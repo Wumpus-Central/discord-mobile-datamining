@@ -1,0 +1,915 @@
+// app/modules/chat/native/ChatView.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var12 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var12;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var7 = var4.bind(var1)(var7);
+    var _closure1_slot3 = var7;
+    var13 = 1;
+    var4 = var6[var13];
+    var4 = var5.bind(var1)(var4);
+    var11 = var4.StyleSheet;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var12.bind(var1)(var4);
+    var _closure1_slot4 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.createChannelRecord;
+    var _closure1_slot5 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var4 = var12.bind(var1)(var4);
+    var _closure1_slot6 = var4;
+    var4 = 5;
+    var4 = var6[var4];
+    var4 = var12.bind(var1)(var4);
+    var _closure1_slot7 = var4;
+    var4 = 6;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.ChannelTypes;
+    var _closure1_slot8 = var4;
+    var4 = 7;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var8 = var4.jsx;
+    var _closure1_slot9 = var8;
+    var8 = var4.jsxs;
+    var _closure1_slot10 = var8;
+    var4 = var4.Fragment;
+    var _closure1_slot11 = var4;
+    var4 = 8;
+    var4 = var6[var4];
+    var9 = var5.bind(var1)(var4);
+    var8 = var9.createStyles;
+    var4 = {};
+    var10 = {};
+    var10['flex'] = var13;
+    var11 = var11.hairlineWidth;
+    var10['borderTopWidth'] = var11;
+    var11 = 9;
+    var13 = var6[var11];
+    var13 = var12.bind(var1)(var13);
+    var13 = var13.colors;
+    var13 = var13.BORDER_SUBTLE;
+    var10['borderTopColor'] = var13;
+    var4['empty'] = var10;
+    var10 = {'flex': 1, 'overflow': 'hidden'};
+    var4['messages'] = var10;
+    var10 = {'backgroundColor': null, 'justifyContent': 'flex-start', 'overflow': 'hidden', 'flex': 1};
+    var11 = var6[var11];
+    var11 = var12.bind(var1)(var11);
+    var11 = var11.colors;
+    var11 = var11.CHANNEL_BACKGROUND_DEFAULT;
+    var10['backgroundColor'] = var11;
+    var4['chat'] = var10;
+    var4 = var8.bind(var9)(var4);
+    var _closure1_slot12 = var4;
+    var4 = var7.memo;
+    var2 = function ChatView(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var2 = arg1;
+            var1 = var2.alwaysRespectKeyboard;
+            var4 = undefined;
+            if(!(var1 === var4)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var1 = false;
+case 2:
+            var _closure2_slot0 = var1;
+            var13 = var2.channelId;
+            var _closure2_slot1 = var13;
+            var3 = var2.chatInputRef;
+            var _closure2_slot2 = var3;
+            var9 = var2.disableGradient;
+            if(!(var9 === var4)) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var9 = false;
+case 4:
+            var12 = var2.guildId;
+            var _closure2_slot3 = var12;
+            var5 = var2.HACK_fixModalInteraction;
+            var _closure2_slot4 = var5;
+            var5 = var2.screenIndex;
+            var _closure2_slot5 = var5;
+            var5 = var2.secondaryTextFieldRef;
+            var _closure2_slot6 = var5;
+            var2 = var2.setNoExtractUI;
+            var _closure2_slot7 = var2;
+            var _closure2_slot8 = var4;
+            var _closure2_slot9 = var4;
+            var _closure2_slot10 = var4;
+            var _closure2_slot11 = var4;
+            var _closure2_slot12 = var4;
+            var _closure2_slot13 = var4;
+            var _closure2_slot14 = var4;
+            var _closure2_slot15 = var4;
+            var _closure2_slot16 = var4;
+            var _closure2_slot17 = var4;
+            var _closure2_slot18 = var4;
+            var _closure2_slot19 = var4;
+            var _closure2_slot20 = var4;
+            var _closure2_slot21 = var4;
+            var _closure2_slot22 = var4;
+            var _closure2_slot23 = var4;
+            var _closure2_slot24 = var4;
+            var2 = function renderMessagesWrapper() {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    var4 = _closure1_slot10;
+                    var3 = _closure1_slot11;
+                    var2 = {};
+                    var14 = _closure1_slot1;
+                    var10 = _closure1_slot2;
+                    var1 = 22;
+                    var5 = var10[var1];
+                    var1 = undefined;
+                    var7 = var14.bind(var1)(var5);
+                    var5 = {};
+                    var8 = _closure2_slot8;
+                    var8 = var8.messages;
+                    var5['style'] = var8;
+                    var16 = _closure2_slot1;
+                    var5['channelId'] = var16;
+                    var15 = _closure1_slot9;
+                    var8 = 23;
+                    var8 = var10[var8];
+                    var11 = var14.bind(var1)(var8);
+                    var8 = {};
+                    var12 = _closure2_slot11;
+                    var8['channel'] = var12;
+                    var12 = _closure2_slot16;
+                    var8['ref'] = var12;
+                    var12 = _closure2_slot23;
+                    var8['scrollToNewMessages'] = var12;
+                    var8 = var15.bind(var1)(var11, var8);
+                    var5['stickyHeader'] = var8;
+                    var8 = 24;
+                    var8 = var10[var8];
+                    var11 = var14.bind(var1)(var8);
+                    var8 = {};
+                    var12 = _closure2_slot0;
+                    var8['alwaysRespectKeyboard'] = var12;
+                    var12 = _closure2_slot11;
+                    var8['channel'] = var12;
+                    var17 = _closure2_slot5;
+                    var8['screenIndex'] = var17;
+                    var18 = _closure2_slot2;
+                    var8['chatInputRef'] = var18;
+                    var12 = _closure2_slot4;
+                    var8['HACK_fixModalInteraction'] = var12;
+                    var12 = _closure2_slot18;
+                    var8['isResourceChannel'] = var12;
+                    var12 = _closure2_slot22;
+                    var8['onPressKey'] = var12;
+                    var12 = _closure2_slot21;
+                    var8['onScroll'] = var12;
+                    var12 = _closure2_slot15;
+                    var8['ref'] = var12;
+                    var12 = _closure2_slot8;
+                    var12 = var12.chat;
+                    var8['style'] = var12;
+                    var12 = _closure2_slot17;
+                    var8['visibleMessagesWindowHandler'] = var12;
+                    var12 = 25;
+                    var12 = var10[var12];
+                    var13 = var14.bind(var1)(var12);
+                    var12 = {};
+                    var12['ref'] = var18;
+                    var18 = _closure2_slot11;
+                    var12['channel'] = var18;
+                    var18 = _closure2_slot18;
+                    var12['isResourceChannel'] = var18;
+                    var12['screenIndex'] = var17;
+                    var17 = _closure2_slot6;
+                    var12['secondaryTextFieldRef'] = var17;
+                    var17 = _closure2_slot7;
+                    var12['setNoExtractUI'] = var17;
+                    var17 = _closure2_slot24;
+                    var12['onJumpToPresent'] = var17;
+                    var13 = var15.bind(var1)(var13, var12);
+                    var12 = new Array(2);
+                    var12[0] = var13;
+                    var13 = 26;
+                    var13 = var10[var13];
+                    var14 = var14.bind(var1)(var13);
+                    var13 = {};
+                    var13['channelId'] = var16;
+                    var17 = _closure2_slot11;
+                    var16 = var17.getGuildId;
+                    var16 = var16.bind(var17)();
+                    var13['guildId'] = var16;
+                    var16 = _closure2_slot20;
+                    var13['shouldRender'] = var16;
+                    var13 = var15.bind(var1)(var14, var13);
+                    var12[1] = var13;
+                    var8['children'] = var12;
+                    var11 = var4.bind(var1)(var11, var8);
+                    var8 = new Array(4);
+                    var8[0] = var11;
+                    var11 = _closure1_slot0;
+                    var13 = 27;
+                    var10 = var10[var13];
+                    var11 = var11.bind(var1)(var10);
+                    var10 = var11.isAndroid;
+                    var12 = var10.bind(var11)();
+                    var11 = null;
+                    if(var12) { _fun0002_ip = 6; continue _fun0002 }
+case 7:
+                    var15 = _closure1_slot9;
+                    var14 = _closure1_slot1;
+                    var16 = _closure1_slot2;
+                    var12 = 28;
+                    var12 = var16[var12];
+                    var14 = var14.bind(var1)(var12);
+                    var12 = {};
+                    var16 = _closure2_slot11;
+                    var16 = var16.id;
+                    var12['channelId'] = var16;
+                    var16 = _closure2_slot15;
+                    var12['messagesRef'] = var16;
+                    var11 = var15.bind(var1)(var14, var12);
+case 6:
+                    var8[1] = var11;
+                    var12 = _closure2_slot19;
+                    var11 = null;
+                    if(!var12) { _fun0002_ip = 8; continue _fun0002 }
+case 9:
+                    var15 = _closure1_slot9;
+                    var14 = _closure1_slot1;
+                    var16 = _closure1_slot2;
+                    var12 = 29;
+                    var12 = var16[var12];
+                    var14 = var14.bind(var1)(var12);
+                    var12 = {};
+                    var16 = _closure2_slot5;
+                    var12['screenIndex'] = var16;
+                    var11 = var15.bind(var1)(var14, var12);
+case 8:
+                    var8[2] = var11;
+                    var12 = _closure1_slot0;
+                    var11 = _closure1_slot2;
+                    var11 = var11[var13];
+                    var12 = var12.bind(var1)(var11);
+                    var11 = var12.isAndroid;
+                    var11 = var11.bind(var12)();
+                    var10 = null;
+                    if(!var11) { _fun0002_ip = 10; continue _fun0002 }
+case 11:
+                    var13 = _closure1_slot9;
+                    var12 = _closure1_slot1;
+                    var14 = _closure1_slot2;
+                    var11 = 30;
+                    var11 = var14[var11];
+                    var12 = var12.bind(var1)(var11);
+                    var11 = {};
+                    var14 = _closure2_slot1;
+                    var11['channelId'] = var14;
+                    var14 = _closure2_slot5;
+                    var11['screenIndex'] = var14;
+                    var14 = _closure2_slot24;
+                    var11['onJumpToPresent'] = var14;
+                    var10 = var13.bind(var1)(var12, var11);
+case 10:
+                    var8[3] = var10;
+                    var5['children'] = var8;
+                    var7 = var4.bind(var1)(var7, var5);
+                    var5 = new Array(3);
+                    var5[0] = var7;
+                    var8 = _closure1_slot9;
+                    var7 = _closure1_slot1;
+                    var10 = _closure1_slot2;
+                    var6 = 31;
+                    var6 = var10[var6];
+                    var11 = var7.bind(var1)(var6);
+                    var6 = {};
+                    var9 = _closure2_slot1;
+                    var6['channelId'] = var9;
+                    var6 = var8.bind(var1)(var11, var6);
+                    var5[1] = var6;
+                    var6 = 32;
+                    var6 = var10[var6];
+                    var7 = var7.bind(var1)(var6);
+                    var6 = {};
+                    var6['channelId'] = var9;
+                    var6 = var8.bind(var1)(var7, var6);
+                    var5[2] = var6;
+                    var2['children'] = var5;
+                    var1 = var4.bind(var1)(var3, var2);
+                    return var1;
+                }
+            };
+            var _closure2_slot25 = var2;
+            var2 = _closure1_slot12;
+            var2 = var2.bind(var4)();
+            _closure2_slot8 = var2;
+            var14 = _closure1_slot3;
+            var5 = var14.useEffect;
+            var2 = new Array(2);
+            var2[0] = var13;
+            var2[1] = var1;
+            var1 = function() {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var1 = _closure2_slot0;
+                    if(var1) { _fun0003_ip = 12; continue _fun0003 }
+case 13:
+                    var3 = _closure1_slot0;
+                    var2 = _closure1_slot2;
+                    var1 = 10;
+                    var2 = var2[var1];
+                    var1 = undefined;
+                    var2 = var3.bind(var1)(var2);
+                    var1 = var2.dismissKeyboard;
+                    var1 = var1.bind(var2)();
+case 12:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var1 = var5.bind(var14)(var1, var2);
+            var5 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var16 = 11;
+            var1 = var7[var16];
+            var11 = var5.bind(var4)(var1);
+            var10 = var11.useStateFromStores;
+            var1 = _closure1_slot6;
+            var2 = new Array(1);
+            var2[0] = var1;
+            var1 = function() {
+                var3 = _closure1_slot6;
+                var2 = var3.getChannel;
+                var1 = _closure2_slot1;
+                var1 = var2.bind(var3)(var1);
+                return var1;
+            };
+            var11 = var10.bind(var11)(var2, var1);
+            _closure2_slot9 = var11;
+            var10 = var14.useMemo;
+            var2 = new Array(2);
+            var2[0] = var11;
+            var2[1] = var13;
+            var1 = function() {
+                _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+                    var1 = {};
+                    var4 = _closure2_slot9;
+                    var3 = null;
+                    if(!(var3 != var4)) { _fun0004_ip = 14; continue _fun0004 }
+case 15:
+                    var4 = _closure2_slot9;
+                    _fun0004_ip = 16; continue _fun0004;
+case 14:
+                    var7 = _closure1_slot5;
+                    var6 = {};
+                    var8 = _closure2_slot1;
+                    var6['id'] = var8;
+                    var8 = _closure1_slot8;
+                    var8 = var8.GUILD_TEXT;
+                    var6['type'] = var8;
+                    var11 = _closure1_slot0;
+                    var12 = _closure1_slot2;
+                    var8 = 12;
+                    var9 = var12[var8];
+                    var5 = undefined;
+                    var9 = var11.bind(var5)(var9);
+                    var10 = var9.intl;
+                    var9 = var10.string;
+                    var8 = var12[var8];
+                    var8 = var11.bind(var5)(var8);
+                    var8 = var8.t;
+                    var8 = var8.ZTNur7;
+                    var8 = var9.bind(var10)(var8);
+                    var6['name'] = var8;
+                    var4 = var7.bind(var5)(var6);
+case 16:
+                    var1['channel'] = var4;
+                    var2 = _closure2_slot9;
+                    var2 = var3 == var2;
+                    var1['channelIsLoading'] = var2;
+                    return var1;
+                }
+            };
+            var1 = var10.bind(var14)(var1, var2);
+            var2 = var1.channelIsLoading;
+            _closure2_slot10 = var2;
+            var1 = var1.channel;
+            _closure2_slot11 = var1;
+            var2 = 13;
+            var2 = var7[var2];
+            var10 = var5.bind(var4)(var2);
+            var2 = var10.useIsChannelContentGated;
+            var2 = var2.bind(var10)(var1);
+            _closure2_slot12 = var2;
+            var2 = 14;
+            var2 = var7[var2];
+            var10 = var5.bind(var4)(var2);
+            var5 = var10.useGetSpoilerGatingChannelId;
+            var7 = null;
+            var14 = var7 != var11;
+            var2 = null;
+            if(!var14) { _fun0001_ip = 17; continue _fun0001 }
+case 18:
+            var2 = var11;
+case 17:
+            var2 = var5.bind(var10)(var2);
+            _closure2_slot13 = var2;
+            var5 = _closure1_slot3;
+            var2 = var5.useRef;
+            var2 = var2.bind(var5)(var13);
+            _closure2_slot14 = var2;
+            var2 = var5.useRef;
+            var2 = var2.bind(var5)(var7);
+            _closure2_slot15 = var2;
+            var10 = var5.useRef;
+            var10 = var10.bind(var5)(var7);
+            _closure2_slot16 = var10;
+            var10 = _closure1_slot1;
+            var14 = _closure1_slot2;
+            var11 = 15;
+            var11 = var14[var11];
+            var15 = var10.bind(var4)(var11);
+            var11 = function() {
+                var3 = _closure1_slot1;
+                var2 = _closure1_slot2;
+                var1 = 16;
+                var2 = var2[var1];
+                var1 = undefined;
+                var1 = var3.bind(var1)(var2);
+                var2 = var1.prototype;
+                var2 = Object.create(var2, {constructor: {value: var1}});
+                var5 = var2;
+                var1 = new var5[var1](var4);
+                var1 = var1 instanceof Object ? var1 : var2;
+                return var1;
+            };
+            var11 = var15.bind(var4)(var11);
+            _closure2_slot17 = var11;
+            var11 = 17;
+            var11 = var14[var11];
+            var11 = var10.bind(var4)(var11);
+            var15 = var11.bind(var4)(var13);
+            _closure2_slot18 = var15;
+            var11 = _closure1_slot0;
+            var16 = var14[var16];
+            var19 = var11.bind(var4)(var16);
+            var18 = var19.useStateFromStoresObject;
+            var16 = _closure1_slot7;
+            var17 = new Array(1);
+            var17[0] = var16;
+            var16 = new Array(2);
+            var16[0] = var13;
+            var16[1] = var15;
+            var15 = function() {
+                _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+                    var4 = _closure1_slot7;
+                    var2 = var4.getMessages;
+                    var1 = _closure2_slot1;
+                    var2 = var2.bind(var4)(var1);
+                    var1 = {};
+                    var5 = var2.length;
+                    var4 = 0;
+                    var4 = var4 === var5;
+                    if(!var4) { _fun0005_ip = 19; continue _fun0005 }
+case 20:
+                    var5 = var2.loadingMore;
+                    if(var5) { _fun0005_ip = 21; continue _fun0005 }
+case 22:
+                    var6 = var2.ready;
+                    var5 = !var6;
+case 21:
+                    var4 = var5;
+case 19:
+                    var1['shouldRenderPlaceholder'] = var4;
+                    var2 = var2.hasMoreBefore;
+                    var2 = !var2;
+                    if(!var2) { _fun0005_ip = 23; continue _fun0005 }
+case 24:
+                    var3 = _closure2_slot18;
+                    var2 = !var3;
+case 23:
+                    var1['shouldRenderBegginingRow'] = var2;
+                    return var1;
+                }
+            };
+            var15 = var18.bind(var19)(var17, var15, var16);
+            var16 = var15.shouldRenderPlaceholder;
+            _closure2_slot19 = var16;
+            var15 = var15.shouldRenderBegginingRow;
+            _closure2_slot20 = var15;
+            var17 = var5.useCallback;
+            var16 = function(arg1) {
+                _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+                    var1 = _closure2_slot16;
+                    var3 = var1.current;
+                    var1 = null;
+                    if(!(var1 != var3)) { _fun0006_ip = 25; continue _fun0006 }
+case 26:
+                    var2 = var3.onChatViewScrolled;
+                    var1 = arg1;
+                    var1 = var2.bind(var3)(var1);
+case 25:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var15 = new Array(0);
+            var15 = var17.bind(var5)(var16, var15);
+            _closure2_slot21 = var15;
+            var16 = var5.useCallback;
+            var15 = new Array(1);
+            var15[0] = var3;
+            var3 = function(arg1) {
+                _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+                    var1 = arg1;
+                    var1 = var1.nativeEvent;
+                    var3 = var1.keyCommand;
+                    var1 = _closure2_slot2;
+                    var2 = var1.current;
+                    var1 = null;
+                    if(!(var1 != var2)) { _fun0007_ip = 27; continue _fun0007 }
+case 28:
+                    var1 = var2.handlePressKey;
+                    var1 = var1.bind(var2)(var3);
+case 27:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var3 = var16.bind(var5)(var3, var15);
+            _closure2_slot22 = var3;
+            var16 = var5.useCallback;
+            var15 = new Array(1);
+            var15[0] = var2;
+            var3 = function() {
+                _fun0008: for(var _fun0008_ip = 0; ; ) switch(_fun0008_ip) {
+case 0:
+                    var1 = _closure2_slot15;
+                    var2 = var1.current;
+                    var1 = null;
+                    if(!(var1 != var2)) { _fun0008_ip = 29; continue _fun0008 }
+case 26:
+                    var1 = var2.scrollToNewMessages;
+                    var1 = var1.bind(var2)();
+case 29:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var3 = var16.bind(var5)(var3, var15);
+            _closure2_slot23 = var3;
+            var15 = var5.useCallback;
+            var3 = new Array(1);
+            var3[0] = var2;
+            var2 = function() {
+                _fun0009: for(var _fun0009_ip = 0; ; ) switch(_fun0009_ip) {
+case 0:
+                    var1 = _closure2_slot15;
+                    var2 = var1.current;
+                    var1 = null;
+                    if(!(var1 != var2)) { _fun0009_ip = 29; continue _fun0009 }
+case 26:
+                    var1 = var2.jumpToPresent;
+                    var1 = var1.bind(var2)();
+case 29:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var2 = var15.bind(var5)(var2, var3);
+            _closure2_slot24 = var2;
+            var15 = var5.useLayoutEffect;
+            var3 = function() {
+                var3 = _closure1_slot0;
+                var2 = _closure1_slot2;
+                var1 = 18;
+                var2 = var2[var1];
+                var1 = undefined;
+                var2 = var3.bind(var1)(var2);
+                var1 = var2.trackAppUIViewed;
+                var1 = var1.bind(var2)();
+                return var1;
+            };
+            var2 = new Array(0);
+            var2 = var15.bind(var5)(var3, var2);
+            var15 = var5.useEffect;
+            var3 = new Array(1);
+            var3[0] = var13;
+            var2 = function() {
+                var4 = _closure1_slot1;
+                var5 = _closure1_slot2;
+                var1 = 19;
+                var3 = var5[var1];
+                var1 = undefined;
+                var6 = var4.bind(var1)(var3);
+                var3 = var6.loadThread;
+                var4 = _closure2_slot1;
+                var3 = var3.bind(var6)(var4);
+                var3 = _closure1_slot0;
+                var2 = 20;
+                var2 = var5[var2];
+                var3 = var3.bind(var1)(var2);
+                var2 = var3.fetchSummaries;
+                var2 = var2.bind(var3)(var4);
+                return var1;
+            };
+            var2 = var15.bind(var5)(var2, var3);
+            var3 = var5.useEffect;
+            var1 = var1.id;
+            var2 = new Array(1);
+            var2[0] = var1;
+            var1 = function() {
+                var2 = _closure2_slot14;
+                var1 = _closure2_slot11;
+                var1 = var1.id;
+                var2['current'] = var1;
+                var1 = undefined;
+                return var1;
+            };
+            var1 = var3.bind(var5)(var1, var2);
+            var3 = var5.useEffect;
+            var2 = function() {
+                var1 = function() {
+                    var3 = _closure1_slot0;
+                    var2 = _closure1_slot2;
+                    var1 = 21;
+                    var2 = var2[var1];
+                    var1 = undefined;
+                    var4 = var3.bind(var1)(var2);
+                    var3 = var4.clearOldestUnreadMessageId;
+                    var2 = _closure2_slot14;
+                    var2 = var2.current;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                };
+                return var1;
+            };
+            var1 = new Array(0);
+            var1 = var3.bind(var5)(var2, var1);
+            var3 = _closure1_slot10;
+            var5 = 33;
+            var1 = var14[var5];
+            var2 = var10.bind(var4)(var1);
+            var1 = {};
+            var5 = var14[var5];
+            var5 = var11.bind(var4)(var5);
+            var5 = var5.Profiles;
+            var5 = var5.ChatView;
+            var1['profile'] = var5;
+            var11 = _closure1_slot9;
+            var5 = 34;
+            var5 = var14[var5];
+            var10 = var10.bind(var4)(var5);
+            var5 = {};
+            var5['channelId'] = var13;
+            var5['guildId'] = var12;
+            var10 = var11.bind(var4)(var10, var5);
+            var5 = new Array(3);
+            var5[0] = var10;
+            var7 = null;
+            if(var9) { _fun0001_ip = 30; continue _fun0001 }
+case 31:
+            var10 = _closure1_slot9;
+            var9 = _closure1_slot1;
+            var11 = _closure1_slot2;
+            var8 = 35;
+            var8 = var11[var8];
+            var9 = var9.bind(var4)(var8);
+            var8 = {};
+            var11 = true;
+            var8['absolute'] = var11;
+            var7 = var10.bind(var4)(var9, var8);
+case 30:
+            var5[1] = var7;
+            var6 = function() {
+                _fun0010: for(var _fun0010_ip = 0; ; ) switch(_fun0010_ip) {
+case 0:
+                    var5 = function renderWithTTITracking(arg1, arg2) {
+                        var3 = _closure1_slot1;
+                        var2 = _closure1_slot2;
+                        var1 = 36;
+                        var2 = var2[var1];
+                        var1 = undefined;
+                        var3 = var3.bind(var1)(var2);
+                        var2 = var3.setInterstitial;
+                        var1 = arg2;
+                        var1 = var2.bind(var3)(var1);
+                        var1 = arg1;
+                        return var1;
+                    };
+                    var3 = _closure1_slot0;
+                    var4 = _closure1_slot2;
+                    var1 = 37;
+                    var1 = var4[var1];
+                    var4 = undefined;
+                    var6 = var3.bind(var4)(var1);
+                    var3 = var6.shouldNSFWGateGuild;
+                    var1 = _closure2_slot3;
+                    var1 = var3.bind(var6)(var1);
+                    if(var1) { _fun0010_ip = 32; continue _fun0010 }
+case 33:
+                    var1 = _closure2_slot10;
+                    if(!var1) { _fun0010_ip = 34; continue _fun0010 }
+case 35:
+                    var3 = _closure1_slot4;
+                    var1 = var3.isConnected;
+                    var1 = var1.bind(var3)();
+                    if(var1) { _fun0010_ip = 34; continue _fun0010 }
+case 36:
+                    var1 = _closure2_slot25;
+                    var1 = var1.bind(var4)();
+                    _fun0010_ip = 37; continue _fun0010;
+case 34:
+                    var3 = _closure2_slot10;
+                    if(var3) { _fun0010_ip = 38; continue _fun0010 }
+case 39:
+                    var3 = _closure2_slot12;
+                    if(var3) { _fun0010_ip = 40; continue _fun0010 }
+case 41:
+                    var3 = _closure2_slot13;
+                    var6 = null;
+                    if(!(var6 != var3)) { _fun0010_ip = 42; continue _fun0010 }
+case 43:
+                    var3 = _closure2_slot13;
+                    if(!(var6 == var3)) { _fun0010_ip = 44; continue _fun0010 }
+case 42:
+                    var6 = _closure2_slot11;
+                    var3 = var6.isDirectory;
+                    var3 = var3.bind(var6)();
+                    if(var3) { _fun0010_ip = 45; continue _fun0010 }
+case 46:
+                    var6 = _closure2_slot11;
+                    var3 = var6.isForumLikeChannel;
+                    var3 = var3.bind(var6)();
+                    if(var3) { _fun0010_ip = 47; continue _fun0010 }
+case 48:
+                    var3 = _closure2_slot25;
+                    var3 = var3.bind(var4)();
+                    _fun0010_ip = 49; continue _fun0010;
+case 47:
+                    var8 = _closure1_slot9;
+                    var7 = _closure1_slot1;
+                    var10 = _closure1_slot2;
+                    var6 = 43;
+                    var6 = var10[var6];
+                    var7 = var7.bind(var4)(var6);
+                    var6 = {};
+                    var10 = _closure2_slot11;
+                    var6['channel'] = var10;
+                    var6 = var8.bind(var4)(var7, var6);
+                    var7 = 'ForumChannel';
+                    var7 = var5.bind(var4)(var6, var7);
+                    var3 = var6;
+case 49:
+                    _fun0010_ip = 50; continue _fun0010;
+case 45:
+                    var8 = _closure1_slot9;
+                    var7 = _closure1_slot1;
+                    var10 = _closure1_slot2;
+                    var6 = 42;
+                    var6 = var10[var6];
+                    var7 = var7.bind(var4)(var6);
+                    var6 = {};
+                    var10 = _closure2_slot11;
+                    var6['channel'] = var10;
+                    var10 = _closure2_slot3;
+                    var6['guildId'] = var10;
+                    var6 = var8.bind(var4)(var7, var6);
+                    var7 = 'GuildDirectory';
+                    var7 = var5.bind(var4)(var6, var7);
+                    var3 = var6;
+case 50:
+                    _fun0010_ip = 51; continue _fun0010;
+case 44:
+                    var10 = _closure1_slot9;
+                    var7 = _closure1_slot1;
+                    var8 = _closure1_slot2;
+                    var6 = 41;
+                    var6 = var8[var6];
+                    var8 = var7.bind(var4)(var6);
+                    var7 = {};
+                    var6 = _closure2_slot3;
+                    var7['guildId'] = var6;
+                    var6 = _closure2_slot13;
+                    var7['channelId'] = var6;
+                    var6 = _closure2_slot1;
+                    var6 = var10.bind(var4)(var8, var7, var6);
+                    var7 = 'ChannelSpoiler';
+                    var7 = var5.bind(var4)(var6, var7);
+                    var3 = var6;
+case 51:
+                    _fun0010_ip = 52; continue _fun0010;
+case 40:
+                    var8 = _closure1_slot9;
+                    var7 = _closure1_slot1;
+                    var10 = _closure1_slot2;
+                    var6 = 40;
+                    var6 = var10[var6];
+                    var7 = var7.bind(var4)(var6);
+                    var6 = {};
+                    var10 = _closure2_slot3;
+                    var6['guildId'] = var10;
+                    var10 = _closure2_slot1;
+                    var6['channelId'] = var10;
+                    var6 = var8.bind(var4)(var7, var6);
+                    var7 = 'GuildNSFW';
+                    var7 = var5.bind(var4)(var6, var7);
+                    var3 = var6;
+case 52:
+                    _fun0010_ip = 53; continue _fun0010;
+case 38:
+                    var8 = _closure1_slot9;
+                    var12 = _closure1_slot0;
+                    var13 = _closure1_slot2;
+                    var6 = 39;
+                    var6 = var13[var6];
+                    var6 = var12.bind(var4)(var6);
+                    var7 = var6.EmptyState;
+                    var6 = {};
+                    var9 = _closure2_slot8;
+                    var9 = var9.empty;
+                    var6['style'] = var9;
+                    var9 = 12;
+                    var10 = var13[var9];
+                    var10 = var12.bind(var4)(var10);
+                    var14 = var10.intl;
+                    var11 = var14.string;
+                    var10 = var13[var9];
+                    var10 = var12.bind(var4)(var10);
+                    var10 = var10.t;
+                    var10 = var10.ai6Lbr;
+                    var10 = var11.bind(var14)(var10);
+                    var6['title'] = var10;
+                    var10 = var13[var9];
+                    var10 = var12.bind(var4)(var10);
+                    var11 = var10.intl;
+                    var10 = var11.string;
+                    var9 = var13[var9];
+                    var9 = var12.bind(var4)(var9);
+                    var9 = var9.t;
+                    var9 = var9.LTr+x9;
+                    var9 = var10.bind(var11)(var9);
+                    var6['body'] = var9;
+                    var6 = var8.bind(var4)(var7, var6);
+                    var7 = 'EmptyState';
+                    var7 = var5.bind(var4)(var6, var7);
+                    var3 = var6;
+case 53:
+                    var1 = var3;
+case 37:
+                    _fun0010_ip = 54; continue _fun0010;
+case 32:
+                    var6 = _closure1_slot9;
+                    var3 = _closure1_slot1;
+                    var7 = _closure1_slot2;
+                    var2 = 38;
+                    var2 = var7[var2];
+                    var3 = var3.bind(var4)(var2);
+                    var2 = {};
+                    var2 = var6.bind(var4)(var3, var2);
+                    var3 = 'NsfwGateChat';
+                    var3 = var5.bind(var4)(var2, var3);
+                    var1 = var2;
+case 54:
+                    return var1;
+                }
+            };
+            var6 = var6.bind(var4)();
+            var5[2] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var2 = var4.bind(var7)(var2);
+    var4 = 44;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/chat/native/ChatView.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

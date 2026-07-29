@@ -1,0 +1,951 @@
+// app/modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var8 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var8;
+    var _closure1_slot2 = var6;
+    var1 = function AnimatedContainer(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var2 = arg1;
+            var18 = var2.scale;
+            var _closure2_slot0 = var18;
+            var1 = var2.translateX;
+            var _closure2_slot1 = var1;
+            var9 = var2.shadow;
+            var15 = var2.translateY;
+            var _closure2_slot2 = var15;
+            var12 = var2.animateOnMount;
+            var5 = var2.children;
+            var4 = undefined;
+            var _closure2_slot4 = var4;
+            var _closure2_slot5 = var4;
+            var _closure2_slot6 = var4;
+            var _closure2_slot7 = var4;
+            var8 = _closure1_slot1;
+            var7 = _closure1_slot2;
+            var6 = 7;
+            var6 = var7[var6];
+            var8 = var8.bind(var4)(var6);
+            var6 = 'GroupAvatar';
+            var8 = var8.bind(var4)(var6);
+            var6 = _closure1_slot11;
+            var8 = var6.bind(var4)(var8);
+            var10 = _closure1_slot0;
+            var6 = 10;
+            var6 = var7[var6];
+            var14 = var10.bind(var4)(var6);
+            var13 = var14.useStateFromStores;
+            var6 = _closure1_slot5;
+            var11 = new Array(1);
+            var11[0] = var6;
+            var6 = function() {
+                var1 = _closure1_slot5;
+                var1 = var1.useReducedMotion;
+                return var1;
+            };
+            var16 = var13.bind(var14)(var11, var6);
+            var _closure2_slot3 = var16;
+            var6 = 11;
+            var7 = var7[var6];
+            var11 = var10.bind(var4)(var7);
+            var10 = var11.useSharedValue;
+            var7 = 1;
+            if(!var12) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var7 = 0;
+case 2:
+            var17 = var10.bind(var11)(var7);
+            _closure2_slot4 = var17;
+            var10 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var7 = var7[var6];
+            var13 = var10.bind(var4)(var7);
+            var10 = var13.useSharedValue;
+            var7 = 0;
+            if(var12) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var7 = var15;
+case 4:
+            var13 = var10.bind(var13)(var7);
+            _closure2_slot5 = var13;
+            var10 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var7 = var7[var6];
+            var10 = var10.bind(var4)(var7);
+            var7 = var10.useSharedValue;
+            var11 = 0;
+            if(var12) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var11 = var1;
+case 6:
+            var14 = var7.bind(var10)(var11);
+            _closure2_slot6 = var14;
+            var10 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var7 = var7[var6];
+            var11 = var10.bind(var4)(var7);
+            var10 = var11.useSharedValue;
+            var7 = var18;
+            if(!var12) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var12 = 2;
+            var7 = var18 / var12;
+case 8:
+            var12 = var10.bind(var11)(var7);
+            _closure2_slot7 = var12;
+            var11 = _closure1_slot3;
+            var10 = var11.useEffect;
+            var7 = new Array(7);
+            var7[0] = var17;
+            var7[1] = var12;
+            var7[2] = var13;
+            var7[3] = var14;
+            var7[4] = var18;
+            var7[5] = var15;
+            var7[6] = var1;
+            var1 = function() {
+                var4 = _closure2_slot4;
+                var3 = var4.set;
+                var2 = 1;
+                var2 = var3.bind(var4)(var2);
+                var4 = _closure2_slot7;
+                var3 = var4.set;
+                var2 = _closure2_slot0;
+                var2 = var3.bind(var4)(var2);
+                var4 = _closure2_slot5;
+                var3 = var4.set;
+                var2 = _closure2_slot2;
+                var2 = var3.bind(var4)(var2);
+                var3 = _closure2_slot6;
+                var2 = var3.set;
+                var1 = _closure2_slot1;
+                var1 = var2.bind(var3)(var1);
+                var1 = undefined;
+                return var1;
+            };
+            var1 = var10.bind(var11)(var1, var7);
+            var15 = _closure1_slot0;
+            var1 = _closure1_slot2;
+            var7 = var1[var6];
+            var10 = var15.bind(var4)(var7);
+            var7 = var10.useAnimatedStyle;
+            var3 = function T() {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    var1 = {};
+                    var3 = _closure1_slot0;
+                    var5 = _closure1_slot2;
+                    var2 = 12;
+                    var2 = var5[var2];
+                    var8 = undefined;
+                    var6 = var3.bind(var8)(var2);
+                    var3 = var6.withTiming;
+                    var7 = _closure2_slot4;
+                    var2 = var7.get;
+                    var2 = var2.bind(var7)();
+                    var2 = var3.bind(var6)(var2);
+                    var1['opacity'] = var2;
+                    var3 = {};
+                    var2 = _closure2_slot3;
+                    if(var2) { _fun0002_ip = 10; continue _fun0002 }
+case 11:
+                    var6 = _closure1_slot0;
+                    var7 = _closure1_slot2;
+                    var2 = 13;
+                    var2 = var7[var2];
+                    var9 = var6.bind(var8)(var2);
+                    var7 = var9.withSpring;
+                    var6 = _closure2_slot6;
+                    var2 = var6.get;
+                    var6 = var2.bind(var6)();
+                    var2 = _closure1_slot10;
+                    var2 = var7.bind(var9)(var6, var2);
+                    _fun0002_ip = 12; continue _fun0002;
+case 10:
+                    var7 = _closure2_slot6;
+                    var6 = var7.get;
+                    var2 = var6.bind(var7)();
+case 12:
+                    var3['translateX'] = var2;
+                    var2 = new Array(3);
+                    var2[0] = var3;
+                    var3 = {};
+                    var6 = _closure2_slot3;
+                    if(var6) { _fun0002_ip = 13; continue _fun0002 }
+case 14:
+                    var7 = _closure1_slot0;
+                    var9 = _closure1_slot2;
+                    var6 = 13;
+                    var6 = var9[var6];
+                    var10 = var7.bind(var8)(var6);
+                    var9 = var10.withSpring;
+                    var7 = _closure2_slot5;
+                    var6 = var7.get;
+                    var7 = var6.bind(var7)();
+                    var6 = _closure1_slot10;
+                    var6 = var9.bind(var10)(var7, var6);
+                    _fun0002_ip = 15; continue _fun0002;
+case 13:
+                    var9 = _closure2_slot5;
+                    var7 = var9.get;
+                    var6 = var7.bind(var9)();
+case 15:
+                    var3['translateY'] = var6;
+                    var2[1] = var3;
+                    var3 = {};
+                    var6 = _closure2_slot3;
+                    if(var6) { _fun0002_ip = 16; continue _fun0002 }
+case 17:
+                    var7 = _closure1_slot0;
+                    var9 = _closure1_slot2;
+                    var6 = 13;
+                    var6 = var9[var6];
+                    var8 = var7.bind(var8)(var6);
+                    var7 = var8.withSpring;
+                    var9 = _closure2_slot7;
+                    var6 = var9.get;
+                    var6 = var6.bind(var9)();
+                    var4 = _closure1_slot9;
+                    var4 = var7.bind(var8)(var6, var4);
+                    _fun0002_ip = 18; continue _fun0002;
+case 16:
+                    var6 = _closure2_slot7;
+                    var5 = var6.get;
+                    var4 = var5.bind(var6)();
+case 18:
+                    var3['scale'] = var4;
+                    var2[2] = var3;
+                    var1['transform'] = var2;
+                    return var1;
+                }
+            };
+            var11 = {};
+            var18 = 12;
+            var18 = var1[var18];
+            var18 = var15.bind(var4)(var18);
+            var18 = var18.withTiming;
+            var11['withTiming'] = var18;
+            var11['opacityAnimation'] = var17;
+            var11['useReducedMotion'] = var16;
+            var11['translateXAnimation'] = var14;
+            var14 = 13;
+            var14 = var1[var14];
+            var14 = var15.bind(var4)(var14);
+            var14 = var14.withSpring;
+            var11['withSpring'] = var14;
+            var14 = _closure1_slot10;
+            var11['SPRING_OPTIONS_POSITION'] = var14;
+            var11['translateYAnimation'] = var13;
+            var11['scaleAnimation'] = var12;
+            var12 = _closure1_slot9;
+            var11['SPRING_OPTIONS_SCALE'] = var12;
+            var3['__closure'] = var11;
+            var11 = 8800301056148.0;
+            var3['__workletHash'] = var11;
+            var11 = _closure1_slot13;
+            var3['__initData'] = var11;
+            var7 = var7.bind(var10)(var3);
+            var3 = _closure1_slot6;
+            var2 = _closure1_slot1;
+            var1 = var1[var6];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.View;
+            var1 = {};
+            var10 = var8.avatarContainer;
+            var6 = new Array(3);
+            var6[0] = var10;
+            var6[1] = var7;
+            var7 = undefined;
+            if(!var9) { _fun0001_ip = 19; continue _fun0001 }
+case 20:
+            var7 = var8.shadow;
+case 19:
+            var6[2] = var7;
+            var1['style'] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot14 = var1;
+    var1 = function GroupMemberCount(arg1) {
+        var1 = arg1;
+        var12 = var1.count;
+        var2 = _closure1_slot1;
+        var11 = _closure1_slot2;
+        var1 = 7;
+        var1 = var11[var1];
+        var4 = undefined;
+        var2 = var2.bind(var4)(var1);
+        var1 = 'GroupAvatar';
+        var2 = var2.bind(var4)(var1);
+        var1 = _closure1_slot11;
+        var9 = var1.bind(var4)(var2);
+        var3 = _closure1_slot6;
+        var2 = _closure1_slot4;
+        var1 = {};
+        var5 = var9.avatarWrapper;
+        var1['style'] = var5;
+        var7 = _closure1_slot6;
+        var6 = _closure1_slot4;
+        var5 = {};
+        var9 = var9.overflowCount;
+        var5['style'] = var9;
+        var10 = _closure1_slot7;
+        var9 = _closure1_slot0;
+        var8 = 14;
+        var8 = var11[var8];
+        var8 = var9.bind(var4)(var8);
+        var9 = var8.Text;
+        var8 = {};
+        var11 = 'text-sm/semibold';
+        var8['variant'] = var11;
+        var11 = ['+'];
+        var11[1] = var12;
+        var8['children'] = var11;
+        var8 = var10.bind(var4)(var9, var8);
+        var5['children'] = var8;
+        var5 = var7.bind(var4)(var6, var5);
+        var1['children'] = var5;
+        var1 = var3.bind(var4)(var2, var1);
+        return var1;
+    };
+    var _closure1_slot15 = var1;
+    var1 = function GroupMemberAvatar(arg1) {
+        _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+            var2 = arg1;
+            var8 = var2.guildId;
+            var _closure2_slot0 = var8;
+            var7 = var2.user;
+            var _closure2_slot1 = var7;
+            var3 = _closure1_slot1;
+            var4 = _closure1_slot2;
+            var2 = 7;
+            var2 = var4[var2];
+            var5 = undefined;
+            var3 = var3.bind(var5)(var2);
+            var2 = 'GroupAvatar';
+            var3 = var3.bind(var5)(var2);
+            var2 = _closure1_slot11;
+            var10 = var2.bind(var5)(var3);
+            var4 = _closure1_slot3;
+            var3 = var4.useMemo;
+            var2 = new Array(2);
+            var2[0] = var8;
+            var2[1] = var7;
+            var1 = function() {
+                _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+                    var3 = _closure2_slot1;
+                    var1 = null;
+                    var3 = var1 == var3;
+                    var1 = undefined;
+                    if(var3) { _fun0004_ip = 21; continue _fun0004 }
+case 22:
+                    var6 = _closure2_slot1;
+                    var5 = var6.getAvatarSource;
+                    var4 = _closure2_slot0;
+                    var3 = false;
+                    var2 = 32;
+                    var1 = var5.bind(var6)(var4, var3, var2);
+case 21:
+                    return var1;
+                }
+            };
+            var9 = var3.bind(var4)(var1, var2);
+            var1 = null;
+            var2 = var1 == var9;
+            if(var2) { _fun0003_ip = 3; continue _fun0003 }
+case 23:
+            var4 = _closure1_slot6;
+            var3 = _closure1_slot4;
+            var2 = {};
+            var7 = var10.avatarWrapper;
+            var2['style'] = var7;
+            var8 = _closure1_slot6;
+            var7 = _closure1_slot1;
+            var11 = _closure1_slot2;
+            var6 = 15;
+            var6 = var11[var6];
+            var7 = var7.bind(var5)(var6);
+            var6 = {};
+            var10 = var10.avatar;
+            var6['style'] = var10;
+            var6['source'] = var9;
+            var6 = var8.bind(var5)(var7, var6);
+            var2['children'] = var6;
+            var1 = var4.bind(var5)(var3, var2);
+case 3:
+            return var1;
+        }
+    };
+    var _closure1_slot16 = var1;
+    var1 = global;
+    var9 = var1.Object;
+    var7 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var9)(var3, var1, var4);
+    var4 = 0;
+    var9 = var6[var4];
+    var7 = metroImportAll;
+    var1 = undefined;
+    var7 = var7.bind(var1)(var9);
+    var _closure1_slot3 = var7;
+    var7 = 1;
+    var7 = var6[var7];
+    var7 = var5.bind(var1)(var7);
+    var7 = var7.View;
+    var _closure1_slot4 = var7;
+    var7 = 2;
+    var7 = var6[var7];
+    var7 = var8.bind(var1)(var7);
+    var _closure1_slot5 = var7;
+    var7 = 3;
+    var7 = var6[var7];
+    var7 = var5.bind(var1)(var7);
+    var8 = var7.jsx;
+    var _closure1_slot6 = var8;
+    var7 = var7.jsxs;
+    var _closure1_slot7 = var7;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.createElement;
+    var _closure1_slot8 = var4;
+    var4 = {'damping': 30, 'stiffness': 400};
+    var _closure1_slot9 = var4;
+    var4 = {'damping': 30, 'stiffness': 400};
+    var _closure1_slot10 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var8 = var5.bind(var1)(var4);
+    var7 = var8.createStyles;
+    var4 = function(arg1) {
+        _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+            var3 = arg1;
+            var1 = {};
+            var2 = {};
+            var4 = 'relative';
+            var2['position'] = var4;
+            var1['groupContainer'] = var2;
+            var2 = {};
+            var8 = _closure1_slot1;
+            var5 = _closure1_slot2;
+            var7 = 5;
+            var5 = var5[var7];
+            var6 = undefined;
+            var5 = var8.bind(var6)(var5);
+            var5 = var5.radii;
+            var5 = var5.sm;
+            var2['borderRadius'] = var5;
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 24; continue _fun0005 }
+case 25:
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var7];
+            var8 = var9.bind(var6)(var8);
+            var8 = var8.colors;
+            var5 = var8.BLACK;
+case 24:
+            var2['shadowColor'] = var5;
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 26; continue _fun0005 }
+case 27:
+            var5 = {'width': 0, 'height': 0};
+case 26:
+            var2['shadowOffset'] = var5;
+            var5 = var7;
+            if(!var3) { _fun0005_ip = 28; continue _fun0005 }
+case 29:
+            var5 = undefined;
+case 28:
+            var2['shadowRadius'] = var5;
+            var5 = 0.2;
+            if(!var3) { _fun0005_ip = 30; continue _fun0005 }
+case 31:
+            var5 = undefined;
+case 30:
+            var2['shadowOpacity'] = var5;
+            var5 = 10;
+            if(!var3) { _fun0005_ip = 32; continue _fun0005 }
+case 33:
+            var5 = undefined;
+case 32:
+            var2['elevation'] = var5;
+            var1['shadowContainer'] = var2;
+            var2 = {};
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 34; continue _fun0005 }
+case 35:
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var7];
+            var8 = var9.bind(var6)(var8);
+            var8 = var8.colors;
+            var5 = var8.CARD_BACKGROUND_DEFAULT;
+case 34:
+            var2['backgroundColor'] = var5;
+            var1['shadowContainerBackground'] = var2;
+            var2 = {};
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 36; continue _fun0005 }
+case 37:
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var7];
+            var8 = var9.bind(var6)(var8);
+            var8 = var8.colors;
+            var5 = var8.WHITE;
+case 36:
+            var2['backgroundColor'] = var5;
+            var5 = 0.4;
+            var2['opacity'] = var5;
+            var1['shadowContainerBackgroundLight'] = var2;
+            var2 = {};
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 38; continue _fun0005 }
+case 39:
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var7];
+            var8 = var9.bind(var6)(var8);
+            var8 = var8.colors;
+            var5 = var8.WHITE;
+case 38:
+            var2['backgroundColor'] = var5;
+            var5 = 0.15;
+            var2['opacity'] = var5;
+            var1['shadowContainerBackgroundDark'] = var2;
+            var2 = {};
+            var8 = _closure1_slot1;
+            var5 = _closure1_slot2;
+            var9 = var5[var7];
+            var9 = var8.bind(var6)(var9);
+            var9 = var9.modules;
+            var9 = var9.mobile;
+            var9 = var9.GROUP_AVATAR_SIZE;
+            var2['width'] = var9;
+            var9 = var5[var7];
+            var9 = var8.bind(var6)(var9);
+            var9 = var9.modules;
+            var9 = var9.mobile;
+            var9 = var9.GROUP_AVATAR_SIZE;
+            var2['height'] = var9;
+            var9 = 'hidden';
+            var2['overflow'] = var9;
+            var5 = var5[var7];
+            var5 = var8.bind(var6)(var5);
+            var5 = var5.radii;
+            var5 = var5.sm;
+            var2['borderRadius'] = var5;
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 40; continue _fun0005 }
+case 41:
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var7];
+            var8 = var9.bind(var6)(var8);
+            var8 = var8.colors;
+            var5 = var8.CARD_BACKGROUND_DEFAULT;
+case 40:
+            var2['backgroundColor'] = var5;
+            var1['gradientContainer'] = var2;
+            var2 = {'position': 'absolute', 'left': 0, 'top': 0, 'right': 0, 'bottom': 0};
+            var5 = 'absolute';
+            var8 = undefined;
+            if(var3) { _fun0005_ip = 42; continue _fun0005 }
+case 43:
+            var10 = _closure1_slot1;
+            var9 = _closure1_slot2;
+            var9 = var9[var7];
+            var9 = var10.bind(var6)(var9);
+            var9 = var9.colors;
+            var8 = var9.BACKGROUND_MOD_SUBTLE;
+case 42:
+            var2['backgroundColor'] = var8;
+            var1['gradientDimOverlay'] = var2;
+            var2 = {};
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var10 = var8[var7];
+            var10 = var9.bind(var6)(var10);
+            var10 = var10.modules;
+            var10 = var10.mobile;
+            var10 = var10.GROUP_AVATAR_SIZE;
+            var2['width'] = var10;
+            var10 = var8[var7];
+            var10 = var9.bind(var6)(var10);
+            var10 = var10.modules;
+            var10 = var10.mobile;
+            var10 = var10.GROUP_AVATAR_SIZE;
+            var2['height'] = var10;
+            var8 = var8[var7];
+            var8 = var9.bind(var6)(var8);
+            var8 = var8.radii;
+            var8 = var8.sm;
+            var2['borderRadius'] = var8;
+            var8 = 1;
+            if(!var3) { _fun0005_ip = 44; continue _fun0005 }
+case 45:
+            var8 = undefined;
+case 44:
+            var2['borderWidth'] = var8;
+            var8 = undefined;
+            if(var3) { _fun0005_ip = 46; continue _fun0005 }
+case 47:
+            var10 = _closure1_slot1;
+            var9 = _closure1_slot2;
+            var9 = var9[var7];
+            var9 = var10.bind(var6)(var9);
+            var9 = var9.colors;
+            var8 = var9.BORDER_SUBTLE;
+case 46:
+            var2['borderColor'] = var8;
+            var2['position'] = var5;
+            var1['gradientImageBorder'] = var2;
+            var2 = {'position': 'absolute', 'top': '50%', 'left': '50%', 'width': 38, 'height': 38, 'marginTop': 4294967277, 'marginLeft': 4294967277};
+            var1['avatarContainer'] = var2;
+            var2 = {};
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 48; continue _fun0005 }
+case 49:
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var7];
+            var8 = var9.bind(var6)(var8);
+            var8 = var8.colors;
+            var5 = var8.BLACK;
+case 48:
+            var2['shadowColor'] = var5;
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 50; continue _fun0005 }
+case 51:
+            var9 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var8 = 6;
+            var8 = var10[var8];
+            var8 = var9.bind(var6)(var8);
+            var5 = var8.DARK_03_LIGHT_02;
+case 50:
+            var2['shadowOpacity'] = var5;
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 52; continue _fun0005 }
+case 53:
+            var5 = {'width': 0, 'height': 3};
+case 52:
+            var2['shadowOffset'] = var5;
+            var5 = 2;
+            if(!var3) { _fun0005_ip = 54; continue _fun0005 }
+case 55:
+            var5 = undefined;
+case 54:
+            var2['shadowRadius'] = var5;
+            var1['shadow'] = var2;
+            var2 = {'width': 32, 'height': 32, 'position': 'absolute', 'borderRadius': 16};
+            var1['avatar'] = var2;
+            var2 = {'position': 'absolute', 'width': 38, 'height': 38, 'justifyContent': 'center', 'alignItems': 'center', 'borderRadius': 19};
+            var5 = undefined;
+            if(var3) { _fun0005_ip = 56; continue _fun0005 }
+case 57:
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var7];
+            var8 = var9.bind(var6)(var8);
+            var8 = var8.colors;
+            var5 = var8.BACKGROUND_BASE_LOWER;
+case 56:
+            var2['backgroundColor'] = var5;
+            var1['avatarWrapper'] = var2;
+            var2 = {'width': 38, 'height': 38, 'position': 'absolute', 'borderRadius': 19, 'backgroundColor': null, 'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'};
+            var5 = _closure1_slot1;
+            var4 = _closure1_slot2;
+            var4 = var4[var7];
+            var4 = var5.bind(var6)(var4);
+            var4 = var4.colors;
+            if(var3) { _fun0005_ip = 58; continue _fun0005 }
+case 59:
+            var3 = var4.BACKGROUND_BASE_LOWER;
+            _fun0005_ip = 60; continue _fun0005;
+case 58:
+            var3 = var4.BACKGROUND_MOD_SUBTLE;
+case 60:
+            var2['backgroundColor'] = var3;
+            var1['overflowCount'] = var2;
+            return var1;
+        }
+    };
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot11 = var4;
+    var4 = new Array(4);
+    var7 = {'translateY': 0, 'translateX': 0, 'scale': 1};
+    var4[0] = var7;
+    var7 = {'translateY': 0, 'translateX': 0, 'scale': 0};
+    var4[1] = var7;
+    var7 = {'translateY': 0, 'translateX': 0, 'scale': 0};
+    var4[2] = var7;
+    var7 = {'translateY': 0, 'translateX': 0, 'scale': 0};
+    var4[3] = var7;
+    var7 = new Array(4);
+    var7[0] = var4;
+    var4 = new Array(4);
+    var8 = {'translateY': 4294967282, 'translateX': 4294967282, 'scale': 0.75};
+    var4[0] = var8;
+    var8 = {'translateY': 12, 'translateX': 12, 'scale': 0.875};
+    var4[1] = var8;
+    var8 = {'translateY': 0, 'translateX': 0, 'scale': 0};
+    var4[2] = var8;
+    var8 = {'translateY': 0, 'translateX': 0, 'scale': 0};
+    var4[3] = var8;
+    var7[1] = var4;
+    var4 = 16;
+    var8 = new Array(4);
+    var9 = {'translateY': 4294967292, 'translateX': 16, 'scale': 0.75};
+    var8[0] = var9;
+    var9 = {'translateY': 14, 'translateX': 4294967282, 'scale': 0.875};
+    var8[1] = var9;
+    var9 = {'translateY': 4294967278, 'translateX': 4294967284, 'scale': 0.625};
+    var8[2] = var9;
+    var9 = {'translateY': 0, 'translateX': 0, 'scale': 0};
+    var8[3] = var9;
+    var7[2] = var8;
+    var8 = new Array(4);
+    var9 = {'translateY': 4294967282, 'translateX': 4294967282, 'scale': 0.875};
+    var8[0] = var9;
+    var9 = {'translateY': 14, 'translateX': 14, 'scale': 0.875};
+    var8[1] = var9;
+    var9 = {'translateY': 4294967278, 'translateX': 18, 'scale': 0.625};
+    var8[2] = var9;
+    var9 = {'translateY': 18, 'translateX': 4294967278, 'scale': 0.625};
+    var8[3] = var9;
+    var7[3] = var8;
+    var _closure1_slot12 = var7;
+    var7 = {};
+    var8 = 'function GroupAvatarTsx1(){const{withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE}=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};}';
+    var7['code'] = var8;
+    var _closure1_slot13 = var7;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function GroupAvatar(arg1) {
+        _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+            var3 = arg1;
+            var2 = var3.users;
+            var _closure2_slot0 = var2;
+            var3 = var3.guildId;
+            var _closure2_slot1 = var3;
+            var4 = undefined;
+            var _closure2_slot2 = var4;
+            var _closure2_slot3 = var4;
+            var _closure2_slot4 = var4;
+            var _closure2_slot5 = var4;
+            var _closure2_slot6 = var4;
+            var5 = _closure1_slot1;
+            var7 = _closure1_slot2;
+            var3 = 7;
+            var3 = var7[var3];
+            var5 = var5.bind(var4)(var3);
+            var3 = 'GroupAvatar';
+            var5 = var5.bind(var4)(var3);
+            var3 = _closure1_slot11;
+            var13 = var3.bind(var4)(var5);
+            var5 = _closure1_slot0;
+            var3 = 8;
+            var6 = var7[var3];
+            var8 = var5.bind(var4)(var6);
+            var6 = var8.useThemeContext;
+            var8 = var6.bind(var8)();
+            var6 = var8.theme;
+            var15 = var8.primaryColor;
+            var3 = var7[var3];
+            var5 = var5.bind(var4)(var3);
+            var3 = var5.isThemeLight;
+            var3 = var3.bind(var5)(var6);
+            if(var3) { _fun0006_ip = 61; continue _fun0006 }
+case 62:
+            var11 = var13.shadowContainerBackgroundDark;
+            _fun0006_ip = 63; continue _fun0006;
+case 61:
+            var11 = var13.shadowContainerBackgroundLight;
+case 63:
+            var6 = _closure1_slot3;
+            var5 = var6.useRef;
+            var3 = false;
+            var5 = var5.bind(var6)(var3);
+            _closure2_slot2 = var5;
+            var8 = _closure1_slot3;
+            var7 = var8.useEffect;
+            var6 = function() {
+                var2 = _closure2_slot2;
+                var1 = true;
+                var2['current'] = var1;
+                var1 = undefined;
+                return var1;
+            };
+            var3 = new Array(0);
+            var3 = var7.bind(var8)(var6, var3);
+            var3 = global;
+            var14 = var3.Math;
+            var12 = var14.min;
+            var7 = _closure1_slot12;
+            var8 = var7.length;
+            var6 = 1;
+            var9 = var8 - var6;
+            var8 = var2.length;
+            var8 = var8 - var6;
+            var12 = var12.bind(var14)(var9, var8);
+            var9 = var3.Math;
+            var8 = var9.max;
+            var3 = 0;
+            var3 = var8.bind(var9)(var3, var12);
+            var3 = var7[var3];
+            var8 = var2.length;
+            var7 = 4;
+            var7 = var8 > var7;
+            _closure2_slot3 = var7;
+            var7 = var2.length;
+            var2 = 3;
+            var8 = var7 - var2;
+            _closure2_slot4 = var8;
+            var2 = 2;
+            var7 = 10;
+            if(!(var8 >= var7)) { _fun0006_ip = 64; continue _fun0006 }
+case 65:
+            var2 = var6;
+case 64:
+            _closure2_slot5 = var2;
+            var6 = _closure1_slot1;
+            var7 = _closure1_slot2;
+            var2 = 9;
+            var2 = var7[var2];
+            var2 = var6.bind(var4)(var2);
+            var2 = var2.bind(var4)(var5);
+            _closure2_slot6 = var2;
+            var2 = var3.map;
+            var1 = function(arg1, arg2) {
+                _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+                    var9 = arg2;
+                    var1 = _closure2_slot0;
+                    var3 = var1[var9];
+                    var1 = null;
+                    var4 = var1 == var3;
+                    if(var4) { _fun0007_ip = 66; continue _fun0007 }
+case 67:
+                    var6 = _closure1_slot8;
+                    var5 = _closure1_slot14;
+                    var4 = {};
+                    var13 = arg1;
+                    var14 = var4;
+                    var8 = copyDataProperties(var14, var13);
+                    var10 = var3.id;
+                    var8 = 'key';
+                    var4[7] = var10;
+                    var10 = _closure2_slot6;
+                    var8 = 'animateOnMount';
+                    var4[7] = var10;
+                    var8 = _closure2_slot0;
+                    var10 = var8.length;
+                    var8 = 2;
+                    var10 = var10 >= var8;
+                    var8 = 'shadow';
+                    var4[7] = var10;
+                    var8 = _closure2_slot3;
+                    if(!var8) { _fun0007_ip = 10; continue _fun0007 }
+case 68:
+                    var8 = _closure2_slot5;
+                    if(!(var9 !== var8)) { _fun0007_ip = 30; continue _fun0007 }
+case 10:
+                    var10 = _closure1_slot6;
+                    var9 = _closure1_slot16;
+                    var8 = {};
+                    var11 = _closure2_slot1;
+                    var8['guildId'] = var11;
+                    var8['user'] = var3;
+                    var3 = undefined;
+                    var3 = var10.bind(var3)(var9, var8);
+                    _fun0007_ip = 69; continue _fun0007;
+case 30:
+                    var9 = _closure1_slot6;
+                    var8 = _closure1_slot15;
+                    var7 = {};
+                    var2 = _closure2_slot4;
+                    var7['count'] = var2;
+                    var2 = undefined;
+                    var3 = var9.bind(var2)(var8, var7);
+case 69:
+                    var2 = undefined;
+                    var1 = var6.bind(var2)(var5, var4, var3);
+case 66:
+                    return var1;
+                }
+            };
+            var6 = var2.bind(var3)(var1);
+            var3 = _closure1_slot7;
+            var2 = _closure1_slot4;
+            var1 = {};
+            var5 = var13.groupContainer;
+            var1['style'] = var5;
+            var8 = _closure1_slot7;
+            var7 = _closure1_slot4;
+            var5 = {};
+            var12 = var13.shadowContainer;
+            var9 = new Array(2);
+            var9[0] = var12;
+            var14 = null;
+            if(!(var14 == var15)) { _fun0006_ip = 70; continue _fun0006 }
+case 71:
+            var11 = var13.shadowContainerBackground;
+case 70:
+            var9[1] = var11;
+            var5['style'] = var9;
+            var12 = _closure1_slot6;
+            var11 = _closure1_slot4;
+            var9 = {};
+            var16 = var13.gradientContainer;
+            var9['style'] = var16;
+            var14 = var14 == var15;
+            if(!var14) { _fun0006_ip = 72; continue _fun0006 }
+case 73:
+            var17 = _closure1_slot6;
+            var16 = _closure1_slot4;
+            var15 = {};
+            var18 = var13.gradientDimOverlay;
+            var15['style'] = var18;
+            var14 = var17.bind(var4)(var16, var15);
+case 72:
+            var9['children'] = var14;
+            var11 = var12.bind(var4)(var11, var9);
+            var9 = new Array(2);
+            var9[0] = var11;
+            var12 = _closure1_slot6;
+            var11 = _closure1_slot4;
+            var10 = {};
+            var13 = var13.gradientImageBorder;
+            var10['style'] = var13;
+            var10 = var12.bind(var4)(var11, var10);
+            var9[1] = var10;
+            var5['children'] = var9;
+            var7 = var8.bind(var4)(var7, var5);
+            var5 = new Array(2);
+            var5[0] = var7;
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['default'] = var2;
+    return var1;
+})();

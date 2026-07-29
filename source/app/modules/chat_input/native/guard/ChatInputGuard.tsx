@@ -1,0 +1,619 @@
+// app/modules/chat_input/native/guard/ChatInputGuard.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var1 = metroImportDefault;
+    var _closure1_slot1 = var1;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var4 = var4.bind(var1)(var7);
+    var _closure1_slot3 = var4;
+    var4 = 1;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.StyleSheet;
+    var _closure1_slot4 = var7;
+    var4 = var4.View;
+    var _closure1_slot5 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.updateChatInputContainerHeight;
+    var _closure1_slot6 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.jsx;
+    var _closure1_slot7 = var7;
+    var4 = var4.jsxs;
+    var _closure1_slot8 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var8 = var5.bind(var1)(var4);
+    var7 = var8.createStyles;
+    var4 = function(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var4 = arg1;
+            var1 = {};
+            var2 = {};
+            var8 = _closure1_slot1;
+            var3 = _closure1_slot2;
+            var6 = 5;
+            var9 = var3[var6];
+            var5 = undefined;
+            var9 = var8.bind(var5)(var9);
+            var9 = var9.space;
+            var9 = var9.PX_12;
+            var2['paddingHorizontal'] = var9;
+            var3 = var3[var6];
+            var3 = var8.bind(var5)(var3);
+            var3 = var3.space;
+            var3 = var3.PX_8;
+            var2['paddingBottom'] = var3;
+            var1['container'] = var2;
+            var2 = {};
+            var3 = undefined;
+            if(!var4) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var9 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var6];
+            var8 = var9.bind(var5)(var8);
+            var8 = var8.radii;
+            var3 = var8.lg;
+case 2:
+            var2['borderRadius'] = var3;
+            var3 = undefined;
+            if(!var4) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var3 = 'hidden';
+case 4:
+            var2['overflow'] = var3;
+            var1['content'] = var2;
+            var2 = {};
+            var4 = _closure1_slot1;
+            var3 = _closure1_slot2;
+            var8 = var3[var6];
+            var8 = var4.bind(var5)(var8);
+            var8 = var8.colors;
+            var8 = var8.BACKGROUND_BASE_LOWER;
+            var2['backgroundColor'] = var8;
+            var8 = var3[var6];
+            var8 = var4.bind(var5)(var8);
+            var8 = var8.space;
+            var9 = var8.PX_8;
+            var10 = _closure1_slot0;
+            var8 = 6;
+            var8 = var3[var8];
+            var8 = var10.bind(var5)(var8);
+            var8 = var8.Radius;
+            var8 = var8.lg;
+            var8 = var9 + var8;
+            var2['height'] = var8;
+            var7 = _closure1_slot4;
+            var11 = var7.absoluteFillObject;
+            var12 = var2;
+            var7 = copyDataProperties(var12, var11);
+            var7 = 'top';
+            var2[6] = var5;
+            var1['underlay'] = var2;
+            var2 = {};
+            var7 = var3[var6];
+            var7 = var4.bind(var5)(var7);
+            var7 = var7.colors;
+            var7 = var7.BORDER_MUTED;
+            var2['borderColor'] = var7;
+            var7 = var3[var6];
+            var7 = var4.bind(var5)(var7);
+            var7 = var7.space;
+            var7 = var7.PX_12;
+            var2['paddingHorizontal'] = var7;
+            var7 = var3[var6];
+            var7 = var4.bind(var5)(var7);
+            var7 = var7.space;
+            var7 = var7.PX_16;
+            var2['paddingTop'] = var7;
+            var7 = var3[var6];
+            var7 = var4.bind(var5)(var7);
+            var7 = var7.colors;
+            var7 = var7.BACKGROUND_SURFACE_HIGH;
+            var2['backgroundColor'] = var7;
+            var7 = var3[var6];
+            var7 = var4.bind(var5)(var7);
+            var7 = var7.radii;
+            var7 = var7.lg;
+            var2['borderRadius'] = var7;
+            var7 = 1;
+            var2['borderWidth'] = var7;
+            var1['wrapper'] = var2;
+            var2 = {};
+            var8 = var3[var6];
+            var8 = var4.bind(var5)(var8);
+            var8 = var8.colors;
+            var8 = var8.BACKGROUND_SURFACE_HIGH;
+            var2['backgroundColor'] = var8;
+            var8 = var3[var6];
+            var8 = var4.bind(var5)(var8);
+            var8 = var8.modules;
+            var8 = var8.mobile;
+            var8 = var8.TABLE_ROW_BORDER_RADIUS;
+            var2['borderRadius'] = var8;
+            var8 = var3[var6];
+            var8 = var4.bind(var5)(var8);
+            var8 = var8.colors;
+            var8 = var8.BORDER_MUTED;
+            var2['borderColor'] = var8;
+            var2['borderWidth'] = var7;
+            var1['floating'] = var2;
+            var2 = {};
+            var7 = 'center';
+            var2['textAlign'] = var7;
+            var1['text'] = var2;
+            var2 = {};
+            var8 = var3[var6];
+            var8 = var4.bind(var5)(var8);
+            var8 = var8.space;
+            var8 = var8.PX_4;
+            var2['marginTop'] = var8;
+            var2['textAlign'] = var7;
+            var1['subtext'] = var2;
+            var2 = {};
+            var3 = var3[var6];
+            var3 = var4.bind(var5)(var3);
+            var3 = var3.space;
+            var3 = var3.PX_8;
+            var2['marginTop'] = var3;
+            var1['spacing'] = var2;
+            return var1;
+        }
+    };
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot9 = var4;
+    var4 = 22;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/chat_input/native/guard/ChatInputGuard.tsx';
+    var4 = var5.bind(var6)(var4);
+    var4 = function ChatInputGuard(arg1) {
+        _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+            var1 = arg1;
+            var3 = _closure1_slot1;
+            var4 = _closure1_slot2;
+            var2 = 7;
+            var2 = var4[var2];
+            var4 = undefined;
+            var2 = var3.bind(var4)(var2);
+            var3 = var2.bind(var4)();
+            var2 = _closure1_slot9;
+            var20 = var2.bind(var4)(var3);
+            var3 = var1.type;
+            var2 = 'simple-action';
+            if(!(var2 !== var3)) { _fun0002_ip = 6; continue _fun0002 }
+case 7:
+            var10 = var1.message;
+            var14 = var1.subtext;
+            var13 = var1.buttonPrimaryText;
+            var11 = var1.buttonPrimaryOnPress;
+            var16 = var1.buttonPrimaryDisabled;
+            var15 = var1.buttonPrimaryLoading;
+            var5 = var1.buttonPrimaryVariant;
+            var24 = var1.buttonSecondaryText;
+            var23 = var1.buttonSecondaryOnPress;
+            var26 = var1.buttonSecondaryDisabled;
+            var25 = var1.buttonSecondaryLoading;
+            var12 = var1.countdown;
+            var9 = _closure1_slot7;
+            var7 = _closure1_slot0;
+            var6 = _closure1_slot2;
+            var27 = 19;
+            var2 = var6[var27];
+            var2 = var7.bind(var4)(var2);
+            var3 = var2.Button;
+            var2 = {};
+            var2['disabled'] = var16;
+            var2['loading'] = var15;
+            var2['text'] = var13;
+            var2['onPress'] = var11;
+            var22 = 'sm';
+            var2['size'] = var22;
+            var2['variant'] = var5;
+            var21 = var9.bind(var4)(var3, var2);
+            var5 = _closure1_slot8;
+            var3 = _closure1_slot5;
+            var2 = {};
+            var11 = var20.wrapper;
+            var2['style'] = var11;
+            var15 = 18;
+            var6 = var6[var15];
+            var6 = var7.bind(var4)(var6);
+            var7 = var6.Text;
+            var6 = {};
+            var11 = var20.text;
+            var6['style'] = var11;
+            var11 = 'text-sm/semibold';
+            var6['variant'] = var11;
+            var6['children'] = var10;
+            var7 = var9.bind(var4)(var7, var6);
+            var6 = new Array(4);
+            var6[0] = var7;
+            var7 = null;
+            var10 = var7 != var14;
+            var9 = null;
+            if(!var10) { _fun0002_ip = 8; continue _fun0002 }
+case 9:
+            var11 = 'string';
+            var10 = typeof var14;
+            var9 = null;
+            if(!(var11 === var10)) { _fun0002_ip = 8; continue _fun0002 }
+case 10:
+            var11 = var14.length;
+            var10 = 0;
+            var10 = var11 > var10;
+            var9 = null;
+            if(!var10) { _fun0002_ip = 8; continue _fun0002 }
+case 11:
+            var13 = _closure1_slot7;
+            var11 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var10 = var10[var15];
+            var10 = var11.bind(var4)(var10);
+            var11 = var10.Text;
+            var10 = {'style': null, 'variant': 'text-xs/medium', 'color': 'text-muted'};
+            var15 = var20.subtext;
+            var10['style'] = var15;
+            var10['children'] = var14;
+            var9 = var13.bind(var4)(var11, var10);
+case 8:
+            var6[1] = var9;
+            var11 = _closure1_slot7;
+            var10 = _closure1_slot0;
+            var13 = _closure1_slot2;
+            var9 = 20;
+            var9 = var13[var9];
+            var9 = var10.bind(var4)(var9);
+            var10 = var9.ButtonGroup;
+            var9 = {};
+            var13 = var21;
+            if(!(var7 != var24)) { _fun0002_ip = 12; continue _fun0002 }
+case 13:
+            var13 = var21;
+            if(!(var7 != var23)) { _fun0002_ip = 12; continue _fun0002 }
+case 14:
+            var16 = _closure1_slot8;
+            var19 = _closure1_slot0;
+            var18 = _closure1_slot2;
+            var14 = 21;
+            var14 = var18[var14];
+            var14 = var19.bind(var4)(var14);
+            var15 = var14.TwinButtons;
+            var14 = {};
+            var17 = new Array(2);
+            var17[0] = var21;
+            var21 = _closure1_slot7;
+            var18 = var18[var27];
+            var18 = var19.bind(var4)(var18);
+            var19 = var18.Button;
+            var18 = {};
+            var18['disabled'] = var26;
+            var18['loading'] = var25;
+            var18['text'] = var24;
+            var18['onPress'] = var23;
+            var23 = 'secondary';
+            var18['variant'] = var23;
+            var18['size'] = var22;
+            var18 = var21.bind(var4)(var19, var18);
+            var17[1] = var18;
+            var14['children'] = var17;
+            var13 = var16.bind(var4)(var15, var14);
+case 12:
+            var9['children'] = var13;
+            var9 = var11.bind(var4)(var10, var9);
+            var6[2] = var9;
+            var9 = var7 != var12;
+            var7 = null;
+            if(!var9) { _fun0002_ip = 15; continue _fun0002 }
+case 16:
+            var11 = _closure1_slot7;
+            var10 = _closure1_slot1;
+            var13 = _closure1_slot2;
+            var9 = 17;
+            var9 = var13[var9];
+            var10 = var10.bind(var4)(var9);
+            var9 = {};
+            var14 = var20.text;
+            var13 = new Array(2);
+            var13[0] = var14;
+            var14 = var20.spacing;
+            var13[1] = var14;
+            var9['style'] = var13;
+            var9['deadline'] = var12;
+            var7 = var11.bind(var4)(var10, var9);
+case 15:
+            var6[3] = var7;
+            var2['children'] = var6;
+            var2 = var5.bind(var4)(var3, var2);
+            return var2;
+case 6:
+            var9 = var1.icon;
+            var11 = var1.message;
+            var18 = var1.countdown;
+            var7 = var1.subtext;
+            var15 = var1.actionIcon;
+            var17 = var1.actionLabel;
+            var14 = var1.actionOnPress;
+            var3 = _closure1_slot7;
+            var2 = _closure1_slot5;
+            var1 = {};
+            var5 = var20.floating;
+            var1['style'] = var5;
+            var6 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var5 = 14;
+            var5 = var10[var5];
+            var5 = var6.bind(var4)(var5);
+            var6 = var5.TableRow;
+            var5 = {'arrow': false, 'accessibilityRole': 'button', 'onPress': null, 'icon': null, 'start': true, 'end': true};
+            var5['onPress'] = var14;
+            var5['icon'] = var9;
+            var16 = null;
+            if(!(var16 != var17)) { _fun0002_ip = 17; continue _fun0002 }
+case 18:
+            if(!(var16 == var14)) { _fun0002_ip = 19; continue _fun0002 }
+case 17:
+            var10 = var16 != var18;
+            var9 = null;
+            if(!var10) { _fun0002_ip = 20; continue _fun0002 }
+case 21:
+            var13 = _closure1_slot7;
+            var12 = _closure1_slot1;
+            var19 = _closure1_slot2;
+            var10 = 17;
+            var10 = var19[var10];
+            var12 = var12.bind(var4)(var10);
+            var10 = {};
+            var21 = var20.text;
+            var19 = new Array(2);
+            var19[0] = var21;
+            var20 = var20.spacing;
+            var19[1] = var20;
+            var10['style'] = var19;
+            var10['deadline'] = var18;
+            var9 = var13.bind(var4)(var12, var10);
+case 20:
+            _fun0002_ip = 22; continue _fun0002;
+case 19:
+            var13 = _closure1_slot7;
+            var12 = _closure1_slot0;
+            var18 = _closure1_slot2;
+            var10 = 15;
+            var10 = var18[var10];
+            var10 = var12.bind(var4)(var10);
+            var12 = var10.IconButton;
+            var10 = {};
+            var10['accessibilityLabel'] = var17;
+            if(!(var16 == var15)) { _fun0002_ip = 23; continue _fun0002 }
+case 24:
+            var18 = _closure1_slot7;
+            var17 = _closure1_slot0;
+            var21 = _closure1_slot2;
+            var16 = 16;
+            var16 = var21[var16];
+            var16 = var17.bind(var4)(var16);
+            var17 = var16.ArrowSmallRightIcon;
+            var16 = {};
+            var20 = _closure1_slot1;
+            var19 = 5;
+            var19 = var21[var19];
+            var19 = var20.bind(var4)(var19);
+            var19 = var19.colors;
+            var19 = var19.WHITE;
+            var16['color'] = var19;
+            var15 = var18.bind(var4)(var17, var16);
+case 23:
+            var10['icon'] = var15;
+            var15 = 'sm';
+            var10['size'] = var15;
+            var10['onPress'] = var14;
+            var9 = var13.bind(var4)(var12, var10);
+case 22:
+            var5['trailing'] = var9;
+            var10 = _closure1_slot7;
+            var9 = _closure1_slot0;
+            var12 = _closure1_slot2;
+            var8 = 18;
+            var8 = var12[var8];
+            var8 = var9.bind(var4)(var8);
+            var9 = var8.Text;
+            var8 = {};
+            var12 = 'text-sm/semibold';
+            var8['variant'] = var12;
+            var8['children'] = var11;
+            var8 = var10.bind(var4)(var9, var8);
+            var5['label'] = var8;
+            var5['subLabel'] = var7;
+            var5 = var3.bind(var4)(var6, var5);
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['default'] = var4;
+    var2 = function ChatInputGuardContainer(arg1) {
+        _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+            var2 = arg1;
+            var15 = var2.screenIndex;
+            var _closure2_slot0 = var15;
+            var16 = var2.channelId;
+            var14 = var2.onJumpToPresent;
+            var19 = var2.children;
+            var8 = _closure1_slot1;
+            var10 = _closure1_slot2;
+            var2 = 7;
+            var2 = var10[var2];
+            var4 = undefined;
+            var2 = var8.bind(var4)(var2);
+            var18 = var2.bind(var4)();
+            var3 = _closure1_slot0;
+            var2 = 8;
+            var2 = var10[var2];
+            var6 = var3.bind(var4)(var2);
+            var5 = var6.useMobileVisualRefreshConfig;
+            var2 = {};
+            var7 = 'ChatInputGuardContainer';
+            var2['location'] = var7;
+            var2 = var5.bind(var6)(var2);
+            var5 = var2.chatInputFloating;
+            var9 = 9;
+            var2 = var10[var9];
+            var3 = var3.bind(var4)(var2);
+            var2 = var3.useChatInputFloatingOverlayStyle;
+            var12 = var2.bind(var3)();
+            var2 = _closure1_slot9;
+            var20 = var2.bind(var4)(var18);
+            var6 = _closure1_slot3;
+            var3 = var6.useCallback;
+            var2 = new Array(1);
+            var2[0] = var15;
+            var1 = function(arg1) {
+                var1 = arg1;
+                var1 = var1.nativeEvent;
+                var1 = var1.layout;
+                var4 = _closure1_slot6;
+                var3 = _closure2_slot0;
+                var2 = var1.height;
+                var1 = undefined;
+                var2 = var4.bind(var1)(var3, var2);
+                return var1;
+            };
+            var7 = var3.bind(var6)(var1, var2);
+            var3 = _closure1_slot8;
+            var2 = _closure1_slot5;
+            var1 = {};
+            var6 = 10;
+            var6 = var10[var6];
+            var10 = var8.bind(var4)(var6);
+            var8 = {};
+            var6 = false;
+            var8['isCreatingThread'] = var6;
+            var10 = var10.bind(var4)(var8);
+            var8 = new Array(2);
+            var8[0] = var10;
+            var10 = var5;
+            if(!var10) { _fun0003_ip = 25; continue _fun0003 }
+case 26:
+            var10 = var12;
+case 25:
+            var8[1] = var10;
+            var1['style'] = var8;
+            var1['onLayout'] = var7;
+            var1['collapsable'] = var6;
+            var13 = null;
+            var6 = null;
+            if(!var5) { _fun0003_ip = 27; continue _fun0003 }
+case 28:
+            var8 = _closure1_slot7;
+            var7 = _closure1_slot0;
+            var5 = _closure1_slot2;
+            var5 = var5[var9];
+            var5 = var7.bind(var4)(var5);
+            var7 = var5.ChatInputScrimGradient;
+            var5 = {};
+            var6 = var8.bind(var4)(var7, var5);
+case 27:
+            var5 = new Array(2);
+            var5[0] = var6;
+            var8 = _closure1_slot8;
+            var7 = _closure1_slot5;
+            var6 = {};
+            var9 = var20.container;
+            var6['style'] = var9;
+            var10 = null;
+            if(var18) { _fun0003_ip = 29; continue _fun0003 }
+case 30:
+            var17 = _closure1_slot7;
+            var12 = _closure1_slot5;
+            var9 = {};
+            var21 = var20.underlay;
+            var9['style'] = var21;
+            var10 = var17.bind(var4)(var12, var9);
+case 29:
+            var9 = new Array(3);
+            var9[0] = var10;
+            var17 = _closure1_slot8;
+            var12 = _closure1_slot5;
+            var10 = {};
+            var20 = var20.content;
+            var10['style'] = var20;
+            var20 = null;
+            if(!var18) { _fun0003_ip = 31; continue _fun0003 }
+case 32:
+            var22 = _closure1_slot7;
+            var21 = _closure1_slot1;
+            var23 = _closure1_slot2;
+            var18 = 11;
+            var18 = var23[var18];
+            var21 = var21.bind(var4)(var18);
+            var18 = {'absolute': true, 'wide': true, 'tall': true, 'mix': true};
+            var20 = var22.bind(var4)(var21, var18);
+case 31:
+            var18 = new Array(2);
+            var18[0] = var20;
+            var18[1] = var19;
+            var10['children'] = var18;
+            var10 = var17.bind(var4)(var12, var10);
+            var9[1] = var10;
+            var12 = _closure1_slot0;
+            var17 = _closure1_slot2;
+            var10 = 12;
+            var10 = var17[var10];
+            var12 = var12.bind(var4)(var10);
+            var10 = var12.isIOS;
+            var12 = var10.bind(var12)();
+            var10 = null;
+            if(!var12) { _fun0003_ip = 33; continue _fun0003 }
+case 34:
+            var12 = var13 != var16;
+            var10 = null;
+            if(!var12) { _fun0003_ip = 33; continue _fun0003 }
+case 35:
+            var13 = _closure1_slot7;
+            var12 = _closure1_slot1;
+            var17 = _closure1_slot2;
+            var11 = 13;
+            var11 = var17[var11];
+            var12 = var12.bind(var4)(var11);
+            var11 = {};
+            var11['channelId'] = var16;
+            var11['screenIndex'] = var15;
+            var11['onJumpToPresent'] = var14;
+            var10 = var13.bind(var4)(var12, var11);
+case 33:
+            var9[2] = var10;
+            var6['children'] = var9;
+            var6 = var8.bind(var4)(var7, var6);
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['ChatInputGuardContainer'] = var2;
+    return var1;
+})();

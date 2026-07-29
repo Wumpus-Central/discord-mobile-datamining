@@ -1,0 +1,34 @@
+// app/modules/links/native/LinkingSchemas.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var3 = exports;
+    var1 = global;
+    var6 = var1.Object;
+    var5 = var6.defineProperty;
+    var4 = {};
+    var2 = true;
+    var4['value'] = var2;
+    var2 = '__esModule';
+    var2 = var5.bind(var6)(var3, var2, var4);
+    var4 = {};
+    var2 = {};
+    var5 = /(?:^https?:\/\/)(?:www\.)?bestbuy\.com(?:\/(.*))?$/i;
+    var2['regex'] = var5;
+    var5 = 'bestbuy://';
+    var2['protocol'] = var5;
+    var4['bestbuy'] = var2;
+    var2 = var1.Object;
+    var1 = var2.values;
+    var2 = var1.bind(var2)(var4);
+    var5 = dependencyMap;
+    var1 = 0;
+    var6 = var5[var1];
+    var5 = require;
+    var1 = undefined;
+    var7 = var5.bind(var1)(var6);
+    var6 = var7.fileFinishedImporting;
+    var5 = 'modules/links/native/LinkingSchemas.tsx';
+    var5 = var6.bind(var7)(var5);
+    var3['LINKING_SCHEMAS'] = var4;
+    var3['LINKING_SCHEMAS_VALUES'] = var2;
+    return var1;
+})();

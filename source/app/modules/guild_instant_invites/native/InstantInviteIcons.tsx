@@ -1,0 +1,77 @@
+// app/modules/guild_instant_invites/native/InstantInviteIcons.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var6;
+    var2 = global;
+    var9 = var2.Object;
+    var7 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var9)(var3, var1, var4);
+    var1 = 0;
+    var4 = var6[var1];
+    var1 = undefined;
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.Platform;
+    var7 = var2.Object;
+    var4 = var7.freeze;
+    var2 = {};
+    var10 = function get more() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 1;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        return var1;
+    };
+    var9 = 'more';
+    Object.defineProperty(var2, var9, {get: var10, set: var1, enumerable: true});
+    var10 = function get share() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        return var1;
+    };
+    var9 = 'share';
+    Object.defineProperty(var2, var9, {get: var10, set: var1, enumerable: true});
+    var10 = function get revoke() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 3;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        return var1;
+    };
+    var9 = 'revoke';
+    Object.defineProperty(var2, var9, {get: var10, set: var1, enumerable: true});
+    var9 = function get copy() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 4;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        return var1;
+    };
+    var8 = 'copy';
+    Object.defineProperty(var2, var8, {get: var9, set: var1, enumerable: true});
+    var2 = var4.bind(var7)(var2);
+    var4 = 5;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/guild_instant_invites/native/InstantInviteIcons.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

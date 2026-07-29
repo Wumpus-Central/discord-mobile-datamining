@@ -1,0 +1,287 @@
+// app/design/components/TableRow/native/TableSwitchRow.native.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportDefault;
+    var1 = undefined;
+    var4 = var4.bind(var1)(var7);
+    var _closure1_slot2 = var4;
+    var4 = 1;
+    var7 = var6[var4];
+    var4 = metroImportAll;
+    var4 = var4.bind(var1)(var7);
+    var _closure1_slot3 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.View;
+    var _closure1_slot4 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.jsx;
+    var _closure1_slot5 = var7;
+    var4 = var4.jsxs;
+    var _closure1_slot6 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var8 = var5.bind(var1)(var4);
+    var7 = var8.createStyles;
+    var4 = function() {
+        var1 = {};
+        var2 = {'flexDirection': 'row', 'alignItems': 'center', 'gap': 8};
+        var1['labelWithTrailing'] = var2;
+        return var1;
+    };
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot7 = var4;
+    var4 = 10;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'design/components/TableRow/native/TableSwitchRow.native.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function TableSwitchRow(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var5 = arg1;
+            var10 = var5.value;
+            var _closure2_slot0 = var10;
+            var1 = var5.onValueChange;
+            var _closure2_slot1 = var1;
+            var26 = var5.label;
+            var16 = var5.subLabel;
+            var22 = var5.trailing;
+            var8 = var5.disabled;
+            var4 = undefined;
+            if(!(var8 === var4)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var8 = false;
+case 2:
+            var13 = var5.accessibilityHint;
+            var29 = var5.variant;
+            var3 = {'value': 0, 'onValueChange': 0, 'label': 0, 'subLabel': 0, 'trailing': 0, 'disabled': 0, 'accessibilityHint': 0, 'variant': 0};
+            var14 = null;
+            var32 = var3;
+            var31 = null;
+            var1 = silentSetPrototypeOf(var32, var31);
+            var1 = 0;
+            var32 = {};
+            var31 = var5;
+            var30 = var3;
+            var15 = copyDataProperties(var32, var31, var30);
+            var _closure2_slot2 = var4;
+            var9 = function handleOnPress() {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    var3 = _closure2_slot1;
+                    var1 = null;
+                    var3 = var1 == var3;
+                    var4 = undefined;
+                    var1 = undefined;
+                    if(var3) { _fun0002_ip = 4; continue _fun0002 }
+case 5:
+                    var3 = _closure2_slot1;
+                    var2 = _closure2_slot0;
+                    var2 = !var2;
+                    var1 = var3.bind(var4)(var2);
+case 4:
+                    return var1;
+                }
+            };
+            var2 = _closure1_slot7;
+            var21 = var2.bind(var4)();
+            var2 = _closure1_slot0;
+            var18 = _closure1_slot1;
+            var3 = 5;
+            var3 = var18[var3];
+            var7 = var2.bind(var4)(var3);
+            var3 = var7.isAndroid;
+            var7 = var3.bind(var7)();
+            var3 = 6;
+            var11 = var18[var3];
+            var12 = var2.bind(var4)(var11);
+            var11 = var12.getNodeText;
+            var17 = var11.bind(var12)(var26);
+            var3 = var18[var3];
+            var11 = var2.bind(var4)(var3);
+            var3 = var11.getNodeText;
+            var12 = var3.bind(var11)(var16);
+            var20 = _closure1_slot3;
+            var3 = var20.useState;
+            var19 = var3.bind(var20)(var10);
+            var11 = _closure1_slot2;
+            var3 = 2;
+            var3 = var11.bind(var4)(var19, var3);
+            var11 = var3[var1];
+            var1 = 1;
+            var1 = var3[var1];
+            _closure2_slot2 = var1;
+            var19 = var20.useEffect;
+            var3 = new Array(1);
+            var3[0] = var10;
+            var1 = function() {
+                var3 = _closure2_slot2;
+                var2 = _closure2_slot0;
+                var1 = undefined;
+                var2 = var3.bind(var1)(var2);
+                return var1;
+            };
+            var1 = var19.bind(var20)(var1, var3);
+            var3 = _closure1_slot5;
+            var1 = 7;
+            var1 = var18[var1];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.TableRow;
+            var1 = {};
+            var32 = var1;
+            var31 = var15;
+            var15 = copyDataProperties(var32, var31);
+            var15 = 'variant';
+            var1[14] = var29;
+            var18 = false;
+            var15 = 'arrow';
+            var1[14] = var18;
+            var18 = var26;
+            if(!(var14 != var22)) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var20 = _closure1_slot6;
+            var19 = _closure1_slot4;
+            var15 = {};
+            var21 = var21.labelWithTrailing;
+            var15['style'] = var21;
+            var23 = _closure1_slot3;
+            var21 = var23.isValidElement;
+            var21 = var21.bind(var23)(var26);
+            var23 = var26;
+            if(var21) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var25 = _closure1_slot5;
+            var24 = _closure1_slot0;
+            var27 = _closure1_slot1;
+            var21 = 8;
+            var21 = var27[var21];
+            var21 = var24.bind(var4)(var21);
+            var24 = var21.Text;
+            var21 = {'variant': 'text-md/semibold', 'color': null, 'includeFontPadding': true};
+            var27 = 'mobile-text-heading-primary';
+            var28 = 'danger';
+            if(!(var28 === var29)) { _fun0001_ip = 10; continue _fun0001 }
+case 11:
+            var27 = 'text-feedback-critical';
+case 10:
+            var21['color'] = var27;
+            var21['children'] = var26;
+            var23 = var25.bind(var4)(var24, var21);
+case 8:
+            var21 = new Array(2);
+            var21[0] = var23;
+            var21[1] = var22;
+            var15['children'] = var21;
+            var18 = var20.bind(var4)(var19, var15);
+case 6:
+            var15 = 'label';
+            var1[14] = var18;
+            var15 = 'subLabel';
+            var1[14] = var16;
+            var15 = 'disabled';
+            var1[14] = var8;
+            var15 = {};
+            var15['disabled'] = var8;
+            var15['checked'] = var11;
+            var11 = 'accessibilityState';
+            var1[10] = var15;
+            var11 = true;
+            var15 = 'accessible';
+            var1[14] = var11;
+            var16 = 'switch';
+            var15 = 'accessibilityRole';
+            var1[14] = var16;
+            var14 = var14 != var12;
+            var16 = '';
+            var15 = var16;
+            if(!var14) { _fun0001_ip = 12; continue _fun0001 }
+case 13:
+            var15 = var12;
+case 12:
+            var12 = global;
+            var12 = var12.HermesInternal;
+            var14 = var12.concat;
+            var12 = ', ';
+            var14 = var14.bind(var16)(var17, var12, var15);
+            var12 = 'accessibilityLabel';
+            var1[11] = var14;
+            var12 = 'accessibilityHint';
+            var1[11] = var13;
+            var12 = undefined;
+            if(!var7) { _fun0001_ip = 14; continue _fun0001 }
+case 15:
+            var12 = var9;
+case 14:
+            var7 = 'onPress';
+            var1[6] = var12;
+            var7 = function onAccessibilityTap() {
+                var3 = _closure2_slot2;
+                var1 = _closure2_slot0;
+                var2 = !var1;
+                var1 = undefined;
+                var2 = var3.bind(var1)(var2);
+                var2 = global;
+                var3 = var2.setTimeout;
+                var2 = function() {
+                    _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                        var3 = _closure2_slot1;
+                        var2 = null;
+                        if(!(var2 != var3)) { _fun0003_ip = 16; continue _fun0003 }
+case 17:
+                        var3 = _closure2_slot1;
+                        var1 = _closure2_slot0;
+                        var2 = !var1;
+                        var1 = undefined;
+                        var1 = var3.bind(var1)(var2);
+case 16:
+                        var1 = undefined;
+                        return var1;
+                    }
+                };
+                var2 = var3.bind(var1)(var2);
+                return var1;
+            };
+            var6 = 'onAccessibilityTap';
+            var1[5] = var7;
+            var7 = _closure1_slot5;
+            var6 = _closure1_slot0;
+            var12 = _closure1_slot1;
+            var5 = 9;
+            var5 = var12[var5];
+            var5 = var6.bind(var4)(var5);
+            var6 = var5.FormSwitch;
+            var5 = {};
+            var5['aria-hidden'] = var11;
+            var5['value'] = var10;
+            var5['onValueChange'] = var9;
+            var5['disabled'] = var8;
+            var6 = var7.bind(var4)(var6, var5);
+            var5 = 'trailing';
+            var1[4] = var6;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['TableSwitchRow'] = var2;
+    return var1;
+})();

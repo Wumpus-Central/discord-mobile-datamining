@@ -1,0 +1,34 @@
+// discord_common/js/shared/shared-constants/GuildProfileLimits.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var3 = exports;
+    var1 = global;
+    var5 = var1.Object;
+    var4 = var5.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var4.bind(var5)(var3, var1, var2);
+    var2 = dependencyMap;
+    var1 = 0;
+    var4 = var2[var1];
+    var2 = require;
+    var1 = undefined;
+    var5 = var2.bind(var1)(var4);
+    var4 = var5.fileFinishedImporting;
+    var2 = '../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx';
+    var2 = var4.bind(var5)(var2);
+    var2 = 5;
+    var3['MAX_TRAITS'] = var2;
+    var2 = 24;
+    var3['MAX_TRAIT_LABEL_LENGTH'] = var2;
+    var2 = 2;
+    var3['TAG_MIN_LENGTH'] = var2;
+    var2 = 4;
+    var3['TAG_MAX_LENGTH'] = var2;
+    var2 = 20;
+    var3['MAX_GAMES'] = var2;
+    var2 = 300;
+    var3['MAX_DESCRIPTION_LENGTH'] = var2;
+    return var1;
+})();

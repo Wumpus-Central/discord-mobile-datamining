@@ -1,0 +1,2561 @@
+// app/modules/user_profile/UserProfileStore.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var10 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var10;
+    var _closure1_slot2 = var6;
+    var1 = function _isNativeReflectConstruct() {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+case 2: // try_start_0
+            var2 = global;
+            var3 = var2.Boolean;
+            var3 = var3.prototype;
+            var4 = var3.valueOf;
+            var3 = var4.call;
+            var8 = var2.Reflect;
+            var7 = var8.construct;
+            var6 = var2.Boolean;
+            var5 = new Array(0);
+            var2 = function() {
+                var1 = undefined;
+                return var1;
+            };
+            var2 = var7.bind(var8)(var6, var5, var2);
+            var2 = var3.bind(var4)(var2);
+            var2 = !var2;
+            var _closure2_slot0 = var2;
+case 3: // try_end0
+            _fun0001_ip = 4; continue _fun0001;
+case 5: // catch_target0
+            CatchBlockStart(arg_register=1);
+case 4:
+            var2 = function _isNativeReflectConstruct() {
+                var1 = _closure2_slot0;
+                var1 = !var1;
+                var1 = !var1;
+                return var1;
+            };
+            _closure1_slot29 = var2;
+            var1 = undefined;
+            var1 = var2.bind(var1)();
+            return var1;
+        }
+    };
+    var _closure1_slot29 = var1;
+    var1 = function _createForOfIteratorHelperLoose(arg1, arg2) {
+        _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+            var3 = arg1;
+            var _closure2_slot0 = var3;
+            var5 = global;
+            var2 = var5.Symbol;
+            var4 = 'undefined';
+            var2 = typeof var2;
+            var2 = var4 !== var2;
+            if(!var2) { _fun0002_ip = 6; continue _fun0002 }
+case 7:
+            var4 = var5.Symbol;
+            var4 = var4.iterator;
+            var2 = var3[var4];
+case 6:
+            if(var2) { _fun0002_ip = 8; continue _fun0002 }
+case 9:
+            var2 = var3["@@iterator"];
+case 8:
+            if(var2) { _fun0002_ip = 10; continue _fun0002 }
+case 11:
+            var6 = var5.Array;
+            var4 = var6.isArray;
+            var6 = var4.bind(var6)(var3);
+            var4 = var2;
+            if(var6) { _fun0002_ip = 12; continue _fun0002 }
+case 13:
+            var8 = undefined;
+            var6 = undefined;
+            if(!var3) { _fun0002_ip = 14; continue _fun0002 }
+case 15:
+            var9 = 'string';
+            var7 = typeof var3;
+            if(!(var9 !== var7)) { _fun0002_ip = 16; continue _fun0002 }
+case 17:
+            var7 = {};
+            var9 = var7.toString;
+            var7 = var9.call;
+            var11 = var7.bind(var9)(var3);
+            var10 = var11.slice;
+            var9 = 8;
+            var7 = -1;
+            var9 = var10.bind(var11)(var9, var7);
+            var7 = 'Object';
+            var7 = var7 === var9;
+            if(!var7) { _fun0002_ip = 18; continue _fun0002 }
+case 19:
+            var7 = var3.constructor;
+case 18:
+            var10 = var9;
+            if(!var7) { _fun0002_ip = 20; continue _fun0002 }
+case 21:
+            var7 = var3.constructor;
+            var10 = var7.name;
+case 20:
+            var7 = 'Map';
+            if(!(var7 !== var10)) { _fun0002_ip = 22; continue _fun0002 }
+case 23:
+            var7 = 'Set';
+            if(!(var7 !== var10)) { _fun0002_ip = 22; continue _fun0002 }
+case 24:
+            var7 = 'Arguments';
+            if(!(var7 !== var10)) { _fun0002_ip = 25; continue _fun0002 }
+case 26:
+            var9 = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
+            var7 = var9.test;
+            var9 = var7.bind(var9)(var10);
+            var7 = undefined;
+            if(!var9) { _fun0002_ip = 27; continue _fun0002 }
+case 25:
+            var9 = _closure1_slot31;
+            var7 = var9.bind(var8)(var3, var8);
+case 27:
+            _fun0002_ip = 28; continue _fun0002;
+case 22:
+            var10 = var5.Array;
+            var9 = var10.from;
+            var7 = var9.bind(var10)(var3);
+case 28:
+            var6 = var7;
+            _fun0002_ip = 14; continue _fun0002;
+case 16:
+            var7 = _closure1_slot31;
+            var6 = var7.bind(var8)(var3, var8);
+case 14:
+            var4 = var6;
+            if(var4) { _fun0002_ip = 12; continue _fun0002 }
+case 29:
+            var7 = var5.TypeError;
+            var5 = var7.prototype;
+            var6 = Object.create(var5, {constructor: {value: var7}});
+            var13 = 'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.';
+            var14 = var6;
+            var5 = new var14[var7](var13, var12);
+            var5 = var5 instanceof Object ? var5 : var6;
+            throw var5;
+case 12:
+            if(!var4) { _fun0002_ip = 30; continue _fun0002 }
+case 31:
+            _closure2_slot0 = var4;
+case 30:
+            var4 = 0;
+            var _closure2_slot1 = var4;
+            var1 = function() {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var2 = _closure2_slot1;
+                    var1 = _closure2_slot0;
+                    var1 = var1.length;
+                    if(!(!(var2 >= var1))) { _fun0003_ip = 32; continue _fun0003 }
+case 33:
+                    var1 = {};
+                    var2 = false;
+                    var1['done'] = var2;
+                    var3 = _closure2_slot0;
+                    var2 = _closure2_slot1;
+                    var2 = parseFloat(var2);
+                    var4 = var2 + 1;
+                    _closure2_slot1 = var4;
+                    var2 = var3[var2];
+                    var1['value'] = var2;
+                    _fun0003_ip = 34; continue _fun0003;
+case 32:
+                    var2 = {};
+                    var3 = true;
+                    var2['done'] = var3;
+                    var1 = var2;
+case 34:
+                    return var1;
+                }
+            };
+            return var1;
+case 10:
+            var1 = var2.call;
+            var3 = var1.bind(var2)(var3);
+            var2 = var3.next;
+            var1 = var2.bind;
+            var1 = var1.bind(var2)(var3);
+            return var1;
+        }
+    };
+    var _closure1_slot30 = var1;
+    var1 = function _arrayLikeToArray(arg1, arg2) {
+        _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+            var4 = arg1;
+            var1 = null;
+            var3 = undefined;
+            var1 = var1 == var3;
+            if(var1) { _fun0004_ip = 35; continue _fun0004 }
+case 36:
+            var2 = var4.length;
+            var1 = var3 > var2;
+case 35:
+            var2 = undefined;
+            if(!var1) { _fun0004_ip = 37; continue _fun0004 }
+case 38:
+            var2 = var4.length;
+case 37:
+            var1 = global;
+            var1 = var1.Array;
+            var1 = var1.bind(var3)(var2);
+            var3 = 0;
+            var5 = var3 < var2;
+            if(!var5) { _fun0004_ip = 3; continue _fun0004 }
+case 8:
+            var5 = var4[var3];
+            var1[var3] = var5;
+            var3 = var3 + 1;
+            if(var3 < var2) { _fun0004_ip = 8; continue _fun0004 }
+case 3:
+            return var1;
+        }
+    };
+    var _closure1_slot31 = var1;
+    var1 = function createUserWidgetFromServer(arg1) {
+        _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+            var1 = arg1;
+            var2 = var1;
+            var1 = var1.data;
+            var4 = var1.type;
+            var5 = _closure1_slot0;
+            var3 = _closure1_slot2;
+            var7 = 13;
+            var3 = var3[var7];
+            var6 = undefined;
+            var3 = var5.bind(var6)(var3);
+            var3 = var3.WidgetType;
+            var3 = var3.CURRENT_GAMES;
+            if(!(var3 !== var4)) { _fun0005_ip = 39; continue _fun0005 }
+case 40:
+            var5 = _closure1_slot0;
+            var3 = _closure1_slot2;
+            var3 = var3[var7];
+            var3 = var5.bind(var6)(var3);
+            var3 = var3.WidgetType;
+            var3 = var3.FAVORITE_GAMES;
+            if(!(var3 !== var4)) { _fun0005_ip = 39; continue _fun0005 }
+case 15:
+            var5 = _closure1_slot0;
+            var3 = _closure1_slot2;
+            var3 = var3[var7];
+            var3 = var5.bind(var6)(var3);
+            var3 = var3.WidgetType;
+            var3 = var3.PLAYED_GAMES;
+            if(!(var3 !== var4)) { _fun0005_ip = 39; continue _fun0005 }
+case 41:
+            var5 = _closure1_slot0;
+            var3 = _closure1_slot2;
+            var3 = var3[var7];
+            var3 = var5.bind(var6)(var3);
+            var3 = var3.WidgetType;
+            var3 = var3.WANT_TO_PLAY_GAMES;
+            if(!(var3 !== var4)) { _fun0005_ip = 39; continue _fun0005 }
+case 42:
+            var5 = _closure1_slot0;
+            var3 = _closure1_slot2;
+            var3 = var3[var7];
+            var3 = var5.bind(var6)(var3);
+            var3 = var3.WidgetType;
+            var3 = var3.APPLICATION;
+            if(!(var3 !== var4)) { _fun0005_ip = 43; continue _fun0005 }
+case 44:
+            var5 = _closure1_slot0;
+            var3 = _closure1_slot2;
+            var3 = var3[var7];
+            var3 = var5.bind(var6)(var3);
+            var3 = var3.WidgetType;
+            var3 = var3.PERSONAL;
+            if(!(var3 !== var4)) { _fun0005_ip = 45; continue _fun0005 }
+case 46:
+            return var6;
+case 45:
+            var3 = var2;
+            var3 = var3.data;
+            var5 = var3.title;
+            var3 = null;
+            if(!(var3 != var5)) { _fun0005_ip = 47; continue _fun0005 }
+case 48: // try_start_0
+            var3 = global;
+            var7 = var3.JSON;
+            var5 = var7.parse;
+            var8 = var2;
+            var3 = var8.data;
+            var3 = var3.title;
+            var5 = var5.bind(var7)(var3);
+            var7 = _closure1_slot0;
+            var9 = _closure1_slot2;
+            var3 = 17;
+            var3 = var9[var3];
+            var3 = var7.bind(var6)(var3);
+            var7 = var3.UserProfilePersonalWidget;
+            var3 = {};
+            var8 = var8.id;
+            var3['id'] = var8;
+            var8 = var5.header;
+            var3['header'] = var8;
+            var8 = var5.top;
+            var3['top'] = var8;
+            var5 = var5.bottom;
+            var3['bottom'] = var5;
+            var5 = var7.prototype;
+            var5 = Object.create(var5, {constructor: {value: var7}});
+            var12 = var5;
+            var11 = var3;
+            var3 = new var12[var7](var11, var10);
+            var3 = var3 instanceof Object ? var3 : var5;
+case 49: // try_end0
+            return var3;
+case 50: // catch_target0
+            CatchBlockStart(arg_register=2);
+            return var6;
+case 47:
+            return var6;
+case 43:
+            var5 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var3 = 16;
+            var3 = var7[var3];
+            var3 = var5.bind(var6)(var3);
+            var7 = var3.ApplicationWidget;
+            var3 = {};
+            var5 = var2;
+            var8 = var5.id;
+            var3['id'] = var8;
+            var5 = var5.data;
+            var5 = var5.application_id;
+            var3['applicationId'] = var5;
+            var5 = var7.prototype;
+            var5 = Object.create(var5, {constructor: {value: var7}});
+            var12 = var5;
+            var11 = var3;
+            var3 = new var12[var7](var11, var10);
+            var3 = var3 instanceof Object ? var3 : var5;
+            return var3;
+case 39:
+            var5 = var2;
+            var2 = var5.data;
+            var7 = var2.games;
+            var3 = var7.map;
+            var2 = function(arg1) {
+                var2 = arg1;
+                var1 = {};
+                var3 = var2.game_id;
+                var1['applicationId'] = var3;
+                var3 = var2.comment;
+                var1['comment'] = var3;
+                var2 = var2.tags;
+                var1['tags'] = var2;
+                return var1;
+            };
+            var9 = var3.bind(var7)(var2);
+            var3 = _closure1_slot1;
+            var7 = _closure1_slot2;
+            var2 = 14;
+            var2 = var7[var2];
+            var8 = var3.bind(var6)(var2);
+            var3 = var8.uniqBy;
+            var2 = 'applicationId';
+            var2 = var3.bind(var8)(var9, var2);
+            var3 = _closure1_slot0;
+            var1 = 15;
+            var1 = var7[var1];
+            var1 = var3.bind(var6)(var1);
+            var3 = var1.BaseGameWidget;
+            var1 = {};
+            var5 = var5.id;
+            var1['id'] = var5;
+            var1['type'] = var4;
+            var1['games'] = var2;
+            var2 = var3.prototype;
+            var2 = Object.create(var2, {constructor: {value: var3}});
+            var12 = var2;
+            var11 = var1;
+            var1 = new var12[var3](var11, var10);
+            var1 = var1 instanceof Object ? var1 : var2;
+            return var1;
+        }
+    };
+    var _closure1_slot32 = var1;
+    var1 = function checkUserProfileCollectiblesExpiration(arg1, arg2) {
+        _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+            var7 = arg1;
+            var8 = arg2;
+            var _closure2_slot0 = var7;
+            var _closure2_slot1 = var8;
+            var3 = null;
+            if(!(var3 == var8)) { _fun0006_ip = 51; continue _fun0006 }
+case 52:
+            var4 = _closure1_slot18;
+            var1 = var4.get;
+            var6 = var1.bind(var4)(var7);
+            _fun0006_ip = 53; continue _fun0006;
+case 51:
+            var4 = _closure1_slot19;
+            var1 = var4.get;
+            var5 = var1.bind(var4)(var7);
+            var4 = var3 == var5;
+            var1 = undefined;
+            if(var4) { _fun0006_ip = 54; continue _fun0006 }
+case 34:
+            var4 = var5.get;
+            var1 = var4.bind(var5)(var8);
+case 54:
+            var6 = var1;
+case 53:
+            var _closure2_slot2 = var6;
+            var5 = var3 == var6;
+            var1 = undefined;
+            var4 = undefined;
+            if(var5) { _fun0006_ip = 55; continue _fun0006 }
+case 56:
+            var4 = var6.collectibles;
+case 55:
+            if(!(var3 != var4)) { _fun0006_ip = 57; continue _fun0006 }
+case 58:
+            var5 = new Array(0);
+            var _closure2_slot3 = var5;
+            var9 = var6.collectibles;
+            var8 = var9.forEach;
+            var4 = function(arg1) {
+                _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+                    var3 = arg1;
+                    var1 = var3.expiresAt;
+                    var8 = null;
+                    if(!(var8 != var1)) { _fun0007_ip = 59; continue _fun0007 }
+case 60:
+                    var2 = var3.expiresAt;
+                    var1 = var2.getTime;
+                    var4 = var1.bind(var2)();
+                    var2 = global;
+                    var5 = var2.Date;
+                    var1 = var5.now;
+                    var1 = var1.bind(var5)();
+                    var7 = var4 - var1;
+                    var1 = 0;
+                    if(!(!(var7 <= var1))) { _fun0007_ip = 61; continue _fun0007 }
+case 62:
+                    var5 = _closure1_slot20;
+                    var4 = _closure2_slot0;
+                    var4 = var5[var4];
+                    if(!(var8 == var4)) { _fun0007_ip = 63; continue _fun0007 }
+case 13:
+                    var9 = _closure1_slot20;
+                    var5 = _closure2_slot0;
+                    var4 = {};
+                    var11 = _closure1_slot15;
+                    var10 = {};
+                    var4[10] = var10;
+                    var9[var5] = var4;
+case 63:
+                    var5 = _closure1_slot20;
+                    var4 = _closure2_slot0;
+                    var5 = var5[var4];
+                    var4 = _closure2_slot1;
+                    if(!(var8 == var4)) { _fun0007_ip = 64; continue _fun0007 }
+case 65:
+                    var4 = _closure1_slot15;
+                    _fun0007_ip = 66; continue _fun0007;
+case 64:
+                    var4 = _closure2_slot1;
+case 66:
+                    var4 = var5[var4];
+                    if(!(var8 == var4)) { _fun0007_ip = 67; continue _fun0007 }
+case 68:
+                    var5 = _closure1_slot20;
+                    var4 = _closure2_slot0;
+                    var9 = var5[var4];
+                    var4 = _closure2_slot1;
+                    if(!(var8 == var4)) { _fun0007_ip = 69; continue _fun0007 }
+case 21:
+                    var5 = _closure1_slot15;
+                    _fun0007_ip = 20; continue _fun0007;
+case 69:
+                    var5 = _closure2_slot1;
+case 20:
+                    var4 = {};
+                    var9[var5] = var4;
+case 67:
+                    var5 = _closure1_slot20;
+                    var4 = _closure2_slot0;
+                    var5 = var5[var4];
+                    var4 = _closure2_slot1;
+                    if(!(var8 == var4)) { _fun0007_ip = 70; continue _fun0007 }
+case 26:
+                    var4 = _closure1_slot15;
+                    _fun0007_ip = 71; continue _fun0007;
+case 70:
+                    var4 = _closure2_slot1;
+case 71:
+                    var5 = var5[var4];
+                    var4 = var3.skuId;
+                    var4 = var5[var4];
+                    if(!(var8 == var4)) { _fun0007_ip = 12; continue _fun0007 }
+case 72:
+                    var5 = _closure1_slot20;
+                    var4 = _closure2_slot0;
+                    var5 = var5[var4];
+                    var4 = _closure2_slot1;
+                    if(!(var8 == var4)) { _fun0007_ip = 73; continue _fun0007 }
+case 74:
+                    var4 = _closure1_slot15;
+                    _fun0007_ip = 75; continue _fun0007;
+case 73:
+                    var4 = _closure2_slot1;
+case 75:
+                    var9 = var5[var4];
+                    var5 = var3.skuId;
+                    var11 = _closure1_slot0;
+                    var10 = _closure1_slot2;
+                    var4 = 18;
+                    var10 = var10[var4];
+                    var4 = undefined;
+                    var4 = var11.bind(var4)(var10);
+                    var4 = var4.Timeout;
+                    var10 = var4.prototype;
+                    var10 = Object.create(var10, {constructor: {value: var4}});
+                    var14 = var10;
+                    var4 = new var14[var4](var13);
+                    var4 = var4 instanceof Object ? var4 : var10;
+                    var9[var5] = var4;
+case 12:
+                    var5 = _closure1_slot20;
+                    var4 = _closure2_slot0;
+                    var5 = var5[var4];
+                    var4 = _closure2_slot1;
+                    if(!(var8 == var4)) { _fun0007_ip = 76; continue _fun0007 }
+case 10:
+                    var4 = _closure1_slot15;
+                    _fun0007_ip = 77; continue _fun0007;
+case 76:
+                    var4 = _closure2_slot1;
+case 77:
+                    var5 = var5[var4];
+                    var4 = var3.skuId;
+                    var5 = var5[var4];
+                    var4 = var5.start;
+                    var6 = var2.Math;
+                    var2 = var6.min;
+                    var1 = _closure1_slot14;
+                    var2 = var2.bind(var6)(var1, var7);
+                    var1 = function() {
+                        var4 = _closure1_slot33;
+                        var3 = _closure2_slot0;
+                        var2 = _closure2_slot1;
+                        var1 = undefined;
+                        var2 = var4.bind(var1)(var3, var2);
+                        return var1;
+                    };
+                    var1 = var4.bind(var5)(var2, var1);
+                    _fun0007_ip = 59; continue _fun0007;
+case 61:
+                    var2 = _closure2_slot3;
+                    var1 = var2.push;
+                    var1 = var1.bind(var2)(var3);
+case 59:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var4 = var8.bind(var9)(var4);
+            var8 = var5.length;
+            var4 = 0;
+            if(!(var4 !== var8)) { _fun0006_ip = 57; continue _fun0006 }
+case 78:
+            var9 = var6.collectibles;
+            var8 = var9.filter;
+            var4 = function(arg1) {
+                var3 = _closure2_slot3;
+                var2 = var3.includes;
+                var1 = arg1;
+                var1 = var2.bind(var3)(var1);
+                var1 = !var1;
+                return var1;
+            };
+            var4 = var8.bind(var9)(var4);
+            var6['collectibles'] = var4;
+            var4 = var5.forEach;
+            var2 = function(arg1) {
+                _fun0008: for(var _fun0008_ip = 0; ; ) switch(_fun0008_ip) {
+case 0:
+                    var2 = arg1;
+                    var4 = var2.type;
+                    var6 = _closure1_slot0;
+                    var1 = _closure1_slot2;
+                    var7 = 19;
+                    var3 = var1[var7];
+                    var1 = undefined;
+                    var3 = var6.bind(var1)(var3);
+                    var3 = var3.CollectiblesItemType;
+                    var3 = var3.PROFILE_EFFECT;
+                    if(!(var4 !== var3)) { _fun0008_ip = 79; continue _fun0008 }
+case 9:
+                    var4 = var2.type;
+                    var6 = _closure1_slot0;
+                    var3 = _closure1_slot2;
+                    var3 = var3[var7];
+                    var3 = var6.bind(var1)(var3);
+                    var3 = var3.CollectiblesItemType;
+                    var3 = var3.PROFILE_FRAME;
+                    if(!(var4 === var3)) { _fun0008_ip = 80; continue _fun0008 }
+case 81:
+                    var3 = _closure2_slot2;
+                    var3['profileFrame'] = var1;
+                    _fun0008_ip = 80; continue _fun0008;
+case 79:
+                    var3 = _closure2_slot2;
+                    var3['profileEffect'] = var1;
+case 80:
+                    var4 = _closure1_slot20;
+                    var3 = _closure2_slot0;
+                    var7 = var4[var3];
+                    var6 = null;
+                    var4 = var6 == var7;
+                    var3 = var7;
+                    if(var4) { _fun0008_ip = 82; continue _fun0008 }
+case 83:
+                    var9 = _closure2_slot1;
+                    if(!(var6 == var9)) { _fun0008_ip = 84; continue _fun0008 }
+case 85:
+                    var5 = _closure1_slot15;
+                    _fun0008_ip = 86; continue _fun0008;
+case 84:
+                    var5 = _closure2_slot1;
+case 86:
+                    var5 = var7[var5];
+                    var4 = var6 == var5;
+                    var3 = var5;
+case 82:
+                    if(var4) { _fun0008_ip = 87; continue _fun0008 }
+case 88:
+                    var2 = var2.skuId;
+                    var2 = delete var3[var2];
+case 87:
+                    return var1;
+                }
+            };
+            var2 = var4.bind(var5)(var2);
+            var2 = 'guildId';
+            var4 = var2 in var6;
+            if(var4) { _fun0006_ip = 89; continue _fun0006 }
+case 90:
+            var5 = _closure1_slot18;
+            var4 = var5.set;
+            var4 = var4.bind(var5)(var7, var6);
+            _fun0006_ip = 73; continue _fun0006;
+case 89:
+            var5 = _closure1_slot19;
+            var4 = var5.get;
+            var5 = var4.bind(var5)(var7);
+            if(!(var3 != var5)) { _fun0006_ip = 73; continue _fun0006 }
+case 91:
+            var4 = var5.set;
+            var3 = var6.guildId;
+            var3 = var4.bind(var5)(var3, var6);
+case 73:
+            var3 = _closure1_slot28;
+            var2 = var3.emitChange;
+            var2 = var2.bind(var3)();
+case 57:
+            return var1;
+        }
+    };
+    var _closure1_slot33 = var1;
+    var1 = function handleLogout() {
+        var3 = _closure1_slot16;
+        var1 = var3.clear;
+        var1 = var1.bind(var3)();
+        var3 = _closure1_slot17;
+        var1 = var3.clear;
+        var1 = var1.bind(var3)();
+        var3 = _closure1_slot18;
+        var1 = var3.clear;
+        var1 = var1.bind(var3)();
+        var3 = _closure1_slot19;
+        var1 = var3.clear;
+        var1 = var1.bind(var3)();
+        var3 = _closure1_slot21;
+        var1 = var3.clear;
+        var1 = var1.bind(var3)();
+        var3 = _closure1_slot22;
+        var1 = var3.clear;
+        var1 = var1.bind(var3)();
+        var3 = _closure1_slot23;
+        var1 = var3.clear;
+        var1 = var1.bind(var3)();
+        var1 = false;
+        _closure1_slot26 = var1;
+        var1 = undefined;
+        return var1;
+    };
+    var _closure1_slot34 = var1;
+    var1 = function handleMutualFriendsFetchStart(arg1) {
+        var1 = arg1;
+        var3 = var1.userId;
+        var2 = _closure1_slot17;
+        var1 = var2.add;
+        var1 = var1.bind(var2)(var3);
+        var1 = undefined;
+        return var1;
+    };
+    var _closure1_slot35 = var1;
+    var1 = function handleMutualFriendsFetchFailure(arg1) {
+        var1 = arg1;
+        var3 = var1.userId;
+        var2 = _closure1_slot17;
+        var1 = var2.delete;
+        var1 = var1.bind(var2)(var3);
+        var1 = undefined;
+        return var1;
+    };
+    var _closure1_slot36 = var1;
+    var1 = function getMutualFriends(arg1) {
+        var3 = _closure1_slot1;
+        var4 = _closure1_slot2;
+        var2 = 14;
+        var2 = var4[var2];
+        var4 = undefined;
+        var3 = var3.bind(var4)(var2);
+        var2 = arg1;
+        var4 = var3.bind(var4)(var2);
+        var3 = var4.map;
+        var2 = function(arg1) {
+            var2 = arg1;
+            var1 = {};
+            var3 = var2.id;
+            var1['key'] = var3;
+            var6 = _closure1_slot9;
+            var4 = {};
+            var10 = var4;
+            var9 = var2;
+            var5 = copyDataProperties(var10, var9);
+            var8 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var5 = 20;
+            var7 = var7[var5];
+            var5 = undefined;
+            var8 = var8.bind(var5)(var7);
+            var7 = var8.parseServerUserCollectibles;
+            var5 = var2.collectibles;
+            var7 = var7.bind(var8)(var5);
+            var5 = 'collectibles';
+            var4[4] = var7;
+            var5 = var6.prototype;
+            var5 = Object.create(var5, {constructor: {value: var6}});
+            var11 = var5;
+            var10 = var4;
+            var4 = new var11[var6](var10, var9);
+            var4 = var4 instanceof Object ? var4 : var5;
+            var1['user'] = var4;
+            var4 = _closure1_slot12;
+            var3 = var4.getStatus;
+            var2 = var2.id;
+            var2 = var3.bind(var4)(var2);
+            var1['status'] = var2;
+            return var1;
+        };
+        var3 = var3.bind(var4)(var2);
+        var2 = var3.sortBy;
+        var1 = function(arg1) {
+            var1 = arg1;
+            var1 = var1.user;
+            var2 = var1.username;
+            var1 = var2.toLowerCase;
+            var1 = var1.bind(var2)();
+            return var1;
+        };
+        var2 = var2.bind(var3)(var1);
+        var1 = var2.value;
+        var1 = var1.bind(var2)();
+        return var1;
+    };
+    var _closure1_slot37 = var1;
+    var1 = function handleMutualFriendsFetchSuccess(arg1) {
+        var2 = arg1;
+        var5 = _closure1_slot17;
+        var4 = var5.delete;
+        var1 = var2.userId;
+        var1 = var4.bind(var5)(var1);
+        var7 = _closure1_slot21;
+        var6 = var7.set;
+        var5 = var2.userId;
+        var8 = _closure1_slot37;
+        var4 = var2.mutualFriends;
+        var1 = undefined;
+        var4 = var8.bind(var1)(var4);
+        var4 = var6.bind(var7)(var5, var4);
+        var5 = _closure1_slot22;
+        var4 = var5.set;
+        var3 = var2.userId;
+        var2 = var2.mutualFriends;
+        var2 = var2.length;
+        var2 = var4.bind(var5)(var3, var2);
+        return var1;
+    };
+    var _closure1_slot38 = var1;
+    var1 = function handleProfileFetch(arg1) {
+        _fun0009: for(var _fun0009_ip = 0; ; ) switch(_fun0009_ip) {
+case 0:
+            var1 = arg1;
+            var2 = var1.userProfile;
+            var10 = var1.fetchStartedAt;
+            var8 = var1.guildId;
+            var1 = undefined;
+            var _closure2_slot0 = var1;
+            var _closure2_slot1 = var1;
+            var _closure2_slot2 = var1;
+            var5 = null;
+            if(!(var5 == var8)) { _fun0009_ip = 92; continue _fun0009 }
+case 93:
+            var4 = var2.guild_member_profile;
+            var7 = var5 == var4;
+            var3 = undefined;
+            if(var7) { _fun0009_ip = 94; continue _fun0009 }
+case 95:
+            var3 = var4.guild_id;
+case 94:
+            var8 = var3;
+case 92:
+            if(!(var5 == var8)) { _fun0009_ip = 96; continue _fun0009 }
+case 97:
+            var8 = _closure1_slot15;
+case 96:
+            var9 = _closure1_slot16;
+            var7 = var9.get;
+            var4 = var2.user;
+            var4 = var4.id;
+            var7 = var7.bind(var9)(var4);
+            if(!(var5 != var7)) { _fun0009_ip = 98; continue _fun0009 }
+case 99:
+            var4 = var7.delete;
+            var4 = var4.bind(var7)(var8);
+case 98:
+            var8 = _closure1_slot17;
+            var7 = var8.delete;
+            var4 = var2.user;
+            var4 = var4.id;
+            var4 = var7.bind(var8)(var4);
+            var4 = var2.mutual_guilds;
+            if(!(var5 != var4)) { _fun0009_ip = 27; continue _fun0009 }
+case 78:
+            var4 = {};
+            _closure2_slot0 = var4;
+            var8 = var2.mutual_guilds;
+            var7 = var8.forEach;
+            var4 = function(arg1) {
+                _fun0010: for(var _fun0010_ip = 0; ; ) switch(_fun0010_ip) {
+case 0:
+                    var1 = arg1;
+                    var3 = var1.id;
+                    var4 = var1.nick;
+                    var2 = _closure1_slot11;
+                    var1 = var2.getGuild;
+                    var5 = var1.bind(var2)(var3);
+                    var1 = null;
+                    if(!(var1 != var5)) { _fun0010_ip = 40; continue _fun0010 }
+case 100:
+                    var2 = _closure2_slot0;
+                    var1 = {};
+                    var1['guild'] = var5;
+                    var1['nick'] = var4;
+                    var2[var3] = var1;
+case 40:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var4 = var7.bind(var8)(var4);
+            var9 = _closure1_slot23;
+            var8 = var9.set;
+            var4 = var2.user;
+            var7 = var4.id;
+            var11 = _closure1_slot13;
+            var4 = var11.getFlattenedGuildIds;
+            var12 = var4.bind(var11)();
+            var11 = var12.filter;
+            var4 = function(arg1) {
+                var2 = _closure2_slot0;
+                var1 = arg1;
+                var2 = var2[var1];
+                var1 = null;
+                var1 = var1 != var2;
+                return var1;
+            };
+            var12 = var11.bind(var12)(var4);
+            var11 = var12.map;
+            var4 = function(arg1) {
+                var3 = arg1;
+                var1 = {};
+                var4 = _closure2_slot0;
+                var4 = var4[var3];
+                var4 = var4.guild;
+                var1['guild'] = var4;
+                var2 = _closure2_slot0;
+                var2 = var2[var3];
+                var2 = var2.nick;
+                var1['nick'] = var2;
+                return var1;
+            };
+            var4 = var11.bind(var12)(var4);
+            var4 = var8.bind(var9)(var7, var4);
+case 27:
+            var4 = var2.mutual_friends_count;
+            if(!(var5 != var4)) { _fun0009_ip = 12; continue _fun0009 }
+case 101:
+            var7 = var2.mutual_friends_count;
+            var9 = _closure1_slot22;
+            var8 = var9.set;
+            var4 = var2.user;
+            var4 = var4.id;
+            var4 = var8.bind(var9)(var4, var7);
+            var4 = 0;
+            if(!(var4 === var7)) { _fun0009_ip = 12; continue _fun0009 }
+case 102:
+            var9 = _closure1_slot21;
+            var8 = var9.set;
+            var4 = var2.user;
+            var7 = var4.id;
+            var4 = _closure1_slot24;
+            var4 = var8.bind(var9)(var7, var4);
+case 12:
+            var4 = var2.mutual_friends;
+            if(!(var5 != var4)) { _fun0009_ip = 103; continue _fun0009 }
+case 104:
+            var9 = _closure1_slot21;
+            var8 = var9.set;
+            var4 = var2.user;
+            var7 = var4.id;
+            var11 = _closure1_slot37;
+            var4 = var2.mutual_friends;
+            var4 = var11.bind(var1)(var4);
+            var4 = var8.bind(var9)(var7, var4);
+            var9 = _closure1_slot22;
+            var8 = var9.set;
+            var4 = var2.user;
+            var7 = var4.id;
+            var4 = var2.mutual_friends;
+            var4 = var4.length;
+            var4 = var8.bind(var9)(var7, var4);
+case 103:
+            var4 = var2.premium_since;
+            var4 = var5 != var4;
+            var12 = null;
+            if(!var4) { _fun0009_ip = 105; continue _fun0009 }
+case 59:
+            var4 = global;
+            var8 = var4.Date;
+            var30 = var2.premium_since;
+            var7 = var8.prototype;
+            var7 = Object.create(var7, {constructor: {value: var8}});
+            var31 = var7;
+            var4 = new var31[var8](var30, var29);
+            var12 = var4 instanceof Object ? var4 : var7;
+case 105:
+            _closure2_slot1 = var12;
+            var4 = var2.premium_guild_since;
+            var4 = var5 != var4;
+            var9 = null;
+            if(!var4) { _fun0009_ip = 106; continue _fun0009 }
+case 107:
+            var4 = global;
+            var8 = var4.Date;
+            var30 = var2.premium_guild_since;
+            var7 = var8.prototype;
+            var7 = Object.create(var7, {constructor: {value: var8}});
+            var31 = var7;
+            var4 = new var31[var8](var30, var29);
+            var9 = var4 instanceof Object ? var4 : var7;
+case 106:
+            _closure2_slot2 = var9;
+            var25 = var2.application;
+            var4 = var2.badges;
+            if(!(var5 == var4)) { _fun0009_ip = 108; continue _fun0009 }
+case 109:
+            var23 = new Array(0);
+            _fun0009_ip = 110; continue _fun0009;
+case 108:
+            var8 = var2.badges;
+            var7 = var8.map;
+            var4 = function(arg1) {
+                _fun0011: for(var _fun0011_ip = 0; ; ) switch(_fun0011_ip) {
+case 0:
+                    var2 = arg1;
+                    var4 = _closure1_slot0;
+                    var5 = _closure1_slot2;
+                    var3 = 21;
+                    var3 = var5[var3];
+                    var8 = undefined;
+                    var5 = var4.bind(var8)(var3);
+                    var4 = var5.getTieredTenureBadgeData;
+                    var3 = var2.id;
+                    var5 = var4.bind(var5)(var3);
+                    var4 = var2.id;
+                    var3 = 'premium';
+                    if(!(var3 !== var4)) { _fun0011_ip = 111; continue _fun0011 }
+case 95:
+                    var3 = null;
+                    if(!(var3 != var5)) { _fun0011_ip = 112; continue _fun0011 }
+case 111:
+                    var3 = _closure2_slot1;
+                    var4 = null;
+                    if(!(var4 == var3)) { _fun0011_ip = 113; continue _fun0011 }
+case 112:
+                    var9 = var2.id;
+                    var6 = var9.startsWith;
+                    var3 = 'guild_booster_lvl';
+                    var6 = var6.bind(var9)(var3);
+                    var3 = var2;
+                    if(!var6) { _fun0011_ip = 114; continue _fun0011 }
+case 99:
+                    var9 = _closure2_slot2;
+                    var6 = null;
+                    var3 = var2;
+                    if(!(var6 != var9)) { _fun0011_ip = 114; continue _fun0011 }
+case 115:
+                    var6 = {};
+                    var16 = var6;
+                    var15 = var2;
+                    var9 = copyDataProperties(var16, var15);
+                    var10 = _closure1_slot0;
+                    var14 = _closure1_slot2;
+                    var9 = 22;
+                    var11 = var14[var9];
+                    var11 = var10.bind(var8)(var11);
+                    var12 = var11.intl;
+                    var11 = var12.formatToPlainString;
+                    var9 = var14[var9];
+                    var9 = var10.bind(var8)(var9);
+                    var9 = var9.t;
+                    var10 = var9.IWkAq7;
+                    var9 = {};
+                    var13 = _closure2_slot2;
+                    var9['date'] = var13;
+                    var10 = var11.bind(var12)(var10, var9);
+                    var9 = 'description';
+                    var6[8] = var10;
+                    var3 = var6;
+case 114:
+                    return var3;
+case 113:
+                    var6 = _closure1_slot0;
+                    var3 = _closure1_slot2;
+                    var9 = 22;
+                    var10 = var3[var9];
+                    var10 = var6.bind(var8)(var10);
+                    var11 = var10.intl;
+                    var10 = var11.formatToPlainString;
+                    var3 = var3[var9];
+                    var3 = var6.bind(var8)(var3);
+                    var3 = var3.t;
+                    var6 = var3["8zbGNR"];
+                    var3 = {};
+                    var12 = _closure2_slot1;
+                    var3['date'] = var12;
+                    var3 = var10.bind(var11)(var6, var3);
+                    if(!(var4 != var5)) { _fun0011_ip = 77; continue _fun0011 }
+case 29:
+                    var4 = _closure1_slot0;
+                    var1 = _closure1_slot2;
+                    var5 = var1[var9];
+                    var5 = var4.bind(var8)(var5);
+                    var6 = var5.intl;
+                    var5 = var6.formatToPlainString;
+                    var1 = var1[var9];
+                    var1 = var4.bind(var8)(var1);
+                    var1 = var1.t;
+                    var4 = var1.Hu4jfi;
+                    var1 = {};
+                    var7 = _closure2_slot1;
+                    var1['date'] = var7;
+                    var3 = var5.bind(var6)(var4, var1);
+case 77:
+                    var1 = {};
+                    var16 = var1;
+                    var15 = var2;
+                    var2 = copyDataProperties(var16, var15);
+                    var2 = 'description';
+                    var1[1] = var3;
+                    return var1;
+                }
+            };
+            var23 = var7.bind(var8)(var4);
+case 110:
+            var4 = _closure1_slot27;
+            var4 = var5 != var4;
+            if(!var4) { _fun0009_ip = 116; continue _fun0009 }
+case 117:
+            var7 = _closure1_slot27;
+            var8 = var7.userId;
+            var7 = var2.user;
+            var7 = var7.id;
+            var4 = var8 === var7;
+case 116:
+            if(!var4) { _fun0009_ip = 118; continue _fun0009 }
+case 119:
+            var4 = global;
+            var7 = var4.Date;
+            var4 = var7.now;
+            var7 = var4.bind(var7)();
+            var4 = _closure1_slot27;
+            var4 = var4.expiresAtMs;
+            if(!(!(var7 > var4))) { _fun0009_ip = 120; continue _fun0009 }
+case 121:
+            var7 = _closure1_slot40;
+            var4 = _closure1_slot27;
+            var4 = var7.bind(var1)(var23, var4);
+            _fun0009_ip = 118; continue _fun0009;
+case 120:
+            _closure1_slot27 = var5;
+case 118:
+            var4 = global;
+            var8 = var4.Date;
+            var7 = var8.now;
+            var8 = var7.bind(var8)();
+            var22 = _closure1_slot18;
+            var20 = var22.set;
+            var7 = var2.user;
+            var11 = var7.id;
+            var7 = {};
+            var14 = _closure1_slot1;
+            var13 = _closure1_slot2;
+            var21 = 23;
+            var13 = var13[var21];
+            var14 = var14.bind(var1)(var13);
+            var13 = var2.user_profile;
+            var29 = var14.bind(var1)(var13);
+            var30 = var7;
+            var13 = copyDataProperties(var30, var29);
+            var13 = var2.user;
+            var13 = var13.id;
+            var19 = 'userId';
+            var7[18] = var13;
+            var14 = var2.user_profile;
+            var15 = var5 == var14;
+            var13 = undefined;
+            if(var15) { _fun0009_ip = 122; continue _fun0009 }
+case 123:
+            var13 = var14.banner;
+case 122:
+            var18 = 'banner';
+            var7[17] = var13;
+            var14 = var2.user_profile;
+            var15 = var5 == var14;
+            var13 = undefined;
+            if(var15) { _fun0009_ip = 124; continue _fun0009 }
+case 125:
+            var13 = var14.accent_color;
+case 124:
+            var17 = 'accentColor';
+            var7[16] = var13;
+            var14 = var2.user_profile;
+            var15 = var5 == var14;
+            var13 = undefined;
+            if(var15) { _fun0009_ip = 126; continue _fun0009 }
+case 127:
+            var13 = var14.theme_colors;
+case 126:
+            var16 = 'themeColors';
+            var7[15] = var13;
+            var14 = var2.user_profile;
+            var15 = var5 == var14;
+            var13 = undefined;
+            if(var15) { _fun0009_ip = 128; continue _fun0009 }
+case 129:
+            var13 = var14.popout_animation_particle_type;
+case 128:
+            var15 = 'popoutAnimationParticleType';
+            var7[14] = var13;
+            var13 = var2.user_profile;
+            var24 = var5 == var13;
+            var14 = undefined;
+            if(var24) { _fun0009_ip = 130; continue _fun0009 }
+case 131:
+            var14 = var13.bio;
+case 130:
+            var26 = var5 != var14;
+            var24 = '';
+            var13 = var24;
+            if(!var26) { _fun0009_ip = 132; continue _fun0009 }
+case 133:
+            var13 = var14;
+case 132:
+            var14 = 'bio';
+            var7[13] = var13;
+            var26 = var2.user_profile;
+            var27 = var5 == var26;
+            var13 = undefined;
+            if(var27) { _fun0009_ip = 134; continue _fun0009 }
+case 135:
+            var13 = var26.pronouns;
+case 134:
+            var26 = var5 != var13;
+            if(!var26) { _fun0009_ip = 136; continue _fun0009 }
+case 137:
+            var24 = var13;
+case 136:
+            var13 = 'pronouns';
+            var7[12] = var24;
+            var26 = var2.connected_accounts;
+            var24 = var26.filter;
+            var6 = function(arg1) {
+                var3 = _closure1_slot1;
+                var2 = _closure1_slot2;
+                var1 = 24;
+                var2 = var2[var1];
+                var1 = undefined;
+                var3 = var3.bind(var1)(var2);
+                var2 = var3.isSupported;
+                var1 = arg1;
+                var1 = var1.type;
+                var1 = var2.bind(var3)(var1);
+                return var1;
+            };
+            var24 = var24.bind(var26)(var6);
+            if(!(var5 == var24)) { _fun0009_ip = 138; continue _fun0009 }
+case 139:
+            var24 = new Array(0);
+case 138:
+            var6 = 'connectedAccounts';
+            var7[5] = var24;
+            var24 = var2.application_role_connections;
+            if(!(var5 == var24)) { _fun0009_ip = 140; continue _fun0009 }
+case 141:
+            var24 = new Array(0);
+case 140:
+            var6 = 'applicationRoleConnections';
+            var7[5] = var24;
+            var6 = 'premiumSince';
+            var7[5] = var12;
+            var12 = var2.premium_type;
+            var6 = 'premiumType';
+            var7[5] = var12;
+            var6 = 'premiumGuildSince';
+            var7[5] = var9;
+            var9 = 'fetchStartedAt';
+            var7[8] = var10;
+            var6 = 'fetchEndedAt';
+            var7[5] = var8;
+            var24 = var2.legacy_username;
+            var12 = 'legacyUsername';
+            var7[11] = var24;
+            var12 = var5 != var25;
+            var24 = null;
+            if(!var12) { _fun0009_ip = 142; continue _fun0009 }
+case 143:
+            var12 = {};
+            var26 = var25.id;
+            var12['id'] = var26;
+            var26 = var25.primary_sku_id;
+            var12['primarySkuId'] = var26;
+            var26 = var25.custom_install_url;
+            var12['customInstallUrl'] = var26;
+            var26 = var25.install_params;
+            var12['installParams'] = var26;
+            var26 = var25.integration_types_config;
+            var12['integrationTypesConfig'] = var26;
+            var26 = var25.flags;
+            var12['flags'] = var26;
+            var26 = var25.popular_application_command_ids;
+            var12['popularApplicationCommandIds'] = var26;
+            var26 = var25.storefront_available;
+            var12['storefront_available'] = var26;
+            var26 = var25.name;
+            var12['name'] = var26;
+            var26 = var25.terms_of_service_url;
+            var12['termsOfServiceUrl'] = var26;
+            var25 = var25.privacy_policy_url;
+            var12['privacyPolicyUrl'] = var25;
+            var24 = var12;
+case 142:
+            var12 = 'application';
+            var7[11] = var24;
+            var12 = 'badges';
+            var7[11] = var23;
+            var26 = var2.widgets;
+            var23 = var5 == var26;
+            var24 = undefined;
+            if(var23) { _fun0009_ip = 144; continue _fun0009 }
+case 145:
+            var25 = var26.map;
+            var23 = _closure1_slot32;
+            var26 = var25.bind(var26)(var23);
+            var25 = var26.filter;
+            var27 = _closure1_slot0;
+            var28 = _closure1_slot2;
+            var23 = 25;
+            var23 = var28[var23];
+            var23 = var27.bind(var1)(var23);
+            var23 = var23.isNotNullish;
+            var24 = var25.bind(var26)(var23);
+case 144:
+            var23 = 'widgets';
+            var7[22] = var24;
+            var24 = var2.wishlist_settings;
+            var23 = 'wishlistSettings';
+            var7[22] = var24;
+            var24 = var2.private;
+            var23 = 'private';
+            var7[22] = var24;
+            var7 = var20.bind(var22)(var11, var7);
+            var11 = _closure1_slot33;
+            var7 = var2.user;
+            var7 = var7.id;
+            var7 = var11.bind(var1)(var7);
+            var7 = var2.guild_member_profile;
+            if(!(var5 != var7)) { _fun0009_ip = 146; continue _fun0009 }
+case 147:
+            var7 = {};
+            var20 = _closure1_slot1;
+            var11 = _closure1_slot2;
+            var11 = var11[var21];
+            var20 = var20.bind(var1)(var11);
+            var11 = var2.guild_member_profile;
+            var29 = var20.bind(var1)(var11);
+            var30 = var7;
+            var11 = copyDataProperties(var30, var29);
+            var11 = var2.user;
+            var11 = var11.id;
+            var7[18] = var11;
+            var11 = var2.guild_member_profile;
+            var19 = var11.guild_id;
+            var11 = 'guildId';
+            var7[10] = var19;
+            var11 = var2.guild_member_profile;
+            var11 = var11.banner;
+            var7[17] = var11;
+            var11 = var2.guild_member_profile;
+            var11 = var11.accent_color;
+            var7[16] = var11;
+            var17 = var2.guild_member_profile;
+            var18 = var5 == var17;
+            var11 = undefined;
+            if(var18) { _fun0009_ip = 148; continue _fun0009 }
+case 149:
+            var11 = var17.theme_colors;
+case 148:
+            var7[15] = var11;
+            var16 = var2.guild_member_profile;
+            var17 = var5 == var16;
+            var11 = undefined;
+            if(var17) { _fun0009_ip = 150; continue _fun0009 }
+case 151:
+            var11 = var16.popout_animation_particle_type;
+case 150:
+            var7[14] = var11;
+            var11 = var2.guild_member_profile;
+            var11 = var11.bio;
+            var7[13] = var11;
+            var11 = var2.guild_member_profile;
+            var11 = var11.pronouns;
+            var7[12] = var11;
+            var11 = var2.guild_badges;
+            var7[11] = var11;
+            var7[8] = var10;
+            var7[5] = var8;
+            var9 = _closure1_slot19;
+            var8 = var9.get;
+            var6 = var2.user;
+            var6 = var6.id;
+            var6 = var8.bind(var9)(var6);
+            if(!(var5 == var6)) { _fun0009_ip = 152; continue _fun0009 }
+case 153:
+            var4 = var4.Map;
+            var5 = var4.prototype;
+            var5 = Object.create(var5, {constructor: {value: var4}});
+            var31 = var5;
+            var4 = new var31[var4](var30);
+            var9 = var4 instanceof Object ? var4 : var5;
+            var5 = var9.set;
+            var4 = var2.guild_member_profile;
+            var4 = var4.guild_id;
+            var4 = var5.bind(var9)(var4, var7);
+            var8 = _closure1_slot19;
+            var5 = var8.set;
+            var4 = var2.user;
+            var4 = var4.id;
+            var4 = var5.bind(var8)(var4, var9);
+            _fun0009_ip = 154; continue _fun0009;
+case 152:
+            var5 = var6.set;
+            var4 = var2.guild_member_profile;
+            var4 = var4.guild_id;
+            var4 = var5.bind(var6)(var4, var7);
+case 154:
+            var4 = _closure1_slot33;
+            var3 = var2.user;
+            var3 = var3.id;
+            var2 = var2.guild_member_profile;
+            var2 = var2.guild_id;
+            var2 = var4.bind(var1)(var3, var2);
+case 146:
+            return var1;
+        }
+    };
+    var _closure1_slot39 = var1;
+    var1 = function mergePinnedBadges(arg1, arg2) {
+        _fun0012: for(var _fun0012_ip = 0; ; ) switch(_fun0012_ip) {
+case 0:
+            var1 = arg1;
+            var3 = arg2;
+            var4 = null;
+            if(!(var4 == var1)) { _fun0012_ip = 60; continue _fun0012 }
+case 36:
+            var5 = undefined;
+            return var5;
+case 60:
+            var5 = global;
+            var7 = var5.Set;
+            var6 = var1.map;
+            var5 = function(arg1) {
+                var1 = arg1;
+                var1 = var1.id;
+                return var1;
+            };
+            var10 = var6.bind(var1)(var5);
+            var6 = var7.prototype;
+            var6 = Object.create(var6, {constructor: {value: var7}});
+            var11 = var6;
+            var5 = new var11[var7](var10, var9);
+            var5 = var5 instanceof Object ? var5 : var6;
+            var _closure2_slot0 = var5;
+            var4 = var4 == var3;
+            var5 = undefined;
+            if(var4) { _fun0012_ip = 56; continue _fun0012 }
+case 4:
+            var4 = var3.badges;
+            var3 = var4.filter;
+            var2 = function(arg1) {
+                var3 = _closure2_slot0;
+                var2 = var3.has;
+                var1 = arg1;
+                var1 = var1.id;
+                var1 = var2.bind(var3)(var1);
+                var1 = !var1;
+                return var1;
+            };
+            var5 = var3.bind(var4)(var2);
+case 56:
+            var2 = var5.length;
+            var4 = 0;
+            if(!(var2 > var4)) { _fun0012_ip = 155; continue _fun0012 }
+case 156:
+            var3 = var1.push;
+            var2 = new Array(0);
+            var10 = var2;
+            var9 = var5;
+            var8 = 0;
+            var4 = arraySpread(var10, var9, var8);
+            var10 = var3;
+            var9 = var2;
+            var8 = var1;
+            var2 = apply(var10, var9, var8);
+case 155:
+            return var1;
+        }
+    };
+    var _closure1_slot40 = var1;
+    var1 = function handleProfileFetchStart(arg1) {
+        _fun0013: for(var _fun0013_ip = 0; ; ) switch(_fun0013_ip) {
+case 0:
+            var1 = arg1;
+            var3 = var1.userId;
+            var6 = var1.guildId;
+            var2 = var1.withMutualFriends;
+            var4 = null;
+            if(!(var4 == var6)) { _fun0013_ip = 157; continue _fun0013 }
+case 158:
+            var6 = _closure1_slot15;
+case 157:
+            var7 = _closure1_slot16;
+            var5 = var7.get;
+            var5 = var5.bind(var7)(var3);
+            if(!(var4 == var5)) { _fun0013_ip = 58; continue _fun0013 }
+case 159:
+            var4 = global;
+            var4 = var4.Set;
+            var7 = var4.prototype;
+            var7 = Object.create(var7, {constructor: {value: var4}});
+            var11 = var7;
+            var4 = new var11[var4](var10);
+            var8 = var4 instanceof Object ? var4 : var7;
+            var4 = var8.add;
+            var4 = var4.bind(var8)(var6);
+            var7 = _closure1_slot16;
+            var4 = var7.set;
+            var4 = var4.bind(var7)(var3, var8);
+            _fun0013_ip = 160; continue _fun0013;
+case 58:
+            var4 = var5.add;
+            var4 = var4.bind(var5)(var6);
+case 160:
+            if(!var2) { _fun0013_ip = 161; continue _fun0013 }
+case 162:
+            var2 = _closure1_slot17;
+            var1 = var2.add;
+            var1 = var1.bind(var2)(var3);
+case 161:
+            var1 = undefined;
+            return var1;
+        }
+    };
+    var _closure1_slot41 = var1;
+    var1 = function handleProfileFetchFailure(arg1) {
+        _fun0014: for(var _fun0014_ip = 0; ; ) switch(_fun0014_ip) {
+case 0:
+            var1 = arg1;
+            var5 = var1.userId;
+            var10 = var1.guildId;
+            var3 = var1.apiError;
+            var7 = var1.fetchStartedAt;
+            var4 = _closure1_slot16;
+            var1 = var4.get;
+            var8 = var1.bind(var4)(var5);
+            var1 = null;
+            if(!(var1 != var8)) { _fun0014_ip = 97; continue _fun0014 }
+case 163:
+            var6 = var8.delete;
+            var4 = var10;
+            if(!(var1 == var4)) { _fun0014_ip = 62; continue _fun0014 }
+case 40:
+            var4 = _closure1_slot15;
+case 62:
+            var4 = var6.bind(var8)(var4);
+case 97:
+            var6 = _closure1_slot17;
+            var4 = var6.delete;
+            var4 = var4.bind(var6)(var5);
+            var6 = _closure1_slot18;
+            var4 = var6.get;
+            var9 = var4.bind(var6)(var5);
+            if(!(var1 == var9)) { _fun0014_ip = 164; continue _fun0014 }
+case 55:
+            var4 = {'connectedAccounts': null, 'applicationRoleConnections': null, 'premiumSince': null, 'premiumGuildSince': null, 'application': null, 'legacyUsername': null, 'userId': null, 'banner': null, 'accentColor': null, 'bio': '', 'pronouns': '', 'premiumType': null, 'fetchStartedAt': 0, 'fetchEndedAt': 0};
+            var6 = new Array(0);
+            var4['connectedAccounts'] = var6;
+            var6 = new Array(0);
+            var4['applicationRoleConnections'] = var6;
+            var4['userId'] = var5;
+            var6 = undefined;
+            var4['fetchError'] = var6;
+            var9 = var4;
+case 164:
+            var4 = global;
+            var6 = var4.Date;
+            var4 = var6.now;
+            var6 = var4.bind(var6)();
+            var9['fetchStartedAt'] = var7;
+            var9['fetchEndedAt'] = var6;
+            var9['fetchError'] = var3;
+            var8 = _closure1_slot18;
+            var4 = var8.set;
+            var4 = var4.bind(var8)(var5, var9);
+            if(!(var1 != var10)) { _fun0014_ip = 165; continue _fun0014 }
+case 166:
+            var8 = _closure1_slot19;
+            var4 = var8.get;
+            var9 = var4.bind(var8)(var5);
+            var8 = var1 == var9;
+            var4 = undefined;
+            if(var8) { _fun0014_ip = 25; continue _fun0014 }
+case 89:
+            var8 = var9.get;
+            var4 = var8.bind(var9)(var10);
+case 25:
+            if(!(var1 != var4)) { _fun0014_ip = 165; continue _fun0014 }
+case 167:
+            var4['fetchStartedAt'] = var7;
+            var4['fetchEndedAt'] = var6;
+            var4['fetchError'] = var3;
+case 165:
+            var6 = var1 == var3;
+            var1 = undefined;
+            var4 = undefined;
+            if(var6) { _fun0014_ip = 57; continue _fun0014 }
+case 168:
+            var4 = var3.status;
+case 57:
+            var3 = 404;
+            if(!(var3 === var4)) { _fun0014_ip = 169; continue _fun0014 }
+case 170:
+            var6 = _closure1_slot22;
+            var4 = var6.set;
+            var3 = 0;
+            var3 = var4.bind(var6)(var5, var3);
+            var6 = _closure1_slot21;
+            var4 = var6.set;
+            var3 = _closure1_slot24;
+            var3 = var4.bind(var6)(var5, var3);
+            var4 = _closure1_slot23;
+            var3 = var4.set;
+            var2 = _closure1_slot25;
+            var2 = var3.bind(var4)(var5, var2);
+case 169:
+            return var1;
+        }
+    };
+    var _closure1_slot42 = var1;
+    var1 = function handleProfileUpdateStart() {
+        var1 = true;
+        _closure1_slot26 = var1;
+        var1 = undefined;
+        return var1;
+    };
+    var _closure1_slot43 = var1;
+    var1 = function handleProfileUpdateSuccess(arg1) {
+        _fun0015: for(var _fun0015_ip = 0; ; ) switch(_fun0015_ip) {
+case 0:
+            var2 = arg1;
+            var3 = false;
+            _closure1_slot26 = var3;
+            var3 = var2.guild_id;
+            var5 = null;
+            if(!(var5 == var3)) { _fun0015_ip = 171; continue _fun0015 }
+case 172:
+            var6 = var2.userId;
+            var15 = var2.accent_color;
+            var14 = var2.banner;
+            var13 = var2.bio;
+            var12 = var2.pronouns;
+            var11 = var2.popout_animation_particle_type;
+            var10 = var2.theme_colors;
+            var17 = var2.collectibles;
+            var4 = _closure1_slot18;
+            var3 = var4.get;
+            var4 = var3.bind(var4)(var6);
+            if(!(var5 != var4)) { _fun0015_ip = 173; continue _fun0015 }
+case 174:
+            var8 = _closure1_slot18;
+            var7 = var8.set;
+            var3 = {};
+            var19 = var3;
+            var18 = var4;
+            var4 = copyDataProperties(var19, var18);
+            var16 = _closure1_slot1;
+            var9 = _closure1_slot2;
+            var4 = 23;
+            var9 = var9[var4];
+            var4 = undefined;
+            var16 = var16.bind(var4)(var9);
+            var9 = {};
+            var9['collectibles'] = var17;
+            var18 = var16.bind(var4)(var9);
+            var19 = var3;
+            var9 = copyDataProperties(var19, var18);
+            var9 = 'accentColor';
+            var3[8] = var15;
+            var9 = 'banner';
+            var3[8] = var14;
+            var9 = 'bio';
+            var3[8] = var13;
+            var9 = 'pronouns';
+            var3[8] = var12;
+            var9 = 'popoutAnimationParticleType';
+            var3[8] = var11;
+            var9 = 'themeColors';
+            var3[8] = var10;
+            var3 = var7.bind(var8)(var6, var3);
+            var3 = _closure1_slot33;
+            var3 = var3.bind(var4)(var6);
+            _fun0015_ip = 173; continue _fun0015;
+case 171:
+            var4 = var2.userId;
+            var3 = var2.guild_id;
+            var14 = var2.accent_color;
+            var13 = var2.banner;
+            var12 = var2.bio;
+            var11 = var2.pronouns;
+            var10 = var2.popout_animation_particle_type;
+            var9 = var2.theme_colors;
+            var16 = var2.collectibles;
+            var6 = _closure1_slot19;
+            var2 = var6.get;
+            var7 = var2.bind(var6)(var4);
+            if(!(var5 != var3)) { _fun0015_ip = 173; continue _fun0015 }
+case 175:
+            if(!(var5 != var7)) { _fun0015_ip = 173; continue _fun0015 }
+case 176:
+            var2 = var7.get;
+            var2 = var2.bind(var7)(var3);
+            if(!(var5 != var2)) { _fun0015_ip = 173; continue _fun0015 }
+case 177:
+            var6 = var7.set;
+            var5 = {};
+            var19 = var5;
+            var18 = var2;
+            var2 = copyDataProperties(var19, var18);
+            var15 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var2 = 23;
+            var8 = var8[var2];
+            var2 = undefined;
+            var15 = var15.bind(var2)(var8);
+            var8 = {};
+            var8['collectibles'] = var16;
+            var18 = var15.bind(var2)(var8);
+            var19 = var5;
+            var8 = copyDataProperties(var19, var18);
+            var8 = 'accentColor';
+            var5[7] = var14;
+            var8 = 'banner';
+            var5[7] = var13;
+            var8 = 'bio';
+            var5[7] = var12;
+            var8 = 'pronouns';
+            var5[7] = var11;
+            var8 = 'popoutAnimationParticleType';
+            var5[7] = var10;
+            var8 = 'themeColors';
+            var5[7] = var9;
+            var5 = var6.bind(var7)(var3, var5);
+            var1 = _closure1_slot33;
+            var1 = var1.bind(var2)(var4, var3);
+case 173:
+            var1 = undefined;
+            return var1;
+        }
+    };
+    var _closure1_slot44 = var1;
+    var1 = function handleProfileUpdateFailure() {
+        var1 = false;
+        _closure1_slot26 = var1;
+        var1 = undefined;
+        return var1;
+    };
+    var _closure1_slot45 = var1;
+    var1 = function handleWidgetsUpdateSuccess(arg1) {
+        _fun0016: for(var _fun0016_ip = 0; ; ) switch(_fun0016_ip) {
+case 0:
+            var1 = arg1;
+            var5 = var1.userId;
+            var8 = var1.widgets;
+            var3 = _closure1_slot18;
+            var2 = var3.get;
+            var6 = var2.bind(var3)(var5);
+            var2 = null;
+            if(!(var2 != var6)) { _fun0016_ip = 178; continue _fun0016 }
+case 179:
+            var4 = _closure1_slot18;
+            var3 = var4.set;
+            var2 = {};
+            var11 = var2;
+            var10 = var6;
+            var6 = copyDataProperties(var11, var10);
+            var7 = var8.map;
+            var6 = _closure1_slot32;
+            var8 = var7.bind(var8)(var6);
+            var7 = var8.filter;
+            var9 = _closure1_slot0;
+            var6 = _closure1_slot2;
+            var1 = 25;
+            var6 = var6[var1];
+            var1 = undefined;
+            var6 = var9.bind(var1)(var6);
+            var6 = var6.isNotNullish;
+            var7 = var7.bind(var8)(var6);
+            var6 = 'widgets';
+            var2[5] = var7;
+            var2 = var3.bind(var4)(var5, var2);
+            return var1;
+case 178:
+            var1 = false;
+            return var1;
+        }
+    };
+    var _closure1_slot46 = var1;
+    var1 = function handlePinBadgesToProfile(arg1) {
+        _fun0017: for(var _fun0017_ip = 0; ; ) switch(_fun0017_ip) {
+case 0:
+            var2 = arg1;
+            var1 = var2.badges;
+            var5 = var2.ttlInSeconds;
+            var4 = var2.userId;
+            var2 = {};
+            var2['userId'] = var4;
+            var2['badges'] = var1;
+            var1 = global;
+            var3 = var1.Date;
+            var1 = var3.now;
+            var3 = var1.bind(var3)();
+            var1 = 1000;
+            var1 = var1 * var5;
+            var1 = var3 + var1;
+            var2['expiresAtMs'] = var1;
+            _closure1_slot27 = var2;
+            var3 = _closure1_slot18;
+            var2 = var3.get;
+            var5 = var2.bind(var3)(var4);
+            var2 = null;
+            if(!(var2 != var5)) { _fun0017_ip = 86; continue _fun0017 }
+case 174:
+            var6 = var5.badges;
+            if(!(var2 == var6)) { _fun0017_ip = 58; continue _fun0017 }
+case 180:
+            var6 = new Array(0);
+case 58:
+            var7 = _closure1_slot40;
+            var3 = _closure1_slot27;
+            var2 = undefined;
+            var2 = var7.bind(var2)(var6, var3);
+            var3 = _closure1_slot18;
+            var2 = var3.set;
+            var1 = {};
+            var9 = var1;
+            var8 = var5;
+            var5 = copyDataProperties(var9, var8);
+            var5 = 'badges';
+            var1[4] = var6;
+            var1 = var2.bind(var3)(var4, var1);
+case 86:
+            var1 = undefined;
+            return var1;
+        }
+    };
+    var _closure1_slot47 = var1;
+    var1 = function handleUserUpdate(arg1) {
+        _fun0018: for(var _fun0018_ip = 0; ; ) switch(_fun0018_ip) {
+case 0:
+            var1 = arg1;
+            var1 = var1.user;
+            var4 = var1.id;
+            var3 = _closure1_slot16;
+            var1 = var3.get;
+            var5 = var1.bind(var3)(var4);
+            var1 = null;
+            var7 = var1 == var5;
+            var3 = undefined;
+            var6 = undefined;
+            if(var7) { _fun0018_ip = 163; continue _fun0018 }
+case 181:
+            var6 = var5.size;
+case 163:
+            var7 = var1 != var6;
+            var5 = 0;
+            var1 = 0;
+            if(!var7) { _fun0018_ip = 94; continue _fun0018 }
+case 182:
+            var1 = var6;
+case 94:
+            var5 = var1 > var5;
+            var1 = !var5;
+            if(var5) { _fun0018_ip = 183; continue _fun0018 }
+case 5:
+            var2 = _closure1_slot53;
+            var1 = var2.bind(var3)(var4);
+case 183:
+            return var1;
+        }
+    };
+    var _closure1_slot48 = var1;
+    var1 = function handleGuildStatusChange() {
+        var2 = _closure1_slot18;
+        var1 = var2.keys;
+        var6 = var1.bind(var2)();
+        var4 = new Array(0);
+        var5 = 0;
+        var7 = var4;
+        var1 = arraySpread(var7, var6, var5);
+        var3 = var4.reduce;
+        var2 = function(arg1, arg2) {
+            _fun0019: for(var _fun0019_ip = 0; ; ) switch(_fun0019_ip) {
+case 0:
+                var2 = arg1;
+                var4 = _closure1_slot53;
+                var3 = undefined;
+                var1 = arg2;
+                var1 = var4.bind(var3)(var1);
+                if(var1) { _fun0019_ip = 172; continue _fun0019 }
+case 35:
+                var1 = var2;
+case 172:
+                return var1;
+            }
+        };
+        var1 = false;
+        var1 = var3.bind(var4)(var2, var1);
+        return var1;
+    };
+    var _closure1_slot49 = var1;
+    var1 = function handleGuildMemberStatusChange(arg1) {
+        var3 = _closure1_slot53;
+        var1 = arg1;
+        var1 = var1.user;
+        var2 = var1.id;
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        return var1;
+    };
+    var _closure1_slot50 = var1;
+    var1 = function handleRelationshipStatusChange(arg1) {
+        var3 = _closure1_slot53;
+        var1 = arg1;
+        var1 = var1.relationship;
+        var2 = var1.id;
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        return var1;
+    };
+    var _closure1_slot51 = var1;
+    var1 = function handleLocaleStoreChange() {
+        var3 = _closure1_slot16;
+        var2 = var3.clear;
+        var2 = var2.bind(var3)();
+        var3 = _closure1_slot17;
+        var2 = var3.clear;
+        var2 = var2.bind(var3)();
+        var3 = _closure1_slot18;
+        var2 = var3.clear;
+        var2 = var2.bind(var3)();
+        var2 = _closure1_slot19;
+        var1 = var2.clear;
+        var1 = var1.bind(var2)();
+        var1 = undefined;
+        return var1;
+    };
+    var _closure1_slot52 = var1;
+    var1 = function resetProfileFetch(arg1) {
+        _fun0020: for(var _fun0020_ip = 0; ; ) switch(_fun0020_ip) {
+case 0:
+            var7 = arg1;
+            var3 = null;
+            if(!(var3 != var7)) { _fun0020_ip = 164; continue _fun0020 }
+case 184:
+            var4 = _closure1_slot18;
+            var1 = var4.get;
+            var4 = var1.bind(var4)(var7);
+            if(!(var3 != var4)) { _fun0020_ip = 185; continue _fun0020 }
+case 37:
+            var5 = 0;
+            var4['fetchStartedAt'] = var5;
+            var4['fetchEndedAt'] = var5;
+            var1 = undefined;
+            var4['fetchError'] = var1;
+            var6 = _closure1_slot19;
+            var4 = var6.get;
+            var4 = var4.bind(var6)(var7);
+            if(!(var3 != var4)) { _fun0020_ip = 66; continue _fun0020 }
+case 186:
+            var3 = _closure1_slot30;
+            var2 = var4.values;
+            var2 = var2.bind(var4)();
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.bind(var1)();
+            var2 = var3.done;
+            if(var2) { _fun0020_ip = 66; continue _fun0020 }
+case 187:
+            var2 = var3.value;
+            var2['fetchStartedAt'] = var5;
+            var2['fetchEndedAt'] = var5;
+            var2['fetchError'] = var1;
+            var6 = var4.bind(var1)();
+            var2 = var6.done;
+            var3 = var6;
+            if(!var2) { _fun0020_ip = 187; continue _fun0020 }
+case 66:
+            return var1;
+case 185:
+            var1 = false;
+            return var1;
+case 164:
+            var1 = false;
+            return var1;
+        }
+    };
+    var _closure1_slot53 = var1;
+    var2 = global;
+    var9 = var2.Object;
+    var8 = var9.defineProperty;
+    var7 = {};
+    var1 = true;
+    var7['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var7);
+    var1 = 0;
+    var7 = var6[var1];
+    var1 = undefined;
+    var7 = var10.bind(var1)(var7);
+    var _closure1_slot3 = var7;
+    var7 = 1;
+    var8 = var6[var7];
+    var8 = var10.bind(var1)(var8);
+    var _closure1_slot4 = var8;
+    var8 = 2;
+    var8 = var6[var8];
+    var8 = var10.bind(var1)(var8);
+    var _closure1_slot5 = var8;
+    var8 = 3;
+    var8 = var6[var8];
+    var8 = var10.bind(var1)(var8);
+    var _closure1_slot6 = var8;
+    var8 = 4;
+    var8 = var6[var8];
+    var8 = var10.bind(var1)(var8);
+    var _closure1_slot7 = var8;
+    var8 = 5;
+    var8 = var6[var8];
+    var8 = var10.bind(var1)(var8);
+    var _closure1_slot8 = var8;
+    var8 = 6;
+    var8 = var6[var8];
+    var8 = var10.bind(var1)(var8);
+    var _closure1_slot9 = var8;
+    var8 = 7;
+    var8 = var6[var8];
+    var8 = var10.bind(var1)(var8);
+    var _closure1_slot10 = var8;
+    var8 = 8;
+    var8 = var6[var8];
+    var8 = var10.bind(var1)(var8);
+    var _closure1_slot11 = var8;
+    var8 = 9;
+    var8 = var6[var8];
+    var8 = var10.bind(var1)(var8);
+    var9 = 10;
+    var9 = var6[var9];
+    var9 = var10.bind(var1)(var9);
+    var _closure1_slot12 = var9;
+    var9 = 11;
+    var9 = var6[var9];
+    var9 = var10.bind(var1)(var9);
+    var _closure1_slot13 = var9;
+    var9 = 12;
+    var9 = var6[var9];
+    var9 = var5.bind(var1)(var9);
+    var9 = var9.MAX_TIMEOUT_MS;
+    var _closure1_slot14 = var9;
+    var10 = var2.Symbol;
+    var9 = 'NO GUILD ID';
+    var9 = var10.bind(var1)(var9);
+    var _closure1_slot15 = var9;
+    var9 = var2.Map;
+    var10 = var9.prototype;
+    var10 = Object.create(var10, {constructor: {value: var9}});
+    var14 = var10;
+    var9 = new var14[var9](var13);
+    var9 = var9 instanceof Object ? var9 : var10;
+    var _closure1_slot16 = var9;
+    var9 = var2.Set;
+    var10 = var9.prototype;
+    var10 = Object.create(var10, {constructor: {value: var9}});
+    var14 = var10;
+    var9 = new var14[var9](var13);
+    var9 = var9 instanceof Object ? var9 : var10;
+    var _closure1_slot17 = var9;
+    var9 = var2.Map;
+    var10 = var9.prototype;
+    var10 = Object.create(var10, {constructor: {value: var9}});
+    var14 = var10;
+    var9 = new var14[var9](var13);
+    var9 = var9 instanceof Object ? var9 : var10;
+    var _closure1_slot18 = var9;
+    var9 = var2.Map;
+    var10 = var9.prototype;
+    var10 = Object.create(var10, {constructor: {value: var9}});
+    var14 = var10;
+    var9 = new var14[var9](var13);
+    var9 = var9 instanceof Object ? var9 : var10;
+    var _closure1_slot19 = var9;
+    var9 = {};
+    var _closure1_slot20 = var9;
+    var9 = var2.Map;
+    var10 = var9.prototype;
+    var10 = Object.create(var10, {constructor: {value: var9}});
+    var14 = var10;
+    var9 = new var14[var9](var13);
+    var9 = var9 instanceof Object ? var9 : var10;
+    var _closure1_slot21 = var9;
+    var9 = var2.Map;
+    var10 = var9.prototype;
+    var10 = Object.create(var10, {constructor: {value: var9}});
+    var14 = var10;
+    var9 = new var14[var9](var13);
+    var9 = var9 instanceof Object ? var9 : var10;
+    var _closure1_slot22 = var9;
+    var2 = var2.Map;
+    var9 = var2.prototype;
+    var9 = Object.create(var9, {constructor: {value: var2}});
+    var14 = var9;
+    var2 = new var14[var2](var13);
+    var2 = var2 instanceof Object ? var2 : var9;
+    var _closure1_slot23 = var2;
+    var2 = new Array(0);
+    var _closure1_slot24 = var2;
+    var2 = new Array(0);
+    var _closure1_slot25 = var2;
+    var2 = false;
+    var _closure1_slot26 = var2;
+    var2 = null;
+    var _closure1_slot27 = var2;
+    var2 = function(arg1) {
+        var4 = function UserProfileStore() {
+            _fun0021: for(var _fun0021_ip = 0; ; ) switch(_fun0021_ip) {
+case 0:
+                var5 = this;
+                var1 = _closure1_slot3;
+                var3 = _closure2_slot0;
+                var4 = undefined;
+                var1 = var1.bind(var4)(var5, var3);
+                var1 = {};
+                var7 = function CACHE_LOADED_LAZY() {
+                    var2 = _closure3_slot0;
+                    var1 = var2.loadCache;
+                    var1 = var1.bind(var2)();
+                    return var1;
+                };
+                var1['CACHE_LOADED_LAZY'] = var7;
+                var7 = _closure1_slot41;
+                var1['USER_PROFILE_FETCH_START'] = var7;
+                var7 = _closure1_slot42;
+                var1['USER_PROFILE_FETCH_FAILURE'] = var7;
+                var7 = _closure1_slot39;
+                var1['USER_PROFILE_FETCH_SUCCESS'] = var7;
+                var7 = _closure1_slot43;
+                var1['USER_PROFILE_UPDATE_START'] = var7;
+                var7 = _closure1_slot44;
+                var1['USER_PROFILE_UPDATE_SUCCESS'] = var7;
+                var7 = _closure1_slot45;
+                var1['USER_PROFILE_UPDATE_FAILURE'] = var7;
+                var7 = _closure1_slot46;
+                var1['WIDGET_PENDING_SAVE_SUCCESS'] = var7;
+                var7 = _closure1_slot47;
+                var1['USER_PROFILE_PIN_BADGES_ON_CLIENT'] = var7;
+                var7 = _closure1_slot35;
+                var1['MUTUAL_FRIENDS_FETCH_START'] = var7;
+                var7 = _closure1_slot38;
+                var1['MUTUAL_FRIENDS_FETCH_SUCCESS'] = var7;
+                var7 = _closure1_slot36;
+                var1['MUTUAL_FRIENDS_FETCH_FAILURE'] = var7;
+                var7 = _closure1_slot48;
+                var1['USER_UPDATE'] = var7;
+                var1['GUILD_MEMBER_UPDATE'] = var7;
+                var7 = _closure1_slot49;
+                var1['GUILD_JOIN'] = var7;
+                var1['GUILD_DELETE'] = var7;
+                var1['INVITE_ACCEPT_SUCCESS'] = var7;
+                var7 = _closure1_slot50;
+                var1['GUILD_MEMBER_ADD'] = var7;
+                var1['GUILD_MEMBER_REMOVE'] = var7;
+                var7 = _closure1_slot51;
+                var1['RELATIONSHIP_ADD'] = var7;
+                var1['RELATIONSHIP_REMOVE'] = var7;
+                var1['RELATIONSHIP_UPDATE'] = var7;
+                var7 = _closure1_slot34;
+                var1['LOGOUT'] = var7;
+                var10 = new Array(1);
+                var10[0] = var1;
+                var1 = _closure1_slot6;
+                var9 = var1.bind(var4)(var3);
+                var3 = _closure1_slot5;
+                var1 = _closure1_slot29;
+                var1 = var1.bind(var4)();
+                if(var1) { _fun0021_ip = 188; continue _fun0021 }
+case 48:
+                var1 = var9.apply;
+                var1 = var1.bind(var9)(var5, var10);
+                _fun0021_ip = 189; continue _fun0021;
+case 188:
+                var7 = global;
+                var8 = var7.Reflect;
+                var7 = var8.construct;
+                var6 = _closure1_slot6;
+                var6 = var6.bind(var4)(var5);
+                var6 = var6.constructor;
+                var1 = var7.bind(var8)(var9, var10, var6);
+case 189:
+                var1 = var3.bind(var4)(var5, var1);
+                var _closure3_slot0 = var1;
+                var2 = function() {
+                    _fun0022: for(var _fun0022_ip = 0; ; ) switch(_fun0022_ip) {
+case 0:
+                        var3 = _closure3_slot0;
+                        var2 = var3.readSnapshot;
+                        var1 = _closure2_slot0;
+                        var1 = var1.LATEST_SNAPSHOT_VERSION;
+                        var3 = var2.bind(var3)(var1);
+                        var1 = null;
+                        if(!(var1 != var3)) { _fun0022_ip = 190; continue _fun0022 }
+case 179:
+                        var2 = var3.forEach;
+                        var1 = function(arg1) {
+                            _fun0023: for(var _fun0023_ip = 0; ; ) switch(_fun0023_ip) {
+case 0:
+                                var1 = arg1;
+                                var4 = var1.userId;
+                                var3 = var1.profile;
+                                var1 = null;
+                                if(!(var1 != var4)) { _fun0023_ip = 11; continue _fun0023 }
+case 33:
+                                if(!(var1 == var3)) { _fun0023_ip = 181; continue _fun0023 }
+case 191:
+                                var2 = _closure1_slot18;
+                                var1 = var2.delete;
+                                var1 = var1.bind(var2)(var4);
+                                _fun0023_ip = 11; continue _fun0023;
+case 181:
+                                var2 = _closure1_slot18;
+                                var1 = var2.set;
+                                var1 = var1.bind(var2)(var4, var3);
+case 11:
+                                var1 = undefined;
+                                return var1;
+                            }
+                        };
+                        var1 = var2.bind(var3)(var1);
+case 190:
+                        var1 = undefined;
+                        return var1;
+                    }
+                };
+                var1['loadCache'] = var2;
+                return var1;
+            }
+        };
+        var _closure2_slot0 = var4;
+        var5 = _closure1_slot7;
+        var3 = undefined;
+        var2 = arg1;
+        var2 = var5.bind(var3)(var4, var2);
+        var2 = _closure1_slot4;
+        var5 = {};
+        var1 = 'initialize';
+        var5['key'] = var1;
+        var1 = function value() {
+            var4 = this;
+            var3 = var4.waitFor;
+            var2 = _closure1_slot13;
+            var2 = var3.bind(var4)(var2);
+            var3 = var4.syncWith;
+            var5 = _closure1_slot8;
+            var2 = new Array(1);
+            var2[0] = var5;
+            var1 = _closure1_slot52;
+            var1 = var3.bind(var4)(var2, var1);
+            var1 = undefined;
+            return var1;
+        };
+        var5['value'] = var1;
+        var1 = new Array(14);
+        var1[0] = var5;
+        var5 = {};
+        var7 = 'isFetchingProfile';
+        var5['key'] = var7;
+        var7 = function value(arg1, arg2) {
+            _fun0024: for(var _fun0024_ip = 0; ; ) switch(_fun0024_ip) {
+case 0:
+                var4 = arg2;
+                var3 = _closure1_slot16;
+                var2 = var3.get;
+                var1 = arg1;
+                var3 = var2.bind(var3)(var1);
+                var6 = null;
+                var1 = var6 != var3;
+                if(!var1) { _fun0024_ip = 192; continue _fun0024 }
+case 157:
+                var2 = var3.has;
+                if(!(var6 == var4)) { _fun0024_ip = 193; continue _fun0024 }
+case 51:
+                var4 = _closure1_slot15;
+case 193:
+                var1 = var2.bind(var3)(var4);
+case 192:
+                return var1;
+            }
+        };
+        var5['value'] = var7;
+        var1[1] = var5;
+        var5 = {};
+        var7 = 'isFetchingFriends';
+        var5['key'] = var7;
+        var7 = function value(arg1) {
+            var3 = _closure1_slot17;
+            var2 = var3.has;
+            var1 = arg1;
+            var1 = var2.bind(var3)(var1);
+            return var1;
+        };
+        var5['value'] = var7;
+        var1[2] = var5;
+        var5 = {};
+        var7 = 'isSubmitting';
+        var5['key'] = var7;
+        var7 = function get() {
+            var1 = _closure1_slot26;
+            return var1;
+        };
+        var5['get'] = var7;
+        var1[3] = var5;
+        var5 = {};
+        var7 = 'getUserProfile';
+        var5['key'] = var7;
+        var7 = function value(arg1) {
+            var3 = _closure1_slot18;
+            var2 = var3.get;
+            var1 = arg1;
+            var1 = var2.bind(var3)(var1);
+            return var1;
+        };
+        var5['value'] = var7;
+        var1[4] = var5;
+        var5 = {};
+        var7 = 'getGuildMemberProfile';
+        var5['key'] = var7;
+        var7 = function value(arg1, arg2) {
+            _fun0025: for(var _fun0025_ip = 0; ; ) switch(_fun0025_ip) {
+case 0:
+                var6 = arg2;
+                var2 = null;
+                var3 = var2 == var6;
+                var1 = null;
+                if(var3) { _fun0025_ip = 194; continue _fun0025 }
+case 36:
+                var5 = _closure1_slot19;
+                var4 = var5.get;
+                var3 = arg1;
+                var5 = var4.bind(var5)(var3);
+                var4 = var2 == var5;
+                var3 = undefined;
+                if(var4) { _fun0025_ip = 159; continue _fun0025 }
+case 181:
+                var4 = var5.get;
+                var3 = var4.bind(var5)(var6);
+case 159:
+                var4 = var2 != var3;
+                var2 = null;
+                if(!var4) { _fun0025_ip = 92; continue _fun0025 }
+case 94:
+                var2 = var3;
+case 92:
+                var1 = var2;
+case 194:
+                return var1;
+            }
+        };
+        var5['value'] = var7;
+        var1[5] = var5;
+        var5 = {};
+        var7 = 'getMutualFriends';
+        var5['key'] = var7;
+        var7 = function value(arg1) {
+            var3 = _closure1_slot21;
+            var2 = var3.get;
+            var1 = arg1;
+            var1 = var2.bind(var3)(var1);
+            return var1;
+        };
+        var5['value'] = var7;
+        var1[6] = var5;
+        var5 = {};
+        var7 = 'getMutualFriendsCount';
+        var5['key'] = var7;
+        var7 = function value(arg1) {
+            var3 = _closure1_slot22;
+            var2 = var3.get;
+            var1 = arg1;
+            var1 = var2.bind(var3)(var1);
+            return var1;
+        };
+        var5['value'] = var7;
+        var1[7] = var5;
+        var5 = {};
+        var7 = 'getMutualGuilds';
+        var5['key'] = var7;
+        var7 = function value(arg1) {
+            var3 = _closure1_slot23;
+            var2 = var3.get;
+            var1 = arg1;
+            var1 = var2.bind(var3)(var1);
+            return var1;
+        };
+        var5['value'] = var7;
+        var1[8] = var5;
+        var5 = {};
+        var7 = 'getWidgets';
+        var5['key'] = var7;
+        var7 = function value(arg1) {
+            _fun0026: for(var _fun0026_ip = 0; ; ) switch(_fun0026_ip) {
+case 0:
+                var3 = _closure1_slot18;
+                var2 = var3.get;
+                var1 = arg1;
+                var2 = var2.bind(var3)(var1);
+                var1 = null;
+                var3 = var1 == var2;
+                var1 = undefined;
+                if(var3) { _fun0026_ip = 179; continue _fun0026 }
+case 195:
+                var1 = var2.widgets;
+case 179:
+                return var1;
+            }
+        };
+        var5['value'] = var7;
+        var1[9] = var5;
+        var5 = {};
+        var7 = 'getWishlistIds';
+        var5['key'] = var7;
+        var7 = function value(arg1) {
+            _fun0027: for(var _fun0027_ip = 0; ; ) switch(_fun0027_ip) {
+case 0:
+                var3 = _closure1_slot18;
+                var2 = var3.get;
+                var1 = arg1;
+                var2 = var2.bind(var3)(var1);
+                var3 = null;
+                var4 = var3 == var2;
+                var1 = undefined;
+                if(var4) { _fun0027_ip = 179; continue _fun0027 }
+case 195:
+                var1 = var2.wishlistSettings;
+case 179:
+                if(!(var3 == var1)) { _fun0027_ip = 196; continue _fun0027 }
+case 51:
+                var1 = new Array(0);
+                _fun0027_ip = 197; continue _fun0027;
+case 196:
+                var3 = global;
+                var4 = var3.Object;
+                var3 = var4.keys;
+                var2 = var2.wishlistSettings;
+                var1 = var3.bind(var4)(var2);
+case 197:
+                return var1;
+            }
+        };
+        var5['value'] = var7;
+        var1[10] = var5;
+        var5 = {};
+        var7 = 'getFirstWishlistId';
+        var5['key'] = var7;
+        var7 = function value(arg1) {
+            _fun0028: for(var _fun0028_ip = 0; ; ) switch(_fun0028_ip) {
+case 0:
+                var4 = arg1;
+                var3 = this;
+                var1 = null;
+                if(!(var1 != var4)) { _fun0028_ip = 196; continue _fun0028 }
+case 184:
+                var2 = var3.getWishlistIds;
+                var4 = var2.bind(var3)(var4);
+                var2 = var4.length;
+                var3 = 0;
+                var5 = var2 > var3;
+                var2 = null;
+                if(!var5) { _fun0028_ip = 193; continue _fun0028 }
+case 51:
+                var2 = var4[var3];
+case 193:
+                return var2;
+case 196:
+                return var1;
+            }
+        };
+        var5['value'] = var7;
+        var1[11] = var5;
+        var5 = {};
+        var7 = 'getWishlistSettings';
+        var5['key'] = var7;
+        var7 = function value(arg1, arg2) {
+            _fun0029: for(var _fun0029_ip = 0; ; ) switch(_fun0029_ip) {
+case 0:
+                var3 = _closure1_slot18;
+                var2 = var3.get;
+                var1 = arg1;
+                var3 = var2.bind(var3)(var1);
+                var1 = null;
+                var4 = var1 == var3;
+                var2 = undefined;
+                if(var4) { _fun0029_ip = 159; continue _fun0029 }
+case 195:
+                var4 = var3.wishlistSettings;
+                var3 = var1 == var4;
+                var2 = undefined;
+                if(var3) { _fun0029_ip = 159; continue _fun0029 }
+case 6:
+                var3 = arg2;
+                var2 = var4[var3];
+case 159:
+                var3 = var1 != var2;
+                var1 = null;
+                if(!var3) { _fun0029_ip = 92; continue _fun0029 }
+case 94:
+                var1 = var2;
+case 92:
+                return var1;
+            }
+        };
+        var5['value'] = var7;
+        var1[12] = var5;
+        var5 = {};
+        var7 = 'takeSnapshot';
+        var5['key'] = var7;
+        var6 = function value() {
+            _fun0030: for(var _fun0030_ip = 0; ; ) switch(_fun0030_ip) {
+case 0:
+                var3 = _closure1_slot10;
+                var2 = var3.getId;
+                var5 = var2.bind(var3)();
+                var2 = _closure1_slot18;
+                var1 = var2.get;
+                var3 = var1.bind(var2)(var5);
+                var1 = null;
+                if(!(var1 == var3)) { _fun0030_ip = 34; continue _fun0030 }
+case 179:
+                var1 = {};
+                var2 = _closure2_slot0;
+                var2 = var2.LATEST_SNAPSHOT_VERSION;
+                var1['version'] = var2;
+                var2 = new Array(0);
+                var1['data'] = var2;
+                _fun0030_ip = 198; continue _fun0030;
+case 34:
+                var2 = {};
+                var4 = _closure2_slot0;
+                var4 = var4.LATEST_SNAPSHOT_VERSION;
+                var2['version'] = var4;
+                var4 = {};
+                var4['userId'] = var5;
+                var4['profile'] = var3;
+                var3 = new Array(1);
+                var3[0] = var4;
+                var2['data'] = var3;
+                var1 = var2;
+case 198:
+                return var1;
+            }
+        };
+        var5['value'] = var6;
+        var1[13] = var5;
+        var1 = var2.bind(var3)(var4, var1);
+        return var1;
+    };
+    var2 = var2.bind(var1)(var8);
+    var8 = 'UserProfileStore';
+    var2['displayName'] = var8;
+    var2['LATEST_SNAPSHOT_VERSION'] = var7;
+    var7 = var2.prototype;
+    var7 = Object.create(var7, {constructor: {value: var2}});
+    var14 = var7;
+    var2 = new var14[var2](var13);
+    var2 = var2 instanceof Object ? var2 : var7;
+    var _closure1_slot28 = var2;
+    var4 = 26;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/user_profile/UserProfileStore.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

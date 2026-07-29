@@ -1,0 +1,175 @@
+// app/modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var4 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var1 = metroImportDefault;
+    var _closure1_slot1 = var1;
+    var _closure1_slot2 = var4;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var6 = {};
+    var1 = true;
+    var6['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var6);
+    var1 = 5;
+    var4 = var4[var1];
+    var1 = undefined;
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function createChannelPinnedMessageSystemMessage(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var3 = arg1;
+            var1 = var3.message;
+            var5 = var3.roleStyle;
+            var4 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var9 = 0;
+            var2 = var10[var9];
+            var8 = undefined;
+            var4 = var4.bind(var8)(var2);
+            var2 = var4.getMessageAuthorWithProcessedColor;
+            var7 = var2.bind(var4)(var1);
+            var13 = {};
+            var2 = var7.nick;
+            var13['username'] = var2;
+            var4 = _closure1_slot1;
+            var2 = 1;
+            var2 = var10[var2];
+            var4 = var4.bind(var8)(var2);
+            var2 = {};
+            var2['message'] = var1;
+            var2['author'] = var7;
+            var2['roleStyle'] = var5;
+            var2 = var4.bind(var8)(var2);
+            var13['usernameOnClick'] = var2;
+            var2 = {'action': 'bindOpenPins', 'messageChannelId': null, 'medium': true};
+            var4 = var1.channel_id;
+            var2['messageChannelId'] = var4;
+            var12 = true;
+            var13['pinsOnClick'] = var2;
+            var5 = var1.messageReference;
+            var1 = null;
+            if(!(var1 == var5)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var10 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var2 = 2;
+            var4 = var11[var2];
+            var4 = var10.bind(var8)(var4);
+            var7 = var4.intl;
+            var4 = var7.formatToParts;
+            var2 = var11[var2];
+            var2 = var10.bind(var8)(var2);
+            var2 = var2.t;
+            var2 = var2["6TrHq2"];
+            var4 = var4.bind(var7)(var2, var13);
+            _fun0001_ip = 4; continue _fun0001;
+case 2:
+            var7 = _closure1_slot0;
+            var14 = _closure1_slot2;
+            var2 = 2;
+            var10 = var14[var2];
+            var10 = var7.bind(var8)(var10);
+            var11 = var10.intl;
+            var10 = var11.formatToParts;
+            var2 = var14[var2];
+            var2 = var7.bind(var8)(var2);
+            var2 = var2.t;
+            var7 = var2["7mvRNF"];
+            var2 = {};
+            var18 = var2;
+            var17 = var13;
+            var13 = copyDataProperties(var18, var17);
+            var13 = {};
+            var14 = 'bindJumpToMessage';
+            var13['action'] = var14;
+            var14 = var5.channel_id;
+            var13['targetChannelId'] = var14;
+            var14 = var5.message_id;
+            var13['targetMessageId'] = var14;
+            var13['medium'] = var12;
+            var12 = 'messageOnClick';
+            var2[11] = var13;
+            var4 = var10.bind(var11)(var7, var2);
+case 4:
+            var7 = _closure1_slot1;
+            var10 = _closure1_slot2;
+            var2 = 3;
+            var2 = var10[var2];
+            var2 = var7.bind(var8)(var2);
+            var2 = var2.bind(var8)(var3);
+            var7 = var2.accessibilityActions;
+            if(!(var1 == var7)) { _fun0001_ip = 5; continue _fun0001 }
+case 6:
+            var7 = new Array(0);
+case 5:
+            var3 = new Array(0);
+            var18 = var3;
+            var17 = var7;
+            var16 = 0;
+            var7 = arraySpread(var18, var17, var16);
+            var11 = var3.push;
+            var7 = {};
+            var13 = _closure1_slot0;
+            var12 = _closure1_slot2;
+            var10 = 2;
+            var9 = var12[var10];
+            var9 = var13.bind(var8)(var9);
+            var15 = var9.intl;
+            var14 = var15.string;
+            var9 = var12[var10];
+            var9 = var13.bind(var8)(var9);
+            var9 = var9.t;
+            var9 = var9.mp1N/2;
+            var9 = var14.bind(var15)(var9);
+            var7['label'] = var9;
+            var9 = 4;
+            var12 = var12[var9];
+            var12 = var13.bind(var8)(var12);
+            var12 = var12.MessageAccessibilityAction;
+            var12 = var12.OPEN_PINS;
+            var7['name'] = var12;
+            var7 = var11.bind(var3)(var7);
+            if(!(var1 != var5)) { _fun0001_ip = 7; continue _fun0001 }
+case 8:
+            var5 = var3.push;
+            var1 = {};
+            var7 = _closure1_slot0;
+            var6 = _closure1_slot2;
+            var11 = var6[var10];
+            var11 = var7.bind(var8)(var11);
+            var12 = var11.intl;
+            var11 = var12.string;
+            var10 = var6[var10];
+            var10 = var7.bind(var8)(var10);
+            var10 = var10.t;
+            var10 = var10["+TSRGD"];
+            var10 = var11.bind(var12)(var10);
+            var1['label'] = var10;
+            var6 = var6[var9];
+            var6 = var7.bind(var8)(var6);
+            var6 = var6.MessageAccessibilityAction;
+            var6 = var6.JUMP_TO_MESSAGE;
+            var1['name'] = var6;
+            var1 = var5.bind(var3)(var1);
+case 7:
+            var1 = {};
+            var1['content'] = var4;
+            var18 = var1;
+            var17 = var2;
+            var2 = copyDataProperties(var18, var17);
+            var2 = 'accessibilityActions';
+            var1[1] = var3;
+            return var1;
+        }
+    };
+    var3['createChannelPinnedMessageSystemMessage'] = var2;
+    return var1;
+})();

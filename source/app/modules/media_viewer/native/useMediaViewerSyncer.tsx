@@ -1,0 +1,1887 @@
+// app/modules/media_viewer/native/useMediaViewerSyncer.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var7 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var7;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var9 = var1.Object;
+    var8 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var4);
+    var1 = 0;
+    var4 = var6[var1];
+    var1 = undefined;
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot3 = var4;
+    var4 = 1;
+    var7 = var6[var4];
+    var4 = metroImportAll;
+    var4 = var4.bind(var1)(var7);
+    var _closure1_slot4 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.THUMBNAIL_MARGIN;
+    var _closure1_slot5 = var7;
+    var7 = var4.THUMBNAIL_HEIGHT;
+    var _closure1_slot6 = var7;
+    var7 = var4.THUMBNAIL_MAX_WIDTH;
+    var _closure1_slot7 = var7;
+    var7 = var4.THUMBNAIL_MIN_WIDTH;
+    var _closure1_slot8 = var7;
+    var4 = var4.THUMBNAIL_WIDTH_MARGIN;
+    var _closure1_slot9 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var7 = var5.bind(var1)(var4);
+    var4 = var7.isAndroid;
+    var4 = var4.bind(var7)();
+    var _closure1_slot10 = var4;
+    var4 = {};
+    var7 = "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}";
+    var4['code'] = var7;
+    var _closure1_slot11 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx2(){const{thumbnailsScrolling,SCROLLING_DRAG}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()&~SCROLLING_DRAG);}';
+    var4['code'] = var7;
+    var _closure1_slot12 = var4;
+    var4 = {};
+    var7 = "function useMediaViewerSyncerTsx3(event){const{variableWidthThumbnailsEnabled,thumbnailScrollPositions,thumbnailSize,swipeSource,maxIndex,thumbnailsIndex,thumbnailsAnimateTo,selectedIndex,viewerScrolling,thumbnailsScrolling,runOnJS,onSelectedIndexChange}=this.__closure;let thumbnails=0;if(variableWidthThumbnailsEnabled){if(event.contentOffset.x<0){thumbnails=0;}else if(event.contentOffset.x>=thumbnailScrollPositions[thumbnailScrollPositions.length-1].end){thumbnails=thumbnailScrollPositions.length-1;}else{for(let i=0;i<thumbnailScrollPositions.length;i++){const startPos=thumbnailScrollPositions[i].scrollStart;let endPos=i<thumbnailScrollPositions.length-1?thumbnailScrollPositions[i+1].scrollStart:startPos;if(i===thumbnailScrollPositions.length-1){endPos=thumbnailScrollPositions[i].end;}if(event.contentOffset.x>=startPos&&event.contentOffset.x<endPos){thumbnails=i+(event.contentOffset.x-startPos)/(endPos-startPos);break;}}}}else{thumbnails=event.contentOffset.x/thumbnailSize;}if(swipeSource.get()==='thumbnails'||Math.abs(Math.round(thumbnails)-thumbnails)<0.01){const index=Math.max(0,Math.min(Math.round(thumbnails),maxIndex));thumbnailsIndex.set(index);}if(thumbnailsAnimateTo.get()>=0){if(thumbnailsIndex.get()===thumbnailsAnimateTo.get()){thumbnailsAnimateTo.set(-1);selectedIndex.set(thumbnailsIndex.get());}return;}const wasTouched=viewerScrolling.get()!==0||thumbnailsScrolling.get()!==0;if(wasTouched&&thumbnailsIndex.get()!==selectedIndex.get()){selectedIndex.set(thumbnailsIndex.get());runOnJS(onSelectedIndexChange)();}}";
+    var4['code'] = var7;
+    var _closure1_slot13 = var4;
+    var4 = {};
+    var7 = "function useMediaViewerSyncerTsx4(){const{thumbnailsScrolling,SCROLLING_MOMENTUM,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_MOMENTUM);swipeSource.set('thumbnails');}";
+    var4['code'] = var7;
+    var _closure1_slot14 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx5(){const{thumbnailsScrolling,SCROLLING_MOMENTUM}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()&~SCROLLING_MOMENTUM);}';
+    var4['code'] = var7;
+    var _closure1_slot15 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx6(){const{thumbnailsAnimateTo,variableWidthThumbnailsEnabled,runOnJS,scrollVarWidthThumbnails,scrollTo,ref,thumbnailSize}=this.__closure;if(thumbnailsAnimateTo.get()<0)return;if(variableWidthThumbnailsEnabled){runOnJS(scrollVarWidthThumbnails)(thumbnailsAnimateTo.get());}else{scrollTo(ref,thumbnailsAnimateTo.get()*thumbnailSize,0,true);}}';
+    var4['code'] = var7;
+    var _closure1_slot16 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx7(){const{viewerScrolling,thumbnailsIndex,viewerPos,variableWidthThumbnailsEnabled,runOnJS,lerpScrollVarWidthThumbnails,scrollTo,ref,thumbnailSize}=this.__closure;if(viewerScrolling.get()===0)return;else if(thumbnailsIndex.get()!==viewerPos.get()){if(variableWidthThumbnailsEnabled){runOnJS(lerpScrollVarWidthThumbnails)(viewerPos.get());}else{scrollTo(ref,viewerPos.get()*thumbnailSize,0,false);}}}';
+    var4['code'] = var7;
+    var _closure1_slot17 = var4;
+    var4 = {};
+    var7 = "function useMediaViewerSyncerTsx8(){const{thumbnailsScrolling,interpolate,viewerPos,interpolateInput,interpolateOutput}=this.__closure;return thumbnailsScrolling.get()>0?0:-interpolate(viewerPos.get(),interpolateInput,interpolateOutput,'clamp');}";
+    var4['code'] = var7;
+    var _closure1_slot18 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx9(){const{viewerScrolling,headerBufferSize,margin,withSpring}=this.__closure;return{width:viewerScrolling.get()>0?headerBufferSize+margin.get():withSpring(headerBufferSize+margin.get(),{overshootClamping:true})};}';
+    var4['code'] = var7;
+    var _closure1_slot19 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx10(){const{viewerScrolling,footerBufferSize,margin,withSpring}=this.__closure;return{width:viewerScrolling.get()>0?footerBufferSize+margin.get():withSpring(footerBufferSize+margin.get(),{overshootClamping:true})};}';
+    var4['code'] = var7;
+    var _closure1_slot20 = var4;
+    var4 = {};
+    var7 = "function useMediaViewerSyncerTsx11(){const{interpolate,viewerPos,index}=this.__closure;return interpolate(viewerPos.get(),[index-1,index,index+1],[0.4,1,0.4],'clamp');}";
+    var4['code'] = var7;
+    var _closure1_slot21 = var4;
+    var4 = {};
+    var7 = "function useMediaViewerSyncerTsx13(){const{thumbnailsScrolling,THUMBNAIL_MIN_WIDTH,interpolate,viewerPos,index,sourceWidth}=this.__closure;return thumbnailsScrolling.get()>0?THUMBNAIL_MIN_WIDTH:interpolate(viewerPos.get(),[index-1,index,index+1],[THUMBNAIL_MIN_WIDTH,sourceWidth,THUMBNAIL_MIN_WIDTH],'clamp');}";
+    var4['code'] = var7;
+    var _closure1_slot22 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx14(){const{viewerScrolling,_width,withSpring,THUMBNAIL_HEIGHT,opacity}=this.__closure;return{width:viewerScrolling.get()>0?_width.get():withSpring(_width.get(),{overshootClamping:true}),height:THUMBNAIL_HEIGHT,opacity:opacity.get()};}';
+    var4['code'] = var7;
+    var _closure1_slot23 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx15(){const{zoomed}=this.__closure;return!zoomed.get();}';
+    var4['code'] = var7;
+    var _closure1_slot24 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx16(){const{thumbnailsAnimateTo,scrollTo,ref,screenWidth}=this.__closure;if(thumbnailsAnimateTo.get()===-1)return;scrollTo(ref,thumbnailsAnimateTo.get()*screenWidth,0,false);}';
+    var4['code'] = var7;
+    var _closure1_slot25 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx17(){const{thumbnailsScrolling,viewerScrolling,thumbnailsAnimateTo,scrollTo,ref,thumbnailsIndex,screenWidth}=this.__closure;if(thumbnailsScrolling.get()===0||viewerScrolling.get()>0||thumbnailsAnimateTo.get()!==-1)return;scrollTo(ref,thumbnailsIndex.get()*screenWidth,0,false);}';
+    var4['code'] = var7;
+    var _closure1_slot26 = var4;
+    var4 = {};
+    var7 = "function useMediaViewerSyncerTsx18(){const{viewerScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;viewerScrolling.set(viewerScrolling.get()|SCROLLING_DRAG);swipeSource.set('viewer');}";
+    var4['code'] = var7;
+    var _closure1_slot27 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx19(){const{viewerScrolling,SCROLLING_DRAG}=this.__closure;viewerScrolling.set(viewerScrolling.get()&~SCROLLING_DRAG);}';
+    var4['code'] = var7;
+    var _closure1_slot28 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx20(pos){const{viewerPos}=this.__closure;viewerPos.set(pos);}';
+    var4['code'] = var7;
+    var _closure1_slot29 = var4;
+    var4 = {};
+    var7 = "function useMediaViewerSyncerTsx21(){const{viewerScrolling,SCROLLING_MOMENTUM,swipeSource}=this.__closure;viewerScrolling.set(viewerScrolling.get()|SCROLLING_MOMENTUM);swipeSource.set('viewer');}";
+    var4['code'] = var7;
+    var _closure1_slot30 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx22(){const{viewerScrolling,SCROLLING_MOMENTUM}=this.__closure;viewerScrolling.set(viewerScrolling.get()&~SCROLLING_MOMENTUM);}';
+    var4['code'] = var7;
+    var _closure1_slot31 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx23(event){const{contentSizeLastChangedAt,IS_ANDROID,selectedIndex,scrollTo,ref,screenWidth,viewerScrolling,thumbnailsScrolling,thumbnailsAnimateTo,onScrollWorklets}=this.__closure;const contentSizeChangedRecently=Date.now()-contentSizeLastChangedAt.get()<500;if(IS_ANDROID&&contentSizeChangedRecently&&event.contentOffset.x===0&&selectedIndex.get()!==0){scrollTo(ref,selectedIndex.get()*screenWidth,event.contentOffset.y,false);return;}if(viewerScrolling.get()===0&&thumbnailsScrolling.get()===0&&thumbnailsAnimateTo.get()===-1)return;onScrollWorklets.onScroll(event.contentOffset.x/screenWidth);}';
+    var4['code'] = var7;
+    var _closure1_slot32 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx24(){const{index,selectedIndex}=this.__closure;return index===selectedIndex.get();}';
+    var4['code'] = var7;
+    var _closure1_slot33 = var4;
+    var4 = {};
+    var7 = 'function useMediaViewerSyncerTsx25(result,previous){const{runOnJS,setVisible}=this.__closure;if(previous==null||previous===result)return;runOnJS(setVisible)(result);}';
+    var4['code'] = var7;
+    var _closure1_slot34 = var4;
+    var4 = 11;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/media_viewer/native/useMediaViewerSyncer.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function useMediaViewerSyncer(arg1) {
+        var3 = arg1;
+        var8 = var3.sources;
+        var _closure2_slot0 = var8;
+        var2 = var3.initialIndex;
+        var _closure2_slot1 = var2;
+        var6 = var3.onEndReached;
+        var _closure2_slot2 = var6;
+        var5 = var3.onEndReachedThreshold;
+        var _closure2_slot3 = var5;
+        var4 = _closure1_slot4;
+        var7 = var4.useMemo;
+        var3 = new Array(1);
+        var3[0] = var2;
+        var2 = function() {
+            var9 = _closure2_slot1;
+            var1 = {};
+            var3 = _closure1_slot0;
+            var5 = _closure1_slot2;
+            var2 = 4;
+            var6 = var5[var2];
+            var4 = undefined;
+            var7 = var3.bind(var4)(var6);
+            var6 = var7.makeMutable;
+            var6 = var6.bind(var7)(var9);
+            var1['selectedIndex'] = var6;
+            var6 = var5[var2];
+            var7 = var3.bind(var4)(var6);
+            var6 = var7.makeMutable;
+            var6 = var6.bind(var7)(var9);
+            var1['thumbnailsIndex'] = var6;
+            var6 = var5[var2];
+            var7 = var3.bind(var4)(var6);
+            var6 = var7.makeMutable;
+            var8 = 0;
+            var6 = var6.bind(var7)(var8);
+            var1['thumbnailsScrolling'] = var6;
+            var6 = var5[var2];
+            var10 = var3.bind(var4)(var6);
+            var7 = var10.makeMutable;
+            var6 = -1;
+            var6 = var7.bind(var10)(var6);
+            var1['thumbnailsAnimateTo'] = var6;
+            var6 = var5[var2];
+            var7 = var3.bind(var4)(var6);
+            var6 = var7.makeMutable;
+            var6 = var6.bind(var7)(var9);
+            var1['viewerPos'] = var6;
+            var6 = var5[var2];
+            var7 = var3.bind(var4)(var6);
+            var6 = var7.makeMutable;
+            var6 = var6.bind(var7)(var8);
+            var1['viewerScrolling'] = var6;
+            var6 = var5[var2];
+            var8 = var3.bind(var4)(var6);
+            var7 = var8.makeMutable;
+            var6 = false;
+            var6 = var7.bind(var8)(var6);
+            var1['zoomed'] = var6;
+            var2 = var5[var2];
+            var3 = var3.bind(var4)(var2);
+            var2 = var3.makeMutable;
+            var2 = var2.bind(var3)(var4);
+            var1['swipeSource'] = var2;
+            return var1;
+        };
+        var7 = var7.bind(var4)(var2, var3);
+        var _closure2_slot4 = var7;
+        var3 = var4.useMemo;
+        var2 = new Array(4);
+        var2[0] = var8;
+        var2[1] = var7;
+        var2[2] = var6;
+        var2[3] = var5;
+        var1 = function() {
+            _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+                var5 = _closure2_slot0;
+                var4 = new Array(0);
+                var2 = var5.length;
+                var17 = 0;
+                var2 = var17 < var2;
+                var3 = undefined;
+                var16 = global;
+                var15 = 2;
+                var13 = 9;
+                var12 = null;
+                var11 = 0;
+                var10 = 0;
+                var9 = undefined;
+                var8 = undefined;
+                var7 = undefined;
+                var6 = undefined;
+                if(!var2) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+                var18 = _closure1_slot0;
+                var2 = _closure1_slot2;
+                var2 = var2[var13];
+                var19 = var18.bind(var3)(var2);
+                var18 = var19.flattenSource;
+                var2 = var5[var10];
+                var2 = var18.bind(var19)(var2);
+                if(!(var12 == var2)) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+                var19 = var4.push;
+                var18 = {};
+                var18['start'] = var11;
+                var18['end'] = var11;
+                var18['scrollStart'] = var11;
+                var18 = var19.bind(var4)(var18);
+                var18 = var11;
+                _fun0001_ip = 6; continue _fun0001;
+case 4:
+                var21 = var16.Math;
+                var20 = var21.max;
+                var23 = var16.Math;
+                var22 = var23.min;
+                var19 = var2.width;
+                var24 = _closure1_slot6;
+                var2 = var2.height;
+                var2 = var24 / var2;
+                var19 = var19 * var2;
+                var2 = _closure1_slot7;
+                var19 = var22.bind(var23)(var19, var2);
+                var2 = _closure1_slot8;
+                var19 = var20.bind(var21)(var19, var2);
+                var2 = _closure1_slot5;
+                var2 = var15 * var2;
+                var20 = var19 + var2;
+                var19 = var11 + var20;
+                var2 = var19 - var11;
+                var23 = 0;
+                if(!(var23 !== var10)) { _fun0001_ip = 7; continue _fun0001 }
+case 8:
+                var24 = var16.Math;
+                var22 = var24.floor;
+                var21 = var4[var17];
+                var25 = var21.end;
+                var21 = var4[var17];
+                var21 = var21.start;
+                var21 = var25 - var21;
+                var21 = var2 - var21;
+                var21 = var21 / var15;
+                var21 = var11 + var21;
+                var23 = var22.bind(var24)(var21);
+case 7:
+                var22 = var4.push;
+                var21 = {};
+                var21['start'] = var11;
+                var21['end'] = var19;
+                var21['scrollStart'] = var23;
+                var21 = var22.bind(var4)(var21);
+                var18 = var19;
+                var9 = var20;
+                var8 = var11;
+                var7 = var18;
+                var6 = var2;
+case 6:
+                var10 = var10 + 1;
+                var2 = var5.length;
+                var11 = var18;
+                if(var10 < var2) { _fun0001_ip = 3; continue _fun0001 }
+case 2:
+                var2 = {};
+                var2['sources'] = var5;
+                var5 = _closure2_slot4;
+                var2['animProps'] = var5;
+                var2['thumbnailScrollPositions'] = var4;
+                var4 = _closure2_slot2;
+                var2['onEndReached'] = var4;
+                var1 = _closure2_slot3;
+                var2['onEndReachedThreshold'] = var1;
+                var1 = function makeMediaViewerSyncer(arg1) {
+                    _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                        var2 = arg1;
+                        var7 = var2.sources;
+                        var _closure4_slot0 = var7;
+                        var1 = var2.animProps;
+                        var5 = var2.thumbnailScrollPositions;
+                        var _closure4_slot1 = var5;
+                        var3 = var2.onEndReached;
+                        var2 = var2.onEndReachedThreshold;
+                        var8 = var1.selectedIndex;
+                        var _closure4_slot2 = var8;
+                        var6 = var1.thumbnailsIndex;
+                        var _closure4_slot3 = var6;
+                        var6 = var1.thumbnailsScrolling;
+                        var _closure4_slot4 = var6;
+                        var6 = var1.thumbnailsAnimateTo;
+                        var _closure4_slot5 = var6;
+                        var6 = var1.viewerPos;
+                        var _closure4_slot6 = var6;
+                        var6 = var1.viewerScrolling;
+                        var _closure4_slot7 = var6;
+                        var6 = var1.zoomed;
+                        var _closure4_slot8 = var6;
+                        var1 = var1.swipeSource;
+                        var _closure4_slot9 = var1;
+                        var9 = var5.length;
+                        var1 = 0;
+                        if(!(var9 > var1)) { _fun0002_ip = 9; continue _fun0002 }
+case 10:
+                        var9 = var5[var1];
+                        var9 = var9.end;
+                        var1 = var5[var1];
+                        var1 = var1.start;
+case 9:
+                        var1 = {};
+                        var1['index'] = var8;
+                        var1['sources'] = var7;
+                        var1['zoomed'] = var6;
+                        var1['thumbnailScrollPositions'] = var5;
+                        var5 = false;
+                        var1['variableWidthThumbnailsEnabled'] = var5;
+                        var5 = function useThumbnailsProps(arg1, arg2) {
+                            var9 = arg1;
+                            var22 = arg2;
+                            var _closure5_slot0 = var9;
+                            var _closure5_slot1 = var22;
+                            var21 = function onSelectedIndexChange() {
+                                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                                    var3 = _closure4_slot9;
+                                    var2 = var3.get;
+                                    var3 = var2.bind(var3)();
+                                    var2 = 'thumbnails';
+                                    if(!(var2 !== var3)) { _fun0003_ip = 11; continue _fun0003 }
+case 12:
+                                    var2 = _closure4_slot9;
+                                    var1 = var2.get;
+                                    var2 = var1.bind(var2)();
+                                    var1 = 'viewer';
+                                    if(!(var1 === var2)) { _fun0003_ip = 13; continue _fun0003 }
+case 14:
+                                    var5 = _closure1_slot0;
+                                    var6 = _closure1_slot2;
+                                    var1 = 7;
+                                    var2 = var6[var1];
+                                    var4 = undefined;
+                                    var2 = var5.bind(var4)(var2);
+                                    var3 = var2.MediaViewerAnalytics;
+                                    var2 = var3.markActionPerformed;
+                                    var1 = var6[var1];
+                                    var1 = var5.bind(var4)(var1);
+                                    var1 = var1.IncrementableMediaViewerActions;
+                                    var1 = var1.VIEWER_SWIPE;
+                                    var1 = var2.bind(var3)(var1);
+                                    _fun0003_ip = 13; continue _fun0003;
+case 11:
+                                    var5 = _closure1_slot0;
+                                    var6 = _closure1_slot2;
+                                    var1 = 7;
+                                    var2 = var6[var1];
+                                    var4 = undefined;
+                                    var2 = var5.bind(var4)(var2);
+                                    var3 = var2.MediaViewerAnalytics;
+                                    var2 = var3.markActionPerformed;
+                                    var1 = var6[var1];
+                                    var1 = var5.bind(var4)(var1);
+                                    var1 = var1.IncrementableMediaViewerActions;
+                                    var1 = var1.THUMBNAIL_SWIPE;
+                                    var1 = var2.bind(var3)(var1);
+case 13:
+                                    var5 = _closure1_slot0;
+                                    var6 = _closure1_slot2;
+                                    var2 = 7;
+                                    var3 = var6[var2];
+                                    var1 = undefined;
+                                    var3 = var5.bind(var1)(var3);
+                                    var4 = var3.MediaViewerAnalytics;
+                                    var3 = var4.markActionPerformed;
+                                    var2 = var6[var2];
+                                    var2 = var5.bind(var1)(var2);
+                                    var2 = var2.IncrementableMediaViewerActions;
+                                    var2 = var2.SELECTED_ITEM_CHANGE;
+                                    var2 = var3.bind(var4)(var2);
+                                    return var1;
+                                }
+                            };
+                            var _closure5_slot8 = var21;
+                            var14 = _closure1_slot0;
+                            var16 = _closure1_slot2;
+                            var1 = 4;
+                            var3 = var16[var1];
+                            var8 = undefined;
+                            var4 = var14.bind(var8)(var3);
+                            var3 = var4.useAnimatedRef;
+                            var13 = var3.bind(var4)();
+                            var _closure5_slot2 = var13;
+                            var3 = 5;
+                            var3 = var16[var3];
+                            var4 = var14.bind(var8)(var3);
+                            var3 = var4.useMediaViewerDimensions;
+                            var3 = var3.bind(var4)();
+                            var4 = var3.width;
+                            var3 = var3.height;
+                            var6 = _closure1_slot1;
+                            var5 = 6;
+                            var5 = var16[var5];
+                            var5 = var6.bind(var8)(var5);
+                            var5 = var5.bind(var8)();
+                            var6 = var16[var1];
+                            var11 = var14.bind(var8)(var6);
+                            var7 = var11.useAnimatedScrollHandler;
+                            var6 = {};
+                            var12 = function y() {
+                                var4 = _closure4_slot4;
+                                var3 = var4.set;
+                                var2 = var4.get;
+                                var5 = var2.bind(var4)();
+                                var2 = 2;
+                                var2 = var2 | var5;
+                                var2 = var3.bind(var4)(var2);
+                                var3 = _closure4_slot9;
+                                var2 = var3.set;
+                                var1 = 'thumbnails';
+                                var1 = var2.bind(var3)(var1);
+                                var1 = undefined;
+                                return var1;
+                            };
+                            var18 = {};
+                            var26 = _closure4_slot4;
+                            var18['thumbnailsScrolling'] = var26;
+                            var10 = 2;
+                            var18['SCROLLING_DRAG'] = var10;
+                            var20 = _closure4_slot9;
+                            var18['swipeSource'] = var20;
+                            var12['__closure'] = var18;
+                            var18 = 16224520186325.0;
+                            var12['__workletHash'] = var18;
+                            var18 = _closure1_slot11;
+                            var12['__initData'] = var18;
+                            var6['onBeginDrag'] = var12;
+                            var12 = function C() {
+                                var3 = _closure4_slot4;
+                                var2 = var3.set;
+                                var1 = var3.get;
+                                var4 = var1.bind(var3)();
+                                var1 = -3;
+                                var1 = var1 & var4;
+                                var1 = var2.bind(var3)(var1);
+                                var1 = undefined;
+                                return var1;
+                            };
+                            var18 = {};
+                            var18['thumbnailsScrolling'] = var26;
+                            var18['SCROLLING_DRAG'] = var10;
+                            var12['__closure'] = var18;
+                            var18 = 5779899826871.0;
+                            var12['__workletHash'] = var18;
+                            var18 = _closure1_slot12;
+                            var12['__initData'] = var18;
+                            var6['onEndDrag'] = var12;
+                            var12 = function E(arg1) {
+                                _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+                                    var1 = arg1;
+                                    var1 = var1.contentOffset;
+                                    var3 = var1.x;
+                                    var1 = _closure5_slot0;
+                                    var9 = var3 / var1;
+                                    var4 = _closure4_slot9;
+                                    var3 = var4.get;
+                                    var4 = var3.bind(var4)();
+                                    var3 = 'thumbnails';
+                                    if(!(var3 !== var4)) { _fun0004_ip = 15; continue _fun0004 }
+case 16:
+                                    var3 = global;
+                                    var5 = var3.Math;
+                                    var4 = var5.abs;
+                                    var6 = var3.Math;
+                                    var3 = var6.round;
+                                    var3 = var3.bind(var6)(var9);
+                                    var3 = var3 - var9;
+                                    var4 = var4.bind(var5)(var3);
+                                    var3 = 0.01;
+                                    if(!(var4 < var3)) { _fun0004_ip = 17; continue _fun0004 }
+case 15:
+                                    var3 = global;
+                                    var6 = var3.Math;
+                                    var5 = var6.max;
+                                    var8 = var3.Math;
+                                    var7 = var8.min;
+                                    var4 = var3.Math;
+                                    var3 = var4.round;
+                                    var4 = var3.bind(var4)(var9);
+                                    var3 = _closure5_slot1;
+                                    var4 = var7.bind(var8)(var4, var3);
+                                    var3 = 0;
+                                    var5 = var5.bind(var6)(var3, var4);
+                                    var4 = _closure4_slot3;
+                                    var3 = var4.set;
+                                    var3 = var3.bind(var4)(var5);
+case 17:
+                                    var4 = _closure4_slot5;
+                                    var3 = var4.get;
+                                    var3 = var3.bind(var4)();
+                                    var5 = 0;
+                                    if(!(!(var3 >= var5))) { _fun0004_ip = 18; continue _fun0004 }
+case 19:
+                                    var4 = _closure4_slot7;
+                                    var3 = var4.get;
+                                    var3 = var3.bind(var4)();
+                                    var3 = var5 !== var3;
+                                    if(var3) { _fun0004_ip = 20; continue _fun0004 }
+case 21:
+                                    var6 = _closure4_slot4;
+                                    var4 = var6.get;
+                                    var4 = var4.bind(var6)();
+                                    var3 = var5 !== var4;
+case 20:
+                                    if(!var3) { _fun0004_ip = 22; continue _fun0004 }
+case 23:
+                                    var5 = _closure4_slot3;
+                                    var4 = var5.get;
+                                    var5 = var4.bind(var5)();
+                                    var6 = _closure4_slot2;
+                                    var4 = var6.get;
+                                    var4 = var4.bind(var6)();
+                                    var3 = var5 !== var4;
+case 22:
+                                    if(!var3) { _fun0004_ip = 24; continue _fun0004 }
+case 25:
+                                    var5 = _closure4_slot2;
+                                    var4 = var5.set;
+                                    var6 = _closure4_slot3;
+                                    var3 = var6.get;
+                                    var3 = var3.bind(var6)();
+                                    var3 = var4.bind(var5)(var3);
+                                    var5 = _closure1_slot0;
+                                    var4 = _closure1_slot2;
+                                    var3 = 4;
+                                    var4 = var4[var3];
+                                    var3 = undefined;
+                                    var5 = var5.bind(var3)(var4);
+                                    var4 = var5.runOnJS;
+                                    var2 = _closure5_slot8;
+                                    var2 = var4.bind(var5)(var2);
+                                    var2 = var2.bind(var3)();
+                                    _fun0004_ip = 24; continue _fun0004;
+case 18:
+                                    var3 = _closure4_slot3;
+                                    var2 = var3.get;
+                                    var3 = var2.bind(var3)();
+                                    var4 = _closure4_slot5;
+                                    var2 = var4.get;
+                                    var2 = var2.bind(var4)();
+                                    if(!(var3 === var2)) { _fun0004_ip = 24; continue _fun0004 }
+case 26:
+                                    var4 = _closure4_slot5;
+                                    var3 = var4.set;
+                                    var2 = -1;
+                                    var2 = var3.bind(var4)(var2);
+                                    var3 = _closure4_slot2;
+                                    var2 = var3.set;
+                                    var4 = _closure4_slot3;
+                                    var1 = var4.get;
+                                    var1 = var1.bind(var4)();
+                                    var1 = var2.bind(var3)(var1);
+case 24:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var18 = {};
+                            var24 = false;
+                            var18['variableWidthThumbnailsEnabled'] = var24;
+                            var19 = _closure4_slot1;
+                            var18['thumbnailScrollPositions'] = var19;
+                            var18['thumbnailSize'] = var9;
+                            var18['swipeSource'] = var20;
+                            var18['maxIndex'] = var22;
+                            var25 = _closure4_slot3;
+                            var18['thumbnailsIndex'] = var25;
+                            var27 = _closure4_slot5;
+                            var18['thumbnailsAnimateTo'] = var27;
+                            var22 = _closure4_slot2;
+                            var18['selectedIndex'] = var22;
+                            var23 = _closure4_slot7;
+                            var18['viewerScrolling'] = var23;
+                            var18['thumbnailsScrolling'] = var26;
+                            var22 = var16[var1];
+                            var22 = var14.bind(var8)(var22);
+                            var22 = var22.runOnJS;
+                            var18['runOnJS'] = var22;
+                            var18['onSelectedIndexChange'] = var21;
+                            var12['__closure'] = var18;
+                            var18 = 10605529664479.0;
+                            var12['__workletHash'] = var18;
+                            var18 = _closure1_slot13;
+                            var12['__initData'] = var18;
+                            var6['onScroll'] = var12;
+                            var12 = function P() {
+                                var4 = _closure4_slot4;
+                                var3 = var4.set;
+                                var2 = var4.get;
+                                var5 = var2.bind(var4)();
+                                var2 = 4;
+                                var2 = var2 | var5;
+                                var2 = var3.bind(var4)(var2);
+                                var3 = _closure4_slot9;
+                                var2 = var3.set;
+                                var1 = 'thumbnails';
+                                var1 = var2.bind(var3)(var1);
+                                var1 = undefined;
+                                return var1;
+                            };
+                            var18 = {};
+                            var18['thumbnailsScrolling'] = var26;
+                            var18['SCROLLING_MOMENTUM'] = var1;
+                            var18['swipeSource'] = var20;
+                            var12['__closure'] = var18;
+                            var18 = 4138169755088.0;
+                            var12['__workletHash'] = var18;
+                            var18 = _closure1_slot14;
+                            var12['__initData'] = var18;
+                            var6['onMomentumBegin'] = var12;
+                            var12 = function R() {
+                                var3 = _closure4_slot4;
+                                var2 = var3.set;
+                                var1 = var3.get;
+                                var4 = var1.bind(var3)();
+                                var1 = -5;
+                                var1 = var1 & var4;
+                                var1 = var2.bind(var3)(var1);
+                                var1 = undefined;
+                                return var1;
+                            };
+                            var18 = {};
+                            var18['thumbnailsScrolling'] = var26;
+                            var18['SCROLLING_MOMENTUM'] = var1;
+                            var12['__closure'] = var18;
+                            var18 = 1471443652144.0;
+                            var12['__workletHash'] = var18;
+                            var18 = _closure1_slot15;
+                            var12['__initData'] = var18;
+                            var6['onMomentumEnd'] = var12;
+                            var7 = var7.bind(var11)(var6);
+                            var20 = _closure1_slot4;
+                            var12 = var20.useCallback;
+                            var11 = function(arg1) {
+                                _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+                                    var3 = _closure4_slot8;
+                                    var2 = var3.get;
+                                    var2 = var2.bind(var3)();
+                                    if(var2) { _fun0005_ip = 27; continue _fun0005 }
+case 28:
+                                    var4 = _closure4_slot5;
+                                    var3 = var4.set;
+                                    var2 = arg1;
+                                    var2 = var3.bind(var4)(var2);
+                                    var3 = _closure4_slot9;
+                                    var2 = var3.set;
+                                    var1 = 'thumbnails';
+                                    var1 = var2.bind(var3)(var1);
+case 27:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var6 = new Array(0);
+                            var6 = var12.bind(var20)(var11, var6);
+                            var18 = var20.useCallback;
+                            var12 = new Array(1);
+                            var12[0] = var13;
+                            var11 = function(arg1) {
+                                var2 = _closure4_slot1;
+                                var1 = arg1;
+                                var1 = var2[var1];
+                                var10 = var1.scrollStart;
+                                var3 = _closure1_slot0;
+                                var2 = _closure1_slot2;
+                                var1 = 4;
+                                var2 = var2[var1];
+                                var1 = undefined;
+                                var6 = var3.bind(var1)(var2);
+                                var5 = var6.scrollTo;
+                                var11 = _closure5_slot2;
+                                var9 = 0;
+                                var8 = true;
+                                var12 = var6;
+                                var2 = var12[var5](var11, var10, var9, var8, var7);
+                                return var1;
+                            };
+                            var22 = var18.bind(var20)(var11, var12);
+                            var11 = var16[var1];
+                            var18 = var14.bind(var8)(var11);
+                            var12 = var18.useDerivedValue;
+                            var11 = function k() {
+                                _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+                                    var3 = _closure4_slot5;
+                                    var1 = var3.get;
+                                    var1 = var1.bind(var3)();
+                                    var6 = 0;
+                                    if(!(!(var1 < var6))) { _fun0006_ip = 29; continue _fun0006 }
+case 30:
+                                    var4 = _closure1_slot0;
+                                    var3 = _closure1_slot2;
+                                    var1 = 4;
+                                    var3 = var3[var1];
+                                    var1 = undefined;
+                                    var5 = var4.bind(var1)(var3);
+                                    var4 = var5.scrollTo;
+                                    var11 = _closure5_slot2;
+                                    var7 = _closure4_slot5;
+                                    var2 = var7.get;
+                                    var2 = var2.bind(var7)();
+                                    var1 = _closure5_slot0;
+                                    var10 = var2 * var1;
+                                    var8 = true;
+                                    var12 = var5;
+                                    var9 = 0;
+                                    var1 = var12[var4](var11, var10, var9, var8, var7);
+case 29:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var21 = {};
+                            var21['thumbnailsAnimateTo'] = var27;
+                            var21['variableWidthThumbnailsEnabled'] = var24;
+                            var27 = var16[var1];
+                            var27 = var14.bind(var8)(var27);
+                            var27 = var27.runOnJS;
+                            var21['runOnJS'] = var27;
+                            var21['scrollVarWidthThumbnails'] = var22;
+                            var22 = var16[var1];
+                            var22 = var14.bind(var8)(var22);
+                            var22 = var22.scrollTo;
+                            var21['scrollTo'] = var22;
+                            var21['ref'] = var13;
+                            var21['thumbnailSize'] = var9;
+                            var11['__closure'] = var21;
+                            var21 = 1697086875584.0;
+                            var11['__workletHash'] = var21;
+                            var21 = _closure1_slot16;
+                            var11['__initData'] = var21;
+                            var11 = var12.bind(var18)(var11);
+                            var18 = var20.useCallback;
+                            var12 = new Array(1);
+                            var12[0] = var13;
+                            var11 = function(arg1) {
+                                var3 = _closure1_slot0;
+                                var4 = _closure1_slot2;
+                                var1 = 8;
+                                var2 = var4[var1];
+                                var1 = undefined;
+                                var7 = var3.bind(var1)(var2);
+                                var6 = var7.lerpVarWidthThumbnailScrollBounds;
+                                var5 = _closure4_slot1;
+                                var2 = arg1;
+                                var10 = var6.bind(var7)(var5, var2);
+                                var2 = 4;
+                                var2 = var4[var2];
+                                var6 = var3.bind(var1)(var2);
+                                var5 = var6.scrollTo;
+                                var11 = _closure5_slot2;
+                                var9 = 0;
+                                var8 = false;
+                                var12 = var6;
+                                var2 = var12[var5](var11, var10, var9, var8, var7);
+                                return var1;
+                            };
+                            var22 = var18.bind(var20)(var11, var12);
+                            var11 = var16[var1];
+                            var18 = var14.bind(var8)(var11);
+                            var12 = var18.useDerivedValue;
+                            var11 = function Z() {
+                                _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+                                    var3 = _closure4_slot7;
+                                    var1 = var3.get;
+                                    var1 = var1.bind(var3)();
+                                    var6 = 0;
+                                    var1 = var6 !== var1;
+                                    if(!var1) { _fun0007_ip = 3; continue _fun0007 }
+case 31:
+                                    var4 = _closure4_slot3;
+                                    var3 = var4.get;
+                                    var4 = var3.bind(var4)();
+                                    var5 = _closure4_slot6;
+                                    var3 = var5.get;
+                                    var3 = var3.bind(var5)();
+                                    var1 = var4 !== var3;
+case 3:
+                                    if(!var1) { _fun0007_ip = 32; continue _fun0007 }
+case 33:
+                                    var4 = _closure1_slot0;
+                                    var3 = _closure1_slot2;
+                                    var1 = 4;
+                                    var3 = var3[var1];
+                                    var1 = undefined;
+                                    var5 = var4.bind(var1)(var3);
+                                    var4 = var5.scrollTo;
+                                    var11 = _closure5_slot2;
+                                    var7 = _closure4_slot6;
+                                    var2 = var7.get;
+                                    var2 = var2.bind(var7)();
+                                    var1 = _closure5_slot0;
+                                    var10 = var2 * var1;
+                                    var8 = false;
+                                    var12 = var5;
+                                    var9 = 0;
+                                    var1 = var12[var4](var11, var10, var9, var8, var7);
+case 32:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var21 = {};
+                            var21['viewerScrolling'] = var23;
+                            var21['thumbnailsIndex'] = var25;
+                            var25 = _closure4_slot6;
+                            var21['viewerPos'] = var25;
+                            var21['variableWidthThumbnailsEnabled'] = var24;
+                            var24 = var16[var1];
+                            var24 = var14.bind(var8)(var24);
+                            var24 = var24.runOnJS;
+                            var21['runOnJS'] = var24;
+                            var21['lerpScrollVarWidthThumbnails'] = var22;
+                            var22 = var16[var1];
+                            var22 = var14.bind(var8)(var22);
+                            var22 = var22.scrollTo;
+                            var21['scrollTo'] = var22;
+                            var21['ref'] = var13;
+                            var21['thumbnailSize'] = var9;
+                            var11['__closure'] = var21;
+                            var21 = 10477949154269.0;
+                            var11['__workletHash'] = var21;
+                            var21 = _closure1_slot17;
+                            var11['__initData'] = var21;
+                            var11 = var12.bind(var18)(var11);
+                            var18 = _closure4_slot0;
+                            var12 = var18.map;
+                            var11 = function(arg1, arg2) {
+                                var1 = arg2;
+                                return var1;
+                            };
+                            var24 = var12.bind(var18)(var11);
+                            var _closure5_slot3 = var24;
+                            var12 = var18.map;
+                            var11 = function(arg1) {
+                                _fun0008: for(var _fun0008_ip = 0; ; ) switch(_fun0008_ip) {
+case 0:
+                                    var4 = _closure1_slot0;
+                                    var2 = _closure1_slot2;
+                                    var1 = 9;
+                                    var2 = var2[var1];
+                                    var1 = undefined;
+                                    var4 = var4.bind(var1)(var2);
+                                    var2 = var4.flattenSource;
+                                    var1 = arg1;
+                                    var2 = var2.bind(var4)(var1);
+                                    var1 = null;
+                                    var4 = var1 == var2;
+                                    var1 = 0;
+                                    if(var4) { _fun0008_ip = 34; continue _fun0008 }
+case 35:
+                                    var6 = global;
+                                    var5 = var6.Math;
+                                    var4 = var5.max;
+                                    var8 = var6.Math;
+                                    var7 = var8.min;
+                                    var6 = var2.width;
+                                    var9 = _closure1_slot6;
+                                    var2 = var2.height;
+                                    var2 = var9 / var2;
+                                    var6 = var6 * var2;
+                                    var2 = _closure1_slot7;
+                                    var2 = var7.bind(var8)(var6, var2);
+                                    var3 = _closure1_slot8;
+                                    var2 = var4.bind(var5)(var2, var3);
+                                    var3 = var2 - var3;
+                                    var2 = 2;
+                                    var1 = var3 / var2;
+case 34:
+                                    return var1;
+                                }
+                            };
+                            var22 = var12.bind(var18)(var11);
+                            var _closure5_slot4 = var22;
+                            var11 = var16[var1];
+                            var18 = var14.bind(var8)(var11);
+                            var12 = var18.useDerivedValue;
+                            var11 = function ee() {
+                                _fun0009: for(var _fun0009_ip = 0; ; ) switch(_fun0009_ip) {
+case 0:
+                                    var3 = _closure4_slot4;
+                                    var1 = var3.get;
+                                    var3 = var1.bind(var3)();
+                                    var1 = 0;
+                                    var3 = var3 > var1;
+                                    if(var3) { _fun0009_ip = 36; continue _fun0009 }
+case 31:
+                                    var5 = _closure1_slot0;
+                                    var4 = _closure1_slot2;
+                                    var3 = 4;
+                                    var4 = var4[var3];
+                                    var3 = undefined;
+                                    var7 = var5.bind(var3)(var4);
+                                    var6 = var7.interpolate;
+                                    var3 = _closure4_slot6;
+                                    var2 = var3.get;
+                                    var11 = var2.bind(var3)();
+                                    var10 = _closure5_slot3;
+                                    var9 = _closure5_slot4;
+                                    var8 = 'clamp';
+                                    var12 = var7;
+                                    var2 = var12[var6](var11, var10, var9, var8, var7);
+                                    var1 = -var2;
+case 36:
+                                    return var1;
+                                }
+                            };
+                            var21 = {};
+                            var21['thumbnailsScrolling'] = var26;
+                            var26 = var16[var1];
+                            var26 = var14.bind(var8)(var26);
+                            var26 = var26.interpolate;
+                            var21['interpolate'] = var26;
+                            var21['viewerPos'] = var25;
+                            var21['interpolateInput'] = var24;
+                            var21['interpolateOutput'] = var22;
+                            var11['__closure'] = var21;
+                            var21 = 10097839523885.0;
+                            var11['__workletHash'] = var21;
+                            var21 = _closure1_slot18;
+                            var11['__initData'] = var21;
+                            var22 = var12.bind(var18)(var11);
+                            var _closure5_slot5 = var22;
+                            var11 = var4 - var9;
+                            var12 = var11 / var10;
+                            var11 = var5.left;
+                            var11 = var12 - var11;
+                            var _closure5_slot6 = var11;
+                            var12 = var16[var1];
+                            var24 = var14.bind(var8)(var12);
+                            var18 = var24.useAnimatedStyle;
+                            var12 = function te() {
+                                _fun0010: for(var _fun0010_ip = 0; ; ) switch(_fun0010_ip) {
+case 0:
+                                    var1 = {};
+                                    var3 = _closure4_slot7;
+                                    var2 = var3.get;
+                                    var3 = var2.bind(var3)();
+                                    var2 = 0;
+                                    if(!(!(var3 > var2))) { _fun0010_ip = 37; continue _fun0010 }
+case 38:
+                                    var4 = _closure1_slot0;
+                                    var3 = _closure1_slot2;
+                                    var2 = 10;
+                                    var3 = var3[var2];
+                                    var2 = undefined;
+                                    var5 = var4.bind(var2)(var3);
+                                    var4 = var5.withSpring;
+                                    var3 = _closure5_slot6;
+                                    var6 = _closure5_slot5;
+                                    var2 = var6.get;
+                                    var2 = var2.bind(var6)();
+                                    var3 = var3 + var2;
+                                    var2 = {};
+                                    var6 = true;
+                                    var2['overshootClamping'] = var6;
+                                    var2 = var4.bind(var5)(var3, var2);
+                                    _fun0010_ip = 39; continue _fun0010;
+case 37:
+                                    var4 = _closure5_slot6;
+                                    var5 = _closure5_slot5;
+                                    var3 = var5.get;
+                                    var3 = var3.bind(var5)();
+                                    var2 = var4 + var3;
+case 39:
+                                    var1['width'] = var2;
+                                    return var1;
+                                }
+                            };
+                            var25 = {};
+                            var25['viewerScrolling'] = var23;
+                            var25['headerBufferSize'] = var11;
+                            var25['margin'] = var22;
+                            var21 = 10;
+                            var26 = var16[var21];
+                            var26 = var14.bind(var8)(var26);
+                            var26 = var26.withSpring;
+                            var25['withSpring'] = var26;
+                            var12['__closure'] = var25;
+                            var25 = 11328769587377.0;
+                            var12['__workletHash'] = var25;
+                            var25 = _closure1_slot19;
+                            var12['__initData'] = var25;
+                            var12 = var18.bind(var24)(var12);
+                            var24 = var19.length;
+                            var18 = 1;
+                            var18 = var24 - var18;
+                            var18 = var19[var18];
+                            var9 = var4 - var9;
+                            var9 = var9 / var10;
+                            var5 = var5.right;
+                            var9 = var9 - var5;
+                            var _closure5_slot7 = var9;
+                            var5 = var16[var1];
+                            var18 = var14.bind(var8)(var5);
+                            var10 = var18.useAnimatedStyle;
+                            var5 = function ne() {
+                                _fun0011: for(var _fun0011_ip = 0; ; ) switch(_fun0011_ip) {
+case 0:
+                                    var1 = {};
+                                    var3 = _closure4_slot7;
+                                    var2 = var3.get;
+                                    var3 = var2.bind(var3)();
+                                    var2 = 0;
+                                    if(!(!(var3 > var2))) { _fun0011_ip = 37; continue _fun0011 }
+case 38:
+                                    var4 = _closure1_slot0;
+                                    var3 = _closure1_slot2;
+                                    var2 = 10;
+                                    var3 = var3[var2];
+                                    var2 = undefined;
+                                    var5 = var4.bind(var2)(var3);
+                                    var4 = var5.withSpring;
+                                    var3 = _closure5_slot7;
+                                    var6 = _closure5_slot5;
+                                    var2 = var6.get;
+                                    var2 = var2.bind(var6)();
+                                    var3 = var3 + var2;
+                                    var2 = {};
+                                    var6 = true;
+                                    var2['overshootClamping'] = var6;
+                                    var2 = var4.bind(var5)(var3, var2);
+                                    _fun0011_ip = 39; continue _fun0011;
+case 37:
+                                    var4 = _closure5_slot7;
+                                    var5 = _closure5_slot5;
+                                    var3 = var5.get;
+                                    var3 = var3.bind(var5)();
+                                    var2 = var4 + var3;
+case 39:
+                                    var1['width'] = var2;
+                                    return var1;
+                                }
+                            };
+                            var19 = {};
+                            var19['viewerScrolling'] = var23;
+                            var19['footerBufferSize'] = var9;
+                            var19['margin'] = var22;
+                            var21 = var16[var21];
+                            var21 = var14.bind(var8)(var21);
+                            var21 = var21.withSpring;
+                            var19['withSpring'] = var21;
+                            var5['__closure'] = var19;
+                            var19 = 10532164558483.0;
+                            var5['__workletHash'] = var19;
+                            var19 = _closure1_slot20;
+                            var5['__initData'] = var19;
+                            var10 = var10.bind(var18)(var5);
+                            var19 = var20.useCallback;
+                            var18 = function(arg1, arg2) {
+                                var3 = arg1;
+                                var15 = arg2;
+                                var _closure6_slot0 = var15;
+                                var10 = _closure1_slot0;
+                                var11 = _closure1_slot2;
+                                var2 = 4;
+                                var5 = var11[var2];
+                                var9 = undefined;
+                                var7 = var10.bind(var9)(var5);
+                                var6 = var7.useDerivedValue;
+                                var5 = function i() {
+                                    var3 = _closure1_slot0;
+                                    var2 = _closure1_slot2;
+                                    var1 = 4;
+                                    var2 = var2[var1];
+                                    var1 = undefined;
+                                    var6 = var3.bind(var1)(var2);
+                                    var5 = var6.interpolate;
+                                    var2 = _closure4_slot6;
+                                    var1 = var2.get;
+                                    var11 = var1.bind(var2)();
+                                    var2 = _closure6_slot0;
+                                    var1 = 1;
+                                    var7 = var2 - var1;
+                                    var3 = new Array(3);
+                                    var3[0] = var7;
+                                    var3[1] = var2;
+                                    var1 = var2 + var1;
+                                    var3[2] = var1;
+                                    var9 = [0.4, 1, 0.4];
+                                    var8 = 'clamp';
+                                    var12 = var6;
+                                    var10 = var3;
+                                    var1 = var12[var5](var11, var10, var9, var8, var7);
+                                    return var1;
+                                };
+                                var8 = {};
+                                var12 = var11[var2];
+                                var12 = var10.bind(var9)(var12);
+                                var12 = var12.interpolate;
+                                var8['interpolate'] = var12;
+                                var16 = _closure4_slot6;
+                                var8['viewerPos'] = var16;
+                                var8['index'] = var15;
+                                var5['__closure'] = var8;
+                                var8 = 5784737783661.0;
+                                var5['__workletHash'] = var8;
+                                var8 = _closure1_slot21;
+                                var5['__initData'] = var8;
+                                var6 = var6.bind(var7)(var5);
+                                var _closure6_slot1 = var6;
+                                var7 = global;
+                                var8 = var7.Math;
+                                var5 = var8.max;
+                                var17 = var7.Math;
+                                var14 = var17.min;
+                                var13 = var3.width;
+                                var7 = _closure1_slot6;
+                                var3 = var3.height;
+                                var3 = var7 / var3;
+                                var13 = var13 * var3;
+                                var3 = _closure1_slot7;
+                                var3 = var14.bind(var17)(var13, var3);
+                                var17 = _closure1_slot8;
+                                var14 = var5.bind(var8)(var3, var17);
+                                var _closure6_slot2 = var14;
+                                var3 = var11[var2];
+                                var8 = var10.bind(var9)(var3);
+                                var5 = var8.useDerivedValue;
+                                var3 = function l() {
+                                    _fun0012: for(var _fun0012_ip = 0; ; ) switch(_fun0012_ip) {
+case 0:
+                                        var3 = _closure4_slot4;
+                                        var1 = var3.get;
+                                        var3 = var1.bind(var3)();
+                                        var1 = 0;
+                                        if(!(!(var3 > var1))) { _fun0012_ip = 40; continue _fun0012 }
+case 31:
+                                        var5 = _closure1_slot0;
+                                        var4 = _closure1_slot2;
+                                        var3 = 4;
+                                        var4 = var4[var3];
+                                        var3 = undefined;
+                                        var6 = var5.bind(var3)(var4);
+                                        var5 = var6.interpolate;
+                                        var3 = _closure4_slot6;
+                                        var2 = var3.get;
+                                        var13 = var2.bind(var3)();
+                                        var8 = _closure6_slot0;
+                                        var2 = 1;
+                                        var9 = var8 - var2;
+                                        var3 = new Array(3);
+                                        var3[0] = var9;
+                                        var3[1] = var8;
+                                        var2 = var8 + var2;
+                                        var3[2] = var2;
+                                        var1 = _closure1_slot8;
+                                        var2 = new Array(3);
+                                        var2[0] = var1;
+                                        var7 = _closure6_slot2;
+                                        var2[1] = var7;
+                                        var2[2] = var1;
+                                        var10 = 'clamp';
+                                        var14 = var6;
+                                        var12 = var3;
+                                        var11 = var2;
+                                        var1 = var14[var5](var13, var12, var11, var10, var9);
+                                        _fun0012_ip = 41; continue _fun0012;
+case 40:
+                                        var1 = _closure1_slot8;
+case 41:
+                                        return var1;
+                                    }
+                                };
+                                var13 = {};
+                                var18 = _closure4_slot4;
+                                var13['thumbnailsScrolling'] = var18;
+                                var13['THUMBNAIL_MIN_WIDTH'] = var17;
+                                var17 = var11[var2];
+                                var17 = var10.bind(var9)(var17);
+                                var17 = var17.interpolate;
+                                var13['interpolate'] = var17;
+                                var13['viewerPos'] = var16;
+                                var13['index'] = var15;
+                                var13['sourceWidth'] = var14;
+                                var3['__closure'] = var13;
+                                var13 = 12440745987072.0;
+                                var3['__workletHash'] = var13;
+                                var13 = _closure1_slot22;
+                                var3['__initData'] = var13;
+                                var8 = var5.bind(var8)(var3);
+                                var _closure6_slot3 = var8;
+                                var2 = var11[var2];
+                                var3 = var10.bind(var9)(var2);
+                                var2 = var3.useAnimatedStyle;
+                                var1 = function u() {
+                                    _fun0013: for(var _fun0013_ip = 0; ; ) switch(_fun0013_ip) {
+case 0:
+                                        var1 = {};
+                                        var3 = _closure4_slot7;
+                                        var2 = var3.get;
+                                        var3 = var2.bind(var3)();
+                                        var2 = 0;
+                                        if(!(!(var3 > var2))) { _fun0013_ip = 42; continue _fun0013 }
+case 38:
+                                        var4 = _closure1_slot0;
+                                        var3 = _closure1_slot2;
+                                        var2 = 10;
+                                        var3 = var3[var2];
+                                        var2 = undefined;
+                                        var5 = var4.bind(var2)(var3);
+                                        var4 = var5.withSpring;
+                                        var3 = _closure6_slot3;
+                                        var2 = var3.get;
+                                        var3 = var2.bind(var3)();
+                                        var2 = {};
+                                        var6 = true;
+                                        var2['overshootClamping'] = var6;
+                                        var2 = var4.bind(var5)(var3, var2);
+                                        _fun0013_ip = 43; continue _fun0013;
+case 42:
+                                        var4 = _closure6_slot3;
+                                        var3 = var4.get;
+                                        var2 = var3.bind(var4)();
+case 43:
+                                        var1['width'] = var2;
+                                        var2 = _closure1_slot6;
+                                        var1['height'] = var2;
+                                        var3 = _closure6_slot1;
+                                        var2 = var3.get;
+                                        var2 = var2.bind(var3)();
+                                        var1['opacity'] = var2;
+                                        return var1;
+                                    }
+                                };
+                                var5 = {};
+                                var12 = _closure4_slot7;
+                                var5['viewerScrolling'] = var12;
+                                var5['_width'] = var8;
+                                var8 = 10;
+                                var8 = var11[var8];
+                                var8 = var10.bind(var9)(var8);
+                                var8 = var8.withSpring;
+                                var5['withSpring'] = var8;
+                                var5['THUMBNAIL_HEIGHT'] = var7;
+                                var5['opacity'] = var6;
+                                var1['__closure'] = var5;
+                                var5 = 513826663139.0;
+                                var1['__workletHash'] = var5;
+                                var4 = _closure1_slot23;
+                                var1['__initData'] = var4;
+                                var1 = var2.bind(var3)(var1);
+                                return var1;
+                            };
+                            var5 = new Array(0);
+                            var5 = var19.bind(var20)(var18, var5);
+                            var1 = var16[var1];
+                            var14 = var14.bind(var8)(var1);
+                            var8 = var14.useDerivedValue;
+                            var1 = function ie() {
+                                var2 = _closure4_slot8;
+                                var1 = var2.get;
+                                var1 = var1.bind(var2)();
+                                var1 = !var1;
+                                return var1;
+                            };
+                            var16 = {};
+                            var17 = _closure4_slot8;
+                            var16['zoomed'] = var17;
+                            var1['__closure'] = var16;
+                            var16 = 7667674289153.0;
+                            var1['__workletHash'] = var16;
+                            var15 = _closure1_slot24;
+                            var1['__initData'] = var15;
+                            var8 = var8.bind(var14)(var1);
+                            var1 = {};
+                            var1['ref'] = var13;
+                            var1['headerBufferStyle'] = var12;
+                            var1['headerBufferSize'] = var11;
+                            var1['footerBufferStyle'] = var10;
+                            var1['footerBufferSize'] = var9;
+                            var1['scrollEnabled'] = var8;
+                            var1['onScroll'] = var7;
+                            var1['onSelect'] = var6;
+                            var1['useThumbnailStyle'] = var5;
+                            var1['screenWidth'] = var4;
+                            var1['screenHeight'] = var3;
+                            var2 = function itemSize(arg1, arg2) {
+                                var1 = _closure1_slot9;
+                                return var1;
+                            };
+                            var1['itemSize'] = var2;
+                            return var1;
+                        };
+                        var1['useThumbnailsProps'] = var5;
+                        var4 = function useViewerProps() {
+                            var19 = _closure1_slot0;
+                            var20 = _closure1_slot2;
+                            var17 = 4;
+                            var2 = var20[var17];
+                            var18 = undefined;
+                            var3 = var19.bind(var18)(var2);
+                            var2 = var3.useAnimatedRef;
+                            var5 = var2.bind(var3)();
+                            var _closure5_slot0 = var5;
+                            var2 = 5;
+                            var2 = var20[var2];
+                            var3 = var19.bind(var18)(var2);
+                            var2 = var3.useMediaViewerDimensions;
+                            var2 = var2.bind(var3)();
+                            var9 = var2.width;
+                            var _closure5_slot1 = var9;
+                            var2 = var2.height;
+                            var3 = var20[var17];
+                            var6 = var19.bind(var18)(var3);
+                            var4 = var6.useDerivedValue;
+                            var3 = function i() {
+                                _fun0014: for(var _fun0014_ip = 0; ; ) switch(_fun0014_ip) {
+case 0:
+                                    var3 = _closure4_slot5;
+                                    var1 = var3.get;
+                                    var3 = var1.bind(var3)();
+                                    var1 = -1;
+                                    if(!(var1 !== var3)) { _fun0014_ip = 44; continue _fun0014 }
+case 12:
+                                    var4 = _closure1_slot0;
+                                    var3 = _closure1_slot2;
+                                    var1 = 4;
+                                    var3 = var3[var1];
+                                    var1 = undefined;
+                                    var6 = var4.bind(var1)(var3);
+                                    var5 = var6.scrollTo;
+                                    var10 = _closure5_slot0;
+                                    var3 = _closure4_slot5;
+                                    var2 = var3.get;
+                                    var2 = var2.bind(var3)();
+                                    var1 = _closure5_slot1;
+                                    var9 = var2 * var1;
+                                    var8 = 0;
+                                    var7 = false;
+                                    var11 = var6;
+                                    var1 = var11[var5](var10, var9, var8, var7, var6);
+case 44:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var7 = {};
+                            var14 = _closure4_slot5;
+                            var7['thumbnailsAnimateTo'] = var14;
+                            var8 = var20[var17];
+                            var8 = var19.bind(var18)(var8);
+                            var8 = var8.scrollTo;
+                            var7['scrollTo'] = var8;
+                            var7['ref'] = var5;
+                            var7['screenWidth'] = var9;
+                            var3['__closure'] = var7;
+                            var7 = 11860326453239.0;
+                            var3['__workletHash'] = var7;
+                            var7 = _closure1_slot25;
+                            var3['__initData'] = var7;
+                            var3 = var4.bind(var6)(var3);
+                            var3 = var20[var17];
+                            var6 = var19.bind(var18)(var3);
+                            var4 = var6.useDerivedValue;
+                            var3 = function l() {
+                                _fun0015: for(var _fun0015_ip = 0; ; ) switch(_fun0015_ip) {
+case 0:
+                                    var3 = _closure4_slot4;
+                                    var1 = var3.get;
+                                    var1 = var1.bind(var3)();
+                                    var6 = 0;
+                                    var1 = var6 === var1;
+                                    if(var1) { _fun0015_ip = 45; continue _fun0015 }
+case 31:
+                                    var4 = _closure4_slot7;
+                                    var3 = var4.get;
+                                    var3 = var3.bind(var4)();
+                                    var1 = var3 > var6;
+case 45:
+                                    if(var1) { _fun0015_ip = 46; continue _fun0015 }
+case 47:
+                                    var4 = _closure4_slot5;
+                                    var3 = var4.get;
+                                    var4 = var3.bind(var4)();
+                                    var3 = -1;
+                                    var1 = var3 !== var4;
+case 46:
+                                    if(var1) { _fun0015_ip = 48; continue _fun0015 }
+case 49:
+                                    var4 = _closure1_slot0;
+                                    var3 = _closure1_slot2;
+                                    var1 = 4;
+                                    var3 = var3[var1];
+                                    var1 = undefined;
+                                    var5 = var4.bind(var1)(var3);
+                                    var4 = var5.scrollTo;
+                                    var11 = _closure5_slot0;
+                                    var7 = _closure4_slot3;
+                                    var2 = var7.get;
+                                    var2 = var2.bind(var7)();
+                                    var1 = _closure5_slot1;
+                                    var10 = var2 * var1;
+                                    var8 = false;
+                                    var12 = var5;
+                                    var9 = 0;
+                                    var1 = var12[var4](var11, var10, var9, var8, var7);
+case 48:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var7 = {};
+                            var15 = _closure4_slot4;
+                            var7['thumbnailsScrolling'] = var15;
+                            var16 = _closure4_slot7;
+                            var7['viewerScrolling'] = var16;
+                            var7['thumbnailsAnimateTo'] = var14;
+                            var8 = var20[var17];
+                            var8 = var19.bind(var18)(var8);
+                            var8 = var8.scrollTo;
+                            var7['scrollTo'] = var8;
+                            var7['ref'] = var5;
+                            var8 = _closure4_slot3;
+                            var7['thumbnailsIndex'] = var8;
+                            var7['screenWidth'] = var9;
+                            var3['__closure'] = var7;
+                            var7 = 16855593341498.0;
+                            var3['__workletHash'] = var7;
+                            var7 = _closure1_slot26;
+                            var3['__initData'] = var7;
+                            var3 = var4.bind(var6)(var3);
+                            var7 = _closure1_slot4;
+                            var6 = var7.useMemo;
+                            var4 = function() {
+                                var1 = {};
+                                var4 = function o() {
+                                    var4 = _closure4_slot7;
+                                    var3 = var4.set;
+                                    var2 = var4.get;
+                                    var5 = var2.bind(var4)();
+                                    var2 = 2;
+                                    var2 = var2 | var5;
+                                    var2 = var3.bind(var4)(var2);
+                                    var3 = _closure4_slot9;
+                                    var2 = var3.set;
+                                    var1 = 'viewer';
+                                    var1 = var2.bind(var3)(var1);
+                                    var1 = undefined;
+                                    return var1;
+                                };
+                                var3 = {};
+                                var6 = _closure4_slot7;
+                                var3['viewerScrolling'] = var6;
+                                var9 = 2;
+                                var3['SCROLLING_DRAG'] = var9;
+                                var8 = _closure4_slot9;
+                                var3['swipeSource'] = var8;
+                                var4['__closure'] = var3;
+                                var3 = 1082965969005.0;
+                                var4['__workletHash'] = var3;
+                                var5 = _closure1_slot27;
+                                var4['__initData'] = var5;
+                                var1['onBeginDrag'] = var4;
+                                var4 = function l() {
+                                    var3 = _closure4_slot7;
+                                    var2 = var3.set;
+                                    var1 = var3.get;
+                                    var4 = var1.bind(var3)();
+                                    var1 = -3;
+                                    var1 = var1 & var4;
+                                    var1 = var2.bind(var3)(var1);
+                                    var1 = undefined;
+                                    return var1;
+                                };
+                                var5 = {};
+                                var5['viewerScrolling'] = var6;
+                                var5['SCROLLING_DRAG'] = var9;
+                                var4['__closure'] = var5;
+                                var5 = 1722948238280.0;
+                                var4['__workletHash'] = var5;
+                                var5 = _closure1_slot28;
+                                var4['__initData'] = var5;
+                                var1['onEndDrag'] = var4;
+                                var4 = function i(arg1) {
+                                    var3 = _closure4_slot6;
+                                    var2 = var3.set;
+                                    var1 = arg1;
+                                    var1 = var2.bind(var3)(var1);
+                                    var1 = undefined;
+                                    return var1;
+                                };
+                                var5 = {};
+                                var7 = _closure4_slot6;
+                                var5['viewerPos'] = var7;
+                                var4['__closure'] = var5;
+                                var5 = 3817181878424.0;
+                                var4['__workletHash'] = var5;
+                                var5 = _closure1_slot29;
+                                var4['__initData'] = var5;
+                                var1['onScroll'] = var4;
+                                var4 = function n() {
+                                    var4 = _closure4_slot7;
+                                    var3 = var4.set;
+                                    var2 = var4.get;
+                                    var5 = var2.bind(var4)();
+                                    var2 = 4;
+                                    var2 = var2 | var5;
+                                    var2 = var3.bind(var4)(var2);
+                                    var3 = _closure4_slot9;
+                                    var2 = var3.set;
+                                    var1 = 'viewer';
+                                    var1 = var2.bind(var3)(var1);
+                                    var1 = undefined;
+                                    return var1;
+                                };
+                                var7 = {};
+                                var7['viewerScrolling'] = var6;
+                                var5 = 4;
+                                var7['SCROLLING_MOMENTUM'] = var5;
+                                var7['swipeSource'] = var8;
+                                var4['__closure'] = var7;
+                                var7 = 16635271467463.0;
+                                var4['__workletHash'] = var7;
+                                var7 = _closure1_slot30;
+                                var4['__initData'] = var7;
+                                var1['onMomentumBegin'] = var4;
+                                var2 = function t() {
+                                    var3 = _closure4_slot7;
+                                    var2 = var3.set;
+                                    var1 = var3.get;
+                                    var4 = var1.bind(var3)();
+                                    var1 = -5;
+                                    var1 = var1 & var4;
+                                    var1 = var2.bind(var3)(var1);
+                                    var1 = undefined;
+                                    return var1;
+                                };
+                                var4 = {};
+                                var4['viewerScrolling'] = var6;
+                                var4['SCROLLING_MOMENTUM'] = var5;
+                                var2['__closure'] = var4;
+                                var4 = 8806989101472.0;
+                                var2['__workletHash'] = var4;
+                                var3 = _closure1_slot31;
+                                var2['__initData'] = var3;
+                                var1['onMomentumEnd'] = var2;
+                                return var1;
+                            };
+                            var3 = new Array(0);
+                            var10 = var6.bind(var7)(var4, var3);
+                            var _closure5_slot2 = var10;
+                            var3 = var20[var17];
+                            var6 = var19.bind(var18)(var3);
+                            var4 = var6.useSharedValue;
+                            var3 = 0;
+                            var3 = var4.bind(var6)(var3);
+                            var _closure5_slot3 = var3;
+                            var4 = var20[var17];
+                            var8 = var19.bind(var18)(var4);
+                            var6 = var8.useAnimatedScrollHandler;
+                            var4 = {};
+                            var11 = var10.onBeginDrag;
+                            var4['onBeginDrag'] = var11;
+                            var11 = var10.onEndDrag;
+                            var4['onEndDrag'] = var11;
+                            var11 = function S(arg1) {
+                                _fun0016: for(var _fun0016_ip = 0; ; ) switch(_fun0016_ip) {
+case 0:
+                                    var1 = arg1;
+                                    var2 = global;
+                                    var3 = var2.Date;
+                                    var2 = var3.now;
+                                    var4 = var2.bind(var3)();
+                                    var5 = _closure5_slot3;
+                                    var3 = var5.get;
+                                    var3 = var3.bind(var5)();
+                                    var5 = var4 - var3;
+                                    var3 = _closure1_slot10;
+                                    if(!var3) { _fun0016_ip = 50; continue _fun0016 }
+case 35:
+                                    var3 = 500;
+                                    if(!(var5 < var3)) { _fun0016_ip = 50; continue _fun0016 }
+case 51:
+                                    var3 = var1.contentOffset;
+                                    var3 = var3.x;
+                                    var6 = 0;
+                                    if(!(var6 === var3)) { _fun0016_ip = 50; continue _fun0016 }
+case 52:
+                                    var7 = _closure4_slot2;
+                                    var5 = var7.get;
+                                    var5 = var5.bind(var7)();
+                                    if(!(var6 === var5)) { _fun0016_ip = 53; continue _fun0016 }
+case 50:
+                                    var7 = _closure4_slot7;
+                                    var5 = var7.get;
+                                    var5 = var5.bind(var7)();
+                                    var8 = 0;
+                                    var5 = var8 === var5;
+                                    if(!var5) { _fun0016_ip = 54; continue _fun0016 }
+case 55:
+                                    var9 = _closure4_slot4;
+                                    var7 = var9.get;
+                                    var7 = var7.bind(var9)();
+                                    var5 = var8 === var7;
+case 54:
+                                    if(!var5) { _fun0016_ip = 56; continue _fun0016 }
+case 57:
+                                    var7 = _closure4_slot5;
+                                    var6 = var7.get;
+                                    var7 = var6.bind(var7)();
+                                    var6 = -1;
+                                    var5 = var6 === var7;
+case 56:
+                                    if(var5) { _fun0016_ip = 58; continue _fun0016 }
+case 59:
+                                    var7 = _closure5_slot2;
+                                    var6 = var7.onScroll;
+                                    var5 = var1.contentOffset;
+                                    var8 = var5.x;
+                                    var5 = _closure5_slot1;
+                                    var5 = var8 / var5;
+                                    var5 = var6.bind(var7)(var5);
+                                    _fun0016_ip = 58; continue _fun0016;
+case 53:
+                                    var6 = _closure1_slot0;
+                                    var5 = _closure1_slot2;
+                                    var4 = 4;
+                                    var5 = var5[var4];
+                                    var4 = undefined;
+                                    var6 = var6.bind(var4)(var5);
+                                    var5 = var6.scrollTo;
+                                    var13 = _closure5_slot0;
+                                    var7 = _closure4_slot2;
+                                    var3 = var7.get;
+                                    var3 = var3.bind(var7)();
+                                    var2 = _closure5_slot1;
+                                    var12 = var3 * var2;
+                                    var1 = var1.contentOffset;
+                                    var11 = var1.y;
+                                    var10 = false;
+                                    var14 = var6;
+                                    var1 = var14[var5](var13, var12, var11, var10, var9);
+case 58:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var13 = {};
+                            var13['contentSizeLastChangedAt'] = var3;
+                            var22 = _closure1_slot10;
+                            var13['IS_ANDROID'] = var22;
+                            var21 = _closure4_slot2;
+                            var13['selectedIndex'] = var21;
+                            var17 = var20[var17];
+                            var17 = var19.bind(var18)(var17);
+                            var17 = var17.scrollTo;
+                            var13['scrollTo'] = var17;
+                            var13['ref'] = var5;
+                            var13['screenWidth'] = var9;
+                            var13['viewerScrolling'] = var16;
+                            var13['thumbnailsScrolling'] = var15;
+                            var13['thumbnailsAnimateTo'] = var14;
+                            var13['onScrollWorklets'] = var10;
+                            var11['__closure'] = var13;
+                            var13 = 7511342747846.0;
+                            var11['__workletHash'] = var13;
+                            var12 = _closure1_slot32;
+                            var11['__initData'] = var12;
+                            var4['onScroll'] = var11;
+                            var11 = var10.onMomentumBegin;
+                            var4['onMomentumBegin'] = var11;
+                            var10 = var10.onMomentumEnd;
+                            var4['onMomentumEnd'] = var10;
+                            var4 = var6.bind(var8)(var4);
+                            var8 = var7.useCallback;
+                            var6 = new Array(3);
+                            var6[0] = var5;
+                            var6[1] = var9;
+                            var6[2] = var3;
+                            var3 = function() {
+                                _fun0017: for(var _fun0017_ip = 0; ; ) switch(_fun0017_ip) {
+case 0:
+                                    var2 = _closure4_slot2;
+                                    var1 = var2.get;
+                                    var3 = var1.bind(var2)();
+                                    var2 = _closure5_slot1;
+                                    var5 = var3 * var2;
+                                    var2 = _closure5_slot0;
+                                    var4 = var2.current;
+                                    var2 = null;
+                                    if(!(var2 != var4)) { _fun0017_ip = 27; continue _fun0017 }
+case 45:
+                                    var3 = var4.scrollTo;
+                                    var2 = false;
+                                    var2 = var3.bind(var4)(var5, var2);
+case 27:
+                                    var3 = _closure5_slot3;
+                                    var2 = var3.set;
+                                    var1 = global;
+                                    var4 = var1.Date;
+                                    var1 = var4.now;
+                                    var1 = var1.bind(var4)();
+                                    var1 = var2.bind(var3)(var1);
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var3 = var8.bind(var7)(var3, var6);
+                            var8 = var7.useEffect;
+                            var6 = new Array(3);
+                            var6[0] = var9;
+                            var6[1] = var2;
+                            var6[2] = var5;
+                            var2 = function() {
+                                _fun0018: for(var _fun0018_ip = 0; ; ) switch(_fun0018_ip) {
+case 0:
+                                    var1 = _closure5_slot0;
+                                    var2 = var1.current;
+                                    var1 = null;
+                                    if(!(var1 != var2)) { _fun0018_ip = 60; continue _fun0018 }
+case 61:
+                                    var1 = var2.reset;
+                                    var1 = var1.bind(var2)();
+case 60:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var2 = var8.bind(var7)(var2, var6);
+                            var6 = var7.useCallback;
+                            var2 = function(arg1) {
+                                var14 = arg1;
+                                var _closure6_slot0 = var14;
+                                var4 = _closure1_slot4;
+                                var3 = var4.useState;
+                                var13 = _closure4_slot2;
+                                var1 = var13.get;
+                                var1 = var1.bind(var13)();
+                                var1 = var14 === var1;
+                                var4 = var3.bind(var4)(var1);
+                                var3 = _closure1_slot3;
+                                var11 = undefined;
+                                var1 = 2;
+                                var4 = var3.bind(var11)(var4, var1);
+                                var1 = 0;
+                                var1 = var4[var1];
+                                var3 = 1;
+                                var8 = var4[var3];
+                                var _closure6_slot1 = var8;
+                                var10 = _closure1_slot0;
+                                var12 = _closure1_slot2;
+                                var9 = 4;
+                                var3 = var12[var9];
+                                var5 = var10.bind(var11)(var3);
+                                var4 = var5.useAnimatedReaction;
+                                var3 = function o() {
+                                    var2 = _closure6_slot0;
+                                    var3 = _closure4_slot2;
+                                    var1 = var3.get;
+                                    var1 = var1.bind(var3)();
+                                    var1 = var2 === var1;
+                                    return var1;
+                                };
+                                var7 = {};
+                                var7['index'] = var14;
+                                var7['selectedIndex'] = var13;
+                                var3['__closure'] = var7;
+                                var7 = 16337538404179.0;
+                                var3['__workletHash'] = var7;
+                                var7 = _closure1_slot33;
+                                var3['__initData'] = var7;
+                                var2 = function l(arg1, arg2) {
+                                    _fun0019: for(var _fun0019_ip = 0; ; ) switch(_fun0019_ip) {
+case 0:
+                                        var3 = arg1;
+                                        var2 = arg2;
+                                        var1 = null;
+                                        var1 = var1 != var2;
+                                        if(!var1) { _fun0019_ip = 28; continue _fun0019 }
+case 62:
+                                        var1 = var2 !== var3;
+case 28:
+                                        if(!var1) { _fun0019_ip = 63; continue _fun0019 }
+case 30:
+                                        var4 = _closure1_slot0;
+                                        var2 = _closure1_slot2;
+                                        var1 = 4;
+                                        var1 = var2[var1];
+                                        var2 = undefined;
+                                        var5 = var4.bind(var2)(var1);
+                                        var4 = var5.runOnJS;
+                                        var1 = _closure6_slot1;
+                                        var1 = var4.bind(var5)(var1);
+                                        var1 = var1.bind(var2)(var3);
+case 63:
+                                        var1 = undefined;
+                                        return var1;
+                                    }
+                                };
+                                var7 = {};
+                                var9 = var12[var9];
+                                var9 = var10.bind(var11)(var9);
+                                var9 = var9.runOnJS;
+                                var7['runOnJS'] = var9;
+                                var7['setVisible'] = var8;
+                                var2['__closure'] = var7;
+                                var7 = 17035713313425.0;
+                                var2['__workletHash'] = var7;
+                                var6 = _closure1_slot34;
+                                var2['__initData'] = var6;
+                                var2 = var4.bind(var5)(var3, var2);
+                                return var1;
+                            };
+                            var1 = new Array(0);
+                            var2 = var6.bind(var7)(var2, var1);
+                            var1 = {};
+                            var1['ref'] = var5;
+                            var1['onScroll'] = var4;
+                            var1['onContentSizeChange'] = var3;
+                            var1['useItemVisible'] = var2;
+                            return var1;
+                        };
+                        var1['useViewerProps'] = var4;
+                        var1['onEndReached'] = var3;
+                        var1['onEndReachedThreshold'] = var2;
+                        return var1;
+                    }
+                };
+                var1 = var1.bind(var3)(var2);
+                return var1;
+            }
+        };
+        var1 = var3.bind(var4)(var1, var2);
+        return var1;
+    };
+    var3['useMediaViewerSyncer'] = var2;
+    return var1;
+})();

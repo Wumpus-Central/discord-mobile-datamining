@@ -1,0 +1,1229 @@
+// app/modules/app_launcher/native/screens/application_view/activity/ActivityDetailContent.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var13 = metroImportDefault;
+    var7 = metroImportAll;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var13;
+    var _closure1_slot2 = var7;
+    var _closure1_slot3 = var6;
+    var1 = function Tag(arg1) {
+        var1 = arg1;
+        var9 = var1.tagName;
+        var7 = var1.icon;
+        var5 = var1.accessibilityLabel;
+        var1 = _closure1_slot15;
+        var4 = undefined;
+        var10 = var1.bind(var4)();
+        var3 = _closure1_slot12;
+        var2 = _closure1_slot7;
+        var1 = {};
+        var8 = var10.tag;
+        var1['style'] = var8;
+        var8 = true;
+        var1['accessible'] = var8;
+        var1['accessibilityLabel'] = var5;
+        var5 = new Array(2);
+        var5[0] = var7;
+        var8 = _closure1_slot11;
+        var7 = _closure1_slot0;
+        var11 = _closure1_slot3;
+        var6 = 10;
+        var6 = var11[var6];
+        var6 = var7.bind(var4)(var6);
+        var7 = var6.Text;
+        var6 = {};
+        var11 = 'text-sm/normal';
+        var6['variant'] = var11;
+        var10 = var10.tagText;
+        var6['style'] = var10;
+        var6['children'] = var9;
+        var6 = var8.bind(var4)(var7, var6);
+        var5[1] = var6;
+        var1['children'] = var5;
+        var1 = var3.bind(var4)(var2, var1);
+        return var1;
+    };
+    var _closure1_slot16 = var1;
+    var1 = function PrimaryEntryPointButton(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var2 = arg1;
+            var13 = var2.applicationId;
+            var _closure2_slot0 = var13;
+            var3 = var2.context;
+            var20 = var2.sectionName;
+            var1 = var2.primaryEntryPointCommand;
+            var _closure2_slot1 = var1;
+            var7 = var2.disabled;
+            var17 = var2.onActivityItemSelected;
+            var16 = var2.entrypoint;
+            var15 = var2.activityAction;
+            var _closure2_slot2 = var15;
+            var5 = undefined;
+            var _closure2_slot6 = var5;
+            var8 = _closure1_slot6;
+            var6 = var8.useId;
+            var12 = var6.bind(var8)();
+            var10 = _closure1_slot0;
+            var9 = _closure1_slot3;
+            var6 = 11;
+            var6 = var9[var6];
+            var8 = var10.bind(var5)(var6);
+            var6 = var8.useRequiredAppLauncherContext;
+            var6 = var6.bind(var8)();
+            var18 = var6.chatInputRef;
+            var _closure2_slot3 = var18;
+            var6 = var6.keyboardCloseReasonRef;
+            var _closure2_slot4 = var6;
+            var14 = _closure1_slot6;
+            var11 = var14.useCallback;
+            var8 = new Array(2);
+            var8[0] = var18;
+            var8[1] = var6;
+            var6 = function() {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    var4 = _closure2_slot4;
+                    var5 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var1 = 11;
+                    var3 = var3[var1];
+                    var1 = undefined;
+                    var3 = var5.bind(var1)(var3);
+                    var3 = var3.AppLauncherKeyboardCloseReason;
+                    var3 = var3.ACTIVITY;
+                    var4['current'] = var3;
+                    var2 = _closure2_slot3;
+                    var3 = var2.current;
+                    var2 = null;
+                    if(!(var2 != var3)) { _fun0002_ip = 2; continue _fun0002 }
+case 3:
+                    var2 = var3.closeCustomKeyboard;
+                    var2 = var2.bind(var3)();
+case 2:
+                    return var1;
+                }
+            };
+            var14 = var11.bind(var14)(var6, var8);
+            var _closure2_slot5 = var14;
+            var8 = _closure1_slot1;
+            var6 = 12;
+            var6 = var9[var6];
+            var8 = var8.bind(var5)(var6);
+            var6 = {};
+            var6['applicationId'] = var13;
+            var6['context'] = var3;
+            var6['launchingComponentId'] = var12;
+            var11 = 13;
+            var9 = var9[var11];
+            var9 = var10.bind(var5)(var9);
+            var9 = var9.ActivityAction;
+            var10 = var9.LEAVE;
+            var9 = undefined;
+            if(!(var15 !== var10)) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var9 = var14;
+case 4:
+            var6['onSubmissionComplete'] = var9;
+            var6 = var8.bind(var5)(var6);
+            var10 = var6.submitting;
+            var18 = _closure1_slot0;
+            var19 = _closure1_slot3;
+            var6 = 14;
+            var6 = var19[var6];
+            var9 = var18.bind(var5)(var6);
+            var8 = var9.useHandleActivityItemSelected;
+            var6 = {};
+            var6['applicationId'] = var13;
+            var6['context'] = var3;
+            var6['sectionName'] = var20;
+            var6['onActivityItemSelected'] = var17;
+            var17 = 15;
+            var17 = var19[var17];
+            var17 = var18.bind(var5)(var17);
+            var17 = var17.ApplicationCommandTriggerLocations;
+            var17 = var17.APP_LAUNCHER_APPLICATION_VIEW;
+            var6['location'] = var17;
+            var6['entrypoint'] = var16;
+            var6['launchingComponentId'] = var12;
+            var6 = var8.bind(var9)(var6);
+            var16 = var6.handleActivityItemSelected;
+            _closure2_slot6 = var16;
+            var9 = _closure1_slot6;
+            var8 = var9.useMemo;
+            var1 = var1.displayName;
+            var6 = new Array(1);
+            var6[0] = var1;
+            var1 = function() {
+                var3 = _closure1_slot0;
+                var2 = _closure1_slot3;
+                var1 = 16;
+                var2 = var2[var1];
+                var1 = undefined;
+                var3 = var3.bind(var1)(var2);
+                var2 = var3.formatPrimaryEntryPointCommandName;
+                var1 = _closure2_slot1;
+                var1 = var1.displayName;
+                var1 = var2.bind(var3)(var1);
+                return var1;
+            };
+            var8 = var8.bind(var9)(var1, var6);
+            var1 = null;
+            if(!(var1 == var8)) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var17 = _closure1_slot0;
+            var18 = _closure1_slot3;
+            var6 = 17;
+            var9 = var18[var6];
+            var9 = var17.bind(var5)(var9);
+            var12 = var9.intl;
+            var9 = var12.string;
+            var6 = var18[var6];
+            var6 = var17.bind(var5)(var6);
+            var6 = var6.t;
+            var6 = var6.zKX8Nu;
+            var8 = var9.bind(var12)(var6);
+case 6:
+            var9 = _closure1_slot0;
+            var6 = _closure1_slot3;
+            var6 = var6[var11];
+            var6 = var9.bind(var5)(var6);
+            var6 = var6.ActivityAction;
+            var6 = var6.JOIN;
+            if(!(var15 !== var6)) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var9 = _closure1_slot0;
+            var6 = _closure1_slot3;
+            var6 = var6[var11];
+            var6 = var9.bind(var5)(var6);
+            var6 = var6.ActivityAction;
+            var6 = var6.LEAVE;
+            var9 = 'primary';
+            if(!(var15 === var6)) { _fun0001_ip = 10; continue _fun0001 }
+case 11:
+            var17 = _closure1_slot0;
+            var18 = _closure1_slot3;
+            var6 = 17;
+            var11 = var18[var6];
+            var11 = var17.bind(var5)(var11);
+            var12 = var11.intl;
+            var11 = var12.string;
+            var6 = var18[var6];
+            var6 = var17.bind(var5)(var6);
+            var6 = var6.t;
+            var6 = var6.Hi1/aQ;
+            var8 = var11.bind(var12)(var6);
+            var9 = 'destructive';
+            _fun0001_ip = 10; continue _fun0001;
+case 8:
+            var17 = _closure1_slot0;
+            var18 = _closure1_slot3;
+            var6 = 17;
+            var11 = var18[var6];
+            var11 = var17.bind(var5)(var11);
+            var12 = var11.intl;
+            var11 = var12.string;
+            var6 = var18[var6];
+            var6 = var17.bind(var5)(var6);
+            var6 = var6.t;
+            var6 = var6.d9PsMj;
+            var8 = var11.bind(var12)(var6);
+            var9 = 'active';
+case 10:
+            var12 = _closure1_slot6;
+            var11 = var12.useCallback;
+            var6 = new Array(4);
+            var6[0] = var16;
+            var6[1] = var15;
+            var6[2] = var14;
+            var6[3] = var13;
+            var4 = function() {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var3 = _closure1_slot1;
+                    var6 = _closure1_slot3;
+                    var1 = 18;
+                    var2 = var6[var1];
+                    var1 = undefined;
+                    var8 = var3.bind(var1)(var2);
+                    var7 = var8.track;
+                    var2 = _closure1_slot10;
+                    var4 = var2.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED;
+                    var3 = {};
+                    var9 = _closure2_slot0;
+                    var3['application_id'] = var9;
+                    var5 = _closure1_slot0;
+                    var9 = 19;
+                    var9 = var6[var9];
+                    var9 = var5.bind(var1)(var9);
+                    var9 = var9.EntryPointCommandButtonActions;
+                    var9 = var9.USE_APP_COMMAND;
+                    var3['button_action'] = var9;
+                    var3 = var7.bind(var8)(var4, var3);
+                    var3 = _closure2_slot6;
+                    var3 = var3.bind(var1)();
+                    var4 = _closure2_slot2;
+                    var3 = 13;
+                    var3 = var6[var3];
+                    var3 = var5.bind(var1)(var3);
+                    var3 = var3.ActivityAction;
+                    var3 = var3.LEAVE;
+                    if(!(var4 === var3)) { _fun0003_ip = 12; continue _fun0003 }
+case 13:
+                    var2 = _closure2_slot5;
+                    var2 = var2.bind(var1)();
+case 12:
+                    return var1;
+                }
+            };
+            var6 = var11.bind(var12)(var4, var6);
+            var4 = var3.type;
+            var3 = 'channel';
+            var1 = null;
+            if(!(var3 === var4)) { _fun0001_ip = 14; continue _fun0001 }
+case 15:
+            var4 = _closure1_slot11;
+            var3 = _closure1_slot0;
+            var11 = _closure1_slot3;
+            var2 = 20;
+            var2 = var11[var2];
+            var2 = var3.bind(var5)(var2);
+            var3 = var2.Button;
+            var2 = {};
+            var11 = 'lg';
+            var2['size'] = var11;
+            var2['loading'] = var10;
+            var2['variant'] = var9;
+            var2['text'] = var8;
+            var2['disabled'] = var7;
+            var2['onPress'] = var6;
+            var1 = var4.bind(var5)(var3, var2);
+case 14:
+            return var1;
+        }
+    };
+    var _closure1_slot17 = var1;
+    var1 = function TryItOutButton(arg1) {
+        _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+            var1 = arg1;
+            var11 = var1.botUserId;
+            var _closure2_slot0 = var11;
+            var10 = var1.applicationId;
+            var _closure2_slot1 = var10;
+            var9 = var1.analyticsLocations;
+            var _closure2_slot2 = var9;
+            var2 = var1.context;
+            var6 = _closure1_slot6;
+            var5 = var6.useState;
+            var4 = false;
+            var7 = var5.bind(var6)(var4);
+            var6 = _closure1_slot5;
+            var4 = undefined;
+            var5 = 2;
+            var6 = var6.bind(var4)(var7, var5);
+            var5 = 0;
+            var7 = var6[var5];
+            var5 = 1;
+            var5 = var6[var5];
+            var _closure2_slot3 = var5;
+            var8 = _closure1_slot6;
+            var6 = var8.useRef;
+            var5 = null;
+            var5 = var6.bind(var8)(var5);
+            var _closure2_slot4 = var5;
+            var8 = _closure1_slot6;
+            var6 = var8.useCallback;
+            var5 = _closure1_slot4;
+            var3 = function* () {
+                var1 = function* anon_0_() {
+                    _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+                        StartGenerator();
+                        ResumeGenerator(result_out_reg=0, return_bool_out_reg=1);
+                        if(var2) { _fun0005_ip = 16; continue _fun0005 }
+case 17:
+                        var4 = _closure1_slot1;
+                        var11 = _closure1_slot3;
+                        var2 = 18;
+                        var3 = var11[var2];
+                        var2 = undefined;
+                        var8 = var4.bind(var2)(var3);
+                        var7 = var8.track;
+                        var3 = _closure1_slot10;
+                        var5 = var3.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED;
+                        var4 = {};
+                        var9 = _closure2_slot1;
+                        var4['application_id'] = var9;
+                        var10 = _closure1_slot0;
+                        var9 = 19;
+                        var9 = var11[var9];
+                        var9 = var10.bind(var2)(var9);
+                        var9 = var9.EntryPointCommandButtonActions;
+                        var9 = var9.OPEN_APP_DM;
+                        var4['button_action'] = var9;
+                        var4 = var7.bind(var8)(var5, var4);
+                        var7 = _closure2_slot4;
+                        var4 = global;
+                        var9 = var4.setTimeout;
+                        var8 = function() {
+                            var3 = _closure2_slot3;
+                            var1 = undefined;
+                            var2 = true;
+                            var2 = var3.bind(var1)(var2);
+                            return var1;
+                        };
+                        var5 = 250;
+                        var5 = var9.bind(var2)(var8, var5);
+                        var7['current'] = var5;
+case 18: // try_start_0
+                        var7 = _closure1_slot1;
+                        var8 = _closure1_slot3;
+                        var5 = 21;
+                        var5 = var8[var5];
+                        var8 = var7.bind(var2)(var5);
+                        var7 = var8.openPrivateChannel;
+                        var5 = {};
+                        var9 = _closure2_slot0;
+                        var5['recipientIds'] = var9;
+                        var5 = var7.bind(var8)(var5);
+                        SaveGenerator(address=185);
+case 19:
+                        return var5;
+case 20:
+                        ResumeGenerator(result_out_reg=4, return_bool_out_reg=6);
+                        if(var7) { _fun0005_ip = 21; continue _fun0005 }
+case 22:
+                        var7 = _closure1_slot1;
+                        var8 = _closure1_slot3;
+                        var6 = 22;
+                        var6 = var8[var6];
+                        var7 = var7.bind(var2)(var6);
+                        var6 = {};
+                        var8 = _closure2_slot1;
+                        var6['targetApplicationId'] = var8;
+                        var6['channelId'] = var5;
+                        var8 = _closure2_slot2;
+                        var6['analyticsLocations'] = var8;
+                        var6 = var7.bind(var2)(var6);
+                        SaveGenerator(address=244);
+case 23:
+                        return var6;
+case 24:
+                        ResumeGenerator(result_out_reg=5, return_bool_out_reg=6);
+                        if(var7) { _fun0005_ip = 25; continue _fun0005 }
+case 26: // try_end0
+                        _fun0005_ip = 27; continue _fun0005;
+case 25:
+                        return var6;
+case 21:
+                        return var5;
+case 28: // catch_target0
+                        CatchBlockStart(arg_register=4);
+case 27:
+                        var5 = var4.clearTimeout;
+                        var4 = _closure2_slot4;
+                        var4 = var4.current;
+                        var4 = var5.bind(var2)(var4);
+                        var4 = _closure2_slot3;
+                        var3 = false;
+                        var3 = var4.bind(var2)(var3);
+                        return var2;
+case 16:
+                        return var1;
+                    }
+                };
+                return var1;
+            };
+            var5 = var5.bind(var4)(var3);
+            var3 = new Array(3);
+            var3[0] = var11;
+            var3[1] = var10;
+            var3[2] = var9;
+            var5 = var6.bind(var8)(var5, var3);
+            var3 = var2.type;
+            var6 = 'primary';
+            var2 = 'channel';
+            if(!(var2 === var3)) { _fun0004_ip = 29; continue _fun0004 }
+case 30:
+            var6 = 'secondary';
+case 29:
+            var3 = _closure1_slot11;
+            var9 = _closure1_slot0;
+            var10 = _closure1_slot3;
+            var1 = 20;
+            var1 = var10[var1];
+            var1 = var9.bind(var4)(var1);
+            var2 = var1.Button;
+            var1 = {};
+            var8 = 'lg';
+            var1['size'] = var8;
+            var1['loading'] = var7;
+            var1['variant'] = var6;
+            var6 = 17;
+            var7 = var10[var6];
+            var7 = var9.bind(var4)(var7);
+            var8 = var7.intl;
+            var7 = var8.string;
+            var6 = var10[var6];
+            var6 = var9.bind(var4)(var6);
+            var6 = var6.t;
+            var6 = var6.AUM8hY;
+            var6 = var7.bind(var8)(var6);
+            var1['text'] = var6;
+            var1['onPress'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot18 = var1;
+    var1 = global;
+    var9 = var1.Object;
+    var8 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var4);
+    var1 = 0;
+    var4 = var6[var1];
+    var1 = undefined;
+    var4 = var13.bind(var1)(var4);
+    var _closure1_slot4 = var4;
+    var12 = 1;
+    var4 = var6[var12];
+    var4 = var13.bind(var1)(var4);
+    var _closure1_slot5 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot6 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.View;
+    var _closure1_slot7 = var4;
+    var14 = 4;
+    var4 = var6[var14];
+    var4 = var13.bind(var1)(var4);
+    var _closure1_slot8 = var4;
+    var4 = 5;
+    var4 = var6[var4];
+    var4 = var13.bind(var1)(var4);
+    var _closure1_slot9 = var4;
+    var4 = 6;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.AnalyticEvents;
+    var _closure1_slot10 = var4;
+    var4 = 7;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.jsx;
+    var _closure1_slot11 = var7;
+    var7 = var4.jsxs;
+    var _closure1_slot12 = var7;
+    var4 = var4.Fragment;
+    var _closure1_slot13 = var4;
+    var10 = 8;
+    var4 = var6[var10];
+    var4 = var13.bind(var1)(var4);
+    var4 = var4.space;
+    var11 = var4.PX_12;
+    var _closure1_slot14 = var11;
+    var4 = 9;
+    var4 = var6[var4];
+    var8 = var5.bind(var1)(var4);
+    var7 = var8.createStyles;
+    var4 = {};
+    var9 = {};
+    var9['flex'] = var12;
+    var4['container'] = var9;
+    var9 = {};
+    var12 = var6[var10];
+    var12 = var13.bind(var1)(var12);
+    var12 = var12.colors;
+    var12 = var12.BACKGROUND_SURFACE_HIGH;
+    var9['backgroundColor'] = var12;
+    var12 = var6[var10];
+    var12 = var13.bind(var1)(var12);
+    var12 = var12.radii;
+    var12 = var12.lg;
+    var9['borderRadius'] = var12;
+    var12 = 'hidden';
+    var9['overflow'] = var12;
+    var12 = var6[var10];
+    var12 = var13.bind(var1)(var12);
+    var12 = var12.space;
+    var12 = var12.PX_16;
+    var9['gap'] = var12;
+    var9['paddingBottom'] = var11;
+    var4['cardContainer'] = var9;
+    var9 = {};
+    var12 = 'row';
+    var9['flexDirection'] = var12;
+    var4['activityHeroDetailsLandscape'] = var9;
+    var9 = {};
+    var12 = '65%';
+    var9['width'] = var12;
+    var4['heroMediaContainerLandscape'] = var9;
+    var9 = {};
+    var12 = '35%';
+    var9['width'] = var12;
+    var4['detailsContainerLandscape'] = var9;
+    var9 = {'marginTop': 16, 'paddingHorizontal': null, 'rowGap': 4};
+    var12 = 16;
+    var9['paddingHorizontal'] = var11;
+    var4['details'] = var9;
+    var9 = {'display': 'flex', 'flexDirection': 'row', 'flexWrap': 'wrap', 'marginTop': null, 'columnGap': 4, 'rowGap': 6};
+    var11 = var6[var10];
+    var11 = var13.bind(var1)(var11);
+    var11 = var11.space;
+    var11 = var11.PX_8;
+    var9['marginTop'] = var11;
+    var4['tagList'] = var9;
+    var9 = {'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center', 'backgroundColor': null, 'borderRadius': null, 'paddingHorizontal': 12, 'paddingVertical': 4};
+    var11 = 'center';
+    var15 = var6[var10];
+    var15 = var13.bind(var1)(var15);
+    var15 = var15.colors;
+    var15 = var15.BACKGROUND_MOD_SUBTLE;
+    var9['backgroundColor'] = var15;
+    var15 = var6[var10];
+    var15 = var13.bind(var1)(var15);
+    var15 = var15.radii;
+    var15 = var15.round;
+    var9['borderRadius'] = var15;
+    var4['tag'] = var9;
+    var9 = {};
+    var15 = -1;
+    var9['top'] = var15;
+    var4['tagText'] = var9;
+    var9 = {};
+    var9['marginRight'] = var14;
+    var4['tagIcon'] = var9;
+    var9 = {};
+    var9['paddingTop'] = var12;
+    var4['buttonContainer'] = var9;
+    var9 = {};
+    var12 = -4;
+    var9['marginTop'] = var12;
+    var4['activityUrlOverrideInputContainer'] = var9;
+    var9 = {};
+    var12 = var6[var10];
+    var12 = var13.bind(var1)(var12);
+    var12 = var12.space;
+    var12 = var12.PX_12;
+    var9['marginTop'] = var12;
+    var12 = var6[var10];
+    var12 = var13.bind(var1)(var12);
+    var12 = var12.colors;
+    var12 = var12.TEXT_MUTED;
+    var9['color'] = var12;
+    var9['textAlign'] = var11;
+    var4['primaryEntryPointButtonDisabledCTA'] = var9;
+    var9 = {};
+    var9['marginTop'] = var10;
+    var4['tryItOutButtonContainerStyle'] = var9;
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot15 = var4;
+    var4 = 41;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/app_launcher/native/screens/application_view/activity/ActivityDetailContent.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function ActivityDetailContent(arg1) {
+        _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+            var1 = arg1;
+            var28 = var1.application;
+            var _closure2_slot0 = var28;
+            var16 = var1.context;
+            var23 = var1.sectionName;
+            var14 = var1.onActivityItemSelected;
+            var13 = var1.entrypoint;
+            var2 = var1.hasCommands;
+            var1 = _closure1_slot15;
+            var4 = undefined;
+            var38 = var1.bind(var4)();
+            var7 = _closure1_slot0;
+            var8 = _closure1_slot3;
+            var1 = 11;
+            var1 = var8[var1];
+            var3 = var7.bind(var4)(var1);
+            var1 = var3.useRequiredAppLauncherContext;
+            var1 = var1.bind(var3)();
+            var30 = var1.width;
+            var1 = 23;
+            var1 = var8[var1];
+            var5 = var7.bind(var4)(var1);
+            var3 = var5.useGetPrimaryAppCommand;
+            var1 = var28.id;
+            var18 = var3.bind(var5)(var16, var1);
+            var5 = _closure1_slot1;
+            var6 = 24;
+            var1 = var8[var6];
+            var3 = var5.bind(var4)(var1);
+            var1 = 25;
+            var1 = var8[var1];
+            var1 = var5.bind(var4)(var1);
+            var1 = var1.APP_DETAIL;
+            var1 = var3.bind(var4)(var1);
+            var5 = var1.analyticsLocations;
+            var1 = 26;
+            var1 = var8[var1];
+            var3 = var7.bind(var4)(var1);
+            var1 = var3.useIsScreenLandscape;
+            var1 = var1.bind(var3)();
+            var3 = 19;
+            var3 = var8[var3];
+            var3 = var7.bind(var4)(var3);
+            var3 = var3.AppLauncherEntrypoint;
+            var3 = var3.VOICE;
+            var22 = var13 !== var3;
+            if(!var22) { _fun0006_ip = 31; continue _fun0006 }
+case 32:
+            var22 = var1;
+case 31:
+            var8 = _closure1_slot0;
+            var3 = _closure1_slot3;
+            var1 = 27;
+            var1 = var3[var1];
+            var10 = var8.bind(var4)(var1);
+            var9 = var10.useStateFromStoresObject;
+            var1 = _closure1_slot8;
+            var7 = new Array(1);
+            var7[0] = var1;
+            var1 = function() {
+                var1 = {};
+                var3 = _closure1_slot8;
+                var4 = var3.inDevModeForApplication;
+                var2 = _closure2_slot0;
+                var2 = var2.id;
+                var2 = var4.bind(var3)(var2);
+                var1['isDeveloperOfThisApp'] = var2;
+                var2 = var3.getActivityUrlOverride;
+                var2 = var2.bind(var3)();
+                var1['activityUrlOverride'] = var2;
+                var2 = var3.getUseActivityUrlOverride;
+                var2 = var2.bind(var3)();
+                var1['useActivityUrlOverride'] = var2;
+                return var1;
+            };
+            var7 = var9.bind(var10)(var7, var1);
+            var1 = var7.isDeveloperOfThisApp;
+            var31 = var7.activityUrlOverride;
+            var12 = var7.useActivityUrlOverride;
+            var7 = 16;
+            var3 = var3[var7];
+            var8 = var8.bind(var4)(var3);
+            var3 = var8.isRealApplication;
+            var3 = var3.bind(var8)(var28);
+            if(var3) { _fun0006_ip = 33; continue _fun0006 }
+case 34:
+            var3 = global;
+            var9 = var3.Error;
+            var3 = var9.prototype;
+            var8 = Object.create(var3, {constructor: {value: var9}});
+            var41 = 'ActivityDetailContent was passed the Built-in App, which is not supported.';
+            var42 = var8;
+            var3 = new var42[var9](var41, var40);
+            var3 = var3 instanceof Object ? var3 : var8;
+            throw var3;
+case 33:
+            var3 = _closure1_slot9;
+            var3 = var28 instanceof var3;
+            if(var3) { _fun0006_ip = 35; continue _fun0006 }
+case 36:
+            var3 = var28.max_participants;
+            _fun0006_ip = 37; continue _fun0006;
+case 35:
+            var3 = var28.maxParticipants;
+case 37:
+            var26 = null;
+            var8 = var26 != var3;
+            var33 = 0;
+            if(!var8) { _fun0006_ip = 38; continue _fun0006 }
+case 39:
+            var33 = var3;
+case 38:
+            var19 = null;
+            if(!var1) { _fun0006_ip = 40; continue _fun0006 }
+case 41:
+            var9 = _closure1_slot12;
+            var8 = _closure1_slot7;
+            var3 = {};
+            var10 = {};
+            var11 = _closure1_slot14;
+            var10['marginTop'] = var11;
+            var11 = 0;
+            if(var12) { _fun0006_ip = 42; continue _fun0006 }
+case 43:
+            var15 = _closure1_slot14;
+            var11 = -var15;
+case 42:
+            var10['marginBottom'] = var11;
+            var3['style'] = var10;
+            var15 = _closure1_slot11;
+            var34 = _closure1_slot0;
+            var20 = _closure1_slot3;
+            var10 = 28;
+            var10 = var20[var10];
+            var10 = var34.bind(var4)(var10);
+            var11 = var10.TableRowDivider;
+            var10 = {};
+            var11 = var15.bind(var4)(var11, var10);
+            var10 = new Array(3);
+            var10[0] = var11;
+            var17 = _closure1_slot11;
+            var11 = 29;
+            var11 = var20[var11];
+            var11 = var34.bind(var4)(var11);
+            var15 = var11.TableSwitchRow;
+            var11 = {};
+            var21 = 17;
+            var24 = var20[var21];
+            var24 = var34.bind(var4)(var24);
+            var29 = var24.intl;
+            var24 = var29.string;
+            var21 = var20[var21];
+            var21 = var34.bind(var4)(var21);
+            var21 = var21.t;
+            var21 = var21["3TSGuD"];
+            var21 = var24.bind(var29)(var21);
+            var11['label'] = var21;
+            var11['value'] = var12;
+            var21 = _closure1_slot2;
+            var34 = 30;
+            var20 = var20[var34];
+            var20 = var21.bind(var4)(var20);
+            var20 = var20.toggleUseActivityUrlOverride;
+            var11['onValueChange'] = var20;
+            var20 = true;
+            var11['end'] = var20;
+            var11 = var17.bind(var4)(var15, var11);
+            var10[1] = var11;
+            var11 = null;
+            if(!var12) { _fun0006_ip = 44; continue _fun0006 }
+case 45:
+            var17 = _closure1_slot11;
+            var15 = _closure1_slot7;
+            var12 = {};
+            var20 = var38.activityUrlOverrideInputContainer;
+            var12['style'] = var20;
+            var24 = _closure1_slot11;
+            var21 = _closure1_slot0;
+            var29 = _closure1_slot3;
+            var20 = 31;
+            var20 = var29[var20];
+            var20 = var21.bind(var4)(var20);
+            var21 = var20.TextInput;
+            var20 = {};
+            var29 = 'e.g. http://192.168.1.1:3000';
+            var20['placeholder'] = var29;
+            var35 = var26 != var31;
+            var29 = undefined;
+            if(!var35) { _fun0006_ip = 46; continue _fun0006 }
+case 47:
+            var29 = var31;
+case 46:
+            var20['value'] = var29;
+            var31 = _closure1_slot2;
+            var29 = _closure1_slot3;
+            var29 = var29[var34];
+            var29 = var31.bind(var4)(var29);
+            var29 = var29.setActivityUrlOverride;
+            var20['onChange'] = var29;
+            var20 = var24.bind(var4)(var21, var20);
+            var12['children'] = var20;
+            var11 = var17.bind(var4)(var15, var12);
+case 44:
+            var10[2] = var11;
+            var3['children'] = var10;
+            var19 = var9.bind(var4)(var8, var3);
+case 40:
+            var8 = _closure1_slot0;
+            var9 = _closure1_slot3;
+            var3 = 32;
+            var3 = var9[var3];
+            var9 = var8.bind(var4)(var3);
+            var8 = var9.useGetOrFetchApplication;
+            var3 = var28.id;
+            var3 = var8.bind(var9)(var3);
+            var8 = var26 == var3;
+            var17 = undefined;
+            if(var8) { _fun0006_ip = 48; continue _fun0006 }
+case 49:
+            var17 = var3.bot;
+case 48:
+            var8 = _closure1_slot0;
+            var9 = _closure1_slot3;
+            var3 = 13;
+            var3 = var9[var3];
+            var11 = var8.bind(var4)(var3);
+            var10 = var11.useActivityAction;
+            var3 = {};
+            var3['context'] = var16;
+            var12 = var28.id;
+            var3['applicationId'] = var12;
+            var10 = var10.bind(var11)(var3);
+            var3 = 33;
+            var3 = var9[var3];
+            var8 = var8.bind(var4)(var3);
+            var3 = var8.useDelayedSwapToActivityActionLeave;
+            var11 = var3.bind(var8)(var10);
+            var8 = _closure1_slot1;
+            var3 = 34;
+            var3 = var9[var3];
+            var10 = var8.bind(var4)(var3);
+            var3 = {};
+            var3['context'] = var16;
+            var3['application'] = var28;
+            var3['activityAction'] = var11;
+            var3 = var10.bind(var4)(var3);
+            var15 = var3.disabled;
+            var12 = var3.reason;
+            var3 = 35;
+            var3 = var9[var3];
+            var8 = var8.bind(var4)(var3);
+            var3 = {};
+            var3['context'] = var16;
+            var3['application'] = var28;
+            var10 = var26 == var17;
+            var9 = undefined;
+            if(var10) { _fun0006_ip = 50; continue _fun0006 }
+case 51:
+            var9 = var17.id;
+case 50:
+            var3['botUserId'] = var9;
+            var9 = var8.bind(var4)(var3);
+            if(!(var26 == var18)) { _fun0006_ip = 52; continue _fun0006 }
+case 53:
+            if(!var1) { _fun0006_ip = 54; continue _fun0006 }
+case 55:
+            var1 = !var2;
+case 54:
+            if(!var1) { _fun0006_ip = 56; continue _fun0006 }
+case 57:
+            var3 = _closure1_slot0;
+            var2 = _closure1_slot3;
+            var2 = var2[var7];
+            var3 = var3.bind(var4)(var2);
+            var2 = var3.isEmbeddedApp;
+            var1 = var2.bind(var3)(var28);
+case 56:
+            var21 = undefined;
+            var20 = undefined;
+            if(!var1) { _fun0006_ip = 58; continue _fun0006 }
+case 59:
+            var3 = _closure1_slot11;
+            var2 = _closure1_slot7;
+            var1 = {};
+            var7 = var38.buttonContainer;
+            var1['style'] = var7;
+            var10 = _closure1_slot11;
+            var29 = _closure1_slot0;
+            var35 = _closure1_slot3;
+            var24 = 36;
+            var7 = var35[var24];
+            var7 = var29.bind(var4)(var7);
+            var8 = var7.HelpMessage;
+            var7 = {};
+            var24 = var35[var24];
+            var24 = var29.bind(var4)(var24);
+            var24 = var24.HelpMessageTypes;
+            var24 = var24.WARNING;
+            var7['messageType'] = var24;
+            var24 = 17;
+            var31 = var35[var24];
+            var31 = var29.bind(var4)(var31);
+            var34 = var31.intl;
+            var31 = var34.format;
+            var24 = var35[var24];
+            var24 = var29.bind(var4)(var24);
+            var24 = var24.t;
+            var29 = var24.s/3hjE;
+            var24 = {};
+            var24 = var31.bind(var34)(var29, var24);
+            var7['children'] = var24;
+            var7 = var10.bind(var4)(var8, var7);
+            var1['children'] = var7;
+            var20 = var3.bind(var4)(var2, var1);
+            var21 = undefined;
+            _fun0006_ip = 58; continue _fun0006;
+case 52:
+            var3 = _closure1_slot12;
+            var2 = _closure1_slot13;
+            var1 = {};
+            var10 = _closure1_slot11;
+            var8 = _closure1_slot17;
+            var7 = {};
+            var24 = var28.id;
+            var7['applicationId'] = var24;
+            var7['context'] = var16;
+            var7['sectionName'] = var23;
+            var7['primaryEntryPointCommand'] = var18;
+            var7['disabled'] = var15;
+            var7['onActivityItemSelected'] = var14;
+            var7['entrypoint'] = var13;
+            var7['activityAction'] = var11;
+            var8 = var10.bind(var4)(var8, var7);
+            var7 = new Array(2);
+            var7[0] = var8;
+            var8 = null;
+            if(!var9) { _fun0006_ip = 60; continue _fun0006 }
+case 61:
+            var10 = var26 == var17;
+            var9 = undefined;
+            if(var10) { _fun0006_ip = 62; continue _fun0006 }
+case 63:
+            var9 = var17.id;
+case 62:
+            var9 = var26 != var9;
+            var8 = null;
+            if(!var9) { _fun0006_ip = 60; continue _fun0006 }
+case 64:
+            var11 = _closure1_slot11;
+            var10 = _closure1_slot7;
+            var9 = {};
+            var13 = var38.tryItOutButtonContainerStyle;
+            var9['style'] = var13;
+            var15 = _closure1_slot11;
+            var14 = _closure1_slot18;
+            var13 = {};
+            var17 = var17.id;
+            var13['botUserId'] = var17;
+            var17 = var28.id;
+            var13['applicationId'] = var17;
+            var13['analyticsLocations'] = var5;
+            var13['context'] = var16;
+            var13 = var15.bind(var4)(var14, var13);
+            var9['children'] = var13;
+            var8 = var11.bind(var4)(var10, var9);
+case 60:
+            var7[1] = var8;
+            var1['children'] = var7;
+            var8 = var3.bind(var4)(var2, var1);
+            var3 = _closure1_slot12;
+            var2 = _closure1_slot7;
+            var1 = {};
+            var7 = var38.buttonContainer;
+            var1['style'] = var7;
+            var7 = new Array(2);
+            var7[0] = var8;
+            var8 = var26 != var12;
+            if(!var8) { _fun0006_ip = 65; continue _fun0006 }
+case 66:
+            var11 = _closure1_slot11;
+            var10 = _closure1_slot0;
+            var13 = _closure1_slot3;
+            var9 = 10;
+            var9 = var13[var9];
+            var9 = var10.bind(var4)(var9);
+            var10 = var9.Text;
+            var9 = {};
+            var13 = 'text-sm/normal';
+            var9['variant'] = var13;
+            var13 = var38.primaryEntryPointButtonDisabledCTA;
+            var9['style'] = var13;
+            var9['children'] = var12;
+            var8 = var11.bind(var4)(var10, var9);
+case 65:
+            var7[1] = var8;
+            var1['children'] = var7;
+            var21 = var3.bind(var4)(var2, var1);
+            var20 = undefined;
+case 58:
+            var3 = _closure1_slot11;
+            var2 = _closure1_slot0;
+            var1 = _closure1_slot3;
+            var1 = var1[var6];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.AnalyticsLocationProvider;
+            var1 = {};
+            var1['value'] = var5;
+            var7 = _closure1_slot11;
+            var6 = _closure1_slot7;
+            var5 = {};
+            var9 = var38.container;
+            var8 = new Array(1);
+            var8[0] = var9;
+            var5['style'] = var8;
+            var10 = _closure1_slot11;
+            var9 = _closure1_slot7;
+            var8 = {};
+            var11 = var38.cardContainer;
+            var8['style'] = var11;
+            var13 = _closure1_slot12;
+            var12 = _closure1_slot7;
+            var11 = {};
+            var14 = var22;
+            if(!var22) { _fun0006_ip = 67; continue _fun0006 }
+case 68:
+            var14 = var38.activityHeroDetailsLandscape;
+case 67:
+            var11['style'] = var14;
+            var16 = _closure1_slot11;
+            var15 = _closure1_slot7;
+            var14 = {};
+            var17 = var22;
+            if(!var22) { _fun0006_ip = 69; continue _fun0006 }
+case 70:
+            var17 = var38.heroMediaContainerLandscape;
+case 69:
+            var14['style'] = var17;
+            var23 = _closure1_slot11;
+            var18 = _closure1_slot1;
+            var24 = _closure1_slot3;
+            var17 = 37;
+            var17 = var24[var17];
+            var18 = var18.bind(var4)(var17);
+            var17 = {};
+            var24 = var28.id;
+            var17['applicationId'] = var24;
+            var24 = var30;
+            if(!var22) { _fun0006_ip = 71; continue _fun0006 }
+case 72:
+            var29 = 65;
+            var30 = var29 * var30;
+            var29 = 100;
+            var24 = var30 / var29;
+case 71:
+            var17['width'] = var24;
+            var17 = var23.bind(var4)(var18, var17);
+            var14['children'] = var17;
+            var15 = var16.bind(var4)(var15, var14);
+            var14 = new Array(2);
+            var14[0] = var15;
+            var17 = _closure1_slot12;
+            var16 = _closure1_slot7;
+            var15 = {};
+            var23 = var38.details;
+            var18 = new Array(2);
+            var18[0] = var23;
+            if(!var22) { _fun0006_ip = 73; continue _fun0006 }
+case 74:
+            var22 = var38.detailsContainerLandscape;
+case 73:
+            var18[1] = var22;
+            var15['style'] = var18;
+            var23 = _closure1_slot11;
+            var22 = _closure1_slot1;
+            var34 = _closure1_slot3;
+            var18 = 38;
+            var18 = var34[var18];
+            var22 = var22.bind(var4)(var18);
+            var18 = {};
+            var18['application'] = var28;
+            var22 = var23.bind(var4)(var22, var18);
+            var18 = new Array(5);
+            var18[0] = var22;
+            var24 = _closure1_slot12;
+            var23 = _closure1_slot7;
+            var22 = {};
+            var29 = var38.tagList;
+            var22['style'] = var29;
+            var31 = _closure1_slot11;
+            var30 = _closure1_slot16;
+            var29 = {};
+            var36 = _closure1_slot0;
+            var35 = 39;
+            var35 = var34[var35];
+            var35 = var36.bind(var4)(var35);
+            var37 = var35.GroupIcon;
+            var35 = {};
+            var38 = var38.tagIcon;
+            var35['style'] = var38;
+            var38 = 'xs';
+            var35['size'] = var38;
+            var35 = var31.bind(var4)(var37, var35);
+            var29['icon'] = var35;
+            var35 = 40;
+            var34 = var34[var35];
+            var37 = var36.bind(var4)(var34);
+            var36 = var37.getItemSubtitleForMaxPlayersShort;
+            var38 = var26 != var33;
+            var34 = 0;
+            if(!var38) { _fun0006_ip = 75; continue _fun0006 }
+case 76:
+            var34 = var33;
+case 75:
+            var34 = var36.bind(var37)(var34);
+            var29['tagName'] = var34;
+            var34 = _closure1_slot1;
+            var25 = _closure1_slot3;
+            var25 = var25[var35];
+            var25 = var34.bind(var4)(var25);
+            var34 = var26 != var33;
+            var32 = 0;
+            if(!var34) { _fun0006_ip = 77; continue _fun0006 }
+case 78:
+            var32 = var33;
+case 77:
+            var25 = var25.bind(var4)(var32);
+            var29['accessibilityLabel'] = var25;
+            var25 = 'participants';
+            var29 = var31.bind(var4)(var30, var29, var25);
+            var25 = new Array(2);
+            var25[0] = var29;
+            var29 = var28.tags;
+            var28 = var26 == var29;
+            var26 = undefined;
+            if(var28) { _fun0006_ip = 79; continue _fun0006 }
+case 80:
+            var28 = var29.map;
+            var27 = function(arg1) {
+                var5 = arg1;
+                var4 = _closure1_slot11;
+                var3 = _closure1_slot16;
+                var2 = {};
+                var2['tagName'] = var5;
+                var7 = _closure1_slot0;
+                var10 = _closure1_slot3;
+                var6 = 17;
+                var8 = var10[var6];
+                var1 = undefined;
+                var8 = var7.bind(var1)(var8);
+                var9 = var8.intl;
+                var8 = var9.formatToPlainString;
+                var6 = var10[var6];
+                var6 = var7.bind(var1)(var6);
+                var6 = var6.t;
+                var7 = var6.tXXD6v;
+                var6 = {};
+                var6['tagName'] = var5;
+                var6 = var8.bind(var9)(var7, var6);
+                var2['accessibilityLabel'] = var6;
+                var1 = var4.bind(var1)(var3, var2, var5);
+                return var1;
+            };
+            var26 = var28.bind(var29)(var27);
+case 79:
+            var25[1] = var26;
+            var22['children'] = var25;
+            var22 = var24.bind(var4)(var23, var22);
+            var18[1] = var22;
+            var18[2] = var21;
+            var18[3] = var20;
+            var18[4] = var19;
+            var15['children'] = var18;
+            var15 = var17.bind(var4)(var16, var15);
+            var14[1] = var15;
+            var11['children'] = var14;
+            var11 = var13.bind(var4)(var12, var11);
+            var8['children'] = var11;
+            var8 = var10.bind(var4)(var9, var8);
+            var5['children'] = var8;
+            var5 = var7.bind(var4)(var6, var5);
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['default'] = var2;
+    return var1;
+})();

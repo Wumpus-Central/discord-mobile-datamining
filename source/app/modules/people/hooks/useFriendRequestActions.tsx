@@ -1,0 +1,128 @@
+// app/modules/people/hooks/useFriendRequestActions.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var3 = exports;
+    var5 = dependencyMap;
+    var1 = metroImportDefault;
+    var _closure1_slot0 = var1;
+    var _closure1_slot1 = var5;
+    var1 = global;
+    var7 = var1.Object;
+    var6 = var7.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var6.bind(var7)(var3, var1, var4);
+    var1 = 0;
+    var6 = var5[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var4 = var4.bind(var1)(var6);
+    var _closure1_slot2 = var4;
+    var4 = 2;
+    var5 = var5[var4];
+    var4 = require;
+    var6 = var4.bind(var1)(var5);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/people/hooks/useFriendRequestActions.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function useFriendRequestActions(arg1) {
+        var1 = arg1;
+        var7 = var1.userId;
+        var _closure2_slot0 = var7;
+        var13 = var1.applicationId;
+        var _closure2_slot1 = var13;
+        var12 = var1.isGameRelationship;
+        var _closure2_slot2 = var12;
+        var11 = var1.location;
+        var _closure2_slot3 = var11;
+        var9 = var1.onConfirm;
+        var _closure2_slot4 = var9;
+        var10 = var1.onCancel;
+        var _closure2_slot5 = var10;
+        var8 = var1.onFinally;
+        var _closure2_slot6 = var8;
+        var6 = _closure1_slot2;
+        var4 = var6.useCallback;
+        var2 = new Array(4);
+        var2[0] = var13;
+        var2[1] = var12;
+        var2[2] = var11;
+        var2[3] = var7;
+        var1 = function() {
+            _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+                var3 = _closure1_slot0;
+                var2 = _closure1_slot1;
+                var1 = 1;
+                var2 = var2[var1];
+                var1 = undefined;
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.cancelFriendRequest;
+                var2 = {};
+                var6 = _closure2_slot0;
+                var2['userId'] = var6;
+                var7 = _closure2_slot2;
+                var6 = null;
+                if(!var7) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+                var6 = _closure2_slot1;
+case 2:
+                var2['applicationId'] = var6;
+                var5 = _closure2_slot3;
+                var2['location'] = var5;
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            }
+        };
+        var2 = var4.bind(var6)(var1, var2);
+        var1 = {};
+        var5 = var6.useCallback;
+        var4 = new Array(7);
+        var4[0] = var13;
+        var4[1] = var12;
+        var4[2] = var11;
+        var4[3] = var10;
+        var4[4] = var9;
+        var4[5] = var8;
+        var4[6] = var7;
+        var3 = function() {
+            _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                var3 = _closure1_slot0;
+                var2 = _closure1_slot1;
+                var1 = 1;
+                var2 = var2[var1];
+                var1 = undefined;
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.maybeConfirmFriendRequestAccept;
+                var2 = {};
+                var6 = _closure2_slot0;
+                var2['userId'] = var6;
+                var7 = _closure2_slot2;
+                var6 = null;
+                if(!var7) { _fun0002_ip = 2; continue _fun0002 }
+case 3:
+                var6 = _closure2_slot1;
+case 2:
+                var2['applicationId'] = var6;
+                var6 = _closure2_slot3;
+                var2['location'] = var6;
+                var6 = _closure2_slot4;
+                var2['onConfirm'] = var6;
+                var6 = _closure2_slot5;
+                var2['onCancel'] = var6;
+                var5 = _closure2_slot6;
+                var2['onFinally'] = var5;
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            }
+        };
+        var3 = var5.bind(var6)(var3, var4);
+        var1['acceptFriendRequest'] = var3;
+        var1['cancelFriendRequest'] = var2;
+        return var1;
+    };
+    var3['useFriendRequestActions'] = var2;
+    return var1;
+})();

@@ -1,0 +1,194 @@
+// app/stores/AnalyticsTrackingStore.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var12 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var6;
+    var1 = global;
+    var7 = var1.Object;
+    var4 = var7.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var4.bind(var7)(var3, var1, var2);
+    var1 = 0;
+    var2 = var6[var1];
+    var1 = undefined;
+    var9 = var12.bind(var1)(var2);
+    var2 = 1;
+    var2 = var6[var2];
+    var2 = var5.bind(var1)(var2);
+    var10 = var2.Endpoints;
+    var2 = 2;
+    var2 = var6[var2];
+    var7 = var5.bind(var1)(var2);
+    var4 = var7.analyticsTrackingStoreMaker;
+    var2 = {};
+    var11 = 3;
+    var11 = var6[var11];
+    var11 = var12.bind(var1)(var11);
+    var2['dispatcher'] = var11;
+    var11 = {};
+    var12 = function CONNECTION_OPEN(arg1) {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var3 = var1.AnalyticsActionHandlers;
+        var2 = var3.handleConnectionOpen;
+        var1 = arg1;
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var11['CONNECTION_OPEN'] = var12;
+    var12 = function OVERLAY_INITIALIZE(arg1) {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var3 = var1.AnalyticsActionHandlers;
+        var2 = var3.handleConnectionOpen;
+        var1 = arg1;
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var11['OVERLAY_INITIALIZE'] = var12;
+    var12 = function CURRENT_USER_UPDATE(arg1) {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var3 = var1.AnalyticsActionHandlers;
+        var2 = var3.handleConnectionOpen;
+        var1 = arg1;
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var11['CURRENT_USER_UPDATE'] = var12;
+    var12 = function CONNECTION_CLOSED() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var2 = var1.AnalyticsActionHandlers;
+        var1 = var2.handleConnectionClosed;
+        var1 = var1.bind(var2)();
+        return var1;
+    };
+    var11['CONNECTION_CLOSED'] = var12;
+    var12 = function FINGERPRINT() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var2 = var1.AnalyticsActionHandlers;
+        var1 = var2.handleFingerprint;
+        var1 = var1.bind(var2)();
+        return var1;
+    };
+    var11['FINGERPRINT'] = var12;
+    var12 = function TRACK(arg1) {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var3 = var1.AnalyticsActionHandlers;
+        var2 = var3.handleTrack;
+        var1 = arg1;
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var11['TRACK'] = var12;
+    var12 = function SET_ANALYTICS_TOKEN(arg1) {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var3 = var1.AnalyticsActionHandlers;
+        var2 = var3.handleSetAnalyticsToken;
+        var1 = arg1;
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var11['SET_ANALYTICS_TOKEN'] = var12;
+    var2['actionHandler'] = var11;
+    var10 = var10.TRACK;
+    var2['TRACKING_URL'] = var10;
+    var10 = new Array(1);
+    var10[0] = var9;
+    var2['waitFor'] = var10;
+    var9 = var9.getFingerprint;
+    var2['getFingerprint'] = var9;
+    var9 = function getSessionId() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 4;
+        var2 = var2[var1];
+        var1 = undefined;
+        var2 = var3.bind(var1)(var2);
+        var1 = var2.getSession;
+        var3 = var1.bind(var2)();
+        var2 = var3.then;
+        var1 = function(arg1) {
+            _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+                var3 = arg1;
+                var1 = {};
+                var2 = null;
+                var4 = var2 == var3;
+                var2 = undefined;
+                if(var4) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+                var2 = var3.uuid;
+case 2:
+                var1['sessionId'] = var2;
+                return var1;
+            }
+        };
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var2['getSessionId'] = var9;
+    var8 = function getLaunchSignature() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 5;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var1 = var1.launchSignature;
+        return var1;
+    };
+    var2['getLaunchSignature'] = var8;
+    var8 = 6;
+    var8 = var6[var8];
+    var8 = var5.bind(var1)(var8);
+    var8 = var8.requestSafeIdleCallback;
+    var2['scheduleWhenIdle'] = var8;
+    var2 = var4.bind(var7)(var2);
+    var4 = 7;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'stores/AnalyticsTrackingStore.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

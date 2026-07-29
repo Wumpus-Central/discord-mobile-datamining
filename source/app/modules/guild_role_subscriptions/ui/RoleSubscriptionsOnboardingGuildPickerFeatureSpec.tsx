@@ -1,0 +1,132 @@
+// app/modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var2);
+    var1 = 0;
+    var7 = var6[var1];
+    var2 = metroImportDefault;
+    var1 = undefined;
+    var2 = var2.bind(var1)(var7);
+    var _closure1_slot2 = var2;
+    var2 = 1;
+    var2 = var6[var2];
+    var2 = var5.bind(var1)(var2);
+    var2 = var2.isGuildOwner;
+    var _closure1_slot3 = var2;
+    var2 = {};
+    var7 = function title() {
+        var5 = _closure1_slot0;
+        var6 = _closure1_slot1;
+        var1 = 2;
+        var2 = var6[var1];
+        var4 = undefined;
+        var2 = var5.bind(var4)(var2);
+        var3 = var2.intl;
+        var2 = var3.string;
+        var1 = var6[var1];
+        var1 = var5.bind(var4)(var1);
+        var1 = var1.t;
+        var1 = var1.KzCF/6;
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var2['title'] = var7;
+    var7 = function description() {
+        var5 = _closure1_slot0;
+        var6 = _closure1_slot1;
+        var1 = 2;
+        var2 = var6[var1];
+        var4 = undefined;
+        var2 = var5.bind(var4)(var2);
+        var3 = var2.intl;
+        var2 = var3.string;
+        var1 = var6[var1];
+        var1 = var5.bind(var4)(var1);
+        var1 = var1.t;
+        var1 = var1.xMW8FH;
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var2['description'] = var7;
+    var7 = false;
+    var2['canCreateGuild'] = var7;
+    var4 = function useIsGuildSupported() {
+        var3 = _closure1_slot0;
+        var7 = _closure1_slot1;
+        var1 = 3;
+        var5 = var7[var1];
+        var2 = undefined;
+        var6 = var3.bind(var2)(var5);
+        var5 = var6.useStateFromStores;
+        var8 = _closure1_slot2;
+        var4 = new Array(1);
+        var4[0] = var8;
+        var1 = var7[var1];
+        var1 = var3.bind(var2)(var1);
+        var9 = var1.statesWillNeverBeEqual;
+        var11 = function() {
+            var1 = function(arg1, arg2) {
+                _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+                    var5 = arg1;
+                    var3 = _closure1_slot3;
+                    var8 = undefined;
+                    var1 = arg2;
+                    var1 = var3.bind(var8)(var5, var1);
+                    if(!var1) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+                    var7 = _closure1_slot0;
+                    var9 = _closure1_slot1;
+                    var2 = 4;
+                    var2 = var9[var2];
+                    var4 = var7.bind(var8)(var2);
+                    var3 = var4.canSeeGuildRoleSubscriptionSettings;
+                    var2 = {'guild': null, 'isOwner': true, 'canManageGuildRoleSubscriptions': true};
+                    var2['guild'] = var5;
+                    var6 = 5;
+                    var6 = var9[var6];
+                    var10 = var7.bind(var8)(var6);
+                    var6 = var10.isUserInCreatorMonetizationEligibleCountry;
+                    var6 = var6.bind(var10)();
+                    var2['isUserInCreatorMonetizationEligibleCountry'] = var6;
+                    var6 = 6;
+                    var6 = var9[var6];
+                    var7 = var7.bind(var8)(var6);
+                    var6 = var7.shouldRestrictUpdatingCreatorMonetizationSettings;
+                    var5 = var5.id;
+                    var5 = var6.bind(var7)(var5);
+                    var2['shouldRestrictUpdatingRoleSubscriptionSettings'] = var5;
+                    var1 = var3.bind(var4)(var2);
+case 2:
+                    return var1;
+                }
+            };
+            return var1;
+        };
+        var10 = new Array(0);
+        var13 = var6;
+        var12 = var4;
+        var1 = var13[var5](var12, var11, var10, var9, var8);
+        return var1;
+    };
+    var2['useIsGuildSupported'] = var4;
+    var4 = 7;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

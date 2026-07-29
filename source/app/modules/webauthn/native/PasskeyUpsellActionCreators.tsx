@@ -1,0 +1,155 @@
+// app/modules/webauthn/native/PasskeyUpsellActionCreators.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var4 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var2 = metroImportDefault;
+    var _closure1_slot1 = var2;
+    var _closure1_slot2 = var4;
+    var2 = global;
+    var8 = var2.Object;
+    var7 = var8.defineProperty;
+    var6 = {};
+    var2 = true;
+    var6['value'] = var2;
+    var2 = '__esModule';
+    var2 = var7.bind(var8)(var3, var2, var6);
+    var2 = {};
+    var6 = function openPasskeyUpsell() {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var3 = this;
+            var8 = _closure1_slot0;
+            var4 = _closure1_slot2;
+            var1 = 0;
+            var5 = var4[var1];
+            var1 = undefined;
+            var6 = var8.bind(var1)(var5);
+            var5 = var6.UNSAFE_isDismissibleContentDismissed;
+            var7 = 1;
+            var4 = var4[var7];
+            var4 = var8.bind(var1)(var4);
+            var4 = var4.DismissibleContent;
+            var4 = var4.PASSWORDLESS_UPSELL;
+            var4 = var5.bind(var6)(var4);
+            if(var4) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var6 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var4 = 2;
+            var4 = var2[var4];
+            var5 = var6.bind(var1)(var4);
+            var4 = var5.requestMarkDismissibleContentAsShown;
+            var2 = var2[var7];
+            var2 = var6.bind(var1)(var2);
+            var2 = var2.DismissibleContent;
+            var2 = var2.PASSWORDLESS_UPSELL;
+            var2 = var4.bind(var5)(var2);
+            var2 = var3.openPasskeyUpsellPromoSheet;
+            var2 = var2.bind(var3)();
+case 2:
+            return var1;
+        }
+    };
+    var2['openPasskeyUpsell'] = var6;
+    var6 = function openPasskeyUpsellModal() {
+        var5 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 3;
+        var4 = var2[var1];
+        var1 = undefined;
+        var5 = var5.bind(var1)(var4);
+        var4 = var5.pushLazy;
+        var6 = _closure1_slot0;
+        var3 = 5;
+        var3 = var2[var3];
+        var6 = var6.bind(var1)(var3);
+        var3 = 4;
+        var3 = var2[var3];
+        var2 = var2.paths;
+        var3 = var6.bind(var1)(var3, var2);
+        var2 = 'PASSKEY_UPSELL_KEY';
+        var2 = var4.bind(var5)(var3, var1, var2);
+        return var1;
+    };
+    var2['openPasskeyUpsellModal'] = var6;
+    var6 = function closePasskeyUpsellModal() {
+        var3 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 3;
+        var2 = var2[var1];
+        var1 = undefined;
+        var4 = var3.bind(var1)(var2);
+        var3 = var4.popWithKey;
+        var2 = 'PASSKEY_UPSELL_KEY';
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var2['closePasskeyUpsellModal'] = var6;
+    var6 = function openPasskeyUpsellPromoSheet() {
+        var5 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 6;
+        var4 = var2[var1];
+        var1 = undefined;
+        var5 = var5.bind(var1)(var4);
+        var4 = var5.openLazy;
+        var6 = _closure1_slot0;
+        var3 = 5;
+        var3 = var2[var3];
+        var6 = var6.bind(var1)(var3);
+        var3 = 7;
+        var3 = var2[var3];
+        var2 = var2.paths;
+        var3 = var6.bind(var1)(var3, var2);
+        var2 = 'PASSKEY_UPSELL_KEY';
+        var2 = var4.bind(var5)(var3, var2);
+        return var1;
+    };
+    var2['openPasskeyUpsellPromoSheet'] = var6;
+    var6 = function closePasskeyUpsellPromoSheet() {
+        var3 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 6;
+        var2 = var2[var1];
+        var1 = undefined;
+        var4 = var3.bind(var1)(var2);
+        var3 = var4.hideActionSheet;
+        var2 = 'PASSKEY_UPSELL_KEY';
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var2['closePasskeyUpsellPromoSheet'] = var6;
+    var1 = function openPasskeyUpsellPromoModal(arg1) {
+        var5 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 3;
+        var4 = var2[var1];
+        var1 = undefined;
+        var6 = var5.bind(var1)(var4);
+        var5 = var6.pushLazy;
+        var4 = _closure1_slot0;
+        var3 = 5;
+        var3 = var2[var3];
+        var4 = var4.bind(var1)(var3);
+        var3 = 8;
+        var3 = var2[var3];
+        var2 = var2.paths;
+        var4 = var4.bind(var1)(var3, var2);
+        var3 = arg1;
+        var2 = 'PASSKEY_UPSELL_KEY';
+        var2 = var5.bind(var6)(var4, var3, var2);
+        return var1;
+    };
+    var2['openPasskeyUpsellPromoModal'] = var1;
+    var1 = 9;
+    var4 = var4[var1];
+    var1 = undefined;
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/webauthn/native/PasskeyUpsellActionCreators.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

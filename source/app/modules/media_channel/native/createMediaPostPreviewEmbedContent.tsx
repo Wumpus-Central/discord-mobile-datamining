@@ -1,0 +1,488 @@
+// app/modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var8 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var8;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var9 = var1.Object;
+    var7 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var9)(var3, var1, var4);
+    var1 = 0;
+    var4 = var6[var1];
+    var1 = undefined;
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.Image;
+    var _closure1_slot3 = var7;
+    var4 = var4.processColor;
+    var _closure1_slot4 = var4;
+    var4 = 1;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot5 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot6 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot7 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot8 = var4;
+    var4 = 5;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot9 = var4;
+    var4 = 6;
+    var7 = var6[var4];
+    var7 = var8.bind(var1)(var7);
+    var _closure1_slot10 = var7;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.FetchState;
+    var _closure1_slot11 = var4;
+    var4 = 18;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function createMediaPostPreviewEmbedContent(arg1, arg2, arg3) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var7 = arguments[3];
+            var9 = undefined;
+            if(!(var7 === var9)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var7 = false;
+case 2:
+            var2 = _closure1_slot0;
+            var1 = _closure1_slot2;
+            var5 = 7;
+            var1 = var1[var5];
+            var4 = var2.bind(var9)(var1);
+            var2 = var4.getMediaPostEmbedChannelId;
+            var1 = arg3;
+            var6 = var2.bind(var4)(var1);
+            var1 = null;
+            if(!(var1 != var6)) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var4 = _closure1_slot10;
+            var2 = var4.getEmbedFetchState;
+            var4 = var2.bind(var4)(var6);
+            var2 = _closure1_slot11;
+            var2 = var2.FETCHED;
+            if(!(var4 === var2)) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var4 = _closure1_slot10;
+            var2 = var4.getMediaPostEmbed;
+            var2 = var2.bind(var4)(var6);
+            var4 = var1 == var2;
+            var14 = undefined;
+            if(var4) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var14 = var2.media;
+case 8:
+            if(!(var1 != var14)) { _fun0001_ip = 10; continue _fun0001 }
+case 11:
+            var6 = _closure1_slot7;
+            var4 = var6.getGuild;
+            var2 = var14.guild_id;
+            var12 = var4.bind(var6)(var2);
+            var6 = _closure1_slot9;
+            var4 = var6.getUser;
+            var2 = var14.author_id;
+            var13 = var4.bind(var6)(var2);
+            var6 = _closure1_slot6;
+            var4 = var6.getChannel;
+            var2 = var14.parent_channel_id;
+            var11 = var4.bind(var6)(var2);
+            var4 = var6.getChannel;
+            var2 = var14.channel_id;
+            var10 = var4.bind(var6)(var2);
+            var4 = _closure1_slot8;
+            var2 = var4.getGuildId;
+            var8 = var2.bind(var4)();
+            var6 = var1 != var11;
+            if(!var6) { _fun0001_ip = 12; continue _fun0001 }
+case 13:
+            var4 = _closure1_slot0;
+            var15 = _closure1_slot2;
+            var2 = 8;
+            var2 = var15[var2];
+            var4 = var4.bind(var9)(var2);
+            var2 = var4.canViewChannel;
+            var6 = var2.bind(var4)(var11);
+case 12:
+            var4 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var2 = var2[var5];
+            var5 = var4.bind(var9)(var2);
+            var4 = var5.getMediaPostEmbedCommonData;
+            var2 = {};
+            var2['mediaPostEmbedData'] = var14;
+            var2['guild'] = var12;
+            var2['parentChannel'] = var11;
+            var2['postThread'] = var10;
+            var2['user'] = var13;
+            var2['selectedGuildId'] = var8;
+            var2['canAccess'] = var6;
+            var6 = var4.bind(var5)(var2);
+            if(!(var1 != var6)) { _fun0001_ip = 14; continue _fun0001 }
+case 15:
+            var2 = var6.authorName;
+            if(!(var1 != var2)) { _fun0001_ip = 16; continue _fun0001 }
+case 17:
+            var2 = var6.channelName;
+            if(!(var1 != var2)) { _fun0001_ip = 16; continue _fun0001 }
+case 18:
+            if(!(var1 != var13)) { _fun0001_ip = 16; continue _fun0001 }
+case 19:
+            var4 = _closure1_slot0;
+            var14 = _closure1_slot2;
+            var2 = 10;
+            var2 = var14[var2];
+            var8 = var4.bind(var9)(var2);
+            var5 = var8.getUserAuthorWithProcessedColor;
+            var2 = var6.postThread;
+            var12 = var5.bind(var8)(var13, var2);
+            var2 = 9;
+            var5 = var14[var2];
+            var5 = var4.bind(var9)(var5);
+            var8 = var5.intl;
+            var5 = var8.formatToParts;
+            var2 = var14[var2];
+            var2 = var4.bind(var9)(var2);
+            var2 = var2.t;
+            var4 = var2.mCytFr;
+            var2 = {};
+            var10 = var6.authorName;
+            var2['username'] = var10;
+            var11 = _closure1_slot1;
+            var10 = 11;
+            var10 = var14[var10];
+            var11 = var11.bind(var9)(var10);
+            var10 = {};
+            var13 = var13.id;
+            var10['userId'] = var13;
+            var13 = arg1;
+            var10['message'] = var13;
+            var10['author'] = var12;
+            var12 = arg2;
+            var10['roleStyle'] = var12;
+            var12 = var6.threadId;
+            var10['messageChannelId'] = var12;
+            var10 = var11.bind(var9)(var10);
+            var2['usernameOnClick'] = var10;
+            var10 = var6.channelName;
+            var2['channelName'] = var10;
+            var5 = var5.bind(var8)(var4, var2);
+            _fun0001_ip = 20; continue _fun0001;
+case 16:
+            var4 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var2 = 9;
+            var8 = var11[var2];
+            var8 = var4.bind(var9)(var8);
+            var10 = var8.intl;
+            var8 = var10.formatToParts;
+            var2 = var11[var2];
+            var2 = var4.bind(var9)(var2);
+            var2 = var2.t;
+            var4 = var2.p4VdWJ;
+            var2 = {};
+            var11 = var6.guildName;
+            var2['guildName'] = var11;
+            var5 = var8.bind(var10)(var4, var2);
+case 20:
+            var4 = var6.canAccess;
+            var2 = false;
+            if(!(var2 !== var4)) { _fun0001_ip = 21; continue _fun0001 }
+case 22:
+            var4 = _closure1_slot4;
+            var8 = _closure1_slot1;
+            var10 = _closure1_slot2;
+            var2 = 12;
+            var2 = var10[var2];
+            var2 = var8.bind(var9)(var2);
+            var2 = var2.unsafe_rawColors;
+            var2 = var2.BRAND_500;
+            var4 = var4.bind(var9)(var2);
+            _fun0001_ip = 23; continue _fun0001;
+case 21:
+            var8 = _closure1_slot4;
+            var10 = _closure1_slot1;
+            var11 = _closure1_slot2;
+            var2 = 12;
+            var2 = var11[var2];
+            var2 = var10.bind(var9)(var2);
+            var2 = var2.unsafe_rawColors;
+            var2 = var2.TEAL_430;
+            var4 = var8.bind(var9)(var2);
+case 23:
+            var2 = var6.coverImage;
+            var8 = var1 != var2;
+            if(!var8) { _fun0001_ip = 24; continue _fun0001 }
+case 25:
+            var10 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var2 = 13;
+            var2 = var11[var2];
+            var11 = var10.bind(var9)(var2);
+            var10 = var11.isAnimatedImageUrl;
+            var2 = var6.coverImage;
+            var8 = var10.bind(var11)(var2);
+case 24:
+            var2 = var6.coverImage;
+            var2 = var1 != var2;
+            if(!var2) { _fun0001_ip = 26; continue _fun0001 }
+case 27:
+            var10 = var6.shouldShowBlurredThumbnailImage;
+            var2 = !var10;
+case 26:
+            if(!var2) { _fun0001_ip = 28; continue _fun0001 }
+case 29:
+            var2 = var8;
+case 28:
+            if(!var2) { _fun0001_ip = 30; continue _fun0001 }
+case 31:
+            var2 = var7;
+case 30:
+            if(!var2) { _fun0001_ip = 32; continue _fun0001 }
+case 33:
+            var10 = var6.coverImage;
+            var2 = global;
+            var2 = var2.HermesInternal;
+            var8 = var2.concat;
+            var7 = '';
+            var2 = '?format=webp';
+            var2 = var8.bind(var7)(var10, var2);
+            var6['coverImage'] = var2;
+case 32:
+            var2 = var6.shouldShowBlurredThumbnailImage;
+            if(var2) { _fun0001_ip = 34; continue _fun0001 }
+case 35:
+            var8 = _closure1_slot5;
+            var7 = var8.get;
+            var2 = 'obscure_blur_effect_explicit_content_enabled';
+            var10 = var7.bind(var8)(var2);
+            if(var10) { _fun0001_ip = 36; continue _fun0001 }
+case 37:
+            var8 = _closure1_slot5;
+            var7 = var8.get;
+            var2 = 'obscure_blur_effect_gore_content_enabled';
+            var10 = var7.bind(var8)(var2);
+case 36:
+            if(var10) { _fun0001_ip = 38; continue _fun0001 }
+case 39:
+            var8 = _closure1_slot5;
+            var7 = var8.get;
+            var2 = 'obscure_blur_effect_self_harm_content_enabled';
+            var10 = var7.bind(var8)(var2);
+case 38:
+            var7 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var8 = 15;
+            var2 = var2[var8];
+            var11 = var7.bind(var9)(var2);
+            var7 = var11.isPendingScanVersion;
+            var2 = var6.contentScanVersion;
+            var13 = var7.bind(var11)(var2);
+            var12 = var10;
+            if(!var10) { _fun0001_ip = 40; continue _fun0001 }
+case 41:
+            var7 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var2 = var2[var8];
+            var7 = var7.bind(var9)(var2);
+            var2 = var7.shouldAgeVerifyForExplicitMedia;
+            var12 = var2.bind(var7)();
+case 40:
+            var11 = var10;
+            if(!var11) { _fun0001_ip = 42; continue _fun0001 }
+case 43:
+            var7 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var2 = 16;
+            var2 = var8[var2];
+            var7 = var7.bind(var9)(var2);
+            var2 = var7.isVerifiedTeen;
+            var11 = var2.bind(var7)();
+case 42:
+            var2 = var6.shouldContainMediaWithBackground;
+            if(!var2) { _fun0001_ip = 44; continue _fun0001 }
+case 45:
+            var2 = var6.coverImage;
+            if(!(var1 == var2)) { _fun0001_ip = 46; continue _fun0001 }
+case 44:
+            var2 = {};
+            var21 = var2;
+            var20 = var6;
+            var7 = copyDataProperties(var21, var20);
+            var7 = 'footer';
+            var2[6] = var5;
+            var15 = var6.shouldSpoiler;
+            var8 = '';
+            var7 = true;
+            var14 = var8;
+            if(!(var7 === var15)) { _fun0001_ip = 47; continue _fun0001 }
+case 48:
+            var17 = _closure1_slot0;
+            var18 = _closure1_slot2;
+            var7 = 9;
+            var15 = var18[var7];
+            var15 = var17.bind(var9)(var15);
+            var16 = var15.intl;
+            var15 = var16.string;
+            var7 = var18[var7];
+            var7 = var17.bind(var9)(var7);
+            var7 = var7.t;
+            var7 = var7.F+x38C;
+            var15 = var15.bind(var16)(var7);
+            var7 = var15.toUpperCase;
+            var14 = var7.bind(var15)();
+case 47:
+            var7 = 'spoiler';
+            var2[6] = var14;
+            if(!var10) { _fun0001_ip = 49; continue _fun0001 }
+case 50:
+            var16 = _closure1_slot0;
+            var17 = _closure1_slot2;
+            var7 = 9;
+            var14 = var17[var7];
+            var14 = var16.bind(var9)(var14);
+            var15 = var14.intl;
+            var14 = var15.string;
+            var7 = var17[var7];
+            var7 = var16.bind(var9)(var7);
+            var7 = var7.t;
+            var7 = var7.SpxcUR;
+            var8 = var14.bind(var15)(var7);
+case 49:
+            var7 = 'obscure';
+            var2[6] = var8;
+            var7 = 'obscureAwaitingScan';
+            var2[6] = var13;
+            var7 = 'verifyAge';
+            var2[6] = var12;
+            var7 = 'obscureHideControls';
+            var2[6] = var11;
+            var7 = 'obscureIsOpaque';
+            var2[6] = var10;
+            var7 = 'ctaButtonColor';
+            var2[6] = var4;
+            _fun0001_ip = 51; continue _fun0001;
+case 46:
+            var7 = {};
+            var21 = var7;
+            var20 = var6;
+            var8 = copyDataProperties(var21, var20);
+            var8 = 'footer';
+            var7[7] = var5;
+            var16 = var6.shouldSpoiler;
+            var14 = '';
+            var8 = true;
+            var15 = var14;
+            if(!(var8 === var16)) { _fun0001_ip = 52; continue _fun0001 }
+case 53:
+            var18 = _closure1_slot0;
+            var19 = _closure1_slot2;
+            var8 = 9;
+            var16 = var19[var8];
+            var16 = var18.bind(var9)(var16);
+            var17 = var16.intl;
+            var16 = var17.string;
+            var8 = var19[var8];
+            var8 = var18.bind(var9)(var8);
+            var8 = var8.t;
+            var8 = var8.F+x38C;
+            var16 = var16.bind(var17)(var8);
+            var8 = var16.toUpperCase;
+            var15 = var8.bind(var16)();
+case 52:
+            var8 = 'spoiler';
+            var7[7] = var15;
+            if(!var10) { _fun0001_ip = 54; continue _fun0001 }
+case 55:
+            var17 = _closure1_slot0;
+            var18 = _closure1_slot2;
+            var8 = 9;
+            var15 = var18[var8];
+            var15 = var17.bind(var9)(var15);
+            var16 = var15.intl;
+            var15 = var16.string;
+            var8 = var18[var8];
+            var8 = var17.bind(var9)(var8);
+            var8 = var8.t;
+            var8 = var8.SpxcUR;
+            var14 = var15.bind(var16)(var8);
+case 54:
+            var8 = 'obscure';
+            var7[7] = var14;
+            var8 = 'obscureAwaitingScan';
+            var7[7] = var13;
+            var8 = 'verifyAge';
+            var7[7] = var12;
+            var8 = 'obscureHideControls';
+            var7[7] = var11;
+            var8 = 'obscureIsOpaque';
+            var7[7] = var10;
+            var8 = 'ctaButtonColor';
+            var7[7] = var4;
+            var10 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var8 = 17;
+            var8 = var11[var8];
+            var11 = var10.bind(var9)(var8);
+            var10 = var11.getBackgroundImageUrl;
+            var8 = var6.coverImage;
+            var10 = var10.bind(var11)(var8);
+            var8 = 'backgroundImage';
+            var7[7] = var10;
+            var2 = var7;
+case 51:
+            return var2;
+case 34:
+            var2 = {};
+            var21 = var2;
+            var20 = var6;
+            var6 = copyDataProperties(var21, var20);
+            var7 = _closure1_slot3;
+            var6 = var7.resolveAssetSource;
+            var8 = _closure1_slot1;
+            var10 = _closure1_slot2;
+            var3 = 14;
+            var3 = var10[var3];
+            var3 = var8.bind(var9)(var3);
+            var3 = var6.bind(var7)(var3);
+            var6 = var3.uri;
+            var3 = 'blurredCoverImage';
+            var2[2] = var6;
+            var3 = 'footer';
+            var2[2] = var5;
+            var3 = 'ctaButtonColor';
+            var2[2] = var4;
+            return var2;
+case 14:
+            return var1;
+case 10:
+            return var1;
+case 6:
+            return var1;
+case 4:
+            return var1;
+        }
+    };
+    var3['default'] = var2;
+    return var1;
+})();

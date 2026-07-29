@@ -1,0 +1,203 @@
+// app/modules/app_launcher/native/options/AppLauncherCommandOptionActionSheet.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var13 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var13;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var4 = var4.bind(var1)(var7);
+    var10 = 1;
+    var4 = var6[var10];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.View;
+    var _closure1_slot3 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var11 = var4.DEFAULT_CONTENT_PADDING;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.jsx;
+    var _closure1_slot4 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var8 = var5.bind(var1)(var4);
+    var7 = var8.createStyles;
+    var4 = {};
+    var9 = {};
+    var12 = 5;
+    var12 = var6[var12];
+    var12 = var13.bind(var1)(var12);
+    var12 = var12.colors;
+    var12 = var12.MOBILE_KEYBOARD_PANEL_BACKGROUND;
+    var9['backgroundColor'] = var12;
+    var4['actionSheetBackground'] = var9;
+    var9 = {};
+    var12 = 'transparent';
+    var9['backgroundColor'] = var12;
+    var4['titleContainer'] = var9;
+    var9 = {};
+    var12 = 'center';
+    var9['alignItems'] = var12;
+    var4['titleWrapper'] = var9;
+    var9 = {'paddingHorizontal': 12, 'textAlign': 'center'};
+    var4['subtitleWrapper'] = var9;
+    var9 = {};
+    var9['paddingHorizontal'] = var11;
+    var9['paddingTop'] = var11;
+    var9['flex'] = var10;
+    var4['contentContainer'] = var9;
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot5 = var4;
+    var4 = 11;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/app_launcher/native/options/AppLauncherCommandOptionActionSheet.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function AppLauncherCommandOptionActionSheet(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var4 = arg1;
+            var1 = var4.option;
+            var8 = var4.children;
+            var10 = var4.contentContainerStyles;
+            var12 = var4.scrollable;
+            var5 = undefined;
+            if(!(var12 === var5)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var12 = true;
+case 2:
+            var11 = var4.startExpanded;
+            if(!(var11 === var5)) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var11 = true;
+case 4:
+            var3 = {'option': 0, 'children': 0, 'contentContainerStyles': 0, 'scrollable': 0, 'startExpanded': 0};
+            var19 = null;
+            var20 = var3;
+            var2 = silentSetPrototypeOf(var20, var19);
+            var20 = {};
+            var19 = var4;
+            var18 = var3;
+            var6 = copyDataProperties(var20, var19, var18);
+            var _closure2_slot0 = var6;
+            var2 = _closure1_slot5;
+            var9 = var2.bind(var5)();
+            var4 = _closure1_slot4;
+            var13 = _closure1_slot0;
+            var14 = _closure1_slot2;
+            var2 = 6;
+            var2 = var14[var2];
+            var2 = var13.bind(var5)(var2);
+            var3 = var2.BottomSheet;
+            var2 = {};
+            var20 = var2;
+            var19 = var6;
+            var6 = copyDataProperties(var20, var19);
+            var15 = var9.actionSheetBackground;
+            var6 = 'backgroundStyles';
+            var2[5] = var15;
+            var6 = 'scrollable';
+            var2[5] = var12;
+            var6 = 'startExpanded';
+            var2[5] = var11;
+            var6 = 7;
+            var6 = var14[var6];
+            var6 = var13.bind(var5)(var6);
+            var11 = var6.BottomSheetTitleHeader;
+            var6 = {};
+            var12 = var9.titleContainer;
+            var6['titleContainerStyle'] = var12;
+            var12 = var9.titleWrapper;
+            var6['titleWrapperStyle'] = var12;
+            var12 = var9.subtitleWrapper;
+            var6['subtitleStyle'] = var12;
+            var7 = _closure1_slot3;
+            var12 = {};
+            var15 = {};
+            var16 = 'flex-start';
+            var15['alignSelf'] = var16;
+            var12['style'] = var15;
+            var15 = 8;
+            var15 = var14[var15];
+            var15 = var13.bind(var5)(var15);
+            var16 = var15.ActionSheetCloseButton;
+            var15 = {};
+            var17 = function onPress() {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    var3 = _closure1_slot1;
+                    var2 = _closure1_slot2;
+                    var1 = 9;
+                    var2 = var2[var1];
+                    var1 = undefined;
+                    var3 = var3.bind(var1)(var2);
+                    var2 = var3.hideActionSheet;
+                    var2 = var2.bind(var3)();
+                    var3 = _closure2_slot0;
+                    var4 = var3.onDismiss;
+                    var3 = null;
+                    if(!(var3 != var4)) { _fun0002_ip = 6; continue _fun0002 }
+case 7:
+                    var3 = _closure2_slot0;
+                    var2 = var3.onDismiss;
+                    var2 = var2.bind(var3)();
+case 6:
+                    return var1;
+                }
+            };
+            var15['onPress'] = var17;
+            var15 = var4.bind(var5)(var16, var15);
+            var12['children'] = var15;
+            var12 = var4.bind(var5)(var7, var12);
+            var6['leading'] = var12;
+            var12 = var1.displayName;
+            var6['title'] = var12;
+            var12 = var1.displayDescription;
+            var6['subtitle'] = var12;
+            var12 = 10;
+            var12 = var14[var12];
+            var12 = var13.bind(var5)(var12);
+            var13 = var12.Spacer;
+            var12 = {};
+            var14 = 24;
+            var12['size'] = var14;
+            var12 = var4.bind(var5)(var13, var12);
+            var6['trailing'] = var12;
+            var11 = var4.bind(var5)(var11, var6);
+            var6 = 'header';
+            var2[5] = var11;
+            var6 = {};
+            var11 = var9.contentContainer;
+            var9 = new Array(2);
+            var9[0] = var11;
+            var9[1] = var10;
+            var6['style'] = var9;
+            var6['children'] = var8;
+            var7 = var4.bind(var5)(var7, var6);
+            var6 = 'children';
+            var2[5] = var7;
+            var1 = var1.name;
+            var1 = var4.bind(var5)(var3, var2, var1);
+            return var1;
+        }
+    };
+    var3['AppLauncherCommandOptionActionSheet'] = var2;
+    return var1;
+})();

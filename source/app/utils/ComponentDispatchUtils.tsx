@@ -1,0 +1,126 @@
+// app/utils/ComponentDispatchUtils.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var6 = dependencyMap;
+    var1 = metroImportAll;
+    var _closure1_slot0 = var1;
+    var _closure1_slot1 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var4 = var8.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var4.bind(var8)(var3, var1, var2);
+    var1 = 0;
+    var2 = var6[var1];
+    var1 = undefined;
+    var2 = var5.bind(var1)(var2);
+    var2 = var2.ComponentActionsKeyed;
+    var _closure1_slot2 = var2;
+    var2 = 2;
+    var4 = var6[var2];
+    var2 = metroImportDefault;
+    var8 = var2.bind(var1)(var4);
+    var2 = var8.prototype;
+    var4 = Object.create(var2, {constructor: {value: var8}});
+    var13 = 'ComponentDispatchUtils';
+    var14 = var4;
+    var2 = new var14[var8](var13, var12);
+    var2 = var2 instanceof Object ? var2 : var4;
+    var _closure1_slot3 = var2;
+    var4 = 3;
+    var2 = var6[var4];
+    var2 = var5.bind(var1)(var2);
+    var8 = var2.ComponentDispatcher;
+    var2 = {'maxListeners': 100, 'enableDevtools': false};
+    var9 = {};
+    var10 = function warn(arg1, arg2) {
+        var5 = 1;
+        var9 = var5;
+        var8 = copyRestArgs(var9);
+        var3 = _closure1_slot3;
+        var2 = var3.warn;
+        var1 = new Array(1);
+        var6 = arg1;
+        var1[0] = var6;
+        var9 = var1;
+        var7 = var5;
+        var4 = arraySpread(var9, var8, var7);
+        var9 = var2;
+        var8 = var1;
+        var7 = var3;
+        var1 = apply(var9, var8, var7);
+        return var1;
+    };
+    var9['warn'] = var10;
+    var2['logger'] = var9;
+    var7 = function reportDevtoolsEvent(arg1, arg2, arg3) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var6 = arg1;
+            var _closure2_slot0 = var6;
+            var1 = global;
+            var5 = var1.Object;
+            var4 = var5.values;
+            var3 = _closure1_slot2;
+            var4 = var4.bind(var5)(var3);
+            var3 = var4.find;
+            var2 = function(arg1) {
+                var3 = _closure2_slot0;
+                var2 = var3.startsWith;
+                var1 = arg1;
+                var1 = var2.bind(var3)(var1);
+                return var1;
+            };
+            var2 = var3.bind(var4)(var2);
+            var3 = null;
+            var5 = var6;
+            if(!(var3 != var2)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var5 = var2;
+case 2:
+            var3 = _closure1_slot0;
+            var2 = _closure1_slot1;
+            var1 = 1;
+            var2 = var2[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.reportEvent;
+            var2 = {};
+            var7 = 'ComponentDispatch';
+            var2['type'] = var7;
+            var2['description'] = var5;
+            var5 = {};
+            var7 = arg2;
+            var5['actionData'] = var7;
+            var5['fullActionName'] = var6;
+            var2['data'] = var5;
+            var5 = arg3;
+            var2['durationMs'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        }
+    };
+    var2['devtoolsReporter'] = var7;
+    var7 = var8.prototype;
+    var7 = Object.create(var7, {constructor: {value: var8}});
+    var14 = var7;
+    var13 = var2;
+    var2 = new var14[var8](var13, var12);
+    var2 = var2 instanceof Object ? var2 : var7;
+    var7 = 4;
+    var7 = var6[var7];
+    var9 = var5.bind(var1)(var7);
+    var8 = var9.fileFinishedImporting;
+    var7 = 'utils/ComponentDispatchUtils.tsx';
+    var7 = var8.bind(var9)(var7);
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.ComponentDispatcher;
+    var3['ComponentDispatcher'] = var4;
+    var3['ComponentDispatch'] = var2;
+    return var1;
+})();

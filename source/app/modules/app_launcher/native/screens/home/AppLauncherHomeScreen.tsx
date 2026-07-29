@@ -1,0 +1,4730 @@
+// app/modules/app_launcher/native/screens/home/AppLauncherHomeScreen.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var6 = require;
+    var12 = metroImportDefault;
+    var8 = metroImportAll;
+    var3 = exports;
+    var7 = dependencyMap;
+    var _closure1_slot0 = var6;
+    var _closure1_slot1 = var12;
+    var _closure1_slot2 = var8;
+    var _closure1_slot3 = var7;
+    var1 = function AppRowLabel(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var1 = arg1;
+            var9 = var1.renderedName;
+            var1 = var1.showsPromoted;
+            var2 = _closure1_slot25;
+            var5 = undefined;
+            var12 = var2.bind(var5)();
+            if(var1) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot0;
+            var4 = _closure1_slot3;
+            var1 = 16;
+            var1 = var4[var1];
+            var1 = var2.bind(var5)(var1);
+            var2 = var1.Text;
+            var1 = {'variant': 'text-md/semibold', 'color': 'mobile-text-heading-primary', 'lineClamp': 1};
+            var1['children'] = var9;
+            var1 = var3.bind(var5)(var2, var1);
+            _fun0001_ip = 4; continue _fun0001;
+case 2:
+            var4 = _closure1_slot20;
+            var3 = _closure1_slot6;
+            var2 = {};
+            var6 = var12.appRowLabelWithPromotedContainer;
+            var2['style'] = var6;
+            var8 = _closure1_slot19;
+            var16 = _closure1_slot0;
+            var17 = _closure1_slot3;
+            var10 = 16;
+            var6 = var17[var10];
+            var6 = var16.bind(var5)(var6);
+            var7 = var6.Text;
+            var6 = {'style': null, 'variant': 'text-md/semibold', 'color': 'mobile-text-heading-primary', 'lineClamp': 1};
+            var13 = var12.appRowLabelWithPromotedTextContainer;
+            var6['style'] = var13;
+            var6['children'] = var9;
+            var7 = var8.bind(var5)(var7, var6);
+            var6 = new Array(2);
+            var6[0] = var7;
+            var9 = _closure1_slot19;
+            var8 = _closure1_slot6;
+            var7 = {};
+            var12 = var12.promotedLabel;
+            var7['style'] = var12;
+            var12 = _closure1_slot19;
+            var10 = var17[var10];
+            var10 = var16.bind(var5)(var10);
+            var11 = var10.Text;
+            var10 = {'variant': 'text-xxs/semibold', 'color': 'text-muted'};
+            var13 = 17;
+            var14 = var17[var13];
+            var14 = var16.bind(var5)(var14);
+            var15 = var14.intl;
+            var14 = var15.string;
+            var13 = var17[var13];
+            var13 = var16.bind(var5)(var13);
+            var13 = var13.t;
+            var13 = var13["/eVltv"];
+            var13 = var14.bind(var15)(var13);
+            var10['children'] = var13;
+            var10 = var12.bind(var5)(var11, var10);
+            var7['children'] = var10;
+            var7 = var9.bind(var5)(var8, var7);
+            var6[1] = var7;
+            var2['children'] = var6;
+            var1 = var4.bind(var5)(var3, var2);
+case 4:
+            return var1;
+        }
+    };
+    var _closure1_slot26 = var1;
+    var2 = function BaseAppRow(arg1) {
+        _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+            var2 = arg1;
+            var11 = var2.application;
+            var _closure2_slot0 = var11;
+            var9 = var2.iconSource;
+            var5 = var2.onPress;
+            var7 = var2.isFirstRow;
+            var4 = undefined;
+            if(!(var7 === var4)) { _fun0002_ip = 5; continue _fun0002 }
+case 6:
+            var7 = false;
+case 5:
+            var6 = var2.isLastRow;
+            if(!(var6 === var4)) { _fun0002_ip = 7; continue _fun0002 }
+case 8:
+            var6 = false;
+case 7:
+            var12 = var2.showsPromoted;
+            if(!(var12 === var4)) { _fun0002_ip = 9; continue _fun0002 }
+case 10:
+            var12 = false;
+case 9:
+            var14 = null;
+            var10 = var14 != var9;
+            if(!var10) { _fun0002_ip = 11; continue _fun0002 }
+case 12:
+            var8 = _closure1_slot19;
+            var3 = _closure1_slot1;
+            var13 = _closure1_slot3;
+            var2 = 18;
+            var2 = var13[var2];
+            var3 = var3.bind(var4)(var2);
+            var2 = {};
+            var2['iconSource'] = var9;
+            var10 = var8.bind(var4)(var3, var2);
+case 11:
+            var3 = _closure1_slot0;
+            var2 = _closure1_slot3;
+            var16 = 19;
+            var2 = var2[var16];
+            var9 = var3.bind(var4)(var2);
+            var3 = var9.getSectionName;
+            var2 = var11;
+            if(!(var14 == var11)) { _fun0002_ip = 13; continue _fun0002 }
+case 14:
+            var15 = _closure1_slot0;
+            var13 = _closure1_slot3;
+            var13 = var13[var16];
+            var13 = var15.bind(var4)(var13);
+            var2 = var13.FAKE_BUILT_IN_APP;
+case 13:
+            var13 = var3.bind(var9)(var2);
+            if(var12) { _fun0002_ip = 15; continue _fun0002 }
+case 16:
+            var3 = _closure1_slot0;
+            var2 = _closure1_slot3;
+            var2 = var2[var16];
+            var9 = var3.bind(var4)(var2);
+            var3 = var9.isPromotedApplication;
+            var2 = var11;
+            if(!(var14 == var2)) { _fun0002_ip = 17; continue _fun0002 }
+case 18:
+            var15 = _closure1_slot0;
+            var14 = _closure1_slot3;
+            var14 = var14[var16];
+            var14 = var15.bind(var4)(var14);
+            var2 = var14.FAKE_BUILT_IN_APP;
+case 17:
+            var12 = var3.bind(var9)(var2);
+case 15:
+            var9 = _closure1_slot5;
+            var3 = var9.useMemo;
+            var2 = new Array(1);
+            var2[0] = var11;
+            var1 = function() {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var3 = _closure1_slot0;
+                    var1 = _closure1_slot3;
+                    var9 = 19;
+                    var1 = var1[var9];
+                    var7 = undefined;
+                    var5 = var3.bind(var7)(var1);
+                    var3 = var5.getSectionDescription;
+                    var1 = _closure2_slot0;
+                    var4 = null;
+                    if(!(var4 == var1)) { _fun0003_ip = 19; continue _fun0003 }
+case 20:
+                    var8 = _closure1_slot0;
+                    var1 = _closure1_slot3;
+                    var1 = var1[var9];
+                    var1 = var8.bind(var7)(var1);
+                    var1 = var1.FAKE_BUILT_IN_APP;
+                    _fun0003_ip = 21; continue _fun0003;
+case 19:
+                    var1 = _closure2_slot0;
+case 21:
+                    var5 = var3.bind(var5)(var1);
+                    var3 = var4 != var5;
+                    var1 = null;
+                    if(!var3) { _fun0003_ip = 22; continue _fun0003 }
+case 23:
+                    var3 = '';
+                    var1 = null;
+                    if(!(var3 !== var5)) { _fun0003_ip = 22; continue _fun0003 }
+case 24:
+                    var6 = _closure1_slot0;
+                    var8 = _closure1_slot3;
+                    var2 = 20;
+                    var2 = var8[var2];
+                    var4 = var6.bind(var7)(var2);
+                    var3 = var4.renderMessagePreviewMarkup;
+                    var2 = {};
+                    var2['content'] = var5;
+                    var5 = false;
+                    var2['muted'] = var5;
+                    var5 = 21;
+                    var5 = var8[var5];
+                    var5 = var6.bind(var7)(var5);
+                    var5 = var5.ChannelListLayoutTypes;
+                    var5 = var5.COMPACT;
+                    var2['layout'] = var5;
+                    var5 = 'text-muted';
+                    var2['color'] = var5;
+                    var1 = var3.bind(var4)(var2);
+case 22:
+                    return var1;
+                }
+            };
+            var9 = var3.bind(var9)(var1, var2);
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot0;
+            var11 = _closure1_slot3;
+            var1 = 22;
+            var1 = var11[var1];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.TableRow;
+            var1 = {};
+            var1['icon'] = var10;
+            var11 = _closure1_slot19;
+            var10 = _closure1_slot26;
+            var8 = {};
+            var8['renderedName'] = var13;
+            var8['showsPromoted'] = var12;
+            var8 = var11.bind(var4)(var10, var8);
+            var1['label'] = var8;
+            var8 = 1;
+            var1['labelLineClamp'] = var8;
+            var1['subLabel'] = var9;
+            var1['subLabelLineClamp'] = var8;
+            var1['start'] = var7;
+            var1['end'] = var6;
+            var6 = true;
+            var1['arrow'] = var6;
+            var1['onPress'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot27 = var2;
+    var1 = function AppRow(arg1) {
+        _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+            var1 = arg1;
+            var9 = var1.section;
+            var7 = var1.onPress;
+            var6 = var1.isFirstRow;
+            var4 = undefined;
+            if(!(var6 === var4)) { _fun0004_ip = 25; continue _fun0004 }
+case 26:
+            var6 = false;
+case 25:
+            var5 = var1.isLastRow;
+            if(!(var5 === var4)) { _fun0004_ip = 27; continue _fun0004 }
+case 28:
+            var5 = false;
+case 27:
+            var3 = _closure1_slot0;
+            var8 = _closure1_slot3;
+            var2 = 23;
+            var2 = var8[var2];
+            var8 = var3.bind(var4)(var2);
+            var3 = var8.getAppLauncherIconSource;
+            var2 = var9.application;
+            var8 = var3.bind(var8)(var2);
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot27;
+            var1 = {};
+            var9 = var9.application;
+            var1['application'] = var9;
+            var1['iconSource'] = var8;
+            var1['onPress'] = var7;
+            var1['isFirstRow'] = var6;
+            var1['isLastRow'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot28 = var1;
+    var1 = function ActivityRow(arg1) {
+        _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+            var1 = arg1;
+            var10 = var1.section;
+            var _closure2_slot0 = var10;
+            var13 = var1.onPress;
+            var _closure2_slot1 = var13;
+            var8 = var1.isFirstRow;
+            var4 = undefined;
+            if(!(var8 === var4)) { _fun0005_ip = 28; continue _fun0005 }
+case 29:
+            var8 = false;
+case 28:
+            var7 = var1.isLastRow;
+            if(!(var7 === var4)) { _fun0005_ip = 30; continue _fun0005 }
+case 31:
+            var7 = false;
+case 30:
+            var5 = _closure1_slot1;
+            var6 = _closure1_slot3;
+            var3 = 24;
+            var3 = var6[var3];
+            var11 = var5.bind(var4)(var3);
+            var9 = var11.getApplicationIconSource;
+            var5 = {};
+            var3 = var10.application;
+            var3 = var3.id;
+            var5['id'] = var3;
+            var3 = var10.application;
+            var3 = var3.icon;
+            var5['icon'] = var3;
+            var12 = var10.application;
+            var3 = null;
+            var14 = var3 == var12;
+            var6 = undefined;
+            if(var14) { _fun0005_ip = 32; continue _fun0005 }
+case 33:
+            var6 = var12.bot;
+case 32:
+            var5['bot'] = var6;
+            var6 = true;
+            var5['botIconFirst'] = var6;
+            var12 = var9.bind(var11)(var5);
+            var11 = var3 != var12;
+            if(!var11) { _fun0005_ip = 34; continue _fun0005 }
+case 35:
+            var9 = _closure1_slot19;
+            var5 = _closure1_slot1;
+            var14 = _closure1_slot3;
+            var3 = 18;
+            var3 = var14[var3];
+            var5 = var5.bind(var4)(var3);
+            var3 = {};
+            var3['iconSource'] = var12;
+            var11 = var9.bind(var4)(var5, var3);
+case 34:
+            var12 = _closure1_slot5;
+            var9 = var12.useMemo;
+            var5 = new Array(1);
+            var5[0] = var10;
+            var3 = function() {
+                _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+                    var1 = _closure2_slot0;
+                    var1 = var1.application;
+                    var5 = var1.description;
+                    var3 = null;
+                    var2 = var3 != var5;
+                    var1 = null;
+                    if(!var2) { _fun0006_ip = 36; continue _fun0006 }
+case 25:
+                    var2 = '';
+                    var1 = null;
+                    if(!(var2 !== var5)) { _fun0006_ip = 36; continue _fun0006 }
+case 28:
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot3;
+                    var2 = 20;
+                    var2 = var8[var2];
+                    var6 = undefined;
+                    var4 = var7.bind(var6)(var2);
+                    var3 = var4.renderMessagePreviewMarkup;
+                    var2 = {};
+                    var2['content'] = var5;
+                    var5 = false;
+                    var2['muted'] = var5;
+                    var5 = 21;
+                    var5 = var8[var5];
+                    var5 = var7.bind(var6)(var5);
+                    var5 = var5.ChannelListLayoutTypes;
+                    var5 = var5.COMPACT;
+                    var2['layout'] = var5;
+                    var5 = 'text-muted';
+                    var2['color'] = var5;
+                    var1 = var3.bind(var4)(var2);
+case 36:
+                    return var1;
+                }
+            };
+            var9 = var9.bind(var12)(var3, var5);
+            var12 = _closure1_slot5;
+            var5 = var12.useCallback;
+            var3 = new Array(2);
+            var3[0] = var10;
+            var3[1] = var13;
+            var2 = function() {
+                var3 = _closure2_slot1;
+                var2 = _closure2_slot0;
+                var1 = undefined;
+                var2 = var3.bind(var1)(var2);
+                return var1;
+            };
+            var5 = var5.bind(var12)(var2, var3);
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot0;
+            var12 = _closure1_slot3;
+            var1 = 22;
+            var1 = var12[var1];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.TableRow;
+            var1 = {};
+            var1['icon'] = var11;
+            var10 = var10.application;
+            var10 = var10.name;
+            var1['label'] = var10;
+            var1['subLabel'] = var9;
+            var9 = 1;
+            var1['subLabelLineClamp'] = var9;
+            var1['start'] = var8;
+            var1['end'] = var7;
+            var1['arrow'] = var6;
+            var1['onPress'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot29 = var1;
+    var1 = function ActivityItemTuple(arg1) {
+        _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+            var2 = arg1;
+            var20 = var2.context;
+            var19 = var2.sectionName;
+            var18 = var2.onPress;
+            var17 = var2.usesHandleActivityItemSelected;
+            var16 = var2.onActivityItemSelected;
+            var21 = var2.shelfItem1;
+            var15 = var2.shelfItem2;
+            var8 = var2.isLastTuple;
+            var14 = var2.entrypoint;
+            var6 = var2.containerWidth;
+            var _closure2_slot0 = var6;
+            var2 = _closure1_slot25;
+            var4 = undefined;
+            var11 = var2.bind(var4)();
+            var5 = _closure1_slot5;
+            var3 = var5.useMemo;
+            var2 = new Array(1);
+            var2[0] = var6;
+            var1 = function() {
+                _fun0008: for(var _fun0008_ip = 0; ; ) switch(_fun0008_ip) {
+case 0:
+                    var3 = _closure2_slot0;
+                    var2 = null;
+                    if(!(var2 != var3)) { _fun0008_ip = 37; continue _fun0008 }
+case 38:
+                    var6 = _closure1_slot1;
+                    var7 = _closure1_slot3;
+                    var3 = 25;
+                    var5 = var7[var3];
+                    var4 = undefined;
+                    var5 = var6.bind(var4)(var5);
+                    var8 = _closure2_slot0;
+                    var1 = 2;
+                    var8 = var8 / var1;
+                    var1 = _closure1_slot14;
+                    var8 = var8 - var1;
+                    var1 = 6;
+                    var1 = var8 - var1;
+                    var5 = var5.bind(var4)(var1);
+                    var1 = {};
+                    var1['width'] = var5;
+                    var3 = var7[var3];
+                    var3 = var6.bind(var4)(var3);
+                    var2 = _closure1_slot22;
+                    var2 = var5 / var2;
+                    var2 = var3.bind(var4)(var2);
+                    var1['height'] = var2;
+                    return var1;
+case 37:
+                    var1 = {};
+                    var2 = undefined;
+                    var1['width'] = var2;
+                    var1['height'] = var2;
+                    return var1;
+                }
+            };
+            var13 = var3.bind(var5)(var1, var2);
+            var3 = _closure1_slot20;
+            var2 = _closure1_slot6;
+            var1 = {};
+            var6 = var11.activityItemTupleContainer;
+            var5 = new Array(2);
+            var5[0] = var6;
+            var6 = {};
+            var7 = 12;
+            if(!var8) { _fun0007_ip = 39; continue _fun0007 }
+case 40:
+            var7 = undefined;
+case 39:
+            var6['marginBottom'] = var7;
+            var5[1] = var6;
+            var1['style'] = var5;
+            var7 = _closure1_slot19;
+            var6 = _closure1_slot6;
+            var5 = {};
+            var8 = var11.activityItemTupleShelfItemContainer;
+            var5['style'] = var8;
+            var12 = _closure1_slot19;
+            var9 = _closure1_slot31;
+            var8 = {};
+            var8['context'] = var20;
+            var8['sectionName'] = var19;
+            var8['onPress'] = var18;
+            var8['usesHandleActivityItemSelected'] = var17;
+            var8['onActivityItemSelected'] = var16;
+            var8['shelfItem'] = var21;
+            var8['entrypoint'] = var14;
+            var21 = var13.width;
+            var8['imageWidth'] = var21;
+            var21 = var13.height;
+            var8['imageHeight'] = var21;
+            var8 = var12.bind(var4)(var9, var8);
+            var5['children'] = var8;
+            var6 = var7.bind(var4)(var6, var5);
+            var5 = new Array(2);
+            var5[0] = var6;
+            var6 = null;
+            var6 = var6 != var15;
+            if(!var6) { _fun0007_ip = 41; continue _fun0007 }
+case 42:
+            var9 = _closure1_slot19;
+            var8 = _closure1_slot6;
+            var7 = {};
+            var11 = var11.activityItemTupleShelfItemContainer;
+            var7['style'] = var11;
+            var12 = _closure1_slot19;
+            var11 = _closure1_slot31;
+            var10 = {};
+            var10['context'] = var20;
+            var10['sectionName'] = var19;
+            var10['onPress'] = var18;
+            var10['usesHandleActivityItemSelected'] = var17;
+            var10['onActivityItemSelected'] = var16;
+            var10['shelfItem'] = var15;
+            var10['entrypoint'] = var14;
+            var14 = var13.width;
+            var10['imageWidth'] = var14;
+            var13 = var13.height;
+            var10['imageHeight'] = var13;
+            var10 = var12.bind(var4)(var11, var10);
+            var7['children'] = var10;
+            var6 = var9.bind(var4)(var8, var7);
+case 41:
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot30 = var1;
+    var1 = function ActivityItem(arg1) {
+        _fun0009: for(var _fun0009_ip = 0; ; ) switch(_fun0009_ip) {
+case 0:
+            var1 = arg1;
+            var26 = var1.context;
+            var _closure2_slot0 = var26;
+            var12 = var1.shelfItem;
+            var _closure2_slot1 = var12;
+            var25 = var1.sectionName;
+            var13 = var1.onPress;
+            var _closure2_slot2 = var13;
+            var2 = var1.usesHandleActivityItemSelected;
+            var4 = undefined;
+            if(!(var2 === var4)) { _fun0009_ip = 43; continue _fun0009 }
+case 7:
+            var2 = false;
+case 43:
+            var _closure2_slot3 = var2;
+            var22 = var1.onActivityItemSelected;
+            var21 = var1.entrypoint;
+            var18 = var1.imageWidth;
+            var15 = var1.imageHeight;
+            var _closure2_slot4 = var4;
+            var _closure2_slot5 = var4;
+            var1 = _closure1_slot25;
+            var11 = var1.bind(var4)();
+            var3 = _closure1_slot0;
+            var10 = _closure1_slot3;
+            var1 = 26;
+            var1 = var10[var1];
+            var3 = var3.bind(var4)(var1);
+            var1 = var3.useHeroMediaDimensions;
+            var17 = var1.bind(var3)();
+            var3 = _closure1_slot5;
+            var1 = var3.useState;
+            var19 = false;
+            var3 = var1.bind(var3)(var19);
+            var1 = _closure1_slot4;
+            var16 = 2;
+            var3 = var1.bind(var4)(var3, var16);
+            var6 = 0;
+            var1 = var3[var6];
+            var5 = 1;
+            var3 = var3[var5];
+            _closure2_slot4 = var3;
+            var8 = _closure1_slot1;
+            var3 = 27;
+            var3 = var10[var3];
+            var8 = var8.bind(var4)(var3);
+            var3 = {};
+            var10 = var12.application;
+            var10 = var10.id;
+            var3['applicationId'] = var10;
+            var14 = null;
+            var10 = var18;
+            if(!(var14 == var10)) { _fun0009_ip = 44; continue _fun0009 }
+case 45:
+            var10 = var17.width;
+case 44:
+            var3['size'] = var10;
+            var10 = ['embedded_cover'];
+            var3['names'] = var10;
+            var8 = var8.bind(var4)(var3);
+            var10 = _closure1_slot5;
+            var3 = var10.useId;
+            var20 = var3.bind(var10)();
+            var10 = _closure1_slot0;
+            var17 = _closure1_slot3;
+            var3 = 28;
+            var3 = var17[var3];
+            var23 = var10.bind(var4)(var3);
+            var17 = var23.useStateFromStoresArray;
+            var3 = _closure1_slot7;
+            var10 = new Array(1);
+            var10[0] = var3;
+            var3 = function() {
+                _fun0010: for(var _fun0010_ip = 0; ; ) switch(_fun0010_ip) {
+case 0:
+                    var3 = _closure1_slot7;
+                    var1 = var3.isLaunchingActivity;
+                    var3 = var1.bind(var3)();
+                    var1 = new Array(2);
+                    var1[0] = var3;
+                    var5 = _closure1_slot7;
+                    var4 = var5.getLaunchState;
+                    var2 = _closure2_slot1;
+                    var2 = var2.application;
+                    var3 = var2.id;
+                    var2 = _closure2_slot0;
+                    var8 = var2.type;
+                    var7 = 'channel';
+                    var2 = undefined;
+                    if(!(var7 === var8)) { _fun0010_ip = 46; continue _fun0010 }
+case 47:
+                    var6 = _closure2_slot0;
+                    var6 = var6.channel;
+                    var2 = var6.id;
+case 46:
+                    var2 = var4.bind(var5)(var3, var2);
+                    var1[1] = var2;
+                    return var1;
+                }
+            };
+            var10 = var17.bind(var23)(var10, var3);
+            var3 = _closure1_slot4;
+            var3 = var3.bind(var4)(var10, var16);
+            var6 = var3[var6];
+            var3 = var3[var5];
+            var17 = var14 != var3;
+            if(!var17) { _fun0009_ip = 48; continue _fun0009 }
+case 49:
+            var17 = var3.isLaunching;
+case 48:
+            if(!var17) { _fun0009_ip = 50; continue _fun0009 }
+case 51:
+            var3 = var3.componentId;
+            var17 = var3 === var20;
+case 50:
+            var23 = _closure1_slot0;
+            var24 = _closure1_slot3;
+            var3 = 19;
+            var3 = var24[var3];
+            var10 = var23.bind(var4)(var3);
+            var5 = var10.getShelfBadgeTypeIfActive;
+            var3 = var12.application;
+            var16 = var5.bind(var10)(var3);
+            var3 = 23;
+            var3 = var24[var3];
+            var10 = var23.bind(var4)(var3);
+            var5 = var10.useHandleActivityItemSelected;
+            var3 = {};
+            var27 = var12.application;
+            var27 = var27.id;
+            var3['applicationId'] = var27;
+            var3['context'] = var26;
+            var3['sectionName'] = var25;
+            var3['onActivityItemSelected'] = var22;
+            var22 = 29;
+            var22 = var24[var22];
+            var22 = var23.bind(var4)(var22);
+            var22 = var22.ApplicationCommandTriggerLocations;
+            var22 = var22.APP_LAUNCHER_HOME;
+            var3['location'] = var22;
+            var3['entrypoint'] = var21;
+            var3['launchingComponentId'] = var20;
+            var3['fetchesApplication'] = var19;
+            var3 = var5.bind(var10)(var3);
+            var19 = var3.handleActivityItemSelected;
+            _closure2_slot5 = var19;
+            var10 = _closure1_slot5;
+            var5 = var10.useCallback;
+            var3 = new Array(4);
+            var3[0] = var19;
+            var3[1] = var13;
+            var3[2] = var12;
+            var3[3] = var2;
+            var2 = function() {
+                _fun0011: for(var _fun0011_ip = 0; ; ) switch(_fun0011_ip) {
+case 0:
+                    var2 = _closure2_slot3;
+                    if(!var2) { _fun0011_ip = 52; continue _fun0011 }
+case 53:
+                    var3 = _closure2_slot5;
+                    var2 = undefined;
+                    var2 = var3.bind(var2)();
+case 52:
+                    var3 = _closure2_slot2;
+                    var2 = _closure2_slot1;
+                    var1 = undefined;
+                    var2 = var3.bind(var1)(var2);
+                    return var1;
+                }
+            };
+            var5 = var5.bind(var10)(var2, var3);
+            var3 = var8.state;
+            var2 = 'not-found';
+            var2 = var2 === var3;
+            if(var2) { _fun0009_ip = 54; continue _fun0009 }
+case 55:
+            var2 = var1;
+case 54:
+            var3 = var8.state;
+            var1 = 'loading';
+            var1 = var1 === var3;
+            if(var1) { _fun0009_ip = 56; continue _fun0009 }
+case 57:
+            var3 = var8.url;
+            var1 = var14 == var3;
+case 56:
+            if(var2) { _fun0009_ip = 58; continue _fun0009 }
+case 59:
+            var10 = null;
+            if(var1) { _fun0009_ip = 60; continue _fun0009 }
+case 61:
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot1;
+            var13 = _closure1_slot3;
+            var1 = 31;
+            var1 = var13[var1];
+            var2 = var2.bind(var4)(var1);
+            var1 = {};
+            var7 = function onError() {
+                var3 = _closure2_slot4;
+                var2 = undefined;
+                var1 = true;
+                var1 = var3.bind(var2)(var1);
+                return var1;
+            };
+            var1['onError'] = var7;
+            var7 = var11.activityItemImage;
+            var1['style'] = var7;
+            var7 = {};
+            var8 = var8.url;
+            var7['uri'] = var8;
+            var1['source'] = var7;
+            var7 = 'cover';
+            var1['resizeMode'] = var7;
+            var10 = var3.bind(var4)(var2, var1);
+case 60:
+            _fun0009_ip = 62; continue _fun0009;
+case 58:
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot1;
+            var7 = _closure1_slot3;
+            var1 = 30;
+            var1 = var7[var1];
+            var2 = var2.bind(var4)(var1);
+            var1 = {};
+            var10 = var3.bind(var4)(var2, var1);
+case 62:
+            var3 = _closure1_slot20;
+            var2 = _closure1_slot0;
+            var7 = _closure1_slot3;
+            var1 = 32;
+            var1 = var7[var1];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.PressableScale;
+            var1 = {};
+            var7 = var11.activityItemContainer;
+            var1['style'] = var7;
+            var1['disabled'] = var6;
+            var1['onPress'] = var5;
+            var7 = _closure1_slot20;
+            var6 = _closure1_slot6;
+            var5 = {};
+            var13 = var11.activityImageContainer;
+            var8 = new Array(2);
+            var8[0] = var13;
+            var13 = var14 != var18;
+            if(!var13) { _fun0009_ip = 63; continue _fun0009 }
+case 64:
+            var13 = var14 != var15;
+case 63:
+            if(!var13) { _fun0009_ip = 65; continue _fun0009 }
+case 66:
+            var14 = {};
+            var14['width'] = var18;
+            var14['height'] = var15;
+            var13 = var14;
+case 65:
+            var8[1] = var13;
+            var5['style'] = var8;
+            var8 = new Array(3);
+            var8[0] = var10;
+            var15 = _closure1_slot19;
+            var14 = _closure1_slot1;
+            var13 = _closure1_slot3;
+            var10 = 33;
+            var10 = var13[var10];
+            var14 = var14.bind(var4)(var10);
+            var10 = {};
+            var10['labelType'] = var16;
+            var10 = var15.bind(var4)(var14, var10);
+            var8[1] = var10;
+            var16 = _closure1_slot19;
+            var10 = _closure1_slot0;
+            var14 = 34;
+            var14 = var13[var14];
+            var14 = var10.bind(var4)(var14);
+            var15 = var14.SubmittingOverlay;
+            var14 = {};
+            var14['submitting'] = var17;
+            var17 = var11.submittingOverlay;
+            var14['style'] = var17;
+            var14 = var16.bind(var4)(var15, var14);
+            var8[2] = var14;
+            var5['children'] = var8;
+            var6 = var7.bind(var4)(var6, var5);
+            var5 = new Array(2);
+            var5[0] = var6;
+            var8 = _closure1_slot19;
+            var7 = _closure1_slot6;
+            var6 = {};
+            var11 = var11.activityDetailsContainer;
+            var6['style'] = var11;
+            var11 = _closure1_slot19;
+            var9 = 16;
+            var9 = var13[var9];
+            var9 = var10.bind(var4)(var9);
+            var10 = var9.Text;
+            var9 = {'variant': 'heading-sm/bold', 'color': 'mobile-text-heading-primary'};
+            var12 = var12.application;
+            var12 = var12.name;
+            var9['children'] = var12;
+            var9 = var11.bind(var4)(var10, var9);
+            var6['children'] = var9;
+            var6 = var8.bind(var4)(var7, var6);
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot31 = var1;
+    var1 = function RecommendationItemTuple(arg1) {
+        _fun0012: for(var _fun0012_ip = 0; ; ) switch(_fun0012_ip) {
+case 0:
+            var2 = arg1;
+            var18 = var2.context;
+            var17 = var2.sectionName;
+            var16 = var2.onPress;
+            var19 = var2.item1;
+            var15 = var2.item2;
+            var8 = var2.isLastTuple;
+            var14 = var2.entrypoint;
+            var6 = var2.containerWidth;
+            var _closure2_slot0 = var6;
+            var2 = _closure1_slot25;
+            var4 = undefined;
+            var11 = var2.bind(var4)();
+            var5 = _closure1_slot5;
+            var3 = var5.useMemo;
+            var2 = new Array(1);
+            var2[0] = var6;
+            var1 = function() {
+                _fun0013: for(var _fun0013_ip = 0; ; ) switch(_fun0013_ip) {
+case 0:
+                    var3 = _closure2_slot0;
+                    var2 = null;
+                    if(!(var2 != var3)) { _fun0013_ip = 37; continue _fun0013 }
+case 38:
+                    var6 = _closure1_slot1;
+                    var7 = _closure1_slot3;
+                    var3 = 25;
+                    var5 = var7[var3];
+                    var4 = undefined;
+                    var5 = var6.bind(var4)(var5);
+                    var8 = _closure2_slot0;
+                    var1 = 2;
+                    var8 = var8 / var1;
+                    var1 = _closure1_slot14;
+                    var8 = var8 - var1;
+                    var1 = 6;
+                    var1 = var8 - var1;
+                    var5 = var5.bind(var4)(var1);
+                    var1 = {};
+                    var1['width'] = var5;
+                    var3 = var7[var3];
+                    var3 = var6.bind(var4)(var3);
+                    var2 = _closure1_slot22;
+                    var2 = var5 / var2;
+                    var2 = var3.bind(var4)(var2);
+                    var1['height'] = var2;
+                    return var1;
+case 37:
+                    var1 = {};
+                    var2 = undefined;
+                    var1['width'] = var2;
+                    var1['height'] = var2;
+                    return var1;
+                }
+            };
+            var13 = var3.bind(var5)(var1, var2);
+            var3 = _closure1_slot20;
+            var2 = _closure1_slot6;
+            var1 = {};
+            var6 = var11.activityItemTupleContainer;
+            var5 = new Array(2);
+            var5[0] = var6;
+            var6 = {};
+            var7 = 12;
+            if(!var8) { _fun0012_ip = 67; continue _fun0012 }
+case 68:
+            var7 = undefined;
+case 67:
+            var6['marginBottom'] = var7;
+            var5[1] = var6;
+            var1['style'] = var5;
+            var7 = _closure1_slot19;
+            var6 = _closure1_slot6;
+            var5 = {};
+            var8 = var11.activityItemTupleShelfItemContainer;
+            var5['style'] = var8;
+            var12 = _closure1_slot19;
+            var9 = _closure1_slot33;
+            var8 = {};
+            var8['context'] = var18;
+            var8['sectionName'] = var17;
+            var8['onPress'] = var16;
+            var8['item'] = var19;
+            var8['entrypoint'] = var14;
+            var19 = var13.width;
+            var8['imageWidth'] = var19;
+            var19 = var13.height;
+            var8['imageHeight'] = var19;
+            var8 = var12.bind(var4)(var9, var8);
+            var5['children'] = var8;
+            var6 = var7.bind(var4)(var6, var5);
+            var5 = new Array(2);
+            var5[0] = var6;
+            var6 = null;
+            var6 = var6 != var15;
+            if(!var6) { _fun0012_ip = 69; continue _fun0012 }
+case 70:
+            var9 = _closure1_slot19;
+            var8 = _closure1_slot6;
+            var7 = {};
+            var11 = var11.activityItemTupleShelfItemContainer;
+            var7['style'] = var11;
+            var12 = _closure1_slot19;
+            var11 = _closure1_slot33;
+            var10 = {};
+            var10['context'] = var18;
+            var10['sectionName'] = var17;
+            var10['onPress'] = var16;
+            var10['item'] = var15;
+            var10['entrypoint'] = var14;
+            var14 = var13.width;
+            var10['imageWidth'] = var14;
+            var13 = var13.height;
+            var10['imageHeight'] = var13;
+            var10 = var12.bind(var4)(var11, var10);
+            var7['children'] = var10;
+            var6 = var9.bind(var4)(var8, var7);
+case 69:
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot32 = var1;
+    var1 = function RecommendationItem(arg1) {
+        _fun0014: for(var _fun0014_ip = 0; ; ) switch(_fun0014_ip) {
+case 0:
+            var1 = arg1;
+            var5 = var1.item;
+            var2 = var1.sectionName;
+            var _closure2_slot0 = var2;
+            var13 = var1.onPress;
+            var _closure2_slot1 = var13;
+            var17 = var1.imageWidth;
+            var16 = var1.imageHeight;
+            var3 = var1.context;
+            var1 = var1.entrypoint;
+            var1 = _closure1_slot25;
+            var4 = undefined;
+            var10 = var1.bind(var4)();
+            var7 = _closure1_slot0;
+            var8 = _closure1_slot3;
+            var1 = 26;
+            var1 = var8[var1];
+            var3 = var7.bind(var4)(var1);
+            var1 = var3.useHeroMediaDimensions;
+            var14 = var1.bind(var3)();
+            var11 = _closure1_slot5;
+            var3 = var11.useState;
+            var1 = false;
+            var11 = var3.bind(var11)(var1);
+            var3 = _closure1_slot4;
+            var1 = 2;
+            var11 = var3.bind(var4)(var11, var1);
+            var1 = 0;
+            var1 = var11[var1];
+            var3 = 1;
+            var3 = var11[var3];
+            var _closure2_slot2 = var3;
+            var12 = var5.application;
+            var _closure2_slot3 = var12;
+            var18 = 19;
+            var3 = var8[var18];
+            var7 = var7.bind(var4)(var3);
+            var3 = var7.isEmbeddedApp;
+            var11 = var3.bind(var7)(var12);
+            var7 = _closure1_slot1;
+            var3 = 27;
+            var3 = var8[var3];
+            var7 = var7.bind(var4)(var3);
+            var3 = {};
+            var8 = var12.id;
+            var3['applicationId'] = var8;
+            var15 = null;
+            var8 = var17;
+            if(!(var15 == var8)) { _fun0014_ip = 71; continue _fun0014 }
+case 72:
+            var8 = var14.width;
+case 71:
+            var3['size'] = var8;
+            var8 = ['embedded_cover'];
+            var3['names'] = var8;
+            var7 = var7.bind(var4)(var3);
+            var3 = var5.overrideImageUrl;
+            if(!(var15 != var3)) { _fun0014_ip = 73; continue _fun0014 }
+case 74:
+            var3 = {};
+            var8 = 'loaded';
+            var3['state'] = var8;
+            var5 = var5.overrideImageUrl;
+            var3['url'] = var5;
+            var7 = var3;
+case 73:
+            var8 = _closure1_slot5;
+            var5 = var8.useCallback;
+            var3 = new Array(3);
+            var3[0] = var13;
+            var3[1] = var12;
+            var3[2] = var2;
+            var2 = function() {
+                var4 = _closure2_slot1;
+                var3 = _closure2_slot3;
+                var2 = _closure2_slot0;
+                var1 = undefined;
+                var2 = var4.bind(var1)(var3, var2);
+                return var1;
+            };
+            var5 = var5.bind(var8)(var2, var3);
+            var3 = var7.state;
+            var2 = 'not-found';
+            var2 = var2 === var3;
+            if(var2) { _fun0014_ip = 75; continue _fun0014 }
+case 76:
+            var2 = var1;
+case 75:
+            var3 = var7.state;
+            var1 = 'loading';
+            var1 = var1 === var3;
+            if(var1) { _fun0014_ip = 77; continue _fun0014 }
+case 78:
+            var3 = var7.url;
+            var1 = var15 == var3;
+case 77:
+            if(var2) { _fun0014_ip = 79; continue _fun0014 }
+case 80:
+            var13 = null;
+            if(var1) { _fun0014_ip = 81; continue _fun0014 }
+case 82:
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot1;
+            var8 = _closure1_slot3;
+            var1 = 31;
+            var1 = var8[var1];
+            var2 = var2.bind(var4)(var1);
+            var1 = {};
+            var6 = function onError() {
+                var3 = _closure2_slot2;
+                var2 = undefined;
+                var1 = true;
+                var1 = var3.bind(var2)(var1);
+                return var1;
+            };
+            var1['onError'] = var6;
+            var6 = var10.activityItemImage;
+            var1['style'] = var6;
+            var6 = {};
+            var7 = var7.url;
+            var6['uri'] = var7;
+            var1['source'] = var6;
+            var6 = 'cover';
+            var1['resizeMode'] = var6;
+            var13 = var3.bind(var4)(var2, var1);
+case 81:
+            _fun0014_ip = 83; continue _fun0014;
+case 79:
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot1;
+            var6 = _closure1_slot3;
+            var1 = 30;
+            var1 = var6[var1];
+            var2 = var2.bind(var4)(var1);
+            var1 = {};
+            var13 = var3.bind(var4)(var2, var1);
+case 83:
+            var3 = _closure1_slot20;
+            var2 = _closure1_slot0;
+            var6 = _closure1_slot3;
+            var1 = 32;
+            var1 = var6[var1];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.PressableScale;
+            var1 = {};
+            var6 = var10.activityItemContainer;
+            var1['style'] = var6;
+            var1['onPress'] = var5;
+            var7 = _closure1_slot20;
+            var6 = _closure1_slot6;
+            var5 = {};
+            var14 = var10.activityImageContainer;
+            var8 = new Array(2);
+            var8[0] = var14;
+            var14 = var15 != var17;
+            if(!var14) { _fun0014_ip = 84; continue _fun0014 }
+case 85:
+            var14 = var15 != var16;
+case 84:
+            if(!var14) { _fun0014_ip = 86; continue _fun0014 }
+case 87:
+            var15 = {};
+            var15['width'] = var17;
+            var15['height'] = var16;
+            var14 = var15;
+case 86:
+            var8[1] = var14;
+            var5['style'] = var8;
+            var8 = new Array(2);
+            var8[0] = var13;
+            if(!var11) { _fun0014_ip = 88; continue _fun0014 }
+case 89:
+            var15 = _closure1_slot19;
+            var14 = _closure1_slot1;
+            var16 = _closure1_slot3;
+            var13 = 33;
+            var13 = var16[var13];
+            var14 = var14.bind(var4)(var13);
+            var13 = {};
+            var17 = _closure1_slot0;
+            var16 = var16[var18];
+            var17 = var17.bind(var4)(var16);
+            var16 = var17.getShelfBadgeTypeIfActive;
+            var16 = var16.bind(var17)(var12);
+            var13['labelType'] = var16;
+            var11 = var15.bind(var4)(var14, var13);
+case 88:
+            var8[1] = var11;
+            var5['children'] = var8;
+            var6 = var7.bind(var4)(var6, var5);
+            var5 = new Array(2);
+            var5[0] = var6;
+            var8 = _closure1_slot19;
+            var7 = _closure1_slot6;
+            var6 = {};
+            var10 = var10.activityDetailsContainer;
+            var6['style'] = var10;
+            var11 = _closure1_slot19;
+            var10 = _closure1_slot0;
+            var13 = _closure1_slot3;
+            var9 = 16;
+            var9 = var13[var9];
+            var9 = var10.bind(var4)(var9);
+            var10 = var9.Text;
+            var9 = {'variant': 'heading-sm/bold', 'color': 'mobile-text-heading-primary'};
+            var12 = var12.name;
+            var9['children'] = var12;
+            var9 = var11.bind(var4)(var10, var9);
+            var6['children'] = var9;
+            var6 = var8.bind(var4)(var7, var6);
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot33 = var1;
+    var1 = function Divider() {
+        var1 = _closure1_slot25;
+        var4 = undefined;
+        var5 = var1.bind(var4)();
+        var2 = _closure1_slot1;
+        var3 = _closure1_slot3;
+        var1 = 35;
+        var1 = var3[var1];
+        var1 = var2.bind(var4)(var1);
+        var1 = var1.bind(var4)();
+        var10 = var1.left;
+        var8 = var1.right;
+        var3 = _closure1_slot19;
+        var2 = _closure1_slot6;
+        var1 = {};
+        var6 = var5.divider;
+        var5 = new Array(2);
+        var5[0] = var6;
+        var6 = {};
+        var9 = _closure1_slot14;
+        var9 = -var9;
+        var9 = var9 - var10;
+        var6['marginLeft'] = var9;
+        var7 = _closure1_slot14;
+        var7 = -var7;
+        var7 = var7 - var8;
+        var6['marginRight'] = var7;
+        var5[1] = var6;
+        var1['style'] = var5;
+        var1 = var3.bind(var4)(var2, var1);
+        return var1;
+    };
+    var _closure1_slot34 = var1;
+    var1 = function RecommendationSectionHeader(arg1) {
+        _fun0015: for(var _fun0015_ip = 0; ; ) switch(_fun0015_ip) {
+case 0:
+            var1 = arg1;
+            var9 = var1.index;
+            var5 = var1.children;
+            var2 = _closure1_slot25;
+            var4 = undefined;
+            var6 = var2.bind(var4)();
+            var3 = _closure1_slot19;
+            var2 = _closure1_slot0;
+            var7 = _closure1_slot3;
+            var1 = 16;
+            var1 = var7[var1];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.Text;
+            var1 = {'accessibilityRole': 'header', 'variant': 'heading-lg/bold', 'color': 'mobile-text-heading-primary'};
+            var7 = var6.sectionHeader;
+            var6 = new Array(2);
+            var6[0] = var7;
+            var8 = 0;
+            var7 = null;
+            if(!(var8 !== var9)) { _fun0015_ip = 37; continue _fun0015 }
+case 90:
+            var8 = {};
+            var9 = 24;
+            var8['marginTop'] = var9;
+            var7 = var8;
+case 37:
+            var6[1] = var7;
+            var1['style'] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var _closure1_slot35 = var1;
+    var1 = function getRecommendationItemsWithViewAll(arg1, arg2, arg3) {
+        _fun0016: for(var _fun0016_ip = 0; ; ) switch(_fun0016_ip) {
+case 0:
+            var10 = arg1;
+            var6 = arg2;
+            var4 = arg3;
+            var9 = arguments[3];
+            var5 = arguments[4];
+            var _closure2_slot0 = var6;
+            var12 = undefined;
+            if(!(var9 === var12)) { _fun0016_ip = 91; continue _fun0016 }
+case 92:
+            var2 = _closure1_slot0;
+            var3 = _closure1_slot3;
+            var1 = 81;
+            var1 = var3[var1];
+            var1 = var2.bind(var12)(var1);
+            var9 = var1.COLLAPSED_LIST_ITEM_MAX;
+case 91:
+            if(!(var5 === var12)) { _fun0016_ip = 93; continue _fun0016 }
+case 94:
+            var5 = undefined;
+case 93:
+            var _closure2_slot1 = var5;
+            var _closure2_slot2 = var12;
+            var _closure2_slot3 = var12;
+            var _closure2_slot4 = var12;
+            var3 = var10.length;
+            var14 = 0;
+            if(!(var14 !== var3)) { _fun0016_ip = 95; continue _fun0016 }
+case 96:
+            var8 = global;
+            var2 = var8.Math;
+            var1 = var2.min;
+            var11 = var1.bind(var2)(var3, var9);
+            _closure2_slot2 = var11;
+            var2 = var11 < var3;
+            _closure2_slot3 = var2;
+            var1 = new Array(0);
+            _closure2_slot4 = var1;
+            var15 = {};
+            var17 = _closure1_slot0;
+            var16 = _closure1_slot3;
+            var13 = 44;
+            var16 = var16[var13];
+            var16 = var17.bind(var12)(var16);
+            var16 = var16.AppLauncherHomeListItemType;
+            var16 = var16.RECOMMENDATION_SECTION_HEADER;
+            var15['type'] = var16;
+            var15['section'] = var4;
+            var15['sectionName'] = var6;
+            var15['numItems'] = var3;
+            var15['numVisibleItems'] = var11;
+            var3 = var1.push;
+            var3 = var3.bind(var1)(var15);
+            var3 = var10.slice;
+            var14 = var3.bind(var10)(var14, var11);
+            var11 = var14.forEach;
+            var3 = function(arg1, arg2) {
+                _fun0017: for(var _fun0017_ip = 0; ; ) switch(_fun0017_ip) {
+case 0:
+                    var7 = arg1;
+                    var6 = arg2;
+                    var4 = _closure2_slot4;
+                    var3 = var4.push;
+                    var2 = {};
+                    var9 = _closure1_slot0;
+                    var8 = _closure1_slot3;
+                    var1 = 44;
+                    var8 = var8[var1];
+                    var1 = undefined;
+                    var8 = var9.bind(var1)(var8);
+                    var8 = var8.AppLauncherHomeListItemType;
+                    var8 = var8.RECOMMENDATION_APP;
+                    var2['type'] = var8;
+                    var8 = var7.application;
+                    var2['application'] = var8;
+                    var7 = var7.showsPromoted;
+                    var2['showsPromoted'] = var7;
+                    var7 = 0;
+                    var7 = var7 === var6;
+                    var2['isFirstRow'] = var7;
+                    var8 = _closure2_slot2;
+                    var7 = 1;
+                    var7 = var8 - var7;
+                    var7 = var6 === var7;
+                    if(!var7) { _fun0017_ip = 97; continue _fun0017 }
+case 98:
+                    var8 = _closure2_slot3;
+                    var7 = !var8;
+case 97:
+                    var2['isLastRow'] = var7;
+                    var7 = _closure2_slot0;
+                    var2['sectionName'] = var7;
+                    var2['sectionPosition'] = var6;
+                    var5 = _closure2_slot1;
+                    var2['sectionOverallPosition'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var3 = var11.bind(var14)(var3);
+            if(!var2) { _fun0016_ip = 99; continue _fun0016 }
+case 100:
+            var3 = var1.push;
+            var2 = {};
+            var11 = _closure1_slot0;
+            var9 = _closure1_slot3;
+            var9 = var9[var13];
+            var9 = var11.bind(var12)(var9);
+            var9 = var9.AppLauncherHomeListItemType;
+            var9 = var9.VIEW_ALL;
+            var2['type'] = var9;
+            var11 = var10.map;
+            var9 = function(arg1) {
+                var1 = arg1;
+                var1 = var1.application;
+                return var1;
+            };
+            var9 = var11.bind(var10)(var9);
+            var2['applications'] = var9;
+            var9 = var10.reduce;
+            var8 = var8.Set;
+            var11 = var8.prototype;
+            var11 = Object.create(var11, {constructor: {value: var8}});
+            var20 = var11;
+            var8 = new var20[var8](var19);
+            var8 = var8 instanceof Object ? var8 : var11;
+            var7 = function(arg1, arg2) {
+                _fun0018: for(var _fun0018_ip = 0; ; ) switch(_fun0018_ip) {
+case 0:
+                    var1 = arg1;
+                    var2 = arg2;
+                    var3 = var2.showsPromoted;
+                    if(!var3) { _fun0018_ip = 101; continue _fun0018 }
+case 102:
+                    var3 = var1.add;
+                    var2 = var2.application;
+                    var2 = var2.id;
+                    var2 = var3.bind(var1)(var2);
+case 101:
+                    return var1;
+                }
+            };
+            var7 = var9.bind(var10)(var7, var8);
+            var2['promotedApplicationIds'] = var7;
+            var2['sectionName'] = var6;
+            var2['sectionOverallPosition'] = var5;
+            var2['title'] = var4;
+            var2 = var3.bind(var1)(var2);
+case 99:
+            return var1;
+case 95:
+            var1 = new Array(0);
+            return var1;
+        }
+    };
+    var _closure1_slot36 = var1;
+    var1 = global;
+    var10 = var1.Object;
+    var9 = var10.defineProperty;
+    var5 = {};
+    var1 = true;
+    var5['value'] = var1;
+    var1 = '__esModule';
+    var1 = var9.bind(var10)(var3, var1, var5);
+    var1 = 0;
+    var5 = var7[var1];
+    var1 = undefined;
+    var5 = var12.bind(var1)(var5);
+    var _closure1_slot4 = var5;
+    var14 = 1;
+    var5 = var7[var14];
+    var5 = var8.bind(var1)(var5);
+    var _closure1_slot5 = var5;
+    var5 = 2;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var13 = var5.StyleSheet;
+    var5 = var5.View;
+    var _closure1_slot6 = var5;
+    var5 = 3;
+    var5 = var7[var5];
+    var5 = var12.bind(var1)(var5);
+    var _closure1_slot7 = var5;
+    var5 = 4;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var8 = var5.useContextIndexState;
+    var _closure1_slot8 = var8;
+    var5 = var5.useUserIndexState;
+    var _closure1_slot9 = var5;
+    var5 = 5;
+    var5 = var7[var5];
+    var5 = var12.bind(var1)(var5);
+    var _closure1_slot10 = var5;
+    var5 = 6;
+    var5 = var7[var5];
+    var5 = var12.bind(var1)(var5);
+    var _closure1_slot11 = var5;
+    var5 = 7;
+    var5 = var7[var5];
+    var5 = var12.bind(var1)(var5);
+    var _closure1_slot12 = var5;
+    var5 = 8;
+    var5 = var7[var5];
+    var5 = var12.bind(var1)(var5);
+    var _closure1_slot13 = var5;
+    var5 = 9;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var16 = var5.DEFAULT_CONTENT_PADDING;
+    var _closure1_slot14 = var16;
+    var5 = var5.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
+    var _closure1_slot15 = var5;
+    var5 = 10;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var8 = var5.AnalyticEvents;
+    var _closure1_slot16 = var8;
+    var5 = var5.Permissions;
+    var _closure1_slot17 = var5;
+    var5 = 11;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var5 = var5.ContentDismissActionType;
+    var _closure1_slot18 = var5;
+    var5 = 12;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var8 = var5.jsx;
+    var _closure1_slot19 = var8;
+    var8 = var5.jsxs;
+    var _closure1_slot20 = var8;
+    var5 = var5.Fragment;
+    var _closure1_slot21 = var5;
+    var11 = 13;
+    var5 = var7[var11];
+    var5 = var12.bind(var1)(var5);
+    var5 = var5.space;
+    var15 = var5.PX_4;
+    var5 = 1.7777777777777777;
+    var _closure1_slot22 = var5;
+    var5 = new Array(0);
+    var _closure1_slot23 = var5;
+    var5 = 14;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var5 = var5.ApplicationCollectionSurface;
+    var5 = var5.APP_LAUNCHER_IN_TEXT;
+    var _closure1_slot24 = var5;
+    var5 = 15;
+    var5 = var7[var5];
+    var9 = var6.bind(var1)(var5);
+    var8 = var9.createStyles;
+    var5 = {};
+    var10 = {};
+    var17 = var7[var11];
+    var17 = var12.bind(var1)(var17);
+    var17 = var17.colors;
+    var17 = var17.MOBILE_KEYBOARD_PANEL_BACKGROUND;
+    var10['backgroundColor'] = var17;
+    var10['flex'] = var14;
+    var5['container'] = var10;
+    var10 = {'backgroundColor': null, 'position': 'absolute', 'top': 4294967280, 'left': 0, 'right': 0, 'height': 16};
+    var17 = var7[var11];
+    var17 = var12.bind(var1)(var17);
+    var17 = var17.colors;
+    var17 = var17.MOBILE_KEYBOARD_PANEL_BACKGROUND;
+    var10['backgroundColor'] = var17;
+    var5['topBackgroundFill'] = var10;
+    var10 = {'marginBottom': 8, 'marginTop': 8};
+    var5['sectionHeader'] = var10;
+    var10 = {};
+    var10['paddingHorizontal'] = var16;
+    var17 = var7[var11];
+    var17 = var12.bind(var1)(var17);
+    var17 = var17.colors;
+    var17 = var17.MOBILE_KEYBOARD_PANEL_BACKGROUND;
+    var10['backgroundColor'] = var17;
+    var5['list'] = var10;
+    var10 = {};
+    var10['paddingHorizontal'] = var16;
+    var10['paddingBottom'] = var16;
+    var5['searchBarContainer'] = var10;
+    var10 = {};
+    var16 = var7[var11];
+    var16 = var12.bind(var1)(var16);
+    var16 = var16.colors;
+    var16 = var16.BORDER_STRONG;
+    var10['borderColor'] = var16;
+    var10['borderTopWidth'] = var14;
+    var16 = var7[var11];
+    var16 = var12.bind(var1)(var16);
+    var16 = var16.space;
+    var16 = var16.PX_24;
+    var10['marginTop'] = var16;
+    var5['divider'] = var10;
+    var10 = {'overflow': 'hidden', 'flexDirection': 'row', 'alignItems': 'center'};
+    var10['gap'] = var15;
+    var5['appRowLabelWithPromotedContainer'] = var10;
+    var10 = {};
+    var10['flexShrink'] = var14;
+    var5['appRowLabelWithPromotedTextContainer'] = var10;
+    var10 = {'alignSelf': 'center', 'justifyContent': 'center', 'paddingVertical': 2};
+    var14 = var7[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.space;
+    var14 = var14.PX_4;
+    var10['paddingHorizontal'] = var14;
+    var14 = var7[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.colors;
+    var14 = var14.INTERACTIVE_BACKGROUND_ACTIVE;
+    var10['backgroundColor'] = var14;
+    var14 = var7[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.radii;
+    var14 = var14.lg;
+    var10['borderRadius'] = var14;
+    var5['promotedLabel'] = var10;
+    var10 = {'borderRadius': null, 'overflow': 'hidden', 'height': '100%', 'backgroundColor': null, 'borderWidth': 1};
+    var14 = var7[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.radii;
+    var14 = var14.md;
+    var10['borderRadius'] = var14;
+    var14 = var7[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.colors;
+    var14 = var14.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT;
+    var10['backgroundColor'] = var14;
+    var14 = var7[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.colors;
+    var14 = var14.BORDER_SUBTLE;
+    var10['borderColor'] = var14;
+    var5['activityItemContainer'] = var10;
+    var10 = {'justifyContent': 'center', 'alignItems': 'center', 'height': 120};
+    var14 = var7[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.colors;
+    var14 = var14.BACKGROUND_BASE_LOWEST;
+    var10['backgroundColor'] = var14;
+    var13 = var13.hairlineWidth;
+    var10['borderBottomWidth'] = var13;
+    var13 = var7[var11];
+    var13 = var12.bind(var1)(var13);
+    var13 = var13.colors;
+    var13 = var13.BORDER_SUBTLE;
+    var10['borderBottomColor'] = var13;
+    var5['activityImageContainer'] = var10;
+    var10 = {'padding': null, 'flexGrow': 1, 'flexShrink': 1};
+    var11 = var7[var11];
+    var11 = var12.bind(var1)(var11);
+    var11 = var11.space;
+    var11 = var11.PX_12;
+    var10['padding'] = var11;
+    var5['activityDetailsContainer'] = var10;
+    var10 = {'flexDirection': 'row', 'gap': 12};
+    var5['activityItemTupleContainer'] = var10;
+    var10 = {'width': '50%', 'flexShrink': 1};
+    var5['activityItemTupleShelfItemContainer'] = var10;
+    var10 = {'height': '100%', 'width': '100%'};
+    var5['activityItemImage'] = var10;
+    var10 = {'position': 'absolute', 'top': 0, 'left': 0, 'height': '100%', 'width': '100%'};
+    var5['submittingOverlay'] = var10;
+    var5 = var8.bind(var9)(var5);
+    var _closure1_slot25 = var5;
+    var5 = 86;
+    var5 = var7[var5];
+    var7 = var6.bind(var1)(var5);
+    var6 = var7.fileFinishedImporting;
+    var5 = 'modules/app_launcher/native/screens/home/AppLauncherHomeScreen.tsx';
+    var5 = var6.bind(var7)(var5);
+    var4 = function AppLauncherHomeScreen(arg1) {
+        _fun0019: for(var _fun0019_ip = 0; ; ) switch(_fun0019_ip) {
+case 0:
+            var2 = arg1;
+            var1 = var2.route;
+            var1 = var1.params;
+            var18 = var1.context;
+            var _closure2_slot0 = var18;
+            var1 = var1.initialSearchQuery;
+            var _closure2_slot1 = var1;
+            var21 = var2.navigation;
+            var _closure2_slot2 = var21;
+            var4 = undefined;
+            var _closure2_slot29 = var4;
+            var _closure2_slot30 = var4;
+            var _closure2_slot31 = var4;
+            var _closure2_slot32 = var4;
+            var _closure2_slot33 = var4;
+            var _closure2_slot34 = var4;
+            var _closure2_slot35 = var4;
+            var _closure2_slot36 = var4;
+            var11 = _closure1_slot0;
+            var13 = _closure1_slot3;
+            var2 = 36;
+            var2 = var13[var2];
+            var3 = var11.bind(var4)(var2);
+            var2 = var3.useViewableAppLauncherHomeItems;
+            var2 = var2.bind(var3)();
+            var6 = var2.hasViewedActivityItem;
+            var3 = var2.hasViewedLearnMoreItem;
+            var15 = var2.handleViewableItemsChanged;
+            var _closure2_slot3 = var15;
+            var9 = _closure1_slot1;
+            var2 = 37;
+            var5 = var13[var2];
+            var5 = var9.bind(var4)(var5);
+            var17 = var5.bind(var4)(var6);
+            var2 = var13[var2];
+            var2 = var9.bind(var4)(var2);
+            var23 = var2.bind(var4)(var3);
+            var _closure2_slot4 = var23;
+            var2 = _closure1_slot25;
+            var40 = var2.bind(var4)();
+            var _closure2_slot5 = var40;
+            var2 = 38;
+            var2 = var13[var2];
+            var2 = var9.bind(var4)(var2);
+            var10 = var2.bind(var4)();
+            var _closure2_slot6 = var10;
+            var2 = 35;
+            var2 = var13[var2];
+            var2 = var9.bind(var4)(var2);
+            var2 = var2.bind(var4)();
+            var2 = var2.bottom;
+            var3 = 39;
+            var3 = var13[var3];
+            var5 = var11.bind(var4)(var3);
+            var3 = var5.useRequiredAppLauncherContext;
+            var6 = var3.bind(var5)();
+            var16 = var6.chatInputRef;
+            var _closure2_slot7 = var16;
+            var5 = var6.keyboardCloseReasonRef;
+            var _closure2_slot8 = var5;
+            var3 = var6.width;
+            var _closure2_slot9 = var3;
+            var8 = var6.entrypoint;
+            var _closure2_slot10 = var8;
+            var20 = var6.onActivityItemSelected;
+            var _closure2_slot11 = var20;
+            var6 = 40;
+            var6 = var13[var6];
+            var6 = var9.bind(var4)(var6);
+            var12 = var6.bind(var4)();
+            var9 = var12.width;
+            var6 = var12.height;
+            var22 = var9 > var6;
+            var _closure2_slot12 = var22;
+            var19 = _closure1_slot5;
+            var14 = var19.useEffect;
+            var9 = new Array(1);
+            var9[0] = var8;
+            var6 = function() {
+                _fun0020: for(var _fun0020_ip = 0; ; ) switch(_fun0020_ip) {
+case 0:
+                    var4 = _closure2_slot10;
+                    var5 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var1 = 41;
+                    var3 = var3[var1];
+                    var1 = undefined;
+                    var3 = var5.bind(var1)(var3);
+                    var3 = var3.AppLauncherEntrypoint;
+                    var3 = var3.VOICE;
+                    if(!(var4 === var3)) { _fun0020_ip = 103; continue _fun0020 }
+case 31:
+                    var3 = _closure1_slot2;
+                    var4 = _closure1_slot3;
+                    var2 = 42;
+                    var2 = var4[var2];
+                    var3 = var3.bind(var1)(var2);
+                    var2 = var3.dismissNewActivityIndicator;
+                    var2 = var2.bind(var3)();
+case 103:
+                    return var1;
+                }
+            };
+            var6 = var14.bind(var19)(var6, var9);
+            var14 = _closure1_slot5;
+            var9 = var14.useCallback;
+            var6 = new Array(2);
+            var6[0] = var16;
+            var6[1] = var5;
+            var5 = function() {
+                _fun0021: for(var _fun0021_ip = 0; ; ) switch(_fun0021_ip) {
+case 0:
+                    var4 = _closure2_slot8;
+                    var5 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var1 = 39;
+                    var3 = var3[var1];
+                    var1 = undefined;
+                    var3 = var5.bind(var1)(var3);
+                    var3 = var3.AppLauncherKeyboardCloseReason;
+                    var3 = var3.COMMAND;
+                    var4['current'] = var3;
+                    var2 = _closure2_slot7;
+                    var3 = var2.current;
+                    var2 = null;
+                    if(!(var2 != var3)) { _fun0021_ip = 104; continue _fun0021 }
+case 105:
+                    var2 = var3.closeCustomKeyboard;
+                    var2 = var2.bind(var3)();
+case 104:
+                    return var1;
+                }
+            };
+            var16 = var9.bind(var14)(var5, var6);
+            var14 = _closure1_slot5;
+            var9 = var14.useCallback;
+            var6 = new Array(3);
+            var6[0] = var18;
+            var6[1] = var8;
+            var6[2] = var21;
+            var5 = function(arg1, arg2) {
+                _fun0022: for(var _fun0022_ip = 0; ; ) switch(_fun0022_ip) {
+case 0:
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot3;
+                    var1 = 23;
+                    var2 = var8[var1];
+                    var1 = undefined;
+                    var4 = var7.bind(var1)(var2);
+                    var3 = var4.handleApplicationSelected;
+                    var2 = {};
+                    var5 = 29;
+                    var5 = var8[var5];
+                    var5 = var7.bind(var1)(var5);
+                    var5 = var5.ApplicationCommandTriggerLocations;
+                    var5 = var5.APP_LAUNCHER_HOME;
+                    var2['location'] = var5;
+                    var5 = arg1;
+                    var5 = var5.application;
+                    var7 = null;
+                    if(!(var7 == var5)) { _fun0022_ip = 106; continue _fun0022 }
+case 104:
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot3;
+                    var6 = 19;
+                    var6 = var8[var6];
+                    var6 = var7.bind(var1)(var6);
+                    var5 = var6.FAKE_BUILT_IN_APP;
+case 106:
+                    var2['application'] = var5;
+                    var6 = _closure2_slot2;
+                    var2['navigation'] = var6;
+                    var6 = _closure2_slot0;
+                    var2['context'] = var6;
+                    var6 = arg2;
+                    var2['sectionName'] = var6;
+                    var5 = _closure2_slot10;
+                    var2['entrypoint'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var14 = var9.bind(var14)(var5, var6);
+            var _closure2_slot13 = var14;
+            var19 = _closure1_slot5;
+            var9 = var19.useCallback;
+            var6 = new Array(3);
+            var6[0] = var18;
+            var6[1] = var8;
+            var6[2] = var21;
+            var5 = function(arg1) {
+                _fun0023: for(var _fun0023_ip = 0; ; ) switch(_fun0023_ip) {
+case 0:
+                    var1 = arg1;
+                    var5 = var1.shelfData;
+                    var7 = var1.sectionName;
+                    var6 = var1.navigates;
+                    var1 = undefined;
+                    if(!(var6 === var1)) { _fun0023_ip = 107; continue _fun0023 }
+case 92:
+                    var6 = true;
+case 107:
+                    var9 = _closure1_slot0;
+                    var10 = _closure1_slot3;
+                    var2 = 23;
+                    var2 = var10[var2];
+                    var4 = var9.bind(var1)(var2);
+                    var3 = var4.handleApplicationSelected;
+                    var2 = {};
+                    var8 = 29;
+                    var8 = var10[var8];
+                    var8 = var9.bind(var1)(var8);
+                    var8 = var8.ApplicationCommandTriggerLocations;
+                    var8 = var8.APP_LAUNCHER_HOME;
+                    var2['location'] = var8;
+                    var5 = var5.application;
+                    var2['application'] = var5;
+                    var8 = _closure2_slot2;
+                    var2['navigation'] = var8;
+                    var8 = _closure2_slot0;
+                    var2['context'] = var8;
+                    var2['sectionName'] = var7;
+                    var2['navigates'] = var6;
+                    var5 = _closure2_slot10;
+                    var2['entrypoint'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var19 = var9.bind(var19)(var5, var6);
+            var _closure2_slot14 = var19;
+            var6 = {};
+            var6['context'] = var18;
+            var6['entrypoint'] = var8;
+            var5 = function useHomeData(arg1) {
+                _fun0024: for(var _fun0024_ip = 0; ; ) switch(_fun0024_ip) {
+case 0:
+                    var2 = arg1;
+                    var18 = var2.context;
+                    var _closure3_slot0 = var18;
+                    var16 = var2.entrypoint;
+                    var _closure3_slot1 = var16;
+                    var20 = undefined;
+                    var _closure3_slot2 = var20;
+                    var _closure3_slot3 = var20;
+                    var _closure3_slot4 = var20;
+                    var _closure3_slot5 = var20;
+                    var _closure3_slot6 = var20;
+                    var _closure3_slot7 = var20;
+                    var _closure3_slot8 = var20;
+                    var _closure3_slot9 = var20;
+                    var _closure3_slot10 = var20;
+                    var _closure3_slot11 = var20;
+                    var _closure3_slot12 = var20;
+                    var _closure3_slot13 = var20;
+                    var _closure3_slot14 = var20;
+                    var _closure3_slot15 = var20;
+                    var _closure3_slot16 = var20;
+                    var3 = _closure1_slot0;
+                    var4 = _closure1_slot3;
+                    var2 = 73;
+                    var2 = var4[var2];
+                    var3 = var3.bind(var20)(var2);
+                    var2 = var3.useFetchDeveloperActivityShelfItems;
+                    var2 = var2.bind(var3)();
+                    var3 = _closure1_slot1;
+                    var2 = 74;
+                    var2 = var4[var2];
+                    var3 = var3.bind(var20)(var2);
+                    var2 = {};
+                    var5 = var18.type;
+                    var21 = 'channel';
+                    var4 = undefined;
+                    if(!(var21 === var5)) { _fun0024_ip = 108; continue _fun0024 }
+case 109:
+                    var5 = var18.channel;
+                    var4 = var5.guild_id;
+case 108:
+                    var2['guildId'] = var4;
+                    var13 = var3.bind(var20)(var2);
+                    _closure3_slot2 = var13;
+                    var4 = _closure1_slot0;
+                    var6 = _closure1_slot3;
+                    var2 = 41;
+                    var3 = var6[var2];
+                    var3 = var4.bind(var20)(var3);
+                    var3 = var3.AppLauncherEntrypoint;
+                    var3 = var3.VOICE;
+                    var15 = var16 === var3;
+                    _closure3_slot3 = var15;
+                    var5 = _closure1_slot1;
+                    var3 = 75;
+                    var3 = var6[var3];
+                    var7 = var5.bind(var20)(var3);
+                    var3 = {};
+                    var3['context'] = var18;
+                    var3['onlyActivityApps'] = var15;
+                    var7 = var7.bind(var20)(var3);
+                    var10 = var7.frecencyCommands;
+                    var3 = var7.frecentApps;
+                    _closure3_slot4 = var3;
+                    var8 = var7.sectionDescriptors;
+                    var7 = var7.loading;
+                    var2 = var6[var2];
+                    var2 = var4.bind(var20)(var2);
+                    var2 = var2.AppLauncherEntrypoint;
+                    var2 = var2.TEXT;
+                    var17 = var16 === var2;
+                    _closure3_slot5 = var17;
+                    var2 = 76;
+                    var2 = var6[var2];
+                    var5 = var5.bind(var20)(var2);
+                    var2 = {};
+                    var2['context'] = var18;
+                    var2 = var5.bind(var20)(var2);
+                    var2 = var2.appsInThisServer;
+                    _closure3_slot6 = var2;
+                    var12 = _closure1_slot5;
+                    var9 = var12.useMemo;
+                    var5 = new Array(2);
+                    var5[0] = var2;
+                    var5[1] = var17;
+                    var2 = function() {
+                        _fun0025: for(var _fun0025_ip = 0; ; ) switch(_fun0025_ip) {
+case 0:
+                            var2 = _closure3_slot5;
+                            if(var2) { _fun0025_ip = 110; continue _fun0025 }
+case 53:
+                            var8 = _closure1_slot23;
+                            _fun0025_ip = 111; continue _fun0025;
+case 110:
+                            var8 = _closure3_slot6;
+case 111:
+                            var2 = _closure1_slot0;
+                            var7 = _closure1_slot3;
+                            var3 = 17;
+                            var4 = var7[var3];
+                            var6 = undefined;
+                            var4 = var2.bind(var6)(var4);
+                            var5 = var4.intl;
+                            var4 = var5.string;
+                            var3 = var7[var3];
+                            var3 = var2.bind(var6)(var3);
+                            var3 = var3.t;
+                            var3 = var3.oJyzCu;
+                            var10 = var4.bind(var5)(var3);
+                            var4 = _closure1_slot36;
+                            var3 = var8.map;
+                            var1 = function(arg1) {
+                                var1 = {};
+                                var2 = arg1;
+                                var2 = var2.application;
+                                var1['application'] = var2;
+                                return var1;
+                            };
+                            var3 = var3.bind(var8)(var1);
+                            var1 = 67;
+                            var1 = var7[var1];
+                            var1 = var2.bind(var6)(var1);
+                            var9 = var1.IN_THIS_SERVER_ITEM_MAX;
+                            var11 = 'in_this_server';
+                            var13 = undefined;
+                            var12 = var3;
+                            var1 = var13[var4](var12, var11, var10, var9, var8);
+                            return var1;
+                        }
+                    };
+                    var2 = var9.bind(var12)(var2, var5);
+                    var14 = _closure1_slot5;
+                    var12 = var14.useMemo;
+                    var9 = new Array(1);
+                    var9[0] = var3;
+                    var5 = function() {
+                        var3 = _closure3_slot4;
+                        var2 = var3.map;
+                        var1 = function(arg1, arg2) {
+                            var2 = arg1;
+                            var3 = arg2;
+                            var1 = {};
+                            var6 = _closure1_slot0;
+                            var5 = _closure1_slot3;
+                            var4 = 44;
+                            var5 = var5[var4];
+                            var4 = undefined;
+                            var4 = var6.bind(var4)(var5);
+                            var4 = var4.AppLauncherHomeListItemType;
+                            var4 = var4.APP;
+                            var1['type'] = var4;
+                            var4 = var2.id;
+                            var1['applicationId'] = var4;
+                            var1['section'] = var2;
+                            var2 = 0;
+                            var2 = var2 === var3;
+                            var1['isFirstRow'] = var2;
+                            var2 = _closure3_slot4;
+                            var4 = var2.length;
+                            var2 = 1;
+                            var2 = var4 - var2;
+                            var2 = var3 === var2;
+                            var1['isLastRow'] = var2;
+                            var2 = 'recents';
+                            var1['sectionName'] = var2;
+                            return var1;
+                        };
+                        var1 = var2.bind(var3)(var1);
+                        return var1;
+                    };
+                    var9 = var12.bind(var14)(var5, var9);
+                    var14 = _closure1_slot5;
+                    var12 = var14.useMemo;
+                    var5 = new Array(2);
+                    var5[0] = var17;
+                    var5[1] = var3;
+                    var3 = function() {
+                        _fun0026: for(var _fun0026_ip = 0; ; ) switch(_fun0026_ip) {
+case 0:
+                            var3 = _closure3_slot5;
+                            var1 = !var3;
+                            if(!var3) { _fun0026_ip = 27; continue _fun0026 }
+case 38:
+                            var4 = _closure3_slot4;
+                            var3 = var4.some;
+                            var2 = function(arg1) {
+                                var1 = arg1;
+                                var2 = var1.application;
+                                var1 = null;
+                                var1 = var1 != var2;
+                                return var1;
+                            };
+                            var2 = var3.bind(var4)(var2);
+                            var1 = !var2;
+case 27:
+                            return var1;
+                        }
+                    };
+                    var5 = var12.bind(var14)(var3, var5);
+                    var3 = 77;
+                    var3 = var6[var3];
+                    var6 = var4.bind(var20)(var3);
+                    var4 = var6.useIsActivitiesInTextEnabled;
+                    var12 = var18.type;
+                    var3 = undefined;
+                    if(!(var21 === var12)) { _fun0024_ip = 83; continue _fun0024 }
+case 112:
+                    var12 = var18.channel;
+                    var3 = var12.id;
+case 83:
+                    var3 = var4.bind(var6)(var3);
+                    _closure3_slot7 = var3;
+                    var12 = _closure1_slot5;
+                    var6 = var12.useEffect;
+                    var4 = new Array(3);
+                    var4[0] = var3;
+                    var4[1] = var18;
+                    var4[2] = var16;
+                    var3 = function() {
+                        _fun0027: for(var _fun0027_ip = 0; ; ) switch(_fun0027_ip) {
+case 0:
+                            var1 = _closure3_slot7;
+                            if(var1) { _fun0027_ip = 113; continue _fun0027 }
+case 53:
+                            var3 = _closure3_slot1;
+                            var6 = _closure1_slot0;
+                            var4 = _closure1_slot3;
+                            var2 = 41;
+                            var4 = var4[var2];
+                            var2 = undefined;
+                            var2 = var6.bind(var2)(var4);
+                            var2 = var2.AppLauncherEntrypoint;
+                            var2 = var2.VOICE;
+                            var1 = var3 === var2;
+case 113:
+                            if(!var1) { _fun0027_ip = 114; continue _fun0027 }
+case 115:
+                            var2 = _closure1_slot0;
+                            var3 = _closure1_slot3;
+                            var1 = 42;
+                            var1 = var3[var1];
+                            var4 = undefined;
+                            var3 = var2.bind(var4)(var1);
+                            var2 = var3.fetchShelf;
+                            var1 = {};
+                            var6 = _closure3_slot0;
+                            var7 = var6.type;
+                            var6 = 'channel';
+                            if(!(var6 === var7)) { _fun0027_ip = 116; continue _fun0027 }
+case 117:
+                            var5 = _closure3_slot0;
+                            var5 = var5.channel;
+                            var4 = var5.guild_id;
+case 116:
+                            var1['guildId'] = var4;
+                            var4 = true;
+                            var1['force'] = var4;
+                            var1 = var2.bind(var3)(var1);
+case 114:
+                            var1 = undefined;
+                            return var1;
+                        }
+                    };
+                    var3 = var6.bind(var12)(var3, var4);
+                    var3 = function useAppCollectionsActiveState() {
+                        _fun0028: for(var _fun0028_ip = 0; ; ) switch(_fun0028_ip) {
+case 0:
+                            var3 = _closure1_slot0;
+                            var6 = _closure1_slot3;
+                            var2 = 28;
+                            var2 = var6[var2];
+                            var5 = undefined;
+                            var7 = var3.bind(var5)(var2);
+                            var4 = var7.useStateFromStores;
+                            var2 = _closure1_slot10;
+                            var3 = new Array(1);
+                            var3[0] = var2;
+                            var2 = function() {
+                                var3 = _closure1_slot10;
+                                var2 = var3.get;
+                                var1 = 'only_show_preview_app_collections';
+                                var1 = var2.bind(var3)(var1);
+                                return var1;
+                            };
+                            var3 = var4.bind(var7)(var3, var2);
+                            var4 = _closure1_slot1;
+                            var2 = 71;
+                            var2 = var6[var2];
+                            var6 = var4.bind(var5)(var2);
+                            var4 = var6.getConfig;
+                            var2 = {};
+                            var7 = 'App Launcher Home (Mobile)';
+                            var2['location'] = var7;
+                            var2 = var4.bind(var6)(var2);
+                            var2 = var2.enabled;
+                            var4 = _closure1_slot0;
+                            var6 = _closure1_slot3;
+                            var1 = 72;
+                            var1 = var6[var1];
+                            var1 = var4.bind(var5)(var1);
+                            var1 = var1.ApplicationCollectionActiveState;
+                            if(var3) { _fun0028_ip = 118; continue _fun0028 }
+case 68:
+                            if(var2) { _fun0028_ip = 119; continue _fun0028 }
+case 120:
+                            var2 = var1.ACTIVE;
+                            return var2;
+case 119:
+                            var2 = var1.NON_STAFF_PREVIEW;
+                            return var2;
+case 118:
+                            var1 = var1.PREVIEW;
+                            return var1;
+                        }
+                    };
+                    var3 = var3.bind(var20)();
+                    _closure3_slot8 = var3;
+                    var6 = _closure1_slot0;
+                    var4 = _closure1_slot3;
+                    var22 = 28;
+                    var4 = var4[var22];
+                    var14 = var6.bind(var20)(var4);
+                    var12 = var14.useStateFromStores;
+                    var4 = _closure1_slot11;
+                    var6 = new Array(1);
+                    var6[0] = var4;
+                    var4 = function() {
+                        var3 = _closure1_slot11;
+                        var2 = var3.getCollections;
+                        var1 = {};
+                        var4 = _closure1_slot24;
+                        var1['surface'] = var4;
+                        var4 = _closure3_slot8;
+                        var1['activeState'] = var4;
+                        var1 = var2.bind(var3)(var1);
+                        return var1;
+                    };
+                    var4 = var12.bind(var14)(var6, var4);
+                    _closure3_slot9 = var4;
+                    var14 = _closure1_slot5;
+                    var12 = var14.useMemo;
+                    var6 = new Array(2);
+                    var6[0] = var4;
+                    var6[1] = var15;
+                    var4 = function() {
+                        _fun0029: for(var _fun0029_ip = 0; ; ) switch(_fun0029_ip) {
+case 0:
+                            var1 = _closure3_slot3;
+                            if(var1) { _fun0029_ip = 121; continue _fun0029 }
+case 53:
+                            var1 = _closure3_slot9;
+                            _fun0029_ip = 91; continue _fun0029;
+case 121:
+                            var5 = _closure1_slot0;
+                            var4 = _closure1_slot3;
+                            var3 = 19;
+                            var4 = var4[var3];
+                            var3 = undefined;
+                            var4 = var5.bind(var3)(var4);
+                            var3 = var4.ensureRecommendationSectionsOnlyContainActivities;
+                            var2 = _closure3_slot9;
+                            var1 = var3.bind(var4)(var2);
+case 91:
+                            return var1;
+                        }
+                    };
+                    var12 = var12.bind(var14)(var4, var6);
+                    _closure3_slot10 = var12;
+                    var14 = _closure1_slot5;
+                    var6 = var14.useEffect;
+                    var4 = new Array(2);
+                    var4[0] = var3;
+                    var4[1] = var16;
+                    var3 = function() {
+                        _fun0030: for(var _fun0030_ip = 0; ; ) switch(_fun0030_ip) {
+case 0:
+                            var3 = _closure1_slot0;
+                            var2 = _closure1_slot3;
+                            var1 = 19;
+                            var2 = var2[var1];
+                            var1 = undefined;
+                            var4 = var3.bind(var1)(var2);
+                            var3 = var4.appLauncherShowsRecommendations;
+                            var2 = _closure3_slot1;
+                            var2 = var3.bind(var4)(var2);
+                            if(!var2) { _fun0030_ip = 24; continue _fun0030 }
+case 122:
+                            var3 = _closure1_slot0;
+                            var4 = _closure1_slot3;
+                            var2 = 78;
+                            var2 = var4[var2];
+                            var4 = var3.bind(var1)(var2);
+                            var3 = var4.fetchCollections;
+                            var2 = {};
+                            var6 = _closure1_slot24;
+                            var2['surface'] = var6;
+                            var5 = _closure3_slot8;
+                            var2['activeState'] = var5;
+                            var2 = var3.bind(var4)(var2);
+case 24:
+                            return var1;
+                        }
+                    };
+                    var3 = var6.bind(var14)(var3, var4);
+                    var6 = var13.length;
+                    var17 = _closure1_slot5;
+                    var14 = var17.useMemo;
+                    var4 = new Array(2);
+                    var4[0] = var16;
+                    var4[1] = var13;
+                    var3 = function() {
+                        _fun0031: for(var _fun0031_ip = 0; ; ) switch(_fun0031_ip) {
+case 0:
+                            var6 = function getTupleItem(arg1) {
+                                var1 = arg1;
+                                var5 = var1.shelfItem1;
+                                var4 = var1.shelfItem2;
+                                var3 = var1.shelfItem1SectionPosition;
+                                var2 = var1.shelfItem2SectionPosition;
+                                var1 = {};
+                                var8 = _closure1_slot0;
+                                var7 = _closure1_slot3;
+                                var6 = 44;
+                                var7 = var7[var6];
+                                var6 = undefined;
+                                var6 = var8.bind(var6)(var7);
+                                var6 = var6.AppLauncherHomeListItemType;
+                                var6 = var6.SHELF_ITEM_TUPLE;
+                                var1['type'] = var6;
+                                var1['shelfItem1'] = var5;
+                                var1['shelfItem2'] = var4;
+                                var4 = 'activities';
+                                var1['sectionName'] = var4;
+                                var1['shelfItem1SectionPosition'] = var3;
+                                var1['shelfItem2SectionPosition'] = var2;
+                                var2 = 0;
+                                var1['sectionOverallPosition'] = var2;
+                                var2 = false;
+                                var1['isLastTuple'] = var2;
+                                return var1;
+                            };
+                            var2 = _closure3_slot2;
+                            var2 = var2.length;
+                            var8 = 0;
+                            if(!(var8 !== var2)) { _fun0031_ip = 81; continue _fun0031 }
+case 123:
+                            var3 = _closure3_slot1;
+                            var4 = _closure1_slot0;
+                            var7 = _closure1_slot3;
+                            var2 = 41;
+                            var2 = var7[var2];
+                            var9 = undefined;
+                            var2 = var4.bind(var9)(var2);
+                            var2 = var2.AppLauncherEntrypoint;
+                            var2 = var2.VOICE;
+                            if(!(var3 === var2)) { _fun0031_ip = 81; continue _fun0031 }
+case 103:
+                            var3 = new Array(0);
+                            var2 = _closure3_slot2;
+                            var4 = var2.length;
+                            var2 = 1;
+                            var4 = var4 - var2;
+                            var7 = 2;
+                            var8 = 0;
+                            if(!(var8 < var4)) { _fun0031_ip = 124; continue _fun0031 }
+case 125:
+                            var10 = var8 + var2;
+                            var4 = {};
+                            var11 = _closure3_slot2;
+                            var11 = var11[var8];
+                            var4['shelfItem1'] = var11;
+                            var11 = _closure3_slot2;
+                            var11 = var11[var10];
+                            var4['shelfItem2'] = var11;
+                            var4['shelfItem1SectionPosition'] = var8;
+                            var4['shelfItem2SectionPosition'] = var10;
+                            var10 = var6.bind(var9)(var4);
+                            var4 = var3.push;
+                            var4 = var4.bind(var3)(var10);
+                            var8 = var8 + var7;
+                            var4 = _closure3_slot2;
+                            var4 = var4.length;
+                            var4 = var4 - var2;
+                            if(var8 < var4) { _fun0031_ip = 125; continue _fun0031 }
+case 124:
+                            var4 = _closure3_slot2;
+                            var4 = var4.length;
+                            var4 = var4 % var7;
+                            if(!(var4 === var2)) { _fun0031_ip = 126; continue _fun0031 }
+case 127:
+                            var4 = {};
+                            var8 = _closure3_slot2;
+                            var7 = var8.length;
+                            var7 = var7 - var2;
+                            var7 = var8[var7];
+                            var4['shelfItem1'] = var7;
+                            var4['shelfItem2'] = var9;
+                            var7 = _closure3_slot2;
+                            var7 = var7.length;
+                            var7 = var7 - var2;
+                            var4['shelfItem1SectionPosition'] = var7;
+                            var4['shelfItem2SectionPosition'] = var9;
+                            var6 = var6.bind(var9)(var4);
+                            var4 = var3.push;
+                            var4 = var4.bind(var3)(var6);
+case 126:
+                            var4 = var3.length;
+                            var4 = var4 - var2;
+                            var6 = var3[var4];
+                            var4 = true;
+                            var6['isLastTuple'] = var4;
+                            var4 = {};
+                            var8 = _closure1_slot0;
+                            var10 = _closure1_slot3;
+                            var5 = 44;
+                            var5 = var10[var5];
+                            var5 = var8.bind(var9)(var5);
+                            var5 = var5.AppLauncherHomeListItemType;
+                            var5 = var5.SECTION_HEADER;
+                            var4['type'] = var5;
+                            var5 = 17;
+                            var6 = var10[var5];
+                            var6 = var8.bind(var9)(var6);
+                            var7 = var6.intl;
+                            var6 = var7.string;
+                            var5 = var10[var5];
+                            var5 = var8.bind(var9)(var5);
+                            var5 = var5.t;
+                            var5 = var5.aeuOoh;
+                            var5 = var6.bind(var7)(var5);
+                            var4['section'] = var5;
+                            var5 = 'activities';
+                            var4['sectionName'] = var5;
+                            var5 = _closure3_slot2;
+                            var5 = var5.length;
+                            var4['numItems'] = var5;
+                            var1 = _closure3_slot2;
+                            var1 = var1.length;
+                            var4['numVisibleItems'] = var1;
+                            var1 = new Array(1);
+                            var1[0] = var4;
+                            var14 = var1;
+                            var13 = var3;
+                            var12 = var2;
+                            var2 = arraySpread(var14, var13, var12);
+                            return var1;
+case 81:
+                            var1 = new Array(0);
+                            return var1;
+                        }
+                    };
+                    var14 = var14.bind(var17)(var3, var4);
+                    _closure3_slot11 = var14;
+                    var3 = _closure1_slot8;
+                    var19 = true;
+                    var17 = false;
+                    var4 = var3.bind(var20)(var18, var19, var17);
+                    _closure3_slot12 = var4;
+                    var3 = _closure1_slot9;
+                    var3 = var3.bind(var20)(var19, var17);
+                    _closure3_slot13 = var3;
+                    var23 = _closure1_slot5;
+                    var19 = var23.useMemo;
+                    var4 = var4.result;
+                    var17 = null;
+                    var25 = var17 == var4;
+                    var24 = undefined;
+                    if(var25) { _fun0024_ip = 128; continue _fun0024 }
+case 129:
+                    var24 = var4.sections;
+case 128:
+                    var4 = new Array(2);
+                    var4[0] = var24;
+                    var24 = var3.result;
+                    var25 = var17 == var24;
+                    var3 = undefined;
+                    if(var25) { _fun0024_ip = 130; continue _fun0024 }
+case 131:
+                    var3 = var24.sections;
+case 130:
+                    var4[1] = var3;
+                    var3 = function() {
+                        _fun0032: for(var _fun0032_ip = 0; ; ) switch(_fun0032_ip) {
+case 0:
+                            var4 = function hasCommands(arg1) {
+                                var1 = global;
+                                var3 = var1.Object;
+                                var2 = var3.values;
+                                var1 = arg1;
+                                var3 = var2.bind(var3)(var1);
+                                var2 = var3.some;
+                                var1 = function(arg1) {
+                                    var1 = global;
+                                    var3 = var1.Object;
+                                    var2 = var3.keys;
+                                    var1 = arg1;
+                                    var1 = var1.commands;
+                                    var1 = var2.bind(var3)(var1);
+                                    var2 = var1.length;
+                                    var1 = 0;
+                                    var1 = var2 > var1;
+                                    return var1;
+                                };
+                                var1 = var2.bind(var3)(var1);
+                                return var1;
+                            };
+                            var1 = _closure3_slot12;
+                            var6 = var1.result;
+                            var5 = null;
+                            var7 = var5 == var6;
+                            var3 = undefined;
+                            var1 = undefined;
+                            if(var7) { _fun0032_ip = 132; continue _fun0032 }
+case 101:
+                            var1 = var6.sections;
+case 132:
+                            if(!(var5 == var1)) { _fun0032_ip = 133; continue _fun0032 }
+case 134:
+                            var1 = {};
+case 133:
+                            var2 = _closure3_slot13;
+                            var6 = var2.result;
+                            var7 = var5 == var6;
+                            var2 = undefined;
+                            if(var7) { _fun0032_ip = 12; continue _fun0032 }
+case 135:
+                            var2 = var6.sections;
+case 12:
+                            if(!(var5 == var2)) { _fun0032_ip = 103; continue _fun0032 }
+case 136:
+                            var2 = {};
+case 103:
+                            var1 = var4.bind(var3)(var1);
+                            if(var1) { _fun0032_ip = 90; continue _fun0032 }
+case 137:
+                            var1 = var4.bind(var3)(var2);
+case 90:
+                            return var1;
+                        }
+                    };
+                    var4 = var19.bind(var23)(var3, var4);
+                    var19 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var22];
+                    var22 = var19.bind(var20)(var3);
+                    var20 = var22.useStateFromStores;
+                    var3 = _closure1_slot12;
+                    var19 = new Array(1);
+                    var19[0] = var3;
+                    var3 = function() {
+                        _fun0033: for(var _fun0033_ip = 0; ; ) switch(_fun0033_ip) {
+case 0:
+                            var1 = _closure3_slot0;
+                            var2 = var1.type;
+                            var1 = 'channel';
+                            var1 = var1 === var2;
+                            if(!var1) { _fun0033_ip = 117; continue _fun0033 }
+case 111:
+                            var2 = _closure3_slot0;
+                            var4 = var2.channel;
+                            var2 = var4.isDM;
+                            var2 = var2.bind(var4)();
+                            if(var2) { _fun0033_ip = 138; continue _fun0033 }
+case 134:
+                            var4 = _closure3_slot0;
+                            var5 = var4.channel;
+                            var4 = var5.isMultiUserDM;
+                            var2 = var4.bind(var5)();
+case 138:
+                            if(var2) { _fun0033_ip = 139; continue _fun0033 }
+case 140:
+                            var6 = _closure1_slot12;
+                            var5 = var6.can;
+                            var4 = _closure1_slot17;
+                            var4 = var4.USE_APPLICATION_COMMANDS;
+                            var3 = _closure3_slot0;
+                            var3 = var3.channel;
+                            var2 = var5.bind(var6)(var4, var3);
+case 139:
+                            var1 = var2;
+case 117:
+                            return var1;
+                        }
+                    };
+                    var3 = var20.bind(var22)(var19, var3);
+                    var20 = var18.type;
+                    var19 = null;
+                    if(!(var21 === var20)) { _fun0024_ip = 141; continue _fun0024 }
+case 142:
+                    var19 = var18.channel;
+case 141:
+                    var18 = var4;
+                    if(!var18) { _fun0024_ip = 143; continue _fun0024 }
+case 144:
+                    var18 = var5;
+case 143:
+                    if(var18) { _fun0024_ip = 145; continue _fun0024 }
+case 146:
+                    var18 = !var3;
+case 145:
+                    var4 = var5;
+                    if(!var5) { _fun0024_ip = 147; continue _fun0024 }
+case 148:
+                    var4 = !var18;
+case 147:
+                    if(!var4) { _fun0024_ip = 149; continue _fun0024 }
+case 150:
+                    var3 = var17 != var19;
+                    if(!var3) { _fun0024_ip = 151; continue _fun0024 }
+case 152:
+                    var20 = var19.isPrivate;
+                    var3 = var20.bind(var19)();
+case 151:
+                    var4 = !var3;
+case 149:
+                    if(!var4) { _fun0024_ip = 153; continue _fun0024 }
+case 154:
+                    var4 = !var15;
+case 153:
+                    var3 = var5;
+                    if(!var3) { _fun0024_ip = 155; continue _fun0024 }
+case 156:
+                    var3 = var18;
+case 155:
+                    if(!var3) { _fun0024_ip = 157; continue _fun0024 }
+case 158:
+                    var17 = var17 != var19;
+                    if(!var17) { _fun0024_ip = 159; continue _fun0024 }
+case 160:
+                    var18 = var19.isPrivate;
+                    var17 = var18.bind(var19)();
+case 159:
+                    var3 = !var17;
+case 157:
+                    if(!var3) { _fun0024_ip = 161; continue _fun0024 }
+case 162:
+                    var3 = !var15;
+case 161:
+                    _closure3_slot14 = var3;
+                    var18 = _closure1_slot5;
+                    var17 = var18.useMemo;
+                    var15 = new Array(3);
+                    var15[0] = var12;
+                    var15[1] = var13;
+                    var15[2] = var3;
+                    var13 = function() {
+                        _fun0034: for(var _fun0034_ip = 0; ; ) switch(_fun0034_ip) {
+case 0:
+                            var4 = _closure3_slot14;
+                            var1 = new Array(0);
+                            if(var4) { _fun0034_ip = 163; continue _fun0034 }
+case 121:
+                            var _closure4_slot0 = var1;
+                            var4 = global;
+                            var4 = var4.Set;
+                            var5 = var4.prototype;
+                            var5 = Object.create(var5, {constructor: {value: var4}});
+                            var8 = var5;
+                            var4 = new var8[var4](var7);
+                            var4 = var4 instanceof Object ? var4 : var5;
+                            var _closure4_slot1 = var4;
+                            var6 = _closure3_slot10;
+                            var5 = var6.forEach;
+                            var4 = function(arg1) {
+                                var1 = arg1;
+                                var3 = var1.application_directory_collection_items;
+                                var2 = var3.forEach;
+                                var1 = function(arg1) {
+                                    _fun0035: for(var _fun0035_ip = 0; ; ) switch(_fun0035_ip) {
+case 0:
+                                        var2 = arg1;
+                                        var4 = var2.type;
+                                        var5 = _closure1_slot0;
+                                        var3 = _closure1_slot3;
+                                        var1 = 79;
+                                        var3 = var3[var1];
+                                        var1 = undefined;
+                                        var3 = var5.bind(var1)(var3);
+                                        var3 = var3.ApplicationDirectoryCollectionItemType;
+                                        var3 = var3.APPLICATION;
+                                        if(!(var4 === var3)) { _fun0035_ip = 136; continue _fun0035 }
+case 8:
+                                        var4 = _closure4_slot1;
+                                        var3 = var4.add;
+                                        var2 = var2.application;
+                                        var2 = var2.id;
+                                        var2 = var3.bind(var4)(var2);
+case 136:
+                                        return var1;
+                                    }
+                                };
+                                var1 = var2.bind(var3)(var1);
+                                var1 = undefined;
+                                return var1;
+                            };
+                            var4 = var5.bind(var6)(var4);
+                            var4 = _closure3_slot2;
+                            var3 = var4.forEach;
+                            var2 = function(arg1) {
+                                _fun0036: for(var _fun0036_ip = 0; ; ) switch(_fun0036_ip) {
+case 0:
+                                    var3 = arg1;
+                                    var5 = _closure4_slot1;
+                                    var4 = var5.has;
+                                    var2 = var3.application;
+                                    var2 = var2.id;
+                                    var2 = var4.bind(var5)(var2);
+                                    if(var2) { _fun0036_ip = 133; continue _fun0036 }
+case 164:
+                                    var2 = _closure4_slot0;
+                                    var1 = var2.push;
+                                    var1 = var1.bind(var2)(var3);
+case 133:
+                                    var1 = undefined;
+                                    return var1;
+                                }
+                            };
+                            var2 = var3.bind(var4)(var2);
+                            return var1;
+case 163:
+                            return var1;
+                        }
+                    };
+                    var18 = var17.bind(var18)(var13, var15);
+                    _closure3_slot15 = var18;
+                    var17 = _closure1_slot5;
+                    var15 = var17.useMemo;
+                    var13 = new Array(3);
+                    var13[0] = var18;
+                    var13[1] = var12;
+                    var13[2] = var3;
+                    var12 = function() {
+                        _fun0037: for(var _fun0037_ip = 0; ; ) switch(_fun0037_ip) {
+case 0:
+                            var1 = new Array(0);
+                            var _closure4_slot0 = var1;
+                            var4 = _closure3_slot14;
+                            if(var4) { _fun0037_ip = 165; continue _fun0037 }
+case 52:
+                            var4 = _closure3_slot10;
+                            var3 = var4.forEach;
+                            var2 = function(arg1, arg2) {
+                                _fun0038: for(var _fun0038_ip = 0; ; ) switch(_fun0038_ip) {
+case 0:
+                                    var20 = arg1;
+                                    var19 = arg2;
+                                    var4 = var20.type;
+                                    var18 = var20.application_directory_collection_items;
+                                    var5 = _closure1_slot0;
+                                    var1 = _closure1_slot3;
+                                    var6 = 80;
+                                    var3 = var1[var6];
+                                    var1 = undefined;
+                                    var3 = var5.bind(var1)(var3);
+                                    var3 = var3.ApplicationDirectoryCollectionType;
+                                    var3 = var3.BANNER_CARDS;
+                                    if(!(var4 !== var3)) { _fun0038_ip = 166; continue _fun0038 }
+case 9:
+                                    var5 = _closure1_slot0;
+                                    var3 = _closure1_slot3;
+                                    var3 = var3[var6];
+                                    var3 = var5.bind(var1)(var3);
+                                    var3 = var3.ApplicationDirectoryCollectionType;
+                                    var3 = var3.EXPANDABLE_LIST;
+                                    if(!(var4 === var3)) { _fun0038_ip = 167; continue _fun0038 }
+case 168:
+                                    var5 = var20.application_directory_collection_items;
+                                    var4 = var5.map;
+                                    var3 = function(arg1) {
+                                        _fun0039: for(var _fun0039_ip = 0; ; ) switch(_fun0039_ip) {
+case 0:
+                                            var2 = arg1;
+                                            var4 = var2.type;
+                                            var5 = _closure1_slot0;
+                                            var6 = _closure1_slot3;
+                                            var1 = 79;
+                                            var1 = var6[var1];
+                                            var7 = undefined;
+                                            var1 = var5.bind(var7)(var1);
+                                            var1 = var1.ApplicationDirectoryCollectionItemType;
+                                            var1 = var1.APPLICATION;
+                                            if(!(var4 !== var1)) { _fun0039_ip = 7; continue _fun0039 }
+case 8:
+                                            return var7;
+case 7:
+                                            var1 = {};
+                                            var4 = var2.application;
+                                            var1['application'] = var4;
+                                            var6 = _closure1_slot0;
+                                            var8 = _closure1_slot3;
+                                            var3 = 83;
+                                            var3 = var8[var3];
+                                            var5 = var6.bind(var7)(var3);
+                                            var4 = var5.hasFlag;
+                                            var3 = var2.flags;
+                                            var2 = 84;
+                                            var2 = var8[var2];
+                                            var2 = var6.bind(var7)(var2);
+                                            var2 = var2.ApplicationCollectionItemFlags;
+                                            var2 = var2.PROMOTED;
+                                            var2 = var4.bind(var5)(var3, var2);
+                                            var1['showsPromoted'] = var2;
+                                            return var1;
+                                        }
+                                    };
+                                    var5 = var4.bind(var5)(var3);
+                                    var4 = var5.filter;
+                                    var8 = _closure1_slot0;
+                                    var9 = _closure1_slot3;
+                                    var3 = 66;
+                                    var3 = var9[var3];
+                                    var3 = var8.bind(var1)(var3);
+                                    var3 = var3.isNotNullish;
+                                    var5 = var4.bind(var5)(var3);
+                                    var _closure5_slot0 = var5;
+                                    var3 = 83;
+                                    var3 = var9[var3];
+                                    var7 = var8.bind(var1)(var3);
+                                    var6 = var7.hasFlag;
+                                    var4 = var20.flags;
+                                    var3 = 85;
+                                    var3 = var9[var3];
+                                    var3 = var8.bind(var1)(var3);
+                                    var3 = var3.ApplicationCollectionFlags;
+                                    var3 = var3.APPENDS_REMAINING_ACTIVITIES;
+                                    var3 = var6.bind(var7)(var4, var3);
+                                    if(!var3) { _fun0038_ip = 169; continue _fun0038 }
+case 170:
+                                    var4 = _closure3_slot15;
+                                    var3 = var4.forEach;
+                                    var2 = function(arg1) {
+                                        var3 = _closure5_slot0;
+                                        var2 = var3.push;
+                                        var1 = {};
+                                        var4 = arg1;
+                                        var4 = var4.application;
+                                        var1['application'] = var4;
+                                        var4 = false;
+                                        var1['showsPromoted'] = var4;
+                                        var1 = var2.bind(var3)(var1);
+                                        var1 = undefined;
+                                        return var1;
+                                    };
+                                    var2 = var3.bind(var4)(var2);
+case 169:
+                                    var4 = _closure1_slot36;
+                                    var36 = var20.title;
+                                    var35 = var20.title;
+                                    var38 = undefined;
+                                    var37 = var5;
+                                    var34 = undefined;
+                                    var33 = var19;
+                                    var36 = var38[var4](var37, var36, var35, var34, var33, var32);
+                                    var4 = _closure4_slot0;
+                                    var3 = var4.push;
+                                    var2 = new Array(0);
+                                    var35 = 0;
+                                    var37 = var2;
+                                    var5 = arraySpread(var37, var36, var35);
+                                    var37 = var3;
+                                    var36 = var2;
+                                    var35 = var4;
+                                    var2 = apply(var37, var36, var35);
+                                    _fun0038_ip = 167; continue _fun0038;
+case 166:
+                                    var3 = var18.length;
+                                    var2 = global;
+                                    var7 = var2.Math;
+                                    var4 = var7.min;
+                                    var6 = _closure1_slot0;
+                                    var5 = _closure1_slot3;
+                                    var2 = 81;
+                                    var2 = var5[var2];
+                                    var2 = var6.bind(var1)(var2);
+                                    var2 = var2.COLLAPSED_LIST_ITEM_MAX;
+                                    var2 = var4.bind(var7)(var3, var2);
+                                    var4 = {};
+                                    var16 = 44;
+                                    var5 = var5[var16];
+                                    var5 = var6.bind(var1)(var5);
+                                    var5 = var5.AppLauncherHomeListItemType;
+                                    var5 = var5.RECOMMENDATION_SECTION_HEADER;
+                                    var4['type'] = var5;
+                                    var5 = var20.title;
+                                    var4['section'] = var5;
+                                    var5 = var20.title;
+                                    var4['sectionName'] = var5;
+                                    var4['numItems'] = var3;
+                                    var4['numVisibleItems'] = var2;
+                                    var3 = _closure4_slot0;
+                                    var2 = var3.push;
+                                    var2 = var2.bind(var3)(var4);
+                                    var2 = var18.length;
+                                    var14 = 0;
+                                    var2 = var14 < var2;
+                                    var13 = 2;
+                                    var12 = null;
+                                    var11 = 83;
+                                    var10 = 84;
+                                    var9 = 82;
+                                    var8 = 79;
+                                    var7 = 1;
+                                    var6 = undefined;
+                                    var5 = undefined;
+                                    var4 = undefined;
+                                    var3 = undefined;
+                                    if(!var2) { _fun0038_ip = 167; continue _fun0038 }
+case 171:
+                                    var22 = var18[var14];
+                                    var29 = var14 + var7;
+                                    var2 = var18.length;
+                                    var2 = var29 < var2;
+                                    var28 = undefined;
+                                    if(!var2) { _fun0038_ip = 172; continue _fun0038 }
+case 173:
+                                    var28 = var18[var29];
+case 172:
+                                    var23 = var22.type;
+                                    var21 = _closure1_slot0;
+                                    var2 = _closure1_slot3;
+                                    var2 = var2[var8];
+                                    var2 = var21.bind(var1)(var2);
+                                    var2 = var2.ApplicationDirectoryCollectionItemType;
+                                    var2 = var2.APPLICATION;
+                                    var21 = var3;
+                                    if(!(var23 === var2)) { _fun0038_ip = 174; continue _fun0038 }
+case 84:
+                                    var2 = var22.id;
+                                    var2 = var12 != var2;
+                                    if(!var2) { _fun0038_ip = 175; continue _fun0038 }
+case 176:
+                                    var23 = var22.image_hash;
+                                    var2 = var12 != var23;
+case 175:
+                                    var24 = undefined;
+                                    if(!var2) { _fun0038_ip = 177; continue _fun0038 }
+case 178:
+                                    var23 = _closure1_slot0;
+                                    var2 = _closure1_slot3;
+                                    var2 = var2[var9];
+                                    var25 = var23.bind(var1)(var2);
+                                    var23 = var25.getCollectionItemAssetUrl;
+                                    var2 = {};
+                                    var26 = var22.id;
+                                    var2['itemId'] = var26;
+                                    var26 = var22.image_hash;
+                                    var2['hash'] = var26;
+                                    var24 = var23.bind(var25)(var2);
+case 177:
+                                    var23 = {};
+                                    var2 = var22.application;
+                                    var23['application'] = var2;
+                                    var27 = _closure1_slot0;
+                                    var2 = _closure1_slot3;
+                                    var25 = var2[var11];
+                                    var26 = var27.bind(var1)(var25);
+                                    var25 = var26.hasFlag;
+                                    var22 = var22.flags;
+                                    var2 = var2[var10];
+                                    var2 = var27.bind(var1)(var2);
+                                    var2 = var2.ApplicationCollectionItemFlags;
+                                    var2 = var2.PROMOTED;
+                                    var2 = var25.bind(var26)(var22, var2);
+                                    var23['showsPromoted'] = var2;
+                                    var23['overrideImageUrl'] = var24;
+                                    var25 = var12 != var28;
+                                    var22 = undefined;
+                                    var2 = var3;
+                                    if(!var25) { _fun0038_ip = 179; continue _fun0038 }
+case 180:
+                                    var26 = var28.type;
+                                    var27 = _closure1_slot0;
+                                    var25 = _closure1_slot3;
+                                    var25 = var25[var8];
+                                    var25 = var27.bind(var1)(var25);
+                                    var25 = var25.ApplicationDirectoryCollectionItemType;
+                                    var25 = var25.APPLICATION;
+                                    var22 = undefined;
+                                    var2 = var3;
+                                    if(!(var26 === var25)) { _fun0038_ip = 179; continue _fun0038 }
+case 181:
+                                    var25 = var28.id;
+                                    var26 = var12 != var25;
+                                    if(!var26) { _fun0038_ip = 66; continue _fun0038 }
+case 182:
+                                    var25 = var28.image_hash;
+                                    var26 = var12 != var25;
+case 66:
+                                    var25 = undefined;
+                                    if(!var26) { _fun0038_ip = 183; continue _fun0038 }
+case 184:
+                                    var27 = _closure1_slot0;
+                                    var26 = _closure1_slot3;
+                                    var26 = var26[var9];
+                                    var30 = var27.bind(var1)(var26);
+                                    var27 = var30.getCollectionItemAssetUrl;
+                                    var26 = {};
+                                    var31 = var28.id;
+                                    var26['itemId'] = var31;
+                                    var31 = var28.image_hash;
+                                    var26['hash'] = var31;
+                                    var25 = var27.bind(var30)(var26);
+case 183:
+                                    var26 = {};
+                                    var27 = var28.application;
+                                    var26['application'] = var27;
+                                    var32 = _closure1_slot0;
+                                    var27 = _closure1_slot3;
+                                    var30 = var27[var11];
+                                    var31 = var32.bind(var1)(var30);
+                                    var30 = var31.hasFlag;
+                                    var28 = var28.flags;
+                                    var27 = var27[var10];
+                                    var27 = var32.bind(var1)(var27);
+                                    var27 = var27.ApplicationCollectionItemFlags;
+                                    var27 = var27.PROMOTED;
+                                    var27 = var30.bind(var31)(var28, var27);
+                                    var26['showsPromoted'] = var27;
+                                    var26['overrideImageUrl'] = var25;
+                                    var2 = var25;
+                                    var22 = var26;
+case 179:
+                                    var27 = _closure4_slot0;
+                                    var26 = var27.push;
+                                    var25 = {};
+                                    var30 = _closure1_slot0;
+                                    var28 = _closure1_slot3;
+                                    var28 = var28[var16];
+                                    var28 = var30.bind(var1)(var28);
+                                    var28 = var28.AppLauncherHomeListItemType;
+                                    var28 = var28.RECOMMENDATION_TUPLE;
+                                    var25['type'] = var28;
+                                    var28 = var20.title;
+                                    var25['sectionName'] = var28;
+                                    var25['sectionOverallPosition'] = var19;
+                                    var25['item1'] = var23;
+                                    var25['item2'] = var22;
+                                    var30 = var18.length;
+                                    var28 = var14 + var13;
+                                    var28 = var28 >= var30;
+                                    var25['isLastTuple'] = var28;
+                                    var25['item1SectionPosition'] = var14;
+                                    var30 = var12 != var22;
+                                    var28 = undefined;
+                                    if(!var30) { _fun0038_ip = 185; continue _fun0038 }
+case 186:
+                                    var28 = var29;
+case 185:
+                                    var25['item2SectionPosition'] = var28;
+                                    var25 = var26.bind(var27)(var25);
+                                    var6 = var24;
+                                    var5 = var23;
+                                    var4 = var22;
+                                    var21 = var2;
+case 174:
+                                    var14 = var14 + var13;
+                                    var2 = var18.length;
+                                    var3 = var21;
+                                    if(var14 < var2) { _fun0038_ip = 171; continue _fun0038 }
+case 167:
+                                    return var1;
+                                }
+                            };
+                            var2 = var3.bind(var4)(var2);
+                            _fun0037_ip = 133; continue _fun0037;
+case 165:
+                            var1 = new Array(0);
+case 133:
+                            return var1;
+                        }
+                    };
+                    var15 = var15.bind(var17)(var12, var13);
+                    _closure3_slot16 = var15;
+                    var13 = _closure1_slot5;
+                    var12 = var13.useMemo;
+                    var11 = new Array(3);
+                    var11[0] = var16;
+                    var11[1] = var15;
+                    var11[2] = var14;
+                    var1 = function() {
+                        _fun0040: for(var _fun0040_ip = 0; ; ) switch(_fun0040_ip) {
+case 0:
+                            var2 = _closure1_slot0;
+                            var4 = _closure1_slot3;
+                            var1 = 19;
+                            var1 = var4[var1];
+                            var5 = undefined;
+                            var6 = var2.bind(var5)(var1);
+                            var4 = var6.appLauncherShowsRecommendations;
+                            var2 = _closure3_slot1;
+                            var2 = var4.bind(var6)(var2);
+                            if(var2) { _fun0040_ip = 105; continue _fun0040 }
+case 122:
+                            var8 = _closure3_slot11;
+                            var2 = new Array(0);
+                            var7 = 0;
+                            var9 = var2;
+                            var4 = arraySpread(var9, var8, var7);
+                            return var2;
+case 105:
+                            var2 = {};
+                            var4 = _closure1_slot0;
+                            var6 = _closure1_slot3;
+                            var3 = 44;
+                            var3 = var6[var3];
+                            var3 = var4.bind(var5)(var3);
+                            var3 = var3.AppLauncherHomeListItemType;
+                            var3 = var3.LEARN_MORE;
+                            var2['type'] = var3;
+                            var8 = _closure3_slot16;
+                            var1 = new Array(1);
+                            var7 = 0;
+                            var9 = var1;
+                            var3 = arraySpread(var9, var8, var7);
+                            var1[2] = var2;
+                            var2 = 1;
+                            var2 = var3 + var2;
+                            return var1;
+                        }
+                    };
+                    var11 = var12.bind(var13)(var1, var11);
+                    var1 = {};
+                    var1['list'] = var11;
+                    var1['frecencyCommands'] = var10;
+                    var1['frecencyUsedAppList'] = var9;
+                    var1['sectionDescriptors'] = var8;
+                    var1['loading'] = var7;
+                    var1['hasNoCommands'] = var5;
+                    var5 = 0;
+                    var5 = var5 === var6;
+                    var1['hasNoShelfItems'] = var5;
+                    var1['showsEmptyState'] = var4;
+                    var1['showNoPermsState'] = var3;
+                    var1['inThisServerItems'] = var2;
+                    return var1;
+                }
+            };
+            var5 = var5.bind(var4)(var6);
+            var25 = var5.list;
+            var _closure2_slot15 = var25;
+            var47 = var5.frecencyCommands;
+            var _closure2_slot16 = var47;
+            var45 = var5.frecencyUsedAppList;
+            var _closure2_slot17 = var45;
+            var48 = var5.sectionDescriptors;
+            var _closure2_slot18 = var48;
+            var46 = var5.loading;
+            var38 = var5.showsEmptyState;
+            var35 = var5.showNoPermsState;
+            var43 = var5.inThisServerItems;
+            var _closure2_slot19 = var43;
+            var24 = _closure1_slot5;
+            var9 = var24.useCallback;
+            var6 = new Array(4);
+            var6[0] = var18;
+            var6[1] = var8;
+            var6[2] = var21;
+            var6[3] = var48;
+            var5 = function(arg1) {
+                _fun0041: for(var _fun0041_ip = 0; ; ) switch(_fun0041_ip) {
+case 0:
+                    var1 = arg1;
+                    var5 = var1.application;
+                    var _closure3_slot0 = var5;
+                    var6 = var1.sectionName;
+                    var7 = _closure1_slot0;
+                    var4 = _closure1_slot3;
+                    var1 = 19;
+                    var4 = var4[var1];
+                    var1 = undefined;
+                    var7 = var7.bind(var1)(var4);
+                    var4 = var7.isEmbeddedApp;
+                    var4 = var4.bind(var7)(var5);
+                    var7 = !var4;
+                    if(!var7) { _fun0041_ip = 187; continue _fun0041 }
+case 93:
+                    var8 = _closure2_slot18;
+                    var4 = var8.find;
+                    var3 = function(arg1) {
+                        var1 = arg1;
+                        var2 = var1.id;
+                        var1 = _closure3_slot0;
+                        var1 = var1.id;
+                        var1 = var2 === var1;
+                        return var1;
+                    };
+                    var4 = var4.bind(var8)(var3);
+                    var3 = null;
+                    var7 = var3 != var4;
+case 187:
+                    var9 = _closure1_slot0;
+                    var10 = _closure1_slot3;
+                    var2 = 23;
+                    var2 = var10[var2];
+                    var4 = var9.bind(var1)(var2);
+                    var3 = var4.handleApplicationSelected;
+                    var2 = {};
+                    var8 = 29;
+                    var8 = var10[var8];
+                    var8 = var9.bind(var1)(var8);
+                    var8 = var8.ApplicationCommandTriggerLocations;
+                    var8 = var8.APP_LAUNCHER_HOME;
+                    var2['location'] = var8;
+                    var2['application'] = var5;
+                    var8 = _closure2_slot2;
+                    var2['navigation'] = var8;
+                    var8 = _closure2_slot0;
+                    var2['context'] = var8;
+                    var7 = !var7;
+                    var2['installOnDemand'] = var7;
+                    var2['sectionName'] = var6;
+                    var5 = _closure2_slot10;
+                    var2['entrypoint'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var42 = var9.bind(var24)(var5, var6);
+            var _closure2_slot20 = var42;
+            var5 = 43;
+            var5 = var13[var5];
+            var6 = var11.bind(var4)(var5);
+            var5 = var6.useClickOnHomeActivityOpensAppDetails;
+            var24 = var5.bind(var6)();
+            var _closure2_slot21 = var24;
+            var9 = _closure1_slot5;
+            var6 = var9.useCallback;
+            var5 = new Array(14);
+            var5[0] = var24;
+            var5[1] = var18;
+            var5[2] = var8;
+            var5[3] = var23;
+            var5[4] = var22;
+            var22 = var25.length;
+            var5[5] = var22;
+            var5[6] = var21;
+            var5[7] = var20;
+            var5[8] = var19;
+            var5[9] = var14;
+            var5[10] = var42;
+            var5[11] = var10;
+            var10 = var40.sectionHeader;
+            var5[12] = var10;
+            var5[13] = var3;
+            var3 = function(arg1) {
+                _fun0042: for(var _fun0042_ip = 0; ; ) switch(_fun0042_ip) {
+case 0:
+                    var1 = arg1;
+                    var6 = var1.item;
+                    var _closure3_slot0 = var6;
+                    var7 = var1.index;
+                    var5 = var6.type;
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var9 = 44;
+                    var3 = var3[var9];
+                    var4 = undefined;
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.PLACEHOLDER;
+                    if(!(var3 !== var5)) { _fun0042_ip = 188; continue _fun0042 }
+case 19:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.SECTION_HEADER;
+                    if(!(var3 !== var5)) { _fun0042_ip = 189; continue _fun0042 }
+case 139:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.SHELF_ITEM;
+                    if(!(var3 !== var5)) { _fun0042_ip = 190; continue _fun0042 }
+case 119:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.SHELF_ITEM_TUPLE;
+                    if(!(var3 !== var5)) { _fun0042_ip = 191; continue _fun0042 }
+case 192:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.RECOMMENDATION_TUPLE;
+                    if(!(var3 !== var5)) { _fun0042_ip = 193; continue _fun0042 }
+case 194:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.APP;
+                    if(!(var3 !== var5)) { _fun0042_ip = 195; continue _fun0042 }
+case 196:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.RECOMMENDATION_SECTION_HEADER;
+                    if(!(var3 !== var5)) { _fun0042_ip = 65; continue _fun0042 }
+case 197:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.RECOMMENDATION_BANNER_CARD;
+                    if(!(var3 !== var5)) { _fun0042_ip = 198; continue _fun0042 }
+case 199:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.RECOMMENDATION_APP;
+                    if(!(var3 !== var5)) { _fun0042_ip = 89; continue _fun0042 }
+case 200:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.VIEW_ALL;
+                    if(!(var3 !== var5)) { _fun0042_ip = 201; continue _fun0042 }
+case 202:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.DIVIDER_ITEM;
+                    if(!(var3 !== var5)) { _fun0042_ip = 203; continue _fun0042 }
+case 204:
+                    var8 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var3 = var3[var9];
+                    var3 = var8.bind(var4)(var3);
+                    var3 = var3.AppLauncherHomeListItemType;
+                    var3 = var3.LEARN_MORE;
+                    if(!(var3 !== var5)) { _fun0042_ip = 205; continue _fun0042 }
+case 206:
+                    var3 = null;
+                    return var3;
+case 205:
+                    var8 = _closure1_slot19;
+                    var5 = _closure1_slot1;
+                    var9 = _closure1_slot3;
+                    var3 = 51;
+                    var3 = var9[var3];
+                    var5 = var5.bind(var4)(var3);
+                    var3 = {};
+                    var10 = _closure2_slot4;
+                    var9 = var10.valueOf;
+                    var9 = var9.bind(var10)();
+                    var3['visible'] = var9;
+                    var3 = var8.bind(var4)(var5, var3);
+                    return var3;
+case 203:
+                    var8 = _closure1_slot19;
+                    var5 = _closure1_slot34;
+                    var3 = {};
+                    var3 = var8.bind(var4)(var5, var3);
+                    return var3;
+case 201:
+                    var8 = _closure1_slot19;
+                    var5 = _closure1_slot1;
+                    var9 = _closure1_slot3;
+                    var3 = 48;
+                    var3 = var9[var3];
+                    var5 = var5.bind(var4)(var3);
+                    var3 = {};
+                    var9 = var6.title;
+                    var3['title'] = var9;
+                    var9 = function onPress() {
+                        var5 = _closure3_slot0;
+                        var3 = var5.applications;
+                        var2 = var3.map;
+                        var1 = function(arg1) {
+                            var1 = arg1;
+                            return var1;
+                        };
+                        var8 = var2.bind(var3)(var1);
+                        var9 = _closure1_slot0;
+                        var10 = _closure1_slot3;
+                        var1 = 23;
+                        var2 = var10[var1];
+                        var1 = undefined;
+                        var4 = var9.bind(var1)(var2);
+                        var3 = var4.handleViewAllSelected;
+                        var2 = {};
+                        var7 = 29;
+                        var7 = var10[var7];
+                        var7 = var9.bind(var1)(var7);
+                        var7 = var7.ApplicationCommandTriggerLocations;
+                        var7 = var7.APP_LAUNCHER_HOME;
+                        var2['location'] = var7;
+                        var11 = _closure2_slot2;
+                        var2['navigation'] = var11;
+                        var7 = _closure2_slot0;
+                        var2['context'] = var7;
+                        var7 = var5.sectionName;
+                        var2['sectionName'] = var7;
+                        var7 = var5.sectionOverallPosition;
+                        var2['sectionOverallPosition'] = var7;
+                        var2['applications'] = var8;
+                        var7 = 49;
+                        var7 = var10[var7];
+                        var7 = var9.bind(var1)(var7);
+                        var7 = var7.SectionItemType;
+                        var7 = var7.APPS;
+                        var2['sectionItemType'] = var7;
+                        var7 = new Array(0);
+                        var2['commands'] = var7;
+                        var7 = var8.map;
+                        var6 = function(arg1) {
+                            var3 = _closure1_slot0;
+                            var2 = _closure1_slot3;
+                            var1 = 50;
+                            var2 = var2[var1];
+                            var1 = undefined;
+                            var3 = var3.bind(var1)(var2);
+                            var2 = var3.getApplicationCommandSection;
+                            var1 = arg1;
+                            var1 = var2.bind(var3)(var1);
+                            return var1;
+                        };
+                        var6 = var7.bind(var8)(var6);
+                        var2['sectionDescriptors'] = var6;
+                        var6 = var5.title;
+                        var2['title'] = var6;
+                        var5 = var5.promotedApplicationIds;
+                        var2['promotedApplicationIds'] = var5;
+                        var2 = var3.bind(var4)(var2);
+                        return var1;
+                    };
+                    var3['onPress'] = var9;
+                    var3 = var8.bind(var4)(var5, var3);
+                    return var3;
+case 89:
+                    var9 = _closure1_slot19;
+                    var5 = _closure1_slot1;
+                    var8 = _closure1_slot3;
+                    var3 = 47;
+                    var3 = var8[var3];
+                    var8 = var5.bind(var4)(var3);
+                    var5 = {};
+                    var3 = var6.application;
+                    var5['application'] = var3;
+                    var3 = var6.isFirstRow;
+                    var5['isFirstRow'] = var3;
+                    var3 = var6.isLastRow;
+                    var5['isLastRow'] = var3;
+                    var3 = function onPress() {
+                        var3 = _closure2_slot20;
+                        var2 = {};
+                        var1 = _closure3_slot0;
+                        var4 = var1.application;
+                        var2['application'] = var4;
+                        var1 = var1.sectionName;
+                        var2['sectionName'] = var1;
+                        var1 = undefined;
+                        var1 = var3.bind(var1)(var2);
+                        return var1;
+                    };
+                    var5['onPress'] = var3;
+                    var3 = var6.showsPromoted;
+                    var5['showsPromoted'] = var3;
+                    var3 = var6.application;
+                    var3 = var3.id;
+                    var3 = var9.bind(var4)(var8, var5, var3);
+                    return var3;
+case 198:
+                    var8 = _closure1_slot19;
+                    var5 = _closure1_slot1;
+                    var9 = _closure1_slot3;
+                    var3 = 46;
+                    var3 = var9[var3];
+                    var5 = var5.bind(var4)(var3);
+                    var3 = {};
+                    var9 = var6.item;
+                    var9 = var9.application;
+                    var3['application'] = var9;
+                    var9 = var6.isFirst;
+                    var3['isFirst'] = var9;
+                    var9 = var6.isLast;
+                    var3['isLast'] = var9;
+                    var9 = function onPress() {
+                        var3 = _closure2_slot20;
+                        var2 = {};
+                        var1 = _closure3_slot0;
+                        var4 = var1.item;
+                        var4 = var4.application;
+                        var2['application'] = var4;
+                        var1 = var1.sectionName;
+                        var2['sectionName'] = var1;
+                        var1 = undefined;
+                        var1 = var3.bind(var1)(var2);
+                        return var1;
+                    };
+                    var3['onPress'] = var9;
+                    var9 = _closure2_slot12;
+                    var3['isLandscape'] = var9;
+                    var9 = var6.showsPromoted;
+                    var3['showsPromoted'] = var9;
+                    var9 = var6.overrideImageUrl;
+                    var3['overrideImageUrl'] = var9;
+                    var3 = var8.bind(var4)(var5, var3);
+                    return var3;
+case 65:
+                    var8 = _closure1_slot19;
+                    var5 = _closure1_slot35;
+                    var3 = {};
+                    var3['index'] = var7;
+                    var9 = var6.section;
+                    var3['children'] = var9;
+                    var3 = var8.bind(var4)(var5, var3);
+                    return var3;
+case 195:
+                    var9 = _closure1_slot19;
+                    var8 = _closure1_slot28;
+                    var5 = {};
+                    var3 = var6.section;
+                    var5['section'] = var3;
+                    var3 = function onPress() {
+                        var4 = _closure2_slot13;
+                        var1 = _closure3_slot0;
+                        var3 = var1.section;
+                        var5 = _closure1_slot0;
+                        var2 = _closure1_slot3;
+                        var1 = 41;
+                        var2 = var2[var1];
+                        var1 = undefined;
+                        var2 = var5.bind(var1)(var2);
+                        var2 = var2.AppLauncherSectionName;
+                        var2 = var2.INSTALLED;
+                        var2 = var4.bind(var1)(var3, var2);
+                        return var1;
+                    };
+                    var5['onPress'] = var3;
+                    var3 = var6.isFirstRow;
+                    var5['isFirstRow'] = var3;
+                    var3 = var6.isLastRow;
+                    var5['isLastRow'] = var3;
+                    var3 = {};
+                    var10 = _closure2_slot6;
+                    var3['height'] = var10;
+                    var5['style'] = var3;
+                    var3 = var6.section;
+                    var3 = var3.id;
+                    var3 = var9.bind(var4)(var8, var5, var3);
+                    return var3;
+case 193:
+                    var8 = _closure1_slot19;
+                    var5 = _closure1_slot32;
+                    var3 = {};
+                    var10 = _closure2_slot0;
+                    var3['context'] = var10;
+                    var10 = var6.sectionName;
+                    var3['sectionName'] = var10;
+                    var10 = function onPress(arg1, arg2) {
+                        var3 = _closure2_slot20;
+                        var2 = {};
+                        var1 = arg1;
+                        var2['application'] = var1;
+                        var1 = arg2;
+                        var2['sectionName'] = var1;
+                        var1 = undefined;
+                        var1 = var3.bind(var1)(var2);
+                        return var1;
+                    };
+                    var3['onPress'] = var10;
+                    var10 = var6.item1;
+                    var3['item1'] = var10;
+                    var10 = var6.item2;
+                    var3['item2'] = var10;
+                    var10 = var6.isLastTuple;
+                    var3['isLastTuple'] = var10;
+                    var10 = _closure2_slot10;
+                    var3['entrypoint'] = var10;
+                    var9 = _closure2_slot9;
+                    var3['containerWidth'] = var9;
+                    var3 = var8.bind(var4)(var5, var3);
+                    return var3;
+case 191:
+                    var9 = _closure1_slot19;
+                    var8 = _closure1_slot30;
+                    var5 = {};
+                    var10 = _closure2_slot0;
+                    var5['context'] = var10;
+                    var11 = _closure1_slot0;
+                    var10 = _closure1_slot3;
+                    var14 = 41;
+                    var10 = var10[var14];
+                    var10 = var11.bind(var4)(var10);
+                    var10 = var10.AppLauncherSectionName;
+                    var10 = var10.ACTIVITIES;
+                    var5['sectionName'] = var10;
+                    var10 = function onPress(arg1) {
+                        _fun0043: for(var _fun0043_ip = 0; ; ) switch(_fun0043_ip) {
+case 0:
+                            var3 = _closure2_slot14;
+                            var2 = {};
+                            var1 = arg1;
+                            var2['shelfData'] = var1;
+                            var1 = _closure3_slot0;
+                            var1 = var1.sectionName;
+                            var2['sectionName'] = var1;
+                            var1 = _closure2_slot21;
+                            var5 = !var1;
+                            var1 = !var5;
+                            if(!var5) { _fun0043_ip = 187; continue _fun0043 }
+case 31:
+                            var5 = _closure2_slot10;
+                            var7 = _closure1_slot0;
+                            var6 = _closure1_slot3;
+                            var4 = 41;
+                            var6 = var6[var4];
+                            var4 = undefined;
+                            var4 = var7.bind(var4)(var6);
+                            var4 = var4.AppLauncherEntrypoint;
+                            var4 = var4.VOICE;
+                            var1 = var5 !== var4;
+case 187:
+                            var2['navigates'] = var1;
+                            var1 = undefined;
+                            var2 = var3.bind(var1)(var2);
+                            return var1;
+                        }
+                    };
+                    var5['onPress'] = var10;
+                    var10 = _closure2_slot21;
+                    var10 = !var10;
+                    if(!var10) { _fun0042_ip = 207; continue _fun0042 }
+case 208:
+                    var12 = _closure2_slot10;
+                    var13 = _closure1_slot0;
+                    var11 = _closure1_slot3;
+                    var11 = var11[var14];
+                    var11 = var13.bind(var4)(var11);
+                    var11 = var11.AppLauncherEntrypoint;
+                    var11 = var11.VOICE;
+                    var10 = var12 === var11;
+case 207:
+                    var5['usesHandleActivityItemSelected'] = var10;
+                    var10 = _closure2_slot11;
+                    var5['onActivityItemSelected'] = var10;
+                    var10 = var6.shelfItem1;
+                    var5['shelfItem1'] = var10;
+                    var10 = var6.shelfItem2;
+                    var5['shelfItem2'] = var10;
+                    var10 = var6.isLastTuple;
+                    var5['isLastTuple'] = var10;
+                    var10 = _closure2_slot10;
+                    var5['entrypoint'] = var10;
+                    var3 = _closure2_slot9;
+                    var5['containerWidth'] = var3;
+                    var3 = var6.shelfItem1;
+                    var3 = var3.application;
+                    var3 = var3.id;
+                    var3 = var9.bind(var4)(var8, var5, var3);
+                    return var3;
+case 190:
+                    var8 = _closure1_slot19;
+                    var5 = _closure1_slot29;
+                    var3 = {};
+                    var9 = var6.section;
+                    var3['section'] = var9;
+                    var2 = function onPress(arg1) {
+                        var3 = _closure2_slot14;
+                        var2 = {};
+                        var1 = arg1;
+                        var2['shelfData'] = var1;
+                        var1 = _closure3_slot0;
+                        var1 = var1.sectionName;
+                        var2['sectionName'] = var1;
+                        var1 = undefined;
+                        var2 = var3.bind(var1)(var2);
+                        return var1;
+                    };
+                    var3['onPress'] = var2;
+                    var2 = var6.isFirstRow;
+                    var3['isFirstRow'] = var2;
+                    var2 = var6.isLastRow;
+                    var3['isLastRow'] = var2;
+                    var2 = var6.section;
+                    var2 = var2.application;
+                    var2 = var2.id;
+                    var2 = var8.bind(var4)(var5, var3, var2);
+                    return var2;
+case 189:
+                    var5 = _closure1_slot19;
+                    var3 = _closure1_slot0;
+                    var8 = _closure1_slot3;
+                    var2 = 16;
+                    var2 = var8[var2];
+                    var2 = var3.bind(var4)(var2);
+                    var3 = var2.Text;
+                    var2 = {'accessibilityRole': 'header', 'variant': 'text-lg/bold', 'color': 'mobile-text-heading-primary'};
+                    var8 = _closure2_slot5;
+                    var9 = var8.sectionHeader;
+                    var8 = new Array(2);
+                    var8[0] = var9;
+                    var10 = 0;
+                    var9 = null;
+                    if(!(var10 !== var7)) { _fun0042_ip = 209; continue _fun0042 }
+case 210:
+                    var10 = {};
+                    var11 = 24;
+                    var10['marginTop'] = var11;
+                    var9 = var10;
+case 209:
+                    var8[1] = var9;
+                    var2['style'] = var8;
+                    var6 = var6.section;
+                    var2['children'] = var6;
+                    var2 = var5.bind(var4)(var3, var2);
+                    return var2;
+case 188:
+                    var3 = _closure1_slot19;
+                    var2 = _closure1_slot1;
+                    var5 = _closure1_slot3;
+                    var1 = 45;
+                    var1 = var5[var1];
+                    var2 = var2.bind(var4)(var1);
+                    var1 = {};
+                    var5 = 0;
+                    var5 = var5 === var7;
+                    var1['isFirstRow'] = var5;
+                    var5 = _closure2_slot15;
+                    var8 = var5.length;
+                    var5 = 1;
+                    var5 = var8 - var5;
+                    var5 = var7 === var5;
+                    var1['isLastRow'] = var5;
+                    var5 = {};
+                    var6 = _closure2_slot6;
+                    var5['height'] = var6;
+                    var1['style'] = var5;
+                    var1 = var3.bind(var4)(var2, var1);
+                    return var1;
+                }
+            };
+            var27 = var6.bind(var9)(var3, var5);
+            var5 = _closure1_slot5;
+            var3 = var5.useRef;
+            var34 = null;
+            var19 = var3.bind(var5)(var34);
+            var _closure2_slot22 = var19;
+            var5 = _closure1_slot5;
+            var3 = var5.useState;
+            var23 = false;
+            var5 = var3.bind(var5)(var23);
+            var3 = _closure1_slot4;
+            var10 = 2;
+            var6 = var3.bind(var4)(var5, var10);
+            var5 = 0;
+            var9 = var6[var5];
+            var3 = 1;
+            var6 = var6[var3];
+            var _closure2_slot23 = var6;
+            var21 = _closure1_slot5;
+            var20 = var21.useMemo;
+            var14 = new Array(1);
+            var14[0] = var8;
+            var6 = function() {
+                var3 = _closure1_slot1;
+                var2 = _closure1_slot3;
+                var1 = 52;
+                var2 = var2[var1];
+                var1 = undefined;
+                var5 = var3.bind(var1)(var2);
+                var4 = var5.debounce;
+                var3 = function(arg1) {
+                    var4 = _closure1_slot0;
+                    var3 = _closure1_slot3;
+                    var1 = 53;
+                    var3 = var3[var1];
+                    var1 = undefined;
+                    var5 = var4.bind(var1)(var3);
+                    var4 = var5.trackWithMetadata;
+                    var2 = _closure1_slot16;
+                    var3 = var2.APP_LAUNCHER_SEARCH_QUERY_TYPED;
+                    var2 = {};
+                    var6 = arg1;
+                    var2['query'] = var6;
+                    var6 = _closure2_slot10;
+                    var2['source'] = var6;
+                    var2 = var4.bind(var5)(var3, var2);
+                    return var1;
+                };
+                var2 = 400;
+                var1 = {'leading': false, 'trailing': true};
+                var1 = var4.bind(var5)(var3, var2, var1);
+                return var1;
+            };
+            var6 = var20.bind(var21)(var6, var14);
+            var _closure2_slot24 = var6;
+            var20 = _closure1_slot5;
+            var14 = var20.useRef;
+            var14 = var14.bind(var20)(var34);
+            var _closure2_slot25 = var14;
+            var22 = _closure1_slot5;
+            var21 = var22.useEffect;
+            var20 = function() {
+                var1 = function() {
+                    _fun0044: for(var _fun0044_ip = 0; ; ) switch(_fun0044_ip) {
+case 0:
+                        var1 = _closure2_slot25;
+                        var2 = var1.current;
+                        var1 = null;
+                        if(!(var1 != var2)) { _fun0044_ip = 25; continue _fun0044 }
+case 211:
+                        var1 = var2.cancel;
+                        var1 = var1.bind(var2)();
+case 25:
+                        var1 = undefined;
+                        return var1;
+                    }
+                };
+                return var1;
+            };
+            var14 = new Array(0);
+            var14 = var21.bind(var22)(var20, var14);
+            var21 = _closure1_slot5;
+            var20 = var21.useCallback;
+            var14 = new Array(1);
+            var14[0] = var6;
+            var6 = function(arg1) {
+                _fun0045: for(var _fun0045_ip = 0; ; ) switch(_fun0045_ip) {
+case 0:
+                    var3 = arg1;
+                    var _closure3_slot0 = var3;
+                    var6 = _closure2_slot23;
+                    var7 = var3.length;
+                    var1 = undefined;
+                    var5 = 0;
+                    var5 = var5 !== var7;
+                    var5 = var6.bind(var1)(var5);
+                    var5 = _closure2_slot25;
+                    var6 = var5.current;
+                    var5 = null;
+                    if(!(var5 != var6)) { _fun0045_ip = 212; continue _fun0045 }
+case 8:
+                    var5 = var6.cancel;
+                    var5 = var5.bind(var6)();
+case 212:
+                    var5 = _closure2_slot25;
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot3;
+                    var6 = 54;
+                    var6 = var8[var6];
+                    var8 = var7.bind(var1)(var6);
+                    var7 = var8.runAfterInteractions;
+                    var6 = function() {
+                        _fun0046: for(var _fun0046_ip = 0; ; ) switch(_fun0046_ip) {
+case 0:
+                            var1 = _closure2_slot22;
+                            var3 = var1.current;
+                            var1 = null;
+                            if(!(var1 != var3)) { _fun0046_ip = 29; continue _fun0046 }
+case 211:
+                            var2 = var3.setQuery;
+                            var1 = _closure3_slot0;
+                            var1 = var2.bind(var3)(var1);
+case 29:
+                            var1 = undefined;
+                            return var1;
+                        }
+                    };
+                    var4 = 100;
+                    var4 = var7.bind(var8)(var6, var4);
+                    var5['current'] = var4;
+                    var2 = _closure2_slot24;
+                    var2 = var2.bind(var1)(var3);
+                    return var1;
+                }
+            };
+            var50 = var20.bind(var21)(var6, var14);
+            var _closure2_slot26 = var50;
+            var14 = _closure1_slot5;
+            var6 = var14.useRef;
+            var6 = var6.bind(var14)(var50);
+            var _closure2_slot27 = var6;
+            var21 = _closure1_slot5;
+            var20 = var21.useEffect;
+            var14 = new Array(1);
+            var14[0] = var50;
+            var6 = function() {
+                var2 = _closure2_slot27;
+                var1 = _closure2_slot26;
+                var2['current'] = var1;
+                var1 = undefined;
+                return var1;
+            };
+            var6 = var20.bind(var21)(var6, var14);
+            var21 = _closure1_slot5;
+            var20 = var21.useCallback;
+            var14 = new Array(1);
+            var14[0] = var8;
+            var6 = function() {
+                var4 = _closure1_slot0;
+                var3 = _closure1_slot3;
+                var1 = 53;
+                var3 = var3[var1];
+                var1 = undefined;
+                var5 = var4.bind(var1)(var3);
+                var4 = var5.trackWithMetadata;
+                var2 = _closure1_slot16;
+                var3 = var2.APP_LAUNCHER_SEARCH_FOCUSED;
+                var2 = {};
+                var6 = _closure2_slot10;
+                var2['source'] = var6;
+                var2 = var4.bind(var5)(var3, var2);
+                return var1;
+            };
+            var6 = var20.bind(var21)(var6, var14);
+            var _closure2_slot28 = var6;
+            var6 = 55;
+            var6 = var13[var6];
+            var13 = var11.bind(var4)(var6);
+            var11 = var13.usePinnedSearchBarBottomBorder;
+            var6 = {};
+            var14 = 'home-scroller';
+            if(!var9) { _fun0019_ip = 186; continue _fun0019 }
+case 213:
+            var14 = 'search-scroller';
+case 186:
+            var6['key'] = var14;
+            var14 = 5;
+            var6['triggerScrollHeight'] = var14;
+            var33 = var11.bind(var13)(var6);
+            _closure2_slot29 = var33;
+            var11 = _closure1_slot5;
+            var6 = var11.useRef;
+            var13 = var6.bind(var11)(var34);
+            _closure2_slot30 = var13;
+            var14 = _closure1_slot5;
+            var11 = var14.useLayoutEffect;
+            var6 = new Array(1);
+            var6[0] = var1;
+            var1 = function() {
+                _fun0047: for(var _fun0047_ip = 0; ; ) switch(_fun0047_ip) {
+case 0:
+                    var3 = _closure2_slot1;
+                    var2 = null;
+                    if(!(var2 != var3)) { _fun0047_ip = 214; continue _fun0047 }
+case 38:
+                    var3 = _closure2_slot30;
+                    var5 = var3.current;
+                    if(!(var2 != var5)) { _fun0047_ip = 132; continue _fun0047 }
+case 26:
+                    var4 = var5.setText;
+                    var3 = _closure2_slot1;
+                    var3 = var4.bind(var5)(var3);
+case 132:
+                    var3 = _closure2_slot30;
+                    var3 = var3.current;
+                    if(!(var2 != var3)) { _fun0047_ip = 138; continue _fun0047 }
+case 215:
+                    var2 = var3.focus;
+                    var2 = var2.bind(var3)();
+case 138:
+                    var3 = _closure2_slot27;
+                    var2 = var3.current;
+                    var1 = _closure2_slot1;
+                    var1 = var2.bind(var3)(var1);
+case 214:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var1 = var11.bind(var14)(var1, var6);
+            var1 = _closure1_slot14;
+            var2 = var2 + var1;
+            _closure2_slot31 = var2;
+            var51 = _closure1_slot0;
+            var24 = _closure1_slot3;
+            var1 = 56;
+            var1 = var24[var1];
+            var6 = var51.bind(var4)(var1);
+            var1 = var6.useBottomSheetFlashListBottomViewabilityInset;
+            var1 = var1.bind(var6)();
+            var20 = var1.flashListRef;
+            var21 = var1.bottomVisibilityInsetRef;
+            var6 = _closure1_slot1;
+            var1 = 57;
+            var1 = var24[var1];
+            var14 = var6.bind(var4)(var1);
+            var11 = {};
+            var1 = 58;
+            var6 = var24[var1];
+            var6 = var51.bind(var4)(var6);
+            var6 = var6.ImpressionTypes;
+            var6 = var6.VIEW;
+            var11['type'] = var6;
+            var1 = var24[var1];
+            var1 = var51.bind(var4)(var1);
+            var1 = var1.ImpressionNames;
+            var1 = var1.APP_LAUNCHER_HOME_ACTIVITY_ITEM;
+            var11['name'] = var1;
+            var6 = {};
+            var1 = !var17;
+            var6['disableTrack'] = var1;
+            var1 = new Array(1);
+            var1[0] = var17;
+            var1 = var14.bind(var4)(var11, var6, var1);
+            var6 = _closure1_slot5;
+            var1 = var6.useState;
+            var6 = var1.bind(var6)(var23);
+            var1 = _closure1_slot4;
+            var1 = var1.bind(var4)(var6, var10);
+            var37 = var1[var5];
+            var1 = var1[var3];
+            _closure2_slot32 = var1;
+            var6 = _closure1_slot5;
+            var5 = var6.useEffect;
+            var3 = function() {
+                var3 = _closure2_slot32;
+                var1 = undefined;
+                var2 = true;
+                var2 = var3.bind(var1)(var2);
+                return var1;
+            };
+            var1 = new Array(0);
+            var1 = var5.bind(var6)(var3, var1);
+            var1 = 28;
+            var1 = var24[var1];
+            var6 = var51.bind(var4)(var1);
+            var5 = var6.useStateFromStores;
+            var1 = _closure1_slot13;
+            var3 = new Array(1);
+            var3[0] = var1;
+            var1 = function() {
+                var2 = _closure1_slot13;
+                var1 = var2.getTriggeredOnboardingContentMetadata;
+                var1 = var1.bind(var2)();
+                var1 = var1.willShowGlobalSearchOnboarding;
+                return var1;
+            };
+            var11 = var5.bind(var6)(var3, var1);
+            _closure2_slot33 = var11;
+            var6 = _closure1_slot5;
+            var5 = var6.useCallback;
+            var3 = new Array(1);
+            var3[0] = var11;
+            var1 = function(arg1) {
+                _fun0048: for(var _fun0048_ip = 0; ; ) switch(_fun0048_ip) {
+case 0:
+                    var1 = arg1;
+                    var9 = var1.actionType;
+                    var1 = _closure2_slot33;
+                    if(!var1) { _fun0048_ip = 216; continue _fun0048 }
+case 217:
+                    var3 = _closure1_slot0;
+                    var5 = _closure1_slot3;
+                    var1 = 59;
+                    var1 = var5[var1];
+                    var2 = undefined;
+                    var8 = var3.bind(var2)(var1);
+                    var7 = var8.UNSAFE_markDismissibleContentAsDismissed;
+                    var1 = 60;
+                    var1 = var5[var1];
+                    var1 = var3.bind(var2)(var1);
+                    var1 = var1.DismissibleContent;
+                    var6 = var1.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING;
+                    var1 = {};
+                    var1['dismissAction'] = var9;
+                    var1 = var7.bind(var8)(var6, var1);
+                    var1 = 61;
+                    var1 = var5[var1];
+                    var3 = var3.bind(var2)(var1);
+                    var2 = var3.setTriggeredOnboardingContentMetadata;
+                    var1 = {};
+                    var5 = _closure1_slot13;
+                    var4 = var5.getTriggeredOnboardingContentMetadata;
+                    var10 = var4.bind(var5)();
+                    var11 = var1;
+                    var4 = copyDataProperties(var11, var10);
+                    var5 = false;
+                    var4 = 'willShowGlobalSearchOnboarding';
+                    var1[3] = var5;
+                    var1 = var2.bind(var3)(var1);
+case 216:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var10 = var5.bind(var6)(var1, var3);
+            _closure2_slot34 = var10;
+            var1 = 62;
+            var1 = var24[var1];
+            var3 = var51.bind(var4)(var1);
+            var1 = var3.useTrackAppLauncherHomeItemImpression;
+            var1 = var1.bind(var3)();
+            var1 = var1.trackAppLauncherHomeItemImpression;
+            _closure2_slot35 = var1;
+            var14 = _closure1_slot5;
+            var6 = var14.useMemo;
+            var5 = new Array(2);
+            var5[0] = var2;
+            var3 = var40.list;
+            var5[1] = var3;
+            var3 = function() {
+                var1 = {};
+                var3 = _closure2_slot5;
+                var4 = var3.list;
+                var5 = var1;
+                var3 = copyDataProperties(var5, var4);
+                var3 = _closure2_slot31;
+                var2 = 'paddingBottom';
+                var1[1] = var3;
+                return var1;
+            };
+            var29 = var6.bind(var14)(var3, var5);
+            var6 = _closure1_slot5;
+            var5 = var6.useMemo;
+            var3 = new Array(1);
+            var3[0] = var2;
+            var2 = function() {
+                var1 = {};
+                var2 = _closure2_slot31;
+                var1['bottom'] = var2;
+                return var1;
+            };
+            var28 = var5.bind(var6)(var2, var3);
+            var6 = _closure1_slot5;
+            var5 = var6.useCallback;
+            var3 = function(arg1) {
+                var1 = arg1;
+                var1 = var1.type;
+                return var1;
+            };
+            var2 = new Array(0);
+            var26 = var5.bind(var6)(var3, var2);
+            var6 = _closure1_slot5;
+            var5 = var6.useCallback;
+            var3 = new Array(1);
+            var3[0] = var33;
+            var2 = function(arg1) {
+                var3 = _closure2_slot29;
+                var2 = var3.scrollHandler;
+                var1 = arg1;
+                var1 = var2.bind(var3)(var1);
+                var1 = undefined;
+                return var1;
+            };
+            var14 = var5.bind(var6)(var2, var3);
+            _closure2_slot36 = var14;
+            var6 = _closure1_slot5;
+            var5 = var6.useCallback;
+            var3 = new Array(1);
+            var3[0] = var14;
+            var2 = function(arg1) {
+                var1 = arg1;
+                var1 = var1.nativeEvent;
+                var3 = {};
+                var2 = var1.layoutMeasurement;
+                var2 = var2.width;
+                var3['width'] = var2;
+                var2 = var1.layoutMeasurement;
+                var2 = var2.height;
+                var3['height'] = var2;
+                var2 = var1.contentOffset;
+                var2 = var2.y;
+                var3['offset'] = var2;
+                var2 = var1.contentSize;
+                var2 = var2.width;
+                var3['contentWidth'] = var2;
+                var1 = var1.contentSize;
+                var1 = var1.height;
+                var3['contentHeight'] = var1;
+                var2 = _closure2_slot36;
+                var1 = undefined;
+                var2 = var2.bind(var1)(var3);
+                return var1;
+            };
+            var17 = var5.bind(var6)(var2, var3);
+            var6 = 63;
+            var2 = var24[var6];
+            var5 = var51.bind(var4)(var2);
+            var3 = var5.useAppLauncherFlashListProps;
+            var2 = {};
+            var2['onScrollHandler'] = var14;
+            var14 = var3.bind(var5)(var2);
+            var5 = _closure1_slot5;
+            var3 = var5.useMemo;
+            var2 = new Array(2);
+            var2[0] = var15;
+            var2[1] = var1;
+            var1 = function() {
+                var2 = {};
+                var1 = {};
+                var2['viewabilityConfig'] = var1;
+                var1 = _closure2_slot3;
+                var2['onViewableItemsChanged'] = var1;
+                var1 = new Array(2);
+                var1[0] = var2;
+                var2 = {};
+                var4 = _closure1_slot15;
+                var2['viewabilityConfig'] = var4;
+                var3 = _closure2_slot35;
+                var2['onViewableItemsChanged'] = var3;
+                var1[1] = var2;
+                return var1;
+            };
+            var22 = var3.bind(var5)(var1, var2);
+            var3 = _closure1_slot20;
+            var2 = _closure1_slot6;
+            var1 = {};
+            var5 = var40.container;
+            var1['style'] = var5;
+            var30 = _closure1_slot19;
+            var15 = _closure1_slot6;
+            var5 = {};
+            var31 = var40.topBackgroundFill;
+            var5['style'] = var31;
+            var15 = var30.bind(var4)(var15, var5);
+            var5 = new Array(4);
+            var5[0] = var15;
+            var31 = _closure1_slot20;
+            var30 = _closure1_slot21;
+            var15 = {};
+            var39 = _closure1_slot19;
+            var36 = _closure1_slot6;
+            var32 = {};
+            var40 = var40.searchBarContainer;
+            var32['style'] = var40;
+            var49 = _closure1_slot19;
+            var40 = 64;
+            var40 = var24[var40];
+            var40 = var51.bind(var4)(var40);
+            var44 = var40.SearchField;
+            var40 = {};
+            var40['ref'] = var13;
+            var13 = 41;
+            var24 = var24[var13];
+            var24 = var51.bind(var4)(var24);
+            var24 = var24.AppLauncherEntrypoint;
+            var24 = var24.VOICE;
+            if(!(var8 !== var24)) { _fun0019_ip = 218; continue _fun0019 }
+case 219:
+            var53 = _closure1_slot0;
+            var54 = _closure1_slot3;
+            var24 = 17;
+            var51 = var54[var24];
+            var51 = var53.bind(var4)(var51);
+            var52 = var51.intl;
+            var51 = var52.string;
+            var24 = var54[var24];
+            var24 = var53.bind(var4)(var24);
+            var24 = var24.t;
+            var24 = var24.ziyFv2;
+            var24 = var51.bind(var52)(var24);
+            _fun0019_ip = 220; continue _fun0019;
+case 218:
+            var54 = _closure1_slot0;
+            var55 = _closure1_slot3;
+            var51 = 17;
+            var52 = var55[var51];
+            var52 = var54.bind(var4)(var52);
+            var53 = var52.intl;
+            var52 = var53.string;
+            var51 = var55[var51];
+            var51 = var54.bind(var4)(var51);
+            var51 = var51.t;
+            var51 = var51.pw+r5b;
+            var24 = var52.bind(var53)(var51);
+case 220:
+            var40['placeholder'] = var24;
+            var24 = true;
+            var40['isRound'] = var24;
+            var51 = 'md';
+            var40['size'] = var51;
+            var40['onChange'] = var50;
+            var50 = function onFocus() {
+                var3 = _closure2_slot28;
+                var1 = undefined;
+                var3 = var3.bind(var1)();
+                var3 = _closure2_slot34;
+                var2 = {};
+                var4 = _closure1_slot18;
+                var4 = var4.TAKE_ACTION;
+                var2['actionType'] = var4;
+                var2 = var3.bind(var1)(var2);
+                return var1;
+            };
+            var40['onFocus'] = var50;
+            var40 = var49.bind(var4)(var44, var40);
+            var32['children'] = var40;
+            var36 = var39.bind(var4)(var36, var32);
+            var32 = new Array(2);
+            var32[0] = var36;
+            var33 = var33.bottomBorderComponent;
+            var32[1] = var33;
+            var15['children'] = var32;
+            var15 = var31.bind(var4)(var30, var15);
+            var5[1] = var15;
+            var15 = _closure1_slot19;
+            if(var9) { _fun0019_ip = 221; continue _fun0019 }
+case 222:
+            var39 = _closure1_slot1;
+            var44 = _closure1_slot3;
+            var6 = var44[var6];
+            var9 = var39.bind(var4)(var6);
+            var6 = {};
+            var32 = _closure1_slot20;
+            var31 = _closure1_slot21;
+            var30 = {};
+            var40 = _closure1_slot19;
+            var33 = 49;
+            var33 = var44[var33];
+            var36 = var39.bind(var4)(var33);
+            var33 = {};
+            var33['context'] = var18;
+            var33['sectionDescriptors'] = var48;
+            var33['commands'] = var47;
+            var33['loading'] = var46;
+            var33['apps'] = var45;
+            var33['onAppSelected'] = var42;
+            var45 = function onCommandSelected(arg1, arg2) {
+                var7 = _closure1_slot0;
+                var8 = _closure1_slot3;
+                var1 = 23;
+                var2 = var8[var1];
+                var1 = undefined;
+                var4 = var7.bind(var1)(var2);
+                var3 = var4.handleApplicationCommandSelected;
+                var2 = {};
+                var5 = 29;
+                var5 = var8[var5];
+                var5 = var7.bind(var1)(var5);
+                var5 = var5.ApplicationCommandTriggerLocations;
+                var5 = var5.APP_LAUNCHER_HOME;
+                var2['location'] = var5;
+                var6 = _closure2_slot0;
+                var2['context'] = var6;
+                var6 = arg1;
+                var2['command'] = var6;
+                var6 = arg2;
+                var2['section'] = var6;
+                var6 = _closure2_slot18;
+                var2['sectionDescriptors'] = var6;
+                var6 = '';
+                var2['query'] = var6;
+                var6 = _closure2_slot2;
+                var2['navigation'] = var6;
+                var6 = 41;
+                var6 = var8[var6];
+                var6 = var7.bind(var1)(var6);
+                var6 = var6.AppLauncherSectionName;
+                var6 = var6.RECENT_COMMANDS;
+                var2['sectionName'] = var6;
+                var5 = _closure2_slot10;
+                var2['entrypoint'] = var5;
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            };
+            var33['onCommandSelected'] = var45;
+            var45 = function onViewAllSelected(arg1) {
+                _fun0049: for(var _fun0049_ip = 0; ; ) switch(_fun0049_ip) {
+case 0:
+                    var7 = arg1;
+                    var10 = _closure1_slot0;
+                    var8 = _closure1_slot3;
+                    var1 = 23;
+                    var2 = var8[var1];
+                    var1 = undefined;
+                    var4 = var10.bind(var1)(var2);
+                    var3 = var4.handleViewAllSelected;
+                    var2 = {};
+                    var5 = 29;
+                    var5 = var8[var5];
+                    var5 = var10.bind(var1)(var5);
+                    var5 = var5.ApplicationCommandTriggerLocations;
+                    var5 = var5.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT;
+                    var2['location'] = var5;
+                    var9 = _closure2_slot2;
+                    var2['navigation'] = var9;
+                    var9 = _closure2_slot0;
+                    var2['context'] = var9;
+                    var9 = 49;
+                    var8 = var8[var9];
+                    var8 = var10.bind(var1)(var8);
+                    var8 = var8.SectionItemType;
+                    var10 = var8.COMMANDS;
+                    var8 = 'recent_apps_view_more';
+                    if(!(var7 === var10)) { _fun0049_ip = 223; continue _fun0049 }
+case 224:
+                    var8 = 'recent_commands_view_more';
+case 223:
+                    var2['sectionName'] = var8;
+                    var11 = _closure2_slot17;
+                    var10 = var11.map;
+                    var8 = function(arg1) {
+                        _fun0050: for(var _fun0050_ip = 0; ; ) switch(_fun0050_ip) {
+case 0:
+                            var1 = arg1;
+                            var2 = var1.section;
+                            var1 = null;
+                            var3 = var1 == var2;
+                            var1 = undefined;
+                            if(var3) { _fun0050_ip = 225; continue _fun0050 }
+case 52:
+                            var1 = var2.application;
+case 225:
+                            return var1;
+                        }
+                    };
+                    var13 = var10.bind(var11)(var8);
+                    var12 = var13.filter;
+                    var10 = _closure1_slot0;
+                    var11 = _closure1_slot3;
+                    var8 = 66;
+                    var8 = var11[var8];
+                    var8 = var10.bind(var1)(var8);
+                    var8 = var8.isNotNullish;
+                    var8 = var12.bind(var13)(var8);
+                    var2['applications'] = var8;
+                    var2['sectionItemType'] = var7;
+                    var8 = _closure2_slot16;
+                    var2['commands'] = var8;
+                    var8 = _closure2_slot18;
+                    var2['sectionDescriptors'] = var8;
+                    var8 = _closure2_slot10;
+                    var5 = 41;
+                    var5 = var11[var5];
+                    var5 = var10.bind(var1)(var5);
+                    var5 = var5.AppLauncherEntrypoint;
+                    var5 = var5.VOICE;
+                    if(!(var8 !== var5)) { _fun0049_ip = 226; continue _fun0049 }
+case 227:
+                    var8 = _closure1_slot0;
+                    var5 = _closure1_slot3;
+                    var5 = var5[var9];
+                    var5 = var8.bind(var1)(var5);
+                    var5 = var5.SectionItemType;
+                    var5 = var5.COMMANDS;
+                    if(!(var7 !== var5)) { _fun0049_ip = 228; continue _fun0049 }
+case 229:
+                    var9 = _closure1_slot0;
+                    var10 = _closure1_slot3;
+                    var5 = 17;
+                    var7 = var10[var5];
+                    var7 = var9.bind(var1)(var7);
+                    var8 = var7.intl;
+                    var7 = var8.string;
+                    var5 = var10[var5];
+                    var5 = var9.bind(var1)(var5);
+                    var5 = var5.t;
+                    var5 = var5.SCViVk;
+                    var5 = var7.bind(var8)(var5);
+                    _fun0049_ip = 230; continue _fun0049;
+case 228:
+                    var10 = _closure1_slot0;
+                    var11 = _closure1_slot3;
+                    var7 = 17;
+                    var8 = var11[var7];
+                    var8 = var10.bind(var1)(var8);
+                    var9 = var8.intl;
+                    var8 = var9.string;
+                    var7 = var11[var7];
+                    var7 = var10.bind(var1)(var7);
+                    var7 = var7.t;
+                    var7 = var7.V3Sq95;
+                    var5 = var8.bind(var9)(var7);
+case 230:
+                    _fun0049_ip = 206; continue _fun0049;
+case 226:
+                    var9 = _closure1_slot0;
+                    var10 = _closure1_slot3;
+                    var6 = 17;
+                    var7 = var10[var6];
+                    var7 = var9.bind(var1)(var7);
+                    var8 = var7.intl;
+                    var7 = var8.string;
+                    var6 = var10[var6];
+                    var6 = var9.bind(var1)(var6);
+                    var6 = var6.t;
+                    var6 = var6["2pFD8L"];
+                    var5 = var7.bind(var8)(var6);
+case 206:
+                    var2['title'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var33['onViewAllSelected'] = var45;
+            var36 = var40.bind(var4)(var36, var33);
+            var33 = new Array(4);
+            var33[0] = var36;
+            var40 = _closure1_slot19;
+            var36 = 67;
+            var36 = var44[var36];
+            var39 = var39.bind(var4)(var36);
+            var36 = {};
+            var36['items'] = var43;
+            var36['onAppSelected'] = var42;
+            var41 = function onViewAllSelected() {
+                _fun0051: for(var _fun0051_ip = 0; ; ) switch(_fun0051_ip) {
+case 0:
+                    var3 = _closure2_slot19;
+                    var2 = var3.find;
+                    var1 = function(arg1) {
+                        var1 = arg1;
+                        var2 = var1.type;
+                        var4 = _closure1_slot0;
+                        var3 = _closure1_slot3;
+                        var1 = 44;
+                        var3 = var3[var1];
+                        var1 = undefined;
+                        var1 = var4.bind(var1)(var3);
+                        var1 = var1.AppLauncherHomeListItemType;
+                        var1 = var1.VIEW_ALL;
+                        var1 = var2 === var1;
+                        return var1;
+                    };
+                    var3 = var2.bind(var3)(var1);
+                    var2 = null;
+                    var4 = var2 == var3;
+                    var1 = undefined;
+                    var7 = undefined;
+                    if(var4) { _fun0051_ip = 12; continue _fun0051 }
+case 27:
+                    var8 = var3.applications;
+                    var3 = var2 == var8;
+                    var7 = undefined;
+                    if(var3) { _fun0051_ip = 12; continue _fun0051 }
+case 113:
+                    var4 = var8.map;
+                    var3 = function(arg1) {
+                        var1 = arg1;
+                        return var1;
+                    };
+                    var7 = var4.bind(var8)(var3);
+case 12:
+                    if(!(var2 != var7)) { _fun0051_ip = 231; continue _fun0051 }
+case 232:
+                    var8 = _closure1_slot0;
+                    var9 = _closure1_slot3;
+                    var2 = 23;
+                    var2 = var9[var2];
+                    var4 = var8.bind(var1)(var2);
+                    var3 = var4.handleViewAllSelected;
+                    var2 = {};
+                    var10 = 29;
+                    var10 = var9[var10];
+                    var10 = var8.bind(var1)(var10);
+                    var10 = var10.ApplicationCommandTriggerLocations;
+                    var10 = var10.APP_LAUNCHER_HOME;
+                    var2['location'] = var10;
+                    var10 = _closure2_slot2;
+                    var2['navigation'] = var10;
+                    var6 = _closure2_slot0;
+                    var2['context'] = var6;
+                    var6 = 41;
+                    var6 = var9[var6];
+                    var6 = var8.bind(var1)(var6);
+                    var6 = var6.AppLauncherSectionName;
+                    var6 = var6.APPS_IN_THIS_SERVER;
+                    var2['sectionName'] = var6;
+                    var2['applications'] = var7;
+                    var6 = 49;
+                    var6 = var9[var6];
+                    var6 = var8.bind(var1)(var6);
+                    var6 = var6.SectionItemType;
+                    var6 = var6.APPS;
+                    var2['sectionItemType'] = var6;
+                    var6 = new Array(0);
+                    var2['commands'] = var6;
+                    var6 = var7.map;
+                    var5 = function(arg1) {
+                        var3 = _closure1_slot0;
+                        var2 = _closure1_slot3;
+                        var1 = 50;
+                        var2 = var2[var1];
+                        var1 = undefined;
+                        var3 = var3.bind(var1)(var2);
+                        var2 = var3.getApplicationCommandSection;
+                        var1 = arg1;
+                        var1 = var2.bind(var3)(var1);
+                        return var1;
+                    };
+                    var5 = var6.bind(var7)(var5);
+                    var2['sectionDescriptors'] = var5;
+                    var5 = 17;
+                    var6 = var9[var5];
+                    var6 = var8.bind(var1)(var6);
+                    var7 = var6.intl;
+                    var6 = var7.string;
+                    var5 = var9[var5];
+                    var5 = var8.bind(var1)(var5);
+                    var5 = var5.t;
+                    var5 = var5.oJyzCu;
+                    var5 = var6.bind(var7)(var5);
+                    var2['title'] = var5;
+                    var2 = var3.bind(var4)(var2);
+case 231:
+                    return var1;
+                }
+            };
+            var36['onViewAllSelected'] = var41;
+            var36 = var40.bind(var4)(var39, var36);
+            var33[1] = var36;
+            var36 = null;
+            if(!var38) { _fun0019_ip = 233; continue _fun0019 }
+case 234:
+            var36 = null;
+            if(!var37) { _fun0019_ip = 233; continue _fun0019 }
+case 235:
+            var39 = _closure1_slot19;
+            var38 = _closure1_slot1;
+            var40 = _closure1_slot3;
+            var37 = 68;
+            var37 = var40[var37];
+            var38 = var38.bind(var4)(var37);
+            var37 = {};
+            var36 = var39.bind(var4)(var38, var37);
+case 233:
+            var33[2] = var36;
+            var34 = null;
+            if(!var35) { _fun0019_ip = 236; continue _fun0019 }
+case 237:
+            var37 = _closure1_slot19;
+            var36 = _closure1_slot1;
+            var38 = _closure1_slot3;
+            var35 = 69;
+            var35 = var38[var35];
+            var36 = var36.bind(var4)(var35);
+            var35 = {};
+            var34 = var37.bind(var4)(var36, var35);
+case 236:
+            var33[3] = var34;
+            var30['children'] = var33;
+            var30 = var32.bind(var4)(var31, var30);
+            var6['ListHeaderComponent'] = var30;
+            var6['contentContainerStyle'] = var29;
+            var6['scrollIndicatorInsets'] = var28;
+            var6['renderItem'] = var27;
+            var6['getItemType'] = var26;
+            var6['data'] = var25;
+            var6['preserveScrollMomentum'] = var24;
+            var6['automaticallyAdjustsScrollIndicatorInsets'] = var23;
+            var24 = 'on-drag';
+            var6['keyboardDismissMode'] = var24;
+            var24 = 'always';
+            var6['keyboardShouldPersistTaps'] = var24;
+            var6['showsVerticalScrollIndicator'] = var23;
+            var6['viewabilityConfigCallbackPairs'] = var22;
+            var6['bottomViewabilityInsetRef'] = var21;
+            var22 = _closure1_slot0;
+            var21 = _closure1_slot3;
+            var21 = var21[var13];
+            var21 = var22.bind(var4)(var21);
+            var21 = var21.AppLauncherEntrypoint;
+            var21 = var21.VOICE;
+            if(!(var8 === var21)) { _fun0019_ip = 238; continue _fun0019 }
+case 239:
+            var20 = var14.scrollerRef;
+case 238:
+            var6['ref'] = var20;
+            var6['onScroll'] = var17;
+            var20 = var14.onScroll;
+            var6['animatedOnScroll'] = var20;
+            var20 = var14.gestureRef;
+            var6['simultaneousHandlers'] = var20;
+            var14 = var14.animatedProps;
+            var6['animatedProps'] = var14;
+            var6 = var15.bind(var4)(var9, var6);
+            _fun0019_ip = 240; continue _fun0019;
+case 221:
+            var14 = _closure1_slot0;
+            var20 = _closure1_slot3;
+            var9 = 65;
+            var9 = var20[var9];
+            var9 = var14.bind(var4)(var9);
+            var14 = var9.SearchLocalAndGlobalContentView;
+            var9 = {};
+            var9['ref'] = var19;
+            var9['context'] = var18;
+            var9['onScroll'] = var17;
+            var9['onSend'] = var16;
+            var9['entrypoint'] = var8;
+            var6 = var15.bind(var4)(var14, var9);
+case 240:
+            var5[2] = var6;
+            var9 = _closure1_slot0;
+            var6 = _closure1_slot3;
+            var6 = var6[var13];
+            var6 = var9.bind(var4)(var6);
+            var6 = var6.AppLauncherEntrypoint;
+            var6 = var6.TEXT;
+            var6 = var8 === var6;
+            if(!var6) { _fun0019_ip = 241; continue _fun0019 }
+case 242:
+            var9 = _closure1_slot19;
+            var8 = _closure1_slot1;
+            var13 = _closure1_slot3;
+            var7 = 70;
+            var7 = var13[var7];
+            var8 = var8.bind(var4)(var7);
+            var7 = {};
+            var7['windowDimensions'] = var12;
+            var7['visible'] = var11;
+            var7['markAsDismissed'] = var10;
+            var6 = var9.bind(var4)(var8, var7);
+case 241:
+            var5[3] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['default'] = var4;
+    var3['BaseAppRow'] = var2;
+    return var1;
+})();

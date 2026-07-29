@@ -1,0 +1,264 @@
+// app/modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var12 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var12;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var4 = var4.bind(var1)(var7);
+    var4 = 1;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.View;
+    var _closure1_slot3 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var10 = var4.HEADER_CORNER_RADIUS;
+    var13 = var4.MIDNIGHT_BORDER_WIDTH;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.ThemeTypes;
+    var _closure1_slot4 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.jsx;
+    var _closure1_slot5 = var7;
+    var4 = var4.jsxs;
+    var _closure1_slot6 = var4;
+    var4 = 5;
+    var4 = var6[var4];
+    var8 = var5.bind(var1)(var4);
+    var7 = var8.createStyles;
+    var4 = {};
+    var9 = {'position': 'absolute', 'zIndex': 1, 'top': 0, 'width': '100%'};
+    var11 = 6;
+    var14 = var6[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.colors;
+    var14 = var14.BACKGROUND_BASE_LOW;
+    var9['backgroundColor'] = var14;
+    var4['container'] = var9;
+    var9 = {};
+    var14 = var6[var11];
+    var14 = var12.bind(var1)(var14);
+    var14 = var14.colors;
+    var14 = var14.APP_FRAME_BORDER;
+    var9['borderLeftColor'] = var14;
+    var9['borderLeftWidth'] = var13;
+    var4['midnightContainer'] = var9;
+    var9 = {};
+    var13 = var6[var11];
+    var13 = var12.bind(var1)(var13);
+    var13 = var13.colors;
+    var13 = var13.APP_FRAME_BORDER;
+    var9['borderLeftColor'] = var13;
+    var11 = var6[var11];
+    var11 = var12.bind(var1)(var11);
+    var11 = var11.modules;
+    var11 = var11.mobile;
+    var11 = var11.CHANNEL_DRAWER_DIVIDER_WIDTH;
+    var9['borderLeftWidth'] = var11;
+    var4['splitDivider'] = var9;
+    var9 = {};
+    var9['height'] = var10;
+    var4['additionalHeight'] = var9;
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot7 = var4;
+    var4 = {};
+    var7 = 'function ChannelScreenAnimatedFrameTsx1(){const{translateX,maxWidth,isChatLockedOpen,withTiming,STANDARD_EASING,SIDE_PANEL_CLOSE_DURATION_MS,SIDE_PANEL_OPEN_DURATION_MS}=this.__closure;const hide=translateX.get()===maxWidth||isChatLockedOpen;return{opacity:withTiming(hide?0:1,{easing:STANDARD_EASING,duration:hide?SIDE_PANEL_CLOSE_DURATION_MS:SIDE_PANEL_OPEN_DURATION_MS})};}';
+    var4['code'] = var7;
+    var _closure1_slot8 = var4;
+    var4 = 15;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function ChannelScreenAnimatedFrame(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var1 = arg1;
+            var17 = var1.translateX;
+            var _closure2_slot0 = var17;
+            var16 = var1.maxWidth;
+            var _closure2_slot1 = var16;
+            var15 = var1.isChatLockedOpen;
+            var _closure2_slot2 = var15;
+            var1 = _closure1_slot7;
+            var4 = undefined;
+            var9 = var1.bind(var4)();
+            var2 = _closure1_slot1;
+            var5 = _closure1_slot2;
+            var1 = 7;
+            var1 = var5[var1];
+            var1 = var2.bind(var4)(var1);
+            var13 = var1.bind(var4)();
+            var1 = _closure1_slot4;
+            var12 = var1.MIDNIGHT;
+            var8 = _closure1_slot0;
+            var1 = 8;
+            var1 = var5[var1];
+            var10 = var8.bind(var4)(var1);
+            var7 = var10.useMobileVisualRefreshConfig;
+            var1 = {};
+            var11 = 'ChannelScreenAnimatedFrame';
+            var1['location'] = var11;
+            var1 = var7.bind(var10)(var1);
+            var11 = var1.chatInputFloating;
+            var1 = 9;
+            var7 = var5[var1];
+            var10 = var8.bind(var4)(var7);
+            var7 = var10.useAnimatedStyle;
+            var3 = function E() {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    var3 = _closure2_slot0;
+                    var2 = var3.get;
+                    var3 = var2.bind(var3)();
+                    var2 = _closure2_slot1;
+                    var6 = var3 === var2;
+                    if(var6) { _fun0002_ip = 2; continue _fun0002 }
+case 3:
+                    var6 = _closure2_slot2;
+case 2:
+                    var1 = {};
+                    var3 = _closure1_slot0;
+                    var4 = _closure1_slot2;
+                    var2 = 10;
+                    var2 = var4[var2];
+                    var9 = undefined;
+                    var5 = var3.bind(var9)(var2);
+                    var4 = var5.withTiming;
+                    var3 = 1;
+                    if(!var6) { _fun0002_ip = 4; continue _fun0002 }
+case 5:
+                    var3 = 0;
+case 4:
+                    var2 = {};
+                    var10 = _closure1_slot0;
+                    var11 = _closure1_slot2;
+                    var8 = 11;
+                    var8 = var11[var8];
+                    var8 = var10.bind(var9)(var8);
+                    var8 = var8.STANDARD_EASING;
+                    var2['easing'] = var8;
+                    var8 = _closure1_slot0;
+                    var10 = _closure1_slot2;
+                    var7 = 12;
+                    var7 = var10[var7];
+                    var7 = var8.bind(var9)(var7);
+                    if(var6) { _fun0002_ip = 6; continue _fun0002 }
+case 7:
+                    var6 = var7.SIDE_PANEL_OPEN_DURATION_MS;
+                    _fun0002_ip = 8; continue _fun0002;
+case 6:
+                    var6 = var7.SIDE_PANEL_CLOSE_DURATION_MS;
+case 8:
+                    var2['duration'] = var6;
+                    var2 = var4.bind(var5)(var3, var2);
+                    var1['opacity'] = var2;
+                    return var1;
+                }
+            };
+            var14 = {};
+            var14['translateX'] = var17;
+            var14['maxWidth'] = var16;
+            var14['isChatLockedOpen'] = var15;
+            var15 = 10;
+            var15 = var5[var15];
+            var15 = var8.bind(var4)(var15);
+            var15 = var15.withTiming;
+            var14['withTiming'] = var15;
+            var15 = 11;
+            var15 = var5[var15];
+            var15 = var8.bind(var4)(var15);
+            var15 = var15.STANDARD_EASING;
+            var14['STANDARD_EASING'] = var15;
+            var15 = 12;
+            var16 = var5[var15];
+            var16 = var8.bind(var4)(var16);
+            var16 = var16.SIDE_PANEL_CLOSE_DURATION_MS;
+            var14['SIDE_PANEL_CLOSE_DURATION_MS'] = var16;
+            var15 = var5[var15];
+            var15 = var8.bind(var4)(var15);
+            var15 = var15.SIDE_PANEL_OPEN_DURATION_MS;
+            var14['SIDE_PANEL_OPEN_DURATION_MS'] = var15;
+            var3['__closure'] = var14;
+            var14 = 9063010717249.0;
+            var3['__workletHash'] = var14;
+            var14 = _closure1_slot8;
+            var3['__initData'] = var14;
+            var7 = var7.bind(var10)(var3);
+            var3 = 13;
+            var3 = var5[var3];
+            var8 = var8.bind(var4)(var3);
+            var3 = var8.useGradientTop;
+            var8 = var3.bind(var8)();
+            var3 = _closure1_slot6;
+            var1 = var5[var1];
+            var1 = var2.bind(var4)(var1);
+            var2 = var1.View;
+            var1 = {};
+            var5 = 'none';
+            var1['pointerEvents'] = var5;
+            var10 = var9.container;
+            var5 = new Array(5);
+            var5[0] = var10;
+            var10 = var9.splitDivider;
+            var5[1] = var10;
+            var10 = undefined;
+            if(!(var13 === var12)) { _fun0001_ip = 9; continue _fun0001 }
+case 10:
+            var10 = undefined;
+            if(var11) { _fun0001_ip = 9; continue _fun0001 }
+case 11:
+            var10 = var9.midnightContainer;
+case 9:
+            var5[2] = var10;
+            var5[3] = var8;
+            var5[4] = var7;
+            var1['style'] = var5;
+            var8 = _closure1_slot5;
+            var7 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var5 = 14;
+            var5 = var10[var5];
+            var5 = var7.bind(var4)(var5);
+            var7 = var5.SafeAreaPaddingView;
+            var5 = {};
+            var10 = true;
+            var5['top'] = var10;
+            var7 = var8.bind(var4)(var7, var5);
+            var5 = new Array(2);
+            var5[0] = var7;
+            var7 = _closure1_slot3;
+            var6 = {};
+            var9 = var9.additionalHeight;
+            var6['style'] = var9;
+            var6 = var8.bind(var4)(var7, var6);
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['default'] = var2;
+    return var1;
+})();

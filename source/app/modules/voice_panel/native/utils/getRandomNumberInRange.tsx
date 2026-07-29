@@ -1,0 +1,43 @@
+// app/modules/voice_panel/native/utils/getRandomNumberInRange.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var3 = exports;
+    var1 = global;
+    var5 = var1.Object;
+    var4 = var5.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var4.bind(var5)(var3, var1, var2);
+    var1 = {};
+    var2 = 'function getRandomNumberInRange_getRandomNumberInRangeTsx1(min,max){return Math.random()*(max-min)+min;}';
+    var1['code'] = var2;
+    var2 = function n(arg1, arg2) {
+        var2 = arg1;
+        var1 = global;
+        var3 = var1.Math;
+        var1 = var3.random;
+        var3 = var1.bind(var3)();
+        var1 = arg2;
+        var1 = var1 - var2;
+        var1 = var3 * var1;
+        var1 = var1 + var2;
+        return var1;
+    };
+    var4 = {};
+    var2['__closure'] = var4;
+    var4 = 3489295446061.0;
+    var2['__workletHash'] = var4;
+    var2['__initData'] = var1;
+    var4 = dependencyMap;
+    var1 = 0;
+    var5 = var4[var1];
+    var4 = require;
+    var1 = undefined;
+    var6 = var4.bind(var1)(var5);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/voice_panel/native/utils/getRandomNumberInRange.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

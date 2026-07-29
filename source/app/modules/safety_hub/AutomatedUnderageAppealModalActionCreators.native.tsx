@@ -1,0 +1,253 @@
+// app/modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var7 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var7;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var9 = var1.Object;
+    var8 = var9.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var2);
+    var1 = 0;
+    var2 = var6[var1];
+    var1 = undefined;
+    var2 = var7.bind(var1)(var2);
+    var _closure1_slot3 = var2;
+    var2 = 1;
+    var2 = var6[var2];
+    var2 = var5.bind(var1)(var2);
+    var7 = var2.AGE_APPEAL_ACTION_SHEET_NAME;
+    var _closure1_slot4 = var7;
+    var2 = var2.AGE_CHECK_POLL_DELAY_MS;
+    var _closure1_slot5 = var2;
+    var2 = 2;
+    var2 = var6[var2];
+    var2 = var5.bind(var1)(var2);
+    var2 = var2.AGE_VERIFICATION_GET_STARTED_MODAL_KEY;
+    var _closure1_slot6 = var2;
+    var2 = 3;
+    var2 = var6[var2];
+    var2 = var5.bind(var1)(var2);
+    var2 = var2.jsx;
+    var _closure1_slot7 = var2;
+    var2 = {};
+    var7 = function open(arg1, arg2) {
+        var5 = _closure1_slot1;
+        var3 = _closure1_slot2;
+        var1 = 4;
+        var4 = var3[var1];
+        var1 = undefined;
+        var7 = var5.bind(var1)(var4);
+        var6 = var7.dispatch;
+        var4 = {};
+        var8 = 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN';
+        var4['type'] = var8;
+        var4 = var6.bind(var7)(var4);
+        var4 = 5;
+        var4 = var3[var4];
+        var6 = var5.bind(var1)(var4);
+        var5 = var6.openLazy;
+        var7 = _closure1_slot0;
+        var4 = 7;
+        var4 = var3[var4];
+        var7 = var7.bind(var1)(var4);
+        var4 = 6;
+        var4 = var3[var4];
+        var3 = var3.paths;
+        var4 = var7.bind(var1)(var4, var3);
+        var3 = _closure1_slot4;
+        var2 = {};
+        var7 = arg1;
+        var2['classificationId'] = var7;
+        var7 = arg2;
+        var2['onClose'] = var7;
+        var2 = var5.bind(var6)(var4, var3, var2);
+        return var1;
+    };
+    var2['open'] = var7;
+    var7 = function openV2(arg1, arg2) {
+        var7 = arg2;
+        var1 = arg1;
+        var _closure2_slot0 = var1;
+        var _closure2_slot1 = var7;
+        var5 = _closure1_slot1;
+        var6 = _closure1_slot2;
+        var1 = 4;
+        var4 = var6[var1];
+        var1 = undefined;
+        var9 = var5.bind(var1)(var4);
+        var8 = var9.dispatch;
+        var4 = {};
+        var10 = 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN';
+        var4['type'] = var10;
+        var4 = var8.bind(var9)(var4);
+        var4 = 8;
+        var4 = var6[var4];
+        var6 = var5.bind(var1)(var4);
+        var5 = var6.pushLazy;
+        var4 = _closure1_slot3;
+        var3 = function* () {
+            var1 = function* anon_0_() {
+                _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+                    StartGenerator();
+                    ResumeGenerator(result_out_reg=0, return_bool_out_reg=1);
+                    if(var2) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+                    var6 = undefined;
+                    var _closure4_slot0 = var6;
+                    var5 = _closure1_slot0;
+                    var2 = _closure1_slot2;
+                    var4 = 7;
+                    var4 = var2[var4];
+                    var5 = var5.bind(var6)(var4);
+                    var4 = 9;
+                    var4 = var2[var4];
+                    var2 = var2.paths;
+                    var2 = var5.bind(var6)(var4, var2);
+                    SaveGenerator(address=60);
+case 4:
+                    return var2;
+case 5:
+                    ResumeGenerator(result_out_reg=1, return_bool_out_reg=3);
+                    if(var4) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+                    var4 = var2.default;
+                    _closure4_slot0 = var4;
+                    var3 = function() {
+                        var4 = _closure1_slot7;
+                        var3 = _closure4_slot0;
+                        var2 = {};
+                        var5 = _closure2_slot0;
+                        var2['classificationId'] = var5;
+                        var6 = _closure1_slot0;
+                        var5 = _closure1_slot2;
+                        var1 = 10;
+                        var5 = var5[var1];
+                        var1 = undefined;
+                        var5 = var6.bind(var1)(var5);
+                        var5 = var5.AgeVerificationModalEntryPoint;
+                        var5 = var5.AUTOMATED_UNDERAGE_APPEALS;
+                        var2['entryPoint'] = var5;
+                        var5 = false;
+                        var2['isRetry'] = var5;
+                        var5 = true;
+                        var2['useEmbeddedMethods'] = var5;
+                        var5 = function onComplete() {
+                            _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                                var3 = _closure2_slot1;
+                                var4 = _closure1_slot8;
+                                var2 = var4.success;
+                                var2 = var2.bind(var4)();
+                                var2 = null;
+                                if(!(var2 != var3)) { _fun0002_ip = 8; continue _fun0002 }
+case 9:
+                                var2 = undefined;
+                                var2 = var3.bind(var2)();
+case 8:
+                                var2 = _closure1_slot8;
+                                var1 = var2.start_verification_check;
+                                var1 = var1.bind(var2)();
+                                var1 = undefined;
+                                return var1;
+                            }
+                        };
+                        var2['onComplete'] = var5;
+                        var1 = var4.bind(var1)(var3, var2);
+                        return var1;
+                    };
+                    return var3;
+case 6:
+                    return var2;
+case 2:
+                    return var1;
+                }
+            };
+            return var1;
+        };
+        var4 = var4.bind(var1)(var3);
+        var3 = {};
+        var3['onClose'] = var7;
+        var2 = _closure1_slot6;
+        var2 = var5.bind(var6)(var4, var3, var2);
+        return var1;
+    };
+    var2['openV2'] = var7;
+    var7 = function close() {
+        var3 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 4;
+        var2 = var2[var1];
+        var1 = undefined;
+        var4 = var3.bind(var1)(var2);
+        var3 = var4.dispatch;
+        var2 = {};
+        var5 = 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE';
+        var2['type'] = var5;
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var2['close'] = var7;
+    var7 = function success() {
+        var3 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 4;
+        var2 = var2[var1];
+        var1 = undefined;
+        var4 = var3.bind(var1)(var2);
+        var3 = var4.dispatch;
+        var2 = {};
+        var5 = 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS';
+        var2['type'] = var5;
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var2['success'] = var7;
+    var7 = function start_verification_check() {
+        var4 = _closure1_slot1;
+        var3 = _closure1_slot2;
+        var1 = 4;
+        var3 = var3[var1];
+        var1 = undefined;
+        var5 = var4.bind(var1)(var3);
+        var4 = var5.dispatch;
+        var3 = {};
+        var6 = 'SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL';
+        var3['type'] = var6;
+        var3 = var4.bind(var5)(var3);
+        var3 = global;
+        var4 = var3.setTimeout;
+        var3 = _closure1_slot5;
+        var2 = function() {
+            var3 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var1 = 11;
+            var2 = var2[var1];
+            var1 = undefined;
+            var2 = var3.bind(var1)(var2);
+            var1 = var2.checkSuspendedUserAgeVerification;
+            var1 = var1.bind(var2)();
+            return var1;
+        };
+        var2 = var4.bind(var1)(var2, var3);
+        return var1;
+    };
+    var2['start_verification_check'] = var7;
+    var _closure1_slot8 = var2;
+    var4 = 12;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/safety_hub/AutomatedUnderageAppealModalActionCreators.native.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

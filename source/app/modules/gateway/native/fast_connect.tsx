@@ -1,0 +1,698 @@
+// app/modules/gateway/native/fast_connect.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var6 = require;
+    var9 = metroImportDefault;
+    var3 = exports;
+    var7 = dependencyMap;
+    var _closure1_slot0 = var6;
+    var _closure1_slot1 = var9;
+    var1 = metroImportAll;
+    var _closure1_slot2 = var1;
+    var _closure1_slot3 = var7;
+    var1 = function prepareIdentify(arg1, arg2, arg3) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var9 = arg1;
+            var10 = arg2;
+            var4 = _closure1_slot7;
+            var3 = var4.info;
+            var1 = _closure1_slot5;
+            var2 = var1.currentState;
+            var1 = 'prepareIdentify: app state: ';
+            var1 = var3.bind(var4)(var1, var2);
+            var3 = _closure1_slot0;
+            var1 = _closure1_slot3;
+            var11 = 4;
+            var1 = var1[var11];
+            var2 = undefined;
+            var3 = var3.bind(var2)(var1);
+            var1 = var3.isAndroid;
+            var1 = var1.bind(var3)();
+            if(var1) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var1 = _closure1_slot4;
+            var1 = var1.DCDFastConnectManager;
+            var6 = var1.analyticsInstallation;
+            _fun0001_ip = 4; continue _fun0001;
+case 2:
+            var3 = _closure1_slot1;
+            var4 = _closure1_slot3;
+            var1 = 5;
+            var1 = var4[var1];
+            var3 = var3.bind(var2)(var1);
+            var1 = var3.getConstants;
+            var1 = var1.bind(var3)();
+            var3 = var1.analyticsInstallation;
+            var1 = null;
+            var4 = var1 != var3;
+            if(!var4) { _fun0001_ip = 5; continue _fun0001 }
+case 6:
+            var1 = var3;
+case 5:
+            var6 = var1;
+case 4:
+            var1 = {};
+            var3 = arg3;
+            var1['token'] = var3;
+            var3 = {};
+            var5 = _closure1_slot2;
+            var7 = _closure1_slot3;
+            var4 = 6;
+            var4 = var7[var4];
+            var12 = var5.bind(var2)(var4);
+            var4 = var12.getSuperProperties;
+            var17 = var4.bind(var12)();
+            var18 = var3;
+            var4 = copyDataProperties(var18, var17);
+            var4 = _closure1_slot5;
+            var12 = var4.currentState;
+            var4 = 'client_app_state';
+            var3[3] = var12;
+            var12 = true;
+            var4 = 'is_fast_connect';
+            var3[3] = var12;
+            var4 = 7;
+            var4 = var7[var4];
+            var5 = var5.bind(var2)(var4);
+            var4 = var5.describeConnectionReasons;
+            var5 = var4.bind(var5)();
+            var4 = 'gateway_connect_reasons';
+            var3[3] = var5;
+            var7 = null;
+            if(!(var7 == var6)) { _fun0001_ip = 7; continue _fun0001 }
+case 8:
+            var4 = {};
+            _fun0001_ip = 9; continue _fun0001;
+case 7:
+            var5 = {};
+            var5['installation_id'] = var6;
+            var4 = var5;
+case 9:
+            var18 = var3;
+            var17 = var4;
+            var4 = copyDataProperties(var18, var17);
+            var1['properties'] = var3;
+            var12 = _closure1_slot0;
+            var6 = _closure1_slot3;
+            var3 = 8;
+            var3 = var6[var3];
+            var5 = var12.bind(var2)(var3);
+            var4 = var5.getClientCapabilities;
+            var3 = {};
+            var6 = var6[var11];
+            var12 = var12.bind(var2)(var6);
+            var6 = var12.isAndroid;
+            var6 = var6.bind(var12)();
+            if(var6) { _fun0001_ip = 10; continue _fun0001 }
+case 11:
+            var6 = _closure1_slot4;
+            var6 = var6.DCDFastConnectManager;
+            var12 = var6.useChannelObfuscation;
+            var6 = var7 != var12;
+            if(!var6) { _fun0001_ip = 12; continue _fun0001 }
+case 13:
+            var6 = var12;
+case 12:
+            _fun0001_ip = 14; continue _fun0001;
+case 10:
+            var13 = _closure1_slot1;
+            var14 = _closure1_slot3;
+            var12 = 5;
+            var12 = var14[var12];
+            var13 = var13.bind(var2)(var12);
+            var12 = var13.getConstants;
+            var12 = var12.bind(var13)();
+            var13 = var12.useChannelObfuscation;
+            var12 = var7 != var13;
+            if(!var12) { _fun0001_ip = 15; continue _fun0001 }
+case 16:
+            var12 = var13;
+case 15:
+            var6 = var12;
+case 14:
+            var3['useChannelObfuscation'] = var6;
+            var3 = var4.bind(var5)(var3);
+            var1['capabilities'] = var3;
+            var3 = {};
+            var4 = {};
+            var3['guild_versions'] = var4;
+            var1['client_state'] = var3;
+            var3 = global;
+            var6 = var3.JSON;
+            var5 = var6.stringify;
+            var4 = {};
+            var12 = 2;
+            var4['op'] = var12;
+            var4['d'] = var1;
+            var6 = var5.bind(var6)(var4);
+            var5 = _closure1_slot0;
+            var4 = _closure1_slot3;
+            var4 = var4[var11];
+            var5 = var5.bind(var2)(var4);
+            var4 = var5.isAndroid;
+            var4 = var4.bind(var5)();
+            if(var4) { _fun0001_ip = 17; continue _fun0001 }
+case 18:
+            var4 = _closure1_slot4;
+            var11 = var4.DCDFastConnectManager;
+            var5 = var11.prepareIdentify;
+            var12 = _closure1_slot0;
+            var13 = _closure1_slot3;
+            var4 = 9;
+            var4 = var13[var4];
+            var12 = var12.bind(var2)(var4);
+            var4 = var12.isCacheEnabled;
+            var12 = var4.bind(var12)();
+            var4 = null;
+            if(!var12) { _fun0001_ip = 19; continue _fun0001 }
+case 20:
+            var4 = _closure1_slot6;
+case 19:
+            var19 = var11;
+            var18 = var10;
+            var17 = var6;
+            var16 = var9;
+            var15 = var4;
+            var4 = var19[var5](var18, var17, var16, var15, var14);
+            _fun0001_ip = 21; continue _fun0001;
+case 17:
+            var5 = var7 == var10;
+            var4 = undefined;
+            if(var5) { _fun0001_ip = 22; continue _fun0001 }
+case 23:
+            var5 = var10.toString;
+            var4 = var5.bind(var10)();
+case 22:
+            var5 = var7 != var4;
+            var7 = null;
+            if(!var5) { _fun0001_ip = 24; continue _fun0001 }
+case 25:
+            var7 = var4;
+case 24:
+            var5 = _closure1_slot1;
+            var11 = _closure1_slot3;
+            var4 = 5;
+            var4 = var11[var4];
+            var5 = var5.bind(var2)(var4);
+            var4 = var5.prepareIdentify;
+            var3 = var3.parseFloat;
+            var3 = var3.bind(var2)(var9);
+            var10 = _closure1_slot0;
+            var9 = 9;
+            var9 = var11[var9];
+            var10 = var10.bind(var2)(var9);
+            var9 = var10.isCacheEnabled;
+            var9 = var9.bind(var10)();
+            var2 = undefined;
+            if(!var9) { _fun0001_ip = 26; continue _fun0001 }
+case 27:
+            var2 = _closure1_slot6;
+case 26:
+            var19 = var5;
+            var18 = var7;
+            var17 = var6;
+            var16 = var3;
+            var15 = var2;
+            var2 = var19[var4](var18, var17, var16, var15, var14);
+case 21:
+            var1 = var1.client_state;
+            return var1;
+        }
+    };
+    var _closure1_slot9 = var1;
+    var4 = function createFastConnectSocket() {
+        _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+            var1 = global;
+            var1 = var1.window;
+            var2 = var1.WebSocket;
+            var1 = null;
+            if(!(var1 == var2)) { _fun0002_ip = 28; continue _fun0002 }
+case 29:
+            var3 = _closure1_slot7;
+            var2 = var3.log;
+            var1 = 'Skipping fast_connect because `window.WebSocket` does not exist.';
+            var1 = var2.bind(var3)(var1);
+            _fun0002_ip = 30; continue _fun0002;
+case 28:
+            var2 = function newWebSocket() {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var4 = _closure1_slot0;
+                    var1 = _closure1_slot3;
+                    var11 = 4;
+                    var2 = var1[var11];
+                    var1 = undefined;
+                    var4 = var4.bind(var1)(var2);
+                    var2 = var4.isAndroid;
+                    var2 = var2.bind(var4)();
+                    if(var2) { _fun0003_ip = 31; continue _fun0003 }
+case 32:
+                    var2 = _closure1_slot4;
+                    var2 = var2.DCDCompressionManager;
+                    var8 = var2.supportsZstd;
+                    _fun0003_ip = 2; continue _fun0003;
+case 31:
+                    var4 = _closure1_slot1;
+                    var6 = _closure1_slot3;
+                    var2 = 10;
+                    var2 = var6[var2];
+                    var4 = var4.bind(var1)(var2);
+                    var2 = var4.getConstants;
+                    var2 = var2.bind(var4)();
+                    var8 = var2.supportsZstd;
+case 2:
+                    var13 = 'zlib-stream';
+                    if(!var8) { _fun0003_ip = 33; continue _fun0003 }
+case 34:
+                    var13 = 'zstd-stream';
+case 33:
+                    var4 = global;
+                    var2 = var4.window;
+                    var2 = var2.GLOBAL_ENV;
+                    var12 = var2.GATEWAY_ALT_ENDPOINT;
+                    var6 = _closure1_slot1;
+                    var7 = _closure1_slot3;
+                    var2 = 11;
+                    var2 = var7[var2];
+                    var2 = var6.bind(var1)(var2);
+                    var2 = var2.bind(var1)();
+                    if(!var2) { _fun0003_ip = 35; continue _fun0003 }
+case 36:
+                    var2 = null;
+                    if(!(var2 == var12)) { _fun0003_ip = 37; continue _fun0003 }
+case 35:
+                    var2 = var4.window;
+                    var2 = var2.GLOBAL_ENV;
+                    var12 = var2.GATEWAY_ENDPOINT;
+case 37:
+                    var2 = var4.window;
+                    var2 = var2.GLOBAL_ENV;
+                    var16 = var2.API_VERSION;
+                    var2 = var4.HermesInternal;
+                    var9 = var2.concat;
+                    var19 = '';
+                    var17 = '/?encoding=json&v=';
+                    var15 = '&compress=';
+                    var18 = var12;
+                    var14 = var13;
+                    var7 = var19[var9](var18, var17, var16, var15, var14, var13);
+                    var9 = _closure1_slot7;
+                    var6 = var9.log;
+                    var2 = '[FAST CONNECT] ';
+                    var2 = var2 + var7;
+                    var2 = var6.bind(var9)(var2);
+                    var6 = var4.Date;
+                    var2 = var6.now;
+                    var2 = var2.bind(var6)();
+                    var _closure3_slot0 = var2;
+                    var6 = _closure1_slot1;
+                    var9 = _closure1_slot3;
+                    var2 = 12;
+                    var2 = var9[var2];
+                    var2 = var6.bind(var1)(var2);
+                    var2 = var2.bind(var1)(var7);
+                    var9 = var4.parseFloat;
+                    var6 = var2._socketId;
+                    var9 = var9.bind(var1)(var6);
+                    var6 = var4.isNaN;
+                    var6 = var6.bind(var1)(var9);
+                    if(var6) { _fun0003_ip = 38; continue _fun0003 }
+case 39:
+                    var10 = _closure1_slot0;
+                    var6 = _closure1_slot3;
+                    var6 = var6[var11];
+                    var10 = var10.bind(var1)(var6);
+                    var6 = var10.isAndroid;
+                    var6 = var6.bind(var10)();
+                    if(var8) { _fun0003_ip = 40; continue _fun0003 }
+case 12:
+                    if(var6) { _fun0003_ip = 41; continue _fun0003 }
+case 42:
+                    var8 = _closure1_slot4;
+                    var10 = var8.DCDCompressionManager;
+                    var8 = var10.enableZlibStreamSupport;
+                    var8 = var8.bind(var10)(var9);
+                    _fun0003_ip = 43; continue _fun0003;
+case 41:
+                    var10 = _closure1_slot1;
+                    var11 = _closure1_slot3;
+                    var8 = 10;
+                    var8 = var11[var8];
+                    var10 = var10.bind(var1)(var8);
+                    var8 = var10.enableZlibStreamSupport;
+                    var8 = var8.bind(var10)(var9);
+                    _fun0003_ip = 43; continue _fun0003;
+case 40:
+                    if(var6) { _fun0003_ip = 44; continue _fun0003 }
+case 45:
+                    var6 = _closure1_slot4;
+                    var10 = var6.DCDCompressionManager;
+                    var8 = var10.enableZstdStreamSupport;
+                    var6 = 0;
+                    var6 = var8.bind(var10)(var9, var6);
+                    _fun0003_ip = 43; continue _fun0003;
+case 44:
+                    var8 = _closure1_slot1;
+                    var10 = _closure1_slot3;
+                    var6 = 10;
+                    var6 = var10[var6];
+                    var8 = var8.bind(var1)(var6);
+                    var6 = var8.enableZstdStreamSupport;
+                    var6 = var6.bind(var8)(var9);
+case 43:
+                    var6 = {'open': false, 'gateway': null, 'identify': false, 'messages': null, 'clientState': null, 'userId': null};
+                    var6['gateway'] = var7;
+                    var7 = new Array(0);
+                    var6['messages'] = var7;
+                    var _closure3_slot1 = var6;
+                    var7 = function() {
+                        var4 = _closure1_slot1;
+                        var3 = _closure1_slot3;
+                        var1 = 13;
+                        var3 = var3[var1];
+                        var1 = undefined;
+                        var6 = var4.bind(var1)(var3);
+                        var5 = var6.mark;
+                        var4 = '🌐';
+                        var3 = 'Fastconnect socket opened';
+                        var3 = var5.bind(var6)(var4, var3);
+                        var5 = _closure1_slot7;
+                        var4 = var5.log;
+                        var3 = global;
+                        var6 = var3.Date;
+                        var2 = var6.now;
+                        var7 = var2.bind(var6)();
+                        var6 = _closure3_slot0;
+                        var9 = var7 - var6;
+                        var6 = _closure3_slot1;
+                        var8 = var6.identify;
+                        var3 = var3.HermesInternal;
+                        var7 = var3.concat;
+                        var6 = 'connected and identified in ';
+                        var3 = 'ms didIdentify:';
+                        var3 = var7.bind(var6)(var9, var3, var8);
+                        var3 = var4.bind(var5)(var3);
+                        var3 = _closure3_slot1;
+                        var2 = true;
+                        var3['open'] = var2;
+                        return var1;
+                    };
+                    var2['onopen'] = var7;
+                    var7 = function() {
+                        var3 = _closure1_slot1;
+                        var2 = _closure1_slot3;
+                        var1 = 13;
+                        var2 = var2[var1];
+                        var1 = undefined;
+                        var5 = var3.bind(var1)(var2);
+                        var4 = var5.mark;
+                        var3 = '🌐';
+                        var2 = 'Fastconnect socket close';
+                        var2 = var4.bind(var5)(var3, var2);
+                        var2 = global;
+                        var3 = var2.window;
+                        var2 = null;
+                        var3['_ws'] = var2;
+                        return var1;
+                    };
+                    var2['onerror'] = var7;
+                    var2['onclose'] = var7;
+                    var5 = function(arg1) {
+                        var3 = _closure1_slot1;
+                        var2 = _closure1_slot3;
+                        var1 = 13;
+                        var2 = var2[var1];
+                        var1 = undefined;
+                        var5 = var3.bind(var1)(var2);
+                        var4 = var5.mark;
+                        var3 = '🌐';
+                        var2 = 'Fastconnect socket message';
+                        var2 = var4.bind(var5)(var3, var2);
+                        var2 = _closure3_slot1;
+                        var4 = var2.messages;
+                        var3 = var4.push;
+                        var2 = arg1;
+                        var2 = var3.bind(var4)(var2);
+                        return var1;
+                    };
+                    var2['onmessage'] = var5;
+                    var5 = var4.window;
+                    var4 = {};
+                    var4['ws'] = var2;
+                    var4['state'] = var6;
+                    var5['_ws'] = var4;
+                    var5 = _closure1_slot1;
+                    var6 = _closure1_slot3;
+                    var4 = 13;
+                    var4 = var6[var4];
+                    var7 = var5.bind(var1)(var4);
+                    var6 = var7.mark;
+                    var5 = '🌐';
+                    var4 = 'Fastconnect socket created';
+                    var4 = var6.bind(var7)(var5, var4);
+                    _fun0003_ip = 46; continue _fun0003;
+case 38:
+                    var5 = _closure1_slot7;
+                    var4 = var5.log;
+                    var3 = var2._socketId;
+                    var2 = '[FAST CONNECT] Unable to create socketId from NaN value ';
+                    var2 = var4.bind(var5)(var2, var3);
+case 46:
+                    return var1;
+                }
+            };
+            var1 = undefined;
+            var1 = var2.bind(var1)();
+case 30:
+            var1 = undefined;
+            return var1;
+        }
+    };
+    var1 = global;
+    var10 = var1.Object;
+    var8 = var10.defineProperty;
+    var5 = {};
+    var1 = true;
+    var5['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var10)(var3, var1, var5);
+    var1 = 0;
+    var5 = var7[var1];
+    var1 = undefined;
+    var5 = var6.bind(var1)(var5);
+    var5 = 1;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var8 = var5.NativeModules;
+    var _closure1_slot4 = var8;
+    var5 = var5.AppState;
+    var _closure1_slot5 = var5;
+    var8 = 2;
+    var8 = var7[var8];
+    var8 = var6.bind(var1)(var8);
+    var8 = var8.VERSION_TO_FORCE_RESYNCING_ALL_DATA;
+    var _closure1_slot6 = var8;
+    var8 = 3;
+    var8 = var7[var8];
+    var10 = var9.bind(var1)(var8);
+    var8 = var10.prototype;
+    var9 = Object.create(var8, {constructor: {value: var10}});
+    var13 = 'FAST CONNECT';
+    var14 = var9;
+    var8 = new var14[var10](var13, var12);
+    var10 = var8 instanceof Object ? var8 : var9;
+    var _closure1_slot7 = var10;
+    var9 = var10.info;
+    var8 = var5.currentState;
+    var5 = 'initial app state (import time)';
+    var5 = var9.bind(var10)(var5, var8);
+    var5 = null;
+    var _closure1_slot8 = var5;
+    var5 = var4.bind(var1)();
+    var5 = 15;
+    var5 = var7[var5];
+    var7 = var6.bind(var1)(var5);
+    var6 = var7.fileFinishedImporting;
+    var5 = 'modules/gateway/native/fast_connect.tsx';
+    var5 = var6.bind(var7)(var5);
+    var3['createFastConnectSocket'] = var4;
+    var4 = function closeFastConnectSocket() {
+        _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+            var1 = global;
+            var2 = var1.window;
+            var3 = var2._ws;
+            var2 = null;
+            if(!(var2 != var3)) { _fun0004_ip = 47; continue _fun0004 }
+case 29:
+            var3 = var1.window;
+            var3 = var3._ws;
+            var4 = var3.ws;
+            var3 = var4.close;
+            var3 = var3.bind(var4)();
+            var1 = var1.window;
+            var1['_ws'] = var2;
+            _closure1_slot8 = var2;
+case 47:
+            var1 = undefined;
+            return var1;
+        }
+    };
+    var3['closeFastConnectSocket'] = var4;
+    var4 = function getLastFastConnectIdentifyUserId() {
+        var1 = _closure1_slot8;
+        return var1;
+    };
+    var3['getLastFastConnectIdentifyUserId'] = var4;
+    var2 = function identifyWebSocket() {
+        _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+            var1 = global;
+            var1 = var1.window;
+            var2 = var1._ws;
+            var1 = null;
+            if(!(var1 == var2)) { _fun0005_ip = 28; continue _fun0005 }
+case 29:
+            var3 = _closure1_slot7;
+            var2 = var3.log;
+            var1 = 'Skipping identifyWebSocket because socket is null';
+            var1 = var2.bind(var3)(var1);
+            _fun0005_ip = 48; continue _fun0005;
+case 28:
+            var3 = _closure1_slot1;
+            var2 = _closure1_slot3;
+            var1 = 14;
+            var2 = var2[var1];
+            var1 = undefined;
+            var1 = var3.bind(var1)(var2);
+            var3 = var1.beginFastConnect;
+            var2 = var3.measure;
+            var1 = function() {
+                _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+                    var4 = _closure1_slot1;
+                    var3 = _closure1_slot3;
+                    var1 = 14;
+                    var3 = var3[var1];
+                    var1 = undefined;
+                    var3 = var4.bind(var1)(var3);
+                    var5 = var3.loadFastConnectNativeModule;
+                    var4 = var5.measure;
+                    var3 = function() {
+                        _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+                            var3 = _closure1_slot0;
+                            var4 = _closure1_slot3;
+                            var1 = 4;
+                            var1 = var4[var1];
+                            var4 = undefined;
+                            var3 = var3.bind(var4)(var1);
+                            var1 = var3.isAndroid;
+                            var1 = var1.bind(var3)();
+                            if(var1) { _fun0007_ip = 49; continue _fun0007 }
+case 50:
+                            var1 = _closure1_slot4;
+                            var1 = var1.DCDFastConnectManager;
+                            var1 = var1.token;
+                            _fun0007_ip = 51; continue _fun0007;
+case 49:
+                            var3 = _closure1_slot1;
+                            var5 = _closure1_slot3;
+                            var2 = 5;
+                            var2 = var5[var2];
+                            var3 = var3.bind(var4)(var2);
+                            var2 = var3.getConstants;
+                            var2 = var2.bind(var3)();
+                            var3 = var2.token;
+                            var2 = null;
+                            var4 = var2 != var3;
+                            if(!var4) { _fun0007_ip = 52; continue _fun0007 }
+case 53:
+                            var2 = var3;
+case 52:
+                            var1 = var2;
+case 51:
+                            return var1;
+                        }
+                    };
+                    var6 = var4.bind(var5)(var3);
+                    var5 = null;
+                    if(!(var5 != var6)) { _fun0006_ip = 54; continue _fun0006 }
+case 55:
+                    var3 = '';
+                    if(!(var3 === var6)) { _fun0006_ip = 56; continue _fun0006 }
+case 54:
+                    var7 = _closure1_slot7;
+                    var4 = var7.log;
+                    var3 = 'Skipping fast_connect because we could not find a token to connect with.';
+                    var3 = var4.bind(var7)(var3);
+                    _fun0006_ip = 57; continue _fun0006;
+case 56:
+                    var3 = global;
+                    var3 = var3.window;
+                    var3 = var3._ws;
+                    var4 = var3.ws;
+                    var3 = var3.state;
+                    var4 = var4._socketId;
+                    var8 = _closure1_slot0;
+                    var9 = _closure1_slot3;
+                    var7 = 4;
+                    var7 = var9[var7];
+                    var8 = var8.bind(var1)(var7);
+                    var7 = var8.isAndroid;
+                    var7 = var7.bind(var8)();
+                    if(var7) { _fun0006_ip = 58; continue _fun0006 }
+case 59:
+                    var7 = _closure1_slot4;
+                    var7 = var7.DCDFastConnectManager;
+                    var7 = var7.userId;
+                    _fun0006_ip = 60; continue _fun0006;
+case 58:
+                    var9 = _closure1_slot1;
+                    var10 = _closure1_slot3;
+                    var8 = 5;
+                    var8 = var10[var8];
+                    var9 = var9.bind(var1)(var8);
+                    var8 = var9.getConstants;
+                    var8 = var8.bind(var9)();
+                    var7 = var8.userId;
+case 60:
+                    var9 = var5 != var7;
+                    var8 = null;
+                    if(!var9) { _fun0006_ip = 61; continue _fun0006 }
+case 62:
+                    var8 = var7;
+case 61:
+                    _closure1_slot8 = var8;
+                    var9 = var5 != var7;
+                    var8 = null;
+                    if(!var9) { _fun0006_ip = 63; continue _fun0006 }
+case 64:
+                    var8 = var7;
+case 63:
+                    var3['userId'] = var8;
+                    var2 = _closure1_slot9;
+                    var8 = var5 != var7;
+                    var5 = null;
+                    if(!var8) { _fun0006_ip = 65; continue _fun0006 }
+case 66:
+                    var5 = var7;
+case 65:
+                    var2 = var2.bind(var1)(var4, var5, var6);
+                    var4 = true;
+                    var3['identify'] = var4;
+                    var3['clientState'] = var2;
+case 57:
+                    return var1;
+                }
+            };
+            var1 = var2.bind(var3)(var1);
+case 48:
+            var1 = undefined;
+            return var1;
+        }
+    };
+    var3['identifyWebSocket'] = var2;
+    return var1;
+})();

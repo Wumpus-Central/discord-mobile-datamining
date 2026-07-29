@@ -1,0 +1,1395 @@
+// app/modules/user_profile/native/LegacyUserProfileConnections.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var9 = require;
+    var17 = metroImportDefault;
+    var3 = exports;
+    var10 = dependencyMap;
+    var _closure1_slot0 = var9;
+    var _closure1_slot1 = var17;
+    var _closure1_slot2 = var10;
+    var6 = function ConnectedUserAccount(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var4 = arg1;
+            var28 = var4.account;
+            var _closure2_slot0 = var28;
+            var2 = var4.theme;
+            var12 = var4.locale;
+            var10 = var4.userId;
+            var _closure2_slot1 = var10;
+            var9 = var4.style;
+            var3 = var4.showMetadata;
+            var7 = var4.showInvisibleIcon;
+            var4 = undefined;
+            var _closure2_slot2 = var4;
+            var _closure2_slot3 = var4;
+            var20 = null;
+            if(!(var20 == var3)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var3 = true;
+case 2:
+            var5 = _closure1_slot17;
+            var22 = var5.bind(var4)();
+            var11 = var28.metadata;
+            if(!(var20 == var11)) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var11 = {};
+case 4:
+            var29 = null;
+            if(!var3) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var6 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var5 = 12;
+            var5 = var8[var5];
+            var8 = var6.bind(var4)(var5);
+            var6 = var8.getCreatedAtDate;
+            var5 = _closure1_slot13;
+            var5 = var5.CREATED_AT;
+            var5 = var11[var5];
+            var29 = var6.bind(var8)(var5, var12);
+case 6:
+            var21 = undefined;
+            var5 = undefined;
+            if(!var3) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var6 = var28.type;
+            var3 = _closure1_slot11;
+            var3 = var3.REDDIT;
+            if(!(var3 !== var6)) { _fun0001_ip = 10; continue _fun0001 }
+case 11:
+            var3 = _closure1_slot11;
+            var3 = var3.STEAM;
+            if(!(var3 !== var6)) { _fun0001_ip = 12; continue _fun0001 }
+case 13:
+            var3 = _closure1_slot11;
+            var3 = var3.BLUESKY;
+            if(!(var3 !== var6)) { _fun0001_ip = 14; continue _fun0001 }
+case 15:
+            var3 = _closure1_slot11;
+            var3 = var3.MASTODON;
+            if(!(var3 !== var6)) { _fun0001_ip = 14; continue _fun0001 }
+case 16:
+            var3 = _closure1_slot11;
+            var3 = var3.TWITTER;
+            if(!(var3 !== var6)) { _fun0001_ip = 14; continue _fun0001 }
+case 17:
+            var3 = _closure1_slot11;
+            var3 = var3.PAYPAL;
+            if(!(var3 !== var6)) { _fun0001_ip = 18; continue _fun0001 }
+case 19:
+            var3 = _closure1_slot11;
+            var3 = var3.EBAY;
+            if(!(var3 !== var6)) { _fun0001_ip = 20; continue _fun0001 }
+case 21:
+            var3 = _closure1_slot11;
+            var3 = var3.TIKTOK;
+            var21 = undefined;
+            var5 = undefined;
+            if(!(var3 === var6)) { _fun0001_ip = 8; continue _fun0001 }
+case 22:
+            var6 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var3 = 13;
+            var3 = var8[var3];
+            var8 = var6.bind(var4)(var3);
+            var6 = var8.generateTikTokMetadataItems;
+            var3 = var22.metadataItem;
+            var21 = var6.bind(var8)(var11, var3);
+            var5 = undefined;
+            _fun0001_ip = 8; continue _fun0001;
+case 20:
+            var6 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var3 = 13;
+            var3 = var8[var3];
+            var8 = var6.bind(var4)(var3);
+            var6 = var8.generateEbayMetadataItems;
+            var3 = var22.metadataItem;
+            var21 = var6.bind(var8)(var11, var3);
+            var5 = undefined;
+            _fun0001_ip = 8; continue _fun0001;
+case 18:
+            var6 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var3 = 13;
+            var3 = var8[var3];
+            var8 = var6.bind(var4)(var3);
+            var6 = var8.generatePaypalMetadataItems;
+            var3 = var22.metadataItem;
+            var21 = var6.bind(var8)(var11, var3);
+            var5 = undefined;
+            _fun0001_ip = 8; continue _fun0001;
+case 14:
+            var6 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var3 = 13;
+            var3 = var8[var3];
+            var8 = var6.bind(var4)(var3);
+            var6 = var8.generateTwitterMetadataItems;
+            var3 = var22.metadataItem;
+            var6 = var6.bind(var8)(var11, var3);
+            var3 = _closure1_slot13;
+            var3 = var3.TWITTER_VERIFIED;
+            var8 = var11[var3];
+            var3 = '1';
+            var21 = var6;
+            var5 = undefined;
+            if(!(var3 === var8)) { _fun0001_ip = 8; continue _fun0001 }
+case 23:
+            var8 = _closure1_slot1;
+            var12 = _closure1_slot2;
+            var3 = 14;
+            var3 = var12[var3];
+            var12 = var8.bind(var4)(var3);
+            var8 = var12.get;
+            var3 = _closure1_slot11;
+            var3 = var3.TWITTER;
+            var3 = var8.bind(var12)(var3);
+            var5 = var3.color;
+            var21 = var6;
+            _fun0001_ip = 8; continue _fun0001;
+case 12:
+            var6 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var3 = 13;
+            var3 = var8[var3];
+            var8 = var6.bind(var4)(var3);
+            var6 = var8.generateSteamMetadataItems;
+            var3 = var22.metadataItem;
+            var21 = var6.bind(var8)(var11, var3);
+            var5 = undefined;
+            _fun0001_ip = 8; continue _fun0001;
+case 10:
+            var6 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var3 = 13;
+            var3 = var8[var3];
+            var8 = var6.bind(var4)(var3);
+            var6 = var8.generateRedditMetadataItems;
+            var3 = var22.metadataItem;
+            var21 = var6.bind(var8)(var11, var3);
+            var5 = undefined;
+case 8:
+            var6 = _closure1_slot1;
+            var13 = _closure1_slot2;
+            var3 = 14;
+            var3 = var13[var3];
+            var8 = var6.bind(var4)(var3);
+            var6 = var8.get;
+            var3 = var28.type;
+            var3 = var6.bind(var8)(var3);
+            _closure2_slot2 = var3;
+            var12 = _closure1_slot0;
+            var6 = 15;
+            var6 = var13[var6];
+            var11 = var12.bind(var4)(var6);
+            var8 = var11.makeSource;
+            var6 = 16;
+            var6 = var13[var6];
+            var12 = var12.bind(var4)(var6);
+            var6 = var12.isThemeDark;
+            var6 = var6.bind(var12)(var2);
+            var13 = var20 == var3;
+            if(var6) { _fun0001_ip = 24; continue _fun0001 }
+case 25:
+            var6 = undefined;
+            if(var13) { _fun0001_ip = 26; continue _fun0001 }
+case 27:
+            var12 = var3.icon;
+            var6 = var12.lightPNG;
+case 26:
+            _fun0001_ip = 28; continue _fun0001;
+case 24:
+            var12 = undefined;
+            if(var13) { _fun0001_ip = 29; continue _fun0001 }
+case 30:
+            var13 = var3.icon;
+            var12 = var13.darkPNG;
+case 29:
+            var6 = var12;
+case 28:
+            var15 = var8.bind(var11)(var6);
+            var8 = var20 == var3;
+            var6 = undefined;
+            if(var8) { _fun0001_ip = 31; continue _fun0001 }
+case 32:
+            var8 = var3.getPlatformUserUrl;
+            var8 = var20 == var8;
+            var6 = undefined;
+            if(var8) { _fun0001_ip = 31; continue _fun0001 }
+case 33:
+            var8 = var3.getPlatformUserUrl;
+            var6 = var8.bind(var3)(var28);
+case 31:
+            _closure2_slot3 = var6;
+            if(!(var20 != var7)) { _fun0001_ip = 34; continue _fun0001 }
+case 35:
+            if(var7) { _fun0001_ip = 36; continue _fun0001 }
+case 34:
+            var7 = var20 != var6;
+            var12 = null;
+            if(!var7) { _fun0001_ip = 37; continue _fun0001 }
+case 38:
+            var11 = _closure1_slot14;
+            var8 = _closure1_slot0;
+            var16 = _closure1_slot2;
+            var7 = 17;
+            var7 = var16[var7];
+            var7 = var8.bind(var4)(var7);
+            var8 = var7.Icon;
+            var7 = {};
+            var13 = var22.connectedAccountOpenLink;
+            var7['style'] = var13;
+            var14 = _closure1_slot1;
+            var13 = 19;
+            var13 = var16[var13];
+            var13 = var14.bind(var4)(var13);
+            var7['source'] = var13;
+            var12 = var11.bind(var4)(var8, var7);
+            _fun0001_ip = 37; continue _fun0001;
+case 36:
+            var11 = _closure1_slot14;
+            var8 = _closure1_slot0;
+            var16 = _closure1_slot2;
+            var7 = 17;
+            var7 = var16[var7];
+            var7 = var8.bind(var4)(var7);
+            var8 = var7.Icon;
+            var7 = {};
+            var13 = var22.connectedAccountOpenHide;
+            var7['style'] = var13;
+            var14 = _closure1_slot1;
+            var13 = 18;
+            var13 = var16[var13];
+            var13 = var14.bind(var4)(var13);
+            var7['source'] = var13;
+            var12 = var11.bind(var4)(var8, var7);
+case 37:
+            var14 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var13 = 20;
+            var7 = var11[var13];
+            var19 = var14.bind(var4)(var7);
+            var17 = var19.useToken;
+            var16 = _closure1_slot1;
+            var8 = 11;
+            var7 = var11[var8];
+            var7 = var16.bind(var4)(var7);
+            var7 = var7.colors;
+            var7 = var7.BACKGROUND_MOD_MUTED;
+            var7 = var17.bind(var19)(var7, var2);
+            var13 = var11[var13];
+            var14 = var14.bind(var4)(var13);
+            var13 = var14.useToken;
+            var11 = var11[var8];
+            var11 = var16.bind(var4)(var11);
+            var11 = var11.colors;
+            var11 = var11.INTERACTIVE_TEXT_ACTIVE;
+            if(!(var20 != var5)) { _fun0001_ip = 39; continue _fun0001 }
+case 40:
+            var16 = _closure1_slot12;
+            var2 = var16.DARK;
+case 39:
+            var16 = var13.bind(var14)(var11, var2);
+            var14 = var7;
+            if(!(var20 != var5)) { _fun0001_ip = 41; continue _fun0001 }
+case 42:
+            var7 = _closure1_slot1;
+            var2 = _closure1_slot2;
+            var2 = var2[var8];
+            var2 = var7.bind(var4)(var2);
+            var2 = var2.unsafe_rawColors;
+            var16 = var2.WHITE;
+            var14 = var5;
+case 41:
+            var2 = var28.verified;
+            var25 = null;
+            if(!var2) { _fun0001_ip = 43; continue _fun0001 }
+case 44:
+            var7 = _closure1_slot15;
+            var5 = _closure1_slot5;
+            var2 = {};
+            var8 = var22.verifiedCheckContainer;
+            var2['style'] = var8;
+            var13 = _closure1_slot14;
+            var24 = _closure1_slot0;
+            var23 = _closure1_slot2;
+            var17 = 17;
+            var8 = var23[var17];
+            var8 = var24.bind(var4)(var8);
+            var11 = var8.Icon;
+            var8 = {};
+            var19 = var22.verifiedCheck;
+            var8['style'] = var19;
+            var19 = var23[var17];
+            var19 = var24.bind(var4)(var19);
+            var19 = var19.Icon;
+            var19 = var19.Sizes;
+            var19 = var19.REFRESH_SMALL_16;
+            var8['size'] = var19;
+            var19 = _closure1_slot1;
+            var26 = 21;
+            var26 = var23[var26];
+            var26 = var19.bind(var4)(var26);
+            var8['source'] = var26;
+            var8['color'] = var14;
+            var11 = var13.bind(var4)(var11, var8);
+            var8 = new Array(2);
+            var8[0] = var11;
+            var14 = _closure1_slot14;
+            var11 = var23[var17];
+            var11 = var24.bind(var4)(var11);
+            var13 = var11.Icon;
+            var11 = {};
+            var26 = var22.verifiedCheck;
+            var11['style'] = var26;
+            var17 = var23[var17];
+            var17 = var24.bind(var4)(var17);
+            var17 = var17.Icon;
+            var17 = var17.Sizes;
+            var17 = var17.REFRESH_SMALL_16;
+            var11['size'] = var17;
+            var17 = 22;
+            var17 = var23[var17];
+            var17 = var19.bind(var4)(var17);
+            var11['source'] = var17;
+            var11['color'] = var16;
+            var11 = var14.bind(var4)(var13, var11);
+            var8[1] = var11;
+            var2['children'] = var8;
+            var25 = var7.bind(var4)(var5, var2);
+case 43:
+            var8 = _closure1_slot3;
+            var7 = var8.useCallback;
+            var2 = var28.name;
+            var5 = new Array(1);
+            var5[0] = var2;
+            var2 = function() {
+                var3 = _closure1_slot0;
+                var4 = _closure1_slot2;
+                var2 = 23;
+                var5 = var4[var2];
+                var1 = undefined;
+                var6 = var3.bind(var1)(var5);
+                var5 = var6.triggerHapticFeedback;
+                var2 = var4[var2];
+                var2 = var3.bind(var1)(var2);
+                var2 = var2.HapticFeedbackTypes;
+                var2 = var2.IMPACT_LIGHT;
+                var2 = var5.bind(var6)(var2);
+                var2 = 24;
+                var2 = var4[var2];
+                var6 = var3.bind(var1)(var2);
+                var5 = var6.copy;
+                var2 = _closure2_slot0;
+                var2 = var2.name;
+                var2 = var5.bind(var6)(var2);
+                var2 = 25;
+                var2 = var4[var2];
+                var3 = var3.bind(var1)(var2);
+                var2 = var3.presentCopiedToClipboard;
+                var2 = var2.bind(var3)();
+                return var1;
+            };
+            var5 = var7.bind(var8)(var2, var5);
+            var8 = _closure1_slot3;
+            var7 = var8.useMemo;
+            var11 = var20 == var3;
+            var2 = undefined;
+            if(var11) { _fun0001_ip = 45; continue _fun0001 }
+case 46:
+            var2 = var3.name;
+case 45:
+            var3 = new Array(2);
+            var3[0] = var2;
+            var3[1] = var6;
+            var2 = function() {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    var1 = _closure2_slot3;
+                    var5 = null;
+                    if(!(var5 == var1)) { _fun0002_ip = 47; continue _fun0002 }
+case 48:
+                    var2 = _closure1_slot0;
+                    var8 = _closure1_slot2;
+                    var1 = 26;
+                    var3 = var8[var1];
+                    var6 = undefined;
+                    var3 = var2.bind(var6)(var3);
+                    var4 = var3.intl;
+                    var3 = var4.formatToPlainString;
+                    var1 = var8[var1];
+                    var1 = var2.bind(var6)(var1);
+                    var1 = var1.t;
+                    var2 = var1.OKzaN3;
+                    var1 = {};
+                    var8 = _closure2_slot2;
+                    var8 = var5 == var8;
+                    if(var8) { _fun0002_ip = 49; continue _fun0002 }
+case 50:
+                    var7 = _closure2_slot2;
+                    var6 = var7.name;
+case 49:
+                    var7 = var5 != var6;
+                    var5 = '';
+                    if(!var7) { _fun0002_ip = 51; continue _fun0002 }
+case 52:
+                    var5 = var6;
+case 51:
+                    var1['name'] = var5;
+                    var1 = var3.bind(var4)(var2, var1);
+                    _fun0002_ip = 53; continue _fun0002;
+case 47:
+                    var6 = _closure1_slot0;
+                    var7 = _closure1_slot2;
+                    var2 = 26;
+                    var3 = var7[var2];
+                    var5 = undefined;
+                    var3 = var6.bind(var5)(var3);
+                    var4 = var3.intl;
+                    var3 = var4.string;
+                    var2 = var7[var2];
+                    var2 = var6.bind(var5)(var2);
+                    var2 = var2.t;
+                    var2 = var2.wuRE8M;
+                    var1 = var3.bind(var4)(var2);
+case 53:
+                    return var1;
+                }
+            };
+            var8 = var7.bind(var8)(var2, var3);
+            var7 = _closure1_slot3;
+            var3 = var7.useCallback;
+            var11 = var28.type;
+            var2 = new Array(3);
+            var2[0] = var11;
+            var2[1] = var6;
+            var2[2] = var10;
+            var1 = function() {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var2 = _closure2_slot3;
+                    var1 = null;
+                    if(!(var1 != var2)) { _fun0003_ip = 54; continue _fun0003 }
+case 48:
+                    var3 = _closure1_slot0;
+                    var2 = _closure1_slot2;
+                    var1 = 27;
+                    var2 = var2[var1];
+                    var1 = undefined;
+                    var3 = var3.bind(var1)(var2);
+                    var2 = var3.handleClick;
+                    var1 = {};
+                    var6 = _closure2_slot3;
+                    var1['href'] = var6;
+                    var5 = _closure2_slot0;
+                    var5 = var5.type;
+                    var4 = _closure1_slot11;
+                    var4 = var4.DOMAIN;
+                    var4 = var5 !== var4;
+                    var1['trusted'] = var4;
+                    var4 = function onConfirm() {
+                        var4 = _closure1_slot0;
+                        var5 = _closure1_slot2;
+                        var1 = 28;
+                        var2 = var5[var1];
+                        var1 = undefined;
+                        var8 = var4.bind(var1)(var2);
+                        var7 = var8.trackWithMetadata;
+                        var2 = _closure1_slot10;
+                        var6 = var2.CONNECTED_ACCOUNT_VIEWED;
+                        var4 = {};
+                        var9 = _closure2_slot0;
+                        var9 = var9.type;
+                        var4['platform_type'] = var9;
+                        var9 = _closure2_slot1;
+                        var4['other_user_id'] = var9;
+                        var4 = var7.bind(var8)(var6, var4);
+                        var4 = _closure1_slot1;
+                        var3 = 29;
+                        var3 = var5[var3];
+                        var4 = var4.bind(var1)(var3);
+                        var3 = var4.openURL;
+                        var2 = _closure2_slot3;
+                        var2 = var3.bind(var4)(var2);
+                        return var1;
+                    };
+                    var1['onConfirm'] = var4;
+                    var1 = var2.bind(var3)(var1);
+case 54:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var7 = var3.bind(var7)(var1, var2);
+            if(!(var20 == var6)) { _fun0001_ip = 55; continue _fun0001 }
+case 56:
+            var3 = _closure1_slot4;
+            _fun0001_ip = 57; continue _fun0001;
+case 55:
+            var2 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var1 = 30;
+            var1 = var10[var1];
+            var1 = var2.bind(var4)(var1);
+            var3 = var1.PressableOpacity;
+case 57:
+            var2 = _closure1_slot14;
+            var1 = {};
+            var1['accessibilityLabel'] = var8;
+            var8 = 'button';
+            var1['accessibilityRole'] = var8;
+            var8 = var20 != var6;
+            var6 = undefined;
+            if(!var8) { _fun0001_ip = 58; continue _fun0001 }
+case 59:
+            var6 = var7;
+case 58:
+            var1['onPress'] = var6;
+            var1['onLongPress'] = var5;
+            var7 = _closure1_slot14;
+            var6 = _closure1_slot5;
+            var5 = {};
+            var10 = var22.connectedAccountContainer;
+            var8 = new Array(2);
+            var8[0] = var10;
+            var8[1] = var9;
+            var5['style'] = var8;
+            var10 = _closure1_slot15;
+            var9 = _closure1_slot5;
+            var8 = {};
+            var11 = var22.connectedAccount;
+            var8['style'] = var11;
+            var14 = _closure1_slot14;
+            var26 = _closure1_slot0;
+            var24 = _closure1_slot2;
+            var16 = 17;
+            var11 = var24[var16];
+            var11 = var26.bind(var4)(var11);
+            var13 = var11.Icon;
+            var11 = {};
+            var16 = var24[var16];
+            var16 = var26.bind(var4)(var16);
+            var16 = var16.Icon;
+            var16 = var16.Sizes;
+            var16 = var16.MEDIUM;
+            var11['size'] = var16;
+            var11['source'] = var15;
+            var15 = true;
+            var11['disableColor'] = var15;
+            var13 = var14.bind(var4)(var13, var11);
+            var11 = new Array(3);
+            var11[0] = var13;
+            var15 = _closure1_slot15;
+            var14 = _closure1_slot5;
+            var13 = {};
+            var16 = var22.connectedAccountNameContainer;
+            var13['style'] = var16;
+            var23 = _closure1_slot15;
+            var17 = _closure1_slot5;
+            var16 = {};
+            var19 = var22.connectedAccountName;
+            var16['style'] = var19;
+            var27 = _closure1_slot14;
+            var19 = 31;
+            var24 = var24[var19];
+            var24 = var26.bind(var4)(var24);
+            var26 = var24.Text;
+            var24 = {};
+            var30 = 'text-md/semibold';
+            var24['variant'] = var30;
+            var30 = var22.connectedAccountNameText;
+            var24['style'] = var30;
+            var28 = var28.name;
+            var24['children'] = var28;
+            var26 = var27.bind(var4)(var26, var24);
+            var24 = new Array(2);
+            var24[0] = var26;
+            var24[1] = var25;
+            var16['children'] = var24;
+            var17 = var23.bind(var4)(var17, var16);
+            var16 = new Array(3);
+            var16[0] = var17;
+            var23 = var20 != var29;
+            var17 = null;
+            if(!var23) { _fun0001_ip = 60; continue _fun0001 }
+case 61:
+            var24 = _closure1_slot14;
+            var26 = _closure1_slot0;
+            var30 = _closure1_slot2;
+            var19 = var30[var19];
+            var19 = var26.bind(var4)(var19);
+            var23 = var19.Text;
+            var19 = {};
+            var25 = 'heading-deprecated-12/medium';
+            var19['variant'] = var25;
+            var25 = var22.connectedAccountNameCreatedAtText;
+            var19['style'] = var25;
+            var25 = 26;
+            var27 = var30[var25];
+            var27 = var26.bind(var4)(var27);
+            var28 = var27.intl;
+            var27 = var28.format;
+            var25 = var30[var25];
+            var25 = var26.bind(var4)(var25);
+            var25 = var25.t;
+            var26 = var25["9rfonh"];
+            var25 = {};
+            var25['date'] = var29;
+            var25 = var27.bind(var28)(var26, var25);
+            var19['children'] = var25;
+            var17 = var24.bind(var4)(var23, var19);
+case 60:
+            var16[1] = var17;
+            var19 = var20 != var21;
+            var17 = null;
+            if(!var19) { _fun0001_ip = 62; continue _fun0001 }
+case 63:
+            var23 = var21.length;
+            var19 = 0;
+            var19 = var23 > var19;
+            var17 = null;
+            if(!var19) { _fun0001_ip = 62; continue _fun0001 }
+case 64:
+            var20 = _closure1_slot14;
+            var19 = _closure1_slot5;
+            var18 = {};
+            var22 = var22.connectedAccountChildren;
+            var18['style'] = var22;
+            var18['children'] = var21;
+            var17 = var20.bind(var4)(var19, var18);
+case 62:
+            var16[2] = var17;
+            var13['children'] = var16;
+            var13 = var15.bind(var4)(var14, var13);
+            var11[1] = var13;
+            var11[2] = var12;
+            var8['children'] = var11;
+            var8 = var10.bind(var4)(var9, var8);
+            var5['children'] = var8;
+            var5 = var7.bind(var4)(var6, var5);
+            var1['children'] = var5;
+            var1 = var2.bind(var4)(var3, var1);
+            return var1;
+        }
+    };
+    var5 = function ConnectedApplicationUserRoleAccount(arg1) {
+        _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+            var1 = arg1;
+            var17 = var1.applicationRoleConnection;
+            var _closure2_slot0 = var17;
+            var6 = var1.style;
+            var1 = _closure1_slot17;
+            var4 = undefined;
+            var13 = var1.bind(var4)();
+            var _closure2_slot1 = var13;
+            var2 = _closure1_slot0;
+            var3 = _closure1_slot2;
+            var1 = 13;
+            var1 = var3[var1];
+            var2 = var2.bind(var4)(var1);
+            var1 = var2.generateRoleConnectionMetadataItems;
+            var11 = var1.bind(var2)(var17);
+            var3 = _closure1_slot15;
+            var2 = _closure1_slot5;
+            var1 = {};
+            var7 = var13.connectedAccountContainer;
+            var5 = new Array(2);
+            var5[0] = var7;
+            var5[1] = var6;
+            var1['style'] = var5;
+            var5 = var17.platform_name;
+            var8 = null;
+            var5 = var8 != var5;
+            var6 = null;
+            if(!var5) { _fun0004_ip = 53; continue _fun0004 }
+case 65:
+            var9 = _closure1_slot14;
+            var7 = _closure1_slot0;
+            var12 = _closure1_slot2;
+            var5 = 31;
+            var5 = var12[var5];
+            var5 = var7.bind(var4)(var5);
+            var7 = var5.Text;
+            var5 = {'variant': 'eyebrow', 'color': 'interactive-text-default'};
+            var12 = var17.platform_name;
+            var5['children'] = var12;
+            var6 = var9.bind(var4)(var7, var5);
+case 53:
+            var5 = new Array(4);
+            var5[0] = var6;
+            var9 = _closure1_slot14;
+            var7 = _closure1_slot5;
+            var6 = {};
+            var12 = var13.appConnectionNameContainer;
+            var6['style'] = var12;
+            var12 = var17.platform_username;
+            var14 = var8 != var12;
+            var12 = null;
+            if(!var14) { _fun0004_ip = 66; continue _fun0004 }
+case 67:
+            var16 = _closure1_slot14;
+            var15 = _closure1_slot0;
+            var18 = _closure1_slot2;
+            var14 = 31;
+            var14 = var18[var14];
+            var14 = var15.bind(var4)(var14);
+            var15 = var14.Text;
+            var14 = {'variant': 'text-md/semibold', 'color': 'interactive-text-active'};
+            var17 = var17.platform_username;
+            var14['children'] = var17;
+            var12 = var16.bind(var4)(var15, var14);
+case 66:
+            var6['children'] = var12;
+            var6 = var9.bind(var4)(var7, var6);
+            var5[1] = var6;
+            var7 = var8 != var11;
+            var6 = null;
+            if(!var7) { _fun0004_ip = 68; continue _fun0004 }
+case 69:
+            var9 = var11.length;
+            var7 = 0;
+            var7 = var9 > var7;
+            var6 = null;
+            if(!var7) { _fun0004_ip = 68; continue _fun0004 }
+case 70:
+            var9 = _closure1_slot14;
+            var8 = _closure1_slot5;
+            var7 = {};
+            var12 = var13.connectedAccountChildren;
+            var7['style'] = var12;
+            var7['children'] = var11;
+            var6 = var9.bind(var4)(var8, var7);
+case 68:
+            var5[2] = var6;
+            var8 = _closure1_slot15;
+            var7 = _closure1_slot5;
+            var6 = {};
+            var9 = {};
+            var11 = 'row';
+            var9['flexDirection'] = var11;
+            var6['style'] = var9;
+            var12 = _closure1_slot14;
+            var11 = _closure1_slot5;
+            var9 = {};
+            var13 = var13.connectedAccountPoweredByContainer;
+            var9['style'] = var13;
+            var15 = _closure1_slot14;
+            var17 = _closure1_slot0;
+            var21 = _closure1_slot2;
+            var13 = 31;
+            var13 = var21[var13];
+            var13 = var17.bind(var4)(var13);
+            var14 = var13.Text;
+            var13 = {'variant': 'text-xs/normal', 'color': 'text-muted'};
+            var16 = 26;
+            var18 = var21[var16];
+            var18 = var17.bind(var4)(var18);
+            var19 = var18.intl;
+            var18 = var19.format;
+            var16 = var21[var16];
+            var16 = var17.bind(var4)(var16);
+            var16 = var16.t;
+            var17 = var16.zIT9YA;
+            var16 = {};
+            var20 = function applicationHook() {
+                _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+                    var4 = _closure1_slot15;
+                    var3 = _closure1_slot5;
+                    var2 = {};
+                    var5 = _closure2_slot1;
+                    var5 = var5.connectedAccountPoweredByText;
+                    var2['style'] = var5;
+                    var5 = _closure2_slot0;
+                    var5 = var5.application;
+                    var5 = var5.bot;
+                    var6 = null;
+                    var5 = var6 != var5;
+                    if(!var5) { _fun0005_ip = 71; continue _fun0005 }
+case 72:
+                    var10 = _closure1_slot14;
+                    var12 = _closure1_slot0;
+                    var13 = _closure1_slot2;
+                    var11 = 17;
+                    var5 = var13[var11];
+                    var8 = undefined;
+                    var5 = var12.bind(var8)(var5);
+                    var7 = var5.Avatar;
+                    var5 = {};
+                    var14 = _closure2_slot1;
+                    var14 = var14.connectedAccountPoweredByAvatar;
+                    var5['style'] = var14;
+                    var16 = _closure1_slot7;
+                    var14 = _closure2_slot0;
+                    var14 = var14.application;
+                    var18 = var14.bot;
+                    var15 = var16.prototype;
+                    var15 = Object.create(var15, {constructor: {value: var16}});
+                    var19 = var15;
+                    var14 = new var19[var16](var18, var17);
+                    var14 = var14 instanceof Object ? var14 : var15;
+                    var5['user'] = var14;
+                    var11 = var13[var11];
+                    var11 = var12.bind(var8)(var11);
+                    var11 = var11.AvatarSizes;
+                    var11 = var11.SIZE_16;
+                    var5['size'] = var11;
+                    var5['guildId'] = var8;
+                    var6 = var10.bind(var8)(var7, var5);
+case 71:
+                    var5 = new Array(2);
+                    var5[0] = var6;
+                    var8 = _closure1_slot14;
+                    var7 = _closure1_slot0;
+                    var6 = _closure1_slot2;
+                    var1 = 31;
+                    var6 = var6[var1];
+                    var1 = undefined;
+                    var6 = var7.bind(var1)(var6);
+                    var7 = var6.Text;
+                    var6 = {'variant': 'text-xs/normal', 'color': 'text-default'};
+                    var9 = _closure2_slot0;
+                    var9 = var9.application;
+                    var9 = var9.name;
+                    var6['children'] = var9;
+                    var6 = var8.bind(var1)(var7, var6);
+                    var5[1] = var6;
+                    var2['children'] = var5;
+                    var1 = var4.bind(var1)(var3, var2);
+                    return var1;
+                }
+            };
+            var16['applicationHook'] = var20;
+            var16 = var18.bind(var19)(var17, var16);
+            var13['children'] = var16;
+            var13 = var15.bind(var4)(var14, var13);
+            var9['children'] = var13;
+            var11 = var12.bind(var4)(var11, var9);
+            var9 = new Array(2);
+            var9[0] = var11;
+            var12 = _closure1_slot14;
+            var11 = _closure1_slot5;
+            var10 = {};
+            var13 = {};
+            var14 = 1;
+            var13['flexGrow'] = var14;
+            var10['style'] = var13;
+            var10 = var12.bind(var4)(var11, var10);
+            var9[1] = var10;
+            var6['children'] = var9;
+            var6 = var8.bind(var4)(var7, var6);
+            var5[3] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var4 = function useAppplicationRoleConnectionItems(arg1, arg2) {
+        var3 = arg1;
+        var2 = arg2;
+        var _closure2_slot0 = var2;
+        var6 = _closure1_slot0;
+        var7 = _closure1_slot2;
+        var4 = 32;
+        var4 = var7[var4];
+        var5 = undefined;
+        var8 = var6.bind(var5)(var4);
+        var4 = var8.useThemeContext;
+        var4 = var4.bind(var8)();
+        var4 = var4.theme;
+        var _closure2_slot1 = var4;
+        var4 = 33;
+        var4 = var7[var4];
+        var6 = var6.bind(var5)(var4);
+        var5 = var6.useStateFromStores;
+        var2 = _closure1_slot6;
+        var4 = new Array(1);
+        var4[0] = var2;
+        var2 = function() {
+            var1 = _closure1_slot6;
+            var1 = var1.locale;
+            return var1;
+        };
+        var2 = var5.bind(var6)(var4, var2);
+        var _closure2_slot2 = var2;
+        var2 = var3.map;
+        var1 = function(arg1, arg2) {
+            var5 = _closure1_slot14;
+            var2 = _closure1_slot3;
+            var4 = var2.Fragment;
+            var3 = {};
+            var7 = _closure1_slot14;
+            var6 = _closure1_slot19;
+            var1 = {};
+            var2 = arg1;
+            var1['applicationRoleConnection'] = var2;
+            var8 = _closure2_slot1;
+            var1['theme'] = var8;
+            var8 = _closure2_slot2;
+            var1['locale'] = var8;
+            var2 = _closure2_slot0;
+            var1['style'] = var2;
+            var2 = undefined;
+            var1 = var7.bind(var2)(var6, var1);
+            var3['children'] = var1;
+            var1 = arg2;
+            var1 = var5.bind(var2)(var4, var3, var1);
+            return var1;
+        };
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var _closure1_slot22 = var4;
+    var2 = function useConnectedAccountItems(arg1, arg2, arg3) {
+        var4 = arg1;
+        var2 = arg2;
+        var _closure2_slot0 = var2;
+        var2 = arg3;
+        var _closure2_slot1 = var2;
+        var5 = _closure1_slot0;
+        var6 = _closure1_slot2;
+        var3 = 32;
+        var7 = var6[var3];
+        var3 = undefined;
+        var8 = var5.bind(var3)(var7);
+        var7 = var8.useThemeContext;
+        var7 = var7.bind(var8)();
+        var7 = var7.theme;
+        var _closure2_slot2 = var7;
+        var7 = 33;
+        var7 = var6[var7];
+        var9 = var5.bind(var3)(var7);
+        var8 = var9.useStateFromStores;
+        var2 = _closure1_slot6;
+        var7 = new Array(1);
+        var7[0] = var2;
+        var2 = function() {
+            var1 = _closure1_slot6;
+            var1 = var1.locale;
+            return var1;
+        };
+        var2 = var8.bind(var9)(var7, var2);
+        var _closure2_slot3 = var2;
+        var2 = 34;
+        var2 = var6[var2];
+        var5 = var5.bind(var3)(var2);
+        var3 = var5.usePlatformAllowed;
+        var2 = {};
+        var6 = true;
+        var2['forUserProfile'] = var6;
+        var2 = var3.bind(var5)(var2);
+        var _closure2_slot4 = var2;
+        var3 = var4.filter;
+        var2 = function(arg1) {
+            _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+                var2 = _closure1_slot1;
+                var3 = _closure1_slot2;
+                var1 = 14;
+                var1 = var3[var1];
+                var4 = undefined;
+                var3 = var2.bind(var4)(var1);
+                var2 = var3.get;
+                var1 = arg1;
+                var1 = var1.type;
+                var3 = var2.bind(var3)(var1);
+                var1 = null;
+                var1 = var1 != var3;
+                if(!var1) { _fun0006_ip = 73; continue _fun0006 }
+case 74:
+                var2 = _closure2_slot4;
+                var1 = var2.bind(var4)(var3);
+case 73:
+                return var1;
+            }
+        };
+        var3 = var3.bind(var4)(var2);
+        var2 = var3.map;
+        var1 = function(arg1, arg2) {
+            var5 = _closure1_slot14;
+            var2 = _closure1_slot3;
+            var4 = var2.Fragment;
+            var3 = {};
+            var7 = _closure1_slot14;
+            var6 = _closure1_slot18;
+            var1 = {};
+            var2 = arg1;
+            var1['account'] = var2;
+            var8 = _closure2_slot2;
+            var1['theme'] = var8;
+            var8 = _closure2_slot3;
+            var1['locale'] = var8;
+            var8 = _closure2_slot0;
+            var1['userId'] = var8;
+            var2 = _closure2_slot1;
+            var1['style'] = var2;
+            var2 = undefined;
+            var1 = var7.bind(var2)(var6, var1);
+            var3['children'] = var1;
+            var1 = arg2;
+            var1 = var5.bind(var2)(var4, var3, var1);
+            return var1;
+        };
+        var1 = var2.bind(var3)(var1);
+        return var1;
+    };
+    var _closure1_slot23 = var2;
+    var1 = global;
+    var12 = var1.Object;
+    var11 = var12.defineProperty;
+    var8 = {};
+    var1 = true;
+    var8['value'] = var1;
+    var1 = '__esModule';
+    var1 = var11.bind(var12)(var3, var1, var8);
+    var1 = 0;
+    var11 = var10[var1];
+    var8 = metroImportAll;
+    var1 = undefined;
+    var11 = var8.bind(var1)(var11);
+    var _closure1_slot3 = var11;
+    var8 = 1;
+    var8 = var10[var8];
+    var8 = var9.bind(var1)(var8);
+    var12 = var8.Pressable;
+    var _closure1_slot4 = var12;
+    var8 = var8.View;
+    var _closure1_slot5 = var8;
+    var18 = 2;
+    var8 = var10[var18];
+    var8 = var17.bind(var1)(var8);
+    var _closure1_slot6 = var8;
+    var8 = 3;
+    var8 = var10[var8];
+    var8 = var17.bind(var1)(var8);
+    var _closure1_slot7 = var8;
+    var15 = 4;
+    var8 = var10[var15];
+    var8 = var17.bind(var1)(var8);
+    var _closure1_slot8 = var8;
+    var8 = 5;
+    var8 = var10[var8];
+    var8 = var17.bind(var1)(var8);
+    var _closure1_slot9 = var8;
+    var8 = 6;
+    var8 = var10[var8];
+    var8 = var9.bind(var1)(var8);
+    var12 = var8.AnalyticEvents;
+    var _closure1_slot10 = var12;
+    var12 = var8.PlatformTypes;
+    var _closure1_slot11 = var12;
+    var8 = var8.ThemeTypes;
+    var _closure1_slot12 = var8;
+    var8 = 7;
+    var8 = var10[var8];
+    var8 = var9.bind(var1)(var8);
+    var16 = var8.FORM_ROW_VERTICAL_PADDING;
+    var8 = 8;
+    var8 = var10[var8];
+    var8 = var9.bind(var1)(var8);
+    var8 = var8.MetadataFields;
+    var _closure1_slot13 = var8;
+    var8 = 9;
+    var8 = var10[var8];
+    var8 = var9.bind(var1)(var8);
+    var12 = var8.jsx;
+    var _closure1_slot14 = var12;
+    var12 = var8.jsxs;
+    var _closure1_slot15 = var12;
+    var8 = var8.Fragment;
+    var _closure1_slot16 = var8;
+    var19 = 10;
+    var8 = var10[var19];
+    var13 = var9.bind(var1)(var8);
+    var12 = var13.createStyles;
+    var8 = {};
+    var14 = {};
+    var14['paddingHorizontal'] = var19;
+    var16 = var16 / var18;
+    var14['paddingVertical'] = var16;
+    var8['connectedAccountContainer'] = var14;
+    var14 = {'flexDirection': 'row', 'alignItems': 'center'};
+    var8['connectedAccount'] = var14;
+    var14 = {'flex': 1, 'marginLeft': 8};
+    var8['connectedAccountNameContainer'] = var14;
+    var14 = {'flexDirection': 'row', 'alignItems': 'center'};
+    var8['connectedAccountName'] = var14;
+    var14 = {};
+    var16 = 11;
+    var18 = var10[var16];
+    var18 = var17.bind(var1)(var18);
+    var18 = var18.colors;
+    var18 = var18.INTERACTIVE_TEXT_ACTIVE;
+    var14['color'] = var18;
+    var8['connectedAccountNameText'] = var14;
+    var14 = {};
+    var18 = var10[var16];
+    var18 = var17.bind(var1)(var18);
+    var18 = var18.colors;
+    var18 = var18.TEXT_SUBTLE;
+    var14['color'] = var18;
+    var8['connectedAccountNameCreatedAtText'] = var14;
+    var14 = {'height': 24, 'width': 24};
+    var19 = {};
+    var18 = '135deg';
+    var19['rotate'] = var18;
+    var18 = new Array(1);
+    var18[0] = var19;
+    var14['transform'] = var18;
+    var18 = var10[var16];
+    var18 = var17.bind(var1)(var18);
+    var18 = var18.colors;
+    var18 = var18.INTERACTIVE_TEXT_ACTIVE;
+    var14['tintColor'] = var18;
+    var8['connectedAccountOpenLink'] = var14;
+    var14 = {'alignSelf': 'flex-start', 'margin': 4, 'height': 16, 'width': 16};
+    var18 = var10[var16];
+    var18 = var17.bind(var1)(var18);
+    var18 = var18.colors;
+    var18 = var18.INTERACTIVE_TEXT_DEFAULT;
+    var14['tintColor'] = var18;
+    var8['connectedAccountOpenHide'] = var14;
+    var14 = {'marginLeft': 4, 'height': 16, 'width': 16};
+    var8['verifiedCheckContainer'] = var14;
+    var14 = {'position': 'absolute', 'left': 0, 'top': 0};
+    var8['verifiedCheck'] = var14;
+    var14 = {'flexDirection': 'row', 'flexWrap': 'wrap', 'alignItems': 'center', 'overflow': 'hidden'};
+    var8['connectedAccountChildren'] = var14;
+    var14 = {};
+    var18 = var10[var16];
+    var18 = var17.bind(var1)(var18);
+    var18 = var18.colors;
+    var18 = var18.INTERACTIVE_TEXT_ACTIVE;
+    var14['color'] = var18;
+    var8['metadataItem'] = var14;
+    var14 = {'flex': 1, 'flexDirection': 'row', 'alignItems': 'center', 'marginTop': 4};
+    var8['appConnectionNameContainer'] = var14;
+    var14 = {'flexDirection': 'row', 'alignItems': 'center', 'backgroundColor': null, 'borderRadius': null, 'borderWidth': 1, 'borderColor': null, 'paddingHorizontal': 8, 'paddingVertical': 4, 'marginTop': 12};
+    var18 = var10[var16];
+    var18 = var17.bind(var1)(var18);
+    var18 = var18.colors;
+    var18 = var18.BACKGROUND_BASE_LOWEST;
+    var14['backgroundColor'] = var18;
+    var18 = var10[var16];
+    var18 = var17.bind(var1)(var18);
+    var18 = var18.radii;
+    var18 = var18.sm;
+    var14['borderRadius'] = var18;
+    var16 = var10[var16];
+    var16 = var17.bind(var1)(var16);
+    var16 = var16.colors;
+    var16 = var16.BORDER_SUBTLE;
+    var14['borderColor'] = var16;
+    var8['connectedAccountPoweredByContainer'] = var14;
+    var14 = {};
+    var14['marginRight'] = var15;
+    var8['connectedAccountPoweredByAvatar'] = var14;
+    var14 = {'marginTop': 4294967292, 'alignItems': 'center', 'flexDirection': 'row'};
+    var8['connectedAccountPoweredByText'] = var14;
+    var8 = var12.bind(var13)(var8);
+    var _closure1_slot17 = var8;
+    var8 = var11.memo;
+    var8 = var8.bind(var11)(var6);
+    var _closure1_slot18 = var8;
+    var8 = var11.memo;
+    var8 = var8.bind(var11)(var5);
+    var _closure1_slot19 = var8;
+    var8 = new Array(0);
+    var _closure1_slot20 = var8;
+    var8 = new Array(0);
+    var _closure1_slot21 = var8;
+    var8 = 36;
+    var8 = var10[var8];
+    var10 = var9.bind(var1)(var8);
+    var9 = var10.fileFinishedImporting;
+    var8 = 'modules/user_profile/native/LegacyUserProfileConnections.tsx';
+    var8 = var9.bind(var10)(var8);
+    var7 = function LegacyUserProfileConnections(arg1) {
+        _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+            var1 = arg1;
+            var1 = var1.user;
+            var _closure2_slot0 = var1;
+            var6 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var3 = 33;
+            var4 = var7[var3];
+            var5 = undefined;
+            var10 = var6.bind(var5)(var4);
+            var9 = var10.useStateFromStores;
+            var4 = _closure1_slot9;
+            var8 = new Array(1);
+            var8[0] = var4;
+            var4 = function() {
+                var3 = _closure1_slot9;
+                var2 = var3.getUserProfile;
+                var1 = _closure2_slot0;
+                var1 = var1.id;
+                var1 = var2.bind(var3)(var1);
+                return var1;
+            };
+            var4 = var9.bind(var10)(var8, var4);
+            var _closure2_slot1 = var4;
+            var3 = var7[var3];
+            var8 = var6.bind(var5)(var3);
+            var7 = var8.useStateFromStores;
+            var3 = _closure1_slot8;
+            var6 = new Array(1);
+            var6[0] = var3;
+            var3 = function() {
+                var1 = _closure1_slot8;
+                var1 = var1.hidePersonalInformation;
+                return var1;
+            };
+            var3 = var7.bind(var8)(var6, var3);
+            var10 = _closure1_slot3;
+            var9 = var10.useMemo;
+            var6 = null;
+            var8 = var6 == var4;
+            var7 = undefined;
+            if(var8) { _fun0007_ip = 75; continue _fun0007 }
+case 76:
+            var7 = var4.applicationRoleConnections;
+case 75:
+            var8 = new Array(1);
+            var8[0] = var7;
+            var7 = function() {
+                _fun0008: for(var _fun0008_ip = 0; ; ) switch(_fun0008_ip) {
+case 0:
+                    var1 = _closure2_slot1;
+                    var2 = null;
+                    var4 = var2 == var1;
+                    var1 = undefined;
+                    if(var4) { _fun0008_ip = 77; continue _fun0008 }
+case 78:
+                    var3 = _closure2_slot1;
+                    var1 = var3.applicationRoleConnections;
+case 77:
+                    if(!(var2 == var1)) { _fun0008_ip = 79; continue _fun0008 }
+case 80:
+                    var1 = _closure1_slot21;
+case 79:
+                    return var1;
+                }
+            };
+            var7 = var9.bind(var10)(var7, var8);
+            var9 = _closure1_slot3;
+            var8 = var9.useMemo;
+            var12 = var6 == var4;
+            var10 = undefined;
+            if(var12) { _fun0007_ip = 71; continue _fun0007 }
+case 11:
+            var10 = var4.connectedAccounts;
+case 71:
+            var4 = new Array(1);
+            var4[0] = var10;
+            var2 = function() {
+                _fun0009: for(var _fun0009_ip = 0; ; ) switch(_fun0009_ip) {
+case 0:
+                    var1 = _closure2_slot1;
+                    var2 = null;
+                    var4 = var2 == var1;
+                    var1 = undefined;
+                    if(var4) { _fun0009_ip = 77; continue _fun0009 }
+case 78:
+                    var3 = _closure2_slot1;
+                    var1 = var3.connectedAccounts;
+case 77:
+                    if(!(var2 == var1)) { _fun0009_ip = 79; continue _fun0009 }
+case 80:
+                    var1 = _closure1_slot20;
+case 79:
+                    return var1;
+                }
+            };
+            var2 = var8.bind(var9)(var2, var4);
+            var4 = _closure1_slot22;
+            var12 = var4.bind(var5)(var7);
+            var4 = _closure1_slot23;
+            var1 = var1.id;
+            var10 = var4.bind(var5)(var2, var1);
+            var1 = null;
+            if(var3) { _fun0007_ip = 81; continue _fun0007 }
+case 82:
+            var2 = var2.length;
+            var8 = 0;
+            var1 = null;
+            if(!(var8 !== var2)) { _fun0007_ip = 81; continue _fun0007 }
+case 83:
+            var4 = _closure1_slot15;
+            var3 = _closure1_slot16;
+            var2 = {};
+            var7 = var6 != var12;
+            if(!var7) { _fun0007_ip = 66; continue _fun0007 }
+case 84:
+            var6 = var12.length;
+            var7 = var6 > var8;
+case 66:
+            if(!var7) { _fun0007_ip = 85; continue _fun0007 }
+case 86:
+            var9 = _closure1_slot14;
+            var8 = _closure1_slot1;
+            var17 = _closure1_slot2;
+            var6 = 35;
+            var6 = var17[var6];
+            var8 = var8.bind(var5)(var6);
+            var6 = {};
+            var16 = _closure1_slot0;
+            var13 = 26;
+            var14 = var17[var13];
+            var14 = var16.bind(var5)(var14);
+            var15 = var14.intl;
+            var14 = var15.string;
+            var13 = var17[var13];
+            var13 = var16.bind(var5)(var13);
+            var13 = var13.t;
+            var13 = var13.PHjkRE;
+            var13 = var14.bind(var15)(var13);
+            var6['title'] = var13;
+            var13 = true;
+            var6['showContainer'] = var13;
+            var6['children'] = var12;
+            var7 = var9.bind(var5)(var8, var6);
+case 85:
+            var6 = new Array(2);
+            var6[0] = var7;
+            var9 = _closure1_slot14;
+            var8 = _closure1_slot1;
+            var15 = _closure1_slot2;
+            var7 = 35;
+            var7 = var15[var7];
+            var8 = var8.bind(var5)(var7);
+            var7 = {};
+            var14 = _closure1_slot0;
+            var11 = 26;
+            var12 = var15[var11];
+            var12 = var14.bind(var5)(var12);
+            var13 = var12.intl;
+            var12 = var13.string;
+            var11 = var15[var11];
+            var11 = var14.bind(var5)(var11);
+            var11 = var11.t;
+            var11 = var11["3fe7U5"];
+            var11 = var12.bind(var13)(var11);
+            var7['title'] = var11;
+            var11 = true;
+            var7['showContainer'] = var11;
+            var7['children'] = var10;
+            var7 = var9.bind(var5)(var8, var7);
+            var6[1] = var7;
+            var2['children'] = var6;
+            var1 = var4.bind(var5)(var3, var2);
+case 81:
+            return var1;
+        }
+    };
+    var3['default'] = var7;
+    var3['ConnectedUserAccount'] = var6;
+    var3['ConnectedApplicationUserRoleAccount'] = var5;
+    var3['useAppplicationRoleConnectionItems'] = var4;
+    var3['useConnectedAccountItems'] = var2;
+    return var1;
+})();

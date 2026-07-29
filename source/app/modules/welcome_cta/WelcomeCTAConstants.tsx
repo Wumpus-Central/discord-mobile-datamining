@@ -1,0 +1,36 @@
+// app/modules/welcome_cta/WelcomeCTAConstants.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var3 = exports;
+    var1 = global;
+    var5 = var1.Object;
+    var4 = var5.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var4.bind(var5)(var3, var1, var2);
+    var2 = dependencyMap;
+    var1 = 0;
+    var4 = var2[var1];
+    var2 = require;
+    var1 = undefined;
+    var5 = var2.bind(var1)(var4);
+    var4 = var5.fileFinishedImporting;
+    var2 = 'modules/welcome_cta/WelcomeCTAConstants.tsx';
+    var2 = var4.bind(var5)(var2);
+    var2 = new Array(6);
+    var4 = {'id': '749054660769218631', 'format_type': 3, 'description': 'Wumpus waves hello', 'name': 'Wave'};
+    var2[0] = var4;
+    var4 = {'id': '751606379340365864', 'format_type': 3, 'description': 'Nelly peeks around a wall and waves hello', 'name': 'Wave'};
+    var2[1] = var4;
+    var4 = {'id': '754108890559283200', 'format_type': 3, 'description': 'Clyde cheerfully waving', 'name': 'Wave'};
+    var2[2] = var4;
+    var4 = {'id': '781291131828699156', 'format_type': 2, 'description': 'Choco waves in greeting', 'name': 'Wave'};
+    var2[3] = var4;
+    var4 = {'id': '816087792291282944', 'format_type': 3, 'description': 'Doggo spins and greets you', 'name': 'Sup'};
+    var2[4] = var4;
+    var4 = {'id': '819128604311027752', 'format_type': 3, 'description': 'Peach raising her arms in distress', 'name': 'Scream'};
+    var2[5] = var4;
+    var3['WELCOME_STICKERS'] = var2;
+    return var1;
+})();

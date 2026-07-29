@@ -1,0 +1,38 @@
+// app/modules/device/constants/DeviceState.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var3 = exports;
+    var1 = global;
+    var5 = var1.Object;
+    var4 = var5.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var4.bind(var5)(var3, var1, var2);
+    var4 = {};
+    var1 = 'NOMINAL';
+    var4['NOMINAL'] = var1;
+    var1 = 'FAIR';
+    var4['FAIR'] = var1;
+    var1 = 'SERIOUS';
+    var4['SERIOUS'] = var1;
+    var1 = 'CRITICAL';
+    var4['CRITICAL'] = var1;
+    var1 = 'UNKNOWN';
+    var4['UNKNOWN'] = var1;
+    var2 = {'thermalState': null, 'batteryLevel': 1, 'isLowPowerMode': false};
+    var1 = var4.UNKNOWN;
+    var2['thermalState'] = var1;
+    var5 = dependencyMap;
+    var1 = 0;
+    var6 = var5[var1];
+    var5 = require;
+    var1 = undefined;
+    var7 = var5.bind(var1)(var6);
+    var6 = var7.fileFinishedImporting;
+    var5 = 'modules/device/constants/DeviceState.tsx';
+    var5 = var6.bind(var7)(var5);
+    var3['ThermalState'] = var4;
+    var3['DEFAULT_DEVICE_STATE'] = var2;
+    return var1;
+})();

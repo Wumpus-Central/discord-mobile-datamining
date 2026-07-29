@@ -1,0 +1,77 @@
+// app/modules/instant_invite/GuildInviteSendStateStore.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var6 = require;
+    var3 = exports;
+    var7 = dependencyMap;
+    var _closure1_slot0 = var6;
+    var _closure1_slot1 = var7;
+    var1 = global;
+    var8 = var1.Object;
+    var5 = var8.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var5.bind(var8)(var3, var1, var2);
+    var1 = 0;
+    var2 = var7[var1];
+    var1 = undefined;
+    var8 = var6.bind(var1)(var2);
+    var5 = var8.create;
+    var2 = function() {
+        var1 = {};
+        return var1;
+    };
+    var2 = var5.bind(var8)(var2);
+    var _closure1_slot2 = var2;
+    var5 = 2;
+    var5 = var7[var5];
+    var7 = var6.bind(var1)(var5);
+    var6 = var7.fileFinishedImporting;
+    var5 = 'modules/instant_invite/GuildInviteSendStateStore.tsx';
+    var5 = var6.bind(var7)(var5);
+    var4 = function setSendState(arg1, arg2, arg3) {
+        var1 = arg1;
+        var _closure2_slot0 = var1;
+        var1 = arg2;
+        var _closure2_slot1 = var1;
+        var1 = arg3;
+        var _closure2_slot2 = var1;
+        var4 = _closure1_slot0;
+        var3 = _closure1_slot1;
+        var1 = 1;
+        var3 = var3[var1];
+        var1 = undefined;
+        var4 = var4.bind(var1)(var3);
+        var3 = var4.batchUpdates;
+        var2 = function() {
+            var3 = _closure1_slot2;
+            var2 = var3.setState;
+            var1 = function(arg1) {
+                var5 = arg1;
+                var1 = {};
+                var7 = var1;
+                var6 = var5;
+                var2 = copyDataProperties(var7, var6);
+                var3 = _closure2_slot0;
+                var2 = {};
+                var6 = var5[var3];
+                var7 = var2;
+                var5 = copyDataProperties(var7, var6);
+                var5 = _closure2_slot1;
+                var4 = _closure2_slot2;
+                var2[4] = var4;
+                var1[2] = var2;
+                return var1;
+            };
+            var1 = var2.bind(var3)(var1);
+            var1 = undefined;
+            return var1;
+        };
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var3['setSendState'] = var4;
+    var3['useGuildInviteSendStates'] = var2;
+    return var1;
+})();

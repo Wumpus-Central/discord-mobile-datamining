@@ -1,0 +1,113 @@
+// app/design/components/Sheet/native/ActionSheetCloseButton.native.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var1 = metroImportDefault;
+    var _closure1_slot1 = var1;
+    var _closure1_slot2 = var6;
+    var4 = global;
+    var9 = var4.Object;
+    var8 = var9.defineProperty;
+    var7 = {};
+    var1 = true;
+    var7['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var7);
+    var1 = 0;
+    var8 = var6[var1];
+    var7 = metroImportAll;
+    var1 = undefined;
+    var7 = var7.bind(var1)(var8);
+    var7 = 1;
+    var7 = var6[var7];
+    var7 = var5.bind(var1)(var7);
+    var7 = var7.jsx;
+    var _closure1_slot3 = var7;
+    var9 = var4.Object;
+    var8 = var9.freeze;
+    var7 = {};
+    var10 = 12;
+    var7['radius'] = var10;
+    var7 = var8.bind(var9)(var7);
+    var _closure1_slot4 = var7;
+    var8 = var4.Object;
+    var7 = var8.freeze;
+    var4 = {'top': 8, 'right': 8, 'bottom': 8, 'left': 8};
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot5 = var4;
+    var4 = 6;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'design/components/Sheet/native/ActionSheetCloseButton.native.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function ActionSheetCloseButton(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var1 = arg1;
+            var5 = var1.onPress;
+            var9 = var1.variant;
+            var4 = _closure1_slot3;
+            var6 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var1 = 2;
+            var1 = var7[var1];
+            var3 = undefined;
+            var1 = var6.bind(var3)(var1);
+            var2 = var1.PressableOpacity;
+            var1 = {};
+            var10 = 'button';
+            var1['accessibilityRole'] = var10;
+            var10 = 3;
+            var11 = var7[var10];
+            var11 = var6.bind(var3)(var11);
+            var12 = var11.intl;
+            var11 = var12.string;
+            var10 = var7[var10];
+            var10 = var6.bind(var3)(var10);
+            var10 = var10.t;
+            var10 = var10.cpT0Cq;
+            var10 = var11.bind(var12)(var10);
+            var1['accessibilityLabel'] = var10;
+            var10 = _closure1_slot5;
+            var1['hitSlop'] = var10;
+            var10 = _closure1_slot4;
+            var1['androidRippleConfig'] = var10;
+            var1['onPress'] = var5;
+            var5 = 4;
+            var5 = var7[var5];
+            var5 = var6.bind(var3)(var5);
+            var6 = var5.XSmallIcon;
+            var5 = {};
+            var7 = 'overlay';
+            if(!(var7 !== var9)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var9 = _closure1_slot1;
+            var10 = _closure1_slot2;
+            var7 = 5;
+            var7 = var10[var7];
+            var7 = var9.bind(var3)(var7);
+            var7 = var7.colors;
+            var7 = var7.ICON_STRONG;
+            _fun0001_ip = 4; continue _fun0001;
+case 2:
+            var9 = _closure1_slot1;
+            var10 = _closure1_slot2;
+            var8 = 5;
+            var8 = var10[var8];
+            var8 = var9.bind(var3)(var8);
+            var8 = var8.colors;
+            var7 = var8.WHITE;
+case 4:
+            var5['color'] = var7;
+            var5 = var4.bind(var3)(var6, var5);
+            var1['children'] = var5;
+            var1 = var4.bind(var3)(var2, var1);
+            return var1;
+        }
+    };
+    var3['ActionSheetCloseButton'] = var2;
+    return var1;
+})();

@@ -1,0 +1,244 @@
+// app/modules/gateway/GatewaySocketSingleton.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+        var7 = require;
+        var10 = metroImportDefault;
+        var3 = exports;
+        var8 = dependencyMap;
+        var _closure1_slot0 = var10;
+        var1 = metroImportAll;
+        var _closure1_slot1 = var1;
+        var _closure1_slot2 = var8;
+        var1 = global;
+        var5 = var1.Object;
+        var4 = var5.defineProperty;
+        var2 = {};
+        var1 = true;
+        var2['value'] = var1;
+        var1 = '__esModule';
+        var1 = var4.bind(var5)(var3, var1, var2);
+        var1 = 0;
+        var2 = var8[var1];
+        var1 = undefined;
+        var2 = var10.bind(var1)(var2);
+        var _closure1_slot3 = var2;
+        var2 = 1;
+        var2 = var8[var2];
+        var5 = var10.bind(var1)(var2);
+        var2 = var5.prototype;
+        var4 = Object.create(var2, {constructor: {value: var5}});
+        var16 = 'ConnectionStore';
+        var17 = var4;
+        var2 = new var17[var5](var16, var15);
+        var2 = var2 instanceof Object ? var2 : var4;
+        var _closure1_slot4 = var2;
+        var2 = 2;
+        var2 = var8[var2];
+        var2 = var10.bind(var1)(var2);
+        var4 = var2.prototype;
+        var4 = Object.create(var4, {constructor: {value: var2}});
+        var17 = var4;
+        var2 = new var17[var2](var16);
+        var5 = var2 instanceof Object ? var2 : var4;
+        var _closure1_slot5 = var5;
+        var2 = 3;
+        var2 = var8[var2];
+        var2 = var10.bind(var1)(var2);
+        var4 = var2.prototype;
+        var4 = Object.create(var4, {constructor: {value: var2}});
+        var17 = var4;
+        var16 = var5;
+        var2 = new var17[var2](var16, var15);
+        var4 = var2 instanceof Object ? var2 : var4;
+        var _closure1_slot6 = var4;
+        var2 = 4;
+        var2 = var8[var2];
+        var2 = var10.bind(var1)(var2);
+        var9 = var2.prototype;
+        var9 = Object.create(var9, {constructor: {value: var2}});
+        var17 = var9;
+        var16 = var5;
+        var2 = new var17[var2](var16, var15);
+        var2 = var2 instanceof Object ? var2 : var9;
+        var9 = function() {
+            _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                var2 = _closure1_slot3;
+                var1 = var2.getToken;
+                var4 = var1.bind(var2)();
+                var7 = _closure1_slot4;
+                var6 = var7.verbose;
+                var5 = {};
+                var1 = null;
+                var2 = var1 != var4;
+                var5['hasToken'] = var2;
+                var2 = 'handleIdentify called';
+                var2 = var6.bind(var7)(var2, var5);
+                if(!(var1 != var4)) { _fun0002_ip = 2; continue _fun0002 }
+case 3:
+                var10 = _closure1_slot0;
+                var9 = _closure1_slot2;
+                var2 = 5;
+                var2 = var9[var2];
+                var8 = undefined;
+                var5 = var10.bind(var8)(var2);
+                var2 = var5.getState;
+                var6 = var2.bind(var5)();
+                var5 = _closure1_slot3;
+                var2 = var5.getInstallationForTracking;
+                var7 = var2.bind(var5)();
+                var2 = {};
+                var2['token'] = var4;
+                var4 = {};
+                var5 = 6;
+                var5 = var9[var5];
+                var10 = var10.bind(var8)(var5);
+                var5 = var10.getSuperProperties;
+                var11 = var5.bind(var10)();
+                var12 = var4;
+                var5 = copyDataProperties(var12, var11);
+                var5 = 'client_app_state';
+                var4[4] = var6;
+                var6 = false;
+                var5 = 'is_fast_connect';
+                var4[4] = var6;
+                var6 = _closure1_slot1;
+                var5 = 7;
+                var5 = var9[var5];
+                var6 = var6.bind(var8)(var5);
+                var5 = var6.describeConnectionReasons;
+                var6 = var5.bind(var6)();
+                var5 = 'gateway_connect_reasons';
+                var4[4] = var6;
+                if(!(var1 == var7)) { _fun0002_ip = 4; continue _fun0002 }
+case 5:
+                var5 = {};
+                _fun0002_ip = 6; continue _fun0002;
+case 4:
+                var6 = {};
+                var6['installation_id'] = var7;
+                var5 = var6;
+case 6:
+                var12 = var4;
+                var11 = var5;
+                var5 = copyDataProperties(var12, var11);
+                var2['properties'] = var4;
+                var4 = _closure1_slot6;
+                var3 = var4.getInitialState;
+                var3 = var3.bind(var4)();
+                var2['presence'] = var3;
+                return var2;
+case 2:
+                return var1;
+            }
+        };
+        var5['handleIdentify'] = var9;
+        var9 = 8;
+        var9 = var8[var9];
+        var11 = var7.bind(var1)(var9);
+        var9 = var11.isDesktop;
+        var9 = var9.bind(var11)();
+        if(!var9) { _fun0001_ip = 7; continue _fun0001 }
+case 8:
+        var9 = 9;
+        var9 = var8[var9];
+        var9 = var10.bind(var1)(var9);
+        var13 = var9.powerMonitor;
+        var12 = var13.on;
+        var11 = 'resume';
+        var9 = function() {
+            var4 = _closure1_slot5;
+            var3 = var4.expeditedHeartbeat;
+            var2 = 5000;
+            var1 = 'power monitor resumed';
+            var1 = var3.bind(var4)(var2, var1);
+            var1 = undefined;
+            return var1;
+        };
+        var9 = var12.bind(var13)(var11, var9);
+case 7:
+        var9 = 10;
+        var11 = var8[var9];
+        var13 = var10.bind(var1)(var11);
+        var12 = var13.addOfflineCallback;
+        var11 = function() {
+            var5 = _closure1_slot5;
+            var4 = var5.networkStateChange;
+            var3 = 15000;
+            var2 = 'network detected offline.';
+            var1 = false;
+            var1 = var4.bind(var5)(var3, var2, var1);
+            var1 = undefined;
+            return var1;
+        };
+        var11 = var12.bind(var13)(var11);
+        var9 = var8[var9];
+        var11 = var10.bind(var1)(var9);
+        var10 = var11.addOnlineCallback;
+        var9 = function() {
+            var4 = _closure1_slot5;
+            var3 = var4.networkStateChange;
+            var2 = 5000;
+            var1 = 'network detected online.';
+            var1 = var3.bind(var4)(var2, var1);
+            var1 = undefined;
+            return var1;
+        };
+        var9 = var10.bind(var11)(var9);
+        var11 = var5.on;
+        var10 = 'disconnect';
+        var9 = function(arg1) {
+            var1 = arg1;
+            var6 = var1.code;
+            var5 = var1.reason;
+            var3 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var1 = 11;
+            var2 = var2[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.dispatch;
+            var2 = {};
+            var7 = 'CONNECTION_CLOSED';
+            var2['type'] = var7;
+            var2['code'] = var6;
+            var2['reason'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        };
+        var9 = var11.bind(var5)(var10, var9);
+        var10 = var5.on;
+        var9 = 'close';
+        var6 = function(arg1) {
+            var1 = arg1;
+            var6 = var1.code;
+            var5 = var1.reason;
+            var3 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var1 = 11;
+            var2 = var2[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.dispatch;
+            var2 = {};
+            var7 = 'CONNECTION_INTERRUPTED';
+            var2['type'] = var7;
+            var2['code'] = var6;
+            var2['reason'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        };
+        var6 = var10.bind(var5)(var9, var6);
+        var6 = 12;
+        var6 = var8[var6];
+        var8 = var7.bind(var1)(var6);
+        var7 = var8.fileFinishedImporting;
+        var6 = 'modules/gateway/GatewaySocketSingleton.tsx';
+        var6 = var7.bind(var8)(var6);
+        var3['socket'] = var5;
+        var3['localPresenceState'] = var4;
+        var3['localVoiceState'] = var2;
+        return var1;
+    }
+})();

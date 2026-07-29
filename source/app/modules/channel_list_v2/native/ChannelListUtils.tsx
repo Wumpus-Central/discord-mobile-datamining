@@ -1,0 +1,82 @@
+// app/modules/channel_list_v2/native/ChannelListUtils.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var1 = metroImportDefault;
+    var _closure1_slot1 = var1;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var4 = var6[var1];
+    var1 = undefined;
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.AnalyticEvents;
+    var _closure1_slot3 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/channel_list_v2/native/ChannelListUtils.tsx';
+    var4 = var5.bind(var6)(var4);
+    var4 = function isFavoritesSection(arg1, arg2) {
+        var1 = arg2;
+        var2 = var1.favoritesSectionNumber;
+        var1 = arg1;
+        var1 = var1 === var2;
+        return var1;
+    };
+    var3['isFavoritesSection'] = var4;
+    var4 = function isRecentsSection(arg1, arg2) {
+        var1 = arg2;
+        var2 = var1.recentsSectionNumber;
+        var1 = arg1;
+        var1 = var1 === var2;
+        return var1;
+    };
+    var3['isRecentsSection'] = var4;
+    var4 = function isVoiceChannelsSection(arg1, arg2) {
+        var1 = arg2;
+        var2 = var1.voiceChannelsSectionNumber;
+        var1 = arg1;
+        var1 = var1 === var2;
+        return var1;
+    };
+    var3['isVoiceChannelsSection'] = var4;
+    var4 = function isNamedCategorySection(arg1) {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot2;
+        var1 = 1;
+        var2 = var2[var1];
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        var2 = var1.SECTION_INDEX_FIRST_NAMED_CATEGORY;
+        var1 = arg1;
+        var1 = var1 >= var2;
+        return var1;
+    };
+    var3['isNamedCategorySection'] = var4;
+    var2 = function logChannelListEndReached() {
+        var4 = _closure1_slot1;
+        var3 = _closure1_slot2;
+        var1 = 2;
+        var3 = var3[var1];
+        var1 = undefined;
+        var4 = var4.bind(var1)(var3);
+        var3 = var4.trackWithMetadata;
+        var2 = _closure1_slot3;
+        var2 = var2.CHANNEL_LIST_END_REACHED;
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var3['logChannelListEndReached'] = var2;
+    return var1;
+})();

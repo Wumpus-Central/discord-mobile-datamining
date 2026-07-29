@@ -1,0 +1,2232 @@
+// app/modules/explicit_media_redaction/ExplicitMediaManager.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var7 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var7;
+    var _closure1_slot2 = var6;
+    var1 = function _isNativeReflectConstruct() {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+case 2: // try_start_0
+            var2 = global;
+            var3 = var2.Boolean;
+            var3 = var3.prototype;
+            var4 = var3.valueOf;
+            var3 = var4.call;
+            var8 = var2.Reflect;
+            var7 = var8.construct;
+            var6 = var2.Boolean;
+            var5 = new Array(0);
+            var2 = function() {
+                var1 = undefined;
+                return var1;
+            };
+            var2 = var7.bind(var8)(var6, var5, var2);
+            var2 = var3.bind(var4)(var2);
+            var2 = !var2;
+            var _closure2_slot0 = var2;
+case 3: // try_end0
+            _fun0001_ip = 4; continue _fun0001;
+case 5: // catch_target0
+            CatchBlockStart(arg_register=1);
+case 4:
+            var2 = function _isNativeReflectConstruct() {
+                var1 = _closure2_slot0;
+                var1 = !var1;
+                var1 = !var1;
+                return var1;
+            };
+            _closure1_slot20 = var2;
+            var1 = undefined;
+            var1 = var2.bind(var1)();
+            return var1;
+        }
+    };
+    var _closure1_slot20 = var1;
+    var1 = function createCompositeKey(arg1) {
+        var1 = arg1;
+        var5 = var1.channel_id;
+        var4 = var1.id;
+        var1 = global;
+        var1 = var1.HermesInternal;
+        var3 = var1.concat;
+        var2 = '';
+        var1 = ':';
+        var1 = var3.bind(var2)(var5, var1, var4);
+        return var1;
+    };
+    var _closure1_slot21 = var1;
+    var1 = function resetManager() {
+        var1 = global;
+        var4 = var1.Object;
+        var3 = var4.values;
+        var1 = _closure1_slot19;
+        var4 = var3.bind(var4)(var1);
+        var3 = var4.forEach;
+        var1 = function(arg1) {
+            var1 = arg1;
+            var3 = var1.timeout;
+            var1 = global;
+            var2 = var1.clearTimeout;
+            var1 = undefined;
+            var2 = var2.bind(var1)(var3);
+            return var1;
+        };
+        var1 = var3.bind(var4)(var1);
+        var1 = {};
+        _closure1_slot19 = var1;
+        var1 = undefined;
+        return var1;
+    };
+    var _closure1_slot22 = var1;
+    var1 = function maybeCancelTimeout(arg1, arg2) {
+        _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+            var8 = arg1;
+            var1 = var8.id;
+            var4 = null;
+            if(!(var4 != var1)) { _fun0002_ip = 6; continue _fun0002 }
+case 7:
+            var1 = var8.channel_id;
+            if(!(var4 != var1)) { _fun0002_ip = 6; continue _fun0002 }
+case 8:
+            var2 = _closure1_slot21;
+            var5 = undefined;
+            var2 = var2.bind(var5)(var8);
+            var3 = _closure1_slot19;
+            var3 = var3[var2];
+            if(!(var4 == var3)) { _fun0002_ip = 9; continue _fun0002 }
+case 10:
+            var3 = false;
+            return var3;
+case 9:
+            var3 = _closure1_slot19;
+            var3 = var3[var2];
+            var4 = var3.timeout;
+            var7 = var3.setAt;
+            var6 = function handleMediaScanCompleteReporting(arg1, arg2, arg3) {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var12 = arg1;
+                    var5 = arg2;
+                    var7 = _closure1_slot0;
+                    var1 = _closure1_slot2;
+                    var4 = 15;
+                    var6 = var1[var4];
+                    var1 = undefined;
+                    var6 = var7.bind(var1)(var6);
+                    var6 = var6.TimeoutCancelSource;
+                    var6 = var6.UPDATE;
+                    if(!(var5 === var6)) { _fun0003_ip = 11; continue _fun0003 }
+case 12:
+                    var11 = var12.attachments;
+                    var6 = null;
+                    if(!(var6 == var11)) { _fun0003_ip = 13; continue _fun0003 }
+case 14:
+                    var11 = new Array(0);
+case 13:
+                    var10 = var12.embeds;
+                    if(!(var6 == var10)) { _fun0003_ip = 15; continue _fun0003 }
+case 16:
+                    var10 = new Array(0);
+case 15:
+                    var7 = var11.filter;
+                    var6 = function(arg1) {
+                        var7 = _closure1_slot0;
+                        var8 = _closure1_slot2;
+                        var1 = 16;
+                        var1 = var8[var1];
+                        var6 = undefined;
+                        var4 = var7.bind(var6)(var1);
+                        var3 = var4.isMediaFlaggedForHarmType;
+                        var1 = 17;
+                        var1 = var8[var1];
+                        var1 = var7.bind(var6)(var1);
+                        var1 = var1.ContentHarmType;
+                        var2 = var1.EXPLICIT;
+                        var1 = {};
+                        var5 = 18;
+                        var5 = var8[var5];
+                        var5 = var7.bind(var6)(var5);
+                        var5 = var5.ObscuredMediaTypes;
+                        var5 = var5.Attachment;
+                        var1['type'] = var5;
+                        var5 = arg1;
+                        var1['media'] = var5;
+                        var1 = var3.bind(var4)(var2, var1);
+                        return var1;
+                    };
+                    var9 = var7.bind(var11)(var6);
+                    var6 = var10.filter;
+                    var3 = function(arg1) {
+                        var7 = _closure1_slot0;
+                        var8 = _closure1_slot2;
+                        var1 = 16;
+                        var1 = var8[var1];
+                        var6 = undefined;
+                        var4 = var7.bind(var6)(var1);
+                        var3 = var4.isMediaFlaggedForHarmType;
+                        var1 = 17;
+                        var1 = var8[var1];
+                        var1 = var7.bind(var6)(var1);
+                        var1 = var1.ContentHarmType;
+                        var2 = var1.EXPLICIT;
+                        var1 = {};
+                        var5 = 18;
+                        var5 = var8[var5];
+                        var5 = var7.bind(var6)(var5);
+                        var5 = var5.ObscuredMediaTypes;
+                        var5 = var5.Embed;
+                        var1['type'] = var5;
+                        var5 = arg1;
+                        var1['media'] = var5;
+                        var1 = var3.bind(var4)(var2, var1);
+                        return var1;
+                    };
+                    var8 = var6.bind(var10)(var3);
+                    var6 = _closure1_slot0;
+                    var3 = _closure1_slot2;
+                    var3 = var3[var4];
+                    var7 = var6.bind(var1)(var3);
+                    var6 = var7.trackExplicitMediaScanComplete;
+                    var3 = {};
+                    var13 = var12.id;
+                    var3['messageId'] = var13;
+                    var12 = var12.channel_id;
+                    var3['channelId'] = var12;
+                    var11 = var11.length;
+                    var3['numOfAttachments'] = var11;
+                    var10 = var10.length;
+                    var3['numOfEmbeds'] = var10;
+                    var9 = var9.length;
+                    var3['numOfExplicitAttachments'] = var9;
+                    var8 = var8.length;
+                    var3['numOfExplicitEmbeds'] = var8;
+                    var3 = var6.bind(var7)(var3);
+case 11:
+                    var3 = _closure1_slot0;
+                    var2 = _closure1_slot2;
+                    var2 = var2[var4];
+                    var4 = var3.bind(var1)(var2);
+                    var3 = var4.trackScanTiming;
+                    var2 = arg3;
+                    var2 = var3.bind(var4)(var2, var5);
+                    return var1;
+                }
+            };
+            var3 = arg2;
+            var3 = var6.bind(var5)(var8, var3, var7);
+            var3 = global;
+            var3 = var3.clearTimeout;
+            var3 = var3.bind(var5)(var4);
+            var1 = _closure1_slot19;
+            var1 = delete var1[var2];
+            var1 = true;
+            return var1;
+case 6:
+            var1 = false;
+            return var1;
+        }
+    };
+    var _closure1_slot23 = var1;
+    var1 = function sendForScanning(arg1, arg2) {
+        _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+            var3 = arg1;
+            var2 = var3.length;
+            var1 = 0;
+            if(!(var1 !== var2)) { _fun0004_ip = 17; continue _fun0004 }
+case 7:
+            var5 = _closure1_slot0;
+            var4 = _closure1_slot2;
+            var2 = 20;
+            var4 = var4[var2];
+            var2 = undefined;
+            var2 = var5.bind(var2)(var4);
+            var4 = arg2;
+            if(var4) { _fun0004_ip = 18; continue _fun0004 }
+case 19:
+            var5 = var2.sendMessagesForScanning;
+            var1 = var3[var1];
+            var4 = var1.channel_id;
+            var6 = var3.map;
+            var1 = function(arg1) {
+                var1 = arg1;
+                var1 = var1.id;
+                return var1;
+            };
+            var1 = var6.bind(var3)(var1);
+            var1 = var5.bind(var2)(var4, var1);
+            _fun0004_ip = 17; continue _fun0004;
+case 18:
+            var1 = var2.sendMultiChannelMessagesForScanning;
+            var1 = var1.bind(var2)(var3);
+case 17:
+            var1 = undefined;
+            return var1;
+        }
+    };
+    var _closure1_slot24 = var1;
+    var1 = function withoutScheduledTimeout(arg1) {
+        var4 = _closure1_slot21;
+        var3 = undefined;
+        var2 = arg1;
+        var2 = var4.bind(var3)(var2);
+        var1 = _closure1_slot19;
+        var2 = var1[var2];
+        var1 = null;
+        var1 = var1 == var2;
+        return var1;
+    };
+    var _closure1_slot25 = var1;
+    var1 = function handleUnscannedMessages(arg1, arg2) {
+        _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+            var8 = arg1;
+            var4 = arg2;
+            var6 = null;
+            var3 = var4;
+            if(!(var6 == var3)) { _fun0005_ip = 20; continue _fun0005 }
+case 21:
+            var3 = {};
+case 20:
+            var7 = var3.forceBatchScan;
+            var1 = undefined;
+            var5 = var1 !== var7;
+            if(!var5) { _fun0005_ip = 22; continue _fun0005 }
+case 23:
+            var5 = var7;
+case 22:
+            var7 = var3.jitter;
+            var3 = var1 !== var7;
+            if(!var3) { _fun0005_ip = 9; continue _fun0005 }
+case 24:
+            var3 = var7;
+case 9:
+            if(!(var6 != var4)) { _fun0005_ip = 25; continue _fun0005 }
+case 26:
+            var4 = var4.isMessageUpdate;
+            if(var4) { _fun0005_ip = 27; continue _fun0005 }
+case 25:
+            var6 = var8.filter;
+            var4 = function(arg1) {
+                var3 = _closure1_slot0;
+                var2 = _closure1_slot2;
+                var1 = 16;
+                var2 = var2[var1];
+                var1 = undefined;
+                var3 = var3.bind(var1)(var2);
+                var2 = var3.isEligibleForScanning;
+                var1 = arg1;
+                var1 = var2.bind(var3)(var1);
+                return var1;
+            };
+            var7 = var6.bind(var8)(var4);
+            var6 = var7.filter;
+            var4 = _closure1_slot25;
+            var4 = var6.bind(var7)(var4);
+            _fun0005_ip = 28; continue _fun0005;
+case 27:
+            var7 = var8.filter;
+            var6 = function(arg1) {
+                _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+                    var4 = arg1;
+                    var3 = _closure1_slot0;
+                    var1 = _closure1_slot2;
+                    var6 = 16;
+                    var1 = var1[var6];
+                    var5 = undefined;
+                    var3 = var3.bind(var5)(var1);
+                    var1 = var3.isEligibleForScanning;
+                    var1 = var1.bind(var3)(var4);
+                    if(!var1) { _fun0006_ip = 3; continue _fun0006 }
+case 29:
+                    var3 = _closure1_slot0;
+                    var2 = _closure1_slot2;
+                    var2 = var2[var6];
+                    var3 = var3.bind(var5)(var2);
+                    var2 = var3.hasUnscannedMedia;
+                    var1 = var2.bind(var3)(var4);
+case 3:
+                    return var1;
+                }
+            };
+            var8 = var7.bind(var8)(var6);
+            var7 = var8.filter;
+            var6 = _closure1_slot25;
+            var4 = var7.bind(var8)(var6);
+case 28:
+            var _closure2_slot0 = var4;
+            var7 = var4.forEach;
+            var6 = function(arg1) {
+                _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+                    var4 = arg1;
+                    var _closure3_slot0 = var4;
+                    var3 = _closure1_slot21;
+                    var1 = undefined;
+                    var4 = var3.bind(var1)(var4);
+                    var3 = _closure1_slot19;
+                    var6 = var3[var4];
+                    var3 = null;
+                    if(!(var3 == var6)) { _fun0007_ip = 30; continue _fun0007 }
+case 31:
+                    var6 = _closure1_slot1;
+                    var10 = _closure1_slot2;
+                    var3 = 21;
+                    var3 = var10[var3];
+                    var7 = var6.bind(var1)(var3);
+                    var6 = var7.increment;
+                    var3 = {};
+                    var9 = _closure1_slot0;
+                    var8 = 22;
+                    var8 = var10[var8];
+                    var8 = var9.bind(var1)(var8);
+                    var8 = var8.MetricEvents;
+                    var8 = var8.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE;
+                    var3['name'] = var8;
+                    var3 = var6.bind(var7)(var3);
+                    var3 = _closure1_slot19;
+                    var2 = {};
+                    var6 = global;
+                    var8 = var6.Date;
+                    var7 = var8.now;
+                    var7 = var7.bind(var8)();
+                    var2['setAt'] = var7;
+                    var7 = var6.setTimeout;
+                    var6 = function() {
+                        _fun0008: for(var _fun0008_ip = 0; ; ) switch(_fun0008_ip) {
+case 0:
+                            var5 = _closure3_slot0;
+                            var4 = _closure1_slot23;
+                            var7 = _closure1_slot0;
+                            var1 = _closure1_slot2;
+                            var6 = 15;
+                            var3 = var1[var6];
+                            var1 = undefined;
+                            var3 = var7.bind(var1)(var3);
+                            var3 = var3.TimeoutCancelSource;
+                            var3 = var3.TIMEOUT;
+                            var3 = var4.bind(var1)(var5, var3);
+                            if(!var3) { _fun0008_ip = 32; continue _fun0008 }
+case 33:
+                            var8 = _closure1_slot13;
+                            var7 = var8.getMessage;
+                            var4 = var5.channel_id;
+                            var3 = var5.id;
+                            var9 = var7.bind(var8)(var4, var3);
+                            var3 = null;
+                            if(!(var3 != var9)) { _fun0008_ip = 34; continue _fun0008 }
+case 35:
+                            var4 = _closure1_slot0;
+                            var3 = _closure1_slot2;
+                            var7 = 16;
+                            var7 = var3[var7];
+                            var8 = var4.bind(var1)(var7);
+                            var7 = var8.getUnscannedMediaIds;
+                            var7 = var7.bind(var8)(var9);
+                            var8 = var7.attachmentIds;
+                            var7 = var7.embedIds;
+                            var3 = var3[var6];
+                            var6 = var4.bind(var1)(var3);
+                            var4 = var6.trackScanningTimedOut;
+                            var3 = {};
+                            var9 = var5.channel_id;
+                            var3['channelId'] = var9;
+                            var9 = var5.id;
+                            var3['messageId'] = var9;
+                            var3['attachmentIds'] = var8;
+                            var3['embedIds'] = var7;
+                            var3 = var4.bind(var6)(var3);
+case 34:
+                            var3 = _closure1_slot1;
+                            var4 = _closure1_slot2;
+                            var2 = 19;
+                            var2 = var4[var2];
+                            var4 = var3.bind(var1)(var2);
+                            var3 = var4.dispatch;
+                            var2 = {};
+                            var6 = 'MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT';
+                            var2['type'] = var6;
+                            var6 = var5.id;
+                            var2['messageId'] = var6;
+                            var5 = var5.channel_id;
+                            var2['channelId'] = var5;
+                            var2 = var3.bind(var4)(var2);
+case 32:
+                            return var1;
+                        }
+                    };
+                    var5 = 3000;
+                    var5 = var7.bind(var1)(var6, var5);
+                    var2['timeout'] = var5;
+                    var3[var4] = var2;
+case 30:
+                    return var1;
+                }
+            };
+            var6 = var7.bind(var4)(var6);
+            if(var5) { _fun0005_ip = 36; continue _fun0005 }
+case 37:
+            var6 = global;
+            var8 = var6.Set;
+            var7 = var4.map;
+            var6 = function(arg1) {
+                var1 = arg1;
+                var1 = var1.channel_id;
+                return var1;
+            };
+            var11 = var7.bind(var4)(var6);
+            var7 = var8.prototype;
+            var7 = Object.create(var7, {constructor: {value: var8}});
+            var12 = var7;
+            var6 = new var12[var8](var11, var10);
+            var6 = var6 instanceof Object ? var6 : var7;
+            var7 = var6.size;
+            var6 = 1;
+            var5 = var7 > var6;
+case 36:
+            var _closure2_slot1 = var5;
+            if(var3) { _fun0005_ip = 38; continue _fun0005 }
+case 39:
+            var3 = _closure1_slot24;
+            var3 = var3.bind(var1)(var4, var5);
+            _fun0005_ip = 40; continue _fun0005;
+case 38:
+            var3 = global;
+            var4 = var3.setTimeout;
+            var5 = var3.Math;
+            var3 = var5.random;
+            var5 = var3.bind(var5)();
+            var3 = 800;
+            var3 = var3 * var5;
+            var2 = function() {
+                var4 = _closure1_slot24;
+                var5 = _closure2_slot0;
+                var3 = var5.filter;
+                var2 = function(arg1) {
+                    var2 = _closure1_slot19;
+                    var4 = _closure1_slot21;
+                    var3 = undefined;
+                    var1 = arg1;
+                    var1 = var4.bind(var3)(var1);
+                    var2 = var2[var1];
+                    var1 = null;
+                    var1 = var1 != var2;
+                    return var1;
+                };
+                var3 = var3.bind(var5)(var2);
+                var2 = _closure2_slot1;
+                var1 = undefined;
+                var2 = var4.bind(var1)(var3, var2);
+                return var1;
+            };
+            var2 = var4.bind(var1)(var2, var3);
+case 40:
+            return var1;
+        }
+    };
+    var _closure1_slot26 = var1;
+    var1 = function aggregateExplicitMediaCounts(arg1) {
+        var5 = arg1;
+        var3 = {};
+        var _closure2_slot0 = var3;
+        var2 = {};
+        var _closure2_slot1 = var2;
+        var4 = var5.forEach;
+        var1 = function(arg1) {
+            _fun0009: for(var _fun0009_ip = 0; ; ) switch(_fun0009_ip) {
+case 0:
+                var4 = arg1;
+                var3 = _closure2_slot0;
+                var1 = var4.channel_id;
+                var1 = var3[var1];
+                var5 = null;
+                if(!(var5 == var1)) { _fun0009_ip = 24; continue _fun0009 }
+case 41:
+                var7 = _closure2_slot0;
+                var3 = var4.channel_id;
+                var1 = {'numOfAttachments': 0, 'numOfAttachmentsPendingScan': 0, 'numOfEmbeds': 0, 'numOfEmbedsPendingScan': 0};
+                var7[var3] = var1;
+case 24:
+                var3 = _closure2_slot1;
+                var1 = var4.id;
+                var1 = var3[var1];
+                if(!(var5 == var1)) { _fun0009_ip = 42; continue _fun0009 }
+case 43:
+                var7 = _closure2_slot1;
+                var3 = var4.id;
+                var1 = {'channelId': null, 'numOfAttachments': 0, 'numOfSelfHarmAttachments': 0, 'numOfGoreAttachments': 0, 'numOfExplicitAttachments': 0, 'numOfEmbeds': 0, 'numOfSelfHarmEmbeds': 0, 'numOfGoreEmbeds': 0, 'numOfExplicitEmbeds': 0};
+                var8 = var4.channel_id;
+                var1['channelId'] = var8;
+                var7[var3] = var1;
+case 42:
+                var3 = var4.attachments;
+                var8 = var5 == var3;
+                var1 = undefined;
+                var7 = undefined;
+                if(var8) { _fun0009_ip = 44; continue _fun0009 }
+case 45:
+                var7 = var3.length;
+case 44:
+                var8 = var5 != var7;
+                var9 = 0;
+                if(!var8) { _fun0009_ip = 46; continue _fun0009 }
+case 47:
+                var9 = var7;
+case 46:
+                var8 = var4.embeds;
+                var10 = var5 == var8;
+                var7 = undefined;
+                if(var10) { _fun0009_ip = 48; continue _fun0009 }
+case 37:
+                var7 = var8.length;
+case 48:
+                var10 = var5 != var7;
+                var8 = 0;
+                if(!var10) { _fun0009_ip = 49; continue _fun0009 }
+case 50:
+                var8 = var7;
+case 49:
+                var10 = _closure1_slot0;
+                var11 = _closure1_slot2;
+                var7 = 16;
+                var7 = var11[var7];
+                var10 = var10.bind(var1)(var7);
+                var7 = var10.getUnscannedMediaIds;
+                var7 = var7.bind(var10)(var4);
+                var11 = var7.attachmentIds;
+                var7 = var7.embedIds;
+                var12 = _closure2_slot0;
+                var10 = var4.channel_id;
+                var10 = var12[var10];
+                var12 = var10.numOfAttachments;
+                var12 = var12 + var9;
+                var10['numOfAttachments'] = var12;
+                var12 = var10.numOfEmbeds;
+                var12 = var12 + var8;
+                var10['numOfEmbeds'] = var12;
+                var12 = var10.numOfAttachmentsPendingScan;
+                var11 = var11.length;
+                var11 = var12 + var11;
+                var10['numOfAttachmentsPendingScan'] = var11;
+                var11 = var10.numOfEmbedsPendingScan;
+                var7 = var7.length;
+                var7 = var11 + var7;
+                var10['numOfEmbedsPendingScan'] = var7;
+                var7 = _closure2_slot1;
+                var2 = var4.id;
+                var2 = var7[var2];
+                var7 = var2.numOfAttachments;
+                var7 = var7 + var9;
+                var2['numOfAttachments'] = var7;
+                var7 = var2.numOfEmbeds;
+                var7 = var7 + var8;
+                var2['numOfEmbeds'] = var7;
+                var10 = var4.attachments;
+                var7 = var5 == var10;
+                var8 = undefined;
+                if(var7) { _fun0009_ip = 51; continue _fun0009 }
+case 52:
+                var9 = var10.filter;
+                var7 = function(arg1) {
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot2;
+                    var1 = 16;
+                    var1 = var8[var1];
+                    var6 = undefined;
+                    var4 = var7.bind(var6)(var1);
+                    var3 = var4.isMediaFlaggedForHarmType;
+                    var1 = 17;
+                    var1 = var8[var1];
+                    var1 = var7.bind(var6)(var1);
+                    var1 = var1.ContentHarmType;
+                    var2 = var1.EXPLICIT;
+                    var1 = {};
+                    var5 = 18;
+                    var5 = var8[var5];
+                    var5 = var7.bind(var6)(var5);
+                    var5 = var5.ObscuredMediaTypes;
+                    var5 = var5.Attachment;
+                    var1['type'] = var5;
+                    var5 = arg1;
+                    var1['media'] = var5;
+                    var1 = var3.bind(var4)(var2, var1);
+                    return var1;
+                };
+                var7 = var9.bind(var10)(var7);
+                var8 = var7.length;
+case 51:
+                var9 = var5 != var8;
+                var7 = 0;
+                if(!var9) { _fun0009_ip = 53; continue _fun0009 }
+case 54:
+                var7 = var8;
+case 53:
+                var2['numOfExplicitAttachments'] = var7;
+                var10 = var4.embeds;
+                var7 = var5 == var10;
+                var8 = undefined;
+                if(var7) { _fun0009_ip = 55; continue _fun0009 }
+case 56:
+                var9 = var10.filter;
+                var7 = function(arg1) {
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot2;
+                    var1 = 16;
+                    var1 = var8[var1];
+                    var6 = undefined;
+                    var4 = var7.bind(var6)(var1);
+                    var3 = var4.isMediaFlaggedForHarmType;
+                    var1 = 17;
+                    var1 = var8[var1];
+                    var1 = var7.bind(var6)(var1);
+                    var1 = var1.ContentHarmType;
+                    var2 = var1.EXPLICIT;
+                    var1 = {};
+                    var5 = 18;
+                    var5 = var8[var5];
+                    var5 = var7.bind(var6)(var5);
+                    var5 = var5.ObscuredMediaTypes;
+                    var5 = var5.Embed;
+                    var1['type'] = var5;
+                    var5 = arg1;
+                    var1['media'] = var5;
+                    var1 = var3.bind(var4)(var2, var1);
+                    return var1;
+                };
+                var7 = var9.bind(var10)(var7);
+                var8 = var7.length;
+case 55:
+                var9 = var5 != var8;
+                var7 = 0;
+                if(!var9) { _fun0009_ip = 57; continue _fun0009 }
+case 58:
+                var7 = var8;
+case 57:
+                var2['numOfExplicitEmbeds'] = var7;
+                var10 = var4.attachments;
+                var7 = var5 == var10;
+                var8 = undefined;
+                if(var7) { _fun0009_ip = 59; continue _fun0009 }
+case 60:
+                var9 = var10.filter;
+                var7 = function(arg1) {
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot2;
+                    var1 = 16;
+                    var1 = var8[var1];
+                    var6 = undefined;
+                    var4 = var7.bind(var6)(var1);
+                    var3 = var4.isMediaFlaggedForHarmType;
+                    var1 = 17;
+                    var1 = var8[var1];
+                    var1 = var7.bind(var6)(var1);
+                    var1 = var1.ContentHarmType;
+                    var2 = var1.GORE;
+                    var1 = {};
+                    var5 = 18;
+                    var5 = var8[var5];
+                    var5 = var7.bind(var6)(var5);
+                    var5 = var5.ObscuredMediaTypes;
+                    var5 = var5.Attachment;
+                    var1['type'] = var5;
+                    var5 = arg1;
+                    var1['media'] = var5;
+                    var1 = var3.bind(var4)(var2, var1);
+                    return var1;
+                };
+                var7 = var9.bind(var10)(var7);
+                var8 = var7.length;
+case 59:
+                var9 = var5 != var8;
+                var7 = 0;
+                if(!var9) { _fun0009_ip = 61; continue _fun0009 }
+case 62:
+                var7 = var8;
+case 61:
+                var2['numOfGoreAttachments'] = var7;
+                var10 = var4.embeds;
+                var7 = var5 == var10;
+                var8 = undefined;
+                if(var7) { _fun0009_ip = 63; continue _fun0009 }
+case 64:
+                var9 = var10.filter;
+                var7 = function(arg1) {
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot2;
+                    var1 = 16;
+                    var1 = var8[var1];
+                    var6 = undefined;
+                    var4 = var7.bind(var6)(var1);
+                    var3 = var4.isMediaFlaggedForHarmType;
+                    var1 = 17;
+                    var1 = var8[var1];
+                    var1 = var7.bind(var6)(var1);
+                    var1 = var1.ContentHarmType;
+                    var2 = var1.GORE;
+                    var1 = {};
+                    var5 = 18;
+                    var5 = var8[var5];
+                    var5 = var7.bind(var6)(var5);
+                    var5 = var5.ObscuredMediaTypes;
+                    var5 = var5.Embed;
+                    var1['type'] = var5;
+                    var5 = arg1;
+                    var1['media'] = var5;
+                    var1 = var3.bind(var4)(var2, var1);
+                    return var1;
+                };
+                var7 = var9.bind(var10)(var7);
+                var8 = var7.length;
+case 63:
+                var9 = var5 != var8;
+                var7 = 0;
+                if(!var9) { _fun0009_ip = 65; continue _fun0009 }
+case 66:
+                var7 = var8;
+case 65:
+                var2['numOfGoreEmbeds'] = var7;
+                var10 = var4.attachments;
+                var7 = var5 == var10;
+                var8 = undefined;
+                if(var7) { _fun0009_ip = 67; continue _fun0009 }
+case 68:
+                var9 = var10.filter;
+                var7 = function(arg1) {
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot2;
+                    var1 = 16;
+                    var1 = var8[var1];
+                    var6 = undefined;
+                    var4 = var7.bind(var6)(var1);
+                    var3 = var4.isMediaFlaggedForHarmType;
+                    var1 = 17;
+                    var1 = var8[var1];
+                    var1 = var7.bind(var6)(var1);
+                    var1 = var1.ContentHarmType;
+                    var2 = var1.SELF_HARM;
+                    var1 = {};
+                    var5 = 18;
+                    var5 = var8[var5];
+                    var5 = var7.bind(var6)(var5);
+                    var5 = var5.ObscuredMediaTypes;
+                    var5 = var5.Attachment;
+                    var1['type'] = var5;
+                    var5 = arg1;
+                    var1['media'] = var5;
+                    var1 = var3.bind(var4)(var2, var1);
+                    return var1;
+                };
+                var7 = var9.bind(var10)(var7);
+                var8 = var7.length;
+case 67:
+                var9 = var5 != var8;
+                var7 = 0;
+                if(!var9) { _fun0009_ip = 69; continue _fun0009 }
+case 70:
+                var7 = var8;
+case 69:
+                var2['numOfSelfHarmAttachments'] = var7;
+                var8 = var4.embeds;
+                var7 = var5 == var8;
+                var4 = undefined;
+                if(var7) { _fun0009_ip = 71; continue _fun0009 }
+case 72:
+                var7 = var8.filter;
+                var6 = function(arg1) {
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot2;
+                    var1 = 16;
+                    var1 = var8[var1];
+                    var6 = undefined;
+                    var4 = var7.bind(var6)(var1);
+                    var3 = var4.isMediaFlaggedForHarmType;
+                    var1 = 17;
+                    var1 = var8[var1];
+                    var1 = var7.bind(var6)(var1);
+                    var1 = var1.ContentHarmType;
+                    var2 = var1.SELF_HARM;
+                    var1 = {};
+                    var5 = 18;
+                    var5 = var8[var5];
+                    var5 = var7.bind(var6)(var5);
+                    var5 = var5.ObscuredMediaTypes;
+                    var5 = var5.Embed;
+                    var1['type'] = var5;
+                    var5 = arg1;
+                    var1['media'] = var5;
+                    var1 = var3.bind(var4)(var2, var1);
+                    return var1;
+                };
+                var6 = var7.bind(var8)(var6);
+                var4 = var6.length;
+case 71:
+                var5 = var5 != var4;
+                var3 = 0;
+                if(!var5) { _fun0009_ip = 73; continue _fun0009 }
+case 74:
+                var3 = var4;
+case 73:
+                var2['numOfSelfHarmEmbeds'] = var3;
+                return var1;
+            }
+        };
+        var1 = var4.bind(var5)(var1);
+        var1 = {};
+        var1['channelLookup'] = var3;
+        var1['messageLookup'] = var2;
+        return var1;
+    };
+    var _closure1_slot27 = var1;
+    var1 = function processMessagesFromAction(arg1, arg2) {
+        _fun0010: for(var _fun0010_ip = 0; ; ) switch(_fun0010_ip) {
+case 0:
+            var3 = function getScanningAttributesForMessages(arg1) {
+                _fun0011: for(var _fun0011_ip = 0; ; ) switch(_fun0011_ip) {
+case 0:
+                    var4 = arg1;
+                    var2 = var4.filter;
+                    var1 = function(arg1) {
+                        _fun0012: for(var _fun0012_ip = 0; ; ) switch(_fun0012_ip) {
+case 0:
+                            var4 = arg1;
+                            var5 = _closure1_slot0;
+                            var6 = _closure1_slot2;
+                            var1 = 23;
+                            var1 = var6[var1];
+                            var3 = undefined;
+                            var2 = var5.bind(var3)(var1);
+                            var1 = var2.hasAttachmentsEmbedsComponentsOrSnapshots;
+                            var1 = var1.bind(var2)(var4);
+                            var2 = 16;
+                            var2 = var6[var2];
+                            var3 = var5.bind(var3)(var2);
+                            var2 = var3.getEnabledHarmTypesForMessage;
+                            var3 = var2.bind(var3)(var4);
+                            var2 = 0;
+                            var2 = var2 !== var3;
+                            if(!var1) { _fun0012_ip = 4; continue _fun0012 }
+case 75:
+                            var1 = var2;
+case 4:
+                            return var1;
+                        }
+                    };
+                    var5 = var2.bind(var4)(var1);
+                    var2 = var4.map;
+                    var1 = function(arg1) {
+                        _fun0013: for(var _fun0013_ip = 0; ; ) switch(_fun0013_ip) {
+case 0:
+                            var1 = arg1;
+                            var3 = null;
+                            if(!(var3 != var1)) { _fun0013_ip = 76; continue _fun0013 }
+case 77:
+                            var2 = 'referenced_message';
+                            var2 = var2 in var1;
+                            if(!var2) { _fun0013_ip = 76; continue _fun0013 }
+case 78:
+                            var2 = var1.referenced_message;
+                            if(!(var3 != var2)) { _fun0013_ip = 76; continue _fun0013 }
+case 79:
+                            var5 = _closure1_slot0;
+                            var4 = _closure1_slot2;
+                            var3 = 23;
+                            var3 = var4[var3];
+                            var4 = undefined;
+                            var6 = var5.bind(var4)(var3);
+                            var5 = var6.hasAttachmentsEmbedsComponentsOrSnapshots;
+                            var3 = var1.referenced_message;
+                            var3 = var5.bind(var6)(var3);
+                            if(!var3) { _fun0013_ip = 76; continue _fun0013 }
+case 80:
+                            var3 = _closure1_slot0;
+                            var5 = _closure1_slot2;
+                            var2 = 16;
+                            var2 = var5[var2];
+                            var4 = var3.bind(var4)(var2);
+                            var3 = var4.getEnabledHarmTypesForMessage;
+                            var2 = var1.referenced_message;
+                            var3 = var3.bind(var4)(var2);
+                            var2 = 0;
+                            if(!(var2 === var3)) { _fun0013_ip = 45; continue _fun0013 }
+case 76:
+                            var2 = undefined;
+                            return var2;
+case 45:
+                            var1 = var1.referenced_message;
+                            return var1;
+                        }
+                    };
+                    var4 = var2.bind(var4)(var1);
+                    var2 = var4.filter;
+                    var1 = function(arg1) {
+                        var2 = null;
+                        var1 = arg1;
+                        var1 = var2 != var1;
+                        return var1;
+                    };
+                    var4 = var2.bind(var4)(var1);
+                    var1 = var4.length;
+                    var2 = 0;
+                    var6 = var5;
+                    if(!(var1 > var2)) { _fun0011_ip = 81; continue _fun0011 }
+case 14:
+                    var1 = new Array(0);
+                    var9 = var1;
+                    var8 = var5;
+                    var7 = 0;
+                    var7 = arraySpread(var9, var8, var7);
+                    var9 = var1;
+                    var8 = var4;
+                    var2 = arraySpread(var9, var8, var7);
+                    var6 = var1;
+case 81:
+                    var5 = _closure1_slot1;
+                    var4 = _closure1_slot2;
+                    var2 = 24;
+                    var2 = var4[var2];
+                    var4 = undefined;
+                    var5 = var5.bind(var4)(var2);
+                    var2 = function(arg1, arg2) {
+                        _fun0014: for(var _fun0014_ip = 0; ; ) switch(_fun0014_ip) {
+case 0:
+                            var3 = arg1;
+                            var2 = arg2;
+                            var4 = var3.id;
+                            var1 = var2.id;
+                            var1 = var4 === var1;
+                            if(!var1) { _fun0014_ip = 22; continue _fun0014 }
+case 8:
+                            var3 = var3.channel_id;
+                            var2 = var2.channel_id;
+                            var1 = var3 === var2;
+case 22:
+                            return var1;
+                        }
+                    };
+                    var2 = var5.bind(var4)(var6, var2);
+                    var5 = var2.filter;
+                    var3 = function(arg1) {
+                        var3 = _closure1_slot0;
+                        var2 = _closure1_slot2;
+                        var1 = 16;
+                        var2 = var2[var1];
+                        var1 = undefined;
+                        var3 = var3.bind(var1)(var2);
+                        var2 = var3.hasUnscannedMedia;
+                        var1 = arg1;
+                        var1 = var2.bind(var3)(var1);
+                        return var1;
+                    };
+                    var3 = var5.bind(var2)(var3);
+                    var1 = _closure1_slot27;
+                    var2 = var1.bind(var4)(var2);
+                    var1 = {};
+                    var1['messagesPendingScan'] = var3;
+                    var3 = var2.messageLookup;
+                    var1['attributesByMessageId'] = var3;
+                    var2 = var2.channelLookup;
+                    var1['attributesByChannelId'] = var2;
+                    return var1;
+                }
+            };
+            var5 = undefined;
+            var2 = arg1;
+            var2 = var3.bind(var5)(var2);
+            var4 = var2.messagesPendingScan;
+            var11 = var2.attributesByChannelId;
+            var7 = var2.attributesByMessageId;
+            var6 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var3 = 25;
+            var9 = var8[var3];
+            var10 = var6.bind(var5)(var9);
+            var9 = var10.entries;
+            var11 = var9.bind(var10)(var11);
+            var10 = var11.forEach;
+            var9 = function(arg1) {
+                _fun0015: for(var _fun0015_ip = 0; ; ) switch(_fun0015_ip) {
+case 0:
+                    var4 = arg1;
+                    var2 = var4[Symbol.iterator];
+                    var4 = var2().next;
+                    var5 = var4().value;
+                    var3 = var2;
+                    var1 = undefined;
+                    var3 = var3 === var1;
+                    var6 = undefined;
+                    if(var3) { _fun0015_ip = 41; continue _fun0015 }
+case 82:
+                    var6 = var5;
+case 41:
+                    var5 = undefined;
+                    if(var3) { _fun0015_ip = 26; continue _fun0015 }
+case 83:
+                    var7 = var4().value;
+                    var4 = var2;
+                    var4 = var4 === var1;
+                    var5 = undefined;
+                    var3 = var4;
+                    if(var4) { _fun0015_ip = 26; continue _fun0015 }
+case 84:
+                    var5 = var7;
+                    var3 = var4;
+case 26:
+                    if(var3) { _fun0015_ip = 85; continue _fun0015 }
+case 33:
+                    var2.return();
+case 85:
+                    var3 = _closure1_slot0;
+                    var4 = _closure1_slot2;
+                    var2 = 15;
+                    var2 = var4[var2];
+                    var4 = var3.bind(var1)(var2);
+                    var3 = var4.trackExplicitMediaRedactableMessagedLoaded;
+                    var2 = {};
+                    var2['channelId'] = var6;
+                    var6 = var5.numOfAttachments;
+                    var2['numOfAttachments'] = var6;
+                    var6 = var5.numOfAttachmentsPendingScan;
+                    var2['numOfAttachmentsPendingScan'] = var6;
+                    var6 = var5.numOfEmbeds;
+                    var2['numOfEmbeds'] = var6;
+                    var5 = var5.numOfEmbedsPendingScan;
+                    var2['numOfEmbedsPendingScan'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var9 = var10.bind(var11)(var9);
+            var3 = var8[var3];
+            var6 = var6.bind(var5)(var3);
+            var3 = var6.entries;
+            var6 = var3.bind(var6)(var7);
+            var3 = var6.forEach;
+            var1 = function(arg1) {
+                _fun0016: for(var _fun0016_ip = 0; ; ) switch(_fun0016_ip) {
+case 0:
+                    var4 = arg1;
+                    var2 = var4[Symbol.iterator];
+                    var4 = var2().next;
+                    var5 = var4().value;
+                    var3 = var2;
+                    var1 = undefined;
+                    var3 = var3 === var1;
+                    var6 = undefined;
+                    if(var3) { _fun0016_ip = 41; continue _fun0016 }
+case 82:
+                    var6 = var5;
+case 41:
+                    var5 = undefined;
+                    if(var3) { _fun0016_ip = 26; continue _fun0016 }
+case 83:
+                    var7 = var4().value;
+                    var4 = var2;
+                    var4 = var4 === var1;
+                    var5 = undefined;
+                    var3 = var4;
+                    if(var4) { _fun0016_ip = 26; continue _fun0016 }
+case 84:
+                    var5 = var7;
+                    var3 = var4;
+case 26:
+                    if(var3) { _fun0016_ip = 85; continue _fun0016 }
+case 33:
+                    var2.return();
+case 85:
+                    var3 = _closure1_slot0;
+                    var4 = _closure1_slot2;
+                    var2 = 15;
+                    var2 = var4[var2];
+                    var4 = var3.bind(var1)(var2);
+                    var3 = var4.trackRedactableMessageLoaded;
+                    var2 = {};
+                    var2['messageId'] = var6;
+                    var6 = var5.channelId;
+                    var2['channelId'] = var6;
+                    var6 = var5.numOfAttachments;
+                    var2['numOfAttachments'] = var6;
+                    var6 = var5.numOfGoreAttachments;
+                    var2['numOfGoreAttachments'] = var6;
+                    var6 = var5.numOfExplicitAttachments;
+                    var2['numOfExplicitAttachments'] = var6;
+                    var6 = var5.numOfSelfHarmAttachments;
+                    var2['numOfSelfHarmAttachments'] = var6;
+                    var6 = var5.numOfEmbeds;
+                    var2['numOfEmbeds'] = var6;
+                    var6 = var5.numOfGoreEmbeds;
+                    var2['numOfGoreEmbeds'] = var6;
+                    var6 = var5.numOfExplicitEmbeds;
+                    var2['numOfExplicitEmbeds'] = var6;
+                    var5 = var5.numOfSelfHarmEmbeds;
+                    var2['numOfSelfHarmEmbeds'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var1 = var3.bind(var6)(var1);
+            var3 = var4.length;
+            var1 = 0;
+            var1 = var3 > var1;
+            if(!var1) { _fun0010_ip = 86; continue _fun0010 }
+case 87:
+            var3 = _closure1_slot26;
+            var2 = arg2;
+            var2 = var3.bind(var5)(var4, var2);
+            var1 = true;
+case 86:
+            return var1;
+        }
+    };
+    var _closure1_slot28 = var1;
+    var1 = function processChannelMessagesFromAction(arg1) {
+        _fun0017: for(var _fun0017_ip = 0; ; ) switch(_fun0017_ip) {
+case 0:
+            var3 = function getScanningAttributesForChannelMessages(arg1) {
+                _fun0018: for(var _fun0018_ip = 0; ; ) switch(_fun0018_ip) {
+case 0:
+                    var4 = arg1;
+                    var2 = var4.filter;
+                    var1 = function(arg1) {
+                        _fun0019: for(var _fun0019_ip = 0; ; ) switch(_fun0019_ip) {
+case 0:
+                            var4 = arg1;
+                            var3 = _closure1_slot0;
+                            var5 = _closure1_slot2;
+                            var1 = 23;
+                            var1 = var5[var1];
+                            var5 = undefined;
+                            var3 = var3.bind(var5)(var1);
+                            var1 = var3.hasAttachmentsEmbedsComponentsOrSnapshots;
+                            var1 = var1.bind(var3)(var4);
+                            if(!var1) { _fun0019_ip = 88; continue _fun0019 }
+case 29:
+                            var3 = _closure1_slot0;
+                            var6 = _closure1_slot2;
+                            var2 = 16;
+                            var2 = var6[var2];
+                            var3 = var3.bind(var5)(var2);
+                            var2 = var3.getEnabledHarmTypesForMessage;
+                            var3 = var2.bind(var3)(var4);
+                            var2 = 0;
+                            var1 = var2 !== var3;
+case 88:
+                            return var1;
+                        }
+                    };
+                    var5 = var2.bind(var4)(var1);
+                    var2 = var4.map;
+                    var1 = function(arg1) {
+                        _fun0020: for(var _fun0020_ip = 0; ; ) switch(_fun0020_ip) {
+case 0:
+                            var1 = arg1;
+                            var5 = _closure1_slot17;
+                            var4 = var5.has;
+                            var3 = var1.type;
+                            var3 = var4.bind(var5)(var3);
+                            if(!var3) { _fun0020_ip = 89; continue _fun0020 }
+case 90:
+                            var3 = var1.messageReference;
+                            var4 = null;
+                            if(!(var4 != var3)) { _fun0020_ip = 89; continue _fun0020 }
+case 91:
+                            var5 = _closure1_slot8;
+                            var3 = var5.getMessageByReference;
+                            var1 = var1.messageReference;
+                            var1 = var3.bind(var5)(var1);
+                            var5 = var1.state;
+                            var3 = _closure1_slot9;
+                            var3 = var3.LOADED;
+                            if(!(var5 === var3)) { _fun0020_ip = 89; continue _fun0020 }
+case 92:
+                            var3 = var1.message;
+                            if(!(var4 != var3)) { _fun0020_ip = 89; continue _fun0020 }
+case 93:
+                            var5 = _closure1_slot0;
+                            var4 = _closure1_slot2;
+                            var3 = 23;
+                            var3 = var4[var3];
+                            var4 = undefined;
+                            var6 = var5.bind(var4)(var3);
+                            var5 = var6.hasAttachmentsEmbedsComponentsOrSnapshots;
+                            var3 = var1.message;
+                            var3 = var5.bind(var6)(var3);
+                            if(!var3) { _fun0020_ip = 89; continue _fun0020 }
+case 47:
+                            var3 = _closure1_slot0;
+                            var5 = _closure1_slot2;
+                            var2 = 16;
+                            var2 = var5[var2];
+                            var4 = var3.bind(var4)(var2);
+                            var3 = var4.getEnabledHarmTypesForMessage;
+                            var2 = var1.message;
+                            var3 = var3.bind(var4)(var2);
+                            var2 = 0;
+                            if(!(var2 === var3)) { _fun0020_ip = 94; continue _fun0020 }
+case 89:
+                            var2 = undefined;
+                            return var2;
+case 94:
+                            var1 = var1.message;
+                            return var1;
+                        }
+                    };
+                    var4 = var2.bind(var4)(var1);
+                    var2 = var4.filter;
+                    var1 = function(arg1) {
+                        var2 = null;
+                        var1 = arg1;
+                        var1 = var2 != var1;
+                        return var1;
+                    };
+                    var4 = var2.bind(var4)(var1);
+                    var1 = var4.length;
+                    var2 = 0;
+                    var6 = var5;
+                    if(!(var1 > var2)) { _fun0018_ip = 81; continue _fun0018 }
+case 14:
+                    var1 = new Array(0);
+                    var9 = var1;
+                    var8 = var5;
+                    var7 = 0;
+                    var7 = arraySpread(var9, var8, var7);
+                    var9 = var1;
+                    var8 = var4;
+                    var2 = arraySpread(var9, var8, var7);
+                    var6 = var1;
+case 81:
+                    var5 = _closure1_slot1;
+                    var4 = _closure1_slot2;
+                    var2 = 24;
+                    var2 = var4[var2];
+                    var4 = undefined;
+                    var5 = var5.bind(var4)(var2);
+                    var2 = function(arg1, arg2) {
+                        _fun0021: for(var _fun0021_ip = 0; ; ) switch(_fun0021_ip) {
+case 0:
+                            var3 = arg1;
+                            var2 = arg2;
+                            var4 = var3.id;
+                            var1 = var2.id;
+                            var1 = var4 === var1;
+                            if(!var1) { _fun0021_ip = 22; continue _fun0021 }
+case 8:
+                            var3 = var3.channel_id;
+                            var2 = var2.channel_id;
+                            var1 = var3 === var2;
+case 22:
+                            return var1;
+                        }
+                    };
+                    var2 = var5.bind(var4)(var6, var2);
+                    var5 = var2.filter;
+                    var3 = function(arg1) {
+                        var3 = _closure1_slot0;
+                        var2 = _closure1_slot2;
+                        var1 = 16;
+                        var2 = var2[var1];
+                        var1 = undefined;
+                        var3 = var3.bind(var1)(var2);
+                        var2 = var3.hasUnscannedMedia;
+                        var1 = arg1;
+                        var1 = var2.bind(var3)(var1);
+                        return var1;
+                    };
+                    var3 = var5.bind(var2)(var3);
+                    var1 = _closure1_slot27;
+                    var2 = var1.bind(var4)(var2);
+                    var1 = {};
+                    var1['messagesPendingScan'] = var3;
+                    var3 = var2.channelLookup;
+                    var1['attributesByChannelId'] = var3;
+                    var2 = var2.messageLookup;
+                    var1['attributesByMessageId'] = var2;
+                    return var1;
+                }
+            };
+            var4 = undefined;
+            var2 = arg1;
+            var2 = var3.bind(var4)(var2);
+            var3 = var2.messagesPendingScan;
+            var11 = var2.attributesByChannelId;
+            var7 = var2.attributesByMessageId;
+            var6 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var5 = 25;
+            var9 = var8[var5];
+            var10 = var6.bind(var4)(var9);
+            var9 = var10.entries;
+            var11 = var9.bind(var10)(var11);
+            var10 = var11.forEach;
+            var9 = function(arg1) {
+                _fun0022: for(var _fun0022_ip = 0; ; ) switch(_fun0022_ip) {
+case 0:
+                    var4 = arg1;
+                    var2 = var4[Symbol.iterator];
+                    var4 = var2().next;
+                    var5 = var4().value;
+                    var3 = var2;
+                    var1 = undefined;
+                    var3 = var3 === var1;
+                    var6 = undefined;
+                    if(var3) { _fun0022_ip = 41; continue _fun0022 }
+case 82:
+                    var6 = var5;
+case 41:
+                    var5 = undefined;
+                    if(var3) { _fun0022_ip = 26; continue _fun0022 }
+case 83:
+                    var7 = var4().value;
+                    var4 = var2;
+                    var4 = var4 === var1;
+                    var5 = undefined;
+                    var3 = var4;
+                    if(var4) { _fun0022_ip = 26; continue _fun0022 }
+case 84:
+                    var5 = var7;
+                    var3 = var4;
+case 26:
+                    if(var3) { _fun0022_ip = 85; continue _fun0022 }
+case 33:
+                    var2.return();
+case 85:
+                    var3 = _closure1_slot0;
+                    var4 = _closure1_slot2;
+                    var2 = 15;
+                    var2 = var4[var2];
+                    var4 = var3.bind(var1)(var2);
+                    var3 = var4.trackExplicitMediaRedactableMessagedLoaded;
+                    var2 = {};
+                    var2['channelId'] = var6;
+                    var6 = var5.numOfAttachments;
+                    var2['numOfAttachments'] = var6;
+                    var6 = var5.numOfAttachmentsPendingScan;
+                    var2['numOfAttachmentsPendingScan'] = var6;
+                    var6 = var5.numOfEmbeds;
+                    var2['numOfEmbeds'] = var6;
+                    var5 = var5.numOfEmbedsPendingScan;
+                    var2['numOfEmbedsPendingScan'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var9 = var10.bind(var11)(var9);
+            var5 = var8[var5];
+            var6 = var6.bind(var4)(var5);
+            var5 = var6.entries;
+            var6 = var5.bind(var6)(var7);
+            var5 = var6.forEach;
+            var1 = function(arg1) {
+                _fun0023: for(var _fun0023_ip = 0; ; ) switch(_fun0023_ip) {
+case 0:
+                    var4 = arg1;
+                    var2 = var4[Symbol.iterator];
+                    var4 = var2().next;
+                    var5 = var4().value;
+                    var3 = var2;
+                    var1 = undefined;
+                    var3 = var3 === var1;
+                    var6 = undefined;
+                    if(var3) { _fun0023_ip = 41; continue _fun0023 }
+case 82:
+                    var6 = var5;
+case 41:
+                    var5 = undefined;
+                    if(var3) { _fun0023_ip = 26; continue _fun0023 }
+case 83:
+                    var7 = var4().value;
+                    var4 = var2;
+                    var4 = var4 === var1;
+                    var5 = undefined;
+                    var3 = var4;
+                    if(var4) { _fun0023_ip = 26; continue _fun0023 }
+case 84:
+                    var5 = var7;
+                    var3 = var4;
+case 26:
+                    if(var3) { _fun0023_ip = 85; continue _fun0023 }
+case 33:
+                    var2.return();
+case 85:
+                    var3 = _closure1_slot0;
+                    var4 = _closure1_slot2;
+                    var2 = 15;
+                    var2 = var4[var2];
+                    var4 = var3.bind(var1)(var2);
+                    var3 = var4.trackRedactableMessageLoaded;
+                    var2 = {};
+                    var2['messageId'] = var6;
+                    var6 = var5.channelId;
+                    var2['channelId'] = var6;
+                    var6 = var5.numOfAttachments;
+                    var2['numOfAttachments'] = var6;
+                    var6 = var5.numOfGoreAttachments;
+                    var2['numOfGoreAttachments'] = var6;
+                    var6 = var5.numOfSelfHarmAttachments;
+                    var2['numOfSelfHarmAttachments'] = var6;
+                    var6 = var5.numOfExplicitAttachments;
+                    var2['numOfExplicitAttachments'] = var6;
+                    var6 = var5.numOfEmbeds;
+                    var2['numOfEmbeds'] = var6;
+                    var6 = var5.numOfGoreEmbeds;
+                    var2['numOfGoreEmbeds'] = var6;
+                    var6 = var5.numOfExplicitEmbeds;
+                    var2['numOfExplicitEmbeds'] = var6;
+                    var5 = var5.numOfSelfHarmEmbeds;
+                    var2['numOfSelfHarmEmbeds'] = var5;
+                    var2 = var3.bind(var4)(var2);
+                    return var1;
+                }
+            };
+            var1 = var5.bind(var6)(var1);
+            var5 = var3.length;
+            var1 = 0;
+            var1 = var5 > var1;
+            if(!var1) { _fun0017_ip = 95; continue _fun0017 }
+case 87:
+            var2 = _closure1_slot26;
+            var2 = var2.bind(var4)(var3);
+            var1 = true;
+case 95:
+            return var1;
+        }
+    };
+    var _closure1_slot29 = var1;
+    var1 = function handleMessageUpdate(arg1) {
+        _fun0024: for(var _fun0024_ip = 0; ; ) switch(_fun0024_ip) {
+case 0:
+            var1 = arg1;
+            var2 = var1.message;
+            var3 = var2.channel_id;
+            var1 = null;
+            if(!(var1 != var3)) { _fun0024_ip = 96; continue _fun0024 }
+case 97:
+            var3 = var2.id;
+            if(!(var1 != var3)) { _fun0024_ip = 96; continue _fun0024 }
+case 23:
+            var7 = _closure1_slot0;
+            var4 = _closure1_slot2;
+            var6 = 16;
+            var4 = var4[var6];
+            var5 = undefined;
+            var7 = var7.bind(var5)(var4);
+            var4 = var7.getChannelIdAndAuthorIdFromMessage;
+            var4 = var4.bind(var7)(var2);
+            var7 = var4.authorId;
+            var8 = _closure1_slot10;
+            var4 = var8.getId;
+            var4 = var4.bind(var8)();
+            if(!(var7 !== var4)) { _fun0024_ip = 96; continue _fun0024 }
+case 98:
+            var4 = var2.embeds;
+            if(!(var1 == var4)) { _fun0024_ip = 99; continue _fun0024 }
+case 100:
+            var4 = var2.attachments;
+            if(!(var1 == var4)) { _fun0024_ip = 99; continue _fun0024 }
+case 101:
+            var7 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var4 = 15;
+            var4 = var8[var4];
+            var7 = var7.bind(var5)(var4);
+            var4 = var7.hasMessageSnapshotsWithAttachmentsOrEmbeds;
+            var4 = var4.bind(var7)(var2);
+            if(var4) { _fun0024_ip = 99; continue _fun0024 }
+case 102:
+            var4 = false;
+            return var4;
+case 99:
+            var7 = var2.embeds;
+            var8 = var1 == var7;
+            var4 = undefined;
+            if(var8) { _fun0024_ip = 103; continue _fun0024 }
+case 104:
+            var4 = var7.length;
+case 103:
+            var7 = 0;
+            if(!(var7 === var4)) { _fun0024_ip = 32; continue _fun0024 }
+case 105:
+            var8 = var2.attachments;
+            var9 = var1 == var8;
+            var4 = undefined;
+            if(var9) { _fun0024_ip = 106; continue _fun0024 }
+case 107:
+            var4 = var8.length;
+case 106:
+            if(!(var7 === var4)) { _fun0024_ip = 32; continue _fun0024 }
+case 108:
+            var7 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var4 = 15;
+            var4 = var8[var4];
+            var7 = var7.bind(var5)(var4);
+            var4 = var7.hasMessageSnapshotsWithAttachmentsOrEmbeds;
+            var4 = var4.bind(var7)(var2);
+            if(var4) { _fun0024_ip = 32; continue _fun0024 }
+case 109:
+            var4 = false;
+            return var4;
+case 32:
+            var7 = _closure1_slot0;
+            var4 = _closure1_slot2;
+            var4 = var4[var6];
+            var7 = var7.bind(var5)(var4);
+            var4 = var7.hasUnscannedMedia;
+            var4 = var4.bind(var7)(var2);
+            if(var4) { _fun0024_ip = 110; continue _fun0024 }
+case 111:
+            var9 = _closure1_slot13;
+            var8 = var9.getMessage;
+            var7 = var2.channel_id;
+            var4 = var2.id;
+            var7 = var8.bind(var9)(var7, var4);
+            if(!(var1 == var7)) { _fun0024_ip = 112; continue _fun0024 }
+case 113:
+            var10 = _closure1_slot16;
+            var9 = var10.getMessage;
+            var8 = var2.id;
+            var4 = var2.channel_id;
+            var7 = var9.bind(var10)(var8, var4);
+case 112:
+            if(!(var1 == var7)) { _fun0024_ip = 114; continue _fun0024 }
+case 115:
+            var10 = _closure1_slot8;
+            var9 = var10.getMessage;
+            var8 = var2.channel_id;
+            var4 = var2.id;
+            var8 = var9.bind(var10)(var8, var4);
+            var9 = var1 == var8;
+            var4 = undefined;
+            if(var9) { _fun0024_ip = 116; continue _fun0024 }
+case 117:
+            var4 = var8.message;
+case 116:
+            var7 = var4;
+case 114:
+            var4 = var1 == var7;
+            if(var4) { _fun0024_ip = 118; continue _fun0024 }
+case 119:
+            var10 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var6 = var11[var6];
+            var9 = var10.bind(var5)(var6);
+            var8 = var9.hasUnscannedMedia;
+            var6 = 26;
+            var6 = var11[var6];
+            var10 = var10.bind(var5)(var6);
+            var6 = var10.updateMessageRecord;
+            var6 = var6.bind(var10)(var7, var2);
+            var4 = var8.bind(var9)(var6);
+case 118:
+            if(var4) { _fun0024_ip = 110; continue _fun0024 }
+case 120:
+            var6 = _closure1_slot23;
+            var8 = _closure1_slot0;
+            var9 = _closure1_slot2;
+            var4 = 15;
+            var4 = var9[var4];
+            var4 = var8.bind(var5)(var4);
+            var4 = var4.TimeoutCancelSource;
+            var4 = var4.UPDATE;
+            var4 = var6.bind(var5)(var7, var4);
+case 110:
+            var6 = _closure1_slot14;
+            var4 = var6.getChannelId;
+            var7 = var4.bind(var6)();
+            var6 = _closure1_slot11;
+            var4 = var6.getCurrentSidebarChannelId;
+            var6 = var4.bind(var6)(var7);
+            var4 = var2.channel_id;
+            if(!(var4 !== var7)) { _fun0024_ip = 121; continue _fun0024 }
+case 122:
+            var4 = var2.channel_id;
+            if(!(var4 !== var6)) { _fun0024_ip = 121; continue _fun0024 }
+case 123:
+            var4 = false;
+            return var4;
+case 121:
+            var7 = _closure1_slot13;
+            var6 = var7.getMessage;
+            var4 = var2.channel_id;
+            var2 = var2.id;
+            var2 = var6.bind(var7)(var4, var2);
+            var1 = var1 != var2;
+            if(!var1) { _fun0024_ip = 124; continue _fun0024 }
+case 125:
+            var4 = _closure1_slot28;
+            var3 = new Array(1);
+            var3[0] = var2;
+            var2 = {};
+            var6 = true;
+            var2['isMessageUpdate'] = var6;
+            var1 = var4.bind(var5)(var3, var2);
+case 124:
+            return var1;
+case 96:
+            var1 = false;
+            return var1;
+        }
+    };
+    var _closure1_slot30 = var1;
+    var1 = function handleMessageCreate(arg1) {
+        _fun0025: for(var _fun0025_ip = 0; ; ) switch(_fun0025_ip) {
+case 0:
+            var2 = arg1;
+            var6 = var2.channelId;
+            var1 = var2.message;
+            var3 = var2.optimistic;
+            var2 = var2.isPushNotification;
+            if(var3) { _fun0025_ip = 126; continue _fun0025 }
+case 90:
+            if(var2) { _fun0025_ip = 126; continue _fun0025 }
+case 22:
+            var7 = null;
+            if(!(var7 != var6)) { _fun0025_ip = 126; continue _fun0025 }
+case 91:
+            var5 = _closure1_slot0;
+            var4 = _closure1_slot2;
+            var3 = 16;
+            var3 = var4[var3];
+            var4 = undefined;
+            var5 = var5.bind(var4)(var3);
+            var3 = var5.getChannelIdAndAuthorIdFromMessage;
+            var3 = var3.bind(var5)(var1);
+            var5 = var3.authorId;
+            var8 = _closure1_slot10;
+            var3 = var8.getId;
+            var3 = var3.bind(var8)();
+            if(!(var5 !== var3)) { _fun0025_ip = 126; continue _fun0025 }
+case 127:
+            var5 = _closure1_slot14;
+            var3 = var5.getChannelId;
+            var8 = var3.bind(var5)();
+            var5 = _closure1_slot11;
+            var3 = var5.getCurrentSidebarChannelId;
+            var5 = var3.bind(var5)(var8);
+            var9 = _closure1_slot12;
+            var3 = var9.getChannel;
+            var3 = var3.bind(var9)(var6);
+            if(!(var6 !== var8)) { _fun0025_ip = 128; continue _fun0025 }
+case 129:
+            if(!(var6 === var5)) { _fun0025_ip = 130; continue _fun0025 }
+case 128:
+            var5 = var7 == var3;
+            var6 = undefined;
+            if(var5) { _fun0025_ip = 131; continue _fun0025 }
+case 132:
+            var5 = var3.isPrivate;
+            var6 = var5.bind(var3)();
+case 131:
+            var5 = var7 == var6;
+            if(var5) { _fun0025_ip = 133; continue _fun0025 }
+case 134:
+            var5 = var6;
+case 133:
+            var8 = var7 == var3;
+            var6 = undefined;
+            if(var8) { _fun0025_ip = 135; continue _fun0025 }
+case 136:
+            var6 = var3.memberCount;
+case 135:
+            var6 = var7 == var6;
+            if(var6) { _fun0025_ip = 137; continue _fun0025 }
+case 138:
+            var8 = var7 == var3;
+            var7 = undefined;
+            if(var8) { _fun0025_ip = 139; continue _fun0025 }
+case 140:
+            var7 = var3.memberCount;
+case 139:
+            var3 = 100;
+            var6 = var7 > var3;
+case 137:
+            var3 = _closure1_slot28;
+            var2 = new Array(1);
+            var2[0] = var1;
+            var1 = {};
+            if(!var5) { _fun0025_ip = 141; continue _fun0025 }
+case 142:
+            var5 = var6;
+case 141:
+            var1['jitter'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+case 130:
+            var1 = false;
+            return var1;
+case 126:
+            var1 = false;
+            return var1;
+        }
+    };
+    var _closure1_slot31 = var1;
+    var1 = function handleMessagesLoad(arg1) {
+        _fun0026: for(var _fun0026_ip = 0; ; ) switch(_fun0026_ip) {
+case 0:
+            var1 = arg1;
+            var5 = var1.channelId;
+            var4 = var1.messages;
+            var1 = null;
+            if(!(var1 != var5)) { _fun0026_ip = 143; continue _fun0026 }
+case 78:
+            if(!(var1 != var4)) { _fun0026_ip = 143; continue _fun0026 }
+case 82:
+            var3 = _closure1_slot14;
+            var1 = var3.getChannelId;
+            var1 = var1.bind(var3)();
+            var6 = _closure1_slot11;
+            var3 = var6.getCurrentSidebarChannelId;
+            var3 = var3.bind(var6)(var1);
+            var1 = var5 === var1;
+            if(var1) { _fun0026_ip = 43; continue _fun0026 }
+case 85:
+            var1 = var5 === var3;
+case 43:
+            if(!var1) { _fun0026_ip = 144; continue _fun0026 }
+case 3:
+            var3 = _closure1_slot28;
+            var2 = undefined;
+            var1 = var3.bind(var2)(var4);
+case 144:
+            return var1;
+case 143:
+            var1 = false;
+            return var1;
+        }
+    };
+    var _closure1_slot32 = var1;
+    var1 = function handleSearchMessagesSuccess(arg1) {
+        var2 = arg1;
+        var4 = var2.data;
+        var2 = false;
+        var _closure2_slot0 = var2;
+        var3 = var4.forEach;
+        var2 = function(arg1) {
+            _fun0027: for(var _fun0027_ip = 0; ; ) switch(_fun0027_ip) {
+case 0:
+                var1 = arg1;
+                var5 = var1.messages;
+                var4 = _closure1_slot1;
+                var6 = _closure1_slot2;
+                var1 = 27;
+                var3 = var6[var1];
+                var1 = undefined;
+                var3 = var4.bind(var1)(var3);
+                var5 = var3.bind(var1)(var5);
+                var3 = _closure1_slot28;
+                var2 = 24;
+                var2 = var6[var2];
+                var4 = var4.bind(var1)(var2);
+                var2 = function(arg1, arg2) {
+                    _fun0028: for(var _fun0028_ip = 0; ; ) switch(_fun0028_ip) {
+case 0:
+                        var3 = arg1;
+                        var2 = arg2;
+                        var4 = var3.id;
+                        var1 = var2.id;
+                        var1 = var4 === var1;
+                        if(!var1) { _fun0028_ip = 22; continue _fun0028 }
+case 8:
+                        var3 = var3.channel_id;
+                        var2 = var2.channel_id;
+                        var1 = var3 === var2;
+case 22:
+                        return var1;
+                    }
+                };
+                var2 = var4.bind(var1)(var5, var2);
+                var3 = var3.bind(var1)(var2);
+                if(var3) { _fun0027_ip = 143; continue _fun0027 }
+case 145:
+                var3 = _closure2_slot0;
+case 143:
+                _closure2_slot0 = var3;
+                return var1;
+            }
+        };
+        var2 = var3.bind(var4)(var2);
+        var1 = _closure2_slot0;
+        return var1;
+    };
+    var _closure1_slot33 = var1;
+    var1 = function handleLoadPinnedMessages(arg1) {
+        var1 = arg1;
+        var4 = var1.pins;
+        var3 = _closure1_slot28;
+        var2 = var4.map;
+        var1 = function(arg1) {
+            var1 = arg1;
+            var1 = var1.message;
+            return var1;
+        };
+        var2 = var2.bind(var4)(var1);
+        var1 = undefined;
+        var1 = var3.bind(var1)(var2);
+        return var1;
+    };
+    var _closure1_slot34 = var1;
+    var1 = function handleForumPostsLoad(arg1) {
+        _fun0029: for(var _fun0029_ip = 0; ; ) switch(_fun0029_ip) {
+case 0:
+            var1 = arg1;
+            var5 = var1.guildId;
+            var8 = var1.threads;
+            var _closure2_slot0 = var8;
+            var1 = null;
+            var1 = var1 != var8;
+            if(!var1) { _fun0029_ip = 146; continue _fun0029 }
+case 147:
+            var6 = _closure1_slot15;
+            var2 = var6.getGuildId;
+            var2 = var2.bind(var6)();
+            var2 = var2 === var5;
+            if(!var2) { _fun0029_ip = 127; continue _fun0029 }
+case 9:
+            var5 = _closure1_slot28;
+            var7 = _closure1_slot1;
+            var6 = _closure1_slot2;
+            var4 = 25;
+            var6 = var6[var4];
+            var4 = undefined;
+            var7 = var7.bind(var4)(var6);
+            var6 = var7.keys;
+            var7 = var6.bind(var7)(var8);
+            var6 = var7.map;
+            var3 = function(arg1) {
+                var2 = _closure2_slot0;
+                var1 = arg1;
+                var1 = var2[var1];
+                var1 = var1.first_message;
+                return var1;
+            };
+            var3 = var6.bind(var7)(var3);
+            var2 = var5.bind(var4)(var3);
+case 127:
+            var1 = var2;
+case 146:
+            return var1;
+        }
+    };
+    var _closure1_slot35 = var1;
+    var1 = function handleThreadsLoad(arg1) {
+        _fun0030: for(var _fun0030_ip = 0; ; ) switch(_fun0030_ip) {
+case 0:
+            var1 = arg1;
+            var4 = var1.guildId;
+            var6 = var1.firstMessages;
+            var1 = null;
+            var1 = var1 != var6;
+            if(!var1) { _fun0030_ip = 4; continue _fun0030 }
+case 8:
+            var5 = _closure1_slot15;
+            var2 = var5.getGuildId;
+            var2 = var2.bind(var5)();
+            var4 = var2 !== var4;
+            var2 = !var4;
+            if(var4) { _fun0030_ip = 75; continue _fun0030 }
+case 24:
+            var5 = _closure1_slot28;
+            var4 = {};
+            var3 = true;
+            var4['forceBatchScan'] = var3;
+            var3 = undefined;
+            var2 = var5.bind(var3)(var6, var4);
+case 75:
+            var1 = var2;
+case 4:
+            return var1;
+        }
+    };
+    var _closure1_slot36 = var1;
+    var1 = function handleSidebarViewChannel(arg1) {
+        _fun0031: for(var _fun0031_ip = 0; ; ) switch(_fun0031_ip) {
+case 0:
+            var1 = arg1;
+            var4 = var1.channelId;
+            var1 = null;
+            var1 = var1 != var4;
+            if(!var1) { _fun0031_ip = 90; continue _fun0031 }
+case 21:
+            var3 = _closure1_slot41;
+            var2 = undefined;
+            var1 = var3.bind(var2)(var4);
+case 90:
+            return var1;
+        }
+    };
+    var _closure1_slot37 = var1;
+    var1 = function handleChannelSelect(arg1) {
+        _fun0032: for(var _fun0032_ip = 0; ; ) switch(_fun0032_ip) {
+case 0:
+            var1 = arg1;
+            var5 = var1.channelId;
+            var1 = null;
+            var1 = var1 != var5;
+            if(!var1) { _fun0032_ip = 148; continue _fun0032 }
+case 21:
+            var4 = _closure1_slot14;
+            var2 = var4.getChannelId;
+            var2 = var2.bind(var4)();
+            var4 = var5 !== var2;
+            var2 = !var4;
+            if(var4) { _fun0032_ip = 149; continue _fun0032 }
+case 150:
+            var4 = _closure1_slot41;
+            var3 = undefined;
+            var2 = var4.bind(var3)(var5);
+case 149:
+            var1 = var2;
+case 148:
+            return var1;
+        }
+    };
+    var _closure1_slot38 = var1;
+    var1 = function handleUserSettingsUpdate(arg1) {
+        _fun0033: for(var _fun0033_ip = 0; ; ) switch(_fun0033_ip) {
+case 0:
+            var2 = arg1;
+            var1 = var2.settings;
+            var2 = var2.local;
+            if(!var2) { _fun0033_ip = 145; continue _fun0033 }
+case 151:
+            var3 = var1.type;
+            var1 = _closure1_slot18;
+            var1 = var1.PRELOADED_USER_SETTINGS;
+            if(!(var3 === var1)) { _fun0033_ip = 145; continue _fun0033 }
+case 31:
+            var3 = _closure1_slot14;
+            var1 = var3.getChannelId;
+            var4 = var1.bind(var3)();
+            var1 = null;
+            var1 = var1 != var4;
+            if(!var1) { _fun0033_ip = 4; continue _fun0033 }
+case 85:
+            var3 = _closure1_slot41;
+            var2 = undefined;
+            var1 = var3.bind(var2)(var4);
+case 4:
+            return var1;
+case 145:
+            var1 = false;
+            return var1;
+        }
+    };
+    var _closure1_slot39 = var1;
+    var1 = function handleVoiceChannelChatOpen(arg1) {
+        _fun0034: for(var _fun0034_ip = 0; ; ) switch(_fun0034_ip) {
+case 0:
+            var1 = arg1;
+            var4 = var1.channelId;
+            var1 = var1.chatOpen;
+            var2 = !var1;
+            var1 = !var2;
+            if(var2) { _fun0034_ip = 22; continue _fun0034 }
+case 8:
+            var3 = _closure1_slot41;
+            var2 = undefined;
+            var1 = var3.bind(var2)(var4);
+case 22:
+            return var1;
+        }
+    };
+    var _closure1_slot40 = var1;
+    var1 = function maybeScanMessagesForChannelId(arg1) {
+        _fun0035: for(var _fun0035_ip = 0; ; ) switch(_fun0035_ip) {
+case 0:
+            var4 = _closure1_slot13;
+            var3 = var4.getMessages;
+            var1 = arg1;
+            var4 = var3.bind(var4)(var1);
+            var3 = var4.length;
+            var1 = 0;
+            var1 = var1 !== var3;
+            if(!var1) { _fun0035_ip = 91; continue _fun0035 }
+case 152:
+            var3 = _closure1_slot29;
+            var2 = undefined;
+            var1 = var3.bind(var2)(var4);
+case 91:
+            return var1;
+        }
+    };
+    var _closure1_slot41 = var1;
+    var1 = global;
+    var9 = var1.Object;
+    var8 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var4);
+    var1 = 0;
+    var4 = var6[var1];
+    var1 = undefined;
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot3 = var4;
+    var4 = 1;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot4 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot5 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot6 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot7 = var4;
+    var4 = 5;
+    var8 = var6[var4];
+    var8 = var7.bind(var1)(var8);
+    var _closure1_slot8 = var8;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.ReferencedMessageState;
+    var _closure1_slot9 = var4;
+    var4 = 6;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot10 = var4;
+    var4 = 7;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot11 = var4;
+    var4 = 8;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot12 = var4;
+    var4 = 9;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot13 = var4;
+    var4 = 10;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot14 = var4;
+    var4 = 11;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot15 = var4;
+    var4 = 12;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot16 = var4;
+    var4 = 13;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.MessageTypesWithLazyLoadedReferences;
+    var _closure1_slot17 = var4;
+    var4 = 14;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.UserSettingsTypes;
+    var _closure1_slot18 = var4;
+    var4 = {};
+    var _closure1_slot19 = var4;
+    var4 = 28;
+    var4 = var6[var4];
+    var4 = var7.bind(var1)(var4);
+    var2 = function(arg1) {
+        var3 = function ExplicitMediaManager(arg1) {
+            _fun0036: for(var _fun0036_ip = 0; ; ) switch(_fun0036_ip) {
+case 0:
+                var5 = this;
+                var13 = 0;
+                var1 = copyRestArgs(var13);
+                var7 = _closure1_slot4;
+                var2 = _closure2_slot0;
+                var4 = undefined;
+                var7 = var7.bind(var4)(var5, var2);
+                var10 = new Array(0);
+                var13 = var10;
+                var12 = var1;
+                var11 = 0;
+                var1 = arraySpread(var13, var12, var11);
+                var1 = _closure1_slot6;
+                var9 = var1.bind(var4)(var2);
+                var2 = _closure1_slot5;
+                var1 = _closure1_slot20;
+                var1 = var1.bind(var4)();
+                if(var1) { _fun0036_ip = 153; continue _fun0036 }
+case 75:
+                var1 = var9.apply;
+                var1 = var1.bind(var9)(var5, var10);
+                _fun0036_ip = 76; continue _fun0036;
+case 153:
+                var6 = global;
+                var8 = var6.Reflect;
+                var7 = var8.construct;
+                var6 = _closure1_slot6;
+                var6 = var6.bind(var4)(var5);
+                var6 = var6.constructor;
+                var1 = var7.bind(var8)(var9, var10, var6);
+case 76:
+                var1 = var2.bind(var4)(var5, var1);
+                var2 = {};
+                var4 = _closure1_slot32;
+                var2['LOAD_MESSAGES_SUCCESS'] = var4;
+                var4 = _closure1_slot35;
+                var2['LOAD_FORUM_POSTS'] = var4;
+                var4 = _closure1_slot36;
+                var2['LOAD_THREADS_SUCCESS'] = var4;
+                var2['LOAD_ARCHIVED_THREADS_SUCCESS'] = var4;
+                var4 = _closure1_slot37;
+                var2['SIDEBAR_VIEW_CHANNEL'] = var4;
+                var4 = _closure1_slot31;
+                var2['MESSAGE_CREATE'] = var4;
+                var4 = _closure1_slot30;
+                var2['MESSAGE_UPDATE'] = var4;
+                var4 = _closure1_slot22;
+                var2['LOGOUT'] = var4;
+                var4 = _closure1_slot33;
+                var2['SEARCH_MESSAGES_SUCCESS'] = var4;
+                var2['MOD_VIEW_SEARCH_MESSAGES_SUCCESS'] = var4;
+                var4 = _closure1_slot38;
+                var2['CHANNEL_SELECT'] = var4;
+                var4 = _closure1_slot34;
+                var2['LOAD_PINNED_MESSAGES_SUCCESS'] = var4;
+                var4 = _closure1_slot39;
+                var2['USER_SETTINGS_PROTO_UPDATE'] = var4;
+                var3 = _closure1_slot40;
+                var2['CHANNEL_RTC_UPDATE_CHAT_OPEN'] = var3;
+                var1['actions'] = var2;
+                return var1;
+            }
+        };
+        var _closure2_slot0 = var3;
+        var5 = _closure1_slot7;
+        var2 = undefined;
+        var4 = arg1;
+        var4 = var5.bind(var2)(var3, var4);
+        var1 = _closure1_slot3;
+        var1 = var1.bind(var2)(var3);
+        return var1;
+    };
+    var2 = var2.bind(var1)(var4);
+    var4 = var2.prototype;
+    var4 = Object.create(var4, {constructor: {value: var2}});
+    var13 = var4;
+    var2 = new var13[var2](var12);
+    var2 = var2 instanceof Object ? var2 : var4;
+    var4 = 29;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/explicit_media_redaction/ExplicitMediaManager.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    var2 = 3000;
+    var3['MESSAGE_SCAN_TIMEOUT'] = var2;
+    var2 = 800;
+    var3['MAX_TIMEOUT_FOR_JITTER'] = var2;
+    return var1;
+})();

@@ -1,0 +1,61 @@
+// app/design/components/Navigator/native/useNavigation.native.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var6 = require;
+    var3 = exports;
+    var5 = dependencyMap;
+    var _closure1_slot0 = var6;
+    var _closure1_slot1 = var5;
+    var4 = function useNavigation() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 0;
+        var2 = var2[var1];
+        var1 = undefined;
+        var2 = var3.bind(var1)(var2);
+        var1 = var2.useNavigation;
+        var1 = var1.bind(var2)();
+        return var1;
+    };
+    var1 = global;
+    var9 = var1.Object;
+    var8 = var9.defineProperty;
+    var7 = {};
+    var1 = true;
+    var7['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var7);
+    var1 = 1;
+    var5 = var5[var1];
+    var1 = undefined;
+    var7 = var6.bind(var1)(var5);
+    var6 = var7.fileFinishedImporting;
+    var5 = 'design/components/Navigator/native/useNavigation.native.tsx';
+    var5 = var6.bind(var7)(var5);
+    var3['useNavigation'] = var4;
+    var5 = function useNativeStackNavigation() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 0;
+        var2 = var2[var1];
+        var1 = undefined;
+        var2 = var3.bind(var1)(var2);
+        var1 = var2.useNavigation;
+        var1 = var1.bind(var2)();
+        return var1;
+    };
+    var3['useNativeStackNavigation'] = var5;
+    var3['useStackNavigation'] = var4;
+    var2 = function useTabNavigation() {
+        var3 = _closure1_slot0;
+        var2 = _closure1_slot1;
+        var1 = 0;
+        var2 = var2[var1];
+        var1 = undefined;
+        var2 = var3.bind(var1)(var2);
+        var1 = var2.useNavigation;
+        var1 = var1.bind(var2)();
+        return var1;
+    };
+    var3['useTabNavigation'] = var2;
+    return var1;
+})();

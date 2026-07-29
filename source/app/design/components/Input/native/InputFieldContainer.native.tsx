@@ -1,0 +1,638 @@
+// app/design/components/Input/native/InputFieldContainer.native.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var6 = require;
+    var11 = metroImportDefault;
+    var3 = exports;
+    var7 = dependencyMap;
+    var _closure1_slot0 = var6;
+    var _closure1_slot1 = var11;
+    var _closure1_slot2 = var7;
+    var4 = function useInputStyles(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var1 = arg1;
+            var8 = var1.size;
+            var7 = undefined;
+            if(!(var8 === var7)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var8 = 'lg';
+case 2:
+            var10 = var1.isRound;
+            if(!(var10 === var7)) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var10 = false;
+case 4:
+            var6 = var1.isDisabled;
+            if(!(var6 === var7)) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var6 = false;
+case 6:
+            var5 = var1.grow;
+            if(!(var5 === var7)) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var5 = true;
+case 8:
+            var12 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var9 = 4;
+            var3 = var2[var9];
+            var13 = var12.bind(var7)(var3);
+            var11 = var13.useToken;
+            var3 = 'sm';
+            if(!(var3 !== var8)) { _fun0001_ip = 10; continue _fun0001 }
+case 11:
+            var4 = 'md';
+            if(!(var4 !== var8)) { _fun0001_ip = 12; continue _fun0001 }
+case 13:
+            var14 = 'lg';
+            var4 = undefined;
+            if(!(var14 === var8)) { _fun0001_ip = 14; continue _fun0001 }
+case 15:
+            var15 = _closure1_slot1;
+            var16 = _closure1_slot2;
+            var14 = 3;
+            var14 = var16[var14];
+            var14 = var15.bind(var7)(var14);
+            var14 = var14.modules;
+            var14 = var14.mobile;
+            var4 = var14.INPUT_FIELD_RADIUS_LG;
+            _fun0001_ip = 14; continue _fun0001;
+case 12:
+            var15 = _closure1_slot1;
+            var16 = _closure1_slot2;
+            var14 = 3;
+            var14 = var16[var14];
+            var14 = var15.bind(var7)(var14);
+            var14 = var14.modules;
+            var14 = var14.mobile;
+            var4 = var14.INPUT_FIELD_RADIUS_MD;
+            _fun0001_ip = 14; continue _fun0001;
+case 10:
+            var15 = _closure1_slot1;
+            var16 = _closure1_slot2;
+            var14 = 3;
+            var14 = var16[var14];
+            var14 = var15.bind(var7)(var14);
+            var14 = var14.modules;
+            var14 = var14.mobile;
+            var4 = var14.INPUT_FIELD_RADIUS_SM;
+case 14:
+            var4 = var11.bind(var13)(var4);
+            var11 = var2[var9];
+            var13 = var12.bind(var7)(var11);
+            var11 = var13.useToken;
+            var14 = _closure1_slot1;
+            var12 = 3;
+            var2 = var2[var12];
+            var2 = var14.bind(var7)(var2);
+            var2 = var2.modules;
+            var2 = var2.mobile;
+            var2 = var2.INPUT_FIELD_ROUND_RADIUS;
+            var2 = var11.bind(var13)(var2);
+            if(!var10) { _fun0001_ip = 16; continue _fun0001 }
+case 17:
+            var4 = var2;
+case 16:
+            var10 = _closure1_slot0;
+            var2 = _closure1_slot2;
+            var11 = var2[var9];
+            var13 = var10.bind(var7)(var11);
+            var11 = var13.useToken;
+            if(!(var3 !== var8)) { _fun0001_ip = 18; continue _fun0001 }
+case 19:
+            var3 = 'md';
+            if(!(var3 !== var8)) { _fun0001_ip = 20; continue _fun0001 }
+case 21:
+            var14 = 'lg';
+            var3 = undefined;
+            if(!(var14 === var8)) { _fun0001_ip = 22; continue _fun0001 }
+case 23:
+            var15 = _closure1_slot1;
+            var14 = _closure1_slot2;
+            var14 = var14[var12];
+            var14 = var15.bind(var7)(var14);
+            var14 = var14.modules;
+            var14 = var14.mobile;
+            var3 = var14.INPUT_FIELD_TEXT_STYLE_LG;
+            _fun0001_ip = 22; continue _fun0001;
+case 20:
+            var15 = _closure1_slot1;
+            var14 = _closure1_slot2;
+            var14 = var14[var12];
+            var14 = var15.bind(var7)(var14);
+            var14 = var14.modules;
+            var14 = var14.mobile;
+            var3 = var14.INPUT_FIELD_TEXT_STYLE_MD;
+            _fun0001_ip = 22; continue _fun0001;
+case 18:
+            var15 = _closure1_slot1;
+            var14 = _closure1_slot2;
+            var14 = var14[var12];
+            var14 = var15.bind(var7)(var14);
+            var14 = var14.modules;
+            var14 = var14.mobile;
+            var3 = var14.INPUT_FIELD_TEXT_STYLE_SM;
+case 22:
+            var18 = var11.bind(var13)(var3);
+            var9 = var2[var9];
+            var10 = var10.bind(var7)(var9);
+            var9 = var10.useToken;
+            var11 = _closure1_slot1;
+            var2 = var2[var12];
+            var2 = var11.bind(var7)(var2);
+            var2 = var2.modules;
+            var2 = var2.mobile;
+            var2 = var2.INPUT_FIELD_PADDING_VERTICAL_SM_IOS;
+            var17 = var9.bind(var10)(var2);
+            var1 = _closure1_slot8;
+            var23 = undefined;
+            var22 = var8;
+            var21 = var6;
+            var20 = var5;
+            var19 = var4;
+            var1 = var23[var1](var22, var21, var20, var19, var18, var17, var16);
+            return var1;
+        }
+    };
+    var _closure1_slot11 = var4;
+    var1 = global;
+    var9 = var1.Object;
+    var8 = var9.defineProperty;
+    var5 = {};
+    var1 = true;
+    var5['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var5);
+    var1 = 0;
+    var8 = var7[var1];
+    var5 = metroImportAll;
+    var1 = undefined;
+    var5 = var5.bind(var1)(var8);
+    var5 = 1;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var8 = var5.Platform;
+    var8 = var5.StyleSheet;
+    var _closure1_slot3 = var8;
+    var5 = var5.View;
+    var _closure1_slot4 = var5;
+    var5 = 2;
+    var5 = var7[var5];
+    var5 = var6.bind(var1)(var5);
+    var8 = var5.jsx;
+    var _closure1_slot5 = var8;
+    var5 = var5.jsxs;
+    var _closure1_slot6 = var5;
+    var5 = {'mass': 0.5, 'damping': 15, 'stiffness': 200, 'overshootClamping': true};
+    var _closure1_slot7 = var5;
+    var5 = 5;
+    var8 = var7[var5];
+    var10 = var6.bind(var1)(var8);
+    var9 = var10.createStyles;
+    var8 = function() {
+        _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+            var2 = arguments[0];
+            var12 = arguments[1];
+            var15 = arguments[2];
+            var8 = arguments[3];
+            var13 = arguments[4];
+            var5 = undefined;
+            if(!(var2 === var5)) { _fun0002_ip = 24; continue _fun0002 }
+case 25:
+            var2 = 'lg';
+case 24:
+            if(!(var12 === var5)) { _fun0002_ip = 26; continue _fun0002 }
+case 27:
+            var12 = false;
+case 26:
+            if(!(var15 === var5)) { _fun0002_ip = 28; continue _fun0002 }
+case 29:
+            var15 = true;
+case 28:
+            if(!(var8 === var5)) { _fun0002_ip = 30; continue _fun0002 }
+case 31:
+            var8 = 12;
+case 30:
+            if(!(var13 === var5)) { _fun0002_ip = 9; continue _fun0002 }
+case 32:
+            var13 = 'text-md/medium';
+case 9:
+            var1 = {};
+            var6 = _closure1_slot0;
+            var7 = _closure1_slot2;
+            var4 = 6;
+            var9 = var7[var4];
+            var9 = var6.bind(var5)(var9);
+            var9 = var9.InputHeights;
+            var9 = var9.SM;
+            var1['sm'] = var9;
+            var9 = var7[var4];
+            var9 = var6.bind(var5)(var9);
+            var9 = var9.InputHeights;
+            var9 = var9.MD;
+            var1['md'] = var9;
+            var4 = var7[var4];
+            var4 = var6.bind(var5)(var4);
+            var4 = var4.InputHeights;
+            var4 = var4.LG;
+            var1['lg'] = var4;
+            var14 = var1[var2];
+            var1 = {};
+            var9 = _closure1_slot1;
+            var6 = 3;
+            var4 = var7[var6];
+            var4 = var9.bind(var5)(var4);
+            var4 = var4.space;
+            var4 = var4.PX_8;
+            var1['sm'] = var4;
+            var4 = var7[var6];
+            var4 = var9.bind(var5)(var4);
+            var4 = var4.space;
+            var4 = var4.PX_12;
+            var1['md'] = var4;
+            var4 = var7[var6];
+            var4 = var9.bind(var5)(var4);
+            var4 = var4.space;
+            var4 = var4.PX_16;
+            var1['lg'] = var4;
+            var10 = var1[var2];
+            var1 = {};
+            var4 = var7[var6];
+            var4 = var9.bind(var5)(var4);
+            var4 = var4.space;
+            var4 = var4.PX_4;
+            var1['sm'] = var4;
+            var4 = var7[var6];
+            var4 = var9.bind(var5)(var4);
+            var4 = var4.space;
+            var4 = var4.PX_8;
+            var1['md'] = var4;
+            var4 = var7[var6];
+            var4 = var9.bind(var5)(var4);
+            var4 = var4.space;
+            var4 = var4.PX_8;
+            var1['lg'] = var4;
+            var11 = var1[var2];
+            var1 = {};
+            var4 = {};
+            var16 = var7[var6];
+            var16 = var9.bind(var5)(var16);
+            var16 = var16.space;
+            var16 = var16.PX_8;
+            var4['paddingHorizontal'] = var16;
+            var16 = var7[var6];
+            var16 = var9.bind(var5)(var16);
+            var16 = var16.space;
+            var16 = var16.PX_4;
+            var4['paddingVertical'] = var16;
+            var1['sm'] = var4;
+            var4 = {};
+            var16 = var7[var6];
+            var16 = var9.bind(var5)(var16);
+            var16 = var16.space;
+            var16 = var16.PX_12;
+            var4['paddingHorizontal'] = var16;
+            var16 = var7[var6];
+            var16 = var9.bind(var5)(var16);
+            var16 = var16.space;
+            var16 = var16.PX_8;
+            var4['paddingVertical'] = var16;
+            var1['md'] = var4;
+            var4 = {};
+            var16 = var7[var6];
+            var16 = var9.bind(var5)(var16);
+            var16 = var16.space;
+            var16 = var16.PX_16;
+            var4['paddingHorizontal'] = var16;
+            var7 = var7[var6];
+            var7 = var9.bind(var5)(var7);
+            var7 = var7.space;
+            var9 = var7.PX_8;
+            var7 = 2;
+            var7 = var9 + var7;
+            var4['paddingVertical'] = var7;
+            var1['lg'] = var4;
+            var4 = var1[var2];
+            var1 = {};
+            var2 = {};
+            var7 = 1;
+            var9 = var7;
+            if(!var12) { _fun0002_ip = 33; continue _fun0002 }
+case 34:
+            var9 = 0.5;
+case 33:
+            var2['opacity'] = var9;
+            var9 = 'auto';
+            if(!var12) { _fun0002_ip = 35; continue _fun0002 }
+case 36:
+            var9 = 'none';
+case 35:
+            var2['pointerEvents'] = var9;
+            var9 = 'row';
+            var2['flexDirection'] = var9;
+            var9 = 0;
+            if(!var15) { _fun0002_ip = 37; continue _fun0002 }
+case 38:
+            var9 = var7;
+case 37:
+            var2['flexGrow'] = var9;
+            var9 = 'center';
+            var2['alignItems'] = var9;
+            var1['container'] = var2;
+            var2 = {};
+            var17 = _closure1_slot1;
+            var15 = _closure1_slot2;
+            var16 = var15[var6];
+            var16 = var17.bind(var5)(var16);
+            var16 = var16.colors;
+            var16 = var16.INPUT_BACKGROUND_DEFAULT;
+            var2['backgroundColor'] = var16;
+            var16 = var15[var6];
+            var16 = var17.bind(var5)(var16);
+            var16 = var16.modules;
+            var16 = var16.mobile;
+            var16 = var16.INPUT_FIELD_BORDER_WIDTH;
+            var2['borderWidth'] = var16;
+            var16 = var15[var6];
+            var16 = var17.bind(var5)(var16);
+            var16 = var16.colors;
+            var16 = var16.INPUT_BORDER_DEFAULT;
+            var2['borderColor'] = var16;
+            var1['background'] = var2;
+            var2 = {};
+            var16 = var15[var6];
+            var16 = var17.bind(var5)(var16);
+            var16 = var16.colors;
+            var16 = var16.INPUT_PLACEHOLDER_TEXT_DEFAULT;
+            var2['color'] = var16;
+            var1['placeholderText'] = var2;
+            var2 = {};
+            var2['minHeight'] = var14;
+            var1['minHeight'] = var2;
+            var2 = {};
+            var2['borderRadius'] = var8;
+            var1['radius'] = var2;
+            var1['padding'] = var4;
+            var2 = {};
+            var14 = _closure1_slot0;
+            var8 = 7;
+            var8 = var15[var8];
+            var8 = var14.bind(var5)(var8);
+            var8 = var8.TextStyleSheet;
+            var18 = var8[var13];
+            var19 = var2;
+            var8 = copyDataProperties(var19, var18);
+            var8 = 'lineHeight';
+            var2[7] = var5;
+            var13 = _closure1_slot1;
+            var8 = _closure1_slot2;
+            var8 = var8[var6];
+            var8 = var13.bind(var5)(var8);
+            var8 = var8.colors;
+            if(var12) { _fun0002_ip = 39; continue _fun0002 }
+case 40:
+            var12 = var8.TEXT_DEFAULT;
+            _fun0002_ip = 41; continue _fun0002;
+case 39:
+            var12 = var8.TEXT_MUTED;
+case 41:
+            var8 = 'color';
+            var2[7] = var12;
+            var8 = 'flexGrow';
+            var2[7] = var7;
+            var1['text'] = var2;
+            var2 = {'position': 'absolute', 'left': 0};
+            var19 = var2;
+            var18 = var4;
+            var8 = copyDataProperties(var19, var18);
+            var8 = 'paddingEnd';
+            var2[7] = var11;
+            var13 = 'zIndex';
+            var2[12] = var7;
+            var8 = 'none';
+            var12 = 'pointerEvents';
+            var2[11] = var8;
+            var1['leadingText'] = var2;
+            var2 = {'position': 'absolute', 'right': 0};
+            var19 = var2;
+            var18 = var4;
+            var14 = copyDataProperties(var19, var18);
+            var14 = 'paddingStart';
+            var2[13] = var11;
+            var2[12] = var7;
+            var2[11] = var8;
+            var1['trailingText'] = var2;
+            var2 = {'position': 'absolute', 'left': 0, 'top': 0, 'bottom': 0};
+            var2['paddingTop'] = var10;
+            var2['paddingBottom'] = var10;
+            var2['paddingStart'] = var10;
+            var2['paddingEnd'] = var11;
+            var2['justifyContent'] = var9;
+            var2['zIndex'] = var7;
+            var2['pointerEvents'] = var8;
+            var1['leadingIcon'] = var2;
+            var2 = {'position': 'absolute', 'right': 0, 'top': 0, 'bottom': 0};
+            var2['paddingTop'] = var10;
+            var2['paddingBottom'] = var10;
+            var2['paddingStart'] = var11;
+            var2['paddingEnd'] = var10;
+            var2['justifyContent'] = var9;
+            var2['zIndex'] = var7;
+            var2['pointerEvents'] = var8;
+            var1['trailingIcon'] = var2;
+            var2 = {};
+            var19 = var2;
+            var18 = var4;
+            var4 = copyDataProperties(var19, var18);
+            var4 = 'borderRightWidth';
+            var2[3] = var7;
+            var4 = _closure1_slot1;
+            var3 = _closure1_slot2;
+            var3 = var3[var6];
+            var3 = var4.bind(var5)(var3);
+            var3 = var3.colors;
+            var4 = var3.BORDER_STRONG;
+            var3 = 'borderRightColor';
+            var2[2] = var4;
+            var1['splitBorder'] = var2;
+            return var1;
+        }
+    };
+    var8 = var9.bind(var10)(var8);
+    var _closure1_slot8 = var8;
+    var5 = var7[var5];
+    var9 = var6.bind(var1)(var5);
+    var8 = var9.createStyleProperties;
+    var5 = {};
+    var10 = 3;
+    var12 = var7[var10];
+    var12 = var11.bind(var1)(var12);
+    var12 = var12.colors;
+    var12 = var12.INPUT_BORDER_ERROR_DEFAULT;
+    var5['error'] = var12;
+    var12 = 'transparent';
+    var5['default'] = var12;
+    var10 = var7[var10];
+    var10 = var11.bind(var1)(var10);
+    var10 = var10.colors;
+    var10 = var10.INPUT_BORDER_ACTIVE;
+    var5['focused'] = var10;
+    var5 = var8.bind(var9)(var5);
+    var _closure1_slot9 = var5;
+    var5 = {};
+    var8 = "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}";
+    var5['code'] = var8;
+    var _closure1_slot10 = var5;
+    var5 = 10;
+    var5 = var7[var5];
+    var7 = var6.bind(var1)(var5);
+    var6 = var7.fileFinishedImporting;
+    var5 = 'design/components/Input/native/InputFieldContainer.native.tsx';
+    var5 = var6.bind(var7)(var5);
+    var3['useInputStyles'] = var4;
+    var2 = function InputFieldContainer(arg1) {
+        _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+            var5 = arg1;
+            var2 = _closure1_slot9;
+            var4 = undefined;
+            var13 = var2.bind(var4)();
+            var _closure2_slot0 = var13;
+            var2 = var5.isFocused;
+            var8 = var4 !== var2;
+            if(!var8) { _fun0003_ip = 42; continue _fun0003 }
+case 29:
+            var8 = var2;
+case 42:
+            var _closure2_slot1 = var8;
+            var2 = var5.status;
+            var14 = 'default';
+            if(!(var4 !== var2)) { _fun0003_ip = 43; continue _fun0003 }
+case 44:
+            var14 = var2;
+case 43:
+            var _closure2_slot2 = var14;
+            var6 = var5.children;
+            var3 = _closure1_slot11;
+            var2 = {};
+            var7 = var5.size;
+            var2['size'] = var7;
+            var7 = var5.isRound;
+            var2['isRound'] = var7;
+            var7 = var5.isDisabled;
+            var2['isDisabled'] = var7;
+            var7 = var5.grow;
+            var2['grow'] = var7;
+            var7 = var5.leadingIcon;
+            var5 = null;
+            var5 = var5 != var7;
+            var2['hasLeadingIcon'] = var5;
+            var11 = var3.bind(var4)(var2);
+            var10 = _closure1_slot0;
+            var12 = _closure1_slot2;
+            var5 = 8;
+            var2 = var12[var5];
+            var3 = var10.bind(var4)(var2);
+            var2 = var3.useAnimatedStyle;
+            var1 = function s() {
+                _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+                    var3 = _closure2_slot2;
+                    var2 = 'default';
+                    if(!(var2 === var3)) { _fun0004_ip = 45; continue _fun0004 }
+case 46:
+                    var3 = _closure2_slot1;
+                    var6 = 'transparent';
+                    var2 = 0;
+                    if(!var3) { _fun0004_ip = 44; continue _fun0004 }
+case 5:
+                    var3 = _closure2_slot0;
+                    var6 = var3.focused;
+                    var2 = 1;
+                    _fun0004_ip = 44; continue _fun0004;
+case 45:
+                    var1 = _closure2_slot0;
+                    var6 = var1.error;
+                    var2 = 2;
+case 44:
+                    var1 = {};
+                    var7 = _closure1_slot0;
+                    var8 = _closure1_slot2;
+                    var3 = 9;
+                    var9 = var8[var3];
+                    var4 = undefined;
+                    var10 = var7.bind(var4)(var9);
+                    var9 = var10.withSpring;
+                    var5 = _closure1_slot7;
+                    var9 = var9.bind(var10)(var2, var5);
+                    var1['borderWidth'] = var9;
+                    var3 = var8[var3];
+                    var4 = var7.bind(var4)(var3);
+                    var3 = var4.withSpring;
+                    var3 = var3.bind(var4)(var6, var5);
+                    var1['borderColor'] = var3;
+                    var2 = -var2;
+                    var1['left'] = var2;
+                    var1['right'] = var2;
+                    var1['top'] = var2;
+                    var1['bottom'] = var2;
+                    return var1;
+                }
+            };
+            var7 = {};
+            var7['status'] = var14;
+            var7['ringColors'] = var13;
+            var7['isFocused'] = var8;
+            var8 = 9;
+            var8 = var12[var8];
+            var8 = var10.bind(var4)(var8);
+            var8 = var8.withSpring;
+            var7['withSpring'] = var8;
+            var8 = _closure1_slot7;
+            var7['RING_SPRING_CONFIG'] = var8;
+            var1['__closure'] = var7;
+            var7 = 1037178877006.0;
+            var1['__workletHash'] = var7;
+            var7 = _closure1_slot10;
+            var1['__initData'] = var7;
+            var10 = var2.bind(var3)(var1);
+            var3 = _closure1_slot6;
+            var2 = _closure1_slot4;
+            var1 = {};
+            var8 = var11.container;
+            var7 = new Array(4);
+            var7[0] = var8;
+            var8 = var11.background;
+            var7[1] = var8;
+            var8 = var11.radius;
+            var7[2] = var8;
+            var8 = var11.minHeight;
+            var7[3] = var8;
+            var1['style'] = var7;
+            var8 = _closure1_slot5;
+            var7 = _closure1_slot1;
+            var5 = var12[var5];
+            var5 = var7.bind(var4)(var5);
+            var7 = var5.View;
+            var5 = {};
+            var9 = _closure1_slot3;
+            var12 = var9.absoluteFill;
+            var9 = new Array(3);
+            var9[0] = var12;
+            var11 = var11.radius;
+            var9[1] = var11;
+            var9[2] = var10;
+            var5['style'] = var9;
+            var7 = var8.bind(var4)(var7, var5);
+            var5 = new Array(2);
+            var5[0] = var7;
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['InputFieldContainer'] = var2;
+    return var1;
+})();

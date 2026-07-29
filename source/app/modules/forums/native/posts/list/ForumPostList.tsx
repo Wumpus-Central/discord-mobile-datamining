@@ -1,0 +1,196 @@
+// app/modules/forums/native/posts/list/ForumPostList.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var7 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var7;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var9 = var1.Object;
+    var8 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var4);
+    var1 = 0;
+    var4 = var6[var1];
+    var1 = undefined;
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot3 = var4;
+    var4 = 1;
+    var7 = var6[var4];
+    var4 = metroImportAll;
+    var4 = var4.bind(var1)(var7);
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.View;
+    var _closure1_slot4 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.ChannelFlags;
+    var _closure1_slot5 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.jsx;
+    var _closure1_slot6 = var7;
+    var7 = var4.jsxs;
+    var _closure1_slot7 = var7;
+    var4 = var4.Fragment;
+    var _closure1_slot8 = var4;
+    var4 = 5;
+    var4 = var6[var4];
+    var8 = var5.bind(var1)(var4);
+    var7 = var8.createStyles;
+    var4 = {};
+    var9 = {'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center', 'marginBottom': 8};
+    var4['header'] = var9;
+    var9 = {'flex': 1, 'marginBottom': 12};
+    var4['content'] = var9;
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot9 = var4;
+    var4 = 11;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/forums/native/posts/list/ForumPostList.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function ForumPostList(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var1 = arg1;
+            var22 = var1.messageContent;
+            var11 = var1.firstMessage;
+            var18 = var1.firstMessageLoaded;
+            var10 = var1.hasUnreads;
+            var23 = var1.isNew;
+            var21 = var1.media;
+            var20 = var1.isEmbed;
+            var19 = var1.isLocalDeviceMedia;
+            var9 = var1.parentChannel;
+            var12 = var1.thread;
+            var17 = var1.senderModifier;
+            var1 = _closure1_slot9;
+            var4 = undefined;
+            var24 = var1.bind(var4)();
+            var2 = _closure1_slot0;
+            var3 = _closure1_slot2;
+            var1 = 6;
+            var1 = var3[var1];
+            var2 = var2.bind(var4)(var1);
+            var1 = var2.useSomeAppliedTags;
+            var3 = 2;
+            var2 = var1.bind(var2)(var12, var3);
+            var1 = _closure1_slot3;
+            var2 = var1.bind(var4)(var2, var3);
+            var25 = 0;
+            var29 = var2[var25];
+            var1 = 1;
+            var28 = var2[var1];
+            var2 = var12.hasFlag;
+            var1 = _closure1_slot5;
+            var1 = var1.PINNED;
+            var16 = var2.bind(var12)(var1);
+            var3 = _closure1_slot7;
+            var2 = _closure1_slot8;
+            var1 = {};
+            var6 = _closure1_slot4;
+            var5 = {};
+            var7 = var24.content;
+            var5['style'] = var7;
+            var7 = var16;
+            if(var16) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var8 = var29.length;
+            var7 = var25 !== var8;
+case 2:
+            if(!var7) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var15 = _closure1_slot7;
+            var14 = _closure1_slot4;
+            var8 = {};
+            var24 = var24.header;
+            var8['style'] = var24;
+            var24 = var16;
+            if(!var24) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var27 = _closure1_slot6;
+            var26 = _closure1_slot1;
+            var30 = _closure1_slot2;
+            var16 = 7;
+            var16 = var30[var16];
+            var26 = var26.bind(var4)(var16);
+            var16 = {};
+            var24 = var27.bind(var4)(var26, var16);
+case 6:
+            var16 = new Array(2);
+            var16[0] = var24;
+            var24 = var29.length;
+            var24 = var25 !== var24;
+            if(!var24) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var27 = _closure1_slot6;
+            var26 = _closure1_slot0;
+            var30 = _closure1_slot2;
+            var25 = 8;
+            var25 = var30[var25];
+            var25 = var26.bind(var4)(var25);
+            var26 = var25.ForumPostAppliedTagPills;
+            var25 = {};
+            var25['appliedTags'] = var29;
+            var25['additionalTagsCount'] = var28;
+            var25['hasUnreads'] = var10;
+            var24 = var27.bind(var4)(var26, var25);
+case 8:
+            var16[1] = var24;
+            var8['children'] = var16;
+            var7 = var15.bind(var4)(var14, var8);
+case 4:
+            var14 = new Array(2);
+            var14[0] = var7;
+            var8 = _closure1_slot6;
+            var7 = _closure1_slot1;
+            var13 = _closure1_slot2;
+            var15 = 9;
+            var15 = var13[var15];
+            var16 = var7.bind(var4)(var15);
+            var15 = {};
+            var15['thread'] = var12;
+            var15['firstMessage'] = var11;
+            var15['hasUnreads'] = var10;
+            var15['isNew'] = var23;
+            var15['messageContent'] = var22;
+            var15['media'] = var21;
+            var15['isEmbed'] = var20;
+            var15['isLocalDeviceMedia'] = var19;
+            var15['firstMessageLoaded'] = var18;
+            var15['senderModifier'] = var17;
+            var15 = var8.bind(var4)(var16, var15);
+            var14[1] = var15;
+            var5['children'] = var14;
+            var6 = var3.bind(var4)(var6, var5);
+            var5 = new Array(2);
+            var5[0] = var6;
+            var6 = 10;
+            var6 = var13[var6];
+            var7 = var7.bind(var4)(var6);
+            var6 = {};
+            var6['thread'] = var12;
+            var6['firstMessage'] = var11;
+            var6['hasUnreads'] = var10;
+            var6['parentChannel'] = var9;
+            var6 = var8.bind(var4)(var7, var6);
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var3['default'] = var2;
+    return var1;
+})();

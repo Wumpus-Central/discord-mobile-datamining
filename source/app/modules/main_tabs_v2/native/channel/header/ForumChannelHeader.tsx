@@ -1,0 +1,117 @@
+// app/modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var1 = metroImportDefault;
+    var _closure1_slot1 = var1;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var7 = var4.bind(var1)(var7);
+    var4 = 1;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.View;
+    var _closure1_slot3 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var11 = var4.MIN_HEADER_HEIGHT;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.jsx;
+    var _closure1_slot4 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var9 = var5.bind(var1)(var4);
+    var8 = var9.createStyles;
+    var4 = {};
+    var10 = {'flex': 1, 'flexShrink': 1, 'flexDirection': 'row', 'alignItems': 'center', 'paddingStart': 4};
+    var10['height'] = var11;
+    var4['search'] = var10;
+    var4 = var8.bind(var9)(var4);
+    var _closure1_slot5 = var4;
+    var4 = var7.memo;
+    var2 = function(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var1 = arg1;
+            var10 = var1.channelId;
+            var3 = var1.screenIndex;
+            var9 = var1.guildId;
+            var13 = var1.pressable;
+            var12 = var1.isGuildMemberCountVisible;
+            var11 = var1.isNavigationScreen;
+            var8 = var1.searchPlaceholder;
+            var1 = _closure1_slot5;
+            var5 = undefined;
+            var7 = var1.bind(var5)();
+            var2 = _closure1_slot0;
+            var4 = _closure1_slot2;
+            var1 = 5;
+            var1 = var4[var1];
+            var2 = var2.bind(var5)(var1);
+            var1 = var2.useIsForumChannelSearchActive;
+            var1 = var1.bind(var2)(var10);
+            var4 = _closure1_slot4;
+            if(var1) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var2 = _closure1_slot1;
+            var14 = _closure1_slot2;
+            var1 = 7;
+            var1 = var14[var1];
+            var2 = var2.bind(var5)(var1);
+            var1 = {};
+            var1['channelId'] = var10;
+            var1['guildId'] = var9;
+            var1['pressable'] = var13;
+            var1['isGuildMemberCountVisible'] = var12;
+            var1['isNavigationScreen'] = var11;
+            var1['screenIndex'] = var3;
+            var1 = var4.bind(var5)(var2, var1);
+            _fun0001_ip = 4; continue _fun0001;
+case 2:
+            var3 = _closure1_slot3;
+            var2 = {};
+            var7 = var7.search;
+            var2['style'] = var7;
+            var7 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var6 = 6;
+            var6 = var11[var6];
+            var6 = var7.bind(var5)(var6);
+            var7 = var6.ForumChannelSearchInput;
+            var6 = {};
+            var6['channelId'] = var10;
+            var6['guildId'] = var9;
+            var6['placeholder'] = var8;
+            var6 = var4.bind(var5)(var7, var6);
+            var2['children'] = var6;
+            var1 = var4.bind(var5)(var3, var2);
+case 4:
+            return var1;
+        }
+    };
+    var2 = var4.bind(var7)(var2);
+    var4 = 8;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/main_tabs_v2/native/channel/header/ForumChannelHeader.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

@@ -1,0 +1,613 @@
+// app/modules/channel_list_v2/native/items/TextChannel.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var8 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var8;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var9 = var1.Object;
+    var7 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var9)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var7 = var4.bind(var1)(var7);
+    var _closure1_slot3 = var7;
+    var4 = 1;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.View;
+    var _closure1_slot4 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot5 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot6 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot7 = var4;
+    var4 = 5;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot8 = var4;
+    var4 = 6;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot9 = var4;
+    var4 = 7;
+    var4 = var6[var4];
+    var4 = var8.bind(var1)(var4);
+    var _closure1_slot10 = var4;
+    var4 = 8;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var8 = var4.CHANNEL_MARGIN_VERTICAL;
+    var _closure1_slot11 = var8;
+    var4 = var4.CHANNEL_TITLE_LINE_HEIGHT;
+    var _closure1_slot12 = var4;
+    var4 = 9;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var8 = var4.jsx;
+    var _closure1_slot13 = var8;
+    var4 = var4.jsxs;
+    var _closure1_slot14 = var4;
+    var4 = 10;
+    var4 = var6[var4];
+    var9 = var5.bind(var1)(var4);
+    var8 = var9.createStyles;
+    var4 = function(arg1, arg2) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var6 = arguments[2];
+            var7 = undefined;
+            if(!(var6 === var7)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var6 = false;
+case 2:
+            var1 = {};
+            var2 = {'position': 'relative', 'marginVertical': null, 'marginHorizontal': 8, 'borderRadius': null, 'flexGrow': 1};
+            var4 = _closure1_slot11;
+            var2['marginVertical'] = var4;
+            var9 = _closure1_slot1;
+            var4 = _closure1_slot2;
+            var8 = 11;
+            var5 = var4[var8];
+            var5 = var9.bind(var7)(var5);
+            var5 = var5.modules;
+            var5 = var5.mobile;
+            var5 = var5.CHANNEL_ITEM_RADIUS;
+            var2['borderRadius'] = var5;
+            var5 = 1;
+            var1['container'] = var2;
+            var2 = {};
+            var4 = var4[var8];
+            var4 = var9.bind(var7)(var4);
+            var4 = var4.colors;
+            var4 = var4.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED;
+            var2['backgroundColor'] = var4;
+            var1['selected'] = var2;
+            var2 = {'position': 'absolute', 'top': 0, 'bottom': 0, 'left': 0, 'right': 0};
+            var4 = var5;
+            if(!var6) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var4 = undefined;
+case 4:
+            var2['borderWidth'] = var4;
+            var4 = undefined;
+            if(var6) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var9 = _closure1_slot1;
+            var6 = _closure1_slot2;
+            var6 = var6[var8];
+            var6 = var9.bind(var7)(var6);
+            var6 = var6.colors;
+            var4 = var6.BORDER_MUTED;
+case 6:
+            var2['borderColor'] = var4;
+            var6 = _closure1_slot1;
+            var4 = _closure1_slot2;
+            var4 = var4[var8];
+            var4 = var6.bind(var7)(var4);
+            var4 = var4.modules;
+            var4 = var4.mobile;
+            var4 = var4.CHANNEL_ITEM_RADIUS;
+            var2['borderRadius'] = var4;
+            var1['selectedBorder'] = var2;
+            var2 = {'padding': 8, 'flexDirection': 'row', 'alignItems': 'center'};
+            var1['row'] = var2;
+            var2 = {'flexGrow': 1, 'paddingVertical': 6};
+            var1['rowWithSubtitle'] = var2;
+            var2 = {'flexDirection': 'column', 'flex': 1};
+            var1['channelLabel'] = var2;
+            var2 = {'textAlign': 'left', 'flex': 1};
+            var3 = _closure1_slot12;
+            var2['lineHeight'] = var3;
+            var4 = arg1;
+            var3 = var5;
+            if(!var4) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var4 = arg2;
+            var3 = var5;
+            if(var4) { _fun0001_ip = 8; continue _fun0001 }
+case 10:
+            var3 = 0.5;
+case 8:
+            var2['opacity'] = var3;
+            var1['channelLabelText'] = var2;
+            return var1;
+        }
+    };
+    var4 = var8.bind(var9)(var4);
+    var _closure1_slot15 = var4;
+    var4 = var7.memo;
+    var2 = function(arg1) {
+        _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+            var3 = arg1;
+            var21 = var3.channel;
+            var _closure2_slot0 = var21;
+            var19 = var3.muted;
+            var20 = var3.selected;
+            var2 = var3.isRulesChannel;
+            var31 = var3.subtitle;
+            var3 = var3.isSuggestedSection;
+            var _closure2_slot1 = var3;
+            var6 = _closure1_slot1;
+            var9 = _closure1_slot2;
+            var4 = 16;
+            var5 = var9[var4];
+            var4 = undefined;
+            var6 = var6.bind(var4)(var5);
+            var5 = 'TextChannel';
+            var6 = var6.bind(var4)(var5);
+            var5 = _closure1_slot15;
+            var24 = var5.bind(var4)(var19, var20, var6);
+            var5 = var21.id;
+            var _closure2_slot2 = var5;
+            var6 = var21.guild_id;
+            var _closure2_slot3 = var6;
+            var8 = _closure1_slot0;
+            var7 = 17;
+            var7 = var9[var7];
+            var11 = var8.bind(var4)(var7);
+            var10 = var11.useStateFromStoresObject;
+            var7 = _closure1_slot7;
+            var9 = new Array(6);
+            var9[0] = var7;
+            var7 = _closure1_slot6;
+            var9[1] = var7;
+            var7 = _closure1_slot8;
+            var9[2] = var7;
+            var7 = _closure1_slot9;
+            var9[3] = var7;
+            var7 = _closure1_slot10;
+            var9[4] = var7;
+            var7 = _closure1_slot5;
+            var9[5] = var7;
+            var8 = new Array(2);
+            var8[0] = var21;
+            var8[1] = var5;
+            var7 = function() {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var2 = _closure1_slot0;
+                    var3 = _closure1_slot2;
+                    var1 = 18;
+                    var1 = var3[var1];
+                    var5 = undefined;
+                    var6 = var2.bind(var5)(var1);
+                    var4 = var6.getChannelRoleSubscriptionStatus;
+                    var7 = _closure2_slot2;
+                    var14 = _closure1_slot7;
+                    var13 = _closure1_slot6;
+                    var12 = _closure1_slot8;
+                    var16 = var6;
+                    var15 = var7;
+                    var1 = var16[var4](var15, var14, var13, var12, var11);
+                    var3 = var1.isSubscriptionGated;
+                    var2 = var1.needSubscriptionToAccess;
+                    var1 = {};
+                    var6 = _closure1_slot9;
+                    var4 = var6.hasUnread;
+                    var4 = var4.bind(var6)(var7);
+                    var1['hasUnread'] = var4;
+                    var4 = var6.getMentionCount;
+                    var4 = var4.bind(var6)(var7);
+                    var1['mentionCount'] = var4;
+                    var7 = _closure1_slot10;
+                    var6 = var7.resolveUnreadSetting;
+                    var4 = _closure2_slot0;
+                    var6 = var6.bind(var7)(var4);
+                    var1['resolvedUnreadSetting'] = var6;
+                    var6 = null;
+                    var10 = var6 != var4;
+                    var4 = 0;
+                    if(!var10) { _fun0003_ip = 11; continue _fun0003 }
+case 12:
+                    var10 = _closure2_slot0;
+                    var10 = var10.id;
+                    var10 = var6 != var10;
+                    var4 = 0;
+                    if(!var10) { _fun0003_ip = 11; continue _fun0003 }
+case 13:
+                    var10 = _closure2_slot0;
+                    var11 = var10.id;
+                    var10 = '';
+                    var4 = 0;
+                    if(!(var10 !== var11)) { _fun0003_ip = 11; continue _fun0003 }
+case 6:
+                    var10 = _closure1_slot5;
+                    var9 = var10.getEmbeddedActivitiesForChannel;
+                    var8 = _closure2_slot0;
+                    var8 = var8.id;
+                    var8 = var9.bind(var10)(var8);
+                    var9 = var6 == var8;
+                    var5 = undefined;
+                    if(var9) { _fun0003_ip = 14; continue _fun0003 }
+case 15:
+                    var5 = var8.length;
+case 14:
+                    var6 = var6 != var5;
+                    var4 = 0;
+                    if(!var6) { _fun0003_ip = 11; continue _fun0003 }
+case 16:
+                    var4 = var5;
+case 11:
+                    var1['embeddedActivitiesCount'] = var4;
+                    var1['isSubscriptionGated'] = var3;
+                    var1['needSubscriptionToAccess'] = var2;
+                    return var1;
+                }
+            };
+            var7 = var10.bind(var11)(var9, var7, var8);
+            var12 = var7.hasUnread;
+            var10 = var7.mentionCount;
+            var18 = var7.isSubscriptionGated;
+            var17 = var7.needSubscriptionToAccess;
+            var30 = var7.resolvedUnreadSetting;
+            var11 = var7.embeddedActivitiesCount;
+            var7 = _closure1_slot3;
+            var9 = var7.useCallback;
+            var8 = new Array(2);
+            var8[0] = var5;
+            var8[1] = var6;
+            var6 = function() {
+                var3 = _closure1_slot1;
+                var2 = _closure1_slot2;
+                var1 = 19;
+                var2 = var2[var1];
+                var1 = undefined;
+                var5 = var3.bind(var1)(var2);
+                var4 = var5.preload;
+                var3 = _closure2_slot3;
+                var2 = _closure2_slot2;
+                var2 = var4.bind(var5)(var3, var2);
+                return var1;
+            };
+            var27 = var9.bind(var7)(var6, var8);
+            var8 = var7.useCallback;
+            var6 = new Array(2);
+            var6[0] = var5;
+            var6[1] = var3;
+            var3 = function() {
+                _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+                    var3 = _closure1_slot0;
+                    var2 = _closure1_slot2;
+                    var1 = 20;
+                    var2 = var2[var1];
+                    var1 = undefined;
+                    var5 = var3.bind(var1)(var2);
+                    var4 = var5.transitionToChannel;
+                    var3 = _closure2_slot2;
+                    var6 = _closure2_slot1;
+                    var2 = undefined;
+                    if(!var6) { _fun0004_ip = 17; continue _fun0004 }
+case 18:
+                    var6 = {};
+                    var8 = _closure1_slot1;
+                    var9 = _closure1_slot2;
+                    var7 = 21;
+                    var7 = var9[var7];
+                    var7 = var8.bind(var1)(var7);
+                    var7 = var7.CHANNEL_LIST_SUGGESTED_SECTION;
+                    var6['source'] = var7;
+                    var2 = var6;
+case 17:
+                    var2 = var4.bind(var5)(var3, var2);
+                    return var1;
+                }
+            };
+            var23 = var8.bind(var7)(var3, var6);
+            var6 = var7.useCallback;
+            var3 = new Array(1);
+            var3[0] = var5;
+            var1 = function() {
+                var3 = _closure1_slot0;
+                var2 = _closure1_slot2;
+                var1 = 22;
+                var2 = var2[var1];
+                var1 = undefined;
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.openChannelLongPressActionSheet;
+                var2 = _closure2_slot2;
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            };
+            var9 = var6.bind(var7)(var1, var3);
+            var32 = var12;
+            if(!var32) { _fun0002_ip = 19; continue _fun0002 }
+case 20:
+            var32 = !var19;
+case 19:
+            var22 = _closure1_slot0;
+            var15 = _closure1_slot2;
+            var1 = 23;
+            var1 = var15[var1];
+            var6 = var22.bind(var4)(var1);
+            var3 = var6.getChannelMode;
+            var1 = {};
+            var1['muted'] = var19;
+            var1['selected'] = var20;
+            var1['unread'] = var32;
+            var1['resolvedUnreadSetting'] = var30;
+            var1['mentionCount'] = var10;
+            var7 = false;
+            var1['locked'] = var7;
+            var1['channel'] = var21;
+            var34 = var3.bind(var6)(var1);
+            var1 = 24;
+            var1 = var15[var1];
+            var3 = var22.bind(var4)(var1);
+            var1 = var3.useIsActivitiesInTextEnabled;
+            var16 = var1.bind(var3)(var5);
+            var1 = {};
+            var1['channel'] = var21;
+            var1['isRulesChannel'] = var2;
+            var6 = var1.channel;
+            var1 = var1.isRulesChannel;
+            if(var1) { _fun0002_ip = 21; continue _fun0002 }
+case 22:
+            var3 = _closure1_slot0;
+            var5 = _closure1_slot2;
+            var1 = 14;
+            var2 = var5[var1];
+            var14 = var3.bind(var4)(var2);
+            var8 = var14.getChannelIcon;
+            var2 = {};
+            var2['isRulesChannel'] = var7;
+            var2 = var8.bind(var14)(var6, var2);
+            var1 = var5[var1];
+            var5 = var3.bind(var4)(var1);
+            var3 = var5.getChannelIconComponent;
+            var1 = {};
+            var1['isRulesChannel'] = var7;
+            var5 = var3.bind(var5)(var6, var1);
+            var6 = var2;
+            _fun0002_ip = 23; continue _fun0002;
+case 21:
+            var2 = _closure1_slot1;
+            var7 = _closure1_slot2;
+            var1 = 12;
+            var1 = var7[var1];
+            var6 = var2.bind(var4)(var1);
+            var3 = _closure1_slot0;
+            var1 = 13;
+            var1 = var7[var1];
+            var1 = var3.bind(var4)(var1);
+            var5 = var1.BookCheckIcon;
+case 23:
+            var2 = _closure1_slot0;
+            var1 = _closure1_slot2;
+            var28 = 15;
+            var1 = var1[var28];
+            var3 = var2.bind(var4)(var1);
+            var2 = var3.BaseChannelIcon;
+            var1 = {};
+            var1['mode'] = var34;
+            var1['source'] = var6;
+            var1['IconComponent'] = var5;
+            var14 = var2.bind(var3)(var1);
+            var6 = _closure1_slot1;
+            var1 = 25;
+            var1 = var15[var1];
+            var1 = var6.bind(var4)(var1);
+            var3 = var1.bind(var4)(var21);
+            var7 = _closure1_slot13;
+            var25 = 26;
+            var1 = var15[var25];
+            var1 = var22.bind(var4)(var1);
+            var2 = var1.Text;
+            var1 = {'experimental_useNativeText': true, 'lineClamp': 1};
+            var8 = true;
+            var5 = var24.channelLabelText;
+            var1['style'] = var5;
+            var5 = var15[var28];
+            var26 = var22.bind(var4)(var5);
+            var5 = var26.useChannelNameTextProps;
+            var36 = var5.bind(var26)(var34);
+            var37 = var1;
+            var5 = copyDataProperties(var37, var36);
+            var29 = 'children';
+            var1[28] = var3;
+            var26 = var7.bind(var4)(var2, var1);
+            var3 = _closure1_slot14;
+            var1 = 27;
+            var1 = var15[var1];
+            var2 = var6.bind(var4)(var1);
+            var1 = {};
+            var5 = 28;
+            var5 = var15[var5];
+            var6 = var6.bind(var4)(var5);
+            var5 = {};
+            var5['unread'] = var32;
+            var5['resolvedUnreadSetting'] = var30;
+            var6 = var7.bind(var4)(var6, var5);
+            var5 = new Array(2);
+            var5[0] = var6;
+            var6 = 29;
+            var6 = var15[var6];
+            var6 = var22.bind(var4)(var6);
+            var7 = var6.AnimatedPressableHighlight;
+            var6 = {};
+            var6['onPressIn'] = var27;
+            var6['onPress'] = var23;
+            var6['onLongPress'] = var9;
+            var23 = var24.container;
+            var9 = new Array(2);
+            var9[0] = var23;
+            var15 = var15[var28];
+            var15 = var22.bind(var4)(var15);
+            var15 = var15.ChannelModes;
+            var15 = var15.SELECTED;
+            var15 = var34 === var15;
+            if(!var15) { _fun0002_ip = 24; continue _fun0002 }
+case 25:
+            var15 = var24.selected;
+case 24:
+            var9[1] = var15;
+            var6['style'] = var9;
+            var6['accessible'] = var8;
+            var8 = 'button';
+            var6['accessibilityRole'] = var8;
+            var9 = _closure1_slot1;
+            var15 = _closure1_slot2;
+            var8 = 30;
+            var8 = var15[var8];
+            var9 = var9.bind(var4)(var8);
+            var8 = {};
+            var8['channel'] = var21;
+            var8['unread'] = var12;
+            var8['mentionCount'] = var10;
+            var10 = 0;
+            if(!var16) { _fun0002_ip = 26; continue _fun0002 }
+case 27:
+            var10 = var11;
+case 26:
+            var8['embeddedActivitiesCount'] = var10;
+            var8['isSubscriptionGated'] = var18;
+            var8['needSubscriptionToAccess'] = var17;
+            var8 = var9.bind(var4)(var8);
+            var6['accessibilityLabel'] = var8;
+            var8 = {};
+            var8['selected'] = var20;
+            var6['accessibilityState'] = var8;
+            var9 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var8 = var8[var28];
+            var8 = var9.bind(var4)(var8);
+            var8 = var8.ChannelModes;
+            var8 = var8.SELECTED;
+            var9 = var34 === var8;
+            if(!var9) { _fun0002_ip = 28; continue _fun0002 }
+case 29:
+            var11 = _closure1_slot13;
+            var10 = _closure1_slot4;
+            var8 = {};
+            var12 = var24.selectedBorder;
+            var8['style'] = var12;
+            var9 = var11.bind(var4)(var10, var8);
+case 28:
+            var8 = new Array(2);
+            var8[0] = var9;
+            var11 = _closure1_slot14;
+            var10 = _closure1_slot4;
+            var9 = {};
+            var15 = var24.row;
+            var12 = new Array(2);
+            var12[0] = var15;
+            var15 = null;
+            var22 = var15 != var31;
+            if(!var22) { _fun0002_ip = 30; continue _fun0002 }
+case 31:
+            var22 = var24.rowWithSubtitle;
+case 30:
+            var12[1] = var22;
+            var9['style'] = var12;
+            var12 = new Array(3);
+            var12[0] = var14;
+            var14 = var26;
+            if(!(var15 != var31)) { _fun0002_ip = 32; continue _fun0002 }
+case 33:
+            var23 = _closure1_slot14;
+            var22 = _closure1_slot4;
+            var15 = {};
+            var24 = var24.channelLabel;
+            var15['style'] = var24;
+            var24 = new Array(2);
+            var24[0] = var26;
+            var27 = _closure1_slot13;
+            var30 = _closure1_slot0;
+            var32 = _closure1_slot2;
+            var25 = var32[var25];
+            var25 = var30.bind(var4)(var25);
+            var26 = var25.Text;
+            var25 = {'experimental_useNativeText': true, 'lineClamp': 1};
+            var28 = var32[var28];
+            var33 = var30.bind(var4)(var28);
+            var28 = var33.getChannelSubtitleTextProps;
+            var36 = var28.bind(var33)(var34);
+            var37 = var25;
+            var28 = copyDataProperties(var37, var36);
+            var28 = 31;
+            var28 = var32[var28];
+            var30 = var30.bind(var4)(var28);
+            var28 = var30.getChannelSubtitleData;
+            var28 = var28.bind(var30)(var31);
+            var28 = var28.subtitle;
+            var25[28] = var28;
+            var25 = var27.bind(var4)(var26, var25);
+            var24[1] = var25;
+            var15['children'] = var24;
+            var14 = var23.bind(var4)(var22, var15);
+case 32:
+            var12[1] = var14;
+            var15 = _closure1_slot13;
+            var14 = _closure1_slot1;
+            var22 = _closure1_slot2;
+            var13 = 32;
+            var13 = var22[var13];
+            var14 = var14.bind(var4)(var13);
+            var13 = {};
+            var13['channel'] = var21;
+            var13['isChannelSelected'] = var20;
+            var13['muted'] = var19;
+            var13['isSubscriptionGated'] = var18;
+            var13['needSubscriptionToAccess'] = var17;
+            var13['enableActivities'] = var16;
+            var13 = var15.bind(var4)(var14, var13);
+            var12[2] = var13;
+            var9['children'] = var12;
+            var9 = var11.bind(var4)(var10, var9);
+            var8[1] = var9;
+            var6['children'] = var8;
+            var6 = var3.bind(var4)(var7, var6);
+            var5[1] = var6;
+            var1['children'] = var5;
+            var1 = var3.bind(var4)(var2, var1);
+            return var1;
+        }
+    };
+    var2 = var4.bind(var7)(var2);
+    var4 = 33;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/channel_list_v2/native/items/TextChannel.tsx';
+    var4 = var5.bind(var6)(var4);
+    var3['default'] = var2;
+    return var1;
+})();

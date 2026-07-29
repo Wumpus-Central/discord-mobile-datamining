@@ -1,0 +1,38 @@
+// app/design/animation/reanimated/ReanimatedConstants.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var6 = require;
+    var3 = exports;
+    var7 = dependencyMap;
+    var1 = global;
+    var5 = var1.Object;
+    var4 = var5.defineProperty;
+    var2 = {};
+    var1 = true;
+    var2['value'] = var1;
+    var1 = '__esModule';
+    var1 = var4.bind(var5)(var3, var1, var2);
+    var4 = {};
+    var5 = 1;
+    var4['duration'] = var5;
+    var1 = 0;
+    var2 = var7[var1];
+    var1 = undefined;
+    var2 = var6.bind(var1)(var2);
+    var2 = var2.ReduceMotion;
+    var2 = var2.Always;
+    var4['reduceMotion'] = var2;
+    var2 = {};
+    var11 = var2;
+    var10 = var4;
+    var8 = copyDataProperties(var11, var10);
+    var8 = 'reduceMotion';
+    var2[7] = var1;
+    var5 = var7[var5];
+    var7 = var6.bind(var1)(var5);
+    var6 = var7.fileFinishedImporting;
+    var5 = 'design/animation/reanimated/ReanimatedConstants.tsx';
+    var5 = var6.bind(var7)(var5);
+    var3['CONFIG_NEVER_ANIMATE'] = var4;
+    var3['CONFIG_NEVER_ANIMATE_TIMING'] = var2;
+    return var1;
+})();

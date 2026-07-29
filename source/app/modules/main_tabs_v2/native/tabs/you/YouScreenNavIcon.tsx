@@ -1,0 +1,471 @@
+// app/modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+        var5 = require;
+        var12 = metroImportDefault;
+        var3 = exports;
+        var6 = dependencyMap;
+        var _closure1_slot0 = var5;
+        var _closure1_slot1 = var12;
+        var _closure1_slot2 = var6;
+        var1 = global;
+        var8 = var1.Object;
+        var7 = var8.defineProperty;
+        var4 = {};
+        var1 = true;
+        var4['value'] = var1;
+        var1 = '__esModule';
+        var1 = var7.bind(var8)(var3, var1, var4);
+        var13 = 0;
+        var7 = var6[var13];
+        var4 = metroImportAll;
+        var1 = undefined;
+        var7 = var4.bind(var1)(var7);
+        var4 = 1;
+        var4 = var6[var4];
+        var4 = var5.bind(var1)(var4);
+        var4 = var4.View;
+        var _closure1_slot3 = var4;
+        var9 = 2;
+        var4 = var6[var9];
+        var4 = var5.bind(var1)(var4);
+        var8 = var4.jsx;
+        var _closure1_slot4 = var8;
+        var8 = var4.jsxs;
+        var _closure1_slot5 = var8;
+        var4 = var4.Fragment;
+        var _closure1_slot6 = var4;
+        var15 = 3;
+        var4 = var6[var15];
+        var8 = var5.bind(var1)(var4);
+        var4 = var8.isYouNavFloating;
+        var10 = var4.bind(var8)();
+        var8 = 4;
+        var4 = var6[var8];
+        var4 = var5.bind(var1)(var4);
+        var4 = var4.ICON_SIZE;
+        if(var10) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+        var10 = var4.sm;
+        _fun0001_ip = 4; continue _fun0001;
+case 2:
+        var10 = var4.md;
+case 4:
+        var4 = var6[var15];
+        var11 = var5.bind(var1)(var4);
+        var4 = var11.isYouNavFloating;
+        var11 = var4.bind(var11)();
+        var4 = 'sm';
+        if(!var11) { _fun0001_ip = 5; continue _fun0001 }
+case 6:
+        var4 = 'md';
+case 5:
+        var _closure1_slot7 = var4;
+        var11 = 5;
+        var4 = var6[var11];
+        var4 = var12.bind(var1)(var4);
+        var4 = var4.space;
+        var4 = var4.PX_32;
+        var4 = var4 - var10;
+        var16 = var4 / var9;
+        var4 = var6[var15];
+        var14 = var5.bind(var1)(var4);
+        var4 = var14.isYouNavFloating;
+        var4 = var4.bind(var14)();
+        var14 = var6[var11];
+        var14 = var12.bind(var1)(var14);
+        var14 = var14.colors;
+        if(var4) { _fun0001_ip = 7; continue _fun0001 }
+case 8:
+        var4 = var14.WHITE;
+        _fun0001_ip = 9; continue _fun0001;
+case 7:
+        var4 = var14.TEXT_DEFAULT;
+case 9:
+        var _closure1_slot8 = var4;
+        var4 = var6[var15];
+        var14 = var5.bind(var1)(var4);
+        var4 = var14.isYouNavFloating;
+        var14 = var4.bind(var14)();
+        var4 = 'text-overlay-light';
+        if(!var14) { _fun0001_ip = 10; continue _fun0001 }
+case 11:
+        var4 = 'text-default';
+case 10:
+        var _closure1_slot9 = var4;
+        var4 = var6[var15];
+        var14 = var5.bind(var1)(var4);
+        var4 = var14.isYouNavFloating;
+        var4 = var4.bind(var14)();
+        var17 = 6;
+        var14 = var17;
+        if(!var4) { _fun0001_ip = 12; continue _fun0001 }
+case 13:
+        var14 = 8;
+case 12:
+        var4 = var6[var15];
+        var18 = var5.bind(var1)(var4);
+        var4 = var18.isYouNavFloating;
+        var18 = var4.bind(var18)();
+        var4 = var9;
+        if(!var18) { _fun0001_ip = 14; continue _fun0001 }
+case 15:
+        var4 = var8;
+case 14:
+        var8 = {};
+        var17 = var6[var17];
+        var17 = var5.bind(var1)(var17);
+        var17 = var17.CutoutShape;
+        var17 = var17.Circle;
+        var8['shape'] = var17;
+        var10 = var10 - var14;
+        var10 = var10 - var4;
+        var8['x'] = var10;
+        var10 = -var4;
+        var8['y'] = var10;
+        var4 = var9 * var4;
+        var4 = var14 + var4;
+        var8['size'] = var4;
+        var4 = new Array(1);
+        var4[0] = var8;
+        var _closure1_slot10 = var4;
+        var4 = 7;
+        var4 = var6[var4];
+        var9 = var5.bind(var1)(var4);
+        var8 = var9.createStyles;
+        var4 = {};
+        var10 = {};
+        var17 = var6[var15];
+        var18 = var5.bind(var1)(var17);
+        var17 = var18.isYouNavFloating;
+        var18 = var17.bind(var18)();
+        var17 = undefined;
+        if(var18) { _fun0001_ip = 16; continue _fun0001 }
+case 17:
+        var18 = var6[var11];
+        var18 = var12.bind(var1)(var18);
+        var18 = var18.colors;
+        var17 = var18.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+case 16:
+        var10['backgroundColor'] = var17;
+        var17 = var6[var11];
+        var17 = var12.bind(var1)(var17);
+        var17 = var17.modules;
+        var17 = var17.button;
+        var17 = var17.BORDER_RADIUS;
+        var10['borderRadius'] = var17;
+        var17 = var6[var11];
+        var17 = var12.bind(var1)(var17);
+        var17 = var17.space;
+        var17 = var17.PX_4;
+        var10['marginHorizontal'] = var17;
+        var17 = var6[var15];
+        var18 = var5.bind(var1)(var17);
+        var17 = var18.isYouNavFloating;
+        var18 = var17.bind(var18)();
+        var17 = 'row';
+        if(!var18) { _fun0001_ip = 18; continue _fun0001 }
+case 19:
+        var17 = 'column';
+case 18:
+        var10['flexDirection'] = var17;
+        var17 = 'center';
+        var10['alignItems'] = var17;
+        var10['padding'] = var16;
+        var16 = var6[var15];
+        var17 = var5.bind(var1)(var16);
+        var16 = var17.isYouNavFloating;
+        var17 = var16.bind(var17)();
+        var16 = 'hidden';
+        if(!var17) { _fun0001_ip = 20; continue _fun0001 }
+case 21:
+        var16 = undefined;
+case 20:
+        var10['overflow'] = var16;
+        var4['container'] = var10;
+        var10 = {};
+        var16 = var6[var15];
+        var17 = var5.bind(var1)(var16);
+        var16 = var17.isYouNavFloating;
+        var17 = var16.bind(var17)();
+        var16 = undefined;
+        if(var17) { _fun0001_ip = 22; continue _fun0001 }
+case 23:
+        var17 = var6[var11];
+        var17 = var12.bind(var1)(var17);
+        var17 = var17.space;
+        var16 = var17.PX_4;
+case 22:
+        var10['marginLeft'] = var16;
+        var15 = var6[var15];
+        var16 = var5.bind(var1)(var15);
+        var15 = var16.isYouNavFloating;
+        var16 = var15.bind(var16)();
+        var15 = undefined;
+        if(!var16) { _fun0001_ip = 24; continue _fun0001 }
+case 25:
+        var16 = var6[var11];
+        var16 = var12.bind(var1)(var16);
+        var16 = var16.space;
+        var15 = var16.PX_4;
+case 24:
+        var10['marginTop'] = var15;
+        var4['label'] = var10;
+        var10 = {};
+        var15 = var6[var11];
+        var15 = var12.bind(var1)(var15);
+        var15 = var15.colors;
+        var15 = var15.BACKGROUND_FEEDBACK_NOTIFICATION;
+        var10['backgroundColor'] = var15;
+        var15 = var6[var11];
+        var15 = var12.bind(var1)(var15);
+        var15 = var15.radii;
+        var15 = var15.round;
+        var10['borderRadius'] = var15;
+        var10['height'] = var14;
+        var10['width'] = var14;
+        var14 = 'absolute';
+        var10['position'] = var14;
+        var10['right'] = var13;
+        var10['top'] = var13;
+        var4['dot'] = var10;
+        var10 = {'backgroundColor': null, 'transform': null, 'position': 'absolute', 'height': '200%', 'opacity': 0.15};
+        var13 = var6[var11];
+        var13 = var12.bind(var1)(var13);
+        var13 = var13.colors;
+        var13 = var13.WHITE;
+        var10['backgroundColor'] = var13;
+        var14 = {};
+        var13 = '30deg';
+        var14['rotate'] = var13;
+        var13 = new Array(1);
+        var13[0] = var14;
+        var10['transform'] = var13;
+        var4['nitroSlant'] = var10;
+        var10 = {};
+        var13 = var6[var11];
+        var13 = var12.bind(var1)(var13);
+        var13 = var13.space;
+        var13 = var13.PX_12;
+        var10['width'] = var13;
+        var13 = '75%';
+        var10['left'] = var13;
+        var4['nitroSlantLarge'] = var10;
+        var10 = {};
+        var11 = var6[var11];
+        var11 = var12.bind(var1)(var11);
+        var11 = var11.space;
+        var11 = var11.PX_8;
+        var10['width'] = var11;
+        var11 = '45%';
+        var10['left'] = var11;
+        var4['nitroSlantSmall'] = var10;
+        var4 = var8.bind(var9)(var4);
+        var _closure1_slot11 = var4;
+        var4 = var7.forwardRef;
+        var2 = function(arg1, arg2) {
+            _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                var1 = arg1;
+                var5 = var1.onPress;
+                var6 = var1.IconComponent;
+                var10 = var1.accessibilityLabel;
+                var11 = var1.label;
+                var7 = var1.showNitroSlant;
+                var4 = undefined;
+                if(!(var7 === var4)) { _fun0002_ip = 26; continue _fun0002 }
+case 27:
+                var7 = false;
+case 26:
+                var1 = var1.showRedDot;
+                if(!(var1 === var4)) { _fun0002_ip = 28; continue _fun0002 }
+case 29:
+                var1 = false;
+case 28:
+                var2 = _closure1_slot11;
+                var14 = var2.bind(var4)();
+                var3 = _closure1_slot4;
+                var2 = {};
+                var8 = _closure1_slot7;
+                var2['size'] = var8;
+                var8 = _closure1_slot8;
+                var2['color'] = var8;
+                var16 = var3.bind(var4)(var6, var2);
+                var6 = var16;
+                if(!var1) { _fun0002_ip = 30; continue _fun0002 }
+case 31:
+                var8 = _closure1_slot5;
+                var3 = _closure1_slot3;
+                var2 = {};
+                var15 = _closure1_slot4;
+                var12 = _closure1_slot1;
+                var17 = _closure1_slot2;
+                var9 = 6;
+                var9 = var17[var9];
+                var12 = var12.bind(var4)(var9);
+                var9 = {};
+                var17 = _closure1_slot10;
+                var9['cutouts'] = var17;
+                var9['children'] = var16;
+                var12 = var15.bind(var4)(var12, var9);
+                var9 = new Array(2);
+                var9[0] = var12;
+                var12 = {};
+                var16 = var14.dot;
+                var12['style'] = var16;
+                var12 = var15.bind(var4)(var3, var12);
+                var9[1] = var12;
+                var2['children'] = var9;
+                var6 = var8.bind(var4)(var3, var2);
+case 30:
+                var8 = undefined;
+                if(!var1) { _fun0002_ip = 32; continue _fun0002 }
+case 33:
+                var1 = {};
+                var12 = _closure1_slot0;
+                var15 = _closure1_slot2;
+                var2 = 8;
+                var3 = var15[var2];
+                var3 = var12.bind(var4)(var3);
+                var9 = var3.intl;
+                var3 = var9.string;
+                var2 = var15[var2];
+                var2 = var12.bind(var4)(var2);
+                var2 = var2.t;
+                var2 = var2.y2b7CA;
+                var2 = var3.bind(var9)(var2);
+                var1['text'] = var2;
+                var8 = var1;
+case 32:
+                var3 = _closure1_slot5;
+                var2 = _closure1_slot0;
+                var9 = _closure1_slot2;
+                var1 = 9;
+                var1 = var9[var1];
+                var1 = var2.bind(var4)(var1);
+                var2 = var1.PressableScale;
+                var1 = {};
+                var12 = arg2;
+                var1['ref'] = var12;
+                var12 = var14.container;
+                var1['style'] = var12;
+                var12 = 'button';
+                var1['accessibilityRole'] = var12;
+                var1['accessibilityLabel'] = var10;
+                var1['accessibilityValue'] = var8;
+                var1['onPress'] = var5;
+                var8 = _closure1_slot1;
+                var5 = 5;
+                var5 = var9[var5];
+                var5 = var8.bind(var4)(var5);
+                var5 = var5.space;
+                var5 = var5.PX_8;
+                var1['hitSlop'] = var5;
+                if(!var7) { _fun0002_ip = 34; continue _fun0002 }
+case 35:
+                var8 = _closure1_slot0;
+                var9 = _closure1_slot2;
+                var5 = 3;
+                var5 = var9[var5];
+                var8 = var8.bind(var4)(var5);
+                var5 = var8.isYouNavFloating;
+                var5 = var5.bind(var8)();
+                var7 = !var5;
+case 34:
+                if(!var7) { _fun0002_ip = 36; continue _fun0002 }
+case 37:
+                var9 = _closure1_slot5;
+                var8 = _closure1_slot6;
+                var5 = {};
+                var17 = _closure1_slot4;
+                var16 = _closure1_slot3;
+                var12 = {};
+                var18 = var14.nitroSlant;
+                var15 = new Array(2);
+                var15[0] = var18;
+                var18 = var14.nitroSlantSmall;
+                var15[1] = var18;
+                var12['style'] = var15;
+                var15 = var17.bind(var4)(var16, var12);
+                var12 = new Array(2);
+                var12[0] = var15;
+                var15 = {};
+                var19 = var14.nitroSlant;
+                var18 = new Array(2);
+                var18[0] = var19;
+                var19 = var14.nitroSlantLarge;
+                var18[1] = var19;
+                var15['style'] = var18;
+                var15 = var17.bind(var4)(var16, var15);
+                var12[1] = var15;
+                var5['children'] = var12;
+                var7 = var9.bind(var4)(var8, var5);
+case 36:
+                var5 = new Array(3);
+                var5[0] = var7;
+                var5[1] = var6;
+                var12 = null;
+                if(!(var12 == var11)) { _fun0002_ip = 38; continue _fun0002 }
+case 39:
+                var7 = _closure1_slot0;
+                var8 = _closure1_slot2;
+                var6 = 3;
+                var6 = var8[var6];
+                var7 = var7.bind(var4)(var6);
+                var6 = var7.isYouNavFloating;
+                var7 = var6.bind(var7)();
+                var6 = null;
+                if(!var7) { _fun0002_ip = 21; continue _fun0002 }
+case 38:
+                var9 = _closure1_slot4;
+                var15 = _closure1_slot0;
+                var16 = _closure1_slot2;
+                var7 = 10;
+                var7 = var16[var7];
+                var7 = var15.bind(var4)(var7);
+                var8 = var7.Text;
+                var7 = {};
+                var14 = var14.label;
+                var7['style'] = var14;
+                var14 = 3;
+                var14 = var16[var14];
+                var15 = var15.bind(var4)(var14);
+                var14 = var15.isYouNavFloating;
+                var15 = var14.bind(var15)();
+                var14 = 'text-sm/semibold';
+                if(!var15) { _fun0002_ip = 40; continue _fun0002 }
+case 41:
+                var14 = 'text-xs/semibold';
+case 40:
+                var7['variant'] = var14;
+                var13 = _closure1_slot9;
+                var7['color'] = var13;
+                var13 = 2;
+                var7['maxFontSizeMultiplier'] = var13;
+                if(!(var12 != var11)) { _fun0002_ip = 42; continue _fun0002 }
+case 43:
+                var10 = var11;
+case 42:
+                var7['children'] = var10;
+                var6 = var9.bind(var4)(var8, var7);
+case 21:
+                var5[2] = var6;
+                var1['children'] = var5;
+                var1 = var3.bind(var4)(var2, var1);
+                return var1;
+            }
+        };
+        var4 = var4.bind(var7)(var2);
+        var2 = var7.memo;
+        var2 = var2.bind(var7)(var4);
+        var4 = 11;
+        var4 = var6[var4];
+        var6 = var5.bind(var1)(var4);
+        var5 = var6.fileFinishedImporting;
+        var4 = 'modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx';
+        var4 = var5.bind(var6)(var4);
+        var3['default'] = var2;
+        return var1;
+    }
+})();

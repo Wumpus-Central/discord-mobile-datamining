@@ -1,0 +1,1208 @@
+// app/modules/voice_calls/native/CallsUtils.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+        var7 = require;
+        var9 = metroImportDefault;
+        var5 = metroImportAll;
+        var3 = exports;
+        var8 = dependencyMap;
+        var _closure1_slot0 = var7;
+        var _closure1_slot1 = var9;
+        var _closure1_slot2 = var5;
+        var _closure1_slot3 = var8;
+        var1 = function _handleToggleVideo() {
+            var5 = undefined;
+            var1 = undefined;
+            var4 = _closure1_slot5;
+            var3 = function* (arg1) {
+                var1 = function* anon_0_(arg1) {
+                    _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                        StartGenerator();
+                        var4 = arguments[1];
+                        ResumeGenerator(result_out_reg=0, return_bool_out_reg=1);
+                        if(var2) { _fun0002_ip = 2; continue _fun0002 }
+case 3:
+                        var3 = undefined;
+                        if(!(var4 === var3)) { _fun0002_ip = 4; continue _fun0002 }
+case 5:
+                        var4 = true;
+case 4:
+                        SaveGenerator(address=25);
+case 6:
+                        return var3;
+case 7:
+                        ResumeGenerator(result_out_reg=1, return_bool_out_reg=4);
+                        if(var5) { _fun0002_ip = 8; continue _fun0002 }
+case 9:
+                        var6 = _closure1_slot10;
+                        var5 = var6.isVideoEnabled;
+                        var5 = var5.bind(var6)();
+                        var8 = _closure1_slot0;
+                        var9 = _closure1_slot3;
+                        var6 = 12;
+                        var6 = var9[var6];
+                        var9 = var8.bind(var3)(var6);
+                        var8 = var9.getChannelVideoLimit;
+                        var6 = arg1;
+                        var8 = var8.bind(var9)(var6);
+                        var6 = var8.reachedLimit;
+                        var12 = var8.limit;
+                        if(var6) { _fun0002_ip = 10; continue _fun0002 }
+case 11:
+                        var6 = _closure1_slot1;
+                        var8 = _closure1_slot3;
+                        if(var5) { _fun0002_ip = 12; continue _fun0002 }
+case 13:
+                        var5 = 15;
+                        var5 = var8[var5];
+                        var10 = var6.bind(var3)(var5);
+                        var9 = var10.requestPermission;
+                        var5 = _closure1_slot15;
+                        var5 = var5.CAMERA;
+                        var5 = var9.bind(var10)(var5);
+                        SaveGenerator(address=150);
+case 14:
+                        return var5;
+case 15:
+                        ResumeGenerator(result_out_reg=4, return_bool_out_reg=8);
+                        if(var9) { _fun0002_ip = 16; continue _fun0002 }
+case 17:
+                        if(!var5) { _fun0002_ip = 18; continue _fun0002 }
+case 19:
+                        var10 = _closure1_slot1;
+                        var11 = _closure1_slot3;
+                        var9 = 16;
+                        var9 = var11[var9];
+                        var11 = var10.bind(var3)(var9);
+                        var10 = var11.setVideoEnabled;
+                        var9 = true;
+                        var9 = var10.bind(var11)(var9);
+                        _fun0002_ip = 18; continue _fun0002;
+case 16:
+                        return var5;
+case 12:
+                        var5 = 16;
+                        var5 = var8[var5];
+                        var8 = var6.bind(var3)(var5);
+                        var6 = var8.setVideoEnabled;
+                        var5 = false;
+                        var5 = var6.bind(var8)(var5);
+                        _fun0002_ip = 18; continue _fun0002;
+case 10:
+                        if(!var4) { _fun0002_ip = 18; continue _fun0002 }
+case 20:
+                        var5 = _closure1_slot1;
+                        var11 = _closure1_slot3;
+                        var4 = 13;
+                        var4 = var11[var4];
+                        var6 = var5.bind(var3)(var4);
+                        var5 = var6.show;
+                        var4 = {};
+                        var8 = _closure1_slot0;
+                        var7 = 14;
+                        var9 = var11[var7];
+                        var9 = var8.bind(var3)(var9);
+                        var13 = var9.intl;
+                        var10 = var13.string;
+                        var9 = var11[var7];
+                        var9 = var8.bind(var3)(var9);
+                        var9 = var9.t;
+                        var9 = var9["3ffmE+"];
+                        var9 = var10.bind(var13)(var9);
+                        var4['title'] = var9;
+                        var9 = var11[var7];
+                        var9 = var8.bind(var3)(var9);
+                        var10 = var9.intl;
+                        var9 = var10.formatToPlainString;
+                        var7 = var11[var7];
+                        var7 = var8.bind(var3)(var7);
+                        var7 = var7.t;
+                        var8 = var7.x9mtl4;
+                        var7 = {};
+                        var11 = var12.toString;
+                        var11 = var11.bind(var12)();
+                        var7['limit'] = var11;
+                        var7 = var9.bind(var10)(var8, var7);
+                        var4['body'] = var7;
+                        var4 = var5.bind(var6)(var4);
+case 18:
+                        return var3;
+case 8:
+                        return var2;
+case 2:
+                        return var1;
+                    }
+                };
+                var2 = var1.next;
+                var2 = var2.bind(var1)();
+                return var1;
+            };
+            var4 = var4.bind(var5)(var3);
+            _closure1_slot20 = var4;
+            var3 = var4.apply;
+            var1 = arguments;
+            var2 = var1;
+            var1 = this;
+            var1 = var3.bind(var4)(var1, var2);
+            return var1;
+        };
+        var _closure1_slot20 = var1;
+        var1 = global;
+        var10 = var1.Object;
+        var6 = var10.defineProperty;
+        var4 = {};
+        var1 = true;
+        var4['value'] = var1;
+        var1 = '__esModule';
+        var1 = var6.bind(var10)(var3, var1, var4);
+        var24 = 0;
+        var4 = var8[var24];
+        var1 = undefined;
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot4 = var4;
+        var23 = 1;
+        var4 = var8[var23];
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot5 = var4;
+        var22 = 2;
+        var4 = var8[var22];
+        var4 = var5.bind(var1)(var4);
+        var _closure1_slot6 = var4;
+        var21 = 3;
+        var4 = var8[var21];
+        var4 = var7.bind(var1)(var4);
+        var4 = var4.NativeModules;
+        var _closure1_slot7 = var4;
+        var20 = 4;
+        var4 = var8[var20];
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot8 = var4;
+        var19 = 5;
+        var4 = var8[var19];
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot9 = var4;
+        var18 = 6;
+        var4 = var8[var18];
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot10 = var4;
+        var17 = 7;
+        var4 = var8[var17];
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot11 = var4;
+        var16 = 8;
+        var4 = var8[var16];
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot12 = var4;
+        var15 = 9;
+        var4 = var8[var15];
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot13 = var4;
+        var14 = 10;
+        var4 = var8[var14];
+        var4 = var9.bind(var1)(var4);
+        var _closure1_slot14 = var4;
+        var13 = 11;
+        var4 = var8[var13];
+        var4 = var7.bind(var1)(var4);
+        var4 = var4.NativePermissionTypes;
+        var _closure1_slot15 = var4;
+        var12 = 21;
+        var4 = var8[var12];
+        var10 = var9.bind(var1)(var4);
+        var6 = var10.debounce;
+        var5 = function(arg1) {
+            _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                var1 = _closure1_slot7;
+                var3 = var1.AudioRoutePicker;
+                var1 = null;
+                if(!(var1 != var3)) { _fun0003_ip = 21; continue _fun0003 }
+case 5:
+                var2 = var3.handleAudioRoute;
+                var1 = arg1;
+                var1 = var2.bind(var3)(var1);
+case 21:
+                var1 = undefined;
+                return var1;
+            }
+        };
+        var4 = 250;
+        var4 = var6.bind(var10)(var5, var4);
+        var _closure1_slot16 = var4;
+        var4 = var8[var12];
+        var6 = var9.bind(var1)(var4);
+        var5 = var6.debounce;
+        var4 = function(arg1) {
+            var2 = arg1;
+            var1 = undefined;
+            var2 = var2.bind(var1)();
+            return var1;
+        };
+        var4 = var5.bind(var6)(var4, var23);
+        var _closure1_slot17 = var4;
+        var5 = {};
+        var11 = 22;
+        var4 = var8[var11];
+        var4 = var9.bind(var1)(var4);
+        var5['EARPIECE'] = var4;
+        var10 = 23;
+        var4 = var8[var10];
+        var4 = var9.bind(var1)(var4);
+        var5['BLUETOOTH_HEADSET'] = var4;
+        var6 = 24;
+        var4 = var8[var6];
+        var4 = var9.bind(var1)(var4);
+        var5['WIRED_HEADSET'] = var4;
+        var4 = var8[var6];
+        var4 = var9.bind(var1)(var4);
+        var5['SPEAKERPHONE'] = var4;
+        var4 = var8[var6];
+        var4 = var9.bind(var1)(var4);
+        var5['INVALID'] = var4;
+        var _closure1_slot18 = var5;
+        var9 = {};
+        var9['TYPE_UNKNOWN'] = var24;
+        var4 = 'TYPE_UNKNOWN';
+        var9[var24] = var4;
+        var9['TYPE_BUILTIN_EARPIECE'] = var23;
+        var4 = 'TYPE_BUILTIN_EARPIECE';
+        var9[var23] = var4;
+        var9['TYPE_BUILTIN_SPEAKER'] = var22;
+        var4 = 'TYPE_BUILTIN_SPEAKER';
+        var9[var22] = var4;
+        var9['TYPE_WIRED_HEADSET'] = var21;
+        var4 = 'TYPE_WIRED_HEADSET';
+        var9[var21] = var4;
+        var9['TYPE_WIRED_HEADPHONES'] = var20;
+        var4 = 'TYPE_WIRED_HEADPHONES';
+        var9[var20] = var4;
+        var9['TYPE_LINE_ANALOG'] = var19;
+        var4 = 'TYPE_LINE_ANALOG';
+        var9[var19] = var4;
+        var9['TYPE_LINE_DIGITAL'] = var18;
+        var4 = 'TYPE_LINE_DIGITAL';
+        var9[var18] = var4;
+        var9['TYPE_BLUETOOTH_SCO'] = var17;
+        var4 = 'TYPE_BLUETOOTH_SCO';
+        var9[var17] = var4;
+        var9['TYPE_BLUETOOTH_A2DP'] = var16;
+        var4 = 'TYPE_BLUETOOTH_A2DP';
+        var9[var16] = var4;
+        var9['TYPE_HDMI'] = var15;
+        var4 = 'TYPE_HDMI';
+        var9[var15] = var4;
+        var9['TYPE_HDMI_ARC'] = var14;
+        var4 = 'TYPE_HDMI_ARC';
+        var9[var14] = var4;
+        var9['TYPE_USB_DEVICE'] = var13;
+        var4 = 'TYPE_USB_DEVICE';
+        var9[var13] = var4;
+        var13 = 12;
+        var9['TYPE_USB_ACCESSORY'] = var13;
+        var4 = 'TYPE_USB_ACCESSORY';
+        var9[var13] = var4;
+        var13 = 13;
+        var9['TYPE_DOCK'] = var13;
+        var4 = 'TYPE_DOCK';
+        var9[var13] = var4;
+        var13 = 14;
+        var9['TYPE_FM'] = var13;
+        var4 = 'TYPE_FM';
+        var9[var13] = var4;
+        var13 = 15;
+        var9['TYPE_BUILTIN_MIC'] = var13;
+        var4 = 'TYPE_BUILTIN_MIC';
+        var9[var13] = var4;
+        var13 = 16;
+        var9['TYPE_FM_TUNER'] = var13;
+        var4 = 'TYPE_FM_TUNER';
+        var9[var13] = var4;
+        var13 = 17;
+        var9['TYPE_TV_TUNER'] = var13;
+        var4 = 'TYPE_TV_TUNER';
+        var9[var13] = var4;
+        var13 = 18;
+        var9['TYPE_TELEPHONY'] = var13;
+        var4 = 'TYPE_TELEPHONY';
+        var9[var13] = var4;
+        var13 = 19;
+        var9['TYPE_AUX_LINE'] = var13;
+        var4 = 'TYPE_AUX_LINE';
+        var9[var13] = var4;
+        var13 = 20;
+        var9['TYPE_IP'] = var13;
+        var4 = 'TYPE_IP';
+        var9[var13] = var4;
+        var9['TYPE_BUS'] = var12;
+        var4 = 'TYPE_BUS';
+        var9[var12] = var4;
+        var9['TYPE_USB_HEADSET'] = var11;
+        var4 = 'TYPE_USB_HEADSET';
+        var9[var11] = var4;
+        var9['TYPE_HEARING_AID'] = var10;
+        var4 = 'TYPE_HEARING_AID';
+        var9[var10] = var4;
+        var9['TYPE_BUILTIN_SPEAKER_SAFE'] = var6;
+        var4 = 'TYPE_BUILTIN_SPEAKER_SAFE';
+        var9[var6] = var4;
+        var4 = 25;
+        var9['TYPE_REMOTE_SUBMIX'] = var4;
+        var6 = 'TYPE_REMOTE_SUBMIX';
+        var9[var4] = var6;
+        var10 = 26;
+        var9['TYPE_BLE_HEADSET'] = var10;
+        var6 = 'TYPE_BLE_HEADSET';
+        var9[var10] = var6;
+        var10 = 27;
+        var9['TYPE_BLE_SPEAKER'] = var10;
+        var6 = 'TYPE_BLE_SPEAKER';
+        var9[var10] = var6;
+        var10 = 28;
+        var9['TYPE_ECHO_REFERENCE'] = var10;
+        var6 = 'TYPE_ECHO_REFERENCE';
+        var9[var10] = var6;
+        var10 = 29;
+        var9['TYPE_HDMI_EARC'] = var10;
+        var6 = 'TYPE_HDMI_EARC';
+        var9[var10] = var6;
+        var10 = 30;
+        var9['TYPE_BLE_BROADCAST'] = var10;
+        var6 = 'TYPE_BLE_BROADCAST';
+        var9[var10] = var6;
+        var6 = 31;
+        var9['TYPE_DOCK_ANALOG'] = var6;
+        var10 = 'TYPE_DOCK_ANALOG';
+        var9[var6] = var10;
+        var _closure1_slot19 = var9;
+        var4 = var8[var4];
+        var9 = var7.bind(var1)(var4);
+        var4 = var9.isAndroid;
+        var4 = var4.bind(var9)();
+        if(var4) { _fun0001_ip = 22; continue _fun0001 }
+case 23:
+        var4 = function() {
+            _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+                var3 = _closure1_slot0;
+                var4 = _closure1_slot3;
+                var1 = 26;
+                var1 = var4[var1];
+                var5 = undefined;
+                var7 = var3.bind(var5)(var1);
+                var4 = var7.useStateFromStoresObject;
+                var1 = _closure1_slot9;
+                var3 = new Array(6);
+                var3[0] = var1;
+                var1 = _closure1_slot11;
+                var3[1] = var1;
+                var1 = _closure1_slot8;
+                var3[2] = var1;
+                var1 = _closure1_slot12;
+                var3[3] = var1;
+                var1 = _closure1_slot10;
+                var3[4] = var1;
+                var1 = _closure1_slot13;
+                var3[5] = var1;
+                var1 = function() {
+                    _fun0005: for(var _fun0005_ip = 0; ; ) switch(_fun0005_ip) {
+case 0:
+                        var6 = _closure1_slot0;
+                        var7 = _closure1_slot3;
+                        var2 = 29;
+                        var2 = var7[var2];
+                        var5 = undefined;
+                        var11 = var6.bind(var5)(var2);
+                        var10 = var11.isVideoMode;
+                        var16 = _closure1_slot9;
+                        var15 = _closure1_slot11;
+                        var14 = _closure1_slot8;
+                        var13 = _closure1_slot12;
+                        var12 = _closure1_slot10;
+                        var17 = var11;
+                        var3 = var17[var10](var16, var15, var14, var13, var12, var11);
+                        var2 = _closure1_slot13;
+                        var1 = var2.getCurrentRouteType;
+                        var2 = var1.bind(var2)();
+                        var1 = 30;
+                        var4 = var7[var1];
+                        var4 = var6.bind(var5)(var4);
+                        var4 = var4.RouteTypes;
+                        var4 = var4.SPEAKER;
+                        var4 = var2 === var4;
+                        var1 = var7[var1];
+                        var1 = var6.bind(var5)(var1);
+                        var1 = var1.RouteTypes;
+                        var1 = var1.BLUETOOTH;
+                        var2 = var2 === var1;
+                        var1 = {};
+                        if(var4) { _fun0005_ip = 24; continue _fun0005 }
+case 25:
+                        var4 = var2;
+case 24:
+                        if(var4) { _fun0005_ip = 26; continue _fun0005 }
+case 27:
+                        var4 = var3;
+case 26:
+                        var1['isEnabled'] = var4;
+                        var1['isVideoMode'] = var3;
+                        var1['isBluetoothRoute'] = var2;
+                        return var1;
+                    }
+                };
+                var1 = var4.bind(var7)(var3, var1);
+                var11 = var1.isEnabled;
+                var _closure2_slot0 = var11;
+                var10 = var1.isVideoMode;
+                var _closure2_slot1 = var10;
+                var1 = var1.isBluetoothRoute;
+                var9 = _closure1_slot6;
+                var3 = var9.useState;
+                var7 = var3.bind(var9)(var11);
+                var4 = _closure1_slot4;
+                var3 = 2;
+                var7 = var4.bind(var5)(var7, var3);
+                var3 = 0;
+                var4 = var7[var3];
+                var _closure2_slot2 = var4;
+                var3 = 1;
+                var3 = var7[var3];
+                var _closure2_slot3 = var3;
+                var8 = var9.useCallback;
+                var7 = new Array(2);
+                var7[0] = var4;
+                var7[1] = var10;
+                var3 = function() {
+                    _fun0006: for(var _fun0006_ip = 0; ; ) switch(_fun0006_ip) {
+case 0:
+                        var3 = _closure1_slot13;
+                        var2 = var3.getMultipleRoutesAvailable;
+                        var2 = var2.bind(var3)();
+                        if(var2) { _fun0006_ip = 28; continue _fun0006 }
+case 29:
+                        var3 = _closure1_slot17;
+                        var2 = var3.cancel;
+                        var2 = var2.bind(var3)();
+                        var3 = _closure2_slot1;
+                        if(var3) { _fun0006_ip = 28; continue _fun0006 }
+case 30:
+                        var4 = _closure2_slot3;
+                        var2 = _closure2_slot2;
+                        var3 = !var2;
+                        var2 = undefined;
+                        var2 = var4.bind(var2)(var3);
+case 28:
+                        var3 = _closure1_slot16;
+                        var1 = _closure2_slot2;
+                        var2 = !var1;
+                        var1 = undefined;
+                        var2 = var3.bind(var1)(var2);
+                        return var1;
+                    }
+                };
+                var3 = var8.bind(var9)(var3, var7);
+                var8 = var9.useEffect;
+                var7 = new Array(2);
+                var7[0] = var11;
+                var7[1] = var10;
+                var2 = function() {
+                    _fun0007: for(var _fun0007_ip = 0; ; ) switch(_fun0007_ip) {
+case 0:
+                        var3 = _closure1_slot13;
+                        var2 = var3.getMultipleRoutesAvailable;
+                        var2 = var2.bind(var3)();
+                        if(var2) { _fun0007_ip = 31; continue _fun0007 }
+case 29:
+                        var2 = _closure2_slot1;
+                        if(var2) { _fun0007_ip = 31; continue _fun0007 }
+case 32:
+                        var3 = _closure1_slot17;
+                        var2 = undefined;
+                        var1 = function() {
+                            var3 = _closure2_slot3;
+                            var2 = _closure2_slot0;
+                            var1 = undefined;
+                            var1 = var3.bind(var1)(var2);
+                            return var1;
+                        };
+                        var1 = var3.bind(var2)(var1);
+                        _fun0007_ip = 33; continue _fun0007;
+case 31:
+                        var3 = _closure2_slot3;
+                        var2 = _closure2_slot0;
+                        var1 = undefined;
+                        var1 = var3.bind(var1)(var2);
+case 33:
+                        var1 = undefined;
+                        return var1;
+                    }
+                };
+                var2 = var8.bind(var9)(var2, var7);
+                var2 = _closure1_slot1;
+                var7 = _closure1_slot3;
+                if(var1) { _fun0004_ip = 34; continue _fun0004 }
+case 35:
+                var1 = 24;
+                var1 = var7[var1];
+                _fun0004_ip = 36; continue _fun0004;
+case 34:
+                var6 = 23;
+                var1 = var7[var6];
+case 36:
+                var2 = var2.bind(var5)(var1);
+                var1 = {};
+                var1['isAudioRouteEnabled'] = var4;
+                var1['toggleAudio'] = var3;
+                var1['routeSource'] = var2;
+                return var1;
+            }
+        };
+        _fun0001_ip = 37; continue _fun0001;
+case 22:
+        var4 = function() {
+            var4 = _closure1_slot0;
+            var3 = _closure1_slot3;
+            var2 = 26;
+            var3 = var3[var2];
+            var2 = undefined;
+            var5 = var4.bind(var2)(var3);
+            var4 = var5.useStateFromStoresObject;
+            var1 = _closure1_slot14;
+            var3 = new Array(1);
+            var3[0] = var1;
+            var2 = function() {
+                _fun0008: for(var _fun0008_ip = 0; ; ) switch(_fun0008_ip) {
+case 0:
+                    var2 = _closure1_slot14;
+                    var1 = var2.getActiveAudioDevice;
+                    var7 = var1.bind(var2)();
+                    var1 = {};
+                    var2 = true;
+                    var1['isAudioRouteEnabled'] = var2;
+                    var3 = _closure1_slot0;
+                    var5 = _closure1_slot3;
+                    var2 = 27;
+                    var2 = var5[var2];
+                    var6 = undefined;
+                    var2 = var3.bind(var6)(var2);
+                    var2 = var2.showAudioOutputSelector;
+                    var1['toggleAudio'] = var2;
+                    var3 = _closure1_slot18;
+                    var5 = null;
+                    var8 = var5 == var7;
+                    var2 = undefined;
+                    if(var8) { _fun0008_ip = 38; continue _fun0008 }
+case 39:
+                    var2 = var7.simpleDeviceType;
+case 38:
+                    if(!(var5 == var2)) { _fun0008_ip = 40; continue _fun0008 }
+case 41:
+                    var5 = _closure1_slot0;
+                    var7 = _closure1_slot3;
+                    var4 = 28;
+                    var4 = var7[var4];
+                    var4 = var5.bind(var6)(var4);
+                    var4 = var4.AudioDeviceType;
+                    var2 = var4.INVALID;
+case 40:
+                    var2 = var3[var2];
+                    var1['routeSource'] = var2;
+                    return var1;
+                }
+            };
+            var1 = new Array(0);
+            var1 = var4.bind(var5)(var3, var2, var1);
+            return var1;
+        };
+case 37:
+        var6 = var8[var6];
+        var8 = var7.bind(var1)(var6);
+        var7 = var8.fileFinishedImporting;
+        var6 = 'modules/voice_calls/native/CallsUtils.tsx';
+        var6 = var7.bind(var8)(var6);
+        var6 = function handleToggleVideo() {
+            var1 = undefined;
+            var4 = _closure1_slot20;
+            var3 = var4.apply;
+            var1 = arguments;
+            var2 = var1;
+            var1 = this;
+            var1 = var3.bind(var4)(var1, var2);
+            return var1;
+        };
+        var3['handleToggleVideo'] = var6;
+        var6 = function handleToggleSelfDeaf() {
+            var3 = _closure1_slot1;
+            var2 = _closure1_slot3;
+            var1 = 16;
+            var2 = var2[var1];
+            var1 = undefined;
+            var3 = var3.bind(var1)(var2);
+            var2 = var3.toggleSelfDeaf;
+            var2 = var2.bind(var3)();
+            return var1;
+        };
+        var3['handleToggleSelfDeaf'] = var6;
+        var6 = function handleToggleSelfMute() {
+            var3 = _closure1_slot1;
+            var4 = _closure1_slot3;
+            var1 = 15;
+            var5 = var4[var1];
+            var1 = undefined;
+            var7 = var3.bind(var1)(var5);
+            var6 = var7.requestPermission;
+            var2 = _closure1_slot15;
+            var5 = var2.AUDIO;
+            var2 = {};
+            var8 = true;
+            var2['showAuthorizationError'] = var8;
+            var2 = var6.bind(var7)(var5, var2);
+            var2 = 16;
+            var2 = var4[var2];
+            var3 = var3.bind(var1)(var2);
+            var2 = var3.toggleSelfMute;
+            var2 = var2.bind(var3)();
+            return var1;
+        };
+        var3['handleToggleSelfMute'] = var6;
+        var6 = function showSuppressedAlert() {
+            var3 = _closure1_slot1;
+            var9 = _closure1_slot3;
+            var1 = 13;
+            var2 = var9[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.show;
+            var2 = {};
+            var8 = _closure1_slot0;
+            var5 = 14;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var10 = var6.intl;
+            var7 = var10.string;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var6 = var6.t;
+            var6 = var6.FJSZVM;
+            var6 = var7.bind(var10)(var6);
+            var2['title'] = var6;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var7 = var6.intl;
+            var6 = var7.string;
+            var5 = var9[var5];
+            var5 = var8.bind(var1)(var5);
+            var5 = var5.t;
+            var5 = var5.etJjgW;
+            var5 = var6.bind(var7)(var5);
+            var2['body'] = var5;
+            var5 = false;
+            var2['hideActionSheet'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        };
+        var3['showSuppressedAlert'] = var6;
+        var6 = function showServerMuteAlert() {
+            var3 = _closure1_slot1;
+            var9 = _closure1_slot3;
+            var1 = 13;
+            var2 = var9[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.show;
+            var2 = {};
+            var8 = _closure1_slot0;
+            var5 = 14;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var10 = var6.intl;
+            var7 = var10.string;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var6 = var6.t;
+            var6 = var6["+JQCa/"];
+            var6 = var7.bind(var10)(var6);
+            var2['title'] = var6;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var7 = var6.intl;
+            var6 = var7.string;
+            var5 = var9[var5];
+            var5 = var8.bind(var1)(var5);
+            var5 = var5.t;
+            var5 = var5.hsNm7d;
+            var5 = var6.bind(var7)(var5);
+            var2['body'] = var5;
+            var5 = false;
+            var2['hideActionSheet'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        };
+        var3['showServerMuteAlert'] = var6;
+        var6 = function showServerDeafenAlert() {
+            var3 = _closure1_slot1;
+            var9 = _closure1_slot3;
+            var1 = 13;
+            var2 = var9[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.show;
+            var2 = {};
+            var8 = _closure1_slot0;
+            var5 = 14;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var10 = var6.intl;
+            var7 = var10.string;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var6 = var6.t;
+            var6 = var6.QZ7WSS;
+            var6 = var7.bind(var10)(var6);
+            var2['title'] = var6;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var7 = var6.intl;
+            var6 = var7.string;
+            var5 = var9[var5];
+            var5 = var8.bind(var1)(var5);
+            var5 = var5.t;
+            var5 = var5.Tl9JpL;
+            var5 = var6.bind(var7)(var5);
+            var2['body'] = var5;
+            var5 = false;
+            var2['hideActionSheet'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        };
+        var3['showServerDeafenAlert'] = var6;
+        var6 = function showCameraDisabledAlert() {
+            var3 = _closure1_slot1;
+            var9 = _closure1_slot3;
+            var1 = 13;
+            var2 = var9[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.show;
+            var2 = {};
+            var8 = _closure1_slot0;
+            var5 = 14;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var10 = var6.intl;
+            var7 = var10.string;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var6 = var6.t;
+            var6 = var6.OYzPcW;
+            var6 = var7.bind(var10)(var6);
+            var2['title'] = var6;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var7 = var6.intl;
+            var6 = var7.string;
+            var5 = var9[var5];
+            var5 = var8.bind(var1)(var5);
+            var5 = var5.t;
+            var5 = var5.oBH7Y2;
+            var5 = var6.bind(var7)(var5);
+            var2['body'] = var5;
+            var5 = false;
+            var2['hideActionSheet'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        };
+        var3['showCameraDisabledAlert'] = var6;
+        var6 = function showScreenshareDisabledAlert() {
+            var3 = _closure1_slot1;
+            var9 = _closure1_slot3;
+            var1 = 13;
+            var2 = var9[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.show;
+            var2 = {};
+            var8 = _closure1_slot0;
+            var5 = 14;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var10 = var6.intl;
+            var7 = var10.string;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var6 = var6.t;
+            var6 = var6["/x4knx"];
+            var6 = var7.bind(var10)(var6);
+            var2['title'] = var6;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var7 = var6.intl;
+            var6 = var7.string;
+            var5 = var9[var5];
+            var5 = var8.bind(var1)(var5);
+            var5 = var5.t;
+            var5 = var5.PpfzUE;
+            var5 = var6.bind(var7)(var5);
+            var2['body'] = var5;
+            var5 = false;
+            var2['hideActionSheet'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        };
+        var3['showScreenshareDisabledAlert'] = var6;
+        var6 = function showMinOSScreenshareRequirementAlert() {
+            _fun0009: for(var _fun0009_ip = 0; ; ) switch(_fun0009_ip) {
+case 0:
+                var11 = _closure1_slot0;
+                var12 = _closure1_slot3;
+                var10 = 14;
+                var2 = var12[var10];
+                var1 = undefined;
+                var2 = var11.bind(var1)(var2);
+                var5 = var2.intl;
+                var4 = var5.formatToPlainString;
+                var2 = var12[var10];
+                var2 = var11.bind(var1)(var2);
+                var2 = var2.t;
+                var3 = var2.ejOT95;
+                var2 = {};
+                var7 = 17;
+                var8 = var12[var7];
+                var9 = var11.bind(var1)(var8);
+                var8 = var9.getErrorInfo;
+                var7 = var12[var7];
+                var7 = var11.bind(var1)(var7);
+                var7 = var7.AVError;
+                var7 = var7.SCREENSHARE_OS_NOT_SUPPORTED;
+                var8 = var8.bind(var9)(var7);
+                var7 = null;
+                var9 = var7 == var8;
+                var7 = undefined;
+                if(var9) { _fun0009_ip = 42; continue _fun0009 }
+case 43:
+                var7 = var8.errorCode;
+case 42:
+                var2['errorCode'] = var7;
+                var9 = var4.bind(var5)(var3, var2);
+                var3 = _closure1_slot1;
+                var5 = _closure1_slot3;
+                var2 = 13;
+                var2 = var5[var2];
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.show;
+                var2 = {};
+                var8 = _closure1_slot0;
+                var6 = var5[var10];
+                var6 = var8.bind(var1)(var6);
+                var11 = var6.intl;
+                var7 = var11.string;
+                var6 = var5[var10];
+                var6 = var8.bind(var1)(var6);
+                var6 = var6.t;
+                var6 = var6.oblMYa;
+                var6 = var7.bind(var11)(var6);
+                var2['title'] = var6;
+                var6 = var5[var10];
+                var6 = var8.bind(var1)(var6);
+                var7 = var6.intl;
+                var6 = var7.string;
+                var5 = var5[var10];
+                var5 = var8.bind(var1)(var5);
+                var5 = var5.t;
+                var5 = var5.Wnhd3q;
+                var8 = var6.bind(var7)(var5);
+                var5 = global;
+                var5 = var5.HermesInternal;
+                var7 = var5.concat;
+                var6 = '';
+                var5 = '\n\n';
+                var5 = var7.bind(var6)(var8, var5, var9);
+                var2['body'] = var5;
+                var5 = false;
+                var2['hideActionSheet'] = var5;
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            }
+        };
+        var3['showMinOSScreenshareRequirementAlert'] = var6;
+        var6 = function showTabletRequirementAlert() {
+            var3 = _closure1_slot1;
+            var9 = _closure1_slot3;
+            var1 = 13;
+            var2 = var9[var1];
+            var1 = undefined;
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.show;
+            var2 = {};
+            var8 = _closure1_slot0;
+            var5 = 14;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var10 = var6.intl;
+            var7 = var10.string;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var6 = var6.t;
+            var6 = var6["1N0dxa"];
+            var6 = var7.bind(var10)(var6);
+            var2['title'] = var6;
+            var6 = var9[var5];
+            var6 = var8.bind(var1)(var6);
+            var7 = var6.intl;
+            var6 = var7.string;
+            var5 = var9[var5];
+            var5 = var8.bind(var1)(var5);
+            var5 = var5.t;
+            var5 = var5.qqDFVb;
+            var5 = var6.bind(var7)(var5);
+            var2['body'] = var5;
+            var5 = false;
+            var2['hideActionSheet'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        };
+        var3['showTabletRequirementAlert'] = var6;
+        var6 = function handleDisconnect(arg1) {
+            var5 = _closure1_slot2;
+            var4 = _closure1_slot3;
+            var1 = 18;
+            var3 = var4[var1];
+            var1 = undefined;
+            var5 = var5.bind(var1)(var3);
+            var3 = var5.dismissGlobalKeyboard;
+            var3 = var3.bind(var5)();
+            var3 = _closure1_slot0;
+            var2 = 19;
+            var2 = var4[var2];
+            var5 = var3.bind(var1)(var2);
+            var4 = var5.dismissVoiceChannelScreens;
+            var3 = arg1;
+            var2 = function() {
+                var3 = _closure1_slot1;
+                var2 = _closure1_slot3;
+                var1 = 20;
+                var2 = var2[var1];
+                var1 = undefined;
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.selectVoiceChannel;
+                var2 = null;
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            };
+            var2 = var4.bind(var5)(var3, var2);
+            return var1;
+        };
+        var3['handleDisconnect'] = var6;
+        var3['audioDeviceToIconMap'] = var5;
+        var5 = function getAudioDeviceToDisplayText(arg1) {
+            _fun0010: for(var _fun0010_ip = 0; ; ) switch(_fun0010_ip) {
+case 0:
+                var1 = arg1;
+                var3 = {};
+                var9 = _closure1_slot0;
+                var4 = _closure1_slot3;
+                var7 = 14;
+                var5 = var4[var7];
+                var6 = undefined;
+                var5 = var9.bind(var6)(var5);
+                var10 = var5.intl;
+                var8 = var10.string;
+                var5 = var4[var7];
+                var5 = var9.bind(var6)(var5);
+                var5 = var5.t;
+                var5 = var5.Ouoi6E;
+                var5 = var8.bind(var10)(var5);
+                var3['EARPIECE'] = var5;
+                var5 = var4[var7];
+                var5 = var9.bind(var6)(var5);
+                var10 = var5.intl;
+                var8 = var10.string;
+                var5 = var4[var7];
+                var5 = var9.bind(var6)(var5);
+                var5 = var5.t;
+                var5 = var5.i6eV3z;
+                var5 = var8.bind(var10)(var5);
+                var3['BLUETOOTH_HEADSET'] = var5;
+                var5 = var4[var7];
+                var5 = var9.bind(var6)(var5);
+                var10 = var5.intl;
+                var8 = var10.string;
+                var5 = var4[var7];
+                var5 = var9.bind(var6)(var5);
+                var5 = var5.t;
+                var5 = var5.Dluojr;
+                var5 = var8.bind(var10)(var5);
+                var3['WIRED_HEADSET'] = var5;
+                var5 = var4[var7];
+                var5 = var9.bind(var6)(var5);
+                var10 = var5.intl;
+                var8 = var10.string;
+                var5 = var4[var7];
+                var5 = var9.bind(var6)(var5);
+                var5 = var5.t;
+                var5 = var5.snEhlu;
+                var5 = var8.bind(var10)(var5);
+                var3['SPEAKERPHONE'] = var5;
+                var5 = var4[var7];
+                var5 = var9.bind(var6)(var5);
+                var8 = var5.intl;
+                var5 = var8.string;
+                var4 = var4[var7];
+                var4 = var9.bind(var6)(var4);
+                var4 = var4.t;
+                var4 = var4.kCBL6t;
+                var4 = var5.bind(var8)(var4);
+                var3['INVALID'] = var4;
+                var5 = var1.deviceType;
+                var4 = _closure1_slot19;
+                var4 = var4.TYPE_BLE_HEADSET;
+                if(!(var5 !== var4)) { _fun0010_ip = 44; continue _fun0010 }
+case 45:
+                var1 = var1.simpleDeviceType;
+                var1 = var3[var1];
+                _fun0010_ip = 46; continue _fun0010;
+case 44:
+                var5 = _closure1_slot0;
+                var2 = _closure1_slot3;
+                var3 = var2[var7];
+                var3 = var5.bind(var6)(var3);
+                var4 = var3.intl;
+                var3 = var4.string;
+                var2 = var2[var7];
+                var2 = var5.bind(var6)(var2);
+                var2 = var2.t;
+                var2 = var2.BtXSp9;
+                var1 = var3.bind(var4)(var2);
+case 46:
+                return var1;
+            }
+        };
+        var3['getAudioDeviceToDisplayText'] = var5;
+        var3['useMaskedSpeakerStates'] = var4;
+        var2 = function() {
+            _fun0011: for(var _fun0011_ip = 0; ; ) switch(_fun0011_ip) {
+case 0:
+                var4 = _closure1_slot0;
+                var7 = _closure1_slot3;
+                var1 = 26;
+                var1 = var7[var1];
+                var5 = undefined;
+                var9 = var4.bind(var5)(var1);
+                var8 = var9.useStateFromStores;
+                var1 = _closure1_slot13;
+                var3 = new Array(1);
+                var3[0] = var1;
+                var1 = function() {
+                    var2 = _closure1_slot13;
+                    var1 = var2.getCurrentRouteType;
+                    var1 = var1.bind(var2)();
+                    return var1;
+                };
+                var3 = var8.bind(var9)(var3, var1);
+                var8 = _closure1_slot1;
+                var1 = 29;
+                var1 = var7[var1];
+                var1 = var8.bind(var5)(var1);
+                var10 = var1.bind(var5)();
+                var _closure2_slot0 = var10;
+                var1 = 30;
+                var8 = var7[var1];
+                var8 = var4.bind(var5)(var8);
+                var8 = var8.RouteTypes;
+                var8 = var8.SPEAKER;
+                var11 = var3 === var8;
+                var1 = var7[var1];
+                var1 = var4.bind(var5)(var1);
+                var1 = var1.RouteTypes;
+                var1 = var1.BLUETOOTH;
+                var1 = var3 === var1;
+                if(var11) { _fun0011_ip = 47; continue _fun0011 }
+case 48:
+                var11 = var1;
+case 47:
+                if(var11) { _fun0011_ip = 49; continue _fun0011 }
+case 50:
+                var11 = var10;
+case 49:
+                var _closure2_slot1 = var11;
+                var9 = _closure1_slot6;
+                var3 = var9.useState;
+                var7 = var3.bind(var9)(var11);
+                var4 = _closure1_slot4;
+                var3 = 2;
+                var7 = var4.bind(var5)(var7, var3);
+                var3 = 0;
+                var4 = var7[var3];
+                var _closure2_slot2 = var4;
+                var3 = 1;
+                var3 = var7[var3];
+                var _closure2_slot3 = var3;
+                var8 = var9.useCallback;
+                var7 = new Array(2);
+                var7[0] = var4;
+                var7[1] = var10;
+                var3 = function() {
+                    _fun0012: for(var _fun0012_ip = 0; ; ) switch(_fun0012_ip) {
+case 0:
+                        var3 = _closure1_slot13;
+                        var2 = var3.getMultipleRoutesAvailable;
+                        var2 = var2.bind(var3)();
+                        if(var2) { _fun0012_ip = 28; continue _fun0012 }
+case 29:
+                        var3 = _closure1_slot17;
+                        var2 = var3.cancel;
+                        var2 = var2.bind(var3)();
+                        var3 = _closure2_slot0;
+                        if(var3) { _fun0012_ip = 28; continue _fun0012 }
+case 30:
+                        var4 = _closure2_slot3;
+                        var2 = _closure2_slot2;
+                        var3 = !var2;
+                        var2 = undefined;
+                        var2 = var4.bind(var2)(var3);
+case 28:
+                        var3 = _closure1_slot16;
+                        var1 = _closure2_slot2;
+                        var2 = !var1;
+                        var1 = undefined;
+                        var2 = var3.bind(var1)(var2);
+                        return var1;
+                    }
+                };
+                var3 = var8.bind(var9)(var3, var7);
+                var8 = var9.useEffect;
+                var7 = new Array(2);
+                var7[0] = var11;
+                var7[1] = var10;
+                var2 = function() {
+                    var3 = _closure2_slot3;
+                    var2 = _closure2_slot1;
+                    var1 = undefined;
+                    var2 = var3.bind(var1)(var2);
+                    return var1;
+                };
+                var2 = var8.bind(var9)(var2, var7);
+                var2 = _closure1_slot1;
+                var7 = _closure1_slot3;
+                if(var1) { _fun0011_ip = 51; continue _fun0011 }
+case 52:
+                var1 = 24;
+                var1 = var7[var1];
+                _fun0011_ip = 53; continue _fun0011;
+case 51:
+                var6 = 23;
+                var1 = var7[var6];
+case 53:
+                var2 = var2.bind(var5)(var1);
+                var1 = {};
+                var1['isAudioRouteEnabled'] = var4;
+                var1['toggleAudio'] = var3;
+                var1['routeSource'] = var2;
+                return var1;
+            }
+        };
+        var3['useImmediateMaskedSpeakerStates'] = var2;
+        return var1;
+    }
+})();

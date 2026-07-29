@@ -1,0 +1,324 @@
+// app/modules/welcome_screen/WelcomeScreenActionCreators.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var7 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var7;
+    var _closure1_slot2 = var6;
+    var1 = function _fetchWelcomeScreen() {
+        var5 = undefined;
+        var1 = undefined;
+        var4 = _closure1_slot3;
+        var3 = function* (arg1) {
+            var1 = function* anon_0_(arg1) {
+                _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+                    StartGenerator();
+                    ResumeGenerator(result_out_reg=0, return_bool_out_reg=1);
+                    if(var2) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+                    var9 = arg1;
+                    var6 = _closure1_slot1;
+                    var2 = _closure1_slot2;
+                    var5 = 2;
+                    var4 = var2[var5];
+                    var2 = undefined;
+                    var7 = var6.bind(var2)(var4);
+                    var6 = var7.dispatch;
+                    var4 = {};
+                    var8 = 'WELCOME_SCREEN_FETCH_START';
+                    var4['type'] = var8;
+                    var4 = var6.bind(var7)(var4);
+case 4: // try_start_0
+                    var6 = _closure1_slot0;
+                    var7 = _closure1_slot2;
+                    var4 = 3;
+                    var4 = var7[var4];
+                    var4 = var6.bind(var2)(var4);
+                    var7 = var4.HTTP;
+                    var6 = var7.get;
+                    var4 = {'url': null, 'oldFormErrors': true, 'rejectWithError': true};
+                    var11 = _closure1_slot4;
+                    var10 = var11.GUILD_WELCOME_SCREEN;
+                    var8 = var9;
+                    var8 = var10.bind(var11)(var8);
+                    var4['url'] = var8;
+                    var4 = var6.bind(var7)(var4);
+                    SaveGenerator(address=133);
+case 5:
+                    return var4;
+case 6:
+                    ResumeGenerator(result_out_reg=3, return_bool_out_reg=5);
+                    if(var6) { _fun0001_ip = 7; continue _fun0001 }
+case 8:
+                    var7 = _closure1_slot1;
+                    var6 = _closure1_slot2;
+                    var6 = var6[var5];
+                    var8 = var7.bind(var2)(var6);
+                    var7 = var8.dispatch;
+                    var6 = {};
+                    var10 = 'WELCOME_SCREEN_FETCH_SUCCESS';
+                    var6['type'] = var10;
+                    var6['guildId'] = var9;
+                    var9 = var4.body;
+                    var6['welcomeScreen'] = var9;
+                    var6 = var7.bind(var8)(var6);
+                    var6 = var4.body;
+case 9: // try_end0
+                    return var6;
+case 7:
+                    return var4;
+case 10: // catch_target0
+                    CatchBlockStart(arg_register=3);
+                    var4 = _closure1_slot1;
+                    var3 = _closure1_slot2;
+                    var3 = var3[var5];
+                    var5 = var4.bind(var2)(var3);
+                    var4 = var5.dispatch;
+                    var3 = {};
+                    var6 = 'WELCOME_SCREEN_FETCH_FAIL';
+                    var3['type'] = var6;
+                    var3 = var4.bind(var5)(var3);
+                    return var2;
+case 2:
+                    return var1;
+                }
+            };
+            return var1;
+        };
+        var4 = var4.bind(var5)(var3);
+        _closure1_slot5 = var4;
+        var3 = var4.apply;
+        var1 = arguments;
+        var2 = var1;
+        var1 = this;
+        var1 = var3.bind(var4)(var1, var2);
+        return var1;
+    };
+    var _closure1_slot5 = var1;
+    var1 = function _saveWelcomeScreen() {
+        var5 = undefined;
+        var1 = undefined;
+        var4 = _closure1_slot3;
+        var3 = function* (arg1, arg2) {
+            var1 = function* anon_0_(arg1, arg2) {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    StartGenerator();
+                    ResumeGenerator(result_out_reg=0, return_bool_out_reg=1);
+                    if(var2) { _fun0002_ip = 11; continue _fun0002 }
+case 3:
+                    var9 = arg1;
+                    var10 = arg2;
+                    var6 = _closure1_slot1;
+                    var2 = _closure1_slot2;
+                    var5 = 2;
+                    var4 = var2[var5];
+                    var2 = undefined;
+                    var7 = var6.bind(var2)(var4);
+                    var6 = var7.dispatch;
+                    var4 = {};
+                    var8 = 'WELCOME_SCREEN_SUBMIT';
+                    var4['type'] = var8;
+                    var4 = var6.bind(var7)(var4);
+case 12: // try_start_0
+                    var6 = _closure1_slot0;
+                    var7 = _closure1_slot2;
+                    var4 = 3;
+                    var4 = var7[var4];
+                    var4 = var6.bind(var2)(var4);
+                    var7 = var4.HTTP;
+                    var6 = var7.patch;
+                    var4 = {};
+                    var12 = _closure1_slot4;
+                    var11 = var12.GUILD_WELCOME_SCREEN;
+                    var8 = var9;
+                    var8 = var11.bind(var12)(var8);
+                    var4['url'] = var8;
+                    var8 = {};
+                    var11 = var10.description;
+                    var8['description'] = var11;
+                    var11 = var10.channels;
+                    var8['welcome_channels'] = var11;
+                    var10 = var10.enabled;
+                    var8['enabled'] = var10;
+                    var4['body'] = var8;
+                    var8 = true;
+                    var4['oldFormErrors'] = var8;
+                    var4['rejectWithError'] = var8;
+                    var4 = var6.bind(var7)(var4);
+                    SaveGenerator(address=173);
+case 13:
+                    return var4;
+case 14:
+                    ResumeGenerator(result_out_reg=3, return_bool_out_reg=5);
+                    if(var6) { _fun0002_ip = 15; continue _fun0002 }
+case 16:
+                    var7 = _closure1_slot1;
+                    var6 = _closure1_slot2;
+                    var6 = var6[var5];
+                    var8 = var7.bind(var2)(var6);
+                    var7 = var8.dispatch;
+                    var6 = {};
+                    var10 = 'WELCOME_SCREEN_SUBMIT_SUCCESS';
+                    var6['type'] = var10;
+                    var6['guildId'] = var9;
+                    var9 = var4.body;
+                    var6['welcomeScreen'] = var9;
+                    var6 = var7.bind(var8)(var6);
+case 17: // try_end0
+                    _fun0002_ip = 18; continue _fun0002;
+case 15:
+                    return var4;
+case 19: // catch_target0
+                    CatchBlockStart(arg_register=3);
+                    var4 = _closure1_slot1;
+                    var3 = _closure1_slot2;
+                    var3 = var3[var5];
+                    var5 = var4.bind(var2)(var3);
+                    var4 = var5.dispatch;
+                    var3 = {};
+                    var6 = 'WELCOME_SCREEN_SUBMIT_FAILURE';
+                    var3['type'] = var6;
+                    var3 = var4.bind(var5)(var3);
+case 18:
+                    return var2;
+case 11:
+                    return var1;
+                }
+            };
+            return var1;
+        };
+        var4 = var4.bind(var5)(var3);
+        _closure1_slot6 = var4;
+        var3 = var4.apply;
+        var1 = arguments;
+        var2 = var1;
+        var1 = this;
+        var1 = var3.bind(var4)(var1, var2);
+        return var1;
+    };
+    var _closure1_slot6 = var1;
+    var1 = global;
+    var9 = var1.Object;
+    var8 = var9.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var8.bind(var9)(var3, var1, var4);
+    var1 = 0;
+    var4 = var6[var1];
+    var1 = undefined;
+    var4 = var7.bind(var1)(var4);
+    var _closure1_slot3 = var4;
+    var4 = 1;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.Endpoints;
+    var _closure1_slot4 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/welcome_screen/WelcomeScreenActionCreators.tsx';
+    var4 = var5.bind(var6)(var4);
+    var4 = function welcomeScreenViewed(arg1) {
+        _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+            var5 = arguments[1];
+            var1 = undefined;
+            if(!(var5 === var1)) { _fun0003_ip = 20; continue _fun0003 }
+case 21:
+            var5 = false;
+case 20:
+            var3 = _closure1_slot1;
+            var4 = _closure1_slot2;
+            var2 = 2;
+            var2 = var4[var2];
+            var4 = var3.bind(var1)(var2);
+            var3 = var4.dispatch;
+            var2 = {};
+            var6 = 'WELCOME_SCREEN_VIEW';
+            var2['type'] = var6;
+            var6 = arg1;
+            var2['guildId'] = var6;
+            var2['isLurking'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        }
+    };
+    var3['welcomeScreenViewed'] = var4;
+    var4 = function fetchWelcomeScreen() {
+        var1 = undefined;
+        var4 = _closure1_slot5;
+        var3 = var4.apply;
+        var1 = arguments;
+        var2 = var1;
+        var1 = this;
+        var1 = var3.bind(var4)(var1, var2);
+        return var1;
+    };
+    var3['fetchWelcomeScreen'] = var4;
+    var4 = function resetWelcomeScreen() {
+        var3 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var4 = var3.bind(var1)(var2);
+        var3 = var4.dispatch;
+        var2 = {};
+        var5 = 'WELCOME_SCREEN_SETTINGS_RESET';
+        var2['type'] = var5;
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var3['resetWelcomeScreen'] = var4;
+    var4 = function clearWelcomeScreenSettings() {
+        var3 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var4 = var3.bind(var1)(var2);
+        var3 = var4.dispatch;
+        var2 = {};
+        var5 = 'WELCOME_SCREEN_SETTINGS_CLEAR';
+        var2['type'] = var5;
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var3['clearWelcomeScreenSettings'] = var4;
+    var4 = function updateSettings(arg1) {
+        var3 = _closure1_slot1;
+        var2 = _closure1_slot2;
+        var1 = 2;
+        var2 = var2[var1];
+        var1 = undefined;
+        var4 = var3.bind(var1)(var2);
+        var3 = var4.dispatch;
+        var2 = {};
+        var5 = 'WELCOME_SCREEN_SETTINGS_UPDATE';
+        var2['type'] = var5;
+        var5 = arg1;
+        var2['settings'] = var5;
+        var2 = var3.bind(var4)(var2);
+        return var1;
+    };
+    var3['updateSettings'] = var4;
+    var2 = function saveWelcomeScreen() {
+        var1 = undefined;
+        var4 = _closure1_slot6;
+        var3 = var4.apply;
+        var1 = arguments;
+        var2 = var1;
+        var1 = this;
+        var1 = var3.bind(var4)(var1, var2);
+        return var1;
+    };
+    var3['saveWelcomeScreen'] = var2;
+    return var1;
+})();

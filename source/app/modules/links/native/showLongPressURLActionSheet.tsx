@@ -1,0 +1,314 @@
+// app/modules/links/native/showLongPressURLActionSheet.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var3 = exports;
+    var4 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var1 = metroImportDefault;
+    var _closure1_slot1 = var1;
+    var _closure1_slot2 = var4;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var6 = {};
+    var1 = true;
+    var6['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var6);
+    var1 = 8;
+    var4 = var4[var1];
+    var1 = undefined;
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/links/native/showLongPressURLActionSheet.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function showLongPressURLActionSheet(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var1 = arg1;
+            var7 = var1.urlString;
+            var _closure2_slot0 = var7;
+            var2 = var1.guildId;
+            var _closure2_slot1 = var2;
+            var4 = var1.channelId;
+            var _closure2_slot2 = var4;
+            var2 = var1.messageId;
+            var _closure2_slot3 = var2;
+            var2 = var1.disableHapticFeedback;
+            var1 = undefined;
+            if(!(var2 === var1)) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+            var2 = false;
+case 2:
+            var _closure2_slot4 = var1;
+            if(var2) { _fun0001_ip = 4; continue _fun0001 }
+case 5:
+            var8 = _closure1_slot0;
+            var9 = _closure1_slot2;
+            var2 = 0;
+            var3 = var9[var2];
+            var5 = var8.bind(var1)(var3);
+            var3 = var5.triggerHapticFeedback;
+            var2 = var9[var2];
+            var2 = var8.bind(var1)(var2);
+            var2 = var2.HapticFeedbackTypes;
+            var2 = var2.IMPACT_LIGHT;
+            var2 = var3.bind(var5)(var2);
+case 4:
+            var9 = new Array(0);
+            var3 = var7.match;
+            var2 = /^(tel|sms|mailto):([^?;]+)/;
+            var2 = var3.bind(var7)(var2);
+            _closure2_slot4 = var2;
+            var3 = null;
+            if(!(var3 != var2)) { _fun0001_ip = 6; continue _fun0001 }
+case 7:
+            var10 = var9.push;
+            var5 = {};
+            var12 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var13 = 1;
+            var11 = var11[var13];
+            var11 = var12.bind(var1)(var11);
+            var14 = var11.intl;
+            var12 = var14.string;
+            var15 = var2[var13];
+            var11 = 'mailto';
+            if(!(var11 !== var15)) { _fun0001_ip = 8; continue _fun0001 }
+case 9:
+            var15 = _closure1_slot0;
+            var11 = _closure1_slot2;
+            var11 = var11[var13];
+            var11 = var15.bind(var1)(var11);
+            var11 = var11.t;
+            var11 = var11["3zozoR"];
+            _fun0001_ip = 10; continue _fun0001;
+case 8:
+            var16 = _closure1_slot0;
+            var15 = _closure1_slot2;
+            var15 = var15[var13];
+            var15 = var16.bind(var1)(var15);
+            var15 = var15.t;
+            var11 = var15.ZYLVKo;
+case 10:
+            var11 = var12.bind(var14)(var11);
+            var5['label'] = var11;
+            var11 = function onPress() {
+                var3 = _closure1_slot0;
+                var4 = _closure1_slot2;
+                var5 = 2;
+                var2 = var4[var5];
+                var1 = undefined;
+                var6 = var3.bind(var1)(var2);
+                var2 = var6.presentLinkCopied;
+                var2 = var2.bind(var6)();
+                var2 = 3;
+                var2 = var4[var2];
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.copy;
+                var2 = _closure2_slot4;
+                var2 = var2[var5];
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            };
+            var5['onPress'] = var11;
+            var5 = var10.bind(var9)(var5);
+            var5 = var2[var13];
+            var2 = 'tel';
+            if(!(var2 === var5)) { _fun0001_ip = 6; continue _fun0001 }
+case 11:
+            var5 = var9.push;
+            var2 = {};
+            var12 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var10 = var8[var13];
+            var10 = var12.bind(var1)(var10);
+            var11 = var10.intl;
+            var10 = var11.string;
+            var8 = var8[var13];
+            var8 = var12.bind(var1)(var8);
+            var8 = var8.t;
+            var8 = var8["+wbjMW"];
+            var8 = var10.bind(var11)(var8);
+            var2['label'] = var8;
+            var8 = function onPress() {
+                var3 = _closure1_slot1;
+                var2 = _closure1_slot2;
+                var1 = 4;
+                var2 = var2[var1];
+                var1 = undefined;
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.openURL;
+                var7 = _closure2_slot0;
+                var6 = var7.replace;
+                var5 = 'tel:';
+                var2 = 'sms:';
+                var2 = var6.bind(var7)(var5, var2);
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            };
+            var2['onPress'] = var8;
+            var2 = var5.bind(var9)(var2);
+case 6:
+            var8 = {};
+            var14 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var12 = 1;
+            var5 = var10[var12];
+            var5 = var14.bind(var1)(var5);
+            var13 = var5.intl;
+            var11 = var13.string;
+            var5 = var10[var12];
+            var5 = var14.bind(var1)(var5);
+            var5 = var5.t;
+            var5 = var5.wuRE8M;
+            var5 = var11.bind(var13)(var5);
+            var8['label'] = var5;
+            var5 = function onPress() {
+                var3 = _closure1_slot1;
+                var2 = _closure1_slot2;
+                var1 = 4;
+                var2 = var2[var1];
+                var1 = undefined;
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.openURL;
+                var2 = _closure2_slot0;
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            };
+            var8['onPress'] = var5;
+            var5 = new Array(3);
+            var5[0] = var8;
+            var8 = {};
+            var11 = var10[var12];
+            var11 = var14.bind(var1)(var11);
+            var15 = var11.intl;
+            var13 = var15.string;
+            var11 = var10[var12];
+            var11 = var14.bind(var1)(var11);
+            var11 = var11.t;
+            var11 = var11.WqhZss;
+            var11 = var13.bind(var15)(var11);
+            var8['label'] = var11;
+            var11 = function onPress() {
+                var3 = _closure1_slot0;
+                var4 = _closure1_slot2;
+                var1 = 2;
+                var2 = var4[var1];
+                var1 = undefined;
+                var5 = var3.bind(var1)(var2);
+                var2 = var5.presentLinkCopied;
+                var2 = var2.bind(var5)();
+                var2 = 3;
+                var2 = var4[var2];
+                var4 = var3.bind(var1)(var2);
+                var3 = var4.copy;
+                var2 = _closure2_slot0;
+                var2 = var3.bind(var4)(var2);
+                return var1;
+            };
+            var8['onPress'] = var11;
+            var5[1] = var8;
+            var17 = 2;
+            var19 = var5;
+            var18 = var9;
+            var8 = arraySpread(var19, var18, var17);
+            var9 = {};
+            var11 = var10[var12];
+            var11 = var14.bind(var1)(var11);
+            var13 = var11.intl;
+            var11 = var13.string;
+            var10 = var10[var12];
+            var10 = var14.bind(var1)(var10);
+            var10 = var10.t;
+            var10 = var10.Ej3B3Y;
+            var10 = var11.bind(var13)(var10);
+            var9['label'] = var10;
+            var10 = function onPress() {
+                var3 = _closure1_slot0;
+                var2 = _closure1_slot2;
+                var1 = 5;
+                var2 = var2[var1];
+                var1 = undefined;
+                var5 = var3.bind(var1)(var2);
+                var4 = var5.showShareActionSheet;
+                var3 = {};
+                var2 = _closure2_slot0;
+                var3['url'] = var2;
+                var2 = 'Share Link';
+                var2 = var4.bind(var5)(var3, var2);
+                return var1;
+            };
+            var9['onPress'] = var10;
+            var5[7] = var9;
+            var8 = var8 + var12;
+            if(!(var3 != var4)) { _fun0001_ip = 12; continue _fun0001 }
+case 13:
+            var4 = var5.unshift;
+            var3 = {};
+            var11 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var9 = var8[var12];
+            var9 = var11.bind(var1)(var9);
+            var10 = var9.intl;
+            var9 = var10.string;
+            var8 = var8[var12];
+            var8 = var11.bind(var1)(var8);
+            var8 = var8.t;
+            var8 = var8.aW2YlJ;
+            var8 = var9.bind(var10)(var8);
+            var3['label'] = var8;
+            var6 = function onPress() {
+                var3 = _closure1_slot1;
+                var2 = _closure1_slot2;
+                var1 = 6;
+                var2 = var2[var1];
+                var1 = undefined;
+                var3 = var3.bind(var1)(var2);
+                var2 = {};
+                var5 = _closure2_slot1;
+                var2['guildId'] = var5;
+                var5 = _closure2_slot2;
+                var2['channelId'] = var5;
+                var4 = _closure2_slot3;
+                var2['messageId'] = var4;
+                var4 = {'navigationReplace': true, 'safe': true};
+                var2['navigationSettings'] = var4;
+                var2 = var3.bind(var1)(var2);
+                return var1;
+            };
+            var3['onPress'] = var6;
+            var3 = var4.bind(var5)(var3);
+case 12:
+            var11 = _closure1_slot0;
+            var8 = _closure1_slot2;
+            var2 = 7;
+            var2 = var8[var2];
+            var4 = var11.bind(var1)(var2);
+            var3 = var4.showSimpleActionSheet;
+            var2 = {};
+            var6 = 'LongPressUrl';
+            var2['key'] = var6;
+            var6 = {};
+            var9 = var8[var12];
+            var9 = var11.bind(var1)(var9);
+            var10 = var9.intl;
+            var9 = var10.string;
+            var8 = var8[var12];
+            var8 = var11.bind(var1)(var8);
+            var8 = var8.t;
+            var8 = var8["5oIOLX"];
+            var8 = var9.bind(var10)(var8);
+            var6['title'] = var8;
+            var6['subtitle'] = var7;
+            var2['header'] = var6;
+            var2['options'] = var5;
+            var5 = false;
+            var2['hasIcons'] = var5;
+            var2 = var3.bind(var4)(var2);
+            return var1;
+        }
+    };
+    var3['default'] = var2;
+    return var1;
+})();

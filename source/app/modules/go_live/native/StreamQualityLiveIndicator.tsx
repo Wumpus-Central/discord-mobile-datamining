@@ -1,0 +1,564 @@
+// app/modules/go_live/native/StreamQualityLiveIndicator.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var11 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var11;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var4 = var4.bind(var1)(var7);
+    var _closure1_slot3 = var4;
+    var4 = 1;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.View;
+    var _closure1_slot4 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.AnalyticEvents;
+    var _closure1_slot5 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.PremiumTypes;
+    var _closure1_slot6 = var7;
+    var4 = var4.PremiumUpsellTypes;
+    var _closure1_slot7 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.ResolutionTypes;
+    var _closure1_slot8 = var4;
+    var4 = 5;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.jsx;
+    var _closure1_slot9 = var7;
+    var4 = var4.jsxs;
+    var _closure1_slot10 = var4;
+    var4 = 6;
+    var4 = var6[var4];
+    var8 = var5.bind(var1)(var4);
+    var7 = var8.createStyles;
+    var4 = {};
+    var12 = 'center';
+    var13 = 18;
+    var9 = {'flexDirection': 'row', 'alignItems': 'center', 'height': 18};
+    var4['liveIndicator'] = var9;
+    var9 = {};
+    var10 = 7;
+    var14 = var6[var10];
+    var14 = var11.bind(var1)(var14);
+    var14 = var14.radii;
+    var14 = var14.none;
+    var9['borderBottomLeftRadius'] = var14;
+    var14 = var6[var10];
+    var14 = var11.bind(var1)(var14);
+    var14 = var14.radii;
+    var14 = var14.none;
+    var9['borderTopLeftRadius'] = var14;
+    var9['height'] = var13;
+    var9['textAlign'] = var12;
+    var4['liveTag'] = var9;
+    var9 = {'borderBottomLeftRadius': null, 'borderTopLeftRadius': null, 'backgroundColor': null, 'opacity': 0.8, 'paddingLeft': 8, 'paddingRight': 4, 'flexDirection': 'row', 'alignItems': 'center', 'height': 18};
+    var12 = var6[var10];
+    var12 = var11.bind(var1)(var12);
+    var12 = var12.radii;
+    var12 = var12.sm;
+    var9['borderBottomLeftRadius'] = var12;
+    var12 = var6[var10];
+    var12 = var11.bind(var1)(var12);
+    var12 = var12.radii;
+    var12 = var12.sm;
+    var9['borderTopLeftRadius'] = var12;
+    var12 = var6[var10];
+    var12 = var11.bind(var1)(var12);
+    var12 = var12.unsafe_rawColors;
+    var12 = var12.PRIMARY_800;
+    var9['backgroundColor'] = var12;
+    var4['qualityTag'] = var9;
+    var9 = {'color': '#fff', 'textAlign': 'center', 'fontWeight': '700'};
+    var4['qualityTagText'] = var9;
+    var9 = {};
+    var10 = var6[var10];
+    var10 = var11.bind(var1)(var10);
+    var10 = var10.unsafe_rawColors;
+    var10 = var10.PRIMARY_300;
+    var9['color'] = var10;
+    var4['reducedQualityTagText'] = var9;
+    var9 = {'width': 20, 'marginLeft': 4294967292};
+    var4['nitroWheel'] = var9;
+    var4 = var7.bind(var8)(var4);
+    var _closure1_slot11 = var4;
+    var4 = {};
+    var7 = 'function StreamQualityLiveIndicatorTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}';
+    var4['code'] = var7;
+    var _closure1_slot12 = var4;
+    var4 = 23;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/go_live/native/StreamQualityLiveIndicator.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function StreamQualityLiveIndicator(arg1) {
+        _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+            var5 = arg1;
+            var19 = var5.participant;
+            var3 = var19;
+            var6 = var5.style;
+            var5 = undefined;
+            var24 = undefined;
+            var _closure2_slot0 = var5;
+            var4 = undefined;
+            var _closure2_slot1 = var5;
+            var13 = undefined;
+            var2 = undefined;
+            var18 = undefined;
+            var7 = undefined;
+            var20 = undefined;
+            var22 = undefined;
+            var16 = undefined;
+            var _closure2_slot6 = var5;
+            var9 = undefined;
+            var17 = undefined;
+            var10 = undefined;
+            var8 = _closure1_slot11;
+            var13 = var8.bind(var5)();
+            var11 = _closure1_slot3;
+            var14 = var11.useContext;
+            var26 = _closure1_slot0;
+            var25 = _closure1_slot2;
+            var8 = 8;
+            var8 = var25[var8];
+            var8 = var26.bind(var5)(var8);
+            var8 = var8.RevealContext;
+            var8 = var14.bind(var11)(var8);
+            var14 = var8.reveal;
+            var _closure2_slot2 = var14;
+            var8 = 9;
+            var8 = var25[var8];
+            var15 = var26.bind(var5)(var8);
+            var8 = var15.useAnalyticsContext;
+            var8 = var8.bind(var15)();
+            var8 = var8.location;
+            var2 = var8;
+            var _closure2_slot3 = var8;
+            var23 = _closure1_slot1;
+            var8 = 10;
+            var8 = var25[var8];
+            var8 = var23.bind(var5)(var8);
+            var8 = var8.bind(var5)();
+            var8 = var8.analyticsLocations;
+            var18 = var8;
+            var _closure2_slot4 = var8;
+            var8 = var11.useRef;
+            var15 = false;
+            var8 = var8.bind(var11)(var15);
+            var _closure2_slot5 = var8;
+            var8 = 11;
+            var11 = var25[var8];
+            var27 = var26.bind(var5)(var11);
+            var21 = var27.useAnimatedStyle;
+            var11 = function f() {
+                _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                    var1 = {};
+                    var3 = _closure1_slot0;
+                    var4 = _closure1_slot2;
+                    var2 = 12;
+                    var2 = var4[var2];
+                    var8 = undefined;
+                    var5 = var3.bind(var8)(var2);
+                    var4 = var5.withTiming;
+                    var2 = _closure2_slot2;
+                    var3 = 0;
+                    if(!var2) { _fun0002_ip = 2; continue _fun0002 }
+case 3:
+                    var3 = 1;
+case 2:
+                    var2 = {};
+                    var7 = _closure1_slot0;
+                    var9 = _closure1_slot2;
+                    var6 = 13;
+                    var6 = var9[var6];
+                    var6 = var7.bind(var8)(var6);
+                    var6 = var6.STANDARD_EASING;
+                    var2['easing'] = var6;
+                    var6 = 250;
+                    var2['duration'] = var6;
+                    var2 = var4.bind(var5)(var3, var2);
+                    var1['opacity'] = var2;
+                    return var1;
+                }
+            };
+            var28 = {};
+            var29 = 12;
+            var29 = var25[var29];
+            var29 = var26.bind(var5)(var29);
+            var29 = var29.withTiming;
+            var28['withTiming'] = var29;
+            var28['reveal'] = var14;
+            var14 = 13;
+            var29 = var25[var14];
+            var29 = var26.bind(var5)(var29);
+            var29 = var29.STANDARD_EASING;
+            var28['STANDARD_EASING'] = var29;
+            var11['__closure'] = var28;
+            var28 = 14676679064575.0;
+            var11['__workletHash'] = var28;
+            var28 = _closure1_slot12;
+            var11['__initData'] = var28;
+            var7 = var21.bind(var27)(var11);
+            var21 = 14;
+            var11 = var25[var21];
+            var26 = var26.bind(var5)(var11);
+            var11 = var26.useMaxQuality;
+            var20 = var11.bind(var26)(var19);
+            var11 = 15;
+            var11 = var25[var11];
+            var11 = var23.bind(var5)(var11);
+            var19 = var11.bind(var5)(var19);
+            var11 = null;
+            var22 = var11 != var19;
+case 4: // try_start_0
+            var23 = _closure1_slot0;
+            var19 = _closure1_slot2;
+            var19 = var19[var21];
+            var25 = var23.bind(var5)(var19);
+            var23 = var25.isPremiumFPS;
+            var19 = var20;
+            var19 = var23.bind(var25)(var19);
+            var24 = var19;
+            _closure2_slot0 = var19;
+case 5: // try_end0
+            _fun0001_ip = 6; continue _fun0001;
+case 7: // catch_target0
+            CatchBlockStart(arg_register=18);
+            var24 = false;
+            _closure2_slot0 = var15;
+case 6: // try_start_1
+            var23 = _closure1_slot0;
+            var19 = _closure1_slot2;
+            var19 = var19[var21];
+            var25 = var23.bind(var5)(var19);
+            var23 = var25.isPremiumResolution;
+            var19 = var20;
+            var19 = var23.bind(var25)(var19);
+            var4 = var19;
+            _closure2_slot1 = var19;
+case 8: // try_end1
+            _fun0001_ip = 9; continue _fun0001;
+case 10: // catch_target1
+            CatchBlockStart(arg_register=18);
+            var4 = false;
+            _closure2_slot1 = var15;
+case 9:
+            var19 = var24;
+            var15 = var19;
+            if(var19) { _fun0001_ip = 11; continue _fun0001 }
+case 12:
+            var15 = var4;
+case 11:
+            var25 = var15;
+            var16 = var25;
+            _closure2_slot6 = var25;
+            var15 = _closure1_slot3;
+            var23 = var15.useEffect;
+            var19 = new Array(4);
+            var19[0] = var18;
+            var19[1] = var25;
+            var19[2] = var24;
+            var19[3] = var4;
+            var4 = function() {
+                _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                    var2 = _closure2_slot5;
+                    var2 = var2.current;
+                    var2 = !var2;
+                    if(!var2) { _fun0003_ip = 13; continue _fun0003 }
+case 14:
+                    var2 = _closure2_slot6;
+case 13:
+                    if(!var2) { _fun0003_ip = 15; continue _fun0003 }
+case 16:
+                    var4 = _closure1_slot1;
+                    var3 = _closure1_slot2;
+                    var2 = 16;
+                    var3 = var3[var2];
+                    var2 = undefined;
+                    var5 = var4.bind(var2)(var3);
+                    var4 = var5.track;
+                    var2 = _closure1_slot5;
+                    var3 = var2.PREMIUM_UPSELL_VIEWED;
+                    var2 = {};
+                    var6 = _closure1_slot7;
+                    var6 = var6.STREAM_QUALITY_INDICATOR;
+                    var2['type'] = var6;
+                    var6 = _closure2_slot0;
+                    var2['has_premium_stream_fps'] = var6;
+                    var6 = _closure2_slot1;
+                    var2['has_premium_stream_resolution'] = var6;
+                    var6 = _closure2_slot4;
+                    var2['location_stack'] = var6;
+                    var2 = var4.bind(var5)(var3, var2);
+                    var2 = _closure2_slot5;
+                    var1 = true;
+                    var2['current'] = var1;
+case 15:
+                    var1 = undefined;
+                    return var1;
+                }
+            };
+            var4 = var23.bind(var15)(var4, var19);
+            var4 = var15.useCallback;
+            var19 = var2;
+            var2 = new Array(2);
+            var2[0] = var19;
+            var2[1] = var18;
+            var1 = function() {
+                var3 = _closure1_slot1;
+                var6 = _closure1_slot2;
+                var1 = 17;
+                var2 = var6[var1];
+                var1 = undefined;
+                var3 = var3.bind(var1)(var2);
+                var2 = {};
+                var7 = _closure2_slot3;
+                var2['analyticsLocation'] = var7;
+                var5 = _closure2_slot4;
+                var2['analyticsLocations'] = var5;
+                var5 = _closure1_slot0;
+                var4 = 18;
+                var4 = var6[var4];
+                var4 = var5.bind(var1)(var4);
+                var4 = var4.PremiumFeatureCardOrder;
+                var4 = var4.TIER_0_LEADING;
+                var2['premiumFeatureCardOrder'] = var4;
+                var2 = var3.bind(var1)(var2);
+                return var1;
+            };
+            var9 = var4.bind(var15)(var1, var2);
+            var4 = _closure1_slot1;
+            var2 = _closure1_slot2;
+            var18 = 19;
+            var2 = var2[var18];
+            var19 = var4.bind(var5)(var2);
+            var15 = var19.isPremium;
+            var2 = var3;
+            var4 = var2.user;
+            var2 = _closure1_slot6;
+            var2 = var2.TIER_1;
+            var2 = var15.bind(var19)(var4, var2);
+            var2 = !var2;
+            var1 = var2;
+            if(!var2) { _fun0001_ip = 17; continue _fun0001 }
+case 18:
+            var4 = _closure1_slot1;
+            var2 = _closure1_slot2;
+            var15 = var2[var18];
+            var19 = var4.bind(var5)(var15);
+            var15 = var19.canStreamQuality;
+            var2 = var2[var18];
+            var2 = var4.bind(var5)(var2);
+            var2 = var2.StreamQuality;
+            var4 = var2.MID;
+            var2 = var3;
+            var2 = var2.user;
+            var2 = var15.bind(var19)(var4, var2);
+            var1 = !var2;
+case 17:
+            var17 = var1;
+            var15 = _closure1_slot1;
+            var4 = _closure1_slot2;
+            var4 = var4[var18];
+            var19 = var15.bind(var5)(var4);
+            var15 = var19.isPremiumExactly;
+            var4 = var3.user;
+            var3 = _closure1_slot6;
+            var3 = var3.TIER_1;
+            var3 = var15.bind(var19)(var4, var3);
+            var2 = var3;
+            if(!var3) { _fun0001_ip = 19; continue _fun0001 }
+case 20:
+            var3 = var20;
+            var3 = var11 == var3;
+            var4 = undefined;
+            if(var3) { _fun0001_ip = 21; continue _fun0001 }
+case 22:
+            var3 = var20;
+            var3 = var3.maxResolution;
+            var4 = var3.type;
+case 21:
+            var3 = _closure1_slot8;
+            var3 = var3.SOURCE;
+            var2 = var4 === var3;
+case 19:
+            var1 = var2;
+            if(!var2) { _fun0001_ip = 23; continue _fun0001 }
+case 24:
+            var15 = _closure1_slot1;
+            var2 = _closure1_slot2;
+            var3 = var2[var18];
+            var4 = var15.bind(var5)(var3);
+            var3 = var4.canStreamQuality;
+            var2 = var2[var18];
+            var2 = var15.bind(var5)(var2);
+            var2 = var2.StreamQuality;
+            var2 = var2.HIGH;
+            var2 = var3.bind(var4)(var2);
+            var1 = !var2;
+case 23:
+            var10 = var1;
+            var1 = var20;
+            var2 = var11 == var1;
+            var1 = null;
+            if(var2) { _fun0001_ip = 25; continue _fun0001 }
+case 26:
+            var4 = _closure1_slot9;
+            var3 = _closure1_slot1;
+            var2 = _closure1_slot2;
+            var2 = var2[var8];
+            var2 = var3.bind(var5)(var2);
+            var3 = var2.View;
+            var2 = {};
+            var18 = var16;
+            var15 = 'none';
+            var8 = var15;
+            if(!var18) { _fun0001_ip = 27; continue _fun0001 }
+case 28:
+            if(var17) { _fun0001_ip = 29; continue _fun0001 }
+case 30:
+            var8 = var15;
+            if(!var10) { _fun0001_ip = 27; continue _fun0001 }
+case 29:
+            var8 = 'auto';
+case 27:
+            var2['pointerEvents'] = var8;
+            var17 = var6;
+            var6 = new Array(2);
+            var6[0] = var17;
+            var6[1] = var7;
+            var2['style'] = var6;
+            var8 = _closure1_slot10;
+            var7 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var6 = 20;
+            var6 = var10[var6];
+            var6 = var7.bind(var5)(var6);
+            var7 = var6.PressableOpacity;
+            var6 = {};
+            var10 = 'button';
+            var6['accessibilityRole'] = var10;
+            var10 = var13;
+            var18 = var10.liveIndicator;
+            var15 = new Array(2);
+            var15[0] = var18;
+            var15[1] = var17;
+            var6['style'] = var15;
+            var6['onPress'] = var9;
+            var15 = _closure1_slot4;
+            var9 = {};
+            var10 = var10.qualityTag;
+            var9['style'] = var10;
+            var10 = var16;
+            if(!var16) { _fun0001_ip = 31; continue _fun0001 }
+case 32:
+            var18 = _closure1_slot9;
+            var23 = _closure1_slot1;
+            var24 = _closure1_slot2;
+            var16 = 21;
+            var16 = var24[var16];
+            var17 = var23.bind(var5)(var16);
+            var16 = {};
+            var19 = 22;
+            var19 = var24[var19];
+            var19 = var23.bind(var5)(var19);
+            var16['source'] = var19;
+            var19 = var13;
+            var19 = var19.nitroWheel;
+            var16['style'] = var19;
+            var19 = 'contain';
+            var16['resizeMode'] = var19;
+            var10 = var18.bind(var5)(var17, var16);
+case 31:
+            var16 = new Array(2);
+            var16[0] = var10;
+            var19 = _closure1_slot9;
+            var17 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var10 = var10[var14];
+            var10 = var17.bind(var5)(var10);
+            var18 = var10.LegacyText;
+            var17 = {};
+            var10 = var13;
+            var23 = var10.qualityTagText;
+            var10 = new Array(2);
+            var10[0] = var23;
+            var11 = null;
+            if(!var22) { _fun0001_ip = 33; continue _fun0001 }
+case 34:
+            var22 = var13;
+            var11 = var22.reducedQualityTagText;
+case 33:
+            var10[1] = var11;
+            var17['style'] = var10;
+            var11 = _closure1_slot0;
+            var10 = _closure1_slot2;
+            var22 = var10[var21];
+            var24 = var11.bind(var5)(var22);
+            var23 = var24.getResolutionText;
+            var22 = var20.maxResolution;
+            var24 = var23.bind(var24)(var22);
+            var21 = var10[var21];
+            var22 = var11.bind(var5)(var21);
+            var21 = var22.getFPSText;
+            var20 = var20.maxFrameRate;
+            var23 = var21.bind(var22)(var20);
+            var20 = global;
+            var20 = var20.HermesInternal;
+            var22 = var20.concat;
+            var21 = '';
+            var20 = ' ';
+            var20 = var22.bind(var21)(var24, var20, var23);
+            var17['children'] = var20;
+            var17 = var19.bind(var5)(var18, var17);
+            var16[1] = var17;
+            var9['children'] = var16;
+            var15 = var8.bind(var5)(var15, var9);
+            var9 = new Array(2);
+            var9[0] = var15;
+            var12 = _closure1_slot9;
+            var10 = var10[var14];
+            var10 = var11.bind(var5)(var10);
+            var11 = var10.LiveTag;
+            var10 = {};
+            var13 = var13.liveTag;
+            var10['style'] = var13;
+            var10 = var12.bind(var5)(var11, var10);
+            var9[1] = var10;
+            var6['children'] = var9;
+            var6 = var8.bind(var5)(var7, var6);
+            var2['children'] = var6;
+            var1 = var4.bind(var5)(var3, var2);
+case 25:
+            return var1;
+        }
+    };
+    var3['default'] = var2;
+    return var1;
+})();

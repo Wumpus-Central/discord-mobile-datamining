@@ -1,0 +1,309 @@
+// app/modules/forums/native/AvailableForumTag.tsx
+export default (function(global, require, metroImportDefault, metroImportAll, moduleObject, exports, dependencyMap) {
+    var5 = require;
+    var13 = metroImportDefault;
+    var3 = exports;
+    var6 = dependencyMap;
+    var _closure1_slot0 = var5;
+    var _closure1_slot1 = var13;
+    var _closure1_slot2 = var6;
+    var1 = global;
+    var8 = var1.Object;
+    var7 = var8.defineProperty;
+    var4 = {};
+    var1 = true;
+    var4['value'] = var1;
+    var1 = '__esModule';
+    var1 = var7.bind(var8)(var3, var1, var4);
+    var1 = 0;
+    var7 = var6[var1];
+    var4 = metroImportAll;
+    var1 = undefined;
+    var4 = var4.bind(var1)(var7);
+    var _closure1_slot3 = var4;
+    var11 = 1;
+    var4 = var6[var11];
+    var4 = var13.bind(var1)(var4);
+    var _closure1_slot4 = var4;
+    var4 = 2;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var4 = var4.EMOJI_URL_BASE_SIZE;
+    var _closure1_slot5 = var4;
+    var4 = 3;
+    var4 = var6[var4];
+    var4 = var5.bind(var1)(var4);
+    var7 = var4.jsx;
+    var _closure1_slot6 = var7;
+    var4 = var4.jsxs;
+    var _closure1_slot7 = var4;
+    var4 = 4;
+    var4 = var6[var4];
+    var9 = var5.bind(var1)(var4);
+    var8 = var9.createStyles;
+    var7 = {};
+    var10 = {'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center', 'paddingHorizontal': 12, 'borderRadius': 20, 'backgroundColor': null, 'margin': 6, 'borderWidth': 2, 'borderColor': null, 'overflow': 'hidden', 'height': 32};
+    var4 = 12;
+    var12 = 5;
+    var14 = var6[var12];
+    var14 = var13.bind(var1)(var14);
+    var14 = var14.colors;
+    var14 = var14.BACKGROUND_BASE_LOWEST;
+    var10['backgroundColor'] = var14;
+    var14 = var6[var12];
+    var14 = var13.bind(var1)(var14);
+    var14 = var14.colors;
+    var14 = var14.BACKGROUND_BASE_LOWEST;
+    var10['borderColor'] = var14;
+    var7['pill'] = var10;
+    var10 = {};
+    var12 = var6[var12];
+    var12 = var13.bind(var1)(var12);
+    var12 = var12.colors;
+    var12 = var12.BACKGROUND_BRAND;
+    var10['borderColor'] = var12;
+    var10['borderWidth'] = var11;
+    var7['pillSelected'] = var10;
+    var10 = {};
+    var11 = 0.6;
+    var10['opacity'] = var11;
+    var7['pillDisabled'] = var10;
+    var10 = {'height': 18, 'width': 18, 'marginRight': 4, 'display': 'flex', 'alignItems': 'center', 'justifyContent': 'center'};
+    var7['emoji'] = var10;
+    var10 = {'height': 16, 'width': 16};
+    var7['imageEmoji'] = var10;
+    var10 = {'fontSize': 14, 'lineHeight': 20};
+    var7['textEmoji'] = var10;
+    var7 = var8.bind(var9)(var7);
+    var _closure1_slot8 = var7;
+    var4 = var6[var4];
+    var6 = var5.bind(var1)(var4);
+    var5 = var6.fileFinishedImporting;
+    var4 = 'modules/forums/native/AvailableForumTag.tsx';
+    var4 = var5.bind(var6)(var4);
+    var2 = function AvailableForumTag(arg1) {
+        var1 = arg1;
+        var6 = var1.tag;
+        var _closure2_slot0 = var6;
+        var2 = var1.onPress;
+        var _closure2_slot1 = var2;
+        var11 = var1.disabled;
+        var _closure2_slot2 = var11;
+        var10 = var1.selected;
+        var _closure2_slot3 = var10;
+        var1 = function handlePress() {
+            _fun0001: for(var _fun0001_ip = 0; ; ) switch(_fun0001_ip) {
+case 0:
+                var2 = _closure2_slot2;
+                if(var2) { _fun0001_ip = 2; continue _fun0001 }
+case 3:
+                var3 = _closure2_slot1;
+                var2 = _closure2_slot0;
+                var1 = undefined;
+                var1 = var3.bind(var1)(var2);
+case 2:
+                var1 = undefined;
+                return var1;
+            }
+        };
+        var _closure2_slot10 = var1;
+        var2 = _closure1_slot8;
+        var4 = undefined;
+        var2 = var2.bind(var4)();
+        var _closure2_slot4 = var2;
+        var3 = var6.name;
+        var _closure2_slot5 = var3;
+        var3 = var6.emojiId;
+        var _closure2_slot6 = var3;
+        var3 = var6.emojiName;
+        var _closure2_slot7 = var3;
+        var8 = _closure1_slot0;
+        var7 = _closure1_slot2;
+        var3 = 6;
+        var3 = var7[var3];
+        var12 = var8.bind(var4)(var3);
+        var9 = var12.useStateFromStores;
+        var3 = _closure1_slot4;
+        var8 = new Array(1);
+        var8[0] = var3;
+        var3 = function() {
+            _fun0002: for(var _fun0002_ip = 0; ; ) switch(_fun0002_ip) {
+case 0:
+                var3 = _closure2_slot6;
+                var1 = null;
+                var3 = var1 != var3;
+                if(!var3) { _fun0002_ip = 4; continue _fun0002 }
+case 5:
+                var4 = _closure1_slot4;
+                var3 = var4.getUsableCustomEmojiById;
+                var2 = _closure2_slot6;
+                var1 = var3.bind(var4)(var2);
+case 4:
+                return var1;
+            }
+        };
+        var3 = var9.bind(var12)(var8, var3);
+        var _closure2_slot8 = var3;
+        var9 = _closure1_slot3;
+        var8 = var9.useMemo;
+        var3 = new Array(3);
+        var3[0] = var11;
+        var3[1] = var10;
+        var3[2] = var2;
+        var2 = function() {
+            _fun0003: for(var _fun0003_ip = 0; ; ) switch(_fun0003_ip) {
+case 0:
+                var1 = new Array(0);
+                var4 = var1.push;
+                var3 = _closure2_slot4;
+                var3 = var3.pill;
+                var3 = var4.bind(var1)(var3);
+                var3 = _closure2_slot3;
+                if(!var3) { _fun0003_ip = 6; continue _fun0003 }
+case 7:
+                var4 = var1.push;
+                var3 = _closure2_slot4;
+                var3 = var3.pillSelected;
+                var3 = var4.bind(var1)(var3);
+case 6:
+                var3 = _closure2_slot2;
+                if(!var3) { _fun0003_ip = 8; continue _fun0003 }
+case 9:
+                var3 = var1.push;
+                var2 = _closure2_slot4;
+                var2 = var2.pillDisabled;
+                var2 = var3.bind(var1)(var2);
+case 8:
+                return var1;
+            }
+        };
+        var2 = var8.bind(var9)(var2, var3);
+        var _closure2_slot9 = var2;
+        var3 = _closure1_slot6;
+        var2 = _closure1_slot1;
+        var1 = 7;
+        var1 = var7[var1];
+        var2 = var2.bind(var4)(var1);
+        var1 = {};
+        var6 = var6.id;
+        var1['tagId'] = var6;
+        var5 = function children(arg1) {
+            _fun0004: for(var _fun0004_ip = 0; ; ) switch(_fun0004_ip) {
+case 0:
+                var3 = arg1;
+                var7 = var3.ref;
+                var12 = null;
+                var2 = Object.create(var12);
+                var1 = 0;
+                var2['ref'] = var1;
+                var20 = {};
+                var19 = var3;
+                var18 = var2;
+                var19 = copyDataProperties(var20, var19, var18);
+                var4 = _closure1_slot7;
+                var2 = _closure1_slot0;
+                var3 = _closure1_slot2;
+                var1 = 8;
+                var1 = var3[var1];
+                var3 = undefined;
+                var1 = var2.bind(var3)(var1);
+                var2 = var1.PressableScale;
+                var1 = {};
+                var8 = _closure2_slot9;
+                var1['style'] = var8;
+                var8 = 'button';
+                var1['accessibilityRole'] = var8;
+                var8 = {};
+                var10 = _closure2_slot3;
+                var8['selected'] = var10;
+                var1['accessibilityState'] = var8;
+                var8 = _closure2_slot2;
+                var1['disabled'] = var8;
+                var1['ref'] = var7;
+                var20 = var1;
+                var6 = copyDataProperties(var20, var19);
+                var7 = _closure2_slot10;
+                var6 = 'onPress';
+                var1[5] = var7;
+                var6 = _closure2_slot8;
+                var7 = var12 != var6;
+                if(var7) { _fun0004_ip = 10; continue _fun0004 }
+case 11:
+                var6 = _closure2_slot7;
+                var7 = var12 != var6;
+case 10:
+                if(!var7) { _fun0004_ip = 12; continue _fun0004 }
+case 13:
+                var10 = _closure1_slot6;
+                var8 = _closure1_slot1;
+                var11 = _closure1_slot2;
+                var6 = 9;
+                var6 = var11[var6];
+                var8 = var8.bind(var3)(var6);
+                var6 = {};
+                var11 = _closure2_slot4;
+                var13 = var11.emoji;
+                var6['style'] = var13;
+                var13 = var11.textEmoji;
+                var6['textEmojiStyle'] = var13;
+                var11 = var11.imageEmoji;
+                var6['fastImageStyle'] = var11;
+                var11 = _closure2_slot8;
+                var13 = var12 != var11;
+                var11 = undefined;
+                if(!var13) { _fun0004_ip = 14; continue _fun0004 }
+case 15:
+                var14 = _closure1_slot1;
+                var15 = _closure1_slot2;
+                var13 = 10;
+                var13 = var15[var13];
+                var15 = var14.bind(var3)(var13);
+                var14 = var15.getEmojiURL;
+                var13 = {};
+                var16 = _closure2_slot8;
+                var17 = var16.id;
+                var13['id'] = var17;
+                var16 = var16.animated;
+                var13['animated'] = var16;
+                var16 = _closure1_slot5;
+                var13['size'] = var16;
+                var11 = var14.bind(var15)(var13);
+case 14:
+                var6['src'] = var11;
+                var11 = _closure2_slot7;
+                var12 = var12 != var11;
+                var11 = '';
+                if(!var12) { _fun0004_ip = 16; continue _fun0004 }
+case 17:
+                var11 = _closure2_slot7;
+case 16:
+                var6['name'] = var11;
+                var7 = var10.bind(var3)(var8, var6);
+case 12:
+                var6 = new Array(2);
+                var6[0] = var7;
+                var8 = _closure1_slot6;
+                var7 = _closure1_slot0;
+                var10 = _closure1_slot2;
+                var5 = 11;
+                var5 = var10[var5];
+                var5 = var7.bind(var3)(var5);
+                var7 = var5.Text;
+                var5 = {'variant': 'text-sm/semibold', 'color': 'mobile-text-heading-primary'};
+                var9 = _closure2_slot5;
+                var5['children'] = var9;
+                var5 = var8.bind(var3)(var7, var5);
+                var6[1] = var5;
+                var5 = 'children';
+                var1[4] = var6;
+                var1 = var4.bind(var3)(var2, var1);
+                return var1;
+            }
+        };
+        var1['children'] = var5;
+        var1 = var3.bind(var4)(var2, var1);
+        return var1;
+    };
+    var3['default'] = var2;
+    return var1;
+})();
