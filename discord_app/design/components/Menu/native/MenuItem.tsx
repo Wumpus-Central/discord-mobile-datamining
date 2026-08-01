@@ -1,0 +1,74 @@
+// === Module 13194: MenuItem ===
+
+// Module 13194 (MenuItem)
+import importAllResult from "noop";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+const require = arg1;
+let c3 = importAllResult;
+let closure_5 = createCacheKey.createStyles({ formIcon: { width: 20, height: 20 }, formLabel: { fontSize: 14, fontWeight: "500" } });
+const forwardRefResult = importAllResult.forwardRef((action, ref) => {
+  let IconComponent;
+  let disabled;
+  let iconSource;
+  let label;
+  let showIconFirst;
+  let style;
+  ({ label, IconComponent, iconSource, showIconFirst } = action);
+  if (showIconFirst === undefined) {
+    showIconFirst = false;
+  }
+  ({ disabled, style } = action);
+  if (disabled === undefined) {
+    disabled = false;
+  }
+  action = action.action;
+  let menuClose;
+  const tmp = callback();
+  menuClose = importAllResult.useContext(action(13192).MenuContext).menuClose;
+  if (null != IconComponent) {
+    let tmp3 = <IconComponent size="sm" />;
+  } else {
+    tmp3 = null;
+    if (null != iconSource) {
+      let obj = { source: null, style: null };
+      obj[0] = iconSource;
+      obj[1] = tmp.formIcon;
+      tmp3 = jsx(menuClose(4606), { source: null, style: null });
+    }
+  }
+  obj = { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null };
+  let tmp10 = null;
+  if (null != iconSource) {
+    tmp10 = null;
+    if (showIconFirst) {
+      tmp10 = tmp3;
+    }
+  }
+  obj[4] = tmp10;
+  let tmp11 = null;
+  if (null != iconSource) {
+    tmp11 = null;
+    if (!showIconFirst) {
+      tmp11 = tmp3;
+    }
+  }
+  obj[5] = tmp11;
+  let tmp7Result = label;
+  if (typeof label !== "__FORMATJS_LISTFORMAT_DATA__") {
+    obj = { text: null, style: null };
+    obj[0] = label;
+    obj[1] = tmp.formLabel;
+    tmp7Result = tmp7(menuClose(5237), obj);
+  }
+  obj[6] = tmp7Result;
+  obj[7] = function onPress() {
+    action();
+    menuClose();
+  };
+  return jsx(menuClose(5217), { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null });
+});
+const result = require("createCacheKey").fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");
+
+export const MenuItem = forwardRefResult;

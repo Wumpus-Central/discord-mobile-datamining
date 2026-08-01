@@ -1,0 +1,119 @@
+// === Module 371: _isNativeReflectConstruct ===
+
+// Module 371 (_isNativeReflectConstruct)
+import _classCallCheck from "_classCallCheck";
+import _possibleConstructorReturn from "_possibleConstructorReturn";
+import _getPrototypeOf from "_getPrototypeOf";
+import _get from "_get";
+import importDefaultResult from "_createClass";
+
+const AnimatedModulo = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    let closure_0 = !callResult;
+    function _isNativeReflectConstruct() {
+      return closure_0;
+    }
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+class AnimatedModulo {
+  constructor(arg0, arg1, arg2) {
+    self = this;
+    tmp = _isNativeReflectConstruct(this, AnimatedModulo);
+    items = [];
+    items[0] = importDefault;
+    tmp2 = __esModule;
+    obj = __esModule(AnimatedModulo);
+    tmp3 = __esModule;
+    if (_isNativeReflectConstruct()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._a = global;
+    tmp3Result._modulus = arg1;
+    return tmp3Result;
+  }
+}
+require("_inherits")(AnimatedModulo, require("_isNativeReflectConstruct"));
+let items = [
+  {
+    key: "__makeNative",
+    value: function __makeNative(arg0) {
+      const _a = this._a;
+      _a.__makeNative(arg0);
+      const self = this;
+      let fn;
+      fn = callback3(callback2(self.prototype), "__makeNative", this);
+      if (typeof fn !== "disabledUntil") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      fn(items);
+    }
+  },
+  {
+    key: "__getValue",
+    value: function __getValue() {
+      const _a = this._a;
+      return (_a.__getValue() % this._modulus + this._modulus) % this._modulus;
+    }
+  },
+  {
+    key: "interpolate",
+    value: function interpolate(arg0) {
+      return new AnimatedModulo(363)(this, arg0);
+    }
+  },
+  {
+    key: "__attach",
+    value: function __attach() {
+      const _a = this._a;
+      _a.__addChild(this);
+      const self = this;
+      let fn;
+      fn = callback3(callback2(self.prototype), "__attach", this);
+      if (typeof fn !== "disabledUntil") {
+        fn = (items) => fn.apply(self, items);
+      }
+      fn([]);
+    }
+  },
+  {
+    key: "__detach",
+    value: function __detach() {
+      const _a = this._a;
+      _a.__removeChild(this);
+      const self = this;
+      let fn;
+      fn = callback3(callback2(self.prototype), "__detach", this);
+      if (typeof fn !== "disabledUntil") {
+        fn = (items) => fn.apply(self, items);
+      }
+      fn([]);
+    }
+  },
+  {
+    key: "__getNativeConfig",
+    value: function __getNativeConfig() {
+      const _a = this._a;
+      return { type: "modulus", input: _a.__getNativeTag(), modulus: this._modulus, debugID: this.__getDebugID() };
+    }
+  }
+];
+
+export default importDefaultResult(AnimatedModulo, items);

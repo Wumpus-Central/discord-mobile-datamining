@@ -1,0 +1,83 @@
+// === Module 9192: ChangeEmailWarning ===
+
+// Module 9192 (ChangeEmailWarning)
+import noop from "noop";
+import get_ActivityIndicator from "set";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import { COMMON_SCAMS_EDUCATION_HC_ARTICLE as closure_7 } from "ChangeEmailReasons";
+import { AnalyticEvents } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let c10;
+let c4;
+let c5;
+let c9;
+const require = arg1;
+({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
+({ jsx: c9, jsxs: c10 } = jsxProd);
+createCacheKey = { container: null, title: null, body: null, buttonContainer: null };
+createCacheKey = { flex: 1, padding: require("Themes").space.PX_16, alignItems: "center", justifyContent: "center" };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { marginTop: require("Themes").space.PX_16 };
+let obj1 = { marginTop: require("Themes").space.PX_16 };
+createCacheKey[2] = { marginTop: require("Themes").space.PX_8, textAlign: "center" };
+let obj2 = { marginTop: require("Themes").space.PX_8, textAlign: "center" };
+createCacheKey[3] = { flexDirection: "row", gap: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_16 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj3 = { flexDirection: "row", gap: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_16 };
+const result = require("mergeGuildAvatar").fileFinishedImporting("modules/verification/native/components/ChangeEmailWarning.tsx");
+
+export default function ChangeEmailWarning(changeEmailReason) {
+  changeEmailReason = changeEmailReason.changeEmailReason;
+  let navigation;
+  const tmp = createCacheKey();
+  let obj = changeEmailReason(1480);
+  navigation = obj.useNavigation();
+  let obj1 = changeEmailReason(589);
+  const items = [mergeGuildAvatar];
+  const items1 = [navigation, changeEmailReason];
+  const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
+  let tmp7 = null;
+  if (null != stateFromStores) {
+    obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+    obj = { style: null, children: null };
+    obj[0] = tmp.container;
+    const items2 = [callback(tmp2(6790).TrafficConeSpotIllustration, {}), , , ];
+    obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+    obj1[0] = tmp.title;
+    const intl = tmp2(1236).intl;
+    obj1[4] = intl.string(tmp2(1236).t.hhR7gX);
+    items2[1] = callback(tmp2(4189).Text, obj1);
+    const obj2 = { style: null, accessibilityRole: "header", variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
+    obj2[0] = tmp.body;
+    const intl2 = tmp2(1236).intl;
+    const obj3 = { hcArticle: null };
+    obj3[0] = closure_7;
+    const items3 = [intl2.format(tmp2(1236).t.rqWXUf, obj3), "\n\n", ];
+    const intl3 = tmp2(1236).intl;
+    items3[2] = intl3.string(tmp2(1236).t["3LW10C"]);
+    obj2[4] = items3;
+    items2[2] = callback2(tmp2(4189).Text, obj2);
+    const obj4 = { style: null, children: null };
+    obj4[0] = tmp.buttonContainer;
+    const obj5 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
+    const intl4 = tmp2(1236).intl;
+    obj5[2] = intl4.string(tmp2(1236).t.rwTBFs);
+    obj5[3] = tmp6;
+    const items4 = [callback(tmp2(4604).Button, obj5), ];
+    const obj6 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
+    const intl5 = tmp2(1236).intl;
+    obj6[2] = intl5.string(tmp2(1236).t["ETE/oC"]);
+    obj6[3] = function onPress() {
+      return navigation(table[16]).close();
+    };
+    items4[1] = callback(tmp2(4604).Button, obj6);
+    obj4[1] = items4;
+    items2[3] = callback2(closure_4, obj4);
+    obj[1] = items2;
+    obj[2] = callback2(closure_4, obj);
+    tmp7 = callback(closure_5, obj);
+  }
+  return tmp7;
+};

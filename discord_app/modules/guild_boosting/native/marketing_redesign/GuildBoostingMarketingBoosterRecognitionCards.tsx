@@ -1,0 +1,64 @@
+// === Module 12677: Card ===
+
+// Module 12677 (Card)
+import "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+
+let c4;
+let c5;
+const require = arg1;
+function Card(arg0) {
+  let IconComponent;
+  let children;
+  const tmp = createCacheKey();
+  let obj = { style: tmp.card, children: null };
+  obj = { style: tmp.iconContainer, children: null };
+  obj = { size: "lg", color: importDefault(712).unsafe_rawColors.GUILD_BOOSTING_PINK };
+  ({ IconComponent, children } = arg0);
+  obj[1] = callback(IconComponent, obj);
+  const items = [callback(View, obj), callback(require(4189) /* Text */.Text, { style: tmp.description, variant: "text-sm/medium", children })];
+  obj[1] = items;
+  return callback2(View, obj);
+}
+({ jsx: c4, jsxs: c5 } = jsxProd);
+createCacheKey = { card: null, description: null, iconContainer: null };
+createCacheKey = { minHeight: 124, width: 172, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: require("Themes").radii.sm, paddingHorizontal: 13, paddingVertical: 16 };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { textAlign: "center" };
+createCacheKey[2] = { height: 30, marginBottom: 10 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles({ container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" }, title: { textAlign: "center", marginHorizontal: 34 }, recognitionCardsContainer: { marginTop: 15, display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap" } });
+const result = require("jsxProd").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx");
+
+export default function GuildBoostingMarketingBoosterRecognitionCards() {
+  const tmp = callback3();
+  let obj = { style: tmp.container, children: null };
+  obj = { variant: "heading-xl/extrabold", style: tmp.title, children: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.IzKs3o);
+  const items = [callback(require(4189) /* Text */.Heading, obj), ];
+  obj = { style: tmp.recognitionCardsContainer, children: null };
+  const obj1 = { icon: importDefault(12678), IconComponent: require(6621) /* BoostGemIcon */.BoostGemIcon, children: null };
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  obj1[2] = intl2.string(require(1236) /* getSystemLocale */.t.TZigSO);
+  const items1 = [callback(Card, obj1), , , ];
+  const obj2 = { icon: importDefault(12679), IconComponent: require(12575) /* BoostTier3Icon */.BoostTier3Icon, children: null };
+  const intl3 = require(1236) /* getSystemLocale */.intl;
+  obj2[2] = intl3.string(require(1236) /* getSystemLocale */.t.hjQuV2);
+  items1[1] = callback(Card, obj2);
+  const obj3 = { icon: importDefault(12680), IconComponent: require(8290) /* ShieldUserIcon */.ShieldUserIcon, children: null };
+  const intl4 = require(1236) /* getSystemLocale */.intl;
+  obj3[2] = intl4.string(require(1236) /* getSystemLocale */.t["2RUcaM"]);
+  items1[2] = callback(Card, obj3);
+  const obj4 = { icon: importDefault(12681), IconComponent: require(8681) /* HeartIcon */.HeartIcon, children: null };
+  const intl5 = require(1236) /* getSystemLocale */.intl;
+  obj4[2] = intl5.string(require(1236) /* getSystemLocale */.t.bJoZKV);
+  items1[3] = callback(Card, obj4);
+  obj[1] = items1;
+  items[1] = callback2(View, obj);
+  obj[1] = items;
+  return callback2(View, obj);
+};

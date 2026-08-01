@@ -1,0 +1,353 @@
+// === Module 13939: FamilyCenterActivityCardPrefaceText ===
+
+// Module 13939 (FamilyCenterActivityCardPrefaceText)
+import importAllResult from "asyncRequireImpl";
+import { View } from "module_4399";
+import items from "items";
+import { AnalyticEvents } from "ME";
+import jsxProd from "FamilyCenterUsernameHeader";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+import createCacheKey from "createCacheKey";
+
+let c5;
+let c9;
+let closure_6;
+let metroImportAll;
+let require = arg1;
+function FamilyCenterActivityCardPrefaceText() {
+  const tmp = callback3();
+  const tmp4 = importDefault(6259)();
+  let obj = require(6258) /* useUserIdsForLinkStatus */;
+  const activeLinkUserIds = obj.useActiveLinkUserIds();
+  let obj1 = require(5858) /* getEmptyActivityFormatter */;
+  const activityWindowTimestampFormatter = obj1.getActivityWindowTimestampFormatter(tmp4);
+  let obj2 = require(6258) /* useUserIdsForLinkStatus */;
+  const activityWindowTimeStamp = obj2.useActivityWindowTimeStamp(activityWindowTimestampFormatter);
+  let obj3 = require(11127) /* useAgeSpecificText */;
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj = { activeLinks: activeLinkUserIds.length };
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  const ageSpecificText = obj3.useAgeSpecificText(intl.formatToPlainString(importDefault(2225).tazvHQ, obj), intl2.string(importDefault(2225).KrLnkE));
+  obj = { style: tmp.container, children: null };
+  let tmp12 = null;
+  if (!tmp4) {
+    obj1 = { color: null, source: null, style: null };
+    obj1[0] = tmp.icon.color;
+    obj1[1] = tmp2(13940);
+    obj1[2] = tmp.icon;
+    tmp12 = callback(tmp5(1297).Icon, obj1);
+  }
+  const items = [tmp12, , ];
+  obj2 = { style: tmp.text, variant: "text-xs/semibold", color: "text-subtle", children: null };
+  let tmp15 = ageSpecificText;
+  if (activeLinkUserIds.length > 1) {
+    tmp15 = ageSpecificText;
+    if (tmp4) {
+      tmp15 = activityWindowTimeStamp;
+    }
+  }
+  obj2[3] = tmp15;
+  items[1] = callback(require(4189) /* Text */.Text, obj2);
+  obj3 = {
+    onPress() {
+      callback2(paths[17]).pushLazy(callback(paths[19])(paths[18], paths.paths));
+    },
+    children: null
+  };
+  const formatToPlainStringResult = intl.formatToPlainString(importDefault(2225).tazvHQ, obj);
+  const tmp10 = closure_9;
+  const tmp11 = View;
+  const obj4 = { color: tmp.icon.color, source: null, size: null, style: null };
+  obj4[1] = importDefault(6553);
+  obj4[2] = require(1297) /* Button */.Icon.Sizes.EXTRA_SMALL;
+  obj4[3] = tmp.icon;
+  obj3[1] = callback(require(1297) /* Button */.Icon, obj4);
+  items[2] = callback(importDefault(8344), obj3);
+  obj[1] = items;
+  return tmp10(tmp11, obj);
+}
+function FamilyCenterHeaderSubText() {
+  const tmp2 = importDefault(6259)();
+  let obj = require(6258) /* useUserIdsForLinkStatus */;
+  const activeLinkUserIds = obj.useActiveLinkUserIds();
+  const activityWindowTimestampFormatter = require(5858) /* getEmptyActivityFormatter */.getActivityWindowTimestampFormatter(tmp2);
+  require(6258) /* useUserIdsForLinkStatus */;
+  if (!tmp2) {
+    obj = { variant: "text-sm/medium", color: "text-muted", children: null };
+    obj[2] = tmp6;
+    let tmp7 = callback(require(4189) /* Text */.Text, obj);
+  } else {
+    tmp7 = null;
+  }
+  return tmp7;
+}
+class FamilyCenterActivityCardHeader {
+  constructor() {
+    obj = require("useUserIdsForLinkStatus");
+    activeLinkUserIds = obj.useActiveLinkUserIds();
+    tmp = require("useIsInAdultAgeGroup")();
+    obj2 = require("useSelectedTeenUser");
+    selectedTeenUser = obj2.useSelectedTeenUser();
+    if (undefined === selectedTeenUser) {
+      return null;
+    } else {
+      if (!tmp) {
+        tmp3 = jsx;
+        tmp4 = View;
+        obj = { children: null };
+        tmp5 = f58285;
+        obj1 = { user: null };
+        obj1[0] = selectedTeenUser;
+        obj[0] = jsx(f58285, obj1);
+        tmp6 = jsx(View, obj);
+        tmp9 = tmp6;
+      } else {
+        num = 1;
+      }
+      tmp7 = jsx;
+      tmp8 = FamilyCenterActivityCardAccountSelect;
+      tmp6 = jsx(FamilyCenterActivityCardAccountSelect, {});
+    }
+    return;
+  }
+}
+class FamilyCenterActivityCardAccountSelect {
+  constructor() {
+    tmp = FamilyCenterActivityCardAccount();
+    tmp2 = useActiveLinkUsers;
+    tmp3 = selectTeenUser;
+    obj = require("useUserIdsForLinkStatus");
+    activeLinkUsers = obj.useActiveLinkUsers();
+    useActiveLinkUsers = activeLinkUsers;
+    obj2 = require("useSelectedTeenUser");
+    selectedTeenUser = obj2.useSelectedTeenUser();
+    closure_1 = selectedTeenUser;
+    obj3 = require("useFamilyCenterActions");
+    obj = {
+      onSuccess() {
+            return selectedTeenUser(selectTeenUser[24]).hideActionSheet(closure_10);
+          },
+      onError() {
+            const intl = activeLinkUsers(selectTeenUser[11]).intl;
+            return activeLinkUsers(selectTeenUser[25]).presentFailedToast(intl.string(selectedTeenUser(selectTeenUser[12]).Wu8BK2));
+          }
+    };
+    selectTeenUser = obj3.useFamilyCenterActions(obj).selectTeenUser;
+    items = [];
+    items[0] = activeLinkUsers;
+    f92491 = f92491.useMemo(() => activeLinkUsers.map((id) => {
+      const obj = { label: null, value: null };
+      const name = callback(4032).getName(id);
+      const obj2 = callback(4032);
+      obj[0] = "" + name + " (" + callback(4032).getUserTag(id) + ")";
+      obj[1] = id.id;
+      return obj;
+    }), items);
+    tmp6 = null;
+    if (undefined !== selectedTeenUser) {
+      tmp7 = jsx;
+      tmp8 = View;
+      obj1 = { children: null };
+      tmp9 = jsxs;
+      tmp10 = closure_1;
+      obj2 = { style: null, accessibilityRole: "spinbutton", onPress: null, children: null };
+      obj2[0] = tmp.touch;
+      obj2[2] = function onPress() {
+        if (undefined !== selectedTeenUser) {
+          let obj = selectedTeenUser(selectTeenUser[24]);
+          obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+          const intl = activeLinkUsers(selectTeenUser[11]).intl;
+          obj[0] = intl.string(selectedTeenUser(selectTeenUser[12]).vORl9Q);
+          obj[1] = closure_3;
+          obj[2] = function onItemSelect(arg0) {
+            let tmp = null != arg0;
+            if (tmp) {
+              tmp = arg0 !== id.id;
+            }
+            if (tmp) {
+              callback(arg0);
+              let obj = outer1_1(outer1_2[28]);
+              obj = { action: null };
+              obj[0] = outer1_5.SelectTeen;
+              obj.track(outer1_7.FAMILY_CENTER_ACTION, obj);
+            }
+            setImmediate(() => {
+              callback(table[24]).hideActionSheet(closure_10);
+            });
+          };
+          obj[3] = tmp.id;
+          obj.openLazy(activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths), outer1_10, obj);
+          const tmp5 = activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths);
+        }
+      };
+      tmp12 = f58285;
+      obj3 = { user: null, inSelector: true };
+      obj3[0] = selectedTeenUser;
+      tmp11 = require("render");
+      items1 = [, ];
+      items1[0] = jsx(f58285, obj3);
+      obj4 = { style: null, size: null, source: null };
+      obj4[0] = tmp.icon;
+      obj4[1] = require("Button").Icon.Sizes.MEDIUM;
+      obj4[2] = require("registerAsset");
+      items1[1] = jsx(require("Button").Icon, obj4);
+      obj2[3] = items1;
+      obj1[0] = jsxs(tmp11, obj2);
+      tmp6 = jsx(View, obj1);
+    }
+    return tmp6;
+  }
+}
+let c3 = importAllResult;
+({ FamilyCenterAction: c5, TeenActionDisplayType: closure_6 } = items);
+({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+const FamilyCenterTeenAccountSelect = "FamilyCenterTeenAccountSelect";
+let obj = { container: { display: "flex", flexDirection: "row", alignItems: "center" }, icon: null, text: null };
+obj = { color: require("Themes").colors.ICON_SUBTLE, width: require("Themes").space.PX_16, height: require("Themes").space.PX_16 };
+obj[1] = obj;
+createCacheKey = { marginHorizontal: require("Themes").space.PX_4 };
+obj[2] = createCacheKey;
+let closure_11 = createCacheKey.createStyles(obj);
+let obj2 = { header: null, avatar: null, avatarContainer: null, userHeader: null, nonSelectorHeader: null };
+obj2[0] = { display: "flex", flexDirection: "row", alignItems: "center", padding: require("Themes").space.PX_12, flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: require("Themes").radii.md, borderTopRightRadius: require("Themes").radii.md };
+let obj4 = { borderRadius: null, backgroundColor: null };
+obj4[0] = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2;
+obj4[1] = require("Themes").colors.BACKGROUND_SURFACE_HIGH;
+obj2[1] = obj4;
+createCacheKey = { marginRight: require("Themes").space.PX_12, alignItems: "flex-start" };
+obj2[2] = createCacheKey;
+let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", padding: require("Themes").space.PX_12, flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: require("Themes").radii.md, borderTopRightRadius: require("Themes").radii.md };
+obj2[3] = { display: "flex", flexDirection: "column", width: "100%", paddingRight: require("Themes").space.PX_16 };
+const obj6 = { display: "flex", flexDirection: "column", width: "100%", paddingRight: require("Themes").space.PX_16 };
+obj2[4] = { flex: 1, paddingRight: require("Themes").space.PX_16 };
+let closure_14 = createCacheKey.createStyles(obj2);
+const memoResult = importAllResult.memo((arg0) => {
+  let inSelector;
+  let user;
+  ({ user, inSelector } = arg0);
+  const tmp = callback4();
+  const AvatarSizes = require(1297) /* Button */.AvatarSizes;
+  if (inSelector) {
+    let NORMAL = AvatarSizes.SMALL;
+    let tmp4 = tmp2;
+  } else {
+    NORMAL = AvatarSizes.NORMAL;
+    tmp4 = tmp2;
+  }
+  let obj = { style: tmp.header, children: null };
+  obj = { style: tmp.avatarContainer, children: callback(tmp4(1297).Avatar, obj) };
+  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 428.309 };
+  obj[5] = NORMAL;
+  const items = [callback(View, obj), ];
+  const items1 = [tmp.userHeader, ];
+  let nonSelectorHeader;
+  if (!inSelector) {
+    nonSelectorHeader = tmp.nonSelectorHeader;
+  }
+  const obj1 = { style: items1, children: null };
+  items1[1] = nonSelectorHeader;
+  const items2 = [callback(importDefault(13942), { user }), callback(FamilyCenterHeaderSubText, {})];
+  obj1[1] = items2;
+  items[1] = closure_9(View, obj1);
+  obj[1] = items;
+  return closure_9(View, obj);
+});
+memoResult.displayName = "FamilyCenterActivityCardAccount";
+const obj8 = { touch: null, icon: null };
+const obj7 = { flex: 1, paddingRight: require("Themes").space.PX_16 };
+const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
+obj8[0] = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST };
+const obj9 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-start", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST };
+items = [{ rotate: "90deg" }];
+obj8[1] = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, width: require("Themes").space.PX_24, height: require("Themes").space.PX_24, transform: items, marginHorizontal: require("Themes").space.PX_8 };
+let closure_17 = createCacheKey.createStyles(obj8);
+const obj11 = { card: null, preface: null, container: null, content: null, totals: null, first: null, other: null, activities: null, settingsControls: null };
+createCacheKey = { marginTop: require("Themes").space.PX_16 };
+obj11[0] = createCacheKey;
+const obj10 = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, width: require("Themes").space.PX_24, height: require("Themes").space.PX_24, transform: items, marginHorizontal: require("Themes").space.PX_8 };
+obj11[1] = { display: "flex", marginBottom: require("Themes").space.PX_12 };
+const obj13 = { display: "flex", marginBottom: require("Themes").space.PX_12 };
+obj11[2] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.md };
+const obj14 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.md };
+obj11[3] = { padding: require("Themes").space.PX_16, display: "flex", flexDirection: "column", gap: require("Themes").space.PX_32 };
+createCacheKey = { display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", gap: require("Themes").space.PX_8 };
+obj11[4] = createCacheKey;
+obj11[5] = { width: "100%" };
+obj11[6] = { width: "48.5%" };
+const obj15 = { padding: require("Themes").space.PX_16, display: "flex", flexDirection: "column", gap: require("Themes").space.PX_32 };
+obj11[7] = { display: "flex", flexDirection: "column", gap: require("Themes").space.PX_32 };
+const obj17 = { display: "flex", flexDirection: "column", gap: require("Themes").space.PX_32 };
+obj11[8] = { marginTop: require("Themes").space.PX_24 };
+let closure_19 = createCacheKey.createStyles(obj11);
+const obj18 = { marginTop: require("Themes").space.PX_24 };
+const result = require("items").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityCard.tsx");
+
+export default function FamilyCenterActivityCard() {
+  const tmp = callback6();
+  const require = tmp;
+  let obj = require(13943) /* useSelectedTeenUser */;
+  const selectedTeenUser = obj.useSelectedTeenUser();
+  require(13944) /* useActionsForDisplayType */;
+  if (undefined === selectedTeenUser) {
+    return null;
+  } else {
+    const sortedActivityTypeConfigs = tmp2(5858).getSortedActivityTypeConfigs();
+    obj = { style: null, children: null };
+    obj[0] = tmp.card;
+    obj = { style: null, children: null };
+    obj[0] = tmp.preface;
+    obj[1] = callback(FamilyCenterActivityCardPrefaceText, {});
+    const items = [callback(View, obj), , ];
+    const obj1 = { style: null, children: null };
+    obj1[0] = tmp.container;
+    const items1 = [callback(FamilyCenterActivityCardHeader, {}), ];
+    const obj2 = { style: null, children: null };
+    obj2[0] = tmp.content;
+    const obj3 = { style: null, children: null };
+    obj3[0] = tmp.totals;
+    const found = sortedActivityTypeConfigs.filter((arg0) => {
+      let tmp;
+      [tmp] = arg0;
+      return tmp !== constants.GIFTS;
+    });
+    obj3[1] = found.map((arg0, arg1) => {
+      let tmp;
+      [tmp, ] = arg0;
+      if (0 === arg1) {
+        let other = tmp.first;
+      } else {
+        other = tmp.other;
+      }
+      return outer1_8(outer1_4, { style: other, children: outer1_8(outer1_1(outer1_2[31]), { displayType: tmp }) }, "total-" + tmp);
+    });
+    const items2 = [callback(View, obj3), callback(importDefault(13946), {}), ];
+    let tmp11Result = null;
+    if (tmp6) {
+      const obj4 = { style: null, children: null };
+      obj4[0] = tmp.activities;
+      obj4[1] = sortedActivityTypeConfigs.map((arg0) => {
+        let tmp;
+        [tmp, ] = arg0;
+        return callback2(callback(table[33]), { displayType }, "section-" + displayType);
+      });
+      tmp11Result = tmp11(tmp10, obj4);
+    }
+    items2[2] = tmp11Result;
+    obj2[1] = items2;
+    items1[1] = closure_9(View, obj2);
+    obj1[1] = items1;
+    items[1] = closure_9(View, obj1);
+    const obj5 = { style: null, children: null };
+    obj5[0] = tmp.settingsControls;
+    obj5[1] = callback(importDefault(13956), {});
+    items[2] = callback(View, obj5);
+    obj[1] = items;
+    return closure_9(View, obj);
+  }
+  tmp2 = require;
+};
+export const FamilyCenterActivityCardAccount = memoResult;
+export { FamilyCenterActivityCardHeader };
+export { FamilyCenterActivityCardAccountSelect };

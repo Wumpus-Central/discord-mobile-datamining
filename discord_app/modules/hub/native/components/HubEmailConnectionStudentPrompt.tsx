@@ -1,0 +1,75 @@
+// === Module 11844: HubEmailConnectionStudentPrompt ===
+
+// Module 11844 (HubEmailConnectionStudentPrompt)
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
+import ME from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importDefaultResult from "createTextStyle";
+
+let Fonts;
+let c3;
+let c4;
+let closure_6;
+let error;
+let metroImportAll;
+const require = arg1;
+({ View: c3, Image: c4 } = get_ActivityIndicator);
+({ AnalyticEvents: closure_6, Fonts } = ME);
+({ jsx: error, jsxs: metroImportAll } = jsxProd);
+createCacheKey = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }, header: null, row: null };
+createCacheKey = {};
+const merged = Object.assign(require("createTextStyle")(Fonts.PRIMARY_BOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+createCacheKey.textAlign = "center";
+createCacheKey.marginBottom = 24;
+createCacheKey[1] = createCacheKey;
+createCacheKey[2] = { borderRadius: require("Themes").radii.sm, marginBottom: 8, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderRadius: require("Themes").radii.sm, marginBottom: 8, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+const result = require("HubEmailConnectionSteps").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionStudentPrompt.tsx");
+
+export default function HubEmailConnectionStudentPrompt(onClose) {
+  onClose = onClose.onClose;
+  const invite = onClose.invite;
+  let dependencyMap;
+  const tmp = createCacheKey();
+  let obj = onClose(1480);
+  dependencyMap = obj.useNavigation();
+  obj = { children: null };
+  obj = { style: tmp.container, children: null };
+  const obj1 = { style: tmp.header, children: null };
+  const intl = onClose(1236).intl;
+  obj1[1] = intl.string(onClose(1236).t["+/Pv0h"]);
+  const items = [callback(onClose(1297).LegacyText, obj1), , ];
+  const obj2 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, subLabel: null, onPress: null };
+  const obj3 = { source: null };
+  obj3[0] = invite(11845);
+  obj2[1] = callback(closure_4, obj3);
+  obj2[2] = invite(5217).Arrow;
+  const intl2 = onClose(1236).intl;
+  obj2[3] = intl2.string(onClose(1236).t["a7a/D+"]);
+  const intl3 = onClose(1236).intl;
+  obj2[4] = intl3.string(onClose(1236).t.Gsegk8);
+  obj2[5] = function onPress() {
+    let obj = invite(arr[14]);
+    obj.track(outer1_6.HUB_STUDENT_PROMPT_CLICKED);
+    obj = { onClose, invite };
+    arr = arr.push(outer1_5.VERIFY_EMAIL, obj);
+  };
+  items[1] = callback(invite(5217), obj2);
+  const obj4 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
+  const obj5 = { source: null };
+  const tmp2 = invite(5217);
+  obj5[0] = invite(11846);
+  obj4[1] = callback(closure_4, obj5);
+  obj4[2] = invite(5217).Arrow;
+  const intl4 = onClose(1236).intl;
+  obj4[3] = intl4.string(onClose(1236).t.GLG9n4);
+  obj4[4] = onClose;
+  items[2] = callback(invite(5217), obj4);
+  obj[1] = items;
+  obj[0] = callback2(closure_3, obj);
+  return callback(onClose(11843).HubEmailConnectionScreen, obj);
+};

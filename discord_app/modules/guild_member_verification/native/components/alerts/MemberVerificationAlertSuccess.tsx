@@ -1,0 +1,70 @@
+// === Module 9158: MemberVerificationAlertSuccess ===
+
+// Module 9158 (MemberVerificationAlertSuccess)
+import "noop";
+import { View } from "get ActivityIndicator";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let closure_6;
+let error;
+const require = arg1;
+({ jsx: closure_6, jsxs: error } = jsxProd);
+let closure_8 = createCacheKey.createStyles({ alert: { marginTop: 120 }, header: { marginTop: 40, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" }, illustrationContainer: { position: "absolute", display: "flex", flexDirection: "column", alignItems: "center", left: 0, right: 0, top: -220 }, illustration: { height: 246, width: 240 } });
+const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx");
+
+export default function MemberVerificationAlertSuccess(guildId) {
+  guildId = guildId.guildId;
+  const handleConfirmAndAck = guildId.handleConfirmAndAck;
+  const merged = Object.assign(guildId, Object.create(null));
+  const tmp2 = callback3();
+  let obj = guildId(merged[6]);
+  const items = [createGuildRecordFromRust];
+  const items1 = [guildId];
+  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(guildId), items1);
+  guildId(merged[6]);
+  [][0] = maybeApplyNoTextColorForLightCustomTheme;
+  if (null == stateFromStores) {
+    return null;
+  } else {
+    function onConfirm() {
+      handleConfirmAndAck();
+      const onClose = merged.onClose;
+      if (onClose != null) {
+        onClose();
+      }
+    }
+    obj = {};
+    const merged1 = Object.assign(merged);
+    const intl = tmp3(tmp4[8]).intl;
+    obj.confirmText = intl.string(tmp3(tmp4[8]).t.NuzmOA);
+    obj.style = tmp2.alert;
+    obj.onCancel = onConfirm;
+    obj.onConfirm = onConfirm;
+    obj = { style: null, children: null };
+    obj[0] = tmp2.illustrationContainer;
+    const obj1 = { source: null, autoPlay: null, style: null };
+    const tmp10 = handleConfirmAndAck(tmp4[7]);
+    obj1[0] = tmp3(tmp4[10]);
+    obj1[1] = !tmp7;
+    obj1[2] = tmp2.illustration;
+    obj[1] = callback(handleConfirmAndAck(tmp4[9]), obj1);
+    const items2 = [callback(View, obj), , ];
+    const obj2 = { style: null, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+    obj2[0] = tmp2.header;
+    const intl2 = tmp3(tmp4[8]).intl;
+    const obj3 = { guildName: null };
+    obj3[0] = stateFromStores.name;
+    obj2[3] = intl2.format(tmp3(tmp4[8]).t["7hhNEn"], obj3);
+    items2[1] = callback(tmp3(tmp4[11]).Heading, obj2);
+    const obj4 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
+    obj4[0] = tmp2.text;
+    const intl3 = tmp3(tmp4[8]).intl;
+    obj4[3] = intl3.string(tmp3(tmp4[8]).t.nwpqyc);
+    items2[2] = callback(tmp3(tmp4[11]).Text, obj4);
+    obj.children = items2;
+    return callback2(tmp10, obj);
+  }
+};

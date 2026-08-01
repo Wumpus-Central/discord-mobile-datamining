@@ -1,0 +1,29 @@
+// === Module 272: get BatchedBridge ===
+
+// Module 272 (get BatchedBridge)
+const obj = {};
+Object.defineProperty(obj, "BatchedBridge", { get: () => require(39) /* MessageQueue */.default, set: undefined });
+Object.defineProperty(obj, "ExceptionsManager", { get: () => require(189) /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "Platform", { get: () => require(273) /* get Version */.default, set: undefined });
+Object.defineProperty(obj, "RCTEventEmitter", { get: () => require(276) /* MessageQueue */.default, set: undefined });
+Object.defineProperty(obj, "ReactNativeViewConfigRegistry", { get: () => require(66) /* map */, set: undefined });
+Object.defineProperty(obj, "TextInputState", { get: () => require(144) /* set */.default, set: undefined });
+Object.defineProperty(obj, "UIManager", { get: () => require(68) /* measure */.default, set: undefined });
+Object.defineProperty(obj, "deepDiffer", { get: () => require(147) /* deepDiffer */.default, set: undefined });
+Object.defineProperty(obj, "deepFreezeAndThrowOnMutationInDev", { get: () => require(277) /* deepFreezeAndThrowOnMutationInDev */.default, set: undefined });
+Object.defineProperty(obj, "flattenStyle", { get: () => require(148) /* flattenStyle */.default, set: undefined });
+Object.defineProperty(obj, "ReactFiberErrorDialog", { get: () => require(278) /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "legacySendAccessibilityEvent", { get: () => require(279) /* legacySendAccessibilityEvent */.default, set: undefined });
+Object.defineProperty(obj, "RawEventEmitter", { get: () => require(280) /* EventEmitter */.default, set: undefined });
+Object.defineProperty(obj, "CustomEvent", { get: () => require(152) /* _isNativeReflectConstruct */.default, set: undefined });
+Object.defineProperty(obj, "createAttributePayload", { get: () => require(146) /* restoreDeletedValuesInNestedArray */.create, set: undefined });
+Object.defineProperty(obj, "diffAttributePayloads", { get: () => require(146) /* restoreDeletedValuesInNestedArray */.diff, set: undefined });
+Object.defineProperty(obj, "createPublicRootInstance", { get: () => require(281) /* createPublicRootInstance */.createPublicRootInstance, set: undefined });
+Object.defineProperty(obj, "createPublicInstance", { get: () => require(281) /* createPublicRootInstance */.createPublicInstance, set: undefined });
+Object.defineProperty(obj, "createPublicTextInstance", { get: () => require(281) /* createPublicRootInstance */.createPublicTextInstance, set: undefined });
+Object.defineProperty(obj, "getNativeTagFromPublicInstance", { get: () => require(281) /* createPublicRootInstance */.getNativeTagFromPublicInstance, set: undefined });
+Object.defineProperty(obj, "getNodeFromPublicInstance", { get: () => require(281) /* createPublicRootInstance */.getNodeFromPublicInstance, set: undefined });
+Object.defineProperty(obj, "getInternalInstanceHandleFromPublicInstance", { get: () => require(281) /* createPublicRootInstance */.getInternalInstanceHandleFromPublicInstance, set: undefined });
+Object.defineProperty(obj, "dispatchNativeEvent", { get: () => require(282) /* dispatchNativeEvent */.default, set: undefined });
+
+export default obj;

@@ -1,0 +1,82 @@
+// === Module 16619: GuildRoleSubscriptionBenefitModalHeader ===
+
+// Module 16619 (GuildRoleSubscriptionBenefitModalHeader)
+import _slicedToArray from "_slicedToArray";
+import "noop";
+import { View } from "get ActivityIndicator";
+import { Fonts } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importDefaultResult from "createTextStyle";
+import importDefaultResult1 from "createTextStyle";
+import importDefaultResult2 from "createTextStyle";
+
+let closure_6;
+let error;
+const require = arg1;
+({ jsx: closure_6, jsxs: error } = jsxProd);
+createCacheKey = { headerContainer: null, headerButtonContainer: null, headerButtonStart: null, headerButtonEnd: null, headerButton: null, disabledButton: null, titleContainer: null, title: null, subtitle: null };
+createCacheKey = { alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", paddingBottom: 8, paddingHorizontal: 16 };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { flexDirection: "row", alignSelf: "center", minWidth: 60 };
+createCacheKey[2] = { alignItems: "flex-start" };
+createCacheKey[3] = { alignItems: "flex-end" };
+const merged = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, 16));
+createCacheKey[4] = {};
+let obj1 = {};
+let obj2 = {};
+const merged1 = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.TEXT_MUTED, 16));
+createCacheKey[5] = obj2;
+createCacheKey[6] = { flex: 1, flexDirection: "column" };
+let obj3 = {};
+const merged2 = Object.assign(require("createTextStyle")(Fonts.DISPLAY_EXTRABOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+obj3.textAlign = "center";
+createCacheKey[7] = obj3;
+createCacheKey[8] = { textAlign: "center" };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitModalHeader.tsx");
+
+export default function GuildRoleSubscriptionBenefitModalHeader(canSave) {
+  let listingId;
+  let onClose;
+  let onSave;
+  let title;
+  canSave = canSave.canSave;
+  ({ title, onSave, onClose, listingId } = canSave);
+  const tmp = createCacheKey();
+  let obj = importAll(14263);
+  obj = { top: true, style: tmp.headerContainer, children: null };
+  obj = { style: items, accessibilityRole: "button", onPress: onClose, children: null };
+  items = [, ];
+  ({ headerButtonContainer: arr[0], headerButtonStart: arr[1] } = tmp);
+  const obj1 = { style: tmp.headerButton, variant: "text-md/medium", color: "interactive-text-active", children: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj1[3] = intl.string(require(1236) /* getSystemLocale */.t["ETE/oC"]);
+  obj[3] = callback2(require(4189) /* Text */.Text, obj1);
+  const items1 = [callback2(importDefault(8344), obj), , ];
+  const obj2 = { style: tmp.titleContainer, children: null };
+  const items2 = [callback2(require(1297) /* Button */.LegacyText, { style: tmp.title, accessibilityRole: "header", children: title }), ];
+  const obj3 = { style: tmp.title, accessibilityRole: "header", children: title };
+  const tmp3 = callback3;
+  const tmp6 = importDefault(8344);
+  items2[1] = callback2(require(4189) /* Text */.Text, { style: tmp.subtitle, variant: "text-xs/medium", color: "text-default", children: callback(obj.useName(listingId), 1)[0] });
+  obj2[1] = items2;
+  items1[1] = callback3(View, obj2);
+  const obj5 = { style: items3, accessibilityRole: "button", disabled: !canSave, onPress: onSave, children: null };
+  items3 = [, ];
+  ({ headerButtonContainer: arr4[0], headerButtonEnd: arr4[1] } = tmp);
+  const obj4 = { style: tmp.subtitle, variant: "text-xs/medium", color: "text-default", children: callback(obj.useName(listingId), 1)[0] };
+  const items4 = [tmp.headerButton, ];
+  let disabledButton = !canSave;
+  if (!canSave) {
+    disabledButton = tmp.disabledButton;
+  }
+  const obj6 = { style: items4, children: null };
+  items4[1] = disabledButton;
+  const intl2 = tmp4(1236).intl;
+  obj6[1] = intl2.string(require(1236) /* getSystemLocale */.t["R3BPH+"]);
+  obj5[4] = callback2(require(1297) /* Button */.LegacyText, obj6);
+  items1[2] = callback2(importDefault(8344), obj5);
+  obj[2] = items1;
+  return tmp3(require(5181) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+};

@@ -1,0 +1,14 @@
+// === Module 804: baseAssignValue ===
+
+// Module 804 (baseAssignValue)
+
+export default function baseAssignValue(arg0, arg1, arg2) {
+  if ("__proto__" == arg1) {
+    if (require(805) /* getNative */) {
+      const obj = { configurable: true, enumerable: true, value: null, writable: true };
+      obj[2] = arg2;
+      require(805) /* getNative */(arg0, arg1, obj);
+    }
+  }
+  arg0[arg1] = arg2;
+};

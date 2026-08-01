@@ -1,0 +1,59 @@
+// === Module 10344: NotificationSettingsMessageUnreadActionSheet ===
+
+// Module 10344 (NotificationSettingsMessageUnreadActionSheet)
+import "noop";
+import { View } from "get ActivityIndicator";
+import { UnreadSetting } from "ReadStateTypes";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let c5;
+let closure_6;
+const require = arg1;
+({ jsx: c5, jsxs: closure_6 } = jsxProd);
+createCacheKey = { sheet: null, header: null, content: null, form: null };
+createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { padding: 24, paddingTop: 0 };
+createCacheKey[2] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, padding: 16 };
+createCacheKey[3] = { marginTop: 8, marginBottom: 16 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, padding: 16 };
+const result = require("ReadStateTypes").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadActionSheet.tsx");
+
+export default function NotificationSettingsMessageUnreadActionSheet(defaultValue) {
+  const tmp = createCacheKey();
+  let obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
+  obj = { style: tmp.header, children: null };
+  obj = { unreadSetting: defaultValue.value };
+  obj[1] = callback(importDefault(10341), obj);
+  const items = [callback(View, obj), ];
+  const obj1 = { style: tmp.content, children: null };
+  const obj2 = { variant: "text-sm/semibold", children: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj2[1] = intl.string(require(1236) /* getSystemLocale */.t.Tqd1Af);
+  const items1 = [callback(require(4189) /* Text */.Text, obj2), , ];
+  const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  obj3[2] = intl2.string(require(1236) /* getSystemLocale */.t.RpQgm5);
+  items1[1] = callback(require(4189) /* Text */.Text, obj3);
+  const obj4 = { style: tmp.form, children: null };
+  const obj5 = { defaultValue: defaultValue.value, onChange: defaultValue.onChange, hasIcons: false, children: null };
+  const obj6 = { label: null, value: null };
+  const intl3 = require(1236) /* getSystemLocale */.intl;
+  obj6[0] = intl3.string(require(1236) /* getSystemLocale */.t["HVah/3"]);
+  obj6[1] = UnreadSetting.ALL_MESSAGES;
+  const items2 = [callback(require(7659) /* TableRadioRow */.TableRadioRow, obj6), ];
+  const obj7 = { subLabel: defaultValue.disabledMentionOnlyWithReason, disabled: null != defaultValue.disabledMentionOnlyWithReason, label: null, value: null };
+  const intl4 = require(1236) /* getSystemLocale */.intl;
+  obj7[2] = intl4.string(require(1236) /* getSystemLocale */.t["tu+ZWJ"]);
+  obj7[3] = UnreadSetting.ONLY_MENTIONS;
+  items2[1] = callback(require(7659) /* TableRadioRow */.TableRadioRow, obj7);
+  obj5[3] = items2;
+  obj4[1] = callback2(require(7660) /* context */.TableRadioGroup, obj5);
+  items1[2] = callback(View, obj4);
+  obj1[1] = items1;
+  items[1] = callback2(View, obj1);
+  obj[2] = items;
+  return callback2(require(5247) /* Background */.BottomSheet, obj);
+};

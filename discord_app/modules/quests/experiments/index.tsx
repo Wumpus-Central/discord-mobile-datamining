@@ -1,0 +1,65 @@
+// === Module 10512: apexExperiment ===
+
+// Module 10512 (apexExperiment)
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+import ApexExperiment from "ApexExperiment";
+
+let obj = { 1: null };
+obj[1] = { enabled: true };
+const apexExperiment = ApexExperiment.createApexExperiment({ name: "2025-11-video-end-card-v2", kind: "user", defaultConfig: { enabled: false }, variations: obj });
+const apexExperiment1 = ApexExperiment.createApexExperiment({ name: "2026-02-new-video-quest-progress-bar-styling", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+obj = { 1: null };
+obj[1] = { enabled: true };
+const apexExperiment2 = ApexExperiment.createApexExperiment({ name: "2026-05-app-store-overlay-feature-gate", kind: "user", defaultConfig: { enabled: false }, variations: obj });
+const obj1 = { 1: null };
+obj1[1] = { enabled: true };
+let obj2 = { DEFAULT: 0, [0]: "DEFAULT", AUTO_ENABLE_CAPTIONS: 1, [1]: "AUTO_ENABLE_CAPTIONS", AUTO_UNMUTE: 2, [2]: "AUTO_UNMUTE" };
+const apexExperiment3 = ApexExperiment.createApexExperiment({ name: "2026-03-quest-reload-video-on-obscured", kind: "user", defaultConfig: { enabled: false }, variations: obj1 });
+const apexExperiment4 = ApexExperiment.createApexExperiment({ name: "2026-03-muted-video-quest-new-defaults", kind: "user", defaultConfig: { enabled: false, variant: obj2.DEFAULT }, variations: { 0: { enabled: false, variant: obj2.DEFAULT }, 1: { enabled: true, variant: obj2.AUTO_ENABLE_CAPTIONS }, 2: { enabled: true, variant: obj2.AUTO_UNMUTE } } });
+let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-04-quests-premium-orb-multiplier-marketing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const obj7 = { 1: null };
+obj7[1] = { enabled: true };
+const apexExperiment5 = ApexExperiment.createApexExperiment({ name: "2026-03-video-quest-player-refactor", kind: "user", defaultConfig: { enabled: false }, variations: obj7 });
+const obj8 = { 1: null };
+obj8[1] = { enabled: true };
+const apexExperiment6 = ApexExperiment.createApexExperiment({ name: "2026-04-composed-quest-player", kind: "user", defaultConfig: { enabled: false }, variations: obj8 });
+const apexExperiment7 = ApexExperiment.createApexExperiment({ name: "2026-03-mobile-quest-home-red-dot-notification", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const apexExperiment8 = ApexExperiment.createApexExperiment({ name: "2026-05-quest-home-tile-redesign", kind: "user", defaultConfig: { useNewLayoutWithSearch: false, useNewTile: false, useLargeFeaturedTiles: false, ctaOnHover: false, clickableTile: false }, variations: { 0: { useNewLayoutWithSearch: false, useNewTile: false, useLargeFeaturedTiles: false, ctaOnHover: false, clickableTile: false }, 1: { useNewLayoutWithSearch: true, useNewTile: false, useLargeFeaturedTiles: false, ctaOnHover: false, clickableTile: false }, 2: { useNewLayoutWithSearch: true, useNewTile: true, useLargeFeaturedTiles: true, ctaOnHover: true, clickableTile: false }, 3: { useNewLayoutWithSearch: true, useNewTile: true, useLargeFeaturedTiles: false, ctaOnHover: true, clickableTile: false }, 4: { useNewLayoutWithSearch: true, useNewTile: true, useLargeFeaturedTiles: true, ctaOnHover: false, clickableTile: false }, 5: { useNewLayoutWithSearch: true, useNewTile: true, useLargeFeaturedTiles: true, ctaOnHover: true, clickableTile: true } } });
+const obj9 = { CONTROL: 0, [0]: "CONTROL", NEW_LAYOUT_WITH_SEARCH: 1, [1]: "NEW_LAYOUT_WITH_SEARCH", LARGE_MASK_MARGIN: 2, [2]: "LARGE_MASK_MARGIN", REMOVE_QUEST_TITLE_SUFFIX: 3, [3]: "REMOVE_QUEST_TITLE_SUFFIX", REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER: 4, [4]: "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER" };
+const apexExperiment9 = ApexExperiment.createApexExperiment({ name: "2026-05-bounty-stale-refresh-quest-home", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const apexExperiment10 = ApexExperiment.createApexExperiment({ name: "2026-06-quest-home-layout-visual-tweaks", kind: "user", defaultConfig: { enabled: false, variant: obj9.CONTROL }, variations: { 0: { enabled: false, variant: obj9.CONTROL }, 1: { enabled: true, variant: obj9.NEW_LAYOUT_WITH_SEARCH }, 2: { enabled: true, variant: obj9.LARGE_MASK_MARGIN }, 3: { enabled: true, variant: obj9.REMOVE_QUEST_TITLE_SUFFIX }, 4: { enabled: true, variant: obj9.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER } } });
+const apexExperiment11 = ApexExperiment.createApexExperiment({ name: "2026-07-quest-bar-secondary-cta", kind: "user", defaultConfig: { enabled: false, showPlayInstantlyLabel: false }, variations: { 0: { enabled: false, showPlayInstantlyLabel: false }, 1: { enabled: true, showPlayInstantlyLabel: false }, 2: { enabled: true, showPlayInstantlyLabel: true } } });
+const result = require("items").fileFinishedImporting("modules/quests/experiments/index.tsx");
+
+export const VideoEndCardV2Experiment = apexExperiment;
+export const NewVideoQuestProgressBarStylingExperiment = apexExperiment1;
+export const AppStoreBottomSheetOverlayFeatureGate = apexExperiment2;
+export const QuestReloadVideoOnObscuredExperiment = apexExperiment3;
+export const MutedVideoQuestNewDefaultsVariant = obj2;
+export const MutedVideoQuestNewDefaultsExperiment = apexExperiment4;
+export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMarketing(location) {
+  let obj = { location };
+  const questOrbMultiplierEligibility = require(9497) /* getQuestOrbMultiplierEligibilityForUser */.useQuestOrbMultiplierEligibility();
+  const obj2 = require(9497) /* getQuestOrbMultiplierEligibilityForUser */;
+  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== require(9498) /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== require(9498) /* items */.QuestOrbMultiplierEligibilityType.CREPE && closure_2.useConfig(obj).enabled, multiplier: tmp(10513).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
+  return obj;
+};
+export const VideoQuestPlayerRefactorExperiment = apexExperiment5;
+export const ComposedQuestPlayerExperiment = apexExperiment6;
+export const MobileQuestHomeRedDotNotificationExperiment = apexExperiment7;
+export const QuestHomeTileRedesignExperiment = apexExperiment8;
+export const BountyStaleRefreshQuestHomeExperiment = apexExperiment9;
+export const QuestHomeLayoutVisualTweakVariant = obj9;
+export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment10;
+export const QuestBarSecondaryCtaExperiment = apexExperiment11;

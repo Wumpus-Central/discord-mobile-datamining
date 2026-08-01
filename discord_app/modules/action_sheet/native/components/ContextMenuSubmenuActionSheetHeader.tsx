@@ -1,0 +1,27 @@
+// === Module 9978: ContextMenuSubmenuActionSheetHeader ===
+
+// Module 9978 (ContextMenuSubmenuActionSheetHeader)
+import "noop";
+import { View } from "get ActivityIndicator";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+const require = arg1;
+let closure_4 = createCacheKey.createStyles({ headerContainer: { paddingVertical: 12, paddingHorizontal: 16, alignItems: "flex-start" } });
+const result = require("jsxProd").fileFinishedImporting("modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx");
+
+export default function ContextMenuSubmenuActionSheetHeader(onBack) {
+  let fn = onBack.onBack;
+  let obj = { style: callback().headerContainer, children: null };
+  obj = { label: null, onPress: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
+  if (fn == null) {
+    fn = () => {
+
+    };
+  }
+  obj[1] = fn;
+  obj[1] = jsx(require(8258) /* ActionSheetHeaderPressableText */.ActionSheetHeaderPressableText, { label: null, onPress: null });
+  return <View label={null} onPress={null} />;
+};

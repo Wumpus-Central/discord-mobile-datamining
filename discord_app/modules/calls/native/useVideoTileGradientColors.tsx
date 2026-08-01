@@ -1,0 +1,62 @@
+// === Module 7992: rgbToHex ===
+
+// Module 7992 (rgbToHex)
+import noop from "noop";
+import { ThemeTypes } from "ME";
+
+const require = arg1;
+function rgbToHex(arg0) {
+  let tmp;
+  let tmp2;
+  let tmp3;
+  [tmp, tmp2, tmp3] = arg0;
+  let str = Math.max(0, Math.min(255, tmp));
+  str = str.toString(16);
+  let str2 = Math.max(0, Math.min(255, tmp2));
+  const padStartResult = str.padStart(2, "0");
+  const str1 = str2.toString(16);
+  const padStartResult1 = str2.toString(16).padStart(2, "0");
+  str2 = Math.max(0, Math.min(255, tmp3)).toString(16);
+  return "#" + padStartResult + padStartResult1 + str2.padStart(2, "0");
+}
+function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2BackgroundColor) {
+  if (null != modalV2BackgroundColor) {
+    if (null != modalV2BackgroundColor) {
+      let DARK = require(7993) /* getProfileTheme */.getProfileTheme(modalV2BackgroundColor);
+      if (DARK == null) {
+        DARK = ThemeTypes.DARK;
+      }
+      let tmp9Result = tmp9(688);
+      tmp9Result = tmp9(7993);
+      const int2rgbArrayResult = tmp9Result.int2rgbArray(tmp9Result.calculateModalV2BackgroundColor(modalV2BackgroundColor, modalV2BackgroundColor, DARK));
+      const obj7 = require(7993) /* getProfileTheme */;
+      const tmp9Result1 = require(688) /* int2hslRaw */;
+      const int2rgbArrayResult1 = require(688) /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
+      const tmp9Result2 = require(688) /* int2hslRaw */;
+      const int2rgbArrayResult2 = require(688) /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
+      const items = [, , ];
+      [arr[0], arr[1], arr[2]] = int2rgbArrayResult;
+      const items1 = [, , ];
+      [arr2[0], arr2[1], arr2[2]] = int2rgbArrayResult1;
+      let valueInColorGradientByPercentage = require(7993) /* getProfileTheme */.getValueInColorGradientByPercentage(items, items1, 20);
+      const tmp9Result3 = require(7993) /* getProfileTheme */;
+      const items2 = [, , ];
+      [arr3[0], arr3[1], arr3[2]] = int2rgbArrayResult;
+      const items3 = [, , ];
+      [arr4[0], arr4[1], arr4[2]] = int2rgbArrayResult2;
+      valueInColorGradientByPercentage = require(7993) /* getProfileTheme */.getValueInColorGradientByPercentage(items2, items3, 60);
+      const items4 = [rgbToHex(valueInColorGradientByPercentage), rgbToHex(valueInColorGradientByPercentage)];
+      return items4;
+    }
+  }
+  return null;
+}
+const result = require("getProfileTheme").fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
+
+export { computeVideoTileGradientStops };
+export const useVideoTileGradientColors = function useVideoTileGradientColors(arg0, arg1) {
+  let closure_0 = arg0;
+  let closure_1 = arg1;
+  const items = [arg0, arg1];
+  return React.useMemo(() => outer1_5(closure_0, closure_1), items);
+};

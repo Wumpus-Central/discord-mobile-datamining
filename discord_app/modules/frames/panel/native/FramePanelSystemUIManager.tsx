@@ -1,0 +1,18 @@
+// === Module 15898: ? ===
+
+// Module 15898
+import importAllResult from "noop";
+import { jsx } from "jsxProd";
+
+const require = arg1;
+let c3 = importAllResult;
+const memoResult = importAllResult.memo(() => {
+  let mode;
+  let wrapperDimensions;
+  const context = importAllResult.useContext(importDefault(15889));
+  ({ mode, wrapperDimensions } = context);
+  return jsx(require(15886) /* BaseActivityPanelSystemUIManager */.BaseActivityPanelSystemUIManager, { mode, isWindowLandscape: wrapperDimensions.isWindowLandscape });
+});
+const result = require("context").fileFinishedImporting("modules/frames/panel/native/FramePanelSystemUIManager.tsx");
+
+export default memoResult;

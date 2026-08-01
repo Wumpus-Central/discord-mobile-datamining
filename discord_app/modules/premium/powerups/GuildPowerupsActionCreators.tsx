@@ -1,0 +1,153 @@
+// === Module 11593: guildPowerupsAckNotification ===
+
+// Module 11593 (guildPowerupsAckNotification)
+import BoostedGuildTiers from "BoostedGuildTiers";
+import { Endpoints } from "ME";
+
+let c3;
+let c4;
+({ GUILD_POWERUP_APPLICATION_ID: c3, GuildPowerupType: c4 } = BoostedGuildTiers);
+let result = require("dispatcher").fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
+
+export const guildPowerupsAckNotification = function guildPowerupsAckNotification(closure_0) {
+  let obj = importDefault(709);
+  obj = { type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: closure_0 };
+  obj.dispatch(obj);
+};
+export const guildPowerupsResetNotifications = function guildPowerupsResetNotifications() {
+  importDefault(709).dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
+};
+export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(closure_0) {
+  const _require = closure_0;
+  if (true === arg1) {
+    const MOCK_LEVELS = _require(11594).MOCK_LEVELS;
+    const combined = MOCK_LEVELS.concat(_require(11594).MOCK_PERKS);
+    let obj = {};
+    obj[constants.LEVEL] = _require(11594).MOCK_LEVELS;
+    obj[constants.PERK] = _require(11594).MOCK_PERKS;
+    let obj2 = importDefault(709);
+    obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: null, allPowerups: null, powerupCatalog: null };
+    obj[1] = closure_0;
+    let sorted = combined.sort((skuId, skuId2) => {
+      let num = -1;
+      if (skuId.skuId >= skuId2.skuId) {
+        num = 1;
+      }
+      return num;
+    });
+    obj[2] = sorted.reduce((arg0, skuId) => {
+      arg0[skuId.skuId] = skuId;
+      return arg0;
+    }, {});
+    obj[3] = obj;
+    obj2.dispatch(obj);
+  } else {
+    const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+    obj1[0] = Endpoints.STORE_PUBLISHED_LISTINGS_SKUS;
+    obj2 = { application_id: null, guild_id: null };
+    obj2[0] = closure_3;
+    obj2[1] = closure_0;
+    obj1[1] = obj2;
+    const obj5 = _require(4431);
+    obj1[3] = _require(530).rejectWithMigratedError();
+    const result = obj5.httpGetWithCountryCodeQuery(obj1);
+    return result.then((body) => {
+      let allPowerups;
+      let powerupCatalog;
+      const callback = body;
+      body = body.body;
+      const mapped = body.map((arg0) => outer1_1(outer1_2[6])(body.body, arg0));
+      const found = mapped.filter(callback(outer1_2[7]).isNotNullish);
+      const sorted = found.sort((skuId, skuId2) => {
+        let num = -1;
+        if (skuId.skuId >= skuId2.skuId) {
+          num = 1;
+        }
+        return num;
+      });
+      const reduced = sorted.reduce((powerupCatalog, skuId) => {
+        powerupCatalog = powerupCatalog.powerupCatalog;
+        powerupCatalog.allPowerups[skuId.skuId] = skuId;
+        if (null == powerupCatalog[skuId.type]) {
+          powerupCatalog[skuId.type] = [];
+        }
+        let arr = powerupCatalog[skuId.type];
+        if (arr != null) {
+          const push = arr.push;
+          if (push != null) {
+            arr = push(skuId);
+          }
+        }
+        return powerupCatalog;
+      }, { allPowerups: {}, powerupCatalog: {} });
+      ({ allPowerups, powerupCatalog } = reduced);
+      outer1_1(outer1_2[2]).dispatch({ type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: callback, allPowerups, powerupCatalog });
+      return body.body;
+    });
+  }
+};
+export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(closure_0, arg1) {
+  const _require = closure_0;
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  let obj = _require(4431);
+  obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: null };
+  obj[3] = _require(530).rejectWithMigratedError();
+  const result = obj.httpGetWithCountryCodeQuery(obj);
+  return result.then((body) => {
+    let obj = {};
+    obj = {};
+    body = body.body;
+    const item = body.forEach((sku) => {
+      sku = sku.sku;
+      let powerup;
+      if (sku != null) {
+        const tenant_metadata = sku.tenant_metadata;
+        if (tenant_metadata != null) {
+          const guild_monetization = tenant_metadata.guild_monetization;
+          if (guild_monetization != null) {
+            powerup = guild_monetization.powerup;
+          }
+        }
+      }
+      if (null == powerup) {
+        let powerup_metadata;
+        if (sku != null) {
+          const sku2 = sku.sku;
+          if (sku2 != null) {
+            powerup_metadata = sku2.powerup_metadata;
+          }
+        }
+        if (null == powerup_metadata) {
+          const sku3 = sku.sku;
+          let game_server;
+          if (sku3 != null) {
+            const tenant_metadata2 = sku3.tenant_metadata;
+            if (tenant_metadata2 != null) {
+              const guild_monetization2 = tenant_metadata2.guild_monetization;
+              if (guild_monetization2 != null) {
+                game_server = guild_monetization2.game_server;
+              }
+            }
+          }
+          if (null != game_server) {
+            obj[sku.id] = sku;
+          }
+        }
+      }
+      obj[sku.sku_id] = sku;
+    });
+    obj = { type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS", guildId: obj, unlockedPowerups: obj, unlockedGameServers: obj };
+    outer1_1(outer1_2[2]).dispatch(obj);
+  });
+};
+export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {
+  const HTTP = require(530) /* sendRequest */.HTTP;
+  return HTTP.post({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
+};
+export const disablePowerupForGuild = function disablePowerupForGuild(arg0, arg1) {
+  const HTTP = require(530) /* sendRequest */.HTTP;
+  return HTTP.del({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
+};

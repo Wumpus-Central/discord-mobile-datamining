@@ -1,0 +1,36 @@
+// === Module 4770: getCreateAttachmentURL ===
+
+// Module 4770 (getCreateAttachmentURL)
+import ME from "ME";
+
+let c3;
+let c4;
+let obj1;
+({ Endpoints: obj1, MAX_ATTACHMENT_SIZE: c3, MAX_UPLOAD_COUNT: c4 } = ME);
+const result = require("set").fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
+class ICYMIAttachmentUploadTarget {
+}
+const prototype = ICYMIAttachmentUploadTarget.prototype;
+prototype["getCreateAttachmentURL"] = function getCreateAttachmentURL() {
+  return closure_2.GRAVITY_ATTACHMENTS;
+};
+prototype["getDeleteUploadURL"] = function getDeleteUploadURL(arg0) {
+  return closure_2.MESSAGE_DELETE_UPLOAD(arg0);
+};
+prototype["getMaxFileSize"] = function getMaxFileSize() {
+  return closure_3;
+};
+prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
+  return closure_4;
+};
+prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
+  return require(4727) /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
+};
+Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
+  get: function shouldReactNativeCompressUploads() {
+    return true;
+  },
+  set: undefined
+});
+
+export default ICYMIAttachmentUploadTarget;

@@ -1,0 +1,11 @@
+// === Module 13700: zustandStore ===
+
+// Module 13700 (zustandStore)
+const zustandStore = require("defaultStatesAreEqual").createZustandStore(() => {
+  const obj = { blocklist: null };
+  obj[0] = new Set();
+  return obj;
+});
+const result = require("set").fileFinishedImporting("modules/settings/native/renderer/stores/SettingBlocklistStore.tsx");
+
+export default zustandStore;

@@ -1,0 +1,38 @@
+// === Module 8745: useTrackPdpClick ===
+
+// Module 8745 (useTrackPdpClick)
+import noop from "noop";
+import { AnalyticEvents } from "ME";
+
+const require = arg1;
+const result = require("context").fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
+
+export const useTrackPdpClick = function useTrackPdpClick(skuId) {
+  skuId = skuId.skuId;
+  const productSkuIds = skuId.productSkuIds;
+  const analyticsLocations = skuId.analyticsLocations;
+  let cardId;
+  let sessionId;
+  let shopDiscountSource;
+  let collectiblesAnalyticsContext = skuId(analyticsLocations[2]).useCollectiblesAnalyticsContext();
+  if (collectiblesAnalyticsContext == null) {
+    collectiblesAnalyticsContext = {};
+  }
+  cardId = collectiblesAnalyticsContext.cardId;
+  sessionId = collectiblesAnalyticsContext.sessionId;
+  let tmpResult = tmp(tmp2[3]);
+  const currentUserIfAvailable = tmpResult.useCurrentUserIfAvailable();
+  tmpResult = tmp(tmp2[4]);
+  shopDiscountSource = tmpResult.getShopDiscountSource(currentUserIfAvailable);
+  const items = [skuId, analyticsLocations, cardId, productSkuIds, sessionId, shopDiscountSource];
+  return cardId.useCallback((cta) => {
+    let tmp = arg1;
+    let obj = productSkuIds(analyticsLocations[5]);
+    if (arg1 == null) {
+      tmp = skuId;
+    }
+    obj = { sku_id: tmp, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: null };
+    obj[6] = skuId(analyticsLocations[4]).getAnalyticsShopDiscountSource(shopDiscountSource);
+    obj.track(sessionId.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj);
+  }, items);
+};

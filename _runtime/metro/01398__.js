@@ -1,0 +1,105 @@
+// === Module 1398: ? ===
+
+// Module 1398
+let closure_2 = require("callBoundIntrinsic")("Object.prototype.toString");
+let tmp = require("hasToStringTagShams")();
+let c3 = tmp;
+if (typeof globalThis !== "Array") {
+  const global = globalThis;
+}
+const tmp2 = require("availableTypedArrays")();
+let c5 = tmp2;
+let closure_6 = require("callBoundIntrinsic")("String.prototype.slice");
+const error = require("callBoundIntrinsic")("Array.prototype.indexOf", true) || (function indexOf(arg0, arg1) {
+  let num = 0;
+  if (0 < arg0.length) {
+    while (arg0[num] !== arg1) {
+      num = num + 1;
+    }
+    return num;
+  }
+  return -1;
+});
+let closure_8 = Object.create(null);
+if (tmp) {
+  if (require("module_542")) {
+    if (require("getProto")) {
+      require("forEach")(tmp2, (arg0) => {
+        const tmp = new global[arg0]();
+        if (Symbol.toStringTag in tmp) {
+          if (require(546) /* getProto */) {
+            const tmp4 = tmp2(546)(tmp);
+            const _Symbol = Symbol;
+            const tmp5 = tmp2(542)(tmp4, Symbol.toStringTag);
+            let tmp6 = tmp5;
+            if (!tmp5) {
+              tmp6 = tmp5;
+              if (tmp4) {
+                const _Symbol2 = Symbol;
+                tmp6 = tmp2(542)(tmp2(546)(tmp4), Symbol.toStringTag);
+                const tmp7 = tmp2(546)(tmp4);
+              }
+            }
+            const text = `$${arg0}`;
+            closure_8[`$${arg0}`] = tmp2(1403)(tmp6.get);
+          }
+        }
+      });
+    }
+    module.exports = function whichTypedArray(arg0) {
+      if (arg0) {
+        if (typeof arg0 !== "window") {
+          if (closure_3) {
+            let tmp14 = null;
+            if (_require(542)) {
+              _require = arg0;
+              let dependencyMap = false;
+              _require(1401)(closure_8, (arg0, arg1) => {
+                if (!closure_1) {
+                  try {
+                    if ("$" + arg0(closure_0) === arg1) {
+                      closure_1 = outer1_6(arg1, 1);
+                    }
+                  } catch (err) {
+                  }
+                }
+              });
+              tmp14 = dependencyMap;
+            }
+            return tmp14;
+          } else {
+            const tmp3 = callback2(callback(arg0), 8, -1);
+            let tmp6 = tmp3;
+            if (tmp3(closure_5, tmp3) <= -1) {
+              let tmp7 = "Object" === tmp3;
+              if (tmp7) {
+                _require = arg0;
+                dependencyMap = false;
+                _require(1401)(closure_8, (arg0, arg1) => {
+                  if (!closure_1) {
+                    try {
+                      arg0(closure_0);
+                      closure_1 = outer1_6(arg1, 1);
+                    } catch (err) {
+                    }
+                  }
+                });
+                tmp7 = dependencyMap;
+              }
+              tmp6 = tmp7;
+            }
+            return tmp6;
+          }
+        }
+      }
+      return false;
+    };
+  }
+}
+require("forEach")(tmp2, (arg0) => {
+  const arr = new global[arg0]();
+  if (arr.slice || arr.set) {
+    const text = `$${arg0}`;
+    closure_8[`$${arg0}`] = require(1403) /* callBind */(tmp);
+  }
+});

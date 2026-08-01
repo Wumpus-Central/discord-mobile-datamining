@@ -1,0 +1,128 @@
+// === Module 9767: getSubtitle ===
+
+// Module 9767 (getSubtitle)
+import { useMemo } from "noop";
+import { intl } from "getSystemLocale";
+import { intl as intl2 } from "getSystemLocale";
+import { intl as intl3 } from "getSystemLocale";
+import { intl as intl4 } from "getSystemLocale";
+
+let obj = { FULL_WISHLIST: "FULL_WISHLIST", MIXED: "MIXED", SHOP_ONLY: "SHOP_ONLY", SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY" };
+obj = { FULL_WISHLIST: null, MIXED: null, SHOP_ONLY: null, SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY: null };
+obj = { title: null, getSubtitle: null, showIcons: false };
+obj[0] = intl.string(require("getSystemLocale").t["7lZ31J"]);
+obj[1] = function getSubtitle(username) {
+  const intl = require(1236) /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.BjEX38, { username });
+};
+obj[0] = obj;
+let obj1 = { title: null, getSubtitle: null, showIcons: true };
+obj1[0] = intl2.string(require("getSystemLocale").t.pWG4ze);
+obj1[1] = function getSubtitle(username) {
+  const intl = require(1236) /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.dIDKgi, { username });
+};
+obj[1] = obj1;
+let obj2 = { title: null, getSubtitle: null, showIcons: false };
+obj2[0] = intl3.string(require("getSystemLocale").t.SK5rmi);
+obj2[1] = function getSubtitle(username) {
+  const intl = require(1236) /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.wyMp1j, { username });
+};
+obj[2] = obj2;
+const obj3 = { title: null, getSubtitle: null, showIcons: false };
+obj3[0] = intl4.string(require("getSystemLocale").t.BCi1gT);
+obj3[1] = function getSubtitle(username) {
+  const intl = require(1236) /* getSystemLocale */.intl;
+  return intl.formatToPlainString(require(1236) /* getSystemLocale */.t.BjEX38, { username });
+};
+obj[3] = obj3;
+const result = require("getUserWishlistKey").fileFinishedImporting("modules/premium/gifting/utils/WishlistBannerUtils.tsx");
+
+export const BannerMode = obj;
+export const BANNER_CONFIG_MOBILE = obj;
+export const getBannerMode = function getBannerMode(wishlistInDmLength) {
+  let displayItems;
+  let totalUnownedWishlistItemCount;
+  ({ totalUnownedWishlistItemCount, displayItems } = wishlistInDmLength);
+  if (totalUnownedWishlistItemCount >= wishlistInDmLength.wishlistInDmLength) {
+    let SHOP_ONLY = obj.FULL_WISHLIST;
+  } else if (totalUnownedWishlistItemCount > 0) {
+    SHOP_ONLY = obj.MIXED;
+  } else {
+    if (displayItems.length > 0) {
+      if (displayItems.every((arg0) => {
+        let sku;
+        let source;
+        ({ sku, source } = arg0);
+        let isGameItemSKUResult = source === callback(table[2]).WishlistItemSource.POPULAR;
+        if (isGameItemSKUResult) {
+          isGameItemSKUResult = callback(table[3]).isGameItemSKU(sku);
+          const tmpResult = callback(table[3]);
+        }
+        return isGameItemSKUResult;
+      })) {
+        SHOP_ONLY = obj.SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY;
+      }
+    }
+    SHOP_ONLY = obj.SHOP_ONLY;
+  }
+  return SHOP_ONLY;
+};
+export const useWishlistBannerConfig = function useWishlistBannerConfig(totalUnownedWishlistItemCount) {
+  totalUnownedWishlistItemCount = totalUnownedWishlistItemCount.totalUnownedWishlistItemCount;
+  const wishlistInDmLength = totalUnownedWishlistItemCount.wishlistInDmLength;
+  const displayItems = totalUnownedWishlistItemCount.displayItems;
+  const recipientName = totalUnownedWishlistItemCount.recipientName;
+  let c4;
+  const items = [totalUnownedWishlistItemCount, wishlistInDmLength, displayItems];
+  const tmp = displayItems(() => {
+    if (totalUnownedWishlistItemCount >= wishlistInDmLength) {
+      let SHOP_ONLY = recipientName.FULL_WISHLIST;
+    } else if (tmp > 0) {
+      SHOP_ONLY = recipientName.MIXED;
+    } else {
+      if (arr.length > 0) {
+        if (arr.every((arg0) => {
+          let sku;
+          let source;
+          ({ sku, source } = arg0);
+          let isGameItemSKUResult = source === callback(table[2]).WishlistItemSource.POPULAR;
+          if (isGameItemSKUResult) {
+            isGameItemSKUResult = callback(table[3]).isGameItemSKU(sku);
+            const tmpResult = callback(table[3]);
+          }
+          return isGameItemSKUResult;
+        })) {
+          SHOP_ONLY = recipientName.SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY;
+        }
+      }
+      SHOP_ONLY = recipientName.SHOP_ONLY;
+    }
+    return SHOP_ONLY;
+  }, items);
+  c4 = tmp;
+  const items1 = [tmp, recipientName];
+  return displayItems(() => {
+    if (recipientName.FULL_WISHLIST === c4) {
+      let obj = { title: null, showIcons: false };
+      const intl3 = totalUnownedWishlistItemCount(wishlistInDmLength[1]).intl;
+      obj = { username: null };
+      obj[0] = recipientName;
+      obj[0] = intl3.formatToPlainString(totalUnownedWishlistItemCount(wishlistInDmLength[1]).t["YcL/Vr"], obj);
+      return obj;
+    } else if (tmp2.MIXED === tmp) {
+      const obj1 = { title: null, showIcons: true };
+      const intl2 = totalUnownedWishlistItemCount(wishlistInDmLength[1]).intl;
+      const obj2 = { username: null };
+      obj2[0] = recipientName;
+      obj1[0] = intl2.formatToPlainString(totalUnownedWishlistItemCount(wishlistInDmLength[1]).t.dIDKgi, obj2);
+      return obj1;
+    } else {
+      obj = { title: null, showIcons: false };
+      const intl = totalUnownedWishlistItemCount(wishlistInDmLength[1]).intl;
+      obj[0] = intl.string(totalUnownedWishlistItemCount(wishlistInDmLength[1]).t.BCi1gT);
+      return obj;
+    }
+  }, items1);
+};

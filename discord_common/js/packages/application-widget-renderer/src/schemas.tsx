@@ -1,0 +1,47 @@
+// === Module 12088: applicationWidgetStaticFieldConfigSchema ===
+
+// Module 12088 (applicationWidgetStaticFieldConfigSchema)
+import { z } from "module_12089";
+import { z as z2 } from "module_12089";
+import { z as z3 } from "module_12089";
+import { z as z4 } from "module_12089";
+import { z as z5 } from "module_12089";
+import { z as z6 } from "module_12089";
+import { z as z7 } from "module_12089";
+import { z as z8 } from "module_12089";
+import { z as z9 } from "module_12089";
+import { z as z10 } from "module_12089";
+import { z as z11 } from "module_12089";
+import { z as z12 } from "module_12089";
+import { z as z13 } from "module_12089";
+import { z as z14 } from "module_12089";
+import { z as z15 } from "module_12089";
+import { z as z16 } from "module_12089";
+import { z as z17 } from "module_12089";
+
+let obj = { value_type: null, presentation_type: null, value: null };
+obj[0] = z2.enum(require("ApplicationWidgetFieldValueType").ApplicationWidgetFieldValueType);
+obj[1] = z3.enum(require("ApplicationWidgetFieldPresentationType").ApplicationWidgetFieldPresentationType);
+obj[2] = z4.string();
+let objectResult = z.object(obj);
+obj = { value_type: null, presentation_type: null, value: null, fallback: null };
+obj[0] = z6.enum(require("ApplicationWidgetFieldValueType").ApplicationWidgetFieldValueType);
+obj[1] = z7.enum(require("ApplicationWidgetFieldPresentationType").ApplicationWidgetFieldPresentationType);
+obj[2] = z8.string();
+obj[3] = objectResult.nullish();
+objectResult = z5.object(obj);
+obj = { fields: null };
+obj[0] = z10.partialRecord(z11.string(), objectResult);
+const objectResult1 = z9.object(obj);
+const obj1 = { layout: null, components: null };
+obj1[0] = z13.string();
+obj1[1] = z14.partialRecord(z15.string(), objectResult1);
+const objectResult2 = z12.object(obj1);
+const partialRecordResult = z16.partialRecord(z17.enum(require("ApplicationWidgetConfigSurface").ApplicationWidgetConfigSurface), objectResult2);
+const result = require("ApplicationWidgetFieldPresentationType").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/schemas.tsx");
+
+export const applicationWidgetStaticFieldConfigSchema = objectResult;
+export const applicationWidgetFieldConfigSchema = objectResult;
+export const applicationWidgetComponentConfigSchema = objectResult1;
+export const applicationWidgetSurfaceConfigSchema = objectResult2;
+export const applicationWidgetSurfaceConfigsSchema = partialRecordResult;

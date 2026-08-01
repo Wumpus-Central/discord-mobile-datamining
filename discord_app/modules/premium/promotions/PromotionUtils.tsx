@@ -1,0 +1,341 @@
+// === Module 6569: claimedOutboundPromotionCodeFromServer ===
+
+// Module 6569 (claimedOutboundPromotionCodeFromServer)
+import closure_3 from "ME";
+import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
+import createFromServer from "createFromServer";
+import createEmptyPromotionsByType from "createEmptyPromotionsByType";
+import { PromotionFlags } from "GuildFeatures";
+import ME from "ME";
+import { ActivityPlatform } from "items3";
+
+let c10;
+let c9;
+let metroImportAll;
+const require = arg1;
+function claimedOutboundPromotionCodeFromServer(code) {
+  return { code: code.code, userId: code.user_id, claimedAt: code.claimed_at, promotion: createFromServer.createFromServer(code.promotion) };
+}
+function _claimOutboundPromotion() {
+  const self = this;
+  const tmp = callback((arg0) => {
+    let closure_0 = arg0;
+    let c5 = 0;
+    let c6 = 0;
+    const iter = (function*(arg0) {
+      let c0;
+      let c1;
+      let c2;
+      let c3;
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === body) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let handleConnectionClosedOrResumed = tmp5;
+              c3 = tmp2;
+              let callback;
+              let callback2;
+              let dependencyMap;
+              c3 = undefined;
+              ({ promotionId: c0, promotionTitle: c1, partnerId: c2, analyticsLocations: c3 } = callback);
+              handleConnectionClosedOrResumed = undefined;
+              body = undefined;
+              c6 = undefined;
+              body = 1;
+              c6 = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              const HTTP = callback(530).HTTP;
+              const obj2 = { url: null, rejectWithError: null };
+              obj2[0] = closure_9.CLAIM_OUTBOUND_PROMOTION_CODE(callback);
+              obj2[1] = callback(530).rejectWithMigratedError();
+              body = 2;
+              c6 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            handleConnectionClosedOrResumed = arg1;
+            body = handleConnectionClosedOrResumed.body;
+            if (obj9.isIOS()) {
+              let ANDROID = tmp39.IOS;
+            } else {
+              ANDROID = tmp39.ANDROID;
+            }
+            c6 = ANDROID;
+            obj = callback2(698);
+            const obj5 = { platform: null, status: null, location_stack: null, promotion_id: null, name: null, partner: null };
+            obj5[0] = c6;
+            obj5[1] = handleConnectionClosedOrResumed.status;
+            obj5[2] = c3;
+            obj5[3] = callback;
+            if (callback2 == null) {
+              callback2 = null;
+            }
+            obj5[4] = callback2;
+            if (dependencyMap == null) {
+              dependencyMap = null;
+            }
+            obj5[5] = dependencyMap;
+            obj.track(constants.OUTBOUND_PROMOTION_CLAIMED, obj5);
+            c6 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = callback3(body);
+            return obj6;
+          }
+        } catch (tmp27) {
+          c6 = tmp;
+          throw tmp27;
+        }
+      }
+    })();
+    iter.next();
+    return iter;
+  });
+  const _claimOutboundPromotion = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+({ AnalyticEvents: metroImportAll, Endpoints: c9, Platforms: c10 } = ME);
+const result = require("createFromServer").fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
+
+export const getPromotionImageURL = function getPromotionImageURL(id, arg1) {
+  let str = "logo-light";
+  if (obj.isThemeDark(arg1)) {
+    str = "logo-dark";
+  }
+  if (null != CDN_HOST) {
+    const _HermesInternal2 = HermesInternal;
+    let combined = "https://" + CDN_HOST + "/promotions/" + id + "/" + str + "?size=256";
+  } else {
+    const _location = location;
+    const _window = window;
+    const _HermesInternal = HermesInternal;
+    combined = "" + location.protocol + window.GLOBAL_ENV.API_ENDPOINT + "/promotions/" + id + "/" + str + "?size=256";
+  }
+  return combined;
+};
+export { claimedOutboundPromotionCodeFromServer };
+export const claimOutboundPromotion = function claimOutboundPromotion(arg0) {
+  const self = this;
+  const apply = _claimOutboundPromotion.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const getOutboundPromotionRedemptionUrl = function getOutboundPromotionRedemptionUrl(arg0, outboundPromotion) {
+  if (null != outboundPromotion.outboundRedemptionUrlFormat) {
+    if ("" !== outboundPromotion.outboundRedemptionUrlFormat) {
+      const _encodeURIComponent = encodeURIComponent;
+      let str2 = outboundPromotion.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(arg0));
+      const str3 = outboundPromotion.outboundRedemptionUrlFormat;
+    }
+    return str2;
+  }
+  str2 = outboundPromotion.outboundRedemptionPageLink;
+  if (str2 == null) {
+    str2 = "";
+  }
+};
+export const getNextUnseenOutboundPromotionId = function getNextUnseenOutboundPromotionId() {
+  let outboundPromotions;
+  let require;
+  ({ outboundPromotions, consumedInboundPromotionId: require } = createEmptyPromotionsByType);
+  const found = outboundPromotions.filter((id) => {
+    let tmp = id.id !== closure_0;
+    if (tmp) {
+      tmp = !outer1_0(outer1_2[11]).hasFlag(id.flags, outer1_7.SUPPRESS_NOTIFICATION);
+      const obj = outer1_0(outer1_2[11]);
+    }
+    if (tmp) {
+      let hasItem = null != id.partnerId;
+      if (hasItem) {
+        const DEDICATED_SURFACE_PARTNER_IDS = outer1_0(outer1_2[15]).DEDICATED_SURFACE_PARTNER_IDS;
+        hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(id.partnerId);
+      }
+      tmp = !hasItem;
+    }
+    return tmp;
+  });
+  const userContent = handleConnectionClosedOrResumed.settings.userContent;
+  let prop;
+  if (userContent != null) {
+    const tmp4 = userContent.recurringDismissibleContentStates[require(undefined, 1358) /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
+    if (tmp4 != null) {
+      prop = tmp4.lastDismissedObjectId;
+    }
+  }
+  let found1 = found;
+  if (null != prop) {
+    found1 = found.filter((id) => 1 === prop(outer1_2[13]).compare(id.id, prop));
+  }
+  let id = null;
+  if (0 !== found1.length) {
+    id = found1.sort((startDate, startDate2) => {
+      const date = new Date(startDate.startDate);
+      let num = 1;
+      if (date < date1) {
+        num = -1;
+      }
+      return num;
+    })[0].id;
+  }
+  return id;
+};
+export const shouldShowOutboundPromotionNotice = function shouldShowOutboundPromotionNotice() {
+  let outboundPromotions;
+  let require;
+  ({ outboundPromotions, consumedInboundPromotionId: require } = createEmptyPromotionsByType);
+  const found = outboundPromotions.filter((id) => {
+    let tmp = id.id !== closure_0;
+    if (tmp) {
+      tmp = !outer1_0(outer1_2[11]).hasFlag(id.flags, outer1_7.SUPPRESS_NOTIFICATION);
+      const obj = outer1_0(outer1_2[11]);
+    }
+    if (tmp) {
+      let hasItem = null != id.partnerId;
+      if (hasItem) {
+        const DEDICATED_SURFACE_PARTNER_IDS = outer1_0(outer1_2[15]).DEDICATED_SURFACE_PARTNER_IDS;
+        hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(id.partnerId);
+      }
+      tmp = !hasItem;
+    }
+    return tmp;
+  });
+  const userContent = handleConnectionClosedOrResumed.settings.userContent;
+  let prop;
+  if (userContent != null) {
+    const tmp4 = userContent.recurringDismissibleContentStates[require(undefined, 1358) /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR];
+    if (tmp4 != null) {
+      prop = tmp4.lastDismissedObjectId;
+    }
+  }
+  let found1 = found;
+  if (null != prop) {
+    found1 = found.filter((id) => 1 === prop(outer1_2[13]).compare(id.id, prop));
+  }
+  let id = null;
+  if (0 !== found1.length) {
+    id = found1.sort((startDate, startDate2) => {
+      const date = new Date(startDate.startDate);
+      let num = 1;
+      if (date < date1) {
+        num = -1;
+      }
+      return num;
+    })[0].id;
+  }
+  let tmp6 = null != id;
+  if (tmp6) {
+    tmp6 = !require(1360) /* addVersionedDismissedContent */.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(require(1358) /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, { cooldownDurationMs: 259200000 });
+    let obj = require(1360) /* addVersionedDismissedContent */;
+  }
+  return tmp6;
+};
+export const isDedicatedSurfacePromotion = function isDedicatedSurfacePromotion(promotion) {
+  let hasItem = null != promotion.partnerId;
+  if (hasItem) {
+    const DEDICATED_SURFACE_PARTNER_IDS = require(6267) /* CountryListMode */.DEDICATED_SURFACE_PARTNER_IDS;
+    hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(promotion.partnerId);
+  }
+  return hasItem;
+};
+export const shouldShowOutboundPromotionOnPlatform = function shouldShowOutboundPromotionOnPlatform(promotion) {
+  const isIOSResult = require(500) /* set */.isIOS();
+  let tmp2 = !isIOSResult;
+  if (isIOSResult) {
+    tmp2 = !promotion.hasFlag(PromotionFlags.IS_BLOCKED_IOS);
+  }
+  return tmp2;
+};
+export const getClaimedOutboundPromotionCodeMap = function getClaimedOutboundPromotionCodeMap(stateFromStores2) {
+  const obj = {};
+  const iter = stateFromStores2[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    obj[nextResult.promotion.id] = nextResult.code;
+    continue;
+  }
+  return obj;
+};
+export const getClaimedEndedOutboundPromotions = function getClaimedEndedOutboundPromotions(arr, arr2) {
+  const set = new Set(arr2.map((id) => id.id));
+  return arr.filter((promotion) => {
+    promotion = promotion.promotion;
+    const hasItem = set.has(promotion.id);
+    let tmp2 = !hasItem;
+    if (!hasItem) {
+      tmp2 = promotion.promotionType !== set(outer1_2[15]).PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
+    }
+    if (tmp2) {
+      let hasItem1 = null != promotion.partnerId;
+      if (hasItem1) {
+        const DEDICATED_SURFACE_PARTNER_IDS = set(outer1_2[15]).DEDICATED_SURFACE_PARTNER_IDS;
+        hasItem1 = DEDICATED_SURFACE_PARTNER_IDS.has(promotion.partnerId);
+      }
+      tmp2 = !hasItem1;
+    }
+    if (tmp2) {
+      const isIOSResult = set(outer1_2[9]).isIOS();
+      let tmp12 = !isIOSResult;
+      if (isIOSResult) {
+        tmp12 = !promotion.hasFlag(outer1_7.IS_BLOCKED_IOS);
+      }
+      tmp2 = tmp12;
+      const obj = set(outer1_2[9]);
+    }
+    return tmp2;
+  });
+};
+export const isRecurringPromotion = function isRecurringPromotion(promotionType) {
+  return promotionType.promotionType === require(6267) /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
+};

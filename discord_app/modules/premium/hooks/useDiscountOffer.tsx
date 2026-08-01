@@ -1,0 +1,145 @@
+// === Module 6263: useDiscountOffer ===
+
+// Module 6263 (useDiscountOffer)
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import emitChanges from "emitChanges";
+import GuildFeatures from "GuildFeatures";
+
+let closure_6;
+let error;
+const require = arg1;
+({ PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: closure_6, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: error } = GuildFeatures);
+const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");
+
+export default function useDiscountOffer(arg0, arg1) {
+  const _require = arg0;
+  const items = [emitChanges];
+  stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () => outer1_5.getUserDiscountOffer(closure_0));
+  let flag;
+  if (stateFromStores != null) {
+    flag = stateFromStores.hasExpired();
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  const tmp3 = first(React.useState(flag), 2);
+  first = tmp3[0];
+  React = tmp3[1];
+  const obj = _require(stateFromStores[5]);
+  const obj3 = React;
+  const tmp = _require;
+  const tmp2 = stateFromStores;
+  const items1 = [mergeGuildAvatar];
+  const items2 = [first, stateFromStores];
+  const stateFromStores1 = _require(stateFromStores[5]).useStateFromStores(items1, () => callback(stateFromStores[6]).isPremium(currentUser.getCurrentUser()));
+  const effect = obj3.useEffect(() => {
+    let hasAcknowledgedResult;
+    if (stateFromStores != null) {
+      hasAcknowledgedResult = obj.hasAcknowledged();
+    }
+    if (hasAcknowledgedResult) {
+      const timeout = new callback(stateFromStores[7]).Timeout();
+      let hasAcknowledgedResult1;
+      if (obj != null) {
+        hasAcknowledgedResult1 = obj.hasAcknowledged();
+      }
+      if (hasAcknowledgedResult1) {
+        let num = 0;
+        if (null != obj.expiresAt) {
+          const expiresAt = obj.expiresAt;
+          const _Date = Date;
+          const time = expiresAt.getTime();
+          num = time - Date.now();
+        }
+        timeout.start(num, () => {
+          if (!outer1_2) {
+            if (outer1_1.hasExpired()) {
+              outer1_3(true);
+            }
+          }
+          let obj = outer1_1;
+          let hasAcknowledgedResult;
+          if (outer1_1 != null) {
+            hasAcknowledgedResult = obj.hasAcknowledged();
+          }
+          if (hasAcknowledgedResult) {
+            let num = 0;
+            if (null != obj.expiresAt) {
+              let expiresAt = obj.expiresAt;
+              let _Date = Date;
+              let time = expiresAt.getTime();
+              num = time - Date.now();
+            }
+            if (closure_0 != null) {
+              obj2.start(num, () => {
+                if (!outer1_2) {
+                  if (outer1_1.hasExpired()) {
+                    outer1_3(true);
+                  }
+                }
+                let obj = outer1_1;
+                let hasAcknowledgedResult;
+                if (outer1_1 != null) {
+                  hasAcknowledgedResult = obj.hasAcknowledged();
+                }
+                if (hasAcknowledgedResult) {
+                  let num = 0;
+                  if (null != obj.expiresAt) {
+                    let expiresAt = obj.expiresAt;
+                    let _Date = Date;
+                    let time = expiresAt.getTime();
+                    num = time - Date.now();
+                  }
+                  if (closure_0 != null) {
+                    obj2.start(num, () => {
+                      if (!outer1_2) {
+                        if (outer1_1.hasExpired()) {
+                          outer1_3(true);
+                        }
+                      }
+                      let obj = outer1_1;
+                      let hasAcknowledgedResult;
+                      if (outer1_1 != null) {
+                        hasAcknowledgedResult = obj.hasAcknowledged();
+                      }
+                      if (hasAcknowledgedResult) {
+                        let num = 0;
+                        if (null != obj.expiresAt) {
+                          let expiresAt = obj.expiresAt;
+                          let _Date = Date;
+                          let time = expiresAt.getTime();
+                          num = time - Date.now();
+                        }
+                        if (closure_0 != null) {
+                          obj2.start(num, () => { ... });
+                        }
+                        obj2 = closure_0;
+                      }
+                    });
+                  }
+                  obj2 = closure_0;
+                }
+              });
+            }
+            obj2 = closure_0;
+          }
+        });
+      }
+      return () => timeout.stop();
+    }
+  }, items2);
+  let tmp7 = null;
+  if (!first) {
+    if (stateFromStores1) {
+      if (!arg1) {
+        if (arg0 !== closure_6) {
+          tmp7 = null;
+        }
+      }
+    }
+    tmp7 = stateFromStores;
+  }
+  return tmp7;
+};

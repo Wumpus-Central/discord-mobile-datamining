@@ -1,0 +1,39 @@
+// === Module 16611: FormTrialActiveUserLimitPicker ===
+
+// Module 16611 (FormTrialActiveUserLimitPicker)
+import "noop";
+import { jsx } from "jsxProd";
+
+const require = arg1;
+let c4 = "GuildRoleSubscriptionTrialActiveUserLimitSelect";
+const result = require("useTrialActiveUserLimitOptions").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx");
+
+export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
+  const str = activeTrialUserlimit.activeTrialUserlimit;
+  const onChange = activeTrialUserlimit.onChange;
+  let dependencyMap;
+  dependencyMap = onChange(16612)();
+  if (null == str) {
+    let intl = str(1236).intl;
+    let stringResult = intl.string(str(1236).t.zHfL6o);
+  } else {
+    stringResult = str.toString();
+  }
+  return jsx(onChange(13054), {
+    label: stringResult,
+    onPress() {
+      let obj = onChange(paths[5]);
+      obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+      const intl = str(paths[4]).intl;
+      obj[0] = intl.string(str(paths[4]).t["/JD9oe"]);
+      obj[1] = paths;
+      obj[2] = function onItemSelect(arg0) {
+        callback(arg0);
+        outer1_1(outer1_2[5]).hideActionSheet(outer1_4);
+      };
+      obj[3] = str;
+      obj.openLazy(str(paths[7])(paths[6], paths.paths), outer1_4, obj);
+    },
+    disabled: activeTrialUserlimit.disabled
+  });
+};

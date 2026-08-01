@@ -1,0 +1,187 @@
+// === Module 15331: ForYouSuggestedFriendRow ===
+
+// Module 15331 (ForYouSuggestedFriendRow)
+import renderChannelPressableWrapper from "renderChannelPressableWrapper";
+import { View } from "getSystemLocale";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import upsertRelationship from "upsertRelationship";
+import ME from "ME";
+import jsxProd from "renderChannelWrapper";
+import createCacheKey from "createCacheKey";
+
+let c10;
+let c9;
+let error;
+let metroImportAll;
+let unpackModuleId;
+const require = arg1;
+({ AnalyticEvents: error, RelationshipTypes: metroImportAll } = ME);
+({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
+let closure_12 = createCacheKey.createStyles((layout) => {
+  let obj = require(10299) /* getLayoutStyles */;
+  const layoutStyles = obj.getLayoutStyles(layout);
+  let obj1 = require(10299) /* getLayoutStyles */;
+  const sizeStyle = obj1.makeSizeStyle(layoutStyles.icon.wrapper.size);
+  obj = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null };
+  obj = { backgroundColor: importDefault(712).colors.BACKGROUND_MOD_MUTED };
+  obj[0] = obj;
+  obj[1] = { flex: 1 };
+  obj1 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: importDefault(712).space.PX_8 };
+  obj[2] = obj1;
+  let num = 0;
+  if (obj6.isAndroid()) {
+    num = 2;
+  }
+  obj[3] = { flexShrink: 1, marginBottom: num };
+  const obj2 = { position: "relative", borderRadius: importDefault(712).radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
+  const merged = Object.assign(sizeStyle);
+  obj2.marginRight = layoutStyles.icon.margin.marginRight + 4;
+  obj[4] = obj2;
+  return obj;
+});
+let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendRow.tsx");
+
+export default function ForYouSuggestedFriendRow(suggestedFriend) {
+  let dependencyMap;
+  let importDefault;
+  let panelVariant;
+  suggestedFriend = suggestedFriend.suggestedFriend;
+  ({ onAddSuggestion: importDefault, onAddSuggestionAnimationFinish: dependencyMap, panelVariant } = suggestedFriend);
+  if (panelVariant === undefined) {
+    panelVariant = false;
+  }
+  let analyticsLocations;
+  let sharedValue;
+  let stateFromStores;
+  let obj = suggestedFriend(10299);
+  const messagesTabLayout = obj.useMessagesTabLayout(panelVariant);
+  const tmp4 = callback2(messagesTabLayout);
+  analyticsLocations = importDefault(5519)().analyticsLocations;
+  let obj1 = suggestedFriend(10299);
+  const layoutStyles = obj1.getLayoutStyles(messagesTabLayout);
+  let obj2 = suggestedFriend(4610);
+  const fontScale = obj2.useFontScale();
+  let obj3 = suggestedFriend(647);
+  const items = [stateFromStores];
+  const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => stateFromStores.useReducedMotion);
+  let obj4 = analyticsLocations;
+  const items1 = [suggestedFriend, analyticsLocations];
+  if (null != suggestedFriend.friendSuggestionName) {
+    if (suggestedFriend.friendSuggestionName.length > 0) {
+      let friendSuggestionName = suggestedFriend.friendSuggestionName;
+    }
+    let tmpResult = tmp(15060);
+    const suggestedContactNameForSuggestion = tmpResult.getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend);
+    let str2 = "";
+    if (null != suggestedContactNameForSuggestion) {
+      const _HermesInternal = HermesInternal;
+      str2 = " \u00B7 " + suggestedContactNameForSuggestion;
+    }
+    if (null != suggestedFriend.mutualFriendsCount) {
+      if (suggestedFriend.mutualFriendsCount > 0) {
+        const intl = tmp(1236).intl;
+        obj = { count: null };
+        obj[0] = suggestedFriend.mutualFriendsCount;
+        let formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t.z7y34b, obj);
+      }
+      tmpResult = tmp(4054);
+      sharedValue = tmpResult.useSharedValue(false);
+      const items2 = [upsertRelationship];
+      stateFromStores = tmp(647).useStateFromStores(items2, () => outer1_6.getRelationshipType(suggestedFriend.user.id) === outer1_8.PENDING_OUTGOING);
+      const items3 = [sharedValue, stateFromStores];
+      const effect = obj4.useEffect(() => {
+        if (!stateFromStores) {
+          const result = sharedValue.set(false);
+        }
+      }, items3);
+      const tmpResult1 = tmp(647);
+      obj = { accessibilityRole: "button", underlayColor: null, onPress: null, style: null, children: null };
+      obj[1] = tmp4.rowActive.backgroundColor;
+      obj[2] = tmp9;
+      const items4 = [tmp4.pressable, ];
+      obj1 = { borderRadius: null };
+      obj1[0] = layoutStyles.container.borderRadius;
+      items4[1] = obj1;
+      obj[3] = items4;
+      const tmpResult2 = tmp(15332);
+      obj2 = { style: null, children: null };
+      obj2[0] = tmp4.avatar;
+      obj3 = { user: null, guildId: "r", size: "ct", animate: null };
+      obj3[0] = suggestedFriend.user;
+      obj3[2] = layoutStyles.icon.avatarSize;
+      obj3[3] = !stateFromStoresObject;
+      obj2[1] = callback(tmp(1297).Avatar, obj3);
+      const items5 = [callback(sharedValue, obj2), , ];
+      obj4 = { style: null, children: null };
+      obj4[0] = tmp4.textContainer;
+      const obj5 = { lineClamp: 1, variant: null, color: "text-default", style: null, children: null };
+      obj5[1] = layoutStyles.channelName.text.variant;
+      obj5[3] = tmp4.nameText;
+      obj5[4] = friendSuggestionName;
+      const items6 = [callback(tmp(4189).Text, obj5), ];
+      const tmp20 = closure_11;
+      const tmpResult3 = tmp(15333);
+      let num3 = 0;
+      if (tmpResult4.isAndroid()) {
+        num3 = -2;
+      }
+      const obj6 = { style: null, children: null };
+      const obj7 = { marginTop: null };
+      obj7[0] = num3;
+      obj6[0] = obj7;
+      tmpResult4 = tmp(500);
+      let num4 = 0;
+      if (tmpResult5.isAndroid()) {
+        num4 = 2;
+      }
+      const obj8 = { lineHeight: null, textVariant: null, actioned: null, maxFontSizeMultiplier: 1.75, label: null, actionStatus: null, animate: null };
+      obj8[0] = layoutStyles.messagePreview.height + num4;
+      obj8[1] = layoutStyles.messagePreview.text.variant;
+      obj8[2] = sharedValue;
+      const _HermesInternal2 = HermesInternal;
+      obj8[4] = "" + formatToPlainStringResult + str2;
+      const intl2 = tmp(1236).intl;
+      obj8[5] = intl2.string(tmp(1236).t.Kzyxm9);
+      obj8[6] = !stateFromStoresObject;
+      obj6[1] = callback(tmp(15334).ActionStatusSubLabel, obj8);
+      items6[1] = callback(sharedValue, obj6);
+      obj4[1] = items6;
+      items5[1] = closure_10(sharedValue, obj4);
+      const obj9 = { user: null, added: null, size: null, onAddSuggestion: null, onFinishAnimation: null, animate: null };
+      obj9[0] = suggestedFriend.user;
+      obj9[1] = sharedValue;
+      tmpResult5 = tmp(500);
+      let str4 = "sm";
+      if (tmpResult6.isLayoutCozy(messagesTabLayout)) {
+        str4 = "md";
+      }
+      const obj10 = { children: null };
+      obj9[2] = str4;
+      obj9[3] = function onAddSuggestion(id) {
+        let obj = outer1_1(outer1_2[26]);
+        obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: "Notifications Tab" };
+        obj.track(outer1_7.FRIEND_SUGGESTION_ADDED, obj);
+        callback(suggestedFriend);
+      };
+      obj9[4] = function onFinishAnimation() {
+        callback2(suggestedFriend);
+      };
+      obj9[5] = !stateFromStoresObject;
+      items5[2] = callback(tmp(15335).ContactSuggestionActions, obj9);
+      obj10[0] = items5;
+      const obj11 = { layout: null, fontScale: null, panelVariant: null };
+      obj11[0] = messagesTabLayout;
+      obj11[1] = fontScale;
+      obj11[2] = panelVariant;
+      obj[4] = tmpResult3.renderChannelWrapper(closure_10(tmp20, obj10), obj11);
+      const obj12 = { layout: null, panelVariant: null };
+      obj12[0] = messagesTabLayout;
+      obj12[1] = panelVariant;
+      return tmpResult2.renderChannelPressableWrapper(callback(tmp(4721).PressableHighlight, obj), obj12);
+    }
+    let tmp5Result = tmp5(4032);
+    formatToPlainStringResult = tmp5Result.getName(suggestedFriend.user);
+  }
+  tmp5Result = tmp5(4032);
+  friendSuggestionName = tmp5Result.getName(suggestedFriend.user);
+};

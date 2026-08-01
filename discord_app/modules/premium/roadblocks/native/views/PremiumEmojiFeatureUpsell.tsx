@@ -1,0 +1,55 @@
+// === Module 9414: PremiumEmojiFeatureUpsell ===
+
+// Module 9414 (PremiumEmojiFeatureUpsell)
+import "noop";
+import { View } from "get ActivityIndicator";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+const require = arg1;
+let closure_5 = createCacheKey.createStyles((arg0) => {
+  let obj = { container: null };
+  obj = { position: "absolute", bottom: arg0 + importDefault(712).space.PX_12, left: 0, right: 0 };
+  obj[0] = obj;
+  return obj;
+});
+let closure_6 = { code: "function PremiumEmojiFeatureUpsellTsx1(){const{shouldShow,inPortalKeyboard,bottomSheetIndex}=this.__closure;if(!shouldShow.get()){return false;}return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}" };
+const result = require("jsxProd").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumEmojiFeatureUpsell.tsx");
+
+export default function PremiumEmojiFeatureUpsell(bottomSheetIndex) {
+  bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
+  const inPortalKeyboard = bottomSheetIndex.inPortalKeyboard;
+  const shouldShow = bottomSheetIndex.shouldShow;
+  const tmp = inPortalKeyboard;
+  const tmp3 = inPortalKeyboard(shouldShow[6])();
+  const tmp4 = bottomSheetIndex;
+  bottomSheetIndex(shouldShow[8]);
+  const fn = function c() {
+    let value = shouldShow.get();
+    if (!value) {
+      return value;
+    } else {
+      value = bottomSheetIndex.get();
+      if (inPortalKeyboard) {
+        let tmp5 = 1 === value;
+      } else {
+        tmp5 = 0 === value;
+      }
+    }
+  };
+  fn.__closure = { shouldShow, inPortalKeyboard, bottomSheetIndex };
+  fn.__workletHash = 10168295304319;
+  fn.__initData = closure_6;
+  let tmp8 = null;
+  if (!tmp3) {
+    let obj = { style: null, children: null };
+    obj[0] = tmp5.container;
+    obj = { shouldShow: null, featureName: null };
+    obj[0] = tmp7;
+    obj[1] = tmp4(tmp2[10]).EntitlementFeatureNames.EMOJIS_EVERYWHERE;
+    obj[1] = jsx(tmp(tmp2[9]), { shouldShow: null, featureName: null });
+    tmp8 = <View shouldShow={null} featureName={null} />;
+    const tmpResult = tmp(tmp2[9]);
+  }
+  return tmp8;
+};

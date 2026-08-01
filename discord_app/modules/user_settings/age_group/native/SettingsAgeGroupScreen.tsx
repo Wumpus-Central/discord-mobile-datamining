@@ -1,0 +1,54 @@
+// === Module 13820: SettingsAgeGroupHeader ===
+
+// Module 13820 (SettingsAgeGroupHeader)
+import noop from "noop";
+import { View } from "get ActivityIndicator";
+import { MobileSetting } from "MobileSetting";
+import { HelpdeskArticles } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let error;
+let metroImportAll;
+const require = arg1;
+function SettingsAgeGroupHeader() {
+  let obj = { style: createCacheKey().headerContainer, children: null };
+  const callback = React.useCallback(() => {
+    const obj = callback(6750);
+    obj.openUrl(callback(1945).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+  }, []);
+  obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl.string(importDefault(2743).PY4MA0);
+  const items = [callback(require(4189) /* Text */.Text, obj), ];
+  obj = { variant: "text-sm/normal", color: "text-default", children: null };
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl2.format(importDefault(2743)["1DN29p"], { handleOnHelpUrlHook: callback });
+  items[1] = callback(require(4189) /* Text */.Text, obj);
+  obj[1] = items;
+  return callback2(View, obj);
+}
+({ jsx: error, jsxs: metroImportAll } = jsxProd);
+createCacheKey = { headerContainer: null };
+createCacheKey = { gap: require("Themes").space.PX_4, paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_16 };
+createCacheKey[0] = createCacheKey;
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+const result = require("MobileSetting").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
+
+export default function SettingsAgeGroupScreen() {
+  const node = React.useMemo(() => {
+    let obj = callback(10133);
+    obj = { sections: null, ListHeaderComponent: null };
+    obj = { label: null, settings: null };
+    const intl = callback(1236).intl;
+    obj[0] = intl.string(callback2(2743)["5Mi5TE"]);
+    const items = [, ];
+    ({ AGE_GROUP_CONFIRM: arr[0], AGE_GROUP_RESET: arr[1] } = closure_5);
+    obj[1] = items;
+    const items1 = [obj];
+    obj[0] = items1;
+    obj[1] = closure_10;
+    return obj.createList(obj);
+  }, []);
+  return callback(importDefault(13697), { node });
+};

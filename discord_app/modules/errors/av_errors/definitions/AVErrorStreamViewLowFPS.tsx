@@ -1,0 +1,68 @@
+// === Module 16699: AVErrorStreamViewLowFPSDefinition ===
+
+// Module 16699 (AVErrorStreamViewLowFPSDefinition)
+import getParticipants from "getParticipants";
+import reset from "reset";
+import fetchFingerprint from "fetchFingerprint";
+import initialize from "initialize";
+import { ApplicationStreamStates } from "ME";
+
+const require = arg1;
+const result = require("fetchFingerprint").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
+
+export const AVErrorStreamViewLowFPSDefinition = {
+  getActiveErrors() {
+    let reduced = null;
+    if (obj.getReportInboundErrors()) {
+      allActiveStreams = allActiveStreams.getAllActiveStreams();
+      reduced = allActiveStreams.reduce((arr, ownerId) => {
+        let obj = callback(table[6]);
+        rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
+        let mediaEngineConnectionId;
+        if (rTCConnection != null) {
+          mediaEngineConnectionId = rTCConnection.getMediaEngineConnectionId();
+        }
+        if (null == mediaEngineConnectionId) {
+          return arr;
+        } else {
+          if (ownerId.ownerId !== id.getId()) {
+            if (ownerId.state !== constants.PAUSED) {
+              let tmpResult = tmp(tmp2[5]);
+              const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
+              if (null == accumulatedStatsWithMinDatapoints) {
+                return arr;
+              } else {
+                tmpResult = tmp(tmp2[6]);
+                participant = participant.getParticipant(ownerId.channelId, tmpResult.encodeStreamKey(ownerId));
+                if (null == participant) {
+                  return arr;
+                } else {
+                  const maxQuality = tmp(tmp2[7]).getMaxQuality(participant);
+                  if (null != maxQuality) {
+                    if (accumulatedStatsWithMinDatapoints.short.frameRate < tmpResult2.getWarningFrameRate(maxQuality.maxFrameRate)) {
+                      obj = { type: null };
+                      obj[0] = tmp(tmp2[8]).AVError.STREAM_VIEW_LOW_FPS;
+                      const tmpResult3 = tmp(tmp2[9]);
+                      const merged = Object.assign(tmpResult3.getStreamErrorContext(tmp(tmp2[6]).encodeStreamKey(ownerId)));
+                      arr.push(obj);
+                      const tmpResult4 = tmp(tmp2[6]);
+                    } else {
+                      const tmpResult5 = tmp(tmp2[5]);
+                    }
+                    tmpResult2 = tmp(tmp2[5]);
+                  }
+                  return arr;
+                }
+              }
+            }
+          }
+          return arr;
+        }
+      }, []);
+    }
+    return reduced;
+  },
+  makeErrorContextKey(streamKey) {
+    return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;
+  }
+};

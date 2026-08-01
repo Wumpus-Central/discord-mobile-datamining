@@ -1,0 +1,519 @@
+// === Module 12037: JoinActivityButton ===
+
+// Module 12037 (JoinActivityButton)
+import handleInviteData from "handleInviteData";
+import "getEmbeddedActivityLocationChannelId";
+import participantFromServer from "participantFromServer";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import set from "set";
+import closure_7 from "handleInviteData";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import updateActivities from "updateActivities";
+import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import upsertRelationship from "upsertRelationship";
+import handleConnectionOpen from "handleConnectionOpen";
+import filterPlayingActivities from "filterPlayingActivities";
+import updateVoiceState from "updateVoiceState";
+import ME from "ME";
+import WEB_OPEN from "WEB_OPEN";
+import { jsx } from "getActivityChannelId";
+import createCacheKey from "createCacheKey";
+
+let closure_15;
+let closure_16;
+let closure_17;
+let closure_18;
+const require = arg1;
+({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = ME);
+({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = WEB_OPEN);
+createCacheKey = { icon: null };
+createCacheKey = { tintColor: require("Themes").colors.CONTROL_SECONDARY_TEXT_DEFAULT };
+createCacheKey[0] = createCacheKey;
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+const result = require("participantFromServer").fileFinishedImporting("modules/user_profile/native/UserProfileActivityButtons.tsx");
+
+export const JoinActivityButton = function JoinActivityButton(user) {
+  let activity;
+  let importDefault;
+  user = user.user;
+  ({ currentUser: importDefault, activity } = user);
+  const application = user.application;
+  const onAction = user.onAction;
+  let analyticsLocations;
+  let embeddedActivityLocationChannelId;
+  let closure_7;
+  let JOINED = activity;
+  analyticsLocations = importDefault(activity[18])().analyticsLocations;
+  let id;
+  if (application != null) {
+    id = application.id;
+  }
+  const embeddedActivityForUserId = onAction.getEmbeddedActivityForUserId(user.id, id);
+  let obj = user(JOINED[19]);
+  let _location;
+  if (embeddedActivityForUserId != null) {
+    _location = embeddedActivityForUserId.location;
+  }
+  embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(_location);
+  let tmp5Result = tmp5(JOINED[20]);
+  closure_7 = tmp5Result.useStateFromStores([], () => outer1_1(activity[21])({ channelId: set, userId: user.id, activity }));
+  tmp5Result = tmp5(JOINED[20]);
+  const items = [analyticsLocations, createGuildRecordFromRust, closure_7, upsertRelationship, handleConnectionOpen, updateVoiceState, getUncachedChannelPermissions, updateActivities, filterPlayingActivities, onAction];
+  const stateFromStores = tmp5Result.useStateFromStores(items, () => outer1_1(activity[22])({ isEmbedded: true, user, currentUser: closure_1, activity, application, channelId: closure_7, ChannelStore: analyticsLocations, GuildStore: outer1_8, GuildMemberCountStore: closure_7, RelationshipStore: outer1_11, SelectedChannelStore: outer1_12, VoiceStateStore: outer1_14, PermissionStore: outer1_10, LocalActivityStore: outer1_9, SelfPresenceStore: outer1_13, EmbeddedActivitiesStore: onAction }));
+  let tmp8 = null;
+  if (importDefault(JOINED[23])(activity)) {
+    tmp8 = null;
+    if (null != application) {
+      tmp8 = null;
+      if (stateFromStores !== tmp5(JOINED[22]).ActivityJoinability.CANNOT_JOIN) {
+        if (stateFromStores === tmp5(JOINED[22]).ActivityJoinability.JOINED) {
+          const intl2 = tmp5(JOINED[25]).intl;
+          let stringResult = intl2.string(tmp5(JOINED[25]).t.DPfdsq);
+        } else {
+          const intl = tmp5(JOINED[25]).intl;
+          stringResult = intl.string(tmp5(JOINED[25]).t["4i2vj+"]);
+        }
+        obj = { text: null, icon: null, variant: "active", disabled: null, onPress: null };
+        obj[0] = stringResult;
+        obj[1] = jsx(tmp5(JOINED[26]).AppsIcon, { size: "sm", color: "white" });
+        JOINED = tmp5(JOINED[22]).ActivityJoinability.JOINED;
+        obj[3] = stateFromStores === JOINED;
+        obj[4] = function onPress() {
+          onAction({ action: "PRESS_JOIN_BUTTON" });
+          outer1_1(activity[27])({ applicationId: application.id, activityChannelId: closure_7, locationObject: {}, analyticsLocations });
+          outer1_1(activity[28]).hideActionSheet();
+        };
+        jsx(tmp5(JOINED[24]).Button, { text: null, icon: null, variant: "active", disabled: null, onPress: null });
+      }
+    }
+  }
+  return tmp8;
+};
+export const JoinGameActivityButton = function JoinGameActivityButton(onAction) {
+  let application;
+  let dependencyMap;
+  let importDefault;
+  let require;
+  ({ user: require, currentUser: importDefault, activity: dependencyMap, application } = onAction);
+  onAction = onAction.onAction;
+  let analyticsLocations;
+  let set;
+  let JOINED = dependencyMap;
+  analyticsLocations = importDefault(5519)().analyticsLocations;
+  set = { id: application.id, deeplink_uri: application.deepLinkUri };
+  let obj = require(647) /* defaultAreStatesEqual */;
+  const items = [analyticsLocations, createGuildRecordFromRust, closure_7, upsertRelationship, handleConnectionOpen, updateVoiceState, getUncachedChannelPermissions, updateActivities, filterPlayingActivities, onAction];
+  const stateFromStores = obj.useStateFromStores(items, () => outer1_1(outer1_2[22])({ user: closure_0, currentUser: closure_1, activity: closure_2, application, channelId: null, isEmbedded: false, ChannelStore: analyticsLocations, GuildStore: outer1_8, GuildMemberCountStore: outer1_7, RelationshipStore: outer1_11, SelectedChannelStore: outer1_12, VoiceStateStore: outer1_14, PermissionStore: outer1_10, LocalActivityStore: outer1_9, SelfPresenceStore: outer1_13, EmbeddedActivitiesStore: onAction }));
+  let tmp3 = null;
+  if (null != application) {
+    tmp3 = null;
+    if (stateFromStores !== tmp(12039).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(12039).ActivityJoinability.JOINED) {
+        const intl2 = tmp(1236).intl;
+        let stringResult = intl2.string(tmp(1236).t.DPfdsq);
+      } else {
+        const intl = tmp(1236).intl;
+        stringResult = intl.string(tmp(1236).t.VJlc0S);
+      }
+      obj = { text: null, variant: "active", disabled: null, onPress: null };
+      obj[0] = stringResult;
+      JOINED = tmp(12039).ActivityJoinability.JOINED;
+      obj[2] = stateFromStores === JOINED;
+      obj[3] = function onPress() {
+        onAction({ action: "PRESS_JOIN_BUTTON" });
+        let obj = outer1_1(outer1_2[29]);
+        obj = { userId: id.id, sessionId: session_id.session_id, application: set, channelId: null, messageId: null, applicationActivity: session_id, source: "UserProfile", analyticsLocations };
+        const joined = obj.join(obj);
+        outer1_1(outer1_2[28]).hideActionSheet();
+      };
+      jsx(tmp(4604).Button, { text: null, variant: "active", disabled: null, onPress: null });
+      const tmp6 = jsx;
+    }
+  }
+  return tmp3;
+};
+export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
+  let activity;
+  let require;
+  ({ activity, onAction: require } = arg0);
+  let sync_id;
+  sync_id = activity.sync_id;
+  let tmp4 = null;
+  if (sync_id(9088)(activity)) {
+    tmp4 = null;
+    if (null != sync_id) {
+      let obj = { text: null, icon: null, variant: "secondary", onPress: null };
+      const intl = require(1236) /* getSystemLocale */.intl;
+      obj = { platform: null };
+      obj[0] = activity.name;
+      obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.LEgD7t, obj);
+      obj = { size: null, source: null, disableColor: true, style: null };
+      obj[0] = require(1297) /* Button */.Icon.Sizes.SMALL;
+      obj[1] = sync_id(7924);
+      obj[3] = tmp.icon;
+      obj[1] = jsx(require(1297) /* Button */.Icon, { size: null, source: null, disableColor: true, style: null });
+      obj[3] = callback(function*() {
+        if (c5 === 2) {
+          c5 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                let closure_0 = tmp7;
+                closure_0 = undefined;
+                outer1_0({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" });
+                let c3 = 1;
+                let obj2 = outer1_0(outer1_2[33]);
+                c4 = 2;
+                c5 = 1;
+                const obj1 = { value: null, done: false };
+                obj1[0] = obj2.canOpenSpotifyUrl();
+                return obj1;
+              }
+            } else if (1 === tmp7) {
+              c3 = 0;
+              c5 = 3;
+              return { value: "HermesInternal", done: null };
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              c5 = 3;
+              obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              closure_0 = arg1;
+              const obj7 = outer1_0(outer1_2[33]);
+              if (closure_0) {
+                obj7.openUrl(closure_0, outer1_18.TRACK, closure_1);
+              } else {
+                obj7.attributeInstall();
+                obj = outer1_1(outer1_2[34]);
+                obj.openURL(outer1_17.APP_STORE);
+              }
+              c3 = 0;
+              c5 = 3;
+            }
+          } catch (tmp22) {
+            let closure_2 = tmp22;
+            if (tmp4 === c3) {
+              c5 = tmp2;
+              throw tmp22;
+            } else {
+              c4 = tmp;
+            }
+          }
+        }
+      });
+      tmp4 = jsx(require(4604) /* Button */.Button, { size: null, source: null, disableColor: true, style: null });
+    }
+  }
+  return tmp4;
+};
+export const WatchActivityButton = function WatchActivityButton(arg0) {
+  let activity;
+  let require;
+  ({ activity, onAction: require } = arg0);
+  let importDefault;
+  const tmp2 = importDefault(12041)(activity);
+  importDefault = tmp2;
+  let tmp3 = null;
+  if (importDefault(7982)(activity)) {
+    tmp3 = null;
+    if (null != tmp2) {
+      const obj = { text: null, variant: "secondary", onPress: null };
+      const intl = require(1236) /* getSystemLocale */.intl;
+      obj[0] = intl.string(require(1236) /* getSystemLocale */.t.I6JG46);
+      obj[2] = function onPress() {
+        callback({ action: "PRESS_WATCH_BUTTON" });
+        _undefined(outer1_2[34]).openURL(_undefined);
+      };
+      tmp3 = jsx(require(4604) /* Button */.Button, { text: null, variant: "secondary", onPress: null });
+    }
+  }
+  return tmp3;
+};
+export const VoiceChannelButtons = function VoiceChannelButtons(channel) {
+  let importDefault;
+  let isInChannel;
+  channel = channel.channel;
+  ({ isInChannel, onAction: importDefault } = channel);
+  let newestAnalyticsLocation;
+  let c3;
+  newestAnalyticsLocation = importDefault(newestAnalyticsLocation[18])().newestAnalyticsLocation;
+  const isGuildStageVoiceResult = channel.isGuildStageVoice();
+  c3 = isGuildStageVoiceResult;
+  const isDMResult = channel.isDM();
+  if (isInChannel) {
+    if (!isDMResult) {
+      if (!channel.isGroupDM()) {
+        const intl3 = tmp3(_7hwn2A[25]).intl;
+        const string2 = intl3.string;
+        const t2 = tmp3(_7hwn2A[25]).t;
+        if (isGuildStageVoiceResult) {
+          let string2Result = string2(t2.Acqcot);
+        } else {
+          string2Result = string2(t2.BXxdl7);
+        }
+      }
+    }
+    const intl4 = tmp3(_7hwn2A[25]).intl;
+    string2Result = intl4.string(_7hwn2A);
+  } else {
+    if (!isDMResult) {
+      if (!channel.isGroupDM()) {
+        const intl = tmp3(_7hwn2A[25]).intl;
+        const string = intl.string;
+        const t = tmp3(_7hwn2A[25]).t;
+        if (isGuildStageVoiceResult) {
+          let stringResult = string(t["7vb2cc"]);
+        } else {
+          stringResult = string(t["96ANUN"]);
+        }
+      }
+      let obj = { text: null, variant: null, grow: true, onPress: null };
+      obj[0] = stringResult;
+      let str = "active";
+      if (isInChannel) {
+        str = "secondary";
+      }
+      obj[1] = str;
+      obj[3] = function onPress() {
+        callback({ action: "PRESS_JOIN_CALL_BUTTON" });
+        outer1_1(newestAnalyticsLocation[28]).hideActionSheet();
+        const obj = outer1_1(newestAnalyticsLocation[28]);
+        outer1_1(newestAnalyticsLocation[37]).popAll();
+        const obj2 = outer1_1(newestAnalyticsLocation[37]);
+        const rootNavigationRef = channel(newestAnalyticsLocation[38]).getRootNavigationRef();
+        let isReadyResult;
+        if (rootNavigationRef != null) {
+          isReadyResult = rootNavigationRef.isReady();
+        }
+        let tmp7 = true === isReadyResult;
+        if (tmp7) {
+          const currentRoute = rootNavigationRef.getCurrentRoute();
+          let name;
+          if (currentRoute != null) {
+            name = currentRoute.name;
+          }
+          tmp7 = "you" === name;
+        }
+        if (tmp7) {
+          rootNavigationRef.goBack();
+        }
+        if (c3) {
+          let tmp5Result = tmp5(tmp2[39]);
+          tmp5Result.connectAndOpen(channel);
+        } else {
+          tmp5Result = tmp5(tmp2[40]);
+          tmp5Result.openGuildVoiceModal(channel, newestAnalyticsLocation);
+        }
+      };
+      return jsx(channel(newestAnalyticsLocation[24]).Button, { text: null, variant: null, grow: true, onPress: null });
+    }
+    const intl2 = tmp3(_7hwn2A[25]).intl;
+    stringResult = intl2.string(tmp3(_7hwn2A[25]).t.ozoE2A);
+  }
+};
+export const ConnectPlatformButton = function ConnectPlatformButton(type) {
+  type = type.type;
+  const onAction = type.onAction;
+  let newestAnalyticsLocation;
+  let c3;
+  newestAnalyticsLocation = onAction(newestAnalyticsLocation[18])().newestAnalyticsLocation;
+  let obj = type(newestAnalyticsLocation[20]);
+  const items = [set];
+  if (obj.useStateFromStores(items, () => null != outer1_6.getAccount(null, type))) {
+    return null;
+  } else {
+    const value = tmp2(tmp3[41]).get(type);
+    c3 = value;
+    obj = { text: null, icon: null, variant: "secondary", onPress: null };
+    const intl = tmp4(tmp3[25]).intl;
+    obj = { platform: null };
+    obj[0] = value.name;
+    obj[0] = intl.formatToPlainString(tmp4(tmp3[25]).t.XWSHTb, obj);
+    const obj1 = { size: null, source: null, disableColor: true, style: null };
+    obj1[0] = tmp4(tmp3[31]).Icon.Sizes.SMALL;
+    const tmp2Result = tmp2(tmp3[41]);
+    obj1[1] = tmp4(tmp3[42]).makeSource(value.icon.whitePNG);
+    obj1[3] = tmp.icon;
+    obj[1] = jsx(tmp4(tmp3[31]).Icon, { size: null, source: null, disableColor: true, style: null });
+    obj[3] = function onPress() {
+      let str = "PRESS_CONNECT_XBOX_BUTTON";
+      if (type === outer1_15.PLAYSTATION) {
+        str = "PRESS_CONNECT_PLAYSTATION_BUTTON";
+      }
+      onAction({ action: str });
+      onAction(newestAnalyticsLocation[43])({
+        platformType: _undefined.type,
+        location: newestAnalyticsLocation,
+        onClose() {
+          let obj = callback(table[44]);
+          obj = { screen: constants.CONNECTIONS };
+          return obj.openUserSettings(obj);
+        }
+      });
+    };
+    return jsx(tmp4(tmp3[24]).Button, { platform: null });
+  }
+  tmp = createCacheKey();
+  tmp2 = onAction;
+};
+export const CustomActivityButton = function CustomActivityButton(index) {
+  let activity;
+  let require;
+  ({ user: require, activity } = index);
+  index = index.index;
+  const onAction = index.onAction;
+  let tmp = null;
+  if (null != activity.buttons) {
+    tmp = null;
+    if (index < activity.buttons.length) {
+      let obj = index;
+      if (activity(index[45])(activity)) {
+        const intl = tmp3(obj[25]).intl;
+        let stringResult = intl.string(tmp3(obj[25]).t.I6JG46);
+      } else {
+        stringResult = activity.buttons[index];
+      }
+      obj = { text: null, variant: "secondary", onPress: null };
+      obj[0] = stringResult;
+      obj[2] = onAction(function*() {
+        if (c5 === 2) {
+          c5 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                let closure_0 = tmp7;
+                closure_0 = undefined;
+                closure_1 = undefined;
+                let closure_2;
+                let v0;
+                v0({ action: "PRESS_CUSTOM_BUTTON" });
+                v0 = 1;
+                c4 = 2;
+                c5 = 1;
+                let obj1 = { value: null, done: false };
+                obj1[0] = outer1_0(outer1_2[46]).getMetadata(outer1_1, outer1_0.id);
+                return obj1;
+              }
+            } else {
+              if (1 === tmp7) {
+                v0 = 0;
+                c5 = 3;
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 0;
+                c5 = 3;
+                const obj2 = { value: null, done: true };
+                obj2[0] = arg1;
+                return obj2;
+              } else {
+                closure_0 = arg1;
+                if (closure_0.button_urls.length <= closure_2) {
+                  v0 = 0;
+                  c5 = 3;
+                  return { value: "HermesInternal", done: null };
+                } else {
+                  closure_1 = closure_0.button_urls[closure_2];
+                  if (typeof closure_1 === "__FORMATJS_LISTFORMAT_DATA__") {
+                    v0 = 0;
+                    c5 = 3;
+                    return { value: "HermesInternal", done: null };
+                  } else {
+                    closure_2 = outer1_1(outer1_2[47]).safeParseWithQuery(closure_1);
+                    let protocol;
+                    if (closure_2 != null) {
+                      protocol = closure_2.protocol;
+                    }
+                    if (null != protocol) {
+                      let hostname;
+                      if (closure_2 != null) {
+                        hostname = closure_2.hostname;
+                      }
+                      if (null != hostname) {
+                        obj = outer1_1(outer1_2[47]);
+                        v0 = obj.format(closure_2);
+                        obj1 = outer1_0(outer1_2[48]);
+                        const obj3 = { href: null, onConfirm: null, trusted: false };
+                        obj3[0] = v0;
+                        obj3[1] = function onConfirm() {
+                          return callback(tmp20[34]).openURL(c3);
+                        };
+                        obj1.handleClick(obj3);
+                        v0 = 0;
+                      }
+                    }
+                    const obj8 = outer1_1(outer1_2[47]);
+                  }
+                }
+              }
+              v0 = 0;
+              c5 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } catch (tmp20) {
+            closure_2 = tmp20;
+            if (tmp4 === v0) {
+              c5 = tmp2;
+              throw tmp20;
+            } else {
+              c4 = tmp;
+            }
+          }
+        }
+      });
+      jsx(require(index[24]).Button, { text: null, variant: "secondary", onPress: null });
+      const tmp2 = jsx;
+    }
+  }
+  return tmp;
+};

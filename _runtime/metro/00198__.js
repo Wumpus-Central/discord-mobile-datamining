@@ -1,0 +1,32 @@
+// === Module 198: ? ===
+
+// Module 198
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+import polyfillObjectProperty from "polyfillObjectProperty";
+
+polyfillObjectProperty.polyfillGlobal("XMLHttpRequest", () => require(199) /* _isNativeReflectConstruct */.default);
+polyfillObjectProperty.polyfillGlobal("FormData", () => require(211) /* FormData */.default);
+polyfillObjectProperty.polyfillGlobal("fetch", () => require(215) /* t */.fetch);
+polyfillObjectProperty.polyfillGlobal("Headers", () => require(215) /* t */.Headers);
+polyfillObjectProperty.polyfillGlobal("Request", () => require(215) /* t */.Request);
+polyfillObjectProperty.polyfillGlobal("Response", () => require(215) /* t */.Response);
+polyfillObjectProperty.polyfillGlobal("WebSocket", () => require(217) /* _isNativeReflectConstruct */.default);
+polyfillObjectProperty.polyfillGlobal("Blob", () => require(203) /* Blob */.default);
+polyfillObjectProperty.polyfillGlobal("File", () => require(222) /* _isNativeReflectConstruct */.default);
+polyfillObjectProperty.polyfillGlobal("FileReader", () => require(223) /* _isNativeReflectConstruct */.default);
+polyfillObjectProperty.polyfillGlobal("URL", () => require(226) /* URL */.URL);
+polyfillObjectProperty.polyfillGlobal("URLSearchParams", () => require(226) /* URL */.URLSearchParams);
+polyfillObjectProperty.polyfillGlobal("AbortController", () => require(228) /* _isNativeReflectConstruct */.AbortController);
+polyfillObjectProperty.polyfillGlobal("AbortSignal", () => require(228) /* _isNativeReflectConstruct */.AbortSignal);

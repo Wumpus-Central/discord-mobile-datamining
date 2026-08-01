@@ -1,0 +1,439 @@
+// === Module 15088: IconOrPreview ===
+
+// Module 15088 (IconOrPreview)
+import importAllResult from "HappeningNowCardPlaceholder";
+import get_ActivityIndicator from "asyncRequireImpl";
+import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
+import ME from "ME";
+import jsxProd from "HAPPENING_NOW_CONTENT_HEIGHT";
+import createCacheKey from "createCacheKey";
+
+let HAPPENING_NOW_CONTENT_HEIGHT;
+let HAPPENING_NOW_STAGE_PREVIEW_HEIGHT;
+let PixelRatio;
+let c10;
+let c4;
+let c9;
+let closure_12;
+let error;
+let map1;
+let metroImportAll;
+let unpackModuleId;
+const require = arg1;
+function IconOrPreview(arg0) {
+  let activity;
+  let b;
+  let g;
+  let game;
+  let r;
+  let stream;
+  let userId;
+  ({ userId, activity, stream, game } = arg0);
+  let _require;
+  let importDefault;
+  let dependencyMap;
+  const tmp = callback2();
+  _require = tmp;
+  let guildId;
+  if (stream != null) {
+    guildId = stream.guildId;
+  }
+  let channelId;
+  if (stream != null) {
+    channelId = stream.channelId;
+  }
+  let ownerId;
+  if (stream != null) {
+    ownerId = stream.ownerId;
+  }
+  const previewUrl = importDefault(10867)(guildId, channelId, ownerId).previewUrl;
+  let assetImage;
+  if (null != previewUrl) {
+    assetImage = previewUrl;
+  }
+  let tmp9 = null == assetImage;
+  if (tmp9) {
+    let large_image;
+    if (activity != null) {
+      const assets = activity.assets;
+      if (assets != null) {
+        large_image = assets.large_image;
+      }
+    }
+    tmp9 = null != large_image;
+  }
+  if (tmp9) {
+    let obj = _require(7921);
+    let application_id;
+    if (activity != null) {
+      application_id = activity.application_id;
+    }
+    let large_image1;
+    if (activity != null) {
+      large_image1 = activity.assets.large_image;
+    }
+    let items = [closure_14, closure_14];
+    assetImage = obj.getAssetImage(application_id, large_image1, items);
+  }
+  if (null == assetImage) {
+    let iconURL;
+    if (game != null) {
+      iconURL = game.getIconURL(closure_14);
+    }
+    assetImage = iconURL;
+  }
+  let tmp17 = null == assetImage;
+  if (tmp17) {
+    let small_image;
+    if (activity != null) {
+      const assets2 = activity.assets;
+      if (assets2 != null) {
+        small_image = assets2.small_image;
+      }
+    }
+    tmp17 = null != small_image;
+  }
+  if (tmp17) {
+    let obj1 = _require(7921);
+    let application_id1;
+    if (activity != null) {
+      application_id1 = activity.application_id;
+    }
+    let small_image1;
+    if (activity != null) {
+      small_image1 = activity.assets.small_image;
+    }
+    const items1 = [closure_14, closure_14];
+    assetImage = obj1.getAssetImage(application_id1, small_image1, items1);
+  }
+  if (null != assetImage) {
+    let obj3 = _require(7984);
+    const memoizedImageSourceResult = obj3.memoizedImageSource(assetImage);
+    let obj4 = _require(7984);
+    const dominantRGBFromImage = obj4.useDominantRGBFromImage(assetImage, memoizedImageSourceResult);
+    ({ r, g, b } = dominantRGBFromImage);
+    const rgbToHexResult = _require(4037).rgbToHex(r, g, b);
+    importDefault = rgbToHexResult;
+    const obj6 = _require(4037);
+    const hexWithOpacityResult = _require(4037).hexWithOpacity(rgbToHexResult, 0.2);
+    dependencyMap = hexWithOpacityResult;
+    const items2 = [rgbToHexResult, tmp.cardImageAssetContainer];
+    const memo = importAllResult.useMemo(() => {
+      const items = [_undefined.cardImageAssetContainer, { shadowColor: c1 }];
+      return items;
+    }, items2);
+    const items3 = [hexWithOpacityResult, tmp.cardImageAssetBackground];
+    if (null != stream) {
+      obj = { style: null, children: null };
+      obj[0] = memo;
+      obj = { stream: null, children: null, style: null, ctaText: null, disabled: true };
+      obj[0] = stream;
+      let tmp2Result = tmp2(10864);
+      obj1 = { style: null, textStyle: null, allowFontScaling: false };
+      ({ cardImageStreamLive: obj13[0], stageStreamLiveText: obj13[1] } = tmp);
+      obj[1] = callback(tmp28(1297).LiveTag, obj1);
+      obj[2] = tmp.cardImageStreamPreview;
+      const intl5 = tmp28(1236).intl;
+      obj[3] = intl5.string(tmp28(1236).t["7Xq/nV"]);
+      obj[1] = callback(tmp2Result, obj);
+      return callback(closure_4, obj);
+    } else {
+      if (tmp2(9088)(activity)) {
+        const intl4 = tmp28(1236).intl;
+        let stringResult = intl4.string(tmp28(1236).t.rmnkz4);
+      } else {
+        let type;
+        if (activity != null) {
+          type = activity.type;
+        }
+        if (type === constants.LISTENING) {
+          const intl3 = tmp28(1236).intl;
+          stringResult = intl3.string(tmp28(1236).t.kUEnxN);
+        } else if (tmp2(12005)(activity)) {
+          const intl2 = tmp28(1236).intl;
+          stringResult = intl2.string(tmp28(1236).t.T0uYK9);
+        } else {
+          let type1;
+          if (activity != null) {
+            type1 = activity.type;
+          }
+          if (type1 !== tmp37.CUSTOM_STATUS) {
+            const intl = tmp28(1236).intl;
+            stringResult = intl.string(tmp28(1236).t["2TbM/G"]);
+          }
+        }
+      }
+      const obj2 = { style: null, accessibilityLabel: null, children: null };
+      obj2[0] = memo;
+      obj2[1] = stringResult;
+      obj3 = { style: null, children: null };
+      obj3[0] = tmp35;
+      obj4 = { style: null, source: null };
+      obj4[0] = tmp.cardImageAsset;
+      obj4[1] = memoizedImageSourceResult;
+      obj3[1] = callback(tmp2(5145), obj4);
+      obj2[2] = callback(closure_4, obj3);
+      return callback(closure_4, obj2);
+    }
+    const obj7 = _require(4037);
+  } else {
+    let type2;
+    if (activity != null) {
+      type2 = activity.type;
+    }
+    if (type2 === constants.PLAYING) {
+      const substr = userId.slice(-1);
+      userId = substr.charCodeAt(0);
+      tmp2Result = items[userId % items.length];
+    } else {
+      tmp2Result = tmp2(15099);
+    }
+  }
+}
+function StageStreamAvatars(stage) {
+  let audienceCount;
+  let audienceFriends;
+  stage = stage.stage;
+  let obj = require(15086) /* useLiveStageData */;
+  const liveStageData = obj.useLiveStageData(stage);
+  obj = { style: callback2().avatarStackContainer, children: null };
+  ({ audienceCount, audienceFriends } = liveStageData);
+  obj = { users: null, guildId: null, userCount: null, isStage: true, avatarSize: null };
+  const items = [stage.user];
+  HermesBuiltin.arraySpread(audienceFriends, 1);
+  obj[0] = items;
+  obj[1] = stage.guild_id;
+  obj[2] = audienceCount + 1;
+  obj[4] = require(1297) /* Button */.AvatarSizes.SIZE_16;
+  obj[1] = callback(require(15097) /* HappeningNowAvatarStack */.HappeningNowAvatarStack, obj);
+  return callback(closure_4, obj);
+}
+let c3 = importAllResult;
+({ PixelRatio, View: c4 } = get_ActivityIndicator);
+({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: error, STATUS_CUTOUT_SMALL: metroImportAll, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+({ ActivityTypes: c9, AnalyticEvents: c10 } = ME);
+({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
+let items = [require("registerAsset"), require("registerAsset")];
+let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: null, cardAvatar: null, cardImage: null, cardImageStream: null, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
+obj = { backgroundColor: require("Themes").colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: require("Themes").radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
+obj[1] = obj;
+obj[2] = { marginBottom: 2 };
+obj[3] = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" };
+obj[4] = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" };
+createCacheKey = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
+obj[5] = createCacheKey;
+obj[6] = { height: "100%", backgroundColor: require("Themes").colors.CARD_SECONDARY_BG, borderRadius: require("Themes").radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
+let obj2 = { height: "100%", backgroundColor: require("Themes").colors.CARD_SECONDARY_BG, borderRadius: require("Themes").radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
+obj[7] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: require("Themes").radii.sm };
+let obj3 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: require("Themes").radii.sm };
+obj[8] = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+obj[9] = { top: 4, left: 4, position: "absolute" };
+obj[10] = { fontSize: 10, lineHeight: 13, fontFamily: require("sum").Fonts.PRIMARY_BOLD };
+obj[11] = { marginRight: 12, flexDirection: "column", height: "100%" };
+let closure_16 = createCacheKey.createStyles(obj);
+let obj4 = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+const memoResult = importAllResult.memo((userId) => {
+  let fullwidth;
+  let panelVariant;
+  let renderingContext;
+  let status;
+  userId = userId.userId;
+  const guildId = userId.guildId;
+  const index = userId.index;
+  const activity = userId.activity;
+  const stream = userId.stream;
+  ({ fullwidth, panelVariant } = userId);
+  ({ status, renderingContext } = userId);
+  if (panelVariant === undefined) {
+    panelVariant = false;
+  }
+  let analyticsLocations;
+  let stateFromStores;
+  const tmp = callback2();
+  analyticsLocations = guildId(index[12])().analyticsLocations;
+  let obj = userId(index[13]);
+  let items = [stateFromStores];
+  stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getUser(userId));
+  let obj1 = userId(index[14]);
+  let application_id;
+  if (activity != null) {
+    application_id = activity.application_id;
+  }
+  const getOrFetchApplication = obj1.useGetOrFetchApplication(application_id);
+  const items1 = [analyticsLocations];
+  const stateFromStores1 = userId(index[13]).useStateFromStores(items1, () => {
+    let channelId;
+    if (stream != null) {
+      channelId = stream.channelId;
+    }
+    return analyticsLocations.getStageInstanceByChannel(channelId);
+  });
+  if (guildId(index[26])(activity)) {
+    let GameControllerIcon = tmp4(tmp3[27]).SpotifyNeutralIcon;
+  } else {
+    let type;
+    if (activity != null) {
+      type = activity.type;
+    }
+    if (type === constants.LISTENING) {
+      GameControllerIcon = tmp4(tmp3[28]).MusicIcon;
+    } else if (tmp2(tmp3[29])(activity)) {
+      GameControllerIcon = tmp4(tmp3[30]).XboxNeutralIcon;
+    } else {
+      let type1;
+      if (activity != null) {
+        type1 = activity.type;
+      }
+      if (type1 !== tmp10.CUSTOM_STATUS) {
+        if (null != stateFromStores1) {
+          GameControllerIcon = tmp4(tmp3[31]).StageIcon;
+        } else {
+          GameControllerIcon = tmp4(tmp3[32]).GameControllerIcon;
+        }
+      }
+    }
+  }
+  const items2 = [userId, stateFromStores, stream, guildId, activity, index, analyticsLocations];
+  const callback = activity.useCallback(() => {
+    if (null != stream) {
+      let STATUS_CARD = outer1_7.STREAM_CARD;
+    } else {
+      if (null != activity) {
+        if (activity.type !== outer1_9.CUSTOM_STATUS) {
+          STATUS_CARD = outer1_7.ACTIVITY_CARD;
+        }
+      }
+      STATUS_CARD = outer1_7.STATUS_CARD;
+    }
+    let obj = guildId(index[15]);
+    obj = { type: STATUS_CARD, order: index, guild_id: guildId, highlighted_user_ids: items, destination_channel_id: null };
+    items = [userId];
+    let channelId;
+    if (stream != null) {
+      channelId = tmp.channelId;
+    }
+    obj[4] = channelId;
+    obj.track(outer1_10.ACTIVITY_CARD_CLICKED, obj);
+    if (null != stream) {
+      userId(tmp6[17])(tmp6[16], tmp6.paths).then((arg0) => arg0.default(channelId.channelId, true));
+      const promise2 = userId(tmp6[17])(tmp6[16], tmp6.paths);
+    } else {
+      userId(tmp6[17])(tmp6[18], tmp6.paths).then((arg0) => arg0.default({ userId: closure_0, localUser: mergeGuildAvatar, sourceAnalyticsLocations: handleStageInstanceCreateOrUpdate }));
+      const promise = userId(tmp6[17])(tmp6[18], tmp6.paths);
+    }
+  }, items2);
+  if (null == stateFromStores) {
+    obj = { panelVariant: null };
+    obj[0] = panelVariant;
+    return callback(tmp4(tmp3[19]).HappeningNowCardPlaceholder, obj);
+  } else {
+    let str2 = "full";
+    if (!fullwidth) {
+      let str = "medium";
+      if (null != stream) {
+        str = "large";
+      }
+      str2 = str;
+    }
+    let tmp2Result = tmp2(tmp3[20]);
+    const name = tmp2Result.getName(guildId, null, stateFromStores);
+    let type2;
+    if (activity != null) {
+      type2 = activity.type;
+    }
+    if (type2 === constants.CUSTOM_STATUS) {
+      obj = { fullwidth: null, user: null, guildId: null, activity: null, userTitle: null, onPress: null, panelVariant: null };
+      obj[0] = fullwidth;
+      obj[1] = stateFromStores;
+      obj[2] = guildId;
+      obj[3] = activity;
+      obj[4] = name;
+      obj[5] = callback;
+      obj[6] = panelVariant;
+      let tmp23Result = callback(tmp4(tmp3[21]).CustomStatusActivityCard, obj);
+    } else {
+      obj1 = { onPress: null, width: null, IconComponent: null, panelVariant: null, children: null };
+      obj1[0] = callback;
+      obj1[1] = str2;
+      obj1[2] = GameControllerIcon;
+      obj1[3] = panelVariant;
+      tmp2Result = tmp2(tmp3[22]);
+      if (null != stateFromStores1) {
+        const obj2 = { style: null, children: null };
+        obj2[0] = tmp.stagePreviewWrapper;
+        const obj3 = { style: null, children: null };
+        obj3[0] = tmp.cardImageStream;
+        const obj4 = { userId: null, activity: null, game: null, stream: null };
+        obj4[0] = stateFromStores.id;
+        obj4[1] = activity;
+        obj4[2] = getOrFetchApplication;
+        obj4[3] = stream;
+        obj3[1] = tmp23(IconOrPreview, obj4);
+        const items3 = [tmp23(stream, obj3), ];
+        tmp23Result = null;
+        if (null != stateFromStores1) {
+          const obj5 = { user: null, stage: null };
+          obj5[0] = stateFromStores;
+          obj5[1] = stateFromStores1;
+          tmp23Result = tmp23(StageStreamAvatars, obj5);
+        }
+        const obj6 = { children: null };
+        items3[1] = tmp23Result;
+        obj2[1] = items3;
+        const items4 = [tmp25(stream, obj2), ];
+        const obj7 = { stage: null, renderingContext: null, guildId: null, streamingUser: null };
+        obj7[0] = stateFromStores1;
+        obj7[1] = renderingContext;
+        obj7[2] = guildId;
+        obj7[3] = stateFromStores;
+        items4[1] = tmp23(tmp4(tmp3[23]).HappeningNowLiveStageContent, obj7);
+        obj6[0] = items4;
+        let obj8 = obj6;
+        const tmp16 = stream;
+      } else {
+        obj8 = { children: null };
+        const obj9 = { style: null, children: null };
+        obj9[0] = tmp.cardImage;
+        const obj10 = { userId: null, activity: null, game: null, stream: null };
+        obj10[0] = stateFromStores.id;
+        obj10[1] = activity;
+        obj10[2] = getOrFetchApplication;
+        obj10[3] = stream;
+        obj9[1] = tmp23(IconOrPreview, obj10);
+        const items5 = [tmp23(stream, obj9), ];
+        const obj11 = { style: null, children: null };
+        obj11[0] = tmp.content;
+        const obj12 = { user: null, avatarDecoration: null, size: null, guildId: null, status: null, style: null, autoStatusCutout: null };
+        obj12[0] = stateFromStores;
+        obj12[1] = stateFromStores.avatarDecoration;
+        obj12[2] = tmp4(tmp3[24]).AvatarSizes.XSMALL;
+        obj12[3] = guildId;
+        obj12[4] = status;
+        obj12[5] = tmp.cardAvatar;
+        obj12[6] = closure_8;
+        const items6 = [tmp23(tmp4(tmp3[24]).Avatar, obj12), , ];
+        const obj13 = { noMargin: true, children: null };
+        obj13[1] = name;
+        items6[1] = tmp23(tmp4(tmp3[22]).HappeningNowCardHeader, obj13);
+        const obj14 = { activity: null, stream: null };
+        obj14[0] = activity;
+        obj14[1] = stream;
+        items6[2] = tmp23(tmp4(tmp3[25]).HappeningNowActivityCardSubtitle, obj14);
+        obj11[1] = items6;
+        items5[1] = tmp25(stream, obj11);
+        obj8[0] = items5;
+      }
+      obj1[4] = closure_12(closure_13, obj8);
+      tmp23Result = tmp23(tmp2Result, obj1);
+      const tmp26 = closure_13;
+    }
+    return tmp23Result;
+  }
+  const tmp4Result = userId(index[13]);
+});
+const result = require("handleStageInstanceCreateOrUpdate").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx");
+
+export default memoResult;

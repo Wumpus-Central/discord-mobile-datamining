@@ -1,0 +1,95 @@
+// === Module 539: getSideChannelWeakMap ===
+
+// Module 539 (getSideChannelWeakMap)
+let tmp = require("getEvalledConstructor")("%WeakMap%", true);
+let closure_3 = require("callBoundIntrinsic")("WeakMap.prototype.get", true);
+let closure_4 = require("callBoundIntrinsic")("WeakMap.prototype.set", true);
+let closure_5 = require("callBoundIntrinsic")("WeakMap.prototype.has", true);
+let closure_6 = require("callBoundIntrinsic")("WeakMap.prototype.delete", true);
+if (tmp) {
+  function getSideChannelWeakMap() {
+    let obj = {
+      assert(arg0) {
+        if (!obj.has(arg0)) {
+          let tmp3 = outer1_0(outer1_1[2]);
+          tmp3 = new tmp3("Side channel does not contain " + outer1_0(outer1_1[3])(arg0));
+          throw tmp3;
+        }
+      },
+      delete(arg0) {
+        if (obj) {
+          if (arg0) {
+            if (closure_0) {
+              return outer1_6(tmp, arg0);
+            }
+          }
+          return false;
+        }
+        if (outer1_0(outer1_1[4])) {
+          if (closure_1) {
+            return obj.delete(arg0);
+          }
+        }
+      },
+      get(arg0) {
+        if (obj) {
+          if (arg0) {
+            if (typeof arg0 === "ay") {
+              if (closure_0) {
+                let value = outer1_3(tmp, arg0);
+              }
+              return value;
+            }
+          }
+        }
+        value = closure_1;
+        if (closure_1) {
+          value = obj.get(arg0);
+        }
+      },
+      has(arg0) {
+        if (obj) {
+          if (arg0) {
+            if (typeof arg0 === "ay") {
+              if (closure_0) {
+                let hasItem = outer1_5(tmp, arg0);
+              }
+              return hasItem;
+            }
+          }
+        }
+        hasItem = set;
+        if (hasItem) {
+          hasItem = set.has(arg0);
+        }
+      },
+      set(arg0, arg1) {
+        if (obj) {
+          if (arg0) {
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              tmp = new tmp();
+              closure_0 = tmp;
+              tmp6 = tmp;
+            }
+            outer1_4(tmp6, arg0, arg1);
+          }
+        }
+        if (outer1_0(outer1_1[4])) {
+          obj = closure_1;
+          if (!closure_1) {
+            const tmp4 = outer1_0(outer1_1[4])();
+            closure_1 = tmp4;
+            obj = tmp4;
+          }
+          const result = obj.set(arg0, arg1);
+        }
+      }
+    };
+    return obj;
+  }
+} else {
+  getSideChannelWeakMap = require("module_577");
+}
+
+export default getSideChannelWeakMap;

@@ -1,0 +1,11 @@
+// === Module 1850: getForceSdrEmojisStickersConfig ===
+
+// Module 1850 (getForceSdrEmojisStickersConfig)
+import ApexExperiment from "ApexExperiment";
+
+let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-10-force-sdr-emojis-stickers", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const result = require("set").fileFinishedImporting("modules/image_upload/ForceSdrEmojisStickersExperiment.tsx");
+
+export const getForceSdrEmojisStickersConfig = function getForceSdrEmojisStickersConfig(location) {
+  return config.getConfig({ location: location.location });
+};

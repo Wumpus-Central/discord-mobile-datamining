@@ -1,0 +1,107 @@
+// === Module 8081: useProfileTheme ===
+
+// Module 8081 (useProfileTheme)
+import _slicedToArray from "_slicedToArray";
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore";
+import { ThemeTypes } from "ME";
+
+const require = arg1;
+let result = require("useProfileThemeOverrideStore").fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
+
+export default function useProfileTheme(arg0) {
+  let displayProfile;
+  let forceUserTheme;
+  let isPreview;
+  let pendingAvatarSrc;
+  let pendingThemeColors;
+  let user;
+  ({ user, displayProfile, pendingAvatarSrc } = arg0);
+  ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
+  const tmp2 = importDefault(4129)();
+  const tmp3 = useEffectiveThemeOverride();
+  let obj = require(589) /* initialize */;
+  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const stateFromStores = obj.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
+  if (pendingAvatarSrc == null) {
+    let avatarURL;
+    if (user != null) {
+      let guildId;
+      if (displayProfile != null) {
+        guildId = displayProfile.guildId;
+      }
+      avatarURL = user.getAvatarURL(guildId, 80);
+    }
+    pendingAvatarSrc = avatarURL;
+  }
+  let tmp4Result = tmp4(711);
+  const result = tmp4Result.unsafe_getResolvedRawColor("PRIMARY_530", { saturation: 1 });
+  tmp4Result = tmp4(7915);
+  callback(tmp4Result.useAvatarColors(pendingAvatarSrc, result, false), 2);
+  if (null != tmp3) {
+    return tmp3;
+  } else {
+    let canEditThemes;
+    if (displayProfile != null) {
+      canEditThemes = displayProfile.canEditThemes;
+    }
+    if (!canEditThemes) {
+      if (!isPreview) {
+        obj = { theme: null, primaryColor: null, secondaryColor: null };
+        obj[0] = tmp2;
+        return obj;
+      }
+    }
+    let previewThemeColors;
+    if (displayProfile != null) {
+      previewThemeColors = displayProfile.getPreviewThemeColors(pendingThemeColors);
+    }
+    let first;
+    if (previewThemeColors != null) {
+      first = previewThemeColors[0];
+    }
+    if (first == null) {
+      first = tmp4(688).hex2int(tmp10);
+      const tmp4Result1 = tmp4(688);
+    }
+    let hex2intResult;
+    if (previewThemeColors != null) {
+      hex2intResult = previewThemeColors[1];
+    }
+    if (hex2intResult == null) {
+      hex2intResult = tmp4(688).hex2int(tmp11);
+      const tmp4Result2 = tmp4(688);
+    }
+    let tmp16 = tmp2;
+    if (!stateFromStores) {
+      tmp16 = tmp2;
+      if (!forceUserTheme) {
+        let profileTheme = tmp4(7993).getProfileTheme(first);
+        if (profileTheme == null) {
+          profileTheme = tmp2;
+        }
+        tmp16 = profileTheme;
+        const tmp4Result3 = tmp4(7993);
+      }
+    }
+    if (tmp16 !== ThemeTypes.DARK) {
+      let isThemeLightResult = tmp16 === tmp18.DARK;
+      if (isThemeLightResult) {
+        isThemeLightResult = tmp4(4039).isThemeLight(tmp2);
+        const tmp4Result4 = tmp4(4039);
+      }
+      let DARKER = tmp16;
+      if (isThemeLightResult) {
+        DARKER = tmp18.DARKER;
+      }
+    } else {
+      DARKER = tmp2;
+      const tmp4Result5 = tmp4(4039);
+    }
+    obj = { theme: null, primaryColor: null, secondaryColor: null };
+    obj[0] = DARKER;
+    obj[1] = first;
+    obj[2] = hex2intResult;
+    return obj;
+  }
+};

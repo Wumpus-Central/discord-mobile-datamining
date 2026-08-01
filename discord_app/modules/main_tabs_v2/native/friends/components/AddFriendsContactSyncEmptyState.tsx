@@ -1,0 +1,59 @@
+// === Module 15625: AddFriendsContactSyncEmptyState ===
+
+// Module 15625 (AddFriendsContactSyncEmptyState)
+import "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let c3;
+let c4;
+let c5;
+let closure_6;
+const require = arg1;
+({ View: c3, Image: c4 } = get_ActivityIndicator);
+({ jsx: c5, jsxs: closure_6 } = jsxProd);
+createCacheKey = { content: null, headerImage: null, title: null, subtitle: null, subtitleText: null, trailing: null };
+createCacheKey = { alignItems: "center", marginTop: require("Themes").space.PX_24, marginHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.CARD_BACKGROUND_DEFAULT, borderRadius: require("Themes").radii.lg };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { height: 135, width: 216, marginTop: require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_16 };
+let obj1 = { height: 135, width: 216, marginTop: require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_16 };
+createCacheKey[2] = { marginBottom: require("Themes").space.PX_8, width: "100%", textAlign: "center" };
+let obj2 = { marginBottom: require("Themes").space.PX_8, width: "100%", textAlign: "center" };
+createCacheKey[3] = { marginBottom: require("Themes").space.PX_24, paddingHorizontal: require("Themes").space.PX_48, width: "100%", alignContent: "center" };
+createCacheKey[4] = { textAlign: "center" };
+let obj3 = { marginBottom: require("Themes").space.PX_24, paddingHorizontal: require("Themes").space.PX_48, width: "100%", alignContent: "center" };
+createCacheKey[5] = { width: "100%", paddingBottom: require("Themes").space.PX_4, paddingHorizontal: require("Themes").space.PX_12 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj4 = { width: "100%", paddingBottom: require("Themes").space.PX_4, paddingHorizontal: require("Themes").space.PX_12 };
+const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsContactSyncEmptyState.tsx");
+
+export default function AddFriendsContactSyncEmptyState() {
+  const tmp = createCacheKey();
+  let obj = { style: tmp.content, children: null };
+  obj = { resizeMode: "contain", style: tmp.headerImage, source: importDefault(11798) };
+  const items = [callback(closure_4, obj), , , ];
+  obj = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj[3] = intl.string(require(1236) /* getSystemLocale */.t["/G+nci"]);
+  items[1] = callback(require(4189) /* Text */.Text, obj);
+  const obj1 = { style: tmp.subtitle, children: null };
+  const obj2 = { style: tmp.subtitleText, variant: "text-sm/medium", children: null };
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  const obj3 = { learnMoreHook: null };
+  obj3[0] = require(11785) /* _uploadContacts */.handleOpenLearnMoreLink;
+  obj2[2] = intl2.format(require(1236) /* getSystemLocale */.t.OXdOPf, obj3);
+  obj1[1] = callback(require(4189) /* Text */.Text, obj2);
+  items[2] = callback(closure_3, obj1);
+  const obj4 = { style: tmp.trailing, children: null };
+  const obj5 = { variant: "primary", size: "lg", text: null, onPress: null };
+  const intl3 = require(1236) /* getSystemLocale */.intl;
+  obj5[2] = intl3.string(require(1236) /* getSystemLocale */.t.QUXSpo);
+  obj5[3] = function onPress() {
+    callback(table[10]).openContactSyncModal({}, "Add Friends Contact Sync Empty State");
+  };
+  obj4[1] = callback(require(4604) /* Button */.Button, obj5);
+  items[3] = callback(closure_3, obj4);
+  obj[1] = items;
+  return callback2(closure_3, obj);
+};

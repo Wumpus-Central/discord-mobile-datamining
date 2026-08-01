@@ -1,0 +1,104 @@
+// === Module 14025: _updateClipsAllowVoiceRecording ===
+
+// Module 14025 (_updateClipsAllowVoiceRecording)
+import getSystemLocale from "getSystemLocale";
+import createToggle from "createToggle";
+
+const require = arg1;
+function _updateClipsAllowVoiceRecording() {
+  const self = this;
+  const tmp = callback((arg0) => {
+    let closure_0 = arg0;
+    let c2 = 0;
+    let c3 = 0;
+    return (function*(arg0) {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const callback2 = tmp4;
+              const ClipsAllowVoiceRecording = callback(3866).ClipsAllowVoiceRecording;
+              dependencyMap = 1;
+              c3 = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = ClipsAllowVoiceRecording.updateSetting(callback);
+              return obj1;
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          } else {
+            obj = callback2(709);
+            obj.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp12) {
+          c3 = tmp;
+          throw tmp12;
+        }
+      }
+    })();
+  });
+  const _updateClipsAllowVoiceRecording = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+createToggle = {
+  useTitle() {
+    const intl = require(1236) /* getSystemLocale */.intl;
+    return intl.string(require(1236) /* getSystemLocale */.t.AGDDkH);
+  },
+  useDescription() {
+    const intl = require(1236) /* getSystemLocale */.intl;
+    return intl.string(require(1236) /* getSystemLocale */.t["wW9/zQ"]);
+  },
+  parent: require("MobileSetting").MobileSetting.CLIPS,
+  useValue: require("explicitContentFromProto").ClipsAllowVoiceRecording.useSetting,
+  onValueChange: function updateClipsAllowVoiceRecording() {
+    const self = this;
+    const apply = _updateClipsAllowVoiceRecording.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  }
+};
+createToggle = createToggle.createToggle(createToggle);
+const result = require("explicitContentFromProto").fileFinishedImporting("modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx");
+
+export default createToggle;

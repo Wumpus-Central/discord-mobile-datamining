@@ -1,0 +1,26 @@
+// === Module 6086: getForumChannelSessionId ===
+
+// Module 6086 (getForumChannelSessionId)
+class ForumSessionAnalyticsManager {
+}
+ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(arg0) {
+  const self = this;
+  if (null == this.session) {
+    let obj = { channelId: null, sessionId: null };
+    obj[0] = arg0;
+    obj[1] = require(514) /* v1 */.v4();
+    self.session = obj;
+    const obj2 = require(514) /* v1 */;
+  }
+  if (self.session.channelId !== arg0) {
+    obj = { channelId: null, sessionId: null };
+    obj[0] = arg0;
+    obj[1] = require(514) /* v1 */.v4();
+    self.session = obj;
+    const obj4 = require(514) /* v1 */;
+  }
+  return self.session.sessionId;
+};
+const result = require("set").fileFinishedImporting("modules/forums/tracking/ForumSessionAnalyticsManager.tsx");
+
+export default Object.create(ForumSessionAnalyticsManager.prototype);

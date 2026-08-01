@@ -1,0 +1,146 @@
+// === Module 12337: ? ===
+
+// Module 12337
+import _slicedToArray from "_slicedToArray";
+import importAllResult from "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let StyleSheet;
+let c5;
+let closure_6;
+let error;
+let metroImportAll;
+const require = arg1;
+let c4 = importAllResult;
+({ View: c5, ActivityIndicator: closure_6, StyleSheet } = get_ActivityIndicator);
+({ jsx: error, jsxs: metroImportAll } = jsxProd);
+let obj = { loader: null, loaderIndicator: null, loaderText: null };
+obj = {};
+let merged = Object.assign(StyleSheet.absoluteFillObject);
+obj.flex = 1;
+obj.alignItems = "center";
+obj.justifyContent = "center";
+obj.backgroundColor = "rgba(0, 0, 0, 0.7)";
+obj[0] = obj;
+createCacheKey = { marginTop: require("Themes").space.PX_12 };
+obj[1] = createCacheKey;
+obj[2] = { textAlign: "center" };
+let closure_9 = createCacheKey.createStyles(obj);
+let closure_10 = { None: 0, [0]: "None", Loading: 1, [1]: "Loading", Loaded: 2, [2]: "Loaded", Error: 3, [3]: "Error" };
+const memoResult = importAllResult.memo(function MediaModalLoader(onLoad) {
+  let c5;
+  let onLoadStart;
+  let style;
+  let tmp8;
+  ({ style, onLoadStart } = onLoad);
+  onLoad = onLoad.onLoad;
+  const onError = onLoad.onError;
+  let num = onLoad.index;
+  if (num === undefined) {
+    num = 0;
+  }
+  const source = onLoad.source;
+  const merged = Object.assign(onLoad, Object.create(null));
+  let first;
+  let importAllResult;
+  c5 = undefined;
+  let closure_6;
+  const tmp2 = callback2();
+  const tmp5 = first(importAllResult.useState(closure_10.None), 2);
+  first = tmp5[0];
+  importAllResult = tmp5[1];
+  [tmp8, c5] = first(importAllResult.useState(0), 2);
+  closure_6 = importAllResult.useRef(null);
+  const callback = importAllResult.useCallback(() => {
+    const timerId = setTimeout(() => {
+      callback((arg0) => arg0 === None.None ? None.Loading : None.None);
+    }, 1000);
+    closure_6.current = timerId;
+    return timerId;
+  }, []);
+  const callback1 = importAllResult.useCallback((nativeEvent) => {
+    nativeEvent = nativeEvent.nativeEvent;
+    _undefined(100 * nativeEvent.loaded / nativeEvent.total);
+  }, []);
+  callback2 = importAllResult.useCallback(() => callback(outer1_10.Loaded), []);
+  const items = [first, onLoadStart, onError, onLoad];
+  const callback3 = importAllResult.useCallback(() => callback(outer1_10.Error), []);
+  const effect = importAllResult.useEffect(() => {
+    if (outer1_10.Loading === first) {
+      if (onLoadStart != null) {
+        tmp9();
+      }
+    } else if (tmp2.Error === tmp) {
+      if (onError != null) {
+        tmp6();
+      }
+    } else if (tmp2.Loaded === tmp) {
+      if (onLoad != null) {
+        tmp3();
+      }
+    }
+  }, items);
+  const effect1 = importAllResult.useEffect(() => () => clearTimeout(ref.current));
+  if (first === closure_10.Error) {
+    let obj = { style: null, children: null };
+    const items1 = [tmp2.loader, style];
+    obj[0] = items1;
+    obj = { style: null, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
+    obj[0] = tmp2.loaderText;
+    const intl = onLoadStart(onError[7]).intl;
+    obj[3] = intl.string(onLoadStart(onError[7]).t["+ITMYX"]);
+    obj[1] = callback(onLoadStart(onError[6]).Text, obj);
+    let tmp28Result1 = callback(c5, obj);
+  } else {
+    const obj1 = {};
+    const merged1 = Object.assign(merged);
+    obj1.style = style;
+    obj1.source = source;
+    obj1.onLoadStart = callback;
+    obj1.onProgress = callback1;
+    obj1.onLoad = callback2;
+    obj1.onError = callback3;
+    obj1.accessibilityRole = "image";
+    const description = source.description;
+    obj1.accessibilityLabel = description;
+    obj1.loop = true;
+    const items2 = [callback(onLoad.Component, obj1), , ];
+    let tmp28Result = null;
+    if (first === closure_10.Loading) {
+      const obj2 = { style: null, children: null };
+      const items3 = [tmp2.loader, style];
+      obj2[0] = items3;
+      tmp28Result = null;
+      if (null == source.videoURI) {
+        obj = { style: null, variant: "heading-md/semibold", color: "text-overlay-light", children: null };
+        obj[0] = tmp2.loaderText;
+        const _Math = Math;
+        const items4 = [Math.round(tmp8), "%"];
+        obj[3] = items4;
+        tmp28Result = tmp28(onLoadStart(onError[6]).Text, obj);
+      }
+      const items5 = [tmp28Result, ];
+      const obj3 = { color: "white", style: null, size: "large" };
+      obj3[1] = tmp2.loaderIndicator;
+      items5[1] = tmp29(closure_6, obj3);
+      obj2[1] = items5;
+      tmp28Result = tmp28(c5, obj2);
+      const tmp33 = c5;
+    }
+    const obj4 = { children: null };
+    items2[1] = tmp28Result;
+    const obj5 = { style: null, index: null, source: null };
+    obj5[0] = style;
+    obj5[1] = num;
+    obj5[2] = source;
+    items2[2] = callback(onLoad(onError[8]), obj5);
+    obj4[0] = items2;
+    tmp28Result1 = tmp28(importAllResult.Fragment, obj4);
+  }
+  return tmp28Result1;
+});
+const result = require("get ActivityIndicator").fileFinishedImporting("modules/media_viewer/native/components/MediaModalLoader.tsx");
+
+export default memoResult;

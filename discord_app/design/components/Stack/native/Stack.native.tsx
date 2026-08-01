@@ -1,0 +1,51 @@
+// === Module 4602: Stack ===
+
+// Module 4602 (Stack)
+import "noop";
+import { View } from "get ActivityIndicator";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let closure_2 = createCacheKey.createStyles((gap, arg1, alignItems, justifyContent) => {
+  const stack = { width: "100%", gap, alignItems, justifyContent, flexDirection: null };
+  let str = "column";
+  if ("horizontal" === arg1) {
+    str = "row";
+  }
+  stack[4] = str;
+  return { stack };
+});
+const result = require("jsxProd").fileFinishedImporting("design/components/Stack/native/Stack.native.tsx");
+
+export const Stack = function Stack(spacing) {
+  let children;
+  let onLayout;
+  let style;
+  spacing = spacing.spacing;
+  let num = 8;
+  if (undefined !== spacing) {
+    num = spacing;
+  }
+  const direction = spacing.direction;
+  let str = "vertical";
+  if (undefined !== direction) {
+    str = direction;
+  }
+  const align = spacing.align;
+  let str2 = "stretch";
+  if (undefined !== align) {
+    str2 = align;
+  }
+  const justify = spacing.justify;
+  let str3 = "flex-start";
+  if (undefined !== justify) {
+    str3 = justify;
+  }
+  ({ children, style, onLayout } = spacing);
+  const obj = { style: null, onLayout: null, children: null };
+  const items = [callback(num, str, str2, str3).stack, style];
+  obj[0] = items;
+  obj[1] = onLayout;
+  obj[2] = children;
+  return <View style={null} onLayout={null}>{null}</View>;
+};

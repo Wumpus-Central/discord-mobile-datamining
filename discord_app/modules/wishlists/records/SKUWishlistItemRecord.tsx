@@ -1,0 +1,61 @@
+// === Module 8689: fromServer ===
+
+// Module 8689 (fromServer)
+import createFromServer from "createFromServer";
+import "fromServer";
+
+let prototype;
+prototype = function SKUWishlistItemRecord(sku) {
+  const tmp = new prototype(sku, new.target);
+  // ThrowIfThisInitialized (0x7c)
+  tmp.skuProductLine = sku.sku.productLine;
+  tmp.sku = sku.sku;
+  return tmp;
+}.prototype;
+class prototype extends tmp2 {
+}
+prototype["fromServer"] = function fromServer(sku) {
+  const fromServer = createFromServer.createFromServer(sku.sku);
+  if (null == fromServer) {
+    const _Error = Error;
+    const error = new Error("SKU not found");
+    throw error;
+  } else {
+    const obj = { sku: fromServer };
+    const merged = Object.assign(sku);
+    if (typeof prototype !== "fileFinishedImporting") {
+      HermesBuiltin.throwTypeError();
+    }
+    const tmp11 = new prototype(obj, sku, merged);
+    // ThrowIfThisInitialized (0x7c)
+    tmp11.skuProductLine = obj.sku.productLine;
+    tmp11.sku = obj.sku;
+    return tmp11;
+  }
+};
+prototype["fromSKU"] = function fromSKU(arg0) {
+  let name;
+  let tmp = null;
+  if (null != arg0) {
+    const obj = { sku_id: null, sku_product_line: null, sku_name: null, sku: null };
+    ({ id: obj[0], productLine: obj[1], name } = arg0);
+    obj[2] = name;
+    obj[3] = arg0;
+    if (typeof prototype !== "fileFinishedImporting") {
+      HermesBuiltin.throwTypeError();
+    }
+    const tmp8 = new prototype(obj, name, prototype, new.target);
+    // ThrowIfThisInitialized (0x7c)
+    tmp8.skuProductLine = obj.sku.productLine;
+    tmp8.sku = obj.sku;
+    tmp = tmp8;
+    const tmp2 = prototype;
+  }
+  return tmp;
+};
+const result = require("set").fileFinishedImporting("modules/wishlists/records/SKUWishlistItemRecord.tsx");
+
+export default prototype;
+export const isSKUWishlistItemRecord = function isSKUWishlistItemRecord(sku) {
+  return sku instanceof prototype;
+};

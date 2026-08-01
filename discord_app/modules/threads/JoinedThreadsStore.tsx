@@ -1,0 +1,364 @@
+// === Module 3823: storeThread ===
+
+// Module 3823 (storeThread)
+import { ALL_CHANNEL_TYPES } from "createChannelRecord";
+import fetchFingerprint from "fetchFingerprint";
+import { Store } from "initialize";
+import set from "reset";
+
+function storeThread(channel) {
+  let hasItem = ALL_CHANNEL_TYPES.has(channel.type);
+  if (hasItem) {
+    hasItem = null != channel.member;
+  }
+  if (hasItem) {
+    const obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
+    ({ id: obj[0], guild_id: obj[1] } = channel);
+    obj[2] = channel.member.flags;
+    obj[3] = channel.member.muted;
+    obj[4] = channel.member.muteConfig;
+    const _Date = Date;
+    const date = new Date(channel.member.joinTimestamp);
+    obj[5] = date;
+    dependencyMap[channel.id] = obj;
+    const id = channel.id;
+    tmp2.clearTimer(id);
+    if (true === dependencyMap[id].muted) {
+      const _Set2 = Set;
+      const set = new Set(set2);
+      set2 = set;
+      set.add(id);
+      if (obj2.setTimer(id, tmp10.muteConfig, () => {
+        outer1_4[id].muted = false;
+        const set = new Set(outer1_6);
+        outer1_6 = set;
+        set.delete(id);
+        outer1_8.emitChange();
+      })) {
+        dependencyMap[id].muted = false;
+        const _Set3 = Set;
+        const set1 = new Set(set2);
+        set2 = set1;
+        set1.delete(id);
+      }
+    } else {
+      const _Set = Set;
+      set2 = new Set(set2);
+      set2.delete(id);
+    }
+    obj2 = tmp2;
+  }
+}
+function handleThreadListSyncOrSearchFinish(guildId) {
+  guildId = guildId.guildId;
+  const members = guildId.members;
+  if (tmp) {
+    const item = members.forEach((id) => {
+      const obj = { threadId: id.id, guildId: id, flags: id.flags, muted: id.muted, muteConfig: id.muteConfig, joinTimestamp: null };
+      obj[5] = new Date(id.joinTimestamp);
+      outer1_4[id.id] = obj;
+      id = id.id;
+      outer1_5.clearTimer(id);
+      if (true === outer1_4[id].muted) {
+        const _Set2 = Set;
+        const set = new Set(outer1_6);
+        outer1_6 = set;
+        set.add(id);
+        if (outer1_5.setTimer(id, tmp2.muteConfig, () => {
+          outer1_4[id].muted = false;
+          const set = new Set(outer1_6);
+          outer1_6 = set;
+          set.delete(id);
+          outer1_8.emitChange();
+        })) {
+          outer1_4[id].muted = false;
+          const _Set3 = Set;
+          const set1 = new Set(outer1_6);
+          outer1_6 = set1;
+          set1.delete(id);
+        }
+      } else {
+        const _Set = Set;
+        const set2 = new Set(outer1_6);
+        outer1_6 = set2;
+        set2.delete(id);
+      }
+    });
+  }
+}
+function handleSearchMessagesSuccess(guildId) {
+  guildId = guildId.guildId;
+  const data = guildId.data;
+  if (null != guildId) {
+    let item = data.forEach((members) => {
+      members = members.members;
+      const item = members.forEach((id) => {
+        const obj = { threadId: id.id, guildId: id, flags: id.flags, muted: id.muted, muteConfig: id.muteConfig, joinTimestamp: null };
+        obj[5] = new Date(id.joinTimestamp);
+        outer1_4[id.id] = obj;
+        id = id.id;
+        outer1_5.clearTimer(id);
+        if (true === outer1_4[id].muted) {
+          const _Set2 = Set;
+          let set = new Set(outer1_6);
+          outer1_6 = set;
+          set.add(id);
+          if (outer1_5.setTimer(id, tmp2.muteConfig, () => {
+            outer1_4[id].muted = false;
+            const set = new Set(outer1_6);
+            outer1_6 = set;
+            set.delete(id);
+            outer1_8.emitChange();
+          })) {
+            outer1_4[id].muted = false;
+            const _Set3 = Set;
+            const set1 = new Set(outer1_6);
+            outer1_6 = set1;
+            set1.delete(id);
+          }
+        } else {
+          const _Set = Set;
+          const set2 = new Set(outer1_6);
+          outer1_6 = set2;
+          set2.delete(id);
+        }
+      });
+    });
+  }
+}
+let closure_4 = {};
+let c5 = new require("reset")();
+let set = new Set();
+class JoinedThreadsStoreClass extends Store {
+}
+const prototype = JoinedThreadsStoreClass.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(fetchFingerprint);
+};
+prototype["hasJoined"] = function hasJoined(id) {
+  return id in closure_4;
+};
+prototype["joinTimestamp"] = function joinTimestamp(id) {
+  let joinTimestamp;
+  if (dependencyMap[id] != null) {
+    joinTimestamp = tmp.joinTimestamp;
+  }
+  return joinTimestamp;
+};
+prototype["flags"] = function flags(arg0) {
+  let flags;
+  if (dependencyMap[arg0] != null) {
+    flags = tmp.flags;
+  }
+  return flags;
+};
+prototype["getInitialOverlayState"] = function getInitialOverlayState() {
+  return Object.values(closure_4);
+};
+prototype["getMuteConfig"] = function getMuteConfig(arg0) {
+  let muteConfig;
+  if (dependencyMap[arg0] != null) {
+    muteConfig = tmp.muteConfig;
+  }
+  return muteConfig;
+};
+prototype["getMutedThreads"] = function getMutedThreads() {
+  return set;
+};
+prototype["isMuted"] = function isMuted(arg0) {
+  return set.has(arg0);
+};
+JoinedThreadsStoreClass.displayName = "JoinedThreadsStore";
+const joinedThreadsStoreClass = new JoinedThreadsStoreClass(require("dispatcher"), {
+  CONNECTION_OPEN: function handleConnectionOpen(guilds) {
+    tmp2.reset();
+    const set = new Set();
+    let closure_4 = {};
+    guilds = guilds.guilds;
+    let item = guilds.forEach((threads) => {
+      threads = threads.threads;
+      if (threads != null) {
+        const item = threads.forEach(closure_7);
+      }
+    });
+  },
+  OVERLAY_INITIALIZE: function handleOverlayInitialize(joinedThreads) {
+    const mapped = importDefault(12)(joinedThreads.joinedThreads).map((joinTimestamp) => {
+      const obj = {};
+      const merged = Object.assign(joinTimestamp);
+      obj.joinTimestamp = new Date(joinTimestamp.joinTimestamp);
+      return obj;
+    });
+    const arr = importDefault(12)(joinedThreads.joinedThreads);
+    let closure_4 = mapped.keyBy("threadId").value();
+  },
+  GUILD_CREATE: function handleGuildCreate(guild) {
+    guild = guild.guild;
+    const id = guild.id;
+    const obj = id(12)(closure_4);
+    const rejectResult = id(12)(closure_4).reject((guildId) => guildId.guildId === id);
+    closure_4 = id(12)(closure_4).reject((guildId) => guildId.guildId === id).keyBy("threadId").value();
+    const threads = guild.threads;
+    if (threads != null) {
+      const item = threads.forEach(storeThread);
+    }
+  },
+  GUILD_DELETE: function handleGuildDelete(guild) {
+    const id = guild.guild.id;
+    const obj = id(12)(closure_4);
+    const rejectResult = id(12)(closure_4).reject((guildId) => guildId.guildId === id);
+    closure_4 = id(12)(closure_4).reject((guildId) => guildId.guildId === id).keyBy("threadId").value();
+  },
+  THREAD_CREATE: function handleThreadCreate(channel) {
+    storeThread(channel.channel);
+  },
+  THREAD_LIST_SYNC: handleThreadListSyncOrSearchFinish,
+  SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
+  MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
+  LOAD_THREADS_SUCCESS: handleThreadListSyncOrSearchFinish,
+  LOAD_ARCHIVED_THREADS_SUCCESS: handleThreadListSyncOrSearchFinish,
+  THREAD_DELETE: function handleThreadDelete(channel) {
+    channel = channel.channel;
+    if (channel.id in obj) {
+      obj = {};
+      const merged = Object.assign(obj);
+      const id = channel.id;
+      delete tmp2[tmp];
+    } else {
+      return false;
+    }
+  },
+  THREAD_MEMBER_UPDATE: function handleThreadMemberUpdate(userId) {
+    if (store.getId() !== userId.userId) {
+      return false;
+    } else {
+      const obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
+      ({ id: obj4[0], guildId: obj4[1], flags: obj4[2], muted: obj4[3], muteConfig: obj4[4] } = userId);
+      const _Date = Date;
+      const date = new Date(userId.joinTimestamp);
+      obj[5] = date;
+      dependencyMap[userId.id] = obj;
+      const id = userId.id;
+      tmp2.clearTimer(id);
+      if (true === dependencyMap[id].muted) {
+        const _Set2 = Set;
+        const set = new Set(set2);
+        set2 = set;
+        set.add(id);
+        if (tmp2.setTimer(id, tmp24.muteConfig, () => {
+          outer1_4[id].muted = false;
+          const set = new Set(outer1_6);
+          outer1_6 = set;
+          set.delete(id);
+          outer1_8.emitChange();
+        })) {
+          dependencyMap[id].muted = false;
+          const _Set3 = Set;
+          const set1 = new Set(set2);
+          set2 = set1;
+          set1.delete(id);
+        }
+      } else {
+        const _Set = Set;
+        set2 = new Set(set2);
+        set2.delete(id);
+      }
+    }
+  },
+  THREAD_MEMBER_LOCAL_UPDATE: function handleThreadMemberLocalUpdate(arg0) {
+    let guildId;
+    let id;
+    let isJoining;
+    let userId;
+    ({ id, guildId } = arg0);
+    ({ userId, isJoining } = arg0);
+    let tmp3 = store.getId() === userId;
+    if (tmp3) {
+      if (null === guildId) {
+        tmp3 = tmp5;
+      } else if (isJoining) {
+        const obj = { threadId: null, guildId: null, flags: 0, muted: true, muteConfig: null, joinTimestamp: null };
+        obj[0] = id;
+        obj[1] = guildId;
+        obj[4] = { end_time: "r" };
+        const _Date = Date;
+        const date = new Date();
+        guildId = date;
+        obj[5] = date;
+        tmp6[id] = obj;
+      } else {
+        delete tmp[tmp2];
+      }
+    }
+    return tmp3;
+  },
+  THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(removedMemberIds) {
+    let closure_0 = removedMemberIds;
+    let c1 = false;
+    removedMemberIds = removedMemberIds.removedMemberIds;
+    let hasItem;
+    if (removedMemberIds != null) {
+      hasItem = removedMemberIds.includes(store.getId());
+    }
+    if (hasItem) {
+      hasItem = removedMemberIds.id in obj;
+    }
+    if (hasItem) {
+      obj = {};
+      let merged = Object.assign(obj);
+      let id = removedMemberIds.id;
+      delete tmp2[tmp];
+      c1 = true;
+    }
+    const addedMembers = removedMemberIds.addedMembers;
+    if (addedMembers != null) {
+      const item = addedMembers.forEach((userId) => {
+        if (userId.userId === outer1_3.getId()) {
+          let obj = {};
+          const merged = Object.assign(obj);
+          obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
+          ({ id: obj5[0], guildId: obj5[1] } = id);
+          ({ flags: obj5[2], muted: obj5[3], muteConfig: obj5[4] } = userId);
+          let tmp15 = globalThis;
+          const _Date = Date;
+          const date = new Date(userId.joinTimestamp);
+          obj[5] = date;
+          obj[id.id] = obj;
+          id = id.id;
+          let muteConfig = obj[id];
+          outer1_5.clearTimer(id);
+          if (true === muteConfig.muted) {
+            const set = new tmp15.Set(outer1_6);
+            outer1_6 = set;
+            set.add(id);
+            muteConfig = muteConfig.muteConfig;
+            if (obj6.setTimer(id, muteConfig, () => {
+              outer1_4[id].muted = false;
+              const set = new Set(outer1_6);
+              outer1_6 = set;
+              set.delete(id);
+              outer1_8.emitChange();
+            })) {
+              obj[id].muted = false;
+              const set1 = new tmp15.Set(outer1_6);
+              tmp15 = set1;
+              outer1_6 = set1;
+              set1.delete(id);
+            }
+          } else {
+            const _Set = Set;
+            const set2 = new Set(outer1_6);
+            outer1_6 = set2;
+            set2.delete(id);
+          }
+          let c1 = true;
+          obj6 = outer1_5;
+        }
+      });
+    }
+    return c1;
+  }
+});
+const result = set.fileFinishedImporting("modules/threads/JoinedThreadsStore.tsx");
+
+export default joinedThreadsStoreClass;

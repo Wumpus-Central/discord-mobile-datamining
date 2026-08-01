@@ -1,0 +1,188 @@
+// === Module 12370: createCodedLinkEmbeds ===
+
+// Module 12370 (createCodedLinkEmbeds)
+import _slicedToArray from "_slicedToArray";
+import initialize from "initialize";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import mergeGuildAvatar from "mergeGuildAvatar";
+
+const require = arg1;
+const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");
+
+export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, message2, channel, arg3) {
+  let closure_0 = message;
+  let closure_1 = channel;
+  let _slicedToArray = arg3;
+  if (null != message.author) {
+    if (0 !== message2.codedLinks.length) {
+      const currentUser2 = currentUser.getCurrentUser();
+      const codedLinks = message2.codedLinks;
+      return codedLinks.map((arg0) => {
+        let code;
+        let tmp10;
+        let tmp14;
+        let tmp15;
+        let tmp9;
+        let type;
+        let url;
+        ({ type, code, url } = arg0);
+        let obj = message(table[4]);
+        if (obj.isApplicationCodedLink(type)) {
+          if (null == table) {
+            return null;
+          } else {
+            let tmpResult = tmp(tmp2[4]);
+            if (tmpResult.isApplicationCodedLinkMobileSupported(type)) {
+              tmpResult = tmp(tmp2[4]);
+              const applicationCodedLinkData = tmpResult.getApplicationCodedLinkData(type, code, url);
+              if (null == applicationCodedLinkData) {
+                return null;
+              } else {
+                obj = { appId: null, channel: null, message: null, theme: null };
+                obj[0] = applicationCodedLinkData.applicationId;
+                obj[1] = tmp35;
+                obj[2] = message;
+                obj[3] = callback;
+                const appLinkGateResult = tmp(tmp2[5]).getAppLinkGateResult(obj);
+                if ("unavailable" === appLinkGateResult.state) {
+                  return null;
+                } else if ("blocked" === appLinkGateResult.state) {
+                  return appLinkGateResult.model;
+                } else {
+                  const app = appLinkGateResult.app;
+                  const type2 = applicationCodedLinkData.type;
+                  if (tmp(tmp2[6]).CodedLinkType.ACTIVITY_BOOKMARK === type2) {
+                    obj = { theme: null, embedUrl: null, message: null, app: null, params: null };
+                    obj[0] = tmp39;
+                    obj[1] = url;
+                    obj[2] = tmp38;
+                    obj[3] = app;
+                    obj[4] = applicationCodedLinkData.params;
+                    return tmp(tmp2[7]).createActivityMessageEmbed(obj);
+                  } else {
+                    if (tmp(tmp2[6]).CodedLinkType.APP_DIRECTORY_PROFILE !== type2) {
+                      if (tmp(tmp2[6]).CodedLinkType.APP_OAUTH2_LINK !== type2) {
+                        return null;
+                      }
+                    }
+                    const obj1 = { theme: null, embedUrl: null, message: null, app: null };
+                    obj1[0] = tmp39;
+                    obj1[1] = url;
+                    obj1[2] = tmp38;
+                    obj1[3] = app;
+                    return tmp(tmp2[5]).createAppMessageEmbed(obj1);
+                  }
+                }
+                const tmpResult1 = tmp(tmp2[5]);
+              }
+            } else {
+              return null;
+            }
+          }
+        } else if (tmp(tmp2[6]).CodedLinkType.INVITE === type) {
+          return tmp(tmp2[8]).createInviteEmbed(message, code, callback);
+        } else if (tmp(tmp2[6]).CodedLinkType.TEMPLATE === type) {
+          return tmp(tmp2[9]).createGuildTemplateEmbed(code, callback);
+        } else if (tmp(tmp2[6]).CodedLinkType.BUILD_OVERRIDE === type) {
+          return tmp(tmp2[10]).createBuildOverrideEmbed(code, callback);
+        } else if (tmp(tmp2[6]).CodedLinkType.MANUAL_BUILD_OVERRIDE === type) {
+          const currentUser = outer1_5.getCurrentUser();
+          let isStaffResult;
+          if (currentUser != null) {
+            isStaffResult = currentUser.isStaff();
+          }
+          if (!isStaffResult) {
+            const currentUser1 = outer1_5.getCurrentUser();
+            let isStaffPersonalResult;
+            if (currentUser1 != null) {
+              isStaffPersonalResult = currentUser1.isStaffPersonal();
+            }
+            isStaffResult = isStaffPersonalResult;
+          }
+          if (!isStaffResult) {
+            let tmp27 = null != outer1_4.getGuild("943265993613008967");
+            if (tmp27) {
+              tmp27 = !lurking.isLurking("943265993613008967");
+            }
+            isStaffResult = tmp27;
+          }
+          let buildOverrideEmbed = null;
+          if (isStaffResult) {
+            buildOverrideEmbed = tmp(tmp2[10]).createBuildOverrideEmbed(code, callback);
+            const tmpResult7 = tmp(tmp2[10]);
+          }
+          return buildOverrideEmbed;
+        } else if (tmp(tmp2[6]).CodedLinkType.EVENT === type) {
+          return tmp(tmp2[11]).createGuildScheduledEventLinkEmbed(code, callback);
+        } else if (tmp(tmp2[6]).CodedLinkType.CHANNEL_LINK === type) {
+          return tmp(tmp2[12]).createVoiceChannelLinkEmbed(code, callback);
+        } else if (tmp(tmp2[6]).CodedLinkType.EMBEDDED_ACTIVITY_INVITE === type) {
+          const obj2 = { theme: null, inviteCode: null };
+          obj2[0] = callback;
+          obj2[1] = code;
+          return tmp(tmp2[13]).createEmbeddedActivityInviteEmbed(obj2);
+        } else if (tmp(tmp2[6]).CodedLinkType.EXPERIMENT === type) {
+          let experimentEmbed = null;
+          if (tmpResult11.canSeeExperimentEmbeds()) {
+            experimentEmbed = tmp(tmp2[15]).createExperimentEmbed(url, callback);
+            const tmpResult12 = tmp(tmp2[15]);
+          }
+          return experimentEmbed;
+        } else {
+          if (tmp(tmp2[6]).CodedLinkType.GUILD_PRODUCT !== type) {
+            if (tmp(tmp2[6]).CodedLinkType.SERVER_SHOP !== type) {
+              if (tmp(tmp2[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT !== type) {
+                if (tmp(tmp2[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP !== type) {
+                  if (tmp(tmp2[6]).CodedLinkType.QUESTS_EMBED === type) {
+                    const obj3 = { theme: null, questId: null, currentUser: null };
+                    obj3[0] = callback;
+                    obj3[1] = code;
+                    obj3[2] = lurking;
+                    return tmp(tmp2[18]).createQuestsEmbed(obj3);
+                  } else {
+                    if (tmp(tmp2[6]).CodedLinkType.COLLECTIBLES_SHOP !== type) {
+                      if (tmp(tmp2[6]).CodedLinkType.GAME_PROFILE !== type) {
+                        if (tmp(tmp2[6]).CodedLinkType.GAME_SERVER_SHARE !== type) {
+                          return tmp(tmp2[19]).assertNever(type);
+                        }
+                      }
+                    }
+                    return null;
+                  }
+                }
+              }
+              if (tmpResult15.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "create_coded_link_embeds" })) {
+                if (type === tmp(tmp2[6]).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+                  [tmp14, tmp15] = callback(code.split("-"), 2);
+                  const tmp13 = callback(code.split("-"), 2);
+                  const obj4 = { skuId: null, guildOrApplication: null, theme: null };
+                  obj4[0] = tmp14;
+                  const obj5 = { type: "application", applicationId: null };
+                  obj5[1] = tmp15;
+                  obj4[1] = obj5;
+                  obj4[2] = callback;
+                  return tmp(tmp2[17]).createSocialLayerStorefrontProductDetailsEmbed(obj4);
+                } else {
+                  [tmp9, tmp10] = callback(code.split("-"), 2);
+                  const tmp8 = callback(code.split("-"), 2);
+                  const obj6 = { skuId: null, guildOrApplication: null, theme: null };
+                  obj6[0] = tmp9;
+                  const obj7 = { type: "guild", guildId: null };
+                  obj7[1] = tmp10;
+                  obj6[1] = obj7;
+                  obj6[2] = callback;
+                  return tmp(tmp2[17]).createSocialLayerStorefrontProductDetailsEmbed(obj6);
+                }
+              } else {
+                return null;
+              }
+              tmpResult15 = tmp(tmp2[16]);
+            }
+          }
+          return null;
+        }
+      });
+    }
+  }
+  return [];
+};

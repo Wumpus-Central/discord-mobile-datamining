@@ -1,0 +1,450 @@
+// === Module 10995: _applyStaffBuildOverride ===
+
+// Module 10995 (_applyStaffBuildOverride)
+import importDefaultResult from "set";
+import fetchFingerprint from "fetchFingerprint";
+
+let closure_0 = arg1;
+function _applyStaffBuildOverride() {
+  const self = this;
+  const tmp = importDefaultResult((arg0) => {
+    let closure_0 = arg0;
+    let c6 = 0;
+    let c7 = 0;
+    let c5 = 0;
+    return (function*(arg0) {
+      if (c7 === 2) {
+        c7 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c7 = 2;
+          if (0 === c6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_3 = tmp3;
+              const callback2 = tmp7;
+              let callback;
+              let c5 = 1;
+              const HTTP = callback(outer1_1[3]).HTTP;
+              const obj1 = { url: null, body: null, headers: null, oldFormErrors: true, rejectWithError: false };
+              obj1[0] = callback(outer1_1[4]).getAPIEndpoint(c5);
+              const obj2 = { overrides: null, version: null };
+              obj2[0] = callback;
+              obj2[1] = callback(outer1_1[4]).APP_VERSION;
+              obj1[1] = obj2;
+              const token = outer1_4.getToken();
+              let c1 = token;
+              if (token == null) {
+                c1 = "";
+              }
+              const obj3 = { Authorization: null };
+              obj3[0] = c1;
+              obj1[2] = obj3;
+              c6 = 2;
+              c7 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.put(obj1);
+              return obj4;
+            }
+          } else if (1 === tmp7) {
+            c5 = 0;
+            c7 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = fetchFingerprint;
+            return obj5;
+          } else if (2 === tmp7) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              c7 = 3;
+              const obj6 = { value: null, done: true };
+              obj6[0] = arg1;
+              return obj6;
+            } else {
+              callback = arg1;
+              c6 = 3;
+              c7 = 1;
+              const obj7 = { value: null, done: false };
+              obj7[0] = callback2(callback);
+              return obj7;
+            }
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c5 = 0;
+            c7 = 3;
+            const obj8 = { value: null, done: true };
+            obj8[0] = arg1;
+            return obj8;
+          } else {
+            c5 = 0;
+            c7 = 3;
+            obj = { value: null, done: true };
+            obj[0] = callback;
+            return obj;
+          }
+        } catch (tmp15) {
+          fetchFingerprint = tmp15;
+          if (tmp4 === c5) {
+            c7 = tmp2;
+            throw tmp15;
+          } else {
+            c6 = tmp;
+          }
+        }
+      }
+    })();
+  });
+  const _applyStaffBuildOverride = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+function _applyPublicBuildOverride() {
+  const self = this;
+  const tmp = importDefaultResult((arg0) => {
+    let closure_0 = arg0;
+    let c5 = 0;
+    let c6 = 0;
+    let c4 = 0;
+    return (function*(arg0) {
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const callback2 = tmp3;
+              let closure_1 = tmp7;
+              let callback;
+              let token = 1;
+              const HTTP = callback(outer1_1[3]).HTTP;
+              const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
+              obj1[0] = callback(outer1_1[4]).getAPIEndpoint("/__development/link");
+              const obj2 = { payload: null, token: null, version: null };
+              obj2[0] = callback;
+              obj2[1] = token.getToken();
+              obj2[2] = callback(outer1_1[4]).APP_VERSION;
+              obj1[1] = obj2;
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.put(obj1);
+              return obj3;
+            }
+          } else if (1 === tmp7) {
+            token = 0;
+            c6 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = closure_3;
+            return obj4;
+          } else if (2 === tmp7) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              token = 0;
+              c6 = 3;
+              const obj5 = { value: null, done: true };
+              obj5[0] = arg1;
+              return obj5;
+            } else {
+              callback = arg1;
+              c5 = 3;
+              c6 = 1;
+              const obj6 = { value: null, done: false };
+              obj6[0] = callback2(callback);
+              return obj6;
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            token = 0;
+            c6 = 3;
+            const obj7 = { value: null, done: true };
+            obj7[0] = arg1;
+            return obj7;
+          } else {
+            token = 0;
+            c6 = 3;
+            obj = { value: null, done: true };
+            obj[0] = callback;
+            return obj;
+          }
+        } catch (tmp14) {
+          closure_3 = tmp14;
+          if (tmp4 === token) {
+            c6 = tmp2;
+            throw tmp14;
+          } else {
+            c5 = tmp;
+          }
+        }
+      }
+    })();
+  });
+  const _applyPublicBuildOverride = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+function _clearBuildOverride() {
+  const self = this;
+  const tmp = importDefaultResult(function*() {
+    if (c3 === 2) {
+      c3 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === v0) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_1 = tmp2;
+            let closure_0 = tmp5;
+            closure_0 = undefined;
+            const HTTP = outer1_0(outer1_1[3]).HTTP;
+            const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+            obj1[0] = outer1_0(outer1_1[4]).getAPIEndpoint(outer1_5);
+            v0 = 1;
+            c3 = 1;
+            const obj2 = { value: null, done: false };
+            obj2[0] = HTTP.del(obj1);
+            return obj2;
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = arg1;
+            return obj3;
+          } else {
+            closure_0 = arg1;
+            v0 = 2;
+            c3 = 1;
+            const obj4 = { value: null, done: false };
+            obj4[0] = v0(closure_0);
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj5 = { value: null, done: true };
+          obj5[0] = arg1;
+          return obj5;
+        } else {
+          c3 = 3;
+          obj = { value: null, done: true };
+          obj[0] = closure_0;
+          return obj;
+        }
+      } catch (tmp11) {
+        c3 = tmp;
+        throw tmp11;
+      }
+    }
+  });
+  const _clearBuildOverride = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let c3 = importDefaultResult;
+let c5 = "/__development/build_overrides";
+closure_0 = importDefaultResult((arg0) => {
+  let closure_0 = arg0;
+  let c2 = 0;
+  let c1 = 0;
+  return (function*(arg0) {
+    if (table === 2) {
+      table = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        table = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            table = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            table = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            c2 = 1;
+            table = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = lib(table[2]).default.setBuildOverrideCookieHeader(lib.headers["set-cookie"]);
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          table = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          table = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          table = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp8) {
+        table = tmp;
+        throw tmp8;
+      }
+    }
+  })();
+});
+const f86223 = function() {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+const result = require("BundleUpdaterManager").fileFinishedImporting("modules/build_overrides/ApplyBuildOverrideUtils.tsx");
+
+export const applyStaffBuildOverride = function applyStaffBuildOverride(arg0) {
+  const self = this;
+  const apply = _applyStaffBuildOverride.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const applyPublicBuildOverride = function applyPublicBuildOverride(payload) {
+  const self = this;
+  const apply = _applyPublicBuildOverride.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const clearBuildOverride = function clearBuildOverride() {
+  const self = this;
+  const apply = _clearBuildOverride.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const getPublicBuildOverrideLink = function getPublicBuildOverrideLink(arg0) {
+  const HTTP = callback(530).HTTP;
+  let obj = { url: null, body: null, headers: null, oldFormErrors: true, rejectWithError: false };
+  obj[0] = callback(4109).getAPIEndpoint("/__development/create_build_override_link");
+  obj[1] = arg0;
+  let str = token.getToken();
+  if (str == null) {
+    str = "";
+  }
+  obj[2] = { Authorization: str };
+  const obj2 = callback(4109);
+  return HTTP.post(obj).then((body) => ({ url: body.body.url, error: false }), (status) => {
+    if (400 === status.status) {
+      let obj = { url: false, error: null };
+      obj[1] = status.body;
+    } else {
+      obj = { url: false, error: null };
+      const _HermesInternal = HermesInternal;
+      obj[1] = "Error making API request (" + status.status + ")";
+    }
+    return obj;
+  });
+};

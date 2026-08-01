@@ -1,0 +1,197 @@
+// === Module 7778: identityHook ===
+
+// Module 7778 (identityHook)
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import getJoinButtonLabels from "getJoinButtonLabels";
+import ME from "ME";
+
+let c5;
+let c9;
+let closure_6;
+let error;
+let metroImportAll;
+const require = arg1;
+function identityHook(arg0) {
+  return arg0;
+}
+function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler) {
+  usernameOnClickHandler = usernameOnClickHandler.usernameOnClickHandler;
+  if (usernameOnClickHandler === undefined) {
+    usernameOnClickHandler = identityHook;
+  }
+  let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
+  if (roleSubscriptionOnClickHandler === undefined) {
+    roleSubscriptionOnClickHandler = closure_9;
+  }
+  const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
+  const guild = store.getGuild(usernameOnClickHandler.guildId);
+  let num;
+  if (roleSubscriptionData != null) {
+    num = roleSubscriptionData.total_months_subscribed;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  let flag;
+  if (roleSubscriptionData != null) {
+    flag = roleSubscriptionData.is_renewal;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  const t = require(1236) /* getSystemLocale */.t;
+  if (!tmp2) {
+    let obj = { content: null, formatParams: null };
+    obj[0] = flag ? t.mPTTdv : t.mYjFFx;
+    obj = { username: null, usernameHook: null, guildName: null, handleGuildNameClick: null, tierName: null, months: null };
+    obj[0] = usernameOnClickHandler.username;
+    obj[1] = usernameOnClickHandler;
+    let name;
+    if (guild != null) {
+      name = guild.name;
+    }
+    obj[2] = name;
+    obj[3] = roleSubscriptionOnClickHandler;
+    let tier_name;
+    if (roleSubscriptionData != null) {
+      tier_name = roleSubscriptionData.tier_name;
+    }
+    obj[4] = tier_name;
+    obj[5] = num;
+    obj[1] = obj;
+    return obj;
+  }
+}
+({ getJoinButtonLabels: c5, getRenewButtonLabels: closure_6, STICKERS: error } = getJoinButtonLabels);
+({ AnalyticEvents: metroImportAll, NOOP: c9 } = ME);
+const result = require("getJoinButtonLabels").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx");
+
+export const pickRoleSubscriptionPurchaseSticker = function pickRoleSubscriptionPurchaseSticker(id) {
+  const currentUser = authStore.getCurrentUser();
+  id = undefined;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  let num = 0;
+  if (null != id) {
+    num = importDefault(11).extractTimestamp(id);
+    const obj = importDefault(11);
+  }
+  const obj2 = importDefault(11);
+  return length[(num + obj2.extractTimestamp(obj2, id)) % length.length];
+};
+export const getRoleSubscriptionPurchaseStickerCTA = function getRoleSubscriptionPurchaseStickerCTA(id, arg1) {
+  if (arg1) {
+    let arr = callback2();
+  } else {
+    arr = callback();
+  }
+  const obj = importDefault(11);
+  return arr[obj.extractTimestamp(obj, id) % arr.length];
+};
+export const getRoleSubscriptionPurchaseSystemMessageFormattedContent = function getRoleSubscriptionPurchaseSystemMessageFormattedContent(username) {
+  let content;
+  let formatParams;
+  ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({ username: username.username, usernameOnClickHandler: username.usernameOnClickHandler, roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler, guildId: username.guildId, roleSubscriptionData: username.roleSubscriptionData }));
+  const intl = require(1236) /* getSystemLocale */.intl;
+  return intl.format(content, formatParams);
+};
+export const getRoleSubscriptionPurchaseSystemMessageAstFormattedContent = function getRoleSubscriptionPurchaseSystemMessageAstFormattedContent(username) {
+  let content;
+  let formatParams;
+  ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({ username: username.username, usernameOnClickHandler: username.usernameOnClickHandler, roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler, guildId: username.guildId, roleSubscriptionData: username.roleSubscriptionData }));
+  const intl = require(1236) /* getSystemLocale */.intl;
+  return intl.formatToParts(content, formatParams);
+};
+export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOnClickHandler) {
+  usernameOnClickHandler = usernameOnClickHandler.usernameOnClickHandler;
+  if (usernameOnClickHandler === undefined) {
+    usernameOnClickHandler = identityHook;
+  }
+  let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
+  if (roleSubscriptionOnClickHandler === undefined) {
+    roleSubscriptionOnClickHandler = closure_9;
+  }
+  const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
+  const guild = store.getGuild(usernameOnClickHandler.guildId);
+  let num;
+  if (roleSubscriptionData != null) {
+    num = roleSubscriptionData.total_months_subscribed;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  let flag;
+  if (roleSubscriptionData != null) {
+    flag = roleSubscriptionData.is_renewal;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  const t = require(1236) /* getSystemLocale */.t;
+  if (tmp2) {
+    if (flag) {
+      _N9bxq = t.OQ0OUy;
+      let tmp7 = tmp4;
+      let tmp8 = tmp3;
+    } else {
+      _N9bxq = t["+N9bxq"];
+      tmp7 = tmp4;
+      tmp8 = tmp3;
+    }
+  } else {
+    if (flag) {
+      let tmp6 = tmp3;
+    } else {
+      tmp6 = tmp3;
+    }
+    const intl = tmp6(1236).intl;
+    let name;
+    if (guild != null) {
+      name = guild.name;
+    }
+    const obj = { guildName: null, tierName: null, username: null, usernameOnClick: null, roleSubscriptionOnClick: null, months: null };
+    obj[0] = name;
+    let tier_name;
+    if (roleSubscriptionData != null) {
+      tier_name = roleSubscriptionData.tier_name;
+    }
+    obj[1] = tier_name;
+    obj[2] = usernameOnClickHandler.username;
+    obj[3] = usernameOnClickHandler;
+    obj[4] = roleSubscriptionOnClickHandler;
+    obj[5] = num;
+    return intl.formatToParts(_6Z1E_7, obj);
+  }
+};
+export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings = function isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild) {
+  return require(7780) /* useIsCreatorMonetizationEnabledGuild */.isCreatorMonetizationEnabledGuild(guild);
+};
+export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(guild_id) {
+  let obj = importDefault(4388);
+  obj = { guild_id, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
+  const currentUser = authStore.getCurrentUser();
+  let id;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  obj[1] = id;
+  obj[2] = arg1;
+  obj[3] = arg2;
+  obj[4] = arg3;
+  obj.trackWithMetadata(constants.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, obj);
+};
+export const getRoleSubscriptionPurchaseSystemMessageEventProperties = function getRoleSubscriptionPurchaseSystemMessageEventProperties(guild_id, author) {
+  const obj = { guild_id: guild_id.guild_id, sender: null, target_user: null, channel_id: null, message_id: null };
+  const currentUser = authStore.getCurrentUser();
+  let id;
+  if (currentUser != null) {
+    id = currentUser.id;
+  }
+  obj[1] = id;
+  obj[2] = author.author.id;
+  obj[3] = guild_id.id;
+  obj[4] = author.id;
+  return obj;
+};

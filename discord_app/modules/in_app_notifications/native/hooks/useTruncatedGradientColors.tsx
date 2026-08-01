@@ -1,0 +1,26 @@
+// === Module 10294: useTruncatedGradientColors ===
+
+// Module 10294 (useTruncatedGradientColors)
+import { useMemo } from "noop";
+import createCacheKey from "createCacheKey";
+
+let closure_4 = createCacheKey.createStyles({ gradient: { height: 40 } });
+const result = require("map").fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
+
+export default function useTruncatedGradientColors() {
+  let obj = token(3897);
+  token = obj.useToken(importDefault(712).colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+  obj = {
+    gradientColors: useMemo(() => {
+      const obj = outer1_1(outer1_2[4])(token);
+      const items = [outer1_1(outer1_2[4])(token).alpha(0).hex(), ];
+      const alphaResult = outer1_1(outer1_2[4])(token).alpha(0);
+      const obj3 = outer1_1(outer1_2[4])(token);
+      items[1] = outer1_1(outer1_2[4])(token).alpha(0.72).hex();
+      return items;
+    }, items),
+    gradientStyles: callback().gradient
+  };
+  items = [token];
+  return obj;
+};

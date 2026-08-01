@@ -1,0 +1,6 @@
+// === Module 5017: AgeGatedFeature ===
+
+// Module 5017 (AgeGatedFeature)
+const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx");
+
+export const AgeGatedFeature = { NONE: 0, [0]: "NONE", AGE_GATED_SPACES: 1, [1]: "AGE_GATED_SPACES", SENSITIVE_CONTENT_SHOW_SETTING: 2, [2]: "SENSITIVE_CONTENT_SHOW_SETTING", DM_PRIVACY_SETTINGS: 4, [4]: "DM_PRIVACY_SETTINGS", MESSAGE_REQUEST_RESTRICTIONS_TOGGLE: 8, [8]: "MESSAGE_REQUEST_RESTRICTIONS_TOGGLE", LARGE_SERVER_ACCESS: 16, [16]: "LARGE_SERVER_ACCESS", COMMANDS_TOGGLE: 32, [32]: "COMMANDS_TOGGLE", REACTIVE_CHECK: 64, [64]: "REACTIVE_CHECK", STAGE_SPEAKING: 128, [128]: "STAGE_SPEAKING" };

@@ -1,0 +1,58 @@
+// === Module 11666: useGuildPowerupsWarningConfig ===
+
+// Module 11666 (useGuildPowerupsWarningConfig)
+import noop from "noop";
+import handleModifyingAppliedBoostStart from "handleModifyingAppliedBoostStart";
+
+const require = arg1;
+const result = require("useGuildAppliedBoostCount").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
+
+export default function useGuildPowerupsWarningConfig(arg0, arg1) {
+  const _require = arg0;
+  const importDefault = arg1;
+  const items = [handleModifyingAppliedBoostStart];
+  const items1 = [arg0];
+  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => outer1_4.getAppliedGuildBoostsForGuild(closure_0), items1);
+  const items2 = [stateFromStores];
+  const diff = importDefault(stateFromStores[2])(arg0).spent - React.useMemo(() => {
+    let num;
+    if (stateFromStores != null) {
+      const filter = stateFromStores.filter;
+      if (filter != null) {
+        const found = filter((ended) => {
+          ended = ended.ended;
+          let tmp = !ended;
+          if (!ended) {
+            tmp = null == ended.endsAt;
+          }
+          return tmp;
+        });
+        if (found != null) {
+          num = found.length;
+        }
+      }
+    }
+    if (num == null) {
+      num = 0;
+    }
+    return num;
+  }, items2);
+  React = diff;
+  const items3 = [diff, arg1];
+  return React.useMemo(() => {
+    if (noop <= 0) {
+      let obj = { shouldShow: false, title: "", description: "", requiredBoostCount: 0 };
+    } else {
+      obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
+      const intl = callback(stateFromStores[4]).intl;
+      obj[1] = intl.string(lib(stateFromStores[5]).n5hQhc);
+      const intl2 = callback(stateFromStores[4]).intl;
+      obj = { boostCount: null, perksString: null };
+      obj[0] = tmp;
+      obj[1] = lib.join(", ");
+      obj[2] = intl2.formatToPlainString(lib(stateFromStores[5]).iAaAiG, obj);
+      obj[3] = tmp;
+    }
+    return obj;
+  }, items3);
+};

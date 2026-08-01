@@ -1,0 +1,36 @@
+// === Module 10479: isVoiceEmbeddedActivity ===
+
+// Module 10479 (isVoiceEmbeddedActivity)
+import fetchFingerprint from "fetchFingerprint";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import handleConnectionOpen from "handleConnectionOpen";
+import updateVoiceState from "updateVoiceState";
+
+const require = arg1;
+const result = require("handleConnectionOpen").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
+
+export default function isVoiceEmbeddedActivity(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = ensureGuildLoaded;
+  }
+  const channel = obj.getChannel(arg0);
+  let tmp3 = null != channel;
+  if (tmp3) {
+    let tmp6 = channel.type === require(692) /* set */.ChannelTypes.GUILD_VOICE;
+    if (!tmp6) {
+      let isPrivateResult = channel.isPrivate();
+      if (isPrivateResult) {
+        let tmp8 = channel.id === tmp2;
+        if (!tmp8) {
+          voiceStatesForChannel = voiceStatesForChannel.getVoiceStatesForChannel(channel.id);
+          tmp8 = null != voiceStatesForChannel[id.getId(id)];
+        }
+        isPrivateResult = tmp8;
+      }
+      tmp6 = isPrivateResult;
+    }
+    tmp3 = tmp6;
+  }
+  return tmp3;
+};

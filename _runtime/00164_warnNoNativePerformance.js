@@ -1,0 +1,20 @@
+// === Module 164: warnNoNativePerformance ===
+
+// Module 164 (warnNoNativePerformance)
+import importDefaultResult from "NativePerformanceCxx";
+
+let fn;
+if (importDefaultResult != null) {
+  fn = importDefaultResult.now;
+}
+if (fn == null) {
+  fn = global.nativePerformanceNow;
+}
+if (fn == null) {
+  fn = () => Date.now();
+}
+
+export const warnNoNativePerformance = function warnNoNativePerformance() {
+  importDefault(165)("missing-native-performance", "Missing native implementation of Performance");
+};
+export const getCurrentTimeStamp = fn;

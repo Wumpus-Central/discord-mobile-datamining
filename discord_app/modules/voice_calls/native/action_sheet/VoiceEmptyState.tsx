@@ -1,0 +1,49 @@
+// === Module 12857: VoiceEmptyState ===
+
+// Module 12857 (VoiceEmptyState)
+import "noop";
+import { View } from "get ActivityIndicator";
+import { Fonts } from "ME";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importDefaultResult from "createTextStyle";
+import importDefaultResult1 from "createTextStyle";
+
+let c4;
+let c5;
+const require = arg1;
+({ jsx: c4, jsxs: c5 } = jsxProd);
+createCacheKey = { container: { justifyContent: "center" }, button: { paddingHorizontal: 12, paddingTop: 16 }, emptyTitle: null, emptyBody: null };
+createCacheKey = {};
+const merged = Object.assign(require("createTextStyle")(Fonts.DISPLAY_EXTRABOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+createCacheKey.textTransform = "none";
+createCacheKey.lineHeight = 24;
+createCacheKey[2] = createCacheKey;
+const obj1 = {};
+const merged1 = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.TEXT_SUBTLE, 16));
+obj1.lineHeight = 20;
+obj1.fontWeight = "600";
+createCacheKey[3] = obj1;
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+const result = require("ME").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceEmptyState.tsx");
+
+export default function VoiceEmptyState(channel) {
+  const tmp = createCacheKey();
+  let obj = { style: null, children: null };
+  const items = [tmp.container, ];
+  obj = { paddingBottom: importDefault(1581)().bottom };
+  items[1] = obj;
+  obj[0] = items;
+  obj = { title: null, body: null, lightSource: null, darkSource: null, titleStyle: null, bodyStyle: null, imageStyle: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj[0] = intl.string(require(1236) /* getSystemLocale */.t["/HABZo"]);
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["5Jy2FY"]);
+  obj[2] = importDefault(12858);
+  obj[3] = importDefault(12858);
+  ({ emptyTitle: obj3[4], emptyBody: obj3[5] } = tmp);
+  obj[6] = { marginBottom: 16, marginTop: 20 };
+  const items1 = [callback(require(1297) /* Button */.ThemedEmptyState, obj), callback(importDefault(12859), { channel: channel.channel, style: tmp.button })];
+  obj[1] = items1;
+  return callback2(View, obj);
+};

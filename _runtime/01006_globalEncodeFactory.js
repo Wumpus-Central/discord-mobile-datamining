@@ -1,0 +1,27 @@
+// === Module 1006: globalEncodeFactory ===
+
+// Module 1006 (globalEncodeFactory)
+const require = arg1;
+const dependencyMap = arg6;
+function globalEncodeFactory(arg0) {
+  let closure_0 = arg0;
+  return (arg0) => new TextEncoder().encode(arg0);
+}
+function encodePolyfill(arr) {
+  const uint8Array = new Uint8Array(require(1007) /* utf8ToBytes */.utf8ToBytes(arr));
+  return uint8Array;
+}
+arg5.useEncodePolyfill = () => {
+  const sentryCarrier = TextEncoder(1005).getSentryCarrier();
+  if (TextEncoder(816).RN_GLOBAL_OBJ.TextEncoder) {
+    if (typeof globalEncodeFactory !== "fileFinishedImporting") {
+      HermesBuiltin.throwTypeError();
+    }
+    TextEncoder = TextEncoder(816).RN_GLOBAL_OBJ.TextEncoder;
+    sentryCarrier.encodePolyfill = (arg0) => new TextEncoder().encode(arg0);
+  } else {
+    sentryCarrier.encodePolyfill = encodePolyfill;
+  }
+};
+arg5.globalEncodeFactory = globalEncodeFactory;
+arg5.encodePolyfill = encodePolyfill;

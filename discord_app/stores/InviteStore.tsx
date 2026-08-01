@@ -1,0 +1,213 @@
+// === Module 4178: updateInvite ===
+
+// Module 4178 (updateInvite)
+import { InviteStates } from "ME";
+import { Store } from "initialize";
+
+function updateInvite(code, arg1) {
+  let str = code;
+  if (code == null) {
+    str = "";
+  }
+  let obj = require(4179) /* readSnowflake */;
+  const result = obj.parseExtraDataFromInviteKey(str);
+  const value = map.get(str);
+  if (null != value) {
+    obj = { state: null };
+    obj[0] = InviteStates.RESOLVING;
+    const merged = Object.assign(value);
+  } else {
+    obj = { state: null, code: null };
+    obj[0] = InviteStates.RESOLVING;
+    obj[1] = result.baseCode;
+  }
+  arg1(obj);
+  map = new Map(map);
+  const result1 = map.set(str, obj);
+  const guild = obj.guild;
+  let id;
+  if (guild != null) {
+    id = guild.id;
+  }
+  if (null != id) {
+    const obj1 = {};
+    const merged1 = Object.assign(obj1);
+    obj1[obj.guild.id] = str;
+  }
+}
+function handleInviteResolveFailure(code) {
+  let closure_0 = code;
+  updateInvite(code.code, (arg0) => {
+    if ("banned" in banned) {
+      if (banned.banned) {
+        let EXPIRED = outer1_2.BANNED;
+      }
+      arg0.state = EXPIRED;
+    }
+    EXPIRED = outer1_2.EXPIRED;
+  });
+}
+let map = new Map();
+const map1 = new Map();
+let closure_5 = {};
+const map2 = new Map();
+class InviteStore extends Store {
+}
+const prototype = InviteStore.prototype;
+prototype["getInvite"] = function getInvite(arg0) {
+  return map.get(arg0);
+};
+prototype["getInviteError"] = function getInviteError(arg0) {
+  return map1.get(arg0);
+};
+prototype["getInvites"] = function getInvites() {
+  return map;
+};
+prototype["getInviteKeyForGuildId"] = function getInviteKeyForGuildId(id) {
+  return table[id];
+};
+prototype["getFriendMemberIds"] = function getFriendMemberIds(arg0) {
+  return map2.get(arg0);
+};
+InviteStore.displayName = "InviteStore";
+const inviteStore = new InviteStore(require("dispatcher"), {
+  INVITE_RESOLVE: function handleInviteResolve(code) {
+    code = code.code;
+    let obj = require(4179) /* readSnowflake */;
+    const result = obj.parseExtraDataFromInviteKey(code);
+    map = new Map(map);
+    obj = { code: result.baseCode, state: InviteStates.RESOLVING };
+    const result1 = map.set(code, obj);
+  },
+  INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(code) {
+    let closure_0 = code;
+    updateInvite(code.code, (arg0) => {
+      arg0.state = outer1_2.RESOLVED;
+      arg0.guild = code.invite.guild;
+      arg0.channel = code.invite.channel;
+      arg0.inviter = code.invite.inviter;
+      let prop = code.invite.approximate_member_count;
+      if (prop == null) {
+        prop = null;
+      }
+      arg0.approximate_member_count = prop;
+      let prop1 = tmp.invite.approximate_presence_count;
+      if (prop1 == null) {
+        prop1 = null;
+      }
+      arg0.approximate_presence_count = prop1;
+      arg0.target_type = code.invite.target_type;
+      arg0.target_user = code.invite.target_user;
+      arg0.target_application = code.invite.target_application;
+      arg0.expires_at = code.invite.expires_at;
+      arg0.friends_count = code.invite.friends_count;
+      arg0.is_contact = code.invite.is_contact;
+      arg0.guild_scheduled_event = code.invite.guild_scheduled_event;
+      arg0.type = code.invite.type;
+      arg0.flags = code.invite.flags;
+      arg0.is_nickname_changeable = code.invite.is_nickname_changeable;
+      arg0.profile = code.invite.profile;
+      arg0.roles = code.invite.roles;
+      arg0.target_channel_id = code.invite.target_channel_id;
+      arg0.target_message_id = code.invite.target_message_id;
+      arg0.liveliness = code.invite.liveliness;
+    });
+  },
+  INVITE_RESOLVE_FAILURE: handleInviteResolveFailure,
+  INSTANT_INVITE_REVOKE_SUCCESS: handleInviteResolveFailure,
+  FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreate(invite) {
+    let closure_0 = invite;
+    updateInvite(invite.invite.code, (arg0) => {
+      arg0.state = outer1_2.RESOLVED;
+      arg0.inviter = invite.invite.inviter;
+    });
+  },
+  FRIEND_INVITE_REVOKE_SUCCESS: function handleFriendInviteRevokeSuccess(invites) {
+    invites = invites.invites;
+    const item = invites.forEach((code) => {
+      callback(code.code, (arg0) => {
+        arg0.state = constants.EXPIRED;
+      });
+    });
+  },
+  INSTANT_INVITE_CREATE_SUCCESS: function handleInstantInviteCreate(invite) {
+    let closure_0 = invite;
+    updateInvite(invite.invite.code, (arg0) => {
+      arg0.state = outer1_2.RESOLVED;
+      arg0.guild = invite.invite.guild;
+      arg0.channel = invite.invite.channel;
+      arg0.inviter = invite.invite.inviter;
+      let prop = invite.invite.approximate_member_count;
+      if (prop == null) {
+        prop = null;
+      }
+      arg0.approximate_member_count = prop;
+      let prop1 = tmp.invite.approximate_presence_count;
+      if (prop1 == null) {
+        prop1 = null;
+      }
+      arg0.approximate_presence_count = prop1;
+      arg0.target_type = invite.invite.target_type;
+      arg0.target_user = invite.invite.target_user;
+      arg0.target_application = invite.invite.target_application;
+      arg0.guild_scheduled_event = invite.invite.guild_scheduled_event;
+      arg0.type = invite.invite.type;
+      arg0.is_nickname_changeable = invite.invite.is_nickname_changeable;
+      arg0.profile = invite.invite.profile;
+      arg0.roles = invite.invite.roles;
+    });
+  },
+  INVITE_ACCEPT: function handleAcceptInvite(code) {
+    updateInvite(code.code, (arg0) => {
+      arg0.state = constants.ACCEPTING;
+    });
+  },
+  INVITE_ACCEPT_SUCCESS: function handleAcceptInviteSuccess(code) {
+    let closure_0 = code;
+    updateInvite(code.code, (channel) => {
+      channel.state = outer1_2.ACCEPTED;
+      channel.guild = code.invite.guild;
+      channel.new_member = code.invite.new_member;
+      const merged = Object.assign(channel.channel);
+      const merged1 = Object.assign(code.invite.channel);
+      channel.channel = {};
+    });
+  },
+  INVITE_ACCEPT_FAILURE: function handleAcceptInviteFailure(code) {
+    const result = map1.set(code.code, code.error);
+    updateInvite(code.code, (arg0) => {
+      arg0.state = constants.ERROR;
+    });
+  },
+  INVITE_APP_OPENING: function handleInviteAppOpening(code) {
+    updateInvite(code.code, (arg0) => {
+      arg0.state = constants.APP_OPENING;
+    });
+  },
+  INVITE_APP_OPENED: function handleInviteAppOpened(code) {
+    updateInvite(code.code, (arg0) => {
+      arg0.state = constants.APP_OPENED;
+    });
+  },
+  INVITE_APP_NOT_OPENED: function handleInviteAppNotOpened(code) {
+    updateInvite(code.code, (arg0) => {
+      arg0.state = constants.APP_NOT_OPENED;
+    });
+  },
+  INVITE_FRIEND_MEMBERS_FETCH_SUCCESS: function handleInviteFriendMembersFetchSuccess(code) {
+    map = new Map(map);
+    const result = map.set(code.code, code.friendMemberIds);
+  },
+  INVITE_FRIEND_MEMBERS_FETCH_FAILURE: function handleInviteFriendMembersFetchFailure(code) {
+    if (map.has(code.code)) {
+      const _Map = Map;
+      map = new Map(map);
+      map.delete(code.code);
+    } else {
+      return false;
+    }
+  }
+});
+let result = require("initialize").fileFinishedImporting("stores/InviteStore.tsx");
+
+export default inviteStore;

@@ -1,0 +1,28 @@
+// === Module 6670: useTimeout ===
+
+// Module 6670 (useTimeout)
+import noop from "noop";
+
+let c0;
+let closure_1;
+({ useEffect: c0, useRef: closure_1 } = noop);
+const result = require("set").fileFinishedImporting("hooks/useTimeout.tsx");
+
+export default function useTimeout(arg0, arg1) {
+  const callback = arg0;
+  const callback2 = arg1;
+  const tmp = callback2(arg0);
+  let closure_2 = tmp;
+  const items = [arg0];
+  callback(() => {
+    closure_2.current = closure_0;
+  }, items);
+  const items1 = [arg1, tmp];
+  callback(() => {
+    if (null !== closure_1) {
+      const _setTimeout = setTimeout;
+      const timeout = setTimeout(() => ref.current(), tmp);
+      return () => clearTimeout(closure_0);
+    }
+  }, items1);
+};

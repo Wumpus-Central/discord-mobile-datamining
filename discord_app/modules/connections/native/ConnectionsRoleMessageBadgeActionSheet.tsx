@@ -1,0 +1,404 @@
+// === Module 11023: PopoutCheck ===
+
+// Module 11023 (PopoutCheck)
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
+import apply from "apply";
+import get_ActivityIndicator from "Text";
+import createdAt from "createdAt";
+import fetchFingerprint from "fetchFingerprint";
+import trackCommunicationDisabled from "trackCommunicationDisabled";
+import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
+import createGuildRecordFromRust from "createGuildRecordFromRust";
+import map from "map";
+import { OperatorTypes } from "OperatorTypes";
+import ME from "ME";
+import jsxProd from "getPlatformUserUrl";
+import createCacheKey from "createCacheKey";
+
+let c5;
+let closure_14;
+let closure_15;
+let closure_16;
+let closure_17;
+let closure_18;
+let closure_6;
+const require = arg1;
+function PopoutCheck(arg0) {
+  let connectionMetadataField;
+  let connectionType;
+  let description;
+  let operator;
+  let value;
+  ({ operator, value, description } = arg0);
+  ({ connectionType, connectionMetadataField } = arg0);
+  const tmp = createCacheKey();
+  if (null != description) {
+    if (OperatorTypes.LESS_THAN === operator) {
+      const intl = require(1236) /* getSystemLocale */.intl;
+      let obj = { description: null, count: null };
+      obj[0] = description;
+      const _Math = Math;
+      const _Number = Number;
+      obj[1] = Math.max(0, Number(value) - 1);
+      let formatResult = intl.format(require(1236) /* getSystemLocale */.t["2p7dA3"], obj);
+    } else {
+      formatResult = description;
+      if (tmp5.GREATER_THAN === operator) {
+        const intl2 = require(1236) /* getSystemLocale */.intl;
+        obj = { description: null, count: null };
+        obj[0] = description;
+        const _Math2 = Math;
+        const _Number2 = Number;
+        obj[1] = Math.max(0, Number(value) + 1);
+        formatResult = intl2.format(require(1236) /* getSystemLocale */.t["2p7dA3"], obj);
+      }
+    }
+  } else {
+    obj = require(5000) /* officialApplicationIds */;
+    const obj1 = { connectionType: null, connectionMetadataField: null, operator: null, value: null };
+    obj1[0] = connectionType;
+    obj1[1] = connectionMetadataField;
+    obj1[2] = operator;
+    obj1[3] = value;
+    formatResult = obj.getConnectionsCheckText(obj1);
+  }
+  let tmp9 = null;
+  if (null != formatResult) {
+    const obj2 = { style: null, children: null };
+    obj2[0] = tmp.popoutCheck;
+    const obj3 = { size: "sm", style: null };
+    obj3[1] = tmp.popoutCheckIcon;
+    const items = [callback(require(4145) /* CheckmarkLargeIcon */.CheckmarkLargeIcon, obj3), ];
+    const obj4 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
+    obj4[2] = formatResult;
+    items[1] = callback(require(4189) /* Text */.Text, obj4);
+    obj2[1] = items;
+    tmp9 = callback2(closure_6, obj2);
+  }
+  return tmp9;
+}
+class PopoutChecks {
+  constructor(arg0) {
+    guildId = global.guildId;
+    guildId = undefined;
+    c2 = undefined;
+    c3 = undefined;
+    c4 = undefined;
+    GREEN_330 = undefined;
+    guildId = Fragment();
+    c2 = require("useTheme")();
+    obj = require("apply");
+    groupByResult = obj.groupBy(global.eligibilityStates, (application_id) => {
+      let str = "";
+      if (null != application_id.application_id) {
+        const _HermesInternal = HermesInternal;
+        str = ":" + application_id.application_id;
+      }
+      return "" + application_id.connection_type + str;
+    });
+    c3 = groupByResult;
+    keys = Object.keys(groupByResult);
+    c4 = keys.length - 1;
+    obj2 = require("map");
+    GREEN_330 = obj2.useToken(require("Themes").unsafe_rawColors.GREEN_330);
+    obj = {
+      children: keys.map((arg0, arg1) => {
+            const found = arr.filter((operator) => null != operator.operator);
+            const found1 = arr.find((application) => null != application.application);
+            let obj = lib(table[21]);
+            const value = obj.get(arg0);
+            let application;
+            if (found1 != null) {
+              application = found1.application;
+            }
+            let bot;
+            if (application != null) {
+              bot = application.bot;
+            }
+            let tmp7 = null;
+            if (null != bot) {
+              tmp7 = new outer1_7(application.bot);
+            }
+            const officialApplicationIds = guildId(tmp3[15]).officialApplicationIds;
+            let str;
+            if (application != null) {
+              str = application.id;
+            }
+            if (str == null) {
+              str = "";
+            }
+            if (officialApplicationIds.includes(str)) {
+              obj = { style: null, guildId: null, roleColor: null, size: 16 };
+              obj[0] = lib.botTag;
+              obj[1] = guildId;
+              obj[2] = closure_5;
+              let tmp12 = outer1_16(tmp2(tmp3[22]), obj);
+            } else if (null != tmp7) {
+              obj = { style: null, verified: false };
+              obj[0] = lib.botTag;
+              tmp12 = outer1_16(tmp2(tmp3[23]), obj);
+            }
+            const items = [lib.popoutChecksGroup, ];
+            let prop = null;
+            if (arg1 < apply) {
+              prop = tmp21.popoutChecksGroupBottomMargin;
+            }
+            const obj1 = { style: items, children: null };
+            items[1] = prop;
+            const obj2 = { style: lib.popoutCheckGroupName, children: null };
+            if (null == value) {
+              const items1 = [null, , , ];
+              let tmp26 = null;
+              if (null != tmp7) {
+                const obj3 = { style: null, user: null, size: null, guildId: "Array" };
+                obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
+                obj3[1] = tmp7;
+                obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;
+                tmp26 = outer1_16(tmp11(tmp3[24]).Avatar, obj3);
+              }
+              items1[1] = tmp26;
+              let name;
+              if (value != null) {
+                name = value.name;
+              }
+              if (name == null) {
+                let name1;
+                if (application != null) {
+                  name1 = application.name;
+                }
+                name = name1;
+              }
+              const obj4 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
+              obj4[2] = name;
+              items1[2] = outer1_16(tmp11(tmp3[17]).Text, obj4);
+              items1[3] = tmp12;
+              obj2[1] = items1;
+              const items2 = [
+                tmp19(tmp20, obj2),
+                found.map((description) => {
+                    let connection_metadata_field;
+                    let connection_type;
+                    let operator;
+                    let value;
+                    ({ connection_type, connection_metadata_field, operator, value } = description);
+                    callback(38)(null != connectionMetadataField, "connectionMetadataField is null");
+                    callback(38)(null != operator, "operator is null");
+                    callback(38)(null != value, "value is null");
+                    return callback2(closure_20, { connectionType, connectionMetadataField, operator, value, description: description.description }, "" + connectionType + ":" + connectionMetadataField + ":" + operator + ":" + value);
+                  })
+              ];
+              obj1[1] = items2;
+              return tmp19(tmp20, obj1, arg0);
+            } else {
+              const obj5 = { style: null, source: null, disableColor: true, size: null };
+              obj5[0] = tmp21.popoutCheckGroupPlatformIcon;
+              let tmp11Result = tmp11(tmp3[25]);
+              tmp11Result = tmp11(tmp3[26]);
+              const icon = value.icon;
+              obj5[1] = tmp11Result.makeSource(tmp11Result.isThemeDark(table) ? icon.darkPNG : icon.lightPNG);
+              obj5[3] = tmp11(tmp3[24]).Icon.Sizes.MEDIUM;
+              outer1_16(tmp11(tmp3[24]).Icon, obj5);
+              const tmp23 = outer1_16;
+            }
+          })
+    };
+    return jsx(Fragment, obj);
+  }
+}
+({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
+({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = ME);
+({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
+createCacheKey = { container: { flexDirection: "column", alignItems: "center", padding: 16 }, header: null, verifiedContainer: null, headerTextContainer: null, verifiedCheck: null, loadingSpinner: null, popoutCheck: null, popoutCheckIcon: null, popoutChecksGroup: null, popoutChecksGroupBottomMargin: null, popoutCheckGroupName: null, popoutCheckGroupPlatformIcon: null, button: null, botTag: null };
+createCacheKey = { width: "100%", flexDirection: "row", alignItems: "center", paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: require("Themes").space.PX_24 };
+createCacheKey[1] = createCacheKey;
+createCacheKey[2] = { marginRight: 8, height: 24, width: 24 };
+createCacheKey[3] = { flexShrink: 1, flexDirection: "column" };
+createCacheKey[4] = { position: "absolute", left: 0, top: 0 };
+createCacheKey[5] = { marginVertical: 40 };
+createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 8, marginLeft: 32, paddingRight: 20 };
+createCacheKey[7] = { marginRight: 8, tintColor: require("Themes").colors.TEXT_FEEDBACK_POSITIVE };
+createCacheKey[8] = { width: "100%", marginBottom: 24 };
+let obj1 = { marginRight: 8, tintColor: require("Themes").colors.TEXT_FEEDBACK_POSITIVE };
+createCacheKey[9] = { paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: 12 };
+createCacheKey[10] = { flexDirection: "row", alignItems: "center" };
+createCacheKey[11] = { marginRight: 8 };
+createCacheKey[12] = { marginBottom: 8 };
+createCacheKey[13] = { marginLeft: 4 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj2 = { paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: 12 };
+let result = require("get ActivityIndicator").fileFinishedImporting("modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx");
+
+export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
+  userId = userId.userId;
+  const roleId = userId.roleId;
+  const channelId = userId.channelId;
+  const guildId = userId.guildId;
+  let analyticsLocations;
+  let stateFromStores;
+  let closure_6;
+  let stateFromStores2;
+  let first;
+  let trackCommunicationDisabled;
+  let tmp = createCacheKey();
+  analyticsLocations = roleId(channelId[28])(roleId(channelId[29]).CONNECTIONS_ROLE_POPOUT).analyticsLocations;
+  let obj = userId(channelId[30]);
+  const items = [createGuildRecordFromRust];
+  stateFromStores = obj.useStateFromStores(items, () => outer1_11.getGuild(guildId));
+  let obj1 = userId(channelId[30]);
+  const items1 = [first];
+  closure_6 = obj1.useStateFromStores(items1, () => first.getId());
+  let obj2 = userId(channelId[30]);
+  const items2 = [trackCommunicationDisabled];
+  const stateFromStores1 = obj2.useStateFromStores(items2, () => member.getMember(guildId, closure_6));
+  let obj3 = userId(channelId[30]);
+  const items3 = [map];
+  stateFromStores2 = obj3.useStateFromStores(items3, () => outer1_12.getGuildRoleConnectionEligibility(roleId));
+  let obj4 = analyticsLocations;
+  const tmp8 = guildId(analyticsLocations.useState(null == stateFromStores2), 2);
+  first = tmp8[0];
+  trackCommunicationDisabled = tmp8[1];
+  if (stateFromStores1 != null) {
+    const roles = stateFromStores1.roles;
+    const hasItem = roles.includes(roleId);
+  }
+  const items4 = [userId, roleId, channelId, guildId];
+  const effect = obj4.useEffect(() => {
+    let obj = roleId(channelId[31]);
+    obj = { other_user_id: userId, role_id: roleId };
+    const merged = Object.assign(userId(channelId[32]).collectChannelAnalyticsMetadataFromId(channelId));
+    const obj3 = userId(channelId[32]);
+    const merged1 = Object.assign(userId(channelId[32]).collectGuildAnalyticsMetadata(guildId));
+    obj.track(outer1_14.PASSPORT_ROLE_POPOUT_VIEWED, obj);
+  }, items4);
+  const items5 = [guildId, roleId, first, stateFromStores2];
+  const effect1 = obj4.useEffect(() => {
+    let tmp = first;
+    if (first) {
+      tmp = null == stateFromStores2;
+    }
+    if (tmp) {
+      const guildRoleConnectionsEligibility = roleId(channelId[33]).fetchGuildRoleConnectionsEligibility(guildId, roleId);
+      guildRoleConnectionsEligibility.then(() => callback(false));
+      const obj = roleId(channelId[33]);
+    }
+  }, items5);
+  if (stateFromStores2 != null) {
+    const flatResult = stateFromStores2.flat();
+    const someResult = stateFromStores2.flat().some((application_id) => undefined === application_id.application_id);
+  }
+  const tmp2 = roleId;
+  const tmp4 = roleId(channelId[28]);
+  const items6 = [createGuildRoleRecordFromRust];
+  const stateFromStores3 = userId(channelId[30]).useStateFromStores(items6, () => {
+    let role;
+    if (null != stateFromStores) {
+      role = outer1_10.getRole(tmp.id, roleId);
+    }
+    return role;
+  });
+  if (null != stateFromStores2) {
+    if (1 === stateFromStores2.length) {
+      obj = { value: null, children: null };
+      obj[0] = analyticsLocations;
+      obj = { style: null, children: null };
+      obj[0] = tmp.container;
+      obj1 = { style: null, children: null };
+      obj1[0] = tmp.header;
+      obj2 = { style: null, children: null };
+      obj2[0] = tmp.verifiedContainer;
+      obj3 = { style: null, guildId: null, role: null, size: 24 };
+      obj3[0] = tmp.verifiedCheck;
+      let id;
+      if (stateFromStores != null) {
+        id = stateFromStores.id;
+      }
+      if (id == null) {
+        id = closure_15;
+      }
+      obj3[1] = id;
+      obj3[2] = stateFromStores3;
+      obj2[1] = closure_16(tmp2(tmp3[35]), obj3);
+      const items7 = [closure_16(closure_6, obj2), ];
+      obj4 = { style: null, children: null };
+      obj4[0] = tmp.headerTextContainer;
+      let name;
+      if (stateFromStores3 != null) {
+        name = stateFromStores3.name;
+      }
+      const obj5 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+      obj5[2] = name;
+      const items8 = [closure_16(tmp5(tmp3[17]).Text, obj5), ];
+      const obj6 = { variant: "text-xs/normal", color: "text-default", children: null };
+      obj6[2] = formatResult;
+      items8[1] = closure_16(tmp5(tmp3[17]).Text, obj6);
+      obj4[1] = items8;
+      items7[1] = closure_17(closure_6, obj4);
+      obj1[1] = items7;
+      const items9 = [closure_17(closure_6, obj1), ];
+      if (null != stateFromStores2) {
+        if (null != stateFromStores2.flat()) {
+          const obj7 = { eligibilityStates: null, guildId: null };
+          obj7[0] = stateFromStores2.flat();
+          obj7[1] = guildId;
+          const items10 = [tmp16(PopoutChecks, obj7), , ];
+          let tmp16Result = null;
+          if (!hasItem) {
+            const obj8 = { style: null, children: null };
+            obj8[0] = tmp.button;
+            const obj9 = { onPress: null, text: null, variant: "primary", grow: true };
+            obj9[0] = function onPress() {
+              let obj = roleId(channelId[37]);
+              obj.hideActionSheet("ConnectionsRoleMessageBadgeActionSheet");
+              obj = { guildId };
+              const result = userId(channelId[38]).openGuildRoleConnectionsModal(obj);
+            };
+            const intl4 = tmp5(tmp3[14]).intl;
+            obj9[1] = intl4.string(tmp5(tmp3[14]).t.T1t1WV);
+            obj8[1] = tmp16(tmp5(tmp3[36]).Button, obj9);
+            tmp16Result = tmp16(tmp18, obj8);
+          }
+          items10[1] = tmp16Result;
+          tmp16Result = null;
+          if (someResult) {
+            const obj10 = { style: null, children: null };
+            obj10[0] = tmp.button;
+            const obj11 = { onPress: null, text: null, variant: "secondary", grow: true };
+            obj11[0] = function onPress() {
+              roleId(channelId[39])({ userId, channelId, roleId, sourceAnalyticsLocations: analyticsLocations });
+            };
+            const intl5 = tmp5(tmp3[14]).intl;
+            obj11[1] = intl5.string(tmp5(tmp3[14]).t.hgKDnG);
+            obj10[1] = tmp16(tmp5(tmp3[36]).Button, obj11);
+            tmp16Result = tmp16(tmp18, obj10);
+          }
+          const obj12 = { children: null };
+          items10[2] = tmp16Result;
+          obj12[0] = items10;
+          let tmp16Result1 = tmp17(closure_18, obj12);
+          const tmp25 = closure_18;
+        }
+        const obj13 = { children: null };
+        items9[1] = tmp16Result1;
+        obj[1] = items9;
+        obj13[0] = tmp17(tmp18, obj);
+        obj[1] = tmp16(tmp5(tmp3[34]).BottomSheet, obj13);
+        return tmp16(tmp5(tmp3[28]).AnalyticsLocationProvider, obj);
+      }
+      const obj14 = { style: null, size: "large" };
+      obj14[0] = tmp.loadingSpinner;
+      tmp16Result1 = tmp16(stateFromStores, obj14);
+      const tmp21 = stateFromStores3;
+      const tmp2Result = tmp2(tmp3[35]);
+    }
+    if (1 === stateFromStores2.length) {
+      const intl2 = tmp5(tmp3[14]).intl;
+      formatResult = intl2.format(tmp5(tmp3[14]).t["0eBj3x"], {});
+    } else {
+      const intl = tmp5(tmp3[14]).intl;
+      formatResult = intl.format(tmp5(tmp3[14]).t.D7uftB, {});
+    }
+  }
+  const intl3 = tmp5(tmp3[14]).intl;
+  formatResult = intl3.string(tmp5(tmp3[14]).t.jDym4E);
+};
+export { PopoutChecks };

@@ -1,0 +1,77 @@
+// === Module 10683: EmbeddedActivityBackgroundImageWithOverlay ===
+
+// Module 10683 (EmbeddedActivityBackgroundImageWithOverlay)
+import _slicedToArray from "_slicedToArray";
+import noop from "noop";
+import get_ActivityIndicator from "get ActivityIndicator";
+import { jsx } from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let c4;
+let c5;
+let closure_6;
+({ ImageBackground: c4, View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
+createCacheKey = { overlay: null };
+createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: require("Themes").colors.BLACK };
+createCacheKey[0] = createCacheKey;
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = ["embedded_background"];
+const result = require("get ActivityIndicator").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
+
+export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
+  let application;
+  let borderRadius;
+  let dimensionsStyle;
+  let resizeMode;
+  ({ application, dimensionsStyle, borderRadius, resizeMode } = arg0);
+  if (resizeMode === undefined) {
+    resizeMode = "contain";
+  }
+  let importDefault;
+  const tmp2 = callback(React.useState(false), 2);
+  importDefault = tmp2[1];
+  let str;
+  const tmp = createCacheKey();
+  if (application != null) {
+    str = application.id;
+  }
+  if (str == null) {
+    str = "";
+  }
+  let obj = { applicationId: str, names: closure_9, size: 1024 };
+  const url = importDefault(10684)(obj).url;
+  let tmp7Result = null;
+  if (!tmp2[0]) {
+    tmp7Result = null;
+    if (null != url) {
+      tmp7Result = null;
+      if ("" !== url) {
+        obj = { resizeMode: null, source: null, style: null, imageStyle: null, onError: null, children: null };
+        obj[0] = resizeMode;
+        obj = { uri: null };
+        obj[0] = url;
+        obj[1] = obj;
+        if (dimensionsStyle == null) {
+          dimensionsStyle = absoluteFillObject.absoluteFillObject;
+        }
+        obj[2] = dimensionsStyle;
+        const obj1 = { borderRadius: null };
+        obj1[0] = borderRadius;
+        obj[3] = obj1;
+        obj[4] = function onError() {
+          return callback(true);
+        };
+        const obj2 = { style: null };
+        const items = [tmp.overlay, ];
+        const obj3 = { borderRadius: null };
+        obj3[0] = borderRadius;
+        items[1] = obj3;
+        obj2[0] = items;
+        obj[5] = <closure_5 style={null} />;
+        tmp7Result = tmp7(closure_4, obj);
+        const tmp8 = closure_4;
+      }
+    }
+  }
+  return tmp7Result;
+};

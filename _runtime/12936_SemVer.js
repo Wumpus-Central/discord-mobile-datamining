@@ -1,0 +1,5 @@
+// === Module 12936: SemVer ===
+
+// Module 12936 (SemVer)
+
+export default (arg0, arg1) => new require(12925) /* SemVer */(arg0, arg1).minor;

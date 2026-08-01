@@ -1,0 +1,98 @@
+// === Module 6138: onDismiss ===
+
+// Module 6138 (onDismiss)
+import "dispatcher";
+import get_ActivityIndicator from "onDismiss";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let StyleSheet;
+let c3;
+let c4;
+let c5;
+const require = arg1;
+function onDismiss() {
+  importDefault(4161).hideActionSheet();
+}
+({ View: c3, StyleSheet } = get_ActivityIndicator);
+({ jsx: c4, jsxs: c5 } = jsxProd);
+createCacheKey = { container: { paddingTop: 24, paddingBottom: 24, paddingLeft: 12, paddingRight: 12 }, fill: null, nitroWheel: null, textContainer: null, body: null, content: null };
+createCacheKey = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+createCacheKey.flex = 1;
+createCacheKey.alignItems = "center";
+createCacheKey.justifyContent = "center";
+createCacheKey.top = -120;
+createCacheKey[1] = createCacheKey;
+createCacheKey[2] = { tintColor: require("Themes").colors.TEXT_SUBTLE, width: 37.5, height: 37.5 };
+createCacheKey[3] = { flexDirection: "row", flexShrink: 1, alignItems: "center", alignSelf: "center", textAlign: "center" };
+createCacheKey[4] = { paddingTop: 8, paddingBottom: 18 };
+createCacheKey[5] = { paddingHorizontal: 16 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj1 = { tintColor: require("Themes").colors.TEXT_SUBTLE, width: 37.5, height: 37.5 };
+let result = require("jsxProd").fileFinishedImporting("components_native/reactions/BurstReactionFirstSendActionSheet.tsx");
+
+export default function BurstReactionFirstSendActionSheet(arg0) {
+  let channelId;
+  let emoji;
+  let messageId;
+  ({ emoji, channelId, messageId } = arg0);
+  const tmp = createCacheKey();
+  let obj = require(6139) /* getDeviceSpecificString */;
+  obj = { quest: require(1236) /* getSystemLocale */.t["5TpPli"] };
+  const deviceSpecificString = obj.getDeviceSpecificString(obj, require(1236) /* getSystemLocale */.t["2Yp7dF"]);
+  obj = { backdropOpacity: null, contentStyles: null, backdropChildren: null, onDismiss: null, children: null };
+  obj[0] = require(6099) /* _generateAnimationSource */.BACKDROP_OPACITY;
+  obj[1] = tmp.content;
+  const obj1 = { style: tmp.fill, children: null };
+  const obj2 = { channelId, emoji, messageId, reactionType: null };
+  obj2[3] = require(6078) /* ReactionTypes */.ReactionTypes.BURST;
+  obj1[1] = callback(importDefault(6140), obj2);
+  obj[2] = callback(closure_3, obj1);
+  obj[3] = onDismiss;
+  const obj3 = { style: tmp.container, children: null };
+  const obj4 = { style: tmp.textContainer, children: null };
+  const items = [callback(require(1297) /* Button */.NitroWheel, { style: tmp.nitroWheel }), ];
+  const obj6 = { variant: "heading-xl/bold", children: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj6[1] = intl.string(require(1236) /* getSystemLocale */.t.NX7HI7);
+  items[1] = callback(require(4189) /* Text */.Text, obj6);
+  obj4[1] = items;
+  const items1 = [callback2(closure_3, obj4), , ];
+  const obj5 = { style: tmp.nitroWheel };
+  const tmp3 = importDefault(6140);
+  items1[1] = callback(closure_3, { style: tmp.body, children: callback(require(4189) /* Text */.Text, obj8) });
+  const obj9 = { text: null, onPress: null };
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  obj9[0] = intl2.string(require(1236) /* getSystemLocale */.t["+IrDzN"]);
+  obj9[1] = onDismiss;
+  items1[2] = callback(require(4604) /* Button */.Button, obj9);
+  obj3[1] = items1;
+  obj[4] = callback2(closure_3, obj3);
+  return callback(require(5247) /* Background */.BottomSheet, obj);
+};
+export const openBurstReactionFirstSendActionSheet = function openBurstReactionFirstSendActionSheet(arg0) {
+  let channelId;
+  let emoji;
+  let messageId;
+  ({ channelId, messageId, emoji } = arg0);
+  let obj = importDefault(4161);
+  obj.hideActionSheet();
+  if (obj2.UNSAFE_isDismissibleContentDismissed(require(1358) /* DismissibleContent */.DismissibleContent.SUPER_REACTIONS_FIRST_SENT)) {
+    let tmpResult = tmp(709);
+    obj = { type: "BURST_REACTION_EFFECT_SEND", channelId: null, messageId: null, emoji: null };
+    obj[1] = channelId;
+    obj[2] = messageId;
+    obj[3] = emoji;
+    tmpResult.dispatch(obj);
+  } else {
+    const result = tmp4(4009).UNSAFE_markDismissibleContentAsDismissed(tmp4(1358).DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
+    tmpResult = tmp(4161);
+    obj = { channelId: null, messageId: null, emoji: null };
+    obj[0] = channelId;
+    obj[1] = messageId;
+    obj[2] = emoji;
+    tmpResult.openLazy(tmp4(1959)(6138, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj);
+    const tmp4Result = tmp4(4009);
+  }
+};

@@ -1,0 +1,185 @@
+// === Module 16689: handleAuthenticatorDelete ===
+
+// Module 16689 (handleAuthenticatorDelete)
+import asyncGeneratorStep from "asyncGeneratorStep";
+import fetchFingerprint from "fetchFingerprint";
+import "initialize";
+
+class WebAuthnSignalManager extends tmp2 {
+  constructor() {
+    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
+    applyArgumentsResult.actions = { AUTHENTICATOR_DELETE: applyArgumentsResult.handleAuthenticatorDelete, MFA_WEBAUTHN_CREDENTIALS_LOADED: applyArgumentsResult.handleWebAuthnCredentialsLoaded, CURRENT_USER_UPDATE: applyArgumentsResult.handleCurrentUserUpdate };
+    return applyArgumentsResult;
+  }
+}
+const prototype = WebAuthnSignalManager.prototype;
+prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(credential) {
+  credential = credential.credential;
+  return callback(function*() {
+    if (v0 === 2) {
+      v0 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v0 = 2;
+        if (0 === table) {
+          if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let obj1 = v0(table[3]);
+            table = 1;
+            v0 = 1;
+            obj1 = { value: null, done: false };
+            obj1[0] = obj1.signalUnknownCredential(v0);
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          v0 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp8) {
+        v0 = tmp;
+        throw tmp8;
+      }
+    }
+  })();
+};
+prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredentialsLoaded(credentials) {
+  credentials = credentials.credentials;
+  return callback(function*() {
+    if (v0 === 2) {
+      v0 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v0 = 2;
+        if (0 === table) {
+          if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            const id = outer1_3.getId();
+            let obj1 = v0(table[3]);
+            table = 1;
+            v0 = 1;
+            obj1 = { value: null, done: false };
+            obj1[0] = obj1.signalAllAcceptedCredentials(v0, id);
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          v0 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp10) {
+        v0 = tmp;
+        throw tmp10;
+      }
+    }
+  })();
+};
+prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
+  user = user.user;
+  return callback(function*() {
+    if (v0 === 2) {
+      v0 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v0 = 2;
+        if (0 === table) {
+          if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let obj1 = v0(table[3]);
+            table = 1;
+            v0 = 1;
+            obj1 = { value: null, done: false };
+            obj1[0] = obj1.signalCurrentUserDetails(v0);
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          v0 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp8) {
+        v0 = tmp;
+        throw tmp8;
+      }
+    }
+  })();
+};
+const webAuthnSignalManager = new WebAuthnSignalManager();
+const result = require("initialize").fileFinishedImporting("modules/webauthn/WebAuthnSignalManager.tsx");
+
+export default webAuthnSignalManager;

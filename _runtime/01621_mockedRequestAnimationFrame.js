@@ -1,0 +1,7 @@
+// === Module 1621: mockedRequestAnimationFrame ===
+
+// Module 1621 (mockedRequestAnimationFrame)
+arg5.mockedRequestAnimationFrame = function mockedRequestAnimationFrame(arg0) {
+  let closure_0 = arg0;
+  return setTimeout(() => callback(performance.now()), 0);
+};

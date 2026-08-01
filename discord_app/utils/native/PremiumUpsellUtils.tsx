@@ -1,0 +1,286 @@
+// === Module 6194: usePremiumUpsellConfig ===
+
+// Module 6194 (usePremiumUpsellConfig)
+import getBestActiveInput from "getBestActiveInput";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import ME from "ME";
+import GuildFeatures from "GuildFeatures";
+import { jsx } from "ACTION_SHEET_HEIGHT_HALF";
+
+let c5;
+let c9;
+let closure_6;
+let error;
+let metroImportAll;
+const require = arg1;
+function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analyticsLocation) {
+  const _require = initialUpsellKey;
+  let closure_1 = analyticsLocations2;
+  const dependencyMap = analyticsLocation;
+  let obj = _require(6245);
+  const premiumTrialOffer = obj.usePremiumTrialOffer();
+  let items = [, ];
+  ({ GLOBAL_EMOJI: arr[0], UPLOAD: arr[1] } = closure_7);
+  const set = new Set(items);
+  let hasItem = null != premiumTrialOffer;
+  if (hasItem) {
+    hasItem = set.has(initialUpsellKey);
+  }
+  let tmp4 = hasItem;
+  if (hasItem) {
+    let sku_id;
+    if (premiumTrialOffer != null) {
+      let subscription_trial = premiumTrialOffer.subscription_trial;
+      if (subscription_trial != null) {
+        sku_id = subscription_trial.sku_id;
+      }
+    }
+    tmp4 = sku_id === TIER_0.TIER_0;
+  }
+  let closure_5 = tmp4;
+  const items1 = [initialUpsellKey, tmp4];
+  const memo = premiumTrialOffer.useMemo(() => {
+    if (closure_5) {
+      return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
+    } else {
+      if (outer1_7.UPLOAD !== initialUpsellKey) {
+        if (tmp2.ANIMATED_EMOJI !== tmp) {
+          if (tmp2.GLOBAL_EMOJI !== tmp) {
+            if (tmp2.GLOBAL_STICKER !== tmp) {
+              if (tmp2.CUSTOM_PROFILES !== tmp) {
+                if (tmp2.PREMIUM_GUILD_PROFILE !== tmp) {
+                  if (tmp2.APP_ICONS !== tmp) {
+                    if (tmp2.STREAM_HIGH_QUALITY !== tmp) {
+                      if (tmp2.LONGER_MESSAGE !== tmp) {
+                        if (tmp2.GUILD_CAP !== tmp) {
+                          const ANIMATED_AVATAR = tmp2.ANIMATED_AVATAR;
+                        }
+                      }
+                      return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_2_LEADING;
+    }
+  }, items1);
+  const items2 = [memo, analyticsLocations2, analyticsLocation];
+  const items3 = [tmp4, premiumTrialOffer, hasItem];
+  const callback = premiumTrialOffer.useCallback(() => {
+    let obj = initialUpsellKey(analyticsLocation[19]);
+    const bestActiveInput = obj.getBestActiveInput();
+    if (bestActiveInput != null) {
+      bestActiveInput.closeCustomKeyboard();
+    }
+    obj = { location: analyticsLocation };
+    analyticsLocations2(analyticsLocation[20]).track(tmp4.PREMIUM_PROMOTION_OPENED, obj);
+    const obj3 = analyticsLocations2(analyticsLocation[20]);
+    analyticsLocations2(analyticsLocation[21]).hideActionSheet();
+    obj = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
+    const obj1 = {};
+    const obj5 = analyticsLocations2(analyticsLocation[21]);
+    const merged = Object.assign(analyticsLocation);
+    obj1.object = memo.BUTTON_CTA;
+    obj[0] = obj1;
+    let items = analyticsLocations2;
+    if (analyticsLocations2 == null) {
+      items = [];
+    }
+    obj[1] = items;
+    obj[2] = memo;
+    analyticsLocations2(analyticsLocation[22])(obj);
+  }, items2);
+  obj = {
+    useTier0UpsellContent: tmp4,
+    onViewAllPerks: callback,
+    getNitroText: premiumTrialOffer.useMemo(() => {
+      if (hasItem) {
+        let sku_id;
+        if (premiumTrialOffer != null) {
+          const subscription_trial = premiumTrialOffer.subscription_trial;
+          if (subscription_trial != null) {
+            sku_id = subscription_trial.sku_id;
+          }
+        }
+        if (outer1_8.TIER_0 === sku_id) {
+          const intl4 = initialUpsellKey(analyticsLocation[6]).intl;
+          return intl4.string(initialUpsellKey(analyticsLocation[6]).t.hz78hE);
+        } else if (tmp8.TIER_2 === sku_id) {
+          const intl3 = initialUpsellKey(analyticsLocation[6]).intl;
+          return intl3.string(initialUpsellKey(analyticsLocation[6]).t["Gd/XHF"]);
+        }
+      } else if (closure_5) {
+        const intl = initialUpsellKey(analyticsLocation[6]).intl;
+        return intl.string(initialUpsellKey(analyticsLocation[6]).t["9CM5v9"]);
+      }
+      const intl2 = initialUpsellKey(analyticsLocation[6]).intl;
+      return intl2.string(initialUpsellKey(analyticsLocation[6]).t.pj0XBN);
+    }, items3)
+  };
+  return obj;
+}
+({ AnalyticEvents: c5, AnalyticsObjects: closure_6, UpsellTypes: error } = ME);
+({ PremiumSubscriptionSKUs: metroImportAll, PremiumTypes: c9 } = GuildFeatures);
+const result = require("ME").fileFinishedImporting("utils/native/PremiumUpsellUtils.tsx");
+
+export default {
+  handleShowUpsellAlert(initialUpsellKey) {
+    let mergeGuildAvatar;
+    let closure_5;
+    initialUpsellKey = initialUpsellKey.initialUpsellKey;
+    let analyticsLocation = initialUpsellKey.analyticsLocation;
+    if (undefined === analyticsLocation) {
+      analyticsLocation = {};
+    }
+    let analyticsLocations = initialUpsellKey.analyticsLocations;
+    if (undefined === analyticsLocations) {
+      analyticsLocations = [];
+    }
+    let analyticsProperties = initialUpsellKey.analyticsProperties;
+    if (undefined === analyticsProperties) {
+      analyticsProperties = {};
+    }
+    ({ largestFileSize: mergeGuildAvatar, imageSource: closure_5 } = initialUpsellKey);
+    currentUser = currentUser.getCurrentUser();
+    let flag = false;
+    if (null != currentUser) {
+      if (constants.UPLOAD === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).isPremiumExactly(currentUser, TIER_2.TIER_2);
+        const obj15 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.GLOBAL_EMOJI === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUseEmojisEverywhere(currentUser);
+        const obj14 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.ANIMATED_AVATAR === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUseAnimatedAvatar(currentUser);
+        const obj13 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.BADGE === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUseBadges(currentUser);
+        const obj12 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.ANIMATED_EMOJI === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUseAnimatedEmojis(currentUser);
+        const obj11 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.EMOJI_AUTOCOMPLETE === initialUpsellKey) {
+        const canUseAnimatedEmojisResult = analyticsLocation(analyticsLocations[16]).canUseAnimatedEmojis(currentUser);
+        let tmp18 = !canUseAnimatedEmojisResult;
+        if (canUseAnimatedEmojisResult) {
+          tmp18 = !tmp15(tmp16[16]).canUseEmojisEverywhere(currentUser);
+          const tmp15Result = tmp15(tmp16[16]);
+        }
+        flag = tmp18;
+        const obj9 = analyticsLocation(analyticsLocations[16]);
+        tmp15 = analyticsLocation;
+        tmp16 = analyticsLocations;
+      } else if (tmp2.CUSTOM_PROFILES === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumProfileCustomization(currentUser);
+        const obj8 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.APP_ICONS === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumAppIcons(currentUser);
+        const obj7 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.GLOBAL_STICKER === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUseCustomStickersEverywhere(currentUser);
+        const obj6 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.PREMIUM_GUILD_PROFILE === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUsePremiumGuildMemberProfile(currentUser);
+        const obj5 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.LONGER_MESSAGE === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUseIncreasedMessageLength(currentUser);
+        const obj4 = analyticsLocation(analyticsLocations[16]);
+      } else if (tmp2.GUILD_CAP === initialUpsellKey) {
+        flag = !analyticsLocation(analyticsLocations[16]).canUseIncreasedGuildCap(currentUser);
+        const obj3 = analyticsLocation(analyticsLocations[16]);
+      } else {
+        flag = false;
+        if (tmp2.STREAM_HIGH_QUALITY === initialUpsellKey) {
+          flag = true;
+        }
+      }
+    }
+    if (flag) {
+      if (!analyticsLocation(analyticsLocations[12])(initialUpsellKey)) {
+        let obj = { importer: null };
+        obj[0] = function importer() {
+          return initialUpsellKey(analyticsLocations[15])(analyticsLocations[14], analyticsLocations.paths).then((arg0) => {
+            let closure_0 = arg0.default;
+            return (arg0) => {
+              const obj = {};
+              const merged = Object.assign(arg0);
+              obj.initialUpsellKey = closure_0;
+              obj.analyticsLocation = outer1_1;
+              obj.analyticsProperties = outer1_3;
+              obj.analyticsLocations = outer1_2;
+              obj.largestFileSize = outer1_4;
+              obj.imageSource = outer1_5;
+              return outer2_10(closure_0, obj);
+            };
+          });
+        };
+        tmp30(tmp31[13]).openLazy(obj);
+        const tmp30Result = tmp30(tmp31[13]);
+      }
+      tmp30 = analyticsLocation;
+      tmp31 = analyticsLocations;
+    }
+  },
+  usePremiumUpsellConfig
+};
+export const getUpsellItems = function getUpsellItems() {
+  let obj = { key: constants.GLOBAL_EMOJI, image: importDefault(6195), activeTitle: null, passiveTitle: null, description: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl.string(require(1236) /* getSystemLocale */.t.gKtr8N);
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  obj[3] = intl2.string(require(1236) /* getSystemLocale */.t.N8ZRNb);
+  const intl3 = require(1236) /* getSystemLocale */.intl;
+  obj[4] = intl3.format(require(1236) /* getSystemLocale */.t.rf7Ixp, {});
+  const items = [obj, , , , , ];
+  obj = { key: constants.ANIMATED_EMOJI, image: importDefault(6196), activeTitle: null, passiveTitle: null, description: null };
+  const intl4 = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl4.string(require(1236) /* getSystemLocale */.t.F6rmyq);
+  const intl5 = require(1236) /* getSystemLocale */.intl;
+  obj[3] = intl5.string(require(1236) /* getSystemLocale */.t.e4cKNt);
+  const intl6 = require(1236) /* getSystemLocale */.intl;
+  obj[4] = intl6.format(require(1236) /* getSystemLocale */.t.JxTzzb, {});
+  items[1] = obj;
+  obj = { key: constants.ANIMATED_AVATAR, image: importDefault(6197), activeTitle: null, passiveTitle: null, description: null };
+  const intl7 = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl7.string(require(1236) /* getSystemLocale */.t["tQh+gF"]);
+  const intl8 = require(1236) /* getSystemLocale */.intl;
+  obj[3] = intl8.string(require(1236) /* getSystemLocale */.t.HGSXTM);
+  const intl9 = require(1236) /* getSystemLocale */.intl;
+  obj[4] = intl9.format(require(1236) /* getSystemLocale */.t["Tso/Fn"], {});
+  items[2] = obj;
+  const obj1 = { key: constants.UPLOAD, image: importDefault(6198), activeTitle: null, passiveTitle: null, description: null };
+  const intl10 = require(1236) /* getSystemLocale */.intl;
+  obj1[2] = intl10.string(require(1236) /* getSystemLocale */.t["1EOZqw"]);
+  const intl11 = require(1236) /* getSystemLocale */.intl;
+  obj1[3] = intl11.string(require(1236) /* getSystemLocale */.t.tB51W4);
+  const intl12 = require(1236) /* getSystemLocale */.intl;
+  const obj2 = { maxUploadStandard: null, maxUploadPremium: null };
+  const intl13 = require(1236) /* getSystemLocale */.intl;
+  obj2[0] = intl13.string(require(1236) /* getSystemLocale */.t.Ll40SK);
+  const intl14 = require(1236) /* getSystemLocale */.intl;
+  obj2[1] = intl14.string(require(1236) /* getSystemLocale */.t.EaBfeq);
+  obj1[4] = intl12.format(require(1236) /* getSystemLocale */.t.DUT5IC, obj2);
+  items[3] = obj1;
+  const obj3 = { key: constants.BADGE, image: importDefault(6199), activeTitle: null, passiveTitle: null, description: null };
+  const intl15 = require(1236) /* getSystemLocale */.intl;
+  obj3[2] = intl15.string(require(1236) /* getSystemLocale */.t["602BK4"]);
+  const intl16 = require(1236) /* getSystemLocale */.intl;
+  obj3[3] = intl16.string(require(1236) /* getSystemLocale */.t.j0TXTX);
+  const intl17 = require(1236) /* getSystemLocale */.intl;
+  obj3[4] = intl17.format(require(1236) /* getSystemLocale */.t["p7i+li"], {});
+  items[4] = obj3;
+  const obj4 = { key: constants.APP_ICONS, image: importDefault(6200), activeTitle: null, passiveTitle: null, description: null };
+  const intl18 = require(1236) /* getSystemLocale */.intl;
+  obj4[2] = intl18.string(require(1236) /* getSystemLocale */.t["1B1Cyn"]);
+  const intl19 = require(1236) /* getSystemLocale */.intl;
+  obj4[3] = intl19.string(require(1236) /* getSystemLocale */.t["1B1Cyn"]);
+  const intl20 = require(1236) /* getSystemLocale */.intl;
+  obj4[4] = intl20.string(require(1236) /* getSystemLocale */.t.VL5TYT);
+  items[5] = obj4;
+  return items;
+};
+export { usePremiumUpsellConfig };

@@ -1,0 +1,97 @@
+// === Module 3851: getNonePlanIdForIntervalType ===
+
+// Module 3851 (getNonePlanIdForIntervalType)
+import GuildFeatures from "GuildFeatures";
+
+let c0;
+let closure_1;
+let obj1;
+({ SubscriptionPlans: c0, SubscriptionPlanInfo: closure_1, PremiumSubscriptionSKUs: obj1 } = GuildFeatures);
+const result = require("set").fileFinishedImporting("modules/premium/PremiumSubscription.tsx");
+
+export const getNonePlanIdForIntervalType = function getNonePlanIdForIntervalType(arg0) {
+  const constants = arg0;
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 1;
+  }
+  const keys = Object.keys(num);
+  let NONE_MONTH = keys.find((arg0) => {
+    let tmp2 = null != tmp;
+    if (tmp2) {
+      tmp2 = tmp.skuId === outer1_2.NONE;
+    }
+    if (tmp2) {
+      tmp2 = tmp.interval === interval;
+    }
+    if (tmp2) {
+      tmp2 = tmp.intervalCount === intervalCount;
+    }
+    return tmp2;
+  });
+  if (NONE_MONTH == null) {
+    NONE_MONTH = constants.NONE_MONTH;
+  }
+  return NONE_MONTH;
+};
+export const getNonePlanIdForSubscription = function getNonePlanIdForSubscription(arg0) {
+  let num = tmp2.intervalCount;
+  num = undefined;
+  const interval = tmp2.interval;
+  if (num === undefined) {
+    num = 1;
+  }
+  const keys = Object.keys(num);
+  let NONE_MONTH = keys.find((arg0) => {
+    let tmp2 = null != tmp;
+    if (tmp2) {
+      tmp2 = tmp.skuId === outer1_2.NONE;
+    }
+    if (tmp2) {
+      tmp2 = tmp.interval === interval;
+    }
+    if (tmp2) {
+      tmp2 = tmp.intervalCount === intervalCount;
+    }
+    return tmp2;
+  });
+  if (NONE_MONTH == null) {
+    NONE_MONTH = interval.NONE_MONTH;
+  }
+  return NONE_MONTH;
+};
+export const getBaseSubscriptionItemForSubscriptionItems = function getBaseSubscriptionItemForSubscriptionItems(arr) {
+  return arr.find((arg0) => null != intervalCount[arg0.planId] && null != intervalCount[arg0.planId].premiumType);
+};
+export const getBasePlanIdForSubscriptionItems = function getBasePlanIdForSubscriptionItems(items, interval, intervalCount) {
+  const found = items.find((arg0) => null != intervalCount[arg0.planId] && null != intervalCount[arg0.planId].premiumType);
+  if (null == found) {
+    if (items.length > 0) {
+      ({ interval, intervalCount } = intervalCount[items[0].planId]);
+    }
+    if (intervalCount === undefined) {
+      intervalCount = 1;
+    }
+    const _Object = Object;
+    const keys = Object.keys(intervalCount);
+    let NONE_MONTH = keys.find((arg0) => {
+      let tmp2 = null != tmp;
+      if (tmp2) {
+        tmp2 = tmp.skuId === outer1_2.NONE;
+      }
+      if (tmp2) {
+        tmp2 = tmp.interval === interval;
+      }
+      if (tmp2) {
+        tmp2 = tmp.intervalCount === intervalCount;
+      }
+      return tmp2;
+    });
+    if (NONE_MONTH == null) {
+      NONE_MONTH = interval.NONE_MONTH;
+    }
+    return NONE_MONTH;
+  } else {
+    return found.planId;
+  }
+};

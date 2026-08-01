@@ -1,0 +1,59 @@
+// === Module 9459: EmojiPickerCategoriesBackspaceItem ===
+
+// Module 9459 (EmojiPickerCategoriesBackspaceItem)
+import noop from "noop";
+import { Pressable } from "get ActivityIndicator";
+import { NODE_MARGIN } from "ME";
+import { jsx } from "jsxProd";
+
+const require = arg1;
+const result = require("ME").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx");
+
+export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
+  let iconStyle;
+  let style;
+  onBackspace = onBackspace.onBackspace;
+  let dependencyMap;
+  let React;
+  ({ style, iconStyle } = onBackspace);
+  const interval = new onBackspace(4078).Interval();
+  dependencyMap = React.useRef(interval);
+  const delayedCall = new onBackspace(4078).DelayedCall(500, () => {
+    const current = noop.current;
+    current.cancel();
+    const current2 = ref.current;
+    current2.start(50, onBackspace);
+  });
+  React = React.useRef(delayedCall);
+  const items = [onBackspace];
+  const items1 = [onBackspace];
+  const callback = React.useCallback(() => {
+    onBackspace();
+    const current = noop.current;
+    current.delay();
+  }, items);
+  const callback1 = React.useCallback(() => {
+    const current = noop.current;
+    current.cancel();
+    const current2 = ref.current;
+    current2.stop();
+    onBackspace();
+  }, items1);
+  const effect = React.useEffect(() => {
+    current = current.current;
+    current = noop.current;
+    return () => {
+      current.stop();
+      current.cancel();
+    };
+  });
+  obj = { hitSlop: obj, style, accessibilityRole: "keyboardkey", accessibilityLabel: null, delayLongPress: 500, onPressOut: null, onLongPress: null, children: null };
+  obj = { top: NODE_MARGIN, bottom: NODE_MARGIN, right: NODE_MARGIN, left: NODE_MARGIN };
+  const intl = onBackspace(1236).intl;
+  obj[3] = intl.string(onBackspace(1236).t["4SnBzF"]);
+  obj[5] = callback1;
+  obj[6] = callback;
+  const items2 = [iconStyle, { opacity: 0.5 }];
+  obj[7] = jsx(onBackspace(9460).BackspaceIcon, { style: items2 });
+  return <Pressable top={NODE_MARGIN} bottom={NODE_MARGIN} right={NODE_MARGIN} left={NODE_MARGIN} />;
+};

@@ -1,0 +1,11 @@
+// === Module 10547: useIsActivitiesEnabledForCurrentPlatform ===
+
+// Module 10547 (useIsActivitiesEnabledForCurrentPlatform)
+const result = require("set").fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");
+
+export const useIsActivitiesEnabledForCurrentPlatform = function useIsActivitiesEnabledForCurrentPlatform() {
+  return !require(4430) /* isTablet */.isTablet;
+};
+export const getIsActivitiesEnabledForCurrentPlatform = function getIsActivitiesEnabledForCurrentPlatform() {
+  return !require(4430) /* isTablet */.isTablet;
+};

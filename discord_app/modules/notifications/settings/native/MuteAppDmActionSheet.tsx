@@ -1,0 +1,84 @@
+// === Module 11707: MuteAppDMActionSheet ===
+
+// Module 11707 (MuteAppDMActionSheet)
+import "noop";
+import { View } from "set";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+
+let c4;
+let c5;
+let require = arg1;
+({ jsx: c4, jsxs: c5 } = jsxProd);
+createCacheKey = { sheet: null, iconContainer: null, iconBackground: null, content: null, headerText: null, infoText: null, dismissButtonContainer: null, mutedNotificationContainer: null, mutedNotification: null };
+createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { alignItems: "center", marginBottom: 8 };
+createCacheKey[2] = { width: 48, height: 48 };
+createCacheKey[3] = { padding: 16 };
+createCacheKey[4] = { textAlign: "center", marginBottom: 8, paddingHorizontal: 16 };
+createCacheKey[5] = { textAlign: "center", marginBottom: 16, paddingHorizontal: 16 };
+createCacheKey[6] = { marginTop: 8 };
+createCacheKey[7] = { borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_NOTIFICATION, height: 24, width: 24, padding: 4, alignContent: "center" };
+createCacheKey[8] = { width: 16, height: 16 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_NOTIFICATION, height: 24, width: 24, padding: 4, alignContent: "center" };
+let result = require("jsxProd").fileFinishedImporting("modules/notifications/settings/native/MuteAppDmActionSheet.tsx");
+
+export default function MuteAppDMActionSheet(channel) {
+  const tmp = createCacheKey();
+  const require = tmp;
+  channel = channel.channel;
+  let obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
+  obj = { style: tmp.content, children: null };
+  obj = { style: tmp.iconContainer, children: null };
+  const obj1 = { style: tmp.iconBackground, IconComponent: null, active: true, accessibilityLabel: null };
+  obj1[1] = require(10243) /* BellIcon */.BellIcon;
+  let intl = require(1236) /* getSystemLocale */.intl;
+  obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.uAmAiL);
+  obj[1] = callback(channel(11413), obj1);
+  const items = [callback(View, obj), , , , ];
+  let obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  obj2[3] = intl2.string(require(1236) /* getSystemLocale */.t.uAmAiL);
+  items[1] = callback(require(4189) /* Text */.Text, obj2);
+  const obj3 = { variant: "text-md/normal", color: "text-default", style: tmp.infoText, children: null };
+  const intl3 = require(1236) /* getSystemLocale */.intl;
+  obj3[3] = intl3.string(require(1236) /* getSystemLocale */.t.mscFJU);
+  items[2] = callback(require(4189) /* Text */.Text, obj3);
+  const obj4 = { variant: "destructive", text: null, onPress: null };
+  const intl4 = require(1236) /* getSystemLocale */.intl;
+  obj4[1] = intl4.string(require(1236) /* getSystemLocale */.t.uAmAiL);
+  obj4[2] = function onPress() {
+    let obj = channel(outer1_2[11]);
+    const result = obj.updateChannelOverrideSettings(null, channel.id, { muted: true }, tmp(outer1_2[12]).NotificationLabels.Muted);
+    channel(outer1_2[13]).hideActionSheet();
+    const obj2 = channel(outer1_2[13]);
+    obj = { key: "NOTIFICATIONS_MUTED", content: null, icon: null };
+    const intl = tmp(outer1_2[8]).intl;
+    obj[1] = intl.string(tmp(outer1_2[8]).t.EgGpkx);
+    obj[2] = function icon() {
+      let obj = { style: closure_0.mutedNotificationContainer, children: null };
+      obj = { source: null, color: null, style: null };
+      obj[0] = outer1_1(outer1_2[16]);
+      obj[1] = outer1_1(outer1_2[4]).unsafe_rawColors.WHITE;
+      obj[2] = closure_0.mutedNotification;
+      obj[1] = outer1_4(outer1_0(outer1_2[15]).Icon, obj);
+      return outer1_4(outer1_3, obj);
+    };
+    channel(outer1_2[14]).open(obj);
+  };
+  items[3] = callback(require(4604) /* Button */.Button, obj4);
+  const obj5 = { style: tmp.dismissButtonContainer, children: null };
+  const obj6 = { variant: "secondary", text: null, onPress: null };
+  const intl5 = require(1236) /* getSystemLocale */.intl;
+  obj6[1] = intl5.string(require(1236) /* getSystemLocale */.t.WAI6xu);
+  obj6[2] = function onPress() {
+    channel(table[13]).hideActionSheet();
+  };
+  obj5[1] = callback(require(4604) /* Button */.Button, obj6);
+  items[4] = callback(View, obj5);
+  obj[1] = items;
+  obj[2] = callback2(View, obj);
+  return callback(require(5247) /* Background */.BottomSheet, obj);
+};

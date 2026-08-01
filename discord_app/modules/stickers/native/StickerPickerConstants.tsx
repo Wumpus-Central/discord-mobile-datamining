@@ -1,0 +1,25 @@
+// === Module 9601: PADDING_HORIZONTAL ===
+
+// Module 9601 (PADDING_HORIZONTAL)
+import ExpressionPickerViewType from "ExpressionPickerViewType";
+
+let MIN_MARGIN;
+let PADDING_HORIZONTAL;
+const PADDING_VERTICAL = ExpressionPickerViewType.PADDING_VERTICAL;
+({ PADDING_HORIZONTAL, MIN_MARGIN } = ExpressionPickerViewType);
+const result = 2 * PADDING_VERTICAL;
+const items = [require("StickerFormat").StickerFormat.GIF, require("StickerFormat").StickerFormat.PNG, require("StickerFormat").StickerFormat.APNG];
+const result1 = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerConstants.tsx");
+
+export { PADDING_HORIZONTAL };
+export { PADDING_VERTICAL };
+export { MIN_MARGIN };
+export const STICKER_SIZE = 64;
+export const LABEL_HEIGHT = 16;
+export const BUTTON_HEIGHT = 32;
+export const ROW_HEIGHT = 64 + result;
+export const STICKER_NUDGE_RESULTS_CAP = 4;
+export const STICKER_PICKER_PADDING = 100;
+export const STICKER_SCROLL_LOAD_DELAY_MS = 250;
+export const STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS = 750;
+export const STICKER_FORMATS = items;

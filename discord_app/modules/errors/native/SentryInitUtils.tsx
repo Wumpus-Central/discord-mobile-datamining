@@ -1,0 +1,751 @@
+// === Module 1209: _maybeBackfillMissingBreadcrumbsFromTelemetryRing ===
+
+// Module 1209 (_maybeBackfillMissingBreadcrumbsFromTelemetryRing)
+import timestamp from "timestamp";
+import { NativeModules } from "DCDDeviceManager";
+import ME from "ME";
+import { PRIMARY_DOMAIN } from "sum";
+import addBreadcrumb from "addBreadcrumb";
+import IGNORE_ANALYTICS_BREADCRUMB_EVENTS from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS";
+
+let Endpoints;
+let closure_6;
+const require = arg1;
+function _maybeBackfillMissingBreadcrumbsFromTelemetryRing() {
+  const self = this;
+  const tmp = callback((arg0) => {
+    let closure_0 = arg0;
+    let c2 = 0;
+    let c3 = 0;
+    return (function*(arg0) {
+      if (table === 2) {
+        table = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          table = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              table = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              table = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_1 = tmp2;
+              closure_1 = undefined;
+              const breadcrumbs = lib.breadcrumbs;
+              const _Array2 = Array;
+              if (Array.isArray(breadcrumbs)) {
+                if (breadcrumbs.length > 0) {
+                  table = 3;
+                }
+              }
+              const SentryTelemetry = lib(table[6]).SentryTelemetry;
+              const items = [SentryTelemetry.snapshotForBreadcrumbs(), ];
+              const promise = new Promise((arg0, arg1) => {
+                let closure_0 = arg1;
+                return setTimeout(() => {
+                  const error = new Error("TelemetryRing breadcrumb timeout");
+                  return callback(error);
+                }, 200);
+              });
+              items[1] = promise;
+              c2 = 1;
+              table = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = Promise.race(items).catch(() => null);
+              return obj1;
+            }
+          } else if (arg0 === 1) {
+            table = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            closure_1 = arg1;
+            let isArray = null != closure_1;
+            if (isArray) {
+              const _Array = Array;
+              isArray = Array.isArray(closure_1.entries);
+            }
+            if (isArray) {
+              isArray = 0 !== closure_1.entries.length;
+            }
+            if (isArray) {
+              const entries = closure_1.entries;
+              lib.breadcrumbs = entries.map((data) => {
+                let key = data.message;
+                if (key == null) {
+                  key = data.key;
+                }
+                return { message: key, category: "telemetry_ring", timestamp: data.timestamp / 1000, data: data.data };
+              });
+            }
+          }
+          table = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } catch (tmp21) {
+          table = tmp;
+          throw tmp21;
+        }
+      }
+    })();
+  });
+  const _maybeBackfillMissingBreadcrumbsFromTelemetryRing = tmp;
+  const apply = tmp.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+function filterError(event_id, originalException) {
+  let closure_0 = event_id;
+  const importDefault = originalException;
+  originalException = undefined;
+  if (originalException != null) {
+    originalException = originalException.originalException;
+  }
+  let status;
+  if (originalException != null) {
+    status = originalException.status;
+  }
+  if (!status) {
+    let captchaFields;
+    if (originalException != null) {
+      captchaFields = originalException.captchaFields;
+    }
+    let tmp4 = null;
+    if (null != captchaFields) {
+      let code;
+      if (originalException != null) {
+        code = originalException.code;
+      }
+      tmp4 = code;
+    }
+    let flag = false;
+    if (tmp4) {
+      flag = false;
+      if (tmp4 < 0) {
+        flag = true;
+      }
+    }
+  } else {
+    flag = true;
+  }
+  if (!flag) {
+    let originalException1;
+    if (originalException != null) {
+      originalException1 = originalException.originalException;
+    }
+    let code1;
+    if (originalException1 != null) {
+      if (originalException1.err != null) {
+        code1 = err.code;
+      }
+    }
+    let flag2 = false;
+    if ("ABORTED" === code1) {
+      flag2 = true;
+    }
+    flag = flag2;
+  }
+  if (flag) {
+    event_id = event_id.event_id;
+    let tmp17 = typeof event_id === "y";
+    if (typeof event_id !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp17 = 0 !== event_id.length;
+    }
+    if (tmp17) {
+      importDefault(1208).markCrashHandled(event_id);
+      let obj = importDefault(1208);
+    }
+  } else {
+    let originalException2;
+    if (originalException != null) {
+      originalException2 = originalException.originalException;
+    }
+    let status1;
+    if (originalException2 != null) {
+      status1 = originalException2.status;
+    }
+    if (null != status1) {
+      if (null == event_id.tags) {
+        event_id.tags = {};
+      }
+      event_id.tags.httpStatusCode = status1;
+    }
+    let tmp10 = c12;
+    if ("error" === event_id.level) {
+      tmp10 = c13;
+    }
+    if (!c14) {
+      if (callback2()) {
+        const _Math = Math;
+      }
+      trackCrash(event_id, originalException, false);
+    }
+    return callback(function*() {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === table) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_1 = tmp3;
+              let closure_0 = tmp3;
+              let c2 = 1;
+              const ZoomedInTelemetry = outer1_0(table[6]).ZoomedInTelemetry;
+              const items = [ZoomedInTelemetry.flushNow(), ];
+              const promise = new Promise((arg0) => setTimeout(arg0, 200));
+              items[1] = promise;
+              table = 2;
+              c4 = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = Promise.race(items);
+              return obj1;
+            }
+          } else {
+            if (1 === tmp7) {
+              c2 = 0;
+              outer1_19(outer1_0, outer1_1);
+              c4 = 3;
+            } else if (2 === tmp7) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c2 = 0;
+                c4 = 3;
+                const obj2 = { value: null, done: true };
+                obj2[0] = arg1;
+                return obj2;
+              } else {
+                table = 3;
+                c4 = 1;
+                const obj3 = { value: null, done: false };
+                obj3[0] = (function maybeBackfillMissingBreadcrumbsFromTelemetryRing(closure_0) {
+                  const self = this;
+                  const apply = closure_15.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_0);
+                return obj3;
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c2 = 0;
+            }
+            c2 = 0;
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp17) {
+          if (tmp4 === c2) {
+            c4 = tmp2;
+            throw tmp17;
+          } else {
+            table = tmp;
+          }
+        }
+      }
+    })();
+  }
+  return null;
+}
+function getCrashErrorMessage(exception) {
+  let type;
+  let value;
+  exception = exception.exception;
+  let first;
+  if (exception != null) {
+    const values = exception.values;
+    if (values != null) {
+      first = values[0];
+    }
+  }
+  if (null == first) {
+    const extra2 = exception.extra;
+    let prop;
+    if (extra2 != null) {
+      prop = extra2.persisted_error_message;
+    }
+    let message;
+    if (typeof prop !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (prop.length > 0) {
+        message = prop;
+      }
+    }
+    if (message == null) {
+      message = exception.message;
+    }
+    return message;
+  } else {
+    ({ type, value } = first);
+    if (null != type) {
+      if (null != value) {
+        const _HermesInternal = HermesInternal;
+        return "" + type + ": " + value;
+      }
+    }
+    const extra = exception.extra;
+    if (extra != null) {
+      const prop1 = extra.persisted_error_message;
+    }
+    message = type;
+    if (type == null) {
+      message = value;
+    }
+    if (message == null) {
+      message = exception.message;
+    }
+    if (message == null) {
+      let tmp2;
+      if (typeof prop1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+        if (prop1.length > 0) {
+          tmp2 = prop1;
+        }
+      }
+      message = tmp2;
+    }
+    return message;
+  }
+}
+function getErrorStackTrace(exception) {
+  exception = exception.exception;
+  let first;
+  if (exception != null) {
+    const values = exception.values;
+    if (values != null) {
+      first = values[0];
+    }
+  }
+  if (null == first) {
+    const extra2 = exception.extra;
+    let prop;
+    if (extra2 != null) {
+      prop = extra2.persisted_error_stack;
+    }
+    let tmp6;
+    if (typeof prop !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (prop.length > 0) {
+        tmp6 = prop;
+      }
+    }
+    return tmp6;
+  } else {
+    const stacktrace = first.stacktrace;
+    let joined;
+    if (stacktrace != null) {
+      const frames = stacktrace.frames;
+      if (frames != null) {
+        const mapped = frames.map((filename) => "" + filename.filename + ":" + filename.lineno + ":" + filename.colno);
+        joined = mapped.join("\n");
+      }
+    }
+    if (null != joined) {
+      if (joined.length > 0) {
+        return joined;
+      }
+    }
+    const extra = exception.extra;
+    let prop1;
+    if (extra != null) {
+      prop1 = extra.persisted_error_stack;
+    }
+    let tmp4;
+    if (typeof prop1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (prop1.length > 0) {
+        tmp4 = prop1;
+      }
+    }
+    return tmp4;
+  }
+}
+function trackCrash(event, hint, arg2) {
+  let extra;
+  let level;
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = true;
+  }
+  let obj = { event, hint };
+  tmp7.info("Crash", obj);
+  ({ level, extra } = event);
+  let native_is_native;
+  if (extra != null) {
+    native_is_native = extra.native_is_native;
+  }
+  if (null != native_is_native) {
+    let tmp4 = "true" === event.extra.native_is_native;
+  } else {
+    const tags = event.tags;
+    let prop;
+    if (tags != null) {
+      prop = tags["event.origin"];
+    }
+    tmp4 = "javascript" !== prop;
+  }
+  if ("fatal" !== level) {
+    return event;
+  }
+  let tmp5 = tmp4;
+  if (!tmp4) {
+    tmp5 = "error" !== level;
+  }
+  let num = 1;
+  if (!tmp5) {
+    num = 0.01;
+  }
+  if (!c14) {
+    const _Math = Math;
+    if (Math.random() > num) {
+      const event_id = event.event_id;
+      tmp7 = typeof event_id === "y";
+      if (typeof event_id !== "__FORMATJS_LISTFORMAT_DATA__") {
+        tmp7 = 0 !== event_id.length;
+      }
+      if (tmp7) {
+        let obj1 = importDefault(1208);
+        obj1.markCrashHandled(event_id);
+      }
+    }
+  }
+  let tmp13 = null;
+  if (flag) {
+    let event_id1 = event.event_id;
+    if (event_id1 == null) {
+      event_id1 = null;
+    }
+    tmp13 = event_id1;
+  }
+  const timestamp = event.timestamp;
+  let result;
+  if (null != timestamp) {
+    if (typeof timestamp !== "__REMOTEDEV__") {
+      const _isNaN = isNaN;
+      if (!isNaN(timestamp)) {
+        result = 1000 * timestamp;
+      }
+    }
+    const _Date = Date;
+    if (timestamp instanceof Date) {
+      result = timestamp.getTime();
+    } else if (typeof timestamp !== "__FORMATJS_LISTFORMAT_DATA__") {
+      const _Date3 = Date;
+      const parsed = Date.parse(timestamp);
+      const _Number = Number;
+      if (!Number.isNaN(parsed)) {
+        result = parsed;
+      }
+    }
+  }
+  if (result == null) {
+    const _Date2 = Date;
+    result = Date.now();
+  }
+  const obj3 = require(1222) /* transitionTo */;
+  const track = importDefault(698).track;
+  if (tmp4) {
+    extra = event.extra;
+    if (extra == null) {
+      extra = {};
+    }
+    obj = { did_crash: true, sentry_issue_id: null, client_track_timestamp: null, exit_reason: null, exit_description: null, tombstone_hash: null, tombstone_cause: null, tombstone: null, call_stack_tree: null, binary_name: null, exception_message: null, exception_stacktrace: null, js_error_message: null, js_error_stacktrace: null };
+    obj[1] = tmp13;
+    obj[2] = result;
+    const native_exit_reason = extra.native_exit_reason;
+    let tmp27 = null;
+    if (typeof native_exit_reason !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp27 = null;
+      if (native_exit_reason.length > 0) {
+        tmp27 = native_exit_reason;
+      }
+    }
+    obj[3] = tmp27;
+    const prop1 = extra.native_exit_description;
+    let tmp28 = null;
+    if (typeof prop1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp28 = null;
+      if (prop1.length > 0) {
+        tmp28 = prop1;
+      }
+    }
+    obj[4] = tmp28;
+    const prop2 = extra.native_tombstone_hash;
+    let tmp29 = null;
+    if (typeof prop2 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp29 = null;
+      if (prop2.length > 0) {
+        tmp29 = prop2;
+      }
+    }
+    obj[5] = tmp29;
+    const prop3 = extra.native_tombstone_cause;
+    let tmp30 = null;
+    if (typeof prop3 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp30 = null;
+      if (prop3.length > 0) {
+        tmp30 = prop3;
+      }
+    }
+    obj[6] = tmp30;
+    const native_tombstone = extra.native_tombstone;
+    let tmp31 = null;
+    if (typeof native_tombstone !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp31 = null;
+      if (native_tombstone.length > 0) {
+        tmp31 = native_tombstone;
+      }
+    }
+    obj[7] = tmp31;
+    const prop4 = extra.native_tombstone_group_by;
+    let tmp32 = null;
+    if (typeof prop4 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp32 = null;
+      if (prop4.length > 0) {
+        tmp32 = prop4;
+      }
+    }
+    obj[8] = tmp32;
+    const prop5 = extra.native_tombstone_origin;
+    let tmp33 = null;
+    if (typeof prop5 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp33 = null;
+      if (prop5.length > 0) {
+        tmp33 = prop5;
+      }
+    }
+    obj[9] = tmp33;
+    obj[10] = getCrashErrorMessage(event);
+    obj[11] = getErrorStackTrace(event);
+    const prop6 = extra.persisted_error_message;
+    let tmp36 = null;
+    if (typeof prop6 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp36 = null;
+      if (prop6.length > 0) {
+        tmp36 = prop6;
+      }
+    }
+    obj[12] = tmp36;
+    const prop7 = extra.persisted_error_stack;
+    let tmp37 = null;
+    if (typeof prop7 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      tmp37 = null;
+      if (prop7.length > 0) {
+        tmp37 = prop7;
+      }
+    }
+    obj[13] = tmp37;
+    track(tmp20.APP_NATIVE_CRASH, obj);
+    let tmp25 = tmp18;
+    let tmp26 = tmp18;
+  } else {
+    obj = { path: null, client_track_timestamp: null, sentry_issue_id: null, extra: null, error_message: null, error_level: null, error_stack: null };
+    obj[0] = obj3.getHistory().location.pathname;
+    obj[1] = result;
+    obj[2] = tmp13;
+    obj[3] = hint;
+    obj[4] = getCrashErrorMessage(event);
+    obj[5] = level;
+    obj[6] = getErrorStackTrace(event);
+    track(tmp20.APP_CRASHED, obj);
+    tmp25 = tmp18;
+    tmp26 = tmp18;
+    const tmp22 = level;
+  }
+  const event_id2 = event.event_id;
+  let tmp39 = typeof event_id2 === "y";
+  if (typeof event_id2 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    tmp39 = 0 !== event_id2.length;
+  }
+  if (tmp39) {
+    tmp25(1208).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1208);
+  }
+  const AppCrashedReasons = tmp11(13275).AppCrashedReasons;
+  const tmp19 = importDefault(698);
+  const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
+  obj1 = { name: tmp11(5875).MetricEvents.APP_CRASHED, tags: null };
+  const items = ["reason:" + tmp41, ];
+  if (level == null) {
+    level = "unknown";
+  }
+  items[1] = "level:" + level;
+  obj1[1] = items;
+  tmp26(5870).increment(obj1, true);
+}
+({ AnalyticEvents: closure_6, Endpoints } = ME);
+addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
+const regExp = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS, "g");
+let items = [regExp, , ];
+const regExp1 = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS_V2, "g");
+items[1] = regExp1;
+const regExp2 = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.TRACK, "g");
+items[2] = regExp2;
+let c10 = new require("sum")("Sentry");
+let closure_11 = ["The operation couldn\u2019t be completed. (com.apple.CallKit.error.requesttransaction", "Request has been terminated", "couldn't execute statement: database is disabled", "couldn't delete database: database is currently open", "database is no longer open"];
+let c12 = 0.05;
+let c13 = 0.005;
+let c14 = false;
+let closure_20 = IGNORE_ANALYTICS_BREADCRUMB_EVENTS.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
+let tmp7 = new require("sum")("Sentry");
+const result1 = require("ME").fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
+
+export const routingInstrumentation = addBreadcrumb;
+export const initSentry = function initSentry() {
+  const CrashReportingManager = NativeModules.CrashReportingManager;
+  if (CrashReportingManager != null) {
+    const isUserStaffForCrashReporting = CrashReportingManager.getIsUserStaffForCrashReporting((arg0) => {
+      let closure_14 = arg0;
+      let obj = callback3(table[14]);
+      const constants = obj.getConstants();
+      const ReleaseChannel = constants.ReleaseChannel;
+      if (-1 === ReleaseChannel.indexOf("debug")) {
+        if (-1 === ReleaseChannel.indexOf("developer")) {
+          const isStable = callback(tmp[15]).isStable;
+          obj = { releaseChannel: null, isProductionChannel: null };
+          obj[0] = ReleaseChannel;
+          obj[1] = isStable;
+          closure_10.verbose("Initialize", obj);
+          if (obj18.isAndroid()) {
+            if (isStable) {
+              let tmp16Result = tmp16(tmp[17]);
+              const device = tmp16Result.getDevice();
+            }
+          }
+          let c12 = 0.05;
+          const SentryDsn = constants.SentryDsn;
+          if (isStable) {
+            tmp16Result = tmp16(tmp[18]);
+            let SentryStaffDsn = SentryDsn;
+            if (tmp16Result.isMetaQuest()) {
+              c12 = 1;
+              let c13 = 1;
+              SentryStaffDsn = SentryDsn;
+            }
+          } else {
+            c12 = 1;
+            SentryStaffDsn = constants.SentryAlphaBetaDsn;
+          }
+          if (arg0) {
+            SentryStaffDsn = constants.SentryStaffDsn;
+            c12 = 1;
+          }
+          obj18 = callback(tmp[16]);
+          const lastCrashReport = callback2(tmp[13]).getLastCrashReport();
+          const obj4 = callback2(tmp[13]);
+          lastCrashReport.then((arg0) => {
+            if (null != arg0) {
+              callback2(arg0, { crash_event_source: "startup_reconcile" });
+            }
+          }).catch((arg0) => {
+            logger.warn("Failed to replay pending crash report", arg0);
+          });
+          const nextPromise = lastCrashReport.then((arg0) => {
+            if (null != arg0) {
+              callback2(arg0, { crash_event_source: "startup_reconcile" });
+            }
+          });
+          const tmp16Result1 = callback(tmp[4]);
+          let str2 = "ios";
+          if (tmp16Result2.isAndroid()) {
+            str2 = "android";
+          }
+          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6119", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@341.4.0-2+341204", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj[0] = `/error-reporting-proxy/${str2}`;
+          obj[2] = closure_16;
+          obj[4] = SentryStaffDsn;
+          obj[5] = ReleaseChannel;
+          obj[8] = closure_11;
+          const items = [closure_7];
+          obj[10] = items;
+          const items1 = [closure_8, , ];
+          tmp16Result2 = callback(tmp[16]);
+          items1[1] = callback(tmp[4]).featureFlagsIntegration();
+          const tmp16Result3 = callback(tmp[4]);
+          const obj1 = { shouldCreateSpanForRequest: null };
+          obj1[0] = function shouldCreateSpanForRequest(arg0) {
+            let closure_0 = arg0;
+            return !closure_9.some((arg0) => null != closure_0.match(arg0));
+          };
+          items1[2] = callback(tmp[4]).reactNativeTracingIntegration(obj1);
+          obj[11] = items1;
+          obj[12] = function beforeBreadcrumb(data) {
+            if (null == data.data) {
+              data.data = {};
+            }
+            const currentMemoryUsageKB = callback(table[19]).getCurrentMemoryUsageKB();
+            if (null != currentMemoryUsageKB) {
+              data.data.client_performance_memory = currentMemoryUsageKB;
+            }
+            const obj = callback(table[19]);
+            const tmp = callback;
+            const tmp2 = table;
+            const currentCPUUsagePercent = callback(table[19]).getCurrentCPUUsagePercent();
+            if (null != currentCPUUsagePercent) {
+              data.data.client_performance_cpu = currentCPUUsagePercent;
+            }
+            return data;
+          };
+          tmp16Result1.init(obj);
+          const tmp16Result4 = callback(tmp[4]);
+          callback(tmp[4]).setTag("buildNumber", "6119");
+          const tmp16Result5 = callback(tmp[4]);
+          callback(tmp[4]).setTag("appVersion", constants.Version);
+          const tmp16Result6 = callback(tmp[4]);
+          const _HermesInternal = HermesInternal;
+          callback(tmp[4]).setTag("design_id", "" + callback(tmp[20]).DesignIds.DESIGN_TABS_IA);
+          const tmp16Result7 = callback(tmp[4]);
+          const tmp16Result8 = callback(tmp[4]);
+          tmp16Result8.setTag("newArchEnabled", callback(tmp[21]).isFabric());
+          const tmp16Result9 = callback(tmp[21]);
+          callback(tmp[4]).setTag("isBridgeless", callback(tmp[21]).isBridgeless);
+          const tmp16Result10 = callback(tmp[4]);
+        }
+      }
+    });
+  }
+};

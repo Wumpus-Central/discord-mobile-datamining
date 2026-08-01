@@ -1,0 +1,76 @@
+// === Module 11141: SoundmojiActionSheet ===
+
+// Module 11141 (SoundmojiActionSheet)
+import noop from "noop";
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import set from "set";
+import set from "jsxProd";
+
+let c5;
+let closure_6;
+const require = arg1;
+({ jsx: c5, jsxs: closure_6 } = jsxProd);
+createCacheKey = { container: null, soundmojiContainer: null, emoji: null, textContainer: null };
+createCacheKey = { padding: require("Themes").space.PX_24, gap: require("Themes").space.PX_16 };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { flexDirection: "row", alignItems: "center" };
+let num;
+if (set.isIOS()) {
+  num = 32;
+}
+createCacheKey[2] = { width: 32, height: 32, fontSize: num, lineHeight: 36, marginEnd: require("Themes").space.PX_16 };
+let obj1 = { width: 32, height: 32, fontSize: num, lineHeight: 36, marginEnd: require("Themes").space.PX_16 };
+createCacheKey[3] = { gap: require("Themes").space.PX_4, display: "flex", flex: 1 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+const result = set.fileFinishedImporting("modules/premium/sounds/soundmoji/native/views/SoundmojiActionSheet.tsx");
+
+export default function SoundmojiActionSheet(guildId) {
+  guildId = guildId.guildId;
+  const channelId = guildId.channelId;
+  const messageId = guildId.messageId;
+  const soundId = guildId.soundId;
+  const tmp = createCacheKey();
+  const items = [guildId, channelId, messageId, soundId];
+  const memo = soundId.useMemo(() => guildId(messageId[6]).getSoundmojiFromMessage(guildId, channelId, messageId, soundId, []), items);
+  let tmp4Result = null;
+  if (null != memo) {
+    let obj = { startExpanded: true, bodyStyles: null, children: null };
+    obj[1] = tmp.container;
+    obj = { style: null, children: null };
+    obj[0] = tmp.soundmojiContainer;
+    tmp4Result = null != memo.emojiId;
+    if (!tmp4Result) {
+      tmp4Result = null != memo.emojiName;
+    }
+    if (tmp4Result) {
+      obj = { fastImageStyle: null, textEmojiStyle: null, src: null, name: null };
+      ({ emoji: obj3[0], emoji: obj3[1] } = tmp);
+      obj[2] = channelId(tmp6[9])(memo, 32);
+      let str = memo.emojiName;
+      if (str == null) {
+        str = "";
+      }
+      obj[3] = str;
+      tmp4Result = tmp4(channelId(tmp6[8]), obj);
+      const tmp11 = channelId(tmp6[8]);
+    }
+    const items1 = [tmp4Result, ];
+    const obj1 = { style: null, children: null };
+    obj1[0] = tmp.textContainer;
+    const obj2 = { variant: "text-sm/bold", children: null };
+    obj2[1] = memo.name;
+    const items2 = [closure_5(guildId(messageId[10]).Text, obj2), ];
+    const obj3 = { variant: "text-sm/normal", children: null };
+    const intl = tmp5(tmp6[11]).intl;
+    obj3[1] = intl.string(guildId(messageId[11]).t.Tj5Nwi);
+    items2[1] = closure_5(guildId(messageId[10]).Text, obj3);
+    obj1[1] = items2;
+    items1[1] = closure_6(View, obj1);
+    obj[1] = items1;
+    obj[2] = closure_6(View, obj);
+    tmp4Result = tmp4(guildId(messageId[7]).BottomSheet, obj);
+  }
+  return tmp4Result;
+};

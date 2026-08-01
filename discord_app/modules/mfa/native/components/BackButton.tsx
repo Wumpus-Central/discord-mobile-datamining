@@ -1,0 +1,20 @@
+// === Module 14789: BackButton ===
+
+// Module 14789 (BackButton)
+import { jsx } from "jsxProd";
+
+const result = require("MFAButton").fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
+
+export default function BackButton(props) {
+  props = props.props;
+  let importDefault;
+  let obj = props(1480);
+  importDefault = obj.useNavigation();
+  obj = { variant: "secondary", text: null, onPress: null };
+  const intl = props(1236).intl;
+  obj[1] = intl.string(props(1236).t.Tot4EC);
+  obj[2] = function onPress() {
+
+  };
+  return jsx(importDefault(14790), { variant: "secondary", text: null, onPress: null });
+};

@@ -1,0 +1,198 @@
+// === Module 8318: PreviewBody ===
+
+// Module 8318 (PreviewBody)
+import usePrimaryActionButtonType from "usePrimaryActionButtonType";
+import { View } from "EditGuildEventScreens";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import jsxProd from "getRRule";
+import createCacheKey from "createCacheKey";
+import set from "set";
+import set from "ensureGuildLoaded";
+
+let closure_6;
+let error;
+const require = arg1;
+function PreviewBody(event) {
+  event = event.event;
+  let _require;
+  let channel_id;
+  let locationFromEvent;
+  let eventLocationIconSource;
+  const tmp = createCacheKey();
+  _require = tmp;
+  channel_id = event.channel_id;
+  let obj = _require(locationFromEvent[8]);
+  let items = [ensureGuildLoaded];
+  const items1 = [channel_id];
+  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getChannel(channel_id), items1);
+  locationFromEvent = channel_id(locationFromEvent[9])(stateFromStores);
+  let obj1 = _require(locationFromEvent[10]);
+  if (locationFromEvent == null) {
+    locationFromEvent = obj1.getLocationFromEvent(event);
+  }
+  eventLocationIconSource = _require(locationFromEvent[11]).getEventLocationIconSource(event, stateFromStores, true);
+  obj = { style: tmp.header, children: null };
+  obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+  const intl = tmp2(tmp3[13]).intl;
+  obj[3] = intl.string(_require(locationFromEvent[13]).t.yBsFE3);
+  const items2 = [callback(_require(locationFromEvent[12]).Text, obj), ];
+  obj1 = { style: tmp.headerSubtitle, accessibilityLabel: null, variant: "text-sm/medium", color: "text-default", children: null };
+  let formatToPlainStringResult;
+  if (null != stateFromStores) {
+    const intl2 = tmp2(tmp3[13]).intl;
+    const obj2 = { channelName: null };
+    const obj3 = { channel: null };
+    obj3[0] = stateFromStores;
+    obj2[0] = channel_id(tmp3[14])(obj3);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp2(tmp3[13]).t.sxcQPE, obj2);
+  }
+  obj1[1] = formatToPlainStringResult;
+  if (null != stateFromStores) {
+    const intl4 = tmp2(tmp3[13]).intl;
+    const obj4 = { channelName: null, channelHook: null };
+    obj4[0] = locationFromEvent;
+    obj4[1] = function channelHook() {
+      let obj = { style: _undefined.channelContainer, children: null };
+      let tmp2Result = null != React;
+      if (tmp2Result) {
+        obj = { source: null, size: null, style: null };
+        obj[0] = tmp5;
+        obj[1] = _undefined(locationFromEvent[15]).Icon.Sizes.EXTRA_SMALL;
+        obj[2] = tmp4.channelIcon;
+        tmp2Result = tmp2(_undefined(locationFromEvent[15]).Icon, obj);
+      }
+      obj[1] = tmp2Result;
+      const items = [outer1_6(outer1_4, obj), ];
+      let str = locationFromEvent;
+      let result = null;
+      if (null != locationFromEvent) {
+        result = _undefined(locationFromEvent[16]).guildEventDetailsParser(str, true);
+        const tmp9Result = _undefined(locationFromEvent[16]);
+      }
+      obj = { children: null };
+      items[1] = outer1_6(_undefined(locationFromEvent[12]).Text, { accessibilityElementsHidden: true, importantForAccessibility: "no", variant: "text-sm/medium", color: "text-default", children: result });
+      obj[0] = items;
+      if (str == null) {
+        str = "preview-body";
+      }
+      return outer1_7(React.Fragment, obj, str);
+    };
+    let formatResult = intl4.format(tmp2(tmp3[13]).t.f55NX0, obj4);
+  } else {
+    const intl3 = tmp2(tmp3[13]).intl;
+    formatResult = intl3.string(tmp2(tmp3[13]).t.KDPFi9);
+  }
+  obj1[4] = formatResult;
+  items2[1] = callback(_require(locationFromEvent[12]).Text, obj1);
+  obj[1] = items2;
+  return closure_7(View, obj);
+}
+({ jsx: closure_6, jsxs: error } = jsxProd);
+createCacheKey = { container: null, centered: null, centerContainer: null, flex: null, header: null, headerTitle: null, headerSubtitle: null, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };
+createCacheKey = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };
+createCacheKey[0] = createCacheKey;
+createCacheKey[1] = { flexDirection: "column", alignItems: "center", justifyContent: "center" };
+createCacheKey[2] = { flexGrow: 0, width: "100%" };
+createCacheKey[3] = { flex: 1, overflow: "visible" };
+createCacheKey[4] = { alignItems: "center", paddingBottom: 24 };
+createCacheKey[5] = { marginTop: 16, marginBottom: 8 };
+createCacheKey[6] = { textAlign: "center" };
+createCacheKey[7] = { padding: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: require("Themes").colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: require("Themes").radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };
+createCacheKey[8] = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 14 };
+let obj2 = { tintColor: require("Themes").colors.TEXT_SUBTLE, marginRight: 4, height: 14, transform: null };
+let num = 0;
+if (set.isAndroid()) {
+  num = 2;
+}
+let items = [{ translateY: num }];
+obj2[3] = items;
+createCacheKey[9] = obj2;
+createCacheKey[10] = { position: "absolute", bottom: 16, left: 0, right: 0 };
+let obj1 = { padding: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: require("Themes").colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: require("Themes").radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };
+createCacheKey[11] = { paddingBottom: 8, fontSize: 14, fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, color: require("Themes").unsafe_rawColors.RED_400 };
+createCacheKey = createCacheKey.createStyles(createCacheKey);
+let result = set.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventPreview.tsx");
+
+export default function EditGuildEventPreview(guild) {
+  let View;
+  let error;
+  let guildEvent;
+  let importDefault;
+  let loading;
+  guild = guild.guild;
+  ({ initialGuildEvent: importDefault, guildEvent } = guild);
+  const isEdit = guild.isEdit;
+  ({ loading, error, onSave: View } = guild);
+  const tmp = createCacheKey();
+  const intl = guild(guildEvent[13]).intl;
+  const string = intl.string;
+  const t = guild(guildEvent[13]).t;
+  if (isEdit) {
+    let stringResult = string(t.e5VEcE);
+    let tmp5 = tmp3;
+    let tmp6 = tmp2;
+  } else {
+    stringResult = string(t["60lJ0C"]);
+    tmp5 = tmp3;
+    tmp6 = tmp2;
+  }
+  const items = [guildEvent, guild.id];
+  const memo = isEdit.useMemo(() => guild(guildEvent[17]).convertToFakeGuildEvent(guildEvent, guild.id), items);
+  let obj = { bottom: true, style: tmp.container, children: null };
+  obj = { style: items1, children: null };
+  items1 = [, ];
+  ({ flex: arr2[0], centered: arr2[1] } = tmp);
+  obj = { style: tmp.centerContainer, children: null };
+  const obj1 = { style: tmp.eventContainer, children: null };
+  const items2 = [callback(tmp6(tmp5[19]).GuildEventCardImageHeader, { event: memo }), callback(tmp6(tmp5[19]).GuildEventCardHeader, { event: memo, isPreview: true }), callback(tmp6(tmp5[19]).GuildEventCardMetaInfo, { event: memo }), callback(tmp6(tmp5[19]).GuildEventSimpleLocation, { event: memo })];
+  obj1[1] = items2;
+  const items3 = [callback2(View, obj1), callback(PreviewBody, { event: memo })];
+  obj[1] = items3;
+  const items4 = [callback2(View, obj), ];
+  let obj2 = { style: tmp.buttonContainer, children: null };
+  let tmp8Result = null;
+  if (null != error) {
+    const obj3 = { style: null, children: null };
+    obj3[0] = tmp.error;
+    obj3[1] = error.getAnyErrorMessage();
+    tmp8Result = tmp8(tmp6(tmp5[15]).LegacyText, obj3);
+  }
+  const items5 = [
+    tmp8Result,
+    callback(tmp6(tmp5[20]).Button, {
+      text: stringResult,
+      variant: "primary",
+      onPress() {
+        if (null != guildEvent.recurrenceRule) {
+          if (isEdit) {
+            let obj = guild(guildEvent[21]);
+            if (obj.hasScheduleChanges(closure_1, tmp)) {
+              obj = { importer: null };
+              obj[0] = function importer() {
+                return outer1_0(outer1_2[24])(outer1_2[23], outer1_2.paths).then((arg0) => {
+                  let closure_0 = arg0.default;
+                  return (arg0) => {
+                    const obj = {};
+                    const merged = Object.assign(arg0);
+                    obj.onConfirm = outer1_4;
+                    return outer2_6(closure_0, obj);
+                  };
+                });
+              };
+              outer1_1(guildEvent[22]).openLazy(obj);
+              const obj2 = outer1_1(guildEvent[22]);
+            }
+          }
+        }
+        callback();
+      },
+      disabled: loading,
+      loading
+    })
+  ];
+  obj2[1] = items5;
+  items4[1] = callback2(View, obj2);
+  obj[1] = items4;
+  obj[2] = callback2(View, obj);
+  return callback(tmp6(tmp5[18]).SafeAreaPaddingView, obj);
+};

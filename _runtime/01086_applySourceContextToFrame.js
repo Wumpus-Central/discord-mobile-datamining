@@ -1,0 +1,82 @@
+// === Module 1086: applySourceContextToFrame ===
+
+// Module 1086 (applySourceContextToFrame)
+import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export const applySourceContextToFrame = function applySourceContextToFrame(filename) {
+  if (filename.filename === arg2) {
+    if (filename.lineno) {
+      if (arg1.length) {
+        require(817) /* registerSpanErrorInstrumentation */.addContextToFrame(arg1, filename, arg3);
+        const obj = require(817) /* registerSpanErrorInstrumentation */;
+      }
+    }
+  }
+  return filename;
+};
+export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let num;
+  num = 7;
+  if (null != obj.frameContextLines) {
+    num = obj.frameContextLines;
+  }
+  obj = {
+    name: "ContextLines",
+    processEvent(exception) {
+      const _document = num(outer1_1[0]).GLOBAL_OBJ.document;
+      let _location = num(outer1_1[0]).GLOBAL_OBJ.location;
+      if (_location) {
+        _location = tmp(tmp2[0]).stripUrlQueryAndFragment(tmp(tmp2[0]).GLOBAL_OBJ.location.href);
+        const tmpResult = tmp(tmp2[0]);
+      }
+      if (_document) {
+        if (_location) {
+          exception = exception.exception;
+          let values;
+          if (exception != null) {
+            values = exception.values;
+          }
+          let length;
+          if (values != null) {
+            length = values.length;
+          }
+          if (length) {
+            if (_document.documentElement.innerHTML) {
+              const items = ["<!DOCTYPE html>", "<html>"];
+              items[HermesBuiltin.arraySpread(str.split("\n"), 2)] = "</html>";
+              const item = values.forEach((stacktrace) => {
+                stacktrace = stacktrace.stacktrace;
+                let frames;
+                if (stacktrace != null) {
+                  frames = stacktrace.frames;
+                }
+                if (frames) {
+                  const frames1 = stacktrace.frames;
+                  stacktrace.frames = frames1.map((filename) => {
+                    if (filename.filename === closure_1) {
+                      if (filename.lineno) {
+                        if (arr.length) {
+                          outer1_0(outer1_1[0]).addContextToFrame(arr, filename, tmp);
+                          const obj = outer1_0(outer1_1[0]);
+                        }
+                      }
+                    }
+                    return filename;
+                  });
+                }
+              });
+            }
+          }
+        }
+      }
+      return exception;
+    }
+  };
+  return obj;
+});

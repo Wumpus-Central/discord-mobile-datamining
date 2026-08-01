@@ -1,0 +1,132 @@
+// === Module 5819: map ===
+
+// Module 5819 (map)
+import { Store } from "initialize";
+
+const require = arg1;
+let map = new Map();
+let c4 = false;
+let c5;
+let c6;
+let c7;
+let c8 = false;
+class CollectiblesPurchaseStore extends Store {
+}
+const prototype = CollectiblesPurchaseStore.prototype;
+Object.defineProperty(prototype, "isFetching", {
+  get: function isFetching() {
+    return c4;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isClaiming", {
+  get: function isClaiming() {
+    return c5;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "purchases", {
+  get: function purchases(hasPreviouslyFetched, arg1) {
+    return map;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "fetchError", {
+  get: function fetchError() {
+    return c6;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "claimError", {
+  get: function claimError() {
+    return c7;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "hasPreviouslyFetched", {
+  get: function hasPreviouslyFetched(arg0, items2) {
+    return c8;
+  },
+  set: undefined
+});
+prototype["getPurchase"] = function getPurchase(skuId) {
+  let value;
+  if (null != skuId) {
+    value = map.get(skuId);
+  }
+  return value;
+};
+prototype["getPurchases"] = function getPurchases(arr) {
+  const mapped = arr.map((arg0) => closure_3.get(arg0));
+  return mapped.filter((arg0) => null != arg0);
+};
+CollectiblesPurchaseStore.displayName = "CollectiblesPurchaseStore";
+const collectiblesPurchaseStore = new CollectiblesPurchaseStore(require("dispatcher"), {
+  COLLECTIBLES_PURCHASES_FETCH: function handlePurchasesFetch() {
+    let c4 = true;
+    let c6;
+  },
+  COLLECTIBLES_PURCHASES_FETCH_SUCCESS: function handlePurchasesFetchSuccess(purchases) {
+    if (0 !== purchases.purchases.length) {
+      let items = [];
+      HermesBuiltin.arraySpread(map.values(), 0);
+      if (!obj.isEqual(items, purchases.purchases)) {
+        const _Map = Map;
+        purchases = purchases.purchases;
+        map = new Map(purchases.map((skuId) => {
+          const items = [skuId.skuId, skuId];
+          return items;
+        }));
+      }
+      obj = require(12) /* apply */;
+    }
+    let c8 = true;
+    let c4 = false;
+    let c6;
+  },
+  COLLECTIBLES_PURCHASES_FETCH_FAILURE: function handlePurchasesFetchFailure(error) {
+    let closure_3 = map;
+    let c4 = false;
+    error = error.error;
+    let c8 = true;
+  },
+  COLLECTIBLES_CLAIM: function handleClaim(skuId) {
+    skuId = skuId.skuId;
+    let c7;
+  },
+  COLLECTIBLES_CLAIM_SUCCESS: function handleClaimSuccess(purchases) {
+    if (null != purchases.purchases) {
+      if (0 !== purchases.purchases.length) {
+        let items = [];
+        HermesBuiltin.arraySpread(map.values(), 0);
+        if (!obj.isEqual(items, purchases.purchases)) {
+          const _Map = Map;
+          purchases = purchases.purchases;
+          map = new Map(purchases.map((skuId) => {
+            const items = [skuId.skuId, skuId];
+            return items;
+          }));
+        }
+        obj = require(12) /* apply */;
+      }
+      let c5;
+      let c7;
+    }
+  },
+  COLLECTIBLES_CLAIM_FAILURE: function handleClaimFailure(arg0) {
+    let c5;
+    let c7;
+    ({ skuId: c5, error: c7 } = arg0);
+  },
+  LOGOUT: function handleLogout() {
+    let closure_3 = map;
+    let c4 = false;
+    let c5;
+    let c6;
+    let c7;
+    let c8 = false;
+  }
+});
+const result = require("dispatcher").fileFinishedImporting("modules/collectibles/CollectiblesPurchaseStore.tsx");
+
+export default collectiblesPurchaseStore;

@@ -1,0 +1,23 @@
+// === Module 6048: getInviteURL ===
+
+// Module 6048 (getInviteURL)
+const result = require("set").fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");
+
+export default function getInviteURL() {
+  let str = arg0;
+  if (arg0 === undefined) {
+    str = "";
+  }
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  let str2 = "";
+  const combined = "/" + str;
+  if (flag) {
+    const _location = location;
+    const _HermesInternal = HermesInternal;
+    str2 = "" + location.protocol + "//";
+  }
+  return "" + str2 + window.GLOBAL_ENV.INVITE_HOST + combined;
+};

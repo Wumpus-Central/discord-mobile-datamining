@@ -1,0 +1,66 @@
+// === Module 15785: ? ===
+
+// Module 15785
+import { View } from "get ActivityIndicator";
+import jsxProd from "jsxProd";
+import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
+
+let c4;
+let c5;
+const require = arg1;
+({ jsx: c4, jsxs: c5 } = jsxProd);
+let obj = { contentContainer: null, buttonContainer: null, title: null, heroIllustrationContainer: null };
+obj = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
+obj[0] = obj;
+obj[1] = { marginVertical: 6, width: "100%", height: 48 };
+obj[2] = { width: "100%", textAlign: "center" };
+obj[3] = { alignItems: "center", justifyContent: "center", height: 188, width: "100%" };
+let closure_6 = createCacheKey.createStyles(obj);
+const memoResult = require("noop").memo(function PremiumDiscountOfferActionSheetContent(arg0) {
+  let discountOffer;
+  let onConfirm;
+  ({ discountOffer, onConfirm } = arg0);
+  const tmp = callback3();
+  let obj = { IconComponent: require(11029) /* UserIcon */.UserIcon, label: null, description: null };
+  const intl = require(1236) /* getSystemLocale */.intl;
+  obj[1] = intl.string(require(1236) /* getSystemLocale */.t.kpMomJ);
+  const intl2 = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.uVUtPw);
+  const items = [obj, , ];
+  obj = { IconComponent: require(9018) /* ChatSmileIcon */.ChatSmileIcon, label: null, description: null };
+  const intl3 = require(1236) /* getSystemLocale */.intl;
+  obj[1] = intl3.string(require(1236) /* getSystemLocale */.t["R2IV/Q"]);
+  const intl4 = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl4.string(require(1236) /* getSystemLocale */.t["3SUJLd"]);
+  items[1] = obj;
+  obj = { IconComponent: require(4693) /* FolderIcon */.FolderIcon, label: null, description: null };
+  const intl5 = require(1236) /* getSystemLocale */.intl;
+  obj[1] = intl5.string(require(1236) /* getSystemLocale */.t["u/NJKc"]);
+  const intl6 = require(1236) /* getSystemLocale */.intl;
+  obj[2] = intl6.string(require(1236) /* getSystemLocale */.t.i1UuMk);
+  items[2] = obj;
+  const amount = discountOffer.discount.amount;
+  const obj1 = { style: tmp.contentContainer, children: null };
+  const items1 = [callback(View, { style: tmp.heroIllustrationContainer, children: callback(require(6790) /* AccountAgeTier10LargeBadge */.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }) }), , , ];
+  const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  const intl7 = require(1236) /* getSystemLocale */.intl;
+  obj3[3] = intl7.formatToPlainString(require(1236) /* getSystemLocale */.t.qowbUk, { percent: amount });
+  items1[1] = callback(require(4189) /* Text */.Text, obj3);
+  items1[2] = callback(importDefault(14806), { perks: items });
+  const obj4 = { style: tmp.buttonContainer, children: null };
+  const obj5 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
+  const intl8 = require(1236) /* getSystemLocale */.intl;
+  obj5[1] = intl8.formatToPlainString(require(1236) /* getSystemLocale */.t.bkQ4bH, { percent: amount });
+  obj5[2] = onConfirm;
+  const obj6 = { size: "md", color: null };
+  obj6[1] = importDefault(712).unsafe_rawColors.WHITE;
+  obj5[4] = callback(require(6630) /* NitroWheelIcon */.NitroWheelIcon, obj6);
+  obj4[1] = callback(require(4604) /* Button */.Button, obj5);
+  items1[3] = callback(View, obj4);
+  obj1[1] = items1;
+  return callback2(View, obj1);
+});
+const result = require("jsxProd").fileFinishedImporting("modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx");
+
+export default memoResult;

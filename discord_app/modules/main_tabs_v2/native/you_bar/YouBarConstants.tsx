@@ -1,0 +1,42 @@
+// === Module 14143: CONNECTION_BANNER_HEIGHT ===
+
+// Module 14143 (CONNECTION_BANNER_HEIGHT)
+import { PixelRatio } from "get ActivityIndicator";
+import roundToNearestPixelResult from "module_14";
+
+const PX_12 = require("Themes").space.PX_12;
+const result = 2 * PX_12;
+const obj = { top: null, bottom: null, left: null, right: null };
+obj[0] = require("Themes").space.PX_16;
+obj[1] = require("Themes").space.PX_16;
+obj[2] = require("Themes").space.PX_16;
+obj[3] = require("Themes").space.PX_16;
+const REFRESH_MEDIUM_32 = require("Button").AvatarSizes.REFRESH_MEDIUM_32;
+const NORMAL = require("Button").AvatarSizes.NORMAL;
+const YOUBAR_60 = require("Button").AvatarSizes.YOUBAR_60;
+const sum = require("Button").AVATAR_SIZE_MAP[YOUBAR_60] + 12;
+const diff = sum - (require("Button").AVATAR_SIZE_MAP[REFRESH_MEDIUM_32] + PX_12);
+const sum1 = require("Button").AVATAR_SIZE_MAP[NORMAL] + 8;
+const diff1 = sum1 + 8 - (require("Button").AVATAR_SIZE_MAP[REFRESH_MEDIUM_32] + PX_12);
+const result1 = require("Button").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarConstants.tsx");
+
+export const CONNECTION_BANNER_HEIGHT = 48;
+export const YOU_BAR_SPRING_CONFIG = { damping: 20, stiffness: 300, mass: 1.5, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
+export const YOU_BAR_PADDING = PX_12;
+export const YOU_BAR_HEIGHT = 32 + result;
+export const YOU_BAR_MARGIN = require("Themes").space.PX_16;
+export const YOU_BAR_MARGIN_IOS = require("Themes").space.PX_24;
+export const YOU_BAR_LEFT_INSET = require("Themes").space.PX_16;
+export const YOU_BAR_FLOATING_OFFSET_MINIMUM = require("Themes").space.PX_16;
+export const YOU_BAR_GRADIENT_EXTRA_HEIGHT = require("Themes").space.PX_16;
+export const YOU_BAR_BUTTON_HIT_SLOP = obj;
+export const YOU_BAR_STATUS_INSET = -3;
+export const YOU_BAR_LARGE_STATUS_SIZE = roundToNearestPixelResult;
+export const YOU_BAR_STATUS_OFFSET = -2;
+export const YOU_BAR_AVATAR_PLACEHOLDER_SIZE = REFRESH_MEDIUM_32;
+export const YOU_BAR_AVATAR_SIZE = NORMAL;
+export const YOU_BAR_AVATAR_LARGE_SIZE = YOUBAR_60;
+export const YOU_BAR_AVATAR_LARGE_PX = require("Button").AVATAR_SIZE_MAP[YOUBAR_60];
+export const YOU_BAR_LARGE_AVATAR_NAME_MARGIN = diff;
+export const YOU_BAR_SMALL_AVATAR_NAME_MARGIN = diff1;
+export const YOU_BAR_BUTTON_ICON_SIZE = 18;

@@ -1,0 +1,38 @@
+// === Module 10303: CHANNEL_LIST_STYLES_COZY ===
+
+// Module 10303 (CHANNEL_LIST_STYLES_COZY)
+import importDefaultResult from "merge";
+
+let obj = { layout: { margin: { marginVertical: 2 }, marginPanels: { marginVertical: 2 }, marginThread: { marginVertical: 2, marginLeft: 76 } }, container: null, category: null, voiceUsers: null, voiceOrStageSummaryRow: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
+obj = { borderRadius: null, padding: null, paddingPanels: null, paddingThread: null };
+obj[0] = require("Themes").radii.lg;
+obj[1] = { paddingVertical: 8 };
+obj[2] = { paddingVertical: 8 };
+obj[3] = { paddingVertical: 6, paddingLeft: 8 };
+obj[1] = obj;
+obj[2] = { margin: { marginTop: 24 } };
+obj[3] = { height: 40, margin: { marginTop: -4, marginLeft: 80 } };
+obj = { size: 32, avatarSize: require("Button").AvatarSizes.REFRESH_MEDIUM_32 };
+obj[4] = obj;
+obj[5] = { text: { variant: "redesign/message-preview/medium" }, messageTypeIconSize: require("Button").IconSizes.REFRESH_SMALL_16, messageTypeIconSizeNew: "xs", height: 18, margin: { marginTop: 2 } };
+obj[6] = { text: { variant: "text-md/semibold" } };
+const obj1 = { text: { variant: "redesign/message-preview/medium" }, messageTypeIconSize: require("Button").IconSizes.REFRESH_SMALL_16, messageTypeIconSizeNew: "xs", height: 18, margin: { marginTop: 2 } };
+obj[7] = { avatarSize: require("Button").AvatarSizes.LARGE_48, guildIconSize: require("GuildIconSizes").GuildIconSizes.LARGE, guildBadgeIconSize: require("GuildIconSizes").GuildIconSizes.XSMALL_20, wrapper: { size: 48 }, channelIcon: { size: 24 }, margin: { marginRight: 12 }, emoji: { size: 24, lineHeight: 32 } };
+obj[8] = { positionThread: { left: -68 } };
+obj[9] = { position: { top: 34 }, positionThread: { top: 27 } };
+const obj3 = { text: { variant: "text-sm/bold" }, layout: { paddingVertical: 6, paddingRight: 12, paddingLeft: 12, height: 32 }, icon: null };
+const obj2 = { avatarSize: require("Button").AvatarSizes.LARGE_48, guildIconSize: require("GuildIconSizes").GuildIconSizes.LARGE, guildBadgeIconSize: require("GuildIconSizes").GuildIconSizes.XSMALL_20, wrapper: { size: 48 }, channelIcon: { size: 24 }, margin: { marginRight: 12 }, emoji: { size: 24, lineHeight: 32 } };
+obj3[2] = { size: require("Button").IconSizes.REFRESH_SMALL_16, gameSize: require("GameIcon").GameIconSizes.SMALL };
+obj[10] = obj3;
+const items = [{ translateY: 0 }];
+obj[11] = { left: 48, startAndEndHeight: 16, transform: items, topOffset: -6 };
+obj[12] = { margin: { marginBottom: 20 } };
+obj[13] = { position: { top: 12, left: 12 }, positionThread: { top: 3, left: -17 }, typingIndicator: { position: { top: 25, left: 11 } } };
+obj[14] = { margin: { marginVertical: 20 } };
+const importDefaultResultResult = importDefaultResult(require("CHANNEL_LIST_STYLES_COMPACT").CHANNEL_LIST_STYLES_COMPACT, obj);
+const obj4 = { size: require("Button").IconSizes.REFRESH_SMALL_16, gameSize: require("GameIcon").GameIconSizes.SMALL };
+const tmp4 = require("merge")(importDefaultResultResult, { layout: { marginThread: { marginLeft: 0 } }, container: { paddingThread: { paddingLeft: 20 } }, unreadBadge: { positionThread: { left: 4 } }, mentionBadge: { positionThread: { top: 34 } } });
+const result = require("Themes").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Cozy.tsx");
+
+export const CHANNEL_LIST_STYLES_COZY = importDefaultResultResult;
+export const CHANNEL_LIST_STYLES_COZY_LAUNCHPAD = tmp4;

@@ -1,0 +1,408 @@
+// === Module 8352: showInstantInviteActionSheet ===
+
+// Module 8352 (showInstantInviteActionSheet)
+import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
+import { ChannelRecordBase } from "createChannelRecord";
+import ensureGuildLoaded from "ensureGuildLoaded";
+import updateWithLatestInvite from "updateWithLatestInvite";
+import comparator from "comparator";
+import updateInvite from "updateInvite";
+import sortActivity from "sortActivity";
+import mergeGuildAvatar from "mergeGuildAvatar";
+import getDisplayedInviteCode from "getDisplayedInviteCode";
+import { InviteTargetTypes } from "InviteSendStates";
+import { IOS_COPY_TO_PASTEBOARD } from "SHARE_APPS_KEY";
+import ME from "ME";
+
+let closure_14;
+let closure_15;
+let closure_16;
+const require = arg1;
+function showInstantInviteActionSheet(channel, source) {
+  let obj = importDefault(698);
+  source = undefined;
+  if (source != null) {
+    source = source.source;
+  }
+  obj.track(constants.OPEN_POPOUT, { type: "Instant Invite", source });
+  let stream;
+  if (source != null) {
+    stream = source.stream;
+  }
+  obj = { isActionSheet: true, location: "IOS Instant Invite Action Sheet Mount" };
+  if (null != stream) {
+    stream = source.stream;
+    obj.targetType = InviteTargetTypes.STREAM;
+    obj.targetUserId = stream.ownerId;
+    const streamerApplication = require(6027) /* _findPlayingActivity */.getStreamerApplication(stream, sortActivity);
+    let tmpResult = tmp(698);
+    obj = { type: "Send Stream Invite", location: null, other_user_id: null, application_id: null, application_name: null, game_id: null };
+    obj[1] = obj.location;
+    obj[2] = stream.ownerId;
+    let id;
+    if (streamerApplication != null) {
+      id = streamerApplication.id;
+    }
+    obj[3] = id;
+    let name;
+    if (streamerApplication != null) {
+      name = streamerApplication.name;
+    }
+    obj[4] = name;
+    let id1;
+    if (streamerApplication != null) {
+      id1 = streamerApplication.id;
+    }
+    obj[5] = id1;
+    tmpResult.track(constants.OPEN_MODAL, obj);
+    const obj3 = require(6027) /* _findPlayingActivity */;
+  } else {
+    let targetApplicationId;
+    if (source != null) {
+      targetApplicationId = source.targetApplicationId;
+    }
+    if (null != targetApplicationId) {
+      obj.targetType = InviteTargetTypes.EMBEDDED_APPLICATION;
+      obj.targetApplicationId = source.targetApplicationId;
+    }
+  }
+  let createInvite;
+  if (source != null) {
+    createInvite = source.createInvite;
+  }
+  let tmp17 = false !== createInvite;
+  if (tmp17) {
+    let code;
+    if (source != null) {
+      code = source.code;
+    }
+    tmp17 = null == code;
+  }
+  if (tmp17) {
+    tmpResult = tmp(8359);
+    tmpResult.init(channel.getGuildId(), channel.id, obj);
+  }
+  const obj1 = { channel, source: null, guildScheduledEventId: null, targetApplicationId: null, code: null, vanityURLCode: null, stackingBehavior: null };
+  let source1;
+  if (source != null) {
+    source1 = source.source;
+  }
+  obj1[1] = source1;
+  let prop;
+  if (source != null) {
+    prop = source.guildScheduledEventId;
+  }
+  obj1[2] = prop;
+  let targetApplicationId1;
+  if (source != null) {
+    targetApplicationId1 = source.targetApplicationId;
+  }
+  obj1[3] = targetApplicationId1;
+  let code1;
+  if (source != null) {
+    code1 = source.code;
+  }
+  obj1[4] = code1;
+  let stackingBehavior;
+  if (source != null) {
+    stackingBehavior = source.stackingBehavior;
+  }
+  obj1[6] = stackingBehavior;
+  importDefault(8360)(obj1);
+}
+function trackOptionClicked(code, channel, COPY, _location) {
+  let obj = require(4179) /* readSnowflake */;
+  const invite = store3.getInvite(obj.parseExtraDataFromInviteKey(code).baseCode);
+  obj = { invite_type: COPY, guild_id: null, channel_id: null, invite_code: null, invite_channel_type: null, invite_inviter_id: null, location: null, application_id: null };
+  if (channel instanceof ChannelRecordBase) {
+    let guild_id = channel.guild_id;
+  } else {
+    let id;
+    if (channel != null) {
+      id = channel.id;
+    }
+    channel = store.getChannel(id);
+    if (channel != null) {
+      guild_id = channel.getGuildId();
+    }
+  }
+  obj[1] = guild_id;
+  let id1;
+  if (channel != null) {
+    id1 = channel.id;
+  }
+  obj[2] = id1;
+  const obj2 = importDefault(698);
+  const tmp = require;
+  obj[3] = require(4179) /* readSnowflake */.parseInviteCodeFromInviteKey(code);
+  let type;
+  if (channel != null) {
+    type = channel.type;
+  }
+  obj[4] = type;
+  const currentUser = authStore.getCurrentUser();
+  let id2;
+  if (currentUser != null) {
+    id2 = currentUser.id;
+  }
+  obj[5] = id2;
+  obj[6] = _location;
+  let id3;
+  if (invite != null) {
+    const target_application = invite.target_application;
+    if (target_application != null) {
+      id3 = target_application.id;
+    }
+  }
+  obj[7] = id3;
+  obj2.track(constants.INSTANT_INVITE_OPTION_CLICKED, obj);
+}
+({ AnalyticEvents: closure_14, InviteOptionsType: closure_15, Permissions: closure_16 } = ME);
+let result = require("ensureGuildLoaded").fileFinishedImporting("modules/instant_invite/native/InstantInviteUtils.tsx");
+
+export const showInstantInviteActionSheetForChannel = function showInstantInviteActionSheetForChannel(channelId) {
+  const channel = store.getChannel(channelId);
+  if (null != channel) {
+    showInstantInviteActionSheet(channel);
+  }
+};
+export { showInstantInviteActionSheet };
+export const showVanityUrlInviteActionSheet = function showVanityUrlInviteActionSheet(guild, channel, GUILD_SCHEDULED_EVENT, guildScheduledEventId) {
+  let obj = importDefault(698);
+  obj = { type: "Vanity URL Invite", source: GUILD_SCHEDULED_EVENT };
+  obj.track(constants.OPEN_POPOUT, obj);
+  importDefault(8359).init(guild.id, channel.id, { skipCreateInvite: true });
+  obj = { vanityURLCode: guild.vanityURLCode, channel, source: GUILD_SCHEDULED_EVENT, guildScheduledEventId: null, stackingBehavior: null };
+  let prop;
+  const obj3 = importDefault(8359);
+  if (guildScheduledEventId != null) {
+    prop = guildScheduledEventId.guildScheduledEventId;
+  }
+  obj[3] = prop;
+  let stackingBehavior;
+  if (guildScheduledEventId != null) {
+    stackingBehavior = guildScheduledEventId.stackingBehavior;
+  }
+  obj[4] = stackingBehavior;
+  importDefault(8360)(obj);
+};
+export { trackOptionClicked };
+export function getShareMessage(c10) {
+  return c10;
+}
+export const handleOpenShareSheet = function handleOpenShareSheet(code, channel, intl, ADD_FRIENDS_WIDGET) {
+  let flag = arg4;
+  if (arg4 === undefined) {
+    flag = true;
+  }
+  if (null != code) {
+    const result = require(4179) /* readSnowflake */.parseExtraDataFromInviteKey(code);
+    const invite = store3.getInvite(result.baseCode);
+    const obj6 = require(4179) /* readSnowflake */;
+    const tmp21 = require;
+    const tmp26 = importDefault;
+    if (channel instanceof ChannelRecordBase) {
+      let guild_id = channel.guild_id;
+    } else {
+      let id;
+      if (channel != null) {
+        id = channel.id;
+      }
+      channel = store.getChannel(id);
+      if (channel != null) {
+        guild_id = channel.getGuildId();
+      }
+    }
+    let obj = { guild_id: null, channel_id: null, invite_code: null, invite_channel_type: null, invite_inviter_id: null, invite_guild_scheduled_event_id: null, location: null, application_id: null };
+    obj[0] = guild_id;
+    let id1;
+    if (channel != null) {
+      id1 = channel.id;
+    }
+    obj[1] = id1;
+    obj[2] = result.baseCode;
+    let type;
+    if (channel != null) {
+      type = channel.type;
+    }
+    obj[3] = type;
+    const currentUser = authStore.getCurrentUser();
+    let id2;
+    if (currentUser != null) {
+      id2 = currentUser.id;
+    }
+    obj[4] = id2;
+    obj[5] = result.guildScheduledEventId;
+    obj[6] = ADD_FRIENDS_WIDGET;
+    let id3;
+    if (invite != null) {
+      const target_application = invite.target_application;
+      if (target_application != null) {
+        id3 = target_application.id;
+      }
+    }
+    obj[7] = id3;
+    importDefault(698).track(constants.INSTANT_INVITE_SHARED, obj);
+    if (flag) {
+      trackOptionClicked(code, channel, constants2.SHARE, ADD_FRIENDS_WIDGET);
+    }
+    const obj7 = importDefault(698);
+    tmp26(4161).hideAllActionSheets();
+    const tmp26Result = tmp26(4161);
+    obj = { message: null, iOSOnlyShareCallback: null };
+    obj[0] = intl;
+    obj[1] = function iOSOnlyShareCallback(arg0, arr) {
+      let tmp = arg0;
+      if (arg0) {
+        tmp = null != arr;
+      }
+      if (tmp) {
+        tmp = !arr.includes(closure_13);
+      }
+      if (tmp) {
+        callback(table[19]).presentInviteSent();
+        const obj = callback(table[19]);
+      }
+    };
+    tmp21(8200).showShareActionSheet(obj, ADD_FRIENDS_WIDGET);
+    const tmp21Result = tmp21(8200);
+  }
+};
+export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
+  let flag = arg3;
+  if (arg3 === undefined) {
+    flag = true;
+  }
+  if (null != code) {
+    const result = require(4179) /* readSnowflake */.parseExtraDataFromInviteKey(code);
+    const obj4 = require(4179) /* readSnowflake */;
+    const tmp13 = require;
+    const tmp17 = importDefault(6048)(code);
+    require(5547) /* _copy */.copy(tmp17);
+    const invite = store3.getInvite(result.baseCode);
+    const obj5 = require(5547) /* _copy */;
+    if (channel instanceof ChannelRecordBase) {
+      let guild_id = channel.guild_id;
+    } else {
+      let id;
+      if (channel != null) {
+        id = channel.id;
+      }
+      channel = store.getChannel(id);
+      if (channel != null) {
+        guild_id = channel.getGuildId();
+      }
+    }
+    const obj = { server: null, channel: null, channel_type: null, location: null, code: null, guild_scheduled_event_id: null, application_id: null };
+    obj[0] = guild_id;
+    let id1;
+    if (channel != null) {
+      id1 = channel.id;
+    }
+    obj[1] = id1;
+    let type;
+    if (channel != null) {
+      type = channel.type;
+    }
+    obj[2] = type;
+    obj[3] = GROUP_DM;
+    ({ baseCode: obj2[4], guildScheduledEventId: obj2[5] } = result);
+    let id2;
+    if (invite != null) {
+      const target_application = invite.target_application;
+      if (target_application != null) {
+        id2 = target_application.id;
+      }
+    }
+    obj[6] = id2;
+    importDefault(698).track(constants.COPY_INSTANT_INVITE, obj);
+    if (flag) {
+      trackOptionClicked(code, channel, constants2.COPY);
+    }
+    const obj6 = importDefault(698);
+    tmp13(3893).presentLinkCopied();
+    const tmp13Result = tmp13(3893);
+  }
+};
+export const handlePressSettings = function handlePressSettings(channel, closure_1, handleGuildTemplateResolveSuccess) {
+  let guild_id;
+  let id;
+  let closure_0 = channel;
+  const importDefault = closure_1;
+  let str = handleGuildTemplateResolveSuccess;
+  importDefault(4161).hideActionSheet();
+  const dependencyMap = pendingSettings.getPendingSettings();
+  let obj = importDefault(4161);
+  ({ guild_id, id } = channel);
+  if (handleGuildTemplateResolveSuccess == null) {
+    str = "Instant Invite Action Sheet";
+  }
+  importDefault(8359).openSettings(guild_id, id, str, () => {
+    if (null != closure_1) {
+      tmp();
+    } else {
+      let targetApplicationId;
+      if (targetApplicationId != null) {
+        targetApplicationId = targetApplicationId.targetApplicationId;
+      }
+      const obj = { createInvite: false, targetApplicationId: null };
+      obj[1] = targetApplicationId;
+      outer1_17(closure_0, obj);
+      const tmp2 = outer1_17;
+      const tmp3 = closure_0;
+    }
+  });
+};
+export const isAppInstalled = function isAppInstalled(handleGuildTemplateResolveSuccess) {
+  return require(4367) /* sendSMS */.canOpenUrlScheme(handleGuildTemplateResolveSuccess);
+};
+export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(guild, id, channels, GUILD_HEADER) {
+  let obj = store;
+  let channel = store.getChannel(id);
+  if (channel == null) {
+    channel = store2.getDefaultChannel(guild.id, true, constants3.CREATE_INSTANT_INVITE);
+  }
+  importDefault(38)(null != channel, "Channel cannot be null");
+  if (null != guild.vanityURLCode) {
+    if ("" !== guild.vanityURLCode) {
+      let tmp4Result = tmp4(698);
+      obj = { type: "Vanity URL Invite", source: null };
+      obj[1] = GUILD_HEADER;
+      tmp4Result.track(constants.OPEN_POPOUT, obj);
+      tmp4Result = tmp4(8359);
+      tmp4Result.init(guild.id, channel.id, { skipCreateInvite: true });
+      obj = { vanityURLCode: null, channel: null, source: null, guildScheduledEventId: null, stackingBehavior: null };
+      obj[0] = guild.vanityURLCode;
+      obj[1] = channel;
+      obj[2] = GUILD_HEADER;
+      obj[3] = undefined;
+      obj[4] = undefined;
+      tmp4(8360)(obj);
+    }
+  }
+  let obj1 = require(8355) /* get label */;
+  const inviteChannelId = obj1.getInviteChannelId(channel.id, channels);
+  if (null != inviteChannelId) {
+    let channel1 = obj.getChannel(inviteChannelId);
+    if (channel1 == null) {
+      channel1 = store2.getDefaultChannel(guild.id, true, constants3.CREATE_INSTANT_INVITE);
+    }
+    tmp4(38)(null != channel1, "Channel cannot be null");
+    obj1 = { source: null };
+    obj1[0] = GUILD_HEADER;
+    showInstantInviteActionSheet(channel1, obj1);
+  }
+};
+export const hasDeferredInvite = function hasDeferredInvite() {
+  displayedInviteCode = displayedInviteCode.getDisplayedInviteCode();
+  displayedGuildTemplateCode = displayedGuildTemplateCode.getDisplayedGuildTemplateCode();
+  let invite = null;
+  if (null != displayedInviteCode) {
+    invite = store3.getInvite(displayedInviteCode);
+  }
+  let guildTemplate = null;
+  if (null != displayedGuildTemplateCode) {
+    guildTemplate = displayedGuildTemplateCode.getGuildTemplate(displayedGuildTemplateCode);
+  }
+  return null != invite || null != guildTemplate;
+};
