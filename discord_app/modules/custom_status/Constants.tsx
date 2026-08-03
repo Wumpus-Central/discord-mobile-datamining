@@ -4,7 +4,7 @@ const frozen = Object.freeze({ MINUTES_30: 1800000, HOURS_1: 3600000, HOURS_4: 1
 let obj = {
   value: StatusTypes.ONLINE,
   label() {
-    return require(4032) /* nameFromUser */.humanizeStatus(StatusTypes.ONLINE);
+    return require(4094) /* nameFromUser */.humanizeStatus(StatusTypes.ONLINE);
   }
 };
 const items = [
@@ -12,19 +12,19 @@ const items = [
   {
     value: StatusTypes.IDLE,
     label() {
-      return require(4032) /* nameFromUser */.humanizeStatus(StatusTypes.IDLE);
+      return require(4094) /* nameFromUser */.humanizeStatus(StatusTypes.IDLE);
     }
   },
   {
     value: StatusTypes.DND,
     label() {
-      return require(4032) /* nameFromUser */.humanizeStatus(StatusTypes.DND);
+      return require(4094) /* nameFromUser */.humanizeStatus(StatusTypes.DND);
     }
   },
   {
     value: StatusTypes.INVISIBLE,
     label() {
-      return require(4032) /* nameFromUser */.humanizeStatus(StatusTypes.INVISIBLE);
+      return require(4094) /* nameFromUser */.humanizeStatus(StatusTypes.INVISIBLE);
     }
   }
 ];

@@ -69,7 +69,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     if (!flag) {
       const obj1 = { blurTheme: "dark", style: null };
       obj1[1] = absoluteFill.absoluteFill;
-      tmp2Result = tmp2(importDefault(4594), obj1);
+      tmp2Result = tmp2(importDefault(4656), obj1);
     }
   }
   const items1 = [tmp2Result, , ];
@@ -99,6 +99,6 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
   obj[1] = items1;
   const items2 = [closure_7(closure_3, obj), children];
   obj[5] = items2;
-  obj[1] = closure_7(require(4721) /* PressableBase */.PressableOpacity, obj);
+  obj[1] = closure_7(require(4783) /* PressableBase */.PressableOpacity, obj);
   return closure_6(closure_3, obj);
 };

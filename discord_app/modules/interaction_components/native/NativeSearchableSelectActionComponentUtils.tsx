@@ -104,10 +104,10 @@ export const transformSearchableSelectOptions = function transformSearchableSele
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = importDefault(7908);
+    let channelIconWithGuild = importDefault(8026);
   } else {
-    channelIconWithGuild = require(4654) /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
-    const obj = require(4654) /* getChannelIcon */;
+    channelIconWithGuild = require(4716) /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
+    const obj = require(4716) /* getChannelIcon */;
   }
   return channelIconWithGuild;
 };

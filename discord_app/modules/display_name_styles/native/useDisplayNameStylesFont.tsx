@@ -11,9 +11,9 @@ export const useDisplayNameStylesFont = function useDisplayNameStylesFont(arg0) 
   if (ignoreDisabledStylesSetting === undefined) {
     ignoreDisabledStylesSetting = false;
   }
-  const obj = require(4424) /* useDisplayNameStylesEnabled */;
+  const obj = require(4486) /* useDisplayNameStylesEnabled */;
   const displayNameStylesEnabled = obj.useDisplayNameStylesEnabled({ location: "useDisplayNameStylesFont-native" });
-  require(8392) /* apexExperiment */;
+  require(8697) /* apexExperiment */;
   if (displayNameStylesEnabled) {
     if (null != displayNameStyles) {
       return obj[displayNameStyles.fontId];

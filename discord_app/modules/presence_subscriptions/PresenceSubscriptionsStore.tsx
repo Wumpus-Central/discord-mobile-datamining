@@ -26,8 +26,8 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
     continue;
   }
   if (0 !== items.length) {
-    importDefault(10496).subscribeActivities(items);
-    const obj = importDefault(10496);
+    importDefault(10634).subscribeActivities(items);
+    const obj = importDefault(10634);
   }
 });
 class PresenceSubscriptionsStore extends Store {

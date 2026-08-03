@@ -33,7 +33,7 @@ function checkReactionResponse(arg0, arg1, isRetry) {
         code = body.code;
       }
       if (constants.TOO_MANY_REACTIONS === code) {
-        let obj = importDefault(4532);
+        let obj = importDefault(4594);
         obj = { title: null, body: null, confirmText: null };
         const intl = require(1236) /* getSystemLocale */.intl;
         obj[0] = intl.string(require(1236) /* getSystemLocale */.t.lFddsR);
@@ -67,7 +67,7 @@ function optimisticDispatch(type, channelId, messageId, arg3, userId) {
     colors = [];
   }
   obj[6] = colors;
-  const ReactionTypes = require(6078) /* ReactionTypes */.ReactionTypes;
+  const ReactionTypes = require(7130) /* ReactionTypes */.ReactionTypes;
   obj[7] = userId.burst ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   obj.dispatch(obj);
 }
@@ -83,7 +83,7 @@ function makeURL(type) {
   }
   let NORMAL = type.type;
   if (NORMAL === undefined) {
-    NORMAL = require(6078) /* ReactionTypes */.ReactionTypes.NORMAL;
+    NORMAL = require(7130) /* ReactionTypes */.ReactionTypes.NORMAL;
   }
   if (null != emoji.id) {
     const _HermesInternal = HermesInternal;
@@ -165,7 +165,7 @@ function _getReactors() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              if (c5 === callback(6078).ReactionTypes.VOTE) {
+              if (c5 === callback(7130).ReactionTypes.VOTE) {
                 let tmp28 = (function makeURLForVoteReactors(c0, c1, c2) {
                   let name = c2.id;
                   if (name == null) {
@@ -206,7 +206,7 @@ function _getReactors() {
           } else {
             closure_7 = arg1;
             let tmp14;
-            if (c5 === callback(6078).ReactionTypes.VOTE) {
+            if (c5 === callback(7130).ReactionTypes.VOTE) {
               body = closure_7.body.users;
             } else {
               body = closure_7.body;
@@ -320,7 +320,7 @@ function _addReaction() {
               }
               if (!isRetry) {
                 if (callback6(callback, callback2, dependencyMap, burst)) {
-                  let obj5 = callback2(4532);
+                  let obj5 = callback2(4594);
                   let obj2 = { title: null, body: null, confirmText: null };
                   let intl = callback(1236).intl;
                   obj2[0] = intl.string(callback(1236).t["uaUU/g"]);
@@ -357,7 +357,7 @@ function _addReaction() {
               c7 = 3;
               c8 = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = callback2(6080).unarchiveThreadIfNecessary(callback);
+              obj6[0] = callback2(7132).unarchiveThreadIfNecessary(callback);
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -379,7 +379,7 @@ function _addReaction() {
             obj8[0] = callback4(obj9);
             obj = { location: null, type: null };
             obj[0] = MESSAGE;
-            let fn = callback(6078).ReactionTypes;
+            let fn = callback(7130).ReactionTypes;
             if (burst) {
               let NORMAL = fn.BURST;
             } else {
@@ -796,7 +796,7 @@ function _removeReaction() {
               obj2[0] = c4;
               obj2[1] = burst;
               callback3("MESSAGE_REACTION_REMOVE", callback, callback2, dependencyMap, obj2);
-              let obj5 = callback2(6080);
+              let obj5 = callback2(7132);
               c4 = 2;
               c5 = 1;
               let obj3 = { value: null, done: false };
@@ -824,7 +824,7 @@ function _removeReaction() {
               callback2 = "@me";
             }
             obj5[3] = callback2;
-            let ReactionTypes = callback(6078).ReactionTypes;
+            let ReactionTypes = callback(7130).ReactionTypes;
             if (burst) {
               let NORMAL = ReactionTypes.BURST;
             } else {
@@ -866,7 +866,7 @@ function _removeReaction() {
                 let closure_0 = arg0;
                 let c3 = 0;
                 let c4 = 0;
-                return (/* F118978 */ function*() { ... })();
+                return (/* F119172 */ function*() { ... })();
               });
               return function() {
                 const self = this;

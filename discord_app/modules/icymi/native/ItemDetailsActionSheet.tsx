@@ -38,13 +38,13 @@ export default function ItemDetailsActionSheet(arg0) {
     return dehydratedItem;
   });
   const tmp5 = importDefault;
-  const tmp6 = importDefault(4384)(stateFromStores, true);
+  const tmp6 = importDefault(4446)(stateFromStores, true);
   if (null != stateFromStores1) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores1;
-    obj[1] = tmp(5570).GuildIconSizes.LARGE;
-    let tmp9 = callback(tmp5(5570), obj);
-    const tmp5Result = tmp5(5570);
+    obj[1] = tmp(5632).GuildIconSizes.LARGE;
+    let tmp9 = callback(tmp5(5632), obj);
+    const tmp5Result = tmp5(5632);
   } else if (null != stateFromStores) {
     obj = { size: null, channel: null };
     obj[0] = tmp(1297).AvatarSizes.LARGE;
@@ -52,13 +52,13 @@ export default function ItemDetailsActionSheet(arg0) {
     tmp9 = callback(tmp(1297).Avatar, obj);
   }
   let result = null != stateFromStores;
-  const tmp8 = importDefault(5149)("show_icymi_debug_scores");
+  const tmp8 = importDefault(5211)("show_icymi_debug_scores");
   if (result) {
     result = null != stateFromStores1;
   }
   if (result) {
-    result = tmp(8188).isChannelCustomScoreEligible(stateFromStores);
-    const tmpResult = tmp(8188);
+    result = tmp(8495).isChannelCustomScoreEligible(stateFromStores);
+    const tmpResult = tmp(8495);
   }
   obj1 = { icon: tmp9, title: tmp6, subtitle: null };
   let str;
@@ -68,14 +68,14 @@ export default function ItemDetailsActionSheet(arg0) {
   if (str == null) {
     str = "";
   }
-  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(10387).ActionSheetIconHeader, obj1), children: null };
+  obj2 = { showGradient: true, startExpanded: true, header: tmp16(tmp(10526).ActionSheetIconHeader, obj1), children: null };
   obj1[2] = str;
   let tmp16Result = result;
   if (result) {
     const obj3 = { channel: null, guild: null };
     obj3[0] = stateFromStores;
     obj3[1] = stateFromStores1;
-    tmp16Result = tmp16(tmp(15351).ChannelScoreSettings, obj3);
+    tmp16Result = tmp16(tmp(15418).ChannelScoreSettings, obj3);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
@@ -89,7 +89,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const items4 = [result, ];
     const obj6 = { guild: null };
     obj6[0] = stateFromStores1;
-    items4[1] = tmp16(tmp(15351).GuildScoreSettings, obj6);
+    items4[1] = tmp16(tmp(15418).GuildScoreSettings, obj6);
     obj5[0] = items4;
     tmp15Result = tmp15(closure_8, obj5);
     const tmp19 = closure_8;
@@ -104,11 +104,11 @@ export default function ItemDetailsActionSheet(arg0) {
       obj8[0] = `Total Score: ${tmp7.score}`;
       const _JSON = JSON;
       obj8[1] = JSON.stringify(stateFromStores2.score_components);
-      obj7[2] = tmp16(tmp(5224).TableRow, obj8);
-      tmp16Result = tmp16(tmp(5558).TableRowGroup, obj7);
+      obj7[2] = tmp16(tmp(5286).TableRow, obj8);
+      tmp16Result = tmp16(tmp(5620).TableRowGroup, obj7);
     }
   }
   items3[2] = tmp16Result;
   obj2[3] = items3;
-  return closure_9(require(5555) /* ActionSheet */.ActionSheet, obj2);
+  return closure_9(require(5617) /* ActionSheet */.ActionSheet, obj2);
 };

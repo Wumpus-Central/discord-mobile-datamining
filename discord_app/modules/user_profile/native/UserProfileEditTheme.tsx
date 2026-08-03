@@ -16,7 +16,7 @@ function ColorSwatch(color) {
   const tmp = createCacheKey();
   let obj = require(688) /* int2hslRaw */;
   const int2hexResult = obj.int2hex(color);
-  let obj1 = require(5564) /* getHigherContrastColor */;
+  let obj1 = require(5626) /* getHigherContrastColor */;
   const items = [WHITE, PRIMARY_530];
   obj = { style: tmp.colorSwatchContainer, children: null };
   const higherContrastColor = obj1.getHigherContrastColor({ backgroundColor: int2hexResult, colors: items });
@@ -27,8 +27,8 @@ function ColorSwatch(color) {
   obj[3] = items1;
   obj[4] = onPress;
   obj1 = { size: "xs", color: higherContrastColor, style: tmp.dropperIcon };
-  obj[5] = callback(require(9111) /* PencilIcon */.PencilIcon, obj1);
-  const items2 = [callback(require(4721) /* PressableBase */.PressableOpacity, obj, color), callback(require(4189) /* Text */.Text, { variant: "text-sm/normal", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: label })];
+  obj[5] = callback(require(9284) /* PencilIcon */.PencilIcon, obj1);
+  const items2 = [callback(require(4783) /* PressableBase */.PressableOpacity, obj, color), callback(require(4251) /* Text */.Text, { variant: "text-sm/normal", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: label })];
   obj[1] = items2;
   return callback2(View, obj);
 }
@@ -58,21 +58,21 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   if (flag === undefined) {
     flag = false;
   }
-  let f92091;
+  let f92278;
   let primaryColor;
   secondaryColor = undefined;
   let callback;
   const tmp = createCacheKey();
-  let tmp4 = f92091(primaryColor[11])(user.id, guildId);
-  f92091 = tmp4;
-  const tmp5 = f92091(primaryColor[12])({ user, displayProfile: tmp4, pendingThemeColors: pendingThemeColors.pendingThemeColors, isPreview: flag });
+  let tmp4 = f92278(primaryColor[11])(user.id, guildId);
+  f92278 = tmp4;
+  const tmp5 = f92278(primaryColor[12])({ user, displayProfile: tmp4, pendingThemeColors: pendingThemeColors.pendingThemeColors, isPreview: flag });
   primaryColor = tmp5.primaryColor;
   secondaryColor = tmp5.secondaryColor;
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(guildId, 80);
   }
   let obj = secondaryColor(tmp3[13]);
-  callback = obj.useAvatarColors(pendingAvatarSrc, f92091(tmp3[4]).unsafe_rawColors.PRIMARY_530, false);
+  callback = obj.useAvatarColors(pendingAvatarSrc, f92278(tmp3[4]).unsafe_rawColors.PRIMARY_530, false);
   if (null != primaryColor) {
     if (null != secondaryColor) {
       obj = { style: null, children: null };
@@ -88,7 +88,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl = tmp6(tmp3[8]).intl;
         obj2[1] = intl.string(tmp6(tmp3[8]).t["+1H47t"]);
         obj2[2] = function onPress() {
-          let obj = f92091(primaryColor[18]);
+          let obj = f92278(primaryColor[18]);
           obj = {
             onResetTheme(arg0) {
               let themeColors;
@@ -117,27 +117,27 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       obj4[0] = tmp.themeColorContainer;
       const obj5 = { onPress: null, color: null, label: null, accessibilityLabel: null };
       secondaryColor = primaryColor;
-      f92091 = (arg0) => {
+      f92278 = (arg0) => {
         if (arg0 !== primaryColor) {
           const items = [arg0, secondaryColor];
           let themeColors;
-          if (f92091 != null) {
-            themeColors = f92091.themeColors;
+          if (f92278 != null) {
+            themeColors = f92278.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {
             tmp8 = items;
           }
           secondaryColor(tmp8);
-          tmp4 = f92091(primaryColor[14]);
+          tmp4 = f92278(primaryColor[14]);
           const tmp7 = secondaryColor;
         }
       };
       obj5[0] = () => {
-        let obj = require(4009) /* UNSAFE_isDismissibleContentDismissed */;
+        let obj = require(4071) /* UNSAFE_isDismissibleContentDismissed */;
         const result = obj.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
-        obj = { color: secondaryColor, onSelect: f92091, suggestedColors: closure_4 };
-        importDefault(13714)(obj);
+        obj = { color: secondaryColor, onSelect: f92278, suggestedColors: closure_4 };
+        importDefault(13777)(obj);
       };
       obj5[1] = primaryColor;
       const intl2 = tmp6(tmp3[8]).intl;
@@ -150,27 +150,27 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       const items2 = [callback(ColorSwatch, obj5), ];
       const obj7 = { color: null, onPress: null, label: null, accessibilityLabel: null };
       obj7[0] = secondaryColor;
-      f92091 = (arg0) => {
+      f92278 = (arg0) => {
         if (arg0 !== secondaryColor) {
           const items = [primaryColor, arg0];
           let themeColors;
-          if (f92091 != null) {
-            themeColors = f92091.themeColors;
+          if (f92278 != null) {
+            themeColors = f92278.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {
             tmp8 = items;
           }
           secondaryColor(tmp8);
-          tmp4 = f92091(primaryColor[14]);
+          tmp4 = f92278(primaryColor[14]);
           const tmp7 = secondaryColor;
         }
       };
       obj7[1] = () => {
-        let obj = require(4009) /* UNSAFE_isDismissibleContentDismissed */;
+        let obj = require(4071) /* UNSAFE_isDismissibleContentDismissed */;
         const result = obj.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
-        obj = { color: secondaryColor, onSelect: f92091, suggestedColors: closure_4 };
-        importDefault(13714)(obj);
+        obj = { color: secondaryColor, onSelect: f92278, suggestedColors: closure_4 };
+        importDefault(13777)(obj);
       };
       const intl4 = tmp6(tmp3[8]).intl;
       obj7[2] = intl4.string(tmp6(tmp3[8]).t["8elvy6"]);

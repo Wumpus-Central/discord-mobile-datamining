@@ -263,22 +263,22 @@ export default function ChannelSettingsEditForumTag(channelId) {
           usableCustomEmojiById(null);
           callback("");
         };
-        obj5[2] = tmp27(tmp3(6739).CircleXIcon, { size: "xs" });
-        let tmp27Result = tmp27(tmp3(4721).PressableOpacity, obj5);
+        obj5[2] = tmp27(tmp3(5895).CircleXIcon, { size: "xs" });
+        let tmp27Result = tmp27(tmp3(4783).PressableOpacity, obj5);
       } else {
         tmp27Result = null;
       }
       const obj6 = { children: null };
       const obj7 = { hasIcons: true, children: null };
       obj3[2] = tmp27Result;
-      obj7[1] = tmp27(tmp3(5224).TableRow, obj3);
-      const items6 = [tmp27(tmp3(5558).TableRowGroup, obj7), ];
+      obj7[1] = tmp27(tmp3(5286).TableRow, obj3);
+      const items6 = [tmp27(tmp3(5620).TableRowGroup, obj7), ];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp.hint;
       const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
       let intl2 = tmp3(1236).intl;
       obj9[2] = intl2.string(tmp3(1236).t["3v8kZH"]);
-      obj8[1] = tmp27(tmp3(4189).Text, obj9);
+      obj8[1] = tmp27(tmp3(4251).Text, obj9);
       items6[1] = tmp27(tmp28, obj8);
       obj6[0] = items6;
       const items7 = [tmp29(tmp28, obj6), , ];
@@ -302,8 +302,8 @@ export default function ChannelSettingsEditForumTag(channelId) {
         }
         closure_10(tmp2);
       };
-      obj11[1] = tmp27(tmp3(5559).TableSwitchRow, obj10);
-      items7[1] = tmp27(tmp3(5558).TableRowGroup, obj11);
+      obj11[1] = tmp27(tmp3(5621).TableSwitchRow, obj10);
+      items7[1] = tmp27(tmp3(5620).TableRowGroup, obj11);
       tmp27Result = null;
       if (!tmp2) {
         const obj12 = { hasIcons: false, children: null };
@@ -330,12 +330,12 @@ export default function ChannelSettingsEditForumTag(channelId) {
           };
           obj.show(obj);
         };
-        obj12[1] = tmp27(tmp3(5224).TableRow, obj13);
-        tmp27Result = tmp27(tmp3(5558).TableRowGroup, obj12);
+        obj12[1] = tmp27(tmp3(5286).TableRow, obj13);
+        tmp27Result = tmp27(tmp3(5620).TableRowGroup, obj12);
       }
       items7[2] = tmp27Result;
       obj1[2] = items7;
-      obj[1] = tmp29(tmp3(4602).Stack, obj1);
+      obj[1] = tmp29(tmp3(4664).Stack, obj1);
       return tmp27(tmp28, obj);
     }
     const obj14 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
@@ -357,9 +357,9 @@ export default function ChannelSettingsEditForumTag(channelId) {
       str2 = "";
     }
     obj14[3] = str2;
-    tmp27Result1 = tmp27(tag(5210), obj14);
+    tmp27Result1 = tmp27(tag(5272), obj14);
     tmp31 = tag;
-    const tmp32 = tag(5210);
+    const tmp32 = tag(5272);
   }
-  tmp27Result1 = tmp27(tmp3(6579).ReactionIcon, {});
+  tmp27Result1 = tmp27(tmp3(7564).ReactionIcon, {});
 };

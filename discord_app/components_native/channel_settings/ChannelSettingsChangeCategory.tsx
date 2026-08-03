@@ -199,7 +199,7 @@ prototype["handleSetCategory"] = function handleSetCategory(id) {
 prototype["renderCategory"] = function renderCategory(label) {
   const self = this;
   const _require = label;
-  return callback3(_require(5224).TableRow, {
+  return callback3(_require(5286).TableRow, {
     label: label.name,
     onPress() {
       return self.handleSetCategory(label.id);
@@ -226,7 +226,7 @@ prototype["renderCategories"] = function renderCategories() {
   if (mapped.length > 0) {
     const obj = { hasIcons: false, children: null };
     obj[1] = mapped;
-    tmp4 = callback3(require(5558) /* TableRowGroupTitle */.TableRowGroup, obj);
+    tmp4 = callback3(require(5620) /* TableRowGroupTitle */.TableRowGroup, obj);
   }
   return tmp4;
 };
@@ -247,7 +247,7 @@ prototype["render"] = function render() {
     name = intl2.string(tmp4(1236).t.GSfOoo);
   }
   obj = { variant: "text-md/medium", color: "text-muted", children: intl.formatToPlainString(first(1236).t.OqccVl, { categoryName: name }) };
-  const items = [closure_13(first(4189).Text, obj), , ];
+  const items = [closure_13(first(4251).Text, obj), , ];
   let tmp3Result = null;
   if (null != first) {
     tmp3Result = null;
@@ -260,16 +260,16 @@ prototype["render"] = function render() {
         obj2[1] = function onPress() {
           return self.handleSetCategory(first.id);
         };
-        obj1[1] = tmp3(tmp4(5224).TableRow, obj2, first.id);
-        tmp3Result = tmp3(tmp4(5558).TableRowGroup, obj1);
+        obj1[1] = tmp3(tmp4(5286).TableRow, obj2, first.id);
+        tmp3Result = tmp3(tmp4(5620).TableRowGroup, obj1);
       }
     }
   }
   items[1] = tmp3Result;
   items[2] = self.renderCategories();
   obj[2] = items;
-  obj[1] = closure_14(first(4602).Stack, obj);
-  return closure_13(first(7639).Form, obj);
+  obj[1] = closure_14(first(4664).Stack, obj);
+  return closure_13(first(7765).Form, obj);
 };
 ChannelSettingsChangeCategory.contextType = require("ManaContext").ThemeContext;
 let obj1 = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };

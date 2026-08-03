@@ -4,7 +4,7 @@ import { AnalyticEvents } from "ME";
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/notifications/server_trending/ServerTrendingNotificationUtils.tsx");
 
 export const onServerTrendingNotificationSettingsChanged = function onServerTrendingNotificationSettingsChanged(server_trending_notifications) {
-  const EnableServerTrendingNotifications = require(3866) /* explicitContentFromProto */.EnableServerTrendingNotifications;
+  const EnableServerTrendingNotifications = require(3928) /* explicitContentFromProto */.EnableServerTrendingNotifications;
   EnableServerTrendingNotifications.updateSetting(server_trending_notifications);
   let obj = importDefault(698);
   obj = { update_type: constants.ACCOUNT, server_trending_notifications };

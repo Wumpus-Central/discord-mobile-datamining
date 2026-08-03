@@ -1,7 +1,7 @@
 const result = require("transitionToChannel").fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 
 export default function navigateToLastChannel() {
-  const coerceGuildsRouteResult = require(4044) /* navigationToRootTabHelper */.coerceGuildsRoute(importDefault(10941)());
+  const coerceGuildsRouteResult = require(4106) /* navigationToRootTabHelper */.coerceGuildsRoute(importDefault(11063)());
   let tmp4 = null != coerceGuildsRouteResult;
   if (tmp4) {
     const params = coerceGuildsRouteResult.params;
@@ -17,7 +17,7 @@ export default function navigateToLastChannel() {
     if (params2 != null) {
       channelId1 = params2.channelId;
     }
-    require(4201) /* transitionToChannel */.transitionToChannel(channelId1);
-    const tmpResult = require(4201) /* transitionToChannel */;
+    require(4263) /* transitionToChannel */.transitionToChannel(channelId1);
+    const tmpResult = require(4263) /* transitionToChannel */;
   }
 };

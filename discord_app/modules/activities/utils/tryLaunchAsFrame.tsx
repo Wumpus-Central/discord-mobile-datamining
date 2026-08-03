@@ -8,16 +8,16 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   application = application.getApplication(applicationId);
   let tmp2 = null == application;
   if (!tmp2) {
-    let obj = require(10519) /* canLaunchFrame */;
+    let obj = require(10660) /* canLaunchFrame */;
     tmp2 = !obj.canLaunchFrame(application);
   }
   let flag = !tmp2;
   if (!tmp2) {
     obj = { applicationId: null };
     obj[0] = applicationId;
-    importDefault(5698).launchFrame(obj);
+    importDefault(10661).launchFrame(obj);
     flag = true;
-    const obj2 = importDefault(5698);
+    const obj2 = importDefault(10661);
   }
   return flag;
 };

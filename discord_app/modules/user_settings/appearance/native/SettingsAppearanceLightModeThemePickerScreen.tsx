@@ -9,5 +9,5 @@ export default function SettingsAppearanceLightModeThemePickerScreen() {
   const obj = { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.NoFvjZ);
-  return jsx(importDefault(14302), { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null });
+  return jsx(importDefault(14369), { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null });
 };

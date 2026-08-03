@@ -34,7 +34,7 @@ export const RoleDot = function RoleDot(background) {
   }
   ({ containerStyles, guildId } = background);
   const tmp = createCacheKey();
-  let obj = require(4610) /* getFontScale */;
+  let obj = require(4672) /* getFontScale */;
   const fontScale = obj.useFontScale();
   if (null == color) {
     if (null == colors) {
@@ -48,7 +48,7 @@ export const RoleDot = function RoleDot(background) {
   const result = num * fontScale;
   obj = { paddingRight: 2 * fontScale, paddingTop: null, height: null };
   const tmp5 = importDefault;
-  const tmp6 = importDefault(4632)(guildId, null);
+  const tmp6 = importDefault(4694)(guildId, null);
   if (tmp2Result.isAndroid()) {
     let result1 = 3 * fontScale;
   } else {
@@ -87,8 +87,8 @@ export const RoleDot = function RoleDot(background) {
         obj5[2] = { x: 1, y: 0 };
         const items6 = [tmp.dot, obj1];
         obj5[3] = items6;
-        let tmp12Result = tmp12(tmp5(4615), obj5);
-        const tmp5Result = tmp5(4615);
+        let tmp12Result = tmp12(tmp5(4677), obj5);
+        const tmp5Result = tmp5(4677);
       }
       items4[1] = tmp12Result;
       obj3[1] = items4;

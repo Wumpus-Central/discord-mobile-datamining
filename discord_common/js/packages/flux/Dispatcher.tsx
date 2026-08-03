@@ -163,7 +163,7 @@ class Dispatcher {
     obj[1] = {};
     obj[2] = [];
     tmp2 = ActionHandlersGraph;
-    if (typeof ActionHandlersGraph !== "fileFinishedImporting") {
+    if (typeof ActionHandlersGraph !== "error") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }

@@ -16,8 +16,8 @@ export default function useTextareaPlaceholderAndLabels(isCreatingThread) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = importDefault(4384)(channel, true);
-  const tmp3 = importDefault(4384)(channel, false);
+  const tmp2 = importDefault(4446)(channel, true);
+  const tmp3 = importDefault(4446)(channel, false);
   if (null != channel) {
     if (null != tmp2) {
       if (flag) {

@@ -19,6 +19,6 @@ export default function BountiesModalCloseButton(onPress) {
   obj[4] = callback().closeButton;
   obj = { size: "sm", color: null };
   obj[1] = importDefault(712).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
-  obj[5] = jsx(require(5179) /* XSmallIcon */.XSmallIcon, { size: "sm", color: null });
-  return jsx(require(4721) /* PressableBase */.PressableOpacity, { size: "sm", color: null });
+  obj[5] = jsx(require(5241) /* XSmallIcon */.XSmallIcon, { size: "sm", color: null });
+  return jsx(require(4783) /* PressableBase */.PressableOpacity, { size: "sm", color: null });
 };

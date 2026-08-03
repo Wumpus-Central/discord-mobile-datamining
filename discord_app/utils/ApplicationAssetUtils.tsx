@@ -729,7 +729,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
         applyResult = HermesBuiltin.apply(items, Math);
       }
       let str4 = "";
-      if (typeof applyResult !== "__REMOTEDEV__") {
+      if (typeof applyResult !== "SENTRY_RELEASE") {
         const _HermesInternal3 = HermesInternal;
         str4 = "?size=" + require(1450) /* handleImageLoad */.getBestMediaProxySize(applyResult);
         const obj4 = require(1450) /* handleImageLoad */;

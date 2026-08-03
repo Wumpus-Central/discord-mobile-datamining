@@ -37,7 +37,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp16 = callback(stream(10562).StreamEnded, obj);
+      tmp16 = callback(stream(10746).StreamEnded, obj);
     }
     obj = { children: null };
     const items = [tmp16, ];
@@ -55,7 +55,7 @@ export default function VideoEmptyState(style) {
     if (!removeSplashImage) {
       obj = { style: null };
       obj[0] = tmp2.placeholderImage;
-      tmp7 = callback(stream(10565).StreamFailed, obj);
+      tmp7 = callback(stream(10749).StreamFailed, obj);
     }
     let obj2 = { children: null };
     const items1 = [tmp7, ];
@@ -72,20 +72,20 @@ export default function VideoEmptyState(style) {
     tmp5Result = null;
   }
   if (null != avError) {
-    let obj7 = stream(8861);
+    let obj7 = stream(9038);
     let errorCode = obj7.getErrorInfo(avError).errorCode;
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      let obj6 = stream(8861);
-      errorCode = obj6.getErrorInfo(stream(8861).AVError.STREAM_FAILED_TO_START).errorCode;
+      let obj6 = stream(9038);
+      errorCode = obj6.getErrorInfo(stream(9038).AVError.STREAM_FAILED_TO_START).errorCode;
     }
   }
   let obj8 = stream(589);
   const items2 = [ensureGuildLoaded];
   const items3 = [stream.channelId];
   importDefault = obj8.useStateFromStores(items2, () => outer1_4.getChannel(stream.channelId), items3);
-  importDefault(4620)(() => {
+  importDefault(4682)(() => {
     let isGuildStageVoiceResult;
     if (closure_1 != null) {
       isGuildStageVoiceResult = closure_1.isGuildStageVoice();
@@ -108,7 +108,7 @@ export default function VideoEmptyState(style) {
     obj6 = { errorCode: null };
     obj6[0] = errorCode;
     obj5[3] = intl3.formatToPlainString(tmp28(1236).t.ejOT95, obj6);
-    tmp34 = callback(tmp28(4189).Text, obj5);
+    tmp34 = callback(tmp28(4251).Text, obj5);
   }
   items5[1] = tmp34;
   let tmp36 = !removeCloseButton;
@@ -123,7 +123,7 @@ export default function VideoEmptyState(style) {
       const obj = stream(outer1_2[14]);
       obj.stopStream(stream(outer1_2[15]).encodeStreamKey(stream));
     };
-    obj7[1] = callback(tmp28(4605).BaseTextButton, obj8);
+    obj7[1] = callback(tmp28(4667).BaseTextButton, obj8);
     tmp36 = callback(tmp32, obj7);
   }
   items5[2] = tmp36;

@@ -39957,7 +39957,7 @@ export const checkForSimpleEmbedMessage = function checkForSimpleEmbedMessage(ar
           if (obj.isEmbedInline(first1)) {
             items = [];
           }
-          obj = require(4526) /* getEffectiveVideoProvider */;
+          obj = require(4588) /* getEffectiveVideoProvider */;
         }
       } else {
         items = arg0;
@@ -39971,8 +39971,8 @@ export const removeBuildOverrideLinks = function removeBuildOverrideLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(4109).isBuildOverrideLink(type.target);
-      const obj = callback(4109);
+      tmp = !callback(4171).isBuildOverrideLink(type.target);
+      const obj = callback(4171);
     }
     return tmp;
   });
@@ -39981,8 +39981,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !callback(7883).isExperimentEmbedURL(type.target);
-      const obj = callback(7883);
+      tmp = !callback(8001).isExperimentEmbedURL(type.target);
+      const obj = callback(8001);
     }
     return tmp;
   });
@@ -40146,7 +40146,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             if (obj3.isEmbedInline(first1)) {
               items2 = [];
             }
-            obj3 = _require(4526);
+            obj3 = _require(4588);
           }
         } else {
           items2 = arr;
@@ -40169,8 +40169,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
         }
         if (tmp) {
           const content = type.content;
-          let tmp2 = typeof content === "__FORMATJS_LISTFORMAT_DATA__";
-          if (typeof content !== "__FORMATJS_LISTFORMAT_DATA__") {
+          let tmp2 = typeof content === "ge";
+          if (typeof content !== "ge") {
             tmp2 = "" !== type.content.trim();
             const str2 = type.content;
           }
@@ -40213,8 +40213,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
           }
           if (tmp) {
             const content = type.content;
-            let tmp2 = typeof content === "__FORMATJS_LISTFORMAT_DATA__";
-            if (typeof content !== "__FORMATJS_LISTFORMAT_DATA__") {
+            let tmp2 = typeof content === "ge";
+            if (typeof content !== "ge") {
               tmp2 = "" !== type.content.trim();
               const str2 = type.content;
             }
@@ -40250,16 +40250,16 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     const found = arr4.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(4109).isBuildOverrideLink(type.target);
-        const obj = callback(4109);
+        tmp = !callback(4171).isBuildOverrideLink(type.target);
+        const obj = callback(4171);
       }
       return tmp;
     });
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !callback(7883).isExperimentEmbedURL(type.target);
-        const obj = callback(7883);
+        tmp = !callback(8001).isExperimentEmbedURL(type.target);
+        const obj = callback(8001);
       }
       return tmp;
     });

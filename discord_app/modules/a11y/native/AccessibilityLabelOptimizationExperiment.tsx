@@ -10,8 +10,8 @@ export default apexExperiment;
 export const shouldSkipAccessibilityLabels = function shouldSkipAccessibilityLabels() {
   enabled = enabled.enabled;
   if (enabled) {
-    enabled = !require(4590) /* SCREEN_READER_ENABLED_GETTER */.getIsScreenReaderEnabled();
-    const obj = require(4590) /* SCREEN_READER_ENABLED_GETTER */;
+    enabled = !require(4652) /* SCREEN_READER_ENABLED_GETTER */.getIsScreenReaderEnabled();
+    const obj = require(4652) /* SCREEN_READER_ENABLED_GETTER */;
   }
   return enabled;
 };

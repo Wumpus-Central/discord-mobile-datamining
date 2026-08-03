@@ -35,8 +35,8 @@ GuildAffinitiesStore.persistKey = "GuildAffinitiesStore";
 const guildAffinitiesStore = new GuildAffinitiesStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleConnectionOpen() {
     if (Date.now() - closure_3.lastFetched > 86400000) {
-      const guildAffinities = require(8185) /* fetchGuildAffinities */.fetchGuildAffinities();
-      const obj = require(8185) /* fetchGuildAffinities */;
+      const guildAffinities = require(8492) /* fetchGuildAffinities */.fetchGuildAffinities();
+      const obj = require(8492) /* fetchGuildAffinities */;
     }
     return false;
   },

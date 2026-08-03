@@ -1,17 +1,17 @@
 import { PermissionStateType } from "set";
 import { NUF_NOTIFICATION_MODAL_KEY as closure_4 } from "NewUserTypes";
 
-let result = require("module_4399").fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
+let result = require("module_4461").fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  let obj = importDefault(4399);
+  let obj = importDefault(4461);
   obj = {
     onComplete() {
       outer1_1(outer1_2[2]).popWithKey(outer1_4);
       onComplete();
     }
   };
-  obj.pushLazy(onComplete(1959)(14930, dependencyMap.paths), obj, closure_4);
-  const result = onComplete(11520).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  obj.pushLazy(onComplete(1959)(14997, dependencyMap.paths), obj, closure_4);
+  const result = onComplete(11630).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 };

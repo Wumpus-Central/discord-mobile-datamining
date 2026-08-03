@@ -10,9 +10,9 @@ export default function isApplicationAgeRestricted(arg0) {
     if (application != null) {
       prop = application.contentClassification;
     }
-    return require(5912) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(prop);
+    return require(6992) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(prop);
   } else {
     return false;
   }
-  obj = importDefault(8031);
+  obj = importDefault(8355);
 };

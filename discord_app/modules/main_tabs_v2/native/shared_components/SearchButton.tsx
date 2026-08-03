@@ -25,11 +25,11 @@ export const SearchButtonContent = function SearchButtonContent(panelVariant) {
   const merged1 = Object.assign(merged);
   const items = [tmp2.searchButton, panelVariant.panelVariant ? tmp2.roundedCornersAlt : tmp2.roundedCorners, merged.style];
   obj.style = items;
-  const items1 = [callback(require(8298) /* MagnifyingGlassIcon */.MagnifyingGlassIcon, { size: "xs" }), ];
+  const items1 = [callback(require(5905) /* MagnifyingGlassIcon */.MagnifyingGlassIcon, { size: "xs" }), ];
   obj = { variant: "text-sm/medium", color: "text-muted", style: tmp2.text, maxFontSizeMultiplier: 2, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[4] = intl.string(require(1236) /* getSystemLocale */.t["5h0QOP"]);
-  items1[1] = callback(require(4189) /* Text */.Text, obj);
+  items1[1] = callback(require(4251) /* Text */.Text, obj);
   obj.children = items1;
   return closure_4(Pressable, obj);
 };

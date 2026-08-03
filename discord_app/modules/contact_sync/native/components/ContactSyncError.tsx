@@ -16,7 +16,7 @@ export default function ContactSyncError(error) {
     tmp2 = "" !== error;
   }
   _require = tmp2;
-  let obj = _require(4054);
+  let obj = _require(4116);
   const fn = function l() {
     let obj = _undefined(outer1_2[4]);
     let num = 0;
@@ -26,13 +26,13 @@ export default function ContactSyncError(error) {
     obj = { height: obj.withTiming(num) };
     return obj;
   };
-  obj = { withTiming: _require(4194).withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
+  obj = { withTiming: _require(4256).withTiming, hasError: tmp2, ERROR_HEIGHT: 44 };
   fn.__closure = obj;
   fn.__workletHash = 14558247431913;
   fn.__initData = closure_5;
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: items, children: null };
   items = [tmp.container, error.style, animatedStyle];
-  obj[1] = jsx(_require(4189).Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error });
-  return jsx(importDefault(4054).View, { style: items, children: null });
+  obj[1] = jsx(_require(4251).Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error });
+  return jsx(importDefault(4116).View, { style: items, children: null });
 };

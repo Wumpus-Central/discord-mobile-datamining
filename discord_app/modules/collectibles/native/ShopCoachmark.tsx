@@ -33,34 +33,23 @@ export default function ShopCoachmark(markAsDismissed) {
         callback(outer1_4.USER_DISMISS);
       },
       visible,
-      position: null,
-      offsetY: null,
+      position: "top",
+      offsetY: visible(title[5]).space.PX_12,
       renderImgComponent: null,
       buttonLabel: null,
       buttonVariant: "primary",
       onButtonPress: null
     };
-    let str = "bottom";
-    if (obj2.isYouNavFloating()) {
-      str = "top";
-    }
-    obj[4] = str;
-    obj2 = markAsDismissed(title[5]);
-    let PX_12;
-    if (tmpResult.isYouNavFloating()) {
-      PX_12 = visible(tmp2[6]).space.PX_12;
-    }
-    obj[5] = PX_12;
     let fn = renderImgComponent;
     if (renderImgComponent == null) {
       fn = () => outer1_5(outer1_7, { source: closure_4, decorationAsset: closure_5 });
     }
     obj[6] = fn;
-    const intl = tmp(tmp2[7]).intl;
-    obj[7] = intl.string(markAsDismissed(title[7]).t.fYfGgK);
+    const intl = markAsDismissed(tmp[6]).intl;
+    obj[7] = intl.string(markAsDismissed(title[6]).t.fYfGgK);
     obj[9] = navigateToShop;
     return obj;
   }, items);
-  const coachmark = markAsDismissed(title[8]).useCoachmark(markAsDismissed.buttonRef, memo);
+  const coachmark = markAsDismissed(title[7]).useCoachmark(markAsDismissed.buttonRef, memo);
   return null;
 };

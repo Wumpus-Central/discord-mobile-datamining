@@ -156,9 +156,9 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
     scheduled_start_time = initialGuildEvent.scheduled_start_time;
   }
   if (scheduled_start_time == null) {
-    const initialEventStartDate = require(8214) /* getRRule */.getInitialEventStartDate();
+    const initialEventStartDate = require(8521) /* getRRule */.getInitialEventStartDate();
     scheduled_start_time = initialEventStartDate.toISOString();
-    const obj2 = require(8214) /* getRRule */;
+    const obj2 = require(8521) /* getRRule */;
   }
   obj[3] = scheduled_start_time;
   let entity_type;
@@ -233,13 +233,13 @@ export const getInitialGuildEventData = function getInitialGuildEventData(initia
       entity_type1 = initialGuildEvent.entity_type;
     }
     if (entity_type1 === constants.EXTERNAL) {
-      const locationFromEvent = require(8217) /* getChannelFromEvent */.getLocationFromEvent(initialGuildEvent);
+      const locationFromEvent = require(8524) /* getChannelFromEvent */.getLocationFromEvent(initialGuildEvent);
       if (null != locationFromEvent) {
         obj = { location: null };
         obj[0] = locationFromEvent;
         obj.entityMetadata = obj;
       }
-      const obj7 = require(8217) /* getChannelFromEvent */;
+      const obj7 = require(8524) /* getChannelFromEvent */;
     }
     return obj;
   }

@@ -72,7 +72,7 @@ export const SpotifyActionTypes = { USER_ACTIVITY_PLAY: "user_activity_play", US
 export const SPOTIFY_HOSTNAMES = ["open.spotify.com", "www.spotify.com"];
 export const SpotifyEndpoints = frozen;
 export const getSpotifyResourceType = function getSpotifyResourceType(arg0) {
-  if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof arg0 === "ge") {
     return null;
   } else if ("track" === arg0) {
     return obj.TRACK;

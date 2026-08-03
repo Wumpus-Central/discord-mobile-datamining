@@ -33,7 +33,7 @@ export default function InAppReportsBottomButton(button) {
       const intl2 = tmp17(1236).intl;
       const string = intl2.string;
       if (isModeratorReport) {
-        let stringResult = string(importDefault(2325).ZUyreS);
+        let stringResult = string(importDefault(2355).ZUyreS);
       } else {
         const intl3 = tmp17(1236).intl;
         const stringResult1 = string(tmp17(1236).t["G+vU89"]);
@@ -54,7 +54,7 @@ export default function InAppReportsBottomButton(button) {
       const intl4 = tmp17(1236).intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
-        let string2Result = string2(importDefault(2325).psKFdJ);
+        let string2Result = string2(importDefault(2355).psKFdJ);
       } else {
         string2Result = string2(tmp17(1236).t.h6D8Vy);
       }
@@ -70,7 +70,7 @@ export default function InAppReportsBottomButton(button) {
         const obj1 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
         obj1[0] = tmp.descriptionText;
         obj1[3] = tmp3;
-        tmp14Result = tmp14(tmp17(4189).Text, obj1);
+        tmp14Result = tmp14(tmp17(4251).Text, obj1);
       }
       const items1 = [tmp14Result, , ];
       const obj2 = { disabled: null, onPress: null, text: null, variant: null };
@@ -80,7 +80,7 @@ export default function InAppReportsBottomButton(button) {
       };
       obj2[2] = stringResult2;
       obj2[3] = str2;
-      items1[1] = callback(tmp17(4604).Button, obj2);
+      items1[1] = callback(tmp17(4666).Button, obj2);
       tmp14Result = null;
       if (hasError) {
         const obj3 = { style: null, children: null };

@@ -11,11 +11,11 @@ function CoachmarkImage() {
   const tmp = callback();
   let obj = { style: tmp.imageContainer, children: null };
   obj = { source: null, style: null };
-  obj = { uri: importDefault(12247) };
+  obj = { uri: importDefault(12345) };
   obj[0] = obj;
   obj[1] = tmp.image;
-  obj[1] = <closure_5 uri={importDefault(12247)} />;
-  return <closure_4 uri={importDefault(12247)} />;
+  obj[1] = <closure_5 uri={importDefault(12345)} />;
+  return <closure_4 uri={importDefault(12345)} />;
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 let closure_8 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });

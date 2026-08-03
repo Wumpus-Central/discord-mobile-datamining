@@ -9,14 +9,14 @@ createToggle = {
   },
   useDescription() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2225)["7aYkh1"]);
+    return intl.string(importDefault(2255)["7aYkh1"]);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
-    const defaultGuildsRestricted = require(13874) /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
-    const obj = require(13874) /* useParentalControlledExplicitContentSettings */;
-    const selectedTeenId = require(6260) /* useSelectedTeen */.useSelectedTeenId();
-    const ParentalControlledDefaultMessageRequestRestricted = require(13875) /* result */.ParentalControlledDefaultMessageRequestRestricted;
+    const defaultGuildsRestricted = require(13941) /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
+    const obj = require(13941) /* useParentalControlledExplicitContentSettings */;
+    const selectedTeenId = require(7249) /* useSelectedTeen */.useSelectedTeenId();
+    const ParentalControlledDefaultMessageRequestRestricted = require(13942) /* result */.ParentalControlledDefaultMessageRequestRestricted;
     let tmp3 = !defaultGuildsRestricted;
     if (!defaultGuildsRestricted) {
       tmp3 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
@@ -24,22 +24,22 @@ createToggle = {
     return tmp3;
   },
   useIsDisabled() {
-    return require(13874) /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
+    return require(13941) /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
   },
   onValueChange: function onAllowMessageRequestsFromServerMembersValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
       if (!arg0) {
-        let obj = require(14688) /* shouldAgeVerifyForDMDefaultOff */;
+        let obj = require(14755) /* shouldAgeVerifyForDMDefaultOff */;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
           obj = { entryPoint: null };
-          obj[0] = tmp2(6752).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
-          const result = importDefault(6750).showAgeVerificationGetStartedModal(obj);
-          const obj2 = importDefault(6750);
+          obj[0] = tmp2(7710).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
+          const result = importDefault(7708).showAgeVerificationGetStartedModal(obj);
+          const obj2 = importDefault(7708);
         }
         tmp2 = require;
       }
-      const ParentalControlledDefaultMessageRequestRestricted = require(13875) /* result */.ParentalControlledDefaultMessageRequestRestricted;
+      const ParentalControlledDefaultMessageRequestRestricted = require(13942) /* result */.ParentalControlledDefaultMessageRequestRestricted;
       const result1 = ParentalControlledDefaultMessageRequestRestricted.updateControlledSetting(selectedTeenId, !arg0);
     }
   },

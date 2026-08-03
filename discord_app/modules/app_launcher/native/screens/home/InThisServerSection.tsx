@@ -14,7 +14,7 @@ function AppInThisServer(onAppSelected) {
   const tmp3 = application(1348)("AppLauncherInThisServer-native");
   const tmp4 = createCacheKey();
   application = onAppSelected.appItem.application;
-  let obj = onAppSelected(11239);
+  let obj = onAppSelected(11350);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   obj = {
     accessible: true,
@@ -47,11 +47,11 @@ function AppInThisServer(onAppSelected) {
     obj = { iconSource: null, wrapperStyle: null, iconSize: 36 };
     obj[0] = appLauncherIconSource;
     obj[1] = tmp4.iconContainer;
-    tmp8 = callback(application(11244), obj);
+    tmp8 = callback(application(11355), obj);
   }
-  const items1 = [tmp8, callback(onAppSelected(4189).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
+  const items1 = [tmp8, callback(onAppSelected(4251).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj[5] = items1;
-  return closure_6(onAppSelected(8240).PressableScale, obj, application.id);
+  return closure_6(onAppSelected(8547).PressableScale, obj, application.id);
 }
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -100,7 +100,7 @@ export default function InThisServerSection(arg0) {
     obj = { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp11(1236).intl;
     obj[2] = intl.string(require(1236) /* getSystemLocale */.t.oJyzCu);
-    const items1 = [callback(require(4189) /* Text */.Text, obj), ];
+    const items1 = [callback(require(4251) /* Text */.Text, obj), ];
     let tmp5Result = null != dependencyMap;
     if (tmp5Result) {
       const obj1 = { style: null, onPress: null, accessibilityRole: "button", children: null };
@@ -115,8 +115,8 @@ export default function InThisServerSection(arg0) {
       const obj2 = { variant: "text-sm/medium", color: "text-brand", children: null };
       const intl2 = tmp11(1236).intl;
       obj2[2] = intl2.string(tmp11(1236).t["/qG8v7"]);
-      obj1[3] = tmp5(tmp11(4189).Text, obj2);
-      tmp5Result = tmp5(tmp11(4721).PressableOpacity, obj1);
+      obj1[3] = tmp5(tmp11(4251).Text, obj2);
+      tmp5Result = tmp5(tmp11(4783).PressableOpacity, obj1);
     }
     items1[1] = tmp5Result;
     obj[1] = items1;

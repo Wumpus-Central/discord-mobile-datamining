@@ -12,7 +12,7 @@ export default function useChannelLoading(arg0) {
   ({ channelId: require, jumpTargetId: importDefault, oldestUnreadMessageId: dependencyMap, shouldJumpToOriginalPost: _slicedToArray } = arg0);
   let first;
   first = callback(first.useState(() => new callback(table[2])("Messages")), 1)[0];
-  importDefault(4621)(() => {
+  importDefault(4683)(() => {
     let obj = outer1_0(outer1_2[3]);
     obj = { jumpTargetId: closure_1, oldestUnreadMessageId: closure_2, shouldJumpToOriginalPost: callback2(false), channelId: closure_0, tracker: first };
     const result = obj.startOrCancelChannelLatestMessagesLoad(obj);

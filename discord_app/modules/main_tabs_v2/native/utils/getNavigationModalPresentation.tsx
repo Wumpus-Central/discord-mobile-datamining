@@ -40,20 +40,20 @@ export default function getNavigationModalPresentation() {
   obj = { presentation, orientation: null };
   let tmp4;
   if (lockOrientation) {
-    const orientationLock = require(8171) /* handleOrientationChange */.getOrientationLock();
+    const orientationLock = require(8478) /* handleOrientationChange */.getOrientationLock();
     let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
       if (null != orientationLock) {
         str2 = "portrait";
       } else {
-        const orientation = tmp5(8171).getOrientation();
-        const tmp5Result = tmp5(8171);
+        const orientation = tmp5(8478).getOrientation();
+        const tmp5Result = tmp5(8478);
       }
       str4 = str2;
     }
     tmp4 = str4;
-    const obj2 = require(8171) /* handleOrientationChange */;
+    const obj2 = require(8478) /* handleOrientationChange */;
   }
   obj[1] = tmp4;
   return obj;

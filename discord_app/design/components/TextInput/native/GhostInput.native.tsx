@@ -13,7 +13,7 @@ let closure_4 = createCacheKey.createStyles(() => {
     str2 = "default";
   }
   const input = {};
-  const merged = Object.assign({ md: require(4189) /* Text */.TextStyleSheet["text-md/semibold"], lg: require(4189) /* Text */.TextStyleSheet["text-lg/semibold"] }[str]);
+  const merged = Object.assign({ md: require(4251) /* Text */.TextStyleSheet["text-md/semibold"], lg: require(4251) /* Text */.TextStyleSheet["text-lg/semibold"] }[str]);
   if ("error" === str2) {
     let TEXT_DEFAULT = importDefault(712).colors.TEXT_FEEDBACK_CRITICAL;
   } else {
@@ -26,13 +26,13 @@ let closure_4 = createCacheKey.createStyles(() => {
 const result = require("createCacheKey").fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
 
 export const GhostInput = function GhostInput(size) {
-  let obj = require(6743) /* useInputStyles */;
+  let obj = require(5899) /* useInputStyles */;
   obj = { size: size.size };
   const inputStyles = obj.useInputStyles(obj);
   const tmp4 = callback(size.size, size.status);
   const isCentered = size.isCentered;
   const autoFocus = size.autoFocus;
-  const textField = require(6737) /* useTextFieldState */.useTextField(size, undefined);
+  const textField = require(5893) /* useTextFieldState */.useTextField(size, undefined);
   obj = {};
   const merged = Object.assign(size);
   const items = [size.containerStyle, ];
@@ -50,6 +50,6 @@ export const GhostInput = function GhostInput(size) {
   obj1.placeholderTextColor = inputStyles.placeholderText.color;
   obj1.spellCheck = false;
   obj1.autoFocus = undefined === autoFocus || autoFocus;
-  obj.children = jsx(require(6746) /* useKeyboardBlurring */.NativeTextInput, {});
-  return jsx(require(6731) /* Input */.Input, {});
+  obj.children = jsx(require(5902) /* useKeyboardBlurring */.NativeTextInput, {});
+  return jsx(require(7702) /* Input */.Input, {});
 };

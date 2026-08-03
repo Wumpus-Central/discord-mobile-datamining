@@ -42,9 +42,9 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
   if (null != experimentServerAssignment) {
     if (null != system) {
       const system2 = system.system;
-      if (require(4115) /* trackExposureToExperiment */.ExperimentSystem.LEGACY === system2) {
-        return importDefault(7884).getExperimentBucketName(experimentServerAssignment.bucket);
-      } else if (tmp4(4115).ExperimentSystem.APEX === system2) {
+      if (require(4177) /* trackExposureToExperiment */.ExperimentSystem.LEGACY === system2) {
+        return importDefault(8002).getExperimentBucketName(experimentServerAssignment.bucket);
+      } else if (tmp4(4177).ExperimentSystem.APEX === system2) {
         const _HermesInternal = HermesInternal;
         return "Variant " + experimentServerAssignment.variantId;
       } else {
@@ -57,6 +57,6 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
   return null;
 };
 export const getExperimentBuckets = function getExperimentBuckets(experiment) {
-  const experimentVariantsForDevTools = require(7885) /* getExperimentVariantsForDevTools */.getExperimentVariantsForDevTools(experiment);
+  const experimentVariantsForDevTools = require(8003) /* getExperimentVariantsForDevTools */.getExperimentVariantsForDevTools(experiment);
   return experimentVariantsForDevTools.map((id) => ({ id: id.id, label: id.label, value: id.id }));
 };

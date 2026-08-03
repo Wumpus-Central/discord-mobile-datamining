@@ -94,7 +94,7 @@ function _httpGetWithCountryCodeQuery() {
                         let closure_0 = arg0;
                         let c2 = 0;
                         let c3 = 0;
-                        return (/* F119247 */ function*() { ... })();
+                        return (/* F119437 */ function*() { ... })();
                       });
                       return new Promise(function() {
                         const self = this;
@@ -161,7 +161,7 @@ function _httpGetWithCountryCodeQuery() {
               closure_7.payment_source_id = paymentSourceId;
             }
             if (null != defaultBillingCountryCode) {
-              if (typeof obj3 !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof obj3 !== "ge") {
                 obj3 = { url: null, oldFormErrors: true, rejectWithError: false };
                 obj3[0] = obj3;
               }

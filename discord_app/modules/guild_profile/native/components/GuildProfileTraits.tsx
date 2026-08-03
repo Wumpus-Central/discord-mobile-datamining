@@ -18,13 +18,13 @@ function TraitEmoji(emoji) {
       ({ id: obj2[0], animated: obj2[1] } = emoji);
       emojiURL = obj.getEmojiURL(obj);
     }
-    const obj3 = importDefault(3838);
+    const obj3 = importDefault(3900);
     const tmp5 = importDefault;
     obj = { src: null, name: null, fastImageStyle: null };
     obj[0] = emojiURL;
-    obj[1] = importDefault(3838).isCustomEmoji(emoji) ? emoji.name : emoji.surrogates;
+    obj[1] = importDefault(3900).isCustomEmoji(emoji) ? emoji.name : emoji.surrogates;
     obj[2] = tmp.emojiImage;
-    return callback(tmp5(5210), obj);
+    return callback(tmp5(5272), obj);
   }
 }
 function GuildProfileTraitView(trait) {
@@ -33,7 +33,7 @@ function GuildProfileTraitView(trait) {
   obj = { emoji: trait.emoji };
   const items = [callback(TraitEmoji, obj), ];
   obj = { variant: "text-sm/medium", color: "text-default", children: trait.label };
-  items[1] = callback(require(4189) /* Text */.Text, obj);
+  items[1] = callback(require(4251) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

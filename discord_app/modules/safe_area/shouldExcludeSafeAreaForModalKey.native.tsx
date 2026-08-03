@@ -9,12 +9,12 @@ const result = set.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAre
 export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaForModalKey(key) {
   let tmp = null != key;
   if (tmp) {
-    let hasItem = require(4403) /* openChannelCallModal */.isVoiceChannelModalKey(key);
+    let hasItem = require(4465) /* openChannelCallModal */.isVoiceChannelModalKey(key);
     if (!hasItem) {
       hasItem = set.has(key);
     }
     tmp = hasItem;
-    const obj = require(4403) /* openChannelCallModal */;
+    const obj = require(4465) /* openChannelCallModal */;
   }
   return tmp;
 };

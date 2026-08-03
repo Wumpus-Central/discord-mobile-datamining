@@ -10,7 +10,7 @@ let result = require("apply").fileFinishedImporting("design/tokens/native/useTok
 export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
   let obj = require;
   let result = dependencyMap;
-  const themeContext = require(3905) /* ManaContext */.useThemeContext();
+  const themeContext = require(3967) /* ManaContext */.useThemeContext();
   let tmp3 = null;
   if (theme == null) {
     theme = themeContext.theme;
@@ -61,7 +61,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
         semanticColor = value;
         if (BACKGROUND_BASE_LOW in closure_4) {
           const internal5 = tmp6(712).internal;
-          obj = obj(3898);
+          obj = obj(3960);
           result = obj.getSemanticColorContextFromThemeContext(themeContext);
           semanticColor = internal5.resolveSemanticColor(theme, tmp6(712).colors[tmp15[BACKGROUND_BASE_LOW]], result);
         }
@@ -71,8 +71,8 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
       semanticColor = value;
       if (internal6.isSemanticColor(BACKGROUND_BASE_LOW)) {
         const internal4 = tmp6(712).internal;
-        semanticColor = internal4.resolveSemanticColor(theme, BACKGROUND_BASE_LOW, obj(3898).getSemanticColorContextFromThemeContext(themeContext));
-        const objResult = obj(3898);
+        semanticColor = internal4.resolveSemanticColor(theme, BACKGROUND_BASE_LOW, obj(3960).getSemanticColorContextFromThemeContext(themeContext));
+        const objResult = obj(3960);
       }
     }
     resolveResult = tmp14;

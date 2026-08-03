@@ -8,7 +8,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/c
 export default function CrunchyrollLinkDiscordError(onClose) {
   let obj = require(1480) /* useNavigation */;
   const navigation = obj.useNavigation();
-  const connectRetry = require(8988) /* useConnectRetry */.useConnectRetry(navigation, constants.PRE_CONNECT);
+  const connectRetry = require(9165) /* useConnectRetry */.useConnectRetry(navigation, constants.PRE_CONNECT);
   obj = { title: null, body: null, onClose: null, onRetry: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t["8YK70c"]);
@@ -16,5 +16,5 @@ export default function CrunchyrollLinkDiscordError(onClose) {
   obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.moyYLf);
   obj[2] = onClose.onClose;
   obj[3] = connectRetry;
-  return jsx(require(8989) /* TwoWayLinkError */.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
+  return jsx(require(9166) /* TwoWayLinkError */.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 };

@@ -11,7 +11,7 @@ export default function useActivityTimer(start) {
   start = start.start;
   let first;
   let importDefault;
-  const interval = new first(4078).Interval();
+  const interval = new first(4140).Interval();
   first = callback(callback3(interval), 1)[0];
   const tmp3 = callback(callback3(() => Date.now()), 2);
   importDefault = tmp3[1];
@@ -60,5 +60,5 @@ export const formatTimeForA11yLabel = function formatTimeForA11yLabel(arg0) {
   const rounded1 = Math.floor(arg0 / importDefault(687).Seconds.MINUTE);
   const minutes = rounded1 % importDefault(687).Seconds.MINUTE;
   const hours = Math.floor(arg0 / importDefault(687).Seconds.HOUR);
-  return require(7918) /* calculateTimestampDurations */.formatTimestampToA11yLabel({ hours, minutes, seconds });
+  return require(8036) /* calculateTimestampDurations */.formatTimestampToA11yLabel({ hours, minutes, seconds });
 };

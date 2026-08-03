@@ -2,7 +2,7 @@ import noop from "noop";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-let result = require("module_4054").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
+let result = require("module_4116").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
 
 export const TableCheckboxRow = function TableCheckboxRow(checked) {
   let accessibilityRole;

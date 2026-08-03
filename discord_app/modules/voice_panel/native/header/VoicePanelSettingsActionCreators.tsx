@@ -3,10 +3,10 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/voice_
 
 export const VOICE_PANEL_SETTINGS_ACTION_SHEET_KEY = "VoicePanelSettingsActionSheet";
 export const closeVoicePanelSettingsActionSheet = function closeVoicePanelSettingsActionSheet() {
-  importDefault(4161).hideActionSheet(VoicePanelSettingsActionSheet);
+  importDefault(4223).hideActionSheet(VoicePanelSettingsActionSheet);
 };
 export const openVoicePanelSettingsActionSheet = function openVoicePanelSettingsActionSheet(guildId, channelId) {
-  let obj = importDefault(4161);
+  let obj = importDefault(4223);
   obj = { guildId, channelId };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(15958, dependencyMap.paths), VoicePanelSettingsActionSheet, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(16022, dependencyMap.paths), VoicePanelSettingsActionSheet, obj);
 };

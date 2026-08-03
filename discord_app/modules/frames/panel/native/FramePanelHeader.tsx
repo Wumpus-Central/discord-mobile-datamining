@@ -26,17 +26,17 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
     applicationId = stateFromStores.applicationId;
   }
   const items1 = [applicationId];
-  const first = callback(importDefault(5525)(items1), 1)[0];
-  let tmpResult = tmp(15872);
+  const first = callback(importDefault(5587)(items1), 1)[0];
+  let tmpResult = tmp(15936);
   const baseActivityPanelHeaderContent = tmpResult.useBaseActivityPanelHeaderContent({ landscape, setMode, wrapperOffset, pipState });
   ({ gesture, headerWrapperStyles, headerStyles } = baseActivityPanelHeaderContent);
-  tmpResult = tmp(15872);
+  tmpResult = tmp(15936);
   const minimizeAndQuestButtonContainerStyles = tmpResult.useMinimizeAndQuestButtonContainerStyles();
   if (null == stateFromStores) {
     return null;
   } else {
     let id;
-    let tmp5Result = tmp5(15874);
+    let tmp5Result = tmp5(15938);
     if (first != null) {
       id = first.id;
     }
@@ -58,7 +58,7 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
     items2[1] = prop;
     obj1[0] = items2;
     let tmp15;
-    tmp5Result = tmp5(15878);
+    tmp5Result = tmp5(15942);
     if (!landscape) {
       let name;
       if (first != null) {
@@ -74,7 +74,7 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
     if (tmp20Result) {
       const obj3 = { applicationId: null };
       obj3[0] = applicationId;
-      tmp20Result = tmp20(tmp5(15879), obj3);
+      tmp20Result = tmp20(tmp5(15943), obj3);
     }
     items3[1] = tmp20Result;
     let tmp18 = null;
@@ -92,14 +92,14 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
     const obj4 = { frame: null, setMode: null };
     obj4[0] = stateFromStores;
     obj4[1] = setMode;
-    items4[2] = closure_6(tmp5(15897), obj4);
+    items4[2] = closure_6(tmp5(15961), obj4);
     obj[5] = items4;
-    return closure_7(tmp(15872).BaseActivityPanelContent, obj);
+    return closure_7(tmp(15936).BaseActivityPanelContent, obj);
   }
 });
 const memoResult = importAllResult.memo(() => {
-  let obj = require(15872) /* useBaseActivityPanelHeaderContent */;
-  obj = { context: importDefault(15889) };
+  let obj = require(15936) /* useBaseActivityPanelHeaderContent */;
+  obj = { context: importDefault(15953) };
   const baseActivityPanelHeader = obj.useBaseActivityPanelHeader(obj);
   obj = { style: baseActivityPanelHeader.headerStyles, children: callback2(closure_8, obj1) };
   return callback2(View, obj);

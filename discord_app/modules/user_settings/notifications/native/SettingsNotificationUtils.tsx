@@ -4,8 +4,8 @@ export const hasAndroidNotificationChannels = function hasAndroidNotificationCha
   let isAndroidResult = require(500) /* set */.isAndroid();
   if (isAndroidResult) {
     const _parseInt = parseInt;
-    isAndroidResult = parseInt(require(4173) /* DCDDeviceManager */.getSystemVersion(), 10) >= 26;
-    const tmpResult = require(4173) /* DCDDeviceManager */;
+    isAndroidResult = parseInt(require(4235) /* DCDDeviceManager */.getSystemVersion(), 10) >= 26;
+    const tmpResult = require(4235) /* DCDDeviceManager */;
   }
   return isAndroidResult;
 };

@@ -3,7 +3,7 @@ import { Features } from "DesktopSources";
 const result = require("set").fileFinishedImporting("modules/clips/isClientClipsCapable.tsx");
 
 export default function isClientClipsCapable(getMediaEngine) {
-  const ClipsExperiment = require(4252) /* apexExperiment */.ClipsExperiment;
+  const ClipsExperiment = require(4314) /* apexExperiment */.ClipsExperiment;
   let ignorePlatformRestriction = ClipsExperiment.getConfig({ location: "isClipsClientCapable" }).ignorePlatformRestriction;
   if (!ignorePlatformRestriction) {
     let isDesktopResult = importAll(500).isDesktop();

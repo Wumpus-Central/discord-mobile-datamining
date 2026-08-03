@@ -10,10 +10,10 @@ export const openShopGiftModal = function openShopGiftModal(arg0) {
   let onGiftModalDismiss;
   let skuId;
   ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = arg0);
-  let obj = importDefault(4399);
+  let obj = importDefault(4461);
   obj = { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin };
-  obj.pushLazy(require(1959) /* asyncRequireImpl */(8779, dependencyMap.paths), obj, c3, navigationParams);
+  obj.pushLazy(require(1959) /* asyncRequireImpl */(8956, dependencyMap.paths), obj, c3, navigationParams);
 };
 export const closeShopGiftModal = function closeShopGiftModal() {
-  importDefault(4399).popWithKey(c3);
+  importDefault(4461).popWithKey(c3);
 };

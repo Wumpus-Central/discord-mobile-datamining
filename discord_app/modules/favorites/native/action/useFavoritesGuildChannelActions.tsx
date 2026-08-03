@@ -9,7 +9,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   let hasAccess;
   let hasHigherPrivileges;
   const _require = channelId;
-  let obj = _require(10228);
+  let obj = _require(10367);
   const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildChannelList);
   ({ hasAccess, hasHigherPrivileges } = favoritesAccess);
   let result = _require(1865).canFavoriteChannelType(channelId, hasHigherPrivileges);
@@ -18,8 +18,8 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   const items = [initializeFromUserSettings];
   const stateFromStores = _require(589).useStateFromStores(items, () => outer1_4.isFavorite(channelId.id));
   const obj3 = _require(589);
-  const isFavoritesGuildSelected = _require(10228).useIsFavoritesGuildSelected();
-  const obj4 = _require(10228);
+  const isFavoritesGuildSelected = _require(10367).useIsFavoritesGuildSelected();
+  const obj4 = _require(10367);
   const items1 = [trackCommunicationDisabled, fetchFingerprint];
   if (result) {
     result = obj5.useStateFromStores(items1, () => {
@@ -41,7 +41,7 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10234).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10373).useFavoritesBetaTagDismissibleContent(tmp7);
   obj = { hasFavoritesAccess: hasAccess, canFavoriteChannel: result, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
   return obj;
 };

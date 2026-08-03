@@ -4,15 +4,15 @@ import createToggle from "createToggle";
 const pressable = createToggle.createPressable({
   useTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2743)["bD//cU"]);
+    return intl.string(importDefault(2773)["bD//cU"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2743).Gn0SAj);
+    return intl.string(importDefault(2773).Gn0SAj);
   },
   onPress() {
-    require(4534) /* useAlertStore */.openAlert(require(13824) /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(require(13824) /* SettingsAgeGroupResetAlert */.default, {}));
+    require(4596) /* useAlertStore */.openAlert(require(13891) /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(require(13891) /* SettingsAgeGroupResetAlert */.default, {}));
   },
   withArrow: true,
   usePredicate: require("useAgeVerificationRunner").useShowAssignedAgeGroupSettings
@@ -20,15 +20,15 @@ const pressable = createToggle.createPressable({
 const obj = {
   useTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2743)["bD//cU"]);
+    return intl.string(importDefault(2773)["bD//cU"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2743).Gn0SAj);
+    return intl.string(importDefault(2773).Gn0SAj);
   },
   onPress() {
-    require(4534) /* useAlertStore */.openAlert(require(13824) /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(require(13824) /* SettingsAgeGroupResetAlert */.default, {}));
+    require(4596) /* useAlertStore */.openAlert(require(13891) /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(require(13891) /* SettingsAgeGroupResetAlert */.default, {}));
   },
   withArrow: true,
   usePredicate: require("useAgeVerificationRunner").useShowAssignedAgeGroupSettings

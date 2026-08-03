@@ -20,13 +20,13 @@ prototype["getMaxFileSize"] = function getMaxFileSize(arg0) {
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  return importAll(4731).maxFileSize(guild_id);
+  return importAll(4793).maxFileSize(guild_id);
 };
 prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return closure_6;
 };
 prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return require(4727) /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
+  return require(4789) /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
 };
 Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {
@@ -40,14 +40,14 @@ const result = require("getUploadFileSizeSum").fileFinishedImporting("lib/upload
 export const UploadTargets = obj;
 export const getUploadTarget = function getUploadTarget(target) {
   if (obj.GUILD_PRODUCT_ATTACHMENT === target) {
-    const tmp14 = new importDefault(4768)();
+    const tmp14 = new importDefault(4830)();
     return tmp14;
   } else if (tmp.GRAVITY_ATTACHMENT === target) {
-    const tmp8 = new importDefault(4770)();
+    const tmp8 = new importDefault(4832)();
     return tmp8;
   } else {
     const MESSAGE_ATTACHMENT = tmp.MESSAGE_ATTACHMENT;
-    if (typeof MessageAttachmentUploadTarget !== "fileFinishedImporting") {
+    if (typeof MessageAttachmentUploadTarget !== "error") {
       HermesBuiltin.throwTypeError();
     }
     return Object.create(MessageAttachmentUploadTarget.prototype);

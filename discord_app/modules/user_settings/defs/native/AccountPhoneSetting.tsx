@@ -21,10 +21,10 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = importDefault(4399);
+    let obj = importDefault(4461);
     obj = { allowDeletePhone: true, reason: null };
-    obj[1] = require(9244) /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(9241, dependencyMap.paths), obj, closure_4);
+    obj[1] = require(9417) /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    obj.pushLazy(require(1959) /* asyncRequireImpl */(9414, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

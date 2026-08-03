@@ -80,9 +80,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "description", purchaseType: "isArray", storeHasPrice: "isArray" };
-    obj[2] = SELF_PURCHASE;
-    obj[3] = null != stateFromStores1;
+    obj = { userPrice: "r", pricesForPurchaseType: "op", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj;
   }, items1);
   userPrice = memo.userPrice;
@@ -213,26 +211,26 @@ function formatSKUPrice(arg0, arg1) {
   ({ normalPrice, discountedPrice, discountPercent, userPrice } = arg0);
   let formatPriceResult = null;
   if (null != normalPrice) {
-    let obj = require(5673) /* formatSingleCurrencyPrice */;
+    let obj = require(5735) /* formatSingleCurrencyPrice */;
     formatPriceResult = obj.formatPrice(normalPrice.amount, normalPrice.currency);
   }
   obj = { normalPrice: formatPriceResult, discountedPrice: null, discountPercent: null, userPrice: null };
   let formatPriceResult1 = null;
   if (null != discountedPrice) {
-    formatPriceResult1 = require(5673) /* formatSingleCurrencyPrice */.formatPrice(discountedPrice.amount, discountedPrice.currency);
-    const obj3 = require(5673) /* formatSingleCurrencyPrice */;
+    formatPriceResult1 = require(5735) /* formatSingleCurrencyPrice */.formatPrice(discountedPrice.amount, discountedPrice.currency);
+    const obj3 = require(5735) /* formatSingleCurrencyPrice */;
   }
   obj[1] = formatPriceResult1;
   let formatPercentResult = null;
   if (null != discountPercent) {
-    formatPercentResult = require(5673) /* formatSingleCurrencyPrice */.formatPercent(arg1, -discountPercent / 100);
-    const obj4 = require(5673) /* formatSingleCurrencyPrice */;
+    formatPercentResult = require(5735) /* formatSingleCurrencyPrice */.formatPercent(arg1, -discountPercent / 100);
+    const obj4 = require(5735) /* formatSingleCurrencyPrice */;
   }
   obj[2] = formatPercentResult;
   let formatPriceResult2 = null;
   if (null != userPrice) {
-    formatPriceResult2 = require(5673) /* formatSingleCurrencyPrice */.formatPrice(userPrice.amount, userPrice.currency);
-    const obj5 = require(5673) /* formatSingleCurrencyPrice */;
+    formatPriceResult2 = require(5735) /* formatSingleCurrencyPrice */.formatPrice(userPrice.amount, userPrice.currency);
+    const obj5 = require(5735) /* formatSingleCurrencyPrice */;
   }
   obj[3] = formatPriceResult2;
   return obj;
@@ -256,13 +254,13 @@ export const transformStorefrontPricesServer = function transformStorefrontPrice
 };
 export const transformPriceSetAssignmentToStorefrontPurchaseType = function transformPriceSetAssignmentToStorefrontPurchaseType(arg0) {
   if (null == arg0) {
-    return require(5672) /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return require(5734) /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
   } else if (constants.DEFAULT === arg0) {
-    return require(5672) /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return require(5734) /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
   } else if (tmp9.GIFT === arg0) {
-    return require(5672) /* StorefrontPromotionRewardType */.StorefrontPurchaseType.GIFT;
+    return require(5734) /* StorefrontPromotionRewardType */.StorefrontPurchaseType.GIFT;
   } else {
-    return require(5672) /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return require(5734) /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
   }
 };
 export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableOnThisPlatform(sku) {
@@ -382,9 +380,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    obj = { userPrice: "r", pricesForPurchaseType: "description", purchaseType: "isArray", storeHasPrice: "isArray" };
-    obj[2] = SELF_PURCHASE;
-    obj[3] = null != stateFromStores1;
+    obj = { userPrice: "r", pricesForPurchaseType: "op", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj;
   }, items1);
   userPrice = memo.userPrice;

@@ -36,12 +36,12 @@ export default function AppealIngestionExternalLink(children) {
   };
   obj = { style: tmp.childContainer, children: null };
   obj = { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text };
-  const items = [callback(require(4189) /* Text */.Text, obj), ];
+  const items = [callback(require(4251) /* Text */.Text, obj), ];
   const obj1 = { source: null, color: null };
-  obj1[0] = require(7708) /* registerAsset */;
+  obj1[0] = require(7829) /* registerAsset */;
   obj1[1] = tmp.chevron.color;
   items[1] = callback(require(1297) /* Button */.Icon, obj1);
   obj[1] = items;
   obj[3] = callback2(View, obj);
-  return callback(require(4721) /* PressableBase */.PressableHighlight, obj);
+  return callback(require(4783) /* PressableBase */.PressableHighlight, obj);
 };

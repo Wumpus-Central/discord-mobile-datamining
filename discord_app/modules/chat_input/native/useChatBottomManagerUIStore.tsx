@@ -18,7 +18,7 @@ export default obj;
 export const updateChatInputContainerHeight = function updateChatInputContainerHeight(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  if (typeof arg0 !== "__REMOTEDEV__") {
+  if (typeof arg0 !== "SENTRY_RELEASE") {
     const Storage = _require(595).Storage;
     let result = Storage.set(chatInputContainerHeight, arg1);
   }

@@ -14,7 +14,7 @@ createToggle = {
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
     mode = mode.getMode();
-    let obj = importDefault(8847);
+    let obj = importDefault(9024);
     obj = { vadUseKrisp };
     obj.setMode(mode, obj);
   },

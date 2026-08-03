@@ -9,13 +9,13 @@ let error;
 const require = arg1;
 function handleMessageSendFailedAutomod(messageData) {
   messageData = messageData.messageData;
-  let obj = require(6149) /* items */;
+  let obj = require(7201) /* items */;
   const failedMessageId = obj.getFailedMessageId(messageData);
   obj = { id: failedMessageId, isBlockedEdit: null, messageData: null, errorMessage: null };
-  obj[1] = require(6149) /* items */.isMessageDataEdit(messageData);
+  obj[1] = require(7201) /* items */.isMessageDataEdit(messageData);
   obj[2] = messageData;
-  const obj3 = require(6149) /* items */;
-  obj[3] = require(6181) /* getAutomodErrorMessageFromErrorResponse */.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
+  const obj3 = require(7201) /* items */;
+  obj[3] = require(7233) /* getAutomodErrorMessageFromErrorResponse */.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
   closure_8[failedMessageId] = obj;
   closure_9 = closure_9 + 1;
   return true;
@@ -129,18 +129,18 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(require("dispatche
     } else if (message.type !== constants2.AUTO_MODERATION_ACTION) {
       return false;
     } else {
-      const messageRecord = require(4413) /* createMinimalMessageRecord */.createMessageRecord(message);
-      const obj = require(4413) /* createMinimalMessageRecord */;
+      const messageRecord = require(4475) /* createMinimalMessageRecord */.createMessageRecord(message);
+      const obj = require(4475) /* createMinimalMessageRecord */;
       const tmp = require;
-      let result = require(5769) /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(messageRecord);
+      let result = require(6864) /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(messageRecord);
       if (result) {
-        let flag = tmp(5769).isAutomodNotification(messageRecord);
+        let flag = tmp(6864).isAutomodNotification(messageRecord);
         if (flag) {
           closure_11[guildId] = messageRecord.id;
           flag = true;
         }
         result = flag;
-        const tmpResult = tmp(5769);
+        const tmpResult = tmp(6864);
       }
       return result;
     }

@@ -31,9 +31,9 @@ export default function InstantInviteAgeText(style) {
     const items1 = [tmp.inviteAgeContainer, style.style];
     obj[0] = items1;
     obj = { variant: "text-xs/normal", children: null };
-    const items2 = [tmp2(8354).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
+    const items2 = [tmp2(8659).maxAgeString(stateFromStores.maxAge, stateFromStores.maxUses), " "];
     obj[1] = items2;
-    const items3 = [callback(tmp2(4189).Text, obj), ];
+    const items3 = [callback(tmp2(4251).Text, obj), ];
     if (canEditInvite) {
       const obj1 = { onPress: null, accessibilityRole: "link", accessibilityLabel: null, hitSlop: null, children: null };
       obj1[0] = function onPress() {
@@ -48,13 +48,13 @@ export default function InstantInviteAgeText(style) {
       const obj2 = { variant: "text-xs/normal", color: "text-link", children: null };
       const intl2 = tmp2(1236).intl;
       obj2[2] = intl2.string(tmp2(1236).t["VNe8P/"]);
-      obj1[4] = callback2(tmp2(4189).Text, obj2);
-      canEditInvite = callback2(tmp2(4721).PressableOpacity, obj1);
+      obj1[4] = callback2(tmp2(4251).Text, obj2);
+      canEditInvite = callback2(tmp2(4783).PressableOpacity, obj1);
     }
     items3[1] = canEditInvite;
     obj[1] = items3;
     tmp6Result = callback(View, obj);
-    const tmp2Result = tmp2(8354);
+    const tmp2Result = tmp2(8659);
     const tmp6 = callback;
     const tmp7 = View;
   }

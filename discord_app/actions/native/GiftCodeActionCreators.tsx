@@ -84,7 +84,7 @@ function _redeemGiftCode() {
               return obj1;
             } else {
               if (obj18.getIsPaymentsBlocked()) {
-                options(6359)();
+                options(7354)();
                 paymentSource = 3;
                 return { value: "HermesInternal", done: null };
               } else {
@@ -122,12 +122,12 @@ function _redeemGiftCode() {
                 obj5[0] = HTTP.post(obj3);
                 return obj5;
               }
-              obj18 = callback(6294);
+              obj18 = callback(6778);
             }
           } else if (2 === tmp7) {
             channelId = 0;
             let closure_10 = c3;
-            billingError = new callback(4092).BillingError(closure_10);
+            billingError = new callback(4154).BillingError(closure_10);
             obj3 = options(709);
             obj6 = { type: "GIFT_CODE_REDEEM_FAILURE", code: null, error: null };
             obj6[1] = callback;
@@ -191,9 +191,9 @@ function _redeemGiftCode() {
   return applyArgumentsResult;
 }
 function openGiftCodeRedeemModal(code) {
-  let obj = importDefault(4399);
+  let obj = importDefault(4461);
   obj = { code };
-  obj.pushLazy(require(1959) /* asyncRequireImpl */(8041, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
+  obj.pushLazy(require(1959) /* asyncRequireImpl */(8374, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 ({ Endpoints: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = Object.freeze({});

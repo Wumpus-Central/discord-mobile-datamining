@@ -21,7 +21,7 @@ export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   const intl2 = senderId(1236).intl;
   obj[1] = intl2.string(senderId(1236).t.w2ve0t);
   obj[2] = senderId.handleMutePressed;
-  obj[3] = jsx(senderId(10241).BellSlashIcon, {});
-  obj[1] = jsx(senderId(5224).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-  return jsx(senderId(5558).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
+  obj[3] = jsx(senderId(10380).BellSlashIcon, {});
+  obj[1] = jsx(senderId(5286).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(5620).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
 };

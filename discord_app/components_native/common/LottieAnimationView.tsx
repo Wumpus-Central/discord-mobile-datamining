@@ -65,7 +65,7 @@ prototype["render"] = function render() {
   items1 = [tmp4, style];
   const tmp = callback(props, closure_2);
   const merged = Object.assign(tmp);
-  obj[2] = jsx(importDefault(5511), { ref: this.setRef, source, style: items1 });
+  obj[2] = jsx(importDefault(5573), { ref: this.setRef, source, style: items1 });
   return <View ref={this.setRef} source={source} style={items1} />;
 };
 LottieAnimationView.defaultProps = { autoPlay: true, loop: true, collapsable: false };

@@ -85,7 +85,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
     }
     const obj2 = { content: null };
     obj2[0] = str;
-    const merged = Object.assign(importDefault(7751)(message));
+    const merged = Object.assign(importDefault(7870)(message));
     return obj2;
   }
 };

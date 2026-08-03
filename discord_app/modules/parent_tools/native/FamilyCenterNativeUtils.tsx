@@ -21,25 +21,25 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
     obj[1] = match[1];
     obj[2] = FamilyCenterQRCodeScan;
     obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
-    importDefault(5800).setPendingConnection(match[1], match[2]);
-    const obj3 = importDefault(5800);
+    importDefault(6895).setPendingConnection(match[1], match[2]);
+    const obj3 = importDefault(6895);
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    importDefault(4399).pushLazy(require(1959) /* asyncRequireImpl */(11122, dependencyMap.paths), obj, c7);
+    importDefault(4461).pushLazy(require(1959) /* asyncRequireImpl */(11235, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
   pendingConnection = pendingConnection.getPendingConnection();
   let flag = null != pendingConnection;
   if (flag) {
-    let obj = importDefault(4399);
+    let obj = importDefault(4461);
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    importDefault(4399).pushLazy(require(1959) /* asyncRequireImpl */(11122, dependencyMap.paths), obj, c7);
+    importDefault(4461).pushLazy(require(1959) /* asyncRequireImpl */(11235, dependencyMap.paths), obj, c7);
     flag = true;
-    const obj2 = importDefault(4399);
+    const obj2 = importDefault(4461);
   }
   return flag;
 };

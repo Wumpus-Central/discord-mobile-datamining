@@ -1,4 +1,4 @@
-let obj = { duration: 1, reduceMotion: require("module_4054").ReduceMotion.Always };
+let obj = { duration: 1, reduceMotion: require("module_4116").ReduceMotion.Always };
 obj = {};
 const merged = Object.assign(obj);
 obj.reduceMotion = undefined;

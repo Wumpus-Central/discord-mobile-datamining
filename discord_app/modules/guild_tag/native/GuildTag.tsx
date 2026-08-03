@@ -82,7 +82,7 @@ const memoResult1 = importAllResult.memo((textVariant) => {
     let tmp4 = closure_1;
     if (null != closure_1) {
       tmp4 = tmp3;
-      if (typeof tmp3 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof tmp3 !== "ge") {
         let obj = { source: null, size: null };
         obj = { uri: null };
         obj[0] = tmp3;

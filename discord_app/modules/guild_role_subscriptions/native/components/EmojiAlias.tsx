@@ -18,9 +18,9 @@ export default function EmojiAlias(arg0) {
   let obj = { style: items, children: null };
   items = [tmp.emojiAlias, style];
   obj = { style: tmp.emojiColon, "aria-hidden": true, variant: "text-md/medium", color: "text-muted", children: ":" };
-  const items1 = [callback(require(4189) /* Text */.Text, obj), callback(require(4189) /* Text */.Text, { lineClamp: 1, variant: "text-md/bold", color: "interactive-text-active", children: name }), ];
+  const items1 = [callback(require(4251) /* Text */.Text, obj), callback(require(4251) /* Text */.Text, { lineClamp: 1, variant: "text-md/bold", color: "interactive-text-active", children: name }), ];
   obj = { style: tmp.emojiColon, "aria-hidden": true, variant: "text-md/medium", color: "text-muted", children: ":" };
-  items1[2] = callback(require(4189) /* Text */.Text, obj);
+  items1[2] = callback(require(4251) /* Text */.Text, obj);
   obj[1] = items1;
   return callback2(View, obj);
 };

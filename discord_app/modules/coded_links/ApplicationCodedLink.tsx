@@ -15,11 +15,11 @@ export const isApplicationCodedLinkMobileSupported = function isApplicationCoded
   return require(1351) /* isDiscordFrontendDevelopment */.isInSet(type, set1);
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
-  if (require(4182) /* CodedLinkType */.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
-    if (tmp(4182).CodedLinkType.APP_OAUTH2_LINK !== type) {
-      if (tmp(4182).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
-        if (tmp(4182).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
-          let tmpResult = tmp(5979);
+  if (require(4244) /* CodedLinkType */.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
+    if (tmp(4244).CodedLinkType.APP_OAUTH2_LINK !== type) {
+      if (tmp(4244).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
+        if (tmp(4244).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {
+          let tmpResult = tmp(7058);
           const result = tmpResult.parseStorefrontSkuCodedLink(code);
           let tmp5 = null;
           if (null != result) {
@@ -29,11 +29,11 @@ export const getApplicationCodedLinkData = function getApplicationCodedLinkData(
             tmp5 = obj;
           }
           return tmp5;
-        } else if (tmp(4182).CodedLinkType.ACTIVITY_BOOKMARK === type) {
+        } else if (tmp(4244).CodedLinkType.ACTIVITY_BOOKMARK === type) {
           obj = { type: null, applicationId: null, params: null };
           obj[0] = type;
           obj[1] = code;
-          tmpResult = tmp(5980);
+          tmpResult = tmp(7059);
           obj[2] = tmpResult.extractActivityBookmarkParams(url);
           return obj;
         }

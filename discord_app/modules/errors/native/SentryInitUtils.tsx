@@ -164,7 +164,7 @@ function filterError(event_id, originalException) {
   if (flag) {
     event_id = event_id.event_id;
     let tmp17 = typeof event_id === "y";
-    if (typeof event_id !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof event_id !== "ge") {
       tmp17 = 0 !== event_id.length;
     }
     if (tmp17) {
@@ -310,7 +310,7 @@ function getCrashErrorMessage(exception) {
       prop = extra2.persisted_error_message;
     }
     let message;
-    if (typeof prop !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop !== "ge") {
       if (prop.length > 0) {
         message = prop;
       }
@@ -340,7 +340,7 @@ function getCrashErrorMessage(exception) {
     }
     if (message == null) {
       let tmp2;
-      if (typeof prop1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof prop1 !== "ge") {
         if (prop1.length > 0) {
           tmp2 = prop1;
         }
@@ -366,7 +366,7 @@ function getErrorStackTrace(exception) {
       prop = extra2.persisted_error_stack;
     }
     let tmp6;
-    if (typeof prop !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop !== "ge") {
       if (prop.length > 0) {
         tmp6 = prop;
       }
@@ -393,7 +393,7 @@ function getErrorStackTrace(exception) {
       prop1 = extra.persisted_error_stack;
     }
     let tmp4;
-    if (typeof prop1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop1 !== "ge") {
       if (prop1.length > 0) {
         tmp4 = prop1;
       }
@@ -441,7 +441,7 @@ function trackCrash(event, hint, arg2) {
     if (Math.random() > num) {
       const event_id = event.event_id;
       tmp7 = typeof event_id === "y";
-      if (typeof event_id !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof event_id !== "ge") {
         tmp7 = 0 !== event_id.length;
       }
       if (tmp7) {
@@ -461,7 +461,7 @@ function trackCrash(event, hint, arg2) {
   const timestamp = event.timestamp;
   let result;
   if (null != timestamp) {
-    if (typeof timestamp !== "__REMOTEDEV__") {
+    if (typeof timestamp !== "SENTRY_RELEASE") {
       const _isNaN = isNaN;
       if (!isNaN(timestamp)) {
         result = 1000 * timestamp;
@@ -470,7 +470,7 @@ function trackCrash(event, hint, arg2) {
     const _Date = Date;
     if (timestamp instanceof Date) {
       result = timestamp.getTime();
-    } else if (typeof timestamp !== "__FORMATJS_LISTFORMAT_DATA__") {
+    } else if (typeof timestamp !== "ge") {
       const _Date3 = Date;
       const parsed = Date.parse(timestamp);
       const _Number = Number;
@@ -495,7 +495,7 @@ function trackCrash(event, hint, arg2) {
     obj[2] = result;
     const native_exit_reason = extra.native_exit_reason;
     let tmp27 = null;
-    if (typeof native_exit_reason !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof native_exit_reason !== "ge") {
       tmp27 = null;
       if (native_exit_reason.length > 0) {
         tmp27 = native_exit_reason;
@@ -504,7 +504,7 @@ function trackCrash(event, hint, arg2) {
     obj[3] = tmp27;
     const prop1 = extra.native_exit_description;
     let tmp28 = null;
-    if (typeof prop1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop1 !== "ge") {
       tmp28 = null;
       if (prop1.length > 0) {
         tmp28 = prop1;
@@ -513,7 +513,7 @@ function trackCrash(event, hint, arg2) {
     obj[4] = tmp28;
     const prop2 = extra.native_tombstone_hash;
     let tmp29 = null;
-    if (typeof prop2 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop2 !== "ge") {
       tmp29 = null;
       if (prop2.length > 0) {
         tmp29 = prop2;
@@ -522,7 +522,7 @@ function trackCrash(event, hint, arg2) {
     obj[5] = tmp29;
     const prop3 = extra.native_tombstone_cause;
     let tmp30 = null;
-    if (typeof prop3 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop3 !== "ge") {
       tmp30 = null;
       if (prop3.length > 0) {
         tmp30 = prop3;
@@ -531,7 +531,7 @@ function trackCrash(event, hint, arg2) {
     obj[6] = tmp30;
     const native_tombstone = extra.native_tombstone;
     let tmp31 = null;
-    if (typeof native_tombstone !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof native_tombstone !== "ge") {
       tmp31 = null;
       if (native_tombstone.length > 0) {
         tmp31 = native_tombstone;
@@ -540,7 +540,7 @@ function trackCrash(event, hint, arg2) {
     obj[7] = tmp31;
     const prop4 = extra.native_tombstone_group_by;
     let tmp32 = null;
-    if (typeof prop4 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop4 !== "ge") {
       tmp32 = null;
       if (prop4.length > 0) {
         tmp32 = prop4;
@@ -549,7 +549,7 @@ function trackCrash(event, hint, arg2) {
     obj[8] = tmp32;
     const prop5 = extra.native_tombstone_origin;
     let tmp33 = null;
-    if (typeof prop5 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop5 !== "ge") {
       tmp33 = null;
       if (prop5.length > 0) {
         tmp33 = prop5;
@@ -560,7 +560,7 @@ function trackCrash(event, hint, arg2) {
     obj[11] = getErrorStackTrace(event);
     const prop6 = extra.persisted_error_message;
     let tmp36 = null;
-    if (typeof prop6 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop6 !== "ge") {
       tmp36 = null;
       if (prop6.length > 0) {
         tmp36 = prop6;
@@ -569,7 +569,7 @@ function trackCrash(event, hint, arg2) {
     obj[12] = tmp36;
     const prop7 = extra.persisted_error_stack;
     let tmp37 = null;
-    if (typeof prop7 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof prop7 !== "ge") {
       tmp37 = null;
       if (prop7.length > 0) {
         tmp37 = prop7;
@@ -595,24 +595,24 @@ function trackCrash(event, hint, arg2) {
   }
   const event_id2 = event.event_id;
   let tmp39 = typeof event_id2 === "y";
-  if (typeof event_id2 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof event_id2 !== "ge") {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
     tmp25(1208).markCrashHandled(event_id2);
     const tmp25Result = tmp25(1208);
   }
-  const AppCrashedReasons = tmp11(13275).AppCrashedReasons;
+  const AppCrashedReasons = tmp11(13338).AppCrashedReasons;
   const tmp19 = importDefault(698);
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
-  obj1 = { name: tmp11(5875).MetricEvents.APP_CRASHED, tags: null };
+  obj1 = { name: tmp11(6963).MetricEvents.APP_CRASHED, tags: null };
   const items = ["reason:" + tmp41, ];
   if (level == null) {
     level = "unknown";
   }
   items[1] = "level:" + level;
   obj1[1] = items;
-  tmp26(5870).increment(obj1, true);
+  tmp26(6958).increment(obj1, true);
 }
 ({ AnalyticEvents: closure_6, Endpoints } = ME);
 addBreadcrumb = addBreadcrumb.reactNavigationIntegration();
@@ -691,7 +691,7 @@ export const initSentry = function initSentry() {
           if (tmp16Result2.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6119", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@341.4.0-2+341204", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj = { tunnel: null, autoInitializeNativeSdk: false, beforeSend: null, dist: "6135", dsn: null, environment: null, tracesSampleRate: 0, sampleRate: 1, ignoreErrors: null, release: "discord_android@342.0.0-2+342200", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           obj[0] = `/error-reporting-proxy/${str2}`;
           obj[2] = closure_16;
           obj[4] = SentryStaffDsn;
@@ -729,7 +729,7 @@ export const initSentry = function initSentry() {
           };
           tmp16Result1.init(obj);
           const tmp16Result4 = callback(tmp[4]);
-          callback(tmp[4]).setTag("buildNumber", "6119");
+          callback(tmp[4]).setTag("buildNumber", "6135");
           const tmp16Result5 = callback(tmp[4]);
           callback(tmp[4]).setTag("appVersion", constants.Version);
           const tmp16Result6 = callback(tmp[4]);

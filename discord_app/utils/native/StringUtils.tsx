@@ -1,7 +1,7 @@
 const result = require("set").fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export const splitGraphemes = function splitGraphemes(closure_0) {
-  const obj = importDefault(8398)();
+  const obj = importDefault(8703)();
   const items = [];
   let match = obj.exec(closure_0);
   let num = 0;

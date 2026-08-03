@@ -26,12 +26,12 @@ let closure_7 = importAllResult.memo(function MessagesItemChannel(arg0) {
     obj[1] = placeholderHeight;
     obj[2] = isPressed;
     obj[3] = setIsPressed;
-    let tmp5 = jsx(importDefault(15048), { channel: null, height: null, isPressed: null, setIsPressed: null });
+    let tmp5 = jsx(importDefault(15028), { channel: null, height: null, isPressed: null, setIsPressed: null });
   } else {
     obj = { height: null, row: null };
     obj[0] = placeholderHeight;
     obj[1] = row;
-    tmp5 = jsx(importDefault(15057), { height: null, row: null });
+    tmp5 = jsx(importDefault(15037), { height: null, row: null });
   }
   return tmp5;
 });
@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo((arg0) => {
   return <closure_7 />;
 });
 const memoResult1 = importAllResult.memo((channelId) => {
-  let obj = require(6679) /* noop */;
+  let obj = require(7654) /* noop */;
   const items = [channelId.channelId];
   const tmp = callback(obj.useRecyclingState(false, items), 2);
   require = tmp2;
@@ -61,7 +61,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
 const memoResult2 = importAllResult.memo((arg0) => {
   let tmp2;
   let tmp3;
-  let obj = require(15058) /* toNativeHorizontalOffset */;
+  let obj = require(15038) /* toNativeHorizontalOffset */;
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
   const merged = Object.assign(arg0);
@@ -72,14 +72,14 @@ const memoResult2 = importAllResult.memo((arg0) => {
 const result = require("ensureGuildLoaded").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemChannel.tsx");
 
 export const getMessagesItemChannelSizes = function getMessagesItemChannelSizes(fontScale) {
-  let obj = require(9925) /* map */;
+  let obj = require(10068) /* map */;
   const scaleTextLineHeightResult = obj.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
-  const scaleTextLineHeightResult1 = require(9925) /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
+  const scaleTextLineHeightResult1 = require(10068) /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
   const PX_16 = importDefault(712).space.PX_16;
   const PX_32 = importDefault(712).space.PX_32;
   obj = { avatar: PX_32, height: null, label: null, labelSecondary: null, padding: null };
   const sum = Math.max(PX_32, scaleTextLineHeightResult + scaleTextLineHeightResult1) + PX_16;
-  obj[1] = sum + require(15048) /* MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING */.MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING;
+  obj[1] = sum + require(15028) /* MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING */.MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING;
   obj[2] = scaleTextLineHeightResult;
   obj[3] = scaleTextLineHeightResult1;
   obj[4] = PX_16;

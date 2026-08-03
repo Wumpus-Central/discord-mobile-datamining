@@ -9,7 +9,7 @@ const pressable = createToggle.createPressable({
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    importDefault(3890).openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    importDefault(3952).openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 });
@@ -21,7 +21,7 @@ const obj = {
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    importDefault(3890).openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    importDefault(3952).openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 };

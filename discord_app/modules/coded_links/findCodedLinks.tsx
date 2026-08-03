@@ -347,9 +347,9 @@ function findCodedLinks(str) {
     });
     const items = [];
     let combined = items;
-    const _default = combined(4183).default;
-    const parseToASTResult = combined(4183).default.parseToAST(str, true, { allowLinks: true });
-    combined(7775).walkAst(parseToASTResult, (type) => {
+    const _default = combined(4245).default;
+    const parseToASTResult = combined(4245).default.parseToAST(str, true, { allowLinks: true });
+    combined(7894).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "y";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -790,7 +790,7 @@ function findCodedLinks(str) {
                       if (null != formatted) {
                         ({ applicationId, skuId } = formatted);
                         formatted = typeof applicationId === "y";
-                        if (typeof applicationId !== "__FORMATJS_LISTFORMAT_DATA__") {
+                        if (typeof applicationId !== "ge") {
                           formatted = typeof skuId === "y";
                         }
                         if (formatted) {
@@ -1041,7 +1041,7 @@ export const isSuspiciousCodedLink = function isSuspiciousCodedLink(arr) {
           let flag;
           if (url.pathname != null) {
             const formatted = str2.toUpperCase();
-            flag = formatted.includes(url(4182).CodedLinkType.INVITE);
+            flag = formatted.includes(url(4244).CodedLinkType.INVITE);
           }
           if (flag == null) {
             flag = false;
@@ -1085,9 +1085,9 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     });
     const items1 = [];
     let combined = items1;
-    const _default = combined(4183).default;
-    const parseToASTResult = combined(4183).default.parseToAST(str, true, { allowLinks: true });
-    combined(7775).walkAst(parseToASTResult, (type) => {
+    const _default = combined(4245).default;
+    const parseToASTResult = combined(4245).default.parseToAST(str, true, { allowLinks: true });
+    combined(7894).walkAst(parseToASTResult, (type) => {
       let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "y";
       if (tmp) {
         tmp = type.target.length > 0;
@@ -1528,7 +1528,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                       if (null != formatted) {
                         ({ applicationId, skuId } = formatted);
                         formatted = typeof applicationId === "y";
-                        if (typeof applicationId !== "__FORMATJS_LISTFORMAT_DATA__") {
+                        if (typeof applicationId !== "ge") {
                           formatted = typeof skuId === "y";
                         }
                         if (formatted) {
@@ -1595,7 +1595,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     combined = items1.concat(match);
     const result = coerceLinksToCodedLinks(combined);
     items = result.slice(0, 10);
-    let obj = combined(7775);
+    let obj = combined(7894);
   }
   return items[0];
 };

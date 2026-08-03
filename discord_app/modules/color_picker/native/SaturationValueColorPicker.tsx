@@ -16,7 +16,7 @@ function ColorBox(hue) {
   const tmp = createCacheKey();
   const tmp2 = callback(React.useState("rgb(0,0,0)"), 2);
   importDefault = tmp3;
-  let obj = hue(4054);
+  let obj = hue(4116);
   class S {
     constructor() {
       obj = hue(outer1_2[7]);
@@ -24,7 +24,7 @@ function ColorBox(hue) {
       return obj.hslToRgbWorklet(obj);
     }
   }
-  obj = { hslToRgbWorklet: hue(13717).hslToRgbWorklet, hue };
+  obj = { hslToRgbWorklet: hue(13780).hslToRgbWorklet, hue };
   S.__closure = obj;
   S.__workletHash = 8814597686728;
   S.__initData = closure_9;
@@ -36,7 +36,7 @@ function ColorBox(hue) {
       const runOnJSResult = hue(outer1_2[6]).runOnJS(c1);
     }
   };
-  obj = { runOnJS: hue(4054).runOnJS, setColor: tmp3 };
+  obj = { runOnJS: hue(4116).runOnJS, setColor: tmp3 };
   fn.__closure = obj;
   fn.__workletHash = 14688428173537;
   fn.__initData = closure_10;
@@ -46,9 +46,9 @@ function ColorBox(hue) {
   items1 = ["rgb(255,255,255)", tmp2[0]];
   const obj2 = { colors: ["rgba(0, 0, 0, 0)", "#000"], children: null };
   const items2 = [tmp.colorBoxInner, colorBoxInnerStyle];
-  const tmp5 = importDefault(4615);
+  const tmp5 = importDefault(4677);
   obj2[1] = callback2(View, { style: items2 });
-  obj1[4] = callback2(importDefault(4615), obj2);
+  obj1[4] = callback2(importDefault(4677), obj2);
   return callback2(tmp5, obj1);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);

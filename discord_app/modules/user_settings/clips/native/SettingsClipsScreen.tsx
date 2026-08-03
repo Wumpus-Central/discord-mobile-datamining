@@ -11,5 +11,5 @@ export default function ClipsSettingsScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(importDefault(13697), { node });
+  return jsx(importDefault(13760), { node });
 };

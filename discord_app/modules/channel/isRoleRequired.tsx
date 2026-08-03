@@ -13,7 +13,7 @@ export default function isRoleRequired(guild_id) {
           if (!obj.canEveryoneRole(Permissions.CONNECT, guild_id)) {
             return true;
           }
-          obj = importAll(3826);
+          obj = importAll(3888);
         }
         let hasItem = null != tmp4;
         if (hasItem) {

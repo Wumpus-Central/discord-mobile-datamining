@@ -21,7 +21,7 @@ export default function GroupDMRow(channel) {
   }
   const onPress = channel.onPress;
   const merged = Object.assign(channel, Object.create(null));
-  let str = onPress(4384)(channel);
+  let str = onPress(4446)(channel);
   const items = [channel, onPress];
   const callback = React.useCallback(() => {
     if (onPress != null) {
@@ -31,8 +31,8 @@ export default function GroupDMRow(channel) {
   let obj = { size: null, channel: null };
   obj[0] = channel(1297).AvatarSizes.REFRESH_MEDIUM_32;
   obj[1] = channel;
-  const tmp6 = onPress(9101);
-  let obj1 = channel(9102);
+  const tmp6 = onPress(9274);
+  let obj1 = channel(9275);
   const recipientsLabel = obj1.useRecipientsLabel(channel);
   obj = {};
   const merged1 = Object.assign(merged);
@@ -41,10 +41,10 @@ export default function GroupDMRow(channel) {
   if (null != recipientsLabel) {
     obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     obj[3] = recipientsLabel;
-    tmp5Result = tmp5(tmp7(4189).Text, obj);
+    tmp5Result = tmp5(tmp7(4251).Text, obj);
   }
   obj.subLabel = tmp5Result;
-  obj.icon = jsx(onPress(9101), {});
+  obj.icon = jsx(onPress(9274), {});
   obj.onPress = callback;
   if (str == null) {
     str = "";
@@ -56,11 +56,11 @@ export default function GroupDMRow(channel) {
     obj1 = {};
     const merged2 = Object.assign(obj);
     obj1.checked = flag;
-    tmp5Result = tmp5(tmp7(9099).TableCheckboxRow, obj1);
+    tmp5Result = tmp5(tmp7(9272).TableCheckboxRow, obj1);
   } else {
     const obj2 = {};
     const merged3 = Object.assign(obj);
-    tmp5Result = tmp5(tmp7(5224).TableRow, obj2);
+    tmp5Result = tmp5(tmp7(5286).TableRow, obj2);
   }
   return tmp5Result;
 };

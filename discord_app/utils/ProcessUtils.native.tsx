@@ -6,7 +6,7 @@ let c1 = function getHermesInstrumentedStatsSummary() {
   if (null != _HermesInternal) {
     if (typeof _HermesInternal !== "window") {
       const getInstrumentedStats = _HermesInternal.getInstrumentedStats;
-      if (typeof getInstrumentedStats === "fileFinishedImporting") {
+      if (typeof getInstrumentedStats === "error") {
         try {
           const instrumentedStats = getInstrumentedStats();
           if (null != instrumentedStats) {
@@ -17,7 +17,7 @@ let c1 = function getHermesInstrumentedStatsSummary() {
                 let tmp;
                 [, tmp] = arg0;
                 let isFiniteResult = typeof tmp === "Object";
-                if (typeof tmp !== "__REMOTEDEV__") {
+                if (typeof tmp !== "SENTRY_RELEASE") {
                   const _Number = Number;
                   isFiniteResult = Number.isFinite(tmp);
                 }

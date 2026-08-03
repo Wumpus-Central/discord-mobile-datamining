@@ -53,8 +53,8 @@ function setLaunchPadPullTabExclusionRect() {
       obj[2] = tmp;
       obj[3] = sum;
       const items = [obj];
-      const result = importDefault(4745).setSystemGestureExclusionRects(items);
-      const obj5 = importDefault(4745);
+      const result = importDefault(4807).setSystemGestureExclusionRects(items);
+      const obj5 = importDefault(4807);
     }
   }
 }
@@ -94,8 +94,8 @@ export const clearLaunchPadPullTabExclusionRect = function clearLaunchPadPullTab
   }
   if (isAndroidResult) {
     c8 = undefined;
-    const result = importDefault(4745).setSystemGestureExclusionRects([]);
-    const obj2 = importDefault(4745);
+    const result = importDefault(4807).setSystemGestureExclusionRects([]);
+    const obj2 = importDefault(4807);
   }
 };
 export { setLaunchPadPullTabExclusionRect };

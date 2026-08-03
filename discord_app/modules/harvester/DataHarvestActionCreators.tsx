@@ -19,7 +19,7 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   });
 };
 export const requestDataHarvest = function requestDataHarvest(mapped) {
-  const harvest = require(9235) /* saveProfileAndAccountRequest */.requestHarvest(mapped);
+  const harvest = require(9408) /* saveProfileAndAccountRequest */.requestHarvest(mapped);
   return harvest.then((body) => {
     if (tmp) {
       let obj = callback(table[1]);

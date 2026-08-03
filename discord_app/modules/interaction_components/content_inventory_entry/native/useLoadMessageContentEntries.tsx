@@ -409,7 +409,7 @@ function _fetchTopArtistContentParts() {
             } else if ("media" in lib.extra) {
               const image_url = lib.extra.media.image_url;
               v0(38)(null != image_url, "missing image url for top artist");
-              let obj1 = lib(7915);
+              let obj1 = lib(8033);
               dependencyMap = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
@@ -509,7 +509,7 @@ function _loadContentEntryParts() {
                       if (outer1_2.type === arr(outer1_2[11]).ComponentType.CONTENT_INVENTORY_ENTRY) {
                         function _fetchEntryParts() {
                           const self = this;
-                          const tmp = outer1_4(/* F119273 */ function() { ... });
+                          const tmp = outer1_4(/* F119463 */ function() { ... });
                           const _fetchEntryParts = tmp;
                           const apply = tmp.apply;
                           if (typeof apply === "unknown") {
@@ -729,7 +729,7 @@ function isMessageRenderable(arg0) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
     if (nextResult.type === require(1906) /* PermissionOverwriteType */.ComponentType.CONTENT_INVENTORY_ENTRY) {
-      let tmp3Result = tmp3(7913);
+      let tmp3Result = tmp3(8031);
       let obj = { component: null, message: null };
       obj = { contentInventoryEntry: null };
       let tmp5 = nextResult;
@@ -765,7 +765,7 @@ export default function useLoadMessageContentEntries(arg0) {
   const tmp7 = first(first1.useState(new Set()), 2);
   first1 = tmp7[0];
   let addApplication = tmp7[1];
-  let obj = _require(7915);
+  let obj = _require(8033);
   _require = undefined;
   const colorStore = obj.useColorStore((palette) => palette.palette);
   _require = callback((arg0, arg1) => {

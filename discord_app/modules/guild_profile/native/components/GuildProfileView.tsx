@@ -28,7 +28,7 @@ function GuildProfileBackground(guildProfile) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
       ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(8467)() * importDefault(1474)().width;
+      obj[2] = tmp3(8768)() * importDefault(1474)().width;
       obj = { style: null, source: null };
       obj[0] = tmp4.imageBanner;
       obj[1] = tmp3(1416).getGuildDiscoverySplashSource(obj);
@@ -39,17 +39,17 @@ function GuildProfileBackground(guildProfile) {
 }
 function GuildProfileGradient(guildProfile) {
   const tmp = createCacheKey();
-  let obj = require(3897) /* map */;
+  let obj = require(3959) /* map */;
   const token = obj.useToken(importDefault(712).colors.BACKGROUND_BASE_LOWEST);
-  const tmp2 = importDefault(4129)();
-  const profilePrimaryColor = require(8468) /* useProfilePrimaryColor */.useProfilePrimaryColor(guildProfile.guildProfile, token);
+  const tmp2 = importDefault(4191)();
+  const profilePrimaryColor = require(8769) /* useProfilePrimaryColor */.useProfilePrimaryColor(guildProfile.guildProfile, token);
   obj = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
   const items = [profilePrimaryColor, ];
-  const obj2 = require(8468) /* useProfilePrimaryColor */;
+  const obj2 = require(8769) /* useProfilePrimaryColor */;
   const tmp5 = closure_8;
-  const tmp6 = importDefault(4615);
-  const obj4 = require(3903) /* isThemeLight */;
-  const obj5 = require(3905) /* ManaContext */;
+  const tmp6 = importDefault(4677);
+  const obj4 = require(3965) /* isThemeLight */;
+  const obj5 = require(3967) /* ManaContext */;
   if (isThemeDarkResult) {
     let brightenColorResult = obj5.brightenColor(profilePrimaryColor, 0.8);
   } else {
@@ -64,13 +64,13 @@ function JoinForFullAccessCard() {
   obj = { variant: "text-md/semibold", color: "text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.us0bE8);
-  const items = [callback(require(4189) /* Text */.Text, obj), ];
+  const items = [callback(require(4251) /* Text */.Text, obj), ];
   obj = { variant: "text-sm/normal", color: "text-muted", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.fTtTTp);
-  items[1] = callback(require(4189) /* Text */.Text, obj);
+  items[1] = callback(require(4251) /* Text */.Text, obj);
   obj[3] = items;
-  return callback2(require(5226) /* PressableCard */.Card, obj);
+  return callback2(require(5288) /* PressableCard */.Card, obj);
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);
@@ -119,10 +119,10 @@ export default function GuildProfileView(guildProfile) {
   const items1 = [callback(GuildProfileBackground, { guildProfile }), , , ];
   let tmp5Result = flag;
   if (flag) {
-    tmp5Result = tmp5(importDefault(8469), {});
+    tmp5Result = tmp5(importDefault(8770), {});
   }
   items1[1] = tmp5Result;
-  items1[2] = callback(importDefault(8470), { profile: guildProfile, guildIconSource: memo });
+  items1[2] = callback(importDefault(8771), { profile: guildProfile, guildIconSource: memo });
   obj = { style: tmp.body, children: null };
   tmp5Result = null != guildProfile.description;
   if (tmp5Result) {
@@ -131,7 +131,7 @@ export default function GuildProfileView(guildProfile) {
   if (tmp5Result) {
     obj = { variant: "text-md/medium", color: "text-subtle", children: null };
     obj[2] = guildProfile.description;
-    tmp5Result = tmp5(guildProfile(4189).Text, obj);
+    tmp5Result = tmp5(guildProfile(4251).Text, obj);
   }
   const items2 = [tmp5Result, ];
   if (flag) {
@@ -140,10 +140,10 @@ export default function GuildProfileView(guildProfile) {
     const obj1 = { children: null };
     const obj2 = { profile: null };
     obj2[0] = guildProfile;
-    const items3 = [tmp5(tmp9(8484), obj2), ];
+    const items3 = [tmp5(tmp9(8773), obj2), ];
     const obj3 = { profile: null };
     obj3[0] = guildProfile;
-    items3[1] = tmp5(tmp9(11966), obj3);
+    items3[1] = tmp5(tmp9(12062), obj3);
     obj1[0] = items3;
     tmp5Result1 = tmp3(closure_10, obj1);
   }
@@ -155,8 +155,8 @@ export default function GuildProfileView(guildProfile) {
 };
 export const getBackgroundForProfile = function getBackgroundForProfile(closure_2, token) {
   const items = [token, ];
-  const obj = require(3903) /* isThemeLight */;
-  const obj2 = require(3905) /* ManaContext */;
+  const obj = require(3965) /* isThemeLight */;
+  const obj2 = require(3967) /* ManaContext */;
   if (isThemeDarkResult) {
     let brightenColorResult = obj2.brightenColor(token, 0.8);
   } else {

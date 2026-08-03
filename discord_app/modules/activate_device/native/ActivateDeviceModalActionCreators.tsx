@@ -3,11 +3,11 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/activa
 
 export default {
   showModal(userCode) {
-    let obj = importDefault(4399);
+    let obj = importDefault(4461);
     obj = { userCode };
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(13032, dependencyMap.paths), obj, ACTIVATE_DEVICE_MODAL_KEY);
+    obj.pushLazy(require(1959) /* asyncRequireImpl */(13095, dependencyMap.paths), obj, ACTIVATE_DEVICE_MODAL_KEY);
   },
   hideModal() {
-    importDefault(4399).popWithKey(ACTIVATE_DEVICE_MODAL_KEY);
+    importDefault(4461).popWithKey(ACTIVATE_DEVICE_MODAL_KEY);
   }
 };

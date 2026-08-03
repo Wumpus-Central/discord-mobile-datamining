@@ -153,18 +153,18 @@ export const getCtaLink = function getCtaLink(config) {
 };
 export const copyShareLink = function copyShareLink(id, ctaContent) {
   ctaContent = ctaContent.ctaContent;
-  let obj = require(8455) /* apexExperiment */;
-  if (obj.shouldMigrateToAdAnalyticsInterface(require(8455) /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "copy_share_link")) {
-    let tmpResult = tmp(8456);
+  let obj = require(8756) /* apexExperiment */;
+  if (obj.shouldMigrateToAdAnalyticsInterface(require(8756) /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "copy_share_link")) {
+    let tmpResult = tmp(8757);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
-    obj[0] = tmp(8460).AdUserActionType.CLICK_INTERNAL;
-    obj[1] = tmp(6017).AdCreativeType.QUEST;
+    obj[0] = tmp(8761).AdUserActionType.CLICK_INTERNAL;
+    obj[1] = tmp(7096).AdCreativeType.QUEST;
     obj[2] = id;
     obj[3] = ctaContent;
     ({ content: obj5[4], sourceQuestContent: obj5[5], position: obj5[6], impressionId: obj5[7] } = ctaContent);
     tmpResult.captureAdUserAction(obj);
   } else {
-    tmpResult = tmp(6006);
+    tmpResult = tmp(7085);
     obj = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     obj[0] = id;
     obj[1] = ctaContent.content;
@@ -172,7 +172,7 @@ export const copyShareLink = function copyShareLink(id, ctaContent) {
     ({ position: obj3[3], impressionId: obj3[4], sourceQuestContent: obj3[5] } = ctaContent);
     const result = tmpResult.trackQuestContentClicked(obj);
   }
-  require(5547) /* _copy */.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
+  require(5609) /* _copy */.copy("" + location.protocol + "//" + location.host + "/quests/" + id);
 };
 export const getDefaultReward = function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {

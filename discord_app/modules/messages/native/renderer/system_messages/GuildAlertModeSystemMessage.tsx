@@ -12,10 +12,10 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   let theme;
   ({ message, theme } = roleStyle);
   channel = channel.getChannel(message.channel_id);
-  let obj = require(7748) /* getMessageAuthorWithProcessedColor */;
+  let obj = require(7867) /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   let automodUsernameColor = createCacheKey(theme).automodUsernameColor;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7750)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), time: null };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7869)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), time: null };
   let str = "";
   if ("" !== message.content) {
     const _Date = Date;
@@ -23,9 +23,9 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
     str = date.toLocaleString(tmp5(1236).intl.currentLocale, { hour: "numeric", minute: "2-digit" });
   }
   obj[2] = str;
-  const tmp3 = importDefault(7741)(theme);
+  const tmp3 = importDefault(7860)(theme);
   obj = {};
-  const merged = Object.assign(tmp(7751)(roleStyle));
+  const merged = Object.assign(tmp(7870)(roleStyle));
   const intl = tmp5(1236).intl;
   obj.content = intl.formatToParts(require(1236) /* getSystemLocale */.t.ig55n6, obj);
   const intl2 = tmp5(1236).intl;
@@ -36,7 +36,7 @@ export const createGuildAlertModeEnabledSystemMessage = function createGuildAler
   obj.usernameColor = automodUsernameColor;
   let tmp5Result = tmp5(1419);
   tmp5Result = tmp5(1416);
-  const tmp12 = importDefault(7820)({ message, channel, isSystemDM: true, colors: importDefault(7741)(theme) });
+  const tmp12 = importDefault(7938)({ message, channel, isSystemDM: true, colors: importDefault(7860)(theme) });
   obj.avatarURL = tmp5Result.ensureAvatarSource(tmp5Result.makeSource(require(1419) /* ensureAvatarSource */.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp12);
   return obj;
@@ -46,14 +46,14 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   let theme;
   ({ message, theme } = roleStyle);
   let automodUsernameColor = createCacheKey(theme).automodUsernameColor;
-  let obj = require(7748) /* getMessageAuthorWithProcessedColor */;
+  let obj = require(7867) /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7750)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7869)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj = { message, channel: "HermesInternal", isSystemDM: null, colors: "button" };
-  obj[3] = importDefault(7741)(theme);
-  const tmp2 = importDefault(7741)(theme);
+  obj[3] = importDefault(7860)(theme);
+  const tmp2 = importDefault(7860)(theme);
   const obj1 = {};
-  const merged = Object.assign(importDefault(7751)(roleStyle));
+  const merged = Object.assign(importDefault(7870)(roleStyle));
   const intl = require(1236) /* getSystemLocale */.intl;
   obj1.content = intl.formatToParts(require(1236) /* getSystemLocale */.t.cyq2WA, obj);
   const intl2 = require(1236) /* getSystemLocale */.intl;
@@ -64,7 +64,7 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   obj1.usernameColor = automodUsernameColor;
   let tmp4Result = tmp4(1419);
   tmp4Result = tmp4(1416);
-  const tmp6 = importDefault(7820)(obj);
+  const tmp6 = importDefault(7938)(obj);
   obj1.avatarURL = tmp4Result.ensureAvatarSource(tmp4Result.makeSource(require(1419) /* ensureAvatarSource */.getAutomodAvatarURL())).uri;
   const merged1 = Object.assign(tmp6);
   return obj1;

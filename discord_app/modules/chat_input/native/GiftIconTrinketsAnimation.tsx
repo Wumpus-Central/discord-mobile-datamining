@@ -6,7 +6,7 @@ import importAllResult from "noop";
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
-  width = require(4608) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + require(4608) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_PADDING + 2;
+  width = require(4670) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + require(4670) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_PADDING + 2;
   const containerRefresh = { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 };
   return { container: { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 4, zIndex: 0 }, containerRefresh, trinkets: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "100%", height: "100%", top: 0, left: 0 }, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } };
 });
@@ -16,8 +16,8 @@ const memoResult = require("noop").memo((trinketsAnimationUrl) => {
   let obj = dependencyMap;
   let obj1 = require(1348) /* useIsMobileVisualRefreshExperimentEnabled */;
   const enabled = obj1.useMobileVisualRefreshConfig({ location: "GiftIconTrinketsAnimation" }).enabled;
-  const tmp2 = callback(require(3897) /* map */.useToken(importDefault(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
-  const obj3 = require(3897) /* map */;
+  const tmp2 = callback(require(3959) /* map */.useToken(importDefault(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
+  const obj3 = require(3959) /* map */;
   const tmp = importDefault;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -29,7 +29,7 @@ const memoResult = require("noop").memo((trinketsAnimationUrl) => {
     obj = { style: null, pointerEvents: "none", children: null };
     obj[0] = enabled ? tmp2.containerRefresh : tmp2.container;
     if (APNGPlayerResult1.isAndroid()) {
-      APNGPlayer = APNGPlayer(6210).APNGPlayer;
+      APNGPlayer = APNGPlayer(8176).APNGPlayer;
       obj = { url: null, autoplay: null, style: null };
       obj[0] = trinketsAnimationUrl;
       obj[1] = !stateFromStores;
@@ -42,7 +42,7 @@ const memoResult = require("noop").memo((trinketsAnimationUrl) => {
       obj[0] = obj1;
       obj[1] = tmp4;
       obj[3] = !stateFromStores;
-      tmp5Result = tmp5(tmp(5145), obj);
+      tmp5Result = tmp5(tmp(5207), obj);
     }
     obj[2] = tmp5Result;
     tmp5Result = tmp5(View, obj);

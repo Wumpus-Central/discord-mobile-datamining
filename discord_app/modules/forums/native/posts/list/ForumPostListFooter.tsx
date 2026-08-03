@@ -21,11 +21,11 @@ export default function ForumPostListFooter(parentChannel) {
   let thread;
   ({ thread, firstMessage, hasUnreads } = parentChannel);
   const tmp = createCacheKey();
-  let obj = require(11171) /* useTypingUserIds */;
+  let obj = require(11283) /* useTypingUserIds */;
   const typingUserIds = obj.useTypingUserIds(thread.id);
   let tmp5Result = typingUserIds.length > 0;
   obj = { style: tmp.footer, children: null };
-  const items = [callback(importDefault(11209), { thread, hasUnreads }), , ];
+  const items = [callback(importDefault(11321), { thread, hasUnreads }), , ];
   if (tmp5Result) {
     obj = { children: null };
     const obj1 = { style: null };
@@ -35,7 +35,7 @@ export default function ForumPostListFooter(parentChannel) {
     obj2[0] = thread;
     obj2[1] = typingUserIds;
     obj2[2] = hasUnreads;
-    items1[1] = tmp7(importDefault(11210), obj2);
+    items1[1] = tmp7(importDefault(11322), obj2);
     obj[0] = items1;
     tmp5Result = tmp5(closure_6, obj);
   }
@@ -47,7 +47,7 @@ export default function ForumPostListFooter(parentChannel) {
     obj3[1] = firstMessage;
     obj3[2] = parentChannel.parentChannel;
     obj3[3] = AnalyticsObjects.FORUM_LIST_ITEM_FOOTER;
-    tmp7Result = tmp7(require(10471) /* MaxForumPostReactions */.MostCommonForumPostReaction, obj3);
+    tmp7Result = tmp7(require(10609) /* MaxForumPostReactions */.MostCommonForumPostReaction, obj3);
   }
   items[2] = tmp7Result;
   obj[1] = items;

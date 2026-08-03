@@ -25,9 +25,9 @@ class UserFlashListActions {
         let subLabel;
         ({ label, subLabel, icon, IconComponent, iconVariant, onPress } = arg0);
         const obj = { label, subLabel, icon: null, onPress: null, arrow: true };
-        obj[2] = callback2(callback(5224).TableRow.Icon, { source: icon, IconComponent, variant: iconVariant });
+        obj[2] = callback2(callback(5286).TableRow.Icon, { source: icon, IconComponent, variant: iconVariant });
         obj[3] = onPress;
-        return callback2(callback(5224).TableRow, obj, arg1);
+        return callback2(callback(5286).TableRow, obj, arg1);
       });
     }
     obj[1] = tmp(require("TableRowGroupTitle").TableRowGroup, { hasIcons: true, children: mapped });
@@ -41,7 +41,7 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
   actions = actions.actions;
   const style = actions.style;
   let dependencyMap;
-  const tmp = style(8828)();
+  const tmp = style(9005)();
   dependencyMap = tmp;
   const items = [actions, tmp, style];
   return React.useMemo(() => {
@@ -60,8 +60,8 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
     if (undefined !== paddingBottom) {
       num2 = paddingBottom;
     }
-    if (typeof num !== "__REMOTEDEV__") {
-      if (typeof num2 !== "__REMOTEDEV__") {
+    if (typeof num !== "SENTRY_RELEASE") {
+      if (typeof num2 !== "SENTRY_RELEASE") {
         let num3 = 0;
         if (null != actions) {
           num3 = 0;

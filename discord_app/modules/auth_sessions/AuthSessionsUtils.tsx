@@ -34,8 +34,8 @@ export const formatDate = function formatDate(arg0) {
     const intl = require(1236) /* getSystemLocale */.intl;
     let stringResult = intl.string(require(1236) /* getSystemLocale */.t.TXCmfL);
   } else {
-    stringResult = importDefault(3775)(arg0).fromNow();
-    const obj = importDefault(3775)(arg0);
+    stringResult = importDefault(3837)(arg0).fromNow();
+    const obj = importDefault(3837)(arg0);
   }
   return stringResult;
 };

@@ -19,12 +19,12 @@ obj = {
         let obj = { participants: null };
         obj[0] = [];
       } else {
-        callback = callback(3811).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = callback(3811);
-        callback2 = callback(3811).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        callback = callback(3873).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = callback(3873);
+        callback2 = callback(3873).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
         obj = { participants: null };
         const _Array = Array;
-        const obj5 = callback(3811);
+        const obj5 = callback(3873);
         obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           const user = outer1_4.getUser(arg0);
           if (null != user) {
@@ -64,12 +64,12 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
     obj[0] = [];
     return obj;
   } else {
-    _require = _require(3811).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-    const obj2 = _require(3811);
-    const embeddedActivityLocationChannelId = _require(3811).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+    _require = _require(3873).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+    const obj2 = _require(3873);
+    const embeddedActivityLocationChannelId = _require(3873).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
     obj = { participants: null };
     const _Array = Array;
-    const obj3 = _require(3811);
+    const obj3 = _require(3873);
     obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
       const user = outer1_4.getUser(arg0);
       if (null != user) {

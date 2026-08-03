@@ -33,7 +33,7 @@ prototype["initialize"] = function initialize(arg0) {
       let tmp2 = null != tmp;
       if (tmp2) {
         const _Symbol = Symbol;
-        tmp2 = typeof tmp[Symbol.iterator] === "fileFinishedImporting";
+        tmp2 = typeof tmp[Symbol.iterator] === "error";
       }
       if (tmp2) {
         const _Set = Set;

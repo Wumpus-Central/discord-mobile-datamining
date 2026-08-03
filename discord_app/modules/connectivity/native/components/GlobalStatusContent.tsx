@@ -27,7 +27,7 @@ export default function ConnectivityGlobalStatusContent() {
   let remotePlatform;
   let rtcConnectionState;
   const tmp = createCacheKey();
-  const tmp4 = importDefault(8938)();
+  const tmp4 = importDefault(9115)();
   const require = tmp4;
   let obj = require(589) /* initialize */;
   const items = [createRTCConnection, createGuildRecordFromRust, ensureGuildLoaded, handleUpdate];
@@ -83,22 +83,22 @@ export default function ConnectivityGlobalStatusContent() {
   if (channel != null) {
     id = channel.id;
   }
-  let tmp2ResultResult = importDefault(10408)(id);
-  const tmp2Result = importDefault(10408);
-  let tmp5Result = tmp5(4039);
+  let tmp2ResultResult = importDefault(10547)(id);
+  const tmp2Result = importDefault(10547);
+  let tmp5Result = tmp5(4101);
   let tmp14 = tmp12;
-  const tmp11 = importDefault(10700)();
+  const tmp11 = importDefault(10808)();
   if (isGuildStageVoiceResult) {
     if (!tmp2ResultResult) {
       tmp2ResultResult = tmp11;
     }
     tmp14 = tmp2ResultResult;
   }
-  tmp5Result = tmp5(4724);
+  tmp5Result = tmp5(4786);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4044).isModalOpen(tmp2(10521));
-    const tmp5Result1 = tmp5(4044);
+    isScreenLandscape = tmp5(4106).isModalOpen(tmp2(10706));
+    const tmp5Result1 = tmp5(4106);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(500).isAndroid();
@@ -113,7 +113,7 @@ export default function ConnectivityGlobalStatusContent() {
   obj = { minHeight: RTC_PANEL_HEIGHT + num, paddingTop: num };
   items2[2] = obj;
   if (isScreenLandscape) {
-    isScreenLandscape = callback(tmp2(6682), { hidden: true });
+    isScreenLandscape = callback(tmp2(7657), { hidden: true });
   }
   const items3 = [isScreenLandscape, ];
   let tmp19 = null;
@@ -125,7 +125,7 @@ export default function ConnectivityGlobalStatusContent() {
     obj1[3] = isThemeDarkResult;
     obj1[4] = rtcConnectionState;
     obj1[5] = remotePlatform;
-    tmp19 = callback(tmp2(10707), obj1);
+    tmp19 = callback(tmp2(10815), obj1);
   }
   items3[1] = tmp19;
   obj[1] = items3;

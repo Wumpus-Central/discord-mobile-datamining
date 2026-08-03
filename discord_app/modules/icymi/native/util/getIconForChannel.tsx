@@ -5,18 +5,18 @@ const result = require("VoiceNormalIcon").fileFinishedImporting("modules/icymi/n
 export const getIconForChannel = function getIconForChannel(type) {
   type = type.type;
   if (ChannelTypes.GUILD_ANNOUNCEMENT === type) {
-    return require(4712) /* AnnouncementsIcon */.AnnouncementsIcon;
+    return require(4774) /* AnnouncementsIcon */.AnnouncementsIcon;
   } else if (tmp.GUILD_VOICE === type) {
-    return require(4719) /* VoiceNormalIcon */.VoiceNormalIcon;
+    return require(4781) /* VoiceNormalIcon */.VoiceNormalIcon;
   } else if (tmp.GUILD_STAGE_VOICE === type) {
-    return require(4715) /* StageIcon */.StageIcon;
+    return require(4777) /* StageIcon */.StageIcon;
   } else if (tmp.GUILD_TEXT === type) {
-    return require(4699) /* TextIcon */.TextIcon;
+    return require(4761) /* TextIcon */.TextIcon;
   } else if (tmp.GUILD_FORUM === type) {
-    return require(4706) /* ForumIcon */.ForumIcon;
+    return require(4768) /* ForumIcon */.ForumIcon;
   } else if (tmp.GUILD_MEDIA === type) {
-    return require(4705) /* ImageIcon */.ImageIcon;
+    return require(4767) /* ImageIcon */.ImageIcon;
   } else {
-    return require(4699) /* TextIcon */.TextIcon;
+    return require(4761) /* TextIcon */.TextIcon;
   }
 };

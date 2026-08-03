@@ -36,11 +36,11 @@ export default function VoiceEmptyState(channel) {
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t["/HABZo"]);
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["5Jy2FY"]);
-  obj[2] = importDefault(12858);
-  obj[3] = importDefault(12858);
+  obj[2] = importDefault(12921);
+  obj[3] = importDefault(12921);
   ({ emptyTitle: obj3[4], emptyBody: obj3[5] } = tmp);
   obj[6] = { marginBottom: 16, marginTop: 20 };
-  const items1 = [callback(require(1297) /* Button */.ThemedEmptyState, obj), callback(importDefault(12859), { channel: channel.channel, style: tmp.button })];
+  const items1 = [callback(require(1297) /* Button */.ThemedEmptyState, obj), callback(importDefault(12922), { channel: channel.channel, style: tmp.button })];
   obj[1] = items1;
   return callback2(View, obj);
 };

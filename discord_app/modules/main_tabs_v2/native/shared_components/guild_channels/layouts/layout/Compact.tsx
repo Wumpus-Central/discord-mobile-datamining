@@ -39,7 +39,7 @@ export const getCompactStyles = function getCompactStyles(arg0) {
     obj = { text: null };
     obj[0] = { variant: "text-xs/semibold" };
     obj[1] = obj;
-    let tmp = importDefault(10301)(obj, obj);
+    let tmp = importDefault(10440)(obj, obj);
   } else {
     tmp = obj;
   }

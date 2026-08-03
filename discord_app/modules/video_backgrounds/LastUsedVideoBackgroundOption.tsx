@@ -11,20 +11,20 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
   if (voiceAndVideo != null) {
     prop = voiceAndVideo.videoBackgroundFilterDesktop;
   }
-  const videoBackgroundOptionFromProto = require(8854) /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-  const obj = require(8854) /* isAnimatedBackgroundOption */;
+  const videoBackgroundOptionFromProto = require(9031) /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+  const obj = require(9031) /* isAnimatedBackgroundOption */;
   const tmp2 = require;
   if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
-    if (typeof videoBackgroundOptionFromProto === "__REMOTEDEV__") {
+    if (typeof videoBackgroundOptionFromProto === "SENTRY_RELEASE") {
       let tmp7 = videoBackgroundOptionFromProto;
     } else {
       tmp7 = null;
-      const tmp2Result = tmp2(8854);
+      const tmp2Result = tmp2(9031);
     }
     let tmp6 = tmp7;
   } else {
     tmp6 = null;
-    const obj3 = importDefault(3839);
+    const obj3 = importDefault(3901);
   }
   return tmp6;
 };
@@ -47,7 +47,7 @@ export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgro
       const obj = stateFromStores1(outer1_2[3]);
       const tmp4 = stateFromStores1;
       if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
-        if (typeof videoBackgroundOptionFromProto === "__REMOTEDEV__") {
+        if (typeof videoBackgroundOptionFromProto === "SENTRY_RELEASE") {
           let tmp9 = videoBackgroundOptionFromProto;
         } else {
           tmp9 = null;

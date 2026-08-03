@@ -4,8 +4,8 @@ const result = require("enforcing").fileFinishedImporting("modules/gateway/Gatew
 
 export const supportsZstd = function supportsZstd() {
   if (obj.isAndroid()) {
-    let flag = importDefault(12729).getConstants().supportsZstd;
-    const obj2 = importDefault(12729);
+    let flag = importDefault(12792).getConstants().supportsZstd;
+    const obj2 = importDefault(12792);
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;

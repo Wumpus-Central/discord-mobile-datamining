@@ -33,9 +33,9 @@ export default function useSuggestedFriends(arg0) {
       });
       let obj = first(flag[5]);
       return first(flag[5]).unionBy(found, mapped, (user) => user.user.id).sort((user, user2) => {
-        const name = callback(4032).getName(user.user);
-        const obj = callback(4032);
-        return name.localeCompare(callback(4032).getName(user2.user));
+        const name = callback(4094).getName(user.user);
+        const obj = callback(4094);
+        return name.localeCompare(callback(4094).getName(user2.user));
       });
     } else {
       return [];

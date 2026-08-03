@@ -5,8 +5,8 @@ let result = require("enforcing").fileFinishedImporting("modules/links/native/Li
 export default {
   tryOpenUrlAsUniversalLink(closure_0) {
     if (obj.isAndroid()) {
-      let result = importDefault(3888).tryOpenUrlAsUniversalLink(closure_0);
-      const obj2 = importDefault(3888);
+      let result = importDefault(3950).tryOpenUrlAsUniversalLink(closure_0);
+      const obj2 = importDefault(3950);
     } else {
       const DCDLinkingManager = NativeModules.DCDLinkingManager;
       result = DCDLinkingManager.tryOpenUrlAsUniversalLink(closure_0);
@@ -15,8 +15,8 @@ export default {
   },
   tryOpenScheme(closure_0) {
     if (obj.isAndroid()) {
-      let tryOpenSchemeResult = importDefault(3888).tryOpenScheme(closure_0);
-      const obj2 = importDefault(3888);
+      let tryOpenSchemeResult = importDefault(3950).tryOpenScheme(closure_0);
+      const obj2 = importDefault(3950);
     } else {
       const DCDLinkingManager = NativeModules.DCDLinkingManager;
       tryOpenSchemeResult = DCDLinkingManager.tryOpenScheme(closure_0);

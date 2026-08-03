@@ -115,7 +115,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(tmp3(1236).t.q91szp));
               throw error1;
             }
-            obj = callback(8217);
+            obj = callback(8524);
           }
           if (null == tmp) {
             if (entityType !== tmp2.EXTERNAL) {

@@ -113,7 +113,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
           return obj8;
         }
       }
-      return { badge: null, cutout: "Array", cutouts: "padding" };
+      return { badge: null, cutout: "Array", cutouts: "isArray" };
     }
   }, items1);
 };

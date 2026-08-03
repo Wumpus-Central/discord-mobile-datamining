@@ -2,7 +2,7 @@ import noop from "noop";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-const result = require("module_10114").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
+const result = require("module_10253").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchIndexingScreen.tsx");
 
 export default function SearchIndexingScreen(searchContext) {
   searchContext = searchContext.searchContext;
@@ -12,6 +12,6 @@ export default function SearchIndexingScreen(searchContext) {
     obj = { searchContext };
     obj.trackSearchIndexing(obj);
   }, items);
-  const text = searchContext(10116).getIndexingErrorText(searchContext);
-  return jsx(importDefault(15498), { text });
+  const text = searchContext(10255).getIndexingErrorText(searchContext);
+  return jsx(importDefault(15565), { text });
 };

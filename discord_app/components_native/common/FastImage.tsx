@@ -60,7 +60,7 @@ let merged = Object.assign(require("noop").memo((fade) => {
     obj.manualPlayback = manualPlayback;
     obj.fade = tmp3;
     obj.usesSmallCache = tmp4;
-    return jsx(importDefault(5146), {});
+    return jsx(importDefault(5208), {});
   }
   tmp = callback();
   tmp4 = undefined !== usesSmallCache && usesSmallCache;

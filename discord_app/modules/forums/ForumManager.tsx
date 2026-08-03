@@ -15,8 +15,8 @@ ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(c
   if (!isStaticChannelRoute(channelId)) {
     channel = channel.getChannel(channelId);
     if (tmp3) {
-      require(6068) /* loadForumPostData */.preloadForumThreads(channel);
-      const obj2 = require(6068) /* loadForumPostData */;
+      require(5800) /* loadForumPostData */.preloadForumThreads(channel);
+      const obj2 = require(5800) /* loadForumPostData */;
     }
     tmp3 = null != channel && channel.isForumLikeChannel();
   }

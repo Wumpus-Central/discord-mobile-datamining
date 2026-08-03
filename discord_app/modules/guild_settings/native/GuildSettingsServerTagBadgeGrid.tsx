@@ -29,7 +29,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   guildId = guildId.guildId;
   ({ selectedBadge: importDefault, onSelectBadge: dependencyMap, cellSize: noop } = guildId);
   const tmp = createCacheKey();
-  ({ unlockedBadges, lockedBadges } = importDefault(16447)());
+  ({ unlockedBadges, lockedBadges } = importDefault(16513)());
   const items = [guildId];
   const callback = React.useCallback(() => {
     outer1_1(outer1_2[7])({ guildId, autoOpenPerkId: "guildTagsBadgePacks" });
@@ -39,7 +39,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   obj = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
   const intl = guildId(1236).intl;
   obj[3] = intl.string(guildId(1236).t.wRnfnY);
-  const items1 = [callback(guildId(4189).Text, obj), , ];
+  const items1 = [callback(guildId(4251).Text, obj), , ];
   obj = {
     accessibilityRole: "radiogroup",
     style: tmp.grid,
@@ -72,14 +72,14 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
     obj3[2] = tmp.upsellText;
     const intl3 = tmp7(1236).intl;
     obj3[3] = intl3.string(tmp7(1236).t.U5p3GZ);
-    items2[1] = tmp8(tmp7(4189).Text, obj3);
+    items2[1] = tmp8(tmp7(4251).Text, obj3);
     const obj4 = { size: "md", color: null };
     obj4[1] = importDefault(712).colors.ICON_SUBTLE;
-    items2[2] = tmp8(tmp7(5569).ChevronSmallRightIcon, obj4);
+    items2[2] = tmp8(tmp7(5631).ChevronSmallRightIcon, obj4);
     obj1[4] = items2;
     tmp6Result = tmp6(closure_4, obj1);
   }
   items1[2] = tmp6Result;
   obj[1] = items1;
-  return closure_8(guildId(4602).Stack, obj);
+  return closure_8(guildId(4664).Stack, obj);
 };

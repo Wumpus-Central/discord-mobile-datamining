@@ -23,8 +23,8 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     }
     let assetImage = null;
     if (null != invite_cover_image) {
-      assetImage = require(7921) /* updateAssets */.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
-      const obj2 = require(7921) /* updateAssets */;
+      assetImage = require(8039) /* updateAssets */.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
+      const obj2 = require(8039) /* updateAssets */;
     }
     if (assetImage == null) {
       assetImage = coverImageURL;
@@ -73,8 +73,8 @@ export const getPresenceActivityInviteCoverImageURL = function getPresenceActivi
     obj = { messageId: null, coverImageURL: null };
     obj[0] = messageId;
     obj[1] = imageURL;
-    importAll(12403).setCoverImageURL(obj);
-    const obj2 = importAll(12403);
+    importAll(12501).setCoverImageURL(obj);
+    const obj2 = importAll(12501);
   }
   return imageURL;
 };

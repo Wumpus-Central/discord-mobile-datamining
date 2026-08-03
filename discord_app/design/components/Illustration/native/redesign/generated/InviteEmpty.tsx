@@ -6,50 +6,50 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/InviteEmpty.tsx");
 
 export const getInviteEmptySource = function getInviteEmptySource(theme) {
-  let obj = require(6541) /* getIllustrationSource */;
+  let obj = require(7532) /* getIllustrationSource */;
   obj = {
     dark() {
-      return callback(10223);
+      return callback(10362);
     },
     darker() {
-      return callback(16511);
+      return callback(16577);
     },
     light() {
-      return callback(10222);
+      return callback(10361);
     }
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useInviteEmptySource = function useInviteEmptySource() {
-  let obj = require(4039) /* AccessibilityAnnouncer */;
+  let obj = require(4101) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(10223);
+      return callback(10362);
     },
     darker() {
-      return callback(16511);
+      return callback(16577);
     },
     light() {
-      return callback(10222);
+      return callback(10361);
     }
   };
-  return require(6541) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return require(7532) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const InviteEmpty = function InviteEmpty(arg0) {
-  let obj = require(4039) /* AccessibilityAnnouncer */;
+  let obj = require(4101) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(10223);
+      return callback(10362);
     },
     darker() {
-      return callback(16511);
+      return callback(16577);
     },
     light() {
-      return callback(10222);
+      return callback(10361);
     }
   };
   obj = {};
-  const illustrationSource = require(6541) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = require(7532) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

@@ -2,7 +2,7 @@ const result = require("CollectiblesItemType").fileFinishedImporting("modules/co
 
 export default function useShouldShowPremiumProfileFrameCTA(location) {
   const _location = location.location;
-  let tmp2 = importDefault(11926)(_location) && !importDefault(8709)(_location);
+  let tmp2 = importDefault(12022)(_location) && !importDefault(8886)(_location);
   if (tmp2) {
     tmp2 = location.product.type === require(1901) /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME;
   }

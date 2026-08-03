@@ -25,7 +25,7 @@ export default function EmptyState(Illustration) {
   let children;
   let title;
   const tmp = createCacheKey();
-  require(4039) /* AccessibilityAnnouncer */;
+  require(4101) /* AccessibilityAnnouncer */;
   if (null != Illustration.Illustration) {
     let obj = { accessible: false, importantForAccessibility: "no", accessibilityRole: "none", resizeMode: "contain", style: null };
     const items = [tmp.emptyImage, Illustration.imageStyle];
@@ -35,11 +35,11 @@ export default function EmptyState(Illustration) {
     tmp8Result = null;
     if (tmp6) {
       obj = { resizeMode: "contain", source: null, style: null };
-      obj[1] = tmp2(4039).isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource;
+      obj[1] = tmp2(4101).isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource;
       const items1 = [tmp.emptyImage, Illustration.imageStyle];
       obj[2] = items1;
       tmp8Result = callback(closure_3, obj);
-      const tmp2Result = tmp2(4039);
+      const tmp2Result = tmp2(4101);
       const tmp8 = callback;
       const tmp9 = closure_3;
     }
@@ -56,7 +56,7 @@ export default function EmptyState(Illustration) {
     const items4 = [tmp.emptyTitle, tmp11];
     obj2[3] = items4;
     obj2[4] = title;
-    tmp14 = callback(tmp2(4189).Text, obj2);
+    tmp14 = callback(tmp2(4251).Text, obj2);
   }
   items3[1] = tmp14;
   let tmp16 = null;
@@ -65,7 +65,7 @@ export default function EmptyState(Illustration) {
     const items5 = [tmp.emptyBody, bodyStyle];
     obj3[3] = items5;
     obj3[4] = body;
-    tmp16 = callback(tmp2(4189).Text, obj3);
+    tmp16 = callback(tmp2(4251).Text, obj3);
   }
   items3[2] = tmp16;
   items3[3] = children;

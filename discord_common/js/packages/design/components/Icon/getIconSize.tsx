@@ -1,4 +1,4 @@
-let obj = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "description", refresh_sm: true };
+let obj = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "op", refresh_sm: true };
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Icon/getIconSize.tsx");
 
 export const getIconSize = function getIconSize(arg0) {

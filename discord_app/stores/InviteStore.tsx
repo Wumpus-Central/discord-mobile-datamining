@@ -6,7 +6,7 @@ function updateInvite(code, arg1) {
   if (code == null) {
     str = "";
   }
-  let obj = require(4179) /* readSnowflake */;
+  let obj = require(4241) /* readSnowflake */;
   const result = obj.parseExtraDataFromInviteKey(str);
   const value = map.get(str);
   if (null != value) {
@@ -70,7 +70,7 @@ InviteStore.displayName = "InviteStore";
 const inviteStore = new InviteStore(require("dispatcher"), {
   INVITE_RESOLVE: function handleInviteResolve(code) {
     code = code.code;
-    let obj = require(4179) /* readSnowflake */;
+    let obj = require(4241) /* readSnowflake */;
     const result = obj.parseExtraDataFromInviteKey(code);
     map = new Map(map);
     obj = { code: result.baseCode, state: InviteStates.RESOLVING };

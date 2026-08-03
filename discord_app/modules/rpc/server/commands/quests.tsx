@@ -12,12 +12,12 @@ obj = {
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
-    let obj = require(10645) /* recurseReplaceContentTree */;
+    let obj = require(10698) /* recurseReplaceContentTree */;
     const result = obj.validatePostMessageTransport(socket.transport);
-    const obj2 = require(10645) /* recurseReplaceContentTree */;
+    const obj2 = require(10698) /* recurseReplaceContentTree */;
     const quest = store.getQuest(quest_id);
-    const validateApplicationResult = require(10645) /* recurseReplaceContentTree */.validateApplication(socket.application);
-    const activityApplicationId = require(6012) /* getApplicationIdsByTaskTypes */.getActivityApplicationId(quest);
+    const validateApplicationResult = require(10698) /* recurseReplaceContentTree */.validateApplication(socket.application);
+    const activityApplicationId = require(7091) /* getApplicationIdsByTaskTypes */.getActivityApplicationId(quest);
     if (null != quest) {
       if (null != activityApplicationId) {
         if (activityApplicationId === validateApplicationResult) {
@@ -43,7 +43,7 @@ obj = {
       }
     }
     obj = { errorCode: constants.INVALID_COMMAND };
-    let tmp8 = importDefault(10640);
+    let tmp8 = importDefault(10693);
     tmp8 = new tmp8(obj, "Quest not found: " + quest_id);
     throw tmp8;
   }
@@ -54,12 +54,12 @@ obj = {
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
-    let obj = require(10645) /* recurseReplaceContentTree */;
+    let obj = require(10698) /* recurseReplaceContentTree */;
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = require(10645) /* recurseReplaceContentTree */;
+    let obj1 = require(10698) /* recurseReplaceContentTree */;
     const validateApplicationResult = obj1.validateApplication(socket.application);
     const quest = store.getQuest(quest_id);
-    let obj2 = require(6012) /* getApplicationIdsByTaskTypes */;
+    let obj2 = require(7091) /* getApplicationIdsByTaskTypes */;
     const playActivityApplicationId = obj2.getPlayActivityApplicationId(quest);
     if (null != quest) {
       if (null != playActivityApplicationId) {
@@ -72,7 +72,7 @@ obj = {
           if (null == enrolledAt) {
             obj = { errorCode: null };
             obj[0] = constants.INVALID_COMMAND;
-            const tmp16 = new importDefault(10640)(obj, "User is not enrolled in quest");
+            const tmp16 = new importDefault(10693)(obj, "User is not enrolled in quest");
             throw tmp16;
           } else {
             obj = { application_id: null, quest_id: null };
@@ -90,7 +90,7 @@ obj = {
       }
     }
     obj2 = { errorCode: constants.INVALID_COMMAND };
-    let tmp18 = importDefault(10640);
+    let tmp18 = importDefault(10693);
     tmp18 = new tmp18(obj2, "Quest not found: " + quest_id);
     throw tmp18;
   }
@@ -100,15 +100,15 @@ obj[RPCCommands.GET_QUEST] = {
   scope: require("set").OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
-    let obj = require(10645) /* recurseReplaceContentTree */;
+    let obj = require(10698) /* recurseReplaceContentTree */;
     const result = obj.validatePostMessageTransport(socket.transport);
-    const obj2 = require(10645) /* recurseReplaceContentTree */;
-    const validateApplicationResult = require(10645) /* recurseReplaceContentTree */.validateApplication(socket.application);
-    const eligibleQuestsForApplicationId = require(10516) /* questMatchesActivity */.getEligibleQuestsForApplicationId(store.quests, validateApplicationResult, true);
+    const obj2 = require(10698) /* recurseReplaceContentTree */;
+    const validateApplicationResult = require(10698) /* recurseReplaceContentTree */.validateApplication(socket.application);
+    const eligibleQuestsForApplicationId = require(10654) /* questMatchesActivity */.getEligibleQuestsForApplicationId(store.quests, validateApplicationResult, true);
     if (0 === eligibleQuestsForApplicationId.length) {
       obj = { errorCode: null };
       obj[0] = constants.INVALID_COMMAND;
-      const tmp9 = new importDefault(10640)(obj, "No eligible quests found");
+      const tmp9 = new importDefault(10693)(obj, "No eligible quests found");
       throw tmp9;
     } else {
       const mapped = eligibleQuestsForApplicationId.map((id) => {
@@ -156,22 +156,22 @@ obj[RPCCommands.GET_QUEST] = {
         return num;
       })[0];
     }
-    const obj3 = require(10516) /* questMatchesActivity */;
+    const obj3 = require(10654) /* questMatchesActivity */;
   }
 };
 let obj1 = {
   scope: require("set").OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
-    let obj = require(10645) /* recurseReplaceContentTree */;
+    let obj = require(10698) /* recurseReplaceContentTree */;
     const result = obj.validatePostMessageTransport(socket.transport);
-    const obj2 = require(10645) /* recurseReplaceContentTree */;
-    const validateApplicationResult = require(10645) /* recurseReplaceContentTree */.validateApplication(socket.application);
-    const eligibleQuestsForApplicationId = require(10516) /* questMatchesActivity */.getEligibleQuestsForApplicationId(store.quests, validateApplicationResult, true);
+    const obj2 = require(10698) /* recurseReplaceContentTree */;
+    const validateApplicationResult = require(10698) /* recurseReplaceContentTree */.validateApplication(socket.application);
+    const eligibleQuestsForApplicationId = require(10654) /* questMatchesActivity */.getEligibleQuestsForApplicationId(store.quests, validateApplicationResult, true);
     if (0 === eligibleQuestsForApplicationId.length) {
       obj = { errorCode: null };
       obj[0] = constants.INVALID_COMMAND;
-      const tmp9 = new importDefault(10640)(obj, "No eligible quests found");
+      const tmp9 = new importDefault(10693)(obj, "No eligible quests found");
       throw tmp9;
     } else {
       const mapped = eligibleQuestsForApplicationId.map((id) => {
@@ -219,7 +219,7 @@ let obj1 = {
         return num;
       })[0];
     }
-    const obj3 = require(10516) /* questMatchesActivity */;
+    const obj3 = require(10654) /* questMatchesActivity */;
   }
 };
 let result = require("set").fileFinishedImporting("modules/rpc/server/commands/quests.tsx");

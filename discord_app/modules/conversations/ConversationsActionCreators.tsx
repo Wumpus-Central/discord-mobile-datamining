@@ -104,7 +104,7 @@ function _fetchChannelConversations() {
               return obj5;
             }
           }
-          obj15 = callback(9277);
+          obj15 = callback(9449);
         }
       } else if (2 === tmp7) {
         c6 = 0;
@@ -269,7 +269,7 @@ function _fetchConversationMessages() {
                   }
                 }
               }
-              obj14 = callback(9277);
+              obj14 = callback(9449);
               tmp52 = callback;
             }
           } else {
@@ -360,8 +360,8 @@ export const setSelectedConversation = function setSelectedConversation(channelI
     obj = { channelId: null, messageId: null, flash: false };
     obj[0] = channelId;
     obj[1] = conversationMetadata.conversation.startMessageId;
-    importDefault(5718).jumpToMessage(obj);
-    const tmpResult = importDefault(5718);
+    importDefault(6814).jumpToMessage(obj);
+    const tmpResult = importDefault(6814);
   }
 };
 export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
@@ -376,11 +376,11 @@ export const setConversationFeedbackRating = function setConversationFeedbackRat
 };
 export { fetchConversationMessages };
 export const trackTopicalNavigationEntrypointImpression = function trackTopicalNavigationEntrypointImpression(id, stateFromStores1) {
-  const ConversationsAnalytics = require(9281) /* ConversationsAnalytics */.ConversationsAnalytics;
+  const ConversationsAnalytics = require(9453) /* ConversationsAnalytics */.ConversationsAnalytics;
   const result = ConversationsAnalytics.trackEntrypointImpression({ channelId: id, conversationCount: stateFromStores1 });
   if (initialize.shouldTriggerOnNextExposure()) {
-    importDefault(9282).fireSurveyAction(require(9289) /* SurveyActionTypes */.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
-    const obj2 = importDefault(9282);
+    importDefault(9454).fireSurveyAction(require(9461) /* SurveyActionTypes */.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
+    const obj2 = importDefault(9454);
   }
   importDefault(709).dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
 };

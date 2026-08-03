@@ -10,7 +10,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
   getComponent() {
-    return require(14583) /* MyTableRow */.default;
+    return require(14650) /* MyTableRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

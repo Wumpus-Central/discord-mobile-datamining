@@ -421,9 +421,9 @@ class MobileVoiceOverlayManager {
 const prototype = MobileVoiceOverlayManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  let obj = require(4057) /* isFabric */;
+  let obj = require(4119) /* isFabric */;
   if (!tmp2) {
-    if (typeof NativeCallableInterface !== "fileFinishedImporting") {
+    if (typeof NativeCallableInterface !== "error") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(NativeCallableInterface.prototype);

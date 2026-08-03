@@ -5,5 +5,5 @@ const result = require("UserRowSubLabel").fileFinishedImporting("modules/search/
 
 export default function GuildChannelMemberRow(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(importDefault(8838), {});
+  return jsx(importDefault(9015), {});
 };

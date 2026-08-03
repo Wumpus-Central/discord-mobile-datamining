@@ -6,11 +6,11 @@ import importDefaultResult1 from "apply";
 
 const require = arg1;
 function normalizeLocale(arg0) {
-  let str = importDefault(5198)[arg0];
+  let str = importDefault(5260)[arg0];
   if (str == null) {
     str = arg0;
   }
-  const parsed = require(5199) /* parse */.parse(str.replace(/[_-]/g, "-"));
+  const parsed = require(5261) /* parse */.parse(str.replace(/[_-]/g, "-"));
   if (null != parsed) {
     if (null != parsed.langtag.language) {
       if (null != parsed.langtag.region) {
@@ -131,7 +131,7 @@ class Spellchecker {
       } else {
         let tmp3 = dependencyMap[arg0];
         if (tmp3 == null) {
-          tmp3 = first(5198)[first];
+          tmp3 = first(5260)[first];
         }
         if (null != tmp3) {
           obj.setLocale(tmp3);

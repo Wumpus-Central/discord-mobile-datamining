@@ -2,15 +2,15 @@ let closure_2 = { LOADING: 0, [0]: "LOADING", FAILED: 1, [1]: "FAILED", EPHEMERA
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx");
 
 export const createInteractionStatus = function createInteractionStatus(message, interaction) {
-  let obj = require(7900) /* _executeMessageComponentInteraction */;
+  let obj = require(8018) /* _executeMessageComponentInteraction */;
   const interactionStatusViewState = obj.getInteractionStatusViewState(message, interaction);
-  if (require(7900) /* _executeMessageComponentInteraction */.InteractionStatusViewState.SENDING === interactionStatusViewState) {
+  if (require(8018) /* _executeMessageComponentInteraction */.InteractionStatusViewState.SENDING === interactionStatusViewState) {
     obj = { text: null, state: null };
     const intl4 = tmp(1236).intl;
     obj[0] = intl4.string(tmp(1236).t.RiLfBY);
     obj[1] = constants.LOADING;
     return obj;
-  } else if (tmp(7900).InteractionStatusViewState.CREATED === interactionStatusViewState) {
+  } else if (tmp(8018).InteractionStatusViewState.CREATED === interactionStatusViewState) {
     obj = { text: null, state: null };
     const intl3 = tmp(1236).intl;
     const obj1 = { applicationName: null };
@@ -18,13 +18,13 @@ export const createInteractionStatus = function createInteractionStatus(message,
     obj[0] = intl3.formatToPlainString(tmp(1236).t["7ePV4t"], obj1);
     obj[1] = constants.LOADING;
     return obj;
-  } else if (tmp(7900).InteractionStatusViewState.TIMED_OUT === interactionStatusViewState) {
+  } else if (tmp(8018).InteractionStatusViewState.TIMED_OUT === interactionStatusViewState) {
     const obj2 = { text: null, state: null };
     const intl2 = tmp(1236).intl;
     obj2[0] = intl2.string(tmp(1236).t.h8hzPd);
     obj2[1] = constants.FAILED;
     return obj2;
-  } else if (tmp(7900).InteractionStatusViewState.FAILED === interactionStatusViewState) {
+  } else if (tmp(8018).InteractionStatusViewState.FAILED === interactionStatusViewState) {
     let interactionError = message.interactionError;
     if (interactionError == null) {
       const intl = tmp(1236).intl;
@@ -34,7 +34,7 @@ export const createInteractionStatus = function createInteractionStatus(message,
     obj3[0] = interactionError;
     obj3[1] = constants.FAILED;
     return obj3;
-  } else if (tmp(7900).InteractionStatusViewState.EPHEMERAL_SUCCESS === interactionStatusViewState) {
+  } else if (tmp(8018).InteractionStatusViewState.EPHEMERAL_SUCCESS === interactionStatusViewState) {
     const obj4 = { text: "", state: null };
     obj4[1] = constants.EPHEMERAL_SUCCESS;
     return obj4;

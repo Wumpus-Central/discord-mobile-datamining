@@ -17,7 +17,7 @@ const memoResult = require("noop").memo(function InvitesDisabledBadge(style) {
   obj = { style: tmp.pauseBackground, children: null };
   obj = { style: tmp.pause, themedColor: null, source: null };
   obj[1] = importDefault(712).colors.INTERACTIVE_TEXT_ACTIVE;
-  obj[2] = importDefault(11841);
+  obj[2] = importDefault(11937);
   obj[1] = jsx(require(1297) /* Button */.ThemedIcon, { style: tmp.pause, themedColor: null, source: null });
   obj[1] = <View style={tmp.pause} themedColor={null} source={null} />;
   return <View style={tmp.pause} themedColor={null} source={null} />;

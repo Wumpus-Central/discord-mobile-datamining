@@ -46,7 +46,7 @@ export default function getTimestampString(arg0) {
   let since;
   const obj = { seconds: null, getFormatter: null };
   ({ since, getFormatter } = arg0);
-  obj[0] = importDefault(3775)().diff(importDefault(3775)(since), "s");
+  obj[0] = importDefault(3837)().diff(importDefault(3837)(since), "s");
   obj[1] = getFormatter;
   return getDurationString(obj);
 };

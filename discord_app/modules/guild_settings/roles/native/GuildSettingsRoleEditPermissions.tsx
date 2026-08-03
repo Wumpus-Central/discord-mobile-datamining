@@ -50,10 +50,10 @@ export default function GuildSettingsRoleEditPermission(guild) {
   currentUser = currentUser.getCurrentUser();
   highestRole = undefined;
   if (null != currentUser) {
-    let obj = importAll(3826);
+    let obj = importAll(3888);
     highestRole = obj.getHighestRole(guild, currentUser.id);
   }
-  let obj1 = importAll(3826);
+  let obj1 = importAll(3888);
   let id;
   if (currentUser != null) {
     id = currentUser.id;
@@ -69,7 +69,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   const tmp13 = callback(highestRole.useState(false), 2);
   const tmp6 = importAll;
   obj = { permission: constants.ADMINISTRATOR, user: currentUser, context: guild };
-  const tmp6Result = importAll(3826);
+  const tmp6Result = importAll(3888);
   currentUser = highestRole.useRef(false);
   let tmp18Result = tmp16;
   if (!tmp16) {
@@ -90,11 +90,11 @@ export default function GuildSettingsRoleEditPermission(guild) {
       obj.openLazy(guild(outer1_3[16])(outer1_3[15], outer1_3.paths), "role-permission-templates-" + guild.id + "-" + role.id, obj);
     };
     obj[2] = intl.format(guild(1236).t.ZhSOBy, obj1);
-    tmp18Result = tmp18(guild(4189).Text, obj);
+    tmp18Result = tmp18(guild(4251).Text, obj);
   }
   tmp18Result = tmp18(tmp19, { children: tmp18Result });
-  canResult = importAll(3826).can(obj);
-  const guildPermissionSpec = role(15679).generateGuildPermissionSpec(guild);
+  canResult = importAll(3888).can(obj);
+  const guildPermissionSpec = role(15744).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -107,12 +107,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(16493), { role }), , , ];
-  const tmp14Result = role(15679);
+  const children = [closure_14(role(16559), { role }), , , ];
+  const tmp14Result = role(15744);
   const tmp24 = mapped1.length > 0;
   const tmp25 = closure_16;
   const tmp26 = closure_15;
-  children[1] = closure_14(c6, { children: closure_14(guild(9248).SearchField, obj3) });
+  children[1] = closure_14(c6, { children: closure_14(guild(5891).SearchField, obj3) });
   children[2] = tmp18Result;
   if (tmp24) {
     const obj4 = { sections: null, stickySectionHeadersEnabled: false, renderItem: null, renderSectionHeader: null, SectionSeparatorComponent: null, ItemSeparatorComponent: null, keyExtractor: null, keyboardDismissMode: "on-drag", contentContainerStyle: null };
@@ -190,7 +190,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     let tmp18Result1 = tmp18(closure_8, obj4);
   } else {
     let obj5 = { Illustration: null, style: null, bodyStyle: null, body: null };
-    obj5[0] = tmp27(8300).NoResultsAlt;
+    obj5[0] = tmp27(8605).NoResultsAlt;
     ({ emptyState: obj10[1], emptyStateText: obj10[2] } = tmp);
     const intl2 = tmp27(1236).intl;
     const obj6 = { query: null };

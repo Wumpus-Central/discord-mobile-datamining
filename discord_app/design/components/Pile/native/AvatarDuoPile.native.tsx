@@ -10,17 +10,17 @@ export const AvatarDuoPile = function AvatarDuoPile(size) {
   if ("aria-label" in merged) {
     aria_label = merged["aria-label"];
   } else {
-    let tmp3Result = tmp3(11726);
+    let tmp3Result = tmp3(11829);
     aria_label = tmp3Result.getListSummaryLabel(merged.names);
   }
-  const obj = { aria-label, shape: require(7974) /* SolidCutout */.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null };
+  const obj = { aria-label, shape: require(8091) /* SolidCutout */.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null };
   tmp3Result = tmp3(12);
   if (tmp3Result.isArray(size)) {
     let mapped = size.map((arg0) => callback(table[6]).AVATAR_SIZE_MAP[arg0]);
   } else {
-    mapped = tmp3(12033).AVATAR_SIZE_MAP[size];
+    mapped = tmp3(12129).AVATAR_SIZE_MAP[size];
   }
   obj[2] = mapped;
   obj[6] = size.children;
-  return jsx(require(9945) /* Pile */.Pile, { aria-label, shape: require(7974) /* SolidCutout */.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null });
+  return jsx(require(10088) /* Pile */.Pile, { aria-label, shape: require(8091) /* SolidCutout */.CutoutShape.Circle, size: null, gap: 4, depthX: 0.5, depthY: 0.5, children: null });
 };

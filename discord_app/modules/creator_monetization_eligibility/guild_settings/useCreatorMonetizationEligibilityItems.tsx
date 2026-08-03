@@ -140,7 +140,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let fn;
       if (!noRecentViolations) {
         fn = () => {
-          const tmp = callback(3884);
+          const tmp = callback(3946);
           return tmp(callback(1945).getSubmitRequestURL());
         };
       }

@@ -14,10 +14,10 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
   if (hasItem) {
     hasItem = THREAD_CHANNEL_TYPES.has(channel.type);
   }
-  let obj = require(7748) /* getMessageAuthorWithProcessedColor */;
+  let obj = require(7867) /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const userAuthorWithProcessedColor = require(7748) /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7750)({ message, author: messageAuthorWithProcessedColor, roleStyle }), otherUsername: userAuthorWithProcessedColor.nick, otherUsernameOnClick: importDefault(7750)({ userId: first, message, author: userAuthorWithProcessedColor, roleStyle }) };
+  const userAuthorWithProcessedColor = require(7867) /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7869)({ message, author: messageAuthorWithProcessedColor, roleStyle }), otherUsername: userAuthorWithProcessedColor.nick, otherUsernameOnClick: importDefault(7869)({ userId: first, message, author: userAuthorWithProcessedColor, roleStyle }) };
   const intl = require(1236) /* getSystemLocale */.intl;
   const formatToParts = intl.formatToParts;
   const t = require(1236) /* getSystemLocale */.t;
@@ -27,6 +27,6 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
     formatToPartsResult = formatToParts(t["7/Xl0S"], obj);
   }
   obj = { content: formatToPartsResult };
-  const merged = Object.assign(importDefault(7751)(message));
+  const merged = Object.assign(importDefault(7870)(message));
   return obj;
 };

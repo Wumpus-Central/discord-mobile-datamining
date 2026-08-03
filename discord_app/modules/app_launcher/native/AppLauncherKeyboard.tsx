@@ -1,5 +1,5 @@
 import importAllResult from "collectGuildAnalyticsMetadata";
-import { View } from "module_11235";
+import { View } from "module_11346";
 import { AnalyticEvents } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { KEYBOARD_ANIMATION_CONFIG } from "KEYBOARD_ANIMATION_DURATION";

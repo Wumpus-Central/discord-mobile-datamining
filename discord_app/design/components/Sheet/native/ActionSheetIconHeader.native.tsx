@@ -19,12 +19,12 @@ export const ActionSheetIconHeader = function ActionSheetIconHeader(subtitle) {
   let obj = { style: tmp.container, children: null };
   const items = [callback(View, { children: icon }), ];
   obj = { style: tmp.titles, children: null };
-  const items1 = [callback(require(4189) /* Text */.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
+  const items1 = [callback(require(4251) /* Text */.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
   let tmp4Result = null;
   if (null != subtitle) {
     obj = { variant: "text-xs/medium", color: "text-default", children: null };
     obj[2] = subtitle;
-    tmp4Result = callback(require(4189) /* Text */.Text, obj);
+    tmp4Result = callback(require(4251) /* Text */.Text, obj);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;

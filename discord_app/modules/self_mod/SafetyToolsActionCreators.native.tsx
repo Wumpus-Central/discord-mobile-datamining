@@ -5,7 +5,7 @@ const result = require("SafetyToolsActionSheet").fileFinishedImporting("modules/
 export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType) {
   const tmp = callback(channelId);
   const require = tmp;
-  let obj = importDefault(4161);
+  let obj = importDefault(4223);
   obj = {
     channelId,
     warningId,
@@ -15,5 +15,5 @@ export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(ch
       outer1_1(outer1_2[1]).hideActionSheet(closure_0);
     }
   };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(10173, dependencyMap.paths), tmp, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(10312, dependencyMap.paths), tmp, obj);
 };

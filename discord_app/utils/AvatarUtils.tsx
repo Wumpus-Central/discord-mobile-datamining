@@ -1258,7 +1258,7 @@ export default {
     let obj = require(500) /* set */;
     if (obj.isAndroid()) {
       if (flag) {
-        if (typeof tmp === "__REMOTEDEV__") {
+        if (typeof tmp === "SENTRY_RELEASE") {
           const tmp2 = arg1(false);
           if (typeof tmp2 === "Object") {
             const items = [tmp, ];

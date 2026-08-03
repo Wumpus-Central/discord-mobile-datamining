@@ -19,19 +19,19 @@ const items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICAT
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler(socket) {
-  let obj = require(13557) /* validateOpenInviteDialog */;
+  let obj = require(13620) /* validateOpenInviteDialog */;
   const result = obj.validateOpenInviteDialog();
   if (null != result.frame) {
     obj = { errorCode: null };
     obj[0] = constants2.UNKNOWN_ERROR;
-    const tmp12 = new importDefault(10640)(obj, "Cannot support frames (yet)");
+    const tmp12 = new importDefault(10693)(obj, "Cannot support frames (yet)");
     throw tmp12;
   } else {
     obj = { source: null, targetApplicationId: null };
     obj[0] = constants.ACTIVITY_INVITE;
     const id = socket.socket.application.id;
     obj[1] = id;
-    const result1 = tmp(8352).showInstantInviteActionSheet(tmp4, obj);
+    const result1 = tmp(8657).showInstantInviteActionSheet(tmp4, obj);
   }
   tmp = require;
 };

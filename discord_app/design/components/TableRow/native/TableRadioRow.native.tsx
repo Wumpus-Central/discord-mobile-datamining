@@ -21,16 +21,16 @@ export const TableRadioRow = function TableRadioRow(value) {
   ({ legacyCompat_selected, legacyCompat_onPress: dependencyMap } = value);
   const merged = Object.assign(value, Object.create(null));
   let onSelect;
-  const context = onSelect.useContext(require(7660) /* context */.TableRadioGroupContext);
+  const context = onSelect.useContext(require(7783) /* context */.TableRadioGroupContext);
   onSelect = context.onSelect;
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  let tmp2Result = tmp2(3899);
+  let tmp2Result = tmp2(3961);
   const nodeText = tmp2Result.getNodeText(label);
-  tmp2Result = tmp2(3899);
+  tmp2Result = tmp2(3961);
   const nodeText1 = tmp2Result.getNodeText(subLabel);
-  const radioA11yNative = require(3911) /* useCheckboxA11yNative */.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
+  const radioA11yNative = require(3973) /* useCheckboxA11yNative */.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj = {};
   const merged1 = Object.assign(merged);
@@ -53,6 +53,6 @@ export const TableRadioRow = function TableRadioRow(value) {
     }
     onSelect(closure_0);
   };
-  obj.trailing = jsx(require(7661) /* FormRadio */.FormRadio, { selected: legacyCompat_selected });
-  return jsx(require(5224) /* TableRowInner */.TableRow, {});
+  obj.trailing = jsx(require(7784) /* FormRadio */.FormRadio, { selected: legacyCompat_selected });
+  return jsx(require(5286) /* TableRowInner */.TableRow, {});
 };

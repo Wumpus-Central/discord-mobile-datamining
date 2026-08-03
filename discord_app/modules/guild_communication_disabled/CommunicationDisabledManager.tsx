@@ -48,7 +48,7 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         importDefault(709).dispatch(obj1);
         const obj4 = importDefault(709);
       }
-      obj6 = require(3810) /* isCommunicationDisabled */;
+      obj6 = require(3872) /* isCommunicationDisabled */;
     }
   }
 }

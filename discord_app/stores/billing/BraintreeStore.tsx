@@ -57,7 +57,7 @@ obj = {
     if (paymentSourceType.paymentSourceType === constants2.PAYPAL) {
       if (tmp === closure_2) {
         const _window = window;
-        if (typeof onComplete !== "disabledUntil") {
+        if (typeof onComplete !== "HAS_APPLICATION") {
           const obj = { path: null, queryItems: null };
           obj[0] = tmp2;
           obj[1] = tmp3;

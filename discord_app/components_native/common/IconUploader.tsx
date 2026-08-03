@@ -131,9 +131,9 @@ export default function IconUploader(disabled) {
       obj[0] = iconStyle;
       obj[1] = fnResult;
       obj[2] = name;
-      obj[3] = require(5570) /* GuildIconSizes */.GuildIconSizes.XLARGE;
-      let tmp7 = callback(importDefault(5570), obj);
-      const tmp12 = importDefault(5570);
+      obj[3] = require(5632) /* GuildIconSizes */.GuildIconSizes.XLARGE;
+      let tmp7 = callback(importDefault(5632), obj);
+      const tmp12 = importDefault(5632);
     }
     tmp8 = null == icon && null == name;
   } else {
@@ -149,7 +149,7 @@ export default function IconUploader(disabled) {
   if (!flag) {
     obj1 = { style: null, source: null };
     obj1[0] = tmp.uploadIcon;
-    obj1[1] = importDefault(10201);
+    obj1[1] = importDefault(10340);
     tmp16 = callback(closure_6, obj1);
   }
   items1[1] = tmp16;
@@ -172,7 +172,7 @@ export default function IconUploader(disabled) {
       return applyArgumentsResult;
     };
     obj3[3] = tmp14Result;
-    obj2[1] = callback(require(4721) /* PressableBase */.PressableOpacity, obj3);
+    obj2[1] = callback(require(4783) /* PressableBase */.PressableOpacity, obj3);
     tmp22 = callback(closure_5, obj2);
   }
   return tmp22;

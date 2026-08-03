@@ -202,7 +202,7 @@ prototype2["ensureSound"] = function ensureSound() {
       let closure_0 = arg0;
       let closure_1 = arg1;
       ({ name, usage, _volume } = closure_0);
-      if (typeof outer1_4 !== "fileFinishedImporting") {
+      if (typeof outer1_4 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const fn = (arg0) => {

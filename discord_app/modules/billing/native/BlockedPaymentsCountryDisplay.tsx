@@ -28,7 +28,7 @@ export default function BlockedPaymentsCountryDisplay() {
   obj = { children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   const obj1 = { helpdeskArticle: null };
-  const tmp4 = importDefault(4129)();
+  const tmp4 = importDefault(4191)();
   const tmp5 = closure_7;
   const tmp6 = closure_3;
   const tmp7 = callback;
@@ -39,9 +39,9 @@ export default function BlockedPaymentsCountryDisplay() {
   const obj5 = importDefault(1945);
   const tmp8 = closure_4;
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(6362);
+    let tmp2Result = tmp2(7315);
   } else {
-    tmp2Result = tmp2(6363);
+    tmp2Result = tmp2(7316);
   }
   obj2[1] = tmp2Result;
   items[2] = tmp7(tmp8, obj2);

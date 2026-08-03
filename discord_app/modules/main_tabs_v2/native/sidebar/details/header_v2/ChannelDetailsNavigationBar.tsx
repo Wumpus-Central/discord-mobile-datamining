@@ -40,18 +40,18 @@ function MuteButton(channelId) {
     navigation.navigate("sidebar", { screen: outer1_12.MUTE, channelId, source: "channel-details-navigation-bar" });
   }, items1);
   const obj2 = channelId(1480);
-  const token = channelId(3897).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(3897);
+  const token = channelId(3959).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(3959);
   const tmp5 = navigation;
-  const token1 = channelId(3897).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token1 = channelId(3959).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   obj = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null };
   const intl = channelId(1236).intl;
   obj[0] = intl.string(channelId(1236).t.w4m945);
   obj[1] = callback;
   obj[2] = token1;
   obj[3] = token;
-  obj[4] = tmp5(stateFromStores ? 10242 : 7737);
-  return closure_15(channelId(6685).IconButton, obj, constants.MUTE);
+  obj[4] = tmp5(stateFromStores ? 10381 : 7856);
+  return closure_15(channelId(7660).IconButton, obj, constants.MUTE);
 }
 function SearchButton(channelId) {
   channelId = channelId.channelId;
@@ -77,20 +77,20 @@ function SearchButton(channelId) {
   let obj = channelId(589);
   const items1 = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items1, () => outer1_7.getChannel(channelId));
-  const shouldHideChannelContent = channelId(4407).useShouldHideChannelContent(stateFromStores);
-  let obj2 = channelId(4407);
-  const token = channelId(3897).useToken(importDefault(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  const obj3 = channelId(3897);
-  const token1 = channelId(3897).useToken(importDefault(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const shouldHideChannelContent = channelId(4469).useShouldHideChannelContent(stateFromStores);
+  let obj2 = channelId(4469);
+  const token = channelId(3959).useToken(importDefault(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  const obj3 = channelId(3959);
+  const token1 = channelId(3959).useToken(importDefault(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   obj = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null, disabled: null };
   const intl = channelId(1236).intl;
   obj[0] = intl.string(channelId(1236).t["5h0QOP"]);
   obj[1] = callback;
   obj[2] = token1;
   obj[3] = token;
-  obj[4] = importDefault(8299);
+  obj[4] = importDefault(5906);
   obj[5] = shouldHideChannelContent;
-  return callback2(channelId(6685).IconButton, obj, constants.SEARCH);
+  return callback2(channelId(7660).IconButton, obj, constants.SEARCH);
 }
 function SettingsButton(channel) {
   channel = channel.channel;
@@ -115,17 +115,17 @@ function SettingsButton(channel) {
       const obj4 = channel(outer1_2[25]);
     }
   }, items);
-  const token = channel(3897).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
-  let obj2 = channel(3897);
-  const token1 = channel(3897).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
+  const token = channel(3959).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_SIZE);
+  let obj2 = channel(3959);
+  const token1 = channel(3959).useToken(navigation(712).modules.mobile.CHANNEL_DETAILS_NAV_ICON_BUTTON_VARIANT);
   obj = { accessibilityLabel: null, onPress: null, accessibilityRole: "button", variant: null, size: null, icon: null };
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t["3D5yo/"]);
   obj[1] = callback;
   obj[3] = token1;
   obj[4] = token;
-  obj[5] = navigation(9021);
-  return callback2(channel(6685).IconButton, obj, constants.SETTINGS);
+  obj[5] = navigation(5911);
+  return callback2(channel(7660).IconButton, obj, constants.SETTINGS);
 }
 function NavigationHeader(channel) {
   let onBackPress;
@@ -255,9 +255,9 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
   cleanUp = cleanUp.cleanUp;
   let dependencyMap;
   ({ onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, transitionState } = cleanUp);
-  const tmp2 = transitionState !== width(4538).TransitionStates.YEETED;
+  const tmp2 = transitionState !== width(4600).TransitionStates.YEETED;
   dependencyMap = tmp2;
-  let obj = width(4054);
+  let obj = width(4116);
   class S {
     constructor() {
       str = "none";
@@ -291,15 +291,15 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
       return obj;
     }
   }
-  obj = { isActive: tmp2, withTiming: width(4194).withTiming, Easing: width(4054).Easing, runOnJS: width(4054).runOnJS, cleanUp, width };
+  obj = { isActive: tmp2, withTiming: width(4256).withTiming, Easing: width(4116).Easing, runOnJS: width(4116).runOnJS, cleanUp, width };
   S.__closure = obj;
   S.__workletHash = 1270940013897;
   S.__initData = closure_22;
   const animatedStyle = obj.useAnimatedStyle(S);
   obj = { style: items, children: null };
   items = [callback4().searchHeader, animatedStyle];
-  obj[1] = callback2(cleanUp(15484), { ref, channelId: channel.id, guildId: channel.guild_id, onSuggestionsLayoutMesure: onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, showBackButton: true });
-  return callback2(cleanUp(4054).View, obj);
+  obj[1] = callback2(cleanUp(15551), { ref, channelId: channel.id, guildId: channel.guild_id, onSuggestionsLayoutMesure: onSuggestionsLayoutMeasure, suggestionsDismissed, setSuggestionsDismissed, showBackButton: true });
+  return callback2(cleanUp(4116).View, obj);
 });
 let closure_25 = { code: "function ChannelDetailsNavigationBarTsx3(){const{isActive,withTiming,timingFast,runOnJS,cleanUp,width}=this.__closure;return{pointerEvents:isActive?'auto':'none',opacity:withTiming(isActive?1:0,timingFast,'animate-always',function(finished){if(finished)runOnJS(cleanUp)();}),width:width};}" };
 let closure_26 = { code: "function ChannelDetailsNavigationBarTsx4(finished){const{runOnJS,cleanUp}=this.__closure;if(finished)runOnJS(cleanUp)();}" };

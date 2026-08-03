@@ -83,7 +83,7 @@ function applyOverwrites(id, member, closure_23, overwrites) {
     const hasItem = importAll(506).has(addResult4, Permissions.ADMINISTRATOR);
     const tmp19Result1 = importAll(506);
     const tmp28 = require;
-    const result = require(3827) /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member);
+    const result = require(3889) /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member);
     let tmp31 = result;
     if (result) {
       tmp31 = !hasItem;
@@ -93,14 +93,14 @@ function applyOverwrites(id, member, closure_23, overwrites) {
       found = tmp19(506).filter(addResult4, closure_29);
       const tmp19Result2 = tmp19(506);
     }
-    const obj10 = require(3827) /* GuildMemberFlags */;
-    const tmp28Result = tmp28(3810);
+    const obj10 = require(3889) /* GuildMemberFlags */;
+    const tmp28Result = tmp28(3872);
     found1 = found;
     if (tmp34) {
       found1 = tmp19(506).filter(found, closure_28);
       const tmp19Result3 = tmp19(506);
     }
-    tmp34 = tmp28(3810).isMemberCommunicationDisabled(member) && !hasItem;
+    tmp34 = tmp28(3872).isMemberCommunicationDisabled(member) && !hasItem;
   }
   return found1;
 }

@@ -77,7 +77,7 @@ export default function RedesignAddAvatarModal(route) {
               dependencyMap = 1;
               v0 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = outer1_0(4735).openImagePicker(obj1);
+              obj2[0] = outer1_0(4797).openImagePicker(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -93,19 +93,19 @@ export default function RedesignAddAvatarModal(route) {
             if (null == base64) {
               let pendingImage;
               if (null != outer1_0) {
-                obj = outer1_0(7955);
+                obj = outer1_0(8073);
                 const obj4 = { imageUri: null, description: null };
                 obj4[0] = base64;
-                obj2 = outer1_0(7955);
+                obj2 = outer1_0(8073);
                 obj4[1] = obj2.generateAvatarDescription();
                 pendingImage = obj.createPendingImage(obj4);
               }
               outer1_1 = pendingImage;
-              obj3 = outer1_0(7945);
+              obj3 = outer1_0(8063);
               let obj5 = { avatar: null };
               obj5[0] = outer1_1;
               obj3.setPendingChanges(obj5);
-              obj5 = outer1_0(7947);
+              obj5 = outer1_0(8065);
               let str = "set";
               if (null == outer1_1) {
                 str = "remove";

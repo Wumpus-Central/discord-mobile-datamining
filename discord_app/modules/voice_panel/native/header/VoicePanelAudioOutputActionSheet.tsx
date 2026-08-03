@@ -18,9 +18,9 @@ function VoicePanelAudioPhoneOutputSection() {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ activeDevice: store.getActiveAudioDevice(), availableDevices: store.getAudioDevices() }));
   availableDevices = stateFromStoresObject.availableDevices;
   let closure_1 = importAllResult.useCallback((arg0) => {
-    availableDevices(8868).setAudioOutputDevice(arg0);
-    const obj = availableDevices(8868);
-    callback(4161).hideActionSheet(closure_9);
+    availableDevices(9045).setAudioOutputDevice(arg0);
+    const obj = availableDevices(9045);
+    callback(4223).hideActionSheet(closure_9);
   }, []);
   let tmp5 = null;
   if (availableDevices.length > 0) {
@@ -40,9 +40,9 @@ function VoicePanelAudioPhoneOutputSection() {
     obj[3] = availableDevices.map((deviceId) => {
       let obj = { value: deviceId.deviceId, icon: null, label: null, subLabel: null };
       obj = { source: null };
-      obj[0] = availableDevices(8840).audioDeviceToIconMap[deviceId.simpleDeviceType];
-      obj[1] = callback2(availableDevices(5230).TableRowIcon, obj);
-      obj[2] = availableDevices(8840).getAudioDeviceToDisplayText(deviceId);
+      obj[0] = availableDevices(9017).audioDeviceToIconMap[deviceId.simpleDeviceType];
+      obj[1] = callback2(availableDevices(5292).TableRowIcon, obj);
+      obj[2] = availableDevices(9017).getAudioDeviceToDisplayText(deviceId);
       const deviceName = deviceId.deviceName;
       let length;
       if (deviceName != null) {
@@ -53,10 +53,10 @@ function VoicePanelAudioPhoneOutputSection() {
         deviceName1 = deviceId.deviceName;
       }
       obj[3] = deviceName1;
-      return callback2(availableDevices(7659).TableRadioRow, obj, deviceId.deviceId);
+      return callback2(availableDevices(7782).TableRadioRow, obj, deviceId.deviceId);
     });
-    obj[3] = callback(tmp2(7660).TableRadioGroup, obj);
-    tmp5 = callback(tmp2(8869).VoicePanelFormSection, obj);
+    obj[3] = callback(tmp2(7783).TableRadioGroup, obj);
+    tmp5 = callback(tmp2(9046).VoicePanelFormSection, obj);
   }
   return tmp5;
 }
@@ -67,8 +67,8 @@ function VoicePanelAudioConsoleSection(channel) {
   let stateFromStores;
   let stateFromStores1;
   let c5;
-  arr = arr(8937)();
-  dependencyMap = arr(8938)();
+  arr = arr(9114)();
+  dependencyMap = arr(9115)();
   let obj = channel(647);
   const items = [c5];
   stateFromStores = obj.useStateFromStores(items, () => _undefined.getAwaitingRemoteSessionInfo());
@@ -120,7 +120,7 @@ function VoicePanelAudioConsoleSection(channel) {
     }
   }, items3);
   let obj2 = channel(647);
-  const tmp8 = !channel(4009).useIsDismissibleContentDismissed_UNSAFE(channel(1358).DismissibleContent.DONUT_MOBILE_NUX);
+  const tmp8 = !channel(4071).useIsDismissibleContentDismissed_UNSAFE(channel(1358).DismissibleContent.DONUT_MOBILE_NUX);
   c5 = tmp8;
   const items4 = [arr, tmp8];
   const effect = stateFromStores.useEffect(() => {
@@ -172,8 +172,8 @@ function VoicePanelAudioConsoleSection(channel) {
       return tmp5;
     });
     obj[3] = mapped.filter((arg0) => Boolean(arg0));
-    obj[3] = callback(tmp3(7660).TableRadioGroup, obj);
-    tmp10 = callback(tmp3(8869).VoicePanelFormSection, obj);
+    obj[3] = callback(tmp3(7783).TableRadioGroup, obj);
+    tmp10 = callback(tmp3(9046).VoicePanelFormSection, obj);
   }
   return tmp10;
 }
@@ -193,7 +193,7 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
     obj = { title: null };
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t.iwxPM3);
-    obj[0] = callback(tmp(5246).BottomSheetTitleHeader, obj);
+    obj[0] = callback(tmp(5308).BottomSheetTitleHeader, obj);
     if (isConnectedToVoiceChannel) {
       isConnectedToVoiceChannel = tmp5(VoicePanelAudioPhoneOutputSection, {});
     }
@@ -204,12 +204,12 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
     obj3[0] = stateFromStores;
     items1[1] = callback(VoicePanelAudioConsoleSection, obj3);
     obj2[0] = items1;
-    obj1[0] = closure_12(importDefault(5572), obj2);
+    obj1[0] = closure_12(importDefault(5634), obj2);
     obj[1] = callback(ScrollView, obj1);
-    tmp5Result = tmp5(tmp(5247).BottomSheet, obj);
+    tmp5Result = tmp5(tmp(5309).BottomSheet, obj);
     const tmp6 = ScrollView;
     const tmp7 = closure_12;
-    const tmp9 = importDefault(5572);
+    const tmp9 = importDefault(5634);
   }
   return tmp5Result;
 });

@@ -54,27 +54,31 @@ export default function MobileShopButtonCoachmark(marketing) {
   items2[6] = callback;
   items2[7] = callback1;
   const memo = visible.useMemo(() => {
-    let obj = { title: marketing.title, description: marketing.body, visible, position: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "secondary", onButtonPress: null, onDismiss: null };
-    let str = "bottom";
-    if (obj2.isYouNavFloating()) {
-      str = "top";
-    }
-    obj[3] = str;
-    obj[4] = function renderImgComponent() {
-      obj = { style: image.image, source: obj };
-      obj = { uri: closure_5 };
-      return outer1_5(outer1_3, obj);
+    let obj = {
+      title: marketing.title,
+      description: marketing.body,
+      visible,
+      position: "top",
+      renderImgComponent() {
+        obj = { style: image.image, source: obj };
+        obj = { uri: closure_5 };
+        return outer1_5(outer1_3, obj);
+      },
+      buttonLabel: null,
+      buttonVariant: "secondary",
+      onButtonPress: null,
+      onDismiss: null
     };
     let buttonLabel = marketing.buttonLabel;
     if (buttonLabel == null) {
-      const intl = tmp2(tmp3[7]).intl;
-      buttonLabel = intl.string(tmp2(tmp3[7]).t.fYfGgK);
+      const intl = marketing(navigateToShop[6]).intl;
+      buttonLabel = intl.string(marketing(navigateToShop[6]).t.fYfGgK);
     }
     obj[5] = buttonLabel;
     obj[7] = callback;
     obj[8] = callback1;
     return obj;
   }, items2);
-  const coachmark = marketing(navigateToShop[8]).useCoachmark(marketing.shopButtonRef, memo);
+  const coachmark = marketing(navigateToShop[7]).useCoachmark(marketing.shopButtonRef, memo);
   return null;
 };

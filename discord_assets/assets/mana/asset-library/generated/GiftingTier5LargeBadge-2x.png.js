@@ -1,5 +1,5 @@
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftingTier5LargeBadge-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/fb1f68ebb03f26e8816c62d01bed0d70d745c7a6af9529895a82fe02a3a33c85.png";
+export default "https://cdn.discordapp.com/assets/content/e9af6ab8a1e2e54a8b31a75b471dc7b7e3b77a093c3e67a2f7aba684b2bf7211.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/GiftingTier5LargeBadge-2x.png";
-export const metadata = { fileBytes: 21745 };
+export const metadata = { fileBytes: 49388 };

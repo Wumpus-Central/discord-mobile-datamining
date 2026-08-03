@@ -225,8 +225,8 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
     importDefault(709).dispatch(obj1);
     const obj4 = importDefault(709);
     const tmp5 = importDefault;
-    resolved = importDefault(5645).switchAccountToken(token, switchSynchronously);
-    const tmp5Result = importDefault(5645);
+    resolved = importDefault(5707).switchAccountToken(token, switchSynchronously);
+    const tmp5Result = importDefault(5707);
   }
   return resolved;
 };

@@ -20,5 +20,5 @@ export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
     return since;
   }, items2);
   const obj2 = _require(647);
-  return _require(5000).getCreatedAtDate(stateFromStores1, stateFromStores);
+  return _require(5062).getCreatedAtDate(stateFromStores1, stateFromStores);
 };

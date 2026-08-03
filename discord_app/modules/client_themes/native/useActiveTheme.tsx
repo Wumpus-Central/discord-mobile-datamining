@@ -12,7 +12,7 @@ function useActiveThemeType() {
   const obj = require(589) /* initialize */;
   const items1 = [isSyncedModeThemesEnabled];
   const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => null != gradientPreset.gradientPreset);
-  const tmp3 = importDefault(4043)();
+  const tmp3 = importDefault(4105)();
   const obj2 = require(589) /* initialize */;
   const items2 = [CHANNEL_SIDEBAR_WIDTH];
   let type;

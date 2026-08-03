@@ -72,10 +72,10 @@ export const useQuestStatusChanged = function useQuestStatusChanged(adContentIds
   return memo !== adCreativeType(stateFromStores[5])(memo);
 };
 export const useQuestImpressionRef = function useQuestImpressionRef() {
-  return React.useContext(require(10509) /* set */.QuestImpressionContext);
+  return React.useContext(require(10647) /* set */.QuestImpressionContext);
 };
 export const useQuestImpression = function useQuestImpression() {
-  const context = React.useContext(require(10509) /* set */.QuestImpressionContext);
+  const context = React.useContext(require(10647) /* set */.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -83,7 +83,7 @@ export const useQuestImpression = function useQuestImpression() {
   return current;
 };
 export const useQuestImpressionId = function useQuestImpressionId() {
-  const context = React.useContext(require(10509) /* set */.QuestImpressionContext);
+  const context = React.useContext(require(10647) /* set */.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -95,7 +95,7 @@ export const useQuestImpressionId = function useQuestImpressionId() {
   return id;
 };
 export const useGetQuestImpressionId = function useGetQuestImpressionId() {
-  context = React.useContext(context(10509).QuestImpressionContext);
+  context = React.useContext(context(10647).QuestImpressionContext);
   const items = [context];
   return React.useCallback(() => {
     let id;

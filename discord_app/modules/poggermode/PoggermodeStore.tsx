@@ -47,7 +47,7 @@ function updateCombo(userId) {
     decayInterval = iter.decayInterval;
   }
   if (decayInterval == null) {
-    decayInterval = new obj(4078).Interval();
+    decayInterval = new obj(4140).Interval();
   }
   obj.decayInterval = decayInterval;
   const result = obj.set("" + userId.userId + "-" + userId.channelId, obj);
@@ -107,8 +107,8 @@ prototype["getComboScore"] = function getComboScore(arg0, arg1) {
   const value = secondaryIndexMap.get("" + arg0 + "-" + arg1);
   let num = 0;
   if (null != value) {
-    num = require(6147) /* getComboShakeIntensity */.getComboScore(value);
-    const obj = require(6147) /* getComboShakeIntensity */;
+    num = require(7199) /* getComboShakeIntensity */.getComboScore(value);
+    const obj = require(7199) /* getComboShakeIntensity */;
   }
   return num;
 };
@@ -154,8 +154,8 @@ prototype["getUserComboShakeIntensity"] = function getUserComboShakeIntensity(id
   const userCombo = this.getUserCombo(id, throwTypeErrorResult);
   let num = 0;
   if (null != userCombo) {
-    num = require(6147) /* getComboShakeIntensity */.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
-    const obj = require(6147) /* getComboShakeIntensity */;
+    num = require(7199) /* getComboShakeIntensity */.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
+    const obj = require(7199) /* getComboShakeIntensity */;
   }
   return num;
 };
@@ -214,12 +214,12 @@ const poggermodeStore = new PoggermodeStore(require("dispatcher"), {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {
-                  let num2 = id(6147).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
+                  let num2 = id(7199).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
                   if (num2 == null) {
                     num2 = 0.001;
                   }
                   let result = num2;
-                  const obj2 = id(6147);
+                  const obj2 = id(7199);
                 } else {
                   const _Math = Math;
                   result = 4 * Math.random();

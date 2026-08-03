@@ -8,5 +8,5 @@ export const setThemeFlag = function setThemeFlag(arg0, MOBILE_DARK_GRADIENT_THE
   return arg0 | MOBILE_DARK_GRADIENT_THEME_ENABLED;
 };
 export const useThemeFlag = function useThemeFlag(arg0) {
-  return (require(3916) /* json */.useThemeContext().flags & arg0) === arg0;
+  return (require(3978) /* json */.useThemeContext().flags & arg0) === arg0;
 };

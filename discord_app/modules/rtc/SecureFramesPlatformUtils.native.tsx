@@ -15,17 +15,17 @@ const result = require("SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY").fileFinishedImp
 
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
-    let obj = importDefault(4161);
+    let obj = importDefault(4223);
     obj = { streamKey, channelId };
-    obj.openLazy(require(1959) /* asyncRequireImpl */(8916, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(require(1959) /* asyncRequireImpl */(9093, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
-      let obj = importDefault(4399);
+      let obj = importDefault(4461);
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(require(1959) /* asyncRequireImpl */(8906, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(require(1959) /* asyncRequireImpl */(9083, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -38,7 +38,7 @@ export default {
       confirmText = intl.string(onConfirm(1236).t["cY+Oob"]);
     }
     onConfirm = confirmText.onConfirm;
-    let obj = importDefault(4533);
+    let obj = importDefault(4595);
     obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
     const intl2 = onConfirm(1236).intl;
     obj[3] = intl2.string(onConfirm(1236).t["ETE/oC"]);
@@ -64,15 +64,15 @@ export default {
     }
     if (null != channelId) {
       if (null != channel) {
-        importDefault(5683)(closure_9.CHANNEL(guildId, channelId));
-        const tmp6 = importDefault(5683);
+        importDefault(5745)(closure_9.CHANNEL(guildId, channelId));
+        const tmp6 = importDefault(5745);
         let obj = { userId: null, channelId: null, guildId: null, fingerprint: null };
         obj[0] = userId;
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        importDefault(4161).openLazy(require(1959) /* asyncRequireImpl */(8919, dependencyMap.paths), closure_5, obj);
-        const obj4 = importDefault(4161);
+        importDefault(4223).openLazy(require(1959) /* asyncRequireImpl */(9096, dependencyMap.paths), closure_5, obj);
+        const obj4 = importDefault(4223);
       }
     }
     obj = { title: null, body: null };
@@ -80,6 +80,6 @@ export default {
     obj[0] = intl.string(require(1236) /* getSystemLocale */.t["5ICxE6"]);
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["v1eXp/"]);
-    importDefault(4533).show(obj);
+    importDefault(4595).show(obj);
   }
 };

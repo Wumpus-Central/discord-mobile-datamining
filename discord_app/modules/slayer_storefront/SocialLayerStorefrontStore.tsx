@@ -53,6 +53,9 @@ prototype["getStorefrontData"] = function getStorefrontData(arg0) {
 prototype["getStorefrontDataForApplicationId"] = function getStorefrontDataForApplicationId(arg0) {
   return dependencyMap2[arg0];
 };
+prototype["getLoadedStorefrontApplicationIds"] = function getLoadedStorefrontApplicationIds() {
+  return Object.keys(closure_5);
+};
 prototype["getStorefrontFetchState"] = function getStorefrontFetchState(closure_0) {
   if ("guild" === closure_0.type) {
     let guildId = closure_0.guildId;

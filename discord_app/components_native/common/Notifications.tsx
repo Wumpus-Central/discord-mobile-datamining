@@ -13,7 +13,7 @@ export default function Notifications() {
   if (null != stateFromStores) {
     obj = { notification: null };
     obj[0] = stateFromStores;
-    tmp3 = jsx(importDefault(10290), { notification: null }, stateFromStores.key);
+    tmp3 = jsx(importDefault(10429), { notification: null }, stateFromStores.key);
   }
   return tmp3;
 };

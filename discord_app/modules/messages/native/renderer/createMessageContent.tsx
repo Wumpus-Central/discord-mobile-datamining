@@ -36,20 +36,20 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
     if (message.hasFlag(constants3.HAS_THREAD)) {
       if (null != channel1) {
         let string2Result = dependencyMap;
-        const channelName = require(4384) /* computeChannelName */.computeChannelName(channel1, mergeGuildAvatar, upsertRelationship);
-        const backgroundColor = importDefault(7730)(arg5).baseColors.backgroundColor;
-        const obj11 = require(4384) /* computeChannelName */;
+        const channelName = require(4446) /* computeChannelName */.computeChannelName(channel1, mergeGuildAvatar, upsertRelationship);
+        const backgroundColor = importDefault(7851)(arg5).baseColors.backgroundColor;
+        const obj11 = require(4446) /* computeChannelName */;
         const tmp19 = importDefault;
         const mostRecentMessage = store3.getMostRecentMessage(importDefault(11).castMessageIdAsChannelId(message.id));
         const obj12 = importDefault(11);
         const count = store3.getCount(importDefault(11).castMessageIdAsChannelId(message.id));
         const obj13 = importDefault(11);
-        let intl5 = require(7731) /* _formatMessageCountLabel */.formatMobileMessageCountLabel(count, channel1.id);
-        const obj14 = require(7731) /* _formatMessageCountLabel */;
-        let string2 = require(7731) /* _formatMessageCountLabel */.formatMessageCountLabel(count, channel1.id);
+        let intl5 = require(7852) /* _formatMessageCountLabel */.formatMobileMessageCountLabel(count, channel1.id);
+        const obj14 = require(7852) /* _formatMessageCountLabel */;
+        let string2 = require(7852) /* _formatMessageCountLabel */.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
-            let tmp15Result = tmp15(7732);
+            let tmp15Result = tmp15(5842);
             if (tmp15Result.isChannelSpoilerGated(channel1)) {
               let obj = { title: null, messageCountLabel: null, messageCountAccessibilityLabel: null, messagePreviewString: null, archived: false, backgroundColor: null };
               obj[0] = channelName;
@@ -74,8 +74,8 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 obj[2] = string2;
                 const intl4 = tmp15(1236).intl;
                 obj[3] = intl4.string(tmp15(1236).t.ZTo4HS);
-                tmp15Result = tmp15(7734);
-                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7735));
+                tmp15Result = tmp15(7853);
+                obj[5] = tmp15Result.getAssetUriForEmbed(tmp19(7854));
                 obj[6] = backgroundColor;
                 obj1 = obj;
               } else {
@@ -867,7 +867,7 @@ function createMessageContent(message) {
                 obj24[3] = merged.flags;
                 obj24[4] = message.type;
                 if (null != message.nonce) {
-                  if (typeof message.nonce === "__FORMATJS_LISTFORMAT_DATA__") {
+                  if (typeof message.nonce === "ge") {
                     merged = globalThis;
                     const _String = String;
                     let nonce = String(message.nonce);
@@ -1271,7 +1271,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result8 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "PX_16", hasSpoilerEmbeds: "GuildBasicChannels", hasBailedAst: null };
+    parseMessageMarkupResult = { content: "PX_16", hasSpoilerEmbeds: "TRANSPARENT", hasBailedAst: 0 };
     const tmp13Result2 = tmp13(tmp3[42]);
   }
 }

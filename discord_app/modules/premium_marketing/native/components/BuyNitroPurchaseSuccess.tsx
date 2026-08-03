@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("GuildFeatures").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx");
 
 export const presentBuyNitroPurchaseSuccess = function presentBuyNitroPurchaseSuccess(premiumTier) {
-  let obj = require(4534) /* useAlertStore */;
+  let obj = require(4596) /* useAlertStore */;
   obj = { title: null, content: null, actions: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t["Q+BB2w"]);
@@ -25,6 +25,6 @@ export const presentBuyNitroPurchaseSuccess = function presentBuyNitroPurchaseSu
   obj = { variant: "primary", text: null };
   const intl5 = tmp(1236).intl;
   obj[1] = intl5.string(require(1236) /* getSystemLocale */.t.TkTvBz);
-  obj[2] = jsx(require(4537) /* getAlertModalItemKey */.AlertActionButton, { variant: "primary", text: null });
-  obj.openAlert("BuyNitroPurchaseSuccess", jsx(require(4537) /* getAlertModalItemKey */.AlertModal, { variant: "primary", text: null }), reset);
+  obj[2] = jsx(require(4599) /* getAlertModalItemKey */.AlertActionButton, { variant: "primary", text: null });
+  obj.openAlert("BuyNitroPurchaseSuccess", jsx(require(4599) /* getAlertModalItemKey */.AlertModal, { variant: "primary", text: null }), reset);
 };

@@ -29,7 +29,7 @@ export default function FadeOutLottieAnimation(onComplete) {
   const effect = React.useEffect(() => {
     dependencyMap(false);
   }, []);
-  onComplete(4054);
+  onComplete(4116);
   class T {
     constructor() {
       if (c1) {
@@ -69,7 +69,7 @@ export default function FadeOutLottieAnimation(onComplete) {
       return;
     }
   }
-  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4194).withTiming, runOnJS: onComplete(4054).runOnJS, setIsFadeOut: tmp7 };
+  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4256).withTiming, runOnJS: onComplete(4116).runOnJS, setIsFadeOut: tmp7 };
   T.__closure = obj;
   T.__workletHash = 1137618554665;
   T.__initData = closure_8;
@@ -90,9 +90,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       dependencyMap(true);
     };
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(first(5510), { style: null, speed: null, onAnimationFinish: null });
-    let tmp14Result = tmp14(first(4054).View, obj);
-    const tmp16 = first(5510);
+    obj[1] = jsx(first(5572), { style: null, speed: null, onAnimationFinish: null });
+    let tmp14Result = tmp14(first(4116).View, obj);
+    const tmp16 = first(5572);
   } else {
     tmp14Result = null;
   }

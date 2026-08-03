@@ -9,7 +9,7 @@ encodeProperties = {
   waitFor: items,
   getFingerprint: importDefaultResult.getFingerprint,
   getSessionId() {
-    const session = require(5726) /* trackHeartbeat */.getSession();
+    const session = require(6820) /* trackHeartbeat */.getSession();
     return session.then((uuid) => {
       let sessionId;
       if (uuid != null) {
@@ -21,7 +21,8 @@ encodeProperties = {
   getLaunchSignature() {
     return require(698) /* expandEventProperties */.launchSignature;
   },
-  scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback
+  scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback,
+  sendUnloadRequest: require("sendUnloadRequest").sendUnloadRequest
 };
 encodeProperties = {
   CONNECTION_OPEN(arg0) {

@@ -21,7 +21,7 @@ export default function useNativeForumPostContent(arg0) {
     return obj;
   } else {
     if (null != message) {
-      if (importDefault(5927)(message)) {
+      if (importDefault(5770)(message)) {
         obj = { content: null, style: null, variant: "text-sm/normal" };
         obj[0] = messageContent;
         obj[1] = tmp.italics;
@@ -96,7 +96,7 @@ export default function useNativeForumPostContent(arg0) {
                 }
                 tmp14 = MessageFlags;
               }
-              obj5 = require(4528) /* getStickerExtensionFromFormatType */;
+              obj5 = require(4590) /* getStickerExtensionFromFormatType */;
             }
           }
         }

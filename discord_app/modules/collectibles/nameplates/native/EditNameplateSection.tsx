@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let obj = { children: null };
   obj = { style: tmp.row, children: null };
   const items1 = [...items, null, null];
-  const substr = items1.slice(0, require(7967) /* useCollectibleListLayout */.ROW_SIZE);
+  const substr = items1.slice(0, require(8084) /* useCollectibleListLayout */.ROW_SIZE);
   obj[1] = substr.map((skuId) => {
     if (skuId === outer1_0(outer1_2[6]).NONE_ITEM) {
       let obj = { size: null, onPress: null, isSelected: null, asDefault: null };
@@ -85,8 +85,8 @@ const memoResult1 = importAllResult.memo((nameplate) => {
   }, items1);
   const obj = { skuId: nameplate.skuId, isSelected, onPress: callback, size, accessibilityLabel: nameplate.label, children: null };
   const items2 = [callback3().nameplate, { borderRadius: 6 }];
-  obj[5] = callback(setSelectedNameplate(8074), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 });
-  return callback(nameplate(7968).EditCollectiblesListItemProduct, obj);
+  obj[5] = callback(setSelectedNameplate(8405), { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 });
+  return callback(nameplate(8085).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditNameplateItem";
 const result = require("fromServer").fileFinishedImporting("modules/collectibles/nameplates/native/EditNameplateSection.tsx");

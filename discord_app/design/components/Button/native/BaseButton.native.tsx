@@ -4,8 +4,8 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4054";
-import importDefaultResult1 from "module_4054";
+import importDefaultResult from "module_4116";
+import importDefaultResult1 from "module_4116";
 
 let Pressable;
 let TouchableOpacity;
@@ -25,8 +25,8 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   obj[1] = { opacity: 0.5 };
   return obj;
 });
-let closure_9 = require("module_4054").createAnimatedComponent(Pressable);
-let closure_10 = require("module_4054").createAnimatedComponent(TouchableOpacity);
+let closure_9 = require("module_4116").createAnimatedComponent(Pressable);
+let closure_10 = require("module_4116").createAnimatedComponent(TouchableOpacity);
 const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   let accessibilityActions;
   let accessibilityElementsHidden;
@@ -76,10 +76,10 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   if (flag) {
     onPress = onPressDisabled;
   }
-  let obj = flag2(4609);
+  let obj = flag2(4671);
   const buttonPressAnimationProps = obj.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
-    obj = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
+    obj = { animatedScaleStyles: "Array", buttonAnimationProps: true };
     obj = { onLayout: null, onPressIn: null, onPressOut: null };
     obj[0] = onLayout;
     obj[1] = onPressIn;
@@ -100,7 +100,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj.busy = flag2;
     return obj;
   }, items);
-  let tmp4Result = tmp4(3905);
+  let tmp4Result = tmp4(3967);
   let str = "light";
   if ("primary-overlay" !== variant) {
     let str3;
@@ -116,7 +116,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     const obj2 = { theme: null, children: null };
     obj2[0] = str;
     obj2[1] = children;
-    tmp11 = jsx(tmp4(3905).ThemeContextProvider, { theme: null, children: null });
+    tmp11 = jsx(tmp4(3967).ThemeContextProvider, { theme: null, children: null });
   }
   const items1 = [tmp.button, disabled.style, , , ];
   if (flag) {

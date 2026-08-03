@@ -105,8 +105,8 @@ function ChannelSubtitle(channel) {
     return privateChannelUserTagsString;
   }, items1);
   if (!channel.isPrivate()) {
-    stateFromStores = tmp(4376).channelTypeString(channel);
-    const tmpResult = tmp(4376);
+    stateFromStores = tmp(4438).channelTypeString(channel);
+    const tmpResult = tmp(4438);
   }
   let tmp4 = null;
   if (null != stateFromStores) {
@@ -114,7 +114,7 @@ function ChannelSubtitle(channel) {
     if ("" !== stateFromStores) {
       obj = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: null };
       obj[3] = stateFromStores;
-      tmp4 = callback(tmp(4189).Text, obj);
+      tmp4 = callback(tmp(4251).Text, obj);
     }
   }
   return tmp4;
@@ -234,7 +234,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5519)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5581)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = importAllResult.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -249,7 +249,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: items1, onPress: callback, children: null };
   items1 = [callback2().container, channel.containerStyle];
   obj[2] = callback(ChannelNameHeaderContent, { channel });
-  return callback(channel(4721).PressableOpacity, obj);
+  return callback(channel(4783).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   let channel;

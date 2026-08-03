@@ -5,7 +5,7 @@ import importDefaultResult from "priv";
 const require = arg1;
 function getGuildNameSuggestion(truncateUsername) {
   currentUser = currentUser.getCurrentUser();
-  let obj = importAll(4032);
+  let obj = importAll(4094);
   const name = obj.getName(currentUser);
   let str = "";
   if (null != name) {

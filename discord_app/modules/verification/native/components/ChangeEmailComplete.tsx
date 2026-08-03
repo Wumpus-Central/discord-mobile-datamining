@@ -12,7 +12,7 @@ let metroImportAll;
 const require = arg1;
 function handlePress() {
   resetChangeEmailStore();
-  importDefault(9186).close();
+  importDefault(9359).close();
 }
 ({ View: c3, Image: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
@@ -32,28 +32,28 @@ const result = require("ChangeEmailFields").fileFinishedImporting("modules/verif
 export default function ChangeEmailComplete(email) {
   const tmp = createCacheKey();
   let obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { style: tmp.image, source: importDefault(9197) };
+  obj = { style: tmp.image, source: importDefault(9370) };
   const items = [callback(closure_4, obj), , , ];
   obj = { style: tmp.bodyInner, children: null };
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj1[4] = intl.string(require(1236) /* getSystemLocale */.t["8O+nF7"]);
-  const items1 = [callback(require(4189) /* Text */.Text, obj1), ];
+  const items1 = [callback(require(4251) /* Text */.Text, obj1), ];
   const obj2 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj2[3] = intl2.format(require(1236) /* getSystemLocale */.t.Zvx0O3, { email: email.email });
-  items1[1] = callback(require(4189) /* Text */.Text, obj2);
+  items1[1] = callback(require(4251) /* Text */.Text, obj2);
   obj[1] = items1;
   items[1] = callback2(closure_3, obj);
   const obj3 = { style: tmp.tooltip, variant: "text-sm/normal", children: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj3[2] = intl3.string(require(1236) /* getSystemLocale */.t.yb7itQ);
-  items[2] = callback(require(4189) /* Text */.Text, obj3);
+  items[2] = callback(require(4251) /* Text */.Text, obj3);
   const obj4 = { text: null, onPress: null, grow: true };
   const intl4 = require(1236) /* getSystemLocale */.intl;
   obj4[0] = intl4.string(require(1236) /* getSystemLocale */.t.BddRzS);
   obj4[1] = handlePress;
-  items[3] = callback(require(4604) /* Button */.Button, obj4);
+  items[3] = callback(require(4666) /* Button */.Button, obj4);
   obj[3] = items;
   return callback2(closure_5, obj);
 };

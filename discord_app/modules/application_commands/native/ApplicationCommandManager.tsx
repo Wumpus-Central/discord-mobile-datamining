@@ -337,7 +337,7 @@ class ApplicationCommandManager {
         ruleId: "commandOptionParserRuleId",
         type: obj(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION,
         matchFunction(arg0, arg1) {
-          return lib(11183).getMatchedOptions(arg0, arg1);
+          return lib(11295).getMatchedOptions(arg0, arg1);
         },
         style() {
           const styles = lib.styles;
@@ -352,7 +352,7 @@ class ApplicationCommandManager {
         ruleId: "commandOptionValueParserRuleId",
         type: obj(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE,
         matchFunction(arg0, arg1) {
-          return lib(11183).getMatchedOptionsWithValue(arg0, arg1);
+          return lib(11295).getMatchedOptionsWithValue(arg0, arg1);
         },
         style() {
           const styles = lib.styles;
@@ -486,7 +486,7 @@ class ApplicationCommandManager {
         ruleId: "silentHighlightRuleId",
         type: obj(outer1_3[6]).ChatInputNodeType.SILENT_HIGHLIGHT,
         matchFunction(arg0) {
-          return lib(11183).getSilentHighlightNodes(arg0);
+          return lib(11295).getSilentHighlightNodes(arg0);
         },
         style() {
           const styles = lib.styles;
@@ -501,7 +501,7 @@ class ApplicationCommandManager {
         ruleId: "silentHighlightRuleId",
         type: obj(outer1_3[6]).ChatInputNodeType.SILENT_HIGHLIGHT,
         matchFunction(arg0) {
-          return lib(11183).getSilentHighlightNodes(arg0);
+          return lib(11295).getSilentHighlightNodes(arg0);
         },
         style() {
           const styles = lib.styles;
@@ -546,7 +546,7 @@ class ApplicationCommandManager {
         ruleId: "gameMentionInputRuleId",
         type: obj(outer1_3[6]).ChatInputNodeType.GAME_MENTION_INPUT,
         matchFunction(arr) {
-          return lib(11183).getGameMentionInputNodes(arr);
+          return lib(11295).getGameMentionInputNodes(arr);
         },
         style() {
           const styles = lib.styles;
@@ -1116,8 +1116,8 @@ prototype["getMentionGames"] = function getMentionGames() {
 };
 prototype["buildGameMentionNode"] = function buildGameMentionNode(game) {
   const styles = this.styles;
-  const obj = { type: require(11184) /* addRule */.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
-  const merged = Object.assign(require(11183) /* findGameMentionTokens */.buildGameMentionResult(game));
+  const obj = { type: require(11296) /* addRule */.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
+  const merged = Object.assign(require(11295) /* findGameMentionTokens */.buildGameMentionResult(game));
   return obj;
 };
 prototype["setPreferredOptionValue"] = function setPreferredOptionValue(id, name, displayText) {
@@ -1184,7 +1184,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
     if (tmp84) {
       let focused2 = editId.focused;
       if (!focused2) {
-        let obj5 = obj1(4059);
+        let obj5 = obj1(4121);
         const keyboardType = obj5.getKeyboardType();
         focused2 = keyboardType !== obj1(1579).KeyboardTypes.SYSTEM;
       }
@@ -1196,8 +1196,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       tmp91 = null != self.activeCommand;
     }
     if (tmp91) {
-      importDefault(6189).clearAll(channel.id, DraftType.SlashCommand);
-      const obj7 = importDefault(6189);
+      importDefault(8156).clearAll(channel.id, DraftType.SlashCommand);
+      const obj7 = importDefault(8156);
     }
     let name;
     if (activeOption != null) {
@@ -1230,7 +1230,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       preferredCommandType = obj1;
       preferredCommandType = dependencyMap;
       preferredCommandType = dependencyMap;
-      const obj8 = obj1(11346);
+      const obj8 = obj1(11456);
       preferredCommandType = obj8;
       preferredCommandType = activeCommand;
       self.optionValidationResults = obj8.getValidationResults(activeCommand, self.optionValues, editId.channel.guild_id, editId.channel.id, false);
@@ -1475,6 +1475,14 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
             obj2.length = preferredCommandType;
             obj2.optionValue = self.optionValues[name2];
             obj2.hasValue = true;
+            preferredCommandType = self.optionValidationResults[name2];
+            preferredCommandType = undefined;
+            if (preferredCommandType != null) {
+              preferredCommandType = preferredCommandType.success;
+            }
+            if (preferredCommandType) {
+              obj2.lastValidationResult = preferredCommandType;
+            }
             obj1[name2] = obj2;
           }
         }
@@ -1519,8 +1527,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           obj3[3] = preferredCommandType;
           obj3[4] = self.location;
           obj3[5] = obj1;
-          preferredCommandType = importAll(6093).updateChannelState(obj3);
-          const obj16 = importAll(6093);
+          preferredCommandType = importAll(7145).updateChannelState(obj3);
+          const obj16 = importAll(7145);
         }
       }
     }
@@ -1532,9 +1540,9 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       preferredCommandType = activeOption.type !== preferredCommandType(1906).ApplicationCommandOptionType.ATTACHMENT;
     }
     if (preferredCommandType) {
-      preferredCommandType = preferredCommandType(4059).getKeyboardType();
+      preferredCommandType = preferredCommandType(4121).getKeyboardType();
       preferredCommandType = preferredCommandType !== preferredCommandType(1579).KeyboardTypes.SYSTEM;
-      const preferredCommandTypeResult1 = preferredCommandType(4059);
+      const preferredCommandTypeResult1 = preferredCommandType(4121);
     }
     if (preferredCommandType) {
       const current3 = self.ref.current;
@@ -1640,7 +1648,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       let tmp39 = obj1;
       let tmp40 = dependencyMap;
       let tmp41 = dependencyMap;
-      obj3 = obj1(11183);
+      obj3 = obj1(11295);
       let hasItem = 0 !== obj3.findGameMentionTokens(editId.text, tmp36[1].name, mapped).locations.length;
       if (!hasItem) {
         let text2 = editId.text;
@@ -1745,7 +1753,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           continue;
         }
         if (items3.length > 0) {
-          obj4 = importDefault(6189);
+          obj4 = importDefault(8156);
           obj4.removeFiles(channel.id, items3, DraftType.SlashCommand);
         }
       }
@@ -1788,7 +1796,7 @@ prototype["updateValidationResults"] = function updateValidationResults() {
       }
     }
   }
-  importAll(6093).updateOptionStates(self.props.channel.id, obj);
+  importAll(7145).updateOptionStates(self.props.channel.id, obj);
 };
 
 export default ApplicationCommandManager;

@@ -9,7 +9,7 @@ prototype["pack"] = function pack(arg0) {
   return JSON.stringify(arg0);
 };
 prototype["unpack"] = function unpack(arg0) {
-  if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof arg0 === "ge") {
     let tmp2 = null;
     if (null != arg0) {
       tmp2 = typeof arg0;

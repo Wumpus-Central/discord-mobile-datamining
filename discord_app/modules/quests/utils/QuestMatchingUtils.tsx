@@ -31,8 +31,8 @@ function questMatchesActivity(arg0, id) {
           let tmp13 = tmp2 != formatted.application_id;
           if (tmp13) {
             const application_id = formatted.application_id;
-            const allApplicationIds = application_id(6012).getAllApplicationIds(id);
-            const obj = application_id(6012);
+            const allApplicationIds = application_id(7091).getAllApplicationIds(id);
+            const obj = application_id(7091);
             tmp13 = tmp2 != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
             const tmp16 = tmp2 != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
           }
@@ -42,7 +42,7 @@ function questMatchesActivity(arg0, id) {
       tmp9 = formatted.platform === ActivityGamePlatforms.PS4 || formatted.platform === tmp8.PS5;
     }
     formatted = formatted.name.toLowerCase();
-    const consoleApplicationId = application_id(6012).getConsoleApplicationId(id);
+    const consoleApplicationId = application_id(7091).getConsoleApplicationId(id);
     let flag = false;
     if (tmp2 != consoleApplicationId) {
       application = application.getApplication(consoleApplicationId);
@@ -54,7 +54,7 @@ function questMatchesActivity(arg0, id) {
       flag = tmp2;
     }
     tmp10 = flag;
-    const obj3 = application_id(6012);
+    const obj3 = application_id(7091);
     const str = formatted.name;
   }
 }
@@ -70,7 +70,7 @@ function getQuestByActivity(result, arg1) {
     if (questMatchesActivity(arg1, tmp4)) {
       let tmp7 = require;
       let tmp8 = dependencyMap;
-      let obj2 = require(5987) /* getQuestDeliveryDataForPlacement */;
+      let obj2 = require(7066) /* getQuestDeliveryDataForPlacement */;
       let tmp9 = tmp4;
       if (!obj2.isQuestExpired(tmp5)) {
         let tmp10 = tmp4;
@@ -84,8 +84,8 @@ function getQuestByActivity(result, arg1) {
 }
 function questMatchesApplicationId(arg0, quest) {
   const _require = arg0;
-  const allApplicationIds = _require(6012).getAllApplicationIds(quest);
-  const obj = _require(6012);
+  const allApplicationIds = _require(7091).getAllApplicationIds(quest);
+  const obj = _require(7091);
   return null != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
 }
 ({ DISCORD_APPLICATION_ID: c4, PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: c5, PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_6 } = QuestsExperimentLocations);
@@ -105,7 +105,7 @@ export const getQuestByApplicationId = function getQuestByApplicationId(arg0, ar
     if (questMatchesApplicationId(arg1, tmp5)) {
       let tmp8 = require;
       let tmp9 = dependencyMap;
-      let obj2 = require(5987) /* getQuestDeliveryDataForPlacement */;
+      let obj2 = require(7066) /* getQuestDeliveryDataForPlacement */;
       let tmp10 = tmp5;
       if (!obj2.isQuestExpired(tmp6)) {
         let tmp = tmp5;

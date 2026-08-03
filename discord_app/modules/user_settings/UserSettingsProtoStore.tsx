@@ -38,11 +38,11 @@ function handleUserSettingsProtoUpdate(settings) {
   }
   if (settings.partial) {
     tmp.proto = require(1342) /* b64ToProto */.mergeTopLevelFields(tmp.ProtoClass, tmp.proto, proto);
-    importDefault(38)(typeof tmp.proto === "__FORMATJS_LISTFORMAT_DATA__", "UserSettingsProto cannot be a string");
+    importDefault(38)(typeof tmp.proto === "ge", "UserSettingsProto cannot be a string");
     const obj = require(1342) /* b64ToProto */;
   } else {
     tmp.proto = proto;
-    importDefault(38)(typeof tmp.proto === "__FORMATJS_LISTFORMAT_DATA__", "UserSettingsProto cannot be a string");
+    importDefault(38)(typeof tmp.proto === "ge", "UserSettingsProto cannot be a string");
     tmp.editInfo.loaded = true;
     tmp.editInfo.loading = false;
   }
@@ -76,7 +76,7 @@ prototype["initialize"] = function initialize(arg0) {
         const b64ToProtoResult = userSettings(outer1_2[4]).b64ToProto(ProtoClass.ProtoClass, str);
         if (null != b64ToProtoResult) {
           ProtoClass.proto = b64ToProtoResult;
-          outer1_1(tmp4[3])(typeof ProtoClass.proto === "__FORMATJS_LISTFORMAT_DATA__", "UserSettingsProto cannot be a string");
+          outer1_1(tmp4[3])(typeof ProtoClass.proto === "ge", "UserSettingsProto cannot be a string");
           let protoToSave;
           if (tmp != null) {
             protoToSave = tmp.protoToSave;
@@ -299,7 +299,7 @@ obj = {
           const b64ToProtoResult = userSettings(outer1_2[4]).b64ToProto(ProtoClass.ProtoClass, str);
           if (null != b64ToProtoResult) {
             ProtoClass.proto = b64ToProtoResult;
-            outer1_1(tmp4[3])(typeof ProtoClass.proto === "__FORMATJS_LISTFORMAT_DATA__", "UserSettingsProto cannot be a string");
+            outer1_1(tmp4[3])(typeof ProtoClass.proto === "ge", "UserSettingsProto cannot be a string");
             let protoToSave;
             if (tmp != null) {
               protoToSave = tmp.protoToSave;
@@ -342,7 +342,7 @@ obj = {
     userSettingsProto = userSettingsProto.userSettingsProto;
     if (null != userSettingsProto) {
       obj.proto = userSettingsProto;
-      importDefault(38)(typeof obj.proto === "__FORMATJS_LISTFORMAT_DATA__", "UserSettingsProto cannot be a string");
+      importDefault(38)(typeof obj.proto === "ge", "UserSettingsProto cannot be a string");
     }
     obj = require(1342) /* b64ToProto */;
     ({ isDirty, proto, cleanupFuncs } = obj.runMigrations(obj.proto, importDefault(1343)[UserSettingsTypes.PRELOADED_USER_SETTINGS]));
@@ -354,7 +354,7 @@ obj = {
       tmp6.editInfo = createEmptyEditInfo();
     }
     obj.proto = proto;
-    importDefault(38)(typeof obj.proto === "__FORMATJS_LISTFORMAT_DATA__", "UserSettingsProto cannot be a string");
+    importDefault(38)(typeof obj.proto === "ge", "UserSettingsProto cannot be a string");
     obj.editInfo.triggeredMigrations = isDirty;
     obj.editInfo.cleanupFuncs = cleanupFuncs;
     obj.editInfo.loaded = true;
@@ -391,7 +391,7 @@ obj = {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(userSettingsProto) {
     const obj = require(1342) /* b64ToProto */;
     obj.proto = obj.b64ToPreloadedUserSettingsProto(userSettingsProto.userSettingsProto);
-    importDefault(38)(typeof obj.proto === "__FORMATJS_LISTFORMAT_DATA__", "UserSettingsProto cannot be a string");
+    importDefault(38)(typeof obj.proto === "ge", "UserSettingsProto cannot be a string");
   },
   LOGOUT: function handleLogout() {
     let values = Object.values(closure_7);

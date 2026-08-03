@@ -7,7 +7,7 @@ export const useDisplayNameStylesEnabled = function useDisplayNameStylesEnabled(
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   let overrideSettings = require(589) /* initialize */.useStateFromStores(items, () => obj.displayNameStylesEnabled);
   if (!overrideSettings) {
-    overrideSettings = useContext(require(4425) /* context */.DisplayNameStylesContext).overrideSettings;
+    overrideSettings = useContext(require(4487) /* context */.DisplayNameStylesContext).overrideSettings;
   }
   return overrideSettings;
 };

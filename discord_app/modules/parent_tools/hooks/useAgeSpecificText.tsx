@@ -2,7 +2,7 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 
 export const useAgeSpecificText = function useAgeSpecificText(stringResult, intl2) {
   let tmp = stringResult;
-  if (importDefault(6259)()) {
+  if (importDefault(7248)()) {
     tmp = intl2;
   }
   return tmp;

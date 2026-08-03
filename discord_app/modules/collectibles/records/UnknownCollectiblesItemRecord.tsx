@@ -16,7 +16,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   const fromServerResult = super.fromServer(arg0);
   const merged = Object.assign(fromServerResult);
   obj.type = require(1901) /* CollectiblesItemType */.CollectiblesItemType.NONE;
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "error") {
     HermesBuiltin.throwTypeError();
   }
   tmp2 = new tmp2(obj, fromServerResult, this, prototype, obj);

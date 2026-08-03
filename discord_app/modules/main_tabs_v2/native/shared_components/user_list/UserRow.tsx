@@ -39,15 +39,15 @@ function UserRowSubLabel(arg0) {
         obj[1] = guildId;
         obj[2] = gameIcon.activityText;
         obj[3] = animate;
-        return callback(importDefault(9071), obj);
+        return callback(importDefault(9244), obj);
       }
     }
   }
   if (!isGameRelationship) {
     obj = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-    obj[3] = tmp(4032).getUserTag(user);
-    callback(tmp(4189).Text, obj);
-    const tmpResult = tmp(4032);
+    obj[3] = tmp(4094).getUserTag(user);
+    callback(tmp(4251).Text, obj);
+    const tmpResult = tmp(4094);
   }
   if (null == stateFromStores) {
     const obj1 = { style: null };
@@ -69,7 +69,7 @@ function UserRowSubLabel(arg0) {
     const items1 = [callback(tmp(1297).Icon, obj3, stateFromStores.id), ];
     const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: null };
     obj5[3] = stateFromStores.name;
-    items1[1] = callback(tmp(4189).Text, obj5);
+    items1[1] = callback(tmp(4251).Text, obj5);
     obj2[1] = items1;
     closure_15(View, obj2);
     const tmp11 = closure_15;
@@ -644,7 +644,7 @@ const memoResult = importAllResult.memo(function UserRow(type) {
   const displayNameStylesFont = tmp6Result.useDisplayNameStylesFont({ displayNameStyles: tmp26 });
   const humanizeStatusResult = type(NONE[24]).humanizeStatus(status, { isMobile: isMobileOnline, isVR: isVROnline });
   let combined;
-  if (typeof memo3 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof memo3 !== "ge") {
     if (null != humanizeStatusResult) {
       const _HermesInternal = HermesInternal;
       combined = "" + memo3 + ", " + humanizeStatusResult;

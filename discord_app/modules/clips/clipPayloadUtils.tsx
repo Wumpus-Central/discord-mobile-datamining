@@ -43,7 +43,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
       const diff = clip.decision.timestamp - clip.length;
       const sum = diff + 1000 * editMetadata.end;
       const sum1 = diff + 1000 * editMetadata.start;
-      let closure_1 = _require(4729).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
+      let closure_1 = _require(4791).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
       const timeline1 = clip.timeline;
       const found = timeline1.filter((signal) => {
         const editMetadata = clip.editMetadata;
@@ -77,7 +77,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
           let tmp20 = _require;
           let tmp21 = dependencyMap;
           let tmp22 = dependencyMap;
-          if (item10063.signal.type !== _require(4250).ClipSignalTypes.SPEAKING) {
+          if (item10063.signal.type !== _require(4312).ClipSignalTypes.SPEAKING) {
             continue;
           } else {
             let tmp23 = item10063;
@@ -100,7 +100,7 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         }
         const tmp12 = map;
       }
-      const obj2 = _require(4729);
+      const obj2 = _require(4791);
     }
   }
 };

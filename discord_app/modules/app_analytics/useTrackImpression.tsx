@@ -47,9 +47,9 @@ function trackImpression(type, arg1, arg2) {
   }
   let tmpResult = tmp(698);
   obj = { impression_type: type, location: callback3() };
-  tmpResult = tmp(4388);
+  tmpResult = tmp(4450);
   const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
-  const merged1 = Object.assign(require(4388) /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
+  const merged1 = Object.assign(require(4450) /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj);
   if (flag) {
@@ -80,7 +80,7 @@ export default function useTrackImpression(arg0) {
   let ensureGuildLoaded;
   React = React.useRef(undefined);
   ensureGuildLoaded = React.useRef(undefined);
-  obj(4620)(() => {
+  obj(4682)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = obj(659)(ref.current, obj);
       if (!tmp6) {
@@ -93,7 +93,7 @@ export default function useTrackImpression(arg0) {
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
-        obj.sequenceId = tmp2(4400)("impression_");
+        obj.sequenceId = tmp2(4462)("impression_");
         outer1_13(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {
@@ -117,7 +117,7 @@ export default function useTrackImpression(arg0) {
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
-        obj.sequenceId = tmp2(4400)("impression_");
+        obj.sequenceId = tmp2(4462)("impression_");
         outer1_13(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {

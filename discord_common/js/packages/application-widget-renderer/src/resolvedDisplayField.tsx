@@ -12,11 +12,11 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
   if (null == subtitle_1) {
     return flag ? { status: "skeleton" } : { status: "hidden" };
   } else {
-    const items = [require(12085) /* resolveFieldValue */.ResolvedValueType.STRING, require(12085) /* resolveFieldValue */.ResolvedValueType.NUMBER];
+    const items = [require(12181) /* resolveFieldValue */.ResolvedValueType.STRING, require(12181) /* resolveFieldValue */.ResolvedValueType.NUMBER];
     let iter = resolveFieldValue(subtitle_1.fields.text, items);
     let str = null;
     if (!flag2) {
-      const items1 = [tmp9(12085).ResolvedValueType.STRING, tmp9(12085).ResolvedValueType.NUMBER];
+      const items1 = [tmp9(12181).ResolvedValueType.STRING, tmp9(12181).ResolvedValueType.NUMBER];
       str = resolveFieldValue(subtitle_1.fields.label, items1);
     }
     if (null == iter) {
@@ -24,7 +24,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
         return { status: "skeleton" };
       }
     }
-    const items2 = [require(12085) /* resolveFieldValue */.ResolvedValueType.MEDIA];
+    const items2 = [require(12181) /* resolveFieldValue */.ResolvedValueType.MEDIA];
     const tmp2 = resolveFieldValue(subtitle_1.fields.icon, items2);
     let str3 = "";
     if (null != str) {
@@ -81,18 +81,18 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     }
     return tmp4;
   } else {
-    const items = [require(12085) /* resolveFieldValue */.ResolvedValueType.STRING, require(12085) /* resolveFieldValue */.ResolvedValueType.NUMBER];
+    const items = [require(12181) /* resolveFieldValue */.ResolvedValueType.STRING, require(12181) /* resolveFieldValue */.ResolvedValueType.NUMBER];
     const iter = closure_1(fields.fields.value, items);
-    const items1 = [require(12085) /* resolveFieldValue */.ResolvedValueType.STRING];
+    const items1 = [require(12181) /* resolveFieldValue */.ResolvedValueType.STRING];
     const iter2 = closure_1(fields.fields.label, items1);
-    const items2 = [require(12085) /* resolveFieldValue */.ResolvedValueType.MEDIA];
+    const items2 = [require(12181) /* resolveFieldValue */.ResolvedValueType.MEDIA];
     const tmp8 = closure_1(fields.fields.icon, items2);
     if (null == iter) {
       obj = { status: "skeleton" };
     } else {
-      if (iter.type === tmp6(12085).ResolvedValueType.STRING) {
+      if (iter.type === tmp6(12181).ResolvedValueType.STRING) {
         let formatResult = iter.value;
-      } else if (iter.presentationType === tmp6(12086).ApplicationWidgetFieldPresentationType.DURATION) {
+      } else if (iter.presentationType === tmp6(12182).ApplicationWidgetFieldPresentationType.DURATION) {
         formatResult = formatDurationNarrow(iter.value);
       } else {
         formatResult = closure_2.format(iter.value);
@@ -127,7 +127,7 @@ export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkele
   if (componentConfig != null) {
     tmp = componentConfig.fields[description];
   }
-  const items = [require(12085) /* resolveFieldValue */.ResolvedValueType.STRING];
+  const items = [require(12181) /* resolveFieldValue */.ResolvedValueType.STRING];
   const iter = resolveFieldValue(tmp, items);
   if (null == iter) {
     let obj = { status: "skeleton" };

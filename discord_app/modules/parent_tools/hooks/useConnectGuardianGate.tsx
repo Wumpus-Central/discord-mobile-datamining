@@ -53,7 +53,7 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
       }
     });
   }, []);
-  importDefault(4620)(callback);
+  importDefault(4682)(callback);
   if (tmp3) {
     obj = { state: "error" };
   } else if (tmp4[0]) {

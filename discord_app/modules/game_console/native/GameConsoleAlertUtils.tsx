@@ -39,7 +39,7 @@ export default {
         }
         return resolved;
       }
-      obj2 = require(4009) /* UNSAFE_isDismissibleContentDismissed */;
+      obj2 = require(4071) /* UNSAFE_isDismissibleContentDismissed */;
     }
     return Promise.resolve();
   },
@@ -49,11 +49,11 @@ export default {
     let title;
     reconnectPlatformType = reconnectPlatformType.reconnectPlatformType;
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
-    let obj = importDefault(4533);
+    let obj = importDefault(4595);
     obj = { title, body: null, onConfirm: null };
     obj = { body, errorCodeMessage, dismissCallback: null };
-    obj[2] = importDefault(4533).close;
-    obj[1] = jsx(reconnectPlatformType(9053).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: null });
+    obj[2] = importDefault(4595).close;
+    obj[1] = jsx(reconnectPlatformType(9226).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: null });
     obj[2] = function onConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: null, location: null };

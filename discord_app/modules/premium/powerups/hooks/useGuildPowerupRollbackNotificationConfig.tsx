@@ -10,7 +10,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
   const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4084).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4146).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   if (tmp4 != null) {
     const storeRemovalDate = tmp4.storeRemovalDate;
@@ -35,12 +35,12 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
           obj[0] = tmp(1358).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION;
           const intl = tmp(1236).intl;
           obj = { dateString: null };
-          obj[0] = importDefault(11605)(storeRemovalDate);
-          obj[1] = intl.formatToPlainString(importDefault(2257)["6e2ry1"], obj);
+          obj[0] = importDefault(11712)(storeRemovalDate);
+          obj[1] = intl.formatToPlainString(importDefault(2287)["6e2ry1"], obj);
           const intl2 = tmp(1236).intl;
           const obj1 = { startDate: null, endDate: null, perkName: null, boostCount: null };
-          obj1[0] = importDefault(11605)(storeRemovalDate);
-          obj1[1] = importDefault(11605)(storeRemovalDate);
+          obj1[0] = importDefault(11712)(storeRemovalDate);
+          obj1[1] = importDefault(11712)(storeRemovalDate);
           let title1;
           if (tmp4 != null) {
             title1 = tmp4.title;
@@ -51,7 +51,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
             cost1 = tmp4.cost;
           }
           obj1[3] = cost1;
-          obj[2] = intl2.formatToPlainString(importDefault(2257).jd8fki, obj1);
+          obj[2] = intl2.formatToPlainString(importDefault(2287).jd8fki, obj1);
           tmp5 = obj;
         }
       }

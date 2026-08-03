@@ -15,8 +15,8 @@ export default function EditGuildScheduledEventResetWarningAlert(arg0) {
   obj[3] = intl2.format(require(1236) /* getSystemLocale */.t.RWBa5X, {});
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj[4] = intl3.string(require(1236) /* getSystemLocale */.t["cY+Oob"]);
-  obj[5] = importDefault(4622).Colors.GREEN;
+  obj[5] = importDefault(4684).Colors.GREEN;
   const intl4 = require(1236) /* getSystemLocale */.intl;
   obj[6] = intl4.string(require(1236) /* getSystemLocale */.t["ETE/oC"]);
-  return jsx(importDefault(4622), { onClose, onConfirm, title: null, body: null, confirmText: null, confirmColor: null, cancelText: null });
+  return jsx(importDefault(4684), { onClose, onConfirm, title: null, body: null, confirmText: null, confirmColor: null, cancelText: null });
 };

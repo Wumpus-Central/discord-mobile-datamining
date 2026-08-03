@@ -88,13 +88,13 @@ function CodeFieldInner(loading) {
   obj = { style: tmp2.container, children: null };
   [tmp4, tmp5] = callback(React.useState(""), 2);
   obj = { style: tmp2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items1 = [callback2(require(4189) /* Text */.Text, obj), callback2(require(4189) /* Text */.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
+  const items1 = [callback2(require(4251) /* Text */.Text, obj), callback2(require(4251) /* Text */.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
   const obj1 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
   const tmp3 = callback(React.useState(""), 2);
   items1[2] = callback2(closure_5, { style: tmp2.inputContainer, children: callback2(SingleCodeInput, { loading: flag, error, count: num, onCodeEntered, codeType: NUMERIC, disabled, code: tmp4, setCode: tmp5 }) });
   items1[3] = actions;
   obj[1] = items1;
-  const items2 = [callback3(closure_5, obj), callback2(importDefault(5642), { children: footer })];
+  const items2 = [callback3(closure_5, obj), callback2(importDefault(5704), { children: footer })];
   obj[4] = items2;
   return callback3(closure_6, obj);
 }
@@ -132,8 +132,8 @@ export default function CodeField(disableKeyboardAvoidingView) {
     obj = {};
     const merged1 = Object.assign(disableKeyboardAvoidingView);
     obj[1] = tmp2(CodeFieldInner, obj);
-    tmp2Result = tmp2(importDefault(5642), obj);
-    const tmp5 = importDefault(5642);
+    tmp2Result = tmp2(importDefault(5704), obj);
+    const tmp5 = importDefault(5704);
   }
   return tmp2Result;
 };

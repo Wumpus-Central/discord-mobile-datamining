@@ -99,8 +99,8 @@ export default {
     return tmp3;
   },
   extractEveryoneRole(arg0, getGuildId) {
-    const obj = importDefault(5971);
-    const obj2 = importDefault(5971).parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
+    const obj = importDefault(7050);
+    const obj2 = importDefault(7050).parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
     while (obj2 !== undefined) {
       let tmp3 = parsedItemUsesEveryoneRole;
       let tmp4 = parsedItemUsesEveryoneRole(tmp2);

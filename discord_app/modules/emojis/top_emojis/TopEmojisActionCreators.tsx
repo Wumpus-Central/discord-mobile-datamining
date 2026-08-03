@@ -4,7 +4,7 @@ const result = require("dispatcher").fileFinishedImporting("modules/emojis/top_e
 
 export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   const _require = guildId;
-  let obj = _require(4028);
+  let obj = _require(4090);
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_EMOJIS_FETCH", guildId: null };
     obj[1] = guildId;

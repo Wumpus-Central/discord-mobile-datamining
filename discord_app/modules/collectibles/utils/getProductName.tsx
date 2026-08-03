@@ -38,7 +38,7 @@ export const getPurchasedProductName = function getPurchasedProductName(baseVari
 };
 export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(closure_0) {
   if (null == closure_0) {
-    let obj1 = require(5814) /* getProductOrbPrice */;
+    let obj1 = require(6909) /* getProductOrbPrice */;
     const productType = obj1.getProductType(closure_0);
     if (require(1901) /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === productType) {
       const intl5 = tmp3(1236).intl;

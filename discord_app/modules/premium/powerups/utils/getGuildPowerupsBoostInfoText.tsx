@@ -7,14 +7,14 @@ export const getGuildPowerupsBoostInfoText = function getGuildPowerupsBoostInfoT
     const intl3 = require(1236) /* getSystemLocale */.intl;
     let obj = { boostCount: null };
     obj[0] = count;
-    return intl3.formatToPlainString(importDefault(2257).BdRXZA, obj);
+    return intl3.formatToPlainString(importDefault(2287).BdRXZA, obj);
   } else if (tmp.SPENT === type) {
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj = { boostCount: null };
     obj[0] = count;
-    return intl2.formatToPlainString(importDefault(2257).xvgIVG, obj);
+    return intl2.formatToPlainString(importDefault(2287).xvgIVG, obj);
   } else if (tmp.TOTAL === type) {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2257)["/F7Z2y"]);
+    return intl.string(importDefault(2287)["/F7Z2y"]);
   }
 };

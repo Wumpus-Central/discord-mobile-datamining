@@ -79,9 +79,9 @@ export const getRoleIcon = function getRoleIcon(roleId) {
     if (null != roleId) {
       role = role.getRole(guild.id, roleId);
       if (null != role) {
-        let obj = require(5544) /* getRoleIconData */;
+        let obj = require(5606) /* getRoleIconData */;
         if (obj.canGuildUseRoleIcons(guild, role)) {
-          let roleIconData = tmp4(5544).getRoleIconData(role);
+          let roleIconData = tmp4(5606).getRoleIconData(role);
           if (roleIconData == null) {
             roleIconData = {};
           }

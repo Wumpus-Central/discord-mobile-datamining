@@ -19,5 +19,5 @@ export default function ProfileEffectUserPreview(profileEffect) {
   }
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(8080), { profileEffectOverride: profileEffect, accessibilityLabel: null });
+  return jsx(importDefault(8411), { profileEffectOverride: profileEffect, accessibilityLabel: null });
 };

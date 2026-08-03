@@ -120,7 +120,7 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(onSi
     tmp2 = onSignFailure.status < 500;
   }
   if (!tmp2) {
-    let tmp4 = onSignFailure instanceof importDefault(3861);
+    let tmp4 = onSignFailure instanceof importDefault(3923);
     if (tmp4) {
       tmp4 = null != onSignFailure.status;
     }

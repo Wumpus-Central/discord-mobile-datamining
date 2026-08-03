@@ -8,7 +8,7 @@ const result = require("DefaultState").fileFinishedImporting("modules/directory_
 export default function GuildDirectorySearchModal(arg0) {
   const _require = arg0;
   const obj = { screens: null, initialRouteName: null };
-  obj[0] = importDefault(5507)(() => ({
+  obj[0] = importDefault(5569)(() => ({
     [outer1_4]: {
       fullscreen: true,
       headerShown: false,
@@ -19,5 +19,5 @@ export default function GuildDirectorySearchModal(arg0) {
     }
   }));
   obj[1] = SEARCH_SCREEN_KEY;
-  return jsx(_require(5574).Navigator, { screens: null, initialRouteName: null });
+  return jsx(_require(5636).Navigator, { screens: null, initialRouteName: null });
 };

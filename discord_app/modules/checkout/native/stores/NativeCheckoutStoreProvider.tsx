@@ -23,7 +23,7 @@ function NativeCheckoutStoreProvider(children) {
   let closure_6;
   let first;
   let closure_8;
-  closure_6 = order(5507)(() => {
+  closure_6 = order(5569)(() => {
     let id;
     if (order != null) {
       id = order.id;

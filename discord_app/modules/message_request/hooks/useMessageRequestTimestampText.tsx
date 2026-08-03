@@ -7,7 +7,7 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
   let lastMessageId;
   let message;
   const _require = channel;
-  let obj = _require(11702);
+  let obj = _require(11805);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   obj = { lastMessageId: null };
   const items = [generateOldThreadCutoff];
@@ -21,8 +21,8 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = importDefault(3775)(extractTimestampResult).calendar();
-      const obj6 = importDefault(3775)(extractTimestampResult);
+      str = importDefault(3837)(extractTimestampResult).calendar();
+      const obj6 = importDefault(3837)(extractTimestampResult);
     }
     return str;
   }
@@ -36,7 +36,7 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
   let lastMessageId;
   let message;
   const _require = channel;
-  let obj = _require(11702);
+  let obj = _require(11805);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   obj = { lastMessageId: null };
   const items = [generateOldThreadCutoff];
@@ -50,8 +50,8 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = _require(6096).getTimestampString(extractTimestampResult);
-      const tmpResult = _require(6096);
+      str = _require(7148).getTimestampString(extractTimestampResult);
+      const tmpResult = _require(7148);
     }
     return str;
   }

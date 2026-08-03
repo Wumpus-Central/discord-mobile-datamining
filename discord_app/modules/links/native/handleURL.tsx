@@ -1,4 +1,4 @@
-import module_3887 from "module_3887";
+import module_3949 from "module_3949";
 import { Linking } from "handleSupportedURL";
 import setContent from "setContent";
 import { WebBrowserType } from "ME";

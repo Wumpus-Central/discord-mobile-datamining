@@ -19,7 +19,7 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
     return [];
   } else {
     const tmp2 = type === _require(1906).ComponentType.USER_SELECT || type === _require(1906).ComponentType.MENTIONABLE_SELECT;
-    let obj = channel(5035);
+    let obj = channel(5097);
     obj = { query: null, channel: null, canMentionEveryone: false, canMentionHere: false, canMentionUsers: null, canMentionRoles: null, includeAllGuildUsers: true, includeNonMentionableRoles: true, checkRecentlyTalkedOnEmptyQuery: false, limit: 15 };
     obj[0] = arg1;
     obj[1] = channel;
@@ -50,15 +50,15 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
   if (null == channel) {
     let items = [];
   } else {
-    let obj = importDefault(5035);
+    let obj = importDefault(5097);
     obj = { query: null, channel: null, channelTypes: null, limit: 15 };
     obj[0] = arg0;
     obj[1] = channel;
     obj[2] = arg2;
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
-      const obj = { type: callback(4421).SelectOptionType.CHANNEL, value: id.id, label: null };
-      obj[2] = callback(4384).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+      const obj = { type: callback(4483).SelectOptionType.CHANNEL, value: id.id, label: null };
+      obj[2] = callback(4446).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
       return obj;
     });
   }

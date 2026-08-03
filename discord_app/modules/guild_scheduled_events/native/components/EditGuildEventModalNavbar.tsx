@@ -16,11 +16,11 @@ export default function EditGuildEventModalNavbar(screen) {
   let tmp7;
   screen = screen.screen;
   const tmp = callback4();
-  if (require(8213) /* EditGuildEventScreens */.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
+  if (require(8520) /* EditGuildEventScreens */.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
-  } else if (tmp2(8213).EditGuildEventScreens.DETAILS === screen) {
+  } else if (tmp2(8520).EditGuildEventScreens.DETAILS === screen) {
     items = [2, 3];
-  } else if (tmp2(8213).EditGuildEventScreens.PREVIEW === screen) {
+  } else if (tmp2(8520).EditGuildEventScreens.PREVIEW === screen) {
     items = [3, 3];
   } else {
     tmp2(1351).assertNever(screen);
@@ -33,16 +33,16 @@ export default function EditGuildEventModalNavbar(screen) {
   const obj1 = { style: tmp.headerTitle, variant: "text-xs/bold", color: "text-default", children: null };
   const intl = tmp2(1236).intl;
   obj1[3] = intl.format(require(1236) /* getSystemLocale */.t["42HaFY"], { step: tmp6, total: tmp7 });
-  items1[1] = callback2(require(4189) /* Text */.Text, obj1);
+  items1[1] = callback2(require(4251) /* Text */.Text, obj1);
   const obj2 = { style: tmp.buttonContainer, children: null };
   const obj3 = { accessibilityLabel: null, onPress: null, source: null, style: null };
   const intl2 = tmp2(1236).intl;
   obj3[0] = intl2.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
   obj3[1] = screen.onClose;
-  obj3[2] = importDefault(7704);
+  obj3[2] = importDefault(7825);
   obj3[3] = tmp.rightButton;
-  obj2[1] = callback2(require(6755) /* HeaderActionButton */.HeaderActionButton, obj3);
+  obj2[1] = callback2(require(5907) /* HeaderActionButton */.HeaderActionButton, obj3);
   items1[2] = callback2(View, obj2);
   obj[2] = items1;
-  return callback3(require(5181) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback3(require(5243) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

@@ -33,8 +33,8 @@ function CountryCodeSelector(alpha2) {
     const obj1 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.selectorText;
     obj1[3] = combined;
-    obj[6] = callback(require(4189) /* Text */.Text, obj1);
-    const items = [callback(require(4721) /* PressableBase */.PressableOpacity, obj), ];
+    obj[6] = callback(require(4251) /* Text */.Text, obj1);
+    const items = [callback(require(4783) /* PressableBase */.PressableOpacity, obj), ];
     const obj2 = { style: null };
     obj2[0] = tmp.separator;
     items[1] = callback(View, obj2);

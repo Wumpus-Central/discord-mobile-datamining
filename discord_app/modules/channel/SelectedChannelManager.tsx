@@ -24,8 +24,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   const channelId = store.getChannelId(closure_9);
   const voiceChannelId = store.getVoiceChannelId();
   if (guild.id === channelId) {
-    require(6693) /* transitionToGuild */.transitionToGuild(guild.id);
-    const obj = require(6693) /* transitionToGuild */;
+    require(5856) /* transitionToGuild */.transitionToGuild(guild.id);
+    const obj = require(5856) /* transitionToGuild */;
   }
   let tmp6 = guild.id === voiceChannelId;
   if (tmp6) {
@@ -35,8 +35,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = importDefault(5005).selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = importDefault(5005);
+    const voiceChannel = importDefault(5067).selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = importDefault(5067);
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -51,8 +51,8 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = importDefault(5005).selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = importDefault(5005);
+      const voiceChannel = importDefault(5067).selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = importDefault(5067);
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }

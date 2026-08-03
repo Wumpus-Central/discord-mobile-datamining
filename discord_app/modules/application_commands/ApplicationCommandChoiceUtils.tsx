@@ -45,7 +45,7 @@ export const findAutocompleteChoiceStringValue = function findAutocompleteChoice
     }
   }
   let tmp2;
-  if (typeof value !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof value !== "ge") {
     tmp2 = value;
   }
   return tmp2;
@@ -61,7 +61,7 @@ export const findAutocompleteChoiceNumberValue = function findAutocompleteChoice
     }
   }
   let tmp2;
-  if (typeof value !== "__REMOTEDEV__") {
+  if (typeof value !== "SENTRY_RELEASE") {
     tmp2 = value;
   }
   return tmp2;

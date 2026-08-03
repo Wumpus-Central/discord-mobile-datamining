@@ -22,7 +22,7 @@ export default function EmojiIcon(size) {
   if (lineHeight === undefined) {
     lineHeight = num + 4;
   }
-  let obj = require(14277) /* useEmojiByIdOrName */;
+  let obj = require(14344) /* useEmojiByIdOrName */;
   const emojiByIdOrName = obj.useEmojiByIdOrName(guildId, id);
   if (null == emojiByIdOrName) {
     let tmp4 = null;
@@ -32,9 +32,9 @@ export default function EmojiIcon(size) {
       obj[0] = num;
       obj[1] = num;
       obj[1] = obj;
-      obj[2] = importDefault(9377);
-      tmp4 = jsx(importDefault(5145), { width: null, height: null });
-      const tmp7 = importDefault(5145);
+      obj[2] = importDefault(9536);
+      tmp4 = jsx(importDefault(5207), { width: null, height: null });
+      const tmp7 = importDefault(5207);
     }
     let tmp8Result = tmp4;
   } else {
@@ -73,8 +73,8 @@ export default function EmojiIcon(size) {
       url = emojiByIdOrName.url;
     }
     obj1[4] = url;
-    tmp8Result = jsx(importDefault(5210), { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
-    const tmp10 = importDefault(5210);
+    tmp8Result = jsx(importDefault(5272), { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
+    const tmp10 = importDefault(5272);
     const tmp8 = jsx;
     tmp9 = importDefault;
   }

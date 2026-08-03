@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo((animatedIndex) => {
       close();
     } else if ("collapse" === tmp3) {
       snapToIndex(num3);
-    } else if (typeof tmp3 !== "__REMOTEDEV__") {
+    } else if (typeof tmp3 !== "SENTRY_RELEASE") {
       snapToIndex(tmp3);
     }
   }, items);

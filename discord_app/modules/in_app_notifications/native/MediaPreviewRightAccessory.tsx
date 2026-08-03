@@ -16,19 +16,19 @@ let metroImportAll;
 const require = arg1;
 function VideoBadge() {
   const tmp = createCacheKey();
-  obj = { style: tmp.badge, children: callback(require(8131) /* PlayIcon */.PlayIcon, obj) };
+  obj = { style: tmp.badge, children: callback(require(8462) /* PlayIcon */.PlayIcon, obj) };
   obj = { style: tmp.icon, size: "custom", color: "white" };
   return callback(View, obj);
 }
 function CountBadge(children) {
-  return callback(View, { style: callback3().badge, children: callback(require(4189) /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
+  return callback(View, { style: callback3().badge, children: callback(require(4251) /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
 }
 function ObscuredMediaOverlay(isSpoiler) {
   let children;
   let isObscured;
   ({ isObscured, children } = isSpoiler);
   const tmp = createCacheKey();
-  let obj = require(3897) /* map */;
+  let obj = require(3959) /* map */;
   const token = obj.useToken(importDefault(712).colors.SPOILER_HIDDEN_BACKGROUND);
   if (!isObscured) {
     if (!isSpoiler.isSpoiler) {
@@ -53,16 +53,16 @@ function ObscuredMediaOverlay(isSpoiler) {
     obj[0] = str;
     obj[1] = token;
     obj[2] = StyleSheet.absoluteFill;
-    tmp11 = callback(importDefault(4594), obj);
+    tmp11 = callback(importDefault(4656), obj);
   }
   items[2] = tmp11;
   const obj1 = { style: tmp.spoilerIconContainer, children: null };
   if (isObscured) {
-    let tmp14Result = tmp14(tmp2(4700).ImageWarningIcon, { size: "sm", color: "white" });
+    let tmp14Result = tmp14(tmp2(4762).ImageWarningIcon, { size: "sm", color: "white" });
   } else {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.spoilerPill;
-    obj2[1] = tmp14(tmp2(8742).EyeIcon, { size: "sm", color: "white" });
+    obj2[1] = tmp14(tmp2(8919).EyeIcon, { size: "sm", color: "white" });
     tmp14Result = tmp14(tmp15, obj2);
   }
   const obj3 = { children: null };
@@ -86,11 +86,11 @@ function SinglePreviewableMedia(arg0) {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   ({ type, media, icon } = previewableMedia);
-  let obj1 = require(5865) /* redactionSettingToRenderedString */;
+  let obj1 = require(6956) /* redactionSettingToRenderedString */;
   const shouldAgeVerifyForExplicitMedia = obj1.useShouldAgeVerifyForExplicitMedia();
-  let obj2 = require(9902) /* useEnabledHarmTypesBitmaskForChannelAndAuthorId */;
+  let obj2 = require(10047) /* useEnabledHarmTypesBitmaskForChannelAndAuthorId */;
   const enabledHarmTypesBitmaskForMessage = obj2.useEnabledHarmTypesBitmaskForMessage(message);
-  if (require(10309) /* VoiceMessageIcon */.PreviewableMediaTypes.VOICE_MESSAGE === type) {
+  if (require(10448) /* VoiceMessageIcon */.PreviewableMediaTypes.VOICE_MESSAGE === type) {
     obj = { style: null, children: null };
     obj = { width: null, height: null };
     obj[0] = size;
@@ -99,11 +99,11 @@ function SinglePreviewableMedia(arg0) {
     obj[1] = icon;
     return callback(View, obj);
   } else {
-    if (tmp2(10309).PreviewableMediaTypes.AUDIO !== type) {
-      if (tmp2(10309).PreviewableMediaTypes.FILE !== type) {
-        if (tmp2(10309).PreviewableMediaTypes.IMAGE !== type) {
-          if (tmp2(10309).PreviewableMediaTypes.VIDEO !== type) {
-            if (tmp2(10309).PreviewableMediaTypes.GIF === type) {
+    if (tmp2(10448).PreviewableMediaTypes.AUDIO !== type) {
+      if (tmp2(10448).PreviewableMediaTypes.FILE !== type) {
+        if (tmp2(10448).PreviewableMediaTypes.IMAGE !== type) {
+          if (tmp2(10448).PreviewableMediaTypes.VIDEO !== type) {
+            if (tmp2(10448).PreviewableMediaTypes.GIF === type) {
               const video = media.video;
               if (video != null) {
                 const url = video.url;
@@ -112,17 +112,17 @@ function SinglePreviewableMedia(arg0) {
               if (null == thumbnail) {
                 return null;
               } else {
-                let tmp2Result = tmp2(5880);
+                let tmp2Result = tmp2(5789);
                 const author = message.author;
                 let id;
                 if (author != null) {
                   id = author.id;
                 }
                 const enabledHarmTypesForChannelAndAuthorId = tmp2Result.getEnabledHarmTypesForChannelAndAuthorId(message.channel_id, id);
-                tmp2Result = tmp2(5880);
+                tmp2Result = tmp2(5789);
                 obj1 = { type: null, media: null };
                 const getMediaObscuredReasonFromBitmask = tmp2Result.getMediaObscuredReasonFromBitmask;
-                obj1[0] = tmp2(5883).ObscuredMediaTypes.Embed;
+                obj1[0] = tmp2(5794).ObscuredMediaTypes.Embed;
                 obj1[1] = media;
                 if (null != thumbnail.proxyURL) {
                   if ("" !== thumbnail.proxyURL) {
@@ -147,7 +147,7 @@ function SinglePreviewableMedia(arg0) {
                         obj6[0] = url;
                         obj5[4] = obj6;
                         obj5[5] = url2;
-                        let tmp16Result = tmp16(importDefault(8146), obj5);
+                        let tmp16Result = tmp16(importDefault(8477), obj5);
                       }
                       obj4[2] = tmp16Result;
                       obj2[1] = tmp16(tmp18, obj4);
@@ -159,11 +159,11 @@ function SinglePreviewableMedia(arg0) {
                   obj8[0] = url2;
                   obj7[0] = obj8;
                   obj7[1] = tmp.mediaThumbnail;
-                  tmp16Result = tmp16(importDefault(5145), obj7);
+                  tmp16Result = tmp16(importDefault(5207), obj7);
                 }
                 url2 = thumbnail.url;
               }
-            } else if (tmp2(10309).PreviewableMediaTypes.STICKER === type) {
+            } else if (tmp2(10448).PreviewableMediaTypes.STICKER === type) {
               const obj9 = { style: null, children: null };
               const items2 = [tmp.mediaThumbnailContainer, ];
               const obj10 = { width: null, height: null };
@@ -175,7 +175,7 @@ function SinglePreviewableMedia(arg0) {
               obj11[0] = media;
               obj11[1] = size;
               obj11[2] = !stateFromStores;
-              obj9[1] = callback(importDefault(9647), obj11);
+              obj9[1] = callback(importDefault(9794), obj11);
               return callback(View, obj9);
             } else {
               return null;
@@ -191,10 +191,10 @@ function SinglePreviewableMedia(arg0) {
                 obj12[0] = media;
                 obj12[2] = enabledHarmTypesBitmaskForMessage;
                 obj12[3] = shouldAgeVerifyForExplicitMedia;
-                const attachmentObscurityProps = tmp2(7909).getAttachmentObscurityProps(obj12);
-                const tmp2Result1 = tmp2(7909);
-                const attachmentUrl = tmp2(8121).getAttachmentUrl(media);
-                const tmp2Result2 = tmp2(8121);
+                const attachmentObscurityProps = tmp2(8027).getAttachmentObscurityProps(obj12);
+                const tmp2Result1 = tmp2(8027);
+                const attachmentUrl = tmp2(8452).getAttachmentUrl(media);
+                const tmp2Result2 = tmp2(8452);
                 const obj13 = { src: null, sourceWidth: null, sourceHeight: null, targetWidth: null, targetHeight: null, animated: false, format: null };
                 obj13[0] = attachmentUrl;
                 obj13[1] = width;
@@ -202,7 +202,7 @@ function SinglePreviewableMedia(arg0) {
                 obj13[3] = 2 * size;
                 obj13[4] = 2 * size;
                 let str3;
-                if (type === tmp2(10309).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10448).PreviewableMediaTypes.VIDEO) {
                   str3 = "png";
                 }
                 obj13[6] = str3;
@@ -221,9 +221,9 @@ function SinglePreviewableMedia(arg0) {
                 obj18[0] = srcWithWidthAndHeight;
                 obj17[0] = obj18;
                 obj17[1] = tmp.mediaThumbnail;
-                const items4 = [callback(importDefault(5145), obj17), ];
+                const items4 = [callback(importDefault(5207), obj17), ];
                 let tmp24Result = null;
-                if (type === tmp2(10309).PreviewableMediaTypes.VIDEO) {
+                if (type === tmp2(10448).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
                 }
                 items4[1] = tmp24Result;
@@ -259,7 +259,7 @@ function MultiplePreviewableMedia(arg0) {
     const sum = BADGE_PADDING + 5;
     const roundToNearestPixelResult = closure_4.roundToNearestPixel(20 + 2 * BADGE_PADDING);
     const obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
-    obj[0] = callback(7974).CutoutShape.RoundedRect;
+    obj[0] = callback(8091).CutoutShape.RoundedRect;
     obj[1] = 56 - roundToNearestPixelResult + sum;
     obj[2] = -sum;
     obj[3] = roundToNearestPixelResult;
@@ -271,7 +271,7 @@ function MultiplePreviewableMedia(arg0) {
   items = [memo];
   const tmp = callback4();
   obj[1] = callback(SinglePreviewableMedia, { previewableMedia, size: 56, message });
-  const items1 = [callback(importDefault(7974), obj), callback(CountBadge, { total: totalMediaCount })];
+  const items1 = [callback(importDefault(8091), obj), callback(CountBadge, { total: totalMediaCount })];
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -300,7 +300,7 @@ function ExpandableMediaPreview(accessoryExitProgressSV) {
   let totalMediaCount;
   accessoryExitProgressSV = accessoryExitProgressSV.accessoryExitProgressSV;
   ({ message, totalMediaCount, previewableMedia } = accessoryExitProgressSV);
-  let obj = accessoryExitProgressSV(4054);
+  let obj = accessoryExitProgressSV(4116);
   const fn = function l() {
     const value = accessoryExitProgressSV.get();
     let obj = { opacity: 1 - value, transform: items };
@@ -315,7 +315,7 @@ function ExpandableMediaPreview(accessoryExitProgressSV) {
   obj = { style: items, children: null };
   items = [callback5().rightAccessoryAbsolute, animatedStyle];
   obj[1] = callback(MediaPreviewRightAccessoryContent, { previewableMedia, totalMediaCount, message });
-  return callback(importDefault(4054).View, obj);
+  return callback(importDefault(4116).View, obj);
 }
 function SimpleMediaPreview(arg0) {
   let message;
@@ -367,7 +367,7 @@ export const MediaPreviewRightAccessory = function MediaPreviewRightAccessory(ar
   let accessoryExitProgressSV;
   let message;
   ({ message, accessoryExitProgressSV } = arg0);
-  let obj = require(10309) /* VoiceMessageIcon */;
+  let obj = require(10448) /* VoiceMessageIcon */;
   const previewableMedia = obj.usePreviewableMedia(message);
   if (0 === previewableMedia.length) {
     return null;

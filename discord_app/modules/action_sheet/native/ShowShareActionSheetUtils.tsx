@@ -14,7 +14,7 @@ export const trackAppClickInNativeShareSheet = function trackAppClickInNativeSha
 export const getMediaShareParams = function getMediaShareParams(source) {
   let contentType;
   let videoURI;
-  let obj = require(8203) /* apexExperiment */;
+  let obj = require(8510) /* apexExperiment */;
   if (obj.getMobileMediaViewerShareExperimentEnabled("shareMediaSource")) {
     if (true !== source.disableDownload) {
       if (true === source.isGIFV) {
@@ -31,7 +31,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
       } else {
         ({ videoURI, contentType } = source);
         if (null != videoURI) {
-          let tmpResult = tmp(5204);
+          let tmpResult = tmp(5266);
           const decideFileExtensionResult = tmpResult.decideFileExtension(videoURI, contentType, true);
           obj = { mediaFallbackUrl: null, mediaStagingOptions: null };
           obj[0] = videoURI;
@@ -45,7 +45,7 @@ export const getMediaShareParams = function getMediaShareParams(source) {
           obj[1] = tmp6;
           return obj;
         } else {
-          tmpResult = tmp(5204);
+          tmpResult = tmp(5266);
           const decideFileExtensionResult1 = tmpResult.decideFileExtension(source.uri, contentType, true);
           let uri = source.sourceURI;
           if (uri == null) {
@@ -76,5 +76,5 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   return { mediaFallbackUrl };
 };
 export const resolveShareFileExtension = function resolveShareFileExtension(closure_0, contentType) {
-  return require(5204) /* decideFileExtension */.decideFileExtension(closure_0, contentType, true);
+  return require(5266) /* decideFileExtension */.decideFileExtension(closure_0, contentType, true);
 };

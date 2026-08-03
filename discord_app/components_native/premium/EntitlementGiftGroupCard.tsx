@@ -103,14 +103,14 @@ prototype["renderGenerateGiftCodeRow"] = function renderGenerateGiftCodeRow() {
   obj = { variant: "text-xs/medium", color: "text-subtle", style: tmp.generateGiftRowText, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.lELyPj);
-  const items1 = [callback(require(4189) /* Text */.Text, obj), ];
+  const items1 = [callback(require(4251) /* Text */.Text, obj), ];
   obj = { style: tmp.generateButtonContainer, children: null };
   const obj1 = { style: tmp.generateGiftButton, children: null };
   const obj2 = { text: null, size: "sm", onPress: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj2[0] = intl2.string(require(1236) /* getSystemLocale */.t["w4+/BA"]);
   obj2[2] = this.handleGenerateGiftCode;
-  obj1[1] = callback(require(4604) /* Button */.Button, obj2);
+  obj1[1] = callback(require(4666) /* Button */.Button, obj2);
   obj[1] = callback(closure_4, obj1);
   items1[1] = callback(closure_4, obj);
   obj[1] = items1;
@@ -125,7 +125,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   const isOpen = this.state.isOpen;
   ({ entitlements, application, sku, isRefreshEnabled } = this.props);
   let obj = dependencyMap;
-  let obj1 = require(5666) /* getPrice */;
+  let obj1 = require(5728) /* getPrice */;
   let isGameItemSKUResult = obj1.isGameItemSKU(sku);
   if (isGameItemSKUResult) {
     isGameItemSKUResult = null != application;
@@ -146,7 +146,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   if (isGameItemSKUResult) {
     obj1 = { sku: null, size: null, containerStyle: null };
     obj1[0] = sku;
-    const tmp15 = importDefault(8056);
+    const tmp15 = importDefault(8387);
     obj1[1] = tmp2(1297).getIconSize(tmp2(1297).Icon.Sizes.LARGE);
     obj1[2] = tmp.giftIcon;
     let tmp6Result = tmp6(tmp15, obj1);
@@ -163,7 +163,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   }
   const items1 = [tmp6Result, , ];
   const obj3 = { style: tmp.titleContainer, children: null };
-  const items2 = [closure_14(require(4189) /* Text */.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children }), ];
+  const items2 = [closure_14(require(4251) /* Text */.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children }), ];
   let socialLayerSubtitleContainer = isGameItemSKUResult;
   if (isGameItemSKUResult) {
     socialLayerSubtitleContainer = tmp.socialLayerSubtitleContainer;
@@ -174,10 +174,10 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   if (isGameItemSKUResult) {
     const obj6 = { game: null, size: null, skuId: null };
     obj6[0] = application;
-    obj6[1] = importDefault(5529).Sizes.SIZE_24;
+    obj6[1] = importDefault(5591).Sizes.SIZE_24;
     obj6[2] = sku.id;
-    tmp6Result = tmp6(importDefault(5529), obj6);
-    const tmp18 = importDefault(5529);
+    tmp6Result = tmp6(importDefault(5591), obj6);
+    const tmp18 = importDefault(5591);
   }
   const items4 = [tmp6Result, ];
   const obj7 = { variant: "text-md/normal", color: "text-subtle", style: tmp.subtitle, children: null };
@@ -195,16 +195,16 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
     formatResult = format(t.zMcvcA, obj9);
   }
   obj7[3] = formatResult;
-  items4[1] = closure_14(require(4189) /* Text */.Text, obj7);
+  items4[1] = closure_14(require(4251) /* Text */.Text, obj7);
   obj5[1] = items4;
   items2[1] = closure_15(closure_4, obj5);
   obj3[1] = items2;
   items1[1] = closure_15(closure_4, obj3);
   if (isRefreshEnabled) {
     if (isOpen) {
-      let ChevronSmallRightIcon = tmp2(8402).ChevronSmallDownIcon;
+      let ChevronSmallRightIcon = tmp2(8707).ChevronSmallDownIcon;
     } else {
-      ChevronSmallRightIcon = tmp2(5569).ChevronSmallRightIcon;
+      ChevronSmallRightIcon = tmp2(5631).ChevronSmallRightIcon;
     }
     obj = {};
     tmp6(ChevronSmallRightIcon, obj);
@@ -212,7 +212,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
     const obj10 = { style: null, size: null, source: null, color: null };
     obj10[0] = tmp.rowArrow;
     obj10[1] = tmp2(1297).Icon.Sizes.LARGE;
-    obj10[2] = importDefault(isOpen ? 12613 : 12614);
+    obj10[2] = importDefault(isOpen ? 12706 : 12707);
     obj10[3] = tmp.arrow.color;
     items1[2] = tmp6(tmp2(1297).Icon, obj10);
     obj[1] = items1;
@@ -222,36 +222,36 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return importDefault(12357);
+    return importDefault(12455);
   } else if (tmp.CAKE === giftStyle) {
-    return importDefault(12359);
+    return importDefault(12457);
   } else if (tmp.CHEST === giftStyle) {
-    return importDefault(12360);
+    return importDefault(12458);
   } else if (tmp.COFFEE === giftStyle) {
-    return importDefault(12358);
+    return importDefault(12456);
   } else if (tmp.SEASONAL_STANDARD_BOX === giftStyle) {
-    return importDefault(12361);
+    return importDefault(12459);
   } else if (tmp.SEASONAL_CAKE === giftStyle) {
-    return importDefault(12362);
+    return importDefault(12460);
   } else if (tmp.SEASONAL_CHEST === giftStyle) {
-    return importDefault(12363);
+    return importDefault(12461);
   } else if (tmp.SEASONAL_COFFEE === giftStyle) {
-    return importDefault(12364);
+    return importDefault(12462);
   } else if (tmp.NITROWEEN_STANDARD === giftStyle) {
     const obj = { uri: null };
-    obj[0] = importDefault(11910);
+    obj[0] = importDefault(12006);
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return importDefault(12365);
+    return importDefault(12463);
   } else if (tmp3.TIER_1 === id) {
-    return importDefault(12368);
+    return importDefault(12466);
   } else {
     if (tmp3.TIER_2 !== id) {
       if (tmp3.LEGACY !== id) {
         return null;
       }
     }
-    return importDefault(12369);
+    return importDefault(12467);
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {
@@ -357,7 +357,7 @@ let tmp11 = require("initialize").connectStores(items, (arg0) => {
     obj[3] = importDefaultResult.getApplication(value.applicationId);
     let orFetchSubscriptionPlan = null;
     if (null != subscriptionPlanId) {
-      obj = require(8044) /* getSubscriptionPlans */;
+      obj = require(8377) /* getSubscriptionPlans */;
       orFetchSubscriptionPlan = obj.getOrFetchSubscriptionPlan(subscriptionPlanId);
     }
     obj[4] = orFetchSubscriptionPlan;

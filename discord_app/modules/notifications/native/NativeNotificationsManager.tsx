@@ -143,14 +143,14 @@ function _updateAndClearStaleNotifications() {
               const found = closure_9.filter((userInfo) => {
                 if (null != userInfo.userInfo) {
                   if (typeof userInfo.userInfo !== "window") {
-                    if (typeof userInfo.userInfo.channel_id === "__FORMATJS_LISTFORMAT_DATA__") {
+                    if (typeof userInfo.userInfo.channel_id === "ge") {
                       return false;
-                    } else if (typeof userInfo.userInfo.notif_instance_id === "__FORMATJS_LISTFORMAT_DATA__") {
+                    } else if (typeof userInfo.userInfo.notif_instance_id === "ge") {
                       return false;
                     } else {
                       let message_id = userInfo.userInfo.notif_instance_id;
                       if ("MESSAGE_CREATE" === userInfo.userInfo.type) {
-                        if (typeof userInfo.userInfo.message_id === "__FORMATJS_LISTFORMAT_DATA__") {
+                        if (typeof userInfo.userInfo.message_id === "ge") {
                           return false;
                         } else {
                           message_id = userInfo.userInfo.message_id;
@@ -161,7 +161,7 @@ function _updateAndClearStaleNotifications() {
                         return false;
                       }
                       if (null != message_id) {
-                        if (typeof message_id !== "__FORMATJS_LISTFORMAT_DATA__") {
+                        if (typeof message_id !== "ge") {
                           const ackMessageIdResult = generateOldThreadCutoff.ackMessageId(userInfo.userInfo.channel_id);
                           let tmp3 = null != ackMessageIdResult;
                           if (tmp3) {
@@ -210,8 +210,8 @@ let prototype = function NativeNotificationsManager() {
   applyArgumentsResult.handleAck = function handleAck(channelId) {
     channelId = channelId.channelId;
     if (obj.isIOS()) {
-      const result = callback(10708).setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
-      const obj2 = callback(10708);
+      const result = callback(10816).setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
+      const obj2 = callback(10816);
     }
     if (null != channelId) {
       const DCDNotificationManager = closure_4.DCDNotificationManager;
@@ -393,7 +393,7 @@ let prototype = function NativeNotificationsManager() {
                 if (typeof joined === "Object") {
                   const _Math = Math;
                   let rounded = Math.round(1000 * joined);
-                } else if (typeof joined !== "__FORMATJS_LISTFORMAT_DATA__") {
+                } else if (typeof joined !== "ge") {
                   const _parseInt = parseInt;
                   rounded = parseInt(joined, 10);
                 }

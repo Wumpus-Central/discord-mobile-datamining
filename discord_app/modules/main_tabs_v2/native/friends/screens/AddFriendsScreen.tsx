@@ -21,7 +21,7 @@ let error;
 let map1;
 const require = arg1;
 function handleFindFriends() {
-  require(11781) /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, constants.FRIENDS_ADD_FRIENDS_MODAL);
+  require(11883) /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, constants.FRIENDS_ADD_FRIENDS_MODAL);
 }
 function handleShare() {
   const self = this;
@@ -80,7 +80,7 @@ function _handleShare() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            obj1 = callback(3893);
+            obj1 = callback(3955);
             const intl = callback(1236).intl;
             obj1.presentError(intl.string(callback(1236).t.R0RpRX));
             c6 = 3;
@@ -103,7 +103,7 @@ function _handleShare() {
             obj3[1] = code;
             const intl2 = callback(1236).intl;
             const obj4 = { link: null };
-            obj4[0] = code(6048)(code);
+            obj4[0] = code(7126)(code);
             obj3[2] = intl2.formatToPlainString(callback(1236).t.PJf9P9, obj4);
             obj3[3] = constants.ADD_FRIENDS_MODAL;
             callback(obj3);
@@ -292,9 +292,9 @@ export default function AddFriendsScreen(navigation) {
     });
     const obj2 = callback(analyticsLocations[26]);
     return callback(analyticsLocations[26]).unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = callback(4032).getName(arg0);
-      const obj = callback(4032);
-      return name.localeCompare(callback(4032).getName(arg1));
+      const name = callback(4094).getName(arg0);
+      const obj = callback(4094);
+      return name.localeCompare(callback(4094).getName(arg1));
     });
   });
   let obj3 = _require(analyticsLocations[25]);
@@ -334,9 +334,9 @@ export default function AddFriendsScreen(navigation) {
     });
     let obj = callback(analyticsLocations[26]);
     return callback(analyticsLocations[26]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(4032).getName(user.user);
-      const obj = items1(4032);
-      return name.localeCompare(items1(4032).getName(user2.user));
+      const name = items1(4094).getName(user.user);
+      const obj = items1(4094);
+      return name.localeCompare(items1(4094).getName(user2.user));
     });
   }, items4, areHydratedGameFriendRequestRowStatesEqual);
   let tmp6 = callback(React.useState([]), 2);

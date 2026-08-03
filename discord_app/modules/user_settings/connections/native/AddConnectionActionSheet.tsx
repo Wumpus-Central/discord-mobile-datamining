@@ -15,10 +15,10 @@ function AddApplicationIdentityTableRow(application) {
   let _require;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5522)(application));
-  const tmp2 = analyticsLocations(5522)(application);
-  analyticsLocations = analyticsLocations(5519)(analyticsLocations(5539).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(5519);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5584)(application));
+  const tmp2 = analyticsLocations(5584)(application);
+  analyticsLocations = analyticsLocations(5581)(analyticsLocations(5601).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(5581);
   let obj = _require(1297);
   const iconSource = application.getIconSource(obj.getIconSize(_require(1297).IconSizes.LARGE));
   obj = {
@@ -43,9 +43,9 @@ function AddApplicationIdentityTableRow(application) {
     tmp7Result = tmp7(tmp5(1297).Icon, obj);
   }
   obj[4] = tmp7Result;
-  obj[5] = closure_5(_require(5224).TableRow.Arrow, {});
+  obj[5] = closure_5(_require(5286).TableRow.Arrow, {});
   obj[6] = !canStartAuthorization;
-  return closure_5(_require(5224).TableRow, obj, application.id);
+  return closure_5(_require(5286).TableRow, obj, application.id);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { list: { paddingHorizontal: 16 }, icon: null };

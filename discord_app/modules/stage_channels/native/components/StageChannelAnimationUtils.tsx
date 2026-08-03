@@ -1,4 +1,4 @@
-import { Easing } from "module_4054";
+import { Easing } from "module_4116";
 
 let obj = { duration: 250, easing: null };
 obj[1] = Easing.bezier(0.66, 0, 0.2, 1);

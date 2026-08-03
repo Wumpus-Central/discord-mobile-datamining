@@ -1,37 +1,37 @@
-import module_16082 from "module_16082";
-import module_16083 from "module_16083";
-import module_16084 from "module_16084";
-import module_16085 from "module_16085";
-import module_16086 from "module_16086";
-import module_16087 from "module_16087";
-import module_16088 from "module_16088";
-import module_16089 from "module_16089";
-import module_16090 from "module_16090";
-import module_16091 from "module_16091";
-import module_16092 from "module_16092";
-import module_16093 from "module_16093";
-import module_16094 from "module_16094";
-import module_16095 from "module_16095";
-import module_16096 from "module_16096";
-import module_16097 from "module_16097";
-import module_16098 from "module_16098";
-import module_16099 from "module_16099";
-import module_16100 from "module_16100";
-import module_16101 from "module_16101";
-import module_16102 from "module_16102";
-import module_16103 from "module_16103";
-import module_16104 from "module_16104";
-import module_16105 from "module_16105";
-import module_16106 from "module_16106";
-import module_16107 from "module_16107";
-import module_16108 from "module_16108";
-import module_16109 from "module_16109";
+import module_16146 from "module_16146";
+import module_16147 from "module_16147";
+import module_16148 from "module_16148";
+import module_16149 from "module_16149";
+import module_16150 from "module_16150";
+import module_16151 from "module_16151";
+import module_16152 from "module_16152";
+import module_16153 from "module_16153";
+import module_16154 from "module_16154";
+import module_16155 from "module_16155";
+import module_16156 from "module_16156";
+import module_16157 from "module_16157";
+import module_16158 from "module_16158";
+import module_16159 from "module_16159";
+import module_16160 from "module_16160";
+import module_16161 from "module_16161";
+import module_16162 from "module_16162";
+import module_16163 from "module_16163";
+import module_16164 from "module_16164";
+import module_16165 from "module_16165";
+import module_16166 from "module_16166";
+import module_16167 from "module_16167";
+import module_16168 from "module_16168";
+import module_16169 from "module_16169";
+import module_16170 from "module_16170";
+import module_16171 from "module_16171";
+import module_16172 from "module_16172";
+import module_16173 from "module_16173";
 import { EventEmitter } from "EventEmitter";
 
 let require = arg1;
-global.IntlMessageFormat = require("module_16073");
+global.IntlMessageFormat = require("module_16137");
 delete tmp2[tmp];
-if (typeof Intl !== "pack") {
+if (typeof Intl !== "as") {
   require("_default2");
 }
 let c2 = "en-US";
@@ -135,11 +135,11 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(16115);
+        obj = self(16179);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "y") {
-          return self(16115).getMessage(tmp7, tmp);
+          return self(16179).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -168,7 +168,7 @@ class I18N extends EventEmitter {
       _Intl = Intl;
       tmp9 = closure_0;
       tmp10 = closure_1;
-      __addLocaleDataResult = Intl.__addLocaleData(require("module_16114"));
+      __addLocaleDataResult = Intl.__addLocaleData(require("module_16178"));
     }
     tmp6._languages = getLanguages();
     if (null != window.Proxy) {
@@ -212,7 +212,7 @@ prototype["setLocale"] = function setLocale(_requestedLocale) {
   }
 };
 prototype["setUpdateRules"] = function setUpdateRules(arg0) {
-  require(16115) /* format */.setUpdateRules(arg0);
+  require(16179) /* format */.setUpdateRules(arg0);
 };
 prototype["getLanguages"] = function getLanguages() {
   return this._languages;
@@ -346,7 +346,7 @@ prototype["_fetchMessages"] = function _fetchMessages(outer1_2) {
     return tmp();
   }
 };
-let result = require("module_16083").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
+let result = require("module_16147").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
 export const getSystemLocale = require("getSystemLocale").getSystemLocale;
 export { I18N };

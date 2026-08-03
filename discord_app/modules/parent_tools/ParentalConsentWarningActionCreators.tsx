@@ -112,7 +112,7 @@ function fetchWarning() {
                   closure_1 = (function normalizeWarning(body) {
                     const obj = { inGrace: true === body.in_grace, daysRemaining: null, surfaces: null };
                     let days_remaining = null;
-                    if (typeof body.days_remaining !== "__REMOTEDEV__") {
+                    if (typeof body.days_remaining !== "SENTRY_RELEASE") {
                       days_remaining = body.days_remaining;
                     }
                     obj[1] = days_remaining;
@@ -154,7 +154,7 @@ function fetchWarning() {
   } else {
     return Promise.resolve();
   }
-  obj = _require(16321);
+  obj = _require(16387);
 }
 function maybeFetchWarning() {
   const self = this;

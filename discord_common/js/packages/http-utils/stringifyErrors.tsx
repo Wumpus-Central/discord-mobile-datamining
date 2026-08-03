@@ -10,7 +10,7 @@ function stringifyErrors(arr) {
         const _Array = Array;
         if (Array.isArray(arr)) {
           const reduced = arr.reduce((arr, arr2) => {
-            if (typeof closure_0 !== "fileFinishedImporting") {
+            if (typeof closure_0 !== "error") {
               HermesBuiltin.throwTypeError();
             }
             closure_0 = arr2;
@@ -24,7 +24,7 @@ function stringifyErrors(arr) {
                   const _Array = Array;
                   if (Array.isArray(arr2)) {
                     const reduced = arr2.reduce((arr, arr2) => {
-                      if (typeof closure_0 !== "fileFinishedImporting") {
+                      if (typeof closure_0 !== "error") {
                         HermesBuiltin.throwTypeError();
                       }
                       closure_0 = arr2;
@@ -38,7 +38,7 @@ function stringifyErrors(arr) {
                             const _Array = Array;
                             if (Array.isArray(arr2)) {
                               const reduced = arr2.reduce((arr, arr2) => {
-                                if (typeof closure_0 !== "fileFinishedImporting") {
+                                if (typeof closure_0 !== "error") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 closure_0 = arr2;
@@ -52,7 +52,7 @@ function stringifyErrors(arr) {
                                       const _Array = Array;
                                       if (Array.isArray(arr2)) {
                                         const reduced = arr2.reduce((arr, arr2) => {
-                                          if (typeof closure_0 !== "fileFinishedImporting") {
+                                          if (typeof closure_0 !== "error") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           closure_0 = arr2;
@@ -85,7 +85,7 @@ function stringifyErrors(arr) {
                                         const keys = Object.keys(arr2);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "fileFinishedImporting") {
+                                          if (typeof outer1_0 !== "error") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
@@ -132,7 +132,7 @@ function stringifyErrors(arr) {
                               const keys = Object.keys(arr2);
                               const reduced1 = keys.reduce((arr) => {
                                 arr = arr[arg1];
-                                if (typeof outer1_0 !== "fileFinishedImporting") {
+                                if (typeof outer1_0 !== "error") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 let str = "";
@@ -144,7 +144,7 @@ function stringifyErrors(arr) {
                                       let _Array = Array;
                                       if (Array.isArray(arr)) {
                                         let reduced = arr.reduce((arr, arr2) => {
-                                          if (typeof closure_0 !== "fileFinishedImporting") {
+                                          if (typeof closure_0 !== "error") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           closure_0 = arr2;
@@ -179,7 +179,7 @@ function stringifyErrors(arr) {
                                           let keys = Object.keys(arr);
                                           let reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "fileFinishedImporting") {
+                                            if (typeof outer1_0 !== "error") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
@@ -240,7 +240,7 @@ function stringifyErrors(arr) {
                     const keys = Object.keys(arr2);
                     const reduced1 = keys.reduce((arr) => {
                       arr = arr[arg1];
-                      if (typeof outer1_0 !== "fileFinishedImporting") {
+                      if (typeof outer1_0 !== "error") {
                         HermesBuiltin.throwTypeError();
                       }
                       let str = "";
@@ -252,7 +252,7 @@ function stringifyErrors(arr) {
                             let _Array = Array;
                             if (Array.isArray(arr)) {
                               let reduced = arr.reduce((arr, arr2) => {
-                                if (typeof closure_0 !== "fileFinishedImporting") {
+                                if (typeof closure_0 !== "error") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 closure_0 = arr2;
@@ -266,7 +266,7 @@ function stringifyErrors(arr) {
                                       const _Array = Array;
                                       if (Array.isArray(arr2)) {
                                         const reduced = arr2.reduce((arr, arr2) => {
-                                          if (typeof closure_0 !== "fileFinishedImporting") {
+                                          if (typeof closure_0 !== "error") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           closure_0 = arr2;
@@ -299,7 +299,7 @@ function stringifyErrors(arr) {
                                         const keys = Object.keys(arr2);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "fileFinishedImporting") {
+                                          if (typeof outer1_0 !== "error") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
@@ -348,7 +348,7 @@ function stringifyErrors(arr) {
                                 let keys = Object.keys(arr);
                                 let reduced1 = keys.reduce((arr) => {
                                   arr = arr[arg1];
-                                  if (typeof outer1_0 !== "fileFinishedImporting") {
+                                  if (typeof outer1_0 !== "error") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   let str = "";
@@ -360,7 +360,7 @@ function stringifyErrors(arr) {
                                         let _Array = Array;
                                         if (Array.isArray(arr)) {
                                           let reduced = arr.reduce((arr, arr2) => {
-                                            if (typeof closure_0 !== "fileFinishedImporting") {
+                                            if (typeof closure_0 !== "error") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             closure_0 = arr2;
@@ -395,7 +395,7 @@ function stringifyErrors(arr) {
                                             let keys = Object.keys(arr);
                                             let reduced1 = keys.reduce((arr) => {
                                               arr = arr[arg1];
-                                              if (typeof outer1_0 !== "fileFinishedImporting") {
+                                              if (typeof outer1_0 !== "error") {
                                                 HermesBuiltin.throwTypeError();
                                               }
                                               let str = "";
@@ -470,7 +470,7 @@ function stringifyErrors(arr) {
           const keys = Object.keys(arr);
           const reduced1 = keys.reduce((arr) => {
             arr = arr[arg1];
-            if (typeof outer1_0 !== "fileFinishedImporting") {
+            if (typeof outer1_0 !== "error") {
               HermesBuiltin.throwTypeError();
             }
             let str = "";
@@ -482,7 +482,7 @@ function stringifyErrors(arr) {
                   let _Array = Array;
                   if (Array.isArray(arr)) {
                     let reduced = arr.reduce((arr, arr2) => {
-                      if (typeof closure_0 !== "fileFinishedImporting") {
+                      if (typeof closure_0 !== "error") {
                         HermesBuiltin.throwTypeError();
                       }
                       closure_0 = arr2;
@@ -496,7 +496,7 @@ function stringifyErrors(arr) {
                             const _Array = Array;
                             if (Array.isArray(arr2)) {
                               const reduced = arr2.reduce((arr, arr2) => {
-                                if (typeof closure_0 !== "fileFinishedImporting") {
+                                if (typeof closure_0 !== "error") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 closure_0 = arr2;
@@ -510,7 +510,7 @@ function stringifyErrors(arr) {
                                       const _Array = Array;
                                       if (Array.isArray(arr2)) {
                                         const reduced = arr2.reduce((arr, arr2) => {
-                                          if (typeof closure_0 !== "fileFinishedImporting") {
+                                          if (typeof closure_0 !== "error") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           closure_0 = arr2;
@@ -543,7 +543,7 @@ function stringifyErrors(arr) {
                                         const keys = Object.keys(arr2);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "fileFinishedImporting") {
+                                          if (typeof outer1_0 !== "error") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
@@ -590,7 +590,7 @@ function stringifyErrors(arr) {
                               const keys = Object.keys(arr2);
                               const reduced1 = keys.reduce((arr) => {
                                 arr = arr[arg1];
-                                if (typeof outer1_0 !== "fileFinishedImporting") {
+                                if (typeof outer1_0 !== "error") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 let str = "";
@@ -602,7 +602,7 @@ function stringifyErrors(arr) {
                                       let _Array = Array;
                                       if (Array.isArray(arr)) {
                                         let reduced = arr.reduce((arr, arr2) => {
-                                          if (typeof closure_0 !== "fileFinishedImporting") {
+                                          if (typeof closure_0 !== "error") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           closure_0 = arr2;
@@ -637,7 +637,7 @@ function stringifyErrors(arr) {
                                           let keys = Object.keys(arr);
                                           let reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "fileFinishedImporting") {
+                                            if (typeof outer1_0 !== "error") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
@@ -700,7 +700,7 @@ function stringifyErrors(arr) {
                       let keys = Object.keys(arr);
                       let reduced1 = keys.reduce((arr) => {
                         arr = arr[arg1];
-                        if (typeof outer1_0 !== "fileFinishedImporting") {
+                        if (typeof outer1_0 !== "error") {
                           HermesBuiltin.throwTypeError();
                         }
                         let str = "";
@@ -712,7 +712,7 @@ function stringifyErrors(arr) {
                               let _Array = Array;
                               if (Array.isArray(arr)) {
                                 let reduced = arr.reduce((arr, arr2) => {
-                                  if (typeof closure_0 !== "fileFinishedImporting") {
+                                  if (typeof closure_0 !== "error") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   closure_0 = arr2;
@@ -726,7 +726,7 @@ function stringifyErrors(arr) {
                                         const _Array = Array;
                                         if (Array.isArray(arr2)) {
                                           const reduced = arr2.reduce((arr, arr2) => {
-                                            if (typeof closure_0 !== "fileFinishedImporting") {
+                                            if (typeof closure_0 !== "error") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             closure_0 = arr2;
@@ -759,7 +759,7 @@ function stringifyErrors(arr) {
                                           const keys = Object.keys(arr2);
                                           const reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "fileFinishedImporting") {
+                                            if (typeof outer1_0 !== "error") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
@@ -808,7 +808,7 @@ function stringifyErrors(arr) {
                                   let keys = Object.keys(arr);
                                   let reduced1 = keys.reduce((arr) => {
                                     arr = arr[arg1];
-                                    if (typeof outer1_0 !== "fileFinishedImporting") {
+                                    if (typeof outer1_0 !== "error") {
                                       HermesBuiltin.throwTypeError();
                                     }
                                     let str = "";
@@ -820,7 +820,7 @@ function stringifyErrors(arr) {
                                           let _Array = Array;
                                           if (Array.isArray(arr)) {
                                             let reduced = arr.reduce((arr, arr2) => {
-                                              if (typeof closure_0 !== "fileFinishedImporting") {
+                                              if (typeof closure_0 !== "error") {
                                                 HermesBuiltin.throwTypeError();
                                               }
                                               closure_0 = arr2;
@@ -855,7 +855,7 @@ function stringifyErrors(arr) {
                                               let keys = Object.keys(arr);
                                               let reduced1 = keys.reduce((arr) => {
                                                 arr = arr[arg1];
-                                                if (typeof outer1_0 !== "fileFinishedImporting") {
+                                                if (typeof outer1_0 !== "error") {
                                                   HermesBuiltin.throwTypeError();
                                                 }
                                                 let str = "";

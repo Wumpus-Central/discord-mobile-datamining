@@ -10,7 +10,7 @@ const result = require("getNodeText").fileFinishedImporting("design/components/E
 export const ErrorText = function ErrorText(children) {
   children = children.children;
   let nodeText;
-  let obj = nodeText(3899);
+  let obj = nodeText(3961);
   nodeText = obj.getNodeText(children);
   const items = [nodeText];
   const effect = React.useEffect(() => {
@@ -24,7 +24,7 @@ export const ErrorText = function ErrorText(children) {
     }
   }, items);
   obj = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
-  const items1 = [callback(nodeText(6733).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), callback(nodeText(4189).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
+  const items1 = [callback(nodeText(7704).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), callback(nodeText(4251).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
   obj[4] = items1;
-  return callback2(nodeText(4602).Stack, obj);
+  return callback2(nodeText(4664).Stack, obj);
 };

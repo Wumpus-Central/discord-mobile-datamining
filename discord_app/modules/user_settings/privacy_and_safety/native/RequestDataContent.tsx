@@ -144,7 +144,7 @@ const memoResult = importAllResult.memo(() => {
           const intl = arr(1236).intl;
           message = intl.string(arr(1236).t["0F5Jyt"]);
         }
-        let obj = callback(4532);
+        let obj = callback(4594);
         obj = { title: null, body: null };
         const intl2 = arr(1236).intl;
         obj[0] = intl2.string(arr(1236).t.OjbtDm);
@@ -190,7 +190,7 @@ const memoResult = importAllResult.memo(() => {
           const intl = arr(1236).intl;
           message = intl.string(arr(1236).t["0F5Jyt"]);
         }
-        let obj = callback(4532);
+        let obj = callback(4594);
         obj = { title: null, body: null };
         const intl2 = arr(1236).intl;
         obj[0] = intl2.string(arr(1236).t.OjbtDm);

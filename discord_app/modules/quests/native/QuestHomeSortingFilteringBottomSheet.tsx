@@ -31,15 +31,15 @@ function FilterFooter(inline) {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj1[2] = intl.string(require(1236) /* getSystemLocale */.t.i4jeWR);
   obj1[3] = onConfirm;
-  const items = [closure_7(require(4604) /* Button */.Button, obj1), ];
+  const items = [closure_7(require(4666) /* Button */.Button, obj1), ];
   const obj2 = { size: "lg", grow: true, text: null, onPress: null, variant: "secondary" };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj2[2] = intl2.string(require(1236) /* getSystemLocale */.t.yBZMsQ);
   obj2[3] = onReset;
-  items[1] = closure_7(require(4604) /* Button */.Button, obj2);
+  items[1] = closure_7(require(4666) /* Button */.Button, obj2);
   obj[2] = items;
-  obj[1] = callback2(require(5026) /* ButtonGroup */.ButtonGroup, obj);
-  obj[2] = closure_7(require(5181) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[1] = callback2(require(5088) /* ButtonGroup */.ButtonGroup, obj);
+  obj[2] = closure_7(require(5243) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
   return closure_7(View, obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);

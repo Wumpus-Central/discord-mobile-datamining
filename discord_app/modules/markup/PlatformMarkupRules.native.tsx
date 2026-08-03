@@ -18,7 +18,7 @@ obj = {
           const json = JSON.stringify(match[0]);
           tmp3 = null;
         }
-        obj = importDefault(3834);
+        obj = importDefault(3896);
       }
       return tmp3;
     }
@@ -41,7 +41,7 @@ obj[2] = {
       obj[0] = arg0[0];
       return obj;
     } else {
-      obj = importDefault(3834);
+      obj = importDefault(3896);
       const result = obj.maybeTranslateSurrogatesToInlineEmoji(arg0[0]);
       if (null == result) {
         obj = { content: null };
@@ -59,7 +59,7 @@ obj[2] = {
 };
 obj[3] = {
   parse(content) {
-    let obj = importDefault(3834);
+    let obj = importDefault(3896);
     obj = { type: "emoji", content: content[0], surrogate: obj.convertNameToSurrogate(content[1]) };
     return obj;
   }
@@ -94,7 +94,7 @@ obj[4] = {
 };
 obj[5] = {
   parse(arg0, arg1, arg2) {
-    const channelMention = importDefault(4634).channelMention;
+    const channelMention = importDefault(4696).channelMention;
     const parsed = channelMention.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -163,7 +163,7 @@ obj[5] = {
 };
 obj[6] = {
   parse(arg0, arg1, arg2) {
-    const channelOrMessageUrl = importDefault(4634).channelOrMessageUrl;
+    const channelOrMessageUrl = importDefault(4696).channelOrMessageUrl;
     const parsed = channelOrMessageUrl.parse(arg0, arg1, arg2);
     const obj = {};
     const merged = Object.assign(parsed);
@@ -232,7 +232,7 @@ obj[6] = {
 };
 obj[7] = {
   parse(arg0, arg1, arg2) {
-    const mediaPostLink = importDefault(4634).mediaPostLink;
+    const mediaPostLink = importDefault(4696).mediaPostLink;
     const parsed = mediaPostLink.parse(arg0, arg1, arg2);
     let obj = {};
     let merged = Object.assign(parsed);
@@ -301,7 +301,7 @@ obj[7] = {
 };
 obj[8] = {
   parse(arg0, arg1, arg2) {
-    const attachmentLink = importDefault(4637).attachmentLink;
+    const attachmentLink = importDefault(4699).attachmentLink;
     return attachmentLink.parse(arg0, arg1, arg2);
   }
 };

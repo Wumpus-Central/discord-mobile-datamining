@@ -4,7 +4,7 @@ import initialize from "initialize";
 import { JoinGuildSources } from "ME";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4054";
+import importDefaultResult from "module_4116";
 
 let Pressable;
 let c4;
@@ -13,7 +13,7 @@ let metroImportAll;
 const require = arg1;
 ({ View: c4, Pressable } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
-let closure_9 = require("module_4054").createAnimatedComponent(Pressable);
+let closure_9 = require("module_4116").createAnimatedComponent(Pressable);
 let closure_10 = createCacheKey.createStyles((arg0) => {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -101,17 +101,17 @@ export default function ChannelListStickyHeader(guild) {
       _undefined(outer1_2[12])(guild);
     }
   }, items);
-  const tmp10 = importDefault(15139)(guild);
-  let tmp6Result = tmp6(5229);
+  const tmp10 = importDefault(15119)(guild);
+  let tmp6Result = tmp6(5291);
   const iOSPressEffects = tmp6Result.useIOSPressEffects(4);
   ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
   tmp6Result = tmp6(1865);
   const favoritesAwareGuildName = tmp6Result.getFavoritesAwareGuildName(guild);
-  const token = guild(3897).useToken(tmp(712).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
-  const tmp6Result1 = guild(3897);
+  const token = guild(3959).useToken(tmp(712).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
+  const tmp6Result1 = guild(3959);
   const tmp8 = isFavoritesGuildIdResult ? t.hW8QDk : t["Gpyp/e"];
-  const token1 = guild(3897).useToken(tmp(712).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
-  const tmp6Result2 = guild(3897);
+  const token1 = guild(3959).useToken(tmp(712).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
+  const tmp6Result2 = guild(3959);
   const items1 = [initialize];
   let enabled = guild(589).useStateFromStores(items1, () => outer1_5.isLurking(guild.id));
   const tmp6Result3 = guild(589);
@@ -152,23 +152,23 @@ export default function ChannelListStickyHeader(guild) {
     obj1 = { style: null, size: "sm", color: null };
     obj1[0] = tmp4.headerIcon;
     obj1[2] = tmp(712).colors.MOBILE_TEXT_HEADING_PRIMARY;
-    tmp22 = callback(tmp6(9430).StarIcon, obj1);
+    tmp22 = callback(tmp6(9577).StarIcon, obj1);
   }
   const items3 = [tmp22, , , ];
   const tmp16 = closure_9;
-  tmp6Result4 = guild(6694);
-  items3[1] = callback(closure_4, { ref, collapsable: false, style: tmp4.flex, children: callback(guild(4189).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) });
+  tmp6Result4 = guild(5817);
+  items3[1] = callback(closure_4, { ref, collapsable: false, style: tmp4.flex, children: callback(guild(4251).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) });
   const obj3 = { guild, size: null, style: null };
-  const obj2 = { ref, collapsable: false, style: tmp4.flex, children: callback(guild(4189).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
+  const obj2 = { ref, collapsable: false, style: tmp4.flex, children: callback(guild(4251).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
   obj3[1] = guild(1297).Icon.Sizes.REFRESH_SMALL_16;
   obj3[2] = tmp4.guildBadge;
-  items3[2] = callback(importDefault(8474), obj3);
+  items3[2] = callback(importDefault(5820), obj3);
   let tmp24Result = null;
   if (flag2) {
     const obj4 = { size: "xxs", color: null, style: null };
     obj4[1] = tmp(712).colors.TEXT_SUBTLE;
     obj4[2] = tmp4.chevron;
-    tmp24Result = tmp24(tmp6(5569).ChevronSmallRightIcon, obj4);
+    tmp24Result = tmp24(tmp6(5631).ChevronSmallRightIcon, obj4);
   }
   items3[3] = tmp24Result;
   obj[1] = items3;
@@ -185,7 +185,7 @@ export default function ChannelListStickyHeader(guild) {
       const obj7 = { count: null };
       obj7[0] = tmp10;
       obj6[4] = intl2.format(tmp6(1236).t.zRl6XR, obj7);
-      const items5 = [tmp24(tmp6(4189).Text, obj6), , ];
+      const items5 = [tmp24(tmp6(4251).Text, obj6), , ];
       const obj8 = { style: null };
       obj8[0] = tmp4.ellipse;
       items5[1] = tmp24(tmp21, obj8);
@@ -193,7 +193,7 @@ export default function ChannelListStickyHeader(guild) {
       obj9[2] = token1;
       const intl3 = tmp6(1236).intl;
       obj9[4] = intl3.string(tmp6(1236).t["1g9A/f"]);
-      items5[2] = tmp24(tmp6(4189).Text, obj9);
+      items5[2] = tmp24(tmp6(4251).Text, obj9);
       obj5[1] = items5;
       tmp15Result = tmp15(tmp21, obj5);
     }
@@ -212,7 +212,7 @@ export default function ChannelListStickyHeader(guild) {
   const items7 = [tmp15Result, ];
   tmp24Result = null;
   if (isFavoritesGuildIdResult) {
-    tmp24Result = tmp24(tmp6(15144).FavoritesGuildHeaderActionButton, {});
+    tmp24Result = tmp24(tmp6(15124).FavoritesGuildHeaderActionButton, {});
   }
   items7[1] = tmp24Result;
   obj11[1] = items7;
@@ -223,7 +223,7 @@ export default function ChannelListStickyHeader(guild) {
     if (!enabled) {
       const obj12 = { guild: null, useButtonComponent: true, useEventsButton: true };
       obj12[0] = guild;
-      tmp24Result1 = tmp24(tmp(11464), obj12);
+      tmp24Result1 = tmp24(tmp(11574), obj12);
     }
   }
   items8[1] = tmp24Result1;
@@ -233,7 +233,7 @@ export default function ChannelListStickyHeader(guild) {
     const obj14 = { guildId: null, joinSource: null };
     obj14[0] = guild.id;
     obj14[1] = JoinGuildSources.CHANNEL_LIST_STICKY_HEADER_LURKER;
-    obj13[1] = tmp24(tmp(11540), obj14);
+    obj13[1] = tmp24(tmp(11650), obj14);
     enabled = tmp24(tmp21, obj13);
   }
   items8[2] = enabled;
@@ -249,7 +249,7 @@ export default function ChannelListStickyHeader(guild) {
     const obj16 = { targetRef: null, guild: null };
     obj16[0] = ref;
     obj16[1] = guild;
-    tmp24Result3 = tmp24(tmp(15149), obj16);
+    tmp24Result3 = tmp24(tmp(15129), obj16);
   }
   items8[4] = tmp24Result3;
   obj10[1] = items8;

@@ -274,7 +274,7 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   }
   let canResult = null != user && null != channel;
   if (canResult) {
-    let obj = importAll(3826);
+    let obj = importAll(3888);
     obj = { permission: null, user: null, context: null };
     obj[0] = constants2.VIEW_CHANNEL;
     obj[1] = user;
@@ -300,8 +300,8 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = importDefault(4032).getName(user);
-    const obj3 = importDefault(4032);
+    nick = importDefault(4094).getName(user);
+    const obj3 = importDefault(4094);
   }
   const items = [str, , ];
   let formatted;
@@ -482,7 +482,7 @@ const threadMemberListStore = new ThreadMemberListStore(require("dispatcher"), {
       parent_id = channel.parent_id;
     }
     if (null != parent_id) {
-      if (typeof MemberList !== "fileFinishedImporting") {
+      if (typeof MemberList !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let obj = Object.create(MemberList.prototype);
