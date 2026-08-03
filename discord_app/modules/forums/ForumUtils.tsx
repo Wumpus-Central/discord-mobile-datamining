@@ -1,6 +1,6 @@
-// === Module 6071: getCreationDefaultFormatter ===
+// === Module 5803: getCreationDefaultFormatter ===
 
-// Module 6071 (getCreationDefaultFormatter)
+// Module 5803 (getCreationDefaultFormatter)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import generateOldThreadCutoff from "generateOldThreadCutoff";

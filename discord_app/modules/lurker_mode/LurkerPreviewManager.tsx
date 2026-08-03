@@ -1,6 +1,6 @@
-// === Module 11541: hasNavigatedAway ===
+// === Module 5834: hasNavigatedAway ===
 
-// Module 11541 (hasNavigatedAway)
+// Module 5834 (hasNavigatedAway)
 import MobileLurkerServerPreviewExperiment from "MobileLurkerServerPreviewExperiment";
 import createRTCConnection from "createRTCConnection";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -11,7 +11,7 @@ const require = arg1;
 class LurkerPreviewManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f108434 = applyArgumentsResult;
+    f105105 = applyArgumentsResult;
     map = new Map();
     applyArgumentsResult.timers = map;
     set = new Set();
@@ -187,8 +187,8 @@ class LurkerPreviewManager extends tmp2 {
         continue;
       }
     };
-    f108434 = undefined;
-    f108434 = MobileLurkerServerPreviewExperiment((arg0) => {
+    f105105 = undefined;
+    f105105 = MobileLurkerServerPreviewExperiment((arg0) => {
       let closure_0 = arg0;
       let c2 = 0;
       let c1 = 0;

@@ -1,6 +1,6 @@
-// === Module 8695: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 8872: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 8695 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+// Module 8872 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import noop from "noop";
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
 

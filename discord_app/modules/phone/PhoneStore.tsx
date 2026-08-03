@@ -1,6 +1,6 @@
-// === Module 9201: handleSetLocationMetadata ===
+// === Module 9374: handleSetLocationMetadata ===
 
-// Module 9201 (handleSetLocationMetadata)
+// Module 9374 (handleSetLocationMetadata)
 import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME";
 import { DeviceSettingsStore } from "initialize";
 

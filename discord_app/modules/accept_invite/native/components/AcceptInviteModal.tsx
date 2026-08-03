@@ -1,6 +1,6 @@
-// === Module 16143: AcceptInviteModal ===
+// === Module 16207: AcceptInviteModal ===
 
-// Module 16143 (AcceptInviteModal)
+// Module 16207 (AcceptInviteModal)
 import noop from "noop";
 import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics";
 import { jsx } from "jsxProd";
@@ -31,5 +31,5 @@ export default function AcceptInviteModal(arg0) {
     return obj;
   }, items);
   obj[1] = CreateGuildModalStates.ACCEPT_INVITE;
-  return jsx(_require(5574).Navigator, { screens: null, initialRouteName: null });
+  return jsx(_require(5636).Navigator, { screens: null, initialRouteName: null });
 };

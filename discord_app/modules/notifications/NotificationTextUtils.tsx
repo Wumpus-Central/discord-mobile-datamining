@@ -1,6 +1,6 @@
-// === Module 10263: shouldNotifyBase ===
+// === Module 10402: shouldNotifyBase ===
 
-// Module 10263 (shouldNotifyBase)
+// Module 10402 (shouldNotifyBase)
 import participantFromServer from "participantFromServer";
 import initialize from "initialize";
 import processChannel from "processChannel";
@@ -68,7 +68,7 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
             }
             let tmp17 = !tmp14;
             if (!tmp14) {
-              const FocusMode = tmp2(3866).FocusMode;
+              const FocusMode = tmp2(3928).FocusMode;
               const setting = FocusMode.getSetting();
               let tmp19 = !setting;
               if (!setting) {
@@ -89,25 +89,25 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
       }
       return tmp6;
     }
-    obj2 = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+    obj2 = require(4469) /* shouldShowAgeGateForVoiceChannel */;
     tmp2 = require;
   }
 }
 function renderTitle(channelName, channel, channel) {
-  const obj = require(5973) /* FSI */;
-  const isolateResult = require(5973) /* FSI */.isolate(channelName);
-  const obj2 = require(5973) /* FSI */;
-  const obj3 = require(4384) /* computeChannelName */;
+  const obj = require(7052) /* FSI */;
+  const isolateResult = require(7052) /* FSI */.isolate(channelName);
+  const obj2 = require(7052) /* FSI */;
+  const obj3 = require(4446) /* computeChannelName */;
   const tmp4 = mergeGuildAvatar;
   const tmp5 = upsertRelationship;
   let str = "";
   if (null != channel) {
-    let tmpResult = tmp(5973);
-    tmpResult = tmp(4384);
+    let tmpResult = tmp(7052);
+    tmpResult = tmp(4446);
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
   }
-  return "" + isolateResult + " (" + obj2.isolate(require(4384) /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)) + str + ")";
+  return "" + isolateResult + " (" + obj2.isolate(require(4446) /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)) + str + ")";
 }
 function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   type = type.type;
@@ -186,7 +186,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
               if (obj5.isChannelCurrentlyVisible(channel1.id)) {
                 return false;
               }
-              obj5 = require(10265) /* isChannelCurrentlyVisible */;
+              obj5 = require(10405) /* isChannelCurrentlyVisible */;
             }
             if (upsertRelationship.isBlockedOrIgnoredForMessage(message)) {
               return false;
@@ -214,7 +214,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 if (muted.isMuted(channel1.id)) {
                   return false;
                 } else {
-                  const threadNotificationSetting = require(10266) /* computeThreadNotificationSetting */.computeThreadNotificationSetting(channel1);
+                  const threadNotificationSetting = require(10406) /* computeThreadNotificationSetting */.computeThreadNotificationSetting(channel1);
                   let tmp39 = threadNotificationSetting !== ThreadMemberFlags.NO_MESSAGES;
                   if (tmp39) {
                     result = threadNotificationSetting === ThreadMemberFlags.ALL_MESSAGES;
@@ -222,8 +222,8 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                       obj = { rawMessage: null, userId: null, suppressEveryone: false, suppressRoles: false };
                       obj[0] = message;
                       obj[1] = currentUser.id;
-                      result = require(4427) /* isMentioned */.isRawMessageMentioned(obj);
-                      const tmp36Result = require(4427) /* isMentioned */;
+                      result = require(4489) /* isMentioned */.isRawMessageMentioned(obj);
+                      const tmp36Result = require(4489) /* isMentioned */;
                     }
                     tmp39 = result;
                   }
@@ -247,7 +247,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 obj1[1] = currentUser.id;
                 obj1[2] = result1;
                 obj1[3] = result2;
-                return require(4427) /* isMentioned */.isRawMessageMentioned(obj1);
+                return require(4489) /* isMentioned */.isRawMessageMentioned(obj1);
               }
             }
           }
@@ -295,7 +295,7 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
             if (tmp16) {
               let tmp19 = store3.getStatus() !== constants6.DND;
               if (tmp19) {
-                const FocusMode = require(3866) /* explicitContentFromProto */.FocusMode;
+                const FocusMode = require(3928) /* explicitContentFromProto */.FocusMode;
                 const setting = FocusMode.getSetting();
                 let tmp23 = !setting;
                 if (!setting) {
@@ -338,8 +338,8 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
       if (!result) {
         let result1 = !flag;
         if (!flag) {
-          result1 = require(10265) /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel2.id);
-          const obj3 = require(10265) /* isChannelCurrentlyVisible */;
+          result1 = require(10405) /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel2.id);
+          const obj3 = require(10405) /* isChannelCurrentlyVisible */;
         }
         let newForumThreadsCreated = !result1;
         if (!result1) {
@@ -378,8 +378,8 @@ export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
       if (tmp11) {
         let result = !includeSelectedChannel;
         if (!includeSelectedChannel) {
-          result = require(10265) /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel.id);
-          const obj = require(10265) /* isChannelCurrentlyVisible */;
+          result = require(10405) /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel.id);
+          const obj = require(10405) /* isChannelCurrentlyVisible */;
         }
         tmp11 = !result;
       }
@@ -394,14 +394,14 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
   let flag = true;
   if (!state.isVoicePanelFullscreen()) {
     if (null == store.getConnectedActivityLocation()) {
-      const rootNavigationRef = require(4045) /* getRootNavigationRef */.getRootNavigationRef();
+      const rootNavigationRef = require(4107) /* getRootNavigationRef */.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
-        tmp5 = !tmp3(10267).isChannelFocused();
-        const tmp3Result = tmp3(10267);
+        tmp5 = !tmp3(10407).isChannelFocused();
+        const tmp3Result = tmp3(10407);
       }
       flag = tmp5;
-      const obj3 = require(4045) /* getRootNavigationRef */;
+      const obj3 = require(4107) /* getRootNavigationRef */;
       tmp3 = require;
     } else {
       flag = true;
@@ -413,7 +413,7 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
 export { renderTitle };
 export const makeTextChatNotification = function makeTextChatNotification(getGuildId, content, bot) {
   let emoji;
-  let obj = importDefault(4383);
+  let obj = importDefault(4445);
   const name = obj.getName(getGuildId.getGuildId(), getGuildId.id, bot);
   const type = getGuildId.type;
   if (constants2.GUILD_ANNOUNCEMENT !== type) {
@@ -426,7 +426,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               if (tmp4.GROUP_DM === type) {
                 let tmp6 = getGuildId.isManaged() && bot.bot;
                 if (tmp6) {
-                  let obj1 = require(4384) /* computeChannelName */;
+                  let obj1 = require(4446) /* computeChannelName */;
                   tmp6 = name === obj1.computeChannelName(getGuildId, mergeGuildAvatar, upsertRelationship);
                 }
                 tmp5 = name;
@@ -436,8 +436,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               }
             }
             content = content.content;
-            if (tmp(5927)(content)) {
-              let tmpResult = tmp(7772);
+            if (tmp(5770)(content)) {
+              let tmpResult = tmp(7891);
               content = tmpResult.stringify(content, getGuildId);
               if (null == content) {
                 const obj15 = new tmp(3)("NotificationTextUtils");
@@ -455,10 +455,10 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               sticker_items = "stickerItems" in content ? content.stickerItems : content.stickers;
             }
             if ("message_reference" in content) {
-              let obj4 = require(5887) /* isForwardMessage */;
+              let obj4 = require(5798) /* isForwardMessage */;
               let result = obj4.isForwardServerMessage(content);
             } else {
-              result = tmp(5887)(content);
+              result = tmp(5798)(content);
             }
             const items = [];
             if (result) {
@@ -510,7 +510,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               if (content.type === constants4.PREMIUM_REFERRAL) {
                 const intl4 = require(1236) /* getSystemLocale */.intl;
                 obj4 = { username: null };
-                tmpResult = tmp(4032);
+                tmpResult = tmp(4094);
                 obj4[0] = tmpResult.getName(bot);
                 stringResult = intl4.formatToPlainString(require(1236) /* getSystemLocale */.t.lieTqU, obj4);
                 tmp26 = items;
@@ -549,8 +549,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                 }
-                const tmpResult1 = tmp(5971);
-                ({ content, emoji } = tmp(5971).unparseWithMeta(content, getGuildId.id, true));
+                const tmpResult1 = tmp(7050);
+                ({ content, emoji } = tmp(7050).unparseWithMeta(content, getGuildId.id, true));
                 tmp26 = emoji;
                 stringResult = content;
                 if (0 !== content.length) {
@@ -577,7 +577,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                 }
-                const unparseWithMetaResult = tmp(5971).unparseWithMeta(content, getGuildId.id, true);
+                const unparseWithMetaResult = tmp(7050).unparseWithMeta(content, getGuildId.id, true);
               }
             }
             if (0 === stringResult.length) {
@@ -643,7 +643,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
       tmp5 = renderTitle(name, channel, obj2.getChannel(channel.parent_id));
     }
   }
-  if (importDefault(5927)(content)) {
+  if (importDefault(5770)(content)) {
     tmp5 = name;
     if (null != guild.getGuild(getGuildId.getGuildId())) {
       tmp5 = renderTitle(name, getGuildId, channel);
@@ -656,7 +656,7 @@ export const allowInAppNotifications = function allowInAppNotifications() {
   if (handleRequiredAction.hasAction()) {
     return false;
   } else {
-    const ShowInAppNotifications = require(3866) /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = require(3928) /* explicitContentFromProto */.ShowInAppNotifications;
     let setting = ShowInAppNotifications.getSetting();
     if (setting) {
       setting = !obj.getFocusModeEnabled();
@@ -665,10 +665,10 @@ export const allowInAppNotifications = function allowInAppNotifications() {
   }
 };
 export const useAllowInAppNotifications = function useAllowInAppNotifications() {
-  const ShowInAppNotifications = require(3866) /* explicitContentFromProto */.ShowInAppNotifications;
+  const ShowInAppNotifications = require(3928) /* explicitContentFromProto */.ShowInAppNotifications;
   const setting = ShowInAppNotifications.useSetting();
-  const focusModeEnabled = require(10269) /* useFocusModeEnabled */.useFocusModeEnabled();
-  const obj = require(10269) /* useFocusModeEnabled */;
+  const focusModeEnabled = require(10408) /* useFocusModeEnabled */.useFocusModeEnabled();
+  const obj = require(10408) /* useFocusModeEnabled */;
   const items = [handleRequiredAction];
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => handleRequiredAction.hasAction());
   let tmp4 = !stateFromStores;

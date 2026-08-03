@@ -1,6 +1,6 @@
-// === Module 4263: bitrate ===
+// === Module 4325: bitrate ===
 
-// Module 4263 (bitrate)
+// Module 4325 (bitrate)
 import { DEFAULT_VOICE_BITRATE } from "DesktopSources";
 import { Store } from "initialize";
 

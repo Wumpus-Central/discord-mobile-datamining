@@ -1,6 +1,6 @@
-// === Module 4999: callback ===
+// === Module 5061: callback ===
 
-// Module 4999 (callback)
+// Module 5061 (callback)
 import dispatcher from "dispatcher";
 import set from "set";
 import ME from "ME";
@@ -150,7 +150,7 @@ let obj = {
   },
   callback,
   connect(arg0, arg1, name, location, friend_sync) {
-    let obj = importDefault(5003);
+    let obj = importDefault(5065);
     obj = { url: closure_6.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, friend_sync: null };
     friend_sync = undefined;
@@ -195,7 +195,7 @@ let obj = {
     return this.update(type, id, { show_activity: closure_0 });
   },
   update(arg0, arg1, body) {
-    let obj = importDefault(5003);
+    let obj = importDefault(5065);
     obj = { url: closure_6.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     const merged = Object.assign(body);

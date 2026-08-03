@@ -1,6 +1,6 @@
-// === Module 14146: useConnectionBannerHeight ===
+// === Module 14213: useConnectionBannerHeight ===
 
-// Module 14146 (useConnectionBannerHeight)
+// Module 14213 (useConnectionBannerHeight)
 import updateState from "updateState";
 import { ConnectivityIndicatorState as closure_4 } from "updateState";
 import { CONNECTION_BANNER_HEIGHT } from "CONNECTION_BANNER_HEIGHT";
@@ -11,7 +11,7 @@ const result = require("apexExperiment").fileFinishedImporting("modules/main_tab
 export const useConnectionBannerHeight = function useConnectionBannerHeight() {
   let hidden;
   let timeoutMs;
-  const config = importDefault(12760).useConfig({ location: "useConnectionBannerHeight" });
+  const config = importDefault(12823).useConfig({ location: "useConnectionBannerHeight" });
   ({ timeoutMs, hidden } = config);
   require(589) /* initialize */;
   [][0] = updateState;

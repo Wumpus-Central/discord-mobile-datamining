@@ -1,6 +1,6 @@
-// === Module 8045: prototype ===
+// === Module 8378: prototype ===
 
-// Module 8045 (prototype)
+// Module 8378 (prototype)
 import { RevenueError } from "prototype";
 
 const prototype = function CheckoutError(arg0) {

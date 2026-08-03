@@ -1,6 +1,6 @@
-// === Module 12540: _fetchPremiumGroupMembership ===
+// === Module 12633: _fetchPremiumGroupMembership ===
 
-// Module 12540 (_fetchPremiumGroupMembership)
+// Module 12633 (_fetchPremiumGroupMembership)
 import sendRequest from "sendRequest";
 import createdAt from "createdAt";
 import createFromServer from "createFromServer";

@@ -1,6 +1,6 @@
-// === Module 10918: items ===
+// === Module 11040: items ===
 
-// Module 10918 (items)
+// Module 11040 (items)
 import getQuestContentName from "getQuestContentName";
 import set from "set";
 import closure_8 from "GuildFeatures";
@@ -71,7 +71,7 @@ let result = require("_slicedToArray").fileFinishedImporting("modules/messages/n
 class MessagesHandlers {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
-    f107781 = obj;
+    f108037 = obj;
     obj.getMessageData = function getMessageData(messageId) {
       if (null == messageId) {
         return null;
@@ -2259,8 +2259,8 @@ class MessagesHandlers {
       obj[2] = callback(closure_3[144]);
       callback(closure_3[142]).open(obj);
     };
-    f107781 = undefined;
-    f107781 = set((arg0) => {
+    f108037 = undefined;
+    f108037 = set((arg0) => {
       let closure_0 = arg0;
       let c2 = 0;
       let c1 = 0;
@@ -2382,7 +2382,7 @@ class MessagesHandlers {
       const obj = uiStore(closure_3[39]);
       callback(closure_3[50]).openLazy(uiStore(closure_3[38])(closure_3[172], closure_3.paths), "ExplicitMediaLearnMore", { messageId, channelId, attachmentId, embedId });
     };
-    f107781 = set((arg0) => {
+    f108037 = set((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -2422,25 +2422,25 @@ class MessagesHandlers {
                 let closure_1 = tmp2;
                 isReveal = undefined;
                 closure_1 = undefined;
-                const nativeSyntheticEventData = callback(9560).getNativeSyntheticEventData(isReveal);
+                const nativeSyntheticEventData = callback(9707).getNativeSyntheticEventData(isReveal);
                 ({ messageId, channelId, isReveal } = nativeSyntheticEventData);
                 ({ attachmentId, embedId } = nativeSyntheticEventData);
-                const obj10 = callback(9560);
+                const obj10 = callback(9707);
                 if (isReveal) {
                   if (obj11.shouldAgeVerifyForExplicitMedia()) {
                     dependencyMap = 1;
                     c4 = 1;
                     const obj1 = { value: null, done: false };
-                    obj1[0] = callback(4409).maybePerformReactiveCheck();
+                    obj1[0] = callback(4471).maybePerformReactiveCheck();
                     return obj1;
                   }
                 }
-                let obj3 = callback(5865);
+                let obj3 = callback(6956);
                 const obj2 = { obscure: null };
                 obj2[0] = isReveal;
                 const result = obj3.trackToggleMediaObscurityV2(obj2);
                 c4 = 3;
-                obj11 = callback(5865);
+                obj11 = callback(6956);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -2453,9 +2453,9 @@ class MessagesHandlers {
                 reactiveCheckPassed = outer1_9.getReactiveCheckPassed();
               }
               if (!reactiveCheckPassed) {
-                obj = outer1_1(6750);
+                obj = outer1_1(7708);
                 obj3 = { entryPoint: null };
-                obj3[0] = callback(6752).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
+                obj3[0] = callback(7710).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
                 const result1 = obj.showAgeVerificationGetStartedModal(obj3);
               }
             }

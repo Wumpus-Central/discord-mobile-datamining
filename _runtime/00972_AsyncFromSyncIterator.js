@@ -139,13 +139,13 @@ function processEvent(type, finishReasons, arg2, setStatus) {
             finishReasons.push(message.stop_reason);
           }
           if (message.usage) {
-            if (typeof message.usage.input_tokens !== "__REMOTEDEV__") {
+            if (typeof message.usage.input_tokens !== "SENTRY_RELEASE") {
               finishReasons.promptTokens = message.usage.input_tokens;
             }
-            if (typeof message.usage.cache_creation_input_tokens !== "__REMOTEDEV__") {
+            if (typeof message.usage.cache_creation_input_tokens !== "SENTRY_RELEASE") {
               finishReasons.cacheCreationInputTokens = message.usage.cache_creation_input_tokens;
             }
-            if (typeof message.usage.cache_read_input_tokens !== "__REMOTEDEV__") {
+            if (typeof message.usage.cache_read_input_tokens !== "SENTRY_RELEASE") {
               finishReasons.cacheReadInputTokens = message.usage.cache_read_input_tokens;
             }
           }
@@ -165,9 +165,9 @@ function processEvent(type, finishReasons, arg2, setStatus) {
         }
         if ("content_block_delta" === type.type) {
           if (type.delta) {
-            if (typeof type.index !== "__REMOTEDEV__") {
+            if (typeof type.index !== "SENTRY_RELEASE") {
               if ("partial_json" in type.delta) {
-                if (typeof type.delta.partial_json !== "__FORMATJS_LISTFORMAT_DATA__") {
+                if (typeof type.delta.partial_json !== "ge") {
                   if (finishReasons.activeToolBlocks[type.index]) {
                     let inputJsonParts = tmp16.inputJsonParts;
                     inputJsonParts.push(type.delta.partial_json);
@@ -188,7 +188,7 @@ function processEvent(type, finishReasons, arg2, setStatus) {
         (function handleContentBlockStop(type, finishReasons) {
           let name;
           if ("content_block_stop" === type.type) {
-            if (typeof tmp3.index !== "__REMOTEDEV__") {
+            if (typeof tmp3.index !== "SENTRY_RELEASE") {
               let activeToolBlocks = finishReasons;
               name = finishReasons.activeToolBlocks[tmp3.index];
               if (name) {
@@ -477,9 +477,11 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   let closure_0 = arg1;
   let closure_1 = flag;
-  let closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "description", cacheCreationInputTokens: "cix", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
+  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "View", cacheCreationInputTokens: "resizeMode", cacheReadInputTokens: "PX_16", toolCalls: "person_in_motorized_wheelchair_dark_skin_tone", activeToolBlocks: "addTimeToInitialDisplayFallback" };
+  obj[8] = [];
+  obj[9] = {};
   applyResult.on("streamEvent", (arg0) => {
-    outer1_5(arg0, closure_2, closure_1, closure_0);
+    outer1_5(arg0, obj, closure_1, closure_0);
   });
   applyResult.on("message", () => {
     let obj = lib;

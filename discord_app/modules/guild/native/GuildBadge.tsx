@@ -1,6 +1,6 @@
-// === Module 9176: getGuildBadgeSource ===
+// === Module 9349: getGuildBadgeSource ===
 
-// Module 9176 (getGuildBadgeSource)
+// Module 9349 (getGuildBadgeSource)
 import "noop";
 import { GuildFeatures } from "ME";
 import { jsx } from "jsxProd";

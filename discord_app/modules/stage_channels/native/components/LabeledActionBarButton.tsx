@@ -1,6 +1,6 @@
-// === Module 10818: IconPosition ===
+// === Module 10918: IconPosition ===
 
-// Module 10818 (IconPosition)
+// Module 10918 (IconPosition)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -105,6 +105,6 @@ export const LabeledActionButton = function LabeledActionButton(children) {
   const items5 = [closure_5(closure_3, obj3), children.children];
   obj1[1] = items5;
   obj.children = closure_5(closure_3, obj1);
-  obj[1] = closure_4(require(4721) /* PressableBase */.PressableOpacity, obj);
+  obj[1] = closure_4(require(4783) /* PressableBase */.PressableOpacity, obj);
   return closure_4(closure_3, obj);
 };

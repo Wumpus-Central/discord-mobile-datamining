@@ -1,6 +1,6 @@
-// === Module 15653: YouAvatar ===
+// === Module 15718: YouAvatar ===
 
-// Module 15653 (YouAvatar)
+// Module 15718 (YouAvatar)
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled";
 import DismissibleContent from "DismissibleContent";
 import get_ActivityIndicator from "UserProfileAnalyticsProvider";
@@ -20,9 +20,9 @@ let map1;
 const require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(15646).trackYouTabAvatarPress();
-    const obj = callback(15646);
-    const result1 = callback(15265).showYouAccountActionSheet();
+    const result = callback(15711).trackYouTabAvatarPress();
+    const obj = callback(15711);
+    const result1 = callback(15332).showYouAccountActionSheet();
   }, []);
   let obj = require(500) /* set */;
   const isAndroidResult = obj.isAndroid();
@@ -32,7 +32,7 @@ function YouAvatar(arg0) {
   obj.importantForAccessibility = "no-hide-descendants";
   obj.accessibilityElementsHidden = isAndroidResult;
   obj.accessible = !isAndroidResult;
-  return closure_13(importDefault(8108), obj);
+  return closure_13(importDefault(8439), obj);
 }
 function YouScreenWidgetsBoardContainer(containerBackground) {
   let activeSection;
@@ -41,7 +41,7 @@ function YouScreenWidgetsBoardContainer(containerBackground) {
   let userId;
   containerBackground = containerBackground.containerBackground;
   ({ userId, activeSection, isRefreshEnabled, containerBorderColor } = containerBackground);
-  const tmp3 = importDefault(8083)();
+  const tmp3 = importDefault(8414)();
   const items = [tmp3.card, ];
   if (isRefreshEnabled) {
     let obj = { backgroundColor: null, borderColor: null, borderWidth: 1 };
@@ -56,7 +56,7 @@ function YouScreenWidgetsBoardContainer(containerBackground) {
     tmp4 = items;
   }
   obj = { style: tmp3.profileContent, children: null };
-  const items1 = [callback2(importDefault(12069), {}), callback2(importDefault(12070), { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: tmp4 })];
+  const items1 = [callback2(importDefault(12165), {}), callback2(importDefault(12166), { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: tmp4 })];
   obj[1] = items1;
   return callback3(closure_6, obj);
 }
@@ -65,14 +65,14 @@ function EditSection(navigateToProfileCustomization) {
   let trackUserProfileAction;
   let dependencyMap;
   let callback;
-  let obj = navigateToProfileCustomization(8111);
+  let obj = navigateToProfileCustomization(8442);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj1 = React;
   const ref = React.useRef(null);
-  let obj2 = navigateToProfileCustomization(8392);
+  let obj2 = navigateToProfileCustomization(8697);
   const isDisplayNameStylesFlywheelSettersEnabled = obj2.useIsDisplayNameStylesFlywheelSettersEnabled("YouScreenUserProfileContent");
-  const tmp3 = trackUserProfileAction(8083)();
-  navigateToProfileCustomization(8451);
+  const tmp3 = trackUserProfileAction(8414)();
+  navigateToProfileCustomization(5921);
   if (isDisplayNameStylesFlywheelSettersEnabled) {
     if (!tmp7) {
       let items = [tmp4(1358).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK];
@@ -97,17 +97,17 @@ function EditSection(navigateToProfileCustomization) {
     obj1[0] = ref;
     obj2 = { size: "sm", color: null };
     obj2[1] = tmp(712).colors.WHITE;
-    obj1[2] = callback2(tmp4(9111).PencilIcon, obj2);
+    obj1[2] = callback2(tmp4(9284).PencilIcon, obj2);
     const intl = tmp4(1236).intl;
     obj1[3] = intl.string(tmp4(1236).t.AAjhgi);
     obj1[4] = callback;
-    obj[1] = callback2(tmp4(4604).Button, obj1);
-    const items2 = [callback2(tmp(11999), obj), ];
+    obj[1] = callback2(tmp4(4666).Button, obj1);
+    const items2 = [callback2(tmp(12095), obj), ];
     const obj3 = { targetRef: null, visible: null, markAsDismissed: null };
     obj3[0] = ref;
     obj3[1] = tmp13;
     obj3[2] = tmp11[1];
-    items2[1] = callback2(tmp(15654), obj3);
+    items2[1] = callback2(tmp(15719), obj3);
     obj[0] = items2;
     return callback3(closure_15, obj);
   }

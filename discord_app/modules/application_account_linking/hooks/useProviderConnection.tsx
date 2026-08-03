@@ -1,6 +1,6 @@
-// === Module 5538: useProviderConnection ===
+// === Module 5600: useProviderConnection ===
 
-// Module 5538 (useProviderConnection)
+// Module 5600 (useProviderConnection)
 import set from "set";
 import noop from "noop";
 import closure_5 from "set";

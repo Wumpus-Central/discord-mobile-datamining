@@ -1,6 +1,6 @@
-// === Module 5529: GameIcon ===
+// === Module 5591: GameIcon ===
 
-// Module 5529 (GameIcon)
+// Module 5591 (GameIcon)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PremiumSubscriptionSKUs } from "GuildFeatures";

@@ -1,6 +1,6 @@
-// === Module 8856: prototype ===
+// === Module 9033: prototype ===
 
-// Module 8856 (prototype)
+// Module 9033 (prototype)
 import { V8APIError } from "sendRequest";
 
 let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };

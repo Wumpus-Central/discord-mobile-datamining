@@ -1,6 +1,6 @@
-// === Module 5784: scheduledEventSort ===
+// === Module 6882: scheduledEventSort ===
 
-// Module 5784 (scheduledEventSort)
+// Module 6882 (scheduledEventSort)
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";

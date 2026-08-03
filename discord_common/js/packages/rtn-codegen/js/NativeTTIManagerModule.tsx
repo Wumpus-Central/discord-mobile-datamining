@@ -1,6 +1,6 @@
-// === Module 4051: enforcing ===
+// === Module 4113: enforcing ===
 
-// Module 4051 (enforcing)
+// Module 4113 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTTIManagerModule");

@@ -1,6 +1,6 @@
-// === Module 7722: processColorOrThrow ===
+// === Module 7843: processColorOrThrow ===
 
-// Module 7722 (processColorOrThrow)
+// Module 7843 (processColorOrThrow)
 import { processColor } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RowGeneratorStyleSheet.tsx");

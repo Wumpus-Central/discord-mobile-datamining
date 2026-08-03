@@ -1,6 +1,6 @@
-// === Module 7995: didReplyMention ===
+// === Module 8113: didReplyMention ===
 
-// Module 7995 (didReplyMention)
+// Module 8113 (didReplyMention)
 const result = require("set").fileFinishedImporting("modules/replies/didReplyMention.tsx");
 
 export default function didReplyMention(mentions, author) {

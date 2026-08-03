@@ -1,6 +1,6 @@
-// === Module 14503: DismissibleNewTag ===
+// === Module 14570: DismissibleNewTag ===
 
-// Module 14503 (DismissibleNewTag)
+// Module 14570 (DismissibleNewTag)
 import "noop";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";
@@ -24,7 +24,7 @@ export default function DismissibleNewTag(dismissibleContent) {
   let closure_6;
   closure_6 = createCacheKey();
   let items = [dismissibleContent];
-  return jsx(importDefault(9676), {
+  return jsx(importDefault(9821), {
     contentTypes: items,
     children(visibleContent) {
       if (visibleContent.visibleContent !== dismissibleContent) {

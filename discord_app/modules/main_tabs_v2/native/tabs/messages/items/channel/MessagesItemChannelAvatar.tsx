@@ -1,6 +1,6 @@
-// === Module 15051: ? ===
+// === Module 15031: ? ===
 
-// Module 15051
+// Module 15031
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import fetchFingerprint from "fetchFingerprint";
 import sortActivity from "sortActivity";
@@ -110,7 +110,7 @@ const memoResult = require("noop").memo(function MessagesItemChannelAvatar(chann
     obj[2] = channel;
     obj[3] = stateFromStores1;
     obj[4] = tmpResult.avatar;
-    let tmp11Result = jsx(importDefault(9101), { status: null, size: null, channel: null, animate: null, style: null });
+    let tmp11Result = jsx(importDefault(9274), { status: null, size: null, channel: null, animate: null, style: null });
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {

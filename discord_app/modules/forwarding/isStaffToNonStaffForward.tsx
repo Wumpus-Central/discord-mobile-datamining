@@ -1,6 +1,6 @@
-// === Module 9911: isStaffToNonStaffForward ===
+// === Module 10054: isStaffToNonStaffForward ===
 
-// Module 9911 (isStaffToNonStaffForward)
+// Module 10054 (isStaffToNonStaffForward)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

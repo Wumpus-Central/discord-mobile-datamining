@@ -1,6 +1,6 @@
-// === Module 11687: BOOST_EXPIRING_DISPLAY_WINDOW_DAYS ===
+// === Module 11792: BOOST_EXPIRING_DISPLAY_WINDOW_DAYS ===
 
-// Module 11687 (BOOST_EXPIRING_DISPLAY_WINDOW_DAYS)
+// Module 11792 (BOOST_EXPIRING_DISPLAY_WINDOW_DAYS)
 let c2 = 259200000;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
 

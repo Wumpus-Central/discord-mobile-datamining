@@ -1,6 +1,6 @@
-// === Module 3905: ManaContext ===
+// === Module 3967: ManaContext ===
 
-// Module 3905 (ManaContext)
+// Module 3967 (ManaContext)
 import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD";
 
 const result = require("useCheckboxA11yNative").fileFinishedImporting("../discord_common/js/packages/design/native.tsx");
@@ -59,9 +59,9 @@ for (const key10059 in require("ThemeContextFlags")) {
   arg5[key10059] = require("ThemeContextFlags")[key10059];
   continue;
 }
-for (const key10063 in require("module_3920")) {
+for (const key10063 in require("module_3982")) {
   let tmp15 = key10063;
-  arg5[key10063] = require("module_3920")[key10063];
+  arg5[key10063] = require("module_3982")[key10063];
   continue;
 }
 for (const key10067 in require("WCAGContrastRatios")) {

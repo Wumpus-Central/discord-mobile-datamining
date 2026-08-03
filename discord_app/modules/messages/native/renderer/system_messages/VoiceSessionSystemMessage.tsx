@@ -1,6 +1,6 @@
-// === Module 7850: createVoiceSessionSystemMessage ===
+// === Module 7968: createVoiceSessionSystemMessage ===
 
-// Module 7850 (createVoiceSessionSystemMessage)
+// Module 7968 (createVoiceSessionSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;
@@ -11,10 +11,10 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
   ({ message, roleStyle } = message);
   let _require;
   _require = channel.getChannel(message.channel_id);
-  const tmp3 = importDefault(7766)(message);
-  let obj = _require(7748);
+  const tmp3 = importDefault(7885)(message);
+  let obj = _require(7867);
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  let obj1 = _require(7851);
+  let obj1 = _require(7969);
   const sortedVoiceSessionParticipants = obj1.getSortedVoiceSessionParticipants(message);
   const mapped = sortedVoiceSessionParticipants.map((user) => {
     const obj = { user, messageAuthor: null };
@@ -29,7 +29,7 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(7750)(obj);
+    obj[1] = tmp(7869)(obj);
     let formatToPartsResult = intl.formatToParts(tmp4(1236).t.HzBfIN, obj);
   } else {
     const intl2 = tmp4(1236).intl;
@@ -40,7 +40,7 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
     obj2[0] = message;
     obj2[1] = messageAuthorWithProcessedColor;
     obj2[2] = roleStyle;
-    obj1[2] = tmp(7750)(obj2);
+    obj1[2] = tmp(7869)(obj2);
     const first = mapped[0];
     let nick;
     if (first != null) {
@@ -54,7 +54,7 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
       obj3[1] = message;
       obj3[2] = mapped[0].messageAuthor;
       obj3[3] = roleStyle;
-      tmp7 = tmp(7750)(obj3);
+      tmp7 = tmp(7869)(obj3);
     }
     obj1[4] = tmp7;
     let nick1;
@@ -69,13 +69,13 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
       obj4[1] = message;
       obj4[2] = mapped[1].messageAuthor;
       obj4[3] = roleStyle;
-      tmp10 = tmp(7750)(obj4);
+      tmp10 = tmp(7869)(obj4);
     }
     obj1[6] = tmp10;
     obj1[7] = mapped.length - 1;
     obj1[8] = tmp3;
     formatToPartsResult = intl2.formatToParts(tmp4(1236).t.atbXuX, obj1);
   }
-  const merged = Object.assign(tmp(7751)(message));
+  const merged = Object.assign(tmp(7870)(message));
   return { content: formatToPartsResult };
 };

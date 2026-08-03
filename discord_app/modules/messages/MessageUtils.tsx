@@ -1,6 +1,6 @@
-// === Module 10262: canViewPotentiallyNSFWChannel ===
+// === Module 10401: canViewPotentiallyNSFWChannel ===
 
-// Module 10262 (canViewPotentiallyNSFWChannel)
+// Module 10401 (canViewPotentiallyNSFWChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -12,8 +12,8 @@ export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChan
   const channel = store.getChannel(channel_id);
   let tmp3 = null != currentUser && null != channel;
   if (tmp3) {
-    tmp3 = !require(4407) /* shouldShowAgeGateForVoiceChannel */.isChannelContentGated(channel);
-    const obj = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+    tmp3 = !require(4469) /* shouldShowAgeGateForVoiceChannel */.isChannelContentGated(channel);
+    const obj = require(4469) /* shouldShowAgeGateForVoiceChannel */;
   }
   return tmp3;
 };

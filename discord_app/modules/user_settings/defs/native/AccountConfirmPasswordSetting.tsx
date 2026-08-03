@@ -1,6 +1,6 @@
-// === Module 13829: route ===
+// === Module 13896: route ===
 
-// Module 13829 (route)
+// Module 13896 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.ACCOUNT_CONFIRM_PASSWORD,
   getComponent() {
-    return require(9238) /* UserSettingsConfirmPasswordWrapped */.UserSettingsConfirmPasswordWrapped;
+    return require(9411) /* UserSettingsConfirmPasswordWrapped */.UserSettingsConfirmPasswordWrapped;
   }
 };
 const route = createToggle.createRoute(obj);

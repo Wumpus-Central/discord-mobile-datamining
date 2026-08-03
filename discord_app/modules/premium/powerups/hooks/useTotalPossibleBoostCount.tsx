@@ -1,6 +1,6 @@
-// === Module 15208: useTotalPossibleBoostCount ===
+// === Module 15189: useTotalPossibleBoostCount ===
 
-// Module 15208 (useTotalPossibleBoostCount)
+// Module 15189 (useTotalPossibleBoostCount)
 import { useMemo } from "noop";
 import BoostedGuildTiers from "BoostedGuildTiers";
 import ME from "ME";

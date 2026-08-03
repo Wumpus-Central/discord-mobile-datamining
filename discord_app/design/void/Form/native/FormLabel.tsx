@@ -1,6 +1,6 @@
-// === Module 5237: FormLabel ===
+// === Module 5299: FormLabel ===
 
-// Module 5237 (FormLabel)
+// Module 5299 (FormLabel)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -19,5 +19,5 @@ export default function FormLabel(children) {
   if (color === undefined) {
     color = "mobile-text-heading-primary";
   }
-  return jsx(require(4189) /* Text */.Text, { variant: "heading-md/semibold", color, lineClamp, style, maxFontSizeMultiplier: 2, accessible, children: children.text });
+  return jsx(require(4251) /* Text */.Text, { variant: "heading-md/semibold", color, lineClamp, style, maxFontSizeMultiplier: 2, accessible, children: children.text });
 };

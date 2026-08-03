@@ -1,6 +1,6 @@
-// === Module 13583: RPC_LOCAL_SCOPE ===
+// === Module 13646: RPC_LOCAL_SCOPE ===
 
-// Module 13583 (RPC_LOCAL_SCOPE)
+// Module 13646 (RPC_LOCAL_SCOPE)
 import set from "set";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -90,7 +90,7 @@ const items1 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC
 obj2[RPC_SCOPE_CONFIG.ALL] = items1;
 obj1[0] = obj2;
 obj1[1] = function validation(string) {
-  let obj = importDefault(10643)(string);
+  let obj = importDefault(10696)(string);
   obj = { guild_id: string.string(), sound_id: string.string() };
   return obj.required().keys(obj);
 };

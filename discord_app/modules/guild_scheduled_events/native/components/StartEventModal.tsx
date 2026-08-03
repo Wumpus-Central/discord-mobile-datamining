@@ -1,6 +1,6 @@
-// === Module 8339: NavigationBar ===
+// === Module 8644: NavigationBar ===
 
-// Module 8339 (NavigationBar)
+// Module 8644 (NavigationBar)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
 import canManageResource from "canManageResource";
@@ -27,9 +27,9 @@ function NavigationBar(onClose) {
     return onClose();
   };
   obj = { source: null };
-  obj[0] = importDefault(7739);
+  obj[0] = importDefault(7858);
   obj[3] = callback(onClose(1297).Icon, obj);
-  obj[0] = callback(onClose(4721).PressableOpacity, obj);
+  obj[0] = callback(onClose(4783).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {
@@ -38,9 +38,9 @@ function StartEventHeader(children) {
   obj = { style: tmp.headerPrivacyLevel, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t["q+fFJv"]);
-  const items = [callback(require(4189) /* Text */.Text, obj), ];
+  const items = [callback(require(4251) /* Text */.Text, obj), ];
   obj = { style: tmp.headerTitle, variant: "text-md/medium", color: "text-default", children: children.event.name };
-  items[1] = callback(require(4189) /* Text */.Text, obj);
+  items[1] = callback(require(4251) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

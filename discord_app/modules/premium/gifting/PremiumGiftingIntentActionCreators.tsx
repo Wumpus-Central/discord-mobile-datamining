@@ -1,6 +1,6 @@
-// === Module 6182: fetchAndReconcileGiftIntentDismissals ===
+// === Module 7234: fetchAndReconcileGiftIntentDismissals ===
 
-// Module 6182 (fetchAndReconcileGiftIntentDismissals)
+// Module 7234 (fetchAndReconcileGiftIntentDismissals)
 import recomputeAffinities from "recomputeAffinities";
 import fetchFingerprint from "fetchFingerprint";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -59,7 +59,7 @@ export const logMessageGiftIntentShown = function logMessageGiftIntentShown(reci
   }
   obj[2] = dmProbability;
   obj2.track(constants.GIFT_INTENT_DISMISSED, obj);
-  let result = require(6183) /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
+  let result = require(7235) /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
   if (result) {
     result = FRIEND_ANNIVERSARY !== GiftIntentType.UNSPECIFIED;
   }
@@ -96,7 +96,7 @@ export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismis
     }
     obj[2] = dmProbability;
     importDefault(698).track(constants.GIFT_INTENT_DISMISSED, obj);
-    obj = require(6183) /* apexExperiment */;
+    obj = require(7235) /* apexExperiment */;
     let result = obj.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
     if (result) {
       result = giftIntentType !== GiftIntentType.UNSPECIFIED;
@@ -135,7 +135,7 @@ export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchase
   }
   obj[2] = dmProbability;
   obj2.track(constants.GIFT_INTENT_DISMISSED, obj);
-  let result = require(6183) /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
+  let result = require(7235) /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
   if (result) {
     result = FRIEND_ANNIVERSARY !== GiftIntentType.UNSPECIFIED;
   }

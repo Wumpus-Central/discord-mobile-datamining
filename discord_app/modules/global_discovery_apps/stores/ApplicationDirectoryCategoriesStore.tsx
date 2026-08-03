@@ -1,6 +1,6 @@
-// === Module 11260: getLastFetchTimeMs ===
+// === Module 11371: getLastFetchTimeMs ===
 
-// Module 11260 (getLastFetchTimeMs)
+// Module 11371 (getLastFetchTimeMs)
 import { Store } from "initialize";
 
 let closure_0 = [];

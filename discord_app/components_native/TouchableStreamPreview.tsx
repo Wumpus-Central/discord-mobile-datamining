@@ -1,8 +1,8 @@
-// === Module 10863: StreamPreviewContainer ===
+// === Module 10963: StreamPreviewContainer ===
 
-// Module 10863 (StreamPreviewContainer)
+// Module 10963 (StreamPreviewContainer)
 import transitionToStream from "transitionToStream";
-import get_ActivityIndicator from "module_5005";
+import get_ActivityIndicator from "module_5067";
 import set from "set";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";

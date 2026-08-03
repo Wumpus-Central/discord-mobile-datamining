@@ -1,6 +1,6 @@
-// === Module 14246: useRestorePurchases ===
+// === Module 14313: useRestorePurchases ===
 
-// Module 14246 (useRestorePurchases)
+// Module 14313 (useRestorePurchases)
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

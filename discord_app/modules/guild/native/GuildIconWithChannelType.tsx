@@ -1,6 +1,6 @@
-// === Module 9944: GuildIconWithChannelTypeSizes ===
+// === Module 10087: GuildIconWithChannelTypeSizes ===
 
-// Module 9944 (GuildIconWithChannelTypeSizes)
+// Module 10087 (GuildIconWithChannelTypeSizes)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -36,7 +36,7 @@ export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) 
   ({ guildIconSize, typeIconSize } = obj[size]);
   typeIconPadding = tmp4.typeIconPadding;
   const gap = tmp4.gap;
-  const tmp5 = typeIconSize(5570).ImageSizes[guildIconSize];
+  const tmp5 = typeIconSize(5632).ImageSizes[guildIconSize];
   dependencyMap = tmp5;
   const sum = typeIconSize + 2 * typeIconPadding;
   React = sum;
@@ -50,10 +50,10 @@ export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) 
   const items2 = [typeIconSize];
   const memo1 = React.useMemo(() => ({ width: c3, height: c3, padding: typeIconPadding }), items1);
   const memo2 = React.useMemo(() => ({ width: typeIconSize, height: typeIconSize }), items2);
-  obj = typeIconSize(4654);
+  obj = typeIconSize(4716);
   const channelIcon = obj.getChannelIcon(channel);
   obj = { "aria-label": tmp, shape: null, size: null, gap: null, depthX: null, depthY: null, children: null };
-  obj[1] = typeIconSize(7974).CutoutShape.Circle;
+  obj[1] = typeIconSize(8091).CutoutShape.Circle;
   obj[2] = memo;
   obj[3] = gap;
   obj[4] = sum1;
@@ -62,11 +62,11 @@ export const GuildIconWithChannelType = function GuildIconWithChannelType(arg0) 
   const tmp3 = callback3();
   const merged1 = Object.assign(merged);
   obj.size = guildIconSize;
-  const items3 = [callback(typeIconPadding(5570), obj), ];
-  const tmp12 = typeIconPadding(5570);
+  const items3 = [callback(typeIconPadding(5632), obj), ];
+  const tmp12 = typeIconPadding(5632);
   const items4 = [tmp3.typeIconWrapper, memo1];
   const items5 = [memo2];
   items3[1] = callback(View, { style: items4, children: callback(typeIconSize(1297).Icon, { style: items5, source: channelIcon }) });
   obj[6] = items3;
-  return callback2(typeIconSize(9945).Pile, obj);
+  return callback2(typeIconSize(10088).Pile, obj);
 };

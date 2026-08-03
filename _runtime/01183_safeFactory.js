@@ -10,7 +10,7 @@ arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if (typeof fn !== "disabledUntil") {
+  if (typeof fn !== "HAS_APPLICATION") {
     fn = () => {
       const items = [...arguments];
       try {

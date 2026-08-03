@@ -1,6 +1,6 @@
-// === Module 7656: FormTextColors ===
+// === Module 7779: FormTextColors ===
 
-// Module 7656 (FormTextColors)
+// Module 7779 (FormTextColors)
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";
@@ -8,7 +8,7 @@ import importAllResult from "noop";
 const require = arg1;
 let closure_3 = createCacheKey.createStyles((arg0) => {
   let obj = { primary: null, text: null };
-  obj = { color: require(5034) /* result */.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+  obj = { color: require(5096) /* result */.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
   obj[0] = obj;
   let num = 16;
   if ("small" === arg0) {

@@ -1,6 +1,6 @@
-// === Module 16684: updateSocialRpcNetworkConfig ===
+// === Module 16750: updateSocialRpcNetworkConfig ===
 
-// Module 16684 (updateSocialRpcNetworkConfig)
+// Module 16750 (updateSocialRpcNetworkConfig)
 import { NativeModules } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
 import fetchFingerprint from "fetchFingerprint";

@@ -1,6 +1,6 @@
-// === Module 8779: CollectiblesShopGiftModal ===
+// === Module 8956: CollectiblesShopGiftModal ===
 
-// Module 8779 (CollectiblesShopGiftModal)
+// Module 8956 (CollectiblesShopGiftModal)
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "ME";

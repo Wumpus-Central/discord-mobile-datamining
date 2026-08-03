@@ -1,6 +1,6 @@
-// === Module 4056: __INTERNAL_VIEW_CONFIG ===
+// === Module 4118: __INTERNAL_VIEW_CONFIG ===
 
-// Module 4056 (__INTERNAL_VIEW_CONFIG)
+// Module 4118 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "ReanimatedView", validAttributes: { hasEnteringAnimation: true } };

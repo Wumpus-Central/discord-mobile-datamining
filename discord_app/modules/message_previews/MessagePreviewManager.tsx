@@ -1,6 +1,6 @@
-// === Module 14355: addWant ===
+// === Module 14422: addWant ===
 
-// Module 14355 (addWant)
+// Module 14422 (addWant)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -492,7 +492,7 @@ prototype["getOrCreate"] = function getOrCreate(arg0) {
   const remote = this.remote;
   if (!remote.has(arg0)) {
     const remote2 = self.remote;
-    const remoteFetchData = new require(14356) /* FetchStatus */.RemoteFetchData();
+    const remoteFetchData = new require(14423) /* FetchStatus */.RemoteFetchData();
     const result = remote2.set(arg0, remoteFetchData);
   }
   const remote3 = self.remote;

@@ -1,6 +1,6 @@
-// === Module 9315: NativeFWOMeasureModule ===
+// === Module 9487: NativeFWOMeasureModule ===
 
-// Module 9315 (NativeFWOMeasureModule)
+// Module 9487 (NativeFWOMeasureModule)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const value = TurboModuleRegistry.get("NativeFWOMeasureModule");

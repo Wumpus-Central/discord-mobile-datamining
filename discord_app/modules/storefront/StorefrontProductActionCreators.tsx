@@ -1,6 +1,6 @@
-// === Module 8375: _maybeFetchProductsWithSkus ===
+// === Module 8680: _maybeFetchProductsWithSkus ===
 
-// Module 8375 (_maybeFetchProductsWithSkus)
+// Module 8680 (_maybeFetchProductsWithSkus)
 import set from "set";
 import _getSystemLocale from "_getSystemLocale";
 import getFetchState from "getFetchState";

@@ -1,6 +1,6 @@
-// === Module 15381: AnnouncementMessageRowWrapper ===
+// === Module 15448: AnnouncementMessageRowWrapper ===
 
-// Module 15381 (AnnouncementMessageRowWrapper)
+// Module 15448 (AnnouncementMessageRowWrapper)
 import importAllResult from "getSystemLocale";
 import { View } from "generateHydrationId";
 import ensureGuildLoaded from "ensureGuildLoaded";

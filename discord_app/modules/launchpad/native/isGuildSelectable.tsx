@@ -1,6 +1,6 @@
-// === Module 15823: isGuildSelectable ===
+// === Module 15887: isGuildSelectable ===
 
-// Module 15823 (isGuildSelectable)
+// Module 15887 (isGuildSelectable)
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import reset from "reset";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";

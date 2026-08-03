@@ -1,6 +1,6 @@
-// === Module 9857: useSetMediaPostThumbnail ===
+// === Module 10002: useSetMediaPostThumbnail ===
 
-// Module 9857 (useSetMediaPostThumbnail)
+// Module 10002 (useSetMediaPostThumbnail)
 import noop from "noop";
 import { DraftType } from "handleChanged";
 import map from "map";

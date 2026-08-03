@@ -1,6 +1,6 @@
-// === Module 15141: FavoritesGuildActionSheet ===
+// === Module 15121: FavoritesGuildActionSheet ===
 
-// Module 15141 (FavoritesGuildActionSheet)
+// Module 15121 (FavoritesGuildActionSheet)
 import "noop";
 import jsxProd from "jsxProd";
 
@@ -8,22 +8,22 @@ let c3;
 let c4;
 let require = arg1;
 function FavoritesGuildActionSheet() {
-  const tmp2 = importDefault(15142)();
+  const tmp2 = importDefault(15122)();
   const require = tmp2;
-  const tmp3 = importDefault(15143)();
+  const tmp3 = importDefault(15123)();
   importDefault = tmp3;
   let obj = { header: null, children: null };
   obj = { title: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.wMWyci);
-  obj[0] = callback(require(5246) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  obj[0] = callback(require(5308) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: null, onPress: null };
   if (tmp2.isPreview) {
-    let EyeSlashIcon = tmp5(5179).XSmallIcon;
+    let EyeSlashIcon = tmp5(5241).XSmallIcon;
   } else {
-    EyeSlashIcon = tmp5(9223).EyeSlashIcon;
+    EyeSlashIcon = tmp5(9396).EyeSlashIcon;
   }
-  obj[2] = callback(require(5557) /* ActionSheetRowIcon */.ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
+  obj[2] = callback(require(5619) /* ActionSheetRowIcon */.ActionSheetRow.Icon, { IconComponent: EyeSlashIcon });
   let str = "danger";
   if (tmp2.isPreview) {
     str = "default";
@@ -33,30 +33,30 @@ function FavoritesGuildActionSheet() {
     tmp3(outer1_2[10]).hideActionSheet(outer1_5);
     tmp2.perform();
   };
-  const items = [callback(require(5557) /* ActionSheetRowIcon */.ActionSheetRow, obj), ];
+  const items = [callback(require(5619) /* ActionSheetRowIcon */.ActionSheetRow, obj), ];
   let tmp4Result = null;
   if (tmp3.isAvailable) {
     const obj1 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
     ({ label: obj4[0], subLabel: obj4[1] } = tmp3);
     const obj2 = { IconComponent: null };
-    obj2[0] = tmp5(4152).TrashIcon;
-    obj1[2] = tmp4(tmp5(5557).ActionSheetRow.Icon, obj2);
+    obj2[0] = tmp5(4214).TrashIcon;
+    obj1[2] = tmp4(tmp5(5619).ActionSheetRow.Icon, obj2);
     obj1[4] = function onPress() {
       tmp3(outer1_2[10]).hideActionSheet(outer1_5);
       tmp3.perform();
     };
-    tmp4Result = tmp4(tmp5(5557).ActionSheetRow, obj1);
+    tmp4Result = tmp4(tmp5(5619).ActionSheetRow, obj1);
   }
   items[1] = tmp4Result;
-  obj[1] = closure_4(require(5557) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: items });
-  return callback(require(5555) /* ActionSheet */.ActionSheet, obj);
+  obj[1] = closure_4(require(5619) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: items });
+  return callback(require(5617) /* ActionSheet */.ActionSheet, obj);
 }
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 FavoritesGuildActionSheet = "FavoritesGuildActionSheet";
 const result = require("useFavoritesGuildHideAction").fileFinishedImporting("modules/favorites/native/FavoritesGuildActionSheet.tsx");
 
 export const openFavoritesGuildActionSheet = function openFavoritesGuildActionSheet() {
-  let obj = require(4161) /* ACTION_SHEET_HEIGHT_HALF */;
+  let obj = require(4223) /* ACTION_SHEET_HEIGHT_HALF */;
   obj = { content: callback(FavoritesGuildActionSheet, {}), key: FavoritesGuildActionSheet };
   obj.showActionSheet(obj);
 };

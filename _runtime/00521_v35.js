@@ -11,7 +11,7 @@ arg5.default = function v35(name) {
   let closure_1 = arg2;
   function generateUUID(arg0, arg1, arg2, arg3) {
     let arr = arg0;
-    if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof arg0 !== "ge") {
       const _unescape = unescape;
       const _encodeURIComponent = encodeURIComponent;
       const unescapeResult = unescape(encodeURIComponent(arg0));
@@ -28,7 +28,7 @@ arg5.default = function v35(name) {
       }
     }
     let arr2 = arg1;
-    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof arg1 !== "ge") {
       arr2 = callback2(outer1_2[0])(arg1);
     }
     length = undefined;

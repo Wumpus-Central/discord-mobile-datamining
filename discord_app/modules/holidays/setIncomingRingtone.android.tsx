@@ -1,6 +1,6 @@
-// === Module 16236: setIncomingRingtone ===
+// === Module 16300: setIncomingRingtone ===
 
-// Module 16236 (setIncomingRingtone)
+// Module 16300 (setIncomingRingtone)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("modules/holidays/setIncomingRingtone.android.tsx");

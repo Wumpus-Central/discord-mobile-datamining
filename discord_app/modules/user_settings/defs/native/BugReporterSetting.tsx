@@ -1,12 +1,12 @@
-// === Module 14557: useBugReporterExperimentSettingPredicate ===
+// === Module 14624: useBugReporterExperimentSettingPredicate ===
 
-// Module 14557 (useBugReporterExperimentSettingPredicate)
+// Module 14624 (useBugReporterExperimentSettingPredicate)
 import zustandStore from "zustandStore";
 import createToggle from "createToggle";
 
 const require = arg1;
 function useBugReporterExperimentSettingPredicate() {
-  return importDefault(10373).useConfig({ location: "native-settings" }).hasBugReporterAccess;
+  return importDefault(10512).useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
 createToggle = {
   useTitle() {
@@ -18,8 +18,8 @@ createToggle = {
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      importDefault(4399).pushLazy(require(1959) /* asyncRequireImpl */(10359, dependencyMap.paths));
-      const obj2 = importDefault(4399);
+      importDefault(4461).pushLazy(require(1959) /* asyncRequireImpl */(10498, dependencyMap.paths));
+      const obj2 = importDefault(4461);
     }
   },
   withArrow: true,

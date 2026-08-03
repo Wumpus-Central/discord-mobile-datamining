@@ -1,6 +1,6 @@
-// === Module 6753: AGE_VERIFICATION_INCODE_PATH ===
+// === Module 7711: AGE_VERIFICATION_INCODE_PATH ===
 
-// Module 6753 (AGE_VERIFICATION_INCODE_PATH)
+// Module 7711 (AGE_VERIFICATION_INCODE_PATH)
 let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
 let c1 = "Verification.Result";
 let c2 = "Verification.CaptureComplete";
@@ -30,13 +30,13 @@ export const readInjectedIncodeParams = function readInjectedIncodeParams() {
       ({ schemaVersion, apiUrl, sessionToken, consentId, interviewId, theme, method } = tmp);
       if (null == schemaVersion) {
         let tmp2 = null;
-        if (typeof apiUrl !== "__FORMATJS_LISTFORMAT_DATA__") {
+        if (typeof apiUrl !== "ge") {
           tmp2 = null;
-          if (typeof sessionToken !== "__FORMATJS_LISTFORMAT_DATA__") {
+          if (typeof sessionToken !== "ge") {
             tmp2 = null;
-            if (typeof consentId !== "__FORMATJS_LISTFORMAT_DATA__") {
+            if (typeof consentId !== "ge") {
               tmp2 = null;
-              if (typeof interviewId !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof interviewId !== "ge") {
                 if (null == theme) {
                   const obj = { apiUrl: null, sessionToken: null, consentId: null, interviewId: null, theme: null, method: null };
                   obj[0] = apiUrl;
@@ -79,7 +79,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(arg0
     return null;
   } else {
     let parsed = arg0;
-    if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof arg0 !== "ge") {
       const _JSON = JSON;
       parsed = JSON.parse(arg0);
     }
@@ -89,7 +89,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(arg0
     }
     if (eventType === c2) {
       let tmp10 = null;
-      if (typeof parsed.interviewId !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof parsed.interviewId !== "ge") {
         tmp10 = null;
         if (0 !== parsed.interviewId.length) {
           let obj = { kind: "capture_complete", interviewId: null };
@@ -105,7 +105,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(arg0
       }
       if (eventType1 === c3) {
         let tmp9 = null;
-        if (typeof parsed.previousInterviewId !== "__FORMATJS_LISTFORMAT_DATA__") {
+        if (typeof parsed.previousInterviewId !== "ge") {
           tmp9 = null;
           if (0 !== parsed.previousInterviewId.length) {
             obj = { kind: "fallback_request", previousInterviewId: null };

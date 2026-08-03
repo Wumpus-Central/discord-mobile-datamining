@@ -1,6 +1,6 @@
-// === Module 5100: rebuild ===
+// === Module 5162: rebuild ===
 
-// Module 5100 (rebuild)
+// Module 5162 (rebuild)
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -133,7 +133,7 @@ function rebuildGuild_(guildId) {
               let tmp49 = importDefault;
               let tmp50 = dependencyMap;
               let _Date = Date;
-              let tmp51 = importDefault(5102)(channel);
+              let tmp51 = importDefault(5164)(channel);
               dependencyMap7[channel.id] = setTimeout(() => {
                 channel = outer1_5.getChannel(channel.id);
                 if (null != channel) {
@@ -200,7 +200,7 @@ function recountParent(guild_id, id) {
                 const joinedAt = guild.joinedAt;
                 if (guild.joinedAt instanceof Date) {
                   timestamp = joinedAt.getTime();
-                } else if (typeof joinedAt !== "__FORMATJS_LISTFORMAT_DATA__") {
+                } else if (typeof joinedAt !== "ge") {
                   const _Date3 = Date;
                   const date = new Date(guild.joinedAt);
                   timestamp = date.getTime();
@@ -300,7 +300,7 @@ function updateThread(guild_id, parent_id, id) {
             const _setTimeout = setTimeout;
             clearTimeoutResult = importDefault;
             clearTimeoutResult = dependencyMap;
-            clearTimeoutResult = importDefault(5102)(_Date);
+            clearTimeoutResult = importDefault(5164)(_Date);
             _Date = Date;
             dependencyMap7[_Date.id] = setTimeout(() => {
               channel = outer1_5.getChannel(channel.id);
@@ -462,7 +462,7 @@ function anyThreadsNSFW(guild_id, parent_id) {
         let tmp10 = key10006;
         let tmp11 = require;
         let tmp12 = dependencyMap;
-        let obj = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+        let obj = require(4469) /* shouldShowAgeGateForVoiceChannel */;
         if (!obj.isChannelContentGated(tmp[key10006].channel)) {
           continue;
         } else {
@@ -480,7 +480,7 @@ function anyThreadsNSFW(guild_id, parent_id) {
         let tmp13 = key10015;
         let tmp14 = require;
         let tmp15 = dependencyMap;
-        let obj2 = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+        let obj2 = require(4469) /* shouldShowAgeGateForVoiceChannel */;
         if (!obj2.isChannelContentGated(tmp5[key10015])) {
           continue;
         } else {
@@ -554,8 +554,8 @@ function handleReadStateChannelAction(channelId) {
                 obj[1] = channel;
                 obj.dispatch(obj);
               }
-            }, importDefault(5102)(channel) - Date.now() + 1);
-            const tmp33 = importDefault(5102)(channel);
+            }, importDefault(5164)(channel) - Date.now() + 1);
+            const tmp33 = importDefault(5164)(channel);
           }
           ({ guild_id: guild_id2, parent_id: parent_id2 } = channel);
           let tmp35 = guild_id2 in closure_13;
@@ -688,7 +688,7 @@ function rebuildReadStates() {
               let tmp20 = importDefault;
               let tmp21 = dependencyMap;
               let _Date = Date;
-              let tmp22 = importDefault(5102)(channel);
+              let tmp22 = importDefault(5164)(channel);
               dependencyMap7[channel.id] = setTimeout(() => {
                 channel = outer1_5.getChannel(channel.id);
                 if (null != channel) {
@@ -804,8 +804,8 @@ function parseThreadState(channel) {
   let tmp6 = isActiveThreadResult;
   if (isActiveThreadResult) {
     const _Date = Date;
-    tmp6 = importDefault(5102)(channel) > Date.now();
-    const tmp9 = importDefault(5102)(channel);
+    tmp6 = importDefault(5164)(channel) > Date.now();
+    const tmp9 = importDefault(5164)(channel);
   }
   let tmp12 = isActiveThreadResult;
   const voiceChannelId = store3.getVoiceChannelId();
@@ -1119,7 +1119,7 @@ obj = {
     while (iter !== undefined) {
       let tmp2 = require;
       let tmp3 = dependencyMap;
-      let obj = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+      let obj = require(4469) /* shouldShowAgeGateForVoiceChannel */;
       let tmp5 = anyThreadsNSFW;
       let result = obj.isChannelContentGated(nextResult);
       if (result !== anyThreadsNSFW(nextResult.guild_id, nextResult.parent_id)) {

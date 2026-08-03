@@ -1,6 +1,6 @@
-// === Module 11040: canToggleCommunicationDisableOnUser ===
+// === Module 8351: canToggleCommunicationDisableOnUser ===
 
-// Module 11040 (canToggleCommunicationDisableOnUser)
+// Module 8351 (canToggleCommunicationDisableOnUser)
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -30,8 +30,8 @@ function canToggleCommunicationDisableOnUser(id, id2, items) {
         obj[0] = Permissions.ADMINISTRATOR;
         obj[1] = user;
         obj[2] = guild;
-        canResult = importAll(3826).can(obj);
-        const obj5 = importAll(3826);
+        canResult = importAll(3888).can(obj);
+        const obj5 = importAll(3888);
       }
       let canManageUserResult = !canResult;
       if (!canResult) {

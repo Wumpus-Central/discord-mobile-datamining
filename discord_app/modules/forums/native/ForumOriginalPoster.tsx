@@ -1,6 +1,6 @@
-// === Module 11077: ForumOriginalPoster ===
+// === Module 11193: ForumOriginalPoster ===
 
-// Module 11077 (ForumOriginalPoster)
+// Module 11193 (ForumOriginalPoster)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

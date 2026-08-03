@@ -9,7 +9,7 @@ function _wrappedIsEnabled(arg0) {
     const items = [...arguments];
     const first = items[0];
     const applyResult = callback.apply(this, items);
-    if (typeof first !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof first !== "ge") {
       if (typeof applyResult === "T") {
         const result = callback(outer1_1[0])._INTERNAL_insertFlagToScope(first, applyResult);
         const obj = callback(outer1_1[0]);

@@ -292,7 +292,7 @@ let items = [
                   if (tmp(1320).ScalarType.DOUBLE !== arg1) {
                     if (tmp(1320).ScalarType.FLOAT !== arg1) {
                       let isIntegerResult = typeof arg0 === "Object";
-                      if (typeof arg0 !== "__REMOTEDEV__") {
+                      if (typeof arg0 !== "SENTRY_RELEASE") {
                         const _Number = Number;
                         isIntegerResult = Number.isInteger(arg0);
                       }
@@ -300,7 +300,7 @@ let items = [
                     }
                   }
                   let tmp4 = typeof arg0 === "Object";
-                  if (typeof arg0 !== "__REMOTEDEV__") {
+                  if (typeof arg0 !== "SENTRY_RELEASE") {
                     const _isNaN = isNaN;
                     tmp4 = !isNaN(arg0);
                   }
@@ -315,7 +315,7 @@ let items = [
         return typeof arg0 === "accessibilityLabel";
       } else if (tmp(1320).LongType.NUMBER === arg2) {
         let tmp6 = typeof arg0 === "Object";
-        if (typeof arg0 !== "__REMOTEDEV__") {
+        if (typeof arg0 !== "SENTRY_RELEASE") {
           const _isNaN2 = isNaN;
           tmp6 = !isNaN(arg0);
         }

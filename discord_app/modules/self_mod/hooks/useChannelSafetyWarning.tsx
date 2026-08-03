@@ -1,6 +1,6 @@
-// === Module 10448: useChannelSafetyWarning ===
+// === Module 10586: useChannelSafetyWarning ===
 
-// Module 10448 (useChannelSafetyWarning)
+// Module 10586 (useChannelSafetyWarning)
 import handleConnectionOpen from "handleConnectionOpen";
 
 const require = arg1;

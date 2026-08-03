@@ -1,6 +1,6 @@
-// === Module 10705: nativeEventEmitter ===
+// === Module 10813: nativeEventEmitter ===
 
-// Module 10705 (nativeEventEmitter)
+// Module 10813 (nativeEventEmitter)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import setContent from "setContent";
@@ -162,7 +162,7 @@ export default function GlobalStatusIndicator(children) {
 };
 export const useGlobalStatusIndicatorHeightSharedValue = function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
   const _require = globalStatusIndicatorState;
-  const sharedValue = _require(4054).useSharedValue(globalStatusIndicatorState.height);
+  const sharedValue = _require(4116).useSharedValue(globalStatusIndicatorState.height);
   const items = [globalStatusIndicatorState.height, sharedValue];
   const effect = React.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);

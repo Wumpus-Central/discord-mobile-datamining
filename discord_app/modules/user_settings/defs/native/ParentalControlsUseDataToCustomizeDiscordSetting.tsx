@@ -1,6 +1,6 @@
-// === Module 14711: toggle ===
+// === Module 14778: toggle ===
 
-// Module 14711 (toggle)
+// Module 14778 (toggle)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { Consents } from "ME";
 import createToggle from "createToggle";
@@ -13,7 +13,7 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToCustomizeDiscordSettingValue() {
-    return require(13874) /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
+    return require(13941) /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
   },
   onValueChange: function handlePersonalizationChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
@@ -29,8 +29,8 @@ createToggle = {
       } else {
         items2 = [Consents.PERSONALIZATION];
       }
-      importDefault(5800).updateTeenConsents(selectedTeenId, items1, items2);
-      const obj = importDefault(5800);
+      importDefault(6895).updateTeenConsents(selectedTeenId, items1, items2);
+      const obj = importDefault(6895);
     }
   }
 };

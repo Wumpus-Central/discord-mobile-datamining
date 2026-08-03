@@ -1,6 +1,6 @@
-// === Module 9141: useIsNsfwGated ===
+// === Module 9314: useIsNsfwGated ===
 
-// Module 9141 (useIsNsfwGated)
+// Module 9314 (useIsNsfwGated)
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

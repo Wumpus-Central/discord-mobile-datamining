@@ -1,6 +1,6 @@
-// === Module 14657: route ===
+// === Module 14724: route ===
 
-// Module 14657 (route)
+// Module 14724 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
   getComponent() {
-    return require(14658) /* CollectiblesShopViewAllCategoryItemsScreen */.default;
+    return require(14725) /* CollectiblesShopViewAllCategoryItemsScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

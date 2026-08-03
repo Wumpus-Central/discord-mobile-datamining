@@ -1,6 +1,6 @@
-// === Module 10168: getSafetyAlertsSettingOrDefault ===
+// === Module 10307: getSafetyAlertsSettingOrDefault ===
 
-// Module 10168 (getSafetyAlertsSettingOrDefault)
+// Module 10307 (getSafetyAlertsSettingOrDefault)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -24,7 +24,7 @@ export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOr
   if (flag == null) {
     flag = true;
   }
-  let userIsTeen = require(10169) /* trackViewedEvent */.getUserIsTeen();
+  let userIsTeen = require(10308) /* trackViewedEvent */.getUserIsTeen();
   if (!userIsTeen) {
     userIsTeen = true === isStaffResult;
   }

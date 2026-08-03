@@ -1,6 +1,6 @@
-// === Module 11611: useFeaturedExpiringPowerup ===
+// === Module 11718: useFeaturedExpiringPowerup ===
 
-// Module 11611 (useFeaturedExpiringPowerup)
+// Module 11718 (useFeaturedExpiringPowerup)
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

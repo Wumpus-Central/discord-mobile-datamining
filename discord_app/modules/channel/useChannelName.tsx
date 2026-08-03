@@ -1,6 +1,6 @@
-// === Module 4384: computeChannelName ===
+// === Module 4446: computeChannelName ===
 
-// Module 4384 (computeChannelName)
+// Module 4446 (computeChannelName)
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import upsertRelationship from "upsertRelationship";
@@ -40,8 +40,8 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
           if (!first.isProvisional) {
             let str12 = closure_7.getNickname(first.id);
             if (str12 == null) {
-              str12 = importDefault(4032).getName(first);
-              const obj3 = importDefault(4032);
+              str12 = importDefault(4094).getName(first);
+              const obj3 = importDefault(4094);
             }
             if (str12 == null) {
               str12 = "???";
@@ -76,9 +76,9 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         } else {
           const intl = tmp20(1236).intl;
           const obj = { name: null };
-          obj[0] = importDefault(4032).getName(closure_9.getCurrentUser());
+          obj[0] = importDefault(4094).getName(closure_9.getCurrentUser());
           joined = intl.formatToPlainString(tmp20(1236).t["9Uk8PF"], obj);
-          const obj2 = importDefault(4032);
+          const obj2 = importDefault(4094);
         }
       }
     } else {
@@ -161,9 +161,9 @@ export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroup
   } else {
     const intl = tmp(1236).intl;
     const obj = { name: null };
-    obj[0] = importDefault(4032).getName(getUser.getCurrentUser());
+    obj[0] = importDefault(4094).getName(getUser.getCurrentUser());
     joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
-    const obj2 = importDefault(4032);
+    const obj2 = importDefault(4094);
   }
   return joined;
 };
@@ -185,9 +185,9 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   } else {
     const intl = tmp(1236).intl;
     const obj = { name: null };
-    obj[0] = importDefault(4032).getName(getUser.getCurrentUser());
+    obj[0] = importDefault(4094).getName(getUser.getCurrentUser());
     joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
-    const obj2 = importDefault(4032);
+    const obj2 = importDefault(4094);
   }
   return joined;
 };

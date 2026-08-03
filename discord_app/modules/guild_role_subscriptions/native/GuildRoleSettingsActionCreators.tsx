@@ -1,17 +1,17 @@
-// === Module 16601: pushTierEditScene ===
+// === Module 16667: pushTierEditScene ===
 
-// Module 16601 (pushTierEditScene)
+// Module 16667 (pushTierEditScene)
 import usePriceTiers from "usePriceTiers";
 import { GuildSettingsSections } from "ME";
 
-const result = require("module_8308").fileFinishedImporting("modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx");
+const result = require("module_8613").fileFinishedImporting("modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx");
 
 export const pushTierEditScene = function pushTierEditScene(arr, arg1) {
   usePriceTiers.resetImperatively();
   arr.push(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_EDIT, arg1);
-  importDefault(8308).setSection(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_EDIT);
+  importDefault(8613).setSection(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_EDIT);
 };
 export const pushTierTemplateSelectionScene = function pushTierTemplateSelectionScene(arr, arg1) {
   arr.push(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION, arg1);
-  importDefault(8308).setSection(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION);
+  importDefault(8613).setSection(GuildSettingsSections.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION);
 };

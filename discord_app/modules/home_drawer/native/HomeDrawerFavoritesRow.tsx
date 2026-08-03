@@ -1,6 +1,6 @@
-// === Module 14989: HomeDrawerFavoritesRowExpandedChildren ===
+// === Module 15277: HomeDrawerFavoritesRowExpandedChildren ===
 
-// Module 14989 (HomeDrawerFavoritesRowExpandedChildren)
+// Module 15277 (HomeDrawerFavoritesRowExpandedChildren)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -12,6 +12,6 @@ export const HomeDrawerFavoritesRowExpandedChildren = function HomeDrawerFavorit
   obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.wMWyci);
-  obj[0] = jsx(require(4189) /* Text */.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
-  return jsx(require(14981) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  obj[0] = jsx(require(4251) /* Text */.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  return jsx(require(15270) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
 };

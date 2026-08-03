@@ -1,6 +1,6 @@
-// === Module 12839: isNotAutomodEmbed ===
+// === Module 12902: isNotAutomodEmbed ===
 
-// Module 12839 (isNotAutomodEmbed)
+// Module 12902 (isNotAutomodEmbed)
 const result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStoreUtils.tsx");
 
 export const isNotAutomodEmbed = function isNotAutomodEmbed(type) {

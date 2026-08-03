@@ -1,6 +1,6 @@
-// === Module 13118: markGuildsAsRead ===
+// === Module 13181: markGuildsAsRead ===
 
-// Module 13118 (markGuildsAsRead)
+// Module 13181 (markGuildsAsRead)
 import handleUpdate from "handleUpdate";
 import rebuild from "rebuild";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -88,5 +88,5 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   obj = { source, type: "guild" };
   importDefault(698).track(AnalyticEvents.MARK_AS_READ, obj);
   let obj2 = importDefault(698);
-  return mapped(5130).bulkAck(mapped, onFinished);
+  return mapped(5192).bulkAck(mapped, onFinished);
 };

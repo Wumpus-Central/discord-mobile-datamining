@@ -1,6 +1,6 @@
-// === Module 5941: getAll ===
+// === Module 7020: getAll ===
 
-// Module 5941 (getAll)
+// Module 7020 (getAll)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import set from "set";
 

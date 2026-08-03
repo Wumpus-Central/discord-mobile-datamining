@@ -1,6 +1,6 @@
-// === Module 15502: handleVoiceOrStageChannelConnectPress ===
+// === Module 15569: handleVoiceOrStageChannelConnectPress ===
 
-// Module 15502 (handleVoiceOrStageChannelConnectPress)
+// Module 15569 (handleVoiceOrStageChannelConnectPress)
 import SearchNavigatorScreens from "SearchNavigatorScreens";
 import ComponentDispatcher from "ComponentDispatcher";
 import ensureGuildLoaded from "ensureGuildLoaded";

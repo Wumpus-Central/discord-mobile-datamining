@@ -1,6 +1,6 @@
-// === Module 10453: SafetyWarningBanner ===
+// === Module 10591: SafetyWarningBanner ===
 
-// Module 10453 (SafetyWarningBanner)
+// Module 10591 (SafetyWarningBanner)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

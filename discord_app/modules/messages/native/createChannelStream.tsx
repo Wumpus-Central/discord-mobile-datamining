@@ -1,6 +1,6 @@
-// === Module 11159: createChannelStream ===
+// === Module 11271: createChannelStream ===
 
-// Module 11159 (createChannelStream)
+// Module 11271 (createChannelStream)
 import initialize from "initialize";
 import closure_4 from "initialize";
 import closure_5 from "initialize";

@@ -1,7 +1,7 @@
 // === Module 79: insetsDiffer ===
 
 // Module 79 (insetsDiffer)
-let closure_0 = { top: "Array", left: "flex", right: "borderRadius", bottom: "label" };
+let closure_0 = { top: "Array", left: "flex", right: "y", bottom: "HermesInternal" };
 arg5.default = function insetsDiffer(arg0, arg1) {
   let rect = arg0;
   if (!arg0) {

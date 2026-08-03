@@ -1,6 +1,6 @@
-// === Module 9359: DoubleTapReminderContent ===
+// === Module 9518: DoubleTapReminderContent ===
 
-// Module 9359 (DoubleTapReminderContent)
+// Module 9518 (DoubleTapReminderContent)
 import "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";
@@ -17,7 +17,7 @@ function DoubleTapReminderContent(emoji) {
     emojiName: emoji.emoji.name
   };
   obj[2] = intl.format(require(1236) /* getSystemLocale */.t.C2tQIV, obj);
-  return jsx(require(4189) /* Text */.Text, {
+  return jsx(require(4251) /* Text */.Text, {
     protipHook(children) {
       return callback2(callback(table[5]).Text, { variant: "text-sm/bold", color: "text-feedback-info", children }, "doubleTapReminder");
     },
@@ -32,22 +32,22 @@ let result = require("jsxProd").fileFinishedImporting("modules/double_tap_to_rea
 
 export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapReminderToast(emoji) {
   const _require = emoji;
-  let obj = _require(4009);
+  let obj = _require(4071);
   if (!obj.UNSAFE_isDismissibleContentDismissed(_require(1358).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER)) {
-    const DoubleTapReactionEmoji = tmp(3866).DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = tmp(3928).DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
     let flag = setting.disableDoubleTap;
     if (flag == null) {
       flag = false;
     }
-    let tmpResult = tmp(7755);
+    let tmpResult = tmp(7874);
     const result = tmpResult.disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      tmpResult = tmp(7755);
+      tmpResult = tmp(7874);
       areEmojisEqualResult = tmpResult.areEmojisEqual(result, emoji);
     }
     if (areEmojisEqualResult) {
@@ -58,12 +58,12 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       obj[2] = function content() {
         return outer1_4(outer1_6, { emoji: closure_0 });
       };
-      importDefault(3894).open(obj);
-      const obj4 = importDefault(3894);
+      importDefault(3956).open(obj);
+      const obj4 = importDefault(3956);
       obj = { dismissAction: null, forceTrack: true };
       obj[0] = ContentDismissActionType.AUTO_DISMISS;
-      const result1 = tmp(4009).UNSAFE_markDismissibleContentAsDismissed(tmp(1358).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj);
-      const tmpResult1 = tmp(4009);
+      const result1 = tmp(4071).UNSAFE_markDismissibleContentAsDismissed(tmp(1358).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj);
+      const tmpResult1 = tmp(4071);
     }
   }
 };

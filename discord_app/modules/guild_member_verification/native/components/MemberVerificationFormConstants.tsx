@@ -1,6 +1,6 @@
-// === Module 9153: BANNER_RATIO_HEIGHT_16_9 ===
+// === Module 9326: BANNER_RATIO_HEIGHT_16_9 ===
 
-// Module 9153 (BANNER_RATIO_HEIGHT_16_9)
+// Module 9326 (BANNER_RATIO_HEIGHT_16_9)
 let c2 = 0.5625;
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");
 

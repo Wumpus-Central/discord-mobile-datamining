@@ -1,6 +1,6 @@
-// === Module 12792: initialize ===
+// === Module 12855: initialize ===
 
-// Module 12792 (initialize)
+// Module 12855 (initialize)
 import filterPlayingActivities from "filterPlayingActivities";
 import { StatusTypes } from "ME";
 import { PersistedStore } from "initialize";
@@ -30,7 +30,7 @@ prototype["getState"] = function getState() {
 };
 prototype["getTemp"] = function getTemp() {
   const obj = { x: null };
-  const StatusExpiresAtSetting = require(3866) /* explicitContentFromProto */.StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = require(3928) /* explicitContentFromProto */.StatusExpiresAtSetting;
   obj[0] = StatusExpiresAtSetting.getSetting();
   return obj;
 };
@@ -39,7 +39,7 @@ HabitualDNDStore.persistKey = "habitualDND";
 const habitualDNDStore = new HabitualDNDStore(require("dispatcher"), {
   POST_CONNECTION_OPEN: function handleConnect() {
     if (status.getStatus() === StatusTypes.DND) {
-      const StatusExpiresAtSetting = require(3866) /* explicitContentFromProto */.StatusExpiresAtSetting;
+      const StatusExpiresAtSetting = require(3928) /* explicitContentFromProto */.StatusExpiresAtSetting;
       if ("0" === StatusExpiresAtSetting.getSetting()) {
         const _Date = Date;
         arr = arr.push(Date.now());

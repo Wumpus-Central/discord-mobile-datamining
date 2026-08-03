@@ -1,6 +1,6 @@
-// === Module 9678: AppliedForumTag ===
+// === Module 9823: AppliedForumTag ===
 
-// Module 9678 (AppliedForumTag)
+// Module 9823 (AppliedForumTag)
 import "noop";
 import { View } from "get ActivityIndicator";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -18,7 +18,7 @@ class AppliedForumTag {
     name = undefined;
     emojiId = undefined;
     emojiName = undefined;
-    f83205 = undefined;
+    f83525 = undefined;
     c6 = undefined;
     containerStyle = jsxs();
     ({ name, emojiId, emojiName } = tag);
@@ -26,7 +26,7 @@ class AppliedForumTag {
     obj = require("initialize");
     items = [];
     items[0] = emojiName;
-    f83205 = obj.useStateFromStores(items, () => {
+    f83525 = obj.useStateFromStores(items, () => {
       let usableCustomEmojiById = null;
       if (null != c3) {
         usableCustomEmojiById = _undefined2.getUsableCustomEmojiById(tmp);

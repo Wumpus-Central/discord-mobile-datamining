@@ -1,6 +1,6 @@
-// === Module 3267: dateFnsLocales ===
+// === Module 3329: dateFnsLocales ===
 
-// Module 3267 (dateFnsLocales)
+// Module 3329 (dateFnsLocales)
 import importDefaultResult from "code";
 
 const require = arg1;

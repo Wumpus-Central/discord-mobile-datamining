@@ -1,6 +1,6 @@
-// === Module 16364: getCountrySelectorOpened ===
+// === Module 16430: getCountrySelectorOpened ===
 
-// Module 16364 (getCountrySelectorOpened)
+// Module 16430 (getCountrySelectorOpened)
 import { Store } from "initialize";
 
 let c0 = false;

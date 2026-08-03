@@ -1,6 +1,6 @@
-// === Module 11092: _getSafetyHubData ===
+// === Module 11208: _getSafetyHubData ===
 
-// Module 11092 (_getSafetyHubData)
+// Module 11208 (_getSafetyHubData)
 import dispatcher from "dispatcher";
 import fetchFingerprint from "fetchFingerprint";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
@@ -288,7 +288,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(6758);
+                      obj3 = callback(7715);
                     }
                   }
                   let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };
@@ -350,7 +350,7 @@ function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = callback(6758);
+                      obj3 = callback(7715);
                     }
                   }
                   let obj = { type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS", classification: null, accountStanding: null, isDsaEligible: null, username: null, isAppealEligible: null };

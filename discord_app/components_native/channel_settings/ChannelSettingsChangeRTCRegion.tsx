@@ -1,6 +1,6 @@
-// === Module 15703: handleSetRegion ===
+// === Module 15768: handleSetRegion ===
 
-// Module 15703 (handleSetRegion)
+// Module 15768 (handleSetRegion)
 import _toArray from "_toArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import initialize from "initialize";
@@ -75,7 +75,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(7691).updateChannel({ rtcRegion: tmp });
+  self(7814).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     let obj = self(outer1_2[9]);
     obj = { rtcRegion: c0 };
@@ -83,13 +83,13 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
   });
 };
 prototype["renderRegion"] = function renderRegion(label) {
-  return jsx(require(7659) /* TableRadioRow */.TableRadioRow, { label: label.name, value: label.id }, label.id);
+  return jsx(require(7782) /* TableRadioRow */.TableRadioRow, { label: label.name, value: label.id }, label.id);
 };
 prototype["renderRegions"] = function renderRegions() {
   const self = this;
   const substr = callback(this.state.regions).slice(0);
   const mapped = substr.map(this.renderRegion, this);
-  return jsx(self(7660).TableRadioGroup, {
+  return jsx(self(7783).TableRadioGroup, {
     defaultValue: this.state.selectedRegionId,
     onChange(arg0) {
       return self.handleSetRegion(arg0);
@@ -101,7 +101,7 @@ prototype["renderRegions"] = function renderRegions() {
 prototype["render"] = function render() {
   const obj = { style: createCacheKey(this.context).form, children: null };
   obj[1] = this.renderRegions();
-  return jsx(require(7639) /* Form */.Form, { style: createCacheKey(this.context).form, children: null });
+  return jsx(require(7765) /* Form */.Form, { style: createCacheKey(this.context).form, children: null });
 };
 ChannelSettingsChangeRTCRegion.contextType = require("ManaContext").ThemeContext;
 const result = require("ensureGuildLoaded").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");

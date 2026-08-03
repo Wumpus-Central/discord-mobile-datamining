@@ -1,6 +1,6 @@
-// === Module 11990: CustomStatusPreview ===
+// === Module 12086: CustomStatusPreview ===
 
-// Module 11990 (CustomStatusPreview)
+// Module 12086 (CustomStatusPreview)
 import EmojiImage from "EmojiImage";
 import { View } from "OpenableUserProfileAvatar";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";

@@ -1,6 +1,6 @@
-// === Module 9581: useGetThreadDraftSettings ===
+// === Module 9728: useGetThreadDraftSettings ===
 
-// Module 9581 (useGetThreadDraftSettings)
+// Module 9728 (useGetThreadDraftSettings)
 import handleChanged from "handleChanged";
 
 const require = arg1;

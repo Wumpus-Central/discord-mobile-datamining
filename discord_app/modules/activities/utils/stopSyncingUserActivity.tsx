@@ -1,6 +1,6 @@
-// === Module 12709: stopSyncingUserActivity ===
+// === Module 12772: stopSyncingUserActivity ===
 
-// Module 12709 (stopSyncingUserActivity)
+// Module 12772 (stopSyncingUserActivity)
 const result = require("set").fileFinishedImporting("modules/activities/utils/stopSyncingUserActivity.tsx");
 
 export default function stopSyncingUserActivity() {

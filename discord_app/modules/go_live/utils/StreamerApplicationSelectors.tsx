@@ -1,6 +1,6 @@
-// === Module 6027: _findPlayingActivity ===
+// === Module 7106: _findPlayingActivity ===
 
-// Module 6027 (_findPlayingActivity)
+// Module 7106 (_findPlayingActivity)
 import sortActivity from "sortActivity";
 import { ActivityTypes } from "ME";
 
@@ -8,7 +8,7 @@ const require = arg1;
 function _findPlayingActivity(type) {
   let tmp = type.type === ActivityTypes.PLAYING;
   if (tmp) {
-    tmp = !importDefault(6028)(type);
+    tmp = !importDefault(7107)(type);
   }
   return tmp;
 }

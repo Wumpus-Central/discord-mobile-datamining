@@ -1,6 +1,6 @@
-// === Module 7618: metadata ===
+// === Module 6754: metadata ===
 
-// Module 7618 (metadata)
+// Module 6754 (metadata)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WumpusGearSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/696267024f823e70ace60bb0c8523a7416859d79954772d752766e208237af60.png";

@@ -1,6 +1,6 @@
-// === Module 9782: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 9927: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 9782 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 9927 (SocialLayerStorefrontGiftPurchaseSection)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "useSyncGiftOptionsToOrder";

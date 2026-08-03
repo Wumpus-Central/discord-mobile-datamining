@@ -1,6 +1,6 @@
-// === Module 16278: prototype ===
+// === Module 16342: prototype ===
 
-// Module 16278 (prototype)
+// Module 16342 (prototype)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import getState from "getState";
 import { AppStates } from "ME";

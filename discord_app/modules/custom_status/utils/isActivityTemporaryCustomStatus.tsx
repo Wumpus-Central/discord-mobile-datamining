@@ -1,6 +1,6 @@
-// === Module 15080: isActivityTemporaryCustomStatus ===
+// === Module 15060: isActivityTemporaryCustomStatus ===
 
-// Module 15080 (isActivityTemporaryCustomStatus)
+// Module 15060 (isActivityTemporaryCustomStatus)
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");

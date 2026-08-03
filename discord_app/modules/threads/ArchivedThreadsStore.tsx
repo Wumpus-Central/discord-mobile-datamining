@@ -1,6 +1,6 @@
-// === Module 6081: listKey ===
+// === Module 7133: listKey ===
 
-// Module 6081 (listKey)
+// Module 7133 (listKey)
 import _slicedToArray from "_slicedToArray";
 import { ALL_CHANNEL_TYPES } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -291,7 +291,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(require("dispatcher"), {
     } else {
       return false;
     }
-    obj = channel(6071);
+    obj = channel(5803);
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     let flag = false;
@@ -345,8 +345,8 @@ const archivedThreadsStore = new ArchivedThreadsStore(require("dispatcher"), {
           const _Array2 = Array;
           obj[4] = Array.from(tagFilter.tagFilter);
           obj[5] = tagFilter.sortOrder;
-          const result = require(6082) /* trackForumChannelSeenBatch */.trackForumMorePostsLoaded(obj);
-          const obj3 = require(6082) /* trackForumChannelSeenBatch */;
+          const result = require(7134) /* trackForumChannelSeenBatch */.trackForumMorePostsLoaded(obj);
+          const obj3 = require(7134) /* trackForumChannelSeenBatch */;
         }
         resortListState(value);
         value.hasMore = tagFilter.hasMore;

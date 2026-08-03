@@ -1,6 +1,6 @@
-// === Module 6255: setGPlayAnalytics ===
+// === Module 7244: setGPlayAnalytics ===
 
-// Module 6255 (setGPlayAnalytics)
+// Module 7244 (setGPlayAnalytics)
 import keys from "keys";
 
 let closure_2 = Object.freeze({ analyticsByProductId: {} });

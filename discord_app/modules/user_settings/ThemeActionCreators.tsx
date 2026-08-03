@@ -1,6 +1,6 @@
-// === Module 4035: setSystemTheme ===
+// === Module 4097: setSystemTheme ===
 
-// Module 4035 (setSystemTheme)
+// Module 4097 (setSystemTheme)
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import { SystemThemeState } from "SystemThemeState";
 

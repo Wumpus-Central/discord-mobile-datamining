@@ -1,6 +1,6 @@
-// === Module 9819: BalanceWidgetPill ===
+// === Module 9964: BalanceWidgetPill ===
 
-// Module 9819 (BalanceWidgetPill)
+// Module 9964 (BalanceWidgetPill)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,6 @@
-// === Module 8861: mapped ===
+// === Module 9038: mapped ===
 
-// Module 8861 (mapped)
+// Module 9038 (mapped)
 import _objectWithoutProperties from "_objectWithoutProperties";
 
 let mapped = importDefault;

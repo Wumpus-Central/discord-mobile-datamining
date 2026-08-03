@@ -1,6 +1,6 @@
-// === Module 11018: canOpenPremiumPlanDirectlyForReferralTrial ===
+// === Module 11135: canOpenPremiumPlanDirectlyForReferralTrial ===
 
-// Module 11018 (canOpenPremiumPlanDirectlyForReferralTrial)
+// Module 11135 (canOpenPremiumPlanDirectlyForReferralTrial)
 import reset from "reset";
 import emitChanges from "emitChanges";
 

@@ -1,6 +1,6 @@
-// === Module 5699: closeVoicePanels ===
+// === Module 10662: closeVoicePanels ===
 
-// Module 5699 (closeVoicePanels)
+// Module 10662 (closeVoicePanels)
 import { ComponentActions } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/closeVoicePanels.tsx");

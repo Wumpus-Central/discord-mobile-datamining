@@ -1,6 +1,6 @@
-// === Module 15528: MediaGrid ===
+// === Module 15595: MediaGrid ===
 
-// Module 15528 (MediaGrid)
+// Module 15595 (MediaGrid)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import MessageEmbedTypes from "MessageEmbedTypes";

@@ -1,6 +1,6 @@
-// === Module 11005: ? ===
+// === Module 11126: ? ===
 
-// Module 11005
+// Module 11126
 import _handleConnectionOpen from "_handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Endpoints } from "ME";
@@ -38,9 +38,9 @@ export default {
             }
           });
         } else {
-          callback(6693).transitionToGuild(body.id);
+          callback(5856).transitionToGuild(body.id);
           body(body);
-          const obj3 = callback(6693);
+          const obj3 = callback(5856);
         }
       }, (body) => {
         let obj = callback2(709);

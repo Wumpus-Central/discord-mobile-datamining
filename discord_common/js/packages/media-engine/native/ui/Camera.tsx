@@ -1,6 +1,6 @@
-// === Module 4297: Camera ===
+// === Module 4359: Camera ===
 
-// Module 4297 (Camera)
+// Module 4359 (Camera)
 import "noop";
 import { jsx } from "jsxProd";
 

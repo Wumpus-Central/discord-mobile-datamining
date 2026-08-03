@@ -1,6 +1,6 @@
-// === Module 6047: ServiceNotificationPriority ===
+// === Module 7125: ServiceNotificationPriority ===
 
-// Module 6047 (ServiceNotificationPriority)
+// Module 7125 (ServiceNotificationPriority)
 const result = require("set").fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManagerTypes.tsx");
 
 export const ServiceNotificationPriority = { HIGH: 0, [0]: "HIGH", MEDIUM: 1, [1]: "MEDIUM", LOW: 2, [2]: "LOW" };

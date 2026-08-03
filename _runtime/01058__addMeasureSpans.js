@@ -205,7 +205,7 @@ function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr
           let tmp4 = null != tmp3;
           if (tmp4) {
             let tmp5 = typeof tmp3 === "Object";
-            if (typeof tmp3 !== "__REMOTEDEV__") {
+            if (typeof tmp3 !== "SENTRY_RELEASE") {
               tmp5 = tmp3 < 2147483647;
             }
             if (!tmp5) {
@@ -251,7 +251,7 @@ export const _setResourceRequestAttributes = function _setResourceRequestAttribu
     let tmp4 = null != tmp3;
     if (tmp4) {
       let tmp5 = typeof tmp3 === "Object";
-      if (typeof tmp3 !== "__REMOTEDEV__") {
+      if (typeof tmp3 !== "SENTRY_RELEASE") {
         tmp5 = tmp3 < 2147483647;
       }
       if (!tmp5) {

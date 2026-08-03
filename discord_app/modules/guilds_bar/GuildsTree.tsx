@@ -1,6 +1,6 @@
-// === Module 5033: GuildsNodeType ===
+// === Module 5095: GuildsNodeType ===
 
-// Module 5033 (GuildsNodeType)
+// Module 5095 (GuildsNodeType)
 let obj = { ROOT: "root", FOLDER: "folder", GUILD: "guild" };
 const result = require("set").fileFinishedImporting("modules/guilds_bar/GuildsTree.tsx");
 class GuildsTree {

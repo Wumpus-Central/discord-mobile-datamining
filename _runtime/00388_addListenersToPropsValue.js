@@ -148,7 +148,7 @@ export default function createAnimatedPropsHook(arg0) {
             if (obj != null) {
               setNativeProps = obj.setNativeProps;
             }
-            if (typeof setNativeProps !== "disabledUntil") {
+            if (typeof setNativeProps !== "HAS_APPLICATION") {
               if (isPublicInstanceResult) {
                 if (items) {
                   obj.setNativeProps(obj5.__getAnimatedValue());
@@ -180,7 +180,7 @@ export default function createAnimatedPropsHook(arg0) {
             getScrollableNode = getScrollableNode.getScrollableNode;
           }
           scrollableNode = getScrollableNode;
-          if (typeof getScrollableNode !== "disabledUntil") {
+          if (typeof getScrollableNode !== "HAS_APPLICATION") {
             scrollableNode = getScrollableNode.getScrollableNode();
           }
         }
@@ -268,7 +268,7 @@ export default function createAnimatedPropsHook(arg0) {
               if (obj != null) {
                 setNativeProps = obj.setNativeProps;
               }
-              if (typeof setNativeProps !== "disabledUntil") {
+              if (typeof setNativeProps !== "HAS_APPLICATION") {
                 if (isPublicInstanceResult) {
                   if (items) {
                     obj.setNativeProps(obj5.__getAnimatedValue());
@@ -300,7 +300,7 @@ export default function createAnimatedPropsHook(arg0) {
               getScrollableNode = getScrollableNode.getScrollableNode;
             }
             scrollableNode = getScrollableNode;
-            if (typeof getScrollableNode !== "disabledUntil") {
+            if (typeof getScrollableNode !== "HAS_APPLICATION") {
               scrollableNode = getScrollableNode.getScrollableNode();
             }
           }

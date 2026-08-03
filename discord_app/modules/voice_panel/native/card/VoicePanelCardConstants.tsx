@@ -1,6 +1,6 @@
-// === Module 10054: CARD_SIZE ===
+// === Module 10196: CARD_SIZE ===
 
-// Module 10054 (CARD_SIZE)
+// Module 10196 (CARD_SIZE)
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardConstants.tsx");
 
 export const CARD_SIZE = 165;

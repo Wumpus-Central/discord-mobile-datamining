@@ -1,6 +1,6 @@
-// === Module 13155: IconPill ===
+// === Module 13218: IconPill ===
 
-// Module 13155 (IconPill)
+// Module 13218 (IconPill)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -38,15 +38,15 @@ export default function IconPill(IconComponent) {
   } else {
     obj = { source: null, size: null, style: null };
     obj[0] = source;
-    obj[1] = importDefault(4606).Sizes.EXTRA_SMALL;
+    obj[1] = importDefault(4668).Sizes.EXTRA_SMALL;
     obj[2] = tmp.pillIcon;
     tmp8 = callback;
-    tmp9 = callback(importDefault(4606), obj);
-    const tmp7 = importDefault(4606);
+    tmp9 = callback(importDefault(4668), obj);
+    const tmp7 = importDefault(4668);
   }
   const items1 = [tmp9, ];
   const items2 = [tmp.pillText, textStyle];
-  items1[1] = tmp8(importDefault(7674), { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
+  items1[1] = tmp8(importDefault(7797), { style: items2, numberOfLines: 1, accessibilityLabel, children: text });
   obj[1] = items1;
   return closure_4(View, obj);
 };

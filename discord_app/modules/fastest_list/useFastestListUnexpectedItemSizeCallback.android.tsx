@@ -1,6 +1,6 @@
-// === Module 9253: useFastestListUnexpectedItemSizeCallback ===
+// === Module 9425: useFastestListUnexpectedItemSizeCallback ===
 
-// Module 9253 (useFastestListUnexpectedItemSizeCallback)
+// Module 9425 (useFastestListUnexpectedItemSizeCallback)
 import noop from "noop";
 
 const require = arg1;
@@ -36,7 +36,7 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
     if (element != null) {
       type = element.type;
     }
-    if (typeof type !== "disabledUntil") {
+    if (typeof type !== "HAS_APPLICATION") {
       if (type.name.length > 0) {
         let str = type.name;
       }
@@ -75,7 +75,7 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
     if (type != null) {
       type1 = type.type;
     }
-    if (typeof type1 !== "disabledUntil") {
+    if (typeof type1 !== "HAS_APPLICATION") {
       if (type1.name.length > 0) {
         str = type1.name;
       }

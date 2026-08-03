@@ -1,6 +1,6 @@
-// === Module 11408: ? ===
+// === Module 11518: ? ===
 
-// Module 11408
+// Module 11518
 import handleInit from "handleInit";
 import { DraftType } from "handleChanged";
 import map from "map";
@@ -38,7 +38,7 @@ const memoResult = require("noop").memo(function ChatInputImageCarousel(canUploa
     obj = { attachments: null, channelId: null };
     obj[0] = stateFromStores;
     obj[1] = channelId;
-    tmp4 = jsx(channelId(9682), { attachments: null, channelId: null });
+    tmp4 = jsx(channelId(9827), { attachments: null, channelId: null });
   }
   return tmp4;
 });

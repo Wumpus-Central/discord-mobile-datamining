@@ -1,6 +1,6 @@
-// === Module 11664: useGameServerGetExpiringEntitlements ===
+// === Module 11769: useGameServerGetExpiringEntitlements ===
 
-// Module 11664 (useGameServerGetExpiringEntitlements)
+// Module 11769 (useGameServerGetExpiringEntitlements)
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 

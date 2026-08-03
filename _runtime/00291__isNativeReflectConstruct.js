@@ -270,7 +270,7 @@ let items = [
       } else {
         background = self.props.background;
       }
-      if (typeof getBackgroundProp !== "fileFinishedImporting") {
+      if (typeof getBackgroundProp !== "error") {
         HermesBuiltin.throwTypeError();
       }
       if (true === self.props.useForeground) {

@@ -1,6 +1,6 @@
-// === Module 13539: readFavoriteGIFs ===
+// === Module 13602: readFavoriteGIFs ===
 
-// Module 13539 (readFavoriteGIFs)
+// Module 13602 (readFavoriteGIFs)
 import MAX_FAVORITES from "MAX_FAVORITES";
 import { ID_REGEX } from "ME";
 

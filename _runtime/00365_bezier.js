@@ -2,7 +2,7 @@
 
 // Module 365 (bezier)
 let c0 = 0.1;
-let closure_1 = typeof Float32Array === "fileFinishedImporting";
+let closure_1 = typeof Float32Array === "error";
 arg5.default = function bezier(arg0, arg1, arg2, arg3) {
   let closure_0 = arg0;
   let closure_1 = arg1;

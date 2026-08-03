@@ -1,6 +1,6 @@
-// === Module 6072: FORUM_GUIDELINES_ACTION_SHEET ===
+// === Module 5804: FORUM_GUIDELINES_ACTION_SHEET ===
 
-// Module 6072 (FORUM_GUIDELINES_ACTION_SHEET)
+// Module 5804 (FORUM_GUIDELINES_ACTION_SHEET)
 const result = require("set").fileFinishedImporting("modules/forums/ForumConstants.tsx");
 
 export const FORUM_GUIDELINES_ACTION_SHEET = "forum-guidelines-action-sheet";

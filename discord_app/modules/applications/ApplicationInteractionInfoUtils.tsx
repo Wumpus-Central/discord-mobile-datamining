@@ -1,6 +1,6 @@
-// === Module 8017: canViewInteractionInfo ===
+// === Module 8135: canViewInteractionInfo ===
 
-// Module 8017 (canViewInteractionInfo)
+// Module 8135 (canViewInteractionInfo)
 const result = require("set").fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
 export const canViewInteractionInfo = function canViewInteractionInfo(message) {

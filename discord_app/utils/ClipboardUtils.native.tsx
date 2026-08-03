@@ -1,6 +1,6 @@
-// === Module 5547: _copy ===
+// === Module 5609: _copy ===
 
-// Module 5547 (_copy)
+// Module 5609 (_copy)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _copy() {
@@ -90,5 +90,5 @@ export const copy = function copy() {
   return applyArgumentsResult;
 };
 export const getString = function getString() {
-  return importDefault(5548).getString();
+  return importDefault(5610).getString();
 };

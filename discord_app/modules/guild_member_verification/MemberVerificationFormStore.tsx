@@ -1,6 +1,6 @@
-// === Module 5142: get ===
+// === Module 5204: get ===
 
-// Module 5142 (get)
+// Module 5204 (get)
 import { Store } from "initialize";
 
 const require = arg1;
@@ -19,7 +19,7 @@ prototype["getRulesPrompt"] = function getRulesPrompt(guildId) {
   if (dependencyMap[guildId] != null) {
     formFields = tmp2.formFields;
   }
-  return importDefault(12).find(formFields, require(4013) /* MAX_RESULTS_PER_PAGE */.isTermsFormField);
+  return importDefault(12).find(formFields, require(4075) /* MAX_RESULTS_PER_PAGE */.isTermsFormField);
 };
 MemberVerificationFormStore.displayName = "MemberVerificationFormStore";
 obj = {

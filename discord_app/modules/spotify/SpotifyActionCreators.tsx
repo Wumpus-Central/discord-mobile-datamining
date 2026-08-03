@@ -1,6 +1,6 @@
-// === Module 10957: apiRequest ===
+// === Module 11079: apiRequest ===
 
-// Module 10957 (apiRequest)
+// Module 11079 (apiRequest)
 import isProtocolRegistered from "isProtocolRegistered";
 import WEB_OPEN from "WEB_OPEN";
 import ME from "ME";
@@ -552,13 +552,13 @@ export const pause = function pause(arg0, arg1) {
 export const fetchIsSpotifyProtocolRegistered = function fetchIsSpotifyProtocolRegistered() {
   if (!protocolRegistered.isProtocolRegistered()) {
     if (obj.isDesktop()) {
-      const obj2 = importDefault(8494);
-      importDefault(8494).isProtocolRegistered(closure_4).then((isRegistered) => {
+      const obj2 = importDefault(8783);
+      importDefault(8783).isProtocolRegistered(closure_4).then((isRegistered) => {
         let obj = callback(table[5]);
         obj = { type: "SPOTIFY_SET_PROTOCOL_REGISTERED", isRegistered };
         obj.dispatch(obj);
       });
-      const isProtocolRegisteredResult = importDefault(8494).isProtocolRegistered(closure_4);
+      const isProtocolRegisteredResult = importDefault(8783).isProtocolRegistered(closure_4);
     }
     obj = require(500) /* set */;
   }

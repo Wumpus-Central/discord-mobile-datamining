@@ -1,6 +1,6 @@
-// === Module 11119: disableFalsePositiveButton ===
+// === Module 8321: disableFalsePositiveButton ===
 
-// Module 11119 (disableFalsePositiveButton)
+// Module 8321 (disableFalsePositiveButton)
 function disableFalsePositiveButton(channelId, messageId) {
   let obj = importDefault(709);
   obj = { type: "MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT", messageId, channelId };

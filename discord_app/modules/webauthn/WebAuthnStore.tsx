@@ -1,6 +1,6 @@
-// === Module 13770: hasFetchedCredentials ===
+// === Module 13837: hasFetchedCredentials ===
 
-// Module 13770 (hasFetchedCredentials)
+// Module 13837 (hasFetchedCredentials)
 import { Store } from "initialize";
 
 const require = arg1;

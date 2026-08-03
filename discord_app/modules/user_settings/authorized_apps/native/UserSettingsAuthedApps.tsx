@@ -1,6 +1,6 @@
-// === Module 13988: UserSettingsAuthedApps ===
+// === Module 14055: UserSettingsAuthedApps ===
 
-// Module 13988 (UserSettingsAuthedApps)
+// Module 14055 (UserSettingsAuthedApps)
 import getAvatarURL from "getAvatarURL";
 import get_ActivityIndicator from "getSystemLocale";
 import recomputeFromAppTokens from "recomputeFromAppTokens";

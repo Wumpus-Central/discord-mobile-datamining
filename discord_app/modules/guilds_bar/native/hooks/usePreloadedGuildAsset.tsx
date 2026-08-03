@@ -1,6 +1,6 @@
-// === Module 15015: usePreloadedGuildAsset ===
+// === Module 15302: usePreloadedGuildAsset ===
 
-// Module 15015 (usePreloadedGuildAsset)
+// Module 15302 (usePreloadedGuildAsset)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
@@ -17,7 +17,7 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
   const effect = React.useEffect(() => () => {
     ref.current.guildId = undefined;
   }, []);
-  const tmp3 = importDefault(5182)(ref);
+  const tmp3 = importDefault(5244)(ref);
   if (guildId === tmp3.guildId) {
     asset = tmp3.asset;
   }

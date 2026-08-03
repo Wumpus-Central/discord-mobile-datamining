@@ -1,6 +1,6 @@
-// === Module 10172: LOCATION_CONTEXT_MOBILE ===
+// === Module 10311: LOCATION_CONTEXT_MOBILE ===
 
-// Module 10172 (LOCATION_CONTEXT_MOBILE)
+// Module 10311 (LOCATION_CONTEXT_MOBILE)
 const result = require("set").fileFinishedImporting("modules/self_mod/Constants.tsx");
 
 export const LOCATION_CONTEXT_MOBILE = "SAFETY_WARNING_BANNER_MOBILE";

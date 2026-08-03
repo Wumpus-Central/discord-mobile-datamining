@@ -1,6 +1,6 @@
-// === Module 8964: useIsSocialLayerParentApplication ===
+// === Module 9141: useIsSocialLayerParentApplication ===
 
-// Module 8964 (useIsSocialLayerParentApplication)
+// Module 9141 (useIsSocialLayerParentApplication)
 import noop from "noop";
 import { ApplicationFlags } from "ME";
 
@@ -13,5 +13,5 @@ export default function useIsSocialLayerParentApplication(arg0) {
   return React.useMemo(() => callback(outer1_1[2]).hasApplicationFlag(callback, outer1_3.PARENT), items);
 };
 export const getIsSocialLayerParentApplication = function getIsSocialLayerParentApplication(application) {
-  return require(5696) /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARENT);
+  return require(7498) /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARENT);
 };

@@ -1,6 +1,6 @@
-// === Module 10377: useNativeForumPostHandlers ===
+// === Module 10516: useNativeForumPostHandlers ===
 
-// Module 10377 (useNativeForumPostHandlers)
+// Module 10516 (useNativeForumPostHandlers)
 import IMPACT_LIGHT from "IMPACT_LIGHT";
 import setContent from "setContent";
 import ensureGuildLoaded from "ensureGuildLoaded";

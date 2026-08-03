@@ -1,6 +1,6 @@
-// === Module 16445: GuildSettingsServerTagColorPickerActionSheet ===
+// === Module 16511: GuildSettingsServerTagColorPickerActionSheet ===
 
-// Module 16445 (GuildSettingsServerTagColorPickerActionSheet)
+// Module 16511 (GuildSettingsServerTagColorPickerActionSheet)
 import _slicedToArray from "_slicedToArray";
 import GuildBadge from "GuildBadge";
 import { View } from "Stack";

@@ -1,6 +1,6 @@
-// === Module 9807: createUseCollectiblesShopStyles ===
+// === Module 9952: createUseCollectiblesShopStyles ===
 
-// Module 9807 (createUseCollectiblesShopStyles)
+// Module 9952 (createUseCollectiblesShopStyles)
 import _slicedToArray from "_slicedToArray";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

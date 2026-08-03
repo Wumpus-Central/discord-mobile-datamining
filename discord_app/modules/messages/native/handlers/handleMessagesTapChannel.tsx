@@ -1,6 +1,6 @@
-// === Module 10003: maybeStartLurking ===
+// === Module 10146: maybeStartLurking ===
 
-// Module 10003 (maybeStartLurking)
+// Module 10146 (maybeStartLurking)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import { isGuildVocalChannelType } from "createChannelRecord";
 import { isGuildLurker } from "GuildNSFWContentLevel";

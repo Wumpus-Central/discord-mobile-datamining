@@ -1,6 +1,6 @@
-// === Module 5121: useCanChannelBeDefault ===
+// === Module 5183: useCanChannelBeDefault ===
 
-// Module 5121 (useCanChannelBeDefault)
+// Module 5183 (useCanChannelBeDefault)
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
@@ -43,8 +43,8 @@ export const canChannelBeDefault = function canChannelBeDefault(guild_id, id) {
     }
     let isChannelGatedResult = channelGated.isChannelGated(guild_id, id);
     if (!isChannelGatedResult) {
-      isChannelGatedResult = importAll(3826).canEveryoneRole(VIEW_CHANNEL, channel.getChannel(id));
-      const obj3 = importAll(3826);
+      isChannelGatedResult = importAll(3888).canEveryoneRole(VIEW_CHANNEL, channel.getChannel(id));
+      const obj3 = importAll(3888);
     }
     return isChannelGatedResult;
   }

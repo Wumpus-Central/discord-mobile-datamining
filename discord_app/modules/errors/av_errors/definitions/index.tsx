@@ -1,6 +1,6 @@
-// === Module 16695: ErrorDefinitions ===
+// === Module 16761: ErrorDefinitions ===
 
-// Module 16695 (ErrorDefinitions)
+// Module 16761 (ErrorDefinitions)
 const obj = {};
 obj[require("mapped").AVError.NO_AUDIO_INPUT_DETECTED] = require("AVErrorNoAudioInputDetectedDefinition").AVErrorNoAudioInputDetectedDefinition;
 obj[require("mapped").AVError.NO_INPUT_DEVICES] = require("AVErrorNoInputDevicesDefinition").AVErrorNoInputDevicesDefinition;

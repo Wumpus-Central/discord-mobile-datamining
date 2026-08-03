@@ -1,6 +1,6 @@
-// === Module 7779: getJoinButtonLabels ===
+// === Module 7898: getJoinButtonLabels ===
 
-// Module 7779 (getJoinButtonLabels)
+// Module 7898 (getJoinButtonLabels)
 let obj = { id: "781323471249604648", format_type: require("StickerFormat").StickerFormat.APNG, description: "Cheerful Choco jumps out of gift box", name: "Surprise" };
 let items = [obj, , , , ];
 obj = { id: "781324642736144424", format_type: require("StickerFormat").StickerFormat.APNG, description: "Cheerful Choco preens against window", name: "Affection" };

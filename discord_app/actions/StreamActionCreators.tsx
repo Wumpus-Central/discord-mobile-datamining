@@ -1,6 +1,6 @@
-// === Module 4373: watchStream ===
+// === Module 4435: watchStream ===
 
-// Module 4373 (watchStream)
+// Module 4435 (watchStream)
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
 import initialize from "initialize";
@@ -22,7 +22,7 @@ function watchStream(stream, forceMultiple) {
   if (null == remoteSessionId.getRemoteSessionId()) {
     const channelId = stream.channelId;
     if (null == stream.guildId) {
-      const encodeStreamKeyResult = require(4257) /* isStreamKey */.encodeStreamKey(stream);
+      const encodeStreamKeyResult = require(4319) /* isStreamKey */.encodeStreamKey(stream);
       forceMultiple = undefined;
       if (forceMultiple != null) {
         forceMultiple = forceMultiple.forceMultiple;
@@ -31,7 +31,7 @@ function watchStream(stream, forceMultiple) {
         const allActiveStreamsForChannel = authStore.getAllActiveStreamsForChannel(channelId);
         forceMultiple = allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
       }
-      const obj2 = require(4257) /* isStreamKey */;
+      const obj2 = require(4319) /* isStreamKey */;
       const tmp18 = importDefault;
       let obj = { type: "STREAM_WATCH", streamKey: null, allowMultiple: null };
       obj[1] = encodeStreamKeyResult;
@@ -53,8 +53,8 @@ function watchStream(stream, forceMultiple) {
         tmp21 = forceMultiple;
       }
       if (!tmp21) {
-        const participant = tmp18(4387).selectParticipant(stream.channelId, encodeStreamKeyResult);
-        const tmp18Result = tmp18(4387);
+        const participant = tmp18(4449).selectParticipant(stream.channelId, encodeStreamKeyResult);
+        const tmp18Result = tmp18(4449);
       }
       const obj3 = importDefault(709);
     } else {
@@ -63,7 +63,7 @@ function watchStream(stream, forceMultiple) {
       const isInChannelResult = updateVoiceState.isInChannel(channelId);
       let isChannelFullResult = !isInChannelResult;
       if (!isInChannelResult) {
-        obj = require(4376) /* allowChannelAccess */;
+        obj = require(4438) /* allowChannelAccess */;
         isChannelFullResult = obj.isChannelFull(channel, tmp6, createGuildRecordFromRust);
       }
       tmp6 = updateVoiceState;
@@ -114,7 +114,7 @@ function _fetchStreamPreview() {
               dependencyMap = undefined;
               if (c6.shouldFetchPreview(c0, lib, dependencyMap)) {
                 let obj5 = callback;
-                let result = callback(4257);
+                let result = callback(4319);
                 let HTTP = result.encodeStreamKey;
                 if (null != tmp55) {
                   let CALL = outer1_16.GUILD;
@@ -243,7 +243,7 @@ function _notifyStreamStart() {
               dependencyMap = 2;
               v0 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = v0(5003).post(obj1);
+              obj3[0] = v0(5065).post(obj1);
               return obj3;
             }
           } else {
@@ -298,7 +298,7 @@ export const startStream = function startStream(guildId, channelId) {
   obj.dispatch(obj);
 };
 export const setStreamPaused = function setStreamPaused(currentUserActiveStream, paused) {
-  let obj = require(4257) /* isStreamKey */;
+  let obj = require(4319) /* isStreamKey */;
   const encodeStreamKeyResult = obj.encodeStreamKey(currentUserActiveStream);
   obj = { type: "STREAM_SET_PAUSED", streamKey: encodeStreamKeyResult, paused };
   importDefault(709).dispatch(obj);
@@ -318,7 +318,7 @@ export const watchStreamAndTransitionToStream = function watchStreamAndTransitio
       windowOpen = store2.getVoiceChannelId() === channelId;
     }
     if (!windowOpen) {
-      importDefault(4398)(stream);
+      importDefault(4460)(stream);
     }
   } else {
     const channel = store.getChannel(channelId);
@@ -326,8 +326,8 @@ export const watchStreamAndTransitionToStream = function watchStreamAndTransitio
     const isInChannelResult = updateVoiceState.isInChannel(channelId);
     let isChannelFullResult = !isInChannelResult;
     if (!isInChannelResult) {
-      isChannelFullResult = require(4376) /* allowChannelAccess */.isChannelFull(channel, tmp6, createGuildRecordFromRust);
-      const obj = require(4376) /* allowChannelAccess */;
+      isChannelFullResult = require(4438) /* allowChannelAccess */.isChannelFull(channel, tmp6, createGuildRecordFromRust);
+      const obj = require(4438) /* allowChannelAccess */;
     }
     tmp6 = updateVoiceState;
   }
@@ -390,7 +390,7 @@ export const notifyStreamStart = function notifyStreamStart() {
 };
 export const updateStreamSettings = function updateStreamSettings(noTrack) {
   if (true !== noTrack.noTrack) {
-    let obj = require(8860) /* isPremiumResolution */;
+    let obj = require(9037) /* isPremiumResolution */;
     const result = obj.trackStreamSettingsUpdate(noTrack.preset, noTrack.resolution, noTrack.frameRate, noTrack.soundshareEnabled);
   }
   obj = { type: "STREAM_UPDATE_SETTINGS" };
@@ -410,7 +410,7 @@ export const stopOwnStream = function stopOwnStream(arg0) {
   }
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    const encodeStreamKeyResult = require(4257) /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
+    const encodeStreamKeyResult = require(4319) /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
     if (flag === undefined) {
       flag = true;
     }
@@ -422,7 +422,7 @@ export const stopOwnStream = function stopOwnStream(arg0) {
     obj[1] = encodeStreamKeyResult;
     obj[2] = flag;
     obj.dispatch(obj);
-    const obj5 = require(4257) /* isStreamKey */;
+    const obj5 = require(4319) /* isStreamKey */;
     obj = { type: "STREAM_STOP", streamKey: null, appContext: null };
     obj[1] = encodeStreamKeyResult;
     obj[2] = constants.APP;
@@ -433,15 +433,15 @@ export const stopOwnStream = function stopOwnStream(arg0) {
 export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWatchStream(arg0, streamKey) {
   const _require = arg0;
   id = id.getId();
-  const importDefault = _require(4257).decodeStreamKey(streamKey);
+  const importDefault = _require(4319).decodeStreamKey(streamKey);
   const voiceChannelId = store2.getVoiceChannelId();
   if (tmp4) {
-    importDefault(5005).disconnect();
-    const obj2 = importDefault(5005);
+    importDefault(5067).disconnect();
+    const obj2 = importDefault(5067);
   }
-  let obj = _require(4257);
+  let obj = _require(4319);
   tmp4 = null != voiceChannelId && voiceChannelId !== arg0;
-  importDefault(4203).addRecipient(arg0, id, undefined, () => {
+  importDefault(4265).addRecipient(arg0, id, undefined, () => {
     const tmp = callback(outer1_2[25]);
     const call = tmp.call;
     const fn = () => {

@@ -1,6 +1,6 @@
-// === Module 9304: __INTERNAL_VIEW_CONFIG ===
+// === Module 9476: __INTERNAL_VIEW_CONFIG ===
 
-// Module 9304 (__INTERNAL_VIEW_CONFIG)
+// Module 9476 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDAutoModerationSystemMessageView", validAttributes: { row: true } };

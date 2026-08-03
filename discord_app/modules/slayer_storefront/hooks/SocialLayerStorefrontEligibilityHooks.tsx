@@ -1,6 +1,6 @@
-// === Module 8696: useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds ===
+// === Module 8873: useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds ===
 
-// Module 8696 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
+// Module 8873 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
 import map from "map";
 import initialize from "initialize";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
@@ -113,7 +113,7 @@ export const useUsersPlayingStorefrontEnabledGamesApplicationIds = function useU
     return items;
   }, items1);
   const obj = userIds(589);
-  const slayerStorefrontDevApplicationIdOverride = userIds(8698).useSlayerStorefrontDevApplicationIdOverride();
+  const slayerStorefrontDevApplicationIdOverride = userIds(8875).useSlayerStorefrontDevApplicationIdOverride();
   let tmp3 = stateFromStoresArray;
   if (null != slayerStorefrontDevApplicationIdOverride) {
     const items2 = [];
@@ -150,7 +150,7 @@ export const useAreUsersPlayingStorefrontEnabledGames = function useAreUsersPlay
     return items;
   }, items1);
   const obj = userIds(589);
-  const slayerStorefrontDevApplicationIdOverride = userIds(8698).useSlayerStorefrontDevApplicationIdOverride();
+  const slayerStorefrontDevApplicationIdOverride = userIds(8875).useSlayerStorefrontDevApplicationIdOverride();
   let arr3 = stateFromStoresArray;
   if (null != slayerStorefrontDevApplicationIdOverride) {
     const items2 = [];

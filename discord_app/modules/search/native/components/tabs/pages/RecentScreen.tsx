@@ -1,6 +1,6 @@
-// === Module 15500: ClearAllHistory ===
+// === Module 15567: ClearAllHistory ===
 
-// Module 15500 (ClearAllHistory)
+// Module 15567 (ClearAllHistory)
 import _slicedToArray from "_slicedToArray";
 import deserialize from "deserialize";
 import importAllResult from "SearchTokenTypes";
@@ -34,8 +34,8 @@ function ClearAllHistory(searchContext) {
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1236).intl;
   obj[2] = intl2.string(searchContext(1236).t.LFTAUp);
-  obj[4] = jsx(searchContext(4189).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(4721).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  obj[4] = jsx(searchContext(4251).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(4783).PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };
@@ -44,8 +44,8 @@ function ViewAll(onJumpToMedia) {
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.Ofpgwh);
-  obj[4] = jsx(require(4189) /* Text */.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(require(4721) /* PressableBase */.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  obj[4] = jsx(require(4251) /* Text */.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(require(4783) /* PressableBase */.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 let c5 = importAllResult;
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: unpackModuleId, SearchListItemTypes: closure_12, SearchTabs: map1 } = MessageEmbedTypes);

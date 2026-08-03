@@ -1,6 +1,6 @@
-// === Module 10499: fetchChannelInfo ===
+// === Module 10637: fetchChannelInfo ===
 
-// Module 10499 (fetchChannelInfo)
+// Module 10637 (fetchChannelInfo)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import handleConnectionReset from "handleConnectionReset";
 

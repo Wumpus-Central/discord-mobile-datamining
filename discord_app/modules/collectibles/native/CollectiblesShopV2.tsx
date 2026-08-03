@@ -1,6 +1,6 @@
-// === Module 14623: CollectiblesShopInternal ===
+// === Module 14690: CollectiblesShopInternal ===
 
-// Module 14623 (CollectiblesShopInternal)
+// Module 14690 (CollectiblesShopInternal)
 import maybeFetchUserProfile from "maybeFetchUserProfile";
 import set from "set";
 import get_ActivityIndicator from "useFetchPurchases";

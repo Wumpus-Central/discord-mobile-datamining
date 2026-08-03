@@ -1,6 +1,6 @@
-// === Module 6170: getTransformedUser ===
+// === Module 7222: getTransformedUser ===
 
-// Module 6170 (getTransformedUser)
+// Module 7222 (getTransformedUser)
 import { isPrivate } from "createChannelRecord";
 import createdAt from "createdAt";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -919,7 +919,7 @@ prototype2["rebootWebworker"] = function rebootWebworker() {
     _worker.terminate();
     self._worker = null;
   }
-  self._worker = require(6171) /* UserSearchWorkerManager */;
+  self._worker = require(7223) /* UserSearchWorkerManager */;
 };
 prototype2["updateUsers"] = function updateUsers(arr) {
   const _worker = this._worker;
@@ -995,7 +995,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(handleUserSea
     const error = new Error("SearchContextManager: No webworker initialized");
     throw error;
   } else {
-    if (typeof UserSearchContext !== "fileFinishedImporting") {
+    if (typeof UserSearchContext !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (num === undefined) {

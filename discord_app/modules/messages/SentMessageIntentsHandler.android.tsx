@@ -1,6 +1,6 @@
-// === Module 6049: set ===
+// === Module 7127: set ===
 
-// Module 6049 (set)
+// Module 7127 (set)
 const result = require("set").fileFinishedImporting("modules/messages/SentMessageIntentsHandler.android.tsx");
 
 export default {

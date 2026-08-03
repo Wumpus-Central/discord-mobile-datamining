@@ -1,6 +1,6 @@
-// === Module 8753: ProfilePreviewWrapper ===
+// === Module 8930: ProfilePreviewWrapper ===
 
-// Module 8753 (ProfilePreviewWrapper)
+// Module 8930 (ProfilePreviewWrapper)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import items from "items";
@@ -37,7 +37,7 @@ function ProfilePreviewWrapper(children) {
   obj = { style: tmp.profilePreviewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items1 = ["" + tmp.profilePreviewGradient.color + "00", tmp.profilePreviewGradient.color];
   obj[3] = items1;
-  items[1] = callback(importDefault(4615), obj);
+  items[1] = callback(importDefault(4677), obj);
   obj[1] = items;
   obj[2] = callback2(closure_4, obj);
   return callback(closure_3, obj);
@@ -60,11 +60,11 @@ function ProfileFramePreview(arg0) {
   let profileFrame;
   let width;
   ({ profileFrame, width, handlePreviewPress, onTrackPress } = arg0);
-  let obj = require(8674) /* useCurrentUser */;
+  let obj = require(8851) /* useCurrentUser */;
   obj = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = obj.useCurrentUser();
   obj = { profileFrame, user: currentUser, maxWidth: width, style: createCacheKey().profilePreview };
-  obj[2] = callback(importDefault(8754), obj);
+  obj[2] = callback(importDefault(8931), obj);
   return callback(ProfilePreviewWrapper, obj);
 }
 class AvatarDecorationPreview {
@@ -145,11 +145,11 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   } else if (tmp(1901).CollectiblesItemType.EXTERNAL_SKU === type) {
     const ALL = tmp(679).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
-      let tmp5 = callback(tmp(8758).FractionalNitroPreview, {});
+      let tmp5 = callback(tmp(8935).FractionalNitroPreview, {});
     } else {
       tmp5 = null;
       if (product.skuId === constants.ORB_PROFILE_BADGE) {
-        tmp5 = callback(tmp(8761).OrbBadgePreview, {});
+        tmp5 = callback(tmp(8938).OrbBadgePreview, {});
       }
     }
     return tmp5;

@@ -1,6 +1,6 @@
-// === Module 6574: usePremiumPlanPrice ===
+// === Module 7559: usePremiumPlanPrice ===
 
-// Module 6574 (usePremiumPlanPrice)
+// Module 7559 (usePremiumPlanPrice)
 import noop from "noop";
 import addSubscriptionPlan from "addSubscriptionPlan";
 import reset from "reset";

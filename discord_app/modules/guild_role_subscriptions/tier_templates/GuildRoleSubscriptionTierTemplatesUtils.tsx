@@ -1,6 +1,6 @@
-// === Module 14269: getUsedTemplateChannelsForGuild ===
+// === Module 14336: getUsedTemplateChannelsForGuild ===
 
-// Module 14269 (getUsedTemplateChannelsForGuild)
+// Module 14336 (getUsedTemplateChannelsForGuild)
 import initialize from "initialize";
 import { useMemo } from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -390,14 +390,14 @@ export const getTemplateTierCreationAnalyticsContext = function getTemplateTierC
   }
 };
 export const isEligibleForNewBadge = function isEligibleForNewBadge(features) {
-  let result = require(12641) /* computeGuildRoleSubscriptionSettingsVisibility */.canManageGuildRoleSubscriptions(features);
+  let result = require(5760) /* computeGuildRoleSubscriptionSettingsVisibility */.canManageGuildRoleSubscriptions(features);
   if (result) {
     features = features.features;
     result = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
   }
   if (result) {
-    result = require(13051) /* GuildFeatures */.isGuildEligibleForTierTemplates(features.id);
-    const tmpResult = require(13051) /* GuildFeatures */;
+    result = require(13114) /* GuildFeatures */.isGuildEligibleForTierTemplates(features.id);
+    const tmpResult = require(13114) /* GuildFeatures */;
   }
   return result;
 };

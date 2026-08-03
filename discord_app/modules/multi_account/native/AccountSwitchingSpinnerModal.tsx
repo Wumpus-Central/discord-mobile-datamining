@@ -1,6 +1,6 @@
-// === Module 16275: AccountSwitchingSpinnerModal ===
+// === Module 16339: AccountSwitchingSpinnerModal ===
 
-// Module 16275 (AccountSwitchingSpinnerModal)
+// Module 16339 (AccountSwitchingSpinnerModal)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

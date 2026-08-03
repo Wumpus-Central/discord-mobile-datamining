@@ -1,6 +1,6 @@
-// === Module 11804: SuggestedFriendSource ===
+// === Module 11906: SuggestedFriendSource ===
 
-// Module 11804 (SuggestedFriendSource)
+// Module 11906 (SuggestedFriendSource)
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendsScreenConstants.tsx");
 
 export const SuggestedFriendSource = { USER_SUGGESTIONS: 1, [1]: "USER_SUGGESTIONS", FF_PEOPLE_YOU_MAY_KNOW: 2, [2]: "FF_PEOPLE_YOU_MAY_KNOW" };

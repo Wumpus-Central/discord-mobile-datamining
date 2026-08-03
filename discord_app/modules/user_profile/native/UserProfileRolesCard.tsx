@@ -1,6 +1,6 @@
-// === Module 5542: RoleDot ===
+// === Module 5604: RoleDot ===
 
-// Module 5542 (RoleDot)
+// Module 5604 (RoleDot)
 import initialize from "initialize";
 import { View } from "Text";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -183,8 +183,8 @@ export default function UserProfileRolesCard(userId) {
     obj[0] = guildId;
     obj[1] = roles;
     obj[2] = callback(RolesList, obj);
-    tmp4 = callback(guildId(5566), obj);
-    const tmp7 = guildId(5566);
+    tmp4 = callback(guildId(5628), obj);
+    const tmp7 = guildId(5628);
   }
   return tmp4;
 };

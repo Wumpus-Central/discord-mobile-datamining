@@ -1,6 +1,6 @@
-// === Module 8748: DynamicBadgeTooltip ===
+// === Module 8925: DynamicBadgeTooltip ===
 
-// Module 8748 (DynamicBadgeTooltip)
+// Module 8925 (DynamicBadgeTooltip)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

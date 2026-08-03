@@ -1,6 +1,6 @@
-// === Module 5563: VerifiedRoleIcon ===
+// === Module 5625: VerifiedRoleIcon ===
 
-// Module 5563 (VerifiedRoleIcon)
+// Module 5625 (VerifiedRoleIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";
@@ -39,11 +39,11 @@ export default function VerifiedRoleIcon(arg0) {
   if (roleColor == null) {
     roleColor = closure_3;
   }
-  let obj = require(5564) /* getHigherContrastColor */;
+  let obj = require(5626) /* getHigherContrastColor */;
   const items = [WHITE, PRIMARY_630];
   const diff = size - size / 8 * 2;
   const higherContrastColor = obj.getHigherContrastColor({ backgroundColor: roleColor, colors: items });
-  let obj1 = require(5543) /* useRoleIcon */;
+  let obj1 = require(5605) /* useRoleIcon */;
   obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
@@ -67,7 +67,7 @@ export default function VerifiedRoleIcon(arg0) {
     obj2[1] = diff;
     obj1[0] = obj2;
     obj1[2] = higherContrastColor;
-    roleIcon = tmp9(require(4137) /* LinkIcon */.LinkIcon, obj1);
+    roleIcon = tmp9(require(4199) /* LinkIcon */.LinkIcon, obj1);
   }
   obj[1] = roleIcon;
   return <View style={items1}>{null}</View>;

@@ -1,6 +1,6 @@
-// === Module 3872: isFeatureAgeGated ===
+// === Module 3934: isFeatureAgeGated ===
 
-// Module 3872 (isFeatureAgeGated)
+// Module 3934 (isFeatureAgeGated)
 import getRegionalFeatureConfig from "getRegionalFeatureConfig";
 
 const require = arg1;

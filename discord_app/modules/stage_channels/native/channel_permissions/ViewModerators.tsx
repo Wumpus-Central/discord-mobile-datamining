@@ -1,6 +1,6 @@
-// === Module 15674: ViewModerators ===
+// === Module 15739: ViewModerators ===
 
-// Module 15674 (ViewModerators)
+// Module 15739 (ViewModerators)
 import ME from "ME";
 import "getSystemLocale";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -218,7 +218,7 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   }
   let obj = importDefault(698);
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
-  const obj2 = importDefault(4161);
+  const obj2 = importDefault(4223);
   obj = { channel, canSkip: flag };
-  obj2.openLazy(require(1959) /* asyncRequireImpl */(15675, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
+  obj2.openLazy(require(1959) /* asyncRequireImpl */(15740, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

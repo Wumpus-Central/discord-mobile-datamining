@@ -1,6 +1,6 @@
-// === Module 14287: volumeSlider ===
+// === Module 14354: volumeSlider ===
 
-// Module 14287 (volumeSlider)
+// Module 14354 (volumeSlider)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
 
@@ -25,7 +25,7 @@ createToggle = {
     return items;
   },
   usePredicate() {
-    return importDefault(10782).useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
+    return importDefault(10890).useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);

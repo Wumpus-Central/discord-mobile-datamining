@@ -1,6 +1,6 @@
-// === Module 8706: useTrackShopCardClick ===
+// === Module 8883: useTrackShopCardClick ===
 
-// Module 8706 (useTrackShopCardClick)
+// Module 8883 (useTrackShopCardClick)
 import noop from "noop";
 import { useSelectedVariantIndex } from "useSelectedVariantIndex";
 import { AnalyticEvents } from "ME";

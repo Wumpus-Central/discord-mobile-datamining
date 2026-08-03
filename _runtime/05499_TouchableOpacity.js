@@ -1,4 +1,0 @@
-// === Module 5499: TouchableOpacity ===
-
-// Module 5499 (TouchableOpacity)
-arg5.default = { TouchableOpacity: require("TouchableOpacity").TouchableOpacity, TouchableHighlight: require("TouchableOpacity").TouchableHighlight, TouchableWithoutFeedback: require("TouchableOpacity").TouchableWithoutFeedback };

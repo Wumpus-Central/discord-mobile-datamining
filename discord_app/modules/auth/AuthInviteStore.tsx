@@ -1,6 +1,6 @@
-// === Module 4113: getGuild ===
+// === Module 4175: getGuild ===
 
-// Module 4113 (getGuild)
+// Module 4175 (getGuild)
 import { Store } from "initialize";
 
 const require = arg1;

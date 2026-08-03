@@ -1,6 +1,6 @@
-// === Module 6933: ClydeAnnouncementSpotIllustration ===
+// === Module 6069: ClydeAnnouncementSpotIllustration ===
 
-// Module 6933 (ClydeAnnouncementSpotIllustration)
+// Module 6069 (ClydeAnnouncementSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ClydeAnnouncementSpotIllustration.native.tsx");
@@ -24,7 +24,7 @@ export const ClydeAnnouncementSpotIllustration = function ClydeAnnouncementSpotI
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6934);
+  obj[0] = importDefault(6070);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const ClydeAnnouncementSpotIllustration = function ClydeAnnouncementSpotI
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
 };

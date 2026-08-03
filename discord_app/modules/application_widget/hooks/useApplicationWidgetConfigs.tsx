@@ -1,6 +1,6 @@
-// === Module 12179: useApplicationWidgetConfigs ===
+// === Module 12275: useApplicationWidgetConfigs ===
 
-// Module 12179 (useApplicationWidgetConfigs)
+// Module 12275 (useApplicationWidgetConfigs)
 import noop from "noop";
 import updateApplicationConfigs from "updateApplicationConfigs";
 import { FetchState } from "updateApplicationConfigs";

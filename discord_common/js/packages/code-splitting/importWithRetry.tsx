@@ -1,6 +1,6 @@
-// === Module 3859: _importWithRetry ===
+// === Module 3921: _importWithRetry ===
 
-// Module 3859 (_importWithRetry)
+// Module 3921 (_importWithRetry)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

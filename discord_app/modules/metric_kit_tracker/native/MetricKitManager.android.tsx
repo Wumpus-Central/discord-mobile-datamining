@@ -1,6 +1,6 @@
-// === Module 16273: _initialize ===
+// === Module 16337: _initialize ===
 
-// Module 16273 (_initialize)
+// Module 16337 (_initialize)
 import "initialize";
 
 class MetricKitManager extends tmp2 {

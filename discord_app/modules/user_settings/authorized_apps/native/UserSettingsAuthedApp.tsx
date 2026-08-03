@@ -1,6 +1,6 @@
-// === Module 13991: WarningLabel ===
+// === Module 14058: WarningLabel ===
 
-// Module 13991 (WarningLabel)
+// Module 14058 (WarningLabel)
 import tokensToAppTokensMap from "tokensToAppTokensMap";
 import get_ActivityIndicator from "Link";
 import participantFromServer from "participantFromServer";
@@ -29,7 +29,7 @@ function WarningLabel(children) {
   obj = { size: "xs", color: null, style: null };
   obj[1] = importDefault(712).colors.TEXT_MUTED;
   obj[2] = tmp.warningIcon;
-  const items = [callback(require(4149) /* CircleInformationIcon */.CircleInformationIcon, obj), callback(require(4189) /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
+  const items = [callback(require(4211) /* CircleInformationIcon */.CircleInformationIcon, obj), callback(require(4251) /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
   obj[1] = items;
   return callback2(closure_5, obj);
 }
@@ -360,7 +360,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
 };
 export const handleDeleteApp = function handleDeleteApp(application) {
   application = application.application;
-  let obj = importDefault(5527);
+  let obj = importDefault(5589);
   obj.delete(application.id);
   selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
   const value = selfEmbeddedActivities.get(application.id);
@@ -369,5 +369,5 @@ export const handleDeleteApp = function handleDeleteApp(application) {
     _location = value.location;
   }
   obj = { location: _location, applicationId: application.id };
-  importDefault(10623).leaveActivity(obj);
+  importDefault(10688).leaveActivity(obj);
 };

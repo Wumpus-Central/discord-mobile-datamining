@@ -1,6 +1,6 @@
-// === Module 10360: uriScheme ===
+// === Module 10499: uriScheme ===
 
-// Module 10360 (uriScheme)
+// Module 10499 (uriScheme)
 import set from "set";
 
 const require = arg1;
@@ -183,7 +183,7 @@ function _getAttachments() {
             let obj6 = arr(514);
             dependencyMap = obj6.v4();
             let tmp55 = dependencyMap;
-            let obj8 = arr(4735);
+            let obj8 = arr(4797);
             let tmp56 = lib;
             c7 = 3;
             let num5 = 1;

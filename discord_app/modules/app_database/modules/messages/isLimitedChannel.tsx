@@ -1,6 +1,6 @@
-// === Module 5746: LIMITED_GUILD_MEMBER_THRESHOLD ===
+// === Module 6841: LIMITED_GUILD_MEMBER_THRESHOLD ===
 
-// Module 5746 (LIMITED_GUILD_MEMBER_THRESHOLD)
+// Module 6841 (LIMITED_GUILD_MEMBER_THRESHOLD)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import { ChannelTypes } from "ME";

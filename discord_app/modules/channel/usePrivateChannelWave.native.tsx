@@ -1,6 +1,6 @@
-// === Module 15054: usePrivateChannelWave ===
+// === Module 15034: usePrivateChannelWave ===
 
-// Module 15054 (usePrivateChannelWave)
+// Module 15034 (usePrivateChannelWave)
 import getDmHasMessageHistory from "getDmHasMessageHistory";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -111,7 +111,7 @@ export default function usePrivateChannelWave(id) {
       }
     }
   }), items);
-  obj[0] = _require(15055).usePrivateChannelWaveEligible(id, arg1);
+  obj[0] = _require(15035).usePrivateChannelWaveEligible(id, arg1);
   obj[1] = callback;
   return obj;
 };

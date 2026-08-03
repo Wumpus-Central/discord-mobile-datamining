@@ -1,6 +1,6 @@
-// === Module 10647: _processQueue ===
+// === Module 10700: _processQueue ===
 
-// Module 10647 (_processQueue)
+// Module 10700 (_processQueue)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/leaky-bucket/LeakyBucket.tsx");
 class LeakyBucket {
   constructor(arg0, arg1) {

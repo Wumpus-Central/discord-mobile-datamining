@@ -1,6 +1,6 @@
-// === Module 5794: useOptInEnabledForGuild ===
+// === Module 6891: useOptInEnabledForGuild ===
 
-// Module 5794 (useOptInEnabledForGuild)
+// Module 6891 (useOptInEnabledForGuild)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -13,8 +13,8 @@ const require = arg1;
 ({ GuildFeatures: closure_6, Permissions: error } = ME);
 const result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/opt_in_channels/isOptInEnabled.tsx");
 
-export const useOptInEnabledForGuild = function useOptInEnabledForGuild(guild_id) {
-  const _require = guild_id;
+export const useOptInEnabledForGuild = function useOptInEnabledForGuild(id) {
+  const _require = id;
   const items = [updateUserGuildSettingsInternal, createGuildRecordFromRust, mergeGuildAvatar];
   return _require(589).useStateFromStores(items, () => {
     let isOptInEnabledResult = outer1_4.isOptInEnabled(closure_0);

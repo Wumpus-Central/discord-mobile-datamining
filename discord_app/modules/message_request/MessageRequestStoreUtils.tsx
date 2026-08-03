@@ -1,6 +1,6 @@
-// === Module 15731: sortChannelIds ===
+// === Module 15796: sortChannelIds ===
 
-// Module 15731 (sortChannelIds)
+// Module 15796 (sortChannelIds)
 const result = require("set").fileFinishedImporting("modules/message_request/MessageRequestStoreUtils.tsx");
 
 export const sortChannelIds = function sortChannelIds(found) {

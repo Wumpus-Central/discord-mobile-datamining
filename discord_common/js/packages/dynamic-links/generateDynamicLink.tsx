@@ -1,6 +1,6 @@
-// === Module 12447: generateDynamicLink ===
+// === Module 12545: generateDynamicLink ===
 
-// Module 12447 (generateDynamicLink)
+// Module 12545 (generateDynamicLink)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 
@@ -66,7 +66,7 @@ export default function generateDynamicLink(arg0, arg1) {
     const _encodeURIComponent2 = encodeURIComponent;
     encodeURIComponentResult4 = encodeURIComponent(iosFallbackLink);
   }
-  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(importDefault(12448)()) + "&af_dp=" + encodeURIComponentResult1;
+  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(importDefault(12546)()) + "&af_dp=" + encodeURIComponentResult1;
   let sum = combined;
   if (null != encodeURIComponentResult3) {
     const _HermesInternal = HermesInternal;

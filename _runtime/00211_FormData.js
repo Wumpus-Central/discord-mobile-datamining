@@ -50,13 +50,13 @@ let items = [
           const _Array = Array;
           if (!Array.isArray(tmp2)) {
             if (tmp2) {
-              if (typeof tmp2.name !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof tmp2.name !== "ge") {
                 const _encodeURIComponent = encodeURIComponent;
                 const _HermesInternal = HermesInternal;
                 obj["content-disposition"] = obj["content-disposition"] + "; filename=\"" + encodeURIComponent(tmp2.name.replace(/\//g, "_")) + "\"";
                 const str = tmp2.name;
               }
-              if (typeof tmp2.type !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof tmp2.type !== "ge") {
                 obj["content-type"] = tmp2.type;
               }
               obj = {};

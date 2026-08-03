@@ -309,7 +309,7 @@ arg5.mobileReplayIntegration = () => {
     }
     tmp2Result1 = tmp2(1002);
   }
-  if (typeof mobileReplayIntegrationNoop !== "fileFinishedImporting") {
+  if (typeof mobileReplayIntegrationNoop !== "error") {
     HermesBuiltin.throwTypeError();
   }
   obj = {

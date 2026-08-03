@@ -1,6 +1,6 @@
-// === Module 11185: getUsers ===
+// === Module 11297: getUsers ===
 
-// Module 11185 (getUsers)
+// Module 11297 (getUsers)
 import noop from "noop";
 import rebuild from "rebuild";
 import { isGuildSelectableChannelType as closure_5 } from "createChannelRecord";
@@ -41,14 +41,14 @@ function getChannels(getGuildId, arr) {
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
       const obj = { id: id.id, text: null };
-      obj[1] = arr(4384).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+      obj[1] = arr(4446).computeChannelName(id, mergeGuildAvatar, upsertRelationship);
       return obj;
     });
   } else {
     const dependencyMap = textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId);
     const tmp9 = guildId(12);
-    const tmp9Result = guildId(12)(_require(5035).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const combined = guildId(12)(_require(5035).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => outer1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(rebuild.computeAllActiveJoinedThreads(guildId));
+    const tmp9Result = guildId(12)(_require(5097).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const combined = guildId(12)(_require(5097).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).flatMap((arg0) => outer1_6.getChannels(guildId)[arg0].map((channel) => channel.channel)).concat(rebuild.computeAllActiveJoinedThreads(guildId));
     const found = combined.filter((type) => {
       let hasItem = null == closure_0;
       if (!hasItem) {
@@ -64,13 +64,13 @@ function getChannels(getGuildId, arr) {
           name = tmp7.name;
         }
         if (name == null) {
-          name = arr(4384).computeChannelName(id, outer1_10, outer1_9);
-          const obj3 = arr(4384);
+          name = arr(4446).computeChannelName(id, outer1_10, outer1_9);
+          const obj3 = arr(4446);
         }
         let channelName = name;
       } else {
-        channelName = arr(4384).computeChannelName(id, outer1_10, outer1_9);
-        const obj2 = arr(4384);
+        channelName = arr(4446).computeChannelName(id, outer1_10, outer1_9);
+        const obj2 = arr(4446);
       }
       obj[1] = channelName;
       return obj;
@@ -105,7 +105,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
     function matchUser() {
       const arr = outer1_11;
       let obj = closure_1;
-      if (typeof outer1_14 !== "fileFinishedImporting") {
+      if (typeof outer1_14 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let firstResult = null;
@@ -128,7 +128,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         obj[1] = firstResult.id;
         let tmp6 = obj;
       } else {
-        if (typeof outer1_14 !== "fileFinishedImporting") {
+        if (typeof outer1_14 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         let firstResult1 = null;
@@ -175,7 +175,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
     function matchRole() {
       const arr = outer1_11;
       let obj = closure_2;
-      if (typeof outer1_14 !== "fileFinishedImporting") {
+      if (typeof outer1_14 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let firstResult = null;
@@ -209,7 +209,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
     }
     if (type.type === obj(outer1_2[13]).ApplicationCommandOptionType.CHANNEL) {
       arr6 = outer1_12;
-      if (typeof outer1_14 !== "fileFinishedImporting") {
+      if (typeof outer1_14 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let firstResult = null;
@@ -279,7 +279,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
   } else {
     let obj = {};
     const options = activeCommand.options;
-    const parserState = require(5971) /* rebuild */.createParserState(channel);
+    const parserState = require(7050) /* rebuild */.createParserState(channel);
     const iter = options[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -302,7 +302,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
                 obj = { type: "text", text: null };
                 let tmp10 = importDefault;
                 let tmp11 = tmp24;
-                let obj2 = importDefault(5971);
+                let obj2 = importDefault(7050);
                 let tmp12 = tmp5;
                 obj[1] = obj2.parse(channel, tmp6[0].text, parserState).content;
                 let items = [obj];
@@ -324,7 +324,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
   channel = channel.channel;
   const items = [channel];
   return React.useMemo(() => {
-    if (typeof outer1_17 !== "fileFinishedImporting") {
+    if (typeof outer1_17 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(outer1_17.prototype);
@@ -349,7 +349,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
       function matchUser() {
         const arr = outer1_11;
         let obj = closure_1;
-        if (typeof outer1_14 !== "fileFinishedImporting") {
+        if (typeof outer1_14 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         let firstResult = null;
@@ -372,7 +372,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           obj[1] = firstResult.id;
           let tmp6 = obj;
         } else {
-          if (typeof outer1_14 !== "fileFinishedImporting") {
+          if (typeof outer1_14 !== "error") {
             HermesBuiltin.throwTypeError();
           }
           let firstResult1 = null;
@@ -419,7 +419,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
       function matchRole() {
         const arr = outer1_11;
         let obj = closure_2;
-        if (typeof outer1_14 !== "fileFinishedImporting") {
+        if (typeof outer1_14 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         let firstResult = null;
@@ -453,7 +453,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
       }
       if (type.type === obj(outer1_2[13]).ApplicationCommandOptionType.CHANNEL) {
         arr6 = outer1_12;
-        if (typeof outer1_14 !== "fileFinishedImporting") {
+        if (typeof outer1_14 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         let firstResult = null;

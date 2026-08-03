@@ -1,6 +1,6 @@
-// === Module 7781: getGuildProductPurchaseSystemMessageContentMobile ===
+// === Module 7899: getGuildProductPurchaseSystemMessageContentMobile ===
 
-// Module 7781 (getGuildProductPurchaseSystemMessageContentMobile)
+// Module 7899 (getGuildProductPurchaseSystemMessageContentMobile)
 import { NOOP } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");

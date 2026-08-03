@@ -1,6 +1,6 @@
-// === Module 8821: UnifiedGiftModalRecipientSelectScreen ===
+// === Module 8998: UnifiedGiftModalRecipientSelectScreen ===
 
-// Module 8821 (UnifiedGiftModalRecipientSelectScreen)
+// Module 8998 (UnifiedGiftModalRecipientSelectScreen)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UserRowModes } from "UserRowModes";
@@ -19,7 +19,7 @@ export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) 
   let importDefault;
   let obj = setRecipientUser(1480);
   importDefault = obj.useNavigation();
-  obj = { style: createCacheKey().container, children: jsx(importDefault(8823), obj) };
+  obj = { style: createCacheKey().container, children: jsx(importDefault(9000), obj) };
   obj = {
     onSelectUser(user) {
       setRecipientUser(user);

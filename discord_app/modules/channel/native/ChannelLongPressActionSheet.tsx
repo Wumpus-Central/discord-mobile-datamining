@@ -1,6 +1,6 @@
-// === Module 9105: handleVoiceOrStageChannelConnectPress ===
+// === Module 9278: handleVoiceOrStageChannelConnectPress ===
 
-// Module 9105 (handleVoiceOrStageChannelConnectPress)
+// Module 9278 (handleVoiceOrStageChannelConnectPress)
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import connectToStage from "connectToStage";
 import { SafetyWarningTypes } from "handleConnectionOpen";

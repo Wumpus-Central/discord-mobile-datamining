@@ -1,6 +1,6 @@
-// === Module 12032: AvatarPile ===
+// === Module 12128: AvatarPile ===
 
-// Module 12032 (AvatarPile)
+// Module 12128 (AvatarPile)
 import noop from "noop";
 import jsxProd from "jsxProd";
 
@@ -19,10 +19,10 @@ export const AvatarPile = function AvatarPile(arg0) {
   const Children = React.Children;
   ({ size, names } = arg0);
   const countResult = Children.count(children);
-  const tmp4 = require(12033) /* StaticNativeCutoutAvatarImage */.AVATAR_SIZE_MAP[size];
+  const tmp4 = require(12129) /* StaticNativeCutoutAvatarImage */.AVATAR_SIZE_MAP[size];
   let obj = { "aria-label": null, shape: null, size: null, gap: null, depthX: 0.4, children: null };
-  obj[0] = require(11726) /* getListSummaryLabel */.getListSummaryLabel(names, totalCount);
-  obj[1] = require(7974) /* SolidCutout */.CutoutShape.Circle;
+  obj[0] = require(11829) /* getListSummaryLabel */.getListSummaryLabel(names, totalCount);
+  obj[1] = require(8091) /* SolidCutout */.CutoutShape.Circle;
   obj[2] = tmp4;
   let num = 3;
   if (tmp4 <= 40) {
@@ -36,9 +36,9 @@ export const AvatarPile = function AvatarPile(arg0) {
     obj[0] = tmp4;
     obj[1] = tmp4 / 2;
     obj[2] = totalCount - countResult;
-    tmp6 = callback(require(9946) /* map */.PileOverflow, obj);
+    tmp6 = callback(require(10089) /* map */.PileOverflow, obj);
   }
   items[1] = tmp6;
   obj[5] = items;
-  return closure_4(require(9945) /* Pile */.Pile, obj);
+  return closure_4(require(10088) /* Pile */.Pile, obj);
 };

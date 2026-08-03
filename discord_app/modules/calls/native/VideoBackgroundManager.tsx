@@ -1,6 +1,6 @@
-// === Module 7986: prototype ===
+// === Module 8104: prototype ===
 
-// Module 7986 (prototype)
+// Module 8104 (prototype)
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";
 

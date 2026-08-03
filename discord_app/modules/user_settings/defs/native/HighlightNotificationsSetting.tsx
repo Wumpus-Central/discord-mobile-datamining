@@ -1,6 +1,6 @@
-// === Module 14500: useHighlightNotifications ===
+// === Module 14567: useHighlightNotifications ===
 
-// Module 14500 (useHighlightNotifications)
+// Module 14567 (useHighlightNotifications)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import createToggle from "createToggle";
 
@@ -25,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
   getComponent() {
-    return require(14501) /* Row */.default;
+    return require(14568) /* Row */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

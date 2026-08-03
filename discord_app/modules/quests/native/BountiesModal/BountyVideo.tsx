@@ -1,6 +1,6 @@
-// === Module 14071: BountyVideo ===
+// === Module 14138: BountyVideo ===
 
-// Module 14071 (BountyVideo)
+// Module 14138 (BountyVideo)
 import _slicedToArray from "_slicedToArray";
 import preload from "preload";
 import get_ActivityIndicator from "hasVideoEnded";
@@ -33,7 +33,7 @@ let closure_15 = createCacheKey.createStyles(() => {
   obj[0] = obj;
   obj = { position: "absolute", top: importDefault(712).space.PX_8, left: importDefault(712).space.PX_8, flexDirection: "row", alignItems: "center", gap: importDefault(712).space.PX_8 };
   obj[1] = obj;
-  obj[2] = { position: "absolute", bottom: 0, height: require(14072) /* BountiesModalProgress */.PROGRESS_BAR_HEIGHT, left: lg, right: lg };
+  obj[2] = { position: "absolute", bottom: 0, height: require(14139) /* BountiesModalProgress */.PROGRESS_BAR_HEIGHT, left: lg, right: lg };
   const obj2 = {};
   const merged1 = Object.assign(closure_6.absoluteFillObject);
   obj2.backgroundColor = "#000000";

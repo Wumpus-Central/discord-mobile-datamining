@@ -1,6 +1,6 @@
-// === Module 16674: _getMyContentInventory ===
+// === Module 16740: _getMyContentInventory ===
 
-// Module 16674 (_getMyContentInventory)
+// Module 16740 (_getMyContentInventory)
 import dispatcher from "dispatcher";
 import { ContentInventoryFeedKey } from "ContentInventoryFeedKey";
 import { Endpoints } from "ME";
@@ -84,7 +84,7 @@ function _getMyContentInventory() {
           } else if (2 === tmp7) {
             constants = 0;
             c6 = body;
-            const aPIError = new callback(4092).APIError(c6);
+            const aPIError = new callback(4154).APIError(c6);
             throw aPIError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -194,7 +194,7 @@ function _getContentInventoryOutbox() {
             obj4 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE", userId: null };
             obj4[1] = callback;
             obj4.dispatch(obj4);
-            const aPIError = new callback(4092).APIError(dependencyMap);
+            const aPIError = new callback(4154).APIError(dependencyMap);
             throw aPIError;
           } else if (arg0 === 1) {
             c7 = 3;

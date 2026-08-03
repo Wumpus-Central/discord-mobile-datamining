@@ -22,7 +22,7 @@ arg5.default = function dispatchNativeEvent(self, arg1, timeStamp) {
     if (timestamp == null) {
       timestamp = timeStamp.timestamp;
     }
-    if (typeof timestamp !== "__REMOTEDEV__") {
+    if (typeof timestamp !== "SENTRY_RELEASE") {
       tmpResult = tmp(134);
       const result2 = tmpResult.setEventInitTimeStamp(obj, timestamp);
     }

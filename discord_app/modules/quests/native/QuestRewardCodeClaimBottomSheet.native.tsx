@@ -1,6 +1,6 @@
-// === Module 10978: QuestRewardCodeClaimBottomSheet ===
+// === Module 11099: QuestRewardCodeClaimBottomSheet ===
 
-// Module 10978 (QuestRewardCodeClaimBottomSheet)
+// Module 11099 (QuestRewardCodeClaimBottomSheet)
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
 import get_ActivityIndicator from "_getQuestsInstructionsToWinReward";
 import initializeState from "initializeState";
@@ -108,7 +108,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
   const callback = obj2.useCallback(() => {
     if (null != rewardCode) {
       quest(hasError[15]).copy(tmp.code, () => {
-        let obj = callback2(3894);
+        let obj = callback2(3956);
         obj = { key: "TOAST_QUEST_REWARD_CODE_COPIED", content: null, icon: null };
         const intl = callback(1236).intl;
         obj[1] = intl.string(callback(1236).t.MSaeTe);

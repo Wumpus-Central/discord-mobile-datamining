@@ -1,6 +1,6 @@
-// === Module 4414: createFromServer ===
+// === Module 4476: createFromServer ===
 
-// Module 4414 (createFromServer)
+// Module 4476 (createFromServer)
 import "toJS";
 import createdAt from "createdAt";
 
@@ -24,7 +24,7 @@ prototype["createFromServer"] = function createFromServer(user) {
   const merged = Object.assign(user);
   let str = user.user;
   obj.user = new createdAt(str);
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "error") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }

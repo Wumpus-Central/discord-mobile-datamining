@@ -1,6 +1,6 @@
-// === Module 8888: generateDisplayableCode ===
+// === Module 9065: generateDisplayableCode ===
 
-// Module 8888 (generateDisplayableCode)
+// Module 9065 (generateDisplayableCode)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
 
 export const generateDisplayableCode = function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {

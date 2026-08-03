@@ -1,6 +1,6 @@
-// === Module 9466: SlideoutButton ===
+// === Module 9613: SlideoutButton ===
 
-// Module 9466 (SlideoutButton)
+// Module 9613 (SlideoutButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

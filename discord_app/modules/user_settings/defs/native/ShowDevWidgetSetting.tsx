@@ -1,6 +1,6 @@
-// === Module 14553: toggle ===
+// === Module 14620: toggle ===
 
-// Module 14553 (toggle)
+// Module 14620 (toggle)
 import initialize from "initialize";
 import createToggle from "createToggle";
 
@@ -12,7 +12,7 @@ createToggle = {
   parent: null,
   IconComponent: require("StaffBadgeIcon").StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
-    let obj = require(13657) /* updateDevToolsSettings */;
+    let obj = require(13720) /* updateDevToolsSettings */;
     obj = { showDevWidget };
     const result = obj.updateDevToolsSettings(obj);
   },

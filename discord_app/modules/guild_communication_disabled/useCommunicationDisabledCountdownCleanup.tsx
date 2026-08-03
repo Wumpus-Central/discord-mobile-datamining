@@ -1,6 +1,6 @@
-// === Module 11567: useCommunicationDisabledCountdownCleanup ===
+// === Module 11674: useCommunicationDisabledCountdownCleanup ===
 
-// Module 11567 (useCommunicationDisabledCountdownCleanup)
+// Module 11674 (useCommunicationDisabledCountdownCleanup)
 import noop from "noop";
 
 let c3;

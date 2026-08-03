@@ -74,10 +74,10 @@ let fn = function n(userConfig, callback) {
       callback: table,
       velocity: null,
       initialVelocity: 0,
-      current: "ip",
+      current: "delete",
       lastTimestamp: null,
-      startTimestamp: "union",
-      reduceMotion: null
+      startTimestamp: "text-xs/semibold",
+      reduceMotion: "mobile-text-heading-primary"
     };
     let num = obj.velocity;
     if (num == null) {

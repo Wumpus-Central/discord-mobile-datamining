@@ -1,6 +1,6 @@
-// === Module 15295: IconWithBadge ===
+// === Module 15362: IconWithBadge ===
 
-// Module 15295 (IconWithBadge)
+// Module 15362 (IconWithBadge)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
@@ -27,7 +27,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(15286)().value;
+    num2 = memo(15353)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -69,7 +69,7 @@ function IconWithBadge(includeNotificationsCount) {
   } else {
     items4 = [];
   }
-  const tmp5Result = memo(7974);
+  const tmp5Result = memo(8091);
   const items5 = [closure_6(tmp5Result, { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, obj3) }), ];
   let tmp9Result = null;
   if (sum > 0) {
@@ -102,10 +102,10 @@ export const SettingsLeftIconWithBadge = function SettingsLeftIconWithBadge(navi
   const items = [navigation];
   const obj = { includeNotificationsCount: flag, Icon: null };
   if (React.useMemo(() => navigation.getState().index > 0, items)) {
-    obj[1] = tmp3(5151).ArrowLargeLeftIcon;
+    obj[1] = tmp3(5213).ArrowLargeLeftIcon;
     let tmp5 = obj;
   } else {
-    obj[1] = tmp3(5179).XSmallIcon;
+    obj[1] = tmp3(5241).XSmallIcon;
     tmp5 = obj;
   }
   return closure_6(IconWithBadge, tmp5);
@@ -115,12 +115,12 @@ export const LeftBackIconWithBadge = function LeftBackIconWithBadge(includeNotif
   if (flag === undefined) {
     flag = false;
   }
-  return callback(IconWithBadge, { includeNotificationsCount: flag, Icon: require(5151) /* ArrowLargeLeftIcon */.ArrowLargeLeftIcon });
+  return callback(IconWithBadge, { includeNotificationsCount: flag, Icon: require(5213) /* ArrowLargeLeftIcon */.ArrowLargeLeftIcon });
 };
 export const CloseIconWithBadgeOnSide = function CloseIconWithBadgeOnSide(count) {
   count = count.count;
   let obj = { style: createCacheKey().iconWithBadge, children: null };
-  const items = [callback(require(4147) /* XLargeIcon */.XLargeIcon, { size: "sm", color: "white" }), ];
+  const items = [callback(require(4209) /* XLargeIcon */.XLargeIcon, { size: "sm", color: "white" }), ];
   let tmp3Result = null;
   if (count > 0) {
     obj = { value: null };

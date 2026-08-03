@@ -1,6 +1,6 @@
-// === Module 14468: toggle ===
+// === Module 14535: toggle ===
 
-// Module 14468 (toggle)
+// Module 14535 (toggle)
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
@@ -12,7 +12,7 @@ const toggle = createToggle.createToggle({
   useValue: require("explicitContentFromProto").NativePhoneIntegrationEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").NativePhoneIntegrationEnabled.updateSetting,
   usePredicate() {
-    let enabled = importDefault(14469).useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
+    let enabled = importDefault(14536).useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
       enabled = require(500) /* set */.isIOS();
       const obj2 = require(500) /* set */;
@@ -29,7 +29,7 @@ const obj = {
   useValue: require("explicitContentFromProto").NativePhoneIntegrationEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").NativePhoneIntegrationEnabled.updateSetting,
   usePredicate() {
-    let enabled = importDefault(14469).useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
+    let enabled = importDefault(14536).useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
       enabled = require(500) /* set */.isIOS();
       const obj2 = require(500) /* set */;

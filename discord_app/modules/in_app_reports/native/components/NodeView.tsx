@@ -1,6 +1,6 @@
-// === Module 7705: HeaderView ===
+// === Module 7826: HeaderView ===
 
-// Module 7705 (HeaderView)
+// Module 7826 (HeaderView)
 import ShieldElement from "ShieldElement";
 import PressableBase from "PressableBase";
 import get_ActivityIndicator from "CircleInformationIcon";
@@ -37,7 +37,7 @@ function HeaderView(node) {
     obj[0] = node.headerRef;
     obj[1] = tmp.header;
     obj[5] = header;
-    tmp6 = callback2(require(4189) /* Text */.Text, obj);
+    tmp6 = callback2(require(4251) /* Text */.Text, obj);
   }
   const items = [tmp6, , ];
   let tmp9 = null;
@@ -47,7 +47,7 @@ function HeaderView(node) {
       obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
       obj[0] = tmp.subheader;
       obj[3] = tmp3(subheader);
-      tmp9 = callback2(require(4189) /* Text */.Text, obj);
+      tmp9 = callback2(require(4251) /* Text */.Text, obj);
     }
   }
   items[1] = tmp9;
@@ -58,7 +58,7 @@ function HeaderView(node) {
       const obj1 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
       obj1[0] = tmp.description;
       obj1[3] = description;
-      tmp12 = callback2(require(4189) /* Text */.Text, obj1);
+      tmp12 = callback2(require(4251) /* Text */.Text, obj1);
     }
   }
   items[2] = tmp12;
@@ -73,19 +73,19 @@ function InfoView(node) {
     let obj = { style: null, children: null };
     const items = [tmp.infoBox, ];
     obj = { backgroundColor: null };
-    obj[0] = require(4037) /* hexToRgba */.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1);
+    obj[0] = require(4099) /* hexToRgba */.hexWithOpacity(tmp.infoBox.backgroundColor, 0.1);
     items[1] = obj;
     obj[0] = items;
     obj = { size: "md", color: null };
     obj[1] = tmp.infoBox.backgroundColor;
-    const items1 = [callback2(require(4149) /* CircleInformationIcon */.CircleInformationIcon, obj), ];
+    const items1 = [callback2(require(4211) /* CircleInformationIcon */.CircleInformationIcon, obj), ];
     const obj1 = { style: null, variant: "text-sm/normal", color: "interactive-text-active", children: null };
     obj1[0] = tmp.infoBoxText;
     obj1[3] = tmp3(info);
-    items1[1] = callback2(require(4189) /* Text */.Text, obj1);
+    items1[1] = callback2(require(4251) /* Text */.Text, obj1);
     obj[1] = items1;
     tmp4 = callback3(closure_6, obj);
-    const obj3 = require(4037) /* hexToRgba */;
+    const obj3 = require(4099) /* hexToRgba */;
   }
   return tmp4;
 }
@@ -105,7 +105,7 @@ function ChildItem(child) {
   obj = { style: tmp.childButton, accessibilityRole: "button", onPress: callback(React.useState(() => () => closure_1.onPress(closure_0)), 1)[0], children: null };
   obj = { style: tmp.childContainer, children: null };
   const obj1 = { style: tmp.childContent, children: null };
-  const items1 = [callback2(child(4189).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const items1 = [callback2(child(4251).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
@@ -113,14 +113,14 @@ function ChildItem(child) {
     const obj3 = { style: null, variant: "text-xs/normal", color: "text-muted", children: null };
     obj3[0] = tmp.debugText;
     obj3[3] = report_type;
-    stateFromStores = tmp9(tmp5(4189).Text, obj3);
+    stateFromStores = tmp9(tmp5(4251).Text, obj3);
   }
   items1[1] = stateFromStores;
   obj1[1] = items1;
-  const items2 = [closure_17(closure_6, obj1), callback2(importDefault(7707), {})];
+  const items2 = [closure_17(closure_6, obj1), callback2(importDefault(7828), {})];
   obj[1] = items2;
   obj[3] = closure_17(closure_6, obj);
-  return callback2(child(4721).PressableHighlight, obj);
+  return callback2(child(4783).PressableHighlight, obj);
 }
 function ChildrenView(node) {
   let importDefault;

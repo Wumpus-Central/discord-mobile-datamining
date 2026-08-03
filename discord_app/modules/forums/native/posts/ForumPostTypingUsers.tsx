@@ -1,6 +1,6 @@
-// === Module 11210: ForumPostTypingUsers ===
+// === Module 11322: ForumPostTypingUsers ===
 
-// Module 11210 (ForumPostTypingUsers)
+// Module 11322 (ForumPostTypingUsers)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

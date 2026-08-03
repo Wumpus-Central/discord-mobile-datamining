@@ -1,6 +1,6 @@
-// === Module 6148: getScreenshakeLocationName ===
+// === Module 7200: getScreenshakeLocationName ===
 
-// Module 6148 (getScreenshakeLocationName)
+// Module 7200 (getScreenshakeLocationName)
 import ConfettiLocation from "ConfettiLocation";
 import { AnalyticEvents } from "ME";
 import importDefaultResult from "apply";

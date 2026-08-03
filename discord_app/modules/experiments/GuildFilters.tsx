@@ -1,6 +1,6 @@
-// === Module 4112: isInRange ===
+// === Module 4174: isInRange ===
 
-// Module 4112 (isInRange)
+// Module 4174 (isInRange)
 import _slicedToArray from "_slicedToArray";
 import getGuild from "getGuild";
 import handleInviteData from "handleInviteData";

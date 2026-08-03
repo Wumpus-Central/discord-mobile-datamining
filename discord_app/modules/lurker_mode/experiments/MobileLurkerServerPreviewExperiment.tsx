@@ -1,6 +1,6 @@
-// === Module 6694: MobileLurkerServerPreviewExperiment ===
+// === Module 5817: MobileLurkerServerPreviewExperiment ===
 
-// Module 6694 (MobileLurkerServerPreviewExperiment)
+// Module 5817 (MobileLurkerServerPreviewExperiment)
 const obj = { 1: null, 2: { enabled: true, stickyLurk: false } };
 obj[2] = { enabled: true, stickyLurk: true };
 const tmp2 = require("getUnitId")({ name: "2026-05-mobile-lurker-server-preview", kind: "user", defaultConfig: { enabled: false, stickyLurk: false }, variations: obj });

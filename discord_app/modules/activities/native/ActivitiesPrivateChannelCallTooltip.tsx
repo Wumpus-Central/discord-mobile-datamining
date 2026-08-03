@@ -1,6 +1,6 @@
-// === Module 11891: ActivitiesPrivateChannelCallTooltip ===
+// === Module 11987: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 11891 (ActivitiesPrivateChannelCallTooltip)
+// Module 11987 (ActivitiesPrivateChannelCallTooltip)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -42,11 +42,11 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
       return obj;
     }
   }
-  obj = { withRepeat: tmp2(4054).withRepeat, withSequence: tmp2(4054).withSequence, withTiming: tmp2(4194).withTiming, OFFSET: 40, translateBounceOffset: num, TIMING_CONFIG: closure_7 };
+  obj = { withRepeat: tmp2(4116).withRepeat, withSequence: tmp2(4116).withSequence, withTiming: tmp2(4256).withTiming, OFFSET: 40, translateBounceOffset: num, TIMING_CONFIG: closure_7 };
   T.__closure = obj;
   T.__workletHash = 4621705591670;
   T.__initData = closure_9;
-  const animatedStyle = num(4054).useAnimatedStyle(T);
+  const animatedStyle = num(4116).useAnimatedStyle(T);
   obj = { style: items1, children: null };
   items1 = [tmp.tooltipContainer, animatedStyle];
   const obj1 = { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: items2, label: null, title: null, children: null };
@@ -60,8 +60,8 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const intl3 = tmp2(1236).intl;
   obj4[0] = intl3.string(num(1236).t["NX+WJN"]);
   obj4[1] = onClosePress.onClosePress;
-  obj3[1] = jsx(num(4604).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj3[1] = jsx(num(4666).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj1[5] = <View style={tmp.closeButtonWrapper}>{null}</View>;
   obj[1] = jsx(num(1297).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: items2, label: null, title: null, children: null });
-  return jsx(importDefault(4054).View, { style: items1, children: null });
+  return jsx(importDefault(4116).View, { style: items1, children: null });
 };

@@ -1,6 +1,6 @@
-// === Module 6672: useToggleOnIAPSuccess ===
+// === Module 7326: useToggleOnIAPSuccess ===
 
-// Module 6672 (useToggleOnIAPSuccess)
+// Module 7326 (useToggleOnIAPSuccess)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

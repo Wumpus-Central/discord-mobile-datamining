@@ -1,6 +1,6 @@
-// === Module 4722: getStyleProp ===
+// === Module 4784: getStyleProp ===
 
-// Module 4722 (getStyleProp)
+// Module 4784 (getStyleProp)
 function getStyleProp(style, borderRadius) {
   if (null != borderRadius) {
     if ("" !== borderRadius) {

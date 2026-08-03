@@ -1,6 +1,6 @@
-// === Module 14987: useFavoritesGuildUnreads ===
+// === Module 15276: useFavoritesGuildUnreads ===
 
-// Module 14987 (useFavoritesGuildUnreads)
+// Module 15276 (useFavoritesGuildUnreads)
 import rebuild from "rebuild";
 import storeThread from "storeThread";
 import ensureGuildLoaded from "ensureGuildLoaded";

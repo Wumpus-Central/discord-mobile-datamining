@@ -1,6 +1,6 @@
-// === Module 5807: createCollectiblesItemsFromServerResponse ===
+// === Module 6902: createCollectiblesItemsFromServerResponse ===
 
-// Module 5807 (createCollectiblesItemsFromServerResponse)
+// Module 6902 (createCollectiblesItemsFromServerResponse)
 import fromServer from "fromServer";
 import closure_3 from "fromServer";
 import closure_4 from "fromServer";

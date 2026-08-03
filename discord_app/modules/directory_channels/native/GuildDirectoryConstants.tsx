@@ -1,6 +1,6 @@
-// === Module 10075: GuildDirectoryCreate ===
+// === Module 10217: GuildDirectoryCreate ===
 
-// Module 10075 (GuildDirectoryCreate)
+// Module 10217 (GuildDirectoryCreate)
 const result = require("set").fileFinishedImporting("modules/directory_channels/native/GuildDirectoryConstants.tsx");
 
 export const GuildDirectoryCreate = { CREATE_OR_ADD: "CREATE_OR_ADD", DESCRIPTION: "DESCRIPTION", TEMPLATES: "TEMPLATES", CREATE: "CREATE" };

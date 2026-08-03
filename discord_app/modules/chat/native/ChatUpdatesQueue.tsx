@@ -1,6 +1,6 @@
-// === Module 10500: hasUpdates ===
+// === Module 10638: hasUpdates ===
 
-// Module 10500 (hasUpdates)
+// Module 10638 (hasUpdates)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;

@@ -1,6 +1,6 @@
-// === Module 15767: dispatcher ===
+// === Module 15832: dispatcher ===
 
-// Module 15767 (dispatcher)
+// Module 15832 (dispatcher)
 const result = require("set").fileFinishedImporting("actions/PermissionActionCreators.tsx");
 
 export default {

@@ -1,6 +1,6 @@
-// === Module 8664: __INTERNAL_VIEW_CONFIG ===
+// === Module 8841: __INTERNAL_VIEW_CONFIG ===
 
-// Module 8664 (__INTERNAL_VIEW_CONFIG)
+// Module 8841 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDImageWithThumbhashPlaceholderView", validAttributes: { uri: true, placeholder: true, placeholderVersion: true, alt: true } };

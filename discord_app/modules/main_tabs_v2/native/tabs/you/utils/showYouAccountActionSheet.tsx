@@ -1,6 +1,6 @@
-// === Module 15265: showYouAccountActionSheet ===
+// === Module 15332: showYouAccountActionSheet ===
 
-// Module 15265 (showYouAccountActionSheet)
+// Module 15332 (showYouAccountActionSheet)
 import { YOU_ACCOUNT_ACTION_SHEET_KEY as closure_3 } from "YOU_SCREEN_ID";
 
 const result = require("YouStatusRadioGroup").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx");
@@ -14,5 +14,5 @@ export const showYouAccountActionSheet = function showYouAccountActionSheet() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  importDefault(4161).openLazy(require(1959) /* asyncRequireImpl */(15267, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
+  importDefault(4223).openLazy(require(1959) /* asyncRequireImpl */(15334, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
 };

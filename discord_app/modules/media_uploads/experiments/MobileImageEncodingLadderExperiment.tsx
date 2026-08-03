@@ -1,6 +1,6 @@
-// === Module 4764: getMobileImageEncodingLadderConfig ===
+// === Module 4826: getMobileImageEncodingLadderConfig ===
 
-// Module 4764 (getMobileImageEncodingLadderConfig)
+// Module 4826 (getMobileImageEncodingLadderConfig)
 import ApexExperiment from "ApexExperiment";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-01-image-optimized-encoding-ladder", kind: "user", defaultConfig: { useImageEncodingLadder: false }, variations: { 0: { useImageEncodingLadder: false }, 1: { useImageEncodingLadder: true } } });

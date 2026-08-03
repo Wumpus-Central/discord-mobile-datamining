@@ -1,6 +1,6 @@
-// === Module 16673: getBackoffJitter ===
+// === Module 16739: getBackoffJitter ===
 
-// Module 16673 (getBackoffJitter)
+// Module 16739 (getBackoffJitter)
 import updateImpressionCaches from "updateImpressionCaches";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import closure_5 from "set";
@@ -57,7 +57,7 @@ function canFetch(GLOBAL_FEED) {
       } else {
         return false;
       }
-      obj = require(12765) /* apexExperiment */;
+      obj = require(12828) /* apexExperiment */;
     }
     return true;
   }
@@ -103,7 +103,7 @@ function scheduleNextFetch() {
               flag = false;
             }
           }
-          obj9 = require(12765) /* apexExperiment */;
+          obj9 = require(12828) /* apexExperiment */;
         }
       } else {
         flag = false;
@@ -391,7 +391,7 @@ function handleSpotifyNewTrack(connectionId) {
   }
 }
 function handleFetchGameProfileFeed() {
-  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: require(16675) /* ContentInventoryFeature */.ContentInventoryFeature.GAME_PROFILE });
+  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: require(16741) /* ContentInventoryFeature */.ContentInventoryFeature.GAME_PROFILE });
 }
 let closure_11 = 2 * require("set").Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;

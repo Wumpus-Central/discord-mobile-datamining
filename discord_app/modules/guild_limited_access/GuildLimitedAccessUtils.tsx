@@ -1,6 +1,6 @@
-// === Module 16133: isLimitedAccessErrorCode ===
+// === Module 16197: isLimitedAccessErrorCode ===
 
-// Module 16133 (isLimitedAccessErrorCode)
+// Module 16197 (isLimitedAccessErrorCode)
 import { AbortCodes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/guild_limited_access/GuildLimitedAccessUtils.tsx");

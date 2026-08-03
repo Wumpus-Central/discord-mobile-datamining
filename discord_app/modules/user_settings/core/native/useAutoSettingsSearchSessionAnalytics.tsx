@@ -1,6 +1,6 @@
-// === Module 15754: useAutoSettingsSearchSessionAnalytics ===
+// === Module 15819: useAutoSettingsSearchSessionAnalytics ===
 
-// Module 15754 (useAutoSettingsSearchSessionAnalytics)
+// Module 15819 (useAutoSettingsSearchSessionAnalytics)
 import noop from "noop";
 import getState from "getState";
 import zustandStore from "zustandStore";
@@ -14,9 +14,9 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
     state = state.getState();
     return state === stateFromStores(table[4]).AppStates.ACTIVE;
   });
-  const tmp2 = importDefault(8129)(stateFromStores);
+  const tmp2 = importDefault(8460)(stateFromStores);
   importDefault = tmp2;
-  importDefault(4620)(() => () => {
+  importDefault(4682)(() => () => {
     callback(table[7]).terminate();
   });
   const items1 = [stateFromStores, tmp2];

@@ -1,6 +1,6 @@
-// === Module 10235: computeIsFavoritesGuildEnabled ===
+// === Module 10374: computeIsFavoritesGuildEnabled ===
 
-// Module 10235 (computeIsFavoritesGuildEnabled)
+// Module 10374 (computeIsFavoritesGuildEnabled)
 import initializeFromUserSettings from "initializeFromUserSettings";
 
 const require = arg1;
@@ -23,8 +23,8 @@ export const getIsFavoritesGuildEnabled = function getIsFavoritesGuildEnabled() 
   return favoriteGuildEnabled;
 };
 export const useIsFavoritesGuildEnabled = function useIsFavoritesGuildEnabled() {
-  isFreemium = isFreemium(10228).useFavoritesAccess("useIsFavoritesGuildEnabled").isFreemium;
-  const obj = isFreemium(10228);
+  isFreemium = isFreemium(10367).useFavoritesAccess("useIsFavoritesGuildEnabled").isFreemium;
+  const obj = isFreemium(10367);
   const items = [initializeFromUserSettings];
   return isFreemium(589).useStateFromStores(items, () => {
     if (isFreemium) {

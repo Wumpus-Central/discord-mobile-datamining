@@ -1,6 +1,6 @@
-// === Module 11831: _createHandoffToken ===
+// === Module 5814: _createHandoffToken ===
 
-// Module 11831 (_createHandoffToken)
+// Module 5814 (_createHandoffToken)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

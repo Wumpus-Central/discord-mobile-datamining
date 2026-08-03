@@ -1,6 +1,6 @@
-// === Module 5136: handleConnectionOpen ===
+// === Module 5198: handleConnectionOpen ===
 
-// Module 5136 (handleConnectionOpen)
+// Module 5198 (handleConnectionOpen)
 import sendRequest from "sendRequest";
 import incrementVersion from "incrementVersion";
 import ensureGuildLoaded from "ensureGuildLoaded";

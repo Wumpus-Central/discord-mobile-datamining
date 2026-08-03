@@ -1,6 +1,6 @@
-// === Module 10629: NativeModules ===
+// === Module 10674: NativeModules ===
 
-// Module 10629 (NativeModules)
+// Module 10674 (NativeModules)
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";
 import keys from "keys";
@@ -18,13 +18,13 @@ let closure_5 = keys.create((arg0) => {
   let thermalState = dependencyMap;
   if (obj.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() >= 29) {
-      thermalState = importDefault(10630).getThermalState();
+      thermalState = importDefault(10675).getThermalState();
       let resolved = Promise.resolve(thermalState);
-      const obj3 = importDefault(10630);
+      const obj3 = importDefault(10675);
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = _require(4173);
+    tmpResult = _require(4235);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();

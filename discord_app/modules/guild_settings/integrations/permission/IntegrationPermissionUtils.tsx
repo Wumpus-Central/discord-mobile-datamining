@@ -1,6 +1,6 @@
-// === Module 5708: commandPermissions ===
+// === Module 6878: commandPermissions ===
 
-// Module 5708 (commandPermissions)
+// Module 6878 (commandPermissions)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
@@ -33,11 +33,11 @@ export const commandName = function commandName(arg0) {
   return text;
 };
 export const commandPermissionChannels = function commandPermissionChannels(arg0) {
-  const items = [require(5709) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL];
+  const items = [require(6879) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL];
   return commandPermissions(arg0, items);
 };
 export const commandPermissionMembersRoles = function commandPermissionMembersRoles(arg0) {
-  const items = [require(5709) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE, require(5709) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER];
+  const items = [require(6879) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE, require(6879) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER];
   return commandPermissions(arg0, items);
 };
 export const toPermissionKey = function toPermissionKey(allChannelsSentinelResult, CHANNEL) {

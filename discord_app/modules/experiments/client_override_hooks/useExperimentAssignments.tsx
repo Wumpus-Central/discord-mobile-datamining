@@ -1,6 +1,6 @@
-// === Module 11010: useExperimentAssignment ===
+// === Module 11131: useExperimentAssignment ===
 
-// Module 11010 (useExperimentAssignment)
+// Module 11131 (useExperimentAssignment)
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import initialize from "initialize";
@@ -40,7 +40,7 @@ export const getExperimentServerAssignment = function getExperimentServerAssignm
   [obj, obj2] = callback(tmp, 2);
   if (null == name) {
     return null;
-  } else if (name.system === require(4115) /* trackExposureToExperiment */.ExperimentSystem.LEGACY) {
+  } else if (name.system === require(4177) /* trackExposureToExperiment */.ExperimentSystem.LEGACY) {
     name = name.name;
     let loadedUserExperiment = obj.getLoadedUserExperiment(name);
   } else {

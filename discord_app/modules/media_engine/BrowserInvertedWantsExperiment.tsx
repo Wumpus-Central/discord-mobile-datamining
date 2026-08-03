@@ -1,6 +1,6 @@
-// === Module 12882: getBrowserInvertedWantsConfig ===
+// === Module 12945: getBrowserInvertedWantsConfig ===
 
-// Module 12882 (getBrowserInvertedWantsConfig)
+// Module 12945 (getBrowserInvertedWantsConfig)
 import ApexExperiment from "ApexExperiment";
 
 let obj = { 1: null };

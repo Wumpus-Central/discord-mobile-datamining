@@ -1,6 +1,6 @@
-// === Module 9006: ClearButton ===
+// === Module 9183: ClearButton ===
 
-// Module 9006 (ClearButton)
+// Module 9183 (ClearButton)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -19,11 +19,11 @@ function ClearButton(onPress) {
   obj[3] = onPress.onPress;
   obj[4] = { top: 8, bottom: 8, right: 8 };
   obj = { source: null, style: null, size: null };
-  obj[0] = importDefault(9007);
+  obj[0] = importDefault(9184);
   obj[1] = callback2().closeIcon;
   obj[2] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
   obj[5] = callback(require(1297) /* Button */.Icon, obj);
-  return callback(require(4721) /* PressableBase */.PressableOpacity, obj);
+  return callback(require(4783) /* PressableBase */.PressableOpacity, obj);
 }
 let c3 = importAllResult;
 ({ TouchableWithoutFeedback: c4, View: c5, TouchableOpacity: closure_6 } = get_ActivityIndicator);
@@ -36,8 +36,8 @@ createCacheKey = { flex: 1, color: require("Themes").colors.MOBILE_TEXT_HEADING_
 obj[2] = createCacheKey;
 obj[3] = { borderColor: require("Themes").unsafe_rawColors.RED_400 };
 let obj2 = { borderColor: require("Themes").unsafe_rawColors.RED_400 };
-obj[4] = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, paddingLeft: 8, flexShrink: 0 };
-const obj3 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, paddingLeft: 8, flexShrink: 0 };
+obj[4] = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
+const obj3 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
 obj[5] = { color: require("Themes").colors.TEXT_MUTED };
 let closure_9 = createCacheKey.createStyles(obj);
 const obj4 = { color: require("Themes").colors.TEXT_MUTED };

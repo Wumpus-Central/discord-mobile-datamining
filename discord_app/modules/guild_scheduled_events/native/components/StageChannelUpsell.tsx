@@ -1,9 +1,9 @@
-// === Module 8273: StageChannelUpsell ===
+// === Module 8580: StageChannelUpsell ===
 
-// Module 8273 (StageChannelUpsell)
+// Module 8580 (StageChannelUpsell)
 import _slicedToArray from "_slicedToArray";
 import "asyncRequireImpl";
-import get_ActivityIndicator from "module_4399";
+import get_ActivityIndicator from "module_4461";
 import { createChannelRecord } from "createChannelRecord";
 import { useStageChannelUpsellCardStore as closure_7 } from "useStageChannelUpsellCardStore";
 import { CREATE_GUILD_EVENT_MODAL_KEY as closure_8 } from "CREATE_GUILD_EVENT_MODAL_KEY";
@@ -46,23 +46,23 @@ export default function StageChannelUpsell(arg0) {
     obj[0] = tmp3;
     obj[2] = tmp.closeContainer;
     obj = { source: null };
-    obj[0] = importDefault(7704);
+    obj[0] = importDefault(7825);
     obj[3] = callback3(require(1297) /* Button */.Icon, obj);
-    const items = [callback3(require(4721) /* PressableBase */.PressableOpacity, obj), , , , , ];
+    const items = [callback3(require(4783) /* PressableBase */.PressableOpacity, obj), , , , , ];
     const obj1 = { source: null, style: null };
-    obj1[0] = importDefault(8275);
+    obj1[0] = importDefault(8582);
     obj1[1] = tmp.image;
     items[1] = callback3(closure_4, obj1);
     let obj2 = { style: null, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp.header;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj2[3] = intl.string(require(1236) /* getSystemLocale */.t.Sx8Ezi);
-    items[2] = callback3(require(4189) /* Text */.Text, obj2);
+    items[2] = callback3(require(4251) /* Text */.Text, obj2);
     const obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj3[0] = tmp.description;
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj3[3] = intl2.string(require(1236) /* getSystemLocale */.t.JUzPhm);
-    items[3] = callback3(require(4189) /* Text */.Text, obj3);
+    items[3] = callback3(require(4251) /* Text */.Text, obj3);
     const obj4 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj4[0] = tmp.description;
     const intl3 = require(1236) /* getSystemLocale */.intl;
@@ -71,7 +71,7 @@ export default function StageChannelUpsell(arg0) {
       return callback2(callback(_undefined[14]).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
     };
     obj4[3] = intl3.format(require(1236) /* getSystemLocale */.t.Vh7rP7, obj5);
-    items[4] = callback3(require(4189) /* Text */.Text, obj4);
+    items[4] = callback3(require(4251) /* Text */.Text, obj4);
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.button;
     const obj7 = { variant: "secondary", size: "md", text: null, onPress: null };
@@ -98,7 +98,7 @@ export default function StageChannelUpsell(arg0) {
       const obj2 = outer1_1(_undefined[17]);
       outer1_1(_undefined[20]).hideActionSheet();
     };
-    obj6[1] = callback3(require(4604) /* Button */.Button, obj7);
+    obj6[1] = callback3(require(4666) /* Button */.Button, obj7);
     items[5] = callback3(closure_5, obj6);
     obj[1] = items;
     tmp4 = callback4(closure_5, obj);

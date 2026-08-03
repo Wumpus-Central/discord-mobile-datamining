@@ -1,6 +1,6 @@
-// === Module 10276: dispatcher ===
+// === Module 10415: dispatcher ===
 
-// Module 10276 (dispatcher)
+// Module 10415 (dispatcher)
 const result = require("set").fileFinishedImporting("actions/native/InAppNotificationActionCreators.tsx");
 
 export default {

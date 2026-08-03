@@ -1,6 +1,6 @@
-// === Module 13877: spendingLimitEqual ===
+// === Module 13944: spendingLimitEqual ===
 
-// Module 13877 (spendingLimitEqual)
+// Module 13944 (spendingLimitEqual)
 const result = require("set").fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
 
 export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {

@@ -1,6 +1,6 @@
-// === Module 4392: Presets ===
+// === Module 4454: Presets ===
 
-// Module 4392 (Presets)
+// Module 4454 (Presets)
 import { UserNotificationSettings } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
 
@@ -10,9 +10,9 @@ const result = require("t").fileFinishedImporting("modules/notifications/setting
 export const Presets = obj;
 export const presetFromSettings = function presetFromSettings(unreadSetting, messageNotifications) {
   const items = [messageNotifications, unreadSetting];
-  const match = require(4393) /* t */.match(items);
+  const match = require(4455) /* t */.match(items);
   const items1 = [UserNotificationSettings.ALL_MESSAGES, UnreadSetting.ALL_MESSAGES];
-  const str = require(4393) /* t */;
+  const str = require(4455) /* t */;
   const items2 = [UserNotificationSettings.ONLY_MENTIONS, UnreadSetting.UNSET];
   const withResult = match.with(items1, () => constants.ALL_MESSAGES);
   const items3 = [UserNotificationSettings.ONLY_MENTIONS, UnreadSetting.ONLY_MENTIONS];
@@ -24,8 +24,8 @@ export const presetFromSettings = function presetFromSettings(unreadSetting, mes
   return match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS).with(items3, () => constants.MENTIONS).with(items4, () => constants.NOTHING).with(items5, () => constants.NOTHING).otherwise(() => constants.CUSTOM);
 };
 export const presetName = function presetName(tmp4Result) {
-  const match = require(4393) /* t */.match(tmp4Result);
-  const str = require(4393) /* t */;
+  const match = require(4455) /* t */.match(tmp4Result);
+  const str = require(4455) /* t */;
   const withResult = match.with(obj.ALL_MESSAGES, () => {
     const intl = callback(1236).intl;
     return intl.string(callback(1236).t.hZrr6k);

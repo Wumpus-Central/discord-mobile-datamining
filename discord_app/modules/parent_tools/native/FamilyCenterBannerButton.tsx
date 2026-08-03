@@ -1,6 +1,6 @@
-// === Module 13926: FamilyCenterTeenQRCodeButtonInner ===
+// === Module 13993: FamilyCenterTeenQRCodeButtonInner ===
 
-// Module 13926 (FamilyCenterTeenQRCodeButtonInner)
+// Module 13993 (FamilyCenterTeenQRCodeButtonInner)
 import ConnectGuardianBottomSheet from "ConnectGuardianBottomSheet";
 import { View } from "shareGuardianConnectLink";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -130,7 +130,7 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
   function handleQrCodeScanSucess(url) {
     let hostname;
     let pathname;
-    let arr = callback(4399);
+    let arr = callback(4461);
     arr = arr.pop();
     let toURLSafeResult = callback(1467).toURLSafe(url);
     if (toURLSafeResult == null) {
@@ -144,8 +144,8 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
         tmp4 = null;
         if (tmpResult.isDiscordHostname(hostname)) {
           if (null !== pathname.match(closure_8)) {
-            const result = handleQrCodeScanSucess(11121).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
-            const obj4 = handleQrCodeScanSucess(11121);
+            const result = handleQrCodeScanSucess(11234).handleFamilyCenterQRCodeScan(pathname, "FamilyCenterQRCodeScan");
+            const obj4 = handleQrCodeScanSucess(11234);
           }
           tmp4 = tmp6;
         }
@@ -154,13 +154,13 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     }
     return tmp4;
   }
-  let obj = handleQrCodeScanSucess(6258);
+  let obj = handleQrCodeScanSucess(7247);
   if (obj.useHasMaxConnections()) {
     return null;
   } else {
     obj = { text: null, onPress: null };
     const intl = tmp(1236).intl;
-    obj[0] = intl.string(importDefault(2225).z4a9HP);
+    obj[0] = intl.string(importDefault(2255).z4a9HP);
     obj[1] = function onPress() {
       let obj = outer1_1(outer1_2[16]);
       obj = { action: outer1_9.ScanQRCodeButton };

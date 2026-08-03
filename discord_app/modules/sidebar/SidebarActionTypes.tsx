@@ -1,6 +1,6 @@
-// === Module 5791: SidebarType ===
+// === Module 5780: SidebarType ===
 
-// Module 5791 (SidebarType)
+// Module 5780 (SidebarType)
 const result = require("set").fileFinishedImporting("modules/sidebar/SidebarActionTypes.tsx");
 
 export const SidebarType = { CREATE_THREAD: 0, [0]: "CREATE_THREAD", VIEW_THREAD: 1, [1]: "VIEW_THREAD", VIEW_CHANNEL: 2, [2]: "VIEW_CHANNEL", VIEW_MESSAGE_REQUEST: 3, [3]: "VIEW_MESSAGE_REQUEST", VIEW_MOD_REPORT: 4, [4]: "VIEW_MOD_REPORT" };

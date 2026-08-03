@@ -1,6 +1,6 @@
-// === Module 8924: useCanRingToGuildVoiceChannel ===
+// === Module 9101: useCanRingToGuildVoiceChannel ===
 
-// Module 8924 (useCanRingToGuildVoiceChannel)
+// Module 9101 (useCanRingToGuildVoiceChannel)
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -54,12 +54,12 @@ function useCanRingToGuildVoiceChannel(user, DisconnectedUserRow, stateFromStore
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp5 = importDefault(4635);
+  const tmp5 = importDefault(4697);
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
-  let enabled = tmp4(8925).useExperiment({ guildId: guild_id, location: str }).enabled;
+  let enabled = tmp4(9102).useExperiment({ guildId: guild_id, location: str }).enabled;
   if (stateFromStores != null) {
     const type = stateFromStores.type;
   }
@@ -148,7 +148,7 @@ export const canRingUsersInChannel = function canRingUsersInChannel(channel) {
     call = call.getCall(channel.id);
     return null != call && null != call.messageId && !call.isCallUnavailable(channel.id);
   } else if (tmp === tmp2) {
-    let obj = importDefault(8925);
+    let obj = importDefault(9102);
     obj = { guildId: null, location: "ring" };
     obj[0] = channel.guild_id;
     let enabled = obj.getCurrentConfig(obj).enabled;

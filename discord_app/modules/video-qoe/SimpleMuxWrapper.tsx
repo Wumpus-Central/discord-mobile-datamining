@@ -1,6 +1,6 @@
-// === Module 14180: logger ===
+// === Module 14247: logger ===
 
-// Module 14180 (logger)
+// Module 14247 (logger)
 const logger = new require("set").Logger("SimpleMuxWrapper");
 const result = require("mapDiscordToMuxMetadata").fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
 class SimpleMuxWrapper {
@@ -22,14 +22,14 @@ prototype["initialize"] = function initialize() {
     flag = false;
   }
   const obj = { debug: flag, disableCookies: true, respectDoNotTrack: true, data: null };
-  const MuxIntegration = require(14182) /* mapDiscordToMuxMetadata */.MuxIntegration;
+  const MuxIntegration = require(14249) /* mapDiscordToMuxMetadata */.MuxIntegration;
   obj[3] = MuxIntegration.mapDiscordToMuxMetadata(self.config, self.sessionId);
   if (null != self.hlsInstance) {
     obj.hlsjs = self.hlsInstance;
     obj.Hls = self.hlsInstance.constructor;
   }
   try {
-    importDefault(14183).monitor(self.videoElement, obj);
+    importDefault(14250).monitor(self.videoElement, obj);
     self.isMonitoring = true;
   } catch (tmp5) {
     logger.error("Error creating Mux monitor", tmp5);
@@ -40,9 +40,9 @@ prototype["endSession"] = function endSession() {
   const self = this;
   if (this.isMonitoring) {
     try {
-      if (typeof importDefault(14183).destroyMonitor !== "disabledUntil") {
-        tmp(14183).destroyMonitor(self.videoElement);
-        const tmpResult = tmp(14183);
+      if (typeof importDefault(14250).destroyMonitor !== "HAS_APPLICATION") {
+        tmp(14250).destroyMonitor(self.videoElement);
+        const tmpResult = tmp(14250);
       }
       self.isMonitoring = false;
       tmp = importDefault;
@@ -55,9 +55,9 @@ prototype["destroy"] = function destroy() {
   const self = this;
   if (this.isMonitoring) {
     try {
-      if (typeof importDefault(14183).destroyMonitor !== "disabledUntil") {
-        tmp(14183).destroyMonitor(self.videoElement);
-        const tmpResult = tmp(14183);
+      if (typeof importDefault(14250).destroyMonitor !== "HAS_APPLICATION") {
+        tmp(14250).destroyMonitor(self.videoElement);
+        const tmpResult = tmp(14250);
       }
       self.isMonitoring = false;
       tmp = importDefault;

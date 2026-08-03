@@ -1,6 +1,6 @@
-// === Module 16196: UploadLogsActionSheet ===
+// === Module 16260: UploadLogsActionSheet ===
 
-// Module 16196 (UploadLogsActionSheet)
+// Module 16260 (UploadLogsActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";
@@ -33,12 +33,12 @@ export default function UploadLogsActionSheet(arg0) {
   obj = { title: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.KTjjrG);
-  obj[0] = callback(require(5246) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  obj[0] = callback(require(5308) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { style: tmp.container, children: null };
   const obj1 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj1[3] = intl2.string(require(1236) /* getSystemLocale */.t["ZvRR/t"]);
-  const items = [callback(require(4189) /* Text */.Text, obj1), , , ];
+  const items = [callback(require(4251) /* Text */.Text, obj1), , , ];
   let obj2 = { text: null, onPress: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj2[0] = intl3.string(require(1236) /* getSystemLocale */.t.EbwFfR);
@@ -61,7 +61,7 @@ export default function UploadLogsActionSheet(arg0) {
     const tmp3 = outer1_1;
     outer1_1(outer1_2[13]).hideActionSheet();
   };
-  items[1] = callback(require(4604) /* Button */.Button, obj2);
+  items[1] = callback(require(4666) /* Button */.Button, obj2);
   items[2] = callback(View, { style: tmp.buttonSpacer });
   const obj4 = { text: null, variant: "secondary", onPress: null };
   const intl4 = require(1236) /* getSystemLocale */.intl;
@@ -69,8 +69,8 @@ export default function UploadLogsActionSheet(arg0) {
   obj4[2] = function onPress() {
     return callback(table[13]).hideActionSheet();
   };
-  items[3] = callback(require(4604) /* Button */.Button, obj4);
+  items[3] = callback(require(4666) /* Button */.Button, obj4);
   obj[1] = items;
   obj[1] = callback2(View, obj);
-  return callback(require(5247) /* Background */.BottomSheet, obj);
+  return callback(require(5309) /* Background */.BottomSheet, obj);
 };

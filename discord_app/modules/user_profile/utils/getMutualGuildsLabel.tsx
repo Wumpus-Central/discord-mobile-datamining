@@ -1,6 +1,6 @@
-// === Module 11712: getMutualGuildsLabel ===
+// === Module 11815: getMutualGuildsLabel ===
 
-// Module 11712 (getMutualGuildsLabel)
+// Module 11815 (getMutualGuildsLabel)
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/getMutualGuildsLabel.tsx");
 
 export default function getMutualGuildsLabel(arg0) {

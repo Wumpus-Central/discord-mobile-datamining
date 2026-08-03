@@ -1,6 +1,6 @@
-// === Module 10676: getSafeArea ===
+// === Module 10784: getSafeArea ===
 
-// Module 10676 (getSafeArea)
+// Module 10784 (getSafeArea)
 import closure_4 from "items3";
 import _slicedToArray from "_slicedToArray";
 import expandEventProperties from "expandEventProperties";
@@ -62,13 +62,13 @@ class BaseActivityWebView {
     channelId = global.channelId;
     guildId = global.guildId;
     activitySessionId = global.activitySessionId;
-    f85428 = undefined;
+    f85729 = undefined;
     c17 = undefined;
     c18 = undefined;
     useState = undefined;
     c20 = undefined;
     useState = undefined;
-    f85432 = undefined;
+    f85733 = undefined;
     queryParams = undefined;
     concat = undefined;
     useRef = undefined;
@@ -88,7 +88,7 @@ class BaseActivityWebView {
     context = applicationId.useContext(require("context").WebViewContext);
     tmp5 = hadInvalidUrlError;
     first = hadInvalidUrlError(applicationId.useState(() => callback()), 1)[0];
-    f85428 = first;
+    f85729 = first;
     first1 = hadInvalidUrlError(applicationId.useState(() => {
       if (null != webViewKey) {
         let v4Result = callback2();
@@ -144,7 +144,7 @@ class BaseActivityWebView {
       }
     }, items2);
     rect = require("useStableSafeAreaInsets")();
-    f85432 = rect;
+    f85733 = rect;
     obj3 = require("getConstants");
     obj = {};
     constants = obj3.getConstants();
@@ -390,8 +390,8 @@ class BaseActivityWebView {
     }, items9);
     HermesInternal = null;
     if (null == url) {
-      tmp30 = f85428;
-      closure_28 = f85428;
+      tmp30 = f85729;
+      closure_28 = f85729;
       flag = false;
       tmp5Result = tmp5(obj2.useState(false), 2);
       [tmp32, useState] = tmp5Result;
@@ -401,7 +401,7 @@ class BaseActivityWebView {
       c31 = tmp5Result1[1];
       items10 = [, ];
       items10[0] = applicationId;
-      items10[1] = f85428;
+      items10[1] = f85729;
       effect5 = obj2.useEffect(() => {
         if (closure_28) {
           function parseCsp(arg0, str) {
@@ -957,8 +957,8 @@ class BaseActivityWebView {
       }
       return null;
     } else {
-      tmp26 = f85428;
-      if (f85428) {
+      tmp26 = f85729;
+      if (f85729) {
         _HermesInternal2 = HermesInternal;
         str5 = "file://";
         combined1 = "file://" + str;
@@ -1056,5 +1056,5 @@ export { BaseActivityWebView };
 export const useHasInvalidUrlErrorState = function useHasInvalidUrlErrorState() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
-  return { hasInvalidUrlError: first, setHasInvalidUrlError: tmp[1], hadInvalidUrlError: importDefault(8129)(first) };
+  return { hasInvalidUrlError: first, setHasInvalidUrlError: tmp[1], hadInvalidUrlError: importDefault(8460)(first) };
 };

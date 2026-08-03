@@ -1,6 +1,6 @@
-// === Module 4235: transformProfileEffectKeyFrameFromServer ===
+// === Module 4297: transformProfileEffectKeyFrameFromServer ===
 
-// Module 4235 (transformProfileEffectKeyFrameFromServer)
+// Module 4297 (transformProfileEffectKeyFrameFromServer)
 function transformProfileEffectKeyFrameFromServer(src) {
   let randomizedSources;
   const obj = { src: src.src, loop: src.loop, height: src.height, width: src.width, duration: null, start: null, loopDelay: null, position: null, zIndex: null, randomizedSources: null };

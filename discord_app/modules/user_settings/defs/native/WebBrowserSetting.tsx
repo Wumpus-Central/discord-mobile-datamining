@@ -1,6 +1,6 @@
-// === Module 14454: route ===
+// === Module 14521: route ===
 
-// Module 14454 (route)
+// Module 14521 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -9,7 +9,7 @@ obj = {
     return intl.string(require(1236) /* getSystemLocale */.t["C+DkPu"]);
   },
   usePredicate() {
-    return require(14455) /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
+    return require(14522) /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
   },
   parent: null,
   IconComponent: require("GlobeEarthIcon").GlobeEarthIcon,
@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.BROWSER,
   getComponent() {
-    return require(14456).default;
+    return require(14523).default;
   }
 };
 const route = createToggle.createRoute(obj);

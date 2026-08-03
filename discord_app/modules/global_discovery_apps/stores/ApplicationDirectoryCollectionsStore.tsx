@@ -1,6 +1,6 @@
-// === Module 11261: getLastFetchTimeMs ===
+// === Module 11372: getLastFetchTimeMs ===
 
-// Module 11261 (getLastFetchTimeMs)
+// Module 11372 (getLastFetchTimeMs)
 import { Store } from "initialize";
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };

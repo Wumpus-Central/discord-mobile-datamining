@@ -1,6 +1,6 @@
-// === Module 14943: getGuildsComponent ===
+// === Module 15010: getGuildsComponent ===
 
-// Module 14943 (getGuildsComponent)
+// Module 15010 (getGuildsComponent)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -16,13 +16,13 @@ let c9;
 let unpackModuleId;
 const require = arg1;
 function getGuildsComponent() {
-  return require(14944).default;
+  return require(15011).default;
 }
 function getNotificationsComponent() {
-  return require(15293) /* goBack */.ThemedNotifications;
+  return require(15360) /* goBack */.ThemedNotifications;
 }
 function getICYMIComponent() {
-  return require(15341) /* ICYMINavigator */.default;
+  return require(15408) /* ICYMINavigator */.default;
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);

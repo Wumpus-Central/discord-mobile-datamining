@@ -59,7 +59,7 @@ function instrumentXHR() {
             }
           };
           if ("onreadystatechange" in onreadystatechange) {
-            if (typeof onreadystatechange.onreadystatechange === "fileFinishedImporting") {
+            if (typeof onreadystatechange.onreadystatechange === "error") {
               const _Proxy = Proxy;
               obj = { apply: null };
               obj[0] = function apply(apply) {

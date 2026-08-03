@@ -1,6 +1,6 @@
-// === Module 9294: ConversationNavigatorHeader ===
+// === Module 9466: ConversationNavigatorHeader ===
 
-// Module 9294 (ConversationNavigatorHeader)
+// Module 9466 (ConversationNavigatorHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -29,10 +29,10 @@ export default function ConversationNavigatorHeader(channelId) {
   const items = [ensureGuildLoaded];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getChannel(channelId), items1);
-  const tmp3 = importDefault(4384)(stateFromStores, true);
+  const tmp3 = importDefault(4446)(stateFromStores, true);
   obj = { style: callback(flag).container, children: null };
   obj = { title: channelId.title, subtitle: null, variant: "heading-lg/semibold", subtitleColor: "text-muted" };
   obj[1] = tmp3;
-  obj[1] = jsx(channelId(9127).GenericHeaderTitle, { title: channelId.title, subtitle: null, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj[1] = jsx(channelId(9300).GenericHeaderTitle, { title: channelId.title, subtitle: null, variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   return <View title={arg0.title} subtitle={null} variant="heading-lg/semibold" subtitleColor="text-muted" />;
 };

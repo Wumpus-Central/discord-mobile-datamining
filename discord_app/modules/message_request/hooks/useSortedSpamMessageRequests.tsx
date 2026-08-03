@@ -1,6 +1,6 @@
-// === Module 15741: useSortedSpamMessageRequests ===
+// === Module 15806: useSortedSpamMessageRequests ===
 
-// Module 15741 (useSortedSpamMessageRequests)
+// Module 15806 (useSortedSpamMessageRequests)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";

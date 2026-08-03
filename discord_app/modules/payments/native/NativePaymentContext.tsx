@@ -1,6 +1,6 @@
-// === Module 8773: NativePaymentContextProvider ===
+// === Module 8950: NativePaymentContextProvider ===
 
-// Module 8773 (NativePaymentContextProvider)
+// Module 8950 (NativePaymentContextProvider)
 import noop from "noop";
 import addSubscriptionPlan from "addSubscriptionPlan";
 import { PaymentGateways } from "sum";

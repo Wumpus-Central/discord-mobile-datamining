@@ -1,11 +1,11 @@
-// === Module 6357: items ===
+// === Module 7352: items ===
 
-// Module 6357 (items)
+// Module 7352 (items)
 const result = require("set").fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 
 export default {
   loadProducts() {
-    return Promise.resolve(require(6358) /* items */.copiedIAPProducts);
+    return Promise.resolve(require(7353) /* items */.copiedIAPProducts);
   },
   purchaseProduct() {
     const error = new Error("IAPUtils is mocked \u2014 purchases cannot be completed in this build.");

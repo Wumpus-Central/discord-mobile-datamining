@@ -1,6 +1,6 @@
-// === Module 15604: getFriendStatusCounts ===
+// === Module 15670: getFriendStatusCounts ===
 
-// Module 15604 (getFriendStatusCounts)
+// Module 15670 (getFriendStatusCounts)
 import sortActivity from "sortActivity";
 import upsertRelationship from "upsertRelationship";
 import { StatusTypes } from "ME";

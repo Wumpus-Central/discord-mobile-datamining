@@ -1,6 +1,6 @@
-// === Module 9374: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 9533: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9374 (RoleSubscriptionEmojiUpsellAlert)
+// Module 9533 (RoleSubscriptionEmojiUpsellAlert)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { StaticChannelRoute } from "set";

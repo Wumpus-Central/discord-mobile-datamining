@@ -1,6 +1,6 @@
-// === Module 10139: ForumChannelCloseSearchButton ===
+// === Module 10278: ForumChannelCloseSearchButton ===
 
-// Module 10139 (ForumChannelCloseSearchButton)
+// Module 10278 (ForumChannelCloseSearchButton)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import initialize from "initialize";
@@ -50,7 +50,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
   let placeholder;
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(10140);
+  let obj = channelId(10279);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = callback();
   const items = [initialize];
@@ -99,7 +99,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
           const obj3 = outer1_1(outer1_2[10]);
         }
       };
-      obj[1] = jsx(tmp2(9248).SearchField, { size: "sm", defaultValue: null, onChange: null, placeholder: null, autoFocus: null, onClear: null, grow: false });
+      obj[1] = jsx(tmp2(5891).SearchField, { size: "sm", defaultValue: null, onChange: null, placeholder: null, autoFocus: null, onClear: null, grow: false });
       tmp6Result = tmp6(View, obj);
       const tmp7 = View;
     }

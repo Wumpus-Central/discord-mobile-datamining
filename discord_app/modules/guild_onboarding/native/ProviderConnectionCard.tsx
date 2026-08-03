@@ -1,6 +1,6 @@
-// === Module 5535: ProviderConnectionCard ===
+// === Module 5597: ProviderConnectionCard ===
 
-// Module 5535 (ProviderConnectionCard)
+// Module 5597 (ProviderConnectionCard)
 import getPlatformUserUrl from "getPlatformUserUrl";
 import noop from "noop";
 import { AnalyticEvents } from "ME";
@@ -72,7 +72,7 @@ export default function ProviderConnectionCard(connection) {
             } else {
               const obj1 = {};
               const obj5 = v0(698);
-              const merged = Object.assign(outer1_0(4388).collectGuildAnalyticsMetadata(v0));
+              const merged = Object.assign(outer1_0(4450).collectGuildAnalyticsMetadata(v0));
               obj1.connection_type = "provider";
               const provider_id = outer1_0.provider_id;
               let c0 = provider_id;

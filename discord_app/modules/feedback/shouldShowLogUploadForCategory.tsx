@@ -1,6 +1,6 @@
-// === Module 16195: shouldShowLogUploadForCategory ===
+// === Module 16259: shouldShowLogUploadForCategory ===
 
-// Module 16195 (shouldShowLogUploadForCategory)
+// Module 16259 (shouldShowLogUploadForCategory)
 import { FeedbackRating } from "FeedbackRating";
 
 let closure_1 = {};

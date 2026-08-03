@@ -1,6 +1,6 @@
-// === Module 10880: RootThemeContextProvider ===
+// === Module 10980: RootThemeContextProvider ===
 
-// Module 10880 (RootThemeContextProvider)
+// Module 10980 (RootThemeContextProvider)
 import noop from "noop";
 import { ThemeTypes } from "sum";
 import { jsx } from "jsxProd";
@@ -59,7 +59,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   return num(DARK(primaryColor[3]).ThemeContext.Provider, { value, children: children.children });
 };
 export const DisableCustomTheme = function DisableCustomTheme(children) {
-  let obj = themeContext(3905);
+  let obj = themeContext(3967);
   themeContext = obj.useThemeContext();
   const items = [themeContext];
   const memo = React.useMemo(() => {
@@ -72,5 +72,5 @@ export const DisableCustomTheme = function DisableCustomTheme(children) {
     return obj.createThemedContext(obj);
   }, items);
   obj = { value: memo, children: children.children };
-  return jsx(themeContext(3905).ThemeContext.Provider, { value: memo, children: children.children });
+  return jsx(themeContext(3967).ThemeContext.Provider, { value: memo, children: children.children });
 };

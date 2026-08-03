@@ -1,6 +1,6 @@
-// === Module 8741: PreviewProfileTrigger ===
+// === Module 8918: PreviewProfileTrigger ===
 
-// Module 8741 (PreviewProfileTrigger)
+// Module 8918 (PreviewProfileTrigger)
 import initialize from "initialize";
 import apexExperiment from "apexExperiment";
 import noop from "apexExperiment";
@@ -32,9 +32,9 @@ function PreviewProfileTrigger(handlePreviewPress) {
   let closure_5;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = handlePreviewPress(3905);
+  let obj = handlePreviewPress(3967);
   const theme = obj.useThemeContext().theme;
-  const isThemeLightResult = handlePreviewPress(4039).isThemeLight(theme);
+  const isThemeLightResult = handlePreviewPress(4101).isThemeLight(theme);
   initialize = theme === constants2.MIDNIGHT;
   React = isThemeLightResult ? tmp.previewProfileButtonLight : tmp.previewProfileButtonDark;
   closure_5 = isThemeLightResult ? tmp.previewProfileButtonLightPressed : tmp.previewProfileButtonDarkPressed;
@@ -66,7 +66,7 @@ function PreviewProfileTrigger(handlePreviewPress) {
   obj[3] = intl.string(handlePreviewPress(1236).t["3Qcx6K"]);
   obj = { size: "md", color: null };
   obj[1] = onTrackPress(712).colors.INTERACTIVE_ICON_DEFAULT;
-  obj[4] = callback3(handlePreviewPress(8742).EyeIcon, obj);
+  obj[4] = callback3(handlePreviewPress(8919).EyeIcon, obj);
   return callback3(closure_7, obj);
 }
 function ProductDetailsActionSheetInner(product) {
@@ -426,5 +426,5 @@ export default function ProductDetailsActionSheet(shopAnalyticsContext) {
   obj = {};
   const merged1 = Object.assign(merged);
   obj[1] = callback3(ProductDetailsActionSheetWithOrderCTX, obj);
-  return callback3(require(8673) /* context */.CollectiblesAnalyticsProvider, obj);
+  return callback3(require(8850) /* context */.CollectiblesAnalyticsProvider, obj);
 };

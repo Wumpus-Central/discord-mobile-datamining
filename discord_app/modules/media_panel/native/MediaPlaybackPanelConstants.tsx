@@ -1,6 +1,6 @@
-// === Module 13610: MediaPlaybackPanelModes ===
+// === Module 13673: MediaPlaybackPanelModes ===
 
-// Module 13610 (MediaPlaybackPanelModes)
+// Module 13673 (MediaPlaybackPanelModes)
 const result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
 
 export const MediaPlaybackPanelModes = { DISMISSED: "dismissed", PIP: "pip" };

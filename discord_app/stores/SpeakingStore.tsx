@@ -1,6 +1,6 @@
-// === Module 5013: anyoneHasFlagInContext ===
+// === Module 5075: anyoneHasFlagInContext ===
 
-// Module 5013 (anyoneHasFlagInContext)
+// Module 5075 (anyoneHasFlagInContext)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -227,7 +227,7 @@ prototype["getVoiceVolume"] = function getVoiceVolume(arg0) {
   if (arg1 === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
-  const config = importDefault(5014).getConfig({ location: "SpeakingStore" });
+  const config = importDefault(5076).getConfig({ location: "SpeakingStore" });
   let num = -Infinity;
   if (config.enabled) {
     num = -Infinity;
@@ -262,7 +262,7 @@ const speakingStore = new SpeakingStore(require("dispatcher"), {
     if ((speakingFlags & constants.PRIORITY) === constants.PRIORITY) {
       channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
       if (null != channel) {
-        let obj = importAll(3826);
+        let obj = importAll(3888);
         obj = { permission: null, user: null, context: null };
         obj[0] = Permissions.PRIORITY_SPEAKER;
         obj[1] = userId;

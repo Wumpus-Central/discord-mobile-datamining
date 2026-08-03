@@ -1,6 +1,6 @@
-// === Module 15423: useMainTabsChannelScreenStyles ===
+// === Module 15490: useMainTabsChannelScreenStyles ===
 
-// Module 15423 (useMainTabsChannelScreenStyles)
+// Module 15490 (useMainTabsChannelScreenStyles)
 import noop from "noop";
 import createCacheKey from "createCacheKey";
 
@@ -65,7 +65,7 @@ export const useMainTabsChannelScreenStyles = function useMainTabsChannelScreenS
   fn.__closure = { freezeValue: parentFreezeValue, isDragging, translateX, maxWidth, elevationStyle: elevation, isCompletelyCovered: derivedValue };
   fn.__workletHash = 16765484569296;
   fn.__initData = closure_4;
-  const animatedStyle = _require(4054).useAnimatedStyle(fn);
+  const animatedStyle = _require(4116).useAnimatedStyle(fn);
   let items = [tmp, animatedStyle];
   return React.useMemo(() => {
     const items = [tmp.elevation, animatedStyle];

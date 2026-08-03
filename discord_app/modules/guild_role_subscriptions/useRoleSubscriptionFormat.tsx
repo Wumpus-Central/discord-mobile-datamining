@@ -1,6 +1,6 @@
-// === Module 16583: useRoleSubscriptionFormat ===
+// === Module 16649: useRoleSubscriptionFormat ===
 
-// Module 16583 (useRoleSubscriptionFormat)
+// Module 16649 (useRoleSubscriptionFormat)
 import noop from "noop";
 import { hasPermission } from "GuildRoleRecordTypeTag";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

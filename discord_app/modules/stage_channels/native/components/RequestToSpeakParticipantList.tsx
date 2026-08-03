@@ -1,6 +1,6 @@
-// === Module 10734: RequestToSpeakParticipant ===
+// === Module 10842: RequestToSpeakParticipant ===
 
-// Module 10734 (RequestToSpeakParticipant)
+// Module 10842 (RequestToSpeakParticipant)
 import "preload";
 import { View } from "useStageParticipants";
 import jsxProd from "renderDefaultEmpty";

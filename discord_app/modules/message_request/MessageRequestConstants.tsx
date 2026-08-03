@@ -1,6 +1,6 @@
-// === Module 11548: MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL ===
+// === Module 11655: MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL ===
 
-// Module 11548 (MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL)
+// Module 11655 (MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL)
 const result = require("set").fileFinishedImporting("modules/message_request/MessageRequestConstants.tsx");
 
 export const MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL = "Message Request Accept Confirmation";

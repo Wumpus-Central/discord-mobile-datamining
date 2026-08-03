@@ -1,6 +1,6 @@
-// === Module 8728: ? ===
+// === Module 8905: ? ===
 
-// Module 8728
+// Module 8905
 const result = require("useRedeemVirtualCurrency").fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");
 for (const key10018 in require("useFetchVirtualCurrencyBalance")) {
   let tmp3 = key10018;

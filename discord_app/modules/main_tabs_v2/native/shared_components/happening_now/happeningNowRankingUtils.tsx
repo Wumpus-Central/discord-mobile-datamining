@@ -1,6 +1,6 @@
-// === Module 15082: cardSize ===
+// === Module 15062: cardSize ===
 
-// Module 15082 (cardSize)
+// Module 15062 (cardSize)
 import upsertRelationship from "upsertRelationship";
 import updateVoiceState from "updateVoiceState";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";

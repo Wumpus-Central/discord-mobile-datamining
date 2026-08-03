@@ -1,6 +1,6 @@
-// === Module 11207: ForumPostTitle ===
+// === Module 11319: ForumPostTitle ===
 
-// Module 11207 (ForumPostTitle)
+// Module 11319 (ForumPostTitle)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -30,5 +30,5 @@ export default function ForumPostTitle(arg0) {
     str = "mobile-text-heading-primary";
   }
   const tmp = createCacheKey();
-  return jsx(require(4189) /* Text */.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: createCacheKey().title, onTextLayout, children: title });
+  return jsx(require(4251) /* Text */.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: createCacheKey().title, onTextLayout, children: title });
 };

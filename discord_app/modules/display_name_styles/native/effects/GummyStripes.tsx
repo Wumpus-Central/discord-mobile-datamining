@@ -1,6 +1,6 @@
-// === Module 13735: GummyStripes ===
+// === Module 13798: GummyStripes ===
 
-// Module 13735 (GummyStripes)
+// Module 13798 (GummyStripes)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

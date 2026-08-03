@@ -1,6 +1,6 @@
-// === Module 16207: handleConnectionOpen ===
+// === Module 16271: handleConnectionOpen ===
 
-// Module 16207 (handleConnectionOpen)
+// Module 16271 (handleConnectionOpen)
 import handleStickersStoreUpdate from "handleStickersStoreUpdate";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import closure_5 from "handleUserSettingsProtoStoreChange";

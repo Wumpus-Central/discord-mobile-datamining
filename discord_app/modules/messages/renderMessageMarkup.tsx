@@ -1,6 +1,6 @@
-// === Module 7881: getInitialParserState ===
+// === Module 7999: getInitialParserState ===
 
-// Module 7881 (getInitialParserState)
+// Module 7999 (getInitialParserState)
 function getInitialParserState(channelId) {
   const renderOptions = channelId.renderOptions;
   const obj = { channelId: channelId.channelId, messageId: channelId.messageId, authorId: channelId.authorId, allowLinks: Boolean(renderOptions.allowLinks), allowDevLinks: Boolean(renderOptions.allowDevLinks), allowGameMentions: Boolean(renderOptions.allowGameMentions), allowTimeMentionInput: Boolean(renderOptions.allowTimeMentionInput), formatInline: Boolean(renderOptions.formatInline), noStyleAndInteraction: Boolean(renderOptions.noStyleAndInteraction), allowHeading: Boolean(renderOptions.allowHeading), allowList: Boolean(renderOptions.allowList), previewLinkTarget: Boolean(renderOptions.previewLinkTarget), disableAnimatedEmoji: Boolean(renderOptions.disableAnimatedEmoji), allowEmojiLinks: false, disableAutoBlockNewlines: true, mentionChannels: [], mentionGames: null, soundboardSounds: null, muted: false, unknownUserMentionPlaceholder: true, viewingChannelId: null, forceWhite: null, textColor: null, disablePressableChannelMention: null };
@@ -87,7 +87,7 @@ export default function renderMessageMarkup(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  const tmp2 = importDefault(4183);
+  const tmp2 = importDefault(4245);
   return render(obj.formatInline ? tmp2.parseInlineReply : tmp2.parse, arg0, obj);
 };
 export const getInitialParserStateFromMessage = function getInitialParserStateFromMessage(message, closure_7) {
@@ -135,7 +135,7 @@ export const renderMessageMarkupToAST = function renderMessageMarkupToAST(messag
   if (result === undefined) {
     obj = {};
   }
-  const tmp2 = importDefault(4183);
+  const tmp2 = importDefault(4245);
   obj = {};
   const merged = Object.assign(obj);
   obj.toAST = true;
@@ -147,7 +147,14 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(no
   let content;
   let guildId;
   let messageId;
-  const obj = { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], mentionGames: null, soundboardSounds: null, formatInline: true, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: true, guildId: null, channelId: null, messageId: null, authorId: null, muted: false, disablePressableChannelMention: true };
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  if (obj === undefined) {
+    obj = {};
+  }
+  obj = { allowLinks: false, allowDevLinks: false, allowEmojiLinks: false, allowGameMentions: false, mentionChannels: [], mentionGames: null, soundboardSounds: null, formatInline: true, noStyleAndInteraction: false, allowHeading: false, allowList: false, disableAutoBlockNewlines: true, previewLinkTarget: false, disableAnimatedEmoji: true, guildId: null, channelId: null, messageId: null, authorId: null, muted: false, disablePressableChannelMention: true, textColor: null };
   ({ content, guildId, channelId, messageId, authorId } = arg1);
   obj[5] = new Map();
   obj[6] = [];
@@ -155,6 +162,7 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(no
   obj[15] = channelId;
   obj[16] = messageId;
   obj[17] = authorId;
+  obj[20] = obj.textColor;
   return notifCenterV2MessagePreviewParser(content, true, obj, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
@@ -170,7 +178,7 @@ export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(ar
   obj[6] = [];
   obj[12] = arg1;
   obj[14] = arg2;
-  return importDefault(4183).parseAutoModerationSystemMessage(arg0, true, obj, (arg0) => {
+  return importDefault(4245).parseAutoModerationSystemMessage(arg0, true, obj, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
       const items = [arg0];
@@ -185,7 +193,7 @@ export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMark
   obj[6] = [];
   obj[12] = arg1;
   obj[14] = arg2;
-  return importDefault(4183).parseAutoModerationSystemMessageToAST(arg0, true, obj, (arg0) => {
+  return importDefault(4245).parseAutoModerationSystemMessageToAST(arg0, true, obj, (arg0) => {
     let tmp = arg0;
     if (!Array.isArray(arg0)) {
       const items = [arg0];

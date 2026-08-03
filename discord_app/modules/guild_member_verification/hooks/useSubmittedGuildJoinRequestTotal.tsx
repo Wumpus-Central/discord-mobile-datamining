@@ -1,6 +1,6 @@
-// === Module 15202: useSubmittedGuildJoinRequestTotal ===
+// === Module 15183: useSubmittedGuildJoinRequestTotal ===
 
-// Module 15202 (useSubmittedGuildJoinRequestTotal)
+// Module 15183 (useSubmittedGuildJoinRequestTotal)
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 
 const require = arg1;

@@ -1,13 +1,13 @@
-// === Module 13927: useRefreshLinkCodeOnExpiry ===
+// === Module 13994: useRefreshLinkCodeOnExpiry ===
 
-// Module 13927 (useRefreshLinkCodeOnExpiry)
+// Module 13994 (useRefreshLinkCodeOnExpiry)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
 
 export default function useRefreshLinkCodeOnExpiry(arg0, arg1) {
   const importDefault = arg0;
-  const tmp = importDefault(8259)(arg1);
+  const tmp = importDefault(8566)(arg1);
   const dependencyMap = tmp;
   const items = [arg0, tmp];
   const effect = React.useEffect(() => {

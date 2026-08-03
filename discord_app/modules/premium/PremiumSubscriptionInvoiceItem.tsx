@@ -1,6 +1,6 @@
-// === Module 3849: coalesceInvoiceItems ===
+// === Module 3911: coalesceInvoiceItems ===
 
-// Module 3849 (coalesceInvoiceItems)
+// Module 3911 (coalesceInvoiceItems)
 const result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
 
 export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {

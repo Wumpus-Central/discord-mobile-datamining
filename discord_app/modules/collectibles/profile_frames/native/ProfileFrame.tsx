@@ -1,6 +1,6 @@
-// === Module 8101: ProfileFrameLayer ===
+// === Module 8432: ProfileFrameLayer ===
 
-// Module 8101 (ProfileFrameLayer)
+// Module 8432 (ProfileFrameLayer)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { useFramePreviewOverrideStore as closure_4 } from "measure";
@@ -195,8 +195,8 @@ export default function ProfileFrame(arg0) {
     let obj = { override: null };
     obj[0] = tmp;
     const merged = Object.assign(arg0);
-    let tmp7 = jsx(importDefault(8104), { override: null });
-    const tmp11 = importDefault(8104);
+    let tmp7 = jsx(importDefault(8435), { override: null });
+    const tmp11 = importDefault(8435);
   } else {
     obj = {};
     const merged1 = Object.assign(arg0);

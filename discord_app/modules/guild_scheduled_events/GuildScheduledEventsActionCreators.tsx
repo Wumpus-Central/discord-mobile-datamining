@@ -1,6 +1,6 @@
-// === Module 8212: ? ===
+// === Module 8519: ? ===
 
-// Module 8212
+// Module 8519
 import sendRequest from "sendRequest";
 import fetchFingerprint from "fetchFingerprint";
 import scheduledEventSort from "scheduledEventSort";
@@ -34,8 +34,8 @@ export default {
     return HTTP.patch(obj);
   },
   joinVoiceEvent(arg0, id) {
-    const voiceChannel = importDefault(5005).selectVoiceChannel(id);
-    const obj = importDefault(5005);
+    const voiceChannel = importDefault(5067).selectVoiceChannel(id);
+    const obj = importDefault(5067);
     require(1222) /* transitionTo */.transitionTo(closure_11.CHANNEL(arg0, id));
   },
   saveEvent(arg0, entityType) {
@@ -53,19 +53,19 @@ export default {
       let obj = /^data:/;
     }
     obj = { name: entityType.name, description: entityType.description, image, privacy_level: entityType.privacyLevel, scheduled_start_time: entityType.scheduledStartTime, scheduled_end_time: entityType.scheduledEndTime, entity_type: entityType.entityType, channel_id: channelId, entity_metadata: entityMetadata, recurrence_rule: null };
-    obj[9] = require(8213) /* EditGuildEventScreens */.recurrenceRuleToServer(entityType.recurrenceRule);
+    obj[9] = require(8520) /* EditGuildEventScreens */.recurrenceRuleToServer(entityType.recurrenceRule);
     const HTTP = require(530) /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_EVENT(arg2, arg0), body: obj, rejectWithError: null };
-    const obj3 = require(8213) /* EditGuildEventScreens */;
+    const obj3 = require(8520) /* EditGuildEventScreens */;
     obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   createGuildEvent(first, id) {
     let obj = { name: first.name, description: first.description, image: first.image, privacy_level: first.privacyLevel, scheduled_start_time: first.scheduledStartTime, scheduled_end_time: first.scheduledEndTime, entity_type: first.entityType, channel_id: first.channelId, entity_metadata: first.entityMetadata, recurrence_rule: null };
-    obj[9] = require(8213) /* EditGuildEventScreens */.recurrenceRuleToServer(first.recurrenceRule);
+    obj[9] = require(8520) /* EditGuildEventScreens */.recurrenceRuleToServer(first.recurrenceRule);
     const HTTP = require(530) /* sendRequest */.HTTP;
     obj = { url: closure_10.GUILD_EVENTS_FOR_GUILD(id), body: obj, rejectWithError: null };
-    const obj2 = require(8213) /* EditGuildEventScreens */;
+    const obj2 = require(8520) /* EditGuildEventScreens */;
     obj[2] = require(530) /* sendRequest */.rejectWithMigratedError();
     return HTTP.post(obj);
   },
@@ -104,7 +104,7 @@ export default {
               body = undefined;
               const obj1 = { url: null, rejectWithError: null };
               obj1[0] = outer1_10.GUILD_EVENT(outer1_0, outer1_1);
-              const obj8 = outer1_0(4431);
+              const obj8 = outer1_0(4493);
               obj1[1] = outer1_0(530).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
@@ -177,7 +177,7 @@ export default {
               dependencyMap = 1;
               c3 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = outer1_0(4431).httpGetWithCountryCodeQuery(obj1);
+              obj2[0] = outer1_0(4493).httpGetWithCountryCodeQuery(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {

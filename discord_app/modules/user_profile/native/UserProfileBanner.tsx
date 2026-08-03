@@ -1,6 +1,6 @@
-// === Module 8105: UserProfileBanner ===
+// === Module 8436: UserProfileBanner ===
 
-// Module 8105 (UserProfileBanner)
+// Module 8436 (UserProfileBanner)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

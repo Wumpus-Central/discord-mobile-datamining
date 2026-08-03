@@ -1,6 +1,6 @@
-// === Module 13135: GuildActionSheetEmojiSection ===
+// === Module 13198: GuildActionSheetEmojiSection ===
 
-// Module 13135 (GuildActionSheetEmojiSection)
+// Module 13198 (GuildActionSheetEmojiSection)
 import _slicedToArray from "_slicedToArray";
 import RowGroup from "RowGroup";
 import { View } from "usePremiumUpsellConfig";

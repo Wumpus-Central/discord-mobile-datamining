@@ -1,6 +1,6 @@
-// === Module 9693: ? ===
+// === Module 9838: ? ===
 
-// Module 9693
+// Module 9838
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -14,7 +14,7 @@ const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHeaderS
   let animatedIndex;
   let onPress;
   ({ animatedIndex, onPress } = arg0);
-  return <View style={callback().headerHandleOnlyWrap}>{jsx(importDefault(9694), { animatedIndex, onPress })}</View>;
+  return <View style={callback().headerHandleOnlyWrap}>{jsx(importDefault(9839), { animatedIndex, onPress })}</View>;
 });
 const result = require("DRAG_HANDLE").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
 

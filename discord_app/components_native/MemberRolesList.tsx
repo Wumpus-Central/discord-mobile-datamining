@@ -1,6 +1,6 @@
-// === Module 11064: MemberRolesList ===
+// === Module 11180: MemberRolesList ===
 
-// Module 11064 (MemberRolesList)
+// Module 11180 (MemberRolesList)
 import "noop";
 import { View } from "get ActivityIndicator";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

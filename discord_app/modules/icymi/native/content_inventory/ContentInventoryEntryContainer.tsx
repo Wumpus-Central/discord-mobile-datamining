@@ -1,6 +1,6 @@
-// === Module 15400: iCYMIStyles ===
+// === Module 15467: iCYMIStyles ===
 
-// Module 15400 (iCYMIStyles)
+// Module 15467 (iCYMIStyles)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

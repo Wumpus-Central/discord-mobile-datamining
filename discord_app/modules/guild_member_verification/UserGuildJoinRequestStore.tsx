@@ -1,6 +1,6 @@
-// === Module 4011: handleGatewayJoinRequestUpdate ===
+// === Module 4073: handleGatewayJoinRequestUpdate ===
 
-// Module 4011 (handleGatewayJoinRequestUpdate)
+// Module 4073 (handleGatewayJoinRequestUpdate)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 
@@ -18,7 +18,7 @@ function handleGatewayJoinRequestUpdate(arg0) {
         return false;
       }
     }
-    obj = require(4012) /* isActionedApplicationStatus */;
+    obj = require(4074) /* isActionedApplicationStatus */;
     if (obj.isApprovedAndAcked(obj)) {
       delete tmp[tmp2];
       if (c3 === guildId) {
@@ -109,7 +109,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatc
       } else {
         tmp8[guildId] = obj;
       }
-      obj2 = require(4012) /* isActionedApplicationStatus */;
+      obj2 = require(4074) /* isActionedApplicationStatus */;
     } else {
       delete tmp3[tmp2];
       if (c3 === guildId) {

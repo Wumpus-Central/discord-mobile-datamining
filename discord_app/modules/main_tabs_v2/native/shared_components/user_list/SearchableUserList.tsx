@@ -1,9 +1,9 @@
-// === Module 8823: SearchableUserList ===
+// === Module 9000: SearchableUserList ===
 
-// Module 8823 (SearchableUserList)
+// Module 9000 (SearchableUserList)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
-import { View } from "module_8293";
+import { View } from "module_8600";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserRowModes } from "UserRowModes";
 import jsxProd from "jsxProd";
@@ -17,7 +17,7 @@ const require = arg1;
 createCacheKey = { searchBarContainer: null, searchBar: null, searchBarRowContainer: null, noResults: null };
 createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: "description", minHeight: false };
+createCacheKey[1] = { height: "op", minHeight: false };
 createCacheKey[2] = { paddingTop: require("Themes").space.PX_8 };
 let obj1 = { paddingTop: require("Themes").space.PX_8 };
 createCacheKey[3] = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };

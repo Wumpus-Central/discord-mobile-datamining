@@ -1,12 +1,12 @@
-// === Module 13061: ShareAttachments ===
+// === Module 13124: ShareAttachments ===
 
-// Module 13061 (ShareAttachments)
+// Module 13124 (ShareAttachments)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4054";
+import importDefaultResult from "module_4116";
 
 let c5;
 let closure_6;

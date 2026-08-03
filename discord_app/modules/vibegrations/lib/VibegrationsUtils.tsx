@@ -1,22 +1,19 @@
-// === Module 5686: vibegrationsAppIdFromTopic ===
+// === Module 5748: vibegrationsAppIdFromTopic ===
 
-// Module 5686 (vibegrationsAppIdFromTopic)
-import handleProjectUpsert from "handleProjectUpsert";
-import addApplication from "addApplication";
+// Module 5748 (vibegrationsAppIdFromTopic)
 import comparator from "comparator";
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_6 } from "comparator";
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import closure_9 from "handleProjectUpsert";
 import ME from "ME";
 
-let c10;
-let closure_12;
-let unpackModuleId;
+let closure_6;
+let error;
+let metroImportAll;
 const require = arg1;
 function vibegrationsAppIdFromTopic(topic) {
   if (null != topic) {
-    if (topic.startsWith(c13)) {
+    if (topic.startsWith(c9)) {
       const substr = topic.slice(28);
       let tmp4 = null;
       if (regex.test(substr)) {
@@ -27,168 +24,17 @@ function vibegrationsAppIdFromTopic(topic) {
   }
   return null;
 }
-function vibegrationsTextChannelsIn(guild_id) {
-  return channels.getChannels(guild_id)[closure_6].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+function vibegrationsTextChannelsIn(arg0) {
+  return channels.getChannels(arg0)[closure_3].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
 }
-function _publishPreviewAndReauthorizeIfPermissionsChanged() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
-    const iter = (function*(arg0) {
-      if (body === 2) {
-        body = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          body = 2;
-          if (0 === application) {
-            if (arg0 === 1) {
-              body = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              body = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let preview_guild_id = tmp5;
-              preview_guild_id = tmp2;
-              let flag;
-              let obj1 = flag;
-              if (flag === undefined) {
-                obj1 = {};
-              }
-              flag = obj1.countAsDeploy;
-              if (flag === undefined) {
-                flag = true;
-              }
-              preview_guild_id = undefined;
-              preview_guild_id = undefined;
-              application = undefined;
-              body = undefined;
-              application = undefined;
-              let bot_permissions_changed;
-              let integration_installed;
-              let preview_application_id;
-              let application2;
-              application = 1;
-              body = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              body = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              body = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              preview_guild_id = preview_application_id.getProject(callback);
-              preview_guild_id = undefined;
-              if (preview_guild_id != null) {
-                preview_guild_id = preview_guild_id.preview_guild_id;
-              }
-              let obj5 = callback(preview_guild_id[9]);
-              const obj3 = { countAsDeploy: null };
-              obj3[0] = flag;
-              application = 2;
-              body = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = obj5.publishPreviewProject(callback, obj3);
-              return obj4;
-            }
-          } else {
-            if (2 === tmp5) {
-              if (arg0 === 1) {
-                body = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                body = 3;
-                obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
-              } else {
-                application = arg1;
-                if (application.ok) {
-                  body = application.body;
-                  application = body.application;
-                  bot_permissions_changed = body.bot_permissions_changed;
-                  integration_installed = body.integration_installed;
-                  preview_application_id = body.project.preview_application_id;
-                  if (null != preview_guild_id) {
-                    if (null != preview_application_id) {
-                      if (!integration_installed) {
-                        application2 = application.getApplication(preview_application_id);
-                        if (null != application2) {
-                          obj1 = flag(preview_guild_id[10]);
-                          const obj6 = { applicationId: null, application: null, guildId: null };
-                          obj6[0] = application.id;
-                          obj6[1] = application2;
-                          obj6[2] = preview_guild_id;
-                          application = 3;
-                          body = 1;
-                          const obj7 = { value: null, done: false };
-                          obj7[0] = obj1.openVibegrationsAppInstallModal(obj6);
-                          return obj7;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            } else if (arg0 === 1) {
-              body = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              body = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-            body = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp38) {
-          body = tmp;
-          throw tmp38;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  const _publishPreviewAndReauthorizeIfPermissionsChanged = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-({ Permissions: c10, ChannelTypes: unpackModuleId, GuildFeatures: closure_12 } = ME);
-let c13 = "vibegrations_application_id=";
-const re14 = /^\d{17,20}$/;
-let result = require("comparator").fileFinishedImporting("modules/vibegrations/lib/VibegrationsUtils.tsx");
+({ Permissions: closure_6, ChannelTypes: error, GuildFeatures: metroImportAll } = ME);
+let c9 = "vibegrations_application_id=";
+const re10 = /^\d{17,20}$/;
+let result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/vibegrations/lib/VibegrationsUtils.tsx");
 
 export { vibegrationsAppIdFromTopic };
 export const vibegrationsTopicForApp = function vibegrationsTopicForApp(arg0) {
-  return "" + c13 + arg0;
+  return "" + c9 + arg0;
 };
 export const isVibegrationsProjectInGuild = function isVibegrationsProjectInGuild(guild_id) {
   let tmp = null != guild_id;
@@ -203,7 +49,7 @@ export const isVibegrationsProjectInGuild = function isVibegrationsProjectInGuil
   return tmp;
 };
 export { vibegrationsTextChannelsIn };
-export const findVibegrationChannelId = function findVibegrationChannelId(guild_id, application_id) {
+export const findVibegrationChannelId = function findVibegrationChannelId(arg0, arg1) {
   for (const item10009 of tmp) {
     let channel = item10009.channel;
     let tmp2 = channel;
@@ -216,18 +62,18 @@ export const findVibegrationChannelId = function findVibegrationChannelId(guild_
   }
   return null;
 };
-export const canManageVibegrations = function canManageVibegrations(closure_2, isAccessibleChannelOrThreadPath) {
-  let obj = require(5688) /* useIsVibegrationsGuildEnabled */;
-  obj = { guildId: closure_2.id, location: isAccessibleChannelOrThreadPath };
+export const canManageVibegrations = function canManageVibegrations(comparator, isAccessibleChannelOrThreadPath) {
+  let obj = require(5749) /* useIsVibegrationsGuildEnabled */;
+  obj = { guildId: comparator.id, location: isAccessibleChannelOrThreadPath };
   let result = obj.isVibegrationsGuildEnabled(obj);
   if (result) {
-    result = getUncachedChannelPermissions.can(constants.MANAGE_CHANNELS, closure_2);
+    result = getUncachedChannelPermissions.can(constants.MANAGE_CHANNELS, comparator);
   }
   if (result) {
-    result = getUncachedChannelPermissions.can(constants.MANAGE_GUILD, closure_2);
+    result = getUncachedChannelPermissions.can(constants.MANAGE_GUILD, comparator);
   }
   if (result) {
-    const features = closure_2.features;
+    const features = comparator.features;
     result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
   }
   return result;
@@ -237,9 +83,9 @@ export const useCanManageVibegrations = function useCanManageVibegrations(guildI
   let obj = _require(589);
   const items = [getUncachedChannelPermissions];
   const items1 = [guildId];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_8.can(outer1_10.MANAGE_CHANNELS, closure_0) && outer1_8.can(outer1_10.MANAGE_GUILD, closure_0), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.can(outer1_6.MANAGE_CHANNELS, closure_0) && outer1_5.can(outer1_6.MANAGE_GUILD, closure_0), items1);
   obj = { guildId: guildId.id, location: useGuildActionRows };
-  let isVibegrationsGuildEnabled = _require(5688).useIsVibegrationsGuildEnabled(obj);
+  let isVibegrationsGuildEnabled = _require(5749).useIsVibegrationsGuildEnabled(obj);
   const features = guildId.features;
   const hasItem = features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
   if (isVibegrationsGuildEnabled) {
@@ -249,16 +95,6 @@ export const useCanManageVibegrations = function useCanManageVibegrations(guildI
     isVibegrationsGuildEnabled = !hasItem;
   }
   return isVibegrationsGuildEnabled;
-};
-export const publishPreviewAndReauthorizeIfPermissionsChanged = function publishPreviewAndReauthorizeIfPermissionsChanged() {
-  const self = this;
-  const apply = _publishPreviewAndReauthorizeIfPermissionsChanged.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
 };
 export const isVibegrationsChannelCandidate = function isVibegrationsChannelCandidate(channel, ActivitySounds) {
   let guild_id;
@@ -275,7 +111,7 @@ export const isVibegrationsChannelCandidate = function isVibegrationsChannelCand
     let tmp6 = null;
     if (null != topic) {
       tmp6 = null;
-      if (topic.startsWith(c13)) {
+      if (topic.startsWith(c9)) {
         const substr = topic.slice(28);
         let tmp10 = null;
         if (regex.test(substr)) {
@@ -295,7 +131,7 @@ export const isVibegrationsChannelCandidate = function isVibegrationsChannelCand
     result = !hasItem;
   }
   if (result) {
-    let obj = require(5688) /* useIsVibegrationsGuildEnabled */;
+    let obj = require(5749) /* useIsVibegrationsGuildEnabled */;
     let guild_id1;
     if (channel != null) {
       guild_id1 = channel.guild_id;
@@ -316,7 +152,7 @@ export const useIsVibegrationsChannelCandidate = function useIsVibegrationsChann
     if (guild_id != null) {
       guild_id = guild_id.guild_id;
     }
-    return outer1_7.getGuild(guild_id);
+    return outer1_4.getGuild(guild_id);
   });
   guild_id = undefined;
   if (guild_id != null) {
@@ -324,7 +160,7 @@ export const useIsVibegrationsChannelCandidate = function useIsVibegrationsChann
   }
   obj = { guildId: guild_id, location };
   let tmp4 = null != guild_id;
-  const isVibegrationsGuildEnabled = _require(5688).useIsVibegrationsGuildEnabled(obj);
+  const isVibegrationsGuildEnabled = _require(5749).useIsVibegrationsGuildEnabled(obj);
   if (tmp4) {
     tmp4 = guild_id.type === constants2.GUILD_TEXT;
   }
@@ -333,7 +169,7 @@ export const useIsVibegrationsChannelCandidate = function useIsVibegrationsChann
     let tmp6 = null;
     if (null != topic) {
       tmp6 = null;
-      if (topic.startsWith(c13)) {
+      if (topic.startsWith(c9)) {
         const substr = topic.slice(28);
         let tmp10 = null;
         if (regex.test(substr)) {

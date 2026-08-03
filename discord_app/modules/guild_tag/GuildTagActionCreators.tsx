@@ -1,6 +1,6 @@
-// === Module 13072: _adoptGuildIdentity ===
+// === Module 13135: _adoptGuildIdentity ===
 
-// Module 13072 (_adoptGuildIdentity)
+// Module 13135 (_adoptGuildIdentity)
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Endpoints } from "ME";

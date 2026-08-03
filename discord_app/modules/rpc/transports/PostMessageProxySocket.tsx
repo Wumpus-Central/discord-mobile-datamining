@@ -1,6 +1,6 @@
-// === Module 10649: send ===
+// === Module 10702: send ===
 
-// Module 10649 (send)
+// Module 10702 (send)
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCCloseCodes } from "ME";
 import "checkRpcVersion";
@@ -65,7 +65,7 @@ prototype["send"] = function send(arg0) {
   if (onSendingToRPCClient != null) {
     onSendingToRPCClient(arg0, self.id);
   }
-  const items = [importDefault(10639).FRAME, arg0];
+  const items = [importDefault(10692).FRAME, arg0];
   const result = self.postMessageToRPCClient(items, self.origin);
 };
 prototype["close"] = function close(arg0, arg1) {

@@ -1,6 +1,6 @@
-// === Module 13129: initialize ===
+// === Module 13192: initialize ===
 
-// Module 13129 (initialize)
+// Module 13192 (initialize)
 import getMemberListId from "getMemberListId";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
@@ -52,21 +52,21 @@ obj = {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "accessibilityRole", memberCount: "height" };
+      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "borderRadius", memberCount: "then" };
     }
     obj[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "accessibilityRole", memberCount: "height" };
+      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "borderRadius", memberCount: "then" };
     }
     obj[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "accessibilityRole", memberCount: "height" };
+      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "borderRadius", memberCount: "then" };
     }
     obj[guildId].activeChannelsCount = guildId.count;
   }

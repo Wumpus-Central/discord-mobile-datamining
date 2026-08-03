@@ -1,6 +1,6 @@
-// === Module 15550: useSearchMessages ===
+// === Module 15617: useSearchMessages ===
 
-// Module 15550 (useSearchMessages)
+// Module 15617 (useSearchMessages)
 import handleReaction from "handleReaction";
 import prototype from "prototype";
 

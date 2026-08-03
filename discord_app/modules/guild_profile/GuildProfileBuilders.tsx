@@ -1,6 +1,6 @@
-// === Module 5188: getEmoji ===
+// === Module 5250: getEmoji ===
 
-// Module 5188 (getEmoji)
+// Module 5250 (getEmoji)
 import { EmojiDisambiguations } from "getEmojiToGroupId";
 
 function getEmoji(guildId) {
@@ -24,14 +24,14 @@ function getEmoji(guildId) {
   } else {
     byName = null;
     if (byId != emojiName) {
-      byName = importDefault(3834).getByName(emojiName);
-      const obj2 = importDefault(3834);
+      byName = importDefault(3896).getByName(emojiName);
+      const obj2 = importDefault(3896);
     }
   }
 }
 function buildGuildProfileTraitsFromServer(arg0, arg1) {
   let position;
-  const array = new Array(require(5189) /* MAX_TRAITS */.MAX_TRAITS);
+  const array = new Array(require(5251) /* MAX_TRAITS */.MAX_TRAITS);
   const fillResult = array.fill(closure_5);
   const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
@@ -42,7 +42,7 @@ function buildGuildProfileTraitsFromServer(arg0, arg1) {
       let tmp5 = nextResult;
       let tmp6 = require;
       let tmp7 = dependencyMap;
-      tmp4 = tmp3.position >= require(5189) /* MAX_TRAITS */.MAX_TRAITS;
+      tmp4 = tmp3.position >= require(5251) /* MAX_TRAITS */.MAX_TRAITS;
     }
     if (!tmp4) {
       let tmp8 = nextResult;
@@ -232,7 +232,7 @@ export const buildGuildProfileFromInvite = function buildGuildProfileFromInvite(
         num = 0;
       }
       obj[6] = num;
-      obj[7] = require(5190) /* GuildProfileVisibility */.GuildProfileVisibility.NOT_SPECIFIED;
+      obj[7] = require(5252) /* GuildProfileVisibility */.GuildProfileVisibility.NOT_SPECIFIED;
       obj[8] = [];
       obj[9] = [];
       obj[10] = {};

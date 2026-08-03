@@ -1,6 +1,6 @@
-// === Module 14913: RegisterAgeGate ===
+// === Module 14980: RegisterAgeGate ===
 
-// Module 14913 (RegisterAgeGate)
+// Module 14980 (RegisterAgeGate)
 import _slicedToArray from "_slicedToArray";
 import module_38 from "module_38";
 import { View } from "useAuthFlowBackHandler";

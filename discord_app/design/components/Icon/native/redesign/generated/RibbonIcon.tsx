@@ -1,6 +1,6 @@
-// === Module 12073: RibbonIcon ===
+// === Module 12169: RibbonIcon ===
 
-// Module 12073 (RibbonIcon)
+// Module 12169 (RibbonIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const RibbonIcon = function RibbonIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(12074) /* registerAsset */;
+  obj[0] = require(12170) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

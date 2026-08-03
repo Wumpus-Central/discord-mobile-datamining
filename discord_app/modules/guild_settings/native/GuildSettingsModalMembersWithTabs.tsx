@@ -1,6 +1,6 @@
-// === Module 15461: ? ===
+// === Module 15528: ? ===
 
-// Module 15461
+// Module 15528
 import importAllResult from "showMembersManagementActionSheet";
 import { View } from "useNavigation";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -109,12 +109,12 @@ const memoResult = importAllResult.memo((guildId) => {
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
         const obj = { source: null, accessibilityLabel: null, ref: null };
-        obj[0] = callback2(8338);
+        obj[0] = callback2(8643);
         const intl = callback(1236).intl;
         obj[1] = intl.string(callback(1236).t.ogxXGq);
         obj[2] = ref.ref;
         const merged1 = Object.assign(merged);
-        return callback3(callback(6755).HeaderActionButton, obj);
+        return callback3(callback(5907).HeaderActionButton, obj);
       }
     };
     return outer1_8(guildId(stateFromStores[18]).ContextMenu, obj);

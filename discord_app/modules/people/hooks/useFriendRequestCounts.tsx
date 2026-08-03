@@ -1,6 +1,6 @@
-// === Module 15601: getIncomingFriendRequestCount ===
+// === Module 15667: getIncomingFriendRequestCount ===
 
-// Module 15601 (getIncomingFriendRequestCount)
+// Module 15667 (getIncomingFriendRequestCount)
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import upsertRelationship from "upsertRelationship";

@@ -1,6 +1,6 @@
-// === Module 5854: CollectiblesShopPerfCheckpoint ===
+// === Module 6946: CollectiblesShopPerfCheckpoint ===
 
-// Module 5854 (CollectiblesShopPerfCheckpoint)
+// Module 6946 (CollectiblesShopPerfCheckpoint)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/collectibles/utils/CollectiblesPerfLogging.tsx");

@@ -1,6 +1,6 @@
-// === Module 9111: PencilIcon ===
+// === Module 9284: PencilIcon ===
 
-// Module 9111 (PencilIcon)
+// Module 9284 (PencilIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const PencilIcon = function PencilIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(7753) /* registerAsset */;
+  obj[0] = require(7872) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

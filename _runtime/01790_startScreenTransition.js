@@ -36,7 +36,7 @@ function finishScreenTransition(stackTag) {
   let sharedEvent;
   ({ sharedEvent, goBackGesture } = stackTag);
   sharedEvent.removeListener(stackTag.stackTag);
-  if (typeof getLockAxis !== "fileFinishedImporting") {
+  if (typeof getLockAxis !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const items = ["swipeRight", "swipeLeft", "horizontalSwipe"];

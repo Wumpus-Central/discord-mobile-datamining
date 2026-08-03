@@ -1,6 +1,6 @@
-// === Module 14024: ClipsSettingsScreen ===
+// === Module 14091: ClipsSettingsScreen ===
 
-// Module 14024 (ClipsSettingsScreen)
+// Module 14091 (ClipsSettingsScreen)
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";
@@ -14,5 +14,5 @@ export default function ClipsSettingsScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(importDefault(13697), { node });
+  return jsx(importDefault(13760), { node });
 };

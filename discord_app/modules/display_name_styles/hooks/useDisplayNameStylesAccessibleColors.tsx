@@ -1,6 +1,6 @@
-// === Module 8394: useDisplayNameStylesAccessibleColors ===
+// === Module 8699: useDisplayNameStylesAccessibleColors ===
 
-// Module 8394 (useDisplayNameStylesAccessibleColors)
+// Module 8699 (useDisplayNameStylesAccessibleColors)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

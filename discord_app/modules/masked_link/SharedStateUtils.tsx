@@ -1,6 +1,6 @@
-// === Module 12311: useUrlParts ===
+// === Module 12409: useUrlParts ===
 
-// Module 12311 (useUrlParts)
+// Module 12409 (useUrlParts)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

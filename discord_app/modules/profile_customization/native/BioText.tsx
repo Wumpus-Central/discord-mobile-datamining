@@ -1,6 +1,6 @@
-// === Module 11971: LinkButton ===
+// === Module 12067: LinkButton ===
 
-// Module 11971 (LinkButton)
+// Module 12067 (LinkButton)
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";
@@ -19,13 +19,13 @@ function LinkButton(arg0) {
   const tmp = callback3();
   obj = {
     onPress() {
-      let obj = callback(3890);
+      let obj = callback(3952);
       obj.openURL(closure_6);
       obj = { cta_type: "profile_bio", target: closure_6 };
       callback(698).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
     },
     style: tmp.link,
-    children: callback(require(4189) /* Text */.Text, obj)
+    children: callback(require(4251) /* Text */.Text, obj)
   };
   obj = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: items };
   items = ["\n", text];

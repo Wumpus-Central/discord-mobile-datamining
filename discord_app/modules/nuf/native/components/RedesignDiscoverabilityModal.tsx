@@ -1,6 +1,6 @@
-// === Module 16300: DiscoverabilityLandingScene ===
+// === Module 16364: DiscoverabilityLandingScene ===
 
-// Module 16300 (DiscoverabilityLandingScene)
+// Module 16364 (DiscoverabilityLandingScene)
 import getSystemLocale from "getSystemLocale";
 import { View } from "SkipHeaderButton";
 import { useContactSyncModalStore } from "ContactSyncModes";
@@ -82,7 +82,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj[2] = name;
-  obj[1] = jsx(allowPhone(11802), { onNext: callback, loading: false, initialName: null });
+  obj[1] = jsx(allowPhone(11904), { onNext: callback, loading: false, initialName: null });
   return <tmp6 onNext={callback} loading={false} initialName={null} />;
 }
 class RedesignDiscoverabilityModal {

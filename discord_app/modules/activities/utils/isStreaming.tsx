@@ -1,6 +1,6 @@
-// === Module 7982: _isStreaming ===
+// === Module 8100: _isStreaming ===
 
-// Module 7982 (_isStreaming)
+// Module 8100 (_isStreaming)
 import { validStreamURL } from "items3";
 import { ActivityTypes } from "ME";
 

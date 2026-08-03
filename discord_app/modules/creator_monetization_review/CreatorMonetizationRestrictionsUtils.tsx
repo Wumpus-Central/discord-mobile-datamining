@@ -1,6 +1,6 @@
-// === Module 3814: isRestrictedFromShowingGuildPurchaseEntryPoints ===
+// === Module 3876: isRestrictedFromShowingGuildPurchaseEntryPoints ===
 
-// Module 3814 (isRestrictedFromShowingGuildPurchaseEntryPoints)
+// Module 3876 (isRestrictedFromShowingGuildPurchaseEntryPoints)
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 import { FetchState } from "makeGroupListingIndexSubscriptionListingTag";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

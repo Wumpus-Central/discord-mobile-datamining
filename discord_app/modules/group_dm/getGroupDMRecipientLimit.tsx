@@ -1,6 +1,6 @@
-// === Module 15608: getGroupDMRecipientLimit ===
+// === Module 15674: getGroupDMRecipientLimit ===
 
-// Module 15608 (getGroupDMRecipientLimit)
+// Module 15674 (getGroupDMRecipientLimit)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 

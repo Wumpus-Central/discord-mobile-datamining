@@ -1,6 +1,6 @@
-// === Module 4589: _updateAccessibilityFocusLock ===
+// === Module 4651: _updateAccessibilityFocusLock ===
 
-// Module 4589 (_updateAccessibilityFocusLock)
+// Module 4651 (_updateAccessibilityFocusLock)
 import { NativeModules } from "get ActivityIndicator";
 import "initialize";
 
@@ -53,8 +53,8 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
   }
   if (self._focusLockEnabled) {
     if (obj.isAndroid()) {
-      importDefault(4591).disableFocusLock();
-      let obj2 = importDefault(4591);
+      importDefault(4653).disableFocusLock();
+      let obj2 = importDefault(4653);
     } else {
       let DCDAccessibilityManager = NativeModules.DCDAccessibilityManager;
       DCDAccessibilityManager.disableFocusLock();
@@ -65,7 +65,7 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
 };
 prototype["_initialize"] = function _initialize() {
   const self = this;
-  this._screenReaderEnabledListener = self(4590).addScreenReaderEnabledListener((_screenReaderEnabled) => {
+  this._screenReaderEnabledListener = self(4652).addScreenReaderEnabledListener((_screenReaderEnabled) => {
     self._screenReaderEnabled = _screenReaderEnabled;
     const result = self._updateAccessibilityFocusLock();
   });

@@ -1,6 +1,6 @@
-// === Module 10501: canSeeExperimentEmbeds ===
+// === Module 10639: canSeeExperimentEmbeds ===
 
-// Module 10501 (canSeeExperimentEmbeds)
+// Module 10639 (canSeeExperimentEmbeds)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";

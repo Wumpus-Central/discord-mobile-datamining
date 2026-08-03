@@ -1,6 +1,6 @@
-// === Module 16156: onPostConnectionOpen ===
+// === Module 16220: onPostConnectionOpen ===
 
-// Module 16156 (onPostConnectionOpen)
+// Module 16220 (onPostConnectionOpen)
 import "initialize";
 
 const require = arg1;
@@ -15,7 +15,7 @@ class ATTManager extends tmp2 {
 const prototype = ATTManager.prototype;
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   try {
-    const adUser = require(6021) /* _fetchAdUser */.fetchAdUser("post_connection_open");
+    const adUser = require(7100) /* _fetchAdUser */.fetchAdUser("post_connection_open");
   } catch (tmp4) {
     importDefault(1208).captureException(tmp4);
     const obj2 = importDefault(1208);

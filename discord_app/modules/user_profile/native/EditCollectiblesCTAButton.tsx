@@ -1,6 +1,6 @@
-// === Module 7958: ? ===
+// === Module 8075: ? ===
 
-// Module 7958
+// Module 8075
 import importAllResult from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { CollectiblesMobileShopScreen as closure_5 } from "items";

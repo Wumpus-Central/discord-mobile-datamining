@@ -1,6 +1,6 @@
-// === Module 10695: useCurrentUserStageRoles ===
+// === Module 10803: useCurrentUserStageRoles ===
 
-// Module 10695 (useCurrentUserStageRoles)
+// Module 10803 (useCurrentUserStageRoles)
 import fetchFingerprint from "fetchFingerprint";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 

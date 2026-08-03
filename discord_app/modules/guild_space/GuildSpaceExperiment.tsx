@@ -1,6 +1,6 @@
-// === Module 5665: experiment ===
+// === Module 5727: experiment ===
 
-// Module 5665 (experiment)
+// Module 5727 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable Guild Space", config: { enabled: true } }];

@@ -1,6 +1,6 @@
-// === Module 6364: getUnderlyingIOSExceptionRecursively ===
+// === Module 7356: getUnderlyingIOSExceptionRecursively ===
 
-// Module 6364 (getUnderlyingIOSExceptionRecursively)
+// Module 7356 (getUnderlyingIOSExceptionRecursively)
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {
     const tmp2 = getUnderlyingIOSExceptionRecursively(NSUnderlyingError.userInfo.NSUnderlyingError);
@@ -35,5 +35,5 @@ export const serializeError = function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(require(6365) /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
+  return JSON.stringify(require(7357) /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
 };

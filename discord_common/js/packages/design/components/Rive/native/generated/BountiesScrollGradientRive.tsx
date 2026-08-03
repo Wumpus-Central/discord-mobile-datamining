@@ -1,6 +1,6 @@
-// === Module 3974: BountiesScrollGradientRive ===
+// === Module 4036: BountiesScrollGradientRive ===
 
-// Module 3974 (BountiesScrollGradientRive)
+// Module 4036 (BountiesScrollGradientRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -23,21 +23,21 @@ let closure_8 = importAllResult.forwardRef(function BountiesScrollGradientRiveIn
     tmp = defaultViewModelInstance;
   }
   const obj = { ref, src: null, artboard: null, artboardProperties: null, artboardViewModelInstances: null, defaultViewModelInstance: null, stateMachine: null };
-  obj[1] = importDefault(3975);
+  obj[1] = importDefault(4037);
   obj[2] = str;
   obj[3] = closure_6;
   obj[4] = closure_7;
   obj[5] = tmp;
   obj[6] = defaultViewModelInstance.stateMachine;
   const merged = Object.assign(callback(defaultViewModelInstance, closure_3));
-  return jsx(require(3922) /* BaseRive */.BaseRive, { ref, src: null, artboard: null, artboardProperties: null, artboardViewModelInstances: null, defaultViewModelInstance: null, stateMachine: null });
+  return jsx(require(3984) /* BaseRive */.BaseRive, { ref, src: null, artboard: null, artboardProperties: null, artboardViewModelInstances: null, defaultViewModelInstance: null, stateMachine: null });
 });
 const forwardRefResult = importAllResult.forwardRef(function BountiesScrollGradientRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_8 ref={arg1} />;
-  return jsx(require(3973) /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(require(4035) /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollGradientRive.tsx");
 

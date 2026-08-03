@@ -1,6 +1,6 @@
-// === Module 6008: init ===
+// === Module 7087: init ===
 
-// Module 6008 (init)
+// Module 7087 (init)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ExperimentBuckets } from "ExperimentBuckets";

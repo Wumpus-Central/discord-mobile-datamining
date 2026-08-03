@@ -1,6 +1,6 @@
-// === Module 8113: map ===
+// === Module 8444: map ===
 
-// Module 8113 (map)
+// Module 8444 (map)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 import set from "set";
@@ -240,8 +240,8 @@ const badgeDirectoryStore = new BadgeDirectoryStore(require("dispatcher"), {
           const _Date2 = Date;
           const timestamp = Date.now();
           const result1 = obj3.set(id, timestamp + value.fail());
-          const badgeDirectory = require(8116) /* urlUserId */.fetchBadgeDirectory(id);
-          const obj5 = require(8116) /* urlUserId */;
+          const badgeDirectory = require(8447) /* urlUserId */.fetchBadgeDirectory(id);
+          const obj5 = require(8447) /* urlUserId */;
           const obj6 = map2;
         }
         obj3 = map3;

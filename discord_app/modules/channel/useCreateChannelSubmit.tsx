@@ -1,6 +1,6 @@
-// === Module 8278: useCreateChannelSubmit ===
+// === Module 8585: useCreateChannelSubmit ===
 
-// Module 8278 (useCreateChannelSubmit)
+// Module 8585 (useCreateChannelSubmit)
 import fromString from "fromString";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,6 @@
-// === Module 11511: ApplicationCommandItem ===
+// === Module 11621: ApplicationCommandItem ===
 
-// Module 11511 (ApplicationCommandItem)
+// Module 11621 (ApplicationCommandItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

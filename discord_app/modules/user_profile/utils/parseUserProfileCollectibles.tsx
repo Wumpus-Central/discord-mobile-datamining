@@ -1,6 +1,6 @@
-// === Module 5924: parseUserProfileCollectibles ===
+// === Module 7004: parseUserProfileCollectibles ===
 
-// Module 5924 (parseUserProfileCollectibles)
+// Module 7004 (parseUserProfileCollectibles)
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 
 export default function parseUserProfileCollectibles(collectibles) {
@@ -11,7 +11,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles = collectibles.collectibles;
   }
   if (null == collectibles) {
-    return { collectibles: "Array", profileEffect: "accessibilityRole", profileFrame: "height" };
+    return { collectibles: "Array", profileEffect: "borderRadius", profileFrame: "then" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;

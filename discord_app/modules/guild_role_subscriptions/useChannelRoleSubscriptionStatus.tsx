@@ -1,6 +1,6 @@
-// === Module 4635: getChannelRoleSubscriptionStatus ===
+// === Module 4697: getChannelRoleSubscriptionStatus ===
 
-// Module 4635 (getChannelRoleSubscriptionStatus)
+// Module 4697 (getChannelRoleSubscriptionStatus)
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

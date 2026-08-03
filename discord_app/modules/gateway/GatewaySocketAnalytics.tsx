@@ -1,6 +1,6 @@
-// === Module 12724: prettyPrintTrace_ ===
+// === Module 12787: prettyPrintTrace_ ===
 
-// Module 12724 (prettyPrintTrace_)
+// Module 12787 (prettyPrintTrace_)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

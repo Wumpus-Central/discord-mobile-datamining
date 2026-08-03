@@ -1,6 +1,6 @@
-// === Module 4372: initialize ===
+// === Module 4434: initialize ===
 
-// Module 4372 (initialize)
+// Module 4434 (initialize)
 const result = require("set").fileFinishedImporting("lib/LifecycleManager.tsx");
 class LifecycleManager {
 }

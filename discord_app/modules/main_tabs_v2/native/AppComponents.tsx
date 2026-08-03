@@ -1,6 +1,6 @@
-// === Module 15847: jsx ===
+// === Module 15911: jsx ===
 
-// Module 15847 (jsx)
+// Module 15911 (jsx)
 import jsxProd from "jsxProd";
 import set from "set";
 import importDefaultResult from "jsx";
@@ -29,7 +29,7 @@ if (set.isAndroid()) {
   jsxResult = jsx(require("updateAccessibilityAnnouncerLiveRegionMessage").AccessibilityAnnouncerLiveRegion, {});
 }
 obj = { lockKeys: ["external-pip"], children: null };
-const items1 = [jsx(require("module_15854"), {}), jsx(require("module_15887"), {}), jsx(require("VoicePanel"), {}), jsx(require("module_16062"), {})];
+const items1 = [jsx(require("module_15918"), {}), jsx(require("module_15951"), {}), jsx(require("VoicePanel"), {}), jsx(require("module_16126"), {})];
 obj[1] = items1;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
 

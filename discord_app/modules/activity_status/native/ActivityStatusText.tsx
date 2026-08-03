@@ -1,6 +1,6 @@
-// === Module 9080: ActivityStatusText ===
+// === Module 9253: ActivityStatusText ===
 
-// Module 9080 (ActivityStatusText)
+// Module 9253 (ActivityStatusText)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -22,5 +22,5 @@ export default function ActivityStatusText(variant) {
   items = [callback().text, style];
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(require(4189) /* Text */.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
+  return jsx(require(4251) /* Text */.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
 };

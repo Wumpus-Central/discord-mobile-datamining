@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_viewer/native/images", width: 24, height: 24, scales: [2, 3], hash: "87391322b2483c883b3f5fd1ac4080a9", name: "ic_eye", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 120, height: 96, scales: [2], hash: "e8874e4fc596af26bfde9d20b7f75908", name: "search_empty_state_dark", type: "png" });

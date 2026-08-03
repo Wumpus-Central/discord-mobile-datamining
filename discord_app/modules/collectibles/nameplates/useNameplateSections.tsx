@@ -1,6 +1,6 @@
-// === Module 13751: useNameplateSections ===
+// === Module 13818: useNameplateSections ===
 
-// Module 13751 (useNameplateSections)
+// Module 13818 (useNameplateSections)
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

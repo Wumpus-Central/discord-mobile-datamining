@@ -1,6 +1,6 @@
-// === Module 5663: useIsNewMember ===
+// === Module 5725: useIsNewMember ===
 
-// Module 5663 (useIsNewMember)
+// Module 5725 (useIsNewMember)
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { GuildMemberFlags } from "GuildMemberFlags";

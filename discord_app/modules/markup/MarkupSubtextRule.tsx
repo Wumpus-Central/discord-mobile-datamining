@@ -1,6 +1,6 @@
-// === Module 4652: ? ===
+// === Module 4714: ? ===
 
-// Module 4652
+// Module 4714
 const re2 = /\n$/;
 const re3 = /^ *-# +((?!(-#)+)[^\n]+?) *(?:\n|$)/;
 let obj = {
@@ -13,11 +13,11 @@ let obj = {
       }
       return tmp2;
     }
-    tmp2 = require(3892) /* t */.anyScopeRegex(closure_3)(arg0, arg1, str);
+    tmp2 = require(3954) /* t */.anyScopeRegex(closure_3)(arg0, arg1, str);
   },
   parse(arg0, arg1, inline) {
     const obj = { content: null };
-    obj[0] = require(3892) /* t */.parseInline(arg1, arg0[1].trim(), inline);
+    obj[0] = require(3954) /* t */.parseInline(arg1, arg0[1].trim(), inline);
     return obj;
   }
 };

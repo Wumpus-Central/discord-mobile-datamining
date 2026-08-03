@@ -1,6 +1,6 @@
-// === Module 15153: useGuildThemeNuxTrigger ===
+// === Module 15133: useGuildThemeNuxTrigger ===
 
-// Module 15153 (useGuildThemeNuxTrigger)
+// Module 15133 (useGuildThemeNuxTrigger)
 import noop from "noop";
 import setContent from "setContent";
 
@@ -18,5 +18,5 @@ export default function useGuildThemeNuxTrigger(arg0) {
     callback2(paths[6]).openLazy(tmp, callback(paths[3]).GUILD_THEME_NUX_ACTION_SHEET_KEY, arg0, "stack");
     return tmp;
   }, []);
-  importDefault(15159)(arg0, { isNuxOpen: stateFromStores, openNux: callback });
+  importDefault(15139)(arg0, { isNuxOpen: stateFromStores, openNux: callback });
 };

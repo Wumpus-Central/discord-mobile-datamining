@@ -1,6 +1,6 @@
-// === Module 5061: setParams ===
+// === Module 5123: setParams ===
 
-// Module 5061 (setParams)
+// Module 5123 (setParams)
 const result = require("set").fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
 class LazyPromiseInitializer {
   constructor(arg0) {

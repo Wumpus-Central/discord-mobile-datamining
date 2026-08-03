@@ -1,6 +1,6 @@
-// === Module 9220: PhoneOrEmailSelectorForceMode ===
+// === Module 9393: PhoneOrEmailSelectorForceMode ===
 
-// Module 9220 (PhoneOrEmailSelectorForceMode)
+// Module 9393 (PhoneOrEmailSelectorForceMode)
 let obj = { PHONE: "phone", EMAIL: "email" };
 const re1 = /^[-() \d]+$/;
 const result = require("set").fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");

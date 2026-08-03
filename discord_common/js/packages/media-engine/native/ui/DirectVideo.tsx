@@ -1,6 +1,6 @@
-// === Module 4295: logger ===
+// === Module 4357: logger ===
 
-// Module 4295 (logger)
+// Module 4357 (logger)
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -174,7 +174,7 @@ export default function DirectVideo(streamId, onContainerResized) {
         ref.info("attaching srcObject for " + current);
         value = store.get(current);
         if (null == value) {
-          if (typeof ref !== "fileFinishedImporting") {
+          if (typeof ref !== "error") {
             HermesBuiltin.throwTypeError();
           }
           const obj = Object.create(ref.prototype);

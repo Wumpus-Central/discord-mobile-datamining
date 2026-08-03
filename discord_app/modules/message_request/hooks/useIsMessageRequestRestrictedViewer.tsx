@@ -1,13 +1,13 @@
-// === Module 11545: useIsMessageRequestRestrictedViewer ===
+// === Module 11652: useIsMessageRequestRestrictedViewer ===
 
-// Module 11545 (useIsMessageRequestRestrictedViewer)
+// Module 11652 (useIsMessageRequestRestrictedViewer)
 const result = require("SettingsDefaultFeature").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 
 export const useIsMessageRequestRestrictedViewer = function useIsMessageRequestRestrictedViewer(ChatInputGuardMessageRequest) {
-  let obj = require(4409) /* useAgeVerificationRunner */;
+  let obj = require(4471) /* useAgeVerificationRunner */;
   const isExplicitlyVerifiedAdult = obj.useIsExplicitlyVerifiedAdult();
-  const isSettingTeenByDefault = require(3872) /* isFeatureAgeGated */.useIsSettingTeenByDefault(require(3879) /* SettingsDefaultFeature */.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS);
-  const obj2 = require(3872) /* isFeatureAgeGated */;
+  const isSettingTeenByDefault = require(3934) /* isFeatureAgeGated */.useIsSettingTeenByDefault(require(3941) /* SettingsDefaultFeature */.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS);
+  const obj2 = require(3934) /* isFeatureAgeGated */;
   obj = { location: ChatInputGuardMessageRequest };
   let enabled = !isExplicitlyVerifiedAdult;
   if (!isExplicitlyVerifiedAdult) {

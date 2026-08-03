@@ -1,6 +1,6 @@
-// === Module 8928: ClearFriendRequestFilters ===
+// === Module 9105: ClearFriendRequestFilters ===
 
-// Module 8928 (ClearFriendRequestFilters)
+// Module 9105 (ClearFriendRequestFilters)
 const result = require("set").fileFinishedImporting("modules/relationships/RelationshipConstants.tsx");
 
 export const ClearFriendRequestFilters = { SPAM: 1, [1]: "SPAM", IGNORED: 2, [2]: "IGNORED" };

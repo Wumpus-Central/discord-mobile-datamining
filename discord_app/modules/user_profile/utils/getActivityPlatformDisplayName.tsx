@@ -1,6 +1,6 @@
-// === Module 12024: getActivityPlatformDisplayName ===
+// === Module 12120: getActivityPlatformDisplayName ===
 
-// Module 12024 (getActivityPlatformDisplayName)
+// Module 12120 (getActivityPlatformDisplayName)
 import { PlatformTypes } from "ME";
 
 const result = require("isOnMetaHorizon").fileFinishedImporting("modules/user_profile/utils/getActivityPlatformDisplayName.tsx");

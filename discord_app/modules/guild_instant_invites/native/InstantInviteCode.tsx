@@ -1,6 +1,6 @@
-// === Module 10214: InstantInviteDetails ===
+// === Module 10353: InstantInviteDetails ===
 
-// Module 10214 (InstantInviteDetails)
+// Module 10353 (InstantInviteDetails)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord";
@@ -70,11 +70,11 @@ export default function InstantInviteCode(invite) {
   const memo = React.useMemo(() => outer1_5(invite.channel), items);
   obj = { children: null };
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  const items1 = [callback(invite(4189).Text, obj), ];
+  const items1 = [callback(invite(4251).Text, obj), ];
   const tmp = createCacheKey();
   items1[1] = callback(InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj[0] = items1;
-  obj[1] = callback2(invite(4602).Stack, obj);
+  obj[1] = callback2(invite(4664).Stack, obj);
   return callback(View, obj);
 };
 export { InstantInviteDetails };

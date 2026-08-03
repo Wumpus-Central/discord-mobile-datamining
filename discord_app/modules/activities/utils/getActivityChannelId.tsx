@@ -1,6 +1,6 @@
-// === Module 12038: getActivityChannelId ===
+// === Module 12134: getActivityChannelId ===
 
-// Module 12038 (getActivityChannelId)
+// Module 12134 (getActivityChannelId)
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateVoiceState from "updateVoiceState";

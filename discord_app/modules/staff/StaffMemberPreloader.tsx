@@ -1,6 +1,6 @@
-// === Module 16344: preloadStaffMembers ===
+// === Module 16410: preloadStaffMembers ===
 
-// Module 16344 (preloadStaffMembers)
+// Module 16410 (preloadStaffMembers)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PRELOAD_SERVER_ID } from "PRELOAD_SERVER_ID";
@@ -17,7 +17,7 @@ export const preloadStaffMembers = function preloadStaffMembers() {
     isStaffResult = null != guild.getGuild(PRELOAD_SERVER_ID);
   }
   if (isStaffResult) {
-    const obj2 = importDefault(5109);
+    const obj2 = importDefault(5171);
     const members = obj2.requestMembers(PRELOAD_SERVER_ID, "", 0, false);
   }
 };

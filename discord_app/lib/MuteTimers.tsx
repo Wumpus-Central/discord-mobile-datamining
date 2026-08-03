@@ -1,6 +1,6 @@
-// === Module 3824: reset ===
+// === Module 3886: reset ===
 
-// Module 3824 (reset)
+// Module 3886 (reset)
 const result = require("set").fileFinishedImporting("lib/MuteTimers.tsx");
 class MuteTimers {
   constructor() {

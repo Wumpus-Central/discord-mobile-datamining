@@ -1,6 +1,6 @@
-// === Module 14923: _decodeEncodedUserRecord ===
+// === Module 14990: _decodeEncodedUserRecord ===
 
-// Module 14923 (_decodeEncodedUserRecord)
+// Module 14990 (_decodeEncodedUserRecord)
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "asyncGeneratorStep";
 import createdAt from "createdAt";
@@ -74,7 +74,7 @@ function _decodeEncodedUserRecord() {
               dependencyMap = dependencyMap(table, 5);
               asyncGeneratorStep = 5;
               createdAt = 1882;
-              c5 = 14921;
+              c5 = 14988;
               closure_6 = 2;
               const obj3 = { id: null, discriminator: null, avatar: null, username: null };
               obj3[0] = asyncGeneratorStep;

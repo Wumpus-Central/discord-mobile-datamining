@@ -1,6 +1,6 @@
-// === Module 6688: MarketingPageBannerTile ===
+// === Module 7663: MarketingPageBannerTile ===
 
-// Module 6688 (MarketingPageBannerTile)
+// Module 7663 (MarketingPageBannerTile)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -36,7 +36,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   let helpArticleLinkProps;
   ({ style, cardStyle, componentId, analyticsPage, onPaymentSuccess, onPaymentDismiss } = bannerFields);
   const tmp = createCacheKey();
-  let obj = helpArticleLinkProps(6689);
+  let obj = helpArticleLinkProps(7664);
   const button = bannerFields.button;
   let buttonAction;
   if (button != null) {
@@ -51,7 +51,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     }
   }
   obj[1] = value;
-  obj[2] = importDefault(5519)().analyticsLocations;
+  obj[2] = importDefault(5581)().analyticsLocations;
   obj[3] = analyticsPage;
   obj[4] = onPaymentSuccess;
   obj[5] = onPaymentDismiss;
@@ -59,12 +59,12 @@ export default function MarketingPageBannerTile(bannerFields) {
   const buttonActionHandler = obj.getButtonActionHandler(obj);
   obj[0] = helpArticleLinkProps(503).ImpressionTypes.VIEW;
   obj[1] = helpArticleLinkProps(503).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  const tmp2Result = importDefault(8436);
-  obj[2] = { component_type: helpArticleLinkProps(6570).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId };
+  const tmp2Result = importDefault(8741);
+  obj[2] = { component_type: helpArticleLinkProps(7556).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId };
   tmp2Result(obj);
-  let tmp4Result = tmp4(12451);
+  let tmp4Result = tmp4(12549);
   const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
-  tmp4Result = tmp4(12451);
+  tmp4Result = tmp4(12549);
   helpArticleLinkProps = tmp4Result.getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj2 = { style: items, children: null };
   items = [tmp.container, style];
@@ -79,7 +79,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     obj4[1] = tmp.image;
     tmp12Result = tmp12(closure_3, obj4);
   }
-  const items2 = [tmp12Result, closure_5(helpArticleLinkProps(4189).Text, { color: "mobile-text-heading-primary", variant: "text-lg/bold", children: bannerFields.header }), , ];
+  const items2 = [tmp12Result, closure_5(helpArticleLinkProps(4251).Text, { color: "mobile-text-heading-primary", variant: "text-lg/bold", children: bannerFields.header }), , ];
   const obj7 = { color: "mobile-text-heading-primary", variant: "text-sm/medium", style: tmp.bodyText, children: null };
   const items3 = [formatStringWithCommonPremiumParams, " ", ];
   tmp12Result = null != helpArticleLinkProps;
@@ -89,11 +89,11 @@ export default function MarketingPageBannerTile(bannerFields) {
       return outer1_1(outer1_2[12]).openURL(helpArticleLinkProps.url);
     };
     obj8[4] = helpArticleLinkProps.linkText;
-    tmp12Result = tmp12(tmp4(4189).Text, obj8);
+    tmp12Result = tmp12(tmp4(4251).Text, obj8);
   }
   items3[2] = tmp12Result;
   obj7[3] = items3;
-  items2[2] = closure_6(helpArticleLinkProps(4189).Text, obj7);
+  items2[2] = closure_6(helpArticleLinkProps(4251).Text, obj7);
   let tmp12Result1 = null != bannerFields.button;
   if (tmp12Result1) {
     const obj9 = { style: null, children: null };
@@ -101,7 +101,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     const obj10 = { text: null, onPress: null };
     obj10[0] = bannerFields.button.copy;
     obj10[1] = buttonActionHandler;
-    obj9[1] = tmp12(tmp2(8437), obj10);
+    obj9[1] = tmp12(tmp2(8742), obj10);
     tmp12Result1 = tmp12(tmp13, obj9);
   }
   items2[3] = tmp12Result1;

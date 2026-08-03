@@ -1,6 +1,6 @@
-// === Module 16372: close ===
+// === Module 16438: close ===
 
-// Module 16372 (close)
+// Module 16438 (close)
 import InvitesDisabledRow from "InvitesDisabledRow";
 import GuildSettingsModalServerTag from "GuildSettingsModalServerTag";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -12,9 +12,9 @@ let error;
 let metroImportAll;
 const require = arg1;
 function close() {
-  importDefault(16373).terminate();
-  const obj = importDefault(16373);
-  importDefault(8308).close();
+  importDefault(16439).terminate();
+  const obj = importDefault(16439);
+  importDefault(8613).close();
 }
 ({ GuildSettingsSections: error, WebhookTypes: metroImportAll } = ME);
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");

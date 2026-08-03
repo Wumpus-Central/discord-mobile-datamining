@@ -1,6 +1,6 @@
-// === Module 12822: getIconURL ===
+// === Module 12885: getIconURL ===
 
-// Module 12822 (getIconURL)
+// Module 12885 (getIconURL)
 import "createExecutable";
 
 let c2 = "xbox:";
@@ -15,7 +15,7 @@ class XboxApplicationRecord extends tmp2 {
   }
 }
 XboxApplicationRecord.prototype["getIconURL"] = function getIconURL() {
-  return importDefault(4875).get("xbox").icon.lightPNG;
+  return importDefault(4937).get("xbox").icon.lightPNG;
 };
 
 export default XboxApplicationRecord;

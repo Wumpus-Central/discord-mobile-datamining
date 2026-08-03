@@ -1,6 +1,6 @@
-// === Module 7803: GUILD_REPORT_RAID_MOBILE_KEY ===
+// === Module 7921: GUILD_REPORT_RAID_MOBILE_KEY ===
 
-// Module 7803 (GUILD_REPORT_RAID_MOBILE_KEY)
+// Module 7921 (GUILD_REPORT_RAID_MOBILE_KEY)
 import { Permissions } from "sum";
 import importAllResult from "fromString";
 

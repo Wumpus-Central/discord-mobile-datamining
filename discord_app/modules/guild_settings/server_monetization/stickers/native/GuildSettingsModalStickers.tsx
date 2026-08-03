@@ -1,6 +1,6 @@
-// === Module 16430: BoostedGuildTiers ===
+// === Module 16496: BoostedGuildTiers ===
 
-// Module 16430 (BoostedGuildTiers)
+// Module 16496 (BoostedGuildTiers)
 import get_ActivityIndicator from "useLoadGuildStickersWithCreator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

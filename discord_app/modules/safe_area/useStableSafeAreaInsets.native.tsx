@@ -1,6 +1,6 @@
-// === Module 10678: useStableSafeAreaInsets ===
+// === Module 10786: useStableSafeAreaInsets ===
 
-// Module 10678 (useStableSafeAreaInsets)
+// Module 10786 (useStableSafeAreaInsets)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

@@ -1,6 +1,6 @@
-// === Module 12415: UserPreview ===
+// === Module 12513: UserPreview ===
 
-// Module 12415 (UserPreview)
+// Module 12513 (UserPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -23,13 +23,13 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 export default function UserPreview(user) {
   user = user.user;
   const tmp = createCacheKey();
-  let obj = require(4037) /* hexToRgba */;
+  let obj = require(4099) /* hexToRgba */;
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.Rsth7z).toUpperCase();
-  const items = [callback(require(4189) /* Text */.Text, obj), ];
+  const items = [callback(require(4251) /* Text */.Text, obj), ];
   const obj1 = { style: items1, children: null };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
   const obj2 = { size: null, user: null, guildId: "Array" };
@@ -41,9 +41,9 @@ export default function UserPreview(user) {
   if (tmp7Result) {
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj4[2] = user.globalName;
-    tmp7Result = tmp7(tmp2(4189).Text, obj4);
+    tmp7Result = tmp7(tmp2(4251).Text, obj4);
   }
-  const items3 = [tmp7Result, callback(require(4189) /* Text */.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
+  const items3 = [tmp7Result, callback(require(4251) /* Text */.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
   obj3[1] = items3;
   items2[1] = closure_4(View, obj3);
   obj1[1] = items2;

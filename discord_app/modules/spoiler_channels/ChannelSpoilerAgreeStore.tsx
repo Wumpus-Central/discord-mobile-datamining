@@ -1,6 +1,6 @@
-// === Module 7733: initialize ===
+// === Module 5843: initialize ===
 
-// Module 7733 (initialize)
+// Module 5843 (initialize)
 import fetchFingerprint from "fetchFingerprint";
 import { DeviceSettingsStore } from "initialize";
 

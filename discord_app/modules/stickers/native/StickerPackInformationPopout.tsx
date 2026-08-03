@@ -1,6 +1,6 @@
-// === Module 9645: StickerPackInformationPopout ===
+// === Module 9792: StickerPackInformationPopout ===
 
-// Module 9645 (StickerPackInformationPopout)
+// Module 9792 (StickerPackInformationPopout)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -33,7 +33,7 @@ export default function StickerPackInformationPopout(stickerPack) {
   const tmp = createCacheKey();
   _require = tmp;
   let items = [];
-  let obj = _require(4528);
+  let obj = _require(4590);
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
     const intl = tmp2(1236).intl;
@@ -46,15 +46,15 @@ export default function StickerPackInformationPopout(stickerPack) {
   const obj2 = { style: tmp.informationHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1236).intl;
   obj2[3] = intl2.format(_require(1236).t.XDm6yN, { stickerPackName: stickerPack.name });
-  const items2 = [callback(_require(4189).Text, obj2), ];
+  const items2 = [callback(_require(4251).Text, obj2), ];
   const obj4 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl3 = tmp2(1236).intl;
   obj4[2] = intl3.string(_require(1236).t.cpT0Cq);
   const obj5 = { variant: "text-md/bold", color: "text-brand", children: null };
   const intl4 = tmp2(1236).intl;
   obj5[2] = intl4.string(_require(1236).t.cpT0Cq);
-  obj4[3] = callback(_require(4189).Text, obj5);
-  items2[1] = callback(_require(4721).PressableOpacity, obj4);
+  obj4[3] = callback(_require(4251).Text, obj5);
+  items2[1] = callback(_require(4783).PressableOpacity, obj4);
   obj1[1] = items2;
   const items3 = [
     callback2(closure_2, obj1),
@@ -78,7 +78,7 @@ export default function StickerPackInformationPopout(stickerPack) {
 };
 export const doesStickerPackHavePopoutInformation = function doesStickerPackHavePopoutInformation(stickerPack) {
   const items = [];
-  let obj = require(4528) /* getStickerExtensionFromFormatType */;
+  let obj = require(4590) /* getStickerExtensionFromFormatType */;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
     const intl = tmp(1236).intl;

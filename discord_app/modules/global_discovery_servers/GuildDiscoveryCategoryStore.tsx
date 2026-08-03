@@ -1,6 +1,6 @@
-// === Module 15362: getPrimaryCategories ===
+// === Module 15429: getPrimaryCategories ===
 
-// Module 15362 (getPrimaryCategories)
+// Module 15429 (getPrimaryCategories)
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import { Store } from "initialize";
 

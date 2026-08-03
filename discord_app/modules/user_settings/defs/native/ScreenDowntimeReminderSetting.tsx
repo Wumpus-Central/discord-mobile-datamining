@@ -1,6 +1,6 @@
-// === Module 14495: toggle ===
+// === Module 14562: toggle ===
 
-// Module 14495 (toggle)
+// Module 14562 (toggle)
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import createToggle from "createToggle";
 
@@ -20,13 +20,13 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => obj.screenDowntimeReminder);
   },
   onValueChange(screenDowntimeReminder) {
-    return importDefault(14496).setScreenDowntimeReminder(screenDowntimeReminder);
+    return importDefault(14563).setScreenDowntimeReminder(screenDowntimeReminder);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = require(5859) /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
-    const obj = require(5859) /* apexExperiment */;
-    const tmp2 = importDefault(13961)();
-    const hasActiveParentLinks = require(6258) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+    let isFamilyCenterV3Enabled = require(6950) /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
+    const obj = require(6950) /* apexExperiment */;
+    const tmp2 = importDefault(14028)();
+    const hasActiveParentLinks = require(7247) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }

@@ -1,6 +1,6 @@
-// === Module 12810: dismissGdmBlockedUserWarning ===
+// === Module 12873: dismissGdmBlockedUserWarning ===
 
-// Module 12810 (dismissGdmBlockedUserWarning)
+// Module 12873 (dismissGdmBlockedUserWarning)
 import { setDismissalTimeForChannel as closure_2 } from "useSharedSpacesWarningStore";
 import { Endpoints } from "ME";
 

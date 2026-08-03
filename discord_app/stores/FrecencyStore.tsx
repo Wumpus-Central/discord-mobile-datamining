@@ -1,6 +1,6 @@
-// === Module 5103: handleChannelSelect ===
+// === Module 5165: handleChannelSelect ===
 
-// Module 5103 (handleChannelSelect)
+// Module 5165 (handleChannelSelect)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

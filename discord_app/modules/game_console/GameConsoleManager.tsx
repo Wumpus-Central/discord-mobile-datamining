@@ -1,6 +1,6 @@
-// === Module 16208: syncLocalState ===
+// === Module 16272: syncLocalState ===
 
-// Module 16208 (syncLocalState)
+// Module 16272 (syncLocalState)
 import updateVoiceState from "updateVoiceState";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -105,9 +105,9 @@ function _syncLocalState() {
 let prototype = function GameConsoleManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const require = applyArgumentsResult;
-  const timeout = new require(4078) /* start */.Timeout();
+  const timeout = new require(4140) /* start */.Timeout();
   applyArgumentsResult.rollbackCommandTimeout = timeout;
-  const timeout1 = new require(4078) /* start */.Timeout();
+  const timeout1 = new require(4140) /* start */.Timeout();
   applyArgumentsResult.awaitRemoteTimeout = timeout1;
   applyArgumentsResult.actions = {
     WAIT_FOR_REMOTE_SESSION() {
@@ -235,14 +235,14 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = callback(9048);
+      let obj = callback(9221);
       obj.disconnectRemote();
       obj = { title: null, body: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.wGMxr3);
       const intl2 = callback(1236).intl;
       obj[1] = intl2.string(callback(1236).t.i5k8b5);
-      callback2(4532).show(obj);
+      callback2(4594).show(obj);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {

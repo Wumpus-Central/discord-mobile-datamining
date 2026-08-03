@@ -1,6 +1,6 @@
-// === Module 10879: ? ===
+// === Module 10979: ? ===
 
-// Module 10879
+// Module 10979
 import _slicedToArray from "_slicedToArray";
 import { View } from "get ActivityIndicator";
 import getParticipants from "getParticipants";
@@ -36,7 +36,7 @@ const memoResult = importAllResult.memo((channel) => {
     const speakingParticipants = outer1_5.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), outer1_5.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(5025).isVersionEqual), 1)[0];
+  }, items1, channel(5087).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -53,7 +53,7 @@ const memoResult = importAllResult.memo((channel) => {
       obj2[1] = first;
       obj2[3] = channel.id;
       obj2[4] = channel.getGuildId();
-      obj1[1] = callback3(importDefault(10030), obj2);
+      obj1[1] = callback3(importDefault(10172), obj2);
       const items2 = [callback3(View, obj1), ];
       const obj3 = { style: null, children: null };
       obj3[0] = tmp.participantNameplateContainer;
@@ -63,12 +63,12 @@ const memoResult = importAllResult.memo((channel) => {
       const obj5 = { count: null };
       obj5[0] = first.length;
       obj4[3] = intl.format(tmp2(1236).t["+dia6l"], obj5);
-      obj3[1] = callback3(tmp2(4189).Text, obj4);
+      obj3[1] = callback3(tmp2(4251).Text, obj4);
       items2[1] = callback3(View, obj3);
       obj[1] = items2;
       obj[3] = callback4(View, obj);
-      tmp5 = callback3(tmp2(4721).PressableOpacity, obj);
-      const tmp10 = importDefault(10030);
+      tmp5 = callback3(tmp2(4783).PressableOpacity, obj);
+      const tmp10 = importDefault(10172);
     }
   }
   return tmp5;

@@ -1,6 +1,6 @@
-// === Module 9462: MessageReactions ===
+// === Module 9609: MessageReactions ===
 
-// Module 9462 (MessageReactions)
+// Module 9609 (MessageReactions)
 import noop from "noop";
 import reinjectEphemerals from "reinjectEphemerals";
 import { jsx } from "jsxProd";

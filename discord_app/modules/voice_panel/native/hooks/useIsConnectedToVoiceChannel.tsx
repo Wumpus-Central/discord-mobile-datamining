@@ -1,6 +1,6 @@
-// === Module 15885: useIsConnectedToVoiceChannel ===
+// === Module 15949: useIsConnectedToVoiceChannel ===
 
-// Module 15885 (useIsConnectedToVoiceChannel)
+// Module 15949 (useIsConnectedToVoiceChannel)
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import updateVoiceState from "updateVoiceState";

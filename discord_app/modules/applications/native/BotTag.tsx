@@ -1,6 +1,6 @@
-// === Module 8400: getBotLabel ===
+// === Module 8705: getBotLabel ===
 
-// Module 8400 (getBotLabel)
+// Module 8705 (getBotLabel)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { BotTagTypes } from "ApplicationTypes";

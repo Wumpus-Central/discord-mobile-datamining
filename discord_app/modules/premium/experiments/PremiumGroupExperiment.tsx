@@ -1,6 +1,6 @@
-// === Module 11932: usePremiumGroupExperiment ===
+// === Module 12028: usePremiumGroupExperiment ===
 
-// Module 11932 (usePremiumGroupExperiment)
+// Module 12028 (usePremiumGroupExperiment)
 import ApexExperiment from "ApexExperiment";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2025-12-katsudon", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

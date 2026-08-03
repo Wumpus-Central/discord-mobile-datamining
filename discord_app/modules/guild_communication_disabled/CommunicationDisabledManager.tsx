@@ -1,6 +1,6 @@
-// === Module 11568: clearGuildMemberTimeout ===
+// === Module 11675: clearGuildMemberTimeout ===
 
-// Module 11568 (clearGuildMemberTimeout)
+// Module 11675 (clearGuildMemberTimeout)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import closure_5 from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -51,7 +51,7 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         importDefault(709).dispatch(obj1);
         const obj4 = importDefault(709);
       }
-      obj6 = require(3810) /* isCommunicationDisabled */;
+      obj6 = require(3872) /* isCommunicationDisabled */;
     }
   }
 }

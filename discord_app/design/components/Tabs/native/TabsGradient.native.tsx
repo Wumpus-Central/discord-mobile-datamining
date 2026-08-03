@@ -1,12 +1,12 @@
-// === Module 11876: TabsGradient ===
+// === Module 11972: TabsGradient ===
 
-// Module 11876 (TabsGradient)
+// Module 11972 (TabsGradient)
 import noop from "noop";
 import { HorizontalGradient } from "ME";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4054";
+import importDefaultResult from "module_4116";
 
 let c4;
 let c5;

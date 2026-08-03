@@ -1,6 +1,6 @@
-// === Module 14603: Content ===
+// === Module 14670: Content ===
 
-// Module 14603 (Content)
+// Module 14670 (Content)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "set";
@@ -173,7 +173,7 @@ export default function UserSettingsDesignSystemCoachmark() {
   obj = { children: null };
   obj = { children: null };
   obj[0] = callback(Content, {});
-  obj[0] = callback(require(5506) /* Layer */.LayerScope, obj);
+  obj[0] = callback(require(5568) /* Layer */.LayerScope, obj);
   obj[2] = callback(closure_6, obj);
-  return callback(require(5181) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(require(5243) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

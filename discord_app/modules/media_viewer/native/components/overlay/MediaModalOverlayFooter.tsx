@@ -1,6 +1,6 @@
-// === Module 12330: clamp ===
+// === Module 12428: clamp ===
 
-// Module 12330 (clamp)
+// Module 12428 (clamp)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";
@@ -296,7 +296,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
       if (translationY > 0) {
         const _Math3 = Math;
         const diff = 1 - translationY / Math.abs(closure_10 - (_slicedToArray + closure_8));
-        if (typeof outer1_10 !== "fileFinishedImporting") {
+        if (typeof outer1_10 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Math4 = Math;
@@ -309,7 +309,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         }
       } else {
         const result2 = -translationY / 3;
-        if (typeof outer1_10 !== "fileFinishedImporting") {
+        if (typeof outer1_10 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Math = Math;

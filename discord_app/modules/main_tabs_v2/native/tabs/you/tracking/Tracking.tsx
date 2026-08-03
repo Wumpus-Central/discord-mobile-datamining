@@ -1,6 +1,6 @@
-// === Module 15646: trackYouTabAvatarPress ===
+// === Module 15711: trackYouTabAvatarPress ===
 
-// Module 15646 (trackYouTabAvatarPress)
+// Module 15711 (trackYouTabAvatarPress)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");

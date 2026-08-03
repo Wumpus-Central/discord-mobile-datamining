@@ -1,6 +1,6 @@
-// === Module 4769: GUILD_PRODUCT_EDIT_MODAL_KEY ===
+// === Module 4831: GUILD_PRODUCT_EDIT_MODAL_KEY ===
 
-// Module 4769 (GUILD_PRODUCT_EDIT_MODAL_KEY)
+// Module 4831 (GUILD_PRODUCT_EDIT_MODAL_KEY)
 const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductConstants.tsx");
 
 export const GUILD_PRODUCT_EDIT_MODAL_KEY = "guild-product-edit-modal";

@@ -1,6 +1,6 @@
-// === Module 16403: makeRequest ===
+// === Module 16469: makeRequest ===
 
-// Module 16403 (makeRequest)
+// Module 16469 (makeRequest)
 import AuditLogActions from "AuditLogActions";
 import ME from "ME";
 
@@ -145,7 +145,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
       if (!tmp5) {
         if (null != guildId) {
           importDefault(709).dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: "padding" };
+          obj = { userId: null, action: "Array", targetId: "isArray" };
           obj[0] = id;
           const tmp10Result = importDefault(709);
           nextPromise = makeRequest(guildId, obj).then((body) => {
@@ -177,7 +177,7 @@ export const filterByTargetId = function filterByTargetId(arg0, arg1) {
       if (!tmp5) {
         if (null != arg1) {
           importDefault(709).dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: "Array" };
+          obj = { userId: null, action: "Array", targetId: true };
           obj[2] = arg0;
           const tmp10Result = importDefault(709);
           nextPromise = makeRequest(arg1, obj).then((body) => {

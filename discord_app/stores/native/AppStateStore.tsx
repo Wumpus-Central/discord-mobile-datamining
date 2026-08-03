@@ -1,6 +1,6 @@
-// === Module 6331: getState ===
+// === Module 6773: getState ===
 
-// Module 6331 (getState)
+// Module 6773 (getState)
 import { AppStates } from "ME";
 import { Store } from "initialize";
 import promise from "expandEventProperties";

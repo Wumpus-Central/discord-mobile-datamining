@@ -1,6 +1,6 @@
-// === Module 10467: InappropriateConversationWarningBanner ===
+// === Module 10605: InappropriateConversationWarningBanner ===
 
-// Module 10467 (InappropriateConversationWarningBanner)
+// Module 10605 (InappropriateConversationWarningBanner)
 import noop from "noop";
 import upsertRelationship from "upsertRelationship";
 import { SafetyWarningTypes } from "handleConnectionOpen";

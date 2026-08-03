@@ -1,6 +1,6 @@
-// === Module 15530: useSearchMessageTimestamp ===
+// === Module 15597: useSearchMessageTimestamp ===
 
-// Module 15530 (useSearchMessageTimestamp)
+// Module 15597 (useSearchMessageTimestamp)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 11800: useBackHandlerSkipPhoneScreens ===
+// === Module 11902: useBackHandlerSkipPhoneScreens ===
 
-// Module 11800 (useBackHandlerSkipPhoneScreens)
+// Module 11902 (useBackHandlerSkipPhoneScreens)
 import { NativeModules } from "get ActivityIndicator";
 import { ContactSyncScenes } from "ContactSyncLandingPage";
 
@@ -9,7 +9,7 @@ const result = require("useNavigatorBackPressHandler").fileFinishedImporting("mo
 export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  _require(5153).useNavigatorBackPressHandler(() => {
+  _require(5215).useNavigatorBackPressHandler(() => {
     if (null != closure_1) {
       tmp();
     } else {
@@ -27,7 +27,7 @@ export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   });
 };
 export const useBackHandlerMinimizeApp = function useBackHandlerMinimizeApp() {
-  require(5153) /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
+  require(5215) /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
     MinimizeApp = MinimizeApp.MinimizeApp;
     MinimizeApp.minimizeApp();
     return true;

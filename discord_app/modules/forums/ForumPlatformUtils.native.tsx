@@ -1,6 +1,6 @@
-// === Module 6722: getSystemLocale ===
+// === Module 7693: getSystemLocale ===
 
-// Module 6722 (getSystemLocale)
+// Module 7693 (getSystemLocale)
 const result = require("set").fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");
 
 export default {

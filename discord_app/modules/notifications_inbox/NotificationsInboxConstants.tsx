@@ -1,6 +1,6 @@
-// === Module 7943: ANALYTICS_NAME ===
+// === Module 8061: ANALYTICS_NAME ===
 
-// Module 7943 (ANALYTICS_NAME)
+// Module 8061 (ANALYTICS_NAME)
 import { NOTIFICATIONS_INBOX } from "ME";
 
 let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
@@ -33,7 +33,7 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
     const intl = require(1236) /* getSystemLocale */.intl;
     stringResult = intl.string(require(1236) /* getSystemLocale */.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "SUBSCRIPTION" };
+  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "header" };
   obj[4] = [];
   return tmp2(1411).fromGuildBasic(obj);
 };

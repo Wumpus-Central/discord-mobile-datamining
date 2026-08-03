@@ -1,6 +1,6 @@
-// === Module 14202: ? ===
+// === Module 14269: ? ===
 
-// Module 14202
+// Module 14269
 import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -31,7 +31,7 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
     return str;
   }, items1);
   const style = [StyleSheet.absoluteFillObject, animatedStyle];
-  return jsx(str(4593), { nativeID: "quest-dock-blurred-background", blurTintRgba, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor, style, layout });
+  return jsx(str(4655), { nativeID: "quest-dock-blurred-background", blurTintRgba, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor, style, layout });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
 

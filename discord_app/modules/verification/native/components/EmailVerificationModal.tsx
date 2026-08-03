@@ -1,6 +1,6 @@
-// === Module 9187: closeModal ===
+// === Module 9360: closeModal ===
 
-// Module 9187 (closeModal)
+// Module 9360 (closeModal)
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -11,7 +11,7 @@ import { jsx } from "set";
 const require = arg1;
 function closeModal() {
   resetChangeEmailStore();
-  importDefault(9186).close();
+  importDefault(9359).close();
 }
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 

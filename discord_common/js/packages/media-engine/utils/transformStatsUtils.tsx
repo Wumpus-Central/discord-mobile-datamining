@@ -1,6 +1,6 @@
-// === Module 4352: formatSinkWantStat ===
+// === Module 4414: formatSinkWantStat ===
 
-// Module 4352 (formatSinkWantStat)
+// Module 4414 (formatSinkWantStat)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/utils/transformStatsUtils.tsx");
 
 export const formatSinkWantStat = function formatSinkWantStat(id, ssrc, arg2) {

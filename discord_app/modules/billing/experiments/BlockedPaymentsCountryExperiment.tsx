@@ -1,6 +1,6 @@
-// === Module 6294: useBlockedPaymentsConfig ===
+// === Module 6778: useBlockedPaymentsConfig ===
 
-// Module 6294 (useBlockedPaymentsConfig)
+// Module 6778 (useBlockedPaymentsConfig)
 import createExperiment from "createExperiment";
 import ApexExperiment from "ApexExperiment";
 
@@ -17,7 +17,7 @@ export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
     enabled = closure_3.useConfig({ location: "c519a9_1" }).enabled;
   }
   if (!enabled) {
-    enabled = "RU" === importDefault(6295)().defaultBillingCountryCode;
+    enabled = "RU" === importDefault(6779)().defaultBillingCountryCode;
   }
   return enabled;
 };

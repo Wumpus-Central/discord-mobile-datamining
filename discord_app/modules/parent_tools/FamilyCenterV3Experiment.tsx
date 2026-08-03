@@ -1,6 +1,6 @@
-// === Module 5859: apexExperiment ===
+// === Module 6950: apexExperiment ===
 
-// Module 5859 (apexExperiment)
+// Module 6950 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-01-family-center-v3", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

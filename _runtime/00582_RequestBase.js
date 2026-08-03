@@ -124,8 +124,8 @@ class RequestBase {
         }
         if (require) {
           if (require.status) {
-            tmp8 = f18733;
-            if (f18733.has(require.status)) {
+            tmp8 = f18799;
+            if (f18799.has(require.status)) {
               flag7 = true;
               return true;
             }
@@ -223,7 +223,7 @@ class RequestBase {
     return this;
   }
   ok(arg0) {
-    if (typeof global === "disabledUntil") {
+    if (typeof global === "HAS_APPLICATION") {
       tmp = globalThis;
       _Error = Error;
       tmp2 = new.target;
@@ -364,7 +364,7 @@ class RequestBase {
             throw error2;
           } else {
             StringResult = require;
-            if (typeof require !== "onScroll") {
+            if (typeof require !== "ta") {
               _String = String;
               StringResult = String(require);
             }
@@ -467,7 +467,7 @@ class RequestBase {
     return this;
   }
   maxResponseSize(arg0) {
-    if (typeof global === "__REMOTEDEV__") {
+    if (typeof global === "SENTRY_RELEASE") {
       tmp = globalThis;
       _TypeError = TypeError;
       tmp2 = new.target;
@@ -524,7 +524,7 @@ class RequestBase {
               tmp20 = keys[tmp];
               while (tmp20 !== undefined) {
                 tmp40 = tmp20;
-                if (typeof global[tmp20] !== "ActionSheetHeaderPressableText") {
+                if (typeof global[tmp20] !== "W") {
                   if (!global[tmp20].toJSON) {
                     tmp21 = globalThis;
                     _Error2 = Error;
@@ -648,7 +648,7 @@ class RequestBase {
         num = 1;
         str3 = url1.slice(index + 1);
         parts = str3.split("&");
-        if (typeof self._sort === "fileFinishedImporting") {
+        if (typeof self._sort === "error") {
           sorted = parts.sort(self._sort);
         } else {
           sorted1 = parts.sort();

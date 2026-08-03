@@ -1,6 +1,6 @@
-// === Module 8227: useLazyAPIPromise ===
+// === Module 8534: useLazyAPIPromise ===
 
-// Module 8227 (useLazyAPIPromise)
+// Module 8534 (useLazyAPIPromise)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

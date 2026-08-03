@@ -1,6 +1,6 @@
-// === Module 5948: recountRelationshipTypes ===
+// === Module 7027: recountRelationshipTypes ===
 
-// Module 5948 (recountRelationshipTypes)
+// Module 7027 (recountRelationshipTypes)
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
 import { Store } from "initialize";
@@ -31,7 +31,7 @@ function recountRelationshipTypes() {
   let closure_9 = c2;
 }
 function remove(arg0, arg1) {
-  if (typeof GAME_RELATIONSHIP_KEY !== "fileFinishedImporting") {
+  if (typeof GAME_RELATIONSHIP_KEY !== "error") {
     HermesBuiltin.throwTypeError();
   }
   secondaryIndexMap.delete("" + arg1 + "-" + arg0);
@@ -50,15 +50,15 @@ function GameRelationshipIndexes_BY_RELATIONSHIP_TYPE(arg0) {
 }
 const secondaryIndexMap = new require("version").SecondaryIndexMap(function gameRelationshipsIndex(applicationId) {
   const items = [];
-  if (typeof GameRelationshipIndexes_BY_APPLICATION_ID !== "fileFinishedImporting") {
+  if (typeof GameRelationshipIndexes_BY_APPLICATION_ID !== "error") {
     HermesBuiltin.throwTypeError();
   }
   items.push("application-id-" + applicationId.applicationId);
-  if (typeof GameRelationshipIndexes_BY_USER_ID !== "fileFinishedImporting") {
+  if (typeof GameRelationshipIndexes_BY_USER_ID !== "error") {
     HermesBuiltin.throwTypeError();
   }
   items.push("user-id-" + applicationId.id);
-  if (typeof GameRelationshipIndexes_BY_RELATIONSHIP_TYPE !== "fileFinishedImporting") {
+  if (typeof GameRelationshipIndexes_BY_RELATIONSHIP_TYPE !== "error") {
     HermesBuiltin.throwTypeError();
   }
   items.push("relationship-type-" + applicationId.type);
@@ -83,14 +83,14 @@ prototype["getGameFriendCount"] = function getGameFriendCount() {
   return c9;
 };
 prototype["getGameFriendsForApplication"] = function getGameFriendsForApplication(arg0) {
-  if (typeof GameRelationshipIndexes_BY_APPLICATION_ID !== "fileFinishedImporting") {
+  if (typeof GameRelationshipIndexes_BY_APPLICATION_ID !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const values = secondaryIndexMap.values("application-id-" + arg0, true);
   return values.filter((type) => type.type === constants.FRIEND);
 };
 prototype["getGameRelationshipsForUser"] = function getGameRelationshipsForUser(upsertRelationship) {
-  if (typeof GameRelationshipIndexes_BY_USER_ID !== "fileFinishedImporting") {
+  if (typeof GameRelationshipIndexes_BY_USER_ID !== "error") {
     HermesBuiltin.throwTypeError();
   }
   return secondaryIndexMap.values("user-id-" + upsertRelationship, true);
@@ -110,7 +110,7 @@ prototype["getGameRelationships"] = function getGameRelationships() {
   return secondaryIndexMap;
 };
 prototype["getGameRelationshipsByType"] = function getGameRelationshipsByType(PENDING_INCOMING) {
-  if (typeof GameRelationshipIndexes_BY_RELATIONSHIP_TYPE !== "fileFinishedImporting") {
+  if (typeof GameRelationshipIndexes_BY_RELATIONSHIP_TYPE !== "error") {
     HermesBuiltin.throwTypeError();
   }
   return secondaryIndexMap.values("relationship-type-" + PENDING_INCOMING, true);
@@ -127,7 +127,7 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
       let applicationId;
       const obj = { id: id.id, applicationId: id.application_id, type: id.type, since: id.since, dmAccessType: id.dm_access_type };
       ({ id, applicationId } = obj);
-      if (typeof c2 !== "fileFinishedImporting") {
+      if (typeof c2 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const result = closure_6.set("" + applicationId + "-" + id, obj);
@@ -161,7 +161,7 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
     let id;
     gameRelationship = gameRelationship.gameRelationship;
     ({ id, applicationId } = gameRelationship);
-    if (typeof c2 !== "fileFinishedImporting") {
+    if (typeof c2 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const result = secondaryIndexMap.set("" + applicationId + "-" + id, gameRelationship);
@@ -193,7 +193,7 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
     let applicationId;
     let userId;
     ({ userId, applicationId } = arg0);
-    if (typeof c2 !== "fileFinishedImporting") {
+    if (typeof c2 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     secondaryIndexMap.delete("" + applicationId + "-" + userId);

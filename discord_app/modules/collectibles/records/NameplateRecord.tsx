@@ -19,7 +19,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   let tmp = prototype;
   const merged = Object.assign(super.fromServer(arg0));
   const merged1 = Object.assign(arg0);
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "error") {
     HermesBuiltin.throwTypeError();
   }
   tmp = new tmp(obj, arg0, this, merged);

@@ -1,6 +1,6 @@
-// === Module 15030: handleCreateJoinGuildPress ===
+// === Module 15317: handleCreateJoinGuildPress ===
 
-// Module 15030 (handleCreateJoinGuildPress)
+// Module 15317 (handleCreateJoinGuildPress)
 import jsxProd from "jsxProd";
 import { View } from "CirclePlusIcon";
 import ME from "ME";
@@ -129,20 +129,20 @@ let closure_10 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" }
 let closure_12 = { onPress: handleCreateJoinGuildPress };
 const memoResult = require("set").memo(function GuildsBarCreateJoinButton() {
   const tmp = importDefault(1348)("GuildsBarCreateJoinButton");
-  let obj = require(14969) /* UnreadIndicator */;
+  let obj = require(15258) /* UnreadIndicator */;
   obj = { style: callback2().stretch, children: null };
   const tmp2 = callback2();
-  obj = { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2008, label: null, expandedChildren: null, children: false };
+  obj = { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2010, label: null, expandedChildren: null, children: false };
   obj[5] = closure_12;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[6] = intl.string(require(1236) /* getSystemLocale */.t.l5WIbf);
-  obj[7] = jsx(require(15031) /* HomeDrawerAddServerRowExpandedChildren */.HomeDrawerAddServerRowExpandedChildren, {});
+  obj[7] = jsx(require(15318) /* HomeDrawerAddServerRowExpandedChildren */.HomeDrawerAddServerRowExpandedChildren, {});
   const obj1 = { size: "md", color: null };
   obj1[1] = importDefault(712).colors.MOBILE_GUILDBAR_ICON_DEFAULT;
-  obj[8] = jsx(require(11322) /* CirclePlusIcon */.CirclePlusIcon, { size: "md", color: null });
-  obj[1] = jsx(importDefault(14969), { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2008, label: null, expandedChildren: null, children: false });
-  return <View selected={false} circle={!tmp} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config={2008} label={null} expandedChildren={null}>{false}</View>;
+  obj[8] = jsx(require(11432) /* CirclePlusIcon */.CirclePlusIcon, { size: "md", color: null });
+  obj[1] = jsx(importDefault(15258), { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2010, label: null, expandedChildren: null, children: false });
+  return <View selected={false} circle={!tmp} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config={2010} label={null} expandedChildren={null}>{false}</View>;
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/guilds_bar/native/GuildsBarCreateJoinButton.tsx");
 

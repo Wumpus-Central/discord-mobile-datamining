@@ -1,9 +1,9 @@
-// === Module 12514: PremiumMarketingPage ===
+// === Module 12607: PremiumMarketingPage ===
 
-// Module 12514 (PremiumMarketingPage)
+// Module 12607 (PremiumMarketingPage)
 import Text from "Text";
 import MarketingComponentType from "MarketingComponentType";
-import get_ActivityIndicator from "module_4054";
+import get_ActivityIndicator from "module_4116";
 import { AnalyticEvents } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { FractionalPremiumStates } from "GuildFeatures";

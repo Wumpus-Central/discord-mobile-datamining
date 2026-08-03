@@ -1,6 +1,6 @@
-// === Module 16239: onClose ===
+// === Module 16303: onClose ===
 
-// Module 16239 (onClose)
+// Module 16303 (onClose)
 import "noop";
 import get_ActivityIndicator from "Button";
 import { InteractionModalState } from "getModalState";
@@ -13,7 +13,7 @@ let closure_6;
 let error;
 const require = arg1;
 function onClose() {
-  return importDefault(4399).popWithKey(interaction_modal);
+  return importDefault(4461).popWithKey(interaction_modal);
 }
 class InteractionModal {
   constructor(arg0) {
@@ -123,6 +123,6 @@ const result = require("getModalState").fileFinishedImporting("modules/interacti
 
 export default InteractionModal;
 export const openInteractionModal = function openInteractionModal(closure_0) {
-  let arr = importDefault(4399);
+  let arr = importDefault(4461);
   arr = arr.push(InteractionModal, closure_0, interaction_modal);
 };

@@ -1,10 +1,10 @@
-// === Module 10434: ChatViewWrapperAnimatedKeyboard ===
+// === Module 10572: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 10434 (ChatViewWrapperAnimatedKeyboard)
+// Module 10572 (ChatViewWrapperAnimatedKeyboard)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import { Easing } from "module_4054";
+import { Easing } from "module_4116";
 
 let c5;
 let closure_6;
@@ -20,11 +20,11 @@ let closure_10 = { code: "function ChatViewWrapperAnimatedKeyboardTsx3(){const{a
 let closure_11 = { code: "function ChatViewWrapperAnimatedKeyboardTsx4(finished){const{animatedAdjustedMarginPending,animatedAdjustedMargin}=this.__closure;if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}}" };
 let closure_12 = importAllResult.memo((channelId) => {
   let c0;
-  const tmp = importDefault(5222)();
+  const tmp = importDefault(5284)();
   c0 = tmp;
   const items = [tmp];
   const obj = { style: null };
-  const items1 = [importDefault(10439)(channelId.channelId), importAllResult.useMemo(() => ({ position: "absolute", bottom: -c0, height: c0, right: 0, left: 0 }), items)];
+  const items1 = [importDefault(10577)(channelId.channelId), importAllResult.useMemo(() => ({ position: "absolute", bottom: -c0, height: c0, right: 0, left: 0 }), items)];
   obj[0] = items1;
   return callback(View, obj);
 });

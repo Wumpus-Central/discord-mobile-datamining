@@ -1,6 +1,6 @@
-// === Module 11582: dispatcher ===
+// === Module 11689: dispatcher ===
 
-// Module 11582 (dispatcher)
+// Module 11689 (dispatcher)
 const result = require("set").fileFinishedImporting("modules/guild_progress/GuildProgressActionCreators.tsx");
 
 export default {

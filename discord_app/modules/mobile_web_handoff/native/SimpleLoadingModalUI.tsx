@@ -1,6 +1,6 @@
-// === Module 11830: SimpleLoadingModal ===
+// === Module 5813: SimpleLoadingModal ===
 
-// Module 11830 (SimpleLoadingModal)
+// Module 5813 (SimpleLoadingModal)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -95,7 +95,7 @@ export default function SimpleLoadingModal(operation) {
     },
     children: null
   };
-  obj = { style: callback().modalBackground, children: jsx(operation(5641).ActivityIndicator, {}) };
-  obj[4] = <closure_4 style={callback().modalBackground}>{jsx(operation(5641).ActivityIndicator, {})}</closure_4>;
-  return <cancelable style={callback().modalBackground}>{jsx(operation(5641).ActivityIndicator, {})}</cancelable>;
+  obj = { style: callback().modalBackground, children: jsx(operation(5703).ActivityIndicator, {}) };
+  obj[4] = <closure_4 style={callback().modalBackground}>{jsx(operation(5703).ActivityIndicator, {})}</closure_4>;
+  return <cancelable style={callback().modalBackground}>{jsx(operation(5703).ActivityIndicator, {})}</cancelable>;
 };

@@ -1,6 +1,6 @@
-// === Module 5186: TABLE_ROW_HEIGHT ===
+// === Module 5248: TABLE_ROW_HEIGHT ===
 
-// Module 5186 (TABLE_ROW_HEIGHT)
+// Module 5248 (TABLE_ROW_HEIGHT)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let Platform;

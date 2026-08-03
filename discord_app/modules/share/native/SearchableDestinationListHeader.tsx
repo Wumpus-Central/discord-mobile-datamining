@@ -1,6 +1,6 @@
-// === Module 9918: SearchableDestinationListHeader ===
+// === Module 10061: SearchableDestinationListHeader ===
 
-// Module 9918 (SearchableDestinationListHeader)
+// Module 10061 (SearchableDestinationListHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -35,9 +35,9 @@ export default function SearchableDestinationListHeader(arg0) {
     headerRight: null,
     headerStatusBarHeight: null
   };
-  obj[4] = require(5147) /* HeaderBackImage */.getHeaderCloseButton(onClose);
+  obj[4] = require(5209) /* HeaderBackImage */.getHeaderCloseButton(onClose);
   obj[5] = headerRight;
-  const obj3 = require(5147) /* HeaderBackImage */;
+  const obj3 = require(5209) /* HeaderBackImage */;
   const tmp3 = View;
   const tmp4 = require;
   let num;
@@ -45,10 +45,10 @@ export default function SearchableDestinationListHeader(arg0) {
     if (!tmp4Result.getIsWindowLarge()) {
       num = 0;
     }
-    tmp4Result = tmp4(6564);
+    tmp4Result = tmp4(7550);
   }
   obj[6] = num;
-  obj[1] = jsx(require(5154) /* Background */.Header, {
+  obj[1] = jsx(require(5216) /* Background */.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

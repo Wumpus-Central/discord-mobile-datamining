@@ -1,6 +1,6 @@
-// === Module 11739: useGetJoinRequestAndGuildForInterviewChannel ===
+// === Module 11842: useGetJoinRequestAndGuildForInterviewChannel ===
 
-// Module 11739 (useGetJoinRequestAndGuildForInterviewChannel)
+// Module 11842 (useGetJoinRequestAndGuildForInterviewChannel)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -50,19 +50,19 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   const effect = joinRequest.useEffect(() => {
     if (!tmp) {
       dependencyMap(true);
-      const requestToJoinGuilds = first(9165).fetchRequestToJoinGuilds();
-      const obj = first(9165);
+      const requestToJoinGuilds = first(9338).fetchRequestToJoinGuilds();
+      const obj = first(9338);
     }
   }, items1);
   const items2 = [joinRequest, castResult];
   const effect1 = joinRequest.useEffect(() => {
     if (null == joinRequest) {
       callback(true);
-      const joinRequestForInterview = first(9165).fetchJoinRequestForInterview(_slicedToArray);
+      const joinRequestForInterview = first(9338).fetchJoinRequestForInterview(_slicedToArray);
       joinRequestForInterview.finally(() => {
         callback(false);
       });
-      const obj = first(9165);
+      const obj = first(9338);
     }
   }, items2);
   return { loading, joinRequest, joinRequestGuild };

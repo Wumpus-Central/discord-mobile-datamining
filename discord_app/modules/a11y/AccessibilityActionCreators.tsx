@@ -1,6 +1,6 @@
-// === Module 13521: setFontSize ===
+// === Module 13584: setFontSize ===
 
-// Module 13521 (setFontSize)
+// Module 13584 (setFontSize)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AnalyticEvents } from "ME";
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
@@ -78,7 +78,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(prefersR
   const useReducedMotion2 = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
   if (!useReducedMotion) {
     if (useReducedMotion2) {
-      let tmpResult = tmp(6209);
+      let tmpResult = tmp(8175);
       obj = { gifAutoPlay: null, animateEmoji: null, animateStickers: null };
       const obj1 = { value: false, reasonKey: null };
       obj1[1] = constants.REDUCED_MOTION;
@@ -97,7 +97,7 @@ export const setPrefersReducedMotion = function setPrefersReducedMotion(prefersR
     useReducedMotion = !useReducedMotion2;
   }
   if (useReducedMotion) {
-    tmpResult = tmp(6209);
+    tmpResult = tmp(8175);
     const result1 = tmpResult.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
   }
 };

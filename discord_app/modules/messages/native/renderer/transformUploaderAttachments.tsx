@@ -1,6 +1,6 @@
-// === Module 7997: createUploaderAttachments ===
+// === Module 8115: createUploaderAttachments ===
 
-// Module 7997 (createUploaderAttachments)
+// Module 8115 (createUploaderAttachments)
 import { AttachmentType } from "Changeset";
 
 const result = require("getAttachmentObscurityProps").fileFinishedImporting("modules/messages/native/renderer/transformUploaderAttachments.tsx");

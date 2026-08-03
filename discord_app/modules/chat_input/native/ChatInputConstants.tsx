@@ -1,6 +1,6 @@
-// === Module 11169: TextAreaCta ===
+// === Module 11281: TextAreaCta ===
 
-// Module 11169 (TextAreaCta)
+// Module 11281 (TextAreaCta)
 let obj = { easing: require("Button").STANDARD_EASING, duration: 250 };
 obj = { easing: require("Button").STANDARD_EASING, duration: 50 };
 obj = { easing: require("Button").STANDARD_EASING, duration: 100 };

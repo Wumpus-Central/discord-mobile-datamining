@@ -1,6 +1,6 @@
-// === Module 12432: ExternalLinkItem ===
+// === Module 12530: ExternalLinkItem ===
 
-// Module 12432 (ExternalLinkItem)
+// Module 12530 (ExternalLinkItem)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -16,12 +16,12 @@ function ExternalLinkItem(data) {
     obj[0] = tmp;
     obj[1] = tmp2;
     obj = { IconComponent: null };
-    obj[0] = url(12433).LinkExternalMediumIcon;
-    obj[2] = callback(url(5230).TableRowIcon, obj);
+    obj[0] = url(12531).LinkExternalMediumIcon;
+    obj[2] = callback(url(5292).TableRowIcon, obj);
     obj[3] = function onPress() {
       outer1_1(outer1_2[8]).openURL(url);
     };
-    tmp3 = callback(url(7642).RowButton, obj);
+    tmp3 = callback(url(7768).RowButton, obj);
   }
   return tmp3;
 }
@@ -44,7 +44,7 @@ export default function ExternalLinksElement(elements) {
           obj[0] = tmp.headerText;
           const intl = require(1236) /* getSystemLocale */.intl;
           obj[4] = intl.string(require(1236) /* getSystemLocale */.t.hvVgAZ).toUpperCase();
-          tmp5 = callback(require(4189) /* Text */.Text, obj);
+          tmp5 = callback(require(4251) /* Text */.Text, obj);
           const str = intl.string(require(1236) /* getSystemLocale */.t.hvVgAZ);
         }
         const items = [tmp5, elements.map((data) => callback(closure_7, { data: data.data }, "external-link-" + arg1))];

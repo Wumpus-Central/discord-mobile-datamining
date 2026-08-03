@@ -1,6 +1,6 @@
-// === Module 13796: RestrictedAccountRedirect ===
+// === Module 13863: RestrictedAccountRedirect ===
 
-// Module 13796 (RestrictedAccountRedirect)
+// Module 13863 (RestrictedAccountRedirect)
 import importAllResult from "noop";
 import { View } from "set";
 import upsertRelationship from "upsertRelationship";
@@ -22,7 +22,7 @@ function RestrictedAccountRedirect() {
     obj.openUserSettings(obj);
   };
   obj[2] = SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE;
-  return callback(importDefault(13797), obj);
+  return callback(importDefault(13864), obj);
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo(() => {
   let obj = require(589) /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require(9239) /* handleOpenEmailVerification */;
+  let obj1 = require(9412) /* handleOpenEmailVerification */;
   const bannerText = obj1.getBannerText(stateFromStores);
   const tmp = callback2();
   const items1 = [upsertRelationship];
@@ -58,8 +58,8 @@ const memoResult = importAllResult.memo(() => {
       obj1 = { text: null, accessibilityLabel: null, onPress: null };
       ({ button: obj6[0], button: obj6[1] } = bannerText);
       obj1[2] = callback;
-      obj[4] = callback(tmp2(4604).Button, obj1);
-      tmp14 = callback(tmp2(5224).TableRow, obj);
+      obj[4] = callback(tmp2(4666).Button, obj1);
+      tmp14 = callback(tmp2(5286).TableRow, obj);
     }
     items2[1] = tmp14;
     obj[1] = items2;

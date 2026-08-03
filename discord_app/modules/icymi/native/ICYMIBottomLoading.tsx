@@ -1,6 +1,6 @@
-// === Module 15406: ICYMIBottomLoading ===
+// === Module 15473: ICYMIBottomLoading ===
 
-// Module 15406 (ICYMIBottomLoading)
+// Module 15473 (ICYMIBottomLoading)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

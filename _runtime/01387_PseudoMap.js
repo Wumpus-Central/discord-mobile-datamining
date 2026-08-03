@@ -10,7 +10,7 @@ if (tmp) {
   const _process2 = process;
   process.env.TEST_PSEUDOMAP = "true";
 }
-if (typeof Map !== "disabledUntil") {
+if (typeof Map !== "HAS_APPLICATION") {
   const _process3 = process;
   if (!process.env.TEST_PSEUDOMAP) {
     const _Map = Map;

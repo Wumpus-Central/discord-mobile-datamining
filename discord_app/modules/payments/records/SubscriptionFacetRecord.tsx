@@ -1,6 +1,6 @@
-// === Module 6224: createFromServer ===
+// === Module 6788: createFromServer ===
 
-// Module 6224 (createFromServer)
+// Module 6788 (createFromServer)
 import "toJS";
 
 let prototype;
@@ -77,7 +77,7 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
     if (flag == null) {
       flag = false;
     }
-    if (typeof prototype !== "fileFinishedImporting") {
+    if (typeof prototype !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const tmp13 = new prototype("Trying to call a non-function", renewal_line_items, tmp6, renewal_info, obj, tmp5, prototype, new.target);

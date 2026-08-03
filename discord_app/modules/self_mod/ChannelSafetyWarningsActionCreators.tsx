@@ -1,6 +1,6 @@
-// === Module 10170: dismissChannelSafetyWarnings ===
+// === Module 10309: dismissChannelSafetyWarnings ===
 
-// Module 10170 (dismissChannelSafetyWarnings)
+// Module 10309 (dismissChannelSafetyWarnings)
 import { SafetyWarningTypes } from "handleConnectionOpen";
 import { Endpoints } from "ME";
 

@@ -1,6 +1,6 @@
-// === Module 14794: isValidClipboardCode ===
+// === Module 14861: isValidClipboardCode ===
 
-// Module 14794 (isValidClipboardCode)
+// Module 14861 (isValidClipboardCode)
 import Text from "Text";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -11,9 +11,9 @@ let error;
 let metroImportAll;
 const require = arg1;
 function isValidClipboardCode(arg0) {
-  let tmp3 = arg0.length >= require(14792) /* finishMFACheck */.BACKUP_CODE_MIN_LENGTH;
+  let tmp3 = arg0.length >= require(14859) /* finishMFACheck */.BACKUP_CODE_MIN_LENGTH;
   if (tmp3) {
-    tmp3 = arg0.length <= require(14792) /* finishMFACheck */.BACKUP_CODE_MAX_LENGTH;
+    tmp3 = arg0.length <= require(14859) /* finishMFACheck */.BACKUP_CODE_MAX_LENGTH;
   }
   return tmp3;
 }

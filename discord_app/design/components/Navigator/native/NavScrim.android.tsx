@@ -1,6 +1,6 @@
-// === Module 5505: NavScrim ===
+// === Module 5567: NavScrim ===
 
-// Module 5505 (NavScrim)
+// Module 5567 (NavScrim)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -17,7 +17,7 @@ obj.top = undefined;
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(() => {
-  const insets = importDefault(5219)({ includeCustomKeyboardHeight: false }).insets;
+  const insets = importDefault(5281)({ includeCustomKeyboardHeight: false }).insets;
   let tmp2 = null;
   if (0 !== insets.bottom) {
     let obj = { style: null, pointerEvents: "none" };

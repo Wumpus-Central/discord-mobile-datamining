@@ -1,6 +1,6 @@
-// === Module 8960: get ActivityIndicator ===
+// === Module 9137: get ActivityIndicator ===
 
-// Module 8960 (get ActivityIndicator)
+// Module 9137 (get ActivityIndicator)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");

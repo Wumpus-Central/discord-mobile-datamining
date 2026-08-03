@@ -1,6 +1,6 @@
-// === Module 9801: PremiumGiftSuccessBody ===
+// === Module 9946: PremiumGiftSuccessBody ===
 
-// Module 9801 (PremiumGiftSuccessBody)
+// Module 9946 (PremiumGiftSuccessBody)
 import PremiumGiftBackgroundAnimation from "PremiumGiftBackgroundAnimation";
 import { View } from "_copy";
 import addSku from "addSku";
@@ -35,10 +35,10 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   let giftCodeURL;
   let tmp = createCacheKey();
-  let obj = giftCodeRecord(8813);
+  let obj = giftCodeRecord(8990);
   const nativeGiftContext = obj.useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj1 = giftCodeRecord(4428);
+  let obj1 = giftCodeRecord(4490);
   giftCodeURL = obj1.getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
@@ -46,12 +46,12 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   if (null != giftCodeRecord.subscriptionPlanId) {
     let subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
   } else {
-    subscriptionPlanId = tmp2(3839).getPlanIdForPremiumType(premiumType, planInterval);
-    const tmp2Result = tmp2(3839);
+    subscriptionPlanId = tmp2(3901).getPlanIdForPremiumType(premiumType, planInterval);
+    const tmp2Result = tmp2(3901);
   }
-  let obj3 = giftCodeURL(3839);
+  let obj3 = giftCodeURL(3901);
   const tierDisplayNameByPlanId = obj3.getTierDisplayNameByPlanId(subscriptionPlanId);
-  let obj4 = giftCodeURL(3839);
+  let obj4 = giftCodeURL(3901);
   const items = [giftCodeRecord, giftCodeURL];
   obj = { children: null };
   const callback = React.useCallback(() => {
@@ -65,12 +65,12 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     tmp = giftCodeRecord;
     const result = giftCodeRecord(outer1_2[18]).presentCopiedToClipboard();
   }, items);
-  obj[0] = callback(giftCodeURL(8787), { giftStyle });
+  obj[0] = callback(giftCodeURL(8964), { giftStyle });
   const items1 = [callback(View, obj), , , , ];
   obj = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1236).intl;
   obj[2] = intl.string(giftCodeRecord(1236).t["/s1xR7"]);
-  items1[1] = callback(giftCodeRecord(4189).Text, obj);
+  items1[1] = callback(giftCodeRecord(4251).Text, obj);
   obj1 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl2 = tmp2(1236).intl;
   if (obj4.getInterval(subscriptionPlanId).intervalType === SubscriptionIntervalTypes.YEAR) {
@@ -80,22 +80,22 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   }
   let obj2 = { children: null };
   obj1[2] = intl2.format(bUdTqI, { intervalCount: 1, name: tierDisplayNameByPlanId });
-  items1[2] = callback(giftCodeRecord(4189).Text, obj1);
+  items1[2] = callback(giftCodeRecord(4251).Text, obj1);
   obj3 = { style: tmp.input, children: null };
   obj4 = { style: tmp.inputLabel, variant: "heading-md/bold", children: null };
   const intl3 = tmp2(1236).intl;
   obj4[2] = intl3.string(giftCodeRecord(1236).t["qS+yMo"]);
-  const items2 = [callback(giftCodeRecord(4189).Text, obj4), ];
+  const items2 = [callback(giftCodeRecord(4251).Text, obj4), ];
   const obj5 = { text: giftCodeURL, icon: null, iconPosition: "end", onPress: null };
-  obj5[1] = giftCodeURL(4142);
+  obj5[1] = giftCodeURL(4204);
   obj5[3] = callback;
-  items2[1] = callback(giftCodeRecord(8240).InputButton, obj5);
+  items2[1] = callback(giftCodeRecord(8547).InputButton, obj5);
   obj3[1] = items2;
   items1[3] = closure_10(View, obj3);
   const obj6 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };
   const intl4 = tmp2(1236).intl;
   obj6[2] = intl4.string(giftCodeRecord(1236).t.As9eLl);
-  items1[4] = callback(giftCodeRecord(4189).Text, obj6);
+  items1[4] = callback(giftCodeRecord(4251).Text, obj6);
   obj2[0] = items1;
   return closure_10(closure_9, obj2);
 };

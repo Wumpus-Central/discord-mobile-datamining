@@ -1,6 +1,6 @@
-// === Module 13746: useProfileFrameSections ===
+// === Module 13813: useProfileFrameSections ===
 
-// Module 13746 (useProfileFrameSections)
+// Module 13813 (useProfileFrameSections)
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

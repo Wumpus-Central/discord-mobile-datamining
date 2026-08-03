@@ -1,6 +1,6 @@
-// === Module 4537: getAlertModalItemKey ===
+// === Module 4599: getAlertModalItemKey ===
 
-// Module 4537 (getAlertModalItemKey)
+// Module 4599 (getAlertModalItemKey)
 import sum from "sum";
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
@@ -21,7 +21,7 @@ function getAlertModalItemKey(key) {
   return key.key;
 }
 function dismissTopAlert() {
-  const useAlertStore = _require(4534).useAlertStore;
+  const useAlertStore = _require(4596).useAlertStore;
   const arr = callback3(useAlertStore.getState().alerts);
   const first = arr[0];
   _require = arr.slice(1);
@@ -30,7 +30,7 @@ function dismissTopAlert() {
     tmp4 = false === first.dismissable;
   }
   if (!tmp4) {
-    let tmpResult = tmp(4534);
+    let tmpResult = tmp(4596);
     let key;
     if (first != null) {
       key = first.key;
@@ -48,7 +48,7 @@ function AlertModalBackdrop() {
   const tmp2 = callback2(useSharedAnimationState(), 2);
   let first = tmp2[0];
   const dependencyMap = tmp4;
-  let obj = context(4534);
+  let obj = context(4596);
   const alertStore = obj.useAlertStore((arg0) => {
     const first = arg0.alerts[0];
     let dismissable;
@@ -59,7 +59,7 @@ function AlertModalBackdrop() {
   });
   let fn = function t() {
     let value = tmp4.get();
-    if (typeof outer1_26 !== "fileFinishedImporting") {
+    if (typeof outer1_26 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let obj = { opacity: null };
@@ -80,11 +80,11 @@ function AlertModalBackdrop() {
     obj[0] = context(tmp4[25]).withSpring(value, outer1_14, "animate-always", fn);
     return obj;
   };
-  obj = { withAlertModalSpring, sharedVisible: tmp4, sharedTransitionState: first, TransitionStates: context(4538).TransitionStates, runOnJS: context(4054).runOnJS, cleanUp: context };
+  obj = { withAlertModalSpring, sharedVisible: tmp4, sharedTransitionState: first, TransitionStates: context(4600).TransitionStates, runOnJS: context(4116).runOnJS, cleanUp: context };
   fn.__closure = obj;
   fn.__workletHash = 4470729133936;
   fn.__initData = closure_22;
-  const animatedStyle = context(4054).useAnimatedStyle(fn);
+  const animatedStyle = context(4116).useAnimatedStyle(fn);
   obj = { blur: "strong", style: animatedStyle, onDismiss: null, accessibilityLabel: null };
   let tmp10 = null;
   if (alertStore) {
@@ -93,7 +93,7 @@ function AlertModalBackdrop() {
   obj[2] = tmp10;
   const intl = tmp5(1236).intl;
   obj[3] = intl.string(context(1236).t.Xkfav5);
-  return closure_10(context(4592).Backdrop, obj);
+  return closure_10(context(4654).Backdrop, obj);
 }
 class AlertModal {
   constructor(arg0) {
@@ -122,7 +122,7 @@ class AlertModal {
     enabled = c6.useContext(require("context").AccessibilityPreferencesContext).reducedMotion.enabled;
     ref = c6.useRef(null);
     c4 = ref;
-    obj = require("module_4054");
+    obj = require("module_4116");
     sharedValue = obj.useSharedValue(context1);
     useSharedValue = sharedValue;
     tmp9 = c4(useSharedAnimationState(), 2);
@@ -144,7 +144,7 @@ class AlertModal {
       }
     }, items);
     height = require("useWindowDimensions")().height;
-    obj2 = require("module_4054");
+    obj2 = require("module_4116");
     class B {
       constructor() {
         diff = height - 32;
@@ -152,7 +152,7 @@ class AlertModal {
         obj = c7;
         result = 2 * Math.max(top, bottom);
         value = c7.get();
-        if (typeof outer1_26 !== "fileFinishedImporting") {
+        if (typeof outer1_26 !== "error") {
           str4 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -194,7 +194,7 @@ class AlertModal {
             num3 = 0.1;
             num = 1 - 0.1 * obj4.get();
           }
-          if (typeof tmp3 !== "fileFinishedImporting") {
+          if (typeof tmp3 !== "error") {
             str5 = "Trying to call a non-function";
             throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
@@ -219,7 +219,7 @@ class AlertModal {
             num4 = 50;
             diff1 = 50 - 50 * obj4.get();
           }
-          if (typeof tmp3 !== "fileFinishedImporting") {
+          if (typeof tmp3 !== "error") {
             str6 = "Trying to call a non-function";
             throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
           }
@@ -236,7 +236,7 @@ class AlertModal {
         return obj;
       }
     }
-    obj = { sharedVisible: tmp11, sharedTransitionState: first, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("module_4054").runOnJS, cleanUp: context, windowHeight: height, ALERT_MODAL_MARGIN: 16, safeAreaTop: top, safeAreaBottom: bottom, withAlertModalSpring, sharedIndex: sharedValue, sharedTopHeight: context2, useReducedMotion: enabled };
+    obj = { sharedVisible: tmp11, sharedTransitionState: first, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("module_4116").runOnJS, cleanUp: context, windowHeight: height, ALERT_MODAL_MARGIN: 16, safeAreaTop: top, safeAreaBottom: bottom, withAlertModalSpring, sharedIndex: sharedValue, sharedTopHeight: context2, useReducedMotion: enabled };
     B.__closure = obj;
     B.__workletHash = 655123755546;
     B.__initData = memo;
@@ -326,7 +326,7 @@ class AlertModal {
     obj2[1] = tmp19(require("Stack").Stack, { spacing: 24, children: items3 });
     obj6[1] = tmp16(tmp18, obj2);
     obj1[4] = tmp16(tmp17, obj6);
-    return tmp16(require("module_4054").View, obj1);
+    return tmp16(require("module_4116").View, obj1);
   }
 }
 function useSharedAnimationState() {
@@ -379,7 +379,7 @@ class AlertActions {
 }
 class AlertActionButton {
   constructor(arg0) {
-    ({ onPress: f104127, loading } = global);
+    ({ onPress: f104320, loading } = global);
     merged = Object.assign(global, Object.create(null));
     useState = undefined;
     useState = undefined;
@@ -394,8 +394,8 @@ class AlertActionButton {
       loading = tmp2[0];
     }
     obj.loading = loading;
-    f104127 = undefined;
-    f104127 = sum((arg0) => {
+    f104320 = undefined;
+    f104320 = sum((arg0) => {
       let closure_0 = arg0;
       let c2 = 0;
       let c4 = 0;
@@ -507,7 +507,7 @@ const context5 = importAllResult.createContext(null);
 let closure_22 = { code: "function AlertModalNativeTsx1(){const{withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}" };
 let closure_24 = { code: "function AlertModalNativeTsx2(){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion}=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};}" };
 function withAlertModalSpring(value, fn2) {
-  return require(4603) /* CONFIG_NEVER_ANIMATE */.withSpring(value, createCacheKey, "animate-always", fn2);
+  return require(4665) /* CONFIG_NEVER_ANIMATE */.withSpring(value, createCacheKey, "animate-always", fn2);
 }
 let obj2 = { withSpring: null, MODAL_SPRING: null };
 obj2[0] = require("CONFIG_NEVER_ANIMATE").withSpring;
@@ -609,7 +609,7 @@ export const showConfirmModal = function showConfirmModal(arg0) {
     variant = "destructive";
   }
   ({ onConfirm, onCancel, onCloseCallback, dismissable } = arg0);
-  let obj = require(4534) /* useAlertStore */;
+  let obj = require(4596) /* useAlertStore */;
   obj = { title, content, extraContent, actions: null };
   obj = { children: null };
   const items = [callback4(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }), callback4(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel })];

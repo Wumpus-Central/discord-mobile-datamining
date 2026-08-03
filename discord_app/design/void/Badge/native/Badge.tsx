@@ -1,6 +1,6 @@
-// === Module 13241: Badge ===
+// === Module 13304: Badge ===
 
-// Module 13241 (Badge)
+// Module 13304 (Badge)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
@@ -100,7 +100,7 @@ class Badge {
         items3[0] = items2.badgeText;
         items3[1] = textStyle;
         obj2[0] = items3;
-        tmp10 = require("module_7674");
+        tmp10 = require("module_7797");
         tmpResult = require("shortenAndLocalizeNumber");
         tmp11 = globalThis;
         _Math = Math;

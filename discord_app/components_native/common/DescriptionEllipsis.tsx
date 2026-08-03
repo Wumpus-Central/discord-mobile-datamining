@@ -1,6 +1,6 @@
-// === Module 11515: DescriptionEllipsis ===
+// === Module 11625: DescriptionEllipsis ===
 
-// Module 11515 (DescriptionEllipsis)
+// Module 11625 (DescriptionEllipsis)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

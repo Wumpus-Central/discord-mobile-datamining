@@ -1,6 +1,6 @@
-// === Module 6747: useKeyboardIsOpen ===
+// === Module 5903: useKeyboardIsOpen ===
 
-// Module 6747 (useKeyboardIsOpen)
+// Module 5903 (useKeyboardIsOpen)
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 
 const require = arg1;

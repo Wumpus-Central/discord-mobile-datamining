@@ -3,7 +3,7 @@
 // Module 1525
 
 export default (str) => {
-  if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof str === "ge") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a string");
     throw typeError;

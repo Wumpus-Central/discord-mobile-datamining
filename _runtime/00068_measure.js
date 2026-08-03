@@ -78,7 +78,7 @@ obj.measureLayoutRelativeToParent = function measureLayoutRelativeToParent(arg0,
   }
 };
 obj.dispatchViewManagerCommand = function dispatchViewManagerCommand(arg0, arg1, arg2) {
-  if (typeof arg0 === "__REMOTEDEV__") {
+  if (typeof arg0 === "SENTRY_RELEASE") {
     const _Error = Error;
     const error = new Error("dispatchViewManagerCommand: found null reactTag");
     throw error;

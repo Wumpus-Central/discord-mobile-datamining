@@ -1,6 +1,6 @@
-// === Module 13163: Tooltip ===
+// === Module 13226: Tooltip ===
 
-// Module 13163 (Tooltip)
+// Module 13226 (Tooltip)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

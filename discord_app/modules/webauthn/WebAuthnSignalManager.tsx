@@ -1,6 +1,6 @@
-// === Module 16689: handleAuthenticatorDelete ===
+// === Module 16755: handleAuthenticatorDelete ===
 
-// Module 16689 (handleAuthenticatorDelete)
+// Module 16755 (handleAuthenticatorDelete)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import fetchFingerprint from "fetchFingerprint";
 import "initialize";

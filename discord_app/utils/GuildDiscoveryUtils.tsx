@@ -1,6 +1,6 @@
-// === Module 6692: _startLurking ===
+// === Module 5855: _startLurking ===
 
-// Module 6692 (_startLurking)
+// Module 5855 (_startLurking)
 import transitionTo from "transitionTo";
 import initialize from "initialize";
 import handleInviteData from "handleInviteData";

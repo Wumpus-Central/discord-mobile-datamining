@@ -1,6 +1,6 @@
-// === Module 11190: prototype ===
+// === Module 11302: prototype ===
 
-// Module 11190 (prototype)
+// Module 11302 (prototype)
 import "prototype";
 
 const prototype = function UploaderError(body) {

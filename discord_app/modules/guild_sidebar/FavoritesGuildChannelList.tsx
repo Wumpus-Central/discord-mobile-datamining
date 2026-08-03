@@ -1,6 +1,6 @@
-// === Module 15252: getMissingFavoriteThreadIds ===
+// === Module 15235: getMissingFavoriteThreadIds ===
 
-// Module 15252 (getMissingFavoriteThreadIds)
+// Module 15235 (getMissingFavoriteThreadIds)
 import _slicedToArray from "_slicedToArray";
 import computeSubtitle from "computeSubtitle";
 import importDefaultResult1 from "initializeFromUserSettings";
@@ -54,7 +54,7 @@ function getMissingFavoriteThreadIds(includeLoading) {
               continue;
             } else {
               let tmp5 = importDefault;
-              let obj = importDefault(10431);
+              let obj = importDefault(5809);
               let loadState = obj.getLoadState(key10013);
               let tmp7 = "NOT_FOUND" !== loadState;
               if (tmp7) {
@@ -264,7 +264,7 @@ function computeFavoritesState(favoriteChannels) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(10228).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10367).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -477,18 +477,18 @@ function computeFavoritesState(favoriteChannels) {
       let length;
       const items = [];
       let num = 0;
-      items[favoriteChannels(5786).SECTION_INDEX_CHANNEL_NOTICES] = 0;
-      items[favoriteChannels(5786).SECTION_INDEX_GUILD_ACTIONS] = 0;
-      items[favoriteChannels(5786).SECTION_INDEX_FAVORITES] = 0;
-      items[favoriteChannels(5786).SECTION_INDEX_RECENTS] = 0;
-      items[favoriteChannels(5786).SECTION_INDEX_UNCATEGORIZED_CHANNELS] = obj.channelList.length;
+      items[favoriteChannels(6884).SECTION_INDEX_CHANNEL_NOTICES] = 0;
+      items[favoriteChannels(6884).SECTION_INDEX_GUILD_ACTIONS] = 0;
+      items[favoriteChannels(6884).SECTION_INDEX_FAVORITES] = 0;
+      items[favoriteChannels(6884).SECTION_INDEX_RECENTS] = 0;
+      items[favoriteChannels(6884).SECTION_INDEX_UNCATEGORIZED_CHANNELS] = obj.channelList.length;
       if (0 < found1.length) {
         do {
           let tmp = favoriteChannels;
           let tmp2 = dependencyMap;
           let _Math = Math;
           let tmp4 = found1;
-          let sum = favoriteChannels(5786).SECTION_INDEX_FIRST_NAMED_CATEGORY + num;
+          let sum = favoriteChannels(6884).SECTION_INDEX_FIRST_NAMED_CATEGORY + num;
           items[sum] = Math.max(1, found1[num].channelList.length);
           num = num + 1;
           length = found1.length;
@@ -497,26 +497,26 @@ function computeFavoritesState(favoriteChannels) {
       return items;
     },
     isPlaceholderRow(arg0, arg1) {
-      let tmp3 = arg0 < favoriteChannels(5786).SECTION_INDEX_FIRST_NAMED_CATEGORY;
+      let tmp3 = arg0 < favoriteChannels(6884).SECTION_INDEX_FIRST_NAMED_CATEGORY;
       if (!tmp3) {
         tmp3 = 0 !== arg1;
       }
       let tmp5 = !tmp3;
       if (!tmp3) {
-        tmp5 = 0 === found1[arg0 - tmp(undefined, 5786).SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length;
+        tmp5 = 0 === found1[arg0 - tmp(undefined, 6884).SECTION_INDEX_FIRST_NAMED_CATEGORY].channelList.length;
       }
       return tmp5;
     },
     getCategoryFromSection(arg0) {
-      if (arg0 === favoriteChannels(5786).SECTION_INDEX_UNCATEGORIZED_CHANNELS) {
+      if (arg0 === favoriteChannels(6884).SECTION_INDEX_UNCATEGORIZED_CHANNELS) {
         let tmp4 = obj;
       } else {
-        tmp4 = found1[arg0 - tmp(undefined, 5786).SECTION_INDEX_FIRST_NAMED_CATEGORY];
+        tmp4 = found1[arg0 - tmp(undefined, 6884).SECTION_INDEX_FIRST_NAMED_CATEGORY];
       }
       return tmp4;
     },
     getNamedCategoryFromSection(arg0) {
-      return found1[arg0 - favoriteChannels(undefined, 5786).SECTION_INDEX_FIRST_NAMED_CATEGORY];
+      return found1[arg0 - favoriteChannels(undefined, 6884).SECTION_INDEX_FIRST_NAMED_CATEGORY];
     },
     getChannelFromSectionRow(arg0, arg1) {
       const categoryFromSection = this.getCategoryFromSection(arg0);
@@ -558,7 +558,7 @@ function computeFavoritesState(favoriteChannels) {
             obj = { section: null, row: null };
             let tmp3 = favoriteChannels;
             let tmp4 = dependencyMap;
-            obj[0] = num + favoriteChannels(5786).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+            obj[0] = num + favoriteChannels(6884).SECTION_INDEX_UNCATEGORIZED_CHANNELS;
             obj[1] = num2;
             let items1 = [obj];
             return items1;
@@ -623,7 +623,7 @@ let items = [importDefaultResult, importDefaultResult1, importDefaultResult2, im
 const result = require("participantFromServer").fileFinishedImporting("modules/guild_sidebar/FavoritesGuildChannelList.tsx");
 
 export const useFavoritesGuildChannelList = function useFavoritesGuildChannelList() {
-  let hasAccess = _require(10228).useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
+  let hasAccess = _require(10367).useFavoritesAccess("FavoritesGuildChannelList").hasAccess;
   _require = hasAccess;
   const tmp3 = callback(React.useState(() => callback2()), 2);
   let closure_1 = tmp3[1];
@@ -660,7 +660,7 @@ export const useFavoritesGuildChannelList = function useFavoritesGuildChannelLis
     hasAccess = getMissingFavoriteThreadIds({ limit: 1, includeLoading: true }).length > 0;
   }
   let shouldShowEmptyState = false;
-  if (guildChannels.getSections().length <= _require(5786).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
+  if (guildChannels.getSections().length <= _require(6884).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
     _require = false;
     guildChannels.forEachShownChannel(() => {
       let c0 = true;

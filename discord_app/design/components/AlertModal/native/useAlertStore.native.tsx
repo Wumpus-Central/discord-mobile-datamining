@@ -1,6 +1,6 @@
-// === Module 4534: useAlertStore ===
+// === Module 4596: useAlertStore ===
 
-// Module 4534 (useAlertStore)
+// Module 4596 (useAlertStore)
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
 
@@ -35,7 +35,7 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(4535)();
+    arr4(4597)();
   }
 };
 export const dismissAlert = function dismissAlert(c6) {
@@ -63,7 +63,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(4535)();
+      found(4597)();
     }
     const obj = _require(705);
   }
@@ -74,7 +74,7 @@ export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallb
   const dependencyMap = onCloseCallback;
   let _slicedToArray = arg3;
   if (0 === keys.getState().alerts.length) {
-    importDefault(4536)();
+    importDefault(4598)();
   }
   _require(705).batchUpdates(() => {
     outer1_4.setState((alerts) => {

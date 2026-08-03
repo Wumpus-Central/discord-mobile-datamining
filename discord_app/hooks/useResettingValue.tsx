@@ -1,6 +1,6 @@
-// === Module 12609: useResettingValue ===
+// === Module 12702: useResettingValue ===
 
-// Module 12609 (useResettingValue)
+// Module 12702 (useResettingValue)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
@@ -16,8 +16,8 @@ export default function useResettingValue(arg0, arg1) {
   const importDefault = arg1;
   const tmp = callback(callback2(arg0), 2);
   const dependencyMap = tmp[1];
-  const tmp2 = importDefault(5507)(() => {
-    const timeout = new callback(4078).Timeout();
+  const tmp2 = importDefault(5569)(() => {
+    const timeout = new callback(4140).Timeout();
     return timeout;
   });
   callback = tmp2;

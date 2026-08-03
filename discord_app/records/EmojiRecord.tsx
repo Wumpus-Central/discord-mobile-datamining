@@ -1,6 +1,6 @@
-// === Module 16420: prototype ===
+// === Module 16486: prototype ===
 
-// Module 16420 (prototype)
+// Module 16486 (prototype)
 import "toJS";
 import createdAt from "createdAt";
 

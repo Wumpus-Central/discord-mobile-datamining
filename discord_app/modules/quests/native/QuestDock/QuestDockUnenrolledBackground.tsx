@@ -1,6 +1,6 @@
-// === Module 14239: QUEST_DOCK_EXPANDED_HEIGHT ===
+// === Module 14306: QUEST_DOCK_EXPANDED_HEIGHT ===
 
-// Module 14239 (QUEST_DOCK_EXPANDED_HEIGHT)
+// Module 14306 (QUEST_DOCK_EXPANDED_HEIGHT)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CONFIG_NEVER_ANIMATE";
 import get_ActivityIndicator from "n";

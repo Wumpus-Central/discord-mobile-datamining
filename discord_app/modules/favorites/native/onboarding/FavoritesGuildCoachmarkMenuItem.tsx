@@ -1,6 +1,6 @@
-// === Module 15219: FavoritesGuildCoachmarkMenuItemContent ===
+// === Module 15200: FavoritesGuildCoachmarkMenuItemContent ===
 
-// Module 15219 (FavoritesGuildCoachmarkMenuItemContent)
+// Module 15200 (FavoritesGuildCoachmarkMenuItemContent)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import initializeFromUserSettings from "initializeFromUserSettings";
@@ -75,7 +75,7 @@ let set = new Set(items);
 const result = set.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx");
 
 export default function FavoritesGuildCoachmarkMenuItem(arg0) {
-  let obj = require(10234) /* items1 */;
+  let obj = require(10373) /* items1 */;
   const isFavoritesMenuItemPopoverPending = obj.useIsFavoritesMenuItemPopoverPending();
   const tmp2 = callback(React.useState(isFavoritesMenuItemPopoverPending), 2);
   const first = tmp2[0];

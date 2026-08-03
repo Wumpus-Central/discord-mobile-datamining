@@ -1,6 +1,6 @@
-// === Module 9391: getEmojiPickerDataRowItemNativeSection ===
+// === Module 9538: getEmojiPickerDataRowItemNativeSection ===
 
-// Module 9391 (getEmojiPickerDataRowItemNativeSection)
+// Module 9538 (getEmojiPickerDataRowItemNativeSection)
 const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
 
 export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLocked) {
@@ -21,7 +21,7 @@ export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLoc
     items = Array.from(emojisDisabled);
   }
   const obj = { type: null, title: null, guildId: null, emojiCount: null, emojisDisabled: null, emojisHidden: null, isSectionNitroLocked: null, hasPremiumInlineRoadblockHeader: null, hasPremiumInlineRoadblockFooter: null };
-  obj[0] = require(9390) /* useEmojiPickerData */.EmojiPickerItemType.NATIVE_SECTION;
+  obj[0] = require(9537) /* useEmojiPickerData */.EmojiPickerItemType.NATIVE_SECTION;
   obj[1] = label;
   obj[2] = guildId;
   obj[3] = emojiCount;

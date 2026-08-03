@@ -1,6 +1,6 @@
-// === Module 4735: openImagePickerUnhandled ===
+// === Module 4797: openImagePickerUnhandled ===
 
-// Module 4735 (openImagePickerUnhandled)
+// Module 4797 (openImagePickerUnhandled)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import get_ActivityIndicator from "cancel";
@@ -691,7 +691,7 @@ function getFileInfo(closure_0, closure_1) {
   if (closure_1 === undefined) {
     str = "";
   }
-  if (item.platform !== require(4726) /* cancel */.UploadPlatform.REACT_NATIVE) {
+  if (item.platform !== require(4788) /* cancel */.UploadPlatform.REACT_NATIVE) {
     const _Error = Error;
     const error = new Error("Try to get file info for unsupported upload item");
     throw error;
@@ -958,17 +958,17 @@ function _shouldConvertToPNG() {
   return applyArgumentsResult;
 }
 function isVideo(uri, overrideType) {
-  let obj = require(4727) /* items */;
+  let obj = require(4789) /* items */;
   obj = { uri, overrideType };
   return obj.getFile(obj).isVideo;
 }
 function isImage(uri, overrideType) {
-  let obj = require(4727) /* items */;
+  let obj = require(4789) /* items */;
   obj = { uri, overrideType };
   return obj.getFile(obj).isImage;
 }
 function getType(uri) {
-  let obj = require(4727) /* items */;
+  let obj = require(4789) /* items */;
   obj = { uri };
   return obj.getFile(obj).type;
 }
@@ -983,24 +983,24 @@ function convertVideo(videoMetadata) {
   let result1;
   let obj;
   let c7;
-  const VideoQualityTarget = require(4758) /* toString */.VideoQualityTarget;
+  const VideoQualityTarget = require(4820) /* toString */.VideoQualityTarget;
   const result = VideoQualityTarget.fromCompressionQuality(videoQualitySetting);
-  obj = require(4758) /* toString */;
-  result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, require(4731) /* getUploadFileSizeSum */.maxFileSize());
-  let obj2 = require(4731) /* getUploadFileSizeSum */;
-  const result2 = require(4758) /* toString */.calculateTargetDimensions(videoMetadata, result.targetResolution);
-  let obj3 = require(4758) /* toString */;
+  obj = require(4820) /* toString */;
+  result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, require(4793) /* getUploadFileSizeSum */.maxFileSize());
+  let obj2 = require(4793) /* getUploadFileSizeSum */;
+  const result2 = require(4820) /* toString */.calculateTargetDimensions(videoMetadata, result.targetResolution);
+  let obj3 = require(4820) /* toString */;
   obj = {};
-  const result3 = require(4758) /* toString */.calculateOptimalBitrate(videoMetadata, result, require(4758) /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
-  const merged = Object.assign(require(4758) /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG);
+  const result3 = require(4820) /* toString */.calculateOptimalBitrate(videoMetadata, result, require(4820) /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
+  const merged = Object.assign(require(4820) /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG);
   obj.videoQuality = result;
   ({ width: obj5.targetWidth, height: obj5.targetHeight } = result2);
   obj.targetBitrate = result3;
-  let obj4 = require(4758) /* toString */;
+  let obj4 = require(4820) /* toString */;
   if (obj6.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
-      let frameRate = Math.min(videoMetadata.frameRate, tmp(4758).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
+      let frameRate = Math.min(videoMetadata.frameRate, tmp(4820).DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
     }
     obj.frameRate = frameRate;
     obj.skipVideoTranscode = result1;
@@ -2498,7 +2498,7 @@ function _tryConvertImage() {
                   if (handleConnectionInfoChange) {
                     const obj9 = { path: null, encoderUsed: null };
                     obj9[0] = handleConnectionInfoChange;
-                    obj9[1] = lib(4420).ImageEncoder.NATIVE;
+                    obj9[1] = lib(4482).ImageEncoder.NATIVE;
                     tmp51 = obj9;
                   }
                   c8 = 3;
@@ -2564,7 +2564,7 @@ function _tryConvertImage() {
                   return obj16;
                 } else {
                   dependencyMap.path = path;
-                  dependencyMap.encoderUsed = lib(4420).ImageEncoder.PASSTHROUGH;
+                  dependencyMap.encoderUsed = lib(4482).ImageEncoder.PASSTHROUGH;
                   c5 = 0;
                   c8 = 3;
                   let obj17 = { value: null, done: true };
@@ -2639,10 +2639,10 @@ function _tryConvertImage() {
                 obj22[0] = tmp10;
                 return obj22;
               }
-              obj16 = lib(4756);
+              obj16 = lib(4818);
               const outer1_13 = obj16.shouldForceConvertToJPG(closure_0, outer1_1, outer1_10);
               if (!outer1_13) {
-                obj17 = lib(4756);
+                obj17 = lib(4818);
                 if (!obj17.shouldConvertToJPG(closure_0, outer1_1, outer1_2, outer1_4, c7)) {
                   if ((function shouldConvertToGifFilepath(closure_0, outer1_1) {
                     const isIOSResult = _undefined(500).isIOS();
@@ -2658,7 +2658,7 @@ function _tryConvertImage() {
                       } else {
                         tmp7 = null != closure_0.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = _undefined(4756);
+                      tmpResult = _undefined(4818);
                     }
                   })(closure_0, outer1_1)) {
                     c7 = 9;
@@ -2816,8 +2816,8 @@ function getCaptionLabel(type, isVideo, item) {
   if (isVideo) {
     let str3 = "VIDEO";
     if (null != item.playableDuration) {
-      str3 = require(4765) /* getTimeFormat */.getTimeFormat(item.playableDuration);
-      const obj = require(4765) /* getTimeFormat */;
+      str3 = require(4827) /* getTimeFormat */.getTimeFormat(item.playableDuration);
+      const obj = require(4827) /* getTimeFormat */;
     }
     let str2 = str3;
   } else {
@@ -3444,7 +3444,7 @@ export { isHEVCEncodingSupported };
 export { checkVideoEncodingSupport };
 export { calculateImageQualityMetrics };
 export const getFileFromUploadItem = function getFileFromUploadItem(result1) {
-  let obj = require(4727) /* items */;
+  let obj = require(4789) /* items */;
   obj = { uri: result1.uri, overrideFilename: result1.filename, overrideType: result1.mimeType };
   return obj.getFile(obj);
 };

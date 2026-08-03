@@ -1,6 +1,6 @@
-// === Module 15318: PROFILE_BACKGROUND ===
+// === Module 15385: PROFILE_BACKGROUND ===
 
-// Module 15318 (PROFILE_BACKGROUND)
+// Module 15385 (PROFILE_BACKGROUND)
 const result = require("set").fileFinishedImporting("modules/notification_center/Constants.tsx");
 
 export const PROFILE_BACKGROUND = "#83DDC5";

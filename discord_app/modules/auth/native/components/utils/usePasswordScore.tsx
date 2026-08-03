@@ -1,6 +1,6 @@
-// === Module 14901: PasswordScore ===
+// === Module 14968: PasswordScore ===
 
-// Module 14901 (PasswordScore)
+// Module 14968 (PasswordScore)
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,6 @@
-// === Module 9227: BackgroundImage ===
+// === Module 9400: BackgroundImage ===
 
-// Module 9227 (BackgroundImage)
+// Module 9400 (BackgroundImage)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -19,7 +19,7 @@ export default function BackgroundImage(backgroundImageSource) {
     flag = false;
   }
   let dependencyMap;
-  const tmp = flag(4129)();
+  const tmp = flag(4191)();
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
   let obj = { style: absoluteFill.absoluteFill, children: null };

@@ -1,6 +1,6 @@
-// === Module 11520: getOrRefreshPushSyncToken ===
+// === Module 11630: getOrRefreshPushSyncToken ===
 
-// Module 11520 (getOrRefreshPushSyncToken)
+// Module 11630 (getOrRefreshPushSyncToken)
 import timestamp from "timestamp";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
@@ -108,7 +108,7 @@ function _getOrRefreshPushSyncToken() {
           } else {
             token = body.body.token;
             c4 = 0;
-            obj = callback(11525);
+            obj = callback(11635);
             obj.updatePushSyncToken(lib.id, token);
             c6 = 3;
             const obj6 = { value: null, done: true };
@@ -152,7 +152,7 @@ let obj = {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      obj = importDefault(5003);
+      obj = importDefault(5065);
       obj = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
       obj[0] = constants.DEVICES;
       if (flag) {
@@ -283,8 +283,8 @@ let obj = {
             } else if (arg0 !== 2) {
               v0 = arg1;
               if (v0.body.invalid_push_sync_tokens.length > 0) {
-                const result = v0(11525).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-                const obj9 = v0(11525);
+                const result = v0(11635).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
+                const obj9 = v0(11635);
               }
             }
             dependencyMap = 3;
@@ -301,7 +301,7 @@ let obj = {
   },
   unregisterDevice(token) {
     tmp4.log("Unregistering push notification token: " + token);
-    let obj = importDefault(5003);
+    let obj = importDefault(5065);
     obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     obj = { provider: callback2(), token };
     obj[1] = obj;

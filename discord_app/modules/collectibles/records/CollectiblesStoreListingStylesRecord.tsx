@@ -1,6 +1,6 @@
-// === Module 5823: fromServer ===
+// === Module 6918: fromServer ===
 
-// Module 5823 (fromServer)
+// Module 6918 (fromServer)
 import "toJS";
 
 const require = arg1;
@@ -19,18 +19,18 @@ prototype["fromServer"] = function fromServer(arg0) {
   let confetti_colors;
   ({ background_colors, button_colors, confetti_colors } = arg0);
   const mapped = background_colors.map((color) => {
-    const tmp = callback2(5813);
+    const tmp = callback2(6908);
     return tmp(callback(688).int2hex(color));
   });
   const mapped1 = button_colors.map((color) => {
-    const tmp = callback2(5813);
+    const tmp = callback2(6908);
     return tmp(callback(688).int2hex(color));
   });
   const mapped2 = confetti_colors.map((color) => {
-    const tmp = callback2(5813);
+    const tmp = callback2(6908);
     return tmp(callback(688).int2hex(color));
   });
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const tmp5 = new prototype("Trying to call a non-function", confetti_colors, prototype, new.target);

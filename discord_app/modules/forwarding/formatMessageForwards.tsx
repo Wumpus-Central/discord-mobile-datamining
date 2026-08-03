@@ -1,6 +1,6 @@
-// === Module 7742: getForwardInfo ===
+// === Module 7861: getForwardInfo ===
 
-// Module 7742 (getForwardInfo)
+// Module 7861 (getForwardInfo)
 import getGuild from "getGuild";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -46,7 +46,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
     obj3 = getGuild;
   }
   ({ snapshotIndex, parentMessage } = this);
-  let obj4 = require(3863) /* resetCache */;
+  let obj4 = require(3925) /* resetCache */;
   const result = obj4.calendarFormatCompact(this.messageSnapshot.message.timestamp);
   const channel = obj.getChannel(this.parentMessage.channel_id);
   if (null != channel) {
@@ -89,7 +89,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
         if (obj1.can(channel1.accessPermissions, channel1)) {
           obj4 = { snapshotIndex: null, footerInfo: null };
           obj4[0] = snapshotIndex;
-          const tmp3Result = tmp3(4384);
+          const tmp3Result = tmp3(4446);
           const channelName = tmp3Result.computeChannelName(channel1, tmp, tmp2, true);
           const obj5 = { originLabel: null, timestampLabel: null, accessibilityLabel: null };
           obj5[0] = channelName;
@@ -151,10 +151,10 @@ let result = require("createGuildRecordFromRust").fileFinishedImporting("modules
 
 export { MessageForward };
 export const maybeCreateSingleForwardForMessage = function maybeCreateSingleForwardForMessage(message) {
-  if (importDefault(5887)(message)) {
+  if (importDefault(5798)(message)) {
     const first = message.messageSnapshots[0];
     if (null != first) {
-      if (typeof MessageForward !== "fileFinishedImporting") {
+      if (typeof MessageForward !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const obj = Object.create(MessageForward.prototype);

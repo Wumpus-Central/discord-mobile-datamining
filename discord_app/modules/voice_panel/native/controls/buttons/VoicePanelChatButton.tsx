@@ -1,6 +1,6 @@
-// === Module 16035: ChatButton ===
+// === Module 16099: ChatButton ===
 
-// Module 16035 (ChatButton)
+// Module 16099 (ChatButton)
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

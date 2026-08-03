@@ -1,6 +1,6 @@
-// === Module 8694: parseSkuIds ===
+// === Module 8871: parseSkuIds ===
 
-// Module 8694 (parseSkuIds)
+// Module 8871 (parseSkuIds)
 import _slicedToArray from "_slicedToArray";
 import "toJS";
 
@@ -181,7 +181,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       obj1[0] = obj5;
     }
   }
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const tmp32 = new prototype(str, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, _Date2, _Date, prototype, new.target, id, application_id, name, display_name, reward_type, reward_status);

@@ -1,6 +1,6 @@
-// === Module 12380: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 12478: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 12380 (useEmbeddedActivityParticipantAvatarUris)
+// Module 12478 (useEmbeddedActivityParticipantAvatarUris)
 import noop from "noop";
 import participantFromServer from "participantFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";

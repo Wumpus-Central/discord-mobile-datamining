@@ -1,6 +1,6 @@
-// === Module 11964: useGuildProfileGameProfilesExperiment ===
+// === Module 12060: useGuildProfileGameProfilesExperiment ===
 
-// Module 11964 (useGuildProfileGameProfilesExperiment)
+// Module 12060 (useGuildProfileGameProfilesExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

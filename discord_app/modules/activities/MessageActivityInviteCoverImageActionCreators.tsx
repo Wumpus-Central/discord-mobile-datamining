@@ -1,6 +1,6 @@
-// === Module 12403: setCoverImageURL ===
+// === Module 12501: setCoverImageURL ===
 
-// Module 12403 (setCoverImageURL)
+// Module 12501 (setCoverImageURL)
 const result = require("set").fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageActionCreators.tsx");
 
 export const setCoverImageURL = function setCoverImageURL(arg0) {

@@ -1,6 +1,6 @@
-// === Module 10341: NotificationSettingsMockChannels ===
+// === Module 10480: NotificationSettingsMockChannels ===
 
-// Module 10341 (NotificationSettingsMockChannels)
+// Module 10480 (NotificationSettingsMockChannels)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";

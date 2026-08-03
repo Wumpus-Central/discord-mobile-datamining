@@ -1,6 +1,6 @@
-// === Module 5667: fromServer ===
+// === Module 5729: fromServer ===
 
-// Module 5667 (fromServer)
+// Module 5729 (fromServer)
 import "toJS";
 import createFromServer from "createFromServer";
 import createExecutable from "createExecutable";
@@ -26,7 +26,7 @@ prototype = function WishlistRecommendationRecord(skus) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(skus) {
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const tmp4 = new prototype("Trying to call a non-function", tmp3, tmp2, tmp);

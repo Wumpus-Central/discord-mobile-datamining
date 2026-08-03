@@ -1,6 +1,6 @@
-// === Module 11435: ChatInputScrimGradient ===
+// === Module 11545: ChatInputScrimGradient ===
 
-// Module 11435 (ChatInputScrimGradient)
+// Module 11545 (ChatInputScrimGradient)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -19,10 +19,10 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
     inline = false;
   }
   scrimBase = scrimBase.scrimBase;
-  let obj = require(4004) /* getGradientColorByPercentage */;
-  const gradientValue = obj.useGradientValue(require(4004) /* getGradientColorByPercentage */.GradientPercentage.END);
-  const token = require(3897) /* map */.useToken(importDefault(712).colors.BACKGROUND_BASE_LOWER);
-  const obj2 = require(3897) /* map */;
+  let obj = require(4066) /* getGradientColorByPercentage */;
+  const gradientValue = obj.useGradientValue(require(4066) /* getGradientColorByPercentage */.GradientPercentage.END);
+  const token = require(3959) /* map */.useToken(importDefault(712).colors.BACKGROUND_BASE_LOWER);
+  const obj2 = require(3959) /* map */;
   const tmp4 = importDefault;
   if (gradientHeight == null) {
     gradientHeight = obj3.useToken(importDefault(712).modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT);
@@ -50,12 +50,12 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
   }
   obj = { style: { position: "absolute", top: result, left: 0, right: 0, bottom: 0 }, pointerEvents: "none", children: null };
   const items = [str, hex2rgbResult];
-  const items1 = [callback(tmp4(4615), { colors: items, style: { height: gradientHeight }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1] }), callback(View, { style: { flex: 1, backgroundColor: hex2rgbResult } })];
+  const items1 = [callback(tmp4(4677), { colors: items, style: { height: gradientHeight }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, locations: [0, 1] }), callback(View, { style: { flex: 1, backgroundColor: hex2rgbResult } })];
   obj[2] = items1;
   return closure_5(View, obj);
 };
 export const useChatInputFloatingOverlayStyle = function useChatInputFloatingOverlayStyle() {
   const obj = { marginTop: null, overflow: "visible" };
-  obj[0] = -require(3897) /* map */.useToken(importDefault(712).modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2;
+  obj[0] = -require(3959) /* map */.useToken(importDefault(712).modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2;
   return obj;
 };

@@ -1,6 +1,6 @@
-// === Module 11673: importDefaultResult1 ===
+// === Module 11778: importDefaultResult1 ===
 
-// Module 11673 (importDefaultResult1)
+// Module 11778 (importDefaultResult1)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -58,6 +58,6 @@ export default function GuildPowerupsCard(status) {
   items[3] = style;
   obj.style = items;
   obj.children = children;
-  obj[1] = jsx(require(5226) /* PressableCard */.Card, { border: "faint", radius: 16, shadow: "none" });
+  obj[1] = jsx(require(5288) /* PressableCard */.Card, { border: "faint", radius: 16, shadow: "none" });
   return <View border="faint" radius={16} shadow="none" />;
 };

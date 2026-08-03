@@ -1,6 +1,6 @@
-// === Module 6016: getQuestContentName ===
+// === Module 7095: getQuestContentName ===
 
-// Module 6016 (getQuestContentName)
+// Module 7095 (getQuestContentName)
 let closure_2 = Object.keys(require("QuestsVisibleMessagesChangedSource").QuestContent);
 const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
 

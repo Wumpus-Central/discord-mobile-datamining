@@ -1,6 +1,6 @@
-// === Module 7749: processColorStrings ===
+// === Module 7868: processColorStrings ===
 
-// Module 7749 (processColorStrings)
+// Module 7868 (processColorStrings)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { processColor } from "get ActivityIndicator";
@@ -106,10 +106,10 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
   }, items);
 };
 export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMessageEligibleForEnhancedRoleColors(guildId, id) {
-  return require(4632) /* useHasEnhancedRoleColors */.getHasEnhancedRoleColors(guildId, id);
+  return require(4694) /* useHasEnhancedRoleColors */.getHasEnhancedRoleColors(guildId, id);
 };
 export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(guildId, id, stateFromStores, processColorStringsArray) {
-  let tmp = importDefault(4632)(guildId, id);
+  let tmp = importDefault(4694)(guildId, id);
   if (tmp) {
     tmp = "username" === stateFromStores;
   }

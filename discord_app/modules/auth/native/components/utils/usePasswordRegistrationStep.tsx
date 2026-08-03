@@ -1,6 +1,6 @@
-// === Module 14900: usePasswordRegistrationStep ===
+// === Module 14967: usePasswordRegistrationStep ===
 
-// Module 14900 (usePasswordRegistrationStep)
+// Module 14967 (usePasswordRegistrationStep)
 import PasswordScore from "PasswordScore";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

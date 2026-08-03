@@ -1,6 +1,6 @@
-// === Module 5653: HotspotStore ===
+// === Module 5715: HotspotStore ===
 
-// Module 5653 (HotspotStore)
+// Module 5715 (HotspotStore)
 import importDefaultResult from "set";
 import HotspotLocations from "HotspotLocations";
 

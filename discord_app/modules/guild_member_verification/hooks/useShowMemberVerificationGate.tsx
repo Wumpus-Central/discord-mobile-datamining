@@ -1,6 +1,6 @@
-// === Module 4680: shouldShowMembershipVerificationGate ===
+// === Module 4742: shouldShowMembershipVerificationGate ===
 
-// Module 4680 (shouldShowMembershipVerificationGate)
+// Module 4742 (shouldShowMembershipVerificationGate)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -34,8 +34,8 @@ function shouldShowMembershipVerificationGate(guildId, items) {
       flag = flag2;
     }
     if (flag) {
-      flag = require(4681) /* isValidFormResponse */.guildHasVerificationGate(guild);
-      const obj4 = require(4681) /* isValidFormResponse */;
+      flag = require(4743) /* isValidFormResponse */.guildHasVerificationGate(guild);
+      const obj4 = require(4743) /* isValidFormResponse */;
     }
     return flag;
   }

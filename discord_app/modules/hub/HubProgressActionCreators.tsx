@@ -1,6 +1,6 @@
-// === Module 10108: setHubProgressActionComplete ===
+// === Module 5832: setHubProgressActionComplete ===
 
-// Module 10108 (setHubProgressActionComplete)
+// Module 5832 (setHubProgressActionComplete)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { HUB_PROGRESS_STEP_ORDER } from "items";
 import { GuildFeatures } from "ME";

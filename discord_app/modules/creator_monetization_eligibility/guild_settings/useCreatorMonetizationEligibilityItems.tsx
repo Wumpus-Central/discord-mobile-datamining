@@ -1,6 +1,6 @@
-// === Module 16550: useCreatorMonetizationEligibilityItems ===
+// === Module 16616: useCreatorMonetizationEligibilityItems ===
 
-// Module 16550 (useCreatorMonetizationEligibilityItems)
+// Module 16616 (useCreatorMonetizationEligibilityItems)
 import getSystemLocale from "getSystemLocale";
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
@@ -143,7 +143,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let fn;
       if (!noRecentViolations) {
         fn = () => {
-          const tmp = callback(3884);
+          const tmp = callback(3946);
           return tmp(callback(1945).getSubmitRequestURL());
         };
       }

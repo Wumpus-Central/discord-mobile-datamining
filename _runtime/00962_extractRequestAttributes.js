@@ -77,7 +77,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
     get(self) {
       let obj = self[arg1];
       let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-      if (typeof obj !== "disabledUntil") {
+      if (typeof obj !== "HAS_APPLICATION") {
         if (tmpResult.shouldInstrument(methodPath)) {
           str = obj;
           let closure_2 = self;
@@ -152,7 +152,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj2[1] = str(methodPath[2]).getSpanOperation(outer1_1);
                       obj2[2] = methodPath;
                       obj5.startSpanManual(obj2, (() => {
-                        let closure_0 = outer2_2(/* F118847 */ function() { ... });
+                        let closure_0 = outer2_2(/* F119037 */ function() { ... });
                         return () => { ... };
                       })());
                       let obj7 = str(methodPath[2]);
@@ -165,7 +165,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj3[1] = obj3.getSpanOperation(outer1_1);
                     obj3[2] = methodPath;
                     obj1.startSpan(obj3, (() => {
-                      let closure_0 = outer2_2(/* F118849 */ function() { ... });
+                      let closure_0 = outer2_2(/* F119039 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -191,7 +191,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
         }
         return instrumentedMethod;
       }
-      if (typeof obj === "fileFinishedImporting") {
+      if (typeof obj === "error") {
         instrumentedMethod = obj.bind(self);
       } else {
         instrumentedMethod = obj;
@@ -207,7 +207,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
             obj[0] = function get(self) {
               let obj = self[arg1];
               let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-              if (typeof obj !== "disabledUntil") {
+              if (typeof obj !== "HAS_APPLICATION") {
                 if (tmpResult.shouldInstrument(methodPath)) {
                   str = obj;
                   let closure_2 = self;
@@ -315,7 +315,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                 }
                 return instrumentedMethod;
               }
-              if (typeof obj === "fileFinishedImporting") {
+              if (typeof obj === "error") {
                 instrumentedMethod = obj.bind(self);
               } else {
                 instrumentedMethod = obj;
@@ -331,7 +331,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj[0] = function get(self) {
                       let obj = self[arg1];
                       let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-                      if (typeof obj !== "disabledUntil") {
+                      if (typeof obj !== "HAS_APPLICATION") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           str = obj;
                           let closure_2 = self;
@@ -340,7 +340,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             let closure_0 = [...arguments];
                             let c3 = 0;
                             let c4 = 0;
-                            const iter = (/* F113754 */ function*() { ... })();
+                            const iter = (/* F113946 */ function*() { ... })();
                             iter.next();
                             return iter;
                           });
@@ -357,7 +357,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                         }
                         return instrumentedMethod;
                       }
-                      if (typeof obj === "fileFinishedImporting") {
+                      if (typeof obj === "error") {
                         instrumentedMethod = obj.bind(self);
                       } else {
                         instrumentedMethod = obj;
@@ -373,7 +373,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             obj[0] = function get(self) {
                               let obj = self[arg1];
                               let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-                              if (typeof obj !== "disabledUntil") {
+                              if (typeof obj !== "HAS_APPLICATION") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
                                   str = obj;
                                   let closure_2 = self;
@@ -383,7 +383,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                 }
                                 return instrumentedMethod;
                               }
-                              if (typeof obj === "fileFinishedImporting") {
+                              if (typeof obj === "error") {
                                 instrumentedMethod = obj.bind(self);
                               } else {
                                 instrumentedMethod = obj;

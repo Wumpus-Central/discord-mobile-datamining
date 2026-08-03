@@ -1,6 +1,6 @@
-// === Module 8080: filterLayer ===
+// === Module 8411: filterLayer ===
 
-// Module 8080 (filterLayer)
+// Module 8411 (filterLayer)
 import _slicedToArray from "_slicedToArray";
 import ManaContext from "ManaContext";
 import { View } from "useBadges";

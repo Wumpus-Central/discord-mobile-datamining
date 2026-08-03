@@ -1,6 +1,6 @@
-// === Module 5648: str2 ===
+// === Module 5710: str2 ===
 
-// Module 5648 (str2)
+// Module 5710 (str2)
 import getConstants from "getConstants";
 import isMetaQuest from "isMetaQuest";
 

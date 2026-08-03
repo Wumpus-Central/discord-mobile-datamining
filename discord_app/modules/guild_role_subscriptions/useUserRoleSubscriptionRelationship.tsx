@@ -1,6 +1,6 @@
-// === Module 14242: useUserRoleSubscriptionRelationship ===
+// === Module 14309: useUserRoleSubscriptionRelationship ===
 
-// Module 14242 (useUserRoleSubscriptionRelationship)
+// Module 14309 (useUserRoleSubscriptionRelationship)
 import computeRolesForGuild from "computeRolesForGuild";
 import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS";
 

@@ -1,6 +1,6 @@
-// === Module 8142: lerpVarWidthThumbnailScrollBounds ===
+// === Module 8473: lerpVarWidthThumbnailScrollBounds ===
 
-// Module 8142 (lerpVarWidthThumbnailScrollBounds)
+// Module 8473 (lerpVarWidthThumbnailScrollBounds)
 function lerpVarWidthThumbnailScrollBounds(closure_1, arg1) {
   if (0 === closure_1.length) {
     return 0;

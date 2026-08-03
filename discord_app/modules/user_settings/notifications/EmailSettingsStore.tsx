@@ -1,6 +1,6 @@
-// === Module 12814: reset ===
+// === Module 12877: reset ===
 
-// Module 12814 (reset)
+// Module 12877 (reset)
 import { Store } from "initialize";
 
 function reset() {

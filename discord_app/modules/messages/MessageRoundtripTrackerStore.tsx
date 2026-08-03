@@ -1,6 +1,6 @@
-// === Module 5723: trackRoundtrip ===
+// === Module 6817: trackRoundtrip ===
 
-// Module 5723 (trackRoundtrip)
+// Module 6817 (trackRoundtrip)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
@@ -21,10 +21,10 @@ function trackRoundtrip(channelId) {
       if (null != channelId.gatewaySeenTimestamp) {
         diff1 = channelId.gatewaySeenTimestamp - channelId.initialSendTimestamp;
       }
-      let obj = require(5724) /* receiveNetworkInfoformation */;
+      let obj = require(6818) /* receiveNetworkInfoformation */;
       const signalStrength = obj.getSignalStrength();
       obj = {};
-      const merged = Object.assign(importDefault(5966)());
+      const merged = Object.assign(importDefault(7045)());
       obj.api_latency_ms = diff;
       obj.gateway_latency_ms = diff1;
       ({ id: obj3.channel_id, type: obj3.channel_type, guild_id: obj3.guild_id } = basicChannel);

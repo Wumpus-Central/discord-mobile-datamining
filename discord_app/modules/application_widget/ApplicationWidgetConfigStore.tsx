@@ -1,6 +1,6 @@
-// === Module 12180: updateApplicationConfigs ===
+// === Module 12276: updateApplicationConfigs ===
 
-// Module 12180 (updateApplicationConfigs)
+// Module 12276 (updateApplicationConfigs)
 import _slicedToArray from "_slicedToArray";
 import { Store } from "initialize";
 

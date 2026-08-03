@@ -1,6 +1,6 @@
-// === Module 9508: getVoiceChannelListInviteExperiment ===
+// === Module 9655: getVoiceChannelListInviteExperiment ===
 
-// Module 9508 (getVoiceChannelListInviteExperiment)
+// Module 9655 (getVoiceChannelListInviteExperiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable channel-list-style voice invite embed", config: { enabled: true } }];

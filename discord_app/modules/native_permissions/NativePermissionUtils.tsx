@@ -1,6 +1,6 @@
-// === Module 4736: NativePermissionsRequestOptions ===
+// === Module 4798: NativePermissionsRequestOptions ===
 
-// Module 4736 (NativePermissionsRequestOptions)
+// Module 4798 (NativePermissionsRequestOptions)
 import { ProcessArgs } from "get";
 import importDefaultResult from "isEnabled";
 

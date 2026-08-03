@@ -1,6 +1,6 @@
-// === Module 13740: UserProfileEffectEditButton ===
+// === Module 13807: UserProfileEffectEditButton ===
 
-// Module 13740 (UserProfileEffectEditButton)
+// Module 13807 (UserProfileEffectEditButton)
 import Button from "Button";
 import { View } from "metadata";
 import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET";

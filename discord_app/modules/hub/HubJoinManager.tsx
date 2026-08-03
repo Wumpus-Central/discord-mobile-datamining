@@ -1,6 +1,6 @@
-// === Module 11856: _initialize ===
+// === Module 11952: _initialize ===
 
-// Module 11856 (_initialize)
+// Module 11952 (_initialize)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 import "initialize";

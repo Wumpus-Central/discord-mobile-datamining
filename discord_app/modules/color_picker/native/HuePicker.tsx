@@ -1,6 +1,6 @@
-// === Module 13720: HuePicker ===
+// === Module 13783: HuePicker ===
 
-// Module 13720 (HuePicker)
+// Module 13783 (HuePicker)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

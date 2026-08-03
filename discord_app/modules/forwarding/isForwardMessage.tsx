@@ -1,6 +1,6 @@
-// === Module 5887: isForwardMessage ===
+// === Module 5798: isForwardMessage ===
 
-// Module 5887 (isForwardMessage)
+// Module 5798 (isForwardMessage)
 import { MessageReferenceTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/forwarding/isForwardMessage.tsx");

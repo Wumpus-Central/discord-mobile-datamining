@@ -1,6 +1,6 @@
-// === Module 12873: OnGoingCallTimer ===
+// === Module 12936: OnGoingCallTimer ===
 
-// Module 12873 (OnGoingCallTimer)
+// Module 12936 (OnGoingCallTimer)
 import "noop";
 import callConnect from "callConnect";
 import { jsx } from "jsxProd";
@@ -25,5 +25,5 @@ export default function OnGoingCallTimer(style) {
     timestamp = importDefault(11).extractTimestamp(stateFromStores);
     const obj2 = importDefault(11);
   }
-  return jsx(importDefault(12874), { style: style.style, timestamp });
+  return jsx(importDefault(12937), { style: style.style, timestamp });
 };

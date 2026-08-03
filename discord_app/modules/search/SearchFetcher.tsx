@@ -1,6 +1,6 @@
-// === Module 10126: fetch ===
+// === Module 10265: fetch ===
 
-// Module 10126 (fetch)
+// Module 10265 (fetch)
 import sendRequest from "sendRequest";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";

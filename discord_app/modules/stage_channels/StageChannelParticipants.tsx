@@ -1,6 +1,6 @@
-// === Module 5018: sortKey ===
+// === Module 5080: sortKey ===
 
-// Module 5018 (sortKey)
+// Module 5080 (sortKey)
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionReset from "handleConnectionReset";
@@ -46,7 +46,7 @@ function sortKey(speaker) {
     num = 999;
   }
   const combined = "" + num;
-  return "" + str2 + str3 + str4 + str + combined.padStart(3, "0") + connectedOn + importDefault(5021)(userNick, user);
+  return "" + str2 + str3 + str4 + str + combined.padStart(3, "0") + connectedOn + importDefault(5083)(userNick, user);
 }
 function requestToSpeakSortKey(user) {
   user = user.user;
@@ -73,7 +73,7 @@ function getParticipantIndex(arg0) {
   if (tmp3) {
     items.push(obj.ALL_REQUESTED_TO_SPEAK);
   }
-  if (rtsState === require(4378) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK) {
+  if (rtsState === require(4440) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK) {
     items.push(obj.REQUESTED_TO_SPEAK_ONLY);
   }
   if (speaker) {
@@ -151,17 +151,17 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
         nick = member1.nick;
       }
       if (nick == null) {
-        let obj = importDefault(4383);
+        let obj = importDefault(4445);
         nick = obj.getName(self.guildId, self.channelId, user);
       }
       obj = { user: null, userNick: null, nick: null, comparator: null, voiceState: null, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
       obj[0] = user;
-      obj[1] = importDefault(4383).getName(self.guildId, self.channelId, user);
+      obj[1] = importDefault(4445).getName(self.guildId, self.channelId, user);
       obj[2] = nick;
       obj[3] = getComparator(voiceStateForChannel, nick);
       obj[4] = voiceStateForChannel;
-      const obj3 = importDefault(4383);
-      obj[5] = require(5022) /* getHighestHoistedRole */.getHighestHoistedRole(self.guildId, userId);
+      const obj3 = importDefault(4445);
+      obj[5] = require(5084) /* getHighestHoistedRole */.getHighestHoistedRole(self.guildId, userId);
       obj[6] = speaker.isSpeaker(userId, self.channelId);
       obj[7] = member1;
       obj[8] = upsertRelationship.isBlocked(user.id);
@@ -180,7 +180,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       const merged = Object.assign(obj);
       obj.type = obj.VOICE;
       obj.id = user.id;
-      let tmp11Result = tmp11(4378);
+      let tmp11Result = tmp11(4440);
       obj.rtsState = tmp11Result.getAudienceRequestToSpeakState(voiceStateForChannel);
       items.push(obj);
       streamForUser = streamForUser.getStreamForUser(userId, self.guildId);
@@ -189,12 +189,12 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       }
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
-          tmp11Result = tmp11(4257);
+          tmp11Result = tmp11(4319);
           const obj1 = {};
           const merged1 = Object.assign(obj);
           obj1.id = tmp11Result.encodeStreamKey(streamForUser);
           obj1.type = obj.STREAM;
-          obj1.rtsState = tmp11(4378).RequestToSpeakStates.NONE;
+          obj1.rtsState = tmp11(4440).RequestToSpeakStates.NONE;
           items.push(obj1);
           const encodeStreamKeyResult = tmp11Result.encodeStreamKey(streamForUser);
         }
@@ -295,5 +295,5 @@ export default StageChannelParticipants;
 export const StageChannelParticipantNamedIndex = obj;
 export const StageChannelParticipantTypes = obj;
 export const isRequestedToSpeakAll = function isRequestedToSpeakAll(rtsState) {
-  return rtsState === require(4378) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === require(4378) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  return rtsState === require(4440) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === require(4440) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 };

@@ -1,6 +1,6 @@
-// === Module 10427: ? ===
+// === Module 10566: ? ===
 
-// Module 10427
+// Module 10566
 import importAllResult from "initialize";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import { createChannelRecord } from "createChannelRecord";

@@ -1,6 +1,6 @@
-// === Module 6153: initialize ===
+// === Module 7205: initialize ===
 
-// Module 6153 (initialize)
+// Module 7205 (initialize)
 import reinjectEphemerals from "reinjectEphemerals";
 import { Store } from "initialize";
 

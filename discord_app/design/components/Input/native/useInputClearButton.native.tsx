@@ -1,6 +1,6 @@
-// === Module 6738: useInputClearButton ===
+// === Module 5894: useInputClearButton ===
 
-// Module 6738 (useInputClearButton)
+// Module 5894 (useInputClearButton)
 import "noop";
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -13,7 +13,7 @@ export const useInputClearButton = function useInputClearButton(clearProps, clea
   if (clearProps.isClearable) {
     if (clearState.hasValue) {
       let obj = { content: null, pressableProps: null };
-      obj[0] = jsx(require(6739) /* CircleXIcon */.CircleXIcon, { size: "xs" });
+      obj[0] = jsx(require(5895) /* CircleXIcon */.CircleXIcon, { size: "xs" });
       obj = { onPress: null, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
       obj[0] = clearState.clear;
       const intl = require(1236) /* getSystemLocale */.intl;
@@ -35,7 +35,7 @@ export const useInputClearButtonConfig = function useInputClearButtonConfig(isCl
   if (isClearable.isClearable) {
     if (state.hasValue) {
       let obj = { content: null, pressableProps: null };
-      obj[0] = jsx(require(6739) /* CircleXIcon */.CircleXIcon, { size: "xs" });
+      obj[0] = jsx(require(5895) /* CircleXIcon */.CircleXIcon, { size: "xs" });
       obj = { onPress: null, accessibilityLabel: null, accessibilityRole: "button", hitSlop: 4 };
       obj[0] = state.clear;
       const intl = require(1236) /* getSystemLocale */.intl;

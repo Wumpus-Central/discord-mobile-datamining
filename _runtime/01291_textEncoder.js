@@ -67,7 +67,7 @@ const items = [
     key: "update",
     value: function update(arg0) {
       let encodeResult = arg0;
-      if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof arg0 !== "ge") {
         let subarrayResult = textEncoder;
         encodeResult = textEncoder.encode(arg0);
       }

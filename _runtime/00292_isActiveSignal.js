@@ -153,7 +153,7 @@ const items = [
           }
           const _responderRegion = obj._responderRegion;
           if (null != _responderRegion) {
-            if (typeof outer1_14 !== "fileFinishedImporting") {
+            if (typeof outer1_14 !== "error") {
               HermesBuiltin.throwTypeError();
             }
             ({ changedTouches, touches } = nativeEvent.nativeEvent);
@@ -237,7 +237,7 @@ const items = [
       };
       let obj2 = self(27);
       if (obj2.shouldPressibilityUseW3CPointerEventsForHover()) {
-        obj = { onPointerEnter: "Array", onPointerLeave: "HermesInternal" };
+        obj = { onPointerEnter: "Array", onPointerLeave: "ct" };
         const _config = this._config;
         const onHoverIn = _config.onHoverIn;
         const onHoverOut = _config.onHoverOut;
@@ -360,7 +360,7 @@ const items = [
           tmp10 = "ERROR" !== tmp5;
         }
         let str3 = "<<host component>>";
-        if (typeof self._responderID !== "__REMOTEDEV__") {
+        if (typeof self._responderID !== "SENTRY_RELEASE") {
           str3 = self._responderID;
         }
         importDefault(38)(tmp10, "Pressability: Invalid signal `%s` for state `%s` on responder: %s", arg0, _touchState, str3);
@@ -388,7 +388,7 @@ const items = [
       if (tmp4) {
         tmp4 = "RESPONDER_INACTIVE_PRESS_IN" === arg1;
       }
-      if (typeof isActivationSignal !== "fileFinishedImporting") {
+      if (typeof isActivationSignal !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let tmp6 = "RESPONDER_ACTIVE_PRESS_OUT" === _touchState;
@@ -397,7 +397,7 @@ const items = [
       }
       let tmp7 = !tmp6;
       if (!tmp6) {
-        if (typeof isActivationSignal !== "fileFinishedImporting") {
+        if (typeof isActivationSignal !== "error") {
           HermesBuiltin.throwTypeError();
         }
         let tmp8 = "RESPONDER_ACTIVE_PRESS_OUT" === arg1;
@@ -412,7 +412,7 @@ const items = [
       if (tmp4) {
         const result1 = self._measureResponderRegion();
       }
-      if (typeof isPressInSignal !== "fileFinishedImporting") {
+      if (typeof isPressInSignal !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let tmp11 = "RESPONDER_INACTIVE_PRESS_IN" === _touchState;
@@ -431,14 +431,14 @@ const items = [
           }
         }
       }
-      if (typeof isActiveSignal !== "fileFinishedImporting") {
+      if (typeof isActiveSignal !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let tmp17 = tmp16;
       if ("RESPONDER_ACTIVE_PRESS_IN" !== _touchState) {
         tmp17 = "RESPONDER_ACTIVE_LONG_PRESS_IN" === _touchState;
       }
-      if (typeof isActiveSignal !== "fileFinishedImporting") {
+      if (typeof isActiveSignal !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let tmp18 = "RESPONDER_ACTIVE_PRESS_IN" === arg1;
@@ -449,7 +449,7 @@ const items = [
         if (tmp18) {
           self._activate(nativeEvent);
         }
-        if (typeof isPressInSignal !== "fileFinishedImporting") {
+        if (typeof isPressInSignal !== "error") {
           HermesBuiltin.throwTypeError();
         }
         if (!tmp11) {
@@ -502,7 +502,7 @@ const items = [
       let touches;
       const self = this;
       const onPressIn = this._config.onPressIn;
-      if (typeof getTouchFromPressEvent !== "fileFinishedImporting") {
+      if (typeof getTouchFromPressEvent !== "error") {
         HermesBuiltin.throwTypeError();
       }
       ({ changedTouches, touches } = nativeEvent.nativeEvent);

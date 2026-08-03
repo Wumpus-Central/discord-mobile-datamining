@@ -1,6 +1,6 @@
-// === Module 11021: getGiftIntentCustomMessagePlaceholder ===
+// === Module 11138: getGiftIntentCustomMessagePlaceholder ===
 
-// Module 11021 (getGiftIntentCustomMessagePlaceholder)
+// Module 11138 (getGiftIntentCustomMessagePlaceholder)
 const result = require("set").fileFinishedImporting("modules/premium/gifting/native/GiftIntentMessagePlaceholder.tsx");
 
 export const getGiftIntentCustomMessagePlaceholder = function getGiftIntentCustomMessagePlaceholder() {

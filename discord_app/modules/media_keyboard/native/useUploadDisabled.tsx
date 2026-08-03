@@ -1,6 +1,6 @@
-// === Module 11410: useUploadDisabled ===
+// === Module 11520: useUploadDisabled ===
 
-// Module 11410 (useUploadDisabled)
+// Module 11520 (useUploadDisabled)
 import { DraftType } from "handleChanged";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import map from "map";

@@ -1,6 +1,6 @@
-// === Module 13642: RootThemeContextProvider ===
+// === Module 13705: RootThemeContextProvider ===
 
-// Module 13642 (RootThemeContextProvider)
+// Module 13705 (RootThemeContextProvider)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import handleThemeChange from "handleThemeChange";

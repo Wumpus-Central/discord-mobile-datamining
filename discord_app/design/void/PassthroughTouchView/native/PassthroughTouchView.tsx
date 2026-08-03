@@ -1,6 +1,6 @@
-// === Module 13180: PassthroughTouchView ===
+// === Module 13243: PassthroughTouchView ===
 
-// Module 13180 (PassthroughTouchView)
+// Module 13243 (PassthroughTouchView)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -12,5 +12,5 @@ export default function PassthroughTouchView(onTouchDown) {
   const merged1 = Object.assign(merged);
   obj.onTouchDown = onTouchDown.onTouchDown;
   obj.pointerEvents = "box-none";
-  return jsx(importDefault(13181), {});
+  return jsx(importDefault(13244), {});
 };

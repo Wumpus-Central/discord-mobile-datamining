@@ -1,6 +1,6 @@
-// === Module 16743: AgeUpdateFooter ===
+// === Module 16809: AgeUpdateFooter ===
 
-// Module 16743 (AgeUpdateFooter)
+// Module 16809 (AgeUpdateFooter)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -14,16 +14,16 @@ export default function AgeUpdateFooter() {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = {
     handleAgeVerifyHook() {
-      let obj = callback2(6750);
-      obj = { entryPoint: callback(6752).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
+      let obj = callback2(7708);
+      obj = { entryPoint: callback(7710).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
     }
   };
-  obj[3] = intl.format(importDefault(2487).ifObbX, obj);
-  return jsx(require(4189) /* Text */.Text, {
+  obj[3] = intl.format(importDefault(2517).ifObbX, obj);
+  return jsx(require(4251) /* Text */.Text, {
     handleAgeVerifyHook() {
-      let obj = callback2(6750);
-      obj = { entryPoint: callback(6752).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
+      let obj = callback2(7708);
+      obj = { entryPoint: callback(7710).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };
       return obj.showAgeVerificationGetStartedModal(obj);
     }
   });

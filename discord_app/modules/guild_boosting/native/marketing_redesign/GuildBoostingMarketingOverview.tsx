@@ -1,6 +1,6 @@
-// === Module 12655: GuildBoostingMarketingOverview ===
+// === Module 5917: GuildBoostingMarketingOverview ===
 
-// Module 12655 (GuildBoostingMarketingOverview)
+// Module 5917 (GuildBoostingMarketingOverview)
 import _slicedToArray from "_slicedToArray";
 import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta";
 import { ScrollView } from "fetchSubscriptionPlansForSKU";
@@ -86,9 +86,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items3);
   const effect1 = obj3.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = callback(6304).fetchPremiumSubscriptionPlans();
-      const obj = callback(6304);
-      const paymentSources = callback(4513).fetchPaymentSources();
+      const premiumSubscriptionPlans = callback(5757).fetchPremiumSubscriptionPlans();
+      const obj = callback(5757);
+      const paymentSources = callback(4575).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

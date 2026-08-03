@@ -1,6 +1,6 @@
-// === Module 8078: useCollectiblesMobileFlexibleBundlesExperiment ===
+// === Module 8409: useCollectiblesMobileFlexibleBundlesExperiment ===
 
-// Module 8078 (useCollectiblesMobileFlexibleBundlesExperiment)
+// Module 8409 (useCollectiblesMobileFlexibleBundlesExperiment)
 import ApexExperiment from "ApexExperiment";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-05-mobile-collectibles-flexible-bundles", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

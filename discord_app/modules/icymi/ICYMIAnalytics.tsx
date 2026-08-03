@@ -1,6 +1,6 @@
-// === Module 8198: DEFAULT_UX_VARIATION ===
+// === Module 8505: DEFAULT_UX_VARIATION ===
 
-// Module 8198 (DEFAULT_UX_VARIATION)
+// Module 8505 (DEFAULT_UX_VARIATION)
 import filterStaffGuild from "filterStaffGuild";
 import ME from "ME";
 

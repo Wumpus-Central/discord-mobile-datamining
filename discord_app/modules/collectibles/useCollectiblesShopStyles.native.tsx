@@ -1,6 +1,6 @@
-// === Module 9806: importDefaultResult1 ===
+// === Module 9951: importDefaultResult1 ===
 
-// Module 9806 (importDefaultResult1)
+// Module 9951 (importDefaultResult1)
 import importDefaultResult from "tinycolor";
 import saturateResult from "Themes";
 import importDefaultResult1 from "tinycolor";

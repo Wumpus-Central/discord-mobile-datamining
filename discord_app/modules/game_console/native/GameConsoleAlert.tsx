@@ -1,6 +1,6 @@
-// === Module 9053: SelfDismissibleAlertBody ===
+// === Module 9226: SelfDismissibleAlertBody ===
 
-// Module 9053 (SelfDismissibleAlertBody)
+// Module 9226 (SelfDismissibleAlertBody)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import set from "set";

@@ -1,7 +1,7 @@
-// === Module 10275: set ===
+// === Module 10414: set ===
 
-// Module 10275 (set)
-import { Easing } from "module_4054";
+// Module 10414 (set)
+import { Easing } from "module_4116";
 import set from "set";
 
 let set = new Set([10, 25]);

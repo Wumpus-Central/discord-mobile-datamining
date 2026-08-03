@@ -1,6 +1,6 @@
-// === Module 13792: WebAuthnSuccessStep ===
+// === Module 13859: WebAuthnSuccessStep ===
 
-// Module 13792 (WebAuthnSuccessStep)
+// Module 13859 (WebAuthnSuccessStep)
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -22,5 +22,5 @@ export default function WebAuthnSuccessStep() {
   obj = { onGenerate: null, headerLabel: null };
   const intl = navigation(1236).intl;
   obj[1] = intl.format(navigation(1236).t.iVTs6i, {});
-  return jsx(importDefault(13793), { onGenerate: null, headerLabel: null });
+  return jsx(importDefault(13860), { onGenerate: null, headerLabel: null });
 };

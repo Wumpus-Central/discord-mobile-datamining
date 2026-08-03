@@ -1,6 +1,6 @@
-// === Module 6680: BuyNitroMarketingHeader ===
+// === Module 7655: BuyNitroMarketingHeader ===
 
-// Module 6680 (BuyNitroMarketingHeader)
+// Module 7655 (BuyNitroMarketingHeader)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "registerAsset";
 import { Gradients } from "items";
@@ -61,8 +61,8 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   obj[1] = obj;
   const tmp3 = -importDefault(712).space.PX_16;
   const tmp5 = absoluteFillObject;
-  obj[2] = { position: "absolute", top: -importDefault(712).space.PX_16, right: "borderRadius", left: "__esModule", alignSelf: 16125688919116202000000000000000000000000000000000000000000000000000000000000000000 };
-  const obj1 = { position: "absolute", top: -importDefault(712).space.PX_16, right: "borderRadius", left: "__esModule", alignSelf: 16125688919116202000000000000000000000000000000000000000000000000000000000000000000 };
+  obj[2] = { position: "absolute", top: -importDefault(712).space.PX_16, right: "borderRadius", left: "Number", alignSelf: -2368620536874309500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+  const obj1 = { position: "absolute", top: -importDefault(712).space.PX_16, right: "borderRadius", left: "Number", alignSelf: -2368620536874309500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
   obj[3] = { position: "absolute", top: arg0 + importDefault(712).space.PX_20, right: importDefault(712).space.PX_4 };
   const obj3 = { height: null };
   obj3[0] = importDefault(712).space.PX_80 + importDefault(712).space.PX_4;

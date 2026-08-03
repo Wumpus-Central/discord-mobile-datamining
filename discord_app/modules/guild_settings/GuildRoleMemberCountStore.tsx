@@ -1,6 +1,6 @@
-// === Module 5208: getRoleMemberCount ===
+// === Module 5270: getRoleMemberCount ===
 
-// Module 5208 (getRoleMemberCount)
+// Module 5270 (getRoleMemberCount)
 import { Store } from "initialize";
 
 let closure_0 = {};

@@ -1,6 +1,6 @@
-// === Module 4427: isMentioned ===
+// === Module 4489: isMentioned ===
 
-// Module 4427 (isMentioned)
+// Module 4489 (isMentioned)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

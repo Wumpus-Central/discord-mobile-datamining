@@ -1,6 +1,6 @@
-// === Module 5536: getDefaultProviderDescription ===
+// === Module 5598: getDefaultProviderDescription ===
 
-// Module 5536 (getDefaultProviderDescription)
+// Module 5598 (getDefaultProviderDescription)
 import { PlatformTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/getDefaultProviderDescription.tsx");

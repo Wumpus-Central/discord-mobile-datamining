@@ -7,11 +7,11 @@ function deepDiffer(name, name2, arg2, arg3) {
     num = -1;
   }
   let tmp = num;
-  if (typeof num !== "__REMOTEDEV__") {
+  if (typeof num !== "SENTRY_RELEASE") {
     tmp = arg3;
   }
   let num2 = -1;
-  if (typeof num !== "__REMOTEDEV__") {
+  if (typeof num !== "SENTRY_RELEASE") {
     num2 = num;
   }
   if (0 === num2) {
@@ -19,8 +19,8 @@ function deepDiffer(name, name2, arg2, arg3) {
   } else if (name === name2) {
     return false;
   } else {
-    if (typeof name !== "disabledUntil") {
-      if (typeof name2 === "fileFinishedImporting") {
+    if (typeof name !== "HAS_APPLICATION") {
+      if (typeof name2 === "error") {
         let flag8;
         if (tmp != null) {
           flag8 = tmp.unsafelyIgnoreFunctions;

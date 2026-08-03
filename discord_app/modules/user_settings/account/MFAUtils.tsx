@@ -1,6 +1,6 @@
-// === Module 13844: getSMSBackupDisabledMessage ===
+// === Module 13911: getSMSBackupDisabledMessage ===
 
-// Module 13844 (getSMSBackupDisabledMessage)
+// Module 13911 (getSMSBackupDisabledMessage)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -71,7 +71,7 @@ export const useMFAAvailability = function useMFAAvailability() {
     }
     return verified;
   });
-  if (require(9208) /* _crypto */.hasCrypto) {
+  if (require(9381) /* _crypto */.hasCrypto) {
     if (false === stateFromStores) {
       let AVAILABLE = obj.UNAVAILABLE_UNVERIFIED;
     } else {

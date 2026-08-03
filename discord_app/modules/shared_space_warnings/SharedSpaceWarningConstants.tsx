@@ -1,6 +1,6 @@
-// === Module 12809: GdmWarningMedium ===
+// === Module 12872: GdmWarningMedium ===
 
-// Module 12809 (GdmWarningMedium)
+// Module 12872 (GdmWarningMedium)
 const result = require("set").fileFinishedImporting("modules/shared_space_warnings/SharedSpaceWarningConstants.tsx");
 
 export const GdmWarningMedium = { BANNER: "BANNER", MODAL: "MODAL", ACTION_SHEET: "ACTION_SHEET" };

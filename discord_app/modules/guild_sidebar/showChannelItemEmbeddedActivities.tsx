@@ -1,6 +1,6 @@
-// === Module 15216: showChannelItemEmbeddedActivities ===
+// === Module 15197: showChannelItemEmbeddedActivities ===
 
-// Module 15216 (showChannelItemEmbeddedActivities)
+// Module 15197 (showChannelItemEmbeddedActivities)
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/showChannelItemEmbeddedActivities.tsx");
 
 export const showChannelItemEmbeddedActivities = function showChannelItemEmbeddedActivities(arg0) {

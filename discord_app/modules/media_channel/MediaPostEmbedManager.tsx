@@ -1,6 +1,6 @@
-// === Module 16664: resolveMediaPostEmbeds ===
+// === Module 16730: resolveMediaPostEmbeds ===
 
-// Module 16664 (resolveMediaPostEmbeds)
+// Module 16730 (resolveMediaPostEmbeds)
 import isSubscriptionGated from "isSubscriptionGated";
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

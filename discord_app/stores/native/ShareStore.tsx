@@ -1,6 +1,6 @@
-// === Module 13479: handleTokenUpdated ===
+// === Module 13542: handleTokenUpdated ===
 
-// Module 13479 (handleTokenUpdated)
+// Module 13542 (handleTokenUpdated)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -29,9 +29,9 @@ const shareStore = new ShareStore(require("dispatcher"), {
     return false;
   },
   LOGOUT: function handleLogout() {
-    importDefault(8201).setSelectedChannel(null, null);
-    const obj = importDefault(8201);
-    const obj2 = importDefault(8201);
+    importDefault(8508).setSelectedChannel(null, null);
+    const obj = importDefault(8508);
+    const obj2 = importDefault(8508);
     const result = obj2.setAuthenticationToken(null, importDefault(698).getSuperPropertiesBase64());
     let c5 = null;
     return false;
@@ -66,10 +66,10 @@ const shareStore = new ShareStore(require("dispatcher"), {
           obj.recipients = mapped.filter(require(1351) /* isDiscordFrontendDevelopment */.isNotNullish);
           json1 = JSON.stringify(obj);
         }
-        importDefault(8201).setSelectedChannel(json1, json);
+        importDefault(8508).setSelectedChannel(json1, json);
         c3 = null;
         c4 = null;
-        const obj3 = importDefault(8201);
+        const obj3 = importDefault(8508);
       }
     }
     if (null != c5) {
@@ -77,7 +77,7 @@ const shareStore = new ShareStore(require("dispatcher"), {
       obj[0] = state;
       const result = require(503) /* encodeProperties */.extendSuperProperties(obj);
       const obj4 = require(503) /* encodeProperties */;
-      const obj6 = importDefault(8201);
+      const obj6 = importDefault(8508);
       const result1 = obj6.setAuthenticationToken(c5, importDefault(698).getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {
         c5 = null;

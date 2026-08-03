@@ -1,6 +1,6 @@
-// === Module 8714: OrbsIcon ===
+// === Module 8891: OrbsIcon ===
 
-// Module 8714 (OrbsIcon)
+// Module 8891 (OrbsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const OrbsIcon = function OrbsIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(8715) /* registerAsset */;
+  obj[0] = require(8892) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

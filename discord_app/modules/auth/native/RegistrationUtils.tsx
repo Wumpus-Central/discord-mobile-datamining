@@ -1,6 +1,6 @@
-// === Module 14885: trackRegTransition ===
+// === Module 14952: trackRegTransition ===
 
-// Module 14885 (trackRegTransition)
+// Module 14952 (trackRegTransition)
 import noop from "noop";
 import updateInvite from "updateInvite";
 import getDisplayedInviteCode from "getDisplayedInviteCode";
@@ -166,7 +166,7 @@ export function getTrackRegTransition(closure_0) {
 export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
   let dependencyMap;
   let importDefault;
-  _require = React.useContext(_require(14875).TrackRegistrationContext);
+  _require = React.useContext(_require(14942).TrackRegistrationContext);
   ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
   let obj = {};
   const merged = Object.assign(arg0);
@@ -180,7 +180,7 @@ export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
       tmp();
     }
   };
-  return jsx(_require(5154).HeaderBackButton, {});
+  return jsx(_require(5216).HeaderBackButton, {});
 };
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {

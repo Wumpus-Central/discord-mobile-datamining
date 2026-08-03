@@ -1,6 +1,6 @@
-// === Module 7773: reactParserFor ===
+// === Module 7892: reactParserFor ===
 
-// Module 7773 (reactParserFor)
+// Module 7892 (reactParserFor)
 const result = require("collectAst").fileFinishedImporting("../discord_common/js/packages/markup/MarkupParser.tsx");
 for (const key10026 in require("collectAst")) {
   let tmp3 = key10026;

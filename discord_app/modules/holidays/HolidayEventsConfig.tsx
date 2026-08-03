@@ -1,6 +1,6 @@
-// === Module 16231: HolidayEmojiAnimationType ===
+// === Module 16295: HolidayEmojiAnimationType ===
 
-// Module 16231 (HolidayEmojiAnimationType)
+// Module 16295 (HolidayEmojiAnimationType)
 let obj = {
   experiment: null,
   useIsExperimentEligible() {

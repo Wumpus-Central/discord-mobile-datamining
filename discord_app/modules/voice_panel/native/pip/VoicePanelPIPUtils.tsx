@@ -1,6 +1,6 @@
-// === Module 15935: PIPReferenceDimensions ===
+// === Module 15999: PIPReferenceDimensions ===
 
-// Module 15935 (PIPReferenceDimensions)
+// Module 15999 (PIPReferenceDimensions)
 import getParticipants from "getParticipants";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
@@ -45,7 +45,7 @@ function pipXYtoAbsoluteXY(arg0) {
   let windowDimensions;
   ({ windowDimensions, safeArea } = arg0);
   ({ pipX, pipY } = arg0);
-  if (typeof getPIPWindowDimensions !== "fileFinishedImporting") {
+  if (typeof getPIPWindowDimensions !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
@@ -98,7 +98,7 @@ function getClampedPIPPosition(topAvoidanceRegion) {
   } else {
     sum = y - height / 2;
   }
-  if (typeof getPIPWindowDimensions !== "fileFinishedImporting") {
+  if (typeof getPIPWindowDimensions !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
@@ -108,13 +108,13 @@ function getClampedPIPPosition(topAvoidanceRegion) {
   const diff3 = windowDimensions.height - bound1;
   const diff4 = diff3 - Math.max(safeArea.bottom, PIP_WINDOW_OFFSET);
   const diff5 = bound + diff2 - width;
-  if (typeof clamp !== "fileFinishedImporting") {
+  if (typeof clamp !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const bound2 = Math.min(Math.max(diff, bound), diff5);
   const sum1 = bound1 + num;
   const diff6 = bound1 + diff4 - bottomAvoidanceRegion - height;
-  if (typeof clamp !== "fileFinishedImporting") {
+  if (typeof clamp !== "error") {
     HermesBuiltin.throwTypeError();
   }
   obj = { x: bound2 + point.x, y: Math.min(Math.max(sum, sum1), diff6) + point.y };
@@ -132,7 +132,7 @@ function calculatePIPPositionFromVelocity(arg0) {
   let windowDimensions;
   ({ velocityX, velocityY, windowDimensions, safeArea } = arg0);
   ({ absoluteX, absoluteY } = arg0);
-  if (typeof getPIPWindowDimensions !== "fileFinishedImporting") {
+  if (typeof getPIPWindowDimensions !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
@@ -145,7 +145,7 @@ function calculatePIPPositionFromVelocity(arg0) {
   const diff5 = absoluteY - bound1;
   const absolute = Math.abs(velocityY);
   if (Math.max(absolute, Math.abs(velocityX)) < MIN_PIP_TOSS_VELOCITY) {
-    if (typeof clamp !== "fileFinishedImporting") {
+    if (typeof clamp !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const rect = { left: null, right: null, top: null, bottom: null };
@@ -153,20 +153,20 @@ function calculatePIPPositionFromVelocity(arg0) {
     const _Math2 = Math;
     rect[0] = Math.min(Math.max(diff4, 0), diff1);
     const diff6 = diff1 - diff4;
-    if (typeof clamp !== "fileFinishedImporting") {
+    if (typeof clamp !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const _Math3 = Math;
     const _Math4 = Math;
     rect[1] = Math.min(Math.max(diff6, 0), diff1);
-    if (typeof clamp !== "fileFinishedImporting") {
+    if (typeof clamp !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const _Math5 = Math;
     const _Math6 = Math;
     rect[2] = Math.min(Math.max(diff5, 0), diff3);
     const diff7 = diff3 - diff5;
-    if (typeof clamp !== "fileFinishedImporting") {
+    if (typeof clamp !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const _Math7 = Math;
@@ -228,11 +228,11 @@ function calculatePIPPositionFromVelocity(arg0) {
     num5 = (diff4 + result1 * (num4 - diff5)) / diff1;
     num6 = num4 / diff3;
   }
-  if (typeof clamp !== "fileFinishedImporting") {
+  if (typeof clamp !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const obj = { pipX: Math.min(Math.max(num5, 0), 1), pipY: null };
-  if (typeof clamp !== "fileFinishedImporting") {
+  if (typeof clamp !== "error") {
     HermesBuiltin.throwTypeError();
   }
   obj[1] = Math.min(Math.max(num6, 0), 1);
@@ -330,7 +330,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
           if (!blockList.has(participant.user.id)) {
             const participant1 = store.getParticipant(channelId, participant.user.id);
             if (null != participant1) {
-              let obj = require(10056) /* canRenderParticipantVideo */;
+              let obj = require(10198) /* canRenderParticipantVideo */;
               if (obj.canRenderParticipantVideo(participant1)) {
                 obj = { id: null, type: null };
                 obj[0] = participant1.id;
@@ -363,7 +363,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
       for (const item10060 of activityParticipants) {
         let tmp17 = item10060;
         let participants = item10060.participants;
-        if (participants.some((userId) => callback(13143).isActivityParticipantCurrentUserCurrentSession(userId))) {
+        if (participants.some((userId) => callback(13206).isActivityParticipantCurrentUserCurrentSession(userId))) {
           let tmp18 = item10060;
           if (!blockList.has(tmp17.id)) {
             let obj1 = { id: null, type: null };
@@ -414,7 +414,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
       type = participant2.type;
       if (ParticipantTypes.STREAM === type) {
         if (null != authStore.getActiveStreamForUser(participant2.user.id, participant2.stream.guildId)) {
-          let obj9 = require(10056) /* canRenderParticipantVideo */;
+          let obj9 = require(10198) /* canRenderParticipantVideo */;
           if (obj9.canRenderParticipantVideo(participant2)) {
             ({ id: obj11[0], type: obj11[1] } = participant2);
             return { id: null, type: null };
@@ -422,7 +422,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
         }
       } else if (tmp31.ACTIVITY === type) {
         const participants2 = participant2.participants;
-        if (participants2.some((userId) => callback(13143).isActivityParticipantCurrentUserCurrentSession(userId))) {
+        if (participants2.some((userId) => callback(13206).isActivityParticipantCurrentUserCurrentSession(userId))) {
           const obj5 = { id: null, type: null };
           ({ id: obj9[0], type: obj9[1] } = participant2);
           return obj5;
@@ -442,7 +442,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
         obj7[1] = ParticipantTypes.USER;
         return obj7;
       }
-      obj13 = require(10056) /* canRenderParticipantVideo */;
+      obj13 = require(10198) /* canRenderParticipantVideo */;
     }
   }
   const videoParticipants = store.getVideoParticipants(channelId);
@@ -451,7 +451,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
     if (!blockList.has(item10162.id)) {
       let tmp41 = require;
       let tmp42 = dependencyMap;
-      let obj16 = require(10056) /* canRenderParticipantVideo */;
+      let obj16 = require(10198) /* canRenderParticipantVideo */;
       let tmp43 = item10162;
       if (obj16.canRenderParticipantVideo(tmp40)) {
         let obj8 = { id: null, type: null };
@@ -502,7 +502,7 @@ export const getPIPMode = function getPIPMode(connected) {
               if (obj.canRenderParticipantVideo(participant1)) {
                 return constants2.IN_PANEL;
               }
-              obj = require(10056) /* canRenderParticipantVideo */;
+              obj = require(10198) /* canRenderParticipantVideo */;
             }
           }
           if (tmp) {
@@ -516,7 +516,7 @@ export const getPIPMode = function getPIPMode(connected) {
                 if (item10032.id !== store2.getId()) {
                   let tmp14 = require;
                   let tmp15 = dependencyMap;
-                  let obj2 = require(10056) /* canRenderParticipantVideo */;
+                  let obj2 = require(10198) /* canRenderParticipantVideo */;
                   let tmp16 = item10032;
                   if (obj2.canRenderParticipantVideo(tmp12)) {
                     let tmp17 = constants2;

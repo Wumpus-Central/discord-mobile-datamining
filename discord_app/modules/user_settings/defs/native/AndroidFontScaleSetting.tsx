@@ -1,6 +1,6 @@
-// === Module 14347: slider ===
+// === Module 14414: slider ===
 
-// Module 14347 (slider)
+// Module 14414 (slider)
 import noop from "noop";
 import { useFontScaleStore } from "DEFAULT_FONT_SCALE_STORE_STATE";
 import { FontScales } from "MAX_FAVORITES";

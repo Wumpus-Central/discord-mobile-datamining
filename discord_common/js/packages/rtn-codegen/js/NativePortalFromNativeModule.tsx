@@ -1,6 +1,6 @@
-// === Module 8126: enforcing ===
+// === Module 8457: enforcing ===
 
-// Module 8126 (enforcing)
+// Module 8457 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativePortalFromNativeModule");

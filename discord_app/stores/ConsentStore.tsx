@@ -1,6 +1,6 @@
-// === Module 5647: hasConsented ===
+// === Module 5709: hasConsented ===
 
-// Module 5647 (hasConsented)
+// Module 5709 (hasConsented)
 import { Store } from "initialize";
 
 let c0 = false;

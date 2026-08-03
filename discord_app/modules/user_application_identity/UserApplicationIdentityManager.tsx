@@ -1,11 +1,11 @@
-// === Module 16747: handleUserApplicationIdentityGatewayEvent ===
+// === Module 16813: handleUserApplicationIdentityGatewayEvent ===
 
-// Module 16747 (handleUserApplicationIdentityGatewayEvent)
+// Module 16813 (handleUserApplicationIdentityGatewayEvent)
 import "initialize";
 
 const require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {
-  const useUserApplicationIdentities = require(12178) /* fetchStore */.useUserApplicationIdentities;
+  const useUserApplicationIdentities = require(12274) /* fetchStore */.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
 }
 let prototype = function UserApplicationIdentityManager() {

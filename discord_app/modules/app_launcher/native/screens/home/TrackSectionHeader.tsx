@@ -1,6 +1,6 @@
-// === Module 11283: TrackSectionHeader ===
+// === Module 11394: TrackSectionHeader ===
 
-// Module 11283 (TrackSectionHeader)
+// Module 11394 (TrackSectionHeader)
 import handleDismissWithDismissed from "handleDismissWithDismissed";
 
 const require = arg1;
@@ -20,6 +20,6 @@ export default function TrackSectionHeader(viewed) {
   obj[2] = obj;
   obj = { disableTrack: !viewed };
   const items = [viewed];
-  importDefault(8436)(obj, obj, items);
+  importDefault(8741)(obj, obj, items);
   return children;
 };

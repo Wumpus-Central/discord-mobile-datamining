@@ -12,8 +12,8 @@ obj = {
   colors: require("mapValues")(SemanticColors, (arg0, arg1) => ({ [closure_7]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: require("mapValues")(Shadows, (arg0) => {
-    let f67183 = arg0;
-    f67183 = (shadowOffset) => {
+    let f67304 = arg0;
+    f67304 = (shadowOffset) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
@@ -22,34 +22,34 @@ obj = {
     };
     let shadowOffset = {
       resolve(isAndroid) {
-        return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        return f67304(f67304[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
       }
     };
-    f67183 = (shadowColorAndroid) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
+    f67304 = (shadowColorAndroid) => arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
     const shadowColor = {
       resolve(isAndroid) {
-        return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+        return f67304(f67304[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
       }
     };
-    f67183 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f67183 = (shadowRadius) => shadowRadius.shadowRadius;
-    f67183 = (elevation) => elevation.elevation;
+    f67304 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f67304 = (shadowRadius) => shadowRadius.shadowRadius;
+    f67304 = (elevation) => elevation.elevation;
     return {
       shadowOffset,
       shadowColor,
       shadowOpacity: {
         resolve(isAndroid) {
-          return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67304(f67304[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67304(f67304[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       },
       elevation: {
         resolve(isAndroid) {
-          return f67183(f67183[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f67304(f67304[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         }
       }
     };
@@ -94,7 +94,7 @@ obj = {
   resolveSemanticColor(theme, TEXT_FEEDBACK_CRITICAL, semanticColorContextFromThemeContext) {
     let tmp = (function sanitizeTheme(theme) {
       let tmp = theme;
-      if (typeof theme !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof theme !== "ge") {
         const formatted = theme.toUpperCase();
         if (formatted in table) {
           tmp = table[formatted];

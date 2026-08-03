@@ -1,6 +1,6 @@
-// === Module 14043: route ===
+// === Module 14110: route ===
 
-// Module 14043 (route)
+// Module 14110 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -9,15 +9,15 @@ obj = {
     return intl.string(require(1236) /* getSystemLocale */.t.JALI2K);
   },
   usePredicate() {
-    return require(10506) /* getIsEligibleForQuests */.getIsEligibleForQuests();
+    return require(10644) /* getIsEligibleForQuests */.getIsEligibleForQuests();
   },
   parent: null,
   IconComponent: require("QuestsIcon").QuestsIcon,
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(6010);
-      obj = { fromContent: callback(5042).QuestContent.USER_SETTINGS };
+      let obj = callback(7089);
+      obj = { fromContent: callback(5104).QuestContent.USER_SETTINGS };
       const result = obj.setQuestHomeUtmContext(obj);
       return true;
     };
@@ -26,7 +26,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUESTS,
   getComponent() {
-    return require(14046) /* QuestHomeSetting */.default;
+    return require(14113) /* QuestHomeSetting */.default;
   }
 };
 const route = createToggle.createRoute(obj);

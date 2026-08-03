@@ -3,299 +3,147 @@
 // Module 530 (sendRequest)
 import set from "fails";
 
-function sendRequest(arg0, url) {
+function sendRequest(arg0, signal) {
   let closure_0 = arg0;
-  const importDefault = url;
+  const importDefault = signal;
   const dependencyMap = arg2;
   let closure_3 = arg3;
   let closure_4 = arg4;
-  const promise = importDefault(531)[arg0](url.url);
-  if (null != url.onRequestCreated) {
-    url.onRequestCreated(promise);
-  }
-  if (null != url.query) {
-    let query = url.query;
-    let tmp3 = query;
-    if (typeof query !== "window") {
-      let obj = {};
-      let merged = Object.assign(query);
-      const _Object = Object;
-      const keys = Object.keys(obj);
-      const mapped = keys.map((arg0) => {
-        if (null == obj[arg0]) {
-          delete tmp[tmp2];
-        }
-      });
-      tmp3 = obj;
-    }
-    query = promise.query(tmp3);
-  }
-  if (url.body) {
-    promise.send(url.body);
-  }
-  if (null != url.headers) {
-    const result = promise.set(url.headers);
-  }
-  if (true === url.withCredentials) {
-    promise.withCredentials();
-  }
-  if (null != url.reason) {
-    const _encodeURIComponent = encodeURIComponent;
-    const result1 = promise.set("X-Audit-Log-Reason", encodeURIComponent(url.reason));
-  }
-  const attachments = url.attachments;
-  if (attachments != null) {
-    const item = attachments.forEach((name) => {
-      promise.attach(name.name, name.file, name.filename);
-    });
-  }
-  const fields = url.fields;
-  if (fields != null) {
-    const item1 = fields.forEach((name) => {
-      promise.field(name.name, name.value);
-    });
-  }
-  if (null != url.context) {
-    const tmp13 = encodeProperties(url.context);
-    if (null != tmp13) {
-      const result2 = promise.set("X-Context-Properties", tmp13);
-    }
-  }
-  let tmp15 = null != url.retried;
-  if (tmp15) {
-    tmp15 = 0 !== url.retried;
-  }
-  if (tmp15) {
-    const _HermesInternal = HermesInternal;
-    const result3 = promise.set("X-Failed-Requests", "" + url.retried);
-  }
-  let tmp18 = null != url.timeout;
-  if (tmp18) {
-    tmp18 = 0 !== url.timeout;
-  }
-  if (tmp18) {
-    promise.timeout(url.timeout);
-  }
-  if (url.binary) {
-    promise.responseType("blob");
-  }
-  if (null != url.onRequestProgress) {
-    promise.on("progress", (arg0) => {
-      const onRequestProgress = url.onRequestProgress;
-      if (onRequestProgress != null) {
-        onRequestProgress(arg0);
-      }
-    });
-  }
-  function retry() {
-
-  }
-  let prepareRequestResult;
-  if (c10 != null) {
-    const prepareRequest = c10.prepareRequest;
-    if (prepareRequest != null) {
-      prepareRequestResult = prepareRequest(promise);
-    }
-  }
-  promise.ok((status) => null != status.status);
-  promise.then((ok) => {
-    let body;
-    let headers;
-    if (null != url.retries) {
-      tmp.retries = +tmp.retries - 1;
-      if (+tmp.retries > 0) {
-        if (set.has(ok.status)) {
-          if (typeof retry !== "fileFinishedImporting") {
-            HermesBuiltin.throwTypeError();
-          }
-          if (null != tmp.backoff) {
-            let backoff = tmp.backoff;
-          } else {
-            backoff = new url(584)();
-          }
-          tmp.backoff = backoff;
-          let num5 = 0;
-          if (null != tmp.retried) {
-            num5 = tmp.retried;
-          }
-          tmp.retried = num5 + 1;
-          const backoff2 = tmp.backoff;
-          backoff2.fail(() => outer1_11(url.url).then(() => {
-            outer1_7(closure_0, closure_1, closure_2, closure_3, closure_4);
-          }));
-        }
-      }
-    }
-    let obj = { ok: ok.ok, headers: ok.headers, body: ok.body, text: ok.text, status: ok.status, retryAfter: null };
-    ({ headers, body } = ok);
-    let prop;
-    if (headers != null) {
-      prop = headers["retry-after"];
-    }
-    if (prop == null) {
-      let prop1;
-      if (headers != null) {
-        prop1 = headers["Retry-After"];
-      }
-      prop = prop1;
-    }
-    if (typeof prop !== "__FORMATJS_LISTFORMAT_DATA__") {
-      const _parseInt = parseInt;
-      let parsed = parseInt(prop, 10);
-      const _Number = Number;
-      obj[5] = parsed;
-      outer1_9(tmp, obj);
-      let c0 = false;
-      function interceptRetry(arg0, interceptResponse) {
-        let obj = {};
-        const merged = Object.assign(outer1_1);
-        obj = {};
-        const merged1 = Object.assign(outer1_1.headers);
-        const merged2 = Object.assign(arg0);
-        obj.headers = obj;
-        obj.interceptResponse = interceptResponse;
-        let c0 = true;
-        retry(c0, obj, outer1_2, outer1_3, outer1_4);
-      }
-      function interceptCancel(arg0) {
-        if (!c0) {
-          outer1_3(arg0);
-          if (outer1_4 != null) {
-            const obj = { ok: false, hasErr: true, err: null };
-            obj[2] = arg0;
-            tmp4(obj);
-          }
-        }
-      }
-      let interceptResponseResult;
-      if (tmp != null) {
-        const interceptResponse = tmp.interceptResponse;
-        if (interceptResponse != null) {
-          interceptResponseResult = interceptResponse(ok, interceptRetry, interceptCancel);
-        }
-      }
-      if (true !== interceptResponseResult) {
-        let interceptResponse2Result;
-        if (outer1_10 != null) {
-          const interceptResponse2 = tmp43.interceptResponse;
-          if (interceptResponse2 != null) {
-            interceptResponse2Result = interceptResponse2(ok, interceptRetry, interceptCancel, closure_8);
-          }
-        }
-        if (true !== interceptResponse2Result) {
-          if (ok.ok) {
-            dependencyMap(obj);
-          } else {
-            if (tmp.oldFormErrors) {
-              const body2 = obj.body;
-              let code;
-              if (body2 != null) {
-                code = body2.code;
-              }
-              if (code === callback(585).INVALID_FORM_BODY_ERROR_CODE) {
-                const errors = obj.body.errors;
-                if (null != errors) {
-                  obj.body = tmp17(586).convertSkemaError(errors);
-                  const tmp17Result = tmp17(586);
-                }
-              }
-              tmp17 = callback;
-            }
-            if (tmp.rejectWithError) {
-              obj = { method: null, url: null, ok: null, status: null, body: null, text: null, headers: null, retryAfter: null };
-              obj[0] = c0;
-              obj[1] = tmp.url;
-              ({ ok: obj3[2], status: obj3[3], body: obj3[4], text: obj3[5], headers: obj3[6], retryAfter: obj3[7] } = obj);
-              callback2(new obj(obj));
-            } else {
-              callback2(obj);
-            }
-          }
-          if (null != set) {
-            obj = { hasErr: false };
-            let merged = Object.assign(obj);
-            tmp30(obj);
-          }
-        }
-      }
-    }
-    if (null != body) {
-      if (typeof body !== "window") {
-        const retry_after = body.retry_after;
-        if (typeof retry_after !== "__REMOTEDEV__") {
-          const _Number2 = Number;
-          if (Number.isFinite(retry_after)) {
-            if (retry_after > 0) {
-              parsed = retry_after;
-            }
-          }
-        }
-      }
-    }
-  }, (code) => {
-    if (null != url.retries) {
-      tmp.retries = +tmp.retries - 1;
-      if (+tmp.retries > 0) {
-        if ("ABORTED" !== code.code) {
-          if (typeof retry !== "fileFinishedImporting") {
-            HermesBuiltin.throwTypeError();
-          }
-          if (null != tmp.backoff) {
-            let backoff = tmp.backoff;
-          } else {
-            backoff = new url(584)();
-          }
-          tmp.backoff = backoff;
-          let num2 = 0;
-          if (null != tmp.retried) {
-            num2 = tmp.retried;
-          }
-          tmp.retried = num2 + 1;
-          const backoff2 = tmp.backoff;
-          backoff2.fail(() => outer1_11(url.url).then(() => {
-            outer1_7(closure_0, closure_1, closure_2, closure_3, closure_4);
-          }));
-        }
-      }
-    }
-    outer1_9(url);
-    callback2(code);
-    if (null != closure_4) {
-      const obj = { ok: false, hasErr: true, err: null };
-      obj[2] = code;
-      tmp5(obj);
-    }
-  });
-  const signal = url.signal;
+  signal = signal.signal;
   let aborted;
   if (signal != null) {
     aborted = signal.aborted;
   }
   if (aborted) {
-    promise.abort();
-  } else {
-    const signal2 = url.signal;
-    if (signal2 != null) {
-      const listener = signal2.addEventListener("abort", () => promise.abort(), { once: true });
+    const _Object = Object;
+    const _Error = Error;
+    const error = new Error("Request aborted");
+    let merged = Object.assign(error, { code: "ABORTED" });
+    cleanupRequestEntry(signal);
+    arg3(merged);
+    if (null != arg4) {
+      let obj = { ok: false, hasErr: true, err: null };
+      obj[2] = merged;
+      arg4(obj);
     }
-  }
-}
-function cleanupRequestEntry(url, status) {
-  let body;
-  let headers;
-  let closure_0 = url;
-  let obj = map;
-  let value = map.get(url.url);
-  if (null != status) {
-    if (set1.has(status.status)) {
-      let backoff;
-      if (value != null) {
-        backoff = value.backoff;
+  } else {
+    const promise = importDefault(531)[arg0](signal.url);
+    if (null != signal.onRequestCreated) {
+      signal.onRequestCreated(promise);
+    }
+    if (null != signal.query) {
+      let query = signal.query;
+      let tmp6 = query;
+      if (typeof query !== "window") {
+        obj = {};
+        let merged1 = Object.assign(query);
+        const _Object2 = Object;
+        const keys = Object.keys(obj);
+        const mapped = keys.map((arg0) => {
+          if (null == obj[arg0]) {
+            delete tmp[tmp2];
+          }
+        });
+        tmp6 = obj;
       }
-      if (backoff == null) {
-        backoff = new importDefault(584)(1000, 60000);
+      query = promise.query(tmp6);
+    }
+    if (signal.body) {
+      promise.send(signal.body);
+    }
+    if (null != signal.headers) {
+      const result = promise.set(signal.headers);
+    }
+    if (true === signal.withCredentials) {
+      promise.withCredentials();
+    }
+    if (null != signal.reason) {
+      const _encodeURIComponent = encodeURIComponent;
+      const result1 = promise.set("X-Audit-Log-Reason", encodeURIComponent(signal.reason));
+    }
+    const attachments = signal.attachments;
+    if (attachments != null) {
+      const item = attachments.forEach((name) => {
+        promise.attach(name.name, name.file, name.filename);
+      });
+    }
+    const fields = signal.fields;
+    if (fields != null) {
+      const item1 = fields.forEach((name) => {
+        promise.field(name.name, name.value);
+      });
+    }
+    if (null != signal.context) {
+      const tmp16 = encodeProperties(signal.context);
+      if (null != tmp16) {
+        const result2 = promise.set("X-Context-Properties", tmp16);
       }
-      ({ headers, body } = status);
+    }
+    let tmp18 = null != signal.retried;
+    if (tmp18) {
+      tmp18 = 0 !== signal.retried;
+    }
+    if (tmp18) {
+      const _HermesInternal = HermesInternal;
+      const result3 = promise.set("X-Failed-Requests", "" + signal.retried);
+    }
+    let tmp21 = null != signal.timeout;
+    if (tmp21) {
+      tmp21 = 0 !== signal.timeout;
+    }
+    if (tmp21) {
+      promise.timeout(signal.timeout);
+    }
+    if (signal.binary) {
+      promise.responseType("blob");
+    }
+    if (null != signal.onRequestProgress) {
+      promise.on("progress", (direction) => {
+        const onRequestProgress = signal.onRequestProgress;
+        if (onRequestProgress != null) {
+          onRequestProgress(direction);
+        }
+      });
+    }
+    function retry() {
+
+    }
+    let prepareRequestResult;
+    if (c10 != null) {
+      const prepareRequest = c10.prepareRequest;
+      if (prepareRequest != null) {
+        prepareRequestResult = prepareRequest(promise);
+      }
+    }
+    promise.ok((status) => null != status.status);
+    promise.then((ok) => {
+      let body;
+      let headers;
+      if (null != signal.retries) {
+        tmp.retries = +tmp.retries - 1;
+        if (+tmp.retries > 0) {
+          if (set.has(ok.status)) {
+            if (typeof retry !== "error") {
+              HermesBuiltin.throwTypeError();
+            }
+            if (null != tmp.backoff) {
+              let backoff = tmp.backoff;
+            } else {
+              backoff = new signal(584)();
+            }
+            tmp.backoff = backoff;
+            let num5 = 0;
+            if (null != tmp.retried) {
+              num5 = tmp.retried;
+            }
+            tmp.retried = num5 + 1;
+            const backoff2 = tmp.backoff;
+            backoff2.fail(() => outer1_11(url.url).then(() => outer1_7(closure_0, closure_1, closure_2, closure_3, closure_4)));
+          }
+        }
+      }
+      let obj = { ok: ok.ok, headers: ok.headers, body: ok.body, text: ok.text, status: ok.status, retryAfter: null };
+      ({ headers, body } = ok);
       let prop;
       if (headers != null) {
         prop = headers["retry-after"];
@@ -307,7 +155,174 @@ function cleanupRequestEntry(url, status) {
         }
         prop = prop1;
       }
-      if (typeof prop !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof prop !== "ge") {
+        const _parseInt = parseInt;
+        let parsed = parseInt(prop, 10);
+        const _Number = Number;
+        obj[5] = parsed;
+        outer1_9(tmp, obj);
+        let c0 = false;
+        function interceptRetry(arg0, interceptResponse) {
+          let obj = {};
+          const merged = Object.assign(outer1_1);
+          obj = {};
+          const merged1 = Object.assign(outer1_1.headers);
+          const merged2 = Object.assign(arg0);
+          obj.headers = obj;
+          obj.interceptResponse = interceptResponse;
+          let c0 = true;
+          retry(c0, obj, outer1_2, outer1_3, outer1_4);
+        }
+        function interceptCancel(arg0) {
+          if (!c0) {
+            outer1_3(arg0);
+            if (outer1_4 != null) {
+              const obj = { ok: false, hasErr: true, err: null };
+              obj[2] = arg0;
+              tmp4(obj);
+            }
+          }
+        }
+        let interceptResponseResult;
+        if (tmp != null) {
+          const interceptResponse = tmp.interceptResponse;
+          if (interceptResponse != null) {
+            interceptResponseResult = interceptResponse(ok, interceptRetry, interceptCancel);
+          }
+        }
+        if (true !== interceptResponseResult) {
+          let interceptResponse2Result;
+          if (outer1_10 != null) {
+            const interceptResponse2 = tmp43.interceptResponse;
+            if (interceptResponse2 != null) {
+              interceptResponse2Result = interceptResponse2(ok, interceptRetry, interceptCancel, closure_8);
+            }
+          }
+          if (true !== interceptResponse2Result) {
+            if (ok.ok) {
+              dependencyMap(obj);
+            } else {
+              if (tmp.oldFormErrors) {
+                const body2 = obj.body;
+                let code;
+                if (body2 != null) {
+                  code = body2.code;
+                }
+                if (code === callback(585).INVALID_FORM_BODY_ERROR_CODE) {
+                  const errors = obj.body.errors;
+                  if (null != errors) {
+                    obj.body = tmp17(586).convertSkemaError(errors);
+                    const tmp17Result = tmp17(586);
+                  }
+                }
+                tmp17 = callback;
+              }
+              if (tmp.rejectWithError) {
+                obj = { method: null, url: null, ok: null, status: null, body: null, text: null, headers: null, retryAfter: null };
+                obj[0] = c0;
+                obj[1] = tmp.url;
+                ({ ok: obj3[2], status: obj3[3], body: obj3[4], text: obj3[5], headers: obj3[6], retryAfter: obj3[7] } = obj);
+                callback2(new obj(obj));
+              } else {
+                callback2(obj);
+              }
+            }
+            if (null != set) {
+              obj = { hasErr: false };
+              let merged = Object.assign(obj);
+              tmp30(obj);
+            }
+          }
+        }
+      }
+      if (null != body) {
+        if (typeof body !== "window") {
+          const retry_after = body.retry_after;
+          if (typeof retry_after !== "SENTRY_RELEASE") {
+            const _Number2 = Number;
+            if (Number.isFinite(retry_after)) {
+              if (retry_after > 0) {
+                parsed = retry_after;
+              }
+            }
+          }
+        }
+      }
+    }, (code) => {
+      if (null != signal.retries) {
+        tmp.retries = +tmp.retries - 1;
+        if (+tmp.retries > 0) {
+          if ("ABORTED" !== code.code) {
+            if (typeof retry !== "error") {
+              HermesBuiltin.throwTypeError();
+            }
+            if (null != tmp.backoff) {
+              let backoff = tmp.backoff;
+            } else {
+              backoff = new signal(584)();
+            }
+            tmp.backoff = backoff;
+            let num2 = 0;
+            if (null != tmp.retried) {
+              num2 = tmp.retried;
+            }
+            tmp.retried = num2 + 1;
+            const backoff2 = tmp.backoff;
+            backoff2.fail(() => outer1_11(url.url).then(() => outer1_7(closure_0, closure_1, closure_2, closure_3, closure_4)));
+          }
+        }
+      }
+      outer1_9(signal);
+      callback2(code);
+      if (null != closure_4) {
+        const obj = { ok: false, hasErr: true, err: null };
+        obj[2] = code;
+        tmp5(obj);
+      }
+    });
+    const signal2 = signal.signal;
+    let aborted1;
+    if (signal2 != null) {
+      aborted1 = signal2.aborted;
+    }
+    if (aborted1) {
+      promise.abort();
+    } else {
+      const signal3 = signal.signal;
+      if (signal3 != null) {
+        const listener = signal3.addEventListener("abort", () => promise.abort(), { once: true });
+      }
+    }
+  }
+}
+function cleanupRequestEntry(url) {
+  let body;
+  let headers;
+  let closure_0 = url;
+  let obj = map;
+  let value = map.get(url.url);
+  if (null != arg1) {
+    if (set1.has(arg1.status)) {
+      let backoff;
+      if (value != null) {
+        backoff = value.backoff;
+      }
+      if (backoff == null) {
+        backoff = new importDefault(584)(1000, 60000);
+      }
+      ({ headers, body } = arg1);
+      let prop;
+      if (headers != null) {
+        prop = headers["retry-after"];
+      }
+      if (prop == null) {
+        let prop1;
+        if (headers != null) {
+          prop1 = headers["Retry-After"];
+        }
+        prop = prop1;
+      }
+      if (typeof prop !== "ge") {
         const _parseInt = parseInt;
         let num4 = parseInt(prop, 10);
         const _Number = Number;
@@ -357,13 +372,13 @@ function cleanupRequestEntry(url, status) {
         obj = { queue: null, retryAfterTimestamp: null, latestErrorMessage: null, status: null, timeoutId: null, backoff: null };
         obj[0] = queue;
         obj[1] = sum;
-        const body2 = status.body;
+        const body2 = arg1.body;
         let message;
         if (body2 != null) {
           message = body2.message;
         }
         obj[2] = String(message);
-        obj[3] = status.status;
+        obj[3] = arg1.status;
         obj[4] = timerId;
         obj[5] = backoff;
         const result = obj.set(url.url, obj);
@@ -371,7 +386,7 @@ function cleanupRequestEntry(url, status) {
       if (null != body) {
         if (typeof body !== "window") {
           const retry_after = body.retry_after;
-          if (typeof retry_after !== "__REMOTEDEV__") {
+          if (typeof retry_after !== "SENTRY_RELEASE") {
             const _Number2 = Number;
             if (Number.isFinite(retry_after)) {
               if (retry_after > 0) {
@@ -412,7 +427,7 @@ function makeRequest(arg0, arg1, arg2) {
   let closure_1 = arg1;
   let closure_2 = arg2;
   return new Promise((serializer, bindResult) => {
-    if (typeof obj !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof obj !== "ge") {
       obj = { url: null, rejectWithError: false };
       obj[0] = tmp;
     }
@@ -515,7 +530,7 @@ function parseRetryAfter(retry_after, retry_after) {
     }
     prop = prop1;
   }
-  if (typeof prop !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof prop !== "ge") {
     const _parseInt = parseInt;
     const parsed = parseInt(prop, 10);
     const _Number = Number;
@@ -528,7 +543,7 @@ function parseRetryAfter(retry_after, retry_after) {
   if (null != retry_after) {
     if (typeof retry_after !== "window") {
       retry_after = retry_after.retry_after;
-      if (typeof retry_after !== "__REMOTEDEV__") {
+      if (typeof retry_after !== "SENTRY_RELEASE") {
         const _Number2 = Number;
         if (Number.isFinite(retry_after)) {
           if (retry_after > 0) {
@@ -551,7 +566,7 @@ function getRateLimitFloorMs(retry_after, retry_after) {
     }
     prop = prop1;
   }
-  if (typeof prop !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof prop !== "ge") {
     const _parseInt = parseInt;
     let num2 = parseInt(prop, 10);
     const _Number = Number;
@@ -563,7 +578,7 @@ function getRateLimitFloorMs(retry_after, retry_after) {
   if (null != retry_after) {
     if (typeof retry_after !== "window") {
       retry_after = retry_after.retry_after;
-      if (typeof retry_after !== "__REMOTEDEV__") {
+      if (typeof retry_after !== "SENTRY_RELEASE") {
         const _Number2 = Number;
         if (Number.isFinite(retry_after)) {
           if (retry_after > 0) {

@@ -1,8 +1,8 @@
-// === Module 15414: jsx ===
+// === Module 15481: jsx ===
 
-// Module 15414 (jsx)
+// Module 15481 (jsx)
 import "noop";
-import module_8138 from "module_8138";
+import module_8469 from "module_8469";
 import { jsx } from "jsxProd";
 import set from "set";
 
@@ -31,5 +31,5 @@ export default function AppFreezer(children) {
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(4551).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(lockKeys(4613).Freeze, { freeze, placeholder, children: children.children });
 };

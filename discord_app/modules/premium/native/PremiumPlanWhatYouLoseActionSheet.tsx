@@ -1,6 +1,6 @@
-// === Module 6539: WhatYouLoseItem ===
+// === Module 7530: WhatYouLoseItem ===
 
-// Module 6539 (WhatYouLoseItem)
+// Module 7530 (WhatYouLoseItem)
 import Background from "Background";
 import { View } from "registerAsset";
 import { PremiumTypes } from "GuildFeatures";
@@ -16,9 +16,9 @@ function WhatYouLoseItem(arg0) {
   ({ imageSource, text } = arg0);
   const tmp = createCacheKey();
   let obj = { style: tmp.item, children: null };
-  const items = [callback(importDefault(5145), { source: imageSource }), ];
+  const items = [callback(importDefault(5207), { source: imageSource }), ];
   obj = { variant: "text-md/medium", style: tmp.itemLabel, children: text };
-  items[1] = callback(require(4189) /* Text */.Text, obj);
+  items[1] = callback(require(4251) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

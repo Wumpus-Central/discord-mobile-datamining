@@ -1,6 +1,6 @@
-// === Module 15683: getGuildPermissionSpec ===
+// === Module 15748: getGuildPermissionSpec ===
 
-// Module 15683 (getGuildPermissionSpec)
+// Module 15748 (getGuildPermissionSpec)
 import { Permissions } from "sum";
 
 function getGuildPermissionSpec(permissionOptions) {
@@ -682,7 +682,7 @@ export const renderDescription = function renderDescription(str) {
     let trimmed = str.trim();
   } else {
     trimmed = str;
-    if (typeof str !== "disabledUntil") {
+    if (typeof str !== "HAS_APPLICATION") {
       const intl = require(1236) /* getSystemLocale */.intl;
       trimmed = intl.format(str, {});
     }

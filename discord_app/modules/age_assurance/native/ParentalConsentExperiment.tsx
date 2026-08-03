@@ -1,6 +1,6 @@
-// === Module 16308: isParentalConsentCheckEnabled ===
+// === Module 16372: isParentalConsentCheckEnabled ===
 
-// Module 16308 (isParentalConsentCheckEnabled)
+// Module 16372 (isParentalConsentCheckEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

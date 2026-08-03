@@ -1,6 +1,6 @@
-// === Module 15938: usePIPAvoidanceSpecs ===
+// === Module 16002: usePIPAvoidanceSpecs ===
 
-// Module 15938 (usePIPAvoidanceSpecs)
+// Module 16002 (usePIPAvoidanceSpecs)
 import { VoicePanelModes } from "VoicePanelModes";
 import { VoicePanelControlsModes } from "VoicePanelControlsModes";
 import { PIP_WINDOW_OFFSET } from "MIN_PAN_GESTURE_MOVE";

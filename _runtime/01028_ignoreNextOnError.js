@@ -17,13 +17,13 @@ function wrap(__sentry_wrapped__) {
     obj = {};
   }
   if ((function isFunction(__sentry_wrapped__) {
-    return typeof __sentry_wrapped__ === "fileFinishedImporting";
+    return typeof __sentry_wrapped__ === "error";
   })(__sentry_wrapped__)) {
     try {
       __sentry_wrapped__ = __sentry_wrapped__.__sentry_wrapped__;
       if (__sentry_wrapped__) {
         let tmp15 = __sentry_wrapped__;
-        if (typeof tmp3 !== "disabledUntil") {
+        if (typeof tmp3 !== "HAS_APPLICATION") {
           tmp15 = __sentry_wrapped__;
         }
         return tmp15;

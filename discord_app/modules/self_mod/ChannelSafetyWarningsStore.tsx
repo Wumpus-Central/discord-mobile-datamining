@@ -1,6 +1,6 @@
-// === Module 9106: handleConnectionOpen ===
+// === Module 9279: handleConnectionOpen ===
 
-// Module 9106 (handleConnectionOpen)
+// Module 9279 (handleConnectionOpen)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Store } from "initialize";
 import set from "initialize";

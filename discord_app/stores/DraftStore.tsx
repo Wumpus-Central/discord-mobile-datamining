@@ -1,6 +1,6 @@
-// === Module 4530: handleChanged ===
+// === Module 4592: handleChanged ===
 
-// Module 4530 (handleChanged)
+// Module 4592 (handleChanged)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

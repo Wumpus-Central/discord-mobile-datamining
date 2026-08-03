@@ -1,9 +1,9 @@
-// === Module 7911: set ===
+// === Module 8029: set ===
 
-// Module 7911 (set)
+// Module 8029 (set)
 import set from "set";
 
-let set = new Set(require("module_7912"));
+let set = new Set(require("module_8030"));
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj[0] = regExp;

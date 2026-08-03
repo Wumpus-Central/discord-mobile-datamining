@@ -1,6 +1,6 @@
-// === Module 10716: initialize ===
+// === Module 10824: initialize ===
 
-// Module 10716 (initialize)
+// Module 10824 (initialize)
 import { DeviceSettingsStore } from "initialize";
 
 let c0 = false;

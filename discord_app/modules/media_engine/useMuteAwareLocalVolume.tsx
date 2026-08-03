@@ -1,6 +1,6 @@
-// === Module 10825: useMuteAwareLocalVolume ===
+// === Module 10925: useMuteAwareLocalVolume ===
 
-// Module 10825 (useMuteAwareLocalVolume)
+// Module 10925 (useMuteAwareLocalVolume)
 import noop from "noop";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 

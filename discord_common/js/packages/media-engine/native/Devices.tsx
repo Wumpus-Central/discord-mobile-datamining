@@ -1,6 +1,6 @@
-// === Module 4360: sanitizeDevices ===
+// === Module 4422: sanitizeDevices ===
 
-// Module 4360 (sanitizeDevices)
+// Module 4422 (sanitizeDevices)
 import AudioSubsystems from "AudioSubsystems";
 
 let c3;

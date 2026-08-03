@@ -1,6 +1,6 @@
-// === Module 6283: create ===
+// === Module 7272: create ===
 
-// Module 6283 (create)
+// Module 7272 (create)
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 
@@ -17,7 +17,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "gradient",
       kind: "message",
       T() {
-            return callback(6279).Gradient;
+            return callback(7268).Gradient;
           }
     };
     items[4] = { no: 5, name: "background_asset_url", kind: "scalar", T: 9 };
@@ -26,7 +26,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(6281).ThemeAwareAsset;
+            return callback(7270).ThemeAwareAsset;
           }
     };
     items[6] = {
@@ -34,7 +34,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "background_asset",
       kind: "message",
       T() {
-            return callback(6281).ThemeAwareAsset;
+            return callback(7270).ThemeAwareAsset;
           }
     };
     items[7] = {
@@ -42,7 +42,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_background_asset",
       kind: "message",
       T() {
-            return callback(6281).ThemeAwareAsset;
+            return callback(7270).ThemeAwareAsset;
           }
     };
     items[8] = {
@@ -67,7 +67,7 @@ class GiftCustomizationBanner$Type extends MessageType {
       name: "mobile_body_localized",
       kind: "message",
       T() {
-            return callback(6271).LocalizedString;
+            return callback(7260).LocalizedString;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, T);
@@ -95,7 +95,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
-    const LocalizedString = require(6271) /* create */.LocalizedString;
+    const LocalizedString = require(7260) /* create */.LocalizedString;
     obj.mobileBodyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), arg2, obj.mobileBodyLocalized);
   }
   return obj;
@@ -114,7 +114,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult2 = tag.tag(3, require(1307).WireType.LengthDelimited);
   }
   if (assetUrl.gradient) {
-    const Gradient = require(6279) /* create */.Gradient;
+    const Gradient = require(7268) /* create */.Gradient;
     const tagResult3 = tag.tag(4, require(1307).WireType.LengthDelimited);
     const joined = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -124,19 +124,19 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult4 = tag.tag(5, require(1307).WireType.LengthDelimited);
   }
   if (assetUrl.asset) {
-    const ThemeAwareAsset = require(6281) /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset = require(7270) /* create */.ThemeAwareAsset;
     const tagResult5 = tag.tag(6, require(1307).WireType.LengthDelimited);
     const joined1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.backgroundAsset) {
-    const ThemeAwareAsset2 = require(6281) /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset2 = require(7270) /* create */.ThemeAwareAsset;
     const tagResult6 = tag.tag(7, require(1307).WireType.LengthDelimited);
     const joined2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.mobileBackgroundAsset) {
-    const ThemeAwareAsset3 = require(6281) /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset3 = require(7270) /* create */.ThemeAwareAsset;
     const tagResult7 = tag.tag(8, require(1307).WireType.LengthDelimited);
     const joined3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -146,13 +146,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult8 = tag.tag(9, require(1307).WireType.Varint);
   }
   if (assetUrl.desktopBodyLocalized) {
-    const LocalizedString = require(6271) /* create */.LocalizedString;
+    const LocalizedString = require(7260) /* create */.LocalizedString;
     const tagResult9 = tag.tag(10, require(1307).WireType.LengthDelimited);
     const joined4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.mobileBodyLocalized) {
-    const LocalizedString2 = require(6271) /* create */.LocalizedString;
+    const LocalizedString2 = require(7260) /* create */.LocalizedString;
     const tagResult10 = tag.tag(11, require(1307).WireType.LengthDelimited);
     const joined5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -176,7 +176,7 @@ let items = [
     name: "gradient",
     kind: "message",
     T() {
-      return callback(6279).Gradient;
+      return callback(7268).Gradient;
     }
   },
   { no: 5, name: "background_asset_url", kind: "scalar", T: 9 },
@@ -185,7 +185,7 @@ let items = [
     name: "asset",
     kind: "message",
     T() {
-      return callback(6281).ThemeAwareAsset;
+      return callback(7270).ThemeAwareAsset;
     }
   },
   {
@@ -193,7 +193,7 @@ let items = [
     name: "background_asset",
     kind: "message",
     T() {
-      return callback(6281).ThemeAwareAsset;
+      return callback(7270).ThemeAwareAsset;
     }
   },
   {
@@ -201,7 +201,7 @@ let items = [
     name: "mobile_background_asset",
     kind: "message",
     T() {
-      return callback(6281).ThemeAwareAsset;
+      return callback(7270).ThemeAwareAsset;
     }
   },
   {
@@ -229,7 +229,7 @@ items[10] = {
   name: "mobile_body_localized",
   kind: "message",
   T() {
-    return callback(6271).LocalizedString;
+    return callback(7260).LocalizedString;
   }
 };
 prototype = new prototype("discord_protos.premium_marketing.v1.GiftCustomizationBanner", items, tmp, T, GiftCustomizationBanner$Type, prototype, items, arg1, dependencyMap);

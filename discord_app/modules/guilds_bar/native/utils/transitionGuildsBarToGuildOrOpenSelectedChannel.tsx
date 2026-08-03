@@ -1,6 +1,6 @@
-// === Module 14984: transitionGuildsBarToGuildOrOpenSelectedChannel ===
+// === Module 15273: transitionGuildsBarToGuildOrOpenSelectedChannel ===
 
-// Module 14984 (transitionGuildsBarToGuildOrOpenSelectedChannel)
+// Module 15273 (transitionGuildsBarToGuildOrOpenSelectedChannel)
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_3 from "handleConnectionOpen";
 import { ME } from "ME";
@@ -9,14 +9,14 @@ const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
 
 export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
-  const rootNavigationRef = require(4045) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require(4107) /* getRootNavigationRef */.getRootNavigationRef();
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
   }
   let tmp4;
   if (true === isReadyResult) {
-    let tmpResult = tmp(4044);
+    let tmpResult = tmp(4106);
     const coerceGuildsRouteResult = tmpResult.coerceGuildsRoute(rootNavigationRef.getCurrentRoute());
     let drawerOpen;
     if (coerceGuildsRouteResult != null) {
@@ -43,10 +43,10 @@ export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
     }
   }
   if (null != tmp4) {
-    tmpResult = tmp(4201);
+    tmpResult = tmp(4263);
     tmpResult.transitionToChannel(tmp4);
   } else {
-    tmp(6693).transitionToGuild(arg0);
-    const tmpResult1 = tmp(6693);
+    tmp(5856).transitionToGuild(arg0);
+    const tmpResult1 = tmp(5856);
   }
 };

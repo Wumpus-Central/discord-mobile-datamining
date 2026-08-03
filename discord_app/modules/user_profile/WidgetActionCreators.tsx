@@ -1,7 +1,7 @@
-// === Module 5906: ? ===
+// === Module 6984: ? ===
 
-// Module 5906
-import module_1208 from "module_1208";
+// Module 6984
+import convertClip from "convertClip";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Endpoints } from "ME";
 
@@ -220,6 +220,118 @@ export default {
       }
     })();
   },
+  uploadWidgetClip(arg0) {
+    let dependencyMap;
+    let importDefault;
+    let closure_0 = arg0;
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    ({ onProgress: importDefault, signal: dependencyMap } = obj);
+    return callback(function*() {
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let upload_url = tmp2;
+              let body = tmp5;
+              body = undefined;
+              upload_url = undefined;
+              dependencyMap = undefined;
+              const HTTP2 = outer1_0(530).HTTP;
+              const obj1 = { url: null, body: null, rejectWithError: true };
+              obj1[0] = outer1_5.USER_PROFILE_WIDGET_CLIP_UPLOAD;
+              const obj2 = { file_size: null };
+              obj2[0] = outer1_0.size;
+              obj1[1] = obj2;
+              dependencyMap = 1;
+              c3 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP2.post(obj1);
+              return obj3;
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj4 = { value: null, done: true };
+              obj4[0] = arg1;
+              return obj4;
+            } else {
+              body = arg1.body;
+              upload_url = body.upload_url;
+              dependencyMap = body.upload_filename;
+              const HTTP = outer1_0(530).HTTP;
+              const obj5 = { url: null, body: null, headers: null, onRequestProgress: null, signal: null, rejectWithError: true };
+              obj5[0] = upload_url;
+              obj5[1] = body;
+              const obj6 = { "Content-Type": null };
+              obj6[0] = outer1_0(6985).WIDGET_CLIP_CONTENT_TYPE;
+              obj5[2] = obj6;
+              obj5[3] = function onRequestProgress(direction) {
+                let tmp = "upload" === direction.direction;
+                if (tmp) {
+                  tmp = direction.total > 0;
+                }
+                if (tmp) {
+                  if (upload_url != null) {
+                    tmp2(direction.loaded / direction.total);
+                  }
+                }
+              };
+              obj5[4] = dependencyMap;
+              dependencyMap = 2;
+              c3 = 1;
+              const obj7 = { value: null, done: false };
+              obj7[0] = HTTP.put(obj5);
+              return obj7;
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj8 = { value: null, done: true };
+            obj8[0] = arg1;
+            return obj8;
+          } else {
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = dependencyMap;
+            return obj;
+          }
+        } catch (tmp7) {
+          c3 = tmp;
+          throw tmp7;
+        }
+      }
+    })();
+  },
   fetchSuggestedGames() {
     return callback(function*() {
       if (c7 === 2) {
@@ -248,7 +360,7 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let module_1208 = tmp3;
+              let convertClip = tmp3;
               const dependencyMap = tmp7;
               let closure_0;
               outer1_1(outer1_2[3]).dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });

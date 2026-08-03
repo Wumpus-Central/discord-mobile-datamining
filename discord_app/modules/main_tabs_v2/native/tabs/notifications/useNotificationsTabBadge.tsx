@@ -1,6 +1,6 @@
-// === Module 15286: useNotificationsTabBadge ===
+// === Module 15353: useNotificationsTabBadge ===
 
-// Module 15286 (useNotificationsTabBadge)
+// Module 15353 (useNotificationsTabBadge)
 import noop from "noop";
 import _validate from "_validate";
 

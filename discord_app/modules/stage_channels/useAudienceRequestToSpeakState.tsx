@@ -1,6 +1,6 @@
-// === Module 4378: useAudienceRequestToSpeakState ===
+// === Module 4440: useAudienceRequestToSpeakState ===
 
-// Module 4378 (useAudienceRequestToSpeakState)
+// Module 4440 (useAudienceRequestToSpeakState)
 import updateVoiceState from "updateVoiceState";
 
 const require = arg1;

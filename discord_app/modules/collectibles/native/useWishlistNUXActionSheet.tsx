@@ -1,6 +1,6 @@
-// === Module 8677: useWishlistNUXActionSheet ===
+// === Module 8854: useWishlistNUXActionSheet ===
 
-// Module 8677 (useWishlistNUXActionSheet)
+// Module 8854 (useWishlistNUXActionSheet)
 import noop from "noop";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import fetchFingerprint from "fetchFingerprint";

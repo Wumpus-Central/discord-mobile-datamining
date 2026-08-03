@@ -1,6 +1,6 @@
-// === Module 8193: useLabFeature ===
+// === Module 8500: useLabFeature ===
 
-// Module 8193 (useLabFeature)
+// Module 8500 (useLabFeature)
 import getUserAgnosticState from "getUserAgnosticState";
 
 const require = arg1;

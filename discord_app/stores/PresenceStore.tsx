@@ -1,6 +1,6 @@
-// === Module 4280: sortActivity ===
+// === Module 4342: sortActivity ===
 
-// Module 4280 (sortActivity)
+// Module 4342 (sortActivity)
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -43,11 +43,11 @@ function sortActivity(type, type2) {
   let diff = num2 - num;
   if (!diff) {
     let num3 = 0;
-    if (importDefault(4281)(type2)) {
+    if (importDefault(4343)(type2)) {
       num3 = 1;
     }
     let num4 = 0;
-    if (tmp3(4281)(type)) {
+    if (tmp3(4343)(type)) {
       num4 = 1;
     }
     diff = num3 - num4;

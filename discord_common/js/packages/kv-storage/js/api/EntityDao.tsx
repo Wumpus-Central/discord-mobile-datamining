@@ -26,7 +26,7 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof EntityDao !== "fileFinishedImporting") {
+  if (typeof EntityDao !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(EntityDao.prototype);
@@ -96,7 +96,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   let closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof outer1_3 !== "fileFinishedImporting") {
+    if (typeof outer1_3 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(outer1_3.prototype);
@@ -106,7 +106,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
   const table = this.table;
-  if (typeof EntityDaoTransaction !== "fileFinishedImporting") {
+  if (typeof EntityDaoTransaction !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(EntityDaoTransaction.prototype);
@@ -136,7 +136,7 @@ class EntityDaoTransaction {
 const prototype2 = EntityDaoTransaction.prototype;
 EntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   const tableTransaction = new require(1912) /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
-  if (typeof EntityDaoTransaction !== "fileFinishedImporting") {
+  if (typeof EntityDaoTransaction !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(EntityDaoTransaction.prototype);

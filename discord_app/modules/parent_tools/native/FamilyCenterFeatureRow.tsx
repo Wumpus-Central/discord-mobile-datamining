@@ -1,6 +1,6 @@
-// === Module 13935: FamilyCenterFeatureRows ===
+// === Module 14002: FamilyCenterFeatureRows ===
 
-// Module 13935 (FamilyCenterFeatureRows)
+// Module 14002 (FamilyCenterFeatureRows)
 import "noop";
 import { View } from "TableRowInner";
 import jsxProd from "jsxProd";
@@ -17,44 +17,44 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/native/FamilyCenterFeatureRow.tsx");
 
 export default function FamilyCenterFeatureRows() {
-  let obj = require(11127) /* useAgeSpecificText */;
+  let obj = require(11240) /* useAgeSpecificText */;
   const intl = require(1236) /* getSystemLocale */.intl;
   const tmp = createCacheKey();
   const intl2 = require(1236) /* getSystemLocale */.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(importDefault(2225).qITXhY), intl2.string(importDefault(2225).bmhCnL));
-  let obj1 = require(11127) /* useAgeSpecificText */;
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(importDefault(2255).qITXhY), intl2.string(importDefault(2255).bmhCnL));
+  let obj1 = require(11240) /* useAgeSpecificText */;
   const intl3 = require(1236) /* getSystemLocale */.intl;
-  const stringResult = intl.string(importDefault(2225).qITXhY);
+  const stringResult = intl.string(importDefault(2255).qITXhY);
   const intl4 = require(1236) /* getSystemLocale */.intl;
-  const ageSpecificText1 = obj1.useAgeSpecificText(intl3.string(importDefault(2225).t7SkFy), intl4.string(importDefault(2225)["68zfxD"]));
-  let obj2 = require(11127) /* useAgeSpecificText */;
+  const ageSpecificText1 = obj1.useAgeSpecificText(intl3.string(importDefault(2255).t7SkFy), intl4.string(importDefault(2255)["68zfxD"]));
+  let obj2 = require(11240) /* useAgeSpecificText */;
   const intl5 = require(1236) /* getSystemLocale */.intl;
-  const stringResult1 = intl3.string(importDefault(2225).t7SkFy);
+  const stringResult1 = intl3.string(importDefault(2255).t7SkFy);
   const intl6 = require(1236) /* getSystemLocale */.intl;
   obj = { icon: null, IconComponent: null, header: null, description: null };
-  const ageSpecificText2 = obj2.useAgeSpecificText(intl5.string(importDefault(2225)["+pi4Yt"]), intl6.string(importDefault(2225)["1xPTwE"]));
-  obj[0] = importDefault(13936);
-  obj[1] = require(13937) /* ChatCheckIcon */.ChatCheckIcon;
+  const ageSpecificText2 = obj2.useAgeSpecificText(intl5.string(importDefault(2255)["+pi4Yt"]), intl6.string(importDefault(2255)["1xPTwE"]));
+  obj[0] = importDefault(14003);
+  obj[1] = require(14004) /* ChatCheckIcon */.ChatCheckIcon;
   const intl7 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl7.string(importDefault(2225)["001l3m"]);
+  obj[2] = intl7.string(importDefault(2255)["001l3m"]);
   obj[3] = ageSpecificText;
   const items = [obj, , ];
-  obj = { icon: importDefault(11489), IconComponent: require(8742) /* EyeIcon */.EyeIcon, header: null, description: null };
+  obj = { icon: importDefault(11599), IconComponent: require(8919) /* EyeIcon */.EyeIcon, header: null, description: null };
   const intl8 = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl8.string(importDefault(2225).yipAeP);
+  obj[2] = intl8.string(importDefault(2255).yipAeP);
   obj[3] = ageSpecificText1;
   items[1] = obj;
-  obj1 = { icon: importDefault(12259), IconComponent: require(13932) /* QrCodeIcon */.QrCodeIcon, header: null, description: null };
+  obj1 = { icon: importDefault(12357), IconComponent: require(13999) /* QrCodeIcon */.QrCodeIcon, header: null, description: null };
   const intl9 = require(1236) /* getSystemLocale */.intl;
-  obj1[2] = intl9.string(importDefault(2225).hhOuMe);
+  obj1[2] = intl9.string(importDefault(2255).hhOuMe);
   obj1[3] = ageSpecificText2;
   items[2] = obj1;
   obj2 = { style: tmp.tableGroup, children: null };
   const obj3 = { spacing: 8, children: null };
   const obj4 = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl10 = require(1236) /* getSystemLocale */.intl;
-  obj4[3] = intl10.string(importDefault(2225)["6JkHSg"]);
-  const items1 = [callback(require(4189) /* Text */.Text, obj4), ];
+  obj4[3] = intl10.string(importDefault(2255)["6JkHSg"]);
+  const items1 = [callback(require(4251) /* Text */.Text, obj4), ];
   const obj5 = { hasIcons: true, children: null };
   obj5[1] = items.map((header) => {
     let IconComponent;
@@ -63,11 +63,11 @@ export default function FamilyCenterFeatureRows() {
     header = header.header;
     ({ description, icon, IconComponent } = header);
     const obj = { label: header, subLabel: description, icon: null };
-    obj[2] = callback2(callback(5224).TableRow.Icon, { source: icon, IconComponent });
-    return callback2(callback(5224).TableRow, obj, header);
+    obj[2] = callback2(callback(5286).TableRow.Icon, { source: icon, IconComponent });
+    return callback2(callback(5286).TableRow, obj, header);
   });
-  items1[1] = callback(require(5558) /* TableRowGroupTitle */.TableRowGroup, obj5);
+  items1[1] = callback(require(5620) /* TableRowGroupTitle */.TableRowGroup, obj5);
   obj3[1] = items1;
-  obj2[1] = callback2(require(4602) /* Stack */.Stack, obj3);
+  obj2[1] = callback2(require(4664) /* Stack */.Stack, obj3);
   return callback(View, obj2);
 };

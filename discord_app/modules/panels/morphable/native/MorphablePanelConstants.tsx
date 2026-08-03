@@ -1,6 +1,6 @@
-// === Module 10052: MIN_PAN_GESTURE_MOVE ===
+// === Module 10194: MIN_PAN_GESTURE_MOVE ===
 
-// Module 10052 (MIN_PAN_GESTURE_MOVE)
+// Module 10194 (MIN_PAN_GESTURE_MOVE)
 import set from "set";
 import set from "set";
 

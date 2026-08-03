@@ -1,6 +1,6 @@
-// === Module 6062: reset ===
+// === Module 5783: reset ===
 
-// Module 6062 (reset)
+// Module 5783 (reset)
 let result = require("set").fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
 class GuildChannelSubscriptions {
   constructor(arg0) {

@@ -1,6 +1,6 @@
-// === Module 7959: useCollectiblesData ===
+// === Module 8076: useCollectiblesData ===
 
-// Module 7959 (useCollectiblesData)
+// Module 8076 (useCollectiblesData)
 import _slicedToArray from "_slicedToArray";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";

@@ -1,6 +1,6 @@
-// === Module 15846: getIsOnMainSurface ===
+// === Module 15910: getIsOnMainSurface ===
 
-// Module 15846 (getIsOnMainSurface)
+// Module 15910 (getIsOnMainSurface)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import set from "getRootNavigationRef";
@@ -11,7 +11,7 @@ function getIsOnMainSurface() {
   let index2;
   let routes;
   let routes2;
-  const rootNavigationRef = require(4045) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require(4107) /* getRootNavigationRef */.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();

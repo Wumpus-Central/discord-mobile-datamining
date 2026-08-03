@@ -1,7 +1,7 @@
-// === Module 14783: MFAModal ===
+// === Module 14850: MFAModal ===
 
-// Module 14783 (MFAModal)
-import module_4399 from "module_4399";
+// Module 14850 (MFAModal)
+import module_4461 from "module_4461";
 import set from "set";
 import get_ActivityIndicator from "NavigationStack";
 import { jsx } from "jsxProd";
@@ -12,7 +12,7 @@ const require = arg1;
 class MFAModal {
   constructor(arg0) {
     mfaChallenge = global.mfaChallenge;
-    f110384 = mfaChallenge;
+    f110573 = mfaChallenge;
     finish = global.finish;
     cancel = global.cancel;
     handleOnClose = global.handleOnClose;
@@ -23,7 +23,7 @@ class MFAModal {
     c4 = flag;
     merged = Object.assign(global, Object.create(null));
     useMemo = undefined;
-    f110385 = undefined;
+    f110574 = undefined;
     useCallback = undefined;
     items = [];
     items[0] = mfaChallenge;
@@ -39,8 +39,8 @@ class MFAModal {
       return obj;
     }, items);
     useMemo = memo;
-    f110384 = undefined;
-    f110384 = handleOnClose((arg0) => {
+    f110573 = undefined;
+    f110573 = handleOnClose((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -138,7 +138,7 @@ class MFAModal {
       }
       return applyArgumentsResult;
     }, items1);
-    f110385 = callback;
+    f110574 = callback;
     items2 = [, ];
     items2[0] = cancel;
     items2[1] = handleOnClose;
@@ -204,7 +204,7 @@ class MFAModal {
       obj.headerRight = headerRight;
       obj.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14785), {});
+        return callback2(callback(14852), {});
       };
       obj[callback(cancel[7]).MfaScreens.SELECT] = obj;
       const obj1 = {};
@@ -234,7 +234,7 @@ class MFAModal {
       obj1.headerRight = tmp12;
       obj1.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14786), {});
+        return callback2(callback(14853), {});
       };
       obj[callback(cancel[7]).MfaScreens.WEBAUTHN] = obj1;
       const obj2 = {};
@@ -264,7 +264,7 @@ class MFAModal {
       obj2.headerRight = tmp20;
       obj2.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14791), {});
+        return callback2(callback(14858), {});
       };
       obj[callback(cancel[7]).MfaScreens.TOTP] = obj2;
       obj3 = {};
@@ -294,7 +294,7 @@ class MFAModal {
       obj3.headerRight = tmp28;
       obj3.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14794), {});
+        return callback2(callback(14861), {});
       };
       obj[callback(cancel[7]).MfaScreens.BACKUP] = obj3;
       const obj4 = {};
@@ -324,7 +324,7 @@ class MFAModal {
       obj4.headerRight = tmp36;
       obj4.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14795), {});
+        return callback2(callback(14862), {});
       };
       obj[callback(cancel[7]).MfaScreens.SMS] = obj4;
       const obj5 = {};
@@ -354,14 +354,14 @@ class MFAModal {
       obj5.headerRight = tmp44;
       obj5.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14796), {});
+        return callback2(callback(14863), {});
       };
       obj[callback(cancel[7]).MfaScreens.PASSWORD] = obj5;
       return obj;
     }, items4);
     obj = { screens: memo2, initialRouteStack: memo1, onWillFocus: useMemo.dismiss };
     merged1 = Object.assign(merged);
-    return f110385(require("NavigationStack").Navigator, obj);
+    return f110574(require("NavigationStack").Navigator, obj);
   }
 }
 ({ Keyboard: c5, LogBox } = get_ActivityIndicator);
@@ -371,7 +371,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/m
 
 export { MFAModal };
 export const openMFAModal = function openMFAModal(mfaChallenge, finish, cancel) {
-  let arr = importDefault(4399);
+  let arr = importDefault(4461);
   arr = arr.push(MFAModal, { mfaChallenge, finish, cancel }, MFA_MODAL_KEY);
-  importDefault(4533).close();
+  importDefault(4595).close();
 };

@@ -1,6 +1,6 @@
-// === Module 5102: getThreadAutoArchiveTimeOnce ===
+// === Module 5164: getThreadAutoArchiveTimeOnce ===
 
-// Module 5102 (getThreadAutoArchiveTimeOnce)
+// Module 5164 (getThreadAutoArchiveTimeOnce)
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 
 let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");

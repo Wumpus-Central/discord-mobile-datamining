@@ -1,6 +1,6 @@
-// === Module 11745: ? ===
+// === Module 11848: ? ===
 
-// Module 11745
+// Module 11848
 import importAllResult from "noop";
 import { useChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight";
 import { jsx } from "jsxProd";

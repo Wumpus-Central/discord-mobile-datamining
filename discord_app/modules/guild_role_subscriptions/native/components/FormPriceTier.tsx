@@ -1,6 +1,6 @@
-// === Module 16633: FormPriceTier ===
+// === Module 16699: FormPriceTier ===
 
-// Module 16633 (FormPriceTier)
+// Module 16699 (FormPriceTier)
 import "noop";
 import usePriceTiers from "usePriceTiers";
 import { CurrencyCodes } from "ME";

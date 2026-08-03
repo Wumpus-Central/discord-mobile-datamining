@@ -1,6 +1,6 @@
-// === Module 4395: handleSettingsLoadSuccess ===
+// === Module 4457: handleSettingsLoadSuccess ===
 
-// Module 4395 (handleSettingsLoadSuccess)
+// Module 4457 (handleSettingsLoadSuccess)
 import { Store } from "initialize";
 import set from "set";
 

@@ -1,6 +1,6 @@
-// === Module 13485: reactNativeCorePlugins ===
+// === Module 13548: reactNativeCorePlugins ===
 
-// Module 13485 (reactNativeCorePlugins)
+// Module 13548 (reactNativeCorePlugins)
 import importDefaultResult from "reactNativeCorePlugins";
 
 const reactNative = require("reactNativeCorePlugins").configure({}).useReactNative();

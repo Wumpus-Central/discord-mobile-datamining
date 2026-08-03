@@ -1,6 +1,6 @@
-// === Module 15084: HappeningNowCardPlaceholder ===
+// === Module 15064: HappeningNowCardPlaceholder ===
 
-// Module 15084 (HappeningNowCardPlaceholder)
+// Module 15064 (HappeningNowCardPlaceholder)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { HAPPENING_NOW_CONTENT_HEIGHT } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";

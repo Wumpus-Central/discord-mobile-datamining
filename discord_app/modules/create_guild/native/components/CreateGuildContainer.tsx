@@ -1,6 +1,6 @@
-// === Module 10098: CreateGuildContainer ===
+// === Module 10240: CreateGuildContainer ===
 
-// Module 10098 (CreateGuildContainer)
+// Module 10240 (CreateGuildContainer)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

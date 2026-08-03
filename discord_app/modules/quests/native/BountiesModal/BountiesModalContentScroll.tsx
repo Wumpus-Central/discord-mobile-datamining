@@ -1,6 +1,6 @@
-// === Module 14054: ItemSeparator ===
+// === Module 14121: ItemSeparator ===
 
-// Module 14054 (ItemSeparator)
+// Module 14121 (ItemSeparator)
 import BountiesScrollPromptFooter from "BountiesScrollPromptFooter";
 import getRevealProgress from "getRevealProgress";
 import get_ActivityIndicator from "apexExperiment";
@@ -447,7 +447,7 @@ function BountiesModalContentScrollInner(arg0) {
       if (c31.get()) {
         tmp3 = c25;
         tmp2 = c30;
-        if (typeof c25 !== "fileFinishedImporting") {
+        if (typeof c25 !== "error") {
           str = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -469,7 +469,7 @@ function BountiesModalContentScrollInner(arg0) {
     constructor(arg0) {
       result = c31.set(true);
       tmp2 = c30;
-      if (typeof c25 !== "fileFinishedImporting") {
+      if (typeof c25 !== "error") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -1036,7 +1036,7 @@ export default function BountiesModalContentScroll(arg0) {
   let sourceQuestContent;
   ({ bountyId, sourceQuestContent } = arg0);
   const obj = { theme: null, children: null };
-  obj[0] = require(6681) /* items */.ThemeTypes.DARKER;
+  obj[0] = require(7656) /* items */.ThemeTypes.DARKER;
   obj[1] = callback2(BountiesModalContentScrollInner, { initialBountyId: bountyId, sourceQuestContent });
-  return callback2(require(3917) /* ThemeContextProvider */.ThemeContextProvider, obj);
+  return callback2(require(3979) /* ThemeContextProvider */.ThemeContextProvider, obj);
 };

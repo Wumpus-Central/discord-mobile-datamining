@@ -1,6 +1,6 @@
-// === Module 12878: parsed ===
+// === Module 12941: parsed ===
 
-// Module 12878 (parsed)
+// Module 12941 (parsed)
 import { version as str } from "format";
 
 if (str == null) {
@@ -90,11 +90,11 @@ if (!tmp12) {
 if (!tmp12) {
   tmp12 = "Microsoft Edge" === require("format").name;
 }
-let tmp14 = typeof globalThis.RTCPeerConnection === "pack";
+let tmp14 = typeof globalThis.RTCPeerConnection === "as";
 if (typeof globalThis.RTCPeerConnection !== "Array") {
-  tmp14 = typeof globalThis.RTCPeerConnection.prototype.addTransceiver === "fileFinishedImporting";
+  tmp14 = typeof globalThis.RTCPeerConnection.prototype.addTransceiver === "error";
 }
-let tmp15 = typeof globalThis.RTCRtpSender === "pack";
+let tmp15 = typeof globalThis.RTCRtpSender === "as";
 if (typeof globalThis.RTCRtpSender !== "Array") {
   let tmp16 = "transform" in globalThis.RTCRtpSender.prototype;
   if (!tmp16) {

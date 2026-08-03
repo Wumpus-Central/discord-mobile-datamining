@@ -1,6 +1,6 @@
-// === Module 9346: PremiumUpsellTooltipActionSheet ===
+// === Module 9505: PremiumUpsellTooltipActionSheet ===
 
-// Module 9346 (PremiumUpsellTooltipActionSheet)
+// Module 9505 (PremiumUpsellTooltipActionSheet)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
@@ -74,11 +74,11 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   }
   const items1 = [tmp2Result, , , ];
   const obj1 = { style: tmp.header, children: null };
-  const items2 = [closure_6(require(1297) /* Button */.NitroWheel, { style: tmp.nitroWheel }), closure_6(require(4189) /* Text */.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
+  const items2 = [closure_6(require(1297) /* Button */.NitroWheel, { style: tmp.nitroWheel }), closure_6(require(4251) /* Text */.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
   obj1[1] = items2;
   items1[1] = closure_7(closure_4, obj1);
   const items3 = [tmp.description, descriptionStyle];
-  items1[2] = closure_6(require(4189) /* Text */.Text, { style: items3, variant: "text-md/medium", color: "text-default", children: description });
+  items1[2] = closure_6(require(4251) /* Text */.Text, { style: items3, variant: "text-md/medium", color: "text-default", children: description });
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = {
     variant: "active",
@@ -105,7 +105,7 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
     primaryButtonIconResult = primaryButtonIcon();
   }
   obj5[3] = primaryButtonIconResult;
-  const items4 = [closure_6(require(4604) /* Button */.Button, obj5), ];
+  const items4 = [closure_6(require(4666) /* Button */.Button, obj5), ];
   tmp2Result = null;
   if (null != secondaryButtonText) {
     const obj6 = { variant: "secondary", text: null, onPress: null, size: "lg" };
@@ -126,12 +126,12 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
       tmp5 = null != DISMISS && DISMISS !== outer1_5.DISMISS;
       const result = outer1_0(outer1_2[6]).UNSAFE_markDismissibleContentAsDismissed(closure_0, { forceTrack: true, dismissAction: DISMISS });
     };
-    tmp2Result = tmp2(tmp3(4604).Button, obj6);
+    tmp2Result = tmp2(tmp3(4666).Button, obj6);
   }
   items4[1] = tmp2Result;
   obj4[1] = items4;
   items1[3] = closure_7(closure_4, obj4);
   obj[1] = items1;
   obj.children = closure_7(closure_4, obj);
-  return closure_6(require(5247) /* Background */.BottomSheet, obj);
+  return closure_6(require(5309) /* Background */.BottomSheet, obj);
 };

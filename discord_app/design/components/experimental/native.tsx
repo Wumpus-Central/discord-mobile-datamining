@@ -1,6 +1,6 @@
-// === Module 8240: TwinButtons ===
+// === Module 8547: TwinButtons ===
 
-// Module 8240 (TwinButtons)
+// Module 8547 (TwinButtons)
 const result = require("TwinButtons").fileFinishedImporting("design/components/experimental/native.tsx");
 
 export const TwinButtons = require("TwinButtons").TwinButtons;

@@ -1,6 +1,6 @@
-// === Module 13899: toggle ===
+// === Module 13966: toggle ===
 
-// Module 13899 (toggle)
+// Module 13966 (toggle)
 import noop from "noop";
 import identity from "identity";
 import createToggle from "createToggle";
@@ -22,7 +22,7 @@ identity = {
         callback(table[4]).batchUpdates(() => outer1_4.setState({ isEnabled: closure_0 }));
       });
     }, []);
-    return callback((isEnabled) => isEnabled.isEnabled, require(3806) /* isIterable */.shallow);
+    return callback((isEnabled) => isEnabled.isEnabled, require(3868) /* isIterable */.shallow);
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);

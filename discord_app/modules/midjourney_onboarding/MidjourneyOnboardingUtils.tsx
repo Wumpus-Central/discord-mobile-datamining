@@ -1,6 +1,6 @@
-// === Module 13017: isMidjourneyOnboardingFlow ===
+// === Module 13080: isMidjourneyOnboardingFlow ===
 
-// Module 13017 (isMidjourneyOnboardingFlow)
+// Module 13080 (isMidjourneyOnboardingFlow)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";
 import MIDJOURNEY_GUILD_ID from "MIDJOURNEY_GUILD_ID";

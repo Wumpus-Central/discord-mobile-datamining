@@ -1,6 +1,6 @@
-// === Module 13227: useToggleButtonProps ===
+// === Module 13290: useToggleButtonProps ===
 
-// Module 13227 (useToggleButtonProps)
+// Module 13290 (useToggleButtonProps)
 const result = require("set").fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");
 
 export const useToggleButtonProps = function useToggleButtonProps(on, first) {

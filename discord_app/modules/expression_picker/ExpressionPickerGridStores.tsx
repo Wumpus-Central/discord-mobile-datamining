@@ -1,6 +1,6 @@
-// === Module 9352: withEqualityFn ===
+// === Module 9511: withEqualityFn ===
 
-// Module 9352 (withEqualityFn)
+// Module 9511 (withEqualityFn)
 import identity from "identity";
 import createJSONStorage from "createJSONStorage";
 import identity from "identity";
@@ -113,7 +113,7 @@ const result = require("batchUpdates").fileFinishedImporting("modules/expression
 export default function createStore() {
   let obj = _undefined(700);
   const withEqualityFn = obj.createWithEqualityFn();
-  const withEqualityFnResult = withEqualityFn(_undefined(4062).subscribeWithSelector(() => closure_2));
+  const withEqualityFnResult = withEqualityFn(_undefined(4124).subscribeWithSelector(() => closure_2));
   _undefined = withEqualityFnResult;
   obj = {
     useStore: withEqualityFnResult,

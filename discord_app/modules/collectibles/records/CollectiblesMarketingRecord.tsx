@@ -1,6 +1,6 @@
-// === Module 5825: fromServer ===
+// === Module 6920: fromServer ===
 
-// Module 5825 (fromServer)
+// Module 6920 (fromServer)
 import { CollectiblesMarketingBadgeRecord as closure_2 } from "fromServer";
 import { CollectiblesMarketingBannerRecord as closure_3 } from "fromServer";
 import { CollectiblesMarketingCoachmarkRecord as closure_4 } from "fromServer";
@@ -21,7 +21,7 @@ prototype["fromServer"] = function fromServer(marketings) {
     marketings = {};
   }
   const entries = Object.entries(marketings);
-  if (typeof prototype !== "fileFinishedImporting") {
+  if (typeof prototype !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

@@ -1,6 +1,6 @@
-// === Module 11258: sortGroup ===
+// === Module 11369: sortGroup ===
 
-// Module 11258 (sortGroup)
+// Module 11369 (sortGroup)
 function sortGroup(arr) {
   let closure_0 = arg1;
   return arr.sort((arg0, arg1) => {

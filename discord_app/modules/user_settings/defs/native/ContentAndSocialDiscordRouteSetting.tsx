@@ -1,6 +1,6 @@
-// === Module 14692: route ===
+// === Module 14759: route ===
 
-// Module 14692 (route)
+// Module 14759 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
-    return require(14676) /* ContentAndSocialSettings */.DiscordPermissionsPage;
+    return require(14743) /* ContentAndSocialSettings */.DiscordPermissionsPage;
   }
 };
 const route = createToggle.createRoute(obj);

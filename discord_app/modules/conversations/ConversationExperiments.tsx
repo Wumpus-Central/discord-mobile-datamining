@@ -1,6 +1,6 @@
-// === Module 9277: apexExperiment ===
+// === Module 9449: apexExperiment ===
 
-// Module 9277 (apexExperiment)
+// Module 9449 (apexExperiment)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 import ApexExperiment from "ApexExperiment";

@@ -1,6 +1,6 @@
-// === Module 10466: MoreYouCanDoRow ===
+// === Module 10604: MoreYouCanDoRow ===
 
-// Module 10466 (MoreYouCanDoRow)
+// Module 10604 (MoreYouCanDoRow)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -15,5 +15,5 @@ export default function MoreYouCanDoRow(arg0) {
   let title;
   let variant;
   ({ title, description, variant, onClick, icon, disabled } = arg0);
-  return jsx(require(5224) /* TableRowInner */.TableRow, { label, subLabel, onPress, icon, variant, disabled });
+  return jsx(require(5286) /* TableRowInner */.TableRow, { label, subLabel, onPress, icon, variant, disabled });
 };

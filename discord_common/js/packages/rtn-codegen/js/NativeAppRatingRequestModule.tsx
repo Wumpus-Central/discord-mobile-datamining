@@ -1,6 +1,6 @@
-// === Module 12771: enforcing ===
+// === Module 12834: enforcing ===
 
-// Module 12771 (enforcing)
+// Module 12834 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAppRatingRequestModule");

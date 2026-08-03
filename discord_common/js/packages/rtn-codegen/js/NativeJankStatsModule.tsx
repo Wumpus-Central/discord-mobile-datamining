@@ -1,6 +1,6 @@
-// === Module 16259: enforcing ===
+// === Module 16323: enforcing ===
 
-// Module 16259 (enforcing)
+// Module 16323 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeJankStatsModule");

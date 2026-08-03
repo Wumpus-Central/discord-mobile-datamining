@@ -1,6 +1,6 @@
-// === Module 9661: EmptyStateSticker ===
+// === Module 9808: EmptyStateSticker ===
 
-// Module 9661 (EmptyStateSticker)
+// Module 9808 (EmptyStateSticker)
 import _slicedToArray from "_slicedToArray";
 import IMPACT_LIGHT from "IMPACT_LIGHT";
 import { View } from "PressableBase";
@@ -18,14 +18,14 @@ let unpackModuleId;
 let require = arg1;
 function EmptyStateSticker(sticker) {
   sticker = sticker.sticker;
-  const animated = require(9631) /* useStickerPackCategories */.useShouldAnimateSticker(sticker.isFocused);
+  const animated = require(9779) /* useStickerPackCategories */.useShouldAnimateSticker(sticker.isFocused);
   let id;
-  const obj = require(9631) /* useStickerPackCategories */;
+  const obj = require(9779) /* useStickerPackCategories */;
   const tmp2 = closure_11;
   if (sticker != null) {
     id = sticker.id;
   }
-  return tmp2(importDefault(9647), { sticker, size: 60, animated }, id);
+  return tmp2(importDefault(9794), { sticker, size: 60, animated }, id);
 }
 ({ AnalyticEvents: metroImportAll, AnalyticsSections: c9 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
@@ -37,16 +37,16 @@ export default function _default() {
   let dependencyMap;
   let tmp = callback4();
   const require = tmp;
-  let obj = require(9631) /* useStickerPackCategories */;
+  let obj = require(9779) /* useStickerPackCategories */;
   const fetchStickerPacks = obj.useFetchStickerPacks();
-  analyticsLocations = analyticsLocations(5519)(analyticsLocations(5539).EMPTY_STATE).analyticsLocations;
+  analyticsLocations = analyticsLocations(5581)(analyticsLocations(5601).EMPTY_STATE).analyticsLocations;
   let obj1 = require(589) /* initialize */;
   const items = [loadSavedGuildStickers];
   const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const mapped = closure_7.map((arg0) => stickerById.getStickerById(arg0));
     return mapped.filter((arg0) => null != arg0);
   });
-  const tmp3 = analyticsLocations(5519);
+  const tmp3 = analyticsLocations(5581);
   [dependencyMap, _slicedToArray] = callback(React.useState(null), 2);
   const items1 = [analyticsLocations];
   const effect = React.useEffect(() => {
@@ -59,11 +59,11 @@ export default function _default() {
   obj = { style: tmp.header, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[4] = intl.string(require(1236) /* getSystemLocale */.t.HEm04J);
-  const items2 = [callback2(require(4189) /* Text */.Text, obj), , , ];
+  const items2 = [callback2(require(4251) /* Text */.Text, obj), , , ];
   obj1 = { style: tmp.blurb, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj1[3] = intl2.string(require(1236) /* getSystemLocale */.t.FnNud4);
-  items2[1] = callback2(require(4189) /* Text */.Text, obj1);
+  items2[1] = callback2(require(4251) /* Text */.Text, obj1);
   const tmp4 = callback(React.useState(null), 2);
   items2[2] = callback2(View, {
     style: tmp.stickersRow,
@@ -114,15 +114,15 @@ export default function _default() {
       return tmp(tmp(outer1_2[17]).PressableOpacity, obj, id);
     })
   };
-  obj5[0] = analyticsLocations(9388);
+  obj5[0] = analyticsLocations(8190);
   obj5[1] = tmp.nitroWheel;
-  obj4[0] = callback2(analyticsLocations(5145), obj5);
+  obj4[0] = callback2(analyticsLocations(5207), obj5);
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj4[1] = intl3.string(require(1236) /* getSystemLocale */.t.pj0XBN);
   obj4[4] = function onPress() {
     return analyticsLocations(table[23])({ section: constants.EXPRESSION_PICKER });
   };
-  obj3[1] = callback2(require(4604) /* Button */.Button, obj4);
+  obj3[1] = callback2(require(4666) /* Button */.Button, obj4);
   items2[3] = callback2(View, obj3);
   obj[0] = items2;
   return callback3(View, obj);

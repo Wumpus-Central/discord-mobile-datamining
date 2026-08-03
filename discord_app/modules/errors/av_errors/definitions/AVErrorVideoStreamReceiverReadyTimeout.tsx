@@ -1,6 +1,6 @@
-// === Module 16711: AVErrorVideoStreamReceiverReadyTimeoutDefinition ===
+// === Module 16777: AVErrorVideoStreamReceiverReadyTimeoutDefinition ===
 
-// Module 16711 (AVErrorVideoStreamReceiverReadyTimeoutDefinition)
+// Module 16777 (AVErrorVideoStreamReceiverReadyTimeoutDefinition)
 import fetchFingerprint from "fetchFingerprint";
 import makeTimeoutKey from "makeTimeoutKey";
 

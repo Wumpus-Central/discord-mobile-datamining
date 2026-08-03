@@ -1,6 +1,6 @@
-// === Module 12072: WidgetGameTagIconRole ===
+// === Module 12168: WidgetGameTagIconRole ===
 
-// Module 12072 (WidgetGameTagIconRole)
+// Module 12168 (WidgetGameTagIconRole)
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
 obj = {
   getText() {
@@ -17,86 +17,86 @@ obj = {
   iconRole: obj.RIBBON
 };
 let closure_2 = {
-  [require(5909).WidgetGameTag.BETTER_THAN_YOU]: obj,
-  [require(5909).WidgetGameTag.CASUAL]: obj,
-  [require(5909).WidgetGameTag.INTERMEDIATE]: {
+  [require(6989).WidgetGameTag.BETTER_THAN_YOU]: obj,
+  [require(6989).WidgetGameTag.CASUAL]: obj,
+  [require(6989).WidgetGameTag.INTERMEDIATE]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t["A/mIs/"]);
     },
     iconRole: obj.RIBBON
   },
-  [require(5909).WidgetGameTag.EXPERT]: {
+  [require(6989).WidgetGameTag.EXPERT]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t.RIOFc2);
     },
     iconRole: obj.RIBBON
   },
-  [require(5909).WidgetGameTag.OBSESSED]: {
+  [require(6989).WidgetGameTag.OBSESSED]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t.isPJDu);
     },
     iconRole: obj.THUMBS_UP
   },
-  [require(5909).WidgetGameTag.LOVE_IT]: {
+  [require(6989).WidgetGameTag.LOVE_IT]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t["1rN7BF"]);
     },
     iconRole: obj.THUMBS_UP
   },
-  [require(5909).WidgetGameTag.KIND_OF_LOVE_IT]: {
+  [require(6989).WidgetGameTag.KIND_OF_LOVE_IT]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t.bCBpVg);
     },
     iconRole: obj.THUMBS_UP
   },
-  [require(5909).WidgetGameTag.KIND_OF_HATE_IT]: {
+  [require(6989).WidgetGameTag.KIND_OF_HATE_IT]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t["/WcmcP"]);
     },
     iconRole: obj.THUMBS_DOWN
   },
-  [require(5909).WidgetGameTag.RAGE_QUITTING]: {
+  [require(6989).WidgetGameTag.RAGE_QUITTING]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t["NXZ/MZ"]);
     },
     iconRole: obj.THUMBS_DOWN
   },
-  [require(5909).WidgetGameTag.OPEN_TO_PLAY]: {
+  [require(6989).WidgetGameTag.OPEN_TO_PLAY]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t.q30PoH);
     },
     iconRole: obj.FRIENDS
   },
-  [require(5909).WidgetGameTag.LOOKING_FOR_GROUP]: {
+  [require(6989).WidgetGameTag.LOOKING_FOR_GROUP]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t.DWWAAQ);
     },
     iconRole: obj.FRIENDS
   },
-  [require(5909).WidgetGameTag.LOOKING_FOR_TIPS]: {
+  [require(6989).WidgetGameTag.LOOKING_FOR_TIPS]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t.KQDVvH);
     },
     iconRole: obj.FRIENDS
   },
-  [require(5909).WidgetGameTag.OPEN_TO_TEACH]: {
+  [require(6989).WidgetGameTag.OPEN_TO_TEACH]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t["5HhQo+"]);
     },
     iconRole: obj.FRIENDS
   },
-  [require(5909).WidgetGameTag.LOOKING_TO_DISCUSS]: {
+  [require(6989).WidgetGameTag.LOOKING_TO_DISCUSS]: {
     getText() {
       const intl = require(1236) /* getSystemLocale */.intl;
       return intl.string(require(1236) /* getSystemLocale */.t.GipOCq);

@@ -1,6 +1,6 @@
-// === Module 8188: generateHydrationId ===
+// === Module 8495: generateHydrationId ===
 
-// Module 8188 (generateHydrationId)
+// Module 8495 (generateHydrationId)
 import reinjectEphemerals from "reinjectEphemerals";
 import scheduledEventSort from "scheduledEventSort";
 import { ThreadChannelRecord } from "createChannelRecord";
@@ -66,13 +66,13 @@ function _hydrateItems() {
               const arr = outer1_10.getHydratedItems();
               const substr = arr.slice(callback, dependencyMap);
               if (0 !== substr.length) {
-                let obj1 = callback(8189);
+                let obj1 = callback(8496);
                 const hydratedAttempt = obj1.loadHydratedAttempt(outer1_14(tmp24, tmp25));
                 const found = substr.filter((arg0) => null == dependencyMap[arg0.id]);
-                const found1 = found.filter((type) => type.type === dependencyMap(6160).ICYMIItemTypes.MESSAGE);
+                const found1 = found.filter((type) => type.type === dependencyMap(7212).ICYMIItemTypes.MESSAGE);
                 const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
                 const mapped1 = found.map((type) => {
-                  if (type.type === dependencyMap(6160).ICYMIItemTypes.MESSAGE) {
+                  if (type.type === dependencyMap(7212).ICYMIItemTypes.MESSAGE) {
                     const message_context = type.data.message_context;
                     let reply_message_id;
                     if (message_context != null) {
@@ -114,7 +114,7 @@ function _hydrateItems() {
                 });
                 const _Boolean = Boolean;
                 const found2 = mapped1.flat().filter(Boolean);
-                const found3 = found.filter((type) => type.type === dependencyMap(6160).ICYMIItemTypes.ACTIVITY);
+                const found3 = found.filter((type) => type.type === dependencyMap(7212).ICYMIItemTypes.ACTIVITY);
                 const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
                 const flatResult = mapped1.flat();
                 obj1 = { messageItems: null, activityItems: null };
@@ -125,7 +125,7 @@ function _hydrateItems() {
                 c4 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = callback(8189).fetchHydrated(tmp24, tmp25, obj1);
+                obj2[0] = callback(8496).fetchHydrated(tmp24, tmp25, obj1);
                 return obj2;
               }
             }
@@ -408,9 +408,9 @@ let result = require("createChannelRecord").fileFinishedImporting("modules/icymi
 export { generateHydrationId };
 export const ICYMICustomScore = obj;
 export const isGuildItem = function isGuildItem(type) {
-  let tmp3 = type.type === require(6160) /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE;
+  let tmp3 = type.type === require(7212) /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE;
   if (!tmp3) {
-    tmp3 = type.type === require(6160) /* MessageEmbedTypes */.ICYMIItemTypes.GUILD_EVENT;
+    tmp3 = type.type === require(7212) /* MessageEmbedTypes */.ICYMIItemTypes.GUILD_EVENT;
   }
   return tmp3;
 };
@@ -459,7 +459,7 @@ export const hydrateNextPage = function hydrateNextPage() {
 export const createGravityMessageFromServer = function createGravityMessageFromServer(message, arg1) {
   const obj = {};
   const merged = Object.assign(arg1);
-  obj.message = require(4413) /* createMinimalMessageRecord */.createMessageRecord(message.message);
+  obj.message = require(4475) /* createMinimalMessageRecord */.createMessageRecord(message.message);
   let fromServerResult;
   if (null != message.thread_channel) {
     fromServerResult = ThreadChannelRecord.fromServer(message.thread_channel, message.guild_id);
@@ -527,11 +527,11 @@ export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
   }, items1);
 };
 export const icymiEnabled = function icymiEnabled(customScores) {
-  return require(8190) /* apexExperiment */.getICYMIEnabled(customScores);
+  return require(8497) /* apexExperiment */.getICYMIEnabled(customScores);
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(data) {
-  let obj = { id: data.id, type: require(6160) /* MessageEmbedTypes */.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
-  obj = { id: data.id, author_id: data.data.user_id, author_type: require(8194) /* ContentInventoryAuthorType */.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: require(7914) /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
+  let obj = { id: data.id, type: require(7212) /* MessageEmbedTypes */.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
+  obj = { id: data.id, author_id: data.data.user_id, author_type: require(8501) /* ContentInventoryAuthorType */.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: require(8032) /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
   let str = data.data.text;
   if (str == null) {
     str = "";
@@ -586,7 +586,7 @@ export const getViewableFeedItemsArray = function getViewableFeedItemsArray(view
       if (null != tmp3) {
         let tmp5 = id;
         let tmp6 = dependencyMap;
-        let NON_ELIGIBLE_SCROLL_ITEMS = id(8195).NON_ELIGIBLE_SCROLL_ITEMS;
+        let NON_ELIGIBLE_SCROLL_ITEMS = id(8502).NON_ELIGIBLE_SCROLL_ITEMS;
         if (!NON_ELIGIBLE_SCROLL_ITEMS.has(tmp3.item.data.kind)) {
           break;
         }
@@ -682,7 +682,7 @@ export const itemToType = function itemToType(item) {
       return "guild_event";
     } else if ("contentInventory" === kind) {
       let str8 = "hotwheels_gaming_activity";
-      if (item.data.content.content_type === require(7914) /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS) {
+      if (item.data.content.content_type === require(8032) /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS) {
         str8 = "hotwheels_custom_status";
       }
       return str8;
@@ -699,9 +699,9 @@ export const itemToType = function itemToType(item) {
 };
 export const determineContentType = function determineContentType(channel, message) {
   if (channel.type === constants.GUILD_ANNOUNCEMENT) {
-    return require(6160) /* MessageEmbedTypes */.ContentType.ANNOUNCEMENT;
+    return require(7212) /* MessageEmbedTypes */.ContentType.ANNOUNCEMENT;
   } else if (channel.type === tmp.GUILD_FORUM) {
-    return require(6160) /* MessageEmbedTypes */.ContentType.FORUM_POST;
+    return require(7212) /* MessageEmbedTypes */.ContentType.FORUM_POST;
   } else {
     if (null != message.reactions) {
       const reactions = message.reactions;
@@ -722,27 +722,27 @@ export const determineContentType = function determineContentType(channel, messa
       });
       if (0 !== mapped.length) {
         if (mapped.reduce((arg0, arg1) => arg0 + arg1) > 10) {
-          return require(6160) /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE;
+          return require(7212) /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE;
         }
       }
     }
     if (message.attachments.length > 0) {
       let ContentType = dependencyMap;
       if (obj.isValidImageAttachment(message.attachments[0])) {
-        ContentType = tmp6(6160).ContentType;
+        ContentType = tmp6(7212).ContentType;
         let IMAGE = ContentType.IMAGE;
       } else {
-        const result = tmp6(8196).isValidVideoAttachment(message.attachments[0]);
-        const ContentType2 = tmp6(6160).ContentType;
+        const result = tmp6(8503).isValidVideoAttachment(message.attachments[0]);
+        const ContentType2 = tmp6(7212).ContentType;
         IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
-        const tmp6Result = tmp6(8196);
+        const tmp6Result = tmp6(8503);
       }
-      obj = require(8196) /* isMediaAttachment */;
+      obj = require(8503) /* isMediaAttachment */;
     } else {
       if (message.embeds.length > 0) {
-        let INTERESTING = require(6160) /* MessageEmbedTypes */.ContentType.LINK;
+        let INTERESTING = require(7212) /* MessageEmbedTypes */.ContentType.LINK;
       } else {
-        INTERESTING = require(6160) /* MessageEmbedTypes */.ContentType.INTERESTING;
+        INTERESTING = require(7212) /* MessageEmbedTypes */.ContentType.INTERESTING;
       }
       return INTERESTING;
     }
@@ -753,31 +753,31 @@ export const contentTypeToText = function contentTypeToText(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  if (require(6160) /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE === arg0) {
+  if (require(7212) /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE === arg0) {
     const intl10 = tmp(1236).intl;
     return intl10.string(tmp(1236).t["H/2+cl"]);
-  } else if (tmp(6160).ContentType.IMAGE === arg0) {
+  } else if (tmp(7212).ContentType.IMAGE === arg0) {
     const intl9 = tmp(1236).intl;
     return intl9.string(tmp(1236).t.gmOWAo);
-  } else if (tmp(6160).ContentType.VIDEO === arg0) {
+  } else if (tmp(7212).ContentType.VIDEO === arg0) {
     const intl8 = tmp(1236).intl;
     return intl8.string(tmp(1236).t.swhcPM);
-  } else if (tmp(6160).ContentType.LINK === arg0) {
+  } else if (tmp(7212).ContentType.LINK === arg0) {
     const intl7 = tmp(1236).intl;
     return intl7.string(tmp(1236).t.oj5yvD);
-  } else if (tmp(6160).ContentType.THREAD === arg0) {
+  } else if (tmp(7212).ContentType.THREAD === arg0) {
     const intl6 = tmp(1236).intl;
     return intl6.string(tmp(1236).t.DwLrLK);
-  } else if (tmp(6160).ContentType.FORUM_POST === arg0) {
+  } else if (tmp(7212).ContentType.FORUM_POST === arg0) {
     const intl5 = tmp(1236).intl;
     return intl5.string(tmp(1236).t["Q9/6BS"]);
-  } else if (tmp(6160).ContentType.CHANGED_STATUS === arg0) {
+  } else if (tmp(7212).ContentType.CHANGED_STATUS === arg0) {
     const intl4 = tmp(1236).intl;
     return intl4.string(tmp(1236).t.TGrUmi);
-  } else if (tmp(6160).ContentType.INTERESTING === arg0) {
+  } else if (tmp(7212).ContentType.INTERESTING === arg0) {
     const intl3 = tmp(1236).intl;
     return intl3.string(tmp(1236).t["TahE/i"]);
-  } else if (tmp(6160).ContentType.ANNOUNCEMENT === arg0) {
+  } else if (tmp(7212).ContentType.ANNOUNCEMENT === arg0) {
     const intl2 = tmp(1236).intl;
     const string = intl2.string;
     const t = tmp(1236).t;
@@ -787,7 +787,7 @@ export const contentTypeToText = function contentTypeToText(arg0) {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
-  } else if (tmp(6160).ContentType.FILE === arg0) {
+  } else if (tmp(7212).ContentType.FILE === arg0) {
     const intl = tmp(1236).intl;
     return intl.string(tmp(1236).t.pYrnTY);
   }

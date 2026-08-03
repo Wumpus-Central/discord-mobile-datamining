@@ -1,6 +1,6 @@
-// === Module 15506: useFullscreenPlaceholderCount ===
+// === Module 15573: useFullscreenPlaceholderCount ===
 
-// Module 15506 (useFullscreenPlaceholderCount)
+// Module 15573 (useFullscreenPlaceholderCount)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes";
 
@@ -75,9 +75,9 @@ export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(
       return tmp5;
     }
   }
-  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _require(4054).withRepeat, withSequence: _require(4054).withSequence, withTiming: _require(4194).withTiming, STANDARD_EASING: _require(1297).STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
+  obj = { useReducedMotion: stateFromStores, visible, withRepeat: _require(4116).withRepeat, withSequence: _require(4116).withSequence, withTiming: _require(4256).withTiming, STANDARD_EASING: _require(1297).STANDARD_EASING, FADE_LAYOUT_ANIMATION_DURATION: closure_4 };
   A.__closure = obj;
   A.__workletHash = 9750536800906;
   A.__initData = closure_5;
-  return _require(4054).useAnimatedStyle(A);
+  return _require(4116).useAnimatedStyle(A);
 };

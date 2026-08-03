@@ -1,6 +1,6 @@
-// === Module 10527: useIsSpeaking ===
+// === Module 10712: useIsSpeaking ===
 
-// Module 10527 (useIsSpeaking)
+// Module 10712 (useIsSpeaking)
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import handleConnectionOpen from "handleConnectionOpen";
 import anyoneHasFlagInContext from "anyoneHasFlagInContext";

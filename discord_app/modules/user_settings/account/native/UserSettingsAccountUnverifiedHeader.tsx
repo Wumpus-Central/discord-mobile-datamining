@@ -1,6 +1,6 @@
-// === Module 9239: handleOpenEmailVerification ===
+// === Module 9412: handleOpenEmailVerification ===
 
-// Module 9239 (handleOpenEmailVerification)
+// Module 9412 (handleOpenEmailVerification)
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";
@@ -10,7 +10,7 @@ let c4;
 let c5;
 const require = arg1;
 function handleOpenEmailVerification() {
-  importDefault(9186).open();
+  importDefault(9359).open();
 }
 function getBannerText(currentUser) {
   if (null == currentUser) {
@@ -57,13 +57,13 @@ export default function UserSettingsAccountUnverifiedHeader() {
     obj = { style: null, variant: "text-xs/bold", color: "text-overlay-light", children: null };
     obj[0] = tmp.accountWarningText;
     obj[3] = tmp4.title;
-    const items1 = [callback(tmp2(4189).Text, obj), ];
+    const items1 = [callback(tmp2(4251).Text, obj), ];
     const obj1 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
     obj1[0] = tmp.accountWarningButton;
     obj1[3] = tmp4.button;
-    items1[1] = callback(tmp2(4189).Text, obj1);
+    items1[1] = callback(tmp2(4251).Text, obj1);
     obj[3] = items1;
-    tmp5 = callback2(tmp2(4721).PressableOpacity, obj);
+    tmp5 = callback2(tmp2(4783).PressableOpacity, obj);
   }
   return tmp5;
 };

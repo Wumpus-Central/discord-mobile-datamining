@@ -1,6 +1,6 @@
-// === Module 16739: AgeVerificationScreen ===
+// === Module 16805: AgeVerificationScreen ===
 
-// Module 16739 (AgeVerificationScreen)
+// Module 16805 (AgeVerificationScreen)
 import combined from "combined";
 import { Pressable } from "messagesProxy";
 import mergeGuildAvatar from "mergeGuildAvatar";

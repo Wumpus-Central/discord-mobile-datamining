@@ -1,6 +1,6 @@
-// === Module 14114: CARD_WIDTH ===
+// === Module 14181: CARD_WIDTH ===
 
-// Module 14114 (CARD_WIDTH)
+// Module 14181 (CARD_WIDTH)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CircleCheckIcon";
 import get_ActivityIndicator from "getSystemLocale";

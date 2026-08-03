@@ -1,6 +1,6 @@
-// === Module 16544: ApplicationStatusNotice ===
+// === Module 16610: ApplicationStatusNotice ===
 
-// Module 16544 (ApplicationStatusNotice)
+// Module 16610 (ApplicationStatusNotice)
 import encodeProperties from "encodeProperties";
 import Form from "Form";
 import get_ActivityIndicator from "asyncRequireImpl";
@@ -33,7 +33,7 @@ function ApplicationStatusNotice(arg0) {
     obj[0] = items;
     obj = { children: null };
     obj[0] = resubmissionError.getAnyErrorMessage();
-    obj[1] = callback(importDefault(11397), obj);
+    obj[1] = callback(importDefault(11507), obj);
     return callback(closure_6, obj);
   } else {
     if (isApplicationPending) {
@@ -57,7 +57,7 @@ function ApplicationStatusNotice(arg0) {
       obj1[1] = stringResult;
       obj1[2] = createEnableRequest;
       obj1[3] = resubmittingEnableRequest;
-      obj[1] = callback(importDefault(16546), obj1);
+      obj[1] = callback(importDefault(16612), obj1);
       tmp7 = callback(closure_6, obj);
     }
     return tmp7;

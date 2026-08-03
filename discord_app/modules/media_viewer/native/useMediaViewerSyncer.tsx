@@ -1,6 +1,6 @@
-// === Module 8139: useMediaViewerSyncer ===
+// === Module 8470: useMediaViewerSyncer ===
 
-// Module 8139 (useMediaViewerSyncer)
+// Module 8470 (useMediaViewerSyncer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN";

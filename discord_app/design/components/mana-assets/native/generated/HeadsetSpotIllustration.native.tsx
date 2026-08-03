@@ -1,6 +1,6 @@
-// === Module 7235: HeadsetSpotIllustration ===
+// === Module 6371: HeadsetSpotIllustration ===
 
-// Module 7235 (HeadsetSpotIllustration)
+// Module 6371 (HeadsetSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/HeadsetSpotIllustration.native.tsx");
@@ -24,7 +24,7 @@ export const HeadsetSpotIllustration = function HeadsetSpotIllustration(width) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(7236);
+  obj[0] = importDefault(6372);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const HeadsetSpotIllustration = function HeadsetSpotIllustration(width) {
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
 };

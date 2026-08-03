@@ -1,6 +1,6 @@
-// === Module 12400: getJoinFromSupportedPlatformsIconKeys ===
+// === Module 12498: getJoinFromSupportedPlatformsIconKeys ===
 
-// Module 12400 (getJoinFromSupportedPlatformsIconKeys)
+// Module 12498 (getJoinFromSupportedPlatformsIconKeys)
 import noop from "noop";
 import { ActivityGamePlatforms } from "ME";
 

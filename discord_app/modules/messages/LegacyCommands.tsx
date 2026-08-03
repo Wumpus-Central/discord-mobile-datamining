@@ -1,6 +1,6 @@
-// === Module 11187: action ===
+// === Module 11299: action ===
 
-// Module 11187 (action)
+// Module 11299 (action)
 import _slicedToArray from "_slicedToArray";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -18,7 +18,7 @@ obj = { tts: obj, me: obj, tableflip: obj1, unflip: obj2, shrug: obj3, nick: obj
 obj = {
   action() {
     const obj = { tts: null };
-    const EnableTTSCommand = require(3866) /* explicitContentFromProto */.EnableTTSCommand;
+    const EnableTTSCommand = require(3928) /* explicitContentFromProto */.EnableTTSCommand;
     obj[0] = EnableTTSCommand.getSetting();
     return obj;
   }
@@ -42,8 +42,8 @@ obj5[1] = function action(str, channel) {
           const trimmed = str.trim();
           const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
           if (null != byName) {
-            const obj3 = require(6079) /* checkReactionResponse */;
-            obj3.addReaction(channel.id, lastResult.id, require(3832) /* MAX_REACTIONS */.toReactionEmoji(byName));
+            const obj3 = require(7131) /* checkReactionResponse */;
+            obj3.addReaction(channel.id, lastResult.id, require(3894) /* MAX_REACTIONS */.toReactionEmoji(byName));
             return { content: "" };
           }
         }
@@ -79,7 +79,7 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      const obj = importDefault(6184);
+      const obj = importDefault(8151);
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }
@@ -116,7 +116,7 @@ obj6[1] = function action(str, channel) {
         }
         if (null == str7) {
           if (0 === lastEditableMessage.attachments.length) {
-            let obj = importDefault(5718);
+            let obj = importDefault(6814);
             obj.deleteMessage(channel.id, lastEditableMessage.id);
           }
           return { content: "" };
@@ -124,8 +124,8 @@ obj6[1] = function action(str, channel) {
         if (str7 !== lastEditableMessage.content) {
           obj = { content: null };
           obj[0] = str7;
-          importDefault(5718).editMessage(channel.id, lastEditableMessage.id, obj);
-          const obj2 = importDefault(5718);
+          importDefault(6814).editMessage(channel.id, lastEditableMessage.id, obj);
+          const obj2 = importDefault(6814);
         }
         const tmp5 = callback(Array.from(match), 4);
       }
@@ -164,7 +164,7 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
         let tmp2 = arg1;
         let tmp3 = importDefault;
         let tmp4 = dependencyMap;
-        let obj = importDefault(4388);
+        let obj = importDefault(4450);
         let tmp5 = constants;
         obj = { command: null };
         obj[0] = key10005;

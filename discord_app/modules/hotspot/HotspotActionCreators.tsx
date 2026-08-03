@@ -1,6 +1,6 @@
-// === Module 5656: hideHotspot ===
+// === Module 5718: hideHotspot ===
 
-// Module 5656 (hideHotspot)
+// Module 5718 (hideHotspot)
 import { AnalyticEvents } from "ME";
 
 const result = require("dispatcher").fileFinishedImporting("modules/hotspot/HotspotActionCreators.tsx");

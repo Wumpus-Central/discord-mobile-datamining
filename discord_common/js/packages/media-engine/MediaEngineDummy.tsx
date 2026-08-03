@@ -1,6 +1,6 @@
-// === Module 4361: Video ===
+// === Module 4423: Video ===
 
-// Module 4361 (Video)
+// Module 4423 (Video)
 import DesktopSources from "DesktopSources";
 import "on";
 
@@ -25,7 +25,7 @@ class MediaEngineDummy extends tmp3 {
 }
 const prototype = MediaEngineDummy.prototype;
 prototype["destroy"] = function destroy() {
-  this.emit(require(4290) /* BaseConnectionEvent */.MediaEngineEvent.Destroy);
+  this.emit(require(4352) /* BaseConnectionEvent */.MediaEngineEvent.Destroy);
   this.removeAllListeners();
 };
 prototype["interact"] = function interact() {

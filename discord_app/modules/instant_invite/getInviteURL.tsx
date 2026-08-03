@@ -1,6 +1,6 @@
-// === Module 6048: getInviteURL ===
+// === Module 7126: getInviteURL ===
 
-// Module 6048 (getInviteURL)
+// Module 7126 (getInviteURL)
 const result = require("set").fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");
 
 export default function getInviteURL() {

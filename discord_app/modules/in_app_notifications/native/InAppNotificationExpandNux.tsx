@@ -1,6 +1,6 @@
-// === Module 10350: MAX_TIMES_SHOWN ===
+// === Module 10489: MAX_TIMES_SHOWN ===
 
-// Module 10350 (MAX_TIMES_SHOWN)
+// Module 10489 (MAX_TIMES_SHOWN)
 const inAppNotificationExpandNux = "inAppNotificationExpandNux";
 let closure_3 = { lastShownAtMs: 0, numTimesShown: 0 };
 let result = require("set").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationExpandNux.tsx");

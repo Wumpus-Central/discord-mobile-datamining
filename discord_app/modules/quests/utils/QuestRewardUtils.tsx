@@ -1,6 +1,6 @@
-// === Module 9495: _getDefaultRewardName ===
+// === Module 9642: _getDefaultRewardName ===
 
-// Module 9495 (_getDefaultRewardName)
+// Module 9642 (_getDefaultRewardName)
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import set from "QuestRewardTypes";
 
@@ -8,20 +8,20 @@ const require = arg1;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
   let rewards = rewardsConfig.rewardsConfig.rewards;
   if (rewards.some((type) => type.type === callback(table[2]).QuestRewardTypes.FRACTIONAL_PREMIUM)) {
-    return require(9499) /* getDurationStringOfFractionalPremium */.getFractionalPremiumQuestRewardName(rewardsConfig);
+    return require(9646) /* getDurationStringOfFractionalPremium */.getFractionalPremiumQuestRewardName(rewardsConfig);
   } else {
     let rewards2 = rewardsConfig.rewardsConfig.rewards;
     if (rewards2.some((type) => type.type === callback(table[2]).QuestRewardTypes.VIRTUAL_CURRENCY)) {
       rewards = rewardsConfig.rewardsConfig.rewards;
-      const found = rewards.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+      const found = rewards.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
       let num = null;
       if (null != found) {
         if (null == stateFromStores) {
           num = found.orbQuantity;
         } else {
           const rewards1 = rewardsConfig.rewardsConfig.rewards;
-          const questOrbMultiplierEligibilityForUser = require(9497) /* getQuestOrbMultiplierEligibilityForUser */.getQuestOrbMultiplierEligibilityForUser(stateFromStores);
-          const found1 = rewards1.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+          const questOrbMultiplierEligibilityForUser = require(9644) /* getQuestOrbMultiplierEligibilityForUser */.getQuestOrbMultiplierEligibilityForUser(stateFromStores);
+          const found1 = rewards1.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
           let premiumOrbQuantity;
           if (found1 != null) {
             premiumOrbQuantity = found1.premiumOrbQuantity;
@@ -39,16 +39,16 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
               let orbQuantity = orbQuantity2;
             }
             num = orbQuantity;
-            tmp15Result = tmp15(9498);
+            tmp15Result = tmp15(9645);
           }
           orbQuantity = found.orbQuantity;
-          const obj5 = require(9497) /* getQuestOrbMultiplierEligibilityForUser */;
+          const obj5 = require(9644) /* getQuestOrbMultiplierEligibilityForUser */;
           tmp15 = require;
         }
       }
       if (num == null) {
         rewards2 = rewardsConfig.rewardsConfig.rewards;
-        const found2 = rewards2.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+        const found2 = rewards2.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
         orbQuantity = undefined;
         if (found2 != null) {
           orbQuantity = found2.orbQuantity;
@@ -63,7 +63,7 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
       obj[0] = num;
       return intl.formatToPlainString(require(1236) /* getSystemLocale */.t["nLXlh+"], obj);
     } else {
-      obj = require(9500) /* getContextualEntrypointHeading */;
+      obj = require(9647) /* getContextualEntrypointHeading */;
       const messages = obj.getDefaultReward(rewardsConfig).messages;
       return arg2 ? messages.nameWithArticle : messages.name;
     }
@@ -81,7 +81,7 @@ export const getCollectiblesQuestReward = function getCollectiblesQuestReward(re
     type = found.type;
   }
   let tmp3 = null;
-  if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
+  if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
     tmp3 = found;
   }
   return tmp3;
@@ -94,7 +94,7 @@ export const getCollectibleQuestRewardExtendableExpirationDate = function getCol
     type = found.type;
   }
   let tmp5 = null;
-  if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
+  if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
     tmp5 = found;
   }
   let questFormattedDate = null;
@@ -103,8 +103,8 @@ export const getCollectibleQuestRewardExtendableExpirationDate = function getCol
     if ("expiresAtPremium" in tmp5) {
       questFormattedDate = null;
       if (null != tmp5.expiresAtPremium) {
-        questFormattedDate = require(5987) /* getQuestDeliveryDataForPlacement */.getQuestFormattedDate(tmp5.expiresAtPremium);
-        const tmp3Result = require(5987) /* getQuestDeliveryDataForPlacement */;
+        questFormattedDate = require(7066) /* getQuestDeliveryDataForPlacement */.getQuestFormattedDate(tmp5.expiresAtPremium);
+        const tmp3Result = require(7066) /* getQuestDeliveryDataForPlacement */;
       }
     }
   }
@@ -118,7 +118,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
     type = found.type;
   }
   let tmp5 = null;
-  if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
+  if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
     tmp5 = found;
   }
   if (null != tmp5) {
@@ -128,7 +128,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
         const date = new Date(config.expiresAt);
         const _Date2 = Date;
         const date1 = new Date(tmp5.expiresAt);
-        let tmp3Result = tmp3(3418);
+        let tmp3Result = tmp3(3480);
         const differenceInDaysResult = tmp3Result.differenceInDays(date1, date);
         const _Math3 = Math;
         let num = 0;
@@ -150,7 +150,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
           obj[0] = sum;
           return intl3.formatToPlainString(tmp3(1236).t.kridzK, obj);
         } else {
-          tmp3Result = tmp3(3418);
+          tmp3Result = tmp3(3480);
           const differenceInDaysResult1 = tmp3Result.differenceInDays(date1, date);
           if (differenceInDaysResult1 >= 7) {
             const _Math = Math;
@@ -181,7 +181,7 @@ export const hasVirtualCurrencyReward = function hasVirtualCurrencyReward(config
 };
 export const hasPremiumOrbQuantity = function hasPremiumOrbQuantity(config) {
   const rewards = config.rewardsConfig.rewards;
-  const found = rewards.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+  const found = rewards.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
   let premiumOrbQuantity;
   if (found != null) {
     premiumOrbQuantity = found.premiumOrbQuantity;
@@ -200,7 +200,7 @@ export const hasCollectiblesQuestReward = function hasCollectiblesQuestReward(co
     type = found.type;
   }
   let tmp3 = null;
-  if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
+  if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
     tmp3 = found;
   }
   return null != tmp3;
@@ -229,7 +229,7 @@ export const getCollectiblesQuestRewardItem = function getCollectiblesQuestRewar
     type = found.type;
   }
   let tmp3 = null;
-  if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
+  if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
     tmp3 = found;
   }
   let skuId;
@@ -251,7 +251,7 @@ export const getCollectiblesQuestRewardItem = function getCollectiblesQuestRewar
 };
 export const getVirtualCurrencyRewardOrbQuantity = function getVirtualCurrencyRewardOrbQuantity(config) {
   const rewards = config.rewardsConfig.rewards;
-  const found = rewards.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+  const found = rewards.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
   let orbQuantity;
   if (found != null) {
     orbQuantity = found.orbQuantity;
@@ -265,7 +265,7 @@ export const getVirtualCurrencyRewardPremiumOrbQuantity = function getVirtualCur
   if (found != null) {
     type = found.type;
   }
-  if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
+  if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
     return found.premiumOrbQuantity;
   }
 };
@@ -277,7 +277,7 @@ export const isCollectibleQuestRewardPremiumExtendable = function isCollectibleQ
     type = found.type;
   }
   let tmp3 = null;
-  if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
+  if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
     tmp3 = found;
   }
   let expirationMode;
@@ -298,7 +298,7 @@ export const isCollectibleQuestRewardPermanentWithPremiumSubscription = function
     type = found.type;
   }
   let tmp5 = null;
-  if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
+  if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.COLLECTIBLE) {
     tmp5 = found;
   }
   let expirationMode;
@@ -317,14 +317,14 @@ export const isCollectibleQuestRewardPermanentWithPremiumSubscription = function
       type1 = found1.type;
     }
     let tmp11 = null;
-    if (type1 === tmp3(5994).QuestRewardTypes.COLLECTIBLE) {
+    if (type1 === tmp3(7073).QuestRewardTypes.COLLECTIBLE) {
       tmp11 = found1;
     }
     let expirationMode1;
     if (tmp11 != null) {
       expirationMode1 = tmp11.expirationMode;
     }
-    hasItem = expirationMode1 === tmp3(9496).QuestRewardExpirationMode.PREMIUM_PERMANENT;
+    hasItem = expirationMode1 === tmp3(9643).QuestRewardExpirationMode.PREMIUM_PERMANENT;
   }
   return hasItem;
 };
@@ -349,12 +349,12 @@ export const getQuestOrbMultiplier = function getQuestOrbMultiplier(config) {
   let orbQuantity;
   let premiumOrbQuantity;
   const rewards = config.rewardsConfig.rewards;
-  const found = rewards.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+  const found = rewards.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
   let type;
   if (found != null) {
     type = found.type;
   }
-  if (type !== require(5994) /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
+  if (type !== require(7073) /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
     return null;
   } else {
     ({ premiumOrbQuantity, orbQuantity } = found);
@@ -376,13 +376,13 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
     return 1;
   } else {
     const rewards = rewardsConfig.rewardsConfig.rewards;
-    const found = rewards.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+    const found = rewards.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
     let type;
     if (found != null) {
       type = found.type;
     }
     let num = null;
-    if (type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
+    if (type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.VIRTUAL_CURRENCY) {
       ({ premiumOrbQuantity, orbQuantity } = found);
       let result = null;
       if (null != premiumOrbQuantity) {
@@ -397,10 +397,10 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
     if (num == null) {
       num = 1;
     }
-    let tmp2Result = tmp2(9497);
+    let tmp2Result = tmp2(9644);
     const rewards1 = rewardsConfig.rewardsConfig.rewards;
     const questOrbMultiplierEligibilityForUser = tmp2Result.getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub);
-    const found1 = rewards1.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+    const found1 = rewards1.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
     premiumOrbQuantity = undefined;
     if (found1 != null) {
       premiumOrbQuantity = found1.premiumOrbQuantity;
@@ -411,7 +411,7 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
     }
     let num6 = 1;
     if (tmp9) {
-      tmp2Result = tmp2(9498);
+      tmp2Result = tmp2(9645);
       num6 = 1;
       if (tmp2Result.shouldReceiveQuestOrbMultiplier(questOrbMultiplierEligibilityForUser)) {
         num6 = num;
@@ -422,15 +422,15 @@ export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUse
 };
 export const getQuestOrbRewardQuantityForUser = function getQuestOrbRewardQuantityForUser(config, stateFromStores) {
   const rewards = config.rewardsConfig.rewards;
-  const found = rewards.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+  const found = rewards.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
   if (null == found) {
     return null;
   } else if (null == stateFromStores) {
     return found.orbQuantity;
   } else {
     const rewards1 = config.rewardsConfig.rewards;
-    const questOrbMultiplierEligibilityForUser = require(9497) /* getQuestOrbMultiplierEligibilityForUser */.getQuestOrbMultiplierEligibilityForUser(stateFromStores);
-    const found1 = rewards1.find((type) => type.type === callback(5994).QuestRewardTypes.VIRTUAL_CURRENCY);
+    const questOrbMultiplierEligibilityForUser = require(9644) /* getQuestOrbMultiplierEligibilityForUser */.getQuestOrbMultiplierEligibilityForUser(stateFromStores);
+    const found1 = rewards1.find((type) => type.type === callback(7073).QuestRewardTypes.VIRTUAL_CURRENCY);
     let premiumOrbQuantity;
     if (found1 != null) {
       premiumOrbQuantity = found1.premiumOrbQuantity;
@@ -450,7 +450,7 @@ export const getQuestOrbRewardQuantityForUser = function getQuestOrbRewardQuanti
       return orbQuantity;
     }
     orbQuantity = found.orbQuantity;
-    const obj2 = require(9497) /* getQuestOrbMultiplierEligibilityForUser */;
+    const obj2 = require(9644) /* getQuestOrbMultiplierEligibilityForUser */;
     const tmp5 = require;
   }
 };
@@ -465,7 +465,7 @@ export const getRewardCodeQuestReward = function getRewardCodeQuestReward(idx) {
     return null;
   } else {
     let tmp5 = null;
-    if (tmp.config.rewardsConfig.rewards[idx].type === require(5994) /* QuestRewardTypes */.QuestRewardTypes.REWARD_CODE) {
+    if (tmp.config.rewardsConfig.rewards[idx].type === require(7073) /* QuestRewardTypes */.QuestRewardTypes.REWARD_CODE) {
       tmp5 = tmp2;
     }
     return tmp5;
@@ -473,7 +473,7 @@ export const getRewardCodeQuestReward = function getRewardCodeQuestReward(idx) {
 };
 export const isTieredRewardCodeQuest = function isTieredRewardCodeQuest(quest) {
   const rewardsConfig = quest.quest.config.rewardsConfig;
-  let everyResult = rewardsConfig.assignmentMethod === require(9501) /* QuestRewardAssignmentMethods */.QuestRewardAssignmentMethods.TIERED;
+  let everyResult = rewardsConfig.assignmentMethod === require(9648) /* QuestRewardAssignmentMethods */.QuestRewardAssignmentMethods.TIERED;
   if (everyResult) {
     everyResult = rewardsConfig.rewards.length > 0;
   }
@@ -488,24 +488,24 @@ export const getDefaultPlatform = function getDefaultPlatform(config) {
   if (platforms.length > 0) {
     let CROSS_PLATFORM = platforms[0];
   } else {
-    CROSS_PLATFORM = require(5040) /* QuestsVisibleMessagesChangedSource */.QuestRewardCodePlatforms.CROSS_PLATFORM;
+    CROSS_PLATFORM = require(5102) /* QuestsVisibleMessagesChangedSource */.QuestRewardCodePlatforms.CROSS_PLATFORM;
   }
   return CROSS_PLATFORM;
 };
 export const getPlatformString = function getPlatformString(arg0) {
-  if (require(5040) /* QuestsVisibleMessagesChangedSource */.QuestRewardCodePlatforms.XBOX === arg0) {
+  if (require(5102) /* QuestsVisibleMessagesChangedSource */.QuestRewardCodePlatforms.XBOX === arg0) {
     const intl5 = tmp(1236).intl;
     return intl5.string(tmp(1236).t.G84UWZ);
-  } else if (tmp(5040).QuestRewardCodePlatforms.PLAYSTATION === arg0) {
+  } else if (tmp(5102).QuestRewardCodePlatforms.PLAYSTATION === arg0) {
     const intl4 = tmp(1236).intl;
     return intl4.string(tmp(1236).t["6IeKx2"]);
-  } else if (tmp(5040).QuestRewardCodePlatforms.SWITCH === arg0) {
+  } else if (tmp(5102).QuestRewardCodePlatforms.SWITCH === arg0) {
     const intl3 = tmp(1236).intl;
     return intl3.string(tmp(1236).t["1pp0su"]);
-  } else if (tmp(5040).QuestRewardCodePlatforms.PC === arg0) {
+  } else if (tmp(5102).QuestRewardCodePlatforms.PC === arg0) {
     const intl2 = tmp(1236).intl;
     return intl2.string(tmp(1236).t["YK+wUg"]);
-  } else if (tmp(5040).QuestRewardCodePlatforms.CROSS_PLATFORM === arg0) {
+  } else if (tmp(5102).QuestRewardCodePlatforms.CROSS_PLATFORM === arg0) {
     const intl = tmp(1236).intl;
     return intl.string(tmp(1236).t.UWVbzV);
   }

@@ -203,7 +203,7 @@ let items = [
   {
     key: "__shouldPauseOnThrow",
     value: function __shouldPauseOnThrow() {
-      let tmp = typeof globalThis.DebuggerInternal === "pack";
+      let tmp = typeof globalThis.DebuggerInternal === "as";
       if (typeof globalThis.DebuggerInternal !== "Array") {
         tmp = true === globalThis.DebuggerInternal.shouldPauseOnThrow;
       }

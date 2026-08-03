@@ -1,6 +1,6 @@
-// === Module 10376: BurstReactionButton ===
+// === Module 10515: BurstReactionButton ===
 
-// Module 10376 (BurstReactionButton)
+// Module 10515 (BurstReactionButton)
 import set from "set";
 import { View } from "Emoji";
 import jsxProd from "jsxProd";
@@ -156,10 +156,10 @@ export const AdditionalReactionCount = function AdditionalReactionCount(arg0) {
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t.N8hbZB);
   const items = [createCacheKey().container, containerStyle];
   obj[2] = items;
-  obj[3] = importDefault(10377)({ threadId }).onTapReactionCount;
+  obj[3] = importDefault(10516)({ threadId }).onTapReactionCount;
   const items1 = ["+", count];
-  obj[4] = callback(require(4189) /* Text */.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
-  return callback2(require(4721) /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(require(4251) /* Text */.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
+  return callback2(require(4783) /* PressableBase */.PressableOpacity, obj);
 };
 export const AddReactionButton = function AddReactionButton(reactionType) {
   let containerStyle;
@@ -167,15 +167,15 @@ export const AddReactionButton = function AddReactionButton(reactionType) {
   let NORMAL = reactionType.reactionType;
   ({ threadId, containerStyle } = reactionType);
   if (NORMAL === undefined) {
-    NORMAL = require(6078) /* ReactionTypes */.ReactionTypes.NORMAL;
+    NORMAL = require(7130) /* ReactionTypes */.ReactionTypes.NORMAL;
   }
   const obj = { style: items, accessible: true, accessibilityLabel: null, onPress: null, children: null };
   items = [createCacheKey().container, containerStyle];
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.lfIHs4);
-  obj[3] = importDefault(10377)({ threadId, reactionType: NORMAL }).onTapAddReaction;
-  obj[4] = callback2(require(9323) /* handleOutOfSuperReactions */.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
-  return callback2(require(4721) /* PressableBase */.PressableOpacity, obj);
+  obj[3] = importDefault(10516)({ threadId, reactionType: NORMAL }).onTapAddReaction;
+  obj[4] = callback2(require(9495) /* handleOutOfSuperReactions */.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
+  return callback2(require(4783) /* PressableBase */.PressableOpacity, obj);
 };
 export const ForumPostReactionButton = function ForumPostReactionButton(emojiSize) {
   let animateCount;

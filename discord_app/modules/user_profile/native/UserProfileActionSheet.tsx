@@ -1,6 +1,6 @@
-// === Module 8369: UseAnimatedPosition ===
+// === Module 8674: UseAnimatedPosition ===
 
-// Module 8369 (UseAnimatedPosition)
+// Module 8674 (UseAnimatedPosition)
 import useWindowDimensions from "useWindowDimensions";
 import importAllResult from "useBottomSheetRef";
 import get_ActivityIndicator from "context";
@@ -25,8 +25,8 @@ const require = arg1;
 function UseAnimatedPosition(animatedPosition) {
   animatedPosition = animatedPosition.animatedPosition;
   let animatedPosition2;
-  animatedPosition2 = animatedPosition(5249).useBottomSheet().animatedPosition;
-  const obj = animatedPosition(5249);
+  animatedPosition2 = animatedPosition(5311).useBottomSheet().animatedPosition;
+  const obj = animatedPosition(5311);
   const fn = function n() {
     return animatedPosition2.get();
   };
@@ -39,7 +39,7 @@ function UseAnimatedPosition(animatedPosition) {
   fn2.__closure = { animatedPosition };
   fn2.__workletHash = 15360670503044;
   fn2.__initData = closure_20;
-  const animatedReaction = animatedPosition(4054).useAnimatedReaction(fn, fn2);
+  const animatedReaction = animatedPosition(4116).useAnimatedReaction(fn, fn2);
   return null;
 }
 function ActionSheetAlignedView(children) {

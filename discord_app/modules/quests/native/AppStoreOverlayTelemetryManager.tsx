@@ -1,6 +1,6 @@
-// === Module 10511: handleAppStateUpdate ===
+// === Module 10649: handleAppStateUpdate ===
 
-// Module 10511 (handleAppStateUpdate)
+// Module 10649 (handleAppStateUpdate)
 import { AnalyticEvents } from "ME";
 import "initialize";
 

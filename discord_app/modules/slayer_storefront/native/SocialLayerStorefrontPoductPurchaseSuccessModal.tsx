@@ -1,6 +1,6 @@
-// === Module 9784: PurchaseSuccessModalBase ===
+// === Module 9929: PurchaseSuccessModalBase ===
 
-// Module 9784 (PurchaseSuccessModalBase)
+// Module 9929 (PurchaseSuccessModalBase)
 import _toArray from "_toArray";
 import SafeAreaPaddingView from "SafeAreaPaddingView";
 import get_ActivityIndicator from "handleOrientationChange";

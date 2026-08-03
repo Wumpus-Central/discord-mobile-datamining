@@ -1,6 +1,6 @@
-// === Module 8310: DEFAULT_DISCOVERY_CATEGORY_ID ===
+// === Module 8615: DEFAULT_DISCOVERY_CATEGORY_ID ===
 
-// Module 8310 (DEFAULT_DISCOVERY_CATEGORY_ID)
+// Module 8615 (DEFAULT_DISCOVERY_CATEGORY_ID)
 import set from "set";
 
 const require = arg1;

@@ -1,13 +1,13 @@
-// === Module 10941: getNavigatorCurrentRoute ===
+// === Module 11063: getNavigatorCurrentRoute ===
 
-// Module 10941 (getNavigatorCurrentRoute)
+// Module 11063 (getNavigatorCurrentRoute)
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");
 
 export default function getNavigatorCurrentRoute() {
   let rootNavigationRef = arg0;
   if (arg0 === undefined) {
-    rootNavigationRef = require(4045) /* getRootNavigationRef */.getRootNavigationRef();
-    const obj2 = require(4045) /* getRootNavigationRef */;
+    rootNavigationRef = require(4107) /* getRootNavigationRef */.getRootNavigationRef();
+    const obj2 = require(4107) /* getRootNavigationRef */;
   }
   let isReadyResult;
   if (rootNavigationRef != null) {

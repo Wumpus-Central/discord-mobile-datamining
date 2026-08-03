@@ -1,6 +1,6 @@
-// === Module 13548: setCertifiedDevices ===
+// === Module 13611: setCertifiedDevices ===
 
-// Module 13548 (setCertifiedDevices)
+// Module 13611 (setCertifiedDevices)
 const result = require("set").fileFinishedImporting("actions/CertifiedDeviceActionCreators.tsx");
 
 export const setCertifiedDevices = function setCertifiedDevices(id, devices) {

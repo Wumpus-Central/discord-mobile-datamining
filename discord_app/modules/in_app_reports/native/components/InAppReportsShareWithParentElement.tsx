@@ -1,6 +1,6 @@
-// === Module 12425: parents ===
+// === Module 12523: parents ===
 
-// Module 12425 (parents)
+// Module 12523 (parents)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -49,11 +49,11 @@ export default function _default(parents) {
     }
     obj[3] = username3;
     obj[1] = intl.formatToPlainString(parents(1236).t.BlAMme, obj);
-    obj[2] = jsx(parents(12316).ShareIcon, {});
+    obj[2] = jsx(parents(12414).ShareIcon, {});
     const intl2 = tmp15(1236).intl;
     obj[3] = intl2.string(parents(1236).t["5l/hlt"]);
     obj[4] = tmp[0];
     obj[5] = tmp2;
-    return jsx(importDefault(12424), { count: null, parent1: null, parent2: null, parent3: null });
+    return jsx(importDefault(12522), { count: null, parent1: null, parent2: null, parent3: null });
   }
 };

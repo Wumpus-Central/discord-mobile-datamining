@@ -1,6 +1,6 @@
-// === Module 10388: useReactionPermissions ===
+// === Module 10527: useReactionPermissions ===
 
-// Module 10388 (useReactionPermissions)
+// Module 10527 (useReactionPermissions)
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

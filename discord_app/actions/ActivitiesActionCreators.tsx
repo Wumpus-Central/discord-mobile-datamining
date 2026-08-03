@@ -1,6 +1,6 @@
-// === Module 10496: ? ===
+// === Module 10634: ? ===
 
-// Module 10496
+// Module 10634
 import sendRequest from "sendRequest";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
@@ -122,8 +122,8 @@ export default {
     let require;
     const self = this;
     ({ type: importDefault, activity: dependencyMap, content: sendRequest, location: require } = userId);
-    const obj = importDefault(4203);
-    return importDefault(4203).ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: sendRequest, location: closure_0 }));
+    const obj = importDefault(4265);
+    return importDefault(4265).ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: sendRequest, location: closure_0 }));
   },
   getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
     let closure_0 = arg0;

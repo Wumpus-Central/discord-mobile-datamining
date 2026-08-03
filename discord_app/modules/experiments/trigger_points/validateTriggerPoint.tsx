@@ -1,6 +1,6 @@
-// === Module 4116: validateAllExperiments ===
+// === Module 4178: validateAllExperiments ===
 
-// Module 4116 (validateAllExperiments)
+// Module 4178 (validateAllExperiments)
 import "getHash";
 
 const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");

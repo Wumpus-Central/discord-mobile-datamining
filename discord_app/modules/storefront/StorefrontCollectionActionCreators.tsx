@@ -1,6 +1,6 @@
-// === Module 12232: _maybeFetchCollectionsWithProducts ===
+// === Module 12329: _maybeFetchCollectionsWithProducts ===
 
-// Module 12232 (_maybeFetchCollectionsWithProducts)
+// Module 12329 (_maybeFetchCollectionsWithProducts)
 import set from "set";
 import _getSystemLocale from "_getSystemLocale";
 import getFetchState from "getFetchState";

@@ -1,6 +1,6 @@
-// === Module 5952: initialize ===
+// === Module 7031: initialize ===
 
-// Module 5952 (initialize)
+// Module 7031 (initialize)
 import createdAt from "createdAt";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
@@ -43,11 +43,11 @@ const friendSuggestionStore = new FriendSuggestionStore(require("dispatcher"), {
       if (flag2) {
         c6 = true;
         c7 = false;
-        const response = importDefault(5953).fetch();
-        const obj = importDefault(5953);
+        const response = importDefault(7032).fetch();
+        const obj = importDefault(7032);
       }
     } else {
-      importDefault(5954)();
+      importDefault(7033)();
     }
   },
   FRIEND_SUGGESTION_CREATE: function handleFriendSuggestionCreate(suggestion) {

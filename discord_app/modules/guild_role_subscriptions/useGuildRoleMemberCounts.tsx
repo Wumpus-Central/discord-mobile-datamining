@@ -1,6 +1,6 @@
-// === Module 5207: useGuildRoleMemberCounts ===
+// === Module 5269: useGuildRoleMemberCounts ===
 
-// Module 5207 (useGuildRoleMemberCounts)
+// Module 5269 (useGuildRoleMemberCounts)
 import noop from "noop";
 import getRoleMemberCount from "getRoleMemberCount";
 

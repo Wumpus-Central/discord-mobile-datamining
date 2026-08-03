@@ -1,6 +1,6 @@
-// === Module 15760: showLaunchPad ===
+// === Module 15825: showLaunchPad ===
 
-// Module 15760 (showLaunchPad)
+// Module 15825 (showLaunchPad)
 import { ComponentActions } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/launchpad/native/showLaunchPad.tsx");

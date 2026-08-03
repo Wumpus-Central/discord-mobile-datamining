@@ -175,7 +175,7 @@ if (isJest.shouldBeUseWeb()) {
   const obj5 = { get: null, set: null };
   obj5[0] = maybeThrowError;
   obj5[1] = function set() {
-    if (typeof maybeThrowError !== "fileFinishedImporting") {
+    if (typeof maybeThrowError !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (obj.isJest()) {

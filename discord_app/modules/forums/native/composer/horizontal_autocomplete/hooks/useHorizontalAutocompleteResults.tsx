@@ -1,6 +1,6 @@
-// === Module 9670: useHorizontalAutocompleteResults ===
+// === Module 9817: useHorizontalAutocompleteResults ===
 
-// Module 9670 (useHorizontalAutocompleteResults)
+// Module 9817 (useHorizontalAutocompleteResults)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ME from "ME";

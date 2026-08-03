@@ -1,6 +1,6 @@
-// === Module 5644: openAgeGateModal ===
+// === Module 5706: openAgeGateModal ===
 
-// Module 5644 (openAgeGateModal)
+// Module 5706 (openAgeGateModal)
 import { AgeGateAnalyticAction } from "result";
 import ME from "ME";
 
@@ -47,7 +47,7 @@ export const openFailureAgeGateModal = function openFailureAgeGateModal(source) 
   importDefault(698).track(constants2.AGE_GATE_ACTION, obj);
 };
 export const closeFailedAgeGate = function closeFailedAgeGate() {
-  importDefault(5645).logoutInternal();
-  const obj = importDefault(5645);
+  importDefault(5707).logoutInternal();
+  const obj = importDefault(5707);
   require(1222) /* transitionTo */.transitionTo(constants.LOGIN, { source: "age_gate_modal" });
 };

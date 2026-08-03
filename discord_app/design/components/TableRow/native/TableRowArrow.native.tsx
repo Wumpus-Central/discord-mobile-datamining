@@ -1,6 +1,6 @@
-// === Module 5231: TableRowArrow ===
+// === Module 5293: TableRowArrow ===
 
-// Module 5231 (TableRowArrow)
+// Module 5293 (TableRowArrow)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -20,7 +20,7 @@ export const TableRowArrow = function TableRowArrow() {
   const tmp = importDefault;
   const tmp3 = importDefault(1348)("TableRowArrow");
   const tmp5 = jsx;
-  obj[2] = tmp(tmp3 ? 5232 : 5233);
-  obj[3] = require(4606) /* IconSizes */.IconSizes.CUSTOM;
-  return tmp5(importDefault(4606), obj);
+  obj[2] = tmp(tmp3 ? 5294 : 5295);
+  obj[3] = require(4668) /* IconSizes */.IconSizes.CUSTOM;
+  return tmp5(importDefault(4668), obj);
 };

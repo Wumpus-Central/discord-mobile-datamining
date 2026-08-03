@@ -1,6 +1,6 @@
-// === Module 15588: ChannelDetailsLinkedLobby ===
+// === Module 15655: ChannelDetailsLinkedLobby ===
 
-// Module 15588 (ChannelDetailsLinkedLobby)
+// Module 15655 (ChannelDetailsLinkedLobby)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";
@@ -23,7 +23,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
   let divider = createCacheKey();
   let BPDKoA = require;
   let getArticleURL = dependencyMap;
-  let obj = require(5525) /* useGetOrFetchApplications */;
+  let obj = require(5587) /* useGetOrFetchApplications */;
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
@@ -36,7 +36,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
     obj = { style: null, children: null };
     const items = [divider.container, channel.containerStyle];
     obj[0] = items;
-    let Text = BPDKoA(4189).Text;
+    let Text = BPDKoA(4251).Text;
     if (null != intl) {
       const intl3 = BPDKoA(1236).intl;
       obj = { applicationName: null };

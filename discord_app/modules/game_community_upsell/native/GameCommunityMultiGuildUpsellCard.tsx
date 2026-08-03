@@ -1,6 +1,6 @@
-// === Module 15258: GameCommunityMultiGuildUpsellCard ===
+// === Module 15241: GameCommunityMultiGuildUpsellCard ===
 
-// Module 15258 (GameCommunityMultiGuildUpsellCard)
+// Module 15241 (GameCommunityMultiGuildUpsellCard)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
 import GuildBadgeV2 from "GuildBadgeV2";

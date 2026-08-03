@@ -1,6 +1,6 @@
-// === Module 12546: PremiumMarketingFloatingSubscribeButton ===
+// === Module 12639: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 12546 (PremiumMarketingFloatingSubscribeButton)
+// Module 12639 (PremiumMarketingFloatingSubscribeButton)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

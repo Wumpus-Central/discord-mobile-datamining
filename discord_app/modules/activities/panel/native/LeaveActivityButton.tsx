@@ -1,6 +1,6 @@
-// === Module 15884: BaseLeaveActivityButton ===
+// === Module 15948: BaseLeaveActivityButton ===
 
-// Module 15884 (BaseLeaveActivityButton)
+// Module 15948 (BaseLeaveActivityButton)
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

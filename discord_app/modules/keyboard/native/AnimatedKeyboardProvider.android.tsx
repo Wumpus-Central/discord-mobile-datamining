@@ -1,6 +1,6 @@
-// === Module 10399: ? ===
+// === Module 10538: ? ===
 
-// Module 10399
+// Module 10538
 import importDefaultResult from "enforcing";
 
 const result = require("enforcing").setNavigationBarContrastEnforced(false);

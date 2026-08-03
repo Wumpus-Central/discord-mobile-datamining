@@ -1,6 +1,6 @@
-// === Module 4765: getTimeFormat ===
+// === Module 4827: getTimeFormat ===
 
-// Module 4765 (getTimeFormat)
+// Module 4827 (getTimeFormat)
 let result = require("set").fileFinishedImporting("utils/native/TimeUtils.tsx");
 
 export const getTimeFormat = function getTimeFormat(playableDuration, padMinutes) {

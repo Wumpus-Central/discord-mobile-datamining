@@ -1,12 +1,12 @@
-// === Module 13048: useGuildSettingsPickerFeature ===
+// === Module 13111: useGuildSettingsPickerFeature ===
 
-// Module 13048 (useGuildSettingsPickerFeature)
+// Module 13111 (useGuildSettingsPickerFeature)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 
 const require = arg1;
-let obj = { "server-subscriptions-onboarding": require("module_13049"), "server-subscriptions-create-tier-from-template": require("module_13050") };
+let obj = { "server-subscriptions-onboarding": require("module_13112"), "server-subscriptions-create-tier-from-template": require("module_13113") };
 let closure_6 = {
   title() {
     const intl = require(1236) /* getSystemLocale */.intl;

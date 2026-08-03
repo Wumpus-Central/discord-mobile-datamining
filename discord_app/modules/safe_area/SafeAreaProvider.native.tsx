@@ -1,6 +1,6 @@
-// === Module 13649: SafeAreaReporter ===
+// === Module 13712: SafeAreaReporter ===
 
-// Module 13649 (SafeAreaReporter)
+// Module 13712 (SafeAreaReporter)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

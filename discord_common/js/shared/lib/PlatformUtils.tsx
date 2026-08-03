@@ -1,6 +1,6 @@
-// === Module 4430: isTablet ===
+// === Module 4492: isTablet ===
 
-// Module 4430 (isTablet)
+// Module 4492 (isTablet)
 import { product as str } from "format";
 import importDefaultResult1 from "format";
 import importDefaultResult2 from "format";

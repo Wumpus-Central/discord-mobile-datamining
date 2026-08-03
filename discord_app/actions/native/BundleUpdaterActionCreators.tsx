@@ -1,6 +1,6 @@
-// === Module 16757: ? ===
+// === Module 16823: ? ===
 
-// Module 16757
+// Module 16823
 import { NativeModules } from "get ActivityIndicator";
 
 let c4 = false;
@@ -9,7 +9,7 @@ const result = require("getSystemLocale").fileFinishedImporting("actions/native/
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      let obj = importDefault(4532);
+      let obj = importDefault(4594);
       obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl = require(1236) /* getSystemLocale */.intl;
       obj[0] = intl.string(require(1236) /* getSystemLocale */.t.GQZdmI);

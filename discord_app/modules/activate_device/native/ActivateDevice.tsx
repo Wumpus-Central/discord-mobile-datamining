@@ -1,6 +1,6 @@
-// === Module 13033: ActivateDevice ===
+// === Module 13096: ActivateDevice ===
 
-// Module 13033 (ActivateDevice)
+// Module 13096 (ActivateDevice)
 import _slicedToArray from "_slicedToArray";
 import SafeAreaPaddingView from "SafeAreaPaddingView";
 import get_ActivityIndicator from "getAvatarURL";

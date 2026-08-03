@@ -1,6 +1,6 @@
-// === Module 13612: _initialize ===
+// === Module 13675: _initialize ===
 
-// Module 13612 (_initialize)
+// Module 13675 (_initialize)
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import "initialize";

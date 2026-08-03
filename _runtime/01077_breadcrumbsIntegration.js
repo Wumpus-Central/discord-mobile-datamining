@@ -61,7 +61,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             }
             let maxStringLength;
             if (typeof dom !== "window") {
-              if (typeof tmp15.maxStringLength !== "__REMOTEDEV__") {
+              if (typeof tmp15.maxStringLength !== "SENTRY_RELEASE") {
                 maxStringLength = tmp15.maxStringLength;
               }
             }
@@ -79,7 +79,7 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
               tmp6 = outer1_2;
             }
             let tmp9 = serializeAttribute;
-            if (typeof serializeAttribute !== "__FORMATJS_LISTFORMAT_DATA__") {
+            if (typeof serializeAttribute !== "ge") {
               const items = [serializeAttribute];
               tmp9 = items;
             }

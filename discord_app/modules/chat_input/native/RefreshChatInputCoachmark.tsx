@@ -1,6 +1,6 @@
-// === Module 11176: RefreshChatInputCoachmark ===
+// === Module 11288: RefreshChatInputCoachmark ===
 
-// Module 11176 (RefreshChatInputCoachmark)
+// Module 11288 (RefreshChatInputCoachmark)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
@@ -10,13 +10,13 @@ const result = require("ContentDismissActionType").fileFinishedImporting("module
 
 export default function RefreshChatInputCoachmark(buttonRef) {
   const merged = Object.assign(buttonRef, Object.create(null));
-  const coachmark = require(8440) /* useCoachmark */.useCoachmark(buttonRef.buttonRef, merged);
+  const coachmark = require(8745) /* useCoachmark */.useCoachmark(buttonRef.buttonRef, merged);
   return null;
 };
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {
   let _require;
   let importDefault;
-  _require(8451);
+  _require(5921);
   if (tmp2) {
     if (!disabled.disabled) {
       let items = [tmp3(1358).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];

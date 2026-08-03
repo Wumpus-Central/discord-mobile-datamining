@@ -1,6 +1,6 @@
-// === Module 15762: MenuContainer ===
+// === Module 15827: MenuContainer ===
 
-// Module 15762 (MenuContainer)
+// Module 15827 (MenuContainer)
 import noop from "noop";
 import initialize from "initialize";
 
@@ -20,7 +20,7 @@ export default function MenuContainer() {
     }
     return null != key;
   }, items1);
-  importDefault(4601)(callback);
+  importDefault(4663)(callback);
   let tmp4 = null;
   if (null != key) {
     tmp4 = null;

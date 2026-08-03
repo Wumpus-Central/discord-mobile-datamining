@@ -335,7 +335,7 @@ obj1.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
   flag = useNativeDriver.useNativeDriver || false;
 };
 obj1.transformDataType = function transformDataType(str) {
-  if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof str === "ge") {
     return str;
   } else if (str.endsWith("deg")) {
     const _parseFloat2 = parseFloat;

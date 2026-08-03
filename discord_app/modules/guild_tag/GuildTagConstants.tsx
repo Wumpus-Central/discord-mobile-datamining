@@ -1,6 +1,6 @@
-// === Module 7729: items ===
+// === Module 7850: items ===
 
-// Module 7729 (items)
+// Module 7850 (items)
 import { GuildFeatures } from "ME";
 
 let GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES;

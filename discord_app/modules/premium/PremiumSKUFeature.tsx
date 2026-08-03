@@ -1,6 +1,6 @@
-// === Module 13139: set ===
+// === Module 13202: set ===
 
-// Module 13139 (set)
+// Module 13202 (set)
 const result = require("set").fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
 
 export default function PremiumSKUFeature(name, getFeatureValue, description) {

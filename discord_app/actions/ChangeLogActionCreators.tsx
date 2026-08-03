@@ -1,6 +1,6 @@
-// === Module 7872: cacheBustParam ===
+// === Module 7990: cacheBustParam ===
 
-// Module 7872 (cacheBustParam)
+// Module 7990 (cacheBustParam)
 import explicitContentFromProto from "explicitContentFromProto";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import { Endpoints } from "ME";
@@ -27,7 +27,7 @@ export default {
     let obj = importDefault(709);
     obj = { type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date };
     obj.dispatch(obj);
-    const LastReceivedChangelogId = require(3866) /* explicitContentFromProto */.LastReceivedChangelogId;
+    const LastReceivedChangelogId = require(3928) /* explicitContentFromProto */.LastReceivedChangelogId;
     LastReceivedChangelogId.updateSetting(id);
   },
   setChangelogOverride(id) {

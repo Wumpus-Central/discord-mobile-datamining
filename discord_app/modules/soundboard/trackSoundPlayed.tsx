@@ -1,6 +1,6 @@
-// === Module 10794: trackSoundPlayed ===
+// === Module 5886: trackSoundPlayed ===
 
-// Module 10794 (trackSoundPlayed)
+// Module 5886 (trackSoundPlayed)
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";

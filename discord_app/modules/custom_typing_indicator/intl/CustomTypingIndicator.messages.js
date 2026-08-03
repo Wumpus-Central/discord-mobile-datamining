@@ -1,12 +1,12 @@
-// === Module 3263: messagesProxy ===
+// === Module 3325: messagesProxy ===
 
-// Module 3263 (messagesProxy)
+// Module 3325 (messagesProxy)
 import module_1274 from "module_1274";
 import module_1274 from "module_1274";
 
 const loader = module_1274.createLoader({
   () => {
-    const jsonAsset = require(1239) /* loadJsonAsset */.loadJsonAsset(require(3264) /* registerAsset */);
+    const jsonAsset = require(1239) /* loadJsonAsset */.loadJsonAsset(require(3326) /* registerAsset */);
     return jsonAsset.then((arg0) => ({ default: arg0 }));
   }
 }, "en-US");

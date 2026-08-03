@@ -1,6 +1,6 @@
-// === Module 9353: maybeFetchTopEmojisByGuild ===
+// === Module 9512: maybeFetchTopEmojisByGuild ===
 
-// Module 9353 (maybeFetchTopEmojisByGuild)
+// Module 9512 (maybeFetchTopEmojisByGuild)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import initialize from "initialize";
@@ -19,8 +19,8 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
         }
       }
       if (!isFetching.getIsFetching(guildId)) {
-        const topEmojis = require(9354) /* fetchTopEmojis */.fetchTopEmojis(guildId);
-        const obj = require(9354) /* fetchTopEmojis */;
+        const topEmojis = require(9513) /* fetchTopEmojis */.fetchTopEmojis(guildId);
+        const obj = require(9513) /* fetchTopEmojis */;
       }
     }
   }

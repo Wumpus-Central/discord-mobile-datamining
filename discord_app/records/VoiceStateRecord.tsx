@@ -1,6 +1,6 @@
-// === Module 4210: isVoiceMuted ===
+// === Module 4272: isVoiceMuted ===
 
-// Module 4210 (isVoiceMuted)
+// Module 4272 (isVoiceMuted)
 import "toJS";
 
 const result = require("set").fileFinishedImporting("records/VoiceStateRecord.tsx");

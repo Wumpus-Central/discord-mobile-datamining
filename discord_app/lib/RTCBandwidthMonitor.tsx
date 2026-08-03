@@ -1,6 +1,6 @@
-// === Module 5735: create ===
+// === Module 6830: create ===
 
-// Module 5735 (create)
+// Module 6830 (create)
 let closure_2 = [];
 let RTCBandwidthMonitor;
 class RTCBandwidthMonitor {
@@ -61,7 +61,7 @@ class RTCBandwidthMonitor {
   }
 }
 RTCBandwidthMonitor["create"] = function create() {
-  if (typeof RTCBandwidthMonitor !== "fileFinishedImporting") {
+  if (typeof RTCBandwidthMonitor !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(RTCBandwidthMonitor.prototype);

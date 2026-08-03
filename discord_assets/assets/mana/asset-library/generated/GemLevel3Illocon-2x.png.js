@@ -1,6 +1,6 @@
-// === Module 7160: metadata ===
+// === Module 6296: metadata ===
 
-// Module 7160 (metadata)
+// Module 6296 (metadata)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemLevel3Illocon-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/68d3c8c1c6429771da8c97810b169395ca38e2e20a517cab97acc632cf4eabf9.png";

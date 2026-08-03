@@ -1,6 +1,6 @@
-// === Module 5739: handleSelectedChannelStoreChanged ===
+// === Module 6834: handleSelectedChannelStoreChanged ===
 
-// Module 5739 (handleSelectedChannelStoreChanged)
+// Module 6834 (handleSelectedChannelStoreChanged)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import "clearAll";
@@ -17,11 +17,11 @@ function handleSelectedChannelStoreChanged() {
 }
 function handleConnectionOpenSupplemental() {
   const result = SaveableChannelsStore.dropUnreachableChannels();
-  SaveableChannelsStore.replaceLru(prototype(5747).withFallbacks(extendedMemoryLru, 1250));
+  SaveableChannelsStore.replaceLru(prototype(6842).withFallbacks(extendedMemoryLru, 1250));
 }
 function handleChannelUpdate(id) {
   id = id.id;
-  const isReadableChannelResult = prototype(5745).isReadableChannel(id);
+  const isReadableChannelResult = prototype(6840).isReadableChannel(id);
   let tmp2 = isReadableChannelResult;
   if (isReadableChannelResult) {
     tmp2 = id === store2.getChannelId();
@@ -46,7 +46,7 @@ function handleChannelDelete(channel) {
 function handleThreadUpdate(channel) {
   channel = channel.channel;
   const id = channel.id;
-  const isReadableChannelResult = prototype(5745).isReadableChannel(channel);
+  const isReadableChannelResult = prototype(6840).isReadableChannel(channel);
   let tmp2 = isReadableChannelResult;
   if (isReadableChannelResult) {
     tmp2 = id === store2.getChannelId();
@@ -139,7 +139,7 @@ prototype["saveLimit"] = function saveLimit(channelId) {
     let num = num3;
   } else {
     num = 25;
-    const obj = prototype(5744);
+    const obj = prototype(6839);
   }
   return num;
 };
@@ -172,8 +172,8 @@ prototype["takeSnapshot"] = function takeSnapshot() {
   return obj;
 };
 SaveableChannelsStore["mergeSnapshot"] = function mergeSnapshot(snapshot) {
-  extendedMemoryLru = new prototype(5741).ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
-  lru = new prototype(5742).Lru(lru.capacity);
+  extendedMemoryLru = new prototype(6836).ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
+  lru = new prototype(6837).Lru(lru.capacity);
   if (lastChannel == null) {
     lastChannel = snapshot.lastChannel;
   }
@@ -222,9 +222,9 @@ SaveableChannelsStore["recordChannel"] = function recordChannel(id) {
           extendedMemoryLru.delete(id);
         }
       }
-      tmp8Result = tmp8(5746);
+      tmp8Result = tmp8(6841);
     }
-    obj3 = prototype(5745);
+    obj3 = prototype(6840);
     tmp8 = prototype;
   }
 };
@@ -249,7 +249,7 @@ SaveableChannelsStore["dropUnreachableChannels"] = function dropUnreachableChann
     let tmp5 = prototype;
     let tmp6 = dependencyMap;
     let basicChannel = store.getBasicChannel(item10008);
-    let obj = prototype(5745);
+    let obj = prototype(6840);
     if (!obj.isReadableChannel(basicChannel)) {
       let tmp7 = SaveableChannelsStore;
       let tmp8 = item10008;
@@ -266,7 +266,7 @@ SaveableChannelsStore["deleteUnreadableGuildChannels"] = function deleteUnreadab
     if (!isReadableChannelIdResult) {
       let tmp4 = prototype;
       let tmp5 = dependencyMap;
-      let obj = prototype(5745);
+      let obj = prototype(6840);
       let tmp6 = item10009;
       isReadableChannelIdResult = obj.isReadableChannelId(tmp2.channelId);
     }

@@ -1,6 +1,6 @@
-// === Module 10744: useCanRaiseHand ===
+// === Module 10852: useCanRaiseHand ===
 
-// Module 10744 (useCanRaiseHand)
+// Module 10852 (useCanRaiseHand)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
 

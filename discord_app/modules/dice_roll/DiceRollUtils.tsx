@@ -1,6 +1,6 @@
-// === Module 11497: getBarText ===
+// === Module 11607: getBarText ===
 
-// Module 11497 (getBarText)
+// Module 11607 (getBarText)
 const result = require("set").fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
 
 export const getBarText = function getBarText(flag, results) {

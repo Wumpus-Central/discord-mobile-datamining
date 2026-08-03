@@ -1,6 +1,6 @@
-// === Module 15251: useShouldRenderChannelList ===
+// === Module 15234: useShouldRenderChannelList ===
 
-// Module 15251 (useShouldRenderChannelList)
+// Module 15234 (useShouldRenderChannelList)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleClearCaches from "handleClearCaches";
@@ -50,7 +50,7 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
       let result1 = outer1_4.addReactChangeListener(handleCacheChange);
       let ComponentDispatch = first(1231).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(outer1_6.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(4045).getRootNavigationRef();
+      let rootNavigationRef = first(4107).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }

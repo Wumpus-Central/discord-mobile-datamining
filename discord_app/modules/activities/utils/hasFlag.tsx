@@ -1,6 +1,6 @@
-// === Module 6029: hasFlag ===
+// === Module 5808: hasFlag ===
 
-// Module 6029 (hasFlag)
+// Module 5808 (hasFlag)
 import { ActivityFlags } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/hasFlag.tsx");

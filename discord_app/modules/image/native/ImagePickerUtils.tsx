@@ -1,6 +1,6 @@
-// === Module 4748: isActionPickSupported ===
+// === Module 4810: isActionPickSupported ===
 
-// Module 4748 (isActionPickSupported)
+// Module 4810 (isActionPickSupported)
 const result = require("set").fileFinishedImporting("modules/image/native/ImagePickerUtils.tsx");
 
 export const isActionPickSupported = function isActionPickSupported() {

@@ -1,6 +1,6 @@
-// === Module 12773: enforcing ===
+// === Module 12836: enforcing ===
 
-// Module 12773 (enforcing)
+// Module 12836 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeInstallTimeModule");

@@ -1,6 +1,6 @@
-// === Module 13887: mapColorToHighlightColor ===
+// === Module 13954: mapColorToHighlightColor ===
 
-// Module 13887 (mapColorToHighlightColor)
+// Module 13954 (mapColorToHighlightColor)
 import ME from "ME";
 import { ExplicitContentFilterTypes as closure_5 } from "items";
 
@@ -9,23 +9,23 @@ let c4;
 let obj1;
 function mapColorToHighlightColor(arg0) {
   if (obj.unsafe_getRawColor("PRIMARY_400") === arg0) {
-    return tmp(13888).HighlightColors.ACCENT;
+    return tmp(13955).HighlightColors.ACCENT;
   } else {
     let tmpResult = tmp(711);
     if (tmpResult.unsafe_getRawColor("GREEN_360") === arg0) {
-      return tmp(13888).HighlightColors.GREEN;
+      return tmp(13955).HighlightColors.GREEN;
     } else {
       tmpResult = tmp(711);
       if (tmpResult.unsafe_getRawColor("YELLOW_360") === arg0) {
-        return tmp(13888).HighlightColors.YELLOW;
+        return tmp(13955).HighlightColors.YELLOW;
       } else {
         if (tmpResult1.unsafe_getRawColor("ORANGE_345") === arg0) {
-          return tmp(13888).HighlightColors.ORANGE;
+          return tmp(13955).HighlightColors.ORANGE;
         } else {
           if (tmpResult2.unsafe_getRawColor("RED_400") === arg0) {
-            return tmp(13888).HighlightColors.RED;
+            return tmp(13955).HighlightColors.RED;
           } else {
-            return tmp(13888).HighlightColors.NONE;
+            return tmp(13955).HighlightColors.NONE;
           }
           tmpResult2 = tmp(711);
         }

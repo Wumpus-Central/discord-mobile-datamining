@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "87c2408460473066b05c992e498cb968", name: "header_arrow_right", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 238, height: 96, scales: [2, 3], hash: "b1d330bd5ccfa2833454c026755830a6", name: "img_stream_failed_darker", type: "png" });

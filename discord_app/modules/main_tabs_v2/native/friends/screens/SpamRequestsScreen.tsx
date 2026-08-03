@@ -1,6 +1,6 @@
-// === Module 15633: SpamRequestsScreen ===
+// === Module 15699: SpamRequestsScreen ===
 
-// Module 15633 (SpamRequestsScreen)
+// Module 15699 (SpamRequestsScreen)
 import noop from "noop";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

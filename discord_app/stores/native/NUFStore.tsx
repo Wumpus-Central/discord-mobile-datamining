@@ -1,6 +1,6 @@
-// === Module 5933: handleCacheOrSocketLoaded ===
+// === Module 7012: handleCacheOrSocketLoaded ===
 
-// Module 5933 (handleCacheOrSocketLoaded)
+// Module 7012 (handleCacheOrSocketLoaded)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import upsertRelationship from "upsertRelationship";
 import { PersistedStore } from "initialize";

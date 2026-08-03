@@ -1,6 +1,6 @@
-// === Module 12995: IS_OVERLAY_DEV_ENV ===
+// === Module 13058: IS_OVERLAY_DEV_ENV ===
 
-// Module 12995 (IS_OVERLAY_DEV_ENV)
+// Module 13058 (IS_OVERLAY_DEV_ENV)
 import { isPlatformEmbedded as flag } from "set";
 
 if (flag) {

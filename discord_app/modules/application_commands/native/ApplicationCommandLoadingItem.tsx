@@ -1,6 +1,6 @@
-// === Module 11510: ApplicationCommandLoadingItem ===
+// === Module 11620: ApplicationCommandLoadingItem ===
 
-// Module 11510 (ApplicationCommandLoadingItem)
+// Module 11620 (ApplicationCommandLoadingItem)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT";
@@ -27,7 +27,7 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
 const result = require("AUTOCOMPLETE_ROW_HEIGHT").fileFinishedImporting("modules/application_commands/native/ApplicationCommandLoadingItem.tsx");
 
 export default function ApplicationCommandLoadingItem() {
-  let obj = require(4610) /* getFontScale */;
+  let obj = require(4672) /* getFontScale */;
   const tmp = callback3(obj.useFontScale());
   obj = { style: tmp.applicationCommandLoadingItem, children: null };
   obj = { style: tmp.applicationCommandLoadingLeftWrapper, children: null };

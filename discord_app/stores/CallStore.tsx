@@ -1,6 +1,6 @@
-// === Module 4870: callConnect ===
+// === Module 4932: callConnect ===
 
-// Module 4870 (callConnect)
+// Module 4932 (callConnect)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_5 from "handleConnectionOpen";

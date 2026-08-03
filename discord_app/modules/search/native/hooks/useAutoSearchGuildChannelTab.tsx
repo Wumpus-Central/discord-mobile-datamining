@@ -1,6 +1,6 @@
-// === Module 15577: useAutoSearchGuildChannelTab ===
+// === Module 15644: useAutoSearchGuildChannelTab ===
 
-// Module 15577 (useAutoSearchGuildChannelTab)
+// Module 15644 (useAutoSearchGuildChannelTab)
 import noop from "noop";
 import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_4 } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME";
 

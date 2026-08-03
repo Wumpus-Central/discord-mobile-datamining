@@ -1,6 +1,6 @@
-// === Module 13187: NitroWheel ===
+// === Module 13250: NitroWheel ===
 
-// Module 13187 (NitroWheel)
+// Module 13250 (NitroWheel)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -8,7 +8,7 @@ const result = require("preload").fileFinishedImporting("design/void/NitroWheel/
 
 export default function NitroWheel(style) {
   const obj = { source: null, style: null, resizeMode: "contain" };
-  obj[0] = importDefault(9388);
+  obj[0] = importDefault(8190);
   obj[1] = style.style;
-  return jsx(importDefault(5145), { source: null, style: null, resizeMode: "contain" });
+  return jsx(importDefault(5207), { source: null, style: null, resizeMode: "contain" });
 };

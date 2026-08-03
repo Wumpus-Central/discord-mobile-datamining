@@ -1,6 +1,6 @@
-// === Module 6613: enforcing ===
+// === Module 7598: enforcing ===
 
-// Module 6613 (enforcing)
+// Module 7598 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAppIconModule");

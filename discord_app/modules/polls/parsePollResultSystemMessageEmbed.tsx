@@ -1,6 +1,6 @@
-// === Module 7829: parsePollResultSystemMessageEmbed ===
+// === Module 7947: parsePollResultSystemMessageEmbed ===
 
-// Module 7829 (parsePollResultSystemMessageEmbed)
+// Module 7947 (parsePollResultSystemMessageEmbed)
 const result = require("set").fileFinishedImporting("modules/polls/parsePollResultSystemMessageEmbed.tsx");
 
 export default function parsePollResultSystemMessageEmbed(fields) {

@@ -1,6 +1,6 @@
-// === Module 5926: findOrCreateMessageRecord ===
+// === Module 7006: findOrCreateMessageRecord ===
 
-// Module 5926 (findOrCreateMessageRecord)
+// Module 7006 (findOrCreateMessageRecord)
 import hasFlag from "hasFlag";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -25,8 +25,8 @@ function findOrCreateMessageRecord(channel_id) {
   } else {
     let message = store2.getMessage(channel_id.channel_id, channel_id.id);
     if (null == message) {
-      message = require(4413) /* createMinimalMessageRecord */.createMessageRecord(channel_id);
-      const obj = require(4413) /* createMinimalMessageRecord */;
+      message = require(4475) /* createMinimalMessageRecord */.createMessageRecord(channel_id);
+      const obj = require(4475) /* createMinimalMessageRecord */;
     }
     return message;
   }
@@ -57,7 +57,7 @@ function hasMentionNotificationEnabled(channel_id) {
               obj[1] = currentUser.id;
               obj[2] = result1;
               obj[3] = result2;
-              tmp10 = importDefault(4427)(obj);
+              tmp10 = importDefault(4489)(obj);
             }
             return tmp10;
           } else {
@@ -65,7 +65,7 @@ function hasMentionNotificationEnabled(channel_id) {
             return false;
           }
         }
-        obj2 = require(4407) /* shouldShowAgeGateForVoiceChannel */;
+        obj2 = require(4469) /* shouldShowAgeGateForVoiceChannel */;
       }
     }
   }
@@ -76,7 +76,7 @@ function parseMessage(message, channelId) {
   if (channelId === undefined) {
     channel_id = null;
   }
-  if (importDefault(5927)(message)) {
+  if (importDefault(5770)(message)) {
     const SELF_MENTIONABLE_SYSTEM = constants2.SELF_MENTIONABLE_SYSTEM;
     if (!SELF_MENTIONABLE_SYSTEM.has(message.type)) {
       return null;
@@ -96,13 +96,13 @@ function parseMessage(message, channelId) {
       }
       id = id.getId();
       if (!blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message)) {
-        if (!tmp2(5928)(message, id)) {
+        if (!tmp2(7007)(message, id)) {
           let tmp12 = message;
           if (!(message instanceof hasFlag)) {
             message = store2.getMessage(message.channel_id, message.id);
             if (null == message) {
-              message = require(4413) /* createMinimalMessageRecord */.createMessageRecord(message);
-              const obj2 = require(4413) /* createMinimalMessageRecord */;
+              message = require(4475) /* createMinimalMessageRecord */.createMessageRecord(message);
+              const obj2 = require(4475) /* createMinimalMessageRecord */;
             }
             tmp12 = message;
           }
@@ -112,7 +112,7 @@ function parseMessage(message, channelId) {
           obj[2] = !closure_23.everyoneFilter;
           obj[3] = !closure_23.roleFilter;
           let tmp20 = null;
-          if (tmp2(4427)(obj)) {
+          if (tmp2(4489)(obj)) {
             let tmp2ResultResult = c26;
             if (c26) {
               tmp2ResultResult = generateOldThreadCutoff.ackMessageId(channel.id) !== tmp12.id;
@@ -123,8 +123,8 @@ function parseMessage(message, channelId) {
               obj[1] = id;
               obj[2] = updateUserGuildSettingsInternal.isSuppressEveryoneEnabled(channel.getGuildId());
               obj[3] = updateUserGuildSettingsInternal.isSuppressRolesEnabled(channel.getGuildId());
-              tmp2ResultResult = tmp2(4427)(obj);
-              const tmp2Result = tmp2(4427);
+              tmp2ResultResult = tmp2(4489)(obj);
+              const tmp2Result = tmp2(4489);
             }
             tmp20 = tmp12;
             if (tmp2ResultResult) {
@@ -469,7 +469,7 @@ obj = {
     });
     let c21 = false;
     const tmpResult = importDefault(12);
-    let closure_25 = require(4269) /* sleep */.now();
+    let closure_25 = require(4331) /* sleep */.now();
     let c24 = true;
   },
   LOAD_RECENT_MENTIONS_FAILURE: function handleLoadMentionsFailure() {
@@ -583,7 +583,7 @@ obj = {
     message = message.message;
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = require(4427) /* isMentioned */;
+      let obj = require(4489) /* isMentioned */;
       obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
       obj[0] = message;
       obj[1] = currentUser.id;
@@ -629,8 +629,8 @@ obj = {
         const findIndexResult = importDefault(12).findIndex(substr, (id) => id.id === id);
         substr = substr.slice();
         if (null != substr[findIndexResult]) {
-          substr[findIndexResult] = id(4413).updateMessageRecord(tmp7, message.message);
-          const obj2 = id(4413);
+          substr[findIndexResult] = id(4475).updateMessageRecord(tmp7, message.message);
+          const obj2 = id(4475);
         }
       }
     }

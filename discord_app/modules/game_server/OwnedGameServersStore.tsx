@@ -1,6 +1,6 @@
-// === Module 11588: handleGameServerUpsert ===
+// === Module 11695: handleGameServerUpsert ===
 
-// Module 11588 (handleGameServerUpsert)
+// Module 11695 (handleGameServerUpsert)
 import { GAME_SERVER_SHOP_MAX_INSTANCES } from "str11";
 import { Store } from "initialize";
 

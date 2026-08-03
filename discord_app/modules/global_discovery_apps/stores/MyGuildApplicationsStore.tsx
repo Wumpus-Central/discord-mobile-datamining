@@ -1,6 +1,6 @@
-// === Module 11263: addToApplicationIdToGuildIds ===
+// === Module 11374: addToApplicationIdToGuildIds ===
 
-// Module 11263 (addToApplicationIdToGuildIds)
+// Module 11374 (addToApplicationIdToGuildIds)
 import { PersistedStore } from "initialize";
 
 function addToApplicationIdToGuildIds(applicationId) {

@@ -1,6 +1,6 @@
-// === Module 15283: useICYMITabBadge ===
+// === Module 15350: useICYMITabBadge ===
 
-// Module 15283 (useICYMITabBadge)
+// Module 15350 (useICYMITabBadge)
 import filterStaffGuild from "filterStaffGuild";
 
 const require = arg1;

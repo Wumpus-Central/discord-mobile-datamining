@@ -1,6 +1,6 @@
-// === Module 5230: TableRowIcon ===
+// === Module 5292: TableRowIcon ===
 
-// Module 5230 (TableRowIcon)
+// Module 5292 (TableRowIcon)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -53,12 +53,12 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     if ("default" === variant) {
       let tmp7 = require;
       let tmp8 = dependencyMap;
-      let REFRESH_SMALL_16 = require(4606) /* IconSizes */.IconSizes.MEDIUM;
+      let REFRESH_SMALL_16 = require(4668) /* IconSizes */.IconSizes.MEDIUM;
       let tmp6 = dependencyMap;
     } else {
       let tmp5 = require;
       tmp6 = dependencyMap;
-      REFRESH_SMALL_16 = require(4606) /* IconSizes */.IconSizes.REFRESH_SMALL_16;
+      REFRESH_SMALL_16 = require(4668) /* IconSizes */.IconSizes.REFRESH_SMALL_16;
     }
     let str2 = "md";
     let str3 = "md";
@@ -100,7 +100,7 @@ export const TableRowIcon = function TableRowIcon(arg0) {
       obj[0] = color;
       obj[1] = source;
       obj[2] = REFRESH_SMALL_16;
-      tmp11Result = tmp11(importDefault(4606), obj);
+      tmp11Result = tmp11(importDefault(4668), obj);
     }
     obj[1] = tmp11Result;
     tmp11Result = tmp11(tmp12, obj);

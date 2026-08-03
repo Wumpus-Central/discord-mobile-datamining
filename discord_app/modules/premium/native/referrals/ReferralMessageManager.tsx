@@ -1,6 +1,6 @@
-// === Module 16693: handleReferralMessages ===
+// === Module 16759: handleReferralMessages ===
 
-// Module 16693 (handleReferralMessages)
+// Module 16759 (handleReferralMessages)
 import reset from "reset";
 import emitChanges from "emitChanges";
 import "initialize";
@@ -13,8 +13,8 @@ function handleReferralMessages(type) {
         premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
         const tmp9Result = tmp9(11);
         if (tmp6) {
-          const userOffer = require(6507) /* _fetchUserOffer */.fetchUserOffer("ReferralMessageManager");
-          const tmpResult = require(6507) /* _fetchUserOffer */;
+          const userOffer = require(7501) /* _fetchUserOffer */.fetchUserOffer("ReferralMessageManager");
+          const tmpResult = require(7501) /* _fetchUserOffer */;
         }
         tmp6 = null == premiumTypeSubscription && emitChanges.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }

@@ -1,6 +1,6 @@
-// === Module 9685: UploadPreviewActionSheet ===
+// === Module 9830: UploadPreviewActionSheet ===
 
-// Module 9685 (UploadPreviewActionSheet)
+// Module 9830 (UploadPreviewActionSheet)
 import getSystemLocale from "getSystemLocale";
 import useCanSetThumbnail from "useCanSetThumbnail";
 import get_ActivityIndicator from "CircleErrorIcon";
@@ -130,9 +130,9 @@ export default function UploadPreviewActionSheet(onAdd) {
       }
     }).catch((code) => {
       if ("E_PICKER_CANCELLED" !== code.code) {
-        let obj = callback2(3894);
+        let obj = callback2(3956);
         obj = { key: "CROP_ERROR", IconComponent: null, content: null };
-        obj[1] = callback(6733).CircleErrorIcon;
+        obj[1] = callback(7704).CircleErrorIcon;
         obj[2] = code.message;
         obj.open(obj);
       }

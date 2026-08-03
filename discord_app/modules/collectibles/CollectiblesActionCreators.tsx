@@ -1,6 +1,6 @@
-// === Module 5802: openCollectiblesShop ===
+// === Module 6897: openCollectiblesShop ===
 
-// Module 5802 (openCollectiblesShop)
+// Module 6897 (openCollectiblesShop)
 import map from "map";
 import getUserAgnosticState from "getUserAgnosticState";
 import _getSystemLocale from "_getSystemLocale";
@@ -30,7 +30,7 @@ function openCollectiblesShopMobile(screen) {
   obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(screen);
   obj.dispatch(obj);
-  let obj2 = require(4045) /* getRootNavigationRef */;
+  let obj2 = require(4107) /* getRootNavigationRef */;
   const rootNavigationRef = obj2.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -67,7 +67,7 @@ function openCollectiblesShopMobile(screen) {
 function closeCollectiblesShop() {
   importDefault(709).dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
   const obj = importDefault(709);
-  require(5848) /* pushLayer */.popLayer();
+  require(6943) /* pushLayer */.popLayer();
 }
 function _fetchCollectiblesCategories() {
   const self = this;
@@ -790,8 +790,8 @@ function _validateCollectiblesRecipient() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = getUserAgnosticState;
-            obj2 = callback(5855);
-            const aPIError = new callback(4092).APIError(callback);
+            obj2 = callback(5853);
+            const aPIError = new callback(4154).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             return { value: false, done: true };
@@ -886,8 +886,8 @@ function _validateCollectiblesRecipientsBatch() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = getUserAgnosticState;
-            obj2 = callback(5855);
-            const aPIError = new callback(4092).APIError(callback);
+            obj2 = callback(5853);
+            const aPIError = new callback(4154).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
             c7 = 3;
             const obj4 = { value: null, done: true };
@@ -1486,7 +1486,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4045).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4107).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {
@@ -1685,7 +1685,7 @@ export const maybeFetchCollectiblesProduct = function maybeFetchCollectiblesProd
 };
 export const seedCollectiblesProductFromStandaloneLoad = function seedCollectiblesProductFromStandaloneLoad(memo) {
   const timestamp = Date.now();
-  let obj = require(5815) /* getItemRecordsFromPurchases */;
+  let obj = require(6910) /* getItemRecordsFromPurchases */;
   const items = [memo];
   const result = obj.extendVariantsProducts(items);
   const iter = result[Symbol.iterator]();

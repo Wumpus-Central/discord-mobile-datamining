@@ -1,6 +1,6 @@
-// === Module 12393: updateParty ===
+// === Module 12491: updateParty ===
 
-// Module 12393 (updateParty)
+// Module 12491 (updateParty)
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import filterPlayingActivities from "filterPlayingActivities";

@@ -1,6 +1,6 @@
-// === Module 3827: GuildMemberFlags ===
+// === Module 3889: GuildMemberFlags ===
 
-// Module 3827 (GuildMemberFlags)
+// Module 3889 (GuildMemberFlags)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { GuildMemberFlags } from "GuildMemberFlags";
 

@@ -1,6 +1,6 @@
-// === Module 11597: getState ===
+// === Module 11704: getState ===
 
-// Module 11597 (getState)
+// Module 11704 (getState)
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
@@ -52,7 +52,7 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(requir
     }
     const stateForGuild = stateForGuild2.getStateForGuild(guildId);
     const stateForGuild1 = stateForGuild.getStateForGuild(guildId);
-    let obj = require(11598) /* getExpiringGuildEntitlements */;
+    let obj = require(11705) /* getExpiringGuildEntitlements */;
     let unlockedPowerups;
     if (stateForGuild != null) {
       unlockedPowerups = stateForGuild.unlockedPowerups;

@@ -1,6 +1,6 @@
-// === Module 14930: RedesignNotificationModal ===
+// === Module 14997: RedesignNotificationModal ===
 
-// Module 14930 (RedesignNotificationModal)
+// Module 14997 (RedesignNotificationModal)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PermissionStateType } from "set";

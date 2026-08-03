@@ -1,6 +1,6 @@
-// === Module 10893: openChannelCallModalForChannelId ===
+// === Module 10993: openChannelCallModalForChannelId ===
 
-// Module 10893 (openChannelCallModalForChannelId)
+// Module 10993 (openChannelCallModalForChannelId)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;
@@ -14,12 +14,12 @@ export default function openChannelCallModalForChannelId(arg0, arg1) {
       isGuildStageVoiceResult = channel.isGuildStageVoice();
     }
     if (isGuildStageVoiceResult) {
-      isGuildStageVoiceResult = false === require(6713) /* connectToStage */.connectToStage(channel);
-      const obj2 = require(6713) /* connectToStage */;
+      isGuildStageVoiceResult = false === require(7684) /* connectToStage */.connectToStage(channel);
+      const obj2 = require(7684) /* connectToStage */;
     }
     if (!isGuildStageVoiceResult) {
-      require(4403) /* openChannelCallModal */.openChannelCallModal(channel);
-      const obj3 = require(4403) /* openChannelCallModal */;
+      require(4465) /* openChannelCallModal */.openChannelCallModal(channel);
+      const obj3 = require(4465) /* openChannelCallModal */;
     }
   }
 };

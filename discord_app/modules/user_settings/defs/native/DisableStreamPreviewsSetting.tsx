@@ -1,6 +1,6 @@
-// === Module 14672: toggle ===
+// === Module 14739: toggle ===
 
-// Module 14672 (toggle)
+// Module 14739 (toggle)
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({
@@ -14,7 +14,7 @@ const toggle = createToggle.createToggle({
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue() {
-    const DisableStreamPreviews = require(3866) /* explicitContentFromProto */.DisableStreamPreviews;
+    const DisableStreamPreviews = require(3928) /* explicitContentFromProto */.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
     if (flag == null) {
       flag = false;
@@ -34,7 +34,7 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue() {
-    const DisableStreamPreviews = require(3866) /* explicitContentFromProto */.DisableStreamPreviews;
+    const DisableStreamPreviews = require(3928) /* explicitContentFromProto */.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
     if (flag == null) {
       flag = false;

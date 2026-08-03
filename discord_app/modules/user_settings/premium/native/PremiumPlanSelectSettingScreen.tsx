@@ -1,6 +1,6 @@
-// === Module 14040: PremiumPlanSelectSettingScreen ===
+// === Module 14107: PremiumPlanSelectSettingScreen ===
 
-// Module 14040 (PremiumPlanSelectSettingScreen)
+// Module 14107 (PremiumPlanSelectSettingScreen)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -8,9 +8,9 @@ const require = arg1;
 const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
 
 export default function PremiumPlanSelectSettingScreen() {
-  let obj = require(6333) /* useSettingNavigationRoute */;
+  let obj = require(6775) /* useSettingNavigationRoute */;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = {};
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(importDefault(12592), {});
+  return jsx(importDefault(12685), {});
 };

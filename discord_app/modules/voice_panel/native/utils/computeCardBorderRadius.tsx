@@ -1,6 +1,6 @@
-// === Module 15982: VoicePanelModes ===
+// === Module 16046: VoicePanelModes ===
 
-// Module 15982 (VoicePanelModes)
+// Module 16046 (VoicePanelModes)
 import VoicePanelModes from "VoicePanelModes";
 
 VoicePanelModes = VoicePanelModes.VoicePanelModes;

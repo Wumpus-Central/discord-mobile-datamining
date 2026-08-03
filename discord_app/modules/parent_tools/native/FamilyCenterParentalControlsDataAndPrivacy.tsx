@@ -1,6 +1,6 @@
-// === Module 13981: FamilyCenterParentalControlsDataAndPrivacy ===
+// === Module 14048: FamilyCenterParentalControlsDataAndPrivacy ===
 
-// Module 13981 (FamilyCenterParentalControlsDataAndPrivacy)
+// Module 14048 (FamilyCenterParentalControlsDataAndPrivacy)
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
 import { MobileSetting } from "MobileSetting";
@@ -17,7 +17,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj = { helpdeskArticle: null };
     let obj2 = callback(1945);
     obj[0] = obj2.getArticleURL(constants.DATA_PRIVACY_CONTROLS);
-    obj[1] = intl.format(callback(2225).Z5yJZy, obj);
+    obj[1] = intl.format(callback(2255).Z5yJZy, obj);
     const items1 = [obj, , , ];
     obj = { settings: items2, subLabel: null };
     items2 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION];
@@ -25,14 +25,14 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     const obj1 = { helpdeskArticle: null };
     let obj5 = callback(1945);
     obj1[0] = obj5.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
-    obj[1] = intl2.format(callback(2225).Imp6Ns, obj1);
+    obj[1] = intl2.format(callback(2255).Imp6Ns, obj1);
     items1[1] = obj;
     obj2 = { settings: items3, subLabel: null };
     items3 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_QUESTS];
     const intl3 = memo(1236).intl;
     const obj3 = { helpdeskArticle: null };
     obj3[0] = callback(1945).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-    obj2[1] = intl3.format(callback(2225).cnCK6b, obj3);
+    obj2[1] = intl3.format(callback(2255).cnCK6b, obj3);
     items1[2] = obj2;
     const obj4 = { settings: items4, subLabel: null };
     items4 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P];
@@ -40,7 +40,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj5 = { helpdeskArticle: null };
     const obj9 = callback(1945);
     obj5[0] = callback(1945).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-    obj4[1] = intl4.format(callback(2225)["6mK5Pz"], obj5);
+    obj4[1] = intl4.format(callback(2255)["6mK5Pz"], obj5);
     items1[3] = obj4;
     return items1;
   }, []);
@@ -50,5 +50,5 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj = { sections: memo };
     return obj.createList(obj);
   }, items);
-  return jsx(importDefault(13697), { node });
+  return jsx(importDefault(13760), { node });
 };

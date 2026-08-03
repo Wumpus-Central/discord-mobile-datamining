@@ -1,6 +1,6 @@
-// === Module 9419: openEmojiActionSheet ===
+// === Module 9566: openEmojiActionSheet ===
 
-// Module 9419 (openEmojiActionSheet)
+// Module 9566 (openEmojiActionSheet)
 import { EMOJI_URL_BASE_SIZE } from "set";
 
 let result = require("dismissGlobalKeyboard").fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");
@@ -18,10 +18,10 @@ export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
         obj[1] = ":" + name + ":";
       }
       const result = require(1844) /* dismissGlobalKeyboard */.dismissGlobalKeyboard();
-      const obj6 = importDefault(4161);
+      const obj6 = importDefault(4223);
       obj = { emojiNode: null };
       obj[0] = obj;
-      obj6.openLazy(require(1959) /* asyncRequireImpl */(9420, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
+      obj6.openLazy(require(1959) /* asyncRequireImpl */(9567, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
     }
     obj = { id: null, alt: null, src: null };
     obj[0] = uniqueName.id;

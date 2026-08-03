@@ -80,7 +80,7 @@ export const trpcMiddleware = function trpcMiddleware() {
                   const obj5 = lib(outer2_1[4]);
                 }
                 if (undefined !== getRawInput) {
-                  if (typeof getRawInput === "fileFinishedImporting") {
+                  if (typeof getRawInput === "error") {
                     let c4 = 1;
                     c5 = 2;
                     c6 = 1;
@@ -120,7 +120,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               let c5 = 0;
               let c6 = 0;
               let c4 = 0;
-              return (/* F119299 */ function*() { ... })();
+              return (/* F119489 */ function*() { ... })();
             });
             return obj.startSpanManual(obj, function(arg0) {
               const self = this;

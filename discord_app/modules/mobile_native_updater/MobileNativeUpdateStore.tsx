@@ -1,6 +1,6 @@
-// === Module 13478: checkForNewerBuild ===
+// === Module 13541: checkForNewerBuild ===
 
-// Module 13478 (checkForNewerBuild)
+// Module 13541 (checkForNewerBuild)
 import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL";
 import { Store } from "initialize";
 
@@ -22,15 +22,15 @@ prototype["checkForNewerBuild"] = function checkForNewerBuild() {
   if (true !== checking.checking) {
     importDefault(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
     let obj = importDefault(709);
-    const obj2 = require(13064) /* _checkForNewerBuild */;
-    require(13064) /* _checkForNewerBuild */.checkForNewerBuild().then((newBuild) => {
+    const obj2 = require(13127) /* _checkForNewerBuild */;
+    require(13127) /* _checkForNewerBuild */.checkForNewerBuild().then((newBuild) => {
       let obj = callback(709);
       obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
       obj.dispatch(obj);
     }, () => {
       callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
     });
-    const checkForNewerBuildResult = require(13064) /* _checkForNewerBuild */.checkForNewerBuild();
+    const checkForNewerBuildResult = require(13127) /* _checkForNewerBuild */.checkForNewerBuild();
   }
 };
 prototype["ensureInitialized"] = function ensureInitialized() {

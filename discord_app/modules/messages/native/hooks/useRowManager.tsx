@@ -1,6 +1,6 @@
-// === Module 11158: useRowManager ===
+// === Module 11270: useRowManager ===
 
-// Module 11158 (useRowManager)
+// Module 11270 (useRowManager)
 const result = require("GuildThemeSourcePreference").fileFinishedImporting("modules/messages/native/hooks/useRowManager.tsx");
 
 export default function useRowManager(arg0) {

@@ -1,6 +1,6 @@
-// === Module 11986: ClearAfterValues ===
+// === Module 12082: ClearAfterValues ===
 
-// Module 11986 (ClearAfterValues)
+// Module 12082 (ClearAfterValues)
 import { ClearAfterValues } from "StatusTypes";
 
 const items = [, , ];
@@ -8,7 +8,7 @@ const items = [, , ];
 const result = require("set").fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
 export default function computeInitialClearAfter() {
-  const CustomStatusSetting = _require(3866).CustomStatusSetting;
+  const CustomStatusSetting = _require(3928).CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   if (null != setting) {
     if ("" !== setting.expiresAtMs) {

@@ -1,6 +1,6 @@
-// === Module 12615: handleRevoke ===
+// === Module 12708: handleRevoke ===
 
-// Module 12615 (handleRevoke)
+// Module 12708 (handleRevoke)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { AnalyticsSections } from "ME";
 import jsxProd from "jsxProd";
@@ -56,7 +56,7 @@ class GiftCodeRow extends PureComponent {
 }
 const prototype = GiftCodeRow.prototype;
 prototype["handleRevoke"] = function handleRevoke(code) {
-  importDefault(8038).revokeGiftCode(code);
+  importDefault(8371).revokeGiftCode(code);
 };
 prototype["render"] = function render() {
   let self = this;

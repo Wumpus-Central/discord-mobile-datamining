@@ -1,6 +1,6 @@
-// === Module 10483: initialize ===
+// === Module 10621: initialize ===
 
-// Module 10483 (initialize)
+// Module 10621 (initialize)
 import { NotificationTypes } from "str2";
 import { PersistedStore } from "initialize";
 

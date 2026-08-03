@@ -1,6 +1,6 @@
-// === Module 13624: createLock ===
+// === Module 13687: createLock ===
 
-// Module 13624 (createLock)
+// Module 13687 (createLock)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/MutexUtils.tsx");
 
 export const createLock = function createLock(_getMessages) {

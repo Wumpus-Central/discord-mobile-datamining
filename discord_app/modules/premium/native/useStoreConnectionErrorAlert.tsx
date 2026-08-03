@@ -1,6 +1,6 @@
-// === Module 6332: useStoreConnectionErrorAlert ===
+// === Module 6774: useStoreConnectionErrorAlert ===
 
-// Module 6332 (useStoreConnectionErrorAlert)
+// Module 6774 (useStoreConnectionErrorAlert)
 import noop from "noop";
 import updateProduct from "updateProduct";
 

@@ -1,6 +1,6 @@
-// === Module 12999: trackAckMessages ===
+// === Module 13062: trackAckMessages ===
 
-// Module 12999 (trackAckMessages)
+// Module 13062 (trackAckMessages)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -25,5 +25,5 @@ export default function trackAckMessages(channel_id) {
     const hasUnreadResult = updateGuildUnreadSentinel.hasUnread(id.id);
     return "" + id.id + "," + hasUnreadResult + "," + mentionCount + "," + updateUserGuildSettingsInternal.isMuted(id.id) + "," + updateUserGuildSettingsInternal.resolveGuildUnreadSetting(id);
   });
-  require(4388) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
+  require(4450) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 11174: subscribeToWindowDimensions ===
+// === Module 11286: subscribeToWindowDimensions ===
 
-// Module 11174 (subscribeToWindowDimensions)
+// Module 11286 (subscribeToWindowDimensions)
 import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
 
 const result = require("set").fileFinishedImporting("modules/screen/subscribeToWindowDimensions.native.tsx");

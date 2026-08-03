@@ -1,6 +1,6 @@
-// === Module 3853: SubscriptionStatusTypes ===
+// === Module 3915: SubscriptionStatusTypes ===
 
-// Module 3853 (SubscriptionStatusTypes)
+// Module 3915 (SubscriptionStatusTypes)
 import ME from "ME";
 import importDefaultResult from "combined";
 
@@ -22,7 +22,7 @@ export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export const getPremiumGroupProductName = function getPremiumGroupProductName() {
   const intl = require(1236) /* getSystemLocale */.intl;
-  return intl.string(importDefault(2807).aFBQ3d);
+  return intl.string(importDefault(2837).aFBQ3d);
 };
 export const getPremiumGroupCountryName = function getPremiumGroupCountryName() {
   const intl = require(1236) /* getSystemLocale */.intl;

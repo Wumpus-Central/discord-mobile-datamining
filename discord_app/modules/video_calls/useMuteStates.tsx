@@ -1,6 +1,6 @@
-// === Module 10791: getMuteStates ===
+// === Module 5859: getMuteStates ===
 
-// Module 10791 (getMuteStates)
+// Module 5859 (getMuteStates)
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

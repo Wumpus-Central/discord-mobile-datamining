@@ -1,6 +1,6 @@
-// === Module 9458: cheapWorkletShallowEqual ===
+// === Module 9605: cheapWorkletShallowEqual ===
 
-// Module 9458 (cheapWorkletShallowEqual)
+// Module 9605 (cheapWorkletShallowEqual)
 function cheapWorkletShallowEqual(safeAreaState, current) {
   if (safeAreaState === current) {
     return true;

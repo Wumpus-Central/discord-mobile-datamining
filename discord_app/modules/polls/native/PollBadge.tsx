@@ -1,6 +1,6 @@
-// === Module 15531: PollBadge ===
+// === Module 15598: PollBadge ===
 
-// Module 15531 (PollBadge)
+// Module 15598 (PollBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -23,12 +23,12 @@ export default function PollBadge(style) {
   items = [tmp.container, style.style];
   obj = { size: null, source: null };
   obj[0] = require(1297) /* Button */.IconSizes.EXTRA_SMALL_10;
-  obj[1] = importDefault(15532);
+  obj[1] = importDefault(15599);
   const items1 = [callback(require(1297) /* Button */.Icon, obj), ];
   obj = { style: tmp.text, variant: "text-xs/semibold", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.RgIi2B);
-  items1[1] = callback(require(4189) /* Text */.Text, obj);
+  items1[1] = callback(require(4251) /* Text */.Text, obj);
   obj[1] = items1;
   return callback2(View, obj);
 };

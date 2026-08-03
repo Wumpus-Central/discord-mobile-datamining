@@ -1,12 +1,12 @@
-// === Module 15893: setOrientationLockState ===
+// === Module 15957: setOrientationLockState ===
 
-// Module 15893 (setOrientationLockState)
+// Module 15957 (setOrientationLockState)
 const result = require("set").fileFinishedImporting("modules/frames/native/getDefaultOrientationLockState.tsx");
 
 export const setOrientationLockState = function setOrientationLockState(id) {
   let defaultOrientationLockState = arg1;
   if (arg1 == null) {
-    let obj = require(10670) /* getIsTabletActivitySurface */;
+    let obj = require(10778) /* getIsTabletActivitySurface */;
     defaultOrientationLockState = obj.getDefaultOrientationLockState(id);
   }
   if (null != defaultOrientationLockState) {

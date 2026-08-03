@@ -1,6 +1,6 @@
-// === Module 15733: useMessageRequestsCount ===
+// === Module 15798: useMessageRequestsCount ===
 
-// Module 15733 (useMessageRequestsCount)
+// Module 15798 (useMessageRequestsCount)
 import processChannel from "processChannel";
 
 const require = arg1;

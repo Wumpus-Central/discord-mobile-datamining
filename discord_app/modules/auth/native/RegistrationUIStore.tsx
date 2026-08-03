@@ -1,9 +1,9 @@
-// === Module 14877: useRegistrationUIStore ===
+// === Module 14944: useRegistrationUIStore ===
 
-// Module 14877 (useRegistrationUIStore)
+// Module 14944 (useRegistrationUIStore)
 import keys from "keys";
 
-let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessibilityRole" }));
+let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "borderRadius" }));
 const result = require("set").fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export const useRegistrationUIStore = obj;

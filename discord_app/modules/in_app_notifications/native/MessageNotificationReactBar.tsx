@@ -1,6 +1,6 @@
-// === Module 10353: PX_12 ===
+// === Module 10492: PX_12 ===
 
-// Module 10353 (PX_12)
+// Module 10492 (PX_12)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import set from "set";
@@ -42,7 +42,7 @@ export const MessageNotificationReactBar = function MessageNotificationReactBar(
     const result = 2 * outer1_12;
     return Math.min(outer1_7 - result, width - result - 2 * outer1_6);
   }, items);
-  let obj = notification(9981);
+  let obj = notification(10124);
   const emojisForReactionRow = obj.useEmojisForReactionRow(notification.channel, memo, 48);
   const items1 = [onReactionPress, notification];
   const items2 = [notification, onReactionPress];
@@ -82,10 +82,10 @@ export const MessageNotificationReactBar = function MessageNotificationReactBar(
         styles: _undefined.roundButton
       }, notification(_undefined[16]).getEmojiKey(type, arg1));
     }),
-    callback(notification(9982).EmojiPickerRowButton, { emojiContainerSize: 40, onPress: callback, iconSize: "sm", styles: tmp.roundButton })
+    callback(notification(10125).EmojiPickerRowButton, { emojiContainerSize: 40, onPress: callback, iconSize: "sm", styles: tmp.roundButton })
   ];
   obj1[1] = items4;
   items3[1] = callback2(closure_5, obj1);
   obj[1] = items3;
-  return callback2(onReactionPress(4054).View, obj);
+  return callback2(onReactionPress(4116).View, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 10327: resetGuildUnreadFlags ===
+// === Module 10466: resetGuildUnreadFlags ===
 
-// Module 10327 (resetGuildUnreadFlags)
+// Module 10466 (resetGuildUnreadFlags)
 import MAX_FAVORITES from "MAX_FAVORITES";
 
 let c3;

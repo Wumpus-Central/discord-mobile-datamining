@@ -1,6 +1,6 @@
-// === Module 9064: useIsVideoMode ===
+// === Module 9237: useIsVideoMode ===
 
-// Module 9064 (useIsVideoMode)
+// Module 9237 (useIsVideoMode)
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

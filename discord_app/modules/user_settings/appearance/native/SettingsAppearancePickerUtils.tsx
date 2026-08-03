@@ -1,12 +1,12 @@
-// === Module 14335: getMaxColors ===
+// === Module 14402: getMaxColors ===
 
-// Module 14335 (getMaxColors)
+// Module 14402 (getMaxColors)
 import noop from "noop";
 import { ThemeTypes } from "sum";
 
 const require = arg1;
 function getMaxColors() {
-  const allMobileThemes = require(4126) /* getCustomThemesName */.getAllMobileThemes();
+  const allMobileThemes = require(4188) /* getCustomThemesName */.getAllMobileThemes();
   let num = 0;
   const iter = allMobileThemes[Symbol.iterator]();
   const nextResult = iter.next();
@@ -17,14 +17,14 @@ function getMaxColors() {
     let tmp5 = require;
     let tmp6 = dependencyMap;
     let tmp7 = dependencyMap;
-    if (require(4007) /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
+    if (require(4069) /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let _Math3 = Math;
       let tmp14 = num;
       num = Math.max(1, num);
     } else {
       let tmp15 = tmp4;
       let tmp16 = tmp6;
-      if (tmp5(4007).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
+      if (tmp5(4069).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
         let _Math2 = Math;
         let tmp12 = nextResult;
         let tmp13 = num;
@@ -32,7 +32,7 @@ function getMaxColors() {
       } else {
         let tmp8 = tmp4;
         let tmp9 = tmp6;
-        if (tmp5(4007).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
+        if (tmp5(4069).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
           let _Math = Math;
           let tmp10 = nextResult;
           let tmp11 = num;
@@ -231,19 +231,19 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
     let tmp6 = require;
     let tmp7 = dependencyMap;
     let tmp8 = dependencyMap;
-    if (require(4007) /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
+    if (require(4069) /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let tmp17 = convertStandardThemeToAnimatedTheme;
       let tmp18 = nextResult;
       let arr = items1.push(convertStandardThemeToAnimatedTheme(tmp5, items, BACKGROUND_SURFACE_HIGH));
     } else {
       let tmp9 = tmp7;
-      if (tmp6(4007).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
+      if (tmp6(4069).ClientThemeType.BACKGROUND_GRADIENT_PRESET === type) {
         let tmp14 = convertBackgroundGradientToAnimatedTheme;
         let tmp15 = nextResult;
         arr = items1.push(convertBackgroundGradientToAnimatedTheme(tmp5, num, num2));
       } else {
         let tmp10 = tmp7;
-        if (tmp6(4007).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
+        if (tmp6(4069).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT === type) {
           let tmp11 = convertCustomBackgroundGradientToAnimatedTheme;
           let tmp12 = nextResult;
           let arr1 = items1.push(convertCustomBackgroundGradientToAnimatedTheme(tmp5, num, num2));
@@ -257,7 +257,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
   let tmp = importDefault;
   const tmp4 = importDefault(1339)() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARKER;
-  token = token(3897).useToken(tmp(712).colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(3959).useToken(tmp(712).colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return React.useMemo(() => {
     let obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

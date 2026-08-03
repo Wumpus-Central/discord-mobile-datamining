@@ -1,6 +1,6 @@
-// === Module 10570: useVideoSpinnerTimer ===
+// === Module 10754: useVideoSpinnerTimer ===
 
-// Module 10570 (useVideoSpinnerTimer)
+// Module 10754 (useVideoSpinnerTimer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

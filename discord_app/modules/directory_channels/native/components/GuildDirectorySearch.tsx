@@ -1,15 +1,15 @@
-// === Module 10067: DefaultState ===
+// === Module 10209: DefaultState ===
 
-// Module 10067 (DefaultState)
+// Module 10209 (DefaultState)
 import _slicedToArray from "_slicedToArray";
 import HeaderBackImage from "HeaderBackImage";
-import get_ActivityIndicator from "module_10107";
+import get_ActivityIndicator from "module_10249";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getSearchState from "getSearchState";
 import ME from "ME";
 import jsxProd from "_addDirectoryGuildEntry";
 import createCacheKey from "createCacheKey";
-import ArrayResult from "module_10112";
+import ArrayResult from "module_5890";
 
 let Fonts;
 let closure_12;
@@ -23,7 +23,7 @@ function DefaultState() {
   const tmp = createCacheKey();
   const require = tmp;
   let obj = { style: tmp.emptyWrapper, children: null };
-  obj = { style: tmp.emptyStateImage, source: importDefault(10071) };
+  obj = { style: tmp.emptyStateImage, source: importDefault(10213) };
   const items = [callback(closure_7, obj), ];
   obj = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
@@ -32,7 +32,7 @@ function DefaultState() {
       return outer1_12(tmp(outer1_3[12]).LegacyText, { style: tmp.proTip, children }, "protip");
     }
   });
-  items[1] = callback(require(4189) /* Text */.Text, obj);
+  items[1] = callback(require(4251) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(closure_6, obj);
 }
@@ -43,7 +43,7 @@ function EmptyState(channel) {
   let obj = channel(589);
   const items = [createGuildRecordFromRust];
   importDefault = obj.useStateFromStores(items, () => outer1_9.getGuild(channel.getGuildId()));
-  let obj1 = channel(10072);
+  let obj1 = channel(10214);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1236).intl;
   if (canCreateOrAddGuildInDirectory) {
@@ -58,13 +58,13 @@ function EmptyState(channel) {
     formatResult = intl.string(tmp2(1236).t.vYyEnv);
   }
   obj = { style: tmp.emptyWrapper, children: null };
-  obj1 = { style: tmp.emptyStateImage, source: importDefault(10071) };
+  obj1 = { style: tmp.emptyStateImage, source: importDefault(10213) };
   const items1 = [callback(closure_7, obj1), , ];
   const obj2 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1236).intl;
   obj2[3] = intl2.string(channel(1236).t["6HXiuE"]);
-  items1[1] = callback(channel(4189).Text, obj2);
-  items1[2] = callback(channel(4189).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
+  items1[1] = callback(channel(4251).Text, obj2);
+  items1[2] = callback(channel(4251).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
   obj[1] = items1;
   return callback2(closure_6, obj);
 }
@@ -81,7 +81,7 @@ createCacheKey[6] = { marginBottom: 4, textAlign: "center" };
 createCacheKey[7] = { fontFamily: Fonts.PRIMARY_BOLD, color: require("Themes").unsafe_rawColors.GREEN_360, textTransform: "uppercase" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj1 = { fontFamily: Fonts.PRIMARY_BOLD, color: require("Themes").unsafe_rawColors.GREEN_360, textTransform: "uppercase" };
-let closure_17 = require("module_10112").fill(null);
+let closure_17 = require("module_5890").fill(null);
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearch.tsx");
 
 export default function GuildDirectorySearch(channel) {

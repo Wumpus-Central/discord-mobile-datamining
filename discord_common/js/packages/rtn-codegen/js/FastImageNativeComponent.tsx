@@ -1,6 +1,6 @@
-// === Module 5146: __INTERNAL_VIEW_CONFIG ===
+// === Module 5208: __INTERNAL_VIEW_CONFIG ===
 
-// Module 5146 (__INTERNAL_VIEW_CONFIG)
+// Module 5208 (__INTERNAL_VIEW_CONFIG)
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 

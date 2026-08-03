@@ -1,6 +1,6 @@
-// === Module 5940: getAsync ===
+// === Module 7019: getAsync ===
 
-// Module 5940 (getAsync)
+// Module 7019 (getAsync)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { updateJoinedAt } from "GuildNSFWContentLevel";
 import fetchFingerprint from "fetchFingerprint";

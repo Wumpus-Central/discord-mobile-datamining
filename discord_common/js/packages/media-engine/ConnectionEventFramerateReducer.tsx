@@ -1,6 +1,6 @@
-// === Module 4304: logger ===
+// === Module 4366: logger ===
 
-// Module 4304 (logger)
+// Module 4366 (logger)
 import DesktopSources from "DesktopSources";
 
 let c3;
@@ -63,7 +63,7 @@ prototype["userSpeakingChange"] = function userSpeakingChange(arg0) {
 };
 prototype["destroyFramerateScaleFactorTimers"] = function destroyFramerateScaleFactorTimers() {
   const self = this;
-  if (typeof this.framerateReductionTimeout !== "__REMOTEDEV__") {
+  if (typeof this.framerateReductionTimeout !== "SENTRY_RELEASE") {
     const _clearTimeout = clearTimeout;
     clearTimeout(self.framerateReductionTimeout);
     self.framerateReductionTimeout = undefined;

@@ -1,6 +1,6 @@
-// === Module 9376: ShinyButton ===
+// === Module 9535: ShinyButton ===
 
-// Module 9376 (ShinyButton)
+// Module 9535 (ShinyButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -33,7 +33,7 @@ export default function ShinyButton(style) {
   if (!loading) {
     obj = { size: null, source: null, style: null };
     obj[0] = tmp4(1297).Icon.Sizes.REFRESH_SMALL_16;
-    obj[1] = importDefault(9377);
+    obj[1] = importDefault(9536);
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
       disabled = tmp2.disabled;
@@ -44,5 +44,5 @@ export default function ShinyButton(style) {
   }
   obj[4] = tmp3Result;
   const merged1 = Object.assign(merged);
-  return jsx(require(4605) /* CollapsingText */.BaseTextButton, { onPress, pillStyle: items, loading, disabled, icon: null });
+  return jsx(require(4667) /* CollapsingText */.BaseTextButton, { onPress, pillStyle: items, loading, disabled, icon: null });
 };

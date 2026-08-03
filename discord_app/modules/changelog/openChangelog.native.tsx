@@ -1,9 +1,9 @@
-// === Module 16169: openChangelog ===
+// === Module 16233: openChangelog ===
 
-// Module 16169 (openChangelog)
+// Module 16233 (openChangelog)
 import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY";
 
-const result = require("module_4399").fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
+const result = require("module_4461").fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
 
 export const openChangelog = function openChangelog() {
   let flag = arg0;
@@ -12,11 +12,11 @@ export const openChangelog = function openChangelog() {
   }
   let isModalOpenResult = !flag;
   if (!flag) {
-    isModalOpenResult = require(4044) /* navigationToRootTabHelper */.isModalOpen();
-    const obj = require(4044) /* navigationToRootTabHelper */;
+    isModalOpenResult = require(4106) /* navigationToRootTabHelper */.isModalOpen();
+    const obj = require(4106) /* navigationToRootTabHelper */;
   }
   if (!isModalOpenResult) {
-    importDefault(4399).pushLazy(require(1959) /* asyncRequireImpl */(14522, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
-    const obj2 = importDefault(4399);
+    importDefault(4461).pushLazy(require(1959) /* asyncRequireImpl */(14589, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    const obj2 = importDefault(4461);
   }
 };

@@ -1,6 +1,6 @@
-// === Module 13576: transformStoreAssetFromServer ===
+// === Module 13639: transformStoreAssetFromServer ===
 
-// Module 13576 (transformStoreAssetFromServer)
+// Module 13639 (transformStoreAssetFromServer)
 const result = require("set").fileFinishedImporting("modules/game_store/GameStoreAsset.tsx");
 
 export const transformStoreAssetFromServer = function transformStoreAssetFromServer(box_art) {

@@ -1,6 +1,6 @@
-// === Module 9324: items ===
+// === Module 9496: items ===
 
-// Module 9324 (items)
+// Module 9496 (items)
 import PremiumFeaturesCards from "PremiumFeaturesCards";
 import get_ActivityIndicator from "getPremiumPlanItem";
 import mergeGuildAvatar from "mergeGuildAvatar";

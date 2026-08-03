@@ -1,6 +1,6 @@
-// === Module 9781: SocialLayerStorefrontGiftProductDetails ===
+// === Module 9926: SocialLayerStorefrontGiftProductDetails ===
 
-// Module 9781 (SocialLayerStorefrontGiftProductDetails)
+// Module 9926 (SocialLayerStorefrontGiftProductDetails)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PriceSetAssignmentPurchaseTypes as closure_6 } from "ME";
@@ -30,9 +30,9 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
   sku = sku.sku;
   let getOrFetchApplication;
   const tmp = createCacheKey();
-  let obj = getOrFetchApplication(5525);
+  let obj = getOrFetchApplication(5587);
   getOrFetchApplication = obj.useGetOrFetchApplication(sku.applicationId);
-  let obj1 = getOrFetchApplication(9772);
+  let obj1 = getOrFetchApplication(9917);
   obj = { sku, priceSetAssignmentPurchaseType: constants.GIFT };
   const userPrice = obj1.useFormattedSKUPrice(obj).userPrice;
   const items = [getOrFetchApplication];
@@ -47,7 +47,7 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
     return applicationIconURL;
   }, items);
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(importDefault(8056), { sku, size: 55 }), , ];
+  const items1 = [callback(importDefault(8387), { sku, size: 55 }), , ];
   obj1 = { style: tmp.text, children: null };
   let tmp6Result = null != getOrFetchApplication;
   if (tmp6Result) {
@@ -65,18 +65,18 @@ export default function SocialLayerStorefrontGiftProductDetails(sku) {
     const items2 = [tmp8Result, ];
     const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj5[2] = getOrFetchApplication.name;
-    items2[1] = tmp8(tmp2(4189).Text, obj5);
+    items2[1] = tmp8(tmp2(4251).Text, obj5);
     obj2[1] = items2;
     tmp6Result = tmp6(tmp7, obj2);
   }
-  const items3 = [tmp6Result, callback(getOrFetchApplication(4189).Text, { variant: "text-md/semibold", children: sku.name })];
+  const items3 = [tmp6Result, callback(getOrFetchApplication(4251).Text, { variant: "text-md/semibold", children: sku.name })];
   obj1[1] = items3;
   items1[1] = closure_8(closure_5, obj1);
   tmp8Result = null != userPrice;
   if (tmp8Result) {
     const obj7 = { variant: "text-md/semibold", children: null };
     obj7[1] = userPrice;
-    tmp8Result = tmp8(tmp2(4189).Text, obj7);
+    tmp8Result = tmp8(tmp2(4251).Text, obj7);
   }
   items1[2] = tmp8Result;
   obj[1] = items1;

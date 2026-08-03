@@ -1,6 +1,6 @@
-// === Module 13860: pressable ===
+// === Module 13927: pressable ===
 
-// Module 13860 (pressable)
+// Module 13927 (pressable)
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
@@ -11,7 +11,7 @@ const pressable = createToggle.createPressable({
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
-    importDefault(13861)(true);
+    importDefault(13928)(true);
   }
 });
 const obj = {
@@ -22,7 +22,7 @@ const obj = {
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
-    importDefault(13861)(true);
+    importDefault(13928)(true);
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/AccountDeleteSetting.tsx");

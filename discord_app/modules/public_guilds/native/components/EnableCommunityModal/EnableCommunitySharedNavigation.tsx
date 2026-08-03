@@ -1,6 +1,6 @@
-// === Module 16526: EnableCommunityModalSteps ===
+// === Module 16592: EnableCommunityModalSteps ===
 
-// Module 16526 (EnableCommunityModalSteps)
+// Module 16592 (EnableCommunityModalSteps)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleFormInit from "handleFormInit";

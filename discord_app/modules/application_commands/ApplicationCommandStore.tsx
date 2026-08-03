@@ -1,6 +1,6 @@
-// === Module 6095: handleInit ===
+// === Module 7147: handleInit ===
 
-// Module 6095 (handleInit)
+// Module 7147 (handleInit)
 import _slicedToArray from "_slicedToArray";
 import handlePermissionsChange from "handlePermissionsChange";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -89,8 +89,8 @@ function handleSetActiveCommand(arg0) {
       obj[5] = query;
       obj[6] = searchResultsPosition;
       obj[7] = source;
-      obj(5707).trackCommandSelected(obj);
-      const obj3 = obj(5707);
+      obj(6877).trackCommandSelected(obj);
+      const obj3 = obj(6877);
     }
     return true;
   }

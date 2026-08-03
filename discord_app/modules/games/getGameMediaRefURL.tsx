@@ -1,6 +1,6 @@
-// === Module 4223: getGameMediaRefURL ===
+// === Module 4285: getGameMediaRefURL ===
 
-// Module 4223 (getGameMediaRefURL)
+// Module 4285 (getGameMediaRefURL)
 const result = require("isImageProxyURL").fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
 export default function getGameMediaRefURL(arg0, type, size) {
@@ -24,7 +24,7 @@ export default function getGameMediaRefURL(arg0, type, size) {
       }
       return tmp7;
     } else if ("url" === type) {
-      obj = require(4224) /* isImageProxyURL */;
+      obj = require(4286) /* isImageProxyURL */;
       size = undefined;
       if (size != null) {
         size = size.size;

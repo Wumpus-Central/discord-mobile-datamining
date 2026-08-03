@@ -1,6 +1,6 @@
-// === Module 15644: useHasNewAdContent ===
+// === Module 15709: useHasNewAdContent ===
 
-// Module 15644 (useHasNewAdContent)
+// Module 15709 (useHasNewAdContent)
 import _slicedToArray from "_slicedToArray";
 import getOrCreateSet from "getOrCreateSet";
 import initializeState from "initializeState";

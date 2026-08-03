@@ -1,13 +1,13 @@
-// === Module 11291: getApplicationIdFromApplicationItem ===
+// === Module 11402: getApplicationIdFromApplicationItem ===
 
-// Module 11291 (getApplicationIdFromApplicationItem)
+// Module 11402 (getApplicationIdFromApplicationItem)
 import EmptyState from "EmptyState";
-import importAllResult from "useApplicationsInContext";
-import { View } from "useScaledRowHeight";
+import importAllResult from "isActivityInTextSupportedForChannel";
+import { View } from "useSafeAreaInsets";
 import { getSection } from "getIndexKey";
 import { FetchState } from "getSearchResults";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import jsxProd from "buildCommand";
+import jsxProd from "ApplicationCommandSectionType";
 import createCacheKey from "createCacheKey";
 
 let c10;
@@ -42,25 +42,50 @@ function CommandRow(arg0) {
   let onExecuteCommand;
   let onPress;
   ({ command, application } = arg0);
+  let hasOptions;
+  let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  let obj = require(11239) /* handleApplicationSelected */;
+  let obj = hasOptions(11350);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     obj = { iconSource: null };
     obj[0] = appLauncherIconSource;
-    tmp4 = callback2(importDefault(11244), obj);
+    tmp4 = callback2(onPressSend(11355), obj);
   }
-  obj = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, trailing: null };
-  obj[2] = require(8019) /* getShelfBadgeTypeIfActive */.getSectionName(application);
-  obj[4] = isFirstRow;
-  obj[5] = isLastRow;
-  obj[6] = onPress;
-  const obj1 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: null };
-  const tmpResult = require(8019) /* getShelfBadgeTypeIfActive */;
-  obj1[4] = require(8021) /* AppLauncherEntrypoint */.AppLauncherSectionName.SEARCH;
-  obj[7] = callback2(importDefault(11292), obj1);
-  return callback2(require(5224) /* TableRowInner */.TableRow, obj);
+  let tmpResult = tmp(11403);
+  obj = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: tmp(8358).AppLauncherSectionName.SEARCH };
+  const commandRowSend = tmpResult.useCommandRowSend(obj);
+  hasOptions = commandRowSend.hasOptions;
+  onPressSend = commandRowSend.onPressSend;
+  let items = [hasOptions];
+  const items1 = [onPressSend];
+  const memo = importAllResult.useMemo(() => {
+    let tmp;
+    if (!hasOptions) {
+      const obj = { name: "send", label: null };
+      const intl = hasOptions(outer1_2[13]).intl;
+      obj[1] = intl.string(hasOptions(outer1_2[13]).t.TXNS7S);
+      const items = [obj];
+      tmp = items;
+    }
+    return tmp;
+  }, items);
+  const callback = importAllResult.useCallback((nativeEvent) => {
+    if ("send" === nativeEvent.nativeEvent.actionName) {
+      onPressSend();
+    }
+  }, items1);
+  const obj1 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
+  tmpResult = tmp(8137);
+  obj1[2] = tmpResult.getSectionName(application);
+  obj1[4] = isFirstRow;
+  obj1[5] = isLastRow;
+  obj1[6] = onPress;
+  obj1[7] = memo;
+  obj1[8] = callback;
+  obj1[9] = callback2(onPressSend(11403), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return callback2(hasOptions(5286).TableRow, obj1);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -72,9 +97,9 @@ function PlaceholderCommandRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = callback3();
-  let obj = require(11242) /* usePlaceholderWidth */;
+  let obj = require(11353) /* usePlaceholderWidth */;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = require(11242) /* usePlaceholderWidth */;
+  let obj1 = require(11353) /* usePlaceholderWidth */;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
   obj = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   obj = { style: tmp.loadingCommandAppIcon };
@@ -94,7 +119,7 @@ function PlaceholderCommandRow(isFirstRow) {
   obj[6] = function onPress() {
 
   };
-  return callback2(require(5224) /* TableRowInner */.TableRow, obj);
+  return callback2(require(5286) /* TableRowInner */.TableRow, obj);
 }
 function keyExtractor(type) {
   if (type.type === obj.PLACERHOLDER) {
@@ -188,7 +213,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   let c16;
   let tmp = callback3();
   callback = tmp;
-  const tmp4 = onScroll(entrypoint[17])();
+  const tmp4 = onScroll(entrypoint[18])();
   importAllResult = tmp4;
   const tmp5 = commandResults();
   c5 = tmp5;
@@ -197,28 +222,28 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   first = tmp7[0];
   closure_7 = tmp7[1];
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({ setQuery: closure_7 }));
-  let obj1 = _require(entrypoint[18]);
+  let obj1 = _require(entrypoint[19]);
   let id;
   if ("channel" === context.type) {
     id = context.channel.id;
   }
   const isActivitiesInTextEnabled = obj1.useIsActivitiesInTextEnabled(id);
-  let tmp10Result = tmp10(tmp3[19]);
+  let tmp10Result = tmp10(tmp3[20]);
   obj = { context, query: first, commandLimit: 20, applicationLimit: 10, searchesActivities: null, searchesCommands: null, searchesBots: null };
-  obj[4] = entrypoint === _require(entrypoint[14]).AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled;
-  obj[5] = entrypoint === _require(entrypoint[14]).AppLauncherEntrypoint.TEXT;
-  obj[6] = entrypoint === _require(entrypoint[14]).AppLauncherEntrypoint.TEXT;
+  obj[4] = entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled;
+  obj[5] = entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.TEXT;
+  obj[6] = entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.TEXT;
   const localSearchResults = tmp10Result.useLocalSearchResults(obj);
   loading = localSearchResults.loading;
   commandResults = localSearchResults.commandResults;
   applicationResults = localSearchResults.applicationResults;
-  tmp10Result = tmp10(tmp3[19]);
+  tmp10Result = tmp10(tmp3[20]);
   const globalSearchResults = tmp10Result.useGlobalSearchResults({ query: first, context, fetches: true, entrypoint });
   fetchState = globalSearchResults.fetchState;
   applicationResults2 = globalSearchResults.applicationResults;
   fetchNextPage = globalSearchResults.fetchNextPage;
   _require = undefined;
-  const tmp13 = entrypoint === _require(entrypoint[14]).AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled;
+  const tmp13 = entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled;
   const tmp6 = callback;
   [tmp17, c0] = callback(obj.useState(false), 2);
   let items = [first];
@@ -233,18 +258,18 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   const callback1 = obj.useCallback((applicationId, searchResultsPosition) => {
     const descriptor = first(_undefined, applicationId.applicationId).descriptor;
     let obj = _undefined(entrypoint[9]);
-    obj = { location: _undefined(entrypoint[20]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, context: _undefined, command: applicationId, section: descriptor, sectionDescriptors: items, query: first, navigation: c5, sectionName: _undefined(entrypoint[14]).AppLauncherSectionName.SEARCH, searchResultsPosition, entrypoint };
+    obj = { location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, context: _undefined, command: applicationId, section: descriptor, sectionDescriptors: items, query: first, navigation: c5, sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH, searchResultsPosition, entrypoint };
     items = [descriptor];
     const result = obj.handleApplicationCommandSelected(obj);
   }, items1);
   const items3 = [tmp5, context, first, entrypoint];
   const callback2 = obj.useCallback((command) => {
     command = command.command;
-    let obj = _undefined(entrypoint[21]);
-    obj = { command, location: _undefined(entrypoint[20]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null };
-    obj[2] = _undefined(entrypoint[21]).getCommandTriggerSection(first(_undefined, command.applicationId).descriptor);
+    let obj = _undefined(entrypoint[22]);
+    obj = { command, location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null };
+    obj[2] = _undefined(entrypoint[22]).getCommandTriggerSection(first(_undefined, command.applicationId).descriptor);
     obj[3] = first.length;
-    obj[4] = _undefined(entrypoint[14]).AppLauncherSectionName.SEARCH;
+    obj[4] = _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH;
     obj[5] = first;
     obj[6] = command.searchResultsPosition;
     obj.trackCommandSelected(obj);
@@ -255,7 +280,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
     let section;
     ({ section, installOnDemand, searchResultsPosition } = arg0);
     let obj = _undefined(entrypoint[9]);
-    obj = { location: _undefined(entrypoint[20]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application: section, navigation: c5, context: _undefined, sectionName: _undefined(entrypoint[14]).AppLauncherSectionName.SEARCH, installOnDemand, query: first, searchResultsPosition, entrypoint };
+    obj = { location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application: section, navigation: c5, context: _undefined, sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH, installOnDemand, query: first, searchResultsPosition, entrypoint };
     const result = obj.handleApplicationSelected(obj);
   }, items3);
   const items4 = [loading, commandResults];
@@ -270,7 +295,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       items = [];
     }
     const found = items.filter((type) => {
-      let tmp = type.type !== set(outer1_2[23]).ApplicationDirectorySearchResultType.CONNECTION;
+      let tmp = type.type !== set(outer1_2[24]).ApplicationDirectorySearchResultType.CONNECTION;
       if (tmp) {
         tmp = !set.has(type.data.id);
       }
@@ -299,19 +324,19 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
         if (fetchState !== constants.FETCHING) {
           const sum = commandResults.length + memo1.length;
           if (sum > 0) {
-            const intl = _undefined(entrypoint[24]).intl;
+            const intl = _undefined(entrypoint[13]).intl;
             const obj = { count: null };
             obj[0] = sum;
             const AccessibilityAnnouncer = _undefined(entrypoint[25]).AccessibilityAnnouncer;
-            AccessibilityAnnouncer.announce(intl.formatToPlainString(_undefined(entrypoint[24]).t.ZGVL3g, obj), "polite");
-            const formatToPlainStringResult = intl.formatToPlainString(_undefined(entrypoint[24]).t.ZGVL3g, obj);
+            AccessibilityAnnouncer.announce(intl.formatToPlainString(_undefined(entrypoint[13]).t.ZGVL3g, obj), "polite");
+            const formatToPlainStringResult = intl.formatToPlainString(_undefined(entrypoint[13]).t.ZGVL3g, obj);
           }
         }
       }
     }
   }, items6);
   const items7 = [memo1.length, callback3, tmp4];
-  let sum = onScroll(entrypoint[16])().bottom + loading;
+  let sum = onScroll(entrypoint[17])().bottom + loading;
   c16 = sum;
   const callback4 = obj.useCallback((arg0) => {
     let index;
@@ -347,7 +372,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       return applicationResults(_undefined(entrypoint[27]).BaseAppRow, obj1);
     }
   }, items7);
-  const tmp10Result1 = _require(entrypoint[22]);
+  const tmp10Result1 = _require(entrypoint[23]);
   const tmp23 = 0 === memo.length && 0 === memo1.length;
   const appLauncherFlashListProps = _require(entrypoint[28]).useAppLauncherFlashListProps();
   const items8 = [fetchNextPage, onScroll, tmp4];
@@ -376,8 +401,8 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
     obj[0] = tmp.commandsHeaderContainer;
     obj1 = { accessibilityRole: "header", variant: "text-md/medium", color: "text-default", style: null, children: null };
     obj1[3] = tmp.sectionHeader;
-    const intl4 = tmp10(tmp3[24]).intl;
-    obj1[4] = intl4.string(tmp10(tmp3[24]).t["0hKkS+"]);
+    const intl4 = tmp10(tmp3[13]).intl;
+    obj1[4] = intl4.string(tmp10(tmp3[13]).t["0hKkS+"]);
     const items11 = [tmp31(tmp10(tmp3[29]).Text, obj1), ];
     if (memo.length <= tmp10(tmp3[30]).COLLAPSED_LIST_ITEM_MAX) {
       const obj2 = { children: null };
@@ -398,9 +423,9 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       const obj4 = { style: null, underlayColor: null, accessibilityLabel: null, onPress: null, children: null };
       obj4[0] = tmp.commandsCTA;
       obj4[1] = tmp.commandsCTAUnderlayColor.color;
-      let intl = tmp10(tmp3[24]).intl;
+      let intl = tmp10(tmp3[13]).intl;
       const string = intl.string;
-      const t = tmp10(tmp3[24]).t;
+      const t = tmp10(tmp3[13]).t;
       if (tmp17) {
         let stringResult = string(t.nPGLFQ);
       } else {
@@ -408,9 +433,9 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       }
       obj4[2] = stringResult;
       obj4[3] = callback;
-      const intl2 = tmp10(tmp3[24]).intl;
+      const intl2 = tmp10(tmp3[13]).intl;
       const string2 = intl2.string;
-      let t2 = tmp10(tmp3[24]).t;
+      let t2 = tmp10(tmp3[13]).t;
       if (tmp17) {
         let string2Result = string2(t2.nPGLFQ);
       } else {
@@ -439,8 +464,8 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   if (0 !== memo1.length) {
     const obj7 = { accessibilityRole: "header", variant: "text-md/medium", color: "text-default", style: null, children: null };
     obj7[3] = tmp.sectionHeader;
-    const intl3 = tmp10(tmp3[24]).intl;
-    obj7[4] = intl3.string(tmp10(tmp3[24]).t.PHjkRE);
+    const intl3 = tmp10(tmp3[13]).intl;
+    obj7[4] = intl3.string(tmp10(tmp3[13]).t.PHjkRE);
     tmp31Result1 = tmp31(tmp10(tmp3[29]).Text, obj7);
   }
   items13[2] = tmp31Result1;
@@ -449,7 +474,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
     const obj8 = { query: null, showsGenericMessage: null };
     obj8[0] = first;
     tmp2Result = tmp2(tmp3[32]);
-    obj8[1] = entrypoint === tmp10(tmp3[14]).AppLauncherEntrypoint.VOICE;
+    obj8[1] = entrypoint === tmp10(tmp3[12]).AppLauncherEntrypoint.VOICE;
     tmp31Result2 = tmp31(tmp2Result, obj8);
   }
   const tmp10Result2 = _require(entrypoint[28]);

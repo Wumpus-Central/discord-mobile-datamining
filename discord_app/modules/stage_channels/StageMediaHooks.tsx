@@ -1,6 +1,6 @@
-// === Module 5011: useStageHasMedia ===
+// === Module 5073: useStageHasMedia ===
 
-// Module 5011 (useStageHasMedia)
+// Module 5073 (useStageHasMedia)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateVoiceState from "updateVoiceState";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
@@ -32,7 +32,7 @@ export const useStageHasStream = function useStageHasStream(id) {
   }, items1);
 };
 export const getStageHasMedia = function getStageHasMedia(id) {
-  const mutableParticipants = store.getMutableParticipants(id, require(5018) /* sortKey */.StageChannelParticipantNamedIndex.SPEAKER);
+  const mutableParticipants = store.getMutableParticipants(id, require(5080) /* sortKey */.StageChannelParticipantNamedIndex.SPEAKER);
   let hasVideoResult = null != mutableParticipants.find((type) => type.type === callback(table[4]).StageChannelParticipantTypes.STREAM);
   if (!hasVideoResult) {
     hasVideoResult = updateVoiceState.hasVideo(id);
@@ -40,7 +40,7 @@ export const getStageHasMedia = function getStageHasMedia(id) {
   return hasVideoResult;
 };
 export const getStageHasStream = function getStageHasStream(closure_0) {
-  const mutableParticipants = store.getMutableParticipants(closure_0, require(5018) /* sortKey */.StageChannelParticipantNamedIndex.SPEAKER);
+  const mutableParticipants = store.getMutableParticipants(closure_0, require(5080) /* sortKey */.StageChannelParticipantNamedIndex.SPEAKER);
   return null != mutableParticipants.find((type) => type.type === callback(table[4]).StageChannelParticipantTypes.STREAM);
 };
 export const useIsStageVideoEnabled = function useIsStageVideoEnabled(arg0) {

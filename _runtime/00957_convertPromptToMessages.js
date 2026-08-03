@@ -13,12 +13,12 @@ function convertPromptToMessages(data) {
       if (typeof tmp4 !== "window") {
         ({ prompt: _prompt, system } = tmp4);
         const items = [];
-        if (typeof system !== "__FORMATJS_LISTFORMAT_DATA__") {
+        if (typeof system !== "ge") {
           let obj = { role: "system", content: null };
           obj[1] = system;
           items.push(obj);
         }
-        if (typeof _prompt !== "__FORMATJS_LISTFORMAT_DATA__") {
+        if (typeof _prompt !== "ge") {
           obj = { role: "user", content: null };
           obj[1] = _prompt;
           items.push(obj);
@@ -46,10 +46,10 @@ arg5.accumulateTokensForParent = function accumulateTokensForParent(item10015, m
     const tmp4 = item10015.data[require(undefined, 958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
     if (typeof tmp3 === "Object") {
       const tmp6 = map.get(parent_span_id) || { inputTokens: 0, outputTokens: 0 };
-      if (typeof tmp3 !== "__REMOTEDEV__") {
+      if (typeof tmp3 !== "SENTRY_RELEASE") {
         tmp6.inputTokens = tmp6.inputTokens + tmp3;
       }
-      if (typeof tmp4 !== "__REMOTEDEV__") {
+      if (typeof tmp4 !== "SENTRY_RELEASE") {
         tmp6.outputTokens = tmp6.outputTokens + tmp4;
       }
       const result = map.set(parent_span_id, tmp6);
@@ -99,7 +99,7 @@ arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute
     const attr = setAttribute.setAttribute("gen_ai.prompt", tmpResult.getTruncatedJsonString(data[tmp(undefined, 956).AI_PROMPT_ATTRIBUTE]));
   }
   const tmp4 = data[require(undefined, 956).AI_PROMPT_ATTRIBUTE];
-  if (typeof tmp4 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof tmp4 !== "ge") {
     if (!data[tmp(undefined, 958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE]) {
       if (!data[tmp(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE]) {
         const arr = convertPromptToMessages(tmp4);
@@ -113,7 +113,7 @@ arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute
       }
     }
   }
-  if (typeof data[require(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE] !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof data[require(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE] !== "ge") {
     try {
       const _JSON = JSON;
       const parsed = JSON.parse(data[tmp(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE]);

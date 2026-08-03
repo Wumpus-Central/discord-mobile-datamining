@@ -1,6 +1,6 @@
-// === Module 4237: getComboId ===
+// === Module 4299: getComboId ===
 
-// Module 4237 (getComboId)
+// Module 4299 (getComboId)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import addSku from "addSku";
@@ -21,9 +21,9 @@ export const convertComboId = function convertComboId(str) {
   return { applicationId: tmp[0], branchId: tmp[1] };
 };
 export const shouldShareApplicationActivity = function shouldShareApplicationActivity(application_id, closure_7) {
-  const ShowCurrentGame = require(3866) /* explicitContentFromProto */.ShowCurrentGame;
+  const ShowCurrentGame = require(3928) /* explicitContentFromProto */.ShowCurrentGame;
   if (ShowCurrentGame.getSetting()) {
-    const StatusSetting = require(3866) /* explicitContentFromProto */.StatusSetting;
+    const StatusSetting = require(3928) /* explicitContentFromProto */.StatusSetting;
     if (StatusSetting.getSetting() !== constants3.INVISIBLE) {
       const activeLibraryApplication = closure_7.getActiveLibraryApplication(application_id);
       let tmp7 = null == activeLibraryApplication;

@@ -1,6 +1,6 @@
-// === Module 14240: route ===
+// === Module 14307: route ===
 
-// Module 14240 (route)
+// Module 14307 (route)
 import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS";
 import createToggle from "createToggle";
 
@@ -12,14 +12,14 @@ obj = {
   parent: require("MobileSetting").MobileSetting.PREMIUM,
   IconComponent: require("TicketIcon").TicketIcon,
   usePredicate: function useHasGuildRoleSubscriptionsSetting() {
-    return importDefault(14242)() === constants.SUBSCRIBED;
+    return importDefault(14309)() === constants.SUBSCRIBED;
   },
   screen: obj
 };
 obj = {
   route: require("ME").UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
   getComponent() {
-    return require(14245) /* GuildRoleSubscriptionsSectionHeader */.default;
+    return require(14312) /* GuildRoleSubscriptionsSectionHeader */.default;
   }
 };
 const route = createToggle.createRoute(obj);

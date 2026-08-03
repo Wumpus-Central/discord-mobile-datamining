@@ -1,6 +1,6 @@
-// === Module 9256: createNativePlaceholderConfig ===
+// === Module 9428: createNativePlaceholderConfig ===
 
-// Module 9256 (createNativePlaceholderConfig)
+// Module 9428 (createNativePlaceholderConfig)
 import noop from "noop";
 
 let require = arg1;
@@ -15,14 +15,15 @@ function createNativePlaceholderConfig(type) {
   }
   let NONE = type;
   if (type == null) {
-    NONE = require(8832) /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE;
+    NONE = require(9009) /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE;
   }
-  const obj = { borderRadius: "Array", borderTopLeftRadius: "text", borderTopRightRadius: "bottom", borderBottomLeftRadius: "sr", borderBottomRightRadius: "next", divider: "alignItems", dividerColorRgba: "header", dividerPaddingLeft: "done", dividerPaddingRight: "a", placeholderShape: "isArray", placeholderShapeColorRgba: "enabled", placeholderShapeCount: "v", placeholderShapeGap: "a", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "count", placeholderFeedBackgroundColorRgba: "fileFinishedImporting", placeholderFeedColorRgba: "a", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "Reflect", placeholderFeedLabelSize: "enabled", placeholderFeedLabelSecondarySize: "a", placeholderFeedPadding: "isArray", placeholderFeedShape: "has", placeholderFeedShapeSize: "fill", placeholderType: NONE, width: null, height: null, verticalAlignment: false, horizontalAlignment: false };
+  const obj = { borderRadius: "Array", borderTopLeftRadius: "content", borderTopRightRadius: "disabled", borderBottomLeftRadius: "slice", borderBottomRightRadius: "e", divider: "isArray", dividerColorRgba: "isArray", dividerPaddingLeft: "source", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColorRgba: "isArray", placeholderShapeCount: "split", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColorRgba: "spriteIndex", placeholderFeedColorRgba: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "sr", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "borderRadius", placeholderType: "sk", width: "bottom", height: "__esModule", verticalAlignment: "start", horizontalAlignment: "disabled" };
+  obj[24] = NONE;
   if (null == type) {
     return obj;
   } else {
-    if (require(8832) /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE !== type) {
-      if (tmp11(8832).FastestListPropsPlaceholderType.SHAPE === type) {
+    if (require(9009) /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE !== type) {
+      if (tmp11(9009).FastestListPropsPlaceholderType.SHAPE === type) {
         let num9 = type.borderRadius;
         if (num9 == null) {
           num9 = 0;
@@ -43,7 +44,7 @@ function createNativePlaceholderConfig(type) {
           num11 = 0;
         }
         obj.placeholderShapePaddingVertical = num11;
-        let tmp11Result = tmp11(4037);
+        let tmp11Result = tmp11(4099);
         obj.placeholderShapeColorRgba = tmp11Result.hexToRgbaString(type.colorHex, type.opacity);
         let num12 = type.shapeCount;
         if (num12 == null) {
@@ -60,7 +61,7 @@ function createNativePlaceholderConfig(type) {
           str2 = "center";
         }
         obj.horizontalAlignment = str2;
-      } else if (tmp11(8832).FastestListPropsPlaceholderType.FEED_ITEM === type) {
+      } else if (tmp11(9009).FastestListPropsPlaceholderType.FEED_ITEM === type) {
         let num = type.borderRadius;
         if (num == null) {
           num = 0;
@@ -93,7 +94,7 @@ function createNativePlaceholderConfig(type) {
         obj.divider = flag;
         let hexToRgbaStringResult;
         if (null != type.dividerColorHex) {
-          tmp11Result = tmp11(4037);
+          tmp11Result = tmp11(4099);
           hexToRgbaStringResult = tmp11Result.hexToRgbaString(type.dividerColorHex);
         }
         obj.dividerColorRgba = hexToRgbaStringResult;
@@ -109,11 +110,11 @@ function createNativePlaceholderConfig(type) {
         obj.dividerPaddingRight = num7;
         let hexToRgbaStringResult1;
         if (null != type.backgroundColorHex) {
-          hexToRgbaStringResult1 = tmp11(4037).hexToRgbaString(type.backgroundColorHex);
-          const tmp11Result1 = tmp11(4037);
+          hexToRgbaStringResult1 = tmp11(4099).hexToRgbaString(type.backgroundColorHex);
+          const tmp11Result1 = tmp11(4099);
         }
         obj.placeholderFeedBackgroundColorRgba = hexToRgbaStringResult1;
-        obj.placeholderFeedColorRgba = tmp11(4037).hexToRgbaString(type.colorHex);
+        obj.placeholderFeedColorRgba = tmp11(4099).hexToRgbaString(type.colorHex);
         ({ labelSize: obj.placeholderFeedLabelSize, labelSecondarySize } = type);
         if (labelSecondarySize == null) {
           labelSecondarySize = 0;
@@ -130,7 +131,7 @@ function createNativePlaceholderConfig(type) {
         }
         obj.placeholderFeedPadding = num8;
         ({ shape: obj.placeholderFeedShape, shapeSize: obj.placeholderFeedShapeSize } = type);
-        const tmp11Result2 = tmp11(4037);
+        const tmp11Result2 = tmp11(4099);
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;

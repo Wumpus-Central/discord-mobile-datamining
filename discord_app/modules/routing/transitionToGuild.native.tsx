@@ -1,15 +1,15 @@
-// === Module 6693: transitionToGuild ===
+// === Module 5856: transitionToGuild ===
 
-// Module 6693 (transitionToGuild)
+// Module 5856 (transitionToGuild)
 import { Routes } from "ME";
 
 let result = require("LayoutAnimation").fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");
 
 export const transitionToGuild = function transitionToGuild(id) {
-  let obj = require(5657) /* getChannelIdForGuildTransition */;
+  let obj = require(5719) /* getChannelIdForGuildTransition */;
   const channelIdForGuildTransition = obj.getChannelIdForGuildTransition(id);
-  const result = require(5221) /* LayoutAnimation */.DeprecatedLayoutAnimation({ duration: 0, create: "accessibilityRole", update: "useStateFromStores", delete: "jsxs" });
-  const obj2 = require(5221) /* LayoutAnimation */;
+  const result = require(5283) /* LayoutAnimation */.DeprecatedLayoutAnimation({ duration: 0, create: "w", update: "text", delete: "text" });
+  const obj2 = require(5283) /* LayoutAnimation */;
   obj = { navigationReplace: true };
   const obj3 = require(1222) /* transitionTo */;
   const merged = Object.assign(arg1);

@@ -1,6 +1,6 @@
-// === Module 8657: GameProfileCommunityServer ===
+// === Module 8834: GameProfileCommunityServer ===
 
-// Module 8657 (GameProfileCommunityServer)
+// Module 8834 (GameProfileCommunityServer)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import preload from "preload";

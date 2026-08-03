@@ -10,7 +10,7 @@ let fn = function n(config, _animationToClamp) {
   let obj = _require(1646);
   const fn = function u() {
     let tmpResult = strippedValue;
-    if (typeof strippedValue !== "disabledUntil") {
+    if (typeof strippedValue !== "HAS_APPLICATION") {
       tmpResult = tmp();
     }
     const config = tmpResult;

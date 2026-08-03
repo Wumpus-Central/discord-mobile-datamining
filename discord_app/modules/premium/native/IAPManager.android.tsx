@@ -1,6 +1,6 @@
-// === Module 16237: prototype ===
+// === Module 16301: prototype ===
 
-// Module 16237 (prototype)
+// Module 16301 (prototype)
 import "initialize";
 
 let prototype = function IAPManager() {

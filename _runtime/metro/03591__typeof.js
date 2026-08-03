@@ -1,14 +1,10 @@
 // === Module 3591: _typeof ===
 
 // Module 3591 (_typeof)
-import setUTCISOWeek from "setUTCISOWeek";
-import startOfUTCISOWeek from "startOfUTCISOWeek";
-import { Parser } from "Parser";
+import requiredArgs from "requiredArgs";
 
-let _createSuperInternal = require;
-let closure_1 = dependencyMap;
 function _typeof(arg0) {
-  if (typeof Symbol !== "disabledUntil") {
+  if (typeof Symbol !== "HAS_APPLICATION") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "e") {
       function _typeof(arg0) {
@@ -20,7 +16,7 @@ function _typeof(arg0) {
   _typeof = function _typeof(arg0) {
     if (arg0) {
       const _Symbol = Symbol;
-      if (typeof Symbol !== "disabledUntil") {
+      if (typeof Symbol !== "HAS_APPLICATION") {
         const _Symbol3 = Symbol;
         if (arg0.constructor === Symbol) {
           const _Symbol2 = Symbol;
@@ -32,245 +28,59 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOWeekParser, Parser) {
-  let _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOWeekParser, Parser) {
-      ISOWeekParser.__proto__ = Parser;
-      return ISOWeekParser;
-    };
-  }
-  return _setPrototypeOf(ISOWeekParser, Parser);
-}
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    let _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
-}
-if (!setUTCISOWeek) {
-  let obj = { default: null };
-  obj[0] = setUTCISOWeek;
+if (!requiredArgs) {
+  const obj = { default: null };
+  obj[0] = requiredArgs;
   let tmp3 = obj;
 } else {
-  tmp3 = setUTCISOWeek;
+  tmp3 = requiredArgs;
 }
-let c3 = tmp3;
-if (!startOfUTCISOWeek) {
-  obj = { default: null };
-  obj[0] = startOfUTCISOWeek;
-  let tmp5 = obj;
-} else {
-  tmp5 = startOfUTCISOWeek;
-}
-let c4 = tmp5;
-_createSuperInternal = undefined;
-class ISOWeekParser {
-  constructor() {
-    if (this instanceof c1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 100, enumerable: true, configurable: true, writable: true });
-        } else {
-          num3 = 100;
-          applyResult.priority = 100;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
-            _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj[0] = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-          } else {
-            applyResult.incompatibleTokens = items1;
-          }
-          return applyResult;
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-closure_1 = ISOWeekParser;
-if (typeof Parser !== "fileFinishedImporting") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
-    throw typeError;
-  }
-}
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
-}
-obj = { value: ISOWeekParser, writable: true, configurable: true };
-ISOWeekParser.prototype = Object.create(prototype, { constructor: obj });
-if (Parser) {
-  _setPrototypeOf(ISOWeekParser, Parser);
-}
-_createSuperInternal = ISOWeekParser;
-let num = 0;
-closure_1 = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "Array") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "fileFinishedImporting") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-let items = [
-  {
-    key: "parse",
-    value: function parse(arg0, arg1, ordinalNumber) {
-      if ("I" === arg1) {
-        return _createSuperInternal(3580).parseNumericPattern(_createSuperInternal(3581).numericPatterns.week, arg0);
-      } else if ("Io" === arg1) {
-        return ordinalNumber.ordinalNumber(arg0, { unit: "week" });
-      } else {
-        return _createSuperInternal(3580).parseNDigits(arg1.length, arg0);
-      }
-    }
-  },
-  {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
-      if (tmp) {
-        tmp = arg1 <= 53;
-      }
-      return tmp;
-    }
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2) {
-      return tmp5.default(tmp3.default(arg0, arg2));
-    }
-  }
-];
-if (0 < items.length) {
-  do {
-    let tmp9 = items[num];
-    let flag = tmp9.enumerable;
-    let tmp10 = num;
-    if (!flag) {
-      flag = false;
-    }
-    tmp9.enumerable = flag;
-    tmp9.configurable = true;
-    if ("value" in tmp9) {
-      tmp9.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp8, tmp9.key, tmp9);
-    num = num + 1;
-  } while (num < items.length);
-}
+let c0 = tmp3;
 
-export { ISOWeekParser };
+export default function formatISODuration(years) {
+  tmp3.default(1, arguments);
+  if ("object" !== _typeof(years)) {
+    const _Error = Error;
+    const error = new Error("Duration must be an object");
+    throw error;
+  } else {
+    years = years.years;
+    let num = 0;
+    if (undefined !== years) {
+      num = years;
+    }
+    const months = years.months;
+    let num2 = 0;
+    if (undefined !== months) {
+      num2 = months;
+    }
+    const days = years.days;
+    let num3 = 0;
+    if (undefined !== days) {
+      num3 = days;
+    }
+    const hours = years.hours;
+    let num4 = 0;
+    if (undefined !== hours) {
+      num4 = hours;
+    }
+    const minutes = years.minutes;
+    let num5 = 0;
+    if (undefined !== minutes) {
+      num5 = minutes;
+    }
+    const seconds = years.seconds;
+    let num6 = 0;
+    if (undefined !== seconds) {
+      num6 = seconds;
+    }
+    const concat = "P".concat;
+    const combined = "P".concat(num, "Y");
+    const combined1 = combined.concat(num2, "M");
+    const combined2 = combined1.concat(num3, "DT");
+    const combined3 = combined2.concat(num4, "H");
+    const combined4 = combined3.concat(num5, "M");
+    return combined4.concat(num6, "S");
+  }
+};
+export default exports.default;

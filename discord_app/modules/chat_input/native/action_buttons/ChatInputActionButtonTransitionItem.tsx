@@ -1,6 +1,6 @@
-// === Module 11420: FadeTransitionItem ===
+// === Module 11530: FadeTransitionItem ===
 
-// Module 11420 (FadeTransitionItem)
+// Module 11530 (FadeTransitionItem)
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta";
@@ -75,12 +75,12 @@ function BounceTransitionItem(state) {
   state = state.state;
   ({ cleanup, bounceEnterDelayMs, children } = state);
   let obj = { visible: null, initiallyVisible: null, enterDelayMs: null, onExitComplete: null, interactiveDuringEnter: true };
-  obj[0] = state !== require(4538) /* wrapChildrenDefault */.TransitionStates.YEETED;
-  obj[1] = state !== require(4538) /* wrapChildrenDefault */.TransitionStates.ENTERED;
+  obj[0] = state !== require(4600) /* wrapChildrenDefault */.TransitionStates.YEETED;
+  obj[1] = state !== require(4600) /* wrapChildrenDefault */.TransitionStates.ENTERED;
   obj[2] = bounceEnterDelayMs;
   obj[3] = cleanup;
-  const tmp = importDefault(11421);
-  ({ isInteractive, animatedStyle } = importDefault(11421)(obj));
+  const tmp = importDefault(11531);
+  ({ isInteractive, animatedStyle } = importDefault(11531)(obj));
   obj = { style: items };
   items = [closure_6.transitionItemCentered, animatedStyle];
   let str = "none";
@@ -95,7 +95,7 @@ function BounceTransitionItem(state) {
   obj[2] = str2;
   const merged = Object.assign(obj);
   obj.children = children;
-  return jsx(importDefault(4054).View, { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null });
+  return jsx(importDefault(4116).View, { pointerEvents: str, accessibilityElementsHidden: !isInteractive, importantForAccessibility: null });
 }
 const styles = StyleSheet.create({ transitionItem: { position: "absolute" }, transitionItemCentered: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" } });
 let closure_7 = { code: "function ChatInputActionButtonTransitionItemTsx1(finished){const{runOnJS,cleanup}=this.__closure;if(finished===true){runOnJS(cleanup)();}}" };

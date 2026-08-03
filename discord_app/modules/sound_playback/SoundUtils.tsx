@@ -1,6 +1,6 @@
-// === Module 10285: createSoundForPack ===
+// === Module 10424: createSoundForPack ===
 
-// Module 10285 (createSoundForPack)
+// Module 10424 (createSoundForPack)
 import Soundpacks from "Soundpacks";
 import initialize from "initialize";
 import { SoundOutputChannel } from "SoundOutputChannel";
@@ -19,7 +19,7 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   if (arg3 === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
-  let tmp3 = importDefault(10288)(soundpack)[call_calling];
+  let tmp3 = importDefault(10427)(soundpack)[call_calling];
   if (tmp3 == null) {
     tmp3 = call_calling;
   }
@@ -29,7 +29,7 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   if (DEFAULT === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
-  const mobileAudioSound = new require(10289) /* _createSound */.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
+  const mobileAudioSound = new require(10428) /* _createSound */.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
   return mobileAudioSound;
 };
 export const createSound = function createSound(stage_waiting, soundboard_sound, arg2) {
@@ -45,7 +45,7 @@ export const createSound = function createSound(stage_waiting, soundboard_sound,
   if (arg4 === undefined) {
     flag = false;
   }
-  const mobileAudioSound = new require(10289) /* _createSound */.MobileAudioSound(stage_waiting, soundboard_sound, num, DEFAULT, flag);
+  const mobileAudioSound = new require(10428) /* _createSound */.MobileAudioSound(stage_waiting, soundboard_sound, num, DEFAULT, flag);
   return mobileAudioSound;
 };
 export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChannel) {
@@ -59,7 +59,7 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
     if (arg3 == null) {
       soundpack = soundpack.getSoundpack();
     }
-    const tmp4Result = importDefault(10288)(soundpack);
+    const tmp4Result = importDefault(10427)(soundpack);
     if (null == tmp4Result) {
       const _HermesInternal = HermesInternal;
       tmp2.log("Unable to find sound for pack name: " + arg3);
@@ -91,7 +91,7 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new _require(10289).MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
+    const mobileAudioSound = new _require(10428).MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
     if (null != arg2) {
       mobileAudioSound.playWithListener().then((arg0) => {
         if (arg0) {

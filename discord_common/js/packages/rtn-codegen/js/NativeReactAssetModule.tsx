@@ -1,6 +1,6 @@
-// === Module 16764: enforcing ===
+// === Module 16830: enforcing ===
 
-// Module 16764 (enforcing)
+// Module 16830 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeReactAssetModule");

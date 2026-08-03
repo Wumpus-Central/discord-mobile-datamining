@@ -1,6 +1,6 @@
-// === Module 8274: useStageChannelUpsellCardStore ===
+// === Module 8581: useStageChannelUpsellCardStore ===
 
-// Module 8274 (useStageChannelUpsellCardStore)
+// Module 8581 (useStageChannelUpsellCardStore)
 import { GUILD_EVENT_STAGE_UPSELL_CARD_KEY as closure_2 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import identity from "identity";
 
@@ -23,5 +23,5 @@ export const useStageChannelUpsellCardStore = function useStageChannelUpsellCard
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, require(3806) /* isIterable */.shallow);
+  }, require(3868) /* isIterable */.shallow);
 };

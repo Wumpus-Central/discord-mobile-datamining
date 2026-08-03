@@ -1,6 +1,6 @@
-// === Module 9793: GiftingSKUCardsGrid ===
+// === Module 9938: GiftingSKUCardsGrid ===
 
-// Module 9793 (GiftingSKUCardsGrid)
+// Module 9938 (GiftingSKUCardsGrid)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { isAvatarDecorationRecord } from "fromServer";

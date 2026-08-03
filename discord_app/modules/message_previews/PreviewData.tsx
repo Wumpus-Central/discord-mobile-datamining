@@ -1,6 +1,6 @@
-// === Module 12789: isLatest ===
+// === Module 12852: isLatest ===
 
-// Module 12789 (isLatest)
+// Module 12852 (isLatest)
 import hasFlag from "hasFlag";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 
@@ -58,8 +58,8 @@ prototype["messageRecord"] = function messageRecord(arg0) {
     tmp2 = value.message instanceof hasFlag;
   }
   if (!tmp2) {
-    value.message = require(4413) /* createMinimalMessageRecord */.createMessageRecord(value.message);
-    const obj = require(4413) /* createMinimalMessageRecord */;
+    value.message = require(4475) /* createMinimalMessageRecord */.createMessageRecord(value.message);
+    const obj = require(4475) /* createMinimalMessageRecord */;
   }
   let message;
   if (value != null) {
@@ -126,7 +126,7 @@ prototype["update"] = function update(id) {
         }
       }
       if (id === id.id) {
-        let obj = require(4413) /* createMinimalMessageRecord */;
+        let obj = require(4475) /* createMinimalMessageRecord */;
         if (tmp3) {
           let updateMessageRecordResult = obj.updateMessageRecord(merged.message, id);
         } else {

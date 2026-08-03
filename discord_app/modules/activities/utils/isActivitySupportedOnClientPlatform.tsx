@@ -1,6 +1,6 @@
-// === Module 10619: isActivitySupportedOnClientPlatform ===
+// === Module 10681: isActivitySupportedOnClientPlatform ===
 
-// Module 10619 (isActivitySupportedOnClientPlatform)
+// Module 10681 (isActivitySupportedOnClientPlatform)
 const result = require("set").fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {

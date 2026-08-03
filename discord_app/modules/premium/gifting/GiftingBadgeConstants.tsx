@@ -1,6 +1,6 @@
-// === Module 9839: getTierForProgress ===
+// === Module 9984: getTierForProgress ===
 
-// Module 9839 (getTierForProgress)
+// Module 9984 (getTierForProgress)
 import { getSingleRequirementThreshold as closure_0 } from "map";
 
 const result = require("set").fileFinishedImporting("modules/premium/gifting/GiftingBadgeConstants.tsx");

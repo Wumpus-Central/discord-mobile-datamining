@@ -1,6 +1,6 @@
-// === Module 16548: _createCreatorMonetizationEnableRequest ===
+// === Module 16614: _createCreatorMonetizationEnableRequest ===
 
-// Module 16548 (_createCreatorMonetizationEnableRequest)
+// Module 16614 (_createCreatorMonetizationEnableRequest)
 import fetchApplication from "fetchApplication";
 import { Endpoints } from "ME";
 import { ApplicationTypes } from "ApplicationTypes";

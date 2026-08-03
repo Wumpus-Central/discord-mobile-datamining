@@ -1,6 +1,6 @@
-// === Module 10784: VoiceSensitivity ===
+// === Module 10892: VoiceSensitivity ===
 
-// Module 10784 (VoiceSensitivity)
+// Module 10892 (VoiceSensitivity)
 import anyoneHasFlagInContext from "anyoneHasFlagInContext";
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";

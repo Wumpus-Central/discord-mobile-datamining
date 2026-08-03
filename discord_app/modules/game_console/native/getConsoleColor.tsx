@@ -1,6 +1,6 @@
-// === Module 16020: getConsoleColor ===
+// === Module 16084: getConsoleColor ===
 
-// Module 16020 (getConsoleColor)
+// Module 16084 (getConsoleColor)
 let PLAYSTATION;
 let PLAYSTATION_STAGING;
 let XBOX;

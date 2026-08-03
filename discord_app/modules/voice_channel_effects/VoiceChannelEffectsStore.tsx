@@ -1,6 +1,6 @@
-// === Module 10585: recentlyUsedEmojis ===
+// === Module 10769: recentlyUsedEmojis ===
 
-// Module 10585 (recentlyUsedEmojis)
+// Module 10769 (recentlyUsedEmojis)
 import { EMOJI_PICKER_EMOJI_TO_SHOW_COUNT as closure_4 } from "ParticipantTypes";
 import apply from "apply";
 import { Store } from "initialize";
@@ -11,8 +11,8 @@ let closure_7 = [];
 let closure_8 = [];
 let closure_9 = 10 * require("set").Millis.SECOND;
 let closure_10 = apply.debounce(() => {
-  const effectAnnouncement = require(10586) /* VoiceChannelEffectAnimationType */.getEffectAnnouncement(closure_7);
-  const AccessibilityAnnouncer = require(4039) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const effectAnnouncement = require(5863) /* VoiceChannelEffectAnimationType */.getEffectAnnouncement(closure_7);
+  const AccessibilityAnnouncer = require(4101) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(effectAnnouncement, "polite");
   closure_7 = [];
 }, 500);

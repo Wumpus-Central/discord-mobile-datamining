@@ -1,6 +1,6 @@
-// === Module 4365: ROBLOX_PROTOCOL_URL ===
+// === Module 4427: ROBLOX_PROTOCOL_URL ===
 
-// Module 4365 (ROBLOX_PROTOCOL_URL)
+// Module 4427 (ROBLOX_PROTOCOL_URL)
 class ROBLOX_PROTOCOL_URL {
   constructor(arg0) {
     return "roblox://placeId=" + global;
@@ -21,10 +21,10 @@ export const ROBLOX_URL_SCHEME = "roblox";
 export { ROBLOX_PROTOCOL_URL };
 export { ROBLOX_WEB_URL };
 export const ROBLOX_DEFERRED_WEB_URL = (arg0) => {
-  if (typeof ROBLOX_PROTOCOL_URL !== "fileFinishedImporting") {
+  if (typeof ROBLOX_PROTOCOL_URL !== "error") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof ROBLOX_WEB_URL !== "fileFinishedImporting") {
+  if (typeof ROBLOX_WEB_URL !== "error") {
     HermesBuiltin.throwTypeError();
   }
   return "https://ro.blox.com/Ebh5?af_dp=" + encodeURIComponent("roblox://placeId=" + arg0) + "&af_web_dp=" + encodeURIComponent("https://www.roblox.com/games/start?placeId=" + arg0);

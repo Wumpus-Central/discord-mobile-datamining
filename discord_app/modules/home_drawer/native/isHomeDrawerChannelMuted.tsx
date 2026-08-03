@@ -1,6 +1,6 @@
-// === Module 14996: useIsHomeDrawerChannelMuted ===
+// === Module 15283: useIsHomeDrawerChannelMuted ===
 
-// Module 14996 (useIsHomeDrawerChannelMuted)
+// Module 15283 (useIsHomeDrawerChannelMuted)
 import storeThread from "storeThread";
 import { isThread } from "createChannelRecord";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

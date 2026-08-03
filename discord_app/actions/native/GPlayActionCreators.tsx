@@ -1,6 +1,6 @@
-// === Module 6303: getPlanIdForProduct ===
+// === Module 7287: getPlanIdForProduct ===
 
-// Module 6303 (getPlanIdForProduct)
+// Module 7287 (getPlanIdForProduct)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importDefaultResult from "updateProduct";
 import setGPlayAnalytics from "setGPlayAnalytics";
@@ -25,13 +25,13 @@ let c1 = importDefault;
 function getPlanIdForProduct(arg0, arg1) {
   if (arg1) {
     try {
-      return callback(5679).getPlanIdForGift(arg0);
+      return callback(5741).getPlanIdForGift(arg0);
     } catch (err) {
       return null;
     }
   } else {
     let basePlanId;
-    const tmp4 = callback(5679).AppStorePremiumProductIdsToPremiumBundledItems[arg0];
+    const tmp4 = callback(5741).AppStorePremiumProductIdsToPremiumBundledItems[arg0];
     if (tmp4 != null) {
       basePlanId = tmp4.basePlanId;
     }
@@ -622,7 +622,7 @@ function _subscribe() {
             if (1 === tmp7) {
               c9 = 0;
               message = closure_8;
-              obj1 = callback(3854);
+              obj1 = callback(3916);
               const obj2 = { productId: null, oldProductId: null };
               obj2[0] = callback;
               let c5 = callback2;
@@ -633,7 +633,7 @@ function _subscribe() {
               obj2[1] = c5;
               obj3[0] = obj2;
               const result = obj1.captureBillingException(message, obj3);
-              let obj4 = callback2(4532);
+              let obj4 = callback2(4594);
               obj4 = { title: null, body: null };
               const intl = callback(1236).intl;
               obj4[0] = intl.string(callback(1236).t["U+H+kd"]);
@@ -781,7 +781,7 @@ function _verifyPurchase() {
           } else if (1 === tmp8) {
             c6 = 0;
             c6 = closure_5;
-            obj3 = lib(3854);
+            obj3 = lib(3916);
             const obj5 = { tags: null };
             let obj6 = { productId: null };
             obj6[0] = lib.productId;
@@ -926,7 +926,7 @@ closure_0 = importDefaultResult(() => {
                   obj3[0] = callback3(SubscriptionProductIds);
                   return obj3;
                 }
-                obj14 = SubscriptionProductIds(3852);
+                obj14 = SubscriptionProductIds(3914);
               }
             }
             c6 = 3;
@@ -1218,7 +1218,7 @@ closure_0 = importDefaultResult(() => {
                   })(IAPProductIds);
                   return obj3;
                 }
-                obj14 = IAPProductIds(3852);
+                obj14 = IAPProductIds(3914);
               }
             }
             c6 = 3;
@@ -2033,7 +2033,7 @@ export const updatePendingDowngrade = function updatePendingDowngrade(closure_0,
         if (null != tmp) {
           if (null != tmp2.billingPeriod) {
             if (null != tmp.billingPeriod) {
-              let obj = callback(3854);
+              let obj = callback(3916);
             }
           }
         }

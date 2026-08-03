@@ -1,6 +1,6 @@
-// === Module 12305: isVirtualCurrencyEnabled ===
+// === Module 12403: isVirtualCurrencyEnabled ===
 
-// Module 12305 (isVirtualCurrencyEnabled)
+// Module 12403 (isVirtualCurrencyEnabled)
 const result = require("set").fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx");
 
 export const isVirtualCurrencyEnabled = function isVirtualCurrencyEnabled() {

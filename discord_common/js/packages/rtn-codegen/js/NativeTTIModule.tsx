@@ -1,6 +1,6 @@
-// === Module 5962: enforcing ===
+// === Module 7041: enforcing ===
 
-// Module 5962 (enforcing)
+// Module 7041 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTTIModule");

@@ -1,6 +1,6 @@
-// === Module 14918: CompanionRemoteAuth ===
+// === Module 14985: CompanionRemoteAuth ===
 
-// Module 14918 (CompanionRemoteAuth)
+// Module 14985 (CompanionRemoteAuth)
 import noop from "noop";
 import { View } from "AuthFormView";
 import ME from "ME";
@@ -23,7 +23,7 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
   let obj = navigation(1480);
   navigation = obj.useNavigation();
   let obj1 = React;
-  const context = React.useContext(fingerprint(4426));
+  const context = React.useContext(fingerprint(4488));
   const callback = React.useCallback((arg0) => {
     let tmp = arg0;
     let obj = fingerprint(table[14]);
@@ -34,14 +34,14 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     obj[4] = tmp;
     obj.track(constants.LOGIN_SUCCESSFUL, obj);
   }, []);
-  let obj2 = navigation(14920);
+  let obj2 = navigation(14987);
   const state = obj2.useAuthWebsocket(callback, true).state;
   const items = [navigation];
   const callback1 = React.useCallback(() => {
     navigation.goBack();
   }, items);
   fingerprint = null;
-  if (state.step === navigation(14919).RemoteAuthStep.PENDING_REMOTE_INIT) {
+  if (state.step === navigation(14986).RemoteAuthStep.PENDING_REMOTE_INIT) {
     fingerprint = state.fingerprint;
   }
   const items1 = [fingerprint];
@@ -57,14 +57,14 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     }
   }, items1);
   obj = { headerText: null, children: null };
-  let tmp5Result = tmp5(9224);
+  let tmp5Result = tmp5(9397);
   const intl = tmp2(1236).intl;
   obj[0] = intl.string(navigation(1236).t["7fNJgA"]);
   obj = { style: tmp.statusContainer, children: null };
   const step = state.step;
-  if (navigation(14919).RemoteAuthStep.INITIALIZING !== step) {
-    if (tmp2(14919).RemoteAuthStep.PENDING_REMOTE_INIT !== step) {
-      if (tmp2(14919).RemoteAuthStep.PENDING_TICKET === step) {
+  if (navigation(14986).RemoteAuthStep.INITIALIZING !== step) {
+    if (tmp2(14986).RemoteAuthStep.PENDING_REMOTE_INIT !== step) {
+      if (tmp2(14986).RemoteAuthStep.PENDING_TICKET === step) {
         const user = state.user;
         obj1 = { children: null };
         obj2 = { style: null, user: null, size: null, guildId: null };
@@ -76,27 +76,27 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
         const obj3 = { variant: "heading-lg/bold", children: null };
         const intl2 = tmp2(1236).intl;
         obj3[1] = intl2.string(tmp2(1236).t.apGCUT);
-        items2[1] = tmp11(tmp2(4189).Text, obj3);
+        items2[1] = tmp11(tmp2(4251).Text, obj3);
         const obj4 = { style: null, variant: "text-md/medium", color: "text-muted", children: null };
         obj4[0] = tmp.statusText;
         const intl3 = tmp2(1236).intl;
         const obj5 = { username: null };
-        tmp5Result = tmp5(4032);
+        tmp5Result = tmp5(4094);
         obj5[0] = tmp5Result.getUserTag(user);
         obj4[3] = intl3.format(tmp2(1236).t.Cbl5JK, obj5);
-        items2[2] = tmp11(tmp2(4189).Text, obj4);
+        items2[2] = tmp11(tmp2(4251).Text, obj4);
         const obj6 = { style: null, children: null };
         obj6[0] = tmp.buttonContainer;
         const obj7 = { size: "lg", variant: "tertiary", text: null, onPress: null };
         const intl4 = tmp2(1236).intl;
         obj7[2] = intl4.string(tmp2(1236).t["ETE/oC"]);
         obj7[3] = callback1;
-        obj6[1] = tmp11(tmp2(4604).Button, obj7);
+        obj6[1] = tmp11(tmp2(4666).Button, obj7);
         items2[3] = tmp11(tmp13, obj6);
         obj1[0] = items2;
         let tmp11Result = callback(closure_8, obj1);
-      } else if (tmp2(14919).RemoteAuthStep.PENDING_LOGIN === step) {
-        tmp11Result = tmp11(tmp2(5641).ActivityIndicator, {});
+      } else if (tmp2(14986).RemoteAuthStep.PENDING_LOGIN === step) {
+        tmp11Result = tmp11(tmp2(5703).ActivityIndicator, {});
       }
     }
     obj[1] = tmp11Result;
@@ -104,17 +104,17 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
     return tmp11(tmp5Result, obj);
   }
   const obj8 = { children: null };
-  const items3 = [closure_7(navigation(5641).ActivityIndicator, {}), , ];
+  const items3 = [closure_7(navigation(5703).ActivityIndicator, {}), , ];
   const obj9 = { style: tmp.statusText, variant: "text-md/medium", color: "text-muted", children: null };
   const intl5 = tmp2(1236).intl;
   obj9[3] = intl5.string(navigation(1236).t["7LkwqE"]);
-  items3[1] = closure_7(navigation(4189).Text, obj9);
+  items3[1] = closure_7(navigation(4251).Text, obj9);
   const obj10 = { style: tmp.buttonContainer, children: null };
   const obj11 = { size: "lg", variant: "tertiary", text: null, onPress: null };
   const intl6 = tmp2(1236).intl;
   obj11[2] = intl6.string(navigation(1236).t["ETE/oC"]);
   obj11[3] = callback1;
-  obj10[1] = closure_7(navigation(4604).Button, obj11);
+  obj10[1] = closure_7(navigation(4666).Button, obj11);
   items3[2] = closure_7(View, obj10);
   obj8[0] = items3;
   tmp11Result = callback(closure_8, obj8);

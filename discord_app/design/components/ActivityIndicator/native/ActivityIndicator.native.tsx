@@ -1,6 +1,6 @@
-// === Module 5641: ActivityIndicator ===
+// === Module 5703: ActivityIndicator ===
 
-// Module 5641 (ActivityIndicator)
+// Module 5703 (ActivityIndicator)
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 
@@ -16,7 +16,7 @@ export const ActivityIndicator = function ActivityIndicator(size) {
     flag = true;
   }
   const merged = Object.assign(size, Object.create(null));
-  let obj = require(3897) /* map */;
+  let obj = require(3959) /* map */;
   let color = merged.color;
   if (color == null) {
     color = obj.useToken(importDefault(712).colors.BACKGROUND_BRAND);

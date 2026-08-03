@@ -1,6 +1,6 @@
-// === Module 14519: _serializeIntlData ===
+// === Module 14586: _serializeIntlData ===
 
-// Module 14519 (_serializeIntlData)
+// Module 14586 (_serializeIntlData)
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "set";
 import ME from "ME";
@@ -217,9 +217,9 @@ function _handleUploadIntlDataSettingPress() {
         } else {
           if (2 === tmp9) {
             dependencyMap = 1;
-            let obj5 = callback(3894);
+            let obj5 = callback(3956);
             const obj1 = { key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", IconComponent: null, content: "Failed to upload internationalization data." };
-            obj1[1] = ANDROID_APP(4149).CircleInformationIcon;
+            obj1[1] = ANDROID_APP(4211).CircleInformationIcon;
             obj5.open(obj1);
             dependencyMap = 0;
             (function onUploadIntlDataRequestFinish() {
@@ -259,9 +259,9 @@ function _handleUploadIntlDataSettingPress() {
             c5 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = callback(3894);
+            obj = callback(3956);
             obj5 = { key: "USER_SETTINGS_INTL_DATA_UPLOADED", IconComponent: null, content: "Internationalization data uploaded successfully." };
-            obj5[1] = ANDROID_APP(4149).CircleInformationIcon;
+            obj5[1] = ANDROID_APP(4211).CircleInformationIcon;
             obj.open(obj5);
             dependencyMap = 1;
           }

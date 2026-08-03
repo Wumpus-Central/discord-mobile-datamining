@@ -1,11 +1,11 @@
-// === Module 12772: getFirstInstallTimeMillis ===
+// === Module 12835: getFirstInstallTimeMillis ===
 
-// Module 12772 (getFirstInstallTimeMillis)
+// Module 12835 (getFirstInstallTimeMillis)
 import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;
 function getFirstInstallTimeMillis(arg0) {
-  const firstInstallTimeMillis = importDefault(12773).getFirstInstallTimeMillis();
+  const firstInstallTimeMillis = importDefault(12836).getFirstInstallTimeMillis();
   let str = "InstallTimeLaunch";
   if ("authed" === arg0.from) {
     str = "InstallTimeAuthed";
@@ -55,8 +55,8 @@ export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(un
     const diff = Date.now() - tmp;
     let result = diff;
     if (null != unit) {
-      result = require(4269) /* sleep */.convertMinutesToGivenTimeUnit(diff / require(4269) /* sleep */.MS_PER_MINUTE, unit);
-      const obj = require(4269) /* sleep */;
+      result = require(4331) /* sleep */.convertMinutesToGivenTimeUnit(diff / require(4331) /* sleep */.MS_PER_MINUTE, unit);
+      const obj = require(4331) /* sleep */;
     }
     return result;
   }

@@ -1,6 +1,6 @@
-// === Module 4644: isSoundValid ===
+// === Module 4706: isSoundValid ===
 
-// Module 4644 (isSoundValid)
+// Module 4706 (isSoundValid)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -33,7 +33,7 @@ export default function isSoundValid(guildId) {
       }
       if (guildId2 !== arg1) {
         let canResult = null == channel;
-        const result = importDefault(3839).canUseSoundboardEverywhere(currentUser.getCurrentUser());
+        const result = importDefault(3901).canUseSoundboardEverywhere(currentUser.getCurrentUser());
         if (!canResult) {
           canResult = null == channel.guild_id;
         }

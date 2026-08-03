@@ -1,6 +1,6 @@
-// === Module 4607: SUBTLE_SPRING ===
+// === Module 4669: SUBTLE_SPRING ===
 
-// Module 4607 (SUBTLE_SPRING)
+// Module 4669 (SUBTLE_SPRING)
 const result = require("set").fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
 
 export const SUBTLE_SPRING = { mass: 1, damping: 27, stiffness: 300 };

@@ -1,6 +1,6 @@
-// === Module 10284: isInAppMessageSoundsEnabled ===
+// === Module 10423: isInAppMessageSoundsEnabled ===
 
-// Module 10284 (isInAppMessageSoundsEnabled)
+// Module 10423 (isInAppMessageSoundsEnabled)
 import identity from "identity";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";
@@ -23,5 +23,5 @@ export const setInAppMessageSoundsEnabled = function setInAppMessageSoundsEnable
   store.setState({ isEnabled });
 };
 export const useInAppMessageSoundsEnabled = function useInAppMessageSoundsEnabled() {
-  return store((isEnabled) => isEnabled.isEnabled, require(3806) /* isIterable */.shallow);
+  return store((isEnabled) => isEnabled.isEnabled, require(3868) /* isIterable */.shallow);
 };

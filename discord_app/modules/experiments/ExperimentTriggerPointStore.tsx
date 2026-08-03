@@ -1,6 +1,6 @@
-// === Module 12762: handleConnectionOpen ===
+// === Module 12825: handleConnectionOpen ===
 
-// Module 12762 (handleConnectionOpen)
+// Module 12825 (handleConnectionOpen)
 import getHash from "getHash";
 import initialize from "initialize";
 import apexExperiment from "apexExperiment";
@@ -9,7 +9,7 @@ import importDefaultResult from "dispatcher";
 
 const require = arg1;
 function handleConnectionOpen() {
-  const ConnectionOpenTriggerPoint = require(12764) /* commonTriggerPointConfiguration */.ConnectionOpenTriggerPoint;
+  const ConnectionOpenTriggerPoint = require(12827) /* commonTriggerPointConfiguration */.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
 class ExperimentTriggerPointStore extends Store {

@@ -1,6 +1,6 @@
-// === Module 15174: useGuildHasLiveChannelNotice ===
+// === Module 15155: useGuildHasLiveChannelNotice ===
 
-// Module 15174 (useGuildHasLiveChannelNotice)
+// Module 15155 (useGuildHasLiveChannelNotice)
 import noop from "noop";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";

@@ -1,6 +1,6 @@
-// === Module 11757: useIsHubRealNamePromptShowing ===
+// === Module 11859: useIsHubRealNamePromptShowing ===
 
-// Module 11757 (useIsHubRealNamePromptShowing)
+// Module 11859 (useIsHubRealNamePromptShowing)
 import noop from "noop";
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

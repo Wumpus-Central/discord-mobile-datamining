@@ -1,6 +1,6 @@
-// === Module 12206: useCardGridLayout ===
+// === Module 12302: useCardGridLayout ===
 
-// Module 12206 (useCardGridLayout)
+// Module 12302 (useCardGridLayout)
 import { PROFILE_SIDE_PADDING } from "ARBITRARY_LARGE_OFFSET";
 
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
@@ -62,7 +62,7 @@ export default function useCardGridLayout() {
   const bound1 = Math.min(Math.max(tmp4, num), num2);
   const diff2 = num4 - 1;
   if (diff < bound1 * num4 + num3 * diff2) {
-    obj = { columns: 1, cardWidth: "Array", rowWidth: "borderRadius", gap: "<string:370551850>" };
+    obj = { columns: 1, cardWidth: "Array", rowWidth: "borderRadius", gap: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006252865675557642 };
     obj[3] = num3;
   } else {
     obj = { columns: null, cardWidth: null, rowWidth: null, gap: null };

@@ -4,7 +4,7 @@
 const exports = arg5;
 function _createForOfIteratorHelper(iterable) {
   let closure_0 = iterable;
-  iterable = typeof Symbol === "pack";
+  iterable = typeof Symbol === "as";
   if (typeof Symbol !== "Array") {
     const _Symbol = Symbol;
     iterable = iterable[Symbol.iterator];

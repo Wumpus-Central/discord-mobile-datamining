@@ -1,6 +1,6 @@
-// === Module 14479: toggle ===
+// === Module 14546: toggle ===
 
-// Module 14479 (toggle)
+// Module 14546 (toggle)
 import { AnalyticEvents } from "ME";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 import createToggle from "createToggle";
@@ -17,7 +17,7 @@ const toggle = createToggle.createToggle({
     return intl.string(require(1236) /* getSystemLocale */.t.rngMNx);
   },
   onValueChange(voice_activity_notifications) {
-    const EnableVoiceActivityNotifications = require(3866) /* explicitContentFromProto */.EnableVoiceActivityNotifications;
+    const EnableVoiceActivityNotifications = require(3928) /* explicitContentFromProto */.EnableVoiceActivityNotifications;
     EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
     let obj = importDefault(698);
     obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
@@ -36,7 +36,7 @@ let obj = {
     return intl.string(require(1236) /* getSystemLocale */.t.rngMNx);
   },
   onValueChange(voice_activity_notifications) {
-    const EnableVoiceActivityNotifications = require(3866) /* explicitContentFromProto */.EnableVoiceActivityNotifications;
+    const EnableVoiceActivityNotifications = require(3928) /* explicitContentFromProto */.EnableVoiceActivityNotifications;
     EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
     let obj = importDefault(698);
     obj = { update_type: constants.ACCOUNT, voice_activity_notifications };

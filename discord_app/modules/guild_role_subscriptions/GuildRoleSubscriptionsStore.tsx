@@ -1,6 +1,6 @@
-// === Module 3815: makeGroupListingIndexSubscriptionListingTag ===
+// === Module 3877: makeGroupListingIndexSubscriptionListingTag ===
 
-// Module 3815 (makeGroupListingIndexSubscriptionListingTag)
+// Module 3877 (makeGroupListingIndexSubscriptionListingTag)
 import { DefaultCreatorMonetizationRestrictions as closure_2 } from "CreatorMonetizationRestrictions";
 import { Store } from "initialize";
 import set from "initialize";

@@ -1,6 +1,6 @@
-// === Module 8883: computeCallVerification ===
+// === Module 9060: computeCallVerification ===
 
-// Module 8883 (computeCallVerification)
+// Module 9060 (computeCallVerification)
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";
@@ -55,7 +55,7 @@ function handleUserUpdate(userId) {
       }
       flag = isKeyVerifiedResult !== map.get(userId);
       const result = map.set(userId, isKeyVerifiedResult);
-      obj = require(8901) /* getCurrentUserSigningKey */;
+      obj = require(9078) /* getCurrentUserSigningKey */;
     }
     const allActiveStreamKeys = store2.getAllActiveStreamKeys();
     const reduced = allActiveStreamKeys.reduce((arg0, streamKey) => {
@@ -116,14 +116,14 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(require("dispatc
     if (state.state !== RTCConnectionStates.DISCONNECTED) {
       return false;
     } else {
-      if (require(4290) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM === context) {
+      if (require(4352) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM === context) {
         let tmp6 = null != streamKey;
         if (tmp6) {
           map1.delete(streamKey);
           tmp6 = computeCallVerification();
         }
         return tmp6;
-      } else if (tmp10(4290).MediaEngineContextTypes.DEFAULT === context) {
+      } else if (tmp10(4352).MediaEngineContextTypes.DEFAULT === context) {
         map.clear();
         map1.clear();
         let c10 = false;

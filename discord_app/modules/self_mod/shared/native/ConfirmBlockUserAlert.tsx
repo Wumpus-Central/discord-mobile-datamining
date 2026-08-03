@@ -1,6 +1,6 @@
-// === Module 10183: ConfirmBlockUserAlert ===
+// === Module 10322: ConfirmBlockUserAlert ===
 
-// Module 10183 (ConfirmBlockUserAlert)
+// Module 10322 (ConfirmBlockUserAlert)
 import noop from "noop";
 import { View } from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";

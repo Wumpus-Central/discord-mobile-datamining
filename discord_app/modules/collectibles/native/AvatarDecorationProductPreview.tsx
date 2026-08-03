@@ -1,6 +1,6 @@
-// === Module 8755: AvatarDecorationProductPreview ===
+// === Module 8932: AvatarDecorationProductPreview ===
 
-// Module 8755 (AvatarDecorationProductPreview)
+// Module 8932 (AvatarDecorationProductPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -11,9 +11,9 @@ let closure_4 = createCacheKey.createStyles({ fullSizePreview: { flex: 1, alignI
 const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
 
 export default function AvatarDecorationProductPreview(product) {
-  let obj = require(8674) /* useCurrentUser */;
+  let obj = require(8851) /* useCurrentUser */;
   const currentUser = obj.useCurrentUser();
-  let obj1 = require(8049) /* firstAvatarDecoration */;
+  let obj1 = require(8382) /* firstAvatarDecoration */;
   const firstAvatarDecoration = obj1.useShopProductItems(product.product).firstAvatarDecoration;
   let tmp5 = null;
   if (null != firstAvatarDecoration) {

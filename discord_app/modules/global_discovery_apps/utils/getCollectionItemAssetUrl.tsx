@@ -1,6 +1,6 @@
-// === Module 11312: getCollectionItemAssetUrl ===
+// === Module 11422: getCollectionItemAssetUrl ===
 
-// Module 11312 (getCollectionItemAssetUrl)
+// Module 11422 (getCollectionItemAssetUrl)
 import { Endpoints } from "ME";
 
 let c3;

@@ -1,6 +1,6 @@
-// === Module 5852: addEntitlement ===
+// === Module 6758: addEntitlement ===
 
-// Module 5852 (addEntitlement)
+// Module 6758 (addEntitlement)
 import createFromServer from "createFromServer";
 import setLibraryApplications from "setLibraryApplications";
 import addSku from "addSku";
@@ -202,8 +202,8 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationI
     }
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {
-      tmp13 = !require(4237) /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
-      const obj3 = require(4237) /* getComboId */;
+      tmp13 = !require(4299) /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
+      const obj3 = require(4299) /* getComboId */;
     }
     let tmp16 = !tmp13;
     if (tmp13) {

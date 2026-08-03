@@ -1,13 +1,13 @@
-// === Module 15602: trackFriendsListViewed ===
+// === Module 15668: trackFriendsListViewed ===
 
-// Module 15602 (trackFriendsListViewed)
+// Module 15668 (trackFriendsListViewed)
 import { AnalyticEvents } from "ME";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");
 
 export default function trackFriendsListViewed(source) {
   let str = source.tab_opened;
-  const tmp = importDefault(15603)();
+  const tmp = importDefault(15669)();
   let obj = importDefault(698);
   obj = { tab_opened: str, source: source.source };
   const merged = Object.assign(tmp);
@@ -31,5 +31,5 @@ export default function trackFriendsListViewed(source) {
     num2 = 0;
   }
   obj[3] = num2;
-  require(5729) /* isClickstreamEnabled */.trackClickstream(AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM, obj);
+  require(6823) /* isClickstreamEnabled */.trackClickstream(AnalyticEvents.FRIENDS_LIST_VIEWED_CLICKSTREAM, obj);
 };

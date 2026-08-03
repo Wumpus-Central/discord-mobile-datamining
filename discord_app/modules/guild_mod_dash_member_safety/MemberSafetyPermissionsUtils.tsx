@@ -1,6 +1,6 @@
-// === Module 6066: getContextForPermission ===
+// === Module 5765: getContextForPermission ===
 
-// Module 6066 (getContextForPermission)
+// Module 5765 (getContextForPermission)
 import _slicedToArray from "_slicedToArray";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

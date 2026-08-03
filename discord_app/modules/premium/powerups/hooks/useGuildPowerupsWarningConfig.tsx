@@ -1,6 +1,6 @@
-// === Module 11666: useGuildPowerupsWarningConfig ===
+// === Module 11771: useGuildPowerupsWarningConfig ===
 
-// Module 11666 (useGuildPowerupsWarningConfig)
+// Module 11771 (useGuildPowerupsWarningConfig)
 import noop from "noop";
 import handleModifyingAppliedBoostStart from "handleModifyingAppliedBoostStart";
 

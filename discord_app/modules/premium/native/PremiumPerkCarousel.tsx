@@ -1,6 +1,6 @@
-// === Module 12505: PremiumPerkCarousel ===
+// === Module 12602: PremiumPerkCarousel ===
 
-// Module 12505 (PremiumPerkCarousel)
+// Module 12602 (PremiumPerkCarousel)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

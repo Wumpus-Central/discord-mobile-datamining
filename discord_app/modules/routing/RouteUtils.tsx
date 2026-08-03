@@ -1,6 +1,6 @@
-// === Module 4028: RouteParam ===
+// === Module 4090: RouteParam ===
 
-// Module 4028 (RouteParam)
+// Module 4090 (RouteParam)
 import { PSEUDO_GUILD_IDS } from "INVITE";
 import { isStaticChannelRoute } from "set";
 

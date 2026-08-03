@@ -1,6 +1,6 @@
-// === Module 4094: prototype ===
+// === Module 4156: prototype ===
 
-// Module 4094 (prototype)
+// Module 4156 (prototype)
 import "set";
 
 const prototype = function StripeError(error) {

@@ -1,6 +1,6 @@
-// === Module 10140: useCanSearchForumPostsByChannelId ===
+// === Module 10279: useCanSearchForumPostsByChannelId ===
 
-// Module 10140 (useCanSearchForumPostsByChannelId)
+// Module 10279 (useCanSearchForumPostsByChannelId)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";

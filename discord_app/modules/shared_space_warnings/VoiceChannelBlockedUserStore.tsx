@@ -1,6 +1,6 @@
-// === Module 12804: init ===
+// === Module 12867: init ===
 
-// Module 12804 (init)
+// Module 12867 (init)
 import upsertRelationship from "upsertRelationship";
 import updateVoiceState from "updateVoiceState";
 import { Store } from "initialize";
@@ -46,8 +46,8 @@ function processUserInChannel(channelId, id) {
             delete tmp[tmp2];
           }
           if (flag3) {
-            const result = importDefault(12805).handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
-            const obj4 = importDefault(12805);
+            const result = importDefault(12868).handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
+            const obj4 = importDefault(12868);
           }
           return flag4;
         }

@@ -1,6 +1,6 @@
-// === Module 13552: ? ===
+// === Module 13615: ? ===
 
-// Module 13552
+// Module 13615
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 
@@ -9,7 +9,7 @@ const RPCErrors = ME.RPCErrors;
 let obj = {
   scope: require("RPC_SCOPE_CONFIG").RPC_LOCAL_SCOPE,
   validation(string) {
-    let obj = importDefault(10643)(string);
+    let obj = importDefault(10696)(string);
     obj = { type: null, id: null, format: null, size: null };
     const requiredResult = obj.required();
     const stringResult = string.string();
@@ -43,7 +43,7 @@ let obj = {
         let obj = { errorCode: null };
         obj[0] = RPCErrors.INVALID_USER;
         const _HermesInternal = HermesInternal;
-        let tmp14 = importDefault(10640);
+        let tmp14 = importDefault(10693);
         tmp14 = new tmp14(obj, "Invalid user id: " + id);
         throw tmp14;
       } else {
@@ -63,7 +63,7 @@ let obj = {
     if (null == text) {
       obj = { errorCode: null };
       obj[0] = RPCErrors.INVALID_COMMAND;
-      const tmp10 = new importDefault(10640)(obj, "No valid type.");
+      const tmp10 = new importDefault(10693)(obj, "No valid type.");
       throw tmp10;
     } else {
       const _fetch = fetch;

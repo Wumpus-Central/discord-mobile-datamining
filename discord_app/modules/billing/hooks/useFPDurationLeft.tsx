@@ -1,6 +1,6 @@
-// === Module 12511: roundFPCountdownUnits ===
+// === Module 12604: roundFPCountdownUnits ===
 
-// Module 12511 (roundFPCountdownUnits)
+// Module 12604 (roundFPCountdownUnits)
 function roundFPCountdownUnits(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);
@@ -97,7 +97,7 @@ export default function useFPDurationLeft(toDate) {
     obj2[1] = require(1236) /* getSystemLocale */.t.SFU7QN;
     obj2[2] = require(1236) /* getSystemLocale */.t.Y4FNdL;
   }
-  roundFPCountdownUnits(importDefault(6237)(toDate.toDate(), 60000));
+  roundFPCountdownUnits(importDefault(6800)(toDate.toDate(), 60000));
 };
 export const CountDownMessageTypes = obj;
 export { roundFPCountdownUnits };

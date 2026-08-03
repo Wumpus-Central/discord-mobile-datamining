@@ -1,6 +1,6 @@
-// === Module 11820: ? ===
+// === Module 11922: ? ===
 
-// Module 11820
+// Module 11922
 import { View } from "Button";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateWithLatestInvite from "updateWithLatestInvite";

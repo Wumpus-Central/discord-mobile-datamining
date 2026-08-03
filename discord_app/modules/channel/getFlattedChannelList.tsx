@@ -1,6 +1,6 @@
-// === Module 5132: getFlattenedChannelList ===
+// === Module 5194: getFlattenedChannelList ===
 
-// Module 5132 (getFlattenedChannelList)
+// Module 5194 (getFlattenedChannelList)
 const result = require("set").fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
 
 export default function getFlattenedChannelList(arg0, arg1) {

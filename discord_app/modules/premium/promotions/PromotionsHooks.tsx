@@ -1,6 +1,6 @@
-// === Module 12518: useEligibleActiveOutboundPromotions ===
+// === Module 12611: useEligibleActiveOutboundPromotions ===
 
-// Module 12518 (useEligibleActiveOutboundPromotions)
+// Module 12611 (useEligibleActiveOutboundPromotions)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";

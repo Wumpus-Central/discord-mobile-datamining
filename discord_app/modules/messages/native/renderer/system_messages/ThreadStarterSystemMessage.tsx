@@ -1,6 +1,6 @@
-// === Module 7799: createThreadStarterSystemMessage ===
+// === Module 7917: createThreadStarterSystemMessage ===
 
-// Module 7799 (createThreadStarterSystemMessage)
+// Module 7917 (createThreadStarterSystemMessage)
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";
 import { MessageTypes } from "ME";
@@ -17,7 +17,7 @@ export const createThreadStarterSystemMessage = function createThreadStarterSyst
     const obj = { content: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[0] = intl.string(require(1236) /* getSystemLocale */.t.OCs36J);
-    const merged = Object.assign(importDefault(7751)(message));
+    const merged = Object.assign(importDefault(7870)(message));
     tmp5 = obj;
   }
   return tmp5;

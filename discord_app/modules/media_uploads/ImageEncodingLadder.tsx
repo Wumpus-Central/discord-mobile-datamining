@@ -1,6 +1,6 @@
-// === Module 4760: getAdaptiveImageCompressionQuality ===
+// === Module 4822: getAdaptiveImageCompressionQuality ===
 
-// Module 4760 (getAdaptiveImageCompressionQuality)
+// Module 4822 (getAdaptiveImageCompressionQuality)
 import { CompressionQuality } from "ME";
 
 function getAdaptiveImageCompressionQuality(outer1_13, ADAPTIVE_COMPRESSION_CONFIG) {

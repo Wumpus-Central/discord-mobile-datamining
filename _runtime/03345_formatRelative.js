@@ -1,9 +1,23 @@
 // === Module 3345: formatRelative ===
 
 // Module 3345 (formatRelative)
-let closure_0 = { lastWeek: "\u5148\u9031\u306Eeeee\u306Ep", yesterday: "\u6628\u65E5\u306Ep", today: "\u4ECA\u65E5\u306Ep", tomorrow: "\u660E\u65E5\u306Ep", nextWeek: "\u7FCC\u9031\u306Eeeee\u306Ep", other: "P" };
+let closure_0 = ["ned\u011Bli", "pond\u011Bl\u00ED", "\u00FAter\u00FD", "st\u0159edu", "\u010Dtvrtek", "p\u00E1tek", "sobotu"];
+let closure_1 = {
+  lastWeek: "'posledn\u00ED' eeee 've' p",
+  yesterday: "'v\u010Dera v' p",
+  today: "'dnes v' p",
+  tomorrow: "'z\u00EDtra v' p",
+  nextWeek(arg0) {
+    return "'v " + table[arg0.getUTCDay(arg0)] + " o' p";
+  },
+  other: "P"
+};
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return table[arg0];
+export default function formatRelative(arg0, arg1) {
+  let tmpResult = tmp;
+  if (typeof table2[arg0] !== "HAS_APPLICATION") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
 };
 export default exports.default;

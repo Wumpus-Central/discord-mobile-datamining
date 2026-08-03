@@ -1,6 +1,6 @@
-// === Module 14627: useCollectiblesShopDeepLinkProps ===
+// === Module 14694: useCollectiblesShopDeepLinkProps ===
 
-// Module 14627 (useCollectiblesShopDeepLinkProps)
+// Module 14694 (useCollectiblesShopDeepLinkProps)
 import { useMemo } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import items from "items";

@@ -1,6 +1,6 @@
-// === Module 12287: ImageButton ===
+// === Module 12385: ImageButton ===
 
-// Module 12287 (ImageButton)
+// Module 12385 (ImageButton)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -15,14 +15,14 @@ let c3 = importAllResult;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
-  let MEDIUM_BUTTON_PADDING = require(4608) /* MINIMUM_HIT_AREA */.LARGE_BUTTON_PADDING;
+  let MEDIUM_BUTTON_PADDING = require(4670) /* MINIMUM_HIT_AREA */.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4608).SMALL_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = tmp(4670).SMALL_BUTTON_PADDING;
   } else if ("md" === arg0) {
-    MEDIUM_BUTTON_PADDING = tmp(4608).MEDIUM_BUTTON_PADDING;
+    MEDIUM_BUTTON_PADDING = tmp(4670).MEDIUM_BUTTON_PADDING;
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
-  const buttonBorderRadius = require(4608) /* MINIMUM_HIT_AREA */.getButtonBorderRadius(arg0);
+  const buttonBorderRadius = require(4670) /* MINIMUM_HIT_AREA */.getButtonBorderRadius(arg0);
   let obj = { paddingBottom: importDefault(712).space.PX_4, gap: importDefault(712).space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
   let num = 0;
   if (arg2) {
@@ -30,11 +30,11 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   }
   obj = { labelPressable: obj, pill: null, imageWrapper: null, image: null, imageDim: null };
   obj[4] = num;
-  const tmpResult = require(4608) /* MINIMUM_HIT_AREA */;
-  obj[1] = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: require(4608) /* MINIMUM_HIT_AREA */.BUTTON_BORDER_WIDTH, outlineColor: importDefault(712).colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
+  const tmpResult = require(4670) /* MINIMUM_HIT_AREA */;
+  obj[1] = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: require(4670) /* MINIMUM_HIT_AREA */.BUTTON_BORDER_WIDTH, outlineColor: importDefault(712).colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
   obj[2] = { width: sum, height: sum, position: "relative" };
   obj[3] = { width: sum, height: sum };
-  const obj1 = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: require(4608) /* MINIMUM_HIT_AREA */.BUTTON_BORDER_WIDTH, outlineColor: importDefault(712).colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
+  const obj1 = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: require(4670) /* MINIMUM_HIT_AREA */.BUTTON_BORDER_WIDTH, outlineColor: importDefault(712).colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
   obj[4] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: importDefault(712).colors.REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND, borderRadius: buttonBorderRadius };
   return obj;
 });

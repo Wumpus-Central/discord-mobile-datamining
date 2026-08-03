@@ -1,6 +1,6 @@
-// === Module 11832: LoginHandoffSource ===
+// === Module 5815: LoginHandoffSource ===
 
-// Module 11832 (LoginHandoffSource)
+// Module 5815 (LoginHandoffSource)
 import { StaticChannelRoute } from "set";
 import { UserSettingsPath } from "MAX_FAVORITES";
 
@@ -10,7 +10,7 @@ const result = require("ME").fileFinishedImporting("modules/auth/LoginHandoffSou
 export const LoginHandoffSource = obj;
 export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(closure_0) {
   const str = decodeURIComponent(closure_0);
-  const obj = require(4385) /* ME */;
+  const obj = require(4447) /* ME */;
   const tryParseChannelPathResult = obj.tryParseChannelPath(str);
   if (null != tryParseChannelPathResult) {
     if (tryParseChannelPathResult.channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {

@@ -66,8 +66,8 @@ arg5.spotlightIntegration = function spotlightIntegration(arg0) {
           const items1 = [...arg0[1]];
           items[1] = items1.filter((arg0) => {
             const content_type = arg0[0].content_type;
-            let tmp = typeof content_type === "__FORMATJS_LISTFORMAT_DATA__";
-            if (typeof content_type !== "__FORMATJS_LISTFORMAT_DATA__") {
+            let tmp = typeof content_type === "ge";
+            if (typeof content_type !== "ge") {
               const content_type2 = arg0[0].content_type;
               tmp = !content_type2.startsWith("image");
             }

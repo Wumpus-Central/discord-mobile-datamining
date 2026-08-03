@@ -1,6 +1,6 @@
-// === Module 12333: showMediaMessagePreviewActionSheet ===
+// === Module 12431: showMediaMessagePreviewActionSheet ===
 
-// Module 12333 (showMediaMessagePreviewActionSheet)
+// Module 12431 (showMediaMessagePreviewActionSheet)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -14,13 +14,13 @@ export default function showMediaMessagePreviewActionSheet(message) {
     if (null != message) {
       user = user.getUser(message.author.id);
       if (null != user) {
-        let obj = importDefault(4161);
+        let obj = importDefault(4223);
         obj = { channel: null, message: null, user: null, closeMediaModal: null };
         obj[0] = channel;
         obj[1] = message;
         obj[2] = user;
         obj[3] = message.closeMediaModal;
-        obj.openLazy(require(1959) /* asyncRequireImpl */(12334, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
+        obj.openLazy(require(1959) /* asyncRequireImpl */(12432, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
       }
     }
   }

@@ -1,6 +1,6 @@
-// === Module 8653: GameProfileSummary ===
+// === Module 8830: GameProfileSummary ===
 
-// Module 8653 (GameProfileSummary)
+// Module 8830 (GameProfileSummary)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

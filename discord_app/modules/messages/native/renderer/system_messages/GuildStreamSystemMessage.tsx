@@ -1,6 +1,6 @@
-// === Module 7794: createGuildStreamSystemMessage ===
+// === Module 7912: createGuildStreamSystemMessage ===
 
-// Module 7794 (createGuildStreamSystemMessage)
+// Module 7912 (createGuildStreamSystemMessage)
 import { StreamTypes } from "StreamIssueReportReasons";
 
 const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");
@@ -14,10 +14,10 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
     messageReference = {};
   }
   ({ channel_id, guild_id } = messageReference);
-  const tmp3 = importDefault(7766)(message);
-  let obj1 = require(7748) /* getMessageAuthorWithProcessedColor */;
+  const tmp3 = importDefault(7885)(message);
+  let obj1 = require(7867) /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
-  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7750)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
+  let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7869)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
   obj1 = { ended: tmp4, content: null };
   const intl = require(1236) /* getSystemLocale */.intl;
@@ -35,6 +35,6 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
     formatToPartsResult = formatToParts(t.dMmbGk, obj3);
   }
   obj1[1] = formatToPartsResult;
-  const merged2 = Object.assign(importDefault(7751)(roleStyle));
+  const merged2 = Object.assign(importDefault(7870)(roleStyle));
   return obj1;
 };

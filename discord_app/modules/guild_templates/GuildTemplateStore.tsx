@@ -1,6 +1,6 @@
-// === Module 5720: handleGuildTemplateResolveSuccess ===
+// === Module 6816: handleGuildTemplateResolveSuccess ===
 
-// Module 5720 (handleGuildTemplateResolveSuccess)
+// Module 6816 (handleGuildTemplateResolveSuccess)
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import { Store } from "initialize";
 
@@ -17,7 +17,7 @@ function handleGuildTemplateResolveSuccess(guildTemplate) {
       obj[0] = code;
       obj[1] = GuildTemplateStates.RESOLVING;
     }
-    const tmp7 = importDefault(5722)(guildTemplate);
+    const tmp7 = importDefault(5838)(guildTemplate);
     for (const key10019 in tmp7) {
       let tmp17 = key10019;
       obj[key10019] = tmp7[key10019];

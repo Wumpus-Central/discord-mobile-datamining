@@ -1,6 +1,6 @@
-// === Module 9230: AuthNavbarPlaceholder ===
+// === Module 9403: AuthNavbarPlaceholder ===
 
-// Module 9230 (AuthNavbarPlaceholder)
+// Module 9403 (AuthNavbarPlaceholder)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -14,5 +14,5 @@ const result = require("createCacheKey").fileFinishedImporting("modules/auth/nat
 
 export default function AuthNavbarPlaceholder() {
   const tmp = createCacheKey();
-  return jsx(require(5147) /* HeaderBackImage */.FauxHeader, { style: createCacheKey().navBar, children: null });
+  return jsx(require(5209) /* HeaderBackImage */.FauxHeader, { style: createCacheKey().navBar, children: null });
 };

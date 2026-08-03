@@ -1,6 +1,6 @@
-// === Module 5742: length ===
+// === Module 6837: length ===
 
-// Module 5742 (length)
+// Module 6837 (length)
 class Lru {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);

@@ -1,6 +1,6 @@
-// === Module 11400: useRenderPollAnswerImage ===
+// === Module 11510: useRenderPollAnswerImage ===
 
-// Module 11400 (useRenderPollAnswerImage)
+// Module 11510 (useRenderPollAnswerImage)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";
@@ -30,7 +30,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       status = mediaAttachmentState.status;
     }
   }
-  const tmp7 = status === _require(11394).PollMediaUploadAttachmentStatus.PREPARING;
+  const tmp7 = status === _require(11504).PollMediaUploadAttachmentStatus.PREPARING;
   map = tmp7;
   obj = {
     renderImage: React.useMemo(() => {

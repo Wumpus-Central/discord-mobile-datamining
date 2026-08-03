@@ -1,6 +1,6 @@
-// === Module 8189: ? ===
+// === Module 8496: ? ===
 
-// Module 8189
+// Module 8496
 import generateHydrationId from "generateHydrationId";
 import { Endpoints } from "ME";
 
@@ -342,7 +342,7 @@ export default {
     })();
   },
   fetchForStatusNotification(arg0) {
-    let obj = require(8188) /* generateHydrationId */;
+    let obj = require(8495) /* generateHydrationId */;
     if (obj.icymiEnabled("fetchInitialStatus")) {
       obj = { type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: null };
       obj[1] = arg0;

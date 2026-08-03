@@ -1,6 +1,6 @@
-// === Module 11866: DiscoverabilityActionSheet ===
+// === Module 11962: DiscoverabilityActionSheet ===
 
-// Module 11866 (DiscoverabilityActionSheet)
+// Module 11962 (DiscoverabilityActionSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ContactSyncModes from "ContactSyncModes";

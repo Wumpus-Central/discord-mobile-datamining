@@ -1,6 +1,6 @@
-// === Module 11577: usePermissions ===
+// === Module 11684: usePermissions ===
 
-// Module 11577 (usePermissions)
+// Module 11684 (usePermissions)
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,6 @@
-// === Module 14294: toggle ===
+// === Module 14361: toggle ===
 
-// Module 14294 (toggle)
+// Module 14361 (toggle)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { Features } from "DesktopSources";
 import createToggle from "createToggle";
@@ -20,7 +20,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
   },
   onValueChange(arg0) {
-    return importDefault(8847).setSidechainCompression(arg0);
+    return importDefault(9024).setSidechainCompression(arg0);
   },
   useDescription() {
     const intl = require(1236) /* getSystemLocale */.intl;

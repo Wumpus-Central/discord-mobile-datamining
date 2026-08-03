@@ -1,6 +1,6 @@
-// === Module 15962: Permissions ===
+// === Module 16026: Permissions ===
 
-// Module 15962 (Permissions)
+// Module 16026 (Permissions)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
 

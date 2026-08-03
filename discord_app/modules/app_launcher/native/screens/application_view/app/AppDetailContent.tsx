@@ -1,14 +1,14 @@
-// === Module 11317: PlaceholderCommandRow ===
+// === Module 11427: PlaceholderCommandRow ===
 
-// Module 11317 (PlaceholderCommandRow)
+// Module 11427 (PlaceholderCommandRow)
 import ME from "ME";
-import PermissionOverwriteType from "PermissionOverwriteType";
-import { View } from "useSafeAreaInsets";
+import findCommandInSection from "findCommandInSection";
+import { View } from "getSystemLocale";
 import getIndexKey from "getIndexKey";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { AnalyticEvents } from "ME";
 import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_12 } from "TRUE_OPTION_NAME";
-import jsxProd from "getShelfBadgeTypeIfActive";
+import jsxProd from "useSortedSectionCommands";
 import createCacheKey from "createCacheKey";
 
 let closure_14;
@@ -27,9 +27,9 @@ function PlaceholderCommandRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = createCacheKey();
-  let obj = require(11242) /* usePlaceholderWidth */;
+  let obj = require(11353) /* usePlaceholderWidth */;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = require(11242) /* usePlaceholderWidth */;
+  let obj1 = require(11353) /* usePlaceholderWidth */;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
   obj = { label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null };
   obj = { style: null };
@@ -38,42 +38,33 @@ function PlaceholderCommandRow(isFirstRow) {
   obj1[0] = "" + placeholderWidth + "%";
   items[1] = obj1;
   obj[0] = items;
-  obj[0] = callback4(View, obj);
+  obj[0] = callback2(View, obj);
   const obj2 = { style: null };
   const items1 = [tmp.loadingTextPlaceholderSmall, { width: "" + placeholderWidth1 + "%" }];
   obj2[0] = items1;
-  obj[1] = callback4(View, obj2);
+  obj[1] = callback2(View, obj2);
   obj[3] = flag;
   obj[4] = flag2;
-  return callback4(require(5224) /* TableRowInner */.TableRow, obj);
+  return callback2(require(5286) /* TableRowInner */.TableRow, obj);
 }
 class CommandRow {
   constructor(arg0) {
     command = global.command;
-    f108171 = command;
+    f108424 = command;
     ({ onPressCommand, context } = global);
     ({ section, location, sectionName } = global);
     entrypoint = undefined;
+    hasOptions = undefined;
+    onPressSend = undefined;
+    tmp2 = section;
     ({ isFirstRow, isLastRow, onExecuteCommand, installOnDemand, icon } = global);
+    tmp = f108424;
     obj = require("context");
     entrypoint = obj.useAppLauncherContext().entrypoint;
-    tmp = useUserIndexState(true, true);
-    tmp2 = useContextIndexState(context, true, true);
-    tmp3 = jsx;
+    tmp3 = onPressSend(true, true);
+    tmp4 = hasOptions(context, true, true);
+    obj2 = require("CommandRowIcon");
     obj = {
-      start: isFirstRow,
-      end: isLastRow,
-      label: command.displayName,
-      labelLineClamp: 1,
-      subLabel: command.displayDescription,
-      subLabelLineClamp: 1,
-      icon,
-      onPress() {
-            return callback2(closure_0, closure_3, ME);
-          },
-      trailing: null
-    };
-    obj1 = {
       command,
       context,
       beforeExecuteCommand() {
@@ -88,10 +79,9 @@ class CommandRow {
       sectionName: null
     };
     fn = undefined;
-    tmp4 = require("CommandRowIcon");
     if (installOnDemand) {
       tmp5 = location;
-      f108171 = location((arg0) => {
+      f108424 = location((arg0) => {
         let closure_0 = arg0;
         let c2 = 0;
         let c3 = 0;
@@ -175,10 +165,48 @@ class CommandRow {
         return applyArgumentsResult;
       };
     }
-    obj1[4] = fn;
-    obj1[5] = sectionName;
-    obj[8] = tmp3(tmp4, obj1);
-    return tmp3(require("TableRowInner").TableRow, obj);
+    obj[4] = fn;
+    obj[5] = sectionName;
+    commandRowSend = obj2.useCommandRowSend(obj);
+    hasOptions = commandRowSend.hasOptions;
+    onPressSend = commandRowSend.onPressSend;
+    items = [];
+    items[0] = hasOptions;
+    items1 = [];
+    items1[0] = onPressSend;
+    memo = sectionName.useMemo(() => {
+      let tmp;
+      if (!hasOptions) {
+        const obj = { name: "send", label: null };
+        const intl = callback(outer1_3[17]).intl;
+        obj[1] = intl.string(callback(outer1_3[17]).t.TXNS7S);
+        const items = [obj];
+        tmp = items;
+      }
+      return tmp;
+    }, items);
+    callback = sectionName.useCallback((nativeEvent) => {
+      if ("send" === nativeEvent.nativeEvent.actionName) {
+        onPressSend();
+      }
+    }, items1);
+    obj1 = {
+      start: isFirstRow,
+      end: isLastRow,
+      label: command.displayName,
+      labelLineClamp: 1,
+      subLabel: command.displayDescription,
+      subLabelLineClamp: 1,
+      icon,
+      onPress() {
+            return callback2(closure_0, closure_3, ME);
+          },
+      accessibilityActions: memo,
+      onAccessibilityAction: callback,
+      trailing: null
+    };
+    obj1[10] = jsx(require("CommandRowIcon"), { hasOptions, sending: commandRowSend.sending, onPressSend });
+    return jsx(require("TableRowInner").TableRow, obj1);
   }
 }
 ({ useContextIndexState: error, useUserIndexState: metroImportAll } = getIndexKey);
@@ -233,7 +261,7 @@ export default function AppDetailContent(context) {
   let filterSection;
   let sectionDescriptors;
   let loading;
-  let callback4;
+  let callback2;
   commands = undefined;
   let c15;
   let callback;
@@ -247,10 +275,10 @@ export default function AppDetailContent(context) {
   const requiredAppLauncherContext = obj.useRequiredAppLauncherContext();
   chatInputRef = requiredAppLauncherContext.chatInputRef;
   keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
-  let obj1 = installOnDemand(sectionName[18]);
+  let obj1 = installOnDemand(sectionName[19]);
   obj = { context, filters: null, options: null, allowFetch: true };
   obj = { commandTypes: null };
-  let items = [context(sectionName[19]).ApplicationCommandType.CHAT];
+  let items = [context(sectionName[20]).ApplicationCommandType.CHAT];
   obj[0] = items;
   obj[1] = obj;
   obj1 = { placeholderCount: 0, limit: loading, includeFrecency: true, allowApplicationState: installOnDemand, installOnDemand, applicationId: application.id };
@@ -259,7 +287,7 @@ export default function AppDetailContent(context) {
   filterSection = discovery.filterSection;
   sectionDescriptors = discovery.sectionDescriptors;
   loading = discovery.loading;
-  const tmp7 = application(sectionName[20])({ sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection });
+  const tmp7 = application(sectionName[21])({ sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection });
   ({ setSortOrder: c13, commands } = tmp7);
   let canSort = tmp7.canSort;
   let result = chatInputRef(true, true).result;
@@ -276,7 +304,7 @@ export default function AppDetailContent(context) {
     tmp11 = tmp9;
   }
   if (tmp11) {
-    let tmp4Result = tmp4(tmp3[21]);
+    let tmp4Result = tmp4(tmp3[22]);
     tmp11 = !tmp4Result.isEmbeddedApp(application);
   }
   let items1 = [loading, commands, context.type];
@@ -300,9 +328,9 @@ export default function AppDetailContent(context) {
   callback = onCommandExecuted.useCallback((command, section) => {
     let APP_LAUNCHER_APPLICATION_VIEW = arg2;
     if (arg2 === undefined) {
-      APP_LAUNCHER_APPLICATION_VIEW = context(sectionName[22]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
+      APP_LAUNCHER_APPLICATION_VIEW = context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
     }
-    let obj = context(sectionName[23]);
+    let obj = context(sectionName[24]);
     obj = { location: APP_LAUNCHER_APPLICATION_VIEW, context, command, section, sectionDescriptors, query: "", navigation: c15, installOnDemand, sectionName, entrypoint, onCommandExecuted };
     const result = obj.handleApplicationCommandSelected(obj);
   }, items3);
@@ -319,11 +347,11 @@ export default function AppDetailContent(context) {
   }, items4);
   found = sectionDescriptors.find((id) => id.id === application.id);
   const items5 = [callback, commands.length, context, callback1, found, installOnDemand, sectionName];
-  const sum = application(sectionName[17])().bottom + keyboardCloseReasonRef;
+  const sum = application(sectionName[18])().bottom + keyboardCloseReasonRef;
   c19 = sum;
   const items6 = [application, , , ];
   ({ monetizationDisclosureContainerStyle: arr8[1], monetizationDisclosureStyle: arr8[2], monetizationDisclosureTextStyle: arr8[3] } = tmp);
-  const callback2 = onCommandExecuted.useCallback((arg0) => {
+  callback2 = onCommandExecuted.useCallback((arg0) => {
     let index;
     let item;
     ({ item, index } = arg0);
@@ -342,7 +370,7 @@ export default function AppDetailContent(context) {
       obj[4] = context;
       obj[5] = callback1;
       obj[6] = found;
-      obj[7] = context(sectionName[22]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
+      obj[7] = context(sectionName[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
       obj[8] = installOnDemand;
       obj[9] = sectionName;
       return _undefined2(outer1_20, obj);
@@ -351,24 +379,24 @@ export default function AppDetailContent(context) {
     }
   }, items5);
   const memo1 = onCommandExecuted.useMemo(() => {
-    let obj = context(sectionName[24]);
+    let obj = context(sectionName[25]);
     let isAndroidResult = obj.isAndroid();
     if (isAndroidResult) {
-      let tmpResult = tmp(tmp2[21]);
+      let tmpResult = tmp(tmp2[22]);
       isAndroidResult = tmpResult.isApplicationMonetizedWithIAP(application);
     }
-    tmpResult = tmp(tmp2[21]);
+    tmpResult = tmp(tmp2[22]);
     const result = tmpResult.isApplicationAdSupported(application);
     let tmp6 = null;
     if (result) {
       obj = { style: null, children: null };
       obj[0] = _undefined.monetizationDisclosureStyle;
-      const items = [_undefined2(tmp(tmp2[25]).BillIcon, { size: "sm", color: "icon-muted" }), ];
+      const items = [_undefined2(tmp(tmp2[26]).BillIcon, { size: "sm", color: "icon-muted" }), ];
       obj = { style: null, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       obj[0] = _undefined.monetizationDisclosureTextStyle;
-      const intl = tmp(tmp2[27]).intl;
-      obj[4] = intl.string(tmp(tmp2[27]).t["5khEk8"]);
-      items[1] = _undefined2(tmp(tmp2[26]).Text, obj);
+      const intl = tmp(tmp2[17]).intl;
+      obj[4] = intl.string(tmp(tmp2[17]).t["5khEk8"]);
+      items[1] = _undefined2(tmp(tmp2[27]).Text, obj);
       obj[1] = items;
       tmp6 = commands(onAauth2Cancel, obj);
     }
@@ -379,9 +407,9 @@ export default function AppDetailContent(context) {
       const items1 = [_undefined2(tmp(tmp2[28]).ShopIcon, { size: "sm", color: "icon-muted" }), ];
       const obj2 = { style: null, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       obj2[0] = _undefined.monetizationDisclosureTextStyle;
-      const intl2 = tmp(tmp2[27]).intl;
-      obj2[4] = intl2.string(tmp(tmp2[27]).t["8z5B2U"]);
-      items1[1] = _undefined2(tmp(tmp2[26]).Text, obj2);
+      const intl2 = tmp(tmp2[17]).intl;
+      obj2[4] = intl2.string(tmp(tmp2[17]).t["8z5B2U"]);
+      items1[1] = _undefined2(tmp(tmp2[27]).Text, obj2);
       obj1[1] = items1;
       tmp11 = commands(onAauth2Cancel, obj1);
     }
@@ -407,7 +435,7 @@ export default function AppDetailContent(context) {
   const memo3 = onCommandExecuted.useMemo(() => ({ bottom: c19 }), items8);
   tmp4Result = tmp4(tmp3[29]);
   const appLauncherFlashListProps = tmp4Result.useAppLauncherFlashListProps();
-  const items9 = [callback4(onAauth2Cancel, { style: tmp.headerSpacer }), , , , , , ];
+  const items9 = [callback2(onAauth2Cancel, { style: tmp.headerSpacer }), , , , , , ];
   let obj2 = { sectionId: application.id, commandsByActiveSection: discovery.commandsByActiveSection };
   let obj3 = { style: tmp.headerSpacer };
   const tmp2Result = application(sectionName[29]);
@@ -432,7 +460,7 @@ export default function AppDetailContent(context) {
   if (null != memo1) {
     num3 = tmp2(tmp3[10]).space.PX_16;
   }
-  items9[2] = callback4(context(sectionName[32]).Spacer, { size: num3 });
+  items9[2] = callback2(context(sectionName[32]).Spacer, { size: num3 });
   items9[3] = memo1;
   tmp26Result = commands.length > 1 && !loading;
   if (tmp26Result) {
@@ -457,12 +485,12 @@ export default function AppDetailContent(context) {
       const obj7 = { style: null, children: null };
       obj7[0] = tmp.noCommandsTextContainer;
       const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
-      let intl = tmp4(tmp3[27]).intl;
-      obj8[2] = intl.string(tmp4(tmp3[27]).t["w8+YDM"]);
-      obj7[1] = tmp26(tmp4(tmp3[26]).Text, obj8);
+      let intl = tmp4(tmp3[17]).intl;
+      obj8[2] = intl.string(tmp4(tmp3[17]).t["w8+YDM"]);
+      obj7[1] = tmp26(tmp4(tmp3[27]).Text, obj8);
       tmp26Result1 = tmp26(tmp28, obj7);
     }
-    tmp4Result2 = tmp4(tmp3[21]);
+    tmp4Result2 = tmp4(tmp3[22]);
   }
   items9[5] = tmp26Result1;
   let tmp24Result = null;
@@ -474,9 +502,9 @@ export default function AppDetailContent(context) {
       const obj10 = { style: null, children: null };
       obj10[0] = tmp.commandsHeaderTextContainer;
       const obj11 = { variant: "text-md/medium", color: "text-default", children: null };
-      let intl2 = tmp4(tmp3[27]).intl;
-      obj11[2] = intl2.string(tmp4(tmp3[27]).t.GOXqks);
-      obj10[1] = tmp26(tmp4(tmp3[26]).Heading, obj11);
+      let intl2 = tmp4(tmp3[17]).intl;
+      obj11[2] = intl2.string(tmp4(tmp3[17]).t.GOXqks);
+      obj10[1] = tmp26(tmp4(tmp3[27]).Heading, obj11);
       const items10 = [tmp26(tmp28, obj10), ];
       if (canSort) {
         const obj12 = { sortOrder: null, onSortOptionPress: null };
@@ -491,7 +519,7 @@ export default function AppDetailContent(context) {
       tmp24Result = tmp24(tmp28, obj9);
     }
   }
-  tmp4Result1 = context(sectionName[21]);
+  tmp4Result1 = context(sectionName[22]);
   items9[6] = tmp24Result;
   let str3;
   if (loading) {
@@ -499,8 +527,8 @@ export default function AppDetailContent(context) {
   }
   const obj14 = { children: null };
   const items11 = [
-    callback4(tmp2Result, { ListHeaderComponent: commands(c15, { children: items9 }), contentContainerStyle: memo2, scrollIndicatorInsets: memo3, renderItem: callback2, data: memo, preserveScrollMomentum: true, lockableScrollableContentOffsetY, automaticallyAdjustsScrollIndicatorInsets: false, keyboardDismissMode: "none", animatedOnScroll: appLauncherFlashListProps.onScroll, ref: appLauncherFlashListProps.scrollerRef, simultaneousHandlers: appLauncherFlashListProps.gestureRef, animatedProps: appLauncherFlashListProps.animatedProps }, str3),
-    callback4(application(sectionName[9]), {
+    callback2(tmp2Result, { ListHeaderComponent: commands(c15, { children: items9 }), contentContainerStyle: memo2, scrollIndicatorInsets: memo3, renderItem: callback2, data: memo, preserveScrollMomentum: true, lockableScrollableContentOffsetY, automaticallyAdjustsScrollIndicatorInsets: false, keyboardDismissMode: "none", animatedOnScroll: appLauncherFlashListProps.onScroll, ref: appLauncherFlashListProps.scrollerRef, simultaneousHandlers: appLauncherFlashListProps.gestureRef, animatedProps: appLauncherFlashListProps.animatedProps }, str3),
+    callback2(application(sectionName[9]), {
       application,
       onPressBack,
       scrollOffsetY: lockableScrollableContentOffsetY,
@@ -515,7 +543,7 @@ export default function AppDetailContent(context) {
         if (current != null) {
           current.closeCustomKeyboard();
         }
-        obj = { location: tmp3(tmp[22]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU, application_id: application.id, section_name: sectionName, source: entrypoint };
+        obj = { location: tmp3(tmp[23]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU, application_id: application.id, section_name: sectionName, source: entrypoint };
         if (null == installAppProps.customInstallUrl) {
           let tmp3Result = tmp3(tmp[36]);
           tmp3Result.trackWithMetadata(sectionDescriptors.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj);

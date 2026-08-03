@@ -23,7 +23,7 @@ function validateTransformOrigin(arg0) {
       const reanimatedError2 = new require(1617) /* t */.ReanimatedError("Transform origin y-position must be a number or a percentage string. Passed value: " + obj2 + ".");
       throw reanimatedError2;
     }
-    if (typeof tmp30 === "__REMOTEDEV__") {
+    if (typeof tmp30 === "SENTRY_RELEASE") {
       const _HermesInternal3 = HermesInternal;
       const reanimatedError3 = new require(1617) /* t */.ReanimatedError("Transform origin z-position must be a number. Passed value: " + tmp30 + ".");
       throw reanimatedError3;
@@ -40,7 +40,7 @@ function processTransformOrigin(arg0) {
   if (!Array.isArray(arg0)) {
     items = ["50%", "50%", 0];
   }
-  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof arg0 !== "ge") {
     const obj = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;
     const items1 = ["50%", "50%", 0];
     let match = obj.exec(arg0);

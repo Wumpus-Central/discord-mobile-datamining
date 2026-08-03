@@ -1,6 +1,6 @@
-// === Module 5503: ActionSheetHeaderBar ===
+// === Module 5565: ActionSheetHeaderBar ===
 
-// Module 5503 (ActionSheetHeaderBar)
+// Module 5565 (ActionSheetHeaderBar)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -63,9 +63,9 @@ export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityL
   if (variant === undefined) {
     variant = "default";
   }
-  let obj = require(3897) /* map */;
+  let obj = require(3959) /* map */;
   const tmp3 = callback3(variant, importDefault(1474)().height, obj.useToken(importDefault(712).modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
-  let obj1 = require(4590) /* SCREEN_READER_ENABLED_GETTER */;
+  let obj1 = require(4652) /* SCREEN_READER_ENABLED_GETTER */;
   obj = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
   obj = { style: items, children: null };
   items = [tmp3.header, style];

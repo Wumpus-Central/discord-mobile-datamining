@@ -1,6 +1,6 @@
-// === Module 5209: _fetchMemberCountsFromBackend ===
+// === Module 5271: _fetchMemberCountsFromBackend ===
 
-// Module 5209 (_fetchMemberCountsFromBackend)
+// Module 5271 (_fetchMemberCountsFromBackend)
 import priv from "priv";
 import getRoleMemberCount from "getRoleMemberCount";
 import { Endpoints } from "ME";

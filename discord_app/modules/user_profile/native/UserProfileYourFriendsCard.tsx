@@ -1,6 +1,6 @@
-// === Module 15658: UserProfileYourFriendsCard ===
+// === Module 15723: UserProfileYourFriendsCard ===
 
-// Module 15658 (UserProfileYourFriendsCard)
+// Module 15723 (UserProfileYourFriendsCard)
 import _slicedToArray from "_slicedToArray";
 import ChevronSmallRightIcon from "ChevronSmallRightIcon";
 import { View } from "getSystemLocale";
@@ -50,9 +50,9 @@ export default function UserProfileYourFriendsCard(arg0) {
   const items1 = [upsertRelationship];
   stateFromStoresArray1 = _require(589).useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
   const obj2 = _require(589);
-  gameRelationshipsByType = _require(12068).useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  gameRelationshipsByType = _require(12164).useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = _undefined(8825).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = _undefined(9002).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -114,7 +114,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   obj = { accessibilityRole: "header", variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
   const intl2 = _require(1236).intl;
   obj[4] = intl2.string(_require(1236).t.TdEu5X);
-  const items5 = [callback(_require(4189).Text, obj), memo, callback(_require(5569).ChevronSmallRightIcon, { size: "sm" })];
+  const items5 = [callback(_require(4251).Text, obj), memo, callback(_require(5631).ChevronSmallRightIcon, { size: "sm" })];
   obj[5] = items5;
-  return callback2(_require(4721).PressableOpacity, obj);
+  return callback2(_require(4783).PressableOpacity, obj);
 };

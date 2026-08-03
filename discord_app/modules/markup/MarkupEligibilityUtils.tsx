@@ -1,6 +1,6 @@
-// === Module 7868: isMessageNewerThanImprovedMarkdownEpoch ===
+// === Module 7986: isMessageNewerThanImprovedMarkdownEpoch ===
 
-// Module 7868 (isMessageNewerThanImprovedMarkdownEpoch)
+// Module 7986 (isMessageNewerThanImprovedMarkdownEpoch)
 const result = require("set").fileFinishedImporting("modules/markup/MarkupEligibilityUtils.tsx");
 
 export const isMessageNewerThanImprovedMarkdownEpoch = function isMessageNewerThanImprovedMarkdownEpoch(timestamp) {

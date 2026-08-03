@@ -1,6 +1,6 @@
-// === Module 16701: AVErrorStreamViewHighPacketLossDefinition ===
+// === Module 16767: AVErrorStreamViewHighPacketLossDefinition ===
 
-// Module 16701 (AVErrorStreamViewHighPacketLossDefinition)
+// Module 16767 (AVErrorStreamViewHighPacketLossDefinition)
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";

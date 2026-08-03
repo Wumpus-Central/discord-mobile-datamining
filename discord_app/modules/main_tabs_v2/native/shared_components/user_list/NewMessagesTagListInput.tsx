@@ -1,6 +1,6 @@
-// === Module 11480: ? ===
+// === Module 11590: ? ===
 
-// Module 11480
+// Module 11590
 import importAllResult from "noop";
 import { View } from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";

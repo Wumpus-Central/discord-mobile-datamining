@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e37bbde49f12a4469b46214e14dfde4a", name: "KeyIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_settings/connections/native/two_way_link/images", width: 18, height: 18.5, scales: [2, 3], hash: "84a5f82b0047a661ec45232254da9031", name: "app_installed_check", type: "png" });

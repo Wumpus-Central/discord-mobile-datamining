@@ -1,6 +1,6 @@
-// === Module 13273: snapshotForBreadcrumbs ===
+// === Module 13336: snapshotForBreadcrumbs ===
 
-// Module 13273 (snapshotForBreadcrumbs)
+// Module 13336 (snapshotForBreadcrumbs)
 import "append";
 import importDefaultResult1 from "TelemetryChannel";
 

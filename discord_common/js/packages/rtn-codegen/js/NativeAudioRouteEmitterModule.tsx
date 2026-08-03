@@ -1,6 +1,6 @@
-// === Module 8843: enforcing ===
+// === Module 9020: enforcing ===
 
-// Module 8843 (enforcing)
+// Module 9020 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAudioRouteEmitterModule");

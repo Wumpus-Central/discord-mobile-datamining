@@ -1,6 +1,6 @@
-// === Module 14140: QUEST_DOCK_COLLAPSED_HEIGHT ===
+// === Module 14207: QUEST_DOCK_COLLAPSED_HEIGHT ===
 
-// Module 14140 (QUEST_DOCK_COLLAPSED_HEIGHT)
+// Module 14207 (QUEST_DOCK_COLLAPSED_HEIGHT)
 let obj = { mass: 0.5, damping: 80, stiffness: 320 };
 obj = {};
 const merged = Object.assign(obj);

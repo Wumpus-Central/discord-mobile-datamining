@@ -1,6 +1,6 @@
-// === Module 15628: FriendRequestsSettingsScreen ===
+// === Module 15694: FriendRequestsSettingsScreen ===
 
-// Module 15628 (FriendRequestsSettingsScreen)
+// Module 15694 (FriendRequestsSettingsScreen)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -18,8 +18,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/na
 
 export default function FriendRequestsSettingsScreen() {
   let obj = { children: null };
-  const items = [callback(importDefault(4723), { absolute: true }), ];
-  obj = { style: createCacheKey().container, children: callback(importDefault(15629), {}) };
+  const items = [callback(importDefault(4785), { absolute: true }), ];
+  obj = { style: createCacheKey().container, children: callback(importDefault(15695), {}) };
   items[1] = callback(ScrollView, obj);
   obj[0] = items;
   return callback2(closure_4, obj);

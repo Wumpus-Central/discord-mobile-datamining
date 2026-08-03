@@ -88,12 +88,12 @@ export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
       const constructor2 = arg1.constructor;
       let tmp47 = constructor == constructor2 || !("constructor" in arg0) || !("constructor" in arg1);
       if (!tmp47) {
-        let tmp48 = typeof constructor === "fileFinishedImporting";
-        if (typeof constructor !== "disabledUntil") {
+        let tmp48 = typeof constructor === "error";
+        if (typeof constructor !== "HAS_APPLICATION") {
           tmp48 = constructor instanceof constructor;
         }
         if (tmp48) {
-          tmp48 = typeof constructor2 === "fileFinishedImporting";
+          tmp48 = typeof constructor2 === "error";
         }
         if (tmp48) {
           tmp48 = constructor2 instanceof constructor2;

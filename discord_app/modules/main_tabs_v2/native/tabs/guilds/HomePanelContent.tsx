@@ -1,75 +1,75 @@
-// === Module 14955: HomePanelContent ===
+// === Module 15244: HomeDrawerPanelContent ===
 
-// Module 14955 (HomePanelContent)
-import importAllResult from "noop";
+// Module 15244 (HomeDrawerPanelContent)
 import { View } from "get ActivityIndicator";
 import withEqualityFn from "withEqualityFn";
 import { DM_WIDTH } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
+import importAllResult from "noop";
 
 const require = arg1;
-let c3 = importAllResult;
-let closure_8 = createCacheKey.createStyles({ container: { flex: 1 }, guildsListContainerGestured: { flex: 1 }, guildLisetContainerDefault: { flex: 1 } });
-let closure_9 = { code: "function HomePanelContentTsx1(){const{enableHome,isGradientTheme,maxX,interpolateColor,panelSpringTranslateX,baseLowest,panelBg}=this.__closure;if(!enableHome||isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelSpringTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}" };
-const memoResult = importAllResult.memo(() => {
+function HomeDrawerPanelContent() {
   const tmp = callback();
-  const MobileHomeDrawerExperiment = enableHome(4050).MobileHomeDrawerExperiment;
-  enableHome = MobileHomeDrawerExperiment.useConfig({ location: "guilds" }).enableHome;
-  let obj = enableHome(14952);
-  const drawerOpen = obj.useDrawerOpen(enableHome);
-  const panelSpringTranslateX = isClientThemeOrCustomThemeActive.useContext(enableHome(14948).HomeDrawerStateContext).panelSpringTranslateX;
+  let obj = panelSpringTranslateX(isClientThemeOrCustomThemeActive[8]);
+  const drawerOpen = obj.useDrawerOpen();
+  let obj1 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[6]);
+  panelSpringTranslateX = obj1.useHomeDrawerState().panelSpringTranslateX;
   const tmp4 = token1((maxX) => maxX.maxX);
-  const dependencyMap = tmp4;
-  let obj1 = enableHome(8835);
-  isClientThemeOrCustomThemeActive = obj1.useIsClientThemeOrCustomThemeActive();
-  let obj2 = enableHome(3897);
-  const token = obj2.useToken(panelSpringTranslateX(712).colors.BACKGROUND_BASE_LOWEST);
-  let obj3 = enableHome(3897);
-  token1 = obj3.useToken(panelSpringTranslateX(712).colors.PANEL_BG);
-  const fn = function p() {
-    if (enableHome) {
-      if (!isClientThemeOrCustomThemeActive) {
-        if (tmp4 > 0) {
-          let obj = { backgroundColor: null };
-          const items = [0, tmp2];
-          const items1 = [token, token1];
-          obj[0] = enableHome(tmp4[12]).interpolateColor(panelSpringTranslateX.get(), items, items1);
-          const obj2 = enableHome(tmp4[12]);
-        }
-        return obj;
+  const importDefault = tmp4;
+  isClientThemeOrCustomThemeActive = panelSpringTranslateX(isClientThemeOrCustomThemeActive[9]).useIsClientThemeOrCustomThemeActive();
+  const obj3 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[9]);
+  const tmp2 = isClientThemeOrCustomThemeActive;
+  const token = panelSpringTranslateX(isClientThemeOrCustomThemeActive[10]).useToken(importDefault(isClientThemeOrCustomThemeActive[11]).colors.BACKGROUND_BASE_LOWEST);
+  const obj4 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[10]);
+  const tmp6 = importDefault;
+  token1 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[10]).useToken(importDefault(isClientThemeOrCustomThemeActive[11]).colors.PANEL_BG);
+  const obj5 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[10]);
+  const fn = function n() {
+    if (!isClientThemeOrCustomThemeActive) {
+      if (closure_1 > 0) {
+        let obj = { backgroundColor: null };
+        const items = [0, tmp];
+        const items1 = [token, token1];
+        obj[0] = panelSpringTranslateX(isClientThemeOrCustomThemeActive[12]).interpolateColor(panelSpringTranslateX.get(), items, items1);
+        const obj2 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[12]);
       }
+      return obj;
     }
     obj = { backgroundColor: "transparent" };
   };
-  obj = { enableHome, isGradientTheme: isClientThemeOrCustomThemeActive, maxX: tmp4, interpolateColor: enableHome(4054).interpolateColor, panelSpringTranslateX, baseLowest: token, panelBg: token1 };
+  obj = { isGradientTheme: isClientThemeOrCustomThemeActive, maxX: tmp4, interpolateColor: panelSpringTranslateX(isClientThemeOrCustomThemeActive[12]).interpolateColor, panelSpringTranslateX, baseLowest: token, panelBg: token1 };
   fn.__closure = obj;
-  fn.__workletHash = 4210709178426;
-  fn.__initData = closure_9;
-  const animatedStyle = enableHome(4054).useAnimatedStyle(fn);
+  fn.__workletHash = 7613917810359;
+  fn.__initData = closure_8;
+  const animatedStyle = panelSpringTranslateX(isClientThemeOrCustomThemeActive[12]).useAnimatedStyle(fn);
   obj = { style: items, children: null };
   items = [tmp.container, animatedStyle];
-  if (enableHome) {
-    if (drawerOpen) {
-      let guildLisetContainerDefault = tmp.guildsListContainerGestured;
-    }
-    let items1 = [guildLisetContainerDefault, ];
-    let tmp13 = null;
-    if (!enableHome) {
-      obj1 = { width: null };
-      obj1[0] = DM_WIDTH;
-      tmp13 = obj1;
-    }
-    obj2 = { style: null, children: null };
-    items1[1] = tmp13;
-    obj2[0] = items1;
-    obj3 = { enableHome: null };
-    obj3[0] = enableHome;
-    obj2[1] = tmp10(panelSpringTranslateX(14956), obj3);
-    obj[1] = tmp10(tmp12, obj2);
-    return tmp10(tmp11, obj);
+  obj1 = { style: drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault, children: null };
+  obj1[1] = jsx(tmp6(tmp2[7]), { enableHome: true });
+  obj[1] = <token style={drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault}>{null}</token>;
+  return jsx(importDefault(isClientThemeOrCustomThemeActive[12]).View, { style: items, children: null });
+}
+let closure_7 = createCacheKey.createStyles((width) => {
+  const guildLisetContainerDefault = { flex: 1, width };
+  return { container: { flex: 1 }, guildsListContainerGestured: { flex: 1 }, guildLisetContainerDefault };
+});
+let closure_8 = { code: "function HomePanelContentTsx1(){const{isGradientTheme,maxX,interpolateColor,panelSpringTranslateX,baseLowest,panelBg}=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelSpringTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}" };
+const memoResult = require("noop").memo(() => {
+  const tmp = callback(DM_WIDTH);
+  let obj = require(15020) /* context */;
+  if (obj.useIsHomeDrawerEnabled()) {
+    let tmp3Result = tmp3(HomeDrawerPanelContent, {});
+  } else {
+    obj = { style: null, children: null };
+    obj[0] = tmp.container;
+    obj = { style: null, children: null };
+    obj[0] = tmp.guildLisetContainerDefault;
+    obj[1] = tmp3(importDefault(15245), {});
+    obj[1] = tmp3(View, obj);
+    tmp3Result = tmp3(View, obj);
   }
-  guildLisetContainerDefault = tmp.guildLisetContainerDefault;
+  return tmp3Result;
 });
 const result = require("withEqualityFn").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx");
 

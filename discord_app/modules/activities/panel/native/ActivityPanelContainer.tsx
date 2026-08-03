@@ -1,6 +1,6 @@
-// === Module 15854: ? ===
+// === Module 15918: ? ===
 
-// Module 15854
+// Module 15918
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import participantFromServer from "participantFromServer";
@@ -46,9 +46,9 @@ const memoResult = require("noop").memo(function ActivityPanelContainer() {
     }
   }, [])) {
     obj = { children: null };
-    obj[0] = jsx(importDefault(15864), {});
-    tmp2 = jsx(importDefault(15855), { children: null });
-    const tmp5 = importDefault(15855);
+    obj[0] = jsx(importDefault(15928), {});
+    tmp2 = jsx(importDefault(15919), { children: null });
+    const tmp5 = importDefault(15919);
   }
   return tmp2;
 });

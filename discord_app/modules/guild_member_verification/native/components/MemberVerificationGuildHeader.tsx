@@ -1,6 +1,6 @@
-// === Module 9174: AVATAR_SIZE ===
+// === Module 9347: AVATAR_SIZE ===
 
-// Module 9174 (AVATAR_SIZE)
+// Module 9347 (AVATAR_SIZE)
 import "noop";
 import { View } from "get ActivityIndicator";
 import BANNER_RATIO_HEIGHT_16_9 from "BANNER_RATIO_HEIGHT_16_9";

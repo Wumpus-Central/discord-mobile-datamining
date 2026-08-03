@@ -1,0 +1,14 @@
+// === Module 4397: flatRest ===
+
+// Module 4397 (flatRest)
+import flatRest from "flatRest";
+
+
+export default flatRest((arg0, arg1) => {
+  if (null == arg0) {
+    let obj = {};
+  } else {
+    obj = require(4408) /* basePick */(arg0, arg1);
+  }
+  return obj;
+});

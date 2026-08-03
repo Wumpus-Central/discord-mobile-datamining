@@ -8,12 +8,12 @@ arg5.parseSampleRate = function parseSampleRate(arg0) {
     return Number(arg0);
   } else {
     let parsed = arg0;
-    if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof arg0 !== "ge") {
       const _parseFloat = parseFloat;
       parsed = parseFloat(arg0);
     }
     let tmp;
-    if (typeof parsed !== "__REMOTEDEV__") {
+    if (typeof parsed !== "SENTRY_RELEASE") {
       const _isNaN = isNaN;
       if (!isNaN(parsed)) {
         if (parsed >= 0) {

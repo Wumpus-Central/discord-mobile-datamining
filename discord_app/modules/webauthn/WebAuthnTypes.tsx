@@ -1,6 +1,6 @@
-// === Module 9207: prototype ===
+// === Module 9380: prototype ===
 
-// Module 9207 (prototype)
+// Module 9380 (prototype)
 const prototype = function IgnorableWebAuthnError() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;

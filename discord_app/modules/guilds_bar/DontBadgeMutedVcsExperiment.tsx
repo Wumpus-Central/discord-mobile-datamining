@@ -1,6 +1,6 @@
-// === Module 15010: useIsDontBadgeMutedVcsEnabled ===
+// === Module 15297: useIsDontBadgeMutedVcsEnabled ===
 
-// Module 15010 (useIsDontBadgeMutedVcsEnabled)
+// Module 15297 (useIsDontBadgeMutedVcsEnabled)
 let closure_0 = require("getUnitId")({ kind: "user", name: "2026-06-dont-badge-muted-vcs", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = require("set").fileFinishedImporting("modules/guilds_bar/DontBadgeMutedVcsExperiment.tsx");
 

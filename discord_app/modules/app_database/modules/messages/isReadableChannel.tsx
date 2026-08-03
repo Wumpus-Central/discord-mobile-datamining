@@ -1,6 +1,6 @@
-// === Module 5745: isReadableChannel ===
+// === Module 6840: isReadableChannel ===
 
-// Module 5745 (isReadableChannel)
+// Module 6840 (isReadableChannel)
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

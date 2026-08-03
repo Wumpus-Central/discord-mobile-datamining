@@ -1,6 +1,6 @@
-// === Module 8225: getGuildEventsForCurrentUser ===
+// === Module 8532: getGuildEventsForCurrentUser ===
 
-// Module 8225 (getGuildEventsForCurrentUser)
+// Module 8532 (getGuildEventsForCurrentUser)
 import closure_2 from "set";
 import handleConnectionOpen from "handleConnectionOpen";
 import scheduledEventSort from "scheduledEventSort";
@@ -227,7 +227,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
-  return importDefault(8212).fetchUsersForGuildEvent(id, arg1, guild_id);
+  return importDefault(8519).fetchUsersForGuildEvent(id, arg1, guild_id);
 };
 prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUser(arg0) {
   return getGuildEventsForCurrentUser(arg0);

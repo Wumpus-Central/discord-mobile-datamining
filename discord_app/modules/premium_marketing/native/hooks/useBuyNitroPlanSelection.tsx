@@ -1,6 +1,6 @@
-// === Module 6572: PremiumTypes ===
+// === Module 7558: PremiumTypes ===
 
-// Module 6572 (PremiumTypes)
+// Module 7558 (PremiumTypes)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import GuildFeatures from "GuildFeatures";

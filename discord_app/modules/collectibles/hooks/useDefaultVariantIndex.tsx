@@ -1,6 +1,6 @@
-// === Module 8671: useDefaultVariantIndex ===
+// === Module 8848: useDefaultVariantIndex ===
 
-// Module 8671 (useDefaultVariantIndex)
+// Module 8848 (useDefaultVariantIndex)
 import map from "map";
 
 const require = arg1;
@@ -17,7 +17,7 @@ export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
       const variants = product.variants;
       num = Math.max(0, variants.findIndex((skuId) => !set.has(skuId.skuId)));
     }
-    tmpResult = _require(5814);
+    tmpResult = _require(6909);
   }
   return num;
 };

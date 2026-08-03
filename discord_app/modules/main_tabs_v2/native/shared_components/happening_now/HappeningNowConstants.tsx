@@ -1,6 +1,6 @@
-// === Module 14330: HAPPENING_NOW_PANELS_CONTAINER_PADDING ===
+// === Module 14397: HAPPENING_NOW_PANELS_CONTAINER_PADDING ===
 
-// Module 14330 (HAPPENING_NOW_PANELS_CONTAINER_PADDING)
+// Module 14397 (HAPPENING_NOW_PANELS_CONTAINER_PADDING)
 const obj = { padding: require("Button").STATUS_PADDING - 1 };
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx");
 

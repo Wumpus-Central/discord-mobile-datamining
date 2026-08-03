@@ -1,13 +1,13 @@
-// === Module 11973: useBotProfileCommands ===
+// === Module 12069: useBotProfileCommands ===
 
-// Module 11973 (useBotProfileCommands)
+// Module 12069 (useBotProfileCommands)
 import noop from "noop";
 
 const require = arg1;
 const result = require("PermissionOverwriteType").fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
 
 export default function useBotProfileCommands(channel) {
-  let obj = importAll(8028);
+  let obj = importAll(8365);
   const accessibleCommandsForApplication = obj.useAccessibleCommandsForApplication(channel, arg1, arg2);
   const commands = accessibleCommandsForApplication.commands;
   obj = {

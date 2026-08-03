@@ -1,6 +1,6 @@
-// === Module 9790: WishlistViewMoreCard ===
+// === Module 9935: WishlistViewMoreCard ===
 
-// Module 9790 (WishlistViewMoreCard)
+// Module 9935 (WishlistViewMoreCard)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -37,12 +37,12 @@ export default function WishlistViewMoreCard(recipientName) {
   let obj = { onPress, accessibilityLabel: null, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["8uYD+I"], { username: recipientName });
-  const items = [callback(importDefault(9785), { accessibilityHidden: true, sku, size, recipientName }), ];
+  const items = [callback(importDefault(9930), { accessibilityHidden: true, sku, size, recipientName }), ];
   obj = { style: callback3().moreOverlay, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl2.format(require(1236) /* getSystemLocale */.t.F6iMs4, { count: overflowCount });
-  obj[1] = callback(require(4189) /* Text */.Text, obj);
+  obj[1] = callback(require(4251) /* Text */.Text, obj);
   items[1] = callback(closure_5, obj);
   obj[2] = items;
   return callback2(closure_3, obj);

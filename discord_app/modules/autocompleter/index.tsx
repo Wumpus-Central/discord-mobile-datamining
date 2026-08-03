@@ -1,6 +1,6 @@
-// === Module 6166: sortByMatchScore ===
+// === Module 7218: sortByMatchScore ===
 
-// Module 6166 (sortByMatchScore)
+// Module 7218 (sortByMatchScore)
 import HeaderRecord from "HeaderRecord";
 
 const result = require("HeaderRecord").fileFinishedImporting("modules/autocompleter/index.tsx");
@@ -12,5 +12,5 @@ for (const key10022 in _module1) {
 
 export { default } from "getAutocompleterBoosterMap";
 export const createHeaderResult = require("HeaderRecord").createHeaderResult;
-export const findNextSelectedResult = require("module_6176");
+export const findNextSelectedResult = require("module_7228");
 export const sortByMatchScore = require("sortByMatchScore");

@@ -1,6 +1,6 @@
-// === Module 14882: useMultiAccountUsers ===
+// === Module 14949: useMultiAccountUsers ===
 
-// Module 14882 (useMultiAccountUsers)
+// Module 14949 (useMultiAccountUsers)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";

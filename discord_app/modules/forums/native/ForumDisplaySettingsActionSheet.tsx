@@ -1,6 +1,6 @@
-// === Module 11880: ForumDisplaySettingsActionSheet ===
+// === Module 11976: ForumDisplaySettingsActionSheet ===
 
-// Module 11880 (ForumDisplaySettingsActionSheet)
+// Module 11976 (ForumDisplaySettingsActionSheet)
 import _slicedToArray from "_slicedToArray";
 import TableRadioRow from "TableRadioRow";
 import ensureGuildLoaded from "ensureGuildLoaded";

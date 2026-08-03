@@ -1,6 +1,6 @@
-// === Module 12784: GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT ===
+// === Module 12847: GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT ===
 
-// Module 12784 (GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT)
+// Module 12847 (GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true, visualVariant: "one-column" } };

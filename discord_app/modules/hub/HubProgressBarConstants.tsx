@@ -1,6 +1,6 @@
-// === Module 10109: items ===
+// === Module 5833: items ===
 
-// Module 10109 (items)
+// Module 5833 (items)
 const items = [require("create").HubProgressStep.JOIN_GUILD, require("create").HubProgressStep.INVITE_USER, require("create").HubProgressStep.CONTACT_SYNC];
 const result = require("set").fileFinishedImporting("modules/hub/HubProgressBarConstants.tsx");
 

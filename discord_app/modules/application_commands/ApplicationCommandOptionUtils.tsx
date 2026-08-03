@@ -1,6 +1,6 @@
-// === Module 8024: getString ===
+// === Module 8361: getString ===
 
-// Module 8024 (getString)
+// Module 8361 (getString)
 import { TRUE_OPTION_NAME } from "TRUE_OPTION_NAME";
 
 function getString(arg0, arg1) {
@@ -337,18 +337,18 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
   let group;
   if (locale !== closure_5) {
     closure_5 = locale;
-    en_US = require(8025) /* numberParts */.numberParts[locale];
+    en_US = require(8362) /* numberParts */.numberParts[locale];
     if (en_US == null) {
-      en_US = tmp11(8025).numberParts["en-US"];
+      en_US = tmp11(8362).numberParts["en-US"];
     }
     const _RegExp = RegExp;
     ({ group, decimal } = en_US);
-    const regExp = new RegExp(importDefault(4181).escape(group), "g");
+    const regExp = new RegExp(importDefault(4243).escape(group), "g");
     const _RegExp2 = RegExp;
-    const obj = importDefault(4181);
+    const obj = importDefault(4243);
     tmp11 = require;
-    const regExp1 = new RegExp(importDefault(4181).escape(decimal), "g");
-    const obj2 = importDefault(4181);
+    const regExp1 = new RegExp(importDefault(4243).escape(decimal), "g");
+    const obj2 = importDefault(4243);
   }
   return trimmed.replace(regExp, "").replace(regExp1, ".");
 };

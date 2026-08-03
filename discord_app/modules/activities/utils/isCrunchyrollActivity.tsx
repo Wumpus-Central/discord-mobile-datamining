@@ -1,6 +1,6 @@
-// === Module 8183: isCrunchyrollActivity ===
+// === Module 8490: isCrunchyrollActivity ===
 
-// Module 8183 (isCrunchyrollActivity)
+// Module 8490 (isCrunchyrollActivity)
 import { CRUNCHYROLL_CLIENT_ID } from "CRUNCHYROLL_LINK_DEST_ORIGIN";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/isCrunchyrollActivity.tsx");

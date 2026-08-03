@@ -1,6 +1,6 @@
-// === Module 16356: prototype ===
+// === Module 16422: prototype ===
 
-// Module 16356 (prototype)
+// Module 16422 (prototype)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import emitChanges from "emitChanges";
 import { PaymentGateways } from "sum";
@@ -19,7 +19,7 @@ let prototype = function UserOfferManager() {
     currentUser = currentUser.getCurrentUser();
     const NitroACOMSubscriptionExperiment = applyArgumentsResult(table[4]).NitroACOMSubscriptionExperiment;
     if (NitroACOMSubscriptionExperiment.getConfig({ location: "UserOfferManager.handlePostConnectionOpen" }).enabled) {
-      const obj = { offerId: "Array", paymentGatewayOverride: 0 };
+      const obj = { offerId: "Array", paymentGatewayOverride: true };
       obj[1] = constants.APPLE_ADVANCED_COMMERCE;
       const tmp4 = obj;
     }

@@ -1,6 +1,6 @@
-// === Module 9814: useOpenProfileSettings ===
+// === Module 9959: useOpenProfileSettings ===
 
-// Module 9814 (useOpenProfileSettings)
+// Module 9959 (useOpenProfileSettings)
 import "mergeGuildAvatar";
 import zustandStore from "zustandStore";
 import { UserSettingsSections } from "ME";

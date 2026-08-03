@@ -1,6 +1,6 @@
-// === Module 14016: OneWayToTwoWayNewTag ===
+// === Module 14083: OneWayToTwoWayNewTag ===
 
-// Module 14016 (OneWayToTwoWayNewTag)
+// Module 14083 (OneWayToTwoWayNewTag)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { Fonts } from "ME";
@@ -50,7 +50,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   obj = { style: tmp.titleContainer, children: null };
   const items = [newIndicatorDismissibleContent];
   const items1 = [
-    callback(importDefault(9676), {
+    callback(importDefault(9821), {
       contentTypes: items,
       children(visibleContent) {
         let tmp2 = null;
@@ -62,18 +62,18 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
         return tmp2;
       }
     }),
-    callback(newIndicatorDismissibleContent(4189).Text, { style: tmp.title, variant: "text-md/semibold", children: title })
+    callback(newIndicatorDismissibleContent(4251).Text, { style: tmp.title, variant: "text-md/semibold", children: title })
   ];
   obj[1] = items1;
   const items2 = [callback2(View, obj), img];
   obj[1] = items2;
-  const items3 = [callback2(View, obj), callback(newIndicatorDismissibleContent(4189).Text, { style: tmp.body, variant: "text-sm/medium", children: body }), ];
+  const items3 = [callback2(View, obj), callback(newIndicatorDismissibleContent(4251).Text, { style: tmp.body, variant: "text-sm/medium", children: body }), ];
   const obj4 = { style: tmp.reconnectButton, children: null };
   const obj5 = { text: null, onPress: null };
   const intl = newIndicatorDismissibleContent(1236).intl;
   obj5[0] = intl.string(newIndicatorDismissibleContent(1236).t.vD60Pv);
   obj5[1] = onPress;
-  obj4[1] = callback(newIndicatorDismissibleContent(4604).Button, obj5);
+  obj4[1] = callback(newIndicatorDismissibleContent(4666).Button, obj5);
   items3[2] = callback(View, obj4);
   obj[1] = items3;
   return callback2(View, obj);

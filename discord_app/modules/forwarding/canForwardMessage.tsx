@@ -1,6 +1,6 @@
-// === Module 9566: canForwardMessage ===
+// === Module 9713: canForwardMessage ===
 
-// Module 9566 (canForwardMessage)
+// Module 9713 (canForwardMessage)
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

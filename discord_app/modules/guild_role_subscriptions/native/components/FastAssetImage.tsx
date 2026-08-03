@@ -1,6 +1,6 @@
-// === Module 14272: FastAssetImage ===
+// === Module 14339: FastAssetImage ===
 
-// Module 14272 (FastAssetImage)
+// Module 14339 (FastAssetImage)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

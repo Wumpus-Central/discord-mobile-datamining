@@ -1,6 +1,6 @@
-// === Module 15567: prototype ===
+// === Module 15634: prototype ===
 
-// Module 15567 (prototype)
+// Module 15634 (prototype)
 import hasFlag from "hasFlag";
 import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "MessageEmbedTypes";
 
@@ -105,11 +105,11 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     }
     return content;
   };
-  let obj = require(10116) /* SearchTokenTypes */;
-  const tokenizeQueryResult = require(10116) /* SearchTokenTypes */.tokenizeQuery(searchQueryString);
-  const searchQueryFromTokens = require(10116) /* SearchTokenTypes */.getSearchQueryFromTokens(tokenizeQueryResult);
-  const obj2 = require(10116) /* SearchTokenTypes */;
-  const str = require(10116) /* SearchTokenTypes */.getQueryContentString(searchQueryFromTokens);
+  let obj = require(10255) /* SearchTokenTypes */;
+  const tokenizeQueryResult = require(10255) /* SearchTokenTypes */.tokenizeQuery(searchQueryString);
+  const searchQueryFromTokens = require(10255) /* SearchTokenTypes */.getSearchQueryFromTokens(tokenizeQueryResult);
+  const obj2 = require(10255) /* SearchTokenTypes */;
+  const str = require(10255) /* SearchTokenTypes */.getQueryContentString(searchQueryFromTokens);
   let str2;
   if (str != null) {
     str2 = str.trim();

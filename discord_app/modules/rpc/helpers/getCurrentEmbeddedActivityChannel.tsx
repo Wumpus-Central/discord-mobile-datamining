@@ -1,6 +1,6 @@
-// === Module 13546: getCurrentEmbeddedActivityChannel ===
+// === Module 13609: getCurrentEmbeddedActivityChannel ===
 
-// Module 13546 (getCurrentEmbeddedActivityChannel)
+// Module 13609 (getCurrentEmbeddedActivityChannel)
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
 

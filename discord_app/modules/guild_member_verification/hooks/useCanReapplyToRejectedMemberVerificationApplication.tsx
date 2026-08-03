@@ -1,6 +1,6 @@
-// === Module 9168: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 9341: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 9168 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 9341 (useCanReapplyToRejectedMemberVerificationApplication)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

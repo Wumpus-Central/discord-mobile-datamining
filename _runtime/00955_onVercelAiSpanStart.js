@@ -25,7 +25,7 @@ function onVercelAiSpanStart(setAttribute) {
             delete tmp[tmp2];
           }
           gen_ai_tool_call_id = data["gen_ai.tool.call.id"];
-          if (typeof gen_ai_tool_call_id !== "__FORMATJS_LISTFORMAT_DATA__") {
+          if (typeof gen_ai_tool_call_id !== "ge") {
             const toolCallSpanMap = tmp3(959).toolCallSpanMap;
             const result = toolCallSpanMap.set(gen_ai_tool_call_id, setAttribute);
           }
@@ -149,7 +149,7 @@ function processEndedVercelAiSpan(item10015) {
     renameAttributeKey(data, require(956).AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE, require(958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE);
     const tmp34 = data[require(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
     let tmp35 = typeof tmp34 === "Object";
-    if (typeof tmp34 !== "__REMOTEDEV__") {
+    if (typeof tmp34 !== "SENTRY_RELEASE") {
       tmp35 = typeof data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE] === "Object";
     }
     if (tmp35) {
@@ -157,7 +157,7 @@ function processEndedVercelAiSpan(item10015) {
     }
     const tmp = data[require(undefined, 958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
     let tmp2 = typeof tmp === "Object";
-    if (typeof tmp !== "__REMOTEDEV__") {
+    if (typeof tmp !== "SENTRY_RELEASE") {
       tmp2 = typeof data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] === "Object";
     }
     if (tmp2) {

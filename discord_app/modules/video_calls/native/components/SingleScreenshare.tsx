@@ -1,6 +1,6 @@
-// === Module 10831: SingleScreenshare ===
+// === Module 10931: SingleScreenshare ===
 
-// Module 10831 (SingleScreenshare)
+// Module 10931 (SingleScreenshare)
 import "noop";
 import VoiceChatDrawerState from "VoiceChatDrawerState";
 import { jsx } from "jsxProd";
@@ -17,7 +17,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/video_calls/nat
 
 export default function SingleScreenshare(channel) {
   channel = channel.channel;
-  channel(4620)(() => {
+  channel(4682)(() => {
     callback();
   });
   const obj = {
@@ -38,5 +38,5 @@ export default function SingleScreenshare(channel) {
     stageStreamContainer = tmp.stageStreamContainer;
   }
   obj[3] = stageStreamContainer;
-  return tmp3(channel(10832), obj);
+  return tmp3(channel(10932), obj);
 };

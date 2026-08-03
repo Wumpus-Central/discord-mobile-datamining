@@ -1,6 +1,6 @@
-// === Module 11533: ChatInputGuardWrapper ===
+// === Module 11643: ChatInputGuardWrapper ===
 
-// Module 11533 (ChatInputGuardWrapper)
+// Module 11643 (ChatInputGuardWrapper)
 import "useIsSpamMessageRequest";
 import initialize from "initialize";
 import { isThread } from "createChannelRecord";

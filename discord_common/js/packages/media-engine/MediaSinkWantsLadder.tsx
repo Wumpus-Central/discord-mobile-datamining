@@ -1,6 +1,6 @@
-// === Module 4303: getMaxSinkValue ===
+// === Module 4365: getMaxSinkValue ===
 
-// Module 4303 (getMaxSinkValue)
+// Module 4365 (getMaxSinkValue)
 import DesktopSources from "DesktopSources";
 
 let c0;

@@ -1,6 +1,6 @@
-// === Module 9478: weakMap ===
+// === Module 9625: weakMap ===
 
-// Module 9478 (weakMap)
+// Module 9625 (weakMap)
 const weakMap = new WeakMap();
 let result = require("set").fileFinishedImporting("modules/chat/native/ChatChangesetUpdateTracker.tsx");
 

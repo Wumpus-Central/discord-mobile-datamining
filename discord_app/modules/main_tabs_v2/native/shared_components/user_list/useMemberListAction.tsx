@@ -1,6 +1,6 @@
-// === Module 10922: useMemberListAction ===
+// === Module 11044: useMemberListAction ===
 
-// Module 10922 (useMemberListAction)
+// Module 11044 (useMemberListAction)
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
 import { View } from "ChatPlusIcon";
@@ -17,7 +17,7 @@ let closure_12;
 let unpackModuleId;
 const require = arg1;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = ME);
-let closure_14 = { listActionRenderer: "Array", listActionHeight: "HermesInternal" };
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "ct" };
 let closure_15 = createCacheKey.createStyles({ wrapper: { paddingTop: require("PX_24").USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
@@ -63,8 +63,8 @@ export default function useMemberListAction(channel) {
   });
   let canResult = flag3.can(first.MANAGE_ROLES, channel);
   if (canResult) {
-    canResult = channel(8281).isPrivateGuildChannel(channel);
-    const tmp5Result = channel(8281);
+    canResult = channel(8588).isPrivateGuildChannel(channel);
+    const tmp5Result = channel(8588);
   }
   React = canResult;
   let tmp9 = null != channel && !flag;
@@ -96,7 +96,7 @@ export default function useMemberListAction(channel) {
   if (channel != null) {
     id = channel.id;
   }
-  const tmp15 = importDefault(8836)();
+  const tmp15 = importDefault(9013)();
   c9 = tmp15;
   const tmp16 = stateFromStores(React.useState(undefined), 2);
   first = tmp16[0];

@@ -1,6 +1,6 @@
-// === Module 15793: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 15857: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 15793 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 15857 (IncentivizedAccountLinkConfirmationBottomSheet)
 import "messagesProxy";
 import { Image } from "combined";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -17,7 +17,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     obj = { source: null, style: null };
     obj = { uri: null };
-    obj[0] = importDefault(14646);
+    obj[0] = importDefault(14713);
     obj[0] = obj;
     const obj1 = { width: null, height: null };
     obj1[0] = c7;
@@ -29,8 +29,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   } else {
     if (tmpResult.isAndroid()) {
       let obj2 = { url: null, style: null };
-      let tmp4Result = tmp4(6211);
-      obj2[0] = tmp4(14647);
+      let tmp4Result = tmp4(8095);
+      obj2[0] = tmp4(14714);
       const obj3 = { width: null, height: null };
       obj3[0] = c7;
       obj3[1] = c7;
@@ -41,8 +41,8 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     } else {
       const obj4 = { source: null, resizeMode: "contain", style: null };
       const obj5 = { uri: null };
-      tmp4Result = tmp4(5145);
-      obj5[0] = tmp4(14647);
+      tmp4Result = tmp4(5207);
+      obj5[0] = tmp4(14714);
       obj4[0] = obj5;
       const obj6 = { width: null, height: null };
       obj6[0] = c7;
@@ -59,22 +59,22 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   obj7[0] = intl.string(require(1236) /* getSystemLocale */.t.aRIFWD);
   const obj8 = { size: "sm", color: null };
   obj8[1] = tmp8(712).colors.WHITE;
-  obj7[1] = tmp9(require(10195) /* WindowLaunchIcon */.WindowLaunchIcon, obj8);
+  obj7[1] = tmp9(require(10334) /* WindowLaunchIcon */.WindowLaunchIcon, obj8);
   obj7[4] = function onPress() {
-    callback(4161).hideActionSheet();
-    const obj = callback(4161);
-    const obj2 = callback(3890);
+    callback(4223).hideActionSheet();
+    const obj = callback(4223);
+    const obj2 = callback(3952);
     obj2.openURL(callback(1945).getArticleURL(constants.IN_GAME_FEATURES));
   };
   const obj9 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
   const intl2 = tmp(1236).intl;
-  obj9[0] = intl2.string(tmp8(2871).ublzTG);
+  obj9[0] = intl2.string(tmp8(2901).ublzTG);
   const intl3 = tmp(1236).intl;
-  obj9[1] = intl3.string(tmp8(2871).JgM2xu);
-  obj9[2] = tmp9(require(4604) /* Button */.Button, obj7);
+  obj9[1] = intl3.string(tmp8(2901).JgM2xu);
+  obj9[2] = tmp9(require(4666) /* Button */.Button, obj7);
   obj9[3] = tmp3Result;
   obj9[4] = function onDismiss() {
-    callback(4161).hideActionSheet();
+    callback(4223).hideActionSheet();
   };
-  return tmp9(require(6659) /* PromoSheet */.PromoSheet, obj9);
+  return tmp9(require(7642) /* PromoSheet */.PromoSheet, obj9);
 };

@@ -1,6 +1,6 @@
-// === Module 4522: getPurchaseToken ===
+// === Module 4584: getPurchaseToken ===
 
-// Module 4522 (getPurchaseToken)
+// Module 4584 (getPurchaseToken)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 8931: validateDiscordTag ===
+// === Module 9108: validateDiscordTag ===
 
-// Module 8931 (validateDiscordTag)
+// Module 9108 (validateDiscordTag)
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
 
@@ -21,9 +21,9 @@ function validateDiscordTag(arr) {
       }
       obj[2] = str2.length;
       obj[3] = tmp4[0].length;
-      let tmp5Result = tmp5(8210);
+      let tmp5Result = tmp5(8517);
       obj[4] = tmp5Result.isEmail(arr);
-      tmp5Result = tmp5(8210);
+      tmp5Result = tmp5(8517);
       obj[5] = tmp5Result.isInvite(arr);
       obj[6] = regex.test(arr);
       obj.track(constants2.FRIEND_REQUEST_FAILED, obj);

@@ -201,7 +201,7 @@ let items = [
       const tmp2 = callback3(callback2(self.prototype), "start", this);
       self = tmp2;
       let fn = tmp2;
-      if (typeof tmp2 !== "disabledUntil") {
+      if (typeof tmp2 !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [_startPosition, _onUpdate, arg2, getInternalState, self];
@@ -317,7 +317,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "stop", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

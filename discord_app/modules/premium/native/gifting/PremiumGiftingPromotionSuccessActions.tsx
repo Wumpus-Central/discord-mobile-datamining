@@ -1,6 +1,6 @@
-// === Module 9803: PremiumGiftingPromotionSuccessActions ===
+// === Module 9948: PremiumGiftingPromotionSuccessActions ===
 
-// Module 9803 (PremiumGiftingPromotionSuccessActions)
+// Module 9948 (PremiumGiftingPromotionSuccessActions)
 import Button from "Button";
 import { View } from "Button";
 import { isAvatarDecorationRecord } from "fromServer";

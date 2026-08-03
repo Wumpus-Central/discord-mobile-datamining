@@ -1,6 +1,6 @@
-// === Module 12526: CheckIcon ===
+// === Module 12619: CheckIcon ===
 
-// Module 12526 (CheckIcon)
+// Module 12619 (CheckIcon)
 import _slicedToArray from "_slicedToArray";
 import PremiumTier0LogoSmall from "PremiumTier0LogoSmall";
 import { View } from "usePremiumPlanPrice";
@@ -18,26 +18,26 @@ let metroImportAll;
 let unpackModuleId;
 const require = arg1;
 function CheckIcon() {
-  let obj = require(4039) /* AccessibilityAnnouncer */;
+  let obj = require(4101) /* AccessibilityAnnouncer */;
   const tmp = importDefault;
-  const tmp3 = importDefault(4129)();
+  const tmp3 = importDefault(4191)();
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  const isThemeDarkResult = obj.isThemeDark(importDefault(4129)());
+  const isThemeDarkResult = obj.isThemeDark(importDefault(4191)());
   obj = { source: null, color: null, size: null };
-  obj[0] = tmp(12527);
-  obj[1] = obj.isThemeDark(importDefault(4129)()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
+  obj[0] = tmp(12620);
+  obj[1] = obj.isThemeDark(importDefault(4191)()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   obj[2] = require(1297) /* Button */.IconSizes.SMALL;
   return callback2(require(1297) /* Button */.Icon, obj);
 }
 function CloseIcon() {
   const obj = { source: null, style: null, size: null };
-  obj[0] = importDefault(12528);
+  obj[0] = importDefault(12621);
   obj[1] = callback3().icon;
   obj[2] = require(1297) /* Button */.IconSizes.SMALL;
   return callback2(require(1297) /* Button */.Icon, obj);
 }
 function CellText(children) {
-  return callback2(require(4189) /* Text */.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
+  return callback2(require(4251) /* Text */.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
 }
 function Row(withTopBorderRadius) {
   let column1;
@@ -196,7 +196,7 @@ function Row(withTopBorderRadius) {
         ({ START: obj9[1], END: obj9[2] } = HorizontalGradient);
         obj6[3] = ["rgba(133, 71, 198, 0.10)", "rgba(184, 69, 193, 0.10)", "rgba(171, 93, 138, 0.10)"];
         obj6[4] = column2;
-        obj4[3] = tmp5(importDefault(4615), obj6);
+        obj4[3] = tmp5(importDefault(4677), obj6);
       }
       items2[2] = tmp5(tmp4, obj4);
       obj[2] = items2;

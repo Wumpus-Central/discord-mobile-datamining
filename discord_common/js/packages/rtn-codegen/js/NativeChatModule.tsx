@@ -1,6 +1,6 @@
-// === Module 9479: enforcing ===
+// === Module 9626: enforcing ===
 
-// Module 9479 (enforcing)
+// Module 9626 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeChatModule");

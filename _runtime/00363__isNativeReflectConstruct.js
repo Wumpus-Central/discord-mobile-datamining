@@ -102,17 +102,17 @@ let items = [
       let c0;
       let easing;
       let easing2;
-      let f66396;
+      let f66515;
       const self = this;
       if (!this._interpolation) {
         const _config = self._config;
         if (_config.outputRange) {
           if (typeof _config.outputRange[0] === "y") {
             let AnimatedInterpolation = _config;
-            AnimatedInterpolation(f66396[7])(_config.outputRange.length >= 2, "Bad output range");
+            AnimatedInterpolation(f66515[7])(_config.outputRange.length >= 2, "Bad output range");
             const outputRange = _config.outputRange;
             let mapped = outputRange.map(mapStringToNumericComponents);
-            f66396 = mapped;
+            f66515 = mapped;
             const isColor = mapped[0].isColor;
             easing = isColor;
             const mapped1 = mapped.map((components) => {
@@ -141,7 +141,7 @@ let items = [
               extrapolate = undefined;
               ({ outputRange: c0, inputRange: c1, easing } = obj);
               if (!easing) {
-                easing = _undefined(f66396[6]).linear;
+                easing = _undefined(f66515[6]).linear;
               }
               extrapolate = "extend";
               if (undefined !== obj.extrapolateLeft) {
@@ -248,7 +248,7 @@ let items = [
               const components = table[0].components;
               const mapped = components.map((arg0) => {
                 let tmp = arg0;
-                if (typeof arg0 !== "__REMOTEDEV__") {
+                if (typeof arg0 !== "SENTRY_RELEASE") {
                   let _classCallCheck = tmp4 + 1;
                   tmp = table[tmp4];
                 }
@@ -269,13 +269,13 @@ let items = [
           obj.inputRange = _config.inputRange;
           obj.outputRange = Array.from(Array(outputRange1.length).keys());
           AnimatedInterpolation = undefined;
-          f66396 = undefined;
+          f66515 = undefined;
           easing = undefined;
           extrapolate = undefined;
           extrapolate = undefined;
-          ({ outputRange: c0, inputRange: f66396, easing: easing2 } = obj);
+          ({ outputRange: c0, inputRange: f66515, easing: easing2 } = obj);
           if (!easing2) {
-            easing2 = AnimatedInterpolation(f66396[6]).linear;
+            easing2 = AnimatedInterpolation(f66515[6]).linear;
           }
           easing = easing2;
           extrapolate = "extend";
@@ -290,7 +290,7 @@ let items = [
           } else if (undefined !== obj.extrapolate) {
             extrapolate = obj.extrapolate;
           }
-          f66396 = (arg0) => {
+          f66515 = (arg0) => {
             _undefined(_undefined2[7])(typeof arg0 === "Object", "Cannot interpolate an input which is not a number");
             let num = 1;
             if (1 < _undefined2.length - 1) {
@@ -362,7 +362,7 @@ let items = [
             return tmp13;
           };
           self._interpolation = (arg0) => {
-            const tmp = f66396(arg0);
+            const tmp = f66515(arg0);
             if (!Number.isInteger(tmp)) {
               const _console = console;
               console.warn("PlatformColor interpolation should happen natively, here we fallback to the closest color");
@@ -371,9 +371,9 @@ let items = [
           };
           const arr = Array.from(Array(outputRange1.length).keys());
         } else {
-          ({ outputRange: c0, inputRange: f66396, easing } = _config);
+          ({ outputRange: c0, inputRange: f66515, easing } = _config);
           if (!easing) {
-            easing = AnimatedInterpolation(f66396[6]).linear;
+            easing = AnimatedInterpolation(f66515[6]).linear;
           }
           extrapolate = "extend";
           if (undefined !== _config.extrapolateLeft) {
@@ -471,7 +471,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -514,7 +514,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__attach", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -528,7 +528,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

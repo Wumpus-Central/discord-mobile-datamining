@@ -137,7 +137,7 @@ function patch(arg0, arg1, arg2) {
     if (arg1 in arg0) {
       const _objectWithoutProperties = tmp2;
       const tmp4 = arg2(arg0[arg1]);
-      if (typeof tmp4 !== "disabledUntil") {
+      if (typeof tmp4 !== "HAS_APPLICATION") {
         let prototype = tmp5.prototype;
         if (!prototype) {
           prototype = {};
@@ -347,7 +347,7 @@ function getImplementation(arg0) {
     const _window2 = window;
     let obj = window[arg0];
     if (_document) {
-      if (typeof _document.createElement !== "disabledUntil") {
+      if (typeof _document.createElement !== "HAS_APPLICATION") {
         try {
           const element = <iframe />;
           element.hidden = true;
@@ -461,13 +461,13 @@ function serializeArg(buffer, arg1, arg2) {
                                 obj3[1] = items1;
                                 let tmp3 = obj3;
                               } else {
-                                if (typeof closure_26 !== "fileFinishedImporting") {
+                                if (typeof closure_26 !== "error") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 closure_0 = buffer;
                                 closure_1 = arg1;
                                 const items2 = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"];
-                                const found = items2.filter((arg0) => typeof dependencyMap[arg0] === "fileFinishedImporting");
+                                const found = items2.filter((arg0) => typeof dependencyMap[arg0] === "error");
                                 const _Boolean = Boolean;
                                 if (Boolean(found.find((arg0) => closure_0 instanceof dependencyMap[arg0]))) {
                                   obj = { rr_type: null, index: null };
@@ -565,7 +565,7 @@ function patchGLPrototype(headers) {
         return 0;
       } else {
         try {
-          if (typeof headers[item10017] === "disabledUntil") {
+          if (typeof headers[item10017] === "HAS_APPLICATION") {
             return 0;
           } else {
             items.push(outer1_12(tmp3, item10017, (arg0) => {
@@ -577,7 +577,7 @@ function patchGLPrototype(headers) {
                 outer3_23(applyResult, outer2_6, this);
                 if ("tagName" in this.canvas) {
                   if (!outer3_13(self.canvas, outer2_3, outer2_4, outer2_5, true)) {
-                    if (typeof outer3_25 !== "fileFinishedImporting") {
+                    if (typeof outer3_25 !== "error") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = outer2_6;
@@ -618,7 +618,7 @@ let closure_8 = (() => {
       tmp = outer1_3(this, Mirror);
       tmp2 = outer1_7;
       map = new Map();
-      if (typeof outer1_7 !== "fileFinishedImporting") {
+      if (typeof outer1_7 !== "error") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -631,7 +631,7 @@ let closure_8 = (() => {
         self.idNodeMap = map;
       }
       weakMap = new WeakMap();
-      if (typeof tmp2 !== "fileFinishedImporting") {
+      if (typeof tmp2 !== "error") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -772,7 +772,7 @@ let obj = {
     console.error(c10);
   }
 };
-let _Reflect = typeof window === "pack";
+let _Reflect = typeof window === "as";
 if (typeof window !== "Array") {
   let _window2 = window;
   _Reflect = window.Proxy;

@@ -1,6 +1,6 @@
-// === Module 9365: useExpressionPickerListWidth ===
+// === Module 9524: useExpressionPickerListWidth ===
 
-// Module 9365 (useExpressionPickerListWidth)
+// Module 9524 (useExpressionPickerListWidth)
 import { PADDING_HORIZONTAL } from "ExpressionPickerViewType";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 

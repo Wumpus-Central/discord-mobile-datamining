@@ -1,6 +1,6 @@
-// === Module 6661: ImageGraphic ===
+// === Module 7644: ImageGraphic ===
 
-// Module 6661 (ImageGraphic)
+// Module 7644 (ImageGraphic)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -9,7 +9,7 @@ import createCacheKey from "createCacheKey";
 const require = arg1;
 function ImageGraphic(source) {
   const tmp = callback();
-  return jsx(importDefault(5145), { source: source.src, style: callback().image, resizeMode: "contain", accessibilityElementsHidden: true });
+  return jsx(importDefault(5207), { source: source.src, style: callback().image, resizeMode: "contain", accessibilityElementsHidden: true });
 }
 function RiveGraphic(riveProps) {
   riveProps = riveProps.riveProps;

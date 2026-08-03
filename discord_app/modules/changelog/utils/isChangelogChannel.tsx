@@ -1,6 +1,6 @@
-// === Module 8208: isChangelogChannel ===
+// === Module 8515: isChangelogChannel ===
 
-// Module 8208 (isChangelogChannel)
+// Module 8515 (isChangelogChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SYSTEM_UPDATES_USER_ID } from "CHANGELOG_MODAL_KEY";
 

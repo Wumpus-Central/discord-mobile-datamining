@@ -1,6 +1,6 @@
-// === Module 11399: ImageInput ===
+// === Module 11509: ImageInput ===
 
-// Module 11399 (ImageInput)
+// Module 11509 (ImageInput)
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "ImageInputAnswerActionSheet";
 import ensureGuildLoaded from "ensureGuildLoaded";

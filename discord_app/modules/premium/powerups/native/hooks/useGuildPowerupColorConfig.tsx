@@ -1,6 +1,6 @@
-// === Module 11653: useGuildPowerupColorConfig ===
+// === Module 11758: useGuildPowerupColorConfig ===
 
-// Module 11653 (useGuildPowerupColorConfig)
+// Module 11758 (useGuildPowerupColorConfig)
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
 
 export default function useGuildPowerupColorConfig(arg0) {

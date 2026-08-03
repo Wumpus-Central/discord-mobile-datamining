@@ -1,6 +1,6 @@
-// === Module 15102: HAPPENING_NOW_CONTENT_HEIGHT ===
+// === Module 15082: HAPPENING_NOW_CONTENT_HEIGHT ===
 
-// Module 15102 (HAPPENING_NOW_CONTENT_HEIGHT)
+// Module 15082 (HAPPENING_NOW_CONTENT_HEIGHT)
 import importAllResult from "HAPPENING_NOW_CARD_MARGIN_RIGHT";
 import get_ActivityIndicator from "getAvatarURL";
 import _getSystemLocale from "_getSystemLocale";

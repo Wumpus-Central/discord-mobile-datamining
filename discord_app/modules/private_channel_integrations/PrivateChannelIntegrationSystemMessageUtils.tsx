@@ -1,6 +1,6 @@
-// === Module 7783: getPrivateChannelIntegrationAddedSystemMessageContent ===
+// === Module 7901: getPrivateChannelIntegrationAddedSystemMessageContent ===
 
-// Module 7783 (getPrivateChannelIntegrationAddedSystemMessageContent)
+// Module 7901 (getPrivateChannelIntegrationAddedSystemMessageContent)
 import ME from "ME";
 
 let c3;

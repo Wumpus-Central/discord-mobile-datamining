@@ -1,6 +1,6 @@
-// === Module 11230: useDeveloperActivityShelfItems ===
+// === Module 11341: useDeveloperActivityShelfItems ===
 
-// Module 11230 (useDeveloperActivityShelfItems)
+// Module 11341 (useDeveloperActivityShelfItems)
 import noop from "noop";
 import initialize from "initialize";
 import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3";

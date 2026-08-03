@@ -1,6 +1,6 @@
-// === Module 10859: StageSectionHeader ===
+// === Module 10959: StageSectionHeader ===
 
-// Module 10859 (StageSectionHeader)
+// Module 10959 (StageSectionHeader)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -30,7 +30,7 @@ export default function StageSectionHeader(collapsed) {
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
   const tmp = createCacheKey();
-  let obj = collapsed(4054);
+  let obj = collapsed(4116);
   const fn = function y() {
     let obj = collapsed(outer1_2[6]);
     let str = "0deg";
@@ -43,7 +43,7 @@ export default function StageSectionHeader(collapsed) {
     obj[0] = items;
     return obj;
   };
-  obj = { withTiming: collapsed(4194).withTiming, collapsed };
+  obj = { withTiming: collapsed(4256).withTiming, collapsed };
   fn.__closure = obj;
   fn.__workletHash = 13855092771739;
   fn.__initData = closure_8;
@@ -51,7 +51,7 @@ export default function StageSectionHeader(collapsed) {
   const obj1 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   let items = [label, " \u2014 ", count];
-  const items1 = [callback(collapsed(4189).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
+  const items1 = [callback(collapsed(4251).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj2 = { style: null, children: null };
@@ -63,10 +63,10 @@ export default function StageSectionHeader(collapsed) {
   const obj3 = { style: tmp.collapseButton, children: null };
   const obj4 = { style: animatedStyle, children: null };
   const obj5 = { source: null, style: null };
-  obj5[0] = importDefault(5509);
+  obj5[0] = importDefault(5571);
   obj5[1] = tmp.collapseIcon;
   obj4[1] = closure_6(collapsed(1297).Icon, obj5);
-  obj3[1] = closure_6(importDefault(4054).View, obj4);
+  obj3[1] = closure_6(importDefault(4116).View, obj4);
   items1[2] = closure_6(closure_4, obj3);
   obj1[2] = items1;
   obj[1] = callback(closure_3, obj1);

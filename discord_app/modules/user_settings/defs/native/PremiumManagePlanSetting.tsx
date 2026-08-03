@@ -1,6 +1,6 @@
-// === Module 14034: route ===
+// === Module 14101: route ===
 
-// Module 14034 (route)
+// Module 14101 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -14,7 +14,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return require(14035) /* PremiumPlanSelectSettingScreen */.default;
+    return require(14102) /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,6 +1,6 @@
-// === Module 10470: ForumPostActionBar ===
+// === Module 10608: ForumPostActionBar ===
 
-// Module 10470 (ForumPostActionBar)
+// Module 10608 (ForumPostActionBar)
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
 import { View } from "getSystemLocale";
@@ -38,7 +38,7 @@ export default function ForumPostActionBar(channel) {
   let obj = channel(589);
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getChannel(channel.parent_id));
-  let obj1 = channel(6068);
+  let obj1 = channel(5800);
   const firstMessage = obj1.useFirstForumPostMessage(channel).firstMessage;
   let obj2 = channel(589);
   const items1 = [storeThread];
@@ -60,7 +60,7 @@ export default function ForumPostActionBar(channel) {
   const callback = React.useCallback((nativeEvent) => {
     callback(width - nativeEvent.nativeEvent.layout.width - 40);
   }, items3);
-  let obj4 = channel(8833);
+  let obj4 = channel(9010);
   obj = { style: null, children: null };
   const items4 = [tmp.actionBarContainer, obj4.useGradientTop()];
   obj[0] = items4;
@@ -73,7 +73,7 @@ export default function ForumPostActionBar(channel) {
     obj1[1] = stateFromStores;
     obj1[2] = firstMessage;
     obj1[3] = tmp7[0];
-    obj[1] = callback(tmp2(10471).ForumPostActionBarReactions, obj1);
+    obj[1] = callback(tmp2(10609).ForumPostActionBarReactions, obj1);
     tmp11 = callback(tmp10, obj);
   }
   const items5 = [tmp11, ];
@@ -91,21 +91,21 @@ export default function ForumPostActionBar(channel) {
     obj3[3] = function onPress() {
       const guildId = channel.getGuildId();
       if (null != guildId) {
-        let obj = channel(9320);
+        let obj = channel(9492);
         obj = { section: null };
         obj[0] = outer1_9.CHANNEL_HEADER;
         const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj);
       }
     };
-    obj3[4] = callback(tmp2(4137).LinkIcon, { size: "xs" });
-    items7[1] = callback(tmp2(4721).PressableOpacity, obj3);
+    obj3[4] = callback(tmp2(4199).LinkIcon, { size: "xs" });
+    items7[1] = callback(tmp2(4783).PressableOpacity, obj3);
     obj2[2] = items7;
     items5[1] = tmp9(tmp10, obj2);
     obj[1] = items5;
     return tmp9(tmp10, obj);
   } else {
     let items9 = function handleFollow() {
-      const result = channel(9320).handleToggleFollowForumPost(channel, stateFromStores1);
+      const result = channel(9492).handleToggleFollowForumPost(channel, stateFromStores1);
     };
     obj4 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     let intl = tmp2(1236).intl;
@@ -116,8 +116,8 @@ export default function ForumPostActionBar(channel) {
       obj4[2] = tmp.actionButton;
       obj4[3] = items9;
       intl = callback;
-      items9 = [callback(tmp2(4145).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
-      Text = tmp2(4189).Text;
+      items9 = [callback(tmp2(4207).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
+      Text = tmp2(4251).Text;
       const obj5 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
       obj5[0] = items10;
@@ -131,15 +131,15 @@ export default function ForumPostActionBar(channel) {
       obj4[1] = Text(t["DjZ+6E"]);
       obj4[2] = tmp.actionButton;
       obj4[3] = items9;
-      const items11 = [callback(tmp2(10243).BellIcon, { size: "xs" }), ];
+      const items11 = [callback(tmp2(10382).BellIcon, { size: "xs" }), ];
       const obj6 = { style: null, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
       obj6[0] = tmp.buttonText;
       const intl2 = tmp2(1236).intl;
       obj6[3] = intl2.string(tmp2(1236).t["0rQinA"]);
-      items11[1] = callback(tmp2(4189).Text, obj6);
+      items11[1] = callback(tmp2(4251).Text, obj6);
       obj4[4] = items11;
       tmp15 = obj4;
     }
-    tmp9(tmp2(4721).PressableOpacity, tmp15);
+    tmp9(tmp2(4783).PressableOpacity, tmp15);
   }
 };

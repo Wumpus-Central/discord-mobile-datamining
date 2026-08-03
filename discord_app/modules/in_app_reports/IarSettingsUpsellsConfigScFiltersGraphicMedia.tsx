@@ -1,6 +1,6 @@
-// === Module 7712: items ===
+// === Module 7833: items ===
 
-// Module 7712 (items)
+// Module 7833 (items)
 let obj = {
   getTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;
@@ -24,8 +24,8 @@ obj[4] = function onApply() {
   let goreContentFriendDm;
   let goreContentGuilds;
   let goreContentNonFriendDm;
-  let obj = require(5886) /* resolveGoreSettingWithDefaults */;
-  const goreContentSettingOrDefault = require(5886) /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
+  let obj = require(5797) /* resolveGoreSettingWithDefaults */;
+  const goreContentSettingOrDefault = require(5797) /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
   obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
   if (goreContentGuilds === require(1306) /* create */.ExplicitContentRedaction.SHOW) {
@@ -43,9 +43,9 @@ obj[5] = function predicate() {
   let goreContentFriendDm;
   let goreContentGuilds;
   let goreContentNonFriendDm;
-  const goreContentSettingOrDefault = require(5886) /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
+  const goreContentSettingOrDefault = require(5797) /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  const obj = require(5886) /* resolveGoreSettingWithDefaults */;
+  const obj = require(5797) /* resolveGoreSettingWithDefaults */;
   return goreContentGuilds === require(1306) /* create */.ExplicitContentRedaction.SHOW || goreContentFriendDm === require(1306) /* create */.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === require(1306) /* create */.ExplicitContentRedaction.SHOW;
 };
 const result = require("getSystemLocale").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");

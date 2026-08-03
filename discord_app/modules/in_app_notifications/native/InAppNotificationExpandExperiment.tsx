@@ -1,6 +1,6 @@
-// === Module 10291: useCanExpandInAppNotification ===
+// === Module 10430: useCanExpandInAppNotification ===
 
-// Module 10291 (useCanExpandInAppNotification)
+// Module 10430 (useCanExpandInAppNotification)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { canExpand: true, canReact: true } };

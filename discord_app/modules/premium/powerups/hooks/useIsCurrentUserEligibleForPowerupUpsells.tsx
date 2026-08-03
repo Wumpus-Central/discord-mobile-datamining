@@ -1,6 +1,6 @@
-// === Module 15160: useIsCurrentUserEligibleForPowerupUpsells ===
+// === Module 15140: useIsCurrentUserEligibleForPowerupUpsells ===
 
-// Module 15160 (useIsCurrentUserEligibleForPowerupUpsells)
+// Module 15140 (useIsCurrentUserEligibleForPowerupUpsells)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,6 @@
-// === Module 5135: initialize ===
+// === Module 5197: initialize ===
 
-// Module 5135 (initialize)
+// Module 5197 (initialize)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import mergeGuildAvatar from "mergeGuildAvatar";

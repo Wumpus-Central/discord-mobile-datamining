@@ -1,6 +1,6 @@
-// === Module 7898: LimitedMap ===
+// === Module 8016: LimitedMap ===
 
-// Module 7898 (LimitedMap)
+// Module 8016 (LimitedMap)
 class LimitedMap extends Map {
   constructor(arg0) {
     tmp = new LimitedMap(new.target);

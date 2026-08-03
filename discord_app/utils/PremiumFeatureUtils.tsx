@@ -1,6 +1,6 @@
-// === Module 9387: getUserMaxFileSize ===
+// === Module 8189: getUserMaxFileSize ===
 
-// Module 9387 (getUserMaxFileSize)
+// Module 8189 (getUserMaxFileSize)
 import setPremiumTypeActual from "setPremiumTypeActual";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";

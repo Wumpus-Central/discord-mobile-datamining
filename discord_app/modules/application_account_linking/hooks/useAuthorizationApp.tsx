@@ -1,6 +1,6 @@
-// === Module 5524: getAuthorizationApp ===
+// === Module 5586: getAuthorizationApp ===
 
-// Module 5524 (getAuthorizationApp)
+// Module 5586 (getAuthorizationApp)
 import noop from "noop";
 import addApplication from "addApplication";
 import createExecutable from "createExecutable";

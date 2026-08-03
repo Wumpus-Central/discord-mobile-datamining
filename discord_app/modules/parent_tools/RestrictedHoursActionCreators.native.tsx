@@ -1,17 +1,17 @@
-// === Module 16134: closeRestrictedHoursModal ===
+// === Module 16198: closeRestrictedHoursModal ===
 
-// Module 16134 (closeRestrictedHoursModal)
+// Module 16198 (closeRestrictedHoursModal)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;
 function closeRestrictedHoursModal() {
-  importDefault(4399).popWithKey(RESTRICTED_HOURS_MODAL_KEY);
+  importDefault(4461).popWithKey(RESTRICTED_HOURS_MODAL_KEY);
 }
 const RESTRICTED_HOURS_MODAL_KEY = "RESTRICTED_HOURS_MODAL_KEY";
 const result = require("RestrictedHoursLogoutBlockingLayer").fileFinishedImporting("modules/parent_tools/RestrictedHoursActionCreators.native.tsx");
 
 export const openRestrictedHoursModal = function openRestrictedHoursModal() {
-  let obj = importDefault(4399);
+  let obj = importDefault(4461);
   obj = { onClose: closeRestrictedHoursModal };
   obj.pushLazy(callback(function*() {
     if (v0 === 2) {

@@ -1,6 +1,6 @@
-// === Module 13047: GuildSettingsPickerBottomSheet ===
+// === Module 13110: GuildSettingsPickerBottomSheet ===
 
-// Module 13047 (GuildSettingsPickerBottomSheet)
+// Module 13110 (GuildSettingsPickerBottomSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

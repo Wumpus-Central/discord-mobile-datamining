@@ -1,6 +1,6 @@
-// === Module 15825: getLayoutStyle ===
+// === Module 15889: getLayoutStyle ===
 
-// Module 15825 (getLayoutStyle)
+// Module 15889 (getLayoutStyle)
 let obj = { layout: { margin: { marginLeft: 8, marginRight: 8, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };
 obj = { borderRadius: require("Themes").radii.md, padding: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 } };
 obj[1] = obj;

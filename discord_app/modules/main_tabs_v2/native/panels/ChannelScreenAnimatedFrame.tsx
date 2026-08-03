@@ -1,6 +1,6 @@
-// === Module 14940: ChannelScreenAnimatedFrame ===
+// === Module 15007: ChannelScreenAnimatedFrame ===
 
-// Module 14940 (ChannelScreenAnimatedFrame)
+// Module 15007 (ChannelScreenAnimatedFrame)
 import "noop";
 import { View } from "get ActivityIndicator";
 import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT";

@@ -1,6 +1,6 @@
-// === Module 14739: TestLocaleSelector ===
+// === Module 14806: TestLocaleSelector ===
 
-// Module 14739 (TestLocaleSelector)
+// Module 14806 (TestLocaleSelector)
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import Text from "Text";
@@ -89,9 +89,9 @@ function TestLocaleSelector() {
     }
     return applyArgumentsResult;
   };
-  const items = [callback3(_require(7659).TableRadioRow, { label: "English", value: "en-US" }), callback3(_require(7659).TableRadioRow, { label: "French", value: "fr" })];
+  const items = [callback3(_require(7782).TableRadioRow, { label: "English", value: "en-US" }), callback3(_require(7782).TableRadioRow, { label: "French", value: "fr" })];
   obj[4] = items;
-  return callback4(_require(7660).TableRadioGroup, obj);
+  return callback4(_require(7783).TableRadioGroup, obj);
 }
 function LocaleInfo() {
   let require;
@@ -104,39 +104,39 @@ function LocaleInfo() {
     return items;
   }), 2);
   const first = tmp[0];
-  [tmp4, require] = callback(React.useState(importDefault(3775).locale), 2);
+  [tmp4, require] = callback(React.useState(importDefault(3837).locale), 2);
   const items1 = [first];
   const effect = React.useEffect(() => {
     const timerId = setTimeout(() => {
       callback(outer1_1(outer1_2[14]).locale());
     }, 0);
   }, items1);
-  let obj1 = importDefault(3775);
+  let obj1 = importDefault(3837);
   obj = { label: "Active System", trailing: null };
-  obj[1] = callback3(require(5224) /* TableRowInner */.TableRow.TrailingText, { text: "@discord/intl" });
-  const items2 = [callback3(require(5224) /* TableRowInner */.TableRow, obj), , , , ];
+  obj[1] = callback3(require(5286) /* TableRowInner */.TableRow.TrailingText, { text: "@discord/intl" });
+  const items2 = [callback3(require(5286) /* TableRowInner */.TableRow, obj), , , , ];
   obj = { label: "App locale", trailing: null };
-  obj[1] = callback3(require(5224) /* TableRowInner */.TableRow.TrailingText, { text: first });
-  items2[1] = callback3(require(5224) /* TableRowInner */.TableRow, obj);
+  obj[1] = callback3(require(5286) /* TableRowInner */.TableRow.TrailingText, { text: first });
+  items2[1] = callback3(require(5286) /* TableRowInner */.TableRow, obj);
   obj1 = { label: "System locale", trailing: null };
-  obj1[1] = callback3(require(5224) /* TableRowInner */.TableRow.TrailingText, { text: tmp[1] });
-  items2[2] = callback3(require(5224) /* TableRowInner */.TableRow, obj1);
+  obj1[1] = callback3(require(5286) /* TableRowInner */.TableRow.TrailingText, { text: tmp[1] });
+  items2[2] = callback3(require(5286) /* TableRowInner */.TableRow, obj1);
   const obj2 = { label: "@discord/intl locale", trailing: null };
   const obj3 = { text: null };
   obj3[0] = require(1236) /* getSystemLocale */.intl.currentLocale;
-  obj2[1] = callback3(require(5224) /* TableRowInner */.TableRow.TrailingText, obj3);
-  items2[3] = callback3(require(5224) /* TableRowInner */.TableRow, obj2);
+  obj2[1] = callback3(require(5286) /* TableRowInner */.TableRow.TrailingText, obj3);
+  items2[3] = callback3(require(5286) /* TableRowInner */.TableRow, obj2);
   const obj4 = { label: "Moment locale", trailing: null, subLabel: null };
-  obj4[1] = callback3(require(5224) /* TableRowInner */.TableRow.TrailingText, { text: tmp4 });
+  obj4[1] = callback3(require(5286) /* TableRowInner */.TableRow.TrailingText, { text: tmp4 });
   let str = "Locale data does not match";
   if (tmp4 === obj1.localeData()._abbr) {
     str = "Locale data matches current locale";
   }
   const obj5 = { hasIcons: false, children: null };
   obj4[2] = str;
-  items2[4] = callback3(require(5224) /* TableRowInner */.TableRow, obj4);
+  items2[4] = callback3(require(5286) /* TableRowInner */.TableRow, obj4);
   obj5[1] = items2;
-  return closure_11(require(5558) /* TableRowGroupTitle */.TableRowGroup, obj5);
+  return closure_11(require(5620) /* TableRowGroupTitle */.TableRowGroup, obj5);
 }
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -162,40 +162,40 @@ export default function IntlTestingSettingsPage() {
   const items = [callback3(LocaleInfo, {}), callback3(TestLocaleSelector, {}), , , , , , ];
   obj = { variant: "text-md/normal", children: null };
   const intl = _require(1236).intl;
-  obj[1] = intl.format(importDefault(14740).HMvEC5, {});
-  items[2] = callback3(_require(4189).Text, obj);
+  obj[1] = intl.format(importDefault(14807).HMvEC5, {});
+  items[2] = callback3(_require(4251).Text, obj);
   const obj1 = { variant: "text-md/normal", children: null };
   const intl2 = _require(1236).intl;
-  obj1[1] = intl2.format(importDefault(14772).swfLzV, {});
-  items[3] = callback3(_require(4189).Text, obj1);
+  obj1[1] = intl2.format(importDefault(14839).swfLzV, {});
+  items[3] = callback3(_require(4251).Text, obj1);
   const obj2 = { variant: "text-md/normal", children: null };
   const intl3 = _require(1236).intl;
-  obj2[1] = intl3.format(importDefault(14740).rmps8y, {});
-  items[4] = callback3(_require(4189).Text, obj2);
+  obj2[1] = intl3.format(importDefault(14807).rmps8y, {});
+  items[4] = callback3(_require(4251).Text, obj2);
   const obj3 = { variant: "text-md/normal", children: null };
   const intl4 = _require(1236).intl;
-  obj3[1] = intl4.format(importDefault(14740).uczI4g, {
+  obj3[1] = intl4.format(importDefault(14807).uczI4g, {
     linkTarget() {
 
     }
   });
-  items[5] = callback3(_require(4189).Text, obj3);
+  items[5] = callback3(_require(4251).Text, obj3);
   const obj5 = { variant: "text-md/normal", children: null };
   const intl5 = _require(1236).intl;
-  obj5[1] = intl5.format(importDefault(14740).rdfRyh, {});
-  items[6] = callback3(_require(4189).Text, obj5);
+  obj5[1] = intl5.format(importDefault(14807).rdfRyh, {});
+  items[6] = callback3(_require(4251).Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
   const intl6 = _require(1236).intl;
-  obj6[1] = intl6.format(importDefault(14740).XOdbAy, {
+  obj6[1] = intl6.format(importDefault(14807).XOdbAy, {
     username: "some user",
     usernameHook(children) {
-      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4189).Text, obj) };
+      obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: callback2(callback(4251).Text, obj) };
       obj = { variant: "text-sm/normal", color: "text-overlay-light", children };
       return callback2(closure_6, obj);
     }
   });
-  items[7] = callback3(_require(4189).Text, obj6);
+  items[7] = callback3(_require(4251).Text, obj6);
   obj[2] = items;
-  obj[1] = callback4(_require(4602).Stack, obj);
+  obj[1] = callback4(_require(4664).Stack, obj);
   return callback3(closure_7, obj);
 };

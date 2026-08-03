@@ -1,6 +1,6 @@
-// === Module 16191: initialize ===
+// === Module 16255: initialize ===
 
-// Module 16191 (initialize)
+// Module 16255 (initialize)
 import { Store } from "initialize";
 
 const require = arg1;
@@ -23,7 +23,7 @@ const hotspotStore = new HotspotStore(require("dispatcher"), {
     feedbackType = feedbackType.feedbackType;
     const obj = {};
     ({ cooldown, chance } = feedbackType);
-    const merged = Object.assign(require(16190) /* optOutEligibilityCheck */.FeedbackConfig[feedbackType]);
+    const merged = Object.assign(require(16254) /* optOutEligibilityCheck */.FeedbackConfig[feedbackType]);
     obj.cooldown = cooldown;
     obj.chance = chance;
     closure_2[feedbackType] = obj;

@@ -57,7 +57,7 @@ function processColor(arg0) {
           if (null != processColorObjectResult) {
             return processColorObjectResult;
           }
-        } else if (typeof tmp4 !== "__REMOTEDEV__") {
+        } else if (typeof tmp4 !== "SENTRY_RELEASE") {
           obj = { r: null, g: null, b: null, a: null };
           obj[0] = (4278190080 & tmp4) >>> 24;
           obj[1] = (16711680 & tmp4) >>> 16;
@@ -355,7 +355,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__attach", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -375,7 +375,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -395,7 +395,7 @@ let items = [
       const self = this;
       if (0 === this._suspendCallbacks) {
         let fn = callback3(callback2(self.prototype), "__callListeners", self);
-        if (typeof fn !== "disabledUntil") {
+        if (typeof fn !== "HAS_APPLICATION") {
           fn = (items) => fn.apply(self, items);
         }
         const items = [arg0];
@@ -417,7 +417,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];

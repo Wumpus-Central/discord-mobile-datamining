@@ -1,6 +1,6 @@
-// === Module 8965: getLocationContextServer ===
+// === Module 9142: getLocationContextServer ===
 
-// Module 8965 (getLocationContextServer)
+// Module 9142 (getLocationContextServer)
 import handleLogout from "handleLogout";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -761,7 +761,7 @@ export const fetchChannels = function fetchChannels(closure_0) {
   return applyArgumentsResult;
 };
 export const logoutWithRedirect = function logoutWithRedirect(pathname, login_required_account_manager) {
-  const obj = importDefault(5645);
+  const obj = importDefault(5707);
   obj.logout(login_required_account_manager, require(507) /* getAuthenticationPath */.getLoginPath(pathname.pathname + pathname.search, false));
 };
 export const verifyUserCode = function verifyUserCode(outer1_0) {

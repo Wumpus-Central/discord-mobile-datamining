@@ -1,6 +1,6 @@
-// === Module 9281: ConversationsAnalytics ===
+// === Module 9453: ConversationsAnalytics ===
 
-// Module 9281 (ConversationsAnalytics)
+// Module 9453 (ConversationsAnalytics)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 

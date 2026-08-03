@@ -1,6 +1,6 @@
-// === Module 7379: OrbNitroSpotIllustration ===
+// === Module 6515: OrbNitroSpotIllustration ===
 
-// Module 7379 (OrbNitroSpotIllustration)
+// Module 6515 (OrbNitroSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/OrbNitroSpotIllustration.native.tsx");
@@ -24,7 +24,7 @@ export const OrbNitroSpotIllustration = function OrbNitroSpotIllustration(width)
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(7380);
+  obj[0] = importDefault(6516);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const OrbNitroSpotIllustration = function OrbNitroSpotIllustration(width)
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
 };

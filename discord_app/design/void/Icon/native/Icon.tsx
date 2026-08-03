@@ -1,6 +1,6 @@
-// === Module 4606: IconSizes ===
+// === Module 4668: IconSizes ===
 
-// Module 4606 (IconSizes)
+// Module 4668 (IconSizes)
 import importAllResult from "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

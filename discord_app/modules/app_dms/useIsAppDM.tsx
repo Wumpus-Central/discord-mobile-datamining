@@ -1,6 +1,6 @@
-// === Module 11336: useIsAppDM ===
+// === Module 11446: useIsAppDM ===
 
-// Module 11336 (useIsAppDM)
+// Module 11446 (useIsAppDM)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

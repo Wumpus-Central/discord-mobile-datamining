@@ -1,6 +1,6 @@
-// === Module 10439: useChannelSafeAreaBottomStyles ===
+// === Module 10577: useChannelSafeAreaBottomStyles ===
 
-// Module 10439 (useChannelSafeAreaBottomStyles)
+// Module 10577 (useChannelSafeAreaBottomStyles)
 import set from "set";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import initialize from "initialize";

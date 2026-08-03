@@ -1,6 +1,6 @@
-// === Module 13256: IntlLink ===
+// === Module 13319: IntlLink ===
 
-// Module 13256 (IntlLink)
+// Module 13319 (IntlLink)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -34,6 +34,6 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = callback(React.useContext(target(3912).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1297).LegacyText, { accessible: true, accessibilityRole: "link", onPress: fn, style: callback(React.useContext(target(3912).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = callback(React.useContext(target(3974).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1297).LegacyText, { accessible: true, accessibilityRole: "link", onPress: fn, style: callback(React.useContext(target(3974).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 };

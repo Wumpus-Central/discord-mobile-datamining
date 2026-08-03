@@ -1,6 +1,6 @@
-// === Module 16149: ExistingUserAgeGate ===
+// === Module 16213: ExistingUserAgeGate ===
 
-// Module 16149 (ExistingUserAgeGate)
+// Module 16213 (ExistingUserAgeGate)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import closure_5 from "t";

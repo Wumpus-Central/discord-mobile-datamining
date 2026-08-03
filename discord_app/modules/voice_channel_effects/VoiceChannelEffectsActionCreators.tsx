@@ -1,6 +1,6 @@
-// === Module 10792: VoiceChannelEffectSentLocation ===
+// === Module 5860: VoiceChannelEffectSentLocation ===
 
-// Module 10792 (VoiceChannelEffectSentLocation)
+// Module 5860 (VoiceChannelEffectSentLocation)
 import getEmojiToGroupId from "getEmojiToGroupId";
 import handleConnectionOpen from "handleConnectionOpen";
 import initialize from "initialize";
@@ -29,16 +29,16 @@ export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCu
       abortController.abort();
     }
   }, 1000);
-  obj[1] = abortController(10586).sampleAnimationId(BASIC, abortController(10586).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
+  obj[1] = abortController(5863).sampleAnimationId(BASIC, abortController(5863).CUSTOM_CALL_SOUND_ANIMATION_RANGE);
   const HTTP = tmp2(530).HTTP;
   obj = { url: closure_7.CUSTOM_CALL_SOUNDS(id), body: obj, signal: abortController.signal, onRequestProgress: throttleResult, rejectWithError: true };
-  const tmp2Result = abortController(10586);
+  const tmp2Result = abortController(5863);
   HTTP.post(obj).then(closure_8, () => {
 
   });
   const postResult = HTTP.post(obj);
-  const items = [abortController(5539).CHANNEL_CALL];
-  abortController(10794)(items, arg2, c4, abortController(4646).AnalyticsSoundType.ENTRY);
+  const items = [abortController(5601).CHANNEL_CALL];
+  abortController(5886)(items, arg2, c4, abortController(4708).AnalyticsSoundType.ENTRY);
 };
 export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundboardEffect(channelId, emojiId, arg2, arg3, arg4) {
   let customEmojiById = null;
@@ -86,5 +86,5 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
   if (arg3 == null) {
     items = [];
   }
-  abortController(10794)(items, arg2, emojiId, abortController(4646).AnalyticsSoundType.DEFAULT, arg4);
+  abortController(5886)(items, arg2, emojiId, abortController(4708).AnalyticsSoundType.DEFAULT, arg4);
 };

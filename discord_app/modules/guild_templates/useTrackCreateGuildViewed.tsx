@@ -1,6 +1,6 @@
-// === Module 11001: useTrackCreateGuildViewed ===
+// === Module 11122: useTrackCreateGuildViewed ===
 
-// Module 11001 (useTrackCreateGuildViewed)
+// Module 11122 (useTrackCreateGuildViewed)
 import noop from "noop";
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import { AnalyticEvents } from "ME";

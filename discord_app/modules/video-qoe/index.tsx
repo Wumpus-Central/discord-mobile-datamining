@@ -1,6 +1,6 @@
-// === Module 14179: SimpleMuxWrapper ===
+// === Module 14246: SimpleMuxWrapper ===
 
-// Module 14179 (SimpleMuxWrapper)
+// Module 14246 (SimpleMuxWrapper)
 const result = require("logger").fileFinishedImporting("modules/video-qoe/index.tsx");
 
 export const SimpleMuxWrapper = require("logger").SimpleMuxWrapper;

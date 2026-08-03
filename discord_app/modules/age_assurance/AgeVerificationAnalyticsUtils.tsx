@@ -1,6 +1,6 @@
-// === Module 6752: AgeVerificationModalEntryPoint ===
+// === Module 7710: AgeVerificationModalEntryPoint ===
 
-// Module 6752 (AgeVerificationModalEntryPoint)
+// Module 7710 (AgeVerificationModalEntryPoint)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 

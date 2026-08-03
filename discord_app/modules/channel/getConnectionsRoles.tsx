@@ -1,6 +1,6 @@
-// === Module 5002: ChannelTypes ===
+// === Module 5064: ChannelTypes ===
 
-// Module 5002 (ChannelTypes)
+// Module 5064 (ChannelTypes)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";

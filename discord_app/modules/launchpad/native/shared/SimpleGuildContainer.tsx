@@ -1,6 +1,6 @@
-// === Module 15820: SimpleGuildContainer ===
+// === Module 15884: SimpleGuildContainer ===
 
-// Module 15820 (SimpleGuildContainer)
+// Module 15884 (SimpleGuildContainer)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -29,7 +29,7 @@ let closure_12 = importAllResult.memo((backgroundColor) => {
     obj[0] = badge;
     obj[1] = unread;
     obj[2] = backgroundColor.backgroundColor;
-    obj[1] = callback(importDefault(9132), obj);
+    obj[1] = callback(importDefault(9305), obj);
     let tmp2 = callback(closure_5, obj);
   } else {
     tmp2 = null;
@@ -51,7 +51,7 @@ let closure_13 = importAllResult.memo((arg0) => {
     obj[0] = backgroundColor;
     obj[0] = obj;
     ({ source: obj3[1], IconComponent: obj3[2], isCurrentUserConnected: obj3[3] } = activityIndicatorState);
-    let tmp2 = callback(require(15011) /* getMediaIcon */.GuildsBarActivityIndicatorBase, obj);
+    let tmp2 = callback(require(15298) /* getMediaIcon */.GuildsBarActivityIndicatorBase, obj);
   } else {
     tmp2 = null;
     if (null != guildId) {
@@ -60,7 +60,7 @@ let closure_13 = importAllResult.memo((arg0) => {
       const obj1 = { backgroundColor: null };
       obj1[0] = backgroundColor;
       obj[1] = obj1;
-      tmp2 = callback(importDefault(15011), obj);
+      tmp2 = callback(importDefault(15298), obj);
     }
   }
   return tmp2;

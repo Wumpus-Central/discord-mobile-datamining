@@ -1,6 +1,6 @@
-// === Module 6252: useCheckoutPlanPriceString ===
+// === Module 7242: useCheckoutPlanPriceString ===
 
-// Module 6252 (useCheckoutPlanPriceString)
+// Module 7242 (useCheckoutPlanPriceString)
 import noop from "noop";
 import { useNativeCheckoutStore } from "context";
 

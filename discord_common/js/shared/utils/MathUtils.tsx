@@ -1,6 +1,6 @@
-// === Module 8763: roundIfClose ===
+// === Module 8940: roundIfClose ===
 
-// Module 8763 (roundIfClose)
+// Module 8940 (roundIfClose)
 function roundIfClose(result, arg1) {
   const diff = result - Math.floor(result);
   if (diff >= 1 - arg1) {

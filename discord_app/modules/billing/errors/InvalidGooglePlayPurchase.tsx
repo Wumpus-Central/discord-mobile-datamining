@@ -1,6 +1,6 @@
-// === Module 6256: prototype ===
+// === Module 7245: prototype ===
 
-// Module 6256 (prototype)
+// Module 7245 (prototype)
 import "set";
 
 const prototype = function InvalidGooglePlayPurchase() {

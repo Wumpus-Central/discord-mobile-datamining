@@ -1,6 +1,6 @@
-// === Module 14270: initialize ===
+// === Module 14337: initialize ===
 
-// Module 14270 (initialize)
+// Module 14337 (initialize)
 import { createChannelRecord } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Store } from "initialize";

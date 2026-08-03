@@ -1,6 +1,6 @@
-// === Module 9158: MemberVerificationAlertSuccess ===
+// === Module 9331: MemberVerificationAlertSuccess ===
 
-// Module 9158 (MemberVerificationAlertSuccess)
+// Module 9331 (MemberVerificationAlertSuccess)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

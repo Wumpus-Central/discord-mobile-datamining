@@ -1,6 +1,6 @@
-// === Module 5022: getHighestHoistedRole ===
+// === Module 5084: getHighestHoistedRole ===
 
-// Module 5022 (getHighestHoistedRole)
+// Module 5084 (getHighestHoistedRole)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 
@@ -23,8 +23,8 @@ function getHighestHoistedRole(arg0, arg1) {
         const member = obj2.getMember(guild.id, arg1);
         let highestHoistedRole = null;
         if (null != member) {
-          highestHoistedRole = importAll(3826).getHighestHoistedRole(guild, member);
-          const obj3 = importAll(3826);
+          highestHoistedRole = importAll(3888).getHighestHoistedRole(guild, member);
+          const obj3 = importAll(3888);
         }
         return highestHoistedRole;
       }

@@ -1,6 +1,6 @@
-// === Module 15869: MorphablePanelModes ===
+// === Module 15933: MorphablePanelModes ===
 
-// Module 15869 (MorphablePanelModes)
+// Module 15933 (MorphablePanelModes)
 import noop from "noop";
 import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE";
 

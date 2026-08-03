@@ -31,7 +31,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
     lc_namespace: ["langchain_core", "callbacks", "sentry"],
     lc_secrets: "r",
     lc_attributes: "accessibilityRole",
-    lc_aliases: "name",
+    lc_aliases: "toCharArray$esjava$1",
     lc_serializable_keys: "call",
     lc_id: ["langchain_core", "callbacks", "sentry"],
     lc_kwargs: {},
@@ -84,7 +84,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         if (result) {
           value.setAttributes(result);
         }
-        if (typeof exitSpan !== "fileFinishedImporting") {
+        if (typeof exitSpan !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -110,7 +110,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         obj = { code: null, message: "llm_error" };
         obj[0] = flag(flag2[4]).SPAN_STATUS_ERROR;
         value.setStatus(obj);
-        if (typeof exitSpan !== "fileFinishedImporting") {
+        if (typeof exitSpan !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -159,7 +159,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
           obj[0] = JSON.stringify(arg0);
           value.setAttributes(obj);
         }
-        if (typeof exitSpan !== "fileFinishedImporting") {
+        if (typeof exitSpan !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -184,7 +184,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         obj = { code: null, message: "chain_error" };
         obj[0] = flag(flag2[4]).SPAN_STATUS_ERROR;
         value.setStatus(obj);
-        if (typeof exitSpan !== "fileFinishedImporting") {
+        if (typeof exitSpan !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -234,7 +234,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
           obj[0] = JSON.stringify(arg0);
           value.setAttributes(obj);
         }
-        if (typeof exitSpan !== "fileFinishedImporting") {
+        if (typeof exitSpan !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -259,7 +259,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         obj = { code: null, message: "tool_error" };
         obj[0] = flag(flag2[4]).SPAN_STATUS_ERROR;
         value.setStatus(obj);
-        if (typeof exitSpan !== "fileFinishedImporting") {
+        if (typeof exitSpan !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -284,7 +284,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
       obj = { lc: 1, type: "not_implemented", id: obj.lc_id };
       return obj;
     },
-    toJSONNotImplemented: "ZoomInEasyDown"
+    toJSONNotImplemented: "function processTransformOrigin_Pnpm_processTransformOriginTs2(transformOriginIn){const{INDEX_X,INDEX_Z,INDEX_Y,__DEV__,validateTransformOrigin}=this.__closure;let transformOrigin=Array.isArray(transformOriginIn)?transformOriginIn:['50%','50%',0];if(typeof transformOriginIn==='string'){const transformOriginString=transformOriginIn;const regex=/(top|bottom|left|right|center|\\d+(?:%|px)|0)/gi;const transformOriginArray=['50%','50%',0];let index=INDEX_X;let matches;while(matches=regex.exec(transformOriginString)){let nextIndex=index+1;const value=matches[0];const valueLower=value.toLowerCase();switch(valueLower){case'left':case'right':{if(index!==INDEX_X){throw new ReanimatedError(\"Transform-origin \"+value+\" can only be used for x-position\");}transformOriginArray[INDEX_X]=valueLower==='left'?0:'100%';break;}case'top':case'bottom':{if(index===INDEX_Z){throw new ReanimatedError(\"Transform-origin \"+value+\" can only be used for y-position\");}transformOriginArray[INDEX_Y]=valueLower==='top'?0:'100%';if(index===INDEX_X){const horizontal=regex.exec(transformOriginString);if(horizontal==null){break;}switch(horizontal===null||horizontal===void 0?void 0:horizontal[0].toLowerCase()){case'left':transformOriginArray[INDEX_X]=0;break;case'right':transformOriginArray[INDEX_X]='100%';break;case'center':transformOriginArray[INDEX_X]='50%';break;default:throw new ReanimatedError(\"Could not parse transform-origin: \"+transformOriginString);}nextIndex=INDEX_Z;}break;}case'center':{if(index===INDEX_Z){throw new ReanimatedError(\"Transform-origin value \"+value+\" cannot be used for z-position\");}transformOriginArray[index]='50%';break;}default:{if(value.endsWith('%')){transformOriginArray[index]=value;}else{const numericValue=parseFloat(value);if(isNaN(numericValue)){throw new ReanimatedError(\"Invalid numeric value in transform-origin: \"+value);}transformOriginArray[index]=numericValue;}break;}}index=nextIndex;}transformOrigin=transformOriginArray;}if(typeof transformOriginIn!=='string'&&!Array.isArray(transformOriginIn)){throw new ReanimatedError(\"Invalid transformOrigin type: \"+typeof transformOriginIn);}if(__DEV__){validateTransformOrigin(transformOrigin);}return transformOrigin;}"
   };
   obj[28] = function toJSONNotImplemented() {
     obj = { lc: 1, type: "not_implemented", id: obj.lc_id };

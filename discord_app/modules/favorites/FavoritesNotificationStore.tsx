@@ -1,6 +1,6 @@
-// === Module 10229: useFavoritesNotificationStore ===
+// === Module 10368: useFavoritesNotificationStore ===
 
-// Module 10229 (useFavoritesNotificationStore)
+// Module 10368 (useFavoritesNotificationStore)
 import keys from "keys";
 
 const obj = keys.create((arg0) => {

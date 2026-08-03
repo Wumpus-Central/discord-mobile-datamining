@@ -1,6 +1,6 @@
-// === Module 7981: useAvatarDecorationIfNotExpired ===
+// === Module 8099: useAvatarDecorationIfNotExpired ===
 
-// Module 7981 (useAvatarDecorationIfNotExpired)
+// Module 8099 (useAvatarDecorationIfNotExpired)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { MAX_TIMEOUT_MS } from "ME";

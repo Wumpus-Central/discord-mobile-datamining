@@ -1,6 +1,6 @@
-// === Module 16187: handleDeletedEntityIds ===
+// === Module 16251: handleDeletedEntityIds ===
 
-// Module 16187 (handleDeletedEntityIds)
+// Module 16251 (handleDeletedEntityIds)
 import getEmojiToGroupId from "getEmojiToGroupId";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -95,7 +95,7 @@ function handleDeletedEntityIds(guild_id) {
   });
 }
 function handleConnectionOpen() {
-  const all = importDefault(5941).getAll();
+  const all = importDefault(7020).getAll();
   all.then((arr) => {
     const item = arr.forEach((arg0) => {
       let closure_0 = arg0;

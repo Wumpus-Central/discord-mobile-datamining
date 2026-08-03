@@ -1,6 +1,6 @@
-// === Module 10060: __INTERNAL_VIEW_CONFIG ===
+// === Module 10202: __INTERNAL_VIEW_CONFIG ===
 
-// Module 10060 (__INTERNAL_VIEW_CONFIG)
+// Module 10202 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDChatList", validAttributes: { floatingChatInputEnabled: true } };

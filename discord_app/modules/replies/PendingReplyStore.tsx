@@ -1,6 +1,6 @@
-// === Module 5969: getState ===
+// === Module 7048: getState ===
 
-// Module 5969 (getState)
+// Module 7048 (getState)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -44,8 +44,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getPendingReply"] = function getPendingReply(id) {
   return dependencyMap[id];
 };
-prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(message) {
-  return table[message];
+prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(pendingReplyActionSource) {
+  return table[pendingReplyActionSource];
 };
 PendingReplyStore.displayName = "PendingReplyStore";
 PendingReplyStore.persistKey = "PendingReplyStore";

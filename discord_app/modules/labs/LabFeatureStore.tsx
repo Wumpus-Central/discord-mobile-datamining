@@ -1,6 +1,6 @@
-// === Module 8191: getUserAgnosticState ===
+// === Module 8498: getUserAgnosticState ===
 
-// Module 8191 (getUserAgnosticState)
+// Module 8498 (getUserAgnosticState)
 import { DeviceSettingsStore } from "initialize";
 
 let closure_2 = {};
@@ -11,7 +11,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { toggleStates: closure_2 };
 };
 prototype["initialize"] = function initialize(toggleStates) {
-  for (const key10008 in importDefault(8192)) {
+  for (const key10008 in importDefault(8499)) {
     let tmp = key10008;
     let flag;
     let tmp2 = closure_2;

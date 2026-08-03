@@ -1,6 +1,6 @@
-// === Module 15331: ForYouSuggestedFriendRow ===
+// === Module 15398: ForYouSuggestedFriendRow ===
 
-// Module 15331 (ForYouSuggestedFriendRow)
+// Module 15398 (ForYouSuggestedFriendRow)
 import renderChannelPressableWrapper from "renderChannelPressableWrapper";
 import { View } from "getSystemLocale";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -18,9 +18,9 @@ const require = arg1;
 ({ AnalyticEvents: error, RelationshipTypes: metroImportAll } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((layout) => {
-  let obj = require(10299) /* getLayoutStyles */;
+  let obj = require(10438) /* getLayoutStyles */;
   const layoutStyles = obj.getLayoutStyles(layout);
-  let obj1 = require(10299) /* getLayoutStyles */;
+  let obj1 = require(10438) /* getLayoutStyles */;
   const sizeStyle = obj1.makeSizeStyle(layoutStyles.icon.wrapper.size);
   obj = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null };
   obj = { backgroundColor: importDefault(712).colors.BACKGROUND_MOD_MUTED };
@@ -53,13 +53,13 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
   let analyticsLocations;
   let sharedValue;
   let stateFromStores;
-  let obj = suggestedFriend(10299);
+  let obj = suggestedFriend(10438);
   const messagesTabLayout = obj.useMessagesTabLayout(panelVariant);
   const tmp4 = callback2(messagesTabLayout);
-  analyticsLocations = importDefault(5519)().analyticsLocations;
-  let obj1 = suggestedFriend(10299);
+  analyticsLocations = importDefault(5581)().analyticsLocations;
+  let obj1 = suggestedFriend(10438);
   const layoutStyles = obj1.getLayoutStyles(messagesTabLayout);
-  let obj2 = suggestedFriend(4610);
+  let obj2 = suggestedFriend(4672);
   const fontScale = obj2.useFontScale();
   let obj3 = suggestedFriend(647);
   const items = [stateFromStores];
@@ -70,7 +70,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
     if (suggestedFriend.friendSuggestionName.length > 0) {
       let friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
-    let tmpResult = tmp(15060);
+    let tmpResult = tmp(15040);
     const suggestedContactNameForSuggestion = tmpResult.getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend);
     let str2 = "";
     if (null != suggestedContactNameForSuggestion) {
@@ -84,7 +84,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
         obj[0] = suggestedFriend.mutualFriendsCount;
         let formatToPlainStringResult = intl.formatToPlainString(tmp(1236).t.z7y34b, obj);
       }
-      tmpResult = tmp(4054);
+      tmpResult = tmp(4116);
       sharedValue = tmpResult.useSharedValue(false);
       const items2 = [upsertRelationship];
       stateFromStores = tmp(647).useStateFromStores(items2, () => outer1_6.getRelationshipType(suggestedFriend.user.id) === outer1_8.PENDING_OUTGOING);
@@ -103,7 +103,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj1[0] = layoutStyles.container.borderRadius;
       items4[1] = obj1;
       obj[3] = items4;
-      const tmpResult2 = tmp(15332);
+      const tmpResult2 = tmp(15399);
       obj2 = { style: null, children: null };
       obj2[0] = tmp4.avatar;
       obj3 = { user: null, guildId: "r", size: "ct", animate: null };
@@ -118,9 +118,9 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj5[1] = layoutStyles.channelName.text.variant;
       obj5[3] = tmp4.nameText;
       obj5[4] = friendSuggestionName;
-      const items6 = [callback(tmp(4189).Text, obj5), ];
+      const items6 = [callback(tmp(4251).Text, obj5), ];
       const tmp20 = closure_11;
-      const tmpResult3 = tmp(15333);
+      const tmpResult3 = tmp(15400);
       let num3 = 0;
       if (tmpResult4.isAndroid()) {
         num3 = -2;
@@ -143,7 +143,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const intl2 = tmp(1236).intl;
       obj8[5] = intl2.string(tmp(1236).t.Kzyxm9);
       obj8[6] = !stateFromStoresObject;
-      obj6[1] = callback(tmp(15334).ActionStatusSubLabel, obj8);
+      obj6[1] = callback(tmp(15401).ActionStatusSubLabel, obj8);
       items6[1] = callback(sharedValue, obj6);
       obj4[1] = items6;
       items5[1] = closure_10(sharedValue, obj4);
@@ -167,7 +167,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
         callback2(suggestedFriend);
       };
       obj9[5] = !stateFromStoresObject;
-      items5[2] = callback(tmp(15335).ContactSuggestionActions, obj9);
+      items5[2] = callback(tmp(15402).ContactSuggestionActions, obj9);
       obj10[0] = items5;
       const obj11 = { layout: null, fontScale: null, panelVariant: null };
       obj11[0] = messagesTabLayout;
@@ -177,11 +177,11 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const obj12 = { layout: null, panelVariant: null };
       obj12[0] = messagesTabLayout;
       obj12[1] = panelVariant;
-      return tmpResult2.renderChannelPressableWrapper(callback(tmp(4721).PressableHighlight, obj), obj12);
+      return tmpResult2.renderChannelPressableWrapper(callback(tmp(4783).PressableHighlight, obj), obj12);
     }
-    let tmp5Result = tmp5(4032);
+    let tmp5Result = tmp5(4094);
     formatToPlainStringResult = tmp5Result.getName(suggestedFriend.user);
   }
-  tmp5Result = tmp5(4032);
+  tmp5Result = tmp5(4094);
   friendSuggestionName = tmp5Result.getName(suggestedFriend.user);
 };

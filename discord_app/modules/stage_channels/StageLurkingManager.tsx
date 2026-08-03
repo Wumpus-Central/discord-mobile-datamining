@@ -1,6 +1,6 @@
-// === Module 12437: _initialize ===
+// === Module 12535: _initialize ===
 
-// Module 12437 (_initialize)
+// Module 12535 (_initialize)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";
@@ -30,7 +30,7 @@ class StageLurkingManager extends tmp2 {
     applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(arg0) {
       guildId = guildId.getGuildId();
       const items = [guildId, arg0];
-      applyArgumentsResult(11542).stopLurkingAll(items.filter(applyArgumentsResult(1351).isNotNullish));
+      applyArgumentsResult(5816).stopLurkingAll(items.filter(applyArgumentsResult(1351).isNotNullish));
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       applyArgumentsResult.terminate();

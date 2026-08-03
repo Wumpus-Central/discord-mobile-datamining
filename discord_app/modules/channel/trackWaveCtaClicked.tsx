@@ -1,6 +1,6 @@
-// === Module 11439: getDmHasMessageHistory ===
+// === Module 11549: getDmHasMessageHistory ===
 
-// Module 11439 (getDmHasMessageHistory)
+// Module 11549 (getDmHasMessageHistory)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 

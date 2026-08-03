@@ -1,6 +1,6 @@
-// === Module 4590: SCREEN_READER_ENABLED_GETTER ===
+// === Module 4652: SCREEN_READER_ENABLED_GETTER ===
 
-// Module 4590 (SCREEN_READER_ENABLED_GETTER)
+// Module 4652 (SCREEN_READER_ENABLED_GETTER)
 import { AccessibilityInfo } from "get ActivityIndicator";
 import keys from "keys";
 

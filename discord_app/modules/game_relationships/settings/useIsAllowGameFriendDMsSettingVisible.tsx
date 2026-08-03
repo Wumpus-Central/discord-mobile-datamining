@@ -1,6 +1,6 @@
-// === Module 14695: useIsAllowGameFriendDMsSettingVisible ===
+// === Module 14762: useIsAllowGameFriendDMsSettingVisible ===
 
-// Module 14695 (useIsAllowGameFriendDMsSettingVisible)
+// Module 14762 (useIsAllowGameFriendDMsSettingVisible)
 import recountRelationshipTypes from "recountRelationshipTypes";
 
 const require = arg1;

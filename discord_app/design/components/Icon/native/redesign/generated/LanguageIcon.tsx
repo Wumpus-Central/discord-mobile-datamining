@@ -1,6 +1,6 @@
-// === Module 14400: LanguageIcon ===
+// === Module 14467: LanguageIcon ===
 
-// Module 14400 (LanguageIcon)
+// Module 14467 (LanguageIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const LanguageIcon = function LanguageIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(14401) /* registerAsset */;
+  obj[0] = require(14468) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

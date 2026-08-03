@@ -1,6 +1,6 @@
-// === Module 7833: createPremiumGroupInviteSystemMessage ===
+// === Module 7951: createPremiumGroupInviteSystemMessage ===
 
-// Module 7833 (createPremiumGroupInviteSystemMessage)
+// Module 7951 (createPremiumGroupInviteSystemMessage)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createCacheKey from "createCacheKey";
@@ -15,16 +15,16 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
   ({ message, theme } = message);
   channel = channel.getChannel(message.getChannelId());
   id = id.getId();
-  let obj = require(7834) /* createPremiumGroupInviteEmbed */;
+  let obj = require(7952) /* createPremiumGroupInviteEmbed */;
   const premiumGroupInviteEmbed = obj.createPremiumGroupInviteEmbed(message, theme, id, channel);
   if (null == premiumGroupInviteEmbed) {
     return null;
   } else {
     obj = {};
-    const merged = Object.assign(importDefault(7751)(message));
+    const merged = Object.assign(importDefault(7870)(message));
     obj.premiumGroupInviteInfo = premiumGroupInviteEmbed;
     const tmp7 = createCacheKey(theme);
-    obj.iconUrl = tmp3(7734).getAssetUriForEmbed(importDefault(6631));
+    obj.iconUrl = tmp3(7853).getAssetUriForEmbed(importDefault(7614));
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj;
   }

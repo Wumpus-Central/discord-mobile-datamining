@@ -1,6 +1,6 @@
-// === Module 15008: useGuildsBarBadges ===
+// === Module 15295: useGuildsBarBadges ===
 
-// Module 15008 (useGuildsBarBadges)
+// Module 15295 (useGuildsBarBadges)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import computeGuildsBarCutout from "computeGuildsBarCutout";
 import computeAlertSettings from "computeAlertSettings";

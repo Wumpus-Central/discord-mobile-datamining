@@ -1,6 +1,6 @@
-// === Module 11401: ImageInputAnswerActionSheet ===
+// === Module 11511: ImageInputAnswerActionSheet ===
 
-// Module 11401 (ImageInputAnswerActionSheet)
+// Module 11511 (ImageInputAnswerActionSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY as closure_5 } from "POLL_ATTACHMENT_FOLDER";

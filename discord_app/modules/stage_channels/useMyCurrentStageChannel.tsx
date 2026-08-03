@@ -1,6 +1,6 @@
-// === Module 10704: useMyCurrentStageChannel ===
+// === Module 10812: useMyCurrentStageChannel ===
 
-// Module 10704 (useMyCurrentStageChannel)
+// Module 10812 (useMyCurrentStageChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 

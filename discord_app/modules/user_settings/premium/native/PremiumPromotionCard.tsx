@@ -1,6 +1,6 @@
-// === Module 12524: PremiumPromotionCard ===
+// === Module 12617: PremiumPromotionCard ===
 
-// Module 12524 (PremiumPromotionCard)
+// Module 12617 (PremiumPromotionCard)
 import noop from "noop";
 import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,6 +1,6 @@
-// === Module 6073: handleLoadThreadsSuccess ===
+// === Module 5805: handleLoadThreadsSuccess ===
 
-// Module 6073 (handleLoadThreadsSuccess)
+// Module 5805 (handleLoadThreadsSuccess)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
@@ -80,8 +80,8 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
           const message3 = tmp.message;
           let messageRecord = null;
           if (null != message3) {
-            messageRecord = require(4413) /* createMinimalMessageRecord */.createMessageRecord(message3);
-            const obj4 = require(4413) /* createMinimalMessageRecord */;
+            messageRecord = require(4475) /* createMinimalMessageRecord */.createMessageRecord(message3);
+            const obj4 = require(4475) /* createMinimalMessageRecord */;
           }
           let obj = { loaded: true, message: null };
           obj[1] = messageRecord;
@@ -132,9 +132,9 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
         if (tmp16) {
           const obj = {};
           const merged = Object.assign(tmp12);
-          obj.message = require(4413) /* createMinimalMessageRecord */.updateMessageRecord(message, message.message);
+          obj.message = require(4475) /* createMinimalMessageRecord */.updateMessageRecord(message, message.message);
           dependencyMap[channel_id] = obj;
-          const obj4 = require(4413) /* createMinimalMessageRecord */;
+          const obj4 = require(4475) /* createMinimalMessageRecord */;
         }
         tmp16 = null != dependencyMap[channel_id] && null != message;
       }
@@ -167,7 +167,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
       if (null != most_recent_message) {
         let tmp = require;
         let tmp2 = dependencyMap;
-        let obj = require(4413) /* createMinimalMessageRecord */;
+        let obj = require(4475) /* createMinimalMessageRecord */;
         messageRecord = obj.createMessageRecord(most_recent_message);
       }
       let tmp4 = closure_5;

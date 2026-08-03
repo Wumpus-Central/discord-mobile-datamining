@@ -1,6 +1,6 @@
-// === Module 13986: _addRestrictedScheduleRule ===
+// === Module 14053: _addRestrictedScheduleRule ===
 
-// Module 13986 (_addRestrictedScheduleRule)
+// Module 14053 (_addRestrictedScheduleRule)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

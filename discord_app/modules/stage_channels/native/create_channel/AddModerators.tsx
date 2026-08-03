@@ -1,6 +1,6 @@
-// === Module 8304: AddModerators ===
+// === Module 8609: AddModerators ===
 
-// Module 8304 (AddModerators)
+// Module 8609 (AddModerators)
 import _slicedToArray from "_slicedToArray";
 import Permissions from "Permissions";
 import { View } from "Button";
@@ -47,11 +47,11 @@ export default function AddModerators(guildId) {
     const mapped = found.map((row) => {
       row = row.row;
       if (row.rowType === constants.ROLE) {
-        let moderatorOverwrite = callback(5009).createModeratorOverwrite(row.id, callback(1906).PermissionOverwriteType.ROLE);
-        const obj2 = callback(5009);
+        let moderatorOverwrite = callback(5071).createModeratorOverwrite(row.id, callback(1906).PermissionOverwriteType.ROLE);
+        const obj2 = callback(5071);
       } else {
-        moderatorOverwrite = callback(5009).createModeratorOverwrite(row.id, callback(1906).PermissionOverwriteType.MEMBER);
-        const obj = callback(5009);
+        moderatorOverwrite = callback(5071).createModeratorOverwrite(row.id, callback(1906).PermissionOverwriteType.MEMBER);
+        const obj = callback(5071);
       }
       return moderatorOverwrite;
     });

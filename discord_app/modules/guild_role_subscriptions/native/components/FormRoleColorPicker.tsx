@@ -1,6 +1,6 @@
-// === Module 16631: FormRoleColorPicker ===
+// === Module 16697: FormRoleColorPicker ===
 
-// Module 16631 (FormRoleColorPicker)
+// Module 16697 (FormRoleColorPicker)
 import noop from "noop";
 import { DEFAULT_ROLE_COLOR } from "ME";
 import { jsx } from "jsxProd";
@@ -29,8 +29,8 @@ export default function FormRoleColorPicker(color) {
   let obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = callback();
   obj = { color, style: tmp.rowColorBlock, onSelect: callback };
-  obj[0] = jsx(onChange(13716), { color, style: tmp.rowColorBlock, onSelect: callback });
-  const tmp3 = onChange(13054);
+  obj[0] = jsx(onChange(13779), { color, style: tmp.rowColorBlock, onSelect: callback });
+  const tmp3 = onChange(13117);
   obj[1] = color(688).int2hex(color);
   obj[2] = flag;
   obj[3] = callback;

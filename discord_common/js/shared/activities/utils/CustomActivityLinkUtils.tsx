@@ -1,6 +1,6 @@
-// === Module 12303: CustomLinkType ===
+// === Module 12401: CustomLinkType ===
 
-// Module 12303 (CustomLinkType)
+// Module 12401 (CustomLinkType)
 import _slicedToArray from "_slicedToArray";
 
 let obj = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };

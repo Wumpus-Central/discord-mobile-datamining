@@ -28,9 +28,9 @@ function updateEmbeddedActivities(content_classification) {
   ({ application_id, launch_id, composite_instance_id, location: _location, participants } = content_classification);
   const mapped = participants.map(participantFromServer);
   let combined = importDefault;
-  const tmp3 = importDefault(5693)(application_id);
+  const tmp3 = importDefault(10659)(application_id);
   if (null != tmp3) {
-    const embeddedActivityLocationChannelId = application_id(3811).getEmbeddedActivityLocationChannelId(_location);
+    const embeddedActivityLocationChannelId = application_id(3873).getEmbeddedActivityLocationChannelId(_location);
     if (null != embeddedActivityLocationChannelId) {
       let value = map2.get(embeddedActivityLocationChannelId);
       let items;
@@ -60,7 +60,7 @@ function updateEmbeddedActivities(content_classification) {
       const sessionId = found1.sessionId;
     }
     let obj4 = map;
-    const obj20 = application_id(3811);
+    const obj20 = application_id(3873);
     const value1 = map.get(application_id);
     let obj5 = map4;
     let tmp12 = embeddedActivityLocationChannelId;
@@ -138,7 +138,7 @@ function updateEmbeddedActivities(content_classification) {
             let id = _location.id;
             let value3 = obj1.get(id);
             if (null == value3) {
-              if (typeof ActivityBucket !== "fileFinishedImporting") {
+              if (typeof ActivityBucket !== "error") {
                 HermesBuiltin.throwTypeError();
               }
               obj1 = Object.create(ActivityBucket.prototype);
@@ -148,12 +148,12 @@ function updateEmbeddedActivities(content_classification) {
               const tmp59 = ActivityBucket;
             }
             value3.upsert(application_id, _location.id, tmp58);
-            let tmp76Result = tmp76(3811);
+            let tmp76Result = tmp76(3873);
             const embeddedActivityLocationChannelId1 = tmp76Result.getEmbeddedActivityLocationChannelId(_location);
             if (null != embeddedActivityLocationChannelId1) {
               let value4 = map2.get(embeddedActivityLocationChannelId1);
               if (null == value4) {
-                if (typeof ActivityBucket !== "fileFinishedImporting") {
+                if (typeof ActivityBucket !== "error") {
                   HermesBuiltin.throwTypeError();
                 }
                 const obj2 = Object.create(ActivityBucket.prototype);
@@ -163,14 +163,14 @@ function updateEmbeddedActivities(content_classification) {
                 const tmp65 = ActivityBucket;
               }
               value4.upsert(application_id, _location.id, tmp58);
-              tmp76Result = tmp76(3811);
+              tmp76Result = tmp76(3873);
               let str5 = tmp76Result.getEmbeddedActivityLocationGuildId(_location);
               if (str5 == null) {
                 str5 = "0";
               }
               let value5 = map1.get(str5);
               if (null == value5) {
-                if (typeof ActivityBucket !== "fileFinishedImporting") {
+                if (typeof ActivityBucket !== "error") {
                   HermesBuiltin.throwTypeError();
                 }
                 obj3 = Object.create(ActivityBucket.prototype);
@@ -199,7 +199,7 @@ function updateEmbeddedActivities(content_classification) {
         if (value2 != null) {
           const inviterUserId = value2.inviterUserId;
         }
-        const tmp36 = combined(5693)(application_id);
+        const tmp36 = combined(10659)(application_id);
         if (null != tmp36) {
           if (null != obj3.getSessionId()) {
             const value6 = obj4.get(application_id);
@@ -208,7 +208,7 @@ function updateEmbeddedActivities(content_classification) {
               id = value6.location.id;
             }
             if (id !== _location.id) {
-              const embeddedActivityLocationChannelId2 = tmp76(3811).getEmbeddedActivityLocationChannelId(_location);
+              const embeddedActivityLocationChannelId2 = tmp76(3873).getEmbeddedActivityLocationChannelId(_location);
               channel = channel.getChannel(embeddedActivityLocationChannelId2);
               if (channel != null) {
                 const guildId = channel.getGuildId();
@@ -254,7 +254,7 @@ function updateEmbeddedActivities(content_classification) {
                   const combinedResult = combined(709);
                 } else {
                   if (embeddedActivityLocationChannelId2 === channelId.getChannelId()) {
-                    if (!combined(10479)(embeddedActivityLocationChannelId2)) {
+                    if (!combined(10617)(embeddedActivityLocationChannelId2)) {
                       PIP = ActivityPanelModes.PANEL;
                     }
                   }
@@ -265,9 +265,9 @@ function updateEmbeddedActivities(content_classification) {
                 const _Date2 = Date;
                 const result5 = map11.set(combined, Date.now());
                 const tmp41 = 0 === arr2.length;
-                tmp76Result2 = tmp76(10621);
+                tmp76Result2 = tmp76(10686);
               }
-              const tmp76Result1 = tmp76(3811);
+              const tmp76Result1 = tmp76(3873);
             }
           }
         }
@@ -280,7 +280,7 @@ function updateEmbeddedActivities(content_classification) {
       const _HermesInternal3 = HermesInternal;
       obj5.delete("" + application_id + ":" + tmp56);
     }
-    const someResult1 = mapped.some((userId) => application_id(13143).isActivityParticipantCurrentUserCurrentSession(userId));
+    const someResult1 = mapped.some((userId) => application_id(13206).isActivityParticipantCurrentUserCurrentSession(userId));
   }
 }
 ActivityPanelModes = ActivityPanelModes.ActivityPanelModes;
@@ -332,14 +332,14 @@ prototype["clear"] = function clear() {
 };
 prototype["getItems"] = function getItems(arg0) {
   const self = this;
-  const ContentClassificationEmbeddedActivityFilterExperiment = require(10528) /* apexExperiment */.ContentClassificationEmbeddedActivityFilterExperiment;
+  const ContentClassificationEmbeddedActivityFilterExperiment = require(10713) /* apexExperiment */.ContentClassificationEmbeddedActivityFilterExperiment;
   if (ContentClassificationEmbeddedActivityFilterExperiment.getConfig({ location: "embedded_activity_store" }).enabled) {
     if ("all" !== arg0) {
       if ("visible" === arg0) {
         let cachedVisible = self.cachedVisible;
         if (cachedVisible == null) {
           const items = self.items;
-          const found = items.filter((contentClassification) => !callback(10529).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found = items.filter((contentClassification) => !callback(10714).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedVisible = found;
           cachedVisible = found;
         }
@@ -348,7 +348,7 @@ prototype["getItems"] = function getItems(arg0) {
         let cachedHidden = self.cachedHidden;
         if (cachedHidden == null) {
           const items1 = self.items;
-          const found1 = items1.filter((contentClassification) => callback(10529).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
+          const found1 = items1.filter((contentClassification) => callback(10714).isAgeRestrictedClassificationReference(contentClassification.contentClassification));
           self.cachedHidden = found1;
           cachedHidden = found1;
         }
@@ -575,7 +575,7 @@ prototype2["getLayoutModeForApp"] = function getLayoutModeForApp(id) {
 };
 prototype2["getConnectedActivityChannelId"] = function getConnectedActivityChannelId() {
   if (null != c29) {
-    return require(3811) /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
+    return require(3873) /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
   }
 };
 prototype2["getConnectedActivityLocation"] = function getConnectedActivityLocation() {
@@ -797,7 +797,7 @@ obj = {
     let launchParams;
     ({ componentId, commandOrigin, launchParams, inviterUserId } = applicationId);
     const result = map4.set("" + applicationId.applicationId + ":" + applicationId.channelId, { isLaunching: true, componentId, inviterUserId, launchParams });
-    if (commandOrigin === require(5709) /* ApplicationCommandSectionType */.CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON) {
+    if (commandOrigin === require(6879) /* ApplicationCommandSectionType */.CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON) {
       let RESIZABLE = FocusedActivityLayouts.NO_CHAT;
     } else {
       RESIZABLE = FocusedActivityLayouts.RESIZABLE;
@@ -925,7 +925,7 @@ obj = {
     const timestamp = Date.now();
     let importDefault;
     let obj = timestamp(500);
-    importDefault = importDefault(8022)(obj.getOS());
+    importDefault = importDefault(8359)(obj.getOS());
     obj.dateRangesForSurfaces = activities.reduce((arg0, arg1) => {
       let closure_0 = arg0;
       let closure_1 = tmp;
@@ -1006,7 +1006,7 @@ obj = {
   },
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
     if (null != c29) {
-      const embeddedActivityLocationChannelId = require(3811) /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
+      const embeddedActivityLocationChannelId = require(3873) /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
       let tmp6 = null != embeddedActivityLocationChannelId && embeddedActivityLocationChannelId !== tmp;
       if (tmp6) {
         tmp6 = PIP === ActivityPanelModes.PANEL;
@@ -1014,7 +1014,7 @@ obj = {
       if (tmp6) {
         PIP = ActivityPanelModes.PIP;
       }
-      const obj = require(3811) /* getEmbeddedActivityLocationChannelId */;
+      const obj = require(3873) /* getEmbeddedActivityLocationChannelId */;
     }
   },
   POPOUT_WINDOW_CLOSE: function handlePopoutWindowClose(key) {

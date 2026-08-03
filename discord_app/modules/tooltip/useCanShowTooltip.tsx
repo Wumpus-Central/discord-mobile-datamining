@@ -1,6 +1,6 @@
-// === Module 10712: useCanShowTooltip ===
+// === Module 10820: useCanShowTooltip ===
 
-// Module 10712 (useCanShowTooltip)
+// Module 10820 (useCanShowTooltip)
 import noop from "noop";
 import set from "set";
 

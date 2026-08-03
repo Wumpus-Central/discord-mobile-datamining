@@ -1,6 +1,6 @@
-// === Module 5885: getShouldObscureForSetting ===
+// === Module 5796: getShouldObscureForSetting ===
 
-// Module 5885 (getShouldObscureForSetting)
+// Module 5796 (getShouldObscureForSetting)
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaRedactionSettingUtils.tsx");
 
 export const getShouldObscureForSetting = function getShouldObscureForSetting(tmp10Result) {

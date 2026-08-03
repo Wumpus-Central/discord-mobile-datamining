@@ -1,6 +1,6 @@
-// === Module 14027: toggle ===
+// === Module 14094: toggle ===
 
-// Module 14027 (toggle)
+// Module 14094 (toggle)
 import noop from "noop";
 import { FriendSourceFlags } from "ME";
 import createToggle from "createToggle";
@@ -13,15 +13,15 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
-    const FriendSourceFlagsSetting = setting(3866).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(3928).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return React.useMemo(() => setting(outer1_2[5]).computeFlags(setting), items).mutualFriends;
   },
   onValueChange: function onFriendRequestsMutualFriendsSettingValueChange(arg0) {
-    const FriendSourceFlagsSetting = require(3866) /* explicitContentFromProto */.FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = require(3928) /* explicitContentFromProto */.FriendSourceFlagsSetting;
     const setting = FriendSourceFlagsSetting.getSetting();
-    const FriendSourceFlagsSetting2 = require(3866) /* explicitContentFromProto */.FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting2 = require(3928) /* explicitContentFromProto */.FriendSourceFlagsSetting;
     const obj = importAll(1384);
     if (arg0) {
       let addFlagResult = obj.addFlag(setting, FriendSourceFlags.MUTUAL_FRIENDS);
@@ -31,7 +31,7 @@ createToggle = {
     FriendSourceFlagsSetting2.updateSetting(addFlagResult);
   },
   useIsDisabled() {
-    return require(13874) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    return require(13941) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

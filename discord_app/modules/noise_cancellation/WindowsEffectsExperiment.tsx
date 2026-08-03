@@ -1,6 +1,6 @@
-// === Module 10804: getWindowsAudioEffectsExperimentConfig ===
+// === Module 10904: getWindowsAudioEffectsExperimentConfig ===
 
-// Module 10804 (getWindowsAudioEffectsExperimentConfig)
+// Module 10904 (getWindowsAudioEffectsExperimentConfig)
 import initialize from "initialize";
 import ApexExperiment from "ApexExperiment";
 

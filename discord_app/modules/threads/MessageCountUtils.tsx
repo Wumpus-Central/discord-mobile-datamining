@@ -1,6 +1,6 @@
-// === Module 7731: _formatMessageCountLabel ===
+// === Module 7852: _formatMessageCountLabel ===
 
-// Module 7731 (_formatMessageCountLabel)
+// Module 7852 (_formatMessageCountLabel)
 import AbortCodes from "AbortCodes";
 
 let c3;

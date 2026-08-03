@@ -1,6 +1,6 @@
-// === Module 15680: isGuildEligibleForStageChannels ===
+// === Module 15745: isGuildEligibleForStageChannels ===
 
-// Module 15680 (isGuildEligibleForStageChannels)
+// Module 15745 (isGuildEligibleForStageChannels)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

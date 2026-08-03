@@ -1,6 +1,6 @@
-// === Module 15394: Screenshot ===
+// === Module 15461: Screenshot ===
 
-// Module 15394 (Screenshot)
+// Module 15461 (Screenshot)
 import dispatcher from "dispatcher";
 import handleChanged from "handleChanged";
 import useGradientBottom from "useGradientBottom";
@@ -39,27 +39,27 @@ function Screenshot(setUri) {
       return nextPromise;
     }, 500);
   }, items);
-  let obj = setUri(8833);
+  let obj = setUri(9010);
   obj = { style: { position: "absolute", top: -1000, overflow: "hidden" }, children: null };
   obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1474)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
   const obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
-  const tmp4 = ref(4040)();
+  const tmp4 = ref(4102)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(15396);
-  obj4[0] = setUri(4004).OverlayOpacity.LEVEL_7;
-  obj4[1] = setUri(4004).OverlayOpacity.LEVEL_8;
+  const tmp6 = ref(15463);
+  obj4[0] = setUri(4066).OverlayOpacity.LEVEL_7;
+  obj4[1] = setUri(4066).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
-  const items2 = [callback3(ref(4723), obj3), ];
+  const items2 = [callback3(ref(4785), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
   const obj6 = { style: items3, children: null };
   items3 = [tmp.contentContainer, clientThemesOverride];
   obj6[1] = setUri.render();
   obj5[1] = callback3(View, obj6);
-  items2[1] = callback3(setUri(3905).ThemeContextProvider, obj5);
+  items2[1] = callback3(setUri(3967).ThemeContextProvider, obj5);
   obj2[1] = items2;
   obj1[2] = callback4(View, obj2);
   obj[1] = callback3(tmp6, obj1);
@@ -205,7 +205,7 @@ class ICYMIShareModal {
                     let closure_0 = arg0;
                     let c2 = 0;
                     let c1 = 0;
-                    return (/* F119290 */ function*() { ... })();
+                    return (/* F119480 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;
@@ -349,7 +349,7 @@ let result = require("noop").fileFinishedImporting("modules/icymi/native/ICYMISh
 export default ICYMIShareModal;
 export const GuildEventShareModal = function GuildEventShareModal(event) {
   event = event.event;
-  let obj = require(8232) /* SHARE_EVENT_DETAILS_LINK */;
+  let obj = require(8539) /* SHARE_EVENT_DETAILS_LINK */;
   obj = { guildId: event.guild_id, guildEventId: event.id };
   obj = { title: null, originDestinationId: null, linkText: null };
   const result = obj.SHARE_EVENT_DETAILS_LINK(obj);

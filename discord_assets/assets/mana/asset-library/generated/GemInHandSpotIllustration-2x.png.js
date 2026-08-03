@@ -1,6 +1,6 @@
-// === Module 7146: metadata ===
+// === Module 6282: metadata ===
 
-// Module 7146 (metadata)
+// Module 6282 (metadata)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemInHandSpotIllustration-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/16f41f9d263b28d2a30504dbc13a558433c4719e0f60f18245d2afd18be3d7ce.png";

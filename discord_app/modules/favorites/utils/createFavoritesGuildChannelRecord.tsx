@@ -1,6 +1,6 @@
-// === Module 3820: createFavoritesGuildChannelRecord ===
+// === Module 3882: createFavoritesGuildChannelRecord ===
 
-// Module 3820 (createFavoritesGuildChannelRecord)
+// Module 3882 (createFavoritesGuildChannelRecord)
 import { ChannelTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");

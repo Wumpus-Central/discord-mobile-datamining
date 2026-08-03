@@ -1,6 +1,6 @@
-// === Module 16276: _initialize ===
+// === Module 16340: _initialize ===
 
-// Module 16276 (_initialize)
+// Module 16340 (_initialize)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";
 import "initialize";
@@ -55,7 +55,7 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   }
 };
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
-  const result = require(12711) /* noop */.setAccountSwitchUserId(targetUserId.targetUserId);
+  const result = require(12774) /* noop */.setAccountSwitchUserId(targetUserId.targetUserId);
 };
 let result = require("initialize").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
 

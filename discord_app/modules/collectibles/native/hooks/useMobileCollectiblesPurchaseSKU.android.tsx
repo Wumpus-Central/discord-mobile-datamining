@@ -1,6 +1,6 @@
-// === Module 11902: useMobileCollectiblesPurchaseSKU ===
+// === Module 11998: useMobileCollectiblesPurchaseSKU ===
 
-// Module 11902 (useMobileCollectiblesPurchaseSKU)
+// Module 11998 (useMobileCollectiblesPurchaseSKU)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
@@ -12,12 +12,12 @@ export default function useMobileCollectiblesPurchaseSKU(product) {
   let obj = require(589) /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const collectibleGoogleSkuId = require(8725) /* hasAtLeastOneGPlaySynced */.getCollectibleGoogleSkuId(product, stateFromStores);
+  const collectibleGoogleSkuId = require(8902) /* hasAtLeastOneGPlaySynced */.getCollectibleGoogleSkuId(product, stateFromStores);
   obj = {};
-  const obj2 = require(8725) /* hasAtLeastOneGPlaySynced */;
+  const obj2 = require(8902) /* hasAtLeastOneGPlaySynced */;
   const merged1 = Object.assign(merged);
   obj.skuId = product.skuId;
   obj.platformSkuId = collectibleGoogleSkuId;
   obj.isFreeForStaffSelfPurchase = true;
-  return importDefault(9774)(obj);
+  return importDefault(9919)(obj);
 };

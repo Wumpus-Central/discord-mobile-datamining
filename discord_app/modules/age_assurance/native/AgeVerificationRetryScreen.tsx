@@ -1,6 +1,6 @@
-// === Module 7629: GetStartedScreen ===
+// === Module 7755: GetStartedScreen ===
 
-// Module 7629 (GetStartedScreen)
+// Module 7755 (GetStartedScreen)
 import closure_3 from "jsxProd";
 import set from "set";
 import get_ActivityIndicator from "TableRowInner";

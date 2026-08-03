@@ -1,6 +1,6 @@
-// === Module 5754: noop ===
+// === Module 6849: noop ===
 
-// Module 5754 (noop)
+// Module 6849 (noop)
 import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged";
 import isSubscriptionGated from "isSubscriptionGated";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";

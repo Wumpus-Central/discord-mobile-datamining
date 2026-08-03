@@ -26,7 +26,7 @@ arg5.appRegistryIntegration = () => {
     name: AppRegistry,
     setupOnce() {
       if (!obj.isWeb()) {
-        if (typeof outer1_3 !== "fileFinishedImporting") {
+        if (typeof outer1_3 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const AppRegistry = tmp(tmp2[2]).ReactNativeLibraries.AppRegistry;

@@ -1,6 +1,6 @@
-// === Module 10900: bountyCtaFromServer ===
+// === Module 11022: bountyCtaFromServer ===
 
-// Module 10900 (bountyCtaFromServer)
+// Module 11022 (bountyCtaFromServer)
 const result = require("set").fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
 export const bountyCtaFromServer = function bountyCtaFromServer(url) {
@@ -23,13 +23,13 @@ export const bountyCtaFromServer = function bountyCtaFromServer(url) {
 };
 export const bountyFromServer = function bountyFromServer(creative_content) {
   let obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: null, videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
-  let obj1 = require(9490) /* resolveAsset */;
+  let obj1 = require(9637) /* resolveAsset */;
   obj[3] = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
-  obj[4] = require(9490) /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
-  const obj3 = require(9490) /* resolveAsset */;
-  obj[5] = require(9490) /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
-  const obj4 = require(9490) /* resolveAsset */;
-  obj[6] = require(9490) /* resolveAsset */.resolveAdCreativeCdnUrl(creative_content.video_hls);
+  obj[4] = require(9637) /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
+  const obj3 = require(9637) /* resolveAsset */;
+  obj[5] = require(9637) /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
+  const obj4 = require(9637) /* resolveAsset */;
+  obj[6] = require(9637) /* resolveAsset */.resolveAdCreativeCdnUrl(creative_content.video_hls);
   const cta = creative_content.cta;
   obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;

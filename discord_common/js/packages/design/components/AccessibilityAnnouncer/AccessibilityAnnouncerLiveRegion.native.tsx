@@ -1,12 +1,12 @@
-// === Module 3907: updateAccessibilityAnnouncerLiveRegionMessage ===
+// === Module 3969: updateAccessibilityAnnouncerLiveRegionMessage ===
 
-// Module 3907 (updateAccessibilityAnnouncerLiveRegionMessage)
+// Module 3969 (updateAccessibilityAnnouncerLiveRegionMessage)
 import { Text } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import keys from "keys";
 import importAllResult from "noop";
 
-let closure_2 = keys.create(() => ({ message: "description", version: false }));
+let closure_2 = keys.create(() => ({ message: "op", version: false }));
 const memoResult = require("noop").memo(() => {
   const tmp = state();
   return <Text key={tmp.version} accessibilityLiveRegion="polite" style={{ display: "none" }}>{tmp.message}</Text>;

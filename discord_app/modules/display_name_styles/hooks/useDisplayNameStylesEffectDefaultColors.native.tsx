@@ -1,6 +1,6 @@
-// === Module 8396: useDisplayNameStylesEffectDefaultColors ===
+// === Module 8701: useDisplayNameStylesEffectDefaultColors ===
 
-// Module 8396 (useDisplayNameStylesEffectDefaultColors)
+// Module 8701 (useDisplayNameStylesEffectDefaultColors)
 import noop from "noop";
 import items3 from "items3";
 
@@ -13,7 +13,7 @@ const result = require("int2hslRaw").fileFinishedImporting("modules/display_name
 
 export default function useDisplayNameStylesEffectDefaultColors() {
   let obj = require(688) /* int2hslRaw */;
-  const hex2intResult = obj.hex2int(require(3897) /* map */.useToken(importDefault(712).colors.TEXT_DEFAULT));
+  const hex2intResult = obj.hex2int(require(3959) /* map */.useToken(importDefault(712).colors.TEXT_DEFAULT));
   require = hex2intResult;
   let items = [hex2intResult];
   return React.useMemo(() => {

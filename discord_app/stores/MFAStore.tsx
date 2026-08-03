@@ -1,6 +1,6 @@
-// === Module 12818: getVerificationKey ===
+// === Module 12881: getVerificationKey ===
 
-// Module 12818 (getVerificationKey)
+// Module 12881 (getVerificationKey)
 import { Store } from "initialize";
 
 let c3 = false;

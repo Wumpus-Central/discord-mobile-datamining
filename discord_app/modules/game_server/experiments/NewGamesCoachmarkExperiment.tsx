@@ -1,6 +1,6 @@
-// === Module 11613: useIsNewGamesCoachmarkEnabled ===
+// === Module 11720: useIsNewGamesCoachmarkEnabled ===
 
-// Module 11613 (useIsNewGamesCoachmarkEnabled)
+// Module 11720 (useIsNewGamesCoachmarkEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

@@ -1,6 +1,6 @@
-// === Module 14988: useCanShowFavoritesGuildCoachmark ===
+// === Module 15201: useCanShowFavoritesGuildCoachmark ===
 
-// Module 14988 (useCanShowFavoritesGuildCoachmark)
+// Module 15201 (useCanShowFavoritesGuildCoachmark)
 import setContent from "setContent";
 import handleConnectionOpen from "handleConnectionOpen";
 
@@ -15,7 +15,7 @@ export default function useCanShowFavoritesGuildCoachmark() {
   const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => open.isOpen());
   const obj2 = require(589) /* initialize */;
   let tmp4 = !stateFromStores;
-  const isModalOpen = require(4044) /* navigationToRootTabHelper */.useIsModalOpen();
+  const isModalOpen = require(4106) /* navigationToRootTabHelper */.useIsModalOpen();
   if (!stateFromStores) {
     tmp4 = !stateFromStores1;
   }

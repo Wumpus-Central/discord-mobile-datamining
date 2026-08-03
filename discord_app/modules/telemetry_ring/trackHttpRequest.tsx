@@ -1,6 +1,6 @@
-// === Module 16124: trackHttpRequest ===
+// === Module 16188: trackHttpRequest ===
 
-// Module 16124 (trackHttpRequest)
+// Module 16188 (trackHttpRequest)
 import { AnalyticEvents } from "ME";
 
 const result = require("trackZoomedInHttpRequest").fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
@@ -14,7 +14,7 @@ export default function trackHttpRequest(url) {
     const str2 = str.split(/[?#]/)[0];
   }
   obj.url = replaced;
-  importDefault(16126)(obj);
+  importDefault(16190)(obj);
   const random = Math.random();
   if (random < obj2.getHttpRequestSampleRate()) {
     obj = {};

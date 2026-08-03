@@ -1,6 +1,6 @@
-// === Module 11156: updateCustomTheme ===
+// === Module 11268: updateCustomTheme ===
 
-// Module 11156 (updateCustomTheme)
+// Module 11268 (updateCustomTheme)
 const result = require("set").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileActionCreators.tsx");
 
 export const updateCustomTheme = function updateCustomTheme(customThemeSettings, first1) {

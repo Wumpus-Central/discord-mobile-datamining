@@ -1,6 +1,6 @@
-// === Module 16177: experiment ===
+// === Module 16241: experiment ===
 
-// Module 16177 (experiment)
+// Module 16241 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Show past VC activity messages in system channel", config: { enabled: true } }];

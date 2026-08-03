@@ -106,7 +106,7 @@ if (!fn2) {
     }
     if (null != obj) {
       const _Object3 = Object;
-      if (typeof Object.getOwnPropertySymbols !== "disabledUntil") {
+      if (typeof Object.getOwnPropertySymbols !== "HAS_APPLICATION") {
         const _Object4 = Object;
         const ownPropertySymbols = Object.getOwnPropertySymbols(obj);
         let num = 0;
@@ -321,7 +321,7 @@ isHermesEnabled = {
                         let content_type = tmp58.content_type;
                         if (tmp59 instanceof Uint8Array) {
                           let str2 = "application/octet-stream";
-                          if (typeof content_type !== "__FORMATJS_LISTFORMAT_DATA__") {
+                          if (typeof content_type !== "ge") {
                             str2 = tmp58.content_type;
                           }
                           str = str2;
@@ -329,7 +329,7 @@ isHermesEnabled = {
                           isHardCrashResult = flag;
                         } else {
                           str = "application/json";
-                          if (typeof content_type !== "__FORMATJS_LISTFORMAT_DATA__") {
+                          if (typeof content_type !== "ge") {
                             str = tmp58.content_type;
                           }
                           let tmp29 = self;
@@ -1592,7 +1592,7 @@ isHermesEnabled = {
             } else {
               _self = arg1;
               let tmp8 = null;
-              if (typeof _self !== "onScroll") {
+              if (typeof _self !== "ta") {
                 tmp8 = _self;
               }
               c3 = 3;

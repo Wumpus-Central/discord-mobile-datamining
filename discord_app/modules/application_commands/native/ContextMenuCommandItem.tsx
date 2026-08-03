@@ -1,6 +1,6 @@
-// === Module 15718: ContextMenuCommandItem ===
+// === Module 15783: ContextMenuCommandItem ===
 
-// Module 15718 (ContextMenuCommandItem)
+// Module 15783 (ContextMenuCommandItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -39,7 +39,7 @@ export default function ContextMenuCommandItem(item) {
     }
     return intl.formatToPlainString(item(outer1_2[7]).t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
-  let obj = item(11405);
+  let obj = item(11515);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null };
   let tmp8Result = null != applicationCommandsIconSource;
@@ -47,13 +47,13 @@ export default function ContextMenuCommandItem(item) {
     obj = { style: null, source: null };
     obj[0] = tmp.commandIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp8Result = tmp8(section(5145), obj);
+    tmp8Result = tmp8(section(5207), obj);
   }
   obj[3] = tmp8Result;
-  obj[4] = jsx(item(4139).SendMessageIcon, {});
+  obj[4] = jsx(item(4201).SendMessageIcon, {});
   obj[5] = start;
   obj[6] = end;
-  return jsx(item(5224).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
+  return jsx(item(5286).TableRow, { accessibilityLabel: memo, onPress, label: item.displayName, icon: null, trailing: null, start: null, end: null });
 };
 export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingItem(arg0) {
   let end;
@@ -73,7 +73,7 @@ export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingI
   obj[1] = <View style={items1} />;
   obj[2] = start;
   obj[3] = end;
-  return jsx(require(5224) /* TableRowInner */.TableRow, { width: null });
+  return jsx(require(5286) /* TableRowInner */.TableRow, { width: null });
 };
 export const ContextMenuCommandEmptyItem = function ContextMenuCommandEmptyItem(arg0) {
   let end;
@@ -87,7 +87,7 @@ export const ContextMenuCommandEmptyItem = function ContextMenuCommandEmptyItem(
   obj[1] = <View style={items} />;
   obj[2] = start;
   obj[3] = end;
-  return jsx(require(5224) /* TableRowInner */.TableRow, { label: null, icon: null, start: null, end: null });
+  return jsx(require(5286) /* TableRowInner */.TableRow, { label: null, icon: null, start: null, end: null });
 };
 export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(section) {
   let end;
@@ -95,7 +95,7 @@ export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(sect
   let start;
   section = section.section;
   ({ onPress, start, end } = section);
-  let obj = require(11405) /* getApplicationCommandsIconSource */;
+  let obj = require(11515) /* getApplicationCommandsIconSource */;
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = { onPress, label: section.name, icon: null, start: null, end: null, arrow: true };
   let tmp4Result = null != applicationCommandsIconSource;
@@ -103,10 +103,10 @@ export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(sect
     obj = { style: null, source: null };
     obj[0] = tmp.commandIcon;
     obj[1] = applicationCommandsIconSource;
-    tmp4Result = tmp4(importDefault(5145), obj);
+    tmp4Result = tmp4(importDefault(5207), obj);
   }
   obj[2] = tmp4Result;
   obj[3] = start;
   obj[4] = end;
-  return jsx(require(5224) /* TableRowInner */.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
+  return jsx(require(5286) /* TableRowInner */.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
 };

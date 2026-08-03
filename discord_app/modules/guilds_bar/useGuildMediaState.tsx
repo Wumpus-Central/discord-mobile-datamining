@@ -1,6 +1,6 @@
-// === Module 15009: canConnectToChannel ===
+// === Module 15296: canConnectToChannel ===
 
-// Module 15009 (canConnectToChannel)
+// Module 15296 (canConnectToChannel)
 import participantFromServer from "participantFromServer";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import { isVoiceChannel } from "createChannelRecord";

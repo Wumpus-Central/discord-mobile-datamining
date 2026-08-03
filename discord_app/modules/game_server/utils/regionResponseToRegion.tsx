@@ -1,6 +1,6 @@
-// === Module 11592: regionResponseToRegion ===
+// === Module 11699: regionResponseToRegion ===
 
-// Module 11592 (regionResponseToRegion)
+// Module 11699 (regionResponseToRegion)
 const result = require("set").fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");
 
 export default function regionResponseToRegion(id) {

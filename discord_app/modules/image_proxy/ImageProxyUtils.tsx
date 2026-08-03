@@ -1,6 +1,6 @@
-// === Module 4224: isImageProxyURL ===
+// === Module 4286: isImageProxyURL ===
 
-// Module 4224 (isImageProxyURL)
+// Module 4286 (isImageProxyURL)
 import set from "set";
 
 let parts;

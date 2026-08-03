@@ -1,6 +1,6 @@
-// === Module 8845: enforcing ===
+// === Module 9022: enforcing ===
 
-// Module 8845 (enforcing)
+// Module 9022 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 let obj = { SPEAKERPHONE: "SPEAKERPHONE", WIRED_HEADSET: "WIRED_HEADSET", EARPIECE: "EARPIECE", BLUETOOTH_HEADSET: "BLUETOOTH_HEADSET", INVALID: "INVALID" };

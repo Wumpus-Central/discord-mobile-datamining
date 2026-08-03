@@ -1,12 +1,12 @@
-// === Module 13983: route ===
+// === Module 14050: route ===
 
-// Module 13983 (route)
+// Module 14050 (route)
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2225)["w/ISB8"]);
+    return intl.string(importDefault(2255)["w/ISB8"]);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   unsearchable: true,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
   getComponent() {
-    return require(13984) /* OverlappingSchedulesWarning */.default;
+    return require(14051) /* OverlappingSchedulesWarning */.default;
   }
 };
 const route = createToggle.createRoute(obj);

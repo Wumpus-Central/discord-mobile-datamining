@@ -1,6 +1,6 @@
-// === Module 12871: id ===
+// === Module 12934: id ===
 
-// Module 12871 (id)
+// Module 12934 (id)
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";
@@ -61,7 +61,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(8938)();
+  const tmp3 = id(9115)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
   stateFromStores = require(589) /* initialize */.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);

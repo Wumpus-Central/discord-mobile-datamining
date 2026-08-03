@@ -1,16 +1,16 @@
-// === Module 8940: ? ===
+// === Module 9117: ? ===
 
-// Module 8940
+// Module 9117
 let c3 = "USER_SETTINGS_CONNECTIONS_XBOX_LINK_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx");
 
 export default {
   showModal(locationStack) {
-    let obj = importDefault(4399);
+    let obj = importDefault(4461);
     obj = { locationStack };
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(8941, dependencyMap.paths), obj, c3);
+    obj.pushLazy(require(1959) /* asyncRequireImpl */(9118, dependencyMap.paths), obj, c3);
   },
   hideModal() {
-    importDefault(4399).popWithKey(c3);
+    importDefault(4461).popWithKey(c3);
   }
 };

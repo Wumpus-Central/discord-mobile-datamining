@@ -1,6 +1,6 @@
-// === Module 5060: ? ===
+// === Module 5122: ? ===
 
-// Module 5060
+// Module 5122
 const require = arg1;
 const obj = {
   setEmojiLocale(locale) {
@@ -18,7 +18,7 @@ const obj = {
   }
 };
 let tmp2 = new require("setParams")(function loadEmoji(arg0) {
-  const tmp = require(5062) /* emojiTermsImporter */.emojiTermsImporter[arg0];
+  const tmp = require(5124) /* emojiTermsImporter */.emojiTermsImporter[arg0];
   if (undefined !== tmp) {
     let nextPromise = tmp().then((arg0) => arg0.default);
     const tmpResult = tmp();

@@ -1,14 +1,14 @@
-// === Module 15177: useActiveEventOrStageInstanceChannel ===
+// === Module 15158: useActiveEventOrStageInstanceChannel ===
 
-// Module 15177 (useActiveEventOrStageInstanceChannel)
+// Module 15158 (useActiveEventOrStageInstanceChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;
 const result = require("useLiveStageChannels").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
 
 export const useActiveEventOrStageInstanceChannel = function useActiveEventOrStageInstanceChannel(id) {
-  let firstActiveEventChannel = require(8325) /* useGuildEvents */.useFirstActiveEventChannel(id);
-  const first = importDefault(15176)(id)[0];
+  let firstActiveEventChannel = require(8630) /* useGuildEvents */.useFirstActiveEventChannel(id);
+  const first = importDefault(15157)(id)[0];
   if (first != null) {
     id = first.id;
   }

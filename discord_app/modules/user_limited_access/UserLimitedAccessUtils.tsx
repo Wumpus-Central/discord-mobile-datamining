@@ -1,6 +1,6 @@
-// === Module 8930: isLimitedAccessErrorCode ===
+// === Module 9107: isLimitedAccessErrorCode ===
 
-// Module 8930 (isLimitedAccessErrorCode)
+// Module 9107 (isLimitedAccessErrorCode)
 import { AbortCodes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");

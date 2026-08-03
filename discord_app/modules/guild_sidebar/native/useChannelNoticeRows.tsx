@@ -1,6 +1,6 @@
-// === Module 15247: useChannelNoticeRows ===
+// === Module 15230: useChannelNoticeRows ===
 
-// Module 15247 (useChannelNoticeRows)
+// Module 15230 (useChannelNoticeRows)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import completeStep from "completeStep";

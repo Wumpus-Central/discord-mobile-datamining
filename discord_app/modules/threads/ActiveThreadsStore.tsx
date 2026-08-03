@@ -1,6 +1,6 @@
-// === Module 5101: handleThreadCreateOrUpdate ===
+// === Module 5163: handleThreadCreateOrUpdate ===
 
-// Module 5101 (handleThreadCreateOrUpdate)
+// Module 5163 (handleThreadCreateOrUpdate)
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Store } from "initialize";

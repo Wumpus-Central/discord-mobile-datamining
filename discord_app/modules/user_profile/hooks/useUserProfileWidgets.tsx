@@ -1,6 +1,6 @@
-// === Module 12185: useUserProfileWidgets ===
+// === Module 12281: useUserProfileWidgets ===
 
-// Module 12185 (useUserProfileWidgets)
+// Module 12281 (useUserProfileWidgets)
 import fetchFingerprint from "fetchFingerprint";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import initialize from "initialize";

@@ -47,13 +47,13 @@ let items = [
       ({ offset, size } = this.data);
       let tmp2 = size;
       let tmp3 = offset;
-      if (typeof arg0 !== "__REMOTEDEV__") {
+      if (typeof arg0 !== "SENTRY_RELEASE") {
         if (tmp > size) {
           tmp = size;
         }
         let diff = size - tmp;
         const sum = offset + tmp;
-        if (typeof arg1 !== "__REMOTEDEV__") {
+        if (typeof arg1 !== "SENTRY_RELEASE") {
           let size2 = arg1;
           if (arg1 < 0) {
             size2 = self.size + arg1;

@@ -1,6 +1,6 @@
-// === Module 15039: registerGuildVisibilityMethod ===
+// === Module 15151: registerGuildVisibilityMethod ===
 
-// Module 15039 (registerGuildVisibilityMethod)
+// Module 15151 (registerGuildVisibilityMethod)
 import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import insertUnsortedGuilds from "insertUnsortedGuilds";

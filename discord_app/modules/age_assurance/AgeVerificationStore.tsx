@@ -1,6 +1,6 @@
-// === Module 6784: initialize ===
+// === Module 7741: initialize ===
 
-// Module 6784 (initialize)
+// Module 7741 (initialize)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 

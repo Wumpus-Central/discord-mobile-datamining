@@ -1,6 +1,6 @@
-// === Module 15087: HappeningNowCardUnifiedVC ===
+// === Module 15067: HappeningNowCardUnifiedVC ===
 
-// Module 15087 (HappeningNowCardUnifiedVC)
+// Module 15067 (HappeningNowCardUnifiedVC)
 import "noop";
 import participantFromServer from "participantFromServer";
 import reset from "reset";
@@ -66,7 +66,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     obj[3] = stream;
     obj[4] = fullwidth;
     obj[5] = panelVariant;
-    let tmp5 = jsx(importDefault(15088), { index: null, userId: null, guildId: null, stream: null, fullwidth: null, panelVariant: null });
+    let tmp5 = jsx(importDefault(15068), { index: null, userId: null, guildId: null, stream: null, fullwidth: null, panelVariant: null });
   } else if (null != activity) {
     obj = { index: null, voiceState: null, fullwidth: null, guildId: null, activity: null, userId: null, cardKey: null, panelVariant: null };
     obj[0] = index;
@@ -77,7 +77,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     obj[5] = userId;
     obj[6] = cardKey;
     obj[7] = panelVariant;
-    tmp5 = jsx(importDefault(15100), { index: null, voiceState: null, fullwidth: null, guildId: null, activity: null, userId: null, cardKey: null, panelVariant: null });
+    tmp5 = jsx(importDefault(15080), { index: null, voiceState: null, fullwidth: null, guildId: null, activity: null, userId: null, cardKey: null, panelVariant: null });
   } else {
     let obj1 = { index: null, voiceState: null, fullwidth: null, guildId: null, panelVariant: null };
     obj1[0] = index;
@@ -85,7 +85,7 @@ export default function HappeningNowCardUnifiedVC(arg0) {
     obj1[2] = fullwidth;
     obj1[3] = guildId;
     obj1[4] = panelVariant;
-    tmp5 = jsx(importDefault(15101), { index: null, voiceState: null, fullwidth: null, guildId: null, panelVariant: null });
+    tmp5 = jsx(importDefault(15081), { index: null, voiceState: null, fullwidth: null, guildId: null, panelVariant: null });
   }
   return tmp5;
 };

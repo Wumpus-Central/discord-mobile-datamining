@@ -1,6 +1,6 @@
-// === Module 13810: useUsernameStatus ===
+// === Module 13877: useUsernameStatus ===
 
-// Module 13810 (useUsernameStatus)
+// Module 13877 (useUsernameStatus)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
@@ -18,7 +18,7 @@ export const useUsernameStatus = (arg0, flag, flag2) => {
   const dependencyMap = tmp;
   let usernameLiveCheck;
   let React;
-  usernameLiveCheck = _require(13811).useUsernameLiveCheck(arg0, flag, flag2);
+  usernameLiveCheck = _require(13878).useUsernameLiveCheck(arg0, flag, flag2);
   const tmp3 = usernameLiveCheck(React.useState(undefined), 2);
   React = tmp3[1];
   const items = [usernameLiveCheck, arg0, arg3];

@@ -1,6 +1,6 @@
-// === Module 6889: BoostGemIllocon ===
+// === Module 6025: BoostGemIllocon ===
 
-// Module 6889 (BoostGemIllocon)
+// Module 6025 (BoostGemIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BoostGemIllocon.native.tsx");
@@ -16,12 +16,12 @@ export const BoostGemIllocon = function BoostGemIllocon(size) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6890);
+  obj[0] = importDefault(6026);
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5145), { uri: null });
+  return jsx(importDefault(5207), { uri: null });
 };

@@ -1,6 +1,6 @@
-// === Module 4527: MessageEmbedTypes ===
+// === Module 4589: MessageEmbedTypes ===
 
-// Module 4527 (MessageEmbedTypes)
+// Module 4589 (MessageEmbedTypes)
 import { MessageEmbedTypes } from "ME";
 import set from "set";
 

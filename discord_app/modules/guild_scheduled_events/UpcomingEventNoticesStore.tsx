@@ -1,6 +1,6 @@
-// === Module 8326: initialize ===
+// === Module 8631: initialize ===
 
-// Module 8326 (initialize)
+// Module 8631 (initialize)
 import fetchFingerprint from "fetchFingerprint";
 import scheduledEventSort from "scheduledEventSort";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
@@ -78,7 +78,7 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(require("dispatc
       if (null != guildScheduledEvent) {
         if (guildScheduledEvent.status === constants.SCHEDULED) {
           if (null == obj[guildEventId]) {
-            obj = require(8327) /* getNextShownUpcomingEventNoticeType */;
+            obj = require(8632) /* getNextShownUpcomingEventNoticeType */;
             if (obj.getNextShownUpcomingEventNoticeType(guildScheduledEvent, undefined, dependencyMap[guildEventId], false) === constants2.NEW_EVENT) {
               obj = {};
               const merged = Object.assign(obj);

@@ -1,6 +1,6 @@
-// === Module 15237: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 15220: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 15237 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 15220 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "ACTION_SHEET_HEIGHT_HALF";
@@ -41,7 +41,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   let callback;
   const tmp = createCacheKey();
   [tmp3, c2] = callback(React.useState(0), 2);
-  let obj = require(4724) /* getIsScreenLandscape */;
+  let obj = require(4786) /* getIsScreenLandscape */;
   callback = obj.useIsScreenLandscape();
   let obj1 = require(647) /* defaultAreStatesEqual */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
@@ -64,17 +64,17 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj1 = { accessibilityRole: "image", accessibilityLabel: null, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj1[1] = intl.string(require(1236) /* getSystemLocale */.t.gCgirr);
-  obj1[2] = callback2(markAsDismissed(8146), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
+  obj1[2] = callback2(markAsDismissed(8477), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
   const items2 = [callback2(View, obj1), , ];
   const obj3 = { style: tmp.info, children: null };
   const obj4 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj4[3] = intl2.string(require(1236) /* getSystemLocale */.t.gCgirr);
-  const items3 = [callback2(require(4189) /* Text */.Text, obj4), ];
+  const items3 = [callback2(require(4251) /* Text */.Text, obj4), ];
   const obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj5[3] = intl3.string(require(1236) /* getSystemLocale */.t.fLMZFw);
-  items3[1] = callback2(require(4189) /* Text */.Text, obj5);
+  items3[1] = callback2(require(4251) /* Text */.Text, obj5);
   obj3[1] = items3;
   items2[1] = callback3(View, obj3);
   const obj6 = { style: items4, children: null };
@@ -87,7 +87,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
     markAsDismissed(_undefined[16]).open(closure_0, outer1_7.ROLE_SUBSCRIPTIONS_TIERS, undefined, outer1_8.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
     markAsDismissed(outer1_9.UNKNOWN);
   };
-  obj7[1] = callback2(require(4604) /* Button */.Button, obj8);
+  obj7[1] = callback2(require(4666) /* Button */.Button, obj8);
   const items5 = [callback2(View, obj7), ];
   const obj9 = { style: tmp.button, children: null };
   const obj10 = { text: null, onPress: null, variant: "secondary" };
@@ -96,11 +96,11 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   obj10[1] = function onPress() {
     return markAsDismissed(_undefined[17]).hideActionSheet();
   };
-  obj9[1] = callback2(require(4604) /* Button */.Button, obj10);
+  obj9[1] = callback2(require(4666) /* Button */.Button, obj10);
   items5[1] = callback2(View, obj9);
   obj6[1] = items5;
   items2[2] = callback3(View, obj6);
   obj[2] = items2;
   obj[1] = callback3(View, obj);
-  return callback2(require(5247) /* Background */.BottomSheet, obj);
+  return callback2(require(5309) /* Background */.BottomSheet, obj);
 };

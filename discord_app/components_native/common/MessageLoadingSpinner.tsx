@@ -1,6 +1,6 @@
-// === Module 10576: result ===
+// === Module 10760: result ===
 
-// Module 10576 (result)
+// Module 10760 (result)
 import "noop";
 import { jsx } from "jsxProd";
 import set from "set";
@@ -15,7 +15,7 @@ let c4 = result;
 const result1 = set.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
 export default function MessageLoadingSpinner(color) {
-  let obj = require(3897) /* map */;
+  let obj = require(3959) /* map */;
   color = color.color;
   if (color == null) {
     color = obj.useToken(importDefault(712).colors.BACKGROUND_BRAND);
@@ -29,7 +29,7 @@ export default function MessageLoadingSpinner(color) {
     obj = { animating: null };
     obj[0] = color.animate;
     const merged1 = Object.assign(color);
-    tmp8 = jsx(require(5641) /* ActivityIndicator */.ActivityIndicator, { animating: null });
+    tmp8 = jsx(require(5703) /* ActivityIndicator */.ActivityIndicator, { animating: null });
   }
   return tmp8;
 };

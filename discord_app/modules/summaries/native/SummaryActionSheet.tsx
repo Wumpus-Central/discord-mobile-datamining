@@ -1,6 +1,6 @@
-// === Module 10946: SummaryActionSheet ===
+// === Module 11068: SummaryActionSheet ===
 
-// Module 10946 (SummaryActionSheet)
+// Module 11068 (SummaryActionSheet)
 import dispatcher from "dispatcher";
 import { View } from "showShareActionSheet";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -187,11 +187,11 @@ export default function SummaryActionSheet(summary) {
 export const openSummaryDividerActionSheet = function openSummaryDividerActionSheet(channelId, summaryId) {
   const findSummaryResult = handleQuickSwitcherUpdate.findSummary(channelId, summaryId);
   if (null != findSummaryResult) {
-    let obj = importDefault(4161);
+    let obj = importDefault(4223);
     const _HermesInternal = HermesInternal;
     obj = { summary: null };
     obj[0] = findSummaryResult;
-    obj.openLazy(require(1959) /* asyncRequireImpl */(10946, dependencyMap.paths), "SummaryDivider" + summaryId, obj);
-    const tmp5 = require(1959) /* asyncRequireImpl */(10946, dependencyMap.paths);
+    obj.openLazy(require(1959) /* asyncRequireImpl */(11068, dependencyMap.paths), "SummaryDivider" + summaryId, obj);
+    const tmp5 = require(1959) /* asyncRequireImpl */(11068, dependencyMap.paths);
   }
 };

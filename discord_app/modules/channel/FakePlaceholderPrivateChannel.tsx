@@ -1,6 +1,6 @@
-// === Module 5661: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ===
+// === Module 5723: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ===
 
-// Module 5661 (FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID)
+// Module 5723 (FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID)
 const obj = { id: "131", type: null, name: "Placeholder Channel" };
 obj[1] = require("ME").ChannelTypes.DM;
 const channelRecord = require("createChannelRecord").createChannelRecord(obj);

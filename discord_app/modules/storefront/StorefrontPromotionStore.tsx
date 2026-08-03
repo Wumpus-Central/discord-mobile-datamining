@@ -1,6 +1,6 @@
-// === Module 8693: handleReset ===
+// === Module 8870: handleReset ===
 
-// Module 8693 (handleReset)
+// Module 8870 (handleReset)
 import { Store } from "initialize";
 
 function handleReset() {

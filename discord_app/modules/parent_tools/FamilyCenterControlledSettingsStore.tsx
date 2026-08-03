@@ -1,6 +1,6 @@
-// === Module 5801: getSettings ===
+// === Module 6896: getSettings ===
 
-// Module 5801 (getSettings)
+// Module 6896 (getSettings)
 import { Store } from "initialize";
 
 const require = arg1;

@@ -1,6 +1,6 @@
-// === Module 16071: getMessage ===
+// === Module 16135: getMessage ===
 
-// Module 16071 (getMessage)
+// Module 16135 (getMessage)
 const result = require("format").fileFinishedImporting("../discord_common/js/packages/i18n/index.tsx");
 
 export { I18N as default } from "getMessages";

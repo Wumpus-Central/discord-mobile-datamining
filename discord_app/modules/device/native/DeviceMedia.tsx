@@ -1,6 +1,6 @@
-// === Module 9697: ? ===
+// === Module 9842: ? ===
 
-// Module 9697
+// Module 9842
 import { AnalyticEvents } from "ME";
 import keys from "keys";
 
@@ -92,14 +92,14 @@ export default {
             obj = { page: table, has_reached_end: tmp12 };
             lastAssetIndex(table[2]).track(outer1_3.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
           };
-          lastAssetIndex(9698)(obj);
+          lastAssetIndex(9843)(obj);
         }
       }
     }
   },
   refreshAssets(batchSize) {
     batchSize = batchSize.batchSize;
-    importDefault(9698)({
+    importDefault(9843)({
       batchSize,
       extensions: batchSize.extensions,
       onFetched(edges) {

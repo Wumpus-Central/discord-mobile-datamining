@@ -1,6 +1,6 @@
-// === Module 5818: useCollectiblesDebugStore ===
+// === Module 6913: useCollectiblesDebugStore ===
 
-// Module 5818 (useCollectiblesDebugStore)
+// Module 6913 (useCollectiblesDebugStore)
 import keys from "keys";
 
 let obj = keys.create((arg0) => {

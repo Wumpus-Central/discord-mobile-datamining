@@ -1,6 +1,6 @@
-// === Module 15600: FriendsScreen ===
+// === Module 15666: FriendsScreen ===
 
-// Module 15600 (FriendsScreen)
+// Module 15666 (FriendsScreen)
 import getSystemLocale from "getSystemLocale";
 import { View } from "registerAsset";
 import recountRelationshipTypes from "recountRelationshipTypes";

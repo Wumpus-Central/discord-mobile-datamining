@@ -1,6 +1,6 @@
-// === Module 9487: clearTimeoutTimer ===
+// === Module 9634: clearTimeoutTimer ===
 
-// Module 9487 (clearTimeoutTimer)
+// Module 9634 (clearTimeoutTimer)
 import { AnalyticEvents } from "ME";
 
 let c4 = 30000;
@@ -17,9 +17,9 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
 };
 prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
   if (Math.random() <= 0.1) {
-    let obj = importDefault(5870);
+    let obj = importDefault(6958);
     obj = { name: null, tags: null };
-    obj[0] = require(5875) /* set */.MetricEvents.QUEST_BAR_RENDER_DELAY;
+    obj[0] = require(6963) /* set */.MetricEvents.QUEST_BAR_RENDER_DELAY;
     const _HermesInternal = HermesInternal;
     const items = ["quest_id:" + arg0, ];
     const _HermesInternal2 = HermesInternal;
@@ -65,7 +65,7 @@ prototype["stopTracking"] = function stopTracking(arg0) {
         const _Math2 = Math;
         self.sendMetric(arg0, flag, Math.min(rounded, c4));
       }
-      obj = importDefault(9488);
+      obj = importDefault(9635);
     }
   }
 };

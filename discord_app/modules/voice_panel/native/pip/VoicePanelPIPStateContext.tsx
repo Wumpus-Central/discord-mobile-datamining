@@ -1,10 +1,10 @@
-// === Module 15940: context ===
+// === Module 16004: context ===
 
-// Module 15940 (context)
+// Module 16004 (context)
 import importAllResult from "noop";
 
 let c0 = importAllResult;
-const context = importAllResult.createContext({ id: "disabled", mode: "isArray", width: false, height: "WaterDepth", containerHeight: null, showSecondaryPIP: "\u{1F1E7}\u{1F1F9}" });
+const context = importAllResult.createContext({ id: "description", mode: "isArray", width: false, height: "#C3BFFF", containerHeight: 0, showSecondaryPIP: 100 });
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");
 
 export const VoicePanelPIPStateContext = context;

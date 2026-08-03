@@ -1,6 +1,6 @@
-// === Module 15479: FormSubmitErrorType ===
+// === Module 15546: FormSubmitErrorType ===
 
-// Module 15479 (FormSubmitErrorType)
+// Module 15546 (FormSubmitErrorType)
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", ApiValidation: 2, [2]: "ApiValidation" };
 const result = require("set").fileFinishedImporting("modules/threads/FormError.tsx");
 
@@ -36,7 +36,7 @@ export const makeApiNameRequiredError = function makeApiNameRequiredError() {
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj = require(6181) /* getAutomodErrorMessageFromErrorResponse */;
+  let obj = require(7233) /* getAutomodErrorMessageFromErrorResponse */;
   id = undefined;
   if (id != null) {
     id = id.id;

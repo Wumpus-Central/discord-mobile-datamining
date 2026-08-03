@@ -1,6 +1,6 @@
-// === Module 15081: getActiveTextChannels ===
+// === Module 15061: getActiveTextChannels ===
 
-// Module 15081 (getActiveTextChannels)
+// Module 15061 (getActiveTextChannels)
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

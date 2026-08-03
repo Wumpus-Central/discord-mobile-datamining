@@ -1,6 +1,6 @@
-// === Module 4102: getPowerupEntitlementPrice ===
+// === Module 4164: getPowerupEntitlementPrice ===
 
-// Module 4102 (getPowerupEntitlementPrice)
+// Module 4164 (getPowerupEntitlementPrice)
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");
 
 export default function getPowerupEntitlementPrice(tenant_metadata) {

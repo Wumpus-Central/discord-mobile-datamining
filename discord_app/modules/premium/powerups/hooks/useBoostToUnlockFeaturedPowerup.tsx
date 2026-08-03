@@ -1,6 +1,6 @@
-// === Module 11609: items ===
+// === Module 11716: items ===
 
-// Module 11609 (items)
+// Module 11716 (items)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

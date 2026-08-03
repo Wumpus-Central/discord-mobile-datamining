@@ -1,6 +1,6 @@
-// === Module 7208: vanityUrl ===
+// === Module 6344: vanityUrl ===
 
-// Module 7208 (vanityUrl)
+// Module 6344 (vanityUrl)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftingTier3SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/44bf140982e19a7cbae99d222f51aa06209f117d6f14694fe98b49c2adc55390.png";

@@ -1,6 +1,6 @@
-// === Module 6558: goToStandalonePremiumCheckout ===
+// === Module 6766: goToStandalonePremiumCheckout ===
 
-// Module 6558 (goToStandalonePremiumCheckout)
+// Module 6766 (goToStandalonePremiumCheckout)
 import ME from "ME";
 
 let c3;

@@ -1,6 +1,6 @@
-// === Module 16649: GuildRoleSubscriptionRolePreview ===
+// === Module 16715: GuildRoleSubscriptionRolePreview ===
 
-// Module 16649 (GuildRoleSubscriptionRolePreview)
+// Module 16715 (GuildRoleSubscriptionRolePreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -37,12 +37,12 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   let obj = require(647) /* defaultAreStatesEqual */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = importDefault(4383);
+  let obj1 = importDefault(4445);
   obj = { style: items1, children: null };
   items1 = [tmp3.container, style];
   const name = obj1.useName(guildId, null, stateFromStores);
   obj = { style: tmp3.avatar, source: { uri: roleImage } };
-  const items2 = [callback(importDefault(5145), obj), ];
+  const items2 = [callback(importDefault(5207), obj), ];
   obj1 = { style: tmp3.content, children: null };
   const obj2 = { style: tmp3.contextRow, children: null };
   const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
@@ -50,9 +50,9 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   obj4[0] = importAll(688).int2hex(roleColor);
   obj3[2] = obj4;
   obj3[3] = name;
-  const items3 = [callback(require(4189) /* Text */.Text, obj3), callback(require(1297) /* Button */.Spacer, { size: 4 }), callback(importDefault(5545), { name: roleName, source: { uri: roleImage }, size: 16 }), callback(require(1297) /* Button */.Spacer, { size: 8 }), callback(require(4189) /* Text */.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
+  const items3 = [callback(require(4251) /* Text */.Text, obj3), callback(require(1297) /* Button */.Spacer, { size: 4 }), callback(importDefault(5607), { name: roleName, source: { uri: roleImage }, size: 16 }), callback(require(1297) /* Button */.Spacer, { size: 8 }), callback(require(4251) /* Text */.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
   obj2[1] = items3;
-  const items4 = [callback2(View, obj2), callback(require(4189) /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
+  const items4 = [callback2(View, obj2), callback(require(4251) /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
   obj1[1] = items4;
   items2[1] = callback2(View, obj1);
   obj[1] = items2;

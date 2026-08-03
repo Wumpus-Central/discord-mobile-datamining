@@ -1,6 +1,6 @@
-// === Module 5128: isConnected ===
+// === Module 5190: isConnected ===
 
-// Module 5128 (isConnected)
+// Module 5190 (isConnected)
 import { Store } from "initialize";
 
 let closure_2 = {};

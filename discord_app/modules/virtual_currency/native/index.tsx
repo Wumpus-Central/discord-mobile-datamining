@@ -1,6 +1,6 @@
-// === Module 9818: BalanceWidgetPill ===
+// === Module 9963: BalanceWidgetPill ===
 
-// Module 9818 (BalanceWidgetPill)
+// Module 9963 (BalanceWidgetPill)
 const result = require("BalanceWidgetPillButton").fileFinishedImporting("modules/virtual_currency/native/index.tsx");
 
 export const BalanceWidgetPill = require("BalanceWidgetPill").BalanceWidgetPill;

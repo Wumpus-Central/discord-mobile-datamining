@@ -1,6 +1,6 @@
-// === Module 9180: MemberVerificationForm ===
+// === Module 9353: MemberVerificationForm ===
 
-// Module 9180 (MemberVerificationForm)
+// Module 9353 (MemberVerificationForm)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";

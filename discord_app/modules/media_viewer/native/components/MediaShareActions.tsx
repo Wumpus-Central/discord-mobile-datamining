@@ -1,6 +1,6 @@
-// === Module 8173: useMediaShareActions ===
+// === Module 8480: useMediaShareActions ===
 
-// Module 8173 (useMediaShareActions)
+// Module 8480 (useMediaShareActions)
 import transitionToChannel from "transitionToChannel";
 import filterStaffGuild from "filterStaffGuild";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -16,7 +16,7 @@ let metroImportAll;
 const require = arg1;
 function useMediaShareActions(source) {
   source = source.source;
-  const disableDownload = source.disableDownload;
+  let disableDownload = source.disableDownload;
   const shareable = source.shareable;
   let channelId;
   let messageId;
@@ -52,7 +52,7 @@ function useMediaShareActions(source) {
     return tmp2;
   }, items1);
   let obj = source(shareable[8]);
-  let tmp = source;
+  const tmp = source;
   let tmp2 = shareable;
   let result = source(shareable[9]).shouldAgeVerifyForExplicitMedia();
   let obj2 = source(shareable[9]);
@@ -101,7 +101,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M12 12.01h1v-1h-1v1ZM11 14.01h1v-1h-1v1ZM13 11.01h1v-1h-1v1Z" };
+          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M1 7H0v2h1V7Z" };
           obj[0] = tmp3;
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -112,7 +112,7 @@ function useMediaShareActions(source) {
         }
       } else {
         let obj1 = source(tmp[18]);
-        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M12 12.01h1v-1h-1v1ZM11 14.01h1v-1h-1v1ZM13 11.01h1v-1h-1v1Z" };
+        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M1 7H0v2h1V7Z" };
         obj1[0] = tmp3;
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];
@@ -164,15 +164,18 @@ function useMediaShareActions(source) {
   }
   let obj5 = source(shareable[23]);
   videoSourceType = tmp(tmp2[12]).getVideoSourceType(source);
-  const items8 = [disableDownload, callback3, callback4, callback2, callback5, callback, callback1, obscure, shareable, canForwardMessage, videoSourceType, , ];
-  ({ channelId: arr9[11], messageId: arr9[12] } = source);
+  const items8 = [disableDownload, callback3, callback4, callback2, callback5, callback, callback1, obscure, shareable, canForwardMessage, videoSourceType, , , ];
+  ({ channelId: arr9[11], messageId: arr9[12], disableDownload: arr9[13] } = source);
   return obj4.useMemo(() => {
-    let tmp = true !== disableDownload;
-    if (tmp) {
-      tmp = videoSourceType !== source(shareable[12]).VideoSourceType.WEB_FILE_IFRAME;
+    disableDownload = true === disableDownload;
+    if (!disableDownload) {
+      disableDownload = videoSourceType === source(shareable[12]).VideoSourceType.WEB_FILE_IFRAME;
+    }
+    if (!disableDownload) {
+      disableDownload = source.disableDownload;
     }
     const items = [];
-    if (tmp) {
+    if (!disableDownload) {
       let obj = { IconComponent: null, label: null, action: null };
       obj[0] = source(shareable[24]).DownloadIcon;
       const intl = source(shareable[25]).intl;
@@ -230,11 +233,11 @@ export default function MediaShareActionSheet(source) {
   obj[1] = useMediaShareActions(obj).map((IconComponent) => {
     let obj = { icon: null, onPress: null, label: null };
     obj = { IconComponent: IconComponent.IconComponent };
-    obj[0] = callback2(callback(5557).ActionSheetRow.Icon, obj);
+    obj[0] = callback2(callback(5619).ActionSheetRow.Icon, obj);
     ({ action: obj[1], label: obj[2] } = IconComponent);
-    return callback2(callback(5557).ActionSheetRow, obj, arg1);
+    return callback2(callback(5619).ActionSheetRow, obj, arg1);
   });
-  obj[0] = jsx(require(5557) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: null });
-  return jsx(require(5555) /* ActionSheet */.ActionSheet, { hasIcons: true, children: null });
+  obj[0] = jsx(require(5619) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: null });
+  return jsx(require(5617) /* ActionSheet */.ActionSheet, { hasIcons: true, children: null });
 };
 export { useMediaShareActions };

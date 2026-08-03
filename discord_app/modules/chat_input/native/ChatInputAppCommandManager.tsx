@@ -1,6 +1,6 @@
-// === Module 11529: areResolvedGamesEqual ===
+// === Module 11639: areResolvedGamesEqual ===
 
-// Module 11529 (areResolvedGamesEqual)
+// Module 11639 (areResolvedGamesEqual)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "PermissionOverwriteType";
 import handleInit from "handleInit";

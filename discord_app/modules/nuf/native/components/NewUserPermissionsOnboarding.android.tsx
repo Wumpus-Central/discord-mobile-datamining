@@ -1,6 +1,6 @@
-// === Module 11793: NewUserPermissionsOnboarding ===
+// === Module 11895: NewUserPermissionsOnboarding ===
 
-// Module 11793 (NewUserPermissionsOnboarding)
+// Module 11895 (NewUserPermissionsOnboarding)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -52,7 +52,7 @@ export default function NewUserPermissionsOnboarding(showSkip) {
   const items = [header, ];
   const obj1 = { style: tmp.alert, children: null };
   const obj2 = { style: tmp.alertContent, children: null };
-  const items1 = [callback(require(4189) /* Text */.Text, { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title }), callback(require(4189) /* Text */.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
+  const items1 = [callback(require(4251) /* Text */.Text, { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title }), callback(require(4251) /* Text */.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
   const items2 = [tmp.buttonWrapper, ];
   let primaryButtonContainer = flag;
   if (flag) {
@@ -65,7 +65,7 @@ export default function NewUserPermissionsOnboarding(showSkip) {
   obj6[2] = intl.string(require(1236) /* getSystemLocale */.t["2nYlT2"]);
   obj6[3] = onAllow;
   obj6[4] = loading;
-  obj5[1] = callback(require(4604) /* Button */.Button, obj6);
+  obj5[1] = callback(require(4666) /* Button */.Button, obj6);
   items1[2] = callback(closure_2, obj5);
   if (flag) {
     const obj7 = { style: null, children: null };
@@ -74,7 +74,7 @@ export default function NewUserPermissionsOnboarding(showSkip) {
     const intl2 = tmp6(1236).intl;
     obj8[1] = intl2.string(tmp6(1236).t["5Wxrcd"]);
     obj8[2] = onDontAllow;
-    obj7[1] = tmp4(tmp6(4604).Button, obj8);
+    obj7[1] = tmp4(tmp6(4666).Button, obj8);
     flag = tmp4(tmp5, obj7);
   }
   const obj9 = { children: null };

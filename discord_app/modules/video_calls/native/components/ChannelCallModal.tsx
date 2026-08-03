@@ -1,6 +1,6 @@
-// === Module 10521: ChannelCallCameraPreview ===
+// === Module 10706: ChannelCallCameraPreview ===
 
-// Module 10521 (ChannelCallCameraPreview)
+// Module 10706 (ChannelCallCameraPreview)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "initialize";
 import getParticipants from "getParticipants";
@@ -52,7 +52,7 @@ class ChannelCallModal {
   constructor(arg0) {
     channel = global.channel;
     obj = { channelId: channel.id, guildId: channel.guild_id };
-    return jsx(f49280, obj);
+    return jsx(f49713, obj);
   }
 }
 let c4 = importAllResult;
@@ -68,10 +68,10 @@ let closure_18 = importAllResult.memo((arg0) => {
     if (null != first) {
       outer1_1(outer1_2[13]).initialize(tmp);
       return () => {
-        callback2(10688).terminate();
-        const obj = callback2(10688);
-        callback2(6682).setHidden(false);
-        const obj2 = callback2(6682);
+        callback2(10796).terminate();
+        const obj = callback2(10796);
+        callback2(7657).setHidden(false);
+        const obj2 = callback2(7657);
         if (!obj3.isModalOpen(closure_31)) {
           callback3();
         }
@@ -82,7 +82,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   if (null != first) {
     let obj = { channel: null };
     obj[0] = first;
-    tmp4 = callback5(importDefault(10689), obj);
+    tmp4 = callback5(importDefault(10797), obj);
   }
   return tmp4;
 });

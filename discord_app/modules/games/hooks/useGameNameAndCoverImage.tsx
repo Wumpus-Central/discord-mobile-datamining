@@ -1,10 +1,10 @@
-// === Module 12075: useGameNameAndCoverImage ===
+// === Module 12171: useGameNameAndCoverImage ===
 
-// Module 12075 (useGameNameAndCoverImage)
+// Module 12171 (useGameNameAndCoverImage)
 const result = require("set").fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default function useGameNameAndCoverImage(arg0, arg1, size) {
-  let obj = require(5910) /* importDefaultResult1 */;
+  let obj = require(6990) /* importDefaultResult1 */;
   const game = obj.useGame(arg0);
   const data = game.data;
   let coverURL;

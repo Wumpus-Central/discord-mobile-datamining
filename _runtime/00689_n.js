@@ -5,7 +5,7 @@ let fn = function n() {
   let length;
   let length2;
   let obj = {};
-  let f101584 = obj;
+  let f101777 = obj;
   let items = ["Boolean", "Number", "String", "Function", "Array", "Date", "RegExp", "Undefined", "Null"];
   let num = 0;
   if (0 < items.length) {
@@ -67,7 +67,7 @@ let fn = function n() {
       typeof call2 === "unknown" ? slice() : call2(arg0);
     } else {
       const first = arg0[0];
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -103,11 +103,11 @@ let fn = function n() {
         } while (tmp3);
       }
       first = items[0];
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         str4 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      tmp5 = f101584;
+      tmp5 = f101777;
       toString = Object.prototype.toString;
       call = toString.call;
       tmp6 = tmp5[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
@@ -119,7 +119,7 @@ let fn = function n() {
           }
         }
       }
-      if (typeof last !== "fileFinishedImporting") {
+      if (typeof last !== "error") {
         str5 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -129,7 +129,7 @@ let fn = function n() {
         diff1 = items.length - 1;
         tmp9 = type$p;
         tmp10 = items[diff1];
-        if (typeof type$p !== "fileFinishedImporting") {
+        if (typeof type$p !== "error") {
           str6 = "Trying to call a non-function";
           throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
         }
@@ -211,13 +211,13 @@ let fn = function n() {
     toString() {
       self = this;
       hex = this.hex;
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         str4 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       toString = Object.prototype.toString;
       call = toString.call;
-      tmp = f101584;
+      tmp = f101777;
       tmp2 = tmp[typeof call === "unknown" ? toString(hex) : call(toString, hex)] || "object";
       if ("function" == tmp2) {
         hexResult = self.hex();
@@ -272,13 +272,13 @@ let fn = function n() {
     }
     name() {
       tmp = rgb2hex_1(this._rgb, "rgb");
-      keys = Object.keys(f67077);
+      keys = Object.keys(f67198);
       num = 0;
       if (0 < keys.length) {
         str = keys[num];
-        tmp2 = f67077;
+        tmp2 = f67198;
         tmp3 = num;
-        while (f67077[str] !== tmp) {
+        while (f67198[str] !== tmp) {
           num = num + 1;
         }
         return str.toLowerCase();
@@ -343,7 +343,7 @@ let fn = function n() {
       self = this;
       if (undefined !== arg0) {
         tmp = type$p;
-        if (typeof type$p !== "fileFinishedImporting") {
+        if (typeof type$p !== "error") {
           str3 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -351,7 +351,7 @@ let fn = function n() {
         _Object = Object;
         toString = Object.prototype.toString;
         call = toString.call;
-        tmp2 = f101584;
+        tmp2 = f101777;
         tmp4 = tmp2[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
         str = "number";
         if ("number" === tmp4) {
@@ -432,7 +432,7 @@ let fn = function n() {
       closure_0 = arg0;
       if (undefined !== arg0) {
         tmp = type$p;
-        if (typeof type$p !== "fileFinishedImporting") {
+        if (typeof type$p !== "error") {
           str6 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -678,12 +678,12 @@ let fn = function n() {
         num4 = -1;
         if (-1 < diff) {
           tmp11 = type$p;
-          if (typeof type$p !== "fileFinishedImporting") {
+          if (typeof type$p !== "error") {
             str11 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           tmp12 = arg1;
-          tmp13 = f101584;
+          tmp13 = f101777;
           tmp14 = globalThis;
           _Object = Object;
           toString = Object.prototype.toString;
@@ -713,7 +713,7 @@ let fn = function n() {
             }
             tmp3[diff] = tmp3[diff] + +arg1;
           } else {
-            if (typeof tmp11 !== "fileFinishedImporting") {
+            if (typeof tmp11 !== "error") {
               str12 = "Trying to call a non-function";
               throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
             }
@@ -877,7 +877,7 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "cmyk");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
@@ -960,13 +960,13 @@ let fn = function n() {
       } while (tmp3);
     }
     const arr2 = unpack(items, "hsla");
-    if (typeof last !== "fileFinishedImporting") {
+    if (typeof last !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let str = null;
     if (items.length >= 2) {
       const diff1 = items.length - 1;
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -977,24 +977,24 @@ let fn = function n() {
         const str3 = items[diff1];
       }
       str = formatted;
-      const tmp7 = f101584;
-      tmp9 = f101584[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
+      const tmp7 = f101777;
+      tmp9 = f101777[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
     }
     if (!str) {
       str = "lsa";
     }
-    if (typeof rnd !== "fileFinishedImporting") {
+    if (typeof rnd !== "error") {
       HermesBuiltin.throwTypeError();
     }
     arr2[0] = Math.round(100 * (arr2[0] || 0)) / 100;
     const result = 100 * arr2[1];
-    if (typeof rnd !== "fileFinishedImporting") {
+    if (typeof rnd !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let num2 = 1;
     arr2[1] = `${Math.round(100 * tmp13) / 100}%`;
     const result1 = 100 * arr2[2];
-    if (typeof rnd !== "fileFinishedImporting") {
+    if (typeof rnd !== "error") {
       HermesBuiltin.throwTypeError();
     }
     arr2[2] = `${Math.round(100 * tmp14) / 100}%`;
@@ -1171,13 +1171,13 @@ let fn = function n() {
       } while (tmp3);
     }
     const arr2 = unpack(items, "rgba");
-    if (typeof last !== "fileFinishedImporting") {
+    if (typeof last !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let str = null;
     if (items.length >= 2) {
       const diff1 = items.length - 1;
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -1188,8 +1188,8 @@ let fn = function n() {
         const str3 = items[diff1];
       }
       str = formatted;
-      const tmp7 = f101584;
-      tmp9 = f101584[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
+      const tmp7 = f101777;
+      tmp9 = f101777[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
     }
     if (!str) {
       str = "rgb";
@@ -1256,7 +1256,7 @@ let fn = function n() {
         } while (0 < tmp3);
       }
       if (!items.length) {
-        if (typeof type$p !== "fileFinishedImporting") {
+        if (typeof type$p !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -1266,8 +1266,8 @@ let fn = function n() {
             return "css";
           }
         }
-        const tmp6 = f101584;
-        tmp8 = f101584[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+        const tmp6 = f101777;
+        tmp8 = f101777[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
     }
   });
@@ -1446,7 +1446,7 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "hcg");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
@@ -1476,13 +1476,13 @@ let fn = function n() {
     const tmp4 = unpack(items, "rgba");
     let num = tmp4[3];
     [tmp5, tmp6, tmp7] = tmp4;
-    if (typeof last !== "fileFinishedImporting") {
+    if (typeof last !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let str = null;
     if (items.length >= 2) {
       const diff1 = items.length - 1;
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -1493,8 +1493,8 @@ let fn = function n() {
         const str3 = items[diff1];
       }
       str = formatted;
-      const tmp11 = f101584;
-      tmp13 = f101584[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
+      const tmp11 = f101777;
+      tmp13 = f101777[typeof call === "unknown" ? toString(items[diff1]) : call(toString, items[diff1])] || "object";
     }
     if (!str) {
       str = "auto";
@@ -1605,7 +1605,7 @@ let fn = function n() {
         } while (0 < tmp3);
       }
       if (!items.length) {
-        if (typeof type$p !== "fileFinishedImporting") {
+        if (typeof type$p !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -1616,8 +1616,8 @@ let fn = function n() {
             return "hex";
           }
         }
-        const tmp6 = f101584;
-        tmp8 = f101584[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+        const tmp6 = f101777;
+        tmp8 = f101777[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
     }
   });
@@ -1721,7 +1721,7 @@ let fn = function n() {
       diff4 = 1 - (diff2 + diff3);
     }
     const result11 = tmp4 * diff4;
-    if (typeof limit$2 !== "fileFinishedImporting") {
+    if (typeof limit$2 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let num9 = result11 * 3;
@@ -1734,7 +1734,7 @@ let fn = function n() {
     }
     const items1 = [255 * num10, , , ];
     const result12 = tmp4 * diff2;
-    if (typeof limit$2 !== "fileFinishedImporting") {
+    if (typeof limit$2 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let num12 = result12 * 3;
@@ -1747,7 +1747,7 @@ let fn = function n() {
     }
     items1[1] = 255 * num13;
     const result13 = tmp4 * diff3;
-    if (typeof limit$2 !== "fileFinishedImporting") {
+    if (typeof limit$2 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let num15 = result13 * 3;
@@ -1782,7 +1782,7 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "hsi");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
@@ -1825,7 +1825,7 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "hsl");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
@@ -1982,7 +1982,7 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "hsv");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
@@ -2019,10 +2019,10 @@ let fn = function n() {
       } while (tmp3);
     }
     [tmp5, tmp6, tmp7] = unpack(items, "rgb");
-    if (typeof rgb2xyz !== "fileFinishedImporting") {
+    if (typeof rgb2xyz !== "error") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof rgb_xyz !== "fileFinishedImporting") {
+    if (typeof rgb_xyz !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const result = tmp5 / 255;
@@ -2031,7 +2031,7 @@ let fn = function n() {
     } else {
       result1 = pow((result + 0.055) / 1.055, 2.4);
     }
-    if (typeof rgb_xyz !== "fileFinishedImporting") {
+    if (typeof rgb_xyz !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const result2 = tmp6 / 255;
@@ -2040,7 +2040,7 @@ let fn = function n() {
     } else {
       result3 = pow((result2 + 0.055) / 1.055, 2.4);
     }
-    if (typeof rgb_xyz !== "fileFinishedImporting") {
+    if (typeof rgb_xyz !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const result4 = tmp7 / 255;
@@ -2050,7 +2050,7 @@ let fn = function n() {
       result5 = pow((result4 + 0.055) / 1.055, 2.4);
     }
     const result6 = (0.4124564 * result1 + 0.3575761 * result3 + 0.1804375 * result5) / obj7.Xn;
-    if (typeof xyz_lab !== "fileFinishedImporting") {
+    if (typeof xyz_lab !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (result6 > obj7.t3) {
@@ -2060,7 +2060,7 @@ let fn = function n() {
     }
     const items1 = [sum, , ];
     const result7 = (0.2126729 * result1 + 0.7151522 * result3 + 0.072175 * result5) / tmp19.Yn;
-    if (typeof xyz_lab !== "fileFinishedImporting") {
+    if (typeof xyz_lab !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (result7 > obj7.t3) {
@@ -2070,7 +2070,7 @@ let fn = function n() {
     }
     items1[1] = sum1;
     const result8 = (0.0193339 * result1 + 0.119192 * result3 + 0.9503041 * result5) / tmp19.Zn;
-    if (typeof xyz_lab !== "fileFinishedImporting") {
+    if (typeof xyz_lab !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (result8 > obj7.t3) {
@@ -2116,7 +2116,7 @@ let fn = function n() {
     if (!isNaN(arr2[2])) {
       diff1 = result - tmp5 / 200;
     }
-    if (typeof lab_xyz !== "fileFinishedImporting") {
+    if (typeof lab_xyz !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (result > obj7.t1) {
@@ -2125,7 +2125,7 @@ let fn = function n() {
       result1 = tmp9.t2 * (result - tmp9.t0);
     }
     const result2 = obj7.Yn * result1;
-    if (typeof lab_xyz !== "fileFinishedImporting") {
+    if (typeof lab_xyz !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (sum > obj7.t1) {
@@ -2134,7 +2134,7 @@ let fn = function n() {
       result3 = tmp9.t2 * (sum - tmp9.t0);
     }
     const result4 = tmp9.Xn * result3;
-    if (typeof lab_xyz !== "fileFinishedImporting") {
+    if (typeof lab_xyz !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (diff1 > obj7.t1) {
@@ -2143,7 +2143,7 @@ let fn = function n() {
       result5 = tmp9.t2 * (diff1 - tmp9.t0);
     }
     const result6 = tmp9.Zn * result5;
-    if (typeof xyz_rgb !== "fileFinishedImporting") {
+    if (typeof xyz_rgb !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const diff2 = 3.2404542 * result4 - 1.5371385 * result2 - 0.4985314 * result6;
@@ -2153,7 +2153,7 @@ let fn = function n() {
       result7 = 1.055 * pow(diff2, 0.4166666666666667) - 0.055;
     }
     const items1 = [255 * result7, , , ];
-    if (typeof xyz_rgb !== "fileFinishedImporting") {
+    if (typeof xyz_rgb !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const sum1 = -0.969266 * result4 + 1.8760108 * result2 + 0.041556 * result6;
@@ -2163,7 +2163,7 @@ let fn = function n() {
       result8 = 1.055 * pow(sum1, 0.4166666666666667) - 0.055;
     }
     items1[1] = 255 * result8;
-    if (typeof xyz_rgb !== "fileFinishedImporting") {
+    if (typeof xyz_rgb !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const sum2 = 0.0556434 * result4 - 0.2040259 * result2 + 1.0572252 * result6;
@@ -2212,7 +2212,7 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "lab");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
@@ -2374,7 +2374,7 @@ let fn = function n() {
           } while (tmp3);
         }
         const arr2 = outer1_115(items, closure_0);
-        if (typeof outer1_116 !== "fileFinishedImporting") {
+        if (typeof outer1_116 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const call = toString.call;
@@ -2414,7 +2414,7 @@ let fn = function n() {
         } while (0 < tmp3);
       }
       if (!items.length) {
-        if (typeof type$p !== "fileFinishedImporting") {
+        if (typeof type$p !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -2424,8 +2424,8 @@ let fn = function n() {
             return "named";
           }
         }
-        const tmp6 = f101584;
-        tmp8 = f101584[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+        const tmp6 = f101777;
+        tmp8 = f101777[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       }
     }
   });
@@ -2460,7 +2460,7 @@ let fn = function n() {
     return new bind.apply(Color, items1.concat(items, ["num"]))();
   };
   obj.format.num = function num2rgb_1(arg0) {
-    if (typeof type$p !== "fileFinishedImporting") {
+    if (typeof type$p !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const call = toString.call;
@@ -2492,7 +2492,7 @@ let fn = function n() {
       }
       if (1 === items.length) {
         const first = items[0];
-        if (typeof type$p !== "fileFinishedImporting") {
+        if (typeof type$p !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -2504,8 +2504,8 @@ let fn = function n() {
             }
           }
         }
-        const tmp6 = f101584;
-        tmp8 = f101584[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
+        const tmp6 = f101777;
+        tmp8 = f101777[typeof call === "unknown" ? toString(first) : call(toString, first)] || "object";
       }
     }
   });
@@ -2559,14 +2559,14 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "rgba");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
       if ("array" === tmp6) {
         if (3 !== arr2.length) {
           if (4 === arr2.length) {
-            if (typeof type$p !== "fileFinishedImporting") {
+            if (typeof type$p !== "error") {
               HermesBuiltin.throwTypeError();
             }
             const _Object = Object;
@@ -2627,7 +2627,7 @@ let fn = function n() {
       let tmp7 = temperature2rgb_1;
       tmp8 = num;
       let tmp9 = num2;
-      if (typeof temperature2rgb_1 !== "fileFinishedImporting") {
+      if (typeof temperature2rgb_1 !== "error") {
         let str = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -2834,7 +2834,7 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "oklab");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
@@ -2915,7 +2915,7 @@ let fn = function n() {
         } while (tmp3);
       }
       const arr2 = unpack(items, "oklch");
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call = toString.call;
@@ -2930,7 +2930,7 @@ let fn = function n() {
   Color.prototype.brighter = Color.prototype.brighten;
   pow = Math.pow;
   function rgb2luminance(arg0, arg1, arg2) {
-    if (typeof luminance_x !== "fileFinishedImporting") {
+    if (typeof luminance_x !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const result = arg0 / 255;
@@ -2940,7 +2940,7 @@ let fn = function n() {
       result1 = pow((result + 0.055) / 1.055, 2.4);
     }
     const result2 = 0.2126 * result1;
-    if (typeof luminance_x !== "fileFinishedImporting") {
+    if (typeof luminance_x !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const result3 = arg1 / 255;
@@ -2950,7 +2950,7 @@ let fn = function n() {
       result4 = pow((result3 + 0.055) / 1.055, 2.4);
     }
     const result5 = 0.7152 * result4;
-    if (typeof luminance_x !== "fileFinishedImporting") {
+    if (typeof luminance_x !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const result6 = arg2 / 255;
@@ -2987,7 +2987,7 @@ let fn = function n() {
       first = Object.keys(tmp5)[0];
     }
     if (obj15[first]) {
-      if (typeof type$p !== "fileFinishedImporting") {
+      if (typeof type$p !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _Object2 = Object;
@@ -2996,18 +2996,18 @@ let fn = function n() {
       if ("object" !== tmp17) {
         obj = Color(arg0);
       }
-      if (typeof tmp13 !== "fileFinishedImporting") {
+      if (typeof tmp13 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _Object3 = Object;
       const call2 = toString2.call;
       tmp13 = type$p;
-      tmp17 = f101584[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
+      tmp17 = f101777[typeof call === "unknown" ? toString(arg0) : call(toString, arg0)] || "object";
       let obj2 = arg1;
       if ("object" !== tmp21) {
         obj2 = Color(arg1);
       }
-      tmp21 = f101584[typeof call2 === "unknown" ? toString2(arg1) : call2(toString2, arg1)] || "object";
+      tmp21 = f101777[typeof call2 === "unknown" ? toString2(arg1) : call2(toString2, arg1)] || "object";
       const obj3 = tmp5[first](obj, obj2, num);
       const alphaResult = obj.alpha();
       return obj3.alpha(alphaResult + num * (obj2.alpha() - obj.alpha()));
@@ -3224,7 +3224,7 @@ let fn = function n() {
       }
       let brewer = items;
       if (items) {
-        if (typeof outer1_202 !== "fileFinishedImporting") {
+        if (typeof outer1_202 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -3243,7 +3243,7 @@ let fn = function n() {
       if (brewer) {
         arr2 = outer1_201.brewer[items.toLowerCase(items)];
       }
-      if (typeof outer1_202 !== "fileFinishedImporting") {
+      if (typeof outer1_202 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const call2 = toString2.call;
@@ -3277,7 +3277,7 @@ let fn = function n() {
           } while (num3 < length2);
         }
       }
-      if (typeof resetCache !== "fileFinishedImporting") {
+      if (typeof resetCache !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let closure_13 = {};
@@ -3352,7 +3352,7 @@ let fn = function n() {
             }
             return tmp51;
           }
-          if (typeof outer1_202 !== "fileFinishedImporting") {
+          if (typeof outer1_202 !== "error") {
             HermesBuiltin.throwTypeError();
           }
           const _Object = Object;
@@ -3388,7 +3388,7 @@ let fn = function n() {
               interpolateResult = arr2[num11];
             }
           } else {
-            if (typeof tmp26 !== "fileFinishedImporting") {
+            if (typeof tmp26 !== "error") {
               HermesBuiltin.throwTypeError();
             }
             const _Object2 = Object;
@@ -3426,7 +3426,7 @@ let fn = function n() {
     };
     fn.classes = (arg0) => {
       if (null != arg0) {
-        if (typeof outer1_202 !== "fileFinishedImporting") {
+        if (typeof outer1_202 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -3518,7 +3518,7 @@ let fn = function n() {
     fn.mode = (arg0) => {
       if (arguments.length) {
         let closure_1 = arg0;
-        if (typeof resetCache !== "fileFinishedImporting") {
+        if (typeof resetCache !== "error") {
           HermesBuiltin.throwTypeError();
         }
         let closure_13 = {};
@@ -3550,7 +3550,7 @@ let fn = function n() {
       if (null == arg0) {
         flag = true;
       }
-      if (typeof resetCache !== "fileFinishedImporting") {
+      if (typeof resetCache !== "error") {
         HermesBuiltin.throwTypeError();
       }
       let closure_13 = {};
@@ -3617,7 +3617,7 @@ let fn = function n() {
     };
     fn.padding = (arg0) => {
       if (null != arg0) {
-        if (typeof outer1_202 !== "fileFinishedImporting") {
+        if (typeof outer1_202 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -3649,7 +3649,7 @@ let fn = function n() {
       if (0 === arguments.length) {
         let substr = arr2.slice(0);
       } else if (1 === arg0) {
-        if (typeof fn !== "fileFinishedImporting") {
+        if (typeof fn !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const tmp18 = outer1_201(getColor(0.5));
@@ -3677,7 +3677,7 @@ let fn = function n() {
         }
         substr = items1.map((arg0) => {
           const sum = first + arg0 / (closure_0 - 1) * closure_3;
-          if (typeof outer1_21 !== "fileFinishedImporting") {
+          if (typeof outer1_21 !== "error") {
             HermesBuiltin.throwTypeError();
           }
           const tmp2 = outer1_201(outer1_19(sum));
@@ -3713,7 +3713,7 @@ let fn = function n() {
             }
           }
           substr = arr.map((arg0) => {
-            if (typeof closure_21 !== "fileFinishedImporting") {
+            if (typeof closure_21 !== "error") {
               HermesBuiltin.throwTypeError();
             }
             const tmp = outer1_201(callback(arg0));
@@ -3774,77 +3774,77 @@ let fn = function n() {
     }
     tmp = blend;
   }
-  f101584 = (arg0, arg1) => {
-    const items = [f101584(arg0[0], arg1[0]), f101584(arg0[1], arg1[1]), f101584(arg0[2], arg1[2])];
+  f101777 = (arg0, arg1) => {
+    const items = [f101777(arg0[0], arg1[0]), f101777(arg0[1], arg1[1]), f101777(arg0[2], arg1[2])];
     return items;
   };
   blend.normal = (arg0, arg1) => {
     const obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f101584(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f101777(rgbResult, chroma$k(arg0).rgb()));
   };
-  f101584 = (arg0, arg1) => {
-    const items = [f101584(arg0[0], arg1[0]), f101584(arg0[1], arg1[1]), f101584(arg0[2], arg1[2])];
+  f101777 = (arg0, arg1) => {
+    const items = [f101777(arg0[0], arg1[0]), f101777(arg0[1], arg1[1]), f101777(arg0[2], arg1[2])];
     return items;
   };
   blend.multiply = (arg0, arg1) => {
     const obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f101584(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f101777(rgbResult, chroma$k(arg0).rgb()));
   };
-  f101584 = (arg0, arg1) => {
-    const items = [f101584(arg0[0], arg1[0]), f101584(arg0[1], arg1[1]), f101584(arg0[2], arg1[2])];
+  f101777 = (arg0, arg1) => {
+    const items = [f101777(arg0[0], arg1[0]), f101777(arg0[1], arg1[1]), f101777(arg0[2], arg1[2])];
     return items;
   };
   blend.screen = (arg0, arg1) => {
     const obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f101584(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f101777(rgbResult, chroma$k(arg0).rgb()));
   };
-  f101584 = (arg0, arg1) => {
-    const items = [f101584(arg0[0], arg1[0]), f101584(arg0[1], arg1[1]), f101584(arg0[2], arg1[2])];
+  f101777 = (arg0, arg1) => {
+    const items = [f101777(arg0[0], arg1[0]), f101777(arg0[1], arg1[1]), f101777(arg0[2], arg1[2])];
     return items;
   };
   blend.overlay = (arg0, arg1) => {
     const obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f101584(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f101777(rgbResult, chroma$k(arg0).rgb()));
   };
-  f101584 = (arg0, arg1) => {
-    const items = [f101584(arg0[0], arg1[0]), f101584(arg0[1], arg1[1]), f101584(arg0[2], arg1[2])];
+  f101777 = (arg0, arg1) => {
+    const items = [f101777(arg0[0], arg1[0]), f101777(arg0[1], arg1[1]), f101777(arg0[2], arg1[2])];
     return items;
   };
   blend.darken = (arg0, arg1) => {
     const obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f101584(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f101777(rgbResult, chroma$k(arg0).rgb()));
   };
-  f101584 = (arg0, arg1) => {
-    const items = [f101584(arg0[0], arg1[0]), f101584(arg0[1], arg1[1]), f101584(arg0[2], arg1[2])];
+  f101777 = (arg0, arg1) => {
+    const items = [f101777(arg0[0], arg1[0]), f101777(arg0[1], arg1[1]), f101777(arg0[2], arg1[2])];
     return items;
   };
   blend.lighten = (arg0, arg1) => {
     const obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f101584(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f101777(rgbResult, chroma$k(arg0).rgb()));
   };
-  f101584 = (arg0, arg1) => {
-    const items = [f101584(arg0[0], arg1[0]), f101584(arg0[1], arg1[1]), f101584(arg0[2], arg1[2])];
+  f101777 = (arg0, arg1) => {
+    const items = [f101777(arg0[0], arg1[0]), f101777(arg0[1], arg1[1]), f101777(arg0[2], arg1[2])];
     return items;
   };
   blend.dodge = (arg0, arg1) => {
     const obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f101584(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f101777(rgbResult, chroma$k(arg0).rgb()));
   };
-  f101584 = (arg0, arg1) => {
-    const items = [f101584(arg0[0], arg1[0]), f101584(arg0[1], arg1[1]), f101584(arg0[2], arg1[2])];
+  f101777 = (arg0, arg1) => {
+    const items = [f101777(arg0[0], arg1[0]), f101777(arg0[1], arg1[1]), f101777(arg0[2], arg1[2])];
     return items;
   };
   blend.burn = (arg0, arg1) => {
     const obj = chroma$k(arg1);
     const rgbResult = chroma$k(arg1).rgb();
-    return chroma$k.rgb(f101584(rgbResult, chroma$k(arg0).rgb()));
+    return chroma$k.rgb(f101777(rgbResult, chroma$k(arg0).rgb()));
   };
   pow = Math.pow;
   sin = Math.sin;
@@ -3859,7 +3859,7 @@ let fn = function n() {
       c0 = null;
     }
     const obj = { min: Number.MAX_VALUE, max: -1 * Number.MAX_VALUE, sum: 0, values: [], count: 0 };
-    if (typeof type$p !== "fileFinishedImporting") {
+    if (typeof type$p !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let call = toString.call;
@@ -3871,7 +3871,7 @@ let fn = function n() {
     const item = values.forEach((arg0) => {
       let tmp2 = c0;
       if (c0) {
-        if (typeof outer1_218 !== "fileFinishedImporting") {
+        if (typeof outer1_218 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -3921,7 +3921,7 @@ let fn = function n() {
     if (undefined === arg2) {
       num = 7;
     }
-    if (typeof type$p !== "fileFinishedImporting") {
+    if (typeof type$p !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const call = toString.call;
@@ -4091,8 +4091,8 @@ let fn = function n() {
       }
       return items1;
     }
-    const tmp = f101584;
-    tmp2 = f101584[typeof call === "unknown" ? toString(analyzeResult) : call(toString, analyzeResult)] || "object";
+    const tmp = f101777;
+    tmp2 = f101777[typeof call === "unknown" ? toString(analyzeResult) : call(toString, analyzeResult)] || "object";
   }
   sqrt = Math.sqrt;
   pow = Math.pow;
@@ -4142,7 +4142,7 @@ let fn = function n() {
     });
     const mapped1 = arr.map((arg0) => callback(arg0));
     if ("lrgb" === str) {
-      if (typeof _average_lrgb !== "fileFinishedImporting") {
+      if (typeof _average_lrgb !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const items = [0, 0, 0, 0];
@@ -4373,7 +4373,7 @@ let fn = function n() {
       tmp = items;
     }
     let c6 = 0;
-    if (typeof type$p !== "fileFinishedImporting") {
+    if (typeof type$p !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let call = toString.call;
@@ -4433,7 +4433,7 @@ let fn = function n() {
         let tmp8 = dependencyMap;
       } else {
         dependencyMap = arg0;
-        if (typeof outer1_208 !== "fileFinishedImporting") {
+        if (typeof outer1_208 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -4457,7 +4457,7 @@ let fn = function n() {
       if (null == arg0) {
         let tmp4 = items;
       } else {
-        if (typeof outer1_208 !== "fileFinishedImporting") {
+        if (typeof outer1_208 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _Object = Object;
@@ -4652,7 +4652,7 @@ if (typeof exports !== "window") {
     module.exports = fn();
   }
 }
-if (typeof globalThis.define !== "disabledUntil") {
+if (typeof globalThis.define !== "HAS_APPLICATION") {
   if (globalThis.define.amd) {
     globalThis.define(fn);
   }

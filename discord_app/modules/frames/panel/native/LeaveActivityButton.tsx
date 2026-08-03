@@ -1,6 +1,6 @@
-// === Module 15897: ? ===
+// === Module 15961: ? ===
 
-// Module 15897
+// Module 15961
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
@@ -10,7 +10,7 @@ const memoResult = require("noop").memo(function LeaveActivityButton(arg0) {
   let importDefault;
   let require;
   ({ frame: require, setMode: importDefault } = arg0);
-  return jsx(require(15884) /* BaseLeaveActivityButton */.BaseLeaveActivityButton, {
+  return jsx(require(15948) /* BaseLeaveActivityButton */.BaseLeaveActivityButton, {
     onPress() {
       callback(outer1_3.DISCONNECTED);
       const timerId = setTimeout(() => {

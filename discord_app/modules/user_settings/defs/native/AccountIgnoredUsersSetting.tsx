@@ -1,6 +1,6 @@
-// === Module 13857: route ===
+// === Module 13924: route ===
 
-// Module 13857 (route)
+// Module 13924 (route)
 import upsertRelationship from "upsertRelationship";
 import createToggle from "createToggle";
 
@@ -25,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.IGNORED_USERS,
   getComponent() {
-    return require(13858) /* IgnoredUsersList */.default;
+    return require(13925) /* IgnoredUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

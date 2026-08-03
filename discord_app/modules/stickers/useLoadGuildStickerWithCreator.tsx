@@ -1,6 +1,6 @@
-// === Module 16433: useLoadGuildStickersWithCreator ===
+// === Module 16499: useLoadGuildStickersWithCreator ===
 
-// Module 16433 (useLoadGuildStickersWithCreator)
+// Module 16499 (useLoadGuildStickersWithCreator)
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

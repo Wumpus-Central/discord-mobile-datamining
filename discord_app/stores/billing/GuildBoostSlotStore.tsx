@@ -1,6 +1,6 @@
-// === Module 4086: handleGuildBoostsUpdate ===
+// === Module 4148: handleGuildBoostsUpdate ===
 
-// Module 4086 (handleGuildBoostsUpdate)
+// Module 4148 (handleGuildBoostsUpdate)
 import reset from "reset";
 import { Store } from "initialize";
 
