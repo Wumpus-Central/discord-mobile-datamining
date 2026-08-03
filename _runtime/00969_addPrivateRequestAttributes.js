@@ -1,6 +1,3 @@
-// === Module 969: addPrivateRequestAttributes ===
-
-// Module 969 (addPrivateRequestAttributes)
 import asyncGeneratorStep from "captureCheckIn";
 
 function addPrivateRequestAttributes(setAttributes, prompt) {

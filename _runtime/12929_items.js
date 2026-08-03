@@ -1,6 +1,3 @@
-// === Module 12929: items ===
-
-// Module 12929 (items)
 import _slicedToArray from "_slicedToArray";
 
 let obj = {};

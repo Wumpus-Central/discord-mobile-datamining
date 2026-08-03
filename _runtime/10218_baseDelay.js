@@ -1,6 +1,3 @@
-// === Module 10218: baseDelay ===
-
-// Module 10218 (baseDelay)
 
 export default function baseDelay(arg0, arg1, arg2) {
   let closure_0 = arg0;

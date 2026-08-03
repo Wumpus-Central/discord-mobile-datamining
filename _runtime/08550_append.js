@@ -1,6 +1,3 @@
-// === Module 8550: append ===
-
-// Module 8550 (append)
 function append(arg0, arg1, arg2, arg3, arg4, arg5) {
   let tmp = 1 !== arg0;
   if (!tmp) {

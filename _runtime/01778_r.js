@@ -1,6 +1,3 @@
-// === Module 1778: r ===
-
-// Module 1778 (r)
 const fn = function r() {
   let num = arg0;
   if (arg0 === undefined) {

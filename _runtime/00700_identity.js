@@ -1,6 +1,3 @@
-// === Module 700: identity ===
-
-// Module 700 (identity)
 import noop from "noop";
 
 function identity(arg0) {

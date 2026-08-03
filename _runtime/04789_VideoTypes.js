@@ -1,6 +1,3 @@
-// === Module 4789: VideoTypes ===
-
-// Module 4789 (VideoTypes)
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
 

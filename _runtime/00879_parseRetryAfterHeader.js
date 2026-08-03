@@ -1,6 +1,3 @@
-// === Module 879: parseRetryAfterHeader ===
-
-// Module 879 (parseRetryAfterHeader)
 import _slicedToArray from "_slicedToArray";
 
 function parseRetryAfterHeader(arg0) {

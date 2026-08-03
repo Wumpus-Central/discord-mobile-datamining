@@ -1,6 +1,3 @@
-// === Module 13332: InsertUnicodeExtensionAndCanonicalize ===
-
-// Module 13332 (InsertUnicodeExtensionAndCanonicalize)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr) {

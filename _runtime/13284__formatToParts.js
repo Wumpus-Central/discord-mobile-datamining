@@ -1,6 +1,3 @@
-// === Module 13284: _formatToParts ===
-
-// Module 13284 (_formatToParts)
 import e from "e";
 import e from "e";
 import e from "e";

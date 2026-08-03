@@ -1,6 +1,3 @@
-// === Module 3442: areIntervalsOverlapping ===
-
-// Module 3442 (areIntervalsOverlapping)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

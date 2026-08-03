@@ -1,6 +1,3 @@
-// === Module 1465: ? ===
-
-// Module 1465
 
 export default (str, SEPARATOR, arg2, maxKeys) => {
   str = SEPARATOR;

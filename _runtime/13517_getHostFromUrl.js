@@ -1,6 +1,3 @@
-// === Module 13517: getHostFromUrl ===
-
-// Module 13517 (getHostFromUrl)
 arg5.getHostFromUrl = function getHostFromUrl(scriptURL) {
   const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
   let tmp2;

@@ -1,6 +1,3 @@
-// === Module 8152: get ColorPropType ===
-
-// Module 8152 (get ColorPropType)
 const obj = {};
 Object.defineProperty(obj, "ColorPropType", { get: () => require(8153) /* colorPropType */, set: undefined });
 Object.defineProperty(obj, "EdgeInsetsPropType", { get: () => require(8155) /* emptyFunction */, set: undefined });

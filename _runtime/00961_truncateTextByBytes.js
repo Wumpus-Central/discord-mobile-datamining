@@ -1,6 +1,3 @@
-// === Module 961: truncateTextByBytes ===
-
-// Module 961 (truncateTextByBytes)
 function truncateTextByBytes(content, c0) {
   let diff;
   let sum;

@@ -1,6 +1,3 @@
-// === Module 1181: makeNativeTransport ===
-
-// Module 1181 (makeNativeTransport)
 import _classCallCheck from "_classCallCheck";
 
 const NativeTransport = arg1;

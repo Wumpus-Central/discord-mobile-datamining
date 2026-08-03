@@ -1,6 +1,3 @@
-// === Module 155: setUpPerformanceModern ===
-
-// Module 155 (setUpPerformanceModern)
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

@@ -1,6 +1,3 @@
-// === Module 757: getMapData ===
-
-// Module 757 (getMapData)
 
 export default function getMapData(__data__) {
   __data__ = __data__.__data__;

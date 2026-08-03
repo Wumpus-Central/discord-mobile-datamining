@@ -1,6 +1,3 @@
-// === Module 6380: isMatchingPattern ===
-
-// Module 6380 (isMatchingPattern)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isMatchingPattern = function isMatchingPattern(arr, test) {

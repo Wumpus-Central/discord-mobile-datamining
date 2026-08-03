@@ -1,6 +1,3 @@
-// === Module 3956: getNumberProperty ===
-
-// Module 3956 (getNumberProperty)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

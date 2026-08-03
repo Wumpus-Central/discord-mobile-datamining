@@ -1,6 +1,3 @@
-// === Module 13640: useReanimatedTransitionProgress ===
-
-// Module 13640 (useReanimatedTransitionProgress)
 import noop from "noop";
 
 

@@ -1,6 +1,3 @@
-// === Module 1830: onPress ===
-
-// Module 1830 (onPress)
 import "noop";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

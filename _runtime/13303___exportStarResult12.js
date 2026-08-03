@@ -1,6 +1,3 @@
-// === Module 13303: __exportStarResult12 ===
-
-// Module 13303 (__exportStarResult12)
 arg5.CollapseNumberRange = function CollapseNumberRange(arg0, items, getInternalSlots) {
   const internalSlots = getInternalSlots.getInternalSlots(arg0);
   const regExp = new RegExp("s?[".concat(internalSlots.dataLocaleData.numbers.symbols[internalSlots.numberingSystem].rangeSign, "]s?"));

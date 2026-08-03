@@ -1,6 +1,3 @@
-// === Module 13338: __exportStarResult30 ===
-
-// Module 13338 (__exportStarResult30)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.PartitionPattern = function PartitionPattern(arr) {

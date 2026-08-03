@@ -1,6 +1,3 @@
-// === Module 5434: AverageWindow ===
-
-// Module 5434 (AverageWindow)
 import MultiTypeAverageWindow from "_classCallCheck";
 import importDefaultResult from "_createClass";
 

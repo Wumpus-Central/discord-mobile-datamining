@@ -1,6 +1,3 @@
-// === Module 13441: ? ===
-
-// Module 13441
 import getOwnPropertyDescriptor from "getOwnPropertyDescriptor";
 
 if (getOwnPropertyDescriptor) {

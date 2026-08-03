@@ -1,6 +1,3 @@
-// === Module 13331: CanonicalizeUValue ===
-
-// Module 13331 (CanonicalizeUValue)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.CanonicalizeUValue = function CanonicalizeUValue(formatted, str) {

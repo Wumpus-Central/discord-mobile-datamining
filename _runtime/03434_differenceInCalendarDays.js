@@ -1,6 +1,3 @@
-// === Module 3434: differenceInCalendarDays ===
-
-// Module 3434 (differenceInCalendarDays)
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import startOfDay from "startOfDay";
 import requiredArgs from "requiredArgs";

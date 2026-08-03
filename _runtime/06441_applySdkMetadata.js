@@ -1,6 +1,3 @@
-// === Module 6441: applySdkMetadata ===
-
-// Module 6441 (applySdkMetadata)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.applySdkMetadata = function applySdkMetadata(_metadata) {

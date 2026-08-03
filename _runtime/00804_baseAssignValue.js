@@ -1,6 +1,3 @@
-// === Module 804: baseAssignValue ===
-
-// Module 804 (baseAssignValue)
 
 export default function baseAssignValue(arg0, arg1, arg2) {
   if ("__proto__" == arg1) {

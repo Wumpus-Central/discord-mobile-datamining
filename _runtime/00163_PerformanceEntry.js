@@ -1,6 +1,3 @@
-// === Module 163: PerformanceEntry ===
-
-// Module 163 (PerformanceEntry)
 import PerformanceEntry from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

@@ -1,6 +1,3 @@
-// === Module 1059: extractNetworkProtocol ===
-
-// Module 1059 (extractNetworkProtocol)
 import _slicedToArray from "_slicedToArray";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

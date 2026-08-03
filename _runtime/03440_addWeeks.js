@@ -1,6 +1,3 @@
-// === Module 3440: addWeeks ===
-
-// Module 3440 (addWeeks)
 import toInteger from "toInteger";
 import addDays from "addDays";
 import requiredArgs from "requiredArgs";

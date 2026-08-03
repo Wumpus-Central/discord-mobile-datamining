@@ -1,6 +1,3 @@
-// === Module 13302: __exportStarResult11 ===
-
-// Module 13302 (__exportStarResult11)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.ApplyUnsignedRoundingMode = function ApplyUnsignedRoundingMode(eq, timesResult, roundedNumber, result) {

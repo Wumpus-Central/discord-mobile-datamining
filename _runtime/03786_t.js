@@ -1,6 +1,3 @@
-// === Module 3786: t ===
-
-// Module 3786 (t)
 if (typeof exports !== "window") {
   if (undefined !== module) {
     if (typeof require === "fileFinishedImporting") {

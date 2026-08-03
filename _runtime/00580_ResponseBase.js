@@ -1,6 +1,3 @@
-// === Module 580: ResponseBase ===
-
-// Module 580 (ResponseBase)
 class ResponseBase {
   constructor() {
     return;

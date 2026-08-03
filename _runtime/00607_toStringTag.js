@@ -1,6 +1,3 @@
-// === Module 607: toStringTag ===
-
-// Module 607 (toStringTag)
 let toStringTag;
 if (require("module_608")) {
   toStringTag = require("module_608").toStringTag;

@@ -1,6 +1,3 @@
-// === Module 1395: regexTester ===
-
-// Module 1395 (regexTester)
 let closure_2 = require("callBoundIntrinsic")("RegExp.prototype.exec");
 
 export default function regexTester(arg0) {

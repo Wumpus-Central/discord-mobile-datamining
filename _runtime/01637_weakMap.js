@@ -1,6 +1,3 @@
-// === Module 1637: weakMap ===
-
-// Module 1637 (weakMap)
 import isJest from "isJest";
 
 isJest = isJest.shouldBeUseWeb();

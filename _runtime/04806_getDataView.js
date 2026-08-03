@@ -1,6 +1,3 @@
-// === Module 4806: getDataView ===
-
-// Module 4806 (getDataView)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.getDataView = function getDataView(buffer, byteOffset, byteLength) {

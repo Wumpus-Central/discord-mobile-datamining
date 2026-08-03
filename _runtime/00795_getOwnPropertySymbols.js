@@ -1,6 +1,3 @@
-// === Module 795: getOwnPropertySymbols ===
-
-// Module 795 (getOwnPropertySymbols)
 if (getOwnPropertySymbols) {
   let fn = (arg0) => {
     let _require = arg0;

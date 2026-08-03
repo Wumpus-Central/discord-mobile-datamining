@@ -1,6 +1,3 @@
-// === Module 910: _mergeOptions ===
-
-// Module 910 (_mergeOptions)
 import setupIntegration from "setupIntegration";
 import setupIntegration from "setupIntegration";
 

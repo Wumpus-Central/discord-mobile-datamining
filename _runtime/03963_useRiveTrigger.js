@@ -1,6 +1,3 @@
-// === Module 3963: useRiveTrigger ===
-
-// Module 3963 (useRiveTrigger)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

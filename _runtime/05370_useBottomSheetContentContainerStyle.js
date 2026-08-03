@@ -1,6 +1,3 @@
-// === Module 5370: useBottomSheetContentContainerStyle ===
-
-// Module 5370 (useBottomSheetContentContainerStyle)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

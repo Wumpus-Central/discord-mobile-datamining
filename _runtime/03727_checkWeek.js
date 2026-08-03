@@ -1,6 +1,3 @@
-// === Module 3727: checkWeek ===
-
-// Module 3727 (checkWeek)
 import isSameUTCWeek from "isSameUTCWeek";
 
 if (!isSameUTCWeek) {

@@ -1,6 +1,3 @@
-// === Module 3792: translate ===
-
-// Module 3792 (translate)
 if (typeof exports !== "window") {
   if (undefined !== module) {
     if (typeof require === "fileFinishedImporting") {

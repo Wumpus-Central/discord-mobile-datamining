@@ -1,6 +1,3 @@
-// === Module 3461: differenceInCalendarWeeks ===
-
-// Module 3461 (differenceInCalendarWeeks)
 import startOfWeek from "startOfWeek";
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import requiredArgs from "requiredArgs";

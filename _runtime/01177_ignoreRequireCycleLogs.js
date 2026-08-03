@@ -1,6 +1,3 @@
-// === Module 1177: ignoreRequireCycleLogs ===
-
-// Module 1177 (ignoreRequireCycleLogs)
 import { LogBox } from "get ActivityIndicator";
 
 

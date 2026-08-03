@@ -1,6 +1,3 @@
-// === Module 1027: _lazyLoadIntegration ===
-
-// Module 1027 (_lazyLoadIntegration)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _lazyLoadIntegration() {

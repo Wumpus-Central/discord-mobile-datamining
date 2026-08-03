@@ -1,6 +1,3 @@
-// === Module 107: accumulateDifferences ===
-
-// Module 107 (accumulateDifferences)
 const exports = arg3;
 const dependencyMap = arg6;
 function accumulateDifferences(items, arr2, obj, arg3) {

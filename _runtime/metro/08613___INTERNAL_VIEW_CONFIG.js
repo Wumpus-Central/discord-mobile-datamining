@@ -1,6 +1,3 @@
-// === Module 8613: __INTERNAL_VIEW_CONFIG ===
-
-// Module 8613 (__INTERNAL_VIEW_CONFIG)
 import resolveAssetSource from "resolveAssetSource";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";

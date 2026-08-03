@@ -1,6 +1,3 @@
-// === Module 13470: invariant ===
-
-// Module 13470 (invariant)
 import _slicedToArray from "_slicedToArray";
 import monadic from "monadic";
 

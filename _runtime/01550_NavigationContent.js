@@ -1,6 +1,3 @@
-// === Module 1550: NavigationContent ===
-
-// Module 1550 (NavigationContent)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

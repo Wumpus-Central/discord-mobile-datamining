@@ -1,6 +1,3 @@
-// === Module 1612: logToConsole ===
-
-// Module 1612 (logToConsole)
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

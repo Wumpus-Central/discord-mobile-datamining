@@ -1,6 +1,3 @@
-// === Module 939: weakMap ===
-
-// Module 939 (weakMap)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const weakMap = new WeakMap();
 arg5.cleanupSessionDataForTransport = function cleanupSessionDataForTransport(arg0) {

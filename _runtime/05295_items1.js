@@ -1,6 +1,3 @@
-// === Module 5295: items1 ===
-
-// Module 5295 (items1)
 const items = ["maxDurationMs", "maxDelayMs", "numberOfTaps", "maxDeltaX", "maxDeltaY", "maxDist", "minPointers"];
 const obj = { name: "TapGestureHandler", allowedProps: null, config: null };
 const items1 = [...items];

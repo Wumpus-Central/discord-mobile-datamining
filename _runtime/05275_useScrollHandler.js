@@ -1,6 +1,3 @@
-// === Module 5275: useScrollHandler ===
-
-// Module 5275 (useScrollHandler)
 const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useScrollHandlerTs1(event,context){const{handleOnScroll,onScroll,runOnJS}=this.__closure;handleOnScroll(event,context);if(onScroll){runOnJS(onScroll)({nativeEvent:event});}}" };

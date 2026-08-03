@@ -1,6 +1,3 @@
-// === Module 5428: RenderTimeTracker ===
-
-// Module 5428 (RenderTimeTracker)
 import _classCallCheck from "_classCallCheck";
 
 const RenderTimeTracker = arg1;

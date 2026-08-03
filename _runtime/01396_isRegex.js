@@ -1,6 +1,3 @@
-// === Module 1396: isRegex ===
-
-// Module 1396 (isRegex)
 import callBoundIntrinsic from "callBoundIntrinsic";
 
 if (tmp) {

@@ -1,6 +1,3 @@
-// === Module 1786: setNativePropsFabric ===
-
-// Module 1786 (setNativePropsFabric)
 import isJest from "isJest";
 import isJest from "isJest";
 

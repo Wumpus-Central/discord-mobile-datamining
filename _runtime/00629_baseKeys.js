@@ -1,6 +1,3 @@
-// === Module 629: baseKeys ===
-
-// Module 629 (baseKeys)
 
 export default function baseKeys(arg0) {
   if (require(630) /* isPrototype */(arg0)) {

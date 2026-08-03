@@ -1,6 +1,3 @@
-// === Module 3600: setUTCISODay ===
-
-// Module 3600 (setUTCISODay)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

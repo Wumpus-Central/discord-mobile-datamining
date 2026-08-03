@@ -1,6 +1,3 @@
-// === Module 1291: textEncoder ===
-
-// Module 1291 (textEncoder)
 import XXH64 from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import importDefaultResult1 from "_classPrivateFieldKey";

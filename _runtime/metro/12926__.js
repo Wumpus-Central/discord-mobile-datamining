@@ -1,6 +1,3 @@
-// === Module 12926: ? ===
-
-// Module 12926
 let closure_0 = Object.freeze({ loose: true });
 let closure_1 = Object.freeze({});
 

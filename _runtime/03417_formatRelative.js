@@ -1,6 +1,3 @@
-// === Module 3417: formatRelative ===
-
-// Module 3417 (formatRelative)
 import isSameUTCWeek from "isSameUTCWeek";
 
 if (!isSameUTCWeek) {

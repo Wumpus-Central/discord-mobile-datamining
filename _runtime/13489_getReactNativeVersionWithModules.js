@@ -1,6 +1,3 @@
-// === Module 13489: getReactNativeVersionWithModules ===
-
-// Module 13489 (getReactNativeVersionWithModules)
 arg5.getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
   try {
     if (constants) {

@@ -1,6 +1,3 @@
-// === Module 1784: scrollToFabric ===
-
-// Module 1784 (scrollToFabric)
 import isJest from "isJest";
 import isJest from "isJest";
 

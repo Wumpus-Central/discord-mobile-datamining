@@ -1,6 +1,3 @@
-// === Module 1014: convertToNormalizedObject ===
-
-// Module 1014 (convertToNormalizedObject)
 const require = arg1;
 const dependencyMap = arg6;
 const value = "value";

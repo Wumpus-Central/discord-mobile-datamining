@@ -1,6 +1,3 @@
-// === Module 5411: BottomSheetFlatList ===
-
-// Module 5411 (BottomSheetFlatList)
 import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent";
 
 const animatedComponent = require("cancelAnimation").createAnimatedComponent(require("get ActivityIndicator").FlatList);

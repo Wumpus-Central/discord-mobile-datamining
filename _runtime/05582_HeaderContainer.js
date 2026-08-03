@@ -1,6 +1,3 @@
-// === Module 5582: HeaderContainer ===
-
-// Module 5582 (HeaderContainer)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

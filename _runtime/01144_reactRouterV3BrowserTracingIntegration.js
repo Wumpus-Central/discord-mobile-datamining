@@ -1,6 +1,3 @@
-// === Module 1144: reactRouterV3BrowserTracingIntegration ===
-
-// Module 1144 (reactRouterV3BrowserTracingIntegration)
 let require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

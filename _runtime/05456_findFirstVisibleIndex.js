@@ -1,6 +1,3 @@
-// === Module 5456: findFirstVisibleIndex ===
-
-// Module 5456 (findFirstVisibleIndex)
 arg5.findFirstVisibleIndex = function findFirstVisibleIndex(layouts, bound1, horizontal) {
   let diff = layouts.length - 1;
   let num = -1;

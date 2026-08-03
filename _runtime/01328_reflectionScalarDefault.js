@@ -1,6 +1,3 @@
-// === Module 1328: reflectionScalarDefault ===
-
-// Module 1328 (reflectionScalarDefault)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {

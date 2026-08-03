@@ -1,6 +1,3 @@
-// === Module 1501: useOptionsGetters ===
-
-// Module 1501 (useOptionsGetters)
 import noop from "noop";
 
 

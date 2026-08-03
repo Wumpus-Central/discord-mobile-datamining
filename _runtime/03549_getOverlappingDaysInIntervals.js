@@ -1,6 +1,3 @@
-// === Module 3549: getOverlappingDaysInIntervals ===
-
-// Module 3549 (getOverlappingDaysInIntervals)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

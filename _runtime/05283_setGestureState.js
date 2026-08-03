@@ -1,6 +1,3 @@
-// === Module 5283: setGestureState ===
-
-// Module 5283 (setGestureState)
 import toArray from "toArray";
 import { Reanimated } from "cancelAnimation";
 import { Reanimated as Reanimated2 } from "cancelAnimation";

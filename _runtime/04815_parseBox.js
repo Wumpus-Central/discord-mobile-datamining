@@ -1,6 +1,3 @@
-// === Module 4815: parseBox ===
-
-// Module 4815 (parseBox)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

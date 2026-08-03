@@ -1,6 +1,3 @@
-// === Module 4499: CreateDataPropertyOrThrow ===
-
-// Module 4499 (CreateDataPropertyOrThrow)
 
 export default function CreateDataPropertyOrThrow(arg0, arg1, arg2) {
   if (require(4438) /* isObject */(arg0)) {

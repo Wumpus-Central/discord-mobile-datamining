@@ -1,6 +1,3 @@
-// === Module 13380: ? ===
-
-// Module 13380
 
 export default (dontCallGetSet, obj) => {
   let _global;

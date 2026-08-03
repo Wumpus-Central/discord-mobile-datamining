@@ -1,6 +1,3 @@
-// === Module 3965: useViewModelInstance ===
-
-// Module 3965 (useViewModelInstance)
 import noop from "noop";
 
 let c3;

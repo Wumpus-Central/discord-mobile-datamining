@@ -1,6 +1,3 @@
-// === Module 1047: bindReporter ===
-
-// Module 1047 (bindReporter)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.bindReporter = (arg0, arg1, arg2, arg3) => {
   let closure_0 = arg0;

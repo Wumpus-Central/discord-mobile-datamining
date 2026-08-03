@@ -1,6 +1,3 @@
-// === Module 1699: prepareCurvedTransition ===
-
-// Module 1699 (prepareCurvedTransition)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, duration, easingY, dummyTransitionKeyframeName) {

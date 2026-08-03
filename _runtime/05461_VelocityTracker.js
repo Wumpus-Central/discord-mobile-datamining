@@ -1,6 +1,3 @@
-// === Module 5461: VelocityTracker ===
-
-// Module 5461 (VelocityTracker)
 import VelocityTracker from "_classCallCheck";
 
 class VelocityTracker {

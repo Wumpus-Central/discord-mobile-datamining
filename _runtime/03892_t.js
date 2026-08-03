@@ -1,6 +1,3 @@
-// === Module 3892: t ===
-
-// Module 3892 (t)
 let fn = function t() {
   const re7 = /\r\n?/g;
   const re8 = /\t/g;

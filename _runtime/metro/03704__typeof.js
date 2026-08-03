@@ -1,6 +1,3 @@
-// === Module 3704: _typeof ===
-
-// Module 3704 (_typeof)
 import subDays from "subDays";
 import subMonths from "subMonths";
 import requiredArgs from "requiredArgs";

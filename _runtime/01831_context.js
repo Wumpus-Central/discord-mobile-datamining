@@ -1,6 +1,3 @@
-// === Module 1831: context ===
-
-// Module 1831 (context)
 import noop from "noop";
 
 const useContext = noop.useContext;

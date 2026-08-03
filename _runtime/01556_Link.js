@@ -1,6 +1,3 @@
-// === Module 1556: Link ===
-
-// Module 1556 (Link)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 

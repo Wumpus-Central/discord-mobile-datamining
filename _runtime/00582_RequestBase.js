@@ -1,6 +1,3 @@
-// === Module 582: RequestBase ===
-
-// Module 582 (RequestBase)
 class RequestBase {
   constructor() {
     return;

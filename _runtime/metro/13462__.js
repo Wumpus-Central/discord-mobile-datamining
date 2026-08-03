@@ -1,6 +1,3 @@
-// === Module 13462: ? ===
-
-// Module 13462
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import _slicedToArray from "_slicedToArray";

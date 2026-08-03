@@ -1,6 +1,3 @@
-// === Module 5437: getInvertedTransformStyle ===
-
-// Module 5437 (getInvertedTransformStyle)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {

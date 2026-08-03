@@ -1,6 +1,3 @@
-// === Module 1226: resolvePathname ===
-
-// Module 1226 (resolvePathname)
 
 export default function resolvePathname(str) {
   let tmp21;

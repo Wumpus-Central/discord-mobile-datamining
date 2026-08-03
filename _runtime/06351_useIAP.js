@@ -1,6 +1,3 @@
-// === Module 6351: useIAP ===
-
-// Module 6351 (useIAP)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import noop from "noop";
 

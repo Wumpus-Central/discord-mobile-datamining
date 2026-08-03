@@ -1,6 +1,3 @@
-// === Module 3643: subDays ===
-
-// Module 3643 (subDays)
 import addDays from "addDays";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

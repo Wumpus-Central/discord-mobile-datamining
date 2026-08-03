@@ -1,6 +1,3 @@
-// === Module 445: getScrollParent ===
-
-// Module 445 (getScrollParent)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function getScrollParent(arg0) {

@@ -1,6 +1,3 @@
-// === Module 6353: ? ===
-
-// Module 6353
 for (const key10013 in require("RNIapAmazonModule")) {
   let tmp2 = key10013;
   arg5[key10013] = require("RNIapAmazonModule")[key10013];

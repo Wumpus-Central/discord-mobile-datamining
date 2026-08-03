@@ -1,6 +1,3 @@
-// === Module 1733: _isNativeReflectConstruct ===
-
-// Module 1733 (_isNativeReflectConstruct)
 import ZoomOutEasyDown from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

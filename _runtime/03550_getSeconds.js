@@ -1,6 +1,3 @@
-// === Module 3550: getSeconds ===
-
-// Module 3550 (getSeconds)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

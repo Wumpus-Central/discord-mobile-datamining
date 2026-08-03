@@ -1,6 +1,3 @@
-// === Module 6388: getSpanStatusFromHttpCode ===
-
-// Module 6388 (getSpanStatusFromHttpCode)
 arg5.SPAN_STATUS_ERROR = 2;
 arg5.SPAN_STATUS_OK = 1;
 arg5.SPAN_STATUS_UNSET = 0;

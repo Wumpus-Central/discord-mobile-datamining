@@ -1,6 +1,3 @@
-// === Module 1032: makeFetchTransport ===
-
-// Module 1032 (makeFetchTransport)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

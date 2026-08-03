@@ -1,6 +1,3 @@
-// === Module 174: polyfillObjectProperty ===
-
-// Module 174 (polyfillObjectProperty)
 let hasPromiseResult;
 if (global != null) {
   const _HermesInternal = global.HermesInternal;

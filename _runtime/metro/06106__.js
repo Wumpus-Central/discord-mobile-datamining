@@ -1,6 +1,3 @@
-// === Module 6106: ? ===
-
-// Module 6106
 let items = [{ id: "image_0", w: 128, h: 128, u: "", p: "", e: 1 }, , ];
 const items1 = [[0, 0], [0, 0]];
 const items2 = [[0, 0], [0, 0]];

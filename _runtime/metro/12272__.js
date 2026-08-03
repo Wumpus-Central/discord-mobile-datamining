@@ -1,6 +1,3 @@
-// === Module 12272: ? ===
-
-// Module 12272
 let num2;
 let num3;
 const obj = {

@@ -1,6 +1,3 @@
-// === Module 13329: BestFitMatcher ===
-
-// Module 13329 (BestFitMatcher)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.BestFitMatcher = function BestFitMatcher(arg0, arr) {

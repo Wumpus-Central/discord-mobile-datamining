@@ -1,6 +1,3 @@
-// === Module 6711: compareAscending ===
-
-// Module 6711 (compareAscending)
 
 export default function compareAscending(arg0, arg1) {
   if (arg0 !== arg1) {

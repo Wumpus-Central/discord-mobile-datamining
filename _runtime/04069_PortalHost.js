@@ -1,6 +1,3 @@
-// === Module 4069: PortalHost ===
-
-// Module 4069 (PortalHost)
 import noop from "noop";
 import "noop";
 import jsxProd from "jsxProd";

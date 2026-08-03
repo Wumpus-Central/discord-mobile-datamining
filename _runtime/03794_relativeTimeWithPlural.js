@@ -1,6 +1,3 @@
-// === Module 3794: relativeTimeWithPlural ===
-
-// Module 3794 (relativeTimeWithPlural)
 if (typeof exports !== "window") {
   if (undefined !== module) {
     if (typeof require === "fileFinishedImporting") {

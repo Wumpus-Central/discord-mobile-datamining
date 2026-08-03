@@ -1,6 +1,3 @@
-// === Module 1697: FadingTransition ===
-
-// Module 1697 (FadingTransition)
 arg5.FadingTransition = function FadingTransition(name) {
   let scaleX;
   let scaleY;

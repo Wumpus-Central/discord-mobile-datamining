@@ -1,6 +1,3 @@
-// === Module 9748: dealWithAnimation ===
-
-// Module 9748 (dealWithAnimation)
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_dealWithAnimationTs2(isFinished){const{cb}=this.__closure;return cb(isFinished);}" };

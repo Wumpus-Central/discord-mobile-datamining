@@ -1,6 +1,3 @@
-// === Module 11250: ? ===
-
-// Module 11250
 const items = [{ ty: 3, nm: "Trinkets Null", sr: 1, st: 0, op: 180, ip: 0, hd: false, ddd: 0, bm: 0, hasMask: false, ao: 0, ks: { a: { a: 0, k: [0, 0, 0], ix: 1 }, s: { a: 0, k: [100, 100, 100], ix: 6 }, sk: { a: 0, k: 0 }, p: { a: 0, k: [50, 50, 0], ix: 2 }, r: { a: 0, k: 0, ix: 10 }, sa: { a: 0, k: 0 }, o: { a: 0, k: 0, ix: 11 } }, ef: [], ind: 1 }, , , , , ];
 const items1 = [{ o: { x: 0.167, y: 0 }, i: { x: 0.502, y: 1 }, s: [0, 0, 100], t: 80 }, { o: { x: 0.507, y: 0 }, i: { x: 0.833, y: 1 }, s: [100, 100, 100], t: 100 }, { s: [0, 0, 100], t: 120 }];
 const items2 = [{ o: { x: 0.333, y: 0 }, i: { x: 0.667, y: 1 }, s: [27.662], t: 80 }, { s: [2.662], t: 120 }];

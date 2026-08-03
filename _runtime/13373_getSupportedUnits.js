@@ -1,6 +1,3 @@
-// === Module 13373: getSupportedUnits ===
-
-// Module 13373 (getSupportedUnits)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedUnits = function getSupportedUnits(locale) {

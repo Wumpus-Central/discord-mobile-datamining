@@ -1,6 +1,3 @@
-// === Module 846: merge ===
-
-// Module 846 (merge)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 function merge(arg0, obj) {
   let num = arg2;

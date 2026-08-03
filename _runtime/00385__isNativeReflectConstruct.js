@@ -1,6 +1,3 @@
-// === Module 385: _isNativeReflectConstruct ===
-
-// Module 385 (_isNativeReflectConstruct)
 import "_readOnlyError";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";

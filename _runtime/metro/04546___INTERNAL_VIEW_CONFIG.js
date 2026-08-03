@@ -1,6 +1,3 @@
-// === Module 4546: __INTERNAL_VIEW_CONFIG ===
-
-// Module 4546 (__INTERNAL_VIEW_CONFIG)
 import { codegenNativeComponent } from "get ActivityIndicator";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";

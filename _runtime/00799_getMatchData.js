@@ -1,6 +1,3 @@
-// === Module 799: getMatchData ===
-
-// Module 799 (getMatchData)
 
 export default function getMatchData(arg0) {
   let tmp7;

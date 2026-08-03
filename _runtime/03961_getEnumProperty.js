@@ -1,6 +1,3 @@
-// === Module 3961: getEnumProperty ===
-
-// Module 3961 (getEnumProperty)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 1549: useCurrentRender ===
-
-// Module 1549 (useCurrentRender)
 import noop from "noop";
 
 

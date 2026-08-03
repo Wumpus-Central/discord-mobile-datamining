@@ -1,6 +1,3 @@
-// === Module 5576: createStackNavigator ===
-
-// Module 5576 (createStackNavigator)
 
 export const createStackNavigator = require("module_5577");
 export const Header = require("module_5607");

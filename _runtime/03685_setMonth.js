@@ -1,6 +1,3 @@
-// === Module 3685: setMonth ===
-
-// Module 3685 (setMonth)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import getDaysInMonth from "getDaysInMonth";

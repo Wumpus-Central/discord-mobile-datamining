@@ -1,6 +1,3 @@
-// === Module 1514: getFocusedRouteNameFromRoute ===
-
-// Module 1514 (getFocusedRouteNameFromRoute)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = function getFocusedRouteNameFromRoute(state) {

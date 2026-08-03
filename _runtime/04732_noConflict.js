@@ -1,6 +1,3 @@
-// === Module 4732: noConflict ===
-
-// Module 4732 (noConflict)
 let self = this;
 const dependencyMap = arg4;
 const exports = arg5;

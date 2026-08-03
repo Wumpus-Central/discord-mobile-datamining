@@ -1,6 +1,3 @@
-// === Module 893: exceptionFromError ===
-
-// Module 893 (exceptionFromError)
 import _slicedToArray from "_slicedToArray";
 
 function exceptionFromError(arg0, name) {

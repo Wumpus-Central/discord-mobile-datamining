@@ -1,6 +1,3 @@
-// === Module 5484: useDataMultiplier ===
-
-// Module 5484 (useDataMultiplier)
 arg5.useDataMultiplier = function useDataMultiplier(arg0, arg1) {
   const array = new Array(arg1);
   let flag = false;

@@ -1,6 +1,3 @@
-// === Module 3687: setDay ===
-
-// Module 3687 (setDay)
 import addDays from "addDays";
 import _typeof from "_typeof";
 import toInteger from "toInteger";

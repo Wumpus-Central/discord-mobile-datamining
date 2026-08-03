@@ -1,6 +1,3 @@
-// === Module 5306: items1 ===
-
-// Module 5306 (items1)
 const items = ["minDurationMs", "maxDist", "numberOfPointers"];
 const obj = { name: "LongPressGestureHandler", allowedProps: null, config: null };
 const items1 = [...items];

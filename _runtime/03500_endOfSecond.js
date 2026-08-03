@@ -1,6 +1,3 @@
-// === Module 3500: endOfSecond ===
-
-// Module 3500 (endOfSecond)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

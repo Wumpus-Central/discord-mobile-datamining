@@ -1,6 +1,3 @@
-// === Module 12967: items ===
-
-// Module 12967 (items)
 const items = [new require("Comparator")(">=0.0.0-0")];
 let tmp = new require("Comparator")(">=0.0.0-0");
 const items1 = [new require("Comparator")(">=0.0.0")];

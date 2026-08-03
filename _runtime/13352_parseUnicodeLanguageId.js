@@ -1,6 +1,3 @@
-// === Module 13352: parseUnicodeLanguageId ===
-
-// Module 13352 (parseUnicodeLanguageId)
 const require = arg1;
 const exports = arg5;
 const dependencyMap = arg6;

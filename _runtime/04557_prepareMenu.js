@@ -1,6 +1,3 @@
-// === Module 4557: prepareMenu ===
-
-// Module 4557 (prepareMenu)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let c0;

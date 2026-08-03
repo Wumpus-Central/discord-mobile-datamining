@@ -1,6 +1,3 @@
-// === Module 1648: isAffineMatrixFlat ===
-
-// Module 1648 (isAffineMatrixFlat)
 import _slicedToArray from "_slicedToArray";
 
 let require = arg1;

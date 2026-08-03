@@ -1,6 +1,3 @@
-// === Module 733: mapCacheClear ===
-
-// Module 733 (mapCacheClear)
 
 export default function mapCacheClear() {
   const obj = { hash: null, map: null, string: null };

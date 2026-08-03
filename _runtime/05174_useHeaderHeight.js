@@ -1,6 +1,3 @@
-// === Module 5174: useHeaderHeight ===
-
-// Module 5174 (useHeaderHeight)
 import noop from "noop";
 
 

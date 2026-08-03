@@ -1,6 +1,3 @@
-// === Module 755: listCacheSet ===
-
-// Module 755 (listCacheSet)
 
 export default function listCacheSet(arg0, arg1) {
   const self = this;

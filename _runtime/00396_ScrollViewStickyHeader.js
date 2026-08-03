@@ -1,6 +1,3 @@
-// === Module 396: ScrollViewStickyHeader ===
-
-// Module 396 (ScrollViewStickyHeader)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "noop";
 import noop from "noop";

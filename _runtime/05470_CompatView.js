@@ -1,6 +1,3 @@
-// === Module 5470: CompatView ===
-
-// Module 5470 (CompatView)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 

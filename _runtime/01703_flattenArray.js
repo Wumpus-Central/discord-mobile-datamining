@@ -1,6 +1,3 @@
-// === Module 1703: flattenArray ===
-
-// Module 1703 (flattenArray)
 arg5.flattenArray = function flattenArray(style) {
   if (Array.isArray(style)) {
     const items = [];

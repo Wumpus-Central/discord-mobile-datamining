@@ -1,6 +1,3 @@
-// === Module 1822: KeyboardToolbar ===
-
-// Module 1822 (KeyboardToolbar)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";

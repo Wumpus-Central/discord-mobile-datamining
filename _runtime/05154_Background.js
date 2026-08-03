@@ -1,6 +1,3 @@
-// === Module 5154: Background ===
-
-// Module 5154 (Background)
 const items = [require("registerAsset"), require("registerAsset")];
 for (const key10018 in require("module_5157")) {
   let tmp2 = key10018;

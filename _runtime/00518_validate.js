@@ -1,6 +1,3 @@
-// === Module 518: validate ===
-
-// Module 518 (validate)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function validate(arg0) {

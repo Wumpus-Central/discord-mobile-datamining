@@ -1,6 +1,3 @@
-// === Module 187: queueMicrotask ===
-
-// Module 187 (queueMicrotask)
 arg5.default = function queueMicrotask(flush) {
   if (arguments.length < 1) {
     const _TypeError2 = TypeError;

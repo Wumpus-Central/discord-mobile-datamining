@@ -1,6 +1,3 @@
-// === Module 3497: endOfISOWeekYear ===
-
-// Module 3497 (endOfISOWeekYear)
 import getISOWeekYear from "getISOWeekYear";
 import startOfISOWeek from "startOfISOWeek";
 import requiredArgs from "requiredArgs";

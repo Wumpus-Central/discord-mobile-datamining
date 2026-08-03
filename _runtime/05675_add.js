@@ -1,6 +1,3 @@
-// === Module 5675: add ===
-
-// Module 5675 (add)
 import Decimal from "module_1";
 
 function add(s, s2) {

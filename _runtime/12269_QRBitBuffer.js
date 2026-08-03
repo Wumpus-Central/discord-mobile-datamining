@@ -1,6 +1,3 @@
-// === Module 12269: QRBitBuffer ===
-
-// Module 12269 (QRBitBuffer)
 class QRBitBuffer {
   constructor() {
     obj = {};

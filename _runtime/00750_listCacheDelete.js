@@ -1,6 +1,3 @@
-// === Module 750: listCacheDelete ===
-
-// Module 750 (listCacheDelete)
 
 export default function listCacheDelete(arg0) {
   const self = this;

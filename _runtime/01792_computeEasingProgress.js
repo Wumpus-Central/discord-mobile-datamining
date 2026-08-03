@@ -1,6 +1,3 @@
-// === Module 1792: computeEasingProgress ===
-
-// Module 1792 (computeEasingProgress)
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = 400;

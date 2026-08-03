@@ -1,6 +1,3 @@
-// === Module 494: subscribe ===
-
-// Module 494 (subscribe)
 import { useSyncExternalStore } from "noop";
 
 function subscribe(onChange) {

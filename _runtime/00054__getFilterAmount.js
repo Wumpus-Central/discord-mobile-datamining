@@ -1,6 +1,3 @@
-// === Module 54: _getFilterAmount ===
-
-// Module 54 (_getFilterAmount)
 import _slicedToArray from "_slicedToArray";
 
 function _getFilterAmount(arg0, arg1) {

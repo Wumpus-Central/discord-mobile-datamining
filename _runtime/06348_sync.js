@@ -1,6 +1,3 @@
-// === Module 6348: sync ===
-
-// Module 6348 (sync)
 const RNIapIosSk2 = require("get ActivityIndicator").NativeModules.RNIapIosSk2;
 
 export const sync = () => RNIapIosSk2.sync();

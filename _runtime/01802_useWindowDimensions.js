@@ -1,6 +1,3 @@
-// === Module 1802: useWindowDimensions ===
-
-// Module 1802 (useWindowDimensions)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { Dimensions } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 4837: parseTags ===
-
-// Module 4837 (parseTags)
 const module = arg2;
 const dependencyMap = arg6;
 function parseTags(byteLength, size, sum) {

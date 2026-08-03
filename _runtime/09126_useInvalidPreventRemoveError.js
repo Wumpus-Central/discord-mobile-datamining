@@ -1,6 +1,3 @@
-// === Module 9126: useInvalidPreventRemoveError ===
-
-// Module 9126 (useInvalidPreventRemoveError)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 149: topLevelTypeToEventType ===
-
-// Module 149 (topLevelTypeToEventType)
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = {};

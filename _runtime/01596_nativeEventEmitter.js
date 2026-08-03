@@ -1,6 +1,3 @@
-// === Module 1596: nativeEventEmitter ===
-
-// Module 1596 (nativeEventEmitter)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let NativeEventEmitter;

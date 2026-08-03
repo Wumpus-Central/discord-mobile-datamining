@@ -1,6 +1,3 @@
-// === Module 1610: addLogBoxLog ===
-
-// Module 1610 (addLogBoxLog)
 for (const key10013 in require("addLogBoxLog")) {
   let tmp2 = key10013;
   arg5[key10013] = require("addLogBoxLog")[key10013];

@@ -1,6 +1,3 @@
-// === Module 4327: cloneTypedArray ===
-
-// Module 4327 (cloneTypedArray)
 
 export default function cloneTypedArray(buffer) {
   if (arg1) {

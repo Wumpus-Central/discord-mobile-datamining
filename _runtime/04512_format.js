@@ -1,6 +1,3 @@
-// === Module 4512: format ===
-
-// Module 4512 (format)
 let self = this;
 let global = arg0;
 const dependencyMap = arg4;

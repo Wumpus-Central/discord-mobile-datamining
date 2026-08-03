@@ -1,6 +1,3 @@
-// === Module 6452: extractRequestData ===
-
-// Module 6452 (extractRequestData)
 const require = arg1;
 const dependencyMap = arg6;
 function extractRequestData(headers, arg1) {

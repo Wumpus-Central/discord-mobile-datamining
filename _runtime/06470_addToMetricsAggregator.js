@@ -1,6 +1,3 @@
-// === Module 6470: addToMetricsAggregator ===
-
-// Module 6470 (addToMetricsAggregator)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.metricsDefault = {

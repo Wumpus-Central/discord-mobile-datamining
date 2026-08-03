@@ -1,6 +1,3 @@
-// === Module 327: areInputsEqual ===
-
-// Module 327 (areInputsEqual)
 function areInputsEqual(arg0, arg1) {
   if (arg0.length !== arg1.length) {
     return false;

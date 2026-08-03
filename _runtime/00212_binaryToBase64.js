@@ -1,6 +1,3 @@
-// === Module 212: binaryToBase64 ===
-
-// Module 212 (binaryToBase64)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = function binaryToBase64(arg0) {

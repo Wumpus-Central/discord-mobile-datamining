@@ -1,6 +1,3 @@
-// === Module 388: addListenersToPropsValue ===
-
-// Module 388 (addListenersToPropsValue)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

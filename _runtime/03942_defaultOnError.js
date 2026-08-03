@@ -1,6 +1,3 @@
-// === Module 3942: defaultOnError ===
-
-// Module 3942 (defaultOnError)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { jsx } from "jsxProd";

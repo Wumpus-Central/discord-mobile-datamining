@@ -1,6 +1,3 @@
-// === Module 6406: handleCallbackErrors ===
-
-// Module 6406 (handleCallbackErrors)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.handleCallbackErrors = function handleCallbackErrors(arg0, arg1) {

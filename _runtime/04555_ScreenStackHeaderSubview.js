@@ -1,6 +1,3 @@
-// === Module 4555: ScreenStackHeaderSubview ===
-
-// Module 4555 (ScreenStackHeaderSubview)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 949: captureFeedback ===
-
-// Module 949 (captureFeedback)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

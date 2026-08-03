@@ -1,6 +1,3 @@
-// === Module 5614: getInvertedMultiplier ===
-
-// Module 5614 (getInvertedMultiplier)
 import { I18nManager } from "get ActivityIndicator";
 
 

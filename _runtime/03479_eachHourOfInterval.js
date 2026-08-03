@@ -1,6 +1,3 @@
-// === Module 3479: eachHourOfInterval ===
-
-// Module 3479 (eachHourOfInterval)
 import addHours from "addHours";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

@@ -1,6 +1,3 @@
-// === Module 1673: RotateInData ===
-
-// Module 1673 (RotateInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";

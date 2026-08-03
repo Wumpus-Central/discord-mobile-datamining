@@ -1,6 +1,3 @@
-// === Module 453: getColorScheme ===
-
-// Module 453 (getColorScheme)
 let require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

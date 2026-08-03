@@ -1,6 +1,3 @@
-// === Module 496: Vibration ===
-
-// Module 496 (Vibration)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {

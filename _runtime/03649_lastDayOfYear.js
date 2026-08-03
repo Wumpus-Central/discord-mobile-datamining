@@ -1,6 +1,3 @@
-// === Module 3649: lastDayOfYear ===
-
-// Module 3649 (lastDayOfYear)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

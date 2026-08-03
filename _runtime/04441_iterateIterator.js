@@ -1,6 +1,3 @@
-// === Module 4441: iterateIterator ===
-
-// Module 4441 (iterateIterator)
 
 export default function iterateIterator(next) {
   if (next) {

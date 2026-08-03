@@ -1,6 +1,3 @@
-// === Module 3807: isIterable ===
-
-// Module 3807 (isIterable)
 import _slicedToArray from "_slicedToArray";
 
 function isIterable(arg0) {

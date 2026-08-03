@@ -1,6 +1,3 @@
-// === Module 3790: t ===
-
-// Module 3790 (t)
 const fn = function t(moment) {
   let closure_0 = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_");
   let closure_1 = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_");

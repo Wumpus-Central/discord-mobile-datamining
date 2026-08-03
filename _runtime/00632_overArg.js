@@ -1,6 +1,3 @@
-// === Module 632: overArg ===
-
-// Module 632 (overArg)
 
 export default function overArg(arg0, arg1) {
   let closure_0 = arg0;

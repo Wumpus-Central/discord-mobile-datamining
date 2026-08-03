@@ -1,6 +1,3 @@
-// === Module 6431: eventFromMessage ===
-
-// Module 6431 (eventFromMessage)
 import _slicedToArray from "_slicedToArray";
 
 

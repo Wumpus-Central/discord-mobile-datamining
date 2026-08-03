@@ -1,6 +1,3 @@
-// === Module 13443: all ===
-
-// Module 13443 (all)
 import all from "all";
 
 let _moduleResult = all(require("module_13381").WeakMap);

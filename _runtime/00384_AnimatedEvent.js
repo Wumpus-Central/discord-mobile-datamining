@@ -1,6 +1,3 @@
-// === Module 384: AnimatedEvent ===
-
-// Module 384 (AnimatedEvent)
 import _classCallCheck from "_classCallCheck";
 
 let AnimatedEvent = arg1;

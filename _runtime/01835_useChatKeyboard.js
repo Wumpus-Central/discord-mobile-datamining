@@ -1,6 +1,3 @@
-// === Module 1835: useChatKeyboard ===
-
-// Module 1835 (useChatKeyboard)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

@@ -1,6 +1,3 @@
-// === Module 4785: isBLEND ===
-
-// Module 4785 (isBLEND)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isBLEND = undefined;

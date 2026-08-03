@@ -1,6 +1,3 @@
-// === Module 1166: INTEGRATION_NAME ===
-
-// Module 1166 (INTEGRATION_NAME)
 import isHermesEnabled from "isHermesEnabled";
 
 const ReactNativeTracing = "ReactNativeTracing";

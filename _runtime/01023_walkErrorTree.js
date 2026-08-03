@@ -1,6 +1,3 @@
-// === Module 1023: walkErrorTree ===
-
-// Module 1023 (walkErrorTree)
 let require = arg1;
 const dependencyMap = arg6;
 function walkErrorTree(arg0, arg1, arg2, arg3) {

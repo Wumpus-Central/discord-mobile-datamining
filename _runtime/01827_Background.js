@@ -1,6 +1,3 @@
-// === Module 1827: Background ===
-
-// Module 1827 (Background)
 
 export const Background = require("noop");
 export const Content = require("module_1829");

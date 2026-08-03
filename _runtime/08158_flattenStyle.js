@@ -1,6 +1,3 @@
-// === Module 8158: flattenStyle ===
-
-// Module 8158 (flattenStyle)
 function flattenStyle(arg0) {
   if (null !== arg0) {
     if (typeof arg0 === "ay") {

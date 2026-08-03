@@ -1,6 +1,3 @@
-// === Module 1202: defaultButtonStyles ===
-
-// Module 1202 (defaultButtonStyles)
 function defaultButtonStyles(theme) {
   const triggerButton = { position: "absolute", bottom: 30, right: 30, backgroundColor: theme.background, padding: 15, borderRadius: 40, justifyContent: "center", alignItems: "center", elevation: 5, shadowColor: theme.border, shadowOffset: { width: 1, height: 2 }, shadowOpacity: 0.5, shadowRadius: 3, flexDirection: "row", borderWidth: 1, borderColor: theme.border };
   const triggerText = { color: theme.foreground, fontSize: 18 };

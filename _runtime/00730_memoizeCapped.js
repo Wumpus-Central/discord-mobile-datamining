@@ -1,6 +1,3 @@
-// === Module 730: memoizeCapped ===
-
-// Module 730 (memoizeCapped)
 
 export default function memoizeCapped(arg0) {
   const tmp = cache(731)(arg0, (arg0) => {

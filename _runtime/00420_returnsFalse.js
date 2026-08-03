@@ -1,6 +1,3 @@
-// === Module 420: returnsFalse ===
-
-// Module 420 (returnsFalse)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";

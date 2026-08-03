@@ -1,6 +1,3 @@
-// === Module 485: Share ===
-
-// Module 485 (Share)
 import _classCallCheck from "_classCallCheck";
 
 const Share = arg1;

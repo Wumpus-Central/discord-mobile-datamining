@@ -1,6 +1,3 @@
-// === Module 5329: _isNativeReflectConstruct ===
-
-// Module 5329 (_isNativeReflectConstruct)
 import TapGesture from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

@@ -1,6 +1,3 @@
-// === Module 1310: fromCharCodes ===
-
-// Module 1310 (fromCharCodes)
 arg5.utf8read = undefined;
 function fromCharCodes(arg0) {
 

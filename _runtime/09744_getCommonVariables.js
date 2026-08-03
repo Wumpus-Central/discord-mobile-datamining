@@ -1,6 +1,3 @@
-// === Module 9744: getCommonVariables ===
-
-// Module 9744 (getCommonVariables)
 import { useMemo } from "noop";
 import { Dimensions } from "get ActivityIndicator";
 

@@ -1,6 +1,3 @@
-// === Module 1683: rubberBandDecay ===
-
-// Module 1683 (rubberBandDecay)
 const require = arg1;
 const dependencyMap = arg6;
 function rubberBandDecay(current, lastTimestamp, deceleration) {

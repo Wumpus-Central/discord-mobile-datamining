@@ -1,6 +1,3 @@
-// === Module 5422: _iterableToArrayLimit ===
-
-// Module 5422 (_iterableToArrayLimit)
 
 export default function _iterableToArrayLimit(iterable) {
   let tmp7 = null;

@@ -1,6 +1,3 @@
-// === Module 1546: useNavigationCache ===
-
-// Module 1546 (useNavigationCache)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 

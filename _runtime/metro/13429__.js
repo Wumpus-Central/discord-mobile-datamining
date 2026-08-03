@@ -1,6 +1,3 @@
-// === Module 13429: ? ===
-
-// Module 13429
 
 export default (arg0) => {
   const tmp = require(13430)(arg0);

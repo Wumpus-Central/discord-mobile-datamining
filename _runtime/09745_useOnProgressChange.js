@@ -1,6 +1,3 @@
-// === Module 9745: useOnProgressChange ===
-
-// Module 9745 (useOnProgressChange)
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useOnProgressChangeTs1(){const{offsetX}=this.__closure;return offsetX.value;}" };

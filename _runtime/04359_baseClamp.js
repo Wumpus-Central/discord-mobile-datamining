@@ -1,6 +1,3 @@
-// === Module 4359: baseClamp ===
-
-// Module 4359 (baseClamp)
 
 export default function baseClamp(arg0, arg1, arg2) {
   let tmp = arg0;

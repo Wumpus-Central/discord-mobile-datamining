@@ -1,6 +1,3 @@
-// === Module 3929: items ===
-
-// Module 3929 (items)
 const items = ["typescript", { project: "tsconfig.build.json" }];
 const items1 = ["commonjs", "module", items];
 

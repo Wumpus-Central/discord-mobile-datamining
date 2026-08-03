@@ -1,6 +1,3 @@
-// === Module 44: toPrimitive ===
-
-// Module 44 (toPrimitive)
 
 export default function toPrimitive(arg0, arg1) {
   if ("object" == obj.default(arg0)) {

@@ -1,6 +1,3 @@
-// === Module 6410: sampleSpan ===
-
-// Module 6410 (sampleSpan)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {

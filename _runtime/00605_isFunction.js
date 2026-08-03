@@ -1,6 +1,3 @@
-// === Module 605: isFunction ===
-
-// Module 605 (isFunction)
 
 export default function isFunction(arg0) {
   if (require(606) /* isObject */(arg0)) {

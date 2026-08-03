@@ -1,6 +1,3 @@
-// === Module 669: format ===
-
-// Module 669 (format)
 let self = this;
 let global = arg0;
 const dependencyMap = arg4;

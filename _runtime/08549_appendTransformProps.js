@@ -1,6 +1,3 @@
-// === Module 8549: appendTransformProps ===
-
-// Module 8549 (appendTransformProps)
 const require = arg1;
 const dependencyMap = arg6;
 function appendTransformProps(arg0) {

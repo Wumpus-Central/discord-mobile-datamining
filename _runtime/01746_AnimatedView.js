@@ -1,6 +1,3 @@
-// === Module 1746: AnimatedView ===
-
-// Module 1746 (AnimatedView)
 import createAnimatedComponent from "createAnimatedComponent";
 
 

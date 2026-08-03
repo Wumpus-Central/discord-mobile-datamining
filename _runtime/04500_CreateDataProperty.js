@@ -1,6 +1,3 @@
-// === Module 4500: CreateDataProperty ===
-
-// Module 4500 (CreateDataProperty)
 
 export default function CreateDataProperty(arg0, arg1, arg2) {
   if (require(4438) /* isObject */(arg0)) {

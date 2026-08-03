@@ -1,6 +1,3 @@
-// === Module 1387: PseudoMap ===
-
-// Module 1387 (PseudoMap)
 let tmp = "pseudomap" === process.env.npm_package_name;
 if (tmp) {
   const _process = process;

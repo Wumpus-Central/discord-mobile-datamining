@@ -1,6 +1,3 @@
-// === Module 765: hasIn ===
-
-// Module 765 (hasIn)
 
 export default function hasIn(arg0, arg1) {
   let tmp = null != arg0;

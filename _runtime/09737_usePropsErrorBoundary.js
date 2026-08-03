@@ -1,6 +1,3 @@
-// === Module 9737: usePropsErrorBoundary ===
-
-// Module 9737 (usePropsErrorBoundary)
 import noop from "noop";
 
 

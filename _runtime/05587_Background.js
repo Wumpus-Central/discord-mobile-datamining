@@ -1,6 +1,3 @@
-// === Module 5587: Background ===
-
-// Module 5587 (Background)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

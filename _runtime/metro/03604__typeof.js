@@ -1,6 +1,3 @@
-// === Module 3604: _typeof ===
-
-// Module 3604 (_typeof)
 import { Parser } from "Parser";
 
 let _createSuperInternal = require;

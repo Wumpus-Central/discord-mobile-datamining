@@ -1,6 +1,3 @@
-// === Module 3623: isSameMonth ===
-
-// Module 3623 (isSameMonth)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

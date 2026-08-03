@@ -1,6 +1,3 @@
-// === Module 3273: requiredArgs ===
-
-// Module 3273 (requiredArgs)
 
 export default function requiredArgs(arg0, arg1) {
   if (arg1.length < arg0) {

@@ -1,6 +1,3 @@
-// === Module 289: getExtendedError ===
-
-// Module 289 (getExtendedError)
 import "noop";
 
 const require = arg1;

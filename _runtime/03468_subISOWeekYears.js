@@ -1,6 +1,3 @@
-// === Module 3468: subISOWeekYears ===
-
-// Module 3468 (subISOWeekYears)
 import addISOWeekYears from "addISOWeekYears";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

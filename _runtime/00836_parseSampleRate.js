@@ -1,6 +1,3 @@
-// === Module 836: parseSampleRate ===
-
-// Module 836 (parseSampleRate)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.parseSampleRate = function parseSampleRate(arg0) {
   if (typeof arg0 === "T") {

@@ -1,6 +1,3 @@
-// === Module 3551: getTime ===
-
-// Module 3551 (getTime)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

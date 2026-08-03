@@ -1,6 +1,3 @@
-// === Module 923: generateIteratee ===
-
-// Module 923 (generateIteratee)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

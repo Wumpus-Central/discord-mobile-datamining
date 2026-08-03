@@ -1,6 +1,3 @@
-// === Module 293: PressabilityPerformanceEventEmitter ===
-
-// Module 293 (PressabilityPerformanceEventEmitter)
 import PressabilityPerformanceEventEmitter from "_classCallCheck";
 
 class PressabilityPerformanceEventEmitter {

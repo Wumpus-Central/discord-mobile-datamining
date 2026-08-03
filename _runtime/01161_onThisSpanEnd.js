@@ -1,6 +1,3 @@
-// === Module 1161: onThisSpanEnd ===
-
-// Module 1161 (onThisSpanEnd)
 import { AppState } from "get ActivityIndicator";
 
 

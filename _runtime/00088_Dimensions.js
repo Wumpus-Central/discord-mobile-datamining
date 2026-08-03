@@ -1,6 +1,3 @@
-// === Module 88: Dimensions ===
-
-// Module 88 (Dimensions)
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import importDefaultResult1 from "_isNativeReflectConstruct";

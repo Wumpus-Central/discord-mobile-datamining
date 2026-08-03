@@ -1,6 +1,3 @@
-// === Module 4442: map ===
-
-// Module 4442 (map)
 import callBind from "callBind";
 import defineProperty from "defineProperty";
 

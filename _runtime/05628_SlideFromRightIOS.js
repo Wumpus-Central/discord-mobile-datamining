@@ -1,6 +1,3 @@
-// === Module 5628: SlideFromRightIOS ===
-
-// Module 5628 (SlideFromRightIOS)
 import { Platform } from "get ActivityIndicator";
 
 let obj = { gestureDirection: "horizontal", transitionSpec: null, cardStyleInterpolator: null, headerStyleInterpolator: null };

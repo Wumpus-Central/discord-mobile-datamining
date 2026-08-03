@@ -1,6 +1,3 @@
-// === Module 1566: useThenable ===
-
-// Module 1566 (useThenable)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

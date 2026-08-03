@@ -1,6 +1,3 @@
-// === Module 16267: ? ===
-
-// Module 16267
 
 export default (promise) => {
   let fn = arg1;

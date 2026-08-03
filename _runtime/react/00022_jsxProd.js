@@ -1,6 +1,3 @@
-// === Module 22: jsxProd ===
-
-// Module 22 (jsxProd)
 function jsxProd(type, key) {
   let text = null;
   if (undefined !== arg2) {

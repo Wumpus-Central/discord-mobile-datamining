@@ -1,6 +1,3 @@
-// === Module 3782: n ===
-
-// Module 3782 (n)
 const fn = function n(moment) {
   let split;
   let split2;

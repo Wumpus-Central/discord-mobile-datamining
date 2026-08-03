@@ -1,6 +1,3 @@
-// === Module 880: _INTERNAL_captureSerializedLog ===
-
-// Module 880 (_INTERNAL_captureSerializedLog)
 import _slicedToArray from "_slicedToArray";
 
 function _INTERNAL_captureSerializedLog(closure_0) {

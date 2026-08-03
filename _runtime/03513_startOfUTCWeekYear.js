@@ -1,6 +1,3 @@
-// === Module 3513: startOfUTCWeekYear ===
-
-// Module 3513 (startOfUTCWeekYear)
 import getUTCWeekYear from "getUTCWeekYear";
 import requiredArgs from "requiredArgs";
 import startOfUTCWeek from "startOfUTCWeek";

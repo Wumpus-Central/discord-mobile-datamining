@@ -1,6 +1,3 @@
-// === Module 1775: getVal ===
-
-// Module 1775 (getVal)
 const require = arg1;
 const dependencyMap = arg6;
 let obj = { IDENTITY: "identity", CLAMP: "clamp", EXTEND: "extend" };

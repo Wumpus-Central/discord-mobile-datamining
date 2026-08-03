@@ -1,6 +1,3 @@
-// === Module 13420: isForced ===
-
-// Module 13420 (isForced)
 const re2 = /#|\.prototype\./;
 function isForced(arg0, arg1) {
   if (typeof fn !== "fileFinishedImporting") {

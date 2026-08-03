@@ -1,6 +1,3 @@
-// === Module 3930: _isNativeReflectConstruct ===
-
-// Module 3930 (_isNativeReflectConstruct)
 import ModuleNotFoundError from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

@@ -1,6 +1,3 @@
-// === Module 8266: colorToHex ===
-
-// Module 8266 (colorToHex)
 import _slicedToArray from "_slicedToArray";
 
 

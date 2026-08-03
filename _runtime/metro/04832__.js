@@ -1,6 +1,3 @@
-// === Module 4832: ? ===
-
-// Module 4832
 obj = { 0: obj, 1: obj, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: "GPSSatellites", 9: null, 10: null, 11: "GPSDOP", 12: null, 13: "GPSSpeed", 14: null, 15: "GPSTrack", 16: null, 17: "GPSImgDirection", 18: "GPSMapDatum", 19: null, 20: null, 21: null, 22: null, 23: null, 24: "GPSDestBearing", 25: null, 26: "GPSDestDistance", 27: null, 28: null, 29: "GPSDateStamp", 30: null, 31: "GPSHPositioningError" };
 obj = {
   name: "GPSVersionID",

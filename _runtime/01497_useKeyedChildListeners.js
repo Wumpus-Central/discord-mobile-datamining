@@ -1,6 +1,3 @@
-// === Module 1497: useKeyedChildListeners ===
-
-// Module 1497 (useKeyedChildListeners)
 import noop from "noop";
 
 

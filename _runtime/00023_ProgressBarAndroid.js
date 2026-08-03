@@ -1,6 +1,3 @@
-// === Module 23: ProgressBarAndroid ===
-
-// Module 23 (ProgressBarAndroid)
 import { jsx } from "jsxProd";
 import noop from "noop";
 

@@ -1,6 +1,3 @@
-// === Module 965: AsyncFromSyncIterator ===
-
-// Module 965 (AsyncFromSyncIterator)
 import _awaitAsyncGenerator from "_awaitAsyncGenerator";
 import AsyncGenerator from "AsyncGenerator";
 

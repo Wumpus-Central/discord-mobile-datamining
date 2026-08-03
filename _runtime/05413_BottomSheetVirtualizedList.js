@@ -1,6 +1,3 @@
-// === Module 5413: BottomSheetVirtualizedList ===
-
-// Module 5413 (BottomSheetVirtualizedList)
 import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent";
 
 const animatedComponent = require("cancelAnimation").createAnimatedComponent(require("get ActivityIndicator").VirtualizedList);

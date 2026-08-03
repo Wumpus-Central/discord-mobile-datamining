@@ -1,6 +1,3 @@
-// === Module 4540: enableScreens ===
-
-// Module 4540 (enableScreens)
 import RNSModule from "RNSModule";
 
 for (const key10015 in require("module_4542")) {

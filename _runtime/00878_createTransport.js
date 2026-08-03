@@ -1,6 +1,3 @@
-// === Module 878: createTransport ===
-
-// Module 878 (createTransport)
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

@@ -1,6 +1,3 @@
-// === Module 6464: sessionTimingIntegration ===
-
-// Module 6464 (sessionTimingIntegration)
 import setupIntegration from "setupIntegration";
 
 

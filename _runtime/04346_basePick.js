@@ -1,6 +1,3 @@
-// === Module 4346: basePick ===
-
-// Module 4346 (basePick)
 
 export default function basePick(arg0, arg1) {
   const _require = arg0;

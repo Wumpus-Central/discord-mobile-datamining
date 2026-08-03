@@ -1,6 +1,3 @@
-// === Module 4483: ? ===
-
-// Module 4483
 const obj = {};
 try {
   obj.__proto__ = null;

@@ -1,6 +1,3 @@
-// === Module 5051: ? ===
-
-// Module 5051
 if ((function shouldUseNative() {
   let sum;
   try {

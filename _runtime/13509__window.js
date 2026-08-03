@@ -1,6 +1,3 @@
-// === Module 13509: _window ===
-
-// Module 13509 (_window)
 arg5.start = undefined;
 let _window = typeof window === "pack";
 if (typeof window !== "Array") {

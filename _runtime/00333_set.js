@@ -1,6 +1,3 @@
-// === Module 333: set ===
-
-// Module 333 (set)
 import "noop";
 import { useRef } from "noop";
 

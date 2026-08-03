@@ -1,6 +1,3 @@
-// === Module 3580: dayPeriodEnumToHours ===
-
-// Module 3580 (dayPeriodEnumToHours)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.dayPeriodEnumToHours = function dayPeriodEnumToHours(arg0) {

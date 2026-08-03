@@ -1,6 +1,3 @@
-// === Module 5629: TransitionIOSSpec ===
-
-// Module 5629 (TransitionIOSSpec)
 import { Easing } from "get ActivityIndicator";
 
 let obj = { animation: "timing", config: null };

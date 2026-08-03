@@ -1,6 +1,3 @@
-// === Module 5489: LayoutCommitObserver ===
-
-// Module 5489 (LayoutCommitObserver)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

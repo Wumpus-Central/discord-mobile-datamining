@@ -1,6 +1,3 @@
-// === Module 16315: getIsConsideredOlderThaniOS ===
-
-// Module 16315 (getIsConsideredOlderThaniOS)
 import importDefaultResult from "asyncGeneratorStep";
 
 let closure_0 = arg1;

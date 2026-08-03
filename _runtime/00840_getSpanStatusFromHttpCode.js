@@ -1,6 +1,3 @@
-// === Module 840: getSpanStatusFromHttpCode ===
-
-// Module 840 (getSpanStatusFromHttpCode)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.SPAN_STATUS_ERROR = 2;
 arg5.SPAN_STATUS_OK = 1;

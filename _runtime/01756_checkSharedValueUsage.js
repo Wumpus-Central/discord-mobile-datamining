@@ -1,6 +1,3 @@
-// === Module 1756: checkSharedValueUsage ===
-
-// Module 1756 (checkSharedValueUsage)
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 import isJest from "isJest";

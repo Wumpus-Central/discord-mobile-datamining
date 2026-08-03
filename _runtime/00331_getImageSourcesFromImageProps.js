@@ -1,6 +1,3 @@
-// === Module 331: getImageSourcesFromImageProps ===
-
-// Module 331 (getImageSourcesFromImageProps)
 import _slicedToArray from "_slicedToArray";
 
 

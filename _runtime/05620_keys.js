@@ -1,6 +1,3 @@
-// === Module 5620: keys ===
-
-// Module 5620 (keys)
 
 export default (arg0) => {
   let require;

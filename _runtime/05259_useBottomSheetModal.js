@@ -1,6 +1,3 @@
-// === Module 5259: useBottomSheetModal ===
-
-// Module 5259 (useBottomSheetModal)
 import { useContext } from "noop";
 
 

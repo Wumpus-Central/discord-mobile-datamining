@@ -1,6 +1,3 @@
-// === Module 12730: ? ===
-
-// Module 12730
 import assign from "assign";
 import Deflate from "Deflate";
 import Inflate from "Inflate";

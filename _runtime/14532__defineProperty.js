@@ -1,6 +1,3 @@
-// === Module 14532: _defineProperty ===
-
-// Module 14532 (_defineProperty)
 
 export default function _defineProperty(arg0, arg1, arg2) {
   const tmp = require(43) /* toPropertyKey */(arg1);

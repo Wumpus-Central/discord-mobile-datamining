@@ -1,6 +1,3 @@
-// === Module 1675: setElementAnimation ===
-
-// Module 1675 (setElementAnimation)
 const require = arg1;
 let dependencyMap = arg6;
 function setElementAnimation(dummy, dummyAnimationConfig, arg2) {

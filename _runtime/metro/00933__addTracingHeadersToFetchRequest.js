@@ -1,6 +1,3 @@
-// === Module 933: _addTracingHeadersToFetchRequest ===
-
-// Module 933 (_addTracingHeadersToFetchRequest)
 const require = arg1;
 const dependencyMap = arg6;
 function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTraceparent) {

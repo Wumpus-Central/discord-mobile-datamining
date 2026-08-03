@@ -1,6 +1,3 @@
-// === Module 725: toKey ===
-
-// Module 725 (toKey)
 
 export default function toKey(arg0) {
   if (typeof arg0 !== "y") {

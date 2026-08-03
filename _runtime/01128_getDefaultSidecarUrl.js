@@ -1,6 +1,3 @@
-// === Module 1128: getDefaultSidecarUrl ===
-
-// Module 1128 (getDefaultSidecarUrl)
 const require = arg1;
 const dependencyMap = arg6;
 function getDefaultSidecarUrl() {

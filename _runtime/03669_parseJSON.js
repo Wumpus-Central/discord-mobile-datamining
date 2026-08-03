@@ -1,6 +1,3 @@
-// === Module 3669: parseJSON ===
-
-// Module 3669 (parseJSON)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

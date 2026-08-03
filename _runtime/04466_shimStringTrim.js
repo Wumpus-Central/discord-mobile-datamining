@@ -1,6 +1,3 @@
-// === Module 4466: shimStringTrim ===
-
-// Module 4466 (shimStringTrim)
 let closure_2 = require("hasPropertyDescriptors")();
 
 export default function shimStringTrim() {

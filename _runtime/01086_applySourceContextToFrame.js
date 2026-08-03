@@ -1,6 +1,3 @@
-// === Module 1086: applySourceContextToFrame ===
-
-// Module 1086 (applySourceContextToFrame)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

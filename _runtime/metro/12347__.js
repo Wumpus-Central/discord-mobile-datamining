@@ -1,6 +1,3 @@
-// === Module 12347: ? ===
-
-// Module 12347
 let items = [{ i: { x: [0.348, 0.348, 0.667], y: [0.967, 0.967, 1] }, o: { x: [0.711, 0.711, 0.333], y: [0.024, 0.024, 0] }, t: 0, s: [0, 0, 100] }, { i: { x: [0.348, 0.348, 0.667], y: [1.033, 1.033, 1] }, o: { x: [0.711, 0.711, 0.333], y: [-0.024, -0.024, 0] }, t: 17, s: [100, 100, 100] }, { t: 34, s: [0, 0, 100] }];
 const items1 = [{ ty: 7, nm: "Frame Rate", mn: "ADBE Posterize Time-0001", ix: 1, v: { a: 0, k: 10, ix: 1 } }];
 const items2 = [{ ty: 5, nm: "Posterize Time", np: 3, mn: "ADBE Posterize Time", ix: 1, en: 1, ef: items1 }];

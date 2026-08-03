@@ -1,6 +1,3 @@
-// === Module 636: debounce ===
-
-// Module 636 (debounce)
 
 export default function debounce(arg0, arg1, leading) {
   const _require = arg0;

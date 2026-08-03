@@ -1,6 +1,3 @@
-// === Module 1136: init ===
-
-// Module 1136 (init)
 import noop from "noop";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

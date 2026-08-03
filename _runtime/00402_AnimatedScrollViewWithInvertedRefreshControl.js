@@ -1,6 +1,3 @@
-// === Module 402: AnimatedScrollViewWithInvertedRefreshControl ===
-
-// Module 402 (AnimatedScrollViewWithInvertedRefreshControl)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import noop from "noop";

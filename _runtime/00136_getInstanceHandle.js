@@ -1,6 +1,3 @@
-// === Module 136: getInstanceHandle ===
-
-// Module 136 (getInstanceHandle)
 const require = arg1;
 const dependencyMap = arg6;
 let closure_4 = Symbol("internalInstanceHandle");

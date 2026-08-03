@@ -1,6 +1,3 @@
-// === Module 120: setUpDefaltReactNativeEnvironment ===
-
-// Module 120 (setUpDefaltReactNativeEnvironment)
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = false;

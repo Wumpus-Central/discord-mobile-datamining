@@ -1,6 +1,3 @@
-// === Module 113: codegenNativeCommands ===
-
-// Module 113 (codegenNativeCommands)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = function codegenNativeCommands(supportedCommands) {

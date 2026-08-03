@@ -1,6 +1,3 @@
-// === Module 516: uint8Array ===
-
-// Module 516 (uint8Array)
 const uint8Array = new Uint8Array(16);
 arg5.default = function rng() {
   let tmp = getRandomValues;

@@ -1,6 +1,3 @@
-// === Module 13330: UnicodeExtensionComponents ===
-
-// Module 13330 (UnicodeExtensionComponents)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {

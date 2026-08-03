@@ -1,6 +1,3 @@
-// === Module 1951: buildFormatLongFn ===
-
-// Module 1951 (buildFormatLongFn)
 
 export default function buildFormatLongFn(arg0) {
   let closure_0 = arg0;

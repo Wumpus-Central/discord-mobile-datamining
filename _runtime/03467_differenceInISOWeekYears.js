@@ -1,6 +1,3 @@
-// === Module 3467: differenceInISOWeekYears ===
-
-// Module 3467 (differenceInISOWeekYears)
 import _typeof from "_typeof";
 import differenceInCalendarISOWeekYears from "differenceInCalendarISOWeekYears";
 import compareAsc from "compareAsc";

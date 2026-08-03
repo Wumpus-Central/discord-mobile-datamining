@@ -1,6 +1,3 @@
-// === Module 7671: SliderTrackMark ===
-
-// Module 7671 (SliderTrackMark)
 import module_7665 from "module_7665";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

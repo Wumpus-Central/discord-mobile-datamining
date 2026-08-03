@@ -1,6 +1,3 @@
-// === Module 9845: isKnownType ===
-
-// Module 9845 (isKnownType)
 
 export const isKnownType = require("isKnownType").isKnownType;
 export const keepLocalCopy = require("keepLocalCopy").keepLocalCopy;

@@ -1,6 +1,3 @@
-// === Module 529: version ===
-
-// Module 529 (version)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function version(arr) {

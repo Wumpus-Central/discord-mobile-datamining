@@ -1,6 +1,3 @@
-// === Module 1087: _getGraphQLOperation ===
-
-// Module 1087 (_getGraphQLOperation)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 function _getGraphQLOperation(operationName) {

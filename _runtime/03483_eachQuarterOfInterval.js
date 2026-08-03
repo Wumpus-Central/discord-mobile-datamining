@@ -1,6 +1,3 @@
-// === Module 3483: eachQuarterOfInterval ===
-
-// Module 3483 (eachQuarterOfInterval)
 import addQuarters from "addQuarters";
 import startOfQuarter from "startOfQuarter";
 import _typeof from "_typeof";

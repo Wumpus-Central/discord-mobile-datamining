@@ -1,6 +1,3 @@
-// === Module 10599: ? ===
-
-// Module 10599
 const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }, ];
 const items1 = [{ ddd: 0, ind: 3, ty: 2, nm: "smile", refId: "image_0", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [19.875, 20.125, 0], ix: 2 }, a: { a: 0, k: [17.25, 17.25, 0], ix: 1 }, s: { a: 0, k: [108.7, 108.7, 100], ix: 6 } }, ao: 0, ip: 0, op: 914, st: 0, bm: 0 }];
 items[1] = { id: "comp_0", layers: items1 };

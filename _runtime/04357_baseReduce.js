@@ -1,6 +1,3 @@
-// === Module 4357: baseReduce ===
-
-// Module 4357 (baseReduce)
 
 export default function baseReduce(arg0, arg1, arg2, arg3, arg4) {
   let closure_0 = arg1;

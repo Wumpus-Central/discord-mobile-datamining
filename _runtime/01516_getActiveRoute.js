@@ -1,6 +1,3 @@
-// === Module 1516: getActiveRoute ===
-
-// Module 1516 (getActiveRoute)
 const module = arg2;
 let exports = arg3;
 const dependencyMap = arg6;

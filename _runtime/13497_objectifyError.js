@@ -1,6 +1,3 @@
-// === Module 13497: objectifyError ===
-
-// Module 13497 (objectifyError)
 import install from "install";
 
 if (!install) {

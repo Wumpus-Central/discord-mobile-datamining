@@ -1,6 +1,3 @@
-// === Module 5891: baseUniq ===
-
-// Module 5891 (baseUniq)
 
 export default function baseUniq(arg0, arg1, arg2) {
   let tmpResult = require(5892) /* arrayIncludes */;

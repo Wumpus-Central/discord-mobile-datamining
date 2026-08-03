@@ -1,6 +1,3 @@
-// === Module 1193: addGestureBreadcrumb ===
-
-// Module 1193 (addGestureBreadcrumb)
 const require = arg1;
 const dependencyMap = arg6;
 function addGestureBreadcrumb(message, event) {

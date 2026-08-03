@@ -1,6 +1,3 @@
-// === Module 1773: ReducedMotionConfig ===
-
-// Module 1773 (ReducedMotionConfig)
 import { useEffect } from "noop";
 
 

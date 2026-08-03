@@ -1,6 +1,3 @@
-// === Module 3505: subMilliseconds ===
-
-// Module 3505 (subMilliseconds)
 import addMilliseconds from "addMilliseconds";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

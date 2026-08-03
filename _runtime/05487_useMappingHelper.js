@@ -1,6 +1,3 @@
-// === Module 5487: useMappingHelper ===
-
-// Module 5487 (useMappingHelper)
 require("noop").useCallback;
 
 export const useMappingHelper = () => {

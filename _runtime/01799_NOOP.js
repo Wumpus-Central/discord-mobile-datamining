@@ -1,6 +1,3 @@
-// === Module 1799: NOOP ===
-
-// Module 1799 (NOOP)
 import noop from "noop";
 import { Animated } from "get ActivityIndicator";
 

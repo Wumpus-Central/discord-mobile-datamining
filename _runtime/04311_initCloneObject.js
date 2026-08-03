@@ -1,6 +1,3 @@
-// === Module 4311: initCloneObject ===
-
-// Module 4311 (initCloneObject)
 
 export default function initCloneObject(arg0) {
   if (typeof arg0.constructor !== "disabledUntil") {

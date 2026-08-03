@@ -1,6 +1,3 @@
-// === Module 1152: setSpanDurationAsMeasurementOnTransactionEvent ===
-
-// Module 1152 (setSpanDurationAsMeasurementOnTransactionEvent)
 const require = arg1;
 const dependencyMap = arg6;
 function setSpanDurationAsMeasurementOnTransactionEvent(measurements, arg1, timestamp) {

@@ -1,6 +1,3 @@
-// === Module 819: spanToJSON ===
-
-// Module 819 (spanToJSON)
 const require = arg1;
 const dependencyMap = arg6;
 function spanToJSON(getSpanJSON) {

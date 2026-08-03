@@ -1,6 +1,3 @@
-// === Module 13367: isSupportedCurrency ===
-
-// Module 13367 (isSupportedCurrency)
 const require = arg1;
 const dependencyMap = arg6;
 function isSupportedCurrency(arr3, locale) {

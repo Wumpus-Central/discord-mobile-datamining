@@ -1,6 +1,3 @@
-// === Module 964: items ===
-
-// Module 964 (items)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const items = ["response.output_item.added", "response.function_call_arguments.delta", "response.function_call_arguments.done", "response.output_item.done"];
 const items1 = ["response.created", "response.in_progress", "response.failed", "response.completed", "response.incomplete", "response.queued", "response.output_text.delta"];

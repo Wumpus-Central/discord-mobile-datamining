@@ -1,6 +1,3 @@
-// === Module 720: baseIteratee ===
-
-// Module 720 (baseIteratee)
 
 export default function baseIteratee(arg0) {
   let tmp;

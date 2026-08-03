@@ -1,6 +1,3 @@
-// === Module 598: forEach ===
-
-// Module 598 (forEach)
 
 export default function forEach(arg0, arg1) {
   if (require(599)(arg0)) {

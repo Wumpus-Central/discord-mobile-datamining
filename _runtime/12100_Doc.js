@@ -1,6 +1,3 @@
-// === Module 12100: Doc ===
-
-// Module 12100 (Doc)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

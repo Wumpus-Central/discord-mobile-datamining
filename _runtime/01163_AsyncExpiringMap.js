@@ -1,6 +1,3 @@
-// === Module 1163: AsyncExpiringMap ===
-
-// Module 1163 (AsyncExpiringMap)
 import AsyncExpiringMap from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 

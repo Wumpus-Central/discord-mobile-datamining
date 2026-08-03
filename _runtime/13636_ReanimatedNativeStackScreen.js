@@ -1,6 +1,3 @@
-// === Module 13636: ReanimatedNativeStackScreen ===
-
-// Module 13636 (ReanimatedNativeStackScreen)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importDefaultResult from "noop";
 import { Platform } from "get ActivityIndicator";

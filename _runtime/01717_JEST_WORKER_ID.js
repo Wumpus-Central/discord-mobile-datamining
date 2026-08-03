@@ -1,6 +1,3 @@
-// === Module 1717: JEST_WORKER_ID ===
-
-// Module 1717 (JEST_WORKER_ID)
 import { Platform } from "get ActivityIndicator";
 
 let flag = JEST_WORKER_ID;

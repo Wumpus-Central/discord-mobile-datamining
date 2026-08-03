@@ -1,6 +1,3 @@
-// === Module 9734: handlerOffsetDirection ===
-
-// Module 9734 (handlerOffsetDirection)
 function handlerOffsetDirection(defaultScrollOffsetValue, fixedDirection) {
   let num = -1;
   let num2 = -1;

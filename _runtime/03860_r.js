@@ -1,6 +1,3 @@
-// === Module 3860: r ===
-
-// Module 3860 (r)
 let fn = () => {
   let fn = function r(arg0, _exports2, firstResult2) {
     let fn;

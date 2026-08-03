@@ -1,6 +1,3 @@
-// === Module 4065: Portal ===
-
-// Module 4065 (Portal)
 import noop from "noop";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 251: children ===
-
-// Module 251 (children)
 import "noop";
 
 

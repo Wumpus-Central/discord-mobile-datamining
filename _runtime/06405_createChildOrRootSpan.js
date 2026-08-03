@@ -1,6 +1,3 @@
-// === Module 6405: createChildOrRootSpan ===
-
-// Module 6405 (createChildOrRootSpan)
 import _slicedToArray from "_slicedToArray";
 
 function createChildOrRootSpan(forceTransaction) {

@@ -1,6 +1,3 @@
-// === Module 6484: isBrowser ===
-
-// Module 6484 (isBrowser)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isBrowser = function isBrowser() {

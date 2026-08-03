@@ -1,6 +1,3 @@
-// === Module 769: baseIsEqualDeep ===
-
-// Module 769 (baseIsEqualDeep)
 
 export default function baseIsEqualDeep(value, value2) {
   const tmp3 = require(599)(value);

@@ -1,6 +1,3 @@
-// === Module 783: setCacheAdd ===
-
-// Module 783 (setCacheAdd)
 
 export default function setCacheAdd(arg0) {
   const __data__ = this.__data__;

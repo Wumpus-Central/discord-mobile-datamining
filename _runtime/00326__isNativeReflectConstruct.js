@@ -1,6 +1,3 @@
-// === Module 326: _isNativeReflectConstruct ===
-
-// Module 326 (_isNativeReflectConstruct)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";

@@ -1,6 +1,3 @@
-// === Module 1398: ? ===
-
-// Module 1398
 let closure_2 = require("callBoundIntrinsic")("Object.prototype.toString");
 let tmp = require("hasToStringTagShams")();
 let c3 = tmp;

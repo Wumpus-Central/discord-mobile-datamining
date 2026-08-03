@@ -1,6 +1,3 @@
-// === Module 5438: useLayoutState ===
-
-// Module 5438 (useLayoutState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

@@ -1,6 +1,3 @@
-// === Module 1010: utf8ToBytes ===
-
-// Module 1010 (utf8ToBytes)
 arg5.utf8ToBytes = function utf8ToBytes(str) {
   let num = arg1;
   if (!arg1) {

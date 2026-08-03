@@ -1,6 +1,3 @@
-// === Module 4435: allSettled ===
-
-// Module 4435 (allSettled)
 import callBind from "callBind";
 import callBind from "callBind";
 

@@ -1,6 +1,3 @@
-// === Module 5432: toPrimitive ===
-
-// Module 5432 (toPrimitive)
 
 export default function toPrimitive(arg0, arg1) {
   if ("object" == obj.default(arg0)) {

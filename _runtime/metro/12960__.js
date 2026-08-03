@@ -1,6 +1,3 @@
-// === Module 12960: ? ===
-
-// Module 12960
 
 export default (arg0, arg1) => {
   let require;

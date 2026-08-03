@@ -1,6 +1,3 @@
-// === Module 4551: Suspender ===
-
-// Module 4551 (Suspender)
 import noop from "noop";
 import closure_3 from "noop";
 import { jsx } from "jsxProd";

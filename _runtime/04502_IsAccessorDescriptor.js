@@ -1,6 +1,3 @@
-// === Module 4502: IsAccessorDescriptor ===
-
-// Module 4502 (IsAccessorDescriptor)
 
 export default function IsAccessorDescriptor(arg0) {
   if (undefined === arg0) {

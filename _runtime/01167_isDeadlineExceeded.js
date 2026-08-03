@@ -1,6 +1,3 @@
-// === Module 1167: isDeadlineExceeded ===
-
-// Module 1167 (isDeadlineExceeded)
 const require = arg1;
 const dependencyMap = arg6;
 let fn = this;

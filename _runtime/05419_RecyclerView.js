@@ -1,6 +1,3 @@
-// === Module 5419: RecyclerView ===
-
-// Module 5419 (RecyclerView)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "CompatView";

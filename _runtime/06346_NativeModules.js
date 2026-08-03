@@ -1,6 +1,3 @@
-// === Module 6346: NativeModules ===
-
-// Module 6346 (NativeModules)
 import importDefaultResult from "asyncGeneratorStep";
 import get_ActivityIndicator from "get ActivityIndicator";
 

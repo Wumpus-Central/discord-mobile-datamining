@@ -1,6 +1,3 @@
-// === Module 954: createConsolaReporter ===
-
-// Module 954 (createConsolaReporter)
 import _objectWithoutProperties from "_objectWithoutProperties";
 
 let closure_3 = ["type", "level", "message", "args", "tag", "date"];

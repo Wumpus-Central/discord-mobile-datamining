@@ -1,6 +1,3 @@
-// === Module 6423: getFilenameToDebugIdMap ===
-
-// Module 6423 (getFilenameToDebugIdMap)
 const require = arg1;
 const dependencyMap = arg6;
 function getFilenameToDebugIdMap(arg0) {

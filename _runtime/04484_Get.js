@@ -1,6 +1,3 @@
-// === Module 4484: Get ===
-
-// Module 4484 (Get)
 
 export default function Get(arg0, arg1) {
   if (require(4438) /* isObject */(arg0)) {

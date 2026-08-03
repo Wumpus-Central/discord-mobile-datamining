@@ -1,6 +1,3 @@
-// === Module 3447: closestTo ===
-
-// Module 3447 (closestTo)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

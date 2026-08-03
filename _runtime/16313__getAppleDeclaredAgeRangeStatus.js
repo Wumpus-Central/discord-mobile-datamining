@@ -1,6 +1,3 @@
-// === Module 16313: _getAppleDeclaredAgeRangeStatus ===
-
-// Module 16313 (_getAppleDeclaredAgeRangeStatus)
 import importDefaultResult from "module_16316";
 import { Platform } from "get ActivityIndicator";
 import { NitroModules } from "module_3925";

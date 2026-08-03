@@ -1,6 +1,3 @@
-// === Module 758: isKeyable ===
-
-// Module 758 (isKeyable)
 
 export default function isKeyable(arg0) {
   if (typeof arg0 !== "y") {

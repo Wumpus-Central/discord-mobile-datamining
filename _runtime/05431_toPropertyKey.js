@@ -1,6 +1,3 @@
-// === Module 5431: toPropertyKey ===
-
-// Module 5431 (toPropertyKey)
 
 export default function toPropertyKey(arg0) {
   const tmp = require(5432) /* toPrimitive */(arg0, "string");

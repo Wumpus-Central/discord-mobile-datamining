@@ -1,6 +1,3 @@
-// === Module 4454: isPrimitive ===
-
-// Module 4454 (isPrimitive)
 
 export default function isPrimitive(arg0) {
   let tmp = null === arg0;

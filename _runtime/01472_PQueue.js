@@ -1,6 +1,3 @@
-// === Module 1472: PQueue ===
-
-// Module 1472 (PQueue)
 function PQueue(arg0) {
   let closure_0 = arg0;
   let closure_1 = [];

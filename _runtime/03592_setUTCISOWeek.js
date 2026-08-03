@@ -1,6 +1,3 @@
-// === Module 3592: setUTCISOWeek ===
-
-// Module 3592 (setUTCISOWeek)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import getUTCISOWeek from "getUTCISOWeek";

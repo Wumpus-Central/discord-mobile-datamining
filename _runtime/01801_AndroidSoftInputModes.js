@@ -1,6 +1,3 @@
-// === Module 1801: AndroidSoftInputModes ===
-
-// Module 1801 (AndroidSoftInputModes)
 import { KeyboardControllerNative } from "nativeEventEmitter";
 
 

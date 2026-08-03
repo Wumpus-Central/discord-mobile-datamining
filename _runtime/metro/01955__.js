@@ -1,6 +1,3 @@
-// === Module 1955: ? ===
-
-// Module 1955
 import buildMatchFn from "buildMatchFn";
 import buildMatchPatternFn from "buildMatchPatternFn";
 

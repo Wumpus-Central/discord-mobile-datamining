@@ -1,6 +1,3 @@
-// === Module 1691: InnerKeyframe ===
-
-// Module 1691 (InnerKeyframe)
 import _classCallCheck from "_classCallCheck";
 
 const InnerKeyframe = arg1;

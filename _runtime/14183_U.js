@@ -1,6 +1,3 @@
-// === Module 14183: U ===
-
-// Module 14183 (U)
 import "module_0";
 import "module_0";
 

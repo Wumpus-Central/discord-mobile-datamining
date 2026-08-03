@@ -1,6 +1,3 @@
-// === Module 13453: parseURL ===
-
-// Module 13453 (parseURL)
 import { URL as _URL } from "URL";
 import { URLSearchParams as _URLSearchParams } from "URL";
 

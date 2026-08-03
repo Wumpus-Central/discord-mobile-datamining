@@ -1,6 +1,3 @@
-// === Module 537: pushToArray ===
-
-// Module 537 (pushToArray)
 let obj = {
   brackets(arg0) {
     return arg0 + "[]";

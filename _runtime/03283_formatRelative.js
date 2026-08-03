@@ -1,6 +1,3 @@
-// === Module 3283: formatRelative ===
-
-// Module 3283 (formatRelative)
 let closure_0 = ["ned\u011Bli", "pond\u011Bl\u00ED", "\u00FAter\u00FD", "st\u0159edu", "\u010Dtvrtek", "p\u00E1tek", "sobotu"];
 let closure_1 = {
   lastWeek: "'posledn\u00ED' eeee 've' p",

@@ -1,6 +1,3 @@
-// === Module 51: normalizeColor ===
-
-// Module 51 (normalizeColor)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

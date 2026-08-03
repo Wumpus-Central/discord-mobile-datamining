@@ -1,6 +1,3 @@
-// === Module 785: arraySome ===
-
-// Module 785 (arraySome)
 
 export default function arraySome(arg0, arg1) {
   let num = 0;

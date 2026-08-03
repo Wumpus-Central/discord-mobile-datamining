@@ -1,6 +1,3 @@
-// === Module 7672: StepNumber ===
-
-// Module 7672 (StepNumber)
 import module_7665 from "module_7665";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

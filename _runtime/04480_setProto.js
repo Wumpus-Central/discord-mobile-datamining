@@ -1,6 +1,3 @@
-// === Module 4480: setProto ===
-
-// Module 4480 (setProto)
 if (require("setPrototypeOf")) {
   function setProto(arg0, arg1) {
     if (require(4481) /* setPrototypeOf */(arg0, arg1)) {

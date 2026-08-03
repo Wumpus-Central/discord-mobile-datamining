@@ -1,6 +1,3 @@
-// === Module 1499: findFocusedRoute ===
-
-// Module 1499 (findFocusedRoute)
 arg5.default = function findFocusedRoute(arg0) {
   let index;
   let index2;

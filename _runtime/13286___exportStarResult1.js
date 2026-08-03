@@ -1,6 +1,3 @@
-// === Module 13286: __exportStarResult1 ===
-
-// Module 13286 (__exportStarResult1)
 arg5.CanonicalizeTimeZoneName = function CanonicalizeTimeZoneName(str) {
   let uppercaseLinks;
   let zoneNames;

@@ -1,6 +1,3 @@
-// === Module 6476: _addTracingHeadersToFetchRequest ===
-
-// Module 6476 (_addTracingHeadersToFetchRequest)
 import _toArray from "_toArray";
 import "errorCallback";
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";

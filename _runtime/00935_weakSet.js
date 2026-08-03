@@ -1,6 +1,3 @@
-// === Module 935: weakSet ===
-
-// Module 935 (weakSet)
 import asyncGeneratorStep from "createErrorCapturingHandler";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

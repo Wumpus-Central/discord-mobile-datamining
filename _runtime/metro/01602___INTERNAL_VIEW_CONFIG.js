@@ -1,6 +1,3 @@
-// === Module 1602: __INTERNAL_VIEW_CONFIG ===
-
-// Module 1602 (__INTERNAL_VIEW_CONFIG)
 import { codegenNativeComponent } from "get ActivityIndicator";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 

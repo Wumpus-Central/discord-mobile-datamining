@@ -1,6 +1,3 @@
-// === Module 84: ? ===
-
-// Module 84
 let closure_0 = [];
 
 export default {

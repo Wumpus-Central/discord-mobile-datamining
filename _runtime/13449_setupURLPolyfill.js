@@ -1,6 +1,3 @@
-// === Module 13449: setupURLPolyfill ===
-
-// Module 13449 (setupURLPolyfill)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 for (const key10016 in require("BlobModule")) {

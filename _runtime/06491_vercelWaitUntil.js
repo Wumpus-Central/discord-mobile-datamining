@@ -1,6 +1,3 @@
-// === Module 6491: vercelWaitUntil ===
-
-// Module 6491 (vercelWaitUntil)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.vercelWaitUntil = function vercelWaitUntil(arg0) {

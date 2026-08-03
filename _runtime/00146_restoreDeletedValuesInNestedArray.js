@@ -1,6 +1,3 @@
-// === Module 146: restoreDeletedValuesInNestedArray ===
-
-// Module 146 (restoreDeletedValuesInNestedArray)
 const module = arg2;
 const dependencyMap = arg6;
 function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {

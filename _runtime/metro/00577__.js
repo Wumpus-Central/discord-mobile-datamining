@@ -1,6 +1,3 @@
-// === Module 577: ? ===
-
-// Module 577
 let tmp = require("getEvalledConstructor")("%Map%", true);
 let closure_3 = require("callBoundIntrinsic")("Map.prototype.get", true);
 let closure_4 = require("callBoundIntrinsic")("Map.prototype.set", true);

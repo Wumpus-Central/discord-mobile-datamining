@@ -1,6 +1,3 @@
-// === Module 9739: CarouselLayout ===
-
-// Module 9739 (CarouselLayout)
 import importDefaultResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

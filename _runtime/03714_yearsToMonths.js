@@ -1,6 +1,3 @@
-// === Module 3714: yearsToMonths ===
-
-// Module 3714 (yearsToMonths)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

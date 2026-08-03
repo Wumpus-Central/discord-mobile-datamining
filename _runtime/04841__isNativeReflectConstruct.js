@@ -1,6 +1,3 @@
-// === Module 4841: _isNativeReflectConstruct ===
-
-// Module 4841 (_isNativeReflectConstruct)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";

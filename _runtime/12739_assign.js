@@ -1,6 +1,3 @@
-// === Module 12739: assign ===
-
-// Module 12739 (assign)
 let c2 = true;
 let c3 = true;
 try {

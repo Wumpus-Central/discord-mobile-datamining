@@ -1,6 +1,3 @@
-// === Module 1069: serializeFormData ===
-
-// Module 1069 (serializeFormData)
 import _slicedToArray from "_slicedToArray";
 
 function serializeFormData(size) {

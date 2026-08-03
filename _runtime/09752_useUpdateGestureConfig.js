@@ -1,6 +1,3 @@
-// === Module 9752: useUpdateGestureConfig ===
-
-// Module 9752 (useUpdateGestureConfig)
 import { useEffect } from "noop";
 
 

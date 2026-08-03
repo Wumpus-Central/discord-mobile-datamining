@@ -1,6 +1,3 @@
-// === Module 3565: intlFormatDistance ===
-
-// Module 3565 (intlFormatDistance)
 import differenceInCalendarDays from "differenceInCalendarDays";
 import differenceInCalendarMonths from "differenceInCalendarMonths";
 import differenceInCalendarQuarters from "differenceInCalendarQuarters";

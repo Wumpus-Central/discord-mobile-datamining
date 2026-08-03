@@ -1,6 +1,3 @@
-// === Module 30: get ===
-
-// Module 30 (get)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

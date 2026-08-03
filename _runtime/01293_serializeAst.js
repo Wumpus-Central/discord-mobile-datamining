@@ -1,6 +1,3 @@
-// === Module 1293: serializeAst ===
-
-// Module 1293 (serializeAst)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

@@ -1,6 +1,3 @@
-// === Module 4577: TabsHost ===
-
-// Module 4577 (TabsHost)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";

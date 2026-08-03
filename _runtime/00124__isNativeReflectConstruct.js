@@ -1,6 +1,3 @@
-// === Module 124: _isNativeReflectConstruct ===
-
-// Module 124 (_isNativeReflectConstruct)
 import DOMRect from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

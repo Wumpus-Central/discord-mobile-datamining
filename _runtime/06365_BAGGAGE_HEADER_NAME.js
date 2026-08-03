@@ -1,6 +1,3 @@
-// === Module 6365: BAGGAGE_HEADER_NAME ===
-
-// Module 6365 (BAGGAGE_HEADER_NAME)
 
 export const BAGGAGE_HEADER_NAME = require("registerSpanErrorInstrumentation").BAGGAGE_HEADER_NAME;
 export const CONSOLE_LEVELS = require("registerSpanErrorInstrumentation").CONSOLE_LEVELS;

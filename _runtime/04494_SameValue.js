@@ -1,6 +1,3 @@
-// === Module 4494: SameValue ===
-
-// Module 4494 (SameValue)
 
 export default function SameValue(arg0, arg1) {
   if (arg0 === arg1) {

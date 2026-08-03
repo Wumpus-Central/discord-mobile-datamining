@@ -1,6 +1,3 @@
-// === Module 751: assocIndexOf ===
-
-// Module 751 (assocIndexOf)
 
 export default function assocIndexOf(arg0, arg1) {
   let diff = tmp - 1;

@@ -1,6 +1,3 @@
-// === Module 4165: setEnabled ===
-
-// Module 4165 (setEnabled)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

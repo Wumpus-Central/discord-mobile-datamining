@@ -1,6 +1,3 @@
-// === Module 689: n ===
-
-// Module 689 (n)
 let fn = function n() {
   let length;
   let length2;

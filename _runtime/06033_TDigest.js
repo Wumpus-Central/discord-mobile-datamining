@@ -1,6 +1,3 @@
-// === Module 6033: TDigest ===
-
-// Module 6033 (TDigest)
 class TDigest {
   constructor(arg0, arg1, arg2) {
     obj = { discrete: false === global };

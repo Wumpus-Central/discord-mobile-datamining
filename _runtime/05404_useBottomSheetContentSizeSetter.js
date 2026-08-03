@@ -1,6 +1,3 @@
-// === Module 5404: useBottomSheetContentSizeSetter ===
-
-// Module 5404 (useBottomSheetContentSizeSetter)
 require("noop").useCallback;
 
 export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {

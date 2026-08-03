@@ -1,6 +1,3 @@
-// === Module 820: unwrapScopeFromWeakRef ===
-
-// Module 820 (unwrapScopeFromWeakRef)
 const require = arg1;
 const dependencyMap = arg6;
 function unwrapScopeFromWeakRef(deref) {

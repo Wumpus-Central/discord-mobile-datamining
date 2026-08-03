@@ -1,6 +1,3 @@
-// === Module 4273: findLastIndex ===
-
-// Module 4273 (findLastIndex)
 
 export default function findLastIndex(arg0, arg1, arg2) {
   let num = 0;

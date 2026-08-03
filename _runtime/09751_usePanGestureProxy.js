@@ -1,6 +1,3 @@
-// === Module 9751: usePanGestureProxy ===
-
-// Module 9751 (usePanGestureProxy)
 import { useMemo } from "noop";
 
 let closure_3 = { code: "function pnpm_usePanGestureProxyTs1(e){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);}" };

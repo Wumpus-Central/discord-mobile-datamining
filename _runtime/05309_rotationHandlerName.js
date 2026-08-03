@@ -1,6 +1,3 @@
-// === Module 5309: rotationHandlerName ===
-
-// Module 5309 (rotationHandlerName)
 const obj = { name: "RotationGestureHandler", allowedProps: null, config: null };
 obj[1] = require("items1").baseGestureHandlerProps;
 obj[2] = {};

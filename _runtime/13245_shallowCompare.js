@@ -1,6 +1,3 @@
-// === Module 13245: shallowCompare ===
-
-// Module 13245 (shallowCompare)
 
 export default function shallowCompare(props) {
   const tmp3 = require(13246) /* shallowEqual */(props.props, arg1);

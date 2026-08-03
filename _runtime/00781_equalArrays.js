@@ -1,6 +1,3 @@
-// === Module 781: equalArrays ===
-
-// Module 781 (equalArrays)
 
 export default function equalArrays(arg0, arg1, arg2, arg3, arg4, get) {
   const _require = arg2;

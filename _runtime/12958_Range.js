@@ -1,6 +1,3 @@
-// === Module 12958: Range ===
-
-// Module 12958 (Range)
 
 export default (arr) => {
   const _require = arg2;

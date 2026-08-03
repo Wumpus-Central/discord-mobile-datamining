@@ -1,6 +1,3 @@
-// === Module 8262: getStyle ===
-
-// Module 8262 (getStyle)
 import noop from "noop";
 import { NativeEventEmitter } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

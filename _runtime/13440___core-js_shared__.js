@@ -1,6 +1,3 @@
-// === Module 13440: __core-js_shared__ ===
-
-// Module 13440 (__core-js_shared__)
 import all from "all";
 
 let closure_0 = require("call")(Function.toString);

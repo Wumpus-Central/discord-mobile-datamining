@@ -1,6 +1,3 @@
-// === Module 415: useAndroidRippleForView ===
-
-// Module 415 (useAndroidRippleForView)
 import "noop";
 import { useMemo } from "noop";
 

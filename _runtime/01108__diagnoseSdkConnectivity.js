@@ -1,6 +1,3 @@
-// === Module 1108: _diagnoseSdkConnectivity ===
-
-// Module 1108 (_diagnoseSdkConnectivity)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _diagnoseSdkConnectivity() {

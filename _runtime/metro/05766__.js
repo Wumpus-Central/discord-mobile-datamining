@@ -1,6 +1,3 @@
-// === Module 5766: ? ===
-
-// Module 5766
 Key = Key.Key;
 if (!Key) {
   const obj = {};

@@ -1,6 +1,3 @@
-// === Module 234: polyfillObjectProperty ===
-
-// Module 234 (polyfillObjectProperty)
 const _navigator = global.navigator;
 if (undefined === _navigator) {
   global.navigator = { product: "ReactNative" };

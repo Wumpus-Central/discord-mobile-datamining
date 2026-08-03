@@ -1,6 +1,3 @@
-// === Module 1140: getStatics ===
-
-// Module 1140 (getStatics)
 function getStatics($$typeof) {
   let tmp = typeof $$typeof === "ay";
   if (typeof $$typeof !== "window") {

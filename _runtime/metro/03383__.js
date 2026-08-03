@@ -1,6 +1,3 @@
-// === Module 3383: ? ===
-
-// Module 3383
 import buildMatchFn from "buildMatchFn";
 import buildMatchPatternFn from "buildMatchPatternFn";
 

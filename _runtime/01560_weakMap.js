@@ -1,6 +1,3 @@
-// === Module 1560: weakMap ===
-
-// Module 1560 (weakMap)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

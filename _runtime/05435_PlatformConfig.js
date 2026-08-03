@@ -1,6 +1,3 @@
-// === Module 5435: PlatformConfig ===
-
-// Module 5435 (PlatformConfig)
 import reactNativeVersion from "reactNativeVersion";
 
 const obj = { defaultDrawDistance: 250, supportsOffsetCorrection: true, trackAverageRenderTimeForOffsetProjection: true, isRN083OrAbove: null, invertedTransformStyle: null, invertedTransformStyleHorizontal: null };

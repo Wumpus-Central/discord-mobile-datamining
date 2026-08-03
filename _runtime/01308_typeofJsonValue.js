@@ -1,6 +1,3 @@
-// === Module 1308: typeofJsonValue ===
-
-// Module 1308 (typeofJsonValue)
 arg5.typeofJsonValue = undefined;
 arg5.isJsonObject = undefined;
 arg5.typeofJsonValue = function typeofJsonValue(arg0) {

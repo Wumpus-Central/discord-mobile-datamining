@@ -1,6 +1,3 @@
-// === Module 179: ? ===
-
-// Module 179
 if (true === global.RN$Bridgeless) {
   global.RN$enableMicrotasksInReact = true;
   const _module = require("polyfillObjectProperty");

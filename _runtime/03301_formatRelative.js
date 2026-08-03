@@ -1,6 +1,3 @@
-// === Module 3301: formatRelative ===
-
-// Module 3301 (formatRelative)
 let closure_0 = {
   lastWeek(getUTCDay) {
     let str = "'\u03C4\u03B7\u03BD \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03B7' eeee '\u03C3\u03C4\u03B9\u03C2' p";

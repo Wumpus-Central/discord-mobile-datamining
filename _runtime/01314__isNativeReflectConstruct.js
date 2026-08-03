@@ -1,6 +1,3 @@
-// === Module 1314: _isNativeReflectConstruct ===
-
-// Module 1314 (_isNativeReflectConstruct)
 import _slicedToArray from "_slicedToArray";
 import c3 from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

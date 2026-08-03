@@ -1,6 +1,3 @@
-// === Module 6467: addToMetricsAggregator ===
-
-// Module 6467 (addToMetricsAggregator)
 import "errorCallback";
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 

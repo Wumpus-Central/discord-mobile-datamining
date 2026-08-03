@@ -1,6 +1,3 @@
-// === Module 13417: element ===
-
-// Module 13417 (element)
 import all from "all";
 
 let _moduleResult = all(require("module_13381").document);

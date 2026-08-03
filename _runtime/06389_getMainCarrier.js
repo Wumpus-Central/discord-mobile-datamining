@@ -1,6 +1,3 @@
-// === Module 6389: getMainCarrier ===
-
-// Module 6389 (getMainCarrier)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getMainCarrier = function getMainCarrier() {

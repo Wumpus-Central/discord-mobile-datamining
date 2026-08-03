@@ -1,6 +1,3 @@
-// === Module 12740: Inflate ===
-
-// Module 12740 (Inflate)
 const require = arg1;
 const dependencyMap = arg6;
 class Inflate {

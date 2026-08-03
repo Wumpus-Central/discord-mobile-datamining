@@ -1,6 +1,3 @@
-// === Module 298: useTextPressability ===
-
-// Module 298 (useTextPressability)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import noop from "noop";

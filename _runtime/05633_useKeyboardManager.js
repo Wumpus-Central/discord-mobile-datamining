@@ -1,6 +1,3 @@
-// === Module 5633: useKeyboardManager ===
-
-// Module 5633 (useKeyboardManager)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 

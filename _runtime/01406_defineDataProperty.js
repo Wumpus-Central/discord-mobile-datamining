@@ -1,6 +1,3 @@
-// === Module 1406: defineDataProperty ===
-
-// Module 1406 (defineDataProperty)
 
 export default function defineDataProperty(arg0, arg1, arg2) {
   if (arg0) {

@@ -1,6 +1,3 @@
-// === Module 3680: roundToNearestMinutes ===
-
-// Module 3680 (roundToNearestMinutes)
 import _typeof from "_typeof";
 import toInteger from "toInteger";
 

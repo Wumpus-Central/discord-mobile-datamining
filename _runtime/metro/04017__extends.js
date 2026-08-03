@@ -1,6 +1,3 @@
-// === Module 4017: _extends ===
-
-// Module 4017 (_extends)
 import noop from "noop";
 import emptyFunction from "emptyFunction";
 import warning from "warning";

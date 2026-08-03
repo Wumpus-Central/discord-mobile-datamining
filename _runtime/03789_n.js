@@ -1,6 +1,3 @@
-// === Module 3789: n ===
-
-// Module 3789 (n)
 const fn = function n(moment) {
   function translateSingular(arg0, arg1, arg2, arg3) {
     const parts = dependencyMap[arg2].split("_");

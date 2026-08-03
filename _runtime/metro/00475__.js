@@ -1,6 +1,3 @@
-// === Module 475: ? ===
-
-// Module 475
 const obj = {
   centroidDimension(touchBank, arg1, arg2, arg3) {
     let tmp2;

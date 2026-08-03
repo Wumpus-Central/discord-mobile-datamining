@@ -1,6 +1,3 @@
-// === Module 974: ? ===
-
-// Module 974
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.CHATS_CREATE_METHOD = "chats.create";
 arg5.CHAT_PATH = "chat";

@@ -1,6 +1,3 @@
-// === Module 3531: formatRFC7231 ===
-
-// Module 3531 (formatRFC7231)
 import _typeof from "_typeof";
 import isValid from "isValid";
 import addLeadingZeros from "addLeadingZeros";

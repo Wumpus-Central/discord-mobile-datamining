@@ -1,6 +1,3 @@
-// === Module 12267: QRRSBlock ===
-
-// Module 12267 (QRRSBlock)
 class QRRSBlock {
   constructor(arg0, arg1) {
     return;

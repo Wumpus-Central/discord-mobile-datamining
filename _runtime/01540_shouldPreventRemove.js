@@ -1,6 +1,3 @@
-// === Module 1540: shouldPreventRemove ===
-
-// Module 1540 (shouldPreventRemove)
 import noop from "noop";
 
 let closure_3 = Symbol("VISITED_ROUTE_KEYS");

@@ -1,6 +1,3 @@
-// === Module 13491: getReactNativeDimensionsWithDimensions ===
-
-// Module 13491 (getReactNativeDimensionsWithDimensions)
 arg5.getReactNativeDimensionsWithDimensions = function getReactNativeDimensionsWithDimensions(width, value) {
   try {
     let obj = {};

@@ -1,6 +1,3 @@
-// === Module 216: t ===
-
-// Module 216 (t)
 const global = arg0;
 const fn = function t(arg0) {
   let closure_0 = arg0;

@@ -1,6 +1,3 @@
-// === Module 13416: ? ===
-
-// Module 13416
 import getOwnPropertyDescriptor from "getOwnPropertyDescriptor";
 
 let tmp2 = !getOwnPropertyDescriptor;

@@ -1,6 +1,3 @@
-// === Module 9749: useAutoPlay ===
-
-// Module 9749 (useAutoPlay)
 import noop from "noop";
 
 

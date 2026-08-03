@@ -1,6 +1,3 @@
-// === Module 4270: tryCatch ===
-
-// Module 4270 (tryCatch)
 let tmp = globalThis;
 if (!globalThis) {
   const _Function = Function;

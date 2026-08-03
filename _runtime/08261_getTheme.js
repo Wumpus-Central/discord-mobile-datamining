@@ -1,6 +1,3 @@
-// === Module 8261: getTheme ===
-
-// Module 8261 (getTheme)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import { DatePickerAndroid } from "getStyle";

@@ -1,6 +1,3 @@
-// === Module 6398: getClient ===
-
-// Module 6398 (getClient)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getClient = function getClient() {

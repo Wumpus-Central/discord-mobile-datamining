@@ -1,6 +1,3 @@
-// === Module 789: mapToArray ===
-
-// Module 789 (mapToArray)
 
 export default function mapToArray(size) {
   let c0 = -1;

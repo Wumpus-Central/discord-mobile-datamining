@@ -1,6 +1,3 @@
-// === Module 13444: __core-js_shared__ ===
-
-// Module 13444 (__core-js_shared__)
 let closure_2 = require("__core-js_shared__")("keys");
 
 export default (arg0) => {

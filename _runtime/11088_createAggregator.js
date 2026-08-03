@@ -1,6 +1,3 @@
-// === Module 11088: createAggregator ===
-
-// Module 11088 (createAggregator)
 
 export default function createAggregator(arg0, arg1) {
   let closure_0 = arg0;

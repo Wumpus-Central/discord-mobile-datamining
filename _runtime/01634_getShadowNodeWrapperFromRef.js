@@ -1,6 +1,3 @@
-// === Module 1634: getShadowNodeWrapperFromRef ===
-
-// Module 1634 (getShadowNodeWrapperFromRef)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getShadowNodeWrapperFromRef = function getShadowNodeWrapperFromRef(self, findHostInstanceResult) {

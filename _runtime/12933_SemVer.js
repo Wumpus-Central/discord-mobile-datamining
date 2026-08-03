@@ -1,6 +1,3 @@
-// === Module 12933: SemVer ===
-
-// Module 12933 (SemVer)
 
 export default (version, pre, major2) => {
   let tmp = arg4;

@@ -1,6 +1,3 @@
-// === Module 1230: invariant ===
-
-// Module 1230 (invariant)
 
 export default function invariant(arg0, arg1) {
   if (!arg0) {

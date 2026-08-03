@@ -1,6 +1,3 @@
-// === Module 896: MIN_DELAY ===
-
-// Module 896 (MIN_DELAY)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

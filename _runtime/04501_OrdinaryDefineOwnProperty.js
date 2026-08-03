@@ -1,6 +1,3 @@
-// === Module 4501: OrdinaryDefineOwnProperty ===
-
-// Module 4501 (OrdinaryDefineOwnProperty)
 
 export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
   if (require(4438) /* isObject */(arg0)) {

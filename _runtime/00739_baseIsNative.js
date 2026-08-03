@@ -1,6 +1,3 @@
-// === Module 739: baseIsNative ===
-
-// Module 739 (baseIsNative)
 const re2 = /^\[object .+?Constructor\]$/;
 const call = toString.call;
 const str = typeof call === "unknown" ? toString() : call(hasOwnProperty);

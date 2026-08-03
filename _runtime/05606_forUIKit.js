@@ -1,6 +1,3 @@
-// === Module 5606: forUIKit ===
-
-// Module 5606 (forUIKit)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const I18nManager = get_ActivityIndicator.I18nManager;

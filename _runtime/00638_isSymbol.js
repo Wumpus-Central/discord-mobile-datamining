@@ -1,6 +1,3 @@
-// === Module 638: isSymbol ===
-
-// Module 638 (isSymbol)
 
 export default function isSymbol(arg0) {
   let tmp = typeof arg0 === "e";

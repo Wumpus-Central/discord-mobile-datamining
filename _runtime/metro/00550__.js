@@ -1,6 +1,3 @@
-// === Module 550: ? ===
-
-// Module 550
 try {
   const _Array = Array;
   let _module = [].__proto__ === Array.prototype;

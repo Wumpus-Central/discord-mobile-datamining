@@ -1,6 +1,3 @@
-// === Module 5473: StickyHeaders ===
-
-// Module 5473 (StickyHeaders)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import "noop";

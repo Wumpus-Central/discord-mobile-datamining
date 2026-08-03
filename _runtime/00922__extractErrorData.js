@@ -1,6 +1,3 @@
-// === Module 922: _extractErrorData ===
-
-// Module 922 (_extractErrorData)
 import setupIntegration from "setupIntegration";
 
 function _extractErrorData(cause) {

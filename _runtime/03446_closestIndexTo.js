@@ -1,6 +1,3 @@
-// === Module 3446: closestIndexTo ===
-
-// Module 3446 (closestIndexTo)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

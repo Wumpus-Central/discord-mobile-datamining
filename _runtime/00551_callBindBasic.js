@@ -1,6 +1,3 @@
-// === Module 551: callBindBasic ===
-
-// Module 551 (callBindBasic)
 
 export default function callBindBasic(items) {
   if (items.length >= 1) {

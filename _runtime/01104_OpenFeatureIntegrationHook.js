@@ -1,6 +1,3 @@
-// === Module 1104: OpenFeatureIntegrationHook ===
-
-// Module 1104 (OpenFeatureIntegrationHook)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";

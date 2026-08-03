@@ -1,6 +1,3 @@
-// === Module 4564: ScreenStack ===
-
-// Module 4564 (ScreenStack)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { jsx } from "jsxProd";

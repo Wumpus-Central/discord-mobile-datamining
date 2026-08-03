@@ -1,6 +1,3 @@
-// === Module 3501: endOfToday ===
-
-// Module 3501 (endOfToday)
 import endOfDay from "endOfDay";
 
 if (!endOfDay) {

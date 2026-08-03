@@ -1,6 +1,3 @@
-// === Module 13463: URLSearchParamsImpl ===
-
-// Module 13463 (URLSearchParamsImpl)
 import _classCallCheck from "_classCallCheck";
 
 const URLSearchParamsImpl = require;

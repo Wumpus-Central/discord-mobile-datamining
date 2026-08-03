@@ -1,6 +1,3 @@
-// === Module 3940: getHostComponent ===
-
-// Module 3940 (getHostComponent)
 import { Platform } from "get ActivityIndicator";
 
 

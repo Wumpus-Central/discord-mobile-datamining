@@ -1,6 +1,3 @@
-// === Module 8547: extractOpacity ===
-
-// Module 8547 (extractOpacity)
 arg5.default = function extractOpacity(str) {
   if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
     const trimmed = str.trim();

@@ -1,6 +1,3 @@
-// === Module 1524: joinPaths ===
-
-// Module 1524 (joinPaths)
 let module = arg2;
 const exports = arg3;
 const dependencyMap = arg6;

@@ -1,6 +1,3 @@
-// === Module 845: updateSession ===
-
-// Module 845 (updateSession)
 const require = arg1;
 const dependencyMap = arg6;
 function updateSession(ipAddress) {

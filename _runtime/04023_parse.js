@@ -1,6 +1,3 @@
-// === Module 4023: parse ===
-
-// Module 4023 (parse)
 function parse(str, delimiter) {
   str = delimiter;
   if (delimiter) {

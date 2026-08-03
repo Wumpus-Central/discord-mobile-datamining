@@ -1,6 +1,3 @@
-// === Module 116: ReactFabric ===
-
-// Module 116 (ReactFabric)
 import describeBuiltInComponentFrame from "describeBuiltInComponentFrame";
 
 global.RN$stopSurface = describeBuiltInComponentFrame.stopSurface;

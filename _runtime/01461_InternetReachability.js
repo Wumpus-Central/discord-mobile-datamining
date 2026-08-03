@@ -1,6 +1,3 @@
-// === Module 1461: InternetReachability ===
-
-// Module 1461 (InternetReachability)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

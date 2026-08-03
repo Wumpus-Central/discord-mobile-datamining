@@ -1,6 +1,3 @@
-// === Module 8562: extractLengthList ===
-
-// Module 8562 (extractLengthList)
 const re0 = /\s+/;
 const re1 = /,/g;
 arg5.default = function extractLengthList(str) {

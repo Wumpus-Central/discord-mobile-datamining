@@ -1,6 +1,3 @@
-// === Module 123: polyfillObjectProperty ===
-
-// Module 123 (polyfillObjectProperty)
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

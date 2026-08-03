@@ -1,6 +1,3 @@
-// === Module 1316: assert ===
-
-// Module 1316 (assert)
 arg5.assert = undefined;
 arg5.assertNever = undefined;
 arg5.assertInt32 = undefined;

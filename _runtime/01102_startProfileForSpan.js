@@ -1,6 +1,3 @@
-// === Module 1102: startProfileForSpan ===
-
-// Module 1102 (startProfileForSpan)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

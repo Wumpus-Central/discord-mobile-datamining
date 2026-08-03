@@ -1,6 +1,3 @@
-// === Module 1292: DEFAULT_LOCALE ===
-
-// Module 1292 (DEFAULT_LOCALE)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

@@ -1,6 +1,3 @@
-// === Module 918: captureConsoleIntegration ===
-
-// Module 918 (captureConsoleIntegration)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

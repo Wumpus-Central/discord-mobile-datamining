@@ -1,6 +1,3 @@
-// === Module 1823: colors ===
-
-// Module 1823 (colors)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let Platform;

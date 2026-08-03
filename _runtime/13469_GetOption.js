@@ -1,6 +1,3 @@
-// === Module 13469: GetOption ===
-
-// Module 13469 (GetOption)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

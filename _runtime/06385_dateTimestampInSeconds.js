@@ -1,6 +1,3 @@
-// === Module 6385: dateTimestampInSeconds ===
-
-// Module 6385 (dateTimestampInSeconds)
 function dateTimestampInSeconds() {
   return Date.now() / 1000;
 }

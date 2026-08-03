@@ -1,6 +1,3 @@
-// === Module 4561: __INTERNAL_VIEW_CONFIG ===
-
-// Module 4561 (__INTERNAL_VIEW_CONFIG)
 import get_ActivityIndicator from "get ActivityIndicator";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";

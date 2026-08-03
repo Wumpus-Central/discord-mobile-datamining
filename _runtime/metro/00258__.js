@@ -1,6 +1,3 @@
-// === Module 258: ? ===
-
-// Module 258
 let closure_0 = [];
 let closure_1 = { name: "default" };
 arg5.default = {

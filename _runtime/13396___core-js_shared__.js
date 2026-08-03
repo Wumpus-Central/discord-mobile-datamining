@@ -1,6 +1,3 @@
-// === Module 13396: __core-js_shared__ ===
-
-// Module 13396 (__core-js_shared__)
 
 export default (arg0, arg1) => {
   let tmp3 = require(13397) /* __core-js_shared__ */[arg0];

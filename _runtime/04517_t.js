@@ -1,6 +1,3 @@
-// === Module 4517: t ===
-
-// Module 4517 (t)
 let fn = function t(exports, React) {
   let c0 = React;
   let emptyFunction = function _objectSpread2(prototype) {

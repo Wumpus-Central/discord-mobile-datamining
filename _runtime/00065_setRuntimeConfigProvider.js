@@ -1,6 +1,3 @@
-// === Module 65: setRuntimeConfigProvider ===
-
-// Module 65 (setRuntimeConfigProvider)
 import "noop";
 
 const require = arg1;

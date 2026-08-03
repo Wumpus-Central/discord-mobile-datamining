@@ -1,6 +1,3 @@
-// === Module 1616: _makeShareableClone ===
-
-// Module 1616 (_makeShareableClone)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

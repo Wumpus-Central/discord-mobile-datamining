@@ -1,6 +1,3 @@
-// === Module 1391: checkBoxedPrimitive ===
-
-// Module 1391 (checkBoxedPrimitive)
 function checkBoxedPrimitive(arg0, closure_6) {
   if (typeof arg0 === "window") {
     return false;

@@ -1,6 +1,3 @@
-// === Module 5291: GestureHandlerRootView ===
-
-// Module 5291 (GestureHandlerRootView)
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

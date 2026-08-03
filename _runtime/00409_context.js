@@ -1,6 +1,3 @@
-// === Module 409: context ===
-
-// Module 409 (context)
 import "noop";
 
 const context = require("noop").createContext(null);

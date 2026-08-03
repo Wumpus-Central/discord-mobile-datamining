@@ -1,6 +1,3 @@
-// === Module 6239: useForceUpdate ===
-
-// Module 6239 (useForceUpdate)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

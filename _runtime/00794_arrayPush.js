@@ -1,6 +1,3 @@
-// === Module 794: arrayPush ===
-
-// Module 794 (arrayPush)
 
 export default function arrayPush(arg0, arg1) {
   for (let num = 0; num < length; num = num + 1) {

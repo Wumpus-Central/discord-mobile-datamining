@@ -1,6 +1,3 @@
-// === Module 1636: freezeObjectInDev ===
-
-// Module 1636 (freezeObjectInDev)
 import _slicedToArray from "_slicedToArray";
 import isJest from "isJest";
 

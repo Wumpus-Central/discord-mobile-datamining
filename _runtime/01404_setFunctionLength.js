@@ -1,6 +1,3 @@
-// === Module 1404: setFunctionLength ===
-
-// Module 1404 (setFunctionLength)
 let closure_2 = require("hasPropertyDescriptors")();
 let closure_3 = require("getEvalledConstructor")("%Math.floor%");
 

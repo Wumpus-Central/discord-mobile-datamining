@@ -1,6 +1,3 @@
-// === Module 3776: t ===
-
-// Module 3776 (t)
 const fn = function t(moment) {
   const parts = "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split("_");
   const parts1 = "led_\u00FAno_b\u0159e_dub_kv\u011B_\u010Dvn_\u010Dvc_srp_z\u00E1\u0159_\u0159\u00EDj_lis_pro".split("_");

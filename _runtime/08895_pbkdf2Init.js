@@ -1,6 +1,3 @@
-// === Module 8895: pbkdf2Init ===
-
-// Module 8895 (pbkdf2Init)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function pbkdf2Init(sha256, B, B, arg3) {

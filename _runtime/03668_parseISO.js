@@ -1,6 +1,3 @@
-// === Module 3668: parseISO ===
-
-// Module 3668 (parseISO)
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";
 

@@ -1,6 +1,3 @@
-// === Module 575: addNumericSeparator ===
-
-// Module 575 (addNumericSeparator)
 function addNumericSeparator(cause, typeError1) {
   let call5;
   let call6;

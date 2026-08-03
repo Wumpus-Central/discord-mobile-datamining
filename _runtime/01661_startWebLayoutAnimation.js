@@ -1,6 +1,3 @@
-// === Module 1661: startWebLayoutAnimation ===
-
-// Module 1661 (startWebLayoutAnimation)
 const require = arg1;
 const dependencyMap = arg6;
 function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {

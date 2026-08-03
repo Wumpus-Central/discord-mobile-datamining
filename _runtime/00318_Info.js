@@ -1,6 +1,3 @@
-// === Module 318: Info ===
-
-// Module 318 (Info)
 import importDefaultResult from "_createClass";
 import _classCallCheck from "_classCallCheck";
 

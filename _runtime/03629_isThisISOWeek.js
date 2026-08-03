@@ -1,6 +1,3 @@
-// === Module 3629: isThisISOWeek ===
-
-// Module 3629 (isThisISOWeek)
 import isSameISOWeek from "isSameISOWeek";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 12154: stringProcessor ===
-
-// Module 12154 (stringProcessor)
 import _slicedToArray from "_slicedToArray";
 
 let closure_4 = { guid: "uuid", url: "uri", datetime: "date-time", json_string: "json-string", regex: "" };

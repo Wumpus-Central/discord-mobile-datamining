@@ -1,6 +1,3 @@
-// === Module 571: sign ===
-
-// Module 571 (sign)
 
 export default function sign(arg0) {
   let tmp = arg0;

@@ -1,6 +1,3 @@
-// === Module 3471: isLastDayOfMonth ===
-
-// Module 3471 (isLastDayOfMonth)
 import _typeof from "_typeof";
 import endOfDay from "endOfDay";
 import endOfMonth from "endOfMonth";

@@ -1,6 +1,3 @@
-// === Module 6375: instrumentUnhandledRejection ===
-
-// Module 6375 (instrumentUnhandledRejection)
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentUnhandledRejection() {

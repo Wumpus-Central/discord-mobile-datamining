@@ -1,6 +1,3 @@
-// === Module 973: addPrivateRequestAttributes ===
-
-// Module 973 (addPrivateRequestAttributes)
 import asyncGeneratorStep from "contentUnionToMessages";
 
 function addPrivateRequestAttributes(setAttributes, config) {

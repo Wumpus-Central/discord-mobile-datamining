@@ -1,6 +1,3 @@
-// === Module 5368: useReactiveSharedValue ===
-
-// Module 5368 (useReactiveSharedValue)
 import noop from "noop";
 
 let c3;

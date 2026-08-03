@@ -1,6 +1,3 @@
-// === Module 5049: keysSorter ===
-
-// Module 5049 (keysSorter)
 const require = arg1;
 let dependencyMap = arg6;
 function keysSorter(arr) {

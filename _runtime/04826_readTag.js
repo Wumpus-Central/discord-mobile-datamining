@@ -1,6 +1,3 @@
-// === Module 4826: readTag ===
-
-// Module 4826 (readTag)
 const require = arg1;
 function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
   let obj = importDefault(4823);

@@ -1,6 +1,3 @@
-// === Module 4836: ? ===
-
-// Module 4836
 arg5.default = {
   0: {
     name: "PentaxVersion",

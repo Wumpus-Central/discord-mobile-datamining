@@ -1,6 +1,3 @@
-// === Module 13371: getSupportedTimeZones ===
-
-// Module 13371 (getSupportedTimeZones)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedTimeZones = function getSupportedTimeZones(locale) {

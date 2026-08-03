@@ -1,6 +1,3 @@
-// === Module 4567: ? ===
-
-// Module 4567
 import "_objectWithoutProperties";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 69: RN$LegacyInterop_UIManager_getConstants ===
-
-// Module 69 (RN$LegacyInterop_UIManager_getConstants)
 let error;
 let metroImportAll;
 let c0 = arg1;

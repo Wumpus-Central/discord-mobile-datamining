@@ -1,6 +1,3 @@
-// === Module 6765: ? ===
-
-// Module 6765
 const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
 export default (str) => {

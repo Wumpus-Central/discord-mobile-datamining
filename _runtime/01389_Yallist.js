@@ -1,6 +1,3 @@
-// === Module 1389: Yallist ===
-
-// Module 1389 (Yallist)
 class Yallist {
   constructor(arg0) {
     self = this;

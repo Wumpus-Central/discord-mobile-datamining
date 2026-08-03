@@ -1,6 +1,3 @@
-// === Module 5592: __react_navigation__elements_contexts ===
-
-// Module 5592 (__react_navigation__elements_contexts)
 import noop from "noop";
 
 let __react_navigation__elements_contexts = "__react_navigation__elements_contexts";

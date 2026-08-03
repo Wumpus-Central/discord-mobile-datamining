@@ -1,6 +1,3 @@
-// === Module 5353: touchDataToPressEvent ===
-
-// Module 5353 (touchDataToPressEvent)
 function touchDataToPressEvent(arg0, arg1, arg2) {
 
 }

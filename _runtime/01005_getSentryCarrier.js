@@ -1,6 +1,3 @@
-// === Module 1005: getSentryCarrier ===
-
-// Module 1005 (getSentryCarrier)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSentryCarrier = () => {

@@ -1,6 +1,3 @@
-// === Module 5324: getHandler ===
-
-// Module 5324 (getHandler)
 const require = arg1;
 const dependencyMap = arg6;
 function getHandler(arg0, onBegin) {

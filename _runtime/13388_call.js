@@ -1,6 +1,3 @@
-// === Module 13388: call ===
-
-// Module 13388 (call)
 import module_13389 from "module_13389";
 
 const call = prototype.call;

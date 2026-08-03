@@ -1,6 +1,3 @@
-// === Module 13324: LookupMatcher ===
-
-// Module 13324 (LookupMatcher)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.LookupMatcher = function LookupMatcher(arg0, arg1, arg2) {

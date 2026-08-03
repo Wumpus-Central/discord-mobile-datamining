@@ -1,6 +1,3 @@
-// === Module 1487: goBack ===
-
-// Module 1487 (goBack)
 arg5.goBack = function goBack() {
   return { type: "GO_BACK" };
 };

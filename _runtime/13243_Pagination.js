@@ -1,6 +1,3 @@
-// === Module 13243: Pagination ===
-
-// Module 13243 (Pagination)
 
 export { default } from "_isNativeReflectConstruct";
 export const Pagination = require("_isNativeReflectConstruct");

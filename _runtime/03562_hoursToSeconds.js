@@ -1,6 +1,3 @@
-// === Module 3562: hoursToSeconds ===
-
-// Module 3562 (hoursToSeconds)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

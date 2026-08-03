@@ -1,6 +1,3 @@
-// === Module 982: extractToolCalls ===
-
-// Module 982 (extractToolCalls)
 const require = arg1;
 const dependencyMap = arg6;
 function extractToolCalls(substr) {

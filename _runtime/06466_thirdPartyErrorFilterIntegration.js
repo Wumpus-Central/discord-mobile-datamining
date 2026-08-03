@@ -1,6 +1,3 @@
-// === Module 6466: thirdPartyErrorFilterIntegration ===
-
-// Module 6466 (thirdPartyErrorFilterIntegration)
 import setupIntegration from "setupIntegration";
 
 let c2 = "_sentryBundlerPluginAppKey:";

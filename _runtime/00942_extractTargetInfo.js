@@ -1,6 +1,3 @@
-// === Module 942: extractTargetInfo ===
-
-// Module 942 (extractTargetInfo)
 import _slicedToArray from "_slicedToArray";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

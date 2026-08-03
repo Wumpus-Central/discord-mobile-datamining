@@ -1,6 +1,3 @@
-// === Module 544: _Symbol ===
-
-// Module 544 (_Symbol)
 let _Symbol = typeof Symbol === "pack";
 if (typeof Symbol !== "Array") {
   _Symbol = Symbol;

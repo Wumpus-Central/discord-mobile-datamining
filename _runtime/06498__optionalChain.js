@@ -1,6 +1,3 @@
-// === Module 6498: _optionalChain ===
-
-// Module 6498 (_optionalChain)
 arg5._optionalChain = function _optionalChain(arg0) {
   let first = arg0[0];
   let num = 1;

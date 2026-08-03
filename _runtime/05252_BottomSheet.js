@@ -1,6 +1,3 @@
-// === Module 5252: BottomSheet ===
-
-// Module 5252 (BottomSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import "noop";

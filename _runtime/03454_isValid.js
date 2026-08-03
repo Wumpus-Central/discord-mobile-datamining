@@ -1,6 +1,3 @@
-// === Module 3454: isValid ===
-
-// Module 3454 (isValid)
 import _typeof from "_typeof";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

@@ -1,6 +1,3 @@
-// === Module 3568: isEqual ===
-
-// Module 3568 (isEqual)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

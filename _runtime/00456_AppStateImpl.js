@@ -1,6 +1,3 @@
-// === Module 456: AppStateImpl ===
-
-// Module 456 (AppStateImpl)
 import _classCallCheck from "_classCallCheck";
 
 const AppStateImpl = importDefault;

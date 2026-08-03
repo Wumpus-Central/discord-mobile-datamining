@@ -1,6 +1,3 @@
-// === Module 5335: _isNativeReflectConstruct ===
-
-// Module 5335 (_isNativeReflectConstruct)
 import ForceTouchGesture from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

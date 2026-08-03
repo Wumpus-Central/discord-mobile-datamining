@@ -1,6 +1,3 @@
-// === Module 3400: buildLocalizeFn ===
-
-// Module 3400 (buildLocalizeFn)
 import buildLocalizeFn from "buildLocalizeFn";
 
 if (!buildLocalizeFn) {

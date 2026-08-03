@@ -1,6 +1,3 @@
-// === Module 4452: ToPrimitive ===
-
-// Module 4452 (ToPrimitive)
 
 export default function ToPrimitive(arg0) {
   if (arguments.length > 1) {

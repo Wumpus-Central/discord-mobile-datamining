@@ -1,6 +1,3 @@
-// === Module 3958: useDisposableMemo ===
-
-// Module 3958 (useDisposableMemo)
 import noop from "noop";
 
 let c0;

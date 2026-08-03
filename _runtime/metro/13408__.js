@@ -1,6 +1,3 @@
-// === Module 13408: ? ===
-
-// Module 13408
 
 export default require("prop") ? ((arg0) => typeof arg0 === "e") : ((arg0) => {
   const tmp3 = require(13409) /* all */("Symbol");

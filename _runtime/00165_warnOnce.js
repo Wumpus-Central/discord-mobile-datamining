@@ -1,6 +1,3 @@
-// === Module 165: warnOnce ===
-
-// Module 165 (warnOnce)
 let closure_0 = {};
 arg5.default = function warnOnce(arg0, arg1) {
   if (!table[arg0]) {

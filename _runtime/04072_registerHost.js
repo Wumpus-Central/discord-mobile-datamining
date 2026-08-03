@@ -1,6 +1,3 @@
-// === Module 4072: registerHost ===
-
-// Module 4072 (registerHost)
 const require = arg1;
 const dependencyMap = arg6;
 function registerHost(arg0, arg1) {

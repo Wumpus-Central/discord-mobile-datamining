@@ -1,6 +1,3 @@
-// === Module 97: _superPropBase ===
-
-// Module 97 (_superPropBase)
 
 export default function _superPropBase(arg0, key10009) {
   const hasOwnProperty = {}.hasOwnProperty;

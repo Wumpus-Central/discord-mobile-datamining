@@ -1,6 +1,3 @@
-// === Module 14: Integer ===
-
-// Module 14 (Integer)
 class Integer {
   constructor(arg0, arg1, arg2, arg3) {
     if (undefined === arg0) {

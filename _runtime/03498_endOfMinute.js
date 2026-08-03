@@ -1,6 +1,3 @@
-// === Module 3498: endOfMinute ===
-
-// Module 3498 (endOfMinute)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

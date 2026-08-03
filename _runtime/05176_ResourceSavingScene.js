@@ -1,6 +1,3 @@
-// === Module 5176: ResourceSavingScene ===
-
-// Module 5176 (ResourceSavingScene)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

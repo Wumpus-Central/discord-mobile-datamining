@@ -1,6 +1,3 @@
-// === Module 436: useVirtualViewLogging ===
-
-// Module 436 (useVirtualViewLogging)
 import { useRef } from "noop";
 
 

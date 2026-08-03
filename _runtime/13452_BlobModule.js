@@ -1,6 +1,3 @@
-// === Module 13452: BlobModule ===
-
-// Module 13452 (BlobModule)
 let closure_0 = null;
 const BlobModule = require("get ActivityIndicator").NativeModules.BlobModule;
 let tmp2 = BlobModule;

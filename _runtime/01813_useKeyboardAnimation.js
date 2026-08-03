@@ -1,6 +1,3 @@
-// === Module 1813: useKeyboardAnimation ===
-
-// Module 1813 (useKeyboardAnimation)
 import { useLayoutEffect } from "noop";
 import { Platform } from "get ActivityIndicator";
 

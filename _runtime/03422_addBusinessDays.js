@@ -1,6 +1,3 @@
-// === Module 3422: addBusinessDays ===
-
-// Module 3422 (addBusinessDays)
 import isWeekend from "isWeekend";
 import _typeof from "_typeof";
 import toInteger from "toInteger";

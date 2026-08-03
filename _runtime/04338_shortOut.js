@@ -1,6 +1,3 @@
-// === Module 4338: shortOut ===
-
-// Module 4338 (shortOut)
 
 export default function shortOut(arg0) {
   let closure_0 = arg0;

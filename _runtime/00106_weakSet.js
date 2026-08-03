@@ -1,6 +1,3 @@
-// === Module 106: weakSet ===
-
-// Module 106 (weakSet)
 const weakSet = new WeakSet();
 arg5.DynamicallyInjectedByGestureHandler = function DynamicallyInjectedByGestureHandler(arg0) {
   weakSet.add(arg0);

@@ -1,6 +1,3 @@
-// === Module 13365: getSupportedCollations ===
-
-// Module 13365 (getSupportedCollations)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedCollations = function getSupportedCollations(locale) {

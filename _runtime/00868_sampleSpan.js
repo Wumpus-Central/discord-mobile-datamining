@@ -1,6 +1,3 @@
-// === Module 868: sampleSpan ===
-
-// Module 868 (sampleSpan)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

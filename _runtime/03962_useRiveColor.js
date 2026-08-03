@@ -1,6 +1,3 @@
-// === Module 3962: useRiveColor ===
-
-// Module 3962 (useRiveColor)
 import _slicedToArray from "_slicedToArray";
 
 let require = arg1;

@@ -1,6 +1,3 @@
-// === Module 5313: GestureDetector ===
-
-// Module 5313 (GestureDetector)
 import noop from "noop";
 import closure_7 from "noop";
 import { Platform } from "get ActivityIndicator";

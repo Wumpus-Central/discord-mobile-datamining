@@ -1,6 +1,3 @@
-// === Module 85: AssetSourceResolver ===
-
-// Module 85 (AssetSourceResolver)
 import _classCallCheck from "_classCallCheck";
 
 const AssetSourceResolver = arg1;

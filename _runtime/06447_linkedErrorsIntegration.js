@@ -1,6 +1,3 @@
-// === Module 6447: linkedErrorsIntegration ===
-
-// Module 6447 (linkedErrorsIntegration)
 import setupIntegration from "setupIntegration";
 
 

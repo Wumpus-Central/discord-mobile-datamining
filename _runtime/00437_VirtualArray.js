@@ -1,6 +1,3 @@
-// === Module 437: VirtualArray ===
-
-// Module 437 (VirtualArray)
 import _classCallCheck from "_classCallCheck";
 
 class VirtualArray {

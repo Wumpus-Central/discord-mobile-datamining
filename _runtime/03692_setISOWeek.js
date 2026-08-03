@@ -1,6 +1,3 @@
-// === Module 3692: setISOWeek ===
-
-// Module 3692 (setISOWeek)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import getISOWeek from "getISOWeek";

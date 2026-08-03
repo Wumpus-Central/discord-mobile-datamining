@@ -1,6 +1,3 @@
-// === Module 9731: SINGLE_ITEM ===
-
-// Module 9731 (SINGLE_ITEM)
 const SINGLE_ITEM = require("DATA_LENGTH").DATA_LENGTH.SINGLE_ITEM;
 const DOUBLE_ITEM = require("DATA_LENGTH").DATA_LENGTH.DOUBLE_ITEM;
 function isAutoFillData(loop) {

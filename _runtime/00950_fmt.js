@@ -1,6 +1,3 @@
-// === Module 950: fmt ===
-
-// Module 950 (fmt)
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const fmt = require("parameterize").fmt;

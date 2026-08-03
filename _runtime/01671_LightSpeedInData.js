@@ -1,6 +1,3 @@
-// === Module 1671: LightSpeedInData ===
-
-// Module 1671 (LightSpeedInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";

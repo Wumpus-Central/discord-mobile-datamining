@@ -1,6 +1,3 @@
-// === Module 987: isBrowser ===
-
-// Module 987 (isBrowser)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

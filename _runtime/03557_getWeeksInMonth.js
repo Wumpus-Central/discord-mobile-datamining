@@ -1,6 +1,3 @@
-// === Module 3557: getWeeksInMonth ===
-
-// Module 3557 (getWeeksInMonth)
 import differenceInCalendarWeeks from "differenceInCalendarWeeks";
 import lastDayOfMonth from "lastDayOfMonth";
 import startOfMonth from "startOfMonth";

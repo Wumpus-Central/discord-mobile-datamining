@@ -1,6 +1,3 @@
-// === Module 6705: baseRest ===
-
-// Module 6705 (baseRest)
 
 export default function baseRest(arg0, arg1) {
   const tmp = require(4337) /* shortOut */;

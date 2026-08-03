@@ -1,6 +1,3 @@
-// === Module 3684: _typeof ===
-
-// Module 3684 (_typeof)
 import _typeof from "_typeof";
 import setMonth from "setMonth";
 import toInteger from "toInteger";

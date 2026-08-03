@@ -1,6 +1,3 @@
-// === Module 850: addHandler ===
-
-// Module 850 (addHandler)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

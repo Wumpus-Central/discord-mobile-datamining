@@ -1,6 +1,3 @@
-// === Module 1559: useLinkTo ===
-
-// Module 1559 (useLinkTo)
 import noop from "noop";
 
 const require = arg1;

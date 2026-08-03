@@ -1,6 +1,3 @@
-// === Module 13349: emitUnicodeLanguageId ===
-
-// Module 13349 (emitUnicodeLanguageId)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {

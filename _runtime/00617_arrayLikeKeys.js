@@ -1,6 +1,3 @@
-// === Module 617: arrayLikeKeys ===
-
-// Module 617 (arrayLikeKeys)
 
 export default function arrayLikeKeys(obj) {
   const tmp3 = require(599)(obj);

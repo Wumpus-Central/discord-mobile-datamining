@@ -1,6 +1,3 @@
-// === Module 1662: TransitionType ===
-
-// Module 1662 (TransitionType)
 let obj = {};
 const merged = Object.assign(require("FadeInData").FadeInData);
 const merged1 = Object.assign(require("FadeInData").FadeOutData);

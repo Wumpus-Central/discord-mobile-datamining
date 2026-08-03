@@ -1,6 +1,3 @@
-// === Module 5607: ? ===
-
-// Module 5607
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

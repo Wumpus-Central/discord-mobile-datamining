@@ -1,6 +1,3 @@
-// === Module 5453: _inherits ===
-
-// Module 5453 (_inherits)
 
 export default function _inherits(value) {
   if (typeof arg1 !== "fileFinishedImporting") {

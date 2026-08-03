@@ -1,6 +1,3 @@
-// === Module 6407: getDynamicSamplingContextFromSpan ===
-
-// Module 6407 (getDynamicSamplingContextFromSpan)
 const require = arg1;
 const dependencyMap = arg6;
 function getDynamicSamplingContextFromSpan(spanContext) {

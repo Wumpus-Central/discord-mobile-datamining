@@ -1,6 +1,3 @@
-// === Module 1046: observe ===
-
-// Module 1046 (observe)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.observe = (arg0, arg1) => {
   let closure_0 = arg1;

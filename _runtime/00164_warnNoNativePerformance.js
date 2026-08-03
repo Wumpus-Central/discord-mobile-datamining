@@ -1,6 +1,3 @@
-// === Module 164: warnNoNativePerformance ===
-
-// Module 164 (warnNoNativePerformance)
 import importDefaultResult from "NativePerformanceCxx";
 
 let fn;

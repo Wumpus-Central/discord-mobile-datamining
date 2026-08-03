@@ -1,6 +1,3 @@
-// === Module 9119: ? ===
-
-// Module 9119
 import noop from "noop";
 import { jsx } from "jsxProd";
 import Link from "Link";

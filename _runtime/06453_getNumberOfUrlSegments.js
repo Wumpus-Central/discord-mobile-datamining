@@ -1,6 +1,3 @@
-// === Module 6453: getNumberOfUrlSegments ===
-
-// Module 6453 (getNumberOfUrlSegments)
 arg5.getNumberOfUrlSegments = function getNumberOfUrlSegments(str) {
   const parts = str.split(/\\?\//);
   return parts.filter((arg0) => {

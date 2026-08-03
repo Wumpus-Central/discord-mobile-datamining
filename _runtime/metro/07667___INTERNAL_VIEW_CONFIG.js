@@ -1,6 +1,3 @@
-// === Module 7667: __INTERNAL_VIEW_CONFIG ===
-
-// Module 7667 (__INTERNAL_VIEW_CONFIG)
 import module_7665 from "module_7665";
 import codegenNativeComponent from "codegenNativeComponent";
 import weakSet from "weakSet";

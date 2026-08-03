@@ -1,6 +1,3 @@
-// === Module 390: isPublicInstance ===
-
-// Module 390 (isPublicInstance)
 arg5.isPublicInstance = function isPublicInstance(closure_0) {
   let tmp = null != closure_0;
   if (tmp) {

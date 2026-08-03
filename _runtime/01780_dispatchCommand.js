@@ -1,6 +1,3 @@
-// === Module 1780: dispatchCommand ===
-
-// Module 1780 (dispatchCommand)
 
 export const dispatchCommand = require("dispatchCommandFabric").dispatchCommand;
 export const getRelativeCoords = require("getRelativeCoords").getRelativeCoords;

@@ -1,6 +1,3 @@
-// === Module 1791: createViewDescriptorPaper ===
-
-// Module 1791 (createViewDescriptorPaper)
 import isJest from "isJest";
 
 function createViewDescriptorPaper(topScreenId) {

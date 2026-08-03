@@ -1,6 +1,3 @@
-// === Module 181: set ===
-
-// Module 181 (set)
 const global = arg0;
 let c1 = 1;
 let set = new Set();

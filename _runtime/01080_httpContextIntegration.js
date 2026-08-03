@@ -1,6 +1,3 @@
-// === Module 1080: httpContextIntegration ===
-
-// Module 1080 (httpContextIntegration)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

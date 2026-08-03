@@ -1,6 +1,3 @@
-// === Module 6403: hasTracingEnabled ===
-
-// Module 6403 (hasTracingEnabled)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.hasTracingEnabled = function hasTracingEnabled(tracesSampler) {

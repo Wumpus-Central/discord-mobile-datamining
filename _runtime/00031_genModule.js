@@ -1,6 +1,3 @@
-// === Module 31: genModule ===
-
-// Module 31 (genModule)
 import _slicedToArray from "_slicedToArray";
 
 let require = arg1;

@@ -1,6 +1,3 @@
-// === Module 3909: keys ===
-
-// Module 3909 (keys)
 function createStoreImpl(arg0) {
   const set = new Set();
   function setState(arg0, arg1) {

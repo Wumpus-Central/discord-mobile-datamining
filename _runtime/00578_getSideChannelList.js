@@ -1,6 +1,3 @@
-// === Module 578: getSideChannelList ===
-
-// Module 578 (getSideChannelList)
 
 export default function getSideChannelList() {
   let obj = {

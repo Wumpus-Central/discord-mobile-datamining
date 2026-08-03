@@ -1,6 +1,3 @@
-// === Module 1168: reactNavigationIntegration ===
-
-// Module 1168 (reactNavigationIntegration)
 const require = arg1;
 const dependencyMap = arg6;
 const ReactNavigation = "ReactNavigation";

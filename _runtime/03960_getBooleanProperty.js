@@ -1,6 +1,3 @@
-// === Module 3960: getBooleanProperty ===
-
-// Module 3960 (getBooleanProperty)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 13510: onSend ===
-
-// Module 13510 (onSend)
 import _slicedToArray from "_slicedToArray";
 
 const re3 = /^(image)\/.*$/i;

@@ -1,6 +1,3 @@
-// === Module 1390: inspect ===
-
-// Module 1390 (inspect)
 function inspect(arg0, showHidden) {
   const obj = { seen: [], stylize: stylizeNoColor };
   if (arguments.length >= 3) {

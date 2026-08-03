@@ -1,6 +1,3 @@
-// === Module 5897: ? ===
-
-// Module 5897
 import noop from "noop";
 
 if (require("getNative")) {

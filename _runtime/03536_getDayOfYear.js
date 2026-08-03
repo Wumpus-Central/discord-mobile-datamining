@@ -1,6 +1,3 @@
-// === Module 3536: getDayOfYear ===
-
-// Module 3536 (getDayOfYear)
 import _typeof from "_typeof";
 import startOfYear from "startOfYear";
 import differenceInCalendarDays from "differenceInCalendarDays";

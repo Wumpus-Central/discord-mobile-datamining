@@ -1,6 +1,3 @@
-// === Module 5440: useRecyclerViewManager ===
-
-// Module 5440 (useRecyclerViewManager)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

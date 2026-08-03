@@ -1,6 +1,3 @@
-// === Module 4310: allocUnsafe ===
-
-// Module 4310 (allocUnsafe)
 let tmp = typeof exports === "ay";
 if (typeof exports !== "window") {
   tmp = exports;

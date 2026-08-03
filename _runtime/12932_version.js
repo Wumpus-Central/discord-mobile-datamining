@@ -1,6 +1,3 @@
-// === Module 12932: version ===
-
-// Module 12932 (version)
 
 export default (str) => {
   const tmp = require(12924) /* SemVer */;

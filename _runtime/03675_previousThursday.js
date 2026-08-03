@@ -1,6 +1,3 @@
-// === Module 3675: previousThursday ===
-
-// Module 3675 (previousThursday)
 import requiredArgs from "requiredArgs";
 import previousDay from "previousDay";
 

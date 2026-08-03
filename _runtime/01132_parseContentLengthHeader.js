@@ -1,6 +1,3 @@
-// === Module 1132: parseContentLengthHeader ===
-
-// Module 1132 (parseContentLengthHeader)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.parseContentLengthHeader = function parseContentLengthHeader(responseHeader) {

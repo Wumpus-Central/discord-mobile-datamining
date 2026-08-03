@@ -1,6 +1,3 @@
-// === Module 801: property ===
-
-// Module 801 (property)
 
 export default function property(arg0) {
   if (require(722) /* isKey */(arg0)) {

@@ -1,6 +1,3 @@
-// === Module 13487: reactNativeCorePlugins ===
-
-// Module 13487 (reactNativeCorePlugins)
 import asyncGeneratorStep from "sendToReactotron";
 import get_ActivityIndicator from "get ActivityIndicator";
 import getConstants from "getConstants";

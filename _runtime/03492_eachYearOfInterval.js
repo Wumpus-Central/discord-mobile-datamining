@@ -1,6 +1,3 @@
-// === Module 3492: eachYearOfInterval ===
-
-// Module 3492 (eachYearOfInterval)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

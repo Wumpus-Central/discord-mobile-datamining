@@ -1,6 +1,3 @@
-// === Module 13461: replaceByteInByteSequence ===
-
-// Module 13461 (replaceByteInByteSequence)
 import _slicedToArray from "_slicedToArray";
 
 function replaceByteInByteSequence(arr) {

@@ -1,6 +1,3 @@
-// === Module 740: isMasked ===
-
-// Module 740 (isMasked)
 const match = /[^.]+$/.exec(require("module_741") && require("module_741").keys && require("module_741").keys.IE_PROTO || "");
 let str = "";
 if (match) {

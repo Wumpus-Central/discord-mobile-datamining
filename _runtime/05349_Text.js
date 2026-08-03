@@ -1,6 +1,3 @@
-// === Module 5349: Text ===
-
-// Module 5349 (Text)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import "noop";

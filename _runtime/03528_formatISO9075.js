@@ -1,6 +1,3 @@
-// === Module 3528: formatISO9075 ===
-
-// Module 3528 (formatISO9075)
 import _typeof from "_typeof";
 import isValid from "isValid";
 import addLeadingZeros from "addLeadingZeros";

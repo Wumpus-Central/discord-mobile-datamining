@@ -1,6 +1,3 @@
-// === Module 13298: __exportStarResult7 ===
-
-// Module 13298 (__exportStarResult7)
 const exports = SANCTIONED_UNITS;
 function removeUnitNamespace(arr) {
   return arr.slice(arr.indexOf("-") + 1);

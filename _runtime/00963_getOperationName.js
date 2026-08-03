@@ -1,6 +1,3 @@
-// === Module 963: getOperationName ===
-
-// Module 963 (getOperationName)
 const require = arg1;
 const dependencyMap = arg6;
 function getOperationName(outer1_1) {

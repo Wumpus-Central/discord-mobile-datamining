@@ -1,6 +1,3 @@
-// === Module 6488: makeFifoCache ===
-
-// Module 6488 (makeFifoCache)
 arg5.makeFifoCache = function makeFifoCache(arg0) {
   let closure_0 = arg0;
   let closure_1 = [];

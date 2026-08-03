@@ -1,6 +1,3 @@
-// === Module 3954: ArtboardByIndex ===
-
-// Module 3954 (ArtboardByIndex)
 arg5.ArtboardByIndex = (arg0) => {
   if (Number.isInteger(arg0)) {
     const obj = { type: "index", index: null };

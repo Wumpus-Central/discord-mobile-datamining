@@ -1,6 +1,3 @@
-// === Module 13508: serialize ===
-
-// Module 13508 (serialize)
 arg5.default = undefined;
 let c0 = "~~~ zero ~~~";
 if (typeof BigInt !== "Array") {

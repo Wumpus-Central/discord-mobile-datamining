@@ -1,6 +1,3 @@
-// === Module 900: getHttpSpanDetailsFromUrlObject ===
-
-// Module 900 (getHttpSpanDetailsFromUrlObject)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

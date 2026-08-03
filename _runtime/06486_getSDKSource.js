@@ -1,6 +1,3 @@
-// === Module 6486: getSDKSource ===
-
-// Module 6486 (getSDKSource)
 arg5.getSDKSource = function getSDKSource() {
   return "npm";
 };

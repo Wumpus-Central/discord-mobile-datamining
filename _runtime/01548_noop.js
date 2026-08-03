@@ -1,6 +1,3 @@
-// === Module 1548: noop ===
-
-// Module 1548 (noop)
 
 export default require("noop").memo(function StaticContainer(children) {
   return children.children;

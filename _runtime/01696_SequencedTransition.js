@@ -1,6 +1,3 @@
-// === Module 1696: SequencedTransition ===
-
-// Module 1696 (SequencedTransition)
 arg5.SequencedTransition = function SequencedTransition(name) {
   let reversed;
   let scaleX;

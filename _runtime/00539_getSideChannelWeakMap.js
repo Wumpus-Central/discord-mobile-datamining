@@ -1,6 +1,3 @@
-// === Module 539: getSideChannelWeakMap ===
-
-// Module 539 (getSideChannelWeakMap)
 let tmp = require("getEvalledConstructor")("%WeakMap%", true);
 let closure_3 = require("callBoundIntrinsic")("WeakMap.prototype.get", true);
 let closure_4 = require("callBoundIntrinsic")("WeakMap.prototype.set", true);

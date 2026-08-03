@@ -1,6 +1,3 @@
-// === Module 3617: isSameHour ===
-
-// Module 3617 (isSameHour)
 import startOfHour from "startOfHour";
 import requiredArgs from "requiredArgs";
 

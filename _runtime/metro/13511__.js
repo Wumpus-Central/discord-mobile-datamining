@@ -1,6 +1,3 @@
-// === Module 13511: ? ===
-
-// Module 13511
 arg5.XHRInterceptor = undefined;
 let c8 = false;
 arg5.XHRInterceptor = {

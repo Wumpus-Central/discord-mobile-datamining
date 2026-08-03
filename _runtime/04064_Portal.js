@@ -1,6 +1,3 @@
-// === Module 4064: Portal ===
-
-// Module 4064 (Portal)
 
 export const Portal = require("Portal").Portal;
 export const PortalHost = require("PortalHost").PortalHost;

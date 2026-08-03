@@ -1,6 +1,3 @@
-// === Module 4478: ArrayCreate ===
-
-// Module 4478 (ArrayCreate)
 let closure_2 = require("getEvalledConstructor")("%Array.prototype%");
 
 export default function ArrayCreate(arg0) {

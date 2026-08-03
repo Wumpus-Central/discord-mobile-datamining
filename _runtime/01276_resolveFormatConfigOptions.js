@@ -1,6 +1,3 @@
-// === Module 1276: resolveFormatConfigOptions ===
-
-// Module 1276 (resolveFormatConfigOptions)
 arg5.DEFAULT_FORMAT_CONFIG = undefined;
 arg5.resolveFormatConfigOptions = function resolveFormatConfigOptions(list, format) {
   format = undefined;

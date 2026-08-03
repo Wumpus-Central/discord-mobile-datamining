@@ -1,6 +1,3 @@
-// === Module 5896: arrayIncludesWith ===
-
-// Module 5896 (arrayIncludesWith)
 
 export default function arrayIncludesWith(arg0, arg1, arg2) {
   let num = 0;

@@ -1,6 +1,3 @@
-// === Module 929: featureFlagsIntegration ===
-
-// Module 929 (featureFlagsIntegration)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

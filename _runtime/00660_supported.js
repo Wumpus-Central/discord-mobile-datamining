@@ -1,6 +1,3 @@
-// === Module 660: supported ===
-
-// Module 660 (supported)
 function supported(arg0) {
   const call = toString.call;
   return "[object Arguments]" == (typeof call === "unknown" ? toString() : call(arg0));

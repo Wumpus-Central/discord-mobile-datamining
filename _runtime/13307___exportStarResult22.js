@@ -1,6 +1,3 @@
-// === Module 13307: __exportStarResult22 ===
-
-// Module 13307 (__exportStarResult22)
 arg5.GetUnsignedRoundingMode = function GetUnsignedRoundingMode(roundingMode, arg1) {
   if (arg1) {
     return table[roundingMode];

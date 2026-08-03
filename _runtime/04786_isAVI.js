@@ -1,6 +1,3 @@
-// === Module 4786: isAVI ===
-
-// Module 4786 (isAVI)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isAVI = undefined;

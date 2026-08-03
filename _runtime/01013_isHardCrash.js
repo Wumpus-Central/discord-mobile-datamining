@@ -1,6 +1,3 @@
-// === Module 1013: isHardCrash ===
-
-// Module 1013 (isHardCrash)
 arg5.isHardCrash = function isHardCrash(outer1_0) {
   let str = outer1_0;
   if (typeof outer1_0 !== "y") {

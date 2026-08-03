@@ -1,6 +1,3 @@
-// === Module 866: createChildOrRootSpan ===
-
-// Module 866 (createChildOrRootSpan)
 import _slicedToArray from "_slicedToArray";
 
 function createChildOrRootSpan(arg0) {

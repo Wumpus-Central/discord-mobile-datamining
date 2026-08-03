@@ -1,6 +1,3 @@
-// === Module 1678: withClamp ===
-
-// Module 1678 (withClamp)
 
 export const withClamp = require("n").withClamp;
 export const withDecay = require("withDecay").withDecay;

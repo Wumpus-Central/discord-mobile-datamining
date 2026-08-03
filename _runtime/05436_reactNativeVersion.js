@@ -1,6 +1,3 @@
-// === Module 5436: reactNativeVersion ===
-
-// Module 5436 (reactNativeVersion)
 const constants = require("get ActivityIndicator").Platform.constants;
 let reactNativeVersion;
 if (constants != null) {

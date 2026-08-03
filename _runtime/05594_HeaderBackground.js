@@ -1,6 +1,3 @@
-// === Module 5594: HeaderBackground ===
-
-// Module 5594 (HeaderBackground)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

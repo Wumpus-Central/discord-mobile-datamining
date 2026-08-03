@@ -1,6 +1,3 @@
-// === Module 1959: asyncRequireImpl ===
-
-// Module 1959 (asyncRequireImpl)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function asyncRequireImpl(closure_0) {

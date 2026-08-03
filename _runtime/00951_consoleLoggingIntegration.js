@@ -1,6 +1,3 @@
-// === Module 951: consoleLoggingIntegration ===
-
-// Module 951 (consoleLoggingIntegration)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

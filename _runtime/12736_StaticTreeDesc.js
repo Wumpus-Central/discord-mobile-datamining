@@ -1,6 +1,3 @@
-// === Module 12736: StaticTreeDesc ===
-
-// Module 12736 (StaticTreeDesc)
 const require = arg1;
 const dependencyMap = arg6;
 function StaticTreeDesc(static_tree, extra_bits, extra_base, elems, max_length) {

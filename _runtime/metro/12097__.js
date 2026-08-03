@@ -1,6 +1,3 @@
-// === Module 12097: ? ===
-
-// Module 12097
 import _slicedToArray from "_slicedToArray";
 
 const self = this;

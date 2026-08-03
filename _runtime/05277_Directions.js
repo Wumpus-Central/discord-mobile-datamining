@@ -1,6 +1,3 @@
-// === Module 5277: Directions ===
-
-// Module 5277 (Directions)
 import initialize from "initialize";
 
 initialize = initialize.initialize();

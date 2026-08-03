@@ -1,6 +1,3 @@
-// === Module 13393: text ===
-
-// Module 13393 (text)
 
 export default (arg0) => {
   const tmp = require(13394)(arg0, "string");

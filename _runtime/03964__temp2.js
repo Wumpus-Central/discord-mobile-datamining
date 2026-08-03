@@ -1,6 +1,3 @@
-// === Module 3964: _temp2 ===
-
-// Module 3964 (_temp2)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

@@ -1,6 +1,3 @@
-// === Module 4062: createJSONStorage ===
-
-// Module 4062 (createJSONStorage)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 

@@ -1,6 +1,3 @@
-// === Module 6445: weakMap ===
-
-// Module 6445 (weakMap)
 import setupIntegration from "setupIntegration";
 
 const weakMap = new WeakMap();

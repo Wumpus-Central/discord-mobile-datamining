@@ -1,6 +1,3 @@
-// === Module 4507: IsGenericDescriptor ===
-
-// Module 4507 (IsGenericDescriptor)
 
 export default function IsGenericDescriptor(arg0) {
   if (undefined === arg0) {

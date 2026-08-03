@@ -1,6 +1,3 @@
-// === Module 3532: formatRelative ===
-
-// Module 3532 (formatRelative)
 import differenceInCalendarDays from "differenceInCalendarDays";
 import format from "format";
 import code from "code";

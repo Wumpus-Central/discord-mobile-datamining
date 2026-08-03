@@ -1,6 +1,3 @@
-// === Module 13467: _typeof ===
-
-// Module 13467 (_typeof)
 import _typeof from "_typeof";
 
 if (_typeof) {

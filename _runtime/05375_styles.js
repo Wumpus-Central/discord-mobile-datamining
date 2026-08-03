@@ -1,6 +1,3 @@
-// === Module 5375: styles ===
-
-// Module 5375 (styles)
 import { StyleSheet } from "get ActivityIndicator";
 
 let obj = { container: null };

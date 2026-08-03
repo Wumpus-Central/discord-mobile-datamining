@@ -1,6 +1,3 @@
-// === Module 5486: useRecyclingState ===
-
-// Module 5486 (useRecyclingState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

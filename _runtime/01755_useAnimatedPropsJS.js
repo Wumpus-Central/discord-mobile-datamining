@@ -1,6 +1,3 @@
-// === Module 1755: useAnimatedPropsJS ===
-
-// Module 1755 (useAnimatedPropsJS)
 import isJest from "isJest";
 
 if (isJest.shouldBeUseWeb()) {

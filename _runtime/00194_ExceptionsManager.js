@@ -1,6 +1,3 @@
-// === Module 194: ExceptionsManager ===
-
-// Module 194 (ExceptionsManager)
 const enforcing = require("get").getEnforcing("ExceptionsManager");
 const obj = {
   reportFatalException(message, stack, id) {

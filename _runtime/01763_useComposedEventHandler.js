@@ -1,6 +1,3 @@
-// === Module 1763: useComposedEventHandler ===
-
-// Module 1763 (useComposedEventHandler)
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useComposedEventHandlerTs1(event){const{workletsMap}=this.__closure;if(workletsMap[event.eventName]){workletsMap[event.eventName].forEach(function(worklet){return worklet(event);});}}" };

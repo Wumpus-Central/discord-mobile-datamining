@@ -1,6 +1,3 @@
-// === Module 1495: useSyncState ===
-
-// Module 1495 (useSyncState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

@@ -1,6 +1,3 @@
-// === Module 8153: colorPropType ===
-
-// Module 8153 (colorPropType)
 function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
   let tmp = arg5;
   if (null == arg1[arg2]) {

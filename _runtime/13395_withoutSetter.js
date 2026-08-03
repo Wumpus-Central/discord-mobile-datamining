@@ -1,6 +1,3 @@
-// === Module 13395: withoutSetter ===
-
-// Module 13395 (withoutSetter)
 import prop from "prop";
 import { Symbol as _Symbol } from "module_13381";
 

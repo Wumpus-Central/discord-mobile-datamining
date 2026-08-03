@@ -1,6 +1,3 @@
-// === Module 753: listCacheGet ===
-
-// Module 753 (listCacheGet)
 
 export default function listCacheGet(arg0) {
   const __data__ = this.__data__;

@@ -1,6 +1,3 @@
-// === Module 1117: ? ===
-
-// Module 1117
 let closure_0 = [];
 let closure_1 = {};
 arg5.PROFILE_QUEUE = {

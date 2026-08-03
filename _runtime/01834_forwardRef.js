@@ -1,6 +1,3 @@
-// === Module 1834: forwardRef ===
-
-// Module 1834 (forwardRef)
 import noop from "noop";
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";

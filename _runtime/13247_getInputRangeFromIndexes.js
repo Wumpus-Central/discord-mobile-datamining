@@ -1,6 +1,3 @@
-// === Module 13247: getInputRangeFromIndexes ===
-
-// Module 13247 (getInputRangeFromIndexes)
 import { Platform } from "get ActivityIndicator";
 
 

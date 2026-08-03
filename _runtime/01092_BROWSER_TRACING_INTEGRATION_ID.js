@@ -1,6 +1,3 @@
-// === Module 1092: BROWSER_TRACING_INTEGRATION_ID ===
-
-// Module 1092 (BROWSER_TRACING_INTEGRATION_ID)
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const BrowserTracing = "BrowserTracing";
 let obj = {};

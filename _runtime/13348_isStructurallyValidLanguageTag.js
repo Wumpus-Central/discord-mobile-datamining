@@ -1,6 +1,3 @@
-// === Module 13348: isStructurallyValidLanguageTag ===
-
-// Module 13348 (isStructurallyValidLanguageTag)
 import e from "e";
 import e from "e";
 import e from "e";

@@ -1,6 +1,3 @@
-// === Module 9740: useLayoutConfig ===
-
-// Module 9740 (useLayoutConfig)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 424: Mixin ===
-
-// Module 424 (Mixin)
 import "noop";
 import { jsx } from "jsxProd";
 

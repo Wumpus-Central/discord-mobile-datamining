@@ -1,6 +1,3 @@
-// === Module 14525: _regeneratorRuntime ===
-
-// Module 14525 (_regeneratorRuntime)
 const tmp3 = require("_regeneratorRuntime")();
 try {
   globalThis.regeneratorRuntime = tmp3;

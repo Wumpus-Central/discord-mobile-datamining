@@ -1,6 +1,3 @@
-// === Module 5352: hitSlop ===
-
-// Module 5352 (hitSlop)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";

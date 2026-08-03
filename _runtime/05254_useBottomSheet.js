@@ -1,6 +1,3 @@
-// === Module 5254: useBottomSheet ===
-
-// Module 5254 (useBottomSheet)
 
 export const useBottomSheet = require("useBottomSheet").useBottomSheet;
 export const useBottomSheetInternal = require("useBottomSheetInternal").useBottomSheetInternal;

@@ -1,6 +1,3 @@
-// === Module 6702: head ===
-
-// Module 6702 (head)
 
 export default function head(arg0) {
   let first;

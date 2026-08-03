@@ -1,6 +1,3 @@
-// === Module 5376: memo ===
-
-// Module 5376 (memo)
 import noop from "noop";
 import "noop";
 import { Platform } from "get ActivityIndicator";

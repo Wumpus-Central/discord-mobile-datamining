@@ -1,6 +1,3 @@
-// === Module 921: _shouldDropEvent ===
-
-// Module 921 (_shouldDropEvent)
 import setupIntegration from "setupIntegration";
 
 function _shouldDropEvent(message, message2) {

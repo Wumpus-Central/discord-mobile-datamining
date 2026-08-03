@@ -1,6 +1,3 @@
-// === Module 5402: createBottomSheetScrollableComponent ===
-
-// Module 5402 (createBottomSheetScrollableComponent)
 
 export const createBottomSheetScrollableComponent = require("createBottomSheetScrollableComponent").createBottomSheetScrollableComponent;
 export const BottomSheetSectionList = require("BottomSheetSectionList");

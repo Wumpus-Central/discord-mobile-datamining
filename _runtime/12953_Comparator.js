@@ -1,6 +1,3 @@
-// === Module 12953: Comparator ===
-
-// Module 12953 (Comparator)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

@@ -1,6 +1,3 @@
-// === Module 3431: startOfWeek ===
-
-// Module 3431 (startOfWeek)
 import _typeof from "_typeof";
 import toInteger from "toInteger";
 import requiredArgs from "requiredArgs";

@@ -1,6 +1,3 @@
-// === Module 3819: baseSortedIndexBy ===
-
-// Module 3819 (baseSortedIndexBy)
 
 export default function baseSortedIndexBy(arg0, arg1, arg2, arg3) {
   let num = 0;

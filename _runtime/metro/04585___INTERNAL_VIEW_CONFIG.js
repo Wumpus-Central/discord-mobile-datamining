@@ -1,6 +1,3 @@
-// === Module 4585: __INTERNAL_VIEW_CONFIG ===
-
-// Module 4585 (__INTERNAL_VIEW_CONFIG)
 import { codegenNativeComponent } from "get ActivityIndicator";
 import resolveAssetSource from "resolveAssetSource";
 import resolveAssetSource from "resolveAssetSource";

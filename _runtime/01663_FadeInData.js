@@ -1,6 +1,3 @@
-// === Module 1663: FadeInData ===
-
-// Module 1663 (FadeInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";

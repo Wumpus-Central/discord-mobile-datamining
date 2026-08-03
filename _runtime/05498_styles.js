@@ -1,6 +1,3 @@
-// === Module 5498: styles ===
-
-// Module 5498 (styles)
 import { StyleSheet } from "get ActivityIndicator";
 
 let obj = { backdrop: null };

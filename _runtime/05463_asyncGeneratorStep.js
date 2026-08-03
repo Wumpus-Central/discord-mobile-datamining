@@ -1,6 +1,3 @@
-// === Module 5463: asyncGeneratorStep ===
-
-// Module 5463 (asyncGeneratorStep)
 function asyncGeneratorStep(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
   try {
     const iter = arg0[arg5](arg6);

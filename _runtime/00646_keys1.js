@@ -1,6 +1,3 @@
-// === Module 646: keys1 ===
-
-// Module 646 (keys1)
 import noop from "noop";
 
 function identity(arg0) {

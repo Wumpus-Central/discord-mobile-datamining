@@ -1,6 +1,3 @@
-// === Module 1456: configure ===
-
-// Module 1456 (configure)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";

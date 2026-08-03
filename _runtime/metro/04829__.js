@@ -1,6 +1,3 @@
-// === Module 4829: ? ===
-
-// Module 4829
 arg5.default = {
   ApertureValue(arg0) {
     return Math.pow(Math.sqrt(2), arg0[0] / arg0[1]).toFixed(2);

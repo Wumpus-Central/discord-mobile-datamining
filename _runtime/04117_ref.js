@@ -1,6 +1,3 @@
-// === Module 4117: ref ===
-
-// Module 4117 (ref)
 import noop from "noop";
 import shallowEqual from "shallowEqual";
 

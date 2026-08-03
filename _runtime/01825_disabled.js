@@ -1,6 +1,3 @@
-// === Module 1825: disabled ===
-
-// Module 1825 (disabled)
 import "noop";
 import { useMemo } from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

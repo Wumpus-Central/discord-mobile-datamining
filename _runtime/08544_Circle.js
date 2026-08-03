@@ -1,6 +1,3 @@
-// === Module 8544: Circle ===
-
-// Module 8544 (Circle)
 
 export { default } from "_isNativeReflectConstruct";
 export const Circle = require("_isNativeReflectConstruct");

@@ -1,6 +1,3 @@
-// === Module 546: getProto ===
-
-// Module 546 (getProto)
 if (require("getPrototypeOf")) {
   function getProto(arg0) {
     return require(547) /* getPrototypeOf */(arg0);

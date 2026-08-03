@@ -1,6 +1,3 @@
-// === Module 4455: ? ===
-
-// Module 4455
 let closure_0 = require("callBoundIntrinsic")("Object.prototype.toString");
 if (require("_Symbol")()) {
   let closure_1 = require("callBoundIntrinsic")("Symbol.prototype.toString");

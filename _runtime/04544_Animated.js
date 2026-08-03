@@ -1,6 +1,3 @@
-// === Module 4544: Animated ===
-
-// Module 4544 (Animated)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importDefaultResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

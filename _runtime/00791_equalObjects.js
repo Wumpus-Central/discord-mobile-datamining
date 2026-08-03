@@ -1,6 +1,3 @@
-// === Module 791: equalObjects ===
-
-// Module 791 (equalObjects)
 
 export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
   const arr = require(792) /* getAllKeys */(arg0);

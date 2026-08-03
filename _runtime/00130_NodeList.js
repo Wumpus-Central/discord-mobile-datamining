@@ -1,6 +1,3 @@
-// === Module 130: NodeList ===
-
-// Module 130 (NodeList)
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

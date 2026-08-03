@@ -1,6 +1,3 @@
-// === Module 12157: ? ===
-
-// Module 12157
 import asyncGeneratorStep from "module_12160";
 
 let self = this;

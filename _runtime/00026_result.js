@@ -1,6 +1,3 @@
-// === Module 26: result ===
-
-// Module 26 (result)
 import importAllResult from "javaScriptFlagGetter";
 
 const result = require("javaScriptFlagGetter").enableNativeCSSParsing();

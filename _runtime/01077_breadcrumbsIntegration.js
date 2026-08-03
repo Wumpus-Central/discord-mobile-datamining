@@ -1,6 +1,3 @@
-// === Module 1077: breadcrumbsIntegration ===
-
-// Module 1077 (breadcrumbsIntegration)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

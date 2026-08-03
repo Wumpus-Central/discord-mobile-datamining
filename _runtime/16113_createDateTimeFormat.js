@@ -1,6 +1,3 @@
-// === Module 16113: createDateTimeFormat ===
-
-// Module 16113 (createDateTimeFormat)
 arg5.createDateTimeFormat = function createDateTimeFormat(str) {
   let pattern;
   if (!regex.test(str)) {

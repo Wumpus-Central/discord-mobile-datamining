@@ -1,6 +1,3 @@
-// === Module 1079: linkedErrorsIntegration ===
-
-// Module 1079 (linkedErrorsIntegration)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

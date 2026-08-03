@@ -1,6 +1,3 @@
-// === Module 12094: toDotPath ===
-
-// Module 12094 (toDotPath)
 const self = this;
 function toDotPath(path) {
   const items = [];

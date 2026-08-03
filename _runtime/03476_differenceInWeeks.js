@@ -1,6 +1,3 @@
-// === Module 3476: differenceInWeeks ===
-
-// Module 3476 (differenceInWeeks)
 import compareLocalAsc from "compareLocalAsc";
 import requiredArgs from "requiredArgs";
 

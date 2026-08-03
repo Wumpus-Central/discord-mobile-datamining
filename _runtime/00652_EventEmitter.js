@@ -1,6 +1,3 @@
-// === Module 652: EventEmitter ===
-
-// Module 652 (EventEmitter)
 class EventEmitter {
   constructor() {
     self = this;

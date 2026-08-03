@@ -1,6 +1,3 @@
-// === Module 6485: dynamicRequire ===
-
-// Module 6485 (dynamicRequire)
 const require = arg1;
 let dependencyMap = arg4;
 dependencyMap = arg6;

@@ -1,6 +1,3 @@
-// === Module 16269: lowerBound ===
-
-// Module 16269 (lowerBound)
 arg5.default = function lowerBound(arg0) {
   let diff;
   let length = arg0.length;

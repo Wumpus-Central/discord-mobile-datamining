@@ -1,6 +1,3 @@
-// === Module 3274: isSameUTCWeek ===
-
-// Module 3274 (isSameUTCWeek)
 import requiredArgs from "requiredArgs";
 import startOfUTCWeek from "startOfUTCWeek";
 

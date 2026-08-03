@@ -1,6 +1,3 @@
-// === Module 5267: n ===
-
-// Module 5267 (n)
 const fn = function n(arg0, arg1) {
   let result = arg0;
   if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {

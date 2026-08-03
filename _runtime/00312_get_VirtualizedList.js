@@ -1,6 +1,3 @@
-// === Module 312: get VirtualizedList ===
-
-// Module 312 (get VirtualizedList)
 const require = arg1;
 const dependencyMap = arg6;
 const obj = { keyExtractor: require("elementsThatOverlapOffsets").keyExtractor };

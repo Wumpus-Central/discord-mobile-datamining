@@ -1,6 +1,3 @@
-// === Module 3420: addDays ===
-
-// Module 3420 (addDays)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

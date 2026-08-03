@@ -1,6 +1,3 @@
-// === Module 5416: isNewArch ===
-
-// Module 5416 (isNewArch)
 import { Platform } from "get ActivityIndicator";
 
 

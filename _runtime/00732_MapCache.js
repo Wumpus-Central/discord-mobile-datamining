@@ -1,6 +1,3 @@
-// === Module 732: MapCache ===
-
-// Module 732 (MapCache)
 class MapCache {
   constructor(arg0) {
     num = 0;

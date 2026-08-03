@@ -1,6 +1,3 @@
-// === Module 270: MutationRecord ===
-
-// Module 270 (MutationRecord)
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

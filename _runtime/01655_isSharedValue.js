@@ -1,6 +1,3 @@
-// === Module 1655: isSharedValue ===
-
-// Module 1655 (isSharedValue)
 function isSharedValue(iter) {
   let prop;
   if (iter != null) {

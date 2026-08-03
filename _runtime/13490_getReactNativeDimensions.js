@@ -1,6 +1,3 @@
-// === Module 13490: getReactNativeDimensions ===
-
-// Module 13490 (getReactNativeDimensions)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 

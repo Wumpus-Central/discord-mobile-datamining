@@ -1,6 +1,3 @@
-// === Module 4066: usePortal ===
-
-// Module 4066 (usePortal)
 import noop from "noop";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 1015: breadcrumbFromObject ===
-
-// Module 1015 (breadcrumbFromObject)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.DEFAULT_BREADCRUMB_LEVEL = "info";

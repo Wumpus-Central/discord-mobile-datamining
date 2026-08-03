@@ -1,6 +1,3 @@
-// === Module 869: captureCheckIn ===
-
-// Module 869 (captureCheckIn)
 import asyncGeneratorStep from "addContextToFrame";
 
 function captureCheckIn(arg0, arg1) {

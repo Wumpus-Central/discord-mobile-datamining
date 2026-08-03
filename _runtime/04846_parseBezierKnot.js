@@ -1,6 +1,3 @@
-// === Module 4846: parseBezierKnot ===
-
-// Module 4846 (parseBezierKnot)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

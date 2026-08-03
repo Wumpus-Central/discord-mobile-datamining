@@ -1,6 +1,3 @@
-// === Module 191: parse ===
-
-// Module 191 (parse)
 let c0 = "<unknown>";
 const re1 = /^\s*at (.*?) ?\(((?:file|https?|blob|chrome-extension|native|eval|webpack|rsc|<anonymous>|\/|[a-z]:\\|\\\\).*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i;
 const re2 = /\((\S*)(?::(\d+))(?::(\d+))\)/;

@@ -1,6 +1,3 @@
-// === Module 5635: useGestureHandlerRef ===
-
-// Module 5635 (useGestureHandlerRef)
 import noop from "noop";
 
 

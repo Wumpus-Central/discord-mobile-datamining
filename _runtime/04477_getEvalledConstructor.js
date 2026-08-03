@@ -1,6 +1,3 @@
-// === Module 4477: getEvalledConstructor ===
-
-// Module 4477 (getEvalledConstructor)
 const tmp = require("getEvalledConstructor")("%Array%");
 const isArray = tmp.isArray;
 let tmp2 = !isArray;

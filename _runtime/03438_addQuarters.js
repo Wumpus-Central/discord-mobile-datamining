@@ -1,6 +1,3 @@
-// === Module 3438: addQuarters ===
-
-// Module 3438 (addQuarters)
 import toInteger from "toInteger";
 import addMonths from "addMonths";
 import requiredArgs from "requiredArgs";

@@ -1,6 +1,3 @@
-// === Module 403: splitLayoutProps ===
-
-// Module 403 (splitLayoutProps)
 arg5.default = function splitLayoutProps(arg0) {
   let outer = null;
   let inner = null;

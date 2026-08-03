@@ -1,6 +1,3 @@
-// === Module 3573: isMatch ===
-
-// Module 3573 (isMatch)
 import _typeof from "_typeof";
 import isValid from "isValid";
 import requiredArgs from "requiredArgs";

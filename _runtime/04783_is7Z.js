@@ -1,6 +1,3 @@
-// === Module 4783: is7Z ===
-
-// Module 4783 (is7Z)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.is7Z = undefined;

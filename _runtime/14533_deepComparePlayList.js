@@ -1,6 +1,3 @@
-// === Module 14533: deepComparePlayList ===
-
-// Module 14533 (deepComparePlayList)
 arg5.deepComparePlayList = function deepComparePlayList(current, playList) {
   let tmp = current === playList;
   if (!tmp) {

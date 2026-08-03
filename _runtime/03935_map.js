@@ -1,6 +1,3 @@
-// === Module 3935: map ===
-
-// Module 3935 (map)
 const require = arg1;
 const dependencyMap = arg6;
 const map = new Map();

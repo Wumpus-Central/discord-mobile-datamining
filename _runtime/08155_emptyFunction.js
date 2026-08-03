@@ -1,6 +1,3 @@
-// === Module 8155: emptyFunction ===
-
-// Module 8155 (emptyFunction)
 import emptyFunction from "emptyFunction";
 
 

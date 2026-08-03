@@ -1,6 +1,3 @@
-// === Module 5307: managePanProps ===
-
-// Module 5307 (managePanProps)
 function managePanProps(activeOffsetX) {
   const obj = {};
   const merged = Object.assign(activeOffsetX);

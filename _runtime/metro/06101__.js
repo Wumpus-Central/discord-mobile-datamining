@@ -1,6 +1,3 @@
-// === Module 6101: ? ===
-
-// Module 6101
 let items = [{ id: "image_0", w: 128, h: 128, u: "", p: "", e: 1 }, ];
 const items1 = [{ ddd: 0, ind: 3, ty: 2, nm: "asmile.png", cl: "png", refId: "image_0", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: 0, ix: 10 }, p: { a: 0, k: [20, 19.98, 0], ix: 2 }, a: { a: 0, k: [64, 64, 0], ix: 1 }, s: { a: 0, k: [30.5, 30.5, 100], ix: 6 } }, ao: 0, ip: 0, op: 901, st: 0, bm: 0 }];
 items[1] = { id: "comp_0", layers: items1 };

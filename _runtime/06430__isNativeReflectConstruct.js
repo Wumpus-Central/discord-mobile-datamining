@@ -1,6 +1,3 @@
-// === Module 6430: _isNativeReflectConstruct ===
-
-// Module 6430 (_isNativeReflectConstruct)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

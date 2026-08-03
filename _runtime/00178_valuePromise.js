@@ -1,6 +1,3 @@
-// === Module 178: valuePromise ===
-
-// Module 178 (valuePromise)
 import noop from "noop";
 import noop from "noop";
 import noop from "noop";

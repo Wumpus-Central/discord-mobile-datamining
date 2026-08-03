@@ -1,6 +1,3 @@
-// === Module 13639: ReanimatedScreen ===
-
-// Module 13639 (ReanimatedScreen)
 import { jsx } from "jsxProd";
 import importDefaultResult from "noop";
 

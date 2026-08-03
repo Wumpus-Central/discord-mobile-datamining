@@ -1,6 +1,3 @@
-// === Module 8651: RNSVGCircle ===
-
-// Module 8651 (RNSVGCircle)
 
 export const RNSVGCircle = require("__INTERNAL_VIEW_CONFIG");
 export const RNSVGClipPath = require("__INTERNAL_VIEW_CONFIG");

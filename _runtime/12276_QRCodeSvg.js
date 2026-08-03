@@ -1,6 +1,3 @@
-// === Module 12276: QRCodeSvg ===
-
-// Module 12276 (QRCodeSvg)
 import emptyFunction from "emptyFunction";
 import noop from "noop";
 

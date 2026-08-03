@@ -1,6 +1,3 @@
-// === Module 16314: AgeRangeThresholdManager ===
-
-// Module 16314 (AgeRangeThresholdManager)
 import AgeRangeThresholdManager from "_classCallCheck";
 
 class AgeRangeThresholdManager {

@@ -1,6 +1,3 @@
-// === Module 4169: _playHaptic ===
-
-// Module 4169 (_playHaptic)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Platform } from "get ActivityIndicator";
 

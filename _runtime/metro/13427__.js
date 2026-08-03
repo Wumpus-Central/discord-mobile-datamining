@@ -1,6 +1,3 @@
-// === Module 13427: ? ===
-
-// Module 13427
 let c0 = require;
 c0 = true;
 c0 = false;

@@ -1,6 +1,3 @@
-// === Module 1547: SceneView ===
-
-// Module 1547 (SceneView)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

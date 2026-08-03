@@ -1,6 +1,3 @@
-// === Module 5323: useViewRefHandler ===
-
-// Module 5323 (useViewRefHandler)
 require("noop").useCallback;
 
 export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {

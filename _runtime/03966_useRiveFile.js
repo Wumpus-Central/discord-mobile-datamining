@@ -1,6 +1,3 @@
-// === Module 3966: useRiveFile ===
-
-// Module 3966 (useRiveFile)
 import callDispose from "callDispose";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

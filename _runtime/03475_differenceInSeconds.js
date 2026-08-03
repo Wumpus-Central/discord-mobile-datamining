@@ -1,6 +1,3 @@
-// === Module 3475: differenceInSeconds ===
-
-// Module 3475 (differenceInSeconds)
 import differenceInMilliseconds from "differenceInMilliseconds";
 import requiredArgs from "requiredArgs";
 

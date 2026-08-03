@@ -1,6 +1,3 @@
-// === Module 6396: merge ===
-
-// Module 6396 (merge)
 function merge(arg0, obj) {
   let num = arg2;
   if (arg2 === undefined) {

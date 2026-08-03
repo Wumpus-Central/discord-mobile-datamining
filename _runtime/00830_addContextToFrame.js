@@ -1,6 +1,3 @@
-// === Module 830: addContextToFrame ===
-
-// Module 830 (addContextToFrame)
 let require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

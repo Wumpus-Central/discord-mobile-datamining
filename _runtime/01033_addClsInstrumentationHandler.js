@@ -1,6 +1,3 @@
-// === Module 1033: addClsInstrumentationHandler ===
-
-// Module 1033 (addClsInstrumentationHandler)
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const addClsInstrumentationHandler = require("triggerHandlers").addClsInstrumentationHandler;

@@ -1,6 +1,3 @@
-// === Module 3419: _typeof ===
-
-// Module 3419 (_typeof)
 import addDays from "addDays";
 import addMonths from "addMonths";
 import _typeof from "_typeof";

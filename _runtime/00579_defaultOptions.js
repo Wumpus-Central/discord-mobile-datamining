@@ -1,6 +1,3 @@
-// === Module 579: defaultOptions ===
-
-// Module 579 (defaultOptions)
 function defaultOptions() {
   return { depthLimit: Number.MAX_SAFE_INTEGER, edgesLimit: Number.MAX_SAFE_INTEGER };
 }

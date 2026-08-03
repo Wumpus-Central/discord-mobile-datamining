@@ -1,6 +1,3 @@
-// === Module 3457: differenceInCalendarISOWeeks ===
-
-// Module 3457 (differenceInCalendarISOWeeks)
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import startOfISOWeek from "startOfISOWeek";
 import requiredArgs from "requiredArgs";

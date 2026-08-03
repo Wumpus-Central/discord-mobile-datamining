@@ -1,6 +1,3 @@
-// === Module 3630: isThisMinute ===
-
-// Module 3630 (isThisMinute)
 import isSameMinute from "isSameMinute";
 import requiredArgs from "requiredArgs";
 

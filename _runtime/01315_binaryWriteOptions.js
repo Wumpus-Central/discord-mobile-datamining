@@ -1,6 +1,3 @@
-// === Module 1315: binaryWriteOptions ===
-
-// Module 1315 (binaryWriteOptions)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

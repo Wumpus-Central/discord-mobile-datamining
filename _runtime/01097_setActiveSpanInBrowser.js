@@ -1,6 +1,3 @@
-// === Module 1097: setActiveSpanInBrowser ===
-
-// Module 1097 (setActiveSpanInBrowser)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

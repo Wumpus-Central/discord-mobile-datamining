@@ -1,6 +1,3 @@
-// === Module 4575: useTransitionProgress ===
-
-// Module 4575 (useTransitionProgress)
 import noop from "noop";
 
 

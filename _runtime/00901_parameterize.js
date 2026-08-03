@@ -1,6 +1,3 @@
-// === Module 901: parameterize ===
-
-// Module 901 (parameterize)
 function parameterize(join) {
   const substr = [...arguments].slice();
   const items = [join, ...substr];

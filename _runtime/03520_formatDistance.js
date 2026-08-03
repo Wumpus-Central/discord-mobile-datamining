@@ -1,6 +1,3 @@
-// === Module 3520: formatDistance ===
-
-// Module 3520 (formatDistance)
 import compareAsc from "compareAsc";
 import differenceInMonths from "differenceInMonths";
 import differenceInSeconds from "differenceInSeconds";

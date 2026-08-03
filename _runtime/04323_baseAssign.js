@@ -1,6 +1,3 @@
-// === Module 4323: baseAssign ===
-
-// Module 4323 (baseAssign)
 
 export default function baseAssign(arg0, arg1) {
   let tmp = arg0;

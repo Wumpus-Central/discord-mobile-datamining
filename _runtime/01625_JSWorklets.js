@@ -1,6 +1,3 @@
-// === Module 1625: JSWorklets ===
-
-// Module 1625 (JSWorklets)
 import _classCallCheck from "_classCallCheck";
 
 const JSWorklets = arg1;

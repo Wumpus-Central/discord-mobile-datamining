@@ -1,6 +1,3 @@
-// === Module 62: processFontVariant ===
-
-// Module 62 (processFontVariant)
 arg5.default = function processFontVariant(str) {
   let found = str;
   if (!Array.isArray(str)) {

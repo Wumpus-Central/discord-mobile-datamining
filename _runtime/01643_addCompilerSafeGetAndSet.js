@@ -1,6 +1,3 @@
-// === Module 1643: addCompilerSafeGetAndSet ===
-
-// Module 1643 (addCompilerSafeGetAndSet)
 import isJest from "isJest";
 import isJest from "isJest";
 

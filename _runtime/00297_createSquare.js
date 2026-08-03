@@ -1,6 +1,3 @@
-// === Module 297: createSquare ===
-
-// Module 297 (createSquare)
 arg5.createSquare = function createSquare(bottom) {
   return { bottom, left: bottom, right: bottom, top: bottom };
 };

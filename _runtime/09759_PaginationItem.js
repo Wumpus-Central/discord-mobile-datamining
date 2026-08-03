@@ -1,6 +1,3 @@
-// === Module 9759: PaginationItem ===
-
-// Module 9759 (PaginationItem)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

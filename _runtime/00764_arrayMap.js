@@ -1,6 +1,3 @@
-// === Module 764: arrayMap ===
-
-// Module 764 (arrayMap)
 
 export default function arrayMap(arg0, arg1) {
   let num = 0;

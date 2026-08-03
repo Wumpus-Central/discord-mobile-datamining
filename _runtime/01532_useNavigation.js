@@ -1,6 +1,3 @@
-// === Module 1532: useNavigation ===
-
-// Module 1532 (useNavigation)
 import noop from "noop";
 
 

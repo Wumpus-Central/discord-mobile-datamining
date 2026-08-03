@@ -1,6 +1,3 @@
-// === Module 5357: applyRelationProp ===
-
-// Module 5357 (applyRelationProp)
 arg5.applyRelationProp = function applyRelationProp(closure_0, arg1, arg2) {
   if (arg2) {
     const _Array = Array;

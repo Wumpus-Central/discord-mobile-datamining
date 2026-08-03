@@ -1,6 +1,3 @@
-// === Module 4111: parse ===
-
-// Module 4111 (parse)
 arg5.parse = function parse(str) {
   if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
     const _TypeError = TypeError;

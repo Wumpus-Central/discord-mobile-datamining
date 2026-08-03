@@ -1,6 +1,3 @@
-// === Module 1112: items ===
-
-// Module 1112 (items)
 let fn = this;
 if (this) {
   fn = this.__awaiter;

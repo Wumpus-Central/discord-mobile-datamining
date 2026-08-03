@@ -1,6 +1,3 @@
-// === Module 1604: Animated ===
-
-// Module 1604 (Animated)
 import closure_2 from "controlEdgeToEdgeValues";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 1078: _getUnhandledRejectionError ===
-
-// Module 1078 (_getUnhandledRejectionError)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 function _getUnhandledRejectionError(reason) {

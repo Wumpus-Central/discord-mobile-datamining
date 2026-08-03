@@ -1,6 +1,3 @@
-// === Module 12944: SemVer ===
-
-// Module 12944 (SemVer)
 
 export default (arr) => {
   let closure_0 = arg1;

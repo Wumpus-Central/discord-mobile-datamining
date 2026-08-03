@@ -1,6 +1,3 @@
-// === Module 5551: addListener ===
-
-// Module 5551 (addListener)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;

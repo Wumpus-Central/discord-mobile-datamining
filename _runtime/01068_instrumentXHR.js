@@ -1,6 +1,3 @@
-// === Module 1068: instrumentXHR ===
-
-// Module 1068 (instrumentXHR)
 import _slicedToArray from "_slicedToArray";
 
 function instrumentXHR() {

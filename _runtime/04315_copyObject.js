@@ -1,6 +1,3 @@
-// === Module 4315: copyObject ===
-
-// Module 4315 (copyObject)
 
 export default function copyObject(arg0, arg1, arg2, arg3) {
   let obj = arg2;

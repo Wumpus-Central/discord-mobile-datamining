@@ -1,6 +1,3 @@
-// === Module 3504: format ===
-
-// Module 3504 (format)
 import isValid from "isValid";
 import subMilliseconds from "subMilliseconds";
 import _typeof from "_typeof";

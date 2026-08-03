@@ -1,6 +1,3 @@
-// === Module 6383: regExp ===
-
-// Module 6383 (regExp)
 const require = arg1;
 const dependencyMap = arg6;
 const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");

@@ -1,6 +1,3 @@
-// === Module 540: getEvalledConstructor ===
-
-// Module 540 (getEvalledConstructor)
 import bind from "bind";
 import module_556 from "module_556";
 import bind from "bind";

@@ -1,6 +1,3 @@
-// === Module 6462: generateIteratee ===
-
-// Module 6462 (generateIteratee)
 import setupIntegration from "setupIntegration";
 
 

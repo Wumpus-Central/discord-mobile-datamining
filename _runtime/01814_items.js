@@ -1,6 +1,3 @@
-// === Module 1814: items ===
-
-// Module 1814 (items)
 require("noop").useCallback;
 
 export default function _default() {

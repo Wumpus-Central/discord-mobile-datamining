@@ -1,6 +1,3 @@
-// === Module 63: processAspectRatio ===
-
-// Module 63 (processAspectRatio)
 arg5.default = function processAspectRatio(str) {
   if (typeof str === "Object") {
     return str;

@@ -1,6 +1,3 @@
-// === Module 5464: useUnmountFlag ===
-
-// Module 5464 (useUnmountFlag)
 import noop from "noop";
 
 let c0;

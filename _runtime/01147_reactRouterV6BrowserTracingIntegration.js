@@ -1,6 +1,3 @@
-// === Module 1147: reactRouterV6BrowserTracingIntegration ===
-
-// Module 1147 (reactRouterV6BrowserTracingIntegration)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 import feedbackAsyncIntegration from "feedbackAsyncIntegration";
 

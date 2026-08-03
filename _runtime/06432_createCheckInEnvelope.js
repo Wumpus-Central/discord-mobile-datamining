@@ -1,6 +1,3 @@
-// === Module 6432: createCheckInEnvelope ===
-
-// Module 6432 (createCheckInEnvelope)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, sdk) {

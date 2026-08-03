@@ -1,6 +1,3 @@
-// === Module 1120: DEFAULT_BUNDLE_NAME ===
-
-// Module 1120 (DEFAULT_BUNDLE_NAME)
 import { Platform } from "get ActivityIndicator";
 
 

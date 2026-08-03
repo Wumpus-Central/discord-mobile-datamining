@@ -1,6 +1,3 @@
-// === Module 790: setToArray ===
-
-// Module 790 (setToArray)
 
 export default function setToArray(size) {
   let c0 = -1;

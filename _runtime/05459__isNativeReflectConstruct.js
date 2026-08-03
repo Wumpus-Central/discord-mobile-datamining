@@ -1,6 +1,3 @@
-// === Module 5459: _isNativeReflectConstruct ===
-
-// Module 5459 (_isNativeReflectConstruct)
 import RVLinearLayoutManagerImpl from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

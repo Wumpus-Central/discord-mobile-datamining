@@ -1,6 +1,3 @@
-// === Module 797: arrayFilter ===
-
-// Module 797 (arrayFilter)
 
 export default function arrayFilter(arg0, arg1) {
   let num = 0;

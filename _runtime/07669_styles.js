@@ -1,6 +1,3 @@
-// === Module 7669: styles ===
-
-// Module 7669 (styles)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const StyleSheet = get_ActivityIndicator.StyleSheet;

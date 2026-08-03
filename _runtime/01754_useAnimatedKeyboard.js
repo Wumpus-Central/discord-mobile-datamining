@@ -1,6 +1,3 @@
-// === Module 1754: useAnimatedKeyboard ===
-
-// Module 1754 (useAnimatedKeyboard)
 import noop from "noop";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 4790: CompressedTypes ===
-
-// Module 4790 (CompressedTypes)
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
 

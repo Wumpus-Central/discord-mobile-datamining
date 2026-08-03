@@ -1,6 +1,3 @@
-// === Module 3507: getUTCDayOfYear ===
-
-// Module 3507 (getUTCDayOfYear)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 40: MessageQueue ===
-
-// Module 40 (MessageQueue)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

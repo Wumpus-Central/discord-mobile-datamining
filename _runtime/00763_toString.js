@@ -1,6 +1,3 @@
-// === Module 763: toString ===
-
-// Module 763 (toString)
 let prototype;
 if (require("module_608")) {
   prototype = require("module_608").prototype;

@@ -1,6 +1,3 @@
-// === Module 4776: detectFile ===
-
-// Module 4776 (detectFile)
 const self = this;
 let self2 = this;
 if (this) {

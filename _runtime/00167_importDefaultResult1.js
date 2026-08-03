@@ -1,6 +1,3 @@
-// === Module 167: importDefaultResult1 ===
-
-// Module 167 (importDefaultResult1)
 import ReactNativeStartupTiming from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import importDefaultResult1 from "_classPrivateFieldKey";

@@ -1,6 +1,3 @@
-// === Module 811: debugSymbolicatorIntegration ===
-
-// Module 811 (debugSymbolicatorIntegration)
 
 export const debugSymbolicatorIntegration = require("processEvent").debugSymbolicatorIntegration;
 export const deviceContextIntegration = require("processEvent").deviceContextIntegration;

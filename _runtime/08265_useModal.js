@@ -1,6 +1,3 @@
-// === Module 8265: useModal ===
-
-// Module 8265 (useModal)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import getNativeComponent from "getNativeComponent";

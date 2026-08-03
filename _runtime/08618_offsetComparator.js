@@ -1,6 +1,3 @@
-// === Module 8618: offsetComparator ===
-
-// Module 8618 (offsetComparator)
 import noop from "noop";
 import { Children } from "noop";
 import { processColor } from "get ActivityIndicator";

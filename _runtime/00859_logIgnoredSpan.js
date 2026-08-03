@@ -1,6 +1,3 @@
-// === Module 859: logIgnoredSpan ===
-
-// Module 859 (logIgnoredSpan)
 const require = arg1;
 const dependencyMap = arg6;
 function logIgnoredSpan(op) {

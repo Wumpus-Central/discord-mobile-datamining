@@ -1,6 +1,3 @@
-// === Module 488: SHORT ===
-
-// Module 488 (SHORT)
 const constants = require("ToastAndroid").getConstants();
 
 export default {

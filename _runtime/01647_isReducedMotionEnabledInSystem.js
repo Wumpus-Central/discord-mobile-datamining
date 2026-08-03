@@ -1,6 +1,3 @@
-// === Module 1647: isReducedMotionEnabledInSystem ===
-
-// Module 1647 (isReducedMotionEnabledInSystem)
 import isJest from "isJest";
 import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet";
 

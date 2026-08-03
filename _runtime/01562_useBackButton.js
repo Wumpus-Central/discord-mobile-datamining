@@ -1,6 +1,3 @@
-// === Module 1562: useBackButton ===
-
-// Module 1562 (useBackButton)
 import noop from "noop";
 
 require("get ActivityIndicator").BackHandler;

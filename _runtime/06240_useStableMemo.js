@@ -1,6 +1,3 @@
-// === Module 6240: useStableMemo ===
-
-// Module 6240 (useStableMemo)
 import { useRef } from "noop";
 
 let closure_3 = [];

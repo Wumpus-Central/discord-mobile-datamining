@@ -1,6 +1,3 @@
-// === Module 4468: truncate ===
-
-// Module 4468 (truncate)
 
 export default function truncate(arg0) {
   if (typeof arg0 !== "Object") {

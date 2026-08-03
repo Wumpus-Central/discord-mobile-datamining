@@ -1,6 +1,3 @@
-// === Module 4805: error ===
-
-// Module 4805 (error)
 class MetadataMissingError {
   constructor(arg0) {
     obj = { name: "MetadataMissingError" };

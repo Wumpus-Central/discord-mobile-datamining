@@ -1,6 +1,3 @@
-// === Module 4788: ImageTypes ===
-
-// Module 4788 (ImageTypes)
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
 

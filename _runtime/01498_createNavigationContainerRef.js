@@ -1,6 +1,3 @@
-// === Module 1498: createNavigationContainerRef ===
-
-// Module 1498 (createNavigationContainerRef)
 const require = arg1;
 let dependencyMap = arg6;
 let c2 = "The 'navigation' object hasn't been initialized yet. This might happen if you don't have a navigator mounted, or if the navigator hasn't finished mounting. See https://reactnavigation.org/docs/navigating-without-navigation-prop#handling-initialization for more details.";

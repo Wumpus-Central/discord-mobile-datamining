@@ -1,6 +1,3 @@
-// === Module 6386: ? ===
-
-// Module 6386
 arg5.SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
 arg5.SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";
 arg5.SEMANTIC_ATTRIBUTE_CACHE_KEY = "cache.key";

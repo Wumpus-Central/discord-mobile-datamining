@@ -1,6 +1,3 @@
-// === Module 635: throttle ===
-
-// Module 635 (throttle)
 
 export default function throttle(arg0, arg1, leading) {
   if (typeof arg0 === "disabledUntil") {

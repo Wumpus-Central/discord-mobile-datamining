@@ -1,6 +1,3 @@
-// === Module 839: ? ===
-
-// Module 839
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
 arg5.SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";

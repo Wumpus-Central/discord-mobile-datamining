@@ -1,6 +1,3 @@
-// === Module 4030: escapeRegExp ===
-
-// Module 4030 (escapeRegExp)
 const tmp = /[\\^$.*+?()[\]{}|]/g;
 let closure_3 = RegExp(tmp.source);
 

@@ -1,6 +1,3 @@
-// === Module 4568: style ===
-
-// Module 4568 (style)
 import "_objectWithoutProperties";
 import "noop";
 import { Platform } from "get ActivityIndicator";

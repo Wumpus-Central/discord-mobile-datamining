@@ -1,6 +1,3 @@
-// === Module 968: AsyncGenerator ===
-
-// Module 968 (AsyncGenerator)
 class AsyncGenerator {
   constructor(arg0) {
     closure_0 = global;

@@ -1,6 +1,3 @@
-// === Module 1598: __INTERNAL_VIEW_CONFIG ===
-
-// Module 1598 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "KeyboardGestureArea", validAttributes: { interpolator: true, showOnSwipeUp: true, enableSwipeToDismiss: true, offset: true, textInputNativeID: true } };

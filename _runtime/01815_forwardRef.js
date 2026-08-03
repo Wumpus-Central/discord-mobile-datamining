@@ -1,6 +1,3 @@
-// === Module 1815: forwardRef ===
-
-// Module 1815 (forwardRef)
 import noop from "noop";
 import "noop";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8650: _fetchText ===
-
-// Module 8650 (_fetchText)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Platform } from "get ActivityIndicator";
 

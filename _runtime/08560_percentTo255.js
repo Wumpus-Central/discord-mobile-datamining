@@ -1,6 +1,3 @@
-// === Module 8560: percentTo255 ===
-
-// Module 8560 (percentTo255)
 const tmp2 = /^rgba?\(\s*(100%|\d{1,2}(\.\d+)?%)\s*,\s*(100%|\d{1,2}(\.\d+)?%)\s*,\s*(100%|\d{1,2}(\.\d+)?%)\s*(?:,\s*(1|0(\.\d+)?|100%|\d{1,2}(\.\d+)?%)\s*)?\)$/;
 let c0 = tmp2;
 function percentTo255(arg0) {

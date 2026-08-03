@@ -1,6 +1,3 @@
-// === Module 1089: distanceToMatch ===
-
-// Module 1089 (distanceToMatch)
 import asyncGeneratorStep from "registerSpanErrorInstrumentation";
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";

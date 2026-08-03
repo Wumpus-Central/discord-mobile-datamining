@@ -1,6 +1,3 @@
-// === Module 934: trpcMiddleware ===
-
-// Module 934 (trpcMiddleware)
 import asyncGeneratorStep from "createChildOrRootSpan";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

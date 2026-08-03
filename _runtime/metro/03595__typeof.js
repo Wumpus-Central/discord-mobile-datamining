@@ -1,6 +1,3 @@
-// === Module 3595: _typeof ===
-
-// Module 3595 (_typeof)
 import setUTCDay from "setUTCDay";
 import { Parser } from "Parser";
 

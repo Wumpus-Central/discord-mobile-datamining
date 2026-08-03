@@ -1,6 +1,3 @@
-// === Module 7664: _getRequireWildcardCache ===
-
-// Module 7664 (_getRequireWildcardCache)
 import module_7665 from "module_7665";
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";

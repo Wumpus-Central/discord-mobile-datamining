@@ -1,6 +1,3 @@
-// === Module 6439: isSentryRequestUrl ===
-
-// Module 6439 (isSentryRequestUrl)
 arg5.isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
   let dsn = getDsn;
   if (getDsn) {

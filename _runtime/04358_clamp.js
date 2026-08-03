@@ -1,6 +1,3 @@
-// === Module 4358: clamp ===
-
-// Module 4358 (clamp)
 
 export default function clamp(arg0, arg1, arg2) {
   let tmp = arg2;

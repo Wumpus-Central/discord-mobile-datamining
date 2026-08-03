@@ -1,6 +1,3 @@
-// === Module 11890: registerAsset ===
-
-// Module 11890 (registerAsset)
 import registerAsset from "registerAsset";
 
 

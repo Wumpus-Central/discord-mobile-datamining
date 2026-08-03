@@ -1,6 +1,3 @@
-// === Module 1533: useIsFocused ===
-
-// Module 1533 (useIsFocused)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useState } from "noop";

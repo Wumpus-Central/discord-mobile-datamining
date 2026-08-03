@@ -1,6 +1,3 @@
-// === Module 521: v35 ===
-
-// Module 521 (v35)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

@@ -1,6 +1,3 @@
-// === Module 269: notifyMutationObservers ===
-
-// Module 269 (notifyMutationObservers)
 import _slicedToArray from "_slicedToArray";
 import { createMutationRecord } from "MutationRecord";
 

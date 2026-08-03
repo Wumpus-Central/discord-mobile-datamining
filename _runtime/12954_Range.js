@@ -1,6 +1,3 @@
-// === Module 12954: Range ===
-
-// Module 12954 (Range)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

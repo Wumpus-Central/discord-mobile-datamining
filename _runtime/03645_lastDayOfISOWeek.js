@@ -1,6 +1,3 @@
-// === Module 3645: lastDayOfISOWeek ===
-
-// Module 3645 (lastDayOfISOWeek)
 import lastDayOfWeek from "lastDayOfWeek";
 import requiredArgs from "requiredArgs";
 

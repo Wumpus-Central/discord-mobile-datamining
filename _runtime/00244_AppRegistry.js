@@ -1,6 +1,3 @@
-// === Module 244: AppRegistry ===
-
-// Module 244 (AppRegistry)
 import importAllResult from "map";
 
 require("map").registerComponent("LogBox", () => function NoOp() {

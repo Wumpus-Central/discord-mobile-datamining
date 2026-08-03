@@ -1,6 +1,3 @@
-// === Module 1957: buildMatchPatternFn ===
-
-// Module 1957 (buildMatchPatternFn)
 
 export default function buildMatchPatternFn(arg0) {
   let closure_0 = arg0;

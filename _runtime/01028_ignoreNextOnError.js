@@ -1,6 +1,3 @@
-// === Module 1028: ignoreNextOnError ===
-
-// Module 1028 (ignoreNextOnError)
 function ignoreNextOnError() {
   closure_2 = closure_2 + 1;
   const timerId = setTimeout(() => {

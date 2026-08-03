@@ -1,6 +1,3 @@
-// === Module 1408: isBuffer ===
-
-// Module 1408 (isBuffer)
 
 export default function isBuffer(copy) {
   let tmp = copy;

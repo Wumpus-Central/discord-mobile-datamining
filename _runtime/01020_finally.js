@@ -1,6 +1,3 @@
-// === Module 1020: finally ===
-
-// Module 1020 (finally)
 require("noop").prototype.finally = function(arg0) {
   let closure_0 = arg0;
   return this.then((arg0) => {

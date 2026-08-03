@@ -1,6 +1,3 @@
-// === Module 600: arrayEach ===
-
-// Module 600 (arrayEach)
 
 export default function arrayEach(arg0, arg1) {
   let num = 0;

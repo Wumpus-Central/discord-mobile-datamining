@@ -1,6 +1,3 @@
-// === Module 6036: Iterator ===
-
-// Module 6036 (Iterator)
 class TreeBase {
   constructor() {
     return;

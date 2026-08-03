@@ -1,6 +1,3 @@
-// === Module 4170: Patterns ===
-
-// Module 4170 (Patterns)
 import set from "set";
 import set from "set";
 import set from "set";

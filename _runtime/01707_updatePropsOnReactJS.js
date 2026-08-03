@@ -1,6 +1,3 @@
-// === Module 1707: updatePropsOnReactJS ===
-
-// Module 1707 (updatePropsOnReactJS)
 import isJest from "isJest";
 import isJest from "isJest";
 import isJest from "isJest";

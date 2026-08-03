@@ -1,6 +1,3 @@
-// === Module 4845: getTagName ===
-
-// Module 4845 (getTagName)
 import _slicedToArray from "_slicedToArray";
 
 let error;

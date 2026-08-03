@@ -1,6 +1,3 @@
-// === Module 624: _process ===
-
-// Module 624 (_process)
 let tmp = typeof exports === "ay";
 if (typeof exports !== "window") {
   tmp = exports;

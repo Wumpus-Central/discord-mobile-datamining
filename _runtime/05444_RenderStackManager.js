@@ -1,6 +1,3 @@
-// === Module 5444: RenderStackManager ===
-
-// Module 5444 (RenderStackManager)
 import RenderStackManager from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 

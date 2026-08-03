@@ -1,6 +1,3 @@
-// === Module 364: bezier ===
-
-// Module 364 (bezier)
 const require = arg1;
 const dependencyMap = arg6;
 const obj = {

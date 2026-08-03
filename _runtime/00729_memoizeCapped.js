@@ -1,6 +1,3 @@
-// === Module 729: memoizeCapped ===
-
-// Module 729 (memoizeCapped)
 import memoizeCapped from "memoizeCapped";
 
 const re0 = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;

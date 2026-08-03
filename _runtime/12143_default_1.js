@@ -1,6 +1,3 @@
-// === Module 12143: default_1 ===
-
-// Module 12143 (default_1)
 import mergeDefs from "mergeDefs";
 
 let fn = this;

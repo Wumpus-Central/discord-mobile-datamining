@@ -1,6 +1,3 @@
-// === Module 3459: differenceInCalendarQuarters ===
-
-// Module 3459 (differenceInCalendarQuarters)
 import getQuarter from "getQuarter";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

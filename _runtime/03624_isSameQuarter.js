@@ -1,6 +1,3 @@
-// === Module 3624: isSameQuarter ===
-
-// Module 3624 (isSameQuarter)
 import startOfQuarter from "startOfQuarter";
 import requiredArgs from "requiredArgs";
 

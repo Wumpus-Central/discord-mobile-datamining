@@ -1,6 +1,3 @@
-// === Module 3574: _typeof ===
-
-// Module 3574 (_typeof)
 import code from "code";
 import subMilliseconds from "subMilliseconds";
 import _typeof from "_typeof";

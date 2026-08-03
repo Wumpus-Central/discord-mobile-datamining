@@ -1,6 +1,3 @@
-// === Module 1777: convertLrgbToOklab ===
-
-// Module 1777 (convertLrgbToOklab)
 const module = arg2;
 const dependencyMap = arg6;
 function convertLrgbToOklab(convert) {

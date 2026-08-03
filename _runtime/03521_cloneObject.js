@@ -1,6 +1,3 @@
-// === Module 3521: cloneObject ===
-
-// Module 3521 (cloneObject)
 import assign from "assign";
 
 if (!assign) {

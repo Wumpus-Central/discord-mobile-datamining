@@ -1,6 +1,3 @@
-// === Module 13411: ? ===
-
-// Module 13411
 
 export default (arg0, arg1) => {
   let tmp4;

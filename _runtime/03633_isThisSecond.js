@@ -1,6 +1,3 @@
-// === Module 3633: isThisSecond ===
-
-// Module 3633 (isThisSecond)
 import isSameSecond from "isSameSecond";
 import requiredArgs from "requiredArgs";
 

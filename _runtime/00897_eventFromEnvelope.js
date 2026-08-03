@@ -1,6 +1,3 @@
-// === Module 897: eventFromEnvelope ===
-
-// Module 897 (eventFromEnvelope)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function eventFromEnvelope(arg0, arg1) {

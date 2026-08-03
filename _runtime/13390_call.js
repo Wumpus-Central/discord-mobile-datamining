@@ -1,6 +1,3 @@
-// === Module 13390: call ===
-
-// Module 13390 (call)
 let closure_0 = require("call")({}.toString);
 let closure_1 = require("call")("".slice);
 

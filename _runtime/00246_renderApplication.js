@@ -1,6 +1,3 @@
-// === Module 246: renderApplication ===
-
-// Module 246 (renderApplication)
 import noop from "noop";
 import module_247 from "module_247";
 import { jsx } from "jsxProd";

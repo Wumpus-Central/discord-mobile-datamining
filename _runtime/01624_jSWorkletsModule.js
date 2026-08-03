@@ -1,6 +1,3 @@
-// === Module 1624: jSWorkletsModule ===
-
-// Module 1624 (jSWorkletsModule)
 import isJest from "isJest";
 
 if (isJest.shouldBeUseWeb()) {

@@ -1,6 +1,3 @@
-// === Module 4168: useHaptics ===
-
-// Module 4168 (useHaptics)
 import { useMemo } from "noop";
 
 

@@ -1,6 +1,3 @@
-// === Module 628: isIndex ===
-
-// Module 628 (isIndex)
 const re0 = /^(?:0|[1-9]\d*)$/;
 
 export default function isIndex(arg0, arg1) {

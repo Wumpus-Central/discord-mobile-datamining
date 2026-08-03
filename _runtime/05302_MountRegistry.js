@@ -1,6 +1,3 @@
-// === Module 5302: MountRegistry ===
-
-// Module 5302 (MountRegistry)
 import MountRegistry from "_classCallCheck";
 
 class MountRegistry {

@@ -1,6 +1,3 @@
-// === Module 1103: buildLaunchDarklyFlagUsedHandler ===
-
-// Module 1103 (buildLaunchDarklyFlagUsedHandler)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

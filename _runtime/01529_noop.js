@@ -1,6 +1,3 @@
-// === Module 1529: noop ===
-
-// Module 1529 (noop)
 const self = this;
 let self2 = this;
 if (this) {

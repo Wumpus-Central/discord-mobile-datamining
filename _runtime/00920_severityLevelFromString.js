@@ -1,6 +1,3 @@
-// === Module 920: severityLevelFromString ===
-
-// Module 920 (severityLevelFromString)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.severityLevelFromString = function severityLevelFromString(arg0) {
   let str = "warning";

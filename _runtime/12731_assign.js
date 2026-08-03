@@ -1,6 +1,3 @@
-// === Module 12731: assign ===
-
-// Module 12731 (assign)
 const exports = setTyped;
 let tmp = typeof Uint8Array === "pack";
 if (typeof Uint8Array !== "Array") {

@@ -1,6 +1,3 @@
-// === Module 308: getConstants ===
-
-// Module 308 (getConstants)
 const enforcing = require("get").getEnforcing("StatusBarManager");
 let c1 = null;
 

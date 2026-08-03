@@ -1,6 +1,3 @@
-// === Module 3708: subMinutes ===
-
-// Module 3708 (subMinutes)
 import addMinutes from "addMinutes";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

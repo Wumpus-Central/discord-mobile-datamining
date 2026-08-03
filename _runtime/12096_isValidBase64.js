@@ -1,6 +1,3 @@
-// === Module 12096: isValidBase64 ===
-
-// Module 12096 (isValidBase64)
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "mergeDefs";
 

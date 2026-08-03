@@ -1,6 +1,3 @@
-// === Module 1541: useOnRouteFocus ===
-
-// Module 1541 (useOnRouteFocus)
 import noop from "noop";
 
 

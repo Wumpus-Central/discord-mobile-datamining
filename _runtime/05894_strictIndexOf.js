@@ -1,6 +1,3 @@
-// === Module 5894: strictIndexOf ===
-
-// Module 5894 (strictIndexOf)
 
 export default function strictIndexOf(arg0, arg1, arg2) {
   let sum = arg2 - 1 + 1;

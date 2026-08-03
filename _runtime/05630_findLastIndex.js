@@ -1,6 +1,3 @@
-// === Module 5630: findLastIndex ===
-
-// Module 5630 (findLastIndex)
 arg5.default = function findLastIndex(arg0, arg1) {
   let diff = arg0.length - 1;
   if (0 <= diff) {

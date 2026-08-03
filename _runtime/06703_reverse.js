@@ -1,6 +1,3 @@
-// === Module 6703: reverse ===
-
-// Module 6703 (reverse)
 
 export default function reverse(arg0) {
   if (null == arg0) {

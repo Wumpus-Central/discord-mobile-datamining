@@ -1,6 +1,3 @@
-// === Module 138: ReactNativeDocumentElementInstanceHandleImpl ===
-
-// Module 138 (ReactNativeDocumentElementInstanceHandleImpl)
 import _classCallCheck from "_classCallCheck";
 
 class ReactNativeDocumentElementInstanceHandleImpl {

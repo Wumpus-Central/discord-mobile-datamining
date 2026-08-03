@@ -1,6 +1,3 @@
-// === Module 13297: __exportStarResult6 ===
-
-// Module 13297 (__exportStarResult6)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.GetStringOrBooleanOption = function GetStringOrBooleanOption(result1, useGrouping, arg2, always, arg4, arg5) {

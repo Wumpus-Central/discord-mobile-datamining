@@ -1,6 +1,3 @@
-// === Module 8893: number ===
-
-// Module 8893 (number)
 function number(NumberResult) {
   const error = new Error("positive integer expected, not " + NumberResult);
   throw error;

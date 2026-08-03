@@ -1,6 +1,3 @@
-// === Module 3480: eachMinuteOfInterval ===
-
-// Module 3480 (eachMinuteOfInterval)
 import addMinutes from "addMinutes";
 import _typeof from "_typeof";
 import startOfMinute from "startOfMinute";

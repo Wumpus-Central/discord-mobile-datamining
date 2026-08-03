@@ -1,6 +1,3 @@
-// === Module 1490: openDrawer ===
-
-// Module 1490 (openDrawer)
 let obj = {};
 let merged = Object.assign(require("getRouteHistory").TabActions);
 obj.openDrawer = function openDrawer() {

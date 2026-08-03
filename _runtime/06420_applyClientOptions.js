@@ -1,6 +1,3 @@
-// === Module 6420: applyClientOptions ===
-
-// Module 6420 (applyClientOptions)
 const require = arg1;
 const dependencyMap = arg6;
 function applyClientOptions(environment, environment2) {

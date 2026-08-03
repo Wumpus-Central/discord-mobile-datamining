@@ -1,6 +1,3 @@
-// === Module 13391: ? ===
-
-// Module 13391
 
 export default (arg0) => {
   if (require(13392)(arg0)) {

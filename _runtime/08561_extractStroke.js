@@ -1,6 +1,3 @@
-// === Module 8561: extractStroke ===
-
-// Module 8561 (extractStroke)
 const module = arg2;
 const dependencyMap = arg6;
 let closure_2 = { butt: 0, square: 2, round: 1 };

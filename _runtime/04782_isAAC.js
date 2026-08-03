@@ -1,6 +1,3 @@
-// === Module 4782: isAAC ===
-
-// Module 4782 (isAAC)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isAAC = undefined;

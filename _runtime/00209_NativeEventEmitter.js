@@ -1,6 +1,3 @@
-// === Module 209: NativeEventEmitter ===
-
-// Module 209 (NativeEventEmitter)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

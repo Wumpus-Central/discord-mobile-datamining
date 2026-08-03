@@ -1,6 +1,3 @@
-// === Module 626: baseIsTypedArray ===
-
-// Module 626 (baseIsTypedArray)
 const obj = {};
 obj["[object Uint32Array]"] = true;
 obj["[object Uint16Array]"] = true;

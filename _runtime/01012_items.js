@@ -1,6 +1,3 @@
-// === Module 1012: items ===
-
-// Module 1012 (items)
 let items = [];
 let num = 0;
 do {

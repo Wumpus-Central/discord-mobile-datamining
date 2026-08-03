@@ -1,6 +1,3 @@
-// === Module 5339: _isNativeReflectConstruct ===
-
-// Module 5339 (_isNativeReflectConstruct)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

@@ -1,6 +1,3 @@
-// === Module 1196: isModalSupported ===
-
-// Module 1196 (isModalSupported)
 import { Alert } from "get ActivityIndicator";
 
 

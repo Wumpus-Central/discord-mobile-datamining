@@ -1,6 +1,3 @@
-// === Module 1171: primitiveTagIntegration ===
-
-// Module 1171 (primitiveTagIntegration)
 const require = arg1;
 const dependencyMap = arg6;
 const PrimitiveTagIntegration = "PrimitiveTagIntegration";

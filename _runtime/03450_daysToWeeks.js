@@ -1,6 +1,3 @@
-// === Module 3450: daysToWeeks ===
-
-// Module 3450 (daysToWeeks)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

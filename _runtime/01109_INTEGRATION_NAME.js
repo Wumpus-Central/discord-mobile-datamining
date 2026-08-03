@@ -1,6 +1,3 @@
-// === Module 1109: INTEGRATION_NAME ===
-
-// Module 1109 (INTEGRATION_NAME)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

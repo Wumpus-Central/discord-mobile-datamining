@@ -1,6 +1,3 @@
-// === Module 3391: formatDistance ===
-
-// Module 3391 (formatDistance)
 const obj = {
   lessThanXSeconds: (arg0, addSuffix) => {
     if (null != addSuffix) {

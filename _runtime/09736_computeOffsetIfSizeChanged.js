@@ -1,6 +1,3 @@
-// === Module 9736: computeOffsetIfSizeChanged ===
-
-// Module 9736 (computeOffsetIfSizeChanged)
 function computeOffsetIfSizeChanged(handlerOffset) {
   return handlerOffset.handlerOffset / handlerOffset.prevSize * handlerOffset.size;
 }

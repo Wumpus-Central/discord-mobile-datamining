@@ -1,6 +1,3 @@
-// === Module 20: noop ===
-
-// Module 20 (noop)
 class Component {
   constructor(arg0, arg1, arg2) {
     obj = { props: arg0, context: arg1, refs: Object };

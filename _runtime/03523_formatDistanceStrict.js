@@ -1,6 +1,3 @@
-// === Module 3523: formatDistanceStrict ===
-
-// Module 3523 (formatDistanceStrict)
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";
 import compareAsc from "compareAsc";
 import _typeof from "_typeof";

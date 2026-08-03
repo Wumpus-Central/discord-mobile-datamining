@@ -1,6 +1,3 @@
-// === Module 1018: done ===
-
-// Module 1018 (done)
 require("noop").prototype.done = function(arg0, arg1) {
   const self = this;
   let self2 = this;

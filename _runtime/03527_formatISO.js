@@ -1,6 +1,3 @@
-// === Module 3527: formatISO ===
-
-// Module 3527 (formatISO)
 import _typeof from "_typeof";
 import addLeadingZeros from "addLeadingZeros";
 import requiredArgs from "requiredArgs";

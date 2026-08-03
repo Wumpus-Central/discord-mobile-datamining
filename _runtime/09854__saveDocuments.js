@@ -1,6 +1,3 @@
-// === Module 9854: _saveDocuments ===
-
-// Module 9854 (_saveDocuments)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Platform } from "get ActivityIndicator";
 

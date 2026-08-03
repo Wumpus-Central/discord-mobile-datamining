@@ -1,6 +1,3 @@
-// === Module 3552: getUnixTime ===
-
-// Module 3552 (getUnixTime)
 import getTime from "getTime";
 import requiredArgs from "requiredArgs";
 

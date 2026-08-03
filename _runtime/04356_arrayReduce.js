@@ -1,6 +1,3 @@
-// === Module 4356: arrayReduce ===
-
-// Module 4356 (arrayReduce)
 
 export default function arrayReduce(arg0, arg1, arg2, arg3) {
   let num = 0;

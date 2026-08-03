@@ -1,6 +1,3 @@
-// === Module 1658: linear ===
-
-// Module 1658 (linear)
 import importDefaultResult from "_slicedToArray";
 
 const require = arg1;

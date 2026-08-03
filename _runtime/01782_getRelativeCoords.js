@@ -1,6 +1,3 @@
-// === Module 1782: getRelativeCoords ===
-
-// Module 1782 (getRelativeCoords)
 const require = arg1;
 const dependencyMap = arg6;
 function getRelativeCoords(arg0, arg1, arg2) {

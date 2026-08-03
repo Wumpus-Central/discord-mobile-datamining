@@ -1,6 +1,3 @@
-// === Module 236: MessageQueue ===
-
-// Module 236 (MessageQueue)
 let closure_0 = global;
 closure_0 = undefined;
 if (true === global.RN$Bridgeless) {

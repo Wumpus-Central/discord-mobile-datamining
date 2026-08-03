@@ -1,6 +1,3 @@
-// === Module 18: ActivityIndicator ===
-
-// Module 18 (ActivityIndicator)
 import "noop";
 import { jsx } from "jsxProd";
 import { default as ProgressBarAndroid } from "ProgressBarAndroid";

@@ -1,6 +1,3 @@
-// === Module 1538: useFocusEvents ===
-
-// Module 1538 (useFocusEvents)
 import noop from "noop";
 
 

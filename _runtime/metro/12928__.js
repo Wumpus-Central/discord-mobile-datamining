@@ -1,6 +1,3 @@
-// === Module 12928: ? ===
-
-// Module 12928
 if (typeof process !== "window") {
   const _process3 = process;
   if (process.env) {

@@ -1,6 +1,3 @@
-// === Module 16109: ? ===
-
-// Module 16109
 globalThis.IntlMessageFormat.__addLocaleData({
   locale: "hi",
   pluralRuleFunction(arg0, arg1) {

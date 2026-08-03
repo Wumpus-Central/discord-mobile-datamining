@@ -1,6 +1,3 @@
-// === Module 3660: nextDay ===
-
-// Module 3660 (nextDay)
 import addDays from "addDays";
 import getDay from "getDay";
 import requiredArgs from "requiredArgs";

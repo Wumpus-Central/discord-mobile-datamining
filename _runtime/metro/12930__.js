@@ -1,6 +1,3 @@
-// === Module 12930: ? ===
-
-// Module 12930
 const re0 = /^[0-9]+$/;
 
 export default {

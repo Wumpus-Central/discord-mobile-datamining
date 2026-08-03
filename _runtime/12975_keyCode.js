@@ -1,6 +1,3 @@
-// === Module 12975: keyCode ===
-
-// Module 12975 (keyCode)
 let num2;
 let num3;
 let num4;

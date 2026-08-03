@@ -1,6 +1,3 @@
-// === Module 13460: ? ===
-
-// Module 13460
 
 export default {
   isASCIIDigit(arg0) {

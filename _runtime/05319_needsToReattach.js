@@ -1,6 +1,3 @@
-// === Module 5319: needsToReattach ===
-
-// Module 5319 (needsToReattach)
 arg5.needsToReattach = function needsToReattach(closure_1, closure_2) {
   if (closure_2.length !== closure_1.attachedGestures.length) {
     return true;

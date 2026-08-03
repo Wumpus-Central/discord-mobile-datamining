@@ -1,6 +1,3 @@
-// === Module 4437: Type ===
-
-// Module 4437 (Type)
 
 export default function Type(arg0) {
   let str = "Null";

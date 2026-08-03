@@ -1,6 +1,3 @@
-// === Module 1758: useSharedValue ===
-
-// Module 1758 (useSharedValue)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

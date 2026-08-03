@@ -1,6 +1,3 @@
-// === Module 958: ? ===
-
-// Module 958
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE = "anthropic.response.timestamp";
 arg5.GEN_AI_AGENT_NAME_ATTRIBUTE = "gen_ai.agent.name";

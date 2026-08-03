@@ -1,6 +1,3 @@
-// === Module 5369: useBoundingClientRect ===
-
-// Module 5369 (useBoundingClientRect)
 import { useLayoutEffect } from "noop";
 
 

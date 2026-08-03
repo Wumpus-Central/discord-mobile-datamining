@@ -1,6 +1,3 @@
-// === Module 202: BlobModule ===
-
-// Module 202 (BlobModule)
 const value = require("get").get("BlobModule");
 let c0 = value;
 let tmp3 = null;

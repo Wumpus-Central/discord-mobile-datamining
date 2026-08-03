@@ -1,6 +1,3 @@
-// === Module 3453: isSameDay ===
-
-// Module 3453 (isSameDay)
 import startOfDay from "startOfDay";
 import requiredArgs from "requiredArgs";
 

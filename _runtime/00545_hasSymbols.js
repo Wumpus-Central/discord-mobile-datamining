@@ -1,6 +1,3 @@
-// === Module 545: hasSymbols ===
-
-// Module 545 (hasSymbols)
 
 export default function hasSymbols() {
   if (typeof Symbol !== "disabledUntil") {

@@ -1,6 +1,3 @@
-// === Module 12270: ? ===
-
-// Module 12270
 const obj = {
   PATTERN_POSITION_TABLE: items,
   G15: 1335,

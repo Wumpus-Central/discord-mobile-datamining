@@ -1,6 +1,3 @@
-// === Module 105: ? ===
-
-// Module 105
 import weakSet from "weakSet";
 import weakSet from "weakSet";
 

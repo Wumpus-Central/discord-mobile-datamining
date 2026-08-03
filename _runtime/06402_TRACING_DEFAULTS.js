@@ -1,6 +1,3 @@
-// === Module 6402: TRACING_DEFAULTS ===
-
-// Module 6402 (TRACING_DEFAULTS)
 import _toArray from "_toArray";
 
 let obj = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };

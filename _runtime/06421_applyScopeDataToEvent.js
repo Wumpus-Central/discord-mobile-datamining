@@ -1,6 +1,3 @@
-// === Module 6421: applyScopeDataToEvent ===
-
-// Module 6421 (applyScopeDataToEvent)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.applyScopeDataToEvent = function applyScopeDataToEvent(extra) {

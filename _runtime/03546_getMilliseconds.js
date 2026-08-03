@@ -1,6 +1,3 @@
-// === Module 3546: getMilliseconds ===
-
-// Module 3546 (getMilliseconds)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

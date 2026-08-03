@@ -1,6 +1,3 @@
-// === Module 3696: setSeconds ===
-
-// Module 3696 (setSeconds)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

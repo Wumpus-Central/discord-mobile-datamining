@@ -1,6 +1,3 @@
-// === Module 1653: Sensor ===
-
-// Module 1653 (Sensor)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

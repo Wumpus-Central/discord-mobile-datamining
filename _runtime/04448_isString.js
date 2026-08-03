@@ -1,6 +1,3 @@
-// === Module 4448: isString ===
-
-// Module 4448 (isString)
 let closure_0 = require("callBoundIntrinsic")("String.prototype.valueOf");
 let closure_1 = require("callBoundIntrinsic")("Object.prototype.toString");
 let closure_2 = require("hasToStringTagShams")();

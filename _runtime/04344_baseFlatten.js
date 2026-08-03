@@ -1,6 +1,3 @@
-// === Module 4344: baseFlatten ===
-
-// Module 4344 (baseFlatten)
 function baseFlatten(arg0, arg1, arg2, arg3, arg4) {
   let tmp = arg2;
   if (!arg2) {

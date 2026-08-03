@@ -1,6 +1,3 @@
-// === Module 6426: isErrorEvent ===
-
-// Module 6426 (isErrorEvent)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

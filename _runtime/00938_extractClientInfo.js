@@ -1,6 +1,3 @@
-// === Module 938: extractClientInfo ===
-
-// Module 938 (extractClientInfo)
 const require = arg1;
 const dependencyMap = arg6;
 function extractClientInfo(requestInfo) {

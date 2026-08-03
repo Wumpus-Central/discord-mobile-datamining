@@ -1,6 +1,3 @@
-// === Module 5481: Cancellable ===
-
-// Module 5481 (Cancellable)
 import Cancellable from "_classCallCheck";
 
 class Cancellable {

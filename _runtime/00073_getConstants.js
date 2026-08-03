@@ -1,6 +1,3 @@
-// === Module 73: getConstants ===
-
-// Module 73 (getConstants)
 import merged from "UIManager";
 
 const require = arg1;

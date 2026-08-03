@@ -1,6 +1,3 @@
-// === Module 3449: compareDesc ===
-
-// Module 3449 (compareDesc)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

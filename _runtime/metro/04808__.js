@@ -1,6 +1,3 @@
-// === Module 4808: ? ===
-
-// Module 4808
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

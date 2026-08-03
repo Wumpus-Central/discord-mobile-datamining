@@ -1,6 +1,3 @@
-// === Module 1731: _isNativeReflectConstruct ===
-
-// Module 1731 (_isNativeReflectConstruct)
 import SlideOutDown from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

@@ -1,6 +1,3 @@
-// === Module 13347: ToIntlMathematicalValue ===
-
-// Module 13347 (ToIntlMathematicalValue)
 import e from "e";
 import digitsToString from "digitsToString";
 

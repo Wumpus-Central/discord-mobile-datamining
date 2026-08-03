@@ -1,6 +1,3 @@
-// === Module 14234: thumbHashToRGBA ===
-
-// Module 14234 (thumbHashToRGBA)
 import _slicedToArray from "_slicedToArray";
 
 function thumbHashToRGBA(arg0) {

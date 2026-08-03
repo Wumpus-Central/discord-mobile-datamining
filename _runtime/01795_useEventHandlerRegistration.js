@@ -1,6 +1,3 @@
-// === Module 1795: useEventHandlerRegistration ===
-
-// Module 1795 (useEventHandlerRegistration)
 import { useRef } from "noop";
 import { Animated } from "get ActivityIndicator";
 

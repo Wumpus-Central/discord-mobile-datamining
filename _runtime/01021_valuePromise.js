@@ -1,6 +1,3 @@
-// === Module 1021: valuePromise ===
-
-// Module 1021 (valuePromise)
 import noop from "noop";
 import noop from "noop";
 import noop from "noop";

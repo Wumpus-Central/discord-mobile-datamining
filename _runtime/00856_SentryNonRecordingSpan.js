@@ -1,6 +1,3 @@
-// === Module 856: SentryNonRecordingSpan ===
-
-// Module 856 (SentryNonRecordingSpan)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

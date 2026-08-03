@@ -1,6 +1,3 @@
-// === Module 1667: FlipInData ===
-
-// Module 1667 (FlipInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";

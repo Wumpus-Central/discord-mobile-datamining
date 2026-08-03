@@ -1,6 +1,3 @@
-// === Module 1772: JsPerformance ===
-
-// Module 1772 (JsPerformance)
 import noop from "noop";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

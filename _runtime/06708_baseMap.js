@@ -1,6 +1,3 @@
-// === Module 6708: baseMap ===
-
-// Module 6708 (baseMap)
 
 export default function baseMap(arg0, arg1) {
   const _require = arg1;

@@ -1,6 +1,3 @@
-// === Module 192: parseHermesStack ===
-
-// Module 192 (parseHermesStack)
 const re0 = /^ {4}at (.+?)(?: \((native)\)?| \((address at )?(.*?):(\d+):(\d+)\))$/;
 const re1 = /^ {4}... skipping (\d+) frames$/;
 const re2 = /^ {4}at .*$/;

@@ -1,6 +1,3 @@
-// === Module 5588: getDefaultHeaderHeight ===
-
-// Module 5588 (getDefaultHeaderHeight)
 import { Platform } from "get ActivityIndicator";
 
 

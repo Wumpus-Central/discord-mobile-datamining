@@ -1,6 +1,3 @@
-// === Module 4026: num2 ===
-
-// Module 4026 (num2)
 class A {
   constructor(arg0) {
     tmp = undefined;

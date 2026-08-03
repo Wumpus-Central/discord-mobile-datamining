@@ -1,6 +1,3 @@
-// === Module 3566: isAfter ===
-
-// Module 3566 (isAfter)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

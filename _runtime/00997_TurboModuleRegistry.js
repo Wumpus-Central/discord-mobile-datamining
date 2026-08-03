@@ -1,6 +1,3 @@
-// === Module 997: TurboModuleRegistry ===
-
-// Module 997 (TurboModuleRegistry)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let AppRegistry;

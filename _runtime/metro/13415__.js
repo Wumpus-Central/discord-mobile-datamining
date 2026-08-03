@@ -1,6 +1,3 @@
-// === Module 13415: ? ===
-
-// Module 13415
 
 export default (arg0, arg1) => {
   if ("string" === arg1) {

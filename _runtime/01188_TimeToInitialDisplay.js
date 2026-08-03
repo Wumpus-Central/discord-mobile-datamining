@@ -1,6 +1,3 @@
-// === Module 1188: TimeToInitialDisplay ===
-
-// Module 1188 (TimeToInitialDisplay)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useState } from "noop";

@@ -1,6 +1,3 @@
-// === Module 1323: isOneofGroup ===
-
-// Module 1323 (isOneofGroup)
 arg5.isOneofGroup = undefined;
 arg5.getOneofValue = undefined;
 arg5.setOneofValue = undefined;

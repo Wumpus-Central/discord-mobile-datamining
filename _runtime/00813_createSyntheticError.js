@@ -1,6 +1,3 @@
-// === Module 813: createSyntheticError ===
-
-// Module 813 (createSyntheticError)
 arg5.createSyntheticError = function createSyntheticError() {
   let num = arg0;
   if (arg0 === undefined) {

@@ -1,6 +1,3 @@
-// === Module 1493: getPartialState ===
-
-// Module 1493 (getPartialState)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";

@@ -1,6 +1,3 @@
-// === Module 3589: _typeof ===
-
-// Module 3589 (_typeof)
 import setUTCWeek from "setUTCWeek";
 import startOfUTCWeek from "startOfUTCWeek";
 import { Parser } from "Parser";

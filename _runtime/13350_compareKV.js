@@ -1,6 +1,3 @@
-// === Module 13350: compareKV ===
-
-// Module 13350 (compareKV)
 const require = arg1;
 const dependencyMap = arg6;
 function compareKV(arg0, arg1) {

@@ -1,6 +1,3 @@
-// === Module 1098: _push ===
-
-// Module 1098 (_push)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _push(arg0, arg1, arg2) {

@@ -1,6 +1,3 @@
-// === Module 147: deepDiffer ===
-
-// Module 147 (deepDiffer)
 function deepDiffer(name, name2, arg2, arg3) {
   let num = arg2;
   if (arg2 === undefined) {

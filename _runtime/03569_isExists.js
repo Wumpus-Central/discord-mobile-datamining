@@ -1,6 +1,3 @@
-// === Module 3569: isExists ===
-
-// Module 3569 (isExists)
 
 export default function isExists(arg0, arg1, arg2) {
   if (arguments.length < 3) {

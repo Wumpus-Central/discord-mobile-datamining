@@ -1,6 +1,3 @@
-// === Module 1659: calcBezier ===
-
-// Module 1659 (calcBezier)
 const require = arg1;
 let dependencyMap = arg6;
 let c2 = 0.001;

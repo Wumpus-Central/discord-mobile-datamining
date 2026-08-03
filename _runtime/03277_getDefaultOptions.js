@@ -1,6 +1,3 @@
-// === Module 3277: getDefaultOptions ===
-
-// Module 3277 (getDefaultOptions)
 arg5.getDefaultOptions = function getDefaultOptions() {
   return closure_0;
 };

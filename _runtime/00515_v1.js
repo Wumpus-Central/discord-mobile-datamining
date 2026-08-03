@@ -1,6 +1,3 @@
-// === Module 515: v1 ===
-
-// Module 515 (v1)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

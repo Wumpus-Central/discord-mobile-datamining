@@ -1,6 +1,3 @@
-// === Module 16076: extend ===
-
-// Module 16076 (extend)
 const require = arg1;
 const dependencyMap = arg6;
 let tmp = (() => {

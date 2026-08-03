@@ -1,6 +1,3 @@
-// === Module 5362: t ===
-
-// Module 5362 (t)
 const fn = function t(arg0, arg1, arr) {
   let closure_0 = arg0 + 0.2 * arg1;
   let closure_1 = min.apply(null, arr.map((arg0) => Math.abs(closure_0 - arg0)));

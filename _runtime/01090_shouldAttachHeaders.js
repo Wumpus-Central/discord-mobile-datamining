@@ -1,6 +1,3 @@
-// === Module 1090: shouldAttachHeaders ===
-
-// Module 1090 (shouldAttachHeaders)
 const require = arg1;
 const dependencyMap = arg6;
 function shouldAttachHeaders(str) {

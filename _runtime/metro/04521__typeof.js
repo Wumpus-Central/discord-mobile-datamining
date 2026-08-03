@@ -1,6 +1,3 @@
-// === Module 4521: _typeof ===
-
-// Module 4521 (_typeof)
 function _typeof(arg0) {
   if (typeof Symbol !== "disabledUntil") {
     let _Symbol = Symbol;

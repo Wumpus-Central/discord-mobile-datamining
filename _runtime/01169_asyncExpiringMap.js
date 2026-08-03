@@ -1,6 +1,3 @@
-// === Module 1169: asyncExpiringMap ===
-
-// Module 1169 (asyncExpiringMap)
 let fn = this;
 if (this) {
   fn = this.__awaiter;

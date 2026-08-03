@@ -1,6 +1,3 @@
-// === Module 5615: getDistanceForDirection ===
-
-// Module 5615 (getDistanceForDirection)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function getDistanceForDirection(width) {

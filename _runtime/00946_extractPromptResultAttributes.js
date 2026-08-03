@@ -1,6 +1,3 @@
-// === Module 946: extractPromptResultAttributes ===
-
-// Module 946 (extractPromptResultAttributes)
 import _slicedToArray from "_slicedToArray";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

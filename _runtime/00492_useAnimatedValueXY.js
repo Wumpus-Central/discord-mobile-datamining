@@ -1,6 +1,3 @@
-// === Module 492: useAnimatedValueXY ===
-
-// Module 492 (useAnimatedValueXY)
 import { useRef } from "noop";
 
 

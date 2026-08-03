@@ -1,6 +1,3 @@
-// === Module 427: BoundingDimensions ===
-
-// Module 427 (BoundingDimensions)
 class BoundingDimensions {
   constructor(arg0, arg1) {
     return;

@@ -1,6 +1,3 @@
-// === Module 581: Emitter ===
-
-// Module 581 (Emitter)
 class Emitter {
   constructor(arg0) {
     if (global) {

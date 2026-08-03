@@ -1,6 +1,3 @@
-// === Module 1803: getLatestState ===
-
-// Module 1803 (getLatestState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

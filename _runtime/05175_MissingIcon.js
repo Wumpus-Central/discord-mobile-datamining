@@ -1,6 +1,3 @@
-// === Module 5175: MissingIcon ===
-
-// Module 5175 (MissingIcon)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

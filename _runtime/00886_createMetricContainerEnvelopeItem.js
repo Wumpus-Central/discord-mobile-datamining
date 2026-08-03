@@ -1,6 +1,3 @@
-// === Module 886: createMetricContainerEnvelopeItem ===
-
-// Module 886 (createMetricContainerEnvelopeItem)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

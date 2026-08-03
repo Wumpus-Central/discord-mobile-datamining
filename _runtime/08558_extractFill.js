@@ -1,6 +1,3 @@
-// === Module 8558: extractFill ===
-
-// Module 8558 (extractFill)
 const module = arg2;
 const dependencyMap = arg6;
 let closure_2 = { evenodd: 0, nonzero: 1 };

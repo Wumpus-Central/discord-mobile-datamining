@@ -1,6 +1,3 @@
-// === Module 6483: supportsFetch ===
-
-// Module 6483 (supportsFetch)
 const require = arg1;
 const dependencyMap = arg6;
 function supportsFetch() {

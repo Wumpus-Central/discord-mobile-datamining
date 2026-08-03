@@ -1,6 +1,3 @@
-// === Module 134: SymbolResult1 ===
-
-// Module 134 (SymbolResult1)
 const SymbolResult = Symbol("composedPath");
 let c0 = SymbolResult;
 const SymbolResult1 = Symbol("currentTarget");

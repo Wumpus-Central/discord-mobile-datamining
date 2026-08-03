@@ -1,6 +1,3 @@
-// === Module 8579: extractFeFlood ===
-
-// Module 8579 (extractFeFlood)
 import noop from "noop";
 
 const re3 = /\s+/;

@@ -1,6 +1,3 @@
-// === Module 387: createAnimatedComponent ===
-
-// Module 387 (createAnimatedComponent)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { useMemo } from "noop";

@@ -1,6 +1,3 @@
-// === Module 3957: useRiveProperty ===
-
-// Module 3957 (useRiveProperty)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

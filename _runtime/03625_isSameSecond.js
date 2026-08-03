@@ -1,6 +1,3 @@
-// === Module 3625: isSameSecond ===
-
-// Module 3625 (isSameSecond)
 import startOfSecond from "startOfSecond";
 import requiredArgs from "requiredArgs";
 

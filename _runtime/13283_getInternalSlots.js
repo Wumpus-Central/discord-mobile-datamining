@@ -1,6 +1,3 @@
-// === Module 13283: getInternalSlots ===
-
-// Module 13283 (getInternalSlots)
 arg5.default = function getInternalSlots(arg0) {
   let items = arg1;
   if (undefined === arg1) {

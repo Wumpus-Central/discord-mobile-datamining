@@ -1,6 +1,3 @@
-// === Module 4486: getEvalledConstructor ===
-
-// Module 4486 (getEvalledConstructor)
 import DefinePropertyOrThrow from "DefinePropertyOrThrow";
 
 const tmp = require("getEvalledConstructor")("%Reflect.construct%", true);

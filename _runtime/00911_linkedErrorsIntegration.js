@@ -1,6 +1,3 @@
-// === Module 911: linkedErrorsIntegration ===
-
-// Module 911 (linkedErrorsIntegration)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

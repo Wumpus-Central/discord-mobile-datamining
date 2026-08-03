@@ -1,6 +1,3 @@
-// === Module 5445: ViewabilityManager ===
-
-// Module 5445 (ViewabilityManager)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

@@ -1,6 +1,3 @@
-// === Module 389: createCompositeKeyForProps ===
-
-// Module 389 (createCompositeKeyForProps)
 import noop from "noop";
 
 let c3;

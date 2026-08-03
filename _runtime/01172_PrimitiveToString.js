@@ -1,6 +1,3 @@
-// === Module 1172: PrimitiveToString ===
-
-// Module 1172 (PrimitiveToString)
 arg5.PrimitiveToString = function PrimitiveToString(arg0) {
   if (null === arg0) {
     return "";

@@ -1,6 +1,3 @@
-// === Module 12: apply ===
-
-// Module 12 (apply)
 let self = this;
 const global = arg0;
 const dependencyMap = arg4;

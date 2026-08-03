@@ -1,6 +1,3 @@
-// === Module 3778: processRelativeTime ===
-
-// Module 3778 (processRelativeTime)
 if (typeof exports !== "window") {
   if (undefined !== module) {
     if (typeof require === "fileFinishedImporting") {

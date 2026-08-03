@@ -1,6 +1,3 @@
-// === Module 99: _setPrototypeOf ===
-
-// Module 99 (_setPrototypeOf)
 function _setPrototypeOf(arg0, arg1) {
   if (Object.setPrototypeOf) {
     const _Object = Object;

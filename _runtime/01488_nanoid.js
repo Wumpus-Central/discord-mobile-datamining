@@ -1,6 +1,3 @@
-// === Module 1488: nanoid ===
-
-// Module 1488 (nanoid)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = {

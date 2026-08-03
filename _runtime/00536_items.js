@@ -1,6 +1,3 @@
-// === Module 536: items ===
-
-// Module 536 (items)
 let items = [];
 let num = 0;
 do {

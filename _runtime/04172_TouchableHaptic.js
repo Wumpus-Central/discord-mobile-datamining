@@ -1,6 +1,3 @@
-// === Module 4172: TouchableHaptic ===
-
-// Module 4172 (TouchableHaptic)
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 8553: __INTERNAL_VIEW_CONFIG ===
-
-// Module 8553 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 let obj = { uiViewClassName: "RNSVGSvgViewAndroid", validAttributes: null };

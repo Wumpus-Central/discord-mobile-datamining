@@ -1,6 +1,3 @@
-// === Module 58: getPositionFromCSSValue ===
-
-// Module 58 (getPositionFromCSSValue)
 function getPositionFromCSSValue(mapped) {
   if (mapped.endsWith("px")) {
     const _parseFloat = parseFloat;

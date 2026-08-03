@@ -1,6 +1,3 @@
-// === Module 1058: _addMeasureSpans ===
-
-// Module 1058 (_addMeasureSpans)
 import _slicedToArray from "_slicedToArray";
 
 function _addMeasureSpans(activeSpan, entryType) {

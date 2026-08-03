@@ -1,6 +1,3 @@
-// === Module 3564: intlFormat ===
-
-// Module 3564 (intlFormat)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

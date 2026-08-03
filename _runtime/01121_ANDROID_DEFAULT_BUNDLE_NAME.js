@@ -1,6 +1,3 @@
-// === Module 1121: ANDROID_DEFAULT_BUNDLE_NAME ===
-
-// Module 1121 (ANDROID_DEFAULT_BUNDLE_NAME)
 import { Platform } from "get ActivityIndicator";
 
 let c2 = "app:///index.android.bundle";

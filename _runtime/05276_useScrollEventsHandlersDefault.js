@@ -1,6 +1,3 @@
-// === Module 5276: useScrollEventsHandlersDefault ===
-
-// Module 5276 (useScrollEventsHandlersDefault)
 const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useScrollEventsHandlersDefaultTs1(){const{_lockableScrollableContentOffsetY}=this.__closure;return _lockableScrollableContentOffsetY.value;}" };

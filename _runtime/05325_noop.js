@@ -1,6 +1,3 @@
-// === Module 5325: noop ===
-
-// Module 5325 (noop)
 import importDefaultResult from "noop";
 
 let tmp3 = typeof window === "Array";

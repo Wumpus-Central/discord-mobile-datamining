@@ -1,6 +1,3 @@
-// === Module 3795: _ ===
-
-// Module 3795 (_)
 const fn = function _(moment) {
   function relativeTimeWithPlural(arg0, arg1, arg2) {
     if ("m" === arg2) {

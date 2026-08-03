@@ -1,6 +1,3 @@
-// === Module 4615: LinearGradient ===
-
-// Module 4615 (LinearGradient)
 import { Platform } from "get ActivityIndicator";
 import importDefaultResult from "_isNativeReflectConstruct";
 

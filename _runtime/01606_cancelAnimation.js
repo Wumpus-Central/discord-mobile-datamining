@@ -1,6 +1,3 @@
-// === Module 1606: cancelAnimation ===
-
-// Module 1606 (cancelAnimation)
 import module_1607 from "module_1607";
 import overrideLogFunctionImplementation from "overrideLogFunctionImplementation";
 

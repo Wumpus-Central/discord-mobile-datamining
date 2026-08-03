@@ -1,6 +1,3 @@
-// === Module 3354: code ===
-
-// Module 3354 (code)
 import translateSeconds from "translateSeconds";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";

@@ -1,6 +1,3 @@
-// === Module 1836: t ===
-
-// Module 1836 (t)
 const require = arg1;
 const dependencyMap = arg6;
 const fn = function t(arg0, arg1, arg2) {

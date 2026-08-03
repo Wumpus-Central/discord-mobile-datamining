@@ -1,6 +1,3 @@
-// === Module 4438: isObject ===
-
-// Module 4438 (isObject)
 
 export default function isObject(arg0) {
   let tmp = arg0;

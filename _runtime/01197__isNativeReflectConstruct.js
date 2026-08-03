@@ -1,6 +1,3 @@
-// === Module 1197: _isNativeReflectConstruct ===
-
-// Module 1197 (_isNativeReflectConstruct)
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_inherits";

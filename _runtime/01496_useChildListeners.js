@@ -1,6 +1,3 @@
-// === Module 1496: useChildListeners ===
-
-// Module 1496 (useChildListeners)
 import noop from "noop";
 
 

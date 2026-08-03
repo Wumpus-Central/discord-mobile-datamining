@@ -1,6 +1,3 @@
-// === Module 229: Event ===
-
-// Module 229 (Event)
 class Event {
   constructor(arg0, arg1) {
     obj = { eventTarget: global, event: require, eventPhase: 2, currentTarget: global, canceled: false, stopped: false, immediateStopped: false, passiveListener: null, timeStamp: null };

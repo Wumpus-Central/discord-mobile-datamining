@@ -1,6 +1,3 @@
-// === Module 721: baseMatchesProperty ===
-
-// Module 721 (baseMatchesProperty)
 
 export default function baseMatchesProperty(arg0, arg1) {
   const _require = arg0;

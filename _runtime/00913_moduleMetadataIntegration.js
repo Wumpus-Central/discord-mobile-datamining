@@ -1,6 +1,3 @@
-// === Module 913: moduleMetadataIntegration ===
-
-// Module 913 (moduleMetadataIntegration)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

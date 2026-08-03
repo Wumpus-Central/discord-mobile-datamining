@@ -1,6 +1,3 @@
-// === Module 117: describeBuiltInComponentFrame ===
-
-// Module 117 (describeBuiltInComponentFrame)
 import setUpDefaltReactNativeEnvironment from "setUpDefaltReactNativeEnvironment";
 import { __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE } from "noop";
 import closure_158 from "setUpDefaltReactNativeEnvironment";

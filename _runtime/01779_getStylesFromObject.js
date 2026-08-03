@@ -1,6 +1,3 @@
-// === Module 1779: getStylesFromObject ===
-
-// Module 1779 (getStylesFromObject)
 import isJest from "isJest";
 
 let obj = { fps: 60 };

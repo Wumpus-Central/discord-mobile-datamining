@@ -1,6 +1,3 @@
-// === Module 13299: __exportStarResult8 ===
-
-// Module 13299 (__exportStarResult8)
 arg5.IsValidTimeZoneName = function IsValidTimeZoneName(str) {
   let uppercaseLinks;
   let zoneNamesFromData;

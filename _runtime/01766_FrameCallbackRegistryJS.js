@@ -1,6 +1,3 @@
-// === Module 1766: FrameCallbackRegistryJS ===
-
-// Module 1766 (FrameCallbackRegistryJS)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

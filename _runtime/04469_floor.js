@@ -1,6 +1,3 @@
-// === Module 4469: floor ===
-
-// Module 4469 (floor)
 
 export default function floor(arg0) {
   let tmp = arg0;

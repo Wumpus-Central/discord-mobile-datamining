@@ -1,6 +1,3 @@
-// === Module 354: _combineCallbacks ===
-
-// Module 354 (_combineCallbacks)
 let require = arg1;
 const module = arg2;
 let dependencyMap = arg6;

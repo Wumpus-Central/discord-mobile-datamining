@@ -1,6 +1,3 @@
-// === Module 8720: compact ===
-
-// Module 8720 (compact)
 
 export default function compact(arg0) {
   let num = 0;

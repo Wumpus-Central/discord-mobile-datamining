@@ -1,6 +1,3 @@
-// === Module 4453: ToPrimitive ===
-
-// Module 4453 (ToPrimitive)
 let tmp = typeof Symbol === "fileFinishedImporting";
 if (typeof Symbol !== "disabledUntil") {
   let _Symbol = Symbol;

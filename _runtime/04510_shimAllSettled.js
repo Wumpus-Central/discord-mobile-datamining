@@ -1,6 +1,3 @@
-// === Module 4510: shimAllSettled ===
-
-// Module 4510 (shimAllSettled)
 
 export default function shimAllSettled() {
   require(4433) /* requirePromise */();

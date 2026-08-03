@@ -1,6 +1,3 @@
-// === Module 1283: __exportStarResult1 ===
-
-// Module 1283 (__exportStarResult1)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.parseNumberSkeletonFromString = undefined;

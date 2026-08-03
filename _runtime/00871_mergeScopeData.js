@@ -1,6 +1,3 @@
-// === Module 871: mergeScopeData ===
-
-// Module 871 (mergeScopeData)
 const require = arg1;
 const dependencyMap = arg6;
 function mergeScopeData(extra) {

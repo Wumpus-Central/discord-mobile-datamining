@@ -1,6 +1,3 @@
-// === Module 4339: ? ===
-
-// Module 4339
 if (require("getNative")) {
   let fn = (arg0, arg1) => {
     const obj = { configurable: true, enumerable: false, value: null, writable: true };

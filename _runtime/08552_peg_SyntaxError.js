@@ -1,6 +1,3 @@
-// === Module 8552: peg$SyntaxError ===
-
-// Module 8552 (peg$SyntaxError)
 class peg$SyntaxError {
   constructor(arg0, arg1, arg2, arg3) {
     self = this;

@@ -1,6 +1,3 @@
-// === Module 6390: getAsyncContextStrategy ===
-
-// Module 6390 (getAsyncContextStrategy)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getAsyncContextStrategy = function getAsyncContextStrategy(arg0) {

@@ -1,6 +1,3 @@
-// === Module 9123: processFonts ===
-
-// Module 9123 (processFonts)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.processFonts = function processFonts(items) {

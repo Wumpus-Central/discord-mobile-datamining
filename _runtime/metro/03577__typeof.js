@@ -1,6 +1,3 @@
-// === Module 3577: _typeof ===
-
-// Module 3577 (_typeof)
 import { Parser } from "Parser";
 
 let _createSuperInternal = function _typeof(arg0) {

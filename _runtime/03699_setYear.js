@@ -1,6 +1,3 @@
-// === Module 3699: setYear ===
-
-// Module 3699 (setYear)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

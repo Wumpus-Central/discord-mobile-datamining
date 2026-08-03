@@ -1,6 +1,3 @@
-// === Module 132: dispatch ===
-
-// Module 132 (dispatch)
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import setPlatformObject from "setPlatformObject";

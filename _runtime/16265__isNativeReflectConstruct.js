@@ -1,6 +1,3 @@
-// === Module 16265: _isNativeReflectConstruct ===
-
-// Module 16265 (_isNativeReflectConstruct)
 import asyncGeneratorStep from "_inherits";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

@@ -1,6 +1,3 @@
-// === Module 5374: BottomSheetHostingContainer ===
-
-// Module 5374 (BottomSheetHostingContainer)
 import noop from "noop";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 5472: CompatScroller ===
-
-// Module 5472 (CompatScroller)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 

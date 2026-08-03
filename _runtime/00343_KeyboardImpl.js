@@ -1,6 +1,3 @@
-// === Module 343: KeyboardImpl ===
-
-// Module 343 (KeyboardImpl)
 import _classCallCheck from "_classCallCheck";
 
 const KeyboardImpl = importDefault;

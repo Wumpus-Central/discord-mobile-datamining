@@ -1,6 +1,3 @@
-// === Module 1165: userInteractionIntegration ===
-
-// Module 1165 (userInteractionIntegration)
 const require = arg1;
 const dependencyMap = arg6;
 const UserInteraction = "UserInteraction";

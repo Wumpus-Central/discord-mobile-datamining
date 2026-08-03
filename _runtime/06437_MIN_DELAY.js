@@ -1,6 +1,3 @@
-// === Module 6437: MIN_DELAY ===
-
-// Module 6437 (MIN_DELAY)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let c3 = 100;

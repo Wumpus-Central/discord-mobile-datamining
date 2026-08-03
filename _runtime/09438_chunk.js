@@ -1,6 +1,3 @@
-// === Module 9438: chunk ===
-
-// Module 9438 (chunk)
 
 export default function chunk(arg0, arg1, arg2) {
   let sum1;

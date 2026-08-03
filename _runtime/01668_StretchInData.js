@@ -1,6 +1,3 @@
-// === Module 1668: StretchInData ===
-
-// Module 1668 (StretchInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";

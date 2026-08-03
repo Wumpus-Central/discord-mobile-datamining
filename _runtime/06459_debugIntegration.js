@@ -1,6 +1,3 @@
-// === Module 6459: debugIntegration ===
-
-// Module 6459 (debugIntegration)
 import setupIntegration from "setupIntegration";
 
 

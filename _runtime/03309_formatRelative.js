@@ -1,6 +1,3 @@
-// === Module 3309: formatRelative ===
-
-// Module 3309 (formatRelative)
 let closure_0 = { lastWeek: "'el' eeee 'pasado a la' p", yesterday: "'ayer a la' p", today: "'hoy a la' p", tomorrow: "'ma\u00F1ana a la' p", nextWeek: "eeee 'a la' p", other: "P" };
 let closure_1 = { lastWeek: "'el' eeee 'pasado a las' p", yesterday: "'ayer a las' p", today: "'hoy a las' p", tomorrow: "'ma\u00F1ana a las' p", nextWeek: "eeee 'a las' p", other: "P" };
 

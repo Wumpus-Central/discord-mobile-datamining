@@ -1,6 +1,3 @@
-// === Module 13400: prop ===
-
-// Module 13400 (prop)
 let prop = Object.getOwnPropertySymbols;
 if (prop) {
   prop = !require("module_13385")(() => {

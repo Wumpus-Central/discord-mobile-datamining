@@ -1,6 +1,3 @@
-// === Module 931: growthbookIntegration ===
-
-// Module 931 (growthbookIntegration)
 import setupIntegration from "setupIntegration";
 
 function _wrapAndCaptureBooleanResult(arg0) {

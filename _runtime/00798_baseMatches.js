@@ -1,6 +1,3 @@
-// === Module 798: baseMatches ===
-
-// Module 798 (baseMatches)
 
 export default function baseMatches(arg0) {
   const _require = arg0;

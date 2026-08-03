@@ -1,6 +1,3 @@
-// === Module 742: toSource ===
-
-// Module 742 (toSource)
 
 export default function toSource(arg0) {
   if (null == arg0) {

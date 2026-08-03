@@ -1,6 +1,3 @@
-// === Module 734: Hash ===
-
-// Module 734 (Hash)
 class Hash {
   constructor(arg0) {
     num = 0;

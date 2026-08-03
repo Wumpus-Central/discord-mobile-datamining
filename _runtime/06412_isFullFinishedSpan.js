@@ -1,6 +1,3 @@
-// === Module 6412: isFullFinishedSpan ===
-
-// Module 6412 (isFullFinishedSpan)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

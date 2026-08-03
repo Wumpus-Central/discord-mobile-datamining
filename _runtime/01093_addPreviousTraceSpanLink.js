@@ -1,6 +1,3 @@
-// === Module 1093: addPreviousTraceSpanLink ===
-
-// Module 1093 (addPreviousTraceSpanLink)
 import "addClsInstrumentationHandler";
 import items from "items";
 import breadcrumbsIntegration from "breadcrumbsIntegration";

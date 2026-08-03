@@ -1,6 +1,3 @@
-// === Module 988: dynamicRequire ===
-
-// Module 988 (dynamicRequire)
 const require = arg1;
 let dependencyMap = arg4;
 dependencyMap = arg6;

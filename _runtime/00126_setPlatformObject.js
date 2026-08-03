@@ -1,6 +1,3 @@
-// === Module 126: setPlatformObject ===
-
-// Module 126 (setPlatformObject)
 let closure_0 = Symbol("isPlatformObject");
 let closure_1 = Symbol("clonePlatformObject");
 arg5.setPlatformObject = function setPlatformObject(importDefaultResultResult, setPlatformObject) {

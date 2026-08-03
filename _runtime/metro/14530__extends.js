@@ -1,6 +1,3 @@
-// === Module 14530: _extends ===
-
-// Module 14530 (_extends)
 function _extends() {
   if (Object.assign) {
     const _Object = Object;

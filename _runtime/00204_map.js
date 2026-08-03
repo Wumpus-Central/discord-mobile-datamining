@@ -1,6 +1,3 @@
-// === Module 204: map ===
-
-// Module 204 (map)
 const map = new Map();
 arg5.register = (arg0) => {
   const value = map.get(arg0);

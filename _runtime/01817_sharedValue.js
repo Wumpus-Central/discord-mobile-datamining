@@ -1,6 +1,3 @@
-// === Module 1817: sharedValue ===
-
-// Module 1817 (sharedValue)
 import noop from "noop";
 
 let c3;

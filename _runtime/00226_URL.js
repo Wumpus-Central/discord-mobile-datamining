@@ -1,6 +1,3 @@
-// === Module 226: URL ===
-
-// Module 226 (URL)
 import URL from "_classCallCheck";
 import importDefaultResult from "_createClass";
 

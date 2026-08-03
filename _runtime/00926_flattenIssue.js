@@ -1,6 +1,3 @@
-// === Module 926: flattenIssue ===
-
-// Module 926 (flattenIssue)
 import setupIntegration from "setupIntegration";
 
 function flattenIssue(path) {

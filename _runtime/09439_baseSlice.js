@@ -1,6 +1,3 @@
-// === Module 9439: baseSlice ===
-
-// Module 9439 (baseSlice)
 
 export default function baseSlice(arg0, arg1, arg2) {
   let tmp = arg1;

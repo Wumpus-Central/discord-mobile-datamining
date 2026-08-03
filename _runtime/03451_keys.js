@@ -1,6 +1,3 @@
-// === Module 3451: keys ===
-
-// Module 3451 (keys)
 arg5.daysInWeek = undefined;
 arg5.daysInYear = undefined;
 arg5.maxTime = undefined;

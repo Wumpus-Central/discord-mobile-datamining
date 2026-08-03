@@ -1,6 +1,3 @@
-// === Module 1812: forwardRef ===
-
-// Module 1812 (forwardRef)
 import noop from "noop";
 import closure_5 from "noop";
 import { View } from "get ActivityIndicator";

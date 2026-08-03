@@ -1,6 +1,3 @@
-// === Module 1826: items ===
-
-// Module 1826 (items)
 import "noop";
 import { useMemo } from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

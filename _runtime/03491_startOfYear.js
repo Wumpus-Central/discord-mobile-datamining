@@ -1,6 +1,3 @@
-// === Module 3491: startOfYear ===
-
-// Module 3491 (startOfYear)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

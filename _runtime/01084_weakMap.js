@@ -1,6 +1,3 @@
-// === Module 1084: weakMap ===
-
-// Module 1084 (weakMap)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

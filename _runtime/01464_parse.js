@@ -1,6 +1,3 @@
-// === Module 1464: parse ===
-
-// Module 1464 (parse)
 import module_1465 from "module_1465";
 import str2 from "str2";
 

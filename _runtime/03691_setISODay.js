@@ -1,6 +1,3 @@
-// === Module 3691: setISODay ===
-
-// Module 3691 (setISODay)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import addDays from "addDays";

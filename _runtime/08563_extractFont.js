@@ -1,6 +1,3 @@
-// === Module 8563: extractFont ===
-
-// Module 8563 (extractFont)
 import "noop";
 import { Children } from "noop";
 import { jsx } from "jsxProd";

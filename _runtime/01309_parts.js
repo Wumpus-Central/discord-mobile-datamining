@@ -1,6 +1,3 @@
-// === Module 1309: parts ===
-
-// Module 1309 (parts)
 import charCodeAtResult from "module_0";
 
 let length;

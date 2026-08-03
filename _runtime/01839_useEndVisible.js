@@ -1,6 +1,3 @@
-// === Module 1839: useEndVisible ===
-
-// Module 1839 (useEndVisible)
 import { useMemo } from "noop";
 
 let closure_3 = { code: "function pnpm_useEndVisibleTs1(){const{layout,size,isScrollAtEnd,scroll,inverted}=this.__closure;if(layout.value.height===0||size.value.height===0){return null;}return isScrollAtEnd(scroll.value,layout.value.height,size.value.height,inverted);}" };

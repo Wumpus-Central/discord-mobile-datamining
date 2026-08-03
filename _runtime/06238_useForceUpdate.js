@@ -1,6 +1,3 @@
-// === Module 6238: useForceUpdate ===
-
-// Module 6238 (useForceUpdate)
 
 export const useForceUpdate = require("useForceUpdate");
 export const useStableMemo = require("useStableMemo");

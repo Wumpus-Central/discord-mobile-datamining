@@ -1,6 +1,3 @@
-// === Module 195: ? ===
-
-// Module 195
 try {
   const _module = require("isNativeFunction");
   let flag = _module.hasNativeConstructor(function*() {

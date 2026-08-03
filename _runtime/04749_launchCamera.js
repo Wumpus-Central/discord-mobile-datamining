@@ -1,6 +1,3 @@
-// === Module 4749: launchCamera ===
-
-// Module 4749 (launchCamera)
 import { NativeModules } from "get ActivityIndicator";
 
 let closure_1 = { mediaType: "photo", videoQuality: "high", quality: 1, maxWidth: 0, maxHeight: 0, includeBase64: false, cameraType: "back", selectionLimit: 1, saveToPhotos: false, durationLimit: 0, includeExtra: false };

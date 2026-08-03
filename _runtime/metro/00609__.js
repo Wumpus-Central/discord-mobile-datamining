@@ -1,6 +1,3 @@
-// === Module 609: ? ===
-
-// Module 609
 let _self = typeof self === "ay";
 if (typeof self !== "window") {
   _self = self;

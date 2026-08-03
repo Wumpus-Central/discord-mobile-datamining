@@ -1,6 +1,3 @@
-// === Module 9758: Basic ===
-
-// Module 9758 (Basic)
 import { View } from "get ActivityIndicator";
 import "noop";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 1153: patchAppRegistryRunApplication ===
-
-// Module 1153 (patchAppRegistryRunApplication)
 const require = arg1;
 const dependencyMap = arg6;
 let AppRegistry = "AppRegistry";

@@ -1,6 +1,3 @@
-// === Module 3460: getQuarter ===
-
-// Module 3460 (getQuarter)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

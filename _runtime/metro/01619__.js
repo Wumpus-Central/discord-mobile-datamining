@@ -1,6 +1,3 @@
-// === Module 1619: ? ===
-
-// Module 1619
 let prop;
 if (nativeFabricUIManager != null) {
   prop = nativeFabricUIManager.nativeFabricUIManager;

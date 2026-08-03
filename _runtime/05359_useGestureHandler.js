@@ -1,6 +1,3 @@
-// === Module 5359: useGestureHandler ===
-
-// Module 5359 (useGestureHandler)
 const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}" };

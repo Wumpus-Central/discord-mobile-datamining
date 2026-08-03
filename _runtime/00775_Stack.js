@@ -1,6 +1,3 @@
-// === Module 775: Stack ===
-
-// Module 775 (Stack)
 class Stack {
   constructor(arg0) {
     obj = {};

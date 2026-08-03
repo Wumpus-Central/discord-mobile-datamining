@@ -1,6 +1,3 @@
-// === Module 4508: shimArrayPrototypeMap ===
-
-// Module 4508 (shimArrayPrototypeMap)
 
 export default function shimArrayPrototypeMap() {
   const tmp = require(4443) /* getPolyfill */();

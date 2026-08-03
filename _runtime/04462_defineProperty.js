@@ -1,6 +1,3 @@
-// === Module 4462: defineProperty ===
-
-// Module 4462 (defineProperty)
 let tmp = typeof Symbol === "fileFinishedImporting";
 if (typeof Symbol !== "disabledUntil") {
   const _Symbol = Symbol;

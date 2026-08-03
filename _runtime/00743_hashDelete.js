@@ -1,6 +1,3 @@
-// === Module 743: hashDelete ===
-
-// Module 743 (hashDelete)
 
 export default function hashDelete(arg0) {
   const self = this;

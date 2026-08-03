@@ -1,6 +1,3 @@
-// === Module 919: instrumentConsole ===
-
-// Module 919 (instrumentConsole)
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentConsole() {

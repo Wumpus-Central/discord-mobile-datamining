@@ -1,6 +1,3 @@
-// === Module 3925: ? ===
-
-// Module 3925
 import installWorkletsSupport from "installWorkletsSupport";
 
 installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();

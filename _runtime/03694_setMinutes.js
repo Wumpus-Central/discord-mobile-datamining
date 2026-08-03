@@ -1,6 +1,3 @@
-// === Module 3694: setMinutes ===
-
-// Module 3694 (setMinutes)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

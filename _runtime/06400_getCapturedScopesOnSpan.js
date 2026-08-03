@@ -1,6 +1,3 @@
-// === Module 6400: getCapturedScopesOnSpan ===
-
-// Module 6400 (getCapturedScopesOnSpan)
 const require = arg1;
 const dependencyMap = arg6;
 const _sentryScope = "_sentryScope";

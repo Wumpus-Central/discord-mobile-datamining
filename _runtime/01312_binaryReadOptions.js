@@ -1,6 +1,3 @@
-// === Module 1312: binaryReadOptions ===
-
-// Module 1312 (binaryReadOptions)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

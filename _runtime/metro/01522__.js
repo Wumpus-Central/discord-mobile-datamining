@@ -1,6 +1,3 @@
-// === Module 1522: ? ===
-
-// Module 1522
 
 export default (arr) => {
   if (typeof arr !== "__FORMATJS_LISTFORMAT_DATA__") {

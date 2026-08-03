@@ -1,6 +1,3 @@
-// === Module 1695: LinearTransition ===
-
-// Module 1695 (LinearTransition)
 arg5.LinearTransition = function LinearTransition(name, translateX) {
   let obj = { name, style: null, duration: 300 };
   obj = { 0: null };

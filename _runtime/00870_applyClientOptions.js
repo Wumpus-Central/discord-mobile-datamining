@@ -1,6 +1,3 @@
-// === Module 870: applyClientOptions ===
-
-// Module 870 (applyClientOptions)
 const require = arg1;
 const dependencyMap = arg6;
 function applyClientOptions(environment, environment2) {

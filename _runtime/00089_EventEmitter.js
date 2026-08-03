@@ -1,6 +1,3 @@
-// === Module 89: EventEmitter ===
-
-// Module 89 (EventEmitter)
 import EventEmitter from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import _createClass from "_createClass";

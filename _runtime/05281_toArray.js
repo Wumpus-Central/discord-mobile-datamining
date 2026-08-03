@@ -1,6 +1,3 @@
-// === Module 5281: toArray ===
-
-// Module 5281 (toArray)
 import noop from "noop";
 
 function deepEqual(arg0, arg1) {

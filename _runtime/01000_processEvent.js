@@ -1,6 +1,3 @@
-// === Module 1000: processEvent ===
-
-// Module 1000 (processEvent)
 import { AppState } from "get ActivityIndicator";
 
 function processEvent(arg0, arg1, arg2) {

@@ -1,6 +1,3 @@
-// === Module 1644: valueSetter ===
-
-// Module 1644 (valueSetter)
 const global = arg0;
 function valueSetter(iter, value, flag) {
   const _global = iter;

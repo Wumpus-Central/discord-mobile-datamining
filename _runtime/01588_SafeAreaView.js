@@ -1,6 +1,3 @@
-// === Module 1588: SafeAreaView ===
-
-// Module 1588 (SafeAreaView)
 import { useMemo } from "noop";
 import { jsx } from "jsxProd";
 

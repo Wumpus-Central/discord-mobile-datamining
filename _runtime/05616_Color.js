@@ -1,6 +1,3 @@
-// === Module 5616: Color ===
-
-// Module 5616 (Color)
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
 import keys from "keys";

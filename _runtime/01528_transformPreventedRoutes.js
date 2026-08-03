@@ -1,6 +1,3 @@
-// === Module 1528: transformPreventedRoutes ===
-
-// Module 1528 (transformPreventedRoutes)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

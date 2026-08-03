@@ -1,6 +1,3 @@
-// === Module 4858: getDataView ===
-
-// Module 4858 (getDataView)
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = [6, 7, 99];

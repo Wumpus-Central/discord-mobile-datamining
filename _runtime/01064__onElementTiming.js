@@ -1,6 +1,3 @@
-// === Module 1064: _onElementTiming ===
-
-// Module 1064 (_onElementTiming)
 import _slicedToArray from "_slicedToArray";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

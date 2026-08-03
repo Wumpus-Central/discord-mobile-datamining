@@ -1,6 +1,3 @@
-// === Module 68: measure ===
-
-// Module 68 (measure)
 if (true === global.RN$Bridgeless) {
   let _default = require("RN$LegacyInterop_UIManager_getConstants").default;
 } else {

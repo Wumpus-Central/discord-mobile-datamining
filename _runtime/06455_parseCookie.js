@@ -1,6 +1,3 @@
-// === Module 6455: parseCookie ===
-
-// Module 6455 (parseCookie)
 arg5.parseCookie = function parseCookie(arr) {
   const obj = {};
   let num = 0;

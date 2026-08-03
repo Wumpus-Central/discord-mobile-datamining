@@ -1,6 +1,3 @@
-// === Module 12271: QRPolynomial ===
-
-// Module 12271 (QRPolynomial)
 class QRPolynomial {
   constructor(arg0, arg1) {
     if (null == global.length) {

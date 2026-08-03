@@ -1,6 +1,3 @@
-// === Module 782: SetCache ===
-
-// Module 782 (SetCache)
 import setCacheAdd from "setCacheAdd";
 
 let prototype;

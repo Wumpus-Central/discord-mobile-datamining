@@ -1,6 +1,3 @@
-// === Module 3544: getISOWeek ===
-
-// Module 3544 (getISOWeek)
 import _typeof from "_typeof";
 import startOfISOWeek from "startOfISOWeek";
 import startOfISOWeekYear from "startOfISOWeekYear";

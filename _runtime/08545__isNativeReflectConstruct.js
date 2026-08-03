@@ -1,6 +1,3 @@
-// === Module 8545: _isNativeReflectConstruct ===
-
-// Module 8545 (_isNativeReflectConstruct)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";

@@ -1,6 +1,3 @@
-// === Module 1513: createNormalizedConfigItem ===
-
-// Module 1513 (createNormalizedConfigItem)
 function createNormalizedConfigItem(arg0) {
 
 }

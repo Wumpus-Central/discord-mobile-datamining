@@ -1,6 +1,3 @@
-// === Module 1207: warn ===
-
-// Module 1207 (warn)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import isHermesEnabled from "isHermesEnabled";

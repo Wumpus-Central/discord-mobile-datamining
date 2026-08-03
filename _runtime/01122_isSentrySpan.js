@@ -1,6 +1,3 @@
-// === Module 1122: isSentrySpan ===
-
-// Module 1122 (isSentrySpan)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isSentrySpan = function isSentrySpan(c4) {

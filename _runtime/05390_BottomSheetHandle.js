@@ -1,6 +1,3 @@
-// === Module 5390: BottomSheetHandle ===
-
-// Module 5390 (BottomSheetHandle)
 import noop from "noop";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

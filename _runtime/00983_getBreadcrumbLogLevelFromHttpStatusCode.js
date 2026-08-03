@@ -1,6 +1,3 @@
-// === Module 983: getBreadcrumbLogLevelFromHttpStatusCode ===
-
-// Module 983 (getBreadcrumbLogLevelFromHttpStatusCode)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
   let tmp;

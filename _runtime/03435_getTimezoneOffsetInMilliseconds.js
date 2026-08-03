@@ -1,6 +1,3 @@
-// === Module 3435: getTimezoneOffsetInMilliseconds ===
-
-// Module 3435 (getTimezoneOffsetInMilliseconds)
 
 export default function getTimezoneOffsetInMilliseconds(getFullYear) {
   const fullYear = getFullYear.getFullYear();

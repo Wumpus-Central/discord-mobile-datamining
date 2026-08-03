@@ -1,6 +1,3 @@
-// === Module 5161: StyleSheet ===
-
-// Module 5161 (StyleSheet)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

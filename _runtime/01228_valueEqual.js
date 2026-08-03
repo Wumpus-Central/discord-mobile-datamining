@@ -1,6 +1,3 @@
-// === Module 1228: valueEqual ===
-
-// Module 1228 (valueEqual)
 function valueEqual(state, state2) {
   const valueEqual = state;
   let closure_1 = state2;

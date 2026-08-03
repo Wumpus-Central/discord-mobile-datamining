@@ -1,6 +1,3 @@
-// === Module 1794: n ===
-
-// Module 1794 (n)
 const fn = function n(translateX) {
   const transform = [{ translateX: translateX.translationX }];
   return { transform };

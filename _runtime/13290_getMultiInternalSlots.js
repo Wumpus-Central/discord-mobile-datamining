@@ -1,6 +1,3 @@
-// === Module 13290: getMultiInternalSlots ===
-
-// Module 13290 (getMultiInternalSlots)
 function getMultiInternalSlots(get) {
   let length;
   const items = [];

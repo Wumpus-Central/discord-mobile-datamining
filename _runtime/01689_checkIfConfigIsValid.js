@@ -1,6 +1,3 @@
-// === Module 1689: checkIfConfigIsValid ===
-
-// Module 1689 (checkIfConfigIsValid)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

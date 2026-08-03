@@ -1,6 +1,3 @@
-// === Module 1042: getActivationStart ===
-
-// Module 1042 (getActivationStart)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

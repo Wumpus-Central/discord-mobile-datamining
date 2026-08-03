@@ -1,6 +1,3 @@
-// === Module 512: read ===
-
-// Module 512 (read)
 arg5.read = (arg0, arg1, arg2, exponent) => {
   let num = 0;
   const diff = 8 * arg4 - exponent;

@@ -1,6 +1,3 @@
-// === Module 121: env ===
-
-// Module 121 (env)
 if (undefined === window.window) {
   window.window = window;
 }

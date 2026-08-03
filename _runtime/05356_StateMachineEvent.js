@@ -1,6 +1,3 @@
-// === Module 5356: StateMachineEvent ===
-
-// Module 5356 (StateMachineEvent)
 import { Platform } from "get ActivityIndicator";
 
 let obj = { NATIVE_BEGIN: "nativeBegin", NATIVE_START: "nativeStart", FINALIZE: "finalize", LONG_PRESS_TOUCHES_DOWN: "longPressTouchesDown", CANCEL: "cancel" };

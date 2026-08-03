@@ -1,6 +1,3 @@
-// === Module 71: getFabricUIManager ===
-
-// Module 71 (getFabricUIManager)
 const global = arg0;
 const module = arg2;
 const dependencyMap = arg6;

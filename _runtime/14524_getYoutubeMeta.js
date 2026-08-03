@@ -1,6 +1,3 @@
-// === Module 14524: getYoutubeMeta ===
-
-// Module 14524 (getYoutubeMeta)
 import module_7665 from "module_7665";
 import _regeneratorRuntime from "_regeneratorRuntime";
 

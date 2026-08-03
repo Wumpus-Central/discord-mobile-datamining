@@ -1,6 +1,3 @@
-// === Module 5430: _createClass ===
-
-// Module 5430 (_createClass)
 
 export default function _createClass(arg0, arg1, arg2) {
   if (arg1) {

@@ -1,6 +1,3 @@
-// === Module 962: extractRequestAttributes ===
-
-// Module 962 (extractRequestAttributes)
 import asyncGeneratorStep from "createChildOrRootSpan";
 
 function extractRequestAttributes(first, outer1_1) {

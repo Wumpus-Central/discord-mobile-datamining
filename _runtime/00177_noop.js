@@ -1,6 +1,3 @@
-// === Module 177: noop ===
-
-// Module 177 (noop)
 function noop() {
 
 }

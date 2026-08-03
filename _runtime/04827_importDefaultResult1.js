@@ -1,6 +1,3 @@
-// === Module 4827: importDefaultResult1 ===
-
-// Module 4827 (importDefaultResult1)
 import getDataView from "getDataView";
 import objectAssignResult from "decodeXPValue";
 

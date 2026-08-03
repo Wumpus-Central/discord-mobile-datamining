@@ -1,6 +1,3 @@
-// === Module 3271: formatRelative ===
-
-// Module 3271 (formatRelative)
 import _typeof from "_typeof";
 import isSameUTCWeek from "isSameUTCWeek";
 

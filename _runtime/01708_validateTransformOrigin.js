@@ -1,6 +1,3 @@
-// === Module 1708: validateTransformOrigin ===
-
-// Module 1708 (validateTransformOrigin)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

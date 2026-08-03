@@ -1,6 +1,3 @@
-// === Module 3525: formatDistanceToNowStrict ===
-
-// Module 3525 (formatDistanceToNowStrict)
 import formatDistanceStrict from "formatDistanceStrict";
 import requiredArgs from "requiredArgs";
 

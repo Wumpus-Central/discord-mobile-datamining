@@ -1,6 +1,3 @@
-// === Module 4472: mod ===
-
-// Module 4472 (mod)
 
 export default function mod(arg0, arg1) {
   const result = arg0 % arg1;

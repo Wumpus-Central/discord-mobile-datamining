@@ -1,6 +1,3 @@
-// === Module 3436: startOfDay ===
-
-// Module 3436 (startOfDay)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

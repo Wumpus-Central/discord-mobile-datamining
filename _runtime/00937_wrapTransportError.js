@@ -1,6 +1,3 @@
-// === Module 937: wrapTransportError ===
-
-// Module 937 (wrapTransportError)
 import asyncGeneratorStep from "getClient";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

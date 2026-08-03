@@ -1,6 +1,3 @@
-// === Module 5268: n ===
-
-// Module 5268 (n)
 const require = arg1;
 const dependencyMap = arg6;
 const fn = function n(arg0) {

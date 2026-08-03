@@ -1,6 +1,3 @@
-// === Module 3709: subQuarters ===
-
-// Module 3709 (subQuarters)
 import toInteger from "toInteger";
 import addQuarters from "addQuarters";
 import requiredArgs from "requiredArgs";

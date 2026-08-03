@@ -1,6 +1,3 @@
-// === Module 4071: memo ===
-
-// Module 4071 (memo)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import "noop";

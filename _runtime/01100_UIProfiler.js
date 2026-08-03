@@ -1,6 +1,3 @@
-// === Module 1100: UIProfiler ===
-
-// Module 1100 (UIProfiler)
 import asyncGeneratorStep from "registerSpanErrorInstrumentation";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

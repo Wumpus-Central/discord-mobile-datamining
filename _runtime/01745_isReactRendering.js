@@ -1,6 +1,3 @@
-// === Module 1745: isReactRendering ===
-
-// Module 1745 (isReactRendering)
 import noop from "noop";
 import { forwardRef } from "noop";
 import isJest from "isJest";

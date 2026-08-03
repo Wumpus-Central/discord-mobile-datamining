@@ -1,6 +1,3 @@
-// === Module 5491: BottomSheetView ===
-
-// Module 5491 (BottomSheetView)
 import noop from "noop";
 import "noop";
 import { View } from "get ActivityIndicator";

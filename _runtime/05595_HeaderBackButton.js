@@ -1,6 +1,3 @@
-// === Module 5595: HeaderBackButton ===
-
-// Module 5595 (HeaderBackButton)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

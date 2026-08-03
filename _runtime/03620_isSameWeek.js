@@ -1,6 +1,3 @@
-// === Module 3620: isSameWeek ===
-
-// Module 3620 (isSameWeek)
 import startOfWeek from "startOfWeek";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 6461: extraErrorDataIntegration ===
-
-// Module 6461 (extraErrorDataIntegration)
 import setupIntegration from "setupIntegration";
 
 

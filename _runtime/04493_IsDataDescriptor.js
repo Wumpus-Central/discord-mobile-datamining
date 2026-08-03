@@ -1,6 +1,3 @@
-// === Module 4493: IsDataDescriptor ===
-
-// Module 4493 (IsDataDescriptor)
 
 export default function IsDataDescriptor(arg0) {
   if (undefined === arg0) {

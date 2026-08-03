@@ -1,6 +1,3 @@
-// === Module 4457: StringToNumber ===
-
-// Module 4457 (StringToNumber)
 let tmp = require("getEvalledConstructor")("%RegExp%");
 let closure_2 = require("getEvalledConstructor")("%parseInt%");
 let closure_3 = require("callBoundIntrinsic")("String.prototype.slice");

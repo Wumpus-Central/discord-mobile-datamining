@@ -1,6 +1,3 @@
-// === Module 1557: state ===
-
-// Module 1557 (state)
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 

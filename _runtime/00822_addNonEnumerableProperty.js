@@ -1,6 +1,3 @@
-// === Module 822: addNonEnumerableProperty ===
-
-// Module 822 (addNonEnumerableProperty)
 const require = arg1;
 const dependencyMap = arg6;
 function addNonEnumerableProperty(arg0, arg1, arg2) {

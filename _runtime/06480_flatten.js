@@ -1,6 +1,3 @@
-// === Module 6480: flatten ===
-
-// Module 6480 (flatten)
 arg5.flatten = function flatten(arr) {
   const items = [];
   const item = arr.forEach((arr) => {

@@ -1,6 +1,3 @@
-// === Module 1788: createAnimatedPropAdapter ===
-
-// Module 1788 (createAnimatedPropAdapter)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createAnimatedPropAdapter = function createAnimatedPropAdapter(arg0, arr) {

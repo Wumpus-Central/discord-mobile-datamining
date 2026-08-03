@@ -1,6 +1,3 @@
-// === Module 927: thirdPartyErrorFilterIntegration ===
-
-// Module 927 (thirdPartyErrorFilterIntegration)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

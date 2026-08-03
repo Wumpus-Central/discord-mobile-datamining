@@ -1,6 +1,3 @@
-// === Module 334: useMergeRefs ===
-
-// Module 334 (useMergeRefs)
 import "noop";
 
 require("noop").useCallback;

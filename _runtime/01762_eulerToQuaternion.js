@@ -1,6 +1,3 @@
-// === Module 1762: eulerToQuaternion ===
-
-// Module 1762 (eulerToQuaternion)
 import noop from "noop";
 
 let c3;

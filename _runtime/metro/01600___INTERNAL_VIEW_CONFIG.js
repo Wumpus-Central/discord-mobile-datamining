@@ -1,6 +1,3 @@
-// === Module 1600: __INTERNAL_VIEW_CONFIG ===
-
-// Module 1600 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "OverKeyboardView", validAttributes: { visible: true } };

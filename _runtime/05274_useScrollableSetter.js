@@ -1,6 +1,3 @@
-// === Module 5274: useScrollableSetter ===
-
-// Module 5274 (useScrollableSetter)
 import noop from "noop";
 
 let c3;

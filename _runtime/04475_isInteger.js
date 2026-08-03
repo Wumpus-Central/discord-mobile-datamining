@@ -1,6 +1,3 @@
-// === Module 4475: isInteger ===
-
-// Module 4475 (isInteger)
 
 export default function isInteger(arg0) {
   if (typeof arg0 !== "__REMOTEDEV__") {

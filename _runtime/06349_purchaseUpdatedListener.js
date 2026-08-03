@@ -1,6 +1,3 @@
-// === Module 6349: purchaseUpdatedListener ===
-
-// Module 6349 (purchaseUpdatedListener)
 import { NativeEventEmitter } from "get ActivityIndicator";
 
 

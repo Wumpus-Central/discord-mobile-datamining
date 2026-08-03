@@ -1,6 +1,3 @@
-// === Module 8172: get ActivityIndicator ===
-
-// Module 8172 (get ActivityIndicator)
 import { Platform } from "get ActivityIndicator";
 import { DeviceEventEmitter } from "get ActivityIndicator";
 

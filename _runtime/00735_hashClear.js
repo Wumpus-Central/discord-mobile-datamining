@@ -1,6 +1,3 @@
-// === Module 735: hashClear ===
-
-// Module 735 (hashClear)
 
 export default function hashClear() {
   let obj = {};

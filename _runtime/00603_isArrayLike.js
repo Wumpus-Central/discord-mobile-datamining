@@ -1,6 +1,3 @@
-// === Module 603: isArrayLike ===
-
-// Module 603 (isArrayLike)
 
 export default function isArrayLike(arg0) {
   let tmp = null != arg0;

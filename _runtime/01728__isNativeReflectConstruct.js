@@ -1,6 +1,3 @@
-// === Module 1728: _isNativeReflectConstruct ===
-
-// Module 1728 (_isNativeReflectConstruct)
 import PinwheelOut from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

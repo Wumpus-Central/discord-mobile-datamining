@@ -1,6 +1,3 @@
-// === Module 5399: sharedValue ===
-
-// Module 5399 (sharedValue)
 import noop from "noop";
 import "noop";
 import jsxProd from "jsxProd";

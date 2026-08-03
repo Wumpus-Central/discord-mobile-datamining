@@ -1,6 +1,3 @@
-// === Module 93: _possibleConstructorReturn ===
-
-// Module 93 (_possibleConstructorReturn)
 
 export default function _possibleConstructorReturn(arg0, arg1) {
   if (arg1) {

@@ -1,6 +1,3 @@
-// === Module 1185: shouldEnableNativeNagger ===
-
-// Module 1185 (shouldEnableNativeNagger)
 import { Platform } from "get ActivityIndicator";
 
 

@@ -1,6 +1,3 @@
-// === Module 1626: NativeWorklets ===
-
-// Module 1626 (NativeWorklets)
 import _classCallCheck from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 

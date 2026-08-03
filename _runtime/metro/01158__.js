@@ -1,6 +1,3 @@
-// === Module 1158: ? ===
-
-// Module 1158
 arg5.SPAN_ORIGIN_AUTO_INTERACTION = "auto.interaction";
 arg5.SPAN_ORIGIN_MANUAL_INTERACTION = "manual.interaction";
 arg5.SPAN_ORIGIN_MANUAL_APP_START = "manual.app.start";

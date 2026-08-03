@@ -1,6 +1,3 @@
-// === Module 1173: logEnricherIntegration ===
-
-// Module 1173 (logEnricherIntegration)
 const require = arg1;
 const dependencyMap = arg6;
 let fn = this;

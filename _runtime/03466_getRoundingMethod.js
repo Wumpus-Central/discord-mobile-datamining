@@ -1,6 +1,3 @@
-// === Module 3466: getRoundingMethod ===
-
-// Module 3466 (getRoundingMethod)
 arg5.getRoundingMethod = function getRoundingMethod(roundingMethod) {
   if (roundingMethod) {
     let tmp3 = tmp[roundingMethod];

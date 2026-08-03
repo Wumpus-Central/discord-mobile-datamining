@@ -1,6 +1,3 @@
-// === Module 3701: startOfToday ===
-
-// Module 3701 (startOfToday)
 import startOfDay from "startOfDay";
 
 if (!startOfDay) {

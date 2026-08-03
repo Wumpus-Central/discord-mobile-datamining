@@ -1,6 +1,3 @@
-// === Module 3695: setQuarter ===
-
-// Module 3695 (setQuarter)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import setMonth from "setMonth";

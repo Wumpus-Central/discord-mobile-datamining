@@ -1,6 +1,3 @@
-// === Module 1646: isValidLayoutAnimationProp ===
-
-// Module 1646 (isValidLayoutAnimationProp)
 import isJest from "isJest";
 
 let c2 = false;

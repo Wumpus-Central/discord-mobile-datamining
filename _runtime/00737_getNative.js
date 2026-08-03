@@ -1,6 +1,3 @@
-// === Module 737: getNative ===
-
-// Module 737 (getNative)
 
 export default function getNative(arg0, arg1) {
   const tmp = require(738) /* getValue */(arg0, arg1);

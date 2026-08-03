@@ -1,6 +1,3 @@
-// === Module 3464: differenceInHours ===
-
-// Module 3464 (differenceInHours)
 import differenceInMilliseconds from "differenceInMilliseconds";
 import requiredArgs from "requiredArgs";
 

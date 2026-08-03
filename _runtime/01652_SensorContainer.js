@@ -1,6 +1,3 @@
-// === Module 1652: SensorContainer ===
-
-// Module 1652 (SensorContainer)
 import _classCallCheck from "_classCallCheck";
 
 const SensorContainer = importDefault;

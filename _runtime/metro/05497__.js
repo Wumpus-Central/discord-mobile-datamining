@@ -1,6 +1,3 @@
-// === Module 5497: ? ===
-
-// Module 5497
 arg5.DEFAULT_OPACITY = 0.5;
 arg5.DEFAULT_APPEARS_ON_INDEX = 1;
 arg5.DEFAULT_DISAPPEARS_ON_INDEX = 0;

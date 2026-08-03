@@ -1,6 +1,3 @@
-// === Module 1751: useHandler ===
-
-// Module 1751 (useHandler)
 import noop from "noop";
 
 let c3;

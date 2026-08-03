@@ -1,6 +1,3 @@
-// === Module 3693: setMilliseconds ===
-
-// Module 3693 (setMilliseconds)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

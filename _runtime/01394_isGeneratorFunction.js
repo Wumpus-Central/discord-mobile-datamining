@@ -1,6 +1,3 @@
-// === Module 1394: isGeneratorFunction ===
-
-// Module 1394 (isGeneratorFunction)
 let closure_3 = require("regexTester")(/^\s*(?:function)?\*/);
 let closure_4 = require("hasToStringTagShams")();
 let closure_5 = require("callBoundIntrinsic")("Object.prototype.toString");

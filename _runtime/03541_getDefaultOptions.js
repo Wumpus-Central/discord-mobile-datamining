@@ -1,6 +1,3 @@
-// === Module 3541: getDefaultOptions ===
-
-// Module 3541 (getDefaultOptions)
 import assign from "assign";
 
 if (!assign) {

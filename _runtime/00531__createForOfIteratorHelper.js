@@ -1,6 +1,3 @@
-// === Module 531: _createForOfIteratorHelper ===
-
-// Module 531 (_createForOfIteratorHelper)
 import _createForOfIteratorHelper from "_createForOfIteratorHelper";
 import _createForOfIteratorHelper from "_createForOfIteratorHelper";
 

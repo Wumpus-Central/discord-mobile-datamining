@@ -1,6 +1,3 @@
-// === Module 6707: baseOrderBy ===
-
-// Module 6707 (baseOrderBy)
 
 export default function baseOrderBy(arg0, arg1, arg2) {
   let closure_0 = arg1;

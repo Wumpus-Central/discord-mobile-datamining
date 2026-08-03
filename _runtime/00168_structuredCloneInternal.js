@@ -1,6 +1,3 @@
-// === Module 168: structuredCloneInternal ===
-
-// Module 168 (structuredCloneInternal)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

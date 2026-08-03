@@ -1,6 +1,3 @@
-// === Module 7670: _getRequireWildcardCache ===
-
-// Module 7670 (_getRequireWildcardCache)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

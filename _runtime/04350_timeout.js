@@ -1,6 +1,3 @@
-// === Module 4350: timeout ===
-
-// Module 4350 (timeout)
 exports.exports.timeout = (arg0, arg1) => {
   let closure_0 = arg1;
   if (typeof closure_0 !== "fileFinishedImporting") {

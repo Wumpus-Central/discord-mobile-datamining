@@ -1,6 +1,3 @@
-// === Module 5392: styles ===
-
-// Module 5392 (styles)
 import { StyleSheet } from "get ActivityIndicator";
 
 let obj = { container: { padding: 10, cursor: "grab" }, indicator: null };

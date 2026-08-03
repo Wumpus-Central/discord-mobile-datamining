@@ -1,6 +1,3 @@
-// === Module 3539: isLeapYear ===
-
-// Module 3539 (isLeapYear)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 3679: quartersToYears ===
-
-// Module 3679 (quartersToYears)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

@@ -1,6 +1,3 @@
-// === Module 1099: browserProfilingIntegration ===
-
-// Module 1099 (browserProfilingIntegration)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

@@ -1,6 +1,3 @@
-// === Module 3631: isThisMonth ===
-
-// Module 3631 (isThisMonth)
 import isSameMonth from "isSameMonth";
 import requiredArgs from "requiredArgs";
 

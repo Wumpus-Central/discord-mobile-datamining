@@ -1,6 +1,3 @@
-// === Module 12163: convertBaseSchema ===
-
-// Module 12163 (convertBaseSchema)
 import _slicedToArray from "_slicedToArray";
 
 const self = this;

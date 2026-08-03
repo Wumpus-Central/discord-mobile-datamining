@@ -1,6 +1,3 @@
-// === Module 4434: getPolyfill ===
-
-// Module 4434 (getPolyfill)
 
 export default function getPolyfill() {
   require(4433) /* requirePromise */();

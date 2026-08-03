@@ -1,6 +1,3 @@
-// === Module 4505: Type ===
-
-// Module 4505 (Type)
 
 export default function Type(arg0) {
   let str = "Symbol";

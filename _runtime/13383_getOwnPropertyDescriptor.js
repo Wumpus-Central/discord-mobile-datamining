@@ -1,6 +1,3 @@
-// === Module 13383: getOwnPropertyDescriptor ===
-
-// Module 13383 (getOwnPropertyDescriptor)
 if (!require("getOwnPropertyDescriptor")) {
   getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
     const tmp3 = require(13386)(arg0);

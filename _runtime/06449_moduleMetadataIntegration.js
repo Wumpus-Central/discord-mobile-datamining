@@ -1,6 +1,3 @@
-// === Module 6449: moduleMetadataIntegration ===
-
-// Module 6449 (moduleMetadataIntegration)
 import setupIntegration from "setupIntegration";
 
 

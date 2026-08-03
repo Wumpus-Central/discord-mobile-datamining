@@ -1,6 +1,3 @@
-// === Module 6419: _flush ===
-
-// Module 6419 (_flush)
 import asyncGeneratorStep from "addContextToFrame";
 
 function _flush() {

@@ -1,6 +1,3 @@
-// === Module 1085: _parseCookieHeaders ===
-
-// Module 1085 (_parseCookieHeaders)
 import _slicedToArray from "_slicedToArray";
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 

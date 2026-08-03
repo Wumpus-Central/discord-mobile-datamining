@@ -1,6 +1,3 @@
-// === Module 630: isPrototype ===
-
-// Module 630 (isPrototype)
 let closure_0 = Object.prototype;
 
 export default function isPrototype(arg0) {

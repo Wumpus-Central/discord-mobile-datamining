@@ -1,6 +1,3 @@
-// === Module 3487: eachWeekendOfMonth ===
-
-// Module 3487 (eachWeekendOfMonth)
 import eachWeekendOfInterval from "eachWeekendOfInterval";
 import startOfMonth from "startOfMonth";
 import endOfMonth from "endOfMonth";

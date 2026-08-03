@@ -1,6 +1,3 @@
-// === Module 767: baseHasIn ===
-
-// Module 767 (baseHasIn)
 
 export default function baseHasIn(arg0, arg1) {
   let tmp = null != arg0;

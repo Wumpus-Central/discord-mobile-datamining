@@ -1,6 +1,3 @@
-// === Module 6409: logSpanEnd ===
-
-// Module 6409 (logSpanEnd)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.logSpanEnd = function logSpanEnd(spanContext) {

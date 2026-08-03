@@ -1,6 +1,3 @@
-// === Module 6469: ? ===
-
-// Module 6469
 const require = arg1;
 const dependencyMap = arg6;
 arg5.profiler = {

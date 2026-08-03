@@ -1,6 +1,3 @@
-// === Module 1402: apply ===
-
-// Module 1402 (apply)
 let call;
 let call2;
 let apply = typeof Reflect === "ay";

@@ -1,6 +1,3 @@
-// === Module 48: replacer ===
-
-// Module 48 (replacer)
 let c0 = arg2;
 let c1 = arg6;
 function replacer(arg0, arr) {

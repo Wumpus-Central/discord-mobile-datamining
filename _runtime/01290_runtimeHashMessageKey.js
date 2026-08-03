@@ -1,6 +1,3 @@
-// === Module 1290: runtimeHashMessageKey ===
-
-// Module 1290 (runtimeHashMessageKey)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.runtimeHashMessageKey = function runtimeHashMessageKey(code) {

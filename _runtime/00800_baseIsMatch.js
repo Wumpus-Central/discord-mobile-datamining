@@ -1,6 +1,3 @@
-// === Module 800: baseIsMatch ===
-
-// Module 800 (baseIsMatch)
 
 export default function baseIsMatch(arg0, arg1, arg2, arg3) {
   if (null == arg0) {

@@ -1,6 +1,3 @@
-// === Module 4844: calculateGPSValue ===
-
-// Module 4844 (calculateGPSValue)
 import _slicedToArray from "_slicedToArray";
 
 function calculateGPSValue(str) {

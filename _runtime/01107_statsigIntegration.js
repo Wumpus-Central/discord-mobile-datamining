@@ -1,6 +1,3 @@
-// === Module 1107: statsigIntegration ===
-
-// Module 1107 (statsigIntegration)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

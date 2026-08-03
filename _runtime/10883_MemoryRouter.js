@@ -1,6 +1,3 @@
-// === Module 10883: MemoryRouter ===
-
-// Module 10883 (MemoryRouter)
 
 export const MemoryRouter = require("_extends").MemoryRouter;
 export const Prompt = require("_extends").Prompt;

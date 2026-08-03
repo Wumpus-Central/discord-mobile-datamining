@@ -1,6 +1,3 @@
-// === Module 4440: getIterator ===
-
-// Module 4440 (getIterator)
 
 export default function getIterator(arg0) {
   if (null != arg0) {

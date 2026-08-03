@@ -1,6 +1,3 @@
-// === Module 231: Alert ===
-
-// Module 231 (Alert)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

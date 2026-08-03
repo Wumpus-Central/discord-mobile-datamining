@@ -1,6 +1,3 @@
-// === Module 1712: setAndForwardRef ===
-
-// Module 1712 (setAndForwardRef)
 arg5.default = function setAndForwardRef(arg0) {
   let closure_0;
   let closure_1;

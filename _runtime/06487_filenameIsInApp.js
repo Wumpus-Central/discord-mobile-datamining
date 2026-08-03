@@ -1,6 +1,3 @@
-// === Module 6487: filenameIsInApp ===
-
-// Module 6487 (filenameIsInApp)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.filenameIsInApp = function filenameIsInApp(str) {

@@ -1,6 +1,3 @@
-// === Module 13409: all ===
-
-// Module 13409 (all)
 
 export default (arg0, arg1) => {
   if (arguments.length < 2) {

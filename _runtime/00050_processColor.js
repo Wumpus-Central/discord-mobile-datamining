@@ -1,6 +1,3 @@
-// === Module 50: processColor ===
-
-// Module 50 (processColor)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = function processColor(arg0) {

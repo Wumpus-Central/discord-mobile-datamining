@@ -1,6 +1,3 @@
-// === Module 16079: SyntaxError ===
-
-// Module 16079 (SyntaxError)
 class SyntaxError {
   constructor(arg0, arg1, arg2, arg3, arg4, arg5) {
     return;

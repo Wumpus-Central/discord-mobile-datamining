@@ -1,6 +1,3 @@
-// === Module 1774: o ===
-
-// Module 1774 (o)
 const fn = function o(arg0, arg1, h, useCorrectedHSVInterpolation) {
   useCorrectedHSVInterpolation = useCorrectedHSVInterpolation.useCorrectedHSVInterpolation;
   if (undefined !== useCorrectedHSVInterpolation) {

@@ -1,6 +1,3 @@
-// === Module 4274: toInteger ===
-
-// Module 4274 (toInteger)
 
 export default function toInteger(arg0) {
   const tmp = require(4275) /* toFinite */(arg0);

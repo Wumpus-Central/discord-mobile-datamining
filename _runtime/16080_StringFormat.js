@@ -1,6 +1,3 @@
-// === Module 16080: StringFormat ===
-
-// Module 16080 (StringFormat)
 class Compiler {
   constructor(arg0, arg1, arg2) {
     return;

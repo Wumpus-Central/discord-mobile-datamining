@@ -1,6 +1,3 @@
-// === Module 3641: isWithinInterval ===
-
-// Module 3641 (isWithinInterval)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

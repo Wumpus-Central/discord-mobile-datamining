@@ -1,6 +1,3 @@
-// === Module 843: Scope ===
-
-// Module 843 (Scope)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

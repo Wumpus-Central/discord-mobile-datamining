@@ -1,6 +1,3 @@
-// === Module 4439: iterateValue ===
-
-// Module 4439 (iterateValue)
 
 export default function iterateValue(arg0) {
   const tmp3 = require(4440) /* getIterator */(arg0);

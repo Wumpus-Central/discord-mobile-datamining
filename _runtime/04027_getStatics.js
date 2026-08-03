@@ -1,6 +1,3 @@
-// === Module 4027: getStatics ===
-
-// Module 4027 (getStatics)
 function getStatics(arg0) {
   const obj = require(4025) /* num2 */;
   if (obj.isMemo(arg0)) {

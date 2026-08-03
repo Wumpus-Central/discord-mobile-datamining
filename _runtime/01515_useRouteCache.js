@@ -1,6 +1,3 @@
-// === Module 1515: useRouteCache ===
-
-// Module 1515 (useRouteCache)
 import "_objectWithoutProperties";
 import noop from "noop";
 

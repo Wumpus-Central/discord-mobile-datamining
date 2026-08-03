@@ -1,6 +1,3 @@
-// === Module 1279: hydrateSingle ===
-
-// Module 1279 (hydrateSingle)
 import _slicedToArray from "_slicedToArray";
 
 function hydrateSingle(arg0) {

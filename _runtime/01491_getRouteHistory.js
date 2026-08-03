@@ -1,6 +1,3 @@
-// === Module 1491: getRouteHistory ===
-
-// Module 1491 (getRouteHistory)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

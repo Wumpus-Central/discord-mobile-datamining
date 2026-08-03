@@ -1,6 +1,3 @@
-// === Module 264: getTargetFromInstanceHandle ===
-
-// Module 264 (getTargetFromInstanceHandle)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

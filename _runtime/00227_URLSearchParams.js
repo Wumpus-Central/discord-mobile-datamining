@@ -1,6 +1,3 @@
-// === Module 227: URLSearchParams ===
-
-// Module 227 (URLSearchParams)
 import URLSearchParams from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 

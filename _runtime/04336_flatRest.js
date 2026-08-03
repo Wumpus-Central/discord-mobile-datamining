@@ -1,6 +1,3 @@
-// === Module 4336: flatRest ===
-
-// Module 4336 (flatRest)
 
 export default function flatRest(arg0) {
   const tmp = require(4337) /* shortOut */;

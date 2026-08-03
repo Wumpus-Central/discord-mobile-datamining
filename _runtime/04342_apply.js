@@ -1,6 +1,3 @@
-// === Module 4342: apply ===
-
-// Module 4342 (apply)
 
 export default function apply(call) {
   let tmp;

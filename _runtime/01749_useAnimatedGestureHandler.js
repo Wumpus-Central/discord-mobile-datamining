@@ -1,6 +1,3 @@
-// === Module 1749: useAnimatedGestureHandler ===
-
-// Module 1749 (useAnimatedGestureHandler)
 
 export const useAnimatedGestureHandler = require("useAnimatedGestureHandler").useAnimatedGestureHandler;
 export const useAnimatedKeyboard = require("useAnimatedKeyboard").useAnimatedKeyboard;

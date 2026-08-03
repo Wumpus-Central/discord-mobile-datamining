@@ -1,6 +1,3 @@
-// === Module 13505: ? ===
-
-// Module 13505
 arg5.default = () => (arg0) => {
   let closure_0 = arg0;
   const features = {

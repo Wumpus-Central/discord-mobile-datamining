@@ -1,6 +1,3 @@
-// === Module 4578: bottomTabsDebugLog ===
-
-// Module 4578 (bottomTabsDebugLog)
 let c0 = false;
 arg5.bottomTabsDebugLog = function bottomTabsDebugLog(arg0) {
   const items = [...arguments];

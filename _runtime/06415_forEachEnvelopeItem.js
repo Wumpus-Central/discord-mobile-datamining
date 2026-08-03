@@ -1,6 +1,3 @@
-// === Module 6415: forEachEnvelopeItem ===
-
-// Module 6415 (forEachEnvelopeItem)
 import _slicedToArray from "_slicedToArray";
 
 function forEachEnvelopeItem(arg0, arg1) {

@@ -1,6 +1,3 @@
-// === Module 1605: controlEdgeToEdgeValues ===
-
-// Module 1605 (controlEdgeToEdgeValues)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 

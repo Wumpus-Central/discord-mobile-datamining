@@ -1,6 +1,3 @@
-// === Module 3945: c ===
-
-// Module 3945 (c)
 import { __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE as closure_0 } from "noop";
 
 

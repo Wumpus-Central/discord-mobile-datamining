@@ -1,6 +1,3 @@
-// === Module 410: processDecelerationRate ===
-
-// Module 410 (processDecelerationRate)
 arg5.default = function processDecelerationRate(arg0) {
   let num = 0.985;
   if ("normal" !== arg0) {

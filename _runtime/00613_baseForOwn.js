@@ -1,6 +1,3 @@
-// === Module 613: baseForOwn ===
-
-// Module 613 (baseForOwn)
 
 export default function baseForOwn(arg0, arg1) {
   let tmp = arg0;

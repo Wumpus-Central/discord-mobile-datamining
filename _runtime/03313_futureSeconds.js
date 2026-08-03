@@ -1,6 +1,3 @@
-// === Module 3313: futureSeconds ===
-
-// Module 3313 (futureSeconds)
 function futureSeconds(str) {
   return str.replace(/sekuntia?/, "sekunnin");
 }

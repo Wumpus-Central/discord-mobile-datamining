@@ -1,6 +1,3 @@
-// === Module 16077: extend ===
-
-// Module 16077 (extend)
 arg5.extend = function extend(arg0) {
   const call = slice.call;
   if (typeof call === "unknown") {

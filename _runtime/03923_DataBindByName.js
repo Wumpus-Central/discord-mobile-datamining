@@ -1,6 +1,3 @@
-// === Module 3923: DataBindByName ===
-
-// Module 3923 (DataBindByName)
 import _classCallCheck from "_classCallCheck";
 
 class DataBindByName {

@@ -1,6 +1,3 @@
-// === Module 4447: RequireObjectCoercible ===
-
-// Module 4447 (RequireObjectCoercible)
 
 export default function RequireObjectCoercible(arg0) {
   if (null == arg0) {

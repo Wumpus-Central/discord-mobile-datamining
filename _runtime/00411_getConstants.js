@@ -1,6 +1,3 @@
-// === Module 411: getConstants ===
-
-// Module 411 (getConstants)
 if (require("I18nManager")) {
   const constants = require("I18nManager").getConstants();
   let obj = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };

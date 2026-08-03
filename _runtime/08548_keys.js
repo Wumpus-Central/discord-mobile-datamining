@@ -1,6 +1,3 @@
-// === Module 8548: keys ===
-
-// Module 8548 (keys)
 import { PanResponder } from "get ActivityIndicator";
 
 const keys = Object.keys(PanResponder.create({}).panHandlers);

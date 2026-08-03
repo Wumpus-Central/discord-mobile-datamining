@@ -1,6 +1,3 @@
-// === Module 810: addBreadcrumb ===
-
-// Module 810 (addBreadcrumb)
 for (const key10013 in require("debugSymbolicatorIntegration")) {
   let tmp2 = key10013;
   arg5[key10013] = require("debugSymbolicatorIntegration")[key10013];

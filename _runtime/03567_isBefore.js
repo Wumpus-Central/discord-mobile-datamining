@@ -1,6 +1,3 @@
-// === Module 3567: isBefore ===
-
-// Module 3567 (isBefore)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

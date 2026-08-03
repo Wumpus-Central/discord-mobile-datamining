@@ -1,6 +1,3 @@
-// === Module 171: _isNativeReflectConstruct ===
-
-// Module 171 (_isNativeReflectConstruct)
 import PerformanceLongTaskTiming from "_get";
 import importDefaultResult from "_createClass";
 import _classCallCheck from "_classCallCheck";

@@ -1,6 +1,3 @@
-// === Module 3515: addLeadingZeros ===
-
-// Module 3515 (addLeadingZeros)
 
 export default function addLeadingZeros(arg0, arg1) {
   let length;

@@ -1,6 +1,3 @@
-// === Module 1029: feedbackSyncIntegration ===
-
-// Module 1029 (feedbackSyncIntegration)
 import mergeOptions from "mergeOptions";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

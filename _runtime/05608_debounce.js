@@ -1,6 +1,3 @@
-// === Module 5608: debounce ===
-
-// Module 5608 (debounce)
 arg5.default = function debounce(arg0, arg1) {
   let closure_0 = arg0;
   let closure_1 = arg1;

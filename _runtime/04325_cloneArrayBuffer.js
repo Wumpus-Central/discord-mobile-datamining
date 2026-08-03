@@ -1,6 +1,3 @@
-// === Module 4325: cloneArrayBuffer ===
-
-// Module 4325 (cloneArrayBuffer)
 
 export default function cloneArrayBuffer(byteLength) {
   const constructor = new byteLength.constructor(byteLength.byteLength);

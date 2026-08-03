@@ -1,6 +1,3 @@
-// === Module 6417: memoBuilder ===
-
-// Module 6417 (memoBuilder)
 arg5.memoBuilder = function memoBuilder() {
   let closure_0 = typeof WeakSet === "fileFinishedImporting";
   if (typeof WeakSet === "fileFinishedImporting") {

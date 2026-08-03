@@ -1,6 +1,3 @@
-// === Module 6440: parameterize ===
-
-// Module 6440 (parameterize)
 arg5.parameterize = function parameterize(join) {
   const substr = [...arguments].slice();
   const items = [join, ...substr];

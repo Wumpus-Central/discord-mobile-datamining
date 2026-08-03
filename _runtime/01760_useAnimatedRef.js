@@ -1,6 +1,3 @@
-// === Module 1760: useAnimatedRef ===
-
-// Module 1760 (useAnimatedRef)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import isJest from "isJest";

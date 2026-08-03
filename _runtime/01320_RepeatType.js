@@ -1,6 +1,3 @@
-// === Module 1320: RepeatType ===
-
-// Module 1320 (RepeatType)
 const require = arg1;
 const dependencyMap = arg6;
 ScalarType.ScalarType = undefined;

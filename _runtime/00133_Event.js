@@ -1,6 +1,3 @@
-// === Module 133: Event ===
-
-// Module 133 (Event)
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

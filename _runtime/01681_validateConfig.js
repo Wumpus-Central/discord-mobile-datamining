@@ -1,6 +1,3 @@
-// === Module 1681: validateConfig ===
-
-// Module 1681 (validateConfig)
 const require = arg1;
 let dependencyMap = arg6;
 function validateConfig(clamp) {

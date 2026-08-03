@@ -1,6 +1,3 @@
-// === Module 1828: noop ===
-
-// Module 1828 (noop)
 import "noop";
 import jsxProd from "jsxProd";
 

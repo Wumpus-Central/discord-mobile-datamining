@@ -1,6 +1,3 @@
-// === Module 15571: ? ===
-
-// Module 15571
 if (typeof Symbol !== "disabledUntil") {
   let _Symbol = Symbol;
   if (typeof Symbol.iterator === "e") {

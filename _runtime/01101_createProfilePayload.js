@@ -1,6 +1,3 @@
-// === Module 1101: createProfilePayload ===
-
-// Module 1101 (createProfilePayload)
 import StringResult from "registerSpanErrorInstrumentation";
 
 function createProfilePayload(arg0, arg1, resources, type) {

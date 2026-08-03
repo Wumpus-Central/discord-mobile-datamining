@@ -1,6 +1,3 @@
-// === Module 3443: clamp ===
-
-// Module 3443 (clamp)
 import _typeof from "_typeof";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

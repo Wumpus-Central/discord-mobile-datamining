@@ -1,6 +1,3 @@
-// === Module 1184: createReleaseFromGlobalReleaseConstants ===
-
-// Module 1184 (createReleaseFromGlobalReleaseConstants)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {

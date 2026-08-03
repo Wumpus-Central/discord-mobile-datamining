@@ -1,6 +1,3 @@
-// === Module 5476: ViewHolderCollection ===
-
-// Module 5476 (ViewHolderCollection)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import closure_6 from "noop";

@@ -1,6 +1,3 @@
-// === Module 476: PermissionsAndroidImpl ===
-
-// Module 476 (PermissionsAndroidImpl)
 import importDefaultResult from "DialogManagerAndroid";
 import PermissionsAndroidImpl from "_classCallCheck";
 import importDefaultResult1 from "_createClass";

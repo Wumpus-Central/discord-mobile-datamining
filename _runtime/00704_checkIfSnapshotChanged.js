@@ -1,6 +1,3 @@
-// === Module 704: checkIfSnapshotChanged ===
-
-// Module 704 (checkIfSnapshotChanged)
 import noop from "noop";
 
 let c3;

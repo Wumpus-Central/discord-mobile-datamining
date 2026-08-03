@@ -1,6 +1,3 @@
-// === Module 13282: addLikelySubtags ===
-
-// Module 13282 (addLikelySubtags)
 import e from "e";
 import getInternalSlots from "getInternalSlots";
 

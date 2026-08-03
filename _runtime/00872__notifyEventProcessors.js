@@ -1,6 +1,3 @@
-// === Module 872: _notifyEventProcessors ===
-
-// Module 872 (_notifyEventProcessors)
 const require = arg1;
 let dependencyMap = arg6;
 function _notifyEventProcessors(arg0, arg1, arg2, arg3) {

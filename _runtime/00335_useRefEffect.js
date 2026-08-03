@@ -1,6 +1,3 @@
-// === Module 335: useRefEffect ===
-
-// Module 335 (useRefEffect)
 import noop from "noop";
 
 let c0;

@@ -1,6 +1,3 @@
-// === Module 1664: convertAnimationObjectToKeyframes ===
-
-// Module 1664 (convertAnimationObjectToKeyframes)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

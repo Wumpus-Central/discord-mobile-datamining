@@ -1,6 +1,3 @@
-// === Module 1785: setGestureStateNative ===
-
-// Module 1785 (setGestureStateNative)
 import isJest from "isJest";
 
 function setGestureStateNative(arg0, arg1) {

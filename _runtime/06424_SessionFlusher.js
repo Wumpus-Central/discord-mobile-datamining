@@ -1,6 +1,3 @@
-// === Module 6424: SessionFlusher ===
-
-// Module 6424 (SessionFlusher)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

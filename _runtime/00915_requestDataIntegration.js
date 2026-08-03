@@ -1,6 +1,3 @@
-// === Module 915: requestDataIntegration ===
-
-// Module 915 (requestDataIntegration)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

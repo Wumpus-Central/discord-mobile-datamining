@@ -1,6 +1,3 @@
-// === Module 13340: isMissingLocaleDataError ===
-
-// Module 13340 (isMissingLocaleDataError)
 import e from "e";
 
 e.__extends(function MissingLocaleDataError() {

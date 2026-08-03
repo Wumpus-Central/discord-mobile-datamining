@@ -1,6 +1,3 @@
-// === Module 1034: triggerHandlers ===
-
-// Module 1034 (triggerHandlers)
 const require = arg1;
 let dependencyMap = arg6;
 function triggerHandlers(arg0, arg1) {

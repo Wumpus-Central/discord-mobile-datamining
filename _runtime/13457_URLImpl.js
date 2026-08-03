@@ -1,6 +1,3 @@
-// === Module 13457: URLImpl ===
-
-// Module 13457 (URLImpl)
 import _classCallCheck from "_classCallCheck";
 
 const URLImpl = require;

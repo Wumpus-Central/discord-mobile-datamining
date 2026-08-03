@@ -1,6 +1,3 @@
-// === Module 1186: getDefaultIntegrations ===
-
-// Module 1186 (getDefaultIntegrations)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise) {

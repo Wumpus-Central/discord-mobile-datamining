@@ -1,6 +1,3 @@
-// === Module 46: isEnabled ===
-
-// Module 46 (isEnabled)
 const global = arg0;
 let c1 = 8192;
 let c2 = 0;

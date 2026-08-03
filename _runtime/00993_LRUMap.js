@@ -1,6 +1,3 @@
-// === Module 993: LRUMap ===
-
-// Module 993 (LRUMap)
 import _readOnlyError from "_readOnlyError";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

@@ -1,6 +1,3 @@
-// === Module 6710: compareMultiple ===
-
-// Module 6710 (compareMultiple)
 
 export default function compareMultiple(criteria, index) {
   criteria = criteria.criteria;

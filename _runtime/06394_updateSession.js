@@ -1,6 +1,3 @@
-// === Module 6394: updateSession ===
-
-// Module 6394 (updateSession)
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import consoleSandbox from "consoleSandbox";
 import "SyncPromise";

@@ -1,6 +1,3 @@
-// === Module 6496: _asyncOptionalChain2 ===
-
-// Module 6496 (_asyncOptionalChain2)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _asyncOptionalChain2() {

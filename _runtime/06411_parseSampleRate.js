@@ -1,6 +1,3 @@
-// === Module 6411: parseSampleRate ===
-
-// Module 6411 (parseSampleRate)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.parseSampleRate = function parseSampleRate(arg0) {

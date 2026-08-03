@@ -1,6 +1,3 @@
-// === Module 1017: getPromisePolyfill ===
-
-// Module 1017 (getPromisePolyfill)
 const require = arg1;
 const dependencyMap = arg6;
 function getPromisePolyfill() {

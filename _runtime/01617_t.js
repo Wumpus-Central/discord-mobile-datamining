@@ -1,6 +1,3 @@
-// === Module 1617: t ===
-
-// Module 1617 (t)
 import _slicedToArray from "_slicedToArray";
 
 const fn = function t(arg0) {

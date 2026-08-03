@@ -1,6 +1,3 @@
-// === Module 4309: copyArray ===
-
-// Module 4309 (copyArray)
 
 export default function copyArray(arg0, arg1) {
   let ArrayResult = arg1;

@@ -1,6 +1,3 @@
-// === Module 955: onVercelAiSpanStart ===
-
-// Module 955 (onVercelAiSpanStart)
 const require = arg1;
 const dependencyMap = arg6;
 function onVercelAiSpanStart(setAttribute) {

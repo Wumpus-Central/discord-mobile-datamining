@@ -1,6 +1,3 @@
-// === Module 13337: __exportStarResult26 ===
-
-// Module 13337 (__exportStarResult26)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(internalSlots, result1, minimumFractionDigits, arg3, GetOptionResult1) {

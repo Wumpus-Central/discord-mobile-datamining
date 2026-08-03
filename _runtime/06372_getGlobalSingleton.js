@@ -1,6 +1,3 @@
-// === Module 6372: getGlobalSingleton ===
-
-// Module 6372 (getGlobalSingleton)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.GLOBAL_OBJ = globalThis;

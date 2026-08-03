@@ -1,6 +1,3 @@
-// === Module 13394: ? ===
-
-// Module 13394
 let closure_3 = require("withoutSetter")("toPrimitive");
 
 export default (arg0, arg1) => {

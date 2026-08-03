@@ -1,6 +1,3 @@
-// === Module 532: _createForOfIteratorHelper ===
-
-// Module 532 (_createForOfIteratorHelper)
 const exports = arg5;
 function _createForOfIteratorHelper(iterable) {
   let closure_0 = iterable;

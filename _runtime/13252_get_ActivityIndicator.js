@@ -1,6 +1,3 @@
-// === Module 13252: get ActivityIndicator ===
-
-// Module 13252 (get ActivityIndicator)
 import { StyleSheet } from "get ActivityIndicator";
 
 let obj = { container: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, image: { position: "relative", resizeMode: "cover", width: null, height: null }, loaderContainer: null };

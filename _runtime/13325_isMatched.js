@@ -1,6 +1,3 @@
-// === Module 13325: isMatched ===
-
-// Module 13325 (isMatched)
 const require = arg1;
 const dependencyMap = arg6;
 function isMatched(region, str) {

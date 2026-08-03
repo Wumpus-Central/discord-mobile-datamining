@@ -1,6 +1,3 @@
-// === Module 12743: inflate_fast ===
-
-// Module 12743 (inflate_fast)
 
 export default function inflate_fast(avail_in) {
   let _window;

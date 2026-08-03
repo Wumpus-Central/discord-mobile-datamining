@@ -1,6 +1,3 @@
-// === Module 1793: RNScreensTurboModule ===
-
-// Module 1793 (RNScreensTurboModule)
 let c0 = require;
 let RNScreensTurboModule = global.RNScreensTurboModule;
 if (!RNScreensTurboModule) {

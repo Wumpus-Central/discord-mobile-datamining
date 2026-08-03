@@ -1,6 +1,3 @@
-// === Module 1155: ? ===
-
-// Module 1155
 arg5.DEFAULT = "default";
 arg5.NAVIGATION = "navigation";
 arg5.UI_LOAD = "ui.load";

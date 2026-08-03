@@ -1,6 +1,3 @@
-// === Module 6481: getBreadcrumbLogLevelFromHttpStatusCode ===
-
-// Module 6481 (getBreadcrumbLogLevelFromHttpStatusCode)
 arg5.getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
   let tmp;
   if (undefined !== arg0) {

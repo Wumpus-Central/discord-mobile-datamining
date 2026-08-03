@@ -1,6 +1,3 @@
-// === Module 5284: cancelAnimation ===
-
-// Module 5284 (cancelAnimation)
 try {
   const _module = require("cancelAnimation");
   let useSharedValue;

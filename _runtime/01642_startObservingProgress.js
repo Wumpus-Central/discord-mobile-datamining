@@ -1,6 +1,3 @@
-// === Module 1642: startObservingProgress ===
-
-// Module 1642 (startObservingProgress)
 import isJest from "isJest";
 import runWorkletOnJS from "runWorkletOnJS";
 

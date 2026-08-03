@@ -1,6 +1,3 @@
-// === Module 211: FormData ===
-
-// Module 211 (FormData)
 import FormData from "_classCallCheck";
 import _createClass from "_createClass";
 

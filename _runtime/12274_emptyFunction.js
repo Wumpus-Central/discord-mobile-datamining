@@ -1,6 +1,3 @@
-// === Module 12274: emptyFunction ===
-
-// Module 12274 (emptyFunction)
 function emptyFunction() {
 
 }

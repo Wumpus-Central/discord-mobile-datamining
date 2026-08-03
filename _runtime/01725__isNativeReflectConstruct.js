@@ -1,6 +1,3 @@
-// === Module 1725: _isNativeReflectConstruct ===
-
-// Module 1725 (_isNativeReflectConstruct)
 import FadeOutDown from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

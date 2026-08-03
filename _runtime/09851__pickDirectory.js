@@ -1,6 +1,3 @@
-// === Module 9851: _pickDirectory ===
-
-// Module 9851 (_pickDirectory)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Platform } from "get ActivityIndicator";
 

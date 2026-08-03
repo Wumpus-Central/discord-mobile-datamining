@@ -1,6 +1,3 @@
-// === Module 3698: setWeekYear ===
-
-// Module 3698 (setWeekYear)
 import differenceInCalendarDays from "differenceInCalendarDays";
 import startOfWeekYear from "startOfWeekYear";
 import _typeof from "_typeof";

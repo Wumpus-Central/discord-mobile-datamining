@@ -1,6 +1,3 @@
-// === Module 86: pickScale ===
-
-// Module 86 (pickScale)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.pickScale = function pickScale(scales, _default) {

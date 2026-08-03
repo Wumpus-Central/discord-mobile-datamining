@@ -1,6 +1,3 @@
-// === Module 12104: mergeDefs ===
-
-// Module 12104 (mergeDefs)
 const self = this;
 let self2 = this;
 if (this) {

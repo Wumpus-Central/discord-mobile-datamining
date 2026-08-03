@@ -1,6 +1,3 @@
-// === Module 3312: code ===
-
-// Module 3312 (code)
 import futureSeconds from "futureSeconds";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";

@@ -1,6 +1,3 @@
-// === Module 1742: ProgressTransitionManager ===
-
-// Module 1742 (ProgressTransitionManager)
 import _classCallCheck from "_classCallCheck";
 import { Platform } from "get ActivityIndicator";
 import importDefaultResult from "_createClass";

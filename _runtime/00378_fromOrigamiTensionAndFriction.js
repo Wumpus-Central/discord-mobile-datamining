@@ -1,6 +1,3 @@
-// === Module 378: fromOrigamiTensionAndFriction ===
-
-// Module 378 (fromOrigamiTensionAndFriction)
 arg5.fromOrigamiTensionAndFriction = function fromOrigamiTensionAndFriction(overshootClamping, overshootClamping) {
   return { stiffness: 3.62 * (overshootClamping - 30) + 194, damping: 3 * (overshootClamping - 8) + 25 };
 };

@@ -1,6 +1,3 @@
-// === Module 6472: items ===
-
-// Module 6472 (items)
 import _slicedToArray from "_slicedToArray";
 
 let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];

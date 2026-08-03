@@ -1,6 +1,3 @@
-// === Module 1553: usePreventRemove ===
-
-// Module 1553 (usePreventRemove)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

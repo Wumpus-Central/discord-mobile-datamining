@@ -1,6 +1,3 @@
-// === Module 6344: singleProductAndroidMap ===
-
-// Module 6344 (singleProductAndroidMap)
 arg5.AndroidPurchaseState = { purchased: 0, [0]: "purchased", canceled: 1, [1]: "canceled", pending: 2, [2]: "pending" };
 arg5.AndroidPurchaseType = { test: 0, [0]: "test", promo: 1, [1]: "promo", rewarded: 2, [2]: "rewarded" };
 arg5.AndroidConsumptionState = { yet: 0, [0]: "yet", consumed: 1, [1]: "consumed" };

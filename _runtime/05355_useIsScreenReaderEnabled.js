@@ -1,6 +1,3 @@
-// === Module 5355: useIsScreenReaderEnabled ===
-
-// Module 5355 (useIsScreenReaderEnabled)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

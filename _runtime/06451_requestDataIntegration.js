@@ -1,6 +1,3 @@
-// === Module 6451: requestDataIntegration ===
-
-// Module 6451 (requestDataIntegration)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import setupIntegration from "setupIntegration";

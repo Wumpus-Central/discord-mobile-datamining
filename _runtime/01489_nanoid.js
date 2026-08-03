@@ -1,6 +1,3 @@
-// === Module 1489: nanoid ===
-
-// Module 1489 (nanoid)
 arg5.nanoid = () => {
   let tmp3;
   let num = arg0;

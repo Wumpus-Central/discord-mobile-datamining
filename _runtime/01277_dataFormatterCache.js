@@ -1,6 +1,3 @@
-// === Module 1277: dataFormatterCache ===
-
-// Module 1277 (dataFormatterCache)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

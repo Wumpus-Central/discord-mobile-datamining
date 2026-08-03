@@ -1,6 +1,3 @@
-// === Module 888: getPossibleEventMessages ===
-
-// Module 888 (getPossibleEventMessages)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getPossibleEventMessages = function getPossibleEventMessages(message) {
   const items = [];

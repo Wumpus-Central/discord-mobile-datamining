@@ -1,6 +1,3 @@
-// === Module 16110: _default2 ===
-
-// Module 16110 (_default2)
 import module_576 from "module_576";
 import { default as _default2 } from "CanonicalizeLocaleList";
 

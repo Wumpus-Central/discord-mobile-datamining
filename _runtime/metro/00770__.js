@@ -1,6 +1,3 @@
-// === Module 770: ? ===
-
-// Module 770
 import toSource from "toSource";
 import getNative from "getNative";
 import toSource from "toSource";

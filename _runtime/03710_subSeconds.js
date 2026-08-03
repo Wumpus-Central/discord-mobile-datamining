@@ -1,6 +1,3 @@
-// === Module 3710: subSeconds ===
-
-// Module 3710 (subSeconds)
 import toInteger from "toInteger";
 import addSeconds from "addSeconds";
 import requiredArgs from "requiredArgs";

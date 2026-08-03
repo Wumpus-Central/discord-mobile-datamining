@@ -1,6 +1,3 @@
-// === Module 1052: LCPEntryManager ===
-
-// Module 1052 (LCPEntryManager)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

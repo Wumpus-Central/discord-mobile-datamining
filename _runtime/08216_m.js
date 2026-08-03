@@ -1,6 +1,3 @@
-// === Module 8216: m ===
-
-// Module 8216 (m)
 let self = this;
 let fn = function m() {
   function y(arg0, arg1, arg2) {

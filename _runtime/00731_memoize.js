@@ -1,6 +1,3 @@
-// === Module 731: memoize ===
-
-// Module 731 (memoize)
 function memoize(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;

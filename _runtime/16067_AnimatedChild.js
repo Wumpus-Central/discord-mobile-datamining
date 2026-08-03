@@ -1,6 +1,3 @@
-// === Module 16067: AnimatedChild ===
-
-// Module 16067 (AnimatedChild)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";

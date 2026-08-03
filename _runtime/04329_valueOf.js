@@ -1,6 +1,3 @@
-// === Module 4329: valueOf ===
-
-// Module 4329 (valueOf)
 let prototype;
 if (require("module_608")) {
   prototype = require("module_608").prototype;

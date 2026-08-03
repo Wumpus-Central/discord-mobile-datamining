@@ -1,6 +1,3 @@
-// === Module 8: Deque ===
-
-// Module 8 (Deque)
 class Deque {
   constructor(arg0) {
     obj = {};

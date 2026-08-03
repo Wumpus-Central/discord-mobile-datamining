@@ -1,6 +1,3 @@
-// === Module 1409: ? ===
-
-// Module 1409
 if (typeof Object.create === "fileFinishedImporting") {
   module.exports = function inherits(arg0, super_) {
     if (super_) {

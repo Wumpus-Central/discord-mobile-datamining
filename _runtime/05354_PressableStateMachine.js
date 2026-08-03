@@ -1,6 +1,3 @@
-// === Module 5354: PressableStateMachine ===
-
-// Module 5354 (PressableStateMachine)
 import PressableStateMachine from "_classCallCheck";
 
 class PressableStateMachine {

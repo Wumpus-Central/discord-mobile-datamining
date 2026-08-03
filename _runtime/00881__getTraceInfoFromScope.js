@@ -1,6 +1,3 @@
-// === Module 881: _getTraceInfoFromScope ===
-
-// Module 881 (_getTraceInfoFromScope)
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

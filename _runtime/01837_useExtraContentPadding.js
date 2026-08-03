@@ -1,6 +1,3 @@
-// === Module 1837: useExtraContentPadding ===
-
-// Module 1837 (useExtraContentPadding)
 import { Platform } from "get ActivityIndicator";
 
 require("noop").useCallback;

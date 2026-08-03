@@ -1,6 +1,3 @@
-// === Module 5381: BottomSheetBackground ===
-
-// Module 5381 (BottomSheetBackground)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 522: parse ===
-
-// Module 522 (parse)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function parse(arr) {

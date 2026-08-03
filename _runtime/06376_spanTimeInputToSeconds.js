@@ -1,6 +1,3 @@
-// === Module 6376: spanTimeInputToSeconds ===
-
-// Module 6376 (spanTimeInputToSeconds)
 const require = arg1;
 const dependencyMap = arg6;
 function spanTimeInputToSeconds(getTime) {

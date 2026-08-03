@@ -1,6 +1,3 @@
-// === Module 1748: AnimatedScrollView ===
-
-// Module 1748 (AnimatedScrollView)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { jsx } from "jsxProd";

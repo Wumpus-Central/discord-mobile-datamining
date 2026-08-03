@@ -1,6 +1,3 @@
-// === Module 190: parseErrorStack ===
-
-// Module 190 (parseErrorStack)
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

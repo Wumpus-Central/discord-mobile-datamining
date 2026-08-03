@@ -1,6 +1,3 @@
-// === Module 6433: initAndBind ===
-
-// Module 6433 (initAndBind)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.initAndBind = function initAndBind(arg0, debug) {

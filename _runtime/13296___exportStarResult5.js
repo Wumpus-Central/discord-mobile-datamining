@@ -1,6 +1,3 @@
-// === Module 13296: __exportStarResult5 ===
-
-// Module 13296 (__exportStarResult5)
 arg5.GetOptionsObject = function GetOptionsObject(arg0) {
   if (undefined === arg0) {
     const _Object = Object;

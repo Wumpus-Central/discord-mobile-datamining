@@ -1,6 +1,3 @@
-// === Module 340: useWindowDimensions ===
-
-// Module 340 (useWindowDimensions)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

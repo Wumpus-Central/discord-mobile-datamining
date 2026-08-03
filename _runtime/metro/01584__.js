@@ -1,6 +1,3 @@
-// === Module 1584: ? ===
-
-// Module 1584
 for (const key10013 in require("context")) {
   let tmp2 = key10013;
   arg5[key10013] = require("context")[key10013];

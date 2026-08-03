@@ -1,6 +1,3 @@
-// === Module 4316: assignValue ===
-
-// Module 4316 (assignValue)
 
 export default function assignValue(arg0, arg1, arg2) {
   const call = hasOwnProperty.call;

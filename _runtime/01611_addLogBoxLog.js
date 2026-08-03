@@ -1,6 +1,3 @@
-// === Module 1611: addLogBoxLog ===
-
-// Module 1611 (addLogBoxLog)
 import { LogBox } from "get ActivityIndicator";
 
 let fn;

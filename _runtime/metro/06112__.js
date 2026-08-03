@@ -1,6 +1,3 @@
-// === Module 6112: ? ===
-
-// Module 6112
 let items = [{ id: "image_0", w: 128, h: 128, u: "", p: "", e: 1 }, , , , ];
 const items1 = [{ ddd: 0, ind: 1, ty: 0, nm: "Portal_Smoke_v02", refId: "comp_1", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: -217.934, ix: 10 }, p: { a: 0, k: [90.409, 150.779, 0], ix: 2 }, a: { a: 0, k: [100, 100, 0], ix: 1 }, s: { a: 0, k: [106.9, 106.9, 100], ix: 6 } }, ao: 0, w: 200, h: 200, ip: 0, op: 901, st: 0, bm: 0 }, { ddd: 0, ind: 2, ty: 0, nm: "Portal_Smoke_v02", refId: "comp_1", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: -159.934, ix: 10 }, p: { a: 0, k: [70.409, 145.779, 0], ix: 2 }, a: { a: 0, k: [100, 100, 0], ix: 1 }, s: { a: 0, k: [106.9, 106.9, 100], ix: 6 } }, ao: 0, w: 200, h: 200, ip: 0, op: 901, st: 0, bm: 0 }, { ddd: 0, ind: 3, ty: 0, nm: "Portal_Smoke_v02", refId: "comp_1", sr: 1, ks: { o: { a: 0, k: 100, ix: 11 }, r: { a: 0, k: -35.934, ix: 10 }, p: { a: 0, k: [98.409, 71.779, 0], ix: 2 }, a: { a: 0, k: [100, 100, 0], ix: 1 }, s: { a: 0, k: [106.9, 106.9, 100], ix: 6 } }, ao: 0, w: 200, h: 200, ip: 0, op: 901, st: 0, bm: 0 }];
 items[1] = { id: "comp_0", layers: items1 };

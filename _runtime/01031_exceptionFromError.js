@@ -1,6 +1,3 @@
-// === Module 1031: exceptionFromError ===
-
-// Module 1031 (exceptionFromError)
 const require = arg1;
 const dependencyMap = arg6;
 function exceptionFromError(arg0, name) {

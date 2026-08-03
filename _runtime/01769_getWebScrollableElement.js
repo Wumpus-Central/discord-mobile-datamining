@@ -1,6 +1,3 @@
-// === Module 1769: getWebScrollableElement ===
-
-// Module 1769 (getWebScrollableElement)
 import noop from "noop";
 import isJest from "isJest";
 

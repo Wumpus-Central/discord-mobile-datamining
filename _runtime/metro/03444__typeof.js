@@ -1,6 +1,3 @@
-// === Module 3444: _typeof ===
-
-// Module 3444 (_typeof)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

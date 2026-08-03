@@ -1,6 +1,3 @@
-// === Module 1537: isRecordEqual ===
-
-// Module 1537 (isRecordEqual)
 arg5.default = function isRecordEqual(arg0, arg1) {
   let closure_0 = arg0;
   let closure_1 = arg1;

@@ -1,6 +1,3 @@
-// === Module 12956: Range ===
-
-// Module 12956 (Range)
 
 export default (arg0, arg1, arg2) => {
   try {

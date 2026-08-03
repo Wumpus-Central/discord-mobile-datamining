@@ -1,6 +1,3 @@
-// === Module 1521: decodeComponents ===
-
-// Module 1521 (decodeComponents)
 function decodeComponents(match, arg1) {
   try {
     const _decodeURIComponent = decodeURIComponent;

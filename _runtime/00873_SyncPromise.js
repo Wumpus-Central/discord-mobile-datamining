@@ -1,6 +1,3 @@
-// === Module 873: SyncPromise ===
-
-// Module 873 (SyncPromise)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

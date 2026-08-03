@@ -1,6 +1,3 @@
-// === Module 3502: endOfTomorrow ===
-
-// Module 3502 (endOfTomorrow)
 
 export default function endOfTomorrow() {
   const date = new Date();

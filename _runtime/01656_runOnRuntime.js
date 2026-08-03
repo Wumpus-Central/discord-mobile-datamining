@@ -1,6 +1,3 @@
-// === Module 1656: runOnRuntime ===
-
-// Module 1656 (runOnRuntime)
 import isJest from "isJest";
 
 let closure_3 = { code: "function pnpm_runtimesTs1(){const{registerReanimatedError,registerLoggerConfig,config,setupCallGuard,setupConsole,initializer}=this.__closure;var _initializer;registerReanimatedError();registerLoggerConfig(config);setupCallGuard();setupConsole();(_initializer=initializer)===null||_initializer===void 0||_initializer();}" };

@@ -1,6 +1,3 @@
-// === Module 13430: ? ===
-
-// Module 13430
 
 export default (arg0) => {
   let num = 0;

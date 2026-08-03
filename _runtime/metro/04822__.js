@@ -1,6 +1,3 @@
-// === Module 4822: ? ===
-
-// Module 4822
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {

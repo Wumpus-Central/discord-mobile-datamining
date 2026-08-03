@@ -1,6 +1,3 @@
-// === Module 5441: RecyclerViewManager ===
-
-// Module 5441 (RecyclerViewManager)
 import _classCallCheck from "_classCallCheck";
 
 const RecyclerViewManager = arg1;

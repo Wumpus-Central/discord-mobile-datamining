@@ -1,6 +1,3 @@
-// === Module 5321: attachHandlers ===
-
-// Module 5321 (attachHandlers)
 import { Platform } from "get ActivityIndicator";
 
 

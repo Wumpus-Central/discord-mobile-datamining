@@ -1,6 +1,3 @@
-// === Module 262: setUpIntersectionObserver ===
-
-// Module 262 (setUpIntersectionObserver)
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = false;

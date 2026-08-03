@@ -1,6 +1,3 @@
-// === Module 2: set ===
-
-// Module 2 (set)
 const set = new Set();
 arg5.clear = function clear() {
   set.clear();

@@ -1,6 +1,3 @@
-// === Module 1710: dummyListener ===
-
-// Module 1710 (dummyListener)
 import _classCallCheck from "_classCallCheck";
 
 let PropsFilter = arg1;

@@ -1,6 +1,3 @@
-// === Module 4828: decodeXPValue ===
-
-// Module 4828 (decodeXPValue)
 function decodeXPValue(arg0) {
   const textDecoder = new TextDecoder("utf-16");
   const uint8Array = new Uint8Array(arg0);

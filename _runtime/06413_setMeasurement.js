@@ -1,6 +1,3 @@
-// === Module 6413: setMeasurement ===
-
-// Module 6413 (setMeasurement)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.setMeasurement = function setMeasurement(arg0, arg1, arg2) {

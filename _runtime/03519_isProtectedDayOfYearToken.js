@@ -1,6 +1,3 @@
-// === Module 3519: isProtectedDayOfYearToken ===
-
-// Module 3519 (isProtectedDayOfYearToken)
 arg5.isProtectedDayOfYearToken = function isProtectedDayOfYearToken(arg0) {
   return -1 !== closure_0.indexOf(arg0);
 };

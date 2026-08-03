@@ -1,6 +1,3 @@
-// === Module 5893: baseIndexOf ===
-
-// Module 5893 (baseIndexOf)
 
 export default function baseIndexOf(arg0, arg1, arg2) {
   if (arg1 == arg1) {

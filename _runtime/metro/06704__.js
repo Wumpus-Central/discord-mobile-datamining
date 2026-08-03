@@ -1,6 +1,3 @@
-// === Module 6704: ? ===
-
-// Module 6704
 import baseRest from "baseRest";
 
 

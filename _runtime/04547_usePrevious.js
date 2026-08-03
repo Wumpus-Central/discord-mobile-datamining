@@ -1,6 +1,3 @@
-// === Module 4547: usePrevious ===
-
-// Module 4547 (usePrevious)
 import noop from "noop";
 
 let c0;

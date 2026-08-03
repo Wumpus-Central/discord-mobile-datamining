@@ -1,6 +1,3 @@
-// === Module 4450: ToNumber ===
-
-// Module 4450 (ToNumber)
 let closure_2 = require("getEvalledConstructor")("%Number%");
 
 export default function ToNumber(arg0) {

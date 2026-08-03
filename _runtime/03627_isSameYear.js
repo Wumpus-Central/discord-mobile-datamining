@@ -1,6 +1,3 @@
-// === Module 3627: isSameYear ===
-
-// Module 3627 (isSameYear)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

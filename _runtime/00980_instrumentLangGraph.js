@@ -1,6 +1,3 @@
-// === Module 980: instrumentLangGraph ===
-
-// Module 980 (instrumentLangGraph)
 import asyncGeneratorStep from "getSpanStatusFromHttpCode";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

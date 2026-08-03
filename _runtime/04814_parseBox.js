@@ -1,6 +1,3 @@
-// === Module 4814: parseBox ===
-
-// Module 4814 (parseBox)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = {

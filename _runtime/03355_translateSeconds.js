@@ -1,6 +1,3 @@
-// === Module 3355: translateSeconds ===
-
-// Module 3355 (translateSeconds)
 let closure_0 = { xseconds_other: "sekund\u0117_sekund\u017Ei\u0173_sekundes", xminutes_one: "minut\u0117_minut\u0117s_minut\u0119", xminutes_other: "minut\u0117s_minu\u010Di\u0173_minutes", xhours_one: "valanda_valandos_valand\u0105", xhours_other: "valandos_valand\u0173_valandas", xdays_one: "diena_dienos_dien\u0105", xdays_other: "dienos_dien\u0173_dienas", xweeks_one: "savait\u0117_savait\u0117s_savait\u0119", xweeks_other: "savait\u0117s_savai\u010Di\u0173_savaites", xmonths_one: "m\u0117nuo_m\u0117nesio_m\u0117nes\u012F", xmonths_other: "m\u0117nesiai_m\u0117nesi\u0173_m\u0117nesius", xyears_one: "metai_met\u0173_metus", xyears_other: "metai_met\u0173_metus", about: "apie", over: "daugiau nei", almost: "beveik", lessthan: "ma\u017Eiau nei" };
 function translateSeconds(arg0, arg1, arg2, arg3) {
   let str = "kelios sekund\u0117s";

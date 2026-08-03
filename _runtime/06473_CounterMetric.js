@@ -1,6 +1,3 @@
-// === Module 6473: CounterMetric ===
-
-// Module 6473 (CounterMetric)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

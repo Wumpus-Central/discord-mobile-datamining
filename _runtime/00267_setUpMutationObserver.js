@@ -1,6 +1,3 @@
-// === Module 267: setUpMutationObserver ===
-
-// Module 267 (setUpMutationObserver)
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = false;

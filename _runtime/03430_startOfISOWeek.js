@@ -1,6 +1,3 @@
-// === Module 3430: startOfISOWeek ===
-
-// Module 3430 (startOfISOWeek)
 import startOfWeek from "startOfWeek";
 import requiredArgs from "requiredArgs";
 

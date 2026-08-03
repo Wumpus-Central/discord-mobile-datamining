@@ -1,6 +1,3 @@
-// === Module 3576: parsers ===
-
-// Module 3576 (parsers)
 const obj = { G: null, y: null, Y: null, R: null, u: null, Q: null, q: null, M: null, L: null, w: null, I: null, d: null, D: null, E: null, e: null, c: null, i: null, a: null, b: null, B: null, h: null, H: null, K: null, k: null, m: null, s: null, S: null, X: null, x: null, t: null, T: null };
 const eraParser = new require("_typeof").EraParser();
 obj[0] = eraParser;

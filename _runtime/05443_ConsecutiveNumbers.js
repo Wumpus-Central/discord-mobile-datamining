@@ -1,6 +1,3 @@
-// === Module 5443: ConsecutiveNumbers ===
-
-// Module 5443 (ConsecutiveNumbers)
 import ConsecutiveNumbers from "_classCallCheck";
 
 class ConsecutiveNumbers {

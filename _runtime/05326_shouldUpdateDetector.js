@@ -1,6 +1,3 @@
-// === Module 5326: shouldUpdateDetector ===
-
-// Module 5326 (shouldUpdateDetector)
 import noop from "noop";
 
 let c4;

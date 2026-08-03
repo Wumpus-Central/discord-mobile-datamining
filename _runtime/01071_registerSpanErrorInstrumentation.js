@@ -1,6 +1,3 @@
-// === Module 1071: registerSpanErrorInstrumentation ===
-
-// Module 1071 (registerSpanErrorInstrumentation)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

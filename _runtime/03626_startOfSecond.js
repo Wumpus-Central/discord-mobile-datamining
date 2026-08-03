@@ -1,6 +1,3 @@
-// === Module 3626: startOfSecond ===
-
-// Module 3626 (startOfSecond)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 13425: items ===
-
-// Module 13425 (items)
 let closure_2 = require("call")([].push);
 
 export default (arg0, arg1) => {

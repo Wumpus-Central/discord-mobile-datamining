@@ -1,6 +1,3 @@
-// === Module 283: getHandler ===
-
-// Module 283 (getHandler)
 import recordTouchStart from "recordTouchStart";
 
 const require = arg1;

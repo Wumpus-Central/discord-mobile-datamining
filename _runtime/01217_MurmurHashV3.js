@@ -1,6 +1,3 @@
-// === Module 1217: MurmurHashV3 ===
-
-// Module 1217 (MurmurHashV3)
 class MurmurHashV3 {
   constructor(arg0, arg1) {
     encodeResult = global;

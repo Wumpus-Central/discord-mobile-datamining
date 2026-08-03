@@ -1,6 +1,3 @@
-// === Module 6343: PurchaseError ===
-
-// Module 6343 (PurchaseError)
 import _classCallCheck from "_classCallCheck";
 
 class PurchaseError {

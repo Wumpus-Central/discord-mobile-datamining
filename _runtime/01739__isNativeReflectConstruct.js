@@ -1,6 +1,3 @@
-// === Module 1739: _isNativeReflectConstruct ===
-
-// Module 1739 (_isNativeReflectConstruct)
 import LinearTransition from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";

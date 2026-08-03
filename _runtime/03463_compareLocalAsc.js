@@ -1,6 +1,3 @@
-// === Module 3463: compareLocalAsc ===
-
-// Module 3463 (compareLocalAsc)
 import _typeof from "_typeof";
 import differenceInCalendarDays from "differenceInCalendarDays";
 import requiredArgs from "requiredArgs";

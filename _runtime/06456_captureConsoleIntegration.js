@@ -1,6 +1,3 @@
-// === Module 6456: captureConsoleIntegration ===
-
-// Module 6456 (captureConsoleIntegration)
 import setupIntegration from "setupIntegration";
 
 

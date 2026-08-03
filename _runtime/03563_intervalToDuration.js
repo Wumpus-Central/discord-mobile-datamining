@@ -1,6 +1,3 @@
-// === Module 3563: intervalToDuration ===
-
-// Module 3563 (intervalToDuration)
 import compareAsc from "compareAsc";
 import _typeof from "_typeof";
 import compareLocalAsc from "compareLocalAsc";

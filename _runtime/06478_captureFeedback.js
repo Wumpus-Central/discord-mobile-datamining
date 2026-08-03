@@ -1,6 +1,3 @@
-// === Module 6478: captureFeedback ===
-
-// Module 6478 (captureFeedback)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.captureFeedback = function captureFeedback(arg0) {

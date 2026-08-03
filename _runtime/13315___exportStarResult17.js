@@ -1,6 +1,3 @@
-// === Module 13315: __exportStarResult17 ===
-
-// Module 13315 (__exportStarResult17)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumeric = function FormatNumeric(internalSlots, isNaN) {

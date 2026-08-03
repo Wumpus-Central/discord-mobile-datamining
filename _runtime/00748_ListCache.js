@@ -1,6 +1,3 @@
-// === Module 748: ListCache ===
-
-// Module 748 (ListCache)
 class ListCache {
   constructor(arg0) {
     num = 0;

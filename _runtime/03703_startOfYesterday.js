@@ -1,6 +1,3 @@
-// === Module 3703: startOfYesterday ===
-
-// Module 3703 (startOfYesterday)
 
 export default function startOfYesterday() {
   const date = new Date();

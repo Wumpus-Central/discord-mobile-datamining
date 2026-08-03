@@ -1,6 +1,3 @@
-// === Module 115: renderElement ===
-
-// Module 115 (renderElement)
 import "noop";
 
 const require = arg1;

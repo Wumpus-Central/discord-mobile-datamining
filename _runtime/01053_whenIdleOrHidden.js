@@ -1,6 +1,3 @@
-// === Module 1053: whenIdleOrHidden ===
-
-// Module 1053 (whenIdleOrHidden)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

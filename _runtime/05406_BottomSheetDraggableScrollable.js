@@ -1,6 +1,3 @@
-// === Module 5406: BottomSheetDraggableScrollable ===
-
-// Module 5406 (BottomSheetDraggableScrollable)
 import "noop";
 import { jsx } from "jsxProd";
 

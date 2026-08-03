@@ -1,6 +1,3 @@
-// === Module 72: map ===
-
-// Module 72 (map)
 const global = arg0;
 const map = new Map();
 arg5.unstable_hasComponent = function unstable_hasComponent(arg0) {

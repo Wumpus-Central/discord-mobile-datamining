@@ -1,6 +1,3 @@
-// === Module 288: peek ===
-
-// Module 288 (peek)
 function peek(arg0) {
   let first = null;
   if (0 !== arg0.length) {

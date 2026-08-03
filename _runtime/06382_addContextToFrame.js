@@ -1,6 +1,3 @@
-// === Module 6382: addContextToFrame ===
-
-// Module 6382 (addContextToFrame)
 const require = arg1;
 const dependencyMap = arg6;
 const re2 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;

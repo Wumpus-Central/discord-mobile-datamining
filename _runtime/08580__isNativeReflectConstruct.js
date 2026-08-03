@@ -1,6 +1,3 @@
-// === Module 8580: _isNativeReflectConstruct ===
-
-// Module 8580 (_isNativeReflectConstruct)
 import FilterPrimitive from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

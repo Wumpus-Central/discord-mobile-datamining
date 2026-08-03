@@ -1,6 +1,3 @@
-// === Module 1170: breadcrumbsIntegration ===
-
-// Module 1170 (breadcrumbsIntegration)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.breadcrumbsIntegration = () => {

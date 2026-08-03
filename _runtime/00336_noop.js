@@ -1,6 +1,3 @@
-// === Module 336: noop ===
-
-// Module 336 (noop)
 import "noop";
 
 

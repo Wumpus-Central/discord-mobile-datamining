@@ -1,6 +1,3 @@
-// === Module 3596: setUTCDay ===
-
-// Module 3596 (setUTCDay)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

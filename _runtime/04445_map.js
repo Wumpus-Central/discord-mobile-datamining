@@ -1,6 +1,3 @@
-// === Module 4445: map ===
-
-// Module 4445 (map)
 const ObjectResult = Object("a");
 let tmp2 = "a" !== ObjectResult[0];
 if (!tmp2) {

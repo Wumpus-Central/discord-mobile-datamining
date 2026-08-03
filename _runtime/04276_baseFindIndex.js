@@ -1,6 +1,3 @@
-// === Module 4276: baseFindIndex ===
-
-// Module 4276 (baseFindIndex)
 
 export default function baseFindIndex(arg0, arg1, arg2, arg3) {
   let num = -1;

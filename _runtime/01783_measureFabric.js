@@ -1,6 +1,3 @@
-// === Module 1783: measureFabric ===
-
-// Module 1783 (measureFabric)
 import isJest from "isJest";
 import isJest from "isJest";
 

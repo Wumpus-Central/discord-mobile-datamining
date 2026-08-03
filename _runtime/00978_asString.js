@@ -1,6 +1,3 @@
-// === Module 978: asString ===
-
-// Module 978 (asString)
 const require = arg1;
 const dependencyMap = arg6;
 function asString(arg0) {

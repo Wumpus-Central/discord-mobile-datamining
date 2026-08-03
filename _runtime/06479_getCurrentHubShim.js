@@ -1,6 +1,3 @@
-// === Module 6479: getCurrentHubShim ===
-
-// Module 6479 (getCurrentHubShim)
 const require = arg1;
 const dependencyMap = arg6;
 function getCurrentHubShim() {

@@ -1,6 +1,3 @@
-// === Module 1131: enrichXhrBreadcrumbsForMobileReplay ===
-
-// Module 1131 (enrichXhrBreadcrumbsForMobileReplay)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobileReplay(category, xhr) {

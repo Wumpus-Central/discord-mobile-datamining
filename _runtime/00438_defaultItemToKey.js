@@ -1,6 +1,3 @@
-// === Module 438: defaultItemToKey ===
-
-// Module 438 (defaultItemToKey)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "noop";
 import noop from "noop";

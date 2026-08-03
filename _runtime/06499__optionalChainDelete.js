@@ -1,6 +1,3 @@
-// === Module 6499: _optionalChainDelete ===
-
-// Module 6499 (_optionalChainDelete)
 const require = arg1;
 const dependencyMap = arg6;
 arg5._optionalChainDelete = function _optionalChainDelete(arg0) {

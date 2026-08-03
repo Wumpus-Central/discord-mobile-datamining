@@ -1,6 +1,3 @@
-// === Module 1820: ? ===
-
-// Module 1820
 import "noop";
 import { Platform } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 1842: ? ===
-
-// Module 1842
 import "noop";
 import { Animated } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

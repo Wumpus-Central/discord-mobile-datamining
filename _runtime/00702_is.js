@@ -1,6 +1,3 @@
-// === Module 702: is ===
-
-// Module 702 (is)
 import noop from "noop";
 
 let c3;

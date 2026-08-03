@@ -1,6 +1,3 @@
-// === Module 13442: state ===
-
-// Module 13442 (state)
 import { state } from "__core-js_shared__";
 
 if (!require("all")) {

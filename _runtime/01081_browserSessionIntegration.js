@@ -1,6 +1,3 @@
-// === Module 1081: browserSessionIntegration ===
-
-// Module 1081 (browserSessionIntegration)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

@@ -1,6 +1,3 @@
-// === Module 5485: runScrollBenchmark ===
-
-// Module 5485 (runScrollBenchmark)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

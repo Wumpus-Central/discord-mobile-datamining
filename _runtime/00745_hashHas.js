@@ -1,6 +1,3 @@
-// === Module 745: hashHas ===
-
-// Module 745 (hashHas)
 
 export default function hashHas(arg0) {
   const __data__ = this.__data__;

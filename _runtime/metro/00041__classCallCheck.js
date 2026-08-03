@@ -1,6 +1,3 @@
-// === Module 41: _classCallCheck ===
-
-// Module 41 (_classCallCheck)
 
 export default function _classCallCheck(arg0, arg1) {
   if (!(arg0 instanceof arg1)) {

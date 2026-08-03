@@ -1,6 +1,3 @@
-// === Module 3518: code ===
-
-// Module 3518 (code)
 import code from "code";
 
 if (!code) {

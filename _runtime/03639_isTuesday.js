@@ -1,6 +1,3 @@
-// === Module 3639: isTuesday ===
-
-// Module 3639 (isTuesday)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

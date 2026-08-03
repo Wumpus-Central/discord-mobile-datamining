@@ -1,6 +1,3 @@
-// === Module 1405: hasPropertyDescriptors ===
-
-// Module 1405 (hasPropertyDescriptors)
 function hasPropertyDescriptors(arg0) {
   return require(564) /* flag */;
 }

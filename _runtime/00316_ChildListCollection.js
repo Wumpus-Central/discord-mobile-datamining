@@ -1,6 +1,3 @@
-// === Module 316: ChildListCollection ===
-
-// Module 316 (ChildListCollection)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

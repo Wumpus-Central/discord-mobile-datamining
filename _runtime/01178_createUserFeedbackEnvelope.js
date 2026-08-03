@@ -1,6 +1,3 @@
-// === Module 1178: createUserFeedbackEnvelope ===
-
-// Module 1178 (createUserFeedbackEnvelope)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.header = 0;

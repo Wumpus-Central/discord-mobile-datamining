@@ -1,6 +1,3 @@
-// === Module 5626: Animated ===
-
-// Module 5626 (Animated)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let Animated;

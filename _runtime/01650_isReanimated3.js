@@ -1,6 +1,3 @@
-// === Module 1650: isReanimated3 ===
-
-// Module 1650 (isReanimated3)
 import controlEdgeToEdgeValues from "controlEdgeToEdgeValues";
 import isJest from "isJest";
 

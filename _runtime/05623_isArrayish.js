@@ -1,6 +1,3 @@
-// === Module 5623: isArrayish ===
-
-// Module 5623 (isArrayish)
 
 export default function isArrayish(arg0) {
   let tmp = !arg0;

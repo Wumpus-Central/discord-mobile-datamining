@@ -1,6 +1,3 @@
-// === Module 5412: BottomSheetScrollView ===
-
-// Module 5412 (BottomSheetScrollView)
 import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent";
 
 const animatedComponent = require("cancelAnimation").createAnimatedComponent(require("get ActivityIndicator").ScrollView);

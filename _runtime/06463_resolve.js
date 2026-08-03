@@ -1,6 +1,3 @@
-// === Module 6463: resolve ===
-
-// Module 6463 (resolve)
 function resolve() {
   let tmp17;
   const items = [...arguments];

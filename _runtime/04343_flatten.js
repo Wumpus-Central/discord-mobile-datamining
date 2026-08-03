@@ -1,6 +1,3 @@
-// === Module 4343: flatten ===
-
-// Module 4343 (flatten)
 
 export default function flatten(arg0) {
   let num = 0;

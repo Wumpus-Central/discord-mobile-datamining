@@ -1,6 +1,3 @@
-// === Module 8398: raw ===
-
-// Module 8398 (raw)
 let closure_1 = raw(HermesBuiltin.getTemplateObject(false, "\\p{Emoji}(?:\\p{EMod}|[\\u{E0020}-\\u{E007E}]+\\u{E007F}|\\uFE0F?\\u20E3?)", "p{Emoji}(?:p{EMod}|[\u{E0020}-\u{E007E}]+\u{E007F}|\uFE0F?\u20E3?)"));
 
 export default () => {

@@ -1,6 +1,3 @@
-// === Module 64: sizesDiffer ===
-
-// Module 64 (sizesDiffer)
 let closure_0 = { width: "Array", height: "HermesInternal" };
 arg5.default = function sizesDiffer(arg0, arg1) {
   let size = arg0;

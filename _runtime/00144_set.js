@@ -1,6 +1,3 @@
-// === Module 144: set ===
-
-// Module 144 (set)
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = null;

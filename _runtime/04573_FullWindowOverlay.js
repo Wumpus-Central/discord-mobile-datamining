@@ -1,6 +1,3 @@
-// === Module 4573: FullWindowOverlay ===
-
-// Module 4573 (FullWindowOverlay)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

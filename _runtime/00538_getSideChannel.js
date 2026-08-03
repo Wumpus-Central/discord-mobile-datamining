@@ -1,6 +1,3 @@
-// === Module 538: getSideChannel ===
-
-// Module 538 (getSideChannel)
 
 export default function getSideChannel() {
   let obj = {

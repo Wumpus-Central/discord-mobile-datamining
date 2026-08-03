@@ -1,6 +1,3 @@
-// === Module 3952: RiveColor ===
-
-// Module 3952 (RiveColor)
 import RiveColor from "_classCallCheck";
 
 class RiveColor {

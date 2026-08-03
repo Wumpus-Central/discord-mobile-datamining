@@ -1,6 +1,3 @@
-// === Module 1672: PinwheelData ===
-
-// Module 1672 (PinwheelData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 

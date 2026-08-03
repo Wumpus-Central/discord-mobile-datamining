@@ -1,6 +1,3 @@
-// === Module 206: byteLength ===
-
-// Module 206 (byteLength)
 arg5.byteLength = function byteLength(arr) {
   if (0 < arr.length % 4) {
     const _Error = Error;

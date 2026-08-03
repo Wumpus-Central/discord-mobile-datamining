@@ -1,6 +1,3 @@
-// === Module 4461: ToString ===
-
-// Module 4461 (ToString)
 let closure_2 = require("getEvalledConstructor")("%String%");
 
 export default function ToString(arg0) {

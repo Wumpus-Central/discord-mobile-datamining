@@ -1,6 +1,3 @@
-// === Module 1016: reactNativeErrorHandlersIntegration ===
-
-// Module 1016 (reactNativeErrorHandlersIntegration)
 const require = arg1;
 const dependencyMap = arg6;
 let fn = this;

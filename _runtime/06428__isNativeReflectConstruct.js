@@ -1,6 +1,3 @@
-// === Module 6428: _isNativeReflectConstruct ===
-
-// Module 6428 (_isNativeReflectConstruct)
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
 import "_possibleConstructorReturn";

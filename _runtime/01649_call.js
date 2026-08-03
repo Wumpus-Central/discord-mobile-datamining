@@ -1,6 +1,3 @@
-// === Module 1649: call ===
-
-// Module 1649 (call)
 import isReanimated3 from "isReanimated3";
 import isReanimated3 from "isReanimated3";
 import isReanimated3 from "isReanimated3";

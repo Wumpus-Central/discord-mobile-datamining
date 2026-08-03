@@ -1,6 +1,3 @@
-// === Module 6422: notifyEventProcessors ===
-
-// Module 6422 (notifyEventProcessors)
 const require = arg1;
 let dependencyMap = arg6;
 arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {

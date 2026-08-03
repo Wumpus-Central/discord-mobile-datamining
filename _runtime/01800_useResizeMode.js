@@ -1,6 +1,3 @@
-// === Module 1800: useResizeMode ===
-
-// Module 1800 (useResizeMode)
 import noop from "noop";
 
 let c3;

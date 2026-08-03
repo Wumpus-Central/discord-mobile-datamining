@@ -1,6 +1,3 @@
-// === Module 1520: ? ===
-
-// Module 1520
 
 export default (arg0) => encodeURIComponent(arg0).replace(/[!'()*]/g, (str) => {
   str = str.charCodeAt(0);

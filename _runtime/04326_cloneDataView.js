@@ -1,6 +1,3 @@
-// === Module 4326: cloneDataView ===
-
-// Module 4326 (cloneDataView)
 
 export default function cloneDataView(buffer) {
   if (arg1) {

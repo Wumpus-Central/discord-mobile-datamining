@@ -1,6 +1,3 @@
-// === Module 13397: __core-js_shared__ ===
-
-// Module 13397 (__core-js_shared__)
 import { "\"__core-js_shared__\"" as __core_js_shared__ } from "module_13381";
 
 if (!__core_js_shared__) {

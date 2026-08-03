@@ -1,6 +1,3 @@
-// === Module 3375: dayAndTimeWithAdjective ===
-
-// Module 3375 (dayAndTimeWithAdjective)
 import isSameUTCWeek from "isSameUTCWeek";
 
 if (!isSameUTCWeek) {

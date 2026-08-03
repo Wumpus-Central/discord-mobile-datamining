@@ -1,6 +1,3 @@
-// === Module 1065: instrumentDOM ===
-
-// Module 1065 (instrumentDOM)
 let require = arg1;
 let dependencyMap = arg6;
 function instrumentDOM() {

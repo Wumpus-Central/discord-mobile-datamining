@@ -1,6 +1,3 @@
-// === Module 5414: forwardRef ===
-
-// Module 5414 (forwardRef)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import "noop";

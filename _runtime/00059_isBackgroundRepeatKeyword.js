@@ -1,6 +1,3 @@
-// === Module 59: isBackgroundRepeatKeyword ===
-
-// Module 59 (isBackgroundRepeatKeyword)
 function isBackgroundRepeatKeyword(arg0) {
   let tmp = "repeat" === arg0;
   if (!tmp) {

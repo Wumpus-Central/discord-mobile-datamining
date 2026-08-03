@@ -1,6 +1,3 @@
-// === Module 1327: ReflectionBinaryReader ===
-
-// Module 1327 (ReflectionBinaryReader)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

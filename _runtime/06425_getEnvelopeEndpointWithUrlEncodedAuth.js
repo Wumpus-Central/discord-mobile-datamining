@@ -1,6 +1,3 @@
-// === Module 6425: getEnvelopeEndpointWithUrlEncodedAuth ===
-
-// Module 6425 (getEnvelopeEndpointWithUrlEncodedAuth)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, arg1, name) {

@@ -1,6 +1,3 @@
-// === Module 842: withScope ===
-
-// Module 842 (withScope)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

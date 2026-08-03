@@ -1,6 +1,3 @@
-// === Module 3441: addYears ===
-
-// Module 3441 (addYears)
 import toInteger from "toInteger";
 import addMonths from "addMonths";
 import requiredArgs from "requiredArgs";

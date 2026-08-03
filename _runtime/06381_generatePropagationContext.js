@@ -1,6 +1,3 @@
-// === Module 6381: generatePropagationContext ===
-
-// Module 6381 (generatePropagationContext)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.generatePropagationContext = function generatePropagationContext() {

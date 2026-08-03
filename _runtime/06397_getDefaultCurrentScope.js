@@ -1,6 +1,3 @@
-// === Module 6397: getDefaultCurrentScope ===
-
-// Module 6397 (getDefaultCurrentScope)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getDefaultCurrentScope = function getDefaultCurrentScope() {

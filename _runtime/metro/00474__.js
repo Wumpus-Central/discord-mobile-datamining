@@ -1,6 +1,3 @@
-// === Module 474: ? ===
-
-// Module 474
 let closure_0 = require("module_475").default.currentCentroidXOfTouchesChangedAfter;
 let closure_1 = require("module_475").default.currentCentroidYOfTouchesChangedAfter;
 let closure_2 = require("module_475").default.previousCentroidXOfTouchesChangedAfter;

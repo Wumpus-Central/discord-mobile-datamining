@@ -1,6 +1,3 @@
-// === Module 827: isInstanceOf ===
-
-// Module 827 (isInstanceOf)
 function isInstanceOf(arg0, arg1) {
   try {
     return arg0 instanceof arg1;

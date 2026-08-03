@@ -1,6 +1,3 @@
-// === Module 13494: map ===
-
-// Module 13494 (map)
 
 export default (arg0) => {
   let map = arg0;

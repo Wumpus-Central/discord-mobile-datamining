@@ -1,6 +1,3 @@
-// === Module 8647: showErrorCSS ===
-
-// Module 8647 (showErrorCSS)
 arg5.showErrorCSS = function showErrorCSS(trying, trying2) {
   throw Error("[react-native-svg] You are trying to import a " + trying2 + " `" + trying + "` that has been moved to a sub-package. Change your import from `react-native-svg` to `react-native-svg/css`.");
 };

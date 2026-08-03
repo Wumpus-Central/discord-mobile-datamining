@@ -1,6 +1,3 @@
-// === Module 3485: eachWeekOfInterval ===
-
-// Module 3485 (eachWeekOfInterval)
 import addWeeks from "addWeeks";
 import startOfWeek from "startOfWeek";
 import _typeof from "_typeof";

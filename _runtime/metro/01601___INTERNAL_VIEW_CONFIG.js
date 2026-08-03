@@ -1,6 +1,3 @@
-// === Module 1601: __INTERNAL_VIEW_CONFIG ===
-
-// Module 1601 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "KeyboardBackgroundView", validAttributes: {} };

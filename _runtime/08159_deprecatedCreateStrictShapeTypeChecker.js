@@ -1,6 +1,3 @@
-// === Module 8159: deprecatedCreateStrictShapeTypeChecker ===
-
-// Module 8159 (deprecatedCreateStrictShapeTypeChecker)
 
 export default function deprecatedCreateStrictShapeTypeChecker(arg0) {
   let closure_0 = arg0;

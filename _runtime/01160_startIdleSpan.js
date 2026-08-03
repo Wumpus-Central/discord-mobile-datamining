@@ -1,6 +1,3 @@
-// === Module 1160: startIdleSpan ===
-
-// Module 1160 (startIdleSpan)
 import { AppState } from "get ActivityIndicator";
 
 let c3 = "Route Change";

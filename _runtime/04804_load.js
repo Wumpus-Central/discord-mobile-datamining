@@ -1,6 +1,3 @@
-// === Module 4804: load ===
-
-// Module 4804 (load)
 const require = arg1;
 function load(response, then) {
   if (then === undefined) {

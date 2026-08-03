@@ -1,6 +1,3 @@
-// === Module 1001: NativeModules ===
-
-// Module 1001 (NativeModules)
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
 import isHermesEnabled from "isHermesEnabled";

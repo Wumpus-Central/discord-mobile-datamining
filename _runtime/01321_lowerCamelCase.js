@@ -1,6 +1,3 @@
-// === Module 1321: lowerCamelCase ===
-
-// Module 1321 (lowerCamelCase)
 arg5.lowerCamelCase = function lowerCamelCase(name) {
   const items = [];
   let num = 0;

@@ -1,6 +1,3 @@
-// === Module 1179: mergeOutcomes ===
-
-// Module 1179 (mergeOutcomes)
 arg5.mergeOutcomes = function mergeOutcomes(_outcomesBuffer, _clearOutcomesResult) {
   const items = [...arguments];
   let map;

@@ -1,6 +1,3 @@
-// === Module 3484: startOfQuarter ===
-
-// Module 3484 (startOfQuarter)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 1285: ? ===
-
-// Module 1285
 const require = arg1;
 const dependencyMap = arg6;
 arg5.astFormatter = undefined;

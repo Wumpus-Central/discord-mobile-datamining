@@ -1,6 +1,3 @@
-// === Module 27: javaScriptFlagGetter ===
-
-// Module 27 (javaScriptFlagGetter)
 import set from "set";
 import set from "set";
 import set from "set";

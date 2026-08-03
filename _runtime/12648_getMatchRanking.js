@@ -1,6 +1,3 @@
-// === Module 12648: getMatchRanking ===
-
-// Module 12648 (getMatchRanking)
 import _extends from "_extends";
 
 function getMatchRanking(arg0, arg1, keepDiacritics) {

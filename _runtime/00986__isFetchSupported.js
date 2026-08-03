@@ -1,6 +1,3 @@
-// === Module 986: _isFetchSupported ===
-
-// Module 986 (_isFetchSupported)
 const require = arg1;
 const dependencyMap = arg6;
 function _isFetchSupported() {

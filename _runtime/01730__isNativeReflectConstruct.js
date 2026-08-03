@@ -1,6 +1,3 @@
-// === Module 1730: _isNativeReflectConstruct ===
-
-// Module 1730 (_isNativeReflectConstruct)
 import RotateOutUpRight from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

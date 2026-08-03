@@ -1,6 +1,3 @@
-// === Module 6454: items ===
-
-// Module 6454 (items)
 let items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
 arg5.getClientIPAddress = function getClientIPAddress(arg0) {
   const items = arg0;

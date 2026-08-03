@@ -1,6 +1,3 @@
-// === Module 127: DOMRectList ===
-
-// Module 127 (DOMRectList)
 import _classCallCheck from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import setPlatformObject from "setPlatformObject";

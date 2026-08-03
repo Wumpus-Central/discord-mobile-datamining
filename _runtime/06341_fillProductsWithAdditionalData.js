@@ -1,6 +1,3 @@
-// === Module 6341: fillProductsWithAdditionalData ===
-
-// Module 6341 (fillProductsWithAdditionalData)
 let RNIapAmazonModule = require("get ActivityIndicator").NativeModules.RNIapAmazonModule;
 RNIapAmazonModule = require("asyncGeneratorStep")((arg0) => {
   let closure_0 = arg0;

@@ -1,6 +1,3 @@
-// === Module 1143: createReduxEnhancer ===
-
-// Module 1143 (createReduxEnhancer)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

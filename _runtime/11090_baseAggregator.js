@@ -1,6 +1,3 @@
-// === Module 11090: baseAggregator ===
-
-// Module 11090 (baseAggregator)
 
 export default function baseAggregator(arg0, arg1, arg2, arg3) {
   const _require = arg1;

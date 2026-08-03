@@ -1,6 +1,3 @@
-// === Module 13355: getCalendarPreferenceDataForRegion ===
-
-// Module 13355 (getCalendarPreferenceDataForRegion)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {

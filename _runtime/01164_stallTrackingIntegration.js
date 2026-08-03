@@ -1,6 +1,3 @@
-// === Module 1164: stallTrackingIntegration ===
-
-// Module 1164 (stallTrackingIntegration)
 import _slicedToArray from "_slicedToArray";
 import { AppState } from "get ActivityIndicator";
 

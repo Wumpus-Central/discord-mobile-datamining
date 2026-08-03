@@ -1,6 +1,3 @@
-// === Module 5366: usePropsValidator ===
-
-// Module 5366 (usePropsValidator)
 import { useMemo } from "noop";
 
 

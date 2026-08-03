@@ -1,6 +1,3 @@
-// === Module 4465: isArguments ===
-
-// Module 4465 (isArguments)
 
 export default function isArguments(callee) {
   const call = toString.call;

@@ -1,6 +1,3 @@
-// === Module 5315: _isNativeReflectConstruct ===
-
-// Module 5315 (_isNativeReflectConstruct)
 import HoverGesture from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

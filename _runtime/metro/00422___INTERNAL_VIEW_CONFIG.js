@@ -1,6 +1,3 @@
-// === Module 422: __INTERNAL_VIEW_CONFIG ===
-
-// Module 422 (__INTERNAL_VIEW_CONFIG)
 import "noop";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";

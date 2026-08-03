@@ -1,6 +1,3 @@
-// === Module 5462: useRecyclerViewController ===
-
-// Module 5462 (useRecyclerViewController)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 4506: isFullyPopulatedPropertyDescriptor ===
-
-// Module 4506 (isFullyPopulatedPropertyDescriptor)
 
 export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor) {
   let tmp = require(4489) /* isPropertyDescriptor */(arg1);

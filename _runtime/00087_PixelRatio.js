@@ -1,6 +1,3 @@
-// === Module 87: PixelRatio ===
-
-// Module 87 (PixelRatio)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

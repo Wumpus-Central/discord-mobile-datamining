@@ -1,6 +1,3 @@
-// === Module 9849: frozen ===
-
-// Module 9849 (frozen)
 import { Platform } from "get ActivityIndicator";
 
 const frozen = Object.freeze({ allFiles: "*/*", audio: "audio/*", csv: ["text/csv", "text/comma-separated-values"], doc: "application/msword", docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document", images: "image/*", pdf: "application/pdf", plainText: "text/plain", json: "application/json", ppt: "application/vnd.ms-powerpoint", pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation", video: "video/*", xls: "application/vnd.ms-excel", xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", zip: "application/zip" });

@@ -1,6 +1,3 @@
-// === Module 1765: useFrameCallback ===
-
-// Module 1765 (useFrameCallback)
 import noop from "noop";
 
 let c0;

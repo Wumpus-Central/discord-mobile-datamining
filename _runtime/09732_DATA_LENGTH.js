@@ -1,6 +1,3 @@
-// === Module 9732: DATA_LENGTH ===
-
-// Module 9732 (DATA_LENGTH)
 import { Easing } from "cancelAnimation";
 
 const obj = { easeOutQuart: null };

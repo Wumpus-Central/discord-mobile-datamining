@@ -1,6 +1,3 @@
-// === Module 855: hasSpansEnabled ===
-
-// Module 855 (hasSpansEnabled)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

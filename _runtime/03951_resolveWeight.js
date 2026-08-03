@@ -1,6 +1,3 @@
-// === Module 3951: resolveWeight ===
-
-// Module 3951 (resolveWeight)
 import _loadFont from "_slicedToArray";
 import _setFallbackFonts from "asyncGeneratorStep";
 import { Image as _clearFallbackFonts } from "get ActivityIndicator";

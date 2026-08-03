@@ -1,6 +1,3 @@
-// === Module 13459: error ===
-
-// Module 13459 (error)
 function error(arg0) {
   const rangeError = new RangeError(closure_3.overflow);
   throw rangeError;

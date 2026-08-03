@@ -1,6 +1,3 @@
-// === Module 281: createPublicRootInstance ===
-
-// Module 281 (createPublicRootInstance)
 const require = arg1;
 const module = arg2;
 const exports = arg3;

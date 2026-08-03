@@ -1,6 +1,3 @@
-// === Module 13493: OverlayCreator ===
-
-// Module 13493 (OverlayCreator)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import map from "map";

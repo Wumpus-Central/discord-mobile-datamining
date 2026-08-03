@@ -1,6 +1,3 @@
-// === Module 4816: parseItemLocationBox ===
-
-// Module 4816 (parseItemLocationBox)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2, length) {

@@ -1,6 +1,3 @@
-// === Module 4355: reduce ===
-
-// Module 4355 (reduce)
 
 export default function reduce(arg0, arg1, arg2) {
   if (require(599)(arg0)) {

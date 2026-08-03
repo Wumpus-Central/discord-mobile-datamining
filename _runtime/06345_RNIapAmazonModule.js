@@ -1,6 +1,3 @@
-// === Module 6345: RNIapAmazonModule ===
-
-// Module 6345 (RNIapAmazonModule)
 import importDefaultResult from "asyncGeneratorStep";
 
 let closure_0 = arg1;

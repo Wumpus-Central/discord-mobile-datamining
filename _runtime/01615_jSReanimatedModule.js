@@ -1,6 +1,3 @@
-// === Module 1615: jSReanimatedModule ===
-
-// Module 1615 (jSReanimatedModule)
 import isJest from "isJest";
 
 if (isJest.shouldBeUseWeb()) {

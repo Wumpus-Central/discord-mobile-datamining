@@ -1,6 +1,3 @@
-// === Module 1224: _extends ===
-
-// Module 1224 (_extends)
 import resolvePathname from "resolvePathname";
 import valueEqual from "valueEqual";
 import warning from "warning";

@@ -1,6 +1,3 @@
-// === Module 299: NativeText ===
-
-// Module 299 (NativeText)
 import javaScriptFlagGetter from "javaScriptFlagGetter";
 
 const require = arg1;

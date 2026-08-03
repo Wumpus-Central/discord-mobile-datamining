@@ -1,6 +1,3 @@
-// === Module 1322: ReflectionTypeCheck ===
-
-// Module 1322 (ReflectionTypeCheck)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

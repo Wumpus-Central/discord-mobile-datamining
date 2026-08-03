@@ -1,6 +1,3 @@
-// === Module 727: baseGet ===
-
-// Module 727 (baseGet)
 
 export default function baseGet(arg0, arg1) {
   const arr = require(728) /* castPath */(arg1, arg0);

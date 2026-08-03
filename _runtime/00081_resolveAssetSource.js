@@ -1,6 +1,3 @@
-// === Module 81: resolveAssetSource ===
-
-// Module 81 (resolveAssetSource)
 function resolveAssetSource(source) {
   if (null != source) {
     if (typeof source !== "ay") {

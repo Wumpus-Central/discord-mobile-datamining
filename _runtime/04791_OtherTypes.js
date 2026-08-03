@@ -1,6 +1,3 @@
-// === Module 4791: OtherTypes ===
-
-// Module 4791 (OtherTypes)
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
 

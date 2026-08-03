@@ -1,6 +1,3 @@
-// === Module 5317: enableExperimentalWebImplementation ===
-
-// Module 5317 (enableExperimentalWebImplementation)
 import { Platform } from "get ActivityIndicator";
 
 let c2 = true;

@@ -1,6 +1,3 @@
-// === Module 3522: assign ===
-
-// Module 3522 (assign)
 
 export default function assign(arg0, obj) {
   if (null == arg0) {

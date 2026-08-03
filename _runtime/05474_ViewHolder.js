@@ -1,6 +1,3 @@
-// === Module 5474: ViewHolder ===
-
-// Module 5474 (ViewHolder)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 12962: ? ===
-
-// Module 12962
 
 export default (arg0, arg1, arg2, arg3) => {
   let obj;

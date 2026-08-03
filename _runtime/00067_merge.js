@@ -1,6 +1,3 @@
-// === Module 67: merge ===
-
-// Module 67 (merge)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

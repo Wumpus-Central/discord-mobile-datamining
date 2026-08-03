@@ -1,6 +1,3 @@
-// === Module 6352: useIAPContext ===
-
-// Module 6352 (useIAPContext)
 import purchaseUpdatedListener from "purchaseUpdatedListener";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 5308: pinchHandlerName ===
-
-// Module 5308 (pinchHandlerName)
 const obj = { name: "PinchGestureHandler", allowedProps: null, config: null };
 obj[1] = require("items1").baseGestureHandlerProps;
 obj[2] = {};

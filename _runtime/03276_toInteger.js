@@ -1,6 +1,3 @@
-// === Module 3276: toInteger ===
-
-// Module 3276 (toInteger)
 
 export default function toInteger(arg0) {
   if (null !== arg0) {

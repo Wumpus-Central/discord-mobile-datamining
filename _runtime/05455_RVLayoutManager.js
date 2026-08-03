@@ -1,6 +1,3 @@
-// === Module 5455: RVLayoutManager ===
-
-// Module 5455 (RVLayoutManager)
 import _classCallCheck from "_classCallCheck";
 
 const RVLayoutManager = arg1;

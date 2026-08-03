@@ -1,6 +1,3 @@
-// === Module 12934: SemVer ===
-
-// Module 12934 (SemVer)
 
 export default (arg0, arg1) => {
   const obj = require(12924) /* SemVer */(arg0, null, true);

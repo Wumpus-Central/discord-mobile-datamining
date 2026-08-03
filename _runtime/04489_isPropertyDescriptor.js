@@ -1,6 +1,3 @@
-// === Module 4489: isPropertyDescriptor ===
-
-// Module 4489 (isPropertyDescriptor)
 let closure_2 = Object.create(null);
 
 export default function isPropertyDescriptor(obj) {

@@ -1,6 +1,3 @@
-// === Module 6709: baseSortBy ===
-
-// Module 6709 (baseSortBy)
 
 export default function baseSortBy(arr) {
   let tmp4;

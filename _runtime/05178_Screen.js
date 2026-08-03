@@ -1,6 +1,3 @@
-// === Module 5178: Screen ===
-
-// Module 5178 (Screen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

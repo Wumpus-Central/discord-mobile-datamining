@@ -1,6 +1,3 @@
-// === Module 5611: memoize ===
-
-// Module 5611 (memoize)
 arg5.default = function memoize(arg0) {
   let closure_0 = arg0;
   return () => {

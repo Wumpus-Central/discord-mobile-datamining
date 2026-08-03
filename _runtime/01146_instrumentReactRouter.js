@@ -1,6 +1,3 @@
-// === Module 1146: instrumentReactRouter ===
-
-// Module 1146 (instrumentReactRouter)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

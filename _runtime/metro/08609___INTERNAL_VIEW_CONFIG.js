@@ -1,6 +1,3 @@
-// === Module 8609: __INTERNAL_VIEW_CONFIG ===
-
-// Module 8609 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "RNSVGFilter", validAttributes: { name: true, x: true, y: true, height: true, width: true, filterUnits: true, primitiveUnits: true } };

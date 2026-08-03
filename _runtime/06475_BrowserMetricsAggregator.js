@@ -1,6 +1,3 @@
-// === Module 6475: BrowserMetricsAggregator ===
-
-// Module 6475 (BrowserMetricsAggregator)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

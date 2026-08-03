@@ -1,6 +1,3 @@
-// === Module 4459: getPolyfill ===
-
-// Module 4459 (getPolyfill)
 
 export default function getPolyfill() {
   if (String.prototype.trim) {

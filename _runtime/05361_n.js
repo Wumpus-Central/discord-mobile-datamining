@@ -1,6 +1,3 @@
-// === Module 5361: n ===
-
-// Module 5361 (n)
 const fn = function n(arg0, arg1, arg2) {
   return Math.min(Math.max(arg1, arg0), arg2);
 };

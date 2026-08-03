@@ -1,6 +1,3 @@
-// === Module 1313: varint64read ===
-
-// Module 1313 (varint64read)
 arg5.varint64read = undefined;
 arg5.varint64write = undefined;
 arg5.int64fromString = undefined;

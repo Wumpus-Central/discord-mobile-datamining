@@ -1,6 +1,3 @@
-// === Module 838: dateTimestampInSeconds ===
-
-// Module 838 (dateTimestampInSeconds)
 const require = arg1;
 const dependencyMap = arg6;
 function dateTimestampInSeconds() {

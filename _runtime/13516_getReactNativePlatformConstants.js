@@ -1,6 +1,3 @@
-// === Module 13516: getReactNativePlatformConstants ===
-
-// Module 13516 (getReactNativePlatformConstants)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 

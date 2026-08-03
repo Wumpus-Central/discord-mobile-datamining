@@ -1,6 +1,3 @@
-// === Module 1525: ? ===
-
-// Module 1525
 
 export default (str) => {
   if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {

@@ -1,6 +1,3 @@
-// === Module 14523: ? ===
-
-// Module 14523
 import module_7665 from "module_7665";
 
 

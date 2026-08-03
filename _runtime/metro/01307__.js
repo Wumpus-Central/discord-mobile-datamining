@@ -1,6 +1,3 @@
-// === Module 1307: ? ===
-
-// Module 1307
 const require = arg1;
 const dependencyMap = arg6;
 let obj = {

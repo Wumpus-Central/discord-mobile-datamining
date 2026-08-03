@@ -1,6 +1,3 @@
-// === Module 1715: unprocessProps ===
-
-// Module 1715 (unprocessProps)
 const require = arg1;
 const dependencyMap = arg6;
 function unprocessProps(styleProps) {

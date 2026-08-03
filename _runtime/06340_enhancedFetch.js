@@ -1,6 +1,3 @@
-// === Module 6340: enhancedFetch ===
-
-// Module 6340 (enhancedFetch)
 let closure_0 = require("asyncGeneratorStep")((arg0, arg1) => {
   let closure_0 = arg0;
   let closure_1 = arg1;

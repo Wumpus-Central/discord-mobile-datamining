@@ -1,6 +1,3 @@
-// === Module 8162: merged1 ===
-
-// Module 8162 (merged1)
 import emptyFunction from "emptyFunction";
 
 let obj = { shadowColor: require("colorPropType"), shadowOffset: null, shadowOpacity: null, shadowRadius: null };

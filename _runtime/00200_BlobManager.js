@@ -1,6 +1,3 @@
-// === Module 200: BlobManager ===
-
-// Module 200 (BlobManager)
 import _classCallCheck from "_classCallCheck";
 
 const BlobManager = global;

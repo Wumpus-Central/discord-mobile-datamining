@@ -1,6 +1,3 @@
-// === Module 6414: createEventEnvelope ===
-
-// Module 6414 (createEventEnvelope)
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";
 import consoleSandbox from "consoleSandbox";
 

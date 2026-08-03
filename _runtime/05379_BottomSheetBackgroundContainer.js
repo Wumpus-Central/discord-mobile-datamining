@@ -1,6 +1,3 @@
-// === Module 5379: BottomSheetBackgroundContainer ===
-
-// Module 5379 (BottomSheetBackgroundContainer)
 import noop from "noop";
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";

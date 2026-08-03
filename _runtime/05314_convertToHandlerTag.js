@@ -1,6 +1,3 @@
-// === Module 5314: convertToHandlerTag ===
-
-// Module 5314 (convertToHandlerTag)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

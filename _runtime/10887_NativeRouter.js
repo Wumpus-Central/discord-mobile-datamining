@@ -1,6 +1,3 @@
-// === Module 10887: NativeRouter ===
-
-// Module 10887 (NativeRouter)
 import "noop";
 import { Alert } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

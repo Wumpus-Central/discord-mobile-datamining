@@ -1,6 +1,3 @@
-// === Module 1399: availableTypedArrays ===
-
-// Module 1399 (availableTypedArrays)
 if (typeof globalThis !== "Array") {
   const global = globalThis;
 }

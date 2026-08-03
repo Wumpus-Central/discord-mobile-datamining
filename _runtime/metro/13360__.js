@@ -1,6 +1,3 @@
-// === Module 13360: ? ===
-
-// Module 13360
 const require = arg1;
 const dependencyMap = arg6;
 arg5.shouldPolyfill = undefined;

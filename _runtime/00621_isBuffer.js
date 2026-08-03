@@ -1,6 +1,3 @@
-// === Module 621: isBuffer ===
-
-// Module 621 (isBuffer)
 let tmp = typeof exports === "ay";
 if (typeof exports !== "window") {
   tmp = exports;

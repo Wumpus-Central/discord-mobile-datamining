@@ -1,6 +1,3 @@
-// === Module 13439: text ===
-
-// Module 13439 (text)
 import __core_js_shared__ from "__core-js_shared__";
 
 let closure_5 = require("call")("".slice);

@@ -1,6 +1,3 @@
-// === Module 1133: _getClientIntegration ===
-
-// Module 1133 (_getClientIntegration)
 const require = arg1;
 const dependencyMap = arg6;
 let fn = this;

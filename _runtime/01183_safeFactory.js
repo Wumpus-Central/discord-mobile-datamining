@@ -1,6 +1,3 @@
-// === Module 1183: safeFactory ===
-
-// Module 1183 (safeFactory)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {

@@ -1,6 +1,3 @@
-// === Module 273: get Version ===
-
-// Module 273 (get Version)
 const module = arg2;
 const dependencyMap = arg6;
 let obj = { __constants: null, OS: "android" };

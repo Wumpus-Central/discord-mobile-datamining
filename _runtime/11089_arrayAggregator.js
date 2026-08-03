@@ -1,6 +1,3 @@
-// === Module 11089: arrayAggregator ===
-
-// Module 11089 (arrayAggregator)
 
 export default function arrayAggregator(arg0, arg1, arg2, arg3) {
   let num = 0;

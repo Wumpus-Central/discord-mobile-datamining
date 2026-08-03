@@ -1,6 +1,3 @@
-// === Module 102: set ===
-
-// Module 102 (set)
 let closure_0 = { "0.75": "ldpi", 1: "mdpi", "1.5": "hdpi", 2: "xhdpi", 3: "xxhdpi", 4: "xxxhdpi" };
 const set = new Set(["gif", "heic", "heif", "jpeg", "jpg", "ktx", "png", "webp", "xml"]);
 

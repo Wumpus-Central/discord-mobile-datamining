@@ -1,6 +1,3 @@
-// === Module 941: createMcpSpan ===
-
-// Module 941 (createMcpSpan)
 const require = arg1;
 const dependencyMap = arg6;
 function createMcpSpan(arg0) {

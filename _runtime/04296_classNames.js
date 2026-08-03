@@ -1,6 +1,3 @@
-// === Module 4296: classNames ===
-
-// Module 4296 (classNames)
 function classNames() {
   let num = 0;
   let str = "";

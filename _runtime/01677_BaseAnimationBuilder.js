@@ -1,6 +1,3 @@
-// === Module 1677: BaseAnimationBuilder ===
-
-// Module 1677 (BaseAnimationBuilder)
 import _classCallCheck from "_classCallCheck";
 
 const BaseAnimationBuilder = arg1;

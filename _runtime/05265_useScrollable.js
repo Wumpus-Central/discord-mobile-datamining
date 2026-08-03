@@ -1,6 +1,3 @@
-// === Module 5265: useScrollable ===
-
-// Module 5265 (useScrollable)
 import noop from "noop";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 985: _resolveResponse ===
-
-// Module 985 (_resolveResponse)
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "module_821";
 

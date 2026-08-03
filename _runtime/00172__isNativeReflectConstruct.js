@@ -1,6 +1,3 @@
-// === Module 172: _isNativeReflectConstruct ===
-
-// Module 172 (_isNativeReflectConstruct)
 import PerformanceResourceTiming from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

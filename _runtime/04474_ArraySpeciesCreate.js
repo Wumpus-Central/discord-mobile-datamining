@@ -1,6 +1,3 @@
-// === Module 4474: ArraySpeciesCreate ===
-
-// Module 4474 (ArraySpeciesCreate)
 let closure_2 = require("getEvalledConstructor")("%Symbol.species%", true);
 
 export default function ArraySpeciesCreate(arg0, arg1) {

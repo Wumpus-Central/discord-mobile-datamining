@@ -1,6 +1,3 @@
-// === Module 13389: ? ===
-
-// Module 13389
 
 export default !require("module_13385")(() => {
   const fn = () => {

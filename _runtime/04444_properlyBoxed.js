@@ -1,6 +1,3 @@
-// === Module 4444: properlyBoxed ===
-
-// Module 4444 (properlyBoxed)
 
 export default function properlyBoxed(call) {
   let c0 = true;

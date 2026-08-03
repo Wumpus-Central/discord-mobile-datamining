@@ -1,6 +1,3 @@
-// === Module 3959: getStringProperty ===
-
-// Module 3959 (getStringProperty)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

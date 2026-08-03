@@ -1,6 +1,3 @@
-// === Module 5634: useCardAnimation ===
-
-// Module 5634 (useCardAnimation)
 import noop from "noop";
 
 

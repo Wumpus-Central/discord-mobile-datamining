@@ -1,6 +1,3 @@
-// === Module 344: LayoutConformance ===
-
-// Module 344 (LayoutConformance)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 9124: useNavigationHeaderAccessibilityRefreshKey ===
-
-// Module 9124 (useNavigationHeaderAccessibilityRefreshKey)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

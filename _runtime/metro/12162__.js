@@ -1,6 +1,3 @@
-// === Module 12162: ? ===
-
-// Module 12162
 const self = this;
 let self2 = this;
 if (this) {

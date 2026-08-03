@@ -1,6 +1,3 @@
-// === Module 315: ListMetricsAggregator ===
-
-// Module 315 (ListMetricsAggregator)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

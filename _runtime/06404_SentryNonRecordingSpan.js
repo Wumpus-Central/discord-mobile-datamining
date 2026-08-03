@@ -1,6 +1,3 @@
-// === Module 6404: SentryNonRecordingSpan ===
-
-// Module 6404 (SentryNonRecordingSpan)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

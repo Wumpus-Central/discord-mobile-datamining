@@ -1,6 +1,3 @@
-// === Module 1004: encodeUTF8 ===
-
-// Module 1004 (encodeUTF8)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.encodeUTF8 = function encodeUTF8(json) {

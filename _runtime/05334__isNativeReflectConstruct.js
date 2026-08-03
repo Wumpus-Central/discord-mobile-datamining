@@ -1,6 +1,3 @@
-// === Module 5334: _isNativeReflectConstruct ===
-
-// Module 5334 (_isNativeReflectConstruct)
 import LongPressGesture from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

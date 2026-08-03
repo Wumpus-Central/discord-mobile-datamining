@@ -1,6 +1,3 @@
-// === Module 1654: createMapperRegistry ===
-
-// Module 1654 (createMapperRegistry)
 import isJest from "isJest";
 
 isJest = isJest.isJest();

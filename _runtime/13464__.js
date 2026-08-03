@@ -1,6 +1,3 @@
-// === Module 13464: _ ===
-
-// Module 13464 (_)
 const exports = unsigned_long_long;
 function _(arg0, context) {
   let str = "Value";

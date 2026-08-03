@@ -1,6 +1,3 @@
-// === Module 6764: originWhitelistToRegex ===
-
-// Module 6764 (originWhitelistToRegex)
 import noop from "noop";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

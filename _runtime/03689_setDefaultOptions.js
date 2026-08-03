@@ -1,6 +1,3 @@
-// === Module 3689: setDefaultOptions ===
-
-// Module 3689 (setDefaultOptions)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

@@ -1,6 +1,3 @@
-// === Module 15115: frozen ===
-
-// Module 15115 (frozen)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";

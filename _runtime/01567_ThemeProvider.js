@@ -1,6 +1,3 @@
-// === Module 1567: ThemeProvider ===
-
-// Module 1567 (ThemeProvider)
 import "noop";
 import { jsx } from "jsxProd";
 

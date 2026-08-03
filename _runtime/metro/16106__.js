@@ -1,6 +1,3 @@
-// === Module 16106: ? ===
-
-// Module 16106
 globalThis.IntlMessageFormat.__addLocaleData({
   locale: "uk",
   pluralRuleFunction(arg0, arg1) {

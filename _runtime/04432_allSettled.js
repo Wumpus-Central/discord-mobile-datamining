@@ -1,6 +1,3 @@
-// === Module 4432: allSettled ===
-
-// Module 4432 (allSettled)
 import callBind from "callBind";
 import defineProperty from "defineProperty";
 

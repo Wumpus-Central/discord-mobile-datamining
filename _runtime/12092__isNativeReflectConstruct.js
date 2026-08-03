@@ -1,6 +1,3 @@
-// === Module 12092: _isNativeReflectConstruct ===
-
-// Module 12092 (_isNativeReflectConstruct)
 import _wrapNativeSuper from "_wrapNativeSuper";
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";

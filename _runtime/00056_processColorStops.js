@@ -1,6 +1,3 @@
-// === Module 56: processColorStops ===
-
-// Module 56 (processColorStops)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

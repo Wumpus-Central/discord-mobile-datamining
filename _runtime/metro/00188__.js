@@ -1,6 +1,3 @@
-// === Module 188: ? ===
-
-// Module 188
 if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
   const _default = require("_isNativeReflectConstruct").default;
   let closure_1 = require("toError").default;

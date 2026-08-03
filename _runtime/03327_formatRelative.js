@@ -1,6 +1,3 @@
-// === Module 3327: formatRelative ===
-
-// Module 3327 (formatRelative)
 let closure_0 = {
   lastWeek(getUTCDay) {
     const uTCDay = getUTCDay.getUTCDay();

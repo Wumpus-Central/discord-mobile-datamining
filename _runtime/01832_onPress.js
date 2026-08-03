@@ -1,6 +1,3 @@
-// === Module 1832: onPress ===
-
-// Module 1832 (onPress)
 import "noop";
 import { jsx } from "jsxProd";
 

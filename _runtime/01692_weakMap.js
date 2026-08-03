@@ -1,6 +1,3 @@
-// === Module 1692: weakMap ===
-
-// Module 1692 (weakMap)
 const require = arg1;
 const dependencyMap = arg6;
 const weakMap = new WeakMap();

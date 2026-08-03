@@ -1,6 +1,3 @@
-// === Module 1506: context ===
-
-// Module 1506 (context)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

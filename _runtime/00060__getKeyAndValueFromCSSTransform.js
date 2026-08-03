@@ -1,6 +1,3 @@
-// === Module 60: _getKeyAndValueFromCSSTransform ===
-
-// Module 60 (_getKeyAndValueFromCSSTransform)
 function _getKeyAndValueFromCSSTransform(arg0, arg1) {
 
 }

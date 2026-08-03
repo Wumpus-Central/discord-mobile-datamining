@@ -1,6 +1,3 @@
-// === Module 3711: subWeeks ===
-
-// Module 3711 (subWeeks)
 import toInteger from "toInteger";
 import addWeeks from "addWeeks";
 import requiredArgs from "requiredArgs";

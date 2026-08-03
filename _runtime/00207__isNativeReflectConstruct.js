@@ -1,6 +1,3 @@
-// === Module 207: _isNativeReflectConstruct ===
-
-// Module 207 (_isNativeReflectConstruct)
 import ProgressEvent from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

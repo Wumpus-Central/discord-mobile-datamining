@@ -1,6 +1,3 @@
-// === Module 606: isObject ===
-
-// Module 606 (isObject)
 
 export default function isObject(arg0) {
   let tmp = null != arg0;

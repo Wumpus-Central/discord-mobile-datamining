@@ -1,6 +1,3 @@
-// === Module 137: createReactNativeDocumentInstanceHandle ===
-
-// Module 137 (createReactNativeDocumentInstanceHandle)
 const exports = arg3;
 const dependencyMap = arg6;
 arg5.createReactNativeDocumentInstanceHandle = function createReactNativeDocumentInstanceHandle(arg0) {

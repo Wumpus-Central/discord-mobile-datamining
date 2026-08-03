@@ -1,6 +1,3 @@
-// === Module 1536: isArrayEqual ===
-
-// Module 1536 (isArrayEqual)
 arg5.default = function isArrayEqual(arr) {
   let closure_0 = arg1;
   let tmp = arr === arg1;

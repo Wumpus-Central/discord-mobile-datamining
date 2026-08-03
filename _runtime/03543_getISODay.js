@@ -1,6 +1,3 @@
-// === Module 3543: getISODay ===
-
-// Module 3543 (getISODay)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

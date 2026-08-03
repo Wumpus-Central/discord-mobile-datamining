@@ -1,6 +1,3 @@
-// === Module 8892: _asyncLoop ===
-
-// Module 8892 (_asyncLoop)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import asyncGeneratorStep from "asyncGeneratorStep";

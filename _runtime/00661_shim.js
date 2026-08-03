@@ -1,6 +1,3 @@
-// === Module 661: shim ===
-
-// Module 661 (shim)
 function shim(obj) {
   const items = [];
   for (const key10003 in arg0) {

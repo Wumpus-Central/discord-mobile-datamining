@@ -1,6 +1,3 @@
-// === Module 1401: forEach ===
-
-// Module 1401 (forEach)
 
 export default function forEach(str, call) {
   if (require(1402) /* apply */(call)) {

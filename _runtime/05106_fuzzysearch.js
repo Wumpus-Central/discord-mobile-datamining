@@ -1,6 +1,3 @@
-// === Module 5106: fuzzysearch ===
-
-// Module 5106 (fuzzysearch)
 
 export default function fuzzysearch(arg0, str) {
   if (arg0.length > str.length) {

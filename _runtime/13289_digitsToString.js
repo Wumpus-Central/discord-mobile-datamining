@@ -1,6 +1,3 @@
-// === Module 13289: digitsToString ===
-
-// Module 13289 (digitsToString)
 let self = this;
 self = this;
 function digitsToString(arg0) {

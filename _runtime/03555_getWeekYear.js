@@ -1,6 +1,3 @@
-// === Module 3555: getWeekYear ===
-
-// Module 3555 (getWeekYear)
 import startOfWeek from "startOfWeek";
 import _typeof from "_typeof";
 import toInteger from "toInteger";

@@ -1,6 +1,3 @@
-// === Module 6493: supportsHistory ===
-
-// Module 6493 (supportsHistory)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.supportsHistory = function supportsHistory() {

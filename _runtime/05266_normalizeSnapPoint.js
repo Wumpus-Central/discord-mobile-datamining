@@ -1,6 +1,3 @@
-// === Module 5266: normalizeSnapPoint ===
-
-// Module 5266 (normalizeSnapPoint)
 
 export const normalizeSnapPoint = require("n").normalizeSnapPoint;
 export const animate = require("n").animate;

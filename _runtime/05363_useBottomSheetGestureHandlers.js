@@ -1,6 +1,3 @@
-// === Module 5363: useBottomSheetGestureHandlers ===
-
-// Module 5363 (useBottomSheetGestureHandlers)
 import { useContext } from "noop";
 
 

@@ -1,6 +1,3 @@
-// === Module 256: composeStyles ===
-
-// Module 256 (composeStyles)
 arg5.default = function composeStyles(arg0, arg1) {
   let tmp = arg1;
   if (null != arg0) {

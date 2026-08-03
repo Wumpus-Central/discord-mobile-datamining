@@ -1,6 +1,3 @@
-// === Module 320: horizontalOrDefault ===
-
-// Module 320 (horizontalOrDefault)
 import "noop";
 
 

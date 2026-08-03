@@ -1,6 +1,3 @@
-// === Module 5467: useOnLoad ===
-
-// Module 5467 (useOnLoad)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

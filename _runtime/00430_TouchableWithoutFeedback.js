@@ -1,6 +1,3 @@
-// === Module 430: TouchableWithoutFeedback ===
-
-// Module 430 (TouchableWithoutFeedback)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_4 from "noop";
 import noop from "noop";

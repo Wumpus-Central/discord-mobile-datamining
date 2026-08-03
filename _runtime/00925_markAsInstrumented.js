@@ -1,6 +1,3 @@
-// === Module 925: markAsInstrumented ===
-
-// Module 925 (markAsInstrumented)
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
 import setupIntegration from "setupIntegration";

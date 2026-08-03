@@ -1,6 +1,3 @@
-// === Module 555: concatty ===
-
-// Module 555 (concatty)
 function concatty(arg0, arg1) {
 
 }

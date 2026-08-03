@@ -1,6 +1,3 @@
-// === Module 128: createValueIterator ===
-
-// Module 128 (createValueIterator)
 arg5.createValueIterator = function createValueIterator(arg0) {
   let closure_0 = arg0;
   let c2 = 0;

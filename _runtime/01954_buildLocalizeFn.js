@@ -1,6 +1,3 @@
-// === Module 1954: buildLocalizeFn ===
-
-// Module 1954 (buildLocalizeFn)
 
 export default function buildLocalizeFn(arg0) {
   let closure_0 = arg0;

@@ -1,6 +1,3 @@
-// === Module 9755: ItemLayout ===
-
-// Module 9755 (ItemLayout)
 import "noop";
 import { jsx } from "jsxProd";
 

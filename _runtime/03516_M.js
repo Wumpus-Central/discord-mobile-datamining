@@ -1,6 +1,3 @@
-// === Module 3516: M ===
-
-// Module 3516 (M)
 import addLeadingZeros from "addLeadingZeros";
 
 if (!addLeadingZeros) {

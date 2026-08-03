@@ -1,6 +1,3 @@
-// === Module 13288: __exportStarResult32 ===
-
-// Module 13288 (__exportStarResult32)
 const require = arg1;
 const dependencyMap = arg6;
 class ToNumber {

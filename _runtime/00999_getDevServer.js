@@ -1,6 +1,3 @@
-// === Module 999: getDevServer ===
-
-// Module 999 (getDevServer)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function getDevServer() {

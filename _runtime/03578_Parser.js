@@ -1,6 +1,3 @@
-// === Module 3578: Parser ===
-
-// Module 3578 (Parser)
 const Parser = arg1;
 const dependencyMap = arg6;
 arg5.Parser = undefined;

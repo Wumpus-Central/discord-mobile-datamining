@@ -1,6 +1,3 @@
-// === Module 261: _isNativeReflectConstruct ===
-
-// Module 261 (_isNativeReflectConstruct)
 import HeadlessJsTaskError from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

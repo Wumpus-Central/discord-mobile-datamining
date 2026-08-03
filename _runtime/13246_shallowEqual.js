@@ -1,6 +1,3 @@
-// === Module 13246: shallowEqual ===
-
-// Module 13246 (shallowEqual)
 
 export default function shallowEqual(arg0, arg1) {
   if (arg0 === arg1) {

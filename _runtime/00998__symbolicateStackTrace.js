@@ -1,6 +1,3 @@
-// === Module 998: _symbolicateStackTrace ===
-
-// Module 998 (_symbolicateStackTrace)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

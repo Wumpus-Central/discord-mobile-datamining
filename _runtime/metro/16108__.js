@@ -1,6 +1,3 @@
-// === Module 16108: ? ===
-
-// Module 16108
 let obj = {
   locale: "zh",
   pluralRuleFunction(arg0, arg1) {

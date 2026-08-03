@@ -1,6 +1,3 @@
-// === Module 4171: set ===
-
-// Module 4171 (set)
 const set = new Set(["o", "O", ".", "-", "="]);
 arg5.PATTERN_CHARS = set;
 arg5.pattern = function pattern(arg0) {

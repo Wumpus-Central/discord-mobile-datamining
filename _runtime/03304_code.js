@@ -1,6 +1,3 @@
-// === Module 3304: code ===
-
-// Module 3304 (code)
 import formatDistance from "formatDistance";
 import formatRelative from "formatRelative";
 import buildLocalizeFn from "buildLocalizeFn";

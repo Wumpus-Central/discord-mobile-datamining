@@ -1,6 +1,3 @@
-// === Module 5342: TouchableNativeFeedback ===
-
-// Module 5342 (TouchableNativeFeedback)
 
 export const TouchableNativeFeedback = require("_isNativeReflectConstruct");
 export const TouchableWithoutFeedback = require("module_5345");

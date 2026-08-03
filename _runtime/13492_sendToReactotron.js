@@ -1,6 +1,3 @@
-// === Module 13492: sendToReactotron ===
-
-// Module 13492 (sendToReactotron)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let closure_1 = { ignore: [] };

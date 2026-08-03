@@ -1,6 +1,3 @@
-// === Module 8149: ? ===
-
-// Module 8149
 
 export default (obj) => {
   if (obj instanceof Object) {

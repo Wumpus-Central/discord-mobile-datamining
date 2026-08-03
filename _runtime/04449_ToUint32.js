@@ -1,6 +1,3 @@
-// === Module 4449: ToUint32 ===
-
-// Module 4449 (ToUint32)
 
 export default function ToUint32(arg0) {
   const tmp3 = require(4450) /* ToNumber */(arg0);

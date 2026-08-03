@@ -1,6 +1,3 @@
-// === Module 1816: forwardRef ===
-
-// Module 1816 (forwardRef)
 import sharedValue from "sharedValue";
 import noop from "noop";
 import closure_8 from "noop";

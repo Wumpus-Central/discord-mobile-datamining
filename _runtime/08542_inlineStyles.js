@@ -1,6 +1,3 @@
-// === Module 8542: inlineStyles ===
-
-// Module 8542 (inlineStyles)
 for (const key10013 in require("module_8543")) {
   let tmp2 = key10013;
   arg5[key10013] = require("module_8543")[key10013];

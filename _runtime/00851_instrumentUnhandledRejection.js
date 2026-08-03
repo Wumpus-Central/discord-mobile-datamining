@@ -1,6 +1,3 @@
-// === Module 851: instrumentUnhandledRejection ===
-
-// Module 851 (instrumentUnhandledRejection)
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentUnhandledRejection() {

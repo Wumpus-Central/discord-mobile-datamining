@@ -1,6 +1,3 @@
-// === Module 564: flag ===
-
-// Module 564 (flag)
 let flag = tmp;
 if (Object.defineProperty || false) {
   try {

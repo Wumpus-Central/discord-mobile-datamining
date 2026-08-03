@@ -1,6 +1,3 @@
-// === Module 6769: nativeEventEmitter ===
-
-// Module 6769 (nativeEventEmitter)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const NativeModules = get_ActivityIndicator.NativeModules;

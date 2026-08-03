@@ -1,6 +1,3 @@
-// === Module 3650: lightFormat ===
-
-// Module 3650 (lightFormat)
 import _typeof from "_typeof";
 import M from "M";
 import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds";

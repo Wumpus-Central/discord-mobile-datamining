@@ -1,6 +1,3 @@
-// === Module 1752: isAnimated ===
-
-// Module 1752 (isAnimated)
 let isAnimated = arg1;
 let dependencyMap = arg6;
 isAnimated = function isAnimated(arr) {

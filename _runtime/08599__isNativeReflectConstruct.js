@@ -1,6 +1,3 @@
-// === Module 8599: _isNativeReflectConstruct ===
-
-// Module 8599 (_isNativeReflectConstruct)
 import FeMergeNode from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

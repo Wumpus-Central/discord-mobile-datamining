@@ -1,6 +1,3 @@
-// === Module 3427: addMilliseconds ===
-
-// Module 3427 (addMilliseconds)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

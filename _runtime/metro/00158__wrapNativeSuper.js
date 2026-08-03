@@ -1,6 +1,3 @@
-// === Module 158: _wrapNativeSuper ===
-
-// Module 158 (_wrapNativeSuper)
 function _wrapNativeSuper(arg0) {
   let map;
   if (typeof Map !== "disabledUntil") {

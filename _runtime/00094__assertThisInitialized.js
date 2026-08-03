@@ -1,6 +1,3 @@
-// === Module 94: _assertThisInitialized ===
-
-// Module 94 (_assertThisInitialized)
 
 export default function _assertThisInitialized(arg0) {
   if (undefined === arg0) {

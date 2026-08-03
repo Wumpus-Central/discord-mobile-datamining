@@ -1,6 +1,3 @@
-// === Module 1311: UnknownFieldHandler ===
-
-// Module 1311 (UnknownFieldHandler)
 UnknownFieldHandler.UnknownFieldHandler = undefined;
 UnknownFieldHandler.mergeBinaryOptions = undefined;
 UnknownFieldHandler.WireType = undefined;

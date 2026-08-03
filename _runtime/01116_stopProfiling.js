@@ -1,6 +1,3 @@
-// === Module 1116: stopProfiling ===
-
-// Module 1116 (stopProfiling)
 import { Platform } from "get ActivityIndicator";
 
 function stopProfiling(arg0) {

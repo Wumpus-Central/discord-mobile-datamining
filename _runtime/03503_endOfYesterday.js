@@ -1,6 +1,3 @@
-// === Module 3503: endOfYesterday ===
-
-// Module 3503 (endOfYesterday)
 
 export default function endOfYesterday() {
   const date = new Date();

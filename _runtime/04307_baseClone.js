@@ -1,6 +1,3 @@
-// === Module 4307: baseClone ===
-
-// Module 4307 (baseClone)
 let obj = {};
 obj["[object Uint32Array]"] = true;
 obj["[object Uint16Array]"] = true;

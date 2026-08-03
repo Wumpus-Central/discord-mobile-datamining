@@ -1,6 +1,3 @@
-// === Module 3474: differenceInQuarters ===
-
-// Module 3474 (differenceInQuarters)
 import differenceInMonths from "differenceInMonths";
 import requiredArgs from "requiredArgs";
 

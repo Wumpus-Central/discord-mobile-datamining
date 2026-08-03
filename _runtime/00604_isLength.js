@@ -1,6 +1,3 @@
-// === Module 604: isLength ===
-
-// Module 604 (isLength)
 
 export default function isLength(arg0) {
   let tmp = typeof arg0 === "Object";

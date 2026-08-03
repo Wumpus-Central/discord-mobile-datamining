@@ -1,6 +1,3 @@
-// === Module 9761: PaginationItem ===
-
-// Module 9761 (PaginationItem)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { Pressable } from "get ActivityIndicator";

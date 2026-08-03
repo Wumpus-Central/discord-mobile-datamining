@@ -1,6 +1,3 @@
-// === Module 1819: useSmoothKeyboardHandler ===
-
-// Module 1819 (useSmoothKeyboardHandler)
 import { Easing } from "cancelAnimation";
 
 let obj = { duration: 250, easing: null };

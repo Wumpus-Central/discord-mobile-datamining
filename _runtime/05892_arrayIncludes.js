@@ -1,6 +1,3 @@
-// === Module 5892: arrayIncludes ===
-
-// Module 5892 (arrayIncludes)
 
 export default function arrayIncludes(arg0, arg1) {
   let num = 0;

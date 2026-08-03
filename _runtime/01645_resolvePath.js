@@ -1,6 +1,3 @@
-// === Module 1645: resolvePath ===
-
-// Module 1645 (resolvePath)
 const require = arg1;
 const dependencyMap = arg6;
 function resolvePath(arg0, arg1) {

@@ -1,6 +1,3 @@
-// === Module 6384: baggageHeaderToDynamicSamplingContext ===
-
-// Module 6384 (baggageHeaderToDynamicSamplingContext)
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = "sentry-";

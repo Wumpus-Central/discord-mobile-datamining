@@ -1,6 +1,3 @@
-// === Module 13294: DefaultNumberOption ===
-
-// Module 13294 (DefaultNumberOption)
 arg5.DefaultNumberOption = function DefaultNumberOption(maximumFractionDigits, minimumSignificantDigits, arg2, arg3) {
   if (undefined === maximumFractionDigits) {
     return arg3;

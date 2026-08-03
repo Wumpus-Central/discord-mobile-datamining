@@ -1,6 +1,3 @@
-// === Module 1088: _isNativeReflectConstruct ===
-
-// Module 1088 (_isNativeReflectConstruct)
 import asyncGeneratorStep from "_slicedToArray";
 import c3 from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

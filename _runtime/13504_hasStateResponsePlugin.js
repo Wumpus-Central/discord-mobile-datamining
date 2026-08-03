@@ -1,6 +1,3 @@
-// === Module 13504: hasStateResponsePlugin ===
-
-// Module 13504 (hasStateResponsePlugin)
 arg5.assertHasStateResponsePlugin = undefined;
 arg5.default = undefined;
 arg5.hasStateResponsePlugin = undefined;

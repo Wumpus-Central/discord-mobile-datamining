@@ -1,6 +1,3 @@
-// === Module 13320: __exportStarResult20 ===
-
-// Module 13320 (__exportStarResult20)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumericToParts = function FormatNumericToParts(arg0, isNaN, getInternalSlots) {

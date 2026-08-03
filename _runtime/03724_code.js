@@ -1,6 +1,3 @@
-// === Module 3724: code ===
-
-// Module 3724 (code)
 import formatDistance from "formatDistance";
 import buildFormatLongFn from "buildFormatLongFn";
 import checkWeek from "checkWeek";

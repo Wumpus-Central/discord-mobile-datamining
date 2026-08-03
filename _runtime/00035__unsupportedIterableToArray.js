@@ -1,6 +1,3 @@
-// === Module 35: _unsupportedIterableToArray ===
-
-// Module 35 (_unsupportedIterableToArray)
 
 export default function _unsupportedIterableToArray(arg0, arg1) {
   if (arg0) {

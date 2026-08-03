@@ -1,6 +1,3 @@
-// === Module 61: processTransformOrigin ===
-
-// Module 61 (processTransformOrigin)
 import "_slicedToArray";
 
 const re2 = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;

@@ -1,6 +1,3 @@
-// === Module 55: parseLength ===
-
-// Module 55 (parseLength)
 const module = arg2;
 const dependencyMap = arg6;
 function parseLength(arg0) {

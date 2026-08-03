@@ -1,6 +1,3 @@
-// === Module 4348: baseSet ===
-
-// Module 4348 (baseSet)
 
 export default function baseSet(arg0, arg1, arg2, arg3) {
   if (require(606) /* isObject */(arg0)) {

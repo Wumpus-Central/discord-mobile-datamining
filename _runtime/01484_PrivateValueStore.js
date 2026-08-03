@@ -1,6 +1,3 @@
-// === Module 1484: PrivateValueStore ===
-
-// Module 1484 (PrivateValueStore)
 import _classCallCheck from "_classCallCheck";
 
 class PrivateValueStore {

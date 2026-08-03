@@ -1,6 +1,3 @@
-// === Module 824: consoleSandbox ===
-
-// Module 824 (consoleSandbox)
 const require = arg1;
 let dependencyMap = arg6;
 function consoleSandbox(arg0) {

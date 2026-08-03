@@ -1,6 +1,3 @@
-// === Module 948: createErrorCapturingHandler ===
-
-// Module 948 (createErrorCapturingHandler)
 const require = arg1;
 const dependencyMap = arg6;
 function createErrorCapturingHandler(apply) {

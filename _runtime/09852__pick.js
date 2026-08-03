@@ -1,6 +1,3 @@
-// === Module 9852: _pick ===
-
-// Module 9852 (_pick)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Platform } from "get ActivityIndicator";
 

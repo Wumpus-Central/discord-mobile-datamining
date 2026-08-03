@@ -1,6 +1,3 @@
-// === Module 1719: getViewInfo ===
-
-// Module 1719 (getViewInfo)
 arg5.getViewInfo = function getViewInfo(findHostInstanceResult) {
   if (undefined !== findHostInstanceResult._nativeTag) {
     if (null !== findHostInstanceResult.__nativeTag) {

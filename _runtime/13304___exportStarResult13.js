@@ -1,6 +1,3 @@
-// === Module 13304: __exportStarResult13 ===
-
-// Module 13304 (__exportStarResult13)
 import e from "e";
 import digitsToString from "digitsToString";
 

@@ -1,6 +1,3 @@
-// === Module 247: ? ===
-
-// Module 247
 const require = arg1;
 let closure_3 = [];
 require("_isNativeReflectConstruct").addListener("hardwareBackPress", (timeStamp) => {

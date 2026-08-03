@@ -1,6 +1,3 @@
-// === Module 659: isUndefinedOrNull ===
-
-// Module 659 (isUndefinedOrNull)
 function isUndefinedOrNull(arg0) {
   return null == arg0;
 }

@@ -1,6 +1,3 @@
-// === Module 1500: useEventEmitter ===
-
-// Module 1500 (useEventEmitter)
 import noop from "noop";
 
 

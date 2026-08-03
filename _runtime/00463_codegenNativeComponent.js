@@ -1,6 +1,3 @@
-// === Module 463: codegenNativeComponent ===
-
-// Module 463 (codegenNativeComponent)
 const global = arg0;
 const module = arg2;
 const dependencyMap = arg6;

@@ -1,6 +1,3 @@
-// === Module 53: hslToRgb ===
-
-// Module 53 (hslToRgb)
 function hslToRgb(arg0, arg1, arg2) {
   if (arg2 < 0.5) {
     let result = arg2 * (1 + arg1);

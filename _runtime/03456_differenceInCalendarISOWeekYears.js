@@ -1,6 +1,3 @@
-// === Module 3456: differenceInCalendarISOWeekYears ===
-
-// Module 3456 (differenceInCalendarISOWeekYears)
 import getISOWeekYear from "getISOWeekYear";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 1111: eventOriginIntegration ===
-
-// Module 1111 (eventOriginIntegration)
 arg5.eventOriginIntegration = () => ({
   name: "EventOrigin",
   setupOnce() {

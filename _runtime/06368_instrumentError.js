@@ -1,6 +1,3 @@
-// === Module 6368: instrumentError ===
-
-// Module 6368 (instrumentError)
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentError() {

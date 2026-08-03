@@ -1,6 +1,3 @@
-// === Module 5469: useSecondaryProps ===
-
-// Module 5469 (useSecondaryProps)
 import get_ActivityIndicator from "get ActivityIndicator";
 import noop from "noop";
 import { useMemo } from "noop";

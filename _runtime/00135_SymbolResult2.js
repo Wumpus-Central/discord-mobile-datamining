@@ -1,6 +1,3 @@
-// === Module 135: SymbolResult2 ===
-
-// Module 135 (SymbolResult2)
 const require = arg1;
 const dependencyMap = arg6;
 const SymbolResult = Symbol("EventTarget[get the parent]");

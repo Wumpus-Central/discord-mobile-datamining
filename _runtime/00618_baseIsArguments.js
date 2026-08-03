@@ -1,6 +1,3 @@
-// === Module 618: baseIsArguments ===
-
-// Module 618 (baseIsArguments)
 import baseIsArguments from "baseIsArguments";
 
 let c3;

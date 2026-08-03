@@ -1,6 +1,3 @@
-// === Module 3785: n ===
-
-// Module 3785 (n)
 const fn = function n(moment) {
   function translate(arg0, arg1, arg2, arg3) {
     if (tmp) {

@@ -1,6 +1,3 @@
-// === Module 13369: getSupportedNumberingSystems ===
-
-// Module 13369 (getSupportedNumberingSystems)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {

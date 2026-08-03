@@ -1,6 +1,3 @@
-// === Module 8559: extractBrush ===
-
-// Module 8559 (extractBrush)
 import { processColor } from "get ActivityIndicator";
 
 const re3 = /^url\(#(.+)\)$/;

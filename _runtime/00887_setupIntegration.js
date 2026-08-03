@@ -1,6 +1,3 @@
-// === Module 887: setupIntegration ===
-
-// Module 887 (setupIntegration)
 const require = arg1;
 let dependencyMap = arg6;
 function setupIntegration(on, name) {

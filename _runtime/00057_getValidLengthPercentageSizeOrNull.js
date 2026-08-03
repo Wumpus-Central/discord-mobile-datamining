@@ -1,6 +1,3 @@
-// === Module 57: getValidLengthPercentageSizeOrNull ===
-
-// Module 57 (getValidLengthPercentageSizeOrNull)
 function getValidLengthPercentageSizeOrNull(str) {
   if (null == str) {
     return null;

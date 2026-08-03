@@ -1,6 +1,3 @@
-// === Module 6387: getMetricSummaryJsonForSpan ===
-
-// Module 6387 (getMetricSummaryJsonForSpan)
 import _slicedToArray from "_slicedToArray";
 
 const _sentryMetrics = "_sentryMetrics";

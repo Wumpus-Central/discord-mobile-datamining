@@ -1,6 +1,3 @@
-// === Module 13503: ? ===
-
-// Module 13503
 arg5.default = () => (startTimer) => {
   let closure_0 = startTimer;
   startTimer = startTimer.startTimer;

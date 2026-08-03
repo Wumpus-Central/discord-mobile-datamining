@@ -1,6 +1,3 @@
-// === Module 9730: useInitProps ===
-
-// Module 9730 (useInitProps)
 import noop from "noop";
 
 const require = arg1;

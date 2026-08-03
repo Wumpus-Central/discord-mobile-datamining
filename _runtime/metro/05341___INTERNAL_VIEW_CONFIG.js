@@ -1,6 +1,3 @@
-// === Module 5341: __INTERNAL_VIEW_CONFIG ===
-
-// Module 5341 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 let obj = { uiViewClassName: "RNGestureHandlerButton", validAttributes: null };

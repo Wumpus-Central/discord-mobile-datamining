@@ -1,6 +1,3 @@
-// === Module 828: _htmlElementAsString ===
-
-// Module 828 (_htmlElementAsString)
 const require = arg1;
 const dependencyMap = arg6;
 function _htmlElementAsString(tagName, arr) {

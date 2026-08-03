@@ -1,6 +1,3 @@
-// === Module 4820: getDataView ===
-
-// Module 4820 (getDataView)
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = 6;

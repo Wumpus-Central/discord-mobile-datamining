@@ -1,6 +1,3 @@
-// === Module 13292: TEN ===
-
-// Module 13292 (TEN)
 import e from "e";
 import digitsToString from "digitsToString";
 

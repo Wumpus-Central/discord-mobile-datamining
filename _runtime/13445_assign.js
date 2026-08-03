@@ -1,6 +1,3 @@
-// === Module 13445: assign ===
-
-// Module 13445 (assign)
 let closure_4 = require("call")([].concat);
 if (!assign) {
   assign = function assign(arg0, arg1) {

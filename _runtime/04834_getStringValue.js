@@ -1,6 +1,3 @@
-// === Module 4834: getStringValue ===
-
-// Module 4834 (getStringValue)
 const require = arg1;
 const dependencyMap = arg6;
 const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };

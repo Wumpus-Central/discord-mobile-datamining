@@ -1,6 +1,3 @@
-// === Module 1150: createAsyncHandlerProxy ===
-
-// Module 1150 (createAsyncHandlerProxy)
 const require = arg1;
 let dependencyMap = arg6;
 function createAsyncHandlerProxy(arg0, item10034, item10008, outer1_18) {

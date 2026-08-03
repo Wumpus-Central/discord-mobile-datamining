@@ -1,6 +1,3 @@
-// === Module 5549: setString ===
-
-// Module 5549 (setString)
 import noop from "noop";
 
 function setString(arg0) {

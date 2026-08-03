@@ -1,6 +1,3 @@
-// === Module 110: _objectWithoutPropertiesLoose ===
-
-// Module 110 (_objectWithoutPropertiesLoose)
 
 export default function _objectWithoutPropertiesLoose(obj, arr) {
   if (null == obj) {

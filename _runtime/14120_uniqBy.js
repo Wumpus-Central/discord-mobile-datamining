@@ -1,6 +1,3 @@
-// === Module 14120: uniqBy ===
-
-// Module 14120 (uniqBy)
 
 export default function uniqBy(arg0, arg1) {
   if (arg0) {

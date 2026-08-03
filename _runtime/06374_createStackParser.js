@@ -1,6 +1,3 @@
-// === Module 6374: createStackParser ===
-
-// Module 6374 (createStackParser)
 function createStackParser() {
   let items = [...arguments];
   let closure_0;

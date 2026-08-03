@@ -1,6 +1,3 @@
-// === Module 4498: Call ===
-
-// Module 4498 (Call)
 let tmp = require("getEvalledConstructor")("%Reflect.apply%", true);
 if (!tmp) {
   tmp = require("callBoundIntrinsic")("Function.prototype.apply");

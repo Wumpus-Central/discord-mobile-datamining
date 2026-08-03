@@ -1,6 +1,3 @@
-// === Module 3738: localeToNumber ===
-
-// Module 3738 (localeToNumber)
 import buildLocalizeFn from "buildLocalizeFn";
 
 if (!buildLocalizeFn) {

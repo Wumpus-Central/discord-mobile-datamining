@@ -1,6 +1,3 @@
-// === Module 4784: isAVIF ===
-
-// Module 4784 (isAVIF)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isAVIF = undefined;

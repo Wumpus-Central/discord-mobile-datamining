@@ -1,6 +1,3 @@
-// === Module 5446: ViewabilityHelper ===
-
-// Module 5446 (ViewabilityHelper)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

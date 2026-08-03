@@ -1,6 +1,3 @@
-// === Module 3506: G ===
-
-// Module 3506 (G)
 import getUTCDayOfYear from "getUTCDayOfYear";
 import getUTCISOWeek from "getUTCISOWeek";
 import getUTCISOWeekYear from "getUTCISOWeekYear";

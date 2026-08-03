@@ -1,6 +1,3 @@
-// === Module 719: mapValues ===
-
-// Module 719 (mapValues)
 
 export default function mapValues(arg0, arg1) {
   let _require = arg1;

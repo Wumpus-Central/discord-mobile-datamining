@@ -1,6 +1,3 @@
-// === Module 197: define ===
-
-// Module 197 (define)
 ((arg0) => {
   let closure_0 = arg0;
   function define(arg0, arg1) {

@@ -1,6 +1,3 @@
-// === Module 1669: ZoomInData ===
-
-// Module 1669 (ZoomInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";

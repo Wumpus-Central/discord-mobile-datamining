@@ -1,6 +1,3 @@
-// === Module 122: setUpDOM ===
-
-// Module 122 (setUpDOM)
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

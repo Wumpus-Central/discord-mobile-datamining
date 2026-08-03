@@ -1,6 +1,3 @@
-// === Module 1458: State ===
-
-// Module 1458 (State)
 import module_1462 from "module_1462";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

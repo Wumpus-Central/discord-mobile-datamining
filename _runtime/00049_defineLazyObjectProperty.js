@@ -1,6 +1,3 @@
-// === Module 49: defineLazyObjectProperty ===
-
-// Module 49 (defineLazyObjectProperty)
 arg5.default = function defineLazyObjectProperty(arg0, arg1, get) {
   let closure_0 = arg0;
   let closure_1 = arg1;

@@ -1,6 +1,3 @@
-// === Module 1638: FlatList ===
-
-// Module 1638 (FlatList)
 
 export const FlatList = require("ReanimatedFlatList").ReanimatedFlatList;
 export const Image = require("AnimatedImage").AnimatedImage;

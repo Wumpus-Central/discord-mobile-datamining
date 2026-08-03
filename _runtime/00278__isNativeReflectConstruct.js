@@ -1,6 +1,3 @@
-// === Module 278: _isNativeReflectConstruct ===
-
-// Module 278 (_isNativeReflectConstruct)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

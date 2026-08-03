@@ -1,6 +1,3 @@
-// === Module 13295: __exportStarResult4 ===
-
-// Module 13295 (__exportStarResult4)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.GetOption = function GetOption(arg0, arg1, arg2, arr) {

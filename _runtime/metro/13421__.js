@@ -1,6 +1,3 @@
-// === Module 13421: ? ===
-
-// Module 13421
 
 export default (arg0, arg1, arg2) => {
   const arr = require(13422)(arg1);

@@ -1,6 +1,3 @@
-// === Module 947: captureError ===
-
-// Module 947 (captureError)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

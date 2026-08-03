@@ -1,6 +1,3 @@
-// === Module 656: DepGraph ===
-
-// Module 656 (DepGraph)
 class DepGraph {
   constructor(arg0) {
     tmp = arg0;

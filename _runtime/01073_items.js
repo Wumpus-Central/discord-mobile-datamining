@@ -1,6 +1,3 @@
-// === Module 1073: items ===
-
-// Module 1073 (items)
 import _slicedToArray from "_slicedToArray";
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 

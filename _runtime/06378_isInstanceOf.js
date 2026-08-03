@@ -1,6 +1,3 @@
-// === Module 6378: isInstanceOf ===
-
-// Module 6378 (isInstanceOf)
 function isInstanceOf(arg0, arg1) {
   try {
     return arg0 instanceof arg1;

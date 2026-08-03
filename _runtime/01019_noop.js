@@ -1,6 +1,3 @@
-// === Module 1019: noop ===
-
-// Module 1019 (noop)
 function noop() {
 
 }

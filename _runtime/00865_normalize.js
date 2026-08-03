@@ -1,6 +1,3 @@
-// === Module 865: normalize ===
-
-// Module 865 (normalize)
 import _slicedToArray from "_slicedToArray";
 
 function normalize(arg0) {

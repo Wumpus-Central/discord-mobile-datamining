@@ -1,6 +1,3 @@
-// === Module 220: _isNativeReflectConstruct ===
-
-// Module 220 (_isNativeReflectConstruct)
 import MessageEvent from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

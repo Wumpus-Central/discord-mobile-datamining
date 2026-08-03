@@ -1,6 +1,3 @@
-// === Module 3967: _initialize ===
-
-// Module 3967 (_initialize)
 import _initialize from "asyncGeneratorStep";
 import { NitroModules } from "module_3925";
 

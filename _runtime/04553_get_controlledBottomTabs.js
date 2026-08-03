@@ -1,6 +1,3 @@
-// === Module 4553: get controlledBottomTabs ===
-
-// Module 4553 (get controlledBottomTabs)
 let ios26AllowInteractionsDuringTransition = { experiment: { controlledBottomTabs: false, synchronousScreenUpdatesEnabled: false, synchronousHeaderConfigUpdatesEnabled: false, synchronousHeaderSubviewUpdatesEnabled: false, androidResetScreenShadowStateOnOrientationChangeEnabled: true, iosPreventReattachmentOfDismissedScreens: true, ios26AllowInteractionsDuringTransition: true }, stable: {} };
 ios26AllowInteractionsDuringTransition = "controlledBottomTabs";
 let c1 = {

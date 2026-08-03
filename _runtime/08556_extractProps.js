@@ -1,6 +1,3 @@
-// === Module 8556: extractProps ===
-
-// Module 8556 (extractProps)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

@@ -1,6 +1,3 @@
-// === Module 892: addUserAgentToTransportHeaders ===
-
-// Module 892 (addUserAgentToTransportHeaders)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addUserAgentToTransportHeaders = function addUserAgentToTransportHeaders(_metadata) {
   _metadata = _metadata._metadata;

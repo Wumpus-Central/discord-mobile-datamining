@@ -1,6 +1,3 @@
-// === Module 4548: items ===
-
-// Module 4548 (items)
 import { Platform } from "get ActivityIndicator";
 
 const items = [-1];

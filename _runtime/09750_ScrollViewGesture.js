@@ -1,6 +1,3 @@
-// === Module 9750: ScrollViewGesture ===
-
-// Module 9750 (ScrollViewGesture)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

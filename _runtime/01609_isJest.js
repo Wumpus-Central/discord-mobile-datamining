@@ -1,6 +1,3 @@
-// === Module 1609: isJest ===
-
-// Module 1609 (isJest)
 import { version } from "noop";
 import { Platform } from "get ActivityIndicator";
 

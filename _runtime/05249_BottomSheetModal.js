@@ -1,6 +1,3 @@
-// === Module 5249: BottomSheetModal ===
-
-// Module 5249 (BottomSheetModal)
 for (const key10013 in require("GESTURE_SOURCE")) {
   let tmp2 = key10013;
   arg5[key10013] = require("GESTURE_SOURCE")[key10013];

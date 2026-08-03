@@ -1,6 +1,3 @@
-// === Module 9729: ? ===
-
-// Module 9729
 import { jsx } from "jsxProd";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 1118: enrichAndroidProfileWithEventContext ===
-
-// Module 1118 (enrichAndroidProfileWithEventContext)
 const require = arg1;
 const dependencyMap = arg6;
 function enrichAndroidProfileWithEventContext(profile_id, build_id, contexts) {

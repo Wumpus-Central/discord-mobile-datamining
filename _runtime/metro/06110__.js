@@ -1,6 +1,3 @@
-// === Module 6110: ? ===
-
-// Module 6110
 let items = [{ id: "image_0", w: 128, h: 128, u: "", p: "", e: 1 }, , ];
 const items1 = [{ i: { x: [0, 0, 0.667], y: [1, 1, 1] }, o: { x: [0, 0, 0.167], y: [0, 0, 16.667] }, t: 5, s: [0, 0, 100] }, { t: 52, s: [76.3, 76.3, 100] }];
 const items2 = [{ d: 1, ty: "el", s: { a: 0, k: [58.794, 58.794], ix: 2 }, p: { a: 0, k: [0, 0], ix: 3 }, nm: "Ellipse Path 1", mn: "ADBE Vector Shape - Ellipse", hd: false }, { ty: "fl", c: { a: 0, k: [1, 1, 1, 1], ix: 4 }, o: { a: 0, k: 100, ix: 5 }, r: 1, bm: 0, nm: "Fill 1", mn: "ADBE Vector Graphic - Fill", hd: false }, { ty: "tr", p: { a: 0, k: [6.397, -55.103], ix: 2 }, a: { a: 0, k: [0, 0], ix: 1 }, s: { a: 0, k: [132.713, 132.713], ix: 3 }, r: { a: 0, k: 0, ix: 6 }, o: { a: 0, k: 100, ix: 7 }, sk: { a: 0, k: 0, ix: 4 }, sa: { a: 0, k: 0, ix: 5 }, nm: "Transform" }];

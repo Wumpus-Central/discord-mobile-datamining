@@ -1,6 +1,3 @@
-// === Module 13399: prop ===
-
-// Module 13399 (prop)
 import prop from "prop";
 
 if (prop) {

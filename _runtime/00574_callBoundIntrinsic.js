@@ -1,6 +1,3 @@
-// === Module 574: callBoundIntrinsic ===
-
-// Module 574 (callBoundIntrinsic)
 import callBindBasic from "callBindBasic";
 
 let items = [require("getEvalledConstructor")("%String.prototype.indexOf%")];

@@ -1,6 +1,3 @@
-// === Module 4777: detectFile ===
-
-// Module 4777 (detectFile)
 let require = arg1;
 const dependencyMap = arg6;
 arg5.detectFile = function detectFile(uint8Array, chunkSize) {

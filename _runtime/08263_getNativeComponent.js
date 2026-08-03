@@ -1,6 +1,3 @@
-// === Module 8263: getNativeComponent ===
-
-// Module 8263 (getNativeComponent)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let Platform;

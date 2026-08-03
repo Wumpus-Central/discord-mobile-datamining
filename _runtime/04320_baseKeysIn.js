@@ -1,6 +1,3 @@
-// === Module 4320: baseKeysIn ===
-
-// Module 4320 (baseKeysIn)
 
 export default function baseKeysIn(obj) {
   if (require(606) /* isObject */(obj)) {

@@ -1,6 +1,3 @@
-// === Module 4504: ValidateAndApplyPropertyDescriptor ===
-
-// Module 4504 (ValidateAndApplyPropertyDescriptor)
 
 export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, arg2, __Configurable__) {
   const tmp3 = require(4505) /* Type */(arg0);

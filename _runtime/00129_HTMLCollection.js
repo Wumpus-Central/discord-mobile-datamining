@@ -1,6 +1,3 @@
-// === Module 129: HTMLCollection ===
-
-// Module 129 (HTMLCollection)
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

@@ -1,6 +1,3 @@
-// === Module 1543: useFocusedListenersChildrenAdapter ===
-
-// Module 1543 (useFocusedListenersChildrenAdapter)
 import noop from "noop";
 
 

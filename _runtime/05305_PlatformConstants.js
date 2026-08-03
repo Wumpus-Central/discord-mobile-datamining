@@ -1,6 +1,3 @@
-// === Module 5305: PlatformConstants ===
-
-// Module 5305 (PlatformConstants)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const NativeModules = get_ActivityIndicator.NativeModules;

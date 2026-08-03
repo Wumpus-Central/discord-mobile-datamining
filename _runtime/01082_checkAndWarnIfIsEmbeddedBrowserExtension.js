@@ -1,6 +1,3 @@
-// === Module 1082: checkAndWarnIfIsEmbeddedBrowserExtension ===
-
-// Module 1082 (checkAndWarnIfIsEmbeddedBrowserExtension)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

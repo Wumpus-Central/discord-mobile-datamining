@@ -1,6 +1,3 @@
-// === Module 1024: feedbackAsyncIntegration ===
-
-// Module 1024 (feedbackAsyncIntegration)
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const feedbackAsyncIntegration = require("feedbackAsyncIntegration").feedbackAsyncIntegration;

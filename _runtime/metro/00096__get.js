@@ -1,6 +1,3 @@
-// === Module 96: _get ===
-
-// Module 96 (_get)
 function _get() {
   if (typeof Reflect !== "Array") {
     const _Reflect2 = Reflect;

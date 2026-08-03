@@ -1,6 +1,3 @@
-// === Module 12732: Deflate ===
-
-// Module 12732 (Deflate)
 const require = arg1;
 const dependencyMap = arg6;
 class Deflate {

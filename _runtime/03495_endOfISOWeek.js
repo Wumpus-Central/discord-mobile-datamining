@@ -1,6 +1,3 @@
-// === Module 3495: endOfISOWeek ===
-
-// Module 3495 (endOfISOWeek)
 import endOfWeek from "endOfWeek";
 import requiredArgs from "requiredArgs";
 

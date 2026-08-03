@@ -1,6 +1,3 @@
-// === Module 3333: formatRelative ===
-
-// Module 3333 (formatRelative)
 let c0 = ["vas\u00E1rnap", "h\u00E9tf\u0151n", "kedden", "szerd\u00E1n", "cs\u00FCt\u00F6rt\u00F6k\u00F6n", "p\u00E9nteken", "szombaton"];
 const obj = {
   lastWeek: (arg0) => {

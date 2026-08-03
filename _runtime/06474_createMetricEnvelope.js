@@ -1,6 +1,3 @@
-// === Module 6474: createMetricEnvelope ===
-
-// Module 6474 (createMetricEnvelope)
 const require = arg1;
 const dependencyMap = arg6;
 function createMetricEnvelope(arg0, arg1, sdk) {

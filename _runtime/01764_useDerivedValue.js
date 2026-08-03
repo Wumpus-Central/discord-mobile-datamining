@@ -1,6 +1,3 @@
-// === Module 1764: useDerivedValue ===
-
-// Module 1764 (useDerivedValue)
 import noop from "noop";
 
 let c3;

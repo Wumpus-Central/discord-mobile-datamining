@@ -1,6 +1,3 @@
-// === Module 1214: q ===
-
-// Module 1214 (q)
 if (typeof window === "pack") {
   let self = window;
 } else {

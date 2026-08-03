@@ -1,6 +1,3 @@
-// === Module 1334: isEnumObject ===
-
-// Module 1334 (isEnumObject)
 import _slicedToArray from "_slicedToArray";
 
 function isEnumObject(arg0) {

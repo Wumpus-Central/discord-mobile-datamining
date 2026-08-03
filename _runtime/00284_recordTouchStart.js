@@ -1,6 +1,3 @@
-// === Module 284: recordTouchStart ===
-
-// Module 284 (recordTouchStart)
 function recordTouchStart(identifier) {
   identifier = identifier.identifier;
   if (null == identifier) {

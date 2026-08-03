@@ -1,6 +1,3 @@
-// === Module 4831: getStringValue ===
-
-// Module 4831 (getStringValue)
 arg5.getStringValue = function getStringValue(value) {
   const mapped = value.map((arg0) => String.fromCharCode(arg0));
   return mapped.join("");

@@ -1,6 +1,3 @@
-// === Module 6494: _asyncNullishCoalesce2 ===
-
-// Module 6494 (_asyncNullishCoalesce2)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _asyncNullishCoalesce2() {

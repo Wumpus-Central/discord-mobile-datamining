@@ -1,6 +1,3 @@
-// === Module 3478: eachDayOfInterval ===
-
-// Module 3478 (eachDayOfInterval)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

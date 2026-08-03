@@ -1,6 +1,3 @@
-// === Module 9747: round ===
-
-// Module 9747 (round)
 function round(arg0) {
   return Math.round(arg0);
 }

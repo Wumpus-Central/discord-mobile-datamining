@@ -1,6 +1,3 @@
-// === Module 3533: fromUnixTime ===
-
-// Module 3533 (fromUnixTime)
 import _typeof from "_typeof";
 import toInteger from "toInteger";
 import requiredArgs from "requiredArgs";

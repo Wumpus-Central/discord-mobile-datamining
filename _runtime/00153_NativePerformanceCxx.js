@@ -1,6 +1,3 @@
-// === Module 153: NativePerformanceCxx ===
-
-// Module 153 (NativePerformanceCxx)
 if (require("NativePerformanceCxx")) {
   require("setUpPerformanceModern")();
 } else if (!global.performance) {

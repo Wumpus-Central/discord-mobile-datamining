@@ -1,6 +1,3 @@
-// === Module 1066: instrumentHistory ===
-
-// Module 1066 (instrumentHistory)
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentHistory() {

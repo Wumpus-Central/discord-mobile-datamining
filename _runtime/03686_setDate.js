@@ -1,6 +1,3 @@
-// === Module 3686: setDate ===
-
-// Module 3686 (setDate)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

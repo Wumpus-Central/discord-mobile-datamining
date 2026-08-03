@@ -1,6 +1,3 @@
-// === Module 4509: PromiseResolve ===
-
-// Module 4509 (PromiseResolve)
 const tmp = require("getEvalledConstructor")("%Promise.resolve%", true);
 let tmp2 = tmp;
 if (tmp) {

@@ -1,6 +1,3 @@
-// === Module 909: weakMap ===
-
-// Module 909 (weakMap)
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

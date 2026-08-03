@@ -1,6 +1,3 @@
-// === Module 6241: areHookInputsEqual ===
-
-// Module 6241 (areHookInputsEqual)
 arg5.default = function areHookInputsEqual(arg0, arg1) {
   if (arg0.length !== arg1.length) {
     return false;

@@ -1,6 +1,3 @@
-// === Module 4464: isArguments ===
-
-// Module 4464 (isArguments)
 if (Object.keys) {
   module.exports = undefined;
 } else {

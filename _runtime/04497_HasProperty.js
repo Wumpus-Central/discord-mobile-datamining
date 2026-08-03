@@ -1,6 +1,3 @@
-// === Module 4497: HasProperty ===
-
-// Module 4497 (HasProperty)
 
 export default function HasProperty(arg0, arg1) {
   if (require(4438) /* isObject */(arg0)) {

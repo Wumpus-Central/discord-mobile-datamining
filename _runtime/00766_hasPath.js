@@ -1,6 +1,3 @@
-// === Module 766: hasPath ===
-
-// Module 766 (hasPath)
 
 export default function hasPath(arg0, arg1, arg2) {
   let tmp4;

@@ -1,6 +1,3 @@
-// === Module 5372: sharedValue ===
-
-// Module 5372 (sharedValue)
 import "noop";
 import { useMemo } from "noop";
 import { jsx } from "jsxProd";

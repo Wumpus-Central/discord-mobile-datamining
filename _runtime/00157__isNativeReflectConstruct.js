@@ -1,6 +1,3 @@
-// === Module 157: _isNativeReflectConstruct ===
-
-// Module 157 (_isNativeReflectConstruct)
 import DOMException from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

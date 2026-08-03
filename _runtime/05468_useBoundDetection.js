@@ -1,6 +1,3 @@
-// === Module 5468: useBoundDetection ===
-
-// Module 5468 (useBoundDetection)
 import noop from "noop";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 4328: cloneRegExp ===
-
-// Module 4328 (cloneRegExp)
 const re0 = /\w*$/;
 
 export default function cloneRegExp(source) {

@@ -1,6 +1,3 @@
-// === Module 3556: getWeekOfMonth ===
-
-// Module 3556 (getWeekOfMonth)
 import getDate from "getDate";
 import getDay from "getDay";
 import startOfMonth from "startOfMonth";

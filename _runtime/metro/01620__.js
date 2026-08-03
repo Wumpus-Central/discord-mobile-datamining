@@ -1,6 +1,3 @@
-// === Module 1620: ? ===
-
-// Module 1620
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

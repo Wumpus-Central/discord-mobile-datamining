@@ -1,6 +1,3 @@
-// === Module 780: stackSet ===
-
-// Module 780 (stackSet)
 
 export default function stackSet(arg0, arg1) {
   const self = this;

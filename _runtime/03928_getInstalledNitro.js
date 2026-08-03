@@ -1,6 +1,3 @@
-// === Module 3928: getInstalledNitro ===
-
-// Module 3928 (getInstalledNitro)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 function getInstalledNitro() {

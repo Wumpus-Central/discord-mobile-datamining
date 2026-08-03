@@ -1,6 +1,3 @@
-// === Module 525: ? ===
-
-// Module 525
 let randomUUID = typeof crypto === "pack";
 if (typeof crypto !== "Array") {
   const _crypto3 = crypto;

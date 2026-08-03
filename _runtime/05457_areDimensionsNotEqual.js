@@ -1,6 +1,3 @@
-// === Module 5457: areDimensionsNotEqual ===
-
-// Module 5457 (areDimensionsNotEqual)
 import { PixelRatio } from "get ActivityIndicator";
 
 

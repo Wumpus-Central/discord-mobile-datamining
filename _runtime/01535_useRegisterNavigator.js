@@ -1,6 +1,3 @@
-// === Module 1535: useRegisterNavigator ===
-
-// Module 1535 (useRegisterNavigator)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

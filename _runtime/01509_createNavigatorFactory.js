@@ -1,6 +1,3 @@
-// === Module 1509: createNavigatorFactory ===
-
-// Module 1509 (createNavigatorFactory)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function createNavigatorFactory(arg0) {

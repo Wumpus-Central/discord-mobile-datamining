@@ -1,6 +1,3 @@
-// === Module 4024: ? ===
-
-// Module 4024
 let fn = Array.isArray;
 if (!fn) {
   fn = (arg0) => {

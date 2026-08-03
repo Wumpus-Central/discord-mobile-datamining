@@ -1,6 +1,3 @@
-// === Module 1572: useTheme ===
-
-// Module 1572 (useTheme)
 import noop from "noop";
 
 

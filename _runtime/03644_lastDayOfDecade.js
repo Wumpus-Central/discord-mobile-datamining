@@ -1,6 +1,3 @@
-// === Module 3644: lastDayOfDecade ===
-
-// Module 3644 (lastDayOfDecade)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

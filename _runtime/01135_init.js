@@ -1,6 +1,3 @@
-// === Module 1135: init ===
-
-// Module 1135 (init)
 import feedbackAsyncIntegration from "feedbackAsyncIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

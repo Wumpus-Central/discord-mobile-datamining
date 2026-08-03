@@ -1,6 +1,3 @@
-// === Module 15058: toNativeHorizontalOffset ===
-
-// Module 15058 (toNativeHorizontalOffset)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import _objectWithoutProperties from "_objectWithoutProperties";

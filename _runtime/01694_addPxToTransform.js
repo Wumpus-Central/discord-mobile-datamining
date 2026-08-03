@@ -1,6 +1,3 @@
-// === Module 1694: addPxToTransform ===
-
-// Module 1694 (addPxToTransform)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 

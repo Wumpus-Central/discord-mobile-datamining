@@ -1,6 +1,3 @@
-// === Module 583: _createForOfIteratorHelper ===
-
-// Module 583 (_createForOfIteratorHelper)
 let length;
 function _createForOfIteratorHelper(iterable) {
   let closure_0 = iterable;

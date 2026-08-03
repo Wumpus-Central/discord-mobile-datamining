@@ -1,6 +1,3 @@
-// === Module 479: map ===
-
-// Module 479 (map)
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 

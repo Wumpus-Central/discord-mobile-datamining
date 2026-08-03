@@ -1,6 +1,3 @@
-// === Module 6393: _getSpanForScope ===
-
-// Module 6393 (_getSpanForScope)
 const require = arg1;
 const dependencyMap = arg6;
 const _sentrySpan = "_sentrySpan";

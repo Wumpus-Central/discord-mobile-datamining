@@ -1,6 +1,3 @@
-// === Module 13435: defineProperty ===
-
-// Module 13435 (defineProperty)
 const enumerable = "enumerable";
 const configurable = "configurable";
 const writable = "writable";

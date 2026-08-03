@@ -1,6 +1,3 @@
-// === Module 482: ReactNativeVersion ===
-
-// Module 482 (ReactNativeVersion)
 import ReactNativeVersion from "_classCallCheck";
 
 class ReactNativeVersion {

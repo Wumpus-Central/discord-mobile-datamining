@@ -1,6 +1,3 @@
-// === Module 928: addConsoleBreadcrumb ===
-
-// Module 928 (addConsoleBreadcrumb)
 import setupIntegration from "setupIntegration";
 
 function addConsoleBreadcrumb(arg0, arguments) {

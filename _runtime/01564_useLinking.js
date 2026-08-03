@@ -1,6 +1,3 @@
-// === Module 1564: useLinking ===
-
-// Module 1564 (useLinking)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 

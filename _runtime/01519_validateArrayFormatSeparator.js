@@ -1,6 +1,3 @@
-// === Module 1519: validateArrayFormatSeparator ===
-
-// Module 1519 (validateArrayFormatSeparator)
 import _slicedToArray from "_slicedToArray";
 
 function validateArrayFormatSeparator(arrayFormatSeparator) {

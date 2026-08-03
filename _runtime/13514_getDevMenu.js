@@ -1,6 +1,3 @@
-// === Module 13514: getDevMenu ===
-
-// Module 13514 (getDevMenu)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 function getDevMenu() {

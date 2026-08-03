@@ -1,6 +1,3 @@
-// === Module 12734: flush_block_only ===
-
-// Module 12734 (flush_block_only)
 const require = arg1;
 const dependencyMap = arg6;
 function flush_block_only(state8, arg1) {

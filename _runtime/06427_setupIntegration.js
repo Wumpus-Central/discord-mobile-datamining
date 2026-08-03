@@ -1,6 +1,3 @@
-// === Module 6427: setupIntegration ===
-
-// Module 6427 (setupIntegration)
 import _slicedToArray from "_slicedToArray";
 
 function setupIntegration(on, name) {

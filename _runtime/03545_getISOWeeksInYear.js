@@ -1,6 +1,3 @@
-// === Module 3545: getISOWeeksInYear ===
-
-// Module 3545 (getISOWeeksInYear)
 import startOfISOWeekYear from "startOfISOWeekYear";
 import addWeeks from "addWeeks";
 import requiredArgs from "requiredArgs";

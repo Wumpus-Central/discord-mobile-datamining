@@ -1,6 +1,3 @@
-// === Module 4780: FILE_TYPES_REQUIRED_ADDITIONAL_CHECK ===
-
-// Module 4780 (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

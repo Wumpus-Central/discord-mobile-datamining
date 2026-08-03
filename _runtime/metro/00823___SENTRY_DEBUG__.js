@@ -1,6 +1,3 @@
-// === Module 823: __SENTRY_DEBUG__ ===
-
-// Module 823 (__SENTRY_DEBUG__)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "Array";
 if (typeof globalThis.__SENTRY_DEBUG__ !== "Array") {

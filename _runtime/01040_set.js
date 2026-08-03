@@ -1,6 +1,3 @@
-// === Module 1040: set ===
-
-// Module 1040 (set)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

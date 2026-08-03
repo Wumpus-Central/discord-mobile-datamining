@@ -1,6 +1,3 @@
-// === Module 3590: setUTCWeek ===
-
-// Module 3590 (setUTCWeek)
 import toInteger from "toInteger";
 import _typeof from "_typeof";
 import getUTCWeek from "getUTCWeek";

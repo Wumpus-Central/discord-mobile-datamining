@@ -1,6 +1,3 @@
-// === Module 1162: fetchNativeFrames ===
-
-// Module 1162 (fetchNativeFrames)
 const require = arg1;
 const dependencyMap = arg6;
 function fetchNativeFrames() {

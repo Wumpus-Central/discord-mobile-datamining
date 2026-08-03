@@ -1,6 +1,3 @@
-// === Module 534: ? ===
-
-// Module 534
 const re1 = /%20/g;
 
 export default {

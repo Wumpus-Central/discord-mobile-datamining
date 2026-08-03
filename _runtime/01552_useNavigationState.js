@@ -1,6 +1,3 @@
-// === Module 1552: useNavigationState ===
-
-// Module 1552 (useNavigationState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

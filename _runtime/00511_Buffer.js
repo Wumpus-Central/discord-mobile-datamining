@@ -1,6 +1,3 @@
-// === Module 511: Buffer ===
-
-// Module 511 (Buffer)
 const require = arg1;
 const exports = arg5;
 const dependencyMap = arg6;

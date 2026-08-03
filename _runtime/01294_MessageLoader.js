@@ -1,6 +1,3 @@
-// === Module 1294: MessageLoader ===
-
-// Module 1294 (MessageLoader)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

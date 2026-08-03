@@ -1,6 +1,3 @@
-// === Module 6429: createClientReportEnvelope ===
-
-// Module 6429 (createClientReportEnvelope)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createClientReportEnvelope = function createClientReportEnvelope(discarded_events) {

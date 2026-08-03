@@ -1,6 +1,3 @@
-// === Module 1670: SlideInData ===
-
-// Module 1670 (SlideInData)
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes";

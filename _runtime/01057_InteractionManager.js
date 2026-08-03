@@ -1,6 +1,3 @@
-// === Module 1057: InteractionManager ===
-
-// Module 1057 (InteractionManager)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

@@ -1,6 +1,3 @@
-// === Module 8630: extractPolyPoints ===
-
-// Module 8630 (extractPolyPoints)
 arg5.default = function extractPolyPoints(join) {
   let str = join;
   if (Array.isArray(join)) {

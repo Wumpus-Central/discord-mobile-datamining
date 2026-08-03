@@ -1,6 +1,3 @@
-// === Module 6434: createTransport ===
-
-// Module 6434 (createTransport)
 const require = arg1;
 let dependencyMap = arg6;
 arg5.DEFAULT_TRANSPORT_BUFFER_SIZE = 64;

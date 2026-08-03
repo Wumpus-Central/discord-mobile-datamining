@@ -1,6 +1,3 @@
-// === Module 4842: ? ===
-
-// Module 4842
 arg5.default = {
   get(arg0) {
     if (arg0) {

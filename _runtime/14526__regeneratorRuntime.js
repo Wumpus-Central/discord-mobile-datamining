@@ -1,6 +1,3 @@
-// === Module 14526: _regeneratorRuntime ===
-
-// Module 14526 (_regeneratorRuntime)
 
 export default function _regeneratorRuntime() {
   function define(arg0, arg1) {

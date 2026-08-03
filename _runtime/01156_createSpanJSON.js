@@ -1,6 +1,3 @@
-// === Module 1156: createSpanJSON ===
-
-// Module 1156 (createSpanJSON)
 const require = arg1;
 const dependencyMap = arg6;
 function createSpanJSON(span_id) {

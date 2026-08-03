@@ -1,6 +1,3 @@
-// === Module 1829: ? ===
-
-// Module 1829
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

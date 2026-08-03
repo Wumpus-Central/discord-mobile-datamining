@@ -1,6 +1,3 @@
-// === Module 3493: endOfDecade ===
-
-// Module 3493 (endOfDecade)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

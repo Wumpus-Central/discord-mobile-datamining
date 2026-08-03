@@ -1,6 +1,3 @@
-// === Module 535: interpretNumericEntities ===
-
-// Module 535 (interpretNumericEntities)
 let obj = { allowDots: false, allowEmptyArrays: false, allowPrototypes: false, allowSparse: false, arrayLimit: 20, charset: "utf-8", charsetSentinel: false, comma: false, decodeDotInKeys: false, decoder: require("items").decode, delimiter: "&", depth: 5, duplicates: "combine", ignoreQueryPrefix: false, interpretNumericEntities: false, parameterLimit: 1000, parseArrays: true, plainObjects: false, strictDepth: false, strictNullHandling: false, throwOnLimitExceeded: false };
 function interpretNumericEntities(arg0) {
 

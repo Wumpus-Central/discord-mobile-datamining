@@ -1,6 +1,3 @@
-// === Module 1403: callBind ===
-
-// Module 1403 (callBind)
 if (require("flag")) {
   const obj = { value: null };
   const _module = require("flag");

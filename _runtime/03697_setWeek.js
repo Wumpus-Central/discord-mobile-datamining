@@ -1,6 +1,3 @@
-// === Module 3697: setWeek ===
-
-// Module 3697 (setWeek)
 import getWeek from "getWeek";
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";

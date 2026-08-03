@@ -1,6 +1,3 @@
-// === Module 6482: _resolveResponse ===
-
-// Module 6482 (_resolveResponse)
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "getGlobalSingleton";
 

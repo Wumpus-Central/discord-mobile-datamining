@@ -1,6 +1,3 @@
-// === Module 6418: dsnFromString ===
-
-// Module 6418 (dsnFromString)
 import _slicedToArray from "_slicedToArray";
 
 function dsnFromString(arg0) {

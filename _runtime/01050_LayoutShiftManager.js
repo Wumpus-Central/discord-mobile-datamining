@@ -1,6 +1,3 @@
-// === Module 1050: LayoutShiftManager ===
-
-// Module 1050 (LayoutShiftManager)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

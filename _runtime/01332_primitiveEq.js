@@ -1,6 +1,3 @@
-// === Module 1332: primitiveEq ===
-
-// Module 1332 (primitiveEq)
 const require = arg1;
 const dependencyMap = arg6;
 function primitiveEq(arg0, arg1, arg2) {

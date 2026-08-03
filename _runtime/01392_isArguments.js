@@ -1,6 +1,3 @@
-// === Module 1392: isArguments ===
-
-// Module 1392 (isArguments)
 let closure_0 = require("hasToStringTagShams")();
 let closure_1 = require("callBoundIntrinsic")("Object.prototype.toString");
 function isArguments(arg0) {

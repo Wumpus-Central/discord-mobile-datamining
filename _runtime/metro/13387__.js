@@ -1,6 +1,3 @@
-// === Module 13387: ? ===
-
-// Module 13387
 let fn = Object;
 let closure_3 = require("call")("".split);
 if (require("module_13385")(() => !Object("z").propertyIsEnumerable(0))) {

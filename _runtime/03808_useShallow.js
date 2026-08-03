@@ -1,6 +1,3 @@
-// === Module 3808: useShallow ===
-
-// Module 3808 (useShallow)
 import noop from "noop";
 
 

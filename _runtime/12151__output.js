@@ -1,6 +1,3 @@
-// === Module 12151: $output ===
-
-// Module 12151 ($output)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

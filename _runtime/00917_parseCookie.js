@@ -1,6 +1,3 @@
-// === Module 917: parseCookie ===
-
-// Module 917 (parseCookie)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.parseCookie = function parseCookie(arr) {
   const obj = {};

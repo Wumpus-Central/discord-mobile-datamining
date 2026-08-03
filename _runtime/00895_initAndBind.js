@@ -1,6 +1,3 @@
-// === Module 895: initAndBind ===
-
-// Module 895 (initAndBind)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

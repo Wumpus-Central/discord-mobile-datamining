@@ -1,6 +1,3 @@
-// === Module 1753: useEvent ===
-
-// Module 1753 (useEvent)
 import { useRef } from "noop";
 
 

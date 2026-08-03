@@ -1,6 +1,3 @@
-// === Module 3489: eachWeekendOfYear ===
-
-// Module 3489 (eachWeekendOfYear)
 import eachWeekendOfInterval from "eachWeekendOfInterval";
 import endOfYear from "endOfYear";
 import startOfYear from "startOfYear";

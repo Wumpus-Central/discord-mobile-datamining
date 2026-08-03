@@ -1,6 +1,3 @@
-// === Module 5391: ? ===
-
-// Module 5391
 arg5.DEFAULT_ACCESSIBLE = true;
 arg5.DEFAULT_ACCESSIBILITY_ROLE = "adjustable";
 arg5.DEFAULT_ACCESSIBILITY_LABEL = "Bottom sheet handle";

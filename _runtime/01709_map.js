@@ -1,6 +1,3 @@
-// === Module 1709: map ===
-
-// Module 1709 (map)
 const map = new Map();
 arg5.ComponentRegistry = {
   register(arg0, arg1) {

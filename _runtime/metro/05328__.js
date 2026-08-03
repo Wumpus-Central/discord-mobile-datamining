@@ -1,6 +1,3 @@
-// === Module 5328: ? ===
-
-// Module 5328
 const require = arg1;
 const dependencyMap = arg6;
 arg5.GestureObjects = {

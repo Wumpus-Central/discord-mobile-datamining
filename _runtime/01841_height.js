@@ -1,6 +1,3 @@
-// === Module 1841: height ===
-
-// Module 1841 (height)
 import "noop";
 import { useMemo } from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

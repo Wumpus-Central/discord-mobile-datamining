@@ -1,6 +1,3 @@
-// === Module 883: isAttributeObject ===
-
-// Module 883 (isAttributeObject)
 import _slicedToArray from "_slicedToArray";
 
 function isAttributeObject(arg0) {

@@ -1,6 +1,3 @@
-// === Module 5294: items1 ===
-
-// Module 5294 (items1)
 const items = ["id", "enabled", "shouldCancelWhenOutside", "hitSlop", "cancelsTouchesInView", "userSelect", "activeCursor", "mouseButton", "enableContextMenu", "touchAction"];
 const items1 = [...items, "waitFor", "simultaneousHandlers", "blocksHandlers", "onBegan", "onFailed", "onCancelled", "onActivated", "onEnded", "onGestureEvent", "onHandlerStateChange"];
 const sum = tmp2 + 1;

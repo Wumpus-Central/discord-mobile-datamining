@@ -1,6 +1,3 @@
-// === Module 1824: TEST_ID_KEYBOARD_TOOLBAR ===
-
-// Module 1824 (TEST_ID_KEYBOARD_TOOLBAR)
 const combined = "" + "keyboard.toolbar" + ".previous";
 const combined1 = "" + "keyboard.toolbar" + ".next";
 const combined2 = "" + "keyboard.toolbar" + ".content";

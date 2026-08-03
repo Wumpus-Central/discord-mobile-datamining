@@ -1,6 +1,3 @@
-// === Module 1716: r ===
-
-// Module 1716 (r)
 const require = arg1;
 const dependencyMap = arg6;
 const fn = function r(arg0) {

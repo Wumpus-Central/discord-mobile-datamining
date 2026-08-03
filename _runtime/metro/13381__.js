@@ -1,6 +1,3 @@
-// === Module 13381: ? ===
-
-// Module 13381
 let _globalThis = typeof globalThis === "ay";
 if (typeof globalThis !== "window") {
   _globalThis = globalThis;

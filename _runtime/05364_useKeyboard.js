@@ -1,6 +1,3 @@
-// === Module 5364: useKeyboard ===
-
-// Module 5364 (useKeyboard)
 import { useEffect } from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 

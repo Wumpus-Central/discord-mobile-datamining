@@ -1,6 +1,3 @@
-// === Module 1781: dispatchCommandFabric ===
-
-// Module 1781 (dispatchCommandFabric)
 import isJest from "isJest";
 import isJest from "isJest";
 

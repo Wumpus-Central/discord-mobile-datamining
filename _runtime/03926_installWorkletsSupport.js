@@ -1,6 +1,3 @@
-// === Module 3926: installWorkletsSupport ===
-
-// Module 3926 (installWorkletsSupport)
 let require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function determine_Pnpm_installWorkletsSupportTs1(value){const{boxedNitroProxy}=this.__closure;const nitroProxy=boxedNitroProxy.unbox();return nitroProxy.isHybridObject(value);}" };

@@ -1,6 +1,3 @@
-// === Module 3448: compareAsc ===
-
-// Module 3448 (compareAsc)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 4503: getEvalledConstructor ===
-
-// Module 4503 (getEvalledConstructor)
 let closure_2 = require("getEvalledConstructor")("%Object.isExtensible%", true);
 
 export default require("getEvalledConstructor")("%Object.preventExtensions%", true) ? (function IsExtensible(arg0) {

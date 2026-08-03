@@ -1,6 +1,3 @@
-// === Module 1682: isValidRubberBandConfig ===
-
-// Module 1682 (isValidRubberBandConfig)
 import isJest from "isJest";
 
 let num = 1;

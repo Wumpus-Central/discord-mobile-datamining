@@ -1,6 +1,3 @@
-// === Module 5270: print ===
-
-// Module 5270 (print)
 function print() {
 
 }

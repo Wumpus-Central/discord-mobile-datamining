@@ -1,6 +1,3 @@
-// === Module 4853: constructTag ===
-
-// Module 4853 (constructTag)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

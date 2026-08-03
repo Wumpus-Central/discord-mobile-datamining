@@ -1,6 +1,3 @@
-// === Module 350: noop ===
-
-// Module 350 (noop)
 import "noop";
 import codegenNativeCommands from "codegenNativeCommands";
 

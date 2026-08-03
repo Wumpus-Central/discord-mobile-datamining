@@ -1,6 +1,3 @@
-// === Module 8554: reduced ===
-
-// Module 8554 (reduced)
 let obj = { meet: 0, slice: 1, none: 2 };
 const items = ["xMinYMin", "xMidYMin", "xMaxYMin", "xMinYMid", "xMidYMid", "xMaxYMid", "xMinYMax", "xMidYMax", "xMaxYMax", "none"];
 const reduced = items.reduce((arg0, arg1) => {

@@ -1,6 +1,3 @@
-// === Module 5164: HeaderTitle ===
-
-// Module 5164 (HeaderTitle)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

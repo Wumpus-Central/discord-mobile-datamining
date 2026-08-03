@@ -1,6 +1,3 @@
-// === Module 5610: HeaderSegment ===
-
-// Module 5610 (HeaderSegment)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 5168: ? ===
-
-// Module 5168
 import "noop";
 import { UIManager } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

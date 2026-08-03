@@ -1,6 +1,3 @@
-// === Module 13433: all ===
-
-// Module 13433 (all)
 
 export default (arg0) => {
   if (require(13406) /* all */(arg0)) {

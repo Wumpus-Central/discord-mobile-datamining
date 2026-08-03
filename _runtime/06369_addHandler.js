@@ -1,6 +1,3 @@
-// === Module 6369: addHandler ===
-
-// Module 6369 (addHandler)
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = {};

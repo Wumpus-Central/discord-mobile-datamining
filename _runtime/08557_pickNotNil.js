@@ -1,6 +1,3 @@
-// === Module 8557: pickNotNil ===
-
-// Module 8557 (pickNotNil)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.pickNotNil = function pickNotNil(obj) {

@@ -1,6 +1,3 @@
-// === Module 83: getConstants ===
-
-// Module 83 (getConstants)
 const enforcing = require("get").getEnforcing("SourceCode");
 let c1 = null;
 

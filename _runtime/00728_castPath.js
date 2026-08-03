@@ -1,6 +1,3 @@
-// === Module 728: castPath ===
-
-// Module 728 (castPath)
 
 export default function castPath(arg0, arg1) {
   if (require(599)(arg0)) {

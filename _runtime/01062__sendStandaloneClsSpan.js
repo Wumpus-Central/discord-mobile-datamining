@@ -1,6 +1,3 @@
-// === Module 1062: _sendStandaloneClsSpan ===
-
-// Module 1062 (_sendStandaloneClsSpan)
 const require = arg1;
 let dependencyMap = arg6;
 function _sendStandaloneClsSpan(arg0, startTime, sentry_pageload_span_id, sentry_report_event) {

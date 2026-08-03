@@ -1,6 +1,3 @@
-// === Module 13323: ResolveLocale ===
-
-// Module 13323 (ResolveLocale)
 let require = arg1;
 const dependencyMap = arg6;
 arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {

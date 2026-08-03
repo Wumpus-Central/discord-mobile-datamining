@@ -1,6 +1,3 @@
-// === Module 1459: get ActivityIndicator ===
-
-// Module 1459 (get ActivityIndicator)
 import { NativeEventEmitter } from "get ActivityIndicator";
 
 if (require("get ActivityIndicator")) {

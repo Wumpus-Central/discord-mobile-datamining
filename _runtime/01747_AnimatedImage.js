@@ -1,6 +1,3 @@
-// === Module 1747: AnimatedImage ===
-
-// Module 1747 (AnimatedImage)
 import createAnimatedComponent from "createAnimatedComponent";
 
 

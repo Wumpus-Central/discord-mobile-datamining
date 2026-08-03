@@ -1,6 +1,3 @@
-// === Module 3572: isFuture ===
-
-// Module 3572 (isFuture)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 885: _INTERNAL_captureSerializedMetric ===
-
-// Module 885 (_INTERNAL_captureSerializedMetric)
 import _slicedToArray from "_slicedToArray";
 
 function _INTERNAL_captureSerializedMetric(closure_0) {

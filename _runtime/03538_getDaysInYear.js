@@ -1,6 +1,3 @@
-// === Module 3538: getDaysInYear ===
-
-// Module 3538 (getDaysInYear)
 import _typeof from "_typeof";
 import isLeapYear from "isLeapYear";
 import requiredArgs from "requiredArgs";

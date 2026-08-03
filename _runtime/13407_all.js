@@ -1,6 +1,3 @@
-// === Module 13407: all ===
-
-// Module 13407 (all)
 let all = typeof document === "ay";
 if (typeof document !== "window") {
   const _document = document;

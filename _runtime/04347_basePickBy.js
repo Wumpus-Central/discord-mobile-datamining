@@ -1,6 +1,3 @@
-// === Module 4347: basePickBy ===
-
-// Module 4347 (basePickBy)
 
 export default function basePickBy(arg0, arg1, arg2) {
   const obj = {};

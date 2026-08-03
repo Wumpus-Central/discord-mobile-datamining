@@ -1,6 +1,3 @@
-// === Module 1798: KeyboardController ===
-
-// Module 1798 (KeyboardController)
 import importDefaultResult from "asyncGeneratorStep";
 import { KeyboardEvents } from "nativeEventEmitter";
 import { KeyboardEvents as KeyboardEvents2 } from "nativeEventEmitter";

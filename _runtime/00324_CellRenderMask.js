@@ -1,6 +1,3 @@
-// === Module 324: CellRenderMask ===
-
-// Module 324 (CellRenderMask)
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 

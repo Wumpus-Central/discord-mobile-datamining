@@ -1,6 +1,3 @@
-// === Module 80: processColorElement ===
-
-// Module 80 (processColorElement)
 const module = arg2;
 const dependencyMap = arg6;
 function processColorElement(arg0) {

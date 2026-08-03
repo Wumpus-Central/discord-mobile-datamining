@@ -1,6 +1,3 @@
-// === Module 13501: hasLoggerPlugin ===
-
-// Module 13501 (hasLoggerPlugin)
 arg5.assertHasLoggerPlugin = undefined;
 arg5.default = undefined;
 arg5.hasLoggerPlugin = undefined;

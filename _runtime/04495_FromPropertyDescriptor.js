@@ -1,6 +1,3 @@
-// === Module 4495: FromPropertyDescriptor ===
-
-// Module 4495 (FromPropertyDescriptor)
 
 export default function FromPropertyDescriptor(arg0) {
   if (undefined !== arg0) {

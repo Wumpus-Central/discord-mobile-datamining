@@ -1,6 +1,3 @@
-// === Module 12263: QRCode ===
-
-// Module 12263 (QRCode)
 import QRCode from "QRCode";
 import module_12268 from "module_12268";
 import emptyFunction from "emptyFunction";

@@ -1,6 +1,3 @@
-// === Module 1700: addTransformToKeepPosition ===
-
-// Module 1700 (addTransformToKeepPosition)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

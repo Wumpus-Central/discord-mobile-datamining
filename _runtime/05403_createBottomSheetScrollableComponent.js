@@ -1,6 +1,3 @@
-// === Module 5403: createBottomSheetScrollableComponent ===
-
-// Module 5403 (createBottomSheetScrollableComponent)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import "noop";

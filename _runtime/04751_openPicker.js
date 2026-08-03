@@ -1,6 +1,3 @@
-// === Module 4751: openPicker ===
-
-// Module 4751 (openPicker)
 
 export { default } from "RNCImageCropPicker";
 export const openPicker = require("RNCImageCropPicker").openPicker;

@@ -1,6 +1,3 @@
-// === Module 3651: milliseconds ===
-
-// Module 3651 (milliseconds)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

@@ -1,6 +1,3 @@
-// === Module 4308: initCloneArray ===
-
-// Module 4308 (initCloneArray)
 
 export default function initCloneArray(arg0) {
   let length = arg0.length;

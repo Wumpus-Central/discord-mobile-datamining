@@ -1,6 +1,3 @@
-// === Module 1698: JumpingTransition ===
-
-// Module 1698 (JumpingTransition)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.JumpingTransition = function JumpingTransition(name) {

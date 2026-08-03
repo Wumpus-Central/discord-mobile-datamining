@@ -1,6 +1,3 @@
-// === Module 6477: trpcMiddleware ===
-
-// Module 6477 (trpcMiddleware)
 import asyncGeneratorStep from "dateTimestampInSeconds";
 import "errorCallback";
 import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__";

@@ -1,6 +1,3 @@
-// === Module 173: _createNativeObserver2 ===
-
-// Module 173 (_createNativeObserver2)
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import _classPrivateFieldBase from "_classPrivateFieldBase";

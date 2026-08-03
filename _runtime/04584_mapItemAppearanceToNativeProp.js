@@ -1,6 +1,3 @@
-// === Module 4584: mapItemAppearanceToNativeProp ===
-
-// Module 4584 (mapItemAppearanceToNativeProp)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

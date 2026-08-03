@@ -1,6 +1,3 @@
-// === Module 4848: ? ===
-
-// Module 4848
 const require = arg1;
 const dependencyMap = arg6;
 obj = { 4: null, 8: null, 12: null, 16: null, 20: obj, 24: null, 36: null, 40: null, 48: obj, 52: null, 64: null, 80: null };

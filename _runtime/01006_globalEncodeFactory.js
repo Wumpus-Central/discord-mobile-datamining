@@ -1,6 +1,3 @@
-// === Module 1006: globalEncodeFactory ===
-
-// Module 1006 (globalEncodeFactory)
 const require = arg1;
 const dependencyMap = arg6;
 function globalEncodeFactory(arg0) {

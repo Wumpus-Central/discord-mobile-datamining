@@ -1,6 +1,3 @@
-// === Module 1105: _wrappedIsEnabled ===
-
-// Module 1105 (_wrappedIsEnabled)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 function _wrappedIsEnabled(arg0) {

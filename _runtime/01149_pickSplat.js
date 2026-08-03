@@ -1,6 +1,3 @@
-// === Module 1149: pickSplat ===
-
-// Module 1149 (pickSplat)
 import _slicedToArray from "_slicedToArray";
 
 function pickSplat(params) {

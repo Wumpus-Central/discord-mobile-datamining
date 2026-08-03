@@ -1,6 +1,3 @@
-// === Module 16270: Events ===
-
-// Module 16270 (Events)
 class Events {
   constructor() {
     return;

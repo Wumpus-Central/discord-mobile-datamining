@@ -1,6 +1,3 @@
-// === Module 724: matchesStrictComparable ===
-
-// Module 724 (matchesStrictComparable)
 
 export default function matchesStrictComparable(arg0, arg1) {
   let closure_0 = arg0;

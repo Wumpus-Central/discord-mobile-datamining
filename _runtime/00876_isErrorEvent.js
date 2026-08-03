@@ -1,6 +1,3 @@
-// === Module 876: isErrorEvent ===
-
-// Module 876 (isErrorEvent)
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "createTransport";
 import _classCallCheck from "_classCallCheck";

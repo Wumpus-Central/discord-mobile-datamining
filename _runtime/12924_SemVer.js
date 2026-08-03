@@ -1,6 +1,3 @@
-// === Module 12924: SemVer ===
-
-// Module 12924 (SemVer)
 
 export default (arg0, arg1) => {
   if (arg0 instanceof require(12925) /* SemVer */) {

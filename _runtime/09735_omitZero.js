@@ -1,6 +1,3 @@
-// === Module 9735: omitZero ===
-
-// Module 9735 (omitZero)
 function omitZero(arg0, arg1) {
   let num = 0;
   if (0 !== arg0) {

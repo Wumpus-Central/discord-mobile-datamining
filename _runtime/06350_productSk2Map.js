@@ -1,6 +1,3 @@
-// === Module 6350: productSk2Map ===
-
-// Module 6350 (productSk2Map)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.productSk2Map = (displayName) => {

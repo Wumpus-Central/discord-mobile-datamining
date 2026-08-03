@@ -1,6 +1,3 @@
-// === Module 3657: minutesToSeconds ===
-
-// Module 3657 (minutesToSeconds)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

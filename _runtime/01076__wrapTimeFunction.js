@@ -1,6 +1,3 @@
-// === Module 1076: _wrapTimeFunction ===
-
-// Module 1076 (_wrapTimeFunction)
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 function _wrapTimeFunction(arg0) {

@@ -1,6 +1,3 @@
-// === Module 450: showActionSheetWithOptions ===
-
-// Module 450 (showActionSheetWithOptions)
 import _objectWithoutProperties from "_objectWithoutProperties";
 
 const require = arg1;

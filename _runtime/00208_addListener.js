@@ -1,6 +1,3 @@
-// === Module 208: addListener ===
-
-// Module 208 (addListener)
 let c3 = 1;
 let c4 = new require("NativeEventEmitter")(null);
 

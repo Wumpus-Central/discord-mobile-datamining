@@ -1,6 +1,3 @@
-// === Module 4317: ? ===
-
-// Module 4317
 if (Object.getOwnPropertySymbols) {
   let fn = (arg0) => {
     let tmp = arg0;

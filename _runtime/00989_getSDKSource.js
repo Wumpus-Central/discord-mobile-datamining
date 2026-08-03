@@ -1,6 +1,3 @@
-// === Module 989: getSDKSource ===
-
-// Module 989 (getSDKSource)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getSDKSource = function getSDKSource() {
   return "npm";

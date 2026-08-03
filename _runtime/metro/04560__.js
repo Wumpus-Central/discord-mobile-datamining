@@ -1,6 +1,3 @@
-// === Module 4560: ? ===
-
-// Module 4560
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importDefaultResult from "noop";
 import { View } from "get ActivityIndicator";

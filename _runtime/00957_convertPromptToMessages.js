@@ -1,6 +1,3 @@
-// === Module 957: convertPromptToMessages ===
-
-// Module 957 (convertPromptToMessages)
 const require = arg1;
 const dependencyMap = arg6;
 function convertPromptToMessages(data) {

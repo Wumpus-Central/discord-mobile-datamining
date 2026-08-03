@@ -1,6 +1,3 @@
-// === Module 615: createBaseFor ===
-
-// Module 615 (createBaseFor)
 
 export default function createBaseFor(arg0) {
   let closure_0 = arg0;

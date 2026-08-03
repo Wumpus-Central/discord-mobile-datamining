@@ -1,6 +1,3 @@
-// === Module 5348: RefreshControl ===
-
-// Module 5348 (RefreshControl)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";

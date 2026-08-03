@@ -1,6 +1,3 @@
-// === Module 4571: ScreenFooter ===
-
-// Module 4571 (ScreenFooter)
 import "noop";
 import { jsx } from "jsxProd";
 

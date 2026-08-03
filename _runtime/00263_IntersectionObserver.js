@@ -1,6 +1,3 @@
-// === Module 263: IntersectionObserver ===
-
-// Module 263 (IntersectionObserver)
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

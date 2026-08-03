@@ -1,6 +1,3 @@
-// === Module 1026: mergeOptions ===
-
-// Module 1026 (mergeOptions)
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "asyncGeneratorStep";
 

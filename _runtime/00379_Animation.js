@@ -1,6 +1,3 @@
-// === Module 379: Animation ===
-
-// Module 379 (Animation)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

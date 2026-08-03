@@ -1,6 +1,3 @@
-// === Module 5442: RVEngagedIndicesTrackerImpl ===
-
-// Module 5442 (RVEngagedIndicesTrackerImpl)
 import _classCallCheck from "_classCallCheck";
 
 const RVEngagedIndicesTrackerImpl = arg1;

@@ -1,6 +1,3 @@
-// === Module 6446: _getEventFilterUrl ===
-
-// Module 6446 (_getEventFilterUrl)
 import setupIntegration from "setupIntegration";
 
 function _getEventFilterUrl(arg0) {

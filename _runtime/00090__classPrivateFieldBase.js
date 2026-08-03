@@ -1,6 +1,3 @@
-// === Module 90: _classPrivateFieldBase ===
-
-// Module 90 (_classPrivateFieldBase)
 
 export default function _classPrivateFieldBase(arg0, key10009) {
   const hasOwnProperty = {}.hasOwnProperty;

@@ -1,6 +1,3 @@
-// === Module 5171: Animated ===
-
-// Module 5171 (Animated)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

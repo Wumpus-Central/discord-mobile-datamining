@@ -1,6 +1,3 @@
-// === Module 8891: XorAndSalsa ===
-
-// Module 8891 (XorAndSalsa)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function XorAndSalsa(B32, sum, V, result1, B322, sum13) {

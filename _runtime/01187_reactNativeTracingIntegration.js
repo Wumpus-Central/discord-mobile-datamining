@@ -1,6 +1,3 @@
-// === Module 1187: reactNativeTracingIntegration ===
-
-// Module 1187 (reactNativeTracingIntegration)
 for (const key10013 in require("module_1155")) {
   let tmp2 = key10013;
   arg5[key10013] = require("module_1155")[key10013];

@@ -1,6 +1,3 @@
-// === Module 418: __INTERNAL_VIEW_CONFIG ===
-
-// Module 418 (__INTERNAL_VIEW_CONFIG)
 import "noop";
 import processColorElement from "processColorElement";
 import weakSet from "weakSet";

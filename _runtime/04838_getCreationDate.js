@@ -1,6 +1,3 @@
-// === Module 4838: getCreationDate ===
-
-// Module 4838 (getCreationDate)
 const require = arg1;
 const dependencyMap = arg6;
 function getCreationDate(value) {

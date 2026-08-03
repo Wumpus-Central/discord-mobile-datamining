@@ -1,6 +1,3 @@
-// === Module 4335: flatRest ===
-
-// Module 4335 (flatRest)
 import flatRest from "flatRest";
 
 

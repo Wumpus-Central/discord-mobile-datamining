@@ -1,6 +1,3 @@
-// === Module 5627: conditional ===
-
-// Module 5627 (conditional)
 let c0;
 let closure_1;
 ({ add: c0, multiply: closure_1 } = require("get ActivityIndicator").Animated);

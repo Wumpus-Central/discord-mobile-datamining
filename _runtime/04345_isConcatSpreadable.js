@@ -1,6 +1,3 @@
-// === Module 4345: isConcatSpreadable ===
-
-// Module 4345 (isConcatSpreadable)
 let isConcatSpreadable;
 if (require("module_608")) {
   isConcatSpreadable = require("module_608").isConcatSpreadable;

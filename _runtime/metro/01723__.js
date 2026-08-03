@@ -1,6 +1,3 @@
-// === Module 1723: ? ===
-
-// Module 1723
 for (const key10013 in require("_isNativeReflectConstruct")) {
   let tmp2 = key10013;
   arg5[key10013] = require("_isNativeReflectConstruct")[key10013];

@@ -1,6 +1,3 @@
-// === Module 13363: getSupportedCalendars ===
-
-// Module 13363 (getSupportedCalendars)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSupportedCalendars = function getSupportedCalendars(locale) {

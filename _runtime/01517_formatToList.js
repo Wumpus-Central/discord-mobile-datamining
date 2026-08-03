@@ -1,6 +1,3 @@
-// === Module 1517: formatToList ===
-
-// Module 1517 (formatToList)
 function formatToList(arg0) {
 
 }

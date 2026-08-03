@@ -1,6 +1,3 @@
-// === Module 13306: __exportStarResult21 ===
-
-// Module 13306 (__exportStarResult21)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.FormatNumericToString = function FormatNumericToString(roundingType, timesResult) {

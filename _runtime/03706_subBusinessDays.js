@@ -1,6 +1,3 @@
-// === Module 3706: subBusinessDays ===
-
-// Module 3706 (subBusinessDays)
 import addBusinessDays from "addBusinessDays";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

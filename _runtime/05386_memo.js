@@ -1,6 +1,3 @@
-// === Module 5386: memo ===
-
-// Module 5386 (memo)
 import noop from "noop";
 import "noop";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 3398: buildFormatLongFn ===
-
-// Module 3398 (buildFormatLongFn)
 import buildFormatLongFn from "buildFormatLongFn";
 
 if (!buildFormatLongFn) {

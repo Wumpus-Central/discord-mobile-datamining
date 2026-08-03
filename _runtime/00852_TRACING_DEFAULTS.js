@@ -1,6 +1,3 @@
-// === Module 852: TRACING_DEFAULTS ===
-
-// Module 852 (TRACING_DEFAULTS)
 import _toArray from "_toArray";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

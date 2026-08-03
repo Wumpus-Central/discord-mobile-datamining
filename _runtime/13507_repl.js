@@ -1,6 +1,3 @@
-// === Module 13507: repl ===
-
-// Module 13507 (repl)
 arg5.default = function repl() {
   return (arg0) => {
     let closure_0 = arg0;

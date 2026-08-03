@@ -1,6 +1,3 @@
-// === Module 495: deepFreezeAndThrowOnMutationInDev ===
-
-// Module 495 (deepFreezeAndThrowOnMutationInDev)
 import deepFreezeAndThrowOnMutationInDev from "deepFreezeAndThrowOnMutationInDev";
 
 

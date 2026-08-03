@@ -1,6 +1,3 @@
-// === Module 3465: differenceInMilliseconds ===
-
-// Module 3465 (differenceInMilliseconds)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

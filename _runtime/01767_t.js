@@ -1,6 +1,3 @@
-// === Module 1767: t ===
-
-// Module 1767 (t)
 import runWorkletOnJS from "runWorkletOnJS";
 
 const fn = function t() {

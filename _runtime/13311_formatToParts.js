@@ -1,6 +1,3 @@
-// === Module 13311: formatToParts ===
-
-// Module 13311 (formatToParts)
 import e from "e";
 import digitsToString from "digitsToString";
 

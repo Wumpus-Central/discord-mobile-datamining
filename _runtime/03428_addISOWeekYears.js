@@ -1,6 +1,3 @@
-// === Module 3428: addISOWeekYears ===
-
-// Module 3428 (addISOWeekYears)
 import toInteger from "toInteger";
 import getISOWeekYear from "getISOWeekYear";
 import setISOWeekYear from "setISOWeekYear";

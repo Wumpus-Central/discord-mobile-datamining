@@ -1,6 +1,3 @@
-// === Module 52: PlatformColor ===
-
-// Module 52 (PlatformColor)
 arg5.PlatformColor = () => ({ resource_paths: HermesBuiltin.copyRestArgs() });
 arg5.normalizeColorObject = (arg0) => {
   let tmp = null;

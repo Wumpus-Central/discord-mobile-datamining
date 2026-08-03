@@ -1,6 +1,3 @@
-// === Module 103: createViewConfig ===
-
-// Module 103 (createViewConfig)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.createViewConfig = function createViewConfig(closure_2) {

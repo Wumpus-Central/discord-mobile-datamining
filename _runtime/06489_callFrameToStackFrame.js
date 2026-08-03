@@ -1,6 +1,3 @@
-// === Module 6489: callFrameToStackFrame ===
-
-// Module 6489 (callFrameToStackFrame)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {

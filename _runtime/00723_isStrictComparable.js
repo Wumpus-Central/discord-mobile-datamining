@@ -1,6 +1,3 @@
-// === Module 723: isStrictComparable ===
-
-// Module 723 (isStrictComparable)
 
 export default function isStrictComparable(arg0) {
   let tmp = arg0 == arg0;

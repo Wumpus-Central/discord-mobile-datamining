@@ -1,6 +1,3 @@
-// === Module 301: usePressability ===
-
-// Module 301 (usePressability)
 import noop from "noop";
 
 let c3;

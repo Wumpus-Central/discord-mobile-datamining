@@ -1,6 +1,3 @@
-// === Module 4569: ScreenContentWrapper ===
-
-// Module 4569 (ScreenContentWrapper)
 import "noop";
 import { jsx } from "jsxProd";
 

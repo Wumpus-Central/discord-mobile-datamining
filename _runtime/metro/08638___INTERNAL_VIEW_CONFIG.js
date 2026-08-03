@@ -1,6 +1,3 @@
-// === Module 8638: __INTERNAL_VIEW_CONFIG ===
-
-// Module 8638 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 let obj = { uiViewClassName: "RNSVGSymbol", validAttributes: null };

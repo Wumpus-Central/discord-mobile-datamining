@@ -1,6 +1,3 @@
-// === Module 414: memo ===
-
-// Module 414 (memo)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";

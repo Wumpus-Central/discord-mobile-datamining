@@ -1,6 +1,3 @@
-// === Module 815: createStealthXhr ===
-
-// Module 815 (createStealthXhr)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.XHR_READYSTATE_DONE = 4;

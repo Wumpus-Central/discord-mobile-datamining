@@ -1,6 +1,3 @@
-// === Module 3473: endOfMonth ===
-
-// Module 3473 (endOfMonth)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

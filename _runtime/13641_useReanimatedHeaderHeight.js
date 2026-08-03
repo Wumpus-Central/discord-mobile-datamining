@@ -1,6 +1,3 @@
-// === Module 13641: useReanimatedHeaderHeight ===
-
-// Module 13641 (useReanimatedHeaderHeight)
 import noop from "noop";
 
 

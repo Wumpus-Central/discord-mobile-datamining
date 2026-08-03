@@ -1,6 +1,3 @@
-// === Module 3659: monthsToYears ===
-
-// Module 3659 (monthsToYears)
 import requiredArgs from "requiredArgs";
 
 if (!requiredArgs) {

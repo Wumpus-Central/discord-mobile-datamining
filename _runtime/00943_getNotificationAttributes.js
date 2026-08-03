@@ -1,6 +1,3 @@
-// === Module 943: getNotificationAttributes ===
-
-// Module 943 (getNotificationAttributes)
 const require = arg1;
 const dependencyMap = arg6;
 function getNotificationAttributes(arg0, requestId) {

@@ -1,6 +1,3 @@
-// === Module 342: configureNext ===
-
-// Module 342 (configureNext)
 const require = arg1;
 function configureNext(duration) {
   const _global = arg1;

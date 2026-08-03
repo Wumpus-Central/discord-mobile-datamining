@@ -1,6 +1,3 @@
-// === Module 907: winterCGHeadersToDict ===
-
-// Module 907 (winterCGHeadersToDict)
 function winterCGHeadersToDict(arr) {
   const obj = {};
   try {

@@ -1,6 +1,3 @@
-// === Module 313: elementsThatOverlapOffsets ===
-
-// Module 313 (elementsThatOverlapOffsets)
 import _slicedToArray from "_slicedToArray";
 
 function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, arg3) {

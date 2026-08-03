@@ -1,6 +1,3 @@
-// === Module 1684: rigidDecay ===
-
-// Module 1684 (rigidDecay)
 const require = arg1;
 const dependencyMap = arg6;
 function rigidDecay(initialVelocity, lastTimestamp, deceleration) {

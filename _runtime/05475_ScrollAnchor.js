@@ -1,6 +1,3 @@
-// === Module 5475: ScrollAnchor ===
-
-// Module 5475 (ScrollAnchor)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import "noop";

@@ -1,6 +1,3 @@
-// === Module 205: getEventHandlerAttributeMap ===
-
-// Module 205 (getEventHandlerAttributeMap)
 function getEventHandlerAttributeMap(removeEventListener) {
   return removeEventListener[closure_0];
 }

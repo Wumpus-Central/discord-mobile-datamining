@@ -1,6 +1,3 @@
-// === Module 14529: _getRequireWildcardCache ===
-
-// Module 14529 (_getRequireWildcardCache)
 function _getRequireWildcardCache(arg0) {
   if (typeof WeakMap === "disabledUntil") {
     return null;

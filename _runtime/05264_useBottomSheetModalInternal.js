@@ -1,6 +1,3 @@
-// === Module 5264: useBottomSheetModalInternal ===
-
-// Module 5264 (useBottomSheetModalInternal)
 import { useContext } from "noop";
 
 

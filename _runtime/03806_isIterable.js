@@ -1,6 +1,3 @@
-// === Module 3806: isIterable ===
-
-// Module 3806 (isIterable)
 const require = arg1;
 const dependencyMap = arg6;
 let obj = {

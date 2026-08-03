@@ -1,6 +1,3 @@
-// === Module 4496: fromPropertyDescriptor ===
-
-// Module 4496 (fromPropertyDescriptor)
 
 export default function fromPropertyDescriptor(__Value__) {
   if (undefined === __Value__) {

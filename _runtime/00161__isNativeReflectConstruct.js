@@ -1,6 +1,3 @@
-// === Module 161: _isNativeReflectConstruct ===
-
-// Module 161 (_isNativeReflectConstruct)
 
 export default function _isNativeReflectConstruct() {
   try {

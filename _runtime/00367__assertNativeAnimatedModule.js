@@ -1,6 +1,3 @@
-// === Module 367: _assertNativeAnimatedModule ===
-
-// Module 367 (_assertNativeAnimatedModule)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

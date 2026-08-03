@@ -1,6 +1,3 @@
-// === Module 6444: addBreadcrumb ===
-
-// Module 6444 (addBreadcrumb)
 const require = arg1;
 let dependencyMap = arg6;
 arg5.addBreadcrumb = function addBreadcrumb(arg0, arg1) {

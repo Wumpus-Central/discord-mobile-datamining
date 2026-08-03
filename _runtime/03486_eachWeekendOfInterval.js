@@ -1,6 +1,3 @@
-// === Module 3486: eachWeekendOfInterval ===
-
-// Module 3486 (eachWeekendOfInterval)
 import eachDayOfInterval from "eachDayOfInterval";
 import isSunday from "isSunday";
 import isWeekend from "isWeekend";

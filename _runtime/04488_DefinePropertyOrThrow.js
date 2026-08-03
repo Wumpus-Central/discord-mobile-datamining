@@ -1,6 +1,3 @@
-// === Module 4488: DefinePropertyOrThrow ===
-
-// Module 4488 (DefinePropertyOrThrow)
 
 export default function DefinePropertyOrThrow(arg0, arg1, arg2) {
   if (require(4438) /* isObject */(arg0)) {

@@ -1,6 +1,3 @@
-// === Module 337: Commands ===
-
-// Module 337 (Commands)
 let obj = { uiViewClassName: "RCTImageView", bubblingEventTypes: {}, directEventTypes: { topLoadStart: { registrationName: "onLoadStart" }, topProgress: { registrationName: "onProgress" }, topError: { registrationName: "onError" }, topLoad: { registrationName: "onLoad" }, topLoadEnd: { registrationName: "onLoadEnd" } }, validAttributes: null };
 obj = { blurRadius: true, defaultSource: true, internal_analyticTag: true, resizeMethod: true, resizeMode: true, resizeMultiplier: true, tintColor: null, borderBottomLeftRadius: true, borderTopLeftRadius: true, src: true, source: true, borderRadius: true, headers: true, shouldNotifyLoadEvents: true, overlayColor: null, borderColor: null, accessible: true, progressiveRenderingEnabled: true, fadeDuration: true, borderBottomRightRadius: true, borderTopRightRadius: true, loadingIndicatorSrc: true };
 obj[6] = require("result").colorAttribute;

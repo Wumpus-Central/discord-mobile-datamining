@@ -1,6 +1,3 @@
-// === Module 1554: useRoute ===
-
-// Module 1554 (useRoute)
 import noop from "noop";
 
 

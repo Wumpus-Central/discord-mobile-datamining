@@ -1,6 +1,3 @@
-// === Module 252: children ===
-
-// Module 252 (children)
 import "noop";
 import { jsx } from "jsxProd";
 

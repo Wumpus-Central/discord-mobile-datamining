@@ -1,6 +1,3 @@
-// === Module 6443: getTraceMetaTags ===
-
-// Module 6443 (getTraceMetaTags)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getTraceMetaTags = function getTraceMetaTags() {

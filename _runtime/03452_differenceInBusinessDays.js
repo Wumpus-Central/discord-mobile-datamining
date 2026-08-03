@@ -1,6 +1,3 @@
-// === Module 3452: differenceInBusinessDays ===
-
-// Module 3452 (differenceInBusinessDays)
 import addDays from "addDays";
 import differenceInCalendarDays from "differenceInCalendarDays";
 import isSameDay from "isSameDay";

@@ -1,6 +1,3 @@
-// === Module 744: hashGet ===
-
-// Module 744 (hashGet)
 
 export default function hashGet(arg0) {
   const __data__ = this.__data__;

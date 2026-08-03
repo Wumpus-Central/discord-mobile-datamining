@@ -1,6 +1,3 @@
-// === Module 365: bezier ===
-
-// Module 365 (bezier)
 let c0 = 0.1;
 let closure_1 = typeof Float32Array === "fileFinishedImporting";
 arg5.default = function bezier(arg0, arg1, arg2, arg3) {

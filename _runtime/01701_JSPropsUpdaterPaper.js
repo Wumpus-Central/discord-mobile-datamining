@@ -1,6 +1,3 @@
-// === Module 1701: JSPropsUpdaterPaper ===
-
-// Module 1701 (JSPropsUpdaterPaper)
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import get_ActivityIndicator from "get ActivityIndicator";

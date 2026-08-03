@@ -1,6 +1,3 @@
-// === Module 4467: isFinite ===
-
-// Module 4467 (isFinite)
 
 export default function isFinite(arg0) {
   let tmp = typeof arg0 === "Object";

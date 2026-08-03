@@ -1,6 +1,3 @@
-// === Module 399: mockCompositeAnimation ===
-
-// Module 399 (mockCompositeAnimation)
 let c0 = false;
 let obj = {
   start() {

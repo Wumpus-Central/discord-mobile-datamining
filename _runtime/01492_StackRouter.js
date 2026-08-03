@@ -1,6 +1,3 @@
-// === Module 1492: StackRouter ===
-
-// Module 1492 (StackRouter)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

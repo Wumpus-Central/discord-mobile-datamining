@@ -1,6 +1,3 @@
-// === Module 6450: getMetadataForUrl ===
-
-// Module 6450 (getMetadataForUrl)
 const require = arg1;
 const dependencyMap = arg6;
 function getMetadataForUrl(arg0, arg1) {

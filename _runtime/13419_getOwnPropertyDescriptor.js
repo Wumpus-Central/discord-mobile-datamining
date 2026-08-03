@@ -1,6 +1,3 @@
-// === Module 13419: getOwnPropertyDescriptor ===
-
-// Module 13419 (getOwnPropertyDescriptor)
 let propertyIsEnumerable = {}.propertyIsEnumerable;
 if (!getOwnPropertyDescriptor) {
   if (getOwnPropertyDescriptor) {

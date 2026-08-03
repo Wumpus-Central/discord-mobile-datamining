@@ -1,6 +1,3 @@
-// === Module 5312: items ===
-
-// Module 5312 (items)
 const items = ["shouldActivateOnStart", "disallowInterruption"];
 const items1 = [...items];
 

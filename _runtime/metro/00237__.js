@@ -1,6 +1,3 @@
-// === Module 237: ? ===
-
-// Module 237
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

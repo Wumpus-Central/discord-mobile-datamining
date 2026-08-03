@@ -1,6 +1,3 @@
-// === Module 611: toStringTag ===
-
-// Module 611 (toStringTag)
 let c0;
 let closure_1;
 ({ hasOwnProperty: c0, toString: closure_1 } = Object.prototype);

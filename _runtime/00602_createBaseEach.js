@@ -1,6 +1,3 @@
-// === Module 602: createBaseEach ===
-
-// Module 602 (createBaseEach)
 
 export default function createBaseEach(arg0) {
   let closure_0 = arg0;

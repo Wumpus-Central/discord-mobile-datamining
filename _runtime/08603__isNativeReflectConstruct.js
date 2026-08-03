@@ -1,6 +1,3 @@
-// === Module 8603: _isNativeReflectConstruct ===
-
-// Module 8603 (_isNativeReflectConstruct)
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

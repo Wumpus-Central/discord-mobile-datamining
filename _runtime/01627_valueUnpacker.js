@@ -1,6 +1,3 @@
-// === Module 1627: valueUnpacker ===
-
-// Module 1627 (valueUnpacker)
 const global = arg0;
 function valueUnpacker(__workletHash) {
   let __handleCache;

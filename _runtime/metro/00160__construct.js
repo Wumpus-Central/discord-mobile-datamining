@@ -1,6 +1,3 @@
-// === Module 160: _construct ===
-
-// Module 160 (_construct)
 
 export default function _construct(bind) {
   if (require(161) /* _isNativeReflectConstruct */()) {

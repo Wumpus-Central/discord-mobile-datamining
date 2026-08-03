@@ -1,6 +1,3 @@
-// === Module 774: getNative ===
-
-// Module 774 (getNative)
 import getNative from "getNative";
 
 

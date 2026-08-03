@@ -1,6 +1,3 @@
-// === Module 9733: useCommonVariables ===
-
-// Module 9733 (useCommonVariables)
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useCommonVariablesTs1(){const{prevDataLength,dataLength,loop}=this.__closure;const previousLength=prevDataLength.value;const currentLength=dataLength;const isLengthChanged=previousLength!==currentLength;const shouldComputed=isLengthChanged&&loop;if(shouldComputed)prevDataLength.value=dataLength;return{shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength};}" };

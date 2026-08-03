@@ -1,6 +1,3 @@
-// === Module 9746: useCarouselController ===
-
-// Module 9746 (useCarouselController)
 import noop from "noop";
 import { useRef } from "noop";
 

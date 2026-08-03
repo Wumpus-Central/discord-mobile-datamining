@@ -1,6 +1,3 @@
-// === Module 1590: initialWindowMetrics ===
-
-// Module 1590 (initialWindowMetrics)
 import importDefaultResult from "RNCSafeAreaContext";
 
 let initialWindowMetrics;

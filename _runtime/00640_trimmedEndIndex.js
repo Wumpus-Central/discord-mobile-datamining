@@ -1,6 +1,3 @@
-// === Module 640: trimmedEndIndex ===
-
-// Module 640 (trimmedEndIndex)
 const re0 = /\s/;
 
 export default function trimmedEndIndex(str) {

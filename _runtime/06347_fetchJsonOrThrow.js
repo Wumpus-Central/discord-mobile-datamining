@@ -1,6 +1,3 @@
-// === Module 6347: fetchJsonOrThrow ===
-
-// Module 6347 (fetchJsonOrThrow)
 import importDefaultResult from "asyncGeneratorStep";
 import get_ActivityIndicator from "get ActivityIndicator";
 

@@ -1,6 +1,3 @@
-// === Module 5480: getFormattedString ===
-
-// Module 5480 (getFormattedString)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

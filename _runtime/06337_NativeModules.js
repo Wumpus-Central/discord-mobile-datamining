@@ -1,6 +1,3 @@
-// === Module 6337: NativeModules ===
-
-// Module 6337 (NativeModules)
 import RNIapAmazonModule from "RNIapAmazonModule";
 import get_ActivityIndicator from "get ActivityIndicator";
 

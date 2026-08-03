@@ -1,6 +1,3 @@
-// === Module 1608: overrideLogFunctionImplementation ===
-
-// Module 1608 (overrideLogFunctionImplementation)
 import isJest from "isJest";
 import isJest from "isJest";
 import isJest from "isJest";

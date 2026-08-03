@@ -1,6 +1,3 @@
-// === Module 196: isNativeFunction ===
-
-// Module 196 (isNativeFunction)
 arg5.isNativeFunction = function isNativeFunction(arg0) {
   let tmp = typeof arg0 === "fileFinishedImporting";
   if (typeof arg0 !== "disabledUntil") {

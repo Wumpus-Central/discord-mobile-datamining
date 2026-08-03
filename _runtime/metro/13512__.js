@@ -1,6 +1,3 @@
-// === Module 13512: ? ===
-
-// Module 13512
 import noop from "noop";
 import map from "map";
 import _isNativeReflectConstruct from "_isNativeReflectConstruct";

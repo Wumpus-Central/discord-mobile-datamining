@@ -1,6 +1,3 @@
-// === Module 4019: emptyFunction ===
-
-// Module 4019 (emptyFunction)
 function emptyFunction() {
 
 }

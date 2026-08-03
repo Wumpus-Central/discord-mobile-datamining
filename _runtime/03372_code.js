@@ -1,6 +1,3 @@
-// === Module 3372: code ===
-
-// Module 3372 (code)
 import formatDistance from "formatDistance";
 import buildFormatLongFn from "buildFormatLongFn";
 import dayAndTimeWithAdjective from "dayAndTimeWithAdjective";

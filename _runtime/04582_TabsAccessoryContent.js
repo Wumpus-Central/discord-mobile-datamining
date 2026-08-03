@@ -1,6 +1,3 @@
-// === Module 4582: TabsAccessoryContent ===
-
-// Module 4582 (TabsAccessoryContent)
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

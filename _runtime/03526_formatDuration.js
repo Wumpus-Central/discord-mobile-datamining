@@ -1,6 +1,3 @@
-// === Module 3526: formatDuration ===
-
-// Module 3526 (formatDuration)
 import code from "code";
 
 if (!code) {

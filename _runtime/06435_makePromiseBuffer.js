@@ -1,6 +1,3 @@
-// === Module 6435: makePromiseBuffer ===
-
-// Module 6435 (makePromiseBuffer)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.makePromiseBuffer = function makePromiseBuffer(arg0) {

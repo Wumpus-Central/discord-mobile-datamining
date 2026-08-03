@@ -1,6 +1,3 @@
-// === Module 12955: LRUCache ===
-
-// Module 12955 (LRUCache)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

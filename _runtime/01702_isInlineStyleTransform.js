@@ -1,6 +1,3 @@
-// === Module 1702: isInlineStyleTransform ===
-
-// Module 1702 (isInlineStyleTransform)
 import _classCallCheck from "_classCallCheck";
 import _slicedToArray from "_slicedToArray";
 

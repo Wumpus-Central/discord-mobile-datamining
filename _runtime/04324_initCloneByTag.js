@@ -1,6 +1,3 @@
-// === Module 4324: initCloneByTag ===
-
-// Module 4324 (initCloneByTag)
 
 export default function initCloneByTag(arg0, arg1, arg2) {
   let constructor = arg0.constructor;

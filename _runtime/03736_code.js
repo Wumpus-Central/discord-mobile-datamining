@@ -1,6 +1,3 @@
-// === Module 3736: code ===
-
-// Module 3736 (code)
 import formatDistance from "formatDistance";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";

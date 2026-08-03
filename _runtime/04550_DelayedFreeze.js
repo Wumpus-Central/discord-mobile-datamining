@@ -1,6 +1,3 @@
-// === Module 4550: DelayedFreeze ===
-
-// Module 4550 (DelayedFreeze)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

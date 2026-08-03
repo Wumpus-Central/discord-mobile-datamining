@@ -1,6 +1,3 @@
-// === Module 1481: Link ===
-
-// Module 1481 (Link)
 for (const key10013 in require("module_1482")) {
   let tmp2 = key10013;
   arg5[key10013] = require("module_1482")[key10013];

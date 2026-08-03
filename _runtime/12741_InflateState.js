@@ -1,6 +1,3 @@
-// === Module 12741: InflateState ===
-
-// Module 12741 (InflateState)
 const require = arg1;
 const dependencyMap = arg6;
 function InflateState() {

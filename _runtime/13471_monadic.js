@@ -1,6 +1,3 @@
-// === Module 13471: monadic ===
-
-// Module 13471 (monadic)
 import ObjectWithoutPrototypeCache from "_classCallCheck";
 
 function monadic(call, get, arg2, g_v) {

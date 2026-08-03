@@ -1,6 +1,3 @@
-// === Module 13499: keys ===
-
-// Module 13499 (keys)
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import module_13500 from "module_13500";

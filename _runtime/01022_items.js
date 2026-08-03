@@ -1,6 +1,3 @@
-// === Module 1022: items ===
-
-// Module 1022 (items)
 const require = arg1;
 let dependencyMap = arg6;
 const items = [ReferenceError, TypeError, RangeError];

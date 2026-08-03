@@ -1,6 +1,3 @@
-// === Module 863: _enhanceEventWithSdkInfo ===
-
-// Module 863 (_enhanceEventWithSdkInfo)
 const require = arg1;
 const dependencyMap = arg6;
 function _enhanceEventWithSdkInfo(sdk, name) {

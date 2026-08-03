@@ -1,6 +1,3 @@
-// === Module 13455: ? ===
-
-// Module 13455
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

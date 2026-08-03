@@ -1,6 +1,3 @@
-// === Module 1386: priv ===
-
-// Module 1386 (priv)
 function priv(self, lruList, max) {
   if (table[lruList]) {
     let tmp3 = tmp[lruList];

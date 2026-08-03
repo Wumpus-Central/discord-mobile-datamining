@@ -1,6 +1,3 @@
-// === Module 13401: ? ===
-
-// Module 13401
 let tmp = require("module_13381").process && require("module_13381").process.versions;
 if (!tmp) {
   tmp = require("module_13381").Deno && require("module_13381").Deno.version;

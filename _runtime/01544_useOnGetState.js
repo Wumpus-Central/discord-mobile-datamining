@@ -1,6 +1,3 @@
-// === Module 1544: useOnGetState ===
-
-// Module 1544 (useOnGetState)
 import noop from "noop";
 
 

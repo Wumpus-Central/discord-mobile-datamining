@@ -1,6 +1,3 @@
-// === Module 4492: result ===
-
-// Module 4492 (result)
 import hasPropertyDescriptors from "hasPropertyDescriptors";
 
 hasPropertyDescriptors = hasPropertyDescriptors.hasArrayLengthDefineBug();

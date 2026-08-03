@@ -1,6 +1,3 @@
-// === Module 13500: ? ===
-
-// Module 13500
 arg5.default = (createSocket) => {
   let host;
   let port;

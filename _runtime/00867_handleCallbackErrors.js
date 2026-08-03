@@ -1,6 +1,3 @@
-// === Module 867: handleCallbackErrors ===
-
-// Module 867 (handleCallbackErrors)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

@@ -1,6 +1,3 @@
-// === Module 6763: NativeModules ===
-
-// Module 6763 (NativeModules)
 import noop from "noop";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

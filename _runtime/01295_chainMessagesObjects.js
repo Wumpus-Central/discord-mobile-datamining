@@ -1,6 +1,3 @@
-// === Module 1295: chainMessagesObjects ===
-
-// Module 1295 (chainMessagesObjects)
 arg5.chainMessagesObjects = function chainMessagesObjects(importDefaultResult, $$loader2) {
   let tmp2 = "IntlMessagesProxy" === $$loader2[Symbol.toStringTag];
   if ("IntlMessagesProxy" === importDefaultResult[Symbol.toStringTag]) {

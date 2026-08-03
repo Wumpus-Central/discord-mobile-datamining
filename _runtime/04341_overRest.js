@@ -1,6 +1,3 @@
-// === Module 4341: overRest ===
-
-// Module 4341 (overRest)
 
 export default function overRest(arg0, arg1, arg2) {
   let closure_0 = arg0;

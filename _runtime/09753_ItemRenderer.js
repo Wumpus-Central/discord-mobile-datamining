@@ -1,6 +1,3 @@
-// === Module 9753: ItemRenderer ===
-
-// Module 9753 (ItemRenderer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

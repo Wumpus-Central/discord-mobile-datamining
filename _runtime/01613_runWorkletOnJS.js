@@ -1,6 +1,3 @@
-// === Module 1613: runWorkletOnJS ===
-
-// Module 1613 (runWorkletOnJS)
 import isJest from "isJest";
 import isJest from "isJest";
 

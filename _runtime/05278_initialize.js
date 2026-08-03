@@ -1,6 +1,3 @@
-// === Module 5278: initialize ===
-
-// Module 5278 (initialize)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

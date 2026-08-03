@@ -1,6 +1,3 @@
-// === Module 1110: processEvent ===
-
-// Module 1110 (processEvent)
 const require = arg1;
 const dependencyMap = arg6;
 function processEvent(arg0, arg1, arg2) {

@@ -1,6 +1,3 @@
-// === Module 1457: ? ===
-
-// Module 1457
 arg5.default = {
   reachabilityUrl: "https://clients3.google.com/generate_204",
   reachabilityMethod: "HEAD",

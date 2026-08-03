@@ -1,6 +1,3 @@
-// === Module 4835: ? ===
-
-// Module 4835
 let obj = { 4: null };
 obj = {
   name: "ShotInfo",

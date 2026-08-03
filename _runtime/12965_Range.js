@@ -1,6 +1,3 @@
-// === Module 12965: Range ===
-
-// Module 12965 (Range)
 
 export default (arg0, arg1, arg2) => {
   const obj = new require(12954) /* Range */(arg0, arg2);

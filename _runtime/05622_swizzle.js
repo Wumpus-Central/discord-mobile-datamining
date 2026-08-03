@@ -1,6 +1,3 @@
-// === Module 5622: swizzle ===
-
-// Module 5622 (swizzle)
 function swizzle(arg0) {
   let items = [];
   let num = 0;

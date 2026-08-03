@@ -1,6 +1,3 @@
-// === Module 4618: __INTERNAL_VIEW_CONFIG ===
-
-// Module 4618 (__INTERNAL_VIEW_CONFIG)
 import pointsDiffer from "pointsDiffer";
 import pointsDiffer from "pointsDiffer";
 import processColorElement from "processColorElement";

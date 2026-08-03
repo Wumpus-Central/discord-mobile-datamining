@@ -1,6 +1,3 @@
-// === Module 8551: peg$SyntaxError ===
-
-// Module 8551 (peg$SyntaxError)
 class peg$SyntaxError {
   constructor(arg0, arg1, arg2, arg3) {
     obj = { message: global, expected: require, found: importDefault, location: importAll, name: "SyntaxError" };

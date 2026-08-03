@@ -1,6 +1,3 @@
-// === Module 1639: ReanimatedFlatList ===
-
-// Module 1639 (ReanimatedFlatList)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { useRef } from "noop";

@@ -1,6 +1,3 @@
-// === Module 805: getNative ===
-
-// Module 805 (getNative)
 
 export default (() => {
   try {

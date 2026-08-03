@@ -1,6 +1,3 @@
-// === Module 1124: mapSamples ===
-
-// Module 1124 (mapSamples)
 function mapSamples(samples) {
   let tmp = arg1;
   if (arg1 === undefined) {

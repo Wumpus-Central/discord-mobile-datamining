@@ -1,6 +1,3 @@
-// === Module 5450: _getPrototypeOf ===
-
-// Module 5450 (_getPrototypeOf)
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;

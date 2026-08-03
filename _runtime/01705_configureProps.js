@@ -1,6 +1,3 @@
-// === Module 1705: configureProps ===
-
-// Module 1705 (configureProps)
 import isJest from "isJest";
 
 function configureProps() {

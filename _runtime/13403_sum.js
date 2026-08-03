@@ -1,6 +1,3 @@
-// === Module 13403: sum ===
-
-// Module 13403 (sum)
 let c0 = 0;
 let closure_1 = Math.random();
 let closure_2 = require("call")(1.toString);

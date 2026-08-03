@@ -1,6 +1,3 @@
-// === Module 3591: _typeof ===
-
-// Module 3591 (_typeof)
 import setUTCISOWeek from "setUTCISOWeek";
 import startOfUTCISOWeek from "startOfUTCISOWeek";
 import { Parser } from "Parser";

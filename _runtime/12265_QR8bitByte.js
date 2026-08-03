@@ -1,6 +1,3 @@
-// === Module 12265: QR8bitByte ===
-
-// Module 12265 (QR8bitByte)
 class QR8bitByte {
   constructor(arg0) {
     obj = { mode: require("module_12266").MODE_8BIT_BYTE, data: global };

@@ -1,6 +1,3 @@
-// === Module 12738: ? ===
-
-// Module 12738
 let num = 0;
 let num2 = 0;
 let tmp2 = num;

@@ -1,6 +1,3 @@
-// === Module 4807: DataView ===
-
-// Module 4807 (DataView)
 import DataView from "_classCallCheck";
 import _createClass from "_createClass";
 

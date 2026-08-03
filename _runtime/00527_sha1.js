@@ -1,6 +1,3 @@
-// === Module 527: sha1 ===
-
-// Module 527 (sha1)
 arg5.default = function sha1(arg0) {
   let length;
   let tmp20;

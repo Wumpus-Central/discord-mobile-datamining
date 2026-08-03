@@ -1,6 +1,3 @@
-// === Module 6037: Node ===
-
-// Module 6037 (Node)
 class Node {
   constructor(arg0) {
     return;

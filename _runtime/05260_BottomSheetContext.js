@@ -1,6 +1,3 @@
-// === Module 5260: BottomSheetContext ===
-
-// Module 5260 (BottomSheetContext)
 
 export const BottomSheetContext = require("context").BottomSheetContext;
 export const BottomSheetProvider = require("context").BottomSheetProvider;

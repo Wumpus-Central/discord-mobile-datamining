@@ -1,6 +1,3 @@
-// === Module 13382: ? ===
-
-// Module 13382
 
 export default (arg0, arg1) => {
   try {

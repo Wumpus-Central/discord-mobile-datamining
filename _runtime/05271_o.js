@@ -1,6 +1,3 @@
-// === Module 5271: o ===
-
-// Module 5271 (o)
 const fn = function o() {
 
 };

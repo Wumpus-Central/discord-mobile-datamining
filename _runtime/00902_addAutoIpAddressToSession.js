@@ -1,6 +1,3 @@
-// === Module 902: addAutoIpAddressToSession ===
-
-// Module 902 (addAutoIpAddressToSession)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addAutoIpAddressToSession = function addAutoIpAddressToSession(attrs) {
   if ("aggregates" in attrs) {

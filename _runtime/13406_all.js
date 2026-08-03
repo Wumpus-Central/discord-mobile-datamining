@@ -1,6 +1,3 @@
-// === Module 13406: all ===
-
-// Module 13406 (all)
 
 export default (arg0) => {
   if (typeof arg0 === "ay") {

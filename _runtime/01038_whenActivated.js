@@ -1,6 +1,3 @@
-// === Module 1038: whenActivated ===
-
-// Module 1038 (whenActivated)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

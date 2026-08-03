@@ -1,6 +1,3 @@
-// === Module 276: MessageQueue ===
-
-// Module 276 (MessageQueue)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {

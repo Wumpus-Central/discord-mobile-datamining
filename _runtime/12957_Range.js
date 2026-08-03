@@ -1,6 +1,3 @@
-// === Module 12957: Range ===
-
-// Module 12957 (Range)
 
 export default (arg0, arg1) => {
   const tmp = new require(12954) /* Range */(arg0, arg1);

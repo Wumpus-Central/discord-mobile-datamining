@@ -1,6 +1,3 @@
-// === Module 5405: ScrollableContainer ===
-
-// Module 5405 (ScrollableContainer)
 import "noop";
 import { jsx } from "jsxProd";
 

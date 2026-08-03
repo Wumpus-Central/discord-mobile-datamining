@@ -1,6 +1,3 @@
-// === Module 13362: supportedValuesOf ===
-
-// Module 13362 (supportedValuesOf)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.supportedValuesOf = function supportedValuesOf(collation, locale) {

@@ -1,6 +1,3 @@
-// === Module 4490: ToPropertyDescriptor ===
-
-// Module 4490 (ToPropertyDescriptor)
 
 export default function ToPropertyDescriptor(enumerable) {
   if (require(4438) /* isObject */(enumerable)) {

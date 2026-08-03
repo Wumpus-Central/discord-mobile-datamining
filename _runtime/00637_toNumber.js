@@ -1,6 +1,3 @@
-// === Module 637: toNumber ===
-
-// Module 637 (toNumber)
 const re2 = /^[-+]0x[0-9a-f]+$/i;
 const re3 = /^0b[01]+$/i;
 const re4 = /^0o[0-7]+$/i;

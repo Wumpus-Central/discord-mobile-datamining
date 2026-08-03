@@ -1,6 +1,3 @@
-// === Module 1573: getRootStateForNavigate ===
-
-// Module 1573 (getRootStateForNavigate)
 import noop from "noop";
 
 const require = arg1;

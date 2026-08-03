@@ -1,6 +1,3 @@
-// === Module 290: Button ===
-
-// Module 290 (Button)
 import "noop";
 import { jsx } from "jsxProd";
 import _isNativeReflectConstruct from "_isNativeReflectConstruct";

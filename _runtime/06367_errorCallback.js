@@ -1,6 +1,3 @@
-// === Module 6367: errorCallback ===
-
-// Module 6367 (errorCallback)
 const require = arg1;
 const dependencyMap = arg6;
 function errorCallback() {

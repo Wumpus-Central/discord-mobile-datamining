@@ -1,6 +1,3 @@
-// === Module 464: get BatchedBridge ===
-
-// Module 464 (get BatchedBridge)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = function _default(arg0) {

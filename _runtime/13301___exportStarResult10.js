@@ -1,6 +1,3 @@
-// === Module 13301: __exportStarResult10 ===
-
-// Module 13301 (__exportStarResult10)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.IsWellFormedUnitIdentifier = function IsWellFormedUnitIdentifier(GetOptionResult3) {

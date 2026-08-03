@@ -1,6 +1,3 @@
-// === Module 6458: severityLevelFromString ===
-
-// Module 6458 (severityLevelFromString)
 arg5.severityLevelFromString = function severityLevelFromString(arg0) {
   let str = "warning";
   if ("warn" !== arg0) {

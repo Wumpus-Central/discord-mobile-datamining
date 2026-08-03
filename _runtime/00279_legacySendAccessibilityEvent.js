@@ -1,6 +1,3 @@
-// === Module 279: legacySendAccessibilityEvent ===
-
-// Module 279 (legacySendAccessibilityEvent)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function legacySendAccessibilityEvent(_nativeTag, arg1) {

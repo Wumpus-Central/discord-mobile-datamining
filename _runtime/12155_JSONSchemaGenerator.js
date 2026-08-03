@@ -1,6 +1,3 @@
-// === Module 12155: JSONSchemaGenerator ===
-
-// Module 12155 (JSONSchemaGenerator)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";

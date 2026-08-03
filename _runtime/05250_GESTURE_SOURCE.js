@@ -1,6 +1,3 @@
-// === Module 5250: GESTURE_SOURCE ===
-
-// Module 5250 (GESTURE_SOURCE)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { Easing } from "cancelAnimation";
 

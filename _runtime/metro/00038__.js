@@ -1,6 +1,3 @@
-// === Module 38: ? ===
-
-// Module 38
 
 export default (arg0, str) => {
   if (!arg0) {

@@ -1,6 +1,3 @@
-// === Module 4272: createFind ===
-
-// Module 4272 (createFind)
 
 export default function createFind(arg0) {
   let closure_0 = arg0;

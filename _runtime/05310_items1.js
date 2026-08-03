@@ -1,6 +1,3 @@
-// === Module 5310: items1 ===
-
-// Module 5310 (items1)
 const items = ["numberOfPointers", "direction"];
 const obj = { name: "FlingGestureHandler", allowedProps: null, config: null };
 const items1 = [...items];

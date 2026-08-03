@@ -1,6 +1,3 @@
-// === Module 3275: startOfUTCWeek ===
-
-// Module 3275 (startOfUTCWeek)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

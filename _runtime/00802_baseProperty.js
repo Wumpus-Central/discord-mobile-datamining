@@ -1,6 +1,3 @@
-// === Module 802: baseProperty ===
-
-// Module 802 (baseProperty)
 
 export default function baseProperty(arg0) {
   let closure_0 = arg0;

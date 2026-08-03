@@ -1,6 +1,3 @@
-// === Module 28: set ===
-
-// Module 28 (set)
 const module = arg2;
 const dependencyMap = arg6;
 const set = new Set();

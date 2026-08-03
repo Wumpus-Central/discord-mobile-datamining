@@ -1,6 +1,3 @@
-// === Module 5580: PanGestureHandler ===
-
-// Module 5580 (PanGestureHandler)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

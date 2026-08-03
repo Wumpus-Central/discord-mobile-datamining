@@ -1,6 +1,3 @@
-// === Module 16075: MessageFormat ===
-
-// Module 16075 (MessageFormat)
 import extend from "extend";
 import extend from "extend";
 import extend from "extend";

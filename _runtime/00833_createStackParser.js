@@ -1,6 +1,3 @@
-// === Module 833: createStackParser ===
-
-// Module 833 (createStackParser)
 function createStackParser() {
   let items = [...arguments];
   let closure_0;

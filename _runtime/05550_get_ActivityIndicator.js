@@ -1,6 +1,3 @@
-// === Module 5550: get ActivityIndicator ===
-
-// Module 5550 (get ActivityIndicator)
 const self = this;
 let self2 = this;
 if (this) {

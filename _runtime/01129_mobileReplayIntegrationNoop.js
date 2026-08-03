@@ -1,6 +1,3 @@
-// === Module 1129: mobileReplayIntegrationNoop ===
-
-// Module 1129 (mobileReplayIntegrationNoop)
 let require = arg1;
 let dependencyMap = arg6;
 let fn = this;

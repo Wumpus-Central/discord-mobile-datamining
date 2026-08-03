@@ -1,6 +1,3 @@
-// === Module 5290: gestureHandlerRootHOC ===
-
-// Module 5290 (gestureHandlerRootHOC)
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 1002: isHermesEnabled ===
-
-// Module 1002 (isHermesEnabled)
 import _slicedToArray from "_slicedToArray";
 import { Platform } from "get ActivityIndicator";
 

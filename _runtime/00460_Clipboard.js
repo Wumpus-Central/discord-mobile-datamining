@@ -1,6 +1,3 @@
-// === Module 460: Clipboard ===
-
-// Module 460 (Clipboard)
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {

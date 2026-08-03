@@ -1,6 +1,3 @@
-// === Module 3517: dateLongFormatter ===
-
-// Module 3517 (dateLongFormatter)
 function dateLongFormatter(arg0, arg1) {
 
 }

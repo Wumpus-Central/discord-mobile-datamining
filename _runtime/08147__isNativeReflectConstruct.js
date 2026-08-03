@@ -1,6 +1,3 @@
-// === Module 8147: _isNativeReflectConstruct ===
-
-// Module 8147 (_isNativeReflectConstruct)
 import _inherits from "_inherits";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";

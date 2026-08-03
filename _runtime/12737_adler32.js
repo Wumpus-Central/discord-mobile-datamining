@@ -1,6 +1,3 @@
-// === Module 12737: adler32 ===
-
-// Module 12737 (adler32)
 
 export default function adler32(arg0, arg1, arg2, arg3) {
   let diff;

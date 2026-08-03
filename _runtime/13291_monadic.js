@@ -1,6 +1,3 @@
-// === Module 13291: monadic ===
-
-// Module 13291 (monadic)
 function monadic(call, get, arg2, g_v) {
   let tmp2 = g_v;
   if (!tmp) {

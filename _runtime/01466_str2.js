@@ -1,6 +1,3 @@
-// === Module 1466: str2 ===
-
-// Module 1466 (str2)
 
 export default (arg0, arg1, arg2, arg3) => {
   let c0 = arg0;

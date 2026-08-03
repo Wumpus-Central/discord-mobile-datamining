@@ -1,6 +1,3 @@
-// === Module 1281: e ===
-
-// Module 1281 (e)
 let fn = (arg0) => {
   let fn = Object.setPrototypeOf;
   if (!fn) {

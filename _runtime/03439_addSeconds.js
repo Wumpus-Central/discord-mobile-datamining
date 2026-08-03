@@ -1,6 +1,3 @@
-// === Module 3439: addSeconds ===
-
-// Module 3439 (addSeconds)
 import toInteger from "toInteger";
 import addMilliseconds from "addMilliseconds";
 import requiredArgs from "requiredArgs";

@@ -1,6 +1,3 @@
-// === Module 3553: getWeek ===
-
-// Module 3553 (getWeek)
 import startOfWeek from "startOfWeek";
 import startOfWeekYear from "startOfWeekYear";
 import _typeof from "_typeof";

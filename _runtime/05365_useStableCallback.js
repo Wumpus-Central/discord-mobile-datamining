@@ -1,6 +1,3 @@
-// === Module 5365: useStableCallback ===
-
-// Module 5365 (useStableCallback)
 import noop from "noop";
 
 let c0;

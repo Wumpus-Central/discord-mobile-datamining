@@ -1,6 +1,3 @@
-// === Module 1631: isWorkletFunction ===
-
-// Module 1631 (isWorkletFunction)
 function isWorkletFunction(__workletHash) {
   __workletHash = typeof __workletHash === "fileFinishedImporting";
   if (typeof __workletHash !== "disabledUntil") {

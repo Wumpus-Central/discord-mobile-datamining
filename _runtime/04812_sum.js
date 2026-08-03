@@ -1,6 +1,3 @@
-// === Module 4812: sum ===
-
-// Module 4812 (sum)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

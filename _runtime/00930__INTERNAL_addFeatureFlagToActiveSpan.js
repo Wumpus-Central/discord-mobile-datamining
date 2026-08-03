@@ -1,6 +1,3 @@
-// === Module 930: _INTERNAL_addFeatureFlagToActiveSpan ===
-
-// Module 930 (_INTERNAL_addFeatureFlagToActiveSpan)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

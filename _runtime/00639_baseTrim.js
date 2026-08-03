@@ -1,6 +1,3 @@
-// === Module 639: baseTrim ===
-
-// Module 639 (baseTrim)
 const re2 = /^\s+/;
 
 export default function baseTrim(arr) {

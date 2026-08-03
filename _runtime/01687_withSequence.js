@@ -1,6 +1,3 @@
-// === Module 1687: withSequence ===
-
-// Module 1687 (withSequence)
 const require = arg1;
 let dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_sequenceTs2(){const{getReduceMotionForAnimation,reduceMotion}=this.__closure;return{onStart:function(animation,value){return animation.current=value;},onFrame:function(){return true;},current:0,animationIndex:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };

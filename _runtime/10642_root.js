@@ -1,6 +1,3 @@
-// === Module 10642: root ===
-
-// Module 10642 (root)
 let fn = () => {
   let _exports;
   let _exports2;

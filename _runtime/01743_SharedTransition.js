@@ -1,6 +1,3 @@
-// === Module 1743: SharedTransition ===
-
-// Module 1743 (SharedTransition)
 import _classCallCheck from "_classCallCheck";
 
 const SharedTransition = global;

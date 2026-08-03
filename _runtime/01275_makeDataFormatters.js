@@ -1,6 +1,3 @@
-// === Module 1275: makeDataFormatters ===
-
-// Module 1275 (makeDataFormatters)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.makeDataFormatters = function makeDataFormatters(items, formatConfig, _forceLookupMatcher) {

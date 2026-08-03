@@ -1,6 +1,3 @@
-// === Module 183: _callTimer ===
-
-// Module 183 (_callTimer)
 let require = arg1;
 function _callTimer(arg0, arg1) {
   const _global = arg1;

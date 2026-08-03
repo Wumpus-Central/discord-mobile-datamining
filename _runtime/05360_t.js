@@ -1,6 +1,3 @@
-// === Module 5360: t ===
-
-// Module 5360 (t)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const Platform = get_ActivityIndicator.Platform;

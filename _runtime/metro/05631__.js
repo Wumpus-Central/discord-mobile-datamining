@@ -1,6 +1,3 @@
-// === Module 5631: ? ===
-
-// Module 5631
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

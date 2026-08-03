@@ -1,6 +1,3 @@
-// === Module 5337: _isNativeReflectConstruct ===
-
-// Module 5337 (_isNativeReflectConstruct)
 import ManualGesture from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

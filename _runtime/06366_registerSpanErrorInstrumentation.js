@@ -1,6 +1,3 @@
-// === Module 6366: registerSpanErrorInstrumentation ===
-
-// Module 6366 (registerSpanErrorInstrumentation)
 
 export const registerSpanErrorInstrumentation = require("errorCallback").registerSpanErrorInstrumentation;
 export const getCapturedScopesOnSpan = require("getCapturedScopesOnSpan").getCapturedScopesOnSpan;

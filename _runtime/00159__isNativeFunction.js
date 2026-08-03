@@ -1,6 +1,3 @@
-// === Module 159: _isNativeFunction ===
-
-// Module 159 (_isNativeFunction)
 
 export default function _isNativeFunction(arg0) {
   try {

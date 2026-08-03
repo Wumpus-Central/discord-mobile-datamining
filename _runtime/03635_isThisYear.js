@@ -1,6 +1,3 @@
-// === Module 3635: isThisYear ===
-
-// Module 3635 (isThisYear)
 import isSameYear from "isSameYear";
 import requiredArgs from "requiredArgs";
 

@@ -1,6 +1,3 @@
-// === Module 1720: updateLayoutAnimations ===
-
-// Module 1720 (updateLayoutAnimations)
 import isJest from "isJest";
 
 let closure_0 = require;

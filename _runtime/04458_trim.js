@@ -1,6 +1,3 @@
-// === Module 4458: trim ===
-
-// Module 4458 (trim)
 import callBind from "callBind";
 import defineProperty from "defineProperty";
 

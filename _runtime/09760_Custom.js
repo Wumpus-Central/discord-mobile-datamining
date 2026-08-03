@@ -1,6 +1,3 @@
-// === Module 9760: Custom ===
-
-// Module 9760 (Custom)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

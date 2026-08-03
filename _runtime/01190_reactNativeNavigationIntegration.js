@@ -1,6 +1,3 @@
-// === Module 1190: reactNativeNavigationIntegration ===
-
-// Module 1190 (reactNativeNavigationIntegration)
 const self = this;
 const require = arg1;
 let dependencyMap = arg6;

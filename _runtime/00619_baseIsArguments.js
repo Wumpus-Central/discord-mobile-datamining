@@ -1,6 +1,3 @@
-// === Module 619: baseIsArguments ===
-
-// Module 619 (baseIsArguments)
 
 export default function baseIsArguments(arg0) {
   let tmp3 = require(620) /* isObjectLike */(arg0);

@@ -1,6 +1,3 @@
-// === Module 16111: CanonicalizeLocaleList ===
-
-// Module 16111 (CanonicalizeLocaleList)
 let require = arg1;
 const dependencyMap = arg6;
 function CanonicalizeLocaleList(arg0) {

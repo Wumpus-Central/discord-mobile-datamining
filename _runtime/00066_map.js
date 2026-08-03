@@ -1,6 +1,3 @@
-// === Module 66: map ===
-
-// Module 66 (map)
 const module = arg2;
 const dependencyMap = arg6;
 let obj = {};

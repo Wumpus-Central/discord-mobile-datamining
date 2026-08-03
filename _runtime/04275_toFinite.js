@@ -1,6 +1,3 @@
-// === Module 4275: toFinite ===
-
-// Module 4275 (toFinite)
 
 export default function toFinite(arg0) {
   if (arg0) {

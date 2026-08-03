@@ -1,6 +1,3 @@
-// === Module 12264: QRCode ===
-
-// Module 12264 (QRCode)
 class QRCode {
   constructor(arg0, arg1) {
     return;

@@ -1,6 +1,3 @@
-// === Module 4073: print ===
-
-// Module 4073 (print)
 let c0 = false;
 const BooleanResult = Boolean(false);
 function print() {

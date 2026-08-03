@@ -1,6 +1,3 @@
-// === Module 995: flushWithTimeout ===
-
-// Module 995 (flushWithTimeout)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function flushWithTimeout(arg0) {

@@ -1,6 +1,3 @@
-// === Module 1574: useScrollToTop ===
-
-// Module 1574 (useScrollToTop)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 3712: subYears ===
-
-// Module 3712 (subYears)
 import toInteger from "toInteger";
 import addYears from "addYears";
 import requiredArgs from "requiredArgs";

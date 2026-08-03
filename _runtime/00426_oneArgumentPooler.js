@@ -1,6 +1,3 @@
-// === Module 426: oneArgumentPooler ===
-
-// Module 426 (oneArgumentPooler)
 const module = arg2;
 const dependencyMap = arg6;
 function oneArgumentPooler(arg0) {

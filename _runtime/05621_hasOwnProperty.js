@@ -1,6 +1,3 @@
-// === Module 5621: hasOwnProperty ===
-
-// Module 5621 (hasOwnProperty)
 let obj = Object.create(null);
 for (const key10013 in require("keys")) {
   let tmp3 = key10013;

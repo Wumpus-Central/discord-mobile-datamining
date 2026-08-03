@@ -1,6 +1,3 @@
-// === Module 3769: prop ===
-
-// Module 3769 (prop)
 if (Intl.ListFormat) {
   const _Intl = Intl;
   if (typeof Intl.ListFormat.__addLocaleData === "fileFinishedImporting") {

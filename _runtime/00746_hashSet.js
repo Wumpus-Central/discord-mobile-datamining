@@ -1,6 +1,3 @@
-// === Module 746: hashSet ===
-
-// Module 746 (hashSet)
 
 export default function hashSet(arg0, arg1) {
   let __data__;

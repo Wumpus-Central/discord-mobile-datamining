@@ -1,6 +1,3 @@
-// === Module 5279: onGestureHandlerEvent ===
-
-// Module 5279 (onGestureHandlerEvent)
 import { DeviceEventEmitter } from "get ActivityIndicator";
 
 function onGestureHandlerEvent(handlerTag) {

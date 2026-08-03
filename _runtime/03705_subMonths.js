@@ -1,6 +1,3 @@
-// === Module 3705: subMonths ===
-
-// Module 3705 (subMonths)
 import toInteger from "toInteger";
 import addMonths from "addMonths";
 import requiredArgs from "requiredArgs";

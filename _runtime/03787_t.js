@@ -1,6 +1,3 @@
-// === Module 3787: t ===
-
-// Module 3787 (t)
 let split;
 let split2;
 if (typeof exports !== "window") {

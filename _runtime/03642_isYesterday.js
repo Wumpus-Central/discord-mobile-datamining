@@ -1,6 +1,3 @@
-// === Module 3642: isYesterday ===
-
-// Module 3642 (isYesterday)
 import isSameDay from "isSameDay";
 import subDays from "subDays";
 import requiredArgs from "requiredArgs";

@@ -1,6 +1,3 @@
-// === Module 3949: _fromURL ===
-
-// Module 3949 (_fromURL)
 import _fromFileURL from "asyncGeneratorStep";
 import { Image as _fromResource } from "get ActivityIndicator";
 import { NitroModules } from "module_3925";

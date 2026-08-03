@@ -1,6 +1,3 @@
-// === Module 268: MutationObserver ===
-
-// Module 268 (MutationObserver)
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

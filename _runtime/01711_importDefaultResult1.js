@@ -1,6 +1,3 @@
-// === Module 1711: importDefaultResult1 ===
-
-// Module 1711 (importDefaultResult1)
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import _classPrivateFieldBase from "_classPrivateFieldBase";

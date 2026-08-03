@@ -1,6 +1,3 @@
-// === Module 9122: StyleSheet ===
-
-// Module 9122 (StyleSheet)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

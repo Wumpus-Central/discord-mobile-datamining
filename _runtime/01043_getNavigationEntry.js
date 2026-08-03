@@ -1,6 +1,3 @@
-// === Module 1043: getNavigationEntry ===
-
-// Module 1043 (getNavigationEntry)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

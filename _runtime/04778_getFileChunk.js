@@ -1,6 +1,3 @@
-// === Module 4778: getFileChunk ===
-
-// Module 4778 (getFileChunk)
 arg5.getFileChunk = undefined;
 arg5.fetchFromObject = undefined;
 arg5.findMatroskaDocTypeElements = undefined;

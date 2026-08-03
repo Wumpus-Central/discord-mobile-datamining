@@ -1,6 +1,3 @@
-// === Module 6242: useLazyValue ===
-
-// Module 6242 (useLazyValue)
 import { useRef } from "noop";
 
 let closure_1 = {};

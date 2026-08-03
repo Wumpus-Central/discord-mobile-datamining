@@ -1,6 +1,3 @@
-// === Module 12649: _extends ===
-
-// Module 12649 (_extends)
 function _extends() {
   if (Object.assign) {
     const _Object = Object;

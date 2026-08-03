@@ -1,6 +1,3 @@
-// === Module 1726: _isNativeReflectConstruct ===
-
-// Module 1726 (_isNativeReflectConstruct)
 import FlipOutEasyY from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

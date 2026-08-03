@@ -1,6 +1,3 @@
-// === Module 8894: _crypto ===
-
-// Module 8894 (_crypto)
 arg5.crypto = undefined;
 let _crypto;
 if (typeof globalThis !== "window") {

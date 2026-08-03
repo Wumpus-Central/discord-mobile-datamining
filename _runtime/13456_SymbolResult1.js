@@ -1,6 +1,3 @@
-// === Module 13456: SymbolResult1 ===
-
-// Module 13456 (SymbolResult1)
 const SymbolResult = Symbol("wrapper");
 let c0 = SymbolResult;
 const SymbolResult1 = Symbol("impl");

@@ -1,6 +1,3 @@
-// === Module 1119: getDebugMetadata ===
-
-// Module 1119 (getDebugMetadata)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getDebugMetadata = function getDebugMetadata() {

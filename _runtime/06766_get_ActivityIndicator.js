@@ -1,6 +1,3 @@
-// === Module 6766: get ActivityIndicator ===
-
-// Module 6766 (get ActivityIndicator)
 import { StyleSheet } from "get ActivityIndicator";
 
 

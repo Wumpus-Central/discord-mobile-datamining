@@ -1,6 +1,3 @@
-// === Module 5813: tinycolor ===
-
-// Module 5813 (tinycolor)
 let round;
 let min;
 let max;

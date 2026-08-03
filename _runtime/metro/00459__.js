@@ -1,6 +1,3 @@
-// === Module 459: ? ===
-
-// Module 459
 arg5.default = function _default() {
   const items = [...arguments];
   if (1 === items.length) {

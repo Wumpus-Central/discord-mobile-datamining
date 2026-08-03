@@ -1,6 +1,3 @@
-// === Module 1693: findDescendantWithExitingAnimation ===
-
-// Module 1693 (findDescendantWithExitingAnimation)
 const require = arg1;
 let dependencyMap = arg6;
 function findDescendantWithExitingAnimation(isDummy, appendChild) {

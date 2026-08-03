@@ -1,6 +1,3 @@
-// === Module 1722: ? ===
-
-// Module 1722
 import startObservingProgress from "startObservingProgress";
 
 for (const key10015 in require("BaseAnimationBuilder")) {

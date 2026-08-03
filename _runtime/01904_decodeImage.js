@@ -1,6 +1,3 @@
-// === Module 1904: decodeImage ===
-
-// Module 1904 (decodeImage)
 let c0;
 let c1;
 let c2;

@@ -1,6 +1,3 @@
-// === Module 4823: ? ===
-
-// Module 4823
 const module = arg2;
 const dependencyMap = arg6;
 let obj = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8, 13: 4 };

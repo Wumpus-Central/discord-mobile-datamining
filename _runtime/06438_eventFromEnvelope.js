@@ -1,6 +1,3 @@
-// === Module 6438: eventFromEnvelope ===
-
-// Module 6438 (eventFromEnvelope)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function eventFromEnvelope(arg0, arg1) {

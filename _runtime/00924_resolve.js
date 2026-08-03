@@ -1,6 +1,3 @@
-// === Module 924: resolve ===
-
-// Module 924 (resolve)
 function resolve() {
   let tmp17;
   const items = [...arguments];

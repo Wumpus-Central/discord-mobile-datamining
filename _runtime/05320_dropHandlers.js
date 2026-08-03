@@ -1,6 +1,3 @@
-// === Module 5320: dropHandlers ===
-
-// Module 5320 (dropHandlers)
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;

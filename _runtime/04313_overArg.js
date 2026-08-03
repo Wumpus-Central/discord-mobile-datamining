@@ -1,6 +1,3 @@
-// === Module 4313: overArg ===
-
-// Module 4313 (overArg)
 import overArg from "overArg";
 
 

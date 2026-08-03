@@ -1,6 +1,3 @@
-// === Module 5471: isComponentClass ===
-
-// Module 5471 (isComponentClass)
 import noop from "noop";
 
 

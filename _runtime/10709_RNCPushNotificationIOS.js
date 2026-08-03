@@ -1,6 +1,3 @@
-// === Module 10709: RNCPushNotificationIOS ===
-
-// Module 10709 (RNCPushNotificationIOS)
 import _classCallCheck from "_classCallCheck";
 import get_ActivityIndicator from "get ActivityIndicator";
 

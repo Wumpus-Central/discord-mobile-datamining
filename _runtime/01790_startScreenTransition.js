@@ -1,6 +1,3 @@
-// === Module 1790: startScreenTransition ===
-
-// Module 1790 (startScreenTransition)
 import configureProps from "configureProps";
 
 configureProps = configureProps.configureProps();

@@ -1,6 +1,3 @@
-// === Module 255: get hairlineWidth ===
-
-// Module 255 (get hairlineWidth)
 const require = arg1;
 let obj = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0 };
 obj = {};

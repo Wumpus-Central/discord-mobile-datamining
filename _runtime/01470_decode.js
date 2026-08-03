@@ -1,6 +1,3 @@
-// === Module 1470: decode ===
-
-// Module 1470 (decode)
 function decode(arr) {
   let tmp67;
   let num = arr.lastIndexOf("-");

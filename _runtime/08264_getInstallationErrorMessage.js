@@ -1,6 +1,3 @@
-// === Module 8264: getInstallationErrorMessage ===
-
-// Module 8264 (getInstallationErrorMessage)
 import { Platform } from "get ActivityIndicator";
 
 let obj = { ios: null, android: null };

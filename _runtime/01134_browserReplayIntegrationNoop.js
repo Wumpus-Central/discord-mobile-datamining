@@ -1,6 +1,3 @@
-// === Module 1134: browserReplayIntegrationNoop ===
-
-// Module 1134 (browserReplayIntegrationNoop)
 const require = arg1;
 const dependencyMap = arg6;
 function browserReplayIntegrationNoop() {

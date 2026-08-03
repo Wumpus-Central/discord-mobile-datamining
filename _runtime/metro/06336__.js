@@ -1,6 +1,3 @@
-// === Module 6336: ? ===
-
-// Module 6336
 for (const key10013 in require("NativeModules")) {
   let tmp2 = key10013;
   arg5[key10013] = require("NativeModules")[key10013];

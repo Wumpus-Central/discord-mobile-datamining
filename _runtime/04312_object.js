@@ -1,6 +1,3 @@
-// === Module 4312: object ===
-
-// Module 4312 (object)
 let object = require;
 object = function object() {
 

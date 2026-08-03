@@ -1,6 +1,3 @@
-// === Module 1127: getExpoUpdatesContext ===
-
-// Module 1127 (getExpoUpdatesContext)
 const require = arg1;
 const dependencyMap = arg6;
 function getExpoUpdatesContext() {

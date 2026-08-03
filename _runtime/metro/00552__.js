@@ -1,6 +1,3 @@
-// === Module 552: ? ===
-
-// Module 552
 import apply from "apply";
 
 if (apply) {

@@ -1,6 +1,3 @@
-// === Module 5426: _objectWithoutProperties ===
-
-// Module 5426 (_objectWithoutProperties)
 
 export default function _objectWithoutProperties(arg0, arr) {
   if (null == arg0) {

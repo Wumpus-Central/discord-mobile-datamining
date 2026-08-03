@@ -1,6 +1,3 @@
-// === Module 5458: _isNativeReflectConstruct ===
-
-// Module 5458 (_isNativeReflectConstruct)
 import RVGridLayoutManagerImpl from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

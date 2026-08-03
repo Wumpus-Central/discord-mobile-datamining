@@ -1,6 +1,3 @@
-// === Module 398: get FlatList ===
-
-// Module 398 (get FlatList)
 const require = arg1;
 if (require("get Version").isDisableAnimations) {
   let importDefaultResult = require("mockCompositeAnimation");

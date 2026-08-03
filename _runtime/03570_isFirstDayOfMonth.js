@@ -1,6 +1,3 @@
-// === Module 3570: isFirstDayOfMonth ===
-
-// Module 3570 (isFirstDayOfMonth)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

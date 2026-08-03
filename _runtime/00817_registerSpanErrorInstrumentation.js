@@ -1,6 +1,3 @@
-// === Module 817: registerSpanErrorInstrumentation ===
-
-// Module 817 (registerSpanErrorInstrumentation)
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const registerSpanErrorInstrumentation = require("registerSpanErrorInstrumentation").registerSpanErrorInstrumentation;

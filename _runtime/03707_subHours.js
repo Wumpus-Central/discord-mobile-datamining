@@ -1,6 +1,3 @@
-// === Module 3707: subHours ===
-
-// Module 3707 (subHours)
 import addHours from "addHours";
 import requiredArgs from "requiredArgs";
 import toInteger from "toInteger";

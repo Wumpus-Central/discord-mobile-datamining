@@ -1,6 +1,3 @@
-// === Module 3616: isPast ===
-
-// Module 3616 (isPast)
 import _typeof from "_typeof";
 import requiredArgs from "requiredArgs";
 

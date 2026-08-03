@@ -1,6 +1,3 @@
-// === Module 423: InternalTextInput ===
-
-// Module 423 (InternalTextInput)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import closure_8 from "noop";

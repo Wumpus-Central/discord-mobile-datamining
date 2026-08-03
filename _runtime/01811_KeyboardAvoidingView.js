@@ -1,6 +1,3 @@
-// === Module 1811: KeyboardAvoidingView ===
-
-// Module 1811 (KeyboardAvoidingView)
 
 export const KeyboardAvoidingView = require("forwardRef");
 export const KeyboardStickyView = require("forwardRef");

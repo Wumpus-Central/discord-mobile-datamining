@@ -1,6 +1,3 @@
-// === Module 4787: AudioTypes ===
-
-// Module 4787 (AudioTypes)
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
 

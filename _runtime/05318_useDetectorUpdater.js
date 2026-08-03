@@ -1,6 +1,3 @@
-// === Module 5318: useDetectorUpdater ===
-
-// Module 5318 (useDetectorUpdater)
 require("noop").useCallback;
 
 export const useDetectorUpdater = function useDetectorUpdater(current, current2, arg2, gesture, webEventHandlers) {

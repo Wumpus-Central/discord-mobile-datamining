@@ -1,6 +1,3 @@
-// === Module 4543: isNativePlatformSupported ===
-
-// Module 4543 (isNativePlatformSupported)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let Platform;

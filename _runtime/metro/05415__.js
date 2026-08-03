@@ -1,6 +1,3 @@
-// === Module 5415: ? ===
-
-// Module 5415
 import isNewArch from "isNewArch";
 
 if (isNewArch.isNewArch()) {

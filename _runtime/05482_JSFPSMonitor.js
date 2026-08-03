@@ -1,6 +1,3 @@
-// === Module 5482: JSFPSMonitor ===
-
-// Module 5482 (JSFPSMonitor)
 import _classCallCheck from "_classCallCheck";
 
 const JSFPSMonitor = arg1;

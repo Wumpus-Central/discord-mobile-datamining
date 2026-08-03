@@ -1,6 +1,3 @@
-// === Module 6706: isIterateeCall ===
-
-// Module 6706 (isIterateeCall)
 
 export default function isIterateeCall(arg0, arg1, arg2) {
   if (require(606) /* isObject */(arg2)) {

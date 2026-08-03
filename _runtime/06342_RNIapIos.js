@@ -1,6 +1,3 @@
-// === Module 6342: RNIapIos ===
-
-// Module 6342 (RNIapIos)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let NativeModules;

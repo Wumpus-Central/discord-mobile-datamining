@@ -1,6 +1,3 @@
-// === Module 1060: onHidden ===
-
-// Module 1060 (onHidden)
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

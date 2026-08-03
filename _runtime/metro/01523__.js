@@ -1,6 +1,3 @@
-// === Module 1523: ? ===
-
-// Module 1523
 
 export default (arg0, arr) => {
   const obj = {};

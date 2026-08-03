@@ -1,6 +1,3 @@
-// === Module 1757: o ===
-
-// Module 1757 (o)
 const require = arg1;
 const dependencyMap = arg6;
 const fn = function o(str) {

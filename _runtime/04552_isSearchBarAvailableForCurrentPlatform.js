@@ -1,6 +1,3 @@
-// === Module 4552: isSearchBarAvailableForCurrentPlatform ===
-
-// Module 4552 (isSearchBarAvailableForCurrentPlatform)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let Platform;

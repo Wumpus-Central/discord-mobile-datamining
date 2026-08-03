@@ -1,6 +1,3 @@
-// === Module 1388: PseudoMap ===
-
-// Module 1388 (PseudoMap)
 class PseudoMap {
   constructor(arg0) {
     self = this;

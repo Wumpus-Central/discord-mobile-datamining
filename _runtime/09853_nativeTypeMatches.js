@@ -1,6 +1,3 @@
-// === Module 9853: nativeTypeMatches ===
-
-// Module 9853 (nativeTypeMatches)
 function nativeTypeMatches(arg0, arg1) {
 
 }

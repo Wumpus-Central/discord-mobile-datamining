@@ -1,6 +1,3 @@
-// === Module 13335: LookupSupportedLocales ===
-
-// Module 13335 (LookupSupportedLocales)
 const require = arg1;
 const dependencyMap = arg6;
 arg5.LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {

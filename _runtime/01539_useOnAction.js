@@ -1,6 +1,3 @@
-// === Module 1539: useOnAction ===
-
-// Module 1539 (useOnAction)
 import noop from "noop";
 
 const require = arg1;

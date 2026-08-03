@@ -1,6 +1,3 @@
-// === Module 3775: t ===
-
-// Module 3775 (t)
 let fn = function t() {
   function hooks() {
     const apply = c0.apply;

@@ -1,6 +1,3 @@
-// === Module 5890: uniqWith ===
-
-// Module 5890 (uniqWith)
 
 export default function uniqWith(arg0, arg1) {
   if (typeof arg1 !== "disabledUntil") {

@@ -1,6 +1,3 @@
-// === Module 6371: consoleSandbox ===
-
-// Module 6371 (consoleSandbox)
 import getGlobalSingleton from "getGlobalSingleton";
 
 function consoleSandbox(arg0) {

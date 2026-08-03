@@ -1,6 +1,3 @@
-// === Module 5177: initialWindowMetrics ===
-
-// Module 5177 (initialWindowMetrics)
 import "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
