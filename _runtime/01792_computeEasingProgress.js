@@ -40,7 +40,7 @@ function maybeScheduleNextFrame(scrollAnimation, arg1, onFinishAnimation, transl
       onFinishAnimation();
     }
   } else {
-    if (typeof computeProgress !== "error") {
+    if (typeof computeProgress !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const screenDimensions = onFinishAnimation.screenDimensions;
@@ -112,7 +112,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
     function computeFrame() {
       const point = point3;
       const x = point3.x;
-      if (typeof screenDimensions !== "error") {
+      if (typeof screenDimensions !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let num = 1;
@@ -120,7 +120,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         num = point4.x * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / x;
       }
       const y = point.y;
-      if (typeof screenDimensions !== "error") {
+      if (typeof screenDimensions !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let num3 = 1;
@@ -128,12 +128,12 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         num3 = point4.y * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / y;
       }
       const result = closure_7 * point.x;
-      if (typeof closure_4 !== "error") {
+      if (typeof closure_4 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       value.translationX = point.x - result * (1 - Math.pow(1 - num, 5));
       const result1 = signResult1 * point.y;
-      if (typeof closure_4 !== "error") {
+      if (typeof closure_4 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       value.translationY = point.y - result1 * (1 - Math.pow(1 - num3, 5));
@@ -173,7 +173,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         const result2 = tmp15(tmp16[1]).applyStyleForBelowTopScreen(tmp17, tmp4);
         const tmp15Result = tmp15(tmp16[1]);
       }
-      if (typeof point !== "error") {
+      if (typeof point !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       if (y2) {
@@ -182,7 +182,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
           onFinishAnimation();
         }
       } else {
-        if (typeof isTransitionCanceled !== "error") {
+        if (typeof isTransitionCanceled !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         screenDimensions = tmp17.screenDimensions;
@@ -206,7 +206,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
     function _computeFrame() {
       const point = point3;
       const x = point3.x;
-      if (typeof screenDimensions !== "error") {
+      if (typeof screenDimensions !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let num = 1;
@@ -214,7 +214,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         num = point4.x * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / x;
       }
       const y = point.y;
-      if (typeof screenDimensions !== "error") {
+      if (typeof screenDimensions !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let num3 = 1;
@@ -222,12 +222,12 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         num3 = point4.y * ((globalThis._getAnimationTimestamp() - tmp2) / 1000) / y;
       }
       const result = closure_7 * point.x;
-      if (typeof closure_4 !== "error") {
+      if (typeof closure_4 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       value.translationX = point.x + result * (1 - Math.pow(1 - num, 5));
       const result1 = signResult1 * point.y;
-      if (typeof closure_4 !== "error") {
+      if (typeof closure_4 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       value.translationY = point.y + result1 * (1 - Math.pow(1 - num3, 5));
@@ -260,7 +260,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       if (!y2) {
         y2 = closure_10.y;
       }
-      if (typeof point !== "error") {
+      if (typeof point !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       if (y2) {
@@ -269,7 +269,7 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
           onFinishAnimation();
         }
       } else {
-        if (typeof isTransitionCanceled !== "error") {
+        if (typeof isTransitionCanceled !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         screenDimensions = tmp20.screenDimensions;

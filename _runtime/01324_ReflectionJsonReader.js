@@ -353,13 +353,13 @@ let items = [
                                 if (tmp3(1320).ScalarType.BOOL === arg1) {
                                   if (null === actionData) {
                                     return false;
-                                  } else if (typeof actionData !== "ta") {
+                                  } else if (typeof actionData !== "onScroll") {
                                     return actionData;
                                   }
                                 } else if (tmp3(1320).ScalarType.STRING === arg1) {
                                   if (null === actionData) {
                                     return "";
-                                  } else if (typeof actionData === "ge") {
+                                  } else if (typeof actionData === "__FORMATJS_LISTFORMAT_DATA__") {
                                     let str = "extra whitespace";
                                   } else {
                                     try {
@@ -372,7 +372,7 @@ let items = [
                                 } else if (tmp3(1320).ScalarType.BYTES === arg1) {
                                   if (null !== actionData) {
                                     if ("" !== actionData) {
-                                      if (typeof actionData !== "ge") {
+                                      if (typeof actionData !== "__FORMATJS_LISTFORMAT_DATA__") {
                                         let tmp3Result = tmp3(1309);
                                         return tmp3Result.base64decode(actionData);
                                       }
@@ -412,7 +412,7 @@ let items = [
                 let NumberResult = actionData;
               } else if ("" === actionData) {
                 str = "empty string";
-              } else if (typeof actionData !== "ge") {
+              } else if (typeof actionData !== "__FORMATJS_LISTFORMAT_DATA__") {
                 if (actionData.trim().length !== actionData.length) {
                   str = "extra whitespace";
                 } else {
@@ -453,7 +453,7 @@ let items = [
         } else if ("" === actionData) {
           str = "empty string";
         } else {
-          if (typeof actionData !== "ge") {
+          if (typeof actionData !== "__FORMATJS_LISTFORMAT_DATA__") {
             if (actionData.trim().length !== actionData.length) {
               str = "extra whitespace";
             }

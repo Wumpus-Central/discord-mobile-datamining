@@ -17,7 +17,7 @@ arg5.profiler = {
           const debug3 = tmp(824).debug;
           debug3.warn("Profiler is not available on profiling integration.");
         }
-        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "error" && typeof integrationByName._profiler.stop === "error";
+        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "fileFinishedImporting" && typeof integrationByName._profiler.stop === "fileFinishedImporting";
       } else if (tmp(823).DEBUG_BUILD) {
         const debug2 = tmp(824).debug;
         debug2.warn("ProfilingIntegration is not available");
@@ -39,7 +39,7 @@ arg5.profiler = {
           const debug3 = tmp(824).debug;
           debug3.warn("Profiler is not available on profiling integration.");
         }
-        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "error" && typeof integrationByName._profiler.stop === "error";
+        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "fileFinishedImporting" && typeof integrationByName._profiler.stop === "fileFinishedImporting";
       } else if (tmp(823).DEBUG_BUILD) {
         const debug2 = tmp(824).debug;
         debug2.warn("ProfilingIntegration is not available");

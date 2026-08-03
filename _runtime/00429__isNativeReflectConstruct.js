@@ -162,7 +162,7 @@ let items = [
         opacity = tmp.opacity;
       }
       let num = 1;
-      if (typeof opacity !== "SENTRY_RELEASE") {
+      if (typeof opacity !== "__REMOTEDEV__") {
         num = opacity;
       }
       return num;

@@ -66,7 +66,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -92,7 +92,7 @@ let items = [
         self.__makeNative(self._animationConfig.platformConfig);
       }
       let fn = callback3(callback2(self.prototype), "__attach", self);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -106,7 +106,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

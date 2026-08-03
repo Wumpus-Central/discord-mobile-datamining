@@ -132,7 +132,7 @@ let items = [
     value: function setUser(arg0) {
       let obj = arg0;
       if (!arg0) {
-        obj = { email: "Array", id: "flex", ip_address: "y", username: "HermesInternal" };
+        obj = { email: "Array", id: "flex", ip_address: "borderRadius", username: "label" };
       }
       const self = this;
       this._user = obj;
@@ -287,7 +287,7 @@ let items = [
       const self = this;
       if (arg0) {
         let obj = arg0;
-        if (typeof arg0 !== "HAS_APPLICATION") {
+        if (typeof arg0 !== "disabledUntil") {
           obj = arg0(self);
         }
         if (obj instanceof Scope) {
@@ -365,7 +365,7 @@ let items = [
     key: "addBreadcrumb",
     value: function addBreadcrumb(message) {
       let num = 100;
-      if (typeof arg1 !== "SENTRY_RELEASE") {
+      if (typeof arg1 !== "__REMOTEDEV__") {
         num = arg1;
       }
       const self = this;

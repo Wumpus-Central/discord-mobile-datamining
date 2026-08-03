@@ -158,7 +158,7 @@ let items = [
     value: function close() {
       const self = this;
       let fn = callback3(callback2(self.prototype), "close", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       return fn([]).then((arg0) => {
@@ -220,7 +220,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "init", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -232,7 +232,7 @@ let items = [
     value: function on(arg0, arg1) {
       const self = this;
       let fn = callback3(callback2(self.prototype), "on", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0, arg1];
@@ -246,7 +246,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "emit", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0, ...substr];

@@ -3,7 +3,7 @@
 // Module 635 (throttle)
 
 export default function throttle(arg0, arg1, leading) {
-  if (typeof arg0 === "HAS_APPLICATION") {
+  if (typeof arg0 === "disabledUntil") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");
     throw typeError;

@@ -124,7 +124,7 @@ let items = [
         const items = [...arguments];
         function traverse(setValue, arg1) {
           if (setValue instanceof traverse(outer1_2[2])) {
-            if (typeof arg1 !== "SENTRY_RELEASE") {
+            if (typeof arg1 !== "__REMOTEDEV__") {
               setValue.setValue(arg1);
             }
           } else if (setValue instanceof traverse(outer1_2[3])) {
@@ -145,7 +145,7 @@ let items = [
         const item = _argMapping.forEach((setValue) => {
           const point = items[arg1];
           if (setValue instanceof traverse(outer1_2[2])) {
-            if (typeof point !== "SENTRY_RELEASE") {
+            if (typeof point !== "__REMOTEDEV__") {
               setValue.setValue(point);
             }
           } else if (setValue instanceof tmp2(tmp3[3])) {
@@ -153,7 +153,7 @@ let items = [
               const x = setValue.x;
               const x2 = point.x;
               if (x instanceof tmp2(tmp3[2])) {
-                if (typeof x2 !== "SENTRY_RELEASE") {
+                if (typeof x2 !== "__REMOTEDEV__") {
                   x.setValue(x2);
                 }
               } else if (x instanceof tmp2(tmp3[3])) {
@@ -172,7 +172,7 @@ let items = [
               const y = setValue.y;
               const y2 = point.y;
               if (y instanceof traverse(outer1_2[2])) {
-                if (typeof y2 !== "SENTRY_RELEASE") {
+                if (typeof y2 !== "__REMOTEDEV__") {
                   y.setValue(y2);
                 }
               } else if (y instanceof tmp5(tmp6[3])) {
@@ -199,7 +199,7 @@ let items = [
               let tmp9 = traverse;
               let tmp10 = outer1_2;
               if (point2 instanceof traverse(outer1_2[2])) {
-                if (typeof point3 === "SENTRY_RELEASE") {
+                if (typeof point3 === "__REMOTEDEV__") {
                   continue;
                 } else {
                   let setValueResult3 = point2.setValue(point3);

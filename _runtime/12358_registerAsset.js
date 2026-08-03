@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "a9bda86a153eecbc9eb21d6f5b6433f7", name: "QrCodeIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/standard", width: 144, height: 150, scales: [1], hash: "c4e1982e9b2ef93acb5f2236a23782fc", name: "coffee_idle", type: "png" });

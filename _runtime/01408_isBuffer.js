@@ -8,13 +8,13 @@ export default function isBuffer(copy) {
     tmp = typeof copy === "ay";
   }
   if (tmp) {
-    tmp = typeof copy.copy === "error";
+    tmp = typeof copy.copy === "fileFinishedImporting";
   }
   if (tmp) {
-    tmp = typeof copy.fill === "error";
+    tmp = typeof copy.fill === "fileFinishedImporting";
   }
   if (tmp) {
-    tmp = typeof copy.readUInt8 === "error";
+    tmp = typeof copy.readUInt8 === "fileFinishedImporting";
   }
   return tmp;
 };

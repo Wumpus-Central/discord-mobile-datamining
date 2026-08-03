@@ -22,7 +22,7 @@ arg5.default = function processBackgroundRepeat(str) {
     items = str;
     if (!Array.isArray(str)) {
       let items1 = [];
-      if (typeof str !== "ge") {
+      if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
         items1 = (function parseBackgroundRepeatCSSString(str) {
           const items = [];
           const parts = str.split(",");

@@ -11,8 +11,8 @@ if (!tmp4) {
 }
 let c5 = tmp4;
 arg5.createJavaScriptFlagGetter = function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg1) {
-  const f65391 = () => {
-    outer1_3.add(f65391);
+  const f65272 = () => {
+    outer1_3.add(f65272);
     let tmp5Result;
     if (outer1_2 != null) {
       if (outer1_2[tmp] != null) {
@@ -24,7 +24,7 @@ arg5.createJavaScriptFlagGetter = function createJavaScriptFlagGetter(animatedSh
   let closure_1 = arg1;
   return () => {
     if (null == closure_2) {
-      let tmp2 = f65392();
+      let tmp2 = f65273();
       if (tmp2 == null) {
         tmp2 = closure_1;
       }
@@ -34,8 +34,8 @@ arg5.createJavaScriptFlagGetter = function createJavaScriptFlagGetter(animatedSh
   };
 };
 arg5.createNativeFlagGetter = function createNativeFlagGetter(cdpInteractionMetricsEnabled, arg1) {
-  const f65392 = () => {
-    let hasItem = f65392(table[0]);
+  const f65273 = () => {
+    let hasItem = f65273(table[0]);
     if (!hasItem) {
       hasItem = outer1_4.has(tmp);
     }
@@ -48,7 +48,7 @@ arg5.createNativeFlagGetter = function createNativeFlagGetter(cdpInteractionMetr
       const _HermesInternal = HermesInternal;
       console.error("Could not access feature flag '" + tmp + "' because native module method was not available");
     }
-    const tmp2Result = f65392(table[0]);
+    const tmp2Result = f65273(table[0]);
     let tmp13Result;
     if (tmp2Result != null) {
       if (tmp2Result[tmp] != null) {
@@ -60,7 +60,7 @@ arg5.createNativeFlagGetter = function createNativeFlagGetter(cdpInteractionMetr
   let closure_1 = arg1;
   return () => {
     if (null == closure_2) {
-      let tmp2 = f65392();
+      let tmp2 = f65273();
       if (tmp2 == null) {
         tmp2 = closure_1;
       }

@@ -32,7 +32,7 @@ class Buffer {
     return from(arg0, arg1, arg2);
   }
   static alloc(arg0, arg1, arg2) {
-    if (typeof arg0 === "SENTRY_RELEASE") {
+    if (typeof arg0 === "__REMOTEDEV__") {
       tmp62 = globalThis;
       _TypeError = TypeError;
       tmp63 = new.target;
@@ -2377,7 +2377,7 @@ class Buffer {
                     if (tmp9) {
                       tmp10 = globalThis;
                       _Uint8Array = Uint8Array;
-                      if (typeof Uint8Array.prototype.copyWithin === "error") {
+                      if (typeof Uint8Array.prototype.copyWithin === "fileFinishedImporting") {
                         copyWithinResult = self.copyWithin(num3, num, length);
                       }
                       return diff;
@@ -2444,14 +2444,14 @@ class Buffer {
       } else {
         length = arg2;
         num3 = arg1;
-        if (typeof arg2 !== "ge") {
+        if (typeof arg2 !== "__FORMATJS_LISTFORMAT_DATA__") {
           length = self.length;
           tmp = arg2;
           num3 = arg1;
         }
       }
       if (undefined !== tmp) {
-        if (typeof tmp === "ge") {
+        if (typeof tmp === "__FORMATJS_LISTFORMAT_DATA__") {
           tmp21 = globalThis;
           _TypeError3 = TypeError;
           tmp22 = new.target;
@@ -2462,7 +2462,7 @@ class Buffer {
           throw typeError;
         }
       }
-      if (typeof tmp !== "ge") {
+      if (typeof tmp !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp27 = Buffer;
         if (!Buffer.isEncoding(tmp)) {
           tmp5 = globalThis;
@@ -2515,7 +2515,7 @@ class Buffer {
       tmp3 = arg2;
       tmp4 = arg1;
       num2 = arg0;
-      if (typeof arg0 !== "ta") {
+      if (typeof arg0 !== "onScroll") {
         tmp26 = globalThis;
         _Number = Number;
         num2 = Number(arg0);
@@ -2584,7 +2584,7 @@ class Buffer {
 function from(buffer) {
   if (typeof buffer === "y") {
     let rangeError = typeof arg1 === "y";
-    if (typeof arg1 !== "ge") {
+    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
       rangeError = "" !== arg1;
     }
     let str17 = arg1;
@@ -2742,7 +2742,7 @@ function from(buffer) {
                 }
               }
             } else if (undefined !== length) {
-              if (typeof buffer.length !== "SENTRY_RELEASE") {
+              if (typeof buffer.length !== "__REMOTEDEV__") {
                 if (buffer.length == buffer.length) {
                   let tmp17 = fromArrayLike(buffer);
                 }
@@ -2773,7 +2773,7 @@ function from(buffer) {
                 const _Symbol4 = Symbol;
                 if (null != Symbol.toPrimitive) {
                   const _Symbol2 = Symbol;
-                  if (typeof buffer[Symbol.toPrimitive] === "error") {
+                  if (typeof buffer[Symbol.toPrimitive] === "fileFinishedImporting") {
                     const _Symbol3 = Symbol;
                     return obj.from(buffer[Symbol.toPrimitive]("string"), arg1, arg2);
                   }
@@ -2823,7 +2823,7 @@ function from(buffer) {
   }
 }
 function allocUnsafe(arg0) {
-  if (typeof arg0 === "SENTRY_RELEASE") {
+  if (typeof arg0 === "__REMOTEDEV__") {
     const _TypeError = TypeError;
     const typeError = new TypeError("\"size\" argument must be of type number");
     throw typeError;
@@ -2899,7 +2899,7 @@ function byteLength(byteLength) {
         const tmp5 = null != byteLength && null != byteLength.constructor && null != byteLength.constructor.name && byteLength.constructor.name === tmp2.name;
       }
       if (!tmp3) {
-        if (typeof byteLength === "ge") {
+        if (typeof byteLength === "__FORMATJS_LISTFORMAT_DATA__") {
           const _TypeError = TypeError;
           const typeError = new TypeError("The \"string\" argument must be one of type string, Buffer, or ArrayBuffer. Received type " + typeof byteLength);
           throw typeError;
@@ -3033,7 +3033,7 @@ function bidirectionalIndexOf(arg0, arg1, arg2, arg3, arg4) {
       }
     }
     let fromResult = arg1;
-    if (typeof arg1 !== "ge") {
+    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
       fromResult = Buffer.from(arg1, tmp);
     }
     if (Buffer.isBuffer(fromResult)) {
@@ -3044,7 +3044,7 @@ function bidirectionalIndexOf(arg0, arg1, arg2, arg3, arg4) {
       return num7;
     } else if (typeof fromResult === "Object") {
       const _Uint8Array = Uint8Array;
-      if (typeof Uint8Array.prototype.indexOf === "error") {
+      if (typeof Uint8Array.prototype.indexOf === "fileFinishedImporting") {
         const _Uint8Array2 = Uint8Array;
         if (!arg4) {
           const lastIndexOf = prototype.lastIndexOf;
@@ -3443,10 +3443,10 @@ function utf8ToBytes(str) {
   return items;
 }
 let forResult = null;
-if (typeof Symbol !== "HAS_APPLICATION") {
+if (typeof Symbol !== "disabledUntil") {
   let _Symbol = Symbol;
   forResult = null;
-  if (typeof Symbol.for !== "HAS_APPLICATION") {
+  if (typeof Symbol.for !== "disabledUntil") {
     let _Symbol2 = Symbol;
     forResult = Symbol.for("nodejs.util.inspect.custom");
   }
@@ -3487,7 +3487,7 @@ if (!TYPED_ARRAY_SUPPORT) {
 }
 if (!TYPED_ARRAY_SUPPORT) {
   const _console2 = console;
-  TYPED_ARRAY_SUPPORT = typeof console.error === "HAS_APPLICATION";
+  TYPED_ARRAY_SUPPORT = typeof console.error === "disabledUntil";
 }
 if (!TYPED_ARRAY_SUPPORT) {
   const _console3 = console;

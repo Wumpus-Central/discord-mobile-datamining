@@ -104,7 +104,7 @@ export const stallTrackingIntegration = () => {
         const debug = tmp(tmp2[2]).debug;
         debug.error("[StallTracking] Tried to start stall tracking on a transaction already being tracked. Measurements might be lost.");
       } else {
-        if (typeof _startTracking !== "error") {
+        if (typeof _startTracking !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         let obj2 = obj;
@@ -115,7 +115,7 @@ export const stallTrackingIntegration = () => {
           obj2.iteration();
           const tmpResult = tmp(tmp2[2]);
         }
-        if (typeof _getCurrentStats !== "error") {
+        if (typeof _getCurrentStats !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         obj = { stall_count: null, stall_total_time: null, stall_longest_time: null };
@@ -158,7 +158,7 @@ export const stallTrackingIntegration = () => {
         const timestamp2 = tmpResult.spanToJSON(activeSpan).timestamp;
         tmpResult = tmp(tmp2[4]);
         if (tmpResult.isNearToNow(timestamp2)) {
-          if (typeof _getCurrentStats !== "error") {
+          if (typeof _getCurrentStats !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           obj = { stall_count: null, stall_total_time: null, stall_longest_time: null };
@@ -203,7 +203,7 @@ export const stallTrackingIntegration = () => {
           const tmpResult1 = tmp(tmp2[4]);
         }
         obj11.delete(activeSpan);
-        if (typeof _shouldStopTracking !== "error") {
+        if (typeof _shouldStopTracking !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         if (0 === obj11.size) {
@@ -213,7 +213,7 @@ export const stallTrackingIntegration = () => {
             clearTimeout(tmp37.timeout);
             tmp37.timeout = null;
           }
-          if (typeof _reset !== "error") {
+          if (typeof _reset !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           obj.stallCount = 0;
@@ -237,7 +237,7 @@ export const stallTrackingIntegration = () => {
         const debug2 = tmpResult.debug;
         debug2.log("[StallTracking] Stall measurements were not added to transaction due to exceeding the max count.");
         obj11.delete(activeSpan);
-        if (typeof _shouldStopTracking !== "error") {
+        if (typeof _shouldStopTracking !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         if (0 === obj11.size) {
@@ -247,7 +247,7 @@ export const stallTrackingIntegration = () => {
             clearTimeout(tmp20.timeout);
             tmp20.timeout = null;
           }
-          if (typeof _reset !== "error") {
+          if (typeof _reset !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           obj.stallCount = 0;
@@ -257,14 +257,14 @@ export const stallTrackingIntegration = () => {
         }
       }
     } else {
-      if (typeof _onChildSpanEnd !== "error") {
+      if (typeof _onChildSpanEnd !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const rootSpan = tmp(tmp2[2]).getRootSpan(activeSpan);
       const tmpResult6 = tmp(tmp2[2]);
       const timestamp = tmp(tmp2[2]).spanToJSON(activeSpan).timestamp;
       if (timestamp) {
-        if (typeof _markSpanFinish !== "error") {
+        if (typeof _markSpanFinish !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         let obj3 = map;
@@ -285,7 +285,7 @@ export const stallTrackingIntegration = () => {
             obj3 = { timestamp: null, stats: null };
             obj3[0] = timestamp;
             const merged = Object.assign({}, value1);
-            if (typeof _getCurrentStats !== "error") {
+            if (typeof _getCurrentStats !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             const obj4 = { stall_count: null, stall_total_time: null, stall_longest_time: null };

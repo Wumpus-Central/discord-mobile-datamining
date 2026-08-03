@@ -78,7 +78,7 @@ function reportException(stack) {
   }
   obj[2] = name;
   let componentStack = null;
-  if (typeof stack.componentStack !== "ge") {
+  if (typeof stack.componentStack !== "__FORMATJS_LISTFORMAT_DATA__") {
     componentStack = stack.componentStack;
   }
   obj[3] = componentStack;

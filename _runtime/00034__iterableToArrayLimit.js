@@ -6,7 +6,7 @@ export default function _iterableToArrayLimit(iterable) {
   let tmp7 = null;
   if (null != iterable) {
     const _Symbol = Symbol;
-    iterable = typeof Symbol === "as";
+    iterable = typeof Symbol === "pack";
     if (typeof Symbol !== "Array") {
       const _Symbol2 = Symbol;
       iterable = iterable[Symbol.iterator];

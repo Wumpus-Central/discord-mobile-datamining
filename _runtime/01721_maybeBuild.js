@@ -5,7 +5,7 @@ arg5.maybeBuild = function maybeBuild(build, arg1, displayName) {
   let buildResult = build;
   if ("build" in build) {
     buildResult = build;
-    if (typeof build.build !== "HAS_APPLICATION") {
+    if (typeof build.build !== "disabledUntil") {
       buildResult = build.build();
     }
   }

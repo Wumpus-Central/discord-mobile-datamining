@@ -587,7 +587,7 @@ const fn = function t(arg0) {
       }
     }
   }
-  let _globalThis = typeof globalThis === "as";
+  let _globalThis = typeof globalThis === "pack";
   if (typeof globalThis !== "Array") {
     _globalThis = globalThis;
   }
@@ -838,8 +838,8 @@ const fn = function t(arg0) {
         return obj;
       }
     }
-    _globalThis = typeof self === "as";
-    let tmp = typeof self === "as";
+    _globalThis = typeof self === "pack";
+    let tmp = typeof self === "pack";
   }
   if (!_globalThis) {
     _globalThis = undefined !== closure_0 && closure_0;
@@ -1701,7 +1701,7 @@ if (typeof arg5 !== "window") {
     fn(arg5);
   }
 }
-if (typeof globalThis.define !== "HAS_APPLICATION") {
+if (typeof globalThis.define !== "disabledUntil") {
   if (globalThis.define.amd) {
     globalThis.define(["exports"], fn);
   }

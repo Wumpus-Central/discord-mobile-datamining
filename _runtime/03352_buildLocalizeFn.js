@@ -10,14 +10,29 @@ if (!buildLocalizeFn) {
   obj = buildLocalizeFn;
 }
 obj = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    unit = undefined;
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    const StringResult = String(unit);
+    if ("minute" !== StringResult) {
+      if ("second" !== StringResult) {
+        if ("date" === StringResult) {
+          return NumberResult + "\uC77C";
+        } else {
+          return NumberResult + "\uBC88\uC9F8";
+        }
+      }
+    }
+    return String(NumberResult);
   },
-  era: obj.default({ values: { narrow: ["fvt", "vt"], abbreviated: ["f.v.t.", "v.t."], wide: ["f\u00F8r vesterlandsk tidsregning", "vesterlandsk tidsregning"] }, defaultWidth: "wide" }),
+  era: obj.default({ values: { narrow: ["BC", "AD"], abbreviated: ["BC", "AD"], wide: ["\uAE30\uC6D0\uC804", "\uC11C\uAE30"] }, defaultWidth: "wide" }),
   quarter: obj.default(obj1),
-  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["jan.", "feb.", "mar.", "apr.", "maj", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."], wide: ["januar", "februar", "marts", "april", "maj", "juni", "juli", "august", "september", "oktober", "november", "december"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["S", "M", "T", "O", "T", "F", "L"], short: ["s\u00F8", "ma", "ti", "on", "to", "fr", "l\u00F8"], abbreviated: ["s\u00F8n.", "man.", "tir.", "ons.", "tor.", "fre.", "l\u00F8r."], wide: ["s\u00F8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\u00F8rdag"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "midnat", noon: "middag", morning: "morgen", afternoon: "eftermiddag", evening: "aften", night: "nat" }, abbreviated: { am: "AM", pm: "PM", midnight: "midnat", noon: "middag", morning: "morgen", afternoon: "eftermiddag", evening: "aften", night: "nat" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnat", noon: "middag", morning: "morgen", afternoon: "eftermiddag", evening: "aften", night: "nat" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "midnat", noon: "middag", morning: "om morgenen", afternoon: "om eftermiddagen", evening: "om aftenen", night: "om natten" }, abbreviated: { am: "AM", pm: "PM", midnight: "midnat", noon: "middag", morning: "om morgenen", afternoon: "om eftermiddagen", evening: "om aftenen", night: "om natten" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnat", noon: "middag", morning: "om morgenen", afternoon: "om eftermiddagen", evening: "om aftenen", night: "om natten" } }, defaultFormattingWidth: "wide" })
+  month: obj.default({ values: { narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], abbreviated: ["1\uC6D4", "2\uC6D4", "3\uC6D4", "4\uC6D4", "5\uC6D4", "6\uC6D4", "7\uC6D4", "8\uC6D4", "9\uC6D4", "10\uC6D4", "11\uC6D4", "12\uC6D4"], wide: ["1\uC6D4", "2\uC6D4", "3\uC6D4", "4\uC6D4", "5\uC6D4", "6\uC6D4", "7\uC6D4", "8\uC6D4", "9\uC6D4", "10\uC6D4", "11\uC6D4", "12\uC6D4"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"], short: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"], abbreviated: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"], wide: ["\uC77C\uC694\uC77C", "\uC6D4\uC694\uC77C", "\uD654\uC694\uC77C", "\uC218\uC694\uC77C", "\uBAA9\uC694\uC77C", "\uAE08\uC694\uC77C", "\uD1A0\uC694\uC77C"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" }, abbreviated: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" }, wide: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" }, abbreviated: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" }, wide: { am: "\uC624\uC804", pm: "\uC624\uD6C4", midnight: "\uC790\uC815", noon: "\uC815\uC624", morning: "\uC544\uCE68", afternoon: "\uC624\uD6C4", evening: "\uC800\uB141", night: "\uBC24" } }, defaultFormattingWidth: "wide" })
 };
 
 export default obj;

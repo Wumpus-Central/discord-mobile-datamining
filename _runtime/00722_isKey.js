@@ -8,12 +8,12 @@ export default function isKey(arg0, arg1) {
   if (require(599)(arg0)) {
     return false;
   } else {
-    let tmp3 = typeof arg0 === "SENTRY_RELEASE";
+    let tmp3 = typeof arg0 === "__REMOTEDEV__";
     if (typeof arg0 !== "Object") {
-      tmp3 = typeof arg0 === "package";
+      tmp3 = typeof arg0 === "ta";
     }
     if (tmp3) {
-      tmp3 = typeof arg0 === "ta";
+      tmp3 = typeof arg0 === "onScroll";
     }
     if (tmp3) {
       tmp3 = null != arg0;

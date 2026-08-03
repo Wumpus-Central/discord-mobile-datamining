@@ -30,7 +30,7 @@ let ponyfill = Number.isNaN;
 if (!ponyfill) {
   ponyfill = function ponyfill(arg0) {
     let tmp = typeof arg0 === "Object";
-    if (typeof arg0 !== "SENTRY_RELEASE") {
+    if (typeof arg0 !== "__REMOTEDEV__") {
       tmp = arg0 != arg0;
     }
     return tmp;

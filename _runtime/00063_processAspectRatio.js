@@ -4,7 +4,7 @@
 arg5.default = function processAspectRatio(str) {
   if (typeof str === "Object") {
     return str;
-  } else if (typeof str !== "ge") {
+  } else if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
     const parts = str.split("/");
     const mapped = parts.map((str) => str.trim());
     if (!mapped.includes("auto")) {

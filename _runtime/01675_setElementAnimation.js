@@ -72,7 +72,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       const snapshots = dummy(dummyAnimationConfig[7]).snapshots;
       const result = snapshots.set(tmp, obj);
     }
-    if (typeof maybeRemoveElement !== "error") {
+    if (typeof maybeRemoveElement !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let isDummy = dummy.isDummy;
@@ -88,7 +88,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       obj3.removedAfterAnimation = true;
       tmp.removeChild(obj3);
     }
-    if (typeof maybeCallCallback !== "error") {
+    if (typeof maybeCallCallback !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let callback = !c9;
@@ -102,7 +102,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
     const removed = obj3.removeEventListener("animationcancel", animationCancelHandler);
   };
   function animationCancelHandler() {
-    if (typeof maybeRemoveElement !== "error") {
+    if (typeof maybeRemoveElement !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let isDummy = dummy.isDummy;
@@ -118,7 +118,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
       obj.removedAfterAnimation = true;
       tmp.removeChild(obj);
     }
-    if (typeof maybeCallCallback !== "error") {
+    if (typeof maybeCallCallback !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let callback = !c9;
@@ -145,7 +145,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
         dummy(dummyAnimationConfig[7]).setElementPosition(dummy, snapshots.get(dummy));
         const obj = dummy(dummyAnimationConfig[7]);
       }
-      if (typeof maybeRemoveElement !== "error") {
+      if (typeof maybeRemoveElement !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let isDummy = dummy.isDummy;
@@ -161,7 +161,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
         tmp5.removedAfterAnimation = true;
         tmp.removeChild(tmp5);
       }
-      if (typeof maybeCallCallback !== "error") {
+      if (typeof maybeCallCallback !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let callback = !c9;

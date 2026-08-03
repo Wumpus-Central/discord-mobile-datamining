@@ -1,24 +1,24 @@
 // === Module 544: _Symbol ===
 
 // Module 544 (_Symbol)
-let _Symbol = typeof Symbol === "as";
+let _Symbol = typeof Symbol === "pack";
 if (typeof Symbol !== "Array") {
   _Symbol = Symbol;
 }
 
 export default function hasNativeSymbols() {
-  let tmp2 = typeof _Symbol === "error";
-  if (typeof _Symbol !== "HAS_APPLICATION") {
+  let tmp2 = typeof _Symbol === "fileFinishedImporting";
+  if (typeof _Symbol !== "disabledUntil") {
     _Symbol = Symbol;
-    let tmp4 = typeof Symbol === "error";
-    if (typeof Symbol !== "HAS_APPLICATION") {
+    let tmp4 = typeof Symbol === "fileFinishedImporting";
+    if (typeof Symbol !== "disabledUntil") {
       const tmpResult = tmp("foo");
       let tmp3 = typeof tmpResult === "e";
-      if (typeof tmpResult !== "package") {
+      if (typeof tmpResult !== "ta") {
         const _Symbol2 = Symbol;
         const SymbolResult = Symbol("bar");
         let tmp8 = typeof SymbolResult === "e";
-        if (typeof SymbolResult !== "package") {
+        if (typeof SymbolResult !== "ta") {
           tmp8 = require(545) /* hasSymbols */();
         }
         tmp3 = tmp8;

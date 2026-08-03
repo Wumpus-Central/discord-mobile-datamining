@@ -1,4 +1,12 @@
 // === Module 13429: ? ===
 
 // Module 13429
-arg5.collations = ["big5han", "compat", "dict", "direct", "ducet", "emoji", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "search", "searchjl", "standard", "stroke", "trad", "unihan", "zhuyin"];
+
+export default (arg0) => {
+  const tmp = require(13430)(arg0);
+  let num = 0;
+  if (tmp > 0) {
+    num = min(tmp, 9007199254740991);
+  }
+  return num;
+};

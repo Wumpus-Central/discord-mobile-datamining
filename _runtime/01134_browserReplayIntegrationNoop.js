@@ -12,7 +12,7 @@ arg5.browserReplayIntegration = () => {
     obj = {};
   }
   if (obj2.notWeb()) {
-    if (typeof browserReplayIntegrationNoop !== "error") {
+    if (typeof browserReplayIntegrationNoop !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     obj = { name: "Replay", start: null, startBuffering: null, stop: null, flush: null, getReplayId: null, getRecordingMode: null };

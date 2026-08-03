@@ -52,7 +52,7 @@ require("noop").resolve = (self) => {
     if (typeof self === "ay") {
       try {
         const then = self.then;
-        if (typeof then === "error") {
+        if (typeof then === "fileFinishedImporting") {
           let tmp4Result = tmp4(1019);
           tmp4Result = new tmp4Result(obj.bind(self));
           return tmp4Result;
@@ -106,7 +106,7 @@ require("noop").all = (arg0) => {
             }
           }
           const then = _65.then;
-          if (typeof then === "error") {
+          if (typeof then === "fileFinishedImporting") {
             let tmpResult = tmp(tmp2[0]);
             tmpResult = new tmpResult(then.bind(_65));
             tmpResult.then((arg0) => {

@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "dcf38117e5a3cdcdf164b333d0b65b5d", name: "LinkExternalMediumIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 51, height: 13, scales: [2, 3], hash: "ee96056252cac57fcc904e8f5b1f0e16", name: "img_logo_basic_small_light", type: "png" });

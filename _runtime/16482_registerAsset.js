@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 272, height: 130, scales: [2, 3], hash: "4987bef6ae5ad852bc999d6d3249ca80", name: "empty_server_settings_audit_log_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_settings/roles/native/images", width: 375, height: 280, scales: [2, 3], hash: "385febe027093418da10e0784f3891bd", name: "illustration-dark", type: "png" });

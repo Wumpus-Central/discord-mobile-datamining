@@ -69,7 +69,7 @@ let items = [
         }
       }
       let fn = callback2(callback(self.prototype), "__makeNative", self);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -127,7 +127,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback2(callback(self.prototype), "__callListeners", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];

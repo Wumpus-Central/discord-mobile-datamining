@@ -82,18 +82,18 @@ function genModule(arg0, arg1) {
           if (items.length > 1) {
             tmp2 = items[items.length - 2];
           }
-          if (typeof tmp2 !== "HAS_APPLICATION") {
+          if (typeof tmp2 !== "disabledUntil") {
             callback("Cannot have a non-function arg after a function arg."[1])(tmp3, "Cannot have a non-function arg after a function arg.");
           }
           let tmp4 = null;
-          if (typeof tmp !== "HAS_APPLICATION") {
+          if (typeof tmp !== "disabledUntil") {
             tmp4 = tmp;
           }
           let tmp5 = null;
-          if (typeof tmp2 !== "HAS_APPLICATION") {
+          if (typeof tmp2 !== "disabledUntil") {
             tmp5 = tmp2;
           }
-          const substr = items.slice(0, items.length - (tmp3 + (typeof tmp2 === "error")));
+          const substr = items.slice(0, items.length - (tmp3 + (typeof tmp2 === "fileFinishedImporting")));
           if ("sync" === str) {
             const _default2 = callback(str[2]).default;
             return _default2.callNativeSyncHook(closure_0, callback, substr, tmp5, tmp4);

@@ -134,7 +134,7 @@ arg5.getFramesFromEvent = function getFramesFromEvent(exception) {
 arg5.getFunctionName = function getFunctionName(name) {
   try {
     if (name) {
-      name = typeof name === "error";
+      name = typeof name === "fileFinishedImporting";
     }
     if (name) {
       name = name.name;

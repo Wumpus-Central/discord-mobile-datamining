@@ -9,7 +9,7 @@ let closure_2 = callBindBasic(items);
 export default function callBoundIntrinsic(arg0) {
   const tmp3 = require(540) /* getEvalledConstructor */(arg0, arg1);
   let tmp4 = tmp3;
-  if (typeof tmp3 !== "HAS_APPLICATION") {
+  if (typeof tmp3 !== "disabledUntil") {
     tmp4 = tmp3;
     if (callback(arg0, ".prototype.") > -1) {
       const items = [tmp3];

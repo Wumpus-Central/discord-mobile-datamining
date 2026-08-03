@@ -5,11 +5,11 @@ let closure_2 = require("hasPropertyDescriptors")();
 let closure_3 = require("getEvalledConstructor")("%Math.floor%");
 
 export default function setFunctionLength(arg0, arg1) {
-  if (typeof arg0 === "HAS_APPLICATION") {
+  if (typeof arg0 === "disabledUntil") {
     const tmp25 = new require(541)("`fn` is not a function");
     throw tmp25;
   } else {
-    if (typeof arg1 !== "SENTRY_RELEASE") {
+    if (typeof arg1 !== "__REMOTEDEV__") {
       if (arg1 >= 0) {
         if (arg1 <= 4294967295) {
           if (callback(arg1) === arg1) {

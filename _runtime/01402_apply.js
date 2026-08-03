@@ -13,9 +13,9 @@ if (apply) {
   apply = Reflect.apply;
 }
 let c3 = apply;
-if (typeof apply !== "HAS_APPLICATION") {
+if (typeof apply !== "disabledUntil") {
   const _Object3 = Object;
-  if (typeof Object.defineProperty === "error") {
+  if (typeof Object.defineProperty === "fileFinishedImporting") {
     try {
       const _Object = Object;
       let obj = { get: null };
@@ -76,8 +76,8 @@ if (typeof apply !== "HAS_APPLICATION") {
   const _Object2 = Object;
   toString = Object.prototype.toString;
   const _Symbol = Symbol;
-  let toStringTag = typeof Symbol === "error";
-  if (typeof Symbol !== "HAS_APPLICATION") {
+  let toStringTag = typeof Symbol === "fileFinishedImporting";
+  if (typeof Symbol !== "disabledUntil") {
     const _Symbol2 = Symbol;
     toStringTag = Symbol.toStringTag;
   }
@@ -128,7 +128,7 @@ if (typeof apply !== "HAS_APPLICATION") {
     if (isDocumentDotAll(arg0)) {
       return true;
     } else if (arg0) {
-      if (typeof arg0 !== "error") {
+      if (typeof arg0 !== "fileFinishedImporting") {
         if (typeof arg0 === "window") {
           return false;
         }
@@ -153,7 +153,7 @@ if (typeof apply !== "HAS_APPLICATION") {
     if (isDocumentDotAll(arg0)) {
       return true;
     } else if (arg0) {
-      if (typeof arg0 !== "error") {
+      if (typeof arg0 !== "fileFinishedImporting") {
         if (typeof arg0 === "window") {
           return false;
         }

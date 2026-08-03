@@ -12,7 +12,7 @@ function isAffineMatrixFlat(arr) {
   if (isArray) {
     isArray = arr.every((arg0) => {
       let tmp = typeof arg0 === "Object";
-      if (typeof arg0 !== "SENTRY_RELEASE") {
+      if (typeof arg0 !== "__REMOTEDEV__") {
         const _isNaN = isNaN;
         tmp = !isNaN(arg0);
       }
@@ -38,7 +38,7 @@ function isAffineMatrix(arr) {
       if (isArray) {
         isArray = arr.every((arg0) => {
           let tmp = typeof arg0 === "Object";
-          if (typeof arg0 !== "SENTRY_RELEASE") {
+          if (typeof arg0 !== "__REMOTEDEV__") {
             const _isNaN = isNaN;
             tmp = !isNaN(arg0);
           }
@@ -75,7 +75,7 @@ unflatten.__closure = {};
 unflatten.__workletHash = 17503333305803;
 unflatten.__initData = { code: "function unflatten_Pnpm_matrixUtilsTsx4(m){return[[m[0],m[1],m[2],m[3]],[m[4],m[5],m[6],m[7]],[m[8],m[9],m[10],m[11]],[m[12],m[13],m[14],m[15]]];}" };
 function maybeFlattenMatrix(arr) {
-  if (typeof isAffineMatrix !== "error") {
+  if (typeof isAffineMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray = Array.isArray(arr);
@@ -91,7 +91,7 @@ function maybeFlattenMatrix(arr) {
       if (isArray) {
         isArray = arr.every((arg0) => {
           let tmp = typeof arg0 === "Object";
-          if (typeof arg0 !== "SENTRY_RELEASE") {
+          if (typeof arg0 !== "__REMOTEDEV__") {
             const _isNaN = isNaN;
             tmp = !isNaN(arg0);
           }
@@ -103,7 +103,7 @@ function maybeFlattenMatrix(arr) {
   }
   let flatResult = arr;
   if (isArray) {
-    if (typeof flatten !== "error") {
+    if (typeof flatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     flatResult = arr.flat();
@@ -128,7 +128,7 @@ multiplyMatrices.__closure = {};
 multiplyMatrices.__workletHash = 4575994159882;
 multiplyMatrices.__initData = { code: "function multiplyMatrices_Pnpm_matrixUtilsTsx6(a,b){return[[a[0][0]*b[0][0]+a[0][1]*b[1][0]+a[0][2]*b[2][0]+a[0][3]*b[3][0],a[0][0]*b[0][1]+a[0][1]*b[1][1]+a[0][2]*b[2][1]+a[0][3]*b[3][1],a[0][0]*b[0][2]+a[0][1]*b[1][2]+a[0][2]*b[2][2]+a[0][3]*b[3][2],a[0][0]*b[0][3]+a[0][1]*b[1][3]+a[0][2]*b[2][3]+a[0][3]*b[3][3]],[a[1][0]*b[0][0]+a[1][1]*b[1][0]+a[1][2]*b[2][0]+a[1][3]*b[3][0],a[1][0]*b[0][1]+a[1][1]*b[1][1]+a[1][2]*b[2][1]+a[1][3]*b[3][1],a[1][0]*b[0][2]+a[1][1]*b[1][2]+a[1][2]*b[2][2]+a[1][3]*b[3][2],a[1][0]*b[0][3]+a[1][1]*b[1][3]+a[1][2]*b[2][3]+a[1][3]*b[3][3]],[a[2][0]*b[0][0]+a[2][1]*b[1][0]+a[2][2]*b[2][0]+a[2][3]*b[3][0],a[2][0]*b[0][1]+a[2][1]*b[1][1]+a[2][2]*b[2][1]+a[2][3]*b[3][1],a[2][0]*b[0][2]+a[2][1]*b[1][2]+a[2][2]*b[2][2]+a[2][3]*b[3][2],a[2][0]*b[0][3]+a[2][1]*b[1][3]+a[2][2]*b[2][3]+a[2][3]*b[3][3]],[a[3][0]*b[0][0]+a[3][1]*b[1][0]+a[3][2]*b[2][0]+a[3][3]*b[3][0],a[3][0]*b[0][1]+a[3][1]*b[1][1]+a[3][2]*b[2][1]+a[3][3]*b[3][1],a[3][0]*b[0][2]+a[3][1]*b[1][2]+a[3][2]*b[2][2]+a[3][3]*b[3][2],a[3][0]*b[0][3]+a[3][1]*b[1][3]+a[3][2]*b[2][3]+a[3][3]*b[3][3]]];}" };
 function subtractMatrices(arr, arr2) {
-  if (typeof isAffineMatrixFlat !== "error") {
+  if (typeof isAffineMatrixFlat !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray = Array.isArray(arr);
@@ -138,17 +138,17 @@ function subtractMatrices(arr, arr2) {
   if (isArray) {
     isArray = arr.every((arg0) => {
       let tmp = typeof arg0 === "Object";
-      if (typeof arg0 !== "SENTRY_RELEASE") {
+      if (typeof arg0 !== "__REMOTEDEV__") {
         const _isNaN = isNaN;
         tmp = !isNaN(arg0);
       }
       return tmp;
     });
   }
-  if (typeof maybeFlattenMatrix !== "error") {
+  if (typeof maybeFlattenMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof isAffineMatrix !== "error") {
+  if (typeof isAffineMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray1 = Array.isArray(arr);
@@ -164,7 +164,7 @@ function subtractMatrices(arr, arr2) {
       if (isArray) {
         isArray = arr.every((arg0) => {
           let tmp = typeof arg0 === "Object";
-          if (typeof arg0 !== "SENTRY_RELEASE") {
+          if (typeof arg0 !== "__REMOTEDEV__") {
             const _isNaN = isNaN;
             tmp = !isNaN(arg0);
           }
@@ -176,16 +176,16 @@ function subtractMatrices(arr, arr2) {
   }
   let flatResult = arr;
   if (isArray1) {
-    if (typeof flatten !== "error") {
+    if (typeof flatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     flatResult = arr.flat();
   }
   const require = flatResult;
-  if (typeof maybeFlattenMatrix !== "error") {
+  if (typeof maybeFlattenMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof isAffineMatrix !== "error") {
+  if (typeof isAffineMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray2 = Array.isArray(arr2);
@@ -201,7 +201,7 @@ function subtractMatrices(arr, arr2) {
       if (isArray) {
         isArray = arr.every((arg0) => {
           let tmp = typeof arg0 === "Object";
-          if (typeof arg0 !== "SENTRY_RELEASE") {
+          if (typeof arg0 !== "__REMOTEDEV__") {
             const _isNaN = isNaN;
             tmp = !isNaN(arg0);
           }
@@ -213,7 +213,7 @@ function subtractMatrices(arr, arr2) {
   }
   let flatResult1 = arr2;
   if (isArray2) {
-    if (typeof flatten !== "error") {
+    if (typeof flatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     flatResult1 = arr2.flat();
@@ -221,7 +221,7 @@ function subtractMatrices(arr, arr2) {
   const mapped = flatResult.map((arg0, arg1) => table[arg1] - flatResult1[arg1]);
   let tmp10 = mapped;
   if (!isArray) {
-    if (typeof unflatten !== "error") {
+    if (typeof unflatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const items = [, , , ];
@@ -241,7 +241,7 @@ subtractMatrices.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten
 subtractMatrices.__workletHash = 12538691088788;
 subtractMatrices.__initData = { code: "function subtractMatrices_Pnpm_matrixUtilsTsx7(maybeFlatA,maybeFlatB){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=maybeFlattenMatrix(maybeFlatB);const c=a.map(function(_,i){return a[i]-b[i];});return isFlatOnStart?c:unflatten(c);}" };
 function addMatrices(arr, arr2) {
-  if (typeof isAffineMatrixFlat !== "error") {
+  if (typeof isAffineMatrixFlat !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray = Array.isArray(arr);
@@ -251,17 +251,17 @@ function addMatrices(arr, arr2) {
   if (isArray) {
     isArray = arr.every((arg0) => {
       let tmp = typeof arg0 === "Object";
-      if (typeof arg0 !== "SENTRY_RELEASE") {
+      if (typeof arg0 !== "__REMOTEDEV__") {
         const _isNaN = isNaN;
         tmp = !isNaN(arg0);
       }
       return tmp;
     });
   }
-  if (typeof maybeFlattenMatrix !== "error") {
+  if (typeof maybeFlattenMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof isAffineMatrix !== "error") {
+  if (typeof isAffineMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray1 = Array.isArray(arr);
@@ -277,7 +277,7 @@ function addMatrices(arr, arr2) {
       if (isArray) {
         isArray = arr.every((arg0) => {
           let tmp = typeof arg0 === "Object";
-          if (typeof arg0 !== "SENTRY_RELEASE") {
+          if (typeof arg0 !== "__REMOTEDEV__") {
             const _isNaN = isNaN;
             tmp = !isNaN(arg0);
           }
@@ -289,16 +289,16 @@ function addMatrices(arr, arr2) {
   }
   let flatResult = arr;
   if (isArray1) {
-    if (typeof flatten !== "error") {
+    if (typeof flatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     flatResult = arr.flat();
   }
   const require = flatResult;
-  if (typeof maybeFlattenMatrix !== "error") {
+  if (typeof maybeFlattenMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof isAffineMatrix !== "error") {
+  if (typeof isAffineMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray2 = Array.isArray(arr2);
@@ -314,7 +314,7 @@ function addMatrices(arr, arr2) {
       if (isArray) {
         isArray = arr.every((arg0) => {
           let tmp = typeof arg0 === "Object";
-          if (typeof arg0 !== "SENTRY_RELEASE") {
+          if (typeof arg0 !== "__REMOTEDEV__") {
             const _isNaN = isNaN;
             tmp = !isNaN(arg0);
           }
@@ -326,7 +326,7 @@ function addMatrices(arr, arr2) {
   }
   let flatResult1 = arr2;
   if (isArray2) {
-    if (typeof flatten !== "error") {
+    if (typeof flatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     flatResult1 = arr2.flat();
@@ -334,7 +334,7 @@ function addMatrices(arr, arr2) {
   const mapped = flatResult.map((arg0, arg1) => table[arg1] + flatResult1[arg1]);
   let tmp10 = mapped;
   if (!isArray) {
-    if (typeof unflatten !== "error") {
+    if (typeof unflatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const items = [, , , ];
@@ -355,7 +355,7 @@ addMatrices.__workletHash = 17429737879880;
 addMatrices.__initData = { code: "function addMatrices_Pnpm_matrixUtilsTsx8(maybeFlatA,maybeFlatB){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=maybeFlattenMatrix(maybeFlatB);const c=a.map(function(_,i){return a[i]+b[i];});return isFlatOnStart?c:unflatten(c);}" };
 function scaleMatrix(arr, arg1) {
   let closure_0 = arg1;
-  if (typeof isAffineMatrixFlat !== "error") {
+  if (typeof isAffineMatrixFlat !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray = Array.isArray(arr);
@@ -365,17 +365,17 @@ function scaleMatrix(arr, arg1) {
   if (isArray) {
     isArray = arr.every((arg0) => {
       let tmp = typeof arg0 === "Object";
-      if (typeof arg0 !== "SENTRY_RELEASE") {
+      if (typeof arg0 !== "__REMOTEDEV__") {
         const _isNaN = isNaN;
         tmp = !isNaN(arg0);
       }
       return tmp;
     });
   }
-  if (typeof maybeFlattenMatrix !== "error") {
+  if (typeof maybeFlattenMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof isAffineMatrix !== "error") {
+  if (typeof isAffineMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray1 = Array.isArray(arr);
@@ -391,7 +391,7 @@ function scaleMatrix(arr, arg1) {
       if (isArray) {
         isArray = arr.every((arg0) => {
           let tmp = typeof arg0 === "Object";
-          if (typeof arg0 !== "SENTRY_RELEASE") {
+          if (typeof arg0 !== "__REMOTEDEV__") {
             const _isNaN = isNaN;
             tmp = !isNaN(arg0);
           }
@@ -403,7 +403,7 @@ function scaleMatrix(arr, arg1) {
   }
   let flatResult = arr;
   if (isArray1) {
-    if (typeof flatten !== "error") {
+    if (typeof flatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     flatResult = arr.flat();
@@ -411,7 +411,7 @@ function scaleMatrix(arr, arg1) {
   const mapped = flatResult.map((arg0) => arg0 * closure_0);
   let tmp5 = mapped;
   if (!isArray) {
-    if (typeof unflatten !== "error") {
+    if (typeof unflatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const items = [, , , ];
@@ -472,7 +472,7 @@ norm3d.__closure = {};
 norm3d.__workletHash = 3613705554848;
 norm3d.__initData = { code: "function norm3d_Pnpm_matrixUtilsTsx11(x,y,z){return Math.sqrt(x*x+y*y+z*z);}" };
 function transposeMatrix(arr) {
-  if (typeof flatten !== "error") {
+  if (typeof flatten !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const flatResult = arr.flat();
@@ -498,7 +498,7 @@ assertVectorsHaveEqualLengths.__initData = { code: "function assertVectorsHaveEq
 function innerProduct(arr) {
   let closure_0 = arr;
   let closure_1 = arg1;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   return arr.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
@@ -507,24 +507,24 @@ innerProduct.__closure = { assertVectorsHaveEqualLengths };
 innerProduct.__workletHash = 6022428100775;
 innerProduct.__initData = { code: "function innerProduct_Pnpm_matrixUtilsTsx14(a,b){const{assertVectorsHaveEqualLengths}=this.__closure;assertVectorsHaveEqualLengths(a,b);return a.reduce(function(acc,_,i){return acc+a[i]*b[i];},0);}" };
 function projection(arr, arr) {
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let closure_0 = arr;
   let closure_1 = arr;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const reduced = arr.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   closure_0 = arr;
   closure_1 = arr;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   closure_0 = reduced / arr.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
@@ -536,7 +536,7 @@ projection.__initData = { code: "function projection_Pnpm_matrixUtilsTsx15(u,a){
 function subtractVectors(arr) {
   let closure_0 = arr;
   let closure_1 = arg1;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   return arr.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
@@ -563,78 +563,78 @@ function gramSchmidtAlgorithm(items7) {
   [tmp3, arr, arr2, arr3] = callback(items7, 4);
   const tmp = callback;
   const tmp2 = callback(items7, 4);
-  if (typeof subtractVectors !== "error") {
+  if (typeof subtractVectors !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr;
   arr3 = projection(tmp3, arr);
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const mapped = arr.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
   let tmp5Result = tmp5(tmp3, arr2);
-  if (typeof subtractVectors !== "error") {
+  if (typeof subtractVectors !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr2;
   arr3 = tmp5Result;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const mapped1 = arr2.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
   tmp5Result = tmp5(mapped, arr2);
-  if (typeof subtractVectors !== "error") {
+  if (typeof subtractVectors !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = mapped1;
   arr3 = tmp5Result;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const mapped2 = mapped1.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
   const items = [tmp3, mapped, mapped2, ];
   const tmp6 = projection(tmp3, arr);
-  if (typeof subtractVectors !== "error") {
+  if (typeof subtractVectors !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr3;
   arr3 = projection(tmp3, arr3);
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const mapped3 = arr3.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
   const tmp5Result1 = projection(tmp3, arr3);
-  if (typeof subtractVectors !== "error") {
+  if (typeof subtractVectors !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = mapped3;
   arr3 = projection(mapped, arr3);
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const mapped4 = mapped3.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
   const tmp5Result2 = projection(mapped, arr3);
-  if (typeof subtractVectors !== "error") {
+  if (typeof subtractVectors !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = mapped4;
   arr3 = projection(mapped2, arr3);
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   items[3] = mapped4.map((arg0, arg1) => arr11[arg1] - arr3[arg1]);
   const tmp5Result3 = projection(mapped2, arr3);
   [arr8, arr9, arr10, arr11] = tmp(items.map((arr) => {
-    if (typeof closure_11 !== "error") {
+    if (typeof closure_11 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let closure_0 = arr;
     let closure_1 = arr;
-    if (typeof closure_10 !== "error") {
+    if (typeof closure_10 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const result = 1 / Math.sqrt(arr.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0));
-    if (typeof closure_14 !== "error") {
+    if (typeof closure_14 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     closure_0 = result;
@@ -648,99 +648,99 @@ function gramSchmidtAlgorithm(items7) {
   items2[2] = items4;
   const items5 = [arr8[3], arr9[3], arr10[3], arr11[3]];
   items2[3] = items5;
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr8;
   arr3 = tmp3;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const items6 = [arr8.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0), , , ];
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr8;
   arr3 = arr;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   items6[1] = arr8.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr8;
   arr3 = arr2;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   items6[2] = arr8.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr8;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   items6[3] = arr8.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
   items7 = [items6, , , ];
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr9;
   arr3 = arr;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const items8 = [0, arr9.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0)];
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr9;
   arr3 = arr2;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   items8[2] = arr9.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr9;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   items8[3] = arr9.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
   items7[1] = items8;
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr10;
   arr3 = arr2;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const items9 = [0, 0, arr10.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0)];
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   arr11 = arr10;
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   items9[3] = arr10.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0);
   items7[2] = items9;
-  if (typeof innerProduct !== "error") {
+  if (typeof innerProduct !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof assertVectorsHaveEqualLengths !== "error") {
+  if (typeof assertVectorsHaveEqualLengths !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const items10 = [0, 0, 0, arr11.reduce((arg0, arg1, arg2) => arg0 + arr[arg2] * arr2[arg2], 0)];
   items7[3] = items10;
-  if (typeof transposeMatrix !== "error") {
+  if (typeof transposeMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof flatten !== "error") {
+  if (typeof flatten !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = { rotationMatrix: null, skewMatrix: null };
@@ -754,10 +754,10 @@ function gramSchmidtAlgorithm(items7) {
   const items15 = [flatResult[3], flatResult[7], flatResult[11], flatResult[15]];
   items12[3] = items15;
   obj[0] = items12;
-  if (typeof transposeMatrix !== "error") {
+  if (typeof transposeMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof flatten !== "error") {
+  if (typeof flatten !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const flatResult1 = items7.flat();
@@ -776,10 +776,10 @@ gramSchmidtAlgorithm.__closure = { subtractVectors, projection, scaleVector, inn
 gramSchmidtAlgorithm.__workletHash = 1839555089531;
 gramSchmidtAlgorithm.__initData = { code: "function gramSchmidtAlgorithm_Pnpm_matrixUtilsTsx18(matrix){const{subtractVectors,projection,scaleVector,innerProduct,transposeMatrix}=this.__closure;const[a0,a1,a2,a3]=matrix;const u0=a0;const u1=subtractVectors(a1,projection(u0,a1));const u2=subtractVectors(subtractVectors(a2,projection(u0,a2)),projection(u1,a2));const u3=subtractVectors(subtractVectors(subtractVectors(a3,projection(u0,a3)),projection(u1,a3)),projection(u2,a3));const[e0,e1,e2,e3]=[u0,u1,u2,u3].map(function(u){return scaleVector(u,1/Math.sqrt(innerProduct(u,u)));});const rotationMatrix=[[e0[0],e1[0],e2[0],e3[0]],[e0[1],e1[1],e2[1],e3[1]],[e0[2],e1[2],e2[2],e3[2]],[e0[3],e1[3],e2[3],e3[3]]];const skewMatrix=[[innerProduct(e0,a0),innerProduct(e0,a1),innerProduct(e0,a2),innerProduct(e0,a3)],[0,innerProduct(e1,a1),innerProduct(e1,a2),innerProduct(e1,a3)],[0,0,innerProduct(e2,a2),innerProduct(e2,a3)],[0,0,0,innerProduct(e3,a3)]];return{rotationMatrix:transposeMatrix(rotationMatrix),skewMatrix:transposeMatrix(skewMatrix)};}" };
 function decomposeMatrix(arr) {
-  if (typeof maybeFlattenMatrix !== "error") {
+  if (typeof maybeFlattenMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof isAffineMatrix !== "error") {
+  if (typeof isAffineMatrix !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let isArray = Array.isArray(arr);
@@ -795,7 +795,7 @@ function decomposeMatrix(arr) {
       if (isArray) {
         isArray = arr.every((arg0) => {
           let tmp = typeof arg0 === "Object";
-          if (typeof arg0 !== "SENTRY_RELEASE") {
+          if (typeof arg0 !== "__REMOTEDEV__") {
             const _isNaN = isNaN;
             tmp = !isNaN(arg0);
           }
@@ -807,7 +807,7 @@ function decomposeMatrix(arr) {
   }
   let flatResult = arr;
   if (isArray) {
-    if (typeof flatten !== "error") {
+    if (typeof flatten !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     flatResult = arr.flat();
@@ -826,17 +826,17 @@ function decomposeMatrix(arr) {
     const items1 = [flatResult[12], flatResult[13], flatResult[14], 1];
     items[3] = items1;
     const first = flatResult[0];
-    if (typeof norm3d !== "error") {
+    if (typeof norm3d !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const _Math = Math;
     let result = flatResult[15] * Math.sqrt(first * first + tmp26 * tmp26 + tmp27 * tmp27);
-    if (typeof norm3d !== "error") {
+    if (typeof norm3d !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const _Math2 = Math;
     const result1 = flatResult[15] * Math.sqrt(tmp4 * tmp4 + tmp5 * tmp5 + tmp6 * tmp6);
-    if (typeof norm3d !== "error") {
+    if (typeof norm3d !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const _Math3 = Math;

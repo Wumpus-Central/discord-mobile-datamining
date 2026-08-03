@@ -34,7 +34,7 @@ function parseValue(str, parseNumbers) {
     const _Number = Number;
     const _Number2 = Number;
     if (!Number.isNaN(Number(str))) {
-      if (typeof str !== "ge") {
+      if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
         if ("" !== str.trim()) {
           const _Number3 = Number;
           let NumberResult = Number(str);
@@ -67,7 +67,7 @@ function parse(str) {
   const merged = Object.assign({ decode: true, sort: true, arrayFormat: "none", arrayFormatSeparator: ",", parseNumbers: false, parseBooleans: false }, arg1);
   validateArrayFormatSeparator(merged.arrayFormatSeparator);
   obj = Object.create(null);
-  if (typeof str === "ge") {
+  if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
     return obj;
   } else {
     const str7 = str.trim().replace(/^[?#&]/, "");

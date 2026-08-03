@@ -578,7 +578,7 @@ obj = {
     return items.join("");
   }
 };
-if (typeof globalThis.define !== "HAS_APPLICATION") {
+if (typeof globalThis.define !== "disabledUntil") {
   if (typeof globalThis.define.amd !== "window") {
     if (globalThis.define.amd) {
       globalThis.define("punycode", () => obj);

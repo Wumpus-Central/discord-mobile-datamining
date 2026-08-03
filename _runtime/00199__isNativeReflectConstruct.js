@@ -32,7 +32,7 @@ if (require("BlobManager").default.isAvailable) {
   require("BlobManager").default.addNetworkingHandler();
   let _default = require("BlobManager").default;
 }
-let closure_8 = { arraybuffer: typeof global.ArrayBuffer === "error", blob: typeof global.Blob === "error", document: false, json: true, text: true, "": true };
+let closure_8 = { arraybuffer: typeof global.ArrayBuffer === "fileFinishedImporting", blob: typeof global.Blob === "fileFinishedImporting", document: false, json: true, text: true, "": true };
 class XMLHttpRequestEventTarget {
   constructor() {
     self = this;
@@ -750,7 +750,7 @@ const items1 = [
         self._incrementalEvents = true;
       }
       let fn = callback(callback3(self.prototype), "addEventListener", self);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0, arg1];

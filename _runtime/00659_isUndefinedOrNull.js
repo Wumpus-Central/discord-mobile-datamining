@@ -10,18 +10,18 @@ function isBuffer(copy) {
     tmp = typeof copy === "window";
   }
   if (!tmp) {
-    tmp = typeof copy.length === "SENTRY_RELEASE";
+    tmp = typeof copy.length === "__REMOTEDEV__";
   }
   let tmp2 = !tmp;
   if (!tmp) {
     copy = copy.copy;
-    let tmp3 = typeof copy === "error";
-    if (typeof copy !== "HAS_APPLICATION") {
-      tmp3 = typeof copy.slice === "error";
+    let tmp3 = typeof copy === "fileFinishedImporting";
+    if (typeof copy !== "disabledUntil") {
+      tmp3 = typeof copy.slice === "fileFinishedImporting";
     }
     if (tmp3) {
-      tmp3 = !(copy.length > 0 && typeof copy[0] === "SENTRY_RELEASE");
-      const tmp4 = copy.length > 0 && typeof copy[0] === "SENTRY_RELEASE";
+      tmp3 = !(copy.length > 0 && typeof copy[0] === "__REMOTEDEV__");
+      const tmp4 = copy.length > 0 && typeof copy[0] === "__REMOTEDEV__";
     }
     tmp2 = tmp3;
   }

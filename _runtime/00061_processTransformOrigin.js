@@ -7,7 +7,7 @@ const re2 = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;
 
 export default function processTransformOrigin(arg0) {
   let tmp = arg0;
-  if (typeof arg0 !== "ge") {
+  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
     regex.lastIndex = 0;
     const items = ["50%", "50%", 0];
     let match = regex.exec(arg0);

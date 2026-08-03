@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/referral_program/native/images", width: 200.5, height: 114, scales: [2, 3], hash: "fbbee3b1c0716eaa554a8f9a94badc67", name: "asset_nitro_ticket", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/forum_channels", width: 343, height: 180, scales: [1], hash: "4344770a7977c211fcddc04a38055e0c", name: "channel_settings_grid_view_example_post", type: "png" });

@@ -423,11 +423,11 @@ export const createBrowserHistory = function createBrowserHistory(props) {
     confirmTransitionTo(arg0, POP, getUserConfirmation, arg3) {
       if (null != c0) {
         let tmp2Result = c0;
-        if (typeof c0 !== "HAS_APPLICATION") {
+        if (typeof c0 !== "disabledUntil") {
           tmp2Result = tmp2(arg0, POP);
         }
         if (typeof tmp2Result === "y") {
-          if (typeof getUserConfirmation === "error") {
+          if (typeof getUserConfirmation === "fileFinishedImporting") {
             getUserConfirmation(tmp2Result, arg3);
           } else {
             arg3(true);
@@ -979,11 +979,11 @@ export const createHashHistory = function createHashHistory(props) {
     confirmTransitionTo(arg0, POP, getUserConfirmation, arg3) {
       if (null != c0) {
         let tmp2Result = c0;
-        if (typeof c0 !== "HAS_APPLICATION") {
+        if (typeof c0 !== "disabledUntil") {
           tmp2Result = tmp2(arg0, POP);
         }
         if (typeof tmp2Result === "y") {
-          if (typeof getUserConfirmation === "error") {
+          if (typeof getUserConfirmation === "fileFinishedImporting") {
             getUserConfirmation(tmp2Result, arg3);
           } else {
             arg3(true);
@@ -1417,11 +1417,11 @@ export const createMemoryHistory = function createMemoryHistory(props) {
     confirmTransitionTo(arg0, POP, getUserConfirmation, arg3) {
       if (null != c0) {
         let tmp2Result = c0;
-        if (typeof c0 !== "HAS_APPLICATION") {
+        if (typeof c0 !== "disabledUntil") {
           tmp2Result = tmp2(arg0, POP);
         }
         if (typeof tmp2Result === "y") {
-          if (typeof getUserConfirmation === "error") {
+          if (typeof getUserConfirmation === "fileFinishedImporting") {
             getUserConfirmation(tmp2Result, arg3);
           } else {
             arg3(true);

@@ -69,20 +69,20 @@ function getNotificationAttributes(arg0, requestId) {
     if (requestId != null) {
       progress = requestId.progress;
     }
-    if (typeof progress !== "SENTRY_RELEASE") {
+    if (typeof progress !== "__REMOTEDEV__") {
       obj["mcp.progress.current"] = requestId.progress;
     }
     let total;
     if (requestId != null) {
       total = requestId.total;
     }
-    if (typeof total !== "SENTRY_RELEASE") {
+    if (typeof total !== "__REMOTEDEV__") {
       obj["mcp.progress.total"] = requestId.total;
       let progress1;
       if (requestId != null) {
         progress1 = requestId.progress;
       }
-      if (typeof progress1 !== "SENTRY_RELEASE") {
+      if (typeof progress1 !== "__REMOTEDEV__") {
         obj["mcp.progress.percentage"] = requestId.progress / requestId.total * 100;
       }
     }

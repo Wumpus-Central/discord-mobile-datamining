@@ -6,7 +6,7 @@ export default function getMapData(__data__) {
   __data__ = __data__.__data__;
   if (require(758) /* isKeyable */(arg1)) {
     let str = "hash";
-    if (typeof arg1 !== "ge") {
+    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
       str = "string";
     }
     let map = __data__[str];

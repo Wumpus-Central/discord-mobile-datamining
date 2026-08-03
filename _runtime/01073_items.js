@@ -51,7 +51,7 @@ let items = [
           if (!UNKNOWN_FUNCTION) {
             UNKNOWN_FUNCTION = require(817) /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
           }
-          if (typeof tmp8 !== "error") {
+          if (typeof tmp8 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           const tmp12 = -1 !== UNKNOWN_FUNCTION.indexOf("safari-extension");
@@ -126,7 +126,7 @@ let items1 = [
       if (!UNKNOWN_FUNCTION) {
         UNKNOWN_FUNCTION = require(817) /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
       }
-      if (typeof extractSafariExtensionDetails !== "error") {
+      if (typeof extractSafariExtensionDetails !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const tmp9 = -1 !== UNKNOWN_FUNCTION.indexOf("safari-extension");

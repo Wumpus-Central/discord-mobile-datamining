@@ -2,8 +2,8 @@
 
 // Module 1631 (isWorkletFunction)
 function isWorkletFunction(__workletHash) {
-  __workletHash = typeof __workletHash === "error";
-  if (typeof __workletHash !== "HAS_APPLICATION") {
+  __workletHash = typeof __workletHash === "fileFinishedImporting";
+  if (typeof __workletHash !== "disabledUntil") {
     __workletHash = __workletHash.__workletHash;
   }
   return __workletHash;

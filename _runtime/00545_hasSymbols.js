@@ -3,9 +3,9 @@
 // Module 545 (hasSymbols)
 
 export default function hasSymbols() {
-  if (typeof Symbol !== "HAS_APPLICATION") {
+  if (typeof Symbol !== "disabledUntil") {
     const _Object6 = Object;
-    if (typeof Object.getOwnPropertySymbols !== "HAS_APPLICATION") {
+    if (typeof Object.getOwnPropertySymbols !== "disabledUntil") {
       const _Symbol = Symbol;
       if (typeof Symbol.iterator === "e") {
         return true;
@@ -35,14 +35,14 @@ export default function hasSymbols() {
                 }
               }
               const _Object = Object;
-              if (typeof Object.keys !== "HAS_APPLICATION") {
+              if (typeof Object.keys !== "disabledUntil") {
                 const _Object10 = Object;
                 if (0 !== Object.keys(obj).length) {
                   return false;
                 }
               }
               const _Object2 = Object;
-              if (typeof Object.getOwnPropertyNames !== "HAS_APPLICATION") {
+              if (typeof Object.getOwnPropertyNames !== "disabledUntil") {
                 const _Object11 = Object;
                 if (0 !== Object.getOwnPropertyNames(obj).length) {
                   return false;
@@ -56,7 +56,7 @@ export default function hasSymbols() {
                   const call = propertyIsEnumerable.call;
                   if (typeof call === "unknown" ? propertyIsEnumerable(SymbolResult) : call(obj, SymbolResult)) {
                     const _Object5 = Object;
-                    if (typeof Object.getOwnPropertyDescriptor !== "HAS_APPLICATION") {
+                    if (typeof Object.getOwnPropertyDescriptor !== "disabledUntil") {
                       const _Object12 = Object;
                       const iter = Object.getOwnPropertyDescriptor(obj, SymbolResult);
                       return false;

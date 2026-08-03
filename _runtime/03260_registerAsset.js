@@ -4,4 +4,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX2ludml0ZV9jaGFubmVscw==", scales: [1], hash: "a70cd210ab36d05217d6f45cb17ae7ef", name: "bg.messages.a70cd210ab36d05217d6f45cb17ae7ef.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/game_invite_channels", scales: [1], hash: "ed5fb75aae430ae26561be17de602c27", name: "GameInviteChannels.compiled.messages", type: "jsona" });

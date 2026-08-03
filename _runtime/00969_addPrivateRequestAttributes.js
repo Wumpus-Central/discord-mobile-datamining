@@ -44,7 +44,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
     get(self) {
       let obj = self[arg1];
       let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-      if (typeof obj !== "HAS_APPLICATION") {
+      if (typeof obj !== "disabledUntil") {
         if (tmpResult.shouldInstrument(methodPath)) {
           str = obj;
           let closure_2 = self;
@@ -347,7 +347,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
         }
         return proxy;
       }
-      if (typeof obj === "error") {
+      if (typeof obj === "fileFinishedImporting") {
         proxy = obj.bind(self);
       } else {
         proxy = obj;
@@ -363,7 +363,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
             obj[0] = function get(self) {
               let obj = self[arg1];
               let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-              if (typeof obj !== "HAS_APPLICATION") {
+              if (typeof obj !== "disabledUntil") {
                 if (tmpResult.shouldInstrument(methodPath)) {
                   str = obj;
                   let closure_2 = self;
@@ -455,7 +455,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 }
                                 const obj2 = str(methodPath[4]);
                               }
-                              return str(methodPath[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F113951 */ function() { ... }, () => { ... });
+                              return str(methodPath[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F113759 */ function() { ... }, () => { ... });
                             });
                           }
                         }
@@ -480,7 +480,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                               let c6 = 0;
                               let c7 = 0;
                               let c5 = 0;
-                              return (/* F119041 */ function*() { ... })();
+                              return (/* F118851 */ function*() { ... })();
                             });
                             let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj, function(arg0) {
                               const self = this;
@@ -531,7 +531,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                 }
                 return proxy;
               }
-              if (typeof obj === "error") {
+              if (typeof obj === "fileFinishedImporting") {
                 proxy = obj.bind(self);
               } else {
                 proxy = obj;
@@ -547,7 +547,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                     obj[0] = function get(self) {
                       let obj = self[arg1];
                       let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-                      if (typeof obj !== "HAS_APPLICATION") {
+                      if (typeof obj !== "disabledUntil") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           str = obj;
                           let closure_2 = self;
@@ -641,7 +641,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 if (BooleanResult) {
                                   if (!tmp12) {
                                     closure_0 = undefined;
-                                    closure_0 = _self(/* F117984 */ function() { ... });
+                                    closure_0 = _self(/* F117794 */ function() { ... });
                                     let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj, () => { ... });
                                     const tmp2Result3 = tmp2(startSpanManual[7]);
                                   }
@@ -663,7 +663,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                         }
                         return proxy;
                       }
-                      if (typeof obj === "error") {
+                      if (typeof obj === "fileFinishedImporting") {
                         proxy = obj.bind(self);
                       } else {
                         proxy = obj;
@@ -679,7 +679,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                             obj[0] = function get(self) {
                               let obj = self[arg1];
                               let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-                              if (typeof obj !== "HAS_APPLICATION") {
+                              if (typeof obj !== "disabledUntil") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
                                   str = obj;
                                   let closure_2 = self;
@@ -691,7 +691,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 }
                                 return proxy;
                               }
-                              if (typeof obj === "error") {
+                              if (typeof obj === "fileFinishedImporting") {
                                 proxy = obj.bind(self);
                               } else {
                                 proxy = obj;

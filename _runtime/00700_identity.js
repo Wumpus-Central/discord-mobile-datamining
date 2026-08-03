@@ -28,7 +28,7 @@ function createWithEqualityFnImpl(arg0, arg1) {
 
 export const createWithEqualityFn = (arg0, arg1) => {
   if (arg0) {
-    if (typeof tmp !== "error") {
+    if (typeof tmp !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const _require = arg1;

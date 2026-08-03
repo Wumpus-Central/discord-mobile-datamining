@@ -174,7 +174,7 @@ arg5.useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
                   if (sharedValue4.value) {
                     tmp93.value = effectiveHeight;
                     effectiveHeight = fn;
-                    if (typeof fn !== "error") {
+                    if (typeof fn !== "fileFinishedImporting") {
                       effectiveHeight = HermesBuiltin.throwTypeError();
                     }
                     const _Math7 = Math;
@@ -201,7 +201,7 @@ arg5.useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
             }
             if (value) {
               sharedValue.value = effectiveHeight;
-              if (typeof fn !== "error") {
+              if (typeof fn !== "fileFinishedImporting") {
                 effectiveHeight = HermesBuiltin.throwTypeError();
               }
               let tmp84 = effectiveHeight;
@@ -229,7 +229,7 @@ arg5.useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
         if ("never" === keyboardLiftBehavior) {
           if (sharedValue4.value) {
             if (effectiveHeight1 < sharedValue.value) {
-              if (typeof fn !== "error") {
+              if (typeof fn !== "fileFinishedImporting") {
                 effectiveHeight = HermesBuiltin.throwTypeError();
               }
               let tmp67 = effectiveHeight1;
@@ -249,7 +249,7 @@ arg5.useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
         if (obj4.shouldShiftContent(keyboardLiftBehavior, true)) {
           if (-1 === sharedValue2.value) {
             if (sharedValue4.value) {
-              if (typeof fn !== "error") {
+              if (typeof fn !== "fileFinishedImporting") {
                 effectiveHeight = HermesBuiltin.throwTypeError();
               }
               let tmp55 = effectiveHeight1;

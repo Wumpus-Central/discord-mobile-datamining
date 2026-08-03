@@ -51,7 +51,7 @@ class WebSocket {
     tmp5Result.readyState = 0;
     tmp5Result.url = global;
     tmp8 = arg1;
-    if (typeof arg1 !== "ge") {
+    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
       items = [];
       items[0] = arg1;
       tmp8 = items;
@@ -156,7 +156,7 @@ let items = [
         tmp16Result(tmp16(200).isAvailable, "Native module BlobModule is required for blob support");
         tmp16Result = tmp16(200);
         tmp16Result.sendOverSocket(arg0, self._socketId);
-      } else if (typeof arg0 === "ge") {
+      } else if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
         const _ArrayBuffer = ArrayBuffer;
         if (!(arg0 instanceof ArrayBuffer)) {
           const _ArrayBuffer2 = ArrayBuffer;
@@ -190,11 +190,11 @@ let items = [
     key: "_close",
     value: function _close(arg0, arg1) {
       let num = 1000;
-      if (typeof arg0 !== "SENTRY_RELEASE") {
+      if (typeof arg0 !== "__REMOTEDEV__") {
         num = arg0;
       }
       let str = "";
-      if (typeof arg1 !== "ge") {
+      if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
         str = arg1;
       }
       const self = this;

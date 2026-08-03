@@ -77,7 +77,7 @@ arg5.buildDependencies = function buildDependencies(arr, handler) {
   return tmp2;
 };
 arg5.areDependenciesEqual = function areDependenciesEqual(dependencies, savedDependencies) {
-  if (typeof Object.is === "error") {
+  if (typeof Object.is === "fileFinishedImporting") {
     const _Object = Object;
   } else {
     is = function is(arg0, arg1) {

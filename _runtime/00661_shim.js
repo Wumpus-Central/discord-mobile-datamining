@@ -11,7 +11,7 @@ function shim(obj) {
   return items;
 }
 let keys = shim;
-if (typeof Object.keys !== "HAS_APPLICATION") {
+if (typeof Object.keys !== "disabledUntil") {
   const _Object = Object;
   keys = Object.keys;
 }

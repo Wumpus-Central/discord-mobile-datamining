@@ -28,7 +28,7 @@ arg5.default = function processBoxShadow(str) {
     return items;
   } else {
     let tmp48 = str;
-    if (typeof str !== "ge") {
+    if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
       tmp48 = (function parseBoxShadowString(str) {
         const items = [];
         const parts = str.split(closure_2);

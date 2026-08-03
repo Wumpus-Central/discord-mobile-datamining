@@ -30,7 +30,7 @@ arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventLis
     }
   }
   if (null != arg2) {
-    if (typeof arg2 === "error") {
+    if (typeof arg2 === "fileFinishedImporting") {
       obj = { handleEvent: null };
       obj[0] = arg2;
       try {

@@ -11,7 +11,7 @@ function serializeAst(ast, value) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    if (typeof nextResult === "ge") {
+    if (typeof nextResult === "__FORMATJS_LISTFORMAT_DATA__") {
       let tmp3 = nextResult;
       let first = tmp2[0];
       let tmp5 = InternalIntlMessage;

@@ -32,12 +32,12 @@ obj = {
     return obj;
   },
   timing(arg0, arg1) {
-    let f66766 = arg1;
+    let f66647 = arg1;
     let closure_1 = arg0;
     const obj = {};
     const merged = Object.assign(closure_1);
-    f66766 = (arg0) => {
-      value.setValue(f66766.toValue);
+    f66647 = (arg0) => {
+      value.setValue(f66647.toValue);
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -70,12 +70,12 @@ obj = {
     return obj;
   },
   spring(animation, arg1) {
-    let f66767 = arg1;
+    let f66648 = arg1;
     let closure_1 = animation;
     const obj = {};
     const merged = Object.assign(closure_1);
-    f66767 = (arg0) => {
-      animation.setValue(f66767.toValue);
+    f66648 = (arg0) => {
+      animation.setValue(f66648.toValue);
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -117,14 +117,14 @@ obj = {
     return obj;
   },
   sequence(arg0) {
-    if (typeof mockCompositeAnimation !== "error") {
+    if (typeof mockCompositeAnimation !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    let f66765 = arg0;
+    let f66646 = arg0;
     const obj = {};
     const merged = Object.assign(obj);
-    f66765 = (arg0) => {
-      const item = f66765.forEach((start) => start.start());
+    f66646 = (arg0) => {
+      const item = f66646.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -157,14 +157,14 @@ obj = {
     return obj;
   },
   parallel(items, arg1) {
-    if (typeof mockCompositeAnimation !== "error") {
+    if (typeof mockCompositeAnimation !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    let f66765 = items;
+    let f66646 = items;
     const obj = {};
     const merged = Object.assign(obj);
-    f66765 = (arg0) => {
-      const item = f66765.forEach((start) => start.start());
+    f66646 = (arg0) => {
+      const item = f66646.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -197,14 +197,14 @@ obj = {
     return obj;
   },
   stagger(arg0, arg1) {
-    if (typeof mockCompositeAnimation !== "error") {
+    if (typeof mockCompositeAnimation !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    let f66765 = arg1;
+    let f66646 = arg1;
     const obj = {};
     const merged = Object.assign(obj);
-    f66765 = (arg0) => {
-      const item = f66765.forEach((start) => start.start());
+    f66646 = (arg0) => {
+      const item = f66646.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }

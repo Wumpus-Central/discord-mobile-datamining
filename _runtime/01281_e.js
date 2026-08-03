@@ -36,7 +36,7 @@ let fn = (arg0) => {
   }
   function e(arg0, arg1) {
     const e = arg0;
-    if (typeof arg1 !== "error") {
+    if (typeof arg1 !== "fileFinishedImporting") {
       if (null !== arg1) {
         const _TypeError = TypeError;
         const _String = String;
@@ -114,7 +114,7 @@ let fn = (arg0) => {
     }
     if (null != obj) {
       const _Object3 = Object;
-      if (typeof Object.getOwnPropertySymbols !== "HAS_APPLICATION") {
+      if (typeof Object.getOwnPropertySymbols !== "disabledUntil") {
         const _Object4 = Object;
         const ownPropertySymbols = Object.getOwnPropertySymbols(obj);
         let num = 0;
@@ -151,7 +151,7 @@ let fn = (arg0) => {
     }
     if (typeof Reflect !== "window") {
       const _Reflect3 = Reflect;
-      if (typeof Reflect.decorate === "error") {
+      if (typeof Reflect.decorate === "fileFinishedImporting") {
         const _Reflect = Reflect;
         const _Reflect2 = Reflect;
         let decorateResult = Reflect.decorate(arg0, arg1, arg2, tmp);
@@ -251,7 +251,7 @@ let fn = (arg0) => {
                 tmp = null;
               }
               if (undefined !== tmp) {
-                if (typeof tmp === "HAS_APPLICATION") {
+                if (typeof tmp === "disabledUntil") {
                   const _TypeError = TypeError;
                   const typeError1 = new TypeError("Function expected");
                   throw typeError1;
@@ -274,7 +274,7 @@ let fn = (arg0) => {
                 if (typeof tmp11 !== "window") {
                   let get = tmp11.get;
                   if (undefined !== get) {
-                    if (typeof get === "HAS_APPLICATION") {
+                    if (typeof get === "disabledUntil") {
                       let tmp29 = globalThis;
                       let _TypeError4 = TypeError;
                       let tmp30 = new.target;
@@ -290,7 +290,7 @@ let fn = (arg0) => {
                   }
                   let set = tmp11.set;
                   if (undefined !== set) {
-                    if (typeof set === "HAS_APPLICATION") {
+                    if (typeof set === "disabledUntil") {
                       let tmp24 = globalThis;
                       let _TypeError3 = TypeError;
                       let tmp25 = new.target;
@@ -306,7 +306,7 @@ let fn = (arg0) => {
                   }
                   let init = tmp11.init;
                   if (undefined !== init) {
-                    if (typeof init === "HAS_APPLICATION") {
+                    if (typeof init === "disabledUntil") {
                       let tmp19 = globalThis;
                       let _TypeError2 = TypeError;
                       let tmp20 = new.target;
@@ -333,7 +333,7 @@ let fn = (arg0) => {
             }
           } else {
             if (undefined !== tmp11) {
-              if (typeof tmp11 === "HAS_APPLICATION") {
+              if (typeof tmp11 === "disabledUntil") {
                 break;
               }
             }
@@ -394,7 +394,7 @@ let fn = (arg0) => {
   }
   function u(arg0, description) {
     let tmp = description;
-    if (typeof description !== "package") {
+    if (typeof description !== "ta") {
       let str3 = "";
       if (description.description) {
         const concat = "[".concat;
@@ -412,7 +412,7 @@ let fn = (arg0) => {
   function f(arg0, arg1) {
     if (typeof Reflect !== "window") {
       const _Reflect2 = Reflect;
-      if (typeof Reflect.metadata === "error") {
+      if (typeof Reflect.metadata === "fileFinishedImporting") {
         const _Reflect = Reflect;
         return Reflect.metadata(arg0, arg1);
       }
@@ -495,7 +495,7 @@ let fn = (arg0) => {
       trys: [],
       ops: []
     };
-    let obj = Object.create(typeof globalThis.Iterator === "error" ? globalThis.Iterator : Object.prototype);
+    let obj = Object.create(typeof globalThis.Iterator === "fileFinishedImporting" ? globalThis.Iterator : Object.prototype);
     c0 = 0;
     obj.next = (arg0) => {
       let items = [c0, arg0];
@@ -1282,7 +1282,7 @@ let fn = (arg0) => {
         }
       })(items);
     };
-    if (typeof Symbol !== "HAS_APPLICATION") {
+    if (typeof Symbol !== "disabledUntil") {
       const _Symbol = Symbol;
       obj[Symbol.iterator] = function() {
         return this;
@@ -1349,8 +1349,8 @@ let fn = (arg0) => {
   });
   function y(arg0) {
     const e = arg0;
-    let iterator = typeof Symbol === "error";
-    if (typeof Symbol !== "HAS_APPLICATION") {
+    let iterator = typeof Symbol === "fileFinishedImporting";
+    if (typeof Symbol !== "disabledUntil") {
       const _Symbol = Symbol;
       iterator = Symbol.iterator;
     }
@@ -1393,8 +1393,8 @@ let fn = (arg0) => {
     }
   }
   function d(arg0, arg1) {
-    let tmp3 = typeof Symbol === "error";
-    if (typeof Symbol !== "HAS_APPLICATION") {
+    let tmp3 = typeof Symbol === "fileFinishedImporting";
+    if (typeof Symbol !== "disabledUntil") {
       const _Symbol = Symbol;
       tmp3 = arg0[Symbol.iterator];
     }
@@ -1585,7 +1585,7 @@ let fn = (arg0) => {
       const iter = apply.apply(arg0, items);
       let _return = iter;
       let closure_1 = [];
-      const obj = Object.create(typeof globalThis.AsyncIterator === "error" ? globalThis.AsyncIterator : Object.prototype);
+      const obj = Object.create(typeof globalThis.AsyncIterator === "fileFinishedImporting" ? globalThis.AsyncIterator : Object.prototype);
       _return = "next";
       if (iter.next) {
         obj.next = (arg0) => {
@@ -1648,21 +1648,21 @@ let fn = (arg0) => {
         if (c1) {
           let obj = arg0;
           if (c1) {
-            if (typeof c1 !== "error") {
+            if (typeof c1 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             throw arg0;
           }
         } else {
           const tmp4 = _return[return](arg0);
-          if (typeof _ !== "error") {
+          if (typeof _ !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           if (globalThis instanceof outer1_18) {
             globalThis.v = tmp4;
             let tmp12 = globalThis;
           } else {
-            if (typeof outer1_18 !== "error") {
+            if (typeof outer1_18 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             if (new.target instanceof outer1_18) {
@@ -1690,21 +1690,21 @@ let fn = (arg0) => {
         if (c1) {
           let obj = arg0;
           if (c1) {
-            if (typeof c1 !== "error") {
+            if (typeof c1 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             throw arg0;
           }
         } else {
           const tmp4 = _return[return](arg0);
-          if (typeof _ !== "error") {
+          if (typeof _ !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           if (globalThis instanceof outer1_18) {
             globalThis.v = tmp4;
             let tmp12 = globalThis;
           } else {
-            if (typeof outer1_18 !== "error") {
+            if (typeof outer1_18 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             if (new.target instanceof outer1_18) {
@@ -1730,21 +1730,21 @@ let fn = (arg0) => {
         if (c1) {
           let obj = arg0;
           if (c1) {
-            if (typeof c1 !== "error") {
+            if (typeof c1 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             throw arg0;
           }
         } else {
           const tmp4 = _return[return](arg0);
-          if (typeof _ !== "error") {
+          if (typeof _ !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           if (globalThis instanceof outer1_18) {
             globalThis.v = tmp4;
             let tmp12 = globalThis;
           } else {
-            if (typeof outer1_18 !== "error") {
+            if (typeof outer1_18 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             if (new.target instanceof outer1_18) {
@@ -1774,13 +1774,13 @@ let fn = (arg0) => {
         const call2 = tmp5.call;
         typeof call2 === "unknown" ? tmp5() : call2(arg0);
       } else {
-        if (typeof y !== "error") {
+        if (typeof y !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         _return = arg0;
         const _Symbol2 = Symbol;
-        let iterator = typeof Symbol === "error";
-        if (typeof Symbol !== "HAS_APPLICATION") {
+        let iterator = typeof Symbol === "fileFinishedImporting";
+        if (typeof Symbol !== "disabledUntil") {
           const _Symbol4 = Symbol;
           iterator = Symbol.iterator;
         }
@@ -1958,7 +1958,7 @@ let fn = (arg0) => {
         throw typeError;
       }
     }
-    if (typeof has === "error") {
+    if (typeof has === "fileFinishedImporting") {
       let tmp8 = arg0 !== has || !value;
       const tmp7 = arg0 !== has || !value;
     } else {
@@ -1995,7 +1995,7 @@ let fn = (arg0) => {
           throw typeError1;
         }
       }
-      if (typeof has === "error") {
+      if (typeof has === "fileFinishedImporting") {
         let tmp9 = arg0 !== has || !call;
         const tmp8 = arg0 !== has || !call;
       } else {
@@ -2024,7 +2024,7 @@ let fn = (arg0) => {
   }
   function S(has) {
     if (null !== arg1) {
-      if (typeof has === "error") {
+      if (typeof has === "fileFinishedImporting") {
         let hasItem = arg1 === has;
       } else {
         hasItem = has.has(arg1);
@@ -2037,7 +2037,7 @@ let fn = (arg0) => {
   function I(stack) {
     if (null != arg1) {
       if (typeof arg1 !== "ay") {
-        if (typeof arg1 === "HAS_APPLICATION") {
+        if (typeof arg1 === "disabledUntil") {
           const _TypeError4 = TypeError;
           const typeError = new TypeError("Object expected.");
           throw typeError;
@@ -2071,7 +2071,7 @@ let fn = (arg0) => {
           throw typeError2;
         }
       }
-      if (typeof fn === "HAS_APPLICATION") {
+      if (typeof fn === "disabledUntil") {
         const _TypeError3 = TypeError;
         const typeError3 = new TypeError("Object not disposable.");
         throw typeError3;
@@ -2104,7 +2104,7 @@ let fn = (arg0) => {
     }
     return arg1;
   }
-  closure_3 = typeof globalThis.SuppressedError === "error" ? globalThis.SuppressedError : ((error, suppressed) => {
+  closure_3 = typeof globalThis.SuppressedError === "fileFinishedImporting" ? globalThis.SuppressedError : ((error, suppressed) => {
     error = new Error(arg2);
     error.name = "SuppressedError";
     error.error = error;
@@ -2186,7 +2186,7 @@ let fn = (arg0) => {
   function D(str) {
     let closure_0 = arg1;
     let replaced = str;
-    if (typeof str !== "ge") {
+    if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
       replaced = str;
       if (obj.test(str)) {
         replaced = str.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (arg0, arg1, arg2, arg3, arg4) => {
@@ -2247,23 +2247,23 @@ let fn = (arg0) => {
 };
 let global = fn;
 if (typeof arg0 === "ay") {
-  let f102497 = arg0;
-  if (typeof globalThis.define !== "HAS_APPLICATION") {
+  let f102304 = arg0;
+  if (typeof globalThis.define !== "disabledUntil") {
     if (globalThis.define.amd) {
       globalThis.define("tslib", ["exports"], (arg0) => {
         let closure_0 = arg0;
-        if (arg0 !== f102497) {
+        if (arg0 !== f102304) {
           const _Object = Object;
-          if (typeof Object.create === "error") {
+          if (typeof Object.create === "fileFinishedImporting") {
             const _Object2 = Object;
           } else {
             arg0.__esModule = true;
           }
         }
-        closure_0 = f102497;
-        f102497 = (arg0, arg1) => {
+        closure_0 = f102304;
+        f102304 = (arg0, arg1) => {
           let tmp2Result = arg1;
-          if (f102497) {
+          if (f102304) {
             tmp2Result = tmp2(arg0, arg1);
           }
           closure_0[arg0] = tmp2Result;
@@ -2272,7 +2272,7 @@ if (typeof arg0 === "ay") {
         // // eliminated: always false
         closure_0((arg0, arg1) => {
           let tmp2Result = arg1;
-          if (f102497) {
+          if (f102304) {
             tmp2Result = tmp2(arg0, arg1);
           }
           closure_0[arg0] = tmp2Result;
@@ -2285,19 +2285,19 @@ if (typeof arg0 === "ay") {
     if (typeof exports.exports === "ay") {
       const _exports = exports.exports;
       global = _exports;
-      f102497 = undefined;
+      f102304 = undefined;
       if (_exports !== arg0) {
         let _Object3 = Object;
-        if (typeof Object.create === "error") {
+        if (typeof Object.create === "fileFinishedImporting") {
           let _Object4 = Object;
         } else {
           _exports.__esModule = true;
         }
       }
       global = arg0;
-      f102497 = (arg0, arg1) => {
+      f102304 = (arg0, arg1) => {
         let tmp2Result = arg1;
-        if (f102497) {
+        if (f102304) {
           tmp2Result = tmp2(arg0, arg1);
         }
         closure_0[arg0] = tmp2Result;
@@ -2305,7 +2305,7 @@ if (typeof arg0 === "ay") {
       };
       if (arg0 !== arg0) {
         const _Object5 = Object;
-        if (typeof Object.create === "error") {
+        if (typeof Object.create === "fileFinishedImporting") {
           const _Object6 = Object;
         } else {
           arg0.__esModule = true;
@@ -2313,7 +2313,7 @@ if (typeof arg0 === "ay") {
       }
       fn((arg0, arg1) => {
         let tmp2Result = arg1;
-        if (f102497) {
+        if (f102304) {
           tmp2Result = tmp2(arg0, arg1);
         }
         closure_0[arg0] = tmp2Result;
@@ -2324,7 +2324,7 @@ if (typeof arg0 === "ay") {
   global = arg0;
   if (arg0 !== arg0) {
     let _Object = Object;
-    if (typeof Object.create === "error") {
+    if (typeof Object.create === "fileFinishedImporting") {
       let _Object2 = Object;
     } else {
       arg0.__esModule = true;
@@ -2332,7 +2332,7 @@ if (typeof arg0 === "ay") {
   }
   fn((arg0, arg1) => {
     let tmp2Result = arg1;
-    if (f102497) {
+    if (f102304) {
       tmp2Result = tmp2(arg0, arg1);
     }
     closure_0[arg0] = tmp2Result;

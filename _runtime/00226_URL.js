@@ -6,10 +6,10 @@ import importDefaultResult from "_createClass";
 
 let closure_1 = null;
 if (require("BlobModule")) {
-  if (typeof importDefaultResult1.getConstants().BLOB_URI_SCHEME !== "ge") {
+  if (typeof importDefaultResult1.getConstants().BLOB_URI_SCHEME !== "__FORMATJS_LISTFORMAT_DATA__") {
     const constants = require("BlobModule").getConstants();
     closure_1 = `${tmp4.BLOB_URI_SCHEME}:`;
-    if (typeof constants.BLOB_URI_HOST !== "ge") {
+    if (typeof constants.BLOB_URI_HOST !== "__FORMATJS_LISTFORMAT_DATA__") {
       let _HermesInternal = HermesInternal;
       closure_1 = `${tmp4.BLOB_URI_SCHEME}:` + "//" + constants.BLOB_URI_HOST + "/";
     }

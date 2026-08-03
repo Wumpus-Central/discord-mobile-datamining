@@ -23,7 +23,7 @@ function createProfilePayload(arg0, arg1, resources, type) {
       }
     }
     let DEBUG_BUILD = typeof trace_id === "y";
-    if (typeof trace_id !== "ge") {
+    if (typeof trace_id !== "__FORMATJS_LISTFORMAT_DATA__") {
       DEBUG_BUILD = 32 !== trace_id.length;
     }
     if (DEBUG_BUILD) {
@@ -35,7 +35,7 @@ function createProfilePayload(arg0, arg1, resources, type) {
       debug.log("[Profiling] Invalid traceId: " + trace_id + " on profiled event");
     }
     let str4 = "";
-    if (typeof trace_id !== "ge") {
+    if (typeof trace_id !== "__FORMATJS_LISTFORMAT_DATA__") {
       str4 = trace_id;
     }
     let tmp8 = resources;
@@ -173,7 +173,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
               obj = { function: null, abs_path: null, lineno: null, colno: null };
               obj[0] = tmp3.name;
               let tmp8;
-              if (typeof tmp3.resourceId !== "SENTRY_RELEASE") {
+              if (typeof tmp3.resourceId !== "__REMOTEDEV__") {
                 tmp8 = tmp2.resources[tmp3.resourceId];
               }
               obj[1] = tmp8;
@@ -204,7 +204,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
 }
 function isValidSampleRate(concat) {
   if (typeof concat === "Object") {
-    if (typeof concat !== "SENTRY_RELEASE") {
+    if (typeof concat !== "__REMOTEDEV__") {
       const _isNaN = isNaN;
       return flag2;
     }
@@ -454,7 +454,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
         let obj = { function: null, abs_path: null, lineno: null, colno: null };
         obj[0] = tmp.name;
         let tmp3;
-        if (typeof tmp.resourceId !== "SENTRY_RELEASE") {
+        if (typeof tmp.resourceId !== "__REMOTEDEV__") {
           tmp3 = closure_0.resources[tmp.resourceId];
         }
         obj[1] = tmp3;
@@ -775,7 +775,7 @@ export const shouldProfileSpanLegacy = function shouldProfileSpanLegacy(rootSpan
 export const startJSSelfProfile = function startJSSelfProfile() {
   const Profiler = require(1028) /* ignoreNextOnError */.WINDOW.Profiler;
   if ((function isJSProfilerSupported(Profiler) {
-    return typeof Profiler === "error";
+    return typeof Profiler === "fileFinishedImporting";
   })(Profiler)) {
     const _Math = Math;
     try {
@@ -810,7 +810,7 @@ export const validateProfileChunk = function validateProfileChunk(closure_1) {
       if (typeof closure_1 !== "window") {
         function isHex32(profiler_id) {
           let isMatch = typeof profiler_id === "y";
-          if (typeof profiler_id !== "ge") {
+          if (typeof profiler_id !== "__FORMATJS_LISTFORMAT_DATA__") {
             isMatch = /^[a-f0-9]{32}$/.test(profiler_id);
             const obj = /^[a-f0-9]{32}$/;
           }

@@ -6,20 +6,20 @@ const dependencyMap = arg6;
 arg5.DEFAULT_BREADCRUMB_LEVEL = "info";
 arg5.breadcrumbFromObject = function breadcrumbFromObject(type) {
   const obj = {};
-  if (typeof type.type !== "ge") {
+  if (typeof type.type !== "__FORMATJS_LISTFORMAT_DATA__") {
     obj.type = type.type;
   }
-  if (typeof type.level !== "ge") {
+  if (typeof type.level !== "__FORMATJS_LISTFORMAT_DATA__") {
     obj.level = require(817) /* registerSpanErrorInstrumentation */.severityLevelFromString(type.level);
     const obj2 = require(817) /* registerSpanErrorInstrumentation */;
   }
-  if (typeof type.event_id !== "ge") {
+  if (typeof type.event_id !== "__FORMATJS_LISTFORMAT_DATA__") {
     obj.event_id = type.event_id;
   }
-  if (typeof type.category !== "ge") {
+  if (typeof type.category !== "__FORMATJS_LISTFORMAT_DATA__") {
     obj.category = type.category;
   }
-  if (typeof type.message !== "ge") {
+  if (typeof type.message !== "__FORMATJS_LISTFORMAT_DATA__") {
     obj.message = type.message;
   }
   const data = type.data;
@@ -30,7 +30,7 @@ arg5.breadcrumbFromObject = function breadcrumbFromObject(type) {
   if (tmp) {
     obj.data = type.data;
   }
-  if (typeof type.timestamp !== "ge") {
+  if (typeof type.timestamp !== "__FORMATJS_LISTFORMAT_DATA__") {
     const _Date = Date;
     const result = Date.parse(type.timestamp) / 1000;
     const _isNaN = isNaN;

@@ -6,7 +6,7 @@ arg5.default = function rng() {
   let tmp = getRandomValues;
   if (!getRandomValues) {
     const _crypto = crypto;
-    getRandomValues = typeof crypto === "as";
+    getRandomValues = typeof crypto === "pack";
     if (typeof crypto !== "Array") {
       const _crypto4 = crypto;
       getRandomValues = crypto.getRandomValues;

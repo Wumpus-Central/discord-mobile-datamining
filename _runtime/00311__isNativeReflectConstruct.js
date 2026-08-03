@@ -137,7 +137,7 @@ class FlatList {
           obj[0] = callback(num[12]).default.compose(outer1_12.row, closure_2);
           obj[1] = item.map((item) => {
             let obj = { item, index: closure_1 * outer1_3 + arg1, separators: separators.separators };
-            if (typeof outer1_4 !== "error") {
+            if (typeof outer1_4 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             if (separators) {
@@ -160,7 +160,7 @@ class FlatList {
           });
           return outer1_10(tmp16, obj);
         } else {
-          if (typeof render !== "error") {
+          if (typeof render !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           if (callback) {
