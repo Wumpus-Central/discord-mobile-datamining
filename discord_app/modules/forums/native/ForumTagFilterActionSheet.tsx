@@ -1,6 +1,6 @@
-// === Module 11977: EmojiIcon ===
+// === Module 11881: EmojiIcon ===
 
-// Module 11977 (EmojiIcon)
+// Module 11881 (EmojiIcon)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "set";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -43,7 +43,7 @@ function EmojiIcon(arg0) {
     emojiName = "";
   }
   obj[4] = emojiName;
-  return jsx(importDefault(5272), { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
+  return jsx(importDefault(5210), { style: tmp.emoji, textEmojiStyle: tmp.textEmoji, fastImageStyle: tmp.imageEmoji, src: null, name: null });
 }
 ({ useForumChannelStore: closure_6, useForumChannelStoreApi: error } = set);
 ({ AnalyticsObjects: metroImportAll, AnalyticsPages: c9, AnalyticsSections: c10 } = ME);

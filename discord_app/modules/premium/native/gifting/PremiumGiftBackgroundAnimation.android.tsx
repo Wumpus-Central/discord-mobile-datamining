@@ -1,6 +1,6 @@
-// === Module 8964: PremiumGiftBackgroundAnimation ===
+// === Module 8787: PremiumGiftBackgroundAnimation ===
 
-// Module 8964 (PremiumGiftBackgroundAnimation)
+// Module 8787 (PremiumGiftBackgroundAnimation)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

@@ -1,6 +1,6 @@
-// === Module 15159: UserSummaryRow ===
+// === Module 15178: UserSummaryRow ===
 
-// Module 15159 (UserSummaryRow)
+// Module 15178 (UserSummaryRow)
 import importAllResult from "Text";
 import { View } from "MINIMUM_HIT_AREA";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
@@ -100,16 +100,16 @@ function UserSummaryRow(arg0) {
       ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp);
       obj[0] = items2;
       let obj1 = { size: "custom", style: null };
-      obj1[1] = max(10438).makeSizeStyle(14);
-      const items3 = [callback(max(11740).HeadphonesIcon, obj1), ];
+      obj1[1] = max(10299).makeSizeStyle(14);
+      const items3 = [callback(max(11633).HeadphonesIcon, obj1), ];
       let obj2 = { variant: "text-xs/semibold", style: null, maxFontSizeMultiplier: 1, children: null };
       obj2[1] = { marginLeft: 4 };
       obj2[3] = audienceCount;
-      items3[1] = callback(max(4251).Text, obj2);
+      items3[1] = callback(max(4189).Text, obj2);
       obj[1] = items3;
       obj[1] = tmp4(tmp5, obj);
       tmp8Result = tmp8(tmp5, obj);
-      const obj5 = max(10438);
+      const obj5 = max(10299);
       const tmp9 = users.length > 0 && { marginLeft: 4 };
     }
     items[1] = tmp8Result;
@@ -135,7 +135,7 @@ function JoinChannelButton(label) {
   }
   const tmp = callback4();
   const items = [channel];
-  const tmp2 = importDefault(4191)();
+  const tmp2 = importDefault(4129)();
   let obj = { style: tmp.button, children: null };
   const callback = importAllResult.useCallback(() => {
     if (null != activeEventOrStageInstanceChannel) {
@@ -151,7 +151,7 @@ function JoinChannelButton(label) {
     }
   }, items);
   obj = { onPress: callback, variant: null, size: "sm", disabled: null, text: null };
-  const tmp3 = importDefault(9011)();
+  const tmp3 = importDefault(8834)();
   const tmp6 = View;
   let str = "tertiary";
   if (obj3.isThemeLight(tmp2)) {
@@ -163,7 +163,7 @@ function JoinChannelButton(label) {
   obj[1] = str;
   obj[3] = disabled;
   obj[4] = label.label;
-  obj[1] = closure_13(channel(4666).Button, obj);
+  obj[1] = closure_13(channel(4604).Button, obj);
   return closure_13(tmp6, obj);
 }
 function GuildVoiceEventNotice(channel) {
@@ -177,7 +177,7 @@ function GuildVoiceEventNotice(channel) {
   let obj1 = channel(589);
   const items1 = [getUncachedChannelPermissions];
   const stateFromStores = obj1.useStateFromStores(items1, () => outer1_9.can(outer1_12.CONNECT, channel));
-  const tmp2 = importDefault(4446)(channel);
+  const tmp2 = importDefault(4384)(channel);
   const items2 = [reset];
   obj = { heading: null, topic: null, location: null, LocationIcon: null, LiveIcon: null, voiceUsers: null, joinButton: null };
   const stateFromStores1 = channel(589).useStateFromStores(items2, () => outer1_8.getAllApplicationStreamsForChannel(channel.id).length > 0);
@@ -187,8 +187,8 @@ function GuildVoiceEventNotice(channel) {
   obj[2] = tmp2;
   const obj3 = channel(589);
   const tmp8 = closure_31;
-  obj[3] = channel(4716).getChannelIconComponent(channel);
-  obj[4] = channel(8636).CalendarIcon;
+  obj[3] = channel(4654).getChannelIconComponent(channel);
+  obj[4] = channel(8331).CalendarIcon;
   obj = { guildId: channel.guild_id, users: stateFromStoresArray, isLiveStreaming: stateFromStores1 };
   obj[5] = callback(UserSummaryRow, obj);
   let tmp7Result;
@@ -204,7 +204,7 @@ function GuildVoiceEventNotice(channel) {
 }
 function GuildExternalEventNotice(guildEvent) {
   guildEvent = guildEvent.guildEvent;
-  let obj = require(8524) /* getChannelFromEvent */;
+  let obj = require(8217) /* getChannelFromEvent */;
   const locationFromEvent = obj.getLocationFromEvent(guildEvent);
   let tmp4 = null;
   if (null != locationFromEvent) {
@@ -213,8 +213,8 @@ function GuildExternalEventNotice(guildEvent) {
     obj[0] = intl.string(tmp(1236).t.TxqPQR);
     obj[1] = guildEvent.name;
     obj[2] = callback2(locationFromEvent, true);
-    obj[3] = tmp(8562).LocationIcon;
-    obj[4] = tmp(8636).CalendarIcon;
+    obj[3] = tmp(8255).LocationIcon;
+    obj[4] = tmp(8331).CalendarIcon;
     obj = { guildEvent: null };
     obj[0] = guildEvent;
     obj[5] = callback(SeeDetailButton, obj);
@@ -234,40 +234,40 @@ function SeeDetailButton(guildEvent) {
   obj = { onPress: callback, variant: "active", size: "sm", text: null };
   const intl = guildEvent(1236).intl;
   obj[3] = intl.string(guildEvent(1236).t.z4FcDs);
-  obj[1] = callback(guildEvent(4666).Button, obj);
+  obj[1] = callback(guildEvent(4604).Button, obj);
   return callback(View, obj);
 }
 function GuildLiveStageNotice(channel) {
   channel = channel.channel;
-  let obj = channel(5086);
-  const stageParticipants = obj.useStageParticipants(channel.id, channel(5080).StageChannelParticipantNamedIndex.SPEAKER);
+  let obj = channel(5024);
+  const stageParticipants = obj.useStageParticipants(channel.id, channel(5018).StageChannelParticipantNamedIndex.SPEAKER);
   const found = stageParticipants.filter((type) => type.type === channel(table[38]).StageChannelParticipantTypes.VOICE);
   const mapped = found.map((user) => user.user);
   let obj1 = channel(589);
   const items = [getActiveStageChannelIds];
   const items1 = [channel.id];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_6.getParticipantCount(channel.id, channel(outer1_3[38]).StageChannelParticipantNamedIndex.AUDIENCE), items1);
-  const tmp2 = importDefault(4446)(channel);
+  const tmp2 = importDefault(4384)(channel);
   const items2 = [getUncachedChannelPermissions];
   const stateFromStores1 = channel(589).useStateFromStores(items2, () => outer1_9.can(outer1_12.CONNECT, channel));
   const obj3 = channel(589);
-  const stageHasStream = channel(5073).useStageHasStream(channel.id);
-  const obj4 = channel(5073);
-  const guildActiveEvent = channel(8630).useGuildActiveEvent(channel.guild_id);
+  const stageHasStream = channel(5011).useStageHasStream(channel.id);
+  const obj4 = channel(5011);
+  const guildActiveEvent = channel(8325).useGuildActiveEvent(channel.guild_id);
   obj = { heading: null, location: null, LocationIcon: null, LiveIcon: null, topic: null, voiceUsers: null, joinButton: null };
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t["X2K3/4"]);
   obj[1] = tmp2;
   let channelIconComponent;
   if (null != guildActiveEvent) {
-    channelIconComponent = tmp3(4716).getChannelIconComponent(channel);
-    const tmp3Result = tmp3(4716);
+    channelIconComponent = tmp3(4654).getChannelIconComponent(channel);
+    const tmp3Result = tmp3(4654);
   }
   obj[2] = channelIconComponent;
   if (null != guildActiveEvent) {
-    let StageIcon = tmp3(8636).CalendarIcon;
+    let StageIcon = tmp3(8331).CalendarIcon;
   } else {
-    StageIcon = tmp3(4777).StageIcon;
+    StageIcon = tmp3(4715).StageIcon;
   }
   obj[3] = StageIcon;
   obj[4] = channel.stageInstance.topic;
@@ -307,8 +307,8 @@ obj.guild = {
     if (typeof content.content === "y") {
       content = content.content;
     } else {
-      content = require(10147) /* smartOutput */.smartOutput(content, output, state);
-      const obj = require(10147) /* smartOutput */;
+      content = require(10004) /* smartOutput */.smartOutput(content, output, state);
+      const obj = require(10004) /* smartOutput */;
     }
     return content;
   }
@@ -376,9 +376,9 @@ let closure_31 = importAllResult.memo((arg0) => {
   items1[1] = isLiveStreaming;
   obj1[2] = items1;
   obj1[3] = heading;
-  items[1] = tmp4(require(4251) /* Text */.Text, obj1);
+  items[1] = tmp4(require(4189) /* Text */.Text, obj1);
   obj[1] = items;
-  const items2 = [closure_14(View, obj), voiceUsers, tmp4(require(4251) /* Text */.Text, { style: tmp.topic, lineClamp: 1, variant: c22, color: "redesign-channel-name-text", children: topic }), , ];
+  const items2 = [closure_14(View, obj), voiceUsers, tmp4(require(4189) /* Text */.Text, { style: tmp.topic, lineClamp: 1, variant: c22, color: "redesign-channel-name-text", children: topic }), , ];
   const obj3 = { style: items3, children: null };
   items3 = [, ];
   ({ row: arr4[0], infoRow: arr4[1] } = tmp);
@@ -402,7 +402,7 @@ let closure_31 = importAllResult.memo((arg0) => {
     obj7[0] = num;
     obj5[3] = obj7;
     obj5[4] = _location;
-    items4[1] = tmp4(tmp7(4251).Text, obj5);
+    items4[1] = tmp4(tmp7(4189).Text, obj5);
     obj6[0] = items4;
     tmp2Result = tmp2(closure_15, obj6);
     const tmp10 = closure_15;
@@ -422,9 +422,9 @@ export default importAllResult.memo((guild) => {
   guild = guild.guild;
   let activeEventOrStageInstanceChannel;
   let guildActiveEvent;
-  let obj = activeEventOrStageInstanceChannel(15158);
+  let obj = activeEventOrStageInstanceChannel(15177);
   activeEventOrStageInstanceChannel = obj.useActiveEventOrStageInstanceChannel(guild.id);
-  let obj1 = activeEventOrStageInstanceChannel(8630);
+  let obj1 = activeEventOrStageInstanceChannel(8325);
   guildActiveEvent = obj1.useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(589);
   const items = [handleStageInstanceCreateOrUpdate];
@@ -507,7 +507,7 @@ export default importAllResult.memo((guild) => {
     obj2[2] = callback;
     obj2[3] = callback1;
     obj2[4] = tmp13;
-    tmp20 = callback(activeEventOrStageInstanceChannel(5288).Card, obj2);
+    tmp20 = callback(activeEventOrStageInstanceChannel(5226).Card, obj2);
   }
   return tmp20;
 });
@@ -519,12 +519,12 @@ export const getScaledLiveChannelNoticeHeight = function getScaledLiveChannelNot
   let hasSpeakers;
   let hasStream;
   ({ hasSpeakers, hasButton, hasAudience, hasStream } = guildLiveChannelNoticeInfo);
-  require(10068) /* map */;
+  require(9925) /* map */;
   if (!hasSpeakers) {
     if (!hasAudience) {
       let num = 0;
     }
-    let tmpResult = tmp(10068);
+    let tmpResult = tmp(9925);
     const sum = PX_82 + tmpResult.scaleTextLineHeight(c22, fontScale);
     tmpResult = tmp(500);
     let num2 = 0;
@@ -533,9 +533,9 @@ export const getScaledLiveChannelNoticeHeight = function getScaledLiveChannelNot
     }
     const sum1 = PX_4 + num2;
     let num3 = 0;
-    const sum2 = sum1 + tmp(10068).scaleTextLineHeight(c23, fontScale);
+    const sum2 = sum1 + tmp(9925).scaleTextLineHeight(c23, fontScale);
     if (hasButton) {
-      num3 = PX_82 + tmp(4670).SMALL_BUTTON_HEIGHT;
+      num3 = PX_82 + tmp(4608).SMALL_BUTTON_HEIGHT;
     }
     return PX_8 + PX_122 + tmp4 + num + sum + sum2 + num3 + PX_122 + PX_12;
   }

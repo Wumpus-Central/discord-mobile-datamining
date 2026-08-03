@@ -1,6 +1,6 @@
-// === Module 13828: useTabSelectedGuildId ===
+// === Module 13761: useTabSelectedGuildId ===
 
-// Module 13828 (useTabSelectedGuildId)
+// Module 13761 (useTabSelectedGuildId)
 import handleConnectionOpen from "handleConnectionOpen";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 

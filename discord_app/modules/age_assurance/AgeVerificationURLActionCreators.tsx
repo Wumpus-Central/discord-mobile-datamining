@@ -1,6 +1,6 @@
-// === Module 7714: requestAgeVerification ===
+// === Module 6757: requestAgeVerification ===
 
-// Module 7714 (requestAgeVerification)
+// Module 6757 (requestAgeVerification)
 import sendRequest from "sendRequest";
 import fetchFingerprint from "fetchFingerprint";
 import { VerificationVendorName } from "set";

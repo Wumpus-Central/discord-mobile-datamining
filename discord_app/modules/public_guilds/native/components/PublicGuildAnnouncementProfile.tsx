@@ -1,6 +1,6 @@
-// === Module 11065: PublicGuildAnnouncementProfile ===
+// === Module 10943: PublicGuildAnnouncementProfile ===
 
-// Module 11065 (PublicGuildAnnouncementProfile)
+// Module 10943 (PublicGuildAnnouncementProfile)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -24,28 +24,28 @@ export default function PublicGuildAnnouncementProfile() {
   let obj = { startExpanded: true, children: null };
   obj = { style: tmp.content, children: null };
   obj = { style: tmp.avatar, source: null };
-  let obj3 = require(7939) /* isPublicSystemMessage */;
+  let obj3 = require(7821) /* isPublicSystemMessage */;
   obj[1] = obj3.getPublicSystemMessageAvatar();
-  const items = [callback(importDefault(5207), obj), , , ];
+  const items = [callback(importDefault(5145), obj), , , ];
   const obj1 = { style: tmp.nameWrapper, children: null };
   const obj2 = { source: null, disableColor: true };
-  obj2[0] = importDefault(11066);
+  obj2[0] = importDefault(10944);
   const items1 = [callback(require(1297) /* Button */.Icon, obj2), ];
   obj3 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj3[3] = intl.string(require(1236) /* getSystemLocale */.t.xfAlNx);
-  items1[1] = callback(require(4251) /* Text */.Text, obj3);
+  items1[1] = callback(require(4189) /* Text */.Text, obj3);
   obj1[1] = items1;
   items[1] = callback2(View, obj1);
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj4[3] = intl2.string(require(1236) /* getSystemLocale */.t.BUZ0sl);
-  items[2] = callback(require(4251) /* Text */.Text, obj4);
+  items[2] = callback(require(4189) /* Text */.Text, obj4);
   const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj5[3] = intl3.string(require(1236) /* getSystemLocale */.t.w5beJH);
-  items[3] = callback(require(4251) /* Text */.Text, obj5);
+  items[3] = callback(require(4189) /* Text */.Text, obj5);
   obj[1] = items;
   obj[1] = callback2(View, obj);
-  return callback(require(5309) /* Background */.BottomSheet, obj);
+  return callback(require(5247) /* Background */.BottomSheet, obj);
 };

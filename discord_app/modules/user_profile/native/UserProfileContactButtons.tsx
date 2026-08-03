@@ -1,11 +1,11 @@
-// === Module 12340: FlatFriendButton ===
+// === Module 12242: FlatFriendButton ===
 
-// Module 12340 (FlatFriendButton)
+// Module 12242 (FlatFriendButton)
 import "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "handleRelationshipAddError";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
-import jsxProd from "module_4265";
+import jsxProd from "module_4203";
 import createCacheKey from "createCacheKey";
 
 let closure_6;
@@ -33,7 +33,7 @@ function FlatFriendButton(label) {
   obj[2] = label;
   obj[3] = str;
   const merged1 = Object.assign(merged);
-  return callback(require(4666) /* Button */.Button, obj);
+  return callback(require(4604) /* Button */.Button, obj);
 }
 function FriendRequestButton(user) {
   let ButtonComponent;
@@ -45,18 +45,18 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let upsertRelationship;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  let obj = user(8442);
+  let obj = user(8111);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(5581)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(5519)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12164);
+  let tmp3Result = tmp3(12068);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(589);
   const items = [upsertRelationship];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  upsertRelationship = trackUserProfileAction(4094).useName(user);
+  upsertRelationship = trackUserProfileAction(4032).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -65,9 +65,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12341).UserClockIcon;
+          let UserPlusIcon = tmp3(12243).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4193).UserPlusIcon;
+          UserPlusIcon = tmp3(4131).UserPlusIcon;
         }
         const intl = tmp3(1236).intl;
         const string = intl.string;
@@ -97,11 +97,11 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               outer1_1(outer1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(11830).confirmCancelFriendRequest(obj);
-            const obj3 = user(11830);
+            const result = user(11727).confirmCancelFriendRequest(obj);
+            const obj3 = user(11727);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
-            obj = trackUserProfileAction(9104);
+            obj = trackUserProfileAction(8927);
             obj = { userId: null, context: null };
             obj[0] = user.id;
             obj[1] = dependencyMap;

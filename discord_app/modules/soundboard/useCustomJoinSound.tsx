@@ -1,6 +1,6 @@
-// === Module 5888: CustomSoundType ===
+// === Module 10796: CustomSoundType ===
 
-// Module 5888 (CustomSoundType)
+// Module 10796 (CustomSoundType)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID as closure_3 } from "MAX_LENGTH_SOUND_NAME";
 

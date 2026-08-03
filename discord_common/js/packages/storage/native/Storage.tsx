@@ -339,11 +339,11 @@ prototype["set"] = function set(arg0, value) {
   this.storage[arg0] = { parsed: true, value };
 };
 prototype["setRaw"] = function setRaw(arg0, arg1) {
-  if (typeof arg0 === "ge") {
+  if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
     const _Error2 = Error;
     const error = new Error("Key must be a string");
     throw error;
-  } else if (typeof arg1 === "ge") {
+  } else if (typeof arg1 === "__FORMATJS_LISTFORMAT_DATA__") {
     const _Error = Error;
     const error1 = new Error("value must be a string");
     throw error1;

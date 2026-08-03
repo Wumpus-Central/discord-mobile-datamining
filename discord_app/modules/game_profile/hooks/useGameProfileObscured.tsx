@@ -1,6 +1,6 @@
-// === Module 8786: useGameProfileObscured ===
+// === Module 8497: useGameProfileObscured ===
 
-// Module 8786 (useGameProfileObscured)
+// Module 8497 (useGameProfileObscured)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
@@ -14,8 +14,8 @@ export default function useGameProfileObscured(contentClassification) {
     result = false === tmp4;
   }
   if (result) {
-    result = require(6992) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.contentClassification);
-    const tmpResult = require(6992) /* isAgeRestrictedContentClassification */;
+    result = require(5912) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.contentClassification);
+    const tmpResult = require(5912) /* isAgeRestrictedContentClassification */;
   }
   return result;
 };
@@ -25,8 +25,8 @@ export const isGameProfileObscured = function isGameProfileObscured(game, nsfwAl
     result = false === nsfwAllowed;
   }
   if (result) {
-    result = require(6992) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(game.contentClassification);
-    const obj = require(6992) /* isAgeRestrictedContentClassification */;
+    result = require(5912) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(game.contentClassification);
+    const obj = require(5912) /* isAgeRestrictedContentClassification */;
   }
   return result;
 };

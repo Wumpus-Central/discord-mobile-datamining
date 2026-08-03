@@ -1,12 +1,12 @@
-// === Module 9140: getApplicationDetailsText ===
+// === Module 8963: getApplicationDetailsText ===
 
-// Module 9140 (getApplicationDetailsText)
+// Module 8963 (getApplicationDetailsText)
 import { MarketingURLs } from "ME";
 
 let result = require("getSystemLocale").fileFinishedImporting("modules/oauth2/Utils.tsx");
 
 export const getApplicationDetailsText = function getApplicationDetailsText(application) {
-  let obj = require(9141) /* useIsSocialLayerParentApplication */;
+  let obj = require(8964) /* useIsSocialLayerParentApplication */;
   const isSocialLayerParentApplication = obj.getIsSocialLayerParentApplication(application);
   if (null != application.privacy_policy_url) {
     if (null != application.terms_of_service_url) {
@@ -44,8 +44,8 @@ export const getApplicationDetailsText = function getApplicationDetailsText(appl
 export const isContentClassificationRestricted = function isContentClassificationRestricted(content_classification, closure_32) {
   let result = null != content_classification;
   if (result) {
-    result = require(6992) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(content_classification);
-    const obj = require(6992) /* isAgeRestrictedContentClassification */;
+    result = require(5912) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(content_classification);
+    const obj = require(5912) /* isAgeRestrictedContentClassification */;
   }
   if (result) {
     result = false === closure_32;

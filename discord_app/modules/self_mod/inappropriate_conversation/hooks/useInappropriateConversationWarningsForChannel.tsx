@@ -1,6 +1,6 @@
-// === Module 10285: useInappropriateConversationWarningsForChannel ===
+// === Module 10146: useInappropriateConversationWarningsForChannel ===
 
-// Module 10285 (useInappropriateConversationWarningsForChannel)
+// Module 10146 (useInappropriateConversationWarningsForChannel)
 import handleConnectionOpen from "handleConnectionOpen";
 import { SafetyWarningTypes } from "handleConnectionOpen";
 

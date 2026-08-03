@@ -1,6 +1,6 @@
-// === Module 12310: useIsNitroWishlistingEnabled ===
+// === Module 12214: useIsNitroWishlistingEnabled ===
 
-// Module 12310 (useIsNitroWishlistingEnabled)
+// Module 12214 (useIsNitroWishlistingEnabled)
 import ApexExperiment from "ApexExperiment";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-03-wishlisting-nitro", kind: "user", defaultConfig: { isEnabled: false, isRoadblocksEnabled: false }, variations: { 0: { isEnabled: false, isRoadblocksEnabled: false }, 1: { isEnabled: true, isRoadblocksEnabled: false }, 2: { isEnabled: true, isRoadblocksEnabled: true } } });

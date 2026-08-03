@@ -1,6 +1,6 @@
-// === Module 5818: LurkerLeavePromptModal ===
+// === Module 11543: LurkerLeavePromptModal ===
 
-// Module 5818 (LurkerLeavePromptModal)
+// Module 11543 (LurkerLeavePromptModal)
 import closure_3 from "set";
 import get_ActivityIndicator from "hasNavigatedAway";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -30,14 +30,14 @@ function LurkerLeavePromptModal(guild) {
   obj = { style: tmp.headerRoot, children: null };
   obj = { style: tmp.iconWrapper, children: null };
   const obj1 = { guild, size: null, value: null };
-  obj1[1] = guild(5632).GuildIconSizes.XLARGE;
+  obj1[1] = guild(5570).GuildIconSizes.XLARGE;
   obj1[2] = guild.name;
-  const items1 = [callback(importDefault(5632), obj1), ];
+  const items1 = [callback(importDefault(5570), obj1), ];
   const obj2 = { guild, size: null, style: null };
-  const tmp3 = importDefault(5632);
+  const tmp3 = importDefault(5570);
   obj2[1] = guild(1297).Icon.Sizes.LARGE;
   obj2[2] = closure_4.flatten(tmp.badgeOverlay);
-  items1[1] = callback(importDefault(5820), obj2);
+  items1[1] = callback(importDefault(8474), obj2);
   obj[1] = items1;
   obj[1] = callback2(closure_5, obj);
   obj[2] = callback(closure_5, obj);
@@ -46,15 +46,15 @@ function LurkerLeavePromptModal(guild) {
   const intl2 = guild(1236).intl;
   obj4[1] = intl2.string(guild(1236).t.VJlc0S);
   obj4[2] = guild.onJoin;
-  const items2 = [callback(guild(4599).AlertActionButton, obj4), ];
+  const items2 = [callback(guild(4537).AlertActionButton, obj4), ];
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl3 = guild(1236).intl;
   obj5[1] = intl3.string(guild(1236).t["2vl7qn"]);
   obj5[2] = callback;
-  items2[1] = callback(guild(4599).AlertActionButton, obj5);
+  items2[1] = callback(guild(4537).AlertActionButton, obj5);
   obj3[0] = items2;
   obj[3] = callback2(closure_12, obj3);
-  return callback(guild(4599).AlertModal, obj);
+  return callback(guild(4537).AlertModal, obj);
 }
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
@@ -87,23 +87,23 @@ export const openLurkerLeavePrompt = function openLurkerLeavePrompt(closure_0, o
           const channel = outer1_6.getChannel(lurkingSourceForGuild.directoryChannelId);
           if (null != channel) {
             const guildId = channel.getGuildId();
-            const result = callback(5832).setHubProgressActionComplete(guildId, callback(1306).HubProgressStep.JOIN_GUILD);
-            const obj2 = callback(5832);
+            const result = callback(10108).setHubProgressActionComplete(guildId, callback(1306).HubProgressStep.JOIN_GUILD);
+            const obj2 = callback(10108);
           }
         }
-        const obj3 = callback(5819);
-        obj3.trackJoinClicked(callback, outer1_9.LEAVE_PROMPT_LURKER, onLeave(5834).hasNavigatedAway(callback));
-        const obj4 = onLeave(5834);
-        onLeave(5171).joinGuild(callback, { source: outer1_9.LEAVE_PROMPT_LURKER });
+        const obj3 = callback(6695);
+        obj3.trackJoinClicked(callback, outer1_9.LEAVE_PROMPT_LURKER, onLeave(11541).hasNavigatedAway(callback));
+        const obj4 = onLeave(11541);
+        onLeave(5109).joinGuild(callback, { source: outer1_9.LEAVE_PROMPT_LURKER });
       };
       const combined = "lurker-leave-prompt:" + closure_0;
-      _require(4596).openAlert(combined, callback(LurkerLeavePromptModal, obj), () => {
+      _require(4534).openAlert(combined, callback(LurkerLeavePromptModal, obj), () => {
         outer1_13.delete(closure_0);
         if (!c2) {
           onLeave();
         }
       });
-      let obj2 = _require(4596);
+      let obj2 = _require(4534);
     } else {
       onLeave();
     }

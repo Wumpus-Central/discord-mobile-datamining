@@ -1,6 +1,6 @@
-// === Module 10673: getShelfItemData ===
+// === Module 10628: getShelfItemData ===
 
-// Module 10673 (getShelfItemData)
+// Module 10628 (getShelfItemData)
 import addApplication from "addApplication";
 
 const result = require("set").fileFinishedImporting("modules/activities/getShelfItemData.tsx");

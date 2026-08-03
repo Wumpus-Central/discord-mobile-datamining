@@ -1,6 +1,6 @@
-// === Module 8748: Tooltip ===
+// === Module 8443: Tooltip ===
 
-// Module 8748 (Tooltip)
+// Module 8443 (Tooltip)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";

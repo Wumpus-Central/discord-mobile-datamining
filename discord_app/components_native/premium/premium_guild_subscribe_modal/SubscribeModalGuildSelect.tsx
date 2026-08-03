@@ -1,6 +1,6 @@
-// === Module 5092: SubscribeModalGuildSelect ===
+// === Module 5030: SubscribeModalGuildSelect ===
 
-// Module 5092 (SubscribeModalGuildSelect)
+// Module 5030 (SubscribeModalGuildSelect)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import { ScrollView } from "PressableBase";
@@ -106,8 +106,8 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   const intl = guildBoostSlots(1236).intl;
   obj[0] = intl.string(guildBoostSlots(1236).t.vf3ZTa);
   obj[1] = tmp2[1];
-  obj[2] = importAll(5089).closeApplyBoostModal;
-  const items3 = [callback2(importDefault(5890), obj), ];
+  obj[2] = importAll(5027).closeApplyBoostModal;
+  const items3 = [callback2(importDefault(10112), obj), ];
   obj1 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
   const obj2 = { bottom: true, children: null };
   obj2[1] = stateFromStoresArray.map((children) => {
@@ -128,8 +128,8 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
     obj[3] = items;
     return outer1_11(guildBoostSlots(_undefined[17]).PressableOpacity, obj, children.id);
   });
-  obj1[2] = callback2(guildBoostSlots(5243).SafeAreaPaddingView, obj2);
+  obj1[2] = callback2(guildBoostSlots(5181).SafeAreaPaddingView, obj2);
   items3[1] = callback2(memo, obj1);
   obj[2] = items3;
-  return callback3(guildBoostSlots(5243).SafeAreaPaddingView, obj);
+  return callback3(guildBoostSlots(5181).SafeAreaPaddingView, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 10688: postMessageToWebView ===
+// === Module 10623: postMessageToWebView ===
 
-// Module 10688 (postMessageToWebView)
+// Module 10623 (postMessageToWebView)
 import items3 from "items3";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
@@ -290,7 +290,7 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   let code;
   let message;
   ({ code, message } = reason);
-  let obj = importDefault(4595);
+  let obj = importDefault(4533);
   obj = { title: null, body: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.hbiAO6, { code });
@@ -298,7 +298,7 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  let obj = importDefault(4595);
+  let obj = importDefault(4533);
   obj = { title: null, body: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.PtobXW);
@@ -306,11 +306,11 @@ prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
   obj.show(obj);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
-  let obj = importDefault(3956);
+  let obj = importDefault(3894);
   obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t.JfA7IK);
-  obj[2] = importDefault(10509);
+  obj[2] = importDefault(10370);
   obj.open(obj);
 };
 prototype["releaseWebView"] = function releaseWebView() {
@@ -349,7 +349,7 @@ prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   }
 };
 prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_location, applicationId, showFeedback) {
-  let obj = require(10664) /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
+  let obj = require(5701) /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
   obj = { location: _location, applicationId, showFeedback };
   obj.stopEmbeddedActivity(obj);
   obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null };

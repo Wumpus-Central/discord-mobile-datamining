@@ -1,6 +1,6 @@
-// === Module 10678: _getActivityLaunchErrorInfo ===
+// === Module 10652: _getActivityLaunchErrorInfo ===
 
-// Module 10678 (_getActivityLaunchErrorInfo)
+// Module 10652 (_getActivityLaunchErrorInfo)
 import explicitContentFromProto from "explicitContentFromProto";
 import initialize from "initialize";
 import { DevShelfFetchState } from "initialize";

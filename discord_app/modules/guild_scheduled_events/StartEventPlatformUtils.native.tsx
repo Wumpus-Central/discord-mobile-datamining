@@ -1,6 +1,6 @@
-// === Module 8647: _navigateToEvent ===
+// === Module 8342: _navigateToEvent ===
 
-// Module 8647 (_navigateToEvent)
+// Module 8342 (_navigateToEvent)
 import ME from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
@@ -107,7 +107,7 @@ function _navigateToEvent() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj1 = callback(7689);
+              obj1 = callback(6718);
               c4 = 3;
               store = 1;
               const obj4 = { value: null, done: false };
@@ -129,7 +129,7 @@ function _navigateToEvent() {
           c4 = 2;
           store = 1;
           obj5 = { value: null, done: false };
-          obj5[0] = callback3(7684).navigateToStage(channel, null);
+          obj5[0] = callback3(6713).navigateToStage(channel, null);
           return obj5;
         } catch (tmp47) {
           store = tmp;

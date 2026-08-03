@@ -1,6 +1,6 @@
-// === Module 9042: showAudioOutputSelector ===
+// === Module 8865: showAudioOutputSelector ===
 
-// Module 9042 (showAudioOutputSelector)
+// Module 8865 (showAudioOutputSelector)
 import { NativeModules } from "get ActivityIndicator";
 import { VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY as closure_4 } from "VOICE_PANEL_SETTINGS_KEY";
 
@@ -12,8 +12,8 @@ export const showAudioOutputSelector = function showAudioOutputSelector(channelI
     obj = { channelId: null, isConnectedToVoiceChannel: null };
     obj[0] = channelId;
     obj[1] = closure_1;
-    importDefault(4223).openLazy(require(1959) /* asyncRequireImpl */(9044, dependencyMap.paths), closure_4, obj);
-    const obj2 = importDefault(4223);
+    importDefault(4161).openLazy(require(1959) /* asyncRequireImpl */(8867, dependencyMap.paths), closure_4, obj);
+    const obj2 = importDefault(4161);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {

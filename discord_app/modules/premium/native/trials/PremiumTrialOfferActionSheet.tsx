@@ -1,6 +1,6 @@
-// === Module 14871: markAsDismissed ===
+// === Module 14804: markAsDismissed ===
 
-// Module 14871 (markAsDismissed)
+// Module 14804 (markAsDismissed)
 import noop from "noop";
 import { PremiumTypes } from "GuildFeatures";
 import { AnalyticEvents } from "ME";

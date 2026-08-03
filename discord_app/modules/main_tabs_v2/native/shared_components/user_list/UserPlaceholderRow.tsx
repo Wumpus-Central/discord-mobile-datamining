@@ -1,6 +1,6 @@
-// === Module 8667: ? ===
+// === Module 8362: ? ===
 
-// Module 8667
+// Module 8362
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -39,7 +39,7 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   let sharedValue;
   flag = undefined;
   const tmp3 = callback3(height);
-  let obj = sharedValue(4116);
+  let obj = sharedValue(4054);
   sharedValue = obj.useSharedValue(1);
   let obj1 = sharedValue(589);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
@@ -69,7 +69,7 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 10137317865125;
   fn.__initData = closure_9;
-  const animatedStyle = sharedValue(4116).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4054).useAnimatedStyle(fn);
   obj = { style: items2, collapsable: false, children: null };
   items2 = [tmp3.row, animatedStyle];
   obj = { style: tmp3.placeholderAvatar };
@@ -87,7 +87,7 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   obj1[1] = callback(View, obj2);
   items3[1] = callback(View, obj1);
   obj[2] = items3;
-  return callback2(flag(4116).View, obj);
+  return callback2(flag(4054).View, obj);
 });
 let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx");
 

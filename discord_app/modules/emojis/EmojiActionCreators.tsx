@@ -1,6 +1,6 @@
-// === Module 9507: toggleGuildExpandedState ===
+// === Module 9348: toggleGuildExpandedState ===
 
-// Module 9507 (toggleGuildExpandedState)
+// Module 9348 (toggleGuildExpandedState)
 const result = require("set").fileFinishedImporting("modules/emojis/EmojiActionCreators.tsx");
 
 export const toggleGuildExpandedState = function toggleGuildExpandedState(guildId) {

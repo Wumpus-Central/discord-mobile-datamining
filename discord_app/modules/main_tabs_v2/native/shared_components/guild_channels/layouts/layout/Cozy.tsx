@@ -1,6 +1,6 @@
-// === Module 10442: CHANNEL_LIST_STYLES_COZY ===
+// === Module 10303: CHANNEL_LIST_STYLES_COZY ===
 
-// Module 10442 (CHANNEL_LIST_STYLES_COZY)
+// Module 10303 (CHANNEL_LIST_STYLES_COZY)
 import importDefaultResult from "merge";
 
 let obj = { layout: { margin: { marginVertical: 2 }, marginPanels: { marginVertical: 2 }, marginThread: { marginVertical: 2, marginLeft: 76 } }, container: null, category: null, voiceUsers: null, voiceOrStageSummaryRow: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };

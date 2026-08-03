@@ -1,6 +1,6 @@
-// === Module 10446: Timestamp ===
+// === Module 10307: Timestamp ===
 
-// Module 10446 (Timestamp)
+// Module 10307 (Timestamp)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -19,7 +19,7 @@ export default function Timestamp(node) {
   if (style == null) {
     style = node.style;
   }
-  const tmp2 = importDefault(10447)(node);
+  const tmp2 = importDefault(10308)(node);
   const tmp3 = jsx;
   return tmp3(node(1297).LegacyText, {
     style,
@@ -28,6 +28,6 @@ export default function Timestamp(node) {
       obj = { key: "TIMESTAMP", content: node.full };
       obj.open(obj);
     },
-    children: importDefault(10447)(node)
+    children: importDefault(10308)(node)
   });
 };

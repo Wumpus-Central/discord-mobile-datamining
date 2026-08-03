@@ -1,6 +1,6 @@
-// === Module 9036: isVideoBackgroundSupported ===
+// === Module 8859: isVideoBackgroundSupported ===
 
-// Module 9036 (isVideoBackgroundSupported)
+// Module 8859 (isVideoBackgroundSupported)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { Features } from "DesktopSources";
 

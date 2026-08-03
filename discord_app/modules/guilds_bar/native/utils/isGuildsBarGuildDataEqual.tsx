@@ -1,6 +1,6 @@
-// === Module 15294: isGuildsBarGuildDataEqual ===
+// === Module 15007: isGuildsBarGuildDataEqual ===
 
-// Module 15294 (isGuildsBarGuildDataEqual)
+// Module 15007 (isGuildsBarGuildDataEqual)
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildDataEqual.tsx");
 
 export default function isGuildsBarGuildDataEqual(icon, icon2) {

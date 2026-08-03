@@ -1,6 +1,6 @@
-// === Module 5852: _fetchDefaultSoundsFromApi2 ===
+// === Module 8051: _fetchDefaultSoundsFromApi2 ===
 
-// Module 5852 (_fetchDefaultSoundsFromApi2)
+// Module 8051 (_fetchDefaultSoundsFromApi2)
 import sendRequest from "sendRequest";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
@@ -61,8 +61,8 @@ function _fetchDefaultSoundsFromApi2() {
             callback2 = dependencyMap;
             let obj3 = callback2(709);
             obj3.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE" });
-            let obj4 = callback(5853);
-            const tmp28 = new callback2(4155)(callback2);
+            let obj4 = callback(5855);
+            const tmp28 = new callback2(4093)(callback2);
             const result = obj4.captureOrIgnoreApiError(tmp28);
             c5 = 3;
           } else if (arg0 === 1) {
@@ -131,7 +131,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  let obj = SOUNDBOARD_SOUNDS_RECEIVED(5854);
+  let obj = SOUNDBOARD_SOUNDS_RECEIVED(8052);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -346,7 +346,7 @@ function _uploadSound() {
             return obj5;
           } else {
             closure_6 = arg1;
-            obj = callback(4708);
+            obj = callback(4646);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
@@ -459,7 +459,7 @@ function _updateSound() {
             return obj5;
           } else {
             closure_6 = arg1;
-            obj = callback(4708);
+            obj = callback(4646);
             c4 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = obj.soundboardSoundFromAPI(closure_6.body, callback);
@@ -607,7 +607,7 @@ function _fetchSoundGuildData() {
           } else if (1 === tmp7) {
             c5 = 0;
             callback = handleSoundCreateOrUpdate;
-            const tmp25 = new callback(4155)(callback);
+            const tmp25 = new callback(4093)(callback);
             throw tmp25;
           } else if (arg0 === 1) {
             c7 = 3;
@@ -622,7 +622,7 @@ function _fetchSoundGuildData() {
             lib = arg1;
             let discoverableGuild = null;
             if (null != lib.body) {
-              obj = lib(5855);
+              obj = lib(6692);
               discoverableGuild = obj.makeDiscoverableGuild(lib.body);
             }
             c5 = 0;

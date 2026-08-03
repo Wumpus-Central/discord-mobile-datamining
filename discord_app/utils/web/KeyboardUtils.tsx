@@ -1,6 +1,6 @@
-// === Module 13037: getCodeToKeyLanguageCorrection ===
+// === Module 12974: getCodeToKeyLanguageCorrection ===
 
-// Module 13037 (getCodeToKeyLanguageCorrection)
+// Module 12974 (getCodeToKeyLanguageCorrection)
 import _slicedToArray from "_slicedToArray";
 import items from "items";
 import set from "set";
@@ -19,9 +19,9 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
       return key;
     }
   }
-  const BACKTICK_CODES = require(13039) /* normalizeKey */.BACKTICK_CODES;
+  const BACKTICK_CODES = require(12976) /* normalizeKey */.BACKTICK_CODES;
   if (BACKTICK_CODES.has(keyCode)) {
-    let tmp2Result = tmp2(13039);
+    let tmp2Result = tmp2(12976);
     const layoutMap = tmp2Result.getLayoutMap();
     let value = layoutMap.get("Backquote");
     if (key === value) {
@@ -31,7 +31,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
       }
       return str7;
     } else {
-      tmp2Result = tmp2(13039);
+      tmp2Result = tmp2(12976);
       const obj = { key: null, code: "Backquote", keyCode: null };
       obj[0] = value;
       obj[2] = keyCode;
@@ -101,7 +101,7 @@ function keyToCode(toLocaleLowerCase) {
                 tmp27 = arg1 === KeyboardEnvs.BROWSER;
               }
               if (tmp27 === true) {
-                const tmp39 = importDefault(13038);
+                const tmp39 = importDefault(12975);
                 const replaced = toLocaleLowerCase.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
                 let str13 = "pause/break";
                 if ("pause" !== replaced) {
@@ -137,7 +137,7 @@ function keyToCode(toLocaleLowerCase) {
       if (null != tmp17) {
         return tmp17;
       } else {
-        const keyboardEventShapeFromKey = require(13039) /* normalizeKey */.getKeyboardEventShapeFromKey(toLocaleLowerCase);
+        const keyboardEventShapeFromKey = require(12976) /* normalizeKey */.getKeyboardEventShapeFromKey(toLocaleLowerCase);
         let keyCode = null;
         if (null != keyboardEventShapeFromKey) {
           keyCode = keyboardEventShapeFromKey.keyCode;
@@ -278,7 +278,7 @@ function codeToKey(items1) {
   if (null != tmp4) {
     return getCodeToKeyLanguageCorrection(tmp2, tmp4, tmp3);
   } else {
-    const keyboardEventShapeFromKeycode = require(13039) /* normalizeKey */.getKeyboardEventShapeFromKeycode(tmp2);
+    const keyboardEventShapeFromKeycode = require(12976) /* normalizeKey */.getKeyboardEventShapeFromKeycode(tmp2);
     let tmp8 = null;
     if (null != keyboardEventShapeFromKeycode) {
       tmp8 = getCodeToKeyLanguageCorrection(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp3);
@@ -294,7 +294,7 @@ const result = set.fileFinishedImporting("utils/web/KeyboardUtils.tsx");
 export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
   if (arg1 !== undefined) {
     if (arg1 === KeyboardEnvs.BROWSER) {
-      let tmp10 = importDefault(13038)(arg0);
+      let tmp10 = importDefault(12975)(arg0);
     } else {
       tmp10 = set[arg0];
     }
@@ -412,7 +412,7 @@ export const toCombo = function toCombo(shortcut) {
     }
     const str2 = shortcut.replace(/numpad plus/i, "");
     const str4 = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus");
-    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(13040).modKey).split("+");
+    const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(12977).modKey).split("+");
     const mapped = parts.map((str) => str.trim().replace("plus", "+"));
     return mapped.reduce((arr) => {
       let tmp3 = outer1_16((function toUglyKey(str) {
@@ -514,12 +514,12 @@ export const toString = function toString(arr) {
       if (null != tmp17) {
         let combined = callback3(tmp15, tmp17, tmp16);
       } else {
-        const keyboardEventShapeFromKeycode = callback(13039).getKeyboardEventShapeFromKeycode(tmp15);
+        const keyboardEventShapeFromKeycode = callback(12976).getKeyboardEventShapeFromKeycode(tmp15);
         combined = null;
         if (null != keyboardEventShapeFromKeycode) {
           combined = callback3(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp16);
         }
-        const obj3 = callback(13039);
+        const obj3 = callback(12976);
       }
       if (combined == null) {
         const _HermesInternal4 = HermesInternal;

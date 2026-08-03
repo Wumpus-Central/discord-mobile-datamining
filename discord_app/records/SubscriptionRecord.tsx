@@ -1,6 +1,6 @@
-// === Module 3908: createSubscriptionItemFromServer ===
+// === Module 3846: createSubscriptionItemFromServer ===
 
-// Module 3908 (createSubscriptionItemFromServer)
+// Module 3846 (createSubscriptionItemFromServer)
 import "toJS";
 import createFromServer from "createFromServer";
 import closure_4 from "createFromServer";
@@ -239,8 +239,8 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
       if (isPurchasedViaGoogle) {
-        isPurchasedViaGoogle = require(3914) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
-        const obj2 = require(3914) /* isPremiumGiftingSupported */;
+        isPurchasedViaGoogle = require(3852) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
+        const obj2 = require(3852) /* isPremiumGiftingSupported */;
       }
       isPurchasedViaApple = isPurchasedViaGoogle;
     }

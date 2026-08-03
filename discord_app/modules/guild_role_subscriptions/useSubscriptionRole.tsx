@@ -1,6 +1,6 @@
-// === Module 14332: useSubscriptionRole ===
+// === Module 14265: useSubscriptionRole ===
 
-// Module 14332 (useSubscriptionRole)
+// Module 14265 (useSubscriptionRole)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 
 const require = arg1;
@@ -8,8 +8,8 @@ const result = require("initialize").fileFinishedImporting("modules/guild_role_s
 
 export default function useSubscriptionRole(arg0, editStateId) {
   const _require = arg0;
-  const dependencyMap = _require(14315).useSubscriptionListing(editStateId);
-  const obj = _require(14315);
+  const dependencyMap = _require(14248).useSubscriptionListing(editStateId);
+  const obj = _require(14248);
   const items = [createGuildRoleRecordFromRust];
   return _require(589).useStateFromStores(items, () => {
     let role;

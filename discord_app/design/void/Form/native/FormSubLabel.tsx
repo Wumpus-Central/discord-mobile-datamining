@@ -1,6 +1,6 @@
-// === Module 5300: FormSubLabel ===
+// === Module 5238: FormSubLabel ===
 
-// Module 5300 (FormSubLabel)
+// Module 5238 (FormSubLabel)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -17,5 +17,5 @@ export default function FormSubLabel(color) {
   if (color === undefined) {
     color = "text-subtle";
   }
-  return jsx(require(4251) /* Text */.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
+  return jsx(require(4189) /* Text */.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
 };

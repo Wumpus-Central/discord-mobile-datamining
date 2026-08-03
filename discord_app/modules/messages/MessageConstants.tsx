@@ -1,6 +1,6 @@
-// === Module 4248: MESSAGE_GROUP_SPACING ===
+// === Module 4186: MESSAGE_GROUP_SPACING ===
 
-// Module 4248 (MESSAGE_GROUP_SPACING)
+// Module 4186 (MESSAGE_GROUP_SPACING)
 import { ChannelStreamTypes } from "ME";
 import importDefaultResult from "fails";
 

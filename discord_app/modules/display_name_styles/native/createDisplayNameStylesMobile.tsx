@@ -1,6 +1,6 @@
-// === Module 12510: createDisplayNameStylesMobile ===
+// === Module 12412: createDisplayNameStylesMobile ===
 
-// Module 12510 (createDisplayNameStylesMobile)
+// Module 12412 (createDisplayNameStylesMobile)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

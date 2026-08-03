@@ -1,6 +1,6 @@
-// === Module 16859: promise ===
+// === Module 16793: promise ===
 
-// Module 16859 (promise)
+// Module 16793 (promise)
 import ME from "ME";
 
 let c3;

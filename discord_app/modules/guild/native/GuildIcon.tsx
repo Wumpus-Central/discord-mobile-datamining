@@ -1,6 +1,6 @@
-// === Module 5632: GuildIconSizes ===
+// === Module 5570: GuildIconSizes ===
 
-// Module 5632 (GuildIconSizes)
+// Module 5570 (GuildIconSizes)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { ExpressionSourceGuildRecord as closure_5 } from "getEmojiSourceData";
@@ -186,7 +186,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     if (!c14) {
       if (c13) {
         if (preloadAnimation) {
-          if (typeof tmp11 !== "ge") {
+          if (typeof tmp11 !== "__FORMATJS_LISTFORMAT_DATA__") {
             const obj3 = icon(flag[10]);
             icon(flag[10]).preload(tmp11).then(() => {
               const timerId = setTimeout(() => {

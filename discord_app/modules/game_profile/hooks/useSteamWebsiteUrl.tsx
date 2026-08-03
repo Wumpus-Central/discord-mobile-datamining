@@ -1,6 +1,6 @@
-// === Module 8790: buildSteamStoreUrl ===
+// === Module 8501: buildSteamStoreUrl ===
 
-// Module 8790 (buildSteamStoreUrl)
+// Module 8501 (buildSteamStoreUrl)
 import map from "map";
 import { Distributors } from "ME";
 
@@ -26,7 +26,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           return null;
         } else {
           const websites = game.websites;
-          const found = websites.find((category) => category.category === callback(8789).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          const found = websites.find((category) => category.category === callback(8500).ThirdPartyGameApplicationWebsiteCategory.STEAM);
           if (found != null) {
             const url = found.url;
           }

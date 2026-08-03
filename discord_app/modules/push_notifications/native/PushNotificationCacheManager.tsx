@@ -1,6 +1,6 @@
-// === Module 16394: prototype ===
+// === Module 16328: prototype ===
 
-// Module 16394 (prototype)
+// Module 16328 (prototype)
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";
@@ -25,15 +25,15 @@ let prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(10816).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(10816);
+      applyArgumentsResult(10708).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(10708);
     } else {
-      applyArgumentsResult(10816).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(10816);
+      applyArgumentsResult(10708).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(10708);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj = obj(10816);
+    obj = obj(10708);
     obj = undefined;
     if (obj.canUseMultiAccountNotifications) {
       const validUsers = obj.getValidUsers();

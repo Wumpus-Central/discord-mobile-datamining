@@ -1,12 +1,12 @@
-// === Module 13879: isRateLimited ===
+// === Module 13812: isRateLimited ===
 
-// Module 13879 (isRateLimited)
+// Module 13812 (isRateLimited)
 import { Store } from "initialize";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = { validations: null, currentUsernameInvalid: false, retryAfterTime: null, suggestions: null };
 obj[0] = new require("priv")({ max: 100, maxAge: 60000 });
-obj[3] = { migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "r" }, source: "ct", fetched: null } };
+obj[3] = { migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "r" }, source: "ct", fetched: "automat do gier" } };
 class UniqueUsernamesStore extends Store {
 }
 const prototype = UniqueUsernamesStore.prototype;
@@ -85,7 +85,7 @@ obj = {
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
     obj.suggestions.migration = { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = { suggestion: { username: "r" }, source: "ct", fetched: null };
+    obj.suggestions.registration = { suggestion: { username: "r" }, source: "ct", fetched: "automat do gier" };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

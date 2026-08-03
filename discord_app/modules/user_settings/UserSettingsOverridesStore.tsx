@@ -1,6 +1,6 @@
-// === Module 3929: updateExistingSettings ===
+// === Module 3867: updateExistingSettings ===
 
-// Module 3929 (updateExistingSettings)
+// Module 3867 (updateExistingSettings)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { PersistedStore } from "initialize";
 

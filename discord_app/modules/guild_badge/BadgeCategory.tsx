@@ -1,6 +1,6 @@
-// === Module 5822: BadgeCategory ===
+// === Module 8473: BadgeCategory ===
 
-// Module 5822 (BadgeCategory)
+// Module 8473 (BadgeCategory)
 const obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };
 const result = require("set").fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
 
@@ -20,7 +20,7 @@ export const getBadgeCategory = function getBadgeCategory(guildTraits) {
       DISCOVERABLE = obj.PARTNERED;
     } else {
       if (guildTraits.community) {
-        if (guildTraits.visibility === require(5823) /* GuildVisibility */.GuildVisibility.PUBLIC) {
+        if (guildTraits.visibility === require(8472) /* GuildVisibility */.GuildVisibility.PUBLIC) {
           DISCOVERABLE = obj.DISCOVERABLE;
         }
       }

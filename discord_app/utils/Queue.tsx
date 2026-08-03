@@ -1,6 +1,6 @@
-// === Module 7202: enqueue ===
+// === Module 6150: enqueue ===
 
-// Module 7202 (enqueue)
+// Module 6150 (enqueue)
 const tmp2 = new require("timestamp")("Queue");
 const result = require("set").fileFinishedImporting("utils/Queue.tsx");
 class Queue {
@@ -57,9 +57,9 @@ prototype["_drainIfNecessary"] = function _drainIfNecessary() {
             setImmediate(() => closure_3._drainIfNecessary());
             try {
               callback(arg1);
-            } catch (tmp13) {
+            } catch (tmp12) {
               const logger3 = tmp.logger;
-              logger3.error("", tmp13);
+              logger3.error("", tmp12);
             }
           } else {
             let defaultRetryAfter = retryAfter.retryAfter;
@@ -69,10 +69,8 @@ prototype["_drainIfNecessary"] = function _drainIfNecessary() {
             const logger2 = tmp2.logger;
             const _HermesInternal = HermesInternal;
             logger2.info("Rate limited. Delaying draining of queue for " + defaultRetryAfter + " ms. LogId:" + tmp3 + " QueueLength: " + tmp2.queue.length);
-            tmp2.pendingRetryItem = arr;
             const _setTimeout = setTimeout;
             tmp2.timeout = setTimeout(() => {
-              closure_3.pendingRetryItem = null;
               const queue = closure_3.queue;
               queue.unshift(closure_1);
               closure_3.timeout = null;
@@ -90,30 +88,6 @@ prototype["clear"] = function clear() {
   clearTimeout(this.timeout);
   this.timeout = null;
   this.draining = false;
-  this.pendingRetryItem = null;
-};
-prototype["remove"] = function remove(arg0) {
-  const self = this;
-  const items = [];
-  if (this.queue.length > 0) {
-    do {
-      let queue = self.queue;
-      let arr = queue.shift();
-      if (!arg0(arr.message)) {
-        arr = items.push(arr);
-      }
-    } while (self.queue.length > 0);
-  }
-  const queue1 = self.queue;
-  const items1 = [...items];
-  queue1.push.apply(items1);
-  if (tmp4) {
-    const _clearTimeout = clearTimeout;
-    clearTimeout(self.timeout);
-    self.timeout = null;
-    self.pendingRetryItem = null;
-    self._drainIfNecessary();
-  }
 };
 
 export default Queue;

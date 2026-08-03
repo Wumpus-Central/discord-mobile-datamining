@@ -1,6 +1,6 @@
-// === Module 10758: isDiscordVisible ===
+// === Module 10574: isDiscordVisible ===
 
-// Module 10758 (isDiscordVisible)
+// Module 10574 (isDiscordVisible)
 import getState from "getState";
 import { AppStates } from "ME";
 

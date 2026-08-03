@@ -1,6 +1,6 @@
-// === Module 13948: pressable ===
+// === Module 13881: pressable ===
 
-// Module 13948 (pressable)
+// Module 13881 (pressable)
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
@@ -10,11 +10,11 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const obj = require(13937) /* useExplicitContentSettingOrDefault */;
-    return require(6956) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
+    const obj = require(13870) /* useExplicitContentSettingOrDefault */;
+    return require(5865) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
   },
   onPress: function onGoreContentFriendsDmOnPress() {
-    let obj = require(5797) /* resolveGoreSettingWithDefaults */;
+    let obj = require(5886) /* resolveGoreSettingWithDefaults */;
     obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[0] = intl.string(require(1236) /* getSystemLocale */.t["16/3Bi"]);
@@ -26,7 +26,7 @@ const pressable = createToggle.createPressable({
       return obj.updateGoreContentSetting(obj);
     };
     obj[3] = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
-    const result = require(13938) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13871) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms() {
     const intl = require(1236) /* getSystemLocale */.intl;
@@ -46,11 +46,11 @@ let obj = {
   },
   parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const obj = require(13937) /* useExplicitContentSettingOrDefault */;
-    return require(6956) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
+    const obj = require(13870) /* useExplicitContentSettingOrDefault */;
+    return require(5865) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
   },
   onPress: function onGoreContentFriendsDmOnPress() {
-    let obj = require(5797) /* resolveGoreSettingWithDefaults */;
+    let obj = require(5886) /* resolveGoreSettingWithDefaults */;
     obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[0] = intl.string(require(1236) /* getSystemLocale */.t["16/3Bi"]);
@@ -62,7 +62,7 @@ let obj = {
       return obj.updateGoreContentSetting(obj);
     };
     obj[3] = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
-    const result = require(13938) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13871) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms() {
     const intl = require(1236) /* getSystemLocale */.intl;

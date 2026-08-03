@@ -1,6 +1,6 @@
-// === Module 16724: AdvancedInstantInvite ===
+// === Module 16658: AdvancedInstantInvite ===
 
-// Module 16724 (AdvancedInstantInvite)
+// Module 16658 (AdvancedInstantInvite)
 import Themes from "Themes";
 import { View } from "TableRowIcon";
 import upsertRelationship from "upsertRelationship";

@@ -1,6 +1,6 @@
-// === Module 5120: getAsync ===
+// === Module 5058: getAsync ===
 
-// Module 5120 (getAsync)
+// Module 5058 (getAsync)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import set from "items";
 

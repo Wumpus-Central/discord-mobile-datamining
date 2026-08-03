@@ -1,6 +1,6 @@
-// === Module 4576: _validatePaymentSourceBillingAddress ===
+// === Module 4514: _validatePaymentSourceBillingAddress ===
 
-// Module 4576 (_validatePaymentSourceBillingAddress)
+// Module 4514 (_validatePaymentSourceBillingAddress)
 import set from "set";
 import createFromServer from "createFromServer";
 import { StripeErrorTypes } from "StripeErrorTypes";
@@ -64,7 +64,7 @@ function _validatePaymentSourceBillingAddress() {
           } else if (1 === tmp7) {
             c4 = 0;
             callback2 = set;
-            obj2 = callback(3923);
+            obj2 = callback(3861);
             callback = obj2.parseV8BillingAddressSkemaErrorToBillingError(callback2);
             obj3 = callback2(709);
             const obj5 = { type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: null };
@@ -416,17 +416,17 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
       obj3.track(constants.PAYMENT_SOURCE_CREATION_FAILED, obj);
       flag = false;
     }
-    let billingError = new require(4154) /* V6OrEarlierAPIError */.BillingError(combined);
+    let billingError = new require(4092) /* V6OrEarlierAPIError */.BillingError(combined);
     let flag2 = flag;
     let tmp12 = obj;
     let tmp15 = require;
   } else {
     let tmp6 = message;
-    if (typeof message !== "ge") {
+    if (typeof message !== "__FORMATJS_LISTFORMAT_DATA__") {
       tmp6 = stringResult;
     }
     const obj1 = { failure_message: null, status_code: null };
-    const billingError1 = new require(4154) /* V6OrEarlierAPIError */.BillingError(tmp6);
+    const billingError1 = new require(4092) /* V6OrEarlierAPIError */.BillingError(tmp6);
     ({ message: obj2[0], code: obj2[1] } = billingError1);
     tmp12 = obj1;
     billingError = billingError1;
@@ -451,8 +451,8 @@ export const dispatchConfirmationError = function dispatchConfirmationError(erro
     const merged2 = Object.assign(tmp12);
     const merged3 = Object.assign(obj.extra);
     obj2.extra = obj3;
-    const result = tmp15(3916).captureBillingException(error1, obj2);
-    const tmp15Result = tmp15(3916);
+    const result = tmp15(3854).captureBillingException(error1, obj2);
+    const tmp15Result = tmp15(3854);
   }
   return error1;
 };

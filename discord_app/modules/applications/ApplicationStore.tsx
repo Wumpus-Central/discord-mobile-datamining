@@ -1,6 +1,6 @@
-// === Module 4292: addApplication ===
+// === Module 4230: addApplication ===
 
-// Module 4292 (addApplication)
+// Module 4230 (addApplication)
 import _slicedToArray from "_slicedToArray";
 import createExecutable from "createExecutable";
 import { PersistedStore } from "initialize";
@@ -135,7 +135,7 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
         let tmp3 = key10002;
         ({ applicationId, lastUsedMs } = arg0.botUserIdToAppUsage[key10002]);
         let tmp = typeof applicationId === "y";
-        if (typeof applicationId !== "ge") {
+        if (typeof applicationId !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp = applicationId.length > 0;
         }
         if (tmp) {

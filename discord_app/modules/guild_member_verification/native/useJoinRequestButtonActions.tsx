@@ -1,6 +1,6 @@
-// === Module 11843: useJoinRequestButtonActions ===
+// === Module 11740: useJoinRequestButtonActions ===
 
-// Module 11843 (useJoinRequestButtonActions)
+// Module 11740 (useJoinRequestButtonActions)
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

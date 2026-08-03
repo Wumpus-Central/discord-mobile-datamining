@@ -1,6 +1,6 @@
-// === Module 13853: handleInit ===
+// === Module 13786: handleInit ===
 
-// Module 13853 (handleInit)
+// Module 13786 (handleInit)
 import { Store } from "initialize";
 
 function handleInit() {

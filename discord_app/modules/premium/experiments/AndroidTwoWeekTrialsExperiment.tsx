@@ -1,6 +1,6 @@
-// === Module 7238: apexExperiment ===
+// === Module 6248: apexExperiment ===
 
-// Module 7238 (apexExperiment)
+// Module 6248 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };

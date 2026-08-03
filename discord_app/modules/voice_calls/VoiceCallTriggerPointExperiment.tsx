@@ -1,6 +1,6 @@
-// === Module 16242: experiment ===
+// === Module 16178: experiment ===
 
-// Module 16242 (experiment)
+// Module 16178 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Treatment", config: { enabled: true } }];

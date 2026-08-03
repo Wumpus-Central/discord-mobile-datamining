@@ -1,6 +1,6 @@
-// === Module 10778: getIsTabletActivitySurface ===
+// === Module 10670: getIsTabletActivitySurface ===
 
-// Module 10778 (getIsTabletActivitySurface)
+// Module 10670 (getIsTabletActivitySurface)
 import DCDDeviceManager from "DCDDeviceManager";
 import isMetaQuest from "isMetaQuest";
 

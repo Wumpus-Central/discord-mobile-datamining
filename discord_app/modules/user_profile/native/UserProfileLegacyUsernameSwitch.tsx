@@ -1,6 +1,6 @@
-// === Module 13823: UserProfileLegacyUsernameSwitch ===
+// === Module 13756: UserProfileLegacyUsernameSwitch ===
 
-// Module 13823 (UserProfileLegacyUsernameSwitch)
+// Module 13756 (UserProfileLegacyUsernameSwitch)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -10,7 +10,7 @@ let result = require("explicitContentFromProto").fileFinishedImporting("modules/
 export default function UserProfileLegacyUsernameSwitch(username) {
   const pendingLegacyUsernameDisabled = username.pendingLegacyUsernameDisabled;
   let setting;
-  const LegacyUsernameDisabled = setting(3928).LegacyUsernameDisabled;
+  const LegacyUsernameDisabled = setting(3866).LegacyUsernameDisabled;
   setting = LegacyUsernameDisabled.useSetting();
   let tmp4 = setting;
   if (undefined !== pendingLegacyUsernameDisabled) {
@@ -32,5 +32,5 @@ export default function UserProfileLegacyUsernameSwitch(username) {
       obj.setPendingChanges(obj);
     }
   };
-  return jsx(setting(13799).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, onValueChange: null });
+  return jsx(setting(13736).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, onValueChange: null });
 };

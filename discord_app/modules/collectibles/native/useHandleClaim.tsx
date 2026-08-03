@@ -1,6 +1,6 @@
-// === Module 12020: useHandleClaim ===
+// === Module 11924: useHandleClaim ===
 
-// Module 12020 (useHandleClaim)
+// Module 11924 (useHandleClaim)
 import dispatcher from "dispatcher";
 import noop from "noop";
 

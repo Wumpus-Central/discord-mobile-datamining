@@ -1,6 +1,6 @@
-// === Module 4832: getCreateAttachmentURL ===
+// === Module 4770: getCreateAttachmentURL ===
 
-// Module 4832 (getCreateAttachmentURL)
+// Module 4770 (getCreateAttachmentURL)
 import ME from "ME";
 
 let c3;
@@ -24,7 +24,7 @@ prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return closure_4;
 };
 prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return require(4789) /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
+  return require(4727) /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
 };
 Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {

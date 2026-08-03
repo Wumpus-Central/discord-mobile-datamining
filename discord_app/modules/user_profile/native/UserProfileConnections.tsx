@@ -1,6 +1,6 @@
-// === Module 12295: VerifiedIcon ===
+// === Module 12199: VerifiedIcon ===
 
-// Module 12295 (VerifiedIcon)
+// Module 12199 (VerifiedIcon)
 import importAllResult from "getPlatformUserUrl";
 import get_ActivityIndicator from "useIsMobileVisualRefreshExperimentEnabled";
 import _getSystemLocale from "_getSystemLocale";
@@ -34,7 +34,7 @@ function VerifiedIcon(arg0) {
   }
   const tmp = callback3();
   let obj = { size: REFRESH_SMALL_16, style: tmp.verifiedIcon };
-  let obj1 = require(3959) /* map */;
+  let obj1 = require(3897) /* map */;
   let PLATFORM_TWITTER = obj1.useToken(importDefault(712).colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
   if (isTwitterVerifiedAccount) {
     PLATFORM_TWITTER = tmp4(712).unsafe_rawColors.PLATFORM_TWITTER;
@@ -46,12 +46,12 @@ function VerifiedIcon(arg0) {
     obj = { style: null, children: null };
     obj[0] = tmp.verifiedIconContainer;
     obj = { source: null, color: null };
-    obj[0] = tmp4(10184);
+    obj[0] = tmp4(10042);
     obj[1] = PLATFORM_TWITTER;
     const merged = Object.assign(obj);
     const items = [callback(tmp2(1297).Icon, obj), ];
     obj1 = { source: null, color: null };
-    obj1[0] = tmp4(10185);
+    obj1[0] = tmp4(10043);
     obj1[1] = WHITE;
     const merged1 = Object.assign(obj);
     items[1] = callback(tmp2(1297).Icon, obj1);
@@ -459,7 +459,7 @@ let closure_20 = importAllResult.memo((application) => {
 const memoResult = importAllResult.memo((applicationRoleConnection) => {
   applicationRoleConnection = applicationRoleConnection.applicationRoleConnection;
   const tmp = callback3();
-  let obj = applicationRoleConnection(10179);
+  let obj = applicationRoleConnection(10037);
   const roleConnectionMetadataItems = obj.generateRoleConnectionMetadataItems(applicationRoleConnection);
   let obj1 = importDefault(1416);
   obj = { id: applicationRoleConnection.application.id, icon: applicationRoleConnection.application.icon };
@@ -471,7 +471,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
       if (null != applicationRoleConnection.platform_username) {
         obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
         obj[2] = applicationRoleConnection.platform_username;
-        tmp15 = callback(tmp4(4251).Text, obj);
+        tmp15 = callback(tmp4(4189).Text, obj);
       }
     }
     const items = [tmp15, , ];
@@ -496,7 +496,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
       return applicationRoleConnection.application.name;
     };
     obj4[2] = intl2.format(tmp4(1236).t.zIT9YA, obj5);
-    obj3[1] = callback(tmp4(4251).Text, obj4);
+    obj3[1] = callback(tmp4(4189).Text, obj4);
     items[2] = callback(closure_5, obj3);
     obj2[0] = items;
     let name = applicationRoleConnection.platform_name;
@@ -513,7 +513,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     obj7[0] = tmp4(1297).Icon.Sizes.MEDIUM;
     obj7[1] = applicationIconSource;
     obj6[2] = callback(tmp4(1297).Icon, obj7);
-    return callback(tmp4(5286).TableRow, obj6);
+    return callback(tmp4(5224).TableRow, obj6);
   } else {
     const obj8 = { style: null, children: null };
     obj8[0] = tmp.connectionRow;
@@ -527,14 +527,14 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     if (null != applicationRoleConnection.platform_name) {
       const obj11 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       obj11[2] = applicationRoleConnection.platform_name;
-      tmp8Result = tmp8(tmp4(4251).Text, obj11);
+      tmp8Result = tmp8(tmp4(4189).Text, obj11);
     }
     const items2 = [tmp8Result, , , ];
     tmp8Result = null;
     if (null != applicationRoleConnection.platform_username) {
       const obj12 = { variant: "text-md/normal", color: "text-default", children: null };
       obj12[2] = applicationRoleConnection.platform_username;
-      tmp8Result = tmp8(tmp4(4251).Text, obj12);
+      tmp8Result = tmp8(tmp4(4189).Text, obj12);
     }
     items2[1] = tmp8Result;
     let tmp8Result1 = null;
@@ -557,7 +557,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
       return applicationRoleConnection.application.name;
     };
     obj15[2] = intl.format(tmp4(1236).t.zIT9YA, obj16);
-    obj14[1] = callback(tmp4(4251).Text, obj15);
+    obj14[1] = callback(tmp4(4189).Text, obj15);
     items2[3] = callback(closure_5, obj14);
     obj10[1] = items2;
     items1[1] = tmp6(closure_5, obj10);
@@ -577,7 +577,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   let dependencyMap;
   const tmp = callback3();
   const tmp4 = theme(1348)("UserProfileConnections");
-  let obj = userId(3967);
+  let obj = userId(3905);
   theme = obj.useThemeContext().theme;
   let obj1 = userId(589);
   const items = [_getSystemLocale];
@@ -586,7 +586,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(589).useStateFromStores(items1, () => obj.hidePersonalInformation);
   const obj3 = userId(589);
   const tmp2 = theme;
-  ({ connections, appIdentities } = theme(12296)(userId));
+  ({ connections, appIdentities } = theme(12200)(userId));
   if (!stateFromStores) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => outer1_13(outer1_19, { account, theme, locale: closure_2, userId }, account.id)), 0);
@@ -609,14 +609,14 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
       const intl2 = tmp5(1236).intl;
       obj[1] = intl2.string(tmp5(1236).t["3fe7U5"]);
       obj[2] = items2;
-      let tmp12Result = tmp12(tmp5(5620).TableRowGroup, obj);
+      let tmp12Result = tmp12(tmp5(5558).TableRowGroup, obj);
     } else {
       obj1 = { children: null };
       obj1[0] = items2;
-      tmp12Result = tmp12(tmp5(5628).UserProfileCardRows, obj1);
+      tmp12Result = tmp12(tmp5(5566).UserProfileCardRows, obj1);
     }
     obj[3] = tmp12Result;
-    return closure_13(tmp2(5628), obj);
+    return closure_13(tmp2(5566), obj);
   }
   return null;
 };
@@ -626,7 +626,7 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
   ({ userId, style } = arg0);
   const tmp = callback3();
   const tmp4 = importDefault(1348)("UserProfileConnections");
-  const arr = importDefault(12299)(userId);
+  const arr = importDefault(12203)(userId);
   let obj = require(589) /* initialize */;
   const items = [initialize];
   if (!obj.useStateFromStores(items, () => obj.hidePersonalInformation)) {
@@ -647,14 +647,14 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
         const intl2 = tmp5(1236).intl;
         obj[1] = intl2.string(tmp5(1236).t.PHjkRE);
         obj[2] = mapped;
-        let tmp9Result = tmp9(tmp5(5620).TableRowGroup, obj);
+        let tmp9Result = tmp9(tmp5(5558).TableRowGroup, obj);
       } else {
         const obj1 = { children: null };
         obj1[0] = mapped;
-        tmp9Result = tmp9(tmp5(5628).UserProfileCardRows, obj1);
+        tmp9Result = tmp9(tmp5(5566).UserProfileCardRows, obj1);
       }
       obj[3] = tmp9Result;
-      return closure_13(importDefault(5628), obj);
+      return closure_13(importDefault(5566), obj);
     }
   }
   return null;

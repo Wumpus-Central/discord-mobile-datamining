@@ -1,6 +1,6 @@
-// === Module 7324: useTimeout ===
+// === Module 6670: useTimeout ===
 
-// Module 7324 (useTimeout)
+// Module 6670 (useTimeout)
 import noop from "noop";
 
 let c0;

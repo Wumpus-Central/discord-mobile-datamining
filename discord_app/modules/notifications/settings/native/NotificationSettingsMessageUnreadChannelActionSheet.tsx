@@ -1,6 +1,6 @@
-// === Module 10484: NotificationSettingsMessageUnreadChannelActionSheet ===
+// === Module 10345: NotificationSettingsMessageUnreadChannelActionSheet ===
 
-// Module 10484 (NotificationSettingsMessageUnreadChannelActionSheet)
+// Module 10345 (NotificationSettingsMessageUnreadChannelActionSheet)
 import "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserNotificationSettings } from "ME";
@@ -15,7 +15,7 @@ export default function NotificationSettingsMessageUnreadChannelActionSheet(chan
   let notification;
   let unread;
   const _require = channel;
-  let obj = _require(10465);
+  let obj = _require(10326);
   const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
   ({ unread, notification } = channelPresetSettings);
   obj = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };
@@ -37,5 +37,5 @@ export default function NotificationSettingsMessageUnreadChannelActionSheet(chan
     const NotificationLabel = channel(outer1_2[11]).NotificationLabel;
     const result = obj.updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.unreads(ONLY_MENTIONS));
   };
-  return jsx(importDefault(10483), { value: unread, disabledMentionOnlyWithReason: null, onChange: null });
+  return jsx(importDefault(10344), { value: unread, disabledMentionOnlyWithReason: null, onChange: null });
 };

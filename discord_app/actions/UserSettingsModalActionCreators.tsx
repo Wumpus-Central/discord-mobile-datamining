@@ -1,6 +1,6 @@
-// === Module 7502: dispatcher ===
+// === Module 6508: dispatcher ===
 
-// Module 7502 (dispatcher)
+// Module 6508 (dispatcher)
 const result = require("set").fileFinishedImporting("actions/UserSettingsModalActionCreators.tsx");
 
 export default {

@@ -1,6 +1,6 @@
-// === Module 16565: Header ===
+// === Module 16499: Header ===
 
-// Module 16565 (Header)
+// Module 16499 (Header)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "TableSwitchRow";
@@ -26,7 +26,7 @@ function Header(arg0) {
   let platform;
   ({ platform, integration, applicationId } = arg0);
   ({ onRemove, locked } = arg0);
-  let obj = require(10162) /* request */;
+  let obj = require(10020) /* request */;
   let application;
   if (integration != null) {
     application = integration.application;
@@ -77,7 +77,7 @@ function Header(arg0) {
     }
   } else if (null != platform) {
     let tmp3Result = tmp3(1416);
-    tmp3Result = tmp3(4101);
+    tmp3Result = tmp3(4039);
     const icon = platform.icon;
     const obj1 = { source: null, disableColor: true };
     obj1[0] = tmp3Result.makeSource(tmp3Result.isThemeDark(tmp2) ? icon.darkPNG : icon.lightPNG);
@@ -99,9 +99,9 @@ function Header(arg0) {
   obj3[0] = intl2.string(require(1236) /* getSystemLocale */.t.N86XcP);
   obj3[1] = onRemove;
   obj3[2] = locked;
-  obj3[3] = callback2(require(5241) /* XSmallIcon */.XSmallIcon, {});
-  obj2[2] = callback2(require(4783) /* PressableBase */.PressableOpacity, obj3);
-  return callback2(require(5286) /* TableRowInner */.TableRow, obj2);
+  obj3[3] = callback2(require(5179) /* XSmallIcon */.XSmallIcon, {});
+  obj2[2] = callback2(require(4721) /* PressableBase */.PressableOpacity, obj3);
+  return callback2(require(5224) /* TableRowInner */.TableRow, obj2);
 }
 function BooleanConfigRule(metadataField) {
   let _slicedToArray;
@@ -151,7 +151,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(5621).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(5559).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   let _slicedToArray;
@@ -210,7 +210,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(16566);
+  let obj = metadataField(16500);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   let value;
@@ -219,7 +219,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(16566);
+  let tmpResult = tmp(16500);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = React;
@@ -269,7 +269,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     map = fieldTextHook.map;
     mapped = map(intl.format(fieldTextHook, obj), (arg0, arg1) => {
       let tmp = arg0;
-      if (typeof arg0 !== "ge") {
+      if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
         const obj = { variant: "text-md/semibold", style: null, children: null };
         obj[1] = map.metadataRowText;
         obj[2] = arg0;
@@ -303,7 +303,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       const obj4 = { variant: "text-md/semibold", style: null, children: null };
       obj4[1] = map.appNumericalInputText;
       obj4[2] = fieldText;
-      items1[1] = onInputValueChange(tmp(4251).Text, obj4);
+      items1[1] = onInputValueChange(tmp(4189).Text, obj4);
       obj1[1] = items1;
       tmp21Result = closure_13(tmp22, obj1);
       const tmp21 = closure_13;
@@ -345,7 +345,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       }
       _slicedToArray(tmp3, num);
     };
-    return onInputValueChange(tmp(5621).TableSwitchRow, obj5, metadataField);
+    return onInputValueChange(tmp(5559).TableSwitchRow, obj5, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
@@ -353,7 +353,7 @@ function BlueskyMetadataRules(arg0) {
   let locked;
   let onConfigurationChange;
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = importDefault(4937);
+  let obj = importDefault(4875);
   const value = obj.get(PlatformTypes.BLUESKY);
   obj = { children: null };
   obj = { fieldTextHook: require(1236) /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
@@ -368,7 +368,7 @@ function SteamMetadataRules(arg0) {
   let locked;
   let onConfigurationChange;
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = importDefault(4937);
+  let obj = importDefault(4875);
   const value = obj.get(PlatformTypes.STEAM);
   obj = { children: null };
   obj = { fieldTextHook: require(1236) /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
@@ -385,7 +385,7 @@ function TwitterMetadataRules(arg0) {
   let locked;
   let onConfigurationChange;
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = importDefault(4937);
+  let obj = importDefault(4875);
   const value = obj.get(PlatformTypes.TWITTER);
   obj = { children: null };
   obj = { fieldTextHook: require(1236) /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
@@ -409,7 +409,7 @@ function RedditMetadataRules(arg0) {
   let locked;
   let onConfigurationChange;
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = importDefault(4937);
+  let obj = importDefault(4875);
   const value = obj.get(PlatformTypes.REDDIT);
   obj = { children: null };
   obj = { fieldTextHook: require(1236) /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
@@ -440,7 +440,7 @@ function PaypalMetadataRules(arg0) {
   let locked;
   let onConfigurationChange;
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = importDefault(4937);
+  let obj = importDefault(4875);
   const value = obj.get(PlatformTypes.PAYPAL);
   obj = { children: null };
   obj = { fieldTextHook: require(1236) /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
@@ -462,7 +462,7 @@ function EbayMetadataRules(arg0) {
   let locked;
   let onConfigurationChange;
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = importDefault(4937);
+  let obj = importDefault(4875);
   const value = obj.get(PlatformTypes.EBAY);
   obj = { children: null };
   obj = { fieldTextHook: require(1236) /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
@@ -488,7 +488,7 @@ function TikTokMetadataRules(arg0) {
   let locked;
   let onConfigurationChange;
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
-  let obj = importDefault(4937);
+  let obj = importDefault(4875);
   const value = obj.get(PlatformTypes.TIKTOK);
   obj = { children: null };
   obj = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
@@ -641,7 +641,7 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
     }
     if (configurationItems[0].configuration.connectionType === closure_11) {
       let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: 1802240002, onRemove: 21168131, locked: -268434591 };
+      obj = { platform: null, integration: "a", applicationId: false, onRemove: false, locked: false };
       obj[2] = applicationId;
       obj[3] = function onRemove() {
         return onConfigurationChange(null, configurationItems[0].index);

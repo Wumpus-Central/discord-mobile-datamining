@@ -1,6 +1,6 @@
-// === Module 7670: map ===
+// === Module 6699: map ===
 
-// Module 7670 (map)
+// Module 6699 (map)
 import createFromServer from "createFromServer";
 import { InviteTargetTypes } from "InviteSendStates";
 import { Store } from "initialize";
@@ -85,9 +85,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
   },
   FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreateSuccess(invite) {
     closure_8[invite.invite.code] = createFromServer.createFromServer(invite.invite);
-    const tmp = importDefault(7672);
-    const tmp2 = importDefault(7674);
-    let tmpResult = tmp(tmp2(importDefault(7675)(Object.values(closure_8), "createdAt")));
+    const tmp = importDefault(6701);
+    const tmp2 = importDefault(6703);
+    let tmpResult = tmp(tmp2(importDefault(6704)(Object.values(closure_8), "createdAt")));
     if (tmpResult == null) {
       tmpResult = null;
     }
@@ -107,9 +107,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
         }
       });
     }
-    const tmp2 = importDefault(7672);
-    const tmp3 = importDefault(7674);
-    let tmp2Result = tmp2(tmp3(importDefault(7675)(Object.values(closure_8), "createdAt")));
+    const tmp2 = importDefault(6701);
+    const tmp3 = importDefault(6703);
+    let tmp2Result = tmp2(tmp3(importDefault(6704)(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
@@ -159,9 +159,9 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
     const item = invites.forEach((code) => {
       closure_8[code.code] = createFromServer.createFromServer(code);
     });
-    const tmp2 = importDefault(7672);
-    const tmp3 = importDefault(7674);
-    let tmp2Result = tmp2(tmp3(importDefault(7675)(Object.values(closure_8), "createdAt")));
+    const tmp2 = importDefault(6701);
+    const tmp3 = importDefault(6703);
+    let tmp2Result = tmp2(tmp3(importDefault(6704)(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }

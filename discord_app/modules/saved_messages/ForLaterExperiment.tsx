@@ -1,6 +1,6 @@
-// === Module 9714: ForLaterFreemiumConfig ===
+// === Module 9567: ForLaterFreemiumConfig ===
 
-// Module 9714 (ForLaterFreemiumConfig)
+// Module 9567 (ForLaterFreemiumConfig)
 import SAVED_BOOKMARKS_MAX from "SAVED_BOOKMARKS_MAX";
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";
@@ -33,7 +33,7 @@ const obj2 = {
   1: null,
   2: (arg0) => {
     const parsed = JSON.parse(arg0);
-    if (typeof ForLaterFreemiumConfig !== "error") {
+    if (typeof ForLaterFreemiumConfig !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(ForLaterFreemiumConfig.prototype);
@@ -46,7 +46,7 @@ const obj2 = {
 };
 obj2[2] = (arg0) => {
   const parsed = JSON.parse(arg0);
-  if (typeof ForLaterFreemiumConfig !== "error") {
+  if (typeof ForLaterFreemiumConfig !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(ForLaterFreemiumConfig.prototype);
@@ -89,7 +89,7 @@ export const useHasForLaterAccess = function useHasForLaterAccess(ForLaterOpenAc
   if (!enabled) {
     let enabled1 = store.useConfig(obj).enabled;
     if (enabled1) {
-      enabled1 = importDefault(9716)();
+      enabled1 = importDefault(9569)();
     }
     enabled = enabled1;
   }
@@ -102,7 +102,7 @@ export const hasForLaterAccess = function hasForLaterAccess(addOrUpdateSavedMess
   if (!enabled) {
     let enabled1 = store.getConfig(obj).enabled;
     if (enabled1) {
-      enabled1 = importDefault(9716)();
+      enabled1 = importDefault(9569)();
     }
     enabled = enabled1;
   }

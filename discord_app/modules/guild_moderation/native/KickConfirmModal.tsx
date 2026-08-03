@@ -1,6 +1,6 @@
-// === Module 11177: KickConfirmModal ===
+// === Module 11061: KickConfirmModal ===
 
-// Module 11177 (KickConfirmModal)
+// Module 11061 (KickConfirmModal)
 import "noop";
 import { jsx } from "jsxProd";
 

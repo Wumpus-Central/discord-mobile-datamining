@@ -1,6 +1,6 @@
-// === Module 10494: ? ===
+// === Module 10355: ? ===
 
-// Module 10494
+// Module 10355
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -31,16 +31,16 @@ const memoResult = importAllResult.memo(function MessageFailedToSendNotification
   obj = { style: callback().iconContainer, children: null };
   const obj1 = { size: "md", color: null };
   obj1[1] = messageId(712).colors.ICON_SUBTLE;
-  obj[1] = jsx(channelId(10127).RetryIcon, { size: "md", color: null });
+  obj[1] = jsx(channelId(9984).RetryIcon, { size: "md", color: null });
   obj[0] = <View style={callback().iconContainer}>{null}</View>;
   const obj2 = { text: null };
   const intl2 = channelId(1236).intl;
   obj2[0] = intl2.string(channelId(1236).t.xxRPOT);
-  obj[1] = jsx(channelId(10432).SystemMessageText, { text: null });
+  obj[1] = jsx(channelId(10293).SystemMessageText, { text: null });
   obj[2] = obj;
   obj[3] = callback;
   obj[4] = notification;
-  return jsx(channelId(10487).NotificationPressable, { style: callback().iconContainer, children: null });
+  return jsx(channelId(10348).NotificationPressable, { style: callback().iconContainer, children: null });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/in_app_notifications/native/MessageFailedToSendNotification.tsx");
 

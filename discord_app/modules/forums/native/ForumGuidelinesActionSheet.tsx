@@ -1,6 +1,6 @@
-// === Module 9742: ForumGuidelinesActionSheet ===
+// === Module 9595: ForumGuidelinesActionSheet ===
 
-// Module 9742 (ForumGuidelinesActionSheet)
+// Module 9595 (ForumGuidelinesActionSheet)
 import _slicedToArray from "_slicedToArray";
 import Background from "Background";
 import { View } from "ME";
@@ -185,8 +185,8 @@ export default function ForumGuidelinesActionSheet(channel) {
   return closure_8(closure_9, { children });
 };
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
-  let obj = importDefault(4223);
+  let obj = importDefault(4161);
   obj = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(require(1959) /* asyncRequireImpl */(9742, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(9595, dependencyMap.paths), closure_6, obj);
 };

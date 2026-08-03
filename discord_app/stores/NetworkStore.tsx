@@ -1,6 +1,6 @@
-// === Module 4347: handleConnectionInfoChange ===
+// === Module 4285: handleConnectionInfoChange ===
 
-// Module 4347 (handleConnectionInfoChange)
+// Module 4285 (handleConnectionInfoChange)
 import ME from "ME";
 import { Store } from "initialize";
 

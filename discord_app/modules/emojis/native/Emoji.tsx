@@ -1,6 +1,6 @@
-// === Module 5272: Emoji ===
+// === Module 5210: Emoji ===
 
-// Module 5272 (Emoji)
+// Module 5210 (Emoji)
 import "noop";
 import { View } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
@@ -24,7 +24,7 @@ export default function Emoji(arg0) {
   if (obj.isAndroid()) {
     uRL = src;
     if (null == src) {
-      let obj1 = importDefault(3900);
+      let obj1 = importDefault(3838);
       uRL = obj1.getURL(name);
     }
   }
@@ -34,18 +34,18 @@ export default function Emoji(arg0) {
       if ("" !== uRL) {
         obj = { resizeMode: "contain", style: null, placeholder: null, source: null };
         obj[1] = fastImageStyle;
-        const tmp10 = importDefault(5207);
+        const tmp10 = importDefault(5145);
         if (tmpResult.isThemeDark(theme.theme)) {
-          let tmp9Result = tmp9(5273);
+          let tmp9Result = tmp9(5211);
         } else {
-          tmp9Result = tmp9(5274);
+          tmp9Result = tmp9(5212);
         }
         obj[2] = tmp9Result;
         obj1 = { uri: null };
         obj1[0] = uRL;
         obj[3] = obj1;
         let tmp6Result = tmp6(tmp10, obj);
-        tmpResult = tmp(4101);
+        tmpResult = tmp(4039);
       }
       obj[1] = tmp6Result;
       return tmp6(tmp7, obj);

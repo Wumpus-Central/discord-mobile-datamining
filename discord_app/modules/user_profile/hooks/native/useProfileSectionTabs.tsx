@@ -1,6 +1,6 @@
-// === Module 12285: useProfileTabIndices ===
+// === Module 12189: useProfileTabIndices ===
 
-// Module 12285 (useProfileTabIndices)
+// Module 12189 (useProfileTabIndices)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";

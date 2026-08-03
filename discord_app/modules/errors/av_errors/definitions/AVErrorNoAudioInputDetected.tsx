@@ -1,6 +1,6 @@
-// === Module 16762: AVErrorNoAudioInputDetectedDefinition ===
+// === Module 16696: AVErrorNoAudioInputDetectedDefinition ===
 
-// Module 16762 (AVErrorNoAudioInputDetectedDefinition)
+// Module 16696 (AVErrorNoAudioInputDetectedDefinition)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
@@ -37,8 +37,8 @@ export const AVErrorNoAudioInputDetectedDefinition = {
                   if (!isGuildStageVoiceResult) {
                     if (!obj5.isSelfMute()) {
                       const obj = { type: null };
-                      obj[0] = require(9038) /* mapped */.AVError.NO_AUDIO_INPUT_DETECTED;
-                      const merged = Object.assign(require(16763) /* getVoiceChannelErrorContext */.getVoiceChannelErrorContext());
+                      obj[0] = require(8861) /* mapped */.AVError.NO_AUDIO_INPUT_DETECTED;
+                      const merged = Object.assign(require(16697) /* getVoiceChannelErrorContext */.getVoiceChannelErrorContext());
                       const items = [obj];
                       return items;
                     }

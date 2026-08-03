@@ -1,6 +1,6 @@
-// === Module 14462: toggle ===
+// === Module 14395: toggle ===
 
-// Module 14462 (toggle)
+// Module 14395 (toggle)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
 
@@ -16,7 +16,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => "auto" === obj.rawPrefersReducedMotion);
   },
   onValueChange: function onReducedMotionSyncSettingValueChange(arg0) {
-    const obj = require(13584) /* setFontSize */;
+    const obj = require(13521) /* setFontSize */;
     let str = "auto";
     if (!arg0) {
       str = obj.systemPrefersReducedMotion;

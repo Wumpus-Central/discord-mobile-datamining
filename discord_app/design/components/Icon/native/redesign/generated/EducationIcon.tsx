@@ -1,6 +1,6 @@
-// === Module 10329: EducationIcon ===
+// === Module 10190: EducationIcon ===
 
-// Module 10329 (EducationIcon)
+// Module 10190 (EducationIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const EducationIcon = function EducationIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(10328) /* registerAsset */;
+  obj[0] = require(10189) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

@@ -1,6 +1,6 @@
-// === Module 10137: StampIcon ===
+// === Module 9994: StampIcon ===
 
-// Module 10137 (StampIcon)
+// Module 9994 (StampIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const StampIcon = function StampIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(10138) /* registerAsset */;
+  obj[0] = require(9995) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

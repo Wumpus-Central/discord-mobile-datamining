@@ -1,6 +1,6 @@
-// === Module 7328: useResubscribeSubscriptionParams ===
+// === Module 6674: useResubscribeSubscriptionParams ===
 
-// Module 7328 (useResubscribeSubscriptionParams)
+// Module 6674 (useResubscribeSubscriptionParams)
 import noop from "noop";
 
 const require = arg1;
@@ -8,7 +8,7 @@ const result = require("v1").fileFinishedImporting("modules/billing/native/subsc
 
 export default function useResubscribeSubscriptionParams(arg0) {
   let closure_0 = arg0;
-  const tmp = importDefault(7326)();
+  const tmp = importDefault(6672)();
   importDefault = tmp;
   const items = [arg0, tmp];
   return React.useMemo(() => {

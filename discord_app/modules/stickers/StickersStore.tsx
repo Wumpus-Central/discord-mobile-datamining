@@ -1,6 +1,6 @@
-// === Module 5158: loadSavedGuildStickers ===
+// === Module 5096: loadSavedGuildStickers ===
 
-// Module 5158 (loadSavedGuildStickers)
+// Module 5096 (loadSavedGuildStickers)
 import items from "items";
 import allGuildIds from "allGuildIds";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,6 @@
-// === Module 9477: ConversationNavigatorMoreMenu ===
+// === Module 9305: ConversationNavigatorMoreMenu ===
 
-// Module 9477 (ConversationNavigatorMoreMenu)
+// Module 9305 (ConversationNavigatorMoreMenu)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,6 @@
-// === Module 15373: _fetchNotificationCenterItems ===
+// === Module 15306: _fetchNotificationCenterItems ===
 
-// Module 15373 (_fetchNotificationCenterItems)
+// Module 15306 (_fetchNotificationCenterItems)
 import encodeProperties from "encodeProperties";
 import _validate from "_validate";
 import { Endpoints } from "ME";
@@ -94,7 +94,7 @@ function _fetchNotificationCenterItems() {
               c6 = 3;
               c7 = 1;
               let obj6 = { value: null, done: false };
-              obj6[0] = callback(5065).get(obj3);
+              obj6[0] = callback(5003).get(obj3);
               return obj6;
             }
           } else if (2 === tmp7) {
@@ -526,7 +526,7 @@ export const markNotificationCenterItemAcked = function markNotificationCenterIt
     importDefault(709).dispatch(obj);
     const obj4 = importDefault(709);
   } else {
-    obj = require(7010) /* getRelativeTimestamp */;
+    obj = require(5931) /* getRelativeTimestamp */;
     if (obj.isMentionItem(local_id)) {
       obj = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
       const items1 = [local_id.id];

@@ -1,6 +1,6 @@
-// === Module 13834: EditGuildIdentityAvatar ===
+// === Module 13767: EditGuildIdentityAvatar ===
 
-// Module 13834 (EditGuildIdentityAvatar)
+// Module 13767 (EditGuildIdentityAvatar)
 import ProfileGIFSelectActionSheet from "ProfileGIFSelectActionSheet";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";

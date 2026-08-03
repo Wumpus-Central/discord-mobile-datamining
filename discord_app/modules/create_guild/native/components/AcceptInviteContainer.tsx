@@ -1,6 +1,6 @@
-// === Module 11928: AcceptInviteContainer ===
+// === Module 11826: AcceptInviteContainer ===
 
-// Module 11928 (AcceptInviteContainer)
+// Module 11826 (AcceptInviteContainer)
 import GuildMemberFlags from "GuildMemberFlags";
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

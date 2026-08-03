@@ -1,6 +1,6 @@
-// === Module 12013: useOrbCheckoutModalContextProvider ===
+// === Module 11917: useOrbCheckoutModalContextProvider ===
 
-// Module 12013 (useOrbCheckoutModalContextProvider)
+// Module 11917 (useOrbCheckoutModalContextProvider)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import addSku from "addSku";

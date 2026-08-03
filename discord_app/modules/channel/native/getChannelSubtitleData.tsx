@@ -1,6 +1,6 @@
-// === Module 15192: getChannelSubtitleData ===
+// === Module 15211: getChannelSubtitleData ===
 
-// Module 15192 (getChannelSubtitleData)
+// Module 15211 (getChannelSubtitleData)
 const result = require("set").fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
 export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {

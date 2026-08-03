@@ -1,6 +1,6 @@
-// === Module 14771: toggle ===
+// === Module 14704: toggle ===
 
-// Module 14771 (toggle)
+// Module 14704 (toggle)
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { FriendSourceFlags } from "ME";
@@ -14,8 +14,8 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
-    const selectedTeenId = controlledSetting(7249).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(13942).ParentalControlledFriendSourceFlags;
+    const selectedTeenId = controlledSetting(6260).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(13875).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return React.useMemo(() => controlledSetting(outer1_2[6]).computeFlags(controlledSetting), items).mutualFriends;
@@ -23,9 +23,9 @@ createToggle = {
   onValueChange: function onFriendRequestsMutualFriendsSettingValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledFriendSourceFlags = require(13942) /* result */.ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = require(13875) /* result */.ParentalControlledFriendSourceFlags;
       const controlledSetting = ParentalControlledFriendSourceFlags.getControlledSetting(selectedTeenId);
-      const ParentalControlledFriendSourceFlags2 = require(13942) /* result */.ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags2 = require(13875) /* result */.ParentalControlledFriendSourceFlags;
       const obj = importAll(1384);
       if (arg0) {
         let addFlagResult = obj.addFlag(controlledSetting, FriendSourceFlags.MUTUAL_FRIENDS);

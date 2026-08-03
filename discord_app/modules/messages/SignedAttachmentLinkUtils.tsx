@@ -1,6 +1,6 @@
-// === Module 9759: shouldRefreshAttachmentUrl ===
+// === Module 9611: shouldRefreshAttachmentUrl ===
 
-// Module 9759 (shouldRefreshAttachmentUrl)
+// Module 9611 (shouldRefreshAttachmentUrl)
 import sendRequest from "sendRequest";
 import { Endpoints } from "ME";
 import set from "set";
@@ -330,7 +330,7 @@ let result = set.fileFinishedImporting("modules/messages/SignedAttachmentLinkUti
 
 export { isAttachmentUrl };
 export const isExternalProxiedAttachmentUrl = function isExternalProxiedAttachmentUrl(toURLSafeResult) {
-  return require(4286) /* isImageProxyURL */.isImageProxyURL(toURLSafeResult);
+  return require(4224) /* isImageProxyURL */.isImageProxyURL(toURLSafeResult);
 };
 export const removeSignedUrlParameters = function removeSignedUrlParameters(toURLSafeResult) {
   toURLSafeResult = importDefault(1467).toURLSafe(toURLSafeResult);

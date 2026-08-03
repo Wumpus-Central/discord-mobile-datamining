@@ -1,6 +1,6 @@
-// === Module 15789: PendingMessageRequestRow ===
+// === Module 15724: PendingMessageRequestRow ===
 
-// Module 15789 (PendingMessageRequestRow)
+// Module 15724 (PendingMessageRequestRow)
 import useSafeAreaInsets from "useSafeAreaInsets";
 import get_ActivityIndicator from "registerAsset";
 import { AnalyticEvents } from "ME";

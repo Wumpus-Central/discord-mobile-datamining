@@ -1,6 +1,6 @@
-// === Module 15968: trackActivityThermalStateNoticeShown ===
+// === Module 15904: trackActivityThermalStateNoticeShown ===
 
-// Module 15968 (trackActivityThermalStateNoticeShown)
+// Module 15904 (trackActivityThermalStateNoticeShown)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import participantFromServer from "participantFromServer";
@@ -11,7 +11,7 @@ const result = require("participantFromServer").fileFinishedImporting("modules/a
 
 export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
-  let obj = require(3873) /* getEmbeddedActivityLocationChannelId */;
+  let obj = require(3811) /* getEmbeddedActivityLocationChannelId */;
   let _location;
   if (currentEmbeddedActivity != null) {
     _location = currentEmbeddedActivity.location;

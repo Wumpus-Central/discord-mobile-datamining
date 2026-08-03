@@ -1,6 +1,6 @@
-// === Module 4650: useAccessibilityViewIsModalToggle ===
+// === Module 4588: useAccessibilityViewIsModalToggle ===
 
-// Module 4650 (useAccessibilityViewIsModalToggle)
+// Module 4588 (useAccessibilityViewIsModalToggle)
 import noop from "noop";
 
 let result = require("set").fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");

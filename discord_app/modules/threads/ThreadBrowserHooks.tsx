@@ -1,6 +1,6 @@
-// === Module 11974: useTrackThreadBrowserTab ===
+// === Module 11878: useTrackThreadBrowserTab ===
 
-// Module 11974 (useTrackThreadBrowserTab)
+// Module 11878 (useTrackThreadBrowserTab)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useShouldShowResolvedFlagsForChannel as closure_5 } from "useReportToModChannelFiltersStore";

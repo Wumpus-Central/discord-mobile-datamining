@@ -1,6 +1,6 @@
-// === Module 8160: sum ===
+// === Module 6193: sum ===
 
-// Module 8160 (sum)
+// Module 6193 (sum)
 function sum(arg0) {
 
 }
@@ -37,7 +37,7 @@ export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(it
   if (items.totalPreCompressionSize > 0) {
     let totalPreCompressionSize = items.totalPreCompressionSize;
   } else {
-    if (typeof sum !== "error") {
+    if (typeof sum !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     totalPreCompressionSize = mapped.reduce((arg0, arg1) => arg0 + arg1, 0);
@@ -51,7 +51,7 @@ export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(it
     obj[4] = items.attachmentsCount > 0 ? items.attachmentsCount : items.length;
     return obj;
   }
-  if (typeof sum !== "error") {
+  if (typeof sum !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   totalPostCompressionSize = mapped1.reduce((arg0, arg1) => arg0 + arg1, 0);

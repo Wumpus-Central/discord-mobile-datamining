@@ -1,6 +1,6 @@
-// === Module 13917: route ===
+// === Module 13850: route ===
 
-// Module 13917 (route)
+// Module 13850 (route)
 import upsertRelationship from "upsertRelationship";
 import createToggle from "createToggle";
 
@@ -23,7 +23,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.BLOCKED_USERS_V2,
   getComponent() {
-    return require(13918) /* BlockedUsersList */.default;
+    return require(13851) /* BlockedUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

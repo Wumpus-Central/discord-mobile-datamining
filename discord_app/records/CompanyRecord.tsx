@@ -1,6 +1,6 @@
-// === Module 4279: createFromServer ===
+// === Module 4217: createFromServer ===
 
-// Module 4279 (createFromServer)
+// Module 4217 (createFromServer)
 import "toJS";
 
 let prototype;
@@ -13,7 +13,7 @@ prototype = function CompanyRecord(arg0) {
 class prototype extends tmp2 {
 }
 prototype["createFromServer"] = function createFromServer(arg0) {
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new prototype("Trying to call a non-function", prototype);

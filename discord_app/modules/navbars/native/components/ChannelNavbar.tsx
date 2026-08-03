@@ -1,6 +1,6 @@
-// === Module 11983: ChannelTitleContent ===
+// === Module 11887: ChannelTitleContent ===
 
-// Module 11983 (ChannelTitleContent)
+// Module 11887 (ChannelTitleContent)
 import importAllResult from "computeChannelName";
 import { View } from "getSystemLocale";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -54,7 +54,7 @@ function ChannelTitleContent(arg0) {
     obj[0] = tmp.channelName;
     obj[4] = accessibleTitle;
     obj[7] = title;
-    obj[1] = callback(require(4251) /* Text */.Text, obj);
+    obj[1] = callback(require(4189) /* Text */.Text, obj);
     tmp8 = callback(View, obj);
   }
   const obj1 = { style: tmp.flexRow, children: null };
@@ -73,11 +73,11 @@ function ParentChannelSubTitle(parentChannel) {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { channelName: null };
   const tmp = callback3();
-  obj[0] = require(4446) /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
+  obj[0] = require(4384) /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
   obj[2] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.BjYvHO, obj);
-  const obj3 = require(4446) /* computeChannelName */;
-  obj[6] = require(4446) /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship, true);
-  return callback(require(4251) /* Text */.Text, obj);
+  const obj3 = require(4384) /* computeChannelName */;
+  obj[6] = require(4384) /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship, true);
+  return callback(require(4189) /* Text */.Text, obj);
 }
 function DMChannelName(style) {
   const userId = style.userId;
@@ -163,7 +163,7 @@ function ChannelTitleWrapper(arg0) {
       return null;
     };
     obj[4] = children;
-    tmp5 = callback(require(4783) /* PressableBase */.PressableOpacity, obj);
+    tmp5 = callback(require(4721) /* PressableBase */.PressableOpacity, obj);
   }
   return tmp5;
 }
@@ -433,12 +433,12 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   }
   let channelIcon = null;
   if (null != stateFromStores) {
-    let tmp2Result = tmp2(4716);
+    let tmp2Result = tmp2(4654);
     channelIcon = tmp2Result.getChannelIcon(stateFromStores);
   }
   let channelName = null;
   if (null != stateFromStores) {
-    tmp2Result = tmp2(4446);
+    tmp2Result = tmp2(4384);
     channelName = tmp2Result.computeChannelName(stateFromStores, mergeGuildAvatar, upsertRelationship);
   }
   let isDMResult;
@@ -467,7 +467,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
     obj3[0] = callback(DMChannelName, obj);
     obj3[1] = channelIcon;
     obj3[2] = tmp16Result;
-    obj3[3] = callback(importDefault(9244), obj1);
+    obj3[3] = callback(importDefault(9071), obj1);
     obj2[1] = callback(ChannelTitleContent, obj3);
     return callback(ChannelTitleWrapper, obj2);
   } else {

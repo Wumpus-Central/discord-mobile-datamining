@@ -1,6 +1,6 @@
-// === Module 15854: ConnectionIcon ===
+// === Module 15790: ConnectionIcon ===
 
-// Module 15854 (ConnectionIcon)
+// Module 15790 (ConnectionIcon)
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
 import { View } from "IncentivizedAccountLinkConfirmationBottomSheet";
 import addApplication from "addApplication";
@@ -17,7 +17,7 @@ function ConnectionIcon(arg0) {
   let theme;
   ({ platform, theme } = arg0);
   const tmp = createCacheKey();
-  let obj = require(3965) /* isThemeLight */;
+  let obj = require(3903) /* isThemeLight */;
   const isThemeDarkResult = obj.isThemeDark(theme);
   const tmp2 = require;
   const icon = platform.icon;
@@ -25,10 +25,10 @@ function ConnectionIcon(arg0) {
   const source = require(1416) /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true, style: null };
   const obj2 = require(1416) /* getAvatarURL */;
-  obj[0] = tmp2(4668).IconSizes.CUSTOM;
+  obj[0] = tmp2(4606).IconSizes.CUSTOM;
   obj[1] = source;
   obj[3] = tmp.connectionIcon;
-  obj[1] = callback(importDefault(4668), obj);
+  obj[1] = callback(importDefault(4606), obj);
   return callback(View, obj);
 }
 function ApplicationIcon(application) {
@@ -38,9 +38,9 @@ function ApplicationIcon(application) {
   if (null != application) {
     obj = { game: null, size: null };
     obj[0] = application;
-    obj[1] = require(5591) /* GameIcon */.GameIconSizes.NORMAL;
-    tmpResult = tmp(importDefault(5591), obj);
-    const tmp6 = importDefault(5591);
+    obj[1] = require(5529) /* GameIcon */.GameIconSizes.NORMAL;
+    tmpResult = tmp(importDefault(5529), obj);
+    const tmp6 = importDefault(5529);
   }
   obj[1] = tmpResult;
   return closure_8(View, obj);
@@ -55,9 +55,10 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let result = require("addApplication").fileFinishedImporting("modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx");
 
 export default function ConnectionDeprecationBottomSheet(arg0) {
+  let applicationName;
   let markAsDismissed;
   let require;
-  ({ platformTypes: require, markAsDismissed } = arg0);
+  ({ platformTypes: require, applicationName, markAsDismissed } = arg0);
   let replacedBy;
   let startAuthorization;
   let analyticsLocations;
@@ -107,6 +108,9 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
   const items3 = [analyticsLocations, startAuthorization, markAsDismissed, callback];
   if (null != value) {
     if (null != stateFromStores1) {
+      if (applicationName == null) {
+        applicationName = stateFromStores1.name;
+      }
       obj = { startExpanded: true, contentStyles: null, header: null, onDismiss: null, children: null };
       obj[1] = tmp.content;
       obj[2] = callback(tmp2(tmp3[19]).BottomSheetTitleHeader, { title: null });
@@ -139,14 +143,15 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       const obj8 = { variant: "text-md/medium", style: null, children: null };
       obj8[1] = tmp.text;
       const intl2 = tmp2(tmp3[24]).intl;
-      const obj9 = { connectionName: null, orbCount: 200, orbsIconHook: null };
+      const obj9 = { connectionName: null, applicationName: null, orbCount: 200, orbsIconHook: null };
       obj9[0] = value.name;
-      obj9[2] = function orbsIconHook() {
+      obj9[1] = applicationName;
+      obj9[3] = function orbsIconHook() {
         const obj = { size: "xs", color: null };
         obj[1] = markAsDismissed(replacedBy[7]).colors.TEXT_STRONG;
         return callback2(callback(replacedBy[26]).OrbsIcon, obj);
       };
-      obj8[2] = intl2.format(tmp4(tmp3[25]).qV9zT6, obj9);
+      obj8[2] = intl2.format(tmp4(tmp3[25]).DfSSdL, obj9);
       items6[1] = callback(tmp2(tmp3[23]).Text, obj8);
       obj6[1] = items6;
       items5[1] = callback2(tmp2(tmp3[21]).Stack, obj6);
@@ -211,8 +216,8 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(5587).useGetOrFetchApplication(replacedBy);
-  const tmp5 = importDefault(5584)(getOrFetchApplication);
+  const getOrFetchApplication = deprecatedPlatformTypes(5525).useGetOrFetchApplication(replacedBy);
+  const tmp5 = importDefault(5522)(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {
     fetchingConnections = !tmp5.fetched;

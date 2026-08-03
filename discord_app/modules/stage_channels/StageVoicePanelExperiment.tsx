@@ -1,6 +1,6 @@
-// === Module 4467: useIsStageVoicePanelEnabled ===
+// === Module 4405: useIsStageVoicePanelEnabled ===
 
-// Module 4467 (useIsStageVoicePanelEnabled)
+// Module 4405 (useIsStageVoicePanelEnabled)
 import ApexExperiment from "ApexExperiment";
 
 let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-stage-voice-panel", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

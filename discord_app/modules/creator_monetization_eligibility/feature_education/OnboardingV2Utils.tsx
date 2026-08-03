@@ -1,6 +1,6 @@
-// === Module 15222: items ===
+// === Module 15239: items ===
 
-// Module 15222 (items)
+// Module 15239 (items)
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -42,9 +42,9 @@ export const canSeeCreatorMonetizationOnboardingV2Upsell = function canSeeCreato
     if (null == currentUser) {
       return false;
     } else {
-      const guildRoleSubscriptionSettingsVisibility = guild(5760).getGuildRoleSubscriptionSettingsVisibility(guild);
-      let tmp5 = guildRoleSubscriptionSettingsVisibility === guild(5760).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
-      const obj = guild(5760);
+      const guildRoleSubscriptionSettingsVisibility = guild(12641).getGuildRoleSubscriptionSettingsVisibility(guild);
+      let tmp5 = guildRoleSubscriptionSettingsVisibility === guild(12641).GuildRoleSubscriptionSettingsVisibility.VISIBLE;
+      const obj = guild(12641);
       const tmp7 = isGuildOwner(guild, currentUser);
       if (tmp5) {
         tmp5 = tmp7;

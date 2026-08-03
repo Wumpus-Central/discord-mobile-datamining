@@ -1,6 +1,6 @@
-// === Module 15816: Settings ===
+// === Module 15751: Settings ===
 
-// Module 15816 (Settings)
+// Module 15751 (Settings)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

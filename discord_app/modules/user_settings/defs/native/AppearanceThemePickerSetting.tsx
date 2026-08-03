@@ -1,6 +1,6 @@
-// === Module 14368: route ===
+// === Module 14301: route ===
 
-// Module 14368 (route)
+// Module 14301 (route)
 import handleThemeChange from "handleThemeChange";
 import createToggle from "createToggle";
 
@@ -26,7 +26,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
-    return require(14369) /* ThemeTypes */.default;
+    return require(14302) /* ThemeTypes */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -1,6 +1,6 @@
-// === Module 15917: useExternalPipParticipant ===
+// === Module 15853: useExternalPipParticipant ===
 
-// Module 15917 (useExternalPipParticipant)
+// Module 15853 (useExternalPipParticipant)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getParticipants from "getParticipants";
@@ -58,7 +58,7 @@ export default function useExternalPipParticipant() {
       id1 = tmp4.id;
     }
     if (focusedParticipantStreamId.current !== id1) {
-      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "ct", focusedParticipantType: null };
+      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "HermesInternal", focusedParticipantType: null };
       obj[2] = stateFromStores1.current;
     } else {
       let type1;
@@ -252,7 +252,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "bottom" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "accessible" };
   }, items4);
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];
   const effect = React.useEffect(() => {

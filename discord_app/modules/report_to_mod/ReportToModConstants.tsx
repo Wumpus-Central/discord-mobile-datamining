@@ -1,6 +1,6 @@
-// === Module 5785: ReportToModPermissions ===
+// === Module 6064: ReportToModPermissions ===
 
-// Module 5785 (ReportToModPermissions)
+// Module 6064 (ReportToModPermissions)
 import { Permissions } from "ME";
 import importAllResult from "fromString";
 

@@ -1,6 +1,6 @@
-// === Module 12059: useGuildProfileGames ===
+// === Module 11963: useGuildProfileGames ===
 
-// Module 12059 (useGuildProfileGames)
+// Module 11963 (useGuildProfileGames)
 import noop from "noop";
 import applicationId from "applicationId";
 import map from "map";
@@ -99,7 +99,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
   games = profile.games;
   const items = [fetchFingerprint];
   const stateFromStores = games(589).useStateFromStores(items, () => authenticated.isAuthenticated());
-  games(6990);
+  games(5910);
   if (null != games) {
     if (!stateFromStores) {
       let items1 = [];

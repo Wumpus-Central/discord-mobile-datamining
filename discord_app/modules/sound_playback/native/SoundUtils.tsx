@@ -1,6 +1,6 @@
-// === Module 10428: _createSound ===
+// === Module 10289: _createSound ===
 
-// Module 10428 (_createSound)
+// Module 10289 (_createSound)
 import { NativeModules } from "get ActivityIndicator";
 import isMetaQuest from "isMetaQuest";
 import isMetaQuest from "isMetaQuest";
@@ -205,7 +205,7 @@ prototype2["ensureSound"] = function ensureSound() {
       let closure_0 = arg0;
       let closure_1 = arg1;
       ({ name, usage, _volume } = closure_0);
-      if (typeof outer1_4 !== "error") {
+      if (typeof outer1_4 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const fn = (arg0) => {

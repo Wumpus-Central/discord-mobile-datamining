@@ -1,6 +1,6 @@
-// === Module 11364: BotsBanner ===
+// === Module 11253: BotsBanner ===
 
-// Module 11364 (BotsBanner)
+// Module 11253 (BotsBanner)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -10,7 +10,7 @@ const result = require("useBannerBots").fileFinishedImporting("modules/app_launc
 export default function BotsBanner(context) {
   let firstBotApplication;
   let secondBotApplication;
-  let obj = require(11365) /* useBannerBots */;
+  let obj = require(11254) /* useBannerBots */;
   const bannerBots = obj.useBannerBots({ context: context.context });
   ({ firstBotApplication, secondBotApplication } = bannerBots);
   let tmp4Result = null;
@@ -24,8 +24,8 @@ export default function BotsBanner(context) {
       obj[0] = firstBotApplication.name;
       obj[1] = secondBotApplication.name;
       obj[1] = intl.formatToPlainString(tmp(1236).t["9SN0xw"], obj);
-      tmp4Result = jsx(importDefault(11360), { firstApplicationName: null, secondApplicationName: null });
-      const tmp5Result = importDefault(11360);
+      tmp4Result = jsx(importDefault(11249), { firstApplicationName: null, secondApplicationName: null });
+      const tmp5Result = importDefault(11249);
     }
   }
   return tmp4Result;

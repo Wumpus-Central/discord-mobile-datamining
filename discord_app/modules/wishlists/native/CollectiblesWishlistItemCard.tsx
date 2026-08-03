@@ -1,6 +1,6 @@
-// === Module 9931: CollectiblesWishlistItemCard ===
+// === Module 9786: CollectiblesWishlistItemCard ===
 
-// Module 9931 (CollectiblesWishlistItemCard)
+// Module 9786 (CollectiblesWishlistItemCard)
 import noop from "noop";
 import { transformSKUToCollectiblesItem as closure_4 } from "createCollectiblesItemsFromServerResponse";
 import initialize from "initialize";

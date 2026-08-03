@@ -1,6 +1,6 @@
-// === Module 12472: getHeaderTextForInvite ===
+// === Module 12374: getHeaderTextForInvite ===
 
-// Module 12472 (getHeaderTextForInvite)
+// Module 12374 (getHeaderTextForInvite)
 const result = require("set").fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {

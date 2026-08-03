@@ -1,6 +1,6 @@
-// === Module 4264: useGuildIdForChannelRoute ===
+// === Module 4202: useGuildIdForChannelRoute ===
 
-// Module 4264 (useGuildIdForChannelRoute)
+// Module 4202 (useGuildIdForChannelRoute)
 import initializeFromUserSettings from "initializeFromUserSettings";
 import handleConnectionOpen from "handleConnectionOpen";
 import { FAVORITES } from "ME";

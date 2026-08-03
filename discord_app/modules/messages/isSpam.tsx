@@ -1,6 +1,6 @@
-// === Module 6863: isSpamSupported ===
+// === Module 5768: isSpamSupported ===
 
-// Module 6863 (isSpamSupported)
+// Module 5768 (isSpamSupported)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 
@@ -38,8 +38,8 @@ export const isSpam = function isSpam(author) {
     flag = false;
   }
   if (flag) {
-    flag = !require(6864) /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(author);
-    const obj2 = require(6864) /* getDecisionOutcomeFromMessage */;
+    flag = !require(5769) /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(author);
+    const obj2 = require(5769) /* getDecisionOutcomeFromMessage */;
   }
   return flag;
 };

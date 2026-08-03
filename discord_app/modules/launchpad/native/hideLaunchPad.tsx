@@ -1,6 +1,6 @@
-// === Module 11988: hideLaunchPad ===
+// === Module 11892: hideLaunchPad ===
 
-// Module 11988 (hideLaunchPad)
+// Module 11892 (hideLaunchPad)
 import { ComponentActions } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/launchpad/native/hideLaunchPad.tsx");

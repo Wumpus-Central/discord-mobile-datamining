@@ -1,6 +1,6 @@
-// === Module 9213: XboxLinkDiscordSuccess ===
+// === Module 9040: XboxLinkDiscordSuccess ===
 
-// Module 9213 (XboxLinkDiscordSuccess)
+// Module 9040 (XboxLinkDiscordSuccess)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import get_ActivityIndicator from "registerAsset";

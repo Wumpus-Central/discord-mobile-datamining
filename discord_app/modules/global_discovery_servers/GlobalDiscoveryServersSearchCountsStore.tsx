@@ -1,6 +1,6 @@
-// === Module 12838: map ===
+// === Module 12775: map ===
 
-// Module 12838 (map)
+// Module 12775 (map)
 import { Store } from "initialize";
 
 const require = arg1;
@@ -18,7 +18,7 @@ prototype["handleSearchCountSuccess"] = function handleSearchCountSuccess(catego
   this.isInitialFetchComplete = true;
 };
 prototype["handleSearchCountFailure"] = function handleSearchCountFailure(error) {
-  const aPIError = new require(4154) /* V6OrEarlierAPIError */.APIError(error);
+  const aPIError = new require(4092) /* V6OrEarlierAPIError */.APIError(error);
   this.error = aPIError;
   this.isFetching = false;
 };
@@ -59,7 +59,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "error") {
+      if (typeof SearchCountState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
@@ -73,7 +73,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "error") {
+      if (typeof SearchCountState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
@@ -87,7 +87,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "error") {
+      if (typeof SearchCountState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);

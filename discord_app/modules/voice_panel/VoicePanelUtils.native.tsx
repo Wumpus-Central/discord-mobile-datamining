@@ -1,6 +1,6 @@
-// === Module 10811: isVoicePanelEnabled ===
+// === Module 10703: isVoicePanelEnabled ===
 
-// Module 10811 (isVoicePanelEnabled)
+// Module 10703 (isVoicePanelEnabled)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import withEqualityFn from "withEqualityFn";
@@ -9,7 +9,7 @@ const require = arg1;
 let result = require("withEqualityFn").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
 export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
-  const result = require(4467) /* useIsStageVoicePanelEnabled */.isStageVoicePanelEnabled("voice_panel_utils");
+  const result = require(4405) /* useIsStageVoicePanelEnabled */.isStageVoicePanelEnabled("voice_panel_utils");
   let tmp2 = !result;
   if (!result) {
     let isGuildStageVoiceResult;

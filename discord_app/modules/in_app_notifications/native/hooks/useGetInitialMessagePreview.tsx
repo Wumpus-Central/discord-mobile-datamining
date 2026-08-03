@@ -1,6 +1,6 @@
-// === Module 10454: useGetInitialMessagePreview ===
+// === Module 10315: useGetInitialMessagePreview ===
 
-// Module 10454 (useGetInitialMessagePreview)
+// Module 10315 (useGetInitialMessagePreview)
 import noop from "noop";
 import hasFlag from "hasFlag";
 import { MessageSnapshotRecord } from "hasFlag";

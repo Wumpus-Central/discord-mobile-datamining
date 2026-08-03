@@ -1,6 +1,6 @@
-// === Module 16106: useSoundboardConfig ===
+// === Module 16042: useSoundboardConfig ===
 
-// Module 16106 (useSoundboardConfig)
+// Module 16042 (useSoundboardConfig)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 
@@ -11,8 +11,8 @@ let result = require("useIsConnectedToVoiceChannel").fileFinishedImporting("modu
 export default function useSoundboardConfig(arg0, arg1) {
   const _require = arg0;
   const importDefault = arg1;
-  const tmp = importDefault(15949)(arg0);
-  let obj = _require(4071);
+  const tmp = importDefault(15885)(arg0);
+  let obj = _require(4009);
   let tmp3 = tmp;
   if (tmp) {
     if (obj.VOICE_CONTROLS === arg1) {

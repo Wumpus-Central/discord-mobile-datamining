@@ -1,6 +1,6 @@
-// === Module 15269: Wrapper ===
+// === Module 14980: Wrapper ===
 
-// Module 15269 (Wrapper)
+// Module 14980 (Wrapper)
 import noop from "noop";
 import { View } from "set";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
@@ -233,7 +233,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(4112).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(4050).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

@@ -1,6 +1,6 @@
-// === Module 9828: IMAGE_CAROUSEL_TILE_HEIGHT ===
+// === Module 9683: IMAGE_CAROUSEL_TILE_HEIGHT ===
 
-// Module 9828 (IMAGE_CAROUSEL_TILE_HEIGHT)
+// Module 9683 (IMAGE_CAROUSEL_TILE_HEIGHT)
 const result = require("set").fileFinishedImporting("modules/image/native/ImageCarouselConstants.tsx");
 
 export const IMAGE_CAROUSEL_TILE_HEIGHT = 60;

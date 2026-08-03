@@ -1,6 +1,6 @@
-// === Module 4319: isStreamKey ===
+// === Module 4257: isStreamKey ===
 
-// Module 4319 (isStreamKey)
+// Module 4257 (isStreamKey)
 import _slicedToArray from "_slicedToArray";
 import { StreamTypes } from "StreamIssueReportReasons";
 

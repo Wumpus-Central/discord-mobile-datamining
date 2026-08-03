@@ -1,6 +1,6 @@
-// === Module 15691: AddFriendsContactSyncEmptyState ===
+// === Module 15625: AddFriendsContactSyncEmptyState ===
 
-// Module 15691 (AddFriendsContactSyncEmptyState)
+// Module 15625 (AddFriendsContactSyncEmptyState)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -31,19 +31,19 @@ const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/na
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = createCacheKey();
   let obj = { style: tmp.content, children: null };
-  obj = { resizeMode: "contain", style: tmp.headerImage, source: importDefault(11900) };
+  obj = { resizeMode: "contain", style: tmp.headerImage, source: importDefault(11798) };
   const items = [callback(closure_4, obj), , , ];
   obj = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t["/G+nci"]);
-  items[1] = callback(require(4251) /* Text */.Text, obj);
+  items[1] = callback(require(4189) /* Text */.Text, obj);
   const obj1 = { style: tmp.subtitle, children: null };
   const obj2 = { style: tmp.subtitleText, variant: "text-sm/medium", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   const obj3 = { learnMoreHook: null };
-  obj3[0] = require(11887) /* _uploadContacts */.handleOpenLearnMoreLink;
+  obj3[0] = require(11785) /* _uploadContacts */.handleOpenLearnMoreLink;
   obj2[2] = intl2.format(require(1236) /* getSystemLocale */.t.OXdOPf, obj3);
-  obj1[1] = callback(require(4251) /* Text */.Text, obj2);
+  obj1[1] = callback(require(4189) /* Text */.Text, obj2);
   items[2] = callback(closure_3, obj1);
   const obj4 = { style: tmp.trailing, children: null };
   const obj5 = { variant: "primary", size: "lg", text: null, onPress: null };
@@ -52,7 +52,7 @@ export default function AddFriendsContactSyncEmptyState() {
   obj5[3] = function onPress() {
     callback(table[10]).openContactSyncModal({}, "Add Friends Contact Sync Empty State");
   };
-  obj4[1] = callback(require(4666) /* Button */.Button, obj5);
+  obj4[1] = callback(require(4604) /* Button */.Button, obj5);
   items[3] = callback(closure_3, obj4);
   obj[1] = items;
   return callback2(closure_3, obj);

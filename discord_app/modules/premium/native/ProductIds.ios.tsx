@@ -1,6 +1,6 @@
-// === Module 6776: SubscriptionPlans ===
+// === Module 6296: SubscriptionPlans ===
 
-// Module 6776 (SubscriptionPlans)
+// Module 6296 (SubscriptionPlans)
 import GuildFeatures from "GuildFeatures";
 
 let PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID;

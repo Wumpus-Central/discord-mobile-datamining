@@ -1,6 +1,6 @@
-// === Module 16403: handleGuildCreate ===
+// === Module 16337: handleGuildCreate ===
 
-// Module 16403 (handleGuildCreate)
+// Module 16337 (handleGuildCreate)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";
 import { findFirstVoiceChannelId } from "handleConnectionOpen";
@@ -27,8 +27,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   const channelId = store.getChannelId(closure_9);
   const voiceChannelId = store.getVoiceChannelId();
   if (guild.id === channelId) {
-    require(5856) /* transitionToGuild */.transitionToGuild(guild.id);
-    const obj = require(5856) /* transitionToGuild */;
+    require(6693) /* transitionToGuild */.transitionToGuild(guild.id);
+    const obj = require(6693) /* transitionToGuild */;
   }
   let tmp6 = guild.id === voiceChannelId;
   if (tmp6) {
@@ -38,8 +38,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = importDefault(5067).selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = importDefault(5067);
+    const voiceChannel = importDefault(5005).selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = importDefault(5005);
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -54,8 +54,8 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = importDefault(5067).selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = importDefault(5067);
+      const voiceChannel = importDefault(5005).selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = importDefault(5005);
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }

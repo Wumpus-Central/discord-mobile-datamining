@@ -1,6 +1,6 @@
-// === Module 4064: WCAGContrastRatios ===
+// === Module 4002: WCAGContrastRatios ===
 
-// Module 4064 (WCAGContrastRatios)
+// Module 4002 (WCAGContrastRatios)
 import _slicedToArray from "_slicedToArray";
 
 let obj = { NonText: 3, Text: 4.5, HighContrastText: 7 };

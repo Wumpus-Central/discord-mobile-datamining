@@ -1,6 +1,6 @@
-// === Module 10231: ListSelectionItem ===
+// === Module 10089: ListSelectionItem ===
 
-// Module 10231 (ListSelectionItem)
+// Module 10089 (ListSelectionItem)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,5 +14,5 @@ export default function ListSelectionItem(arg0) {
   ({ Icon, message, onPress } = arg0);
   const obj = { onPress, label: message, icon: null };
   obj[2] = <Icon size={24} />;
-  return jsx(require(5286) /* TableRowInner */.TableRow, { onPress, label: message, icon: null });
+  return jsx(require(5224) /* TableRowInner */.TableRow, { onPress, label: message, icon: null });
 };

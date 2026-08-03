@@ -1,6 +1,6 @@
-// === Module 3902: createFromServer ===
+// === Module 3840: createFromServer ===
 
-// Module 3902 (createFromServer)
+// Module 3840 (createFromServer)
 import "toJS";
 import GuildFeatures from "GuildFeatures";
 
@@ -55,7 +55,7 @@ SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
     }, {});
   }
   ({ id, name, interval, interval_count, tax_inclusive, sku_id, currency } = prices);
-  if (typeof SubscriptionPlanRecord !== "error") {
+  if (typeof SubscriptionPlanRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp5 = new SubscriptionPlanRecord("Trying to call a non-function", tmp, SubscriptionPlanRecord, new.target, id, name, interval, interval_count, tax_inclusive, sku_id, currency);

@@ -1,6 +1,6 @@
-// === Module 7820: _showReportModal ===
+// === Module 7699: _showReportModal ===
 
-// Module 7820 (_showReportModal)
+// Module 7699 (_showReportModal)
 import asyncRequireImpl from "asyncRequireImpl";
 
 const require = arg1;
@@ -155,5 +155,5 @@ export const showReportModal = function showReportModal(arg0, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const hideReportModal = function hideReportModal() {
-  importDefault(4461).popWithKey(IN_APP_REPORT_MODAL_KEY);
+  importDefault(4399).popWithKey(IN_APP_REPORT_MODAL_KEY);
 };

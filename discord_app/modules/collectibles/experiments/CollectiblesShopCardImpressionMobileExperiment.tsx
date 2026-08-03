@@ -1,6 +1,6 @@
-// === Module 12025: apexExperiment ===
+// === Module 11929: apexExperiment ===
 
-// Module 12025 (apexExperiment)
+// Module 11929 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-shop-card-impression-mobile", kind: "user", defaultConfig: { enableShopCardImpression: false }, variations: { 0: { enableShopCardImpression: false }, 1: { enableShopCardImpression: true } } });

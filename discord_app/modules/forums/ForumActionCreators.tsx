@@ -1,6 +1,6 @@
-// === Module 9317: withErrorHandling ===
+// === Module 9144: withErrorHandling ===
 
-// Module 9317 (withErrorHandling)
+// Module 9144 (withErrorHandling)
 import sendRequest from "sendRequest";
 import ME from "ME";
 
@@ -223,7 +223,7 @@ export default {
               return obj;
             } else {
               let closure_0 = tmp4;
-              let obj2 = v0(7132);
+              let obj2 = v0(6080);
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
@@ -264,19 +264,19 @@ export default {
     obj.dispatch(obj);
   },
   markPostAsSeen(arg0, feedItemId, timestampMillis) {
-    const obj = require(9318) /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemSeen(require(9319) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = require(9145) /* markAnalyticsFeedItemSeen */;
+    const result = obj.markAnalyticsFeedItemSeen(require(9146) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   markPostAsUnseen(arg0, feedItemId, timestampMillis) {
-    const obj = require(9318) /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemUnseen(require(9319) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = require(9145) /* markAnalyticsFeedItemSeen */;
+    const result = obj.markAnalyticsFeedItemUnseen(require(9146) /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   flushSeenItems(arg0, IMMEDIATE_WITH_COOLDOWN) {
     if (IMMEDIATE_WITH_COOLDOWN === undefined) {
-      IMMEDIATE_WITH_COOLDOWN = require(9320) /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
+      IMMEDIATE_WITH_COOLDOWN = require(9147) /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
     }
-    const obj = require(9318) /* markAnalyticsFeedItemSeen */;
-    const result = obj.flushAnalyticsFeedItems(require(9319) /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
+    const obj = require(9145) /* markAnalyticsFeedItemSeen */;
+    const result = obj.flushAnalyticsFeedItems(require(9146) /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
   },
   searchForumPosts(guild_id, id, outer1_5, c1, c2) {
     let closure_0 = guild_id;
@@ -318,7 +318,7 @@ export default {
               obj1[1] = outer1_1;
               outer1_1(709).dispatch(obj1);
               let dependencyMap = 1;
-              const obj13 = outer1_1(7132);
+              const obj13 = outer1_1(6080);
               c3 = 2;
               c4 = 1;
               const obj2 = { value: null, done: false };
@@ -342,8 +342,8 @@ export default {
               obj4[0] = length;
               obj4[1] = closure_1;
               obj4[2] = length.length;
-              outer1_0(7134).trackForumSearched(obj4);
-              const obj7 = outer1_0(7134);
+              outer1_0(6082).trackForumSearched(obj4);
+              const obj7 = outer1_0(6082);
               const obj5 = { type: "FORUM_SEARCH_SUCCESS", channelId: null, threadIds: null };
               obj5[1] = closure_1;
               obj5[2] = length;

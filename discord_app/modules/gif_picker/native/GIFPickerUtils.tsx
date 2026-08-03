@@ -1,6 +1,6 @@
-// === Module 9760: transformFavoriteGifUrl ===
+// === Module 9612: transformFavoriteGifUrl ===
 
-// Module 9760 (transformFavoriteGifUrl)
+// Module 9612 (transformFavoriteGifUrl)
 import noop from "noop";
 
 const require = arg1;
@@ -25,9 +25,9 @@ function transformFavoriteGifUrl(url) {
       const result1 = searchParams2.set("animated", "true");
       return str.toString();
     } else {
-      const tmp14Result = tmp14(9759);
+      const tmp14Result = tmp14(9611);
     }
-    obj6 = require(9759) /* shouldRefreshAttachmentUrl */;
+    obj6 = require(9611) /* shouldRefreshAttachmentUrl */;
     tmp14 = require;
   }
   if (regex.test(arg1)) {
@@ -58,7 +58,7 @@ let result = require("isDiscordProxiedAssetUrl").fileFinishedImporting("modules/
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
-  let obj = sortedFavoriteGIFs(9761);
+  let obj = sortedFavoriteGIFs(9613);
   sortedFavoriteGIFs = obj.useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
   obj = {

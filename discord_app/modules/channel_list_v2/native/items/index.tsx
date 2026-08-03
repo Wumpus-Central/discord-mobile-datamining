@@ -1,6 +1,6 @@
-// === Module 15099: CategoryChannel ===
+// === Module 15119: CategoryChannel ===
 
-// Module 15099 (CategoryChannel)
+// Module 15119 (CategoryChannel)
 const result = require("ThreadChannel").fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
 
 export const CategoryChannel = require("renderCategoryItem").CategoryChannel;

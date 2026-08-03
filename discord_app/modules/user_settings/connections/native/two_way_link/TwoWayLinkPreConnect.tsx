@@ -1,6 +1,6 @@
-// === Module 9128: _authorizeLink ===
+// === Module 8951: _authorizeLink ===
 
-// Module 9128 (_authorizeLink)
+// Module 8951 (_authorizeLink)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "jsxProd";
 import Button from "Button";
@@ -68,7 +68,7 @@ function _authorizeLink() {
             return obj;
           } else {
             url = body.body.url;
-            const obj5 = callback2(3952);
+            const obj5 = callback2(3890);
             const tmp19 = url;
             let tmp6 = closure_8;
             if (obj6.isAndroid()) {

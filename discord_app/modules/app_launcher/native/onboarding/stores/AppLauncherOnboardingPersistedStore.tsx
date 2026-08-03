@@ -1,6 +1,6 @@
-// === Module 11343: initialize ===
+// === Module 11232: initialize ===
 
-// Module 11343 (initialize)
+// Module 11232 (initialize)
 import { PersistedStore } from "initialize";
 
 let obj = { canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, timeMs: 0, channelId: "0" };

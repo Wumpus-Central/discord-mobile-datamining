@@ -1,6 +1,6 @@
-// === Module 9534: CreatorRevenueButton ===
+// === Module 9375: CreatorRevenueButton ===
 
-// Module 9534 (CreatorRevenueButton)
+// Module 9375 (CreatorRevenueButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -17,5 +17,5 @@ export const CreatorRevenueButton = function CreatorRevenueButton(arg0) {
   ({ disabled, text, onPress, style, loading } = arg0);
   style = [callback().container, ];
   style[1] = style;
-  return jsx(importDefault(9535), { style, loading, disabled, onPress, text });
+  return jsx(importDefault(9376), { style, loading, disabled, onPress, text });
 };

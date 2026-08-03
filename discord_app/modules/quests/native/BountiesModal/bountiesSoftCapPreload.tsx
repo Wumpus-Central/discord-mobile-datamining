@@ -1,6 +1,6 @@
-// === Module 14150: SOFT_CAP_PRELOAD_MAX_BITRATE ===
+// === Module 14083: SOFT_CAP_PRELOAD_MAX_BITRATE ===
 
-// Module 14150 (SOFT_CAP_PRELOAD_MAX_BITRATE)
+// Module 14083 (SOFT_CAP_PRELOAD_MAX_BITRATE)
 const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/bountiesSoftCapPreload.tsx");
 
 export const SOFT_CAP_PRELOAD_MAX_BITRATE = 500000;

@@ -1,6 +1,6 @@
-// === Module 12876: onPostConnectionOpen ===
+// === Module 12813: onPostConnectionOpen ===
 
-// Module 12876 (onPostConnectionOpen)
+// Module 12813 (onPostConnectionOpen)
 import "initialize";
 
 const require = arg1;
@@ -14,7 +14,7 @@ class SocialLayerStorefrontConfigManager extends tmp2 {
   }
 }
 SocialLayerStorefrontConfigManager.prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
-  const socialLayerStorefrontConfig = require(7666) /* _fetchSocialLayerStorefront */.fetchSocialLayerStorefrontConfig();
+  const socialLayerStorefrontConfig = require(6691) /* _fetchSocialLayerStorefront */.fetchSocialLayerStorefrontConfig();
 };
 const socialLayerStorefrontConfigManager = new SocialLayerStorefrontConfigManager();
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx");

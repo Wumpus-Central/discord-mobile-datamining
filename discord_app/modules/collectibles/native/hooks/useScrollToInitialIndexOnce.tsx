@@ -1,6 +1,6 @@
-// === Module 14696: INITIAL_SCROLL_DELAY_MS ===
+// === Module 14629: INITIAL_SCROLL_DELAY_MS ===
 
-// Module 14696 (INITIAL_SCROLL_DELAY_MS)
+// Module 14629 (INITIAL_SCROLL_DELAY_MS)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");

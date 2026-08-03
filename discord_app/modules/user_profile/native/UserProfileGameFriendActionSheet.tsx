@@ -1,6 +1,6 @@
-// === Module 12163: GameFriendApplicationRow ===
+// === Module 12067: GameFriendApplicationRow ===
 
-// Module 12163 (GameFriendApplicationRow)
+// Module 12067 (GameFriendApplicationRow)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";

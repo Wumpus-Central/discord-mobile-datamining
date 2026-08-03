@@ -1,6 +1,6 @@
-// === Module 12857: resetStates ===
+// === Module 12794: resetStates ===
 
-// Module 12857 (resetStates)
+// Module 12794 (resetStates)
 import { Store } from "initialize";
 
 function resetStates() {
@@ -34,8 +34,8 @@ prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFe
     const obj = { fetchState: null, foundMembers: 0, notFoundMembers: 0 };
     obj[0] = tmp4.FETCHING;
     dependencyMap[id1] = obj;
-    const membersById = importDefault(5171).requestMembersById(id1, items, false);
-    const obj2 = importDefault(5171);
+    const membersById = importDefault(5109).requestMembersById(id1, items, false);
+    const obj2 = importDefault(5109);
   }
 };
 const guildFriendshipStore = new GuildFriendshipStore(require("dispatcher"), {

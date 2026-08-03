@@ -1,6 +1,6 @@
-// === Module 4819: _initialize ===
+// === Module 4757: _initialize ===
 
-// Module 4819 (_initialize)
+// Module 4757 (_initialize)
 import _slicedToArray from "_slicedToArray";
 import { NativeModules } from "get ActivityIndicator";
 import "initialize";

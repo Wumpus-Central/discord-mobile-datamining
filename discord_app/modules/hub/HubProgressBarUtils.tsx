@@ -1,6 +1,6 @@
-// === Module 11876: getHubProgressTitleForStep ===
+// === Module 11774: getHubProgressTitleForStep ===
 
-// Module 11876 (getHubProgressTitleForStep)
+// Module 11774 (getHubProgressTitleForStep)
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import set from "set";

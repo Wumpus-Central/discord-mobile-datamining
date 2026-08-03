@@ -1,6 +1,6 @@
-// === Module 14750: pressable ===
+// === Module 14683: pressable ===
 
-// Module 14750 (pressable)
+// Module 14683 (pressable)
 import { MarketingURLs } from "ME";
 import createToggle from "createToggle";
 
@@ -11,7 +11,7 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    importDefault(3952).openURL(MarketingURLs.PRIVACY);
+    importDefault(3890).openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 });
@@ -22,10 +22,10 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
-    importDefault(3952).openURL(MarketingURLs.PRIVACY);
+    importDefault(3890).openURL(MarketingURLs.PRIVACY);
   },
   withArrow: true
 };
-const result = require("module_3952").fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
+const result = require("module_3890").fileFinishedImporting("modules/user_settings/defs/native/SafetyPrivacyPolicySetting.tsx");
 
 export default pressable;

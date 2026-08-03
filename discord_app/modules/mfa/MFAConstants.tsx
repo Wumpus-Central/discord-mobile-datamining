@@ -1,6 +1,6 @@
-// === Module 14849: get webauthn ===
+// === Module 14782: get webauthn ===
 
-// Module 14849 (get webauthn)
+// Module 14782 (get webauthn)
 const obj = {};
 Object.defineProperty(obj, "webauthn", {
   get: () => {

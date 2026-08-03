@@ -1,6 +1,6 @@
-// === Module 8700: DISPLAY_NAME_STYLES_EFFECT_NAMES ===
+// === Module 8395: DISPLAY_NAME_STYLES_EFFECT_NAMES ===
 
-// Module 8700 (DISPLAY_NAME_STYLES_EFFECT_NAMES)
+// Module 8395 (DISPLAY_NAME_STYLES_EFFECT_NAMES)
 import noop from "noop";
 
 const require = arg1;
@@ -18,7 +18,7 @@ const result = require("messagesProxy").fileFinishedImporting("modules/display_n
 export const DISPLAY_NAME_STYLES_EFFECT_NAMES = obj;
 export const useDisplayNameStylesEffectConfig = function useDisplayNameStylesEffectConfig(effectId) {
   let closure_0 = effectId;
-  const tmp = importDefault(8701)()[effectId];
+  const tmp = importDefault(8396)()[effectId];
   importDefault = tmp;
   const items = [effectId, tmp];
   return React.useMemo(() => {

@@ -1,6 +1,6 @@
-// === Module 6852: getGuildMemberSecondaryIndexes ===
+// === Module 5757: getGuildMemberSecondaryIndexes ===
 
-// Module 6852 (getGuildMemberSecondaryIndexes)
+// Module 5757 (getGuildMemberSecondaryIndexes)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
@@ -38,7 +38,7 @@ const prototype = GuildMemberSafetyMembers.prototype;
 prototype["reset"] = function reset() {
   const _membersMap = this._membersMap;
   _membersMap.clear();
-  const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
+  const secondaryIndexMap = new require(3817) /* version */.SecondaryIndexMap(getGuildMemberSecondaryIndexes, getGuildMemberSecondarySortBy);
   this._membersMap = secondaryIndexMap;
   const result = this.resetNewMemberTimestamp();
 };
@@ -58,7 +58,7 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   if (isIncludedInSearchResults === undefined) {
     obj = {};
   }
-  const joinedAtTimestamp = require(6854) /* getJoinedAtDateFormatter */.getJoinedAtTimestamp(trueMember.joinedAt);
+  const joinedAtTimestamp = require(5759) /* getJoinedAtDateFormatter */.getJoinedAtTimestamp(trueMember.joinedAt);
   const result = this._computeMemberSupplementals(trueMember.userId, trueMember.unusualDMActivityUntil);
   ({ hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId } = result);
   obj = { hasUnusualDmActivity, hasUnusualAccountActivity, sourceInviteCode, joinSourceType, inviterId, integrationType, joinSourceApplicationId, joinSourceChannelId };
@@ -67,19 +67,19 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   obj.isCurrentGuildMemberByTimestamp = joinedAtTimestamp <= this.newMemberTimestamp;
   obj.isIncludedInSearchResults = false;
   obj.user = user;
-  const obj2 = require(6854) /* getJoinedAtDateFormatter */;
+  const obj2 = require(5759) /* getJoinedAtDateFormatter */;
   const tmp = require;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
-    ORDER_BY_UNSPECIFIED = tmp(6853).OrderBy.ORDER_BY_UNSPECIFIED;
+    ORDER_BY_UNSPECIFIED = tmp(5758).OrderBy.ORDER_BY_UNSPECIFIED;
   }
-  obj.sort = require(6856) /* getSortValueForMember */.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
+  obj.sort = require(5761) /* getSortValueForMember */.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
   obj.joinedAtTimestamp = joinedAtTimestamp;
   const merged1 = Object.assign(obj);
   return obj;
 };
 prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(userId, unusualDMActivityUntil) {
-  let obj = require(6857) /* hasMemberSupplemental */;
+  let obj = require(5762) /* hasMemberSupplemental */;
   obj = obj.getMemberSupplementalByGuildId(this.guildId)[userId];
   if (obj == null) {
     obj = {};
@@ -119,10 +119,10 @@ prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(
     const _Date = Date;
     const date = new Date(unusualDMActivityUntil);
     const time = date.getTime();
-    tmp9 = time >= closure_4 - tmp(6853).UNUSUAL_DM_COMPARISON_DELTA;
+    tmp9 = time >= closure_4 - tmp(5758).UNUSUAL_DM_COMPARISON_DELTA;
   }
   obj[6] = tmp9;
-  obj[7] = require(6863) /* isSpamSupported */.isSpammer(userId);
+  obj[7] = require(5768) /* isSpamSupported */.isSpammer(userId);
   return obj;
 };
 prototype["createMember"] = function createMember(userId) {
@@ -187,7 +187,7 @@ prototype["updateMember"] = function updateMember(userId) {
         let tmp15 = obj[tmp6];
         let tmp16 = importDefault;
         let tmp17 = dependencyMap;
-        if (importDefault(4415)(tmp15, obj[tmp6])) {
+        if (importDefault(4353)(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;
@@ -231,7 +231,7 @@ export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
     const _Date = Date;
     const date = new Date(arg0);
     const time = date.getTime();
-    tmp = time >= closure_4 - require(6853) /* result */.UNUSUAL_DM_COMPARISON_DELTA;
+    tmp = time >= closure_4 - require(5758) /* result */.UNUSUAL_DM_COMPARISON_DELTA;
   }
   return tmp;
 };

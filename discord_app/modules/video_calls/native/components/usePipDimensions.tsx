@@ -1,6 +1,6 @@
-// === Module 10723: usePipDimensions ===
+// === Module 10538: usePipDimensions ===
 
-// Module 10723 (usePipDimensions)
+// Module 10538 (usePipDimensions)
 import noop from "noop";
 
 const require = arg1;

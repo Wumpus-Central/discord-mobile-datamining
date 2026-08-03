@@ -1,6 +1,6 @@
-// === Module 10210: getSearchState ===
+// === Module 10068: getSearchState ===
 
-// Module 10210 (getSearchState)
+// Module 10068 (getSearchState)
 import { Store } from "initialize";
 
 const require = arg1;
@@ -64,7 +64,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(require("dispatc
     obj = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
     obj = { results: null, lastSearchedAt: null };
-    obj[0] = items(10211).orderByTotalMemberCount(items);
+    obj[0] = items(10069).orderByTotalMemberCount(items);
     obj[1] = Date.now();
     obj[query.query] = obj;
     dependencyMap2[channelId] = obj;

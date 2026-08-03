@@ -1,6 +1,6 @@
-// === Module 11619: ApplicationCommandsCategories ===
+// === Module 11509: ApplicationCommandsCategories ===
 
-// Module 11619 (ApplicationCommandsCategories)
+// Module 11509 (ApplicationCommandsCategories)
 import importAllResult from "noop";
 import get_ActivityIndicator from "AccessibilityAnnouncer";
 import handleThemeChange from "handleThemeChange";
@@ -61,7 +61,7 @@ let closure_13 = importAllResult.memo((section) => {
     obj = { style: null, source: null };
     obj[0] = tmp.categoryImage;
     obj[1] = memo;
-    tmp6 = callback(importDefault(5207), obj);
+    tmp6 = callback(importDefault(5145), obj);
   }
   obj = {
     onPress() {
@@ -86,7 +86,7 @@ let closure_13 = importAllResult.memo((section) => {
   obj[2] = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj[3] = callback(stateFromStores, { style: items2, children: tmp6 });
-  return callback(section(4783).PressableOpacity, obj, section.name);
+  return callback(section(4721).PressableOpacity, obj, section.name);
 });
 let obj2 = { opacity: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
 let result = require("handleThemeChange").fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategories.tsx");

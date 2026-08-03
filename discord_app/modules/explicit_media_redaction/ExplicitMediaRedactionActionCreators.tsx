@@ -1,6 +1,6 @@
-// === Module 6966: reportFalsePositive ===
+// === Module 5888: reportFalsePositive ===
 
-// Module 6966 (reportFalsePositive)
+// Module 5888 (reportFalsePositive)
 import { Endpoints } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx");

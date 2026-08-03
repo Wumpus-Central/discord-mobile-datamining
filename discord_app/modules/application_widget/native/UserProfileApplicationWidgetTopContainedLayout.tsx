@@ -1,6 +1,6 @@
-// === Module 12267: UserProfileApplicationWidgetTopContainedLayout ===
+// === Module 12171: UserProfileApplicationWidgetTopContainedLayout ===
 
-// Module 12267 (UserProfileApplicationWidgetTopContainedLayout)
+// Module 12171 (UserProfileApplicationWidgetTopContainedLayout)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -32,25 +32,25 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   let topConfig;
   ({ topConfig, resolveFieldValue, numberFormat } = header);
   const tmp = createCacheKey();
-  let obj = require(12178) /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj = require(12082) /* resolvedValuesFromUserApplicationIdentityProfile */;
   const textComponentValues = obj.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
-  let obj1 = require(12178) /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj1 = require(12082) /* resolvedValuesFromUserApplicationIdentityProfile */;
   const textComponentValues1 = obj1.resolveTextComponentValues(topConfig.components.subtitle_1, resolveFieldValue, numberFormat);
-  let obj2 = require(12178) /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj2 = require(12082) /* resolvedValuesFromUserApplicationIdentityProfile */;
   const textComponentValues2 = obj2.resolveTextComponentValues(topConfig.components.subtitle_2, resolveFieldValue, numberFormat);
-  let obj3 = require(12178) /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj3 = require(12082) /* resolvedValuesFromUserApplicationIdentityProfile */;
   const contained_image = topConfig.components.contained_image;
   let image;
   const textComponentValues3 = obj3.resolveTextComponentValues(topConfig.components.subtitle_3, resolveFieldValue, numberFormat);
   if (contained_image != null) {
     image = contained_image.fields.image;
   }
-  const items = [require(12178) /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
+  const items = [require(12082) /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
   const items1 = [header.header, ];
   obj = { style: tmp.contentRow, children: null };
   obj = { style: tmp.text, children: null };
-  const items2 = [callback(require(12265) /* formatDurationNarrow */.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback(require(12265) /* formatDurationNarrow */.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback(require(12265) /* formatDurationNarrow */.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback(require(12265) /* formatDurationNarrow */.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  const items2 = [callback(require(12169) /* formatDurationNarrow */.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback(require(12169) /* formatDurationNarrow */.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback(require(12169) /* formatDurationNarrow */.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback(require(12169) /* formatDurationNarrow */.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
   obj[1] = items2;
   const items3 = [callback2(closure_3, obj), ];
   if (null != fieldValue) {
@@ -66,7 +66,7 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   } else {
     const obj4 = { style: null };
     obj4[0] = tmp.imageSkeleton;
-    tmp12Result = tmp12(tmp2(12266).ImageSkeleton, obj4);
+    tmp12Result = tmp12(tmp2(12170).ImageSkeleton, obj4);
   }
   const obj5 = { children: null };
   items3[1] = tmp12Result;

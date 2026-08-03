@@ -1,6 +1,6 @@
-// === Module 4142: calculateAppliedBoosts ===
+// === Module 4080: calculateAppliedBoosts ===
 
-// Module 4142 (calculateAppliedBoosts)
+// Module 4080 (calculateAppliedBoosts)
 import _slicedToArray from "_slicedToArray";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import BoostedGuildTiers from "BoostedGuildTiers";

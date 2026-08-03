@@ -1,6 +1,6 @@
-// === Module 9781: useStickerCategories ===
+// === Module 9634: useStickerCategories ===
 
-// Module 9781 (useStickerCategories)
+// Module 9634 (useStickerCategories)
 import noop from "noop";
 import { NativeModules } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -38,15 +38,15 @@ export const useStickerCategories = function useStickerCategories(channel) {
       return tmp2;
     });
     return found1.map((type) => {
-      if (type.type !== callback(4922).StickerCategoryTypes.FAVORITE) {
-        if (type.type !== tmp(4922).StickerCategoryTypes.RECENT) {
+      if (type.type !== callback(4860).StickerCategoryTypes.FAVORITE) {
+        if (type.type !== tmp(4860).StickerCategoryTypes.RECENT) {
           return type;
         }
       }
-      if (type.type === callback(4922).StickerCategoryTypes.FAVORITE) {
-        let tmp4 = lib(9783);
+      if (type.type === callback(4860).StickerCategoryTypes.FAVORITE) {
+        let tmp4 = lib(9636);
       } else {
-        tmp4 = lib(9784);
+        tmp4 = lib(9637);
       }
       const obj = {};
       const merged = Object.assign(type);

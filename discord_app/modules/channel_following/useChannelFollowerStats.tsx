@@ -1,6 +1,6 @@
-// === Module 10037: useChannelFollowerStats ===
+// === Module 9892: useChannelFollowerStats ===
 
-// Module 10037 (useChannelFollowerStats)
+// Module 9892 (useChannelFollowerStats)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getFollowerStatsForChannel from "getFollowerStatsForChannel";
@@ -22,8 +22,8 @@ export default function useChannelFollowerStats(arg0) {
     if (null == stateFromStores) {
       if (!first) {
         dependencyMap(true);
-        const channelFollowerStats = first(10039).fetchChannelFollowerStats(closure_0);
-        const obj = first(10039);
+        const channelFollowerStats = first(9894).fetchChannelFollowerStats(closure_0);
+        const obj = first(9894);
       }
     } else {
       const _Date = Date;

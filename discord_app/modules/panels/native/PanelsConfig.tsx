@@ -1,6 +1,6 @@
-// === Module 15005: isTimingConfig ===
+// === Module 14938: isTimingConfig ===
 
-// Module 15005 (isTimingConfig)
+// Module 14938 (isTimingConfig)
 function isTimingConfig(duration) {
   return null != duration && null != duration.duration;
 }

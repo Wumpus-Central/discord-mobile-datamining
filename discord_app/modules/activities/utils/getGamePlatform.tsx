@@ -1,6 +1,6 @@
-// === Module 15661: getGamePlatform ===
+// === Module 15594: getGamePlatform ===
 
-// Module 15661 (getGamePlatform)
+// Module 15594 (getGamePlatform)
 import ME from "ME";
 
 let c3;
@@ -15,7 +15,7 @@ export default function getGamePlatform(type) {
     if (null != type.type) {
       tmp = null;
       if (type.type === constants.PLAYING) {
-        if (importDefault(12101)(type)) {
+        if (importDefault(12005)(type)) {
           let DESKTOP = constants2.XBOX;
         } else if (null != type.platform) {
           DESKTOP = type.platform;

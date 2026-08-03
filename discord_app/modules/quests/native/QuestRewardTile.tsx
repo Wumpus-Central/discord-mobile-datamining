@@ -1,6 +1,6 @@
-// === Module 11098: QuestRewardTile ===
+// === Module 10977: QuestRewardTile ===
 
-// Module 11098 (QuestRewardTile)
+// Module 10977 (QuestRewardTile)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useMemo } from "noop";

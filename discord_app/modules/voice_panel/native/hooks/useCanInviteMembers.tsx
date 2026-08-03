@@ -1,6 +1,6 @@
-// === Module 16014: useCanInviteMembers ===
+// === Module 15950: useCanInviteMembers ===
 
-// Module 16014 (useCanInviteMembers)
+// Module 15950 (useCanInviteMembers)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

@@ -1,6 +1,6 @@
-// === Module 12125: UserProfileActivityVoiceChannel ===
+// === Module 12029: UserProfileActivityVoiceChannel ===
 
-// Module 12125 (UserProfileActivityVoiceChannel)
+// Module 12029 (UserProfileActivityVoiceChannel)
 import { View } from "dispatcher";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

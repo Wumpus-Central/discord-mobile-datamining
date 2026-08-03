@@ -1,6 +1,6 @@
-// === Module 15861: apexExperiment ===
+// === Module 15797: apexExperiment ===
 
-// Module 15861 (apexExperiment)
+// Module 15797 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-profile-frames-ea-marketing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

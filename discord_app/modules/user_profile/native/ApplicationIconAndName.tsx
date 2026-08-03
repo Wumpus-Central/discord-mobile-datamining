@@ -1,6 +1,6 @@
-// === Module 11838: ApplicationIconAndName ===
+// === Module 11735: ApplicationIconAndName ===
 
-// Module 11838 (ApplicationIconAndName)
+// Module 11735 (ApplicationIconAndName)
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 
@@ -38,7 +38,7 @@ export default function ApplicationIconAndName(textVariant) {
   }
   obj = { children: null };
   obj[1] = "" + application.name + str2;
-  items[1] = closure_3(require(4251) /* Text */.Text, obj);
+  items[1] = closure_3(require(4189) /* Text */.Text, obj);
   obj[0] = items;
   return closure_5(closure_4, obj);
 };

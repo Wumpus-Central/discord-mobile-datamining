@@ -1,6 +1,6 @@
-// === Module 12304: useTrackUserProfileWishlistView ===
+// === Module 12208: useTrackUserProfileWishlistView ===
 
-// Module 12304 (useTrackUserProfileWishlistView)
+// Module 12208 (useTrackUserProfileWishlistView)
 import noop from "noop";
 import get from "get";
 

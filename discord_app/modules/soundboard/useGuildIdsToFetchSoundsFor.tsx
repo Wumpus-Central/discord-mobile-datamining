@@ -1,6 +1,6 @@
-// === Module 5854: useGuildIdsToFetchSoundsFor ===
+// === Module 8052: useGuildIdsToFetchSoundsFor ===
 
-// Module 5854 (useGuildIdsToFetchSoundsFor)
+// Module 8052 (useGuildIdsToFetchSoundsFor)
 import { useMemo } from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";

@@ -1,6 +1,6 @@
-// === Module 9761: useFavoriteGIFs ===
+// === Module 9613: useFavoriteGIFs ===
 
-// Module 9761 (useFavoriteGIFs)
+// Module 9613 (useFavoriteGIFs)
 import noop from "noop";
 
 const require = arg1;
@@ -8,7 +8,7 @@ let closure_4 = {};
 const result = require("apply").fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
 
 export const useFavoriteGIFs = function useFavoriteGIFs() {
-  const favoriteGifs = require(9762) /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
+  const favoriteGifs = require(9614) /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
   let gifs;
   if (favoriteGifs != null) {
     gifs = favoriteGifs.gifs;
@@ -20,7 +20,7 @@ export const useFavoriteGIFs = function useFavoriteGIFs() {
 };
 export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFavoriteGifUrl) {
   const _require = transformFavoriteGifUrl;
-  const favoriteGifs = _require(9762).useFrecencySettings().favoriteGifs;
+  const favoriteGifs = _require(9614).useFrecencySettings().favoriteGifs;
   let gifs;
   if (favoriteGifs != null) {
     gifs = favoriteGifs.gifs;
@@ -50,7 +50,7 @@ export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFav
   }, items);
 };
 export const useShouldShowTooltipOnFavorite = function useShouldShowTooltipOnFavorite() {
-  const favoriteGifs = require(9762) /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
+  const favoriteGifs = require(9614) /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
   let flag;
   if (favoriteGifs != null) {
     flag = favoriteGifs.hideTooltip;
@@ -61,7 +61,7 @@ export const useShouldShowTooltipOnFavorite = function useShouldShowTooltipOnFav
   return flag;
 };
 export const useIsFavoriteGIF = function useIsFavoriteGIF(arg0) {
-  const favoriteGifs = require(9762) /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
+  const favoriteGifs = require(9614) /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
   let gifs;
   if (favoriteGifs != null) {
     gifs = favoriteGifs.gifs;

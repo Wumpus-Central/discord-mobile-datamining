@@ -1,6 +1,6 @@
-// === Module 12841: truncateOldMessageData ===
+// === Module 12778: truncateOldMessageData ===
 
-// Module 12841 (truncateOldMessageData)
+// Module 12778 (truncateOldMessageData)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import { isGuildHomeChannel } from "set";

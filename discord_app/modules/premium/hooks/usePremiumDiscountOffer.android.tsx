@@ -1,6 +1,6 @@
-// === Module 7251: usePremiumDiscountOffer ===
+// === Module 6262: usePremiumDiscountOffer ===
 
-// Module 7251 (usePremiumDiscountOffer)
+// Module 6262 (usePremiumDiscountOffer)
 import updateProduct from "updateProduct";
 import GuildFeatures from "GuildFeatures";
 
@@ -16,7 +16,7 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
   const obj = offerIds(647);
   const tmp = offerIds;
   const tmp3 = importDefault;
-  let values = Object.values(offerIds(5741).DiscountIdToProductOfferId[closure_4]);
+  let values = Object.values(offerIds(5679).DiscountIdToProductOfferId[closure_4]);
   let tmp5 = null;
   if (0 !== values.length) {
     let tmp6 = null;
@@ -25,8 +25,8 @@ export const usePremiumDiscountOffer = function usePremiumDiscountOffer() {
     }
     tmp5 = tmp6;
   }
-  tmp4 = importDefault(7252)(closure_4);
-  values = Object.values(tmp(5741).DiscountIdToProductOfferId[closure_5]);
+  tmp4 = importDefault(6263)(closure_4);
+  values = Object.values(tmp(5679).DiscountIdToProductOfferId[closure_5]);
   let tmp8 = null;
   if (0 !== values.length) {
     let tmp9 = null;

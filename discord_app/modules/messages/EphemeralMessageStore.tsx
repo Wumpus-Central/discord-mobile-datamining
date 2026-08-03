@@ -1,6 +1,6 @@
-// === Module 4474: dropChannelIfEmpty ===
+// === Module 4412: dropChannelIfEmpty ===
 
-// Module 4474 (dropChannelIfEmpty)
+// Module 4412 (dropChannelIfEmpty)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { MessageFlags } from "ME";
 import { Store } from "initialize";
@@ -56,7 +56,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
         const result = map.set(channelId, map);
         value = map;
       }
-      const result1 = value.set(message.id, tmp(4475).createMessageRecord(message));
+      const result1 = value.set(message.id, tmp(4413).createMessageRecord(message));
       if (value.size > 50) {
         const iter2 = value.keys().next();
         while (true !== iter2.done) {
@@ -88,7 +88,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
           if (null == value) {
             return false;
           } else {
-            const result = value.set(id, require(4475) /* createMinimalMessageRecord */.updateMessageRecord(value, message));
+            const result = value.set(id, require(4413) /* createMinimalMessageRecord */.updateMessageRecord(value, message));
           }
         }
       }

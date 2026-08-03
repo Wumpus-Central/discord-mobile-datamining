@@ -1,6 +1,6 @@
-// === Module 7016: handleBackgroundSync ===
+// === Module 5937: handleBackgroundSync ===
 
-// Module 7016 (handleBackgroundSync)
+// Module 5937 (handleBackgroundSync)
 import { createChannelRecordFromServer as closure_2 } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

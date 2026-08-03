@@ -1,6 +1,6 @@
-// === Module 4923: MetaStickerType ===
+// === Module 4861: MetaStickerType ===
 
-// Module 4923 (MetaStickerType)
+// Module 4861 (MetaStickerType)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx");
 
 export const MetaStickerType = { STANDARD: 1, [1]: "STANDARD", GUILD: 2, [2]: "GUILD" };

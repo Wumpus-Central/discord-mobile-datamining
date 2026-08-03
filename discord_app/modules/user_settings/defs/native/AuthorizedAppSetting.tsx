@@ -1,6 +1,6 @@
-// === Module 14056: route ===
+// === Module 13989: route ===
 
-// Module 14056 (route)
+// Module 13989 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -14,7 +14,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AUTHORIZED_APP,
   getComponent() {
-    return require(14057) /* AuthorizedAppScreen */.default;
+    return require(13990) /* AuthorizedAppScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

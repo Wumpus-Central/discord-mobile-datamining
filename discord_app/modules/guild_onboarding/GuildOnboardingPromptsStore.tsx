@@ -1,6 +1,6 @@
-// === Module 5181: handleUpdate ===
+// === Module 5119: handleUpdate ===
 
-// Module 5181 (handleUpdate)
+// Module 5119 (handleUpdate)
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import shouldShowOnboarding from "shouldShowOnboarding";

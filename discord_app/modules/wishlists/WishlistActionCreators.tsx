@@ -1,6 +1,6 @@
-// === Module 8867: extraWishlistParams ===
+// === Module 8690: extraWishlistParams ===
 
-// Module 8867 (extraWishlistParams)
+// Module 8690 (extraWishlistParams)
 import fromServer from "fromServer";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -42,9 +42,9 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     obj[1] = found.map((id) => id.id);
     obj[1] = obj;
     const tmp3Result = importDefault(709);
-    obj[2] = require(5732) /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
+    obj[2] = require(5670) /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
     tmp3Result.dispatch(obj);
-    const tmpResult = require(5732) /* useSKUPrice */;
+    const tmpResult = require(5670) /* useSKUPrice */;
   }
 }
 ({ AnalyticEvents: c10, Endpoints: unpackModuleId, PaymentGateways: closure_12 } = ME);

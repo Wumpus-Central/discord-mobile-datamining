@@ -1,6 +1,6 @@
-// === Module 9123: TwoWayLinkLanding ===
+// === Module 8946: TwoWayLinkLanding ===
 
-// Module 9123 (TwoWayLinkLanding)
+// Module 8946 (TwoWayLinkLanding)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";

@@ -1,6 +1,6 @@
-// === Module 10178: LegacyUserProfileConnections ===
+// === Module 10036: LegacyUserProfileConnections ===
 
-// Module 10178 (LegacyUserProfileConnections)
+// Module 10036 (LegacyUserProfileConnections)
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "Button";
 import _getSystemLocale from "_getSystemLocale";
@@ -528,8 +528,8 @@ export { ConnectedUserAccount };
 export { ConnectedApplicationUserRoleAccount };
 export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr) {
   const _require = arg1;
-  const theme = _require(3967).useThemeContext().theme;
-  const obj = _require(3967);
+  const theme = _require(3905).useThemeContext().theme;
+  const obj = _require(3905);
   const items = [_getSystemLocale];
   const dependencyMap = _require(589).useStateFromStores(items, () => _getSystemLocale.locale);
   return arr.map((applicationRoleConnection) => {

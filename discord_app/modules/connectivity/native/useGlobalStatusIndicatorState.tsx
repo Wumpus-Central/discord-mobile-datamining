@@ -1,6 +1,6 @@
-// === Module 10809: useGlobalStatusIndicatorState ===
+// === Module 10701: useGlobalStatusIndicatorState ===
 
-// Module 10809 (useGlobalStatusIndicatorState)
+// Module 10701 (useGlobalStatusIndicatorState)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT";
@@ -15,12 +15,12 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   }
   let stateFromStores;
   let importDefault;
-  let obj = stateFromStores(10721);
+  let obj = stateFromStores(10536);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
-  const tmp5 = importDefault(9115)();
+  const tmp5 = importDefault(8938)();
   const items = [createRTCConnection];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => channelId.getChannelId());
-  const tmp7 = importDefault(10808)();
+  const tmp7 = importDefault(10700)();
   importDefault = tmp7;
   const obj2 = stateFromStores(589);
   const tmp4 = importDefault;
@@ -38,20 +38,20 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
     return isGuildStageVoiceResult;
   }, items2);
   const obj3 = stateFromStores(589);
-  let num = stateFromStores(10806).useGetStageRTCPanelHeight(stateFromStores);
-  stateFromStores(4106);
+  let num = stateFromStores(10698).useGetStageRTCPanelHeight(stateFromStores);
+  stateFromStores(4044);
   let tmp12 = null != tmp5;
   if (tmp12) {
-    let tmpResult = tmp(4465);
+    let tmpResult = tmp(4403);
     let channelId = tmp5.channelId;
     if (channelId == null) {
       channelId = EMPTY_STRING_SNOWFLAKE_ID;
     }
     tmp12 = tmpResult.getVoiceChannelKey(channelId) !== tmp11;
   }
-  tmpResult = tmp(10811);
+  tmpResult = tmp(10703);
   let isVoicePanelShowing = tmpResult.useIsVoicePanelShowing();
-  const tmp14 = null != tmp4(10812)();
+  const tmp14 = null != tmp4(10704)();
   if (!isVoicePanelShowing) {
     let tmp15 = !tmp12;
     if (!tmp12) {

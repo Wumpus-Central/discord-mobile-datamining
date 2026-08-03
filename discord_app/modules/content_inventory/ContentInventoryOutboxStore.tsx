@@ -1,6 +1,6 @@
-// === Module 8874: map ===
+// === Module 8697: map ===
 
-// Module 8874 (map)
+// Module 8697 (map)
 import { Store } from "initialize";
 import set from "dispatcher";
 
@@ -18,7 +18,7 @@ prototype["getMatchingOutboxEntry"] = function getMatchingOutboxEntry(activity) 
   const value = map.get(activity.userId);
   if (null != value) {
     if (null != activity) {
-      return require(8483) /* isMatchingListeningActivity */.findMatchingEntry(value.entries, activity);
+      return require(8176) /* isMatchingListeningActivity */.findMatchingEntry(value.entries, activity);
     }
   }
 };

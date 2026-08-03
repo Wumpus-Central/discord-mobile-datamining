@@ -1,6 +1,6 @@
-// === Module 8376: useGiftCodeErrorMessage ===
+// === Module 8043: useGiftCodeErrorMessage ===
 
-// Module 8376 (useGiftCodeErrorMessage)
+// Module 8043 (useGiftCodeErrorMessage)
 import _slicedToArray from "_slicedToArray";
 import map from "map";
 import updateGiftCode from "updateGiftCode";

@@ -1,6 +1,6 @@
-// === Module 14297: commonTriggerPointConfiguration ===
+// === Module 14230: commonTriggerPointConfiguration ===
 
-// Module 14297 (commonTriggerPointConfiguration)
+// Module 14230 (commonTriggerPointConfiguration)
 const commonTriggerPointConfiguration = new require("registeredExperimentIds").CommonTriggerPointConfiguration([], require("ExperimentBuckets").CommonTriggerPoints.QUEST_BAR_RENDERED, { location: "quest bar rendered" });
 const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/QuestBarRenderedTriggerPoint.tsx");
 

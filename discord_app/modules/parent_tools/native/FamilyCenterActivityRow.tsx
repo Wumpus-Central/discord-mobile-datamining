@@ -1,6 +1,6 @@
-// === Module 14017: memoResult1 ===
+// === Module 13950: memoResult1 ===
 
-// Module 14017 (memoResult1)
+// Module 13950 (memoResult1)
 import importAllResult from "messagesProxy";
 import { View } from "getGuildBadgeSource";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -43,7 +43,7 @@ const memoResult = importAllResult.memo((action) => {
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.avatarContainer;
-    const obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
+    const obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
     obj1[0] = tmp.avatar;
     obj1[1] = stateFromStores;
     obj1[4] = stateFromStores.avatarDecoration;
@@ -53,14 +53,14 @@ const memoResult = importAllResult.memo((action) => {
     obj2[0] = tmp.textContainer;
     const obj3 = { style: null, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     obj3[0] = tmp.text;
-    tmp3Result = tmp3(4094);
+    tmp3Result = tmp3(4032);
     obj3[5] = tmp3Result.getName(stateFromStores);
-    const items2 = [callback(tmp6(4251).Text, obj3), ];
+    const items2 = [callback(tmp6(4189).Text, obj3), ];
     const obj4 = { variant: "text-xs/medium", color: "channels-default", children: null };
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj4[2] = tmp6(6949).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-    items2[1] = callback(tmp6(4251).Text, obj4);
+    obj4[2] = tmp6(5858).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    items2[1] = callback(tmp6(4189).Text, obj4);
     obj2[1] = items2;
     items1[1] = callback2(View, obj2);
     obj[1] = items1;
@@ -103,8 +103,8 @@ const memoResult1 = importAllResult.memo((action) => {
     obj = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3[0], avatarText: obj3[1] } = tmp);
     obj[2] = stateFromStores;
-    let tmp6Result = tmp6(5632);
-    obj[3] = tmp2(5632).GuildIconSizes.NORMAL;
+    let tmp6Result = tmp6(5570);
+    obj[3] = tmp2(5570).GuildIconSizes.NORMAL;
     const items1 = [callback(tmp6Result, obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.text;
@@ -117,15 +117,15 @@ const memoResult1 = importAllResult.memo((action) => {
       const obj4 = { style: null, guild: null, size: null, disableColor: true };
       obj4[0] = tmp.badge;
       obj4[1] = stateFromStores;
-      tmp6Result = tmp6(9349);
-      obj4[2] = tmp6(9349).Sizes.SMALL;
+      tmp6Result = tmp6(9176);
+      obj4[2] = tmp6(9176).Sizes.SMALL;
       tmp11Result = tmp11(tmp6Result, obj4);
     }
     const items2 = [tmp11Result, ];
     const obj5 = { style: null, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     obj5[0] = tmp.header;
     obj5[5] = stateFromStores.name;
-    items2[1] = callback(tmp2(4251).Text, obj5);
+    items2[1] = callback(tmp2(4189).Text, obj5);
     obj3[1] = items2;
     obj2[1] = closure_9(View, obj3);
     const items3 = [callback(View, obj2), ];
@@ -135,8 +135,8 @@ const memoResult1 = importAllResult.memo((action) => {
       const intl = tmp2(1236).intl;
       const obj7 = { members: null };
       obj7[0] = stateFromStores.approximateMemberCount;
-      obj6[2] = intl.format(tmp6(2255)["5JmNgg"], obj7);
-      tmp11Result = tmp11(tmp2(4251).Text, obj6);
+      obj6[2] = intl.format(tmp6(2225)["5JmNgg"], obj7);
+      tmp11Result = tmp11(tmp2(4189).Text, obj6);
     }
     items3[1] = tmp11Result;
     obj1[1] = items3;
@@ -158,16 +158,16 @@ export default function FamilyCenterActivityRow(action) {
   let skuId;
   let subscriptionPlanId;
   action = action.action;
-  let obj = require(6949) /* getEmptyActivityFormatter */;
+  let obj = require(5858) /* getEmptyActivityFormatter */;
   if (!obj.isUserAction(action)) {
-    let tmpResult = tmp(6949);
+    let tmpResult = tmp(5858);
     if (!tmpResult.isGuildAction(action)) {
-      tmpResult = tmp(6949);
+      tmpResult = tmp(5858);
       if (!tmpResult.isPurchase(action)) {
         if (!tmpResult1.isGift(action)) {
           return null;
         }
-        tmpResult1 = tmp(6949);
+        tmpResult1 = tmp(5858);
       }
     }
   }
@@ -177,7 +177,7 @@ export default function FamilyCenterActivityRow(action) {
     if (null != purchaseInfo) {
       obj = { skuId: null, subscriptionPlanId: null, total: null, currency: null };
       ({ sku_id: obj11[0], subscription_plan_id: obj11[1], total: obj11[2], currency: obj11[3] } = purchaseInfo);
-      tmp14 = callback(importDefault(14018), obj);
+      tmp14 = callback(importDefault(13951), obj);
     }
     return tmp14;
   } else {
@@ -186,7 +186,7 @@ export default function FamilyCenterActivityRow(action) {
       if (null == giftInfo) {
         return null;
       } else {
-        const giftRowDisplayInfo = tmp(14021).getGiftRowDisplayInfo(giftInfo);
+        const giftRowDisplayInfo = tmp(13954).getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
         obj = { skuId: null, subscriptionPlanId: null, price: null, gifterUserId: null, claimed: null, offeredAt: null, claimedAt: null };
         obj[0] = skuId;
@@ -196,7 +196,7 @@ export default function FamilyCenterActivityRow(action) {
         obj[4] = claimed;
         obj[5] = offeredAt;
         obj[6] = claimedAt;
-        return callback(importDefault(14022), obj);
+        return callback(importDefault(13955), obj);
       }
     } else {
       if (tmpResult5.isUserAction(action)) {
@@ -212,7 +212,7 @@ export default function FamilyCenterActivityRow(action) {
       obj3[0] = tmp4Result;
       return callback(View, obj3);
     }
-    tmpResult3 = tmp(6949);
+    tmpResult3 = tmp(5858);
   }
-  tmpResult2 = require(6949) /* getEmptyActivityFormatter */;
+  tmpResult2 = require(5858) /* getEmptyActivityFormatter */;
 };

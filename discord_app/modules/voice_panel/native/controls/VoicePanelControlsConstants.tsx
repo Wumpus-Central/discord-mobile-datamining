@@ -1,6 +1,6 @@
-// === Module 10191: VoicePanelControlsModes ===
+// === Module 10049: VoicePanelControlsModes ===
 
-// Module 10191 (VoicePanelControlsModes)
+// Module 10049 (VoicePanelControlsModes)
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");
 
 export const VoicePanelControlsModes = { FLOATING_DEFAULT: "floating-default", DRAWER: "drawer", HIDDEN: "hidden", RESET: "reset" };

@@ -1,6 +1,6 @@
-// === Module 12762: getGuildSubscriptionRemovalSource ===
+// === Module 12699: getGuildSubscriptionRemovalSource ===
 
-// Module 12762 (getGuildSubscriptionRemovalSource)
+// Module 12699 (getGuildSubscriptionRemovalSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -9,50 +9,50 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx");
 
 export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRemovalSource(theme) {
-  let obj = require(7532) /* getIllustrationSource */;
+  let obj = require(6541) /* getIllustrationSource */;
   obj = {
     dark() {
-      return callback(12763);
+      return callback(12700);
     },
     darker() {
-      return callback(12764);
+      return callback(12701);
     },
     light() {
-      return callback(12765);
+      return callback(12702);
     }
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useGuildSubscriptionRemovalSource = function useGuildSubscriptionRemovalSource() {
-  let obj = require(4101) /* AccessibilityAnnouncer */;
+  let obj = require(4039) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(12763);
+      return callback(12700);
     },
     darker() {
-      return callback(12764);
+      return callback(12701);
     },
     light() {
-      return callback(12765);
+      return callback(12702);
     }
   };
-  return require(7532) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return require(6541) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const GuildSubscriptionRemoval = function GuildSubscriptionRemoval(arg0) {
-  let obj = require(4101) /* AccessibilityAnnouncer */;
+  let obj = require(4039) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(12763);
+      return callback(12700);
     },
     darker() {
-      return callback(12764);
+      return callback(12701);
     },
     light() {
-      return callback(12765);
+      return callback(12702);
     }
   };
   obj = {};
-  const illustrationSource = require(7532) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = require(6541) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

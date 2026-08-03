@@ -1,6 +1,6 @@
-// === Module 10304: SafetyToolsButton ===
+// === Module 10165: SafetyToolsButton ===
 
-// Module 10304 (SafetyToolsButton)
+// Module 10165 (SafetyToolsButton)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

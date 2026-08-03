@@ -1,6 +1,6 @@
-// === Module 4094: nameFromUser ===
+// === Module 4032: nameFromUser ===
 
-// Module 4094 (nameFromUser)
+// Module 4032 (nameFromUser)
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

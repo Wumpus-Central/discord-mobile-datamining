@@ -1,6 +1,6 @@
-// === Module 12388: getGuildEventImageURL ===
+// === Module 12290: getGuildEventImageURL ===
 
-// Module 12388 (getGuildEventImageURL)
+// Module 12290 (getGuildEventImageURL)
 import { Endpoints } from "ME";
 
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");

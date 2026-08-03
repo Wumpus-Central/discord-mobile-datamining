@@ -1,6 +1,6 @@
-// === Module 7869: formatUsernameOnClick ===
+// === Module 7750: formatUsernameOnClick ===
 
-// Module 7869 (formatUsernameOnClick)
+// Module 7750 (formatUsernameOnClick)
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
 
 export default function formatUsernameOnClick(arg0) {

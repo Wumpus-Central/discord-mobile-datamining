@@ -1,6 +1,6 @@
-// === Module 11283: useTypingUserIds ===
+// === Module 11171: useTypingUserIds ===
 
-// Module 11283 (useTypingUserIds)
+// Module 11171 (useTypingUserIds)
 import upsertRelationship from "upsertRelationship";
 import handleTypingStart from "handleTypingStart";
 import mergeGuildAvatar from "mergeGuildAvatar";

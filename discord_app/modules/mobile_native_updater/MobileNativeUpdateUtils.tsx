@@ -1,6 +1,6 @@
-// === Module 13127: _checkForNewerBuild ===
+// === Module 13064: _checkForNewerBuild ===
 
-// Module 13127 (_checkForNewerBuild)
+// Module 13064 (_checkForNewerBuild)
 import set from "set";
 import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL";
 
@@ -111,7 +111,7 @@ function openBuildInstallerUrl(install) {
       const _HermesInternal = HermesInternal;
       tmp2.error("Attempted to follow invalid install URL " + str);
     } else {
-      const openURLExternally = require(3952).default.openURLExternally;
+      const openURLExternally = require(3890).default.openURLExternally;
       if (obj.isIOS()) {
         openURLExternally(str.toString(), require(691) /* keys */.WebBrowserType.SAFARI);
       } else {

@@ -1,6 +1,6 @@
-// === Module 11776: BoostedGuildTiers ===
+// === Module 11671: BoostedGuildTiers ===
 
-// Module 11776 (BoostedGuildTiers)
+// Module 11671 (BoostedGuildTiers)
 import ME from "ME";
 import { BoostedGuildFeatures } from "GuildFeatures";
 

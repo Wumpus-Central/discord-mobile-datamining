@@ -1,6 +1,6 @@
-// === Module 7941: isCrosspost ===
+// === Module 7823: isCrosspost ===
 
-// Module 7941 (isCrosspost)
+// Module 7823 (isCrosspost)
 import ME from "ME";
 
 let c3;

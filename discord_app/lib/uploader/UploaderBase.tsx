@@ -1,6 +1,6 @@
-// === Module 7207: _fileSize ===
+// === Module 6155: _fileSize ===
 
-// Module 7207 (_fileSize)
+// Module 6155 (_fileSize)
 import apply from "apply";
 import { AbortCodes } from "ME";
 import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING";
@@ -80,7 +80,7 @@ class UploaderBase extends EventEmitter {
     };
     obj = require("apply");
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "accessibilityRole" };
+    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "bottom" };
     return tmp3;
   }
 }

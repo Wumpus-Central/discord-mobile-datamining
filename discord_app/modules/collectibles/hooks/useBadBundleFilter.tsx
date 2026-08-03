@@ -1,6 +1,6 @@
-// === Module 14189: useBadBundleFilter ===
+// === Module 14122: useBadBundleFilter ===
 
-// Module 14189 (useBadBundleFilter)
+// Module 14122 (useBadBundleFilter)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import map from "map";
 
@@ -11,7 +11,7 @@ export const useBadBundleFilter = function useBadBundleFilter() {
   const items = [mergeGuildAvatar];
   const stateFromStores = require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require(647) /* defaultAreStatesEqual */;
-  const canUseShopDiscountsResult = importDefault(3901).canUseShopDiscounts(stateFromStores);
+  const canUseShopDiscountsResult = importDefault(3839).canUseShopDiscounts(stateFromStores);
   require = canUseShopDiscountsResult;
   const items1 = [canUseShopDiscountsResult];
   return useCallback((arr) => {

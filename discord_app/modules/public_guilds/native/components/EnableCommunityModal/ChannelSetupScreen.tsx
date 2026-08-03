@@ -1,6 +1,6 @@
-// === Module 16605: ChannelSetupScreen ===
+// === Module 16539: ChannelSetupScreen ===
 
-// Module 16605 (ChannelSetupScreen)
+// Module 16539 (ChannelSetupScreen)
 import asyncRequireImpl from "asyncRequireImpl";
 import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
 import handleFormInit from "handleFormInit";
@@ -97,10 +97,10 @@ export default function ChannelSetupScreen() {
     obj[0] = intl.string(guild(publicUpdatesChannel[15]).t.Yr6nGx);
     obj[1] = callback();
     obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(8613);
+      let obj = callback(8308);
       obj = { rulesChannelId };
       obj.updateGuild(obj);
-      callback(4223).hideActionSheet();
+      callback(4161).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -119,10 +119,10 @@ export default function ChannelSetupScreen() {
     obj[0] = intl.string(guild(publicUpdatesChannel[15]).t.VqhxxN);
     obj[1] = callback();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(8613);
+      let obj = callback(8308);
       obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
-      callback(4223).hideActionSheet();
+      callback(4161).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {

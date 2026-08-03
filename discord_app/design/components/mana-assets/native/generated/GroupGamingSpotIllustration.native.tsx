@@ -1,6 +1,6 @@
-// === Module 6359: GroupGamingSpotIllustration ===
+// === Module 7223: GroupGamingSpotIllustration ===
 
-// Module 6359 (GroupGamingSpotIllustration)
+// Module 7223 (GroupGamingSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GroupGamingSpotIllustration.native.tsx");
@@ -24,7 +24,7 @@ export const GroupGamingSpotIllustration = function GroupGamingSpotIllustration(
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6360);
+  obj[0] = importDefault(7224);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const GroupGamingSpotIllustration = function GroupGamingSpotIllustration(
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

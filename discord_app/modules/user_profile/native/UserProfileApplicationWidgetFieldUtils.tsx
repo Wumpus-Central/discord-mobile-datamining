@@ -1,6 +1,6 @@
-// === Module 12265: formatDurationNarrow ===
+// === Module 12169: formatDurationNarrow ===
 
-// Module 12265 (formatDurationNarrow)
+// Module 12169 (formatDurationNarrow)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -69,7 +69,7 @@ export const FieldText = function FieldText(arg0) {
     let obj = { variant: null, widthChars: null };
     obj[0] = variant;
     obj[1] = skeletonWidthChars;
-    let tmp9Result = callback(require(12266) /* ImageSkeleton */.TextSkeleton, obj);
+    let tmp9Result = callback(require(12170) /* ImageSkeleton */.TextSkeleton, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.fieldTextRow;
@@ -77,7 +77,7 @@ export const FieldText = function FieldText(arg0) {
     obj1[0] = variant;
     obj1[1] = color;
     obj1[3] = field.text;
-    const items = [callback(require(4251) /* Text */.Text, obj1), ];
+    const items = [callback(require(4189) /* Text */.Text, obj1), ];
     let tmp11Result = null != field.icon;
     if (tmp11Result) {
       obj = { source: null, style: null, resizeMode: "contain" };

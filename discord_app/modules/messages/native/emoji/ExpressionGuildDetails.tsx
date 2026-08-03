@@ -1,6 +1,6 @@
-// === Module 9583: ExpressionGuildDetails ===
+// === Module 9436: ExpressionGuildDetails ===
 
-// Module 9583 (ExpressionGuildDetails)
+// Module 9436 (ExpressionGuildDetails)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ExpressionSourceGuildRecord as closure_4 } from "getEmojiSourceData";

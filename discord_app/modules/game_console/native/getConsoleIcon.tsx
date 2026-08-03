@@ -1,6 +1,6 @@
-// === Module 9235: getConsoleIcon ===
+// === Module 9062: getConsoleIcon ===
 
-// Module 9235 (getConsoleIcon)
+// Module 9062 (getConsoleIcon)
 import { VoicePlatforms } from "ParticipantTypes";
 
 let PLAYSTATION;
@@ -15,11 +15,11 @@ export default function getConsoleIcon(arg0) {
 };
 export const getConsoleIconForVoicePlatform = function getConsoleIconForVoicePlatform(voicePlatform) {
   if (voicePlatform === VoicePlatforms.XBOX) {
-    let tmp2 = importDefault(9215);
+    let tmp2 = importDefault(9042);
   } else {
     tmp2 = null;
     if (voicePlatform === tmp.PLAYSTATION) {
-      tmp2 = importDefault(9236);
+      tmp2 = importDefault(9063);
     }
   }
   return tmp2;

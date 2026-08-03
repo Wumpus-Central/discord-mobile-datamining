@@ -1,6 +1,6 @@
-// === Module 10585: useIsMessageRequest ===
+// === Module 10447: useIsMessageRequest ===
 
-// Module 10585 (useIsMessageRequest)
+// Module 10447 (useIsMessageRequest)
 import processChannel from "processChannel";
 import closure_3 from "processChannel";
 

@@ -1,6 +1,6 @@
-// === Module 16393: enforcing ===
+// === Module 16327: enforcing ===
 
-// Module 16393 (enforcing)
+// Module 16327 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeProximitySensorManagerModule");

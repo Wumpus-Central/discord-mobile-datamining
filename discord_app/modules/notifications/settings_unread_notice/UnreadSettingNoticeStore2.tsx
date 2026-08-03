@@ -1,6 +1,6 @@
-// === Module 10607: startInterval ===
+// === Module 10469: startInterval ===
 
-// Module 10607 (startInterval)
+// Module 10469 (startInterval)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -208,9 +208,9 @@ prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
         const channels = closure_14.channels;
         delete tmp[tmp2];
         set.add(id);
-        const result = require(10465) /* useChannelPresetSettings */.updateChannelUnreadSetting(basicChannel.guild_id, basicChannel.id, UnreadSetting.ALL_MESSAGES);
+        const result = require(10326) /* useChannelPresetSettings */.updateChannelUnreadSetting(basicChannel.guild_id, basicChannel.id, UnreadSetting.ALL_MESSAGES);
         flag2 = true;
-        let obj = require(10465) /* useChannelPresetSettings */;
+        let obj = require(10326) /* useChannelPresetSettings */;
       }
       tmp6 = flag2;
     }

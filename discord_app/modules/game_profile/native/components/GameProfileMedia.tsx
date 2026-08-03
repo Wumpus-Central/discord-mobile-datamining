@@ -1,6 +1,6 @@
-// === Module 8818: ImageItem ===
+// === Module 8529: ImageItem ===
 
-// Module 8818 (ImageItem)
+// Module 8529 (ImageItem)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

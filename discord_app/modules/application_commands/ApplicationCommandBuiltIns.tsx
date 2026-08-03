@@ -1,6 +1,6 @@
-// === Module 8148: getOptionValue ===
+// === Module 5715: getOptionValue ===
 
-// Module 8148 (getOptionValue)
+// Module 5715 (getOptionValue)
 import importDefaultResult from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -232,7 +232,7 @@ obj7.predicate = function predicate(channel) {
   channel = channel.channel;
   let setting = null != channel && !channel.isPrivate();
   if (setting) {
-    const EnableTTSCommand = require(3928) /* explicitContentFromProto */.EnableTTSCommand;
+    const EnableTTSCommand = require(3866) /* explicitContentFromProto */.EnableTTSCommand;
     setting = EnableTTSCommand.getSetting();
   }
   if (setting) {
@@ -409,7 +409,7 @@ obj13.execute = function execute(arr) {
       if (str == null) {
         str = "";
       }
-      const obj = importDefault(8151);
+      const obj = importDefault(6184);
       const id = guild.id;
       const id2 = channel.id;
       if (!str) {
@@ -469,7 +469,7 @@ Object.defineProperty(obj17, "displayDescription", {
   },
   set: undefined
 });
-Object.defineProperty(obj17, "maxLength", { get: () => require(8152) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
+Object.defineProperty(obj17, "maxLength", { get: () => require(6185) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
 obj17.required = true;
 items8[1] = obj17;
 obj15.options = items8;
@@ -477,8 +477,8 @@ obj15.predicate = function predicate(channel) {
   channel = channel.channel;
   let canStartPublicThread = null != channel;
   if (canStartPublicThread) {
-    canStartPublicThread = require(5769) /* useCanUnarchiveThread */.computeCanStartPublicThread(channel);
-    const obj = require(5769) /* useCanUnarchiveThread */;
+    canStartPublicThread = require(6052) /* useCanUnarchiveThread */.computeCanStartPublicThread(channel);
+    const obj = require(6052) /* useCanUnarchiveThread */;
   }
   return canStartPublicThread;
 };
@@ -545,8 +545,8 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             if (tmp11 == null) {
               closure_3 = "";
             }
-            obj1 = callback(8153);
-            let obj2 = callback(8155);
+            obj1 = callback(6186);
+            let obj2 = callback(6188);
             c6 = 2;
             c7 = 1;
             obj2 = { value: null, done: false };
@@ -563,11 +563,11 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
           return obj;
         } else {
           id = arg1;
-          const obj8 = channel(6814);
+          const obj8 = channel(5718);
           id = id.id;
           const obj3 = { location: null };
           obj3[0] = constants.THREAD_CREATION;
-          obj8.sendMessage(id, channel(7050).parse(id, closure_3), true, obj3);
+          obj8.sendMessage(id, channel(5971).parse(id, closure_3), true, obj3);
           c7 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1333,7 +1333,7 @@ Object.defineProperty(obj31, "displayDescription", {
   set: undefined
 });
 obj31.required = true;
-Object.defineProperty(obj31, "maxLength", { get: () => require(8152) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
+Object.defineProperty(obj31, "maxLength", { get: () => require(6185) /* useMessageMaxLength */.getMaxMessageLength(), set: undefined });
 items12[1] = obj31;
 obj29.options = items12;
 obj29.execute = function execute(arr, channel) {
@@ -1529,8 +1529,8 @@ obj32.execute = function execute(arr, channel) {
     }
     const NumberResult = Number(num);
     const NumberResult1 = Number(num2);
-    size(5746).startDiceRoll(channel.id, NumberResult, NumberResult1);
-    const obj = size(5746);
+    size(5684).startDiceRoll(channel.id, NumberResult, NumberResult1);
+    const obj = size(5684);
   }
 };
 items[sum10 + 1] = obj32;

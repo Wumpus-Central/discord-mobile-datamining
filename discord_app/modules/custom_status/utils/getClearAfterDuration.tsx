@@ -1,6 +1,6 @@
-// === Module 12084: getClearAfterDuration ===
+// === Module 11988: getClearAfterDuration ===
 
-// Module 12084 (getClearAfterDuration)
+// Module 11988 (getClearAfterDuration)
 import { ClearAfterValues } from "StatusTypes";
 
 const result = require("module_38").fileFinishedImporting("modules/custom_status/utils/getClearAfterDuration.tsx");

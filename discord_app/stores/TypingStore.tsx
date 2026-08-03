@@ -1,6 +1,6 @@
-// === Module 11284: handleTypingStart ===
+// === Module 11172: handleTypingStart ===
 
-// Module 11284 (handleTypingStart)
+// Module 11172 (handleTypingStart)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SlowmodeType } from "setCooldown";
@@ -136,7 +136,7 @@ const typingStore = new TypingStore(require("dispatcher"), {
     id = store.getId();
     if (null == id) {
       return false;
-    } else if (channelId === channelId(5723).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+    } else if (channelId === channelId(5661).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       return false;
     } else {
       let tmp3 = null != obj;

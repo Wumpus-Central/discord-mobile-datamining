@@ -1,6 +1,6 @@
-// === Module 8028: MediaGalleryItemType ===
+// === Module 7910: MediaGalleryItemType ===
 
-// Module 8028 (MediaGalleryItemType)
+// Module 7910 (MediaGalleryItemType)
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RowGeneratorTypes.tsx");
 
 export const MediaGalleryItemType = { IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO", VISUAL_PLACEHOLDER: 3, [3]: "VISUAL_PLACEHOLDER" };

@@ -1,6 +1,6 @@
-// === Module 7149: convertServerThreadMember ===
+// === Module 6097: convertServerThreadMember ===
 
-// Module 7149 (convertServerThreadMember)
+// Module 6097 (convertServerThreadMember)
 const result = require("set").fileFinishedImporting("modules/threads/convertServerThreadMember.tsx");
 
 export default function convertServerThreadMember(id) {

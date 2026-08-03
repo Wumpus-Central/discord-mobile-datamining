@@ -1,6 +1,6 @@
-// === Module 8106: maybeFetchUserProfile ===
+// === Module 7988: maybeFetchUserProfile ===
 
-// Module 8106 (maybeFetchUserProfile)
+// Module 7988 (maybeFetchUserProfile)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
@@ -113,8 +113,8 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       profileEffect = userProfile.profileEffect;
     }
     if (null != profileEffect) {
-      const result = _require(6897).maybeFetchCollectiblesProduct(profileEffect.skuId);
-      const obj2 = _require(6897);
+      const result = _require(5802).maybeFetchCollectiblesProduct(profileEffect.skuId);
+      const obj2 = _require(5802);
     }
     if (null != guildId) {
       let profileFrame;
@@ -125,12 +125,12 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       profileFrame = userProfile.profileFrame;
     }
     if (null != profileFrame) {
-      const result1 = _require(6897).maybeFetchCollectiblesProduct(profileFrame.skuId);
-      const obj3 = _require(6897);
+      const result1 = _require(5802).maybeFetchCollectiblesProduct(profileFrame.skuId);
+      const obj3 = _require(5802);
     }
     if (null != closure_0) {
-      _require(8033).maybeFetchColors(closure_0);
-      const obj4 = _require(8033);
+      _require(7915).maybeFetchColors(closure_0);
+      const obj4 = _require(7915);
     }
     obj = { type: null, withMutualGuilds: null, withMutualFriends: null, withMutualFriendsCount: null, guildId: null, joinRequestId: null, abortSignal: null, connectionsRoleId: null };
     obj[0] = type;
@@ -145,13 +145,13 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       obj = { guildMember: null, channel: null };
       obj[0] = member.getMember(guildId, id);
       obj[1] = channel.getChannel(tmp);
-      const visibleConnectionsRole = _require(5062).getVisibleConnectionsRole(obj);
+      const visibleConnectionsRole = _require(5000).getVisibleConnectionsRole(obj);
       id = undefined;
       if (visibleConnectionsRole != null) {
         id = visibleConnectionsRole.id;
       }
       tmp34 = id;
-      const obj6 = _require(5062);
+      const obj6 = _require(5000);
     }
     obj[7] = tmp34;
     if (flag3) {
@@ -161,7 +161,7 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
       });
       return Promise.resolve();
     } else {
-      const profile = _require(8107).fetchProfile(id, obj, obj(8108));
+      const profile = _require(7989).fetchProfile(id, obj, obj(7990));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

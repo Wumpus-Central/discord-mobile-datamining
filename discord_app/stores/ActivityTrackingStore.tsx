@@ -1,6 +1,6 @@
-// === Module 12878: stopActivity ===
+// === Module 12815: stopActivity ===
 
-// Module 12878 (stopActivity)
+// Module 12815 (stopActivity)
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import fetchFingerprint from "fetchFingerprint";
@@ -43,7 +43,7 @@ function updateActivity(applicationId) {
   if (num > closure_12 + closure_13) {
     num = 0;
   }
-  let obj = _require(4299);
+  let obj = _require(4237);
   const result = obj.shouldShareApplicationActivity(applicationId.applicationId, setLibraryApplications);
   voiceChannelId = voiceChannelId.getVoiceChannelId();
   sessionId = sessionId.getSessionId();
@@ -63,10 +63,10 @@ function updateActivity(applicationId) {
   obj[7] = voiceChannelId;
   obj[8] = sessionId;
   obj[9] = mediaSessionId;
-  importDefault(10634).updateActivity(obj);
+  importDefault(10496).updateActivity(obj);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(4140).Interval();
+    const interval = new tmp3(4078).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       outer1_18(closure_0);
@@ -107,7 +107,7 @@ function handleRunningGamesChange(flag) {
         obj[2] = tmp3.distributor;
         let tmp10 = require;
         let tmp11 = dependencyMap;
-        let obj3 = require(4425) /* removeExecutablePathPrefix */;
+        let obj3 = require(4363) /* removeExecutablePathPrefix */;
         let str = tmp3.exePath;
         if (str == null) {
           str = "";

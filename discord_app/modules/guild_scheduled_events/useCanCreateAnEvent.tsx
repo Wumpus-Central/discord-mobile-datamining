@@ -1,6 +1,6 @@
-// === Module 8629: useCanCreateAnEvent ===
+// === Module 8324: useCanCreateAnEvent ===
 
-// Module 8629 (useCanCreateAnEvent)
+// Module 8324 (useCanCreateAnEvent)
 import _slicedToArray from "_slicedToArray";
 import comparator from "comparator";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";

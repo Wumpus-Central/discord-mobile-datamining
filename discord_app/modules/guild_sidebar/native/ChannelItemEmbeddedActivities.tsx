@@ -1,6 +1,6 @@
-// === Module 15198: ChannelItemEmbeddedActivities ===
+// === Module 15217: ChannelItemEmbeddedActivities ===
 
-// Module 15198 (ChannelItemEmbeddedActivities)
+// Module 15217 (ChannelItemEmbeddedActivities)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -23,7 +23,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
   let size;
   ({ embeddedApps, size } = muted);
   if (size === undefined) {
-    size = require(5591) /* GameIcon */.GameIconSizes.SIZE_24;
+    size = require(5529) /* GameIcon */.GameIconSizes.SIZE_24;
   }
   let modeMuted = muted.muted;
   const tmp3 = createCacheKey();
@@ -37,22 +37,22 @@ export default function ChannelItemEmbeddedActivities(muted) {
       modeMuted = tmp3.modeMuted;
     }
     obj[2] = modeMuted;
-    return callback(importDefault(5591), obj);
+    return callback(importDefault(5529), obj);
   } else {
     const diff = embeddedApps.length - 1;
-    const tmp13 = require(5591) /* GameIcon */.GameIconImageSize[size];
+    const tmp13 = require(5529) /* GameIcon */.GameIconImageSize[size];
     obj = { style: null, children: null };
     obj[0] = tmp3.container;
     const obj1 = { game: null, size: null, style: null };
     obj1[0] = embeddedApps[0].application;
     obj1[1] = size;
     obj1[2] = { marginRight: 4 };
-    const items = [callback(importDefault(5591), obj1), ];
+    const items = [callback(importDefault(5529), obj1), ];
     if (2 === embeddedApps.length) {
       obj = { game: null, size: null };
       obj[0] = embeddedApps[1].application;
       obj[1] = size;
-      let tmp16Result = tmp16(importDefault(5591), obj);
+      let tmp16Result = tmp16(importDefault(5529), obj);
     } else {
       const obj2 = { style: null, children: null };
       const items1 = [tmp3.overflowContainer, ];
@@ -65,7 +65,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
       obj4[0] = tmp3.overflow;
       const _HermesInternal = HermesInternal;
       obj4[2] = "+" + diff;
-      obj2[1] = tmp16(require(4251) /* Text */.Text, obj4);
+      obj2[1] = tmp16(require(4189) /* Text */.Text, obj4);
       tmp16Result = tmp16(tmp15, obj2);
     }
     items[1] = tmp16Result;

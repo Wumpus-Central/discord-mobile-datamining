@@ -1,6 +1,6 @@
-// === Module 5173: openQuarantineModeInfoModal ===
+// === Module 5111: openQuarantineModeInfoModal ===
 
-// Module 5173 (openQuarantineModeInfoModal)
+// Module 5111 (openQuarantineModeInfoModal)
 import "noop";
 import { Keyboard } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -10,7 +10,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/quarantine/open
 
 export default function openQuarantineModeInfoModal() {
   Keyboard.dismiss();
-  let obj = require(4114) /* getBestActiveInput */;
+  let obj = require(4052) /* getBestActiveInput */;
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
@@ -26,5 +26,5 @@ export default function openQuarantineModeInfoModal() {
       });
     }
   };
-  importDefault(4595).openLazy(obj);
+  importDefault(4533).openLazy(obj);
 };

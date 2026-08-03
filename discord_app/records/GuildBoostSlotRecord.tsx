@@ -1,6 +1,6 @@
-// === Module 4153: createFromServer ===
+// === Module 4091: createFromServer ===
 
-// Module 4153 (createFromServer)
+// Module 4091 (createFromServer)
 import "toJS";
 
 let GuildBoostSlotRecord;
@@ -27,7 +27,7 @@ GuildBoostSlotRecord["createFromServer"] = function createFromServer(premium_gui
     tmp2 = obj;
   }
   ({ canceled, cooldown_ends_at } = premium_guild_subscription);
-  if (typeof GuildBoostSlotRecord !== "error") {
+  if (typeof GuildBoostSlotRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp3 = new GuildBoostSlotRecord("Trying to call a non-function", GuildBoostSlotRecord, new.target, id, subscription_id, tmp2, canceled, cooldown_ends_at);

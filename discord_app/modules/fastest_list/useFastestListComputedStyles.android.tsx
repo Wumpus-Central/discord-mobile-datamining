@@ -1,6 +1,6 @@
-// === Module 9424: useFastestListComputedStyles ===
+// === Module 9252: useFastestListComputedStyles ===
 
-// Module 9424 (useFastestListComputedStyles)
+// Module 9252 (useFastestListComputedStyles)
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 
@@ -77,8 +77,8 @@ export default function useFastestListComputedStyles(style) {
     if (num2 == null) {
       num2 = 0;
     }
-    if (typeof num !== "SENTRY_RELEASE") {
-      if (typeof num2 !== "SENTRY_RELEASE") {
+    if (typeof num !== "__REMOTEDEV__") {
+      if (typeof num2 !== "__REMOTEDEV__") {
         let num3;
         if (flattenResult != null) {
           num3 = flattenResult.marginEnd;
@@ -135,8 +135,8 @@ export default function useFastestListComputedStyles(style) {
         if (num4 == null) {
           num4 = 0;
         }
-        if (typeof num3 !== "SENTRY_RELEASE") {
-          if (typeof num4 !== "SENTRY_RELEASE") {
+        if (typeof num3 !== "__REMOTEDEV__") {
+          if (typeof num4 !== "__REMOTEDEV__") {
             obj = { style: null, marginEnd: null, marginStart: null };
             obj[0] = flattenResult;
             obj[1] = num3 + num4;

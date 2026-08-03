@@ -1,6 +1,6 @@
-// === Module 15157: useLiveStageChannels ===
+// === Module 15176: useLiveStageChannels ===
 
-// Module 15157 (useLiveStageChannels)
+// Module 15176 (useLiveStageChannels)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";

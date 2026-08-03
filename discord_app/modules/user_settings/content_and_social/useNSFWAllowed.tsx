@@ -1,6 +1,6 @@
-// === Module 8145: useNSFWAllowed ===
+// === Module 5712: useNSFWAllowed ===
 
-// Module 8145 (useNSFWAllowed)
+// Module 5712 (useNSFWAllowed)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

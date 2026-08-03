@@ -1,6 +1,6 @@
-// === Module 9541: PremiumUpsellGradientBackground ===
+// === Module 9394: PremiumUpsellGradientBackground ===
 
-// Module 9541 (PremiumUpsellGradientBackground)
+// Module 9394 (PremiumUpsellGradientBackground)
 import "noop";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";
@@ -26,5 +26,5 @@ export const PremiumUpsellGradientBackground = function PremiumUpsellGradientBac
     PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_2_TRI_COLOR;
   }
   obj[3] = PREMIUM_TIER_2_TRI_COLOR;
-  return tmp2(importDefault(4677), obj);
+  return tmp2(importDefault(4615), obj);
 };

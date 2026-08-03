@@ -1,6 +1,6 @@
-// === Module 16756: prototype ===
+// === Module 16690: prototype ===
 
-// Module 16756 (prototype)
+// Module 16690 (prototype)
 import _navigateToGuild from "_navigateToGuild";
 import map from "map";
 import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID";

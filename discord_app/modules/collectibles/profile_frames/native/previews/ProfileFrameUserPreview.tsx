@@ -1,6 +1,6 @@
-// === Module 8931: ProfileFrameUserPreview ===
+// === Module 8754: ProfileFrameUserPreview ===
 
-// Module 8931 (ProfileFrameUserPreview)
+// Module 8754 (ProfileFrameUserPreview)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -22,5 +22,5 @@ export default function ProfileFrameUserPreview(profileFrame) {
   }
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(8411), { profileFrameOverride: profileFrame, accessibilityLabel: null });
+  return jsx(importDefault(8080), { profileFrameOverride: profileFrame, accessibilityLabel: null });
 };

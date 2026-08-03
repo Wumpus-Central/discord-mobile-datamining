@@ -1,6 +1,6 @@
-// === Module 14572: AppIcon ===
+// === Module 14505: AppIcon ===
 
-// Module 14572 (AppIcon)
+// Module 14505 (AppIcon)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { getIconById } from "items";
@@ -24,8 +24,8 @@ export default function AppIcon(size) {
     num = 56;
   }
   const tmp = createCacheKey();
-  const tmp2 = importDefault(4191)();
-  let obj = require(4101) /* AccessibilityAnnouncer */;
+  const tmp2 = importDefault(4129)();
+  let obj = require(4039) /* AccessibilityAnnouncer */;
   let num2 = 1;
   if (obj.isThemeDark(tmp2)) {
     num2 = 0;

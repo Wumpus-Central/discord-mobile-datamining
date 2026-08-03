@@ -1,13 +1,13 @@
-// === Module 9668: handleAcceptEventInstantInvite ===
+// === Module 9521: handleAcceptEventInstantInvite ===
 
-// Module 9668 (handleAcceptEventInstantInvite)
+// Module 9521 (handleAcceptEventInstantInvite)
 import scheduledEventSort from "scheduledEventSort";
 
 const require = arg1;
 let result = require("InviteTypes").fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
 
 export default function handleAcceptEventInstantInvite(code) {
-  let obj = guildScheduledEvent(9528);
+  let obj = guildScheduledEvent(9369);
   if (!obj.handleNSFWGuildInvite(code)) {
     if (tmpResult.isGuildScheduledEventInviteEmbed(code)) {
       if (null != code.code) {
@@ -24,11 +24,11 @@ export default function handleAcceptEventInstantInvite(code) {
           obj[2] = function callback() {
             const result = guildScheduledEvent(outer1_2[4]).transitionToEventDetailsFromInvite(guildScheduledEvent);
           };
-          importDefault(7667).acceptInvite(obj);
-          const obj3 = importDefault(7667);
+          importDefault(6696).acceptInvite(obj);
+          const obj3 = importDefault(6696);
         }
       }
     }
-    tmpResult = guildScheduledEvent(7103);
+    tmpResult = guildScheduledEvent(6024);
   }
 };

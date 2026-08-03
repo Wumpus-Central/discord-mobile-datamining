@@ -1,6 +1,6 @@
-// === Module 4211: CircleInformationIcon ===
+// === Module 4149: CircleInformationIcon ===
 
-// Module 4211 (CircleInformationIcon)
+// Module 4149 (CircleInformationIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -25,20 +25,20 @@ export const CircleInformationIcon = function CircleInformationIcon(color) {
   const merged = Object.assign(color, Object.create(null));
   let obj = { children: null };
   obj = { source: null, color: null, style: null };
-  obj[0] = require(4212) /* registerAsset */;
+  obj[0] = require(4150) /* registerAsset */;
   obj[1] = secondaryColor;
   obj[2] = style;
   const merged1 = Object.assign(merged);
-  const items = [callback(require(3958) /* BaseIconImage */.BaseIconImage, obj), ];
+  const items = [callback(require(3896) /* BaseIconImage */.BaseIconImage, obj), ];
   obj = { source: null, color: null, style: null };
-  obj[0] = require(4213) /* registerAsset */;
+  obj[0] = require(4151) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
   obj[2] = items2;
   const merged2 = Object.assign(merged);
-  items[1] = callback(require(3958) /* BaseIconImage */.BaseIconImage, obj);
+  items[1] = callback(require(3896) /* BaseIconImage */.BaseIconImage, obj);
   obj[0] = items;
   return callback2(View, obj);
 };

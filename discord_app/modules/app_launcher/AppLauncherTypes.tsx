@@ -1,6 +1,6 @@
-// === Module 8358: AppLauncherEntrypoint ===
+// === Module 8021: AppLauncherEntrypoint ===
 
-// Module 8358 (AppLauncherEntrypoint)
+// Module 8021 (AppLauncherEntrypoint)
 const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherTypes.tsx");
 
 export const AppLauncherEntrypoint = { NONE: "NONE", TEXT: "TEXT", VOICE: "VOICE" };

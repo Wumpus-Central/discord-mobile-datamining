@@ -1,6 +1,6 @@
-// === Module 8653: GuildStageChannelSelection ===
+// === Module 8348: GuildStageChannelSelection ===
 
-// Module 8653 (GuildStageChannelSelection)
+// Module 8348 (GuildStageChannelSelection)
 import "noop";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

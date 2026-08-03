@@ -1,6 +1,6 @@
-// === Module 8770: ServerPreviewPill ===
+// === Module 8469: ServerPreviewPill ===
 
-// Module 8770 (ServerPreviewPill)
+// Module 8469 (ServerPreviewPill)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -21,6 +21,6 @@ export default function ServerPreviewPill() {
   obj = { variant: "text-xs/bold", style: tmp.text, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.KNhFgD);
-  obj[2] = jsx(require(4251) /* Text */.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
+  obj[2] = jsx(require(4189) /* Text */.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
   return <View variant="text-xs/bold" style={tmp.text}>{null}</View>;
 };

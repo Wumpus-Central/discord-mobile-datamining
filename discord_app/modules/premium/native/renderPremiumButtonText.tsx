@@ -1,6 +1,6 @@
-// === Module 12713: PremiumText ===
+// === Module 12620: PremiumText ===
 
-// Module 12713 (PremiumText)
+// Module 12620 (PremiumText)
 import "noop";
 import { View } from "get ActivityIndicator";
 import GuildFeatures from "GuildFeatures";
@@ -22,7 +22,7 @@ function PremiumText(basePlanId) {
   let text;
   ({ style, isCurrentPlan, isGift, product, text } = basePlanId);
   const tmp = createCacheKey();
-  let obj = importDefault(3901);
+  let obj = importDefault(3839);
   const intervalType = obj.getInterval(basePlanId.basePlanId).intervalType;
   let combined = null;
   if (intervalType === constants.YEAR) {

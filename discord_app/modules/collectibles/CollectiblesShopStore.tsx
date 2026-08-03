@@ -1,6 +1,6 @@
-// === Module 6915: items ===
+// === Module 5820: items ===
 
-// Module 6915 (items)
+// Module 5820 (items)
 import { Store } from "initialize";
 import set from "set";
 

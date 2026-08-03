@@ -1,7 +1,7 @@
-// === Module 14847: handleNewUserOnboarding ===
+// === Module 14780: handleNewUserOnboarding ===
 
-// Module 14847 (handleNewUserOnboarding)
-import module_13898 from "module_13898";
+// Module 14780 (handleNewUserOnboarding)
+import module_13831 from "module_13831";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import Themes from "Themes";
 import { ScrollView } from "jsxProd";
@@ -28,33 +28,33 @@ let closure_22;
 let closure_23;
 const require = arg1;
 function handleNewUserOnboarding() {
-  require(11959) /* setNewUser */.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
-  const obj = require(11959) /* setNewUser */;
-  importDefault(709).wait(require(11911) /* _startContactSyncForDiscoverability */.startOnboarding);
+  require(11863) /* setNewUser */.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
+  const obj = require(11863) /* setNewUser */;
+  importDefault(709).wait(require(11809) /* _startContactSyncForDiscoverability */.startOnboarding);
 }
 function handleThemeChange(arg0) {
-  importDefault(8175).updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
+  importDefault(6209).updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
 }
 function handleReducedMotionChange(arg0) {
   let str = "no-preference";
   if (arg0) {
     str = "reduce";
   }
-  const result = require(13584) /* setFontSize */.setPrefersReducedMotion(str);
+  const result = require(13521) /* setFontSize */.setPrefersReducedMotion(str);
 }
 function handleLaunchWelcomeReset() {
   const result = require(1355) /* updateUserGuildSettings */.removeDismissedContent(require(1358) /* DismissibleContent */.DismissibleContent.SEEN_LAUNCH_WELCOME);
   const obj = require(1355) /* updateUserGuildSettings */;
-  const result1 = require(4071) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.SEEN_OLD_DESIGN);
+  const result1 = require(4009) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.SEEN_OLD_DESIGN);
 }
 function showVibingWumpus() {
-  let obj = importDefault(4461);
+  let obj = importDefault(4399);
   obj = {
     onClose() {
 
     }
   };
-  obj.pushLazy(require(1959) /* asyncRequireImpl */(10323, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
+  obj.pushLazy(require(1959) /* asyncRequireImpl */(10184, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
 }
 function handleResetDoubleTapState() {
   const result = require(1355) /* updateUserGuildSettings */.removeDismissedContent(require(1358) /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL);
@@ -68,9 +68,9 @@ function handleResetDoubleTapState() {
   }, require(1355) /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 function launchTotpSetupSuccess() {
-  let arr = importDefault(4461);
+  let arr = importDefault(4399);
   arr = arr.pop();
-  const items = [require(1959) /* asyncRequireImpl */(13898, dependencyMap.paths), require(1959) /* asyncRequireImpl */(13900, dependencyMap.paths)];
+  const items = [require(1959) /* asyncRequireImpl */(13831, dependencyMap.paths), require(1959) /* asyncRequireImpl */(13833, dependencyMap.paths)];
   Promise.all(items).then((arg0) => {
     const iter = arg0[Symbol.iterator]();
     let nextResult;
@@ -137,7 +137,7 @@ function _handleShowAppRatingModal() {
             dependencyMap = 1;
             c3 = 1;
             const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1(12833)();
+            obj1[0] = outer1_1(12770)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -160,7 +160,7 @@ function _handleShowAppRatingModal() {
             str2 = "Review request failed: " + outer1_0.error;
           }
           obj2[2] = str2;
-          callback(3956).open(obj2);
+          callback(3894).open(obj2);
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -187,9 +187,9 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: require("Themes").space.PX_16 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 function launchMFA() {
-  let arr = importDefault(4461);
+  let arr = importDefault(4399);
   arr = arr.pop();
-  require(1959) /* asyncRequireImpl */(14848, dependencyMap.paths).then((openMFAModal) => {
+  require(1959) /* asyncRequireImpl */(14781, dependencyMap.paths).then((openMFAModal) => {
     const items = [{ type: "webauthn", challenge: "{}" }, { type: "totp" }, { type: "backup" }, { type: "sms" }, { type: "password" }];
     openMFAModal.openMFAModal({ ticket: "ticket", methods: items }, () => {
 
@@ -221,14 +221,14 @@ export default function DevToolsQuickActionsScreen() {
   const callback = obj2.useStateFromStores(items2, () => premiumTypeOverride.getPremiumTypeOverride());
   const tmp4 = showDevWidget(1581)();
   [tmp8, _handleConnectionOpen] = callback(setting.useState(false), 2);
-  let IgnoreProfileSpeedbumpDisabled = locale(3928).IgnoreProfileSpeedbumpDisabled;
+  let IgnoreProfileSpeedbumpDisabled = locale(3866).IgnoreProfileSpeedbumpDisabled;
   setting = IgnoreProfileSpeedbumpDisabled.useSetting();
   let obj3 = locale(589);
   const items3 = [maybeApplyNoTextColorForLightCustomTheme];
   [][0] = locale;
   const stateFromStores = obj3.useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
   if (tmp8) {
-    return callback3(tmp5(14864).default, {});
+    return callback3(tmp5(14797).default, {});
   } else {
     obj = { style: null, contentContainerStyle: null, children: null };
     obj[0] = tmp.container;
@@ -242,12 +242,12 @@ export default function DevToolsQuickActionsScreen() {
     obj2 = { label: "Show Dev Widget", value: null, onValueChange: null };
     obj2[1] = showDevWidget;
     obj2[2] = function onValueChange() {
-      let obj = locale(13720);
+      let obj = locale(13657);
       obj = { showDevWidget: !showDevWidget };
       return obj.updateDevToolsSettings(obj);
     };
-    obj1[2] = callback3(tmp5(5621).TableSwitchRow, obj2);
-    const items5 = [callback3(tmp5(5620).TableRowGroup, obj1), , , , , , , , , ];
+    obj1[2] = callback3(tmp5(5559).TableSwitchRow, obj2);
+    const items5 = [callback3(tmp5(5558).TableRowGroup, obj1), , , , , , , , , ];
     obj3 = { size: null };
     obj3[0] = tmp2(712).space.PX_16;
     items5[1] = callback3(tmp5(1297).Spacer, obj3);
@@ -259,18 +259,18 @@ export default function DevToolsQuickActionsScreen() {
     const obj5 = { label: null, disabled: null, icon: null, value: null, onValueChange: null };
     obj5[0] = str;
     obj5[1] = usingSystemTheme;
-    obj5[2] = tmp14(tmp5(14370).ThemeLightIcon, {});
-    let tmp5Result = tmp5(4101);
+    obj5[2] = tmp14(tmp5(14303).ThemeLightIcon, {});
+    let tmp5Result = tmp5(4039);
     obj5[3] = tmp5Result.isThemeLight(stateFromStoresObject.theme);
     obj5[4] = handleThemeChange;
-    const items6 = [tmp14(tmp5(5621).TableSwitchRow, obj5), ];
+    const items6 = [tmp14(tmp5(5559).TableSwitchRow, obj5), ];
     const obj6 = { label: "Reduced Motion", icon: null, value: null, onValueChange: null };
-    obj6[1] = tmp14(tmp5(14429).AccessibilityIcon, {});
+    obj6[1] = tmp14(tmp5(14362).AccessibilityIcon, {});
     obj6[2] = stateFromStores;
     obj6[3] = handleReducedMotionChange;
-    items6[1] = tmp14(tmp5(5621).TableSwitchRow, obj6);
+    items6[1] = tmp14(tmp5(5559).TableSwitchRow, obj6);
     obj4[2] = items6;
-    items5[2] = closure_22(tmp5(5620).TableRowGroup, obj4);
+    items5[2] = closure_22(tmp5(5558).TableRowGroup, obj4);
     const obj7 = { size: null };
     obj7[0] = tmp2(712).space.PX_16;
     items5[3] = tmp14(tmp5(1297).Spacer, obj7);
@@ -288,11 +288,11 @@ export default function DevToolsQuickActionsScreen() {
         icon: null,
         value: null
       };
-      obj[2] = outer1_21(locale(9284).PencilIcon, {});
-      obj[3] = value === module_13898;
-      return outer1_21(locale(5621).TableSwitchRow, obj, label);
+      obj[2] = outer1_21(locale(9111).PencilIcon, {});
+      obj[3] = value === module_13831;
+      return outer1_21(locale(5559).TableSwitchRow, obj, label);
     });
-    items5[4] = tmp14(tmp5(5620).TableRowGroup, obj8);
+    items5[4] = tmp14(tmp5(5558).TableRowGroup, obj8);
     const obj9 = { size: null };
     obj9[0] = tmp2(712).space.PX_16;
     items5[5] = tmp14(tmp5(1297).Spacer, obj9);
@@ -306,97 +306,97 @@ export default function DevToolsQuickActionsScreen() {
     const obj11 = { label: null, subLabel: "Toggle to a non-english locale for change log testing, etc.", onPress: null, icon: null, trailing: null };
     obj11[0] = str2;
     obj11[2] = tmp11;
-    obj11[3] = tmp14(tmp5(14467).LanguageIcon, {});
-    obj11[4] = tmp14(tmp5(5293).TableRowArrow, {});
-    const items7 = [tmp14(tmp5(5286).TableRow, obj11), , , , , , , , , ];
+    obj11[3] = tmp14(tmp5(14400).LanguageIcon, {});
+    obj11[4] = tmp14(tmp5(5231).TableRowArrow, {});
+    const items7 = [tmp14(tmp5(5224).TableRow, obj11), , , , , , , , , ];
     const obj12 = { label: "Reset Double Tap Emoji State", subLabel: "Clears double tap emoji and resets dismissible content.", onPress: null, icon: null, trailing: null };
     obj12[2] = handleResetDoubleTapState;
-    obj12[3] = tmp14(tmp5(9388).KeyIcon, {});
-    obj12[4] = tmp14(tmp5(5293).TableRowArrow, {});
-    items7[1] = tmp14(tmp5(5286).TableRow, obj12);
+    obj12[3] = tmp14(tmp5(9215).KeyIcon, {});
+    obj12[4] = tmp14(tmp5(5231).TableRowArrow, {});
+    items7[1] = tmp14(tmp5(5224).TableRow, obj12);
     const obj13 = { label: null, subLabel: "Dismisses dev tools when launching.", onPress: null, icon: null, trailing: null };
     const intl2 = tmp5(1236).intl;
     obj13[0] = intl2.string(tmp5(1236).t.yoWDXU);
     obj13[2] = handleNewUserOnboarding;
-    obj13[3] = tmp14(tmp5(14609).WrenchIcon, {});
-    obj13[4] = tmp14(tmp5(5293).TableRowArrow, {});
-    items7[2] = tmp14(tmp5(5286).TableRow, obj13);
+    obj13[3] = tmp14(tmp5(14542).WrenchIcon, {});
+    obj13[4] = tmp14(tmp5(5231).TableRowArrow, {});
+    items7[2] = tmp14(tmp5(5224).TableRow, obj13);
     const obj14 = { label: "Launch MFA Challenge Modal", subLabel: "Dismisses dev tools when launching.", onPress: null, icon: null, trailing: null };
     obj14[2] = launchMFA;
-    obj14[3] = tmp14(tmp5(9388).KeyIcon, {});
-    obj14[4] = tmp14(tmp5(5293).TableRowArrow, {});
-    items7[3] = tmp14(tmp5(5286).TableRow, obj14);
+    obj14[3] = tmp14(tmp5(9215).KeyIcon, {});
+    obj14[4] = tmp14(tmp5(5231).TableRowArrow, {});
+    items7[3] = tmp14(tmp5(5224).TableRow, obj14);
     const obj15 = { label: "Show TOTP Setup Success", subLabel: "Dismisses dev tools when launching.", onPress: null, icon: null, trailing: null };
     obj15[2] = launchTotpSetupSuccess;
-    obj15[3] = tmp14(tmp5(9388).KeyIcon, {});
-    obj15[4] = tmp14(tmp5(5293).TableRowArrow, {});
-    items7[4] = tmp14(tmp5(5286).TableRow, obj15);
+    obj15[3] = tmp14(tmp5(9215).KeyIcon, {});
+    obj15[4] = tmp14(tmp5(5231).TableRowArrow, {});
+    items7[4] = tmp14(tmp5(5224).TableRow, obj15);
     const obj16 = { label: "Reset Launch Welcome", subLabel: "Resets launch welcome NUX flag, requires an app restart to take effect.", onPress: null, icon: null, trailing: null };
     obj16[2] = handleLaunchWelcomeReset;
-    obj16[3] = tmp14(tmp5(9388).KeyIcon, {});
-    obj16[4] = tmp14(tmp5(5293).TableRowArrow, {});
-    items7[5] = tmp14(tmp5(5286).TableRow, obj16);
+    obj16[3] = tmp14(tmp5(9215).KeyIcon, {});
+    obj16[4] = tmp14(tmp5(5231).TableRowArrow, {});
+    items7[5] = tmp14(tmp5(5224).TableRow, obj16);
     const obj17 = { label: "Launch Vibing Wumpus", subLabel: "Vibe with the one and only", onPress: null, icon: null, trailing: null };
     obj17[2] = showVibingWumpus;
-    obj17[3] = tmp14(tmp5(9388).KeyIcon, {});
-    obj17[4] = tmp14(tmp5(5293).TableRowArrow, {});
-    items7[6] = tmp14(tmp5(5286).TableRow, obj17);
+    obj17[3] = tmp14(tmp5(9215).KeyIcon, {});
+    obj17[4] = tmp14(tmp5(5231).TableRowArrow, {});
+    items7[6] = tmp14(tmp5(5224).TableRow, obj17);
     const obj18 = { label: "Test captcha", onPress: null, icon: null, trailing: null };
-    obj18[1] = tmp5(14866).showCaptchaTestModal;
-    obj18[2] = tmp14(tmp5(9388).KeyIcon, {});
-    obj18[3] = tmp14(tmp5(5293).TableRowArrow, {});
-    items7[7] = tmp14(tmp5(5286).TableRow, obj18);
+    obj18[1] = tmp5(14799).showCaptchaTestModal;
+    obj18[2] = tmp14(tmp5(9215).KeyIcon, {});
+    obj18[3] = tmp14(tmp5(5231).TableRowArrow, {});
+    items7[7] = tmp14(tmp5(5224).TableRow, obj18);
     const obj19 = { label: "Ignored Profile Speedbump Suppression", subLabel: "Suppresses the speedbump for ignored profiles.", icon: null, value: null, onValueChange: null };
-    obj19[2] = tmp14(tmp5(9396).EyeSlashIcon, {});
+    obj19[2] = tmp14(tmp5(9223).EyeSlashIcon, {});
     obj19[3] = setting;
     obj19[4] = function onValueChange() {
-      const IgnoreProfileSpeedbumpDisabled = locale(3928).IgnoreProfileSpeedbumpDisabled;
+      const IgnoreProfileSpeedbumpDisabled = locale(3866).IgnoreProfileSpeedbumpDisabled;
       return IgnoreProfileSpeedbumpDisabled.updateSetting(!setting);
     };
-    items7[8] = tmp14(tmp5(5621).TableSwitchRow, obj19);
+    items7[8] = tmp14(tmp5(5559).TableSwitchRow, obj19);
     const obj20 = { label: "Show App Rating Modal", subLabel: "Attempts to show the app rating modal and toasts the request outcome. The prompt may not visually appear on debug builds, or if the OS declines to render it (recent prompt, quota) -- a success toast only means the request was sent without error.", onPress: null, icon: null };
     obj20[2] = handleShowAppRatingModal;
-    obj20[3] = tmp14(tmp5(14609).WrenchIcon, {});
-    items7[9] = tmp14(tmp5(5286).TableRow, obj20);
+    obj20[3] = tmp14(tmp5(14542).WrenchIcon, {});
+    items7[9] = tmp14(tmp5(5224).TableRow, obj20);
     obj10[2] = items7;
-    items5[6] = closure_22(tmp5(5620).TableRowGroup, obj10);
+    items5[6] = closure_22(tmp5(5558).TableRowGroup, obj10);
     const obj21 = { size: null };
     obj21[0] = tmp2(712).space.PX_16;
     items5[7] = tmp14(tmp5(1297).Spacer, obj21);
     const obj22 = { title: "Crash Actions", hasIcons: true, children: null };
     const obj23 = { icon: null, label: "Force Native Crash", onPress: null };
-    obj23[0] = tmp14(tmp5(14609).WrenchIcon, {});
+    obj23[0] = tmp14(tmp5(14542).WrenchIcon, {});
     obj23[2] = function onPress() {
       return showDevWidget(1208).crash();
     };
-    const items8 = [tmp14(tmp5(5286).TableRow, obj23), , , , , ];
+    const items8 = [tmp14(tmp5(5224).TableRow, obj23), , , , , ];
     const obj24 = { icon: null, label: "Force JS Crash", onPress: null };
-    obj24[0] = tmp14(tmp5(14609).WrenchIcon, {});
+    obj24[0] = tmp14(tmp5(14542).WrenchIcon, {});
     obj24[2] = function onPress() {
       const error = new Error("Force JS Crash");
       throw error;
     };
-    items8[1] = tmp14(tmp5(5286).TableRow, obj24);
+    items8[1] = tmp14(tmp5(5224).TableRow, obj24);
     const obj25 = { icon: null, label: "Force JS Boundary Crash", onPress: null };
-    obj25[0] = tmp14(tmp5(14609).WrenchIcon, {});
+    obj25[0] = tmp14(tmp5(14542).WrenchIcon, {});
     obj25[2] = function onPress() {
       callback(true);
     };
-    items8[2] = tmp14(tmp5(5286).TableRow, obj25);
+    items8[2] = tmp14(tmp5(5224).TableRow, obj25);
     const obj26 = { icon: null, label: "Force libdiscore Crash", onPress: null };
-    obj26[0] = tmp14(tmp5(14609).WrenchIcon, {});
+    obj26[0] = tmp14(tmp5(14542).WrenchIcon, {});
     obj26[2] = function onPress() {
       locale(1869).crash();
     };
-    items8[3] = tmp14(tmp5(5286).TableRow, obj26);
+    items8[3] = tmp14(tmp5(5224).TableRow, obj26);
     const obj27 = { icon: null, label: "Force libdiscore Store Crash", subLabel: "Dispatches LIBDISCORE_SIMULATE_CRASH to NoteStore", onPress: null };
-    obj27[0] = tmp14(tmp5(14609).WrenchIcon, {});
+    obj27[0] = tmp14(tmp5(14542).WrenchIcon, {});
     obj27[3] = function onPress() {
       showDevWidget(709).dispatch({ type: "LIBDISCORE_SIMULATE_CRASH" });
     };
-    items8[4] = tmp14(tmp5(5286).TableRow, obj27);
+    items8[4] = tmp14(tmp5(5224).TableRow, obj27);
     const obj28 = { icon: null, label: "Force libdiscore Store Error", subLabel: "Dispatches LIBDISCORE_SIMULATE_STORE_ERROR with socket reset", onPress: null };
-    obj28[0] = tmp14(tmp5(14609).WrenchIcon, {});
+    obj28[0] = tmp14(tmp5(14542).WrenchIcon, {});
     obj28[3] = function onPress() {
       const socket2 = socket.getSocket();
       const obj = showDevWidget(709);
@@ -404,9 +404,9 @@ export default function DevToolsQuickActionsScreen() {
         const result = closure_0.resetSocketOnDispatchError({ error, action: "LIBDISCORE_SIMULATE_STORE_ERROR" });
       });
     };
-    items8[5] = tmp14(tmp5(5286).TableRow, obj28);
+    items8[5] = tmp14(tmp5(5224).TableRow, obj28);
     obj22[2] = items8;
-    items5[8] = closure_22(tmp5(5620).TableRowGroup, obj22);
+    items5[8] = closure_22(tmp5(5558).TableRowGroup, obj22);
     tmp5Result = tmp5(500);
     let isIOSResult = tmp5Result.isIOS();
     if (isIOSResult) {
@@ -416,12 +416,12 @@ export default function DevToolsQuickActionsScreen() {
       const items9 = [tmp14(tmp5(1297).Spacer, obj30), ];
       const obj31 = { title: "Memory Actions", hasIcons: true, children: null };
       const obj32 = { icon: null, label: "Trigger Memory Warning", subLabel: "Simulates a memory warning to test cache-eviction behavior (e.g. SDWebImage).", onPress: null };
-      obj32[0] = tmp14(tmp5(14609).WrenchIcon, {});
+      obj32[0] = tmp14(tmp5(14542).WrenchIcon, {});
       obj32[3] = function onPress() {
         return showDevWidget(1208).triggerMemoryWarning();
       };
-      obj31[2] = tmp14(tmp5(5286).TableRow, obj32);
-      items9[1] = tmp14(tmp5(5620).TableRowGroup, obj31);
+      obj31[2] = tmp14(tmp5(5224).TableRow, obj32);
+      items9[1] = tmp14(tmp5(5558).TableRowGroup, obj31);
       obj29[0] = items9;
       isIOSResult = tmp12(closure_23, obj29);
     }

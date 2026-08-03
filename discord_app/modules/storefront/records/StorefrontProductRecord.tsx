@@ -1,6 +1,6 @@
-// === Module 6919: fromServer ===
+// === Module 5824: fromServer ===
 
-// Module 6919 (fromServer)
+// Module 5824 (fromServer)
 import fromServer from "fromServer";
 import createFromServer from "createFromServer";
 
@@ -66,7 +66,7 @@ prototype["fromServer"] = function fromServer(sku_ids) {
     }
   }
   obj.gameApplicationId = game_application_id;
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(tmp.prototype);

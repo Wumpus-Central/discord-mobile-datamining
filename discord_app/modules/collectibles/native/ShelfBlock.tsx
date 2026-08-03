@@ -1,6 +1,6 @@
-// === Module 14717: ListEdgeSpacer ===
+// === Module 14650: ListEdgeSpacer ===
 
-// Module 14717 (ListEdgeSpacer)
+// Module 14650 (ListEdgeSpacer)
 import Button from "Button";
 import get_ActivityIndicator from "CollectiblesShopCardInternalV2";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

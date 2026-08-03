@@ -1,6 +1,6 @@
-// === Module 9528: GuildNSFWContentLevel ===
+// === Module 9369: GuildNSFWContentLevel ===
 
-// Module 9528 (GuildNSFWContentLevel)
+// Module 9369 (GuildNSFWContentLevel)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -55,7 +55,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
     let flag2 = !tmp10;
     if (!tmp10) {
       id = undefined;
-      const obj2 = importDefault(4461);
+      const obj2 = importDefault(4399);
       if (invite != null) {
         const guild3 = invite.guild;
         if (guild3 != null) {
@@ -64,9 +64,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
       }
       obj = { guildId: null };
       obj[0] = id;
-      obj2.pushLazy(tmp(1959)(9529, tmp2.paths), obj);
+      obj2.pushLazy(tmp(1959)(9370, tmp2.paths), obj);
       flag2 = true;
-      const tmp12 = tmp(1959)(9529, tmp2.paths);
+      const tmp12 = tmp(1959)(9370, tmp2.paths);
     }
     return flag2;
   } else {
@@ -84,8 +84,8 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
         const tmp9 = getUncachedChannelPermissions.can(Permissions.ADMINISTRATOR, guild) || getUncachedChannelPermissions.can(Permissions.MANAGE_GUILD, guild) || getUncachedChannelPermissions.can(Permissions.KICK_MEMBERS, guild) || getUncachedChannelPermissions.can(Permissions.BAN_MEMBERS, guild);
         let nsfwAllowed = currentUser.nsfwAllowed;
         if (nsfwAllowed) {
-          nsfwAllowed = tmp(8144).getViewNsfwGuildsOrDefault();
-          const tmpResult = tmp(8144);
+          nsfwAllowed = tmp(5711).getViewNsfwGuildsOrDefault();
+          const tmpResult = tmp(5711);
         }
         let tmp11 = !tmp9;
         if (!tmp9) {

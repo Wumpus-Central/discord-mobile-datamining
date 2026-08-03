@@ -1,6 +1,6 @@
-// === Module 13583: A11Y_FEATURE_MAP ===
+// === Module 13520: A11Y_FEATURE_MAP ===
 
-// Module 13583 (A11Y_FEATURE_MAP)
+// Module 13520 (A11Y_FEATURE_MAP)
 import { AccessibilityFeatureFlags } from "AccessibilityFeatureFlags";
 
 const result = require("AccessibilityAnnouncer").fileFinishedImporting("modules/a11y/native/AccessibilityPreferencesSharedValue.tsx");

@@ -1,6 +1,6 @@
-// === Module 10165: OfficialConnectionIcon ===
+// === Module 10023: OfficialConnectionIcon ===
 
-// Module 10165 (OfficialConnectionIcon)
+// Module 10023 (OfficialConnectionIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";
@@ -29,7 +29,7 @@ export default function OfficialConnectionIcon(arg0) {
   ({ guildId, displayRoleIcon } = arg0);
   const tmp = callback3();
   let obj = { width: size, height: size };
-  let obj1 = require(5605) /* useRoleIcon */;
+  let obj1 = require(5543) /* useRoleIcon */;
   obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
@@ -74,13 +74,13 @@ export default function OfficialConnectionIcon(arg0) {
   const obj2 = { style: items2, size: null, source: null, color: null };
   items2 = [tmp.verifiedCheck, obj];
   obj2[1] = require(1297) /* Button */.Icon.Sizes.CUSTOM;
-  obj2[2] = importDefault(10166);
+  obj2[2] = importDefault(10024);
   obj2[3] = roleColor;
   const items3 = [callback(require(1297) /* Button */.Icon, obj2), ];
   const obj3 = { style: items4, size: null, source: null, color: null };
   items4 = [tmp.verifiedCheck, obj];
   obj3[1] = require(1297) /* Button */.Icon.Sizes.CUSTOM;
-  obj3[2] = importDefault(10167);
+  obj3[2] = importDefault(10025);
   obj3[3] = PRIMARY_630;
   items3[1] = callback(require(1297) /* Button */.Icon, obj3);
   obj1[1] = items3;

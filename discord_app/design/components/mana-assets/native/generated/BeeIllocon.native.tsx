@@ -1,6 +1,6 @@
-// === Module 6017: BeeIllocon ===
+// === Module 6881: BeeIllocon ===
 
-// Module 6017 (BeeIllocon)
+// Module 6881 (BeeIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
@@ -16,12 +16,12 @@ export const BeeIllocon = function BeeIllocon(size) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6018);
+  obj[0] = importDefault(6882);
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { uri: null });
+  return jsx(importDefault(5145), { uri: null });
 };

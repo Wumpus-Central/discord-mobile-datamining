@@ -1,6 +1,6 @@
-// === Module 9176: CrunchyrollLinkDiscordConsent ===
+// === Module 8999: CrunchyrollLinkDiscordConsent ===
 
-// Module 9176 (CrunchyrollLinkDiscordConsent)
+// Module 8999 (CrunchyrollLinkDiscordConsent)
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_3 } from "CrunchyrollLinkModalScenes";
 import { PlatformTypes } from "ME";
@@ -29,5 +29,5 @@ export default function CrunchyrollLinkDiscordConsent(arg0) {
     navigation.push(outer1_3.ERROR);
   }, items1);
   obj = { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId: closure_5, scopes: closure_6, onNext: callback, onError: callback1 };
-  return jsx(navigation(9132).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId: closure_5, scopes: closure_6, onNext: callback, onError: callback1 });
+  return jsx(navigation(8955).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId: closure_5, scopes: closure_6, onNext: callback, onError: callback1 });
 };

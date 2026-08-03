@@ -1,6 +1,6 @@
-// === Module 11738: useGuildPowerupLevelPerks ===
+// === Module 11631: useGuildPowerupLevelPerks ===
 
-// Module 11738 (useGuildPowerupLevelPerks)
+// Module 11631 (useGuildPowerupLevelPerks)
 import noop from "noop";
 import { GUILD_FEATURE_TO_PERK } from "BoostedGuildTiers";
 

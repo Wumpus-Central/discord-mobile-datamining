@@ -1,6 +1,6 @@
-// === Module 10949: StageChannelBackground ===
+// === Module 10849: StageChannelBackground ===
 
-// Module 10949 (StageChannelBackground)
+// Module 10849 (StageChannelBackground)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,6 @@
-// === Module 10038: getFollowerStatsForChannel ===
+// === Module 9893: getFollowerStatsForChannel ===
 
-// Module 10038 (getFollowerStatsForChannel)
+// Module 9893 (getFollowerStatsForChannel)
 import { Store } from "initialize";
 
 let closure_0 = { FAILED: "failed", SUCCEEDED: "succeeded" };

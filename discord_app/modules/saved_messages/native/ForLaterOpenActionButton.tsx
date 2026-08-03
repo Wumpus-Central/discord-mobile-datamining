@@ -1,6 +1,6 @@
-// === Module 15363: BadgedIcon ===
+// === Module 15296: BadgedIcon ===
 
-// Module 15363 (BadgedIcon)
+// Module 15296 (BadgedIcon)
 import importAllResult from "IconButton";
 import { View } from "EntitlementFeatureNames";
 import getTimeSafe from "getTimeSafe";
@@ -14,15 +14,15 @@ function BadgedIcon(arg0) {
   let showRedDot;
   let type;
   ({ type, showRedDot } = arg0);
-  let obj = require(3959) /* map */;
-  const token = obj.useToken(importDefault(712).colors.INTERACTIVE_TEXT_DEFAULT, importDefault(4191)());
+  let obj = require(3897) /* map */;
+  const token = obj.useToken(importDefault(712).colors.INTERACTIVE_TEXT_DEFAULT, importDefault(4129)());
   const tmp6 = callback2();
-  let obj1 = require(4671) /* styleProperties */;
+  let obj1 = require(4609) /* styleProperties */;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
-  if (type === require(9712) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
-    let BookmarkIcon = tmp4(4219).ClockIcon;
+  if (type === require(9565) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
+    let BookmarkIcon = tmp4(4157).ClockIcon;
   } else {
-    BookmarkIcon = tmp4(10111).BookmarkIcon;
+    BookmarkIcon = tmp4(9968).BookmarkIcon;
   }
   obj = { style: items, children: null };
   items = [tmp6.container, iconSizeStyles];
@@ -35,13 +35,13 @@ function BadgedIcon(arg0) {
     const obj2 = { size: "sm", color: null };
     obj2[1] = token;
     obj1[1] = tmp8(BookmarkIcon, obj2);
-    const items2 = [tmp8(importDefault(8091), obj1), ];
+    const items2 = [tmp8(importDefault(7974), obj1), ];
     const obj3 = { style: null };
     obj3[0] = tmp6.dot;
     items2[1] = tmp8(tmp9, obj3);
     obj[1] = items2;
     let tmp8Result = callback(tmp9, obj);
-    const tmpResult = importDefault(8091);
+    const tmpResult = importDefault(7974);
   } else {
     const obj4 = { size: "sm", color: null };
     obj4[1] = token;

@@ -1,6 +1,6 @@
-// === Module 10472: NotificationSettingsMessageNotification ===
+// === Module 10333: NotificationSettingsMessageNotification ===
 
-// Module 10472 (NotificationSettingsMessageNotification)
+// Module 10333 (NotificationSettingsMessageNotification)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -82,7 +82,7 @@ export default NotificationSettingsMessageNotification;
 export const NotificationSettingsGuildMessageNotification = function NotificationSettingsGuildMessageNotification(style) {
   const _require = style;
   let obj = { context: "guild", style: style.style, setting: null, onCustomize: null };
-  obj[2] = _require(10471).useGuildPresetSettings(style.guildId).notification;
+  obj[2] = _require(10332).useGuildPresetSettings(style.guildId).notification;
   obj[3] = function onCustomize() {
     let obj = outer1_1(outer1_2[11]);
     obj = { guildId: style.guildId };
@@ -93,7 +93,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
 export const NotificationSettingsChannelMessageNotification = function NotificationSettingsChannelMessageNotification(style) {
   const _require = style;
   let obj = { context: "channel", style: style.style, setting: null, onCustomize: null };
-  obj[2] = _require(10465).useChannelPresetSettings(style.channel).notification;
+  obj[2] = _require(10326).useChannelPresetSettings(style.channel).notification;
   obj[3] = function onCustomize() {
     let obj = outer1_1(outer1_2[11]);
     obj = { channel: style.channel };

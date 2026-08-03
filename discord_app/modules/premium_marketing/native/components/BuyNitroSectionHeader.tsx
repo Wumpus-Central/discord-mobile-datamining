@@ -1,6 +1,6 @@
-// === Module 7651: BuyNitroSectionHeader ===
+// === Module 6676: BuyNitroSectionHeader ===
 
-// Module 7651 (BuyNitroSectionHeader)
+// Module 6676 (BuyNitroSectionHeader)
 import jsxProd from "jsxProd";
 
 let c3;
@@ -31,7 +31,7 @@ export default function BuyNitroSectionHeader(arg0) {
       obj = { variant: "text-sm/semibold", color: "text-link", accessibilityRole: "link", onPress: null, children: null };
       obj[3] = onPress;
       obj[4] = tmp5;
-      items[1] = tmp(require(4251) /* Text */.Text, obj);
+      items[1] = tmp(require(4189) /* Text */.Text, obj);
       items[2] = title.slice(index + 5);
       obj[0] = items;
       tmp7 = callback(closure_3, obj);
@@ -40,5 +40,5 @@ export default function BuyNitroSectionHeader(arg0) {
     tmp5 = Nitro;
   }
   obj[4] = tmp4;
-  return closure_2(require(4251) /* Text */.Text, obj);
+  return closure_2(require(4189) /* Text */.Text, obj);
 };

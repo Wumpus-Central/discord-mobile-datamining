@@ -1,6 +1,6 @@
-// === Module 4137: resolveSavedActiveGuildTheme ===
+// === Module 4075: resolveSavedActiveGuildTheme ===
 
-// Module 4137 (resolveSavedActiveGuildTheme)
+// Module 4075 (resolveSavedActiveGuildTheme)
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -40,7 +40,7 @@ function resolveSavedActiveGuildTheme(enabled) {
       }
       tmp5 = tmp4;
       if (null == tmp4) {
-        const guildThemePreset = require(4103) /* set */.getGuildThemePreset(themeSettings.presetId);
+        const guildThemePreset = require(4041) /* set */.getGuildThemePreset(themeSettings.presetId);
         let tmp9 = null;
         if (null != guildThemePreset) {
           obj = { type: "preset", preset: null };
@@ -48,7 +48,7 @@ function resolveSavedActiveGuildTheme(enabled) {
           tmp9 = obj;
         }
         tmp5 = tmp9;
-        const obj2 = require(4103) /* set */;
+        const obj2 = require(4041) /* set */;
       }
     }
     tmp2 = tmp5;
@@ -184,7 +184,7 @@ export const resolveRenderableGuildThemeSettings = function resolveRenderableGui
     if (null != tmp2) {
       return tmp2;
     } else {
-      const guildThemePreset = require(4103) /* set */.getGuildThemePreset(customUserThemeSettings.presetId);
+      const guildThemePreset = require(4041) /* set */.getGuildThemePreset(customUserThemeSettings.presetId);
       let tmp6 = null;
       if (null != guildThemePreset) {
         obj = { type: "preset", preset: null };
@@ -218,7 +218,7 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
     }
     tmp = tmp3;
     if (null == tmp3) {
-      const guildThemePreset = require(4103) /* set */.getGuildThemePreset(customUserThemeSettings.presetId);
+      const guildThemePreset = require(4041) /* set */.getGuildThemePreset(customUserThemeSettings.presetId);
       let tmp7 = null;
       if (null != guildThemePreset) {
         obj = { type: "preset", preset: null };
@@ -226,7 +226,7 @@ export const isRenderableGuildThemeSettings = function isRenderableGuildThemeSet
         tmp7 = obj;
       }
       tmp = tmp7;
-      const obj2 = require(4103) /* set */;
+      const obj2 = require(4041) /* set */;
     }
   }
   return null != tmp;
@@ -277,7 +277,7 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
         const features = guild.features;
         if (features.has(GuildFeatures.GUILD_THEME)) {
           const guildThemeSourcePreference = handleConnectionClosedOrResumed.resolveGuildThemeSourcePreference(guildId);
-          if (guildThemeSourcePreference === tmp8(4187).GuildThemeSourcePreference.PERSONAL) {
+          if (guildThemeSourcePreference === tmp8(4125).GuildThemeSourcePreference.PERSONAL) {
             return null;
           } else {
             let guildTheme = store2.getGuildThemeSnapshot(guildId);
@@ -290,7 +290,7 @@ export const getActiveGuildThemeForGuildId = function getActiveGuildThemeForGuil
       }
       return null;
     }
-    obj = require(4184) /* apexExperiment */;
+    obj = require(4122) /* apexExperiment */;
     tmp8 = require;
   }
   return null;
@@ -309,7 +309,7 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
         if (features.has(GuildFeatures.GUILD_THEME)) {
           const guildThemeSourcePreference = handleConnectionClosedOrResumed.resolveGuildThemeSourcePreference(guildId);
           tmp11Result = null;
-          if (guildThemeSourcePreference !== tmp3(4187).GuildThemeSourcePreference.PERSONAL) {
+          if (guildThemeSourcePreference !== tmp3(4125).GuildThemeSourcePreference.PERSONAL) {
             let guildTheme = store2.getGuildThemeSnapshot(guildId);
             if (undefined === guildTheme) {
               guildTheme = guild.guildTheme;
@@ -320,7 +320,7 @@ export const getActiveGuildTheme = function getActiveGuildTheme() {
         }
       }
     }
-    obj = require(4184) /* apexExperiment */;
+    obj = require(4122) /* apexExperiment */;
     tmp3 = require;
   }
   return tmp11Result;

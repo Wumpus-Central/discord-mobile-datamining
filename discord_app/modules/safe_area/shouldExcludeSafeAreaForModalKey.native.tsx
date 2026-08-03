@@ -1,6 +1,6 @@
-// === Module 15786: set ===
+// === Module 15721: set ===
 
-// Module 15786 (set)
+// Module 15721 (set)
 import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
 import set from "openChannelCallModal";
 
@@ -12,12 +12,12 @@ const result = set.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAre
 export const shouldExcludeSafeAreaForModalKey = function shouldExcludeSafeAreaForModalKey(key) {
   let tmp = null != key;
   if (tmp) {
-    let hasItem = require(4465) /* openChannelCallModal */.isVoiceChannelModalKey(key);
+    let hasItem = require(4403) /* openChannelCallModal */.isVoiceChannelModalKey(key);
     if (!hasItem) {
       hasItem = set.has(key);
     }
     tmp = hasItem;
-    const obj = require(4465) /* openChannelCallModal */;
+    const obj = require(4403) /* openChannelCallModal */;
   }
   return tmp;
 };

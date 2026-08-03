@@ -1,6 +1,6 @@
-// === Module 10298: ? ===
+// === Module 10159: ? ===
 
-// Module 10298
+// Module 10159
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -84,7 +84,7 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
     obj3[1] = color;
     obj3[3] = tmp2 ? tmp10.refreshText : tmp10.text;
     obj3[4] = intl.format(etqpUG, obj);
-    items2[1] = closure_4(require(4251) /* Text */.Text, obj3);
+    items2[1] = closure_4(require(4189) /* Text */.Text, obj3);
     obj[1] = items2;
     return closure_5(View, obj);
   }

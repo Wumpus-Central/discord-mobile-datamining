@@ -1,6 +1,6 @@
-// === Module 14649: route ===
+// === Module 14582: route ===
 
-// Module 14649 (route)
+// Module 14582 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -13,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
   getComponent() {
-    return require(14650) /* MyTableRow */.default;
+    return require(14583) /* MyTableRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

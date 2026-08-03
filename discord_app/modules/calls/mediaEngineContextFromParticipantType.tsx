@@ -1,6 +1,6 @@
-// === Module 10773: mediaEngineContextFromParticipantType ===
+// === Module 10613: mediaEngineContextFromParticipantType ===
 
-// Module 10773 (mediaEngineContextFromParticipantType)
+// Module 10613 (mediaEngineContextFromParticipantType)
 import { ParticipantTypes } from "ParticipantTypes";
 import { MediaEngineContextTypes } from "DesktopSources";
 

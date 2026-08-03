@@ -1,6 +1,6 @@
-// === Module 14891: useManaTextMigrationHighlightRestartNotice ===
+// === Module 14824: useManaTextMigrationHighlightRestartNotice ===
 
-// Module 14891 (useManaTextMigrationHighlightRestartNotice)
+// Module 14824 (useManaTextMigrationHighlightRestartNotice)
 import noop from "noop";
 import getUserAgnosticState from "getUserAgnosticState";
 

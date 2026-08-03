@@ -1,6 +1,6 @@
-// === Module 16270: handleChannelPreload ===
+// === Module 16206: handleChannelPreload ===
 
-// Module 16270 (handleChannelPreload)
+// Module 16206 (handleChannelPreload)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { isStaticChannelRoute } from "set";
 import "initialize";
@@ -18,8 +18,8 @@ ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(c
   if (!isStaticChannelRoute(channelId)) {
     channel = channel.getChannel(channelId);
     if (tmp3) {
-      require(5800) /* loadForumPostData */.preloadForumThreads(channel);
-      const obj2 = require(5800) /* loadForumPostData */;
+      require(6068) /* loadForumPostData */.preloadForumThreads(channel);
+      const obj2 = require(6068) /* loadForumPostData */;
     }
     tmp3 = null != channel && channel.isForumLikeChannel();
   }

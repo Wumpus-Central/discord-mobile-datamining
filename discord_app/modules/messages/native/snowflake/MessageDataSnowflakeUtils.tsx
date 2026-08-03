@@ -1,6 +1,6 @@
-// === Module 9707: castNativeSyntheticEventData ===
+// === Module 9560: castNativeSyntheticEventData ===
 
-// Module 9707 (castNativeSyntheticEventData)
+// Module 9560 (castNativeSyntheticEventData)
 const result = require("set").fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");
 
 export function castNativeSyntheticEventData(arg0) {

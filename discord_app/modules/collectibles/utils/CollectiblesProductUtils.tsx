@@ -1,6 +1,6 @@
-// === Module 6909: getProductOrbPrice ===
+// === Module 5814: getProductOrbPrice ===
 
-// Module 6909 (getProductOrbPrice)
+// Module 5814 (getProductOrbPrice)
 import _slicedToArray from "_slicedToArray";
 import { isProfileEffectRecord } from "fromServer";
 import ME from "ME";

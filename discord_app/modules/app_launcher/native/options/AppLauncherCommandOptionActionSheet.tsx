@@ -1,6 +1,6 @@
-// === Module 11467: AppLauncherCommandOptionActionSheet ===
+// === Module 11357: AppLauncherCommandOptionActionSheet ===
 
-// Module 11467 (AppLauncherCommandOptionActionSheet)
+// Module 11357 (AppLauncherCommandOptionActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
@@ -41,7 +41,7 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   obj.startExpanded = flag;
   obj = { titleContainerStyle: tmp2.titleContainer, titleWrapperStyle: tmp2.titleWrapper, subtitleStyle: tmp2.subtitleWrapper, leading: null, title: null, subtitle: null, trailing: null };
   obj = { style: { alignSelf: "flex-start" }, children: null };
-  obj[1] = jsx(merged(5618).ActionSheetCloseButton, {
+  obj[1] = jsx(merged(5556).ActionSheetCloseButton, {
     onPress() {
       outer1_1(outer1_2[9]).hideActionSheet();
       const onDismiss = merged.onDismiss;
@@ -53,8 +53,8 @@ export const AppLauncherCommandOptionActionSheet = function AppLauncherCommandOp
   obj[3] = <View style={{ alignSelf: "flex-start" }}>{null}</View>;
   ({ displayName: obj2[4], displayDescription: obj2[5] } = option);
   obj[6] = jsx(merged(1297).Spacer, { size: 24 });
-  obj.header = jsx(merged(5308).BottomSheetTitleHeader, { style: { alignSelf: "flex-start" }, children: null });
+  obj.header = jsx(merged(5246).BottomSheetTitleHeader, { style: { alignSelf: "flex-start" }, children: null });
   const items = [tmp2.contentContainer, contentContainerStyles];
   obj.children = <View style={items}>{children}</View>;
-  return jsx(merged(5309).BottomSheet, { style: { alignSelf: "flex-start" }, children: null }, option.name);
+  return jsx(merged(5247).BottomSheet, { style: { alignSelf: "flex-start" }, children: null }, option.name);
 };

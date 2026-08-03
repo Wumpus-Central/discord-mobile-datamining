@@ -1,6 +1,6 @@
-// === Module 11251: _handleForwardBreadcrumb ===
+// === Module 11138: _handleForwardBreadcrumb ===
 
-// Module 11251 (_handleForwardBreadcrumb)
+// Module 11138 (_handleForwardBreadcrumb)
 import showTooManyUserGuildsAlert from "showTooManyUserGuildsAlert";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

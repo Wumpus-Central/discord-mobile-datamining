@@ -1,6 +1,6 @@
-// === Module 16822: installWebsocketTelemetryHook ===
+// === Module 16756: installWebsocketTelemetryHook ===
 
-// Module 16822 (installWebsocketTelemetryHook)
+// Module 16756 (installWebsocketTelemetryHook)
 const result = require("set").fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
 
 export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {
@@ -41,7 +41,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       obj.url = tmp;
     }
     let flag = false;
-    if (typeof arg1 !== "ge") {
+    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
       if (arg1.length > 0) {
         if ("{" === arg1[0]) {
           try {
@@ -91,7 +91,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
     } catch (err) {
     }
   }
-  if (typeof globalThis === "as") {
+  if (typeof globalThis === "pack") {
     let _globalThis = globalThis;
   } else {
     _globalThis = closure_0;
@@ -125,7 +125,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
             }
           }
           c0 = str;
-          if (typeof obj.addEventListener !== "HAS_APPLICATION") {
+          if (typeof obj.addEventListener !== "disabledUntil") {
             str2 = "message";
             listener = obj.addEventListener("message", (data) => {
               data = undefined;

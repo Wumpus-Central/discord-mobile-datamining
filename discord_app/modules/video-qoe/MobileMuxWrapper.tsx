@@ -1,6 +1,6 @@
-// === Module 14251: logger ===
+// === Module 14184: logger ===
 
-// Module 14251 (logger)
+// Module 14184 (logger)
 const logger = new require("log").Logger("MobileMuxWrapper");
 let result = require("set").fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
 class MobileMuxWrapper {
@@ -14,7 +14,7 @@ const prototype = MobileMuxWrapper.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   try {
-    const mobileCustomMuxIntegration = new require(14252) /* logger */.MobileCustomMuxIntegration(self.config);
+    const mobileCustomMuxIntegration = new require(14185) /* logger */.MobileCustomMuxIntegration(self.config);
     self.muxIntegration = mobileCustomMuxIntegration;
     const muxIntegration = self.muxIntegration;
     muxIntegration.initialize();

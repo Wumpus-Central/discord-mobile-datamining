@@ -1,6 +1,6 @@
-// === Module 7017: hasBasicChannelChanged ===
+// === Module 5938: hasBasicChannelChanged ===
 
-// Module 7017 (hasBasicChannelChanged)
+// Module 5938 (hasBasicChannelChanged)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _handleConnectionOpen from "_handleConnectionOpen";

@@ -1,6 +1,6 @@
-// === Module 10644: getIsEligibleForQuests ===
+// === Module 10506: getIsEligibleForQuests ===
 
-// Module 10644 (getIsEligibleForQuests)
+// Module 10506 (getIsEligibleForQuests)
 const result = require("set").fileFinishedImporting("modules/quests/lib/QuestsEligibility.tsx");
 
 export const getIsEligibleForQuests = function getIsEligibleForQuests() {

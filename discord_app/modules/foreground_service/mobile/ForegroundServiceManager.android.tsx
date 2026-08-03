@@ -1,6 +1,6 @@
-// === Module 7124: initialize ===
+// === Module 6046: initialize ===
 
-// Module 7124 (initialize)
+// Module 6046 (initialize)
 import { NativeModules } from "get ActivityIndicator";
 import "initialize";
 

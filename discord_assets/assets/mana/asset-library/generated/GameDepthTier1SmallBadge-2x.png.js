@@ -1,6 +1,6 @@
-// === Module 6198: vanityUrl ===
+// === Module 7062: vanityUrl ===
 
-// Module 6198 (vanityUrl)
+// Module 7062 (vanityUrl)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDepthTier1SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/85a5bf056733f3b4800b421282f25eb24fe58947b2badd45727a5acaccf3cea3.png";

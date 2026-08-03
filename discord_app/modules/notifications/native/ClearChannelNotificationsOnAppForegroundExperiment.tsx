@@ -1,6 +1,6 @@
-// === Module 16735: shouldClearChannelNotificationsOnAppForeground ===
+// === Module 16669: shouldClearChannelNotificationsOnAppForeground ===
 
-// Module 16735 (shouldClearChannelNotificationsOnAppForeground)
+// Module 16669 (shouldClearChannelNotificationsOnAppForeground)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

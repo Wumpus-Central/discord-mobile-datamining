@@ -1,6 +1,6 @@
-// === Module 14565: route ===
+// === Module 14498: route ===
 
-// Module 14565 (route)
+// Module 14498 (route)
 import computeAlertSettings from "computeAlertSettings";
 import createToggle from "createToggle";
 
@@ -24,7 +24,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.COMMUNITY_ALERTS,
   getComponent() {
-    return require(14566) /* UserSettingsCommunityNotifications */.default;
+    return require(14499) /* UserSettingsCommunityNotifications */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

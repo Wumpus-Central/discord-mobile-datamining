@@ -1,6 +1,6 @@
-// === Module 4346: getHookError ===
+// === Module 4284: getHookError ===
 
-// Module 4346 (getHookError)
+// Module 4284 (getHookError)
 import { MediaEngineHookTypes } from "ME";
 import { Store } from "initialize";
 

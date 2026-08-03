@@ -1,6 +1,6 @@
-// === Module 9454: fetchSurveyDetails ===
+// === Module 9282: fetchSurveyDetails ===
 
-// Module 9454 (fetchSurveyDetails)
+// Module 9282 (fetchSurveyDetails)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "QuestionTypeEnum";
 import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";

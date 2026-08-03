@@ -1,6 +1,6 @@
-// === Module 12093: useShouldShowMutualInfo ===
+// === Module 11997: useShouldShowMutualInfo ===
 
-// Module 12093 (useShouldShowMutualInfo)
+// Module 11997 (useShouldShowMutualInfo)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
@@ -14,6 +14,6 @@ export default function useShouldShowMutualInfo(id) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp2 = importDefault(12094)(id);
-  return id !== id.id && !importDefault(12094)(id);
+  const tmp2 = importDefault(11998)(id);
+  return id !== id.id && !importDefault(11998)(id);
 };

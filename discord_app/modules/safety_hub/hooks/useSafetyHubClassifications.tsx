@@ -1,6 +1,6 @@
-// === Module 11207: useSafetyHubClassifications ===
+// === Module 11091: useSafetyHubClassifications ===
 
-// Module 11207 (useSafetyHubClassifications)
+// Module 11091 (useSafetyHubClassifications)
 import noop from "noop";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
 import { ViolationType } from "SafetyHubView";
@@ -38,7 +38,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(7717).MemberType.OWNER) {
+    if (member_type === tmp(6760).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;

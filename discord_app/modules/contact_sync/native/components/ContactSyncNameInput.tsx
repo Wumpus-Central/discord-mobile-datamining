@@ -1,6 +1,6 @@
-// === Module 11904: ContactSyncNameInput ===
+// === Module 11802: ContactSyncNameInput ===
 
-// Module 11904 (ContactSyncNameInput)
+// Module 11802 (ContactSyncNameInput)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

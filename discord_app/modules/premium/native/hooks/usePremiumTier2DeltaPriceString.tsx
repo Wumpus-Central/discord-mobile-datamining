@@ -1,6 +1,6 @@
-// === Module 12693: getViewerProductId ===
+// === Module 12600: getViewerProductId ===
 
-// Module 12693 (getViewerProductId)
+// Module 12600 (getViewerProductId)
 import noop from "noop";
 import { useNativeCheckoutStore } from "context";
 import updateProduct from "updateProduct";
@@ -12,7 +12,7 @@ function getViewerProductId(subscription) {
     return null;
   } else {
     try {
-      return require(6768) /* getPremiumBundledItemsFromProductId */.getProductIdFromSubscription(subscription, false);
+      return require(6253) /* getPremiumBundledItemsFromProductId */.getProductIdFromSubscription(subscription, false);
     } catch (err) {
       return tmp;
     }
@@ -24,8 +24,7 @@ let result = require("updateProduct").fileFinishedImporting("modules/premium/nat
 export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPriceString(plan, subscription, first, flag3) {
   const tmp = productId((orderRequired) => ({ orderRequired: orderRequired.orderRequired, checkoutContext: orderRequired.getCheckoutContextRecord() }));
   const checkoutContext = tmp.checkoutContext;
-  const tmp3 = getViewerProductId(subscription);
-  let kind = tmp3;
+  let kind = getViewerProductId(subscription);
   let obj = kind(platform[9]);
   const items = [updateProduct];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -43,21 +42,21 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
       flag = false;
       if (plan.numPremiumGuild >= 1) {
         const tmp2Result = getViewerProductId(subscription);
-        let tmp11 = null;
+        let tmp10 = null;
         if (null != tmp2Result) {
-          tmp11 = tmp4(tmp5[5]).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
+          tmp10 = tmp3(tmp4[5]).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
         }
-        flag = null != tmp11 && tmp11.basePlanId === plan.basePlanId && tmp11.numPremiumGuild < plan.numPremiumGuild;
-        const tmp12 = null != tmp11 && tmp11.basePlanId === plan.basePlanId && tmp11.numPremiumGuild < plan.numPremiumGuild;
+        flag = null != tmp10 && tmp10.basePlanId === plan.basePlanId && 0 === tmp10.numPremiumGuild;
+        const tmp11 = null != tmp10 && tmp10.basePlanId === plan.basePlanId && 0 === tmp10.numPremiumGuild;
       }
     }
   }
   if (flag) {
-    if (!tmp7) {
+    if (!tmp6) {
       if (null != first) {
         if (null != stateFromStores) {
-          let tmp4Result = tmp4(tmp5[6]);
-          const platformName = tmp4Result.getPlatformName();
+          let tmp3Result = tmp3(tmp4[6]);
+          const platformName = tmp3Result.getPlatformName();
           if (first.currencyCode !== stateFromStores.currencyCode) {
             obj = { priceString: null, failure: null };
             obj = { kind: "currency_mismatch", platform: null, productId: null, currencyCode: null };
@@ -70,15 +69,15 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
             const diff = first.price - stateFromStores.price;
             if (diff > 0) {
               if (diff < first.price) {
-                tmp4Result = tmp4(tmp5[6]);
+                tmp3Result = tmp3(tmp4[6]);
                 let result = diff;
-                if (tmp4Result.isAndroid()) {
+                if (tmp3Result.isAndroid()) {
                   result = diff / 100;
                 }
                 obj1 = { priceString: null, failure: null };
-                obj1[0] = tmp4(tmp5[7]).formatPrice(result, first.currencyCode, { convertToMajorUnits: false });
+                obj1[0] = tmp3(tmp4[7]).formatPrice(result, first.currencyCode, { convertToMajorUnits: false });
                 obj2 = obj1;
-                const tmp4Result1 = tmp4(tmp5[7]);
+                const tmp3Result1 = tmp3(tmp4[7]);
               }
             }
             obj2 = { priceString: null, failure: null };
@@ -93,55 +92,26 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
       obj2 = closure_6;
     }
     if (null == checkoutContext) {
-      let tmp20 = closure_6;
+      let tmp17 = closure_6;
     } else {
-      const availablePlanForItems = checkoutContext.getAvailablePlanForItems(tmp4(tmp5[4]).getSubscriptionItemsForProduct(plan.productId));
-      if (null == availablePlanForItems) {
-        tmp20 = closure_6;
-      } else {
+      const availablePlanForItems = checkoutContext.getAvailablePlanForItems(tmp3(tmp4[4]).getSubscriptionItemsForProduct(plan.productId));
+      if (null != availablePlanForItems) {
         const addOnPrice = availablePlanForItems.getAddOnPrice();
         if (null != addOnPrice) {
           if (addOnPrice.majorUnits > 0) {
-            let tmp17 = null;
-            if (null != tmp3) {
-              tmp17 = tmp4(tmp5[5]).AppStorePremiumProductIdsToPremiumBundledItems[tmp3];
-            }
-            if (null != tmp3) {
-              if (null != tmp17) {
-                if (0 !== tmp17.numPremiumGuild) {
-                  const availablePlanForItems1 = checkoutContext.getAvailablePlanForItems(tmp4(tmp5[4]).getSubscriptionItemsForProduct(tmp3));
-                  let addOnPrice1;
-                  if (availablePlanForItems1 != null) {
-                    addOnPrice1 = availablePlanForItems1.getAddOnPrice();
-                  }
-                  if (null != addOnPrice1) {
-                    const diff1 = addOnPrice.majorUnits - addOnPrice1.majorUnits;
-                    if (diff1 > 0) {
-                      const obj4 = { priceString: null, failure: null };
-                      obj4[0] = tmp4(tmp5[7]).formatPrice(diff1, addOnPrice.currency, { convertToMajorUnits: false });
-                      tmp20 = obj4;
-                      const tmp4Result4 = tmp4(tmp5[7]);
-                    } else {
-                      tmp20 = closure_6;
-                    }
-                  }
-                  const tmp4Result3 = tmp4(tmp5[4]);
-                }
-                tmp20 = closure_6;
-              }
-            }
-            const obj5 = { priceString: null, failure: null };
-            obj5[0] = tmp4(tmp5[7]).formatPrice(addOnPrice.majorUnits, addOnPrice.currency, { convertToMajorUnits: false });
-            tmp20 = obj5;
-            const tmp4Result5 = tmp4(tmp5[7]);
+            const obj4 = { priceString: null, failure: null };
+            obj4[0] = tmp3(tmp4[7]).formatPrice(addOnPrice.majorUnits, addOnPrice.currency, { convertToMajorUnits: false });
+            tmp17 = obj4;
+            const tmp3Result3 = tmp3(tmp4[7]);
           }
         }
-        tmp20 = closure_6;
+        tmp17 = closure_6;
       }
-      const tmp4Result2 = tmp4(tmp5[4]);
+      const tmp3Result2 = tmp3(tmp4[4]);
     }
+    tmp17 = closure_6;
   } else {
-    const failure = tmp13.failure;
+    const failure = tmp12.failure;
     kind = undefined;
     platform = undefined;
     let currencyCode;

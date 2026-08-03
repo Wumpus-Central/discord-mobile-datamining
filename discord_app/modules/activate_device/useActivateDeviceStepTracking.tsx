@@ -1,6 +1,6 @@
-// === Module 13097: useActivateDeviceStepTracking ===
+// === Module 13034: useActivateDeviceStepTracking ===
 
-// Module 13097 (useActivateDeviceStepTracking)
+// Module 13034 (useActivateDeviceStepTracking)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 
@@ -9,7 +9,7 @@ let result = require("usePrevious").fileFinishedImporting("modules/activate_devi
 
 export const useActivateDeviceStepTracking = function useActivateDeviceStepTracking(first) {
   let closure_0 = first;
-  const tmp = importDefault(8460)(first);
+  const tmp = importDefault(8129)(first);
   importDefault = tmp;
   const items = [tmp, first];
   const effect = React.useEffect(() => {

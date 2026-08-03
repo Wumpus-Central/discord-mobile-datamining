@@ -1,6 +1,6 @@
-// === Module 14539: toggle ===
+// === Module 14472: toggle ===
 
-// Module 14539 (toggle)
+// Module 14472 (toggle)
 import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore";
 import createToggle from "createToggle";
 
@@ -27,8 +27,8 @@ const toggle = createToggle.createToggle({
     const isIOSResult = require(500) /* set */.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !tmp2(14528).hasAndroidNotificationChannels();
-      const tmp2Result = tmp2(14528);
+      tmp5 = !tmp2(14461).hasAndroidNotificationChannels();
+      const tmp2Result = tmp2(14461);
     }
     if (tmp5) {
       tmp5 = null != tmp;
@@ -56,8 +56,8 @@ const obj = {
     const isIOSResult = require(500) /* set */.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !tmp2(14528).hasAndroidNotificationChannels();
-      const tmp2Result = tmp2(14528);
+      tmp5 = !tmp2(14461).hasAndroidNotificationChannels();
+      const tmp2Result = tmp2(14461);
     }
     if (tmp5) {
       tmp5 = null != tmp;

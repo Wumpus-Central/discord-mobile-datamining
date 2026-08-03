@@ -1,6 +1,6 @@
-// === Module 5722: processChannel ===
+// === Module 5660: processChannel ===
 
-// Module 5722 (processChannel)
+// Module 5660 (processChannel)
 import prototype from "ensureGuildLoaded";
 import "clearAll";
 import set from "set";

@@ -1,6 +1,6 @@
-// === Module 8033: hasFetchedColors ===
+// === Module 7915: hasFetchedColors ===
 
-// Module 8033 (hasFetchedColors)
+// Module 7915 (hasFetchedColors)
 import _slicedToArray from "_slicedToArray";
 import batchUpdates from "batchUpdates";
 import noop from "noop";
@@ -164,7 +164,7 @@ function _fetchColors() {
               throw arg1;
             } else if (arg0 !== 2) {
               table = arg1;
-              obj = callback(4099);
+              obj = callback(4037);
               dependencyMap = obj.getComplimentaryPaletteForColor(table[0]);
               obj1 = callback(705);
               obj1.batchUpdates(() => {

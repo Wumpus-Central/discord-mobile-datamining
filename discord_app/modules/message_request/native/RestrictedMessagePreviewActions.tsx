@@ -1,6 +1,6 @@
-// === Module 15811: RestrictedMessagePreviewActions ===
+// === Module 15746: RestrictedMessagePreviewActions ===
 
-// Module 15811 (RestrictedMessagePreviewActions)
+// Module 15746 (RestrictedMessagePreviewActions)
 import Button from "Button";
 import { View } from "_submitHamReportForFirstDM";
 import upsertRelationship from "upsertRelationship";

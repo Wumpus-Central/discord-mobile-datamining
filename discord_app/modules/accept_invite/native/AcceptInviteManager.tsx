@@ -1,6 +1,6 @@
-// === Module 16206: prototype ===
+// === Module 16142: prototype ===
 
-// Module 16206 (prototype)
+// Module 16142 (prototype)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -86,7 +86,7 @@ let prototype = function AcceptInviteManager() {
               applyArgumentsResult(outer2_2[16]).acceptFriendInvite(invite, obj);
               const obj15 = applyArgumentsResult(outer2_2[16]);
               const tmp59 = outer2_2;
-              outer2_1(outer2_2[17]).wait(() => set(8836).clearDisplayedInvite());
+              outer2_1(outer2_2[17]).wait(() => set(8659).clearDisplayedInvite());
               const obj17 = outer2_1(outer2_2[17]);
             }
             return false;
@@ -140,7 +140,7 @@ let prototype = function AcceptInviteManager() {
           tmp65 = outer2_2;
         }
         if (flag) {
-          outer2_1(outer2_2[17]).wait(() => set(8836).clearDisplayedInvite());
+          outer2_1(outer2_2[17]).wait(() => set(8659).clearDisplayedInvite());
           const obj14 = outer2_1(outer2_2[17]);
         } else {
           if (flag) {
@@ -176,7 +176,7 @@ let prototype = function AcceptInviteManager() {
                 const obj6 = applyArgumentsResult(outer2_2[9]);
               }
               if (enabled) {
-                outer2_1(outer2_2[17]).wait(() => set(8836).clearDisplayedInvite());
+                outer2_1(outer2_2[17]).wait(() => set(8659).clearDisplayedInvite());
                 const target_channel_id2 = invite.target_channel_id;
                 const obj11 = applyArgumentsResult(outer2_2[19]);
                 id = invite.guild.id;

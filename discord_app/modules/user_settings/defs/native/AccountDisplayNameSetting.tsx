@@ -1,6 +1,6 @@
-// === Module 13882: route ===
+// === Module 13815: route ===
 
-// Module 13882 (route)
+// Module 13815 (route)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createToggle from "createToggle";
 
@@ -27,7 +27,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return require(13769) /* ProfileCustomizationSubsection */.default;
+    return require(13706) /* ProfileCustomizationSubsection */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

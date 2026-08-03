@@ -1,6 +1,6 @@
-// === Module 7210: logMessageSendFailure ===
+// === Module 6158: logMessageSendFailure ===
 
-// Module 7210 (logMessageSendFailure)
+// Module 6158 (logMessageSendFailure)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");
@@ -20,7 +20,7 @@ export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
   }
   const errorMessage = fileItems.errorMessage;
   const failureCode = fileItems.failureCode;
-  require(4450) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.SEND_MESSAGE_FAILURE, { failure_code: failureCode, error_message: errorMessage, attachment_mimetypes: mapped });
+  require(4388) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.SEND_MESSAGE_FAILURE, { failure_code: failureCode, error_message: errorMessage, attachment_mimetypes: mapped });
 };
 export const getAttachmentMimeTypes = function getAttachmentMimeTypes(items) {
   return items.map((mimeType) => {

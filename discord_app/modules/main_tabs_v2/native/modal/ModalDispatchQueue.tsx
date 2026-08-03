@@ -1,6 +1,6 @@
-// === Module 4464: enqueue ===
+// === Module 4402: enqueue ===
 
-// Module 4464 (enqueue)
+// Module 4402 (enqueue)
 class ModalDispatchQueue {
   constructor() {
     obj = Object.create(new.target.prototype);

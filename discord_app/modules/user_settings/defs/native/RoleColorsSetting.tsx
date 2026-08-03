@@ -1,6 +1,6 @@
-// === Module 14433: useRoleColorSettingValue ===
+// === Module 14366: useRoleColorSettingValue ===
 
-// Module 14433 (useRoleColorSettingValue)
+// Module 14366 (useRoleColorSettingValue)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
@@ -11,7 +11,7 @@ function useRoleColorSettingValue() {
   return require(589) /* initialize */.useStateFromStores(items, () => roleStyle.roleStyle);
 }
 function onRoleColorSettingValueChange(roleStyle) {
-  require(13584) /* setFontSize */.setRoleStyle(roleStyle);
+  require(13521) /* setFontSize */.setRoleStyle(roleStyle);
 }
 function useRoleColorSettingOptions() {
   return React.useMemo(() => {

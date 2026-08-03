@@ -1,6 +1,6 @@
-// === Module 8089: PremiumFeaturesBackground ===
+// === Module 7972: PremiumFeaturesBackground ===
 
-// Module 8089 (PremiumFeaturesBackground)
+// Module 7972 (PremiumFeaturesBackground)
 import "noop";
 import { Gradients } from "items";
 import { PremiumTypes } from "GuildFeatures";
@@ -42,5 +42,5 @@ export default function PremiumFeaturesBackground(opacity) {
   obj[3] = num(691).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(importDefault(4677), { style: items, colors: mapped, start: null, end: null });
+  return jsx(importDefault(4615), { style: items, colors: mapped, start: null, end: null });
 };

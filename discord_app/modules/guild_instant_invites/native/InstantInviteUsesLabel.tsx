@@ -1,6 +1,6 @@
-// === Module 10360: InstantInviteUsesLabel ===
+// === Module 10221: InstantInviteUsesLabel ===
 
-// Module 10360 (InstantInviteUsesLabel)
+// Module 10221 (InstantInviteUsesLabel)
 import "noop";
 import { jsxs } from "jsxProd";
 
@@ -17,5 +17,5 @@ export default function InstantInviteUsesLabel(style) {
     combined = "" + uses + "/" + maxUses;
   }
   const children = ["Uses: ", combined];
-  return jsxs(require(4251) /* Text */.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children });
+  return jsxs(require(4189) /* Text */.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children });
 };

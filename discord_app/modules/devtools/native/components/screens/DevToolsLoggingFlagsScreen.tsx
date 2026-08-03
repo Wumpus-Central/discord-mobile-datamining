@@ -1,6 +1,6 @@
-// === Module 13728: DevToolsLoggingFlagsScreen ===
+// === Module 13665: DevToolsLoggingFlagsScreen ===
 
-// Module 13728 (DevToolsLoggingFlagsScreen)
+// Module 13665 (DevToolsLoggingFlagsScreen)
 import { ScrollView } from "get ActivityIndicator";
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import jsxProd from "jsxProd";
@@ -29,7 +29,7 @@ export default function DevToolsLoggingFlagsScreen() {
   ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isTracingRequests } = stateFromStoresObject);
   obj = { title: "Logging", hasIcons: false, children: null };
   const items1 = [
-    callback(require(5621) /* TableSwitchRow */.TableSwitchRow, {
+    callback(require(5559) /* TableSwitchRow */.TableSwitchRow, {
       label: "Gateway Events",
       subLabel: "Logs all gateway events to console, including content. Enable verbose logs to see them.",
       value: isLoggingGatewayEvents,
@@ -39,7 +39,7 @@ export default function DevToolsLoggingFlagsScreen() {
         return obj.setDeveloperOptionSettings(obj);
       }
     }),
-    callback(require(5621) /* TableSwitchRow */.TableSwitchRow, {
+    callback(require(5559) /* TableSwitchRow */.TableSwitchRow, {
       label: "Analytics Events",
       subLabel: "Logs all analytics events to the developer console.",
       value: isLoggingAnalyticsEvents,
@@ -49,7 +49,7 @@ export default function DevToolsLoggingFlagsScreen() {
         return obj.setDeveloperOptionSettings(obj);
       }
     }),
-    callback(require(5621) /* TableSwitchRow */.TableSwitchRow, {
+    callback(require(5559) /* TableSwitchRow */.TableSwitchRow, {
       label: "Tracing Requests",
       subLabel: "Force trace all client requests with APM.",
       value: isTracingRequests,
@@ -61,6 +61,6 @@ export default function DevToolsLoggingFlagsScreen() {
     })
   ];
   obj[2] = items1;
-  obj[2] = callback2(require(5620) /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback2(require(5558) /* TableRowGroupTitle */.TableRowGroup, obj);
   return callback(ScrollView, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 7862: getGuild ===
+// === Module 7743: getGuild ===
 
-// Module 7862 (getGuild)
+// Module 7743 (getGuild)
 import { Store } from "initialize";
 
 let c0 = 0;

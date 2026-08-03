@@ -1,6 +1,6 @@
-// === Module 13943: defineParentalControlledSetting ===
+// === Module 13876: defineParentalControlledSetting ===
 
-// Module 13943 (defineParentalControlledSetting)
+// Module 13876 (defineParentalControlledSetting)
 import getSettings from "getSettings";
 
 const require = arg1;
@@ -35,7 +35,7 @@ export const defineParentalControlledSetting = function defineParentalControlled
     getControlledSetting,
     updateControlledSetting: (arg0, arg1) => {
       let tmp = arg1;
-      if (typeof arg1 !== "HAS_APPLICATION") {
+      if (typeof arg1 !== "disabledUntil") {
         const settings = explicitContentToProto.getSettings(arg0);
         let tmp4;
         if (settings != null) {

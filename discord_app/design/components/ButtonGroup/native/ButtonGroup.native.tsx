@@ -1,6 +1,6 @@
-// === Module 5088: ButtonGroup ===
+// === Module 5026: ButtonGroup ===
 
-// Module 5088 (ButtonGroup)
+// Module 5026 (ButtonGroup)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -28,5 +28,5 @@ export const ButtonGroup = function ButtonGroup(size) {
   const items = [callback().container, style];
   obj.style = items;
   obj.children = children;
-  return jsx(require(4664) /* Stack */.Stack, {});
+  return jsx(require(4602) /* Stack */.Stack, {});
 };

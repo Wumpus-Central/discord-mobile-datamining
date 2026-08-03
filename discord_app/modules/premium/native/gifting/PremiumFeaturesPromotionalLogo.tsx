@@ -1,6 +1,6 @@
-// === Module 9871: PremiumFeaturesPromotionalLogo ===
+// === Module 9726: PremiumFeaturesPromotionalLogo ===
 
-// Module 9871 (PremiumFeaturesPromotionalLogo)
+// Module 9726 (PremiumFeaturesPromotionalLogo)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

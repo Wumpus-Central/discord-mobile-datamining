@@ -1,6 +1,6 @@
-// === Module 7036: promise ===
+// === Module 5957: promise ===
 
-// Module 7036 (promise)
+// Module 5957 (promise)
 const obj = {
   resolve() {
 

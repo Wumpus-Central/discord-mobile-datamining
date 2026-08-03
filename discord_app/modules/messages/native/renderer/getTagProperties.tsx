@@ -1,6 +1,6 @@
-// === Module 7938: getTagProperties ===
+// === Module 7820: getTagProperties ===
 
-// Module 7938 (getTagProperties)
+// Module 7820 (getTagProperties)
 import { Image } from "get ActivityIndicator";
 import { MessageTagTypes } from "MESSAGE_GROUP_SPACING";
 
@@ -18,10 +18,10 @@ export default function getTagProperties(arg0) {
   ({ channel, colors } = arg0);
   const author = message.author;
   const isVerifiedBotResult = author.isVerifiedBot();
-  let obj = require(7939) /* isPublicSystemMessage */;
+  let obj = require(7821) /* isPublicSystemMessage */;
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
-      if (importDefault(7941)(message)) {
+      if (importDefault(7823)(message)) {
         const intl2 = tmp2(1236).intl;
         let stringResult = intl2.string(tmp2(1236).t.PuJGuM);
         let SYSTEM_DM_TAG_SYSTEM_TYPE = MessageTagTypes.BOT_TAG_SERVER_TYPE;
@@ -33,7 +33,7 @@ export default function getTagProperties(arg0) {
           const intl = tmp2(1236).intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(tmp4(7943)).uri;
+            uri = Image.resolveAssetSource(tmp4(7825)).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(tmp2(1236).t["9RNkeF"]);
@@ -61,7 +61,7 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1236).intl;
         stringResult2 = intl6.string(tmp2(1236).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "add", tagType: "<string:1627390332>", tagIconUrl: "a", opTagText: "USER_MODAL_IGNORE", opTagTextColor: "Array", opTagBackgroundColor: "isRedirect" };
+      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "accessibilityRole", tagType: "Array", tagIconUrl: "isArray", opTagText: "r", opTagTextColor: "description", opTagBackgroundColor: "getChannel" };
       obj[0] = stringResult;
       obj[1] = null;
       obj[2] = flag;
@@ -83,12 +83,12 @@ export default function getTagProperties(arg0) {
           } else {
             stringResult3 = string(t.qwJHjo);
           }
-          tmp14 = importDefault(7941)(message);
+          tmp14 = importDefault(7823)(message);
         }
       }
       const intl5 = tmp2(1236).intl;
       stringResult3 = intl5.string(tmp2(1236).t["7s687k"]);
-      tmp2Result = tmp2(7939);
+      tmp2Result = tmp2(7821);
     }
   }
   const intl3 = tmp2(1236).intl;

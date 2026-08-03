@@ -1,6 +1,6 @@
-// === Module 8902: hasAtLeastOneGPlaySynced ===
+// === Module 8725: hasAtLeastOneGPlaySynced ===
 
-// Module 8902 (hasAtLeastOneGPlaySynced)
+// Module 8725 (hasAtLeastOneGPlaySynced)
 import { PriceSetAssignmentPurchaseTypes as closure_3 } from "ME";
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -114,7 +114,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
       DEFAULT = tmp.DEFAULT;
       tmp2 = tmp;
     }
-    let obj = require(3914) /* isPremiumGiftingSupported */;
+    let obj = require(3852) /* isPremiumGiftingSupported */;
     if (obj.isGooglePlayBillingSupported()) {
       if (DEFAULT === tmp2.MOBILE) {
         googleSkuIds = googleSkuIds.googleSkuIds;
@@ -122,7 +122,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
         if (googleSkuIds != null) {
           tmp12 = googleSkuIds[DEFAULT];
         }
-        const product = importDefault(5738).getProduct(tmp12);
+        const product = importDefault(5676).getProduct(tmp12);
         let tmp14;
         if (null != product) {
           obj = { amount: null, currency: null, priceString: null, tax: 0, taxInclusive: false };
@@ -130,12 +130,12 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
           tmp14 = obj;
         }
         let result = tmp14;
-        const obj3 = importDefault(5738);
+        const obj3 = importDefault(5676);
       } else {
         result = null;
       }
     } else {
-      let tmp7Result = tmp7(6910);
+      let tmp7Result = tmp7(5815);
       result = tmp7Result.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
     }
     if (null == result) {
@@ -143,13 +143,13 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     } else if (null != result.priceString) {
       let priceString = result.priceString;
     } else {
-      tmp7Result = tmp7(5735);
+      tmp7Result = tmp7(5673);
       priceString = tmp7Result.formatPrice(result.amount, result.currency);
     }
   }
 };
 export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds) {
-  let obj = require(3914) /* isPremiumGiftingSupported */;
+  let obj = require(3852) /* isPremiumGiftingSupported */;
   if (obj.isGooglePlayBillingSupported()) {
     if (arg1 !== closure_3.MOBILE) {
       if (arg1 !== closure_3.MOBILE_PREMIUM_TIER_2) {
@@ -161,7 +161,7 @@ export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
     if (googleSkuIds != null) {
       tmp5 = googleSkuIds[arg1];
     }
-    const product = importDefault(5738).getProduct(tmp5);
+    const product = importDefault(5676).getProduct(tmp5);
     let tmp7;
     if (null != product) {
       obj = { amount: null, currency: null, priceString: null, tax: 0, taxInclusive: false };
@@ -170,7 +170,7 @@ export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
     }
     return tmp7;
   } else {
-    return tmp(6910).extractPriceByPurchaseTypes(googleSkuIds, arg1);
+    return tmp(5815).extractPriceByPurchaseTypes(googleSkuIds, arg1);
   }
   tmp = require;
 };
@@ -178,7 +178,7 @@ export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(clos
   if (null == stateFromStores) {
     return null;
   } else {
-    const obj = importDefault(3901);
+    const obj = importDefault(3839);
     const googleSkuIds = closure_0.googleSkuIds;
     let tmp5;
     if (googleSkuIds != null) {
@@ -288,18 +288,18 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
     if (googleSkuIds != null) {
       tmp4 = googleSkuIds[closure_3.MOBILE];
     }
-    const product = importDefault(5738).getProduct(tmp4);
-    const obj2 = importDefault(5738);
+    const product = importDefault(5676).getProduct(tmp4);
+    const obj2 = importDefault(5676);
     const tmp2 = importDefault;
     const googleSkuIds2 = variants.googleSkuIds;
     let tmp7;
     if (googleSkuIds2 != null) {
       tmp7 = googleSkuIds2[closure_3.MOBILE_PREMIUM_TIER_2];
     }
-    const tmp2Result = importDefault(5738);
-    return null != product && null != importDefault(5738).getProduct(tmp7);
+    const tmp2Result = importDefault(5676);
+    return null != product && null != importDefault(5676).getProduct(tmp7);
   }
-  obj = require(6909) /* getProductOrbPrice */;
+  obj = require(5814) /* getProductOrbPrice */;
 };
 export const filterGPlaySyncedCategories = function filterGPlaySyncedCategories(items) {
   if (null == items) {
@@ -336,5 +336,5 @@ export const filterHiddenCategories = function filterHiddenCategories(result) {
   });
 };
 export const createOrbProfileBadge = function createOrbProfileBadge() {
-  return { id: require(8903) /* BalanceWidgetMode */.OrbBadges.ORB_PROFILE_BADGE, icon: require(8903) /* BalanceWidgetMode */.OrbBadges.ORB_PROFILE_BADGE, iconSrc: importDefault(8904), description: "", isPreviewMode: true };
+  return { id: require(8726) /* BalanceWidgetMode */.OrbBadges.ORB_PROFILE_BADGE, icon: require(8726) /* BalanceWidgetMode */.OrbBadges.ORB_PROFILE_BADGE, iconSrc: importDefault(8727), description: "", isPreviewMode: true };
 };

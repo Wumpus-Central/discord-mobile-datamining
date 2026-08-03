@@ -1,6 +1,6 @@
-// === Module 10435: getOrParseMessagePreviewMarkupAST ===
+// === Module 10296: getOrParseMessagePreviewMarkupAST ===
 
-// Module 10435 (getOrParseMessagePreviewMarkupAST)
+// Module 10296 (getOrParseMessagePreviewMarkupAST)
 const require = arg1;
 function getOrParseMessagePreviewMarkupAST(arg0) {
   let color;
@@ -15,10 +15,10 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
   if (null != value) {
     return value;
   } else {
-    const items = [importDefault(4688).RULES, importDefault(10436)(layout, color, fontScale, maxFontSizeMultiplier)];
-    const tmp11 = importDefault(4687);
-    const tmp11Result = importDefault(4687)(items);
-    const obj3 = importDefault(4245);
+    const items = [importDefault(4626).RULES, importDefault(10297)(layout, color, fontScale, maxFontSizeMultiplier)];
+    const tmp11 = importDefault(4625);
+    const tmp11Result = importDefault(4625)(items);
+    const obj3 = importDefault(4183);
     let startsWithResult = content.startsWith("```");
     let tmp3;
     if (!startsWithResult) {
@@ -29,7 +29,7 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
     if (startsWithResult) {
       tmp3 = content;
     }
-    const astParserForResultResult = importDefault(4245).astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
+    const astParserForResultResult = importDefault(4183).astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
     const result = obj.set(content, astParserForResultResult);
     return astParserForResultResult;
   }
@@ -46,21 +46,21 @@ export const renderASTToReact = function renderASTToReact(layout) {
   let maxFontSizeMultiplier;
   let tree;
   ({ tree, initialParserState, color, fontScale, maxFontSizeMultiplier } = layout);
-  const items = [importDefault(4688).RULES, importDefault(10436)(layout.layout, color, fontScale, maxFontSizeMultiplier)];
-  const tmp = importDefault(4687);
-  const tmpResult = importDefault(4687)(items);
-  const obj = importDefault(3954);
-  return obj.reactFor(importDefault(3954).ruleOutput(tmpResult, "react"))(tree, initialParserState);
+  const items = [importDefault(4626).RULES, importDefault(10297)(layout.layout, color, fontScale, maxFontSizeMultiplier)];
+  const tmp = importDefault(4625);
+  const tmpResult = importDefault(4625)(items);
+  const obj = importDefault(3892);
+  return obj.reactFor(importDefault(3892).ruleOutput(tmpResult, "react"))(tree, initialParserState);
 };
 export const getMessagePreviewASTParser = function getMessagePreviewASTParser(layout) {
   let color;
   let fontScale;
   let maxFontSizeMultiplier;
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
-  const items = [importDefault(4688).RULES, importDefault(10436)(layout.layout, color, fontScale, maxFontSizeMultiplier)];
-  const tmp = importDefault(4687);
-  const tmpResult = importDefault(4687)(items);
-  return importDefault(4245).astParserFor(tmpResult);
+  const items = [importDefault(4626).RULES, importDefault(10297)(layout.layout, color, fontScale, maxFontSizeMultiplier)];
+  const tmp = importDefault(4625);
+  const tmpResult = importDefault(4625)(items);
+  return importDefault(4183).astParserFor(tmpResult);
 };
 export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fontScale) {
   let channelId;
@@ -74,7 +74,7 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
   ({ content, muted, layout } = fontScale);
   ({ guildId, channelId } = fontScale);
   if (layout === undefined) {
-    layout = require(3933) /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
+    layout = require(3871) /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
   }
   ({ color, disableAnimatedEmoji, postProcessor } = fontScale);
   if (disableAnimatedEmoji === undefined) {
@@ -110,11 +110,11 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
     obj[5] = maxFontSizeMultiplier;
     obj[6] = postProcessor;
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
-    const items = [importDefault(4688).RULES, importDefault(10436)(layout, color, num, maxFontSizeMultiplier)];
-    const tmp7 = importDefault(4687);
-    const tmp7Result = importDefault(4687)(items);
-    const obj2 = importDefault(3954);
-    return obj2.reactFor(importDefault(3954).ruleOutput(tmp7Result, "react"))(tmp4, obj);
+    const items = [importDefault(4626).RULES, importDefault(10297)(layout, color, num, maxFontSizeMultiplier)];
+    const tmp7 = importDefault(4625);
+    const tmp7Result = importDefault(4625)(items);
+    const obj2 = importDefault(3892);
+    return obj2.reactFor(importDefault(3892).ruleOutput(tmp7Result, "react"))(tmp4, obj);
   }
 };
 export const messagePreviewASTCache = tmp2;

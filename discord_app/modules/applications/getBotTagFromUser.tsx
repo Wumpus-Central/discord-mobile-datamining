@@ -1,6 +1,6 @@
-// === Module 9271: getBotTagTypeFromUser ===
+// === Module 9098: getBotTagTypeFromUser ===
 
-// Module 9271 (getBotTagTypeFromUser)
+// Module 9098 (getBotTagTypeFromUser)
 import { BotTagTypes } from "ApplicationTypes";
 
 const result = require("set").fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");

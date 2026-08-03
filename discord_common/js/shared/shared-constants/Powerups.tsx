@@ -1,6 +1,6 @@
-// === Module 4146: VANITY_URL_POWERUP_SKU_ID ===
+// === Module 4084: VANITY_URL_POWERUP_SKU_ID ===
 
-// Module 4146 (VANITY_URL_POWERUP_SKU_ID)
+// Module 4084 (VANITY_URL_POWERUP_SKU_ID)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/Powerups.tsx");
 
 export const VANITY_URL_POWERUP_SKU_ID = "1387197800336330924";

@@ -1,6 +1,6 @@
-// === Module 7046: initialize ===
+// === Module 5967: initialize ===
 
-// Module 7046 (initialize)
+// Module 5967 (initialize)
 import ConfettiLocation from "ConfettiLocation";
 import apply from "apply";
 import { DeviceSettingsStore } from "initialize";

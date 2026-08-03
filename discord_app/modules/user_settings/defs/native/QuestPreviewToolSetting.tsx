@@ -1,6 +1,6 @@
-// === Module 14278: route ===
+// === Module 14211: route ===
 
-// Module 14278 (route)
+// Module 14211 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -9,7 +9,7 @@ obj = {
     return intl.string(require(1236) /* getSystemLocale */.t.BDUDau);
   },
   usePredicate() {
-    return require(10643) /* useQuests */.useIsPreviewerOnAnyQuest();
+    return require(10505) /* useQuests */.useIsPreviewerOnAnyQuest();
   },
   parent: null,
   IconComponent: require("QuestsIcon").QuestsIcon,
@@ -18,7 +18,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUEST_PREVIEW_TOOL_2,
   getComponent() {
-    return require(14279) /* SettingsQuestPreviewScreen */.default;
+    return require(14212) /* SettingsQuestPreviewScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

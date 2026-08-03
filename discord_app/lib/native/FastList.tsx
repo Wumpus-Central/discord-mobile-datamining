@@ -1,12 +1,12 @@
-// === Module 7806: renderDefaultEmpty ===
+// === Module 7683: renderDefaultEmpty ===
 
-// Module 7806 (renderDefaultEmpty)
+// Module 7683 (renderDefaultEmpty)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
-import importDefaultResult from "module_4116";
+import importDefaultResult from "module_4054";
 
 let StyleSheet;
 let c10;
@@ -1432,7 +1432,7 @@ let closure_21 = importAllResult.memo(function _FastListSectionRenderer(disableW
   fastListInstance = children(section, fastListInstance);
   section = [fastListInstance, false];
   obj1[3] = section;
-  closure_10(importDefault(5634), obj1);
+  closure_10(importDefault(5572), obj1);
 });
 let closure_22 = importAllResult.memo(function _FastListSectionFooterRenderer(disableWrapper) {
   let children;
@@ -1460,7 +1460,7 @@ let closure_22 = importAllResult.memo(function _FastListSectionFooterRenderer(di
   children = children(section, fastListInstance);
   section = [children, false];
   obj1[2] = section;
-  closure_10(importDefault(5634), obj1);
+  closure_10(importDefault(5572), obj1);
 });
 let closure_23 = importAllResult.memo(function _FastListItemRenderer(disableWrapper) {
   let children;
@@ -1493,7 +1493,7 @@ let closure_23 = importAllResult.memo(function _FastListItemRenderer(disableWrap
   }
   const items = [childrenResult1, false];
   obj[2] = items;
-  childrenResult = closure_10(importDefault(5634), obj);
+  childrenResult = closure_10(importDefault(5572), obj);
 });
 let closure_24 = importAllResult.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
   let children;
@@ -1520,7 +1520,7 @@ let closure_24 = importAllResult.memo(function _FastListHeaderFooterRenderer(dis
   children = children(fastListInstance);
   fastListInstance = [children, false];
   obj1[3] = fastListInstance;
-  closure_10(importDefault(5634), obj1);
+  closure_10(importDefault(5572), obj1);
 });
 let closure_25 = importAllResult.memo(function _FastListSpacer(layoutSize) {
   layoutSize = layoutSize.layoutSize;
@@ -1532,7 +1532,7 @@ let closure_25 = importAllResult.memo(function _FastListSpacer(layoutSize) {
     style = { height: null };
     style[0] = layoutSize;
   }
-  return closure_11(importDefault(5634), { collapsable: false, style });
+  return closure_11(importDefault(5572), { collapsable: false, style });
 });
 let c26 = 1000;
 let c27 = 0.5;
@@ -1650,7 +1650,7 @@ class FastList extends PureComponent {
     tmp.deferredCompute = -1;
     tmp.deferNextCompute = false;
     tmp9 = FastListScrollAnchor;
-    if (typeof FastListScrollAnchor !== "error") {
+    if (typeof FastListScrollAnchor !== "fileFinishedImporting") {
       str5 = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -1732,7 +1732,7 @@ class FastList extends PureComponent {
     num = props.chunkBase;
     obj1 = { headerSize: props.headerSize, footerSize: props.footerSize, sectionSize: props.sectionSize, itemSize: props.itemSize, sectionFooterSize: props.sectionFooterSize, sections: props.sections, insetStart: props.insetStart, insetEnd: props.insetEnd, stickyHeaderFooter: props.stickyHeaderFooter, getRecyclerKey: props.getRecyclerKey, persistantKeys: props.persistantKeys, disableRecyclingOnFullCompute: props.disableRecyclingOnFullCompute };
     tmp11 = FastListComputer;
-    if (typeof FastListComputer !== "error") {
+    if (typeof FastListComputer !== "fileFinishedImporting") {
       str6 = "Trying to call a non-function";
       throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
     }
@@ -2239,8 +2239,8 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
     const result2 = scrollPosValue.set(tmp10);
     self.scrollPosValue = scrollPosValue;
   } else {
-    self.scrollPosValue = require(4116).makeMutable(tmp10);
-    const obj3 = require(4116);
+    self.scrollPosValue = require(4054).makeMutable(tmp10);
+    const obj3 = require(4054);
   }
   if (result > 0) {
     let computeResult = setInfo.compute(tmp3, sum, items, true);
@@ -2754,14 +2754,14 @@ prototype4["render"] = function render() {
     removeClippedSubviews = obj.isAndroid();
   }
   if (props.inActionSheet) {
-    let BottomSheetScrollView = require(5311) /* BottomSheetModal */.BottomSheetScrollView;
+    let BottomSheetScrollView = require(5249) /* BottomSheetModal */.BottomSheetScrollView;
   } else {
     BottomSheetScrollView = closure_8;
   }
   obj = {};
   const merged = Object.assign(callback(props, closure_3));
   obj.accessibilityRole = "list";
-  obj.ref = importDefault(7809)(self.scrollView);
+  obj.ref = importDefault(7686)(self.scrollView);
   obj.scrollEventThrottle = 16;
   obj.contentOffset = self.state.initialContentOffset;
   ({ handleScroll: obj2.onScroll, handleLayout: obj2.onLayout, handleMomentumScrollEnd: obj2.onMomentumScrollEnd, handleScrollBeginDrag: obj2.onScrollBeginDrag } = self);
@@ -2785,7 +2785,7 @@ prototype4["render"] = function render() {
 };
 FastList.defaultProps = { batchesToRender: 12, contentInset: { top: 0, right: 0, left: 0, bottom: 0 }, disableLegacyGestureHandling: false, disableRecyclingOnFullCompute: false, stickyHeaderFooter: false };
 let closure_29 = { code: "function FastListTsx2(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}" };
-const animatedComponent = require("module_4116").createAnimatedComponent(FastList);
+const animatedComponent = require("module_4054").createAnimatedComponent(FastList);
 let result = require("noop").fileFinishedImporting("lib/native/FastList.tsx");
 
 export default FastList;

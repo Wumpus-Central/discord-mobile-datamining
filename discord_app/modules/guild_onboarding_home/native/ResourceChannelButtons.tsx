@@ -1,6 +1,6 @@
-// === Module 11560: ResourceChannelButtons ===
+// === Module 11450: ResourceChannelButtons ===
 
-// Module 11560 (ResourceChannelButtons)
+// Module 11450 (ResourceChannelButtons)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

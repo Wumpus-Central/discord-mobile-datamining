@@ -1,6 +1,6 @@
-// === Module 11542: useVoiceMessageTooltip ===
+// === Module 11432: useVoiceMessageTooltip ===
 
-// Module 11542 (useVoiceMessageTooltip)
+// Module 11432 (useVoiceMessageTooltip)
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus";
@@ -44,7 +44,7 @@ export default function useVoiceMessageTooltip() {
       };
     }
   }, items1);
-  let obj = require(8746) /* useTooltip */;
+  let obj = require(8441) /* useTooltip */;
   const tooltip = obj.useTooltip(ref, memo);
   obj = { tooltipTargetRef: ref, showVoiceMessagesTooltip: closure_5 };
   return obj;

@@ -1,6 +1,6 @@
-// === Module 16781: getCurrentScreenshareCaptureMethod ===
+// === Module 16715: getCurrentScreenshareCaptureMethod ===
 
-// Module 16781 (getCurrentScreenshareCaptureMethod)
+// Module 16715 (getCurrentScreenshareCaptureMethod)
 import _slicedToArray from "_slicedToArray";
 import updateAveragedStatsHelper from "updateAveragedStatsHelper";
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo";

@@ -1,6 +1,6 @@
-// === Module 6846: getAll ===
+// === Module 5751: getAll ===
 
-// Module 6846 (getAll)
+// Module 5751 (getAll)
 import apply from "apply";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import generateOldThreadCutoff from "generateOldThreadCutoff";

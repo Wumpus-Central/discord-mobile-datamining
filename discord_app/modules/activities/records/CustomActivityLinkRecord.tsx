@@ -1,6 +1,6 @@
-// === Module 12400: getAssetURL ===
+// === Module 12302: getAssetURL ===
 
-// Module 12400 (getAssetURL)
+// Module 12302 (getAssetURL)
 let result = require("fetchCustomActivityLink").fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
   constructor(arg0) {
@@ -32,11 +32,11 @@ class CustomActivityLinkRecord {
 }
 CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
   const self = this;
-  if (this.type === require(12401) /* CustomLinkType */.CustomLinkType.MANAGED) {
-    let tmpResult = tmp(8039);
+  if (this.type === require(12303) /* CustomLinkType */.CustomLinkType.MANAGED) {
+    let tmpResult = tmp(7921);
     let assetImage = tmpResult.getAssetImage(self.applicationId, self.assetId, 512);
-  } else if (self.type === tmp(12401).CustomLinkType.QUICK) {
-    tmpResult = tmp(12398);
+  } else if (self.type === tmp(12303).CustomLinkType.QUICK) {
+    tmpResult = tmp(12300);
     assetImage = tmpResult.getQuickLinkImage(self.assetPath);
   }
   return assetImage;

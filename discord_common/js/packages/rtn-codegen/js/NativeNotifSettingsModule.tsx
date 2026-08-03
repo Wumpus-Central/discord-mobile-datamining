@@ -1,6 +1,6 @@
-// === Module 13596: NativeNotifSettingsModule ===
+// === Module 13533: NativeNotifSettingsModule ===
 
-// Module 13596 (NativeNotifSettingsModule)
+// Module 13533 (NativeNotifSettingsModule)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const value = TurboModuleRegistry.get("NativeNotifSettingsModule");

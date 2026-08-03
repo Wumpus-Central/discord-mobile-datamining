@@ -1,6 +1,6 @@
-// === Module 11332: openCustomKeyboard ===
+// === Module 11221: openCustomKeyboard ===
 
-// Module 11332 (openCustomKeyboard)
+// Module 11221 (openCustomKeyboard)
 const result = require("zustandStore").fileFinishedImporting("modules/keyboard/native/openCustomKeyboard.android.tsx");
 
 export default function openCustomKeyboard(secondaryTextFieldRef) {
@@ -12,7 +12,7 @@ export default function openCustomKeyboard(secondaryTextFieldRef) {
   secondaryTextFieldRef = secondaryTextFieldRef.secondaryTextFieldRef;
   require(1478) /* computeEntryState */.setKeyboardType(keyboardParams);
   let obj = require(1478) /* computeEntryState */;
-  require(5701) /* runAfterInteractions */.runAfterInteractions(() => {
+  require(5639) /* runAfterInteractions */.runAfterInteractions(() => {
     const current = ref.current;
     current.blur();
     if (secondaryTextFieldRef != null) {

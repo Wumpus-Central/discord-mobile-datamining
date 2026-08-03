@@ -1,6 +1,6 @@
-// === Module 13543: handleUpdateVADPermission ===
+// === Module 13480: handleUpdateVADPermission ===
 
-// Module 13543 (handleUpdateVADPermission)
+// Module 13480 (handleUpdateVADPermission)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

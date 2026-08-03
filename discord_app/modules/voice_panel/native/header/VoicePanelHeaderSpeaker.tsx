@@ -1,6 +1,6 @@
-// === Module 16030: ? ===
+// === Module 15966: ? ===
 
-// Module 16030
+// Module 15966
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "useCanConnect";
 import { NativeModules } from "getConsoleIcon";
@@ -25,7 +25,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   let canShowTooltip;
   let targetRef;
   ({ targetRef, canShowTooltip } = arg0);
-  importDefault(16034)(targetRef, canShowTooltip);
+  importDefault(15970)(targetRef, canShowTooltip);
   return null;
 });
 const memoResult = importAllResult.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChannel) {

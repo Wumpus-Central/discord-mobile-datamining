@@ -1,6 +1,6 @@
-// === Module 8583: ChannelTypeRow ===
+// === Module 8276: ChannelTypeRow ===
 
-// Module 8583 (ChannelTypeRow)
+// Module 8276 (ChannelTypeRow)
 import Form from "Form";
 import AnnouncementsIcon from "AnnouncementsIcon";
 import get_ActivityIndicator from "VoiceNormalIcon";
@@ -725,7 +725,7 @@ export default function CreateChannelModal(arg0) {
   let initialStack;
   let screens;
   const _require = arg0;
-  ({ screens, initialStack } = importDefault(5569)(() => {
+  ({ screens, initialStack } = importDefault(5507)(() => {
     let obj = { name: outer1_30.CREATE_CHANNEL, params: null };
     obj = {};
     let merged = Object.assign(callback);
@@ -763,6 +763,6 @@ export default function CreateChannelModal(arg0) {
     obj[1] = items;
     return obj;
   }));
-  return callback(_require(5636).Navigator, { screens, initialRouteStack });
+  return callback(_require(5574).Navigator, { screens, initialRouteStack });
 };
 export { CreateChannel };

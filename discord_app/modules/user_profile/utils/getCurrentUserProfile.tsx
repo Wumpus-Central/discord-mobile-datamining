@@ -1,6 +1,6 @@
-// === Module 9958: getCurrentUserProfile ===
+// === Module 9813: getCurrentUserProfile ===
 
-// Module 9958 (getCurrentUserProfile)
+// Module 9813 (getCurrentUserProfile)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 

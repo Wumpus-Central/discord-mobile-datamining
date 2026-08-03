@@ -1,6 +1,6 @@
-// === Module 4120: enforcing ===
+// === Module 4058: enforcing ===
 
-// Module 4120 (enforcing)
+// Module 4058 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeArchitectureProvider");

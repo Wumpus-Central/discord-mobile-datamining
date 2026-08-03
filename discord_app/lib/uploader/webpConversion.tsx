@@ -1,6 +1,6 @@
-// === Module 4836: _shouldConvertToWebP ===
+// === Module 4774: _shouldConvertToWebP ===
 
-// Module 4836 (_shouldConvertToWebP)
+// Module 4774 (_shouldConvertToWebP)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;
@@ -62,7 +62,7 @@ function _shouldConvertToWebP2() {
                 const items = ["image/png"];
                 if (items.includes(obj18.type)) {
                   c4 = 1;
-                  if (typeof obj18.arrayBuffer === "error") {
+                  if (typeof obj18.arrayBuffer === "fileFinishedImporting") {
                     c5 = 4;
                     c6 = 1;
                     const obj2 = { value: null, done: false };

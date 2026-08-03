@@ -1,6 +1,6 @@
-// === Module 11084: hasPartySize ===
+// === Module 10962: hasPartySize ===
 
-// Module 11084 (hasPartySize)
+// Module 10962 (hasPartySize)
 const result = require("set").fileFinishedImporting("modules/activities/utils/hasPartySize.tsx");
 
 export const hasPartySize = function hasPartySize(partySize) {

@@ -1,6 +1,6 @@
-// === Module 5062: officialApplicationIds ===
+// === Module 5000: officialApplicationIds ===
 
-// Module 5062 (officialApplicationIds)
+// Module 5000 (officialApplicationIds)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -361,7 +361,7 @@ export const getVisibleConnectionsRole = function getVisibleConnectionsRole(guil
         }
         return hasItem;
       });
-      const intersectionResult = importDefault(12).intersection(found, importDefault(5064)(channel));
+      const intersectionResult = importDefault(12).intersection(found, importDefault(5002)(channel));
       if (intersectionResult.length > 0) {
         let first = intersectionResult[0];
         if (first == null) {

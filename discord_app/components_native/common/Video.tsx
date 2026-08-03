@@ -1,6 +1,6 @@
-// === Module 8477: VideoComponent ===
+// === Module 8146: VideoComponent ===
 
-// Module 8477 (VideoComponent)
+// Module 8146 (VideoComponent)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -144,7 +144,7 @@ class Video extends PureComponent {
 const prototype = Video.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
-  this._renderTask = self(5701).runAfterInteractions(() => {
+  this._renderTask = self(5639).runAfterInteractions(() => {
     self.setState({ postponeRender: false });
   });
 };

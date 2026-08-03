@@ -1,6 +1,6 @@
-// === Module 15822: BurstReactionAnimationContainer ===
+// === Module 15757: BurstReactionAnimationContainer ===
 
-// Module 15822 (BurstReactionAnimationContainer)
+// Module 15757 (BurstReactionAnimationContainer)
 import ActionSheetPresenter from "ActionSheetPresenter";
 import { NativeModules } from "BurstReactionAnimationContainerInner";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -21,10 +21,10 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
   let obj = require(589) /* initialize */;
   const items = [ensureGuildLoaded, createRTCConnection];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
-  const hasPipParticipant = require(10721) /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
-  const obj2 = require(10721) /* usePipVideoOrStream */;
-  const isModalOpen = require(4106) /* navigationToRootTabHelper */.useIsModalOpen();
-  require(10811) /* isVoicePanelEnabled */;
+  const hasPipParticipant = require(10536) /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
+  const obj2 = require(10536) /* usePipVideoOrStream */;
+  const isModalOpen = require(4044) /* navigationToRootTabHelper */.useIsModalOpen();
+  require(10703) /* isVoicePanelEnabled */;
   let tmp7 = null;
   if (null != stateFromStores) {
     tmp7 = null;
@@ -35,7 +35,7 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
         if (!tmp6) {
           obj = { channel: null };
           obj[0] = stateFromStores;
-          tmp7 = jsx(importDefault(15823), { channel: null });
+          tmp7 = jsx(importDefault(15758), { channel: null });
         }
       }
     }
@@ -60,7 +60,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
     const items = [obj];
     return items;
   }, []);
-  const keyCommands = require(13709) /* KeyCommandsView */.useKeyCommands(memo);
+  const keyCommands = require(13646) /* KeyCommandsView */.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
   const effect = React.useEffect(() => {

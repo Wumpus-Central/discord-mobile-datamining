@@ -1,6 +1,6 @@
-// === Module 10642: _fetchApexExperimentsMetadata ===
+// === Module 10504: _fetchApexExperimentsMetadata ===
 
-// Module 10642 (_fetchApexExperimentsMetadata)
+// Module 10504 (_fetchApexExperimentsMetadata)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import dispatcher from "dispatcher";
 import initialize from "initialize";

@@ -1,6 +1,6 @@
-// === Module 7143: handleSummarizeThreadFinish ===
+// === Module 6091: handleSummarizeThreadFinish ===
 
-// Module 7143 (handleSummarizeThreadFinish)
+// Module 6091 (handleSummarizeThreadFinish)
 import { Store } from "initialize";
 
 function handleSummarizeThreadFinish() {

@@ -1,6 +1,6 @@
-// === Module 3916: _createGatewayCheckoutContext ===
+// === Module 3854: _createGatewayCheckoutContext ===
 
-// Module 3916 (_createGatewayCheckoutContext)
+// Module 3854 (_createGatewayCheckoutContext)
 import set from "set";
 import { PaymentGateways } from "sum";
 
@@ -123,7 +123,7 @@ export const isExpectedHttpClientError = function isExpectedHttpClientError(onSi
     tmp2 = onSignFailure.status < 500;
   }
   if (!tmp2) {
-    let tmp4 = onSignFailure instanceof importDefault(3923);
+    let tmp4 = onSignFailure instanceof importDefault(3861);
     if (tmp4) {
       tmp4 = null != onSignFailure.status;
     }

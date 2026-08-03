@@ -1,6 +1,6 @@
-// === Module 6862: PlayStationVoiceExperiment ===
+// === Module 5767: PlayStationVoiceExperiment ===
 
-// Module 6862 (PlayStationVoiceExperiment)
+// Module 5767 (PlayStationVoiceExperiment)
 const obj = { 1: null };
 obj[1] = { allowPlayStationStaging: true };
 const tmp2 = require("getUnitId")({ kind: "user", name: "2026-03-churro", defaultConfig: { allowPlayStationStaging: false }, variations: obj });

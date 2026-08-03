@@ -1,13 +1,13 @@
-// === Module 16396: showPendingNotification ===
+// === Module 16330: showPendingNotification ===
 
-// Module 16396 (showPendingNotification)
+// Module 16330 (showPendingNotification)
 import { FriendsSections } from "ME";
 
 const result = require("getAvatarURL").fileFinishedImporting("utils/RelationshipUtils.tsx");
 
 export const showPendingNotification = function showPendingNotification(user) {
   const intl = require(1236) /* getSystemLocale */.intl;
-  let obj = importDefault(14563);
+  let obj = importDefault(14496);
   const stringResult = intl.string(require(1236) /* getSystemLocale */.t["t3+Af3"]);
   obj = {
     omitViewTracking: true,
@@ -23,7 +23,7 @@ export const showPendingNotification = function showPendingNotification(user) {
 export const showAcceptedNotification = function showAcceptedNotification(user) {
   const _require = user;
   const intl = _require(1236).intl;
-  let obj = importDefault(14563);
+  let obj = importDefault(14496);
   const stringResult = intl.string(_require(1236).t.MYr3Ka);
   obj = {
     omitViewTracking: true,

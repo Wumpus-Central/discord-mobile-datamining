@@ -1,6 +1,6 @@
-// === Module 11391: RecommendationAppRow ===
+// === Module 11280: RecommendationAppRow ===
 
-// Module 11391 (RecommendationAppRow)
+// Module 11280 (RecommendationAppRow)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -25,5 +25,5 @@ export default function RecommendationAppRow(onPress) {
   let obj = importDefault(1416);
   obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const iconSource = obj.getApplicationIconSource(obj);
-  return jsx(require(11381) /* AppRowLabel */.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
+  return jsx(require(11270) /* AppRowLabel */.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
 };

@@ -1,6 +1,6 @@
-// === Module 4152: createFromServer ===
+// === Module 4090: createFromServer ===
 
-// Module 4152 (createFromServer)
+// Module 4090 (createFromServer)
 import "toJS";
 
 let prototype;
@@ -38,7 +38,7 @@ prototype["createFromServer"] = function createFromServer(user) {
       date = new Date(user.ends_at);
     }
   }
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp5 = new prototype(str2, _Date, str, prototype, new.target, id, guild_id, user_id, user);

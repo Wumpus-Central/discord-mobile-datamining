@@ -1,6 +1,6 @@
-// === Module 4671: styleProperties ===
+// === Module 4609: styleProperties ===
 
-// Module 4671 (styleProperties)
+// Module 4609 (styleProperties)
 import noop from "noop";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
@@ -11,9 +11,7 @@ let c4 = "rgba(0,0,0,0.001)";
 let closure_5 = createCacheKey.experimental_createToken(() => "#161CBB");
 let closure_6 = createCacheKey.experimental_createToken(() => "#1318A0");
 createCacheKey = { primary: require("Themes").colors.CONTROL_PRIMARY_TEXT_DEFAULT, "experimental_welcome-secondary": require("Themes").unsafe_rawColors.WHITE, secondary: require("Themes").colors.CONTROL_SECONDARY_TEXT_DEFAULT, tertiary: require("Themes").colors.REDESIGN_BUTTON_TERTIARY_TEXT, destructive: require("Themes").colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-primary": require("Themes").colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-secondary": require("Themes").colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, active: require("Themes").colors.CONTROL_CONNECTED_TEXT_DEFAULT, "primary-overlay": require("Themes").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, "secondary-overlay": require("Themes").colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, "experimental_premium-primary": require("Themes").colors.WHITE, "experimental_premium-basic": require("Themes").colors.WHITE, "experimental_premium-secondary": require("Themes").colors.TEXT_BRAND, "icon-only": require("Themes").colors.CONTROL_ICON_ONLY_ICON_DEFAULT, expressive: require("Themes").colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
-const styleProperties = createCacheKey.createStyleProperties((arg0) => {
-
-});
+const styleProperties = createCacheKey.createStyleProperties((arg0) => ({ backgroundInactive: c4, backgroundPressed: c4, borderInactive: c4, borderPressed: c4 }));
 let closure_9 = { code: "function ButtonHooksNativeTsx1(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
 let closure_10 = { code: "function ButtonHooksNativeTsx2(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};}" };
 let result = require("ManaContext").fileFinishedImporting("design/components/Button/native/ButtonHooks.native.tsx");
@@ -100,7 +98,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
   }, items);
 };
 export const useForegroundColor = function useForegroundColor(variant) {
-  return require(3959) /* map */.useToken(createCacheKey[variant]);
+  return require(3897) /* map */.useToken(createCacheKey[variant]);
 };
 export const useButtonColorStyles = styleProperties;
 export const useButtonTextColorStyles = function useButtonTextColorStyles(style) {
@@ -404,7 +402,7 @@ export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width
   const _require = pressed;
   let closure_1 = width;
   const dependencyMap = scaleAmountInPx;
-  let obj = _require(4116);
+  let obj = _require(4054);
   const fn = function n() {
     let obj = sharedValue1;
     let num = 1;
@@ -422,7 +420,7 @@ export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width
     obj[0] = items1;
     return obj;
   };
-  obj = { width, scaleAmountInPx, withSpring: _require(4665).withSpring, interpolate: _require(4116).interpolate, pressed, ON_PRESS_SPRING: _require(4669).ON_PRESS_SPRING };
+  obj = { width, scaleAmountInPx, withSpring: _require(4603).withSpring, interpolate: _require(4054).interpolate, pressed, ON_PRESS_SPRING: _require(4607).ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 17256006845494;
   fn.__initData = closure_10;
@@ -438,9 +436,9 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
   num = onPressOut;
   sharedValue = undefined;
   sharedValue1 = undefined;
-  let obj = sharedValue(4116);
+  let obj = sharedValue(4054);
   sharedValue = obj.useSharedValue(0);
-  let tmpResult = tmp(4116);
+  let tmpResult = tmp(4054);
   sharedValue1 = tmpResult.useSharedValue(0);
   obj = {
     onPressIn: sharedValue.useCallback((arg0) => {
@@ -466,7 +464,7 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
   items = [sharedValue, onPressIn];
   items1 = [sharedValue, onPressOut];
   items2 = [sharedValue1, onLayout];
-  tmpResult = tmp(4116);
+  tmpResult = tmp(4054);
   const fn = function n() {
     let obj = sharedValue1;
     let num = 1;
@@ -484,7 +482,7 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
     obj[0] = items1;
     return obj;
   };
-  obj = { width: sharedValue1, scaleAmountInPx: num, withSpring: tmp(4665).withSpring, interpolate: tmp(4116).interpolate, pressed: sharedValue, ON_PRESS_SPRING: tmp(4669).ON_PRESS_SPRING };
+  obj = { width: sharedValue1, scaleAmountInPx: num, withSpring: tmp(4603).withSpring, interpolate: tmp(4054).interpolate, pressed: sharedValue, ON_PRESS_SPRING: tmp(4607).ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 17256006845494;
   fn.__initData = closure_10;

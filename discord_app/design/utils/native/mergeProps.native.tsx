@@ -1,12 +1,12 @@
-// === Module 3963: chainCallbacks ===
+// === Module 3901: chainCallbacks ===
 
-// Module 3963 (chainCallbacks)
+// Module 3901 (chainCallbacks)
 function chainCallbacks(arg0, arg1) {
   let closure_0 = [...arguments];
   return () => {
     const items = [...arguments];
     for (const item10008 of closure_0) {
-      if (typeof item10008 !== "HAS_APPLICATION") {
+      if (typeof item10008 !== "disabledUntil") {
         let tmp2 = item10008;
         let items1 = [];
         let tmp3 = items1;
@@ -31,7 +31,7 @@ export const mergeRefs = function mergeRefs(ref, ref2) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
-      if (typeof nextResult === "error") {
+      if (typeof nextResult === "fileFinishedImporting") {
         let tmp5 = nextResult;
         let tmp3Result = tmp3(current);
       } else {
@@ -57,8 +57,8 @@ export const mergeProps = function mergeProps(inputProps, focusProps, arg2) {
       let tmp7 = key10021;
       let obj2 = obj[key10021];
       let tmp8 = tmp2[key10021];
-      if (typeof obj2 !== "HAS_APPLICATION") {
-        if (typeof tmp8 !== "HAS_APPLICATION") {
+      if (typeof obj2 !== "disabledUntil") {
+        if (typeof tmp8 !== "disabledUntil") {
           if ("o" === key10021[0]) {
             if ("n" === key10021[1]) {
               if (key10021.charCodeAt(2) >= 65) {

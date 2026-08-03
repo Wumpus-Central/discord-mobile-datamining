@@ -1,6 +1,6 @@
-// === Module 11554: ChatFloatingNavButton ===
+// === Module 11444: ChatFloatingNavButton ===
 
-// Module 11554 (ChatFloatingNavButton)
+// Module 11444 (ChatFloatingNavButton)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

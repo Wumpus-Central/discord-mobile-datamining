@@ -1,6 +1,6 @@
-// === Module 5849: useGuildOnboardingAvailable ===
+// === Module 10006: useGuildOnboardingAvailable ===
 
-// Module 5849 (useGuildOnboardingAvailable)
+// Module 10006 (useGuildOnboardingAvailable)
 import initialize from "initialize";
 import { GuildFeatures } from "ME";
 

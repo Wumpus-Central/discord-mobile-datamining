@@ -1,6 +1,6 @@
-// === Module 10843: participantMemberInfo ===
+// === Module 10735: participantMemberInfo ===
 
-// Module 10843 (participantMemberInfo)
+// Module 10735 (participantMemberInfo)
 const require = arg1;
 const DAY = require("set").Millis.DAY;
 const result = require("getSystemLocale").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
@@ -47,5 +47,5 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     }
     return stringResult;
   }
-  obj = require(4094) /* nameFromUser */;
+  obj = require(4032) /* nameFromUser */;
 };

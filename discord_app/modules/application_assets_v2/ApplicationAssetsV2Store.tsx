@@ -1,6 +1,6 @@
-// === Module 12272: handleFeaturedOrDeveloperFetchSuccess ===
+// === Module 12176: handleFeaturedOrDeveloperFetchSuccess ===
 
-// Module 12272 (handleFeaturedOrDeveloperFetchSuccess)
+// Module 12176 (handleFeaturedOrDeveloperFetchSuccess)
 import { Store } from "initialize";
 
 const require = arg1;

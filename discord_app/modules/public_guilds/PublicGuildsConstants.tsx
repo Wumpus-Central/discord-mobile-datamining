@@ -1,6 +1,6 @@
-// === Module 7940: PUBLIC_SUCCESS_MODAL_SEEN_KEY ===
+// === Module 7822: PUBLIC_SUCCESS_MODAL_SEEN_KEY ===
 
-// Module 7940 (PUBLIC_SUCCESS_MODAL_SEEN_KEY)
+// Module 7822 (PUBLIC_SUCCESS_MODAL_SEEN_KEY)
 import importAllResult from "fromString";
 
 const items = [, , , , , , , , , , , , , ];

@@ -1,6 +1,6 @@
-// === Module 16061: useActivityUsers ===
+// === Module 15997: useActivityUsers ===
 
-// Module 16061 (useActivityUsers)
+// Module 15997 (useActivityUsers)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import participantFromServer from "participantFromServer";
 

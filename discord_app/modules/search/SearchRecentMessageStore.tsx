@@ -1,6 +1,6 @@
-// === Module 10258: handleReset ===
+// === Module 10119: handleReset ===
 
-// Module 10258 (handleReset)
+// Module 10119 (handleReset)
 import { Store } from "initialize";
 
 const require = arg1;

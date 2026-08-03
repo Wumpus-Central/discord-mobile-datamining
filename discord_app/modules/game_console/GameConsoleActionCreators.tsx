@@ -1,6 +1,6 @@
-// === Module 9221: disconnectRemote ===
+// === Module 9048: disconnectRemote ===
 
-// Module 9221 (disconnectRemote)
+// Module 9048 (disconnectRemote)
 import expandEventProperties from "expandEventProperties";
 import createRTCConnection from "createRTCConnection";
 import handleUpdate from "handleUpdate";
@@ -100,7 +100,7 @@ function _disconnectRemote() {
         } else {
           if (1 === tmp7) {
             c3 = 0;
-            obj1 = v0(4594);
+            obj1 = v0(4532);
             const obj2 = { title: null, body: null };
             const intl = callback(1236).intl;
             obj2[0] = intl.string(callback(1236).t.LNhXcL);
@@ -757,7 +757,7 @@ export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
   disconnectRemote();
 };
 export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId, arg1, first) {
-  let obj = require(9026) /* snapVolumeToDefault */;
+  let obj = require(8849) /* snapVolumeToDefault */;
   const result = obj.coerceAudioContextForProto(first);
   if (null != result) {
     obj = { type: "REMOTE_COMMAND", sessionId: null, payload: null };

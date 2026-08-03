@@ -1,6 +1,6 @@
-// === Module 8853: apexExperiment ===
+// === Module 8676: apexExperiment ===
 
-// Module 8853 (apexExperiment)
+// Module 8676 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-profile-frame-gifting", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,6 +1,6 @@
-// === Module 15940: keyExtractor ===
+// === Module 15876: keyExtractor ===
 
-// Module 15940 (keyExtractor)
+// Module 15876 (keyExtractor)
 import noop from "noop";
 import { Fonts } from "ME";
 import jsxProd from "jsxProd";
@@ -27,9 +27,9 @@ function FriendsEmptyComponent() {
   const items = [callback(require(1297) /* Button */.RefreshEmptyState, obj), ];
   obj = {
     onPress() {
-      let obj = callback2(4223);
+      let obj = callback2(4161);
       obj.hideActionSheet();
-      const rootNavigationRef = callback(4107).getRootNavigationRef();
+      const rootNavigationRef = callback(4045).getRootNavigationRef();
       if (null != rootNavigationRef) {
         obj = { screen: "add-friends", params: null };
         obj[1] = { sourcePage: "Instant Invite Empty State" };
@@ -48,8 +48,8 @@ function FriendsEmptyComponent() {
   items1 = [tmp.goToFriendsLink];
   const intl4 = require(1236) /* getSystemLocale */.intl;
   obj1[3] = intl4.string(require(1236) /* getSystemLocale */.t.a7FVbE);
-  obj[4] = callback(require(4251) /* Text */.Text, obj1);
-  items[1] = callback(require(4783) /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(require(4189) /* Text */.Text, obj1);
+  items[1] = callback(require(4721) /* PressableBase */.PressableOpacity, obj);
   obj[0] = items;
   return callback2(closure_5, obj);
 }

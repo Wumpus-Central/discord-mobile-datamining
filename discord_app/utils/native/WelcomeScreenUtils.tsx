@@ -1,6 +1,6 @@
-// === Module 11863: useShowWelcomeModal ===
+// === Module 11761: useShowWelcomeModal ===
 
-// Module 11863 (useShowWelcomeModal)
+// Module 11761 (useShowWelcomeModal)
 import noop from "noop";
 import handleInviteData from "handleInviteData";
 import { NO_WELCOME_SCREEN } from "handleInviteData";
@@ -73,6 +73,6 @@ export const useShowWelcomeModal = function useShowWelcomeModal(guildId, channel
 };
 export const openWelcomeActionSheet = function openWelcomeActionSheet(onHide) {
   const guildId = onHide.guildId;
-  const obj = importDefault(4223);
-  obj.openLazy(require(1959) /* asyncRequireImpl */(11867, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
+  const obj = importDefault(4161);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(11765, dependencyMap.paths), "GuildWelcomeActionSheet" + guildId, { guildId, onHide: onHide.onHide });
 };

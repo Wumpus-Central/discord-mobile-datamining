@@ -1,6 +1,6 @@
-// === Module 11039: useScrollHandlers ===
+// === Module 10917: useScrollHandlers ===
 
-// Module 11039 (useScrollHandlers)
+// Module 10917 (useScrollHandlers)
 import noop from "noop";
 import updateChatInputContainerHeight from "updateChatInputContainerHeight";
 

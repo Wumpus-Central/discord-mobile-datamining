@@ -1,6 +1,6 @@
-// === Module 11685: handlePopAllLayers ===
+// === Module 11578: handlePopAllLayers ===
 
-// Module 11685 (handlePopAllLayers)
+// Module 11578 (handlePopAllLayers)
 import { Store } from "initialize";
 
 function handlePopAllLayers() {

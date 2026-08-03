@@ -1,6 +1,6 @@
-// === Module 15520: HomeWelcomeMessage ===
+// === Module 15453: HomeWelcomeMessage ===
 
-// Module 15520 (HomeWelcomeMessage)
+// Module 15453 (HomeWelcomeMessage)
 import Text from "Text";
 import { View } from "Button";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

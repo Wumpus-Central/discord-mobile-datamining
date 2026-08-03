@@ -1,6 +1,6 @@
-// === Module 9950: CancelButton ===
+// === Module 9805: CancelButton ===
 
-// Module 9950 (CancelButton)
+// Module 9805 (CancelButton)
 import BalanceWidgetPill from "BalanceWidgetPill";
 import _toArray from "_toArray";
 import importDefaultResult1 from "importDefaultResult1";
@@ -44,7 +44,7 @@ function CancelButton(arg0) {
   };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
-  return callback(require(5216) /* Background */.HeaderBackButton, obj);
+  return callback(require(5154) /* Background */.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;

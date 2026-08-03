@@ -1,6 +1,6 @@
-// === Module 14954: useIdentityRegistrationStep ===
+// === Module 14887: useIdentityRegistrationStep ===
 
-// Module 14954 (useIdentityRegistrationStep)
+// Module 14887 (useIdentityRegistrationStep)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -83,7 +83,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               let c4;
               const sum = ref.current + c6;
               closure_1 = sum;
-              let obj1 = { email: "Array", phone: true };
+              let obj1 = { email: "Array", phone: 0 };
               obj1[1] = sum;
               v0(obj1);
               closure_2 = callback2(callback);

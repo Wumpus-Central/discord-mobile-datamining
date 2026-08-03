@@ -1,13 +1,13 @@
-// === Module 14999: usePortraitOrientationOnly ===
+// === Module 14932: usePortraitOrientationOnly ===
 
-// Module 14999 (usePortraitOrientationOnly)
+// Module 14932 (usePortraitOrientationOnly)
 import noop from "noop";
 
 let require = arg1;
 const result = require("isMetaQuest").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
 export default function usePortraitOrientationOnly() {
-  let tmp = importDefault(9375)();
+  let tmp = importDefault(9202)();
   const require = tmp;
   const items = [tmp];
   const effect = React.useEffect(() => {

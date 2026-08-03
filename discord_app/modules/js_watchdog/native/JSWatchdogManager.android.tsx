@@ -1,6 +1,6 @@
-// === Module 16324: handleAppStateUpdate ===
+// === Module 16260: handleAppStateUpdate ===
 
-// Module 16324 (handleAppStateUpdate)
+// Module 16260 (handleAppStateUpdate)
 import enforcing from "enforcing";
 import ME from "ME";
 import "initialize";
@@ -234,7 +234,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_0 = undefined;
             c1 = undefined;
             if (null == outer1_0._timeoutId) {
-              if (null != outer1_1(16325)) {
+              if (null != outer1_1(16261)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj1 = { value: null, done: false };
@@ -255,7 +255,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_0._enabled = true;
               if (closure_0._pingCompleted) {
                 let checkForStallReportResult;
-                obj = outer1_1(16325);
+                obj = outer1_1(16261);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -288,7 +288,7 @@ prototype["stopWatchdog"] = function stopWatchdog() {
 prototype["reportStall"] = function reportStall(c1, c0, is_previous, _analyticsReportsRemaining) {
   let obj = importDefault(698);
   obj = {};
-  const merged = Object.assign(require(6831) /* getDeviceMetadata */.getDeviceMetadata());
+  const merged = Object.assign(require(5736) /* getDeviceMetadata */.getDeviceMetadata());
   obj.version = 1;
   obj.stall_time = c1.stallTime;
   obj.is_previous = is_previous;
@@ -334,7 +334,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             let closure_0 = tmp2;
             closure_0 = undefined;
             if (null != outer1_0._cachedSession) {
-              let obj1 = outer1_0(6828);
+              let obj1 = outer1_0(5734);
               if (!obj1.isSessionExpired(outer1_0._cachedSession)) {
                 const uuid = outer1_0._cachedSession.uuid;
                 c3 = 3;
@@ -343,7 +343,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(6820).getSession();
+            obj1[0] = outer1_0(5726).getSession();
             return obj1;
           }
         } else if (arg0 === 1) {

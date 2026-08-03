@@ -1,6 +1,6 @@
-// === Module 9726: ForumComposerModal ===
+// === Module 9579: ForumComposerModal ===
 
-// Module 9726 (ForumComposerModal)
+// Module 9579 (ForumComposerModal)
 import "computeEntryState";
 import { View } from "useGetThreadDraftSettings";
 import initialize from "initialize";

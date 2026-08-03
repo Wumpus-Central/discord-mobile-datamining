@@ -1,12 +1,12 @@
-// === Module 15941: ? ===
+// === Module 15877: ? ===
 
-// Module 15941
+// Module 15877
 import { View } from "getAvatarURL";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { InviteSendStates } from "InviteSendStates";
-import { jsx } from "module_11924";
+import { jsx } from "module_11822";
 import createCacheKey from "createCacheKey";
 import importAllResult from "Text";
 

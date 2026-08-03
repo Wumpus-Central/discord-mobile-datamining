@@ -1,6 +1,6 @@
-// === Module 4930: requireSortedDescending ===
+// === Module 4868: requireSortedDescending ===
 
-// Module 4930 (requireSortedDescending)
+// Module 4868 (requireSortedDescending)
 const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/requireSortedDescending.tsx");
 
 export const requireSortedDescending = function requireSortedDescending(messages) {

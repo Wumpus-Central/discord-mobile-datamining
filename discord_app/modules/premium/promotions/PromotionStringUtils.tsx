@@ -1,6 +1,6 @@
-// === Module 12549: useFormatStringWithCommonPremiumParams ===
+// === Module 12451: useFormatStringWithCommonPremiumParams ===
 
-// Module 12549 (useFormatStringWithCommonPremiumParams)
+// Module 12451 (useFormatStringWithCommonPremiumParams)
 import addSubscriptionPlan from "addSubscriptionPlan";
 import GuildFeatures from "GuildFeatures";
 
@@ -17,10 +17,10 @@ export const useFormatStringWithCommonPremiumParams = function useFormatStringWi
   if (-1 !== body.indexOf("{price}")) {
     if (stateFromStores) {
       try {
-        const defaultPrice = importDefault(3901).getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
-        const obj2 = importDefault(3901);
-        str = require(5735) /* formatSingleCurrencyPrice */.formatPrice(defaultPrice.amount, defaultPrice.currency);
-        const tmpResult = require(5735) /* formatSingleCurrencyPrice */;
+        const defaultPrice = importDefault(3839).getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+        const obj2 = importDefault(3839);
+        str = require(5673) /* formatSingleCurrencyPrice */.formatPrice(defaultPrice.amount, defaultPrice.currency);
+        const tmpResult = require(5673) /* formatSingleCurrencyPrice */;
       } catch (err) {
       }
     }

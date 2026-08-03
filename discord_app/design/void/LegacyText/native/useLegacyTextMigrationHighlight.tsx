@@ -1,6 +1,6 @@
-// === Module 7798: useLegacyTextMigrationHighlight ===
+// === Module 7675: useLegacyTextMigrationHighlight ===
 
-// Module 7798 (useLegacyTextMigrationHighlight)
+// Module 7675 (useLegacyTextMigrationHighlight)
 import getUserAgnosticState from "getUserAgnosticState";
 import createCacheKey from "createCacheKey";
 

@@ -1,6 +1,6 @@
-// === Module 11635: validateMultiAccountTokens ===
+// === Module 11525: validateMultiAccountTokens ===
 
-// Module 11635 (validateMultiAccountTokens)
+// Module 11525 (validateMultiAccountTokens)
 import setSecondaryToken from "setSecondaryToken";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
@@ -228,8 +228,8 @@ export const switchAccount = function switchAccount(id, switchSynchronously, CHO
     importDefault(709).dispatch(obj1);
     const obj4 = importDefault(709);
     const tmp5 = importDefault;
-    resolved = importDefault(5707).switchAccountToken(token, switchSynchronously);
-    const tmp5Result = importDefault(5707);
+    resolved = importDefault(5645).switchAccountToken(token, switchSynchronously);
+    const tmp5Result = importDefault(5645);
   }
   return resolved;
 };

@@ -1,6 +1,6 @@
-// === Module 5747: _isAccessibleChannelOrThreadPath ===
+// === Module 5685: _isAccessibleChannelOrThreadPath ===
 
-// Module 5747 (_isAccessibleChannelOrThreadPath)
+// Module 5685 (_isAccessibleChannelOrThreadPath)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import isSubscriptionGated from "isSubscriptionGated";
 import shouldShowOnboarding from "shouldShowOnboarding";

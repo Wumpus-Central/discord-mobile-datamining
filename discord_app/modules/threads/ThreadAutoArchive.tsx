@@ -1,6 +1,6 @@
-// === Module 8155: getAutoArchiveOptions ===
+// === Module 6188: getAutoArchiveOptions ===
 
-// Module 8155 (getAutoArchiveOptions)
+// Module 6188 (getAutoArchiveOptions)
 import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_3 } from "AbortCodes";
 
 function getAutoArchiveOptions() {
@@ -41,9 +41,9 @@ export const getAutoArchiveDurationText = function getAutoArchiveDurationText(ar
     label = found.label;
   }
   if (label == null) {
-    const obj = importDefault(3837);
-    label = importDefault(3837).duration(arg0, "minutes").humanize();
-    const durationResult = importDefault(3837).duration(arg0, "minutes");
+    const obj = importDefault(3775);
+    label = importDefault(3775).duration(arg0, "minutes").humanize();
+    const durationResult = importDefault(3775).duration(arg0, "minutes");
   }
   return label;
 };

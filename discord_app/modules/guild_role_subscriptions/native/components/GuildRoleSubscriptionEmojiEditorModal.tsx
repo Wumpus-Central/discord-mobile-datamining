@@ -1,6 +1,6 @@
-// === Module 16688: GuildRoleSubscriptionEmojiEditorModal ===
+// === Module 16622: GuildRoleSubscriptionEmojiEditorModal ===
 
-// Module 16688 (GuildRoleSubscriptionEmojiEditorModal)
+// Module 16622 (GuildRoleSubscriptionEmojiEditorModal)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import set from "set";

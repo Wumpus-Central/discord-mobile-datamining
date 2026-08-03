@@ -1,13 +1,13 @@
-// === Module 13696: useRequestGatewaySocket ===
+// === Module 13633: useRequestGatewaySocket ===
 
-// Module 13696 (useRequestGatewaySocket)
+// Module 13633 (useRequestGatewaySocket)
 import noop from "noop";
 
 const result = require("setRequestedBy").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 
 export const useRequestGatewaySocket = function useRequestGatewaySocket(arg0) {
   const importDefault = arg0;
-  const canUIRequestGatewaySocket = importDefault(9635).useCanUIRequestGatewaySocket();
+  const canUIRequestGatewaySocket = importDefault(9488).useCanUIRequestGatewaySocket();
   const items = [arg0, canUIRequestGatewaySocket];
   const effect = React.useEffect(() => {
     if (canUIRequestGatewaySocket) {

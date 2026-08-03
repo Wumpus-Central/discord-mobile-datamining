@@ -1,6 +1,6 @@
-// === Module 9280: ChannelDetailsNavigatorScreens ===
+// === Module 9107: ChannelDetailsNavigatorScreens ===
 
-// Module 9280 (ChannelDetailsNavigatorScreens)
+// Module 9107 (ChannelDetailsNavigatorScreens)
 const sum = require("MessageEmbedTypes").SEARCH_BAR_HEIGHT + 40;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
 

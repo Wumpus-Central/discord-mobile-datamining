@@ -1,6 +1,6 @@
-// === Module 7778: FormSwitch ===
+// === Module 7655: FormSwitch ===
 
-// Module 7778 (FormSwitch)
+// Module 7655 (FormSwitch)
 import "noop";
 import { Switch } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -35,7 +35,7 @@ export default function FormSwitch(value) {
     color = tmp4.track.color;
   }
   if (null == borderColor) {
-    let obj = require(4101) /* AccessibilityAnnouncer */;
+    let obj = require(4039) /* AccessibilityAnnouncer */;
     if (obj.isThemeDark(tmp7)) {
       borderColor = importDefault(712).unsafe_rawColors.PRIMARY_400;
     }

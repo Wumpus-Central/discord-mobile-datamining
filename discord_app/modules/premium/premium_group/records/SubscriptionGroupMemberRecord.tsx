@@ -1,6 +1,6 @@
-// === Module 12634: createFromServer ===
+// === Module 12541: createFromServer ===
 
-// Module 12634 (createFromServer)
+// Module 12541 (createFromServer)
 import "toJS";
 import createdAt from "createdAt";
 
@@ -18,7 +18,7 @@ class SubscriptionGroupMemberRecord extends tmp2 {
 }
 const prototype = SubscriptionGroupMemberRecord.prototype;
 SubscriptionGroupMemberRecord["createFromServer"] = function createFromServer(user) {
-  if (typeof SubscriptionGroupMemberRecord !== "error") {
+  if (typeof SubscriptionGroupMemberRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new SubscriptionGroupMemberRecord("Trying to call a non-function", SubscriptionGroupMemberRecord, new.target);

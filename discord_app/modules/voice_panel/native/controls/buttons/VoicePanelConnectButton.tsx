@@ -1,6 +1,6 @@
-// === Module 16093: ConnectButton ===
+// === Module 16029: ConnectButton ===
 
-// Module 16093 (ConnectButton)
+// Module 16029 (ConnectButton)
 import set from "set";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { jsx } from "jsxProd";

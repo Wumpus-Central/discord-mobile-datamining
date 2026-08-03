@@ -1,6 +1,6 @@
-// === Module 12850: handleSetLocationMetadata ===
+// === Module 12787: handleSetLocationMetadata ===
 
-// Module 12850 (handleSetLocationMetadata)
+// Module 12787 (handleSetLocationMetadata)
 import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME";
 import { Store } from "initialize";
 

@@ -1,6 +1,6 @@
-// === Module 14512: toggle ===
+// === Module 14445: toggle ===
 
-// Module 14512 (toggle)
+// Module 14445 (toggle)
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import createToggle from "createToggle";
 
@@ -16,7 +16,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => obj.saveCameraUploadsToDevice);
   },
   onValueChange: function onSaveCameraUploadsToDeviceValueChange(saveCameraUploadsToDevice) {
-    let obj = importDefault(8175);
+    let obj = importDefault(6209);
     obj = { saveCameraUploadsToDevice };
     const result = obj.updatedUnsyncedSettings(obj);
   }

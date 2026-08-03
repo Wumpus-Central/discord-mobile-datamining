@@ -1,6 +1,6 @@
-// === Module 11276: ChatTTITracker ===
+// === Module 11164: ChatTTITracker ===
 
-// Module 11276 (ChatTTITracker)
+// Module 11164 (ChatTTITracker)
 import jsxProd from "jsxProd";
 
 let c3;
@@ -18,7 +18,7 @@ export const ChatTTITracker = function ChatTTITracker(messages) {
       const displayMessagesWithCache = callback(9).displayMessagesWithCache;
       displayMessagesWithCache.record(nativeEvent.nativeEvent.timestamp);
     };
-    tmp3 = callback(require(10204) /* TTIMeasurementView */.TTIMeasurementView, obj, "cached_messages_tti");
+    tmp3 = callback(require(10062) /* TTIMeasurementView */.TTIMeasurementView, obj, "cached_messages_tti");
   }
   const children = [tmp3, ];
   if (messages.hasFetched) {
@@ -27,7 +27,7 @@ export const ChatTTITracker = function ChatTTITracker(messages) {
       const displayLatestMessages = callback(9).displayLatestMessages;
       displayLatestMessages.record(nativeEvent.nativeEvent.timestamp);
     };
-    let tmp7 = callback(require(10204) /* TTIMeasurementView */.TTIMeasurementView, obj, "latest_messages_tti");
+    let tmp7 = callback(require(10062) /* TTIMeasurementView */.TTIMeasurementView, obj, "latest_messages_tti");
   } else {
     tmp7 = null;
     if (messages.ready) {

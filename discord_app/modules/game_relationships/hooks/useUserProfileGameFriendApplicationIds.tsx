@@ -1,6 +1,6 @@
-// === Module 12283: useUserProfileGameFriendApplicationIds ===
+// === Module 12187: useUserProfileGameFriendApplicationIds ===
 
-// Module 12283 (useUserProfileGameFriendApplicationIds)
+// Module 12187 (useUserProfileGameFriendApplicationIds)
 import noop from "noop";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

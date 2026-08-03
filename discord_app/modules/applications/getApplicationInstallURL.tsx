@@ -1,6 +1,6 @@
-// === Module 11430: getActivityLaunchURL ===
+// === Module 11320: getActivityLaunchURL ===
 
-// Module 11430 (getActivityLaunchURL)
+// Module 11320 (getActivityLaunchURL)
 import { Routes } from "ME";
 
 let result = require("set").fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");

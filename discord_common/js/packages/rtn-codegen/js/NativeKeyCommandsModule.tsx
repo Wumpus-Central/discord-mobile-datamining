@@ -1,6 +1,6 @@
-// === Module 13714: enforcing ===
+// === Module 13651: enforcing ===
 
-// Module 13714 (enforcing)
+// Module 13651 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("RTNKeyCommandsModule");

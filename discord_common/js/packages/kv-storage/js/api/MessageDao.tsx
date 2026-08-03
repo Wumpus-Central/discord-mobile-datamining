@@ -26,7 +26,7 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof MessageDao !== "error") {
+  if (typeof MessageDao !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(MessageDao.prototype);
@@ -105,7 +105,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   let closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof outer1_2 !== "error") {
+    if (typeof outer1_2 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(outer1_2.prototype);
@@ -115,7 +115,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
   const table = this.table;
-  if (typeof MessageDaoTransaction !== "error") {
+  if (typeof MessageDaoTransaction !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(MessageDaoTransaction.prototype);
@@ -132,7 +132,7 @@ class MessageDaoTransaction {
 }
 const prototype2 = MessageDaoTransaction.prototype;
 MessageDaoTransaction["fromTableTransaction"] = function fromTableTransaction(transaction) {
-  if (typeof MessageDaoTransaction !== "error") {
+  if (typeof MessageDaoTransaction !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(MessageDaoTransaction.prototype);
@@ -141,7 +141,7 @@ MessageDaoTransaction["fromTableTransaction"] = function fromTableTransaction(tr
 };
 MessageDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   const tableTransaction = new require(1912) /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
-  if (typeof MessageDaoTransaction !== "error") {
+  if (typeof MessageDaoTransaction !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(MessageDaoTransaction.prototype);

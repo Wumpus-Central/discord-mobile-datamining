@@ -1,6 +1,6 @@
-// === Module 12893: handleUserStoreUpdates ===
+// === Module 12830: handleUserStoreUpdates ===
 
-// Module 12893 (handleUserStoreUpdates)
+// Module 12830 (handleUserStoreUpdates)
 import comparator from "comparator";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MFALevels } from "ME";

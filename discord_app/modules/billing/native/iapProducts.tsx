@@ -1,6 +1,6 @@
-// === Module 7353: items ===
+// === Module 6358: items ===
 
-// Module 7353 (items)
+// Module 6358 (items)
 const result = require("set").fileFinishedImporting("modules/billing/native/iapProducts.tsx");
 const items = [{ identifier: "premium_tier_2_premium_guild_5_yearly", price: 274.99, currencySymbol: "$", currencyCode: "usd", priceString: "$274.99", countryCode: "US", downloadable: false, description: "Chat perks and 7 Boosts (Yearly Sub)", title: "Nitro + 5 Boosts (Yearly)", discounts: [] }, { identifier: "premium_tier_1_premium_guild_1_yearly", price: 84.99, currencySymbol: "$", currencyCode: "usd", priceString: "$84.99", countryCode: "US", downloadable: false, description: "Chat perks and 1 Boost (Yearly Sub)", title: "Nitro Classic + 1 Boost", discounts: [] }, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
 const items1 = [{ identifier: "premium_tier_0_yearly_likelihood", localizedPrice: "$0.00", numberOfPeriods: "1", type: "SUBSCRIPTION", paymentMode: "FREETRIAL", subscriptionPeriod: "MONTH", price: "0" }];

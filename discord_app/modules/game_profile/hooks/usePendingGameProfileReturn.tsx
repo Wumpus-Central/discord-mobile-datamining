@@ -1,6 +1,6 @@
-// === Module 11645: usePendingGameProfileReturn ===
+// === Module 11535: usePendingGameProfileReturn ===
 
-// Module 11645 (usePendingGameProfileReturn)
+// Module 11535 (usePendingGameProfileReturn)
 import noop from "noop";
 import map from "map";
 import getSimilarGames from "getSimilarGames";

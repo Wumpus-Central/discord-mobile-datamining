@@ -1,6 +1,6 @@
-// === Module 9652: questHomeHeroCtaFromServer ===
+// === Module 9505: questHomeHeroCtaFromServer ===
 
-// Module 9652 (questHomeHeroCtaFromServer)
+// Module 9505 (questHomeHeroCtaFromServer)
 const result = require("set").fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
 
 export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(cta) {

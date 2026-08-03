@@ -1,6 +1,6 @@
-// === Module 9717: useShouldHideMediaOptions ===
+// === Module 9570: useShouldHideMediaOptions ===
 
-// Module 9717 (useShouldHideMediaOptions)
+// Module 9570 (useShouldHideMediaOptions)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelFlags } from "set";
 

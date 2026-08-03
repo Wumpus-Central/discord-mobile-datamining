@@ -1,6 +1,6 @@
-// === Module 5698: NavigatorScreen ===
+// === Module 5636: NavigatorScreen ===
 
-// Module 5698 (NavigatorScreen)
+// Module 5636 (NavigatorScreen)
 import { jsxs } from "jsxProd";
 import importAllResult from "noop";
 
@@ -13,7 +13,7 @@ const memoResult = require("noop").memo((arg0) => {
   ({ screen, route } = arg0);
   const customNavbar = screen.customNavbar;
   ({ navigation, viewStyle } = arg0);
-  const designConfig = require(5699) /* designConfig */.designConfig;
+  const designConfig = require(5637) /* designConfig */.designConfig;
   const trackNavigatorScreenImpression = designConfig.useTrackNavigatorScreenImpression(screen, route);
   let customNavbarResult = null;
   if (null != customNavbar) {
@@ -22,7 +22,7 @@ const memoResult = require("noop").memo((arg0) => {
   const obj = { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null };
   const items = [customNavbarResult, screen.render(route.params, navigation)];
   obj[3] = items;
-  return jsxs(require(5700) /* PostponeRender */.PostponeRender, { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null });
+  return jsxs(require(5638) /* PostponeRender */.PostponeRender, { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null });
 });
 const result = require("designConfig").fileFinishedImporting("design/components/Navigator/native/NavigatorScreen.native.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 16367: useConnectGuardianGate ===
+// === Module 16303: useConnectGuardianGate ===
 
-// Module 16367 (useConnectGuardianGate)
+// Module 16303 (useConnectGuardianGate)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
@@ -56,7 +56,7 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
       }
     });
   }, []);
-  importDefault(4682)(callback);
+  importDefault(4620)(callback);
   if (tmp3) {
     obj = { state: "error" };
   } else if (tmp4[0]) {

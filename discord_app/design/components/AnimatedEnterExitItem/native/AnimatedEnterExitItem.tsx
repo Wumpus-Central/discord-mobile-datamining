@@ -1,6 +1,6 @@
-// === Module 8751: AnimatedRenderItem ===
+// === Module 8446: AnimatedRenderItem ===
 
-// Module 8751 (AnimatedRenderItem)
+// Module 8446 (AnimatedRenderItem)
 import noop from "noop";
 import jsxProd from "jsxProd";
 import { createElement } from "noop";
@@ -131,7 +131,7 @@ function renderAnimatedItem(key, arg1, state, cleanUp) {
 let closure_6 = { code: "function AnimatedEnterExitItemTsx1(){const{useReducedMotion,shouldAnimate,state,TransitionStates,exiting,visible,runOnJS,cleanUp,entering}=this.__closure;var _shouldAnimate;if(useReducedMotion)return{};if(((_shouldAnimate=shouldAnimate)===null||_shouldAnimate===void 0?void 0:_shouldAnimate.get())===false)return{};if(state===TransitionStates.YEETED&&exiting!=null){return exiting(visible.get(),function(finished){if(finished){runOnJS(cleanUp)();}});}if(entering!=null){return entering(visible.get());}return{};}" };
 let closure_7 = { code: "function AnimatedEnterExitItemTsx2(){const{state,TransitionStates,visible,hasExiting,useReducedMotion}=this.__closure;return state===TransitionStates.YEETED&&visible.get()===0&&(!hasExiting||useReducedMotion);}" };
 let closure_8 = { code: "function AnimatedEnterExitItemTsx3(hasExited,previous){const{runOnJS,cleanUp}=this.__closure;if(!hasExited||hasExited===previous)return;runOnJS(cleanUp)();}" };
-let result = require("module_4116").fileFinishedImporting("design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx");
+let result = require("module_4054").fileFinishedImporting("design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx");
 
 export default function AnimatedEnterExitItem(useReducedMotion) {
   useReducedMotion = useReducedMotion.useReducedMotion;

@@ -1,6 +1,6 @@
-// === Module 11119: usePendingFolderGuildIds ===
+// === Module 10998: usePendingFolderGuildIds ===
 
-// Module 11119 (usePendingFolderGuildIds)
+// Module 10998 (usePendingFolderGuildIds)
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

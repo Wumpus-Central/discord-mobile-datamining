@@ -1,14 +1,14 @@
-// === Module 11137: _sendGiftIntentGif ===
+// === Module 11020: _sendGiftIntentGif ===
 
-// Module 11137 (_sendGiftIntentGif)
+// Module 11020 (_sendGiftIntentGif)
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
-import module_9754 from "module_9754";
+import module_9607 from "module_9607";
 import { View } from "getSystemLocale";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import jsxProd from "module_4461";
+import jsxProd from "module_4399";
 import createCacheKey from "createCacheKey";
 
 let c10;

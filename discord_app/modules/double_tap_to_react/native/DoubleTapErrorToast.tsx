@@ -1,6 +1,6 @@
-// === Module 7877: DoubleTapErrorToastIcon ===
+// === Module 7758: DoubleTapErrorToastIcon ===
 
-// Module 7877 (DoubleTapErrorToastIcon)
+// Module 7758 (DoubleTapErrorToastIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { EmojiDisabledReasons } from "set";
@@ -12,7 +12,7 @@ function DoubleTapErrorToastIcon() {
   let obj = { style: createCacheKey().icon, "aria-hidden": true, children: null };
   obj = { color: null, size: "xs" };
   obj[0] = importDefault(712).colors.WHITE;
-  obj[2] = jsx(require(7878) /* XSmallBoldIcon */.XSmallBoldIcon, { color: null, size: "xs" });
+  obj[2] = jsx(require(7759) /* XSmallBoldIcon */.XSmallBoldIcon, { color: null, size: "xs" });
   return <View color={null} size="xs" />;
 }
 createCacheKey = { icon: null };
@@ -25,7 +25,7 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(arg0) {
   let importDefault;
   let require;
   ({ emojiName: require, reason: importDefault } = arg0);
-  let obj = importDefault(3956);
+  let obj = importDefault(3894);
   obj = {
     key: "EMOJI_DOUBLE_TAP_ERROR",
     icon() {

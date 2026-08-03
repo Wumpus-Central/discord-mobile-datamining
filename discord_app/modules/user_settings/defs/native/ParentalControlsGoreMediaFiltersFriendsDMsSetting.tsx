@@ -1,6 +1,6 @@
-// === Module 14775: pressable ===
+// === Module 14708: pressable ===
 
-// Module 14775 (pressable)
+// Module 14708 (pressable)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
 
@@ -12,22 +12,22 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const parentalControlledGoreContentSettings = require(13941) /* useParentalControlledExplicitContentSettings */.useParentalControlledGoreContentSettings();
+    const parentalControlledGoreContentSettings = require(13874) /* useParentalControlledExplicitContentSettings */.useParentalControlledGoreContentSettings();
     let goreContentFriendDm;
     if (parentalControlledGoreContentSettings != null) {
       goreContentFriendDm = parentalControlledGoreContentSettings.goreContentFriendDm;
     }
     let tmp5 = null;
     if (null != goreContentFriendDm) {
-      tmp5 = require(6956) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(goreContentFriendDm)();
-      const tmpResult = require(6956) /* redactionSettingToRenderedString */;
+      tmp5 = require(5865) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(goreContentFriendDm)();
+      const tmpResult = require(5865) /* redactionSettingToRenderedString */;
     }
     return tmp5;
   },
   onPress: function onGoreContentFriendsDmOnPress() {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      let obj = selectedTeenId(13945);
+      let obj = selectedTeenId(13878);
       obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl = selectedTeenId(1236).intl;
       obj[0] = intl.string(selectedTeenId(1236).t["16/3Bi"]);
@@ -41,8 +41,8 @@ createToggle = {
       obj[3] = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentFriendDm;
       const items = [selectedTeenId(1306).ExplicitContentRedaction.SHOW];
       obj[4] = items;
-      const result = selectedTeenId(13938).handleSensitiveMediaFilterPress(obj);
-      const obj2 = selectedTeenId(13938);
+      const result = selectedTeenId(13871).handleSensitiveMediaFilterPress(obj);
+      const obj2 = selectedTeenId(13871);
     }
   },
   unsearchable: true

@@ -1,6 +1,6 @@
-// === Module 10044: _markUnread ===
+// === Module 9899: _markUnread ===
 
-// Module 10044 (_markUnread)
+// Module 9899 (_markUnread)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import storeThread from "storeThread";
 import ensureGuildLoaded from "ensureGuildLoaded";

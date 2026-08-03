@@ -1,6 +1,6 @@
-// === Module 7052: FSI ===
+// === Module 5973: FSI ===
 
-// Module 7052 (FSI)
+// Module 5973 (FSI)
 const result = require("set").fileFinishedImporting("modules/bidi/IsolateString.tsx");
 
 export const FSI = "\u2068";

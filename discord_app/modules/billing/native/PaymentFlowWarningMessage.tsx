@@ -1,6 +1,6 @@
-// === Module 7320: PaymentFlowWarningMessage ===
+// === Module 12456: PaymentFlowWarningMessage ===
 
-// Module 7320 (PaymentFlowWarningMessage)
+// Module 12456 (PaymentFlowWarningMessage)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -25,7 +25,7 @@ export default function PaymentFlowWarningMessage(children) {
   obj[1] = importDefault(712).unsafe_rawColors.YELLOW_300;
   const items = [callback(require(1297) /* Button */.WarningCircle, obj), ];
   obj = { variant: "text-sm/medium", style: tmp.text, children: children.message };
-  items[1] = callback(require(4251) /* Text */.Text, obj);
+  items[1] = callback(require(4189) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

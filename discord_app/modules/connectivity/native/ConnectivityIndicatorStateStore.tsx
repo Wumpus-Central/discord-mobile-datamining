@@ -1,6 +1,6 @@
-// === Module 12822: updateState ===
+// === Module 12759: updateState ===
 
-// Module 12822 (updateState)
+// Module 12759 (updateState)
 import handleClearCaches from "handleClearCaches";
 import fetchFingerprint from "fetchFingerprint";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -36,7 +36,7 @@ function updateState() {
             const obj1 = { state: null, delayMs: null };
             obj1[0] = tmp13.WAITING_FOR_NETWORK;
             if (handleClearCaches.hasCache()) {
-              let obj15 = state(12823);
+              let obj15 = state(12760);
               let num2 = obj15.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
@@ -67,7 +67,7 @@ function updateState() {
             const obj5 = { state: null, delayMs: null };
             obj5[0] = tmp13.WAITING_FOR_NETWORK;
             if (handleClearCaches.hasCache()) {
-              let obj10 = state(12823);
+              let obj10 = state(12760);
               let num = obj10.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;

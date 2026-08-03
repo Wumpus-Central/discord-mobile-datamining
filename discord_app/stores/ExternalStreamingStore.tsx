@@ -1,6 +1,6 @@
-// === Module 10626: makeTwitchRequest ===
+// === Module 10488: makeTwitchRequest ===
 
-// Module 10626 (makeTwitchRequest)
+// Module 10488 (makeTwitchRequest)
 import sendRequest from "sendRequest";
 import closure_4 from "set";
 import initialize from "initialize";
@@ -134,8 +134,8 @@ prototype["start"] = function start() {
   if (!this._started) {
     self._started = true;
     if (closure_4.isFetching()) {
-      const response = importDefault(5061).fetch();
-      const obj = importDefault(5061);
+      const response = importDefault(4999).fetch();
+      const obj = importDefault(4999);
     } else {
       self._check();
     }

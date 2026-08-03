@@ -1,6 +1,6 @@
-// === Module 9615: useCanRemoveAllReactions ===
+// === Module 9468: useCanRemoveAllReactions ===
 
-// Module 9615 (useCanRemoveAllReactions)
+// Module 9468 (useCanRemoveAllReactions)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 

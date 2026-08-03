@@ -1,6 +1,6 @@
-// === Module 13820: UserProfilePrimaryGuildEditButton ===
+// === Module 13753: UserProfilePrimaryGuildEditButton ===
 
-// Module 13820 (UserProfilePrimaryGuildEditButton)
+// Module 13753 (UserProfilePrimaryGuildEditButton)
 import "set";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildTagBadgeSize } from "items";

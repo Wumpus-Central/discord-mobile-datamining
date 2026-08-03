@@ -1,6 +1,6 @@
-// === Module 10581: ChatViewWrapperBase ===
+// === Module 10443: ChatViewWrapperBase ===
 
-// Module 10581 (ChatViewWrapperBase)
+// Module 10443 (ChatViewWrapperBase)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,6 +14,6 @@ export default function ChatViewWrapperBase(arg0) {
   let style;
   ({ channelId, children, stickyHeader, style } = arg0);
   const obj = { children: null };
-  obj[0] = jsx(require(10580) /* StickyWrapper */.StickyWrapper, { header: stickyHeader, style, pointerEvents: importDefault(10579)(channelId), children });
-  return jsx(require(5568) /* Layer */.LayerScope, { children: null });
+  obj[0] = jsx(require(10442) /* StickyWrapper */.StickyWrapper, { header: stickyHeader, style, pointerEvents: importDefault(10441)(channelId), children });
+  return jsx(require(5506) /* Layer */.LayerScope, { children: null });
 };

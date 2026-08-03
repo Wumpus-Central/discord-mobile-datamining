@@ -1,6 +1,6 @@
-// === Module 9925: SocialLayerStorefrontGiftModal ===
+// === Module 9780: SocialLayerStorefrontGiftModal ===
 
-// Module 9925 (SocialLayerStorefrontGiftModal)
+// Module 9780 (SocialLayerStorefrontGiftModal)
 import "SocialLayerStorefrontGiftPurchaseSection";
 import addSku from "addSku";
 import ME from "ME";

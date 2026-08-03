@@ -1,6 +1,6 @@
-// === Module 7648: BuyNitroPurchaseButtonLegalDisclaimer ===
+// === Module 6665: BuyNitroPurchaseButtonLegalDisclaimer ===
 
-// Module 7648 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 6665 (BuyNitroPurchaseButtonLegalDisclaimer)
 import "noop";
 import ME from "ME";
 import { jsx } from "jsxProd";
@@ -36,8 +36,8 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       if (isDiscounted) {
         let obj = { buttonText: null, interval: null, cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
         obj[0] = ctaText;
-        obj[1] = importDefault(3901).formatInterval(item.interval);
-        const obj5 = importDefault(3901);
+        obj[1] = importDefault(3839).formatInterval(item.interval);
+        const obj5 = importDefault(3839);
         obj[2] = importDefault(1945).getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
         const obj6 = importDefault(1945);
         obj[3] = importDefault(1945).getArticleURL(constants.PAID_TERMS);
@@ -50,7 +50,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         obj = { paidURL: null, interval: null, ctaText: null };
         obj[0] = constants2.PAID_TERMS;
         const isAndroidResult = tmp3Result.isAndroid();
-        tmp3Result = tmp3(3901);
+        tmp3Result = tmp3(3839);
         obj[1] = tmp3Result.getIntervalStringAsNoun(item.interval);
         obj[2] = ctaText;
         formatResult = format(tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"], obj);
@@ -60,7 +60,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       const obj1 = { style: null, variant: "text-xxs/medium", children: null };
       obj1[0] = tmp.disclaimer;
       obj1[2] = formatResult;
-      jsx(tmp10(4251).Text, { style: null, variant: "text-xxs/medium", children: null });
+      jsx(tmp10(4189).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
     const tmp3Result1 = require(500) /* set */;
     t = tmp3(1236).t;
@@ -68,8 +68,8 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
     t = { paidURL: null, interval: null, cancelURL: null };
     t[0] = constants2.PAID_TERMS;
     const tmp14 = require(500) /* set */.isAndroid() ? t.tINI9V : t.ZWXtAj;
-    t[1] = require(3901) /* getPremiumPlanItem */.getIntervalStringAsNoun(item.interval);
-    const tmp3Result2 = require(3901) /* getPremiumPlanItem */;
+    t[1] = require(3839) /* getPremiumPlanItem */.getIntervalStringAsNoun(item.interval);
+    const tmp3Result2 = require(3839) /* getPremiumPlanItem */;
     item = importDefault(1945).getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
     t[2] = item;
     format(tmp14, t);

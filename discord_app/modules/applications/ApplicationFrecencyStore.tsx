@@ -1,6 +1,6 @@
-// === Module 8139: handleUserSettingsProtoStoreChange ===
+// === Module 5703: handleUserSettingsProtoStoreChange ===
 
-// Module 8139 (handleUserSettingsProtoStoreChange)
+// Module 5703 (handleUserSettingsProtoStoreChange)
 import participantFromServer from "participantFromServer";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { UserSettingsTypes } from "MAX_FAVORITES";

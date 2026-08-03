@@ -1,6 +1,6 @@
-// === Module 14324: NavigateForwardButton ===
+// === Module 14257: NavigateForwardButton ===
 
-// Module 14324 (NavigateForwardButton)
+// Module 14257 (NavigateForwardButton)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -23,10 +23,10 @@ export default function NavigateForwardButton(arg0) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, onPress, children: null };
   obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
-  const items = [callback(require(4251) /* Text */.Text, obj), ];
+  const items = [callback(require(4189) /* Text */.Text, obj), ];
   obj = { source: null };
-  obj[0] = importDefault(14325);
+  obj[0] = importDefault(14258);
   items[1] = callback(require(1297) /* Button */.Icon, obj);
   obj[2] = items;
-  return callback2(require(4783) /* PressableBase */.PressableHighlight, obj);
+  return callback2(require(4721) /* PressableBase */.PressableHighlight, obj);
 };

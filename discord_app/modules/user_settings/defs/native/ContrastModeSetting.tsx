@@ -1,6 +1,6 @@
-// === Module 14458: slider ===
+// === Module 14391: slider ===
 
-// Module 14458 (slider)
+// Module 14391 (slider)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
@@ -19,7 +19,7 @@ createToggle = {
     return jsx(require(1297) /* Button */.BetaTag, { size: null });
   },
   useProps: function useContrastSettingProps() {
-    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(13584).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(14415).CircleMinusIcon, {}), endIcon: callback2(callback(11432).CirclePlusIcon, {}) }), []);
+    return React.useMemo(() => ({ value: contrast.contrast, onSlidingComplete: callback(13521).setContrast, minimumValue: 0, maximumValue: 2, step: 0.1, startIcon: callback2(callback(14348).CircleMinusIcon, {}), endIcon: callback2(callback(11322).CirclePlusIcon, {}) }), []);
   }
 };
 createToggle = createToggle.createSlider(createToggle);

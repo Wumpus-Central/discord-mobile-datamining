@@ -1,6 +1,6 @@
-// === Module 10894: VolumeSlider ===
+// === Module 10786: VolumeSlider ===
 
-// Module 10894 (VolumeSlider)
+// Module 10786 (VolumeSlider)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources";
@@ -36,7 +36,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   ({ onValueChange: require, onResponderGrant } = maxTrackTintColor);
   const merged = Object.assign(maxTrackTintColor, Object.create(null));
   const tmp4 = callback2();
-  let obj = require(3959) /* map */;
+  let obj = require(3897) /* map */;
   let minTrackColor = merged.minTrackColor;
   if (minTrackColor == null) {
     minTrackColor = obj.useToken(importDefault(712).colors.BACKGROUND_BRAND);
@@ -44,9 +44,9 @@ export default function VolumeSlider(maxTrackTintColor) {
   obj = { style: items, children: null };
   items = [tmp4.volumerSlider, maxTrackTintColor.style];
   obj = { style: tmp4.leftIcon };
-  const items1 = [callback(require(10895) /* VoiceXIcon */.VoiceXIcon, obj), , ];
+  const items1 = [callback(require(10787) /* VoiceXIcon */.VoiceXIcon, obj), , ];
   const obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
-  let tmp5Result = tmp5(4703);
+  let tmp5Result = tmp5(4641);
   obj1[1] = tmp5Result.amplitudeToPerceptual(value);
   obj1[3] = maxVolume;
   obj1[4] = minTrackColor;
@@ -65,8 +65,8 @@ export default function VolumeSlider(maxTrackTintColor) {
     onResponderGrant = fn;
   }
   obj1[8] = onResponderGrant;
-  items1[1] = callback(importDefault(7787), obj1);
-  items1[2] = callback(require(4781) /* VoiceNormalIcon */.VoiceNormalIcon, { style: tmp4.rightIcon });
+  items1[1] = callback(importDefault(7664), obj1);
+  items1[2] = callback(require(4719) /* VoiceNormalIcon */.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj[1] = items1;
   return closure_6(View, obj);
 };

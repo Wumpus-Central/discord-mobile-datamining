@@ -1,6 +1,6 @@
-// === Module 16407: handleVoiceStateUpdates ===
+// === Module 16341: handleVoiceStateUpdates ===
 
-// Module 16407 (handleVoiceStateUpdates)
+// Module 16341 (handleVoiceStateUpdates)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";

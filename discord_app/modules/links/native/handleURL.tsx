@@ -1,7 +1,7 @@
-// === Module 3947: sanitizeURLPart ===
+// === Module 3885: sanitizeURLPart ===
 
-// Module 3947 (sanitizeURLPart)
-import module_3949 from "module_3949";
+// Module 3885 (sanitizeURLPart)
+import module_3887 from "module_3887";
 import { Linking } from "handleSupportedURL";
 import setContent from "setContent";
 import { WebBrowserType } from "ME";

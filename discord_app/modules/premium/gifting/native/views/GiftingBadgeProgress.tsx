@@ -1,6 +1,6 @@
-// === Module 9985: GiftingBadgeProgressBar ===
+// === Module 9840: GiftingBadgeProgressBar ===
 
-// Module 9985 (GiftingBadgeProgressBar)
+// Module 9840 (GiftingBadgeProgressBar)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { getSingleRequirementThreshold as closure_4 } from "map";
@@ -68,7 +68,7 @@ export default function GiftingBadgeProgress(title) {
     obj = { icon: null, size: null };
     obj[0] = currentTier.simple_icon_url;
     obj[1] = iconSize;
-    tmp8 = callback2(importDefault(9865), obj);
+    tmp8 = callback2(importDefault(9720), obj);
   }
   const items = [tmp8, , ];
   obj = { style: tmp.content, children: null };
@@ -76,7 +76,7 @@ export default function GiftingBadgeProgress(title) {
   if (tmp12) {
     const obj1 = { variant: "text-md/semibold", children: null };
     obj1[1] = title;
-    tmp12 = callback2(require(4251) /* Text */.Text, obj1);
+    tmp12 = callback2(require(4189) /* Text */.Text, obj1);
   }
   const items1 = [tmp12, callback2(GiftingBadgeProgressBar, { percent: num2 }), ];
   const obj2 = { style: tmp.labels, children: null };
@@ -87,8 +87,8 @@ export default function GiftingBadgeProgress(title) {
     const obj4 = { count: null, threshold: null };
     obj4[0] = progress;
     obj4[1] = tmp2;
-    obj3[2] = intl.format(importDefault(2351).iIpfQe, obj4);
-    tmp16Result = tmp16(require(4251) /* Text */.Text, obj3);
+    obj3[2] = intl.format(importDefault(2321).iIpfQe, obj4);
+    tmp16Result = tmp16(require(4189) /* Text */.Text, obj3);
   }
   obj2[1] = tmp16Result;
   items1[2] = callback2(View, obj2);
@@ -103,7 +103,7 @@ export default function GiftingBadgeProgress(title) {
     const obj5 = { icon: null, size: null };
     obj5[0] = nextTier.simple_icon_url;
     obj5[1] = iconSize;
-    tmp16Result = tmp16(importDefault(9865), obj5);
+    tmp16Result = tmp16(importDefault(9720), obj5);
   }
   items[2] = tmp16Result;
   obj[1] = items;

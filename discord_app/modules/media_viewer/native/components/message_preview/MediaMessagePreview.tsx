@@ -1,6 +1,6 @@
-// === Module 12430: MeasureMessage ===
+// === Module 12332: MeasureMessage ===
 
-// Module 12430 (MeasureMessage)
+// Module 12332 (MeasureMessage)
 import _slicedToArray from "_slicedToArray";
 import DISCORD_EPOCH from "DISCORD_EPOCH";
 import get_ActivityIndicator from "useReactionPermissions";

@@ -1,6 +1,6 @@
-// === Module 11903: SkipHeaderButton ===
+// === Module 11801: SkipHeaderButton ===
 
-// Module 11903 (SkipHeaderButton)
+// Module 11801 (SkipHeaderButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -31,5 +31,5 @@ export default function SkipHeaderButton(label) {
   obj.labelStyle = items;
   obj.label = label;
   obj.accessibilityLabel = label;
-  return jsx(require(9300) /* GenericHeaderTitle */.HeaderTextButton, {});
+  return jsx(require(9127) /* GenericHeaderTitle */.HeaderTextButton, {});
 };

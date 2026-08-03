@@ -1,6 +1,6 @@
-// === Module 6041: BumpingFistsSpotIllustration ===
+// === Module 6905: BumpingFistsSpotIllustration ===
 
-// Module 6041 (BumpingFistsSpotIllustration)
+// Module 6905 (BumpingFistsSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx");
@@ -24,7 +24,7 @@ export const BumpingFistsSpotIllustration = function BumpingFistsSpotIllustratio
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6042);
+  obj[0] = importDefault(6906);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const BumpingFistsSpotIllustration = function BumpingFistsSpotIllustratio
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

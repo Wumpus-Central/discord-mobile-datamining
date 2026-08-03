@@ -1,6 +1,6 @@
-// === Module 15492: serverNameHook ===
+// === Module 15425: serverNameHook ===
 
-// Module 15492 (serverNameHook)
+// Module 15425 (serverNameHook)
 import noop from "noop";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import initialize from "initialize";
@@ -9,7 +9,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function serverNameHook(children) {
-  return jsx(require(4251) /* Text */.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
+  return jsx(require(4189) /* Text */.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
 }
 class RoleSubscriptionsUnavailableNotice {
   constructor(arg0) {
@@ -27,15 +27,15 @@ function PurchasePage(arg0) {
   let gatedChannelId;
   let guildId;
   ({ guildId, gatedChannelId } = arg0);
-  let obj = importDefault(7560);
+  let obj = importDefault(6575);
   const storeFront = obj.useNativeIAPPayments().storeFront;
   let country;
   if (storeFront != null) {
     country = storeFront.country;
   }
   obj = { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: null };
-  obj[4] = jsx(importDefault(15494), { guildId, gatedChannelId });
-  return jsx(require(14316) /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: null });
+  obj[4] = jsx(importDefault(15427), { guildId, gatedChannelId });
+  return jsx(require(14249) /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: null });
 }
 const result = require("initialize").fileFinishedImporting("modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx");
 

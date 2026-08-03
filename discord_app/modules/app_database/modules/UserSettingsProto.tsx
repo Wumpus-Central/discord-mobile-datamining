@@ -1,6 +1,6 @@
-// === Module 6845: getAll ===
+// === Module 5750: getAll ===
 
-// Module 6845 (getAll)
+// Module 5750 (getAll)
 import databaseName from "databaseName";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import fetchFingerprint from "fetchFingerprint";

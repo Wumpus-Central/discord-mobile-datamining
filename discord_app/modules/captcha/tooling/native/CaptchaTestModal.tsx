@@ -1,6 +1,6 @@
-// === Module 14867: CaptchaTestScreen ===
+// === Module 14800: CaptchaTestScreen ===
 
-// Module 14867 (CaptchaTestScreen)
+// Module 14800 (CaptchaTestScreen)
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -227,5 +227,5 @@ export default function CaptchaTestModal() {
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
-  return callback(require(5636) /* NavigationStack */.Navigator, obj);
+  return callback(require(5574) /* NavigationStack */.Navigator, obj);
 };

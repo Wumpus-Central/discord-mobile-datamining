@@ -1,6 +1,6 @@
-// === Module 12490: getIconURL ===
+// === Module 12392: getIconURL ===
 
-// Module 12490 (getIconURL)
+// Module 12392 (getIconURL)
 import "createExecutable";
 import importDefaultResult1 from "getPlatformUserUrl";
 

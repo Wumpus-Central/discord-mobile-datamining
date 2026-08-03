@@ -1,6 +1,6 @@
-// === Module 10293: GroupDmMemberCount ===
+// === Module 10154: GroupDmMemberCount ===
 
-// Module 10293 (GroupDmMemberCount)
+// Module 10154 (GroupDmMemberCount)
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import sortActivity from "sortActivity";
@@ -46,7 +46,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(589);
-  return channel(10296).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(10157).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 let c3 = importAllResult;
 ({ ChannelTypes: metroImportAll, StatusTypes: c9 } = ME);

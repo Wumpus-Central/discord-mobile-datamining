@@ -1,6 +1,6 @@
-// === Module 9606: EmojiPickerCategoriesBackspaceItem ===
+// === Module 9459: EmojiPickerCategoriesBackspaceItem ===
 
-// Module 9606 (EmojiPickerCategoriesBackspaceItem)
+// Module 9459 (EmojiPickerCategoriesBackspaceItem)
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
 import { NODE_MARGIN } from "ME";
@@ -16,9 +16,9 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   let dependencyMap;
   let React;
   ({ style, iconStyle } = onBackspace);
-  const interval = new onBackspace(4140).Interval();
+  const interval = new onBackspace(4078).Interval();
   dependencyMap = React.useRef(interval);
-  const delayedCall = new onBackspace(4140).DelayedCall(500, () => {
+  const delayedCall = new onBackspace(4078).DelayedCall(500, () => {
     const current = noop.current;
     current.cancel();
     const current2 = ref.current;
@@ -54,6 +54,6 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   obj[5] = callback1;
   obj[6] = callback;
   const items2 = [iconStyle, { opacity: 0.5 }];
-  obj[7] = jsx(onBackspace(9607).BackspaceIcon, { style: items2 });
+  obj[7] = jsx(onBackspace(9460).BackspaceIcon, { style: items2 });
   return <Pressable top={NODE_MARGIN} bottom={NODE_MARGIN} right={NODE_MARGIN} left={NODE_MARGIN} />;
 };

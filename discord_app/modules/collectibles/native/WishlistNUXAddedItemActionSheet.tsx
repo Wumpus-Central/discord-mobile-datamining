@@ -1,6 +1,6 @@
-// === Module 8855: WishlistNUXAddedItemActionSheet ===
+// === Module 8678: WishlistNUXAddedItemActionSheet ===
 
-// Module 8855 (WishlistNUXAddedItemActionSheet)
+// Module 8678 (WishlistNUXAddedItemActionSheet)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import { View } from "getSystemLocale";

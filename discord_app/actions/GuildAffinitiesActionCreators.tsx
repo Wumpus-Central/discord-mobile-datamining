@@ -1,6 +1,6 @@
-// === Module 8492: fetchGuildAffinities ===
+// === Module 8185: fetchGuildAffinities ===
 
-// Module 8492 (fetchGuildAffinities)
+// Module 8185 (fetchGuildAffinities)
 import { Endpoints } from "ME";
 
 const result = require("dispatcher").fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");

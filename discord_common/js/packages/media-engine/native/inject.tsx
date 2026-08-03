@@ -1,6 +1,6 @@
-// === Module 4304: inject ===
+// === Module 4242: inject ===
 
-// Module 4304 (inject)
+// Module 4242 (inject)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/inject.tsx");
 
 export function inject(arg0) {

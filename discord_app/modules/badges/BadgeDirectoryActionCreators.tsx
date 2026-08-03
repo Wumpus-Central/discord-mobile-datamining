@@ -1,6 +1,6 @@
-// === Module 8447: urlUserId ===
+// === Module 8116: urlUserId ===
 
-// Module 8447 (urlUserId)
+// Module 8116 (urlUserId)
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -132,9 +132,9 @@ function _fetchBadgeDirectory() {
               if (2 === tmp7) {
                 c6 = 0;
                 let closure_9 = closure_5;
-                obj5 = obj1(6958);
+                obj5 = obj1(5870);
                 const obj6 = { name: null, tags: null };
-                obj6[0] = callback(6963).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
+                obj6[0] = callback(5875).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
                 const items = [authStore, "result:failure", "catalog_state:unknown", closure_5];
                 obj6[1] = items;
                 const _Date2 = Date;
@@ -158,9 +158,9 @@ function _fetchBadgeDirectory() {
                 items1[2] = "catalog_state:" + str;
                 items1[3] = closure_5;
                 c8 = items1;
-                obj = obj1(6958);
+                obj = obj1(5870);
                 const obj8 = { name: null, tags: null };
-                obj8[0] = callback(6963).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
+                obj8[0] = callback(5875).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
                 obj8[1] = c8;
                 const _Date = Date;
                 obj.distribution(obj8, Date.now() - c6);

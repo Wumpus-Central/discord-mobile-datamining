@@ -1,6 +1,6 @@
-// === Module 14918: ScrollBenchmark ===
+// === Module 14851: ScrollBenchmark ===
 
-// Module 14918 (ScrollBenchmark)
+// Module 14851 (ScrollBenchmark)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,7 +14,7 @@ export default function ScrollBenchmark(subLabel) {
   if (str === undefined) {
     str = "Records frame times while you scroll the content below.";
   }
-  const tmp = importDefault(14915)(subLabel.onResult);
+  const tmp = importDefault(14848)(subLabel.onResult);
   ({ monitoring, start } = tmp);
   let str2 = "Start scroll monitor";
   if (monitoring) {
@@ -30,5 +30,5 @@ export default function ScrollBenchmark(subLabel) {
     start = tmp.stop;
   }
   obj[4] = start;
-  return jsx(require(5286) /* TableRowInner */.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
+  return jsx(require(5224) /* TableRowInner */.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
 };

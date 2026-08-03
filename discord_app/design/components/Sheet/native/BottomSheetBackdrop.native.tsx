@@ -1,6 +1,6 @@
-// === Module 5566: BottomSheetBackdrop ===
+// === Module 5504: BottomSheetBackdrop ===
 
-// Module 5566 (BottomSheetBackdrop)
+// Module 5504 (BottomSheetBackdrop)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -49,7 +49,7 @@ const memoResult = importAllResult.memo((animatedIndex) => {
       close();
     } else if ("collapse" === tmp3) {
       snapToIndex(num3);
-    } else if (typeof tmp3 !== "SENTRY_RELEASE") {
+    } else if (typeof tmp3 !== "__REMOTEDEV__") {
       snapToIndex(tmp3);
     }
   }, items);

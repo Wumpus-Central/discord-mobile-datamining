@@ -1,6 +1,6 @@
-// === Module 7137: updateFromGuild ===
+// === Module 6085: updateFromGuild ===
 
-// Module 7137 (updateFromGuild)
+// Module 6085 (updateFromGuild)
 import { ALL_CHANNEL_TYPES } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Store } from "initialize";

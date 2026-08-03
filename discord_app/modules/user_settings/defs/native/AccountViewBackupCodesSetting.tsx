@@ -1,6 +1,6 @@
-// === Module 13912: route ===
+// === Module 13845: route ===
 
-// Module 13912 (route)
+// Module 13845 (route)
 import noop from "noop";
 import ME from "ME";
 import createToggle from "createToggle";
@@ -65,7 +65,7 @@ createToggle = {
       let intl3 = callback(1236).intl;
       obj[5] = intl3.string(callback(1236).t.PDTjLN);
       obj[6] = callback(1297).ButtonColors.BRAND;
-      callback2(13913)(obj);
+      callback2(13846)(obj);
       return false;
     }, []);
   },
@@ -74,7 +74,7 @@ createToggle = {
 createToggle = {
   route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
   getComponent() {
-    return require(13860) /* CodeRow */.default;
+    return require(13793) /* CodeRow */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

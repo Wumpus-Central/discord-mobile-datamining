@@ -1,6 +1,6 @@
-// === Module 10977: throttleStateFn ===
+// === Module 10877: throttleStateFn ===
 
-// Module 10977 (throttleStateFn)
+// Module 10877 (throttleStateFn)
 import noop from "noop";
 
 const require = arg1;
@@ -40,7 +40,7 @@ export const useThrottledState = (stateFromStores) => {
   }
   let current2;
   let ref1;
-  if (typeof useThrottledFunction !== "error") {
+  if (typeof useThrottledFunction !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   _require = tmp;

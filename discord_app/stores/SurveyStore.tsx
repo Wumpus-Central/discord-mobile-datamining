@@ -1,6 +1,6 @@
-// === Module 9455: fetchSurveyIfNeeded ===
+// === Module 9283: fetchSurveyIfNeeded ===
 
-// Module 9455 (fetchSurveyIfNeeded)
+// Module 9283 (fetchSurveyIfNeeded)
 import handleInviteData from "handleInviteData";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -30,7 +30,7 @@ function fetchSurveyIfNeeded() {
   }
   if (!tmp) {
     c18 = true;
-    obj = require(9456) /* overrideSurvey */;
+    obj = require(9284) /* overrideSurvey */;
     obj.surveyFetch(obj.surveyOverride, true);
   }
 }
@@ -223,7 +223,7 @@ function setSurvey(survey) {
   const value = Storage.get(closure_11);
   let tmp9 = null == value;
   if (!tmp9) {
-    obj = importDefault(3837)();
+    obj = importDefault(3775)();
     tmp9 = obj.diff(value, "day") < 7;
   }
   let tmp11 = null;
@@ -694,7 +694,7 @@ obj = {
       const hiddenSurveys = obj.hiddenSurveys;
       delete tmp[tmp2];
     }
-    obj = require(9456) /* overrideSurvey */;
+    obj = require(9284) /* overrideSurvey */;
     obj.surveyFetch(obj.surveyOverride, true);
   },
   PUSH_NOTIFICATION_CLICK: function handlePushNotificationClick() {

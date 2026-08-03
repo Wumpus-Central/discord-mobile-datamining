@@ -1,6 +1,6 @@
-// === Module 7232: trackMemberApplicationViewed ===
+// === Module 6180: trackMemberApplicationViewed ===
 
-// Module 7232 (trackMemberApplicationViewed)
+// Module 6180 (trackMemberApplicationViewed)
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { AnalyticEvents } from "ME";

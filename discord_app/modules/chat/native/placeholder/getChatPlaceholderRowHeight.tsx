@@ -1,6 +1,6 @@
-// === Module 11850: PX_24 ===
+// === Module 11747: PX_24 ===
 
-// Module 11850 (PX_24)
+// Module 11747 (PX_24)
 const PX_24 = require("Themes").space.PX_24;
 const tmp2 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];
 let closure_1 = tmp2;

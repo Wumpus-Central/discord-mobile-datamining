@@ -1,7 +1,7 @@
-// === Module 10948: useStageActionBarAnimation ===
+// === Module 10848: useStageActionBarAnimation ===
 
-// Module 10948 (useStageActionBarAnimation)
-import { Easing } from "module_4116";
+// Module 10848 (useStageActionBarAnimation)
+import { Easing } from "module_4054";
 
 let obj = { duration: 250, easing: null };
 obj[1] = Easing.bezier(0.66, 0, 0.2, 1);

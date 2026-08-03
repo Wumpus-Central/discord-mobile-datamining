@@ -1,6 +1,6 @@
-// === Module 5243: SafeAreaPaddingView ===
+// === Module 5181: SafeAreaPaddingView ===
 
-// Module 5243 (SafeAreaPaddingView)
+// Module 5181 (SafeAreaPaddingView)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

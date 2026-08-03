@@ -1,6 +1,6 @@
-// === Module 7960: useIsEligibleSenderForReferralProgram ===
+// === Module 7842: useIsEligibleSenderForReferralProgram ===
 
-// Module 7960 (useIsEligibleSenderForReferralProgram)
+// Module 7842 (useIsEligibleSenderForReferralProgram)
 import emitChanges from "emitChanges";
 
 const require = arg1;
@@ -11,8 +11,8 @@ export const useIsEligibleSenderForReferralProgram = function useIsEligibleSende
   if (result === undefined) {
     flag = false;
   }
-  const maybeFetchReferralsRemaining = require(7961) /* useMaybeFetchReferralsRemaining */.useMaybeFetchReferralsRemaining(flag);
-  const obj = require(7961) /* useMaybeFetchReferralsRemaining */;
+  const maybeFetchReferralsRemaining = require(7843) /* useMaybeFetchReferralsRemaining */.useMaybeFetchReferralsRemaining(flag);
+  const obj = require(7843) /* useMaybeFetchReferralsRemaining */;
   const items = [emitChanges];
   return require(589) /* initialize */.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 };

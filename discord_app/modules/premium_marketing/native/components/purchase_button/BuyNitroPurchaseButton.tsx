@@ -1,9 +1,9 @@
-// === Module 7646: BuyNitroPurchaseButton ===
+// === Module 6663: BuyNitroPurchaseButton ===
 
-// Module 7646 (BuyNitroPurchaseButton)
+// Module 6663 (BuyNitroPurchaseButton)
 import _slicedToArray from "_slicedToArray";
 import BuyNitroPurchaseButtonLegalDisclaimer from "BuyNitroPurchaseButtonLegalDisclaimer";
-import { View } from "module_4595";
+import { View } from "module_4533";
 import updateProduct from "updateProduct";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "set";

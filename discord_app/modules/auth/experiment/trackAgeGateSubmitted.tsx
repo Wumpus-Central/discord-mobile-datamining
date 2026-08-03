@@ -1,6 +1,6 @@
-// === Module 14957: trackAgeGateSubmitted ===
+// === Module 14890: trackAgeGateSubmitted ===
 
-// Module 14957 (trackAgeGateSubmitted)
+// Module 14890 (trackAgeGateSubmitted)
 import { AnalyticEvents } from "ME";
 
 const result = require("t").fileFinishedImporting("modules/auth/experiment/trackAgeGateSubmitted.tsx");

@@ -1,6 +1,6 @@
-// === Module 8713: useMobileTenureBadgeImages ===
+// === Module 8408: useMobileTenureBadgeImages ===
 
-// Module 8713 (useMobileTenureBadgeImages)
+// Module 8408 (useMobileTenureBadgeImages)
 import { TieredTenureBadge } from "GuildFeatures";
 
 let obj = {};

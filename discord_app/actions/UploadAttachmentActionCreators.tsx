@@ -1,6 +1,6 @@
-// === Module 8156: dispatcher ===
+// === Module 6189: dispatcher ===
 
-// Module 8156 (dispatcher)
+// Module 6189 (dispatcher)
 const result = require("set").fileFinishedImporting("actions/UploadAttachmentActionCreators.tsx");
 
 export default {

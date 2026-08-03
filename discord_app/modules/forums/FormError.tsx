@@ -1,6 +1,6 @@
-// === Module 9731: FormSubmitErrorType ===
+// === Module 9584: FormSubmitErrorType ===
 
-// Module 9731 (FormSubmitErrorType)
+// Module 9584 (FormSubmitErrorType)
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", EmptyTags: 2, [2]: "EmptyTags", ApiValidation: 3, [3]: "ApiValidation" };
 const result = require("set").fileFinishedImporting("modules/forums/FormError.tsx");
 
@@ -26,7 +26,7 @@ export const makeEmptyMessageError = function makeEmptyMessageError() {
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj = require(7233) /* getAutomodErrorMessageFromErrorResponse */;
+  let obj = require(6181) /* getAutomodErrorMessageFromErrorResponse */;
   id = undefined;
   if (id != null) {
     id = id.id;

@@ -1,6 +1,6 @@
-// === Module 14398: HAPPENING_NOW_CARD_MARGIN_RIGHT ===
+// === Module 14331: HAPPENING_NOW_CARD_MARGIN_RIGHT ===
 
-// Module 14398 (HAPPENING_NOW_CARD_MARGIN_RIGHT)
+// Module 14331 (HAPPENING_NOW_CARD_MARGIN_RIGHT)
 import "noop";
 import { View } from "get ActivityIndicator";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
@@ -105,10 +105,10 @@ export default function HappeningNowCard(IconComponent) {
   if (panelVariant == null) {
     panelVariant = false;
   }
-  const tmp5Result = closure_21(width, panelVariant, importDefault(7550)(), tmp4);
+  const tmp5Result = closure_21(width, panelVariant, importDefault(6564)(), tmp4);
   IconComponent = IconComponent.IconComponent;
   const tmp = importDefault;
-  const tmp3 = importDefault(7550)();
+  const tmp3 = importDefault(6564)();
   const tmp5 = closure_21;
   ({ accessibilityLabel, accessibilityHint } = IconComponent);
   let obj = { variant: "secondary", style: items, onPress: IconComponent.onPress, border: "faint", shadow: null, onLongPress: null, disabled: null, accessibilityLabel: null, accessibilityHint: null, children: null };
@@ -146,7 +146,7 @@ export default function HappeningNowCard(IconComponent) {
   }
   items1[1] = tmp10Result;
   obj[9] = items1;
-  return closure_19(require(5288) /* PressableCard */.Card, obj);
+  return closure_19(require(5226) /* PressableCard */.Card, obj);
 };
 export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNameFont) {
   let children;
@@ -175,7 +175,7 @@ export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNam
   obj[4] = items;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return closure_18(require(4251) /* Text */.Text, obj);
+  return closure_18(require(4189) /* Text */.Text, obj);
 };
 export const HappeningNowCardSubtitle = function HappeningNowCardSubtitle(variant) {
   variant = variant.variant;
@@ -196,5 +196,5 @@ export const HappeningNowCardSubtitle = function HappeningNowCardSubtitle(varian
   obj[1] = str2;
   const merged1 = Object.assign(merged);
   obj.children = variant.children;
-  return closure_18(require(4251) /* Text */.Text, obj);
+  return closure_18(require(4189) /* Text */.Text, obj);
 };

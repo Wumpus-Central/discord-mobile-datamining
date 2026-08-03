@@ -1,6 +1,6 @@
-// === Module 8088: NewBadge ===
+// === Module 7971: NewBadge ===
 
-// Module 8088 (NewBadge)
+// Module 7971 (NewBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { PremiumTypes } from "GuildFeatures";
@@ -38,7 +38,7 @@ export const NewBadge = function NewBadge(style) {
   obj = { variant: "text-sm/bold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.y2b7CA);
-  obj[1] = callback(require(4251) /* Text */.Text, obj);
+  obj[1] = callback(require(4189) /* Text */.Text, obj);
   return callback(View, obj);
 };
 export const LockBadge = function LockBadge(isNew) {
@@ -55,22 +55,22 @@ export const LockBadge = function LockBadge(isNew) {
     obj[1] = items;
     obj = { size: "xxs", color: null };
     obj[1] = importDefault(712).colors.WHITE;
-    const items1 = [callback(require(4775) /* LockIcon */.LockIcon, obj), ];
+    const items1 = [callback(require(4713) /* LockIcon */.LockIcon, obj), ];
     const obj1 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
     obj1[2] = tmp.badgeTextUppercase;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.y2b7CA);
-    items1[1] = callback(require(4251) /* Text */.Text, obj1);
+    items1[1] = callback(require(4189) /* Text */.Text, obj1);
     obj[2] = items1;
-    let tmp7 = callback2(importDefault(8089), obj);
-    const tmp11 = importDefault(8089);
+    let tmp7 = callback2(importDefault(7972), obj);
+    const tmp11 = importDefault(7972);
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp.lockIconBadge, style];
     obj[0] = items2;
     const obj2 = { size: "sm", color: null };
     obj2[1] = importDefault(712).colors.WHITE;
-    obj[1] = callback(require(4775) /* LockIcon */.LockIcon, obj2);
+    obj[1] = callback(require(4713) /* LockIcon */.LockIcon, obj2);
     tmp7 = callback(View, obj);
   }
   return tmp7;
@@ -89,22 +89,22 @@ export const PremiumBadge = function PremiumBadge(isNew) {
     obj[1] = items;
     obj = { size: "xxs", color: null };
     obj[1] = importDefault(712).colors.WHITE;
-    const items1 = [callback(require(7613) /* NitroWheelIcon */.NitroWheelIcon, obj), ];
+    const items1 = [callback(require(6630) /* NitroWheelIcon */.NitroWheelIcon, obj), ];
     const obj1 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
     obj1[2] = tmp.badgeTextUppercase;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.y2b7CA);
-    items1[1] = callback(require(4251) /* Text */.Text, obj1);
+    items1[1] = callback(require(4189) /* Text */.Text, obj1);
     obj[2] = items1;
-    let tmp7 = callback2(importDefault(8089), obj);
-    const tmp11 = importDefault(8089);
+    let tmp7 = callback2(importDefault(7972), obj);
+    const tmp11 = importDefault(7972);
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp.lockIconBadge, style];
     obj[0] = items2;
     const obj2 = { size: "sm", color: null };
     obj2[1] = importDefault(712).colors.WHITE;
-    obj[1] = callback(require(7613) /* NitroWheelIcon */.NitroWheelIcon, obj2);
+    obj[1] = callback(require(6630) /* NitroWheelIcon */.NitroWheelIcon, obj2);
     tmp7 = callback(View, obj);
   }
   return tmp7;
@@ -116,7 +116,7 @@ export const LimitedTimeBadge = function LimitedTimeBadge(style) {
   obj = { variant: "text-xs/bold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t["h/uBCR"]);
-  obj[1] = callback(require(4251) /* Text */.Text, obj);
+  obj[1] = callback(require(4189) /* Text */.Text, obj);
   return callback(View, obj);
 };
 export const IconBadgePill = function IconBadgePill(isDark) {
@@ -154,7 +154,7 @@ export const IconTextBadge = function IconTextBadge(isDark) {
     str2 = "text-overlay-dark";
   }
   obj = { variant: "text-xs/bold", color: str2, style: tmp.badgeTextUppercase, children: label };
-  items1[1] = closure_5(require(4251) /* Text */.Text, obj);
+  items1[1] = closure_5(require(4189) /* Text */.Text, obj);
   obj[1] = items1;
   return closure_6(View, obj);
 };

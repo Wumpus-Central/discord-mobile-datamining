@@ -1,6 +1,6 @@
-// === Module 8752: retryMeasurements ===
+// === Module 8447: retryMeasurements ===
 
-// Module 8752 (retryMeasurements)
+// Module 8447 (retryMeasurements)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function retryMeasurements() {

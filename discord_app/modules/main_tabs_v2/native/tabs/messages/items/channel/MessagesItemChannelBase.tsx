@@ -1,8 +1,8 @@
-// === Module 15028: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
+// === Module 15048: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
 
-// Module 15028 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
+// Module 15048 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
 import importAllResult from "openChannelLongPressActionSheet";
-import { View } from "module_4265";
+import { View } from "module_4203";
 import sortActivity from "sortActivity";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import upsertRelationship from "upsertRelationship";
@@ -96,7 +96,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = _undefined.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "Array", activities: "ct" };
+      obj = { status: "Array", activities: "HermesInternal" };
     }
     return obj;
   });

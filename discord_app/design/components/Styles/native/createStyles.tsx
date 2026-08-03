@@ -1,6 +1,6 @@
-// === Module 4255: createCacheKey ===
+// === Module 4193: createCacheKey ===
 
-// Module 4255 (createCacheKey)
+// Module 4193 (createCacheKey)
 import _slicedToArray from "_slicedToArray";
 import { processColor } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -60,7 +60,7 @@ function parseThemedStyles(obj, enabledExperiments) {
       let internal = importDefault(712).internal;
       if (internal.isSemanticColor(obj2)) {
         let tmp16 = require;
-        let obj3 = require(3960) /* getSemanticColorContextFromThemeContext */;
+        let obj3 = require(3898) /* getSemanticColorContextFromThemeContext */;
         let semanticColorContextFromThemeContext = obj3.getSemanticColorContextFromThemeContext(arg1);
         let internal4 = tmp6(712).internal;
         obj[key10022] = internal4.resolveSemanticColor(theme, obj2, semanticColorContextFromThemeContext);
@@ -68,7 +68,7 @@ function parseThemedStyles(obj, enabledExperiments) {
       } else {
         if (tmp) {
           let tmp8 = obj2;
-          if (typeof obj2 !== "ge") {
+          if (typeof obj2 !== "__FORMATJS_LISTFORMAT_DATA__") {
             tmp8 = obj2;
             if ("#" === obj2[0]) {
               let str = "background";
@@ -126,7 +126,7 @@ export const experimental_createToken = function experimental_createToken(arg0) 
 export const createStyles = function createStyles(createCacheKey) {
   let closure_0 = createCacheKey;
   const map = new Map();
-  let closure_2 = typeof createCacheKey === "error";
+  let closure_2 = typeof createCacheKey === "fileFinishedImporting";
   return () => {
     let items = [...arguments];
     let themeContext;
@@ -217,7 +217,7 @@ export const createLegacyClassComponentStyles = function createLegacyClassCompon
   };
 };
 export const useLegacyClassComponentStyles = function useLegacyClassComponentStyles(createCacheKey) {
-  return createCacheKey(require(3967) /* ManaContext */.useThemeContext());
+  return createCacheKey(require(3905) /* ManaContext */.useThemeContext());
 };
 export const createStyleProperties = function createStyleProperties(createCacheKey) {
   let closure_0 = createCacheKey;
@@ -233,7 +233,7 @@ export const createStyleProperties = function createStyleProperties(createCacheK
       return value;
     } else {
       let applyResult = createCacheKey;
-      if (typeof createCacheKey !== "HAS_APPLICATION") {
+      if (typeof createCacheKey !== "disabledUntil") {
         const items2 = [];
         HermesBuiltin.arraySpread(items, 0);
         applyResult = HermesBuiltin.apply(items2, undefined);
@@ -301,7 +301,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
         return value;
       } else {
         let applyResult1 = createCacheKey;
-        if (typeof createCacheKey !== "HAS_APPLICATION") {
+        if (typeof createCacheKey !== "disabledUntil") {
           const items2 = [];
           arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
           applyResult1 = HermesBuiltin.apply(items2, undefined);

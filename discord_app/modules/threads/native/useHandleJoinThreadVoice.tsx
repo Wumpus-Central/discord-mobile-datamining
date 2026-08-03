@@ -1,6 +1,6 @@
-// === Module 9322: useHandleJoinThreadVoice ===
+// === Module 9149: useHandleJoinThreadVoice ===
 
-// Module 9322 (useHandleJoinThreadVoice)
+// Module 9149 (useHandleJoinThreadVoice)
 import patchThread from "patchThread";
 import storeThread from "storeThread";
 

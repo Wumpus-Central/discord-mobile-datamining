@@ -1,6 +1,6 @@
-// === Module 10069: enforcing ===
+// === Module 9926: enforcing ===
 
-// Module 10069 (enforcing)
+// Module 9926 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeFontModule");

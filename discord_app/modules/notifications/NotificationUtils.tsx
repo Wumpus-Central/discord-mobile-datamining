@@ -1,6 +1,6 @@
-// === Module 10463: getMuteTimeOptions ===
+// === Module 10324: getMuteTimeOptions ===
 
-// Module 10463 (getMuteTimeOptions)
+// Module 10324 (getMuteTimeOptions)
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserNotificationSettings } from "ME";
 import MAX_FAVORITES from "MAX_FAVORITES";

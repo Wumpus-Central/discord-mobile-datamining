@@ -1,13 +1,13 @@
-// === Module 9513: fetchTopEmojis ===
+// === Module 9354: fetchTopEmojis ===
 
-// Module 9513 (fetchTopEmojis)
+// Module 9354 (fetchTopEmojis)
 import { Endpoints } from "ME";
 
 const result = require("dispatcher").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisActionCreators.tsx");
 
 export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   const _require = guildId;
-  let obj = _require(4090);
+  let obj = _require(4028);
   if (!obj.isPseudoGuildId(guildId)) {
     obj = { type: "TOP_EMOJIS_FETCH", guildId: null };
     obj[1] = guildId;

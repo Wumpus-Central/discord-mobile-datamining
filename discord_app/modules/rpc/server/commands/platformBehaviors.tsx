@@ -1,6 +1,6 @@
-// === Module 13645: sum ===
+// === Module 13582: sum ===
 
-// Module 13645 (sum)
+// Module 13582 (sum)
 const result = require("set").fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
 
 export default {

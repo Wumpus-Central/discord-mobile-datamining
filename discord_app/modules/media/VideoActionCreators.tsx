@@ -1,6 +1,6 @@
-// === Module 15916: updateVideoSize ===
+// === Module 15852: updateVideoSize ===
 
-// Module 15916 (updateVideoSize)
+// Module 15852 (updateVideoSize)
 const result = require("set").fileFinishedImporting("modules/media/VideoActionCreators.tsx");
 
 export const updateVideoSize = function updateVideoSize(streamId, dimensions, sharedValue2) {

@@ -1,13 +1,13 @@
-// === Module 12022: useShouldShowPremiumProfileFrameEA ===
+// === Module 11926: useShouldShowPremiumProfileFrameEA ===
 
-// Module 12022 (useShouldShowPremiumProfileFrameEA)
+// Module 11926 (useShouldShowPremiumProfileFrameEA)
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx");
 
 export default function useShouldShowPremiumProfileFrameEA(location) {
-  let isProfileFramesEnabled = require(8428) /* apexExperiment */.useIsProfileFramesEnabled(location);
-  importDefault(8887);
+  let isProfileFramesEnabled = require(8097) /* apexExperiment */.useIsProfileFramesEnabled(location);
+  importDefault(8710);
   if (isProfileFramesEnabled) {
-    isProfileFramesEnabled = tmp5 === require(8887) /* apexExperiment */.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+    isProfileFramesEnabled = tmp5 === require(8710) /* apexExperiment */.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
   return isProfileFramesEnabled;
 };

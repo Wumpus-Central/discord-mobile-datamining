@@ -1,6 +1,6 @@
-// === Module 12879: getSkuIdForChannel ===
+// === Module 12816: getSkuIdForChannel ===
 
-// Module 12879 (getSkuIdForChannel)
+// Module 12816 (getSkuIdForChannel)
 import { Store } from "initialize";
 
 let closure_0 = {};

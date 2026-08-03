@@ -1,6 +1,6 @@
-// === Module 13120: onClose ===
+// === Module 13057: onClose ===
 
-// Module 13120 (onClose)
+// Module 13057 (onClose)
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -10,7 +10,7 @@ import { jsx } from "jsxProd";
 
 let require = arg1;
 function onClose() {
-  importDefault(4461).popWithKey(SHARE_SCREEN_MODAL_KEY);
+  importDefault(4399).popWithKey(SHARE_SCREEN_MODAL_KEY);
 }
 let c9 = new require("ensureGuildLoaded")("ShareScreenModal");
 const tmp2 = new require("ensureGuildLoaded")("ShareScreenModal");

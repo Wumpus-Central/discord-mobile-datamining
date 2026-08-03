@@ -1,6 +1,6 @@
-// === Module 9716: hasForLaterPremiumType ===
+// === Module 9569: hasForLaterPremiumType ===
 
-// Module 9716 (hasForLaterPremiumType)
+// Module 9569 (hasForLaterPremiumType)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 

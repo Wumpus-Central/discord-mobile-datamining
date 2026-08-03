@@ -1,6 +1,6 @@
-// === Module 8555: useCollapsibleFloatingActionButtonState ===
+// === Module 8248: useCollapsibleFloatingActionButtonState ===
 
-// Module 8555 (useCollapsibleFloatingActionButtonState)
+// Module 8248 (useCollapsibleFloatingActionButtonState)
 import noop from "noop";
 
 const require = arg1;
@@ -9,7 +9,7 @@ let result = require("set").fileFinishedImporting("design/components/experimenta
 
 export const useCollapsibleFloatingActionButtonState = function useCollapsibleFloatingActionButtonState() {
   const obj = { collapseText: null };
-  obj[0] = require(4116).useSharedValue(0);
+  obj[0] = require(4054).useSharedValue(0);
   return obj;
 };
 export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState, UNDETERMINED) {

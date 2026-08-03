@@ -1,6 +1,6 @@
-// === Module 13930: route ===
+// === Module 13863: route ===
 
-// Module 13930 (route)
+// Module 13863 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -30,7 +30,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SENSITIVE_MEDIA_FILTERS,
   getComponent() {
-    return require(13931) /* UserSettingsSensitiveContentFilters */.default;
+    return require(13864) /* UserSettingsSensitiveContentFilters */.default;
   }
 };
 const route = createToggle.createRoute(obj);

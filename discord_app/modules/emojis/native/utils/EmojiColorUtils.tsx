@@ -1,6 +1,6 @@
-// === Module 15073: _getEmojiCacheKey ===
+// === Module 15093: _getEmojiCacheKey ===
 
-// Module 15073 (_getEmojiCacheKey)
+// Module 15093 (_getEmojiCacheKey)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 

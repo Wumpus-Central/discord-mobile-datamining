@@ -1,6 +1,6 @@
-// === Module 11038: start ===
+// === Module 10916: start ===
 
-// Module 11038 (start)
+// Module 10916 (start)
 import { AnalyticEvents } from "ME";
 import set from "set";
 
@@ -31,7 +31,7 @@ prototype["finish"] = function finish(channelId) {
         const seenChannelIds = tmp10.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
-      let obj = require(6823) /* isClickstreamEnabled */;
+      let obj = require(5729) /* isClickstreamEnabled */;
       obj = { load_duration_ms: null, were_messages_cached: null, is_first_load: null };
       obj[0] = diff;
       obj[1] = channelId.areMessagesCached;

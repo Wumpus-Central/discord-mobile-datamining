@@ -1,6 +1,6 @@
-// === Module 13189: initialize ===
+// === Module 13126: initialize ===
 
-// Module 13189 (initialize)
+// Module 13126 (initialize)
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 
@@ -45,7 +45,7 @@ const guildPopoutStore = new GuildPopoutStore(require("dispatcher"), {
   },
   GUILD_POPOUT_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
     guildId = guildId.guildId;
-    let obj = require(5855) /* _startLurking */;
+    let obj = require(6692) /* _startLurking */;
     obj = {};
     const discoverableGuild = obj.makeDiscoverableGuild(guildId.guild);
     const merged = Object.assign(closure_4.guilds[guildId]);

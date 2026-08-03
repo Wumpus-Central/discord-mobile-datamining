@@ -1,6 +1,6 @@
-// === Module 11077: asString ===
+// === Module 10955: asString ===
 
-// Module 11077 (asString)
+// Module 10955 (asString)
 import ME from "ME";
 import initialize from "initialize";
 import isProtocolRegistered from "isProtocolRegistered";
@@ -90,7 +90,7 @@ function _getSpotifyMetadataFromActivity() {
               throw error;
             } else {
               let context_uri;
-              if (typeof lib.context_uri !== "ge") {
+              if (typeof lib.context_uri !== "__FORMATJS_LISTFORMAT_DATA__") {
                 context_uri = lib.context_uri;
               }
               obj = { context_uri: null, album_id: null, artist_ids: null, type: null, button_urls: null };
@@ -159,7 +159,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (observedAppRunning.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11079).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(10957).setActiveDevice(socket.accountId, device.id);
         obj = { socket: null, device: null };
         obj[0] = socket;
         obj[1] = device;
@@ -228,7 +228,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
     if (socket.isPremium) {
       let resolved = Promise.resolve();
     } else {
-      const profile = socket(11079).getProfile(socket.accountId, socket.accessToken);
+      const profile = socket(10957).getProfile(socket.accountId, socket.accessToken);
       resolved = profile.then(() => {
         if (!socket.isPremium) {
           const _Error = Error;
@@ -236,7 +236,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
           return Promise.reject(error);
         }
       });
-      const obj = socket(11079);
+      const obj = socket(10957);
     }
     return resolved;
   }

@@ -1,6 +1,6 @@
-// === Module 11306: ForumPostPinIcon ===
+// === Module 11194: ForumPostPinIcon ===
 
-// Module 11306 (ForumPostPinIcon)
+// Module 11194 (ForumPostPinIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -20,7 +20,7 @@ export default function ForumPostPinIcon(containerStyle) {
   let obj = { style: items, children: null };
   items = [tmp.pin, containerStyle.containerStyle];
   obj = { source: null, style: null };
-  obj[0] = importDefault(11307);
+  obj[0] = importDefault(11195);
   obj[1] = tmp.pinIcon;
   obj[1] = jsx(require(1297) /* Button */.Icon, { source: null, style: null });
   return <View source={null} style={null} />;

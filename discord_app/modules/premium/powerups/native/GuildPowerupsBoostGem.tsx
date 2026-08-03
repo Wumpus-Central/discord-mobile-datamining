@@ -1,6 +1,6 @@
-// === Module 11733: GuildPowerupsBoostGem ===
+// === Module 11626: GuildPowerupsBoostGem ===
 
-// Module 11733 (GuildPowerupsBoostGem)
+// Module 11626 (GuildPowerupsBoostGem)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -19,6 +19,6 @@ export default function GuildPowerupsBoostGem(arg0) {
   const obj = { style: null, children: null };
   const items = [callback().boostGemContainer, style];
   obj[0] = items;
-  obj[1] = jsx(importDefault(11734), { width: gemWidth, height: gemHeight });
+  obj[1] = jsx(importDefault(11627), { width: gemWidth, height: gemHeight });
   return <View style={null}>{null}</View>;
 };

@@ -1,6 +1,6 @@
-// === Module 5887: getCurrentVoiceChannel ===
+// === Module 10795: getCurrentVoiceChannel ===
 
-// Module 5887 (getCurrentVoiceChannel)
+// Module 10795 (getCurrentVoiceChannel)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateVoiceState from "updateVoiceState";

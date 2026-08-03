@@ -1,13 +1,13 @@
-// === Module 11852: ? ===
+// === Module 11749: ? ===
 
-// Module 11852
+// Module 11749
 import apexExperiment from "apexExperiment";
 
 if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = require("module_11853");
+  let importDefaultResult = require("module_11750");
 } else {
-  importDefaultResult = require("module_11854");
+  importDefaultResult = require("module_11751");
 }
-const result = require("module_11854").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
+const result = require("module_11751").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 
 export default importDefaultResult;

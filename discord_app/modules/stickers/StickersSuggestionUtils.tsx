@@ -1,6 +1,6 @@
-// === Module 4924: removePunctuation ===
+// === Module 4862: removePunctuation ===
 
-// Module 4924 (removePunctuation)
+// Module 4862 (removePunctuation)
 const re0 = /(!|\.|;|,|-|—|–|\?|"|')/g;
 const re1 = /(\n|\t|\s)/g;
 const result = require("set").fileFinishedImporting("modules/stickers/StickersSuggestionUtils.tsx");

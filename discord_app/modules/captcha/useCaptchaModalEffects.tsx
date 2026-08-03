@@ -1,6 +1,6 @@
-// === Module 16193: useCaptchaModalEffects ===
+// === Module 16129: useCaptchaModalEffects ===
 
-// Module 16193 (useCaptchaModalEffects)
+// Module 16129 (useCaptchaModalEffects)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 
@@ -16,7 +16,7 @@ export default function useCaptchaModalEffects(arg0) {
   }
   let dependencyMap;
   dependencyMap = React.useRef(true);
-  analyticsType(4682)(() => () => {
+  analyticsType(4620)(() => () => {
     if (ref.current) {
       if (closure_0 != null) {
         tmp(outer1_0(outer1_2[3]).CaptchaError.CANCEL);

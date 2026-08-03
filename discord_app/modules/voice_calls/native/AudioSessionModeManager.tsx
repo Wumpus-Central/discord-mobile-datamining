@@ -1,6 +1,6 @@
-// === Module 16221: handleAVAudioSessionMode ===
+// === Module 16157: handleAVAudioSessionMode ===
 
-// Module 16221 (handleAVAudioSessionMode)
+// Module 16157 (handleAVAudioSessionMode)
 import participantFromServer from "participantFromServer";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import reset from "reset";
@@ -39,7 +39,7 @@ function handleAVAudioSessionMode() {
           VIDEO = AVAudioSessionMode.LISTEN;
           obj2 = tmp9;
         }
-        obj = require(16222) /* handleVoiceChannelSelect */;
+        obj = require(16158) /* handleVoiceChannelSelect */;
       }
     }
     VIDEO = VoiceEngine.AVAudioSessionMode.VIDEO;

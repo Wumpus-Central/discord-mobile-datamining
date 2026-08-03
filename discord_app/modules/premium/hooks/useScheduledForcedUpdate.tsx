@@ -1,6 +1,6 @@
-// === Module 12613: useScheduledForcedUpdate ===
+// === Module 12520: useScheduledForcedUpdate ===
 
-// Module 12613 (useScheduledForcedUpdate)
+// Module 12520 (useScheduledForcedUpdate)
 import noop from "noop";
 
 const require = arg1;

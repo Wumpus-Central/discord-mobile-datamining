@@ -1,6 +1,6 @@
-// === Module 3976: isThemeLight ===
+// === Module 3914: isThemeLight ===
 
-// Module 3976 (isThemeLight)
+// Module 3914 (isThemeLight)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/utils/ThemeUtils.tsx");
 
 export const isThemeLight = function isThemeLight(arg0) {

@@ -1,6 +1,6 @@
-// === Module 10926: useDeafStates ===
+// === Module 10826: useDeafStates ===
 
-// Module 10926 (useDeafStates)
+// Module 10826 (useDeafStates)
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";

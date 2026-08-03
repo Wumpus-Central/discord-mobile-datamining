@@ -1,6 +1,6 @@
-// === Module 3885: storeThread ===
+// === Module 3823: storeThread ===
 
-// Module 3885 (storeThread)
+// Module 3823 (storeThread)
 import { ALL_CHANNEL_TYPES } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";

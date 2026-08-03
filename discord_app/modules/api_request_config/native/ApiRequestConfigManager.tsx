@@ -1,6 +1,6 @@
-// === Module 16751: updateApiRequestConfig ===
+// === Module 16685: updateApiRequestConfig ===
 
-// Module 16751 (updateApiRequestConfig)
+// Module 16685 (updateApiRequestConfig)
 import { NativeModules } from "get ActivityIndicator";
 import fetchFingerprint from "fetchFingerprint";
 import "initialize";

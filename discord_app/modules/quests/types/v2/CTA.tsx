@@ -1,6 +1,6 @@
-// === Module 7082: questCtaConfigFromServer ===
+// === Module 6003: questCtaConfigFromServer ===
 
-// Module 7082 (questCtaConfigFromServer)
+// Module 6003 (questCtaConfigFromServer)
 const result = require("set").fileFinishedImporting("modules/quests/types/v2/CTA.tsx");
 
 export const questCtaConfigFromServer = function questCtaConfigFromServer(cta_config) {

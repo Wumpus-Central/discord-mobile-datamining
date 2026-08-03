@@ -1,6 +1,6 @@
-// === Module 11721: experiment ===
+// === Module 11614: experiment ===
 
-// Module 11721 (experiment)
+// Module 11614 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable Game Server Pricing", config: { enabled: true } }];
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/game_server/experim
 
 export const GameServerPricingExperiment = experiment;
 export const useIsGameServerPricingEnabled = function useIsGameServerPricingEnabled(guildId, useGuildPowerupsChannelListPopout) {
-  let obj = require(4166) /* experiment */;
+  let obj = require(4104) /* experiment */;
   let enabled = obj.useGameServerEnabled(guildId, useGuildPowerupsChannelListPopout);
   obj = { guildId, location: useGuildPowerupsChannelListPopout };
   if (enabled) {

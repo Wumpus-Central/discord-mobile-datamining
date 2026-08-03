@@ -1,6 +1,6 @@
-// === Module 5070: MAX_STAGE_TOPIC_LENGTH ===
+// === Module 5008: MAX_STAGE_TOPIC_LENGTH ===
 
-// Module 5070 (MAX_STAGE_TOPIC_LENGTH)
+// Module 5008 (MAX_STAGE_TOPIC_LENGTH)
 import { HelpdeskArticles } from "ME";
 
 const result = require("combined").fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");

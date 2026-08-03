@@ -1,8 +1,8 @@
-// === Module 6352: vanityUrl ===
+// === Module 7216: vanityUrl ===
 
-// Module 6352 (vanityUrl)
+// Module 7216 (vanityUrl)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftingTier5SmallBadge-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/4051d76fef08b6beaadbed9cad514d7311d4f855be8eb9dee80b6e977fb97e82.png";
+export default "https://cdn.discordapp.com/assets/content/f8daa5cf212ad9bc956c61973bc4300f563a68a471c72d235891978ceaf26367.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/GiftingTier5SmallBadge-2x.png";
-export const metadata = { fileBytes: 2141 };
+export const metadata = { fileBytes: 2369 };

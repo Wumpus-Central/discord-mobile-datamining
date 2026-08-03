@@ -1,6 +1,6 @@
-// === Module 15059: isActivityPermanentCustomStatus ===
+// === Module 15079: isActivityPermanentCustomStatus ===
 
-// Module 15059 (isActivityPermanentCustomStatus)
+// Module 15079 (isActivityPermanentCustomStatus)
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/custom_status/utils/isActivityPermanentCustomStatus.tsx");

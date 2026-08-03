@@ -1,6 +1,6 @@
-// === Module 7233: getAutomodErrorMessageFromErrorResponse ===
+// === Module 6181: getAutomodErrorMessageFromErrorResponse ===
 
-// Module 7233 (getAutomodErrorMessageFromErrorResponse)
+// Module 6181 (getAutomodErrorMessageFromErrorResponse)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AbortCodes } from "ME";
 import set from "getSystemLocale";

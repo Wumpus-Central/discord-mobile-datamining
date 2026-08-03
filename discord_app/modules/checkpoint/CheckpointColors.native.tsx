@@ -1,6 +1,6 @@
-// === Module 10077: items ===
+// === Module 9934: items ===
 
-// Module 10077 (items)
+// Module 9934 (items)
 import { CheckpointPersonas } from "CheckpointPersonas";
 
 let obj = {};

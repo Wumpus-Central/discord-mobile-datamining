@@ -1,6 +1,6 @@
-// === Module 5578: GuildOnboardingConnectionPrompt ===
+// === Module 5516: GuildOnboardingConnectionPrompt ===
 
-// Module 5578 (GuildOnboardingConnectionPrompt)
+// Module 5516 (GuildOnboardingConnectionPrompt)
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get_ActivityIndicator from "isChattableChannel";
 import get from "get";

@@ -1,6 +1,6 @@
-// === Module 7808: createFakeSharedValue ===
+// === Module 7685: createFakeSharedValue ===
 
-// Module 7808 (createFakeSharedValue)
+// Module 7685 (createFakeSharedValue)
 const result = require("set").fileFinishedImporting("modules/reanimated/ReanimatedHelperTypes.tsx");
 
 export function createFakeSharedValue(COLLAPSED) {

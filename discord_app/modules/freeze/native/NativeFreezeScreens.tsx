@@ -1,6 +1,6 @@
-// === Module 15016: NativeFreezeScreens ===
+// === Module 15041: NativeFreezeScreens ===
 
-// Module 15016 (NativeFreezeScreens)
+// Module 15041 (NativeFreezeScreens)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";

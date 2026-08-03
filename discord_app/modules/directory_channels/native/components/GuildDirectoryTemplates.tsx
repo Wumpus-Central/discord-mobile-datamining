@@ -1,6 +1,6 @@
-// === Module 10230: GuildTemplatesItem ===
+// === Module 10088: GuildTemplatesItem ===
 
-// Module 10230 (GuildTemplatesItem)
+// Module 10088 (GuildTemplatesItem)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import DirectoryEntryTypes from "DirectoryEntryTypes";

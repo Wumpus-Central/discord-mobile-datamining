@@ -1,6 +1,6 @@
-// === Module 12972: HdrCaptureMode ===
+// === Module 12909: HdrCaptureMode ===
 
-// Module 12972 (HdrCaptureMode)
+// Module 12909 (HdrCaptureMode)
 import ApexExperiment from "ApexExperiment";
 
 let obj = { Never: "never", Always: "always", PermittedDevicesOnly: "permittedDevicesOnly" };

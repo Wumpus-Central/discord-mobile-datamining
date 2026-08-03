@@ -1,6 +1,6 @@
-// === Module 10409: _setUserStatus ===
+// === Module 10270: _setUserStatus ===
 
-// Module 10409 (_setUserStatus)
+// Module 10270 (_setUserStatus)
 import getSystemLocale from "getSystemLocale";
 import initialize from "initialize";
 import filterPlayingActivities from "filterPlayingActivities";
@@ -141,7 +141,7 @@ function _setUserStatus() {
                 return formatToPlainStringResult;
               }
             })(callback, str);
-            const AccessibilityAnnouncer = callback(4070).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = callback(4008).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(constants);
             if (!globalStats) {
               obj = { next_status: null, prev_status: null };

@@ -1,6 +1,6 @@
-// === Module 12884: getIconURL ===
+// === Module 12821: getIconURL ===
 
-// Module 12884 (getIconURL)
+// Module 12821 (getIconURL)
 import "createExecutable";
 
 const require = arg1;
@@ -17,7 +17,7 @@ class TwitchApplicationRecord extends tmp2 {
   }
 }
 TwitchApplicationRecord.prototype["getIconURL"] = function getIconURL() {
-  return importDefault(4937).get("twitch").icon.lightPNG;
+  return importDefault(4875).get("twitch").icon.lightPNG;
 };
 
 export default TwitchApplicationRecord;

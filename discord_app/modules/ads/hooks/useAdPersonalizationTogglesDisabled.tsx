@@ -1,6 +1,6 @@
-// === Module 14737: useAdPersonalizationTogglesDisabled ===
+// === Module 14670: useAdPersonalizationTogglesDisabled ===
 
-// Module 14737 (useAdPersonalizationTogglesDisabled)
+// Module 14670 (useAdPersonalizationTogglesDisabled)
 import reset from "reset";
 
 const require = arg1;

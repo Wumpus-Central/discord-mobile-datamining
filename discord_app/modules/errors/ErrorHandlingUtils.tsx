@@ -1,6 +1,6 @@
-// === Module 5853: items ===
+// === Module 5855: items ===
 
-// Module 5853 (items)
+// Module 5855 (items)
 import set from "set";
 
 const items = [, , ];
@@ -24,7 +24,7 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
       }
       let tmp4 = true === crossDomain;
       if (!tmp4) {
-        let tmp5 = !("status" in aPIError) || typeof aPIError.status === "SENTRY_RELEASE";
+        let tmp5 = !("status" in aPIError) || typeof aPIError.status === "__REMOTEDEV__";
         if (!tmp5) {
           let tmp6 = 0 !== aPIError.status;
           if (tmp6) {
@@ -37,7 +37,7 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
         }
         let tmp9 = !tmp5;
         if (tmp5) {
-          let tmp10 = !("code" in aPIError) || typeof aPIError.code === "SENTRY_RELEASE";
+          let tmp10 = !("code" in aPIError) || typeof aPIError.code === "__REMOTEDEV__";
           if (!tmp10) {
             tmp10 = !items.includes(aPIError.code);
           }

@@ -1,6 +1,6 @@
-// === Module 15770: ChannelSettingsChangeDefaultForumLayout ===
+// === Module 15705: ChannelSettingsChangeDefaultForumLayout ===
 
-// Module 15770 (ChannelSettingsChangeDefaultForumLayout)
+// Module 15705 (ChannelSettingsChangeDefaultForumLayout)
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
 import { View } from "registerAsset";

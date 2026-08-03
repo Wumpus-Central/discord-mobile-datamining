@@ -1,6 +1,6 @@
-// === Module 15881: HistorySeparator ===
+// === Module 15817: HistorySeparator ===
 
-// Module 15881 (HistorySeparator)
+// Module 15817 (HistorySeparator)
 import importAllResult from "renderCategoryItem";
 import get_ActivityIndicator from "transitionToChannel";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -52,7 +52,7 @@ let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
     guildId(outer1_2[9]).transitionToGuild(guildId);
   }, items1);
   obj = { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
-  obj[1] = callback(onGuildSelect(15882), obj);
+  obj[1] = callback(onGuildSelect(15818), obj);
   return callback(closure_5, obj);
 });
 let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId) {
@@ -91,7 +91,7 @@ let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId
   }
   if (type === ChannelTypes.DM) {
     if (null != stateFromStores1) {
-      obj = { style: null, user: null, guildId: "Array", size: false };
+      obj = { style: null, user: null, guildId: "Array", size: true };
       obj[0] = tmp.privateChannelIcon;
       obj[1] = stateFromStores1;
       obj[3] = tmp2(tmp3[12]).AvatarSizes.LARGE_48;

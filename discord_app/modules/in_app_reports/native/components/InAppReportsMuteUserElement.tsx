@@ -1,6 +1,6 @@
-// === Module 12525: MuteUserElement ===
+// === Module 12427: MuteUserElement ===
 
-// Module 12525 (MuteUserElement)
+// Module 12427 (MuteUserElement)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

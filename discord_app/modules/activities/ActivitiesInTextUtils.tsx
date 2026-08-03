@@ -1,6 +1,6 @@
-// === Module 8136: isActivityInTextSupportedForChannel ===
+// === Module 8018: isActivityInTextSupportedForChannel ===
 
-// Module 8136 (isActivityInTextSupportedForChannel)
+// Module 8018 (isActivityInTextSupportedForChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

@@ -1,6 +1,6 @@
-// === Module 6838: next ===
+// === Module 5743: next ===
 
-// Module 6838 (next)
+// Module 5743 (next)
 class Chained {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -29,7 +29,7 @@ const result = require("set").fileFinishedImporting("modules/app_database/util/I
 
 export const chain = function chain() {
   const items = [...arguments];
-  if (typeof Chained !== "error") {
+  if (typeof Chained !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(Chained.prototype);

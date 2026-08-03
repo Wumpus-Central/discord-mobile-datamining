@@ -1,6 +1,6 @@
-// === Module 7718: AgeVerificationWebViewScreen ===
+// === Module 6761: AgeVerificationWebViewScreen ===
 
-// Module 7718 (AgeVerificationWebViewScreen)
+// Module 6761 (AgeVerificationWebViewScreen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

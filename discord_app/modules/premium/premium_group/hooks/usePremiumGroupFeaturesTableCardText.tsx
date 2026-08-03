@@ -1,6 +1,6 @@
-// === Module 12629: usePremiumGroupFeaturesTableCardText ===
+// === Module 12536: usePremiumGroupFeaturesTableCardText ===
 
-// Module 12629 (usePremiumGroupFeaturesTableCardText)
+// Module 12536 (usePremiumGroupFeaturesTableCardText)
 import reset from "reset";
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
 
@@ -12,7 +12,7 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/premium
 
 export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
   let obj = { useCachedData: true, fetch: arg0 === require(1892) /* create */.PremiumSubscriptionGroupRole.MEMBER };
-  const tmp4 = importDefault(12630)(obj);
+  const tmp4 = importDefault(12537)(obj);
   let obj1 = require(589) /* initialize */;
   const items = [reset];
   const stateFromStores = obj1.useStateFromStores(items, () => premiumGroupSubscription.getPremiumGroupSubscription());
@@ -20,8 +20,8 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     return null;
   } else {
     if (arg0 === tmp(1892).PremiumSubscriptionGroupRole.PRIMARY) {
-      let priceString = tmp(7954).getPriceString(stateFromStores, { withIntervals: true });
-      const tmpResult = tmp(7954);
+      let priceString = tmp(7836).getPriceString(stateFromStores, { withIntervals: true });
+      const tmpResult = tmp(7836);
     } else {
       priceString = null;
       if (null != tmp4) {
@@ -29,7 +29,7 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
         obj = { primaryName: null, premiumGroupProductName: null };
         obj[0] = tmp4;
         obj[1] = callback();
-        priceString = intl.format(tmp3(2837).Nu9LNm, obj);
+        priceString = intl.format(tmp3(2807).Nu9LNm, obj);
       }
     }
     let str = "...";
@@ -41,10 +41,10 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
       obj = { helpCenterLink: null, premiumGroupProductName: null };
       obj[0] = closure_5;
       obj[1] = callback();
-      let formatResult = intl3.format(tmp3(2837)["+R/K74"], obj);
+      let formatResult = intl3.format(tmp3(2807)["+R/K74"], obj);
     } else {
       const intl2 = tmp(1236).intl;
-      const tmp3Result = tmp3(2837);
+      const tmp3Result = tmp3(2807);
       obj1 = { helpCenterLink: null };
       obj1[0] = closure_5;
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj1);

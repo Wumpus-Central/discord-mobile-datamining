@@ -1,6 +1,6 @@
-// === Module 7848: set ===
+// === Module 7727: set ===
 
-// Module 7848 (set)
+// Module 7727 (set)
 import isSubscriptionGated from "isSubscriptionGated";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -44,7 +44,7 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(require("dispatc
             }
           }
         }
-        obj2 = require(7849) /* useIsFirstMessageInMediaPost */;
+        obj2 = require(7728) /* useIsFirstMessageInMediaPost */;
       }
     }
   },

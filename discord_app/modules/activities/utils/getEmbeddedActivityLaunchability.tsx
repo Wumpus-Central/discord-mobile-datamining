@@ -1,6 +1,6 @@
-// === Module 11014: getEmbeddedActivityLaunchability ===
+// === Module 11151: getEmbeddedActivityLaunchability ===
 
-// Module 11014 (getEmbeddedActivityLaunchability)
+// Module 11151 (getEmbeddedActivityLaunchability)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -56,7 +56,7 @@ function getEmbeddedActivityLaunchability(arg0) {
     } else {
       return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS;
     }
-    obj2 = require(10680) /* useIsActivitiesEnabledForCurrentPlatform */;
+    obj2 = require(10547) /* useIsActivitiesEnabledForCurrentPlatform */;
   } else {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }

@@ -1,6 +1,6 @@
-// === Module 7135: initialize ===
+// === Module 6083: initialize ===
 
-// Module 7135 (initialize)
+// Module 6083 (initialize)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Store } from "initialize";
 

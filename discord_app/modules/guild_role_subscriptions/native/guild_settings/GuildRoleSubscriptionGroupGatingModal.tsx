@@ -1,6 +1,6 @@
-// === Module 16672: GuildRoleSubscriptionGroupGatingModal ===
+// === Module 16606: GuildRoleSubscriptionGroupGatingModal ===
 
-// Module 16672 (GuildRoleSubscriptionGroupGatingModal)
+// Module 16606 (GuildRoleSubscriptionGroupGatingModal)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import usePriceTiers from "usePriceTiers";
@@ -22,6 +22,6 @@ export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
   obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.csJWVI);
   obj[3] = constants.GROUP;
   const merged = Object.assign(arg0);
-  obj.children = jsx(importDefault(16652), { isFullServerGating: tmp2, onChange: tmp3 });
-  return jsx(importDefault(16662), { title: null, description: null, canProceedToNextStep: true, nextStep: null });
+  obj.children = jsx(importDefault(16586), { isFullServerGating: tmp2, onChange: tmp3 });
+  return jsx(importDefault(16596), { title: null, description: null, canProceedToNextStep: true, nextStep: null });
 };

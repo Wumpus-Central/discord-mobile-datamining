@@ -1,6 +1,6 @@
-// === Module 11494: getAppDMApplication ===
+// === Module 11384: getAppDMApplication ===
 
-// Module 11494 (getAppDMApplication)
+// Module 11384 (getAppDMApplication)
 import addApplication from "addApplication";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";

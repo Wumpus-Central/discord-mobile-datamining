@@ -1,6 +1,6 @@
-// === Module 11992: useFavoritesGuildChannelFilter ===
+// === Module 11896: useFavoritesGuildChannelFilter ===
 
-// Module 11992 (useFavoritesGuildChannelFilter)
+// Module 11896 (useFavoritesGuildChannelFilter)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

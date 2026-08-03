@@ -1,6 +1,6 @@
-// === Module 16304: getData ===
+// === Module 16240: getData ===
 
-// Module 16304 (getData)
+// Module 16240 (getData)
 import handleChanged from "handleChanged";
 import _slicedToArray from "_slicedToArray";
 import DISCORD_EPOCH from "DISCORD_EPOCH";
@@ -2123,7 +2123,7 @@ function _submitModal() {
             obj[0] = arg1;
             return obj;
           } else {
-            DISCORD_EPOCH = arr.map((closure_0, closure_1) => lib(4789).getAttachmentPayload(closure_0, closure_1));
+            DISCORD_EPOCH = arr.map((closure_0, closure_1) => lib(4727).getAttachmentPayload(closure_0, closure_1));
             const obj4 = { uploads: null };
             obj4[0] = arr;
             c6 = callback2(lib.customId, lib.components, obj4);
@@ -2190,7 +2190,7 @@ function _submitModal() {
 let result = require("noop").fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");
 
 export const useIsFirstTextInputInModal = function useIsFirstTextInputInModal(id) {
-  const componentStateContext = require(8014) /* isInteractionComponent */.useComponentStateContext();
+  const componentStateContext = require(7896) /* isInteractionComponent */.useComponentStateContext();
   let first;
   if (componentStateContext != null) {
     const modal = componentStateContext.modal;

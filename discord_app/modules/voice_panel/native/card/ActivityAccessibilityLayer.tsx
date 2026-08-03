@@ -1,6 +1,6 @@
-// === Module 16056: FocusedActivityAccessibilityLayer ===
+// === Module 15992: FocusedActivityAccessibilityLayer ===
 
-// Module 16056 (FocusedActivityAccessibilityLayer)
+// Module 15992 (FocusedActivityAccessibilityLayer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -93,7 +93,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/voi
 
 export default function ActivityAccessibilityLayer(isActivityFocused) {
   const merged = Object.assign(isActivityFocused, Object.create(null));
-  let obj = require(4652) /* SCREEN_READER_ENABLED_GETTER */;
+  let obj = require(4590) /* SCREEN_READER_ENABLED_GETTER */;
   if (IS_IOS) {
     if (obj.useIsScreenReaderEnabled()) {
       if (isActivityFocused.isActivityFocused) {

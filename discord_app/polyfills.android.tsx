@@ -1,8 +1,8 @@
-// === Module 13343: toLocaleLowerCase ===
+// === Module 13280: toLocaleLowerCase ===
 
-// Module 13343 (toLocaleLowerCase)
+// Module 13280 (toLocaleLowerCase)
 import addLikelySubtags from "addLikelySubtags";
-import module_13440 from "module_13440";
+import module_13377 from "module_13377";
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   const self = this;

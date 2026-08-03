@@ -1,6 +1,6 @@
-// === Module 6035: BrushIllocon ===
+// === Module 6899: BrushIllocon ===
 
-// Module 6035 (BrushIllocon)
+// Module 6899 (BrushIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BrushIllocon.native.tsx");
@@ -16,12 +16,12 @@ export const BrushIllocon = function BrushIllocon(size) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6036);
+  obj[0] = importDefault(6900);
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { uri: null });
+  return jsx(importDefault(5145), { uri: null });
 };

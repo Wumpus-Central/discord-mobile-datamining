@@ -1,6 +1,6 @@
-// === Module 5579: ConnectionCard ===
+// === Module 5517: ConnectionCard ===
 
-// Module 5579 (ConnectionCard)
+// Module 5517 (ConnectionCard)
 import "noop";
 import { OnboardingConnectionType } from "serverPromptToClientPrompt";
 import { jsx } from "jsxProd";
@@ -18,13 +18,13 @@ export default function ConnectionCard(arg0) {
     obj[0] = connection;
     obj[1] = guildId;
     obj[2] = _location;
-    return jsx(importDefault(5580), { connection: null, guildId: null, location: null });
+    return jsx(importDefault(5518), { connection: null, guildId: null, location: null });
   } else if (tmp.PROVIDER_CONNECTED_ACCOUNT === connection_type) {
     obj = { connection: null, guildId: null, location: null };
     obj[0] = connection;
     obj[1] = guildId;
     obj[2] = _location;
-    return jsx(importDefault(5597), { connection: null, guildId: null, location: null });
+    return jsx(importDefault(5535), { connection: null, guildId: null, location: null });
   } else {
     const connection_type2 = connection.connection_type;
     return null;

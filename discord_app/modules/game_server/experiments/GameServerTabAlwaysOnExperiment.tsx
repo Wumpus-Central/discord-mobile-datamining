@@ -1,6 +1,6 @@
-// === Module 15229: useIsGameServerTabAlwaysOnEnabled ===
+// === Module 15246: useIsGameServerTabAlwaysOnEnabled ===
 
-// Module 15229 (useIsGameServerTabAlwaysOnEnabled)
+// Module 15246 (useIsGameServerTabAlwaysOnEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

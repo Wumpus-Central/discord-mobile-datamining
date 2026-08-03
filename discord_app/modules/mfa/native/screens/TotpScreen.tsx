@@ -1,6 +1,6 @@
-// === Module 14858: isValidClipboardCode ===
+// === Module 14791: isValidClipboardCode ===
 
-// Module 14858 (isValidClipboardCode)
+// Module 14791 (isValidClipboardCode)
 import MFAOptionScreen from "MFAOptionScreen";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -8,7 +8,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function isValidClipboardCode(arg0) {
-  let isMatch = arg0.length === require(14859) /* finishMFACheck */.TOTP_CODE_LENGTH;
+  let isMatch = arg0.length === require(14792) /* finishMFACheck */.TOTP_CODE_LENGTH;
   if (isMatch) {
     isMatch = /^\d+$/.test(arg0);
     const obj = /^\d+$/;

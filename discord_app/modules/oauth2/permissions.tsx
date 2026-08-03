@@ -1,6 +1,6 @@
-// === Module 9145: Permissions ===
+// === Module 8968: Permissions ===
 
-// Module 9145 (Permissions)
+// Module 8968 (Permissions)
 import { Permissions } from "ME";
 
 let ADD_REACTIONS;

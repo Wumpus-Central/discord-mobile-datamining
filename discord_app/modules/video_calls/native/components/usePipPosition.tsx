@@ -1,6 +1,6 @@
-// === Module 10718: usePipPosition ===
+// === Module 10533: usePipPosition ===
 
-// Module 10718 (usePipPosition)
+// Module 10533 (usePipPosition)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
@@ -11,7 +11,7 @@ let result = require("Storage").fileFinishedImporting("modules/video_calls/nativ
 export default function usePipPosition() {
   const tmp = callback(React.useState(() => {
     const Storage = callback(595).Storage;
-    return Storage.get(closure_4, callback(10719).DEFAULT_PIP_POSITION);
+    return Storage.get(closure_4, callback(10534).DEFAULT_PIP_POSITION);
   }), 2);
   let closure_0 = tmp[1];
   const items = [

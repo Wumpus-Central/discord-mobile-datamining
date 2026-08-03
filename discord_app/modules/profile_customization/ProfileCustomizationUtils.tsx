@@ -1,6 +1,6 @@
-// === Module 8065: useAvatarsWithGuilds ===
+// === Module 7947: useAvatarsWithGuilds ===
 
-// Module 8065 (useAvatarsWithGuilds)
+// Module 7947 (useAvatarsWithGuilds)
 import noop from "noop";
 import handleFormOpen from "handleFormOpen";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
@@ -266,15 +266,15 @@ export const showRemoveBanner = function showRemoveBanner(arg0, banner) {
 };
 export const announcePendingAvatarChange = function announcePendingAvatarChange(set) {
   if ("set" === set) {
-    const AccessibilityAnnouncer3 = require(4101) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const AccessibilityAnnouncer3 = require(4039) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
     const intl3 = require(1236) /* getSystemLocale */.intl;
     AccessibilityAnnouncer3.announce(intl3.string(require(1236) /* getSystemLocale */.t.dyU5c5));
   } else if ("remove" === set) {
-    const AccessibilityAnnouncer2 = require(4101) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const AccessibilityAnnouncer2 = require(4039) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
     const intl2 = require(1236) /* getSystemLocale */.intl;
     AccessibilityAnnouncer2.announce(intl2.string(require(1236) /* getSystemLocale */.t["f1+oNk"]));
   } else {
-    const AccessibilityAnnouncer = require(4101) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = require(4039) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
     const intl = require(1236) /* getSystemLocale */.intl;
     AccessibilityAnnouncer.announce(intl.string(require(1236) /* getSystemLocale */.t["/b5nqj"]));
   }

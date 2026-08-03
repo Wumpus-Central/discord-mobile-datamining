@@ -1,6 +1,6 @@
-// === Module 15487: ? ===
+// === Module 15420: ? ===
 
-// Module 15487
+// Module 15420
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -22,7 +22,7 @@ const memoResult = require("noop").memo(function ThemedHeaderBackgroundGradient(
   }
   const tmp3 = callback();
   const tmp4 = importDefault;
-  let obj = require(3959) /* map */;
+  let obj = require(3897) /* map */;
   const token = obj.useToken(BACKGROUND_BASE_LOWEST);
   let obj1 = require(688) /* int2hslRaw */;
   let str = obj1.hex2rgb(token, 0);
@@ -36,7 +36,7 @@ const memoResult = require("noop").memo(function ThemedHeaderBackgroundGradient(
   obj[0] = items;
   obj1 = { style: absoluteFill.absoluteFill, colors: items1, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } };
   items1 = [token, str];
-  obj[2] = jsx(tmp4(4677), { style: absoluteFill.absoluteFill, colors: items1, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } });
+  obj[2] = jsx(tmp4(4615), { style: absoluteFill.absoluteFill, colors: items1, start: { x: 0, y: 0 }, end: { x: 0, y: 1 } });
   return <closure_4 height={Math.max(importDefault(1581)().top, num)} />;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx");

@@ -1,6 +1,6 @@
-// === Module 15374: set ===
+// === Module 15307: set ===
 
-// Module 15374 (set)
+// Module 15307 (set)
 import noop from "noop";
 import set from "useGetOrFetchApplications";
 
@@ -29,5 +29,5 @@ export const useGetOrFetchNotificationCenterItemsApplications = function useGetO
     });
     return items;
   }, items);
-  return importDefault(5587)(memo);
+  return importDefault(5525)(memo);
 };

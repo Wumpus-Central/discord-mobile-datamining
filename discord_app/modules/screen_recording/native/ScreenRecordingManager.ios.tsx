@@ -1,6 +1,6 @@
-// === Module 14932: get ActivityIndicator ===
+// === Module 14865: get ActivityIndicator ===
 
-// Module 14932 (get ActivityIndicator)
+// Module 14865 (get ActivityIndicator)
 const DCDScreenRecordingManager = require("get ActivityIndicator").NativeModules.DCDScreenRecordingManager;
 const result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
 

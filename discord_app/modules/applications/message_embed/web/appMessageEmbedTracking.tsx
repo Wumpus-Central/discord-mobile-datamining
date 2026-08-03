@@ -1,6 +1,6 @@
-// === Module 7061: ClickArea ===
+// === Module 5982: ClickArea ===
 
-// Module 7061 (ClickArea)
+// Module 5982 (ClickArea)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 
@@ -32,10 +32,10 @@ export const trackAppEmbedViewed = function trackAppEmbedViewed(arg0) {
   importDefault(698).track(AnalyticEvents.APP_EMBED_VIEWED, { application_id: appId, link_type: linkType, referrer_id: referrerId, custom_id: customId, guild_id: guildId, channel_id: channelId, message_id: messageId, app_embed_state: appEmbedState });
 };
 export const useTrackAppEmbedViewed = function useTrackAppEmbedViewed(id) {
-  _require = _require(7062).trackingConfigWithDefaults(id);
+  _require = _require(5983).trackingConfigWithDefaults(id);
   let closure_1 = React.useRef(false);
-  let obj = _require(7062);
-  return _require(7063).useIsVisible((arg0) => {
+  let obj = _require(5983);
+  return _require(5984).useIsVisible((arg0) => {
     let activityCustomId;
     let appEmbedState;
     let channelId;

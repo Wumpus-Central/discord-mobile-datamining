@@ -1,6 +1,6 @@
-// === Module 4107: getRootNavigationRef ===
+// === Module 4045: getRootNavigationRef ===
 
-// Module 4107 (getRootNavigationRef)
+// Module 4045 (getRootNavigationRef)
 import Link from "Link";
 
 Link = Link.createNavigationContainerRef();

@@ -1,6 +1,6 @@
-// === Module 6903: fromServer ===
+// === Module 5808: fromServer ===
 
-// Module 6903 (fromServer)
+// Module 5808 (fromServer)
 import "fromServer";
 
 const require = arg1;
@@ -19,7 +19,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   let tmp = prototype;
   const merged = Object.assign(super.fromServer(arg0));
   const merged1 = Object.assign(arg0);
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   tmp = new tmp(obj, arg0, this, merged);

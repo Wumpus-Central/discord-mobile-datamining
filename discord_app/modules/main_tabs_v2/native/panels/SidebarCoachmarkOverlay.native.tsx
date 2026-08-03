@@ -1,6 +1,6 @@
-// === Module 15009: SidebarCoachmarkOverlayLayer ===
+// === Module 14942: SidebarCoachmarkOverlayLayer ===
 
-// Module 15009 (SidebarCoachmarkOverlayLayer)
+// Module 14942 (SidebarCoachmarkOverlayLayer)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -49,7 +49,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/m
 export const SidebarCoachmarkOverlayContext = context;
 export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled) {
   enabled = enabled.enabled;
-  const tmp = importDefault(5569)(() => {
+  const tmp = importDefault(5507)(() => {
     const layerContextManager = new callback(table[6]).LayerContextManager();
     return layerContextManager;
   });

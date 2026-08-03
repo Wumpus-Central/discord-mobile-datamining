@@ -1,6 +1,6 @@
-// === Module 14701: FeaturedFirstCardCoachmarkAnchor ===
+// === Module 14634: FeaturedFirstCardCoachmarkAnchor ===
 
-// Module 14701 (FeaturedFirstCardCoachmarkAnchor)
+// Module 14634 (FeaturedFirstCardCoachmarkAnchor)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -13,7 +13,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/collectibles/na
 export default function FeaturedFirstCardCoachmarkAnchor(children) {
   const ref = React.useRef(null);
   const obj = { collapsable: false, children: null };
-  const items = [callback(View, { ref, style: { position: "absolute", top: 0, right: 6, width: 32, height: 32 }, collapsable: false }), children.children, callback(importDefault(14702), { anchorRef: ref })];
+  const items = [callback(View, { ref, style: { position: "absolute", top: 0, right: 6, width: 32, height: 32 }, collapsable: false }), children.children, callback(importDefault(14635), { anchorRef: ref })];
   obj[1] = items;
   return callback2(View, obj);
 };

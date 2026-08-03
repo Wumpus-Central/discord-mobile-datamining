@@ -1,6 +1,6 @@
-// === Module 10868: ApplicationStreamPresets ===
+// === Module 10760: ApplicationStreamPresets ===
 
-// Module 10868 (ApplicationStreamPresets)
+// Module 10760 (ApplicationStreamPresets)
 import set from "set";
 import importAllResult from "initialize";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
@@ -322,10 +322,10 @@ let result = require("ApplicationStreamPresets").fileFinishedImporting("modules/
 
 export default memoResult;
 export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(closure_1) {
-  let obj = importDefault(4223);
+  let obj = importDefault(4161);
   obj = { impressionName: null, impressionProperties: null };
   obj[0] = require(503) /* encodeProperties */.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj = { location_stack: closure_1 };
   obj[1] = obj;
-  obj.openLazy(require(1959) /* asyncRequireImpl */(10868, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(10760, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

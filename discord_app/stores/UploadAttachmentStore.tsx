@@ -1,6 +1,6 @@
-// === Module 4591: map ===
+// === Module 4529: map ===
 
-// Module 4591 (map)
+// Module 4529 (map)
 import { DraftType } from "handleChanged";
 import { MAX_UPLOAD_COUNT } from "ME";
 import { Store } from "initialize";
@@ -349,7 +349,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(require("dispatcher"), {
     }
     const items = [...value];
     const found = items.filter((id) => id.id !== closure_0);
-    const cloudUpload = new require(4787) /* set */.CloudUpload(file, channelId, undefined, allowOptimization);
+    const cloudUpload = new require(4725) /* set */.CloudUpload(file, channelId, undefined, allowOptimization);
     found.push(cloudUpload);
     let value1 = obj.get(channelId);
     if (value1 == null) {

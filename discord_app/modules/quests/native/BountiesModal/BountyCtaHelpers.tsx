@@ -1,6 +1,6 @@
-// === Module 14154: getBountyCtaInfo ===
+// === Module 14087: getBountyCtaInfo ===
 
-// Module 14154 (getBountyCtaInfo)
+// Module 14087 (getBountyCtaInfo)
 const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
 
 export const getBountyCtaInfo = function getBountyCtaInfo(bounty) {

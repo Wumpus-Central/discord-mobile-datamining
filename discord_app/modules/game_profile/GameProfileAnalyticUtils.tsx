@@ -1,6 +1,6 @@
-// === Module 8785: GameProfileEmbedAction ===
+// === Module 8496: GameProfileEmbedAction ===
 
-// Module 8785 (GameProfileEmbedAction)
+// Module 8496 (GameProfileEmbedAction)
 import map from "map";
 import ME from "ME";
 import { ContentInventoryFeedKey } from "ContentInventoryFeedKey";

@@ -1,6 +1,6 @@
-// === Module 11488: AppLauncherChannelOption ===
+// === Module 11378: AppLauncherChannelOption ===
 
-// Module 11488 (AppLauncherChannelOption)
+// Module 11378 (AppLauncherChannelOption)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

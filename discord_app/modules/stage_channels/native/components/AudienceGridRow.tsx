@@ -1,6 +1,6 @@
-// === Module 10972: BlankAudience ===
+// === Module 10872: BlankAudience ===
 
-// Module 10972 (BlankAudience)
+// Module 10872 (BlankAudience)
 import { View } from "get ActivityIndicator";
 import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH";
 import jsxProd from "jsxProd";
@@ -17,7 +17,7 @@ class BlankAudience {
       tmp = jsx;
       tmp2 = closure_0;
       tmp3 = closure_1;
-      arr = items.push(jsx(require("module_10973"), {}, num));
+      arr = items.push(jsx(require("module_10873"), {}, num));
     }
     return items;
   }

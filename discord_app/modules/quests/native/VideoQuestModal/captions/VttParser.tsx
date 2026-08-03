@@ -1,6 +1,6 @@
-// === Module 14256: prototype ===
+// === Module 14189: prototype ===
 
-// Module 14256 (prototype)
+// Module 14189 (prototype)
 const prototype = function VttParserError(arg0, error) {
   tmp = new tmp(arg0, new.target);
   // ThrowIfThisInitialized (0x7c)
@@ -36,7 +36,7 @@ export const parseVtt = function parseVtt(text) {
       str9 = " ";
       if (" " !== first) {
         if ("\t" !== replaced[0]) {
-          if (typeof obj !== "error") {
+          if (typeof obj !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           tmp5 = new tmp5("Header comment must start with space or tab", tmp3, parts1, tmp2, tmp, first);
@@ -59,7 +59,7 @@ export const parseVtt = function parseVtt(text) {
     if (!tmp4) {
       if (parts1.length > 1) {
         if ("" !== parts1[1]) {
-          if (typeof obj !== "error") {
+          if (typeof obj !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           str9 = new str9("Missing blank line after signature", tmp3, parts1, tmp2, tmp, obj, parts, str9, tmp4, new.target);
@@ -91,7 +91,7 @@ export const parseVtt = function parseVtt(text) {
             if (!first.includes("-->")) {
               const _HermesInternal = HermesInternal;
               const combined = "Cue identifier cannot be standalone (cue #" + arg1 + ")";
-              if (typeof closure_0 !== "error") {
+              if (typeof closure_0 !== "fileFinishedImporting") {
                 HermesBuiltin.throwTypeError();
               }
               const tmp14 = new closure_2(combined, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined, 0, arg1);
@@ -107,7 +107,7 @@ export const parseVtt = function parseVtt(text) {
               if (!obj2.includes("-->")) {
                 const _HermesInternal2 = HermesInternal;
                 const combined1 = "Cue identifier needs to be followed by timestamp (cue #" + arg1 + ")";
-                if (typeof closure_0 !== "error") {
+                if (typeof closure_0 !== "fileFinishedImporting") {
                   HermesBuiltin.throwTypeError();
                 }
                 const tmp23 = new closure_2(combined1, tmp6, tmp5, tmp4, tmp3, tmp2, "\n", tmp, closure_0, combined1, 0, arg1);
@@ -163,7 +163,7 @@ export const parseVtt = function parseVtt(text) {
                   if (num > num3) {
                     const _HermesInternal5 = HermesInternal;
                     const combined2 = "Start timestamp greater than end (cue #" + arg1 + ")";
-                    if (typeof closure_0 !== "error") {
+                    if (typeof closure_0 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const tmp62 = new closure_2(combined2, tmp6, tmp5, _parseFloat, str14, obj7, "\n", "", str10, num);
@@ -174,7 +174,7 @@ export const parseVtt = function parseVtt(text) {
                   } else if (num3 <= num) {
                     const _HermesInternal4 = HermesInternal;
                     const combined3 = "End must be greater than start (cue #" + arg1 + ")";
-                    if (typeof closure_0 !== "error") {
+                    if (typeof closure_0 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const tmp53 = new closure_2(combined3, tmp6, tmp5, _parseFloat, str14, obj7, "\n", "", str10, num);
@@ -188,7 +188,7 @@ export const parseVtt = function parseVtt(text) {
                   if (num3 < num) {
                     const _HermesInternal3 = HermesInternal;
                     const combined4 = "End must be greater or equal to start when not strict (cue #" + arg1 + ")";
-                    if (typeof closure_0 !== "error") {
+                    if (typeof closure_0 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const tmp42 = new closure_2(combined4, tmp6, closure_0, combined4, new.target, obj7, "\n", "", str10, num, num3, arg1, found, closure_2, parts1, globalThis, length, tmp31);
@@ -219,7 +219,7 @@ export const parseVtt = function parseVtt(text) {
             }
           }
           const combined5 = "Invalid cue timestamp (cue #" + arg1 + ")";
-          if (typeof closure_0 !== "error") {
+          if (typeof closure_0 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           const tmp65 = new closure_2(combined5, tmp6, tmp5, tmp4, tmp3, obj7, "\n");
@@ -275,7 +275,7 @@ export const parseVtt = function parseVtt(text) {
     const merged = Object.assign(tmp4);
     return obj1;
   } else {
-    if (typeof obj !== "error") {
+    if (typeof obj !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     tmp2 = new tmp2("Must start with \"WEBVTT\"", tmp3, obj, tmp2, new.target, "WEBVTT", parts, "\n", tmp4, str4, tmp5, prototype, strict);

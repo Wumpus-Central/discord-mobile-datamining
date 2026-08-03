@@ -1,6 +1,6 @@
-// === Module 11507: ErrorBlock ===
+// === Module 11397: ErrorBlock ===
 
-// Module 11507 (ErrorBlock)
+// Module 11397 (ErrorBlock)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -9,7 +9,7 @@ const result = require("MessageBlock").fileFinishedImporting("modules/guild_role
 
 export default function ErrorBlock(children) {
   const obj = { color: null, children: null };
-  obj[0] = require(11508) /* MessageBlock */.MessageBlockColors.RED;
+  obj[0] = require(11398) /* MessageBlock */.MessageBlockColors.RED;
   obj[1] = children.children;
-  return jsx(importDefault(11508), { color: null, children: null });
+  return jsx(importDefault(11398), { color: null, children: null });
 };

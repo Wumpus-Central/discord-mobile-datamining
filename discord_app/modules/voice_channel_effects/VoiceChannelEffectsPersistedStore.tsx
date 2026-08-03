@@ -1,6 +1,6 @@
-// === Module 5861: initialize ===
+// === Module 10793: initialize ===
 
-// Module 5861 (initialize)
+// Module 10793 (initialize)
 import { VoiceChannelEffectAnimationType as closure_1 } from "VoiceChannelEffectAnimationType";
 import { PersistedStore } from "initialize";
 

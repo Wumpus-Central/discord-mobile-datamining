@@ -1,6 +1,6 @@
-// === Module 7312: useDiscountedPremiumProductInfo ===
+// === Module 6573: useDiscountedPremiumProductInfo ===
 
-// Module 7312 (useDiscountedPremiumProductInfo)
+// Module 6573 (useDiscountedPremiumProductInfo)
 import noop from "noop";
 import updateProduct from "updateProduct";
 import { CurrencyCodes } from "sum";

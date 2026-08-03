@@ -1,6 +1,6 @@
-// === Module 6269: GameDiversityTier9SmallBadge ===
+// === Module 7133: GameDiversityTier9SmallBadge ===
 
-// Module 6269 (GameDiversityTier9SmallBadge)
+// Module 7133 (GameDiversityTier9SmallBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier9SmallBadge.native.tsx");
@@ -24,7 +24,7 @@ export const GameDiversityTier9SmallBadge = function GameDiversityTier9SmallBadg
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6270);
+  obj[0] = importDefault(7134);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const GameDiversityTier9SmallBadge = function GameDiversityTier9SmallBadg
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

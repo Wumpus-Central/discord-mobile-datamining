@@ -1,6 +1,6 @@
-// === Module 6847: getAll ===
+// === Module 5752: getAll ===
 
-// Module 6847 (getAll)
+// Module 5752 (getAll)
 import closure_2 from "set";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import set from "timestamp";

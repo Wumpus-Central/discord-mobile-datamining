@@ -1,6 +1,6 @@
-// === Module 15631: ? ===
+// === Module 15564: ? ===
 
-// Module 15631
+// Module 15564
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -22,25 +22,25 @@ const memoResult = require("noop").memo((onCreateThreadPress) => {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconWrapper, children: null };
   obj = { source: null, size: null };
-  obj[0] = importDefault(11522);
+  obj[0] = importDefault(11412);
   obj[1] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
   obj[1] = callback(require(1297) /* Button */.Icon, obj);
   const items = [callback(View, obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj1[5] = intl.string(require(1236) /* getSystemLocale */.t.HgTQ8p);
-  items[1] = callback(require(4251) /* Text */.Text, obj1);
+  items[1] = callback(require(4189) /* Text */.Text, obj1);
   const obj2 = { style: tmp.subtext, maxFontSizeMultiplier: 2, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj2[4] = intl2.string(require(1236) /* getSystemLocale */.t.jmq9GC);
-  items[2] = callback(require(4251) /* Text */.Text, obj2);
+  items[2] = callback(require(4189) /* Text */.Text, obj2);
   let tmp4Result = null != onCreateThreadPress;
   if (tmp4Result) {
     const obj3 = { onPress: null, text: null };
     obj3[0] = onCreateThreadPress;
     const intl3 = tmp5(1236).intl;
     obj3[1] = intl3.string(tmp5(1236).t.rBIGBL);
-    tmp4Result = callback(tmp5(4666).Button, obj3);
+    tmp4Result = callback(tmp5(4604).Button, obj3);
   }
   items[3] = tmp4Result;
   obj[1] = items;

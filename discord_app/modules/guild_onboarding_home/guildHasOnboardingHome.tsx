@@ -1,6 +1,6 @@
-// === Module 4459: guildHasOnboardingHome ===
+// === Module 4397: guildHasOnboardingHome ===
 
-// Module 4459 (guildHasOnboardingHome)
+// Module 4397 (guildHasOnboardingHome)
 import ME from "ME";
 
 let c3;

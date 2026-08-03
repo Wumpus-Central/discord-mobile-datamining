@@ -1,6 +1,6 @@
-// === Module 12179: toAsciiDigits ===
+// === Module 12083: toAsciiDigits ===
 
-// Module 12179 (toAsciiDigits)
+// Module 12083 (toAsciiDigits)
 function toAsciiDigits(arg0, get) {
   let str = "";
   const iter = arg0[Symbol.iterator]();

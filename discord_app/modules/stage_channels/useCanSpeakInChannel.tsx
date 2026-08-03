@@ -1,6 +1,6 @@
-// === Module 10547: useCanCurrentUserSpeakInChannel ===
+// === Module 10408: useCanCurrentUserSpeakInChannel ===
 
-// Module 10547 (useCanCurrentUserSpeakInChannel)
+// Module 10408 (useCanCurrentUserSpeakInChannel)
 import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;
@@ -10,5 +10,5 @@ export default function useCanCurrentUserSpeakInChannel(arg0) {
   const items = [fetchFingerprint];
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => id.getId());
   const obj = require(589) /* initialize */;
-  return importDefault(4440)(stateFromStores, arg0) === require(4440) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.ON_STAGE;
+  return importDefault(4378)(stateFromStores, arg0) === require(4378) /* useAudienceRequestToSpeakState */.RequestToSpeakStates.ON_STAGE;
 };

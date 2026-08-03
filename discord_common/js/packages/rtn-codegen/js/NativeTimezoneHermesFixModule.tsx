@@ -1,6 +1,6 @@
-// === Module 3927: enforcing ===
+// === Module 3865: enforcing ===
 
-// Module 3927 (enforcing)
+// Module 3865 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTimezoneHermesFixModule");

@@ -1,6 +1,6 @@
-// === Module 13755: fromServer ===
+// === Module 13692: fromServer ===
 
-// Module 13755 (fromServer)
+// Module 13692 (fromServer)
 import "toJS";
 
 let GeneratedTestPoolRecord;
@@ -13,7 +13,7 @@ class GeneratedTestPoolRecord extends tmp2 {
   }
 }
 GeneratedTestPoolRecord["fromServer"] = function fromServer(arg0) {
-  if (typeof GeneratedTestPoolRecord !== "error") {
+  if (typeof GeneratedTestPoolRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new GeneratedTestPoolRecord("Trying to call a non-function", GeneratedTestPoolRecord);

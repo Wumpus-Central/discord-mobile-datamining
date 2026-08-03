@@ -1,6 +1,6 @@
-// === Module 10635: subscribe ===
+// === Module 10497: subscribe ===
 
-// Module 10635 (subscribe)
+// Module 10497 (subscribe)
 const result = require("set").fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsActionCreators.tsx");
 
 export const subscribe = function subscribe(subscription) {

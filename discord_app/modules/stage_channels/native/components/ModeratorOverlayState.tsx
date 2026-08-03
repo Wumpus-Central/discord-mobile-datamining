@@ -1,6 +1,6 @@
-// === Module 10801: useModeratorOverlayChannelState ===
+// === Module 10693: useModeratorOverlayChannelState ===
 
-// Module 10801 (useModeratorOverlayChannelState)
+// Module 10693 (useModeratorOverlayChannelState)
 import identity from "identity";
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
@@ -19,7 +19,7 @@ const result = require("isIterable").fileFinishedImporting("modules/stage_channe
 
 export const useModeratorOverlayChannelState = function useModeratorOverlayChannelState(id) {
   const _require = id;
-  const dependencyMap = callback((dismissOverlay) => dismissOverlay.dismissOverlay, _require(3868).shallow);
-  const items = [!callback((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _require(3868).shallow).has(id), () => callback(closure_0)];
+  const dependencyMap = callback((dismissOverlay) => dismissOverlay.dismissOverlay, _require(3806).shallow);
+  const items = [!callback((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _require(3806).shallow).has(id), () => callback(closure_0)];
   return items;
 };

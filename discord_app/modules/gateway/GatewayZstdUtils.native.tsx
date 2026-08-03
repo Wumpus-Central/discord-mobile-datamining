@@ -1,14 +1,14 @@
-// === Module 12791: supportsZstd ===
+// === Module 12728: supportsZstd ===
 
-// Module 12791 (supportsZstd)
+// Module 12728 (supportsZstd)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
   if (obj.isAndroid()) {
-    let flag = importDefault(12792).getConstants().supportsZstd;
-    const obj2 = importDefault(12792);
+    let flag = importDefault(12729).getConstants().supportsZstd;
+    const obj2 = importDefault(12729);
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;

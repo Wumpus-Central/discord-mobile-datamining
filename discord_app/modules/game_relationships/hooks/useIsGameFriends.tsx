@@ -1,6 +1,6 @@
-// === Module 12282: useIsGameFriends ===
+// === Module 12186: useIsGameFriends ===
 
-// Module 12282 (useIsGameFriends)
+// Module 12186 (useIsGameFriends)
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import { RelationshipTypes } from "ME";
@@ -16,5 +16,5 @@ export const useIsGameFriends = function useIsGameFriends(id) {
     const gameRelationshipsForUserByType = outer1_3.getGameRelationshipsForUserByType(closure_0, outer1_4.FRIEND);
     const items = [gameRelationshipsForUserByType.length > 0, outer1_3.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5087).isVersionEqual), 1)[0];
+  }, items1, _require(5025).isVersionEqual), 1)[0];
 };

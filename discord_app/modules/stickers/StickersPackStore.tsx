@@ -1,6 +1,6 @@
-// === Module 5160: parseServerPackSticker ===
+// === Module 5098: parseServerPackSticker ===
 
-// Module 5160 (parseServerPackSticker)
+// Module 5098 (parseServerPackSticker)
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
 import { LibdiscoreStore } from "identity";
@@ -13,13 +13,13 @@ function parseServerPackSticker(id) {
 }
 function deriveStickerMetadata(name, name2) {
   const items = [];
-  let obj = { type: require(4922) /* StickerFormat */.StickerMetadataTypes.STICKER_NAME, value: null };
+  let obj = { type: require(4860) /* StickerFormat */.StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = name.name.trim();
   obj[1] = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != name2) {
     obj = { type: null, value: null };
-    obj[0] = require(4922) /* StickerFormat */.StickerMetadataTypes.PACK_NAME;
+    obj[0] = require(4860) /* StickerFormat */.StickerMetadataTypes.PACK_NAME;
     obj[1] = name2.name;
     items.push(obj);
   }

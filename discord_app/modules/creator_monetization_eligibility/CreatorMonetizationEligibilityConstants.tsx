@@ -1,6 +1,6 @@
-// === Module 16611: CreatorMonetizationApplicationState ===
+// === Module 16545: CreatorMonetizationApplicationState ===
 
-// Module 16611 (CreatorMonetizationApplicationState)
+// Module 16545 (CreatorMonetizationApplicationState)
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityConstants.tsx");
 
 export const CreatorMonetizationApplicationState = { OPEN: "OPEN", REJECTED: "REJECTED", APPROVED: "APPROVED", ACTION_REQUIRED: "ACTION_REQUIRED" };

@@ -1,6 +1,6 @@
-// === Module 5928: vanityUrl ===
+// === Module 6792: vanityUrl ===
 
-// Module 5928 (vanityUrl)
+// Module 6792 (vanityUrl)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier10LargeBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/e65fc4ed10cd57aefbd3a09ab0651841b8492e50ccb09141754aad3b306c6b8a.png";

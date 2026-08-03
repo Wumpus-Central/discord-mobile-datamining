@@ -1,6 +1,6 @@
-// === Module 10410: getStatusExpiryParts ===
+// === Module 10271: getStatusExpiryParts ===
 
-// Module 10410 (getStatusExpiryParts)
+// Module 10271 (getStatusExpiryParts)
 const result = require("set").fileFinishedImporting("modules/multi_account/StatusUtils.tsx");
 
 export const getStatusExpiryParts = function getStatusExpiryParts(arg0) {

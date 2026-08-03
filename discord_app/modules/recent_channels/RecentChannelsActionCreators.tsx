@@ -1,6 +1,6 @@
-// === Module 10159: _bulkClearRecents ===
+// === Module 10017: _bulkClearRecents ===
 
-// Module 10159 (_bulkClearRecents)
+// Module 10017 (_bulkClearRecents)
 import expandEventProperties from "expandEventProperties";
 import { AnalyticEvents } from "ME";
 

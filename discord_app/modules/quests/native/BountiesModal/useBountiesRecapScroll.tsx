@@ -1,6 +1,6 @@
-// === Module 14125: getRevealProgress ===
+// === Module 14058: getRevealProgress ===
 
-// Module 14125 (getRevealProgress)
+// Module 14058 (getRevealProgress)
 import noop from "noop";
 
 function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {
@@ -45,7 +45,7 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
     if (enabled) {
       if (arg0 > offsets.lastBounty) {
         ({ revealHeight, lastBounty } = tmp2);
-        if (typeof enabled !== "error") {
+        if (typeof enabled !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         let num = 0;

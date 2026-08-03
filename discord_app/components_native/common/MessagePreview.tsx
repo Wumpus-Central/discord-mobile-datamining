@@ -1,6 +1,6 @@
-// === Module 15734: MessagePreview ===
+// === Module 15669: MessagePreview ===
 
-// Module 15734 (MessagePreview)
+// Module 15669 (MessagePreview)
 import noop from "noop";
 import messages from "messages";
 import ME from "ME";
@@ -33,5 +33,5 @@ export default function MessagePreview(channelId) {
     callback(table[6]).clearMessages();
   }, []);
   obj = { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation: closure_6 };
-  return jsx(onBeforeJumpToMessage(9489).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation: closure_6 });
+  return jsx(onBeforeJumpToMessage(9317).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation: closure_6 });
 };

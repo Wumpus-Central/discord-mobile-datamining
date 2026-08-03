@@ -1,6 +1,6 @@
-// === Module 14866: showCaptchaTestModal ===
+// === Module 14799: showCaptchaTestModal ===
 
-// Module 14866 (showCaptchaTestModal)
+// Module 14799 (showCaptchaTestModal)
 import asyncRequireImpl from "asyncRequireImpl";
 import "noop";
 import { jsx } from "jsxProd";
@@ -9,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/captcha/tooling/native/OpenCaptchaTestModal.tsx");
 
 export const showCaptchaTestModal = function showCaptchaTestModal() {
-  importDefault(4461).pushLazy(callback(function*() {
+  importDefault(4399).pushLazy(callback(function*() {
     if (paths === 2) {
       paths = 3;
       HermesBuiltin.throwTypeError();

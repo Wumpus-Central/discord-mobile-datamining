@@ -1,6 +1,6 @@
-// === Module 15190: updateGuildPremiumSubscriptionCount ===
+// === Module 15209: updateGuildPremiumSubscriptionCount ===
 
-// Module 15190 (updateGuildPremiumSubscriptionCount)
+// Module 15209 (updateGuildPremiumSubscriptionCount)
 const result = require("set").fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarActionCreators.tsx");
 
 export const updateGuildPremiumSubscriptionCount = function updateGuildPremiumSubscriptionCount(guildId, arg1) {

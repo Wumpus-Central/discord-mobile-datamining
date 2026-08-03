@@ -1,6 +1,6 @@
-// === Module 14733: toggle ===
+// === Module 14666: toggle ===
 
-// Module 14733 (toggle)
+// Module 14666 (toggle)
 import items from "items";
 import createToggle from "createToggle";
 
@@ -20,7 +20,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
   },
   onValueChange: function handleSecureFramesPersistentCodesToggle(arg0) {
-    const result = importDefault(9081).updatePersistentCodesEnabled(arg0);
+    const result = importDefault(8904).updatePersistentCodesEnabled(arg0);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

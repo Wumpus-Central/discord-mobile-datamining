@@ -1,6 +1,6 @@
-// === Module 6687: StreamingTier7LargeBadge ===
+// === Module 7551: StreamingTier7LargeBadge ===
 
-// Module 6687 (StreamingTier7LargeBadge)
+// Module 7551 (StreamingTier7LargeBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/StreamingTier7LargeBadge.native.tsx");
@@ -24,7 +24,7 @@ export const StreamingTier7LargeBadge = function StreamingTier7LargeBadge(width)
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6688);
+  obj[0] = importDefault(7552);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const StreamingTier7LargeBadge = function StreamingTier7LargeBadge(width)
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

@@ -1,6 +1,6 @@
-// === Module 3875: hasViewChannelPermission ===
+// === Module 3813: hasViewChannelPermission ===
 
-// Module 3875 (hasViewChannelPermission)
+// Module 3813 (hasViewChannelPermission)
 import { hasPermission } from "GuildRoleRecordTypeTag";
 import { Permissions } from "ME";
 

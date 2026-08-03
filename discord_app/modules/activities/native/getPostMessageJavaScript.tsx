@@ -1,6 +1,6 @@
-// === Module 10669: getPostMessageJavaScript ===
+// === Module 10625: getPostMessageJavaScript ===
 
-// Module 10669 (getPostMessageJavaScript)
+// Module 10625 (getPostMessageJavaScript)
 const result = require("set").fileFinishedImporting("modules/activities/native/getPostMessageJavaScript.tsx");
 
 export default function getPostMessageJavaScript(arg0) {

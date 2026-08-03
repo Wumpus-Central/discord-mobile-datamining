@@ -1,6 +1,6 @@
-// === Module 15331: apexExperiment ===
+// === Module 15264: apexExperiment ===
 
-// Module 15331 (apexExperiment)
+// Module 15264 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-you-bar-guild-tag", kind: "user", defaultConfig: { showGuildTag: false }, variations: { 0: { showGuildTag: false }, 1: { showGuildTag: true } } });

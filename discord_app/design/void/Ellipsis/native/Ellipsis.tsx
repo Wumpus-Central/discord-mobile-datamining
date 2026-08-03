@@ -1,6 +1,6 @@
-// === Module 13215: AnimatedEllipsisDot ===
+// === Module 13152: AnimatedEllipsisDot ===
 
-// Module 13215 (AnimatedEllipsisDot)
+// Module 13152 (AnimatedEllipsisDot)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

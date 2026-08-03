@@ -1,6 +1,6 @@
-// === Module 15466: AddEmojiButton ===
+// === Module 15399: AddEmojiButton ===
 
-// Module 15466 (AddEmojiButton)
+// Module 15399 (AddEmojiButton)
 import set from "set";
 import SendMessageIcon from "SendMessageIcon";
 import useWindowDimensions from "useWindowDimensions";
@@ -124,13 +124,13 @@ function ReactActionSheetBase(content) {
             } else {
               let closure_0 = tmp4;
               outer1_5(true);
-              v0(8496).itemInteracted(outer1_0.id, outer1_6, "press_reply_send");
-              const obj5 = v0(8496);
+              v0(8189).itemInteracted(outer1_0.id, outer1_6, "press_reply_send");
+              const obj5 = v0(8189);
               const obj1 = { itemId: null, itemType: null, actionParameters: null };
               obj1[0] = outer1_0.id;
               obj1[1] = outer1_6;
               obj1[2] = { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null };
-              v0(8496).feedItemActioned(obj1);
+              v0(8189).feedItemActioned(obj1);
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
@@ -422,7 +422,7 @@ export default function ReactActionSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(merged);
     obj[0] = callback2(ReactActionSheetBase, obj);
-    return callback2(require(15412) /* context */.ICYMIContextProvider, obj);
+    return callback2(require(15345) /* context */.ICYMIContextProvider, obj);
   }
 };
 export const getStatusReplyContent = function getStatusReplyContent(reply) {

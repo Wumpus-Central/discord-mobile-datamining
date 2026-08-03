@@ -1,13 +1,13 @@
-// === Module 15549: PX_8 ===
+// === Module 15482: PX_8 ===
 
-// Module 15549 (PX_8)
+// Module 15482 (PX_8)
 import importAllResult from "DCDDeviceManager";
 import get_ActivityIndicator from "useSafeAreaInsets";
 import prototype from "prototype";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import useChannelDetailsStore from "useChannelDetailsStore";
 import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens";
-import jsxProd from "module_11584";
+import jsxProd from "module_11474";
 import createCacheKey from "createCacheKey";
 
 let CHANNEL_DETAILS_TOP_MARGIN;

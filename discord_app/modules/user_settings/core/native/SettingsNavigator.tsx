@@ -1,6 +1,6 @@
-// === Module 15817: LeftAlignedHeaderTitle ===
+// === Module 15752: LeftAlignedHeaderTitle ===
 
-// Module 15817 (LeftAlignedHeaderTitle)
+// Module 15752 (LeftAlignedHeaderTitle)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getDeviceMetadata";
 import { View } from "QUICK_SWITCHER";
@@ -18,7 +18,7 @@ let unpackModuleId;
 let require = arg1;
 function LeftAlignedHeaderTitle(children) {
   const tmp = callback3();
-  return callback(require(4251) /* Text */.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: callback3().headerContainer, children: children.title });
+  return callback(require(4189) /* Text */.Heading, { lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, style: callback3().headerContainer, children: children.title });
 }
 let c4 = importAllResult;
 ({ AnalyticsPages: metroImportAll, UserSettingsSections: c9 } = ME);

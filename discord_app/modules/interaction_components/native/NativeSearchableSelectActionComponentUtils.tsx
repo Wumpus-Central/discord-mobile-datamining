@@ -1,6 +1,6 @@
-// === Module 8024: transformSearchableSelectOptions ===
+// === Module 7906: transformSearchableSelectOptions ===
 
-// Module 8024 (transformSearchableSelectOptions)
+// Module 7906 (transformSearchableSelectOptions)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -107,10 +107,10 @@ export const transformSearchableSelectOptions = function transformSearchableSele
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = importDefault(8026);
+    let channelIconWithGuild = importDefault(7908);
   } else {
-    channelIconWithGuild = require(4716) /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
-    const obj = require(4716) /* getChannelIcon */;
+    channelIconWithGuild = require(4654) /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
+    const obj = require(4654) /* getChannelIcon */;
   }
   return channelIconWithGuild;
 };

@@ -1,6 +1,6 @@
-// === Module 8759: SidebarVisibilityMethodStore ===
+// === Module 8458: SidebarVisibilityMethodStore ===
 
-// Module 8759 (SidebarVisibilityMethodStore)
+// Module 8458 (SidebarVisibilityMethodStore)
 import keys from "keys";
 
 let obj = keys.create(() => ({}));

@@ -1,6 +1,6 @@
-// === Module 4802: requestAuthorization ===
+// === Module 4740: requestAuthorization ===
 
-// Module 4802 (requestAuthorization)
+// Module 4740 (requestAuthorization)
 import setPermission from "setPermission";
 import initialize from "initialize";
 import NativePermissionStatus from "NativePermissionStatus";
@@ -58,7 +58,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
             closure_0 = undefined;
             c1 = undefined;
             obj = undefined;
-            if (typeof outer1_1 === "HAS_APPLICATION") {
+            if (typeof outer1_1 === "disabledUntil") {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
               const error = new Error("requestAuthorization: Was provided with not a function for " + outer1_0 + ".");

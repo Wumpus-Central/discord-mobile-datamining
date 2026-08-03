@@ -1,6 +1,6 @@
-// === Module 9973: EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS ===
+// === Module 9828: EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS ===
 
-// Module 9973 (EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS)
+// Module 9828 (EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS)
 let obj = { EARN: 0.25, SPEND: 0.3 };
 let result = require("set").fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
 

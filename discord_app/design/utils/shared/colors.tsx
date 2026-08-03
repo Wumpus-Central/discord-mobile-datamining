@@ -1,6 +1,6 @@
-// === Module 8093: flattenColorOverOpaqueBackground ===
+// === Module 7976: flattenColorOverOpaqueBackground ===
 
-// Module 8093 (flattenColorOverOpaqueBackground)
+// Module 7976 (flattenColorOverOpaqueBackground)
 const result = require("set").fileFinishedImporting("design/utils/shared/colors.tsx");
 
 export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(token, context) {

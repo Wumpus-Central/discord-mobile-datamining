@@ -1,6 +1,6 @@
-// === Module 11891: _updateDiscoverability ===
+// === Module 11789: _updateDiscoverability ===
 
-// Module 11891 (_updateDiscoverability)
+// Module 11789 (_updateDiscoverability)
 import importDefaultResult from "expandEventProperties";
 import set from "set";
 import ME from "ME";
@@ -99,7 +99,7 @@ function _updateDiscoverability() {
               dependencyMap = obj1.hasFlag(dependencyMap, constants2.FIND_BY_EMAIL);
             }
             obj3[2] = dependencyMap;
-            obj2 = phone(11887);
+            obj2 = phone(11785);
             obj3[3] = obj2.isContactSyncEnabled(localAccount.getLocalAccount(constants3.CONTACTS));
             callback2(698).track(constants.USER_DISCOVERY_UPDATED, obj3);
             constants2 = 3;

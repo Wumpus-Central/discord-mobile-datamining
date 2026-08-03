@@ -1,6 +1,6 @@
-// === Module 14434: useOfficialMessageStyleSettingValue ===
+// === Module 14367: useOfficialMessageStyleSettingValue ===
 
-// Module 14434 (useOfficialMessageStyleSettingValue)
+// Module 14367 (useOfficialMessageStyleSettingValue)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
@@ -11,7 +11,7 @@ function useOfficialMessageStyleSettingValue() {
   return require(589) /* initialize */.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
 }
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
-  const result = require(13584) /* setFontSize */.setOfficialMessageStyle(officialMessageStyle);
+  const result = require(13521) /* setFontSize */.setOfficialMessageStyle(officialMessageStyle);
 }
 function useOfficialMessageStyleSettingOptions() {
   return React.useMemo(() => {

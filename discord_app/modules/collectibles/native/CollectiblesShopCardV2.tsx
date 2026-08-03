@@ -1,6 +1,6 @@
-// === Module 8847: CollectiblesShopCardInternalV2 ===
+// === Module 8670: CollectiblesShopCardInternalV2 ===
 
-// Module 8847 (CollectiblesShopCardInternalV2)
+// Module 8670 (CollectiblesShopCardInternalV2)
 import importAllResult from "useCanPurchaseFrames";
 import get_ActivityIndicator from "useTrackShopCardClick";
 import handleThemeChange from "handleThemeChange";
@@ -439,7 +439,7 @@ const memoResult = importAllResult.memo(function CollectiblesShopCardV2(arg0) {
     obj = {};
     const merged1 = Object.assign(merged);
     obj[1] = callback(CollectiblesShopCardV2Inner, obj);
-    return callback(require(8850) /* context */.CollectiblesAnalyticsProvider, obj);
+    return callback(require(8673) /* context */.CollectiblesAnalyticsProvider, obj);
   }
 });
 let result = require("handleThemeChange").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardV2.tsx");

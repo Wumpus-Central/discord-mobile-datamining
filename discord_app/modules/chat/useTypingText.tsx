@@ -1,6 +1,6 @@
-// === Module 11323: useTypingText ===
+// === Module 11211: useTypingText ===
 
-// Module 11323 (useTypingText)
+// Module 11211 (useTypingText)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

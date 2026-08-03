@@ -1,6 +1,6 @@
-// === Module 14210: CONNECTION_BANNER_HEIGHT ===
+// === Module 14143: CONNECTION_BANNER_HEIGHT ===
 
-// Module 14210 (CONNECTION_BANNER_HEIGHT)
+// Module 14143 (CONNECTION_BANNER_HEIGHT)
 import { PixelRatio } from "get ActivityIndicator";
 import roundToNearestPixelResult from "module_14";
 

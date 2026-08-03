@@ -1,6 +1,6 @@
-// === Module 6901: fromServer ===
+// === Module 5806: fromServer ===
 
-// Module 6901 (fromServer)
+// Module 5806 (fromServer)
 let prototype;
 prototype = function CollectiblesBundledProductRecord(arg0) {
   ({ prices: tmp.prices, type: tmp.type, premiumType: tmp.premiumType, name: tmp.name, skuId: tmp.skuId, summary: tmp.summary } = arg0);
@@ -14,11 +14,11 @@ prototype["fromServer"] = function fromServer(arg0) {
   let summary;
   let type;
   ({ prices, type, premium_type, name, sku_id, summary } = arg0);
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.prices = importDefault(4296)(prices);
+  obj.prices = importDefault(4234)(prices);
   obj.type = type;
   obj.premiumType = premium_type;
   obj.name = name;

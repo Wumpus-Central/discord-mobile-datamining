@@ -1,6 +1,6 @@
-// === Module 11724: useGuildPowerupRollbackModalConfig ===
+// === Module 11617: useGuildPowerupRollbackModalConfig ===
 
-// Module 11724 (useGuildPowerupRollbackModalConfig)
+// Module 11617 (useGuildPowerupRollbackModalConfig)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

@@ -1,6 +1,6 @@
-// === Module 7863: transformReactions ===
+// === Module 7744: transformReactions ===
 
-// Module 7863 (transformReactions)
+// Module 7744 (transformReactions)
 const result = require("getAvatarURL").fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
 export default function transformReactions(arg0) {
@@ -8,8 +8,8 @@ export default function transformReactions(arg0) {
   let require;
   ({ reactions, animateEmoji: require } = arg0);
   let closure_1;
-  closure_1 = require(7859) /* apexExperiment */.shouldSkipAccessibilityLabels();
-  let obj = require(7859) /* apexExperiment */;
+  closure_1 = require(7740) /* apexExperiment */.shouldSkipAccessibilityLabels();
+  let obj = require(7740) /* apexExperiment */;
   return reactions.flatMap((emoji) => {
     emoji = emoji.emoji;
     const merged = Object.assign(emoji, Object.create(null));

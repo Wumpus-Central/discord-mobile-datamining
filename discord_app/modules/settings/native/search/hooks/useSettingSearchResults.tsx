@@ -1,6 +1,6 @@
-// === Module 14793: useSettingSearchResults ===
+// === Module 14726: useSettingSearchResults ===
 
-// Module 14793 (useSettingSearchResults)
+// Module 14726 (useSettingSearchResults)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import zustandStore from "zustandStore";
@@ -12,8 +12,8 @@ const result = require("zustandStore").fileFinishedImporting("modules/settings/n
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = callback(14794);
-    tmp = new tmp(memo(13765).getSettingSearchableTitles());
+    let tmp = callback(14727);
+    tmp = new tmp(memo(13702).getSettingSearchableTitles());
     return tmp;
   }, []);
   const settings = callback(memo1.useState(closure_7), 2);

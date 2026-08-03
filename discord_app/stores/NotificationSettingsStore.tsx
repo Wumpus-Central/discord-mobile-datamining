@@ -1,6 +1,6 @@
-// === Module 10398: DesktopNotificationTypes ===
+// === Module 10259: DesktopNotificationTypes ===
 
-// Module 10398 (DesktopNotificationTypes)
+// Module 10259 (DesktopNotificationTypes)
 import ME from "ME";
 import { DeviceSettingsStore } from "initialize";
 
@@ -53,11 +53,11 @@ Object.defineProperty(prototype, "screenDowntimeReminder", {
   },
   set: undefined
 });
-prototype["isSoundDisabled"] = function isSoundDisabled(call_calling) {
+prototype["isSoundDisabled"] = function isSoundDisabled(message1) {
   let disableAllSounds = obj.disableAllSounds;
   if (!disableAllSounds) {
     const disabledSounds = obj.disabledSounds;
-    disableAllSounds = -1 !== disabledSounds.indexOf(call_calling);
+    disableAllSounds = -1 !== disabledSounds.indexOf(message1);
   }
   return disableAllSounds;
 };

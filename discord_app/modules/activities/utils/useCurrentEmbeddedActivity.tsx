@@ -1,6 +1,6 @@
-// === Module 10777: useCurrentEmbeddedActivity ===
+// === Module 10617: useCurrentEmbeddedActivity ===
 
-// Module 10777 (useCurrentEmbeddedActivity)
+// Module 10617 (useCurrentEmbeddedActivity)
 import participantFromServer from "participantFromServer";
 
 const require = arg1;

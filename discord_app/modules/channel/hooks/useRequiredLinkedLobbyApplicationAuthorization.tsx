@@ -1,6 +1,6 @@
-// === Module 11646: useRequiredLinkedLobbyApplicationAuthorization ===
+// === Module 11536: useRequiredLinkedLobbyApplicationAuthorization ===
 
-// Module 11646 (useRequiredLinkedLobbyApplicationAuthorization)
+// Module 11536 (useRequiredLinkedLobbyApplicationAuthorization)
 import { useEffect } from "noop";
 import addApplication from "addApplication";
 import recomputeFromAppTokens from "recomputeFromAppTokens";

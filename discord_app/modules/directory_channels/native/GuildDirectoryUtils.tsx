@@ -1,6 +1,6 @@
-// === Module 10228: _onAddDirectoryGuildEntry ===
+// === Module 10086: _onAddDirectoryGuildEntry ===
 
-// Module 10228 (_onAddDirectoryGuildEntry)
+// Module 10086 (_onAddDirectoryGuildEntry)
 import GuildDirectoryAddAlert from "GuildDirectoryAddAlert";
 import "noop";
 import { jsx } from "jsxProd";
@@ -68,7 +68,7 @@ function _onAddDirectoryGuildEntry() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              let obj3 = lib(10223);
+              let obj3 = lib(10081);
               dependencyMap = 2;
               c4 = 1;
               const obj2 = { value: null, done: false };
@@ -85,7 +85,7 @@ function _onAddDirectoryGuildEntry() {
             return obj3;
           } else {
             callback2();
-            obj = callback(4595);
+            obj = callback(4533);
             const obj4 = { importer: null };
             obj4[0] = function importer() {
               return _undefined(paths[6])(paths[5], paths.paths).then((arg0) => {

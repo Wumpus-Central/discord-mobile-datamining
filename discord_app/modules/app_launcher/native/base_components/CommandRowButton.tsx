@@ -1,6 +1,6 @@
-// === Module 11403: CommandRowIcon ===
+// === Module 11292: CommandRowIcon ===
 
-// Module 11403 (CommandRowIcon)
+// Module 11292 (CommandRowIcon)
 import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,21 +9,7 @@ import { jsx } from "jsxProd";
 const require = arg1;
 const result = require("noop").fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
 
-export default function CommandRowIcon(hasOptions) {
-  if (hasOptions.hasOptions) {
-    let tmp3Result = tmp3(tmp4(5293).TableRowArrow, {});
-  } else {
-    const obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
-    const intl = tmp4(1236).intl;
-    obj[1] = intl.string(tmp4(1236).t.TXNS7S);
-    obj[2] = tmp2;
-    obj[3] = tmp3(tmp4(4201).SendMessageIcon, { size: "sm" });
-    obj[7] = tmp;
-    tmp3Result = tmp3(tmp4(4666).Button, obj);
-  }
-  return tmp3Result;
-};
-export const useCommandRowSend = function useCommandRowSend(command) {
+export default function CommandRowIcon(command) {
   command = command.command;
   const beforeExecuteCommand = command.beforeExecuteCommand;
   const onExecuteCommand = command.onExecuteCommand;
@@ -74,13 +60,13 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               dependencyMap();
             }
             let c3 = 1;
-            let obj1 = outer1_0(8137);
+            let obj1 = outer1_0(8019);
             obj1 = { command: null, optionValues: null, context: null, sectionName: null, commandOrigin: null };
             obj1[0] = outer1_0;
-            obj1[1] = outer1_0(11297).parseOptionValuesForSend(outer1_6.channel, outer1_0, {});
+            obj1[1] = outer1_0(11185).parseOptionValuesForSend(outer1_6.channel, outer1_0, {});
             obj1[2] = outer1_6;
             obj1[3] = c4;
-            obj1[4] = outer1_0(6879).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj1[4] = outer1_0(5709).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj2 = { value: null, done: false };
@@ -121,17 +107,17 @@ export const useCommandRowSend = function useCommandRowSend(command) {
       }
     }
   }), items);
-  obj = {
-    hasOptions: options.length > 0,
-    sending: tmp2[0],
-    onPressSend: sectionName.useCallback(() => {
-      if (null != tryExecuteCommand) {
-        tmp(callback);
-      } else {
-        callback();
-      }
-    }, items1)
-  };
-  items1 = [tryExecuteCommand, callback];
-  return obj;
+  const items1 = [tryExecuteCommand, callback];
+  if (tmp) {
+    let tmp8Result = tmp8(tmp3(tmp4[8]).TableRowArrow, {});
+  } else {
+    obj = { size: "sm", text: null, onPress: null, icon: null, iconPosition: "end", grow: false, variant: "tertiary", disabled: null };
+    const intl = tmp3(tmp4[10]).intl;
+    obj[1] = intl.string(tmp3(tmp4[10]).t.TXNS7S);
+    obj[2] = tmp7;
+    obj[3] = tmp8(tmp3(tmp4[11]).SendMessageIcon, { size: "sm" });
+    obj[7] = tmp2[0];
+    tmp8Result = tmp8(tmp3(tmp4[9]).Button, obj);
+  }
+  return tmp8Result;
 };

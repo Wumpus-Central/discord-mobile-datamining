@@ -1,6 +1,6 @@
-// === Module 9574: useEmojiAndSource ===
+// === Module 9427: useEmojiAndSource ===
 
-// Module 9574 (useEmojiAndSource)
+// Module 9427 (useEmojiAndSource)
 import closure_2 from "getEmojiSourceData";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,6 @@
-// === Module 11503: _downloadPollGif ===
+// === Module 11393: _downloadPollGif ===
 
-// Module 11503 (_downloadPollGif)
+// Module 11393 (_downloadPollGif)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER";
 

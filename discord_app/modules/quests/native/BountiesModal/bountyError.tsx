@@ -1,6 +1,6 @@
-// === Module 14133: set ===
+// === Module 14066: set ===
 
-// Module 14133 (set)
+// Module 14066 (set)
 import { BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS as closure_3 } from "BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS";
 import set from "dispatcher";
 
@@ -8,7 +8,7 @@ let set = new Set([260021]);
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/bountyError.tsx");
 
 export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErrorToast(closure_0) {
-  let obj = importDefault(3956);
+  let obj = importDefault(3894);
   let code;
   if (closure_0 != null) {
     code = closure_0.code;
@@ -24,7 +24,7 @@ export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErr
       }
       obj = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: null, icon: null, toastDurationMs: null };
       obj[1] = message;
-      obj[2] = importDefault(9354);
+      obj[2] = importDefault(9181);
       obj[3] = closure_3;
       obj.open(obj);
     }

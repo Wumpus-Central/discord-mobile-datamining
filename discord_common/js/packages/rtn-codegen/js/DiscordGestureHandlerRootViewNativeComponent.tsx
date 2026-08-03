@@ -1,6 +1,6 @@
-// === Module 13692: __INTERNAL_VIEW_CONFIG ===
+// === Module 13629: __INTERNAL_VIEW_CONFIG ===
 
-// Module 13692 (__INTERNAL_VIEW_CONFIG)
+// Module 13629 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DiscordGestureHandlerRootView", validAttributes: {} };

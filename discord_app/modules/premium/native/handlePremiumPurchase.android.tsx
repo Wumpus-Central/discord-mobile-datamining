@@ -1,6 +1,6 @@
-// === Module 7243: validatePurchase ===
+// === Module 6254: validatePurchase ===
 
-// Module 7243 (validatePurchase)
+// Module 6254 (validatePurchase)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import reset from "reset";
 import set from "set";
@@ -112,7 +112,7 @@ function _validatePurchase() {
           } else if (2 === tmp8) {
             c4 = 0;
             c6 = c3;
-            const tmp18 = new lib(7245)(c6);
+            const tmp18 = new lib(6256)(c6);
             throw tmp18;
           } else if (arg0 === 1) {
             c6 = 3;

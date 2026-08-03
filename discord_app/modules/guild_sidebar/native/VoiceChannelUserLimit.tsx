@@ -1,6 +1,6 @@
-// === Module 15108: ? ===
+// === Module 15128: ? ===
 
-// Module 15108
+// Module 15128
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -32,7 +32,7 @@ const memoResult = importAllResult.memo(function VoiceChannelUserLimit(videoLimi
   let tmp3 = null;
   if (videoLimit.videoLimit) {
     obj = { source: null, size: null, style: null };
-    obj[0] = importDefault(12930);
+    obj[0] = importDefault(12867);
     obj[1] = require(1297) /* Button */.Icon.Sizes.REFRESH_SMALL_16;
     obj[2] = rect.videoIcon;
     tmp3 = callback(require(1297) /* Button */.Icon, obj);
@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo(function VoiceChannelUserLimit(videoLimi
   const items = [tmp3, ];
   const obj1 = { variant: "text-xs/medium", lineClamp: 1, color: "voice-channel-user-limit-text", children: null };
   obj1[3] = users.toString().padStart(2, "0");
-  items[1] = callback(require(4251) /* Text */.Text, obj1);
+  items[1] = callback(require(4189) /* Text */.Text, obj1);
   obj[1] = items;
   const items1 = [closure_5(View, obj), callback(View, { style: rect.mid }), ];
   const obj3 = { style: rect.right, children: null };
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo(function VoiceChannelUserLimit(videoLimi
   const obj2 = { style: rect.mid };
   const str = users.toString();
   obj4[3] = total.toString().padStart(2, "0");
-  obj3[1] = callback(require(4251) /* Text */.Text, obj4);
+  obj3[1] = callback(require(4189) /* Text */.Text, obj4);
   items1[2] = callback(View, obj3);
   obj[1] = items1;
   return closure_5(View, obj);

@@ -1,6 +1,6 @@
-// === Module 12658: handlePress ===
+// === Module 12565: handlePress ===
 
-// Module 12658 (handlePress)
+// Module 12565 (handlePress)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { getPremiumGroupProductName as closure_5 } from "SubscriptionStatusTypes";
 import { jsx } from "jsxProd";
@@ -9,13 +9,13 @@ import createCacheKey from "createCacheKey";
 let c3;
 let c4;
 function handlePress() {
-  let obj = importDefault(4223);
+  let obj = importDefault(4161);
   obj = { aboutText: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { premiumGroupProductName: null };
   obj[0] = callback();
-  obj[0] = intl.formatToPlainString(importDefault(2837)["5xN/C1"], obj);
-  obj.openLazy(require(1959) /* asyncRequireImpl */(12659, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj[0] = intl.formatToPlainString(importDefault(2807)["5xN/C1"], obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(12566, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 let obj = { premiumGroupBanner: null, pgUnavailable: null, pgUnavailableText: null };
@@ -35,7 +35,7 @@ export default function BoostingUnavailablePill(style) {
   const obj1 = { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj1[3] = intl.string(require(1236) /* getSystemLocale */.t["5nrJDO"]);
-  obj[1] = jsx(require(4251) /* Text */.Text, { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
+  obj[1] = jsx(require(4189) /* Text */.Text, { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
   obj[1] = <closure_4 style={tmp.pgUnavailable}>{null}</closure_4>;
   obj[2] = <closure_4 style={tmp.pgUnavailable}>{null}</closure_4>;
   return <closure_3 style={tmp.pgUnavailable}>{null}</closure_3>;

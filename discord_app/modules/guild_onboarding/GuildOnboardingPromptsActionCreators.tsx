@@ -1,6 +1,6 @@
-// === Module 5180: fetchOnboardingPrompts ===
+// === Module 5118: fetchOnboardingPrompts ===
 
-// Module 5180 (fetchOnboardingPrompts)
+// Module 5118 (fetchOnboardingPrompts)
 import serverPromptToClientPrompt from "serverPromptToClientPrompt";
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -162,14 +162,14 @@ function startOnboarding(guildId) {
 function _trackOnboardingDirectJoin(guildId) {
   let obj = importDefault(698);
   obj = {};
-  const merged = Object.assign(require(4450) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const merged = Object.assign(require(4388) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
   obj.required = true;
   obj.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj);
-  const obj3 = require(4450) /* collectGuildAnalyticsMetadata */;
+  const obj3 = require(4388) /* collectGuildAnalyticsMetadata */;
   obj = {};
   const obj4 = importDefault(698);
-  const merged1 = Object.assign(require(4450) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const merged1 = Object.assign(require(4388) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
   obj.skipped = false;
   obj.is_final_step = true;
@@ -183,7 +183,7 @@ const result = require("trackCommunicationDisabled").fileFinishedImporting("modu
 export const loadOnboardingPrompts = function loadOnboardingPrompts(guildId) {
   let obj = importDefault(698);
   obj = {};
-  const merged = Object.assign(require(4450) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const merged = Object.assign(require(4388) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
   obj.has_new_prompts = false;
   obj.number_of_prompts = 0;
   obj.track(constants.GUILD_ONBOARDING_LOADED, obj);

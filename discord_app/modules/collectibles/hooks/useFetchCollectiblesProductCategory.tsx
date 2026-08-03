@@ -1,6 +1,6 @@
-// === Module 9954: useFetchCollectiblesProductCategory ===
+// === Module 9809: useFetchCollectiblesProductCategory ===
 
-// Module 9954 (useFetchCollectiblesProductCategory)
+// Module 9809 (useFetchCollectiblesProductCategory)
 import _slicedToArray from "_slicedToArray";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 
@@ -9,7 +9,7 @@ const result = require("set").fileFinishedImporting("modules/collectibles/hooks/
 
 export const useFetchCollectiblesProductCategory = function useFetchCollectiblesProductCategory(skuId) {
   const _require = skuId;
-  importDefault(8079)();
+  importDefault(7962)();
   let obj = _require(647);
   let items = [updateCategoriesAndProducts];
   const tmp2 = callback(obj.useStateFromStoresArray(items, () => {

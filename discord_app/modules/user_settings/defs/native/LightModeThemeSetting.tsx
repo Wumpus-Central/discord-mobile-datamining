@@ -1,6 +1,6 @@
-// === Module 14406: route ===
+// === Module 14339: route ===
 
-// Module 14406 (route)
+// Module 14339 (route)
 import handleThemeChange from "handleThemeChange";
 import { SystemTheme } from "SystemThemeState";
 import createToggle from "createToggle";
@@ -21,14 +21,14 @@ createToggle = {
     return stateFromStores;
   },
   useTrailing() {
-    return require(14407) /* useSyncedModeThemeName */.useSyncedModeThemeName(SystemTheme.LIGHT);
+    return require(14340) /* useSyncedModeThemeName */.useSyncedModeThemeName(SystemTheme.LIGHT);
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
   getComponent() {
-    return require(14408) /* SettingsAppearanceLightModeThemePickerScreen */.default;
+    return require(14341) /* SettingsAppearanceLightModeThemePickerScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

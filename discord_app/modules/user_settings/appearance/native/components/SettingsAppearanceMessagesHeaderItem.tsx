@@ -1,6 +1,6 @@
-// === Module 14394: MessagesHeaderItem ===
+// === Module 14327: MessagesHeaderItem ===
 
-// Module 14394 (MessagesHeaderItem)
+// Module 14327 (MessagesHeaderItem)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -18,6 +18,6 @@ export default function MessagesHeaderItem(animatedStyles) {
   obj = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.OIgYlQ);
-  obj[1] = jsx(require(4251) /* Text */.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null });
+  obj[1] = jsx(require(4189) /* Text */.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null });
   return <View animated style={arg0.animatedStyles.textNormal} variant="text-lg/bold">{null}</View>;
 };

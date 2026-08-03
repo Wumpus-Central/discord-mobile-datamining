@@ -1,6 +1,6 @@
-// === Module 6967: hasAttachmentsEmbedsComponentsOrSnapshots ===
+// === Module 5889: hasAttachmentsEmbedsComponentsOrSnapshots ===
 
-// Module 6967 (hasAttachmentsEmbedsComponentsOrSnapshots)
+// Module 5889 (hasAttachmentsEmbedsComponentsOrSnapshots)
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
 
 export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachmentsEmbedsComponentsOrSnapshots(message) {

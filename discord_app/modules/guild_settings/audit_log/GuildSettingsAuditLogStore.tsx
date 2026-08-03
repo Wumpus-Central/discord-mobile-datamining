@@ -1,6 +1,6 @@
-// === Module 16459: AuditLogActions ===
+// === Module 16393: AuditLogActions ===
 
-// Module 16459 (AuditLogActions)
+// Module 16393 (AuditLogActions)
 import getTargetType from "getTargetType";
 import { AuditLogChange } from "getTargetType";
 import { isGuildSelectableChannelType as closure_4 } from "createChannelRecord";

@@ -1,6 +1,6 @@
-// === Module 7900: getApplicationSubscriptionSystemMessageASTContent ===
+// === Module 7782: getApplicationSubscriptionSystemMessageASTContent ===
 
-// Module 7900 (getApplicationSubscriptionSystemMessageASTContent)
+// Module 7782 (getApplicationSubscriptionSystemMessageASTContent)
 const result = require("set").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
 
 export const getApplicationSubscriptionSystemMessageASTContent = function getApplicationSubscriptionSystemMessageASTContent(arg0) {

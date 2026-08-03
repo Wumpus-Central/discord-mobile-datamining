@@ -1,6 +1,6 @@
-// === Module 5606: getRoleIconData ===
+// === Module 5544: getRoleIconData ===
 
-// Module 5606 (getRoleIconData)
+// Module 5544 (getRoleIconData)
 import ME from "ME";
 import set from "set";
 import set from "parseRawEmojiObject";
@@ -21,9 +21,9 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
   } else {
     let byName;
     if (null != role.unicodeEmoji) {
-      let obj = importDefault(3896);
-      byName = obj.getByName(importDefault(3896).convertSurrogateToName(role.unicodeEmoji, false));
-      const obj2 = importDefault(3896);
+      let obj = importDefault(3834);
+      byName = obj.getByName(importDefault(3834).convertSurrogateToName(role.unicodeEmoji, false));
+      const obj2 = importDefault(3834);
     }
     ({ id, icon } = role);
     let tmp4;

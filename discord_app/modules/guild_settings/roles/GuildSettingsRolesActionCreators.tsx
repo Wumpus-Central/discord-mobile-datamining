@@ -1,6 +1,6 @@
-// === Module 16552: AsyncFromSyncIterator ===
+// === Module 16486: AsyncFromSyncIterator ===
 
-// Module 16552 (AsyncFromSyncIterator)
+// Module 16486 (AsyncFromSyncIterator)
 import ComponentDispatcher from "ComponentDispatcher";
 import { ComponentActions } from "ME";
 

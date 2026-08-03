@@ -1,6 +1,6 @@
-// === Module 7950: createJoinRequestNotificationSystemMessage ===
+// === Module 7832: createJoinRequestNotificationSystemMessage ===
 
-// Module 7950 (createJoinRequestNotificationSystemMessage)
+// Module 7832 (createJoinRequestNotificationSystemMessage)
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -88,7 +88,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
     }
     const obj2 = { content: null };
     obj2[0] = str;
-    const merged = Object.assign(importDefault(7870)(message));
+    const merged = Object.assign(importDefault(7751)(message));
     return obj2;
   }
 };

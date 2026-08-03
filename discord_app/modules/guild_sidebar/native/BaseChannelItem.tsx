@@ -1,6 +1,6 @@
-// === Module 11602: BaseChannelSubtitle ===
+// === Module 11492: BaseChannelSubtitle ===
 
-// Module 11602 (BaseChannelSubtitle)
+// Module 11492 (BaseChannelSubtitle)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { CHANNEL_TITLE_LINE_HEIGHT } from "hairlineWidth";
@@ -14,8 +14,8 @@ const require = arg1;
 class BaseChannelSubtitle {
   constructor(arg0) {
     ({ mode, subtitle } = global);
-    tmp = f51773;
-    if (mode !== f51773.UNREAD_IMPORTANT) {
+    tmp = f51493;
+    if (mode !== f51493.UNREAD_IMPORTANT) {
       if (mode !== tmp.RELEVANT) {
         if (mode !== tmp.SELECTED) {
           MUTED = tmp.MUTED;
@@ -124,9 +124,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj[1] = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(11603);
+      let AnimatedPressableHighlight = hideIcon(11493);
     } else {
-      AnimatedPressableHighlight = mode(8547).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8240).AnimatedPressableHighlight;
     }
     obj = {};
     const merged1 = Object.assign(merged);
@@ -143,9 +143,9 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj[2] = ALL_MESSAGES;
-    closure_7(hideIcon(10481), obj);
+    closure_7(hideIcon(10342), obj);
     const tmp6 = closure_7;
-    const tmp9 = hideIcon(10481);
+    const tmp9 = hideIcon(10342);
   }
 };
 export const ChannelModes = createCacheKey;

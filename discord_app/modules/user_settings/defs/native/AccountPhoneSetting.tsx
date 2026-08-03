@@ -1,6 +1,6 @@
-// === Module 13884: pressable ===
+// === Module 13817: pressable ===
 
-// Module 13884 (pressable)
+// Module 13817 (pressable)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY";
 import createToggle from "createToggle";
@@ -24,10 +24,10 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = importDefault(4461);
+    let obj = importDefault(4399);
     obj = { allowDeletePhone: true, reason: null };
-    obj[1] = require(9417) /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(9414, dependencyMap.paths), obj, closure_4);
+    obj[1] = require(9244) /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    obj.pushLazy(require(1959) /* asyncRequireImpl */(9241, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

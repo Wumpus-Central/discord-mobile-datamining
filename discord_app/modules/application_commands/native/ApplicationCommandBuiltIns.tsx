@@ -1,6 +1,6 @@
-// === Module 8150: get untranslatedDescription ===
+// === Module 5717: get untranslatedDescription ===
 
-// Module 8150 (get untranslatedDescription)
+// Module 5717 (get untranslatedDescription)
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -30,11 +30,11 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4446).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const channelName = channel(4384).computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     const intl5 = channel(1236).intl;
     let obj = { name: null };
     obj[0] = channelName;
-    const obj5 = channel(4446);
+    const obj5 = channel(4384);
     const intl6 = channel(1236).intl;
     obj = { name: null };
     obj[0] = channelName;
@@ -50,7 +50,7 @@ obj.execute = function execute(arg0, channel) {
       obj1[0] = channelName;
       formatResult = intl2.format(tmp5(1236).t.IK1Qvs, obj1);
     }
-    let obj2 = importDefault(4594);
+    let obj2 = importDefault(4532);
     obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
     obj2[0] = formatToPlainStringResult1;
     obj2[1] = formatResult;

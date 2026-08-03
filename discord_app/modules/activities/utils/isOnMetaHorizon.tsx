@@ -1,6 +1,6 @@
-// === Module 12119: isOnMetaHorizon ===
+// === Module 12023: isOnMetaHorizon ===
 
-// Module 12119 (isOnMetaHorizon)
+// Module 12023 (isOnMetaHorizon)
 import { META_PRESENCE_APPLICATION_ID as closure_0 } from "items3";
 import { ActivityGamePlatforms } from "ME";
 

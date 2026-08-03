@@ -1,6 +1,6 @@
-// === Module 14906: TakeActionButtons ===
+// === Module 14839: TakeActionButtons ===
 
-// Module 14906 (TakeActionButtons)
+// Module 14839 (TakeActionButtons)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import getSystemLocale from "getSystemLocale";
@@ -110,23 +110,23 @@ export default function TakeActionButtons(senderId) {
             let closure_0 = tmp4;
             if (null != outer1_9.getUser(outer1_0)) {
               outer1_6(true);
-              let obj2 = outer1_0(7818);
+              let obj2 = outer1_0(7697);
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
               obj1[0] = obj2.submitReportForInappropriateConversationSafetyAlert(outer1_5, () => {
                 dependencyMap(true);
-                let obj = v1(3956);
+                let obj = v1(3894);
                 obj = { key: outer1_13, content: null, IconComponent: null, iconColor: null, containerStyle: null };
                 const intl = tmp4(1236).intl;
                 obj[1] = intl.string(tmp4(1236).t.gn2c6X);
-                obj[2] = tmp4(4216).CircleCheckIcon;
+                obj[2] = tmp4(4154).CircleCheckIcon;
                 obj[3] = outer1_14;
                 obj[4] = toastContainer.toastContainer;
                 obj.open(obj);
               }, () => {
                 const intl = tmp4(1236).intl;
-                tmp4(3955).presentFailedToast(intl.string(tmp4(1236).t["0YV04/"]));
+                tmp4(3893).presentFailedToast(intl.string(tmp4(1236).t["0YV04/"]));
               });
               return obj1;
             } else {
@@ -138,9 +138,9 @@ export default function TakeActionButtons(senderId) {
           throw arg1;
         } else if (arg0 !== 2) {
           callback2(false);
-          obj = v0(7695);
+          obj = v0(6724);
           const result = obj.showReportSuccessToast(closure_0, v0);
-          callback(outer1_0(10308).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          callback(outer1_0(10169).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
         }
         dependencyMap = 3;
         obj2 = { value: null, done: true };

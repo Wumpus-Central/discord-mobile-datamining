@@ -1,6 +1,6 @@
-// === Module 10193: VoicePanelModes ===
+// === Module 10051: VoicePanelModes ===
 
-// Module 10193 (VoicePanelModes)
+// Module 10051 (VoicePanelModes)
 import set from "set";
 import set from "set";
 import set from "set";

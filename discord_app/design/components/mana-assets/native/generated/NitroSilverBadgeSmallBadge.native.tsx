@@ -1,6 +1,6 @@
-// === Module 6473: NitroSilverBadgeSmallBadge ===
+// === Module 7337: NitroSilverBadgeSmallBadge ===
 
-// Module 6473 (NitroSilverBadgeSmallBadge)
+// Module 7337 (NitroSilverBadgeSmallBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/NitroSilverBadgeSmallBadge.native.tsx");
@@ -24,7 +24,7 @@ export const NitroSilverBadgeSmallBadge = function NitroSilverBadgeSmallBadge(wi
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6474);
+  obj[0] = importDefault(7338);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const NitroSilverBadgeSmallBadge = function NitroSilverBadgeSmallBadge(wi
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

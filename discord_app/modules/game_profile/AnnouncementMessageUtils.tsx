@@ -1,6 +1,6 @@
-// === Module 8838: toAnnouncementMessages ===
+// === Module 8661: toAnnouncementMessages ===
 
-// Module 8838 (toAnnouncementMessages)
+// Module 8661 (toAnnouncementMessages)
 import { isMessageComponentsV2 } from "hasFlag";
 
 const re4 = /^#{1,3}\s+(.+)$/;
@@ -243,7 +243,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
-  let result = require(8121) /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
+  let result = require(8003) /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
   if (result == null) {
     const intl = tmp(1236).intl;
     result = intl.string(tmp(1236).t["e+J3JZ"]);

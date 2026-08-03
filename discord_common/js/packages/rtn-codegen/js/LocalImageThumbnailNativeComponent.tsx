@@ -1,6 +1,6 @@
-// === Module 13225: __INTERNAL_VIEW_CONFIG ===
+// === Module 13162: __INTERNAL_VIEW_CONFIG ===
 
-// Module 13225 (__INTERNAL_VIEW_CONFIG)
+// Module 13162 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDLocalImageThumbnail", validAttributes: { localImageSource: true } };

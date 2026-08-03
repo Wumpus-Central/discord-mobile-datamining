@@ -1,6 +1,6 @@
-// === Module 14108: route ===
+// === Module 14041: route ===
 
-// Module 14108 (route)
+// Module 14041 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
-    return require(12643) /* componentDidMount */.default;
+    return require(12550) /* componentDidMount */.default;
   }
 };
 const route = createToggle.createRoute(obj);

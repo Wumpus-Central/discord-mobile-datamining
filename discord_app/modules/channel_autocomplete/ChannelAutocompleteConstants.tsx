@@ -1,6 +1,6 @@
-// === Module 4690: regExp ===
+// === Module 4628: regExp ===
 
-// Module 4690 (regExp)
+// Module 4628 (regExp)
 let closure_0 = [];
 const tmp2 = /^<@\$(\d+)>/;
 const regExp = new RegExp(tmp2.source.replace(/^\^/, ""), "g");

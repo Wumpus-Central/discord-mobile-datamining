@@ -1,6 +1,6 @@
-// === Module 13929: pressable ===
+// === Module 13862: pressable ===
 
-// Module 13929 (pressable)
+// Module 13862 (pressable)
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
@@ -10,7 +10,7 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function onAccountDisablePress() {
-    importDefault(13928)(false);
+    importDefault(13861)(false);
   }
 });
 const obj = {
@@ -20,7 +20,7 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function onAccountDisablePress() {
-    importDefault(13928)(false);
+    importDefault(13861)(false);
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");

@@ -1,6 +1,6 @@
-// === Module 7197: updatePoggermodeSettings ===
+// === Module 6145: updatePoggermodeSettings ===
 
-// Module 7197 (updatePoggermodeSettings)
+// Module 6145 (updatePoggermodeSettings)
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import updateCombo from "updateCombo";
@@ -14,7 +14,7 @@ export const updatePoggermodeSettings = function updatePoggermodeSettings(settin
   obj = {};
   const merged = Object.assign(state.getState());
   const merged1 = Object.assign(settings);
-  importDefault(7200)(obj);
+  importDefault(6148)(obj);
 };
 export const updateCombo = function updateCombo(arg0) {
   let obj = importDefault(709);

@@ -1,6 +1,6 @@
-// === Module 8397: shouldAnimate ===
+// === Module 8066: shouldAnimate ===
 
-// Module 8397 (shouldAnimate)
+// Module 8066 (shouldAnimate)
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
 export const shouldAnimate = function shouldAnimate(start, current) {
@@ -29,5 +29,5 @@ export const shouldAnimate = function shouldAnimate(start, current) {
   }
 };
 export const calculateProfileEffectHeight = function calculateProfileEffectHeight(layerConfig, width) {
-  return width / require(8398) /* DEFAULT_PROFILE_EFFECT_WH_RATIO */.getAssetWHRatio(layerConfig);
+  return width / require(8067) /* DEFAULT_PROFILE_EFFECT_WH_RATIO */.getAssetWHRatio(layerConfig);
 };

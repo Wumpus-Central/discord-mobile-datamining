@@ -1,6 +1,6 @@
-// === Module 11702: storeListingToGuildPowerup ===
+// === Module 11595: storeListingToGuildPowerup ===
 
-// Module 11702 (storeListingToGuildPowerup)
+// Module 11595 (storeListingToGuildPowerup)
 import GuildFeatures from "GuildFeatures";
 import { GuildPowerupType } from "BoostedGuildTiers";
 import { DEFAULT_EMOJI_SLOTS } from "set";

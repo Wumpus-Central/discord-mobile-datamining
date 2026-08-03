@@ -1,6 +1,6 @@
-// === Module 4354: AudioSubsystems ===
+// === Module 4292: AudioSubsystems ===
 
-// Module 4354 (AudioSubsystems)
+// Module 4292 (AudioSubsystems)
 import { InputModes } from "DesktopSources";
 
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/Constants.tsx");

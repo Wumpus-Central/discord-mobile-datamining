@@ -1,6 +1,6 @@
-// === Module 6952: removePendingListFetch ===
+// === Module 5861: removePendingListFetch ===
 
-// Module 6952 (removePendingListFetch)
+// Module 5861 (removePendingListFetch)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
@@ -101,7 +101,7 @@ function processHydratedMessages(channelId, conversationId, messages, fullyHydra
         while (tmp4 !== undefined) {
           let tmp8 = require;
           let tmp9 = dependencyMap;
-          let obj = require(4475) /* createMinimalMessageRecord */;
+          let obj = require(4413) /* createMinimalMessageRecord */;
           let messageRecord = obj.createMessageRecord(tmp6);
           let tmp11 = messageRecord;
           let arr = items1.push(messageRecord);
@@ -134,7 +134,7 @@ function processHydratedMessages(channelId, conversationId, messages, fullyHydra
             obj = { conversationId: null, moderationLabel: null, message: null };
             let tmp23 = require;
             let tmp24 = dependencyMap;
-            let obj4 = require(4475) /* createMinimalMessageRecord */;
+            let obj4 = require(4413) /* createMinimalMessageRecord */;
             obj[2] = obj4.createMessageRecord(tmp21);
             let result1 = messageMetadataByMessageId4.set(tmp21.id, obj);
           }
@@ -199,7 +199,7 @@ function handleReaction(channelId) {
       } else {
         return false;
       }
-      obj = messageId(3894);
+      obj = messageId(3832);
     }
   }
 }
@@ -571,7 +571,7 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(6955).mapConversation);
+      const mapped = rawConversations.map(set(5864).mapConversation);
       const found = mapped.filter(set(1351).isNotNullish);
       const peekResult = tmp3.peek(channelId);
       if (isJump) {
@@ -1139,7 +1139,7 @@ obj = {
           }
           let flag = null != message;
           if (flag) {
-            const updateMessageRecordResult = id(4475).updateMessageRecord(value.message, message);
+            const updateMessageRecordResult = id(4413).updateMessageRecord(value.message, message);
             value.message = updateMessageRecordResult;
             value = null;
             if (null != value.conversationId) {
@@ -1163,7 +1163,7 @@ obj = {
                 flag = true;
               }
             }
-            const obj = id(4475);
+            const obj = id(4413);
           }
           return flag;
         }

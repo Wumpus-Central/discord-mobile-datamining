@@ -1,6 +1,6 @@
-// === Module 10036: PublishModal ===
+// === Module 9891: PublishModal ===
 
-// Module 10036 (PublishModal)
+// Module 9891 (PublishModal)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -19,7 +19,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/a
 
 export default function PublishModal(channelId) {
   const tmp = createCacheKey();
-  const tmp3 = callback(importDefault(10037)(channelId.channelId), 2);
+  const tmp3 = callback(importDefault(9892)(channelId.channelId), 2);
   const first = tmp3[0];
   if (tmp3[1]) {
     let obj = { style: null, children: null };

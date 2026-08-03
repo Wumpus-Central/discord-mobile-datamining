@@ -1,6 +1,6 @@
-// === Module 15074: HappeningNowVoiceCardSubtitle ===
+// === Module 15094: HappeningNowVoiceCardSubtitle ===
 
-// Module 15074 (HappeningNowVoiceCardSubtitle)
+// Module 15094 (HappeningNowVoiceCardSubtitle)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -24,9 +24,9 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
   if (null != stateFromStores) {
     obj = { channel: null };
     obj[0] = stateFromStores;
-    tmp8 = tmp4(8625)(obj);
+    tmp8 = tmp4(8320)(obj);
   }
-  obj[1] = jsx(voiceState(14398).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: importDefault(4446)(stateFromStores) });
+  obj[1] = jsx(voiceState(14331).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: importDefault(4384)(stateFromStores) });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -42,7 +42,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     const obj = { lineClamp: 1, children: null };
     obj[1] = tmp3;
-    return jsx(require(14398) /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
+    return jsx(require(14331) /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
   }
   if (null != activity.stream) {
     if (null != activity) {
@@ -59,8 +59,8 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     tmp3 = null;
     if (null != name) {
-      if (!importDefault(8100)(activity)) {
-        if (tmp4(9261)(activity)) {
+      if (!importDefault(7982)(activity)) {
+        if (tmp4(9088)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {
               const _HermesInternal = HermesInternal;

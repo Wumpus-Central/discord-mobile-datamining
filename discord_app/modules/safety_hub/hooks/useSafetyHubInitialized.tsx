@@ -1,6 +1,6 @@
-// === Module 11231: useSafetyHubInitialized ===
+// === Module 11115: useSafetyHubInitialized ===
 
-// Module 11231 (useSafetyHubInitialized)
+// Module 11115 (useSafetyHubInitialized)
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
 
 const require = arg1;

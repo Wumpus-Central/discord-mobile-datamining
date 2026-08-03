@@ -1,6 +1,6 @@
-// === Module 7206: nativeEventEmitter ===
+// === Module 6154: nativeEventEmitter ===
 
-// Module 7206 (nativeEventEmitter)
+// Module 6154 (nativeEventEmitter)
 import _fileSize from "_fileSize";
 import get_ActivityIndicator from "set";
 import ME from "ME";
@@ -117,7 +117,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
                       obj1[1] = intl2.formatToPlainString(callback(1236).t.D0noUt, obj2);
                       dependencyMap = 1;
                       const obj3 = { value: null, done: false };
-                      obj3[0] = files(7123).startBackgroundTask(obj1);
+                      obj3[0] = files(6045).startBackgroundTask(obj1);
                       return obj3;
                     }
                   } else if (arg0 === 1) {
@@ -131,7 +131,7 @@ prototype["uploadFiles"] = function uploadFiles(c3) {
                   } else {
                     callback = arg1;
                     if (outer1_0._aborted) {
-                      obj = files(7123);
+                      obj = files(6045);
                       obj.endBackgroundTask(outer1_0);
                     }
                     dependencyMap = 3;

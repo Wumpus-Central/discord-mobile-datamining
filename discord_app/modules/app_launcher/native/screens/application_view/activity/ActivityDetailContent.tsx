@@ -1,6 +1,6 @@
-// === Module 11441: Tag ===
+// === Module 11331: Tag ===
 
-// Module 11441 (Tag)
+// Module 11331 (Tag)
 import createExecutable from "createExecutable";
 import useGetOrFetchApplications from "useGetOrFetchApplications";
 import AppLauncherEntrypoint from "AppLauncherEntrypoint";
@@ -8,7 +8,7 @@ import { View } from "getSystemLocale";
 import initialize from "initialize";
 import closure_9 from "createExecutable";
 import { AnalyticEvents } from "ME";
-import jsxProd from "module_4265";
+import jsxProd from "module_4203";
 import createCacheKey from "createCacheKey";
 
 let closure_12;
@@ -24,7 +24,7 @@ function Tag(arg0) {
   let obj = { style: tmp.tag, accessible: true, accessibilityLabel, children: null };
   const items = [icon, ];
   obj = { variant: "text-sm/normal", style: tmp.tagText, children: tagName };
-  items[1] = callback3(require(4251) /* Text */.Text, obj);
+  items[1] = callback3(require(4189) /* Text */.Text, obj);
   obj[3] = items;
   return callback4(View, obj);
 }
@@ -140,7 +140,7 @@ function TryItOutButton(botUserId) {
             closure_0 = undefined;
             const obj1 = { application_id: null, button_action: null };
             obj1[0] = outer1_1;
-            obj1[1] = outer1_0(8358).EntryPointCommandButtonActions.OPEN_APP_DM;
+            obj1[1] = outer1_0(8021).EntryPointCommandButtonActions.OPEN_APP_DM;
             outer1_1(698).track(outer1_10.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, obj1);
             const _setTimeout = setTimeout;
             ref.current = setTimeout(() => {
@@ -153,7 +153,7 @@ function TryItOutButton(botUserId) {
             ref = 2;
             c5 = 1;
             const obj3 = { value: null, done: false };
-            obj3[0] = outer1_1(4265).openPrivateChannel(obj2);
+            obj3[0] = outer1_1(4203).openPrivateChannel(obj2);
             return obj3;
           }
         } else {
@@ -182,7 +182,7 @@ function TryItOutButton(botUserId) {
               ref = 3;
               c5 = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = outer1_1(11005)(obj5);
+              obj6[0] = outer1_1(10656)(obj5);
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -215,7 +215,7 @@ function TryItOutButton(botUserId) {
   const intl = botUserId(1236).intl;
   obj[3] = intl.string(botUserId(1236).t.AUM8hY);
   obj[4] = callback;
-  return callback3(botUserId(4666).Button, obj);
+  return callback3(botUserId(4604).Button, obj);
 }
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_12 = require("Themes").space.PX_12;
@@ -255,19 +255,19 @@ export default function ActivityDetailContent(application) {
   ({ context, entrypoint } = application);
   ({ sectionName, onActivityItemSelected, hasCommands } = application);
   const tmp = createCacheKey();
-  let obj = application(11060);
+  let obj = application(10938);
   const width = obj.useRequiredAppLauncherContext().width;
-  let obj1 = application(11008);
+  let obj1 = application(11309);
   const getPrimaryAppCommand = obj1.useGetPrimaryAppCommand(context, application.id);
-  const analyticsLocations = importDefault(5581)(importDefault(5601).APP_DETAIL).analyticsLocations;
-  let obj2 = application(4786);
+  const analyticsLocations = importDefault(5519)(importDefault(5539).APP_DETAIL).analyticsLocations;
+  let obj2 = application(4724);
   const isScreenLandscape = obj2.useIsScreenLandscape();
-  let detailsContainerLandscape = entrypoint !== application(8358).AppLauncherEntrypoint.VOICE && isScreenLandscape;
+  let detailsContainerLandscape = entrypoint !== application(8021).AppLauncherEntrypoint.VOICE && isScreenLandscape;
   let tmp2Result = tmp2(589);
   const items = [initialize];
   const stateFromStoresObject = tmp2Result.useStateFromStoresObject(items, () => ({ isDeveloperOfThisApp: outer1_8.inDevModeForApplication(application.id), activityUrlOverride: outer1_8.getActivityUrlOverride(), useActivityUrlOverride: outer1_8.getUseActivityUrlOverride() }));
   ({ isDeveloperOfThisApp, activityUrlOverride, useActivityUrlOverride } = stateFromStoresObject);
-  tmp2Result = tmp2(8137);
+  tmp2Result = tmp2(8019);
   if (tmp2Result.isRealApplication(application)) {
     let num = application instanceof closure_9 ? application.maxParticipants : application.max_participants;
     if (num == null) {
@@ -284,21 +284,21 @@ export default function ActivityDetailContent(application) {
       obj = { style: null, children: null };
       obj[1] = num2;
       obj[0] = obj;
-      const items1 = [callback3(tmp2(5247).TableRowDivider, {}), , ];
+      const items1 = [callback3(tmp2(5185).TableRowDivider, {}), , ];
       obj1 = { label: null, value: null, onValueChange: null, end: true };
       let intl = tmp2(1236).intl;
       obj1[0] = intl.string(tmp2(1236).t["3TSGuD"]);
       obj1[1] = useActivityUrlOverride;
-      obj1[2] = importAll(11006).toggleUseActivityUrlOverride;
-      items1[1] = callback3(tmp2(5621).TableSwitchRow, obj1);
+      obj1[2] = importAll(10659).toggleUseActivityUrlOverride;
+      items1[1] = callback3(tmp2(5559).TableSwitchRow, obj1);
       let tmp19Result = null;
       if (useActivityUrlOverride) {
         obj2 = { style: null, children: null };
         obj2[0] = tmp.activityUrlOverrideInputContainer;
         const obj3 = { placeholder: "e.g. http://192.168.1.1:3000", value: null, onChange: null };
         obj3[1] = activityUrlOverride;
-        obj3[2] = tmp20(11006).setActivityUrlOverride;
-        obj2[1] = tmp19(tmp2(7701).TextInput, obj3);
+        obj3[2] = tmp20(10659).setActivityUrlOverride;
+        obj2[1] = tmp19(tmp2(6730).TextInput, obj3);
         tmp19Result = tmp19(tmp18, obj2);
       }
       items1[2] = tmp19Result;
@@ -307,29 +307,29 @@ export default function ActivityDetailContent(application) {
       const tmp17 = closure_12;
       tmp20 = importAll;
     }
-    const getOrFetchApplication = tmp2(5587).useGetOrFetchApplication(application.id);
+    const getOrFetchApplication = tmp2(5525).useGetOrFetchApplication(application.id);
     let bot;
     if (getOrFetchApplication != null) {
       bot = getOrFetchApplication.bot;
     }
-    const tmp2Result1 = tmp2(5587);
+    const tmp2Result1 = tmp2(5525);
     const obj4 = { context: null, applicationId: null };
     obj4[0] = context;
     obj4[1] = application.id;
-    const activityAction = tmp2(11356).useActivityAction(obj4);
-    const tmp2Result2 = tmp2(11356);
-    const delayedSwapToActivityActionLeave = tmp2(11443).useDelayedSwapToActivityActionLeave(activityAction);
+    const activityAction = tmp2(11245).useActivityAction(obj4);
+    const tmp2Result2 = tmp2(11245);
+    const delayedSwapToActivityActionLeave = tmp2(11333).useDelayedSwapToActivityActionLeave(activityAction);
     const obj5 = { context: null, application: null, activityAction: null };
     obj5[0] = context;
     obj5[1] = application;
     obj5[2] = delayedSwapToActivityActionLeave;
-    const tmp2Result3 = tmp2(11443);
-    ({ reason, disabled } = tmp5(11444)(obj5));
+    const tmp2Result3 = tmp2(11333);
+    ({ reason, disabled } = tmp5(11334)(obj5));
     const obj6 = { context: null, application: null, botUserId: null };
     obj6[0] = context;
     obj6[1] = application;
     let id;
-    let tmp5Result = tmp5(11445);
+    let tmp5Result = tmp5(11335);
     if (bot != null) {
       id = bot.id;
     }
@@ -375,7 +375,7 @@ export default function ActivityDetailContent(application) {
         const obj12 = { variant: "text-sm/normal", style: null, children: null };
         obj12[1] = tmp.primaryEntryPointButtonDisabledCTA;
         obj12[2] = reason;
-        tmp36Result = tmp36(tmp2(4251).Text, obj12);
+        tmp36Result = tmp36(tmp2(4189).Text, obj12);
       }
       items3[1] = tmp36Result;
       obj11[1] = items3;
@@ -387,8 +387,8 @@ export default function ActivityDetailContent(application) {
         isDeveloperOfThisApp = !hasCommands;
       }
       if (isDeveloperOfThisApp) {
-        isDeveloperOfThisApp = tmp2(8137).isEmbeddedApp(application);
-        const tmp2Result4 = tmp2(8137);
+        isDeveloperOfThisApp = tmp2(8019).isEmbeddedApp(application);
+        const tmp2Result4 = tmp2(8019);
       }
       if (isDeveloperOfThisApp) {
         const obj13 = { style: null, children: null };
@@ -423,7 +423,7 @@ export default function ActivityDetailContent(application) {
     const obj20 = { applicationId: null, width: null };
     obj20[0] = application.id;
     let result = width;
-    tmp5Result = tmp5(11382);
+    tmp5Result = tmp5(11271);
     if (detailsContainerLandscape) {
       result = 65 * width / 100;
     }
@@ -439,25 +439,25 @@ export default function ActivityDetailContent(application) {
     obj21[0] = items6;
     const obj22 = { application: null };
     obj22[0] = application;
-    const items7 = [callback3(tmp5(9192), obj22), , , , ];
+    const items7 = [callback3(tmp5(9015), obj22), , , , ];
     const obj23 = { style: null, children: null };
     obj23[0] = tmp.tagList;
     const obj24 = { icon: null, tagName: null, accessibilityLabel: null };
     const obj25 = { style: null, size: "xs" };
     obj25[0] = tmp.tagIcon;
-    obj24[0] = callback3(tmp2(4769).GroupIcon, obj25);
-    const tmp26 = tmp5(11444)(obj5);
+    obj24[0] = callback3(tmp2(4707).GroupIcon, obj25);
+    const tmp26 = tmp5(11334)(obj5);
     const tmp49 = Tag;
     let num5 = num;
     if (num == null) {
       num5 = 0;
     }
-    obj24[1] = tmp2(11447).getItemSubtitleForMaxPlayersShort(num5);
-    const tmp2Result5 = tmp2(11447);
+    obj24[1] = tmp2(11337).getItemSubtitleForMaxPlayersShort(num5);
+    const tmp2Result5 = tmp2(11337);
     if (num == null) {
       num = 0;
     }
-    obj24[2] = tmp5(11447)(num);
+    obj24[2] = tmp5(11337)(num);
     const items8 = [callback3(tmp49, obj24, "participants"), ];
     const tags = application.tags;
     let mapped;
@@ -482,11 +482,11 @@ export default function ActivityDetailContent(application) {
     obj17[1] = closure_12(View, obj18);
     obj16[1] = callback3(View, obj17);
     obj15[1] = callback3(View, obj16);
-    return callback3(tmp2(5581).AnalyticsLocationProvider, obj15);
+    return callback3(tmp2(5519).AnalyticsLocationProvider, obj15);
   } else {
     const _Error = Error;
     const error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
     throw error;
   }
-  const tmp6 = importDefault(5581);
+  const tmp6 = importDefault(5519);
 };

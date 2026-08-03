@@ -1,6 +1,6 @@
-// === Module 7902: computeIsStickerReplyEnabled ===
+// === Module 7784: computeIsStickerReplyEnabled ===
 
-// Module 7902 (computeIsStickerReplyEnabled)
+// Module 7784 (computeIsStickerReplyEnabled)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -20,7 +20,7 @@ export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnable
     }
     tmp2 = isPending;
   }
-  const isReadOnlyThread = require(5769) /* useCanUnarchiveThread */.computeIsReadOnlyThread(channel);
+  const isReadOnlyThread = require(6052) /* useCanUnarchiveThread */.computeIsReadOnlyThread(channel);
   let canResult = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
   if (canResult) {
     canResult = !isReadOnlyThread;

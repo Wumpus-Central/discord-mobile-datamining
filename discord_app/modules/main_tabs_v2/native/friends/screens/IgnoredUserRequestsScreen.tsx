@@ -1,6 +1,6 @@
-// === Module 15700: IgnoredUserRequestsScreen ===
+// === Module 15634: IgnoredUserRequestsScreen ===
 
-// Module 15700 (IgnoredUserRequestsScreen)
+// Module 15634 (IgnoredUserRequestsScreen)
 import noop from "noop";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

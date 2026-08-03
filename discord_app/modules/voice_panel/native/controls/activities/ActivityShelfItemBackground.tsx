@@ -1,6 +1,6 @@
-// === Module 16059: ? ===
+// === Module 15995: ? ===
 
-// Module 16059
+// Module 15995
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { Image } from "get ActivityIndicator";
@@ -39,20 +39,20 @@ const memoResult = importAllResult.memo(function ActivityShelfItemBackground(asp
           }
           obj[4] = accessibilityLabel;
           obj[1] = <Image onError={null} source={null} style={null} accessibilityRole="image" accessibilityLabel={null} />;
-          let tmp9Result = tmp9(importDefault(5634), obj);
-          const tmp12 = importDefault(5634);
+          let tmp9Result = tmp9(importDefault(5572), obj);
+          const tmp12 = importDefault(5572);
           const tmp13 = Image;
         }
       }
       obj = { style: null };
       obj[0] = tmp.previewImage;
-      tmp9Result = jsx(importDefault(5634), { style: null });
+      tmp9Result = jsx(importDefault(5572), { style: null });
     }
     return tmp9Result;
   }
   const obj2 = { style: tmp.previewImage, children: null };
-  obj2[1] = jsx(importDefault(11383), {});
-  tmp9Result = jsx(importDefault(5634), { style: tmp.previewImage, children: null });
+  obj2[1] = jsx(importDefault(11272), {});
+  tmp9Result = jsx(importDefault(5572), { style: tmp.previewImage, children: null });
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemBackground.tsx");
 

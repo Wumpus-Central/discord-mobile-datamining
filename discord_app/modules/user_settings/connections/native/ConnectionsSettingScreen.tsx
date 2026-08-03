@@ -1,19 +1,19 @@
-// === Module 14073: onPress ===
+// === Module 14006: onPress ===
 
-// Module 14073 (onPress)
+// Module 14006 (onPress)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 
 const require = arg1;
 function onPress() {
-  importDefault(4223).openLazy(require(1959) /* asyncRequireImpl */(14074, dependencyMap.paths), "AddConnection");
+  importDefault(4161).openLazy(require(1959) /* asyncRequireImpl */(14007, dependencyMap.paths), "AddConnection");
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
   stackNavigation = stackNavigation(1480).useStackNavigation();
   let obj = stackNavigation(1480);
   const tmp = stackNavigation;
-  const params = stackNavigation(6775).useSettingNavigationRoute().params;
+  const params = stackNavigation(6333).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -27,11 +27,11 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
         obj.onPress = closure_5;
         const intl = callback(1236).intl;
         obj.label = intl.string(callback(1236).t.OYkgVk);
-        return callback2(callback(9300).HeaderTextButton, obj);
+        return callback2(callback(9127).HeaderTextButton, obj);
       }
     });
   }, items);
-  return jsx(tmp(14075).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14008).UserSettingsConnections, { selectedPlatformType });
 });
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
 

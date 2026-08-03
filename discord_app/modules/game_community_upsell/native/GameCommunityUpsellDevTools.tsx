@@ -1,6 +1,6 @@
-// === Module 14803: MultiGuildDevTools ===
+// === Module 14736: MultiGuildDevTools ===
 
-// Module 14803 (MultiGuildDevTools)
+// Module 14736 (MultiGuildDevTools)
 import noop from "noop";
 import get_ActivityIndicator from "handleDCShownToUser";
 import initialize from "initialize";

@@ -1,6 +1,6 @@
-// === Module 14924: VisualEffectViewOverrideOverlay_ ===
+// === Module 14857: VisualEffectViewOverrideOverlay_ ===
 
-// Module 14924 (VisualEffectViewOverrideOverlay_)
+// Module 14857 (VisualEffectViewOverrideOverlay_)
 import { ScrollView } from "toggle";
 import getUserAgnosticState from "getUserAgnosticState";
 import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES";

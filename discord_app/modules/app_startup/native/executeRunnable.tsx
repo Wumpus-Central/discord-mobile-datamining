@@ -1,6 +1,6 @@
-// === Module 16132: executeRunnable ===
+// === Module 16068: executeRunnable ===
 
-// Module 16132 (executeRunnable)
+// Module 16068 (executeRunnable)
 import createFastConnectSocket from "createFastConnectSocket";
 import linkFromAppsFlyer from "linkFromAppsFlyer";
 
@@ -15,8 +15,8 @@ export default function executeRunnable(arg0, arg1) {
   const importDefault = arg1;
   new importDefault(3)(arg0).log("Loading the " + arg0 + " Discord runnable");
   let obj = new importDefault(3)(arg0);
-  importAll(12809).setIsPaused(false);
-  let obj2 = importAll(12809);
+  importAll(12746).setIsPaused(false);
+  let obj2 = importAll(12746);
   const combined = "executeRunnable:" + arg0;
   return importAll(675).withRequest(combined, callback(function*() {
     if (dependencyMap === 2) {

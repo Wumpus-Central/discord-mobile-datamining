@@ -1,6 +1,6 @@
-// === Module 15795: useSortedMessageRequests ===
+// === Module 15730: useSortedMessageRequests ===
 
-// Module 15795 (useSortedMessageRequests)
+// Module 15730 (useSortedMessageRequests)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";

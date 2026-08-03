@@ -1,6 +1,6 @@
-// === Module 6835: result ===
+// === Module 5740: result ===
 
-// Module 6835 (result)
+// Module 5740 (result)
 import items from "items";
 import { Store } from "initialize";
 

@@ -1,6 +1,6 @@
-// === Module 10508: getLogMetadata ===
+// === Module 10369: getLogMetadata ===
 
-// Module 10508 (getLogMetadata)
+// Module 10369 (getLogMetadata)
 const result = require("set").fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 
 export default function getLogMetadata() {
@@ -24,8 +24,8 @@ export default function getLogMetadata() {
   obj[6] = importAll(1578).getBuildNumberLabel();
   obj[7] = DeviceVendorID;
   const obj4 = importAll(1578);
-  obj[8] = require(4235) /* DCDDeviceManager */.getDeviceInfo();
-  const obj5 = require(4235) /* DCDDeviceManager */;
-  obj[9] = require(4235) /* DCDDeviceManager */.getSystemVersion();
+  obj[8] = require(4173) /* DCDDeviceManager */.getDeviceInfo();
+  const obj5 = require(4173) /* DCDDeviceManager */;
+  obj[9] = require(4173) /* DCDDeviceManager */.getSystemVersion();
   return obj;
 };

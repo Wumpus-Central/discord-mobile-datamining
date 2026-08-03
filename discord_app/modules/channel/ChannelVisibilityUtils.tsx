@@ -1,6 +1,6 @@
-// === Module 10405: isChannelCurrentlyVisible ===
+// === Module 10265: isChannelCurrentlyVisible ===
 
-// Module 10405 (isChannelCurrentlyVisible)
+// Module 10265 (isChannelCurrentlyVisible)
 import handlePermissionsChange from "handlePermissionsChange";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_2 from "handleConnectionOpen";

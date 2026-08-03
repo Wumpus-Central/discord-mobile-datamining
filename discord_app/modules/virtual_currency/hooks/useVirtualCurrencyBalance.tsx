@@ -1,6 +1,6 @@
-// === Module 12015: useVirtualCurrencyBalance ===
+// === Module 11919: useVirtualCurrencyBalance ===
 
-// Module 12015 (useVirtualCurrencyBalance)
+// Module 11919 (useVirtualCurrencyBalance)
 import redeemError from "redeemError";
 
 const require = arg1;

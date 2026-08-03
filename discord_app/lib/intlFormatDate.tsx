@@ -1,6 +1,6 @@
-// === Module 3945: makeIntlFormatter ===
+// === Module 3883: makeIntlFormatter ===
 
-// Module 3945 (makeIntlFormatter)
+// Module 3883 (makeIntlFormatter)
 import _getSystemLocale from "_getSystemLocale";
 
 const require = arg1;

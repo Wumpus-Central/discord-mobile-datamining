@@ -1,6 +1,6 @@
-// === Module 8371: resolveGiftCode ===
+// === Module 8038: resolveGiftCode ===
 
-// Module 8371 (resolveGiftCode)
+// Module 8038 (resolveGiftCode)
 import GuildFeatures from "GuildFeatures";
 import addApplication from "addApplication";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
@@ -497,7 +497,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    importDefault(8372).openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    importDefault(8039).openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

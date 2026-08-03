@@ -1,7 +1,7 @@
-// === Module 15041: _sendWave ===
+// === Module 15061: _sendWave ===
 
-// Module 15041 (_sendWave)
-import module_4265 from "module_4265";
+// Module 15061 (_sendWave)
+import module_4203 from "module_4203";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticsSections } from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
@@ -72,17 +72,17 @@ function _sendWave() {
                   c7 = 4;
                   c8 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = flag(4265).getDMChannel(callback);
+                  obj2[0] = flag(4203).getDMChannel(callback);
                   return obj2;
                 } else {
                   constants = 2;
                   if (null != dMFromUserId2) {
-                    let obj7 = callback(11549);
+                    let obj7 = callback(11439);
                     const obj3 = { channelId: null, source: null };
                     obj3[0] = dMFromUserId2;
                     obj3[1] = dependencyMap;
                     obj7.trackWaveCtaClicked(obj3);
-                    let obj9 = flag(6814);
+                    let obj9 = flag(5718);
                     let obj4 = { location: null };
                     obj4[0] = constants.SEND_WAVE;
                     c7 = 5;
@@ -99,7 +99,7 @@ function _sendWave() {
               if (2 !== tmp8) {
                 if (3 === tmp8) {
                   constants = 0;
-                  obj4 = callback(3955);
+                  obj4 = callback(3893);
                   const intl = callback(1236).intl;
                   obj4.presentError(intl.string(callback(1236).t.iufib1));
                   c8 = 3;
@@ -122,7 +122,7 @@ function _sendWave() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   if (flag) {
-                    obj = flag(4265);
+                    obj = flag(4203);
                     obj7 = { recipientIds: null };
                     obj7[0] = callback;
                     obj.openPrivateChannel(obj7);
@@ -130,7 +130,7 @@ function _sendWave() {
                 }
               }
               constants = 0;
-              obj5 = callback(3955);
+              obj5 = callback(3893);
               const intl2 = callback(1236).intl;
               obj5.presentError(intl2.string(callback(1236).t.iufib1));
               c8 = 3;
@@ -175,7 +175,7 @@ export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
   let applicationId;
   let userId;
   ({ userId, applicationId } = arg0);
-  let obj = importDefault(9238);
+  let obj = importDefault(9065);
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
@@ -183,7 +183,7 @@ export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
   let applicationId;
   let userId;
   ({ userId, applicationId } = arg0);
-  let obj = importDefault(9238);
+  let obj = importDefault(9065);
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };
@@ -198,7 +198,7 @@ export const sendWave = function sendWave(id, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
-  let obj = importDefault(9104);
+  let obj = importDefault(8927);
   obj = { userId: user.id, context: obj, type: "HermesInternal", fromFriendSuggestion: null };
   obj = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.addRelationship(obj);

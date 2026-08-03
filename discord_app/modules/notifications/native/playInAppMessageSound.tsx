@@ -1,6 +1,6 @@
-// === Module 10422: playInAppMessageSound ===
+// === Module 10283: playInAppMessageSound ===
 
-// Module 10422 (playInAppMessageSound)
+// Module 10283 (playInAppMessageSound)
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled";
 import { InAppNotificationTypes } from "ME";
@@ -18,8 +18,8 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
           const _Date = Date;
           const timestamp = Date.now();
           if (timestamp - timestamp >= 1000) {
-            tmp8(10424).playSound(tmp3, 0.4);
-            const tmp8Result = tmp8(10424);
+            tmp8(10285).playSound(tmp3, 0.4);
+            const tmp8Result = tmp8(10285);
           }
         }
         tmp3 = message1;

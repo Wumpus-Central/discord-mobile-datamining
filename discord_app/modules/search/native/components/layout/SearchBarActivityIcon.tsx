@@ -1,6 +1,6 @@
-// === Module 15554: items ===
+// === Module 15487: items ===
 
-// Module 15554 (items)
+// Module 15487 (items)
 import importAllResult from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";
 import handleReaction from "handleReaction";

@@ -1,10 +1,10 @@
-// === Module 16186: updateDynamicSuperProperties ===
+// === Module 16122: updateDynamicSuperProperties ===
 
-// Module 16186 (updateDynamicSuperProperties)
-let result = require("module_9635").fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
+// Module 16122 (updateDynamicSuperProperties)
+let result = require("module_9488").fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
-  let obj = require(6820) /* trackHeartbeat */;
+  let obj = require(5726) /* trackHeartbeat */;
   const activeSessionUnsafe = obj.getActiveSessionUnsafe();
   const superProperties = require(503) /* encodeProperties */.getSuperProperties();
   let uuid;
@@ -21,7 +21,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   }
   const obj2 = require(503) /* encodeProperties */;
   const tmp = require;
-  const state = importDefault(9635).getState();
+  const state = importDefault(9488).getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;

@@ -1,6 +1,6 @@
-// === Module 15253: DEFAULT_FOLDER_COLOR ===
+// === Module 14964: DEFAULT_FOLDER_COLOR ===
 
-// Module 15253 (DEFAULT_FOLDER_COLOR)
+// Module 14964 (DEFAULT_FOLDER_COLOR)
 import int2hslRaw from "int2hslRaw";
 import unsafe_getRawColor from "unsafe_getRawColor";
 

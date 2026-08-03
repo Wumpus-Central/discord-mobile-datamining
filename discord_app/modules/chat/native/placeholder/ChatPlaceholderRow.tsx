@@ -1,6 +1,6 @@
-// === Module 11851: ? ===
+// === Module 11748: ? ===
 
-// Module 11851
+// Module 11748
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -39,7 +39,7 @@ const memoResult = importAllResult.memo(function ChatPlaceholderRow(lines) {
       let items1 = [tmp.placeholderText, tmp.placeholderBody, ];
       obj = { width: null };
       let _HermesInternal = HermesInternal;
-      obj[0] = "" + importDefault(10251)(rounded + num) + "%";
+      obj[0] = "" + importDefault(10111)(rounded + num) + "%";
       items1[2] = obj;
       obj[0] = items1;
       let arr = items.push(callback(View, obj, num));

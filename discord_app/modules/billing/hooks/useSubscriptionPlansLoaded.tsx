@@ -1,6 +1,6 @@
-// === Module 12564: getSubscriptionPlansLoaded ===
+// === Module 12467: getSubscriptionPlansLoaded ===
 
-// Module 12564 (getSubscriptionPlansLoaded)
+// Module 12467 (getSubscriptionPlansLoaded)
 import handlePaymentSourceUpdate from "handlePaymentSourceUpdate";
 import addSubscriptionPlan from "addSubscriptionPlan";
 import reset from "reset";

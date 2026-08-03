@@ -1,27 +1,27 @@
-// === Module 14776: useGoreContentNonFriendsDmSettingValue ===
+// === Module 14709: useGoreContentNonFriendsDmSettingValue ===
 
-// Module 14776 (useGoreContentNonFriendsDmSettingValue)
+// Module 14709 (useGoreContentNonFriendsDmSettingValue)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
 
 const require = arg1;
 function useGoreContentNonFriendsDmSettingValue() {
-  const parentalControlledGoreContentSettings = require(13941) /* useParentalControlledExplicitContentSettings */.useParentalControlledGoreContentSettings();
+  const parentalControlledGoreContentSettings = require(13874) /* useParentalControlledExplicitContentSettings */.useParentalControlledGoreContentSettings();
   let prop;
   if (parentalControlledGoreContentSettings != null) {
     prop = parentalControlledGoreContentSettings.goreContentNonFriendDm;
   }
   let tmp5 = null;
   if (null != prop) {
-    tmp5 = require(6956) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(prop)();
-    const tmpResult = require(6956) /* redactionSettingToRenderedString */;
+    tmp5 = require(5865) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(prop)();
+    const tmpResult = require(5865) /* redactionSettingToRenderedString */;
   }
   return tmp5;
 }
 function onGoreContentNonFriendsDmOnPress() {
   selectedTeenId = selectedTeenId.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(13945);
+    let obj = selectedTeenId(13878);
     obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1236).intl;
     obj[0] = intl.string(selectedTeenId(1236).t["16/3Bi"]);
@@ -35,8 +35,8 @@ function onGoreContentNonFriendsDmOnPress() {
     obj[3] = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     const items = [selectedTeenId(1306).ExplicitContentRedaction.SHOW];
     obj[4] = items;
-    const result = selectedTeenId(13938).handleSensitiveMediaFilterPress(obj);
-    const obj2 = selectedTeenId(13938);
+    const result = selectedTeenId(13871).handleSensitiveMediaFilterPress(obj);
+    const obj2 = selectedTeenId(13871);
   }
 }
 createToggle = {

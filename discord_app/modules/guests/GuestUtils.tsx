@@ -1,6 +1,6 @@
-// === Module 9660: ? ===
+// === Module 9513: ? ===
 
-// Module 9660
+// Module 9513
 import { GuildMemberFlags } from "GuildMemberFlags";
 
 const result = require("set").fileFinishedImporting("modules/guests/GuestUtils.tsx");
@@ -27,7 +27,7 @@ export default {
         if (num2 == null) {
           num2 = 0;
         }
-        hasFlagResult1 = tmp2(1384).hasFlag(num2, tmp2(7683).GuildInviteFlags.IS_GUEST_INVITE);
+        hasFlagResult1 = tmp2(1384).hasFlag(num2, tmp2(6712).GuildInviteFlags.IS_GUEST_INVITE);
         const tmp2Result = tmp2(1384);
       }
       tmp = hasFlagResult1;

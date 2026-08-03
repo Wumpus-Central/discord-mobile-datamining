@@ -1,6 +1,6 @@
-// === Module 8882: NameplateCardPreview ===
+// === Module 8705: NameplateCardPreview ===
 
-// Module 8882 (NameplateCardPreview)
+// Module 8705 (NameplateCardPreview)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -34,30 +34,30 @@ export default function NameplateCardPreview(arg0) {
   obj[1] = require(1297) /* Button */.AvatarSizes.XSMALL;
   const items = [{ opacity: 0.6 }];
   obj[3] = items;
-  const items1 = [callback(require(8404) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj), , , , ];
+  const items1 = [callback(require(8073) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj), , , , ];
   const obj1 = { width: 44, avatarSize: null, hideAvatar: true, style: null };
   obj1[1] = require(1297) /* Button */.AvatarSizes.XSMALL;
   const items2 = [{ opacity: 0.6 }];
   obj1[3] = items2;
-  items1[1] = callback(require(8404) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj1);
+  items1[1] = callback(require(8073) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj1);
   const obj2 = { style: tmp.nameplateContainer, children: null };
   const obj3 = { width: 54, avatarSize: null, nameplate: null, style: null, animate: null };
   obj3[1] = require(1297) /* Button */.AvatarSizes.XSMALL;
   obj3[2] = nameplateData;
   obj3[3] = tmp.nameplate;
   obj3[4] = animate;
-  obj2[1] = callback(require(8404) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj3);
+  obj2[1] = callback(require(8073) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj3);
   items1[2] = callback(View, obj2);
   const obj4 = { width: 44, avatarSize: null, hideAvatar: true, style: null };
   obj4[1] = require(1297) /* Button */.AvatarSizes.XSMALL;
   const items3 = [{ opacity: 0.6 }];
   obj4[3] = items3;
-  items1[3] = callback(require(8404) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj4);
+  items1[3] = callback(require(8073) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj4);
   const obj5 = { width: 34, avatarSize: null, hideAvatar: true, style: null };
   obj5[1] = require(1297) /* Button */.AvatarSizes.XSMALL;
   const items4 = [{ opacity: 0.6 }];
   obj5[3] = items4;
-  items1[4] = callback(require(8404) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj5);
+  items1[4] = callback(require(8073) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj5);
   obj[1] = items1;
   return callback2(View, obj);
 };

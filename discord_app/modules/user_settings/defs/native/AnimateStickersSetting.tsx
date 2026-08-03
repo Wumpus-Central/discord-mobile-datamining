@@ -1,6 +1,6 @@
-// === Module 14465: radio ===
+// === Module 14398: radio ===
 
-// Module 14465 (radio)
+// Module 14398 (radio)
 import noop from "noop";
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
 import createToggle from "createToggle";
@@ -14,7 +14,7 @@ createToggle = {
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: require("explicitContentFromProto").AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
-    const AnimateStickers = require(3928) /* explicitContentFromProto */.AnimateStickers;
+    const AnimateStickers = require(3866) /* explicitContentFromProto */.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));
   },
   useOptions: function useAnimateStickerSettingOptions() {

@@ -1,6 +1,6 @@
-// === Module 6081: CoinSlotSpotIllustration ===
+// === Module 6945: CoinSlotSpotIllustration ===
 
-// Module 6081 (CoinSlotSpotIllustration)
+// Module 6945 (CoinSlotSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/CoinSlotSpotIllustration.native.tsx");
@@ -24,7 +24,7 @@ export const CoinSlotSpotIllustration = function CoinSlotSpotIllustration(width)
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6082);
+  obj[0] = importDefault(6946);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const CoinSlotSpotIllustration = function CoinSlotSpotIllustration(width)
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

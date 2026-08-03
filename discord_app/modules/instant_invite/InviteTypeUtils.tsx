@@ -1,6 +1,6 @@
-// === Module 7103: InviteTypes ===
+// === Module 6024: InviteTypes ===
 
-// Module 7103 (InviteTypes)
+// Module 6024 (InviteTypes)
 import { isEventUpcoming } from "scheduledEventSort";
 import createChannelRecord from "createChannelRecord";
 import InviteSendStates from "InviteSendStates";
@@ -99,7 +99,7 @@ export const getGuildInviteExtendedType = function getGuildInviteExtendedType(in
   } else if (invite.target_type === constants.EMBEDDED_APPLICATION) {
     PROFILE = obj.APPLICATION;
   } else {
-    obj = require(7105) /* getEstablishedDate */;
+    obj = require(6026) /* getEstablishedDate */;
     if (obj.guildInviteCanEmbedProfile(invite)) {
       PROFILE = obj.PROFILE;
     } else {

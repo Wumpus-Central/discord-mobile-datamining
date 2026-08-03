@@ -1,6 +1,6 @@
-// === Module 15110: VoiceUserConnected ===
+// === Module 15130: VoiceUserConnected ===
 
-// Module 15110 (VoiceUserConnected)
+// Module 15130 (VoiceUserConnected)
 import "noop";
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";

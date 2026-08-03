@@ -1,6 +1,6 @@
-// === Module 9762: useFrecencySettings ===
+// === Module 9614: useFrecencySettings ===
 
-// Module 9762 (useFrecencySettings)
+// Module 9614 (useFrecencySettings)
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 

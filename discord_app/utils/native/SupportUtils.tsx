@@ -1,6 +1,6 @@
-// === Module 14584: _emailSupport ===
+// === Module 14517: _emailSupport ===
 
-// Module 14584 (_emailSupport)
+// Module 14517 (_emailSupport)
 import combined from "combined";
 import _getSystemLocale from "_getSystemLocale";
 
@@ -34,7 +34,7 @@ function _emailSupport() {
             obj[0] = arg1;
             return obj;
           } else {
-            const tmp10 = outer1_1(3952);
+            const tmp10 = outer1_1(3890);
             let closure_1 = tmp10;
             const openURL = tmp10.openURL;
             let obj1 = outer1_1(1945);

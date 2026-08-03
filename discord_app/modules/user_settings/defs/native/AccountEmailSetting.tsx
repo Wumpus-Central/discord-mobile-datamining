@@ -1,6 +1,6 @@
-// === Module 13883: pressable ===
+// === Module 13816: pressable ===
 
-// Module 13883 (pressable)
+// Module 13816 (pressable)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createToggle from "createToggle";
 
@@ -23,7 +23,7 @@ createToggle = {
     });
   },
   onPress: function onAccountEmailSettingPress() {
-    importDefault(9359).open(true);
+    importDefault(9186).open(true);
   },
   withArrow: true
 };

@@ -1,6 +1,6 @@
-// === Module 11594: useInvitesDisabledPermission ===
+// === Module 11484: useInvitesDisabledPermission ===
 
-// Module 11594 (useInvitesDisabledPermission)
+// Module 11484 (useInvitesDisabledPermission)
 import computeAlertSettings from "computeAlertSettings";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";

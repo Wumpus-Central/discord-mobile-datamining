@@ -1,6 +1,6 @@
-// === Module 8868: useGetOrFetchStorefrontPricesForApplicationId ===
+// === Module 8691: useGetOrFetchStorefrontPricesForApplicationId ===
 
-// Module 8868 (useGetOrFetchStorefrontPricesForApplicationId)
+// Module 8691 (useGetOrFetchStorefrontPricesForApplicationId)
 import noop from "noop";
 
 const require = arg1;

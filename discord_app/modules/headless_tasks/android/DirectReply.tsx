@@ -1,6 +1,6 @@
-// === Module 16864: promise ===
+// === Module 16798: promise ===
 
-// Module 16864 (promise)
+// Module 16798 (promise)
 import trackInvite from "trackInvite";
 import { NativeModules } from "get ActivityIndicator";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
@@ -23,7 +23,7 @@ export default (arg0) => {
           let closure_0 = arg0;
           let c3 = 0;
           let c4 = 0;
-          return (/* F119398 */ function*() { ... })();
+          return (/* F119208 */ function*() { ... })();
         });
         const _sendMessage = tmp;
         const apply = tmp.apply;

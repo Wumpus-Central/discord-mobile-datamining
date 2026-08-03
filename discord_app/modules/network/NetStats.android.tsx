@@ -1,6 +1,6 @@
-// === Module 6818: receiveNetworkInfoformation ===
+// === Module 5724: receiveNetworkInfoformation ===
 
-// Module 6818 (receiveNetworkInfoformation)
+// Module 5724 (receiveNetworkInfoformation)
 import ME from "ME";
 import get_ActivityIndicator from "set";
 import _handleConnectionOpen from "_handleConnectionOpen";
@@ -348,7 +348,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
             return obj2;
           } else {
             callback = arg1;
-            let obj4 = callback(6820);
+            let obj4 = callback(5726);
             c6 = 2;
             guildCount = 1;
             const obj3 = { value: null, done: false };
@@ -368,7 +368,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
           const obj5 = { type: null, properties: null };
           obj5[0] = constants.APP_NETWORK_USAGE;
           const obj6 = {};
-          const merged = Object.assign(callback(6831).getDeviceMetadata());
+          const merged = Object.assign(callback(5736).getDeviceMetadata());
           const _Date = Date;
           obj6.client_track_timestamp = Date.now();
           let uuid;
@@ -376,7 +376,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
             uuid = lib.uuid;
           }
           obj6.client_heartbeat_session_id = uuid;
-          obj = callback(6831);
+          obj = callback(5736);
           obj6.load_id = obj.currentLoadId();
           obj6.num_guilds = guildCount.getGuildCount();
           obj6.was_authenticated = lib(9).wasAuthenticated;
@@ -436,7 +436,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
           obj6.download_bytes_received = closure_10.downloadBytesReceived;
           obj6.download_num_requests = closure_10.downloadNumRequests;
           obj6.media_player_bytes_received = closure_10.mediaPlayerBytesReceived;
-          obj1 = callback(6830);
+          obj1 = callback(5735);
           obj6.rtc_bytes = obj1.getRTCTotalBytes();
           obj6.num_message_sends = closure_15;
           let tmp56;

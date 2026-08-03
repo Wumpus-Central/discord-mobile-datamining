@@ -1,6 +1,6 @@
-// === Module 8819: WebsiteGameStoreLinkButton ===
+// === Module 8530: WebsiteGameStoreLinkButton ===
 
-// Module 8819 (WebsiteGameStoreLinkButton)
+// Module 8530 (WebsiteGameStoreLinkButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -13,8 +13,8 @@ function WebsiteGameStoreLinkButton(data) {
   data = data.data;
   const trackAction = data.trackAction;
   let dependencyMap;
-  dependencyMap = trackAction(8782)(trackAction(3952).openURL);
-  return callback(data(4666).Button, {
+  dependencyMap = trackAction(8493)(trackAction(3890).openURL);
+  return callback(data(4604).Button, {
     variant: "secondary",
     size: "md",
     text: data.title,

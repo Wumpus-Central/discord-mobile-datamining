@@ -1,6 +1,6 @@
-// === Module 11247: ModalFooter ===
+// === Module 11134: ModalFooter ===
 
-// Module 11247 (ModalFooter)
+// Module 11134 (ModalFooter)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,6 @@
-// === Module 10616: ChatOverlays ===
+// === Module 10478: ChatOverlays ===
 
-// Module 10616 (ChatOverlays)
+// Module 10478 (ChatOverlays)
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChatOverlays } from "ChatOverlays";
@@ -32,12 +32,12 @@ export default function useAllowedChatOverlays() {
   const stateFromStores = obj.useStateFromStores(items, () => store.getCurrentEmbeddedActivity());
   const items1 = [participantFromServer];
   const stateFromStores1 = require(647) /* defaultAreStatesEqual */.useStateFromStores(items1, () => store.getActivityPanelMode());
-  require(3873) /* getEmbeddedActivityLocationChannelId */;
+  require(3811) /* getEmbeddedActivityLocationChannelId */;
   if (stateFromStores != null) {
     const _location = stateFromStores.location;
   }
   if (undefined !== stateFromStores) {
-    if (!importDefault(10617)(tmp5, ensureGuildLoaded)) {
+    if (!importDefault(10479)(tmp5, ensureGuildLoaded)) {
       let tmp9 = obj[stateFromStores1];
     }
     return tmp9;

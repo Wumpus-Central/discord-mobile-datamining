@@ -1,6 +1,6 @@
-// === Module 7055: canBypassSlowmodeHelper ===
+// === Module 5976: canBypassSlowmodeHelper ===
 
-// Module 7055 (canBypassSlowmodeHelper)
+// Module 5976 (canBypassSlowmodeHelper)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 
@@ -23,7 +23,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const intl2 = require(1236) /* getSystemLocale */.intl;
     return intl2.string(require(1236) /* getSystemLocale */.t["8+NidX"]);
   } else if (stateFromStores >= importDefault(687).Millis.HOUR) {
-    let tmp2Result = tmp2(3837);
+    let tmp2Result = tmp2(3775);
     const durationResult = tmp2Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + durationResult.minutes();
@@ -33,7 +33,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const _HermesInternal5 = HermesInternal;
     return "" + durationResult.hours() + ":" + padStartResult + ":" + combined1.padStart(2, "0");
   } else if (stateFromStores > 0) {
-    tmp2Result = tmp2(3837);
+    tmp2Result = tmp2(3775);
     const durationResult1 = tmp2Result.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + durationResult1.seconds();

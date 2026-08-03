@@ -1,6 +1,6 @@
-// === Module 16108: MobilePhoneShareIcon ===
+// === Module 16044: MobilePhoneShareIcon ===
 
-// Module 16108 (MobilePhoneShareIcon)
+// Module 16044 (MobilePhoneShareIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const MobilePhoneShareIcon = function MobilePhoneShareIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(16109) /* registerAsset */;
+  obj[0] = require(16045) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

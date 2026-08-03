@@ -1,6 +1,6 @@
-// === Module 11214: ? ===
+// === Module 11098: ? ===
 
-// Module 11214
+// Module 11098
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import SafetyHubView from "SafetyHubView";
 import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "set";
@@ -15,7 +15,7 @@ let obj = {
     let obj = importDefault(709);
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    importDefault(4223).openLazy(require(1959) /* asyncRequireImpl */(11215, dependencyMap.paths), closure_4, obj);
+    importDefault(4161).openLazy(require(1959) /* asyncRequireImpl */(11099, dependencyMap.paths), closure_4, obj);
   },
   openV2(arg0, onClose) {
     let closure_0 = arg0;
@@ -23,7 +23,7 @@ let obj = {
     let obj = importDefault(709);
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { onClose };
-    importDefault(4461).pushLazy(callback(function*() {
+    importDefault(4399).pushLazy(callback(function*() {
       if (paths === 2) {
         paths = 3;
         HermesBuiltin.throwTypeError();

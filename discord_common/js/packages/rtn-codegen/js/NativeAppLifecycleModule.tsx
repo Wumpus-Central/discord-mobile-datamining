@@ -1,6 +1,6 @@
-// === Module 10668: enforcing ===
+// === Module 10624: enforcing ===
 
-// Module 10668 (enforcing)
+// Module 10624 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAppLifecycleModule");

@@ -71,7 +71,7 @@ prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
   throw error1;
 };
 prototype["internalJsonRead"] = function internalJsonRead(str) {
-  if (typeof str === "ge") {
+  if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
     const _Error3 = Error;
     let obj = require(1307);
     const error = new Error("Unable to parse Timestamp from JSON " + obj.typeofJsonValue(str) + ".");

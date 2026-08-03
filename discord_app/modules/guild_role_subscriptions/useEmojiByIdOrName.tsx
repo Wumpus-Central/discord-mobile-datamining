@@ -1,6 +1,6 @@
-// === Module 14344: useEmojiByIdOrName ===
+// === Module 14277: useEmojiByIdOrName ===
 
-// Module 14344 (useEmojiByIdOrName)
+// Module 14277 (useEmojiByIdOrName)
 import getEmojiToGroupId from "getEmojiToGroupId";
 
 const require = arg1;

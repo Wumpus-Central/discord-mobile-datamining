@@ -1,6 +1,6 @@
-// === Module 4772: AnnouncementsSpoilerIcon ===
+// === Module 4710: AnnouncementsSpoilerIcon ===
 
-// Module 4772 (AnnouncementsSpoilerIcon)
+// Module 4710 (AnnouncementsSpoilerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const AnnouncementsSpoilerIcon = function AnnouncementsSpoilerIcon(color)
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(4734) /* registerAsset */;
+  obj[0] = require(4672) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

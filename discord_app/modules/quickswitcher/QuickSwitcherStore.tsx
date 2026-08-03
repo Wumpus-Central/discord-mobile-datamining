@@ -1,6 +1,6 @@
-// === Module 7215: handleConnectionOpen ===
+// === Module 6163: handleConnectionOpen ===
 
-// Module 7215 (handleConnectionOpen)
+// Module 6163 (handleConnectionOpen)
 import set from "set";
 import rebuild from "rebuild";
 import handleThemeChange from "handleThemeChange";
@@ -33,7 +33,7 @@ function handleConnectionOpen() {
   let closure_30 = [];
 }
 function generateResultFromId(arg0) {
-  const tmp = importDefault(7229)(arg0);
+  const tmp = importDefault(6177)(arg0);
   let tmp2 = null;
   if (null != tmp) {
     if (null == c26) {
@@ -308,8 +308,8 @@ function handleQuickSwitcherShow(arg0) {
   let closure_32 = Date.now();
   let tmp13 = store;
   if (store == null) {
-    tmp13 = importDefault(7218);
-    const items1 = [require(7218) /* sortByMatchScore */.AutocompleterResultTypes.USER, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.TEXT_CHANNEL, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.GUILD, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.APPLICATION, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.GAME_PROFILE, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.LINK, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.IN_APP_NAVIGATION];
+    tmp13 = importDefault(6166);
+    const items1 = [require(6166) /* sortByMatchScore */.AutocompleterResultTypes.USER, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.TEXT_CHANNEL, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.GUILD, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.APPLICATION, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.GAME_PROFILE, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.LINK, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.IN_APP_NAVIGATION];
     let num = 5;
     if (null != queryMode) {
       num = 100;
@@ -351,7 +351,7 @@ function handleUserSearchUpdate(arg0, str) {
   }
   if (!flag) {
     let DOWN = require;
-    if (require(7218) /* sortByMatchScore */.AutocompleterResultTypes.USER === c26) {
+    if (require(6166) /* sortByMatchScore */.AutocompleterResultTypes.USER === c26) {
       let name = store3.getGuild(store4.getGuildId());
       if (null != name) {
         const intl7 = DOWN(1236).intl;
@@ -363,61 +363,61 @@ function handleUserSearchUpdate(arg0, str) {
         const intl6 = DOWN(1236).intl;
         formatToPlainStringResult = intl6.string(DOWN(1236).t.XFYW1o);
       }
-      arr = arr.unshift(DOWN(7218).createHeaderResult(formatToPlainStringResult));
+      arr = arr.unshift(DOWN(6166).createHeaderResult(formatToPlainStringResult));
       let items = arr;
-      const DOWNResult = DOWN(7218);
+      const DOWNResult = DOWN(6166);
     } else {
-      if (DOWN(7218).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
+      if (DOWN(6166).AutocompleterResultTypes.TEXT_CHANNEL === tmp7) {
         const intl5 = DOWN(1236).intl;
-        arr = arr.unshift(DOWN(7218).createHeaderResult(intl5.string(DOWN(1236).t.W26k4V)));
+        arr = arr.unshift(DOWN(6166).createHeaderResult(intl5.string(DOWN(1236).t.W26k4V)));
         items = arr;
         items = arr;
-        const DOWNResult1 = DOWN(7218);
-      } else if (DOWN(7218).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
+        const DOWNResult1 = DOWN(6166);
+      } else if (DOWN(6166).AutocompleterResultTypes.VOICE_CHANNEL === tmp7) {
         const intl4 = DOWN(1236).intl;
-        arr.unshift(DOWN(7218).createHeaderResult(intl4.string(DOWN(1236).t.zUoI5C)));
+        arr.unshift(DOWN(6166).createHeaderResult(intl4.string(DOWN(1236).t.zUoI5C)));
         items = arr;
         items = arr;
-        const DOWNResult2 = DOWN(7218);
-      } else if (DOWN(7218).AutocompleterResultTypes.GUILD === tmp7) {
+        const DOWNResult2 = DOWN(6166);
+      } else if (DOWN(6166).AutocompleterResultTypes.GUILD === tmp7) {
         const intl3 = DOWN(1236).intl;
-        arr.unshift(DOWN(7218).createHeaderResult(intl3.string(DOWN(1236).t.olADPs)));
+        arr.unshift(DOWN(6166).createHeaderResult(intl3.string(DOWN(1236).t.olADPs)));
         items = arr;
         items = arr;
-        const DOWNResult3 = DOWN(7218);
-      } else if (DOWN(7218).AutocompleterResultTypes.APPLICATION === tmp7) {
+        const DOWNResult3 = DOWN(6166);
+      } else if (DOWN(6166).AutocompleterResultTypes.APPLICATION === tmp7) {
         const intl2 = DOWN(1236).intl;
-        arr.unshift(DOWN(7218).createHeaderResult(intl2.string(DOWN(1236).t.VwK1ld)));
+        arr.unshift(DOWN(6166).createHeaderResult(intl2.string(DOWN(1236).t.VwK1ld)));
         items = arr;
         items = arr;
-        const DOWNResult4 = DOWN(7218);
-      } else if (DOWN(7218).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
+        const DOWNResult4 = DOWN(6166);
+      } else if (DOWN(6166).AutocompleterResultTypes.GAME_PROFILE === tmp7) {
         const intl = DOWN(1236).intl;
-        arr.unshift(DOWN(7218).createHeaderResult(intl.string(DOWN(1236).t.gEp2SG)));
+        arr.unshift(DOWN(6166).createHeaderResult(intl.string(DOWN(1236).t.gEp2SG)));
         items = arr;
         items = arr;
-        const DOWNResult5 = DOWN(7218);
+        const DOWNResult5 = DOWN(6166);
       } else {
-        const found = arr.filter((type) => type.type === callback(7218).AutocompleterResultTypes.GAME_PROFILE);
+        const found = arr.filter((type) => type.type === callback(6166).AutocompleterResultTypes.GAME_PROFILE);
         const substr = found.slice(0, 3);
         items = [];
-        HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(7218).AutocompleterResultTypes.GAME_PROFILE), 0));
+        HermesBuiltin.arraySpread(substr, HermesBuiltin.arraySpread(arr.filter((type) => type.type !== callback(6166).AutocompleterResultTypes.GAME_PROFILE), 0));
       }
       if (str !== str) {
         const _Math = Math;
         closure_29 = Math.max(str.length, closure_29);
-        str = DOWN(7218).findNextSelectedResult;
-        DOWN = DOWN(7218).FindResultDirections.DOWN;
+        str = DOWN(6166).findNextSelectedResult;
+        DOWN = DOWN(6166).FindResultDirections.DOWN;
         let closure_23 = str(DOWN, -1, items);
-        const DOWNResult6 = DOWN(7218);
+        const DOWNResult6 = DOWN(6166);
       } else {
         let tmp29 = null != tmp27;
         if (tmp29) {
-          tmp29 = tmp27.type === DOWN(7218).AutocompleterResultTypes.HEADER;
+          tmp29 = tmp27.type === DOWN(6166).AutocompleterResultTypes.HEADER;
         }
         if (tmp29) {
-          closure_23 = DOWN(7218).findNextSelectedResult(DOWN(7218).FindResultDirections.DOWN, closure_23, items);
-          const DOWNResult7 = DOWN(7218);
+          closure_23 = DOWN(6166).findNextSelectedResult(DOWN(6166).FindResultDirections.DOWN, closure_23, items);
+          const DOWNResult7 = DOWN(6166);
         }
       }
       quickSwitcherStoreClass.emitChange();
@@ -563,7 +563,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
           const items = [queryMode];
           let items1 = items;
         } else {
-          items1 = [require(7218) /* sortByMatchScore */.AutocompleterResultTypes.USER, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.TEXT_CHANNEL, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.GUILD, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.APPLICATION, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.GAME_PROFILE, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.LINK, require(7218) /* sortByMatchScore */.AutocompleterResultTypes.IN_APP_NAVIGATION];
+          items1 = [require(6166) /* sortByMatchScore */.AutocompleterResultTypes.USER, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.TEXT_CHANNEL, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.GUILD, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.APPLICATION, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.GAME_PROFILE, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.LINK, require(6166) /* sortByMatchScore */.AutocompleterResultTypes.IN_APP_NAVIGATION];
         }
         store.setResultTypes(items1);
         let num = 5;
@@ -572,7 +572,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
         }
         store.setLimit(num);
         const guildId = store4.getGuildId();
-        if (queryMode === require(7218) /* sortByMatchScore */.AutocompleterResultTypes.USER) {
+        if (queryMode === require(6166) /* sortByMatchScore */.AutocompleterResultTypes.USER) {
           if (null != guildId) {
             let obj = { userFilters: null };
             obj = { guild: null, friends: true };
@@ -581,14 +581,14 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
             store.setOptions(obj, true);
           }
         }
-        if (queryMode === tmp7(7218).AutocompleterResultTypes.VOICE_CHANNEL) {
+        if (queryMode === tmp7(6166).AutocompleterResultTypes.VOICE_CHANNEL) {
           store.setOptions({ voiceChannelGuildFilter: null }, true);
         } else {
           store.setOptions({ userFilters: null, voiceChannelGuildFilter: "Array" }, true);
         }
         tmp7 = require;
       }
-      if (queryMode === require(7218) /* sortByMatchScore */.AutocompleterResultTypes.USER) {
+      if (queryMode === require(6166) /* sortByMatchScore */.AutocompleterResultTypes.USER) {
         let guildId1 = store4.getGuildId();
         if (guildId1 == null) {
           guildId1 = null;

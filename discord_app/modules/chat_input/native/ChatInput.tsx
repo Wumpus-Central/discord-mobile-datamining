@@ -1,6 +1,6 @@
-// === Module 11277: ChatInput ===
+// === Module 11165: ChatInput ===
 
-// Module 11277 (ChatInput)
+// Module 11165 (ChatInput)
 import INITIAL_STATE from "INITIAL_STATE";
 import getChatInputMaxHeight from "getChatInputMaxHeight";
 import importAllResult from "jsxProd";
@@ -734,7 +734,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj6[0] = getState.props.current.channel;
           obj6[1] = outer1_28;
           obj6[2] = function onDismissKeyboard() {
-            return callback(4114).dismissKeyboard();
+            return callback(4052).dismissKeyboard();
           };
           obj6[3] = function onRestoreKeyboard() {
             return closure_12.handleToggleKeyboard({ type: outer1_0(outer1_3[48]).KeyboardTypes.SYSTEM });
@@ -753,7 +753,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
           obj7[0] = getState.props.current.channel;
           obj7[1] = outer1_32.CAMERA_BUTTON;
           obj7[2] = function onDismissKeyboard() {
-            return callback(4114).dismissKeyboard();
+            return callback(4052).dismissKeyboard();
           };
           obj7[3] = function onRestoreKeyboard() {
             return closure_12.handleToggleKeyboard({ type: outer1_0(outer1_3[48]).KeyboardTypes.SYSTEM });

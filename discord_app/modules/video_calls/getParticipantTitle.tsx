@@ -1,6 +1,6 @@
-// === Module 10954: getParticipantTitle ===
+// === Module 10854: getParticipantTitle ===
 
-// Module 10954 (getParticipantTitle)
+// Module 10854 (getParticipantTitle)
 import { ParticipantTypes } from "ParticipantTypes";
 
 let result = require("getNickname").fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");
@@ -21,10 +21,10 @@ export default function getParticipantTitle(guild_id, type, name) {
     if (user != null) {
       id = user.id;
     }
-    const result = require(10955) /* useIsGuestOrLurker */.isGuestOrLurkerInGuild(guild_id.guild_id, id);
-    const obj2 = require(10955) /* useIsGuestOrLurker */;
+    const result = require(10855) /* useIsGuestOrLurker */.isGuestOrLurkerInGuild(guild_id.guild_id, id);
+    const obj2 = require(10855) /* useIsGuestOrLurker */;
     let str = "";
-    const name1 = importDefault(4445).getName(guild_id.getGuildId(), guild_id.id, type.user);
+    const name1 = importDefault(4383).getName(guild_id.getGuildId(), guild_id.id, type.user);
     if (result) {
       const intl = tmp10(1236).intl;
       const _HermesInternal = HermesInternal;

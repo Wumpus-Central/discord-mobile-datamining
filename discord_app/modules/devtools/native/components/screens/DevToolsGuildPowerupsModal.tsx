@@ -1,6 +1,6 @@
-// === Module 14884: ? ===
+// === Module 14817: ? ===
 
-// Module 14884
+// Module 14817
 import { jsx } from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import importAllResult from "noop";
@@ -10,7 +10,7 @@ createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigat
 const memoResult = require("noop").memo(function DevToolsGuildPowerupsModal() {
   let Navigator;
   let Screen;
-  let obj = _require(5636);
+  let obj = _require(5574);
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {
@@ -35,15 +35,15 @@ const memoResult = require("noop").memo(function DevToolsGuildPowerupsModal() {
     options() {
       return { title: "Guild Powerups" };
     },
-    component: importDefault(14885)
+    component: importDefault(14818)
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
   obj[1] = <Screen name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={importDefault(14885)} />;
+  }} component={importDefault(14818)} />;
   return <Navigator name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={importDefault(14885)} />;
+  }} component={importDefault(14818)} />;
 });
 const result = require("createNativeStackNavigator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
 

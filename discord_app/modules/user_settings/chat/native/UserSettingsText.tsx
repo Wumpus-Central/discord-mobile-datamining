@@ -1,6 +1,6 @@
-// === Module 14509: UserSettingsText ===
+// === Module 14442: UserSettingsText ===
 
-// Module 14509 (UserSettingsText)
+// Module 14442 (UserSettingsText)
 import "registerAsset";
 import { View } from "dispatcher";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -222,7 +222,7 @@ export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
   obj = { enabled, location: obj };
   obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
   obj.track(constants.STICKERS_IN_AUTOCOMPLETE_TOGGLED, obj);
-  const IncludeStickersInAutocomplete = require(3928) /* explicitContentFromProto */.IncludeStickersInAutocomplete;
+  const IncludeStickersInAutocomplete = require(3866) /* explicitContentFromProto */.IncludeStickersInAutocomplete;
   IncludeStickersInAutocomplete.updateSetting(enabled);
 };
 export const setLowQualityImageMode = function setLowQualityImageMode(lowQualityImageMode) {
@@ -233,7 +233,7 @@ export const setLowQualityImageMode = function setLowQualityImageMode(lowQuality
   ({ videoUploadQuality, viewImageDescriptions, dataSavingMode } = lowQualityImageMode);
   importDefault(698).track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
   const obj = importDefault(698);
-  const result = importDefault(8175).updatedUnsyncedSettings({ lowQualityImageMode });
+  const result = importDefault(6209).updatedUnsyncedSettings({ lowQualityImageMode });
 };
 export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
   let lowQualityImageMode;
@@ -243,7 +243,7 @@ export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
   ({ videoUploadQuality, viewImageDescriptions, lowQualityImageMode } = dataSavingMode);
   importDefault(698).track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
   const obj = importDefault(698);
-  const result = importDefault(8175).updatedUnsyncedSettings({ dataSavingMode });
+  const result = importDefault(6209).updatedUnsyncedSettings({ dataSavingMode });
 };
 export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQuality) {
   let dataSavingMode;
@@ -253,7 +253,7 @@ export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQ
   ({ viewImageDescriptions, lowQualityImageMode, dataSavingMode } = videoUploadQuality);
   importDefault(698).track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
   const obj = importDefault(698);
-  const result = importDefault(8175).updatedUnsyncedSettings({ videoUploadQuality });
+  const result = importDefault(6209).updatedUnsyncedSettings({ videoUploadQuality });
 };
 export const setImageDescriptions = function setImageDescriptions(viewImageDescriptions) {
   let dataSavingMode;
@@ -262,6 +262,6 @@ export const setImageDescriptions = function setImageDescriptions(viewImageDescr
   viewImageDescriptions = viewImageDescriptions.viewImageDescriptions;
   ({ videoUploadQuality, lowQualityImageMode, dataSavingMode } = viewImageDescriptions);
   importDefault(698).track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
-  const ViewImageDescriptions = require(3928) /* explicitContentFromProto */.ViewImageDescriptions;
+  const ViewImageDescriptions = require(3866) /* explicitContentFromProto */.ViewImageDescriptions;
   ViewImageDescriptions.updateSetting(viewImageDescriptions);
 };

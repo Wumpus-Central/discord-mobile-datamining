@@ -1,6 +1,6 @@
-// === Module 8450: _openMediaModal ===
+// === Module 8119: _openMediaModal ===
 
-// Module 8450 (_openMediaModal)
+// Module 8119 (_openMediaModal)
 import _slicedToArray from "_slicedToArray";
 import zustandStore from "zustandStore";
 import setContent from "setContent";
@@ -105,7 +105,7 @@ function _openMediaModal() {
             dependencyMap = v0(closure_8, 3);
             setMediaViewerSources = 32.setMediaViewerSources;
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
-            initVideoStateStore = 3948.initVideoStateStore;
+            initVideoStateStore = 3886.initVideoStateStore;
             !(function getMeasureInWindowFunction(c0) {
               let closure_0 = c0;
               if (null != c0) {

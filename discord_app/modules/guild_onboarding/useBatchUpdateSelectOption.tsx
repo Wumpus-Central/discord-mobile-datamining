@@ -1,6 +1,6 @@
-// === Module 10153: useBatchUpdateSelectOption ===
+// === Module 10011: useBatchUpdateSelectOption ===
 
-// Module 10153 (useBatchUpdateSelectOption)
+// Module 10011 (useBatchUpdateSelectOption)
 import noop from "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import handleUpdate from "handleUpdate";

@@ -1,6 +1,6 @@
-// === Module 13173: items ===
+// === Module 13110: items ===
 
-// Module 13173 (items)
+// Module 13110 (items)
 import "noop";
 import jsxProd from "jsxProd";
 
@@ -23,7 +23,7 @@ export const GuildBadgeMaple = function GuildBadgeMaple(primaryTintColor) {
     num2 = 24;
   }
   const merged = Object.assign(primaryTintColor, Object.create(null));
-  let obj = require(13138) /* getTransformedBadgeColors */;
+  let obj = require(13075) /* getTransformedBadgeColors */;
   obj = { primaryBaseColors: closure_4, primaryTintColor: primaryTintColor.primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items };
   const primaryColorsTransformed = obj.getTransformedBadgeColors(obj).primaryColorsTransformed;
   obj = {};
@@ -32,7 +32,7 @@ export const GuildBadgeMaple = function GuildBadgeMaple(primaryTintColor) {
   obj.height = num2;
   obj.viewBox = "0 0 16 16";
   obj.fill = "none";
-  items = [callback(require(8196) /* inlineStyles */.Path, { d: "M5 12h-1v-1h1v1ZM7 12h-1v-2h-1v-1h1V6h1v6ZM5 9h-1v-1h1v1ZM4 8h-1v-1h1v1ZM3 7H2v-1h1v1Z", fill: primaryColorsTransformed[1] }), callback(require(8196) /* inlineStyles */.Path, { d: "M5 12v-1h-1v-1H2V7h1v1h1v-1h-1v-1h2v1h1v2h-1v-1h-1v1h1v1h1v3H3v-1h2ZM7 6h-1v-1h1v1ZM8 3h-1V2h1v1Z", fill: primaryColorsTransformed[4] }), callback(require(8196) /* inlineStyles */.Path, { d: "M9 13h-1V4h1v3h1v1h-1v2h1v1h-1v2ZM12 12h-1v-1h1v1ZM11 10h-1v-1h1v1ZM12 9h-1v-1h1v1ZM13 8h-1v-1h1v1ZM14 7h-1v-1h1v1ZM10 4h-1v-1h1v1Z", fill: primaryColorsTransformed[0] }), callback(require(8196) /* inlineStyles */.Path, { d: "M2 14H1v-1h1v1ZM3 13H2v-1h1v1ZM4 12h-1v-1h1v1ZM4 6H2v2H1V5h3v1ZM12 7h-1v-1h1v1ZM13 6h-1v-1h1v1ZM7 5h-1V2h1v3ZM9 2h-2V1h2v1Z", fill: "white" }), callback(require(8196) /* inlineStyles */.Path, { d: "M15 13v1H10v-1h5ZM14 10h-2v-1h2v1ZM15 8h-1v-1h1v1Z", fill: primaryColorsTransformed[2] }), callback(require(8196) /* inlineStyles */.Path, { d: "M8 15h-1V3h1V2h2v1h-1v1h-1v11ZM5 14H2v-1h3v1ZM12 11h-1v1h1v-1h1v1h1v1H9v-2h1v-1h1v-1h1v2Z", fill: primaryColorsTransformed[3] }), callback(require(8196) /* inlineStyles */.Path, { d: "M12 8h-1v1h-1v1h-1v-2h1v-1h2v1ZM14 9h-2v-1h1v-1h1v2ZM10 7h-1V4h1v3ZM13 7h-1v-1h1v1ZM15 7h-1v-1h-1v-1h2v2Z", fill: primaryColorsTransformed[3] }), callback(require(8196) /* inlineStyles */.Path, { d: "M7 15h1v-2h2v1h-1v2H6v-2h-1v-1h1v-1h1v3ZM5 15H1v-1h4v1ZM15 15H10v-1h5v1ZM1 14H0v-1h1v1ZM16 14h-1v-1h1v1ZM2 13H1v-1h1v1ZM15 13h-1v-1h1v1ZM4 11h-1v1H2v-2h2v1ZM14 12h-1v-1h-1v-1h2v2ZM2 10H1v-2h1v2ZM15 10h-1v-2h1v2ZM4 5H1v3H0V4h4v1ZM11 5h1v-1h4v4h-1V5H12v1h-1v1h-1V2h1v3ZM6 7h-1v-1h-1v-1h1V2h1v5ZM7 2h-1V1h1v1ZM10 2h-1V1h1v1ZM9 1h-2V0h2v1Z", fill: "black" })];
+  items = [callback(require(8541) /* inlineStyles */.Path, { d: "M5 12h-1v-1h1v1ZM7 12h-1v-2h-1v-1h1V6h1v6ZM5 9h-1v-1h1v1ZM4 8h-1v-1h1v1ZM3 7H2v-1h1v1Z", fill: primaryColorsTransformed[1] }), callback(require(8541) /* inlineStyles */.Path, { d: "M5 12v-1h-1v-1H2V7h1v1h1v-1h-1v-1h2v1h1v2h-1v-1h-1v1h1v1h1v3H3v-1h2ZM7 6h-1v-1h1v1ZM8 3h-1V2h1v1Z", fill: primaryColorsTransformed[4] }), callback(require(8541) /* inlineStyles */.Path, { d: "M9 13h-1V4h1v3h1v1h-1v2h1v1h-1v2ZM12 12h-1v-1h1v1ZM11 10h-1v-1h1v1ZM12 9h-1v-1h1v1ZM13 8h-1v-1h1v1ZM14 7h-1v-1h1v1ZM10 4h-1v-1h1v1Z", fill: primaryColorsTransformed[0] }), callback(require(8541) /* inlineStyles */.Path, { d: "M2 14H1v-1h1v1ZM3 13H2v-1h1v1ZM4 12h-1v-1h1v1ZM4 6H2v2H1V5h3v1ZM12 7h-1v-1h1v1ZM13 6h-1v-1h1v1ZM7 5h-1V2h1v3ZM9 2h-2V1h2v1Z", fill: "white" }), callback(require(8541) /* inlineStyles */.Path, { d: "M15 13v1H10v-1h5ZM14 10h-2v-1h2v1ZM15 8h-1v-1h1v1Z", fill: primaryColorsTransformed[2] }), callback(require(8541) /* inlineStyles */.Path, { d: "M8 15h-1V3h1V2h2v1h-1v1h-1v11ZM5 14H2v-1h3v1ZM12 11h-1v1h1v-1h1v1h1v1H9v-2h1v-1h1v-1h1v2Z", fill: primaryColorsTransformed[3] }), callback(require(8541) /* inlineStyles */.Path, { d: "M12 8h-1v1h-1v1h-1v-2h1v-1h2v1ZM14 9h-2v-1h1v-1h1v2ZM10 7h-1V4h1v3ZM13 7h-1v-1h1v1ZM15 7h-1v-1h-1v-1h2v2Z", fill: primaryColorsTransformed[3] }), callback(require(8541) /* inlineStyles */.Path, { d: "M7 15h1v-2h2v1h-1v2H6v-2h-1v-1h1v-1h1v3ZM5 15H1v-1h4v1ZM15 15H10v-1h5v1ZM1 14H0v-1h1v1ZM16 14h-1v-1h1v1ZM2 13H1v-1h1v1ZM15 13h-1v-1h1v1ZM4 11h-1v1H2v-2h2v1ZM14 12h-1v-1h-1v-1h2v2ZM2 10H1v-2h1v2ZM15 10h-1v-2h1v2ZM4 5H1v3H0V4h4v1ZM11 5h1v-1h4v4h-1V5H12v1h-1v1h-1V2h1v3ZM6 7h-1v-1h-1v-1h1V2h1v5ZM7 2h-1V1h1v1ZM10 2h-1V1h1v1ZM9 1h-2V0h2v1Z", fill: "black" })];
   obj.children = items;
-  return callback2(require(8196) /* inlineStyles */.Svg, obj);
+  return callback2(require(8541) /* inlineStyles */.Svg, obj);
 };

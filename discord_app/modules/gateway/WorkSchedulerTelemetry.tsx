@@ -1,6 +1,6 @@
-// === Module 12786: WorkSchedulerTelemetryEvent ===
+// === Module 12723: WorkSchedulerTelemetryEvent ===
 
-// Module 12786 (WorkSchedulerTelemetryEvent)
+// Module 12723 (WorkSchedulerTelemetryEvent)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

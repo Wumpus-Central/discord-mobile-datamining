@@ -1,6 +1,6 @@
-// === Module 6185: FrogIllocon ===
+// === Module 7049: FrogIllocon ===
 
-// Module 6185 (FrogIllocon)
+// Module 7049 (FrogIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");
@@ -16,12 +16,12 @@ export const FrogIllocon = function FrogIllocon(size) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6186);
+  obj[0] = importDefault(7050);
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { uri: null });
+  return jsx(importDefault(5145), { uri: null });
 };

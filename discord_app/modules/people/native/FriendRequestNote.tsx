@@ -1,6 +1,6 @@
-// === Module 12337: FriendRequestNote ===
+// === Module 12239: FriendRequestNote ===
 
-// Module 12337 (FriendRequestNote)
+// Module 12239 (FriendRequestNote)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

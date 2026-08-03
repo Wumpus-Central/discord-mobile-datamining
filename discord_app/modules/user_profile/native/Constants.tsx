@@ -1,6 +1,6 @@
-// === Module 5629: ARBITRARY_LARGE_OFFSET ===
+// === Module 5567: ARBITRARY_LARGE_OFFSET ===
 
-// Module 5629 (ARBITRARY_LARGE_OFFSET)
+// Module 5567 (ARBITRARY_LARGE_OFFSET)
 const XXLARGE = require("Button").AvatarSizes.XXLARGE;
 const tmp2 = require("Button").AVATAR_SIZE_MAP[XXLARGE];
 const sum = tmp2 + 12;

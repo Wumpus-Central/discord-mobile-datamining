@@ -1,6 +1,6 @@
-// === Module 10252: useGuildSearchContext ===
+// === Module 10113: useGuildSearchContext ===
 
-// Module 10252 (useGuildSearchContext)
+// Module 10113 (useGuildSearchContext)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SearchTypes } from "ME";

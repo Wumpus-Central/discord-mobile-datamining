@@ -1,6 +1,6 @@
-// === Module 5787: getGuildModeratorReportChannelId ===
+// === Module 5795: getGuildModeratorReportChannelId ===
 
-// Module 5787 (getGuildModeratorReportChannelId)
+// Module 5795 (getGuildModeratorReportChannelId)
 const result = require("set").fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");
 
 export default function getGuildModeratorReportChannelId(moderatorReporting) {

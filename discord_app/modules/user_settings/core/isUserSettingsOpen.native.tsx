@@ -1,12 +1,12 @@
-// === Module 12895: isUserSettingsOpen ===
+// === Module 12832: isUserSettingsOpen ===
 
-// Module 12895 (isUserSettingsOpen)
+// Module 12832 (isUserSettingsOpen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
 const require = arg1;
 function isUserSettingsOpen() {
-  const rootNavigationRef = require(4107) /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = require(4045) /* getRootNavigationRef */.getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

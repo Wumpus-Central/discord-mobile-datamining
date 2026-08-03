@@ -1,6 +1,6 @@
-// === Module 8746: useTooltip ===
+// === Module 8441: useTooltip ===
 
-// Module 8746 (useTooltip)
+// Module 8441 (useTooltip)
 import _slicedToArray from "_slicedToArray";
 import v1 from "v1";
 import noop from "noop";
@@ -181,7 +181,7 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
   const tmp = importDefault(1474)();
   let _slicedToArray = tmp;
   let v1 = context.useRef(tmp);
-  context = context.useContext(_require(5570).LayerContext);
+  context = context.useContext(_require(5508).LayerContext);
   let closure_6 = context.useRef(null);
   const items = [context, ref];
   const effect = context.useEffect(() => {

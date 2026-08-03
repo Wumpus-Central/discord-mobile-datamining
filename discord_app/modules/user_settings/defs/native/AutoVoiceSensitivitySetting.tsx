@@ -1,6 +1,6 @@
-// === Module 14352: toggle ===
+// === Module 14285: toggle ===
 
-// Module 14352 (toggle)
+// Module 14285 (toggle)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
 
@@ -17,7 +17,7 @@ createToggle = {
   },
   onValueChange: function onAutoVoiceSensitivitySettingValueChange(autoThreshold) {
     mode = mode.getMode();
-    let obj = importDefault(9024);
+    let obj = importDefault(8847);
     obj = { autoThreshold };
     obj.setMode(mode, obj);
   },

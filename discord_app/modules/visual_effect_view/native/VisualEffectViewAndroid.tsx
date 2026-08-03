@@ -1,6 +1,6 @@
-// === Module 4661: MODERN_ANDROID_BLURRING_AVAILABLE ===
+// === Module 4599: MODERN_ANDROID_BLURRING_AVAILABLE ===
 
-// Module 4661 (MODERN_ANDROID_BLURRING_AVAILABLE)
+// Module 4599 (MODERN_ANDROID_BLURRING_AVAILABLE)
 import DCDDeviceManager from "DCDDeviceManager";
 import importDefaultResult from "map";
 

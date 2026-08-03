@@ -1,6 +1,6 @@
-// === Module 15233: experiment ===
+// === Module 15250: experiment ===
 
-// Module 15233 (experiment)
+// Module 15250 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable Game Claim Coachmark", config: { enabled: true } }];

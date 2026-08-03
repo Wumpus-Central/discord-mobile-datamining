@@ -1,6 +1,6 @@
-// === Module 14693: useHasExpiredShopBlocks ===
+// === Module 14626: useHasExpiredShopBlocks ===
 
-// Module 14693 (useHasExpiredShopBlocks)
+// Module 14626 (useHasExpiredShopBlocks)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { MAX_TIMEOUT_MS } from "ME";

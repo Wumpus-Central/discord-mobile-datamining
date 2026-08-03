@@ -1,6 +1,6 @@
-// === Module 11772: handleModifyingAppliedBoostStart ===
+// === Module 11667: handleModifyingAppliedBoostStart ===
 
-// Module 11772 (handleModifyingAppliedBoostStart)
+// Module 11667 (handleModifyingAppliedBoostStart)
 import { Store } from "initialize";
 
 function handleModifyingAppliedBoostStart() {

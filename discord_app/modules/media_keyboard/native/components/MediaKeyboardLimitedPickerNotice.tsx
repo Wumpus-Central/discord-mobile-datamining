@@ -1,6 +1,6 @@
-// === Module 9854: MediaKeyboardLimitedPickerNotice ===
+// === Module 9709: MediaKeyboardLimitedPickerNotice ===
 
-// Module 9854 (MediaKeyboardLimitedPickerNotice)
+// Module 9709 (MediaKeyboardLimitedPickerNotice)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -32,13 +32,13 @@ export default function MediaKeyboardLimitedPickerNotice(onHeightChange) {
   obj = { style: tmp.text, variant: "text-sm/normal", children: null };
   const intl = onHeightChange(1236).intl;
   obj[2] = intl.string(onHeightChange(1236).t["5g7NcN"]);
-  const items2 = [callback(onHeightChange(4251).Text, obj), ];
+  const items2 = [callback(onHeightChange(4189).Text, obj), ];
   obj = { style: tmp.button, children: null };
   const obj1 = { size: "sm", variant: "tertiary", text: null, onPress: null };
   const intl2 = onHeightChange(1236).intl;
   obj1[2] = intl2.string(onHeightChange(1236).t.JuXTi6);
   obj1[3] = onHeightChange.onPress;
-  obj[1] = callback(onHeightChange(4666).Button, obj1);
+  obj[1] = callback(onHeightChange(4604).Button, obj1);
   items2[1] = callback(View, obj);
   obj[2] = items2;
   return closure_5(View, obj);

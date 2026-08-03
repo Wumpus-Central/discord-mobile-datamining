@@ -1,6 +1,6 @@
-// === Module 12094: useIsUserProfileObfuscated ===
+// === Module 11998: useIsUserProfileObfuscated ===
 
-// Module 12094 (useIsUserProfileObfuscated)
+// Module 11998 (useIsUserProfileObfuscated)
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 
 const require = arg1;

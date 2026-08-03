@@ -1,6 +1,6 @@
-// === Module 9067: compareArrays ===
+// === Module 8890: compareArrays ===
 
-// Module 9067 (compareArrays)
+// Module 8890 (compareArrays)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import module_36 from "module_36";
 
@@ -62,9 +62,9 @@ function _generatePairwiseFingerprint() {
               let lib;
               let uint8Array;
               let asyncGeneratorStep;
-              const items = [lib(9066).generateKeyFingerprint(lib, uint8Array, asyncGeneratorStep), ];
-              const obj9 = lib(9066);
-              items[1] = lib(9066).generateKeyFingerprint(lib, module_36, closure_4);
+              const items = [lib(8889).generateKeyFingerprint(lib, uint8Array, asyncGeneratorStep), ];
+              const obj9 = lib(8889);
+              items[1] = lib(8889).generateKeyFingerprint(lib, module_36, closure_4);
               c7 = 1;
               c8 = 1;
               const obj1 = { value: null, done: false };

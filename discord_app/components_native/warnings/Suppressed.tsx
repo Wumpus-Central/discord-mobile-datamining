@@ -1,6 +1,6 @@
-// === Module 15831: render ===
+// === Module 15766: render ===
 
-// Module 15831 (render)
+// Module 15766 (render)
 import initialize from "initialize";
 import { jsx } from "jsxProd";
 import { Component } from "noop";
@@ -24,16 +24,16 @@ Suppressed.prototype["render"] = function render() {
     let stringResult = string(t.KuYcnU);
     const intl3 = tmp2(1236).intl;
     let stringResult1 = intl3.string(tmp2(1236).t["RaFZ3+"]);
-    let tmp7 = importDefault(15833);
+    let tmp7 = importDefault(15768);
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = tmp2(1236).intl;
     stringResult1 = intl2.string(tmp2(1236).t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = importDefault(15834);
+    tmp7 = importDefault(15769);
   }
-  return jsx(tmp6(4684), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
+  return jsx(tmp6(4622), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
 const result = require("jsxProd").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 

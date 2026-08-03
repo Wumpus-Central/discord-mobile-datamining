@@ -1,6 +1,6 @@
-// === Module 8549: TwinButtons ===
+// === Module 8242: TwinButtons ===
 
-// Module 8549 (TwinButtons)
+// Module 8242 (TwinButtons)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -21,7 +21,7 @@ const result = require("jsxProd").fileFinishedImporting("design/components/exper
 
 export const TwinButtons = function TwinButtons(children) {
   let _require;
-  let obj = _require(4672);
+  let obj = _require(4610);
   let tmp = callback(obj.useFontScale() > 1.2);
   _require = tmp;
   obj = {

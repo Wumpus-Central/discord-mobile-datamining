@@ -1,6 +1,6 @@
-// === Module 10755: map ===
+// === Module 10571: map ===
 
-// Module 10755 (map)
+// Module 10571 (map)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
@@ -22,8 +22,8 @@ class VideoSpinnerTimer {
 const prototype = VideoSpinnerTimer.prototype;
 prototype["onSpinnerStarted"] = function onSpinnerStarted() {
   if (null == this.spinnerVisibleStart) {
-    tmp.spinnerVisibleStart = require(4331) /* sleep */.now();
-    const obj = require(4331) /* sleep */;
+    tmp.spinnerVisibleStart = require(4269) /* sleep */.now();
+    const obj = require(4269) /* sleep */;
   }
 };
 prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerContext, userId, arg2) {
@@ -35,7 +35,7 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
     }
     const sum = num + 1;
     const result = map.set(arg2, sum);
-    let obj = require(4331) /* sleep */;
+    let obj = require(4269) /* sleep */;
     const diff = obj.now() - self.spinnerVisibleStart;
     self.spinnerVisibleStart = null;
     if (diff < 0) {

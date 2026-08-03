@@ -1,6 +1,6 @@
-// === Module 10691: map ===
+// === Module 10638: map ===
 
-// Module 10691 (map)
+// Module 10638 (map)
 import closure_3 from "set";
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
@@ -19,14 +19,14 @@ let closure_11 = 10 * require("set").Millis.SECOND;
 const map = new Map();
 let set = new Set();
 function postClose(origin, arg1, postMessageToRPCClient) {
-  const items = [importDefault(10692).CLOSE, arg1];
+  const items = [importDefault(10639).CLOSE, arg1];
   postMessageToRPCClient(items, origin);
 }
 class PostMessageTransport extends EventEmitter {
   constructor(arg0, arg1, arg2, arg3) {
     tmp4 = new PostMessageTransport(tmp3, tmp2, tmp);
     // ThrowIfThisInitialized (0x7c)
-    f107736 = tmp4;
+    f107519 = tmp4;
     tmp4.disconnectSocket = function disconnectSocket(closure_0, closure_1, arg2) {
       let flag = arg2;
       if (arg2 === undefined) {
@@ -65,9 +65,9 @@ class PostMessageTransport extends EventEmitter {
           [tmp, tmp2] = arg0;
           let obj = callback2(698);
           obj = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
-          obj[1] = callback(3873).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = callback(3873);
-          obj[2] = callback(3873).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj[1] = callback(3811).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = callback(3811);
+          obj[2] = callback(3811).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj[3] = closure_11;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj);
         });
@@ -126,7 +126,7 @@ class PostMessageTransport extends EventEmitter {
       } else {
         try {
           let parsed = arg2;
-          if (typeof arg2 !== "ge") {
+          if (typeof arg2 !== "__FORMATJS_LISTFORMAT_DATA__") {
             const _JSON = JSON;
             parsed = JSON.parse(arg2);
           }
@@ -144,9 +144,9 @@ class PostMessageTransport extends EventEmitter {
         }
       }
     };
-    f107736 = undefined;
+    f107519 = undefined;
     closure_1 = tmp4;
-    f107736 = closure_3((arg0, arg1, arg2) => {
+    f107519 = closure_3((arg0, arg1, arg2) => {
       let closure_0 = arg0;
       let closure_1 = arg1;
       let closure_2 = arg2;
@@ -413,9 +413,9 @@ class PostMessageTransport extends EventEmitter {
       }
       return applyArgumentsResult;
     };
-    f107736 = undefined;
+    f107519 = undefined;
     closure_1 = tmp4;
-    f107736 = closure_3((arg0, arg1) => {
+    f107519 = closure_3((arg0, arg1) => {
       let closure_0 = arg0;
       let closure_1 = arg1;
       let c6 = 0;
@@ -530,29 +530,29 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, arg1, 
   if (Array.isArray(arg2)) {
     const self = this;
     [tmp5, tmp6] = callback2(arg2, 2);
-    if (importDefault(10692).HANDSHAKE === tmp5) {
+    if (importDefault(10639).HANDSHAKE === tmp5) {
       if (null != value) {
         let obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp35 = new tmp7(10693)(obj, "Already connected");
+        const tmp35 = new tmp7(10640)(obj, "Already connected");
         throw tmp35;
       } else {
         return self.handleHandshake(arg1, tmp6, arg3);
       }
-    } else if (tmp7(10692).FRAME === tmp5) {
+    } else if (tmp7(10639).FRAME === tmp5) {
       if (null == value) {
         obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp27 = new tmp7(10693)(obj, "Not connected");
+        const tmp27 = new tmp7(10640)(obj, "Not connected");
         throw tmp27;
       } else {
         return self.handleFrame(arg1, value, tmp6);
       }
-    } else if (tmp7(10692).CLOSE === tmp5) {
+    } else if (tmp7(10639).CLOSE === tmp5) {
       if (null == value) {
         const obj1 = { closeCode: null };
         obj1[0] = constants2.CLOSE_UNSUPPORTED;
-        const tmp20 = new tmp7(10693)(obj1, "Not connected");
+        const tmp20 = new tmp7(10640)(obj1, "Not connected");
         throw tmp20;
       } else {
         return self.handleClose(value, tmp6);
@@ -560,7 +560,7 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, arg1, 
     } else {
       obj = { closeCode: null };
       obj[0] = constants2.CLOSE_UNSUPPORTED;
-      const tmp13 = new tmp7(10693)(obj, "Invalid opcode");
+      const tmp13 = new tmp7(10640)(obj, "Invalid opcode");
       throw tmp13;
     }
     const tmp4 = callback2(arg2, 2);

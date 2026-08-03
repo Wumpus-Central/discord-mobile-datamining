@@ -1,6 +1,6 @@
-// === Module 14689: useShopOrientationLock ===
+// === Module 14622: useShopOrientationLock ===
 
-// Module 14689 (useShopOrientationLock)
+// Module 14622 (useShopOrientationLock)
 import noop from "noop";
 
 const require = arg1;

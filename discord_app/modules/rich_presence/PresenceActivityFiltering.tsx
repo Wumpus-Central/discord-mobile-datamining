@@ -1,6 +1,6 @@
-// === Module 10627: doesGameHaveRichPresence ===
+// === Module 10489: doesGameHaveRichPresence ===
 
-// Module 10627 (doesGameHaveRichPresence)
+// Module 10489 (doesGameHaveRichPresence)
 import addApplication from "addApplication";
 
 const require = arg1;

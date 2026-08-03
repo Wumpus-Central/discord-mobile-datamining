@@ -1,6 +1,6 @@
-// === Module 15045: useMessagesScrollToTop ===
+// === Module 15065: useMessagesScrollToTop ===
 
-// Module 15045 (useMessagesScrollToTop)
+// Module 15065 (useMessagesScrollToTop)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

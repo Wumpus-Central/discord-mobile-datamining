@@ -1,6 +1,6 @@
-// === Module 10781: WakeLock ===
+// === Module 10673: WakeLock ===
 
-// Module 10781 (WakeLock)
+// Module 10673 (WakeLock)
 import noop from "noop";
 import { NativeModules } from "get ActivityIndicator";
 

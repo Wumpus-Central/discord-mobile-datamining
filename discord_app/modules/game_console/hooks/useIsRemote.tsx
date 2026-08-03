@@ -1,6 +1,6 @@
-// === Module 5771: useIsRemote ===
+// === Module 6053: useIsRemote ===
 
-// Module 5771 (useIsRemote)
+// Module 6053 (useIsRemote)
 import set from "set";
 
 const require = arg1;

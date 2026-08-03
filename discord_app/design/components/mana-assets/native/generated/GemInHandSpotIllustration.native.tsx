@@ -1,6 +1,6 @@
-// === Module 6281: GemInHandSpotIllustration ===
+// === Module 7145: GemInHandSpotIllustration ===
 
-// Module 6281 (GemInHandSpotIllustration)
+// Module 7145 (GemInHandSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GemInHandSpotIllustration.native.tsx");
@@ -24,7 +24,7 @@ export const GemInHandSpotIllustration = function GemInHandSpotIllustration(widt
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6282);
+  obj[0] = importDefault(7146);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +32,5 @@ export const GemInHandSpotIllustration = function GemInHandSpotIllustration(widt
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

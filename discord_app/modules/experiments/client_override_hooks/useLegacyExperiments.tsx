@@ -1,6 +1,6 @@
-// === Module 10640: parseRegisteredExperiments ===
+// === Module 10502: parseRegisteredExperiments ===
 
-// Module 10640 (parseRegisteredExperiments)
+// Module 10502 (parseRegisteredExperiments)
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
 import getHash from "getHash";

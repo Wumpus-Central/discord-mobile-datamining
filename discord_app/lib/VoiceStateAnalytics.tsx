@@ -1,6 +1,6 @@
-// === Module 12965: updateVoiceStates ===
+// === Module 12902: updateVoiceStates ===
 
-// Module 12965 (updateVoiceStates)
+// Module 12902 (updateVoiceStates)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";

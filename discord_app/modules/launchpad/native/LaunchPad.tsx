@@ -1,6 +1,6 @@
-// === Module 15880: TabButton ===
+// === Module 15816: TabButton ===
 
-// Module 15880 (TabButton)
+// Module 15816 (TabButton)
 import set from "set";
 import importAllResult from "jsxProd";
 import { View } from "updateVoiceState";
@@ -20,17 +20,15 @@ import generateOldThreadCutoff from "generateOldThreadCutoff";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import updateVoiceState from "updateVoiceState";
-import ME from "ME";
+import { AnalyticEvents } from "ME";
 import jsxProd from "createCacheKey";
 import createCacheKey from "createCacheKey";
 
 let c10;
 let c9;
 let closure_14;
-let closure_25;
 let closure_26;
 let closure_27;
-let closure_28;
 let map1;
 let metroImportAll;
 const require = arg1;
@@ -54,15 +52,15 @@ function TabButton(selected) {
   obj[4] = { selected };
   const colors = importDefault(712).colors;
   obj[5] = icon(selected ? colors.INTERACTIVE_TEXT_ACTIVE : colors.INTERACTIVE_TEXT_DEFAULT);
-  return closure_27(require(4783) /* PressableBase */.PressableHighlight, obj);
+  return closure_26(require(4721) /* PressableBase */.PressableHighlight, obj);
 }
 function TabHeader(children) {
   const tmp = callback3();
-  return callback2(require(4251) /* Text */.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
+  return callback2(require(4189) /* Text */.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
 }
 function createAndAppendChannel(arg0, has, arr) {
   if (!has.has(arg0)) {
-    const tmp3 = importDefault(7229)(arg0);
+    const tmp3 = importDefault(6177)(arg0);
     if (null != tmp3) {
       arr.push(tmp3);
       has.add(arg0);
@@ -72,8 +70,7 @@ function createAndAppendChannel(arg0, has, arr) {
 let c4 = importAllResult;
 ({ CHANNEL_PREFIX: metroImportAll, getIdFromHistoryItem: c9, GUILD_PREFIX: c10 } = getIdFromHistoryItem);
 ({ isGuildSelectableChannelType: map1, isGuildVocalChannelType: closure_14 } = createChannelRecord);
-({ AnalyticEvents: closure_25, GuildFeatures: closure_26 } = ME);
-({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
+({ jsx: closure_26, jsxs: closure_27 } = jsxProd);
 const md = require("Themes").radii.md;
 let obj = { wrapper: null, launchPadContent: null, header: null, subheader: null, tabs: null, tab: null, tabSelected: null };
 obj = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
@@ -85,11 +82,11 @@ createCacheKey = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgrou
 obj[4] = createCacheKey;
 obj[5] = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
 obj[6] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let closure_29 = createCacheKey.createStyles(obj);
-let closure_32 = { SEARCH: 0, [0]: "SEARCH", MEMBERS: 1, [1]: "MEMBERS", NOTIFICATIONS: 2, [2]: "NOTIFICATIONS", DEV_TOOLS: 3, [3]: "DEV_TOOLS" };
-let closure_33 = { code: "function LaunchPadTsx1(){const{sharedState}=this.__closure;return sharedState.get();}" };
-let closure_34 = { code: "function LaunchPadTsx2(sharedState){const{keyboardShown,runOnJS,setFocused}=this.__closure;if(!keyboardShown.get()&&sharedState>0.75){runOnJS(setFocused)(true);}else if(keyboardShown.get()&&sharedState<=0){runOnJS(setFocused)(false);}}" };
-let closure_35 = importAllResult.memo((tab) => {
+let closure_28 = createCacheKey.createStyles(obj);
+let closure_31 = { SEARCH: 0, [0]: "SEARCH", MEMBERS: 1, [1]: "MEMBERS", NOTIFICATIONS: 2, [2]: "NOTIFICATIONS", DEV_TOOLS: 3, [3]: "DEV_TOOLS" };
+let closure_32 = { code: "function LaunchPadTsx1(){const{sharedState}=this.__closure;return sharedState.get();}" };
+let closure_33 = { code: "function LaunchPadTsx2(sharedState){const{keyboardShown,runOnJS,setFocused}=this.__closure;if(!keyboardShown.get()&&sharedState>0.75){runOnJS(setFocused)(true);}else if(keyboardShown.get()&&sharedState<=0){runOnJS(setFocused)(false);}}" };
+let closure_34 = importAllResult.memo((tab) => {
   let importDefault;
   let sharedState;
   tab = tab.tab;
@@ -114,7 +111,7 @@ let closure_35 = importAllResult.memo((tab) => {
   const items1 = [sharedValue, searchRef];
   callback = importAllResult.useCallback((arg0, arg1) => {
     if (arg0) {
-      if (ref2.current === outer1_32.SEARCH) {
+      if (ref2.current === outer1_31.SEARCH) {
         const bestActiveInput = tab(sharedState[26]).getBestActiveInput();
         let isFocusedResult;
         if (bestActiveInput != null) {
@@ -162,7 +159,7 @@ let closure_35 = importAllResult.memo((tab) => {
   }, items3);
   const items4 = [tab, sharedState, callback];
   const effect2 = importAllResult.useEffect(() => {
-    let tmp = tab === outer1_32.SEARCH;
+    let tmp = tab === outer1_31.SEARCH;
     if (tmp) {
       tmp = 1 === sharedState.get();
     }
@@ -178,7 +175,7 @@ let closure_35 = importAllResult.memo((tab) => {
   }
   T.__closure = { sharedState };
   T.__workletHash = 17067823098320;
-  T.__initData = closure_33;
+  T.__initData = closure_32;
   const fn = function p(arg0) {
     if (!sharedValue.get()) {
       if (arg0 > 0.75) {
@@ -198,7 +195,7 @@ let closure_35 = importAllResult.memo((tab) => {
   obj = { keyboardShown: sharedValue, runOnJS: tab(sharedState[25]).runOnJS, setFocused: callback };
   fn.__closure = obj;
   fn.__workletHash = 3784684686013;
-  fn.__initData = closure_34;
+  fn.__initData = closure_33;
   const animatedReaction = obj3.useAnimatedReaction(T, fn);
   obj = { style: tmp.header, children: null };
   if (tab === constants.SEARCH) {
@@ -236,7 +233,7 @@ let closure_35 = importAllResult.memo((tab) => {
   const intl3 = tmp2(tmp3[28]).intl;
   obj5[1] = intl3.string(tab(sharedState[28]).t.JqV7IC);
   obj5[2] = function onPress() {
-    callback(outer1_32.SEARCH);
+    callback(outer1_31.SEARCH);
     const current = searchRef.current;
     if (current != null) {
       current.focus();
@@ -255,7 +252,7 @@ let closure_35 = importAllResult.memo((tab) => {
   const intl4 = tmp2(tmp3[28]).intl;
   obj6[1] = intl4.string(tab(sharedState[28]).t.HcoRu0);
   obj6[2] = function onPress() {
-    callback(outer1_32.NOTIFICATIONS);
+    callback(outer1_31.NOTIFICATIONS);
     const current = searchRef.current;
     if (current != null) {
       current.blur();
@@ -276,7 +273,7 @@ let closure_35 = importAllResult.memo((tab) => {
         outer1_1(tmp2[34])();
         const tmpResult = tab(tmp2[33]);
       } else {
-        callback(outer1_32.DEV_TOOLS);
+        callback(outer1_31.DEV_TOOLS);
       }
       const current = searchRef.current;
       if (current != null) {
@@ -287,14 +284,14 @@ let closure_35 = importAllResult.memo((tab) => {
   }
   items6[2] = tmp17Result;
   obj4[1] = items6;
-  items5[1] = closure_28(sharedValue, obj4);
+  items5[1] = closure_27(sharedValue, obj4);
   obj[1] = items5;
-  return closure_28(sharedValue, obj);
+  return closure_27(sharedValue, obj);
 });
-let closure_37 = [];
+let closure_36 = [];
 let items = [require("sortByMatchScore").AutocompleterResultTypes.GUILD, require("sortByMatchScore").AutocompleterResultTypes.TEXT_CHANNEL, require("sortByMatchScore").AutocompleterResultTypes.GROUP_DM, require("sortByMatchScore").AutocompleterResultTypes.VOICE_CHANNEL, require("sortByMatchScore").AutocompleterResultTypes.USER];
-let closure_39 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
-let closure_40 = { code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
+let closure_38 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
+let closure_39 = { code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
 let obj2 = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
 let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function LaunchPad(arg0) {
@@ -321,14 +318,14 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   let tmp2 = callback(callback2.useState(false), 2);
   [str, ref] = callback(callback2.useState(""), 2);
   let tmp6 = callback(callback2.useState(""), 2);
-  [tmp9, sharedState] = callback(callback2.useState(closure_37), 2);
+  [tmp9, sharedState] = callback(callback2.useState(closure_36), 2);
   const first = callback(callback2.useState(() => new ref(sharedState[41])((arg0, str) => {
     if ("" === str.trim()) {
-      callback(outer1_37);
+      callback(outer1_36);
     } else {
       callback(arg0);
     }
-  }, outer1_38, undefined, { frecencyBoosters: true })), 1)[0];
+  }, outer1_37, undefined, { frecencyBoosters: true })), 1)[0];
   callback = first;
   let items = [first];
   const effect = callback2.useEffect(() => () => set.clean(), items);
@@ -407,7 +404,7 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   });
   closure_8 = callback2.useRef([]);
   let obj3 = callback1(sharedState[24]);
-  let items6 = [insertUnsortedGuilds, updateGuildUnreadSentinel, createGuildRecordFromRust];
+  let items6 = [updateGuildUnreadSentinel, insertUnsortedGuilds];
   const items7 = [visible, selectedGuildFromRoute];
   stateFromStoresArray = obj3.useStateFromStoresArray(items6, () => {
     if (ref) {
@@ -417,36 +414,19 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
       const iter = flattenedGuildIds[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp9 = nextResult;
-        let tmp10 = sharedState;
+        let tmp8 = nextResult;
+        let tmp9 = sharedState;
         if (nextResult !== sharedState) {
           let obj = outer1_18;
-          let tmp30 = nextResult;
-          let hasUnreadResult = outer1_18.getMentionCount(tmp9) > 0;
-          let tmp31 = hasUnreadResult;
-          if (!hasUnreadResult) {
-            let tmp11 = nextResult;
-            hasUnreadResult = obj.hasUnread(tmp9);
-          }
-          if (hasUnreadResult) {
-            let tmp13 = outer1_19;
+          let tmp10 = nextResult;
+          if (outer1_18.getMentionCount(tmp8) > 0) {
             let tmp14 = nextResult;
-            let guild = outer1_19.getGuild(tmp9);
-            let hasItem;
-            if (guild != null) {
-              let features = guild.features;
-              let tmp17 = outer1_26;
-              hasItem = features.has(outer1_26.HUB);
-            }
-            if (!hasItem) {
-              let tmp18 = tmp31;
-              if (tmp31) {
-                let tmp21 = nextResult;
-                let arr = items.push(tmp9);
-              } else {
-                let tmp19 = nextResult;
-                arr = items1.push(tmp9);
-              }
+            let arr = items.push(tmp8);
+          } else {
+            let tmp11 = nextResult;
+            if (obj.hasUnread(tmp8)) {
+              let tmp12 = nextResult;
+              arr = items1.push(tmp8);
             }
           }
         }
@@ -546,7 +526,7 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   const effect6 = callback2.useEffect(() => {
     closure_10.current = stateFromStoresArray1;
   });
-  let tmp8 = callback(callback2.useState(closure_37), 2);
+  let tmp8 = callback(callback2.useState(closure_36), 2);
   const items10 = [stateFromStoresArray1];
   stateFromStores1 = callback1(sharedState[24]).useStateFromStores(items10, () => stateFromStoresArray1.getState().history);
   closure_13 = callback2.useRef([]);
@@ -565,7 +545,7 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
         let diff = stateFromStores1.length - 1;
         if (0 <= diff) {
           while (null != stateFromStores1[diff]) {
-            let tmp28 = closure_8;
+            let tmp26 = closure_8;
             if (obj3.startsWith(closure_8)) {
               let tmp18 = memo1;
               let tmp19 = stateFromStoresArray;
@@ -579,15 +559,12 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
               let tmp16 = stateFromStoresArray;
               tmp17 = stateFromStoresArray(obj3);
             }
-            let tmp22 = outer1_19;
-            let guild = outer1_19.getGuild(tmp17);
-            let hasItem = null == tmp17 || set.has(tmp17) || set1.has(tmp17) || null == guild;
-            if (!hasItem) {
-              let features = guild.features;
-              let tmp25 = outer1_26;
-              hasItem = features.has(outer1_26.HUB);
+            let tmp22 = null == tmp17 || set.has(tmp17) || set1.has(tmp17);
+            if (!tmp22) {
+              let tmp23 = outer1_19;
+              tmp22 = null == outer1_19.getGuild(tmp17);
             }
-            if (!hasItem) {
+            if (!tmp22) {
               let addResult1 = set1.add(tmp17);
               let arr = items.push(tmp17);
             }
@@ -656,8 +633,8 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
           const _Set = Set;
           const set = new Set();
           for (const item10022 of tmp5) {
-            let tmp15 = outer1_36;
-            let tmp16 = outer1_36(item10022, set, items);
+            let tmp15 = outer1_35;
+            let tmp16 = outer1_35(item10022, set, items);
             continue;
           }
         }
@@ -666,8 +643,8 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
         const set1 = new Set();
         if (stateFromStoresArray1.length > 0) {
           for (const item10040 of tmp22) {
-            let tmp25 = outer1_36;
-            let tmp26 = outer1_36(item10040, set1, items1);
+            let tmp25 = outer1_35;
+            let tmp26 = outer1_35(item10040, set1, items1);
             continue;
           }
         }
@@ -750,7 +727,7 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   };
   fn.__closure = { sharedState };
   fn.__workletHash = 7315121230879;
-  fn.__initData = closure_39;
+  fn.__initData = closure_38;
   const fn2 = function i(arg0, arg1) {
     if (arg0 !== arg1) {
       if (arg0) {
@@ -772,11 +749,11 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   obj = { runOnJS: callback1(sharedState[25]).runOnJS, clearQuery: callback2, cancelTimeout: callback3 };
   fn2.__closure = obj;
   fn2.__workletHash = 6379173436444;
-  fn2.__initData = closure_40;
+  fn2.__initData = closure_39;
   const animatedReaction = callback1(sharedState[25]).useAnimatedReaction(fn, fn2);
   obj = { style: memo2, children: null };
   const obj7 = callback1(sharedState[25]);
-  const items16 = [callback2(closure_35, { tab: first3, setTab: tmp40[1], updateQuery: callback1, searchRef: ref, sharedState }), , ];
+  const items16 = [callback2(closure_34, { tab: first3, setTab: tmp40[1], updateQuery: callback1, searchRef: ref, sharedState }), , ];
   let tmp53Result = 0 === str.trim().length && first3 === tmp39.SEARCH;
   if (tmp53Result) {
     obj1 = { selectedGuildId: null, setSelectedGuild: null, unreadPrivateChannelIds: null, unreadGuilds: null, guildHistory: null, visible: null };
@@ -800,7 +777,7 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
     obj2[1] = tmp53Result;
     items16[2] = tmp53(tmp52, obj2);
     obj[1] = items16;
-    return closure_28(tmp52, obj);
+    return closure_27(tmp52, obj);
   }
   if (first3 === constants.SEARCH) {
     obj4 = { selectedGuildId: null, unreads: null, history: null, expandedHistory: null, toggleExpandedHistory: null };

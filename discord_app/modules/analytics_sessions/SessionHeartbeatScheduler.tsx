@@ -1,6 +1,6 @@
-// === Module 6820: trackHeartbeat ===
+// === Module 5726: trackHeartbeat ===
 
-// Module 6820 (trackHeartbeat)
+// Module 5726 (trackHeartbeat)
 import closure_3 from "ME";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import importDefaultResult from "fetchFingerprint";
@@ -93,7 +93,7 @@ function _trackHeartbeat() {
             obj1.addBreadcrumb(obj3);
             let obj5 = { client_heartbeat_initialization_timestamp: null, client_heartbeat_version: 29 };
             obj5[0] = lib.createdAtTimestamp;
-            obj5 = num2(6826);
+            obj5 = num2(5732);
             const merged = Object.assign(obj5.getClientHeartbeatPiggybackProperties());
             const idleSince = store.getIdleSince();
             num2 = idleSince;
@@ -111,7 +111,7 @@ function _trackHeartbeat() {
             track(constants.CLIENT_HEARTBEAT, c4);
             const _performance = obj8.performance;
             let closure_19 = _performance.now();
-            obj8 = num2(6823);
+            obj8 = num2(5729);
             num2 = obj8.drainClickstream();
             const tmp40 = lib(698);
           } else {
@@ -226,9 +226,9 @@ function validateClientSession(version) {
   let tmp = null;
   if (null != version) {
     let tmp4 = version;
-    if (version.version !== require(6828) /* result */.CLIENT_SESSION_STORAGE_VERSION) {
+    if (version.version !== require(5734) /* result */.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      tmp3.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(6828).CLIENT_SESSION_STORAGE_VERSION);
+      tmp3.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(5734).CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
@@ -358,7 +358,7 @@ function handleWindowFocus(focused) {
   }
 }
 function handleLocationChange() {
-  const isActiveUserRouteResult = require(6822) /* isActiveUserRoute */.isActiveUserRoute();
+  const isActiveUserRouteResult = require(5728) /* isActiveUserRoute */.isActiveUserRoute();
   if (isActiveUserRoute !== isActiveUserRouteResult) {
     isActiveUserRoute = isActiveUserRouteResult;
     scheduleHeartbeatTracking();
@@ -372,9 +372,9 @@ function handleAppStateUpdate(state) {
 }
 function handleFluxInitialized() {
   const state = importDefaultResult1.getState();
-  let closure_22 = require(6821) /* isForegrounded */.isForegrounded();
-  const obj = require(6821) /* isForegrounded */;
-  let closure_23 = require(6822) /* isActiveUserRoute */.isActiveUserRoute();
+  let closure_22 = require(5727) /* isForegrounded */.isForegrounded();
+  const obj = require(5727) /* isForegrounded */;
+  let closure_23 = require(5728) /* isActiveUserRoute */.isActiveUserRoute();
   handleAuthenticationChange();
 }
 function getSession() {
@@ -605,7 +605,7 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
   const obj3 = importDefault(709);
   const subscription2 = importDefault(709).subscribe("CONNECTION_OPEN", forceDispatchSessionIdUpdate);
   const obj4 = importDefault(709);
-  let result = require(6822) /* isActiveUserRoute */.subscribeToLocationChanges(handleLocationChange);
+  let result = require(5728) /* isActiveUserRoute */.subscribeToLocationChanges(handleLocationChange);
   scheduleHeartbeatTracking();
   if (null == obj) {
     obj = { id: null, type: "interval" };
@@ -613,8 +613,8 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
     obj[0] = setInterval(() => {
       let result = null != closure_24;
       if (result) {
-        result = callback(6827).shouldLogClientHeartbeatSkipped();
-        const obj = callback(6827);
+        result = callback(5733).shouldLogClientHeartbeatSkipped();
+        const obj = callback(5733);
       }
       if (result) {
         const _performance = performance;
@@ -636,9 +636,9 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     let tmp7 = null;
     if (null != value) {
       let tmp8 = value;
-      if (value.version !== tmp2(6828).CLIENT_SESSION_STORAGE_VERSION) {
+      if (value.version !== tmp2(5734).CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        tmp3.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(6828).CLIENT_SESSION_STORAGE_VERSION);
+        tmp3.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(5734).CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;
@@ -653,7 +653,7 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     if (!obj.isSessionExpired(session)) {
       tmp12 = session;
     }
-    obj = require(6828) /* result */;
+    obj = require(5734) /* result */;
   }
   return tmp12;
 };

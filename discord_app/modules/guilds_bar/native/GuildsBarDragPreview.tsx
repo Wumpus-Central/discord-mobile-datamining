@@ -1,6 +1,6 @@
-// === Module 15326: PreviewItem ===
+// === Module 15040: PreviewItem ===
 
-// Module 15326 (PreviewItem)
+// Module 15040 (PreviewItem)
 import importAllResult from "noop";
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import withEqualityFn from "withEqualityFn";
@@ -24,9 +24,8 @@ function PreviewItem(dragRegion) {
   let derivedValue;
   let derivedValue1;
   let tmp = scrollPosition();
-  let obj = dragRegion(dropComplete[5]);
-  const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  let obj1 = dragRegion(dropComplete[6]);
+  const MobileHomeDrawerExperiment = dragRegion(dropComplete[5]).MobileHomeDrawerExperiment;
+  let obj = dragRegion(dropComplete[6]);
   let fn = function x() {
     const value = scrollPosition.get();
     let num = 0;
@@ -38,7 +37,8 @@ function PreviewItem(dragRegion) {
   fn.__closure = { scrollPosition, dragRegion, listInsets };
   fn.__workletHash = 17436881889698;
   fn.__initData = dropPosition;
-  derivedValue = obj1.useDerivedValue(fn);
+  derivedValue = obj.useDerivedValue(fn);
+  let obj1 = dragRegion(dropComplete[6]);
   const fn2 = function y() {
     const value = scrollPosition.get();
     const sum = value + (windowSize - listInsets.get().end);
@@ -55,10 +55,7 @@ function PreviewItem(dragRegion) {
   fn2.__closure = { scrollPosition, windowSize, listInsets, dragRegion, draggedHeight };
   fn2.__workletHash = 4371355784;
   fn2.__initData = derivedValue;
-  derivedValue1 = dragRegion(dropComplete[6]).useDerivedValue(fn2);
-  const obj3 = dragRegion(dropComplete[6]);
-  const tmp2 = dragRegion;
-  const tmp3 = dropComplete;
+  derivedValue1 = obj1.useDerivedValue(fn2);
   class G {
     constructor() {
       tmp = dropPosition;
@@ -127,7 +124,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "padding", expanded: false, children: false };
+        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "borderRadius", expanded: true, children: true };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -137,8 +134,10 @@ function PreviewItem(dragRegion) {
   }, items);
   const items1 = [tmp.dragPreview, , ];
   let dragPreviewHome = null;
-  const obj4 = dragRegion(dropComplete[6]);
-  if (isHomeDrawerEnabled) {
+  const obj3 = dragRegion(dropComplete[6]);
+  const tmp2 = dragRegion;
+  const tmp3 = dropComplete;
+  if (MobileHomeDrawerExperiment.useConfig({ location: "drag-preview" }).enableHome) {
     dragPreviewHome = tmp.dragPreviewHome;
   }
   obj = { style: items1, nativeID: "guilds-bar-drag-preview", children: null };
@@ -168,21 +167,20 @@ function AnimatedItemPreview(cleanUp) {
   let sharedValue;
   let importAllResult;
   let tmp = callback2();
-  let obj = transitionState(sharedValue[5]);
-  const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  let obj1 = transitionState(sharedValue[6]);
+  const MobileHomeDrawerExperiment = transitionState(sharedValue[5]).MobileHomeDrawerExperiment;
+  let enableHome = MobileHomeDrawerExperiment.useConfig({ location: "drag-preview" }).enableHome;
+  let obj = transitionState(sharedValue[6]);
   let num = 1;
   if (transitionState === transitionState(sharedValue[9]).TransitionStates.ENTERED) {
     num = 0;
   }
-  sharedValue = obj1.useSharedValue(num);
-  importAllResult = tmp7;
-  let tmp8 = isHomeDrawerEnabled;
-  if (isHomeDrawerEnabled) {
-    tmp8 = !tmp7;
+  sharedValue = obj.useSharedValue(num);
+  importAllResult = tmp6;
+  if (enableHome) {
+    enableHome = !tmp6;
   }
-  if (tmp8) {
-    tmp8 = transitionState !== tmp2(tmp3[9]).TransitionStates.YEETED;
+  if (enableHome) {
+    enableHome = transitionState !== tmp2(tmp3[9]).TransitionStates.YEETED;
   }
   let fn = function w() {
     let translateX;
@@ -258,7 +256,7 @@ function AnimatedItemPreview(cleanUp) {
     }
     obj = { translateX: 0, translateY: 0 };
   };
-  obj = { isFolder: tmp7, visible: sharedValue, withSpring: tmp2(tmp3[7]).withSpring, DRAG_SPRING_PHYSICS: closure_8, transitionState, TransitionStates: tmp2(tmp3[9]).TransitionStates, runOnJS: tmp2(tmp3[6]).runOnJS, cleanUp };
+  obj = { isFolder: tmp6, visible: sharedValue, withSpring: tmp2(tmp3[7]).withSpring, DRAG_SPRING_PHYSICS: closure_8, transitionState, TransitionStates: tmp2(tmp3[9]).TransitionStates, runOnJS: tmp2(tmp3[6]).runOnJS, cleanUp };
   fn.__closure = obj;
   fn.__workletHash = 13465198693221;
   fn.__initData = closure_16;
@@ -273,25 +271,25 @@ function AnimatedItemPreview(cleanUp) {
   let items = [tmp.animatedPreviewStyle, , ];
   let prop = null;
   const tmp2Result = transitionState(sharedValue[6]);
-  let tmp6 = GuildsNodeType;
-  if (tmp8) {
+  const tmp5 = GuildsNodeType;
+  if (enableHome) {
     prop = tmp.animatedPreviewStyleHome;
   }
   obj = { style: items, children: null };
   items[1] = prop;
   items[2] = animatedStyle;
-  if (node.type === tmp6.FOLDER) {
-    obj1 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
-    ({ id: obj7[0], expanded: obj7[1], color: obj7[2], name: obj7[3], children: obj7[4] } = node);
-    obj1[6] = !tmp8;
-    let tmp11Result = tmp11(tmp12(tmp3[10]), obj1);
+  if (node.type === tmp5.FOLDER) {
+    let obj1 = { id: null, expanded: null, color: null, name: null, childNodes: null, isDragPreview: true, hideExpandedChildren: null };
+    ({ id: obj6[0], expanded: obj6[1], color: obj6[2], name: obj6[3], children: obj6[4] } = node);
+    obj1[6] = !enableHome;
+    let tmp9Result = tmp9(tmp10(tmp3[10]), obj1);
   } else {
     let obj2 = { guildId: null, isDragPreview: true, hideExpandedChildren: null };
     obj2[0] = node.id;
-    obj2[2] = !tmp8;
-    tmp11Result = tmp11(tmp12(tmp3[11]), obj2);
+    obj2[2] = !enableHome;
+    tmp9Result = tmp9(tmp10(tmp3[11]), obj2);
   }
-  obj[1] = tmp11Result;
+  obj[1] = tmp9Result;
   return jsx(cleanUp(sharedValue[8]), { style: items, children: null });
 }
 let c3 = importAllResult;
@@ -337,7 +335,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "text-sm/semibold", scrollPosition: "text-default", dragRegion: 2, windowSize: null, dropComplete: "eyebrow", listInsets: null };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "money_with_wings", scrollPosition: "dollar", dragRegion: "penge", windowSize: "pengepose", dropComplete: "yen", listInsets: "yen_banknote" };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;
@@ -356,7 +354,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, require(3868) /* isIterable */.shallow);
+  }, require(3806) /* isIterable */.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

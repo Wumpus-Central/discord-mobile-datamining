@@ -1,6 +1,6 @@
-// === Module 15541: useOtherGuildJoinRequestsForUser ===
+// === Module 15474: useOtherGuildJoinRequestsForUser ===
 
-// Module 15541 (useOtherGuildJoinRequestsForUser)
+// Module 15474 (useOtherGuildJoinRequestsForUser)
 import noop from "noop";
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 

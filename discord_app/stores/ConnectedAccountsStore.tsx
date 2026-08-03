@@ -1,6 +1,6 @@
-// === Module 4935: set ===
+// === Module 4873: set ===
 
-// Module 4935 (set)
+// Module 4873 (set)
 import toString from "toString";
 import { Store } from "initialize";
 import set from "getPlatformUserUrl";
@@ -109,7 +109,7 @@ const connectedAccountsStore = new ConnectedAccountsStore(require("dispatcher"),
         let c5 = false;
       }
     }
-    const response = importDefault(5061).fetch();
+    const response = importDefault(4999).fetch();
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function handleJoining(integrationId) {
     closure_8[integrationId.integrationId] = integrationId.joining;
@@ -151,7 +151,7 @@ const connectedAccountsStore = new ConnectedAccountsStore(require("dispatcher"),
     let provider;
     let state;
     ({ code, state, openid_params, provider } = arg0);
-    importDefault(5061).callback(provider, { code, state, openid_params });
+    importDefault(4999).callback(provider, { code, state, openid_params });
   }
 });
 const result = set.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");

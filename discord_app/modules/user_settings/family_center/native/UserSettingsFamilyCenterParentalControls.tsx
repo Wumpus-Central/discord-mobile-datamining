@@ -1,6 +1,6 @@
-// === Module 14046: FamilyCenterParentalControlsSettings ===
+// === Module 13979: FamilyCenterParentalControlsSettings ===
 
-// Module 14046 (FamilyCenterParentalControlsSettings)
+// Module 13979 (FamilyCenterParentalControlsSettings)
 import _slicedToArray from "_slicedToArray";
 import FamilyCenterParentalControlsDataAndPrivacy from "FamilyCenterParentalControlsDataAndPrivacy";
 import get_ActivityIndicator from "GenericHeaderTitle";
@@ -106,7 +106,7 @@ export default function FamilyCenterParentalControlsSettings() {
         }
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "ct" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "HermesInternal" });
   }, items1);
   if (isFamilyCenterV3Enabled) {
     isFamilyCenterV3Enabled = selectedSubPage === items2.SCREEN_TIME_CONTROLS;

@@ -1,6 +1,6 @@
-// === Module 14363: toggle ===
+// === Module 14296: toggle ===
 
-// Module 14363 (toggle)
+// Module 14296 (toggle)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
 
@@ -17,7 +17,7 @@ createToggle = {
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
     mode = mode.getMode();
-    let obj = importDefault(9024);
+    let obj = importDefault(8847);
     obj = { vadUseKrisp };
     obj.setMode(mode, obj);
   },

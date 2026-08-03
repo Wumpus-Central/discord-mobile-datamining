@@ -1,6 +1,6 @@
-// === Module 8130: createConnectionsRoleTag ===
+// === Module 8012: createConnectionsRoleTag ===
 
-// Module 8130 (createConnectionsRoleTag)
+// Module 8012 (createConnectionsRoleTag)
 import { processColor } from "get ActivityIndicator";
 import { DEFAULT_ROLE_COLOR_HEX } from "ME";
 

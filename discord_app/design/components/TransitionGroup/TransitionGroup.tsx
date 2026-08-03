@@ -1,6 +1,6 @@
-// === Module 4600: wrapChildrenDefault ===
+// === Module 4538: wrapChildrenDefault ===
 
-// Module 4600 (wrapChildrenDefault)
+// Module 4538 (wrapChildrenDefault)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -15,11 +15,11 @@ class TransitionGroup {
     getItemKey = global.getItemKey;
     wrapChildren = global.wrapChildren;
     if (wrapChildren === undefined) {
-      wrapChildren = f75096;
+      wrapChildren = f74914;
     }
     lazyCleanUpDelay = global.lazyCleanUpDelay;
     c4 = undefined;
-    f75096 = undefined;
+    f74914 = undefined;
     useRef = undefined;
     useMemo = undefined;
     c4 = require("module_4294967295");
@@ -29,7 +29,7 @@ class TransitionGroup {
         clearTimeout(tmp.current);
       }
     }, []);
-    f75096 = items(renderItem.useState(c4), 2)[1];
+    f74914 = items(renderItem.useState(c4), 2)[1];
     useRef = renderItem.useRef(null);
     items = [, , , ];
     items[0] = items;

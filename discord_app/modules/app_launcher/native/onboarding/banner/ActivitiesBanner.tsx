@@ -1,6 +1,6 @@
-// === Module 11348: ActivitiesBanner ===
+// === Module 11237: ActivitiesBanner ===
 
-// Module 11348 (ActivitiesBanner)
+// Module 11237 (ActivitiesBanner)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { jsx } from "jsxProd";
@@ -11,7 +11,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 export default function ActivitiesBanner(context) {
   let tmp4;
   let tmp5;
-  let obj = require(11337) /* useActivityApplications */;
+  let obj = require(11226) /* useActivityApplications */;
   obj = { guildId: context.context.channel.guild_id, fetchesShelf: false };
   [tmp4, tmp5] = callback(obj.useActivityApplications(obj), 2);
   let tmp6Result = null;
@@ -24,8 +24,8 @@ export default function ActivitiesBanner(context) {
       const obj1 = { activityName: null };
       obj1[0] = tmp4.name;
       obj[1] = intl.formatToPlainString(tmp(1236).t.zHMWuV, obj1);
-      tmp6Result = jsx(importDefault(11360), { image: null, text: null });
-      const tmp7Result = importDefault(11360);
+      tmp6Result = jsx(importDefault(11249), { image: null, text: null });
+      const tmp7Result = importDefault(11249);
     }
   }
   return tmp6Result;

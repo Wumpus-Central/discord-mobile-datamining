@@ -1,6 +1,6 @@
-// === Module 14510: radio ===
+// === Module 14443: radio ===
 
-// Module 14510 (radio)
+// Module 14443 (radio)
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH";
 import createToggle from "createToggle";
@@ -17,9 +17,9 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
   },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
-    let obj = require(14509) /* UserSettingsText */;
+    let obj = require(14442) /* UserSettingsText */;
     obj = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
-    const ViewImageDescriptions = require(3928) /* explicitContentFromProto */.ViewImageDescriptions;
+    const ViewImageDescriptions = require(3866) /* explicitContentFromProto */.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();
     ({ lowQualityImageMode: obj2[2], dataSavingMode: obj2[3] } = CHANNEL_SIDEBAR_WIDTH);
     const result = obj.setVideoUploadQuality(obj);

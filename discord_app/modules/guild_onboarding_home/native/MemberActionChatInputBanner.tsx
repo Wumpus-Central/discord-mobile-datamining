@@ -1,6 +1,6 @@
-// === Module 11564: ActionChannelInfo ===
+// === Module 11454: ActionChannelInfo ===
 
-// Module 11564 (ActionChannelInfo)
+// Module 11454 (ActionChannelInfo)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getAvatarURL";
 import { View } from "registerAsset";
@@ -37,7 +37,7 @@ function ActionChannelInfo(action) {
     obj2[0] = tmp4;
     obj1[2] = intl.format(tmp(1236).t.MkzlDL, obj2);
   }
-  return closure_12(action(4251).Text, obj1);
+  return closure_12(action(4189).Text, obj1);
 }
 function ChannelActionEmoji(emoji) {
   emoji = emoji.emoji;
@@ -46,7 +46,7 @@ function ChannelActionEmoji(emoji) {
   let obj = { style: tmp.emojiPlaceholder, children: null };
   obj = { size: null, source: null };
   obj[0] = id(1297).Icon.Sizes.REFRESH_SMALL_16;
-  obj[1] = importDefault(11125);
+  obj[1] = importDefault(11004);
   obj[1] = callback(id(1297).Icon, obj);
   const tmp6 = callback(View, obj);
   id = undefined;
@@ -69,7 +69,7 @@ function ChannelActionEmoji(emoji) {
     obj = { style: null, source: null, resizeMode: "contain" };
     obj[0] = tmp.emoji;
     const obj1 = { uri: null };
-    let tmp5Result = tmp5(5207);
+    let tmp5Result = tmp5(5145);
     tmp5Result = tmp5(1416);
     const obj2 = { id: null, animated: null, size: null };
     ({ id: obj10[0], animated: obj10[1] } = stateFromStores);
@@ -80,15 +80,15 @@ function ChannelActionEmoji(emoji) {
   } else {
     tmp2Result = tmp6;
     if (null != name) {
-      const tmp5Result1 = tmp5(3896);
+      const tmp5Result1 = tmp5(3834);
       tmp2Result = tmp6;
       if (null != tmp5Result1.getByName(tmp5Result2.convertSurrogateToName(name, false))) {
         const obj3 = { style: null, variant: "heading-lg/normal", children: null };
         obj3[0] = tmp.textEmoji;
         obj3[2] = name;
-        tmp2Result = tmp2(tmp3(4251).Text, obj3);
+        tmp2Result = tmp2(tmp3(4189).Text, obj3);
       }
-      tmp5Result2 = tmp5(3896);
+      tmp5Result2 = tmp5(3834);
     }
   }
   return tmp2Result;
@@ -373,7 +373,7 @@ let closure_18 = { code: "function MemberActionChatInputBannerTsx1(){const{useRe
 let closure_19 = { code: "function MemberActionChatInputBannerTsx2(){const{useReducedMotion,nextHeight,withDelay,isViewAction,completed,withTiming,DECELERATED_EASING}=this.__closure;if(useReducedMotion){return{height:nextHeight.get()};}return{height:withDelay(!isViewAction&&completed?1200:0,withTiming(nextHeight.get(),{duration:400,easing:DECELERATED_EASING}))};}" };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  let obj = channel(5724);
+  let obj = channel(5662);
   const canSeeOnboardingHome = obj.useCanSeeOnboardingHome(channel.guild_id);
   const items = [trackCommunicationDisabled];
   const stateFromStores = channel(647).useStateFromStores(items, () => {
@@ -404,7 +404,7 @@ const memoResult1 = importAllResult.memo((channel) => {
   let channelAction;
   let completed;
   channel = channel.channel;
-  let obj = require(11565) /* useMemberActionsForChannel */;
+  let obj = require(11455) /* useMemberActionsForChannel */;
   const memberActionsForChannel = obj.useMemberActionsForChannel(channel.guild_id, channel);
   ({ channelAction, completed } = memberActionsForChannel);
   let channelId;
@@ -412,11 +412,11 @@ const memoResult1 = importAllResult.memo((channel) => {
     channelId = channelAction.channelId;
   }
   let actionType;
-  const nextMemberAction = require(11565) /* useMemberActionsForChannel */.useNextMemberAction(channel.guild_id, channelId);
+  const nextMemberAction = require(11455) /* useMemberActionsForChannel */.useNextMemberAction(channel.guild_id, channelId);
   if (channelAction != null) {
     actionType = channelAction.actionType;
   }
-  if (actionType !== require(11563) /* newMemberActionFromServer */.NewMemberActionTypes.VIEW) {
+  if (actionType !== require(11453) /* newMemberActionFromServer */.NewMemberActionTypes.VIEW) {
     obj = { channel: null };
     obj[0] = channel;
     let tmp7 = callback(closure_21, obj);

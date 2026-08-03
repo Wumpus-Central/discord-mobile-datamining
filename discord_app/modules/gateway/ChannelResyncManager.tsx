@@ -1,6 +1,6 @@
-// === Module 16235: handleGuildCreate ===
+// === Module 16171: handleGuildCreate ===
 
-// Module 16235 (handleGuildCreate)
+// Module 16171 (handleGuildCreate)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -528,7 +528,7 @@ function _getResyncGuilds() {
 }
 function scheduleIntegrityCheck(guild_id) {
   const _require = guild_id;
-  let obj = _require(12811);
+  let obj = _require(12748);
   if (obj.isChannelMetadataIntegrityCheckEnabled("scheduleIntegrityCheck")) {
     if (null != dependencyMap3[guild_id]) {
       let _clearTimeout = clearTimeout;

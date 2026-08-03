@@ -1,6 +1,6 @@
-// === Module 15625: useFileOrLinkImageDimensions ===
+// === Module 15558: useFileOrLinkImageDimensions ===
 
-// Module 15625 (useFileOrLinkImageDimensions)
+// Module 15558 (useFileOrLinkImageDimensions)
 import noop from "noop";
 import MessageEmbedTypes from "MessageEmbedTypes";
 

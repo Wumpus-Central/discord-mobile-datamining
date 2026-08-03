@@ -1,15 +1,15 @@
-// === Module 15923: useScreenNameSharedValue ===
+// === Module 15859: useScreenNameSharedValue ===
 
-// Module 15923 (useScreenNameSharedValue)
+// Module 15859 (useScreenNameSharedValue)
 import noop from "noop";
 
 const require = arg1;
 const unknown = "unknown";
-let result = require("module_4116").fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
+let result = require("module_4054").fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
 
 export default function useScreenNameSharedValue() {
-  let rootNavigationRef = sharedValue(4107).getRootNavigationRef();
-  let obj = sharedValue(4107);
+  let rootNavigationRef = sharedValue(4045).getRootNavigationRef();
+  let obj = sharedValue(4045);
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
@@ -27,7 +27,7 @@ export default function useScreenNameSharedValue() {
   } else {
     tmp2 = unknown;
   }
-  sharedValue = sharedValue(4116).useSharedValue(tmp2);
+  sharedValue = sharedValue(4054).useSharedValue(tmp2);
   const items = [sharedValue];
   const effect = React.useEffect(() => {
     function handleStateChange() {

@@ -1,6 +1,6 @@
-// === Module 12115: getActivityHeader ===
+// === Module 12019: getActivityHeader ===
 
-// Module 12115 (getActivityHeader)
+// Module 12019 (getActivityHeader)
 import ME from "ME";
 
 let c3;
@@ -9,8 +9,8 @@ let c4;
 const result = require("PlatformTypes").fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");
 
 export default function getActivityHeader(session_id) {
-  const tmp3 = importDefault(12116)(session_id.session_id);
-  const tmp4 = importDefault(12117)(session_id);
+  const tmp3 = importDefault(12020)(session_id.session_id);
+  const tmp4 = importDefault(12021)(session_id);
   if (tmp4 != null) {
     const icon = tmp4.icon;
   }
@@ -160,7 +160,7 @@ export default function getActivityHeader(session_id) {
       obj11[2] = str;
       return obj11;
     }
-    tmp35 = tmp(12120)(tmp3, session_id);
+    tmp35 = tmp(12024)(tmp3, session_id);
   }
   if (session_id.type === constants.PLAYING) {
     const obj13 = { text: null, platformIcon: null, platformLabel: null };
@@ -252,7 +252,7 @@ export default function getActivityHeader(session_id) {
         }
       }
     }
-    obj29 = require(9262) /* unpackStageChannelParty */;
+    obj29 = require(9089) /* unpackStageChannelParty */;
   }
   return obj;
 };

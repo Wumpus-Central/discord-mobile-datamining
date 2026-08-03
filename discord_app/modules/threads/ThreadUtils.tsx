@@ -1,6 +1,6 @@
-// === Module 7148: getAccessibilityLabelFormatter ===
+// === Module 6096: getAccessibilityLabelFormatter ===
 
-// Module 7148 (getAccessibilityLabelFormatter)
+// Module 6096 (getAccessibilityLabelFormatter)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
@@ -23,17 +23,17 @@ let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("m
 
 export const getTimestampString = require("getTimestampString");
 export const getTimestampAccessibilityLabel = function getTimestampAccessibilityLabel(extractTimestampResult) {
-  return importDefault(6855)(extractTimestampResult, getAccessibilityLabelFormatter);
+  return importDefault(5760)(extractTimestampResult, getAccessibilityLabelFormatter);
 };
 export const trackThreadBrowserTab = function trackThreadBrowserTab() {
-  require(4450) /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
+  require(4388) /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
 };
 export const trackThreadBrowserOpened = function trackThreadBrowserOpened() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "Modal";
   }
-  require(4450) /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
+  require(4388) /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
 };
 export const trackActiveThreadsPopoutOpened = function trackActiveThreadsPopoutOpened() {
   importDefault(698).track(constants.OPEN_POPOUT, { type: "Active Threads Popout" });
@@ -41,12 +41,12 @@ export const trackActiveThreadsPopoutOpened = function trackActiveThreadsPopoutO
 export const trackThreadNotificationSettingsUpdated = function trackThreadNotificationSettingsUpdated(outer1_0, c1) {
   let can_send_message;
   let parent_channel_type;
-  let obj = require(7141) /* collectThreadMetadata */;
+  let obj = require(6089) /* collectThreadMetadata */;
   const result = obj.collectThreadMetadata(outer1_0);
   if (null != result) {
     const guildId = outer1_0.getGuildId();
     const parent_id = outer1_0.parent_id;
-    let tmpResult = tmp(5196);
+    let tmpResult = tmp(5134);
     const currentChannelSettings = tmpResult.getCurrentChannelSettings(guildId, parent_id);
     let num = storeThread.flags(outer1_0.id);
     if (num == null) {
@@ -74,7 +74,7 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     }
     let notificationAnalyticsString = getNotificationAnalyticsString(num);
     const isMutedResult = storeThread.isMuted(outer1_0.id);
-    tmpResult = tmp(5196);
+    tmpResult = tmp(5134);
     let result1 = tmpResult.muteConfigToTimestamp(obj7.getMuteConfig(outer1_0.id));
     ({ can_send_message, parent_channel_type } = result);
     obj = {};
@@ -99,8 +99,8 @@ export const trackThreadNotificationSettingsUpdated = function trackThreadNotifi
     obj.new_thread_is_muted = muted;
     obj.old_thread_muted_until = result1;
     if (null != c1.mute_config) {
-      result1 = tmp(5196).muteConfigToTimestamp(c1.mute_config);
-      const tmpResult1 = tmp(5196);
+      result1 = tmp(5134).muteConfigToTimestamp(c1.mute_config);
+      const tmpResult1 = tmp(5134);
     }
     obj.new_thread_muted_until = result1;
     importDefault(698).track(constants.THREAD_NOTIFICATION_SETTINGS_UPDATED, obj);
@@ -123,8 +123,8 @@ export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) 
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = importDefault(3837)(createTimestamp).valueOf();
-    const obj3 = importDefault(3837)(createTimestamp);
+    valueOfResult = importDefault(3775)(createTimestamp).valueOf();
+    const obj3 = importDefault(3775)(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

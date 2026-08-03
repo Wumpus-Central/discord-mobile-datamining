@@ -1,6 +1,6 @@
-// === Module 10152: useSortedOnboardingPrompts ===
+// === Module 10010: useSortedOnboardingPrompts ===
 
-// Module 10152 (useSortedOnboardingPrompts)
+// Module 10010 (useSortedOnboardingPrompts)
 import noop from "noop";
 import handleUpdate from "handleUpdate";
 

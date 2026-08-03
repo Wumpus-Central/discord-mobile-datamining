@@ -1,6 +1,6 @@
-// === Module 12497: isMostRecentDeadEndInvite ===
+// === Module 12399: isMostRecentDeadEndInvite ===
 
-// Module 12497 (isMostRecentDeadEndInvite)
+// Module 12399 (isMostRecentDeadEndInvite)
 import { ActivityActionTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/isMostRecentDeadEndInvite.tsx");

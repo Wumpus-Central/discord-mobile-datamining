@@ -1,6 +1,6 @@
-// === Module 14457: useEnableSwitchIconsSettingValue ===
+// === Module 14390: useEnableSwitchIconsSettingValue ===
 
-// Module 14457 (useEnableSwitchIconsSettingValue)
+// Module 14390 (useEnableSwitchIconsSettingValue)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
 

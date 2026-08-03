@@ -1,6 +1,6 @@
-// === Module 12552: useBuyNitroPlanSubLabelRenderer ===
+// === Module 12454: useBuyNitroPlanSubLabelRenderer ===
 
-// Module 12552 (useBuyNitroPlanSubLabelRenderer)
+// Module 12454 (useBuyNitroPlanSubLabelRenderer)
 import noop from "noop";
 import { PRICE_PLACEHOLDER } from "GuildFeatures";
 import { jsx } from "jsxProd";

@@ -1,6 +1,6 @@
-// === Module 10549: AnnouncementChannelLurkerBar ===
+// === Module 10410: AnnouncementChannelLurkerBar ===
 
-// Module 10549 (AnnouncementChannelLurkerBar)
+// Module 10410 (AnnouncementChannelLurkerBar)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

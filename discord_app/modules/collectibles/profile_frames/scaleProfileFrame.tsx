@@ -1,6 +1,6 @@
-// === Module 8431: scaleProfileFrame ===
+// === Module 8100: scaleProfileFrame ===
 
-// Module 8431 (scaleProfileFrame)
+// Module 8100 (scaleProfileFrame)
 let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");
 
 export default function scaleProfileFrame(innerWidth) {

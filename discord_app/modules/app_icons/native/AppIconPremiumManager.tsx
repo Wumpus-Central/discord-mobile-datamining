@@ -1,6 +1,6 @@
-// === Module 16219: handleAppStateUpdate ===
+// === Module 16155: handleAppStateUpdate ===
 
-// Module 16219 (handleAppStateUpdate)
+// Module 16155 (handleAppStateUpdate)
 import FreemiumAppIconIds from "FreemiumAppIconIds";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { getIconById } from "items";
@@ -141,9 +141,9 @@ prototype["validateAndResetIfNeeded"] = function validateAndResetIfNeeded() {
 prototype["resetIcon"] = function resetIcon(arg0, c0, ORPHANED) {
   const _require = arg0;
   let closure_1 = ORPHANED;
-  let obj = _require(7570);
-  const setAppIconResult = _require(7570).setAppIcon(DEFAULT, c0);
-  _require(7570).setAppIcon(DEFAULT, c0).then(() => {
+  let obj = _require(6585);
+  const setAppIconResult = _require(6585).setAppIcon(DEFAULT, c0);
+  _require(6585).setAppIcon(DEFAULT, c0).then(() => {
     let obj = ORPHANED(outer1_2[10]);
     obj = { previous_icon_id: closure_0, reset_to_icon_id: outer1_8, reset_reason: ORPHANED };
     obj.track(outer1_6.APP_ICON_AUTO_RESET, obj);

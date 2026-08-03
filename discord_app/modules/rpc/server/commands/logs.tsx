@@ -1,6 +1,6 @@
-// === Module 13627: ? ===
+// === Module 13564: ? ===
 
-// Module 13627
+// Module 13564
 import ME from "ME";
 
 let RPCCommands;
@@ -9,7 +9,7 @@ let RPC_APPLICATION_LOGGING_CATEGORY;
 let c3 = new require("recurseReplaceContentTree")(RPC_APPLICATION_LOGGING_CATEGORY);
 let obj = {
   validation(string) {
-    let obj = importDefault(10696)(string);
+    let obj = importDefault(10643)(string);
     obj = { level: null, message: null };
     const requiredResult = obj.required();
     const stringResult = string.string();
@@ -24,7 +24,7 @@ let obj = {
     let socket;
     ({ socket, args } = arg0);
     const level = args.level;
-    const result = require(10698) /* recurseReplaceContentTree */.validatePostMessageTransport(socket.transport);
+    const result = require(10645) /* recurseReplaceContentTree */.validatePostMessageTransport(socket.transport);
     const combined = "" + socket.application.id + " - " + args.message;
     if ("log" === level) {
       tmp3.log(combined);

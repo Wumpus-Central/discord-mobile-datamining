@@ -1,6 +1,6 @@
-// === Module 9414: PhoneVerificationModal ===
+// === Module 9241: PhoneVerificationModal ===
 
-// Module 9414 (PhoneVerificationModal)
+// Module 9241 (PhoneVerificationModal)
 import HeaderBackImage from "HeaderBackImage";
 import "noop";
 import { VerificationModalScenes } from "ME";
@@ -15,9 +15,9 @@ export default function PhoneVerificationModal(onClose) {
   const _require = onClose;
   obj = {};
   obj = { headerTitle: null, headerLeft: null, render: null };
-  obj[0] = _require(5209).getHeaderNoTitle();
-  const obj4 = _require(5209);
-  obj[1] = _require(5209).getHeaderCloseButton(onClose.onClose);
+  obj[0] = _require(5147).getHeaderNoTitle();
+  const obj4 = _require(5147);
+  obj[1] = _require(5147).getHeaderCloseButton(onClose.onClose);
   obj[2] = function render(reason) {
     const onClose = reason;
     let closure_1 = arg1;
@@ -50,8 +50,8 @@ export default function PhoneVerificationModal(onClose) {
   };
   obj[VerificationModalScenes.ADD_PHONE] = obj;
   let obj1 = { headerTitle: null, impressionName: null, render: null };
-  const obj5 = _require(5209);
-  obj1[0] = _require(5209).getHeaderNoTitle();
+  const obj5 = _require(5147);
+  obj1[0] = _require(5147).getHeaderNoTitle();
   obj1[1] = _require(503).ImpressionNames.USER_VERIFY_PHONE;
   obj1[2] = function render(arg0, arg1) {
     let closure_0 = arg1;
@@ -154,8 +154,8 @@ export default function PhoneVerificationModal(onClose) {
   };
   obj[VerificationModalScenes.VERIFY_PHONE] = obj1;
   let obj2 = { headerTitle: null, render: null };
-  const obj7 = _require(5209);
-  obj2[0] = _require(5209).getHeaderNoTitle();
+  const obj7 = _require(5147);
+  obj2[0] = _require(5147).getHeaderNoTitle();
   obj2[1] = function render(arg0) {
     const merged = Object.assign(arg0);
     return callback2(callback(table[11]), {});
@@ -165,5 +165,5 @@ export default function PhoneVerificationModal(onClose) {
   obj[1] = VerificationModalScenes.ADD_PHONE;
   const intl = _require(1236).intl;
   obj[2] = intl.string(_require(1236).t["13/7kX"]);
-  return jsx(_require(5636).Navigator, { headerTitle: null, headerLeft: null, render: null });
+  return jsx(_require(5574).Navigator, { headerTitle: null, headerLeft: null, render: null });
 };

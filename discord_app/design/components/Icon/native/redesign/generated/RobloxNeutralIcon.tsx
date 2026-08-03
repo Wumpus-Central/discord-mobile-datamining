@@ -1,6 +1,6 @@
-// === Module 8798: RobloxNeutralIcon ===
+// === Module 8509: RobloxNeutralIcon ===
 
-// Module 8798 (RobloxNeutralIcon)
+// Module 8509 (RobloxNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,9 +14,9 @@ export const RobloxNeutralIcon = function RobloxNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(8799) /* registerAsset */;
+  obj[0] = require(8510) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3896) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

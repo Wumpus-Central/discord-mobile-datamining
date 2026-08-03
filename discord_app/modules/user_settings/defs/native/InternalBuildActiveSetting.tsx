@@ -1,6 +1,6 @@
-// === Module 14627: ? ===
+// === Module 14560: ? ===
 
-// Module 14627
+// Module 14560
 import checkForNewerBuild from "checkForNewerBuild";
 import createToggle from "createToggle";
 
@@ -15,8 +15,8 @@ createToggle = {
     return "Build installed from builds.discord.tools";
   },
   usePredicate: function useHasCheckNativeUpdateSetting() {
-    const obj = require(13959) /* useStaffOrDeveloperSettingPredicate */;
-    return hasUpdatesConfigured.hasUpdatesConfigured && require(13959) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = require(13892) /* useStaffOrDeveloperSettingPredicate */;
+    return hasUpdatesConfigured.hasUpdatesConfigured && require(13892) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
   }
 };
 createToggle = createToggle.createStatic(createToggle);

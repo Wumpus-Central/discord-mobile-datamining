@@ -1,6 +1,6 @@
-// === Module 15587: ChannelContentComponent ===
+// === Module 15520: ChannelContentComponent ===
 
-// Module 15587 (ChannelContentComponent)
+// Module 15520 (ChannelContentComponent)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";
@@ -31,12 +31,12 @@ function ChannelContentComponent(arg0) {
   ({ subtitle, resolvedUnreadSetting, locked, lastMessageTimestampString, channel, layout, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
   ({ name, unread, muted, connected, needSubscriptionToAccess } = arg0);
   const tmp = createCacheKey();
-  let obj = require(10438) /* getLayoutStyles */;
+  let obj = require(10299) /* getLayoutStyles */;
   let tmp10Result = null != channel;
   const layoutStyles = obj.getLayoutStyles(layout);
   if (tmp10Result) {
     if (!locked) {
-      locked = importDefault(4746)(channel);
+      locked = importDefault(4684)(channel);
     }
     tmp10Result = locked;
   }
@@ -70,7 +70,7 @@ function ChannelContentComponent(arg0) {
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
   obj3[5] = layout;
-  const items1 = [closure_6(importDefault(15588), obj3), ];
+  const items1 = [closure_6(importDefault(15521), obj3), ];
   let tmp12Result = tmp10Result;
   if (!tmp10Result) {
     tmp12Result = isNSFWResult;
@@ -92,19 +92,19 @@ function ChannelContentComponent(arg0) {
     if (tmp10Result) {
       const obj6 = { size: "xxs", color: "icon-muted", style: null };
       obj6[2] = tmp.channelTraitIcon;
-      tmp10Result = tmp10(tmp2(4775).LockIcon, obj6);
+      tmp10Result = tmp10(tmp2(4713).LockIcon, obj6);
     }
     const items3 = [tmp10Result, , ];
     if (isNSFWResult) {
       const obj7 = { size: "xxs", color: "icon-muted", style: null };
       obj7[2] = tmp.channelTraitIcon;
-      isNSFWResult = tmp10(tmp2(7760).WarningIcon, obj7);
+      isNSFWResult = tmp10(tmp2(7634).WarningIcon, obj7);
     }
     items3[1] = isNSFWResult;
     if (isSubscriptionGated) {
       const obj8 = { locked: null, isInMainTabsExperiment: true };
       obj8[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp10(importDefault(15106), obj8);
+      isSubscriptionGated = tmp10(importDefault(15126), obj8);
     }
     items3[2] = isSubscriptionGated;
     obj4[1] = items3;
@@ -142,7 +142,7 @@ function ChannelContentComponent(arg0) {
     const obj13 = { variant: "text-xs/medium", color: "text-muted", style: null, maxFontSizeMultiplier: 1.75, children: null };
     obj13[2] = { marginLeft: "auto" };
     obj13[4] = lastMessageTimestampString;
-    tmp10Result1 = tmp10(tmp2(4251).Text, obj13);
+    tmp10Result1 = tmp10(tmp2(4189).Text, obj13);
   }
   const items7 = [tmp10Result1, , ];
   const items8 = [{ alignItems: "center", paddingLeft: 4 }, ];

@@ -1,6 +1,6 @@
-// === Module 11183: AutomodEventType ===
+// === Module 11067: AutomodEventType ===
 
-// Module 11183 (AutomodEventType)
+// Module 11067 (AutomodEventType)
 const items = [require("AutomodTriggerType").AutomodTriggerType.USER_PROFILE, require("AutomodTriggerType").AutomodTriggerType.SERVER_POLICY, require("AutomodTriggerType").AutomodTriggerType.MENTION_SPAM, require("AutomodTriggerType").AutomodTriggerType.ML_SPAM, require("AutomodTriggerType").AutomodTriggerType.DEFAULT_KEYWORD_LIST, require("AutomodTriggerType").AutomodTriggerType.KEYWORD];
 const result = require("AutomodEventType").fileFinishedImporting("modules/guild_automod/Constants.tsx");
 

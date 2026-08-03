@@ -1,6 +1,6 @@
-// === Module 15574: MediaGridPlaceholderItem ===
+// === Module 15507: MediaGridPlaceholderItem ===
 
-// Module 15574 (MediaGridPlaceholderItem)
+// Module 15507 (MediaGridPlaceholderItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import MessageEmbedTypes from "MessageEmbedTypes";
@@ -27,12 +27,12 @@ export default function MediaGridPlaceholderItem(arg0) {
   let containerStyle;
   let size;
   ({ size, containerStyle } = arg0);
-  let obj = require(15573) /* useFullscreenPlaceholderCount */;
+  let obj = require(15506) /* useFullscreenPlaceholderCount */;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   obj = { style: items, pointerEvents: "none", children: null };
   items = [containerStyle, placeholderAnimatedStyle];
-  obj[2] = callback(importDefault(15575), { height: size, width: size, style: containerStyle });
-  return callback(importDefault(4116).View, obj);
+  obj[2] = callback(importDefault(15508), { height: size, width: size, style: containerStyle });
+  return callback(importDefault(4054).View, obj);
 };
 export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(visible) {
   let numRows;
@@ -47,7 +47,7 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
   memo = memo.useMemo(() => outer1_0(_undefined[9]).range(0, numRows * outer1_5), items);
   const items1 = [memo];
   memo1 = memo.useMemo(() => outer1_0(_undefined[9]).chunk(memo, outer1_5), items1);
-  let obj = require(15573) /* useFullscreenPlaceholderCount */;
+  let obj = require(15506) /* useFullscreenPlaceholderCount */;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(visible.visible);
   obj = { style: items2, pointerEvents: "none", children: null };
   items2 = [, , ];
@@ -58,13 +58,13 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
   const obj2 = { style: tmp.sectionText, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj2[5] = intl.string(require(1236) /* getSystemLocale */.t.LBYpDH);
-  obj1[1] = callback(require(4251) /* Text */.Text, obj2);
+  obj1[1] = callback(require(4189) /* Text */.Text, obj2);
   const items3 = [callback(memo1, obj1), ];
   const obj3 = { style: tmp.sectionItem, children: null };
   const obj4 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.sectionText, children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj4[3] = intl2.string(require(1236) /* getSystemLocale */.t.LFTAUp);
-  obj3[1] = callback(require(4251) /* Text */.Text, obj4);
+  obj3[1] = callback(require(4189) /* Text */.Text, obj4);
   items3[1] = callback(memo1, obj3);
   obj[1] = items3;
   const items4 = [
@@ -76,9 +76,9 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
           style: _undefined.row,
           children: arr.map((arg0, arg1) => {
             let obj = { height: closure_0, width: closure_0, style: null };
-            const tmp = numRows(15575);
+            const tmp = numRows(15508);
             obj = { itemIndex: closure_0 * outer2_5 + arg1, numItems: outer1_3.length, numColumns: outer2_5, spacing: outer2_6 };
-            obj[2] = outer2_0(11576).getMediaGridItemStyles(obj);
+            obj[2] = outer2_0(11466).getMediaGridItemStyles(obj);
             return outer2_7(tmp, obj, arg1);
           })
         }),
@@ -93,5 +93,5 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
     })
   ];
   obj[2] = items4;
-  return callback2(numRows(4116).View, obj);
+  return callback2(numRows(4054).View, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 10600: IGNORE_CONFIRMATION_ACTION_SHEET_KEY ===
+// === Module 10462: IGNORE_CONFIRMATION_ACTION_SHEET_KEY ===
 
-// Module 10600 (IGNORE_CONFIRMATION_ACTION_SHEET_KEY)
+// Module 10462 (IGNORE_CONFIRMATION_ACTION_SHEET_KEY)
 const result = require("set").fileFinishedImporting("modules/relationships/native/RestrictionConfirmationConstants.tsx");
 
 export const IGNORE_CONFIRMATION_ACTION_SHEET_KEY = "IgnoreConfirmationActionSheet";

@@ -1,6 +1,6 @@
-// === Module 12958: _initStats ===
+// === Module 12895: _initStats ===
 
-// Module 12958 (_initStats)
+// Module 12895 (_initStats)
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import ME from "ME";
 

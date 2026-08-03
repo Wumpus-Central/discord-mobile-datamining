@@ -1,6 +1,6 @@
-// === Module 10481: ChannelIndicator ===
+// === Module 10342: ChannelIndicator ===
 
-// Module 10481 (ChannelIndicator)
+// Module 10342 (ChannelIndicator)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";
 import { jsx } from "jsxProd";
@@ -27,7 +27,7 @@ export default function ChannelIndicator(arg0) {
   let unread;
   ({ unread, resolvedUnreadSetting, style } = arg0);
   const tmp = callback();
-  require(3959) /* map */;
+  require(3897) /* map */;
   if (resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
     let CHANNELS_DEFAULT = importDefault(712).colors.INTERACTIVE_TEXT_ACTIVE;
   } else {

@@ -1,6 +1,6 @@
-// === Module 8081: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 7964: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 8081 (useMaybeFetchCollectiblesCategoriesShared)
+// Module 7964 (useMaybeFetchCollectiblesCategoriesShared)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getHash from "getHash";

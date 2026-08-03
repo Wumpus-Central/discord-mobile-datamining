@@ -1,6 +1,6 @@
-// === Module 15173: GuildRoleSubscriptionsRow ===
+// === Module 15192: GuildRoleSubscriptionsRow ===
 
-// Module 15173 (GuildRoleSubscriptionsRow)
+// Module 15192 (GuildRoleSubscriptionsRow)
 import noop from "noop";
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";
@@ -35,7 +35,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
     };
     obj.openLazy(id(outer1_2[10])(outer1_2[9], outer1_2.paths), rolesubscriptionschannelactionsheet, obj);
   }, items1);
-  const ChannelModes = id(11602).ChannelModes;
+  const ChannelModes = id(11492).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -53,9 +53,9 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1236).intl;
   obj[0] = intl2.string(tmp6(1236).t["KzCF/6"]);
   obj[1] = DEFAULT;
-  obj[7] = jsx(tmp6(11602).BaseChannelName, { name: null, mode: null });
+  obj[7] = jsx(tmp6(11492).BaseChannelName, { name: null, mode: null });
   obj = { disableColor: true, mode: DEFAULT, source: null };
-  obj[2] = importDefault(10290);
-  obj[8] = jsx(tmp6(11602).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: null });
-  return jsx(importDefault(11602), { disableColor: true, mode: DEFAULT, source: null });
+  obj[2] = importDefault(10151);
+  obj[8] = jsx(tmp6(11492).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: null });
+  return jsx(importDefault(11492), { disableColor: true, mode: DEFAULT, source: null });
 };

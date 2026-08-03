@@ -1,6 +1,6 @@
-// === Module 13709: KeyCommandsView ===
+// === Module 13646: KeyCommandsView ===
 
-// Module 13709 (KeyCommandsView)
+// Module 13646 (KeyCommandsView)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -55,7 +55,7 @@ export default function KeyCommandsView(style) {
       found.onKeyCommand(nativeEvent);
     }
   };
-  obj[1] = jsx(first(13710), {});
+  obj[1] = jsx(first(13647), {});
   return <redux.Provider />;
 };
 export const useKeyCommands = function useKeyCommands(memo) {

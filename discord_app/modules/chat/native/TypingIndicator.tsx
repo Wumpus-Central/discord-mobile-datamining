@@ -1,6 +1,6 @@
-// === Module 11551: TypingIndicatorInner ===
+// === Module 11441: TypingIndicatorInner ===
 
-// Module 11551 (TypingIndicatorInner)
+// Module 11441 (TypingIndicatorInner)
 import importAllResult from "noop";
 import { View } from "useTypingUserIds";
 import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight";

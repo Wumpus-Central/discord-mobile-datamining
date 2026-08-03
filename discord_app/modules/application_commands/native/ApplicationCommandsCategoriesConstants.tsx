@@ -1,6 +1,6 @@
-// === Module 11616: ICON_SIZE ===
+// === Module 11506: ICON_SIZE ===
 
-// Module 11616 (ICON_SIZE)
+// Module 11506 (ICON_SIZE)
 const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategoriesConstants.tsx");
 
 export const ICON_SIZE = 24;

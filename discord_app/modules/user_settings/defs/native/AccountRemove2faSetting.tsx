@@ -1,6 +1,6 @@
-// === Module 13910: pressable ===
+// === Module 13843: pressable ===
 
-// Module 13910 (pressable)
+// Module 13843 (pressable)
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
@@ -10,7 +10,7 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function remove2FA() {
-    let obj = importDefault(4594);
+    let obj = importDefault(4532);
     obj = { title: null, body: null, cancelText: null, onConfirm: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[0] = intl.string(require(1236) /* getSystemLocale */.t["D+aE7g"]);
@@ -24,7 +24,7 @@ const pressable = createToggle.createPressable({
     obj.show(obj);
   },
   useIsDisabled() {
-    return null !== require(13911) /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
+    return null !== require(13844) /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
   },
   useDescription: require("getSMSBackupDisabledMessage").use2FARemoveDisableReason,
   usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled
@@ -36,7 +36,7 @@ let obj = {
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function remove2FA() {
-    let obj = importDefault(4594);
+    let obj = importDefault(4532);
     obj = { title: null, body: null, cancelText: null, onConfirm: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[0] = intl.string(require(1236) /* getSystemLocale */.t["D+aE7g"]);
@@ -50,7 +50,7 @@ let obj = {
     obj.show(obj);
   },
   useIsDisabled() {
-    return null !== require(13911) /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
+    return null !== require(13844) /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
   },
   useDescription: require("getSMSBackupDisabledMessage").use2FARemoveDisableReason,
   usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled

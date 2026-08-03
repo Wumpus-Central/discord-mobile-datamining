@@ -1,6 +1,6 @@
-// === Module 12290: UserProfilePrivacyNotice ===
+// === Module 12194: UserProfilePrivacyNotice ===
 
-// Module 12290 (UserProfilePrivacyNotice)
+// Module 12194 (UserProfilePrivacyNotice)
 import _slicedToArray from "_slicedToArray";
 import XSmallIcon from "XSmallIcon";
 import { View } from "CircleInformationIcon";

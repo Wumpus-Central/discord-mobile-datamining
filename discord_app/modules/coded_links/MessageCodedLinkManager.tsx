@@ -1,6 +1,6 @@
-// === Module 16327: resolveMessageCodedLinks ===
+// === Module 16263: resolveMessageCodedLinks ===
 
-// Module 16327 (resolveMessageCodedLinks)
+// Module 16263 (resolveMessageCodedLinks)
 import queueMessageLinkFetch from "queueMessageLinkFetch";
 import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
 import updateInvite from "updateInvite";
@@ -8,7 +8,7 @@ import "initialize";
 
 const require = arg1;
 function resolveMessageCodedLinks(content) {
-  const arr = importDefault(4239)(content.content);
+  const arr = importDefault(4177)(content.content);
   let tmp = null != arr;
   if (tmp) {
     tmp = 0 !== arr.length;

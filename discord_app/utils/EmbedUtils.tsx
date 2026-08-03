@@ -1,6 +1,6 @@
-// === Module 4588: getEffectiveVideoProvider ===
+// === Module 4526: getEffectiveVideoProvider ===
 
-// Module 4588 (getEffectiveVideoProvider)
+// Module 4526 (getEffectiveVideoProvider)
 import ME from "ME";
 import { EMBED_TYPES_WITH_PARSEABLE_FIELDS as closure_6 } from "MessageEmbedTypes";
 
@@ -79,7 +79,7 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   }
   if (null != footer.timestamp) {
     const _Date = Date;
-    let tmpResult = tmp(3837);
+    let tmpResult = tmp(3775);
     const date = new Date(footer.timestamp);
     obj.timestamp = tmpResult(date);
   }
@@ -246,13 +246,13 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
     obj.fields = [];
   }
   if (null != footer.components) {
-    const transformComponentsResult = obj6(4477).transformComponents(footer.components);
+    const transformComponentsResult = obj6(4415).transformComponents(footer.components);
     let tmp40;
     if (transformComponentsResult.length > 0) {
       tmp40 = transformComponentsResult;
     }
     obj.components = tmp40;
-    const obj17 = obj6(4477);
+    const obj17 = obj6(4415);
   }
   return obj;
 };

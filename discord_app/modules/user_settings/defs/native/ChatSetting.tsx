@@ -1,6 +1,6 @@
-// === Module 14502: route ===
+// === Module 14435: route ===
 
-// Module 14502 (route)
+// Module 14435 (route)
 import createToggle from "createToggle";
 
 obj = {
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.TEXT,
   getComponent() {
-    return require(14505) /* VideoUploadQualityNitroUpsell */.default;
+    return require(14438) /* VideoUploadQualityNitroUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

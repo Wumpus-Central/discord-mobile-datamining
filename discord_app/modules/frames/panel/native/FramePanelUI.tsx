@@ -1,19 +1,19 @@
-// === Module 15954: renderActivityOrPIP ===
+// === Module 15890: renderActivityOrPIP ===
 
-// Module 15954 (renderActivityOrPIP)
+// Module 15890 (renderActivityOrPIP)
 import noop from "noop";
 import { jsx } from "jsxProd";
 
 const require = arg1;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 15955;
+    let tmp4 = 15891;
   } else {
-    tmp4 = 15959;
+    tmp4 = 15895;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
-const result = require("module_15955").fileFinishedImporting("modules/frames/panel/native/FramePanelUI.tsx");
+const result = require("module_15891").fileFinishedImporting("modules/frames/panel/native/FramePanelUI.tsx");
 
 export default function FramePanelUI() {
   const callback = React.useCallback(() => callback2(callback(table[4]), {}), []);

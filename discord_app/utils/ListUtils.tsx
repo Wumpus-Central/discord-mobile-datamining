@@ -1,6 +1,6 @@
-// === Module 11829: getListSummaryLabel ===
+// === Module 11726: getListSummaryLabel ===
 
-// Module 11829 (getListSummaryLabel)
+// Module 11726 (getListSummaryLabel)
 const result = require("set").fileFinishedImporting("utils/ListUtils.tsx");
 
 export const getListSummaryLabel = function getListSummaryLabel(names, length) {

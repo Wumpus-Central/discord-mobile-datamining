@@ -1,8 +1,12 @@
-// === Module 9763: filterFavoriteGIFsByQuery ===
+// === Module 9615: getSearchPlaceholder ===
 
-// Module 9763 (filterFavoriteGIFsByQuery)
+// Module 9615 (getSearchPlaceholder)
 const result = require("set").fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");
 
+export const getSearchPlaceholder = function getSearchPlaceholder() {
+  const intl = require(1236) /* getSystemLocale */.intl;
+  return intl.string(require(1236) /* getSystemLocale */.t.T1Frnm);
+};
 export const filterFavoriteGIFsByQuery = function filterFavoriteGIFsByQuery(favorites, first2) {
   if ("" === first2) {
     return favorites;

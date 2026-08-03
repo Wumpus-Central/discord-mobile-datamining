@@ -1,6 +1,6 @@
-// === Module 6810: hasUserTrialOfferExpired ===
+// === Module 6247: hasUserTrialOfferExpired ===
 
-// Module 6810 (hasUserTrialOfferExpired)
+// Module 6247 (hasUserTrialOfferExpired)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";

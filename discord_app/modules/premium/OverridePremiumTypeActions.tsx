@@ -1,6 +1,6 @@
-// === Module 14865: updateClientPremiumTypeOverride ===
+// === Module 14798: updateClientPremiumTypeOverride ===
 
-// Module 14865 (updateClientPremiumTypeOverride)
+// Module 14798 (updateClientPremiumTypeOverride)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
@@ -21,9 +21,9 @@ export const updateClientPremiumTypeOverride = function updateClientPremiumTypeO
     tmp2Result.dispatch(obj);
     tmp2Result = tmp2(709);
     const obj1 = { type: "CURRENT_USER_UPDATE", user: null };
-    obj1[1] = require(7120) /* createMessage */.userRecordToServer(currentUser);
+    obj1[1] = require(6042) /* createMessage */.userRecordToServer(currentUser);
     tmp2Result.dispatch(obj1);
-    const obj7 = require(7120) /* createMessage */;
+    const obj7 = require(6042) /* createMessage */;
   }
 };
 export const updateClientCreatedAtOverride = function updateClientCreatedAtOverride(createdAt) {

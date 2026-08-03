@@ -1,6 +1,6 @@
-// === Module 15518: useResourceChannels ===
+// === Module 15451: useResourceChannels ===
 
-// Module 15518 (useResourceChannels)
+// Module 15451 (useResourceChannels)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 

@@ -1,6 +1,6 @@
-// === Module 5700: PostponeRender ===
+// === Module 5638: PostponeRender ===
 
-// Module 5700 (PostponeRender)
+// Module 5638 (PostponeRender)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -32,7 +32,7 @@ export const PostponeRender = function PostponeRender(children) {
   first = tmp2[0];
   importDefault = tmp2[1];
   dependencyMap = React.useRef(undefined);
-  importDefault(4682)(() => {
+  importDefault(4620)(() => {
     if (first) {
       table.current = first(table[7]).runAfterInteractions(() => {
         callback(false);
@@ -46,12 +46,12 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(5702).SceneLoadingIndicator, {});
+    children = jsx(first(5640).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
   } else {
-    tmp4Result = importDefault(5704);
+    tmp4Result = importDefault(5642);
   }
   const style = [createCacheKey().view, viewStyle];
   return <tmp4Result style={style}>{children}</tmp4Result>;

@@ -1,6 +1,6 @@
-// === Module 4692: safelyPartiallyDecodeURIComponent ===
+// === Module 4630: safelyPartiallyDecodeURIComponent ===
 
-// Module 4692 (safelyPartiallyDecodeURIComponent)
+// Module 4630 (safelyPartiallyDecodeURIComponent)
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;
   const result = importDefault(1467).safeDecodeURIComponent(hash);

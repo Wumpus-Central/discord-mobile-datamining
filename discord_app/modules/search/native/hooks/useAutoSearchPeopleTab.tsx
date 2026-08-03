@@ -1,6 +1,6 @@
-// === Module 15646: useAutoSearchPeopleTab ===
+// === Module 15579: useAutoSearchPeopleTab ===
 
-// Module 15646 (useAutoSearchPeopleTab)
+// Module 15579 (useAutoSearchPeopleTab)
 import noop from "noop";
 import prototype from "prototype";
 import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_5 } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME";

@@ -1,6 +1,6 @@
-// === Module 16250: handleInteraction ===
+// === Module 16186: handleInteraction ===
 
-// Module 16250 (handleInteraction)
+// Module 16186 (handleInteraction)
 import handleConnectionOpen from "handleConnectionOpen";
 import { EmojiInteractionPoint } from "set";
 import "initialize";
@@ -17,8 +17,8 @@ TopEmojisDataManager.prototype["handleInteraction"] = function handleInteraction
   const items = [EmojiInteractionPoint.EmojiButtonMouseEntered];
   if (items.includes(interaction.interaction)) {
     guildId = guildId.getGuildId();
-    const result = require(9512) /* maybeFetchTopEmojisByGuild */.maybeFetchTopEmojisByGuild(guildId);
-    const obj = require(9512) /* maybeFetchTopEmojisByGuild */;
+    const result = require(9353) /* maybeFetchTopEmojisByGuild */.maybeFetchTopEmojisByGuild(guildId);
+    const obj = require(9353) /* maybeFetchTopEmojisByGuild */;
   }
 };
 const topEmojisDataManager = new TopEmojisDataManager();

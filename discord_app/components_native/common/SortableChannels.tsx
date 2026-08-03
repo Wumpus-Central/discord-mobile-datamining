@@ -1,6 +1,6 @@
-// === Module 16528: render ===
+// === Module 16462: render ===
 
-// Module 16528 (render)
+// Module 16462 (render)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -505,7 +505,7 @@ class SortableChannels extends Component3 {
               id = tmp2.data.channel.id;
             }
           }
-          if (typeof id !== "ge") {
+          if (typeof id !== "__FORMATJS_LISTFORMAT_DATA__") {
             let tmp22 = obj;
             obj = { y: null, height: null };
             obj[0] = num;

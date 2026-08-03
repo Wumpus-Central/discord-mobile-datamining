@@ -1,6 +1,6 @@
-// === Module 14922: DraggableContainer ===
+// === Module 14855: DraggableContainer ===
 
-// Module 14922 (DraggableContainer)
+// Module 14855 (DraggableContainer)
 import importAllResult from "noop";
 import initialize from "initialize";
 import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES";
@@ -146,17 +146,17 @@ let closure_16 = importAllResult.memo(() => {
     activeOpacity: 0.5,
     children: null
   };
-  obj[4] = callback(require(14621) /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
-  return callback(require(4783) /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(require(14554) /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
+  return callback(require(4721) /* PressableBase */.PressableOpacity, obj);
 });
 let result = require("STORAGE_KEY_LOG_DISPATCHES").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  let obj = require(4116);
+  let obj = require(4054);
   const sharedValue = obj.useSharedValue(initialize.devWidgetPosition.x);
-  const sharedValue1 = require(4116).useSharedValue(initialize.devWidgetPosition.y);
+  const sharedValue1 = require(4054).useSharedValue(initialize.devWidgetPosition.y);
   obj = { children: null };
-  const items = [callback(importDefault(14924), { x: sharedValue, y: sharedValue1 }), ];
+  const items = [callback(importDefault(14857), { x: sharedValue, y: sharedValue1 }), ];
   obj = {
     x: sharedValue,
     y: sharedValue1,

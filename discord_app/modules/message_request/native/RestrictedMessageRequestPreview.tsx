@@ -1,6 +1,6 @@
-// === Module 15809: RestrictedMessageRequestPreview ===
+// === Module 15744: RestrictedMessageRequestPreview ===
 
-// Module 15809 (RestrictedMessageRequestPreview)
+// Module 15744 (RestrictedMessageRequestPreview)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -114,10 +114,10 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj1 = { channel: null, user: null };
       obj1[0] = stateFromStores;
       obj1[1] = stateFromStores1;
-      const items8 = [callback(tmp2(15810), obj1), ];
+      const items8 = [callback(tmp2(15745), obj1), ];
       obj2 = { channelId: null };
       obj2[0] = channelId;
-      items8[1] = callback(tmp2(15812), obj2);
+      items8[1] = callback(tmp2(15747), obj2);
       obj[5] = items8;
       const items9 = [closure_11(closure_5, obj), ];
       const obj3 = { style: null, children: null };
@@ -128,7 +128,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj3[0] = items10;
       const obj5 = { channel: null };
       obj5[0] = stateFromStores;
-      obj3[1] = callback(tmp2(11651), obj5);
+      obj3[1] = callback(tmp2(11544), obj5);
       items9[1] = callback(first1, obj3);
       obj[1] = items9;
       tmp13Result = tmp13(tmp14, obj);

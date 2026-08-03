@@ -1,6 +1,6 @@
-// === Module 9132: TwoWayLinkDiscordConsent ===
+// === Module 8955: TwoWayLinkDiscordConsent ===
 
-// Module 9132 (TwoWayLinkDiscordConsent)
+// Module 8955 (TwoWayLinkDiscordConsent)
 import timestamp from "timestamp";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

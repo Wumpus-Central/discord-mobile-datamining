@@ -1,6 +1,6 @@
-// === Module 15499: getCoverImageURI ===
+// === Module 15432: getCoverImageURI ===
 
-// Module 15499 (getCoverImageURI)
+// Module 15432 (getCoverImageURI)
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 
 const require = arg1;
@@ -10,8 +10,8 @@ export const getCoverImageURI = function getCoverImageURI(subscriptionsSettings)
   applicationIdForGuild = applicationIdForGuild.getApplicationIdForGuild(subscriptionsSettings.guild_id);
   let uri = "";
   if (tmp2) {
-    uri = require(4493) /* _httpGetWithCountryCodeQuery */.getAssetURL(applicationIdForGuild, subscriptionsSettings.cover_image_asset, 1024);
-    const obj = require(4493) /* _httpGetWithCountryCodeQuery */;
+    uri = require(4431) /* _httpGetWithCountryCodeQuery */.getAssetURL(applicationIdForGuild, subscriptionsSettings.cover_image_asset, 1024);
+    const obj = require(4431) /* _httpGetWithCountryCodeQuery */;
   }
   return { uri };
 };

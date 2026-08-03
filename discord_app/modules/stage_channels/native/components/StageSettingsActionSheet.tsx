@@ -1,6 +1,6 @@
-// === Module 7810: StageSettingsActionSheet ===
+// === Module 7687: StageSettingsActionSheet ===
 
-// Module 7810 (StageSettingsActionSheet)
+// Module 7687 (StageSettingsActionSheet)
 import registerAsset from "registerAsset";
 import { View } from "getSystemLocale";
 import getParticipants from "getParticipants";

@@ -1,6 +1,6 @@
-// === Module 10555: ChannelPickerActionSheet ===
+// === Module 10416: ChannelPickerActionSheet ===
 
-// Module 10555 (ChannelPickerActionSheet)
+// Module 10416 (ChannelPickerActionSheet)
 import "noop";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

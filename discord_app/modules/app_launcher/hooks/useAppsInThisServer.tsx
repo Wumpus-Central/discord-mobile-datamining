@@ -1,6 +1,6 @@
-// === Module 11420: useAppsInThisServer ===
+// === Module 11310: useAppsInThisServer ===
 
-// Module 11420 (useAppsInThisServer)
+// Module 11310 (useAppsInThisServer)
 import noop from "noop";
 import { useGuildIndexState } from "getIndexKey";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,6 @@
-// === Module 5801: maybeRebuildState ===
+// === Module 6069: maybeRebuildState ===
 
-// Module 5801 (maybeRebuildState)
+// Module 6069 (maybeRebuildState)
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import updateState from "updateState";
 import fetchFingerprint from "fetchFingerprint";
@@ -314,7 +314,7 @@ const forumActivePostStore = new ForumActivePostStore(require("dispatcher"), {
     channel = channel.channel;
     if (null != channel.parent_id) {
       if (channel.parent_id === c12) {
-        const isForumPostPinnedResult = require(5803) /* getCreationDefaultFormatter */.isForumPostPinned(channel.id);
+        const isForumPostPinnedResult = require(6071) /* getCreationDefaultFormatter */.isForumPostPinned(channel.id);
         const hasItem = set2.has(channel.id);
         if (isForumPostPinnedResult) {
           if (!hasItem) {

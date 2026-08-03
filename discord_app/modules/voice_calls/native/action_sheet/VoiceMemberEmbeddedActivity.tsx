@@ -1,6 +1,6 @@
-// === Module 12924: XSMALL ===
+// === Module 12861: XSMALL ===
 
-// Module 12924 (XSMALL)
+// Module 12861 (XSMALL)
 import _slicedToArray from "_slicedToArray";
 import "handlePressJoinActivity";
 import get_ActivityIndicator from "useWindowDimensions";

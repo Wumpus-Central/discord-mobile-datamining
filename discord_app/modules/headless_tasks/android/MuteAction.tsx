@@ -1,6 +1,6 @@
-// === Module 16860: promise ===
+// === Module 16794: promise ===
 
-// Module 16860 (promise)
+// Module 16794 (promise)
 import { MuteUntilSeconds } from "MAX_FAVORITES";
 
 let result = require("t").fileFinishedImporting("modules/headless_tasks/android/MuteAction.tsx");

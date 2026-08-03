@@ -1,6 +1,6 @@
-// === Module 5205: _getBackgroundGradientColor ===
+// === Module 5143: _getBackgroundGradientColor ===
 
-// Module 5205 (_getBackgroundGradientColor)
+// Module 5143 (_getBackgroundGradientColor)
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get from "get";
 import hexToRgba from "hexToRgba";
@@ -113,12 +113,12 @@ function BackgroundImageGradient(uri) {
   const tmp = createCacheKey();
   let obj = { children: null };
   const items = [tmp.backgroundImage];
-  const items1 = [callback2(importDefault(5207), { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
+  const items1 = [callback2(importDefault(5145), { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
   obj = { style: tmp.backgroundColorGradient, start: null, end: null, colors: null };
   obj[1] = require(691) /* keys */.VerticalGradient.START;
   obj[2] = require(691) /* keys */.VerticalGradient.END;
-  const tmp2 = importDefault(4677);
-  const items2 = [require(4099) /* hexToRgba */.hexWithOpacity(color, 0.16), color];
+  const tmp2 = importDefault(4615);
+  const items2 = [require(4037) /* hexToRgba */.hexWithOpacity(color, 0.16), color];
   obj[3] = items2;
   items1[1] = callback2(tmp2, obj);
   obj[0] = items1;

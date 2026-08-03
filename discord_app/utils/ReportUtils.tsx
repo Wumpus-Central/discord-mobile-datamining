@@ -1,6 +1,6 @@
-// === Module 5786: canReportUser ===
+// === Module 6065: canReportUser ===
 
-// Module 5786 (canReportUser)
+// Module 6065 (canReportUser)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

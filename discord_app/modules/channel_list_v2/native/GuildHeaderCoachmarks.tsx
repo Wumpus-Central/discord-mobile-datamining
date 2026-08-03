@@ -1,6 +1,6 @@
-// === Module 15129: GuildHeaderCoachmarks ===
+// === Module 15149: GuildHeaderCoachmarks ===
 
-// Module 15129 (GuildHeaderCoachmarks)
+// Module 15149 (GuildHeaderCoachmarks)
 import _slicedToArray from "_slicedToArray";
 import GuildPowerupsBoostToUnlockCoachmark from "GuildPowerupsBoostToUnlockCoachmark";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

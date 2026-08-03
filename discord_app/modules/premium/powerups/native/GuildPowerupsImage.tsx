@@ -1,6 +1,6 @@
-// === Module 11735: GuildPowerupsImage ===
+// === Module 11628: GuildPowerupsImage ===
 
-// Module 11735 (GuildPowerupsImage)
+// Module 11628 (GuildPowerupsImage)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -28,11 +28,11 @@ export default function GuildPowerupsImage(style) {
         const items1 = [tmp.image, style];
         obj[0] = items1;
         obj[1] = imageUrl;
-        let tmp6 = jsx(importDefault(8095), { style: null, url: null });
+        let tmp6 = jsx(importDefault(6211), { style: null, url: null });
       }
       return tmp6;
     }
   }
   const items2 = [tmp.image, style];
-  tmp6 = jsx(importDefault(5207), { style: items2, source: { uri: imageUrl } });
+  tmp6 = jsx(importDefault(5145), { style: items2, source: { uri: imageUrl } });
 };

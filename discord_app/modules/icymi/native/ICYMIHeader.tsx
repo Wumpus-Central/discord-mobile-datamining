@@ -1,6 +1,6 @@
-// === Module 15477: ICYMIHeader ===
+// === Module 15410: ICYMIHeader ===
 
-// Module 15477 (ICYMIHeader)
+// Module 15410 (ICYMIHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -28,7 +28,7 @@ export default function ICYMIHeader() {
   obj = { style: tmp.text, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t["jnXV/V"]);
-  items[1] = callback(require(4251) /* Text */.Text, obj);
+  items[1] = callback(require(4189) /* Text */.Text, obj);
   obj[0] = items;
   return callback2(closure_5, obj);
 };

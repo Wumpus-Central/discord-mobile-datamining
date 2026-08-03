@@ -1,6 +1,6 @@
-// === Module 10332: SafetyToolsAboutScreen ===
+// === Module 10193: SafetyToolsAboutScreen ===
 
-// Module 10332 (SafetyToolsAboutScreen)
+// Module 10193 (SafetyToolsAboutScreen)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "combined";

@@ -1,6 +1,6 @@
-// === Module 9734: PostComposerInputs ===
+// === Module 9587: PostComposerInputs ===
 
-// Module 9734 (PostComposerInputs)
+// Module 9587 (PostComposerInputs)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

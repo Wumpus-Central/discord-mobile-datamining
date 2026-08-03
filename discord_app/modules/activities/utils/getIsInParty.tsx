@@ -1,6 +1,6 @@
-// === Module 11086: getIsInParty ===
+// === Module 10964: getIsInParty ===
 
-// Module 11086 (getIsInParty)
+// Module 10964 (getIsInParty)
 const result = require("set").fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
 
 export const getIsInParty = function getIsInParty(tmp8Result, activity) {

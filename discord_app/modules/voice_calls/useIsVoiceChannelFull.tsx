@@ -1,6 +1,6 @@
-// === Module 10857: useIsVoiceChannelFull ===
+// === Module 10749: useIsVoiceChannelFull ===
 
-// Module 10857 (useIsVoiceChannelFull)
+// Module 10749 (useIsVoiceChannelFull)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateVoiceState from "updateVoiceState";

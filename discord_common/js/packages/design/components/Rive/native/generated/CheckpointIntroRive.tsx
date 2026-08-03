@@ -1,6 +1,6 @@
-// === Module 4046: CheckpointIntroRive ===
+// === Module 3984: CheckpointIntroRive ===
 
-// Module 4046 (CheckpointIntroRive)
+// Module 3984 (CheckpointIntroRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -17,8 +17,8 @@ let closure_9 = {
     let onDataBindingChange;
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = require(3984) /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = require(3984) /* BaseRive */;
+    const booleanBinding = require(3922) /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = require(3922) /* BaseRive */;
     let Subtitle;
     if (dataBinding != null) {
       Subtitle = dataBinding.Subtitle;
@@ -27,8 +27,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
-    const stringBinding = require(3984) /* BaseRive */.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = tmp(3984);
+    const stringBinding = require(3922) /* BaseRive */.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
+    let tmpResult = tmp(3922);
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -38,7 +38,7 @@ let closure_9 = {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
     const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = tmp(3984);
+    tmpResult = tmp(3922);
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;
@@ -56,8 +56,8 @@ let closure_9 = {
     let onDataBindingChange;
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = require(3984) /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = require(3984) /* BaseRive */;
+    const booleanBinding = require(3922) /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = require(3922) /* BaseRive */;
     let Subtitle;
     if (dataBinding != null) {
       Subtitle = dataBinding.Subtitle;
@@ -66,8 +66,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Subtitle1 = onDataBindingChange.Subtitle;
     }
-    const stringBinding = require(3984) /* BaseRive */.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let tmpResult = tmp(3984);
+    const stringBinding = require(3922) /* BaseRive */.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
+    let tmpResult = tmp(3922);
     let prop;
     if (dataBinding != null) {
       prop = dataBinding["StartButton Pressed"];
@@ -77,7 +77,7 @@ let closure_9 = {
       prop1 = onDataBindingChange["StartButton Pressed"];
     }
     const booleanBinding1 = tmpResult.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    tmpResult = tmp(3984);
+    tmpResult = tmp(3922);
     let StartButton;
     if (dataBinding != null) {
       StartButton = dataBinding.StartButton;
@@ -133,7 +133,7 @@ const forwardRefResult = importAllResult.forwardRef(function CheckpointIntroRive
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(require(4035) /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(require(3973) /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointIntroRive.tsx");
 

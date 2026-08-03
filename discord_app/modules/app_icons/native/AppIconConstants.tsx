@@ -1,6 +1,6 @@
-// === Module 7571: items ===
+// === Module 6586: items ===
 
-// Module 7571 (items)
+// Module 6586 (items)
 import { intl } from "getSystemLocale";
 import { intl as intl2 } from "getSystemLocale";
 import { intl as intl3 } from "getSystemLocale";
@@ -102,7 +102,7 @@ let closure_4 = [];
 const result = require("getSystemLocale").fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
 
 export const getDefaultIcon = function getDefaultIcon() {
-  const obj = { id: require(7572) /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: importDefault(7573), name: null, isPremium: false };
+  const obj = { id: require(6587) /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: importDefault(6588), name: null, isPremium: false };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.ANxkLy);
   return obj;
@@ -136,7 +136,7 @@ export const getLimitedAlternateIcons = function getLimitedAlternateIcons() {
   });
 };
 export const getIcons = function getIcons() {
-  const obj = { id: require(7572) /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: importDefault(7573), name: null, isPremium: false };
+  const obj = { id: require(6587) /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: importDefault(6588), name: null, isPremium: false };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.ANxkLy);
   items = [
@@ -162,7 +162,7 @@ export const getIcons = function getIcons() {
 };
 export const getIconById = function getIconById(currentAppIcon) {
   const _require = currentAppIcon;
-  let obj = { id: _require(7572).FreemiumAppIconIds.DEFAULT, iconSource: importDefault(7573), name: null, isPremium: false };
+  let obj = { id: _require(6587).FreemiumAppIconIds.DEFAULT, iconSource: importDefault(6588), name: null, isPremium: false };
   const intl = _require(1236).intl;
   obj[2] = intl.string(_require(1236).t.ANxkLy);
   items = [
@@ -187,8 +187,8 @@ export const getIconById = function getIconById(currentAppIcon) {
   let found = items.find((id) => id.id === closure_0);
   if (null == found) {
     obj = { id: null, iconSource: null, name: null, isPremium: false };
-    obj[0] = tmp(7572).FreemiumAppIconIds.DEFAULT;
-    obj[1] = importDefault(7573);
+    obj[0] = tmp(6587).FreemiumAppIconIds.DEFAULT;
+    obj[1] = importDefault(6588);
     const intl2 = tmp(1236).intl;
     obj[2] = intl2.string(tmp(1236).t.ANxkLy);
     found = obj;

@@ -1,11 +1,11 @@
-// === Module 8963: GiftBackgroundSelect ===
+// === Module 8786: GiftBackgroundSelect ===
 
-// Module 8963 (GiftBackgroundSelect)
+// Module 8786 (GiftBackgroundSelect)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4116";
+import importDefaultResult from "module_4054";
 
 let c5;
 let closure_6;
@@ -25,7 +25,7 @@ class GiftBackgroundSelect {
     first = tmp2[0];
     useState = first;
     c1 = tmp2[1];
-    obj = require("module_4116");
+    obj = require("module_4054");
     sharedValue = obj.useSharedValue(false);
     c2 = sharedValue;
     items = [, ];
@@ -34,7 +34,7 @@ class GiftBackgroundSelect {
     effect = noop.useEffect(() => {
       const result = sharedValue.set(null != first);
     }, items);
-    obj2 = require("module_4116");
+    obj2 = require("module_4054");
     class N {
       constructor() {
         tmp = useState;
@@ -94,7 +94,7 @@ class GiftBackgroundSelect {
   }
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let closure_8 = require("module_4116").createAnimatedComponent(require("get ActivityIndicator").ScrollView);
+let closure_8 = require("module_4054").createAnimatedComponent(require("get ActivityIndicator").ScrollView);
 let obj = { scrollView: null, contentContainer: null };
 obj = { flex: 1, marginTop: require("Themes").space.PX_24 };
 obj[0] = obj;
@@ -104,7 +104,7 @@ let closure_10 = { code: "function PremiumGiftBackgroundSelectTsx1(){const{STAND
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
 
 export default function PremiumGiftBackgroundSelect() {
-  let obj = require(8990) /* NativeGiftContextProvider */;
+  let obj = require(8813) /* NativeGiftContextProvider */;
   const nativeGiftContext = obj.useNativeGiftContext();
   obj = { giftStyle: nativeGiftContext.giftStyle, setGiftStyle: nativeGiftContext.setGiftStyle };
   return callback2(GiftBackgroundSelect, obj);

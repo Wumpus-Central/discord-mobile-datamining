@@ -1,6 +1,6 @@
-// === Module 9862: useCreateOrReuseGiftOrder ===
+// === Module 9717: useCreateOrReuseGiftOrder ===
 
-// Module 9862 (useCreateOrReuseGiftOrder)
+// Module 9717 (useCreateOrReuseGiftOrder)
 import timestamp from "timestamp";
 import noop from "noop";
 import { ItemPurchaseType } from "CustomCheckoutFlow";
@@ -14,7 +14,7 @@ let result = require("CustomCheckoutFlow").fileFinishedImporting("modules/paymen
 
 export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(GiftPurchaseButton) {
   let _require = GiftPurchaseButton;
-  let obj = _require(8921);
+  let obj = _require(8744);
   obj = { location: GiftPurchaseButton };
   const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled(obj);
   _require = undefined;

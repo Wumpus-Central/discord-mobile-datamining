@@ -1,6 +1,6 @@
-// === Module 11318: ForumPostNewTag ===
+// === Module 11206: ForumPostNewTag ===
 
-// Module 11318 (ForumPostNewTag)
+// Module 11206 (ForumPostNewTag)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

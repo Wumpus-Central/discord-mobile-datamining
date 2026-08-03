@@ -1,6 +1,6 @@
-// === Module 7548: BuyNitroMarketing ===
+// === Module 6562: BuyNitroMarketing ===
 
-// Module 7548 (BuyNitroMarketing)
+// Module 6562 (BuyNitroMarketing)
 import BuyNitroMarketingHeader from "BuyNitroMarketingHeader";
 import { View } from "BuyNitroPerk";
 import { PremiumTypes } from "GuildFeatures";

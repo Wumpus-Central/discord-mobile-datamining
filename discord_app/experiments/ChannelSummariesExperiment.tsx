@@ -1,6 +1,6 @@
-// === Module 9665: canSeeChannelSummaries ===
+// === Module 9518: canSeeChannelSummaries ===
 
-// Module 9665 (canSeeChannelSummaries)
+// Module 9518 (canSeeChannelSummaries)
 import { isGuildNSFW } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";

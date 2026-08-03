@@ -1,6 +1,6 @@
-// === Module 13619: RPCCommands ===
+// === Module 13556: RPCCommands ===
 
-// Module 13619 (RPCCommands)
+// Module 13556 (RPCCommands)
 import sum from "sum";
 
 let RPCCommands;

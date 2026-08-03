@@ -1,6 +1,6 @@
-// === Module 9818: getAutocompleteOptions ===
+// === Module 9671: getAutocompleteOptions ===
 
-// Module 9818 (getAutocompleteOptions)
+// Module 9671 (getAutocompleteOptions)
 import handleInit from "handleInit";
 import closure_4 from "handleInit";
 import closure_5 from "set";
@@ -230,7 +230,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const obj4 = _private(tmp3[17]);
               }
               const items2 = [query];
-              const items3 = [_private, (arg0, arg1) => arg1 === callback(5851).StickerSendability.SENDABLE];
+              const items3 = [_private, (arg0, arg1) => arg1 === callback(9633).StickerSendability.SENDABLE];
               items1 = flag(tmp3[14]).queryStickers(items2, true, items3);
               const tmp2Result = flag(tmp3[14]);
             }

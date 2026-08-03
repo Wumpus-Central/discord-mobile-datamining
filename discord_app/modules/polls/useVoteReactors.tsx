@@ -1,6 +1,6 @@
-// === Module 10116: useVoteReactors ===
+// === Module 9973: useVoteReactors ===
 
-// Module 10116 (useVoteReactors)
+// Module 9973 (useVoteReactors)
 import reactionKey from "reactionKey";
 import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME";
 

@@ -1,6 +1,6 @@
-// === Module 7849: useIsFirstMessageInMediaPost ===
+// === Module 7728: useIsFirstMessageInMediaPost ===
 
-// Module 7849 (useIsFirstMessageInMediaPost)
+// Module 7728 (useIsFirstMessageInMediaPost)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

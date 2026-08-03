@@ -1,6 +1,6 @@
-// === Module 9327: useSetInitialVerificationEffect ===
+// === Module 9154: useSetInitialVerificationEffect ===
 
-// Module 9327 (useSetInitialVerificationEffect)
+// Module 9154 (useSetInitialVerificationEffect)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import map from "map";

@@ -1,6 +1,6 @@
-// === Module 11806: isMessagePreviewEnabledForChannel ===
+// === Module 11703: isMessagePreviewEnabledForChannel ===
 
-// Module 11806 (isMessagePreviewEnabledForChannel)
+// Module 11703 (isMessagePreviewEnabledForChannel)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import processChannel from "processChannel";
 import closure_4 from "processChannel";
@@ -24,7 +24,7 @@ function storeMessagePreview(id, arg1) {
     if (true) {
       let messageRecord = null;
       if (!flag2) {
-        let obj = require(4475) /* createMinimalMessageRecord */;
+        let obj = require(4413) /* createMinimalMessageRecord */;
         messageRecord = obj.createMessageRecord(null);
       }
       obj = { loaded: true, error: null, message: null };
@@ -105,7 +105,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(require("dispa
         if (null == message) {
           let messageRecord = null;
           if (null != message) {
-            let obj = require(4475) /* createMinimalMessageRecord */;
+            let obj = require(4413) /* createMinimalMessageRecord */;
             messageRecord = obj.createMessageRecord(message);
           }
           obj = { loaded: true, error: null, message: null };
@@ -131,9 +131,9 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(require("dispa
         if (null != tmp2.message) {
           const obj = {};
           const merged = Object.assign(tmp2);
-          obj.message = require(4475) /* createMinimalMessageRecord */.updateMessageRecord(tmp2.message, message.message);
+          obj.message = require(4413) /* createMinimalMessageRecord */.updateMessageRecord(tmp2.message, message.message);
           dependencyMap[channel_id] = obj;
-          const obj2 = require(4475) /* createMinimalMessageRecord */;
+          const obj2 = require(4413) /* createMinimalMessageRecord */;
         }
         tmp3 = tmp4;
       }

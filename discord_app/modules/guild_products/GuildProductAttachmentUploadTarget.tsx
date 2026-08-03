@@ -1,6 +1,6 @@
-// === Module 4830: getCreateAttachmentURL ===
+// === Module 4768: getCreateAttachmentURL ===
 
-// Module 4830 (getCreateAttachmentURL)
+// Module 4768 (getCreateAttachmentURL)
 import GUILD_PRODUCT_EDIT_MODAL_KEY from "GUILD_PRODUCT_EDIT_MODAL_KEY";
 import { Endpoints } from "ME";
 

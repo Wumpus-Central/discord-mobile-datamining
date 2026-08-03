@@ -1,6 +1,6 @@
-// === Module 11426: useNavigationTransitionEnded ===
+// === Module 11316: useNavigationTransitionEnded ===
 
-// Module 11426 (useNavigationTransitionEnded)
+// Module 11316 (useNavigationTransitionEnded)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";

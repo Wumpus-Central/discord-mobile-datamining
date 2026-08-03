@@ -1,6 +1,6 @@
-// === Module 4921: getStickerPreview ===
+// === Module 4859: getStickerPreview ===
 
-// Module 4921 (getStickerPreview)
+// Module 4859 (getStickerPreview)
 import { DraftType } from "handleChanged";
 import { Store } from "initialize";
 

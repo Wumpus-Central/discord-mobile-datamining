@@ -1,6 +1,6 @@
-// === Module 13795: UserProfileDisplayNameStylesEditButton ===
+// === Module 13732: UserProfileDisplayNameStylesEditButton ===
 
-// Module 13795 (UserProfileDisplayNameStylesEditButton)
+// Module 13732 (UserProfileDisplayNameStylesEditButton)
 import _slicedToArray from "_slicedToArray";
 import noop from "Button";
 import { View } from "getSystemLocale";

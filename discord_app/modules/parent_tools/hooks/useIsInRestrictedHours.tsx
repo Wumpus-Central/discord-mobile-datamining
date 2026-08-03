@@ -1,6 +1,6 @@
-// === Module 16202: useIsInRestrictedHours ===
+// === Module 16138: useIsInRestrictedHours ===
 
-// Module 16202 (useIsInRestrictedHours)
+// Module 16138 (useIsInRestrictedHours)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 
@@ -9,5 +9,5 @@ const result = require("initialize").fileFinishedImporting("modules/parent_tools
 
 export default function useIsInRestrictedHours() {
   const items = [mergeGuildAvatar, freshTeenActivityWithMap];
-  return require(589) /* initialize */.useStateFromStores(items, require(16203) /* scheduleUpcomingWarning */.getCurrentRestrictedHoursState);
+  return require(589) /* initialize */.useStateFromStores(items, require(16139) /* scheduleUpcomingWarning */.getCurrentRestrictedHoursState);
 };

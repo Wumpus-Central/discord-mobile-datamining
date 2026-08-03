@@ -1,6 +1,6 @@
-// === Module 11777: useGuildPowerupOnShowMore ===
+// === Module 11672: useGuildPowerupOnShowMore ===
 
-// Module 11777 (useGuildPowerupOnShowMore)
+// Module 11672 (useGuildPowerupOnShowMore)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");

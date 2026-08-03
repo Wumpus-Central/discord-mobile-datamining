@@ -1,6 +1,6 @@
-// === Module 16726: useInviteAssignableRoles ===
+// === Module 16660: useInviteAssignableRoles ===
 
-// Module 16726 (useInviteAssignableRoles)
+// Module 16660 (useInviteAssignableRoles)
 import noop from "noop";
 import { isEveryoneRole } from "GuildRoleRecordTypeTag";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

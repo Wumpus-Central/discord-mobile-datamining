@@ -1,6 +1,6 @@
-// === Module 8990: NativeGiftContextProvider ===
+// === Module 8813: NativeGiftContextProvider ===
 
-// Module 8990 (NativeGiftContextProvider)
+// Module 8813 (NativeGiftContextProvider)
 import frozen from "frozen";
 import importDefaultResult from "dispatcher";
 import getPremiumPlanItem from "getPremiumPlanItem";
@@ -272,7 +272,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
       closure_13 = undefined;
       table = undefined;
       jsx = undefined;
-      obj = { orderId: "a", planId: null, planSelection: null, giftInfo: null };
+      obj = { orderId: "a", planId: 1124074003, planSelection: 137745, giftInfo: "<string:499777539>" };
       obj = { premiumType: null, planInterval: null };
       obj[0] = first;
       obj[1] = first1;

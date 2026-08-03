@@ -1,6 +1,6 @@
-// === Module 7805: useStageBlockedUsersCount ===
+// === Module 7682: useStageBlockedUsersCount ===
 
-// Module 7805 (useStageBlockedUsersCount)
+// Module 7682 (useStageBlockedUsersCount)
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 
 const require = arg1;
@@ -31,14 +31,14 @@ export const useStageIgnoredUsersCount = function useStageIgnoredUsersCount(id1)
   }, items1);
 };
 export const getStageBlockedUsersCount = function getStageBlockedUsersCount(id) {
-  let num = store.getParticipantCount(id, require(5080) /* sortKey */.StageChannelParticipantNamedIndex.BLOCKED);
+  let num = store.getParticipantCount(id, require(5018) /* sortKey */.StageChannelParticipantNamedIndex.BLOCKED);
   if (num == null) {
     num = 0;
   }
   return num;
 };
 export const getStageIgnoredUsersCount = function getStageIgnoredUsersCount(id) {
-  let num = store.getParticipantCount(id, require(5080) /* sortKey */.StageChannelParticipantNamedIndex.IGNORED);
+  let num = store.getParticipantCount(id, require(5018) /* sortKey */.StageChannelParticipantNamedIndex.IGNORED);
   if (num == null) {
     num = 0;
   }

@@ -1,6 +1,6 @@
-// === Module 8170: AlwaysCompressImagesSwitch ===
+// === Module 6203: AlwaysCompressImagesSwitch ===
 
-// Module 8170 (AlwaysCompressImagesSwitch)
+// Module 6203 (AlwaysCompressImagesSwitch)
 import useAPNGPlayerControls from "useAPNGPlayerControls";
 import getSystemLocale from "getSystemLocale";
 import { View } from "getKestrelConfig";
@@ -51,8 +51,8 @@ function AlwaysCompressImagesSwitch(isKestrelTreatment) {
       obj1[0] = tmp.compressionHint;
       const intl2 = tmp2(1236).intl;
       obj1[2] = intl2.string(tmp2(1236).t["wC0+Ph"]);
-      obj[5] = callback2(tmp2(4251).Text, obj1);
-      obj[1] = callback2(tmp2(5621).TableSwitchRow, obj);
+      obj[5] = callback2(tmp2(4189).Text, obj1);
+      obj[1] = callback2(tmp2(5559).TableSwitchRow, obj);
       tmp6 = callback2(View, obj);
     }
   }
@@ -70,13 +70,13 @@ function PremiumUpsellImage(arg0) {
         obj = { url: null, style: null, autoplay: true };
         obj[0] = image.uri;
         obj[1] = style;
-        let tmp5 = callback2(require(8176) /* useAPNGPlayerControls */.APNGPlayer, obj);
+        let tmp5 = callback2(require(6210) /* useAPNGPlayerControls */.APNGPlayer, obj);
       }
       return tmp5;
     }
   }
   obj = { source: image, resizeMode: "contain", style, enableAnimation: !useReducedMotion, accessible: false };
-  tmp5 = callback2(importDefault(5207), obj);
+  tmp5 = callback2(importDefault(5145), obj);
 }
 ({ PremiumSubscriptionSKUs: unpackModuleId, PremiumTypes: closure_12, PremiumUpsellTypes: map1 } = GuildFeatures);
 ({ AnalyticEvents: closure_14, AnalyticsPages: closure_15, HelpdeskArticles: closure_16, ThemeTypes: closure_17 } = ME);

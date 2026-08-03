@@ -1,6 +1,6 @@
-// === Module 10100: ForLaterCardActionButtons ===
+// === Module 9957: ForLaterCardActionButtons ===
 
-// Module 10100 (ForLaterCardActionButtons)
+// Module 9957 (ForLaterCardActionButtons)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -37,7 +37,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }, items);
   let intl = savedMessage(1236).intl;
   obj[0] = intl.string(savedMessage(1236).t["+TSRGD"]);
-  obj[1] = savedMessage(10104).ChatArrowRightIcon;
+  obj[1] = savedMessage(9961).ChatArrowRightIcon;
   obj[2] = function action() {
     return jumpToMessage();
   };
@@ -50,7 +50,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }
   obj = {
     label: intl2.string(SvXS1Z),
-    IconComponent: tmp3(5241).XSmallIcon,
+    IconComponent: tmp3(5179).XSmallIcon,
     action() {
       return savedMessage(outer1_2[7]).removeSavedMessage(savedMessage.saveData);
     },
@@ -61,10 +61,10 @@ export default function ForLaterCardActionButtons(savedMessage) {
     obj = { label: null, IconComponent: null, action: null };
     const intl3 = tmp3(1236).intl;
     obj[0] = intl3.string(tmp3(1236).t.vrbqs1);
-    obj[1] = tmp3(9284).PencilIcon;
+    obj[1] = tmp3(9111).PencilIcon;
     obj[2] = callback;
     items1.unshift(obj);
   }
   const tmp = callback();
-  return <View style={callback().actionGroup}>{jsx(savedMessage(9482).ContextMenu, obj2)}</View>;
+  return <View style={callback().actionGroup}>{jsx(savedMessage(9310).ContextMenu, obj2)}</View>;
 };

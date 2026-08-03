@@ -1,6 +1,6 @@
-// === Module 11136: GiftIntentType ===
+// === Module 11019: GiftIntentType ===
 
-// Module 11136 (GiftIntentType)
+// Module 11019 (GiftIntentType)
 import { GiftIntentType } from "GuildFeatures";
 import { AnalyticsLocations } from "ME";
 
@@ -31,7 +31,7 @@ export const getGiftIntentTypeForLocation = function getGiftIntentTypeForLocatio
 };
 export const parseGiftIntentType = function parseGiftIntentType(giftIntentType) {
   let tmp = null;
-  if (typeof giftIntentType !== "SENTRY_RELEASE") {
+  if (typeof giftIntentType !== "__REMOTEDEV__") {
     tmp = null;
     if (giftIntentType in GiftIntentType) {
       tmp = null;

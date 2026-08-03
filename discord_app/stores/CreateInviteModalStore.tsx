@@ -1,6 +1,6 @@
-// === Module 8658: updateWithLatestInvite ===
+// === Module 8353: updateWithLatestInvite ===
 
-// Module 8658 (updateWithLatestInvite)
+// Module 8353 (updateWithLatestInvite)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import map from "map";
@@ -19,7 +19,7 @@ function updateWithLatestInvite(channelId, arg1) {
     guild_id = channel.guild_id;
   }
   guild = guild.getGuild(guild_id);
-  let obj = require(8661) /* getDefaultInviteExpiration */;
+  let obj = require(8356) /* getDefaultInviteExpiration */;
   let maxAge = obj.getDefaultInviteExpiration({ guild });
   invite = invite.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
   obj = { channelId, maxAge: null, maxUses: null, temporary: null, flags: null, targetType: null, targetUserId: null, targetApplicationId: null, roleIds: null };

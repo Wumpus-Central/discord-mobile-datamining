@@ -1,6 +1,6 @@
-// === Module 12268: UserProfileApplicationWidgetBottomStatsLayout ===
+// === Module 12172: UserProfileApplicationWidgetBottomStatsLayout ===
 
-// Module 12268 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 12172 (UserProfileApplicationWidgetBottomStatsLayout)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

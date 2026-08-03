@@ -1,6 +1,6 @@
-// === Module 5823: GuildVisibility ===
+// === Module 8472: GuildVisibility ===
 
-// Module 5823 (GuildVisibility)
+// Module 8472 (GuildVisibility)
 import ME from "ME";
 
 let c3;

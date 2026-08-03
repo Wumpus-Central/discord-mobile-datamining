@@ -1,6 +1,6 @@
-// === Module 11679: sortChannelsByLastMessageId ===
+// === Module 11572: sortChannelsByLastMessageId ===
 
-// Module 11679 (sortChannelsByLastMessageId)
+// Module 11572 (sortChannelsByLastMessageId)
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

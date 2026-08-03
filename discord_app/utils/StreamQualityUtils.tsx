@@ -1,6 +1,6 @@
-// === Module 9037: isPremiumResolution ===
+// === Module 8860: isPremiumResolution ===
 
-// Module 9037 (isPremiumResolution)
+// Module 8860 (isPremiumResolution)
 import noop from "noop";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import fetchFingerprint from "fetchFingerprint";

@@ -1,10 +1,10 @@
-// === Module 15603: createSearchResultLinkPreviewReactRules ===
+// === Module 15536: createSearchResultLinkPreviewReactRules ===
 
-// Module 15603 (createSearchResultLinkPreviewReactRules)
+// Module 15536 (createSearchResultLinkPreviewReactRules)
 const result = require("set").fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
 
 export const createSearchResultLinkPreviewReactRules = function createSearchResultLinkPreviewReactRules() {
-  let obj = require(10436) /* defaultReactFn */;
+  let obj = require(10297) /* defaultReactFn */;
   obj = { iconColor: "mobile-text-heading-primary", iconSize: "xs", channelIconSize: require(1297) /* Button */.IconSizes.SMALL_14, customEmojiSize: 16 };
   return obj.createMessagePreviewReactRules(obj);
 };

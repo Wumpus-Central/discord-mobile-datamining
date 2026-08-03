@@ -1,6 +1,6 @@
-// === Module 11514: PollCreationInputError ===
+// === Module 11404: PollCreationInputError ===
 
-// Module 11514 (PollCreationInputError)
+// Module 11404 (PollCreationInputError)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -32,7 +32,7 @@ export default function PollCreationInputError(message) {
   }, items);
   let obj = { style: tmp.container, children: null };
   obj = { width: 16, height: 16, style: tmp.icon };
-  const items1 = [callback(message(1297).WarningCircle, obj), callback(message(4251).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
+  const items1 = [callback(message(1297).WarningCircle, obj), callback(message(4189).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children: message })];
   obj[1] = items1;
   return callback2(View, obj);
 };

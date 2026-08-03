@@ -1,6 +1,6 @@
-// === Module 12052: GameProfileReportButton ===
+// === Module 11956: GameProfileReportButton ===
 
-// Module 12052 (GameProfileReportButton)
+// Module 11956 (GameProfileReportButton)
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -23,5 +23,5 @@ export default function GameProfileReportButton(applicationId) {
   const intl = applicationId(1236).intl;
   obj[2] = intl.string(applicationId(1236).t.qP2cXd);
   obj[3] = callback;
-  return jsx(applicationId(4666).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  return jsx(applicationId(4604).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 };

@@ -1,6 +1,6 @@
-// === Module 7748: useIsAgeVerificationExpressiveModalEverywhereEnabled ===
+// === Module 7622: useIsAgeVerificationExpressiveModalEverywhereEnabled ===
 
-// Module 7748 (useIsAgeVerificationExpressiveModalEverywhereEnabled)
+// Module 7622 (useIsAgeVerificationExpressiveModalEverywhereEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

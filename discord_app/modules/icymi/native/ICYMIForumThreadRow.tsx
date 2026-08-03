@@ -1,6 +1,6 @@
-// === Module 15478: ICYMIForumThreadRow ===
+// === Module 15411: ICYMIForumThreadRow ===
 
-// Module 15478 (ICYMIForumThreadRow)
+// Module 15411 (ICYMIForumThreadRow)
 import getDefaultRules from "get defaultRules";
 import { View } from "PressableBase";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -17,7 +17,7 @@ class ICYMIForumThreadRow {
     message = global.message;
     c2 = undefined;
     author = undefined;
-    tmp = f61810();
+    tmp = f61687();
     tmp2 = channel;
     tmp3 = c2;
     obj = require("initialize");

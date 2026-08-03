@@ -1,6 +1,6 @@
-// === Module 8039: updateAssets ===
+// === Module 7921: updateAssets ===
 
-// Module 8039 (updateAssets)
+// Module 7921 (updateAssets)
 import _slicedToArray from "_slicedToArray";
 import timestamp from "timestamp";
 import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";
@@ -732,7 +732,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
         applyResult = HermesBuiltin.apply(items, Math);
       }
       let str4 = "";
-      if (typeof applyResult !== "SENTRY_RELEASE") {
+      if (typeof applyResult !== "__REMOTEDEV__") {
         const _HermesInternal3 = HermesInternal;
         str4 = "?size=" + require(1450) /* handleImageLoad */.getBestMediaProxySize(applyResult);
         const obj4 = require(1450) /* handleImageLoad */;

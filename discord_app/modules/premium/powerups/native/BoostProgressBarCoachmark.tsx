@@ -1,6 +1,6 @@
-// === Module 15141: BoostProgressBarCoachmark ===
+// === Module 15161: BoostProgressBarCoachmark ===
 
-// Module 15141 (BoostProgressBarCoachmark)
+// Module 15161 (BoostProgressBarCoachmark)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
@@ -44,6 +44,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj[9] = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(8745).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(8440).useCoachmark(guild.targetRef, memo);
   return null;
 };

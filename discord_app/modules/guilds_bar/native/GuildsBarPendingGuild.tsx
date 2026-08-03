@@ -1,7 +1,7 @@
-// === Module 15310: ? ===
+// === Module 15023: ? ===
 
-// Module 15310
-import importAllResult from "module_4116";
+// Module 15023
+import importAllResult from "module_4054";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";
 import handleConnectionOpen from "handleConnectionOpen";

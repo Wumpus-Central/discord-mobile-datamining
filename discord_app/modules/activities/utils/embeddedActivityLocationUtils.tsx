@@ -1,6 +1,6 @@
-// === Module 3873: getEmbeddedActivityLocationChannelId ===
+// === Module 3811: getEmbeddedActivityLocationChannelId ===
 
-// Module 3873 (getEmbeddedActivityLocationChannelId)
+// Module 3811 (getEmbeddedActivityLocationChannelId)
 const result = require("set").fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
 
 export const getEmbeddedActivityLocationChannelId = function getEmbeddedActivityLocationChannelId(_location) {

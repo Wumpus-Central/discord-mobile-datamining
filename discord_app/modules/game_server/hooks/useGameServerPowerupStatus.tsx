@@ -1,6 +1,6 @@
-// === Module 11785: useGameServerPowerupStatus ===
+// === Module 11680: useGameServerPowerupStatus ===
 
-// Module 11785 (useGameServerPowerupStatus)
+// Module 11680 (useGameServerPowerupStatus)
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 
@@ -19,7 +19,7 @@ export default function useGameServerPowerupStatus(arg0) {
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(11769)(arg0);
+  const tmp2 = stateFromStores(11664)(arg0);
   const dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return React.useMemo(() => {

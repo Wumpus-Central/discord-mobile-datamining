@@ -1,6 +1,6 @@
-// === Module 10667: postMessageToWebView ===
+// === Module 10633: postMessageToWebView ===
 
-// Module 10667 (postMessageToWebView)
+// Module 10633 (postMessageToWebView)
 import closure_3 from "WebView";
 import map from "map";
 import { ComponentActions } from "ME";
@@ -198,7 +198,7 @@ prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason
   let code;
   let message;
   ({ code, message } = reason);
-  let obj = importDefault(4595);
+  let obj = importDefault(4533);
   obj = { title: null, body: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.hbiAO6, { code });
@@ -218,8 +218,8 @@ prototype["leaveFrame"] = function leaveFrame(applicationId) {
 };
 prototype["clearFrameState"] = function clearFrameState(applicationId) {
   applicationId = applicationId.applicationId;
-  importDefault(10661).stopFrame({ applicationId });
-  const obj = importDefault(10661);
+  importDefault(5698).stopFrame({ applicationId });
+  const obj = importDefault(5698);
   importDefault(709).dispatch({ type: "FRAME_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null });
 };
 prototype["releaseWebView"] = function releaseWebView() {

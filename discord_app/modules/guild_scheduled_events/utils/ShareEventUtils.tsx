@@ -1,6 +1,6 @@
-// === Module 8539: SHARE_EVENT_DETAILS_LINK ===
+// === Module 8232: SHARE_EVENT_DETAILS_LINK ===
 
-// Module 8539 (SHARE_EVENT_DETAILS_LINK)
+// Module 8232 (SHARE_EVENT_DETAILS_LINK)
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");
 
 export const SHARE_EVENT_DETAILS_LINK = (guildId) => "https://discord.com/events/" + guildId.guildId + "/" + guildId.guildEventId;

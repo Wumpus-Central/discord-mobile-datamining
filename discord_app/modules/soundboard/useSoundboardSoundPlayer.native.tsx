@@ -1,6 +1,6 @@
-// === Module 15985: useSoundboardSoundPlayer ===
+// === Module 15921: useSoundboardSoundPlayer ===
 
-// Module 15985 (useSoundboardSoundPlayer)
+// Module 15921 (useSoundboardSoundPlayer)
 import noop from "noop";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import { SoundOutputChannel } from "SoundOutputChannel";

@@ -1,6 +1,6 @@
-// === Module 8764: GuildProfileActionSheet ===
+// === Module 8463: GuildProfileActionSheet ===
 
-// Module 8764 (GuildProfileActionSheet)
+// Module 8463 (GuildProfileActionSheet)
 import _slicedToArray from "_slicedToArray";
 import _fetchGuildTopGames from "_fetchGuildTopGames";
 import get_ActivityIndicator from "QUICK_SWITCHER";

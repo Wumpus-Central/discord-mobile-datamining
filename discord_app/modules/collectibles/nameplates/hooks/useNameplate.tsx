@@ -1,6 +1,6 @@
-// === Module 8679: useNameplate ===
+// === Module 8374: useNameplate ===
 
-// Module 8679 (useNameplate)
+// Module 8374 (useNameplate)
 import noop from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 

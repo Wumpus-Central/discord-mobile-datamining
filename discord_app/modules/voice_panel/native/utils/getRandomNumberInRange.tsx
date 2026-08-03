@@ -1,6 +1,6 @@
-// === Module 16050: n ===
+// === Module 15986: n ===
 
-// Module 16050 (n)
+// Module 15986 (n)
 const fn = function n(arg0, arg1) {
   return Math.random() * (arg1 - arg0) + arg0;
 };

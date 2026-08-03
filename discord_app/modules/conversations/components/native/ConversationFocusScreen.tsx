@@ -1,6 +1,6 @@
-// === Module 9488: ConversationFocusScreen ===
+// === Module 9316: ConversationFocusScreen ===
 
-// Module 9488 (ConversationFocusScreen)
+// Module 9316 (ConversationFocusScreen)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import removePendingListFetch from "removePendingListFetch";

@@ -1,6 +1,6 @@
-// === Module 9974: BalanceWidgetPillButton ===
+// === Module 9829: BalanceWidgetPillButton ===
 
-// Module 9974 (BalanceWidgetPillButton)
+// Module 9829 (BalanceWidgetPillButton)
 import "noop";
 import { jsx } from "jsxProd";
 

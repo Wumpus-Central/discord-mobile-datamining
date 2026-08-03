@@ -1,6 +1,6 @@
-// === Module 7557: useIsBuyNitroPurchaseBlocked ===
+// === Module 6571: useIsBuyNitroPurchaseBlocked ===
 
-// Module 7557 (useIsBuyNitroPurchaseBlocked)
+// Module 6571 (useIsBuyNitroPurchaseBlocked)
 import updateProduct from "updateProduct";
 import keys from "keys";
 

@@ -1,6 +1,6 @@
-// === Module 11606: DiceRollBar ===
+// === Module 11496: DiceRollBar ===
 
-// Module 11606 (DiceRollBar)
+// Module 11496 (DiceRollBar)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

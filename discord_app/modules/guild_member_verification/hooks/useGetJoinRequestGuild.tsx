@@ -1,6 +1,6 @@
-// === Module 12065: useGetGuildJoinRequest ===
+// === Module 11969: useGetGuildJoinRequest ===
 
-// Module 12065 (useGetGuildJoinRequest)
+// Module 11969 (useGetGuildJoinRequest)
 import noop from "noop";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 

@@ -1,6 +1,6 @@
-// === Module 16071: areVoicePanelPreJoinContentPropsEqual ===
+// === Module 16007: areVoicePanelPreJoinContentPropsEqual ===
 
-// Module 16071 (areVoicePanelPreJoinContentPropsEqual)
+// Module 16007 (areVoicePanelPreJoinContentPropsEqual)
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
 
 export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJoinContentPropsEqual(streamingMembers) {

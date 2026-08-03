@@ -1,6 +1,6 @@
-// === Module 11078: isProtocolRegistered ===
+// === Module 10956: isProtocolRegistered ===
 
-// Module 11078 (isProtocolRegistered)
+// Module 10956 (isProtocolRegistered)
 import { Store } from "initialize";
 
 let c0 = false;

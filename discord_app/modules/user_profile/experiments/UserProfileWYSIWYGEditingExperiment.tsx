@@ -1,6 +1,6 @@
-// === Module 9961: useIsEligibleForUserProfileWYSIWYGEditing ===
+// === Module 9816: useIsEligibleForUserProfileWYSIWYGEditing ===
 
-// Module 9961 (useIsEligibleForUserProfileWYSIWYGEditing)
+// Module 9816 (useIsEligibleForUserProfileWYSIWYGEditing)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

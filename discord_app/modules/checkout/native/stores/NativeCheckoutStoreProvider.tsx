@@ -1,6 +1,6 @@
-// === Module 7322: NativeCheckoutStoreProvider ===
+// === Module 6668: NativeCheckoutStoreProvider ===
 
-// Module 7322 (NativeCheckoutStoreProvider)
+// Module 6668 (NativeCheckoutStoreProvider)
 import CustomCheckoutFlow from "CustomCheckoutFlow";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -26,7 +26,7 @@ function NativeCheckoutStoreProvider(children) {
   let closure_6;
   let first;
   let closure_8;
-  closure_6 = order(5569)(() => {
+  closure_6 = order(5507)(() => {
     let id;
     if (order != null) {
       id = order.id;

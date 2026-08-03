@@ -1,6 +1,6 @@
-// === Module 11879: HubProgressHeader ===
+// === Module 11777: HubProgressHeader ===
 
-// Module 11879 (HubProgressHeader)
+// Module 11777 (HubProgressHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import items from "items";

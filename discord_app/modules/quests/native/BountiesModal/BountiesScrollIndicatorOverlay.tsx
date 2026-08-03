@@ -1,6 +1,6 @@
-// === Module 14151: BountiesScrollIndicatorOverlay ===
+// === Module 14084: BountiesScrollIndicatorOverlay ===
 
-// Module 14151 (BountiesScrollIndicatorOverlay)
+// Module 14084 (BountiesScrollIndicatorOverlay)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";

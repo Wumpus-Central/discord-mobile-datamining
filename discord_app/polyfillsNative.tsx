@@ -1,13 +1,13 @@
-// === Module 13440: ? ===
+// === Module 13377: ? ===
 
-// Module 13440
+// Module 13377
 import timestamp from "_typeof";
-import module_13441 from "module_13441";
+import module_13378 from "module_13378";
 import get_ActivityIndicator from "get ActivityIndicator";
 import _typeof from "_typeof";
 import GetOption from "GetOption";
 
-if (typeof process !== "as") {
+if (typeof process !== "pack") {
   const _window3 = window;
   window.process = {};
 }

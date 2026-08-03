@@ -1,6 +1,6 @@
-// === Module 14284: QuestThemePicker ===
+// === Module 14217: QuestThemePicker ===
 
-// Module 14284 (QuestThemePicker)
+// Module 14217 (QuestThemePicker)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "Text";
 import initialize from "initialize";
@@ -95,7 +95,7 @@ class QuestThemePicker {
         const obj = tmp(allMobileThemes[16]);
       }
     }, items5);
-    f93699 = callback;
+    f93508 = callback;
     items6 = [];
     items6[0] = callback;
     obj = { style: tmp.themeSection, children: null };
@@ -129,18 +129,18 @@ class QuestThemePicker {
       return tmp(closure_5, obj, backgroundColor.theme);
     });
     obj2 = { style: tmp.resetButton, onPress: callback1, children: null };
-    obj3 = { style: tmp.resetIcon, children: f93699(require("RefreshIcon").RefreshIcon, { size: "sm" }) };
+    obj3 = { style: tmp.resetIcon, children: f93508(require("RefreshIcon").RefreshIcon, { size: "sm" }) };
     items8 = [, ];
-    items8[0] = f93699(isSynced, obj3);
+    items8[0] = f93508(isSynced, obj3);
     obj4 = { variant: "text-xs/medium", color: "text-muted", style: tmp.themeLabel, children: null };
     intl = require("getSystemLocale").intl;
     obj4[3] = intl.string(require("getSystemLocale").t.yBZMsQ);
-    items8[1] = f93699(require("Text").Text, obj4);
+    items8[1] = f93508(require("Text").Text, obj4);
     obj2[2] = items8;
     items7[1] = jsxs(useRef, obj2);
     obj1[1] = items7;
     obj[1] = jsxs(isSynced, obj1);
-    return f93699(isSynced, obj);
+    return f93508(isSynced, obj);
   }
 }
 ({ View: c4, TouchableOpacity: c5 } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
-// === Module 7709: set ===
+// === Module 6751: set ===
 
-// Module 7709 (set)
+// Module 6751 (set)
 import { HelpdeskArticles } from "ME";
 import set from "getSystemLocale";
 

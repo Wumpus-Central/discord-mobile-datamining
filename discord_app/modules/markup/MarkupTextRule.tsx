@@ -1,6 +1,6 @@
-// === Module 4695: textRegexp ===
+// === Module 4633: textRegexp ===
 
-// Module 4695 (textRegexp)
+// Module 4633 (textRegexp)
 import t from "t";
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;

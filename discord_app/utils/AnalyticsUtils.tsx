@@ -31,18 +31,18 @@ function expandEventProperties(arg0) {
   let obj2 = obj;
   if (null == obj.location) {
     if (null == obj.source) {
-      tmp.client_performance_cpu = importDefault(7043).getCurrentCPUUsagePercent();
-      const obj6 = importDefault(7043);
-      tmp.client_performance_memory = importDefault(7043).getCurrentMemoryUsageKB();
-      const obj7 = importDefault(7043);
-      tmp.cpu_core_count = importDefault(7043).getCPUCoreCount();
+      tmp.client_performance_cpu = importDefault(5964).getCurrentCPUUsagePercent();
+      const obj6 = importDefault(5964);
+      tmp.client_performance_memory = importDefault(5964).getCurrentMemoryUsageKB();
+      const obj7 = importDefault(5964);
+      tmp.cpu_core_count = importDefault(5964).getCPUCoreCount();
       tmp.accessibility_features = getAccessibilityFeatures();
       tmp.rendered_locale = obj2(1236).intl.currentLocale;
       const _Math = Math;
       const _performance = performance;
       tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
-      const obj8 = importDefault(7043);
-      const processUptime = importDefault(7043).getProcessUptime();
+      const obj8 = importDefault(5964);
+      const processUptime = importDefault(5964).getProcessUptime();
       if (null != processUptime) {
         const _Math2 = Math;
         tmp.uptime_process_renderer = Math.floor(processUptime);
@@ -118,7 +118,7 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
   launchSignature = obj2.generateLaunchSignature(obj3.getGlobalObject());
 }
 function addBreadcrumb(arg0) {
-  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require(13339) /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
+  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require(13276) /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
     let obj = importDefault(1208);
     obj = { category: "analytics", message: null };

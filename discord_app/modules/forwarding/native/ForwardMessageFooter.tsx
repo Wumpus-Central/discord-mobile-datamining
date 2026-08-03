@@ -1,6 +1,6 @@
-// === Module 10072: ForwardMessageFooter ===
+// === Module 9929: ForwardMessageFooter ===
 
-// Module 10072 (ForwardMessageFooter)
+// Module 9929 (ForwardMessageFooter)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleChanged from "handleChanged";

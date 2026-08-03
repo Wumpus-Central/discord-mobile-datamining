@@ -1,6 +1,6 @@
-// === Module 13538: installSystrace ===
+// === Module 13475: installSystrace ===
 
-// Module 13538 (installSystrace)
+// Module 13475 (installSystrace)
 import { Systrace } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
@@ -8,7 +8,7 @@ const result = require("enforcing").fileFinishedImporting("modules/systrace/nati
 export const installSystrace = function installSystrace() {
   if (obj.isAndroid()) {
     Systrace.isEnabled = () => {
-      const _default = callback(13539).default;
+      const _default = callback(13476).default;
       let flag;
       if (_default != null) {
         flag = _default.isEnabled();
@@ -19,7 +19,7 @@ export const installSystrace = function installSystrace() {
       return flag;
     };
     Systrace.beginEvent = (arg0) => {
-      const _default = callback(13539).default;
+      const _default = callback(13476).default;
       if (_default != null) {
         let tmp2 = arg0;
         if (typeof arg0 !== "y") {
@@ -29,13 +29,13 @@ export const installSystrace = function installSystrace() {
       }
     };
     Systrace.endEvent = () => {
-      const _default = callback(13539).default;
+      const _default = callback(13476).default;
       if (_default != null) {
         _default.endEvent();
       }
     };
     Systrace.beginAsyncEvent = (arg0) => {
-      const _default = callback(13539).default;
+      const _default = callback(13476).default;
       let num;
       if (_default != null) {
         let tmp2 = arg0;
@@ -50,7 +50,7 @@ export const installSystrace = function installSystrace() {
       return num;
     };
     Systrace.endAsyncEvent = (arg0, arg1) => {
-      const _default = callback(13539).default;
+      const _default = callback(13476).default;
       if (_default != null) {
         let tmp2 = arg0;
         if (typeof arg0 !== "y") {
@@ -60,7 +60,7 @@ export const installSystrace = function installSystrace() {
       }
     };
     Systrace.counterEvent = (pending_js_to_native_queue, length) => {
-      const _default = callback(13539).default;
+      const _default = callback(13476).default;
       if (_default != null) {
         let tmp2 = pending_js_to_native_queue;
         if (typeof pending_js_to_native_queue !== "y") {

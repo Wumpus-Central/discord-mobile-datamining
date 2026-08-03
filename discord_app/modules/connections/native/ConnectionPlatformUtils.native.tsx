@@ -1,6 +1,6 @@
-// === Module 14078: getConnectionBackgroundColor ===
+// === Module 14011: getConnectionBackgroundColor ===
 
-// Module 14078 (getConnectionBackgroundColor)
+// Module 14011 (getConnectionBackgroundColor)
 let BATTLENET;
 let BUNGIE;
 let CRUNCHYROLL;

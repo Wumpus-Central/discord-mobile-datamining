@@ -1,6 +1,6 @@
-// === Module 8914: useIsVariantColorLight ===
+// === Module 8737: useIsVariantColorLight ===
 
-// Module 8914 (useIsVariantColorLight)
+// Module 8737 (useIsVariantColorLight)
 import noop from "noop";
 
 const require = arg1;

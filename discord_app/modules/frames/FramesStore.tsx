@@ -1,6 +1,6 @@
-// === Module 10657: map ===
+// === Module 5690: map ===
 
-// Module 10657 (map)
+// Module 5690 (map)
 import { FrameLayoutModes } from "FrameLayoutModes";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { Store } from "initialize";
@@ -72,7 +72,7 @@ const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
     let proxyTicket;
     applicationId = applicationId.applicationId;
     ({ proxyTicket, channelId } = applicationId);
-    const tmp = importDefault(10659)(applicationId);
+    const tmp = importDefault(5693)(applicationId);
     if (null != tmp) {
       map.delete(applicationId);
       const obj = { applicationId: null, url: null, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, channelId: null };

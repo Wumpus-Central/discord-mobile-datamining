@@ -1,6 +1,6 @@
-// === Module 8504: ContentInventoryFeedKey ===
+// === Module 8197: ContentInventoryFeedKey ===
 
-// Module 8504 (ContentInventoryFeedKey)
+// Module 8197 (ContentInventoryFeedKey)
 const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryConstants.tsx");
 
 export const ContentInventoryFeedKey = { GLOBAL_FEED: "global feed", GAME_PROFILE_FEED: "game profile feed" };

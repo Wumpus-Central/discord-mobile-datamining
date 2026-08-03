@@ -1,6 +1,6 @@
-// === Module 10399: isOnlyDayLoss ===
+// === Module 10260: isOnlyDayLoss ===
 
-// Module 10399 (isOnlyDayLoss)
+// Module 10260 (isOnlyDayLoss)
 let Created;
 let Disabled;
 let Enabled;
@@ -256,12 +256,12 @@ export const getRestrictedScheduleNotificationTitle = function getRestrictedSche
 export const getRestrictedScheduleNotificationSubtitle = function getRestrictedScheduleNotificationSubtitle(rule) {
   let result = null;
   if (null != rule) {
-    result = require(10400) /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
-    const obj = require(10400) /* setsEqual */;
+    result = require(10261) /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
+    const obj = require(10261) /* setsEqual */;
   }
   if (result == null) {
     const intl = require(1236) /* getSystemLocale */.intl;
-    result = intl.string(importDefault(2255)["8OlpoY"]);
+    result = intl.string(importDefault(2225)["8OlpoY"]);
   }
   return result;
 };

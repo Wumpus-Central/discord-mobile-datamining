@@ -1,6 +1,6 @@
-// === Module 16770: AVErrorStreamBadNetworkQualityDefinition ===
+// === Module 16704: AVErrorStreamBadNetworkQualityDefinition ===
 
-// Module 16770 (AVErrorStreamBadNetworkQualityDefinition)
+// Module 16704 (AVErrorStreamBadNetworkQualityDefinition)
 import initialize from "initialize";
 import { RTCConnectionQuality } from "ME";
 
@@ -14,10 +14,10 @@ export const AVErrorStreamBadNetworkQualityDefinition = {
       let tmp = null;
       if (quality.getQuality(streamKey) === constants.BAD) {
         const obj = { type: null };
-        obj[0] = callback(9038).AVError.STREAM_BAD_NETWORK_QUALITY;
-        const merged = Object.assign(callback(16763).getStreamErrorContext(streamKey));
+        obj[0] = callback(8861).AVError.STREAM_BAD_NETWORK_QUALITY;
+        const merged = Object.assign(callback(16697).getStreamErrorContext(streamKey));
         tmp = obj;
-        const obj2 = callback(16763);
+        const obj2 = callback(16697);
       }
       return tmp;
     });

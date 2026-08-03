@@ -1,6 +1,6 @@
-// === Module 10790: allowPopups ===
+// === Module 10682: allowPopups ===
 
-// Module 10790 (allowPopups)
+// Module 10682 (allowPopups)
 import { APPLICATIONS_WITH_ALLOWED_POPUPS as closure_0 } from "items3";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/allowPopups.tsx");

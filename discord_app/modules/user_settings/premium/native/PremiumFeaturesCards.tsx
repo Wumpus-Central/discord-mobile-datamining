@@ -1,6 +1,6 @@
-// === Module 8192: PremiumFeaturesCards ===
+// === Module 9333: PremiumFeaturesCards ===
 
-// Module 8192 (PremiumFeaturesCards)
+// Module 9333 (PremiumFeaturesCards)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { PremiumTypes } from "GuildFeatures";

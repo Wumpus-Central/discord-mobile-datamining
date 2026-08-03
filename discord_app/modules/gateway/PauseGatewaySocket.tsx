@@ -1,6 +1,6 @@
-// === Module 12809: getIsPaused ===
+// === Module 12746: getIsPaused ===
 
-// Module 12809 (getIsPaused)
+// Module 12746 (getIsPaused)
 let c0 = false;
 const result = require("set").fileFinishedImporting("modules/gateway/PauseGatewaySocket.tsx");
 

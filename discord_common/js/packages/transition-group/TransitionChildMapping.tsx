@@ -1,6 +1,6 @@
-// === Module 10545: getChildMapping ===
+// === Module 10406: getChildMapping ===
 
-// Module 10545 (getChildMapping)
+// Module 10406 (getChildMapping)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionChildMapping.tsx");

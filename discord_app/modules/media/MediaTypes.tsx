@@ -1,6 +1,6 @@
-// === Module 4482: messageAttachmentToUnfurledMediaItem ===
+// === Module 4420: messageAttachmentToUnfurledMediaItem ===
 
-// Module 4482 (messageAttachmentToUnfurledMediaItem)
+// Module 4420 (messageAttachmentToUnfurledMediaItem)
 import { MessageAttachmentFlags } from "ME";
 
 function messageAttachmentToUnfurledMediaItem(flags) {
@@ -75,7 +75,7 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(conten
       }
     }
     str = str3;
-    tmpResult = require(4443) /* urlMatchesFileExtension */;
+    tmpResult = require(4381) /* urlMatchesFileExtension */;
   }
   return str;
 };
@@ -89,7 +89,7 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
       str2 = "VIDEO";
     }
     str = str2;
-    tmp2Result = require(4443) /* urlMatchesFileExtension */;
+    tmp2Result = require(4381) /* urlMatchesFileExtension */;
   }
   obj.type = str;
   obj.alt = found2.description;

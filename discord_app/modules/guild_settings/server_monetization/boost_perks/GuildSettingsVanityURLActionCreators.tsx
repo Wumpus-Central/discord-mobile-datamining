@@ -1,6 +1,6 @@
-// === Module 8618: fetchVanityUrl ===
+// === Module 8313: fetchVanityUrl ===
 
-// Module 8618 (fetchVanityUrl)
+// Module 8313 (fetchVanityUrl)
 import { Endpoints } from "ME";
 
 const result = require("dispatcher").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");

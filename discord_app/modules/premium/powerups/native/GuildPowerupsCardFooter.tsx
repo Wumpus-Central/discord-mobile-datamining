@@ -1,6 +1,6 @@
-// === Module 11736: GuildPowerupCardFooterActive ===
+// === Module 11629: GuildPowerupCardFooterActive ===
 
-// Module 11736 (GuildPowerupCardFooterActive)
+// Module 11629 (GuildPowerupCardFooterActive)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

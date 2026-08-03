@@ -1,6 +1,6 @@
-// === Module 16584: GuildSettingsModalCommunity ===
+// === Module 16518: GuildSettingsModalCommunity ===
 
-// Module 16584 (GuildSettingsModalCommunity)
+// Module 16518 (GuildSettingsModalCommunity)
 import computeChannelName from "computeChannelName";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
@@ -203,10 +203,10 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj[0] = intl.string(preferredLocale(navigation[16]).t.Yr6nGx);
     obj[1] = callback1();
     obj[2] = function onItemSelect(rulesChannelId) {
-      let obj = callback(8613);
+      let obj = callback(8308);
       obj = { rulesChannelId };
       obj.updateGuild(obj);
-      callback(4223).hideActionSheet();
+      callback(4161).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -223,10 +223,10 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj[0] = intl.string(preferredLocale(navigation[16]).t.VqhxxN);
     obj[1] = callback1();
     obj[2] = function onItemSelect(publicUpdatesChannelId) {
-      let obj = callback(8613);
+      let obj = callback(8308);
       obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
-      callback(4223).hideActionSheet();
+      callback(4161).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {

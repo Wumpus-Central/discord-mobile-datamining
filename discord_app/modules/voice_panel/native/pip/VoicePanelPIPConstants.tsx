@@ -1,6 +1,6 @@
-// === Module 16000: VoicePanelPIPModes ===
+// === Module 15936: VoicePanelPIPModes ===
 
-// Module 16000 (VoicePanelPIPModes)
+// Module 15936 (VoicePanelPIPModes)
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");
 
 export const VoicePanelPIPModes = { IN_APP: "IN_APP", IN_PANEL: "IN_PANEL" };

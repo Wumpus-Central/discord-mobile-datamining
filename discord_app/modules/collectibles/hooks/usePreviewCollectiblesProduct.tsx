@@ -1,6 +1,6 @@
-// === Module 8923: usePreviewCollectibleProduct ===
+// === Module 8746: usePreviewCollectibleProduct ===
 
-// Module 8923 (usePreviewCollectibleProduct)
+// Module 8746 (usePreviewCollectibleProduct)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { isAvatarDecorationRecord } from "fromServer";
@@ -15,7 +15,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const _require = product;
   const dependencyMap = arg1;
   let _slicedToArray = arg2;
-  const shopProductItems = _require(8382).useShopProductItems(product);
+  const shopProductItems = _require(8049).useShopProductItems(product);
   const firstProfileEffect = shopProductItems.firstProfileEffect;
   const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
   const firstNameplate = shopProductItems.firstNameplate;
@@ -79,7 +79,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       }
       return () => {
         if (closure_1) {
-          outer1_0(outer1_1[8]).setPendingChanges({ avatarDecoration: "Array", profileEffect: "flex", nameplate: "y", profileFrame: "HermesInternal" });
+          outer1_0(outer1_1[8]).setPendingChanges({ avatarDecoration: "Array", profileEffect: "flex", nameplate: "borderRadius", profileFrame: "label" });
           const obj = outer1_0(outer1_1[8]);
         }
       };

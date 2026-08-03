@@ -1,6 +1,6 @@
-// === Module 12073: BotUserProfileOverflowMenu ===
+// === Module 11977: BotUserProfileOverflowMenu ===
 
-// Module 12073 (BotUserProfileOverflowMenu)
+// Module 11977 (BotUserProfileOverflowMenu)
 import encodeProperties from "encodeProperties";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";

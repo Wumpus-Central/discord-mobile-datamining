@@ -1,6 +1,6 @@
-// === Module 3887: MemberSafetyPagePermissions ===
+// === Module 3825: MemberSafetyPagePermissions ===
 
-// Module 3887 (MemberSafetyPagePermissions)
+// Module 3825 (MemberSafetyPagePermissions)
 import { Permissions } from "ME";
 import importAllResult from "fromString";
 

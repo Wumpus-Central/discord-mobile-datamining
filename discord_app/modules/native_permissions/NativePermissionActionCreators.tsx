@@ -1,6 +1,6 @@
-// === Module 4804: setPermission ===
+// === Module 4742: setPermission ===
 
-// Module 4804 (setPermission)
+// Module 4742 (setPermission)
 const prototype = function NativePermissionActionCreators() {
   return Object.create(new.target.prototype);
 }.prototype;

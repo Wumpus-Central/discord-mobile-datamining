@@ -1,6 +1,6 @@
-// === Module 7497: initialize ===
+// === Module 5695: initialize ===
 
-// Module 7497 (initialize)
+// Module 5695 (initialize)
 import { ApplicationFlags } from "ME";
 import { PersistedStore } from "initialize";
 
@@ -23,7 +23,7 @@ prototype["getState"] = function getState() {
   return closure_3;
 };
 prototype["getIsEnabled"] = function getIsEnabled() {
-  const DeveloperMode = require(3928) /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = require(3866) /* explicitContentFromProto */.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     setting = closure_6.length > 0;

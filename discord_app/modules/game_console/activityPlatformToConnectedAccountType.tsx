@@ -1,6 +1,6 @@
-// === Module 16036: activityPlatformToConnectedAccountType ===
+// === Module 15972: activityPlatformToConnectedAccountType ===
 
-// Module 16036 (activityPlatformToConnectedAccountType)
+// Module 15972 (activityPlatformToConnectedAccountType)
 import ME from "ME";
 
 let c0;

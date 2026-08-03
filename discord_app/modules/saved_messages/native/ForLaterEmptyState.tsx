@@ -1,6 +1,6 @@
-// === Module 10109: ForLaterEmptyState ===
+// === Module 9966: ForLaterEmptyState ===
 
-// Module 10109 (ForLaterEmptyState)
+// Module 9966 (ForLaterEmptyState)
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -20,27 +20,27 @@ export const ForLaterEmptyState = function ForLaterEmptyState(type) {
   const tmp = callback2();
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: importDefault(10110), style: tmp.image };
+  obj = { source: importDefault(9967), style: tmp.image };
   const items = [callback(closure_4, obj), ];
   const obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
-  if (type === require(9712) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
+  if (type === require(9565) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
     let erEf2g = tmp7(1236).t.AE4yja;
   } else {
     erEf2g = tmp7(1236).t.erEf2g;
   }
   obj2[3] = intl.string(erEf2g);
-  const items1 = [callback(require(4251) /* Text */.Text, obj2), ];
+  const items1 = [callback(require(4189) /* Text */.Text, obj2), ];
   const obj3 = { variant: "text-sm/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = tmp7(1236).intl;
-  if (type === require(9712) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
+  if (type === require(9565) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
     w1o_75 = tmp7(1236).t.iBFuNE;
   } else {
     w1o_75 = tmp7(1236).t["w1o+75"];
   }
   obj3[3] = intl2.string(w1o_75);
-  items1[1] = callback(require(4251) /* Text */.Text, obj3);
+  items1[1] = callback(require(4189) /* Text */.Text, obj3);
   obj1[1] = items1;
   items[1] = closure_7(closure_3, obj1);
   obj[1] = items;

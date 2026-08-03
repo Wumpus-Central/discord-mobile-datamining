@@ -1,6 +1,6 @@
-// === Module 11116: _applyStaffBuildOverride ===
+// === Module 10995: _applyStaffBuildOverride ===
 
-// Module 11116 (_applyStaffBuildOverride)
+// Module 10995 (_applyStaffBuildOverride)
 import importDefaultResult from "set";
 import fetchFingerprint from "fetchFingerprint";
 
@@ -383,7 +383,7 @@ closure_0 = importDefaultResult((arg0) => {
     }
   })();
 });
-const f86547 = function() {
+const f86223 = function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -428,14 +428,14 @@ export const clearBuildOverride = function clearBuildOverride() {
 export const getPublicBuildOverrideLink = function getPublicBuildOverrideLink(arg0) {
   const HTTP = callback(530).HTTP;
   let obj = { url: null, body: null, headers: null, oldFormErrors: true, rejectWithError: false };
-  obj[0] = callback(4171).getAPIEndpoint("/__development/create_build_override_link");
+  obj[0] = callback(4109).getAPIEndpoint("/__development/create_build_override_link");
   obj[1] = arg0;
   let str = token.getToken();
   if (str == null) {
     str = "";
   }
   obj[2] = { Authorization: str };
-  const obj2 = callback(4171);
+  const obj2 = callback(4109);
   return HTTP.post(obj).then((body) => ({ url: body.body.url, error: false }), (status) => {
     if (400 === status.status) {
       let obj = { url: false, error: null };

@@ -1,6 +1,6 @@
-// === Module 13826: UserSettingsEditGuildProfile ===
+// === Module 13759: UserSettingsEditGuildProfile ===
 
-// Module 13826 (UserSettingsEditGuildProfile)
+// Module 13759 (UserSettingsEditGuildProfile)
 import asyncRequireImpl from "asyncRequireImpl";
 import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
 import handleFormOpen from "handleFormOpen";

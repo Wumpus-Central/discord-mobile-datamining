@@ -1,6 +1,6 @@
-// === Module 3956: dispatcher ===
+// === Module 3894: dispatcher ===
 
-// Module 3956 (dispatcher)
+// Module 3894 (dispatcher)
 const result = require("set").fileFinishedImporting("modules/toast/native/ToastActionCreators.tsx");
 
 export default {

@@ -1,6 +1,6 @@
-// === Module 12068: useFriendsSinceDate ===
+// === Module 11972: useFriendsSinceDate ===
 
-// Module 12068 (useFriendsSinceDate)
+// Module 11972 (useFriendsSinceDate)
 import _getSystemLocale from "_getSystemLocale";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
@@ -23,5 +23,5 @@ export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
     return since;
   }, items2);
   const obj2 = _require(647);
-  return _require(5062).getCreatedAtDate(stateFromStores1, stateFromStores);
+  return _require(5000).getCreatedAtDate(stateFromStores1, stateFromStores);
 };

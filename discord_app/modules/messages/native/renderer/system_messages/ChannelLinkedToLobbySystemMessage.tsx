@@ -1,6 +1,6 @@
-// === Module 7948: createChannelLinkedToLobbySystemMessage ===
+// === Module 7830: createChannelLinkedToLobbySystemMessage ===
 
-// Module 7948 (createChannelLinkedToLobbySystemMessage)
+// Module 7830 (createChannelLinkedToLobbySystemMessage)
 import addApplication from "addApplication";
 import { HelpdeskArticles } from "ME";
 
@@ -12,7 +12,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
   let theme;
   message = message.message;
   ({ roleStyle, theme } = message);
-  const tmp3 = importDefault(7860)(theme);
+  const tmp3 = importDefault(7741)(theme);
   let str = message.applicationId;
   if (str == null) {
     str = "";
@@ -21,7 +21,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
   if (null == application) {
     return null;
   } else {
-    let obj = require(7867) /* getMessageAuthorWithProcessedColor */;
+    let obj = require(7748) /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: null, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -29,7 +29,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(7869)(obj);
+    obj[1] = tmp(7750)(obj);
     obj[2] = application.name;
     const obj1 = { linkColor: null, medium: true };
     obj1[0] = tmp3.defaultUsernameColor;
@@ -41,7 +41,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     const obj3 = { content: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj3[0] = intl.formatToParts(require(1236) /* getSystemLocale */.t.gZfhOw, obj);
-    const merged = Object.assign(tmp(7870)(message));
+    const merged = Object.assign(tmp(7751)(message));
     return obj3;
   }
 };

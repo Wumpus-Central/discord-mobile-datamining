@@ -1,6 +1,6 @@
-// === Module 13827: useGuildProfileEditForm ===
+// === Module 13760: useGuildProfileEditForm ===
 
-// Module 13827 (useGuildProfileEditForm)
+// Module 13760 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import V6OrEarlierAPIError from "V6OrEarlierAPIError";
@@ -64,7 +64,7 @@ export default function useGuildProfileEditForm() {
   const merged1 = Object.assign(stateFromStoresObject.errors);
   const memo = pendingThemeColors.useMemo(() => {
     const delayedCall = new stateFromStores(pendingNickname[11]).DelayedCall(200, () => {
-      callback2(709).wait(callback(9962).resetAllPending);
+      callback2(709).wait(callback(9817).resetAllPending);
     });
     return delayedCall;
   }, []);

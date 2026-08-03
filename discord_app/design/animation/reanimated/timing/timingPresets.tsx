@@ -1,6 +1,6 @@
-// === Module 4259: timingNone ===
+// === Module 4197: timingNone ===
 
-// Module 4259 (timingNone)
+// Module 4197 (timingNone)
 const result = require("set").fileFinishedImporting("design/animation/reanimated/timing/timingPresets.tsx");
 
 export const timingNone = { duration: 0 };

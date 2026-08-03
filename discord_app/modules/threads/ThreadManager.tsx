@@ -1,6 +1,6 @@
-// === Module 16415: handleChannelDelete ===
+// === Module 16349: handleChannelDelete ===
 
-// Module 16415 (handleChannelDelete)
+// Module 16349 (handleChannelDelete)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import "initialize";
@@ -59,8 +59,8 @@ prototype["handleMessageCreate"] = function handleMessageCreate(channelId) {
       const _Date = Date;
       const time = date.getTime();
       if (Date.now() - time < 5000) {
-        importDefault(9317).resort(channel.parent_id);
-        const obj3 = importDefault(9317);
+        importDefault(9144).resort(channel.parent_id);
+        const obj3 = importDefault(9144);
       }
     }
   }

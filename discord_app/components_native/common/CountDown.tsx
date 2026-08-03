@@ -1,6 +1,6 @@
-// === Module 10341: componentDidMount ===
+// === Module 10202: componentDidMount ===
 
-// Module 10341 (componentDidMount)
+// Module 10202 (componentDidMount)
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";
@@ -107,7 +107,7 @@ prototype["render"] = function render() {
     const NumberResult = Number(deadline);
     tmp2 = null != freezeAtRemainingSeconds && result <= freezeAtRemainingSeconds;
   }
-  return jsx(require(4251) /* Text */.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
+  return jsx(require(4189) /* Text */.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
 };
 let result = require("getSystemLocale").fileFinishedImporting("components_native/common/CountDown.tsx");
 

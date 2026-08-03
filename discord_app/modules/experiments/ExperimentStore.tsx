@@ -1,6 +1,6 @@
-// === Module 4169: getHash ===
+// === Module 4107: getHash ===
 
-// Module 4169 (getHash)
+// Module 4107 (getHash)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import "clearAll";
@@ -242,8 +242,8 @@ function _loadGuildFilter(arg0) {
   let tmp2;
   [tmp, tmp2] = arg0;
   let tmp5 = null;
-  if (null != require(4174) /* isInRange */.GUILD_FILTERS[tmp]) {
-    const GUILD_FILTERS = require(4174) /* isInRange */.GUILD_FILTERS;
+  if (null != require(4112) /* isInRange */.GUILD_FILTERS[tmp]) {
+    const GUILD_FILTERS = require(4112) /* isInRange */.GUILD_FILTERS;
     tmp5 = GUILD_FILTERS[tmp](tmp2);
   }
   return tmp5;
@@ -1217,7 +1217,7 @@ prototype["getSerializedState"] = function getSerializedState() {
     }
   }
   obj = { hasLoadedExperiments: c16, trackedExposureExperiments: closure_17, loadedUserExperiments: closure_21, loadedGuildExperiments: obj, userExperimentOverrides: closure_24, guildExperimentOverrides: closure_25, cookieOverrides: null, assignmentSource: null, assignmentSessionId: null, assignmentFingerprint: null };
-  obj[6] = require(4171) /* Version */.getBuildOverrideExperiments();
+  obj[6] = require(4109) /* Version */.getBuildOverrideExperiments();
   obj[7] = closure_20.source;
   obj[8] = closure_20.sessionId;
   obj[9] = closure_20.fingerprint;

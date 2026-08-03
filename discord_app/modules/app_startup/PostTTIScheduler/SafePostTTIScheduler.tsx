@@ -1,6 +1,6 @@
-// === Module 7035: waitSafelyForPostTTI ===
+// === Module 5956: waitSafelyForPostTTI ===
 
-// Module 7035 (waitSafelyForPostTTI)
+// Module 5956 (waitSafelyForPostTTI)
 const result = require("set").fileFinishedImporting("modules/app_startup/PostTTIScheduler/SafePostTTIScheduler.tsx");
 
 export const waitSafelyForPostTTI = function waitSafelyForPostTTI(arg0) {

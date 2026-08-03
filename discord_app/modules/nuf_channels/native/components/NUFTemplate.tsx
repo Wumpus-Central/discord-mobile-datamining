@@ -1,6 +1,6 @@
-// === Module 12917: NUFActionSheetTemplate ===
+// === Module 12854: NUFActionSheetTemplate ===
 
-// Module 12917 (NUFActionSheetTemplate)
+// Module 12854 (NUFActionSheetTemplate)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -32,11 +32,11 @@ export default function NUFActionSheetTemplate(arg0) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items = [callback(require(4251) /* Text */.Text, obj), , , ];
+  const items = [callback(require(4189) /* Text */.Text, obj), , , ];
   obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description };
-  items[1] = callback(require(4251) /* Text */.Text, obj);
+  items[1] = callback(require(4189) /* Text */.Text, obj);
   items[2] = callback(closure_3, { source: imageSrc, style: tmp.image });
-  items[3] = callback(require(4666) /* Button */.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true });
+  items[3] = callback(require(4604) /* Button */.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true });
   obj[1] = items;
   return callback2(closure_2, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 4456: hasPendingMemberAction ===
+// === Module 4394: hasPendingMemberAction ===
 
-// Module 4456 (hasPendingMemberAction)
+// Module 4394 (hasPendingMemberAction)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -16,7 +16,7 @@ export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, 
   channel = channel.getChannel(selectedChannelId);
   let hasItem = null != guild && null != channel;
   if (hasItem) {
-    hasItem = importDefault(4459)(guild);
+    hasItem = importDefault(4397)(guild);
   }
   if (hasItem) {
     const features = guild.features;

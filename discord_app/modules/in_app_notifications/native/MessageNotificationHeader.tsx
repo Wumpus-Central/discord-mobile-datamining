@@ -1,6 +1,6 @@
-// === Module 10490: LocationText ===
+// === Module 10351: LocationText ===
 
-// Module 10490 (LocationText)
+// Module 10351 (LocationText)
 import noop from "noop";
 import { View } from "XSmallIcon";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -104,7 +104,7 @@ export default function MessageNotificationHeader(locationTextColor) {
     obj[0] = tmp5;
     const tmp6 = obj;
   }
-  let tmp2Result = tmp2(4446);
+  let tmp2Result = tmp2(4384);
   const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
   const type = channel.type;
   let tmp10 = channelName;
@@ -119,7 +119,7 @@ export default function MessageNotificationHeader(locationTextColor) {
           }
           let channelName1 = null;
           if (null != parentChannel) {
-            tmp2Result = tmp2(4446);
+            tmp2Result = tmp2(4384);
             channelName1 = tmp2Result.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
           }
           if (null != channelName1) {
@@ -151,7 +151,7 @@ export default function MessageNotificationHeader(locationTextColor) {
     const items1 = [tmp.primaryText, tmp6];
     obj2[3] = items1;
     obj2[4] = author.nick;
-    tmp19 = callback(tmp2(4251).Text, obj2);
+    tmp19 = callback(tmp2(4189).Text, obj2);
   }
   const items2 = [tmp19, ];
   let tmp21 = null != tmp10;
@@ -181,8 +181,8 @@ export default function MessageNotificationHeader(locationTextColor) {
     };
     const obj5 = { color: "icon-subtle", style: null };
     obj5[1] = { height: 20, width: 20 };
-    obj4[5] = callback(tmp2(5241).XSmallIcon, obj5);
-    expanded = callback(tmp2(4783).PressableOpacity, obj4);
+    obj4[5] = callback(tmp2(5179).XSmallIcon, obj5);
+    expanded = callback(tmp2(4721).PressableOpacity, obj4);
   }
   items3[1] = expanded;
   obj[1] = items3;
@@ -196,18 +196,18 @@ export const SimpleNotificationHeader = function SimpleNotificationHeader(second
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   const items = [tmp.primaryText, labelStyle];
-  const items1 = [callback(require(4251) /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: items, children: text }), ];
+  const items1 = [callback(require(4189) /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: items, children: text }), ];
   let tmp2Result = null != secondaryText;
   if (tmp2Result) {
     obj = { style: null, children: null };
     obj[0] = tmp.secondaryTextContainer;
     obj = { variant: "text-md/bold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: null, children: "\u00B7" };
     obj[3] = tmp.separator;
-    const items2 = [tmp4(tmp5(4251).Text, obj), ];
+    const items2 = [tmp4(tmp5(4189).Text, obj), ];
     const obj1 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: null, children: null };
     obj1[3] = tmp.secondaryText;
     obj1[4] = secondaryText;
-    items2[1] = tmp4(tmp5(4251).Text, obj1);
+    items2[1] = tmp4(tmp5(4189).Text, obj1);
     obj[1] = items2;
     tmp2Result = tmp2(tmp3, obj);
   }

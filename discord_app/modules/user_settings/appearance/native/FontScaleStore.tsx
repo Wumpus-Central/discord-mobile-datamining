@@ -1,6 +1,6 @@
-// === Module 14366: DEFAULT_FONT_SCALE_STORE_STATE ===
+// === Module 14299: DEFAULT_FONT_SCALE_STORE_STATE ===
 
-// Module 14366 (DEFAULT_FONT_SCALE_STORE_STATE)
+// Module 14299 (DEFAULT_FONT_SCALE_STORE_STATE)
 import set from "set";
 import identity from "identity";
 import set from "identity";

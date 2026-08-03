@@ -1,6 +1,6 @@
-// === Module 15289: VoiceSubtitle ===
+// === Module 15002: VoiceSubtitle ===
 
-// Module 15289 (VoiceSubtitle)
+// Module 15002 (VoiceSubtitle)
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -19,5 +19,5 @@ export default function VoiceSubtitle(arg0) {
   obj[0] = mapped.join(", ");
   obj[1] = Math.max(voiceUsers.length - 2, 0);
   obj[3] = intl.format(require(1236) /* getSystemLocale */.t.r1Vkoc, obj);
-  return jsx(require(4251) /* Text */.Text, { users: null, overflowCount: null });
+  return jsx(require(4189) /* Text */.Text, { users: null, overflowCount: null });
 };

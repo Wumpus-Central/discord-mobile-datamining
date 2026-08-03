@@ -1,12 +1,12 @@
-// === Module 12869: useSharedSpacesWarningStore ===
+// === Module 12806: useSharedSpacesWarningStore ===
 
-// Module 12869 (useSharedSpacesWarningStore)
+// Module 12806 (useSharedSpacesWarningStore)
 import keys from "keys";
 import createJSONStorage from "createJSONStorage";
 import createJSONStorage from "createJSONStorage";
 
 let obj = { name: "shared-spaces-warning-storage", storage: null };
-obj[1] = createJSONStorage.createJSONStorage(() => importDefault(7072));
+obj[1] = createJSONStorage.createJSONStorage(() => importDefault(5993));
 obj = keys.create(createJSONStorage.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), obj));
 const result = require("frozen").fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningStore.tsx");
 

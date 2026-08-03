@@ -1,6 +1,6 @@
-// === Module 8678: useAvatarDecoration ===
+// === Module 8373: useAvatarDecoration ===
 
-// Module 8678 (useAvatarDecoration)
+// Module 8373 (useAvatarDecoration)
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 

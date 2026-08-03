@@ -1,6 +1,6 @@
-// === Module 9369: _confirmEmailChange ===
+// === Module 9196: _confirmEmailChange ===
 
-// Module 9369 (_confirmEmailChange)
+// Module 9196 (_confirmEmailChange)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 
@@ -38,7 +38,7 @@ function _confirmEmailChange() {
               obj[0] = body;
               return obj;
             } else {
-              let obj5 = v0(5065);
+              let obj5 = v0(5003);
               const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj1[0] = outer1_4.USER_EMAIL_VERIFY_CODE;
               const obj2 = { code: null };
@@ -83,14 +83,14 @@ function _confirmEmailChange() {
   }
   return applyArgumentsResult;
 }
-const result = require("module_5065").fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
+const result = require("module_5003").fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
 
 export const sendConfirmationCode = function sendConfirmationCode() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = importDefault(5065);
+  let obj = importDefault(5003);
   obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
   obj = { event: require(503) /* encodeProperties */.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
   obj[1] = obj;

@@ -1,6 +1,6 @@
-// === Module 10738: isWatchTogetherApplication ===
+// === Module 10554: isWatchTogetherApplication ===
 
-// Module 10738 (isWatchTogetherApplication)
+// Module 10554 (isWatchTogetherApplication)
 import items3 from "items3";
 
 let c0;

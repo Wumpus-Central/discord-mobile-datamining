@@ -1,6 +1,6 @@
-// === Module 14631: toggle ===
+// === Module 14564: toggle ===
 
-// Module 14631 (toggle)
+// Module 14564 (toggle)
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import createToggle from "createToggle";
 
@@ -16,12 +16,12 @@ createToggle = {
     const setDeveloperOptionSettings = require(708) /* setDeveloperOptionSettings */.setDeveloperOptionSettings;
     if (arg0) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
-      importDefault(10511).initialize();
-      const obj2 = importDefault(10511);
+      importDefault(10372).initialize();
+      const obj2 = importDefault(10372);
     } else {
       const result1 = setDeveloperOptionSettings({ bugReporterEnabled: false });
-      importDefault(10511).terminate(true);
-      const obj = importDefault(10511);
+      importDefault(10372).terminate(true);
+      const obj = importDefault(10372);
     }
   },
   useValue: function useCreateBugReportSettingToggleValue() {

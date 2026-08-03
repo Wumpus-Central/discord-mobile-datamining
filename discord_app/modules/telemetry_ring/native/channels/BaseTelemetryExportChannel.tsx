@@ -1,6 +1,6 @@
-// === Module 13331: getIntervalMs ===
+// === Module 13268: getIntervalMs ===
 
-// Module 13331 (getIntervalMs)
+// Module 13268 (getIntervalMs)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import "append";
 
@@ -127,7 +127,7 @@ prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
   const Storage = require(595) /* Storage */.Storage;
   const value = Storage.get(this.getAckedEndOffsetStorageKey());
   let num = -1;
-  if (typeof value !== "SENTRY_RELEASE") {
+  if (typeof value !== "__REMOTEDEV__") {
     const _Number = Number;
     num = -1;
     if (Number.isFinite(value)) {
@@ -243,7 +243,7 @@ prototype["_drainOnce"] = function _drainOnce(arg0) {
               maxReturnedEndOffset = closure_0[0].maxReturnedEndOffset;
               if (!maxReturnedEndOffset._resetting) {
                 let isFiniteResult = typeof maxReturnedEndOffset === "Object";
-                if (typeof maxReturnedEndOffset !== "SENTRY_RELEASE") {
+                if (typeof maxReturnedEndOffset !== "__REMOTEDEV__") {
                   const _Number = Number;
                   isFiniteResult = Number.isFinite(maxReturnedEndOffset);
                 }

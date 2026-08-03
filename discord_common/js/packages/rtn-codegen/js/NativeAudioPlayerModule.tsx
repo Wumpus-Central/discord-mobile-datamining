@@ -1,6 +1,6 @@
-// === Module 13679: enforcing ===
+// === Module 13616: enforcing ===
 
-// Module 13679 (enforcing)
+// Module 13616 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAudioPlayerModule");

@@ -1,6 +1,6 @@
-// === Module 7079: videoAssetFromServer ===
+// === Module 6000: videoAssetFromServer ===
 
-// Module 7079 (videoAssetFromServer)
+// Module 6000 (videoAssetFromServer)
 const result = require("set").fileFinishedImporting("modules/quests/types/v2/Video.tsx");
 
 export const videoAssetFromServer = function videoAssetFromServer(url) {
