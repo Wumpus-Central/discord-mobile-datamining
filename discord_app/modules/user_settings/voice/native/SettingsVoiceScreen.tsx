@@ -1,6 +1,3 @@
-// === Module 14283: KrispLogo ===
-
-// Module 14283 (KrispLogo)
 import set from "set";
 import get_ActivityIndicator from "createToggle";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

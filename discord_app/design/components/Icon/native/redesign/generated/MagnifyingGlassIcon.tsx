@@ -1,6 +1,3 @@
-// === Module 8298: MagnifyingGlassIcon ===
-
-// Module 8298 (MagnifyingGlassIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 12493: ReferredFriendAvatar ===
-
-// Module 12493 (ReferredFriendAvatar)
 import asyncRequireImpl from "asyncRequireImpl";
 import { View } from "ACTION_SHEET_HEIGHT_HALF";
 import emitChanges from "emitChanges";

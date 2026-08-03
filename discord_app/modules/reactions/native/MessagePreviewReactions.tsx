@@ -1,6 +1,3 @@
-// === Module 9472: MessagePreviewReactions ===
-
-// Module 9472 (MessagePreviewReactions)
 import "noop";
 import removePendingListFetch from "removePendingListFetch";
 import messages from "messages";

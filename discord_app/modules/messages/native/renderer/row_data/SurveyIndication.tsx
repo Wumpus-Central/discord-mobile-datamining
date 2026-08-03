@@ -1,6 +1,3 @@
-// === Module 8013: createSurveyIndication ===
-
-// Module 8013 (createSurveyIndication)
 import { NotificationTypes } from "str2";
 
 const result = require("frozen").fileFinishedImporting("modules/messages/native/renderer/row_data/SurveyIndication.tsx");

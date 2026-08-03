@@ -1,6 +1,3 @@
-// === Module 12373: createResolvingGuildInvite ===
-
-// Module 12373 (createResolvingGuildInvite)
 import { Image } from "AccessibilityAnnouncer";
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";
 import reset from "reset";

@@ -1,6 +1,3 @@
-// === Module 14030: route ===
-
-// Module 14030 (route)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";

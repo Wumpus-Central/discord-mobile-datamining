@@ -1,6 +1,3 @@
-// === Module 8725: hasAtLeastOneGPlaySynced ===
-
-// Module 8725 (hasAtLeastOneGPlaySynced)
 import { PriceSetAssignmentPurchaseTypes as closure_3 } from "ME";
 
 function hasAtLeastOneGPlaySynced(nextResult) {

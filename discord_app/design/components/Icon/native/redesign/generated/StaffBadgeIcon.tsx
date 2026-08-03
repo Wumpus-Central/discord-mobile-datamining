@@ -1,6 +1,3 @@
-// === Module 14554: StaffBadgeIcon ===
-
-// Module 14554 (StaffBadgeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

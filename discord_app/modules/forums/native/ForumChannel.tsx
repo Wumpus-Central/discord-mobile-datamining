@@ -1,6 +1,3 @@
-// === Module 11877: forumKeyExtractor ===
-
-// Module 11877 (forumKeyExtractor)
 import useLoadForumUnreadCounts from "useLoadForumUnreadCounts";
 import { View } from "Text";
 import initialize from "initialize";

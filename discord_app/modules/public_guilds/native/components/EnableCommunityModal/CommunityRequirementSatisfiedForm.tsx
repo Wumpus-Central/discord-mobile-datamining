@@ -1,6 +1,3 @@
-// === Module 16538: CommunityRequirementSatisfiedForm ===
-
-// Module 16538 (CommunityRequirementSatisfiedForm)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

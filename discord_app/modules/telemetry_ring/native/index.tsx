@@ -1,6 +1,3 @@
-// === Module 1210: TelemetryRingLifecycle ===
-
-// Module 1210 (TelemetryRingLifecycle)
 const result = require("shouldRun").fileFinishedImporting("modules/telemetry_ring/native/index.tsx");
 
 export const TelemetryRingLifecycle = require("_updateZoomedInExport");

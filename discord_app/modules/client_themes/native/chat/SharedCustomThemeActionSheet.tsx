@@ -1,6 +1,3 @@
-// === Module 11155: PrimaryActionButton ===
-
-// Module 11155 (PrimaryActionButton)
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
 import noop from "initialize";

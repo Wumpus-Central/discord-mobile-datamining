@@ -1,6 +1,3 @@
-// === Module 6725: getSafetyToastTypeContent ===
-
-// Module 6725 (getSafetyToastTypeContent)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SafetyToastType } from "SafetyToastType";

@@ -1,6 +1,3 @@
-// === Module 11860: ? ===
-
-// Module 11860
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

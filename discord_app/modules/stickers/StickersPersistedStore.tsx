@@ -1,6 +1,3 @@
-// === Module 5095: handleStickersStoreUpdate ===
-
-// Module 5095 (handleStickersStoreUpdate)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import { UserSettingsTypes } from "MAX_FAVORITES";

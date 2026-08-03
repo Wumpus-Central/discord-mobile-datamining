@@ -1,6 +1,3 @@
-// === Module 9414: PremiumEmojiFeatureUpsell ===
-
-// Module 9414 (PremiumEmojiFeatureUpsell)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

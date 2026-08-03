@@ -1,6 +1,3 @@
-// === Module 15368: WordTopic ===
-
-// Module 15368 (WordTopic)
 import GuildPrimaryCategory from "GuildPrimaryCategory";
 import initialize from "initialize";
 import BicycleIcon from "BicycleIcon";

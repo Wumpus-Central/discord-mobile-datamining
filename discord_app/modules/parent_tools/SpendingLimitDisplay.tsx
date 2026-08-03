@@ -1,6 +1,3 @@
-// === Module 13959: getSpendingLimitDisplayState ===
-
-// Module 13959 (getSpendingLimitDisplayState)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { SubscriptionIntervalTypes } from "GuildFeatures";

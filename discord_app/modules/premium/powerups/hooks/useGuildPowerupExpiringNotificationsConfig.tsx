@@ -1,6 +1,3 @@
-// === Module 11662: useGuildPowerupExpiringNotificationsConfig ===
-
-// Module 11662 (useGuildPowerupExpiringNotificationsConfig)
 const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {

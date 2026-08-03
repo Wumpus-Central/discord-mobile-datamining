@@ -1,6 +1,3 @@
-// === Module 8395: DISPLAY_NAME_STYLES_EFFECT_NAMES ===
-
-// Module 8395 (DISPLAY_NAME_STYLES_EFFECT_NAMES)
 import noop from "noop";
 
 const require = arg1;

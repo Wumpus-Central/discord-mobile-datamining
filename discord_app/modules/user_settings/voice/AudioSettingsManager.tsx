@@ -1,6 +1,3 @@
-// === Module 16160: handleConnectionOpen ===
-
-// Module 16160 (handleConnectionOpen)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";

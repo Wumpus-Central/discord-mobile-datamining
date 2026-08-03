@@ -1,6 +1,3 @@
-// === Module 8249: ActionSheetDragHandle ===
-
-// Module 8249 (ActionSheetDragHandle)
 import get_ActivityIndicator from "get ActivityIndicator";
 import PX_4 from "PX_4";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 9970: getPollVoteEventProperties ===
-
-// Module 9970 (getPollVoteEventProperties)
 import handleChanged from "handleChanged";
 import initialize from "initialize";
 import processMessage from "processMessage";

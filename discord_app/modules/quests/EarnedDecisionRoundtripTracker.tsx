@@ -1,6 +1,3 @@
-// === Module 9489: trackRoundtrip ===
-
-// Module 9489 (trackRoundtrip)
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import { AnalyticEvents } from "ME";
 import set from "receiveNetworkInfoformation";

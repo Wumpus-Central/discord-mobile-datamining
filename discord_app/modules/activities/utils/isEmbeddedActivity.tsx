@@ -1,6 +1,3 @@
-// === Module 6028: isEmbeddedActivity ===
-
-// Module 6028 (isEmbeddedActivity)
 import { ActivityFlags } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/isEmbeddedActivity.tsx");

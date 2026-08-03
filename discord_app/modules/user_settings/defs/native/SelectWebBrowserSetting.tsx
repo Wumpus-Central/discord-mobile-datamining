@@ -1,6 +1,3 @@
-// === Module 14455: useWebBrowserSettingOptions ===
-
-// Module 14455 (useWebBrowserSettingOptions)
 import createToggle from "createToggle";
 
 function useWebBrowserSettingOptions() {

@@ -1,6 +1,3 @@
-// === Module 16547: useCreateCreatorMonetizationAcceptTermsRequest ===
-
-// Module 16547 (useCreateCreatorMonetizationAcceptTermsRequest)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

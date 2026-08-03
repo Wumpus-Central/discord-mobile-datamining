@@ -1,6 +1,3 @@
-// === Module 14436: ImageTextIcon ===
-
-// Module 14436 (ImageTextIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

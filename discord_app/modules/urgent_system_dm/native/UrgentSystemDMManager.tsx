@@ -1,6 +1,3 @@
-// === Module 16350: ? ===
-
-// Module 16350
 const require = arg1;
 const tmp2 = new require("maybeShowUrgentMessageModal")(() => {
   let obj = importDefault(4533);

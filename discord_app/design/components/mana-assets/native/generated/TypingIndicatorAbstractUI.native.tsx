@@ -1,6 +1,3 @@
-// === Module 7589: TypingIndicatorAbstractUI ===
-
-// Module 7589 (TypingIndicatorAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/TypingIndicatorAbstractUI.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 15073: renderCard ===
-
-// Module 15073 (renderCard)
 import HappeningNowCardCreateChannel from "HappeningNowCardCreateChannel";
 import importAllResult from "useHappeningNowScrollBehavior";
 import get_ActivityIndicator from "QUICK_SWITCHER";

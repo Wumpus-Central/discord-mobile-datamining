@@ -1,6 +1,3 @@
-// === Module 9091: UserProfileVoiceActivityIcon ===
-
-// Module 9091 (UserProfileVoiceActivityIcon)
 import "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

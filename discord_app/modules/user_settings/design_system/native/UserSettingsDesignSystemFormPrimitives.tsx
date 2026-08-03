@@ -1,6 +1,3 @@
-// === Module 14615: Radio ===
-
-// Module 14615 (Radio)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ScrollView } from "Stack";

@@ -1,6 +1,3 @@
-// === Module 11095: ClassificationEvidence ===
-
-// Module 11095 (ClassificationEvidence)
 import _slicedToArray from "_slicedToArray";
 import DCDChatList from "DCDChatList";
 import get_ActivityIndicator from "_openMediaModal";

@@ -1,6 +1,3 @@
-// === Module 14980: Wrapper ===
-
-// Module 14980 (Wrapper)
 import noop from "noop";
 import { View } from "set";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";

@@ -1,6 +1,3 @@
-// === Module 706: refreshSourceMapCookie ===
-
-// Module 706 (refreshSourceMapCookie)
 import { UserFlags } from "ME";
 import importDefaultResult from "fails";
 import { Store } from "initialize";

@@ -1,6 +1,3 @@
-// === Module 7644: BlurTheme ===
-
-// Module 7644 (BlurTheme)
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

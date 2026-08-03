@@ -1,6 +1,3 @@
-// === Module 12626: BetaTag ===
-
-// Module 12626 (BetaTag)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { Gradients } from "items";

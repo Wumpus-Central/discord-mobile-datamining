@@ -1,6 +1,3 @@
-// === Module 15806: updateVisualRefresh ===
-
-// Module 15806 (updateVisualRefresh)
 import { NativeModules } from "get ActivityIndicator";
 
 let result = require("enforcing").fileFinishedImporting("modules/themes/native/updateVisualRefresh.tsx");

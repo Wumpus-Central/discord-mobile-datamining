@@ -1,6 +1,3 @@
-// === Module 12814: reset ===
-
-// Module 12814 (reset)
 import { Store } from "initialize";
 
 function reset() {

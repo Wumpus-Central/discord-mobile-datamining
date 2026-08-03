@@ -1,6 +1,3 @@
-// === Module 12905: trackVideoToggle ===
-
-// Module 12905 (trackVideoToggle)
 import { AnalyticEvents } from "ME";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/media_engine/trackVideoToggle.tsx");

@@ -1,6 +1,3 @@
-// === Module 14154: RedoIcon ===
-
-// Module 14154 (RedoIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

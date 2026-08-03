@@ -1,6 +1,3 @@
-// === Module 1898: getNameplateData ===
-
-// Module 1898 (getNameplateData)
 import { isNameplateRecord } from "fromServer";
 import { ThemeTypes } from "sum";
 

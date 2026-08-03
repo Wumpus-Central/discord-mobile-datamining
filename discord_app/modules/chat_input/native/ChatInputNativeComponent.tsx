@@ -1,6 +1,3 @@
-// === Module 11425: ChatInputNativeComponent ===
-
-// Module 11425 (ChatInputNativeComponent)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";

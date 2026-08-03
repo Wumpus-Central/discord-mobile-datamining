@@ -1,6 +1,3 @@
-// === Module 14265: useSubscriptionRole ===
-
-// Module 14265 (useSubscriptionRole)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 
 const require = arg1;

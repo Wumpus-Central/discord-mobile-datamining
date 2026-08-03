@@ -1,6 +1,3 @@
-// === Module 15590: componentDidMount ===
-
-// Module 15590 (componentDidMount)
 import getParticipants from "getParticipants";
 import initializeFromUserSettings from "initializeFromUserSettings";
 import _handleConnectionOpen from "_handleConnectionOpen";

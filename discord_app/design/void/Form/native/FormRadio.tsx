@@ -1,6 +1,3 @@
-// === Module 5240: FormRadio ===
-
-// Module 5240 (FormRadio)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 10935: handleTapCommandMention ===
-
-// Module 10935 (handleTapCommandMention)
 import context from "context";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";

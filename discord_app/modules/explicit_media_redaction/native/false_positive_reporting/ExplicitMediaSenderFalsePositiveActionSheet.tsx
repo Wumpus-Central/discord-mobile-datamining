@@ -1,6 +1,3 @@
-// === Module 11120: ExplicitMediaObscuredFalsePositiveActionSheet ===
-
-// Module 11120 (ExplicitMediaObscuredFalsePositiveActionSheet)
 import noop from "noop";
 import getFpMessageInfo from "getFpMessageInfo";
 import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "USER_SETTING_ACTION_SHEET_KEY";

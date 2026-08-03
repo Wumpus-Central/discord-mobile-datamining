@@ -1,6 +1,3 @@
-// === Module 9610: isKlipyProvider ===
-
-// Module 9610 (isKlipyProvider)
 import { SearchTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("utils/GIFPickerUtils.tsx");

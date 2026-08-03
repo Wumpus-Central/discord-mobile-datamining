@@ -1,6 +1,3 @@
-// === Module 10384: showThreadNotificationsBottomSheet ===
-
-// Module 10384 (showThreadNotificationsBottomSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/threads/native/threadActionSheets.tsx");
 
 export const showThreadNotificationsBottomSheet = function showThreadNotificationsBottomSheet(channel) {

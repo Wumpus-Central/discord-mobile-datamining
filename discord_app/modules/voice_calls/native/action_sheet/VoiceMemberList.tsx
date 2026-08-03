@@ -1,6 +1,3 @@
-// === Module 12860: ItemSeparator ===
-
-// Module 12860 (ItemSeparator)
 import XSMALL from "XSMALL";
 import createdAt from "createdAt";
 import importAllResult from "Form";

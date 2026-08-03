@@ -1,6 +1,3 @@
-// === Module 9811: useHandleUseNow ===
-
-// Module 9811 (useHandleUseNow)
 import getSystemLocale from "getSystemLocale";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

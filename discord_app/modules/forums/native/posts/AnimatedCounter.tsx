@@ -1,6 +1,3 @@
-// === Module 10390: AnimatedCount ===
-
-// Module 10390 (AnimatedCount)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

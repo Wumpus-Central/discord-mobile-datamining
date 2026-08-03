@@ -1,6 +1,3 @@
-// === Module 588: getFieldMessage ===
-
-// Module 588 (getFieldMessage)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
 class APIError {
   constructor(arg0, arg1) {

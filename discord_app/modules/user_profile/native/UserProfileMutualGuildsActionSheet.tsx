@@ -1,6 +1,3 @@
-// === Module 11709: UserProfileMutualGuildsActionSheet ===
-
-// Module 11709 (UserProfileMutualGuildsActionSheet)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

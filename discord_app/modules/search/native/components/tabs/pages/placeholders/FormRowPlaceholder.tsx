@@ -1,6 +1,3 @@
-// === Module 15533: FormRowPlaceholderItem ===
-
-// Module 15533 (FormRowPlaceholderItem)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

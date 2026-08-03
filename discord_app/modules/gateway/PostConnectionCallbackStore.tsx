@@ -1,6 +1,3 @@
-// === Module 6697: processCallbacks ===
-
-// Module 6697 (processCallbacks)
 import initialize from "initialize";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import importDefaultResult from "dispatcher";

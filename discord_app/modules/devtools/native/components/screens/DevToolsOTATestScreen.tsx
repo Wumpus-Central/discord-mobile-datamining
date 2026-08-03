@@ -1,6 +1,3 @@
-// === Module 14774: OtaVerificationActionSheet ===
-
-// Module 14774 (OtaVerificationActionSheet)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import DownloadIcon from "DownloadIcon";

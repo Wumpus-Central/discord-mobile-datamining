@@ -1,6 +1,3 @@
-// === Module 11245: useActivityAction ===
-
-// Module 11245 (useActivityAction)
 import set from "set";
 import participantFromServer from "participantFromServer";
 import { STAFF_RELEASE_PHASES } from "items3";

@@ -1,6 +1,3 @@
-// === Module 1479: APP_LAUNCHER_BUILT_IN_SECTION_ICON ===
-
-// Module 1479 (APP_LAUNCHER_BUILT_IN_SECTION_ICON)
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
 export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = require("registerAsset");

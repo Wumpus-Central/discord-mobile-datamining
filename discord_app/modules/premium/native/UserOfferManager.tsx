@@ -1,6 +1,3 @@
-// === Module 16356: prototype ===
-
-// Module 16356 (prototype)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import emitChanges from "emitChanges";
 import { PaymentGateways } from "sum";

@@ -1,6 +1,3 @@
-// === Module 12175: useApplicationWidgetLayoutRendererProps ===
-
-// Module 12175 (useApplicationWidgetLayoutRendererProps)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleFeaturedOrDeveloperFetchSuccess from "handleFeaturedOrDeveloperFetchSuccess";

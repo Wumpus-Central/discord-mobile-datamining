@@ -1,6 +1,3 @@
-// === Module 8331: CalendarIcon ===
-
-// Module 8331 (CalendarIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

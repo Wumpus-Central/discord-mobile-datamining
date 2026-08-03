@@ -1,6 +1,3 @@
-// === Module 5743: next ===
-
-// Module 5743 (next)
 class Chained {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);

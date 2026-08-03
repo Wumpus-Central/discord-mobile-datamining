@@ -1,6 +1,3 @@
-// === Module 11618: useHasAllocateBoostPermission ===
-
-// Module 11618 (useHasAllocateBoostPermission)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

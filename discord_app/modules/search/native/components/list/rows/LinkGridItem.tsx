@@ -1,6 +1,3 @@
-// === Module 15534: getLinkNodeAtIndex ===
-
-// Module 15534 (getLinkNodeAtIndex)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "SearchMediaObscurityIcon";
 import get_ActivityIndicator from "SearchListContentAuthor";

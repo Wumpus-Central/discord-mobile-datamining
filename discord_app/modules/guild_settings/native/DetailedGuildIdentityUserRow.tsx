@@ -1,6 +1,3 @@
-// === Module 10215: memoResult1 ===
-
-// Module 10215 (memoResult1)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

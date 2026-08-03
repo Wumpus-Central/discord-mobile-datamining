@@ -1,6 +1,3 @@
-// === Module 15475: useSortedMemberApplications ===
-
-// Module 15475 (useSortedMemberApplications)
 import noop from "noop";
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 

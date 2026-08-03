@@ -1,6 +1,3 @@
-// === Module 4627: TRUE_OPTION_NAME ===
-
-// Module 4627 (TRUE_OPTION_NAME)
 const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];
 const frozen = Object.freeze([]);
 const frozen1 = Object.freeze([]);

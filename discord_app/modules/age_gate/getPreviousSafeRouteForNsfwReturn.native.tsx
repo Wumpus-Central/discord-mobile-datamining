@@ -1,6 +1,3 @@
-// === Module 12647: getPreviousSafeRouteForNsfwReturn ===
-
-// Module 12647 (getPreviousSafeRouteForNsfwReturn)
 import getIdFromHistoryItem from "getIdFromHistoryItem";
 import closure_5 from "getIdFromHistoryItem";
 import ensureGuildLoaded from "ensureGuildLoaded";

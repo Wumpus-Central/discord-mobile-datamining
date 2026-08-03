@@ -1,6 +1,3 @@
-// === Module 11157: handleSharedClientThemeViewed ===
-
-// Module 11157 (handleSharedClientThemeViewed)
 const result = require("set").fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
 
 export const handleSharedClientThemeViewed = function handleSharedClientThemeViewed() {

@@ -1,6 +1,3 @@
-// === Module 16452: GraceOption ===
-
-// Module 16452 (GraceOption)
 import get_ActivityIndicator from "getPlatformUserUrl";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import handleFormInit from "handleFormInit";

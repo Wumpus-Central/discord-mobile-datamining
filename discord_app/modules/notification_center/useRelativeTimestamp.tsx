@@ -1,6 +1,3 @@
-// === Module 15053: useRelativeTimestamp ===
-
-// Module 15053 (useRelativeTimestamp)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

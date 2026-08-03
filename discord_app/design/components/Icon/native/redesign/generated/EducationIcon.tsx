@@ -1,6 +1,3 @@
-// === Module 10190: EducationIcon ===
-
-// Module 10190 (EducationIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 11046: items ===
-
-// Module 11046 (items)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "context";

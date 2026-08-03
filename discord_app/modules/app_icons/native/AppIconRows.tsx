@@ -1,6 +1,3 @@
-// === Module 14507: BackwardsCompatibleAppIconRows ===
-
-// Module 14507 (BackwardsCompatibleAppIconRows)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

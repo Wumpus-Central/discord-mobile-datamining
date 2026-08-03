@@ -1,6 +1,3 @@
-// === Module 1374: allGuildIds ===
-
-// Module 1374 (allGuildIds)
 import { Store } from "initialize";
 import importDefaultResult from "dispatcher";
 import set from "set";

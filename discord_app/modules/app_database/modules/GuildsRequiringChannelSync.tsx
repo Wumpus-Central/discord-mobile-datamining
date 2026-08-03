@@ -1,6 +1,3 @@
-// === Module 5942: getAll ===
-
-// Module 5942 (getAll)
 import createChannelRecord from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 16330: showPendingNotification ===
-
-// Module 16330 (showPendingNotification)
 import { FriendsSections } from "ME";
 
 const result = require("getAvatarURL").fileFinishedImporting("utils/RelationshipUtils.tsx");

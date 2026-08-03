@@ -1,6 +1,3 @@
-// === Module 12387: createQuestsEmbed ===
-
-// Module 12387 (createQuestsEmbed)
 import { Image } from "isSponsoredPlayQuest";
 import handleThemeChange from "handleThemeChange";
 import initializeState from "initializeState";

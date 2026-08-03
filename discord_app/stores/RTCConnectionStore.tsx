@@ -1,6 +1,3 @@
-// === Module 4265: createRTCConnection ===
-
-// Module 4265 (createRTCConnection)
 import set from "set";
 import fetchFingerprint from "fetchFingerprint";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";

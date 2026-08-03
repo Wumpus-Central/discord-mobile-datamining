@@ -1,6 +1,3 @@
-// === Module 5044: set ===
-
-// Module 5044 (set)
 import set from "set";
 
 const obj = { ALL: null, DESKTOP: null, CONSOLE: null, IN_GAME: null, VIDEO: null };

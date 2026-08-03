@@ -1,6 +1,3 @@
-// === Module 7645: FormCTAButton ===
-
-// Module 7645 (FormCTAButton)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import semanticColor from "semanticColor";

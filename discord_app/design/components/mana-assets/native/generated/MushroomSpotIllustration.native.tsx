@@ -1,6 +1,3 @@
-// === Module 7289: MushroomSpotIllustration ===
-
-// Module 7289 (MushroomSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/MushroomSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 15520: ChannelContentComponent ===
-
-// Module 15520 (ChannelContentComponent)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";

@@ -1,6 +1,3 @@
-// === Module 12768: showReviewRequestModal ===
-
-// Module 12768 (showReviewRequestModal)
 import getHash from "getHash";
 import initialize from "initialize";
 import handleConnectionOpen from "handleConnectionOpen";

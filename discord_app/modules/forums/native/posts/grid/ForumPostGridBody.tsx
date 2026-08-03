@@ -1,6 +1,3 @@
-// === Module 11197: GIFIcon ===
-
-// Module 11197 (GIFIcon)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";

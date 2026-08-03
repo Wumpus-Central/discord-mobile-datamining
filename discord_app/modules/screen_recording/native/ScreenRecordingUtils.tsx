@@ -1,6 +1,3 @@
-// === Module 14864: _getLatestVideo ===
-
-// Module 14864 (_getLatestVideo)
 import SURVEY_CONFIGS from "SURVEY_CONFIGS";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { useScreenRecordingStore } from "useScreenRecordingStore";

@@ -1,6 +1,3 @@
-// === Module 13177: SpeakerPulse ===
-
-// Module 13177 (SpeakerPulse)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

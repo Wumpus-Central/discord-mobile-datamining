@@ -1,6 +1,3 @@
-// === Module 8119: _openMediaModal ===
-
-// Module 8119 (_openMediaModal)
 import _slicedToArray from "_slicedToArray";
 import zustandStore from "zustandStore";
 import setContent from "setContent";

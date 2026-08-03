@@ -1,6 +1,3 @@
-// === Module 14863: useScreenRecordingStore ===
-
-// Module 14863 (useScreenRecordingStore)
 import keys from "keys";
 
 let obj = keys.create((arg0, arg1) => {

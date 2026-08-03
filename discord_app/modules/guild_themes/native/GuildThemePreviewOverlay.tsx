@@ -1,6 +1,3 @@
-// === Module 15158: GuildThemePreviewOverlay ===
-
-// Module 15158 (GuildThemePreviewOverlay)
 import "noop";
 import jsxProd from "jsxProd";
 

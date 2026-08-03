@@ -1,6 +1,3 @@
-// === Module 11272: BrokenImage ===
-
-// Module 11272 (BrokenImage)
 import "noop";
 import { jsx } from "jsxProd";
 

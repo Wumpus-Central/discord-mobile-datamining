@@ -1,6 +1,3 @@
-// === Module 16055: voiceSettings ===
-
-// Module 16055 (voiceSettings)
 import "report";
 import initialize from "initialize";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 8705: NameplateCardPreview ===
-
-// Module 8705 (NameplateCardPreview)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

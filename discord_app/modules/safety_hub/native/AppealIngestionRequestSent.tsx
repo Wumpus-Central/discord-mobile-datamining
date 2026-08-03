@@ -1,6 +1,3 @@
-// === Module 11111: AppealIngestionRequestSent ===
-
-// Module 11111 (AppealIngestionRequestSent)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import SafetyHubView from "SafetyHubView";

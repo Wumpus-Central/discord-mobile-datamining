@@ -1,6 +1,3 @@
-// === Module 11980: openUserContextMenuCommands ===
-
-// Module 11980 (openUserContextMenuCommands)
 let result = require("navigationToRootTabHelper").fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
 
 export default function openUserContextMenuCommands(analyticsLocations) {

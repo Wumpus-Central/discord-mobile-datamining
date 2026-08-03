@@ -1,6 +1,3 @@
-// === Module 15048: MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING ===
-
-// Module 15048 (MESSAGES_ITEM_CHANNEL_PRESSABLE_PADDING)
 import importAllResult from "openChannelLongPressActionSheet";
 import { View } from "module_4203";
 import sortActivity from "sortActivity";

@@ -1,6 +1,3 @@
-// === Module 3893: presentAddedFriendToast ===
-
-// Module 3893 (presentAddedFriendToast)
 import { VerificationCriteria } from "ME";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/toast/native/ToastUtils.tsx");

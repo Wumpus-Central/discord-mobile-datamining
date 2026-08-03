@@ -1,6 +1,3 @@
-// === Module 15472: OpenInterviewButton ===
-
-// Module 15472 (OpenInterviewButton)
 import importAllResult from "initialize";
 import { View } from "CustomStatusBubble";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 9208: _crypto ===
-
-// Module 9208 (_crypto)
 let _crypto;
 if (window != null) {
   _crypto = window.crypto;

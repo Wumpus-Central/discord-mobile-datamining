@@ -1,6 +1,3 @@
-// === Module 7373: Orb3dIllustration ===
-
-// Module 7373 (Orb3dIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/Orb3dIllustration.native.tsx");

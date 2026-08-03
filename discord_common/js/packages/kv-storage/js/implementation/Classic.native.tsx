@@ -1,6 +1,3 @@
-// === Module 1910: __KvStorage ===
-
-// Module 1910 (__KvStorage)
 import { NativeModules } from "get ActivityIndicator";
 
 if (null != global.__KvStorage) {

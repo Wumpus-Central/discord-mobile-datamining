@@ -1,6 +1,3 @@
-// === Module 14101: BouncingArrow ===
-
-// Module 14101 (BouncingArrow)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

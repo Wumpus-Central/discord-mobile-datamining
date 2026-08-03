@@ -1,6 +1,3 @@
-// === Module 10238: copyGuildChannelOrThreadLink ===
-
-// Module 10238 (copyGuildChannelOrThreadLink)
 const result = require("presentAddedFriendToast").fileFinishedImporting("modules/channel/native/ChannelActionSheetUtils.tsx");
 
 export const copyGuildChannelOrThreadLink = function copyGuildChannelOrThreadLink(guild_id, id) {

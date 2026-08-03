@@ -1,6 +1,3 @@
-// === Module 8925: experiment ===
-
-// Module 8925 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Allow users to ring each other in Guild Voice Channels", config: { enabled: true } }];

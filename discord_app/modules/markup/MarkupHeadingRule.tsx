@@ -1,6 +1,3 @@
-// === Module 4650: match ===
-
-// Module 4650 (match)
 const require = arg1;
 const re2 = /\n$/;
 let obj = {};

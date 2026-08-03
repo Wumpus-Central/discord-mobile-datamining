@@ -1,6 +1,3 @@
-// === Module 8352: showInstantInviteActionSheet ===
-
-// Module 8352 (showInstantInviteActionSheet)
 import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
 import { ChannelRecordBase } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

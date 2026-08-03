@@ -1,6 +1,3 @@
-// === Module 16346: prototype ===
-
-// Module 16346 (prototype)
 import closure_2 from "GuildFeatures";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";

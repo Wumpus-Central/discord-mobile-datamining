@@ -1,6 +1,3 @@
-// === Module 11987: setCustomStatus ===
-
-// Module 11987 (setCustomStatus)
 import { ClearAfterValues } from "StatusTypes";
 import { AnalyticEvents } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 9601: PADDING_HORIZONTAL ===
-
-// Module 9601 (PADDING_HORIZONTAL)
 import ExpressionPickerViewType from "ExpressionPickerViewType";
 
 let MIN_MARGIN;

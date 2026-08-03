@@ -1,6 +1,3 @@
-// === Module 15156: GuildThemeNuxPreviewGraphic ===
-
-// Module 15156 (GuildThemeNuxPreviewGraphic)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

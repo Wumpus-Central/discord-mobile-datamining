@@ -1,6 +1,3 @@
-// === Module 5737: handleClearCaches ===
-
-// Module 5737 (handleClearCaches)
 import getToken from "getToken";
 import handleConnectionOpen from "handleConnectionOpen";
 import _handleConnectionOpen from "_handleConnectionOpen";

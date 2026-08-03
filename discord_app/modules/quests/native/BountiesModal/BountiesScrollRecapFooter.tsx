@@ -1,6 +1,3 @@
-// === Module 14094: BountiesScrollRecapFooter ===
-
-// Module 14094 (BountiesScrollRecapFooter)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

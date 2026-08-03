@@ -1,6 +1,3 @@
-// === Module 9295: renderItem ===
-
-// Module 9295 (renderItem)
 import closure_3 from "CONVERSATION_COLORS";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";

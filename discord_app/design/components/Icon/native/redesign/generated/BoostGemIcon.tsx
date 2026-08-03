@@ -1,6 +1,3 @@
-// === Module 6621: BoostGemIcon ===
-
-// Module 6621 (BoostGemIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

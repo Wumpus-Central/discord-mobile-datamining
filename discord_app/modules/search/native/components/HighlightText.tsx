@@ -1,6 +1,3 @@
-// === Module 10304: HighlightText ===
-
-// Module 10304 (HighlightText)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

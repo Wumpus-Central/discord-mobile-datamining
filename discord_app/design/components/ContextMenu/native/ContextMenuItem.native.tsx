@@ -1,6 +1,3 @@
-// === Module 13228: ContextMenuItem ===
-
-// Module 13228 (ContextMenuItem)
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

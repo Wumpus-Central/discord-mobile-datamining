@@ -1,6 +1,3 @@
-// === Module 4608: MINIMUM_HIT_AREA ===
-
-// Module 4608 (MINIMUM_HIT_AREA)
 import IconSizes from "IconSizes";
 import IconSizes from "IconSizes";
 import IconSizes from "IconSizes";

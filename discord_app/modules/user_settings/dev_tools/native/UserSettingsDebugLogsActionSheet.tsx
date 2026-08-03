@@ -1,6 +1,3 @@
-// === Module 14545: UserSettingsDebugLogsFiltersActionSheet ===
-
-// Module 14545 (UserSettingsDebugLogsFiltersActionSheet)
 import "noop";
 import jsxProd from "jsxProd";
 

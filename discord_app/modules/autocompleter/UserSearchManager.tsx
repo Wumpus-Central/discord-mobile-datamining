@@ -1,6 +1,3 @@
-// === Module 6170: getTransformedUser ===
-
-// Module 6170 (getTransformedUser)
 import { isPrivate } from "createChannelRecord";
 import createdAt from "createdAt";
 import ensureGuildLoaded from "ensureGuildLoaded";

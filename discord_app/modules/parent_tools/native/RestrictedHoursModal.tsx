@@ -1,6 +1,3 @@
-// === Module 16135: RestrictedHoursLogoutBlockingLayer ===
-
-// Module 16135 (RestrictedHoursLogoutBlockingLayer)
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
 import get_ActivityIndicator from "ManaContext";

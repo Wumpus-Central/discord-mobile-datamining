@@ -1,6 +1,3 @@
-// === Module 14984: transitionGuildsBarToGuildOrOpenSelectedChannel ===
-
-// Module 14984 (transitionGuildsBarToGuildOrOpenSelectedChannel)
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_3 from "handleConnectionOpen";
 import { ME } from "ME";

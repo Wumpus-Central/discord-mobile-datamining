@@ -1,6 +1,3 @@
-// === Module 1299: PX_16 ===
-
-// Module 1299 (PX_16)
 const PX_16 = require("Themes").space.PX_16;
 const PX_12 = require("Themes").space.PX_12;
 const sum = PX_16 + 6;

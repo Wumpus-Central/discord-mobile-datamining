@@ -1,6 +1,3 @@
-// === Module 14730: SettingSearchBar ===
-
-// Module 14730 (SettingSearchBar)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import zustandStore from "zustandStore";

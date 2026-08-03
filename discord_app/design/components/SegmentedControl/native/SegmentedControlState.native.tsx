@@ -1,6 +1,3 @@
-// === Module 8228: useSegmentedControlState ===
-
-// Module 8228 (useSegmentedControlState)
 import noop from "noop";
 
 const require = arg1;

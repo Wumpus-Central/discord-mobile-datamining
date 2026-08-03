@@ -1,6 +1,3 @@
-// === Module 5954: maybeDispatchDevOnlyDummyFriendSuggestions ===
-
-// Module 5954 (maybeDispatchDevOnlyDummyFriendSuggestions)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const result = require("set").fileFinishedImporting("modules/friend_suggestions/maybeDispatchDevOnlyDummyFriendSuggestions.tsx");

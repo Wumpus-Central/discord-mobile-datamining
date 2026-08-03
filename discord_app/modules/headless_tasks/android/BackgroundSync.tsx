@@ -1,6 +1,3 @@
-// === Module 16789: resolved ===
-
-// Module 16789 (resolved)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
 import getState from "getState";

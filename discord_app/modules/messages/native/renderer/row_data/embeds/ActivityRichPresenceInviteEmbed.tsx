@@ -1,6 +1,3 @@
-// === Module 12391: EmbedDisplayType ===
-
-// Module 12391 (EmbedDisplayType)
 import addApplication from "addApplication";
 import upsertAccount from "upsertAccount";
 import { SpotifyApplication } from "getIconURL";

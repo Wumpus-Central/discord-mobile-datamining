@@ -1,6 +1,3 @@
-// === Module 10743: useLocalStorageState ===
-
-// Module 10743 (useLocalStorageState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

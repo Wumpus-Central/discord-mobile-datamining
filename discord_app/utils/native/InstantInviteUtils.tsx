@@ -1,6 +1,3 @@
-// === Module 8355: get label ===
-
-// Module 8355 (get label)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
 import closure_5 from "comparator";

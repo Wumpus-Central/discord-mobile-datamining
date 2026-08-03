@@ -1,6 +1,3 @@
-// === Module 12569: getTopPatternSource ===
-
-// Module 12569 (getTopPatternSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 12342: getMediaViewerStateForScreen ===
-
-// Module 12342 (getMediaViewerStateForScreen)
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 
 export default function getMediaViewerStateForScreen(arg0, arg1, closure_1) {

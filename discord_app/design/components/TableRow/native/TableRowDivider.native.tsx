@@ -1,6 +1,3 @@
-// === Module 5185: TableRowDivider ===
-
-// Module 5185 (TableRowDivider)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { getTableDividerWidth } from "TABLE_ROW_HEIGHT";

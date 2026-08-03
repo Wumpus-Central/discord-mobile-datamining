@@ -1,6 +1,3 @@
-// === Module 16593: pickImage ===
-
-// Module 16593 (pickImage)
 import Themes from "Themes";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

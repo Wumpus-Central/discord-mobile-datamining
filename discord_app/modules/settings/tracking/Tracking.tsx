@@ -1,6 +1,3 @@
-// === Module 6511: trackSettingSearchInputFocused ===
-
-// Module 6511 (trackSettingSearchInputFocused)
 import { AnalyticEvents } from "ME";
 
 const result = require("getSearchSessionId").fileFinishedImporting("modules/settings/tracking/Tracking.tsx");

@@ -1,6 +1,3 @@
-// === Module 13861: handleDisableAccount ===
-
-// Module 13861 (handleDisableAccount)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

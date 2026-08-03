@@ -1,6 +1,3 @@
-// === Module 13894: syncContacts ===
-
-// Module 13894 (syncContacts)
 import closure_3 from "jsxProd";
 import "asyncRequireImpl";
 import mergeGuildAvatar from "mergeGuildAvatar";

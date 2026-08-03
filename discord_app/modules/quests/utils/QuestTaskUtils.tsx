@@ -1,6 +1,3 @@
-// === Module 6012: getApplicationIdsByTaskTypes ===
-
-// Module 6012 (getApplicationIdsByTaskTypes)
 import initializeState from "initializeState";
 
 let items5 = arg1;

@@ -1,6 +1,3 @@
-// === Module 15051: ? ===
-
-// Module 15051
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import fetchFingerprint from "fetchFingerprint";
 import sortActivity from "sortActivity";

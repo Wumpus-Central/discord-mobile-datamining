@@ -1,6 +1,3 @@
-// === Module 15802: AnimatedToast ===
-
-// Module 15802 (AnimatedToast)
 import importAllResult from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import ToastStore from "ToastStore";

@@ -1,6 +1,3 @@
-// === Module 11545: useIsMessageRequestRestrictedViewer ===
-
-// Module 11545 (useIsMessageRequestRestrictedViewer)
 const result = require("SettingsDefaultFeature").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 
 export const useIsMessageRequestRestrictedViewer = function useIsMessageRequestRestrictedViewer(ChatInputGuardMessageRequest) {

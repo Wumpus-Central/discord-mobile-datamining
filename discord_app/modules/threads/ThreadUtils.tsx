@@ -1,6 +1,3 @@
-// === Module 6096: getAccessibilityLabelFormatter ===
-
-// Module 6096 (getAccessibilityLabelFormatter)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

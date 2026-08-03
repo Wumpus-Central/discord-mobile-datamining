@@ -1,6 +1,3 @@
-// === Module 11938: GameProfileWebsiteButton ===
-
-// Module 11938 (GameProfileWebsiteButton)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { IGDB_ATTRIBUTION_LINK } from "ContentInventoryFeedKey";

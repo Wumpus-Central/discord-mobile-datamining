@@ -1,6 +1,3 @@
-// === Module 14221: QuestBarPreview ===
-
-// Module 14221 (QuestBarPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 15951: useVoicePanelNavArrowPressed ===
-
-// Module 15951 (useVoicePanelNavArrowPressed)
 import noop from "noop";
 import { VoicePanelControlsModes } from "VoicePanelControlsModes";
 

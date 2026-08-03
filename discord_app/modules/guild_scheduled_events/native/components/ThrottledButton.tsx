@@ -1,6 +1,3 @@
-// === Module 12291: ThrottledButton ===
-
-// Module 12291 (ThrottledButton)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

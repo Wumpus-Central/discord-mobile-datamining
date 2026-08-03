@@ -1,6 +1,3 @@
-// === Module 10278: getFirstGuildIncidentId ===
-
-// Module 10278 (getFirstGuildIncidentId)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

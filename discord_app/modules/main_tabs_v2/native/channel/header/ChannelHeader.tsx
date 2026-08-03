@@ -1,6 +1,3 @@
-// === Module 10149: ChannelHeader ===
-
-// Module 10149 (ChannelHeader)
 import "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ComponentActions } from "ME";

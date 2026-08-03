@@ -1,6 +1,3 @@
-// === Module 16525: onModalClose ===
-
-// Module 16525 (onModalClose)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

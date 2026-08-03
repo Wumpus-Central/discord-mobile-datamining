@@ -1,6 +1,3 @@
-// === Module 10256: Notifications ===
-
-// Module 10256 (Notifications)
 import "noop";
 import handleAlertMessage from "handleAlertMessage";
 import { jsx } from "jsxProd";

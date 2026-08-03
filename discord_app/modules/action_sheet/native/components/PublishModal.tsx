@@ -1,6 +1,3 @@
-// === Module 9891: PublishModal ===
-
-// Module 9891 (PublishModal)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

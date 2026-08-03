@@ -1,6 +1,3 @@
-// === Module 15780: BogoPromotionActionSheet ===
-
-// Module 15780 (BogoPromotionActionSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { PremiumTypes } from "GuildFeatures";

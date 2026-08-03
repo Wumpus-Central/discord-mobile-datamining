@@ -1,6 +1,3 @@
-// === Module 4999: callback ===
-
-// Module 4999 (callback)
 import dispatcher from "dispatcher";
 import set from "set";
 import ME from "ME";

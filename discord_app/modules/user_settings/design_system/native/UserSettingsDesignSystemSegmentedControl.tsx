@@ -1,6 +1,3 @@
-// === Module 14589: UserSettingsDesignSystemSegmentedControl ===
-
-// Module 14589 (UserSettingsDesignSystemSegmentedControl)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

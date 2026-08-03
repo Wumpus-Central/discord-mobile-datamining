@@ -1,6 +1,3 @@
-// === Module 13913: getDataHarvestStatus ===
-
-// Module 13913 (getDataHarvestStatus)
 import { Endpoints } from "ME";
 
 const result = require("sendRequest").fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");

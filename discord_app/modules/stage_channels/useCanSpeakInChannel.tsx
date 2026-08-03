@@ -1,6 +1,3 @@
-// === Module 10408: useCanCurrentUserSpeakInChannel ===
-
-// Module 10408 (useCanCurrentUserSpeakInChannel)
 import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 499: HELLO_KEY ===
-
-// Module 499 (HELLO_KEY)
 const result = require("set").fileFinishedImporting("modules/app_database/modules/KvCacheVersionConstants.tsx");
 
 export const HELLO_KEY = "hello";

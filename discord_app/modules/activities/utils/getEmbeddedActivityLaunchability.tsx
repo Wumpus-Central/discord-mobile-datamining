@@ -1,6 +1,3 @@
-// === Module 11151: getEmbeddedActivityLaunchability ===
-
-// Module 11151 (getEmbeddedActivityLaunchability)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

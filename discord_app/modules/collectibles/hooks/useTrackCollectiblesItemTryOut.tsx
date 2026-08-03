@@ -1,6 +1,3 @@
-// === Module 7944: useTrackCollectiblesItemTryOut ===
-
-// Module 7944 (useTrackCollectiblesItemTryOut)
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { AnalyticEvents } from "ME";
 import GuildFeatures from "GuildFeatures";

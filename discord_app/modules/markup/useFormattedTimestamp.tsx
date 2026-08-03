@@ -1,6 +1,3 @@
-// === Module 10308: items ===
-
-// Module 10308 (items)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

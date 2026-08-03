@@ -1,6 +1,3 @@
-// === Module 1876: GuildFeatures ===
-
-// Module 1876 (GuildFeatures)
 import ME from "ME";
 import set from "getSystemLocale";
 

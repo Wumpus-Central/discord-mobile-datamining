@@ -1,6 +1,3 @@
-// === Module 9402: useShowNitroUpsellCallback ===
-
-// Module 9402 (useShowNitroUpsellCallback)
 import noop from "noop";
 
 const require = arg1;

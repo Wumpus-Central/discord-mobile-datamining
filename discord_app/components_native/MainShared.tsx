@@ -1,6 +1,3 @@
-// === Module 15757: BurstReactionAnimationContainer ===
-
-// Module 15757 (BurstReactionAnimationContainer)
 import ActionSheetPresenter from "ActionSheetPresenter";
 import { NativeModules } from "BurstReactionAnimationContainerInner";
 import ensureGuildLoaded from "ensureGuildLoaded";

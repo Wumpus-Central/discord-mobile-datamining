@@ -1,6 +1,3 @@
-// === Module 16047: useControlAccessoryHeight ===
-
-// Module 16047 (useControlAccessoryHeight)
 import noop from "noop";
 
 const require = arg1;

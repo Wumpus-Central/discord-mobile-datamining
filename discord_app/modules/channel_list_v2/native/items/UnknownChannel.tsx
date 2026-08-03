@@ -1,6 +1,3 @@
-// === Module 15225: handlePress ===
-
-// Module 15225 (handlePress)
 import importAllResult from "noop";
 import { UnreadSetting } from "ReadStateTypes";
 import { jsx } from "jsxProd";

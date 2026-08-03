@@ -1,6 +1,3 @@
-// === Module 11870: PlusMediumIcon ===
-
-// Module 11870 (PlusMediumIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

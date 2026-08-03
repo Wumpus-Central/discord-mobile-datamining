@@ -1,6 +1,3 @@
-// === Module 15298: NotificationCenterActionButton ===
-
-// Module 15298 (NotificationCenterActionButton)
 import "noop";
 import { jsx } from "jsxProd";
 

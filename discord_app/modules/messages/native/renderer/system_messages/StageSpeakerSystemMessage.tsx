@@ -1,6 +1,3 @@
-// === Module 7815: createStageSpeakerSystemMessage ===
-
-// Module 7815 (createStageSpeakerSystemMessage)
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageSpeakerSystemMessage.tsx");
 
 export const createStageSpeakerSystemMessage = function createStageSpeakerSystemMessage(roleStyle) {

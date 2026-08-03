@@ -1,6 +1,3 @@
-// === Module 8527: GameGenres ===
-
-// Module 8527 (GameGenres)
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
 

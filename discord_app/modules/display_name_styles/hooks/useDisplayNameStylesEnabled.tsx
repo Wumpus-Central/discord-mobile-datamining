@@ -1,6 +1,3 @@
-// === Module 4424: useDisplayNameStylesEnabled ===
-
-// Module 4424 (useDisplayNameStylesEnabled)
 import { useContext } from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

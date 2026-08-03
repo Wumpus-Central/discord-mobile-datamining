@@ -1,6 +1,3 @@
-// === Module 12718: getCachedUseAltGateway ===
-
-// Module 12718 (getCachedUseAltGateway)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");

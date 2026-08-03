@@ -1,6 +1,3 @@
-// === Module 13124: GuildActionSheetDirectory ===
-
-// Module 13124 (GuildActionSheetDirectory)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

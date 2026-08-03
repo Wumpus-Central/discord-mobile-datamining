@@ -1,6 +1,3 @@
-// === Module 7709: SettingsUpsellsConfigRegistry ===
-
-// Module 7709 (SettingsUpsellsConfigRegistry)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 6696: generateAcceptInviteOptions ===
-
-// Module 6696 (generateAcceptInviteOptions)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import scheduledEventSort from "scheduledEventSort";
 import { isGuildScheduledEventActive as closure_7 } from "scheduledEventSort";

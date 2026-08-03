@@ -1,6 +1,3 @@
-// === Module 3922: BaseRive ===
-
-// Module 3922 (BaseRive)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

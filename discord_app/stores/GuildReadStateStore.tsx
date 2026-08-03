@@ -1,6 +1,3 @@
-// === Module 5925: updateGuildUnreadSentinel ===
-
-// Module 5925 (updateGuildUnreadSentinel)
 import findOrCreateMessageRecord from "findOrCreateMessageRecord";
 import _validate from "_validate";
 import rebuild from "rebuild";

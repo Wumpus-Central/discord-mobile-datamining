@@ -1,6 +1,3 @@
-// === Module 11418: AppLauncherButtonIcon ===
-
-// Module 11418 (AppLauncherButtonIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8890: compareArrays ===
-
-// Module 8890 (compareArrays)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import module_36 from "module_36";
 

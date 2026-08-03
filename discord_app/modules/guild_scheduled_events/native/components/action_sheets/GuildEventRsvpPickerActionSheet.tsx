@@ -1,6 +1,3 @@
-// === Module 8351: GuildEventRsvpPickerActionSheet ===
-
-// Module 8351 (GuildEventRsvpPickerActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";

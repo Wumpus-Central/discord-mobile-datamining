@@ -1,6 +1,3 @@
-// === Module 15: createFastConnectSocket ===
-
-// Module 15 (createFastConnectSocket)
 import module_16 from "module_16";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { VERSION_TO_FORCE_RESYNCING_ALL_DATA as closure_6 } from "HELLO_KEY";

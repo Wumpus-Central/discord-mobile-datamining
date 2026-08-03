@@ -1,6 +1,3 @@
-// === Module 1218: fetchFingerprint ===
-
-// Module 1218 (fetchFingerprint)
 import initialize from "initialize";
 import clearAll from "clearAll";
 import ME from "ME";

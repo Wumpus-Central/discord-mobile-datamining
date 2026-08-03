@@ -1,6 +1,3 @@
-// === Module 14453: UserSettingsSwipeRightToLeft ===
-
-// Module 14453 (UserSettingsSwipeRightToLeft)
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 9981: useEmojisForReactionRow ===
-
-// Module 9981 (useEmojisForReactionRow)
 import noop from "noop";
 import { EmojiIntention } from "set";
 

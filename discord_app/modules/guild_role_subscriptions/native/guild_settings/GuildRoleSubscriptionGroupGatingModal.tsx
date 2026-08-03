@@ -1,6 +1,3 @@
-// === Module 16606: GuildRoleSubscriptionGroupGatingModal ===
-
-// Module 16606 (GuildRoleSubscriptionGroupGatingModal)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import usePriceTiers from "usePriceTiers";

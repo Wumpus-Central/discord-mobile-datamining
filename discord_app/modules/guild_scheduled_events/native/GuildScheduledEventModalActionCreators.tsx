@@ -1,6 +1,3 @@
-// === Module 8233: openCreateOrEditGuildEventModal ===
-
-// Module 8233 (openCreateOrEditGuildEventModal)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import DeleteEventAlert from "DeleteEventAlert";
 import ensureGuildLoaded from "ensureGuildLoaded";

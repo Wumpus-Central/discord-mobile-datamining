@@ -1,6 +1,3 @@
-// === Module 8769: useOpenNitroSubscribeActionSheet ===
-
-// Module 8769 (useOpenNitroSubscribeActionSheet)
 import noop from "noop";
 import ME from "ME";
 import { PremiumTypes } from "GuildFeatures";

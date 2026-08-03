@@ -1,6 +1,3 @@
-// === Module 1872: _initLibdiscore ===
-
-// Module 1872 (_initLibdiscore)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 import importAllResult from "setTimeout";

@@ -1,6 +1,3 @@
-// === Module 4591: enforcing ===
-
-// Module 4591 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeDeviceAccessibilityModule");

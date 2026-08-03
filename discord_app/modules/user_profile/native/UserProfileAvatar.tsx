@@ -1,6 +1,3 @@
-// === Module 8108: OpenableUserProfileAvatar ===
-
-// Module 8108 (OpenableUserProfileAvatar)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY";

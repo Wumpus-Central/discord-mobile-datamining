@@ -1,6 +1,3 @@
-// === Module 16679: handleMessageSendFailure ===
-
-// Module 16679 (handleMessageSendFailure)
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_4 from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";

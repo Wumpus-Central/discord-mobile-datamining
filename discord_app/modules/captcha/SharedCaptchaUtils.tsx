@@ -1,6 +1,3 @@
-// === Module 9481: prototype ===
-
-// Module 9481 (prototype)
 import useCaptchaStore from "useCaptchaStore";
 import { CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS as closure_3 } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS";
 

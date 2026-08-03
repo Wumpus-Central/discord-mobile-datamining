@@ -1,6 +1,3 @@
-// === Module 12418: GuildPreview ===
-
-// Module 12418 (GuildPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

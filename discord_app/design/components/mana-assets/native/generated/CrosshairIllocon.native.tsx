@@ -1,6 +1,3 @@
-// === Module 6959: CrosshairIllocon ===
-
-// Module 6959 (CrosshairIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/CrosshairIllocon.native.tsx");

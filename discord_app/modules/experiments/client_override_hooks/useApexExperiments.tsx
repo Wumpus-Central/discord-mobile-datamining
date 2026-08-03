@@ -1,6 +1,3 @@
-// === Module 10503: makeClientVariant ===
-
-// Module 10503 (makeClientVariant)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import initialize from "initialize";

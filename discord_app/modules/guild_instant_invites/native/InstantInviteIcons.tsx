@@ -1,6 +1,3 @@
-// === Module 10209: get more ===
-
-// Module 10209 (get more)
 import { Platform } from "get ActivityIndicator";
 
 const obj = {};

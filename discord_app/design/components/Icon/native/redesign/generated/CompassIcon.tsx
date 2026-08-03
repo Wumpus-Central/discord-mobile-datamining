@@ -1,6 +1,3 @@
-// === Module 13673: CompassIcon ===
-
-// Module 13673 (CompassIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

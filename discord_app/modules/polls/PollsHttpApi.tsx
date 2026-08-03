@@ -1,6 +1,3 @@
-// === Module 9976: _submitPollVote ===
-
-// Module 9976 (_submitPollVote)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

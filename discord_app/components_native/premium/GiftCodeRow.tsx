@@ -1,6 +1,3 @@
-// === Module 12615: handleRevoke ===
-
-// Module 12615 (handleRevoke)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { AnalyticsSections } from "ME";
 import jsxProd from "jsxProd";

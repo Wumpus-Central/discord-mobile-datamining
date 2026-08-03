@@ -1,6 +1,3 @@
-// === Module 16693: handleReferralMessages ===
-
-// Module 16693 (handleReferralMessages)
 import reset from "reset";
 import emitChanges from "emitChanges";
 import "initialize";

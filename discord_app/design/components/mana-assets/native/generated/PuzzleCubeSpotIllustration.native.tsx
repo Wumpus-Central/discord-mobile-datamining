@@ -1,6 +1,3 @@
-// === Module 7415: PuzzleCubeSpotIllustration ===
-
-// Module 7415 (PuzzleCubeSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PuzzleCubeSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 4429: handleSubscribeFailure ===
-
-// Module 4429 (handleSubscribeFailure)
 import { Store } from "initialize";
 
 const require = arg1;

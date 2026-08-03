@@ -1,6 +1,3 @@
-// === Module 16064: setMode ===
-
-// Module 16064 (setMode)
 import createFakeSharedValue from "createFakeSharedValue";
 import createFakeSharedValue from "createFakeSharedValue";
 import createFakeSharedValue from "createFakeSharedValue";

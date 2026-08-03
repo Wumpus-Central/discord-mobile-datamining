@@ -1,6 +1,3 @@
-// === Module 10232: setNextFavoritesGuildViewSource ===
-
-// Module 10232 (setNextFavoritesGuildViewSource)
 import handleConnectionOpen from "handleConnectionOpen";
 import { AnalyticEvents } from "ME";
 

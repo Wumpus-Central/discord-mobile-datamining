@@ -1,6 +1,3 @@
-// === Module 7647: FormHint ===
-
-// Module 7647 (FormHint)
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

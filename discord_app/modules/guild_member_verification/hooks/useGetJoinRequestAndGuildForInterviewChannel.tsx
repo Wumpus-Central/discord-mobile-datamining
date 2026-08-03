@@ -1,6 +1,3 @@
-// === Module 11739: useGetJoinRequestAndGuildForInterviewChannel ===
-
-// Module 11739 (useGetJoinRequestAndGuildForInterviewChannel)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

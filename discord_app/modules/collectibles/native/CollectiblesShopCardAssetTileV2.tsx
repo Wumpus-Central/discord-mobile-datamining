@@ -1,6 +1,3 @@
-// === Module 8721: PurchasedAssetOverlay ===
-
-// Module 8721 (PurchasedAssetOverlay)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ProfileEffectSample";
 import get_ActivityIndicator from "FRACTIONAL_NITRO_COIN_SIZE";

@@ -1,6 +1,3 @@
-// === Module 9495: _getDefaultRewardName ===
-
-// Module 9495 (_getDefaultRewardName)
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import set from "QuestRewardTypes";
 

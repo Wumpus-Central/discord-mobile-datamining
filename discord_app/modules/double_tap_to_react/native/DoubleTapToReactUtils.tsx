@@ -1,6 +1,3 @@
-// === Module 7755: getFallbackDoubleTapDisambiguatedEmoji ===
-
-// Module 7755 (getFallbackDoubleTapDisambiguatedEmoji)
 import DismissibleContent from "DismissibleContent";
 import { isContentShown } from "withContent";
 import getEmojiToGroupId from "getEmojiToGroupId";

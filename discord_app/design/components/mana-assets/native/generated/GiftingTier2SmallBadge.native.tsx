@@ -1,6 +1,3 @@
-// === Module 7203: GiftingTier2SmallBadge ===
-
-// Module 7203 (GiftingTier2SmallBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier2SmallBadge.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 15973: getConsoleInfo ===
-
-// Module 15973 (getConsoleInfo)
 import noop from "noop";
 import { PlatformTypes } from "ME";
 import { jsx } from "jsxProd";

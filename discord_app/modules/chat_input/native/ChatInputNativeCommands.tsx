@@ -1,6 +1,3 @@
-// === Module 11178: ? ===
-
-// Module 11178
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let c3;

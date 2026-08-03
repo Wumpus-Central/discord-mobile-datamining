@@ -1,6 +1,3 @@
-// === Module 1345: resolveTheme ===
-
-// Module 1345 (resolveTheme)
 import reset from "reset";
 import initialize from "initialize";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";

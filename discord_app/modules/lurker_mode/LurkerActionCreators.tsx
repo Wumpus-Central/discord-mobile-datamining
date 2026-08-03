@@ -1,6 +1,3 @@
-// === Module 11542: stopLurkingAll ===
-
-// Module 11542 (stopLurkingAll)
 import sendRequest from "sendRequest";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";

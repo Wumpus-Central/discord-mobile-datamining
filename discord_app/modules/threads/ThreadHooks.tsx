@@ -1,6 +1,3 @@
-// === Module 6052: useCanUnarchiveThread ===
-
-// Module 6052 (useCanUnarchiveThread)
 import _slicedToArray from "_slicedToArray";
 import { THREADED_CHANNEL_TYPES } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";

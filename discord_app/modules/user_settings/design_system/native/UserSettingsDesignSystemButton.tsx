@@ -1,6 +1,3 @@
-// === Module 14570: ExampleButton ===
-
-// Module 14570 (ExampleButton)
 import int2hslRaw from "int2hslRaw";
 import items from "items";
 import get_ActivityIndicator from "useNavigation";

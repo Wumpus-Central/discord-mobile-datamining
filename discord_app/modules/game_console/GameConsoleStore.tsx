@@ -1,6 +1,3 @@
-// === Module 4207: set ===
-
-// Module 4207 (set)
 import handleUpdate from "handleUpdate";
 import updateVoiceState from "updateVoiceState";
 import { DeviceSettingsStore } from "initialize";

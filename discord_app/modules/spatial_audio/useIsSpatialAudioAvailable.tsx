@@ -1,6 +1,3 @@
-// === Module 12903: useIsSpatialAudioAvailable ===
-
-// Module 12903 (useIsSpatialAudioAvailable)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { Features } from "DesktopSources";
 

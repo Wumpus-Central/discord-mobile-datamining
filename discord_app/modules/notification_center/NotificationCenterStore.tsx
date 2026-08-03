@@ -1,6 +1,3 @@
-// === Module 15304: handleLoadFinished ===
-
-// Module 15304 (handleLoadFinished)
 import _slicedToArray from "_slicedToArray";
 import findOrCreateMessageRecord from "findOrCreateMessageRecord";
 import { PersistedStore } from "initialize";

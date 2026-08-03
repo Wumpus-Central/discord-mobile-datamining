@@ -1,6 +1,3 @@
-// === Module 4009: UNSAFE_isDismissibleContentDismissed ===
-
-// Module 4009 (UNSAFE_isDismissibleContentDismissed)
 import isSingleUseDismissibleContent from "isSingleUseDismissibleContent";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import handleConnectionOpen from "handleConnectionOpen";

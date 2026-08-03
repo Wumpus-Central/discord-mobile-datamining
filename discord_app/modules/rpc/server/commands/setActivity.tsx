@@ -1,6 +1,3 @@
-// === Module 13568: RPC_LOCAL_SCOPE ===
-
-// Module 13568 (RPC_LOCAL_SCOPE)
 import addApplication from "addApplication";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";

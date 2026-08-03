@@ -1,6 +1,3 @@
-// === Module 9192: ChangeEmailWarning ===
-
-// Module 9192 (ChangeEmailWarning)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 15085: HappeningNowLiveStageContent ===
-
-// Module 15085 (HappeningNowLiveStageContent)
 import importAllResult from "getNickname";
 import { View } from "computeChannelName";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";

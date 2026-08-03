@@ -1,6 +1,3 @@
-// === Module 12727: items ===
-
-// Module 12727 (items)
 import { NativeModules } from "get ActivityIndicator";
 
 const items = [];

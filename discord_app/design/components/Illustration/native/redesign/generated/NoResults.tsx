@@ -1,6 +1,3 @@
-// === Module 8379: getNoResultsSource ===
-
-// Module 8379 (getNoResultsSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

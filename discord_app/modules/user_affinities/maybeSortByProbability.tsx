@@ -1,6 +1,3 @@
-// === Module 7852: maybeSortByProbability ===
-
-// Module 7852 (maybeSortByProbability)
 const result = require("set").fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
 export const maybeSortByProbability = function maybeSortByProbability(reduced, userAffinitiesMap, location) {

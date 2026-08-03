@@ -1,6 +1,3 @@
-// === Module 10070: DirectoryEntryTypes ===
-
-// Module 10070 (DirectoryEntryTypes)
 import ME from "ME";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 13856: BlockedUserRow ===
-
-// Module 13856 (BlockedUserRow)
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";

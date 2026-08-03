@@ -1,6 +1,3 @@
-// === Module 15721: set ===
-
-// Module 15721 (set)
 import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
 import set from "openChannelCallModal";
 

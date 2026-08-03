@@ -1,6 +1,3 @@
-// === Module 4044: navigationToRootTabHelper ===
-
-// Module 4044 (navigationToRootTabHelper)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ME } from "ME";

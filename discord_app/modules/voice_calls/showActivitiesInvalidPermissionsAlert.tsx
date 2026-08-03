@@ -1,6 +1,3 @@
-// === Module 10655: showActivitiesInvalidPermissionsAlert ===
-
-// Module 10655 (showActivitiesInvalidPermissionsAlert)
 const result = require("set").fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
 
 export const showActivitiesInvalidPermissionsAlert = function showActivitiesInvalidPermissionsAlert() {

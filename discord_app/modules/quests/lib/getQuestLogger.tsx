@@ -1,6 +1,3 @@
-// === Module 5995: getQuestLogger ===
-
-// Module 5995 (getQuestLogger)
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import { NOOP } from "sum";
 

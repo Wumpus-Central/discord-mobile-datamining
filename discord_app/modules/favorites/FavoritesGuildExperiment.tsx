@@ -1,6 +1,3 @@
-// === Module 10231: useFavoritesGuildConfig ===
-
-// Module 10231 (useFavoritesGuildConfig)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true, hasHigherPrivileges: true }, 3: { enabled: true, hasHigherPrivileges: false } };

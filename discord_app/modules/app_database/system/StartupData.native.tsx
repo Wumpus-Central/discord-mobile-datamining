@@ -1,6 +1,3 @@
-// === Module 1924: getUserId ===
-
-// Module 1924 (getUserId)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");

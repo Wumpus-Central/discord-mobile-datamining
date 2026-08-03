@@ -1,6 +1,3 @@
-// === Module 9302: __INTERNAL_VIEW_CONFIG ===
-
-// Module 9302 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDMessageView", validAttributes: { row: true } };

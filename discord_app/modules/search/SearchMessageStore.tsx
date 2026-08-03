@@ -1,6 +1,3 @@
-// === Module 5878: handleReaction ===
-
-// Module 5878 (handleReaction)
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import { Store } from "initialize";

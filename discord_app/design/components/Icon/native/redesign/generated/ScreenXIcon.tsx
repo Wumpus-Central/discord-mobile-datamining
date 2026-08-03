@@ -1,6 +1,3 @@
-// === Module 16038: ScreenXIcon ===
-
-// Module 16038 (ScreenXIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

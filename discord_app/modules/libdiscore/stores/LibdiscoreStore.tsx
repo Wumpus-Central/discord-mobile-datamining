@@ -1,6 +1,3 @@
-// === Module 1863: identity ===
-
-// Module 1863 (identity)
 import { Store } from "initialize";
 
 let require = arg1;

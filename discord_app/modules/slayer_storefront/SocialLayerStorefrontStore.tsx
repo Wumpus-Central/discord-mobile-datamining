@@ -1,6 +1,3 @@
-// === Module 5668: handleUserSettingsStoreUpdate ===
-
-// Module 5668 (handleUserSettingsStoreUpdate)
 import _getSystemLocale from "_getSystemLocale";
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";

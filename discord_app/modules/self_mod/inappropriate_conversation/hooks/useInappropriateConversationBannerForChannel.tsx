@@ -1,6 +1,3 @@
-// === Module 10449: useInappropriateConversationBannerForChannel ===
-
-// Module 10449 (useInappropriateConversationBannerForChannel)
 import { SafetyWarningTypes } from "handleConnectionOpen";
 
 const result = require("useSafetyAlertsSettingOrDefault").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");

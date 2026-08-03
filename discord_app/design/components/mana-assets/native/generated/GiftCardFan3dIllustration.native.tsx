@@ -1,6 +1,3 @@
-// === Module 7177: GiftCardFan3dIllustration ===
-
-// Module 7177 (GiftCardFan3dIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GiftCardFan3dIllustration.native.tsx");

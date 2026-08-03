@@ -1,6 +1,3 @@
-// === Module 4747: ? ===
-
-// Module 4747
 import handleThemeChange from "handleThemeChange";
 import { ThemeTypes } from "sum";
 

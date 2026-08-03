@@ -1,6 +1,3 @@
-// === Module 6675: _discardDraftOrder ===
-
-// Module 6675 (_discardDraftOrder)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { OrderStatus } from "CustomCheckoutFlow";
 

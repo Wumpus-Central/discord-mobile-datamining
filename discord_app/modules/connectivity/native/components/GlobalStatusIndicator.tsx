@@ -1,6 +1,3 @@
-// === Module 10705: nativeEventEmitter ===
-
-// Module 10705 (nativeEventEmitter)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import setContent from "setContent";

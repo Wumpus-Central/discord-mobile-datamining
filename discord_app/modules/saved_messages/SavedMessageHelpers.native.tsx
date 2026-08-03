@@ -1,6 +1,3 @@
-// === Module 9947: _addOrUpdateSavedMessage ===
-
-// Module 9947 (_addOrUpdateSavedMessage)
 import EntitlementFeatureNames from "EntitlementFeatureNames";
 import getTimeSafe from "getTimeSafe";
 import { AbortCodes } from "ME";

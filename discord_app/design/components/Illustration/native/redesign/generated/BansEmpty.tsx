@@ -1,6 +1,3 @@
-// === Module 16514: getBansEmptySource ===
-
-// Module 16514 (getBansEmptySource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

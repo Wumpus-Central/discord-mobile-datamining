@@ -1,6 +1,3 @@
-// === Module 13677: TrainIcon ===
-
-// Module 13677 (TrainIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

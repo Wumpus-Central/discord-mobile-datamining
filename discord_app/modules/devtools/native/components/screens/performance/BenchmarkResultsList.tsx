@@ -1,6 +1,3 @@
-// === Module 14850: BenchmarkResultsList ===
-
-// Module 14850 (BenchmarkResultsList)
 import "noop";
 import jsxProd from "jsxProd";
 

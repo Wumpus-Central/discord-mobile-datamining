@@ -1,6 +1,3 @@
-// === Module 8662: maybeCreateMessageRecordFromSnapshot ===
-
-// Module 8662 (maybeCreateMessageRecordFromSnapshot)
 const result = require("set").fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
 
 export default function maybeCreateMessageRecordFromSnapshot(merge) {

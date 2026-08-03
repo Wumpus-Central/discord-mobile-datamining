@@ -1,6 +1,3 @@
-// === Module 9578: openCreateForumPostModal ===
-
-// Module 9578 (openCreateForumPostModal)
 let c3 = "create-forum-post";
 let result = require("ForumComposerModal").fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
 

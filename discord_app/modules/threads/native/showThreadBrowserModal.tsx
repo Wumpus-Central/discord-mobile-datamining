@@ -1,6 +1,3 @@
-// === Module 10136: showThreadBrowserModal ===
-
-// Module 10136 (showThreadBrowserModal)
 import { ChannelDetailsNavigatorScreens as closure_2 } from "ChannelDetailsNavigatorScreens";
 
 let result = require("getRootNavigationRef").fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");

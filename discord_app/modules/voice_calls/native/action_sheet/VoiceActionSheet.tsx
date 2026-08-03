@@ -1,6 +1,3 @@
-// === Module 12841: VoiceActionSheet ===
-
-// Module 12841 (VoiceActionSheet)
 import noop from "noop";
 import get_ActivityIndicator from "ItemSeparator";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";

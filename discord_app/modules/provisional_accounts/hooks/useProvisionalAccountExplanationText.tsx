@@ -1,6 +1,3 @@
-// === Module 11736: useProvisionalAccountExplanationText ===
-
-// Module 11736 (useProvisionalAccountExplanationText)
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
 

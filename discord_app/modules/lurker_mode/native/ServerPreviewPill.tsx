@@ -1,6 +1,3 @@
-// === Module 8469: ServerPreviewPill ===
-
-// Module 8469 (ServerPreviewPill)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

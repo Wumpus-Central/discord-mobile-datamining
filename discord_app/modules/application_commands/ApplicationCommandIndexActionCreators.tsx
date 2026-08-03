@@ -1,6 +1,3 @@
-// === Module 5706: _fetchApplicationCommandIndex ===
-
-// Module 5706 (_fetchApplicationCommandIndex)
 import expandEventProperties from "expandEventProperties";
 import ME from "ME";
 

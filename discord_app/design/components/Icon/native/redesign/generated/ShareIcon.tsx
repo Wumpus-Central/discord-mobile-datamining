@@ -1,6 +1,3 @@
-// === Module 12316: ShareIcon ===
-
-// Module 12316 (ShareIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

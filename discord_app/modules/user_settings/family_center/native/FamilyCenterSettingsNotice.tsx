@@ -1,6 +1,3 @@
-// === Module 13866: FamilyCenterSettingsParentalControlsNotice ===
-
-// Module 13866 (FamilyCenterSettingsParentalControlsNotice)
 import "noop";
 import { SafetySettingsNoticeType } from "SafetyToastType";
 import { jsx } from "jsxProd";

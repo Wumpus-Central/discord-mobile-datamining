@@ -1,6 +1,3 @@
-// === Module 6718: audienceAckRequestToSpeak ===
-
-// Module 6718 (audienceAckRequestToSpeak)
 import module_38 from "module_38";
 import handleConnectionOpen from "handleConnectionOpen";
 import updateVoiceState from "updateVoiceState";

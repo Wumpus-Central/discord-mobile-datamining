@@ -1,6 +1,3 @@
-// === Module 12899: calculateFps ===
-
-// Module 12899 (calculateFps)
 import { VideoToggleState } from "ME";
 
 class VideoHealthManager {

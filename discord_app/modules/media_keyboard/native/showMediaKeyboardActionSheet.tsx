@@ -1,6 +1,3 @@
-// === Module 9687: hideMediaKeyboardActionSheet ===
-
-// Module 9687 (hideMediaKeyboardActionSheet)
 import { NativeModules } from "get ActivityIndicator";
 
 const MEDIA_KEYBOARD_ACTION_SHEET = "MEDIA_KEYBOARD_ACTION_SHEET";

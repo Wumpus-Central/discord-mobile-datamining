@@ -1,6 +1,3 @@
-// === Module 12992: GuildLimitedAccessInfoAlert ===
-
-// Module 12992 (GuildLimitedAccessInfoAlert)
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "GUILD_LIMITED_ACCESS_HC_LINK";

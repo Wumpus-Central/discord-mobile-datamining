@@ -1,6 +1,3 @@
-// === Module 11476: search ===
-
-// Module 11476 (search)
 import comparator from "comparator";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { Store } from "initialize";

@@ -1,6 +1,3 @@
-// === Module 6837: AnimatedAvatarsAbstractUI ===
-
-// Module 6837 (AnimatedAvatarsAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/AnimatedAvatarsAbstractUI.native.tsx");

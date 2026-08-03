@@ -1,6 +1,3 @@
-// === Module 5510: play ===
-
-// Module 5510 (play)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

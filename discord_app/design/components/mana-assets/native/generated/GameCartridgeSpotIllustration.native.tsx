@@ -1,6 +1,3 @@
-// === Module 7051: GameCartridgeSpotIllustration ===
-
-// Module 7051 (GameCartridgeSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GameCartridgeSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 11327: BillIcon ===
-
-// Module 11327 (BillIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

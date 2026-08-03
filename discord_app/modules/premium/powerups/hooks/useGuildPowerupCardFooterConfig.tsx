@@ -1,6 +1,3 @@
-// === Module 11636: useGuildPowerupCardFooterConfig ===
-
-// Module 11636 (useGuildPowerupCardFooterConfig)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import BoostedGuildTiers from "BoostedGuildTiers";
 import { GuildFeatures } from "ME";

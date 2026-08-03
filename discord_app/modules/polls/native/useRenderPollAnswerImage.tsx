@@ -1,6 +1,3 @@
-// === Module 11400: useRenderPollAnswerImage ===
-
-// Module 11400 (useRenderPollAnswerImage)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";

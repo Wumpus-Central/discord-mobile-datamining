@@ -1,6 +1,3 @@
-// === Module 1301: semanticColor ===
-
-// Module 1301 (semanticColor)
 import handleThemeChange from "handleThemeChange";
 import set from "set";
 import { internal } from "Themes";

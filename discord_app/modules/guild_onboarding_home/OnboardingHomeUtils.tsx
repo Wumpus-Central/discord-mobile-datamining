@@ -1,6 +1,3 @@
-// === Module 5662: useCanSeeOnboardingHome ===
-
-// Module 5662 (useCanSeeOnboardingHome)
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

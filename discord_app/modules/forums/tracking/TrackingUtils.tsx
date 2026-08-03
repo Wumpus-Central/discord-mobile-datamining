@@ -1,6 +1,3 @@
-// === Module 6084: collectForumAnalyticsMetadata ===
-
-// Module 6084 (collectForumAnalyticsMetadata)
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import storeThread from "storeThread";
 import updateFromGuild from "updateFromGuild";

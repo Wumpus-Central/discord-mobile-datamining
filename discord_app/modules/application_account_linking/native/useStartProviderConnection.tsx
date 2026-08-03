@@ -1,6 +1,3 @@
-// === Module 5537: useStartProviderConnection ===
-
-// Module 5537 (useStartProviderConnection)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import noop from "noop";
 

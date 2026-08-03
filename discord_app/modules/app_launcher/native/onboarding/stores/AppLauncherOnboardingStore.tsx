@@ -1,6 +1,3 @@
-// === Module 11233: initialize ===
-
-// Module 11233 (initialize)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 

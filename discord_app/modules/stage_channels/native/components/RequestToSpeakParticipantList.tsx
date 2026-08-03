@@ -1,6 +1,3 @@
-// === Module 10734: RequestToSpeakParticipant ===
-
-// Module 10734 (RequestToSpeakParticipant)
 import "preload";
 import { View } from "useStageParticipants";
 import jsxProd from "renderDefaultEmpty";

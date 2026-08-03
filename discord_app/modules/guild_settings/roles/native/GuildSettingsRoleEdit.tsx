@@ -1,6 +1,3 @@
-// === Module 16485: componentDidMount ===
-
-// Module 16485 (componentDidMount)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import fetchFingerprint from "fetchFingerprint";
 import importAllResult from "HeaderActionButton";

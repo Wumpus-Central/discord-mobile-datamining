@@ -1,6 +1,3 @@
-// === Module 11970: Heading ===
-
-// Module 11970 (Heading)
 import GuildIconSizes from "GuildIconSizes";
 import { View } from "DISCORD_EPOCH";
 import _getSystemLocale from "_getSystemLocale";

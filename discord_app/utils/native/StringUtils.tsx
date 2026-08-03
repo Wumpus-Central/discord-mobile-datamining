@@ -1,6 +1,3 @@
-// === Module 8399: splitGraphemes ===
-
-// Module 8399 (splitGraphemes)
 const result = require("set").fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export const splitGraphemes = function splitGraphemes(closure_0) {

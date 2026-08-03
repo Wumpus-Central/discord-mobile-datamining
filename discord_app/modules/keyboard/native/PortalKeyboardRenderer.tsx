@@ -1,6 +1,3 @@
-// === Module 15609: transitionGroupGetItemKey ===
-
-// Module 15609 (transitionGroupGetItemKey)
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 import { jsx } from "jsxProd";

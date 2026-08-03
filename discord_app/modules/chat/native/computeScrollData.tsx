@@ -1,6 +1,3 @@
-// === Module 9475: computeScrollData ===
-
-// Module 9475 (computeScrollData)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import Changeset from "Changeset";
 

@@ -1,6 +1,3 @@
-// === Module 15282: ? ===
-
-// Module 15282
 import { YOU_BAR_BUTTON_ICON_SIZE } from "CONNECTION_BANNER_HEIGHT";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

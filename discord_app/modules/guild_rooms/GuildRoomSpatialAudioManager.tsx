@@ -1,6 +1,3 @@
-// === Module 16225: _initialize ===
-
-// Module 16225 (_initialize)
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import initialize from "initialize";

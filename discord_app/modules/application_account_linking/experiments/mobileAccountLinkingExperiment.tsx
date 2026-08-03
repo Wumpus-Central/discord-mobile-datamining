@@ -1,6 +1,3 @@
-// === Module 15185: apexExperiment ===
-
-// Module 15185 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 let obj = { MEDIUM: "medium", LARGE: "large" };

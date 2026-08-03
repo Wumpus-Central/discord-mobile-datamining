@@ -1,6 +1,3 @@
-// === Module 6855: AvatarDefaultExample ===
-
-// Module 6855 (AvatarDefaultExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/AvatarDefaultExample.native.tsx");

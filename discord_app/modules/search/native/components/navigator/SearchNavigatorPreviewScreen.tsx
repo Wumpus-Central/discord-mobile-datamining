@@ -1,6 +1,3 @@
-// === Module 15710: SearchNavigatorPreviewScreen ===
-
-// Module 15710 (SearchNavigatorPreviewScreen)
 import noop from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { SearchTypes } from "ME";

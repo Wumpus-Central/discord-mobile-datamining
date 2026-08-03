@@ -1,6 +1,3 @@
-// === Module 6076: getSampleOfVoterUsernamesForAnswer ===
-
-// Module 6076 (getSampleOfVoterUsernamesForAnswer)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reactionKey from "reactionKey";
 import reinjectEphemerals from "reinjectEphemerals";

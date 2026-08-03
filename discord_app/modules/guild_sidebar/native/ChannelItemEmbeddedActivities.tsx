@@ -1,6 +1,3 @@
-// === Module 15217: ChannelItemEmbeddedActivities ===
-
-// Module 15217 (ChannelItemEmbeddedActivities)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

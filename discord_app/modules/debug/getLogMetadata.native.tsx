@@ -1,6 +1,3 @@
-// === Module 10369: getLogMetadata ===
-
-// Module 10369 (getLogMetadata)
 const result = require("set").fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 
 export default function getLogMetadata() {

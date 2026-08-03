@@ -1,6 +1,3 @@
-// === Module 6773: useIsExpressiveModalV2Enabled ===
-
-// Module 6773 (useIsExpressiveModalV2Enabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

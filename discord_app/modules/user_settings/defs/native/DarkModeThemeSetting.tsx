@@ -1,6 +1,3 @@
-// === Module 14342: route ===
-
-// Module 14342 (route)
 import handleThemeChange from "handleThemeChange";
 import { SystemTheme } from "SystemThemeState";
 import createToggle from "createToggle";

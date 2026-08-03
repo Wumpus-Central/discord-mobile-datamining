@@ -1,6 +1,3 @@
-// === Module 13648: ThemedStatusBar ===
-
-// Module 13648 (ThemedStatusBar)
 import "noop";
 import handleThemeChange from "handleThemeChange";
 import fetchFingerprint from "fetchFingerprint";

@@ -1,6 +1,3 @@
-// === Module 10274: extractMetadataFromNotification ===
-
-// Module 10274 (extractMetadataFromNotification)
 import noop from "noop";
 import { REACTION_MILESTONE_COUNTS } from "set";
 import ME from "ME";

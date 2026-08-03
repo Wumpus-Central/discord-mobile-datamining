@@ -1,6 +1,3 @@
-// === Module 10444: ChatViewStickyHeaderAccountSafetyWarnings ===
-
-// Module 10444 (ChatViewStickyHeaderAccountSafetyWarnings)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE";

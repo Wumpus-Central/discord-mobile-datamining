@@ -1,6 +1,3 @@
-// === Module 7953: fromBlob ===
-
-// Module 7953 (fromBlob)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 16280: items ===
-
-// Module 16280 (items)
 import NewUserTypes from "NewUserTypes";
 import handleSetLocationMetadata from "handleSetLocationMetadata";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 11353: AwaitAnimationContext ===
-
-// Module 11353 (AwaitAnimationContext)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

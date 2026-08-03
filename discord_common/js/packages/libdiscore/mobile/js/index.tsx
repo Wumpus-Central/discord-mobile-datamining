@@ -1,6 +1,3 @@
-// === Module 1870: LIBDISCORE_JSI ===
-
-// Module 1870 (LIBDISCORE_JSI)
 import { NativeModules } from "get ActivityIndicator";
 
 if (NativeModules.LibDiscoreModule) {

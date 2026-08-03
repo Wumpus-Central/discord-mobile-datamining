@@ -1,6 +1,3 @@
-// === Module 15212: LimitAndDurationInfo ===
-
-// Module 15212 (LimitAndDurationInfo)
 import "SubscriptionGatedChannelIcon";
 import guildHasCommunity from "guildHasCommunity";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

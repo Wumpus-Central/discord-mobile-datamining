@@ -1,6 +1,3 @@
-// === Module 4075: resolveSavedActiveGuildTheme ===
-
-// Module 4075 (resolveSavedActiveGuildTheme)
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

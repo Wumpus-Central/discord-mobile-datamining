@@ -1,6 +1,3 @@
-// === Module 16449: getGuildTagBadgeLabel ===
-
-// Module 16449 (getGuildTagBadgeLabel)
 import { GuildTagBadgeKind } from "items";
 
 const result = require("isDiscordFrontendDevelopment").fileFinishedImporting("modules/guild_tag/utils/getGuildTagBadgeLabel.tsx");

@@ -1,6 +1,3 @@
-// === Module 11114: AppealIngestionSpam ===
-
-// Module 11114 (AppealIngestionSpam)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

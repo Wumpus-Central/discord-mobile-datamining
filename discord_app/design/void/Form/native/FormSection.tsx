@@ -1,6 +1,3 @@
-// === Module 7652: FormSection ===
-
-// Module 7652 (FormSection)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { TitleStyleType } from "semanticColor";

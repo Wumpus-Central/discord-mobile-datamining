@@ -1,6 +1,3 @@
-// === Module 13653: DevToolsContentSortButtons ===
-
-// Module 13653 (DevToolsContentSortButtons)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "TableRowGroupTitle";
 import get_ActivityIndicator from "useNavigation";

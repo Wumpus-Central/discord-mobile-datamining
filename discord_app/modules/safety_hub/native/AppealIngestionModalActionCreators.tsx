@@ -1,6 +1,3 @@
-// === Module 11100: ? ===
-
-// Module 11100
 const APPEAL_INGESTION_MODAL_KEY = "APPEAL_INGESTION_MODAL_KEY";
 const result = require("AppealIngestionModal").fileFinishedImporting("modules/safety_hub/native/AppealIngestionModalActionCreators.tsx");
 

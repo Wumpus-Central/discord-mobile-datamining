@@ -1,6 +1,3 @@
-// === Module 11466: performKeyboardAwareNavigation ===
-
-// Module 11466 (performKeyboardAwareNavigation)
 import handleReaction from "handleReaction";
 import prototype from "prototype";
 import MessageEmbedTypes from "MessageEmbedTypes";

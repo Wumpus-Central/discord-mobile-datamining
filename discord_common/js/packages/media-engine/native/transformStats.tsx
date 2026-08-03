@@ -1,6 +1,3 @@
-// === Module 4351: sumBytes ===
-
-// Module 4351 (sumBytes)
 function sumBytes(rtpStats) {
   let num;
   if (rtpStats != null) {

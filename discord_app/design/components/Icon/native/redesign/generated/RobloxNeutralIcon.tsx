@@ -1,6 +1,3 @@
-// === Module 8509: RobloxNeutralIcon ===
-
-// Module 8509 (RobloxNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

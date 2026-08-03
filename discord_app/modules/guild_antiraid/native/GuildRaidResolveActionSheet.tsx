@@ -1,6 +1,3 @@
-// === Module 11065: GuildRaidResolveActionSheet ===
-
-// Module 11065 (GuildRaidResolveActionSheet)
 import _slicedToArray from "_slicedToArray";
 import module_6724 from "module_6724";
 import { View } from "collectGuildAnalyticsMetadata";

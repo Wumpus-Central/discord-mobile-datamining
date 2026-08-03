@@ -1,6 +1,3 @@
-// === Module 14955: HomePanelContent ===
-
-// Module 14955 (HomePanelContent)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import withEqualityFn from "withEqualityFn";

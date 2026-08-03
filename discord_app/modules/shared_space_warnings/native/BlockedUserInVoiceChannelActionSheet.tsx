@@ -1,6 +1,3 @@
-// === Module 12812: BlockedUserInVoiceChannelActionSheet ===
-
-// Module 12812 (BlockedUserInVoiceChannelActionSheet)
 import "UserIcon";
 import get_ActivityIndicator from "TableRowInner";
 import ensureGuildLoaded from "ensureGuildLoaded";

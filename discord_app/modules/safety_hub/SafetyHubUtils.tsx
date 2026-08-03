@@ -1,6 +1,3 @@
-// === Module 6758: parseMessageEmbedForProps ===
-
-// Module 6758 (parseMessageEmbedForProps)
 import fetchFingerprint from "fetchFingerprint";
 import SafetyHubView from "SafetyHubView";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 15924: SoundboardSoundPreviewActionSheet ===
-
-// Module 15924 (SoundboardSoundPreviewActionSheet)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import Text from "Text";
 import get_ActivityIndicator from "Emoji";

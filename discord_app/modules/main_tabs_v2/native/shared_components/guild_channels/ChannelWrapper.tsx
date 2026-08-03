@@ -1,6 +1,3 @@
-// === Module 15333: renderChannelWrapper ===
-
-// Module 15333 (renderChannelWrapper)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

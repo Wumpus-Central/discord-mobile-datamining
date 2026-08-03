@@ -1,6 +1,3 @@
-// === Module 13071: GuildSettingsServerTagPreview ===
-
-// Module 13071 (GuildSettingsServerTagPreview)
 import items from "items";
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";

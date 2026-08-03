@@ -1,6 +1,3 @@
-// === Module 10045: handleMessagesLongPressChannel ===
-
-// Module 10045 (handleMessagesLongPressChannel)
 const result = require("set").fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
 
 export const handleMessagesLongPressChannel = function handleMessagesLongPressChannel(data) {

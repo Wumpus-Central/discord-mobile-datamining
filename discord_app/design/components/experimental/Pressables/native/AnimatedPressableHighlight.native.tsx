@@ -1,6 +1,3 @@
-// === Module 5228: AnimatedPressableHighlight ===
-
-// Module 5228 (AnimatedPressableHighlight)
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8671: useDefaultVariantIndex ===
-
-// Module 8671 (useDefaultVariantIndex)
 import map from "map";
 
 const require = arg1;

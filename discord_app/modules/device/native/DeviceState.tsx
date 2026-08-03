@@ -1,6 +1,3 @@
-// === Module 6040: _getDeviceState ===
-
-// Module 6040 (_getDeviceState)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 

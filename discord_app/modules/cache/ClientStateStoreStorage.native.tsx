@@ -1,6 +1,3 @@
-// === Module 13265: setClientState ===
-
-// Module 13265 (setClientState)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");

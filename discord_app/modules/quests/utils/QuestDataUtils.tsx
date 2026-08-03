@@ -1,6 +1,3 @@
-// === Module 5987: getQuestDeliveryDataForPlacement ===
-
-// Module 5987 (getQuestDeliveryDataForPlacement)
 import _getSystemLocale from "_getSystemLocale";
 import set from "set";
 import initializeState from "initializeState";

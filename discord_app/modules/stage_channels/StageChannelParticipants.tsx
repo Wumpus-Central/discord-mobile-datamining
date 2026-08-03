@@ -1,6 +1,3 @@
-// === Module 5018: sortKey ===
-
-// Module 5018 (sortKey)
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionReset from "handleConnectionReset";

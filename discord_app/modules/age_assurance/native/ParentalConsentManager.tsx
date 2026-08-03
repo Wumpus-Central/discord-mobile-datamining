@@ -1,6 +1,3 @@
-// === Module 16307: onPostConnectionOpen ===
-
-// Module 16307 (onPostConnectionOpen)
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { AnalyticEvents } from "ME";

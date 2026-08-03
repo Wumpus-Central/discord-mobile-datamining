@@ -1,6 +1,3 @@
-// === Module 7643: BackgroundBlurView ===
-
-// Module 7643 (BackgroundBlurView)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

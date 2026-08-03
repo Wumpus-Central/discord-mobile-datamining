@@ -1,6 +1,3 @@
-// === Module 11543: LurkerLeavePromptModal ===
-
-// Module 11543 (LurkerLeavePromptModal)
 import closure_3 from "set";
 import get_ActivityIndicator from "hasNavigatedAway";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 6504: isTestModeForApplication ===
-
-// Module 6504 (isTestModeForApplication)
 import initialize from "initialize";
 import reset from "reset";
 

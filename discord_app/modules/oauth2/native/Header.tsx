@@ -1,6 +1,3 @@
-// === Module 9039: Header ===
-
-// Module 9039 (Header)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UserFlags } from "ME";

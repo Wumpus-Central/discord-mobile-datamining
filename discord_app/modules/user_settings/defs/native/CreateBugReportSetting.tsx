@@ -1,6 +1,3 @@
-// === Module 14564: toggle ===
-
-// Module 14564 (toggle)
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import createToggle from "createToggle";
 

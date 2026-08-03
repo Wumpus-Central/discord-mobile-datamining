@@ -1,6 +1,3 @@
-// === Module 16716: platformShowStreamFull ===
-
-// Module 16716 (platformShowStreamFull)
 import "noop";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import { ApplicationStreamPresets } from "RESOLUTION_720";

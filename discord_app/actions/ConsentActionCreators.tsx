@@ -1,6 +1,3 @@
-// === Module 13905: handleRequestSuccess ===
-
-// Module 13905 (handleRequestSuccess)
 import { Endpoints } from "ME";
 
 function handleRequestSuccess(body) {

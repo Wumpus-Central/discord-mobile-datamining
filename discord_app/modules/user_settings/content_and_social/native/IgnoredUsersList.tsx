@@ -1,6 +1,3 @@
-// === Module 13858: IgnoredUsersList ===
-
-// Module 13858 (IgnoredUsersList)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import upsertRelationship from "upsertRelationship";

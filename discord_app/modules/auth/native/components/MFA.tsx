@@ -1,6 +1,3 @@
-// === Module 14907: statesAreEqual ===
-
-// Module 14907 (statesAreEqual)
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import { jsx } from "jsxProd";

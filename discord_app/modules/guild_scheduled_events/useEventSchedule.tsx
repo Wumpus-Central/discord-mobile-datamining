@@ -1,6 +1,3 @@
-// === Module 8220: useEventSchedule ===
-
-// Module 8220 (useEventSchedule)
 import scheduledEventSort from "scheduledEventSort";
 
 const require = arg1;

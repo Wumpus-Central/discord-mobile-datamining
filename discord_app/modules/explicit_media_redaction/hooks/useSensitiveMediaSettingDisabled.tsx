@@ -1,6 +1,3 @@
-// === Module 13873: useSensitiveMediaSettingDisabled ===
-
-// Module 13873 (useSensitiveMediaSettingDisabled)
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx");
 
 export const useSensitiveMediaSettingDisabled = function useSensitiveMediaSettingDisabled() {

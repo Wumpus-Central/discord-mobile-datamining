@@ -1,6 +1,3 @@
-// === Module 13620: _initialize ===
-
-// Module 13620 (_initialize)
 import importDefaultResult from "fetchFingerprint";
 import ME from "ME";
 import "initialize";

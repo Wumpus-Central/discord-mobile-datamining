@@ -1,6 +1,3 @@
-// === Module 11243: setFrecencySectionSelection ===
-
-// Module 11243 (setFrecencySectionSelection)
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStoreActionCreators.tsx");
 
 export const setFrecencySectionSelection = function setFrecencySectionSelection(APPS) {

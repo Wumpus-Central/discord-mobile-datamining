@@ -1,6 +1,3 @@
-// === Module 16000: StreamIcon ===
-
-// Module 16000 (StreamIcon)
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "dismissPanel";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

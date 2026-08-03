@@ -1,6 +1,3 @@
-// === Module 14313: items1 ===
-
-// Module 14313 (items1)
 import { StatusTypes } from "ME";
 
 const result = require("registerAsset").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");

@@ -1,6 +1,3 @@
-// === Module 16541: GuildSettingsRoleSubscriptionsEmptyContent ===
-
-// Module 16541 (GuildSettingsRoleSubscriptionsEmptyContent)
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";

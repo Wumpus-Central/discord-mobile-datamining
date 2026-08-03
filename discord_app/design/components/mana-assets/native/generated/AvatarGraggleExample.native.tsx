@@ -1,6 +1,3 @@
-// === Module 6857: AvatarGraggleExample ===
-
-// Module 6857 (AvatarGraggleExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/AvatarGraggleExample.native.tsx");

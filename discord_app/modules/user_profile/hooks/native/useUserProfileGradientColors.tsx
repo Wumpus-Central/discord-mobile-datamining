@@ -1,6 +1,3 @@
-// === Module 8384: useUserProfileGradientColors ===
-
-// Module 8384 (useUserProfileGradientColors)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

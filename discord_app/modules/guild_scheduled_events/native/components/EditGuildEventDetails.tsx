@@ -1,6 +1,3 @@
-// === Module 8317: EditGuildEventDetails ===
-
-// Module 8317 (EditGuildEventDetails)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort";

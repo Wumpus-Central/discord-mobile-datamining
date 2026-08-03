@@ -1,6 +1,3 @@
-// === Module 13707: UserSettingsEditUserProfile ===
-
-// Module 13707 (UserSettingsEditUserProfile)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";

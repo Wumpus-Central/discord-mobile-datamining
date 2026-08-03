@@ -1,6 +1,3 @@
-// === Module 9944: GuildIconWithChannelTypeSizes ===
-
-// Module 9944 (GuildIconWithChannelTypeSizes)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

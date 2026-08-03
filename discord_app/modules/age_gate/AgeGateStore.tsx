@@ -1,6 +1,3 @@
-// === Module 14880: isUnderageAnonymous ===
-
-// Module 14880 (isUnderageAnonymous)
 import { AGE_GATE_REGISTER_TIMEOUT_MS } from "result";
 import { Store } from "initialize";
 

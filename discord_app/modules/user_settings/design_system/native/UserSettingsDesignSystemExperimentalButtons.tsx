@@ -1,6 +1,3 @@
-// === Module 14581: UserSettingsDesignSystemExperimentalButtons ===
-
-// Module 14581 (UserSettingsDesignSystemExperimentalButtons)
 import "noop";
 import get_ActivityIndicator from "set";
 import jsxProd from "jsxProd";

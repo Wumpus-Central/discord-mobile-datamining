@@ -1,6 +1,3 @@
-// === Module 12857: VoiceEmptyState ===
-
-// Module 12857 (VoiceEmptyState)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { Fonts } from "ME";

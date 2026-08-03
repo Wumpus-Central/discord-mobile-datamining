@@ -1,6 +1,3 @@
-// === Module 9334: PremiumTypes ===
-
-// Module 9334 (PremiumTypes)
 import useDiscountedPremiumProductInfo from "useDiscountedPremiumProductInfo";
 import "messagesProxy";
 import { View } from "getSystemLocale";

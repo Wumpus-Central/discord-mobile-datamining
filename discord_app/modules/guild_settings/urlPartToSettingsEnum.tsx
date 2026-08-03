@@ -1,6 +1,3 @@
-// === Module 13007: urlPartToSettingsEnum ===
-
-// Module 13007 (urlPartToSettingsEnum)
 const result = require("set").fileFinishedImporting("modules/guild_settings/urlPartToSettingsEnum.tsx");
 
 export default function urlPartToSettingsEnum(arg0, str) {

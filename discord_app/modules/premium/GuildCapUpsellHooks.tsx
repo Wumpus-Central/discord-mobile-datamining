@@ -1,6 +1,3 @@
-// === Module 5652: useShouldShowInlineGuildCapUpsell ===
-
-// Module 5652 (useShouldShowInlineGuildCapUpsell)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MAX_USER_GUILDS } from "ME";

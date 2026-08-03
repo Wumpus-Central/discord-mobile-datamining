@@ -1,6 +1,3 @@
-// === Module 7985: useGetIsMounted ===
-
-// Module 7985 (useGetIsMounted)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("hooks/useGetIsMounted.tsx");

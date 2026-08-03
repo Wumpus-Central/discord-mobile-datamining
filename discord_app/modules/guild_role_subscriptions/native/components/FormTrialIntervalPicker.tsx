@@ -1,6 +1,3 @@
-// === Module 16610: FormTrialIntervalPicker ===
-
-// Module 16610 (FormTrialIntervalPicker)
 import "noop";
 import { jsx } from "jsxProd";
 

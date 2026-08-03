@@ -1,6 +1,3 @@
-// === Module 14789: BackButton ===
-
-// Module 14789 (BackButton)
 import { jsx } from "jsxProd";
 
 const result = require("MFAButton").fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");

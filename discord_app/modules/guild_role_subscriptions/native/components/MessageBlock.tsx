@@ -1,6 +1,3 @@
-// === Module 11398: MessageBlock ===
-
-// Module 11398 (MessageBlock)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 16279: enforcing ===
-
-// Module 16279 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeOnDemandResourceModule");

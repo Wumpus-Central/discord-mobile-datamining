@@ -1,6 +1,3 @@
-// === Module 13748: UserProfileNameplateEditButton ===
-
-// Module 13748 (UserProfileNameplateEditButton)
 import set from "set";
 import get_ActivityIndicator from "Button";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

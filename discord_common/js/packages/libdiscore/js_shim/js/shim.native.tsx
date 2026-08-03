@@ -1,6 +1,3 @@
-// === Module 1869: isBlockedDomain ===
-
-// Module 1869 (isBlockedDomain)
 let result = require("_initLibdiscore").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
 export const isBlockedDomain = function isBlockedDomain(arg0) {

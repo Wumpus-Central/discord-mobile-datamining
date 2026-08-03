@@ -1,6 +1,3 @@
-// === Module 14303: ThemeLightIcon ===
-
-// Module 14303 (ThemeLightIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

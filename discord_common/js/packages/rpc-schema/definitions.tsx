@@ -1,6 +1,3 @@
-// === Module 13555: response ===
-
-// Module 13555 (response)
 let obj = { request: "Array", response: 0 };
 obj[1] = function response(string) {
   const obj = { image_url: null };

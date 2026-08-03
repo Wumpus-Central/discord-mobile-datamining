@@ -1,6 +1,3 @@
-// === Module 7239: HeartIllocon ===
-
-// Module 7239 (HeartIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/HeartIllocon.native.tsx");

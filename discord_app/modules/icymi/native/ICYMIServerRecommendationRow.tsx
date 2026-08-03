@@ -1,6 +1,3 @@
-// === Module 15409: CutoutGuildBanner ===
-
-// Module 15409 (CutoutGuildBanner)
 import _slicedToArray from "_slicedToArray";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getSystemLocale from "getSystemLocale";

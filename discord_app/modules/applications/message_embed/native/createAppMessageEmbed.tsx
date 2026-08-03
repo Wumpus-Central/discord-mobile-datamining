@@ -1,6 +1,3 @@
-// === Module 11147: createAppMessageEmbed ===
-
-// Module 11147 (createAppMessageEmbed)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";

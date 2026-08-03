@@ -1,6 +1,3 @@
-// === Module 11673: importDefaultResult1 ===
-
-// Module 11673 (importDefaultResult1)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

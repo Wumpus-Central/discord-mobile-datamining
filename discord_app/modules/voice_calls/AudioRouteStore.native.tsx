@@ -1,6 +1,3 @@
-// === Module 8841: handleAudioRouteChanged ===
-
-// Module 8841 (handleAudioRouteChanged)
 import get_ActivityIndicator from "get ActivityIndicator";
 import createRTCConnection from "createRTCConnection";
 import { Store } from "initialize";

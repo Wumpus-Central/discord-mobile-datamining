@@ -1,6 +1,3 @@
-// === Module 15383: Separator ===
-
-// Module 15383 (Separator)
 import closure_3 from "createICYMIStyles";
 import { View } from "trackInvite";
 import updateState from "updateState";

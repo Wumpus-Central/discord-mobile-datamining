@@ -1,6 +1,3 @@
-// === Module 9018: ChatSmileIcon ===
-
-// Module 9018 (ChatSmileIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

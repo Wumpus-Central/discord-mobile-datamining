@@ -1,6 +1,3 @@
-// === Module 5571: getEmojiSourceData ===
-
-// Module 5571 (getEmojiSourceData)
 import areSetsEqual from "areSetsEqual";
 import "toJS";
 import ME from "ME";

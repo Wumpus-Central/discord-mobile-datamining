@@ -1,6 +1,3 @@
-// === Module 5831: fromServer ===
-
-// Module 5831 (fromServer)
 import fromServer from "fromServer";
 import { createCollectiblesItemsFromServerResponse as closure_3 } from "createCollectiblesItemsFromServerResponse";
 import { CollectiblesVariantProductRecord as closure_4 } from "fromServer";

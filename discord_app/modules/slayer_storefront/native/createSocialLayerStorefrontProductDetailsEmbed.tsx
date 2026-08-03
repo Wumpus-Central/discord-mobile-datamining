@@ -1,6 +1,3 @@
-// === Module 10908: createSocialLayerStorefrontProductDetailsEmbed ===
-
-// Module 10908 (createSocialLayerStorefrontProductDetailsEmbed)
 import _slicedToArray from "_slicedToArray";
 import useGetOrFetchApplications from "useGetOrFetchApplications";
 import addApplication from "addApplication";

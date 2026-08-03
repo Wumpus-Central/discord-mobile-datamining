@@ -1,6 +1,3 @@
-// === Module 4004: getGradientColorByPercentage ===
-
-// Module 4004 (getGradientColorByPercentage)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleThemeChange from "handleThemeChange";

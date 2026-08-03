@@ -1,6 +1,3 @@
-// === Module 9781: SocialLayerStorefrontGiftProductDetails ===
-
-// Module 9781 (SocialLayerStorefrontGiftProductDetails)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PriceSetAssignmentPurchaseTypes as closure_6 } from "ME";

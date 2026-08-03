@@ -1,6 +1,3 @@
-// === Module 10913: MediaViewerAltTextSheet ===
-
-// Module 10913 (MediaViewerAltTextSheet)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

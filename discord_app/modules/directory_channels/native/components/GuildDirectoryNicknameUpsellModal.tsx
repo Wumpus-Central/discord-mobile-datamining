@@ -1,6 +1,3 @@
-// === Module 11770: GuildDirectoryNicknameUpsell ===
-
-// Module 11770 (GuildDirectoryNicknameUpsell)
 import GuildPrompts from "GuildPrompts";
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";

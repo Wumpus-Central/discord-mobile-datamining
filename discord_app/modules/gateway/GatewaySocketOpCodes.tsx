@@ -1,6 +1,3 @@
-// === Module 12715: presenceUpdate ===
-
-// Module 12715 (presenceUpdate)
 import initialize from "initialize";
 import { EventEmitter } from "EventEmitter";
 

@@ -1,6 +1,3 @@
-// === Module 6925: ChestAndGemSpotIllustration ===
-
-// Module 6925 (ChestAndGemSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ChestAndGemSpotIllustration.native.tsx");

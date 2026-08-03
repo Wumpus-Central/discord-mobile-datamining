@@ -1,6 +1,3 @@
-// === Module 14621: CollectiblesShopScreen ===
-
-// Module 14621 (CollectiblesShopScreen)
 import "noop";
 import { CollectiblesMobileShopScreen as closure_3 } from "items";
 import { jsx } from "jsxProd";

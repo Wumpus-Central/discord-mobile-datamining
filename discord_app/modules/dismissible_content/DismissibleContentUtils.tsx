@@ -1,6 +1,3 @@
-// === Module 1360: addVersionedDismissedContent ===
-
-// Module 1360 (addVersionedDismissedContent)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "withContent";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";

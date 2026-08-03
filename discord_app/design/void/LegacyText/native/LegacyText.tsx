@@ -1,6 +1,3 @@
-// === Module 7674: ? ===
-
-// Module 7674
 import { Text } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 7771: createUserJoinSystemMessage ===
-
-// Module 7771 (createUserJoinSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { SystemChannelFlags } from "ME";

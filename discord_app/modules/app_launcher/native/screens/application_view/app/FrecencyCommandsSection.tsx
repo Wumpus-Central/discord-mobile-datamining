@@ -1,6 +1,3 @@
-// === Module 11338: FrecencyCommandsSection ===
-
-// Module 11338 (FrecencyCommandsSection)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";

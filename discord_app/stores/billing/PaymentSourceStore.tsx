@@ -1,6 +1,3 @@
-// === Module 3842: handlePaymentSourceUpdate ===
-
-// Module 3842 (handlePaymentSourceUpdate)
 import createFromServer from "createFromServer";
 import { Store } from "initialize";
 

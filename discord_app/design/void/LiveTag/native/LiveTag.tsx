@@ -1,6 +1,3 @@
-// === Module 13184: LiveTag ===
-
-// Module 13184 (LiveTag)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

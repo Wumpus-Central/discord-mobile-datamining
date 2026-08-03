@@ -1,6 +1,3 @@
-// === Module 1929: isChangelogUser ===
-
-// Module 1929 (isChangelogUser)
 import { SYSTEM_UPDATES_USER_ID } from "CHANGELOG_MODAL_KEY";
 
 const result = require("set").fileFinishedImporting("modules/changelog/utils/isChangelogUser.tsx");

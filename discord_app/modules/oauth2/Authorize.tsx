@@ -1,6 +1,3 @@
-// === Module 8958: filterScopes ===
-
-// Module 8958 (filterScopes)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import ME from "ME";

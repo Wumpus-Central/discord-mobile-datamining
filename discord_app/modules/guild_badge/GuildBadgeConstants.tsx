@@ -1,6 +1,3 @@
-// === Module 8471: getBadgeTooltip ===
-
-// Module 8471 (getBadgeTooltip)
 const result = require("BadgeCategory").fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
 
 export const getBadgeTooltip = function getBadgeTooltip(arg0, arg1) {

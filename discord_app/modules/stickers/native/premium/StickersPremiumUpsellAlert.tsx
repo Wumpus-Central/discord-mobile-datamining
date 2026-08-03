@@ -1,6 +1,3 @@
-// === Module 9656: PerkRow ===
-
-// Module 9656 (PerkRow)
 import componentDidMount from "componentDidMount";
 import get_ActivityIndicator from "useWindowDimensions";
 import updateProduct from "updateProduct";

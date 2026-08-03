@@ -1,6 +1,3 @@
-// === Module 10509: set ===
-
-// Module 10509 (set)
 import jsxProd from "jsxProd";
 import importAllResult from "trackQuestEvent";
 import initializeState from "initializeState";

@@ -1,6 +1,3 @@
-// === Module 8660: EmbedAnnouncementCard ===
-
-// Module 8660 (EmbedAnnouncementCard)
 import importAllResult from "set";
 import get_ActivityIndicator from "Button";
 import jsxProd from "jsxProd";

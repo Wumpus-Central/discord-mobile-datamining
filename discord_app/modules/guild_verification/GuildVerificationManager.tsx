@@ -1,6 +1,3 @@
-// === Module 16227: handleInviteData ===
-
-// Module 16227 (handleInviteData)
 import { GuildFeatures } from "ME";
 import "initialize";
 

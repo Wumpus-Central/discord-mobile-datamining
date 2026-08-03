@@ -1,6 +1,3 @@
-// === Module 6549: launchPremiumPlanSelect ===
-
-// Module 6549 (launchPremiumPlanSelect)
 import { UserSettingsSections } from "ME";
 
 let result = require("module_4399").fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");

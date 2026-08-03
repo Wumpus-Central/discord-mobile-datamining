@@ -1,6 +1,3 @@
-// === Module 3978: CameraRive ===
-
-// Module 3978 (CameraRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

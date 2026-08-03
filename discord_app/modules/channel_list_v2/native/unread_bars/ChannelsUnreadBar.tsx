@@ -1,6 +1,3 @@
-// === Module 15172: ? ===
-
-// Module 15172
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ArrowSmallUpIcon";
 import hairlineWidth from "hairlineWidth";

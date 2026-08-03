@@ -1,6 +1,3 @@
-// === Module 10573: isIncomingVideoEnabled ===
-
-// Module 10573 (isIncomingVideoEnabled)
 import "on";
 
 let require = arg1;

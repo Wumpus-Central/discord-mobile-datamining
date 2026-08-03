@@ -1,6 +1,3 @@
-// === Module 12295: EventDetailInfoSheet ===
-
-// Module 12295 (EventDetailInfoSheet)
 import usePrimaryActionButtonType from "usePrimaryActionButtonType";
 import { View } from "getGuildEventsForCurrentUser";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

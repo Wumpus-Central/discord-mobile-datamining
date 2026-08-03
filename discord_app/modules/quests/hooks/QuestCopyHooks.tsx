@@ -1,6 +1,3 @@
-// === Module 10981: _getQuestsInstructionsToWinReward ===
-
-// Module 10981 (_getQuestsInstructionsToWinReward)
 import closure_3 from "QuestsExperimentLocations";
 import _slicedToArray from "_slicedToArray";
 import GameProfileEmbedAction from "GameProfileEmbedAction";

@@ -1,6 +1,3 @@
-// === Module 15252: getMissingFavoriteThreadIds ===
-
-// Module 15252 (getMissingFavoriteThreadIds)
 import _slicedToArray from "_slicedToArray";
 import computeSubtitle from "computeSubtitle";
 import importDefaultResult1 from "initializeFromUserSettings";

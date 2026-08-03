@@ -1,6 +1,3 @@
-// === Module 1902: NAMEPLATE_PALETTES ===
-
-// Module 1902 (NAMEPLATE_PALETTES)
 let obj = {};
 obj = { darkBackground: "#900007", lightBackground: "#E7040F", name: null };
 obj[2] = require("PaletteKeys").PaletteKeys.Crimson;

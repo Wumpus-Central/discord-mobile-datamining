@@ -1,6 +1,3 @@
-// === Module 11526: ? ===
-
-// Module 11526
 import expandEventProperties from "expandEventProperties";
 import { NativeModules } from "get ActivityIndicator";
 import { PermissionStateType } from "set";

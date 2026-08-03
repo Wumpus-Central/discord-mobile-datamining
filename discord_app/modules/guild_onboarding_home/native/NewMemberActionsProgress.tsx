@@ -1,6 +1,3 @@
-// === Module 15197: ProgressBar ===
-
-// Module 15197 (ProgressBar)
 import set from "set";
 import { View } from "Button";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

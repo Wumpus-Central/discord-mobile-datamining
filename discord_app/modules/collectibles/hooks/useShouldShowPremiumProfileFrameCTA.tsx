@@ -1,6 +1,3 @@
-// === Module 11925: useShouldShowPremiumProfileFrameCTA ===
-
-// Module 11925 (useShouldShowPremiumProfileFrameCTA)
 const result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx");
 
 export default function useShouldShowPremiumProfileFrameCTA(location) {

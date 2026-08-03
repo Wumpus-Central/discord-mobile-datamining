@@ -1,6 +1,3 @@
-// === Module 8270: canManageResource ===
-
-// Module 8270 (canManageResource)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

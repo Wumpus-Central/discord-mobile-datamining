@@ -1,6 +1,3 @@
-// === Module 7634: WarningIcon ===
-
-// Module 7634 (WarningIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

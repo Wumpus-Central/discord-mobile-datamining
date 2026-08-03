@@ -1,6 +1,3 @@
-// === Module 14373: items ===
-
-// Module 14373 (items)
 import noop from "noop";
 import items3 from "items3";
 

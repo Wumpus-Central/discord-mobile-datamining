@@ -1,6 +1,3 @@
-// === Module 4194: CONFIG_NEVER_ANIMATE_TIMING ===
-
-// Module 4194 (CONFIG_NEVER_ANIMATE_TIMING)
 import { CONFIG_NEVER_ANIMATE_TIMING } from "CONFIG_NEVER_ANIMATE";
 
 function withTiming(value, timingStandard, fn, fn2) {

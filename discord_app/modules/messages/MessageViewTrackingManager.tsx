@@ -1,6 +1,3 @@
-// === Module 9507: getAnalyticsConfig ===
-
-// Module 9507 (getAnalyticsConfig)
 import { AnalyticEvents } from "ME";
 import "initialize";
 

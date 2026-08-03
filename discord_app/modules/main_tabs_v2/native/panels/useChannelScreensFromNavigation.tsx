@@ -1,6 +1,3 @@
-// === Module 14936: getActiveTabsRoute ===
-
-// Module 14936 (getActiveTabsRoute)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 14513: useChannelListLayoutPredicate ===
-
-// Module 14513 (useChannelListLayoutPredicate)
 import createToggle from "createToggle";
 
 function useChannelListLayoutPredicate() {

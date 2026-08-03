@@ -1,6 +1,3 @@
-// === Module 14466: onChange ===
-
-// Module 14466 (onChange)
 import createToggle from "createToggle";
 
 function onChange(arg0) {

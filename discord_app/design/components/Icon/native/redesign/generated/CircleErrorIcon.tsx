@@ -1,6 +1,3 @@
-// === Module 6733: CircleErrorIcon ===
-
-// Module 6733 (CircleErrorIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

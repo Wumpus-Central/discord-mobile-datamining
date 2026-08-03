@@ -1,6 +1,3 @@
-// === Module 4033: initialize ===
-
-// Module 4033 (initialize)
 import fetchFingerprint from "fetchFingerprint";
 import { AnalyticEvents } from "ME";
 import { PersistedStore } from "initialize";

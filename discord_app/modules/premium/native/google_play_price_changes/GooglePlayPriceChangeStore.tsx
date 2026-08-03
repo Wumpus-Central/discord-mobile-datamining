@@ -1,6 +1,3 @@
-// === Module 15782: onInitializeSync ===
-
-// Module 15782 (onInitializeSync)
 import reset from "reset";
 import { Store } from "initialize";
 import set from "set";

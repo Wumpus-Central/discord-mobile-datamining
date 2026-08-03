@@ -1,6 +1,3 @@
-// === Module 6227: SyncedLoadingAlertModal ===
-
-// Module 6227 (SyncedLoadingAlertModal)
 import getSystemLocale from "getSystemLocale";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

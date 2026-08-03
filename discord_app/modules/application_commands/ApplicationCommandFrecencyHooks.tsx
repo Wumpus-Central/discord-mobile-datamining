@@ -1,6 +1,3 @@
-// === Module 5714: useTopCommands ===
-
-// Module 5714 (useTopCommands)
 import noop from "noop";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import closure_5 from "handleUserSettingsProtoStoreChange";

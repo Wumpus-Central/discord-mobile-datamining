@@ -1,6 +1,3 @@
-// === Module 10048: ChannelSpoiler ===
-
-// Module 10048 (ChannelSpoiler)
 import _slicedToArray from "_slicedToArray";
 import Stack from "Stack";
 import { View } from "Text";

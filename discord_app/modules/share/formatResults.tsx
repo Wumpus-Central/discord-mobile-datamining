@@ -1,6 +1,3 @@
-// === Module 6162: getChannelIdFromDestinationId ===
-
-// Module 6162 (getChannelIdFromDestinationId)
 import ALLOWED_TYPES from "ALLOWED_TYPES";
 import handleConnectionOpen from "handleConnectionOpen";
 import ensureGuildLoaded from "ensureGuildLoaded";

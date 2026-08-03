@@ -1,6 +1,3 @@
-// === Module 14115: MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL ===
-
-// Module 14115 (MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL)
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import _slicedToArray from "_slicedToArray";
 import useGetOrFetchStorefrontPricesForApplicationId from "useGetOrFetchStorefrontPricesForApplicationId";

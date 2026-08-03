@@ -1,6 +1,3 @@
-// === Module 11824: InstantInviteAgeText ===
-
-// Module 11824 (InstantInviteAgeText)
 import "noop";
 import { View } from "get ActivityIndicator";
 import updateWithLatestInvite from "updateWithLatestInvite";

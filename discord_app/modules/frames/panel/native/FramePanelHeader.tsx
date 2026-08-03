@@ -1,6 +1,3 @@
-// === Module 15896: ? ===
-
-// Module 15896
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";

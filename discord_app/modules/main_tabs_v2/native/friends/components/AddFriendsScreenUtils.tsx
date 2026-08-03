@@ -1,6 +1,3 @@
-// === Module 15061: _sendWave ===
-
-// Module 15061 (_sendWave)
 import module_4203 from "module_4203";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticsSections } from "ME";

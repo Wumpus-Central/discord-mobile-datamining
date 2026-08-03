@@ -1,6 +1,3 @@
-// === Module 10629: NativeModules ===
-
-// Module 10629 (NativeModules)
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";
 import keys from "keys";

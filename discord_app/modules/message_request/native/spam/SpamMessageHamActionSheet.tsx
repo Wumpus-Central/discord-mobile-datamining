@@ -1,6 +1,3 @@
-// === Module 11552: SpamMessageRequestHamActionSheet ===
-
-// Module 11552 (SpamMessageRequestHamActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "Button";

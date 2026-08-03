@@ -1,6 +1,3 @@
-// === Module 8449: Coachmark ===
-
-// Module 8449 (Coachmark)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import set from "set";

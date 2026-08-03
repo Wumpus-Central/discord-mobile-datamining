@@ -1,6 +1,3 @@
-// === Module 16281: handlePressNext ===
-
-// Module 16281 (handlePressNext)
 import { ADD_AVATAR_MODAL_KEY } from "ADD_AVATAR_MODAL_KEY";
 import { AnalyticEvents } from "ME";
 

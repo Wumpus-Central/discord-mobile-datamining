@@ -1,6 +1,3 @@
-// === Module 7811: createGuildProductPurchaseSystemMessage ===
-
-// Module 7811 (createGuildProductPurchaseSystemMessage)
 import hasFlag from "hasFlag";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { MessageTypes } from "ME";

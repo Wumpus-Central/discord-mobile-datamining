@@ -1,6 +1,3 @@
-// === Module 14224: QuestDockWithGestureAnimation ===
-
-// Module 14224 (QuestDockWithGestureAnimation)
 import closure_3 from "QuestsExperimentLocations";
 import Backdrop from "Backdrop";
 import importAllResult from "useYouBarTotalHeight";

@@ -1,6 +1,3 @@
-// === Module 7759: XSmallBoldIcon ===
-
-// Module 7759 (XSmallBoldIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

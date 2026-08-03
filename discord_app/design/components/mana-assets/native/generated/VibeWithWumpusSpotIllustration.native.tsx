@@ -1,6 +1,3 @@
-// === Module 7591: VibeWithWumpusSpotIllustration ===
-
-// Module 7591 (VibeWithWumpusSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/VibeWithWumpusSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 14059: useBountySwipeUpNux ===
-
-// Module 14059 (useBountySwipeUpNux)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

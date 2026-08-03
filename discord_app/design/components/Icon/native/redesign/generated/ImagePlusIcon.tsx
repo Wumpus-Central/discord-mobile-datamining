@@ -1,6 +1,3 @@
-// === Module 16594: ImagePlusIcon ===
-
-// Module 16594 (ImagePlusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

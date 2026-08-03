@@ -1,6 +1,3 @@
-// === Module 4364: _openRobloxURLWithRootPlaceId ===
-
-// Module 4364 (_openRobloxURLWithRootPlaceId)
 import module_4366 from "module_4366";
 import { isDetectionEnabled } from "initialize";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 7913: items ===
-
-// Module 7913 (items)
 import { Image } from "registerAsset";
 import addApplication from "addApplication";
 import _getSystemLocale from "_getSystemLocale";

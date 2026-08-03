@@ -1,6 +1,3 @@
-// === Module 10903: useChatWidth ===
-
-// Module 10903 (useChatWidth)
 import noop from "noop";
 
 const require = arg1;

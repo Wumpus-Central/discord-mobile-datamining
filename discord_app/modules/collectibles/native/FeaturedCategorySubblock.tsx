@@ -1,6 +1,3 @@
-// === Module 14642: subblock ===
-
-// Module 14642 (subblock)
 import "NewBadge";
 import { Image } from "QUICK_SWITCHER";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

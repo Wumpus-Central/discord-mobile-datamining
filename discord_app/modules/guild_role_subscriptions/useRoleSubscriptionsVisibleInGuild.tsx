@@ -1,6 +1,3 @@
-// === Module 12633: computeCanEveryoneInGuildSeeRoleSubscriptions ===
-
-// Module 12633 (computeCanEveryoneInGuildSeeRoleSubscriptions)
 import initialize from "initialize";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";

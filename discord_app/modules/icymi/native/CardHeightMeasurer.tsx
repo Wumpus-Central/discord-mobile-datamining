@@ -1,6 +1,3 @@
-// === Module 15412: CardHeightMeasurer ===
-
-// Module 15412 (CardHeightMeasurer)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 11757: useIsHubRealNamePromptShowing ===
-
-// Module 11757 (useIsHubRealNamePromptShowing)
 import noop from "noop";
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

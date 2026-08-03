@@ -1,6 +1,3 @@
-// === Module 8740: PRODUCT_DETAILS_ACTION_SHEET_KEY ===
-
-// Module 8740 (PRODUCT_DETAILS_ACTION_SHEET_KEY)
 let c3 = "Shop Product Preview";
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
 

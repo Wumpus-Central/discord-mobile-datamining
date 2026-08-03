@@ -1,6 +1,3 @@
-// === Module 16365: getVerifyPhoneSource ===
-
-// Module 16365 (getVerifyPhoneSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

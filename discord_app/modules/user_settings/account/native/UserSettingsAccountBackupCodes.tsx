@@ -1,6 +1,3 @@
-// === Module 13793: CodeRow ===
-
-// Module 13793 (CodeRow)
 import noop from "noop";
 import { ScrollView } from "set";
 import getVerificationKey from "getVerificationKey";

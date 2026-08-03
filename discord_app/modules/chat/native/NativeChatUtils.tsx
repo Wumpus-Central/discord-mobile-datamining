@@ -1,6 +1,3 @@
-// === Module 9476: ChatScrollPosition ===
-
-// Module 9476 (ChatScrollPosition)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let c3;

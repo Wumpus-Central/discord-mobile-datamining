@@ -1,6 +1,3 @@
-// === Module 15647: str2 ===
-
-// Module 15647 (str2)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

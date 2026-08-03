@@ -1,6 +1,3 @@
-// === Module 16211: NewMemberActionsCompleted ===
-
-// Module 16211 (NewMemberActionsCompleted)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

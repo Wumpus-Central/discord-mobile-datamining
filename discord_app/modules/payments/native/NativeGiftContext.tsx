@@ -1,6 +1,3 @@
-// === Module 8813: NativeGiftContextProvider ===
-
-// Module 8813 (NativeGiftContextProvider)
 import frozen from "frozen";
 import importDefaultResult from "dispatcher";
 import getPremiumPlanItem from "getPremiumPlanItem";

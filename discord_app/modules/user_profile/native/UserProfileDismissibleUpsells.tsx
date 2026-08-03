@@ -1,6 +1,3 @@
-// === Module 12193: UserProfileDismissibleUpsells ===
-
-// Module 12193 (UserProfileDismissibleUpsells)
 import XSmallIcon from "XSmallIcon";
 import { View } from "getSystemLocale";
 import mergeGuildAvatar from "mergeGuildAvatar";

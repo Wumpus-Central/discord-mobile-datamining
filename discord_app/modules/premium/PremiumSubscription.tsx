@@ -1,6 +1,3 @@
-// === Module 3851: getNonePlanIdForIntervalType ===
-
-// Module 3851 (getNonePlanIdForIntervalType)
 import GuildFeatures from "GuildFeatures";
 
 let c0;

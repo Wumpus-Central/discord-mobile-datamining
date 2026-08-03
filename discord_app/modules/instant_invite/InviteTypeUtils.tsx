@@ -1,6 +1,3 @@
-// === Module 6024: InviteTypes ===
-
-// Module 6024 (InviteTypes)
 import { isEventUpcoming } from "scheduledEventSort";
 import createChannelRecord from "createChannelRecord";
 import InviteSendStates from "InviteSendStates";

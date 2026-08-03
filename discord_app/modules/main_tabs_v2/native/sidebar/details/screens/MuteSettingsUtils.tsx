@@ -1,6 +1,3 @@
-// === Module 10320: getMuteSettingLabel ===
-
-// Module 10320 (getMuteSettingLabel)
 import storeThread from "storeThread";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

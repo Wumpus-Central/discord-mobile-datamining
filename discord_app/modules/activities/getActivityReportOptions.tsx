@@ -1,6 +1,3 @@
-// === Module 16198: getActivityReportOptions ===
-
-// Module 16198 (getActivityReportOptions)
 import { ActivityFeedbackReasons } from "items3";
 
 const result = require("set").fileFinishedImporting("modules/activities/getActivityReportOptions.tsx");

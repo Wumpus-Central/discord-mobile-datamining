@@ -1,6 +1,3 @@
-// === Module 16404: AuditIcons ===
-
-// Module 16404 (AuditIcons)
 import "StickerIcon";
 import { View } from "CalendarIcon";
 import getTargetType from "getTargetType";

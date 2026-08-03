@@ -1,6 +1,3 @@
-// === Module 14707: useObscuredContentNonFriendsDmSettingValue ===
-
-// Module 14707 (useObscuredContentNonFriendsDmSettingValue)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
 

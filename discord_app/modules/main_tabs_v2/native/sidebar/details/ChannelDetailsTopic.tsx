@@ -1,6 +1,3 @@
-// === Module 15589: GuildChannelDetailsTopic ===
-
-// Module 15589 (GuildChannelDetailsTopic)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "nameFromUser";
 import get_ActivityIndicator from "LinearGradient";

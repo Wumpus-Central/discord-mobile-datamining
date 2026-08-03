@@ -1,6 +1,3 @@
-// === Module 14305: ThemeMidnightIcon ===
-
-// Module 14305 (ThemeMidnightIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

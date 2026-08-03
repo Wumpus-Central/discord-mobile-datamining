@@ -1,6 +1,3 @@
-// === Module 8742: EyeIcon ===
-
-// Module 8742 (EyeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

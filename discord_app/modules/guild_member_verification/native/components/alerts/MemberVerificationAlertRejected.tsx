@@ -1,6 +1,3 @@
-// === Module 9166: MemberVerificationAlertRejected ===
-
-// Module 9166 (MemberVerificationAlertRejected)
 import closure_3 from "jsxProd";
 import noop from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

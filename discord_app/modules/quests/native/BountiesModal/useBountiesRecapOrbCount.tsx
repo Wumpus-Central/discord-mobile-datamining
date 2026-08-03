@@ -1,6 +1,3 @@
-// === Module 14062: getRecapOrbCountFromPullProgress ===
-
-// Module 14062 (getRecapOrbCountFromPullProgress)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

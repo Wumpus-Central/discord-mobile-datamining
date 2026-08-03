@@ -1,6 +1,3 @@
-// === Module 13627: GestureWrapper ===
-
-// Module 13627 (GestureWrapper)
 import set from "set";
 import designConfig from "designConfig";
 import { NativeModules } from "getRootNavigationRef";

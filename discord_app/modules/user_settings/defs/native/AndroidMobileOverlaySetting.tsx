@@ -1,6 +1,3 @@
-// === Module 14290: toggle ===
-
-// Module 14290 (toggle)
 import getUserAgnosticState from "getUserAgnosticState";
 import createToggle from "createToggle";
 

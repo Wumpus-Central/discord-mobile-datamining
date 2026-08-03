@@ -1,6 +1,3 @@
-// === Module 10874: RaisedHandIcon ===
-
-// Module 10874 (RaisedHandIcon)
 import { View } from "AccessibilityAnnouncer";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import jsxProd from "jsxProd";

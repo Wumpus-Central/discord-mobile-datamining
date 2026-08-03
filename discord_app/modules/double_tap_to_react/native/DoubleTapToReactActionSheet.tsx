@@ -1,6 +1,3 @@
-// === Module 11494: EmojiConfetti ===
-
-// Module 11494 (EmojiConfetti)
 import getEmojiToGroupId from "getEmojiToGroupId";
 import closure_4 from "set";
 import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji";

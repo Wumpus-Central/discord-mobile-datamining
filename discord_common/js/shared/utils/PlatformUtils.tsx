@@ -1,6 +1,3 @@
-// === Module 501: PlatformTypes ===
-
-// Module 501 (PlatformTypes)
 let obj = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };
 let c1 = true;
 const android = "android";

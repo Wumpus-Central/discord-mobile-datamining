@@ -1,6 +1,3 @@
-// === Module 9906: FORWARD_MODAL_KEY ===
-
-// Module 9906 (FORWARD_MODAL_KEY)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

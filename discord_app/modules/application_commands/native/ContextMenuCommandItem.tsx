@@ -1,6 +1,3 @@
-// === Module 15718: ContextMenuCommandItem ===
-
-// Module 15718 (ContextMenuCommandItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

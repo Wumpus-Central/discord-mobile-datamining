@@ -1,6 +1,3 @@
-// === Module 13903: renderSuccessIcon ===
-
-// Module 13903 (renderSuccessIcon)
 import noop from "noop";
 import get_ActivityIndicator from "Button";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

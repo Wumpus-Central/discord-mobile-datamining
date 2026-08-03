@@ -1,6 +1,3 @@
-// === Module 9262: getFastestListVisibleItemsDefault ===
-
-// Module 9262 (getFastestListVisibleItemsDefault)
 const result = require("set").fileFinishedImporting("modules/fastest_list/getFastestListVisibleItemsDefault.tsx");
 
 export default function getFastestListVisibleItemsDefault(arg0) {

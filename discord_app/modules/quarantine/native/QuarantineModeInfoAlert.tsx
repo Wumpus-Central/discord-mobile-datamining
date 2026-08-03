@@ -1,6 +1,3 @@
-// === Module 5112: QuarantineModeInfoAlert ===
-
-// Module 5112 (QuarantineModeInfoAlert)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

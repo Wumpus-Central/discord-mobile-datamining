@@ -1,6 +1,3 @@
-// === Module 11897: getFavoritesAddButtonLabel ===
-
-// Module 11897 (getFavoritesAddButtonLabel)
 const result = require("set").fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 
 export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(length) {

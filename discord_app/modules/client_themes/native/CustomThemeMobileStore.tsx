@@ -1,6 +1,3 @@
-// === Module 1346: reset ===
-
-// Module 1346 (reset)
 import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";

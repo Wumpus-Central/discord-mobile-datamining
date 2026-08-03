@@ -1,6 +1,3 @@
-// === Module 15729: useMutualGuildsForMessageRequests ===
-
-// Module 15729 (useMutualGuildsForMessageRequests)
 import noop from "noop";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";

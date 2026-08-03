@@ -1,6 +1,3 @@
-// === Module 15681: experiment ===
-
-// Module 15681 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable Hangout Window", config: { enableHangoutWindow: true } }];

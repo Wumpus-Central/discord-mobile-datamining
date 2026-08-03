@@ -1,6 +1,3 @@
-// === Module 12460: useCommonTriggerPoint ===
-
-// Module 12460 (useCommonTriggerPoint)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getHash from "getHash";

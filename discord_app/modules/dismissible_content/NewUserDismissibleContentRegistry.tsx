@@ -1,6 +1,3 @@
-// === Module 4031: useNewUserDismissibleContent ===
-
-// Module 4031 (useNewUserDismissibleContent)
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
 

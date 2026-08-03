@@ -1,6 +1,3 @@
-// === Module 1380: Permissions ===
-
-// Module 1380 (Permissions)
 import { Permissions } from "ME";
 import importAllResult from "fromString";
 import importAllResult1 from "fromString";

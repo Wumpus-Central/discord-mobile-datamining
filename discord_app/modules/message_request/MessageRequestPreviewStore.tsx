@@ -1,6 +1,3 @@
-// === Module 11703: isMessagePreviewEnabledForChannel ===
-
-// Module 11703 (isMessagePreviewEnabledForChannel)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import processChannel from "processChannel";
 import closure_4 from "processChannel";

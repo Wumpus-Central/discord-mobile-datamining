@@ -1,6 +1,3 @@
-// === Module 15804: ToastIcon ===
-
-// Module 15804 (ToastIcon)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

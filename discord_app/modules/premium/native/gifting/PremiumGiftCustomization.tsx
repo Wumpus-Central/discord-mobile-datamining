@@ -1,6 +1,3 @@
-// === Module 9794: PremiumGiftCustomization ===
-
-// Module 9794 (PremiumGiftCustomization)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "set";

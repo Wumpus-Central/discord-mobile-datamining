@@ -1,6 +1,3 @@
-// === Module 15716: ContextMenuCommandNavigator ===
-
-// Module 15716 (ContextMenuCommandNavigator)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

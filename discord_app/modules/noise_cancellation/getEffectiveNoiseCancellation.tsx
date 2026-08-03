@@ -1,6 +1,3 @@
-// === Module 10803: set ===
-
-// Module 10803 (set)
 import set from "set";
 
 const deep_noise_suppression = "deep_noise_suppression";

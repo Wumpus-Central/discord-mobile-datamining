@@ -1,6 +1,3 @@
-// === Module 15526: FileOrLinkGridPlaceholderItem ===
-
-// Module 15526 (FileOrLinkGridPlaceholderItem)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 7691: init ===
-
-// Module 7691 (init)
 import getRootNavigationRef from "getRootNavigationRef";
 import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare";
 import ensureGuildLoaded from "ensureGuildLoaded";

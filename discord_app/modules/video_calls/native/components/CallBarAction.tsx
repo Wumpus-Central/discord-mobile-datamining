@@ -1,6 +1,3 @@
-// === Module 10542: ActionButton ===
-
-// Module 10542 (ActionButton)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { resetFocusTimer } from "VoiceChatDrawerState";

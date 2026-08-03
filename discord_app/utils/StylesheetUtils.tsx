@@ -1,6 +1,3 @@
-// === Module 11768: getClass ===
-
-// Module 11768 (getClass)
 const result = require("set").fileFinishedImporting("utils/StylesheetUtils.tsx");
 
 export const getClass = function getClass(arg0, arg1) {

@@ -1,6 +1,3 @@
-// === Module 14311: SynchronizeIcon ===
-
-// Module 14311 (SynchronizeIcon)
 import "noop";
 import jsxProd from "jsxProd";
 

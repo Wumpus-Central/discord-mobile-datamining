@@ -1,6 +1,3 @@
-// === Module 4741: initialize ===
-
-// Module 4741 (initialize)
 import { NativePermissionStates } from "NativePermissionStatus";
 import { AnalyticEvents } from "ME";
 import { DeviceSettingsStore } from "initialize";

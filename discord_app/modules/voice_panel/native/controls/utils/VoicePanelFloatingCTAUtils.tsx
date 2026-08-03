@@ -1,6 +1,3 @@
-// === Module 15905: useFloatingCTAProps ===
-
-// Module 15905 (useFloatingCTAProps)
 import DismissibleContent from "DismissibleContent";
 import hideLiveChannelNotice from "hideLiveChannelNotice";
 import { Pressable } from "ACTION_SHEET_HEIGHT_HALF";

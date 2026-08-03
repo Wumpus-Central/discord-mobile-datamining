@@ -1,6 +1,3 @@
-// === Module 4128: useCustomThemeDisplaySettings ===
-
-// Module 4128 (useCustomThemeDisplaySettings)
 import _slicedToArray from "_slicedToArray";
 import reset from "reset";
 

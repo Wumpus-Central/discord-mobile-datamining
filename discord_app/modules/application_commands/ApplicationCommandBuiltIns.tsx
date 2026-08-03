@@ -1,6 +1,3 @@
-// === Module 5715: getOptionValue ===
-
-// Module 5715 (getOptionValue)
 import importDefaultResult from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

@@ -1,6 +1,3 @@
-// === Module 7435: SafetyChatSpotIllustration ===
-
-// Module 7435 (SafetyChatSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/SafetyChatSpotIllustration.native.tsx");

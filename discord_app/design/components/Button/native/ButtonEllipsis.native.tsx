@@ -1,6 +1,3 @@
-// === Module 4619: EllipsisCircle ===
-
-// Module 4619 (EllipsisCircle)
 import "noop";
 import jsxProd from "jsxProd";
 import { Easing } from "module_4054";

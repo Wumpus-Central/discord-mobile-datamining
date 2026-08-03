@@ -1,6 +1,3 @@
-// === Module 7972: PremiumFeaturesBackground ===
-
-// Module 7972 (PremiumFeaturesBackground)
 import "noop";
 import { Gradients } from "items";
 import { PremiumTypes } from "GuildFeatures";

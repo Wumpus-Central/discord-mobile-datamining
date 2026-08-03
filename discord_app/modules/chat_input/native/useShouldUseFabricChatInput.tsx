@@ -1,6 +1,3 @@
-// === Module 11179: useShouldUseFabricChatInput ===
-
-// Module 11179 (useShouldUseFabricChatInput)
 const chat_input = "chat_input";
 const result = require("apexExperiment").fileFinishedImporting("modules/chat_input/native/useShouldUseFabricChatInput.tsx");
 

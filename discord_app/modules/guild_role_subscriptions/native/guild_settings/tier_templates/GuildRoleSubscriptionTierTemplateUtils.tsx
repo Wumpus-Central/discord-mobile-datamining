@@ -1,6 +1,3 @@
-// === Module 16650: getPrivateChannelIconComponent ===
-
-// Module 16650 (getPrivateChannelIconComponent)
 const result = require("VoiceLockIcon").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUtils.tsx");
 
 export const getPrivateChannelIconComponent = function getPrivateChannelIconComponent(type) {

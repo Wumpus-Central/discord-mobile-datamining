@@ -1,6 +1,3 @@
-// === Module 11260: getLastFetchTimeMs ===
-
-// Module 11260 (getLastFetchTimeMs)
 import { Store } from "initialize";
 
 let closure_0 = [];

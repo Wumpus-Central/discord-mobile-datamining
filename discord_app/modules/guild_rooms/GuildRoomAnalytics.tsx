@@ -1,6 +1,3 @@
-// === Module 16219: trackGuildRoomObjectInteracted ===
-
-// Module 16219 (trackGuildRoomObjectInteracted)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";

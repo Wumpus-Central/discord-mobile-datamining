@@ -1,6 +1,3 @@
-// === Module 7659: TableRadioRow ===
-
-// Module 7659 (TableRadioRow)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 13953: AvatarDecorationPreviewImage ===
-
-// Module 13953 (AvatarDecorationPreviewImage)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PROFILE_FRAME_ASPECT_RATIO as closure_5 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO";

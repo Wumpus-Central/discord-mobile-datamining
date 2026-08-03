@@ -1,6 +1,3 @@
-// === Module 10353: PX_12 ===
-
-// Module 10353 (PX_12)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import set from "set";

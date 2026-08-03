@@ -1,6 +1,3 @@
-// === Module 9701: NewCaption ===
-
-// Module 9701 (NewCaption)
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "openImagePickerUnhandled";
 import map from "map";

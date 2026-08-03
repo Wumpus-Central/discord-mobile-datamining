@@ -1,6 +1,3 @@
-// === Module 10085: _createGuildFromTemplate ===
-
-// Module 10085 (_createGuildFromTemplate)
 import set from "set";
 import { Endpoints } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 7007: DogIllocon ===
-
-// Module 7007 (DogIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");

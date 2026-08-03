@@ -1,6 +1,3 @@
-// === Module 7319: NitroOpalBadgeSmallBadge ===
-
-// Module 7319 (NitroOpalBadgeSmallBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/NitroOpalBadgeSmallBadge.native.tsx");

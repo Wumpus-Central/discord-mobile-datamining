@@ -1,6 +1,3 @@
-// === Module 9059: _transferToXbox ===
-
-// Module 9059 (_transferToXbox)
 import set from "set";
 import "noop";
 import { Linking } from "get ActivityIndicator";

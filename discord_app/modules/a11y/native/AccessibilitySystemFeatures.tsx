@@ -1,6 +1,3 @@
-// === Module 13519: AccessibilityFeatureFlags ===
-
-// Module 13519 (AccessibilityFeatureFlags)
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AccessibilityFeatureFlags } from "AccessibilityFeatureFlags";

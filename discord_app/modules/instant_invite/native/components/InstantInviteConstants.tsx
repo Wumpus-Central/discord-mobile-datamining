@@ -1,6 +1,3 @@
-// === Module 12257: SHARE_APPS_KEY ===
-
-// Module 12257 (SHARE_APPS_KEY)
 import { Linking } from "set";
 import SHARE_APPS_KEY from "SHARE_APPS_KEY";
 import ME from "ME";

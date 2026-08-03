@@ -1,6 +1,3 @@
-// === Module 4247: result ===
-
-// Module 4247 (result)
 const obj = {};
 const result = 30 * require("set").Millis.SECOND;
 obj.SECONDS_30 = result;

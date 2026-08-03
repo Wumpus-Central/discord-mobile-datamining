@@ -1,6 +1,3 @@
-// === Module 11318: xl ===
-
-// Module 11318 (xl)
 import "Button";
 import { View } from "AppLauncherBackButton";
 import mergeGuildAvatar from "mergeGuildAvatar";

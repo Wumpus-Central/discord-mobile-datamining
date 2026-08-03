@@ -1,6 +1,3 @@
-// === Module 11695: useFetchGuildBoostSlots ===
-
-// Module 11695 (useFetchGuildBoostSlots)
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

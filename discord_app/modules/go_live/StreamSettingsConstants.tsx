@@ -1,6 +1,3 @@
-// === Module 4248: RESOLUTION_720 ===
-
-// Module 4248 (RESOLUTION_720)
 import { BoostedGuildTiers } from "ME";
 import { StreamQualities } from "GuildFeatures";
 

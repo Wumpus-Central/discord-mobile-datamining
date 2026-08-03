@@ -1,6 +1,3 @@
-// === Module 14079: SkipBackwardIcon ===
-
-// Module 14079 (SkipBackwardIcon)
 import "noop";
 import jsxProd from "jsxProd";
 

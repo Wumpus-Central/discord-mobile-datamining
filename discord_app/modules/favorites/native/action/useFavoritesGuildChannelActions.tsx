@@ -1,6 +1,3 @@
-// === Module 10386: useFavoritesGuildChannelActions ===
-
-// Module 10386 (useFavoritesGuildChannelActions)
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import initializeFromUserSettings from "initializeFromUserSettings";

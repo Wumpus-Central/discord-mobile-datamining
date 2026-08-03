@@ -1,6 +1,3 @@
-// === Module 6045: startBackgroundTask ===
-
-// Module 6045 (startBackgroundTask)
 import closure_3 from "set";
 import { NativeModules } from "get ActivityIndicator";
 import set from "set";

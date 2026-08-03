@@ -1,6 +1,3 @@
-// === Module 14799: showCaptchaTestModal ===
-
-// Module 14799 (showCaptchaTestModal)
 import asyncRequireImpl from "asyncRequireImpl";
 import "noop";
 import { jsx } from "jsxProd";

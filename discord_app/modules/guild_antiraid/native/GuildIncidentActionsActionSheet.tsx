@@ -1,6 +1,3 @@
-// === Module 11033: DurationSelectionActionSheet ===
-
-// Module 11033 (DurationSelectionActionSheet)
 import WarningIcon from "WarningIcon";
 import computeAlertSettings from "computeAlertSettings";
 import useGuildIncidentsActionSheetStore from "useGuildIncidentsActionSheetStore";

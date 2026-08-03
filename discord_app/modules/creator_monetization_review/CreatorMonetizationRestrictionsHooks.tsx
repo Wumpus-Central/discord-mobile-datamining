@@ -1,6 +1,3 @@
-// === Module 12635: useShouldHideGuildPurchaseEntryPoints ===
-
-// Module 12635 (useShouldHideGuildPurchaseEntryPoints)
 import noop from "noop";
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 import { FetchState } from "makeGroupListingIndexSubscriptionListingTag";

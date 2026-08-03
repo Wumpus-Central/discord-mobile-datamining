@@ -1,6 +1,3 @@
-// === Module 10050: dismissPanel ===
-
-// Module 10050 (dismissPanel)
 import { VoicePanelModes } from "VoicePanelModes";
 import VoicePanelControlsModes from "VoicePanelControlsModes";
 import createFakeSharedValue from "createFakeSharedValue";

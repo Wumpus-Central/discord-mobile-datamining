@@ -1,6 +1,3 @@
-// === Module 6790: AccountAgeTier10LargeBadge ===
-
-// Module 6790 (AccountAgeTier10LargeBadge)
 const result = require("AccountAgeTier10SmallBadge").fileFinishedImporting("design/assets/native.tsx");
 
 export const AccountAgeTier10LargeBadge = require("AccountAgeTier10LargeBadge").AccountAgeTier10LargeBadge;

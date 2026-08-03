@@ -1,6 +1,3 @@
-// === Module 4703: ImageLockIcon ===
-
-// Module 4703 (ImageLockIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

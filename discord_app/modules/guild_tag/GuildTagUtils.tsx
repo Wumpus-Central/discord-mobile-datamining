@@ -1,6 +1,3 @@
-// === Module 7946: guildHasTag ===
-
-// Module 7946 (guildHasTag)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

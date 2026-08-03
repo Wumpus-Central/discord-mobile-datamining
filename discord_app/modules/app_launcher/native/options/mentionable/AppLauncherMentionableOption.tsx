@@ -1,6 +1,3 @@
-// === Module 11369: MentionableIcon ===
-
-// Module 11369 (MentionableIcon)
 import _slicedToArray from "_slicedToArray";
 import asyncRequireImpl from "asyncRequireImpl";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

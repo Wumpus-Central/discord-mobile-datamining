@@ -1,6 +1,3 @@
-// === Module 6787: enforcing ===
-
-// Module 6787 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeDigitalCredentialModule");

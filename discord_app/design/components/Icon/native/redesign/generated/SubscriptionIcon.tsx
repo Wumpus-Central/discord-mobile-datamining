@@ -1,6 +1,3 @@
-// === Module 14037: SubscriptionIcon ===
-
-// Module 14037 (SubscriptionIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 9978: ContextMenuSubmenuActionSheetHeader ===
-
-// Module 9978 (ContextMenuSubmenuActionSheetHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

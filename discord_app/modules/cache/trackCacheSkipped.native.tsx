@@ -1,6 +1,3 @@
-// === Module 5955: trackCacheSkipped ===
-
-// Module 5955 (trackCacheSkipped)
 import { AnalyticEvents } from "ME";
 
 const result = require("getDeviceMetadata").fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");

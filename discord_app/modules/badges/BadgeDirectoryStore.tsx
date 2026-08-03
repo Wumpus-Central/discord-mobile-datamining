@@ -1,6 +1,3 @@
-// === Module 8113: map ===
-
-// Module 8113 (map)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 15423: useMainTabsChannelScreenStyles ===
-
-// Module 15423 (useMainTabsChannelScreenStyles)
 import noop from "noop";
 import createCacheKey from "createCacheKey";
 

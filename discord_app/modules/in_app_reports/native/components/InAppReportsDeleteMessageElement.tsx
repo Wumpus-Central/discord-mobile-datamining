@@ -1,6 +1,3 @@
-// === Module 12428: DeleteMessageElement ===
-
-// Module 12428 (DeleteMessageElement)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import reinjectEphemerals from "reinjectEphemerals";

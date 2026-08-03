@@ -1,6 +1,3 @@
-// === Module 10767: SpeedometerIcon ===
-
-// Module 10767 (SpeedometerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

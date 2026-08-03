@@ -1,6 +1,3 @@
-// === Module 6194: usePremiumUpsellConfig ===
-
-// Module 6194 (usePremiumUpsellConfig)
 import getBestActiveInput from "getBestActiveInput";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

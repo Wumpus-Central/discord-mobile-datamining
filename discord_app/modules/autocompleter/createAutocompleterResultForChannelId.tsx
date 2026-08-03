@@ -1,6 +1,3 @@
-// === Module 6177: createAutocompleterResultForChannelId ===
-
-// Module 6177 (createAutocompleterResultForChannelId)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

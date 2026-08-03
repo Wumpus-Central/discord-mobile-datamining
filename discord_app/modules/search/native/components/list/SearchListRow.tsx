@@ -1,6 +1,3 @@
-// === Module 15512: SearchListRow ===
-
-// Module 15512 (SearchListRow)
 import { View } from "get ActivityIndicator";
 import { SEARCH_ROW_TAP_STATE_PADDING as closure_4 } from "MessageEmbedTypes";
 import jsxProd from "jsxProd";

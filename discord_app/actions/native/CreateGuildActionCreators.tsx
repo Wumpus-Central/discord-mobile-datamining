@@ -1,6 +1,3 @@
-// === Module 11861: showInstantInviteModal ===
-
-// Module 11861 (showInstantInviteModal)
 import comparator from "comparator";
 import { InstantInviteSources } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 4863: percentageScrolled ===
-
-// Module 4863 (percentageScrolled)
 import { Store } from "initialize";
 
 let closure_2 = {};

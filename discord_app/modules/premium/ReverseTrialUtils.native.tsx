@@ -1,6 +1,3 @@
-// === Module 7846: useIsInReverseTrial ===
-
-// Module 7846 (useIsInReverseTrial)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

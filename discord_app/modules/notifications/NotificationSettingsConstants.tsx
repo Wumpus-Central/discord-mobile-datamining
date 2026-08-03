@@ -1,6 +1,3 @@
-// === Module 13528: items2 ===
-
-// Module 13528 (items2)
 let obj = { badge: true, visibility: "popup", vibrate: true, sound: true };
 obj = { badge: true, visibility: "default", vibrate: true, sound: true };
 obj = { badge: true, visibility: "default", vibrate: false, sound: false };

@@ -1,6 +1,3 @@
-// === Module 5735: create ===
-
-// Module 5735 (create)
 let closure_2 = [];
 let RTCBandwidthMonitor;
 class RTCBandwidthMonitor {

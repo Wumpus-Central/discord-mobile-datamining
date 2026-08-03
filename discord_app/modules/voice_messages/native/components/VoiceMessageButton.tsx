@@ -1,6 +1,3 @@
-// === Module 11429: VoiceMessageRecordingCancelledToastIcon ===
-
-// Module 11429 (VoiceMessageRecordingCancelledToastIcon)
 import getState from "getState";
 import getSystemLocale from "getSystemLocale";
 import importAllResult from "module_4054";

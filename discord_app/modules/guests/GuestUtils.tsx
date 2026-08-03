@@ -1,6 +1,3 @@
-// === Module 9513: ? ===
-
-// Module 9513
 import { GuildMemberFlags } from "GuildMemberFlags";
 
 const result = require("set").fileFinishedImporting("modules/guests/GuestUtils.tsx");

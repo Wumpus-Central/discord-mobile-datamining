@@ -1,6 +1,3 @@
-// === Module 10394: ThemeDarkIcon ===
-
-// Module 10394 (ThemeDarkIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

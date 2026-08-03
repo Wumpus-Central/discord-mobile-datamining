@@ -1,6 +1,3 @@
-// === Module 12974: getCodeToKeyLanguageCorrection ===
-
-// Module 12974 (getCodeToKeyLanguageCorrection)
 import _slicedToArray from "_slicedToArray";
 import items from "items";
 import set from "set";

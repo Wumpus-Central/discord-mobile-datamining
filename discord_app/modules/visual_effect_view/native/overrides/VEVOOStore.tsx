@@ -1,6 +1,3 @@
-// === Module 4595: useVisualEffectViewOverrides ===
-
-// Module 4595 (useVisualEffectViewOverrides)
 import keys from "keys";
 
 let closure_2 = {};

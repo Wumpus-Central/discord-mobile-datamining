@@ -1,6 +1,3 @@
-// === Module 10430: isSelectedFromHomeChannel ===
-
-// Module 10430 (isSelectedFromHomeChannel)
 import "handlePermissionsChange";
 import "handleConnectionOpen";
 import { isGuildHomeChannel } from "set";

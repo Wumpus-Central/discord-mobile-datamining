@@ -1,6 +1,3 @@
-// === Module 9638: searchAllStickers ===
-
-// Module 9638 (searchAllStickers)
 const result = require("set").fileFinishedImporting("modules/stickers/StickersSearchUtils.tsx");
 
 export const searchAllStickers = function searchAllStickers(arg0) {

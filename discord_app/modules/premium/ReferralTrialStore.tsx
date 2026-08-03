@@ -1,6 +1,3 @@
-// === Module 6215: emitChanges ===
-
-// Module 6215 (emitChanges)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { NOOP_NULL } from "ME";
 import { Store } from "initialize";

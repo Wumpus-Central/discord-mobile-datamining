@@ -1,6 +1,3 @@
-// === Module 6638: DoorEnterIcon ===
-
-// Module 6638 (DoorEnterIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

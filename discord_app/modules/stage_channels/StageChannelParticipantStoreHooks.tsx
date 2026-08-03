@@ -1,6 +1,3 @@
-// === Module 5024: useStageParticipants ===
-
-// Module 5024 (useStageParticipants)
 import _slicedToArray from "_slicedToArray";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 

@@ -1,6 +1,3 @@
-// === Module 15377: useSharedICYMILogic ===
-
-// Module 15377 (useSharedICYMILogic)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import filterStaffGuild from "filterStaffGuild";

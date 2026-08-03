@@ -1,6 +1,3 @@
-// === Module 15984: useTapGestures ===
-
-// Module 15984 (useTapGestures)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 7973: CutoutableAvatarDecoration ===
-
-// Module 7973 (CutoutableAvatarDecoration)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

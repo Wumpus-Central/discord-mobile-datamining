@@ -1,6 +1,3 @@
-// === Module 8525: GameProfileView ===
-
-// Module 8525 (GameProfileView)
 import GameProfileReportButton from "GameProfileReportButton";
 import { View } from "GameProfileWebsiteButton";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 10099: loadInviteSuggestions ===
-
-// Module 10099 (loadInviteSuggestions)
 import _computeRows from "_computeRows";
 
 const result = require("dispatcher").fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");

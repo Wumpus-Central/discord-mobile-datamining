@@ -1,6 +1,3 @@
-// === Module 9707: FOOTER_HEIGHT ===
-
-// Module 9707 (FOOTER_HEIGHT)
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

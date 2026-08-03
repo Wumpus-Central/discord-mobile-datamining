@@ -1,6 +1,3 @@
-// === Module 7746: createSystemMessageContent ===
-
-// Module 7746 (createSystemMessageContent)
 import ME from "ME";
 
 let c3;

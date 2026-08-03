@@ -1,6 +1,3 @@
-// === Module 7850: createVoiceSessionSystemMessage ===
-
-// Module 7850 (createVoiceSessionSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

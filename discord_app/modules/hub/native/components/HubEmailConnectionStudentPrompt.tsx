@@ -1,6 +1,3 @@
-// === Module 11844: HubEmailConnectionStudentPrompt ===
-
-// Module 11844 (HubEmailConnectionStudentPrompt)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";

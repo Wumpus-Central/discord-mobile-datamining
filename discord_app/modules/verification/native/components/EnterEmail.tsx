@@ -1,6 +1,3 @@
-// === Module 9233: EnterEmail ===
-
-// Module 9233 (EnterEmail)
 import closure_4 from "ChangeEmailFields";
 import _slicedToArray from "_slicedToArray";
 import set from "set";

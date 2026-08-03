@@ -1,6 +1,3 @@
-// === Module 13542: activityInstanceConnectedParticipants ===
-
-// Module 13542 (activityInstanceConnectedParticipants)
 import participantFromServer from "participantFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";

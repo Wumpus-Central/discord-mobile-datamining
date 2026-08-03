@@ -1,6 +1,3 @@
-// === Module 6717: StartStageChannelEventActionSheet ===
-
-// Module 6717 (StartStageChannelEventActionSheet)
 import closure_4 from "MAX_STAGE_TOPIC_LENGTH";
 import _slicedToArray from "_slicedToArray";
 import StageSparkleInner from "StageSparkleInner";

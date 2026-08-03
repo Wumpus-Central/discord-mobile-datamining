@@ -1,6 +1,3 @@
-// === Module 6004: apexExperiment ===
-
-// Module 6004 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enableNewRequestBehavior: false }, 3: { enableNewRequestBehavior: true }, 4: { enableNewRequestBehavior: false }, 5: { enableNewRequestBehavior: true }, 6: { enableNewRequestBehavior: true } };

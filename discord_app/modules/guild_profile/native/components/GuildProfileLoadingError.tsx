@@ -1,6 +1,3 @@
-// === Module 11967: GuildProfileLoadingError ===
-
-// Module 11967 (GuildProfileLoadingError)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

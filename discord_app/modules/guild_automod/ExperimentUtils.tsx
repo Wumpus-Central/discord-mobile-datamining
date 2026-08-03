@@ -1,6 +1,3 @@
-// === Module 10280: isInMentionRaidExperiment ===
-
-// Module 10280 (isInMentionRaidExperiment)
 const result = require("set").fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
 
 export const isInMentionRaidExperiment = function isInMentionRaidExperiment(guildId) {

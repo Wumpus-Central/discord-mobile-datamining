@@ -1,6 +1,3 @@
-// === Module 16319: ConnectGuardianShareScreen ===
-
-// Module 16319 (ConnectGuardianShareScreen)
 import HeaderBackImage from "HeaderBackImage";
 import { View } from "ConnectGuardianCard";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";

@@ -1,6 +1,3 @@
-// === Module 11455: useMemberActionsForChannel ===
-
-// Module 11455 (useMemberActionsForChannel)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 import set from "set";

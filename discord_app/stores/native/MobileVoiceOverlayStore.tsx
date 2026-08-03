@@ -1,6 +1,3 @@
-// === Module 10780: getUserAgnosticState ===
-
-// Module 10780 (getUserAgnosticState)
 import { AnalyticEvents } from "ME";
 import { DeviceSettingsStore } from "initialize";
 

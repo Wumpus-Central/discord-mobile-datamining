@@ -1,6 +1,3 @@
-// === Module 4154: CircleCheckIcon ===
-
-// Module 4154 (CircleCheckIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 12071: widgetGameTagMetadata ===
-
-// Module 12071 (widgetGameTagMetadata)
 import WidgetGameTagIconRole from "WidgetGameTagIconRole";
 
 const obj = {};

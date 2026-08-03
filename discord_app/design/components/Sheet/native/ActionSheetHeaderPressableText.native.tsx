@@ -1,6 +1,3 @@
-// === Module 8258: ActionSheetHeaderPressableText ===
-
-// Module 8258 (ActionSheetHeaderPressableText)
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 

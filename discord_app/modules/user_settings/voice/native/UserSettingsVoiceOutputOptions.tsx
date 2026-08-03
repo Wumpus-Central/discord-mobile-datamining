@@ -1,6 +1,3 @@
-// === Module 10785: UserSettingsVoiceOutputOptions ===
-
-// Module 10785 (UserSettingsVoiceOutputOptions)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import reset from "reset";

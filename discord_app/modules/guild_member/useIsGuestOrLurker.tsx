@@ -1,6 +1,3 @@
-// === Module 10855: useIsGuestOrLurker ===
-
-// Module 10855 (useIsGuestOrLurker)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";

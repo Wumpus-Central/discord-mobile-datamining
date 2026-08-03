@@ -1,6 +1,3 @@
-// === Module 8530: WebsiteGameStoreLinkButton ===
-
-// Module 8530 (WebsiteGameStoreLinkButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

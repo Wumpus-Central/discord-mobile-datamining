@@ -1,6 +1,3 @@
-// === Module 9145: markAnalyticsFeedItemSeen ===
-
-// Module 9145 (markAnalyticsFeedItemSeen)
 const result = require("set").fileFinishedImporting("utils/AnalyticsFeedItemSeenActionCreators.tsx");
 
 export const markAnalyticsFeedItemSeen = function markAnalyticsFeedItemSeen(forumPostSeenManagerId, feedItemId, timestampMillis) {

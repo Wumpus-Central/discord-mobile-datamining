@@ -1,6 +1,3 @@
-// === Module 10485: updateActivities ===
-
-// Module 10485 (updateActivities)
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";

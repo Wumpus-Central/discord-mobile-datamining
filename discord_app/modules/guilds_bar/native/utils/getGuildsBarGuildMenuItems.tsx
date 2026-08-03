@@ -1,6 +1,3 @@
-// === Module 14960: getGuildsBarGuildMenuItems ===
-
-// Module 14960 (getGuildsBarGuildMenuItems)
 import DoorExitIcon from "DoorExitIcon";
 import initialize from "initialize";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

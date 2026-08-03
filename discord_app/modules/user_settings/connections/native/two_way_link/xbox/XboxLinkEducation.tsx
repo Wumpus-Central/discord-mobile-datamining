@@ -1,6 +1,3 @@
-// === Module 9045: XboxLinkEducation ===
-
-// Module 9045 (XboxLinkEducation)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";

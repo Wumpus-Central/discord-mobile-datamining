@@ -1,6 +1,3 @@
-// === Module 1349: getUnitId ===
-
-// Module 1349 (getUnitId)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";

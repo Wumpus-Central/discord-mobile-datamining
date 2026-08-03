@@ -1,6 +1,3 @@
-// === Module 5229: SPRING_CONFIG ===
-
-// Module 5229 (SPRING_CONFIG)
 import noop from "noop";
 
 const require = arg1;

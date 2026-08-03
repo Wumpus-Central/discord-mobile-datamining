@@ -1,6 +1,3 @@
-// === Module 12416: WidgetPreview ===
-
-// Module 12416 (WidgetPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

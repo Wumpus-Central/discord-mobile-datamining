@@ -1,6 +1,3 @@
-// === Module 8497: useGameProfileObscured ===
-
-// Module 8497 (useGameProfileObscured)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

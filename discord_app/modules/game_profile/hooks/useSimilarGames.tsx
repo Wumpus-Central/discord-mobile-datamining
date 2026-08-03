@@ -1,6 +1,3 @@
-// === Module 11937: useSimilarGames ===
-
-// Module 11937 (useSimilarGames)
 import map from "map";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set";

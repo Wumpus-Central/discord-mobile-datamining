@@ -1,6 +1,3 @@
-// === Module 9275: MultipleChoiceField ===
-
-// Module 9275 (MultipleChoiceField)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

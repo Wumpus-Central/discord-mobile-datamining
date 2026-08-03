@@ -1,6 +1,3 @@
-// === Module 9673: getGameMentionsAutocompleteConfig ===
-
-// Module 9673 (getGameMentionsAutocompleteConfig)
 const result = require("set").fileFinishedImporting("modules/game_mentions/getGameMentionsAutocompleteConfig.tsx");
 
 export const getGameMentionsAutocompleteConfig = function getGameMentionsAutocompleteConfig(location) {

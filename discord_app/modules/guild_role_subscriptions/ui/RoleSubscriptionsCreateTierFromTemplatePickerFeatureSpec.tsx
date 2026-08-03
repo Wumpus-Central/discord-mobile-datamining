@@ -1,6 +1,3 @@
-// === Module 13050: ? ===
-
-// Module 13050
 import getHash from "getHash";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";

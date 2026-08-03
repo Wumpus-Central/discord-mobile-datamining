@@ -1,6 +1,3 @@
-// === Module 14641: Subblocks ===
-
-// Module 14641 (Subblocks)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

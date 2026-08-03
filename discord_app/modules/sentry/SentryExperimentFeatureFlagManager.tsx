@@ -1,6 +1,3 @@
-// === Module 16749: isLikelyControl ===
-
-// Module 16749 (isLikelyControl)
 import getHash from "getHash";
 import initialize from "initialize";
 import handleConnectionOpen from "handleConnectionOpen";

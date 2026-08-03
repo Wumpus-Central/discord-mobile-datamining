@@ -1,6 +1,3 @@
-// === Module 13817: pressable ===
-
-// Module 13817 (pressable)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY";
 import createToggle from "createToggle";

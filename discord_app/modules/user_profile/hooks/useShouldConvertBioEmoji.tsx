@@ -1,6 +1,3 @@
-// === Module 7949: useShouldConvertBioEmoji ===
-
-// Module 7949 (useShouldConvertBioEmoji)
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
 
 export default function useShouldConvertBioEmoji() {

@@ -1,6 +1,3 @@
-// === Module 11002: GuildTemplateResolving ===
-
-// Module 11002 (GuildTemplateResolving)
 import "Divider";
 import get_ActivityIndicator from "module_9004";
 import { isGuildVocalChannelType } from "createChannelRecord";

@@ -1,6 +1,3 @@
-// === Module 12919: getGlobalFramePoolLockExperimentConfig ===
-
-// Module 12919 (getGlobalFramePoolLockExperimentConfig)
 let obj = { 1: null };
 obj[1] = { enabled: true };
 let closure_0 = require("getUnitId")({ kind: "user", name: "2025-11-global-frame-pool-lock", defaultConfig: { enabled: false }, variations: obj });

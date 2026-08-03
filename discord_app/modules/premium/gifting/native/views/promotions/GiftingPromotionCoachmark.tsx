@@ -1,6 +1,3 @@
-// === Module 15778: GiftingPromotionCoachmarkActionSheet ===
-
-// Module 15778 (GiftingPromotionCoachmarkActionSheet)
 import Button from "Button";
 import { View } from "preload";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

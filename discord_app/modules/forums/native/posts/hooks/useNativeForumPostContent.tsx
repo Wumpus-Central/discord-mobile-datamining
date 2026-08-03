@@ -1,6 +1,3 @@
-// === Module 11216: useNativeForumPostContent ===
-
-// Module 11216 (useNativeForumPostContent)
 import { MessageFlags } from "ME";
 import createCacheKey from "createCacheKey";
 

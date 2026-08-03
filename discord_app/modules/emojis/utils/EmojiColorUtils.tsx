@@ -1,6 +1,3 @@
-// === Module 7745: buildPlatformedThemedEmojiColorPalette ===
-
-// Module 7745 (buildPlatformedThemedEmojiColorPalette)
 function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
   let colors;
   let saturationFactor;

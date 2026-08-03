@@ -1,6 +1,3 @@
-// === Module 9367: trackOnEmojiPickerOpened ===
-
-// Module 9367 (trackOnEmojiPickerOpened)
 import noop from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import ensureGuildLoaded from "ensureGuildLoaded";

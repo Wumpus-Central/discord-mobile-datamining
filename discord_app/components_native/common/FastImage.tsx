@@ -1,6 +1,3 @@
-// === Module 5145: preload ===
-
-// Module 5145 (preload)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

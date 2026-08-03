@@ -1,6 +1,3 @@
-// === Module 4411: reinjectEphemerals ===
-
-// Module 4411 (reinjectEphemerals)
 import canEditMessage from "canEditMessage";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";

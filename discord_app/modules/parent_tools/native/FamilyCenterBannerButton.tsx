@@ -1,6 +1,3 @@
-// === Module 13926: FamilyCenterTeenQRCodeButtonInner ===
-
-// Module 13926 (FamilyCenterTeenQRCodeButtonInner)
 import ConnectGuardianBottomSheet from "ConnectGuardianBottomSheet";
 import { View } from "shareGuardianConnectLink";
 import mergeGuildAvatar from "mergeGuildAvatar";

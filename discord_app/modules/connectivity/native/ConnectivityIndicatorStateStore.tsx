@@ -1,6 +1,3 @@
-// === Module 12759: updateState ===
-
-// Module 12759 (updateState)
 import handleClearCaches from "handleClearCaches";
 import fetchFingerprint from "fetchFingerprint";
 import reinjectEphemerals from "reinjectEphemerals";

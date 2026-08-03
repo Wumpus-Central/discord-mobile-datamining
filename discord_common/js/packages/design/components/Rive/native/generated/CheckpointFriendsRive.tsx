@@ -1,6 +1,3 @@
-// === Module 3982: CheckpointFriendsRive ===
-
-// Module 3982 (CheckpointFriendsRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

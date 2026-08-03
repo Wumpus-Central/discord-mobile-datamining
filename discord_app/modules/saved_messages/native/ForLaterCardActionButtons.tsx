@@ -1,6 +1,3 @@
-// === Module 9957: ForLaterCardActionButtons ===
-
-// Module 9957 (ForLaterCardActionButtons)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

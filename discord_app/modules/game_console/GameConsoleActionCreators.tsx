@@ -1,6 +1,3 @@
-// === Module 9048: disconnectRemote ===
-
-// Module 9048 (disconnectRemote)
 import expandEventProperties from "expandEventProperties";
 import createRTCConnection from "createRTCConnection";
 import handleUpdate from "handleUpdate";

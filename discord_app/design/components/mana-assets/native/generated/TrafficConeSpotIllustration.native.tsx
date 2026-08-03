@@ -1,6 +1,3 @@
-// === Module 7581: TrafficConeSpotIllustration ===
-
-// Module 7581 (TrafficConeSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/TrafficConeSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 8087: useFramePreviewOverrideFrame ===
-
-// Module 8087 (useFramePreviewOverrideFrame)
 import noop from "noop";
 import fromServer from "fromServer";
 import { useFramePreviewOverrideStore as closure_4 } from "measure";

@@ -1,6 +1,3 @@
-// === Module 10349: DragHandle ===
-
-// Module 10349 (DragHandle)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

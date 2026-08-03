@@ -1,6 +1,3 @@
-// === Module 15123: ThreadLongPressActionSheetConnected ===
-
-// Module 15123 (ThreadLongPressActionSheetConnected)
 import PencilIcon from "PencilIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

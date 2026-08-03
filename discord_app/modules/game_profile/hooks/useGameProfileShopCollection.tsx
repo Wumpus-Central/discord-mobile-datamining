@@ -1,6 +1,3 @@
-// === Module 11934: useGameProfileShopCollection ===
-
-// Module 11934 (useGameProfileShopCollection)
 import { useEffect } from "noop";
 import getSimilarGames from "getSimilarGames";
 

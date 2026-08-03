@@ -1,6 +1,3 @@
-// === Module 5717: get untranslatedDescription ===
-
-// Module 5717 (get untranslatedDescription)
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

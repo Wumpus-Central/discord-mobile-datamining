@@ -1,6 +1,3 @@
-// === Module 9335: usePremiumFeatures ===
-
-// Module 9335 (usePremiumFeatures)
 import noop from "noop";
 import GuildFeatures from "GuildFeatures";
 import { TOTAL_PREMIUM_GROUP_USERS } from "SubscriptionStatusTypes";

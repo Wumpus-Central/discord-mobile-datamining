@@ -1,6 +1,3 @@
-// === Module 6716: useStageChannelIsLive ===
-
-// Module 6716 (useStageChannelIsLive)
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 
 const require = arg1;

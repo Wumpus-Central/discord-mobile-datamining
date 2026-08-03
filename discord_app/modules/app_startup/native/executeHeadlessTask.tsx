@@ -1,6 +1,3 @@
-// === Module 16788: _executeHeadlessTask ===
-
-// Module 16788 (_executeHeadlessTask)
 import timestamp from "timestamp";
 import { AppState } from "get ActivityIndicator";
 import fetchFingerprint from "fetchFingerprint";

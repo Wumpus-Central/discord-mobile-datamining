@@ -1,6 +1,3 @@
-// === Module 16115: format ===
-
-// Module 16115 (format)
 import _slicedToArray from "_slicedToArray";
 import FORMAT_RE from "FORMAT_RE";
 

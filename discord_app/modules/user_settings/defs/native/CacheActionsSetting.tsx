@@ -1,6 +1,3 @@
-// === Module 14549: handleCacheActionPress ===
-
-// Module 14549 (handleCacheActionPress)
 import CircleInformationIcon from "CircleInformationIcon";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import jsxProd from "jsxProd";

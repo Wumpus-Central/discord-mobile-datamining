@@ -1,6 +1,3 @@
-// === Module 7267: MagnifyingGlassSpotIllustration ===
-
-// Module 7267 (MagnifyingGlassSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/MagnifyingGlassSpotIllustration.native.tsx");

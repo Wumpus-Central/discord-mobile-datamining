@@ -1,6 +1,3 @@
-// === Module 4241: ? ===
-
-// Module 4241
 import inject from "inject";
 
 inject.inject({

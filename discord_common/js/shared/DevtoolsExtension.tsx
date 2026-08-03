@@ -1,6 +1,3 @@
-// === Module 1232: logFluxAction ===
-
-// Module 1232 (logFluxAction)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/DevtoolsExtension.tsx");
 
 export const logFluxAction = function logFluxAction(description, durationMs) {

@@ -1,6 +1,3 @@
-// === Module 4189: Text ===
-
-// Module 4189 (Text)
 import importAllResult from "noop";
 import { Text } from "get ActivityIndicator";
 import { Fonts } from "sum";

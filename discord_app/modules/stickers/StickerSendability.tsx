@@ -1,6 +1,3 @@
-// === Module 9633: getStickerSendability ===
-
-// Module 9633 (getStickerSendability)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import parseServerPackSticker from "parseServerPackSticker";
 import { Permissions } from "ME";

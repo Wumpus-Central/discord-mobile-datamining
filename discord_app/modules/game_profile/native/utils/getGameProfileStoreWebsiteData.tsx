@@ -1,6 +1,3 @@
-// === Module 8504: getGameProfileStoreWebsiteData ===
-
-// Module 8504 (getGameProfileStoreWebsiteData)
 import "noop";
 import { jsx } from "jsxProd";
 

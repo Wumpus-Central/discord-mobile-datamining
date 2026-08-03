@@ -1,6 +1,3 @@
-// === Module 11352: OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION ===
-
-// Module 11352 (OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

@@ -1,6 +1,3 @@
-// === Module 9252: useFastestListComputedStyles ===
-
-// Module 9252 (useFastestListComputedStyles)
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 

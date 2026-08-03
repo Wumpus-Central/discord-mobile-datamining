@@ -1,6 +1,3 @@
-// === Module 15432: getCoverImageURI ===
-
-// Module 15432 (getCoverImageURI)
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 
 const require = arg1;

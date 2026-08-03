@@ -1,6 +1,3 @@
-// === Module 4418: prototype ===
-
-// Module 4418 (prototype)
 const result = require("set").fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
 const prototype = function InteractionCallbackError(reason) {
   const obj = Object.create(new.target.prototype);

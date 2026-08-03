@@ -1,6 +1,3 @@
-// === Module 11625: useGetGuildPowerupBannerImage ===
-
-// Module 11625 (useGetGuildPowerupBannerImage)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 
 const require = arg1;

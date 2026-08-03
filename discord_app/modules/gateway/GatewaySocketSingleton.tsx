@@ -1,6 +1,3 @@
-// === Module 12710: handleIdentify ===
-
-// Module 12710 (handleIdentify)
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
 import importDefaultResult from "awaitOnline";

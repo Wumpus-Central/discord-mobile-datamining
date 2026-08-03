@@ -1,6 +1,3 @@
-// === Module 15043: useMessagesSpecs ===
-
-// Module 15043 (useMessagesSpecs)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { DM_WIDTH } from "ME";

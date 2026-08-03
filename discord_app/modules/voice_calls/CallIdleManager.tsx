@@ -1,6 +1,3 @@
-// === Module 16164: disconnect ===
-
-// Module 16164 (disconnect)
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateVoiceState from "updateVoiceState";

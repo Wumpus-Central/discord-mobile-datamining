@@ -1,6 +1,3 @@
-// === Module 9362: EducationCoachmarkImg ===
-
-// Module 9362 (EducationCoachmarkImg)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

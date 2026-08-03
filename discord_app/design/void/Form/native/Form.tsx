@@ -1,6 +1,3 @@
-// === Module 5218: context ===
-
-// Module 5218 (context)
 import importAllResult from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

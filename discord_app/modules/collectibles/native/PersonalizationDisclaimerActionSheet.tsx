@@ -1,6 +1,3 @@
-// === Module 14645: PersonalizationDisclaimerActionSheet ===
-
-// Module 14645 (PersonalizationDisclaimerActionSheet)
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";

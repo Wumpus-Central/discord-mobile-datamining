@@ -1,6 +1,3 @@
-// === Module 7658: FormRadioRow ===
-
-// Module 7658 (FormRadioRow)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

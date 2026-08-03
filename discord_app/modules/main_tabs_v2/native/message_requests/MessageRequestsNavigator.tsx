@@ -1,6 +1,3 @@
-// === Module 15722: MessageRequestsNavigator ===
-
-// Module 15722 (MessageRequestsNavigator)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

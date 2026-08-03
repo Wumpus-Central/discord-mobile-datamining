@@ -1,6 +1,3 @@
-// === Module 13777: ? ===
-
-// Module 13777
 const PASSKEY_UPSELL_KEY = "PASSKEY_UPSELL_KEY";
 let result = require("addVersionedDismissedContent").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellActionCreators.tsx");
 

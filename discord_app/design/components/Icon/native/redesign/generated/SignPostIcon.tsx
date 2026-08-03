@@ -1,6 +1,3 @@
-// === Module 13001: SignPostIcon ===
-
-// Module 13001 (SignPostIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

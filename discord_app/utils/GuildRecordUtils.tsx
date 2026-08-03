@@ -1,6 +1,3 @@
-// === Module 1411: fromGuildPropertiesWithAdditionalFields ===
-
-// Module 1411 (fromGuildPropertiesWithAdditionalFields)
 import isValueEqual from "isValueEqual";
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";
 import { GuildNSFWContentLevel } from "ME";

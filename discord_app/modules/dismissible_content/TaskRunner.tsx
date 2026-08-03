@@ -1,6 +1,3 @@
-// === Module 1367: schedule ===
-
-// Module 1367 (schedule)
 const result = require("set").fileFinishedImporting("modules/dismissible_content/TaskRunner.tsx");
 class TaskRunner {
 }

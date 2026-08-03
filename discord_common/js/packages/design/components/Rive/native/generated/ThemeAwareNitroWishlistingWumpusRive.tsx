@@ -1,6 +1,3 @@
-// === Module 4000: ThemeAwareNitroWishlistingWumpusRive ===
-
-// Module 4000 (ThemeAwareNitroWishlistingWumpusRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

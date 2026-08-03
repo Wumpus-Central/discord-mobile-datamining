@@ -1,6 +1,3 @@
-// === Module 11997: useShouldShowMutualInfo ===
-
-// Module 11997 (useShouldShowMutualInfo)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

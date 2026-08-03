@@ -1,6 +1,3 @@
-// === Module 8188: generateHydrationId ===
-
-// Module 8188 (generateHydrationId)
 import reinjectEphemerals from "reinjectEphemerals";
 import scheduledEventSort from "scheduledEventSort";
 import { ThreadChannelRecord } from "createChannelRecord";

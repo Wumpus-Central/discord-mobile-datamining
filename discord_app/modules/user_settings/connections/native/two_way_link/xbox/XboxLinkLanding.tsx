@@ -1,6 +1,3 @@
-// === Module 8943: XboxLinkLanding ===
-
-// Module 8943 (XboxLinkLanding)
 import noop from "noop";
 import { XboxLinkModalScenes } from "XboxLinkModalScenes";
 import ME from "ME";

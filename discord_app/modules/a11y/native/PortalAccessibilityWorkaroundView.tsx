@@ -1,6 +1,3 @@
-// === Module 11742: PortalAccessibilityWorkaroundView ===
-
-// Module 11742 (PortalAccessibilityWorkaroundView)
 import "noop";
 import { View as _default } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

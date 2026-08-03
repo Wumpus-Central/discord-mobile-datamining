@@ -1,6 +1,3 @@
-// === Module 10522: PIP_GESTURE_ACTIVE_OFFSET ===
-
-// Module 10522 (PIP_GESTURE_ACTIVE_OFFSET)
 const result = require("set").fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
 
 export const PIP_GESTURE_ACTIVE_OFFSET = 2;

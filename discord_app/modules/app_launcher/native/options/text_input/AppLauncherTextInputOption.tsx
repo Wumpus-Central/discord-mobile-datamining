@@ -1,6 +1,3 @@
-// === Module 11363: AppLauncherTextInputOption ===
-
-// Module 11363 (AppLauncherTextInputOption)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "EMOJI_PICKER_ACTION_SHEET_KEY";

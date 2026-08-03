@@ -1,6 +1,3 @@
-// === Module 15020: HomeDrawerDMExpandedChildren ===
-
-// Module 15020 (HomeDrawerDMExpandedChildren)
 import MobileHomeDrawerExperiment from "MobileHomeDrawerExperiment";
 import { View } from "ChannelListLayoutTypes";
 import { isMultiUserDM } from "createChannelRecord";

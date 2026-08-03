@@ -1,6 +1,3 @@
-// === Module 11765: WelcomeChannelRow ===
-
-// Module 11765 (WelcomeChannelRow)
 import preload from "preload";
 import get_ActivityIndicator from "transitionTo";
 import getEmojiToGroupId from "getEmojiToGroupId";

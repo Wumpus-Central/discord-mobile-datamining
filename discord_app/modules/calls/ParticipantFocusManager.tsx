@@ -1,6 +1,3 @@
-// === Module 16322: handleFocusParticipant ===
-
-// Module 16322 (handleFocusParticipant)
 import createRTCConnection from "createRTCConnection";
 import getParticipants from "getParticipants";
 import "initialize";

@@ -1,6 +1,3 @@
-// === Module 6582: UploadIcon ===
-
-// Module 6582 (UploadIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

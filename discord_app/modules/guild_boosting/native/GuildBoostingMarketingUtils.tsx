@@ -1,6 +1,3 @@
-// === Module 11632: getIconForPerk ===
-
-// Module 11632 (getIconForPerk)
 const result = require("SoundboardIcon").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {

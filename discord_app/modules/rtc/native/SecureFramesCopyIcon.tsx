@@ -1,6 +1,3 @@
-// === Module 8918: SecureFramesCopyIcon ===
-
-// Module 8918 (SecureFramesCopyIcon)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

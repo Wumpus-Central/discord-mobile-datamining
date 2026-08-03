@@ -1,6 +1,3 @@
-// === Module 16031: VoicePanelLockedIcon ===
-
-// Module 16031 (VoicePanelLockedIcon)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

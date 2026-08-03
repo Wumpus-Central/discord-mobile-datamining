@@ -1,6 +1,3 @@
-// === Module 7875: XNeutralIcon ===
-
-// Module 7875 (XNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

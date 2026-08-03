@@ -1,6 +1,3 @@
-// === Module 16360: handlePushedModal ===
-
-// Module 16360 (handlePushedModal)
 import handleFormInit from "handleFormInit";
 import fetchFingerprint from "fetchFingerprint";
 import updateWithLatestInvite from "updateWithLatestInvite";

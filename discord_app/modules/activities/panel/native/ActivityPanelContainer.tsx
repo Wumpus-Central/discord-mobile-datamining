@@ -1,6 +1,3 @@
-// === Module 15854: ? ===
-
-// Module 15854
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import participantFromServer from "participantFromServer";

@@ -1,6 +1,3 @@
-// === Module 8226: useInterestedEventUsers ===
-
-// Module 8226 (useInterestedEventUsers)
 import { useMemo } from "noop";
 import scheduledEventSort from "scheduledEventSort";
 import { GuildScheduledEventUserResponses as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";

@@ -1,6 +1,3 @@
-// === Module 15619: AddFriendScreen ===
-
-// Module 15619 (AddFriendScreen)
 import _slicedToArray from "_slicedToArray";
 import module_13015 from "module_13015";
 import get_ActivityIndicator from "Text";

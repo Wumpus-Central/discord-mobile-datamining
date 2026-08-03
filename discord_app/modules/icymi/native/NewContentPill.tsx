@@ -1,6 +1,3 @@
-// === Module 15413: CutoutGuildIcon ===
-
-// Module 15413 (CutoutGuildIcon)
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
 import get_ActivityIndicator from "PressableBase";

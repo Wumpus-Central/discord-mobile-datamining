@@ -1,6 +1,3 @@
-// === Module 16376: ModerationIcon ===
-
-// Module 16376 (ModerationIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

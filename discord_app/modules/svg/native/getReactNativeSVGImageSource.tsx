@@ -1,6 +1,3 @@
-// === Module 12036: getReactNativeSVGImageSource ===
-
-// Module 12036 (getReactNativeSVGImageSource)
 const result = require("set").fileFinishedImporting("modules/svg/native/getReactNativeSVGImageSource.tsx");
 
 export default function getReactNativeSVGImageSource(arg0) {

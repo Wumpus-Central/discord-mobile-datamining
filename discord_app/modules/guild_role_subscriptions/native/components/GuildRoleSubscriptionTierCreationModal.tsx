@@ -1,6 +1,3 @@
-// === Module 16603: GuildRoleSubscriptionTierCreationModal ===
-
-// Module 16603 (GuildRoleSubscriptionTierCreationModal)
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

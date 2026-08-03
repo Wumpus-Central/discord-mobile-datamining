@@ -1,6 +1,3 @@
-// === Module 8840: _handleToggleVideo ===
-
-// Module 8840 (_handleToggleVideo)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import openChannelCallModal from "openChannelCallModal";

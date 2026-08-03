@@ -1,6 +1,3 @@
-// === Module 9785: WishlistItemCard ===
-
-// Module 9785 (WishlistItemCard)
 import "noop";
 import { SKUProductLines } from "ME";
 import { jsx } from "jsxProd";

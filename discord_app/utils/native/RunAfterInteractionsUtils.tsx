@@ -1,6 +1,3 @@
-// === Module 5639: runAfterInteractions ===
-
-// Module 5639 (runAfterInteractions)
 import { InteractionManager } from "get ActivityIndicator";
 
 function runAfterInteractions(arg0, MINUTE) {

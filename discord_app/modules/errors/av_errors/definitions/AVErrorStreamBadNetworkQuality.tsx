@@ -1,6 +1,3 @@
-// === Module 16704: AVErrorStreamBadNetworkQualityDefinition ===
-
-// Module 16704 (AVErrorStreamBadNetworkQualityDefinition)
 import initialize from "initialize";
 import { RTCConnectionQuality } from "ME";
 

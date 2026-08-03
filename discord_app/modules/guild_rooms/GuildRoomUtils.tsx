@@ -1,6 +1,3 @@
-// === Module 12833: serverGuildRoomObjectToClient ===
-
-// Module 12833 (serverGuildRoomObjectToClient)
 function serverGuildRoomObjectToClient(object_type) {
   if (object_type.object_type === require(12834) /* GuildRoomObjectTypes */.GuildRoomObjectTypes.PLANT) {
     let obj = { objectType: null };

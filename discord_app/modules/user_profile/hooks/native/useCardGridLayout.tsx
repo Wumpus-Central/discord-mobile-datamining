@@ -1,6 +1,3 @@
-// === Module 12206: useCardGridLayout ===
-
-// Module 12206 (useCardGridLayout)
 import { PROFILE_SIDE_PADDING } from "ARBITRARY_LARGE_OFFSET";
 
 let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");

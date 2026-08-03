@@ -1,6 +1,3 @@
-// === Module 11368: AppLauncherBooleanOption ===
-
-// Module 11368 (AppLauncherBooleanOption)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

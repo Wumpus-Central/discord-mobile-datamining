@@ -1,6 +1,3 @@
-// === Module 16671: initialize ===
-
-// Module 16671 (initialize)
 import { PersistedStore } from "initialize";
 
 const HOUR = require("set").Millis.HOUR;

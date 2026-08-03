@@ -1,6 +1,3 @@
-// === Module 9982: EmojiPickerRowButton ===
-
-// Module 9982 (EmojiPickerRowButton)
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 import { EMOJI_URL_BASE_SIZE } from "set";

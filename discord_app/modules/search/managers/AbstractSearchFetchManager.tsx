@@ -1,6 +1,3 @@
-// === Module 10125: cleanUp ===
-
-// Module 10125 (cleanUp)
 let result = require("set").fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");
 class AbstractSearchFetchManager {
   constructor() {

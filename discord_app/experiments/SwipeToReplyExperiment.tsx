@@ -1,6 +1,3 @@
-// === Module 10491: useIsMessageSwipeActionsEnabled ===
-
-// Module 10491 (useIsMessageSwipeActionsEnabled)
 import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
 
 const result = require("useIsSwipeToMemberListEnabled").fileFinishedImporting("experiments/SwipeToReplyExperiment.tsx");

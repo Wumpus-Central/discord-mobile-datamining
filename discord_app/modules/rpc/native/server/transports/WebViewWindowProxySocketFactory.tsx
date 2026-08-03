@@ -1,6 +1,3 @@
-// === Module 10648: logger ===
-
-// Module 10648 (logger)
 const result = require("set").fileFinishedImporting("modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx");
 
 export default function _default(logger) {

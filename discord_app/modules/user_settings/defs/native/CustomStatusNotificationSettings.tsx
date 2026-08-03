@@ -1,6 +1,3 @@
-// === Module 14467: onChange ===
-
-// Module 14467 (onChange)
 import { AnalyticEvents } from "ME";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 import createToggle from "createToggle";

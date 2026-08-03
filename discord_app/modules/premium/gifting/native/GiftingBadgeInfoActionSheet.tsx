@@ -1,6 +1,3 @@
-// === Module 9719: GiftingBadgeInfoActionSheet ===
-
-// Module 9719 (GiftingBadgeInfoActionSheet)
 import noop from "noop";
 import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,6 +1,3 @@
-// === Module 10333: NotificationSettingsMessageNotification ===
-
-// Module 10333 (NotificationSettingsMessageNotification)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

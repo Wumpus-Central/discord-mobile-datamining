@@ -1,6 +1,3 @@
-// === Module 1958: _preloadAllIntlMessageFiles ===
-
-// Module 1958 (_preloadAllIntlMessageFiles)
 import messagesProxy from "messagesProxy";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 5759: getJoinedAtDateFormatter ===
-
-// Module 5759 (getJoinedAtDateFormatter)
 function getJoinedAtDateFormatter() {
   return { seconds: require(1236) /* getSystemLocale */.t["FsBhl/"], minutes: require(1236) /* getSystemLocale */.t["4d1mgT"], hours: require(1236) /* getSystemLocale */.t["2wkczD"], days: require(1236) /* getSystemLocale */.t["ocdS+f"], months: require(1236) /* getSystemLocale */.t["az14+h"], years: require(1236) /* getSystemLocale */.t["5Gk1ns"] };
 }

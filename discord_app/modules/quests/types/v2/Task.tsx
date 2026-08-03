@@ -1,6 +1,3 @@
-// === Module 5998: _firstPartyTasksFromServer ===
-
-// Module 5998 (_firstPartyTasksFromServer)
 function _firstPartyTasksFromServer(tasks) {
   let obj = {};
   const keys = Object.keys(tasks);

@@ -1,6 +1,3 @@
-// === Module 11354: AppLauncherCommandOption ===
-
-// Module 11354 (AppLauncherCommandOption)
 import "CircleXIcon";
 import { View } from "AppLauncherChannelOption";
 import { AppLauncherOptionAutoFocusType as closure_4 } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";

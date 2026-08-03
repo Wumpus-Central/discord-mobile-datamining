@@ -1,6 +1,3 @@
-// === Module 10405: _toPropertyKey ===
-
-// Module 10405 (_toPropertyKey)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 

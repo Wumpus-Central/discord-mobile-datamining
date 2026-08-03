@@ -1,6 +1,3 @@
-// === Module 8993: CloseButton ===
-
-// Module 8993 (CloseButton)
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes";
 import { PlatformTypes } from "ME";

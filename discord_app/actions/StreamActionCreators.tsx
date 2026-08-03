@@ -1,6 +1,3 @@
-// === Module 4373: watchStream ===
-
-// Module 4373 (watchStream)
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
 import initialize from "initialize";

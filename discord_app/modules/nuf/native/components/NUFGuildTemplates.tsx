@@ -1,6 +1,3 @@
-// === Module 11811: onCreateGuild ===
-
-// Module 11811 (onCreateGuild)
 import GuildTemplateId from "GuildTemplateId";
 import CreationIntent from "CreationIntent";
 import { Keyboard } from "transitionTo";

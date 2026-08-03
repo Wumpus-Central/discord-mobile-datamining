@@ -1,6 +1,3 @@
-// === Module 7827: createGuildReportFalseAlarmSystemMessage ===
-
-// Module 7827 (createGuildReportFalseAlarmSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 10900: bountyCtaFromServer ===
-
-// Module 10900 (bountyCtaFromServer)
 const result = require("set").fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
 export const bountyCtaFromServer = function bountyCtaFromServer(url) {

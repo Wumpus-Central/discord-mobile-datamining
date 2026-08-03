@@ -1,6 +1,3 @@
-// === Module 13963: FamilyCenterLinkingBannerParentContent ===
-
-// Module 13963 (FamilyCenterLinkingBannerParentContent)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 7640: FormCTA ===
-
-// Module 7640 (FormCTA)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { Fonts } from "sum";

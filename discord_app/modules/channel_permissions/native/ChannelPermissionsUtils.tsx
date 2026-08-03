@@ -1,6 +1,3 @@
-// === Module 10932: openAddMembersActionSheet ===
-
-// Module 10932 (openAddMembersActionSheet)
 import { AnalyticEvents } from "ME";
 
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/channel_permissions/native/ChannelPermissionsUtils.tsx");

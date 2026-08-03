@@ -1,6 +1,3 @@
-// === Module 10062: TTIMeasurementView ===
-
-// Module 10062 (TTIMeasurementView)
 import importDefaultResult from "map";
 
 const obj = { componentName: "DCDTTIMeasurementView", componentFoundInstance: null };

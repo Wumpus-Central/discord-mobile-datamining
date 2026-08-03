@@ -1,6 +1,3 @@
-// === Module 6185: useMessageMaxLength ===
-
-// Module 6185 (useMessageMaxLength)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 7795: createGuildDiscoveryDisqualifiedSystemMessage ===
-
-// Module 7795 (createGuildDiscoveryDisqualifiedSystemMessage)
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");
 
 export const createGuildDiscoveryDisqualifiedSystemMessage = function createGuildDiscoveryDisqualifiedSystemMessage(message) {

@@ -1,6 +1,3 @@
-// === Module 15206: GuildPowerupsProgressBar ===
-
-// Module 15206 (GuildPowerupsProgressBar)
 import ChevronSmallRightIcon from "ChevronSmallRightIcon";
 import get_ActivityIndicator from "TwinButtons";
 import initialize from "initialize";

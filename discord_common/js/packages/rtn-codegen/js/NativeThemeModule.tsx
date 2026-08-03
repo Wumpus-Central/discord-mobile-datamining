@@ -1,6 +1,3 @@
-// === Module 13523: enforcing ===
-
-// Module 13523 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeThemeModule");

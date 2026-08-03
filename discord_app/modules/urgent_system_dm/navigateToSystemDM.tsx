@@ -1,6 +1,3 @@
-// === Module 16353: navigateToSystemDM ===
-
-// Module 16353 (navigateToSystemDM)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SYSTEM_USER } from "SYSTEM_USER";
 

@@ -1,6 +1,3 @@
-// === Module 9195: ConfirmEmailChangeStart ===
-
-// Module 9195 (ConfirmEmailChangeStart)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

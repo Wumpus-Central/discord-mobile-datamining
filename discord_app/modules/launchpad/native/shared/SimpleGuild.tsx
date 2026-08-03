@@ -1,6 +1,3 @@
-// === Module 15818: SimpleGuild ===
-
-// Module 15818 (SimpleGuild)
 import noop from "noop";
 import { View } from "module_15821";
 import { getGuildIconSource } from "GuildNSFWContentLevel";

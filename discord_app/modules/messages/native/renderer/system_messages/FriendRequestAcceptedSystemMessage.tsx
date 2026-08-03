@@ -1,6 +1,3 @@
-// === Module 7854: createFriendRequestAcceptedSystemMessage ===
-
-// Module 7854 (createFriendRequestAcceptedSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

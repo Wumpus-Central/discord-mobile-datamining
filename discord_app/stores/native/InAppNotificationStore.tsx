@@ -1,6 +1,3 @@
-// === Module 10257: handleAlertMessage ===
-
-// Module 10257 (handleAlertMessage)
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
 import computeAlertSettings from "computeAlertSettings";

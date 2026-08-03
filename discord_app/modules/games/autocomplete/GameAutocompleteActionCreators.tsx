@@ -1,6 +1,3 @@
-// === Module 6174: _fetchGameAutocomplete ===
-
-// Module 6174 (_fetchGameAutocomplete)
 import sendRequest from "sendRequest";
 import set from "set";
 import { Endpoints } from "ME";

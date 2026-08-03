@@ -1,6 +1,3 @@
-// === Module 12805: handleChannelSelect ===
-
-// Module 12805 (handleChannelSelect)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import upsertRelationship from "upsertRelationship";

@@ -1,6 +1,3 @@
-// === Module 15464: showMembersManagementActionSheet ===
-
-// Module 15464 (showMembersManagementActionSheet)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

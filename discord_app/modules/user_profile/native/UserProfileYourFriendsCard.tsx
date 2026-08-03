@@ -1,6 +1,3 @@
-// === Module 15658: UserProfileYourFriendsCard ===
-
-// Module 15658 (UserProfileYourFriendsCard)
 import _slicedToArray from "_slicedToArray";
 import ChevronSmallRightIcon from "ChevronSmallRightIcon";
 import { View } from "getSystemLocale";

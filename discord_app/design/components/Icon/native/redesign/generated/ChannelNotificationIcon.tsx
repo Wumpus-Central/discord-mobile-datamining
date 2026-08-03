@@ -1,6 +1,3 @@
-// === Module 10244: ChannelNotificationIcon ===
-
-// Module 10244 (ChannelNotificationIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

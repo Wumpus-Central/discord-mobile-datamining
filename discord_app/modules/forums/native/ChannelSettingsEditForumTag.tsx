@@ -1,6 +1,3 @@
-// === Module 15704: ChannelSettingsEditForumTag ===
-
-// Module 15704 (ChannelSettingsEditForumTag)
 import _slicedToArray from "_slicedToArray";
 import EMOJI_PICKER_ACTION_SHEET_KEY from "EMOJI_PICKER_ACTION_SHEET_KEY";
 import { View } from "TableRowInner";

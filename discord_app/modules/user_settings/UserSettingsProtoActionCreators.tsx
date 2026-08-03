@@ -1,6 +1,3 @@
-// === Module 1355: updateUserGuildSettings ===
-
-// Module 1355 (updateUserGuildSettings)
 import importDefaultResult from "timestamp";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import MAX_FAVORITES from "MAX_FAVORITES";

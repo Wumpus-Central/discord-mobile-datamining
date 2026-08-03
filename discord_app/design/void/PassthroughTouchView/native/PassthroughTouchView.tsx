@@ -1,6 +1,3 @@
-// === Module 13180: PassthroughTouchView ===
-
-// Module 13180 (PassthroughTouchView)
 import "noop";
 import { jsx } from "jsxProd";
 

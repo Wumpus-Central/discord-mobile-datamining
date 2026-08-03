@@ -1,6 +1,3 @@
-// === Module 7893: apexExperiment ===
-
-// Module 7893 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-social-layer-storefront-mobile-purchasing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,6 +1,3 @@
-// === Module 5188: getEmoji ===
-
-// Module 5188 (getEmoji)
 import { EmojiDisambiguations } from "getEmojiToGroupId";
 
 function getEmoji(guildId) {

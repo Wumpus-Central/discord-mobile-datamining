@@ -1,6 +1,3 @@
-// === Module 7299: NitroDiamondBadgeLargeBadge ===
-
-// Module 7299 (NitroDiamondBadgeLargeBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/NitroDiamondBadgeLargeBadge.native.tsx");

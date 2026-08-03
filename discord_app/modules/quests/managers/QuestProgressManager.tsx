@@ -1,6 +1,3 @@
-// === Module 16750: isQuestProgressable ===
-
-// Module 16750 (isQuestProgressable)
 import reset from "reset";
 import "_slicedToArray";
 import participantFromServer from "participantFromServer";

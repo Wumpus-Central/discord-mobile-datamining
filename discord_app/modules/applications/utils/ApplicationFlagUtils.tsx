@@ -1,6 +1,3 @@
-// === Module 5696: getApplicationFlags ===
-
-// Module 5696 (getApplicationFlags)
 import createExecutable from "createExecutable";
 
 function getApplicationFlags(application) {

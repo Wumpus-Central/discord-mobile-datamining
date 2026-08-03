@@ -1,6 +1,3 @@
-// === Module 12066: UserCheckIcon ===
-
-// Module 12066 (UserCheckIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 10735: participantMemberInfo ===
-
-// Module 10735 (participantMemberInfo)
 const require = arg1;
 const DAY = require("set").Millis.DAY;
 const result = require("getSystemLocale").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");

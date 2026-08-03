@@ -1,6 +1,3 @@
-// === Module 16398: withEqualityFn ===
-
-// Module 16398 (withEqualityFn)
 import _slicedToArray from "_slicedToArray";
 import closure_3 from "identity";
 import noop from "noop";

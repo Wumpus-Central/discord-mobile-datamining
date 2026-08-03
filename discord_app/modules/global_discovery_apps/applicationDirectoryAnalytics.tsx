@@ -1,6 +1,3 @@
-// === Module 5981: trackAppDirectoryProfileEmbed ===
-
-// Module 5981 (trackAppDirectoryProfileEmbed)
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_3 from "handleConnectionOpen";
 import { AnalyticEvents } from "ME";

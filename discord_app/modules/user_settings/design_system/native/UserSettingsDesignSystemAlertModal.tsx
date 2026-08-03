@@ -1,6 +1,3 @@
-// === Module 14585: DemoModal ===
-
-// Module 14585 (DemoModal)
 import useAlertStore from "useAlertStore";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

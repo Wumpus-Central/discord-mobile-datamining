@@ -1,6 +1,3 @@
-// === Module 5725: result ===
-
-// Module 5725 (result)
 import importDefaultResult from "fetchFingerprint";
 import encodeProperties from "encodeProperties";
 

@@ -1,6 +1,3 @@
-// === Module 1847: useSystemKeyboardHeight ===
-
-// Module 1847 (useSystemKeyboardHeight)
 let closure_3 = { excludeSafeAreaInsets: false };
 const result = require("set").fileFinishedImporting("modules/keyboard/native/useSystemKeyboardHeight.native.tsx");
 

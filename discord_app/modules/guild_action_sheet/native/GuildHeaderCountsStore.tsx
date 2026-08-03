@@ -1,6 +1,3 @@
-// === Module 13129: initialize ===
-
-// Module 13129 (initialize)
 import getMemberListId from "getMemberListId";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";

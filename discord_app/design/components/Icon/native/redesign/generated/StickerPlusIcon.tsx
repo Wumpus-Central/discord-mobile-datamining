@@ -1,6 +1,3 @@
-// === Module 16438: StickerPlusIcon ===
-
-// Module 16438 (StickerPlusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

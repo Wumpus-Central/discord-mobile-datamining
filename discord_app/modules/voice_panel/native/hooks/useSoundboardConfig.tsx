@@ -1,6 +1,3 @@
-// === Module 16042: useSoundboardConfig ===
-
-// Module 16042 (useSoundboardConfig)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 

@@ -1,6 +1,3 @@
-// === Module 14206: QuestOrbMultiplierPerkPill ===
-
-// Module 14206 (QuestOrbMultiplierPerkPill)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import jsxProd from "jsxProd";

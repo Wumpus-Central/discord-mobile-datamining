@@ -1,6 +1,3 @@
-// === Module 11551: openAcceptMessageRequestConfirmModal ===
-
-// Module 11551 (openAcceptMessageRequestConfirmModal)
 import { MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL as closure_3 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL";
 import { AnalyticEvents } from "ME";
 

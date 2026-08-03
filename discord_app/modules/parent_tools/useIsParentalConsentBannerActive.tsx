@@ -1,6 +1,3 @@
-// === Module 13915: useIsParentalConsentBannerActive ===
-
-// Module 13915 (useIsParentalConsentBannerActive)
 const result = require("set").fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 
 export const useIsParentalConsentBannerActive = function useIsParentalConsentBannerActive() {

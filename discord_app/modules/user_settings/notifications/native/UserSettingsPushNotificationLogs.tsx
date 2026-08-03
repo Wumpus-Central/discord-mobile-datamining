@@ -1,6 +1,3 @@
-// === Module 14548: UserSettingsPushNotificationLogs ===
-
-// Module 14548 (UserSettingsPushNotificationLogs)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";

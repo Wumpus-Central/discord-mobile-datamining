@@ -1,6 +1,3 @@
-// === Module 8908: useReadableSecureFramesFingerprint ===
-
-// Module 8908 (useReadableSecureFramesFingerprint)
 import noop from "noop";
 
 const require = arg1;

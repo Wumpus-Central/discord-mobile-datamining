@@ -1,6 +1,3 @@
-// === Module 16436: ? ===
-
-// Module 16436
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import ReactionIcon from "ReactionIcon";
 import importAllResult from "getStickerExtensionFromFormatType";

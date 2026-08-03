@@ -1,6 +1,3 @@
-// === Module 16763: NativeReactAssetModule ===
-
-// Module 16763 (NativeReactAssetModule)
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";
 import set from "enforcing";

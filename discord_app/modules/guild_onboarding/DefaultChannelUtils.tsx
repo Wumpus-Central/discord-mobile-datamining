@@ -1,6 +1,3 @@
-// === Module 5121: useCanChannelBeDefault ===
-
-// Module 5121 (useCanChannelBeDefault)
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";

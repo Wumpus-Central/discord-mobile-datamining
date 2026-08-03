@@ -1,6 +1,3 @@
-// === Module 14991: FavoritesGuildCoachmarkGraphic ===
-
-// Module 14991 (FavoritesGuildCoachmarkGraphic)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

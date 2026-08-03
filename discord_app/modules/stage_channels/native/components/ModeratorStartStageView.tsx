@@ -1,6 +1,3 @@
-// === Module 10694: ModeratorStartStageView ===
-
-// Module 10694 (ModeratorStartStageView)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

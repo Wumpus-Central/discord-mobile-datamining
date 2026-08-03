@@ -1,6 +1,3 @@
-// === Module 1915: open ===
-
-// Module 1915 (open)
 import set from "set";
 
 const require = arg1;

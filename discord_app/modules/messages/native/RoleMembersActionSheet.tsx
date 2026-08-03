@@ -1,6 +1,3 @@
-// === Module 10920: RoleMembersActionSheet ===
-
-// Module 10920 (RoleMembersActionSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

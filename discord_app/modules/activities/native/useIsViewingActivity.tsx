@@ -1,6 +1,3 @@
-// === Module 10539: useIsViewingActivity ===
-
-// Module 10539 (useIsViewingActivity)
 import getParticipants from "getParticipants";
 
 const require = arg1;

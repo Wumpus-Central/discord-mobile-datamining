@@ -1,6 +1,3 @@
-// === Module 12719: set ===
-
-// Module 12719 (set)
 import _slicedToArray from "_slicedToArray";
 import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DISPATCHER_STANDARD_TIMEOUT_MS";
 import set from "timestamp";

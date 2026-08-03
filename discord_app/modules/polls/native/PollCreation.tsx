@@ -1,6 +1,3 @@
-// === Module 11386: UnsavedChangesAlertModal ===
-
-// Module 11386 (UnsavedChangesAlertModal)
 import importAllResult from "trackImpression";
 import get_ActivityIndicator from "TableRowInner";
 import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER";

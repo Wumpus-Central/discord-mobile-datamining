@@ -1,6 +1,3 @@
-// === Module 10206: useShowUnlinkChannelAlert ===
-
-// Module 10206 (useShowUnlinkChannelAlert)
 import componentDidMount from "componentDidMount";
 import noop from "noop";
 

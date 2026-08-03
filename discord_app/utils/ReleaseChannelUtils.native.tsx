@@ -1,6 +1,3 @@
-// === Module 5871: isStable ===
-
-// Module 5871 (isStable)
 import set from "set";
 import set from "set";
 

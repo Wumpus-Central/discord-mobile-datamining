@@ -1,6 +1,3 @@
-// === Module 13182: STANDARD_EASING ===
-
-// Module 13182 (STANDARD_EASING)
 import { Easing } from "module_4054";
 import { Easing as Easing2 } from "module_4054";
 import bezierResult1 from "module_4054";

@@ -1,6 +1,3 @@
-// === Module 16130: CaptchaManager ===
-
-// Module 16130 (CaptchaManager)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import _getSystemLocale from "_getSystemLocale";

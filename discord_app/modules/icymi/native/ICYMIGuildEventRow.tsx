@@ -1,6 +1,3 @@
-// === Module 15408: ICYMIGuildEventRow ===
-
-// Module 15408 (ICYMIGuildEventRow)
 import DISCORD_EPOCH from "DISCORD_EPOCH";
 import get_ActivityIndicator from "useGuildScheduledEventUserCount";
 import scheduledEventSort from "scheduledEventSort";

@@ -1,6 +1,3 @@
-// === Module 10131: useIsSwipeToMemberListEnabled ===
-
-// Module 10131 (useIsSwipeToMemberListEnabled)
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
 
 export const useIsSwipeToMemberListEnabled = function useIsSwipeToMemberListEnabled() {

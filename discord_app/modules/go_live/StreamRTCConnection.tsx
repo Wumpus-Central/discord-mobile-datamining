@@ -1,6 +1,3 @@
-// === Module 4282: isOwner ===
-
-// Module 4282 (isOwner)
 import _migrateDefaultStorage from "_migrateDefaultStorage";
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo";
 import ApplicationStreamPresets from "ApplicationStreamPresets";

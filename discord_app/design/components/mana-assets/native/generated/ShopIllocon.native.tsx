@@ -1,6 +1,3 @@
-// === Module 7493: ShopIllocon ===
-
-// Module 7493 (ShopIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ShopIllocon.native.tsx");

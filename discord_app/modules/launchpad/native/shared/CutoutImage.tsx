@@ -1,6 +1,3 @@
-// === Module 15821: ? ===
-
-// Module 15821
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { Image } from "get ActivityIndicator";

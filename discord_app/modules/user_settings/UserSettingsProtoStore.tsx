@@ -1,6 +1,3 @@
-// === Module 1340: handleConnectionClosedOrResumed ===
-
-// Module 1340 (handleConnectionClosedOrResumed)
 import MAX_FAVORITES from "MAX_FAVORITES";
 import { PreloadedUserSettings } from "create";
 import { FrecencyUserSettings } from "create";

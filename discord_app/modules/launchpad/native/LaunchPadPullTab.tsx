@@ -1,6 +1,3 @@
-// === Module 15814: LAUNCH_PAD_PULL_TAB_BORDER_RADIUS ===
-
-// Module 15814 (LAUNCH_PAD_PULL_TAB_BORDER_RADIUS)
 import { Pressable } from "get ActivityIndicator";
 import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";
 import { CHAT_INPUT_HEIGHT } from "TextAreaCta";

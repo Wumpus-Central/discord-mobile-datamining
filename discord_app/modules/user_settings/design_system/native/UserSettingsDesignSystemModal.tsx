@@ -1,6 +1,3 @@
-// === Module 14609: DemoModal ===
-
-// Module 14609 (DemoModal)
 import _slicedToArray from "_slicedToArray";
 import ModalDisclaimer from "ModalDisclaimer";
 import get_ActivityIndicator from "Text";

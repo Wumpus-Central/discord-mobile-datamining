@@ -1,6 +1,3 @@
-// === Module 13795: useIs2FAEnabled ===
-
-// Module 13795 (useIs2FAEnabled)
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

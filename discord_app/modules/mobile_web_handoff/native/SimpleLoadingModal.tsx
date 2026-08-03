@@ -1,6 +1,3 @@
-// === Module 11829: showSimpleLoadingModal ===
-
-// Module 11829 (showSimpleLoadingModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModal.tsx");
 
 export const showSimpleLoadingModal = function showSimpleLoadingModal(closure_4, arg1) {

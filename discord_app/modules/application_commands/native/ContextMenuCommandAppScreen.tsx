@@ -1,6 +1,3 @@
-// === Module 15719: ContextMenuCommandAppScreen ===
-
-// Module 15719 (ContextMenuCommandAppScreen)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

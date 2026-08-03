@@ -1,6 +1,3 @@
-// === Module 9622: GIFPickerResultsList ===
-
-// Module 9622 (GIFPickerResultsList)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

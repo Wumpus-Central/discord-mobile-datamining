@@ -1,6 +1,3 @@
-// === Module 5004: checkIdleAFK ===
-
-// Module 5004 (checkIdleAFK)
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
 import { SpeakingFlags } from "DesktopSources";

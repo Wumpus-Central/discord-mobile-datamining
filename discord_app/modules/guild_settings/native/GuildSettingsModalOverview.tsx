@@ -1,6 +1,3 @@
-// === Module 16387: componentDidMount ===
-
-// Module 16387 (componentDidMount)
 import { isGuildOwnerWithRequiredMfaLevel as closure_3 } from "GuildNSFWContentLevel";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

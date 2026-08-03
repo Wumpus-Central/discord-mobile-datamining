@@ -1,6 +1,3 @@
-// === Module 10761: getApplicationStreamPresetValues ===
-
-// Module 10761 (getApplicationStreamPresetValues)
 import RESOLUTION_720 from "RESOLUTION_720";
 
 let c3;

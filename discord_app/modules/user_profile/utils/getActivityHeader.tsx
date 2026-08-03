@@ -1,6 +1,3 @@
-// === Module 12019: getActivityHeader ===
-
-// Module 12019 (getActivityHeader)
 import ME from "ME";
 
 let c3;

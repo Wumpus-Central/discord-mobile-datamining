@@ -1,6 +1,3 @@
-// === Module 15405: ICYMILoadingItem ===
-
-// Module 15405 (ICYMILoadingItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

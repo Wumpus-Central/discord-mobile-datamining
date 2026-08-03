@@ -1,6 +1,3 @@
-// === Module 7988: maybeFetchUserProfile ===
-
-// Module 7988 (maybeFetchUserProfile)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

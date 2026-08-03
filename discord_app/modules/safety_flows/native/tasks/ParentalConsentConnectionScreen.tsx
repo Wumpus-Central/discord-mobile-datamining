@@ -1,6 +1,3 @@
-// === Module 16741: ParentalConsentConnectionScreen ===
-
-// Module 16741 (ParentalConsentConnectionScreen)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import PendingRequestRow from "PendingRequestRow";
 import useDerivedPendingRequests from "useDerivedPendingRequests";

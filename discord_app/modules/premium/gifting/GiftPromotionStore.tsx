@@ -1,6 +1,3 @@
-// === Module 6302: initialize ===
-
-// Module 6302 (initialize)
 import { PersistedStore } from "initialize";
 
 let closure_0 = { giftOptionsReceiptMap: {} };

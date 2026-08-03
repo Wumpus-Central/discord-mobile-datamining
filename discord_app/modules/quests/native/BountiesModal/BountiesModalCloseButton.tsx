@@ -1,6 +1,3 @@
-// === Module 14100: BountiesModalCloseButton ===
-
-// Module 14100 (BountiesModalCloseButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

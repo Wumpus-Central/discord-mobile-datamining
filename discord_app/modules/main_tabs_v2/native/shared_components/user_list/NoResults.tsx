@@ -1,6 +1,3 @@
-// === Module 9928: NoResults ===
-
-// Module 9928 (NoResults)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

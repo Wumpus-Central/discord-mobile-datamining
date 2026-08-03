@@ -1,6 +1,3 @@
-// === Module 9789: SocialLayerStorefrontWishlistItemCard ===
-
-// Module 9789 (SocialLayerStorefrontWishlistItemCard)
 import noop from "noop";
 import addApplication from "addApplication";
 import initialize from "initialize";

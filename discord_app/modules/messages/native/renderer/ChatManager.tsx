@@ -1,6 +1,3 @@
-// === Module 9318: getPreviousMessages ===
-
-// Module 9318 (getPreviousMessages)
 import Changeset from "Changeset";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 16630: MemberPreviews ===
-
-// Module 16630 (MemberPreviews)
 import _slicedToArray from "_slicedToArray";
 import Header from "Header";
 import { View } from "pickImage";

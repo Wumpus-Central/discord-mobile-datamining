@@ -1,6 +1,3 @@
-// === Module 11587: fetchGameServerCatalog ===
-
-// Module 11587 (fetchGameServerCatalog)
 import _getSystemLocale from "_getSystemLocale";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleGameServerUpsert from "handleGameServerUpsert";

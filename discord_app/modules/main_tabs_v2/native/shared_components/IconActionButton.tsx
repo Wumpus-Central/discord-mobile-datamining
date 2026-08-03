@@ -1,6 +1,3 @@
-// === Module 10138: ButtonBadge ===
-
-// Module 10138 (ButtonBadge)
 import importAllResult from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

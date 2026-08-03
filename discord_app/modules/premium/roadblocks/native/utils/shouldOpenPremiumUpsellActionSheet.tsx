@@ -1,6 +1,3 @@
-// === Module 6201: maybeOpenPremiumUpsellActionSheet ===
-
-// Module 6201 (maybeOpenPremiumUpsellActionSheet)
 const result = require("EntitlementFeatureNames").fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
 
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {

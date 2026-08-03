@@ -1,6 +1,3 @@
-// === Module 11104: AppealIngestionActivitySummary ===
-
-// Module 11104 (AppealIngestionActivitySummary)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

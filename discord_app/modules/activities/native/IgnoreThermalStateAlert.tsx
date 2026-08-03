@@ -1,6 +1,3 @@
-// === Module 10551: IgnoreThermalStateAlert ===
-
-// Module 10551 (IgnoreThermalStateAlert)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

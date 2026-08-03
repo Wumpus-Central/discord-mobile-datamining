@@ -1,6 +1,3 @@
-// === Module 1843: ? ===
-
-// Module 1843
 const require = arg1;
 let obj = {
   channelSafeAreaBottomLayoutHeightChanged(arg0) {

@@ -1,6 +1,3 @@
-// === Module 15580: useAutoTrackSearchTabCountsViewedAnalytics ===
-
-// Module 15580 (useAutoTrackSearchTabCountsViewedAnalytics)
 import noop from "noop";
 import { SearchTabs } from "MessageEmbedTypes";
 

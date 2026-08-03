@@ -1,6 +1,3 @@
-// === Module 4735: openImagePickerUnhandled ===
-
-// Module 4735 (openImagePickerUnhandled)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import get_ActivityIndicator from "cancel";

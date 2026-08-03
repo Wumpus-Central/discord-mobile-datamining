@@ -1,6 +1,3 @@
-// === Module 10359: handleClose ===
-
-// Module 10359 (handleClose)
 import zustandStore from "zustandStore";
 import PressableBase from "PressableBase";
 import uriScheme from "uriScheme";

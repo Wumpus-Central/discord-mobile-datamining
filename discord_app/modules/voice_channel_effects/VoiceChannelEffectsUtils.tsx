@@ -1,6 +1,3 @@
-// === Module 10586: VoiceChannelEffectAnimationType ===
-
-// Module 10586 (VoiceChannelEffectAnimationType)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import VoiceChannelEffectAnimationType from "VoiceChannelEffectAnimationType";
 import importDefaultResult from "module_10598";

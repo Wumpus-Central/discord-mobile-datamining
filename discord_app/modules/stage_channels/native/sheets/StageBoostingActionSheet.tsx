@@ -1,6 +1,3 @@
-// === Module 5023: StageBoostingActionSheet ===
-
-// Module 5023 (StageBoostingActionSheet)
 import "PromoSheet";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 5926: findOrCreateMessageRecord ===
-
-// Module 5926 (findOrCreateMessageRecord)
 import hasFlag from "hasFlag";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

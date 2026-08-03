@@ -1,6 +1,3 @@
-// === Module 14881: ChooseAccount ===
-
-// Module 14881 (ChooseAccount)
 import closure_4 from "ME";
 import "Text";
 import { View } from "showSimpleActionSheet";

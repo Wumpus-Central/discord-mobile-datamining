@@ -1,6 +1,3 @@
-// === Module 6149: items ===
-
-// Module 6149 (items)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import getUserAgnosticState from "getUserAgnosticState";
 import fetchFingerprint from "fetchFingerprint";

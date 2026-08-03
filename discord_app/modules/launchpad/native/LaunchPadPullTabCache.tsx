@@ -1,6 +1,3 @@
-// === Module 15810: setLaunchPadPullTabExclusionRect ===
-
-// Module 15810 (setLaunchPadPullTabExclusionRect)
 import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";
 
 let c3;

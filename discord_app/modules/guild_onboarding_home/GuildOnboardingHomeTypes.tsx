@@ -1,6 +1,3 @@
-// === Module 11453: newMemberActionFromServer ===
-
-// Module 11453 (newMemberActionFromServer)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 

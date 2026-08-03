@@ -1,6 +1,3 @@
-// === Module 3856: getClient ===
-
-// Module 3856 (getClient)
 import ME from "ME";
 import set from "set";
 import { Store } from "initialize";

@@ -1,6 +1,3 @@
-// === Module 13194: MenuItem ===
-
-// Module 13194 (MenuItem)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

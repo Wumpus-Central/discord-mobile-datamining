@@ -1,6 +1,3 @@
-// === Module 12753: guildId ===
-
-// Module 12753 (guildId)
 import initialize from "initialize";
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";

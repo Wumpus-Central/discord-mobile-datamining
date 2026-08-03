@@ -1,6 +1,3 @@
-// === Module 11078: logVoiceMessagePlaybackStarted ===
-
-// Module 11078 (logVoiceMessagePlaybackStarted)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/voice_messages/VoiceMessageAnalytics.tsx");

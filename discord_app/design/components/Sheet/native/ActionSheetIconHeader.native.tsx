@@ -1,6 +1,3 @@
-// === Module 10387: ActionSheetIconHeader ===
-
-// Module 10387 (ActionSheetIconHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

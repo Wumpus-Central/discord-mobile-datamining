@@ -1,6 +1,3 @@
-// === Module 5838: fromServer ===
-
-// Module 5838 (fromServer)
 let prototype;
 prototype = function FeedBlockRecord(arg0) {
   const obj = Object.create(new.target.prototype);

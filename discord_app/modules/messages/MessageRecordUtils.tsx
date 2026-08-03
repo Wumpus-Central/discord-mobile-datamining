@@ -1,6 +1,3 @@
-// === Module 4413: createMinimalMessageRecord ===
-
-// Module 4413 (createMinimalMessageRecord)
 import createFromServer from "createFromServer";
 import hasFlag from "hasFlag";
 import closure_6 from "hasFlag";

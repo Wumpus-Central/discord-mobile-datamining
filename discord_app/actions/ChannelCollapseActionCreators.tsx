@@ -1,6 +1,3 @@
-// === Module 10246: ? ===
-
-// Module 10246
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 
 let result = require("handleConnectionOpen").fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");

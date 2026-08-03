@@ -1,6 +1,3 @@
-// === Module 5565: sortRolesByVerification ===
-
-// Module 5565 (sortRolesByVerification)
 const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileRoleUtils.tsx");
 
 export const sortRolesByVerification = function sortRolesByVerification(tags, tags2) {

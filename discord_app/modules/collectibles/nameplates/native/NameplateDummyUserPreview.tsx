@@ -1,6 +1,3 @@
-// === Module 8073: NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG ===
-
-// Module 8073 (NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG)
 import "noop";
 import { View } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";

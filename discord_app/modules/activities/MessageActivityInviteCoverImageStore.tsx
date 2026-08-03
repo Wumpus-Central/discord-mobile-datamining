@@ -1,6 +1,3 @@
-// === Module 12402: getCoverImageURL ===
-
-// Module 12402 (getCoverImageURL)
 import { Store } from "initialize";
 
 let c0 = new require("priv")({ max: 500 });

@@ -1,6 +1,3 @@
-// === Module 15563: MessageContent ===
-
-// Module 15563 (MessageContent)
 import importAllResult from "useNullableMessageAuthor";
 import { View } from "nameFromUser";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

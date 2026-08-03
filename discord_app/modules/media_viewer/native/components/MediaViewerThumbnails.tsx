@@ -1,6 +1,3 @@
-// === Module 12322: ObscuredView ===
-
-// Module 12322 (ObscuredView)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

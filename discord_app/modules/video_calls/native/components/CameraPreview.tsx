@@ -1,6 +1,3 @@
-// === Module 10531: CameraPreview ===
-
-// Module 10531 (CameraPreview)
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert";
 import useRevealProviderValue from "useRevealProviderValue";
 import get_ActivityIndicator from "initialize";

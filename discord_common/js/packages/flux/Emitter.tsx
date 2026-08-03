@@ -1,6 +1,3 @@
-// === Module 593: logger ===
-
-// Module 593 (logger)
 import set from "set";
 
 const logger = new require("log").Logger("Flux");

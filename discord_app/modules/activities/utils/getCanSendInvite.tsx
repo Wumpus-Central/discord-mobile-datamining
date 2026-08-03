@@ -1,6 +1,3 @@
-// === Module 12397: getCanSendInvite ===
-
-// Module 12397 (getCanSendInvite)
 import ME from "ME";
 
 let c3;

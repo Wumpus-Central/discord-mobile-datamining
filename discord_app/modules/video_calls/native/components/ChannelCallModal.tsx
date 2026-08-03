@@ -1,6 +1,3 @@
-// === Module 10521: ChannelCallCameraPreview ===
-
-// Module 10521 (ChannelCallCameraPreview)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "initialize";
 import getParticipants from "getParticipants";

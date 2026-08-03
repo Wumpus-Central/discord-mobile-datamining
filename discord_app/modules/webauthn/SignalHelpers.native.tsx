@@ -1,6 +1,3 @@
-// === Module 5650: signalAllAcceptedCredentials ===
-
-// Module 5650 (signalAllAcceptedCredentials)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 

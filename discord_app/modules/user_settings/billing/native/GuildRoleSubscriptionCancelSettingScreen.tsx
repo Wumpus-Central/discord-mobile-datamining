@@ -1,6 +1,3 @@
-// === Module 14261: GuildRoleSubscriptionCancelSettingScreen ===
-
-// Module 14261 (GuildRoleSubscriptionCancelSettingScreen)
 import "noop";
 import { jsx } from "jsxProd";
 

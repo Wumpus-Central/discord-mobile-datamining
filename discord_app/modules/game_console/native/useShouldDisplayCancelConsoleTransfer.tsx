@@ -1,6 +1,3 @@
-// === Module 16018: useShouldDisplayCancelConsoleTransfer ===
-
-// Module 16018 (useShouldDisplayCancelConsoleTransfer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

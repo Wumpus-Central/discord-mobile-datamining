@@ -1,6 +1,3 @@
-// === Module 4225: gameFromServer ===
-
-// Module 4225 (gameFromServer)
 import createExecutable from "createExecutable";
 import { createExecutable } from "createExecutable";
 import { AnalyticEvents } from "ME";

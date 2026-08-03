@@ -1,6 +1,3 @@
-// === Module 5046: settingsPathToRoute ===
-
-// Module 5046 (settingsPathToRoute)
 import _slicedToArray from "_slicedToArray";
 import { UserSettingsPath } from "MAX_FAVORITES";
 import ME from "ME";

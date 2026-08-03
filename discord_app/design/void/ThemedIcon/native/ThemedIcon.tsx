@@ -1,6 +1,3 @@
-// === Module 13160: ThemedIcon ===
-
-// Module 13160 (ThemedIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

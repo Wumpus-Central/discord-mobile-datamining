@@ -1,6 +1,3 @@
-// === Module 14010: trackEmptyStateCardClicked ===
-
-// Module 14010 (trackEmptyStateCardClicked)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsTracking.tsx");

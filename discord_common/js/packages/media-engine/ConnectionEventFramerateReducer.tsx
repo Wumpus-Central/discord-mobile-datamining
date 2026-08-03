@@ -1,6 +1,3 @@
-// === Module 4304: logger ===
-
-// Module 4304 (logger)
 import DesktopSources from "DesktopSources";
 
 let c3;

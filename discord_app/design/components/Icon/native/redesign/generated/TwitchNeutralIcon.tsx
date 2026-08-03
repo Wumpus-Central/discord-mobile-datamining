@@ -1,6 +1,3 @@
-// === Module 11953: TwitchNeutralIcon ===
-
-// Module 11953 (TwitchNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

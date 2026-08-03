@@ -1,6 +1,3 @@
-// === Module 11982: openEditCustomStatusModal ===
-
-// Module 11982 (openEditCustomStatusModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/custom_status/native/CustomStatusUtils.tsx");
 
 export const openEditCustomStatusModal = function openEditCustomStatusModal(arg0) {

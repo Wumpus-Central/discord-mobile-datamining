@@ -1,6 +1,3 @@
-// === Module 9897: handleChannelDelete ===
-
-// Module 9897 (handleChannelDelete)
 import _getSystemLocale from "_getSystemLocale";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

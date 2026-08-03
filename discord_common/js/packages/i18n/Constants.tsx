@@ -1,6 +1,3 @@
-// === Module 16116: FORMAT_RE ===
-
-// Module 16116 (FORMAT_RE)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/Constants.tsx");
 
 export const FORMAT_RE = /\{.+?\}/;

@@ -1,6 +1,3 @@
-// === Module 12972: getWmfCpuEncodeIntel ===
-
-// Module 12972 (getWmfCpuEncodeIntel)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

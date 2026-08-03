@@ -1,6 +1,3 @@
-// === Module 9613: useFavoriteGIFs ===
-
-// Module 9613 (useFavoriteGIFs)
 import noop from "noop";
 
 const require = arg1;

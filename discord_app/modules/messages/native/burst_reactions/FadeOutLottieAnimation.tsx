@@ -1,6 +1,3 @@
-// === Module 6142: FadeOutLottieAnimation ===
-
-// Module 6142 (FadeOutLottieAnimation)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

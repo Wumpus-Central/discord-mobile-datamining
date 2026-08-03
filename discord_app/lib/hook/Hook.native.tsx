@@ -1,6 +1,3 @@
-// === Module 12913: isHookModuleTooOld ===
-
-// Module 12913 (isHookModuleTooOld)
 const result = require("set").fileFinishedImporting("lib/hook/Hook.native.tsx");
 
 export function isHookModuleTooOld() {

@@ -1,6 +1,3 @@
-// === Module 13715: SuggestedColors ===
-
-// Module 13715 (SuggestedColors)
 import _slicedToArray from "_slicedToArray";
 import HSVColorPicker from "HSVColorPicker";
 import { View } from "TextInput";

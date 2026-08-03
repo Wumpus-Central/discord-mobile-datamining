@@ -1,6 +1,3 @@
-// === Module 8202: trackAppClickInNativeShareSheet ===
-
-// Module 8202 (trackAppClickInNativeShareSheet)
 import { AnalyticEvents } from "ME";
 
 const result = require("apexExperiment").fileFinishedImporting("modules/action_sheet/native/ShowShareActionSheetUtils.tsx");

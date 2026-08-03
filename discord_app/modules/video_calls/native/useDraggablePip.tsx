@@ -1,6 +1,3 @@
-// === Module 10540: clamp ===
-
-// Module 10540 (clamp)
 import _slicedToArray from "_slicedToArray";
 import { useChannelCallStore } from "VoiceChatDrawerState";
 import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET";

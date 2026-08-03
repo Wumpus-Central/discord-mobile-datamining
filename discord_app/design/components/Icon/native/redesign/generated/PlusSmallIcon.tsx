@@ -1,6 +1,3 @@
-// === Module 8738: PlusSmallIcon ===
-
-// Module 8738 (PlusSmallIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 14188: useVideoQuestCaptions ===
-
-// Module 14188 (useVideoQuestCaptions)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

@@ -1,6 +1,3 @@
-// === Module 15330: ForYouSuggestedFriendsSectionHeader ===
-
-// Module 15330 (ForYouSuggestedFriendsSectionHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

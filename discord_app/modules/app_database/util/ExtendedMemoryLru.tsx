@@ -1,6 +1,3 @@
-// === Module 5741: totalLength ===
-
-// Module 5741 (totalLength)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

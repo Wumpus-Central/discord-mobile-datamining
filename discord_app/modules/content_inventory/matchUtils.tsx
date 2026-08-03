@@ -1,6 +1,3 @@
-// === Module 8176: isMatchingListeningActivity ===
-
-// Module 8176 (isMatchingListeningActivity)
 import { ActivityTypes } from "ME";
 import { CRUNCHYROLL_CLIENT_ID } from "CRUNCHYROLL_LINK_DEST_ORIGIN";
 import { isSpotifyParty } from "WEB_OPEN";

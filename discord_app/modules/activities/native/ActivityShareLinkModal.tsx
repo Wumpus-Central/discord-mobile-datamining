@@ -1,6 +1,3 @@
-// === Module 13562: ActivityShareLinkModal ===
-
-// Module 13562 (ActivityShareLinkModal)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getMixedGradientColor from "getMixedGradientColor";
 import trackInvite from "trackInvite";

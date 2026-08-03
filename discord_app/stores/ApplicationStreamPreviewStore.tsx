@@ -1,6 +1,3 @@
-// === Module 4375: reset ===
-
-// Module 4375 (reset)
 import { StreamTypes } from "StreamIssueReportReasons";
 import { Store } from "initialize";
 import set from "isStreamKey";

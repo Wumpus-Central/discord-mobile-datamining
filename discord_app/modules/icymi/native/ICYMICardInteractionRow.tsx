@@ -1,6 +1,3 @@
-// === Module 15391: AddEmojiButton ===
-
-// Module 15391 (AddEmojiButton)
 import Separator from "Separator";
 import EMOJI_PICKER_ACTION_SHEET_KEY from "EMOJI_PICKER_ACTION_SHEET_KEY";
 import get_ActivityIndicator from "module_4203";

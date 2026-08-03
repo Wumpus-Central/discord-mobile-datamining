@@ -1,6 +1,3 @@
-// === Module 11347: validateNumericOptionRange ===
-
-// Module 11347 (validateNumericOptionRange)
 import _getSystemLocale from "_getSystemLocale";
 import map from "map";
 

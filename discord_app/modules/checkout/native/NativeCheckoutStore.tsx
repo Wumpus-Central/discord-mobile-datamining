@@ -1,6 +1,3 @@
-// === Module 6221: context ===
-
-// Module 6221 (context)
 import isIterable from "isIterable";
 import importAllResult from "noop";
 import createFromOrder from "createFromOrder";

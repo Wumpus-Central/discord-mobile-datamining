@@ -1,6 +1,3 @@
-// === Module 6775: VideoSelfieIcon ===
-
-// Module 6775 (VideoSelfieIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

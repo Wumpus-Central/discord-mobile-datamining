@@ -1,6 +1,3 @@
-// === Module 15277: ? ===
-
-// Module 15277
 import { YOU_BAR_SPRING_CONFIG } from "CONNECTION_BANNER_HEIGHT";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

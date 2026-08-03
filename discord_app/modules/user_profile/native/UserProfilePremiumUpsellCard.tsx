@@ -1,6 +1,3 @@
-// === Module 13757: UserProfilePremiumUpsellCard ===
-
-// Module 13757 (UserProfilePremiumUpsellCard)
 import noop from "noop";
 import ME from "ME";
 import { jsx } from "jsxProd";

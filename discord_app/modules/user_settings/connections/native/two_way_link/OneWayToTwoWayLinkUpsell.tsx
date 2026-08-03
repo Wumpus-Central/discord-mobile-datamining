@@ -1,6 +1,3 @@
-// === Module 14016: OneWayToTwoWayNewTag ===
-
-// Module 14016 (OneWayToTwoWayNewTag)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { Fonts } from "ME";

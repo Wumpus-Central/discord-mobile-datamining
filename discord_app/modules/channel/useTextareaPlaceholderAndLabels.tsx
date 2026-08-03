@@ -1,6 +1,3 @@
-// === Module 11175: useTextareaPlaceholderAndLabels ===
-
-// Module 11175 (useTextareaPlaceholderAndLabels)
 import ME from "ME";
 
 let c3;

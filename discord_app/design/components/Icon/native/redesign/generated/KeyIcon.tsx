@@ -1,6 +1,3 @@
-// === Module 9215: KeyIcon ===
-
-// Module 9215 (KeyIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

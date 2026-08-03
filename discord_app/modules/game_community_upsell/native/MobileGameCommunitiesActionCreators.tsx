@@ -1,6 +1,3 @@
-// === Module 15254: fetchMobileGameCommunities ===
-
-// Module 15254 (fetchMobileGameCommunities)
 import { Endpoints } from "ME";
 
 const result = require("parse").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx");

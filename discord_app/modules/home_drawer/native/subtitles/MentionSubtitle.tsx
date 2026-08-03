@@ -1,6 +1,3 @@
-// === Module 15003: MentionSubtitle ===
-
-// Module 15003 (MentionSubtitle)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

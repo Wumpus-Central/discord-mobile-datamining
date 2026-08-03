@@ -1,6 +1,3 @@
-// === Module 10461: StrangerDangerWarningBanner ===
-
-// Module 10461 (StrangerDangerWarningBanner)
 import MoreTipsModalScreen from "MoreTipsModalScreen";
 import upsertRelationship from "upsertRelationship";
 import { SafetyWarningTypes } from "handleConnectionOpen";

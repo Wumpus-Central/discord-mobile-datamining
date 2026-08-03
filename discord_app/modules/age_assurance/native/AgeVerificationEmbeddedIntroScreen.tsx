@@ -1,6 +1,3 @@
-// === Module 7630: AgeVerificationEmbeddedIntroScreen ===
-
-// Module 7630 (AgeVerificationEmbeddedIntroScreen)
 import set from "set";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";

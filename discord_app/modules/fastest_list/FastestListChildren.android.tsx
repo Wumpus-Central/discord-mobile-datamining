@@ -1,6 +1,3 @@
-// === Module 9261: map ===
-
-// Module 9261 (map)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";

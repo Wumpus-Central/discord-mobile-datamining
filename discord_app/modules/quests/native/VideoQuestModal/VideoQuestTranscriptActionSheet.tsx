@@ -1,6 +1,3 @@
-// === Module 14197: VideoQuestTranscriptActionSheet ===
-
-// Module 14197 (VideoQuestTranscriptActionSheet)
 import noop from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";
 import _toPropertyKey from "_toPropertyKey";

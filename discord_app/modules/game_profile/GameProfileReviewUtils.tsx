@@ -1,6 +1,3 @@
-// === Module 8533: getSteamReviewScoreDescriptionColor ===
-
-// Module 8533 (getSteamReviewScoreDescriptionColor)
 const result = require("set").fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
 
 export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreDescriptionColor(NO_USER_REVIEWS) {

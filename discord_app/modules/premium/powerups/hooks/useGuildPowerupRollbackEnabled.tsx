@@ -1,6 +1,3 @@
-// === Module 11601: useGuildPowerupRollbackEnabled ===
-
-// Module 11601 (useGuildPowerupRollbackEnabled)
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 
 export default function useGuildPowerupRollbackEnabled(guildId, skuId, location) {

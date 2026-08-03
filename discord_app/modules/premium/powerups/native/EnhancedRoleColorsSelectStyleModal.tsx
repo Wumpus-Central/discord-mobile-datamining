@@ -1,6 +1,3 @@
-// === Module 16490: EnhancedRoleColorsSelectStyleModal ===
-
-// Module 16490 (EnhancedRoleColorsSelectStyleModal)
 import get_ActivityIndicator from "extractColorStringsFromServerColors";
 import { RoleColorsStyle } from "handleSetSection";
 import { HOLOGRAPHIC_ROLE_COLORS } from "HOLOGRAPHIC_ROLE_COLORS";

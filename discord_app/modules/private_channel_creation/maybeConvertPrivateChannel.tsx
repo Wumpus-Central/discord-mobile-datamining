@@ -1,6 +1,3 @@
-// === Module 6044: maybeConvertPrivateChannel ===
-
-// Module 6044 (maybeConvertPrivateChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

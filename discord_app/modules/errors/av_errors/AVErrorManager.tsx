@@ -1,6 +1,3 @@
-// === Module 16694: setDifference ===
-
-// Module 16694 (setDifference)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import reset from "reset";
 import handleConnectionOpen from "handleConnectionOpen";

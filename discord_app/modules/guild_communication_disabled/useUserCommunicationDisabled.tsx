@@ -1,6 +1,3 @@
-// === Module 7763: useUserCommunicationDisabled ===
-
-// Module 7763 (useUserCommunicationDisabled)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

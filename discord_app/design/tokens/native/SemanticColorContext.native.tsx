@@ -1,6 +1,3 @@
-// === Module 3898: getSemanticColorContextFromThemeContext ===
-
-// Module 3898 (getSemanticColorContextFromThemeContext)
 const result = require("getNodeText").fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
 export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(themeContext) {

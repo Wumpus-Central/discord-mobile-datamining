@@ -1,6 +1,3 @@
-// === Module 12807: showGdmBlockedUserModal ===
-
-// Module 12807 (showGdmBlockedUserModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/shared_space_warnings/show_gdm_modal/showGdmBlockedUserModal.native.tsx");
 
 export const showGdmBlockedUserModal = function showGdmBlockedUserModal(arg0) {

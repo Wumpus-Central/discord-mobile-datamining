@@ -1,6 +1,3 @@
-// === Module 5948: recountRelationshipTypes ===
-
-// Module 5948 (recountRelationshipTypes)
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
 import { Store } from "initialize";

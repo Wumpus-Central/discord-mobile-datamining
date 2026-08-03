@@ -1,6 +1,3 @@
-// === Module 11840: getDescriptiveInviteError ===
-
-// Module 11840 (getDescriptiveInviteError)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 

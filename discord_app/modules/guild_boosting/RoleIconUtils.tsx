@@ -1,6 +1,3 @@
-// === Module 5544: getRoleIconData ===
-
-// Module 5544 (getRoleIconData)
 import ME from "ME";
 import set from "set";
 import set from "parseRawEmojiObject";

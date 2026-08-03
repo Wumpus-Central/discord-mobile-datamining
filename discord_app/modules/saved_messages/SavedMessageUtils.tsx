@@ -1,6 +1,3 @@
-// === Module 9955: _savedMessageJumpToMessage ===
-
-// Module 9955 (_savedMessageJumpToMessage)
 import getSystemLocale from "getSystemLocale";
 import noop from "noop";
 import { UnknownChannelRecord } from "createChannelRecord";

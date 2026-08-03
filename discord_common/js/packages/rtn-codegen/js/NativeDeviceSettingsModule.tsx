@@ -1,6 +1,3 @@
-// === Module 4745: enforcing ===
-
-// Module 4745 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeDeviceSettingsModule");

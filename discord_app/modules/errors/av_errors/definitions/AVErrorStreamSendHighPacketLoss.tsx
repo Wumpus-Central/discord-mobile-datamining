@@ -1,6 +1,3 @@
-// === Module 16702: AVErrorStreamSendHighPacketLossDefinition ===
-
-// Module 16702 (AVErrorStreamSendHighPacketLossDefinition)
 import reset from "reset";
 import initialize from "initialize";
 

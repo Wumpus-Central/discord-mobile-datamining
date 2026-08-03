@@ -1,6 +1,3 @@
-// === Module 7715: TextLineElement ===
-
-// Module 7715 (TextLineElement)
 import closure_4 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

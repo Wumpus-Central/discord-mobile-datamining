@@ -1,6 +1,3 @@
-// === Module 14630: ? ===
-
-// Module 14630
 import "noop";
 import { View } from "get ActivityIndicator";
 import { CollectiblesMobileShopScreen as closure_4 } from "items";

@@ -1,6 +1,3 @@
-// === Module 4363: removeExecutablePathPrefix ===
-
-// Module 4363 (removeExecutablePathPrefix)
 import gameFromServer from "gameFromServer";
 
 const require = arg1;

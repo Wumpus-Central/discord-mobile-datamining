@@ -1,6 +1,3 @@
-// === Module 12226: useCanDM ===
-
-// Module 12226 (useCanDM)
 import recountRelationshipTypes from "recountRelationshipTypes";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";

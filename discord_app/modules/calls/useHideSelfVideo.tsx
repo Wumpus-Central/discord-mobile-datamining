@@ -1,6 +1,3 @@
-// === Module 16054: useHideSelfVideo ===
-
-// Module 16054 (useHideSelfVideo)
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { VideoToggleState } from "ME";

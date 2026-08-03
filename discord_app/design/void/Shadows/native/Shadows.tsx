@@ -1,6 +1,3 @@
-// === Module 13186: generateBoxShadowStyle ===
-
-// Module 13186 (generateBoxShadowStyle)
 const result = require("set").fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
 export const generateBoxShadowStyle = (arg0) => {

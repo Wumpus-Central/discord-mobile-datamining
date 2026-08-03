@@ -1,6 +1,3 @@
-// === Module 15442: GuildOnboardingHomePage ===
-
-// Module 15442 (GuildOnboardingHomePage)
 import useCanSeeOnboardingHome from "useCanSeeOnboardingHome";
 import getHash from "getHash";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";

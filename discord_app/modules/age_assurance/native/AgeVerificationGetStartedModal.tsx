@@ -1,6 +1,3 @@
-// === Module 7623: AgeVerificationGetStartedModal ===
-
-// Module 7623 (AgeVerificationGetStartedModal)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

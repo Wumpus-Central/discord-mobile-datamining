@@ -1,6 +1,3 @@
-// === Module 10179: SafetyToolsActionSheetWrapper ===
-
-// Module 10179 (SafetyToolsActionSheetWrapper)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { jsx } from "jsxProd";

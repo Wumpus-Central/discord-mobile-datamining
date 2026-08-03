@@ -1,6 +1,3 @@
-// === Module 7900: _executeMessageComponentInteraction ===
-
-// Module 7900 (_executeMessageComponentInteraction)
 import patchThread from "patchThread";
 import fetchFingerprint from "fetchFingerprint";
 import deleteNonce from "deleteNonce";

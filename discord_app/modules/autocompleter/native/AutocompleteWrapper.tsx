@@ -1,6 +1,3 @@
-// === Module 11498: getStickersItemLayout ===
-
-// Module 11498 (getStickersItemLayout)
 import PermissionOverwriteType from "PermissionOverwriteType";
 import importAllResult from "useSafeAreaInsetsKeyboardAware";
 import get_ActivityIndicator from "AutocompleteLabel";

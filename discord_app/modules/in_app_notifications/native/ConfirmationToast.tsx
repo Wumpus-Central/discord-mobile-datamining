@@ -1,6 +1,3 @@
-// === Module 10401: ConfirmationToast ===
-
-// Module 10401 (ConfirmationToast)
 import "noop";
 import { View } from "get ActivityIndicator";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 14989: HomeDrawerFavoritesRowExpandedChildren ===
-
-// Module 14989 (HomeDrawerFavoritesRowExpandedChildren)
 import "noop";
 import { jsx } from "jsxProd";
 

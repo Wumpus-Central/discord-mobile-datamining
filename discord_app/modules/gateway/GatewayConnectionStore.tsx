@@ -1,6 +1,3 @@
-// === Module 4869: _handleConnectionOpen ===
-
-// Module 4869 (_handleConnectionOpen)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import fetchFingerprint from "fetchFingerprint";

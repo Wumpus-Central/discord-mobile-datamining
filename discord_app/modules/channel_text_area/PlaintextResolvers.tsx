@@ -1,6 +1,3 @@
-// === Module 8027: resolvePlaintextInlineVoid ===
-
-// Module 8027 (resolvePlaintextInlineVoid)
 import _slicedToArray from "_slicedToArray";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import rebuild from "rebuild";

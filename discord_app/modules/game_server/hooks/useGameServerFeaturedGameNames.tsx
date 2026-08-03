@@ -1,6 +1,3 @@
-// === Module 11682: useGameServerFeaturedGameNames ===
-
-// Module 11682 (useGameServerFeaturedGameNames)
 import str11 from "str11";
 
 let c3;

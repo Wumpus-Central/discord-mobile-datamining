@@ -1,6 +1,3 @@
-// === Module 15440: emphasisHook ===
-
-// Module 15440 (emphasisHook)
 import _slicedToArray from "_slicedToArray";
 import "set";
 import { View } from "asyncRequireImpl";

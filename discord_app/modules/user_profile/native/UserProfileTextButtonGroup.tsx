@@ -1,6 +1,3 @@
-// === Module 11999: UserProfileTextButtonGroup ===
-
-// Module 11999 (UserProfileTextButtonGroup)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { PROFILE_SIDE_PADDING } from "ARBITRARY_LARGE_OFFSET";

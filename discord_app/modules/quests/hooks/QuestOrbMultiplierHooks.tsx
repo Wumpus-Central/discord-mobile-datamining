@@ -1,6 +1,3 @@
-// === Module 9497: getQuestOrbMultiplierEligibilityForUser ===
-
-// Module 9497 (getQuestOrbMultiplierEligibilityForUser)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

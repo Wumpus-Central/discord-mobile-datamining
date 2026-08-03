@@ -1,6 +1,3 @@
-// === Module 9397: EmojiItemLockedOverlay ===
-
-// Module 9397 (EmojiItemLockedOverlay)
 import importAllResult from "set";
 import get_ActivityIndicator from "Button";
 import handleThemeChange from "handleThemeChange";

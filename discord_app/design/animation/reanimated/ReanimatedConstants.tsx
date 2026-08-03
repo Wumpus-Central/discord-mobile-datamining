@@ -1,6 +1,3 @@
-// === Module 4195: CONFIG_NEVER_ANIMATE ===
-
-// Module 4195 (CONFIG_NEVER_ANIMATE)
 let obj = { duration: 1, reduceMotion: require("module_4054").ReduceMotion.Always };
 obj = {};
 const merged = Object.assign(obj);

@@ -1,6 +1,3 @@
-// === Module 15979: getCardKey ===
-
-// Module 15979 (getCardKey)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CONFIG_NEVER_ANIMATE";
 import get_ActivityIndicator from "t";

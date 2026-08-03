@@ -1,6 +1,3 @@
-// === Module 9667: CATEGORY_ICON_SIZE ===
-
-// Module 9667 (CATEGORY_ICON_SIZE)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "HapticFeedbackTypes";
 import { View } from "GuildIconSizes";

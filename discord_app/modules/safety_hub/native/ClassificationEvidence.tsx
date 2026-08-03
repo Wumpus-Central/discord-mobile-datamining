@@ -1,6 +1,3 @@
-// === Module 11094: ClassificationEvidence ===
-
-// Module 11094 (ClassificationEvidence)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

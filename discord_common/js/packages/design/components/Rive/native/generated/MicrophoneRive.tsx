@@ -1,6 +1,3 @@
-// === Module 3992: MicrophoneRive ===
-
-// Module 3992 (MicrophoneRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

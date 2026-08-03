@@ -1,6 +1,3 @@
-// === Module 12030: usePersonalizedVoiceChannelUsers ===
-
-// Module 12030 (usePersonalizedVoiceChannelUsers)
 import recomputeAffinities from "recomputeAffinities";
 import hasConsented from "hasConsented";
 import mergeGuildAvatar from "mergeGuildAvatar";

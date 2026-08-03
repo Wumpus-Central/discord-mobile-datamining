@@ -1,6 +1,3 @@
-// === Module 10059: DCDChatList ===
-
-// Module 10059 (DCDChatList)
 import importAllResult from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";

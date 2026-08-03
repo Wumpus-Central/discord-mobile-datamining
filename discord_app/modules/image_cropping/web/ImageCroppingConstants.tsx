@@ -1,6 +1,3 @@
-// === Module 7951: UploadTypes ===
-
-// Module 7951 (UploadTypes)
 import { BACKGROUND_REPLACEMENT_SIZE } from "VideoFilterType";
 
 const result = BACKGROUND_REPLACEMENT_SIZE.width / BACKGROUND_REPLACEMENT_SIZE.height;

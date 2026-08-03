@@ -1,6 +1,3 @@
-// === Module 5235: DragIcon ===
-
-// Module 5235 (DragIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

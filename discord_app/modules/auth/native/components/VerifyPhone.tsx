@@ -1,6 +1,3 @@
-// === Module 14905: VerifyPhone ===
-
-// Module 14905 (VerifyPhone)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

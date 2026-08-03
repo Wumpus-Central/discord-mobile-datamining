@@ -1,6 +1,3 @@
-// === Module 10764: getGoLiveAutoQualityExperimentConfig ===
-
-// Module 10764 (getGoLiveAutoQualityExperimentConfig)
 import initialize from "initialize";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import { ApplicationStreamPresets } from "RESOLUTION_720";

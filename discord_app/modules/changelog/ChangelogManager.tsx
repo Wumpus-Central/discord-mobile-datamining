@@ -1,6 +1,3 @@
-// === Module 16166: prototype ===
-
-// Module 16166 (prototype)
 import cacheBustParam from "cacheBustParam";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";

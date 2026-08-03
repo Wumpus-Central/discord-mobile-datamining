@@ -1,6 +1,3 @@
-// === Module 13797: SafetySettingsNotice ===
-
-// Module 13797 (SafetySettingsNotice)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { SafetySettingsNoticeAction as closure_4 } from "SafetyToastType";

@@ -1,6 +1,3 @@
-// === Module 12047: useUserProfileVoiceActivity ===
-
-// Module 12047 (useUserProfileVoiceActivity)
 import sortActivity from "sortActivity";
 import updateVoiceState from "updateVoiceState";
 

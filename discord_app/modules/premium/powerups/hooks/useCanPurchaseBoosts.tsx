@@ -1,6 +1,3 @@
-// === Module 11610: useCanPurchaseBoosts ===
-
-// Module 11610 (useCanPurchaseBoosts)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { FractionalPremiumStates } from "GuildFeatures";
 

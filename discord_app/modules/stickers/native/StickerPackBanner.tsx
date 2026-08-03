@@ -1,6 +1,3 @@
-// === Module 9644: StickerPackBanner ===
-
-// Module 9644 (StickerPackBanner)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 15470: openJoinRequestActionSheet ===
-
-// Module 15470 (openJoinRequestActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_member_verification/native/openJoinRequestActionSheet.tsx");
 
 export default function openJoinRequestActionSheet(joinRequest) {

@@ -1,6 +1,3 @@
-// === Module 13039: UserCodeInput ===
-
-// Module 13039 (UserCodeInput)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

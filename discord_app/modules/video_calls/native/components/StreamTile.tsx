@@ -1,6 +1,3 @@
-// === Module 10558: StreamTextOverlay ===
-
-// Module 10558 (StreamTextOverlay)
 import importAllResult from "map";
 import get_ActivityIndicator from "ResizeMode";
 import reset from "reset";

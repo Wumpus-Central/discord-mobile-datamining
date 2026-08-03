@@ -1,6 +1,3 @@
-// === Module 6165: GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH ===
-
-// Module 6165 (GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH)
 const result = require("set").fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");
 
 export const GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH = 100;

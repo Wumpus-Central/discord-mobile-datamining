@@ -1,6 +1,3 @@
-// === Module 4010: handleConnectionOpen ===
-
-// Module 4010 (handleConnectionOpen)
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";

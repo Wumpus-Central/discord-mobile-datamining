@@ -1,6 +1,3 @@
-// === Module 11408: ? ===
-
-// Module 11408
 import handleInit from "handleInit";
 import { DraftType } from "handleChanged";
 import map from "map";

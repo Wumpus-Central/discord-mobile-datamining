@@ -1,6 +1,3 @@
-// === Module 15193: GuildRoleSubscriptionsChannelLongPressActionSheet ===
-
-// Module 15193 (GuildRoleSubscriptionsChannelLongPressActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { StaticChannelRoute } from "set";

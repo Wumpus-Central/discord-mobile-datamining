@@ -1,6 +1,3 @@
-// === Module 9564: getTimeSafe ===
-
-// Module 9564 (getTimeSafe)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 import set from "SavedMessageSortTypes";

@@ -1,6 +1,3 @@
-// === Module 12192: UserProfilePrivateInfoBanner ===
-
-// Module 12192 (UserProfilePrivateInfoBanner)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

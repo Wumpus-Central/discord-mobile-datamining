@@ -1,6 +1,3 @@
-// === Module 15295: IconWithBadge ===
-
-// Module 15295 (IconWithBadge)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";

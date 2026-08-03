@@ -1,6 +1,3 @@
-// === Module 1867: ensureValidMode ===
-
-// Module 1867 (ensureValidMode)
 const result = require("set").fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 
 export const ensureValidMode = function ensureValidMode(arg0) {

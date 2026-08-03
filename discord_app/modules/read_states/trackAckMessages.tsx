@@ -1,6 +1,3 @@
-// === Module 12999: trackAckMessages ===
-
-// Module 12999 (trackAckMessages)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

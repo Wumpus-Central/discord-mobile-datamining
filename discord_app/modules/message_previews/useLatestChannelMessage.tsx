@@ -1,6 +1,3 @@
-// === Module 14354: useLatestChannelMessage ===
-
-// Module 14354 (useLatestChannelMessage)
 import _slicedToArray from "_slicedToArray";
 import { useEffect } from "noop";
 import initialize from "initialize";

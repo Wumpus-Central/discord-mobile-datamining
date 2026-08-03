@@ -1,6 +1,3 @@
-// === Module 1235: AbortCodes ===
-
-// Module 1235 (AbortCodes)
 import { AbortCodes } from "ME";
 import set from "set";
 

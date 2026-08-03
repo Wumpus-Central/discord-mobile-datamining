@@ -1,6 +1,3 @@
-// === Module 16724: handleConnectionOpenSupplemental ===
-
-// Module 16724 (handleConnectionOpenSupplemental)
 import "initialize";
 
 const require = arg1;

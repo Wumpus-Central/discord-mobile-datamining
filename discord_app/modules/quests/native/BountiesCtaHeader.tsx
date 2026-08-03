@@ -1,6 +1,3 @@
-// === Module 14129: BountiesCtaDescription ===
-
-// Module 14129 (BountiesCtaDescription)
 import importAllResult from "metadata";
 import get_ActivityIndicator from "BOUNTIES_MODAL_KEY";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

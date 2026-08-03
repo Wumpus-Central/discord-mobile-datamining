@@ -1,6 +1,3 @@
-// === Module 8196: isMediaAttachment ===
-
-// Module 8196 (isMediaAttachment)
 import noop from "noop";
 import updateState from "updateState";
 import ensureGuildLoaded from "ensureGuildLoaded";

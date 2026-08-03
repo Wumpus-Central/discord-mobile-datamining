@@ -1,6 +1,3 @@
-// === Module 14943: getGuildsComponent ===
-
-// Module 14943 (getGuildsComponent)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleConnectionOpen from "handleConnectionOpen";

@@ -1,6 +1,3 @@
-// === Module 13552: ? ===
-
-// Module 13552
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 

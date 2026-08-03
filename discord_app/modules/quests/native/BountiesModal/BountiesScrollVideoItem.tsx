@@ -1,6 +1,3 @@
-// === Module 14063: BountiesScrollVideoItemInner ===
-
-// Module 14063 (BountiesScrollVideoItemInner)
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import closure_5 from "set";

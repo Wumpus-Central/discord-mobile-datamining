@@ -1,6 +1,3 @@
-// === Module 15424: Header ===
-
-// Module 15424 (Header)
 import importAllResult from "useIsSwipeToMemberListEnabled";
 import get_ActivityIndicator from "ChannelHeader";
 import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT";

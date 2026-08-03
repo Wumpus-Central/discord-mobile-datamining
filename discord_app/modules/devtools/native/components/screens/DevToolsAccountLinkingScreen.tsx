@@ -1,6 +1,3 @@
-// === Module 14840: DevToolsAccountLinkingScreen ===
-
-// Module 14840 (DevToolsAccountLinkingScreen)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import get_ActivityIndicator from "Text";

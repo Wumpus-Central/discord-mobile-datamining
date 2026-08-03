@@ -1,6 +1,3 @@
-// === Module 8217: getChannelFromEvent ===
-
-// Module 8217 (getChannelFromEvent)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 

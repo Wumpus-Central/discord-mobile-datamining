@@ -1,6 +1,3 @@
-// === Module 11834: shouldShowInviter ===
-
-// Module 11834 (shouldShowInviter)
 import _slicedToArray from "_slicedToArray";
 import getAvatarURL from "getAvatarURL";
 import { View } from "getGuildBadgeSource";

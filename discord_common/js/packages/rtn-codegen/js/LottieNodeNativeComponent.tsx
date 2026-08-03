@@ -1,6 +1,3 @@
-// === Module 7787: __INTERNAL_VIEW_CONFIG ===
-
-// Module 7787 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 let obj = { uiViewClassName: "NativeLottieNode", validAttributes: {} };

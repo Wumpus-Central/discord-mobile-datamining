@@ -1,6 +1,3 @@
-// === Module 10731: MicrophoneArrowRightIcon ===
-
-// Module 10731 (MicrophoneArrowRightIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

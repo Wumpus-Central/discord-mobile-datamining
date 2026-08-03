@@ -1,6 +1,3 @@
-// === Module 16757: ? ===
-
-// Module 16757
 import { NativeModules } from "get ActivityIndicator";
 
 let c4 = false;

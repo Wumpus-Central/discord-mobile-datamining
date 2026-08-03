@@ -1,6 +1,3 @@
-// === Module 9595: ForumGuidelinesActionSheet ===
-
-// Module 9595 (ForumGuidelinesActionSheet)
 import _slicedToArray from "_slicedToArray";
 import Background from "Background";
 import { View } from "ME";

@@ -1,6 +1,3 @@
-// === Module 11106: AppealIngestionExternalLink ===
-
-// Module 11106 (AppealIngestionExternalLink)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

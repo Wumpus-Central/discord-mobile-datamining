@@ -1,6 +1,3 @@
-// === Module 11697: GuildProgressItem ===
-
-// Module 11697 (GuildProgressItem)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

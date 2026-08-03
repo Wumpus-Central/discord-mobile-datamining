@@ -1,6 +1,3 @@
-// === Module 15499: SearchTabsPage ===
-
-// Module 15499 (SearchTabsPage)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_15559";
 import { View } from "module_15549";

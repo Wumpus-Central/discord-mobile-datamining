@@ -1,6 +1,3 @@
-// === Module 15289: ConnectionUnknownIcon ===
-
-// Module 15289 (ConnectionUnknownIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

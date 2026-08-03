@@ -1,6 +1,3 @@
-// === Module 10203: GroupDMInviteManagement ===
-
-// Module 10203 (GroupDMInviteManagement)
 import closure_3 from "normalizeChannelPropertyForCompare";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "HeaderBackImage";

@@ -1,6 +1,3 @@
-// === Module 1302: handleThemeChange ===
-
-// Module 1302 (handleThemeChange)
 import initialize from "initialize";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";

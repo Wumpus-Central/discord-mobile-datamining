@@ -1,6 +1,3 @@
-// === Module 12236: UserProfileMutuals ===
-
-// Module 12236 (UserProfileMutuals)
 import "GuildIconPile";
 import { View } from "Text";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";

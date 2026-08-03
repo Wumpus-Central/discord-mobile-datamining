@@ -1,6 +1,3 @@
-// === Module 4743: combineStatuses ===
-
-// Module 4743 (combineStatuses)
 import closure_3 from "set";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 9244: ChangePhoneReason ===
-
-// Module 9244 (ChangePhoneReason)
 import sendRequest from "sendRequest";
 import fetchFingerprint from "fetchFingerprint";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY";

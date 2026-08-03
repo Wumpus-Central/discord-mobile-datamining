@@ -1,6 +1,3 @@
-// === Module 11374: AppLauncherRoleOption ===
-
-// Module 11374 (AppLauncherRoleOption)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

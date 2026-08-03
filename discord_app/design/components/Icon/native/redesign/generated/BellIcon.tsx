@@ -1,6 +1,3 @@
-// === Module 10243: BellIcon ===
-
-// Module 10243 (BellIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

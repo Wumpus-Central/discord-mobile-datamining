@@ -1,6 +1,3 @@
-// === Module 9360: ToastEmoji ===
-
-// Module 9360 (ToastEmoji)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { EMOJI_URL_BASE_SIZE } from "set";

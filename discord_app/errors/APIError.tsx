@@ -1,6 +1,3 @@
-// === Module 4093: prototype ===
-
-// Module 4093 (prototype)
 import { Links } from "ME";
 import { V8APIError } from "sendRequest";
 

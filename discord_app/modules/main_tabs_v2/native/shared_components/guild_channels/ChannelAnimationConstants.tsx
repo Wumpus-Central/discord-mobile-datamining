@@ -1,6 +1,3 @@
-// === Module 12034: n ===
-
-// Module 12034 (n)
 let obj = { damping: 35, stiffness: 275, mass: 1, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 const fn = function n() {
   let obj = { initialValues: { transform: items, opacity: 0 }, animations: null };

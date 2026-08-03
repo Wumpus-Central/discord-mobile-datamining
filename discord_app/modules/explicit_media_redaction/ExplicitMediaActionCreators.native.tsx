@@ -1,6 +1,3 @@
-// === Module 11118: handleSenderFalsePositiveFlow ===
-
-// Module 11118 (handleSenderFalsePositiveFlow)
 import getFpMessageInfo from "getFpMessageInfo";
 import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY";
 

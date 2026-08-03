@@ -1,6 +1,3 @@
-// === Module 15783: PremiumMarketingMomentActionSheet ===
-
-// Module 15783 (PremiumMarketingMomentActionSheet)
 import preload from "preload";
 import { View } from "items";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

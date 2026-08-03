@@ -1,6 +1,3 @@
-// === Module 4038: hslToRgb ===
-
-// Module 4038 (hslToRgb)
 import _slicedToArray from "_slicedToArray";
 
 function hslToRgb(alpha) {

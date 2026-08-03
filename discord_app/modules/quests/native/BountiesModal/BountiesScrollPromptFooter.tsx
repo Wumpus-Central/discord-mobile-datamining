@@ -1,6 +1,3 @@
-// === Module 14055: BountiesScrollPromptFooterContent ===
-
-// Module 14055 (BountiesScrollPromptFooterContent)
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

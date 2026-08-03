@@ -1,6 +1,3 @@
-// === Module 15257: OneColumnGuildUpsellList ===
-
-// Module 15257 (OneColumnGuildUpsellList)
 import Text from "Text";
 import { View } from "useGradientBottom";
 import set from "set";

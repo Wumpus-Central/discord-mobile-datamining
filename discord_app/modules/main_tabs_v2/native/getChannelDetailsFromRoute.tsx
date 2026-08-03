@@ -1,6 +1,3 @@
-// === Module 13631: getChannelDetailsFromRoute ===
-
-// Module 13631 (getChannelDetailsFromRoute)
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx");
 
 export default function getChannelDetailsFromRoute(currentRoute) {

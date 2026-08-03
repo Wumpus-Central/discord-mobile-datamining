@@ -1,6 +1,3 @@
-// === Module 14362: AccessibilityIcon ===
-
-// Module 14362 (AccessibilityIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 11031: ChannelSelectComponentActionSheet ===
-
-// Module 11031 (ChannelSelectComponentActionSheet)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

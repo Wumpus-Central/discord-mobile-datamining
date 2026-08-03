@@ -1,6 +1,3 @@
-// === Module 10111: getChatPlaceholderRowWidth ===
-
-// Module 10111 (getChatPlaceholderRowWidth)
 let result = require("set").fileFinishedImporting("modules/chat/native/placeholder/getChatPlaceholderRowWidth.tsx");
 
 export default function getChatPlaceholderRowWidth(arg0) {

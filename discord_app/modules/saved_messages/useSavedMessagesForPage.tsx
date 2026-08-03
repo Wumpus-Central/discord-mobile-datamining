@@ -1,6 +1,3 @@
-// === Module 9952: getSavedMessagesForType ===
-
-// Module 9952 (getSavedMessagesForType)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getTimeSafe from "getTimeSafe";

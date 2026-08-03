@@ -1,6 +1,3 @@
-// === Module 11724: TabItemCount ===
-
-// Module 11724 (TabItemCount)
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

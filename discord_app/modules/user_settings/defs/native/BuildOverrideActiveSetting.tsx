@@ -1,6 +1,3 @@
-// === Module 14563: pressable ===
-
-// Module 14563 (pressable)
 import getCurrentBuildOverride from "getCurrentBuildOverride";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";

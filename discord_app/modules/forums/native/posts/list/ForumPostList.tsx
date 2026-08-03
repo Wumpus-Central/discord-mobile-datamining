@@ -1,6 +1,3 @@
-// === Module 11213: ForumPostList ===
-
-// Module 11213 (ForumPostList)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 15132: VoiceUserNameItem ===
-
-// Module 15132 (VoiceUserNameItem)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

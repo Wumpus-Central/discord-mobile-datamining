@@ -1,6 +1,3 @@
-// === Module 650: setDisplayName ===
-
-// Module 650 (setDisplayName)
 import set from "isTracing";
 
 function setDisplayName(arg0, displayName) {

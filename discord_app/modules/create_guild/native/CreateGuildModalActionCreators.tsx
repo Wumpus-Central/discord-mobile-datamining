@@ -1,6 +1,3 @@
-// === Module 11813: ? ===
-
-// Module 11813
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";
 
 let c3;

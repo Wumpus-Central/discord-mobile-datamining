@@ -1,6 +1,3 @@
-// === Module 11196: ForumPostUsername ===
-
-// Module 11196 (ForumPostUsername)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

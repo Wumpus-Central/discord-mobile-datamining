@@ -1,6 +1,3 @@
-// === Module 9440: GappedList ===
-
-// Module 9440 (GappedList)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

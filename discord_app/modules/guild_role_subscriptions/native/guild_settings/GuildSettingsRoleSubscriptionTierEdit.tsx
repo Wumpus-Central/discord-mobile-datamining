@@ -1,6 +1,3 @@
-// === Module 16637: ArchiveOrDeleteTierSection ===
-
-// Module 16637 (ArchiveOrDeleteTierSection)
 import HeaderActionButton from "HeaderActionButton";
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "Button";

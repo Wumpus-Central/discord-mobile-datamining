@@ -1,6 +1,3 @@
-// === Module 5798: freshTeenActivityWithMap ===
-
-// Module 5798 (freshTeenActivityWithMap)
 import _slicedToArray from "_slicedToArray";
 import { getCountryCodeByAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
 import "clearAll";

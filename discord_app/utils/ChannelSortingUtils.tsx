@@ -1,6 +1,3 @@
-// === Module 16461: getFirstChannelOfType ===
-
-// Module 16461 (getFirstChannelOfType)
 import createChannelRecord from "createChannelRecord";
 import { ChannelTypes } from "ME";
 

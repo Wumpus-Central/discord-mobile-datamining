@@ -1,6 +1,3 @@
-// === Module 5965: ElectronProcessType ===
-
-// Module 5965 (ElectronProcessType)
 const result = require("set").fileFinishedImporting("utils/ProcessUtilsBase.tsx");
 class ProcessUtils {
 }

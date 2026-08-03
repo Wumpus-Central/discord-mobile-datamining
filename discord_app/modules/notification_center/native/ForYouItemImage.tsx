@@ -1,6 +1,3 @@
-// === Module 15317: ForYouItemImage ===
-
-// Module 15317 (ForYouItemImage)
 import importAllResult from "registerAsset";
 import { View } from "Button";
 import { getGuildAcronym } from "GuildNSFWContentLevel";

@@ -1,6 +1,3 @@
-// === Module 1239: loadJsonAsset ===
-
-// Module 1239 (loadJsonAsset)
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "registerAsset";
 

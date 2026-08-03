@@ -1,6 +1,3 @@
-// === Module 11955: GameProfileGameClaimCta ===
-
-// Module 11955 (GameProfileGameClaimCta)
 import createHandoffTokenWithLoadingModal from "createHandoffTokenWithLoadingModal";
 import noop from "noop";
 import { RelativeMarketingURLs } from "ME";

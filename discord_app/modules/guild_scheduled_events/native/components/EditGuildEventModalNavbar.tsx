@@ -1,6 +1,3 @@
-// === Module 8236: EditGuildEventModalNavbar ===
-
-// Module 8236 (EditGuildEventModalNavbar)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";

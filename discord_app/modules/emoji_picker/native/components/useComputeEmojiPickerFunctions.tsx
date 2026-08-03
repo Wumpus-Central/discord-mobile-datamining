@@ -1,6 +1,3 @@
-// === Module 9368: _computeCategories ===
-
-// Module 9368 (_computeCategories)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import EmojiCategoryTypes from "EmojiCategoryTypes";

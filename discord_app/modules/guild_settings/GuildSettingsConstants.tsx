@@ -1,6 +1,3 @@
-// === Module 16467: MAX_SUBCATEGORIES ===
-
-// Module 16467 (MAX_SUBCATEGORIES)
 const obj = {
   afk_channel_id() {
     const intl = require(1236) /* getSystemLocale */.intl;

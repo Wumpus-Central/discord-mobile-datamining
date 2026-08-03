@@ -1,6 +1,3 @@
-// === Module 15238: useCanSeeNUFChannelsForGuild ===
-
-// Module 15238 (useCanSeeNUFChannelsForGuild)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

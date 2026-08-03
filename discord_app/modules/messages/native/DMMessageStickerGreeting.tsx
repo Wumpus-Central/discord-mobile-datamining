@@ -1,6 +1,3 @@
-// === Module 11437: DMMessageStickerGreeting ===
-
-// Module 11437 (DMMessageStickerGreeting)
 import reinjectEphemerals from "reinjectEphemerals";
 import set from "set";
 import closure_5 from "set";

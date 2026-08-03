@@ -1,6 +1,3 @@
-// === Module 14726: useSettingSearchResults ===
-
-// Module 14726 (useSettingSearchResults)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import zustandStore from "zustandStore";

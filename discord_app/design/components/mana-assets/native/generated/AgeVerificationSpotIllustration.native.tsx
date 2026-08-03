@@ -1,6 +1,3 @@
-// === Module 6835: AgeVerificationSpotIllustration ===
-
-// Module 6835 (AgeVerificationSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/AgeVerificationSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 4404: withEqualityFn ===
-
-// Module 4404 (withEqualityFn)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import identity from "identity";
 

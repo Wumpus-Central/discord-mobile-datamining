@@ -1,6 +1,3 @@
-// === Module 11202: MediaPostGridThumbnailAndroid ===
-
-// Module 11202 (MediaPostGridThumbnailAndroid)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

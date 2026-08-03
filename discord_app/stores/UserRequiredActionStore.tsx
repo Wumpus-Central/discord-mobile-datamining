@@ -1,6 +1,3 @@
-// === Module 1366: handleRequiredAction ===
-
-// Module 1366 (handleRequiredAction)
 import { Store } from "initialize";
 
 function handleRequiredAction(requiredAction) {

@@ -1,6 +1,3 @@
-// === Module 10811: NOOP ===
-
-// Module 10811 (NOOP)
 function NOOP() {
 
 }

@@ -1,6 +1,3 @@
-// === Module 10684: useEmbeddedActivityBackground ===
-
-// Module 10684 (useEmbeddedActivityBackground)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

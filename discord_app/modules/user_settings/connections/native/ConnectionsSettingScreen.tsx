@@ -1,6 +1,3 @@
-// === Module 14006: onPress ===
-
-// Module 14006 (onPress)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

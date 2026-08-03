@@ -1,6 +1,3 @@
-// === Module 1945: combined ===
-
-// Module 1945 (combined)
 import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 7820: getTagProperties ===
-
-// Module 7820 (getTagProperties)
 import { Image } from "get ActivityIndicator";
 import { MessageTagTypes } from "MESSAGE_GROUP_SPACING";
 

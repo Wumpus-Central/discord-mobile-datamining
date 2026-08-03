@@ -1,6 +1,3 @@
-// === Module 11863: setNewUser ===
-
-// Module 11863 (setNewUser)
 const result = require("set").fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
 
 export const setNewUser = function setNewUser(ORGANIC_REGISTERED) {

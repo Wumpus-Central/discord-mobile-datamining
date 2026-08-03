@@ -1,6 +1,3 @@
-// === Module 12510: useMaybeFetchTieredTenureBadgeData ===
-
-// Module 12510 (useMaybeFetchTieredTenureBadgeData)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 

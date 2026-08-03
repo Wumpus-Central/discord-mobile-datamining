@@ -1,6 +1,3 @@
-// === Module 15919: SoundButtonEmoji ===
-
-// Module 15919 (SoundButtonEmoji)
 import importAllResult from "getPremiumPlanItem";
 import { View } from "QUICK_SWITCHER";
 import mergeGuildAvatar from "mergeGuildAvatar";

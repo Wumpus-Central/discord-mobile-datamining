@@ -1,6 +1,3 @@
-// === Module 4601: useBackPressHandler ===
-
-// Module 4601 (useBackPressHandler)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 

@@ -1,6 +1,3 @@
-// === Module 8050: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
-
-// Module 8050 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 9527: getCommandOptionComponents ===
-
-// Module 9527 (getCommandOptionComponents)
 import showUserProfileActionSheet from "showUserProfileActionSheet";
 import get_ActivityIndicator from "Button";
 import ensureGuildLoaded from "ensureGuildLoaded";

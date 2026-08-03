@@ -1,6 +1,3 @@
-// === Module 15044: PX_16 ===
-
-// Module 15044 (PX_16)
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "getSystemLocale";
 import { SearchTypes } from "ME";

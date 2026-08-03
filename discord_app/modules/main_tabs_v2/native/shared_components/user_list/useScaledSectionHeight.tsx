@@ -1,6 +1,3 @@
-// === Module 8837: useScaledSectionHeight ===
-
-// Module 8837 (useScaledSectionHeight)
 import PX_24 from "PX_24";
 
 let c3;

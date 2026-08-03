@@ -1,6 +1,3 @@
-// === Module 6695: trackLurkStarted ===
-
-// Module 6695 (trackLurkStarted)
 import initialize from "initialize";
 import { AnalyticEvents } from "ME";
 

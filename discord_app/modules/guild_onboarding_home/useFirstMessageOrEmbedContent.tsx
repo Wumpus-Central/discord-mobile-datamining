@@ -1,6 +1,3 @@
-// === Module 15458: useFirstMessageOrEmbedContent ===
-
-// Module 15458 (useFirstMessageOrEmbedContent)
 const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
 
 export default function useFirstMessageOrEmbedContent(content) {

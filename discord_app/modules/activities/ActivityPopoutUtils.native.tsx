@@ -1,6 +1,3 @@
-// === Module 10621: shouldOpenActivityInPopoutWindow ===
-
-// Module 10621 (shouldOpenActivityInPopoutWindow)
 const result = require("set").fileFinishedImporting("modules/activities/ActivityPopoutUtils.native.tsx");
 
 export function shouldOpenActivityInPopoutWindow() {

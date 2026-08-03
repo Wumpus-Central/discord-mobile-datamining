@@ -1,6 +1,3 @@
-// === Module 12612: importDefaultResult1 ===
-
-// Module 12612 (importDefaultResult1)
 import importAllResult from "Button";
 import get_ActivityIndicator from "getPrice";
 import importDefaultResult from "addApplication";

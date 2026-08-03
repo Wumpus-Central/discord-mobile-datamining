@@ -1,6 +1,3 @@
-// === Module 14071: BountyVideo ===
-
-// Module 14071 (BountyVideo)
 import _slicedToArray from "_slicedToArray";
 import preload from "preload";
 import get_ActivityIndicator from "hasVideoEnded";

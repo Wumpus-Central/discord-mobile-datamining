@@ -1,6 +1,3 @@
-// === Module 13010: ? ===
-
-// Module 13010
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

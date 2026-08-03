@@ -1,6 +1,3 @@
-// === Module 13929: ConnectGuardianBottomSheet ===
-
-// Module 13929 (ConnectGuardianBottomSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";

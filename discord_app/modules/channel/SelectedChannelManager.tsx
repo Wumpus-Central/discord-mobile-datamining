@@ -1,6 +1,3 @@
-// === Module 16337: handleGuildCreate ===
-
-// Module 16337 (handleGuildCreate)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";
 import { findFirstVoiceChannelId } from "handleConnectionOpen";

@@ -1,6 +1,3 @@
-// === Module 14337: SettingsAppearanceChannelListPreviewNitroUpsellComponent ===
-
-// Module 14337 (SettingsAppearanceChannelListPreviewNitroUpsellComponent)
 import importAllResult from "AnimatedRenderItem";
 import get_ActivityIndicator from "Button";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

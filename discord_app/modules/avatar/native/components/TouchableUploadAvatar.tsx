@@ -1,6 +1,3 @@
-// === Module 16293: TouchableUploadAvatar ===
-
-// Module 16293 (TouchableUploadAvatar)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

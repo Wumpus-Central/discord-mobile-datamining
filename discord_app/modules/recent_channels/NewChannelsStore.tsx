@@ -1,6 +1,3 @@
-// === Module 5790: guildHasCommunity ===
-
-// Module 5790 (guildHasCommunity)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

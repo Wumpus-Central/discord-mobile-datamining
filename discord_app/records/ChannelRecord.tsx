@@ -1,6 +1,3 @@
-// === Module 1376: createChannelRecord ===
-
-// Module 1376 (createChannelRecord)
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import ME from "ME";
 import { ChannelFlags } from "set";

@@ -1,6 +1,3 @@
-// === Module 10985: OrbsBalance ===
-
-// Module 10985 (OrbsBalance)
 import handleOrientationChange from "handleOrientationChange";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import importAllResult from "preload";

@@ -1,6 +1,3 @@
-// === Module 11556: ? ===
-
-// Module 11556
 import { QUARANTINE_APPEAL_LINK } from "QUARANTINE_APPEAL_LINK";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

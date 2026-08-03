@@ -1,6 +1,3 @@
-// === Module 10015: categoryCollapse ===
-
-// Module 10015 (categoryCollapse)
 const result = require("set").fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 
 export const categoryCollapse = function categoryCollapse(id) {

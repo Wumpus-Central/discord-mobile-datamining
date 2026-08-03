@@ -1,6 +1,3 @@
-// === Module 14954: NonCollapsableGestureDetector ===
-
-// Module 14954 (NonCollapsableGestureDetector)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { View } from "get ActivityIndicator";

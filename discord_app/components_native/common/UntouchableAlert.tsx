@@ -1,6 +1,3 @@
-// === Module 14281: componentDidMount ===
-
-// Module 14281 (componentDidMount)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

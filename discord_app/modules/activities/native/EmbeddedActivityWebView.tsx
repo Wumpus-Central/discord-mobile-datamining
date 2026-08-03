@@ -1,6 +1,3 @@
-// === Module 10676: getSafeArea ===
-
-// Module 10676 (getSafeArea)
 import closure_4 from "items3";
 import _slicedToArray from "_slicedToArray";
 import expandEventProperties from "expandEventProperties";

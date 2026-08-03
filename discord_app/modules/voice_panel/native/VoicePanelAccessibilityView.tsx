@@ -1,6 +1,3 @@
-// === Module 15945: VoicePanelAccessibilityView ===
-
-// Module 15945 (VoicePanelAccessibilityView)
 import { VoicePanelPIPModes } from "VoicePanelPIPModes";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

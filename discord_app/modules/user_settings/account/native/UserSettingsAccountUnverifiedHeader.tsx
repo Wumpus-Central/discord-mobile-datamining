@@ -1,6 +1,3 @@
-// === Module 9239: handleOpenEmailVerification ===
-
-// Module 9239 (handleOpenEmailVerification)
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";

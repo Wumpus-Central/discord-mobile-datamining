@@ -1,6 +1,3 @@
-// === Module 14790: MFAButton ===
-
-// Module 14790 (MFAButton)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 5711: resolveNsfwTogglesWithDefaults ===
-
-// Module 5711 (resolveNsfwTogglesWithDefaults)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

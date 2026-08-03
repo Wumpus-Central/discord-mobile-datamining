@@ -1,6 +1,3 @@
-// === Module 11010: useExperimentAssignment ===
-
-// Module 11010 (useExperimentAssignment)
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import initialize from "initialize";

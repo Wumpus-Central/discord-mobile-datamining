@@ -1,6 +1,3 @@
-// === Module 15479: FormSubmitErrorType ===
-
-// Module 15479 (FormSubmitErrorType)
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", ApiValidation: 2, [2]: "ApiValidation" };
 const result = require("set").fileFinishedImporting("modules/threads/FormError.tsx");
 

@@ -1,6 +1,3 @@
-// === Module 9: serialize ===
-
-// Module 9 (serialize)
 import set from "set";
 
 const require = arg1;

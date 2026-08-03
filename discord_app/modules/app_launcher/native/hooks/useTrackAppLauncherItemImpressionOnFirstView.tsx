@@ -1,6 +1,3 @@
-// === Module 11288: useTrackAppLauncherItemImpressionOnFirstView ===
-
-// Module 11288 (useTrackAppLauncherItemImpressionOnFirstView)
 import noop from "noop";
 
 const require = arg1;

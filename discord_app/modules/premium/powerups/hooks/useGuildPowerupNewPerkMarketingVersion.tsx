@@ -1,6 +1,3 @@
-// === Module 11608: useGuildPowerupNewPerkMarketingVersion ===
-
-// Module 11608 (useGuildPowerupNewPerkMarketingVersion)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

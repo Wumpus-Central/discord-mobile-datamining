@@ -1,6 +1,3 @@
-// === Module 4229: createFromServer ===
-
-// Module 4229 (createFromServer)
 import "toJS";
 import addApplication from "addApplication";
 import createFromServer from "createFromServer";

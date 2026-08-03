@@ -1,6 +1,3 @@
-// === Module 7065: GameDepthTier2SmallBadge ===
-
-// Module 7065 (GameDepthTier2SmallBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GameDepthTier2SmallBadge.native.tsx");

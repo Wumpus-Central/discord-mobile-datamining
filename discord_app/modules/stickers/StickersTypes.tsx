@@ -1,6 +1,3 @@
-// === Module 4860: StickerFormat ===
-
-// Module 4860 (StickerFormat)
 import { TypeTag } from "TypeTag";
 
 const result = require("set").fileFinishedImporting("modules/stickers/StickersTypes.tsx");

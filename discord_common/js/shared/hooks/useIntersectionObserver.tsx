@@ -1,6 +1,3 @@
-// === Module 5984: items ===
-
-// Module 5984 (items)
 import noop from "noop";
 
 let c3;

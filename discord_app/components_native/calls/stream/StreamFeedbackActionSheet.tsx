@@ -1,6 +1,3 @@
-// === Module 16193: StreamFeedbackActionSheet ===
-
-// Module 16193 (StreamFeedbackActionSheet)
 import "noop";
 import fetchFingerprint from "fetchFingerprint";
 import { AnalyticEvents } from "ME";

@@ -1,6 +1,3 @@
-// === Module 12699: getGuildSubscriptionRemovalSource ===
-
-// Module 12699 (getGuildSubscriptionRemovalSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

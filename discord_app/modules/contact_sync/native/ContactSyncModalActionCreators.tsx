@@ -1,6 +1,3 @@
-// === Module 11781: handleNameInputScreenOrSuggestions ===
-
-// Module 11781 (handleNameInputScreenOrSuggestions)
 import closure_3 from "ContactSyncLandingPage";
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";

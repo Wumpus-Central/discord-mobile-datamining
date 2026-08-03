@@ -1,6 +1,3 @@
-// === Module 1583: EMPTY_SAFE_AREA_INSETS ===
-
-// Module 1583 (EMPTY_SAFE_AREA_INSETS)
 import { initialWindowMetrics } from "module_1584";
 
 let insets;

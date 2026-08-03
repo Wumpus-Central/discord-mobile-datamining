@@ -1,6 +1,3 @@
-// === Module 5922: toSubmission ===
-
-// Module 5922 (toSubmission)
 let ApplicationWidget;
 class ApplicationWidget {
   constructor(arg0) {

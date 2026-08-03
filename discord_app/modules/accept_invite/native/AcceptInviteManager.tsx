@@ -1,6 +1,3 @@
-// === Module 16142: prototype ===
-
-// Module 16142 (prototype)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

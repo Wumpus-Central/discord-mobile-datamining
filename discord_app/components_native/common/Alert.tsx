@@ -1,6 +1,3 @@
-// === Module 4622: componentDidMount ===
-
-// Module 4622 (componentDidMount)
 import importAllResult from "noop";
 import get_ActivityIndicator from "set";
 import jsxProd from "jsxProd";

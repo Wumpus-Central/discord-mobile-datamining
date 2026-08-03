@@ -1,6 +1,3 @@
-// === Module 11930: useTrackProductCardImpression ===
-
-// Module 11930 (useTrackProductCardImpression)
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { AnalyticEvents } from "ME";

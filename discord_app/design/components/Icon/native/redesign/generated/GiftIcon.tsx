@@ -1,6 +1,3 @@
-// === Module 8777: GiftIcon ===
-
-// Module 8777 (GiftIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

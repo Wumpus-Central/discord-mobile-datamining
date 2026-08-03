@@ -1,6 +1,3 @@
-// === Module 1303: initialize ===
-
-// Module 1303 (initialize)
 import { UserSettingsSections } from "ME";
 import { PersistedStore } from "initialize";
 

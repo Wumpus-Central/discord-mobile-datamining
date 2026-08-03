@@ -1,6 +1,3 @@
-// === Module 15419: MainTabsContentScrim ===
-
-// Module 15419 (MainTabsContentScrim)
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 

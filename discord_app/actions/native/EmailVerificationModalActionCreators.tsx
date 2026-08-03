@@ -1,6 +1,3 @@
-// === Module 9186: ? ===
-
-// Module 9186
 import { AnalyticEvents } from "ME";
 
 const EMAIL_VERIFICATION_MODAL_KEY = "EMAIL_VERIFICATION_MODAL_KEY";

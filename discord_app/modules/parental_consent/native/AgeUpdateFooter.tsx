@@ -1,6 +1,3 @@
-// === Module 16743: AgeUpdateFooter ===
-
-// Module 16743 (AgeUpdateFooter)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 5730: clickstreamExperimentEnabled ===
-
-// Module 5730 (clickstreamExperimentEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

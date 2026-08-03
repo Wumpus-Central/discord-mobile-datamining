@@ -1,6 +1,3 @@
-// === Module 6148: getScreenshakeLocationName ===
-
-// Module 6148 (getScreenshakeLocationName)
 import ConfettiLocation from "ConfettiLocation";
 import { AnalyticEvents } from "ME";
 import importDefaultResult from "apply";

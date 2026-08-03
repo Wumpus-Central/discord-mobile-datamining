@@ -1,6 +1,3 @@
-// === Module 8289: RemoveIcon ===
-
-// Module 8289 (RemoveIcon)
 import "useCheckboxA11yNative";
 import { View } from "registerAsset";
 import mergeGuildAvatar from "mergeGuildAvatar";

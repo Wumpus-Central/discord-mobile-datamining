@@ -1,6 +1,3 @@
-// === Module 9467: useEmojiColorPalette ===
-
-// Module 9467 (useEmojiColorPalette)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import handleThemeChange from "handleThemeChange";
 

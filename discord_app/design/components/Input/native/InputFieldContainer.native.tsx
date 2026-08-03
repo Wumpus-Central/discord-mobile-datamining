@@ -1,6 +1,3 @@
-// === Module 6743: useInputStyles ===
-
-// Module 6743 (useInputStyles)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

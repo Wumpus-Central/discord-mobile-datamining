@@ -1,6 +1,3 @@
-// === Module 3832: MAX_REACTIONS ===
-
-// Module 3832 (MAX_REACTIONS)
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
 import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags";

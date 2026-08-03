@@ -1,6 +1,3 @@
-// === Module 9364: ? ===
-
-// Module 9364
 import importAllResult from "IMPACT_LIGHT";
 import { IMAGE_SIZE } from "IMAGE_SIZE";
 import ME from "ME";

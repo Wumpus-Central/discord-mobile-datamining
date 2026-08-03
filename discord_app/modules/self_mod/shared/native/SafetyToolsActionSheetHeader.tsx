@@ -1,6 +1,3 @@
-// === Module 10180: SafetyToolsActionSheetHeader ===
-
-// Module 10180 (SafetyToolsActionSheetHeader)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

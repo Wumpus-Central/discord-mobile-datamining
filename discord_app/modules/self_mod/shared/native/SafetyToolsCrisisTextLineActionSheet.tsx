@@ -1,6 +1,3 @@
-// === Module 10178: SafetyToolsCrisisTextLineActionSheet ===
-
-// Module 10178 (SafetyToolsCrisisTextLineActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE";

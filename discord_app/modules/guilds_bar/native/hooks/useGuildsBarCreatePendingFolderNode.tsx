@@ -1,6 +1,3 @@
-// === Module 15036: useGuildsBarCreatePendingFolderNode ===
-
-// Module 15036 (useGuildsBarCreatePendingFolderNode)
 import noop from "noop";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 9841: GiftingBadgeLevelUpProgress ===
-
-// Module 9841 (GiftingBadgeLevelUpProgress)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { getSingleRequirementThreshold as closure_4 } from "map";

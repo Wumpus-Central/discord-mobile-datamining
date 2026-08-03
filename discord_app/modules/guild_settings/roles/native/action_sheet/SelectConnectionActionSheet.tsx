@@ -1,6 +1,3 @@
-// === Module 16501: IdentityApplicationRow ===
-
-// Module 16501 (IdentityApplicationRow)
 import _slicedToArray from "_slicedToArray";
 import TableRowGroupTitle from "TableRowGroupTitle";
 import { View } from "BottomSheetModal";

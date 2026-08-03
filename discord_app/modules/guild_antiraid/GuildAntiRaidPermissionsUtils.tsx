@@ -1,6 +1,3 @@
-// === Module 10279: canReportRaid ===
-
-// Module 10279 (canReportRaid)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import computeAlertSettings from "computeAlertSettings";
 import ME from "ME";

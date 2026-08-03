@@ -1,6 +1,3 @@
-// === Module 9196: _confirmEmailChange ===
-
-// Module 9196 (_confirmEmailChange)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

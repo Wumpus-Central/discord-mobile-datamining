@@ -1,6 +1,3 @@
-// === Module 12840: _resetAgeVerification ===
-
-// Module 12840 (_resetAgeVerification)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

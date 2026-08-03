@@ -1,6 +1,3 @@
-// === Module 12466: frozen ===
-
-// Module 12466 (frozen)
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "registerAsset";
 import { MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE as closure_6 } from "GuildFeatures";

@@ -1,6 +1,3 @@
-// === Module 8997: CrunchyrollLinkPreConnect ===
-
-// Module 8997 (CrunchyrollLinkPreConnect)
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes";
 import { PlatformTypes } from "ME";

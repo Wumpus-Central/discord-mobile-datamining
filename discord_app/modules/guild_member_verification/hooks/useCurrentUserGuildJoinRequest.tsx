@@ -1,6 +1,3 @@
-// === Module 9167: useCurrentUserGuildJoinRequest ===
-
-// Module 9167 (useCurrentUserGuildJoinRequest)
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 
 const require = arg1;

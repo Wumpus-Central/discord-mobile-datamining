@@ -1,6 +1,3 @@
-// === Module 10769: ImageSparkleIcon ===
-
-// Module 10769 (ImageSparkleIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

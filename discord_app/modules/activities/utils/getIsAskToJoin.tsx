@@ -1,6 +1,3 @@
-// === Module 10965: getIsAskToJoin ===
-
-// Module 10965 (getIsAskToJoin)
 import { ActivityActionTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");

@@ -1,6 +1,3 @@
-// === Module 15525: SearchMediaObscurityIcon ===
-
-// Module 15525 (SearchMediaObscurityIcon)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "initialize";
 import get_ActivityIndicator from "useEnabledHarmTypesBitmaskForChannelAndAuthorId";

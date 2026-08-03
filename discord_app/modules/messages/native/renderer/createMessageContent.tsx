@@ -1,6 +1,3 @@
-// === Module 7725: createThreadEmbed ===
-
-// Module 7725 (createThreadEmbed)
 import { processColor } from "upsertRelationship";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import addApplication from "addApplication";

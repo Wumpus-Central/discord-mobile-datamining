@@ -1,6 +1,3 @@
-// === Module 15648: CoachmarkVariant ===
-
-// Module 15648 (CoachmarkVariant)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import getMarketingBySurface from "getMarketingBySurface";

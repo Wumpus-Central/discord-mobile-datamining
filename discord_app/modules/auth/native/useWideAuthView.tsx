@@ -1,6 +1,3 @@
-// === Module 9202: useWideAuthView ===
-
-// Module 9202 (useWideAuthView)
 const result = require("set").fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
 
 export default function useWideAuthView() {

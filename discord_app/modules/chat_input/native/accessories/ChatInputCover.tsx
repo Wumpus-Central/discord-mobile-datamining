@@ -1,6 +1,3 @@
-// === Module 11427: ChatInputCover ===
-
-// Module 11427 (ChatInputCover)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

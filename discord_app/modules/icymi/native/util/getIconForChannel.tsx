@@ -1,6 +1,3 @@
-// === Module 15386: getIconForChannel ===
-
-// Module 15386 (getIconForChannel)
 import { ChannelTypes } from "ME";
 
 const result = require("VoiceNormalIcon").fileFinishedImporting("modules/icymi/native/util/getIconForChannel.tsx");

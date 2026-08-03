@@ -1,6 +1,3 @@
-// === Module 14146: useConnectionBannerHeight ===
-
-// Module 14146 (useConnectionBannerHeight)
 import updateState from "updateState";
 import { ConnectivityIndicatorState as closure_4 } from "updateState";
 import { CONNECTION_BANNER_HEIGHT } from "CONNECTION_BANNER_HEIGHT";

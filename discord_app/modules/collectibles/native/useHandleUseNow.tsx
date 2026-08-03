@@ -1,6 +1,3 @@
-// === Module 9810: useHandleUseNow ===
-
-// Module 9810 (useHandleUseNow)
 import noop from "noop";
 import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
 

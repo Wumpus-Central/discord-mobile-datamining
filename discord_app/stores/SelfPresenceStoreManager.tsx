@@ -1,6 +1,3 @@
-// === Module 16338: handleChange ===
-
-// Module 16338 (handleChange)
 import filterPlayingActivities from "filterPlayingActivities";
 import "initialize";
 

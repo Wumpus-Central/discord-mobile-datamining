@@ -1,6 +1,3 @@
-// === Module 13054: LockedIcon ===
-
-// Module 13054 (LockedIcon)
 import "noop";
 import { Fonts } from "ME";
 import jsxProd from "jsxProd";

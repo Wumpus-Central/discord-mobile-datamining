@@ -1,6 +1,3 @@
-// === Module 15401: ContentInventoryReplyRow ===
-
-// Module 15401 (ContentInventoryReplyRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

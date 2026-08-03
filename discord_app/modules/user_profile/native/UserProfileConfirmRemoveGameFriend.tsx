@@ -1,6 +1,3 @@
-// === Module 11730: UserProfileConfirmRemoveGameFriend ===
-
-// Module 11730 (UserProfileConfirmRemoveGameFriend)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

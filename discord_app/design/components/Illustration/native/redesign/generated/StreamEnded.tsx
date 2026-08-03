@@ -1,6 +1,3 @@
-// === Module 10562: getStreamEndedSource ===
-
-// Module 10562 (getStreamEndedSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

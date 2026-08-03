@@ -1,6 +1,3 @@
-// === Module 11731: UserProfileConfirmVideoUnstableConnection ===
-
-// Module 11731 (UserProfileConfirmVideoUnstableConnection)
 import "noop";
 import jsxProd from "jsxProd";
 

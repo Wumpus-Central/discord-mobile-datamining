@@ -1,6 +1,3 @@
-// === Module 7019: EnvelopeSpotIllustration ===
-
-// Module 7019 (EnvelopeSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/EnvelopeSpotIllustration.native.tsx");

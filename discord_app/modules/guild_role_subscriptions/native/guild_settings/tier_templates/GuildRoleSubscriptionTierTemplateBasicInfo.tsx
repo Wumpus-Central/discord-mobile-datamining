@@ -1,6 +1,3 @@
-// === Module 16648: GuildRoleSubscriptionTierTemplateBasicInfo ===
-
-// Module 16648 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { SubscriptionIntervalTypes } from "GuildFeatures";

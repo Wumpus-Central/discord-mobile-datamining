@@ -1,6 +1,3 @@
-// === Module 5183: PromptHeader ===
-
-// Module 5183 (PromptHeader)
 import DropdownOptionRow from "DropdownOptionRow";
 import TermsFieldListItem from "TermsFieldListItem";
 import get_ActivityIndicator from "n";

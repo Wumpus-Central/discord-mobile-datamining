@@ -1,6 +1,3 @@
-// === Module 5700: _launchFrame ===
-
-// Module 5700 (_launchFrame)
 import leaveCurrentFrame from "leaveCurrentFrame";
 import map from "map";
 

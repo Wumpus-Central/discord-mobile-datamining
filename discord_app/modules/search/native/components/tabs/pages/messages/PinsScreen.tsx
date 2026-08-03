@@ -1,6 +1,3 @@
-// === Module 15573: InitialPinsScreen ===
-
-// Module 15573 (InitialPinsScreen)
 import importAllResult from "noop";
 import handleChannelDelete from "handleChannelDelete";
 import { FetchState } from "handleChannelDelete";

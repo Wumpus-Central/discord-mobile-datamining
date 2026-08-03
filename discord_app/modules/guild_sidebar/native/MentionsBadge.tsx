@@ -1,6 +1,3 @@
-// === Module 15215: MentionsBadge ===
-
-// Module 15215 (MentionsBadge)
 import "noop";
 import { jsx } from "jsxProd";
 

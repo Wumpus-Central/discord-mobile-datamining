@@ -1,6 +1,3 @@
-// === Module 3817: version ===
-
-// Module 3817 (version)
 import _slicedToArray from "_slicedToArray";
 
 let closure_3 = [];

@@ -1,6 +1,3 @@
-// === Module 10787: VoiceXIcon ===
-
-// Module 10787 (VoiceXIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 4696: TextSpoilerIcon ===
-
-// Module 4696 (TextSpoilerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 12005: isOnXbox ===
-
-// Module 12005 (isOnXbox)
 import { XBOX_ACTIVITY_APPLICATION_ID as closure_0 } from "items3";
 import { ActivityGamePlatforms } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 7653: FormTitle ===
-
-// Module 7653 (FormTitle)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 14677: MobileSetting ===
-
-// Module 14677 (MobileSetting)
 import noop from "noop";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import zustandStore from "zustandStore";

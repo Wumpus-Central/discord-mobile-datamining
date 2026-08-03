@@ -1,6 +1,3 @@
-// === Module 9185: BaseIdentityVerificationField ===
-
-// Module 9185 (BaseIdentityVerificationField)
 import "noop";
 import { View } from "set";
 import jsxProd from "jsxProd";

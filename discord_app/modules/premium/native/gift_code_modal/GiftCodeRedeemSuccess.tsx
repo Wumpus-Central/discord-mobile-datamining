@@ -1,6 +1,3 @@
-// === Module 12350: GiftCodeRedeemSuccess ===
-
-// Module 12350 (GiftCodeRedeemSuccess)
 import _slicedToArray from "_slicedToArray";
 import BundleStaticPreviewContent from "BundleStaticPreviewContent";
 import get_ActivityIndicator from "SlayerStorefrontItemCard";

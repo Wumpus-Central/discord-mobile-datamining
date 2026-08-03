@@ -1,6 +1,3 @@
-// === Module 8492: getSimilarGames ===
-
-// Module 8492 (getSimilarGames)
 import { Store } from "initialize";
 
 let closure_0 = {};

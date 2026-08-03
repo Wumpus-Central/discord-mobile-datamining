@@ -1,6 +1,3 @@
-// === Module 16372: close ===
-
-// Module 16372 (close)
 import InvitesDisabledRow from "InvitesDisabledRow";
 import GuildSettingsModalServerTag from "GuildSettingsModalServerTag";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

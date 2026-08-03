@@ -1,6 +1,3 @@
-// === Module 6244: useShouldShowPremiumTrialUserSettingsAvatarBadge ===
-
-// Module 6244 (useShouldShowPremiumTrialUserSettingsAvatarBadge)
 import { PremiumSubscriptionSKUToPremiumType as closure_2 } from "GuildFeatures";
 
 let result = require("UNSAFE_isDismissibleContentDismissed").fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");

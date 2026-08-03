@@ -1,6 +1,3 @@
-// === Module 9390: useEmojiPickerData ===
-
-// Module 9390 (useEmojiPickerData)
 import noop from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import { LoadState } from "getEmojiToGroupId";

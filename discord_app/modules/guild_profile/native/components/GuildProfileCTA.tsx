@@ -1,6 +1,3 @@
-// === Module 11968: GuildProfileCTA ===
-
-// Module 11968 (GuildProfileCTA)
 import noop from "noop";
 import ME from "ME";
 import { ProfileCustomizationScrollPositions as closure_6 } from "MAX_FAVORITES";

@@ -1,6 +1,3 @@
-// === Module 9454: useExpressionPickerCategoriesPlaceholderConfig ===
-
-// Module 9454 (useExpressionPickerCategoriesPlaceholderConfig)
 import noop from "noop";
 import { CATEGORY_ICON_SIZE } from "ME";
 import createCacheKey from "createCacheKey";

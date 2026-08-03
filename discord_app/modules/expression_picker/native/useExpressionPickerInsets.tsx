@@ -1,6 +1,3 @@
-// === Module 9605: useExpressionPickerInsets ===
-
-// Module 9605 (useExpressionPickerInsets)
 import noop from "noop";
 import { EXPRESSION_FOOTER_HEIGHT } from "ME";
 

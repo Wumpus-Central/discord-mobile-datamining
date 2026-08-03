@@ -1,6 +1,3 @@
-// === Module 11268: useCustomKeyboardBottomSheetConfig ===
-
-// Module 11268 (useCustomKeyboardBottomSheetConfig)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

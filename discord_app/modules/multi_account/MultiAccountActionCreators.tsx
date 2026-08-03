@@ -1,6 +1,3 @@
-// === Module 11525: validateMultiAccountTokens ===
-
-// Module 11525 (validateMultiAccountTokens)
 import setSecondaryToken from "setSecondaryToken";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";

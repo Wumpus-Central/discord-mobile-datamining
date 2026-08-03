@@ -1,6 +1,3 @@
-// === Module 4212: reset ===
-
-// Module 4212 (reset)
 import set from "set";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";

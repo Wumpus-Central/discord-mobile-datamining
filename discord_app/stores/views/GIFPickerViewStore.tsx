@@ -1,6 +1,3 @@
-// === Module 9608: getFormatFromUrl ===
-
-// Module 9608 (getFormatFromUrl)
 import { GIFType } from "create";
 import { Store } from "initialize";
 

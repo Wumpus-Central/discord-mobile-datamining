@@ -1,6 +1,3 @@
-// === Module 10829: GestureContainer ===
-
-// Module 10829 (GestureContainer)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { useChannelCallStore } from "VoiceChatDrawerState";

@@ -1,6 +1,3 @@
-// === Module 15591: collectGuildThemeAnalyticsMetadata ===
-
-// Module 15591 (collectGuildThemeAnalyticsMetadata)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 
 const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");

@@ -1,6 +1,3 @@
-// === Module 4063: PortalKeyboardState ===
-
-// Module 4063 (PortalKeyboardState)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15640: ReferralProgramCoachmarkImg ===
-
-// Module 15640 (ReferralProgramCoachmarkImg)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";

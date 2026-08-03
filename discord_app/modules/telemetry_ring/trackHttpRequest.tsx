@@ -1,6 +1,3 @@
-// === Module 16124: trackHttpRequest ===
-
-// Module 16124 (trackHttpRequest)
 import { AnalyticEvents } from "ME";
 
 const result = require("trackZoomedInHttpRequest").fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");

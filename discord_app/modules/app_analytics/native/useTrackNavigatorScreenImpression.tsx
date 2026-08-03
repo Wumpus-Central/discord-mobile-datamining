@@ -1,6 +1,3 @@
-// === Module 13630: useTrackNavigatorScreenImpression ===
-
-// Module 13630 (useTrackNavigatorScreenImpression)
 const result = require("set").fileFinishedImporting("modules/app_analytics/native/useTrackNavigatorScreenImpression.tsx");
 
 export const useTrackNavigatorScreenImpression = function useTrackNavigatorScreenImpression(impressionProperties, params) {

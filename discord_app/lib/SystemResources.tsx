@@ -1,6 +1,3 @@
-// === Module 6038: getStats ===
-
-// Module 6038 (getStats)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

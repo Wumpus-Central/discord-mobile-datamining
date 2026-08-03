@@ -1,6 +1,3 @@
-// === Module 15075: importDefaultResult1 ===
-
-// Module 15075 (importDefaultResult1)
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel";
 import updateVoiceState from "updateVoiceState";
 import participantFromServer from "participantFromServer";

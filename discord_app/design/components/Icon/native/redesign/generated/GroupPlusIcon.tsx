@@ -1,6 +1,3 @@
-// === Module 10236: GroupPlusIcon ===
-
-// Module 10236 (GroupPlusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

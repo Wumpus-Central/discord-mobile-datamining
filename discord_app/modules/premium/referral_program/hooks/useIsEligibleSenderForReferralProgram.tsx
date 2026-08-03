@@ -1,6 +1,3 @@
-// === Module 7842: useIsEligibleSenderForReferralProgram ===
-
-// Module 7842 (useIsEligibleSenderForReferralProgram)
 import emitChanges from "emitChanges";
 
 const require = arg1;

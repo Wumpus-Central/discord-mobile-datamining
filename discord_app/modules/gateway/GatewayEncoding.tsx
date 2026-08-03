@@ -1,6 +1,3 @@
-// === Module 12712: pack ===
-
-// Module 12712 (pack)
 import getErlpackEncoding from "getErlpackEncoding";
 import { ProcessArgs } from "get";
 

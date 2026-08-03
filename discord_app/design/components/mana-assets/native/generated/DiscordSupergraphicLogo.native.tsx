@@ -1,6 +1,3 @@
-// === Module 6991: DiscordSupergraphicLogo ===
-
-// Module 6991 (DiscordSupergraphicLogo)
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

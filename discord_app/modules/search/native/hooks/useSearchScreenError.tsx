@@ -1,6 +1,3 @@
-// === Module 15543: useMessageSearchErrorScreen ===
-
-// Module 15543 (useMessageSearchErrorScreen)
 import noop from "noop";
 import handleReaction from "handleReaction";
 import prototype from "prototype";

@@ -1,6 +1,3 @@
-// === Module 5054: fromServer ===
-
-// Module 5054 (fromServer)
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
 import { LibdiscoreStore } from "identity";

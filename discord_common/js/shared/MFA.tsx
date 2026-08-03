@@ -1,6 +1,3 @@
-// === Module 14792: finishMFACheck ===
-
-// Module 14792 (finishMFACheck)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

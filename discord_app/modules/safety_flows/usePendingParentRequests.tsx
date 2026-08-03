@@ -1,6 +1,3 @@
-// === Module 16742: useDerivedPendingRequests ===
-
-// Module 16742 (useDerivedPendingRequests)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";

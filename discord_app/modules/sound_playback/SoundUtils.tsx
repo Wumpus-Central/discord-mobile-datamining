@@ -1,6 +1,3 @@
-// === Module 10285: createSoundForPack ===
-
-// Module 10285 (createSoundForPack)
 import Soundpacks from "Soundpacks";
 import initialize from "initialize";
 import { SoundOutputChannel } from "SoundOutputChannel";

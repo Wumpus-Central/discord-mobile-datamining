@@ -1,6 +1,3 @@
-// === Module 1467: isDiscordProxiedAssetUrl ===
-
-// Module 1467 (isDiscordProxiedAssetUrl)
 import { Routes } from "ME";
 import set from "Url";
 

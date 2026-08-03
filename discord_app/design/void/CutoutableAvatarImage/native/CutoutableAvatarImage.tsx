@@ -1,6 +1,3 @@
-// === Module 12033: StaticNativeCutoutAvatarImage ===
-
-// Module 12033 (StaticNativeCutoutAvatarImage)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { CHANNEL_SPRING_CONFIG } from "n";

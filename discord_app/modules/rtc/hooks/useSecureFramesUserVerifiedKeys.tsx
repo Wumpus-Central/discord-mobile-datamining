@@ -1,6 +1,3 @@
-// === Module 14665: useSecureFramesUserVerifiedKeys ===
-
-// Module 14665 (useSecureFramesUserVerifiedKeys)
 import initialize from "initialize";
 
 const require = arg1;

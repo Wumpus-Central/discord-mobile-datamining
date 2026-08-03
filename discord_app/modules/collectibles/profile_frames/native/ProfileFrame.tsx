@@ -1,6 +1,3 @@
-// === Module 8101: ProfileFrameLayer ===
-
-// Module 8101 (ProfileFrameLayer)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { useFramePreviewOverrideStore as closure_4 } from "measure";

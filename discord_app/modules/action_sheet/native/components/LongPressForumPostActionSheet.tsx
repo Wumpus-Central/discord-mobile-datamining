@@ -1,6 +1,3 @@
-// === Module 10379: ForumPostLongPressActionSheet ===
-
-// Module 10379 (ForumPostLongPressActionSheet)
 import "LockIcon";
 import initialize from "initialize";
 import storeThread from "storeThread";

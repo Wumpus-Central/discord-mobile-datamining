@@ -1,6 +1,3 @@
-// === Module 6223: createFromServer ===
-
-// Module 6223 (createFromServer)
 import _slicedToArray from "_slicedToArray";
 import "toJS";
 

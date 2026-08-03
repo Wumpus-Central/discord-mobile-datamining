@@ -1,6 +1,3 @@
-// === Module 9691: AttachmentIcon ===
-
-// Module 9691 (AttachmentIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

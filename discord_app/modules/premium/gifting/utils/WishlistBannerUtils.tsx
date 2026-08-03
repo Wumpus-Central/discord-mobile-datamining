@@ -1,6 +1,3 @@
-// === Module 9767: getSubtitle ===
-
-// Module 9767 (getSubtitle)
 import { useMemo } from "noop";
 import { intl } from "getSystemLocale";
 import { intl as intl2 } from "getSystemLocale";

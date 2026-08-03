@@ -1,6 +1,3 @@
-// === Module 8679: CollectiblesPreview ===
-
-// Module 8679 (CollectiblesPreview)
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment";
 import { View } from "map";
 import { transformSKUToCollectiblesItem as closure_5 } from "createCollectiblesItemsFromServerResponse";

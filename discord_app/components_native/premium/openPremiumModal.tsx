@@ -1,6 +1,3 @@
-// === Module 9332: openPremiumModal ===
-
-// Module 9332 (openPremiumModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("components_native/premium/openPremiumModal.tsx");
 
 export default function openPremiumModal(closure_0) {

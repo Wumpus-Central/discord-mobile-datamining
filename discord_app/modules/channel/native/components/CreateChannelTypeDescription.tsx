@@ -1,6 +1,3 @@
-// === Module 8284: CreateChannelTypeDescription ===
-
-// Module 8284 (CreateChannelTypeDescription)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { GuildProfileFetchStatus } from "handleUpdateStart";

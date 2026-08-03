@@ -1,6 +1,3 @@
-// === Module 7802: DATE_CONFIG ===
-
-// Module 7802 (DATE_CONFIG)
 import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 9463: useReactors ===
-
-// Module 9463 (useReactors)
 import Divider from "Divider";
 import useInitialValue from "useInitialValue";
 import get_ActivityIndicator from "ReactionTypes";

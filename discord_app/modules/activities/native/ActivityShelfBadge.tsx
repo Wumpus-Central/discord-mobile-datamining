@@ -1,6 +1,3 @@
-// === Module 11273: ActivityShelfBadge ===
-
-// Module 11273 (ActivityShelfBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

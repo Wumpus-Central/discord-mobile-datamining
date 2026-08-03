@@ -1,6 +1,3 @@
-// === Module 14838: IntroScreen ===
-
-// Module 14838 (IntroScreen)
 import _slicedToArray from "_slicedToArray";
 import useSafetyToolsButtonTooltipForChannel from "useSafetyToolsButtonTooltipForChannel";
 import { useState } from "useSafetyToolsButtonTooltipForChannel";

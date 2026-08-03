@@ -1,6 +1,3 @@
-// === Module 9823: LottieIcon ===
-
-// Module 9823 (LottieIcon)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

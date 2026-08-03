@@ -1,6 +1,3 @@
-// === Module 11403: EditPollCreationImageAltTextModal ===
-
-// Module 11403 (EditPollCreationImageAltTextModal)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "set";

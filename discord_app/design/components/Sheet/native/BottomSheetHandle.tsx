@@ -1,6 +1,3 @@
-// === Module 5502: useBottomSheetImperativeHandle ===
-
-// Module 5502 (useBottomSheetImperativeHandle)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheetHandle.tsx");

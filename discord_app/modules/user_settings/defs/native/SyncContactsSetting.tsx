@@ -1,6 +1,3 @@
-// === Module 13893: toggle ===
-
-// Module 13893 (toggle)
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PlatformTypes } from "ME";

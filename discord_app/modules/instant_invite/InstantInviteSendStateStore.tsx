@@ -1,6 +1,3 @@
-// === Module 11819: setSendState ===
-
-// Module 11819 (setSendState)
 import keys from "keys";
 
 let obj = keys.create(() => ({}));

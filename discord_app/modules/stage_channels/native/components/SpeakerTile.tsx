@@ -1,6 +1,3 @@
-// === Module 10852: result ===
-
-// Module 10852 (result)
 import importAllResult from "registerAsset";
 import { View } from "Button";
 import getParticipants from "getParticipants";

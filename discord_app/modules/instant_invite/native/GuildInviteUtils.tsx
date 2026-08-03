@@ -1,6 +1,3 @@
-// === Module 12220: _sendGuildInvite ===
-
-// Module 12220 (_sendGuildInvite)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getSystemLocale from "getSystemLocale";
 import comparator from "comparator";

@@ -1,6 +1,3 @@
-// === Module 13916: useParentalConsentWarning ===
-
-// Module 13916 (useParentalConsentWarning)
 import initialize from "initialize";
 
 const require = arg1;

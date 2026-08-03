@@ -1,6 +1,3 @@
-// === Module 11348: getFirstInvalidOption ===
-
-// Module 11348 (getFirstInvalidOption)
 const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandValidationUtils.tsx");
 
 export const getFirstInvalidOption = function getFirstInvalidOption(activeCommand, first2) {

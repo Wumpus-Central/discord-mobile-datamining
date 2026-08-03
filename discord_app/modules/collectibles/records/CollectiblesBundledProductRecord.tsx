@@ -1,6 +1,3 @@
-// === Module 5806: fromServer ===
-
-// Module 5806 (fromServer)
 let prototype;
 prototype = function CollectiblesBundledProductRecord(arg0) {
   ({ prices: tmp.prices, type: tmp.type, premiumType: tmp.premiumType, name: tmp.name, skuId: tmp.skuId, summary: tmp.summary } = arg0);

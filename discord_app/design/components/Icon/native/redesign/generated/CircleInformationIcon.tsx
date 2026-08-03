@@ -1,6 +1,3 @@
-// === Module 4149: CircleInformationIcon ===
-
-// Module 4149 (CircleInformationIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

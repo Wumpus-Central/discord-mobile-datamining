@@ -1,6 +1,3 @@
-// === Module 9347: EMOJI_PICKER_ACTION_SHEET_KEY ===
-
-// Module 9347 (EMOJI_PICKER_ACTION_SHEET_KEY)
 import { EmojiInteractionPoint } from "set";
 
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";

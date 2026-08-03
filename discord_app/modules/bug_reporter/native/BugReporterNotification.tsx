@@ -1,6 +1,3 @@
-// === Module 10357: BugReporterNotification ===
-
-// Module 10357 (BugReporterNotification)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import zustandStore from "zustandStore";

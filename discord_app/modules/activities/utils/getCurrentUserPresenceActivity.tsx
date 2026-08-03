@@ -1,6 +1,3 @@
-// === Module 10967: getCurrentUserPresenceActivity ===
-
-// Module 10967 (getCurrentUserPresenceActivity)
 const result = require("set").fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
 
 export default function getCurrentUserPresenceActivity(getApplicationActivity, getApplicationActivity2) {

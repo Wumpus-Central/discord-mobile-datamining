@@ -1,6 +1,3 @@
-// === Module 11025: StringSelectComponentActionSheet ===
-
-// Module 11025 (StringSelectComponentActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

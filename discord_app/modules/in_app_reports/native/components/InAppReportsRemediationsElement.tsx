@@ -1,6 +1,3 @@
-// === Module 12422: RemediationsElement ===
-
-// Module 12422 (RemediationsElement)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

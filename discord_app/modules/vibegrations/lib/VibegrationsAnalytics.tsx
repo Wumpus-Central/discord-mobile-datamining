@@ -1,6 +1,3 @@
-// === Module 5697: vibegrationLocation ===
-
-// Module 5697 (vibegrationLocation)
 import addApplication from "addApplication";
 import handleProjectUpsert from "handleProjectUpsert";
 import { AnalyticEvents } from "ME";

@@ -1,6 +1,3 @@
-// === Module 12072: WidgetGameTagIconRole ===
-
-// Module 12072 (WidgetGameTagIconRole)
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
 obj = {
   getText() {

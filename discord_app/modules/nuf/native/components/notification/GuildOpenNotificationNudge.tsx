@@ -1,6 +1,3 @@
-// === Module 15416: GuildOpenNotificationNudge ===
-
-// Module 15416 (GuildOpenNotificationNudge)
 import _slicedToArray from "_slicedToArray";
 import getOrRefreshPushSyncToken from "getOrRefreshPushSyncToken";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

@@ -1,6 +1,3 @@
-// === Module 8983: set ===
-
-// Module 8983 (set)
 import set from "set";
 
 const obj = { PLAYSTATION_APPLICATION_IDS: null, IMPLICIT_IDENTIFY_PREMIUM_APPLICATION_IDS: null, ALL: null };

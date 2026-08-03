@@ -1,6 +1,3 @@
-// === Module 11086: handleSafetyHubRequestAgeVerificationResetModalAction ===
-
-// Module 11086 (handleSafetyHubRequestAgeVerificationResetModalAction)
 import SafetyHubView from "SafetyHubView";
 import { Store } from "initialize";
 

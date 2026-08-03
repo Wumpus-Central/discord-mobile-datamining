@@ -1,6 +1,3 @@
-// === Module 10061: TTIFirstContentfulPaint ===
-
-// Module 10061 (TTIFirstContentfulPaint)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

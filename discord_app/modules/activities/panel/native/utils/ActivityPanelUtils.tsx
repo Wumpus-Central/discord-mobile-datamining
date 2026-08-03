@@ -1,6 +1,3 @@
-// === Module 15856: useIsActivityPanelFullscreen ===
-
-// Module 15856 (useIsActivityPanelFullscreen)
 import participantFromServer from "participantFromServer";
 import { ActivityPanelModes } from "ActivityPanelModes";
 

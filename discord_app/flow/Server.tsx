@@ -1,6 +1,3 @@
-// === Module 1906: PermissionOverwriteType ===
-
-// Module 1906 (PermissionOverwriteType)
 const result = require("set").fileFinishedImporting("flow/Server.tsx");
 
 export const PermissionOverwriteType = { ROLE: 0, [0]: "ROLE", MEMBER: 1, [1]: "MEMBER" };

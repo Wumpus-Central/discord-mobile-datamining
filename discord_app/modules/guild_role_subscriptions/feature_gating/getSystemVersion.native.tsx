@@ -1,6 +1,3 @@
-// === Module 5093: getSystemVersion ===
-
-// Module 5093 (getSystemVersion)
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/getSystemVersion.native.tsx");
 
 export const getSystemVersion = function getSystemVersion() {

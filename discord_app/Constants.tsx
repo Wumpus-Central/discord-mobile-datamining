@@ -1,6 +1,3 @@
-// === Module 676: ME ===
-
-// Module 676 (ME)
 import module_16 from "module_16";
 import INVITE from "INVITE";
 import sum from "sum";

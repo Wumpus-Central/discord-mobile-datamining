@@ -1,6 +1,3 @@
-// === Module 13145: getNewestBadgeableVersion ===
-
-// Module 13145 (getNewestBadgeableVersion)
 const result = require("set").fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
 
 export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0) {

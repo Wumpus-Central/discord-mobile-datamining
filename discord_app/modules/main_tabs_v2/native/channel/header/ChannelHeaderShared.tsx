@@ -1,6 +1,3 @@
-// === Module 10157: TitleWrapper ===
-
-// Module 10157 (TitleWrapper)
 import _slicedToArray from "_slicedToArray";
 import module_10159 from "module_10159";
 import { View } from "map";

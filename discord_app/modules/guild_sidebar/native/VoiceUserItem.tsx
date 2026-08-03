@@ -1,6 +1,3 @@
-// === Module 15131: getVoiceUserHeight ===
-
-// Module 15131 (getVoiceUserHeight)
 import { View } from "HeadphonesSlashIcon";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "set";

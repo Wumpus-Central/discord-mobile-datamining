@@ -1,6 +1,3 @@
-// === Module 12821: getIconURL ===
-
-// Module 12821 (getIconURL)
 import "createExecutable";
 
 const require = arg1;

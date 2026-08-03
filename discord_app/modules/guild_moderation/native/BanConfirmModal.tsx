@@ -1,6 +1,3 @@
-// === Module 11063: BanConfirmModal ===
-
-// Module 11063 (BanConfirmModal)
 import "noop";
 import { jsx } from "jsxProd";
 

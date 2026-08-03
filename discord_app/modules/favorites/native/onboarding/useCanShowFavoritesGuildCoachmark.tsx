@@ -1,6 +1,3 @@
-// === Module 14988: useCanShowFavoritesGuildCoachmark ===
-
-// Module 14988 (useCanShowFavoritesGuildCoachmark)
 import setContent from "setContent";
 import handleConnectionOpen from "handleConnectionOpen";
 

@@ -1,6 +1,3 @@
-// === Module 8081: useProfileTheme ===
-
-// Module 8081 (useProfileTheme)
 import _slicedToArray from "_slicedToArray";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore";

@@ -1,6 +1,3 @@
-// === Module 11523: isStaff ===
-
-// Module 11523 (isStaff)
 import { UserFlags } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");

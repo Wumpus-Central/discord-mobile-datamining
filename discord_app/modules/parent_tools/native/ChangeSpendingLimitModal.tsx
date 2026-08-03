@@ -1,6 +1,3 @@
-// === Module 13957: ChangeSpendingLimitScreen ===
-
-// Module 13957 (ChangeSpendingLimitScreen)
 import Themes from "Themes";
 import TextInput from "TextInput";
 import get_ActivityIndicator from "ModalContent";

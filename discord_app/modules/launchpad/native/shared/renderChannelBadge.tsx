@@ -1,6 +1,3 @@
-// === Module 15832: renderChannelBadge ===
-
-// Module 15832 (renderChannelBadge)
 import "noop";
 import { jsx } from "jsxProd";
 

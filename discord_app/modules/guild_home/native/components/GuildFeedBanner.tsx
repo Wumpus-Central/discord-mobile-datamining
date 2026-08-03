@@ -1,6 +1,3 @@
-// === Module 15444: GuildFeedBanner ===
-
-// Module 15444 (GuildFeedBanner)
 import importAllResult from "useIsWindowLarge";
 import get_ActivityIndicator from "timingNone";
 import initialize from "initialize";

@@ -1,6 +1,3 @@
-// === Module 12874: componentDidMount ===
-
-// Module 12874 (componentDidMount)
 import { jsxs } from "jsxProd";
 import { PureComponent } from "noop";
 import importAllResult from "noop";

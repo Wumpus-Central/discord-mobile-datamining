@@ -1,6 +1,3 @@
-// === Module 12389: createActivityInstanceEmbed ===
-
-// Module 12389 (createActivityInstanceEmbed)
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";
 import fetchFingerprint from "fetchFingerprint";

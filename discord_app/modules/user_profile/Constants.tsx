@@ -1,6 +1,3 @@
-// === Module 8109: USER_PROFILE_TOOLTIP_DELAY ===
-
-// Module 8109 (USER_PROFILE_TOOLTIP_DELAY)
 import { Endpoints } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/Constants.tsx");

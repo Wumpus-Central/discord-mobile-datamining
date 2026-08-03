@@ -1,6 +1,3 @@
-// === Module 15872: useBaseActivityPanelHeaderContent ===
-
-// Module 15872 (useBaseActivityPanelHeaderContent)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "QuestActivityButtonInner";
 import get_ActivityIndicator from "module_15874";

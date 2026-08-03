@@ -1,6 +1,3 @@
-// === Module 13056: styles ===
-
-// Module 13056 (styles)
 import { Fonts } from "ME";
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";

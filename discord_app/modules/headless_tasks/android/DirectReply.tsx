@@ -1,6 +1,3 @@
-// === Module 16798: promise ===
-
-// Module 16798 (promise)
 import trackInvite from "trackInvite";
 import { NativeModules } from "get ActivityIndicator";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";

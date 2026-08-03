@@ -1,6 +1,3 @@
-// === Module 14081: FullscreenEnterIcon ===
-
-// Module 14081 (FullscreenEnterIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

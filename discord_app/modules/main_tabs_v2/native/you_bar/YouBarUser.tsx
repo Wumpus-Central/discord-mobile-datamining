@@ -1,6 +1,3 @@
-// === Module 15278: ? ===
-
-// Module 15278
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

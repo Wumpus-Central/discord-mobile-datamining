@@ -1,6 +1,3 @@
-// === Module 14184: logger ===
-
-// Module 14184 (logger)
 const logger = new require("log").Logger("MobileMuxWrapper");
 let result = require("set").fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
 class MobileMuxWrapper {

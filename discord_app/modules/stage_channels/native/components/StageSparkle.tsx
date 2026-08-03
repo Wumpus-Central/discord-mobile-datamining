@@ -1,6 +1,3 @@
-// === Module 6727: StageSparkleInner ===
-
-// Module 6727 (StageSparkleInner)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

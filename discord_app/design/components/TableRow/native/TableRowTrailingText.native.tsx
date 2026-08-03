@@ -1,6 +1,3 @@
-// === Module 5234: TableRowTrailingText ===
-
-// Module 5234 (TableRowTrailingText)
 import "noop";
 import { jsx } from "jsxProd";
 

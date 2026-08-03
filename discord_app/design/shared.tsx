@@ -1,6 +1,3 @@
-// === Module 4039: AccessibilityAnnouncer ===
-
-// Module 4039 (AccessibilityAnnouncer)
 const result = require("isThemeLight").fileFinishedImporting("design/shared.tsx");
 
 export const AccessibilityAnnouncer = require("module_4008").AccessibilityAnnouncer;

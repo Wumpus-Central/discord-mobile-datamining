@@ -1,6 +1,3 @@
-// === Module 8051: _fetchDefaultSoundsFromApi2 ===
-
-// Module 8051 (_fetchDefaultSoundsFromApi2)
 import sendRequest from "sendRequest";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";

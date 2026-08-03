@@ -1,6 +1,3 @@
-// === Module 6538: openPremiumPlanWhatYouLoseActionSheet ===
-
-// Module 6538 (openPremiumPlanWhatYouLoseActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/native/openPremiumPlanWhatYouLoseActionSheet.tsx");
 
 export default function openPremiumPlanWhatYouLoseActionSheet(arg0) {

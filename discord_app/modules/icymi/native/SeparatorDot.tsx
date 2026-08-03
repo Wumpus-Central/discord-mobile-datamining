@@ -1,6 +1,3 @@
-// === Module 15404: SeparatorDot ===
-
-// Module 15404 (SeparatorDot)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

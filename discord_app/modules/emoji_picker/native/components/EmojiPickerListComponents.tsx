@@ -1,6 +1,3 @@
-// === Module 9396: NSFWRow ===
-
-// Module 9396 (NSFWRow)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import IMAGE_SIZE from "IMAGE_SIZE";

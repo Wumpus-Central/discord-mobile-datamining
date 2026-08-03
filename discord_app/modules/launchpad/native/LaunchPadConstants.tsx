@@ -1,6 +1,3 @@
-// === Module 10492: LAUNCH_PAD_SPRING_CONFIG ===
-
-// Module 10492 (LAUNCH_PAD_SPRING_CONFIG)
 import { Dimensions } from "get ActivityIndicator";
 import set from "set";
 import set from "DCDDeviceManager";

@@ -1,6 +1,3 @@
-// === Module 8019: getShelfBadgeTypeIfActive ===
-
-// Module 8019 (getShelfBadgeTypeIfActive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import ME from "ME";
 import getIndexKey from "getIndexKey";

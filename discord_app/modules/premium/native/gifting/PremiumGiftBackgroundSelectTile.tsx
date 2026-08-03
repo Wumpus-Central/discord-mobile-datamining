@@ -1,6 +1,3 @@
-// === Module 11904: PremiumGiftStyles ===
-
-// Module 11904 (PremiumGiftStyles)
 import "set";
 import get_ActivityIndicator from "messagesProxy";
 import { PremiumGiftStyles } from "GuildFeatures";

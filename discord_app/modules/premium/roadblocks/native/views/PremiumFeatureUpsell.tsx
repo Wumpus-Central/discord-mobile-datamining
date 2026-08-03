@@ -1,6 +1,3 @@
-// === Module 9415: PremiumFeatureUpsellPill ===
-
-// Module 9415 (PremiumFeatureUpsellPill)
 import LinearGradient from "LinearGradient";
 import get_ActivityIndicator from "registerAsset";
 import GuildFeatures from "GuildFeatures";

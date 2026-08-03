@@ -1,6 +1,3 @@
-// === Module 15145: useFavoritesGuildHeaderAction ===
-
-// Module 15145 (useFavoritesGuildHeaderAction)
 import noop from "noop";
 import { Routes } from "ME";
 

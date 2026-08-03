@@ -1,6 +1,3 @@
-// === Module 7901: _fetchMessageInteractionData ===
-
-// Module 7901 (_fetchMessageInteractionData)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

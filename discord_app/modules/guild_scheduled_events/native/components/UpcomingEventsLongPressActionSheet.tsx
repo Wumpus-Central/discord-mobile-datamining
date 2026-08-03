@@ -1,6 +1,3 @@
-// === Module 11488: UpcomingEventsLongPressActionSheet ===
-
-// Module 11488 (UpcomingEventsLongPressActionSheet)
 import "module_5139";
 import { View } from "registerAsset";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

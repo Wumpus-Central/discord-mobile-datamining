@@ -1,6 +1,3 @@
-// === Module 8127: useVideoControls ===
-
-// Module 8127 (useVideoControls)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

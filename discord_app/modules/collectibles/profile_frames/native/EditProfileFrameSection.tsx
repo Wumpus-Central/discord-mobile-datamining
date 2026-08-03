@@ -1,6 +1,3 @@
-// === Module 13747: PX_8 ===
-
-// Module 13747 (PX_8)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { isProfileFrameRecord } from "fromServer";

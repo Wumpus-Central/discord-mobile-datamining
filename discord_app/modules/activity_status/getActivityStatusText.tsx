@@ -1,6 +1,3 @@
-// === Module 9085: getActivityStatusText ===
-
-// Module 9085 (getActivityStatusText)
 import { ActivityTypes } from "ME";
 
 const result = require("isEmbeddedActivity").fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");

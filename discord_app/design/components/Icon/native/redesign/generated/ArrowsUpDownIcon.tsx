@@ -1,6 +1,3 @@
-// === Module 11342: ArrowsUpDownIcon ===
-
-// Module 11342 (ArrowsUpDownIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

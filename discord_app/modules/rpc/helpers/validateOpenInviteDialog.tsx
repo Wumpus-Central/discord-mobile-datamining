@@ -1,6 +1,3 @@
-// === Module 13557: validateOpenInviteDialog ===
-
-// Module 13557 (validateOpenInviteDialog)
 import map from "map";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

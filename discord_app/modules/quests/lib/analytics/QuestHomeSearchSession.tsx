@@ -1,6 +1,3 @@
-// === Module 6023: getOrCreateQuestHomeSearchSession ===
-
-// Module 6023 (getOrCreateQuestHomeSearchSession)
 let c2 = null;
 const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/QuestHomeSearchSession.tsx");
 

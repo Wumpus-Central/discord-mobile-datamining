@@ -1,6 +1,3 @@
-// === Module 14113: EmptyState ===
-
-// Module 14113 (EmptyState)
 import ListEdgeSpacer from "ListEdgeSpacer";
 import importAllResult from "HapticFeedbackTypes";
 import { View } from "dispatcher";

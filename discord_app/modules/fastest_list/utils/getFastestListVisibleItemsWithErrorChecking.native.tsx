@@ -1,6 +1,3 @@
-// === Module 9263: getFastestListVisibleItemsWithErrorChecking ===
-
-// Module 9263 (getFastestListVisibleItemsWithErrorChecking)
 const result = require("set").fileFinishedImporting("modules/fastest_list/utils/getFastestListVisibleItemsWithErrorChecking.native.tsx");
 
 export default function getFastestListVisibleItemsWithErrorChecking(arg0, sectionStart) {

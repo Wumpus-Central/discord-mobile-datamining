@@ -1,6 +1,3 @@
-// === Module 12177: map ===
-
-// Module 12177 (map)
 import { Store } from "initialize";
 
 let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };

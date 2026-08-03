@@ -1,6 +1,3 @@
-// === Module 1344: resolveDefaultGuildThemePreference ===
-
-// Module 1344 (resolveDefaultGuildThemePreference)
 const result = require("set").fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
 
 export const resolveDefaultGuildThemePreference = function resolveDefaultGuildThemePreference(arg0) {

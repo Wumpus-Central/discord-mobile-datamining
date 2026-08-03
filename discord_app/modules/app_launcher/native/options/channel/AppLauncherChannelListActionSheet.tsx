@@ -1,6 +1,3 @@
-// === Module 11379: ChannelIcon ===
-
-// Module 11379 (ChannelIcon)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

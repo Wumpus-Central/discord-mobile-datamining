@@ -1,6 +1,3 @@
-// === Module 11623: GuildPowerupsBottomSheetHeader ===
-
-// Module 11623 (GuildPowerupsBottomSheetHeader)
 import { View } from "useGuildPowerupLevelPerks";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import BoostedGuildTiers from "BoostedGuildTiers";

@@ -1,6 +1,3 @@
-// === Module 10581: StreamQualityLiveIndicator ===
-
-// Module 10581 (StreamQualityLiveIndicator)
 import getPremiumPlanItem from "getPremiumPlanItem";
 import { View } from "openPremiumModal";
 import { AnalyticEvents } from "ME";

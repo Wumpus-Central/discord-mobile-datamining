@@ -1,6 +1,3 @@
-// === Module 9930: useShareChatInputActions ===
-
-// Module 9930 (useShareChatInputActions)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { EmojiIntention } from "set";

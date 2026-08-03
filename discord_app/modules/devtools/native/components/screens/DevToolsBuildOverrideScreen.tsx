@@ -1,6 +1,3 @@
-// === Module 13660: jsx ===
-
-// Module 13660 (jsx)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "TrashIcon";
 import { ScrollView } from "presentAddedFriendToast";

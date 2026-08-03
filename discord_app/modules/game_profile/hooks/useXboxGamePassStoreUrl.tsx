@@ -1,6 +1,3 @@
-// === Module 8503: useXboxGamePassStoreUrl ===
-
-// Module 8503 (useXboxGamePassStoreUrl)
 import { Distributors } from "ME";
 
 const result = require("XBOX_DISCORD_OCID").fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");

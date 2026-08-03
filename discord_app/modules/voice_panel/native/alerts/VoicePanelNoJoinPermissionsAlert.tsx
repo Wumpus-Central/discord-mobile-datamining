@@ -1,6 +1,3 @@
-// === Module 16030: VoicePanelNoJoinPermissionsAlert ===
-
-// Module 16030 (VoicePanelNoJoinPermissionsAlert)
 import "noop";
 import { jsx } from "jsxProd";
 

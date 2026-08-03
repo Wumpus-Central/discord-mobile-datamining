@@ -1,6 +1,3 @@
-// === Module 15480: ThreadChannelStarterMessage ===
-
-// Module 15480 (ThreadChannelStarterMessage)
 import "noop";
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";

@@ -1,6 +1,3 @@
-// === Module 8064: sortEffectLayers ===
-
-// Module 8064 (sortEffectLayers)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

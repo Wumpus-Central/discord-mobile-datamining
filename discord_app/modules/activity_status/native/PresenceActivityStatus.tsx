@@ -1,6 +1,3 @@
-// === Module 9082: PresenceActivityStatus ===
-
-// Module 9082 (PresenceActivityStatus)
 import "noop";
 import { ActivityTypes } from "ME";
 import jsxProd from "jsxProd";

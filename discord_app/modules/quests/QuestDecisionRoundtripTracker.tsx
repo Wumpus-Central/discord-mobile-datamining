@@ -1,6 +1,3 @@
-// === Module 9485: trackRoundtrip ===
-
-// Module 9485 (trackRoundtrip)
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import initializeState from "initializeState";
 import { AnalyticEvents } from "ME";

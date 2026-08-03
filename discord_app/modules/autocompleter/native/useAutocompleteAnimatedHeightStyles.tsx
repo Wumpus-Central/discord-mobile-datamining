@@ -1,6 +1,3 @@
-// === Module 11504: useAutocompleteAnimatedHeightStyles ===
-
-// Module 11504 (useAutocompleteAnimatedHeightStyles)
 let closure_2 = { code: "function useAutocompleteAnimatedHeightStylesTsx1(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}" };
 const result = require("CONFIG_NEVER_ANIMATE_TIMING").fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
 

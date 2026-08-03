@@ -1,6 +1,3 @@
-// === Module 8956: useOAuth2AuthorizeForm ===
-
-// Module 8956 (useOAuth2AuthorizeForm)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import OAuth2Prompts from "OAuth2Prompts";
 import filterScopes from "filterScopes";

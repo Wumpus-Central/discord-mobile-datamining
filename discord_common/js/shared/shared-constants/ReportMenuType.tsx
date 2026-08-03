@@ -1,6 +1,3 @@
-// === Module 7700: set ===
-
-// Module 7700 (set)
 import set from "set";
 
 const obj = { IN_APP: null, REPORT_TO_MOD: null, UNAUTHENTICATED: null, CONSOLE: null };

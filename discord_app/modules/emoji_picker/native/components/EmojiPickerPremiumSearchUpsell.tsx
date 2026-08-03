@@ -1,6 +1,3 @@
-// === Module 9400: EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT ===
-
-// Module 9400 (EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT)
 import importAllResult from "noop";
 import { View } from "PressableBase";
 import mergeGuildAvatar from "mergeGuildAvatar";

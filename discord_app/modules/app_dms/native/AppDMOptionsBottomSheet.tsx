@@ -1,6 +1,3 @@
-// === Module 10164: AppDMOptionsBottomSheet ===
-
-// Module 10164 (AppDMOptionsBottomSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import recomputeFromAppTokens from "recomputeFromAppTokens";

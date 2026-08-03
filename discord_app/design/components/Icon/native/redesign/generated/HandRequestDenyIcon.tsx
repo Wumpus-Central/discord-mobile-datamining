@@ -1,6 +1,3 @@
-// === Module 10745: HandRequestDenyIcon ===
-
-// Module 10745 (HandRequestDenyIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

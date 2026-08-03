@@ -1,6 +1,3 @@
-// === Module 15606: isPrivateChannelMatch ===
-
-// Module 15606 (isPrivateChannelMatch)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import JoinCallButton from "JoinCallButton";
 import initialize from "initialize";

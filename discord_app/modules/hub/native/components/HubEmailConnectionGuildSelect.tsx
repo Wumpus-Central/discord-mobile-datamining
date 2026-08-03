@@ -1,6 +1,3 @@
-// === Module 11853: HubEmailConnectionGuildSelectRow ===
-
-// Module 11853 (HubEmailConnectionGuildSelectRow)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import module_11848 from "module_11848";

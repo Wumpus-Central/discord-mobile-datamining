@@ -1,6 +1,3 @@
-// === Module 1375: initializeFromUserSettings ===
-
-// Module 1375 (initializeFromUserSettings)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { createChannelRecord } from "createChannelRecord";
 import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_4 } from "date";

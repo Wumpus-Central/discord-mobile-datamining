@@ -1,6 +1,3 @@
-// === Module 9459: EmojiPickerCategoriesBackspaceItem ===
-
-// Module 9459 (EmojiPickerCategoriesBackspaceItem)
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
 import { NODE_MARGIN } from "ME";

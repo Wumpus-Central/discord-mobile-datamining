@@ -1,6 +1,3 @@
-// === Module 16691: _navigateToGuild ===
-
-// Module 16691 (_navigateToGuild)
 import getSystemLocale from "getSystemLocale";
 import _getSystemLocale from "_getSystemLocale";
 import map from "map";

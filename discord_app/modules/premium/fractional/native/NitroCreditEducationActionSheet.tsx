@@ -1,6 +1,3 @@
-// === Module 12568: NitroCreditEducationActionSheet ===
-
-// Module 12568 (NitroCreditEducationActionSheet)
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";

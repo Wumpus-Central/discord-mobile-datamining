@@ -1,6 +1,3 @@
-// === Module 10859: StageSectionHeader ===
-
-// Module 10859 (StageSectionHeader)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

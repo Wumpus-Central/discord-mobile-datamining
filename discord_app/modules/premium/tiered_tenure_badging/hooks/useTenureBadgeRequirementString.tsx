@@ -1,6 +1,3 @@
-// === Module 8433: useTenureBadgeRequirementString ===
-
-// Module 8433 (useTenureBadgeRequirementString)
 import { TieredTenureBadge } from "GuildFeatures";
 
 const result = require("getTieredTenureBadgeData").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTenureBadgeRequirementString.tsx");

@@ -1,6 +1,3 @@
-// === Module 10630: enforcing ===
-
-// Module 10630 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeDeviceThermalStateModule");

@@ -1,6 +1,3 @@
-// === Module 11784: setStoredContacts ===
-
-// Module 11784 (setStoredContacts)
 import { Storage } from "Storage";
 import keys from "keys";
 import { Storage as Storage2 } from "Storage";

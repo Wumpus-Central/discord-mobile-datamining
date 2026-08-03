@@ -1,6 +1,3 @@
-// === Module 15076: _fetchActiveChannels ===
-
-// Module 15076 (_fetchActiveChannels)
 import set from "set";
 import { Endpoints } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 14150: ? ===
-
-// Module 14150
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
 let result = require("emitClickEventWithCreative").fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx");
 

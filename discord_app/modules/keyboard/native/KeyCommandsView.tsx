@@ -1,6 +1,3 @@
-// === Module 13646: KeyCommandsView ===
-
-// Module 13646 (KeyCommandsView)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

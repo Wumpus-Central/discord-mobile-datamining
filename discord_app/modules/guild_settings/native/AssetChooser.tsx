@@ -1,6 +1,3 @@
-// === Module 16388: getSource ===
-
-// Module 16388 (getSource)
 import closure_3 from "createCacheKey";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { UPLOAD_MEDIUM_SIZE } from "ME";

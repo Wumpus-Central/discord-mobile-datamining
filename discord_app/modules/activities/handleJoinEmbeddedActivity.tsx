@@ -1,6 +1,3 @@
-// === Module 10620: _handleJoinEmbeddedActivityInternal ===
-
-// Module 10620 (_handleJoinEmbeddedActivityInternal)
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";
 import ensureGuildLoaded from "ensureGuildLoaded";

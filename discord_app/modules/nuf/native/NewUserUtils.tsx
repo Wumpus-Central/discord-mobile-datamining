@@ -1,6 +1,3 @@
-// === Module 16295: _shouldSkipContactSyncStep ===
-
-// Module 16295 (_shouldSkipContactSyncStep)
 import importDefaultResult from "ME";
 import { NativeModules } from "transitionTo";
 import initialize from "initialize";

@@ -1,6 +1,3 @@
-// === Module 10755: useHasVideoPermission ===
-
-// Module 10755 (useHasVideoPermission)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 

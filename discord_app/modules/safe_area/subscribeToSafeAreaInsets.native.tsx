@@ -1,6 +1,3 @@
-// === Module 10437: subscribeToSafeAreaInsets ===
-
-// Module 10437 (subscribeToSafeAreaInsets)
 const result = require("set").fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");
 
 export default function subscribeToSafeAreaInsets(arg0) {

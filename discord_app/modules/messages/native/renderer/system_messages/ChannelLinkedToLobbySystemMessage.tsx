@@ -1,6 +1,3 @@
-// === Module 7830: createChannelLinkedToLobbySystemMessage ===
-
-// Module 7830 (createChannelLinkedToLobbySystemMessage)
 import addApplication from "addApplication";
 import { HelpdeskArticles } from "ME";
 

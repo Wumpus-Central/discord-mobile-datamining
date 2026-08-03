@@ -1,6 +1,3 @@
-// === Module 9580: initialize ===
-
-// Module 9580 (initialize)
 import { Store } from "initialize";
 
 let c0 = null;

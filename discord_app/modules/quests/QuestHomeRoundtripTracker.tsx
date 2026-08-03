@@ -1,6 +1,3 @@
-// === Module 14210: clearTimeoutTimer ===
-
-// Module 14210 (clearTimeoutTimer)
 import { AnalyticEvents } from "ME";
 
 let c4 = 30000;

@@ -1,6 +1,3 @@
-// === Module 10710: openNotificationSettings ===
-
-// Module 10710 (openNotificationSettings)
 import { NativeModules } from "get ActivityIndicator";
 
 let result = require("enforcing").fileFinishedImporting("modules/native_permissions/mobile/openNotificationSettings.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 4298: pollConnectionStats ===
-
-// Module 4298 (pollConnectionStats)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

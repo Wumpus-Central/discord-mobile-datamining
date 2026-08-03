@@ -1,6 +1,3 @@
-// === Module 15166: useGuildPowerupsBoostAction ===
-
-// Module 15166 (useGuildPowerupsBoostAction)
 import useGuildBoostPurchaseHandler from "useGuildBoostPurchaseHandler";
 import noop from "noop";
 import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";

@@ -1,6 +1,3 @@
-// === Module 15853: useExternalPipParticipant ===
-
-// Module 15853 (useExternalPipParticipant)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getParticipants from "getParticipants";

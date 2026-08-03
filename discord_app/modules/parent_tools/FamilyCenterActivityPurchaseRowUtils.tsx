@@ -1,6 +1,3 @@
-// === Module 13952: getCollectibleTypeName ===
-
-// Module 13952 (getCollectibleTypeName)
 import { isAvatarDecorationRecord } from "fromServer";
 import { isProfileEffectRecord } from "fromServer";
 import GuildFeatures from "GuildFeatures";

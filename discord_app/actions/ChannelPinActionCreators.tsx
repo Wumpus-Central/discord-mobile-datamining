@@ -1,6 +1,3 @@
-// === Module 9896: ? ===
-
-// Module 9896
 import V6OrEarlierAPIError from "V6OrEarlierAPIError";
 import handleChannelDelete from "handleChannelDelete";
 import { FetchState } from "handleChannelDelete";

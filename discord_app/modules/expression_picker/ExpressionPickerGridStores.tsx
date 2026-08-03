@@ -1,6 +1,3 @@
-// === Module 9352: withEqualityFn ===
-
-// Module 9352 (withEqualityFn)
 import identity from "identity";
 import createJSONStorage from "createJSONStorage";
 import identity from "identity";

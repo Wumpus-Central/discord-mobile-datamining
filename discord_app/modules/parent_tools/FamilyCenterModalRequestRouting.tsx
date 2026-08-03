@@ -1,6 +1,3 @@
-// === Module 11123: getConnectionPrereqTarget ===
-
-// Module 11123 (getConnectionPrereqTarget)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function getConnectionPrereqTarget(teen_identity) {

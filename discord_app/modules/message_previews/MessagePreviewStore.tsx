@@ -1,6 +1,3 @@
-// === Module 12788: initialize ===
-
-// Module 12788 (initialize)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";

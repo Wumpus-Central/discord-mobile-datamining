@@ -1,6 +1,3 @@
-// === Module 1209: _maybeBackfillMissingBreadcrumbsFromTelemetryRing ===
-
-// Module 1209 (_maybeBackfillMissingBreadcrumbsFromTelemetryRing)
 import timestamp from "timestamp";
 import { NativeModules } from "DCDDeviceManager";
 import ME from "ME";

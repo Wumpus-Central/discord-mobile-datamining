@@ -1,6 +1,3 @@
-// === Module 10978: QuestRewardCodeClaimBottomSheet ===
-
-// Module 10978 (QuestRewardCodeClaimBottomSheet)
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
 import get_ActivityIndicator from "_getQuestsInstructionsToWinReward";
 import initializeState from "initializeState";

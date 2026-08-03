@@ -1,6 +1,3 @@
-// === Module 15311: useNotificationCenterItemAcked ===
-
-// Module 15311 (useNotificationCenterItemAcked)
 import handleLoadFinished from "handleLoadFinished";
 
 const require = arg1;

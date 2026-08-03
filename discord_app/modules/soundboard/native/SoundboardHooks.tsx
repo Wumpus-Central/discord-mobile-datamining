@@ -1,6 +1,3 @@
-// === Module 15920: useSoundButtonStyleConfig ===
-
-// Module 15920 (useSoundButtonStyleConfig)
 import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

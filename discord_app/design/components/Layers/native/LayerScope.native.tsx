@@ -1,6 +1,3 @@
-// === Module 5506: Layer ===
-
-// Module 5506 (Layer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

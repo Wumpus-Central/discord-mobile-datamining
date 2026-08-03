@@ -1,6 +1,3 @@
-// === Module 1917: logger ===
-
-// Module 1917 (logger)
 let c2 = 1000000;
 let closure_3 = "1" === process.env.KV_STORAGE_LOGGING;
 const logger = new require("log").Logger("Runtime");

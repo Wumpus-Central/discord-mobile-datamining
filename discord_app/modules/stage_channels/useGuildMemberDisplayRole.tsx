@@ -1,6 +1,3 @@
-// === Module 5022: getHighestHoistedRole ===
-
-// Module 5022 (getHighestHoistedRole)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

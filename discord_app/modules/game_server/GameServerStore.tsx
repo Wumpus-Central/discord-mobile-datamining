@@ -1,6 +1,3 @@
-// === Module 4101: handleGameServerInstanceCreated ===
-
-// Module 4101 (handleGameServerInstanceCreated)
 import { PersistedStore } from "initialize";
 
 function handleGameServerInstanceCreated(arg0) {

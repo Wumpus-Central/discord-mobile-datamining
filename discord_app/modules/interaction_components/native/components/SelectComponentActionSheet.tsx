@@ -1,6 +1,3 @@
-// === Module 11026: SelectionHeader ===
-
-// Module 11026 (SelectionHeader)
 import useWindowDimensions from "useWindowDimensions";
 import { View } from "AccessibilityAnnouncer";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 8326: initialize ===
-
-// Module 8326 (initialize)
 import fetchFingerprint from "fetchFingerprint";
 import scheduledEventSort from "scheduledEventSort";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";

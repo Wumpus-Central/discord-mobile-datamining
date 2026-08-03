@@ -1,6 +1,3 @@
-// === Module 6032: getSamples ===
-
-// Module 6032 (getSamples)
 const result = require("set").fileFinishedImporting("lib/Histogram.tsx");
 class Histogram {
   constructor() {

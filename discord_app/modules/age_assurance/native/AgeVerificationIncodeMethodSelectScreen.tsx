@@ -1,6 +1,3 @@
-// === Module 6756: AgeVerificationIncodeMethodSelectScreen ===
-
-// Module 6756 (AgeVerificationIncodeMethodSelectScreen)
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 14181: generateSessionId ===
-
-// Module 14181 (generateSessionId)
 const result = require("set").fileFinishedImporting("modules/video-qoe/utils/SessionManager.tsx");
 const prototype = function SessionManager() {
   return Object.create(new.target.prototype);

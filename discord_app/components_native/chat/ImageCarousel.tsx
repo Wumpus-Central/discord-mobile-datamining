@@ -1,6 +1,3 @@
-// === Module 9682: Tile ===
-
-// Module 9682 (Tile)
 import importAllResult from "Text";
 import get_ActivityIndicator from "registerAsset";
 import { DraftType } from "handleChanged";

@@ -1,6 +1,3 @@
-// === Module 4043: getGuildIdFromNavigationState ===
-
-// Module 4043 (getGuildIdFromNavigationState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ME } from "ME";

@@ -1,6 +1,3 @@
-// === Module 15309: ForYouMentionPlaceholder ===
-
-// Module 15309 (ForYouMentionPlaceholder)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

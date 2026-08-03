@@ -1,6 +1,3 @@
-// === Module 11773: keyExtractor ===
-
-// Module 11773 (keyExtractor)
 import MagnifyingGlassIcon from "MagnifyingGlassIcon";
 import get_ActivityIndicator from "getSystemLocale";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

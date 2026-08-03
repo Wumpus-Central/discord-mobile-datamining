@@ -1,6 +1,3 @@
-// === Module 4587: AccessibilityView ===
-
-// Module 4587 (AccessibilityView)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

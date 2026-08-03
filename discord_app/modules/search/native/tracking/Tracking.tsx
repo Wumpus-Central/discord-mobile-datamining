@@ -1,6 +1,3 @@
-// === Module 10114: ? ===
-
-// Module 10114
 import ensureGuildLoaded from "ensureGuildLoaded";
 import prototype from "prototype";
 import { SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY as closure_5 } from "SearchEntrypointAnalyticsLocations";

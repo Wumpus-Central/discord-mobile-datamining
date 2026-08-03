@@ -1,6 +1,3 @@
-// === Module 4649: staticRouteToTranslation ===
-
-// Module 4649 (staticRouteToTranslation)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 
 const require = arg1;

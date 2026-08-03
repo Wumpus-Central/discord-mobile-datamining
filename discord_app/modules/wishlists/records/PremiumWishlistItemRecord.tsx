@@ -1,6 +1,3 @@
-// === Module 8688: fromServer ===
-
-// Module 8688 (fromServer)
 import createFromServer from "createFromServer";
 import "fromServer";
 import { SKUProductLines } from "ME";

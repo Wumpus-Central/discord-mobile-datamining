@@ -1,6 +1,3 @@
-// === Module 5021: getParticipantUserKey ===
-
-// Module 5021 (getParticipantUserKey)
 const result = require("set").fileFinishedImporting("modules/calls/getParticipantUserKey.tsx");
 
 export default function getParticipantUserKey(str, id) {

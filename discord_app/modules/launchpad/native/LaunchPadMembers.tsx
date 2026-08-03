@@ -1,6 +1,3 @@
-// === Module 15843: ? ===
-
-// Module 15843
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

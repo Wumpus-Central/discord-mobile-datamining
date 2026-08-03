@@ -1,6 +1,3 @@
-// === Module 15337: ForYouShowAllRow ===
-
-// Module 15337 (ForYouShowAllRow)
 import registerAsset from "registerAsset";
 import { View } from "Text";
 import { AnalyticEvents } from "ME";

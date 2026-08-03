@@ -1,6 +1,3 @@
-// === Module 11833: getInviteState ===
-
-// Module 11833 (getInviteState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "set";

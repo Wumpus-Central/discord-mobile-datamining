@@ -1,6 +1,3 @@
-// === Module 9279: _fetchChannelConversations ===
-
-// Module 9279 (_fetchChannelConversations)
 import apexExperiment from "apexExperiment";
 import removePendingListFetch from "removePendingListFetch";
 import initialize from "initialize";

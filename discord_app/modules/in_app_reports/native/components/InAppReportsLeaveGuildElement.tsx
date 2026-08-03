@@ -1,6 +1,3 @@
-// === Module 12429: LeaveGuildElement ===
-
-// Module 12429 (LeaveGuildElement)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { AnalyticEvents } from "ME";

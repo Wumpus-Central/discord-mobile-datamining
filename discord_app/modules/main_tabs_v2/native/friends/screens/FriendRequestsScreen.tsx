@@ -1,6 +1,3 @@
-// === Module 15630: compareUserItems ===
-
-// Module 15630 (compareUserItems)
 import TableRowInner from "TableRowInner";
 import getRelativeTimestamp from "getRelativeTimestamp";
 import { View } from "explicitContentFromProto";

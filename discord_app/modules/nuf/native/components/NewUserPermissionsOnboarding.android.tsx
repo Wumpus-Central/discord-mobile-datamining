@@ -1,6 +1,3 @@
-// === Module 11793: NewUserPermissionsOnboarding ===
-
-// Module 11793 (NewUserPermissionsOnboarding)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

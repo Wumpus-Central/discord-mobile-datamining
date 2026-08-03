@@ -1,6 +1,3 @@
-// === Module 7521: StreamSpotIllustration ===
-
-// Module 7521 (StreamSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/StreamSpotIllustration.native.tsx");

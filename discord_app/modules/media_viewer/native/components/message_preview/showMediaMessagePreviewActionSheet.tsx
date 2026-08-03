@@ -1,6 +1,3 @@
-// === Module 12333: showMediaMessagePreviewActionSheet ===
-
-// Module 12333 (showMediaMessagePreviewActionSheet)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

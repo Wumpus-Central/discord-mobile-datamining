@@ -1,6 +1,3 @@
-// === Module 12516: SquareIconButton ===
-
-// Module 12516 (SquareIconButton)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

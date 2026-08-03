@@ -1,6 +1,3 @@
-// === Module 13553: items ===
-
-// Module 13553 (items)
 import closure_2 from "sum";
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";

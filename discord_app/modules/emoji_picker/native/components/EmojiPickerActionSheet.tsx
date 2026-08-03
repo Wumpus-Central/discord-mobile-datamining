@@ -1,6 +1,3 @@
-// === Module 9349: EmojiPickerActionSheet ===
-
-// Module 9349 (EmojiPickerActionSheet)
 import Background from "Background";
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "QUICK_SWITCHER";

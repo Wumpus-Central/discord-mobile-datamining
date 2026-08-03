@@ -1,6 +1,3 @@
-// === Module 9935: isVisualMedia ===
-
-// Module 9935 (isVisualMedia)
 import { MessageAttachmentFlags } from "ME";
 
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;

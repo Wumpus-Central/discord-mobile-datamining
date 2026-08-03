@@ -1,6 +1,3 @@
-// === Module 11449: StyleSheet ===
-
-// Module 11449 (StyleSheet)
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

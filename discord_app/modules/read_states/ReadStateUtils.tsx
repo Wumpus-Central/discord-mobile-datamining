@@ -1,6 +1,3 @@
-// === Module 6178: getHasImportantUnread ===
-
-// Module 6178 (getHasImportantUnread)
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UnreadSetting } from "ReadStateTypes";

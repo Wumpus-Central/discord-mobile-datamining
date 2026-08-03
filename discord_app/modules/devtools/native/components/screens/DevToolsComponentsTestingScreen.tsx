@@ -1,6 +1,3 @@
-// === Module 14827: Select ===
-
-// Module 14827 (Select)
 import importDefaultResult from "_slicedToArray";
 import noop from "noop";
 import { ScrollView } from "dispatcher";

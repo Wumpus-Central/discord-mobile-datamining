@@ -1,6 +1,3 @@
-// === Module 11060: showKickConfirmModal ===
-
-// Module 11060 (showKickConfirmModal)
 const result = require("KickConfirmModal").fileFinishedImporting("modules/guild_moderation/native/showKickConfirmModal.tsx");
 
 export default function showKickConfirmModal(closure_0) {

@@ -1,6 +1,3 @@
-// === Module 5930: NotificationCenterScenes ===
-
-// Module 5930 (NotificationCenterScenes)
 const result = require("set").fileFinishedImporting("modules/notification_center/NotificationCenterItemsTypes.tsx");
 
 export const NotificationCenterScenes = { LANDING: "notification_center_landing" };

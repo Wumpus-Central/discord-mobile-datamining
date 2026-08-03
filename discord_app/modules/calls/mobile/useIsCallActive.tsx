@@ -1,6 +1,3 @@
-// === Module 7767: useIsCallActive ===
-
-// Module 7767 (useIsCallActive)
 import callConnect from "callConnect";
 import getParticipants from "getParticipants";
 import { ParticipantTypes } from "ParticipantTypes";

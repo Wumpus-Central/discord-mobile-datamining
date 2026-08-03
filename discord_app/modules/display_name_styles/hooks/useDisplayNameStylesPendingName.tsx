@@ -1,6 +1,3 @@
-// === Module 14370: useDisplayNameStylesPendingName ===
-
-// Module 14370 (useDisplayNameStylesPendingName)
 import handleFormOpen from "handleFormOpen";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 

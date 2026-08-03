@@ -1,6 +1,3 @@
-// === Module 12506: useGiftCardMobileConsumptionHalfsheet ===
-
-// Module 12506 (useGiftCardMobileConsumptionHalfsheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 10966: getRemoteJoinableActivityPlatform ===
-
-// Module 10966 (getRemoteJoinableActivityPlatform)
 import isConnected from "isConnected";
 import handleUpdate from "handleUpdate";
 import ME from "ME";

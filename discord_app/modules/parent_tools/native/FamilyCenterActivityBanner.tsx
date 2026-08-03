@@ -1,6 +1,3 @@
-// === Module 13925: FamilyCenterActivityBannerButton ===
-
-// Module 13925 (FamilyCenterActivityBannerButton)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

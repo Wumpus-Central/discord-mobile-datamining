@@ -1,6 +1,3 @@
-// === Module 11789: _updateDiscoverability ===
-
-// Module 11789 (_updateDiscoverability)
 import importDefaultResult from "expandEventProperties";
 import set from "set";
 import ME from "ME";

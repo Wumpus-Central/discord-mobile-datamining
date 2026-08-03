@@ -1,6 +1,3 @@
-// === Module 11262: getSimilarApplications ===
-
-// Module 11262 (getSimilarApplications)
 import { Store } from "initialize";
 
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };

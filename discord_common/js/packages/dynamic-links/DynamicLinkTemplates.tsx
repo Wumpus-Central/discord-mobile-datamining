@@ -1,6 +1,3 @@
-// === Module 12446: getInviteDynamicLinkTemplate ===
-
-// Module 12446 (getInviteDynamicLinkTemplate)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
 
 export const getInviteDynamicLinkTemplate = function getInviteDynamicLinkTemplate(baseCode) {

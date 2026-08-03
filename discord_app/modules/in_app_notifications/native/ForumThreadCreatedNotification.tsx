@@ -1,6 +1,3 @@
-// === Module 10356: ForumThreadCreatedNotification ===
-
-// Module 10356 (ForumThreadCreatedNotification)
 import noop from "noop";
 import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "set";
 import { jsx } from "jsxProd";

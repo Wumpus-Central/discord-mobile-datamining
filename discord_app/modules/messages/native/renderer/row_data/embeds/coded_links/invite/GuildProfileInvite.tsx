@@ -1,6 +1,3 @@
-// === Module 12381: createGuildProfileInvite ===
-
-// Module 12381 (createGuildProfileInvite)
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import { CodedLinkExtendedType } from "CodedLinkExtendedType";

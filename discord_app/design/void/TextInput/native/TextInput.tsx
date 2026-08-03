@@ -1,6 +1,3 @@
-// === Module 8295: VoidTextInput ===
-
-// Module 8295 (VoidTextInput)
 import { TextInput } from "get ActivityIndicator";
 import ME from "ME";
 import { jsx } from "jsxProd";

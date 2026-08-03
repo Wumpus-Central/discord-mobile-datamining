@@ -1,6 +1,3 @@
-// === Module 14702: toggle ===
-
-// Module 14702 (toggle)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
 

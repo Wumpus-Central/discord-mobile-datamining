@@ -1,6 +1,3 @@
-// === Module 11045: GuildDisableCommunicationModal ===
-
-// Module 11045 (GuildDisableCommunicationModal)
 import "noop";
 import { jsx } from "jsxProd";
 

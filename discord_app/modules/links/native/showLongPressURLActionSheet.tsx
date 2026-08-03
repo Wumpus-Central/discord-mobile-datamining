@@ -1,6 +1,3 @@
-// === Module 9557: showLongPressURLActionSheet ===
-
-// Module 9557 (showLongPressURLActionSheet)
 let result = require("presentAddedFriendToast").fileFinishedImporting("modules/links/native/showLongPressURLActionSheet.tsx");
 
 export default function showLongPressURLActionSheet(urlString) {

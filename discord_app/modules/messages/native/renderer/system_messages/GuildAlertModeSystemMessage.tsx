@@ -1,6 +1,3 @@
-// === Module 7819: nativeStyleProperties ===
-
-// Module 7819 (nativeStyleProperties)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createCacheKey from "createCacheKey";
 

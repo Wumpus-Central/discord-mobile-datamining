@@ -1,6 +1,3 @@
-// === Module 13136: RowGroup ===
-
-// Module 13136 (RowGroup)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

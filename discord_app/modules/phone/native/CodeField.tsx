@@ -1,6 +1,3 @@
-// === Module 9270: SingleCodeInput ===
-
-// Module 9270 (SingleCodeInput)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

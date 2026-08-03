@@ -1,6 +1,3 @@
-// === Module 11801: SkipHeaderButton ===
-
-// Module 11801 (SkipHeaderButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

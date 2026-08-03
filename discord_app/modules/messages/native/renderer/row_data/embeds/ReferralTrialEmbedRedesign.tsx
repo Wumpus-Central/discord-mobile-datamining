@@ -1,6 +1,3 @@
-// === Module 7839: createReferralTrialEmbedRedesign ===
-
-// Module 7839 (createReferralTrialEmbedRedesign)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";

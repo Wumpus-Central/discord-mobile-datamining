@@ -1,6 +1,3 @@
-// === Module 12780: harvestType ===
-
-// Module 12780 (harvestType)
 import { Store } from "initialize";
 
 let c0 = false;

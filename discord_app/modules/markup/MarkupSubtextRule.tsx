@@ -1,6 +1,3 @@
-// === Module 4652: ? ===
-
-// Module 4652
 const re2 = /\n$/;
 const re3 = /^ *-# +((?!(-#)+)[^\n]+?) *(?:\n|$)/;
 let obj = {

@@ -1,6 +1,3 @@
-// === Module 12777: map ===
-
-// Module 12777 (map)
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import { Store } from "initialize";
 

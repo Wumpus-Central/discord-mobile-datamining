@@ -1,6 +1,3 @@
-// === Module 15220: _handleVoiceChannelPress ===
-
-// Module 15220 (_handleVoiceChannelPress)
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import importAllResult from "useIsConnectedToVoiceChannel";
 import { View } from "useStartTime";

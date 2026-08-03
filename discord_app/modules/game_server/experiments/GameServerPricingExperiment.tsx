@@ -1,6 +1,3 @@
-// === Module 11614: experiment ===
-
-// Module 11614 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable Game Server Pricing", config: { enabled: true } }];

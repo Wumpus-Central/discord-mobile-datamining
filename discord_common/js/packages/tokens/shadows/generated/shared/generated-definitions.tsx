@@ -1,6 +1,3 @@
-// === Module 718: _private ===
-
-// Module 718 (_private)
 const Themes = require("items")._private.Themes;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/tokens/shadows/generated/shared/generated-definitions.tsx");
 

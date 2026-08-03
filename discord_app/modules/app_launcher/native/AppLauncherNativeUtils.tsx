@@ -1,6 +1,3 @@
-// === Module 11239: handleApplicationSelected ===
-
-// Module 11239 (handleApplicationSelected)
 import postMessageToWebView from "postMessageToWebView";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";

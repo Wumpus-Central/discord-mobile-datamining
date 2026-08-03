@@ -1,6 +1,3 @@
-// === Module 8252: useChannelsUserCanStartStageIn ===
-
-// Module 8252 (useChannelsUserCanStartStageIn)
 import comparator from "comparator";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

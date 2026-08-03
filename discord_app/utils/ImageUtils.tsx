@@ -1,6 +1,3 @@
-// === Module 1471: fit ===
-
-// Module 1471 (fit)
 import set from "set";
 import importDefaultResult from "apply";
 

@@ -1,6 +1,3 @@
-// === Module 7936: createMessageFailedEmbed ===
-
-// Module 7936 (createMessageFailedEmbed)
 import { MessageFailureState } from "Changeset";
 import { MessageEmbedTypes } from "ME";
 

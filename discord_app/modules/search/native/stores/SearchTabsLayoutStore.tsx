@@ -1,6 +1,3 @@
-// === Module 11475: handleSearchQuery ===
-
-// Module 11475 (handleSearchQuery)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleReaction from "handleReaction";
 import search from "search";

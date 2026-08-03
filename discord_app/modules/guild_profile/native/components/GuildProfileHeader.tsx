@@ -1,6 +1,3 @@
-// === Module 8470: styles ===
-
-// Module 8470 (styles)
 import Text from "Text";
 import { View } from "transitionToGuild";
 import _getSystemLocale from "_getSystemLocale";

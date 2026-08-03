@@ -1,6 +1,3 @@
-// === Module 10142: useInappropriateConversationSafetyToolsWarningForChannel ===
-
-// Module 10142 (useInappropriateConversationSafetyToolsWarningForChannel)
 const result = require("useInappropriateConversationWarningsForChannel").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx");
 
 export const useInappropriateConversationSafetyToolsWarningForChannel = function useInappropriateConversationSafetyToolsWarningForChannel(channelId) {

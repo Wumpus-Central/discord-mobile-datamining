@@ -1,6 +1,3 @@
-// === Module 16659: useInviteApplicationBypassInfo ===
-
-// Module 16659 (useInviteApplicationBypassInfo)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 12722: _trackAppBackgrounded ===
-
-// Module 12722 (_trackAppBackgrounded)
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS";
 
 let c3;

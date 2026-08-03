@@ -1,6 +1,3 @@
-// === Module 6260: useSelectedTeen ===
-
-// Module 6260 (useSelectedTeen)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 

@@ -1,6 +1,3 @@
-// === Module 16058: ReportProblem ===
-
-// Module 16058 (ReportProblem)
 import "noop";
 import sortActivity from "sortActivity";
 import { AnalyticEvents } from "ME";

@@ -1,6 +1,3 @@
-// === Module 10909: isSocialLayerApplication ===
-
-// Module 10909 (isSocialLayerApplication)
 import { ApplicationFlags } from "ME";
 
 const result = require("items").fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");

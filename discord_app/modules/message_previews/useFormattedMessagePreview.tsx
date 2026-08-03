@@ -1,6 +1,3 @@
-// === Module 10273: formatMessagePreview ===
-
-// Module 10273 (formatMessagePreview)
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

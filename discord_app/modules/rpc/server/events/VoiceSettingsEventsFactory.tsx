@@ -1,6 +1,3 @@
-// === Module 13598: createVoiceSettingsEventHandlers ===
-
-// Module 13598 (createVoiceSettingsEventHandlers)
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import { RPCEvents } from "ME";
 

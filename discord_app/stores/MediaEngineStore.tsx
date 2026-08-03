@@ -1,6 +1,3 @@
-// === Module 4240: _detectH265HardwareDecode ===
-
-// Module 4240 (_detectH265HardwareDecode)
 import apexExperiment from "apexExperiment";
 import initialize from "initialize";
 import module_4241 from "module_4241";

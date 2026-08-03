@@ -1,6 +1,3 @@
-// === Module 14892: useInitialRegistrationStep ===
-
-// Module 14892 (useInitialRegistrationStep)
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import hasConsented from "hasConsented";

@@ -1,6 +1,3 @@
-// === Module 6951: ConnectionCablesSpotIllustration ===
-
-// Module 6951 (ConnectionCablesSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ConnectionCablesSpotIllustration.native.tsx");

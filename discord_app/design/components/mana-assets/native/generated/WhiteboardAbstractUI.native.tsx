@@ -1,6 +1,3 @@
-// === Module 7603: WhiteboardAbstractUI ===
-
-// Module 7603 (WhiteboardAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/WhiteboardAbstractUI.native.tsx");

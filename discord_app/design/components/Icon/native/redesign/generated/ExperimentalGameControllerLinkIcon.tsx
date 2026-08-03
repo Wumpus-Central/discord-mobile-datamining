@@ -1,6 +1,3 @@
-// === Module 8655: ExperimentalGameControllerLinkIcon ===
-
-// Module 8655 (ExperimentalGameControllerLinkIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

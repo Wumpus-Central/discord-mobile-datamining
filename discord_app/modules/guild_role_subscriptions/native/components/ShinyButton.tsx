@@ -1,6 +1,3 @@
-// === Module 9376: ShinyButton ===
-
-// Module 9376 (ShinyButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

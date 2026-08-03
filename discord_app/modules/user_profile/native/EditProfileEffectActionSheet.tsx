@@ -1,6 +1,3 @@
-// === Module 13741: EditProfileEffectInner ===
-
-// Module 13741 (EditProfileEffectInner)
 import _slicedToArray from "_slicedToArray";
 import module_7958 from "module_7958";
 import get_ActivityIndicator from "Text";

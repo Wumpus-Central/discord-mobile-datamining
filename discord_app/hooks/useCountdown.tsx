@@ -1,6 +1,3 @@
-// === Module 6237: useCountdown ===
-
-// Module 6237 (useCountdown)
 require("noop").useCallback;
 const result = require("useForceUpdate").fileFinishedImporting("hooks/useCountdown.tsx");
 

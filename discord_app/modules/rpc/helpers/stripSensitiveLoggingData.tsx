@@ -1,6 +1,3 @@
-// === Module 10637: stripSensitiveLoggingData ===
-
-// Module 10637 (stripSensitiveLoggingData)
 import { RPCCommands } from "ME";
 
 let c1 = "<removed>";

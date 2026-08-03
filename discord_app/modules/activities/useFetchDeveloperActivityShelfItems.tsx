@@ -1,6 +1,3 @@
-// === Module 11305: useFetchDeveloperActivityShelfItems ===
-
-// Module 11305 (useFetchDeveloperActivityShelfItems)
 import noop from "noop";
 import initialize from "initialize";
 import { DevShelfFetchState } from "initialize";

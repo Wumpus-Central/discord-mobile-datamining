@@ -1,6 +1,3 @@
-// === Module 14775: ClipboardCheckIcon ===
-
-// Module 14775 (ClipboardCheckIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 9423: useTrackOpenPopout ===
-
-// Module 9423 (useTrackOpenPopout)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

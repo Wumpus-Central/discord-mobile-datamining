@@ -1,6 +1,3 @@
-// === Module 12339: MediaViewer ===
-
-// Module 12339 (MediaViewer)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "View";
 import get_ActivityIndicator from "handleOrientationChange";

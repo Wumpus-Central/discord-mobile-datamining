@@ -1,6 +1,3 @@
-// === Module 13950: memoResult1 ===
-
-// Module 13950 (memoResult1)
 import importAllResult from "messagesProxy";
 import { View } from "getGuildBadgeSource";
 import mergeGuildAvatar from "mergeGuildAvatar";

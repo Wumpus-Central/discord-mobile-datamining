@@ -1,6 +1,3 @@
-// === Module 15505: useSearchMediaSize ===
-
-// Module 15505 (useSearchMediaSize)
 import MessageEmbedTypes from "MessageEmbedTypes";
 
 let c0;

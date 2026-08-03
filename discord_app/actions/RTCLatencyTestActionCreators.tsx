@@ -1,6 +1,3 @@
-// === Module 16333: fetchRTCLatencyTestRegions ===
-
-// Module 16333 (fetchRTCLatencyTestRegions)
 const result = require("set").fileFinishedImporting("actions/RTCLatencyTestActionCreators.tsx");
 
 export const fetchRTCLatencyTestRegions = function fetchRTCLatencyTestRegions(arg0) {

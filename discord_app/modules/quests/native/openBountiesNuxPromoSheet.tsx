@@ -1,6 +1,3 @@
-// === Module 14111: openBountiesNuxPromoSheet ===
-
-// Module 14111 (openBountiesNuxPromoSheet)
 const BountiesNuxPromoSheet = "BountiesNuxPromoSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/quests/native/openBountiesNuxPromoSheet.tsx");
 

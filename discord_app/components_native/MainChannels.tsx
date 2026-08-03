@@ -1,6 +1,3 @@
-// === Module 14946: DM_WIDTH ===
-
-// Module 14946 (DM_WIDTH)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "set";
 import get_ActivityIndicator from "GuildChannels";

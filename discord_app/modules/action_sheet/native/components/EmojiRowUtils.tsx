@@ -1,6 +1,3 @@
-// === Module 9979: shouldShowEmojiRow ===
-
-// Module 9979 (shouldShowEmojiRow)
 import ME from "ME";
 
 let c3;

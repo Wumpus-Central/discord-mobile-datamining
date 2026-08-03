@@ -1,6 +1,3 @@
-// === Module 13726: EditUserProfileAvatar ===
-
-// Module 13726 (EditUserProfileAvatar)
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "PressableBase";

@@ -1,6 +1,3 @@
-// === Module 6220: Header ===
-
-// Module 6220 (Header)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import context from "context";
 import useDiscountedPremiumProductInfo from "useDiscountedPremiumProductInfo";

@@ -1,6 +1,3 @@
-// === Module 14269: getUsedTemplateChannelsForGuild ===
-
-// Module 14269 (getUsedTemplateChannelsForGuild)
 import initialize from "initialize";
 import { useMemo } from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 9235: saveProfileAndAccountRequest ===
-
-// Module 9235 (saveProfileAndAccountRequest)
 import handleLogout from "handleLogout";
 import ME from "ME";
 import str2 from "str2";

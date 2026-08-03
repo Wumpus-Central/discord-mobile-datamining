@@ -1,6 +1,3 @@
-// === Module 14539: MobilePhoneSettingsIcon ===
-
-// Module 14539 (MobilePhoneSettingsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

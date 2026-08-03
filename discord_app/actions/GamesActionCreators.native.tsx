@@ -1,6 +1,3 @@
-// === Module 10971: fetchJoinSecret ===
-
-// Module 10971 (fetchJoinSecret)
 import module_3890 from "module_3890";
 import ME from "ME";
 import { ActivityIntent } from "items3";

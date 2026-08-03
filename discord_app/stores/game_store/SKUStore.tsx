@@ -1,6 +1,3 @@
-// === Module 4238: addSku ===
-
-// Module 4238 (addSku)
 import createFromServer from "createFromServer";
 import _getSystemLocale from "_getSystemLocale";
 import { Store } from "initialize";

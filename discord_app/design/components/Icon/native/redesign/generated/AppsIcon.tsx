@@ -1,6 +1,3 @@
-// === Module 6616: AppsIcon ===
-
-// Module 6616 (AppsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

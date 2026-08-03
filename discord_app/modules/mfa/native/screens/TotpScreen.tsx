@@ -1,6 +1,3 @@
-// === Module 14791: isValidClipboardCode ===
-
-// Module 14791 (isValidClipboardCode)
 import MFAOptionScreen from "MFAOptionScreen";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

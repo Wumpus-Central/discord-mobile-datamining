@@ -1,6 +1,3 @@
-// === Module 12499: SharedUser ===
-
-// Module 12499 (SharedUser)
 import { View } from "Stack";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";

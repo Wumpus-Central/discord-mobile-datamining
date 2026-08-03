@@ -1,6 +1,3 @@
-// === Module 8357: getDisplayedInviteCode ===
-
-// Module 8357 (getDisplayedInviteCode)
 import { Store } from "initialize";
 
 let c1 = null;

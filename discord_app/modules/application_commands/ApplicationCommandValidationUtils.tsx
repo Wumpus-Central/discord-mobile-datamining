@@ -1,6 +1,3 @@
-// === Module 11346: validateOptionContent ===
-
-// Module 11346 (validateOptionContent)
 import { getValidationErrorText } from "TRUE_OPTION_NAME";
 
 function validateOptionContent(allowEmptyValues) {

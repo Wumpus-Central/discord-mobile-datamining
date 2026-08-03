@@ -1,6 +1,3 @@
-// === Module 6073: handleLoadThreadsSuccess ===
-
-// Module 6073 (handleLoadThreadsSuccess)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";

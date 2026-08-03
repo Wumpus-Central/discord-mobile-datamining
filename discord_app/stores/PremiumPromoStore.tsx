@@ -1,6 +1,3 @@
-// === Module 12824: initialize ===
-
-// Module 12824 (initialize)
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import { Store } from "initialize";

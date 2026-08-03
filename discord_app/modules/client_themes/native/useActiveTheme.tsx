@@ -1,6 +1,3 @@
-// === Module 8835: useActiveThemeType ===
-
-// Module 8835 (useActiveThemeType)
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import reset from "reset";

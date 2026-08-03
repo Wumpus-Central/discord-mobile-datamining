@@ -1,6 +1,3 @@
-// === Module 9162: ClipboardListIcon ===
-
-// Module 9162 (ClipboardListIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

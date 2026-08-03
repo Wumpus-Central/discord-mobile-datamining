@@ -1,6 +1,3 @@
-// === Module 16489: RoleGradientPickerActionSheet ===
-
-// Module 16489 (RoleGradientPickerActionSheet)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "PressableBase";

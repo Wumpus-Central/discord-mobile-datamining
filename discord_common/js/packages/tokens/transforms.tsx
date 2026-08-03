@@ -1,6 +1,3 @@
-// === Module 808: interpolate ===
-
-// Module 808 (interpolate)
 function interpolate(arg0, arg1, arg2) {
   let tmp;
   let tmp2;

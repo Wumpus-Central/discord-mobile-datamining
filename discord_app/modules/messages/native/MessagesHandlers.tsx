@@ -1,6 +1,3 @@
-// === Module 10918: items ===
-
-// Module 10918 (items)
 import getQuestContentName from "getQuestContentName";
 import set from "set";
 import closure_8 from "GuildFeatures";

@@ -1,6 +1,3 @@
-// === Module 5726: trackHeartbeat ===
-
-// Module 5726 (trackHeartbeat)
 import closure_3 from "ME";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import importDefaultResult from "fetchFingerprint";

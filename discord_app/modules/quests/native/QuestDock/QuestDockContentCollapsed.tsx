@@ -1,6 +1,3 @@
-// === Module 14227: ? ===
-
-// Module 14227
 import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import { QUEST_DOCK_MODE_CHANGE_PHYSICS as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT";

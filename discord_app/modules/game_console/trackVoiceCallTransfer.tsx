@@ -1,6 +1,3 @@
-// === Module 9054: trackVoiceCallTransfer ===
-
-// Module 9054 (trackVoiceCallTransfer)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import handleUpdate from "handleUpdate";

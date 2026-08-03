@@ -1,6 +1,3 @@
-// === Module 10835: HideStageChannelCallIcon ===
-
-// Module 10835 (HideStageChannelCallIcon)
 import { View } from "module_4399";
 import getParticipants from "getParticipants";
 import ensureGuildLoaded from "ensureGuildLoaded";

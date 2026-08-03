@@ -1,6 +1,3 @@
-// === Module 8406: useIsPremiumSubscriber ===
-
-// Module 8406 (useIsPremiumSubscriber)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 

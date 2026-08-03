@@ -1,6 +1,3 @@
-// === Module 7862: _sendGiftMessage ===
-
-// Module 7862 (_sendGiftMessage)
 import _resolveGiftCode from "_resolveGiftCode";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";

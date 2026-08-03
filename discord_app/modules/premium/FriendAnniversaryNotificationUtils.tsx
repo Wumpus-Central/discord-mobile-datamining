@@ -1,6 +1,3 @@
-// === Module 14478: onFriendAnniversaryNotificationSettingsChanged ===
-
-// Module 14478 (onFriendAnniversaryNotificationSettingsChanged)
 import { AnalyticEvents } from "ME";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 

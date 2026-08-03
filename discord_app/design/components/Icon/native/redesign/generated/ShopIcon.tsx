@@ -1,6 +1,3 @@
-// === Module 11329: ShopIcon ===
-
-// Module 11329 (ShopIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

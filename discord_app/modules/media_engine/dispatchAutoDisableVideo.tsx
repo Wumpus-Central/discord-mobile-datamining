@@ -1,6 +1,3 @@
-// === Module 12900: dispatchAutoDisableVideo ===
-
-// Module 12900 (dispatchAutoDisableVideo)
 import { MediaEngineContextTypes } from "DesktopSources";
 
 const result = require("set").fileFinishedImporting("modules/media_engine/dispatchAutoDisableVideo.tsx");

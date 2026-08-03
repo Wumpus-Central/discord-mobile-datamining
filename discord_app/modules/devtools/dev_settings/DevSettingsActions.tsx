@@ -1,6 +1,3 @@
-// === Module 14807: toggle ===
-
-// Module 14807 (toggle)
 import getUserAgnosticState from "getUserAgnosticState";
 
 const result = require("set").fileFinishedImporting("modules/devtools/dev_settings/DevSettingsActions.tsx");

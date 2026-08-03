@@ -1,6 +1,3 @@
-// === Module 6540: getWhatYouLoseProfileTier1Source ===
-
-// Module 6540 (getWhatYouLoseProfileTier1Source)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 13708: EditUserProfileBanner ===
-
-// Module 13708 (EditUserProfileBanner)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "setPendingChanges";
 import zustandStore from "zustandStore";

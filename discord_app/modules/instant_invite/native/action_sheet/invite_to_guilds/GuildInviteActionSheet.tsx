@@ -1,6 +1,3 @@
-// === Module 12222: EmptyGuildList ===
-
-// Module 12222 (EmptyGuildList)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "SearchField";

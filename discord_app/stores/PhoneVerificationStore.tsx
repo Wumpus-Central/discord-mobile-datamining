@@ -1,6 +1,3 @@
-// === Module 16364: getCountrySelectorOpened ===
-
-// Module 16364 (getCountrySelectorOpened)
 import { Store } from "initialize";
 
 let c0 = false;

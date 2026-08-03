@@ -1,6 +1,3 @@
-// === Module 5062: emojiTermsImporter ===
-
-// Module 5062 (emojiTermsImporter)
 const result = require("module_5064").fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
 
 export const emojiTermsImporter = {

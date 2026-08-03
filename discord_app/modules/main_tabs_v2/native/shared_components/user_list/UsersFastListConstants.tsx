@@ -1,6 +1,3 @@
-// === Module 8830: PX_24 ===
-
-// Module 8830 (PX_24)
 const PX_24 = require("Themes").space.PX_24;
 const PX_8 = require("Themes").space.PX_8;
 const sum = 18 + PX_24 + PX_8;

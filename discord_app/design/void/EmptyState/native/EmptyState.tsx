@@ -1,6 +1,3 @@
-// === Module 13188: EmptyState ===
-
-// Module 13188 (EmptyState)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

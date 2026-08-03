@@ -1,6 +1,3 @@
-// === Module 16734: EnterEmailScreen ===
-
-// Module 16734 (EnterEmailScreen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 15560: ThreadsScreen ===
-
-// Module 15560 (ThreadsScreen)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";

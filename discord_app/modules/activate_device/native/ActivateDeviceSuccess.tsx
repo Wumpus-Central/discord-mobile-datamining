@@ -1,6 +1,3 @@
-// === Module 13043: ActivateDeviceSuccess ===
-
-// Module 13043 (ActivateDeviceSuccess)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

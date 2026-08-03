@@ -1,6 +1,3 @@
-// === Module 6749: StageChannelAgeVerificationNoticeContent ===
-
-// Module 6749 (StageChannelAgeVerificationNoticeContent)
 import "noop";
 import { View } from "set";
 import { HelpdeskArticles } from "ME";

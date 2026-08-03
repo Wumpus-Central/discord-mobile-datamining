@@ -1,6 +1,3 @@
-// === Module 8058: InfoBox ===
-
-// Module 8058 (InfoBox)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

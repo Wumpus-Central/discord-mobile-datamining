@@ -1,6 +1,3 @@
-// === Module 8484: ClickableGameIcon ===
-
-// Module 8484 (ClickableGameIcon)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

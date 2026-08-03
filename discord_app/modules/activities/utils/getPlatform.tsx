@@ -1,6 +1,3 @@
-// === Module 8022: getPlatform ===
-
-// Module 8022 (getPlatform)
 const result = require("set").fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 
 export default function getPlatform(arg0) {

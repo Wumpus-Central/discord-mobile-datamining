@@ -1,6 +1,3 @@
-// === Module 7943: ANALYTICS_NAME ===
-
-// Module 7943 (ANALYTICS_NAME)
 import { NOTIFICATIONS_INBOX } from "ME";
 
 let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };

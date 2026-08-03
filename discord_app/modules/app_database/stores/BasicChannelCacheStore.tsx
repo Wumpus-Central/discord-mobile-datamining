@@ -1,6 +1,3 @@
-// === Module 1373: hasChannel ===
-
-// Module 1373 (hasChannel)
 import _slicedToArray from "_slicedToArray";
 import allGuildIds from "allGuildIds";
 import { Store } from "initialize";

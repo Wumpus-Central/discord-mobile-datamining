@@ -1,6 +1,3 @@
-// === Module 15113: getFriendInviteCode ===
-
-// Module 15113 (getFriendInviteCode)
 import ButtonBadge from "ButtonBadge";
 import importAllResult from "noop";
 import { View } from "registerAsset";

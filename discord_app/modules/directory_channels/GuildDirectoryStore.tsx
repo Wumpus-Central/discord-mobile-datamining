@@ -1,6 +1,3 @@
-// === Module 10077: isFetching ===
-
-// Module 10077 (isFetching)
 import { DirectoryEntryCategories } from "DirectoryEntryTypes";
 import { Store } from "initialize";
 

@@ -1,6 +1,3 @@
-// === Module 1944: getFriendlyDurationString ===
-
-// Module 1944 (getFriendlyDurationString)
 import importDefaultResult from "combined";
 
 const require = arg1;

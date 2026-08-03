@@ -1,6 +1,3 @@
-// === Module 16519: FeatureCard ===
-
-// Module 16519 (FeatureCard)
 import combined from "combined";
 import get_ActivityIndicator from "module_8308";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

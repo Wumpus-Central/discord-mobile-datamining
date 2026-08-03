@@ -1,6 +1,3 @@
-// === Module 11718: getMutualFriendsLabel ===
-
-// Module 11718 (getMutualFriendsLabel)
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
 
 export default function getMutualFriendsLabel(arg0) {

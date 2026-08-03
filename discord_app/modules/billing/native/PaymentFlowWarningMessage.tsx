@@ -1,6 +1,3 @@
-// === Module 12456: PaymentFlowWarningMessage ===
-
-// Module 12456 (PaymentFlowWarningMessage)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 4415: flattenComponents ===
-
-// Module 4415 (flattenComponents)
 import { CheckpointVersions } from "CheckpointPersonas";
 
 function flattenComponents(components) {

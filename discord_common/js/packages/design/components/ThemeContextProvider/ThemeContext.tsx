@@ -1,6 +1,3 @@
-// === Module 3916: json ===
-
-// Module 3916 (json)
 import importAllResult from "noop";
 import jsxProd from "jsxProd";
 

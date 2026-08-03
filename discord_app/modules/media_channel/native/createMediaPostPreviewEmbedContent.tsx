@@ -1,6 +1,3 @@
-// === Module 12407: createMediaPostPreviewEmbedContent ===
-
-// Module 12407 (createMediaPostPreviewEmbedContent)
 import get_ActivityIndicator from "MAX_THUMBNAIL_COUNT";
 import getUserAgnosticState from "getUserAgnosticState";
 import ensureGuildLoaded from "ensureGuildLoaded";

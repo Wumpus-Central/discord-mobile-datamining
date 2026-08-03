@@ -1,6 +1,3 @@
-// === Module 4401: getDeprecatedModalData ===
-
-// Module 4401 (getDeprecatedModalData)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { ModalAnimation } from "ME";
 

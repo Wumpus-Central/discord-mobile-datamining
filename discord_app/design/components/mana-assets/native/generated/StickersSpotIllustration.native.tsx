@@ -1,6 +1,3 @@
-// === Module 7519: StickersSpotIllustration ===
-
-// Module 7519 (StickersSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/StickersSpotIllustration.native.tsx");

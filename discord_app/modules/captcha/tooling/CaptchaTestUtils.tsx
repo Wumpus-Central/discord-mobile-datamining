@@ -1,6 +1,3 @@
-// === Module 14801: found ===
-
-// Module 14801 (found)
 const entries = Object.entries(require("_testCaptcha").HCaptchaDifficulty);
 const mapped = entries.map((arg0) => {
   let str;

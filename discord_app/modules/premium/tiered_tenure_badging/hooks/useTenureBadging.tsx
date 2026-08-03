@@ -1,6 +1,3 @@
-// === Module 8434: usePremiumSince ===
-
-// Module 8434 (usePremiumSince)
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";

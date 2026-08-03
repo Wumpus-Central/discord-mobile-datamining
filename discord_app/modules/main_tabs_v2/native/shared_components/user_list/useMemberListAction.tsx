@@ -1,6 +1,3 @@
-// === Module 10922: useMemberListAction ===
-
-// Module 10922 (useMemberListAction)
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
 import { View } from "ChatPlusIcon";

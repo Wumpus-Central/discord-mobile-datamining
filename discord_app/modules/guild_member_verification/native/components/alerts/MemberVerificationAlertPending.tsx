@@ -1,6 +1,3 @@
-// === Module 9160: MemberVerificationAlertPending ===
-
-// Module 9160 (MemberVerificationAlertPending)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 9915: ForwardingIcon ===
-
-// Module 9915 (ForwardingIcon)
 import { jsx } from "jsxProd";
 
 const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardingIcon.tsx");

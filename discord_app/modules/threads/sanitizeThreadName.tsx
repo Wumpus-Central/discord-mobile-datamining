@@ -1,6 +1,3 @@
-// === Module 6187: sanitizeThreadName ===
-
-// Module 6187 (sanitizeThreadName)
 const result = require("set").fileFinishedImporting("modules/threads/sanitizeThreadName.tsx");
 
 export default function sanitizeThreadName(str) {

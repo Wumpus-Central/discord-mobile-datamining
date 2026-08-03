@@ -1,6 +1,3 @@
-// === Module 8731: fetchVirtualCurrencyBalance ===
-
-// Module 8731 (fetchVirtualCurrencyBalance)
 import sendRequest from "sendRequest";
 import addSku from "addSku";
 import { Endpoints } from "ME";

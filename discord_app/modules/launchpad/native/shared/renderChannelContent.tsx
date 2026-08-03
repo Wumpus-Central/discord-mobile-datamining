@@ -1,6 +1,3 @@
-// === Module 15830: ChannelContent ===
-
-// Module 15830 (ChannelContent)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";

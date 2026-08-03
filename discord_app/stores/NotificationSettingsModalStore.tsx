@@ -1,6 +1,3 @@
-// === Module 16361: FormStates ===
-
-// Module 16361 (FormStates)
 import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord";
 import setIndex from "setIndex";
 import comparator from "comparator";

@@ -1,6 +1,3 @@
-// === Module 11185: getUsers ===
-
-// Module 11185 (getUsers)
 import noop from "noop";
 import rebuild from "rebuild";
 import { isGuildSelectableChannelType as closure_5 } from "createChannelRecord";

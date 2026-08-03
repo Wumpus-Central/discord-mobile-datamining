@@ -1,6 +1,3 @@
-// === Module 10376: BurstReactionButton ===
-
-// Module 10376 (BurstReactionButton)
 import set from "set";
 import { View } from "Emoji";
 import jsxProd from "jsxProd";

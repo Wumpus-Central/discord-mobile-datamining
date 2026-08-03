@@ -1,6 +1,3 @@
-// === Module 15624: ContactSuggestionRow ===
-
-// Module 15624 (ContactSuggestionRow)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import ME from "ME";

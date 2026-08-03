@@ -1,6 +1,3 @@
-// === Module 11652: GuildPowerupsMultiPerkCard ===
-
-// Module 11652 (GuildPowerupsMultiPerkCard)
 import { View } from "Button";
 import jsxProd from "Button";
 import createCacheKey from "createCacheKey";

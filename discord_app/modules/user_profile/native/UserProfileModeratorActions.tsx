@@ -1,6 +1,3 @@
-// === Module 12053: ModeratorActionRow ===
-
-// Module 12053 (ModeratorActionRow)
 import "initialize";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import ensureGuildLoaded from "ensureGuildLoaded";

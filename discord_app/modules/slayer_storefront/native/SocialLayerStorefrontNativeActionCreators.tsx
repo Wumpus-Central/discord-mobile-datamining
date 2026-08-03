@@ -1,6 +1,3 @@
-// === Module 9768: SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY ===
-
-// Module 9768 (SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY)
 import { jsx } from "jsxProd";
 
 let c4 = "social-layer-storefront-product-details-native-modal";

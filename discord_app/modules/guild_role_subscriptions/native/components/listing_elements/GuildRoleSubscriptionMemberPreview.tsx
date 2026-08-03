@@ -1,6 +1,3 @@
-// === Module 14274: GuildRoleSubscriptionMemberPreview ===
-
-// Module 14274 (GuildRoleSubscriptionMemberPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

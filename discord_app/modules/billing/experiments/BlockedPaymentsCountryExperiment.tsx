@@ -1,6 +1,3 @@
-// === Module 6294: useBlockedPaymentsConfig ===
-
-// Module 6294 (useBlockedPaymentsConfig)
 import createExperiment from "createExperiment";
 import ApexExperiment from "ApexExperiment";
 

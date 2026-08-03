@@ -1,6 +1,3 @@
-// === Module 3904: getGradientThemeFromFlags ===
-
-// Module 3904 (getGradientThemeFromFlags)
 const result = require("set").fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");
 
 export const getGradientThemeFromFlags = function getGradientThemeFromFlags(themeContext) {

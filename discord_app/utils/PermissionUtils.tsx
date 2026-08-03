@@ -1,6 +1,3 @@
-// === Module 3826: applyOverwrites ===
-
-// Module 3826 (applyOverwrites)
 import initialize from "initialize";
 import closure_5 from "initialize";
 import storeThread from "storeThread";

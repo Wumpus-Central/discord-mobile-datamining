@@ -1,6 +1,3 @@
-// === Module 6691: _fetchSocialLayerStorefront ===
-
-// Module 6691 (_fetchSocialLayerStorefront)
 import dispatcher from "dispatcher";
 import getPromotionIdOverride from "getPromotionIdOverride";
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";

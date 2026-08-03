@@ -1,6 +1,3 @@
-// === Module 10685: useLeadingEdgeDebounce ===
-
-// Module 10685 (useLeadingEdgeDebounce)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

@@ -1,6 +1,3 @@
-// === Module 11117: shouldRenderReportFalsePositiveButton ===
-
-// Module 11117 (shouldRenderReportFalsePositiveButton)
 import getFpMessageInfo from "getFpMessageInfo";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 4733: doesImageMatchUpload ===
-
-// Module 4733 (doesImageMatchUpload)
 const result = require("_getAttachmentFile").fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {
 }

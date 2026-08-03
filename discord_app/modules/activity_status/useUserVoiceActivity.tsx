@@ -1,6 +1,3 @@
-// === Module 9074: getVisibleUserVoiceActivity ===
-
-// Module 9074 (getVisibleUserVoiceActivity)
 import importDefaultResult from "ensureGuildLoaded";
 import importDefaultResult1 from "getUncachedChannelPermissions";
 import importDefaultResult2 from "updateVoiceState";

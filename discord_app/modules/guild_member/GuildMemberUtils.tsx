@@ -1,6 +1,3 @@
-// === Module 11039: getGuildMemberAgeInRange ===
-
-// Module 11039 (getGuildMemberAgeInRange)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

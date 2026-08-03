@@ -1,6 +1,3 @@
-// === Module 9543: getFeedbackModalNeutralDesaturatedSource ===
-
-// Module 9543 (getFeedbackModalNeutralDesaturatedSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

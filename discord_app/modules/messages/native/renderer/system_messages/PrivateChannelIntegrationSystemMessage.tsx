@@ -1,6 +1,3 @@
-// === Module 7818: createPrivateChannelIntegrationSystemMessage ===
-
-// Module 7818 (createPrivateChannelIntegrationSystemMessage)
 import { MessageTypes } from "ME";
 
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx");

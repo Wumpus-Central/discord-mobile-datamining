@@ -1,6 +1,3 @@
-// === Module 5747: isSaveableChannel ===
-
-// Module 5747 (isSaveableChannel)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import insertUnsortedGuilds from "insertUnsortedGuilds";

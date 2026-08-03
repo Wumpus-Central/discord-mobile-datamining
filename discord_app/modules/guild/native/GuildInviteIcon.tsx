@@ -1,6 +1,3 @@
-// === Module 11767: render ===
-
-// Module 11767 (render)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

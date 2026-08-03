@@ -1,6 +1,3 @@
-// === Module 16576: useIsCreatorMonetizationRequestRejected ===
-
-// Module 16576 (useIsCreatorMonetizationRequestRejected)
 import { CreatorMonetizationApplicationState as closure_2 } from "CreatorMonetizationApplicationState";
 
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");

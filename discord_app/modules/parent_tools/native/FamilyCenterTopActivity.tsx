@@ -1,6 +1,3 @@
-// === Module 13946: FamilyCenterTopActivity ===
-
-// Module 13946 (FamilyCenterTopActivity)
 import noop from "noop";
 import { View } from "GuildIconSizes";
 import mergeGuildAvatar from "mergeGuildAvatar";

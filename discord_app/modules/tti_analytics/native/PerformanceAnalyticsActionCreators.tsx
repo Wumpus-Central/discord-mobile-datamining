@@ -1,6 +1,3 @@
-// === Module 5963: ttiRecorded ===
-
-// Module 5963 (ttiRecorded)
 const result = require("set").fileFinishedImporting("modules/tti_analytics/native/PerformanceAnalyticsActionCreators.tsx");
 
 export const ttiRecorded = function ttiRecorded(closure_5) {

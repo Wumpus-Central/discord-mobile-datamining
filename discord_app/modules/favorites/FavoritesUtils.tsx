@@ -1,6 +1,3 @@
-// === Module 1865: getFavoritesAwareGuildName ===
-
-// Module 1865 (getFavoritesAwareGuildName)
 import { FAVORITES_RAW_GUILD_ID } from "date";
 import { FAVORITES } from "ME";
 

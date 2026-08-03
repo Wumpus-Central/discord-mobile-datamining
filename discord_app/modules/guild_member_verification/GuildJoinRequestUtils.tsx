@@ -1,6 +1,3 @@
-// === Module 4012: isActionedApplicationStatus ===
-
-// Module 4012 (isActionedApplicationStatus)
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");
 
 export const isActionedApplicationStatus = function isActionedApplicationStatus(applicationStatus) {

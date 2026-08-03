@@ -1,6 +1,3 @@
-// === Module 16546: WarningNotice ===
-
-// Module 16546 (WarningNotice)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

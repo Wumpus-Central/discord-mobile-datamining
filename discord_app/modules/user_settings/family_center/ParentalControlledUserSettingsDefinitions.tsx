@@ -1,6 +1,3 @@
-// === Module 13876: defineParentalControlledSetting ===
-
-// Module 13876 (defineParentalControlledSetting)
 import getSettings from "getSettings";
 
 const require = arg1;

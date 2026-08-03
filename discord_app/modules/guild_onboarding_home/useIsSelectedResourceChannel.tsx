@@ -1,6 +1,3 @@
-// === Module 10429: useIsSelectedResourceChannel ===
-
-// Module 10429 (useIsSelectedResourceChannel)
 import handlePermissionsChange from "handlePermissionsChange";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

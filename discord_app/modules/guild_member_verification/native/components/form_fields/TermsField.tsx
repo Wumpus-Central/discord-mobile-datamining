@@ -1,6 +1,3 @@
-// === Module 9183: TermsField ===
-
-// Module 9183 (TermsField)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

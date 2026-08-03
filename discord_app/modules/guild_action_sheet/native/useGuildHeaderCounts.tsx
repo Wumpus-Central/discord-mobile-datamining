@@ -1,6 +1,3 @@
-// === Module 13128: useGuildHeaderCounts ===
-
-// Module 13128 (useGuildHeaderCounts)
 import noop from "noop";
 import handleInviteData from "handleInviteData";
 import initialize from "initialize";

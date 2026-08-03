@@ -1,6 +1,3 @@
-// === Module 14379: DisplayNameStylesGummyColorPickerSheet ===
-
-// Module 14379 (DisplayNameStylesGummyColorPickerSheet)
 import _slicedToArray from "_slicedToArray";
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "RedesignBottomSheetTitleHeaderBase";

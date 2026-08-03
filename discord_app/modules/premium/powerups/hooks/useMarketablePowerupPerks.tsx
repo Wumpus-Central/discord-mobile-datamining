@@ -1,6 +1,3 @@
-// === Module 12659: set ===
-
-// Module 12659 (set)
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import BoostedGuildTiers from "BoostedGuildTiers";

@@ -1,6 +1,3 @@
-// === Module 7633: AgeVerificationMethodsContainer ===
-
-// Module 7633 (AgeVerificationMethodsContainer)
 import openIncodeAgeVerificationModal from "openIncodeAgeVerificationModal";
 import { VerificationMethod } from "set";
 import { SafetyHubLinks } from "SafetyHubView";

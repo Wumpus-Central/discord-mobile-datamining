@@ -1,6 +1,3 @@
-// === Module 6556: emitMWRCSentryErrorOnFailure ===
-
-// Module 6556 (emitMWRCSentryErrorOnFailure)
 import { CustomCheckoutFlow } from "CustomCheckoutFlow";
 import { Routes } from "ME";
 

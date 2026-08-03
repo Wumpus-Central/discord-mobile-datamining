@@ -1,6 +1,3 @@
-// === Module 8121: isValidImageAttachment ===
-
-// Module 8121 (isValidImageAttachment)
 import presentAddedFriendToast from "presentAddedFriendToast";
 import { NativeModules } from "map";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 8944: GameControllerIcon ===
-
-// Module 8944 (GameControllerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

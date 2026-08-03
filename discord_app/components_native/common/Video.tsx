@@ -1,6 +1,3 @@
-// === Module 8146: VideoComponent ===
-
-// Module 8146 (VideoComponent)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

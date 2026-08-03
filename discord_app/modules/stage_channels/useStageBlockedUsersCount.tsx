@@ -1,6 +1,3 @@
-// === Module 7682: useStageBlockedUsersCount ===
-
-// Module 7682 (useStageBlockedUsersCount)
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 
 const require = arg1;

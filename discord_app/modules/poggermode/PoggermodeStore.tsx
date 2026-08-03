@@ -1,6 +1,3 @@
-// === Module 6146: updateCombo ===
-
-// Module 6146 (updateCombo)
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
 import initialize from "initialize";

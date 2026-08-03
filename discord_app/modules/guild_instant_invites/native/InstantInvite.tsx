@@ -1,6 +1,3 @@
-// === Module 10204: LinkedChannelInvite ===
-
-// Module 10204 (LinkedChannelInvite)
 import importAllResult from "IconButton";
 import { View } from "Text";
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord";

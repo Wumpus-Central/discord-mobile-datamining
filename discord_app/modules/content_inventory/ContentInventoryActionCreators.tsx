@@ -1,6 +1,3 @@
-// === Module 11143: toggleMemberListContentFeedHidden ===
-
-// Module 11143 (toggleMemberListContentFeedHidden)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_5 from "handleConnectionOpen";

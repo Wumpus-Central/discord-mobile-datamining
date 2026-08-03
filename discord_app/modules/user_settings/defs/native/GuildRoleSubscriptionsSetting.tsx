@@ -1,6 +1,3 @@
-// === Module 14240: route ===
-
-// Module 14240 (route)
 import { UserGuildRoleSubscriptionRelationship as closure_3 } from "MAX_SUBSCRIPTION_TIERS";
 import createToggle from "createToggle";
 

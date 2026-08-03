@@ -1,6 +1,3 @@
-// === Module 16298: RedesignSkipAvatarUploadAlertModal ===
-
-// Module 16298 (RedesignSkipAvatarUploadAlertModal)
 import "noop";
 import jsxProd from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 13765: EditGuildProfileBanner ===
-
-// Module 13765 (EditGuildProfileBanner)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import usePremiumUpsellConfig from "usePremiumUpsellConfig";
 import get_ActivityIndicator from "getSystemLocale";

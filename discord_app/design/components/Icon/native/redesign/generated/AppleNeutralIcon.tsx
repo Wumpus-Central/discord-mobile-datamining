@@ -1,6 +1,3 @@
-// === Module 11946: AppleNeutralIcon ===
-
-// Module 11946 (AppleNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

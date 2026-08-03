@@ -1,6 +1,3 @@
-// === Module 15127: ConnectedUserLimit ===
-
-// Module 15127 (ConnectedUserLimit)
 import "noop";
 import { jsx } from "jsxProd";
 

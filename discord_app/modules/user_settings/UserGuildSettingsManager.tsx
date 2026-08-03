@@ -1,6 +1,3 @@
-// === Module 5136: handleConnectionOpen ===
-
-// Module 5136 (handleConnectionOpen)
 import sendRequest from "sendRequest";
 import incrementVersion from "incrementVersion";
 import ensureGuildLoaded from "ensureGuildLoaded";

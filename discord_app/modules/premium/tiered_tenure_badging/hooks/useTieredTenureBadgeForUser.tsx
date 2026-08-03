@@ -1,6 +1,3 @@
-// === Module 8435: useTieredTenureBadgeForUser ===
-
-// Module 8435 (useTieredTenureBadgeForUser)
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 10560: isAVErrorContextOfType ===
-
-// Module 10560 (isAVErrorContextOfType)
 import _slicedToArray from "_slicedToArray";
 import { Store } from "initialize";
 

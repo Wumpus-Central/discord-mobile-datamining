@@ -1,6 +1,3 @@
-// === Module 12485: PillText ===
-
-// Module 12485 (PillText)
 import { HorizontalGradient } from "ME";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

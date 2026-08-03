@@ -1,6 +1,3 @@
-// === Module 13962: FamilyCenterMaxConnectionsBlurb ===
-
-// Module 13962 (FamilyCenterMaxConnectionsBlurb)
 import "set";
 import get_ActivityIndicator from "FamilyCenterAcceptedLinkRow";
 import items from "items";

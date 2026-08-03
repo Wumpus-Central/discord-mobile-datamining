@@ -1,6 +1,3 @@
-// === Module 15961: SecureFramesCallVerificationBottomSheet ===
-
-// Module 15961 (SecureFramesCallVerificationBottomSheet)
 import noop from "noop";
 import createRTCConnection from "createRTCConnection";
 import { AnalyticsSections } from "ME";

@@ -1,6 +1,3 @@
-// === Module 10184: VibingWumpusScreen ===
-
-// Module 10184 (VibingWumpusScreen)
 import _slicedToArray from "_slicedToArray";
 import module_4399 from "module_4399";
 import get_ActivityIndicator from "getSystemLocale";

@@ -1,6 +1,3 @@
-// === Module 11621: orderPowerupListings ===
-
-// Module 11621 (orderPowerupListings)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

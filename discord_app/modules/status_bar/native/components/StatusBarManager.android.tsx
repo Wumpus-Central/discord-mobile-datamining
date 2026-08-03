@@ -1,6 +1,3 @@
-// === Module 6683: pushStackEntry ===
-
-// Module 6683 (pushStackEntry)
 import { StatusBar } from "get ActivityIndicator";
 
 class StatusBarManager {

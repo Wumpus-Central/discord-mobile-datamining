@@ -1,6 +1,3 @@
-// === Module 6513: getMobileNitroMarketingRedesignExperiment ===
-
-// Module 6513 (getMobileNitroMarketingRedesignExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

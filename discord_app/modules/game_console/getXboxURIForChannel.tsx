@@ -1,6 +1,3 @@
-// === Module 9060: getXboxURIForChannel ===
-
-// Module 9060 (getXboxURIForChannel)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import upsertRelationship from "upsertRelationship";

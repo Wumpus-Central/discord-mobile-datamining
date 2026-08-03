@@ -1,6 +1,3 @@
-// === Module 7039: FileUploadSpotIllustration ===
-
-// Module 7039 (FileUploadSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/FileUploadSpotIllustration.native.tsx");

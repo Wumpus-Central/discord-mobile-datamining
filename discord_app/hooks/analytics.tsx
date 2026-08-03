@@ -1,6 +1,3 @@
-// === Module 9418: useAnalyticsContext ===
-
-// Module 9418 (useAnalyticsContext)
 import noop from "noop";
 
 const require = arg1;

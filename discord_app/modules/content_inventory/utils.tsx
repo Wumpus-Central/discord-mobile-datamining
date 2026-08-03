@@ -1,6 +1,3 @@
-// === Module 7918: calculateTimestampDurations ===
-
-// Module 7918 (calculateTimestampDurations)
 function calculateTimestampDurations(end, now) {
   const bound = Math.max(end - now, 0);
   const result = bound / importDefault(687).Millis.SECOND;

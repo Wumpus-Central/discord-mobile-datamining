@@ -1,6 +1,3 @@
-// === Module 14828: StringSelectActionComponent ===
-
-// Module 14828 (StringSelectActionComponent)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

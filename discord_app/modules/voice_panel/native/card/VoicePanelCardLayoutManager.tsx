@@ -1,6 +1,3 @@
-// === Module 10053: getTargetCardSize ===
-
-// Module 10053 (getTargetCardSize)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { PixelRatio } from "get ActivityIndicator";

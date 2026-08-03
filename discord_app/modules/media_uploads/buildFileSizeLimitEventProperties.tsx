@@ -1,6 +1,3 @@
-// === Module 6192: buildFileSizeLimitEventProperties ===
-
-// Module 6192 (buildFileSizeLimitEventProperties)
 const result = require("set").fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
 export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {

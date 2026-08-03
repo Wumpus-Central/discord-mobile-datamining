@@ -1,6 +1,3 @@
-// === Module 13975: FamilyCenterModalAcceptScreen ===
-
-// Module 13975 (FamilyCenterModalAcceptScreen)
 import Button from "Button";
 import { View } from "ModalFooter";
 import jsxProd from "Modal";

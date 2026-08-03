@@ -1,6 +1,3 @@
-// === Module 12859: JoinVoiceChannelButton ===
-
-// Module 12859 (JoinVoiceChannelButton)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

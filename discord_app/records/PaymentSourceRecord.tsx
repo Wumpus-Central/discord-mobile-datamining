@@ -1,6 +1,3 @@
-// === Module 3843: createFromServer ===
-
-// Module 3843 (createFromServer)
 import "toJS";
 import ME from "ME";
 

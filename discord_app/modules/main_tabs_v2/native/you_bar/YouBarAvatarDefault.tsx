@@ -1,6 +1,3 @@
-// === Module 15279: AvatarDefault ===
-
-// Module 15279 (AvatarDefault)
 import { View } from "get ActivityIndicator";
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 import { StatusTypes } from "ME";

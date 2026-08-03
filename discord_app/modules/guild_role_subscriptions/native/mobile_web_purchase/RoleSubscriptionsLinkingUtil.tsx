@@ -1,6 +1,3 @@
-// === Module 11827: performRoleSubscriptionUpsellRedirect ===
-
-// Module 11827 (performRoleSubscriptionUpsellRedirect)
 import timestamp from "timestamp";
 import ME from "ME";
 import { StaticChannelRoute } from "set";

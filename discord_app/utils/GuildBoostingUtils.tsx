@@ -1,6 +1,3 @@
-// === Module 4085: getGuildTierFromGuild ===
-
-// Module 4085 (getGuildTierFromGuild)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";

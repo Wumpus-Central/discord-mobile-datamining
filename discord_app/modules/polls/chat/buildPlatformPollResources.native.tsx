@@ -1,6 +1,3 @@
-// === Module 8004: buildPlatformPollResources ===
-
-// Module 8004 (buildPlatformPollResources)
 import importDefaultResult from "apply";
 
 const require = arg1;

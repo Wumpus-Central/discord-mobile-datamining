@@ -1,6 +1,3 @@
-// === Module 9764: handleUserSettingsStoreUpdate ===
-
-// Module 9764 (handleUserSettingsStoreUpdate)
 import _getSystemLocale from "_getSystemLocale";
 import { Store } from "initialize";
 

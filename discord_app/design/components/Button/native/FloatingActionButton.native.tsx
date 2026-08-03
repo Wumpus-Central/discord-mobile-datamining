@@ -1,6 +1,3 @@
-// === Module 8247: styles ===
-
-// Module 8247 (styles)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

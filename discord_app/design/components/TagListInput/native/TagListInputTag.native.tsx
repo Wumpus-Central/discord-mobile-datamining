@@ -1,6 +1,3 @@
-// === Module 8296: TagListInputTagComponent ===
-
-// Module 8296 (TagListInputTagComponent)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

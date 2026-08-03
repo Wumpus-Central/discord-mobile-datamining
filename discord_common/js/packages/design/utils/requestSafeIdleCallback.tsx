@@ -1,6 +1,3 @@
-// === Module 696: setOriginWindow ===
-
-// Module 696 (setOriginWindow)
 import getGlobalObject from "getGlobalObject";
 
 getGlobalObject = getGlobalObject.getGlobalObject();

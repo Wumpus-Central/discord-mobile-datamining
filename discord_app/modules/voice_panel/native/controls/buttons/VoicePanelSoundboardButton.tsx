@@ -1,6 +1,3 @@
-// === Module 16041: SoundboardButton ===
-
-// Module 16041 (SoundboardButton)
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

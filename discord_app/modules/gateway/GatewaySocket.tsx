@@ -1,6 +1,3 @@
-// === Module 12711: noop ===
-
-// Module 12711 (noop)
 import set from "set";
 import pack from "pack";
 import refreshSourceMapCookie from "refreshSourceMapCookie";

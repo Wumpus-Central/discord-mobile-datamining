@@ -1,6 +1,3 @@
-// === Module 14340: useSyncedModeThemeName ===
-
-// Module 14340 (useSyncedModeThemeName)
 import handleThemeChange from "handleThemeChange";
 import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_4 } from "items1";
 

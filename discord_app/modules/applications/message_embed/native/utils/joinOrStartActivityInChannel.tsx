@@ -1,6 +1,3 @@
-// === Module 11153: _joinOrStartActivityInChannel ===
-
-// Module 11153 (_joinOrStartActivityInChannel)
 import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity";
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";

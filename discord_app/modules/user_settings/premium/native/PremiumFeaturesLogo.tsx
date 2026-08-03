@@ -1,6 +1,3 @@
-// === Module 9337: PremiumFeaturesLogo ===
-
-// Module 9337 (PremiumFeaturesLogo)
 import "noop";
 import { PremiumTypes } from "GuildFeatures";
 import { jsx } from "jsxProd";

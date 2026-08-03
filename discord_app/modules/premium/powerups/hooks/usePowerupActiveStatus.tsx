@@ -1,6 +1,3 @@
-// === Module 11604: usePowerupActiveStatus ===
-
-// Module 11604 (usePowerupActiveStatus)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import BoostedGuildTiers from "BoostedGuildTiers";

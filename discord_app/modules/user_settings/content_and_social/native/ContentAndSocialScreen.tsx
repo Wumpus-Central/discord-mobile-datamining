@@ -1,6 +1,3 @@
-// === Module 14676: ContentAndSocialSettings ===
-
-// Module 14676 (ContentAndSocialSettings)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "useAuthorizedSlayerApplications";

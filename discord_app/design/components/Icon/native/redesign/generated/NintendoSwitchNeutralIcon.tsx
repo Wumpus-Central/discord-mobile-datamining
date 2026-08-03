@@ -1,6 +1,3 @@
-// === Module 11944: NintendoSwitchNeutralIcon ===
-
-// Module 11944 (NintendoSwitchNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

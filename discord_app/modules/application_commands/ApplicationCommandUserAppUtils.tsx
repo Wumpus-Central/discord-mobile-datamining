@@ -1,6 +1,3 @@
-// === Module 7866: getEphemeralReasonMessage ===
-
-// Module 7866 (getEphemeralReasonMessage)
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");
 
 export const getEphemeralReasonMessage = function getEphemeralReasonMessage(ephemerality_reason1) {

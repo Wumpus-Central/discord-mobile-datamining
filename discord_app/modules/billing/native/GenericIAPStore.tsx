@@ -1,6 +1,3 @@
-// === Module 5678: isGenericIapConnected ===
-
-// Module 5678 (isGenericIapConnected)
 import { Store } from "initialize";
 
 const require = arg1;

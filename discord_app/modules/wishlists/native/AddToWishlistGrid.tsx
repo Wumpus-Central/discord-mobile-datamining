@@ -1,6 +1,3 @@
-// === Module 12216: AddToWishlistGrid ===
-
-// Module 12216 (AddToWishlistGrid)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

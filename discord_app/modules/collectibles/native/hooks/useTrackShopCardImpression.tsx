@@ -1,6 +1,3 @@
-// === Module 8672: useTrackShopCardImpression ===
-
-// Module 8672 (useTrackShopCardImpression)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

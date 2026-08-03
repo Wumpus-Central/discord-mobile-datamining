@@ -1,6 +1,3 @@
-// === Module 13982: ScheduleRuleRow ===
-
-// Module 13982 (ScheduleRuleRow)
 import { View } from "get ActivityIndicator";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 11882: ? ===
-
-// Module 11882
 import noop from "noop";
 
 const require = arg1;

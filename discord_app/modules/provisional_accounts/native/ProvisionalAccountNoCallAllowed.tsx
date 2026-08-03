@@ -1,6 +1,3 @@
-// === Module 12876: ProvisionalAccountNoCallAllowed ===
-
-// Module 12876 (ProvisionalAccountNoCallAllowed)
 import "noop";
 import { HelpdeskArticles } from "ME";
 import { jsx } from "jsxProd";

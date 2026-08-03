@@ -1,6 +1,3 @@
-// === Module 6334: applyAppleReceipt ===
-
-// Module 6334 (applyAppleReceipt)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_8 from "usePremiumPlanPurchasedStore";
 import "set";

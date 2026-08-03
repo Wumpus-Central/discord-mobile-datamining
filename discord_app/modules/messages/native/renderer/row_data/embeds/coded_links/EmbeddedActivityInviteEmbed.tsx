@@ -1,6 +1,3 @@
-// === Module 12379: createEmbeddedActivityInviteEmbed ===
-
-// Module 12379 (createEmbeddedActivityInviteEmbed)
 import _slicedToArray from "_slicedToArray";
 import { Image } from "computeChannelName";
 import participantFromServer from "participantFromServer";

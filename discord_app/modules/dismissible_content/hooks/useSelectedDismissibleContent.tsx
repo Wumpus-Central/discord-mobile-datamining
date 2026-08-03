@@ -1,6 +1,3 @@
-// === Module 8451: useSelectedDismissibleContent ===
-
-// Module 8451 (useSelectedDismissibleContent)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

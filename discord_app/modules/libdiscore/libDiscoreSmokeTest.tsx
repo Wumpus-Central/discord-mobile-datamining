@@ -1,6 +1,3 @@
-// === Module 16782: libDiscoreSmokeTest ===
-
-// Module 16782 (libDiscoreSmokeTest)
 import items from "items";
 import { AnalyticEvents } from "ME";
 

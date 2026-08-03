@@ -1,6 +1,3 @@
-// === Module 11555: useLongestChannelMessageBeforeReply ===
-
-// Module 11555 (useLongestChannelMessageBeforeReply)
 import reinjectEphemerals from "reinjectEphemerals";
 
 const require = arg1;

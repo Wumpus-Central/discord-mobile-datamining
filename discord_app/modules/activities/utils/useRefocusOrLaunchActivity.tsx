@@ -1,6 +1,3 @@
-// === Module 10518: useRefocusOrLaunchActivity ===
-
-// Module 10518 (useRefocusOrLaunchActivity)
 import fetchApplication from "fetchApplication";
 import noop from "noop";
 import map from "map";

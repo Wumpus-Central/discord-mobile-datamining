@@ -1,6 +1,3 @@
-// === Module 9359: DoubleTapReminderContent ===
-
-// Module 9359 (DoubleTapReminderContent)
 import "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";

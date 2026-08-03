@@ -1,6 +1,3 @@
-// === Module 8513: RiotGamesNeutralIcon ===
-
-// Module 8513 (RiotGamesNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

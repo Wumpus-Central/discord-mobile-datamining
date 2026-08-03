@@ -1,6 +1,3 @@
-// === Module 11307: initialize ===
-
-// Module 11307 (initialize)
 import { PersistedStore } from "initialize";
 
 let closure_0 = 10 * require("set").Millis.MINUTE;

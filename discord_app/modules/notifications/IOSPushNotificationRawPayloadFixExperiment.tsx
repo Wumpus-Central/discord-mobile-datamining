@@ -1,6 +1,3 @@
-// === Module 4867: isIOSPushNotificationRawPayloadFixExperimentEnabled ===
-
-// Module 4867 (isIOSPushNotificationRawPayloadFixExperimentEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

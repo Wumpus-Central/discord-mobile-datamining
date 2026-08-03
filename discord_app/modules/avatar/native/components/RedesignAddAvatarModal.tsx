@@ -1,6 +1,3 @@
-// === Module 16299: RedesignAddAvatarModal ===
-
-// Module 16299 (RedesignAddAvatarModal)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import TouchableUploadAvatar from "TouchableUploadAvatar";

@@ -1,6 +1,3 @@
-// === Module 15618: handleOneRecipientInDM ===
-
-// Module 15618 (handleOneRecipientInDM)
 import _slicedToArray from "_slicedToArray";
 import performQuery from "performQuery";
 import getGroupDMRecipientLimit from "getGroupDMRecipientLimit";

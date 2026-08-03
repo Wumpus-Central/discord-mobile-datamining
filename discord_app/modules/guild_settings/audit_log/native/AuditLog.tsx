@@ -1,6 +1,3 @@
-// === Module 16412: ApplicationHook ===
-
-// Module 16412 (ApplicationHook)
 import importAllResult from "nameFromUser";
 import { View } from "getPermissionChanges";
 import importDefaultResult from "handleThemeChange";

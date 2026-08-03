@@ -1,6 +1,3 @@
-// === Module 16666: handleRTCConnectionState ===
-
-// Module 16666 (handleRTCConnectionState)
 import initialize from "initialize";
 import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo";
 import fetchFingerprint from "fetchFingerprint";

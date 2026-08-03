@@ -1,6 +1,3 @@
-// === Module 13848: toggle ===
-
-// Module 13848 (toggle)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserFlags } from "ME";
 import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY";

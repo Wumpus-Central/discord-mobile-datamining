@@ -1,6 +1,3 @@
-// === Module 8764: SegmentedControl ===
-
-// Module 8764 (SegmentedControl)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

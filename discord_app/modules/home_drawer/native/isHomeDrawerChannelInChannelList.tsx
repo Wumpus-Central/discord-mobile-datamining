@@ -1,6 +1,3 @@
-// === Module 14997: useIsHomeDrawerChannelInChannelList ===
-
-// Module 14997 (useIsHomeDrawerChannelInChannelList)
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 
 const require = arg1;

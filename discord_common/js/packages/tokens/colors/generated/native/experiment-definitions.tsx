@@ -1,6 +1,3 @@
-// === Module 715: _private ===
-
-// Module 715 (_private)
 const Themes = require("items")._private.Themes;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/tokens/colors/generated/native/experiment-definitions.tsx");
 

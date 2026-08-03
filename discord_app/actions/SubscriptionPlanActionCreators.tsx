@@ -1,6 +1,3 @@
-// === Module 6304: fetchSubscriptionPlansForSKU ===
-
-// Module 6304 (fetchSubscriptionPlansForSKU)
 import _deletePaymentSource from "_deletePaymentSource";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
 import { Endpoints } from "ME";

@@ -1,6 +1,3 @@
-// === Module 13609: _initialize ===
-
-// Module 13609 (_initialize)
 import get_ActivityIndicator from "set";
 import participantFromServer from "participantFromServer";
 import withEqualityFn from "withEqualityFn";

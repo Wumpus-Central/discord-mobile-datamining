@@ -1,6 +1,3 @@
-// === Module 6139: getDeviceSpecificString ===
-
-// Module 6139 (getDeviceSpecificString)
 const result = require("set").fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
 
 export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2Yp7dF) {

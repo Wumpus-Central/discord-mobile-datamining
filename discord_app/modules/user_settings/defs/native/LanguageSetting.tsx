@@ -1,6 +1,3 @@
-// === Module 14399: route ===
-
-// Module 14399 (route)
 import _getSystemLocale from "_getSystemLocale";
 import createToggle from "createToggle";
 

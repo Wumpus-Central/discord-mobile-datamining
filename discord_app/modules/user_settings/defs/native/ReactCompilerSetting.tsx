@@ -1,6 +1,3 @@
-// === Module 14691: ? ===
-
-// Module 14691
 import createToggle from "createToggle";
 
 const obj = {

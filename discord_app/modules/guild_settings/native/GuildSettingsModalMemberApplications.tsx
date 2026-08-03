@@ -1,6 +1,3 @@
-// === Module 15469: memoResult1 ===
-
-// Module 15469 (memoResult1)
 import importAllResult from "getNoResultsSource";
 import get_ActivityIndicator from "getSystemLocale";
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";

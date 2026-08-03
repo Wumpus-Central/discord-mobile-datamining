@@ -1,6 +1,3 @@
-// === Module 9858: ImageFileIcon ===
-
-// Module 9858 (ImageFileIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

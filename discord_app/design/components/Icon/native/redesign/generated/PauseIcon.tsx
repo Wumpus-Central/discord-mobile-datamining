@@ -1,6 +1,3 @@
-// === Module 8133: PauseIcon ===
-
-// Module 8133 (PauseIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

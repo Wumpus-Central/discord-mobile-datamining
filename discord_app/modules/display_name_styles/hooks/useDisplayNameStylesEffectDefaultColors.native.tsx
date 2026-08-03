@@ -1,6 +1,3 @@
-// === Module 8396: useDisplayNameStylesEffectDefaultColors ===
-
-// Module 8396 (useDisplayNameStylesEffectDefaultColors)
 import noop from "noop";
 import items3 from "items3";
 

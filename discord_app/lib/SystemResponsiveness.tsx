@@ -1,6 +1,3 @@
-// === Module 12896: start ===
-
-// Module 12896 (start)
 const result = require("apply").fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
   constructor(arg0) {

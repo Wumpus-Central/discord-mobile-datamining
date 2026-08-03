@@ -1,6 +1,3 @@
-// === Module 14937: useMainTabsPanelsGesture ===
-
-// Module 14937 (useMainTabsPanelsGesture)
 import noop from "noop";
 import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
 import set from "set";

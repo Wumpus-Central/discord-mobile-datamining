@@ -1,6 +1,3 @@
-// === Module 13956: SpendingLimitRow ===
-
-// Module 13956 (SpendingLimitRow)
 import useScheduleTimeControlsRowProps from "useScheduleTimeControlsRowProps";
 import { View } from "apexExperiment";
 import { FamilyCenterSubPages } from "items";

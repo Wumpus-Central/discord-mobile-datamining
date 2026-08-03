@@ -1,6 +1,3 @@
-// === Module 9314: __measureInWindowForFWO ===
-
-// Module 9314 (__measureInWindowForFWO)
 import NativeFWOMeasureModule from "NativeFWOMeasureModule";
 
 const __measureInWindowForFWO = global.__measureInWindowForFWO;

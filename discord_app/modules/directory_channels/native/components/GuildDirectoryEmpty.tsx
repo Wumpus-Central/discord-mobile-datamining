@@ -1,6 +1,3 @@
-// === Module 11871: GuildDirectoryEmpty ===
-
-// Module 11871 (GuildDirectoryEmpty)
 import "set";
 import get_ActivityIndicator from "showInstantInviteActionSheet";
 import comparator from "comparator";

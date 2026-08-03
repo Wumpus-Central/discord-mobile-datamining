@@ -1,6 +1,3 @@
-// === Module 12815: stopActivity ===
-
-// Module 12815 (stopActivity)
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import fetchFingerprint from "fetchFingerprint";

@@ -1,6 +1,3 @@
-// === Module 9689: PollsIcon ===
-
-// Module 9689 (PollsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

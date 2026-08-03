@@ -1,6 +1,3 @@
-// === Module 14660: CollectiblesProgressiveImage ===
-
-// Module 14660 (CollectiblesProgressiveImage)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 9677: DismissibleActionSheet ===
-
-// Module 9677 (DismissibleActionSheet)
 import noop from "noop";
 
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/dismissible_content/native/DismissibleActionSheet.tsx");

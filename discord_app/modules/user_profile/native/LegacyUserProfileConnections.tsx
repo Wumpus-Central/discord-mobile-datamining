@@ -1,6 +1,3 @@
-// === Module 10036: LegacyUserProfileConnections ===
-
-// Module 10036 (LegacyUserProfileConnections)
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "Button";
 import _getSystemLocale from "_getSystemLocale";

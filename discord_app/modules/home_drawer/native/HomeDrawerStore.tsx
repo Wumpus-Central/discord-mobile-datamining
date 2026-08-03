@@ -1,6 +1,3 @@
-// === Module 14949: withEqualityFn ===
-
-// Module 14949 (withEqualityFn)
 import { DM_WIDTH } from "ME";
 import identity from "identity";
 

@@ -1,6 +1,3 @@
-// === Module 13230: ContextMenuDivider ===
-
-// Module 13230 (ContextMenuDivider)
 import _slicedToArray from "_slicedToArray";
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "SCREEN_READER_ENABLED_GETTER";

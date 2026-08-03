@@ -1,6 +1,3 @@
-// === Module 9653: StickerOptionsActionSheet ===
-
-// Module 9653 (StickerOptionsActionSheet)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

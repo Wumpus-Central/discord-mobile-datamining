@@ -1,6 +1,3 @@
-// === Module 11007: ExperimentOverrideActionSheet ===
-
-// Module 11007 (ExperimentOverrideActionSheet)
 import Background from "Background";
 import { Image } from "ACTION_SHEET_HEIGHT_HALF";
 import fetchFingerprint from "fetchFingerprint";

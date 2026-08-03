@@ -1,6 +1,3 @@
-// === Module 7764: createRemoveRecipientSystemMessage ===
-
-// Module 7764 (createRemoveRecipientSystemMessage)
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";

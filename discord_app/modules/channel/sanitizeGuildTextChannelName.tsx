@@ -1,6 +1,3 @@
-// === Module 4386: sanitizeGuildTextChannelName ===
-
-// Module 4386 (sanitizeGuildTextChannelName)
 const result = require("set").fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");
 
 export default function sanitizeGuildTextChannelName(str) {

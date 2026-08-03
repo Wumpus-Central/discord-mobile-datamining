@@ -1,6 +1,3 @@
-// === Module 8359: ? ===
-
-// Module 8359
 import updateWithLatestInvite from "updateWithLatestInvite";
 import { AnalyticEvents } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 16154: _initialize ===
-
-// Module 16154 (_initialize)
 import initialize from "initialize";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";

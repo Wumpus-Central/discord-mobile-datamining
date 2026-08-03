@@ -1,6 +1,3 @@
-// === Module 9958: MessageReminderDurationActionSheet ===
-
-// Module 9958 (MessageReminderDurationActionSheet)
 import _slicedToArray from "_slicedToArray";
 import Background from "Background";
 import getTimeSafe from "getTimeSafe";

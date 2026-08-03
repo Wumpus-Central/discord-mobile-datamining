@@ -1,6 +1,3 @@
-// === Module 11278: RecommendationsBannerCard ===
-
-// Module 11278 (RecommendationsBannerCard)
 import noop from "noop";
 import { View } from "TableRowArrow";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";

@@ -1,6 +1,3 @@
-// === Module 8666: _getShopCollection ===
-
-// Module 8666 (_getShopCollection)
 import dispatcher from "dispatcher";
 import _getSystemLocale from "_getSystemLocale";
 import importDefaultResult from "getSimilarGames";

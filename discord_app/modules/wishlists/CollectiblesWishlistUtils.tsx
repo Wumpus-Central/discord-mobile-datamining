@@ -1,6 +1,3 @@
-// === Module 8675: getProductNameAndTypeFromSku ===
-
-// Module 8675 (getProductNameAndTypeFromSku)
 let result = require("getItemRecordsFromPurchases").fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 
 export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSku(sku) {

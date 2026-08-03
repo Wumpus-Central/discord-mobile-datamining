@@ -1,6 +1,3 @@
-// === Module 9392: getEmojiPickerDataRowPremiumInlineRoadblock ===
-
-// Module 9392 (getEmojiPickerDataRowPremiumInlineRoadblock)
 const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowPremiumInlineRoadblock.tsx");
 
 export default function getEmojiPickerDataRowPremiumInlineRoadblock(position) {

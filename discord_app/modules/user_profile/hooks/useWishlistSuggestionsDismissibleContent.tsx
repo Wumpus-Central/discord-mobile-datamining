@@ -1,6 +1,3 @@
-// === Module 12212: useWishlistSuggestionsDismissibleContent ===
-
-// Module 12212 (useWishlistSuggestionsDismissibleContent)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

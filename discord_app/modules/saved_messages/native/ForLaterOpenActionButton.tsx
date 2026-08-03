@@ -1,6 +1,3 @@
-// === Module 15296: BadgedIcon ===
-
-// Module 15296 (BadgedIcon)
 import importAllResult from "IconButton";
 import { View } from "EntitlementFeatureNames";
 import getTimeSafe from "getTimeSafe";

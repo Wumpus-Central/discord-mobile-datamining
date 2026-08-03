@@ -1,6 +1,3 @@
-// === Module 5877: handlePermissionsChange ===
-
-// Module 5877 (handlePermissionsChange)
 import getHash from "getHash";
 import handleReaction from "handleReaction";
 import ensureGuildLoaded from "ensureGuildLoaded";

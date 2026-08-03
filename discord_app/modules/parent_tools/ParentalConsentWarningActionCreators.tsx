@@ -1,6 +1,3 @@
-// === Module 16320: clearPendingRetry ===
-
-// Module 16320 (clearPendingRetry)
 import isParentalConsentWarningFetchEnabled from "isParentalConsentWarningFetchEnabled";
 import initialize from "initialize";
 import importDefaultResult from "fails";

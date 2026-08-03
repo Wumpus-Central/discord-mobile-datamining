@@ -1,6 +1,3 @@
-// === Module 11431: downsampleWaveform ===
-
-// Module 11431 (downsampleWaveform)
 const result = require("set").fileFinishedImporting("modules/voice_messages/downsampleWaveform.tsx");
 
 export default function downsampleWaveform(arg0, arg1) {

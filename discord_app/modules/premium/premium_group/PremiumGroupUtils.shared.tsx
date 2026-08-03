@@ -1,6 +1,3 @@
-// === Module 7837: getPriceString ===
-
-// Module 7837 (getPriceString)
 import addSubscriptionPlan from "addSubscriptionPlan";
 
 const require = arg1;

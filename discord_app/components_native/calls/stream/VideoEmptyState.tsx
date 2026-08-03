@@ -1,6 +1,3 @@
-// === Module 10561: VideoEmptyState ===
-
-// Module 10561 (VideoEmptyState)
 import "noop";
 import { View } from "CollapsingText";
 import ensureGuildLoaded from "ensureGuildLoaded";

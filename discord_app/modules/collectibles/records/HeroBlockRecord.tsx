@@ -1,6 +1,3 @@
-// === Module 5840: fromServer ===
-
-// Module 5840 (fromServer)
 let prototype;
 prototype = function HeroBlockRecord(unpublished_at) {
   let summary;

@@ -1,6 +1,3 @@
-// === Module 10968: getSupportsRemoteJoin ===
-
-// Module 10968 (getSupportsRemoteJoin)
 import { ActivityFlags } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getSupportsRemoteJoin.tsx");

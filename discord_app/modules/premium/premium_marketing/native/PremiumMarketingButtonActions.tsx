@@ -1,6 +1,3 @@
-// === Module 6689: getButtonActionHandler ===
-
-// Module 6689 (getButtonActionHandler)
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import { PremiumTypes } from "GuildFeatures";
 import ME from "ME";

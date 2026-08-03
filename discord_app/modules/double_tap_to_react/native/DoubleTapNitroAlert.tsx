@@ -1,6 +1,3 @@
-// === Module 7760: DoubleTapNitroAlert ===
-
-// Module 7760 (DoubleTapNitroAlert)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY";

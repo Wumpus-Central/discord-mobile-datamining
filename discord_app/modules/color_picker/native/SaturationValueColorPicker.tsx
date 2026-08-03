@@ -1,6 +1,3 @@
-// === Module 13719: ColorBox ===
-
-// Module 13719 (ColorBox)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

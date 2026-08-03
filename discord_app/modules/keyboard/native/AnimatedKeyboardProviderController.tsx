@@ -1,6 +1,3 @@
-// === Module 10400: mutable ===
-
-// Module 10400 (mutable)
 import jsxProd from "jsxProd";
 import module_4054 from "module_4054";
 import mutable from "noop";

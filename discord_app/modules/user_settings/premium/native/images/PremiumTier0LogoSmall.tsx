@@ -1,6 +1,3 @@
-// === Module 12529: PremiumTier0LogoSmall ===
-
-// Module 12529 (PremiumTier0LogoSmall)
 import "noop";
 import { jsx } from "jsxProd";
 

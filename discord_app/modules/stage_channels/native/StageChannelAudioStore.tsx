@@ -1,6 +1,3 @@
-// === Module 15968: handleAudioRouteChanged ===
-
-// Module 15968 (handleAudioRouteChanged)
 import { NativeModules } from "get ActivityIndicator";
 import handleAudioRouteChanged from "handleAudioRouteChanged";
 import ensureGuildLoaded from "ensureGuildLoaded";

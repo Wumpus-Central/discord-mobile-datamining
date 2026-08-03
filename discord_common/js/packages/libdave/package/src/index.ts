@@ -1,6 +1,3 @@
-// === Module 8887: generateDisplayableCode ===
-
-// Module 8887 (generateDisplayableCode)
 const result = require("_generateKeyFingerprint").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/index.ts");
 
 export const generateDisplayableCode = require("generateDisplayableCode").generateDisplayableCode;

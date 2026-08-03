@@ -1,6 +1,3 @@
-// === Module 15509: MessageVerticalSeparator ===
-
-// Module 15509 (MessageVerticalSeparator)
 import "noop";
 import { View } from "get ActivityIndicator";
 import MessageEmbedTypes from "MessageEmbedTypes";

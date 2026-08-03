@@ -1,6 +1,3 @@
-// === Module 13656: CommonProperty ===
-
-// Module 13656 (CommonProperty)
 import _slicedToArray from "_slicedToArray";
 import Stack from "Stack";
 import { View } from "initialize";

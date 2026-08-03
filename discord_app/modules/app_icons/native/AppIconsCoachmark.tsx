@@ -1,6 +1,3 @@
-// === Module 15776: AppIconsCoachmarkActionSheet ===
-
-// Module 15776 (AppIconsCoachmarkActionSheet)
 import noop from "noop";
 import get_ActivityIndicator from "fetchCurrentAppIcon";
 import mergeGuildAvatar from "mergeGuildAvatar";

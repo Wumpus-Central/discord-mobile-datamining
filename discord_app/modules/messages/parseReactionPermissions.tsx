@@ -1,6 +1,3 @@
-// === Module 10389: parseReactionPermissions ===
-
-// Module 10389 (parseReactionPermissions)
 const result = require("set").fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
 
 export default function parseReactionPermissions(arg0) {

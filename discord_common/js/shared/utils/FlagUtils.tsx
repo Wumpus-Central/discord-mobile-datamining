@@ -1,6 +1,3 @@
-// === Module 1384: hasFlag ===
-
-// Module 1384 (hasFlag)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
 
 export const hasFlag = function hasFlag(arg0, arg1) {

@@ -1,6 +1,3 @@
-// === Module 4636: isChannelTypeMentionable ===
-
-// Module 4636 (isChannelTypeMentionable)
 import createChannelRecord from "createChannelRecord";
 
 let c0;

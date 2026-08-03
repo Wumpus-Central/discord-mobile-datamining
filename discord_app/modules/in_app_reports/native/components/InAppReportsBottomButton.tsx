@@ -1,6 +1,3 @@
-// === Module 12435: InAppReportsBottomButton ===
-
-// Module 12435 (InAppReportsBottomButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

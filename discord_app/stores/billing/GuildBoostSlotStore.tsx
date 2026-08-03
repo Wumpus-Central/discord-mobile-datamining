@@ -1,6 +1,3 @@
-// === Module 4086: handleGuildBoostsUpdate ===
-
-// Module 4086 (handleGuildBoostsUpdate)
 import reset from "reset";
 import { Store } from "initialize";
 

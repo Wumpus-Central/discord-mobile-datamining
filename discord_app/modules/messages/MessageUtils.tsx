@@ -1,6 +1,3 @@
-// === Module 10262: canViewPotentiallyNSFWChannel ===
-
-// Module 10262 (canViewPotentiallyNSFWChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

@@ -1,6 +1,3 @@
-// === Module 4217: createFromServer ===
-
-// Module 4217 (createFromServer)
 import "toJS";
 
 let prototype;

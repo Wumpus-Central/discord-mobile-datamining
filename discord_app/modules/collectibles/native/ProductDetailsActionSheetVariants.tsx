@@ -1,6 +1,3 @@
-// === Module 8772: VariantOption ===
-
-// Module 8772 (VariantOption)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

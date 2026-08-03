@@ -1,6 +1,3 @@
-// === Module 11396: restartState ===
-
-// Module 11396 (restartState)
 import noop from "noop";
 
 let closure_3 = function FocusHelperState() {

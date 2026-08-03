@@ -1,6 +1,3 @@
-// === Module 14276: EmojiIcon ===
-
-// Module 14276 (EmojiIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

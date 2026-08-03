@@ -1,6 +1,3 @@
-// === Module 15762: MenuContainer ===
-
-// Module 15762 (MenuContainer)
 import noop from "noop";
 import initialize from "initialize";
 

@@ -1,6 +1,3 @@
-// === Module 6054: GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME ===
-
-// Module 6054 (GAME_INVITES_CHANNEL_NO_MIC_TAG_NAME)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { useMemo } from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

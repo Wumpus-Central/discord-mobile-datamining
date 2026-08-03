@@ -1,6 +1,3 @@
-// === Module 14972: useHasExpired ===
-
-// Module 14972 (useHasExpired)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";

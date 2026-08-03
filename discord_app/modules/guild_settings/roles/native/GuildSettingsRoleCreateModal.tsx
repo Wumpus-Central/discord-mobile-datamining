@@ -1,6 +1,3 @@
-// === Module 16470: RoleCreateScene ===
-
-// Module 16470 (RoleCreateScene)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import TextInput from "TextInput";
 import importAllResult from "initialize";

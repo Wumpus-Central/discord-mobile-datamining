@@ -1,6 +1,3 @@
-// === Module 8696: useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds ===
-
-// Module 8696 (useUsersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds)
 import map from "map";
 import initialize from "initialize";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

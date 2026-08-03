@@ -1,6 +1,3 @@
-// === Module 13977: FamilyCenterModalCancelScreen ===
-
-// Module 13977 (FamilyCenterModalCancelScreen)
 import ButtonGroup from "ButtonGroup";
 import { View } from "FamilyCenterUsernameHeader";
 import jsxProd from "HeaderBackImage";

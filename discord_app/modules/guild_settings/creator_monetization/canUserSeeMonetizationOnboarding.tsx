@@ -1,6 +1,3 @@
-// === Module 12640: canUserSeeMonetizationOnboarding ===
-
-// Module 12640 (canUserSeeMonetizationOnboarding)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

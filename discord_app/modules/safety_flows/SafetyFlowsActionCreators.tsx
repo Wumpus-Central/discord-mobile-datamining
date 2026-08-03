@@ -1,6 +1,3 @@
-// === Module 16728: _getCurrentTask ===
-
-// Module 16728 (_getCurrentTask)
 import set from "set";
 import { Endpoints } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 15095: SpotifyNeutralIcon ===
-
-// Module 15095 (SpotifyNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 16697: getVoiceChannelErrorContext ===
-
-// Module 16697 (getVoiceChannelErrorContext)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";
 import handleConnectionOpen from "handleConnectionOpen";

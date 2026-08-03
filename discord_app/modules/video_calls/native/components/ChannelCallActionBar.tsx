@@ -1,6 +1,3 @@
-// === Module 10754: VideoButton ===
-
-// Module 10754 (VideoButton)
 import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert";
 import { View } from "items";
 import participantFromServer from "participantFromServer";

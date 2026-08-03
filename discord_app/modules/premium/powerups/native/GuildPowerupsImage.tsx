@@ -1,6 +1,3 @@
-// === Module 11628: GuildPowerupsImage ===
-
-// Module 11628 (GuildPowerupsImage)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

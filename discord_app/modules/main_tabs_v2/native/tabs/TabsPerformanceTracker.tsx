@@ -1,6 +1,3 @@
-// === Module 14945: trackTabPressed ===
-
-// Module 14945 (trackTabPressed)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

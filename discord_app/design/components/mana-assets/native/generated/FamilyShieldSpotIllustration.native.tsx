@@ -1,6 +1,3 @@
-// === Module 7033: FamilyShieldSpotIllustration ===
-
-// Module 7033 (FamilyShieldSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/FamilyShieldSpotIllustration.native.tsx");

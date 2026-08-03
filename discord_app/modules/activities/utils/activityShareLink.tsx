@@ -1,6 +1,3 @@
-// === Module 13563: items ===
-
-// Module 13563 (items)
 const items = [require("getPathsFromURL").parseQuestsEmbedCode];
 const result = require("getSystemLocale").fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 

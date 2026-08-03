@@ -1,6 +1,3 @@
-// === Module 9632: _fetchStickerPack ===
-
-// Module 9632 (_fetchStickerPack)
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import _getSystemLocale from "_getSystemLocale";

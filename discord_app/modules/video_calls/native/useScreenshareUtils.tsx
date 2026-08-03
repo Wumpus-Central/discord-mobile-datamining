@@ -1,6 +1,3 @@
-// === Module 10759: stopScreenshare ===
-
-// Module 10759 (stopScreenshare)
 import apexExperiment from "apexExperiment";
 import reset from "reset";
 import { ApplicationStreamStates } from "ME";

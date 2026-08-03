@@ -1,6 +1,3 @@
-// === Module 15370: ScienceIcon ===
-
-// Module 15370 (ScienceIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

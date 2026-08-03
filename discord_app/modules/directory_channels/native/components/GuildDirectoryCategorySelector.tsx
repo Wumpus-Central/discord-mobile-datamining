@@ -1,6 +1,3 @@
-// === Module 11875: GuildDirectoryCategorySelector ===
-
-// Module 11875 (GuildDirectoryCategorySelector)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

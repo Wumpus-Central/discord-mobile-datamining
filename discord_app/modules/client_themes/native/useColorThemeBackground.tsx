@@ -1,6 +1,3 @@
-// === Module 4040: getGuildThemeName ===
-
-// Module 4040 (getGuildThemeName)
 import noop from "noop";
 import handleThemeChange from "handleThemeChange";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";

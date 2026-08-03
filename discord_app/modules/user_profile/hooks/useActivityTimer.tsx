@@ -1,6 +1,3 @@
-// === Module 12028: useActivityTimer ===
-
-// Module 12028 (useActivityTimer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

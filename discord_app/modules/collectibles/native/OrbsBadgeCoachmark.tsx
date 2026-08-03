@@ -1,6 +1,3 @@
-// === Module 8438: OrbsBadgeCoachmarkImg ===
-
-// Module 8438 (OrbsBadgeCoachmarkImg)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

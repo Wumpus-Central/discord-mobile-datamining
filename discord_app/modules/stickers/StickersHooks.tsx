@@ -1,6 +1,3 @@
-// === Module 9631: useStickerPackCategories ===
-
-// Module 9631 (useStickerPackCategories)
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import _slicedToArray from "_slicedToArray";
 import useFrecencySettings from "useFrecencySettings";

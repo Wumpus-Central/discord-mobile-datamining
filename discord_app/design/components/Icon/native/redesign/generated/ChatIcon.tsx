@@ -1,6 +1,3 @@
-// === Module 4690: ChatIcon ===
-
-// Module 4690 (ChatIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 5786: computeSubtitle ===
-
-// Module 5786 (computeSubtitle)
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";
 import handleConnectionReset from "handleConnectionReset";

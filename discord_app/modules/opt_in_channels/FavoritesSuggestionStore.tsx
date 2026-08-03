@@ -1,6 +1,3 @@
-// === Module 5788: handleChange ===
-
-// Module 5788 (handleChange)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

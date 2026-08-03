@@ -1,6 +1,3 @@
-// === Module 1213: _toPropertyKey ===
-
-// Module 1213 (_toPropertyKey)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import { WebAnalyticsEvents } from "sum";

@@ -1,6 +1,3 @@
-// === Module 11693: GuildPowerupsBoostButton ===
-
-// Module 11693 (GuildPowerupsBoostButton)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

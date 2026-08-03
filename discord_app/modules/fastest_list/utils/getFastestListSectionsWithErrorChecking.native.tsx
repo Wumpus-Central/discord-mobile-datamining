@@ -1,6 +1,3 @@
-// === Module 9259: getFastestListSectionsWithErrorChecking ===
-
-// Module 9259 (getFastestListSectionsWithErrorChecking)
 const result = require("set").fileFinishedImporting("modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx");
 
 export default function getFastestListSectionsWithErrorChecking(itemSizes) {

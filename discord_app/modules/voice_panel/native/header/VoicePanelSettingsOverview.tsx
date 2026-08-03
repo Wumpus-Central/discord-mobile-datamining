@@ -1,6 +1,3 @@
-// === Module 15959: VoicePanelSettingsOverviewHeader ===
-
-// Module 15959 (VoicePanelSettingsOverviewHeader)
 import importAllResult from "useIsSecureFramesUIEnabled";
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";

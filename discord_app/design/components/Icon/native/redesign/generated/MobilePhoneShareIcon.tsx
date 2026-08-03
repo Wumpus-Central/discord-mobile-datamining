@@ -1,6 +1,3 @@
-// === Module 16044: MobilePhoneShareIcon ===
-
-// Module 16044 (MobilePhoneShareIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

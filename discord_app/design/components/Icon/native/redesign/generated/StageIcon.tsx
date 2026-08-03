@@ -1,6 +1,3 @@
-// === Module 4715: StageIcon ===
-
-// Module 4715 (StageIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

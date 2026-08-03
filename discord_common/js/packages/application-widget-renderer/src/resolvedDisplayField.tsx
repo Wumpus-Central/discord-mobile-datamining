@@ -1,6 +1,3 @@
-// === Module 12084: resolveTextComponentValues ===
-
-// Module 12084 (resolveTextComponentValues)
 let result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
 
 export const resolveTextComponentValues = function resolveTextComponentValues(subtitle_1, resolveFieldValue, numberFormat, arg3) {

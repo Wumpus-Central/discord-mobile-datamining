@@ -1,6 +1,3 @@
-// === Module 7701: getReportMenu ===
-
-// Module 7701 (getReportMenu)
 import sendRequest from "sendRequest";
 import noop from "noop";
 import getUserAgnosticState from "getUserAgnosticState";

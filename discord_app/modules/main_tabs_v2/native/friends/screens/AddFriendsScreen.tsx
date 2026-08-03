@@ -1,6 +1,3 @@
-// === Module 15620: handleFindFriends ===
-
-// Module 15620 (handleFindFriends)
 import ActivityIndicator from "ActivityIndicator";
 import upsertRelationship from "upsertRelationship";
 import set from "set";

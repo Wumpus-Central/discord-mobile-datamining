@@ -1,6 +1,3 @@
-// === Module 9700: useMediaKeyboardItemsPerRow ===
-
-// Module 9700 (useMediaKeyboardItemsPerRow)
 import noop from "noop";
 
 const require = arg1;

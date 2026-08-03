@@ -1,6 +1,3 @@
-// === Module 16759: onStageConnectionError ===
-
-// Module 16759 (onStageConnectionError)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import scheduledEventSort from "scheduledEventSort";
 import fetchFingerprint from "fetchFingerprint";

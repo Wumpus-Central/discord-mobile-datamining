@@ -1,6 +1,3 @@
-// === Module 11189: _upload2 ===
-
-// Module 11189 (_upload2)
 import Background from "Background";
 import handleChanged from "handleChanged";
 import items from "items";

@@ -1,6 +1,3 @@
-// === Module 11493: TouchableBackground ===
-
-// Module 11493 (TouchableBackground)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

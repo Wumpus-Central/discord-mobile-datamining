@@ -1,6 +1,3 @@
-// === Module 14520: pressable ===
-
-// Module 14520 (pressable)
 import { MarketingURLs } from "ME";
 import createToggle from "createToggle";
 

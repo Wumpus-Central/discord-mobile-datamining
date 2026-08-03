@@ -1,6 +1,3 @@
-// === Module 15394: Screenshot ===
-
-// Module 15394 (Screenshot)
 import dispatcher from "dispatcher";
 import handleChanged from "handleChanged";
 import useGradientBottom from "useGradientBottom";

@@ -1,6 +1,3 @@
-// === Module 5694: reset ===
-
-// Module 5694 (reset)
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import setLibraryApplications from "setLibraryApplications";

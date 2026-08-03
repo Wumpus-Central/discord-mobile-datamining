@@ -1,6 +1,3 @@
-// === Module 8701: CheckmarkLargeBoldIcon ===
-
-// Module 8701 (CheckmarkLargeBoldIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

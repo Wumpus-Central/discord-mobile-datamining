@@ -1,6 +1,3 @@
-// === Module 16601: pushTierEditScene ===
-
-// Module 16601 (pushTierEditScene)
 import usePriceTiers from "usePriceTiers";
 import { GuildSettingsSections } from "ME";
 

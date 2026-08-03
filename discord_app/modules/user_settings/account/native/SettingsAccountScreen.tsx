@@ -1,6 +1,3 @@
-// === Module 13769: PasswordlessUpsell ===
-
-// Module 13769 (PasswordlessUpsell)
 import expandEventProperties from "expandEventProperties";
 import importAllResult from "UserSettingsWebAuthn";
 import { View } from "Button";

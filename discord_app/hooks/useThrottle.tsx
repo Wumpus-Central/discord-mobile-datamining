@@ -1,6 +1,3 @@
-// === Module 10877: throttleStateFn ===
-
-// Module 10877 (throttleStateFn)
 import noop from "noop";
 
 const require = arg1;

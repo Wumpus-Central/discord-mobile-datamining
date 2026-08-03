@@ -1,6 +1,3 @@
-// === Module 15486: ? ===
-
-// Module 15486
 import importAllResult from "module_11474";
 import { View } from "getFontScale";
 import ensureGuildLoaded from "ensureGuildLoaded";

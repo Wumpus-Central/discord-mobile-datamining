@@ -1,6 +1,3 @@
-// === Module 13621: updateEnabledState ===
-
-// Module 13621 (updateEnabledState)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";
 

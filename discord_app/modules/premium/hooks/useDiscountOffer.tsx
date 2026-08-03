@@ -1,6 +1,3 @@
-// === Module 6263: useDiscountOffer ===
-
-// Module 6263 (useDiscountOffer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";

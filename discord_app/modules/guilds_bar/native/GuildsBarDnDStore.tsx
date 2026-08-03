@@ -1,6 +1,3 @@
-// === Module 14958: withEqualityFn ===
-
-// Module 14958 (withEqualityFn)
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import identity from "identity";
 

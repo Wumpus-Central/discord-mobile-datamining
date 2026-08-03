@@ -1,6 +1,3 @@
-// === Module 16708: AVErrorScreenshareOSErrorDefinition ===
-
-// Module 16708 (AVErrorScreenshareOSErrorDefinition)
 import module_4294963475 from "module_4294963475";
 
 const result = require("getVoiceChannelErrorContext").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorScreenshareOSError.tsx");

@@ -1,6 +1,3 @@
-// === Module 12167: isVisualUnfurledMedia ===
-
-// Module 12167 (isVisualUnfurledMedia)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

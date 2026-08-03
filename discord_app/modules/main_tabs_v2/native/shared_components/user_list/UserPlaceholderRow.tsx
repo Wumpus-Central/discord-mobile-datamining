@@ -1,6 +1,3 @@
-// === Module 8362: ? ===
-
-// Module 8362
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

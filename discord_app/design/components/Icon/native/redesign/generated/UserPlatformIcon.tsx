@@ -1,6 +1,3 @@
-// === Module 4133: UserPlatformIcon ===
-
-// Module 4133 (UserPlatformIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

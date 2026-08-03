@@ -1,6 +1,3 @@
-// === Module 6502: _fetchSKU ===
-
-// Module 6502 (_fetchSKU)
 import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery";
 import getPromotionIdOverride from "getPromotionIdOverride";
 import addSku from "addSku";

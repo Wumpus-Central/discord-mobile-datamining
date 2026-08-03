@@ -1,6 +1,3 @@
-// === Module 14180: logger ===
-
-// Module 14180 (logger)
 const logger = new require("set").Logger("SimpleMuxWrapper");
 const result = require("mapDiscordToMuxMetadata").fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
 class SimpleMuxWrapper {

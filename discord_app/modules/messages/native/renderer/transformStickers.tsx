@@ -1,6 +1,3 @@
-// === Module 12405: transformStickers ===
-
-// Module 12405 (transformStickers)
 const result = require("NativeLottieView").fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
 
 export default function transformStickers(message) {

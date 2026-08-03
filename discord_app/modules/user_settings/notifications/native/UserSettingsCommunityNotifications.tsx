@@ -1,6 +1,3 @@
-// === Module 14499: UserSettingsCommunityNotifications ===
-
-// Module 14499 (UserSettingsCommunityNotifications)
 import "noop";
 import computeAlertSettings from "computeAlertSettings";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 11717: MutualFriendRow ===
-
-// Module 11717 (MutualFriendRow)
 import _slicedToArray from "_slicedToArray";
 import getNoMutualFriendsSource from "getNoMutualFriendsSource";
 import get_ActivityIndicator from "useSegmentedControlState";

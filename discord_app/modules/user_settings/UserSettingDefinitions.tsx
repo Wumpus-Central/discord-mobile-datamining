@@ -1,6 +1,3 @@
-// === Module 3870: defineProtoSetting ===
-
-// Module 3870 (defineProtoSetting)
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { UserSettingsDelay } from "MAX_FAVORITES";

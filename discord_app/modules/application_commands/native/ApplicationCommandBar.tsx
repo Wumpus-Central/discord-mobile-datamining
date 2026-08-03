@@ -1,6 +1,3 @@
-// === Module 11514: ApplicationCommandOptionItem ===
-
-// Module 11514 (ApplicationCommandOptionItem)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "DescriptionEllipsis";

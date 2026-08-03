@@ -1,6 +1,3 @@
-// === Module 7945: setPendingChanges ===
-
-// Module 7945 (setPendingChanges)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

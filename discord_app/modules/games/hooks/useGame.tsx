@@ -1,6 +1,3 @@
-// === Module 5910: importDefaultResult1 ===
-
-// Module 5910 (importDefaultResult1)
 import noop from "noop";
 import importDefaultResult1 from "map";
 import initialize from "initialize";

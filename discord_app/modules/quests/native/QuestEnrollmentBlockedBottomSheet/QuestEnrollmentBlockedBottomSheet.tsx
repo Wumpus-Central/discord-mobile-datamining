@@ -1,6 +1,3 @@
-// === Module 14209: QuestEnrollmentBlockedBottomSheet ===
-
-// Module 14209 (QuestEnrollmentBlockedBottomSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import initializeState from "initializeState";

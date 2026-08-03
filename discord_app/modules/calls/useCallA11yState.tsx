@@ -1,6 +1,3 @@
-// === Module 15049: useCallA11yState ===
-
-// Module 15049 (useCallA11yState)
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";
 

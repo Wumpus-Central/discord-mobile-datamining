@@ -1,6 +1,3 @@
-// === Module 1942: trackCommunicationDisabled ===
-
-// Module 1942 (trackCommunicationDisabled)
 import { clearCommunicationDisabledNotice as closure_3 } from "DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";

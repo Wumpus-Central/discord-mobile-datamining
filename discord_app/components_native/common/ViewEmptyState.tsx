@@ -1,6 +1,3 @@
-// === Module 9249: ViewEmptyState ===
-
-// Module 9249 (ViewEmptyState)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { Fonts } from "ME";

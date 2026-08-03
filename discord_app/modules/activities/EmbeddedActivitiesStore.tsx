@@ -1,6 +1,3 @@
-// === Module 1371: participantFromServer ===
-
-// Module 1371 (participantFromServer)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

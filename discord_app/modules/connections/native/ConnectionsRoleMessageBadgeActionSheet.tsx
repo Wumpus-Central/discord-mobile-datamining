@@ -1,6 +1,3 @@
-// === Module 11023: PopoutCheck ===
-
-// Module 11023 (PopoutCheck)
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import apply from "apply";
 import get_ActivityIndicator from "Text";

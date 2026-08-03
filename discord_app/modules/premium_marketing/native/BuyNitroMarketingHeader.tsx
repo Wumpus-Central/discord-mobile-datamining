@@ -1,6 +1,3 @@
-// === Module 6680: BuyNitroMarketingHeader ===
-
-// Module 6680 (BuyNitroMarketingHeader)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "registerAsset";
 import { Gradients } from "items";

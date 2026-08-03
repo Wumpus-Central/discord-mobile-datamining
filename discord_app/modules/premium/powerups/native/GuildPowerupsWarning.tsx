@@ -1,6 +1,3 @@
-// === Module 11665: GuildPowerupsWarning ===
-
-// Module 11665 (GuildPowerupsWarning)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

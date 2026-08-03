@@ -1,6 +1,3 @@
-// === Module 10945: trackRepliedMessageClicked ===
-
-// Module 10945 (trackRepliedMessageClicked)
 import { ReferencedMessageState } from "processMessage";
 import { AnalyticEvents } from "ME";
 

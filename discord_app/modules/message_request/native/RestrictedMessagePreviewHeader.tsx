@@ -1,6 +1,3 @@
-// === Module 15745: RestrictedMessagePreviewHeader ===
-
-// Module 15745 (RestrictedMessagePreviewHeader)
 import Button from "Button";
 import { View } from "PressableBase";
 import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_5 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL";

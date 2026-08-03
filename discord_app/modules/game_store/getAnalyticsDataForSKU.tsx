@@ -1,6 +1,3 @@
-// === Module 4524: getAnalyticsDataForSKU ===
-
-// Module 4524 (getAnalyticsDataForSKU)
 import addApplication from "addApplication";
 import { SKUFeatureTypes } from "ME";
 

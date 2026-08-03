@@ -1,6 +1,3 @@
-// === Module 7367: NitroWumpusPinkSpotIllustration ===
-
-// Module 7367 (NitroWumpusPinkSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusPinkSpotIllustration.native.tsx");

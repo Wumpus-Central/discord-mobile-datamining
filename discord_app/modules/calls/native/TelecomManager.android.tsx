@@ -1,6 +1,3 @@
-// === Module 16347: nativeEventEmitter ===
-
-// Module 16347 (nativeEventEmitter)
 import callConnect from "callConnect";
 import get_ActivityIndicator from "initialize";
 import Soundpacks from "Soundpacks";

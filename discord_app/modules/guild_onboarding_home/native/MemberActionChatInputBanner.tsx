@@ -1,6 +1,3 @@
-// === Module 11454: ActionChannelInfo ===
-
-// Module 11454 (ActionChannelInfo)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getAvatarURL";
 import { View } from "registerAsset";

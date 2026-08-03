@@ -1,6 +1,3 @@
-// === Module 9948: _upsertSavedMessage ===
-
-// Module 9948 (_upsertSavedMessage)
 import dispatcher from "dispatcher";
 import getTimeSafe from "getTimeSafe";
 import { Endpoints } from "ME";

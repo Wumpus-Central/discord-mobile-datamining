@@ -1,6 +1,3 @@
-// === Module 9804: MODAL_KEY ===
-
-// Module 9804 (MODAL_KEY)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

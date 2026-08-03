@@ -1,6 +1,3 @@
-// === Module 12721: _queueIdleCallback ===
-
-// Module 12721 (_queueIdleCallback)
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS";
 import { AppStates } from "ME";
 import { BasicWorkScheduler } from "_trackAppBackgrounded";

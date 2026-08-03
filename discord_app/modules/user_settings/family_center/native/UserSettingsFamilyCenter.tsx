@@ -1,6 +1,3 @@
-// === Module 13919: FamilyCenterLoading ===
-
-// Module 13919 (FamilyCenterLoading)
 import openAgeGateModal from "openAgeGateModal";
 import defaultAreStatesEqual from "defaultAreStatesEqual";
 import get_ActivityIndicator from "useSelectedMyFamilyTab";

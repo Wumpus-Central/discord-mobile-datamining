@@ -1,6 +1,3 @@
-// === Module 11499: AutocompleteLabel ===
-
-// Module 11499 (AutocompleteLabel)
 import getChannelIcon from "getChannelIcon";
 import { View } from "getSystemLocale";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 8489: useResolveGame ===
-
-// Module 8489 (useResolveGame)
 import noop from "noop";
 
 const require = arg1;

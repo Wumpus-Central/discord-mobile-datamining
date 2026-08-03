@@ -1,6 +1,3 @@
-// === Module 12898: round ===
-
-// Module 12898 (round)
 import "on";
 
 let require = arg1;

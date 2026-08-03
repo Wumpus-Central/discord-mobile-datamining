@@ -1,6 +1,3 @@
-// === Module 8091: set ===
-
-// Module 8091 (set)
 import _toArray from "_toArray";
 import set from "ProfileFrameLayerType";
 

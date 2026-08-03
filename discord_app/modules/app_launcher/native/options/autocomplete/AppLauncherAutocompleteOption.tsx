@@ -1,6 +1,3 @@
-// === Module 11361: AppLauncherAutocompleteOption ===
-
-// Module 11361 (AppLauncherAutocompleteOption)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

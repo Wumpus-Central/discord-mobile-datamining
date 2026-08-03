@@ -1,6 +1,3 @@
-// === Module 4178: updateInvite ===
-
-// Module 4178 (updateInvite)
 import { InviteStates } from "ME";
 import { Store } from "initialize";
 

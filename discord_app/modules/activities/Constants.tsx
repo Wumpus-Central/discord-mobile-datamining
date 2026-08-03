@@ -1,6 +1,3 @@
-// === Module 4218: items3 ===
-
-// Module 4218 (items3)
 import { ChannelTypes } from "ME";
 import set from "set";
 

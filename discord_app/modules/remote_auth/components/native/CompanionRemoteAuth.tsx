@@ -1,6 +1,3 @@
-// === Module 14918: CompanionRemoteAuth ===
-
-// Module 14918 (CompanionRemoteAuth)
 import noop from "noop";
 import { View } from "AuthFormView";
 import ME from "ME";

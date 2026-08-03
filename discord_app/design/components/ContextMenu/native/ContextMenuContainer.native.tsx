@@ -1,6 +1,3 @@
-// === Module 13229: getItemKey ===
-
-// Module 13229 (getItemKey)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

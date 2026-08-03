@@ -1,6 +1,3 @@
-// === Module 5738: computeUsersAndMembers ===
-
-// Module 5738 (computeUsersAndMembers)
 import timestamp from "timestamp";
 import _slicedToArray from "_slicedToArray";
 import _handleConnectionOpen from "_handleConnectionOpen";

@@ -1,6 +1,3 @@
-// === Module 16426: getEmptyServerSettingsEmojiSource ===
-
-// Module 16426 (getEmptyServerSettingsEmojiSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

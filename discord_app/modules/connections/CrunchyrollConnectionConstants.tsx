@@ -1,6 +1,3 @@
-// === Module 8177: CRUNCHYROLL_LINK_DEST_ORIGIN ===
-
-// Module 8177 (CRUNCHYROLL_LINK_DEST_ORIGIN)
 const items = [require("set").OAuth2Scopes.ACTIVITIES_WRITE, require("set").OAuth2Scopes.EMAIL, require("set").OAuth2Scopes.IDENTIFY];
 const result = require("set").fileFinishedImporting("modules/connections/CrunchyrollConnectionConstants.tsx");
 

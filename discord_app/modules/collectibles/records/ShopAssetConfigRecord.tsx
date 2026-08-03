@@ -1,6 +1,3 @@
-// === Module 5816: fromServer ===
-
-// Module 5816 (fromServer)
 let AssetDisplayConfigRecord;
 class AssetDisplayConfigRecord {
   constructor(arg0) {

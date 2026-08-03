@@ -1,6 +1,3 @@
-// === Module 13073: GuildBadge ===
-
-// Module 13073 (GuildBadge)
 import "items";
 import { GuildTagBadgeKind } from "items";
 import { jsx } from "items";

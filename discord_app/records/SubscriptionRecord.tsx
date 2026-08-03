@@ -1,6 +1,3 @@
-// === Module 3846: createSubscriptionItemFromServer ===
-
-// Module 3846 (createSubscriptionItemFromServer)
 import "toJS";
 import createFromServer from "createFromServer";
 import closure_4 from "createFromServer";

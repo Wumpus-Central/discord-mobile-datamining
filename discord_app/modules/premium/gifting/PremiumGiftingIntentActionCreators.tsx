@@ -1,6 +1,3 @@
-// === Module 6182: fetchAndReconcileGiftIntentDismissals ===
-
-// Module 6182 (fetchAndReconcileGiftIntentDismissals)
 import recomputeAffinities from "recomputeAffinities";
 import fetchFingerprint from "fetchFingerprint";
 import reinjectEphemerals from "reinjectEphemerals";

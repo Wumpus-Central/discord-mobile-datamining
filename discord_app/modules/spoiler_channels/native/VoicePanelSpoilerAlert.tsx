@@ -1,6 +1,3 @@
-// === Module 12443: VoicePanelSpoilerAlert ===
-
-// Module 12443 (VoicePanelSpoilerAlert)
 import "noop";
 import jsxProd from "jsxProd";
 

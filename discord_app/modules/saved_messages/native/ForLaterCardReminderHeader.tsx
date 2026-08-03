@@ -1,6 +1,3 @@
-// === Module 9963: ForLaterCardReminderHeader ===
-
-// Module 9963 (ForLaterCardReminderHeader)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

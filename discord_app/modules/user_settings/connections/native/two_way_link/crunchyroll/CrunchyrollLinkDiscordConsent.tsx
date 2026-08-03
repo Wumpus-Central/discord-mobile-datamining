@@ -1,6 +1,3 @@
-// === Module 8999: CrunchyrollLinkDiscordConsent ===
-
-// Module 8999 (CrunchyrollLinkDiscordConsent)
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_3 } from "CrunchyrollLinkModalScenes";
 import { PlatformTypes } from "ME";

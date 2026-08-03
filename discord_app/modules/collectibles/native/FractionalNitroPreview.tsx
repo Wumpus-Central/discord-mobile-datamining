@@ -1,6 +1,3 @@
-// === Module 8758: FractionalNitroPreview ===
-
-// Module 8758 (FractionalNitroPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { VerticalGradient } from "ME";

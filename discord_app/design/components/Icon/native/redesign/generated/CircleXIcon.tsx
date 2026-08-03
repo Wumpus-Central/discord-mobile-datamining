@@ -1,6 +1,3 @@
-// === Module 6739: CircleXIcon ===
-
-// Module 6739 (CircleXIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

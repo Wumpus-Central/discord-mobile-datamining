@@ -1,6 +1,3 @@
-// === Module 16425: HeaderRow ===
-
-// Module 16425 (HeaderRow)
 import closure_3 from "ME";
 import _slicedToArray from "_slicedToArray";
 import set from "set";

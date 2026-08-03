@@ -1,6 +1,3 @@
-// === Module 507: getAuthenticationPath ===
-
-// Module 507 (getAuthenticationPath)
 function getAuthenticationPath(login, arg1, flag, arg3) {
   let tmp = arg1;
   if (arg1 === undefined) {

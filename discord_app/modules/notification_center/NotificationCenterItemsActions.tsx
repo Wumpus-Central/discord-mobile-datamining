@@ -1,6 +1,3 @@
-// === Module 15306: _fetchNotificationCenterItems ===
-
-// Module 15306 (_fetchNotificationCenterItems)
 import encodeProperties from "encodeProperties";
 import _validate from "_validate";
 import { Endpoints } from "ME";

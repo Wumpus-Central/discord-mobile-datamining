@@ -1,6 +1,3 @@
-// === Module 8116: urlUserId ===
-
-// Module 8116 (urlUserId)
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 6777: IdCardIcon ===
-
-// Module 6777 (IdCardIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

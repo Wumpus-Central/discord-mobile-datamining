@@ -1,6 +1,3 @@
-// === Module 4609: styleProperties ===
-
-// Module 4609 (styleProperties)
 import noop from "noop";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";

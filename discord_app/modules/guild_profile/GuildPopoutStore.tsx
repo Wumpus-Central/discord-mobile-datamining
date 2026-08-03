@@ -1,6 +1,3 @@
-// === Module 13126: initialize ===
-
-// Module 13126 (initialize)
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 

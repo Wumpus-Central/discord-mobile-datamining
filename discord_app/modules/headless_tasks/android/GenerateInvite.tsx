@@ -1,6 +1,3 @@
-// === Module 16800: promise ===
-
-// Module 16800 (promise)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("generateAcceptInviteOptions").fileFinishedImporting("modules/headless_tasks/android/GenerateInvite.tsx");

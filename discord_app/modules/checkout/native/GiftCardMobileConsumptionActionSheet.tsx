@@ -1,6 +1,3 @@
-// === Module 12509: GiftCardMobileConsumptionActionSheet ===
-
-// Module 12509 (GiftCardMobileConsumptionActionSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

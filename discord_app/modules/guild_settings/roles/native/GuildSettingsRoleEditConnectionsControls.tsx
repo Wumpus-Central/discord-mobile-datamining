@@ -1,6 +1,3 @@
-// === Module 16498: HeaderSection ===
-
-// Module 16498 (HeaderSection)
 import Header from "Header";
 import { View } from "context";
 import getRoleMemberCount from "getRoleMemberCount";

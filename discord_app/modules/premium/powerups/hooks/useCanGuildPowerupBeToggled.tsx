@@ -1,6 +1,3 @@
-// === Module 11637: useCanGuildPowerupBeToggled ===
-
-// Module 11637 (useCanGuildPowerupBeToggled)
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { PowerupActiveStatusType } from "BoostedGuildTiers";

@@ -1,6 +1,3 @@
-// === Module 11203: getForumPostShouldObscure ===
-
-// Module 11203 (getForumPostShouldObscure)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 

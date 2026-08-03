@@ -1,6 +1,3 @@
-// === Module 6295: useGeoForUser ===
-
-// Module 6295 (useGeoForUser)
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";

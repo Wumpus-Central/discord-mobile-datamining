@@ -1,6 +1,3 @@
-// === Module 15927: SoundCategoryItem ===
-
-// Module 15927 (SoundCategoryItem)
 import importAllResult from "initialize";
 import get_ActivityIndicator from "HapticFeedbackTypes";
 import { setSearchQuery } from "withEqualityFn";

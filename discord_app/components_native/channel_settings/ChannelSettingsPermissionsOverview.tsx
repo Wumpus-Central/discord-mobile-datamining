@@ -1,6 +1,3 @@
-// === Module 15676: ChannelPermissionSyncModule ===
-
-// Module 15676 (ChannelPermissionSyncModule)
 import LayoutAnimation from "LayoutAnimation";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import init from "init";

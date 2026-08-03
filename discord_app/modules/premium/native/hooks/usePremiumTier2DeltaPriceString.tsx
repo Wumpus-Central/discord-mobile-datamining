@@ -1,6 +1,3 @@
-// === Module 12600: getViewerProductId ===
-
-// Module 12600 (getViewerProductId)
 import noop from "noop";
 import { useNativeCheckoutStore } from "context";
 import updateProduct from "updateProduct";

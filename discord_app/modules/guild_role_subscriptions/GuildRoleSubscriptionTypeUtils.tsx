@@ -1,6 +1,3 @@
-// === Module 14267: getBenefitKey ===
-
-// Module 14267 (getBenefitKey)
 import { GuildRoleSubscriptionBenefitTypes as closure_2 } from "MAX_SUBSCRIPTION_TIERS";
 import { SubscriptionIntervalTypes } from "GuildFeatures";
 

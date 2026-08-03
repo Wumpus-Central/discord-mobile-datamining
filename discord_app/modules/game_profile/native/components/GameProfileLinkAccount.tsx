@@ -1,6 +1,3 @@
-// === Module 8654: GameProfileLinkAccount ===
-
-// Module 8654 (GameProfileLinkAccount)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

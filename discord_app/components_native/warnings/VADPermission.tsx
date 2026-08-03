@@ -1,6 +1,3 @@
-// === Module 15770: render ===
-
-// Module 15770 (render)
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";

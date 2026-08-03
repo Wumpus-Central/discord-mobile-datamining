@@ -1,6 +1,3 @@
-// === Module 11223: KEYBOARD_ANIMATION_DURATION ===
-
-// Module 11223 (KEYBOARD_ANIMATION_DURATION)
 import BottomSheetModal from "BottomSheetModal";
 
 const keyboardAnimationConfigs = BottomSheetModal.getKeyboardAnimationConfigs("keyboard", 250);

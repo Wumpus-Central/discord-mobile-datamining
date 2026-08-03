@@ -1,6 +1,3 @@
-// === Module 648: attach ===
-
-// Module 648 (attach)
 let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/BatchedStoreListener.tsx");
 class BatchedStoreListener {
   constructor(arg0, arg1) {

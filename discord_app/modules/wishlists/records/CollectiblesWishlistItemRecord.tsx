@@ -1,6 +1,3 @@
-// === Module 8687: createCollectiblesItemFromServerResponse ===
-
-// Module 8687 (createCollectiblesItemFromServerResponse)
 import fromServer from "fromServer";
 import { transformSKUToCollectiblesItem as closure_3 } from "createCollectiblesItemsFromServerResponse";
 import closure_4 from "fromServer";

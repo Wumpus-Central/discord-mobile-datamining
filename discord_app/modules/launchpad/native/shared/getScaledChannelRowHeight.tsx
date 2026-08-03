@@ -1,6 +1,3 @@
-// === Module 15828: getScaledChannelRowHeight ===
-
-// Module 15828 (getScaledChannelRowHeight)
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/getScaledChannelRowHeight.tsx");
 
 export default function getScaledChannelRowHeight(arg0) {

@@ -1,6 +1,3 @@
-// === Module 8854: isAnimatedBackgroundOption ===
-
-// Module 8854 (isAnimatedBackgroundOption)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import VideoFilterType from "VideoFilterType";

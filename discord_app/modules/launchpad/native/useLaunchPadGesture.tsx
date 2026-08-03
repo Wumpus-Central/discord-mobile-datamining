@@ -1,6 +1,3 @@
-// === Module 15811: useLaunchPadGesture ===
-
-// Module 15811 (useLaunchPadGesture)
 import noop from "noop";
 import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";
 

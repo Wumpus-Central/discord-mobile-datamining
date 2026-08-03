@@ -1,6 +1,3 @@
-// === Module 11000: ConnectedAcceptGuildTemplate ===
-
-// Module 11000 (ConnectedAcceptGuildTemplate)
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

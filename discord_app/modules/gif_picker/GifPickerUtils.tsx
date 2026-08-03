@@ -1,6 +1,3 @@
-// === Module 9615: getSearchPlaceholder ===
-
-// Module 9615 (getSearchPlaceholder)
 const result = require("set").fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");
 
 export const getSearchPlaceholder = function getSearchPlaceholder() {

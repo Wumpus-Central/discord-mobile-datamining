@@ -1,6 +1,3 @@
-// === Module 16464: GuildSettingsModalSecurity ===
-
-// Module 16464 (GuildSettingsModalSecurity)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import { isGuildOwnerWithRequiredMfaLevel as closure_6 } from "GuildNSFWContentLevel";

@@ -1,6 +1,3 @@
-// === Module 7785: transform ===
-
-// Module 7785 (transform)
 import noop from "noop";
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
 

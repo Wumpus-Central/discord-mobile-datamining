@@ -1,6 +1,3 @@
-// === Module 13878: getGoreContentSettingOrDefault ===
-
-// Module 13878 (getGoreContentSettingOrDefault)
 function getGoreContentSettingOrDefault(arg0) {
   let goreContentFriendDm;
   let goreContentNonFriendDm;

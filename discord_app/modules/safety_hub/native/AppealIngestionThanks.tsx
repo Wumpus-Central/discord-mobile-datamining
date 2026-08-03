@@ -1,6 +1,3 @@
-// === Module 11113: AppealIngestionThanks ===
-
-// Module 11113 (AppealIngestionThanks)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

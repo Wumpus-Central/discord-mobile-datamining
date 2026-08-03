@@ -1,6 +1,3 @@
-// === Module 5564: getHigherContrastColor ===
-
-// Module 5564 (getHigherContrastColor)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

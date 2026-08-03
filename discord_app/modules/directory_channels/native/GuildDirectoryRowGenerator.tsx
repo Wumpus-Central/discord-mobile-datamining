@@ -1,6 +1,3 @@
-// === Module 11775: RowType ===
-
-// Module 11775 (RowType)
 import { DirectoryEntryCategories } from "DirectoryEntryTypes";
 import ArrayResult from "module_20";
 

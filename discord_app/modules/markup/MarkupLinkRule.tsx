@@ -1,6 +1,3 @@
-// === Module 4629: validateContentTypes ===
-
-// Module 4629 (validateContentTypes)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

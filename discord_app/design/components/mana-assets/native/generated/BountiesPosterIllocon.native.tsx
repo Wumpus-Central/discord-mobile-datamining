@@ -1,6 +1,3 @@
-// === Module 6893: BountiesPosterIllocon ===
-
-// Module 6893 (BountiesPosterIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BountiesPosterIllocon.native.tsx");

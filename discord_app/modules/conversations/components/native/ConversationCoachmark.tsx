@@ -1,6 +1,3 @@
-// === Module 10137: NewBadge ===
-
-// Module 10137 (NewBadge)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

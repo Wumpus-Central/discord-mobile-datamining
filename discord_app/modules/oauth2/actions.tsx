@@ -1,6 +1,3 @@
-// === Module 8965: getLocationContextServer ===
-
-// Module 8965 (getLocationContextServer)
 import handleLogout from "handleLogout";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

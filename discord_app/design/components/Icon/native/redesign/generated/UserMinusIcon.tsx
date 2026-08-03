@@ -1,6 +1,3 @@
-// === Module 4135: UserMinusIcon ===
-
-// Module 4135 (UserMinusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

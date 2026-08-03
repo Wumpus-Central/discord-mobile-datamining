@@ -1,6 +1,3 @@
-// === Module 12054: ThreadMinusIcon ===
-
-// Module 12054 (ThreadMinusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

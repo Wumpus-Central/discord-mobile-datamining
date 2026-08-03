@@ -1,6 +1,3 @@
-// === Module 8917: SecureFramesVerificationBottomSheet ===
-
-// Module 8917 (SecureFramesVerificationBottomSheet)
 import noop from "noop";
 import { View } from "SecureFramesCopyIcon";
 import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";

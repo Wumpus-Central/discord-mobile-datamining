@@ -1,6 +1,3 @@
-// === Module 11729: UserProfileConfirmRemoveFriend ===
-
-// Module 11729 (UserProfileConfirmRemoveFriend)
 import "noop";
 import jsxProd from "jsxProd";
 

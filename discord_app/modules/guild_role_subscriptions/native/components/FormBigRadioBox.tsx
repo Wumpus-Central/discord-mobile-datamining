@@ -1,6 +1,3 @@
-// === Module 16589: FormBigRadioBox ===
-
-// Module 16589 (FormBigRadioBox)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

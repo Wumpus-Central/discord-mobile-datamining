@@ -1,6 +1,3 @@
-// === Module 10976: QuestRewardDetailsBottomSheet ===
-
-// Module 10976 (QuestRewardDetailsBottomSheet)
 import noop from "noop";
 import { View } from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";

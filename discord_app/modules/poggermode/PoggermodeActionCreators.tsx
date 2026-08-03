@@ -1,6 +1,3 @@
-// === Module 6145: updatePoggermodeSettings ===
-
-// Module 6145 (updatePoggermodeSettings)
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import updateCombo from "updateCombo";

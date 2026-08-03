@@ -1,6 +1,3 @@
-// === Module 5830: fromServer ===
-
-// Module 5830 (fromServer)
 let prototype;
 prototype = function CollectiblesMarketingTabTooltipRecord(arg0) {
   const obj = Object.create(new.target.prototype);

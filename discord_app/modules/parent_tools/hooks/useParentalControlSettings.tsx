@@ -1,6 +1,3 @@
-// === Module 13874: useParentalControlledExplicitContentSettings ===
-
-// Module 13874 (useParentalControlledExplicitContentSettings)
 import result from "result";
 import noop from "noop";
 import getSettings from "getSettings";

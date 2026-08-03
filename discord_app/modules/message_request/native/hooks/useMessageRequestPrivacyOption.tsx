@@ -1,6 +1,3 @@
-// === Module 13067: MessageRequestRestrictedGuildPrivacyOption ===
-
-// Module 13067 (MessageRequestRestrictedGuildPrivacyOption)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

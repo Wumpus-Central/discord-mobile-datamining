@@ -1,6 +1,3 @@
-// === Module 15775: trackActionSheetImpression ===
-
-// Module 15775 (trackActionSheetImpression)
 import _slicedToArray from "_slicedToArray";
 import CatEarsBackdrop from "CatEarsBackdrop";
 import noop from "CatEarsBackdrop";

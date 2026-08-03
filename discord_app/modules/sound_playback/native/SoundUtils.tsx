@@ -1,6 +1,3 @@
-// === Module 10289: _createSound ===
-
-// Module 10289 (_createSound)
 import { NativeModules } from "get ActivityIndicator";
 import isMetaQuest from "isMetaQuest";
 import isMetaQuest from "isMetaQuest";

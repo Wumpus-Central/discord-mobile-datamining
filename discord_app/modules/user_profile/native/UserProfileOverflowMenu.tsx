@@ -1,6 +1,3 @@
-// === Module 12219: UserProfileOverflowMenu ===
-
-// Module 12219 (UserProfileOverflowMenu)
 import asyncRequireImpl from "asyncRequireImpl";
 import useEquippedCollectibleSkuIds from "useEquippedCollectibleSkuIds";
 import getParticipants from "getParticipants";

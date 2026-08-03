@@ -1,6 +1,3 @@
-// === Module 10692: ModeratorViewOverlay ===
-
-// Module 10692 (ModeratorViewOverlay)
 import set from "set";
 import ManaContext from "ManaContext";
 import get_ActivityIndicator from "module_10753";

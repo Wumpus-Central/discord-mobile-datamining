@@ -1,6 +1,3 @@
-// === Module 6915: CandyIllocon ===
-
-// Module 6915 (CandyIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/CandyIllocon.native.tsx");

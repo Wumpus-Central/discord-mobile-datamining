@@ -1,6 +1,3 @@
-// === Module 5140: updateGuildSelfMember ===
-
-// Module 5140 (updateGuildSelfMember)
 import initialize from "initialize";
 import { Endpoints } from "ME";
 

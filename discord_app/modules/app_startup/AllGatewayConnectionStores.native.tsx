@@ -1,6 +1,3 @@
-// === Module 12756: noop ===
-
-// Module 12756 (noop)
 import participantFromServer from "participantFromServer";
 import reset from "reset";
 import adUser from "adUser";

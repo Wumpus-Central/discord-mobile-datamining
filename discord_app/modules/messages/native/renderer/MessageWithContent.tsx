@@ -1,6 +1,3 @@
-// === Module 7723: generateMessageRowData ===
-
-// Module 7723 (generateMessageRowData)
 import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod";
 import { RowType } from "Changeset";
 

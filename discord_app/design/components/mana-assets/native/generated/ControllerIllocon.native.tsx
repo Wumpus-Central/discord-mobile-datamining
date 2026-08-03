@@ -1,6 +1,3 @@
-// === Module 6953: ControllerIllocon ===
-
-// Module 6953 (ControllerIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ControllerIllocon.native.tsx");

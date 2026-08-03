@@ -1,6 +1,3 @@
-// === Module 12643: useGuildShopVisibleInGuild ===
-
-// Module 12643 (useGuildShopVisibleInGuild)
 import { GuildFeatures } from "ME";
 
 let result = require("computeCanEveryoneInGuildSeeRoleSubscriptions").fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");

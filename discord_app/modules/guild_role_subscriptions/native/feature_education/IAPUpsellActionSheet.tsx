@@ -1,6 +1,3 @@
-// === Module 15232: IAPUpsellActionSheet ===
-
-// Module 15232 (IAPUpsellActionSheet)
 import "noop";
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";

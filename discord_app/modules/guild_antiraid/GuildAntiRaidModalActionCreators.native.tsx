@@ -1,6 +1,3 @@
-// === Module 13121: openReportRaidModal ===
-
-// Module 13121 (openReportRaidModal)
 import { GUILD_REPORT_RAID_MOBILE_KEY as closure_3 } from "GUILD_REPORT_RAID_MOBILE_KEY";
 
 const result = require("ReportModal").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidModalActionCreators.native.tsx");

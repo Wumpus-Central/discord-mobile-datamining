@@ -1,6 +1,3 @@
-// === Module 14983: ? ===
-
-// Module 14983
 import handleConnectionOpen from "handleConnectionOpen";
 import { ME } from "ME";
 import { jsx } from "jsxProd";

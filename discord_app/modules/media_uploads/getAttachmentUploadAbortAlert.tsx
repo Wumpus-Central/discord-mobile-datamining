@@ -1,6 +1,3 @@
-// === Module 12627: getAttachmentUploadAbortAlertContent ===
-
-// Module 12627 (getAttachmentUploadAbortAlertContent)
 import { AbortCodes } from "ME";
 
 const result = require("items").fileFinishedImporting("modules/media_uploads/getAttachmentUploadAbortAlert.tsx");

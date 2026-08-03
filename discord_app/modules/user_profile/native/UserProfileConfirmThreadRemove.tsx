@@ -1,6 +1,3 @@
-// === Module 11733: UserProfileConfirmThreadRemove ===
-
-// Module 11733 (UserProfileConfirmThreadRemove)
 import "noop";
 import jsxProd from "jsxProd";
 

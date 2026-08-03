@@ -1,6 +1,3 @@
-// === Module 10301: merge ===
-
-// Module 10301 (merge)
 function merge() {
   let items = [...arguments];
   return items.reduce((arg0, arg1) => {

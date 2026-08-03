@@ -1,6 +1,3 @@
-// === Module 10260: isOnlyDayLoss ===
-
-// Module 10260 (isOnlyDayLoss)
 let Created;
 let Disabled;
 let Enabled;

@@ -1,6 +1,3 @@
-// === Module 1383: set ===
-
-// Module 1383 (set)
 import set from "set";
 
 const obj = { ALL: null };

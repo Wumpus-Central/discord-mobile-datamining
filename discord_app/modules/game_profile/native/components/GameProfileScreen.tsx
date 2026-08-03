@@ -1,6 +1,3 @@
-// === Module 8491: GetButton ===
-
-// Module 8491 (GetButton)
 import _slicedToArray from "_slicedToArray";
 import getGameProfileStoreWebsiteData from "getGameProfileStoreWebsiteData";
 import get_ActivityIndicator from "CONFIG_NEVER_ANIMATE_TIMING";

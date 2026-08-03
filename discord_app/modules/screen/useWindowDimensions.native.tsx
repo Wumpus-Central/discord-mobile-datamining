@@ -1,6 +1,3 @@
-// === Module 1474: useWindowDimensions ===
-
-// Module 1474 (useWindowDimensions)
 import noop from "noop";
 import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
 

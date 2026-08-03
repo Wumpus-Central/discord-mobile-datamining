@@ -1,6 +1,3 @@
-// === Module 9950: ForLaterModal ===
-
-// Module 9950 (ForLaterModal)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

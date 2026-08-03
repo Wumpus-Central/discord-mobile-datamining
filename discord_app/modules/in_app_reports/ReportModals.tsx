@@ -1,6 +1,3 @@
-// === Module 7697: _submitHamReportForFirstDM ===
-
-// Module 7697 (_submitHamReportForFirstDM)
 import ReportNames from "ReportNames";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import hasFlag from "hasFlag";

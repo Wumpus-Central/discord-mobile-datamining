@@ -1,6 +1,3 @@
-// === Module 5638: PostponeRender ===
-
-// Module 5638 (PostponeRender)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

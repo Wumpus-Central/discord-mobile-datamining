@@ -1,6 +1,3 @@
-// === Module 13951: FamilyCenterActivityPurchaseRow ===
-
-// Module 13951 (FamilyCenterActivityPurchaseRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

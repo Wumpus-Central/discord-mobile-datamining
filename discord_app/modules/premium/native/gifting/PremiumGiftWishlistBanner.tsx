@@ -1,6 +1,3 @@
-// === Module 9762: PremiumGiftWishlistBanner ===
-
-// Module 9762 (PremiumGiftWishlistBanner)
 import closure_3 from "ME";
 import useSelectPremiumGift from "useSelectPremiumGift";
 import get_ActivityIndicator from "expandEventProperties";

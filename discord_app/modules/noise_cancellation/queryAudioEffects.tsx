@@ -1,6 +1,3 @@
-// === Module 12979: _queryAudioEffects ===
-
-// Module 12979 (_queryAudioEffects)
 import expandEventProperties from "expandEventProperties";
 import { AnalyticEvents } from "ME";
 

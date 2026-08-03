@@ -1,6 +1,3 @@
-// === Module 13122: ReportModal ===
-
-// Module 13122 (ReportModal)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";

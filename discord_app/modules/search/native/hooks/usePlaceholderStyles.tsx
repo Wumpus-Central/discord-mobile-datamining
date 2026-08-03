@@ -1,6 +1,3 @@
-// === Module 15506: useFullscreenPlaceholderCount ===
-
-// Module 15506 (useFullscreenPlaceholderCount)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { FADE_LAYOUT_ANIMATION_DURATION as closure_4 } from "MessageEmbedTypes";
 

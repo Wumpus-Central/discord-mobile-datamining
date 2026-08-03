@@ -1,6 +1,3 @@
-// === Module 8046: prototype ===
-
-// Module 8046 (prototype)
 const prototype = function RevenueError(errorHandlingBehavior) {
   let extraSentryInformation;
   let message;

@@ -1,6 +1,3 @@
-// === Module 1478: computeEntryState ===
-
-// Module 1478 (computeEntryState)
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { ExpressionPickerViewType } from "ExpressionPickerViewType";
 import { MediaKeyboardTarget } from "DRAG_HANDLE";

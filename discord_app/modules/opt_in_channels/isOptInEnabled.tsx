@@ -1,6 +1,3 @@
-// === Module 5794: useOptInEnabledForGuild ===
-
-// Module 5794 (useOptInEnabledForGuild)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

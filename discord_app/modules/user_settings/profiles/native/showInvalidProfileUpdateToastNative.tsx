@@ -1,6 +1,3 @@
-// === Module 13724: showGenericProfileUpdateFailureToast ===
-
-// Module 13724 (showGenericProfileUpdateFailureToast)
 const result = require("Themes").fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
 
 export const showGenericProfileUpdateFailureToast = function showGenericProfileUpdateFailureToast(avatar) {

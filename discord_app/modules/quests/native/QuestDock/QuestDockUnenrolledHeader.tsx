@@ -1,6 +1,3 @@
-// === Module 14232: QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED ===
-
-// Module 14232 (QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)
 import PressableBase from "PressableBase";
 import importAllResult from "map";
 import get_ActivityIndicator from "useTheme";

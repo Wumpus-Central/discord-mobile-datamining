@@ -1,6 +1,3 @@
-// === Module 15222: ? ===
-
-// Module 15222
 import importAllResult from "shouldShowMembershipVerificationGate";
 import { View } from "useStageParticipants";
 import handleConnectionOpen from "handleConnectionOpen";

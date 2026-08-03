@@ -1,6 +1,3 @@
-// === Module 14001: VrHeadsetIcon ===
-
-// Module 14001 (VrHeadsetIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

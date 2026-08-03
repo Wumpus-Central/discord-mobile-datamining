@@ -1,6 +1,3 @@
-// === Module 11540: ? ===
-
-// Module 11540
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";

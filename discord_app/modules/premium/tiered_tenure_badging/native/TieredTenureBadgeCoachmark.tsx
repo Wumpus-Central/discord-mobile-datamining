@@ -1,6 +1,3 @@
-// === Module 8450: CoachmarkImg ===
-
-// Module 8450 (CoachmarkImg)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

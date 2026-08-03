@@ -1,6 +1,3 @@
-// === Module 7343: NitroSupergraphicLogo ===
-
-// Module 7343 (NitroSupergraphicLogo)
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

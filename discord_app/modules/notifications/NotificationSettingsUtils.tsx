@@ -1,6 +1,3 @@
-// === Module 13534: getAssignedNotifSettingsAndMappings ===
-
-// Module 13534 (getAssignedNotifSettingsAndMappings)
 import _slicedToArray from "_slicedToArray";
 import items2 from "items2";
 

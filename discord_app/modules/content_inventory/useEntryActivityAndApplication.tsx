@@ -1,6 +1,3 @@
-// === Module 12003: useEntryActivityAndApplication ===
-
-// Module 12003 (useEntryActivityAndApplication)
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
 import entryToKey from "entryToKey";

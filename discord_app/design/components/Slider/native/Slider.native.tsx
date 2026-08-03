@@ -1,6 +1,3 @@
-// === Module 13240: Slider ===
-
-// Module 13240 (Slider)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

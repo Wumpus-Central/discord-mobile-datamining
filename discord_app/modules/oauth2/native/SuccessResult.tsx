@@ -1,6 +1,3 @@
-// === Module 11016: SuccessResultModal ===
-
-// Module 11016 (SuccessResultModal)
 import SafeAreaPaddingView from "SafeAreaPaddingView";
 import get_ActivityIndicator from "getBestActiveInput";
 import ensureGuildLoaded from "ensureGuildLoaded";

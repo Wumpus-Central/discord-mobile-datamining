@@ -1,6 +1,3 @@
-// === Module 10810: ChannelCallMicButton ===
-
-// Module 10810 (ChannelCallMicButton)
 import noop from "noop";
 import set from "set";
 import { jsx } from "jsxProd";

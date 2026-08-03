@@ -1,6 +1,3 @@
-// === Module 16561: EarningPreview ===
-
-// Module 16561 (EarningPreview)
 import "set";
 import { View } from "registerAsset";
 import { CREATOR_REVENUE_SHARE_PERCENTAGE as closure_4 } from "MAX_SUBSCRIPTION_TIERS";

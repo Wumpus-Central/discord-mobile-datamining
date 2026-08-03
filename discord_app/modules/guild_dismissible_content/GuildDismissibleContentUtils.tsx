@@ -1,6 +1,3 @@
-// === Module 11599: isContentDismissed ===
-
-// Module 11599 (isContentDismissed)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { AnalyticEvents } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";

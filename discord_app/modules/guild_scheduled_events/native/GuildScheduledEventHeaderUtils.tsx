@@ -1,6 +1,3 @@
-// === Module 12293: getGuildScheduledEventHeaderProps ===
-
-// Module 12293 (getGuildScheduledEventHeaderProps)
 import scheduledEventSort from "scheduledEventSort";
 import { GuildScheduledEventEntityTypes as closure_5 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 

@@ -1,6 +1,3 @@
-// === Module 9361: BurstReactionToggle ===
-
-// Module 9361 (BurstReactionToggle)
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

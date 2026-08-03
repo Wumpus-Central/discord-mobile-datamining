@@ -1,6 +1,3 @@
-// === Module 14326: ChannelRowItem ===
-
-// Module 14326 (ChannelRowItem)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { StatusTypes } from "ME";

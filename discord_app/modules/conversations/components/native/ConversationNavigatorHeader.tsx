@@ -1,6 +1,3 @@
-// === Module 9294: ConversationNavigatorHeader ===
-
-// Module 9294 (ConversationNavigatorHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";

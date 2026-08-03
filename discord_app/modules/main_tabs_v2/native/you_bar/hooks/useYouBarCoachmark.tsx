@@ -1,6 +1,3 @@
-// === Module 15262: useYouBarCoachmark ===
-
-// Module 15262 (useYouBarCoachmark)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";

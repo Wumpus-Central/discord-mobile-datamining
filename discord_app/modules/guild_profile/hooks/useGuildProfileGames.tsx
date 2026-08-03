@@ -1,6 +1,3 @@
-// === Module 11963: useGuildProfileGames ===
-
-// Module 11963 (useGuildProfileGames)
 import noop from "noop";
 import applicationId from "applicationId";
 import map from "map";

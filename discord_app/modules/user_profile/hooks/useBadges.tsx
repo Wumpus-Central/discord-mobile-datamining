@@ -1,6 +1,3 @@
-// === Module 8099: useBadges ===
-
-// Module 8099 (useBadges)
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

@@ -1,6 +1,3 @@
-// === Module 10991: QuestCollectibleRewardModalMessages ===
-
-// Module 10991 (QuestCollectibleRewardModalMessages)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { QuestsExperimentLocations } from "QuestsExperimentLocations";
 import jsxProd from "jsxProd";

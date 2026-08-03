@@ -1,6 +1,3 @@
-// === Module 14778: DevToolsProfilingUseStateFromStores ===
-
-// Module 14778 (DevToolsProfilingUseStateFromStores)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 15645: result ===
-
-// Module 15645 (result)
 import ApexExperiment from "ApexExperiment";
 
 const result = 3 * require("set").Millis.DAYS_30;

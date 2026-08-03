@@ -1,6 +1,3 @@
-// === Module 7287: MushroomIllocon ===
-
-// Module 7287 (MushroomIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/MushroomIllocon.native.tsx");

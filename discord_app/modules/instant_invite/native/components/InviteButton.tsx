@@ -1,6 +1,3 @@
-// === Module 11822: ? ===
-
-// Module 11822
 import { View } from "get ActivityIndicator";
 import { InviteSendStates } from "InviteSendStates";
 import { jsx } from "jsxProd";

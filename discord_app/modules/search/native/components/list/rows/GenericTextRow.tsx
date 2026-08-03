@@ -1,6 +1,3 @@
-// === Module 15540: ? ===
-
-// Module 15540
 import Text from "Text";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 7680: RestrictedUser ===
-
-// Module 7680 (RestrictedUser)
 import _slicedToArray from "_slicedToArray";
 import renderDefaultEmpty from "renderDefaultEmpty";
 import { View } from "Button";

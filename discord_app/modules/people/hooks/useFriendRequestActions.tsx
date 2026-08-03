@@ -1,6 +1,3 @@
-// === Module 12238: useFriendRequestActions ===
-
-// Module 12238 (useFriendRequestActions)
 import noop from "noop";
 
 let result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");

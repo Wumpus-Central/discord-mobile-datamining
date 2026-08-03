@@ -1,6 +1,3 @@
-// === Module 3812: isSubscriptionRole ===
-
-// Module 3812 (isSubscriptionRole)
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
 
 export const isSubscriptionRole = function isSubscriptionRole(role) {

@@ -1,6 +1,3 @@
-// === Module 9788: PremiumWishlistItemCard ===
-
-// Module 9788 (PremiumWishlistItemCard)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

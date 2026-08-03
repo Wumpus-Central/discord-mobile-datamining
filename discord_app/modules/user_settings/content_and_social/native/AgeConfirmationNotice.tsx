@@ -1,6 +1,3 @@
-// === Module 13868: AgeConfirmationNotice ===
-
-// Module 13868 (AgeConfirmationNotice)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import SafetyToastType from "SafetyToastType";

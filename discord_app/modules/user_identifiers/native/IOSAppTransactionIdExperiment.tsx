@@ -1,6 +1,3 @@
-// === Module 16255: isIOSAppTransactionIdTrackingEnabled ===
-
-// Module 16255 (isIOSAppTransactionIdTrackingEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

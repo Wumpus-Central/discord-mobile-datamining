@@ -1,6 +1,3 @@
-// === Module 6863: AvatarMallowExample ===
-
-// Module 6863 (AvatarMallowExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/AvatarMallowExample.native.tsx");

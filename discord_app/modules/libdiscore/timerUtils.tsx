@@ -1,6 +1,3 @@
-// === Module 16783: onTimersDelayCallback ===
-
-// Module 16783 (onTimersDelayCallback)
 import { AnalyticEvents } from "ME";
 
 function onTimersDelayCallback(timerId, expectedDelay, actualDelay, executionTime) {

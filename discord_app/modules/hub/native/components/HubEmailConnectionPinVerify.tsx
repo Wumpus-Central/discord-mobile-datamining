@@ -1,6 +1,3 @@
-// === Module 11854: presentResendToast ===
-
-// Module 11854 (presentResendToast)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "jsxProd";
 import SingleCodeInput from "SingleCodeInput";

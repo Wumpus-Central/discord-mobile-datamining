@@ -1,6 +1,3 @@
-// === Module 9599: EXPRESSION_PICKER_ACTION_SHEET_KEY ===
-
-// Module 9599 (EXPRESSION_PICKER_ACTION_SHEET_KEY)
 const ExpressionPickerActionSheet = "ExpressionPickerActionSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/expression_picker/native/openExpressionPickerActionSheet.tsx");
 

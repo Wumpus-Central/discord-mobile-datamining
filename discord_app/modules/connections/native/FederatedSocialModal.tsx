@@ -1,6 +1,3 @@
-// === Module 9010: FederatedSocialModal ===
-
-// Module 9010 (FederatedSocialModal)
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 9017: ApplicationEducationEntry ===
-
-// Module 9017 (ApplicationEducationEntry)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { MAX_FRIENDS } from "ME";

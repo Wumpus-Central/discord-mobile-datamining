@@ -1,6 +1,3 @@
-// === Module 10460: LikelyAtoMoreTipsModalActionItems ===
-
-// Module 10460 (LikelyAtoMoreTipsModalActionItems)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";

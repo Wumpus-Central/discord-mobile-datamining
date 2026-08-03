@@ -1,6 +1,3 @@
-// === Module 13587: toggleVoiceChannelChat ===
-
-// Module 13587 (toggleVoiceChannelChat)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import getParticipants from "getParticipants";

@@ -1,6 +1,3 @@
-// === Module 14503: DismissibleNewTag ===
-
-// Module 14503 (DismissibleNewTag)
 import "noop";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";

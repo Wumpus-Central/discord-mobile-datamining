@@ -1,6 +1,3 @@
-// === Module 8882: useIsUserSecureFramesVerified ===
-
-// Module 8882 (useIsUserSecureFramesVerified)
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import computeCallVerification from "computeCallVerification";

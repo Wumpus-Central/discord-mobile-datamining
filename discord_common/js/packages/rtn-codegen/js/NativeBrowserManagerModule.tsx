@@ -1,6 +1,3 @@
-// === Module 4160: enforcing ===
-
-// Module 4160 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeBrowserManagerModule");

@@ -1,6 +1,3 @@
-// === Module 11502: useMentionAnchor ===
-
-// Module 11502 (useMentionAnchor)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

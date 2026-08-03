@@ -1,6 +1,3 @@
-// === Module 13571: transformSubscriptionListingToSku ===
-
-// Module 13571 (transformSubscriptionListingToSku)
 import set from "set";
 import ME from "ME";
 

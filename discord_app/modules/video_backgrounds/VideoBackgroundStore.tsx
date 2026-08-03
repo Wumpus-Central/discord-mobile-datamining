@@ -1,6 +1,3 @@
-// === Module 8853: handleSyncedStoresUpdate ===
-
-// Module 8853 (handleSyncedStoresUpdate)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";

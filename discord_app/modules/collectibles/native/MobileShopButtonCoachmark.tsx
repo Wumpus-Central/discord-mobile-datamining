@@ -1,6 +1,3 @@
-// === Module 15649: MobileShopButtonCoachmark ===
-
-// Module 15649 (MobileShopButtonCoachmark)
 import noop from "noop";
 import { Image } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

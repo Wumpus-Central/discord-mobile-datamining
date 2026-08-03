@@ -1,6 +1,3 @@
-// === Module 16735: SafetyFlowTaskScreen ===
-
-// Module 16735 (SafetyFlowTaskScreen)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

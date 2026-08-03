@@ -1,6 +1,3 @@
-// === Module 8750: BundleProductPreview ===
-
-// Module 8750 (BundleProductPreview)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

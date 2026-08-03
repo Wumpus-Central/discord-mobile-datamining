@@ -1,6 +1,3 @@
-// === Module 4037: hexToRgba ===
-
-// Module 4037 (hexToRgba)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

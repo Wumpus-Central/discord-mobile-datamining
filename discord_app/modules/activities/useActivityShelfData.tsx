@@ -1,6 +1,3 @@
-// === Module 11228: useActivityShelfData ===
-
-// Module 11228 (useActivityShelfData)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";

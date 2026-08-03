@@ -1,6 +1,3 @@
-// === Module 14640: ShopCardGridItem ===
-
-// Module 14640 (ShopCardGridItem)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

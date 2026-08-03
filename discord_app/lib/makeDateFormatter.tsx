@@ -1,6 +1,3 @@
-// === Module 3882: defaultMeridiem ===
-
-// Module 3882 (defaultMeridiem)
 function defaultMeridiem(arg0, arg1, arg2) {
   if (arg0 < 12) {
     let str2 = "AM";

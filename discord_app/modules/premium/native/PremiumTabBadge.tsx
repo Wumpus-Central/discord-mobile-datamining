@@ -1,6 +1,3 @@
-// === Module 14031: ThemedTabBadge ===
-
-// Module 14031 (ThemedTabBadge)
 import _slicedToArray from "_slicedToArray";
 import "getPremiumPlanItem";
 import { View } from "usePremiumTrialOffer";

@@ -1,6 +1,3 @@
-// === Module 16721: indexingEnabled ===
-
-// Module 16721 (indexingEnabled)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

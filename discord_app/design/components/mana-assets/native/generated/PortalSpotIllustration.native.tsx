@@ -1,6 +1,3 @@
-// === Module 7393: PortalSpotIllustration ===
-
-// Module 7393 (PortalSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PortalSpotIllustration.native.tsx");

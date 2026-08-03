@@ -1,6 +1,3 @@
-// === Module 10943: PublicGuildAnnouncementProfile ===
-
-// Module 10943 (PublicGuildAnnouncementProfile)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

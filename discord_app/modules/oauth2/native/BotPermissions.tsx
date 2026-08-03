@@ -1,6 +1,3 @@
-// === Module 9026: BotPermissions ===
-
-// Module 9026 (BotPermissions)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

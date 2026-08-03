@@ -1,6 +1,3 @@
-// === Module 11678: useMultiPerkStatusValues ===
-
-// Module 11678 (useMultiPerkStatusValues)
 import { PowerupActiveStatusType } from "BoostedGuildTiers";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");

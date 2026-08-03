@@ -1,6 +1,3 @@
-// === Module 14344: toggle ===
-
-// Module 14344 (toggle)
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";

@@ -1,6 +1,3 @@
-// === Module 13526: set ===
-
-// Module 13526 (set)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";

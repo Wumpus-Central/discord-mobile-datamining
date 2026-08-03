@@ -1,6 +1,3 @@
-// === Module 13549: items ===
-
-// Module 13549 (items)
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

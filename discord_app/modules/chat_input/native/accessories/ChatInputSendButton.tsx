@@ -1,6 +1,3 @@
-// === Module 11428: renderChatInputSendButton ===
-
-// Module 11428 (renderChatInputSendButton)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_4054";
 import { View } from "wrapChildrenDefault";

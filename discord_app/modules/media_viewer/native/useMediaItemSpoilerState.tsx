@@ -1,6 +1,3 @@
-// === Module 12323: useMediaItemSpoilerState ===
-
-// Module 12323 (useMediaItemSpoilerState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

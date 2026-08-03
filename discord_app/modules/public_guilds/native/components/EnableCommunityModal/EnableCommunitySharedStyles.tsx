@@ -1,6 +1,3 @@
-// === Module 16528: styles ===
-
-// Module 16528 (styles)
 import { Platform } from "get ActivityIndicator";
 import createCacheKey from "createCacheKey";
 

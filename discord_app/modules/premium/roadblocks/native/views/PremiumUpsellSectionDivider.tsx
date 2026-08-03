@@ -1,6 +1,3 @@
-// === Module 9393: PremiumUpsellSectionDivider ===
-
-// Module 9393 (PremiumUpsellSectionDivider)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { Gradients } from "items";

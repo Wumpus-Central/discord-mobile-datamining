@@ -1,6 +1,3 @@
-// === Module 8995: CrunchyrollLinkLanding ===
-
-// Module 8995 (CrunchyrollLinkLanding)
 import noop from "noop";
 import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes";
 import ME from "ME";

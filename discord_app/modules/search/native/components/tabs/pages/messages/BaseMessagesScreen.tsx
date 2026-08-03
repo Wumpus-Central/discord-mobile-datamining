@@ -1,6 +1,3 @@
-// === Module 15552: BaseMessagesScreen ===
-
-// Module 15552 (BaseMessagesScreen)
 import noop from "noop";
 import handleReaction from "handleReaction";
 import prototype from "prototype";

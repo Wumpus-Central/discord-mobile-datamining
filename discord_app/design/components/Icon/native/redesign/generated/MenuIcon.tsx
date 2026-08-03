@@ -1,6 +1,3 @@
-// === Module 14652: MenuIcon ===
-
-// Module 14652 (MenuIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 4698: TextControllerIcon ===
-
-// Module 4698 (TextControllerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

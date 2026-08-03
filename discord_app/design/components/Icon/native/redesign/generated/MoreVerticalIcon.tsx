@@ -1,6 +1,3 @@
-// === Module 12327: MoreVerticalIcon ===
-
-// Module 12327 (MoreVerticalIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

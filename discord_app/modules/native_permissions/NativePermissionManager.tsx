@@ -1,6 +1,3 @@
-// === Module 4737: isEnabled ===
-
-// Module 4737 (isEnabled)
 import { NativePermissionTypes } from "NativePermissionStatus";
 import { InputModes } from "ME";
 import "initialize";

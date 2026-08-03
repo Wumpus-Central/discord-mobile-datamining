@@ -1,6 +1,3 @@
-// === Module 13271: enforcing ===
-
-// Module 13271 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTelemetryRingModule");

@@ -1,6 +1,3 @@
-// === Module 14025: _updateClipsAllowVoiceRecording ===
-
-// Module 14025 (_updateClipsAllowVoiceRecording)
 import getSystemLocale from "getSystemLocale";
 import createToggle from "createToggle";
 

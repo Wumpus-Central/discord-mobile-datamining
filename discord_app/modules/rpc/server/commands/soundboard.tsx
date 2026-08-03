@@ -1,6 +1,3 @@
-// === Module 13583: RPC_LOCAL_SCOPE ===
-
-// Module 13583 (RPC_LOCAL_SCOPE)
 import set from "set";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import mergeGuildAvatar from "mergeGuildAvatar";

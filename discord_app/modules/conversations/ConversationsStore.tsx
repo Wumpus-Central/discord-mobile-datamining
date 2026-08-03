@@ -1,6 +1,3 @@
-// === Module 5861: removePendingListFetch ===
-
-// Module 5861 (removePendingListFetch)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";

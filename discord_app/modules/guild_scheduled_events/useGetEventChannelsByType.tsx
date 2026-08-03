@@ -1,6 +1,3 @@
-// === Module 8268: getEventChannelsByType ===
-
-// Module 8268 (getEventChannelsByType)
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import comparator from "comparator";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";

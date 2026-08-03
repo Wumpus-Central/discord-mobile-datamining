@@ -1,6 +1,3 @@
-// === Module 11794: ContactSyncLandingImage ===
-
-// Module 11794 (ContactSyncLandingImage)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

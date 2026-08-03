@@ -1,6 +1,3 @@
-// === Module 16391: GuildSettingsOwnerConfiguredContentLevel ===
-
-// Module 16391 (GuildSettingsOwnerConfiguredContentLevel)
 import importAllResult from "Text";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleFormInit from "handleFormInit";

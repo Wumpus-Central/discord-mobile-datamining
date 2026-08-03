@@ -1,6 +1,3 @@
-// === Module 8030: isApplicationAgeRestricted ===
-
-// Module 8030 (isApplicationAgeRestricted)
 import addApplication from "addApplication";
 
 const require = arg1;

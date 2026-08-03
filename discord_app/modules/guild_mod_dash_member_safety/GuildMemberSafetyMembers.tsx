@@ -1,6 +1,3 @@
-// === Module 5757: getGuildMemberSecondaryIndexes ===
-
-// Module 5757 (getGuildMemberSecondaryIndexes)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

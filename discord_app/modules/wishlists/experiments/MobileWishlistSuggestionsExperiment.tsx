@@ -1,6 +1,3 @@
-// === Module 12205: useIsMobileWishlistSuggestionsEnabled ===
-
-// Module 12205 (useIsMobileWishlistSuggestionsEnabled)
 import ApexExperiment from "ApexExperiment";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-smag-mobile-wishlist-suggestions", kind: "user", defaultConfig: { isEnabled: false }, variations: { 0: { isEnabled: false }, 1: { isEnabled: true } } });

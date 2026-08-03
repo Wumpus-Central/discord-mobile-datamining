@@ -1,6 +1,3 @@
-// === Module 9717: useCreateOrReuseGiftOrder ===
-
-// Module 9717 (useCreateOrReuseGiftOrder)
 import timestamp from "timestamp";
 import noop from "noop";
 import { ItemPurchaseType } from "CustomCheckoutFlow";

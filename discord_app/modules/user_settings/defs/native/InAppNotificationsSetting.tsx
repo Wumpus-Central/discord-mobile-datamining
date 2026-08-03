@@ -1,6 +1,3 @@
-// === Module 14464: toggle ===
-
-// Module 14464 (toggle)
 import { AnalyticEvents } from "ME";
 import createToggle from "createToggle";
 

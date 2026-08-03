@@ -1,6 +1,3 @@
-// === Module 4647: getSoundString ===
-
-// Module 4647 (getSoundString)
 const result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundString.tsx");
 
 export default function getSoundString(arg0, arg1) {

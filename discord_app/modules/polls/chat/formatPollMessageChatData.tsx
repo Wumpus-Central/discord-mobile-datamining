@@ -1,6 +1,3 @@
-// === Module 8001: reactionForId ===
-
-// Module 8001 (reactionForId)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import ensureGuildLoaded from "ensureGuildLoaded";

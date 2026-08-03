@@ -1,6 +1,3 @@
-// === Module 10797: canChannelUseSoundboard ===
-
-// Module 10797 (canChannelUseSoundboard)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";

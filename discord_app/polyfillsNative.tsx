@@ -1,6 +1,3 @@
-// === Module 13377: ? ===
-
-// Module 13377
 import timestamp from "_typeof";
 import module_13378 from "module_13378";
 import get_ActivityIndicator from "get ActivityIndicator";

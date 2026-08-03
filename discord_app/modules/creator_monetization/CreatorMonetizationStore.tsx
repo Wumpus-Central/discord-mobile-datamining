@@ -1,6 +1,3 @@
-// === Module 12761: map ===
-
-// Module 12761 (map)
 import { Store } from "initialize";
 
 let map = new Map();

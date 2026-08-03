@@ -1,6 +1,3 @@
-// === Module 1885: items ===
-
-// Module 1885 (items)
 import _slicedToArray from "_slicedToArray";
 import items3 from "items3";
 

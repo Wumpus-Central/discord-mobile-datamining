@@ -1,6 +1,3 @@
-// === Module 14925: getRedirectStepForErrorKey ===
-
-// Module 14925 (getRedirectStepForErrorKey)
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
 import { AbortCodes } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 4246: _migrateDefaultStorage ===
-
-// Module 4246 (_migrateDefaultStorage)
 import closure_3 from "RESOLUTION_720";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";

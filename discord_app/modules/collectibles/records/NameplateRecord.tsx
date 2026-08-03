@@ -1,6 +1,3 @@
-// === Module 1899: fromServer ===
-
-// Module 1899 (fromServer)
 import "fromServer";
 
 const require = arg1;

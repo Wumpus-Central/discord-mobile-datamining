@@ -1,6 +1,3 @@
-// === Module 16039: VideoButtonRive ===
-
-// Module 16039 (VideoButtonRive)
 import VideoIcon from "VideoIcon";
 import { View } from "getSystemLocale";
 import initialize from "initialize";

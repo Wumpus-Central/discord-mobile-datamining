@@ -1,6 +1,3 @@
-// === Module 12781: initialize ===
-
-// Module 12781 (initialize)
 import _slicedToArray from "_slicedToArray";
 import hasConsented from "hasConsented";
 import { Consents } from "ME";

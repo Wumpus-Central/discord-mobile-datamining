@@ -1,6 +1,3 @@
-// === Module 4266: getVoiceStatesForGuild ===
-
-// Module 4266 (getVoiceStatesForGuild)
 import _slicedToArray from "_slicedToArray";
 import initializeFromUserSettings from "initializeFromUserSettings";
 import createdAt from "createdAt";

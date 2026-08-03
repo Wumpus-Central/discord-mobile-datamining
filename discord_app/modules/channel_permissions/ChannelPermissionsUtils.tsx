@@ -1,6 +1,3 @@
-// === Module 8281: getRoleRowData ===
-
-// Module 8281 (getRoleRowData)
 import { isGuildVocalChannelType } from "createChannelRecord";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag";

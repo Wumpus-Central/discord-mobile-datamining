@@ -1,6 +1,3 @@
-// === Module 12754: defineSimpleDispatch ===
-
-// Module 12754 (defineSimpleDispatch)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { createChannelRecordFromServer as closure_6 } from "createChannelRecord";
 import createFromServer from "createFromServer";

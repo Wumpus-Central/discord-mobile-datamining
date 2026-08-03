@@ -1,6 +1,3 @@
-// === Module 12592: BoostPurchaseNitroBanner ===
-
-// Module 12592 (BoostPurchaseNitroBanner)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import initialize from "initialize";
 import importAllResult from "Stack";

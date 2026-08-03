@@ -1,6 +1,3 @@
-// === Module 13559: _fetchIsLinkTrusted ===
-
-// Module 13559 (_fetchIsLinkTrusted)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

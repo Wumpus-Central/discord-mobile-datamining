@@ -1,6 +1,3 @@
-// === Module 7481: ServerTagAbstractUI ===
-
-// Module 7481 (ServerTagAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ServerTagAbstractUI.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 10464: IgnoredInformationTable ===
-
-// Module 10464 (IgnoredInformationTable)
 import encodeProperties from "encodeProperties";
 import importAllResult from "QUICK_SWITCHER";
 import { View } from "useSafeAreaInsets";

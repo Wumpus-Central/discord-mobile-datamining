@@ -1,6 +1,3 @@
-// === Module 4295: logger ===
-
-// Module 4295 (logger)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

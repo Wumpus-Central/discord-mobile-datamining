@@ -1,6 +1,3 @@
-// === Module 11422: ? ===
-
-// Module 11422
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "LinearGradient";
 import { View } from "GiftIcon";

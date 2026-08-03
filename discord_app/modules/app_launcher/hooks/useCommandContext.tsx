@@ -1,6 +1,3 @@
-// === Module 11220: getCommandContext ===
-
-// Module 11220 (getCommandContext)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

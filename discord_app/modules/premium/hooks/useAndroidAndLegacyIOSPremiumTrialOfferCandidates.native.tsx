@@ -1,6 +1,3 @@
-// === Module 6246: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
-
-// Module 6246 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
 import updateProduct from "updateProduct";
 import GuildFeatures from "GuildFeatures";
 

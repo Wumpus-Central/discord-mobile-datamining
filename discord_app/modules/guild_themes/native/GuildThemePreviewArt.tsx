@@ -1,6 +1,3 @@
-// === Module 15157: PreviewOverlay ===
-
-// Module 15157 (PreviewOverlay)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

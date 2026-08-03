@@ -1,6 +1,3 @@
-// === Module 14562: pressable ===
-
-// Module 14562 (pressable)
 import getHash from "getHash";
 import initialize from "initialize";
 import { jsx } from "jsxProd";

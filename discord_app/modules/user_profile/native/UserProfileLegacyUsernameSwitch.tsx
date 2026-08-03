@@ -1,6 +1,3 @@
-// === Module 13756: UserProfileLegacyUsernameSwitch ===
-
-// Module 13756 (UserProfileLegacyUsernameSwitch)
 import "noop";
 import { jsx } from "jsxProd";
 

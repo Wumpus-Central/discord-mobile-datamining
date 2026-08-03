@@ -1,6 +1,3 @@
-// === Module 15728: MessageRequestMutualServers ===
-
-// Module 15728 (MessageRequestMutualServers)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 7119: GameDiversityTier6LargeBadge ===
-
-// Module 7119 (GameDiversityTier6LargeBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier6LargeBadge.native.tsx");

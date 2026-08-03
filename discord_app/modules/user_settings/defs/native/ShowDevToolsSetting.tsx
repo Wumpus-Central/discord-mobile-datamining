@@ -1,6 +1,3 @@
-// === Module 14556: pressable ===
-
-// Module 14556 (pressable)
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({

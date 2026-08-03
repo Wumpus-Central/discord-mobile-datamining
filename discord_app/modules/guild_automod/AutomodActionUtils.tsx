@@ -1,6 +1,3 @@
-// === Module 16401: getRuleDefaultActionsFromConfig ===
-
-// Module 16401 (getRuleDefaultActionsFromConfig)
 import { AutomodActionType } from "AutomodEventType";
 
 const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");

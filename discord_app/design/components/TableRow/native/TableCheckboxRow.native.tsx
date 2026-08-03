@@ -1,6 +1,3 @@
-// === Module 9099: TableCheckboxRow ===
-
-// Module 9099 (TableCheckboxRow)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

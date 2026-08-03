@@ -1,6 +1,3 @@
-// === Module 1351: isDiscordFrontendDevelopment ===
-
-// Module 1351 (isDiscordFrontendDevelopment)
 let closure_0 = "development" === window.GLOBAL_ENV.PROJECT_ENV;
 const result = require("set").fileFinishedImporting("utils/GlobalUtils.tsx");
 

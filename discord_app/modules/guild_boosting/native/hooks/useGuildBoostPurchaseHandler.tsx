@@ -1,6 +1,3 @@
-// === Module 11641: useGuildBoostPurchaseHandler ===
-
-// Module 11641 (useGuildBoostPurchaseHandler)
 import PaymentFlowStep from "PaymentFlowStep";
 import noop from "noop";
 import { AnalyticEvents } from "ME";

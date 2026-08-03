@@ -1,6 +1,3 @@
-// === Module 5151: ArrowLargeLeftIcon ===
-
-// Module 5151 (ArrowLargeLeftIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

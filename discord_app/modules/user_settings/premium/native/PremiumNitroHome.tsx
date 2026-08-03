@@ -1,6 +1,3 @@
-// === Module 12462: NitroHomeHeader ===
-
-// Module 12462 (NitroHomeHeader)
 import PremiumPerkCarousel from "PremiumPerkCarousel";
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "ArrowLargeLeftIcon";

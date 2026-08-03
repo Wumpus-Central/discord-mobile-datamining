@@ -1,6 +1,3 @@
-// === Module 4383: getNickname ===
-
-// Module 4383 (getNickname)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import upsertRelationship from "upsertRelationship";

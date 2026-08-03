@@ -1,6 +1,3 @@
-// === Module 6010: isSponsoredPlayQuest ===
-
-// Module 6010 (isSponsoredPlayQuest)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

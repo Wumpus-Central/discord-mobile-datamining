@@ -1,6 +1,3 @@
-// === Module 14664: UserListItem ===
-
-// Module 14664 (UserListItem)
 import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds";
 import { View } from "map";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 11942: PlaystationNeutralIcon ===
-
-// Module 11942 (PlaystationNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

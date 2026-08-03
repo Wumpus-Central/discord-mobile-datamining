@@ -1,6 +1,3 @@
-// === Module 15126: SubscriptionGatedChannelIcon ===
-
-// Module 15126 (SubscriptionGatedChannelIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

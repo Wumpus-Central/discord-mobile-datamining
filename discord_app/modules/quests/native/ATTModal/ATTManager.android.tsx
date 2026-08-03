@@ -1,6 +1,3 @@
-// === Module 16156: onPostConnectionOpen ===
-
-// Module 16156 (onPostConnectionOpen)
 import "initialize";
 
 const require = arg1;

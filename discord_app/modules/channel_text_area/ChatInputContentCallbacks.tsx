@@ -1,6 +1,3 @@
-// === Module 11186: tryUpdateSubscriptionForHereMention ===
-
-// Module 11186 (tryUpdateSubscriptionForHereMention)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getMemberListId from "getMemberListId";

@@ -1,6 +1,3 @@
-// === Module 10296: getOrParseMessagePreviewMarkupAST ===
-
-// Module 10296 (getOrParseMessagePreviewMarkupAST)
 const require = arg1;
 function getOrParseMessagePreviewMarkupAST(arg0) {
   let color;

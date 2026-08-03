@@ -1,6 +1,3 @@
-// === Module 11547: useMessageRequestActions ===
-
-// Module 11547 (useMessageRequestActions)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

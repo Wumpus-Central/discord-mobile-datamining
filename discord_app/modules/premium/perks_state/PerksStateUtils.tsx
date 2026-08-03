@@ -1,6 +1,3 @@
-// === Module 1890: parseServerPerkConfigKind ===
-
-// Module 1890 (parseServerPerkConfigKind)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

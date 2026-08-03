@@ -1,6 +1,3 @@
-// === Module 10220: RolePill ===
-
-// Module 10220 (RolePill)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

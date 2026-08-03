@@ -1,6 +1,3 @@
-// === Module 13900: radio ===
-
-// Module 13900 (radio)
 import createToggle from "createToggle";
 
 const radio = createToggle.createRadio({

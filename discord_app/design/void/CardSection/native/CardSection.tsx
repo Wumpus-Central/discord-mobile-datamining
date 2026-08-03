@@ -1,6 +1,3 @@
-// === Module 7673: CardSection ===
-
-// Module 7673 (CardSection)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

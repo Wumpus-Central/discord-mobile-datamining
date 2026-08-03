@@ -1,6 +1,3 @@
-// === Module 10752: JoinStageView ===
-
-// Module 10752 (JoinStageView)
 import "noop";
 import { jsx } from "jsxProd";
 

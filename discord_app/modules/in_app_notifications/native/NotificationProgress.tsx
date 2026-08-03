@@ -1,6 +1,3 @@
-// === Module 10352: Progress ===
-
-// Module 10352 (Progress)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

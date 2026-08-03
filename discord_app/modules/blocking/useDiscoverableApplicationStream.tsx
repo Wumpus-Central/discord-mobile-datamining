@@ -1,6 +1,3 @@
-// === Module 9073: getDiscoverableApplicationStream ===
-
-// Module 9073 (getDiscoverableApplicationStream)
 import reset from "reset";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";

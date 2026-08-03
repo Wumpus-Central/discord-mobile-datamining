@@ -1,6 +1,3 @@
-// === Module 3990: GameServerHostingRive ===
-
-// Module 3990 (GameServerHostingRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

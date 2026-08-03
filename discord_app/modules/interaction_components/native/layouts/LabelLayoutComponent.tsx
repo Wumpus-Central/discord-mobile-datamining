@@ -1,6 +1,3 @@
-// === Module 16244: LabelLayoutComponent ===
-
-// Module 16244 (LabelLayoutComponent)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

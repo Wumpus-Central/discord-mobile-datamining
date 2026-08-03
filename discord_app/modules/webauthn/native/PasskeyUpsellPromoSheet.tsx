@@ -1,6 +1,3 @@
-// === Module 13779: PasswordlessUpsellPromoSheet ===
-
-// Module 13779 (PasswordlessUpsellPromoSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { Image } from "get ActivityIndicator";

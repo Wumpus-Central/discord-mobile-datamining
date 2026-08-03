@@ -1,6 +1,3 @@
-// === Module 13713: UserProfileUpsellButton ===
-
-// Module 13713 (UserProfileUpsellButton)
 import noop from "noop";
 import ME from "ME";
 import { PremiumUpsellTypes } from "GuildFeatures";

@@ -1,6 +1,3 @@
-// === Module 8071: AvatarDecorationSampleV2 ===
-
-// Module 8071 (AvatarDecorationSampleV2)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

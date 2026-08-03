@@ -1,6 +1,3 @@
-// === Module 10480: MessagesConnected ===
-
-// Module 10480 (MessagesConnected)
 import _getSystemLocale from "_getSystemLocale";
 import importAllResult from "deleteNonce";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

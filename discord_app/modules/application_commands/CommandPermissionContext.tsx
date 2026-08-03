@@ -1,6 +1,3 @@
-// === Module 5710: computePermissions ===
-
-// Module 5710 (computePermissions)
 import noop from "noop";
 import initialize from "initialize";
 import { ChannelRecordBase } from "createChannelRecord";

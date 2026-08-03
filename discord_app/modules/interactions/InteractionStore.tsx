@@ -1,6 +1,3 @@
-// === Module 7726: deleteNonce ===
-
-// Module 7726 (deleteNonce)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

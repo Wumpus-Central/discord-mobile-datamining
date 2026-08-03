@@ -1,6 +1,3 @@
-// === Module 8085: useUserProfileColors ===
-
-// Module 8085 (useUserProfileColors)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { ThemeTypes } from "sum";
 

@@ -1,6 +1,3 @@
-// === Module 15561: ThreadListSection ===
-
-// Module 15561 (ThreadListSection)
 import noop from "noop";
 import get_ActivityIndicator from "module_15564";
 import { jsx } from "jsxProd";

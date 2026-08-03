@@ -1,6 +1,3 @@
-// === Module 1897: isPremiumAtLeast ===
-
-// Module 1897 (isPremiumAtLeast)
 import { PremiumTypeOrder } from "GuildFeatures";
 
 function isPremiumAtLeast(premiumType, TIER_2) {

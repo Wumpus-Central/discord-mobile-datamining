@@ -1,6 +1,3 @@
-// === Module 5851: calculateFractionalPremiumInfo ===
-
-// Module 5851 (calculateFractionalPremiumInfo)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";

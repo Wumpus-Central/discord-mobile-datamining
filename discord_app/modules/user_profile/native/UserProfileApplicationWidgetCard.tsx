@@ -1,6 +1,3 @@
-// === Module 12079: UserProfileApplicationWidgetCard ===
-
-// Module 12079 (UserProfileApplicationWidgetCard)
 import GameProfileEmbedAction from "GameProfileEmbedAction";
 import get_ActivityIndicator from "importDefaultResult1";
 import _getSystemLocale from "_getSystemLocale";

@@ -1,6 +1,3 @@
-// === Module 12183: isNonEmptyBoardWidget ===
-
-// Module 12183 (isNonEmptyBoardWidget)
 import noop from "noop";
 
 const require = arg1;

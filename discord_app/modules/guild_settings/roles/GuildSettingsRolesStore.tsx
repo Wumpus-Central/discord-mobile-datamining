@@ -1,6 +1,3 @@
-// === Module 16472: handleSetSection ===
-
-// Module 16472 (handleSetSection)
 import { set } from "isValueEqual";
 import map from "map";
 import { isRoleEqual } from "GuildRoleRecordTypeTag";

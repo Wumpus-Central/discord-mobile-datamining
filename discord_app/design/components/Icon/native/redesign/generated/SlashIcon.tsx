@@ -1,6 +1,3 @@
-// === Module 15685: SlashIcon ===
-
-// Module 15685 (SlashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

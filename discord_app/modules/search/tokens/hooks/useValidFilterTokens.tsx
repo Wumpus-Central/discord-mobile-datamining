@@ -1,6 +1,3 @@
-// === Module 15494: useValidOrderedFilterTokens ===
-
-// Module 15494 (useValidOrderedFilterTokens)
 import initialize from "initialize";
 
 const require = arg1;

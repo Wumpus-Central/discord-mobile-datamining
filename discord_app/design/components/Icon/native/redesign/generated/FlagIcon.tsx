@@ -1,6 +1,3 @@
-// === Module 9452: FlagIcon ===
-
-// Module 9452 (FlagIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

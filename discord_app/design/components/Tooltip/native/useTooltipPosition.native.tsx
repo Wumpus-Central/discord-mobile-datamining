@@ -1,6 +1,3 @@
-// === Module 8444: useTooltipPosition ===
-
-// Module 8444 (useTooltipPosition)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("design/components/Tooltip/native/useTooltipPosition.native.tsx");

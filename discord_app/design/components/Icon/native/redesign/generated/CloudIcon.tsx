@@ -1,6 +1,3 @@
-// === Module 10992: CloudIcon ===
-
-// Module 10992 (CloudIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

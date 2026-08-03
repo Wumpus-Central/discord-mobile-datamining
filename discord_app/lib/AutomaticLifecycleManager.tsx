@@ -1,6 +1,3 @@
-// === Module 5138: initialize ===
-
-// Module 5138 (initialize)
 const result = require("set").fileFinishedImporting("lib/AutomaticLifecycleManager.tsx");
 class AutomaticLifecycleManager {
   constructor() {

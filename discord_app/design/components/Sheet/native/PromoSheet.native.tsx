@@ -1,6 +1,3 @@
-// === Module 6659: PromoSheet ===
-
-// Module 6659 (PromoSheet)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

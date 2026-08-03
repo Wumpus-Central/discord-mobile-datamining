@@ -1,6 +1,3 @@
-// === Module 11121: FAMILY_CENTER_REQUEST_MODAL_KEY ===
-
-// Module 11121 (FAMILY_CENTER_REQUEST_MODAL_KEY)
 import initialize from "initialize";
 import items from "items";
 import { AnalyticEvents } from "ME";

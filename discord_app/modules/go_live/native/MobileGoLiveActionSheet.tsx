@@ -1,6 +1,3 @@
-// === Module 10760: ApplicationStreamPresets ===
-
-// Module 10760 (ApplicationStreamPresets)
 import set from "set";
 import importAllResult from "initialize";
 import ApplicationStreamPresets from "ApplicationStreamPresets";

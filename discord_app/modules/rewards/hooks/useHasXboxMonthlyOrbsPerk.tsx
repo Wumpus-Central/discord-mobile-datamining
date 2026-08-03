@@ -1,6 +1,3 @@
-// === Module 12802: hasCrepeMonthlyOrbsPerk ===
-
-// Module 12802 (hasCrepeMonthlyOrbsPerk)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 

@@ -1,6 +1,3 @@
-// === Module 15755: SettingsOverviewScreen ===
-
-// Module 15755 (SettingsOverviewScreen)
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";

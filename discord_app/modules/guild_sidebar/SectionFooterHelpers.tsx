@@ -1,6 +1,3 @@
-// === Module 15226: getSectionFooterConfig ===
-
-// Module 15226 (getSectionFooterConfig)
 import incrementVersion from "incrementVersion";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";

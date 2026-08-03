@@ -1,6 +1,3 @@
-// === Module 14542: WrenchIcon ===
-
-// Module 14542 (WrenchIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

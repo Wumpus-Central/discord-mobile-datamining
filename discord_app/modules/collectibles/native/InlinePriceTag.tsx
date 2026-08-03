@@ -1,6 +1,3 @@
-// === Module 8768: PriceTag ===
-
-// Module 8768 (PriceTag)
 import "useVirtualCurrencyData";
 import get_ActivityIndicator from "useProductDisableState";
 import updateProduct from "updateProduct";

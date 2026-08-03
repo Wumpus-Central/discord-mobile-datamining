@@ -1,6 +1,3 @@
-// === Module 10255: NotificationsContainer ===
-
-// Module 10255 (NotificationsContainer)
 import set from "set";
 import { View } from "AnnouncementChannelLurkerBar";
 import initialize from "initialize";

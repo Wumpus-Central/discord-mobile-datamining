@@ -1,6 +1,3 @@
-// === Module 13052: GuildPicker ===
-
-// Module 13052 (GuildPicker)
 import "noop";
 import { jsx } from "jsxProd";
 

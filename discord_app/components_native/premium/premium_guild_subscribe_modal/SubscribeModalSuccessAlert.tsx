@@ -1,6 +1,3 @@
-// === Module 12703: PremiumPaymentGuildAnimation ===
-
-// Module 12703 (PremiumPaymentGuildAnimation)
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "keys";

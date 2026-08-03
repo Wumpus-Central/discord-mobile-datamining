@@ -1,6 +1,3 @@
-// === Module 5698: _launchFrameOnNative ===
-
-// Module 5698 (_launchFrameOnNative)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import updateVoiceState from "updateVoiceState";
 import merged from "_launchFrame";

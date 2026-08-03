@@ -1,6 +1,3 @@
-// === Module 11192: set ===
-
-// Module 11192 (set)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import keys from "keys";
 import set from "set";

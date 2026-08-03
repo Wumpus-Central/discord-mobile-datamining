@@ -1,6 +1,3 @@
-// === Module 13960: useScheduleTimeControlsRowProps ===
-
-// Module 13960 (useScheduleTimeControlsRowProps)
 import { jsx } from "jsxProd";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/parent_tools/hooks/useScheduleTimeControlsRowProps.tsx");

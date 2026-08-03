@@ -1,6 +1,3 @@
-// === Module 7141: GemHero3dIllustration ===
-
-// Module 7141 (GemHero3dIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GemHero3dIllustration.native.tsx");

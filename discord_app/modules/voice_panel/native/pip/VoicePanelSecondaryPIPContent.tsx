@@ -1,6 +1,3 @@
-// === Module 16012: VoicePanelSecondaryPIPContent ===
-
-// Module 16012 (VoicePanelSecondaryPIPContent)
 import FrameView from "FrameView";
 import participantFromServer from "participantFromServer";
 import map from "map";

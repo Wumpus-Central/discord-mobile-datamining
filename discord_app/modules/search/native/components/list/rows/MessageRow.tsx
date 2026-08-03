@@ -1,6 +1,3 @@
-// === Module 15529: GuildChannelMessageRowHeader ===
-
-// Module 15529 (GuildChannelMessageRowHeader)
 import importAllResult from "nameFromUser";
 import get_ActivityIndicator from "registerAsset";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

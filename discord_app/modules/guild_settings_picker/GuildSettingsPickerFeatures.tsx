@@ -1,6 +1,3 @@
-// === Module 13048: useGuildSettingsPickerFeature ===
-
-// Module 13048 (useGuildSettingsPickerFeature)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

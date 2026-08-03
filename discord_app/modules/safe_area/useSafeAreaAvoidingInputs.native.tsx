@@ -1,6 +1,3 @@
-// === Module 9862: _calculateScrollOffset ===
-
-// Module 9862 (_calculateScrollOffset)
 import getKeyboardDuration from "getKeyboardDuration";
 import noop from "noop";
 

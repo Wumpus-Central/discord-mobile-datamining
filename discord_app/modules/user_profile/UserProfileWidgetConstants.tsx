@@ -1,6 +1,3 @@
-// === Module 5905: items ===
-
-// Module 5905 (items)
 import addApplication from "addApplication";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 6559: LinkButton ===
-
-// Module 6559 (LinkButton)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

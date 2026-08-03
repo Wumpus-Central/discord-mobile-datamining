@@ -1,6 +1,3 @@
-// === Module 4534: useAlertStore ===
-
-// Module 4534 (useAlertStore)
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
 

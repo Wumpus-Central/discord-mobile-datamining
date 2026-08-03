@@ -1,6 +1,3 @@
-// === Module 6732: ErrorText ===
-
-// Module 6732 (ErrorText)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 4089: _fetchAppliedGuildBoostsForGuild ===
-
-// Module 4089 (_fetchAppliedGuildBoostsForGuild)
 import sendRequest from "sendRequest";
 import createFromServer from "createFromServer";
 import closure_5 from "createFromServer";

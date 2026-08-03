@@ -1,6 +1,3 @@
-// === Module 11487: useEventsButtonProps ===
-
-// Module 11487 (useEventsButtonProps)
 import noop from "noop";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

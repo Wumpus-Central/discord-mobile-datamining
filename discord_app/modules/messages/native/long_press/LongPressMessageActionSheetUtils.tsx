@@ -1,6 +1,3 @@
-// === Module 9575: handleEdit ===
-
-// Module 9575 (handleEdit)
 import "getSystemLocale";
 import getState from "getState";
 import { isMessageComponentsV2 } from "hasFlag";

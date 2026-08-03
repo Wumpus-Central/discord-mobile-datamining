@@ -1,6 +1,3 @@
-// === Module 11688: BoostTier1Icon ===
-
-// Module 11688 (BoostTier1Icon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 16760: receiveLocalNotification ===
-
-// Module 16760 (receiveLocalNotification)
 import { LocalNotificationTypes } from "LocalNotificationTypes";
 import { AnalyticEvents } from "ME";
 

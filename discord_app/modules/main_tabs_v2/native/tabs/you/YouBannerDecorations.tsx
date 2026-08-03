@@ -1,6 +1,3 @@
-// === Module 15643: useHasSettingsBadge ===
-
-// Module 15643 (useHasSettingsBadge)
 import importAllResult from "n";
 import get_ActivityIndicator from "useUserProfileColors";
 import mergeGuildAvatar from "mergeGuildAvatar";

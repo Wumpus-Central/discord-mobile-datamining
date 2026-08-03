@@ -1,6 +1,3 @@
-// === Module 3890: ? ===
-
-// Module 3890
 import { Linking } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("lib/native/Linking.tsx");

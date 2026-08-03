@@ -1,6 +1,3 @@
-// === Module 10808: VoiceChatCallScreenHeaderIconInner ===
-
-// Module 10808 (VoiceChatCallScreenHeaderIconInner)
 import "noop";
 import { View } from "get ActivityIndicator";
 import generateOldThreadCutoff from "generateOldThreadCutoff";

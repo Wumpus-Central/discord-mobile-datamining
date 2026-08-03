@@ -1,6 +1,3 @@
-// === Module 7727: set ===
-
-// Module 7727 (set)
 import isSubscriptionGated from "isSubscriptionGated";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

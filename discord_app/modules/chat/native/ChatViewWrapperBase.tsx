@@ -1,6 +1,3 @@
-// === Module 10443: ChatViewWrapperBase ===
-
-// Module 10443 (ChatViewWrapperBase)
 import "noop";
 import { jsx } from "jsxProd";
 

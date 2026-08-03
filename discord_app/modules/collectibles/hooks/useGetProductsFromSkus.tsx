@@ -1,6 +1,3 @@
-// === Module 14119: useGetProductsFromSkus ===
-
-// Module 14119 (useGetProductsFromSkus)
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 
 require("noop").useCallback;

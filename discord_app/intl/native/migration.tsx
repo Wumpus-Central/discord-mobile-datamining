@@ -1,6 +1,3 @@
-// === Module 13256: IntlLink ===
-
-// Module 13256 (IntlLink)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

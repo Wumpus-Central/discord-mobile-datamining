@@ -1,6 +1,3 @@
-// === Module 5127: recomputeFromAppTokens ===
-
-// Module 5127 (recomputeFromAppTokens)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import isConnected from "isConnected";

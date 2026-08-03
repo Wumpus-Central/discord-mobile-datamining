@@ -1,6 +1,3 @@
-// === Module 1884: isUserPrimaryGuildEqual ===
-
-// Module 1884 (isUserPrimaryGuildEqual)
 const result = require("set").fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
 
 export const isUserPrimaryGuildEqual = function isUserPrimaryGuildEqual(primaryGuild, primary_guild) {

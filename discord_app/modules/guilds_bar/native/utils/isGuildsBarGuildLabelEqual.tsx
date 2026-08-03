@@ -1,6 +1,3 @@
-// === Module 14979: isGuildsBarGuildLabelEqual ===
-
-// Module 14979 (isGuildsBarGuildLabelEqual)
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildLabelEqual.tsx");
 
 export default function isGuildsBarGuildLabelEqual(count, count2) {

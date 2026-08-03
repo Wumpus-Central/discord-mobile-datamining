@@ -1,6 +1,3 @@
-// === Module 10950: ? ===
-
-// Module 10950
 import set from "set";
 import set from "registerAsset";
 

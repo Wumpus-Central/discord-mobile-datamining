@@ -1,6 +1,3 @@
-// === Module 11128: PhoneIcon ===
-
-// Module 11128 (PhoneIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

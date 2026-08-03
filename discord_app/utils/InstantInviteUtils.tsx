@@ -1,6 +1,3 @@
-// === Module 8354: isGuildMember ===
-
-// Module 8354 (isGuildMember)
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

@@ -1,6 +1,3 @@
-// === Module 7734: frozen ===
-
-// Module 7734 (frozen)
 import { Image } from "get ActivityIndicator";
 import set from "set";
 

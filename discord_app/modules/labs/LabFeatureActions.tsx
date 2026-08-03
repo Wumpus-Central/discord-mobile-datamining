@@ -1,6 +1,3 @@
-// === Module 14515: toggleLabFeature ===
-
-// Module 14515 (toggleLabFeature)
 import getUserAgnosticState from "getUserAgnosticState";
 
 let closure_3 = {};

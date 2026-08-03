@@ -1,6 +1,3 @@
-// === Module 5913: contentClassificationToAgeRestrictionConclusion ===
-
-// Module 5913 (contentClassificationToAgeRestrictionConclusion)
 function contentClassificationToAgeRestrictionConclusion(data) {
   if (null == data) {
     return obj;

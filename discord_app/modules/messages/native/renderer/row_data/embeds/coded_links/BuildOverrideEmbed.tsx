@@ -1,6 +1,3 @@
-// === Module 12384: createBuildOverrideEmbed ===
-
-// Module 12384 (createBuildOverrideEmbed)
 import { Image } from "get ActivityIndicator";
 import getCurrentBuildOverride from "getCurrentBuildOverride";
 import { State } from "getCurrentBuildOverride";

@@ -1,6 +1,3 @@
-// === Module 11472: YoutubeNeutralIcon ===
-
-// Module 11472 (YoutubeNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

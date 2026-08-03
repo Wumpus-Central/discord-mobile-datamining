@@ -1,6 +1,3 @@
-// === Module 9796: PremiumGiftDurationButton ===
-
-// Module 9796 (PremiumGiftDurationButton)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import GuildFeatures from "GuildFeatures";

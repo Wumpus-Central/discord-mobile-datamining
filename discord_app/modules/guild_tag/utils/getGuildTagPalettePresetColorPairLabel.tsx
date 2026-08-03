@@ -1,6 +1,3 @@
-// === Module 16451: getGuildTagPalettePresetColorLabel ===
-
-// Module 16451 (getGuildTagPalettePresetColorLabel)
 import { GuildTagPalettePresetColor as closure_2 } from "items";
 
 function getGuildTagPalettePresetColorLabel(primary) {

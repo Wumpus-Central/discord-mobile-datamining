@@ -1,6 +1,3 @@
-// === Module 8951: _authorizeLink ===
-
-// Module 8951 (_authorizeLink)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "jsxProd";
 import Button from "Button";

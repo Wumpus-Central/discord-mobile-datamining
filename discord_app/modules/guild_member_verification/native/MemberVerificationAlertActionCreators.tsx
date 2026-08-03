@@ -1,6 +1,3 @@
-// === Module 9157: openMemberVerificationSuccessAlert ===
-
-// Module 9157 (openMemberVerificationSuccessAlert)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 7381: PaintIllocon ===
-
-// Module 7381 (PaintIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PaintIllocon.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 10635: stashPendingFrameLaunch ===
-
-// Module 10635 (stashPendingFrameLaunch)
 let closure_0 = {};
 const result = require("set").fileFinishedImporting("modules/activities/utils/pendingFrameLaunch.tsx");
 

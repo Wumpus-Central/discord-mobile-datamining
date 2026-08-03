@@ -1,6 +1,3 @@
-// === Module 11170: FloatingChatInputContainer ===
-
-// Module 11170 (FloatingChatInputContainer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

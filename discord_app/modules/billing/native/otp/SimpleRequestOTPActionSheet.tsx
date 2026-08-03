@@ -1,6 +1,3 @@
-// === Module 14810: GiftPurchaseSKUView ===
-
-// Module 14810 (GiftPurchaseSKUView)
 import addSku from "addSku";
 import _slicedToArray from "_slicedToArray";
 import module_4533 from "module_4533";

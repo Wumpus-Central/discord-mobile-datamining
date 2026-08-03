@@ -1,6 +1,3 @@
-// === Module 16170: _initialize ===
-
-// Module 16170 (_initialize)
 import importDefaultResult from "Soundpacks";
 import callConnect from "callConnect";
 import ensureGuildLoaded from "ensureGuildLoaded";

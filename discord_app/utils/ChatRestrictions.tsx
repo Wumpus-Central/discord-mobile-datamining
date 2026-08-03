@@ -1,6 +1,3 @@
-// === Module 9585: items ===
-
-// Module 9585 (items)
 import { TOKEN_REGEX } from "ME";
 
 const items = [

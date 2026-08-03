@@ -1,6 +1,3 @@
-// === Module 6845: AppsButtonSpotIllustration ===
-
-// Module 6845 (AppsButtonSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/AppsButtonSpotIllustration.native.tsx");

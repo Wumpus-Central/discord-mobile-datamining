@@ -1,6 +1,3 @@
-// === Module 10258: computeAlertSettings ===
-
-// Module 10258 (computeAlertSettings)
 import getHash from "getHash";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

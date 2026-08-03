@@ -1,6 +1,3 @@
-// === Module 9357: getSoundmojiSendExperiment ===
-
-// Module 9357 (getSoundmojiSendExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };

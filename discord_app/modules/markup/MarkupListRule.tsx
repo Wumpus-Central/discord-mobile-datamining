@@ -1,6 +1,3 @@
-// === Module 4651: regExp ===
-
-// Module 4651 (regExp)
 import closure_10 from "t";
 
 const re2 = /\n{2,}$/;

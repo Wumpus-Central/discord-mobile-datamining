@@ -1,6 +1,3 @@
-// === Module 15239: items ===
-
-// Module 15239 (items)
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

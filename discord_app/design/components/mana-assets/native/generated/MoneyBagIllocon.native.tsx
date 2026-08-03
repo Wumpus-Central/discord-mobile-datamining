@@ -1,6 +1,3 @@
-// === Module 7283: MoneyBagIllocon ===
-
-// Module 7283 (MoneyBagIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/MoneyBagIllocon.native.tsx");

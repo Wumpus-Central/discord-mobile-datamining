@@ -1,6 +1,3 @@
-// === Module 12191: useWishlistViewerCoachmark ===
-
-// Module 12191 (useWishlistViewerCoachmark)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

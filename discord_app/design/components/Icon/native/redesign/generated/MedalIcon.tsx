@@ -1,6 +1,3 @@
-// === Module 15371: MedalIcon ===
-
-// Module 15371 (MedalIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

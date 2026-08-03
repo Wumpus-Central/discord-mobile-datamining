@@ -1,6 +1,3 @@
-// === Module 10378: showLongPressForumPostActionSheet ===
-
-// Module 10378 (showLongPressForumPostActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/action_sheet/native/components/showLongPressForumPostActionSheet.tsx");
 
 export default function showLongPressForumPostActionSheet(thread, parentChannel) {

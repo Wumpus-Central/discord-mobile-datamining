@@ -1,6 +1,3 @@
-// === Module 11184: addRule ===
-
-// Module 11184 (addRule)
 import { processColor } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");

@@ -1,6 +1,3 @@
-// === Module 3884: _openURL ===
-
-// Module 3884 (_openURL)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

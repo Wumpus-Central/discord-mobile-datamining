@@ -1,6 +1,3 @@
-// === Module 13479: handleTokenUpdated ===
-
-// Module 13479 (handleTokenUpdated)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

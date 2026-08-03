@@ -1,6 +1,3 @@
-// === Module 12321: useOverlayLayoutDriver ===
-
-// Module 12321 (useOverlayLayoutDriver)
 import noop from "noop";
 
 const require = arg1;

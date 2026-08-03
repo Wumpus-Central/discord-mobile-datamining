@@ -1,6 +1,3 @@
-// === Module 15922: context ===
-
-// Module 15922 (context)
 import importAllResult from "noop";
 
 const context = importAllResult.createContext({ audioRef: importAllResult.createRef() });

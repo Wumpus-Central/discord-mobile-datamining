@@ -1,6 +1,3 @@
-// === Module 15711: ? ===
-
-// Module 15711
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SearchTabs } from "MessageEmbedTypes";

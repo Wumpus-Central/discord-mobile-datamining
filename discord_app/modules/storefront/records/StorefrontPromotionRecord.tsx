@@ -1,6 +1,3 @@
-// === Module 8694: parseSkuIds ===
-
-// Module 8694 (parseSkuIds)
 import _slicedToArray from "_slicedToArray";
 import "toJS";
 

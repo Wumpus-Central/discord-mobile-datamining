@@ -1,6 +1,3 @@
-// === Module 11322: CirclePlusIcon ===
-
-// Module 11322 (CirclePlusIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

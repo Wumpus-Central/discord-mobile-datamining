@@ -1,6 +1,3 @@
-// === Module 5982: ClickArea ===
-
-// Module 5982 (ClickArea)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

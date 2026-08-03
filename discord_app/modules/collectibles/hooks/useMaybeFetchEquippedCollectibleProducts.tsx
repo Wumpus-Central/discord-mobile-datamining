@@ -1,6 +1,3 @@
-// === Module 8372: useEquippedCollectibleSkuIds ===
-
-// Module 8372 (useEquippedCollectibleSkuIds)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

@@ -1,6 +1,3 @@
-// === Module 13125: CommunityPill ===
-
-// Module 13125 (CommunityPill)
 import useIsWindowLarge from "useIsWindowLarge";
 import get_ActivityIndicator from "Button";
 import initialize from "initialize";

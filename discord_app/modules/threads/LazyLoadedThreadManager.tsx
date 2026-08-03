@@ -1,6 +1,3 @@
-// === Module 10431: initialize ===
-
-// Module 10431 (initialize)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

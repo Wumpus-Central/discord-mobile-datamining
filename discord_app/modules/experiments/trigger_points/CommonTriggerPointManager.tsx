@@ -1,6 +1,3 @@
-// === Module 16174: handleVoiceChannelSelect ===
-
-// Module 16174 (handleVoiceChannelSelect)
 import "initialize";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 1357: hasBit ===
-
-// Module 1357 (hasBit)
 let result = require("set").fileFinishedImporting("utils/Uint8ArrayUtils.tsx");
 
 export const hasBit = function hasBit(dismissedContents, closure_0) {

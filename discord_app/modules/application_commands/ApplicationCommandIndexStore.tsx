@@ -1,6 +1,3 @@
-// === Module 5702: getIndexKey ===
-
-// Module 5702 (getIndexKey)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import module_38 from "module_38";

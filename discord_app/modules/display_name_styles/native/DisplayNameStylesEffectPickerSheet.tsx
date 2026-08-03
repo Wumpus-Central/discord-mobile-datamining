@@ -1,6 +1,3 @@
-// === Module 14378: EffectTile ===
-
-// Module 14378 (EffectTile)
 import _slicedToArray from "_slicedToArray";
 import AVERAGE_FONT_WIDTH_RATIO from "AVERAGE_FONT_WIDTH_RATIO";
 import get_ActivityIndicator from "Stack";

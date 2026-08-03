@@ -1,6 +1,3 @@
-// === Module 9515: handleMessagesTapURLLink ===
-
-// Module 9515 (handleMessagesTapURLLink)
 import { getSection } from "getIndexKey";
 import addApplication from "addApplication";
 import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod";

@@ -1,6 +1,3 @@
-// === Module 15154: GuildThemeNuxActionSheet ===
-
-// Module 15154 (GuildThemeNuxActionSheet)
 import snapshotSelectedGuildId from "snapshotSelectedGuildId";
 import _slicedToArray from "_slicedToArray";
 import context from "context";

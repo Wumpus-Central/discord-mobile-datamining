@@ -1,6 +1,3 @@
-// === Module 10783: handleInputModePress ===
-
-// Module 10783 (handleInputModePress)
 import "noop";
 import { View } from "get ActivityIndicator";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

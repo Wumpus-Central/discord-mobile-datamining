@@ -1,6 +1,3 @@
-// === Module 10693: useModeratorOverlayChannelState ===
-
-// Module 10693 (useModeratorOverlayChannelState)
 import identity from "identity";
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {

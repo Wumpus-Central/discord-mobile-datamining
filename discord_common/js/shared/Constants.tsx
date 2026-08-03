@@ -1,6 +1,3 @@
-// === Module 505: sum ===
-
-// Module 505 (sum)
 import importAllResult from "fromString";
 import importAllResult1 from "fromString";
 import importAllResult2 from "fromString";

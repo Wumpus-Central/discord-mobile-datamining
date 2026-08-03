@@ -1,6 +1,3 @@
-// === Module 16645: TierTemplatesRenderer ===
-
-// Module 16645 (TierTemplatesRenderer)
 import _slicedToArray from "_slicedToArray";
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get_ActivityIndicator from "useNavigation";

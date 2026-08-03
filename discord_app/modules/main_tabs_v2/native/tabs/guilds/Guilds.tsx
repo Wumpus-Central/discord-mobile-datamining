@@ -1,6 +1,3 @@
-// === Module 14944: ? ===
-
-// Module 14944
 import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";

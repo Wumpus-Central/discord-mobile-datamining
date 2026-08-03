@@ -1,6 +1,3 @@
-// === Module 8964: useIsSocialLayerParentApplication ===
-
-// Module 8964 (useIsSocialLayerParentApplication)
 import noop from "noop";
 import { ApplicationFlags } from "ME";
 

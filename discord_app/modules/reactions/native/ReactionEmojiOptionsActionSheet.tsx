@@ -1,6 +1,3 @@
-// === Module 9469: ReactionEmojiOptionsActionSheet ===
-
-// Module 9469 (ReactionEmojiOptionsActionSheet)
 import dispatcher from "dispatcher";
 import { View } from "getSystemLocale";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

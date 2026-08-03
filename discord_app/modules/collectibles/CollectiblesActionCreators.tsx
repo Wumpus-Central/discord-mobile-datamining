@@ -1,6 +1,3 @@
-// === Module 5802: openCollectiblesShop ===
-
-// Module 5802 (openCollectiblesShop)
 import map from "map";
 import getUserAgnosticState from "getUserAgnosticState";
 import _getSystemLocale from "_getSystemLocale";

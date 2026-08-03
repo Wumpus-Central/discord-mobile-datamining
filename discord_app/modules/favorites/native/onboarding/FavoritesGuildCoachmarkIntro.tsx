@@ -1,6 +1,3 @@
-// === Module 14990: FavoritesGuildCoachmarkIntro ===
-
-// Module 14990 (FavoritesGuildCoachmarkIntro)
 import noop from "noop";
 import { FAVORITES } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";

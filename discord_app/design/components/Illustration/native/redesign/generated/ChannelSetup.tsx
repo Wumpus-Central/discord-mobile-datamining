@@ -1,6 +1,3 @@
-// === Module 16532: getChannelSetupSource ===
-
-// Module 16532 (getChannelSetupSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

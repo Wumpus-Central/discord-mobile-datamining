@@ -1,6 +1,3 @@
-// === Module 13739: COLLECTIBLES_PREVIEW_SIZE ===
-
-// Module 13739 (COLLECTIBLES_PREVIEW_SIZE)
 import noop from "noop";
 import get_ActivityIndicator from "registerAsset";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

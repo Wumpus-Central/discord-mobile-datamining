@@ -1,6 +1,3 @@
-// === Module 5720: handleGuildTemplateResolveSuccess ===
-
-// Module 5720 (handleGuildTemplateResolveSuccess)
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import { Store } from "initialize";
 

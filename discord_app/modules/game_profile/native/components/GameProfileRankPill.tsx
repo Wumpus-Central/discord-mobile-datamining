@@ -1,6 +1,3 @@
-// === Module 8528: GameProfileRankPill ===
-
-// Module 8528 (GameProfileRankPill)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

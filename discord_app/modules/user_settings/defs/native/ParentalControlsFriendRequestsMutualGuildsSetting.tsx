@@ -1,6 +1,3 @@
-// === Module 14705: toggle ===
-
-// Module 14705 (toggle)
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { FriendSourceFlags } from "ME";

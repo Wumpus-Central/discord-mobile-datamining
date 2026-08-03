@@ -1,6 +1,3 @@
-// === Module 14128: QuestHomeOrbShopRewardCard ===
-
-// Module 14128 (QuestHomeOrbShopRewardCard)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

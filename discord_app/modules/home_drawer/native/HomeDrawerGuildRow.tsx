@@ -1,6 +1,3 @@
-// === Module 14993: GuildRowWrapper ===
-
-// Module 14993 (GuildRowWrapper)
 import BellZIcon from "BellZIcon";
 import { View } from "MobileHomeDrawerExperiment";
 import storeThread from "storeThread";

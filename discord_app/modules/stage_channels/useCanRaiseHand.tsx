@@ -1,6 +1,3 @@
-// === Module 10744: useCanRaiseHand ===
-
-// Module 10744 (useCanRaiseHand)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
 

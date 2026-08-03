@@ -1,6 +1,3 @@
-// === Module 8972: MoreHorizontalIcon ===
-
-// Module 8972 (MoreHorizontalIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

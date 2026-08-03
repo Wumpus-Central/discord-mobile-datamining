@@ -1,6 +1,3 @@
-// === Module 15519: GuildChannelLabel ===
-
-// Module 15519 (GuildChannelLabel)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { CHANNEL_LIST_SEARCH_LAYOUT as closure_5 } from "MessageEmbedTypes";
 import { jsx } from "jsxProd";

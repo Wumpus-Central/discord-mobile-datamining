@@ -1,6 +1,3 @@
-// === Module 5009: createModeratorOverwrite ===
-
-// Module 5009 (createModeratorOverwrite)
 import initialize from "initialize";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import fetchFingerprint from "fetchFingerprint";

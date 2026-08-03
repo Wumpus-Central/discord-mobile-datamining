@@ -1,6 +1,3 @@
-// === Module 8336: usePrevValue ===
-
-// Module 8336 (usePrevValue)
 import { useRef } from "noop";
 
 const result = require("set").fileFinishedImporting("hooks/usePrevValue.tsx");

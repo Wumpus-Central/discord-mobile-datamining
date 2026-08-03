@@ -1,6 +1,3 @@
-// === Module 14551: FileWarningIcon ===
-
-// Module 14551 (FileWarningIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

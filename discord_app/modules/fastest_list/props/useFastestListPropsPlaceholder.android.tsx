@@ -1,6 +1,3 @@
-// === Module 9256: createNativePlaceholderConfig ===
-
-// Module 9256 (createNativePlaceholderConfig)
 import noop from "noop";
 
 let require = arg1;

@@ -1,6 +1,3 @@
-// === Module 15001: StreamingSubtitle ===
-
-// Module 15001 (StreamingSubtitle)
 import "noop";
 import { jsx } from "jsxProd";
 

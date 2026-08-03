@@ -1,6 +1,3 @@
-// === Module 11887: ChannelTitleContent ===
-
-// Module 11887 (ChannelTitleContent)
 import importAllResult from "computeChannelName";
 import { View } from "getSystemLocale";
 import _handleConnectionOpen from "_handleConnectionOpen";

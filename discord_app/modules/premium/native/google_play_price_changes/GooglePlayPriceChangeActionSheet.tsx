@@ -1,6 +1,3 @@
-// === Module 15781: GooglePlayPriceChangeActionSheet ===
-
-// Module 15781 (GooglePlayPriceChangeActionSheet)
 import "noop";
 import { View } from "set";
 import reset from "reset";

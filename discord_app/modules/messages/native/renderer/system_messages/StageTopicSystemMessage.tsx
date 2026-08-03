@@ -1,6 +1,3 @@
-// === Module 7814: createStageTopicSystemMessage ===
-
-// Module 7814 (createStageTopicSystemMessage)
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageTopicSystemMessage.tsx");
 
 export const createStageTopicSystemMessage = function createStageTopicSystemMessage(roleStyle) {

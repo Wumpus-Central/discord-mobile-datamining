@@ -1,6 +1,3 @@
-// === Module 9778: items ===
-
-// Module 9778 (items)
 import _getSystemLocale from "_getSystemLocale";
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
 import { MarketingURLs } from "ME";

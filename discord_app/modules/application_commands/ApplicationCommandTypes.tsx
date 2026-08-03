@@ -1,6 +1,3 @@
-// === Module 5709: ApplicationCommandSectionType ===
-
-// Module 5709 (ApplicationCommandSectionType)
 const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");
 
 export const ApplicationCommandSectionType = { BUILT_IN: 0, [0]: "BUILT_IN", APPLICATION: 1, [1]: "APPLICATION" };

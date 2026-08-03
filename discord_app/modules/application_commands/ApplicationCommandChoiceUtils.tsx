@@ -1,6 +1,3 @@
-// === Module 8026: toChoiceBooleanValue ===
-
-// Module 8026 (toChoiceBooleanValue)
 import handleInit from "handleInit";
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
 

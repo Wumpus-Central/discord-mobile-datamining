@@ -1,6 +1,3 @@
-// === Module 7889: transformEmbeds ===
-
-// Module 7889 (transformEmbeds)
 import { processColor } from "get ActivityIndicator";
 import { MessageEmbedTypes } from "ME";
 

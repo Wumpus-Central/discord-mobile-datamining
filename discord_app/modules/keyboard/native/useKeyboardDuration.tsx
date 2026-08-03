@@ -1,6 +1,3 @@
-// === Module 5220: getKeyboardDuration ===
-
-// Module 5220 (getKeyboardDuration)
 const result = require("computeEntryState").fileFinishedImporting("modules/keyboard/native/useKeyboardDuration.tsx");
 
 export const getKeyboardDuration = function getKeyboardDuration() {

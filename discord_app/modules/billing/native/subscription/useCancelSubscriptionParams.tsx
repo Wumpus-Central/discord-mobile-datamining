@@ -1,6 +1,3 @@
-// === Module 6673: useCancelSubscriptionParams ===
-
-// Module 6673 (useCancelSubscriptionParams)
 import noop from "noop";
 
 const require = arg1;

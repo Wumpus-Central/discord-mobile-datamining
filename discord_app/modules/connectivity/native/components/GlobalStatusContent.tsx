@@ -1,6 +1,3 @@
-// === Module 10706: ConnectivityGlobalStatusContent ===
-
-// Module 10706 (ConnectivityGlobalStatusContent)
 import "ChannelCallCameraPreview";
 import { View } from "getIsScreenLandscape";
 import ensureGuildLoaded from "ensureGuildLoaded";

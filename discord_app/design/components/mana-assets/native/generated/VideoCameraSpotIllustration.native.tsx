@@ -1,6 +1,3 @@
-// === Module 7593: VideoCameraSpotIllustration ===
-
-// Module 7593 (VideoCameraSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/VideoCameraSpotIllustration.native.tsx");

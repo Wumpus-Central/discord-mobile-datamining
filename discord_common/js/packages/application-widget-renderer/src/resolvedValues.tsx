@@ -1,6 +1,3 @@
-// === Module 12085: resolveFieldValue ===
-
-// Module 12085 (resolveFieldValue)
 function resolveFieldValue(image, items, applicationAssets) {
   const _require = image;
   applicationAssets = applicationAssets.applicationAssets;

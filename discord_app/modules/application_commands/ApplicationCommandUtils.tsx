@@ -1,6 +1,3 @@
-// === Module 5707: buildCommand ===
-
-// Module 5707 (buildCommand)
 import { isReadableType } from "createChannelRecord";
 import { DraftType } from "handleChanged";
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";

@@ -1,6 +1,3 @@
-// === Module 9713: openGiftModal ===
-
-// Module 9713 (openGiftModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/native/utils/openGiftModal.tsx");
 
 export const openGiftModal = function openGiftModal(navigationParams) {

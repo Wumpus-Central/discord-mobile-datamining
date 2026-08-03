@@ -1,6 +1,3 @@
-// === Module 8131: PlayIcon ===
-
-// Module 8131 (PlayIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

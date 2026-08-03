@@ -1,6 +1,3 @@
-// === Module 7884: getFirstEligibleUserExperiment ===
-
-// Module 7884 (getFirstEligibleUserExperiment)
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import ExperimentBuckets from "ExperimentBuckets";

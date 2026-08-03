@@ -1,6 +1,3 @@
-// === Module 6955: ControllerSpotIllustration ===
-
-// Module 6955 (ControllerSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ControllerSpotIllustration.native.tsx");

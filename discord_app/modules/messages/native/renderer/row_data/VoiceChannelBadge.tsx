@@ -1,6 +1,3 @@
-// === Module 8010: createVoiceChannelBadge ===
-
-// Module 8010 (createVoiceChannelBadge)
 import { Image } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

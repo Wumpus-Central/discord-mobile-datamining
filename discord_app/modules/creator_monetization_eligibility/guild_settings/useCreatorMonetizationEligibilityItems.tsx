@@ -1,6 +1,3 @@
-// === Module 16550: useCreatorMonetizationEligibilityItems ===
-
-// Module 16550 (useCreatorMonetizationEligibilityItems)
 import getSystemLocale from "getSystemLocale";
 import noop from "noop";
 import { HelpdeskArticles } from "ME";

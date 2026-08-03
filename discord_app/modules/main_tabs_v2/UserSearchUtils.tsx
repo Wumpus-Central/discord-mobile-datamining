@@ -1,6 +1,3 @@
-// === Module 5951: cleanString ===
-
-// Module 5951 (cleanString)
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import upsertRelationship from "upsertRelationship";

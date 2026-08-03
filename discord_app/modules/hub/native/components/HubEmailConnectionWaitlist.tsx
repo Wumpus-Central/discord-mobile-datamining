@@ -1,6 +1,3 @@
-// === Module 11850: HubEmailConnectionWaitlist ===
-
-// Module 11850 (HubEmailConnectionWaitlist)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

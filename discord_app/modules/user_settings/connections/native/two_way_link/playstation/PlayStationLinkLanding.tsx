@@ -1,6 +1,3 @@
-// === Module 8978: PlayStationLinkLanding ===
-
-// Module 8978 (PlayStationLinkLanding)
 import noop from "noop";
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes";
 import { HelpdeskArticles } from "ME";

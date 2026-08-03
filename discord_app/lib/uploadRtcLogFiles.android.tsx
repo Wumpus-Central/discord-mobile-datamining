@@ -1,6 +1,3 @@
-// === Module 10363: _uploadRtcLogFiles ===
-
-// Module 10363 (_uploadRtcLogFiles)
 import sendRequest from "sendRequest";
 import ME from "ME";
 

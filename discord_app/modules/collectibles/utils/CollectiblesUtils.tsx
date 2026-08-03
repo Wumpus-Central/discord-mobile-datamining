@@ -1,6 +1,3 @@
-// === Module 5849: constructGoLiveSource ===
-
-// Module 5849 (constructGoLiveSource)
 import { ApplicationStreamPresets } from "RESOLUTION_720";
 
 const result = require("ShopVariantsReturnStyle").fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");

@@ -1,6 +1,3 @@
-// === Module 6011: keys ===
-
-// Module 6011 (keys)
 import keys from "keys";
 
 const obj = keys.create((arg0) => {

@@ -1,6 +1,3 @@
-// === Module 8456: emitClickEventWithCreative ===
-
-// Module 8456 (emitClickEventWithCreative)
 import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement";
 import initializeState from "initializeState";
 import { AnalyticEvents } from "ME";

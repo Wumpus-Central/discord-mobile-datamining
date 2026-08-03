@@ -1,6 +1,3 @@
-// === Module 13738: EditProfileThemeActionSheet ===
-
-// Module 13738 (EditProfileThemeActionSheet)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

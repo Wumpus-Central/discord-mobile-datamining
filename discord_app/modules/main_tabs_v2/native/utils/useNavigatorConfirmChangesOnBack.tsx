@@ -1,6 +1,3 @@
-// === Module 9114: useNavigatorConfirmChangesOnBack ===
-
-// Module 9114 (useNavigatorConfirmChangesOnBack)
 import noop from "noop";
 import { Keyboard } from "get ActivityIndicator";
 import { NOOP } from "ME";

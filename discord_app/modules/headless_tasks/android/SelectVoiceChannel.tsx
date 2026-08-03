@@ -1,6 +1,3 @@
-// === Module 16799: promise ===
-
-// Module 16799 (promise)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 

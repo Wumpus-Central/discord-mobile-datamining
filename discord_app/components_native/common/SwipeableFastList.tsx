@@ -1,6 +1,3 @@
-// === Module 9471: componentWillUnmount ===
-
-// Module 9471 (componentWillUnmount)
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";

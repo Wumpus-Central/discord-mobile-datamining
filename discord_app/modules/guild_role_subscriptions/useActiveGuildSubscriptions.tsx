@@ -1,6 +1,3 @@
-// === Module 14247: useActiveGuildSubscriptions ===
-
-// Module 14247 (useActiveGuildSubscriptions)
 import noop from "noop";
 import reset from "reset";
 import { UserGuildRoleSubscriptionRelationship as closure_6 } from "MAX_SUBSCRIPTION_TIERS";

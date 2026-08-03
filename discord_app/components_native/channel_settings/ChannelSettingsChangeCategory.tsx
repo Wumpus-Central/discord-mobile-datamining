@@ -1,6 +1,3 @@
-// === Module 15702: shouldComponentUpdate ===
-
-// Module 15702 (shouldComponentUpdate)
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
 import ensureGuildLoaded from "ensureGuildLoaded";

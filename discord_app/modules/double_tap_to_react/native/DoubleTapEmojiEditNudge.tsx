@@ -1,6 +1,3 @@
-// === Module 9983: DoubleTapEmojiEditNudgeInner ===
-
-// Module 9983 (DoubleTapEmojiEditNudgeInner)
 import ME from "ME";
 import getSystemLocale from "getSystemLocale";
 import { View } from "ToastEmoji";

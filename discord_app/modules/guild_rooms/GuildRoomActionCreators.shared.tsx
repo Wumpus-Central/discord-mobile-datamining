@@ -1,6 +1,3 @@
-// === Module 16218: _guildRoomConnect ===
-
-// Module 16218 (_guildRoomConnect)
 import serverGuildRoomObjectToClient from "serverGuildRoomObjectToClient";
 import fetchFingerprint from "fetchFingerprint";
 import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";

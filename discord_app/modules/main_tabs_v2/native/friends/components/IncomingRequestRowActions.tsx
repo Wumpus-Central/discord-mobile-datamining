@@ -1,6 +1,3 @@
-// === Module 15623: IncomingRequestRowActions ===
-
-// Module 15623 (IncomingRequestRowActions)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

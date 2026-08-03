@@ -1,6 +1,3 @@
-// === Module 10200: IconUploader ===
-
-// Module 10200 (IconUploader)
 import closure_3 from "createCacheKey";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

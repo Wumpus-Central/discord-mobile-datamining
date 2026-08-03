@@ -1,6 +1,3 @@
-// === Module 9171: MemberVerificationAlertIncomplete ===
-
-// Module 9171 (MemberVerificationAlertIncomplete)
 import noop from "noop";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import jsxProd from "jsxProd";

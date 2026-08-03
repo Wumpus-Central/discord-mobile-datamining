@@ -1,6 +1,3 @@
-// === Module 13118: markGuildsAsRead ===
-
-// Module 13118 (markGuildsAsRead)
 import handleUpdate from "handleUpdate";
 import rebuild from "rebuild";
 import ensureGuildLoaded from "ensureGuildLoaded";

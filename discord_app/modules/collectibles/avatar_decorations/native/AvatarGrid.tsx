@@ -1,6 +1,3 @@
-// === Module 7994: GridAvatar ===
-
-// Module 7994 (GridAvatar)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

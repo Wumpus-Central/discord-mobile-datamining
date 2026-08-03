@@ -1,6 +1,3 @@
-// === Module 6265: createEmptyPromotionsByType ===
-
-// Module 6265 (createEmptyPromotionsByType)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createFromServer from "createFromServer";
 import closure_4 from "createFromServer";

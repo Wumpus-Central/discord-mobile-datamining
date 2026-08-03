@@ -1,6 +1,3 @@
-// === Module 16686: prototype ===
-
-// Module 16686 (prototype)
 import { NativeModules } from "get ActivityIndicator";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import "initialize";

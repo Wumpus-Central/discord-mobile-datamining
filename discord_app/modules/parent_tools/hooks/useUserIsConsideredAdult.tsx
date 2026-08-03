@@ -1,6 +1,3 @@
-// === Module 11082: useUserIsConsideredAdult ===
-
-// Module 11082 (useUserIsConsideredAdult)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

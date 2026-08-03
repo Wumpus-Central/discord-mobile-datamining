@@ -1,6 +1,3 @@
-// === Module 15916: useSortedGuildIdsForSoundboard ===
-
-// Module 15916 (useSortedGuildIdsForSoundboard)
 import noop from "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import insertUnsortedGuilds from "insertUnsortedGuilds";

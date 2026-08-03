@@ -1,6 +1,3 @@
-// === Module 14015: XboxTwoWayLinkUpsell ===
-
-// Module 14015 (XboxTwoWayLinkUpsell)
 import "noop";
 import ME from "ME";
 import { jsx } from "jsxProd";

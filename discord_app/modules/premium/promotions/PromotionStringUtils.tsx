@@ -1,6 +1,3 @@
-// === Module 12451: useFormatStringWithCommonPremiumParams ===
-
-// Module 12451 (useFormatStringWithCommonPremiumParams)
 import addSubscriptionPlan from "addSubscriptionPlan";
 import GuildFeatures from "GuildFeatures";
 

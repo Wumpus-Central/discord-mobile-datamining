@@ -1,6 +1,3 @@
-// === Module 5231: TableRowArrow ===
-
-// Module 5231 (TableRowArrow)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

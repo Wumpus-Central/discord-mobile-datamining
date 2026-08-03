@@ -1,6 +1,3 @@
-// === Module 7275: MicrophoneAndKeyboardSpotIllustration ===
-
-// Module 7275 (MicrophoneAndKeyboardSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/MicrophoneAndKeyboardSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 12048: UserVoiceSettings ===
-
-// Module 12048 (UserVoiceSettings)
 import "SoundboardSlashIcon";
 import { View } from "MicrophoneSlashIcon";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";

@@ -1,6 +1,3 @@
-// === Module 15077: useFirstGloballyViewbleGuildChannelId ===
-
-// Module 15077 (useFirstGloballyViewbleGuildChannelId)
 import comparator from "comparator";
 import { Permissions } from "sum";
 

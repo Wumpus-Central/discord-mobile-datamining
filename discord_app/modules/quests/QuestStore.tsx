@@ -1,6 +1,3 @@
-// === Module 5989: initializeState ===
-
-// Module 5989 (initializeState)
 import _slicedToArray from "_slicedToArray";
 import useConsoleQuestUIStore from "useConsoleQuestUIStore";
 import _toPropertyKey from "_toPropertyKey";

@@ -1,6 +1,3 @@
-// === Module 11803: SuggestedFriendsSectionHeader ===
-
-// Module 11803 (SuggestedFriendsSectionHeader)
 import _slicedToArray from "_slicedToArray";
 import Form from "Form";
 import { View } from "hexToRgba";

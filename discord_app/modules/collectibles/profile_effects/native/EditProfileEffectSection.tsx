@@ -1,6 +1,3 @@
-// === Module 13743: memoResult1 ===
-
-// Module 13743 (memoResult1)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { isProfileEffectRecord } from "fromServer";

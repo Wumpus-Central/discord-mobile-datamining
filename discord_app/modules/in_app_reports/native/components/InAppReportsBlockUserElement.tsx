@@ -1,6 +1,3 @@
-// === Module 12426: BlockUserElement ===
-
-// Module 12426 (BlockUserElement)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";

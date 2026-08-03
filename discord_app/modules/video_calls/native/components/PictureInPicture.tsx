@@ -1,6 +1,3 @@
-// === Module 10534: PictureInPicturePositions ===
-
-// Module 10534 (PictureInPicturePositions)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "set";

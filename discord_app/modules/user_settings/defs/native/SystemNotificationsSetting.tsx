@@ -1,6 +1,3 @@
-// === Module 14465: _handleEnableSystemNotification ===
-
-// Module 14465 (_handleEnableSystemNotification)
 import closure_3 from "EventActionType";
 import { NativeModules } from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";

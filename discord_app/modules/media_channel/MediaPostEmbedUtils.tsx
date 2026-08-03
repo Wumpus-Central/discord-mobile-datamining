@@ -1,6 +1,3 @@
-// === Module 4379: getMediaPostEmbedCommonData ===
-
-// Module 4379 (getMediaPostEmbedCommonData)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

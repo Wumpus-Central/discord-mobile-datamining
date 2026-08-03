@@ -1,6 +1,3 @@
-// === Module 14561: pressable ===
-
-// Module 14561 (pressable)
 import checkForNewerBuild from "checkForNewerBuild";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";

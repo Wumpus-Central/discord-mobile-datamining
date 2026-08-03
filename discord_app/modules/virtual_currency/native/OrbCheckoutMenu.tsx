@@ -1,6 +1,3 @@
-// === Module 14814: OrbCheckoutMenu ===
-
-// Module 14814 (OrbCheckoutMenu)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

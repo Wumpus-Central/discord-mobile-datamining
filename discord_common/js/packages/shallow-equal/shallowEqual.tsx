@@ -1,6 +1,3 @@
-// === Module 643: shallowEqual ===
-
-// Module 643 (shallowEqual)
 let closure_0 = {};
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
 

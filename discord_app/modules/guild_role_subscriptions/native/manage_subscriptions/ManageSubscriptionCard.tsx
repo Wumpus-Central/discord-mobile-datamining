@@ -1,6 +1,3 @@
-// === Module 14252: HeaderStatus ===
-
-// Module 14252 (HeaderStatus)
 import set from "set";
 import useManageSubscriptionCardData from "useManageSubscriptionCardData";
 import notSupported from "notSupported";

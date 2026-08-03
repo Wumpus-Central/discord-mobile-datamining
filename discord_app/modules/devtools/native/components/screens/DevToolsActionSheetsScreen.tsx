@@ -1,6 +1,3 @@
-// === Module 14837: ActionSheetSelector ===
-
-// Module 14837 (ActionSheetSelector)
 import _slicedToArray from "_slicedToArray";
 import PressableCard from "PressableCard";
 import get_ActivityIndicator from "CheckmarkLargeIcon";

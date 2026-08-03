@@ -1,6 +1,3 @@
-// === Module 11701: useIsRelationshipTypeSpamReportable ===
-
-// Module 11701 (useIsRelationshipTypeSpamReportable)
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 13547: RPC_LOCAL_SCOPE ===
-
-// Module 13547 (RPC_LOCAL_SCOPE)
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";
 import { DeviceTypes } from "DesktopSources";

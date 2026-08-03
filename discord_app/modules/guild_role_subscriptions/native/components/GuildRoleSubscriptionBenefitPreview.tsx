@@ -1,6 +1,3 @@
-// === Module 16623: BaseBenefitRow ===
-
-// Module 16623 (BaseBenefitRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { GuildRoleSubscriptionBenefitTypes as closure_4 } from "MAX_SUBSCRIPTION_TIERS";

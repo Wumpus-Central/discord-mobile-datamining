@@ -1,6 +1,3 @@
-// === Module 10523: useRevealProviderValue ===
-
-// Module 10523 (useRevealProviderValue)
 import importAllResult from "noop";
 import setContent from "setContent";
 import set from "set";

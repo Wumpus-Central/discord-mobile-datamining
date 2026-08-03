@@ -1,6 +1,3 @@
-// === Module 9516: handleQuickSwitcherUpdate ===
-
-// Module 9516 (handleQuickSwitcherUpdate)
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import handleConnectionOpen from "handleConnectionOpen";

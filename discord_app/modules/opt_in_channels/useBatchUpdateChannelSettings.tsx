@@ -1,6 +1,3 @@
-// === Module 10014: useBatchUpdateChannelSettings ===
-
-// Module 10014 (useBatchUpdateChannelSettings)
 import noop from "noop";
 import incrementVersion from "incrementVersion";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

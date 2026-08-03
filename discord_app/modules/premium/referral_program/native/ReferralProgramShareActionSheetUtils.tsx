@@ -1,6 +1,3 @@
-// === Module 12498: buildReferralUserRow ===
-
-// Module 12498 (buildReferralUserRow)
 import upsertRelationship from "upsertRelationship";
 import { UserRowModes } from "UserRowModes";
 

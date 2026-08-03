@@ -1,6 +1,3 @@
-// === Module 16374: SettingsSection ===
-
-// Module 16374 (SettingsSection)
 import ReactionIcon from "ReactionIcon";
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

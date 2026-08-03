@@ -1,6 +1,3 @@
-// === Module 9404: getSearchEmptySource ===
-
-// Module 9404 (getSearchEmptySource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

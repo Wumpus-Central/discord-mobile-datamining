@@ -1,6 +1,3 @@
-// === Module 13766: canResetThemeColors ===
-
-// Module 13766 (canResetThemeColors)
 const result = require("set").fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");
 
 export const canResetThemeColors = function canResetThemeColors(pendingThemeColors, themeColors) {

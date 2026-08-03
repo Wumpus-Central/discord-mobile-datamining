@@ -1,6 +1,3 @@
-// === Module 3888: enforcing ===
-
-// Module 3888 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeLinkingModule");

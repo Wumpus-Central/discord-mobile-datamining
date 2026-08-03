@@ -1,6 +1,3 @@
-// === Module 13253: Fonts ===
-
-// Module 13253 (Fonts)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { Fonts } from "ME";

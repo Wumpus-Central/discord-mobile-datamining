@@ -1,6 +1,3 @@
-// === Module 10548: useIsPrivateChannelWithEnabledActivities ===
-
-// Module 10548 (useIsPrivateChannelWithEnabledActivities)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

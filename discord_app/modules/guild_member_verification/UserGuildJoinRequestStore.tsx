@@ -1,6 +1,3 @@
-// === Module 4011: handleGatewayJoinRequestUpdate ===
-
-// Module 4011 (handleGatewayJoinRequestUpdate)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
 

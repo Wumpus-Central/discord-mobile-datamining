@@ -1,6 +1,3 @@
-// === Module 6155: _fileSize ===
-
-// Module 6155 (_fileSize)
 import apply from "apply";
 import { AbortCodes } from "ME";
 import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING";

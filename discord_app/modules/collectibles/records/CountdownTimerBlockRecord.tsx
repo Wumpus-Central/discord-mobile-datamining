@@ -1,6 +1,3 @@
-// === Module 5833: fromServer ===
-
-// Module 5833 (fromServer)
 let prototype;
 prototype = function CountdownTimerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);

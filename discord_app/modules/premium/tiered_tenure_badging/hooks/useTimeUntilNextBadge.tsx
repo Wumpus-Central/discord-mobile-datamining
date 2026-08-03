@@ -1,6 +1,3 @@
-// === Module 12490: computeDaysUntilNextBadgeDate ===
-
-// Module 12490 (computeDaysUntilNextBadgeDate)
 import { useMemo } from "noop";
 
 const result = require("useNextTenureBadge").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");

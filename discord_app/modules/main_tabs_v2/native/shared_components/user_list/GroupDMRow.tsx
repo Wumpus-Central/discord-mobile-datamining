@@ -1,6 +1,3 @@
-// === Module 9100: GroupDMRow ===
-
-// Module 9100 (GroupDMRow)
 import noop from "noop";
 import { UserRowModes } from "UserRowModes";
 import { jsx } from "jsxProd";

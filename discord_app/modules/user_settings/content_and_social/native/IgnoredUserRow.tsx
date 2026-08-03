@@ -1,6 +1,3 @@
-// === Module 13859: IgnoredUserRow ===
-
-// Module 13859 (IgnoredUserRow)
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 11085: ClassificationHeader ===
-
-// Module 11085 (ClassificationHeader)
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "useSafetyHubClassifications";
 import _getSystemLocale from "_getSystemLocale";

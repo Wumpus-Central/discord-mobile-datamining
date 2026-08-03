@@ -1,6 +1,3 @@
-// === Module 10984: AdContentImpressionTrackerBaseNative ===
-
-// Module 10984 (AdContentImpressionTrackerBaseNative)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getState from "getState";

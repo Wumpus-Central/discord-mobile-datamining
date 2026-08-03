@@ -1,6 +1,3 @@
-// === Module 4175: UPDATE_CHECK_INTERVAL ===
-
-// Module 4175 (UPDATE_CHECK_INTERVAL)
 import importDefaultResult from "t";
 import getConstants from "getConstants";
 import getConstants from "getConstants";

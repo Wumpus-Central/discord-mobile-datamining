@@ -1,6 +1,3 @@
-// === Module 8846: useChannelVideoLimit ===
-
-// Module 8846 (useChannelVideoLimit)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";
 import { ChannelTypes } from "ME";

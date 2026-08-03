@@ -1,6 +1,3 @@
-// === Module 5844: fromServer ===
-
-// Module 5844 (fromServer)
 let prototype;
 prototype = function SocialLayerStorefrontPromotionalBannerBlockRecord(arg0) {
   const obj = Object.create(new.target.prototype);

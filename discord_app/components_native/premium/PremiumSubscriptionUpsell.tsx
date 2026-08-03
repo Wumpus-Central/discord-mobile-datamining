@@ -1,6 +1,3 @@
-// === Module 12589: PremiumSubscriptionUpsell ===
-
-// Module 12589 (PremiumSubscriptionUpsell)
 import "registerAsset";
 import get_ActivityIndicator from "Text";
 import _getSystemLocale from "_getSystemLocale";

@@ -1,6 +1,3 @@
-// === Module 5205: usePromptHelpText ===
-
-// Module 5205 (usePromptHelpText)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

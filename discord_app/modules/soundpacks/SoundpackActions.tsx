@@ -1,6 +1,3 @@
-// === Module 16235: setSoundpack ===
-
-// Module 16235 (setSoundpack)
 import Soundpacks from "Soundpacks";
 import { AnalyticEvents } from "ME";
 

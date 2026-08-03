@@ -1,6 +1,3 @@
-// === Module 13134: GuildProgressBar ===
-
-// Module 13134 (GuildProgressBar)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

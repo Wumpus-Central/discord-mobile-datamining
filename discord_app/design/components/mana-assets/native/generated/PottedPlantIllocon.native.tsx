@@ -1,6 +1,3 @@
-// === Module 7399: PottedPlantIllocon ===
-
-// Module 7399 (PottedPlantIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PottedPlantIllocon.native.tsx");

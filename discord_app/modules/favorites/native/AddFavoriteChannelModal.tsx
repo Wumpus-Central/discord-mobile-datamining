@@ -1,6 +1,3 @@
-// === Module 11895: AddFavoriteChannelModal ===
-
-// Module 11895 (AddFavoriteChannelModal)
 import UserRowModes from "UserRowModes";
 import _slicedToArray from "_slicedToArray";
 import messagesProxy from "messagesProxy";

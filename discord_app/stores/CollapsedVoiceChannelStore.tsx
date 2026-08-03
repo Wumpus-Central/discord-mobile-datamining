@@ -1,6 +1,3 @@
-// === Module 5785: handleConnectionOpen ===
-
-// Module 5785 (handleConnectionOpen)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { PersistedStore } from "initialize";
 

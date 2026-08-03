@@ -1,6 +1,3 @@
-// === Module 11308: useSortApplicationsViaFrecency ===
-
-// Module 11308 (useSortApplicationsViaFrecency)
 import noop from "noop";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import { UserSettingsTypes } from "MAX_FAVORITES";

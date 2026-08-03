@@ -1,6 +1,3 @@
-// === Module 12558: getTier048PxSource ===
-
-// Module 12558 (getTier048PxSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

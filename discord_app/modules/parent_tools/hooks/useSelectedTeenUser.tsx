@@ -1,6 +1,3 @@
-// === Module 13943: useSelectedTeenUser ===
-
-// Module 13943 (useSelectedTeenUser)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getSettings from "getSettings";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";

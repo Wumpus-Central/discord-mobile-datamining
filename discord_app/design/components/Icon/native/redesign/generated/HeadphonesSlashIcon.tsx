@@ -1,6 +1,3 @@
-// === Module 8874: HeadphonesSlashIcon ===
-
-// Module 8874 (HeadphonesSlashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

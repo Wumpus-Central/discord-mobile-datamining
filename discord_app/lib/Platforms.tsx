@@ -1,6 +1,3 @@
-// === Module 4875: getPlatformUserUrl ===
-
-// Module 4875 (getPlatformUserUrl)
 import { PlatformTypes } from "ME";
 import { ApplicationIdentityConnections } from "items1";
 import unsafe_getRawColor from "unsafe_getRawColor";

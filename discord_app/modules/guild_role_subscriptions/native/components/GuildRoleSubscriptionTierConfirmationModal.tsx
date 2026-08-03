@@ -1,6 +1,3 @@
-// === Module 16627: GuildRoleSubscriptionTierConfirmationModal ===
-
-// Module 16627 (GuildRoleSubscriptionTierConfirmationModal)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

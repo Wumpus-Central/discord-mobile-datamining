@@ -1,6 +1,3 @@
-// === Module 9531: GuildPill ===
-
-// Module 9531 (GuildPill)
 import _slicedToArray from "_slicedToArray";
 import combined from "combined";
 import { View } from "Background";

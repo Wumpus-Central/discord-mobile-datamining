@@ -1,6 +1,3 @@
-// === Module 8322: EditGuildScheduledEventResetWarningAlert ===
-
-// Module 8322 (EditGuildScheduledEventResetWarningAlert)
 import "noop";
 import { jsx } from "jsxProd";
 

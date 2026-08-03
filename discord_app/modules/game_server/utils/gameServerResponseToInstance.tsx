@@ -1,6 +1,3 @@
-// === Module 4103: gameServerResponseToInstance ===
-
-// Module 4103 (gameServerResponseToInstance)
 const result = require("set").fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
 
 export default function gameServerResponseToInstance(id) {

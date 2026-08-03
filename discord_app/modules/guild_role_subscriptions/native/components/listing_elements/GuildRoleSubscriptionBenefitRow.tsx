@@ -1,6 +1,3 @@
-// === Module 14278: BenefitRow ===
-
-// Module 14278 (BenefitRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 9558: _handleContentLinking ===
-
-// Module 9558 (_handleContentLinking)
 import transitionTo from "transitionTo";
 import { Routes } from "ME";
 

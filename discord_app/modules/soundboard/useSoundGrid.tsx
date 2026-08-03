@@ -1,6 +1,3 @@
-// === Module 15914: createSoundItems ===
-
-// Module 15914 (createSoundItems)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

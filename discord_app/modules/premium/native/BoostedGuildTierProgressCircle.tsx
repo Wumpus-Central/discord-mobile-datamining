@@ -1,6 +1,3 @@
-// === Module 12557: BoostedGuildTierProgressCircle ===
-
-// Module 12557 (BoostedGuildTierProgressCircle)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import ME from "ME";

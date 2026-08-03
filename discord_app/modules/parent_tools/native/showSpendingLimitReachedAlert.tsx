@@ -1,6 +1,3 @@
-// === Module 6257: isSpendingLimitError ===
-
-// Module 6257 (isSpendingLimitError)
 const result = require("useUserIdsForLinkStatus").fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 
 export const isSpendingLimitError = function isSpendingLimitError(billingError) {

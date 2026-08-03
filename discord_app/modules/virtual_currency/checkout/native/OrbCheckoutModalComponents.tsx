@@ -1,6 +1,3 @@
-// === Module 11918: OrbCheckoutErrorCard ===
-
-// Module 11918 (OrbCheckoutErrorCard)
 import noop from "noop";
 import get_ActivityIndicator from "OrbsIcon";
 import jsxProd from "jsxProd";

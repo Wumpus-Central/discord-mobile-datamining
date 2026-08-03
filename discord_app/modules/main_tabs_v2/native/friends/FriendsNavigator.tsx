@@ -1,6 +1,3 @@
-// === Module 15598: RequestsSettingsModalButton ===
-
-// Module 15598 (RequestsSettingsModalButton)
 import SuggestedFriendsScreen from "SuggestedFriendsScreen";
 import { View } from "handleFindFriends";
 import jsxProd from "compareUserItems";

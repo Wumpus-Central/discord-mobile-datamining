@@ -1,6 +1,3 @@
-// === Module 16431: BoostGemOutlineIcon ===
-
-// Module 16431 (BoostGemOutlineIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

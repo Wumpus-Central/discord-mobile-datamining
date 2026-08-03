@@ -1,6 +1,3 @@
-// === Module 6677: BuyNitroPerk ===
-
-// Module 6677 (BuyNitroPerk)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

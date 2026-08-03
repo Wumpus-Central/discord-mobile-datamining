@@ -1,6 +1,3 @@
-// === Module 13570: getSubscriptionSkusViaListings ===
-
-// Module 13570 (getSubscriptionSkusViaListings)
 import prototype from "prototype";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";

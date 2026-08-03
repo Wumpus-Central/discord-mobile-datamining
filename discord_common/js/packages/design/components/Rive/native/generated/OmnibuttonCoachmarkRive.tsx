@@ -1,6 +1,3 @@
-// === Module 3996: OmnibuttonCoachmarkRive ===
-
-// Module 3996 (OmnibuttonCoachmarkRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

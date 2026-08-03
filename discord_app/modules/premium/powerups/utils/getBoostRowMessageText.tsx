@@ -1,6 +1,3 @@
-// === Module 11692: getBoostRowMessageText ===
-
-// Module 11692 (getBoostRowMessageText)
 const result = require("BOOST_EXPIRING_DISPLAY_WINDOW_DAYS").fileFinishedImporting("modules/premium/powerups/utils/getBoostRowMessageText.tsx");
 
 export default function getBoostRowMessageText(phase) {

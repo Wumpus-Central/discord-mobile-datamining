@@ -1,6 +1,3 @@
-// === Module 13268: getIntervalMs ===
-
-// Module 13268 (getIntervalMs)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import "append";
 

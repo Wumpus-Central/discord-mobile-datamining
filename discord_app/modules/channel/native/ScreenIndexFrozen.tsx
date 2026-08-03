@@ -1,6 +1,3 @@
-// === Module 4053: set ===
-
-// Module 4053 (set)
 import noop from "noop";
 import set from "set";
 

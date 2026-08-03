@@ -1,6 +1,3 @@
-// === Module 7031: FamilyKeysSpotIllustration ===
-
-// Module 7031 (FamilyKeysSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/FamilyKeysSpotIllustration.native.tsx");

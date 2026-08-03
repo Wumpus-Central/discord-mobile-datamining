@@ -1,6 +1,3 @@
-// === Module 14353: useMessagePreview ===
-
-// Module 14353 (useMessagePreview)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 

@@ -1,6 +1,3 @@
-// === Module 4533: ? ===
-
-// Module 4533
 import "noop";
 import jsxProd from "jsxProd";
 

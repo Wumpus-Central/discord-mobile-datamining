@@ -1,6 +1,3 @@
-// === Module 11183: findGameMentionTokens ===
-
-// Module 11183 (findGameMentionTokens)
 import { Image } from "computeChannelName";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import getEmojiToGroupId from "getEmojiToGroupId";

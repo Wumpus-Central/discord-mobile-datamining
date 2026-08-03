@@ -1,6 +1,3 @@
-// === Module 11591: productToGameServerGame ===
-
-// Module 11591 (productToGameServerGame)
 const result = require("set").fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
 
 export const productToGameServerGame = function productToGameServerGame(id) {

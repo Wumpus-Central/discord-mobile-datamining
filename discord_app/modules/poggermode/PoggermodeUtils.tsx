@@ -1,6 +1,3 @@
-// === Module 6147: getComboShakeIntensity ===
-
-// Module 6147 (getComboShakeIntensity)
 import ConfettiLocation from "ConfettiLocation";
 
 let c3;

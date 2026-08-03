@@ -1,6 +1,3 @@
-// === Module 10251: areParticipantStatesEqual ===
-
-// Module 10251 (areParticipantStatesEqual)
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";

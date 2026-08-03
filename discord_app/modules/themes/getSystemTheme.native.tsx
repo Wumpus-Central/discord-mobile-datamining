@@ -1,6 +1,3 @@
-// === Module 1339: getSystemTheme ===
-
-// Module 1339 (getSystemTheme)
 import { Appearance } from "get ActivityIndicator";
 import { SystemTheme } from "SystemThemeState";
 

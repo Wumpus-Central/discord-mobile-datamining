@@ -1,6 +1,3 @@
-// === Module 9698: getDeviceMediaPhotos ===
-
-// Module 9698 (getDeviceMediaPhotos)
 import { NativeModules } from "get ActivityIndicator";
 
 let c4 = new require("set")("DeviceMedia.tsx");

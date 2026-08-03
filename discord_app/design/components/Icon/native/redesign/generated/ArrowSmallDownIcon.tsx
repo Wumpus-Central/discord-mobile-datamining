@@ -1,6 +1,3 @@
-// === Module 14853: ArrowSmallDownIcon ===
-
-// Module 14853 (ArrowSmallDownIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

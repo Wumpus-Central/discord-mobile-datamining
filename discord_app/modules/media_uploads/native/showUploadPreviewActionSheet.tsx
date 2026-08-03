@@ -1,6 +1,3 @@
-// === Module 9684: showUploadPreviewActionSheet ===
-
-// Module 9684 (showUploadPreviewActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/media_uploads/native/showUploadPreviewActionSheet.tsx");
 
 export default function showUploadPreviewActionSheet(arg0) {

@@ -1,6 +1,3 @@
-// === Module 14839: TakeActionButtons ===
-
-// Module 14839 (TakeActionButtons)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import getSystemLocale from "getSystemLocale";

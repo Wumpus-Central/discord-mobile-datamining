@@ -1,6 +1,3 @@
-// === Module 9354: fetchTopEmojis ===
-
-// Module 9354 (fetchTopEmojis)
 import { Endpoints } from "ME";
 
 const result = require("dispatcher").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisActionCreators.tsx");

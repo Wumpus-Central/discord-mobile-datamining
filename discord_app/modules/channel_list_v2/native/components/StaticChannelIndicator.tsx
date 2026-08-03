@@ -1,6 +1,3 @@
-// === Module 10342: ChannelIndicator ===
-
-// Module 10342 (ChannelIndicator)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";
 import { jsx } from "jsxProd";

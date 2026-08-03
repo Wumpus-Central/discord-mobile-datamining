@@ -1,6 +1,3 @@
-// === Module 13932: QrCodeIcon ===
-
-// Module 13932 (QrCodeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

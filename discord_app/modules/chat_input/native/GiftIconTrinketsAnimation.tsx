@@ -1,6 +1,3 @@
-// === Module 11424: GiftIconTrinketsAnimation ===
-
-// Module 11424 (GiftIconTrinketsAnimation)
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";

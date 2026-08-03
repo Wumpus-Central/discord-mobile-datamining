@@ -1,6 +1,3 @@
-// === Module 12376: createFriendInvite ===
-
-// Module 12376 (createFriendInvite)
 import { Image } from "get ActivityIndicator";
 import upsertRelationship from "upsertRelationship";
 import { InviteTypes } from "InviteSendStates";

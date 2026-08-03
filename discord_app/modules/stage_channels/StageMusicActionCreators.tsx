@@ -1,6 +1,3 @@
-// === Module 10723: updateStageMusicMuted ===
-
-// Module 10723 (updateStageMusicMuted)
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
 
 export const updateStageMusicMuted = function updateStageMusicMuted(muted) {

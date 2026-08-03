@@ -1,6 +1,3 @@
-// === Module 15861: useActivityWebViewLockManager ===
-
-// Module 15861 (useActivityWebViewLockManager)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

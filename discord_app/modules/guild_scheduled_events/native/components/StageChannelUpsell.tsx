@@ -1,6 +1,3 @@
-// === Module 8273: StageChannelUpsell ===
-
-// Module 8273 (StageChannelUpsell)
 import _slicedToArray from "_slicedToArray";
 import "asyncRequireImpl";
 import get_ActivityIndicator from "module_4399";

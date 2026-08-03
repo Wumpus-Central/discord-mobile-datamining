@@ -1,6 +1,3 @@
-// === Module 16157: handleAVAudioSessionMode ===
-
-// Module 16157 (handleAVAudioSessionMode)
 import participantFromServer from "participantFromServer";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import reset from "reset";

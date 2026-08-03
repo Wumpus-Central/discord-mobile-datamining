@@ -1,6 +1,3 @@
-// === Module 5667: fromServer ===
-
-// Module 5667 (fromServer)
 import "toJS";
 import createFromServer from "createFromServer";
 import createExecutable from "createExecutable";

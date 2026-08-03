@@ -1,6 +1,3 @@
-// === Module 16260: handleAppStateUpdate ===
-
-// Module 16260 (handleAppStateUpdate)
 import enforcing from "enforcing";
 import ME from "ME";
 import "initialize";

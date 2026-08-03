@@ -1,6 +1,3 @@
-// === Module 12708: collectCallFeedback ===
-
-// Module 12708 (collectCallFeedback)
 import handleSyncedStoresUpdate from "handleSyncedStoresUpdate";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

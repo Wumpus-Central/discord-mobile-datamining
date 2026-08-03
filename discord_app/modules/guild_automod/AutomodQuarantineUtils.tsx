@@ -1,6 +1,3 @@
-// === Module 11076: useCurrentUserHasAutomodQuarantinedProfile ===
-
-// Module 11076 (useCurrentUserHasAutomodQuarantinedProfile)
 import noop from "noop";
 import zustandStore from "zustandStore";
 import fetchFingerprint from "fetchFingerprint";

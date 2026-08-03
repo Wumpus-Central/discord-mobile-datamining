@@ -1,6 +1,3 @@
-// === Module 15342: SettingsButton ===
-
-// Module 15342 (SettingsButton)
 import generateHydrationId from "generateHydrationId";
 import importAllResult from "asyncRequireImpl";
 import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";

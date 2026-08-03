@@ -1,6 +1,3 @@
-// === Module 13791: WebAuthnNameStep ===
-
-// Module 13791 (WebAuthnNameStep)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

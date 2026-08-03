@@ -1,6 +1,3 @@
-// === Module 12203: useUserProfileApplicationRoleConnections ===
-
-// Module 12203 (useUserProfileApplicationRoleConnections)
 import { useMemo } from "noop";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 

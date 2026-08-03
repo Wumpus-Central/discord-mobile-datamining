@@ -1,6 +1,3 @@
-// === Module 1368: isActionRequired ===
-
-// Module 1368 (isActionRequired)
 import handleUpdateUser from "handleUpdateUser";
 import handleRequiredAction from "handleRequiredAction";
 

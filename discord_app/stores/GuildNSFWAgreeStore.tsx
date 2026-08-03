@@ -1,6 +1,3 @@
-// === Module 4408: initialize ===
-
-// Module 4408 (initialize)
 import { Store } from "initialize";
 
 const require = arg1;

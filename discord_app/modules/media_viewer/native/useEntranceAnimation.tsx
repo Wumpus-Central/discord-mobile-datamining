@@ -1,6 +1,3 @@
-// === Module 12343: setUseEntranceAnimationState ===
-
-// Module 12343 (setUseEntranceAnimationState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import keys from "keys";

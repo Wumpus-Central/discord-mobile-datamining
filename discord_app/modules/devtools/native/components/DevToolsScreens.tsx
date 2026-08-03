@@ -1,6 +1,3 @@
-// === Module 13655: DevToolsScreens ===
-
-// Module 13655 (DevToolsScreens)
 import "LanguageIcon";
 import { jsx } from "DownloadIcon";
 

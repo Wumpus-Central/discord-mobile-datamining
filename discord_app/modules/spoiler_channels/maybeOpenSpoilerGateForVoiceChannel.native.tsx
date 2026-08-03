@@ -1,6 +1,3 @@
-// === Module 12442: maybeOpenSpoilerGateForVoiceChannel ===
-
-// Module 12442 (maybeOpenSpoilerGateForVoiceChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { jsx } from "jsxProd";
 

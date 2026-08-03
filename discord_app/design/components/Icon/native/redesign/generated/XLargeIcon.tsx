@@ -1,6 +1,3 @@
-// === Module 4147: XLargeIcon ===
-
-// Module 4147 (XLargeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

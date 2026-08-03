@@ -1,6 +1,3 @@
-// === Module 11492: BaseChannelSubtitle ===
-
-// Module 11492 (BaseChannelSubtitle)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { CHANNEL_TITLE_LINE_HEIGHT } from "hairlineWidth";

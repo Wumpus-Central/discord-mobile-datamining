@@ -1,6 +1,3 @@
-// === Module 11639: useGuildPowerupOnToggle ===
-
-// Module 11639 (useGuildPowerupOnToggle)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

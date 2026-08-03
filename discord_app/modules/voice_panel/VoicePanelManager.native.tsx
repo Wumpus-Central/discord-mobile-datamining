@@ -1,6 +1,3 @@
-// === Module 16663: prototype ===
-
-// Module 16663 (prototype)
 import createRTCConnection from "createRTCConnection";
 import withEqualityFn from "withEqualityFn";
 import "initialize";

@@ -1,6 +1,3 @@
-// === Module 7223: GroupGamingSpotIllustration ===
-
-// Module 7223 (GroupGamingSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GroupGamingSpotIllustration.native.tsx");

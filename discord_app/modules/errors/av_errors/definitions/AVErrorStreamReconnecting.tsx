@@ -1,6 +1,3 @@
-// === Module 16707: AVErrorStreamReconnectingDefinition ===
-
-// Module 16707 (AVErrorStreamReconnectingDefinition)
 import { ApplicationStreamStates } from "ME";
 
 const result = require("getVoiceChannelErrorContext").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamReconnecting.tsx");

@@ -1,6 +1,3 @@
-// === Module 3261: messagesProxy ===
-
-// Module 3261 (messagesProxy)
 import module_1274 from "module_1274";
 import module_1274 from "module_1274";
 

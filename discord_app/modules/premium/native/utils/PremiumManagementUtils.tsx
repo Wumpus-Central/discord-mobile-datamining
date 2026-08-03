@@ -1,6 +1,3 @@
-// === Module 6555: defaultMobileWebNitroManagementSuccessCallback ===
-
-// Module 6555 (defaultMobileWebNitroManagementSuccessCallback)
 import { SubscriptionStatusTypes } from "ME";
 import { PaymentGatewayToFriendlyName as closure_4 } from "sum";
 import { jsx } from "jsxProd";

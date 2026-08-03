@@ -1,6 +1,3 @@
-// === Module 13154: HelpMessage ===
-
-// Module 13154 (HelpMessage)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

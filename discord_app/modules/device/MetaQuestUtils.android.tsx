@@ -1,6 +1,3 @@
-// === Module 1577: isMetaQuest ===
-
-// Module 1577 (isMetaQuest)
 import importDefaultResult from "enforcing";
 
 const isMetaQuestResult = require("enforcing").isMetaQuest();

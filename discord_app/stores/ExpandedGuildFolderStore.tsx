@@ -1,6 +1,3 @@
-// === Module 5032: set ===
-
-// Module 5032 (set)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { PersistedStore } from "initialize";
 import set from "dispatcher";

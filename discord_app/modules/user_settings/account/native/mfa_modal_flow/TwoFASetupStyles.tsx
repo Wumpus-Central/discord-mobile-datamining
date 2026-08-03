@@ -1,6 +1,3 @@
-// === Module 13836: styles ===
-
-// Module 13836 (styles)
 import createCacheKey from "createCacheKey";
 import importDefaultResult from "createTextStyle";
 

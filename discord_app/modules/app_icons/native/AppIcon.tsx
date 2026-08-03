@@ -1,6 +1,3 @@
-// === Module 14505: AppIcon ===
-
-// Module 14505 (AppIcon)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { getIconById } from "items";

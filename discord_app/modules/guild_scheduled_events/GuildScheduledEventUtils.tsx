@@ -1,6 +1,3 @@
-// === Module 8327: getNextShownUpcomingEventNoticeType ===
-
-// Module 8327 (getNextShownUpcomingEventNoticeType)
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 
 let c3;

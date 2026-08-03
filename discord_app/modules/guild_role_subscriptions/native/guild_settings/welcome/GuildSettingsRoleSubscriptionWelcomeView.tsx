@@ -1,6 +1,3 @@
-// === Module 16544: ApplicationStatusNotice ===
-
-// Module 16544 (ApplicationStatusNotice)
 import encodeProperties from "encodeProperties";
 import Form from "Form";
 import get_ActivityIndicator from "asyncRequireImpl";

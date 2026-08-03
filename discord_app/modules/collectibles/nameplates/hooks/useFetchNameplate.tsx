@@ -1,6 +1,3 @@
-// === Module 13749: useFetchNameplate ===
-
-// Module 13749 (useFetchNameplate)
 const result = require("getNameplateData").fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
 export const useFetchNameplate = function useFetchNameplate(skuId) {

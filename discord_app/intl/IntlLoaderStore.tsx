@@ -1,6 +1,3 @@
-// === Module 1947: _setAppLocale ===
-
-// Module 1947 (_setAppLocale)
 import module_1274 from "module_1274";
 import identity from "identity";
 

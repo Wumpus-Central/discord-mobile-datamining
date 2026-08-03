@@ -1,6 +1,3 @@
-// === Module 5666: getPrice ===
-
-// Module 5666 (getPrice)
 import addApplication from "addApplication";
 import { WishlistRecommendationReason as closure_4 } from "fromServer";
 import createExecutable from "createExecutable";

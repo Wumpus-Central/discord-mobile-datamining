@@ -1,6 +1,3 @@
-// === Module 8501: buildSteamStoreUrl ===
-
-// Module 8501 (buildSteamStoreUrl)
 import map from "map";
 import { Distributors } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 9722: useThemeAndReducedMotionAwareAssetUrl ===
-
-// Module 9722 (useThemeAndReducedMotionAwareAssetUrl)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 
 const require = arg1;

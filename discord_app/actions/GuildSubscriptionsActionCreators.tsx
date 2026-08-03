@@ -1,6 +1,3 @@
-// === Module 6075: subscribeMembers ===
-
-// Module 6075 (subscribeMembers)
 let result = require("set").fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 
 export const subscribeMembers = function subscribeMembers(guildId, userIds) {

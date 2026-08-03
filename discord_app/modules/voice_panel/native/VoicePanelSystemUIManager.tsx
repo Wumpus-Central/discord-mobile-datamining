@@ -1,6 +1,3 @@
-// === Module 15944: ? ===
-
-// Module 15944
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import getParticipants from "getParticipants";

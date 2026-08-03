@@ -1,6 +1,3 @@
-// === Module 10833: SingleStream ===
-
-// Module 10833 (SingleStream)
 import "noop";
 import VoiceChatDrawerState from "VoiceChatDrawerState";
 import { jsx } from "jsxProd";

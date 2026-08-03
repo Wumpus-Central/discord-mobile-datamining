@@ -1,6 +1,3 @@
-// === Module 16351: maybeShowUrgentMessageModal ===
-
-// Module 16351 (maybeShowUrgentMessageModal)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";

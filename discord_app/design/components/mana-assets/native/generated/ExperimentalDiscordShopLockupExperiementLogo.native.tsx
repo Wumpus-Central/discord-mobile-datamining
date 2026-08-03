@@ -1,6 +1,3 @@
-// === Module 7023: ExperimentalDiscordShopLockupExperiementLogo ===
-
-// Module 7023 (ExperimentalDiscordShopLockupExperiementLogo)
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

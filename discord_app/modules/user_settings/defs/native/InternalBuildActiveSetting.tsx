@@ -1,6 +1,3 @@
-// === Module 14560: ? ===
-
-// Module 14560
 import checkForNewerBuild from "checkForNewerBuild";
 import createToggle from "createToggle";
 

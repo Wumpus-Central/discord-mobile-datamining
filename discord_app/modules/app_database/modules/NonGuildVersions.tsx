@@ -1,6 +1,3 @@
-// === Module 5946: getCommittedVersions ===
-
-// Module 5946 (getCommittedVersions)
 import items from "items";
 import importDefaultResult from "handleConnectionOpen";
 import isCacheEnabled from "isCacheEnabled";

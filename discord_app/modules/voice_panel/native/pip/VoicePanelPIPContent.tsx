@@ -1,6 +1,3 @@
-// === Module 16009: VideoStream ===
-
-// Module 16009 (VideoStream)
 import canRenderParticipantVideo from "canRenderParticipantVideo";
 import importAllResult from "cleanUp";
 import get_ActivityIndicator from "Themes";

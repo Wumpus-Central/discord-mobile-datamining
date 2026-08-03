@@ -1,6 +1,3 @@
-// === Module 12245: usePrivateChannelCall ===
-
-// Module 12245 (usePrivateChannelCall)
 import getPrivateChannelCall from "getPrivateChannelCall";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

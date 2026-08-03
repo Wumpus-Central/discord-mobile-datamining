@@ -1,6 +1,3 @@
-// === Module 14444: toggle ===
-
-// Module 14444 (toggle)
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import createToggle from "createToggle";
 

@@ -1,6 +1,3 @@
-// === Module 14986: ? ===
-
-// Module 14986
 import importAllResult from "FavoritesGuildCoachmarkIntro";
 import { View } from "HomeDrawerFavoritesRowExpandedChildren";
 import initializeFromUserSettings from "initializeFromUserSettings";

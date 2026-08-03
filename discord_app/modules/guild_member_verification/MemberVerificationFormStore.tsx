@@ -1,6 +1,3 @@
-// === Module 5142: get ===
-
-// Module 5142 (get)
 import { Store } from "initialize";
 
 const require = arg1;

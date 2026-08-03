@@ -1,6 +1,3 @@
-// === Module 10121: getValidOrderedFilterTokens ===
-
-// Module 10121 (getValidOrderedFilterTokens)
 import initialize from "initialize";
 import ME from "ME";
 

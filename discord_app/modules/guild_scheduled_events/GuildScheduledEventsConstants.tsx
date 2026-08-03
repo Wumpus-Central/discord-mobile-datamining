@@ -1,6 +1,3 @@
-// === Module 1378: GUILD_EVENT_MAX_NAME_LENGTH ===
-
-// Module 1378 (GUILD_EVENT_MAX_NAME_LENGTH)
 import { ChannelTypes } from "ME";
 import set from "set";
 

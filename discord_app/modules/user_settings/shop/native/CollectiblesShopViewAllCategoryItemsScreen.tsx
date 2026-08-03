@@ -1,6 +1,3 @@
-// === Module 14658: CollectiblesShopViewAllCategoryItemsScreen ===
-
-// Module 14658 (CollectiblesShopViewAllCategoryItemsScreen)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

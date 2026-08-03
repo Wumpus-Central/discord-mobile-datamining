@@ -1,6 +1,3 @@
-// === Module 5899: createUserWidgetFromServer ===
-
-// Module 5899 (createUserWidgetFromServer)
 import _getSystemLocale from "_getSystemLocale";
 import createdAt from "createdAt";
 import fetchFingerprint from "fetchFingerprint";

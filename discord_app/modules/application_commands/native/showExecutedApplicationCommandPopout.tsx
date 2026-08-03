@@ -1,6 +1,3 @@
-// === Module 9526: showExecutedApplicationCommandPopout ===
-
-// Module 9526 (showExecutedApplicationCommandPopout)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/application_commands/native/showExecutedApplicationCommandPopout.tsx");
 
 export default function showExecutedApplicationCommandPopout(messageId) {

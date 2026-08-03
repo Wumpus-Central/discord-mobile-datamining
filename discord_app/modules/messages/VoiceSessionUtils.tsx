@@ -1,6 +1,3 @@
-// === Module 7851: getSortedVoiceSessionParticipants ===
-
-// Module 7851 (getSortedVoiceSessionParticipants)
 import noop from "noop";
 import recomputeAffinities from "recomputeAffinities";
 import ensureGuildLoaded from "ensureGuildLoaded";

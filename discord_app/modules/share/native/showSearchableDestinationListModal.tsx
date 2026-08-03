@@ -1,6 +1,3 @@
-// === Module 9908: showSearchableDestinationListModal ===
-
-// Module 9908 (showSearchableDestinationListModal)
 const result = require("set").fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");
 
 export default function showSearchableDestinationListModal(outer1_1, closure_0, closure_4) {

@@ -1,6 +1,3 @@
-// === Module 6586: items ===
-
-// Module 6586 (items)
 import { intl } from "getSystemLocale";
 import { intl as intl2 } from "getSystemLocale";
 import { intl as intl3 } from "getSystemLocale";

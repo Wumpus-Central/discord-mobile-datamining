@@ -1,6 +1,3 @@
-// === Module 5874: addGlobalTag ===
-
-// Module 5874 (addGlobalTag)
 const obj = { design_id: require("DesignIds").DesignIds.DESIGN_TABS_IA };
 const result = require("set").fileFinishedImporting("modules/monitoring/MonitoringAgentUtils.tsx");
 

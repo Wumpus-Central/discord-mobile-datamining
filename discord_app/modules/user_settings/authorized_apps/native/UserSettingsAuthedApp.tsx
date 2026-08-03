@@ -1,6 +1,3 @@
-// === Module 13991: WarningLabel ===
-
-// Module 13991 (WarningLabel)
 import tokensToAppTokensMap from "tokensToAppTokensMap";
 import get_ActivityIndicator from "Link";
 import participantFromServer from "participantFromServer";

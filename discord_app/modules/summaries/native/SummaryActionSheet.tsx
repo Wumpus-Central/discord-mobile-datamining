@@ -1,6 +1,3 @@
-// === Module 10946: SummaryActionSheet ===
-
-// Module 10946 (SummaryActionSheet)
 import dispatcher from "dispatcher";
 import { View } from "showShareActionSheet";
 import ensureGuildLoaded from "ensureGuildLoaded";

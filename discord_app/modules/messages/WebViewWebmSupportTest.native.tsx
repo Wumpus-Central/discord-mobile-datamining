@@ -1,6 +1,3 @@
-// === Module 4382: isIOSWithWebM ===
-
-// Module 4382 (isIOSWithWebM)
 const ARM64_ = "ARM64_";
 const result = require("set").fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 

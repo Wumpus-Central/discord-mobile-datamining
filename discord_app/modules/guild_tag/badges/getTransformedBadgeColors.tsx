@@ -1,6 +1,3 @@
-// === Module 13076: getTransformedBadgeColors ===
-
-// Module 13076 (getTransformedBadgeColors)
 const result = require("set").fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
 
 export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0) {

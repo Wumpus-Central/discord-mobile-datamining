@@ -1,6 +1,3 @@
-// === Module 1: ? ===
-
-// Module 1
 import set from "serialize";
 import set from "serialize";
 

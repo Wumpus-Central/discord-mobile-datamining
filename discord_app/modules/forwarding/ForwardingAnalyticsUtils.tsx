@@ -1,6 +1,3 @@
-// === Module 9907: trackForwardStart ===
-
-// Module 9907 (trackForwardStart)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";

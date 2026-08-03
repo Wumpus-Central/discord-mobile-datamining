@@ -1,6 +1,3 @@
-// === Module 16158: handleVoiceChannelSelect ===
-
-// Module 16158 (handleVoiceChannelSelect)
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import isVoiceMuted from "isVoiceMuted";
 import fetchFingerprint from "fetchFingerprint";

@@ -1,6 +1,3 @@
-// === Module 11172: handleTypingStart ===
-
-// Module 11172 (handleTypingStart)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SlowmodeType } from "setCooldown";

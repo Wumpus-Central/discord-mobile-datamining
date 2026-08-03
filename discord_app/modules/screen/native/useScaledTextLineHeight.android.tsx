@@ -1,6 +1,3 @@
-// === Module 9925: map ===
-
-// Module 9925 (map)
 const map = new Map();
 let result = require("getFontScale").fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
 

@@ -1,6 +1,3 @@
-// === Module 15147: AddFavoriteCategoryActionSheet ===
-
-// Module 15147 (AddFavoriteCategoryActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_5 } from "date";

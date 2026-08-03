@@ -1,6 +1,3 @@
-// === Module 15276: YouBarMaskedBackground ===
-
-// Module 15276 (YouBarMaskedBackground)
 import { View } from "get ActivityIndicator";
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 import jsxProd from "jsxProd";

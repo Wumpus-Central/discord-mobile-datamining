@@ -1,6 +1,3 @@
-// === Module 9714: PremiumGiftModal ===
-
-// Module 9714 (PremiumGiftModal)
 import _slicedToArray from "_slicedToArray";
 import context from "context";
 import mergeGuildAvatar from "mergeGuildAvatar";

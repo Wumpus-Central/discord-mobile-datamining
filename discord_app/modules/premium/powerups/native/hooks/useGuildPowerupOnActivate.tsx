@@ -1,6 +1,3 @@
-// === Module 11638: useGuildPowerupOnActivate ===
-
-// Module 11638 (useGuildPowerupOnActivate)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";

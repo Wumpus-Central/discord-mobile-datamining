@@ -1,6 +1,3 @@
-// === Module 12465: PremiumReferralTrialPill ===
-
-// Module 12465 (PremiumReferralTrialPill)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

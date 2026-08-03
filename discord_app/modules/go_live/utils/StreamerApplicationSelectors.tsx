@@ -1,6 +1,3 @@
-// === Module 6027: _findPlayingActivity ===
-
-// Module 6027 (_findPlayingActivity)
 import sortActivity from "sortActivity";
 import { ActivityTypes } from "ME";
 

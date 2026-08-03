@@ -1,6 +1,3 @@
-// === Module 11920: OrbBadgeCollectedRootScreen ===
-
-// Module 11920 (OrbBadgeCollectedRootScreen)
 import Button from "Button";
 import get_ActivityIndicator from "Text";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

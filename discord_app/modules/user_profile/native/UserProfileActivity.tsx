@@ -1,6 +1,3 @@
-// === Module 12001: ActivityCardText ===
-
-// Module 12001 (ActivityCardText)
 import UserProfileActivityCardBadges from "UserProfileActivityCardBadges";
 import isLinkTrusted from "isLinkTrusted";
 import get_ActivityIndicator from "set";

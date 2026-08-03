@@ -1,6 +1,3 @@
-// === Module 12027: UserProfileActivityTimebar ===
-
-// Module 12027 (UserProfileActivityTimebar)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { Fonts } from "ME";

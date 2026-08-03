@@ -1,6 +1,3 @@
-// === Module 7650: TextAreaField ===
-
-// Module 7650 (TextAreaField)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

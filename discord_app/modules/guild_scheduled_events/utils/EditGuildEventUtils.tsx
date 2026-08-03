@@ -1,6 +1,3 @@
-// === Module 8213: EditGuildEventScreens ===
-
-// Module 8213 (EditGuildEventScreens)
 import fetchFingerprint from "fetchFingerprint";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 

@@ -1,6 +1,3 @@
-// === Module 14024: ClipsSettingsScreen ===
-
-// Module 14024 (ClipsSettingsScreen)
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";

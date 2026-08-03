@@ -1,6 +1,3 @@
-// === Module 11224: useKeyboardActionSheetHeight ===
-
-// Module 11224 (useKeyboardActionSheetHeight)
 const result = require("useWindowDimensions").fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
 
 export default function useKeyboardActionSheetHeight() {

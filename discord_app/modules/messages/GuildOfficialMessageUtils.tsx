@@ -1,6 +1,3 @@
-// === Module 6050: useCanManageGuildOfficialMessages ===
-
-// Module 6050 (useCanManageGuildOfficialMessages)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { GUILD_OFFICIAL_HIGHLIGHT_ALPHA as closure_5 } from "MESSAGE_GROUP_SPACING";

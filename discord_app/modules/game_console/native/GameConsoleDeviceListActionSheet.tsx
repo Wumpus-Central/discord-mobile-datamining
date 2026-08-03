@@ -1,6 +1,3 @@
-// === Module 9056: TransferFooter ===
-
-// Module 9056 (TransferFooter)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";

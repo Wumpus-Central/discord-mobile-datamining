@@ -1,6 +1,3 @@
-// === Module 7877: FacebookNeutralIcon ===
-
-// Module 7877 (FacebookNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

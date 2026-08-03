@@ -1,6 +1,3 @@
-// === Module 8452: canShowTimeRecurringContent ===
-
-// Module 8452 (canShowTimeRecurringContent)
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import handleConnectionOpen from "handleConnectionOpen";

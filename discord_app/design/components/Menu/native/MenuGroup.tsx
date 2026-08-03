@@ -1,6 +1,3 @@
-// === Module 13193: MenuGroup ===
-
-// Module 13193 (MenuGroup)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 14798: updateClientPremiumTypeOverride ===
-
-// Module 14798 (updateClientPremiumTypeOverride)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

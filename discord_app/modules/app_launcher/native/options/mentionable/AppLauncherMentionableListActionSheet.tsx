@@ -1,6 +1,3 @@
-// === Module 11371: AppLauncherMentionableListActionSheet ===
-
-// Module 11371 (AppLauncherMentionableListActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { RelationshipTypes } from "ME";

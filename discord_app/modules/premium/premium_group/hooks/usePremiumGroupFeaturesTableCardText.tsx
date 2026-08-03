@@ -1,6 +1,3 @@
-// === Module 12536: usePremiumGroupFeaturesTableCardText ===
-
-// Module 12536 (usePremiumGroupFeaturesTableCardText)
 import reset from "reset";
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
 

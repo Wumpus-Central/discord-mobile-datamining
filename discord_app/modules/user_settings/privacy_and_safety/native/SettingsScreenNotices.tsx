@@ -1,6 +1,3 @@
-// === Module 13865: items ===
-
-// Module 13865 (items)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

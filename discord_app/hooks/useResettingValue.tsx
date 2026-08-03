@@ -1,6 +1,3 @@
-// === Module 12609: useResettingValue ===
-
-// Module 12609 (useResettingValue)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

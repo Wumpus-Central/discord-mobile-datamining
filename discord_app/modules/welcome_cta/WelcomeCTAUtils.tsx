@@ -1,6 +1,3 @@
-// === Module 7788: pickHelloSticker ===
-
-// Module 7788 (pickHelloSticker)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { WELCOME_STICKERS } from "items";
 import { AnalyticEvents } from "ME";

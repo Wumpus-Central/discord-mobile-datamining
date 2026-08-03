@@ -1,6 +1,3 @@
-// === Module 5213: CheckmarkSmallIcon ===
-
-// Module 5213 (CheckmarkSmallIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

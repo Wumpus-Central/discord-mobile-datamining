@@ -1,6 +1,3 @@
-// === Module 5921: compare ===
-
-// Module 5921 (compare)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");
 
 export const compare = function compare(arg0, arg1) {

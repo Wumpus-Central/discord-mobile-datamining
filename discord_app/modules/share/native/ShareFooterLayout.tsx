@@ -1,6 +1,3 @@
-// === Module 9931: ShareFooterLayout ===
-
-// Module 9931 (ShareFooterLayout)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

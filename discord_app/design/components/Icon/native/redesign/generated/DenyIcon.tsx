@@ -1,6 +1,3 @@
-// === Module 9299: DenyIcon ===
-
-// Module 9299 (DenyIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

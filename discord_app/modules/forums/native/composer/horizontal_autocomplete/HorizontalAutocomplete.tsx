@@ -1,6 +1,3 @@
-// === Module 9675: HorizontalAutocompleteOption ===
-
-// Module 9675 (HorizontalAutocompleteOption)
 import "getRoleIconData";
 import get_ActivityIndicator from "Text";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

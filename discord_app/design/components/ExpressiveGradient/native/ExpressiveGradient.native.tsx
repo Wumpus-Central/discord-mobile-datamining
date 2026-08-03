@@ -1,6 +1,3 @@
-// === Module 6660: ExpressiveGradient ===
-
-// Module 6660 (ExpressiveGradient)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

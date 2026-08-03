@@ -1,6 +1,3 @@
-// === Module 6253: getPremiumBundledItemsFromProductId ===
-
-// Module 6253 (getPremiumBundledItemsFromProductId)
 import _slicedToArray from "_slicedToArray";
 import GuildFeatures from "GuildFeatures";
 

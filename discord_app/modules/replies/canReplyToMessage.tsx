@@ -1,6 +1,3 @@
-// === Module 7762: useCanReplyToMessage ===
-
-// Module 7762 (useCanReplyToMessage)
 import _slicedToArray from "_slicedToArray";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";

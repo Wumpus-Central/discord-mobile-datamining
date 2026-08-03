@@ -1,6 +1,3 @@
-// === Module 15335: ContactSuggestionActions ===
-
-// Module 15335 (ContactSuggestionActions)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

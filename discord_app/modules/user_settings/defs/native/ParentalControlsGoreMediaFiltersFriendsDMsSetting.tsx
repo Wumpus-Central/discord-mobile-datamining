@@ -1,6 +1,3 @@
-// === Module 14708: pressable ===
-
-// Module 14708 (pressable)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
 

@@ -1,6 +1,3 @@
-// === Module 15098: TypingIndicator ===
-
-// Module 15098 (TypingIndicator)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

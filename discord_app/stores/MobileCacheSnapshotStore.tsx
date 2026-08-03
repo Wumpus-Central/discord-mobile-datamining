@@ -1,6 +1,3 @@
-// === Module 1220: clearAll ===
-
-// Module 1220 (clearAll)
 import { Store } from "initialize";
 
 const require = arg1;

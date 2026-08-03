@@ -1,6 +1,3 @@
-// === Module 8318: PreviewBody ===
-
-// Module 8318 (PreviewBody)
 import usePrimaryActionButtonType from "usePrimaryActionButtonType";
 import { View } from "EditGuildEventScreens";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 8938: useVoiceStateForRemoteSession ===
-
-// Module 8938 (useVoiceStateForRemoteSession)
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";
 import set from "set";

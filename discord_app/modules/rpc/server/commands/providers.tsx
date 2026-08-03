@@ -1,6 +1,3 @@
-// === Module 13566: AM_HARMONY_PRD_APPLICATION_ID ===
-
-// Module 13566 (AM_HARMONY_PRD_APPLICATION_ID)
 import importDefaultResult from "sum";
 import closure_5 from "set";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";

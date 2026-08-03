@@ -1,6 +1,3 @@
-// === Module 16138: useIsInRestrictedHours ===
-
-// Module 16138 (useIsInRestrictedHours)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 

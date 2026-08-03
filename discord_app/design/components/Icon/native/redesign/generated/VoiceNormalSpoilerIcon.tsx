@@ -1,6 +1,3 @@
-// === Module 4718: VoiceNormalSpoilerIcon ===
-
-// Module 4718 (VoiceNormalSpoilerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

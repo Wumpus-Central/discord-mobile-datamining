@@ -1,6 +1,3 @@
-// === Module 14387: ChatPreview ===
-
-// Module 14387 (ChatPreview)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 14473: toggle ===
-
-// Module 14473 (toggle)
 import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore";
 import createToggle from "createToggle";
 

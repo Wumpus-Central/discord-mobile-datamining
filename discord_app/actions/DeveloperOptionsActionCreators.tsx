@@ -1,6 +1,3 @@
-// === Module 708: setDeveloperOptionSettings ===
-
-// Module 708 (setDeveloperOptionSettings)
 const result = require("set").fileFinishedImporting("actions/DeveloperOptionsActionCreators.tsx");
 
 export const setDeveloperOptionSettings = function setDeveloperOptionSettings(settings) {

@@ -1,6 +1,3 @@
-// === Module 8020: handleDismissWithDismissed ===
-
-// Module 8020 (handleDismissWithDismissed)
 import { Store } from "initialize";
 
 const require = arg1;

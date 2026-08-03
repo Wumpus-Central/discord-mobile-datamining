@@ -1,6 +1,3 @@
-// === Module 10199: useAnnounceAsyncCompletion ===
-
-// Module 10199 (useAnnounceAsyncCompletion)
 import noop from "noop";
 import { AccessibilityInfo } from "get ActivityIndicator";
 

@@ -1,6 +1,3 @@
-// === Module 14732: DismissableContentsEmpty ===
-
-// Module 14732 (DismissableContentsEmpty)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getSearchEmptySource";
 import { View } from "SearchField";

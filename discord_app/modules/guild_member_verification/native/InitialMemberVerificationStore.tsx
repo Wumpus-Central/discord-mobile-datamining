@@ -1,6 +1,3 @@
-// === Module 9155: map ===
-
-// Module 9155 (map)
 import { Store } from "initialize";
 
 const map = new Map();

@@ -1,6 +1,3 @@
-// === Module 4095: displayMessage ===
-
-// Module 4095 (displayMessage)
 import { DispatchErrorCodes } from "RPC_SCOPE_CONFIG";
 
 const result = require("formatSize").fileFinishedImporting("errors/NativeDispatchError.tsx");

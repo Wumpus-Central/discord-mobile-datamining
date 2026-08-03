@@ -1,6 +1,3 @@
-// === Module 7810: createPurchaseNotificationSystemMessage ===
-
-// Module 7810 (createPurchaseNotificationSystemMessage)
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 
 export const createPurchaseNotificationSystemMessage = function createPurchaseNotificationSystemMessage(message) {

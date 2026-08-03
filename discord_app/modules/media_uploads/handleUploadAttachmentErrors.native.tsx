@@ -1,6 +1,3 @@
-// === Module 6190: handleUploadMessageAttachmentsErrors ===
-
-// Module 6190 (handleUploadMessageAttachmentsErrors)
 import ME from "ME";
 
 let c3;

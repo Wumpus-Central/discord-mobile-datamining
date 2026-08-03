@@ -1,6 +1,3 @@
-// === Module 10861: ? ===
-
-// Module 10861
 import { View } from "get ActivityIndicator";
 import getParticipants from "getParticipants";
 import { ParticipantTypes } from "ParticipantTypes";

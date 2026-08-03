@@ -1,6 +1,3 @@
-// === Module 13061: ShareAttachments ===
-
-// Module 13061 (ShareAttachments)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

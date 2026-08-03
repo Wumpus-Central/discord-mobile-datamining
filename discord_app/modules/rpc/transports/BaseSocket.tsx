@@ -1,6 +1,3 @@
-// === Module 10650: checkRpcVersion ===
-
-// Module 10650 (checkRpcVersion)
 import ME from "ME";
 
 let c3;

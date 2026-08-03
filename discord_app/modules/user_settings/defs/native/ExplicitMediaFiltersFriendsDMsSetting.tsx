@@ -1,6 +1,3 @@
-// === Module 13869: pressable ===
-
-// Module 13869 (pressable)
 import { MobileSetting } from "MobileSetting";
 import createToggle from "createToggle";
 

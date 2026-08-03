@@ -1,6 +1,3 @@
-// === Module 14287: volumeSlider ===
-
-// Module 14287 (volumeSlider)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
 

@@ -1,6 +1,3 @@
-// === Module 5559: TableSwitchRow ===
-
-// Module 5559 (TableSwitchRow)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

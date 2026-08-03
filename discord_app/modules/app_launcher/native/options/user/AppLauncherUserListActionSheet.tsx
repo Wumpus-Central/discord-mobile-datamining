@@ -1,6 +1,3 @@
-// === Module 11376: EmptyStateWithSnowflakeQuery ===
-
-// Module 11376 (EmptyStateWithSnowflakeQuery)
 import noop from "noop";
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { jsx } from "jsxProd";

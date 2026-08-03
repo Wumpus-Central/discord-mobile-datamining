@@ -1,6 +1,3 @@
-// === Module 14663: useSecureFramesVerifiedUserIds ===
-
-// Module 14663 (useSecureFramesVerifiedUserIds)
 import initialize from "initialize";
 
 const require = arg1;

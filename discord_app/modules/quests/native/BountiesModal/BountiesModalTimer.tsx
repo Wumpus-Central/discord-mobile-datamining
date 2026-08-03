@@ -1,6 +1,3 @@
-// === Module 14088: result ===
-
-// Module 14088 (result)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

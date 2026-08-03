@@ -1,6 +1,3 @@
-// === Module 16615: resetImperatively ===
-
-// Module 16615 (resetImperatively)
 import identity from "identity";
 
 let closure_2 = Object.freeze({ name: "", emojiId: "borderRadius", emojiName: "colors", description: "toCharArray$esjava$1", refId: "accessibilityRole" });

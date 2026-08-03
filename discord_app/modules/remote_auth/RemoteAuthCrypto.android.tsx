@@ -1,6 +1,3 @@
-// === Module 14921: generateRsaKeyPair ===
-
-// Module 14921 (generateRsaKeyPair)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let closure_3 = {};

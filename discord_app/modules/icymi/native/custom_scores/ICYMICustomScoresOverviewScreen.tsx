@@ -1,6 +1,3 @@
-// === Module 15348: ICYMICustomScoresOverviewScreen ===
-
-// Module 15348 (ICYMICustomScoresOverviewScreen)
 import noop from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 12641: computeGuildRoleSubscriptionSettingsVisibility ===
-
-// Module 12641 (computeGuildRoleSubscriptionSettingsVisibility)
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";

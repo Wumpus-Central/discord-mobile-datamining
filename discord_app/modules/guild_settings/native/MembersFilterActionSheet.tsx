@@ -1,6 +1,3 @@
-// === Module 15465: MembersFilterActionSheet ===
-
-// Module 15465 (MembersFilterActionSheet)
 import noop from "noop";
 import { View } from "BottomSheetModal";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

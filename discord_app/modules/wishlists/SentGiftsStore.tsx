@@ -1,6 +1,3 @@
-// === Module 9787: initialize ===
-
-// Module 9787 (initialize)
 import _slicedToArray from "_slicedToArray";
 import { PersistedStore } from "initialize";
 

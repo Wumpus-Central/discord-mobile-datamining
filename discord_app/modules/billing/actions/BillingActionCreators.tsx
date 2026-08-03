@@ -1,6 +1,3 @@
-// === Module 4513: _deletePaymentSource ===
-
-// Module 4513 (_deletePaymentSource)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_5 from "ME";
 import createFromServer from "createFromServer";

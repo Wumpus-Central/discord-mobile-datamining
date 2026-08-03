@@ -1,6 +1,3 @@
-// === Module 3901: chainCallbacks ===
-
-// Module 3901 (chainCallbacks)
 function chainCallbacks(arg0, arg1) {
   let closure_0 = [...arguments];
   return () => {

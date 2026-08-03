@@ -1,6 +1,3 @@
-// === Module 15953: useVoicePanelHeaderUserStateIcons ===
-
-// Module 15953 (useVoicePanelHeaderUserStateIcons)
 import importAllResult from "noop";
 import getParticipants from "getParticipants";
 import { jsx } from "jsxProd";

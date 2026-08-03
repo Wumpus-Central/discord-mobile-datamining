@@ -1,6 +1,3 @@
-// === Module 12170: ImageSkeleton ===
-
-// Module 12170 (ImageSkeleton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 13935: FamilyCenterFeatureRows ===
-
-// Module 13935 (FamilyCenterFeatureRows)
 import "noop";
 import { View } from "TableRowInner";
 import jsxProd from "jsxProd";

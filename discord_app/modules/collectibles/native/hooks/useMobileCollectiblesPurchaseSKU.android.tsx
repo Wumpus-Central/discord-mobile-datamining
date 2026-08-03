@@ -1,6 +1,3 @@
-// === Module 11902: useMobileCollectiblesPurchaseSKU ===
-
-// Module 11902 (useMobileCollectiblesPurchaseSKU)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

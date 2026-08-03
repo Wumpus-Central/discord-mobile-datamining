@@ -1,6 +1,3 @@
-// === Module 12997: _networkAwareRetry ===
-
-// Module 12997 (_networkAwareRetry)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import fetchFingerprint from "fetchFingerprint";
 

@@ -1,6 +1,3 @@
-// === Module 11570: ChatXIcon ===
-
-// Module 11570 (ChatXIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 10742: useToggleRequestToSpeak ===
-
-// Module 10742 (useToggleRequestToSpeak)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";

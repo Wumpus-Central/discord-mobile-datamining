@@ -1,6 +1,3 @@
-// === Module 4594: isBlurDisabled ===
-
-// Module 4594 (isBlurDisabled)
 import { View } from "get ActivityIndicator";
 import { useVisualEffectViewOverrides as closure_4 } from "useVisualEffectViewOverrides";
 import { jsx } from "jsxProd";

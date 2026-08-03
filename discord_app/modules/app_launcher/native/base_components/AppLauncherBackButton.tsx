@@ -1,6 +1,3 @@
-// === Module 11319: AppLauncherBackButton ===
-
-// Module 11319 (AppLauncherBackButton)
 import "noop";
 import { jsx } from "jsxProd";
 

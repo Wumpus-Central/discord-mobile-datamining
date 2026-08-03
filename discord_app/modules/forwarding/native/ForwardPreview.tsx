@@ -1,6 +1,3 @@
-// === Module 9932: MessagePreview ===
-
-// Module 9932 (MessagePreview)
 import preload from "preload";
 import { View } from "ImageIcon";
 import jsxProd from "SolidCutout";

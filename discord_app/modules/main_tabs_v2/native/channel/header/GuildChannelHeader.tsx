@@ -1,6 +1,3 @@
-// === Module 10162: GuildChannelMemberCount ===
-
-// Module 10162 (GuildChannelMemberCount)
 import set from "set";
 import importAllResult from "ICON_SIZE";
 import { View } from "initialize";

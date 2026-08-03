@@ -1,6 +1,3 @@
-// === Module 8665: useGameAnnouncements ===
-
-// Module 8665 (useGameAnnouncements)
 import { useEffect } from "noop";
 import getSimilarGames from "getSimilarGames";
 

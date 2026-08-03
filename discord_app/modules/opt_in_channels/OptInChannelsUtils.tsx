@@ -1,6 +1,3 @@
-// === Module 10016: setIndex ===
-
-// Module 10016 (setIndex)
 import DismissibleContent from "DismissibleContent";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import setIndex from "setIndex";

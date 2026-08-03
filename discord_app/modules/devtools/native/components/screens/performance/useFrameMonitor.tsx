@@ -1,6 +1,3 @@
-// === Module 14848: useFrameMonitor ===
-
-// Module 14848 (useFrameMonitor)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

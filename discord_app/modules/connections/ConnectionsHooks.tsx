@@ -1,6 +1,3 @@
-// === Module 5764: PlatformTypes ===
-
-// Module 5764 (PlatformTypes)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import set from "set";

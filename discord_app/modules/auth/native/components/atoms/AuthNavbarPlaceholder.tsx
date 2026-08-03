@@ -1,6 +1,3 @@
-// === Module 9230: AuthNavbarPlaceholder ===
-
-// Module 9230 (AuthNavbarPlaceholder)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

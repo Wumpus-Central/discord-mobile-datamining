@@ -1,6 +1,3 @@
-// === Module 12853: NUFVoiceChannelsTemplate ===
-
-// Module 12853 (NUFVoiceChannelsTemplate)
 import "noop";
 import { jsx } from "jsxProd";
 

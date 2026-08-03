@@ -1,6 +1,3 @@
-// === Module 15332: renderChannelPressableWrapper ===
-
-// Module 15332 (renderChannelPressableWrapper)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

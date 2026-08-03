@@ -1,6 +1,3 @@
-// === Module 6724: ? ===
-
-// Module 6724
 import { SafetyToastType } from "SafetyToastType";
 
 const result = require("getSafetyToastTypeContent").fileFinishedImporting("modules/safety_common/SafetyToastsActionCreators.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 15327: ForYouReadSectionHeader ===
-
-// Module 15327 (ForYouReadSectionHeader)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

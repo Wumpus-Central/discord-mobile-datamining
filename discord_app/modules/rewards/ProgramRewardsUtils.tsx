@@ -1,6 +1,3 @@
-// === Module 12797: canFetchNitroProgramReward ===
-
-// Module 12797 (canFetchNitroProgramReward)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 

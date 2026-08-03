@@ -1,6 +1,3 @@
-// === Module 14951: items ===
-
-// Module 14951 (items)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

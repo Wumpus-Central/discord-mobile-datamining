@@ -1,6 +1,3 @@
-// === Module 7683: renderDefaultEmpty ===
-
-// Module 7683 (renderDefaultEmpty)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";

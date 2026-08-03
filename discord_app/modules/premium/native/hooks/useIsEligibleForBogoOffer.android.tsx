@@ -1,6 +1,3 @@
-// === Module 6264: useIsEligibleForBogoOffer ===
-
-// Module 6264 (useIsEligibleForBogoOffer)
 import noop from "noop";
 import reset from "reset";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";

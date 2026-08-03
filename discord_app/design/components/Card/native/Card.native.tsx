@@ -1,6 +1,3 @@
-// === Module 5226: PressableCard ===
-
-// Module 5226 (PressableCard)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

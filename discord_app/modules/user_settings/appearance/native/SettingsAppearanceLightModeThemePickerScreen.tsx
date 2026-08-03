@@ -1,6 +1,3 @@
-// === Module 14341: SettingsAppearanceLightModeThemePickerScreen ===
-
-// Module 14341 (SettingsAppearanceLightModeThemePickerScreen)
 import "noop";
 import { SystemTheme } from "SystemThemeState";
 import { jsx } from "jsxProd";

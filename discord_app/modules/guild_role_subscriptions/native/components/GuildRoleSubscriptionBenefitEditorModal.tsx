@@ -1,6 +1,3 @@
-// === Module 16616: DeleteButton ===
-
-// Module 16616 (DeleteButton)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "getSystemLocale";

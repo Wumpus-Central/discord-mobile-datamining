@@ -1,6 +1,3 @@
-// === Module 14336: getHorizontalOrVerticalStartPoint ===
-
-// Module 14336 (getHorizontalOrVerticalStartPoint)
 function getHorizontalOrVerticalStartPoint(arg0, arg1, arg2) {
   if (0 === arg0) {
     const items = [-arg1 / 2, 0];

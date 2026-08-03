@@ -1,6 +1,3 @@
-// === Module 11390: createPollCreationImageForMedia ===
-
-// Module 11390 (createPollCreationImageForMedia)
 import useRequest from "useRequest";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

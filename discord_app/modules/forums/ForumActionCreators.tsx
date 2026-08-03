@@ -1,6 +1,3 @@
-// === Module 9144: withErrorHandling ===
-
-// Module 9144 (withErrorHandling)
 import sendRequest from "sendRequest";
 import ME from "ME";
 

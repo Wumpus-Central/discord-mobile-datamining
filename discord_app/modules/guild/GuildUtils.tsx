@@ -1,6 +1,3 @@
-// === Module 9435: handleJoinGuild ===
-
-// Module 9435 (handleJoinGuild)
 let result = require("set").fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
 export const handleJoinGuild = function handleJoinGuild(closure_0) {

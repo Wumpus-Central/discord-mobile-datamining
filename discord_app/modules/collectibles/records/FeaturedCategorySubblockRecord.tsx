@@ -1,6 +1,3 @@
-// === Module 5836: fromServer ===
-
-// Module 5836 (fromServer)
 let prototype;
 prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);

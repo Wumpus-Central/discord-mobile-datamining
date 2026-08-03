@@ -1,6 +1,3 @@
-// === Module 13131: GuildActionSheetTabItems ===
-
-// Module 13131 (GuildActionSheetTabItems)
 import registerAsset from "registerAsset";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

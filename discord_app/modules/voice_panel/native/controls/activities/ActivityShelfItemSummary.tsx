@@ -1,6 +1,3 @@
-// === Module 15996: ParticipantsSummary ===
-
-// Module 15996 (ParticipantsSummary)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";

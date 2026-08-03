@@ -1,6 +1,3 @@
-// === Module 10848: useStageActionBarAnimation ===
-
-// Module 10848 (useStageActionBarAnimation)
 import { Easing } from "module_4054";
 
 let obj = { duration: 250, easing: null };

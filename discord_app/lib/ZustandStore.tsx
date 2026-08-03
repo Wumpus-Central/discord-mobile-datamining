@@ -1,6 +1,3 @@
-// === Module 4061: defaultStatesAreEqual ===
-
-// Module 4061 (defaultStatesAreEqual)
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
 }

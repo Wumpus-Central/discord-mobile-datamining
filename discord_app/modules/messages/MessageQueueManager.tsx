@@ -1,6 +1,3 @@
-// === Module 16272: handleLogout ===
-
-// Module 16272 (handleLogout)
 import "initialize";
 
 class MessageQueueManager extends tmp2 {

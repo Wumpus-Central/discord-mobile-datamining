@@ -1,6 +1,3 @@
-// === Module 8521: GameProfileStoreLinksActionSheet ===
-
-// Module 8521 (GameProfileStoreLinksActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

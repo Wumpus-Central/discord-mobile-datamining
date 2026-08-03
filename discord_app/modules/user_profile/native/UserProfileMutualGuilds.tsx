@@ -1,6 +1,3 @@
-// === Module 11996: UserProfileMutualGuilds ===
-
-// Module 11996 (UserProfileMutualGuilds)
 import "noop";
 import { View } from "set";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";

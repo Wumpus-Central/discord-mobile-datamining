@@ -1,6 +1,3 @@
-// === Module 10879: ? ===
-
-// Module 10879
 import _slicedToArray from "_slicedToArray";
 import { View } from "get ActivityIndicator";
 import getParticipants from "getParticipants";

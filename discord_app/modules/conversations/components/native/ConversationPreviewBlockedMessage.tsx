@@ -1,6 +1,3 @@
-// === Module 9298: ConversationPreviewBlockedMessage ===
-
-// Module 9298 (ConversationPreviewBlockedMessage)
 import "noop";
 import jsxProd from "jsxProd";
 

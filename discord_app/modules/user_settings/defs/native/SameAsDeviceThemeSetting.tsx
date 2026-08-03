@@ -1,6 +1,3 @@
-// === Module 14338: toggle ===
-
-// Module 14338 (toggle)
 import handleThemeChange from "handleThemeChange";
 import createToggle from "createToggle";
 

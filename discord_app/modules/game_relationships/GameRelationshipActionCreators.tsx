@@ -1,6 +1,3 @@
-// === Module 9066: showRequestFailedAlert ===
-
-// Module 9066 (showRequestFailedAlert)
 import sendRequest from "sendRequest";
 import ME from "ME";
 

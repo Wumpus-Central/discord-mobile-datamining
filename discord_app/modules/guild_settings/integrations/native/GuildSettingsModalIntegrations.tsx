@@ -1,6 +1,3 @@
-// === Module 16417: PlatformTypes ===
-
-// Module 16417 (PlatformTypes)
 import "ChannelsFollowedIcon";
 import { Image } from "getSystemLocale";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

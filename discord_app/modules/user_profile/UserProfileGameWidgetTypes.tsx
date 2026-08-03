@@ -1,6 +1,3 @@
-// === Module 5901: items ===
-
-// Module 5901 (items)
 const items = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES];
 let BaseGameWidget;
 class BaseGameWidget {

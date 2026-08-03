@@ -1,6 +1,3 @@
-// === Module 1297: Button ===
-
-// Module 1297 (Button)
 const result = require("set").fileFinishedImporting("design/void/native.tsx");
 
 export const Button = require("getTextStyles");

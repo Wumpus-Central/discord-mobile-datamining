@@ -1,6 +1,3 @@
-// === Module 10270: _setUserStatus ===
-
-// Module 10270 (_setUserStatus)
 import getSystemLocale from "getSystemLocale";
 import initialize from "initialize";
 import filterPlayingActivities from "filterPlayingActivities";

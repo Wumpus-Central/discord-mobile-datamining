@@ -1,6 +1,3 @@
-// === Module 7716: TextElement ===
-
-// Module 7716 (TextElement)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

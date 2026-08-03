@@ -1,6 +1,3 @@
-// === Module 12844: NUFChannelsActionSheet ===
-
-// Module 12844 (NUFChannelsActionSheet)
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";

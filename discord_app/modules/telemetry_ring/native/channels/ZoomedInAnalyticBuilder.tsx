@@ -1,6 +1,3 @@
-// === Module 13272: buildZoomedInAnalyticsEvent ===
-
-// Module 13272 (buildZoomedInAnalyticsEvent)
 import { AnalyticEvents } from "ME";
 
 let closure_3 = { Gateway: "gateway", RtcControl: "rtc_control", RemoteAuth: "remote_auth", Spotify: "spotify", Rpc: "rpc", GameServerPing: "game_server_ping" };

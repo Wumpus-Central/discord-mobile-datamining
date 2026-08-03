@@ -1,6 +1,3 @@
-// === Module 8255: LocationIcon ===
-
-// Module 8255 (LocationIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

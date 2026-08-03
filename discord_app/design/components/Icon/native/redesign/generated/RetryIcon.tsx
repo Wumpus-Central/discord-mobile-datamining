@@ -1,6 +1,3 @@
-// === Module 9984: RetryIcon ===
-
-// Module 9984 (RetryIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

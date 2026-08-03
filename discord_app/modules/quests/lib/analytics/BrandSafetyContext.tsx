@@ -1,6 +1,3 @@
-// === Module 8457: getBrandSafetyContext ===
-
-// Module 8457 (getBrandSafetyContext)
 import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 14780: handleNewUserOnboarding ===
-
-// Module 14780 (handleNewUserOnboarding)
 import module_13831 from "module_13831";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import Themes from "Themes";

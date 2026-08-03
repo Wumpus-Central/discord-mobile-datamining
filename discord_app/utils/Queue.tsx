@@ -1,6 +1,3 @@
-// === Module 6150: enqueue ===
-
-// Module 6150 (enqueue)
 const tmp2 = new require("timestamp")("Queue");
 const result = require("set").fileFinishedImporting("utils/Queue.tsx");
 class Queue {

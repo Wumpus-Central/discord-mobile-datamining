@@ -1,6 +1,3 @@
-// === Module 16276: _initialize ===
-
-// Module 16276 (_initialize)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initialize from "initialize";
 import "initialize";

@@ -1,6 +1,3 @@
-// === Module 9109: UserCircleIcon ===
-
-// Module 9109 (UserCircleIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

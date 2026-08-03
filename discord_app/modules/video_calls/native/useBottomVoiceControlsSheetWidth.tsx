@@ -1,6 +1,3 @@
-// === Module 10543: useBottomVoiceControlsSheetWidth ===
-
-// Module 10543 (useBottomVoiceControlsSheetWidth)
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
 
 let c3;

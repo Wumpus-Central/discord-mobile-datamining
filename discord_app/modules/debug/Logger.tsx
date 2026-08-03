@@ -1,6 +1,3 @@
-// === Module 3: timestamp ===
-
-// Module 3 (timestamp)
 import log from "log";
 
 let timestamp = Date.now();

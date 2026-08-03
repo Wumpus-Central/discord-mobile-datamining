@@ -1,6 +1,3 @@
-// === Module 4728: getClipCreatedAt ===
-
-// Module 4728 (getClipCreatedAt)
 import _slicedToArray from "_slicedToArray";
 import result from "result";
 import { AnalyticEvents } from "ME";

@@ -1,6 +1,3 @@
-// === Module 10087: GuildDirectoryAddAlert ===
-
-// Module 10087 (GuildDirectoryAddAlert)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

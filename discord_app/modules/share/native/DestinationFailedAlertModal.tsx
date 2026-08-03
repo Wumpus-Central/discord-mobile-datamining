@@ -1,6 +1,3 @@
-// === Module 9943: FailedGroupDMRow ===
-
-// Module 9943 (FailedGroupDMRow)
 import "getAlertModalItemKey";
 import { View } from "GuildIconWithChannelTypeSizes";
 import ensureGuildLoaded from "ensureGuildLoaded";

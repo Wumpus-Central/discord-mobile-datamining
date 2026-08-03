@@ -1,6 +1,3 @@
-// === Module 4740: requestAuthorization ===
-
-// Module 4740 (requestAuthorization)
 import setPermission from "setPermission";
 import initialize from "initialize";
 import NativePermissionStatus from "NativePermissionStatus";

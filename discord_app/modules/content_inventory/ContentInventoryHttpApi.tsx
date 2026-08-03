@@ -1,6 +1,3 @@
-// === Module 16674: _getMyContentInventory ===
-
-// Module 16674 (_getMyContentInventory)
 import dispatcher from "dispatcher";
 import { ContentInventoryFeedKey } from "ContentInventoryFeedKey";
 import { Endpoints } from "ME";

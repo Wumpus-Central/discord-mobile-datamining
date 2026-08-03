@@ -1,6 +1,3 @@
-// === Module 4423: useDisplayNameStyles ===
-
-// Module 4423 (useDisplayNameStyles)
 import { useContext } from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";

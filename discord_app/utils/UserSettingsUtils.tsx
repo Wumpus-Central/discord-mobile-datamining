@@ -1,6 +1,3 @@
-// === Module 6509: getSanitizedRestrictedGuilds ===
-
-// Module 6509 (getSanitizedRestrictedGuilds)
 import handleConnectionOpen from "handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";

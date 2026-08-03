@@ -1,6 +1,3 @@
-// === Module 7911: set ===
-
-// Module 7911 (set)
 import set from "set";
 
 let set = new Set(require("module_7912"));

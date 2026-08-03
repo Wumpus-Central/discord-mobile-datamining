@@ -1,6 +1,3 @@
-// === Module 13803: items ===
-
-// Module 13803 (items)
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
 import { View } from "initialize";

@@ -1,6 +1,3 @@
-// === Module 4107: getHash ===
-
-// Module 4107 (getHash)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import "clearAll";

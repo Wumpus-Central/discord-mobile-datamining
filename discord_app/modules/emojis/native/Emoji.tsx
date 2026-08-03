@@ -1,6 +1,3 @@
-// === Module 5210: Emoji ===
-
-// Module 5210 (Emoji)
 import "noop";
 import { View } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";

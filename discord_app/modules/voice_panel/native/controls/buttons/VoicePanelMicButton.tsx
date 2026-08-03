@@ -1,6 +1,3 @@
-// === Module 16026: PTTButton ===
-
-// Module 16026 (PTTButton)
 import _slicedToArray from "_slicedToArray";
 import useControlsLock from "useControlsLock";
 import set from "set";

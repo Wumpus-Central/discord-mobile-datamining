@@ -1,6 +1,3 @@
-// === Module 6788: ModalScreen ===
-
-// Module 6788 (ModalScreen)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

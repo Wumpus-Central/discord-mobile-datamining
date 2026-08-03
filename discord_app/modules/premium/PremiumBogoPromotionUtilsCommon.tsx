@@ -1,6 +1,3 @@
-// === Module 12517: isUserEligibleBasedOnCurrentOrPreviousSubs ===
-
-// Module 12517 (isUserEligibleBasedOnCurrentOrPreviousSubs)
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";

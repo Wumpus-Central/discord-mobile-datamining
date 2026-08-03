@@ -1,6 +1,3 @@
-// === Module 15255: handleJoinGuild ===
-
-// Module 15255 (handleJoinGuild)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "encodeProperties";
 import get_ActivityIndicator from "defaultAreStatesEqual";

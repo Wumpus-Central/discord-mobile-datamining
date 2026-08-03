@@ -1,6 +1,3 @@
-// === Module 8086: useMaybeFetchProfileFrame ===
-
-// Module 8086 (useMaybeFetchProfileFrame)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 12302: getAssetURL ===
-
-// Module 12302 (getAssetURL)
 let result = require("fetchCustomActivityLink").fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
   constructor(arg0) {

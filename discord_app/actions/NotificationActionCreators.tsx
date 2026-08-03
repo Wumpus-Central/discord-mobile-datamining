@@ -1,6 +1,3 @@
-// === Module 14496: ? ===
-
-// Module 14496
 import ME from "ME";
 
 let c3;

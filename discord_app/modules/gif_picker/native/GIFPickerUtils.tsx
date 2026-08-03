@@ -1,6 +1,3 @@
-// === Module 9612: transformFavoriteGifUrl ===
-
-// Module 9612 (transformFavoriteGifUrl)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 7977: __INTERNAL_VIEW_CONFIG ===
-
-// Module 7977 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "ClipView", validAttributes: { cutouts: true } };

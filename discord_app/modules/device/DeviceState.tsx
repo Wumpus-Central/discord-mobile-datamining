@@ -1,6 +1,3 @@
-// === Module 6039: DeviceState ===
-
-// Module 6039 (DeviceState)
 const result = require("ThermalState").fileFinishedImporting("modules/device/DeviceState.tsx");
 
 export const DeviceState = require("ThermalState").DeviceState;

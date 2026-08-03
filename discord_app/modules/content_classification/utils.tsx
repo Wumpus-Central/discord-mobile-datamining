@@ -1,6 +1,3 @@
-// === Module 5912: isAgeRestrictedContentClassification ===
-
-// Module 5912 (isAgeRestrictedContentClassification)
 let result = require("set").fileFinishedImporting("modules/content_classification/utils.tsx");
 
 export const isAgeRestrictedContentClassification = function isAgeRestrictedContentClassification(contentClassification) {

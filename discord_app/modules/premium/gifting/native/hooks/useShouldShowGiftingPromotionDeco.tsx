@@ -1,6 +1,3 @@
-// === Module 9724: useShouldShowGiftingPromotionDeco ===
-
-// Module 9724 (useShouldShowGiftingPromotionDeco)
 import { PremiumTypes } from "GuildFeatures";
 
 const result = require("set").fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");

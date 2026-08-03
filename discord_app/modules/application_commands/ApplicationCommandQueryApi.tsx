@@ -1,6 +1,3 @@
-// === Module 8028: findCommandInSection ===
-
-// Module 8028 (findCommandInSection)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 11419: renderChatInputActionButtonGiftAndThread ===
-
-// Module 11419 (renderChatInputActionButtonGiftAndThread)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { ChatInputActionType } from "TextAreaCta";

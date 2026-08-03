@@ -1,6 +1,3 @@
-// === Module 12296: EmptyDisplay ===
-
-// Module 12296 (EmptyDisplay)
 import importAllResult from "nameFromUser";
 import { View } from "Button";
 import sortActivity from "sortActivity";

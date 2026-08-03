@@ -1,6 +1,3 @@
-// === Module 6576: useStoreFrontPrice ===
-
-// Module 6576 (useStoreFrontPrice)
 import noop from "noop";
 import { PriceSetAssignmentPurchaseTypes as closure_3 } from "ME";
 

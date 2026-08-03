@@ -1,6 +1,3 @@
-// === Module 10636: ? ===
-
-// Module 10636
 import importDefaultResult from "map";
 
 importDefaultResult = new importDefaultResult(require("validateSocketClient").validateSocketClient, new require("validateSocketClient")("RPCServer:PostMessage"), require("logger"), (arg0, info, id) => {

@@ -1,6 +1,3 @@
-// === Module 16509: InvitesDisabledRow ===
-
-// Module 16509 (InvitesDisabledRow)
 import _slicedToArray from "_slicedToArray";
 import apply from "apply";
 import get_ActivityIndicator from "useInvitesDisabledPermission";

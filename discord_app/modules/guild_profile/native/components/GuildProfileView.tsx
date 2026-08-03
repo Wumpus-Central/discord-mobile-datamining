@@ -1,6 +1,3 @@
-// === Module 8466: GuildProfileBackground ===
-
-// Module 8466 (GuildProfileBackground)
 import Text from "Text";
 import get_ActivityIndicator from "LinearGradient";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

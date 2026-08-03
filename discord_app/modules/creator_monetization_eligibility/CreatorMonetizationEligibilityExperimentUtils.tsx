@@ -1,6 +1,3 @@
-// === Module 12642: set ===
-
-// Module 12642 (set)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
 import { GuildFeatures } from "ME";

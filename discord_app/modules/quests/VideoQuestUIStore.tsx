@@ -1,6 +1,3 @@
-// === Module 5991: _toPropertyKey ===
-
-// Module 5991 (_toPropertyKey)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import identity from "identity";
 import createJSONStorage from "createJSONStorage";

@@ -1,6 +1,3 @@
-// === Module 4639: handleSoundCreateOrUpdate ===
-
-// Module 4639 (handleSoundCreateOrUpdate)
 import _slicedToArray from "_slicedToArray";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";

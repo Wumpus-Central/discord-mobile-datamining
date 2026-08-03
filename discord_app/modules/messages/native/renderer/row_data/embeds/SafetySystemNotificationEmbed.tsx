@@ -1,6 +1,3 @@
-// === Module 12410: createSafetySystemNotificationEmbed ===
-
-// Module 12410 (createSafetySystemNotificationEmbed)
 import { Image } from "get ActivityIndicator";
 import { MessageEmbedTypes } from "ME";
 

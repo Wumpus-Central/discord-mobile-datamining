@@ -1,6 +1,3 @@
-// === Module 11986: ClearAfterValues ===
-
-// Module 11986 (ClearAfterValues)
 import { ClearAfterValues } from "StatusTypes";
 
 const items = [, , ];

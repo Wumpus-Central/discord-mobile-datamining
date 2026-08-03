@@ -1,6 +1,3 @@
-// === Module 1859: set ===
-
-// Module 1859 (set)
 import set from "set";
 
 const re0 = /input/i;

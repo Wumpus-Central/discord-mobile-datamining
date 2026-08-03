@@ -1,6 +1,3 @@
-// === Module 11530: addGameMention ===
-
-// Module 11530 (addGameMention)
 import _slicedToArray from "_slicedToArray";
 import { DraftType } from "handleChanged";
 import handleInit from "handleInit";

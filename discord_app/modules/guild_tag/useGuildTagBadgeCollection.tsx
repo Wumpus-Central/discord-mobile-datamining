@@ -1,6 +1,3 @@
-// === Module 16447: useGuildTagBadgeCollection ===
-
-// Module 16447 (useGuildTagBadgeCollection)
 import { useMemo } from "noop";
 import handleFormInit from "handleFormInit";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

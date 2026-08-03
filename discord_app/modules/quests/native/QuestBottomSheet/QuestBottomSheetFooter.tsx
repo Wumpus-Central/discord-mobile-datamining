@@ -1,6 +1,3 @@
-// === Module 14164: useQuestRewardClaimHandler ===
-
-// Module 14164 (useQuestRewardClaimHandler)
 import apexExperiment from "apexExperiment";
 import useWatchTaskPressHandler from "useWatchTaskPressHandler";
 import { View } from "tinycolor";

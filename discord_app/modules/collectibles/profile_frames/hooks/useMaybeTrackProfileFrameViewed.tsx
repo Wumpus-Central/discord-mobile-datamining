@@ -1,6 +1,3 @@
-// === Module 8370: useMaybeTrackProfileFrameViewed ===
-
-// Module 8370 (useMaybeTrackProfileFrameViewed)
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 

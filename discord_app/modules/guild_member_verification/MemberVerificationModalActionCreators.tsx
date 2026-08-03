@@ -1,6 +1,3 @@
-// === Module 9150: openMemberVerificationModal ===
-
-// Module 9150 (openMemberVerificationModal)
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/MemberVerificationModalActionCreators.tsx");
 
 export { default as default } from "module_9151";

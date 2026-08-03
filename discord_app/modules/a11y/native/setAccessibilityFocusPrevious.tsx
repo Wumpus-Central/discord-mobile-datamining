@@ -1,6 +1,3 @@
-// === Module 4535: setAccessibilityFocusPrevious ===
-
-// Module 4535 (setAccessibilityFocusPrevious)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("modules/a11y/native/setAccessibilityFocusPrevious.tsx");

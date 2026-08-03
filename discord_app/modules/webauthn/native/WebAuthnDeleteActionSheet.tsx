@@ -1,6 +1,3 @@
-// === Module 13783: WebAuthnDeleteActionSheet ===
-
-// Module 13783 (WebAuthnDeleteActionSheet)
 import "set";
 import get_ActivityIndicator from "registerAsset";
 import jsxProd from "jsxProd";

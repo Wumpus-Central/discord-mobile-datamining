@@ -1,6 +1,3 @@
-// === Module 591: initialize ===
-
-// Module 591 (initialize)
 let closure_4 = [];
 let c5 = false;
 const promise = new Promise((arg0) => {

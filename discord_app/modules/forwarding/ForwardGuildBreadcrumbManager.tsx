@@ -1,6 +1,3 @@
-// === Module 16687: fetchForwardReferencedGuilds ===
-
-// Module 16687 (fetchForwardReferencedGuilds)
 import { MessageReferenceTypes } from "ME";
 import "initialize";
 

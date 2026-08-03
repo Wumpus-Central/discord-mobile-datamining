@@ -1,6 +1,3 @@
-// === Module 13619: _initialize ===
-
-// Module 13619 (_initialize)
 import getUserAgnosticState from "getUserAgnosticState";
 import "initialize";
 

@@ -1,6 +1,3 @@
-// === Module 11864: DiscoverabilityLandingScene ===
-
-// Module 11864 (DiscoverabilityLandingScene)
 import set from "set";
 import { View } from "NavigationStack";
 import { useContactSyncModalStore } from "ContactSyncModes";

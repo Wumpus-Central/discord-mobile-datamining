@@ -1,6 +1,3 @@
-// === Module 11044: openDisableCommunication ===
-
-// Module 11044 (openDisableCommunication)
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";

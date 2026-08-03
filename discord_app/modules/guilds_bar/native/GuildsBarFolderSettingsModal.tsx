@@ -1,6 +1,3 @@
-// === Module 14963: GuildFolderSettingsScene ===
-
-// Module 14963 (GuildFolderSettingsScene)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import insertUnsortedGuilds from "insertUnsortedGuilds";

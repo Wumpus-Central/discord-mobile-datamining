@@ -1,6 +1,3 @@
-// === Module 8277: useGuildEligibleForMediaChannels ===
-
-// Module 8277 (useGuildEligibleForMediaChannels)
 import { GuildFeatures } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");

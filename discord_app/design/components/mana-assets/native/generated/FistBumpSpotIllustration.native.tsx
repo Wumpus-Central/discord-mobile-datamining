@@ -1,6 +1,3 @@
-// === Module 7043: FistBumpSpotIllustration ===
-
-// Module 7043 (FistBumpSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/FistBumpSpotIllustration.native.tsx");

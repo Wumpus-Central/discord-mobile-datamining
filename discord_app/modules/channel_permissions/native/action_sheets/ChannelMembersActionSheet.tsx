@@ -1,6 +1,3 @@
-// === Module 10933: ChannelMembersActionSheet ===
-
-// Module 10933 (ChannelMembersActionSheet)
 import "PressableBase";
 import { View } from "Background";
 import ensureGuildLoaded from "ensureGuildLoaded";

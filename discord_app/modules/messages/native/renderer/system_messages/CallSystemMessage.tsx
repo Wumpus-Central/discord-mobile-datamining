@@ -1,6 +1,3 @@
-// === Module 7765: createCallSystemMessage ===
-
-// Module 7765 (createCallSystemMessage)
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";

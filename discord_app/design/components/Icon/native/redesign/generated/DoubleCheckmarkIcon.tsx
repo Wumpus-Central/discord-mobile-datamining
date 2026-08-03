@@ -1,6 +1,3 @@
-// === Module 14734: DoubleCheckmarkIcon ===
-
-// Module 14734 (DoubleCheckmarkIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

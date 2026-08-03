@@ -1,6 +1,3 @@
-// === Module 9763: useWishlistRecommendationsWithWishlists ===
-
-// Module 9763 (useWishlistRecommendationsWithWishlists)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

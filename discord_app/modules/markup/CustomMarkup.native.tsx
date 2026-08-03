@@ -1,6 +1,3 @@
-// === Module 4623: createRules ===
-
-// Module 4623 (createRules)
 function createRules(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {

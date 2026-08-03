@@ -1,6 +1,3 @@
-// === Module 5927: isSystemMessage ===
-
-// Module 5927 (isSystemMessage)
 const result = require("set").fileFinishedImporting("modules/messages/isSystemMessage.tsx");
 
 export default function isSystemMessage(type) {

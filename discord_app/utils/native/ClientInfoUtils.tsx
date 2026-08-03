@@ -1,6 +1,3 @@
-// === Module 1578: getConstants ===
-
-// Module 1578 (getConstants)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("utils/native/ClientInfoUtils.tsx");

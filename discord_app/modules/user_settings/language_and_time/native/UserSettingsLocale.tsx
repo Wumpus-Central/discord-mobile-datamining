@@ -1,6 +1,3 @@
-// === Module 14402: handleLanguageChange ===
-
-// Module 14402 (handleLanguageChange)
 import jsxProd from "jsxProd";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { setAppLocale } from "_setAppLocale";

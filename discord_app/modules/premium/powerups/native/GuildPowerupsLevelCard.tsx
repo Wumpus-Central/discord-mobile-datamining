@@ -1,6 +1,3 @@
-// === Module 11670: GuildLevelPowerupHeader ===
-
-// Module 11670 (GuildLevelPowerupHeader)
 import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive";
 import { View } from "useGuildPowerupOnShowMore";
 import BoostedGuildTiers from "BoostedGuildTiers";

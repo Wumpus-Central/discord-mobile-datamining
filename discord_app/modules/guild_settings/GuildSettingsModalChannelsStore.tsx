@@ -1,6 +1,3 @@
-// === Module 16375: sortCategoryList ===
-
-// Module 16375 (sortCategoryList)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import createChannelRecord from "createChannelRecord";
 import comparator from "comparator";

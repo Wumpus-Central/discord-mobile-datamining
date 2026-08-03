@@ -1,6 +1,3 @@
-// === Module 8498: useInAppBrowserReturn ===
-
-// Module 8498 (useInAppBrowserReturn)
 import noop from "noop";
 import getSimilarGames from "getSimilarGames";
 

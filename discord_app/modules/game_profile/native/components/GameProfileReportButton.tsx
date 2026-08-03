@@ -1,6 +1,3 @@
-// === Module 11956: GameProfileReportButton ===
-
-// Module 11956 (GameProfileReportButton)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

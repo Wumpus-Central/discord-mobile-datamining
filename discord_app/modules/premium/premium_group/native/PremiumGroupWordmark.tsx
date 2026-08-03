@@ -1,6 +1,3 @@
-// === Module 9336: PremiumGroupWordmark ===
-
-// Module 9336 (PremiumGroupWordmark)
 import "noop";
 import { jsx } from "jsxProd";
 

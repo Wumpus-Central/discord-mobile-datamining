@@ -1,6 +1,3 @@
-// === Module 12803: reset ===
-
-// Module 12803 (reset)
 import { Store } from "initialize";
 import set from "set";
 

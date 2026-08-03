@@ -1,6 +1,3 @@
-// === Module 10084: GuildDirectoryCreateOrAddDescription ===
-
-// Module 10084 (GuildDirectoryCreateOrAddDescription)
 import _createGuildFromTemplate from "_createGuildFromTemplate";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

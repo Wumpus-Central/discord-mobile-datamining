@@ -1,6 +1,3 @@
-// === Module 15351: ContentSettingsControl ===
-
-// Module 15351 (ContentSettingsControl)
 import _slicedToArray from "_slicedToArray";
 import TableSwitchRow from "TableSwitchRow";
 import { View } from "module_15355";

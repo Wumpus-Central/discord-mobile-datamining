@@ -1,6 +1,3 @@
-// === Module 16718: StreamFullAlert ===
-
-// Module 16718 (StreamFullAlert)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

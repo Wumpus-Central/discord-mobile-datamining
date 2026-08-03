@@ -1,6 +1,3 @@
-// === Module 7947: useAvatarsWithGuilds ===
-
-// Module 7947 (useAvatarsWithGuilds)
 import noop from "noop";
 import handleFormOpen from "handleFormOpen";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

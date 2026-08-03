@@ -1,6 +1,3 @@
-// === Module 15438: GuildRoleSubscriptionPurchaseCard ===
-
-// Module 15438 (GuildRoleSubscriptionPurchaseCard)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";

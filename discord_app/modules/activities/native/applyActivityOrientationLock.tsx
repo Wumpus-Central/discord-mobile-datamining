@@ -1,6 +1,3 @@
-// === Module 15857: applyActivityOrientationLock ===
-
-// Module 15857 (applyActivityOrientationLock)
 import { OrientationLockState } from "items3";
 
 const result = require("handleOrientationChange").fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");

@@ -1,6 +1,3 @@
-// === Module 11606: usePerksCoachmarkDCF ===
-
-// Module 11606 (usePerksCoachmarkDCF)
 const result = require("GUILD_POWERUP_NOTIFICATION_COOLDOWN").fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
 
 export const usePerksCoachmarkDCF = function usePerksCoachmarkDCF(arg0) {

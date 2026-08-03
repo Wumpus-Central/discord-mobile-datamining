@@ -1,6 +1,3 @@
-// === Module 16261: enforcing ===
-
-// Module 16261 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeJSWatchdogModule");

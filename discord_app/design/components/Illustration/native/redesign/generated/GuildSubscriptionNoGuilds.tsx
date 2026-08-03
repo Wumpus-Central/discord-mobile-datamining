@@ -1,6 +1,3 @@
-// === Module 12583: getGuildSubscriptionNoGuildsSource ===
-
-// Module 12583 (getGuildSubscriptionNoGuildsSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

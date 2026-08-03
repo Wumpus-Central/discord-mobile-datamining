@@ -1,6 +1,3 @@
-// === Module 5052: getEmojiToGroupId ===
-
-// Module 5052 (getEmojiToGroupId)
 import dedupeEmojisByNameOrId from "dedupeEmojisByNameOrId";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import getHash from "getHash";

@@ -1,6 +1,3 @@
-// === Module 13683: BurgerIcon ===
-
-// Module 13683 (BurgerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

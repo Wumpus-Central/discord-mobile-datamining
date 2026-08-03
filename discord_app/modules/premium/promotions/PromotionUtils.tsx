@@ -1,6 +1,3 @@
-// === Module 6569: claimedOutboundPromotionCodeFromServer ===
-
-// Module 6569 (claimedOutboundPromotionCodeFromServer)
 import closure_3 from "ME";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createFromServer from "createFromServer";

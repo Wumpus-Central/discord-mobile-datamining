@@ -1,6 +1,3 @@
-// === Module 12550: componentDidMount ===
-
-// Module 12550 (componentDidMount)
 import importAllResult from "getSystemLocale";
 import get_ActivityIndicator from "getSanitizedRestrictedGuilds";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 10297: defaultReactFn ===
-
-// Module 10297 (defaultReactFn)
 import "set";
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 9198: ConfirmEmailChangeCode ===
-
-// Module 9198 (ConfirmEmailChangeCode)
 import keys from "keys";
 import noop from "noop";
 import { setEmailToken } from "ChangeEmailFields";

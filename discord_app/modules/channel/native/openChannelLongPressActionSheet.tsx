@@ -1,6 +1,3 @@
-// === Module 9104: openChannelLongPressActionSheet ===
-
-// Module 9104 (openChannelLongPressActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/channel/native/openChannelLongPressActionSheet.tsx");
 
 export const openChannelLongPressActionSheet = function openChannelLongPressActionSheet(id) {

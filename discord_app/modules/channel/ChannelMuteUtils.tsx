@@ -1,6 +1,3 @@
-// === Module 10321: getMuteSettings ===
-
-// Module 10321 (getMuteSettings)
 const result = require("set").fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
 
 export const getMuteSettings = function getMuteSettings(selected_time_window) {

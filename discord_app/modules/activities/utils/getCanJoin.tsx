@@ -1,6 +1,3 @@
-// === Module 10959: getCanJoin ===
-
-// Module 10959 (getCanJoin)
 import ME from "ME";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 5130: ack ===
-
-// Module 5130 (ack)
 import rebuild from "rebuild";
 import { isReadableType } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

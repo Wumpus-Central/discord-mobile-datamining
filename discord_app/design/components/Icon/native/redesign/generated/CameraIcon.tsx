@@ -1,6 +1,3 @@
-// === Module 9705: CameraIcon ===
-
-// Module 9705 (CameraIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

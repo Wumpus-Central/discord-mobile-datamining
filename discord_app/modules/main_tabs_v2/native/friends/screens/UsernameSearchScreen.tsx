@@ -1,6 +1,3 @@
-// === Module 15626: UsernameSearchScreen ===
-
-// Module 15626 (UsernameSearchScreen)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 15015: usePreloadedGuildAsset ===
-
-// Module 15015 (usePreloadedGuildAsset)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

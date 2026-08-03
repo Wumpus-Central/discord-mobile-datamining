@@ -1,6 +1,3 @@
-// === Module 14356: FetchStatus ===
-
-// Module 14356 (FetchStatus)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let obj = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };

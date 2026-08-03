@@ -1,6 +1,3 @@
-// === Module 9571: usePollMessageContextItemTypes ===
-
-// Module 9571 (usePollMessageContextItemTypes)
 import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;

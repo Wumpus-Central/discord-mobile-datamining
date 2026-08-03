@@ -1,6 +1,3 @@
-// === Module 11015: authorizeCallback ===
-
-// Module 11015 (authorizeCallback)
 import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
 
 let c3;

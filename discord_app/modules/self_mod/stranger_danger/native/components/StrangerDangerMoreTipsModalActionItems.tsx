@@ -1,6 +1,3 @@
-// === Module 10465: StrangerDangerMoreTipsModalActionItems ===
-
-// Module 10465 (StrangerDangerMoreTipsModalActionItems)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import upsertRelationship from "upsertRelationship";

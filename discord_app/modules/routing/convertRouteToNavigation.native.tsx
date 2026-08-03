@@ -1,6 +1,3 @@
-// === Module 10891: convertRouteToNavigation ===
-
-// Module 10891 (convertRouteToNavigation)
 import { Routes } from "ME";
 
 let result = require("navigationToRootTabHelper").fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");

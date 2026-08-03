@@ -1,6 +1,3 @@
-// === Module 15674: ViewModerators ===
-
-// Module 15674 (ViewModerators)
 import ME from "ME";
 import "getSystemLocale";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

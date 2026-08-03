@@ -1,6 +1,3 @@
-// === Module 9204: OneTimeLoginForgotPasswordConfirmAlertModal ===
-
-// Module 9204 (OneTimeLoginForgotPasswordConfirmAlertModal)
 import "noop";
 import { jsx } from "jsxProd";
 

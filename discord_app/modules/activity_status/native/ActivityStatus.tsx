@@ -1,6 +1,3 @@
-// === Module 9071: ActivityStatus ===
-
-// Module 9071 (ActivityStatus)
 import set from "set";
 import { View } from "ActivityEmoji";
 import sortActivity from "sortActivity";

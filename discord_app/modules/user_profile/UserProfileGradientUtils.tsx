@@ -1,6 +1,3 @@
-// === Module 7993: getProfileTheme ===
-
-// Module 7993 (getProfileTheme)
 import _slicedToArray from "_slicedToArray";
 import { ThemeTypes } from "ME";
 import apply from "apply";

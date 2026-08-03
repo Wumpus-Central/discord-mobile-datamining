@@ -1,6 +1,3 @@
-// === Module 4013: MAX_RESULTS_PER_PAGE ===
-
-// Module 4013 (MAX_RESULTS_PER_PAGE)
 const obj = { TERMS: "TERMS", TEXT_INPUT: "TEXT_INPUT", PARAGRAPH: "PARAGRAPH", MULTIPLE_CHOICE: "MULTIPLE_CHOICE", VERIFICATION: "VERIFICATION" };
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
 

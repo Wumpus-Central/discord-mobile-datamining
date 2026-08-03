@@ -1,6 +1,3 @@
-// === Module 16405: ListBulletsIcon ===
-
-// Module 16405 (ListBulletsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

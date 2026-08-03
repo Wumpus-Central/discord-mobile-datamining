@@ -1,6 +1,3 @@
-// === Module 5783: handleReset ===
-
-// Module 5783 (handleReset)
 import participantFromServer from "participantFromServer";
 import isSubscriptionGated from "isSubscriptionGated";
 import scheduledEventSort from "scheduledEventSort";

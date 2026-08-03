@@ -1,6 +1,3 @@
-// === Module 5129: getFlattenedChannels ===
-
-// Module 5129 (getFlattenedChannels)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

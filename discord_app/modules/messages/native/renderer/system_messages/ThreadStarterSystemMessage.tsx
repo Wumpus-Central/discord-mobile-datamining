@@ -1,6 +1,3 @@
-// === Module 7799: createThreadStarterSystemMessage ===
-
-// Module 7799 (createThreadStarterSystemMessage)
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";
 import { MessageTypes } from "ME";

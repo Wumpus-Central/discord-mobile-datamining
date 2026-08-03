@@ -1,6 +1,3 @@
-// === Module 15551: useSearchMessagesLoadingState ===
-
-// Module 15551 (useSearchMessagesLoadingState)
 import handleReaction from "handleReaction";
 import prototype from "prototype";
 import { SEARCH_TABS_TO_SEARCH_QUERY_LIMITS as closure_4 } from "MessageEmbedTypes";

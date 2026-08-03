@@ -1,6 +1,3 @@
-// === Module 14887: useIdentityRegistrationStep ===
-
-// Module 14887 (useIdentityRegistrationStep)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

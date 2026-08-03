@@ -1,6 +1,3 @@
-// === Module 8775: GiftButton ===
-
-// Module 8775 (GiftButton)
 import Text from "Text";
 import useProductDisableState from "useProductDisableState";
 import { View } from "getSystemLocale";

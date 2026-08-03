@@ -1,6 +1,3 @@
-// === Module 10101: CreateGuild ===
-
-// Module 10101 (CreateGuild)
 import noop from "noop";
 import { ScrollView } from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";

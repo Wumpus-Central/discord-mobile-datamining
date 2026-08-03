@@ -1,6 +1,3 @@
-// === Module 11711: UserProfileStackedActionSheet ===
-
-// Module 11711 (UserProfileStackedActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

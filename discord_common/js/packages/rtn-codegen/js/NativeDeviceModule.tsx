@@ -1,6 +1,3 @@
-// === Module 671: enforcing ===
-
-// Module 671 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeDeviceModule");

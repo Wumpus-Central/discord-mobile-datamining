@@ -1,6 +1,3 @@
-// === Module 6730: TextInput ===
-
-// Module 6730 (TextInput)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

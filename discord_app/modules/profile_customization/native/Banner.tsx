@@ -1,6 +1,3 @@
-// === Module 8106: ProfileBanner ===
-
-// Module 8106 (ProfileBanner)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { BANNER_HEIGHT } from "ME";

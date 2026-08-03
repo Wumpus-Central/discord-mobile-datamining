@@ -1,6 +1,3 @@
-// === Module 4653: match ===
-
-// Module 4653 (match)
 import { Image } from "get ActivityIndicator";
 
 const re4 = /^[\u200B-\u200D\uFEFF\u180E\u061C]/;

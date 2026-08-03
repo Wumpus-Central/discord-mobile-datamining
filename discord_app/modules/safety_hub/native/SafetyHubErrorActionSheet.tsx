@@ -1,6 +1,3 @@
-// === Module 13802: SafetyHubErrorActionSheet ===
-
-// Module 13802 (SafetyHubErrorActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

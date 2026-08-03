@@ -1,6 +1,3 @@
-// === Module 8686: fromServer ===
-
-// Module 8686 (fromServer)
 import "toJS";
 import createFromServer from "createFromServer";
 

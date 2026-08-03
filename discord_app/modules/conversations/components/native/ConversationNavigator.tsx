@@ -1,6 +1,3 @@
-// === Module 9292: HeaderWithBorder ===
-
-// Module 9292 (HeaderWithBorder)
 import "noop";
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";

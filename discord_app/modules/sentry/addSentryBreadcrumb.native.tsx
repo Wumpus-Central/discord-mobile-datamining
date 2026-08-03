@@ -1,6 +1,3 @@
-// === Module 809: addSentryBreadcrumb ===
-
-// Module 809 (addSentryBreadcrumb)
 const result = require("set").fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
 
 export default function addSentryBreadcrumb(category) {

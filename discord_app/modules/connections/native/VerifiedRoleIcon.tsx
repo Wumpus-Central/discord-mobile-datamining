@@ -1,6 +1,3 @@
-// === Module 5563: VerifiedRoleIcon ===
-
-// Module 5563 (VerifiedRoleIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

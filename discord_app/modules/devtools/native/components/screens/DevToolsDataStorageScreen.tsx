@@ -1,6 +1,3 @@
-// === Module 13695: DevToolsPersistedStoresActionSheet ===
-
-// Module 13695 (DevToolsPersistedStoresActionSheet)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "styles";

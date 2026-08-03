@@ -1,6 +1,3 @@
-// === Module 10697: styles ===
-
-// Module 10697 (styles)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ThemeTypes } from "sum";

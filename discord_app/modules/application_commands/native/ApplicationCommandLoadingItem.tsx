@@ -1,6 +1,3 @@
-// === Module 11510: ApplicationCommandLoadingItem ===
-
-// Module 11510 (ApplicationCommandLoadingItem)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT";

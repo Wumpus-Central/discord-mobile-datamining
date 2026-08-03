@@ -1,6 +1,3 @@
-// === Module 7751: createCommonMessage ===
-
-// Module 7751 (createCommonMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";

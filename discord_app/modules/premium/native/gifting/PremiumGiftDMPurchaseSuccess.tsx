@@ -1,6 +1,3 @@
-// === Module 9802: PremiumGiftDMSuccessBody ===
-
-// Module 9802 (PremiumGiftDMSuccessBody)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

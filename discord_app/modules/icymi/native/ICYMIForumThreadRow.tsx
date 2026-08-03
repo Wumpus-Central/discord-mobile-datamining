@@ -1,6 +1,3 @@
-// === Module 15411: ICYMIForumThreadRow ===
-
-// Module 15411 (ICYMIForumThreadRow)
 import getDefaultRules from "get defaultRules";
 import { View } from "PressableBase";
 import ensureGuildLoaded from "ensureGuildLoaded";

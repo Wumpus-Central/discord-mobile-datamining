@@ -1,6 +1,3 @@
-// === Module 10397: MessageNotificationDetachedContent ===
-
-// Module 10397 (MessageNotificationDetachedContent)
 import noop from "noop";
 import { Keyboard } from "get ActivityIndicator";
 import { DEFAULT_ANIMATION_TIMING } from "set";

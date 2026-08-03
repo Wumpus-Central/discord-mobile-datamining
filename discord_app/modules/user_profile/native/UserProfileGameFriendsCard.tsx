@@ -1,6 +1,3 @@
-// === Module 12198: UserProfileGameFriendsCard ===
-
-// Module 12198 (UserProfileGameFriendsCard)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

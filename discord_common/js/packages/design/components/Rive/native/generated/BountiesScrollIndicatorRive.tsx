@@ -1,6 +1,3 @@
-// === Module 3976: BountiesScrollIndicatorRive ===
-
-// Module 3976 (BountiesScrollIndicatorRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

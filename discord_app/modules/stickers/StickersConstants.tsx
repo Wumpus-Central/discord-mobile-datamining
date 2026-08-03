@@ -1,6 +1,3 @@
-// === Module 3869: STICKER_PICKER_TAB_PANEL_ID ===
-
-// Module 3869 (STICKER_PICKER_TAB_PANEL_ID)
 const result = require("set").fileFinishedImporting("modules/stickers/StickersConstants.tsx");
 
 export const STICKER_PICKER_TAB_PANEL_ID = "sticker-picker-tab-panel";

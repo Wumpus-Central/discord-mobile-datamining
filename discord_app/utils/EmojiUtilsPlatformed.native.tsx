@@ -1,6 +1,3 @@
-// === Module 6098: getURL ===
-
-// Module 6098 (getURL)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 15742: MessageRequestsScreen ===
-
-// Module 15742 (MessageRequestsScreen)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

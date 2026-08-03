@@ -1,6 +1,3 @@
-// === Module 14442: UserSettingsText ===
-
-// Module 14442 (UserSettingsText)
 import "registerAsset";
 import { View } from "dispatcher";
 import mergeGuildAvatar from "mergeGuildAvatar";

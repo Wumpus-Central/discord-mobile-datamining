@@ -1,6 +1,3 @@
-// === Module 7409: PrivateProfileAbstractUI ===
-
-// Module 7409 (PrivateProfileAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PrivateProfileAbstractUI.native.tsx");

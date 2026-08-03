@@ -1,6 +1,3 @@
-// === Module 9634: useStickerCategories ===
-
-// Module 9634 (useStickerCategories)
 import noop from "noop";
 import { NativeModules } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

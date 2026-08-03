@@ -1,6 +1,3 @@
-// === Module 8966: convertOAuth2Authorization ===
-
-// Module 8966 (convertOAuth2Authorization)
 const result = require("set").fileFinishedImporting("modules/oauth2/convertor.tsx");
 
 export const convertOAuth2Authorization = function convertOAuth2Authorization(closure_0) {

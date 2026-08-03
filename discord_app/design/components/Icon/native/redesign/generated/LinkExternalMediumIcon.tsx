@@ -1,6 +1,3 @@
-// === Module 12433: LinkExternalMediumIcon ===
-
-// Module 12433 (LinkExternalMediumIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

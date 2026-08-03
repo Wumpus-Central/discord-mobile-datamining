@@ -1,6 +1,3 @@
-// === Module 16145: handlePostConnectionOpen ===
-
-// Module 16145 (handlePostConnectionOpen)
 import closure_3 from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

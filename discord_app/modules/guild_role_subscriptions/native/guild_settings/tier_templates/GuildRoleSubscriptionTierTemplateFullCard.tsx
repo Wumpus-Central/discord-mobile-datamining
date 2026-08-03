@@ -1,6 +1,3 @@
-// === Module 16647: SectionSeparator ===
-
-// Module 16647 (SectionSeparator)
 import "noop";
 import { View } from "set";
 import jsxProd from "jsxProd";

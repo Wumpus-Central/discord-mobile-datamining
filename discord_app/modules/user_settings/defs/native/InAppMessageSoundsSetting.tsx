@@ -1,6 +1,3 @@
-// === Module 14474: toggle ===
-
-// Module 14474 (toggle)
 import isInAppMessageSoundsEnabled from "isInAppMessageSoundsEnabled";
 import createToggle from "createToggle";
 

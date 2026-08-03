@@ -1,6 +1,3 @@
-// === Module 16357: _fetchGameCommunities ===
-
-// Module 16357 (_fetchGameCommunities)
 import initialize from "initialize";
 import set from "set";
 import "initialize";

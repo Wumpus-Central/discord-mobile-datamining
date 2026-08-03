@@ -1,6 +1,3 @@
-// === Module 7563: StudyGroupsSpotIllustration ===
-
-// Module 7563 (StudyGroupsSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/StudyGroupsSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 14394: toggle ===
-
-// Module 14394 (toggle)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
 

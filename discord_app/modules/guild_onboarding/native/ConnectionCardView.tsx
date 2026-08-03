@@ -1,6 +1,3 @@
-// === Module 5534: ConnectionCardView ===
-
-// Module 5534 (ConnectionCardView)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 14018: PlayStationTwoWayLinkUpsell ===
-
-// Module 14018 (PlayStationTwoWayLinkUpsell)
 import "noop";
 import ME from "ME";
 import { jsx } from "jsxProd";

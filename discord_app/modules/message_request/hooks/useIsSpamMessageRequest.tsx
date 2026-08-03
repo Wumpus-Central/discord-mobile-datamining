@@ -1,6 +1,3 @@
-// === Module 10446: useIsSpamMessageRequest ===
-
-// Module 10446 (useIsSpamMessageRequest)
 import processChannel from "processChannel";
 
 const require = arg1;

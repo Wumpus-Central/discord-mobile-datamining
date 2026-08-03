@@ -1,6 +1,3 @@
-// === Module 5684: startDiceRoll ===
-
-// Module 5684 (startDiceRoll)
 const result = require("set").fileFinishedImporting("modules/dice_roll/DiceRollActionCreators.tsx");
 
 export const startDiceRoll = function startDiceRoll(channelId, diceCount, diceSides) {

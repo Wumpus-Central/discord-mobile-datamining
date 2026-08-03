@@ -1,6 +1,3 @@
-// === Module 14049: FiltersHorizontalIcon ===
-
-// Module 14049 (FiltersHorizontalIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 13175: useFlashListAnimationDisabler ===
-
-// Module 13175 (useFlashListAnimationDisabler)
 import noop from "noop";
 
 const require = arg1;

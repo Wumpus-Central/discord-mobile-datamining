@@ -1,6 +1,3 @@
-// === Module 15293: goBack ===
-
-// Module 15293 (goBack)
 import importAllResult from "context";
 import { View } from "SavedMessageSortTypes";
 import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS";

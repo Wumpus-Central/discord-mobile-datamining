@@ -1,6 +1,3 @@
-// === Module 10023: OfficialConnectionIcon ===
-
-// Module 10023 (OfficialConnectionIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

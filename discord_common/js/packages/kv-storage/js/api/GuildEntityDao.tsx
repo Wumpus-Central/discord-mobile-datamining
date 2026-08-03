@@ -1,6 +1,3 @@
-// === Module 1920: prefix ===
-
-// Module 1920 (prefix)
 let GuildEntityDao;
 class GuildEntityDao {
   constructor(arg0, arg1, arg2) {

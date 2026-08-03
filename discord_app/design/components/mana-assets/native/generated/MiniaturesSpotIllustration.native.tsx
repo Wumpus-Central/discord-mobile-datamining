@@ -1,6 +1,3 @@
-// === Module 7279: MiniaturesSpotIllustration ===
-
-// Module 7279 (MiniaturesSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/MiniaturesSpotIllustration.native.tsx");

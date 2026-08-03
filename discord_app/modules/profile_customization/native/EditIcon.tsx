@@ -1,6 +1,3 @@
-// === Module 13730: EditIcon ===
-
-// Module 13730 (EditIcon)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

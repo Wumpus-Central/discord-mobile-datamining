@@ -1,6 +1,3 @@
-// === Module 4209: updateVoiceState ===
-
-// Module 4209 (updateVoiceState)
 import _slicedToArray from "_slicedToArray";
 import isVoiceMuted from "isVoiceMuted";
 import { ME } from "ME";

@@ -1,6 +1,3 @@
-// === Module 10334: getPushNotificationSelectOptions ===
-
-// Module 10334 (getPushNotificationSelectOptions)
 import { UserNotificationSettings } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
 

@@ -1,6 +1,3 @@
-// === Module 9686: handleLimitedPickerDialog ===
-
-// Module 9686 (handleLimitedPickerDialog)
 import map from "map";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import ensureGuildLoaded from "ensureGuildLoaded";

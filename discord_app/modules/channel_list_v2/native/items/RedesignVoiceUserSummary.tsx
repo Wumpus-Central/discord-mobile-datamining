@@ -1,6 +1,3 @@
-// === Module 15136: RedesignVoiceUserSummary ===
-
-// Module 15136 (RedesignVoiceUserSummary)
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";

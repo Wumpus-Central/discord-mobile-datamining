@@ -1,6 +1,3 @@
-// === Module 14009: EmptyStateCard ===
-
-// Module 14009 (EmptyStateCard)
 import useSafeAreaInsets from "useSafeAreaInsets";
 import { View } from "Text";
 import { AnalyticsLocations } from "ME";

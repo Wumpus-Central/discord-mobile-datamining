@@ -1,6 +1,3 @@
-// === Module 7748: getMessageAuthorWithProcessedColor ===
-
-// Module 7748 (getMessageAuthorWithProcessedColor)
 import { processColor } from "get ActivityIndicator";
 
 const result = require("processColorStrings").fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");

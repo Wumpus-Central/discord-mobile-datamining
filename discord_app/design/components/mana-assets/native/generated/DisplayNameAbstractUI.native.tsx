@@ -1,6 +1,3 @@
-// === Module 6999: DisplayNameAbstractUI ===
-
-// Module 6999 (DisplayNameAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameAbstractUI.native.tsx");

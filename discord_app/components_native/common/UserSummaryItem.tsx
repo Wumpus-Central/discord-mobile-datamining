@@ -1,6 +1,3 @@
-// === Module 10030: UserSummaryItem ===
-
-// Module 10030 (UserSummaryItem)
 import "noop";
 import { View } from "get ActivityIndicator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

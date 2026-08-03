@@ -1,6 +1,3 @@
-// === Module 14737: set ===
-
-// Module 14737 (set)
 import { PersistedStore } from "initialize";
 import set from "dispatcher";
 

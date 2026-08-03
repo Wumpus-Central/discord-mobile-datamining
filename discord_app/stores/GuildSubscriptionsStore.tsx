@@ -1,6 +1,3 @@
-// === Module 6058: handleConnectionOpenOrResumed ===
-
-// Module 6058 (handleConnectionOpenOrResumed)
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import initialize from "initialize";

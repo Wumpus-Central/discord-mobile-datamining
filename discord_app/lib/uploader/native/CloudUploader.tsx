@@ -1,6 +1,3 @@
-// === Module 6154: nativeEventEmitter ===
-
-// Module 6154 (nativeEventEmitter)
 import _fileSize from "_fileSize";
 import get_ActivityIndicator from "set";
 import ME from "ME";

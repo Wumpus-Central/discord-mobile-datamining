@@ -1,6 +1,3 @@
-// === Module 4251: isClipsEnabled ===
-
-// Module 4251 (isClipsEnabled)
 import _migrateDefaultStorage from "_migrateDefaultStorage";
 
 const require = arg1;

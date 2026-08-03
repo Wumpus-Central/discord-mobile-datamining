@@ -1,6 +1,3 @@
-// === Module 11122: FamilyCenterModalRequestConfirm ===
-
-// Module 11122 (FamilyCenterModalRequestConfirm)
 import closure_3 from "jsxProd";
 import messagesProxy from "messagesProxy";
 import get_ActivityIndicator from "getAvatarURL";

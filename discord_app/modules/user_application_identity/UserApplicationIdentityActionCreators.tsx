@@ -1,6 +1,3 @@
-// === Module 12178: fetchStore ===
-
-// Module 12178 (fetchStore)
 import module_1208 from "module_1208";
 import importDefaultResult from "map";
 import ME from "ME";

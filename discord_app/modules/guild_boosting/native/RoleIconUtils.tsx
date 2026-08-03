@@ -1,6 +1,3 @@
-// === Module 5543: useRoleIcon ===
-
-// Module 5543 (useRoleIcon)
 import noop from "noop";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

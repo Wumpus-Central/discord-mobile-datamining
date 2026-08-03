@@ -1,6 +1,3 @@
-// === Module 11035: _setGuildRaidAlerts ===
-
-// Module 11035 (_setGuildRaidAlerts)
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { DEFAULT_LOCKDOWN_DURATION } from "GUILD_REPORT_RAID_MOBILE_KEY";

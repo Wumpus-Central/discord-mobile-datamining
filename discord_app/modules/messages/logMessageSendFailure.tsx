@@ -1,6 +1,3 @@
-// === Module 6158: logMessageSendFailure ===
-
-// Module 6158 (logMessageSendFailure)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");

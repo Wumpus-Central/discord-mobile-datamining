@@ -1,6 +1,3 @@
-// === Module 4654: getChannelIcon ===
-
-// Module 4654 (getChannelIcon)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

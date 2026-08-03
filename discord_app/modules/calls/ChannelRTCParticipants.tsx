@@ -1,6 +1,3 @@
-// === Module 10525: sortKey ===
-
-// Module 10525 (sortKey)
 import participantFromServer from "participantFromServer";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";

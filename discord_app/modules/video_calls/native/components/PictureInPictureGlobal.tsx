@@ -1,6 +1,3 @@
-// === Module 15758: PictureInPictureGlobal ===
-
-// Module 15758 (PictureInPictureGlobal)
 import module_4054 from "module_4054";
 import importAllResult from "useShouldForcePipOrientation";
 import get_ActivityIndicator from "useIsActivityFocused";

@@ -1,6 +1,3 @@
-// === Module 14089: BountiesScrollEndCardContent ===
-
-// Module 14089 (BountiesScrollEndCardContent)
 import initialize from "initialize";
 import get_ActivityIndicator from "RetryIcon";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

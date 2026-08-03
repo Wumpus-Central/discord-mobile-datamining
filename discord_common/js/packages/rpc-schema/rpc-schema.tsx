@@ -1,6 +1,3 @@
-// === Module 13554: createRPCCommand ===
-
-// Module 13554 (createRPCCommand)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
 export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {

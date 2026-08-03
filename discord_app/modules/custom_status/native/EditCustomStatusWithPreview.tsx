@@ -1,6 +1,3 @@
-// === Module 11983: ClearInputButton ===
-
-// Module 11983 (ClearInputButton)
 import ActivityEmoji from "ActivityEmoji";
 import setCustomStatus from "setCustomStatus";
 import get_ActivityIndicator from "initialize";

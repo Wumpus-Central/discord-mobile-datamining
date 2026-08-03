@@ -1,6 +1,3 @@
-// === Module 16129: useCaptchaModalEffects ===
-
-// Module 16129 (useCaptchaModalEffects)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

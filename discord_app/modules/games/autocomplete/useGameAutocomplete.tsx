@@ -1,6 +1,3 @@
-// === Module 6173: fetchStore ===
-
-// Module 6173 (fetchStore)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import importDefaultResult from "set";

@@ -1,6 +1,3 @@
-// === Module 14355: addWant ===
-
-// Module 14355 (addWant)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _handleConnectionOpen from "_handleConnectionOpen";

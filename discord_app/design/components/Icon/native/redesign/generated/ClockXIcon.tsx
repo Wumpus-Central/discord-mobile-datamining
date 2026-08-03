@@ -1,6 +1,3 @@
-// === Module 9990: ClockXIcon ===
-
-// Module 9990 (ClockXIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

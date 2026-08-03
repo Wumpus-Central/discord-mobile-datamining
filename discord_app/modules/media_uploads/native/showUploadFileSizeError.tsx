@@ -1,6 +1,3 @@
-// === Module 6191: showUploadFileSizeError ===
-
-// Module 6191 (showUploadFileSizeError)
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

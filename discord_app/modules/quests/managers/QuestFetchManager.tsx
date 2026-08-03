@@ -1,6 +1,3 @@
-// === Module 16676: _fetch ===
-
-// Module 16676 (_fetch)
 import initializeState from "initializeState";
 import "initialize";
 

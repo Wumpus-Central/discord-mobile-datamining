@@ -1,6 +1,3 @@
-// === Module 9685: UploadPreviewActionSheet ===
-
-// Module 9685 (UploadPreviewActionSheet)
 import getSystemLocale from "getSystemLocale";
 import useCanSetThumbnail from "useCanSetThumbnail";
 import get_ActivityIndicator from "CircleErrorIcon";

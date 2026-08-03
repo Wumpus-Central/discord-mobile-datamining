@@ -1,6 +1,3 @@
-// === Module 14661: CollectiblesShopViewAllCategoryItemsHeader ===
-
-// Module 14661 (CollectiblesShopViewAllCategoryItemsHeader)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 11663: useGetExpiringGuildPowerups ===
-
-// Module 11663 (useGetExpiringGuildPowerups)
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 

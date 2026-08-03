@@ -1,6 +1,3 @@
-// === Module 7817: createApplicationSubscriptionPurchaseSystemMessage ===
-
-// Module 7817 (createApplicationSubscriptionPurchaseSystemMessage)
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationSubscriptionPurchaseSystemMessage.tsx");
 
 export const createApplicationSubscriptionPurchaseSystemMessage = function createApplicationSubscriptionPurchaseSystemMessage(roleStyle) {

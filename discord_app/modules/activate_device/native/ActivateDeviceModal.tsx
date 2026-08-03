@@ -1,6 +1,3 @@
-// === Module 13032: ActivateDeviceModal ===
-
-// Module 13032 (ActivateDeviceModal)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

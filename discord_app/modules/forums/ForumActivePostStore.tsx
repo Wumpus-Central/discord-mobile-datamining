@@ -1,6 +1,3 @@
-// === Module 6069: maybeRebuildState ===
-
-// Module 6069 (maybeRebuildState)
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import updateState from "updateState";
 import fetchFingerprint from "fetchFingerprint";

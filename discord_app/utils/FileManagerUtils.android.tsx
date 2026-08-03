@@ -1,6 +1,3 @@
-// === Module 8090: _readFile ===
-
-// Module 8090 (_readFile)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _readFile() {

@@ -1,6 +1,3 @@
-// === Module 13752: memoResult1 ===
-
-// Module 13752 (memoResult1)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { isNameplateRecord } from "fromServer";

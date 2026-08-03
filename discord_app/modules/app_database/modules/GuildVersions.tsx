@@ -1,6 +1,3 @@
-// === Module 5943: getCommittedVersions ===
-
-// Module 5943 (getCommittedVersions)
 import _slicedToArray from "_slicedToArray";
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

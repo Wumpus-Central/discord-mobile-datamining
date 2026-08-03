@@ -1,6 +1,3 @@
-// === Module 14617: HapticButton ===
-
-// Module 14617 (HapticButton)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

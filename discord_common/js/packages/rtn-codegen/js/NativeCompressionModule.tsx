@@ -1,6 +1,3 @@
-// === Module 12729: enforcing ===
-
-// Module 12729 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeCompressionModule");

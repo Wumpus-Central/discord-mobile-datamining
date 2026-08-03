@@ -1,6 +1,3 @@
-// === Module 12565: handlePress ===
-
-// Module 12565 (handlePress)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { getPremiumGroupProductName as closure_5 } from "SubscriptionStatusTypes";
 import { jsx } from "jsxProd";

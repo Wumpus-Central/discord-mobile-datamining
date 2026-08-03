@@ -1,6 +1,3 @@
-// === Module 8271: EditGuildEventWhere ===
-
-// Module 8271 (EditGuildEventWhere)
 import _slicedToArray from "_slicedToArray";
 import AccessibilityAnnouncer from "AccessibilityAnnouncer";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 5123: waitForOnboardingCompletion ===
-
-// Module 5123 (waitForOnboardingCompletion)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { GuildMemberFlags } from "GuildMemberFlags";
 

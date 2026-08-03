@@ -1,6 +1,3 @@
-// === Module 6560: getBillingInformationStringNative ===
-
-// Module 6560 (getBillingInformationStringNative)
 import serializePurchaseResponse from "serializePurchaseResponse";
 import { SubscriptionStatusTypes } from "ME";
 

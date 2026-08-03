@@ -1,6 +1,3 @@
-// === Module 13675: CarIcon ===
-
-// Module 13675 (CarIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

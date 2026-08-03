@@ -1,6 +1,3 @@
-// === Module 15983: EDGE_GUTTER ===
-
-// Module 15983 (EDGE_GUTTER)
 import { EDGE_GUTTER } from "CARD_SIZE";
 
 const fn = function t(arg0) {

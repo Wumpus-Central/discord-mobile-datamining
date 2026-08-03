@@ -1,6 +1,3 @@
-// === Module 14932: usePortraitOrientationOnly ===
-
-// Module 14932 (usePortraitOrientationOnly)
 import noop from "noop";
 
 let require = arg1;

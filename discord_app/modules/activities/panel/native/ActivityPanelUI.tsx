@@ -1,6 +1,3 @@
-// === Module 15864: renderActivityOrPIP ===
-
-// Module 15864 (renderActivityOrPIP)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ActivityPanelModes } from "ActivityPanelModes";

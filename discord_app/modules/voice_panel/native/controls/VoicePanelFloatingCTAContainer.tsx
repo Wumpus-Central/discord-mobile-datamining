@@ -1,6 +1,3 @@
-// === Module 16021: FloatingCTA ===
-
-// Module 16021 (FloatingCTA)
 import _slicedToArray from "_slicedToArray";
 import VOICE_PANEL_DRAWER_MAX_WIDTH from "VOICE_PANEL_DRAWER_MAX_WIDTH";
 import ensureGuildLoaded from "ensureGuildLoaded";

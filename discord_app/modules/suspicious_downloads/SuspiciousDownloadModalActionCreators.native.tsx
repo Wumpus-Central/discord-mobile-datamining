@@ -1,6 +1,3 @@
-// === Module 12306: ? ===
-
-// Module 12306
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx");
 
 export default {

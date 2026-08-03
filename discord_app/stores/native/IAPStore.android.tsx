@@ -1,6 +1,3 @@
-// === Module 5676: updateProduct ===
-
-// Module 5676 (updateProduct)
 import GPlayConnectionState from "GPlayConnectionState";
 import { CurrencyCodes } from "sum";
 import { Store } from "initialize";

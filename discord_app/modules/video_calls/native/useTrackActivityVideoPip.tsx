@@ -1,6 +1,3 @@
-// === Module 10687: useTrackActivityPip ===
-
-// Module 10687 (useTrackActivityPip)
 import noop from "noop";
 import initialize from "initialize";
 import { AnalyticEvents } from "ME";

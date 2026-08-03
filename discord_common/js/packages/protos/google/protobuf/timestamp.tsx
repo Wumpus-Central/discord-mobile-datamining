@@ -1,6 +1,3 @@
-// === Module 1336: now ===
-
-// Module 1336 (now)
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 

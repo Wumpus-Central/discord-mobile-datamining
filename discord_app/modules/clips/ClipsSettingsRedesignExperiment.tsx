@@ -1,6 +1,3 @@
-// === Module 4256: apexExperiment ===
-
-// Module 4256 (apexExperiment)
 import _migrateDefaultStorage from "_migrateDefaultStorage";
 import ApexExperiment from "ApexExperiment";
 

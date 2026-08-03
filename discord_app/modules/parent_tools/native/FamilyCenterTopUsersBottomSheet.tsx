@@ -1,6 +1,3 @@
-// === Module 13947: UserRow ===
-
-// Module 13947 (UserRow)
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import jsxProd from "jsxProd";

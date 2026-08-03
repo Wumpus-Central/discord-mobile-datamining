@@ -1,6 +1,3 @@
-// === Module 10721: MusicSlashIcon ===
-
-// Module 10721 (MusicSlashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

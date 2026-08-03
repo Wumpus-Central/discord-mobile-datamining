@@ -1,6 +1,3 @@
-// === Module 16152: AgeGateVerify ===
-
-// Module 16152 (AgeGateVerify)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

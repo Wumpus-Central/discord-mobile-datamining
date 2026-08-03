@@ -1,6 +1,3 @@
-// === Module 6993: DiscordWordmarkLogo ===
-
-// Module 6993 (DiscordWordmarkLogo)
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 9047: _beginConsoleTransfer ===
-
-// Module 9047 (_beginConsoleTransfer)
 import TransferFooter from "TransferFooter";
 import set from "disconnectRemote";
 

@@ -1,6 +1,3 @@
-// === Module 14633: useCollectiblesCoachmarkScrollDismissContext ===
-
-// Module 14633 (useCollectiblesCoachmarkScrollDismissContext)
 import importAllResult from "noop";
 import { NOOP } from "sum";
 import { jsx } from "jsxProd";

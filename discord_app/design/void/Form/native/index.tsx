@@ -1,6 +1,3 @@
-// === Module 7639: Form ===
-
-// Module 7639 (Form)
 const result = require("FormArrow").fileFinishedImporting("design/void/Form/native/index.tsx");
 
 export const Form = require("context");

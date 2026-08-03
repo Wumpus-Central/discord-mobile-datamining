@@ -1,6 +1,3 @@
-// === Module 4381: urlMatchesFileExtension ===
-
-// Module 4381 (urlMatchesFileExtension)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import set from "set";

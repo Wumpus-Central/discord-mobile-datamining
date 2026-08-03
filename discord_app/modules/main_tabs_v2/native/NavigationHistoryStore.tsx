@@ -1,6 +1,3 @@
-// === Module 10268: getIdFromHistoryItem ===
-
-// Module 10268 (getIdFromHistoryItem)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { PersistedStore } from "initialize";
 

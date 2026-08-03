@@ -1,6 +1,3 @@
-// === Module 11350: useLatch ===
-
-// Module 11350 (useLatch)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useLatch.tsx");

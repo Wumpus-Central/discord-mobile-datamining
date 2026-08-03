@@ -1,6 +1,3 @@
-// === Module 16653: MessagePreview ===
-
-// Module 16653 (MessagePreview)
 import resetCache from "resetCache";
 import module_8308 from "module_8308";
 import get_ActivityIndicator from "useNavigation";

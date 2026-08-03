@@ -1,6 +1,3 @@
-// === Module 4699: TextIcon ===
-
-// Module 4699 (TextIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

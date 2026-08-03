@@ -1,6 +1,3 @@
-// === Module 8941: CloseButton ===
-
-// Module 8941 (CloseButton)
 import noop from "noop";
 import { XboxLinkModalScenes } from "XboxLinkModalScenes";
 import { PlatformTypes } from "ME";

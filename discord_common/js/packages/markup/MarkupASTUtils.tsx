@@ -1,6 +1,3 @@
-// === Module 7775: collectAst ===
-
-// Module 7775 (collectAst)
 function collectAst(arr) {
   let items = arg1;
   if (arg1 === undefined) {

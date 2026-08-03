@@ -1,6 +1,3 @@
-// === Module 14535: handleLogout ===
-
-// Module 14535 (handleLogout)
 import jsxProd from "jsxProd";
 import createToggle from "createToggle";
 

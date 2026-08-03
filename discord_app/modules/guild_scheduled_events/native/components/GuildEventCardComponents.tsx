@@ -1,6 +1,3 @@
-// === Module 8229: usePrimaryActionButtonType ===
-
-// Module 8229 (usePrimaryActionButtonType)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getRRule from "getRRule";
 import importAllResult from "IconButton";

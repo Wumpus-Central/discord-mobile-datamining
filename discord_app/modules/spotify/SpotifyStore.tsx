@@ -1,6 +1,3 @@
-// === Module 4872: upsertAccount ===
-
-// Module 4872 (upsertAccount)
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import closure_8 from "set";

@@ -1,6 +1,3 @@
-// === Module 13543: items ===
-
-// Module 13543 (items)
 import merged1 from "RPC_LOCAL_SCOPE";
 import merged2 from "module_13589";
 import merged3 from "items";

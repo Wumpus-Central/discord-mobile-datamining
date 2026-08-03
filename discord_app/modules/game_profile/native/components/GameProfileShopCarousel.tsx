@@ -1,6 +1,3 @@
-// === Module 8669: HorizontalSpacing ===
-
-// Module 8669 (HorizontalSpacing)
 import noop from "noop";
 import { View } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

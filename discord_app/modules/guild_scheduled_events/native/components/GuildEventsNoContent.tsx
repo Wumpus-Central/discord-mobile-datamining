@@ -1,6 +1,3 @@
-// === Module 8329: GuildEventsNoContent ===
-
-// Module 8329 (GuildEventsNoContent)
 import "noop";
 import { View } from "get ActivityIndicator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

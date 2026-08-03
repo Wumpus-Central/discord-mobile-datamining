@@ -1,6 +1,3 @@
-// === Module 12606: TermsAndConditionsActionSheet ===
-
-// Module 12606 (TermsAndConditionsActionSheet)
 import _slicedToArray from "_slicedToArray";
 import fetchActivePromotions from "fetchActivePromotions";
 import get_ActivityIndicator from "OutboundPromotionClaimAlert";

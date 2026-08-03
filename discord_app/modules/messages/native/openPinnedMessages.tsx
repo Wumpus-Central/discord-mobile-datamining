@@ -1,6 +1,3 @@
-// === Module 9524: openPinnedMessages ===
-
-// Module 9524 (openPinnedMessages)
 import { ChannelDetailsNavigatorScreens as closure_2 } from "ChannelDetailsNavigatorScreens";
 
 const result = require("set").fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");

@@ -1,6 +1,3 @@
-// === Module 12622: GiftingBadgeIntro ===
-
-// Module 12622 (GiftingBadgeIntro)
 import _slicedToArray from "_slicedToArray";
 import getGiftingBadgeProgressPercent from "getGiftingBadgeProgressPercent";
 import get_ActivityIndicator from "GiftIcon";

@@ -1,6 +1,3 @@
-// === Module 11207: ForumPostTitle ===
-
-// Module 11207 (ForumPostTitle)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

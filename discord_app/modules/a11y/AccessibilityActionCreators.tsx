@@ -1,6 +1,3 @@
-// === Module 13521: setFontSize ===
-
-// Module 13521 (setFontSize)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AnalyticEvents } from "ME";
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";

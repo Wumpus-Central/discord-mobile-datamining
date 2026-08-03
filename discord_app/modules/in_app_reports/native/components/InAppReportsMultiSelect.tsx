@@ -1,6 +1,3 @@
-// === Module 12431: MultiSelect ===
-
-// Module 12431 (MultiSelect)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

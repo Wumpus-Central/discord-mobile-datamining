@@ -1,6 +1,3 @@
-// === Module 11289: useAppLauncherFlashListProps ===
-
-// Module 11289 (useAppLauncherFlashListProps)
 import importAllResult from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

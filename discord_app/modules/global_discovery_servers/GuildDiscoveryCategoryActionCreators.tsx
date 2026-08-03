@@ -1,6 +1,3 @@
-// === Module 15361: _maybeFetchGuildDiscoveryCategories ===
-
-// Module 15361 (_maybeFetchGuildDiscoveryCategories)
 import dispatcher from "dispatcher";
 import _getSystemLocale from "_getSystemLocale";
 import getPrimaryCategories from "getPrimaryCategories";

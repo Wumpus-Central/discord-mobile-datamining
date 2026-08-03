@@ -1,6 +1,3 @@
-// === Module 11443: JumpToPresentButton ===
-
-// Module 11443 (JumpToPresentButton)
 import "noop";
 import { View } from "memoResult1";
 import updateChatInputContainerHeight from "updateChatInputContainerHeight";

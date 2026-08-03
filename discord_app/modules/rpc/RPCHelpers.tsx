@@ -1,6 +1,3 @@
-// === Module 10645: recurseReplaceContentTree ===
-
-// Module 10645 (recurseReplaceContentTree)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import addApplication from "addApplication";
 import createExecutable from "createExecutable";

@@ -1,6 +1,3 @@
-// === Module 13: extractTimestamp ===
-
-// Module 13 (extractTimestamp)
 function extractTimestamp(arg0) {
   return Math.floor(Number(arg0) / 4194304) + c2;
 }

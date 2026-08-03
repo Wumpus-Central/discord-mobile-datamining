@@ -1,6 +1,3 @@
-// === Module 9090: VoiceActivityStatus ===
-
-// Module 9090 (VoiceActivityStatus)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

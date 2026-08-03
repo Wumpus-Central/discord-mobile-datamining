@@ -1,6 +1,3 @@
-// === Module 10294: useTruncatedGradientColors ===
-
-// Module 10294 (useTruncatedGradientColors)
 import { useMemo } from "noop";
 import createCacheKey from "createCacheKey";
 

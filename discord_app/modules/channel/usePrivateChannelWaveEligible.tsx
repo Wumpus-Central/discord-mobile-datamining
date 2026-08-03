@@ -1,6 +1,3 @@
-// === Module 15055: usePrivateChannelWaveEligible ===
-
-// Module 15055 (usePrivateChannelWaveEligible)
 import reinjectEphemerals from "reinjectEphemerals";
 import upsertRelationship from "upsertRelationship";
 import { ChannelFlags } from "set";

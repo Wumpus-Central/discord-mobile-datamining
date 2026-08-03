@@ -1,6 +1,3 @@
-// === Module 7149: GemLeftUpwards3dIllustration ===
-
-// Module 7149 (GemLeftUpwards3dIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GemLeftUpwards3dIllustration.native.tsx");

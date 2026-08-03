@@ -1,6 +1,3 @@
-// === Module 15153: useGuildThemeNuxTrigger ===
-
-// Module 15153 (useGuildThemeNuxTrigger)
 import noop from "noop";
 import setContent from "setContent";
 

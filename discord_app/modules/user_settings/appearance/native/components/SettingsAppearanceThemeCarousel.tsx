@@ -1,6 +1,3 @@
-// === Module 14307: SettingsAppearanceThemeCarousel ===
-
-// Module 14307 (SettingsAppearanceThemeCarousel)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "Pagination";
 import importDefaultResult from "THEME_ITEM_WIDTH";

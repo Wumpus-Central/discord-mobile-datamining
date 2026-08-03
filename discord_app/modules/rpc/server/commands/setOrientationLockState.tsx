@@ -1,6 +1,3 @@
-// === Module 13569: ? ===
-
-// Module 13569
 import { OrientationLockState } from "items3";
 import sum from "sum";
 

@@ -1,6 +1,3 @@
-// === Module 15083: useHappeningNowScrollBehavior ===
-
-// Module 15083 (useHappeningNowScrollBehavior)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

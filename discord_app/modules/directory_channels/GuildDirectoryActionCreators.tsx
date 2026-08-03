@@ -1,6 +1,3 @@
-// === Module 10081: _addDirectoryGuildEntry ===
-
-// Module 10081 (_addDirectoryGuildEntry)
 import importDefaultResult from "dispatcher";
 import getSearchState from "getSearchState";
 import { DirectoryEntryCategories } from "DirectoryEntryTypes";

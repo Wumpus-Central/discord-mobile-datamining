@@ -1,6 +1,3 @@
-// === Module 4692: ThreadIcon ===
-
-// Module 4692 (ThreadIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15971: useConsoleConnectedAccountForVoiceUpsell ===
-
-// Module 15971 (useConsoleConnectedAccountForVoiceUpsell)
 import set from "set";
 import filterPlayingActivities from "filterPlayingActivities";
 import closure_5 from "set";

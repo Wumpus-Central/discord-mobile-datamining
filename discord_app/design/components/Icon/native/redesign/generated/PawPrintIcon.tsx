@@ -1,6 +1,3 @@
-// === Module 13687: PawPrintIcon ===
-
-// Module 13687 (PawPrintIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15272: ManageAccountsScreens ===
-
-// Module 15272 (ManageAccountsScreens)
 import { AuthStates } from "ME";
 
 const LOGIN = AuthStates.LOGIN;

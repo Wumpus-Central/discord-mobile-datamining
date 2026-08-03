@@ -1,6 +1,3 @@
-// === Module 11485: useCanSeeEventsInChannelList ===
-
-// Module 11485 (useCanSeeEventsInChannelList)
 const result = require("useIsHubForGuild").fileFinishedImporting("modules/guild_scheduled_events/useCanSeeEventsInChannelList.tsx");
 
 export default function useCanSeeEventsInChannelList(arg0) {

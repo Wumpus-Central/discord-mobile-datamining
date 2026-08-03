@@ -1,6 +1,3 @@
-// === Module 9240: handlePress ===
-
-// Module 9240 (handlePress)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { resetChangeEmailStore } from "ChangeEmailFields";

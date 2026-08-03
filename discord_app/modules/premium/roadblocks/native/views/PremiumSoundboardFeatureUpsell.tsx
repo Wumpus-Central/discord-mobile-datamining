@@ -1,6 +1,3 @@
-// === Module 15926: PremiumSoundboardFeatureUpsell ===
-
-// Module 15926 (PremiumSoundboardFeatureUpsell)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

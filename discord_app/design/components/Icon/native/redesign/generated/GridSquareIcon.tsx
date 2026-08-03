@@ -1,6 +1,3 @@
-// === Module 15668: GridSquareIcon ===
-
-// Module 15668 (GridSquareIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

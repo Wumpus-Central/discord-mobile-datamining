@@ -1,6 +1,3 @@
-// === Module 3810: isCommunicationDisabled ===
-
-// Module 3810 (isCommunicationDisabled)
 const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
 
 export const isCommunicationDisabled = function isCommunicationDisabled(arg0) {

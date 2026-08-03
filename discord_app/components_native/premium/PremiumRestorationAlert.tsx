@@ -1,6 +1,3 @@
-// === Module 14280: render ===
-
-// Module 14280 (render)
 import importDefaultResult from "updateProduct";
 import { jsx } from "jsxProd";
 import { PureComponent } from "noop";

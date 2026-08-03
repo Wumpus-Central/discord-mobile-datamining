@@ -1,6 +1,3 @@
-// === Module 5961: AppStartInfo ===
-
-// Module 5961 (AppStartInfo)
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "asyncGeneratorStep";
 

@@ -1,6 +1,3 @@
-// === Module 11385: openCreatePollModal ===
-
-// Module 11385 (openCreatePollModal)
 let c3 = "create-poll-modal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/polls/native/PollCreationModalActionCreators.tsx");
 

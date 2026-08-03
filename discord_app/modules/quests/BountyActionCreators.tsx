@@ -1,6 +1,3 @@
-// === Module 10899: fetchBountiesAndDispatch ===
-
-// Module 10899 (fetchBountiesAndDispatch)
 import AdCreativeType from "AdCreativeType";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import set from "set";

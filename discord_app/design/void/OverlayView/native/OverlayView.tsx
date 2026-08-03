@@ -1,6 +1,3 @@
-// === Module 4539: View ===
-
-// Module 4539 (View)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

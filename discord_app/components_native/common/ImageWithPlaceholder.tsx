@@ -1,6 +1,3 @@
-// === Module 8663: ImagePlaceholderVersions ===
-
-// Module 8663 (ImagePlaceholderVersions)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import set from "set";

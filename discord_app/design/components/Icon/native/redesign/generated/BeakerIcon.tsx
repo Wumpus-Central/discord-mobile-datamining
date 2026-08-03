@@ -1,6 +1,3 @@
-// === Module 13663: BeakerIcon ===
-
-// Module 13663 (BeakerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

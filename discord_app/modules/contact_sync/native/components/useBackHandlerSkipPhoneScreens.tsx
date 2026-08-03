@@ -1,6 +1,3 @@
-// === Module 11800: useBackHandlerSkipPhoneScreens ===
-
-// Module 11800 (useBackHandlerSkipPhoneScreens)
 import { NativeModules } from "get ActivityIndicator";
 import { ContactSyncScenes } from "ContactSyncLandingPage";
 

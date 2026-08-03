@@ -1,6 +1,3 @@
-// === Module 8123: IncrementableMediaViewerActions ===
-
-// Module 8123 (IncrementableMediaViewerActions)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 import keys from "keys";

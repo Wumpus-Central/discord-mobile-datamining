@@ -1,6 +1,3 @@
-// === Module 14926: useIsHCaptchaModalOpenTracking ===
-
-// Module 14926 (useIsHCaptchaModalOpenTracking)
 import noop from "noop";
 import { doesRegistrationHaveIdentityType as closure_3 } from "useRegistrationUIStore";
 import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";

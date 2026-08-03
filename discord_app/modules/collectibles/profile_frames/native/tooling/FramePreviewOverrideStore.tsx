@@ -1,6 +1,3 @@
-// === Module 8088: measure ===
-
-// Module 8088 (measure)
 import enforcing from "enforcing";
 import { Image } from "get ActivityIndicator";
 import OVERRIDE_DIR from "OVERRIDE_DIR";

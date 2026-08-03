@@ -1,6 +1,3 @@
-// === Module 12762: handleConnectionOpen ===
-
-// Module 12762 (handleConnectionOpen)
 import getHash from "getHash";
 import initialize from "initialize";
 import apexExperiment from "apexExperiment";

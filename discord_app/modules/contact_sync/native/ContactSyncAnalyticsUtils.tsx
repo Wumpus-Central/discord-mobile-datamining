@@ -1,6 +1,3 @@
-// === Module 11787: Steps ===
-
-// Module 11787 (Steps)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { getIsOnboarding } from "ContactSyncModes";
 import { ContactPermissions } from "ContactSyncLandingPage";

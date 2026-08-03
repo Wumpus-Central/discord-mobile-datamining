@@ -1,6 +1,3 @@
-// === Module 7915: hasFetchedColors ===
-
-// Module 7915 (hasFetchedColors)
 import _slicedToArray from "_slicedToArray";
 import batchUpdates from "batchUpdates";
 import noop from "noop";

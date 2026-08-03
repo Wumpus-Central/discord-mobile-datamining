@@ -1,6 +1,3 @@
-// === Module 16554: EligibilityChecklistRow ===
-
-// Module 16554 (EligibilityChecklistRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

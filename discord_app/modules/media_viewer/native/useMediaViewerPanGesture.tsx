@@ -1,6 +1,3 @@
-// === Module 12340: useMediaViewerPanGestureConfig ===
-
-// Module 12340 (useMediaViewerPanGestureConfig)
 import noop from "noop";
 
 const require = arg1;

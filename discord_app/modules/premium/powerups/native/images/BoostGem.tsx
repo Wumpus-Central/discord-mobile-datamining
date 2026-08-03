@@ -1,6 +1,3 @@
-// === Module 11627: BoostGem ===
-
-// Module 11627 (BoostGem)
 import "noop";
 import jsxProd from "jsxProd";
 

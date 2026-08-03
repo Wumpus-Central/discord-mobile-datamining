@@ -1,6 +1,3 @@
-// === Module 14904: PasswordStrength ===
-
-// Module 14904 (PasswordStrength)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "EyeIcon";

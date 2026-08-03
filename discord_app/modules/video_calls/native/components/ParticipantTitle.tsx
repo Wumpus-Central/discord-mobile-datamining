@@ -1,6 +1,3 @@
-// === Module 10871: ParticipantTitle ===
-
-// Module 10871 (ParticipantTitle)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

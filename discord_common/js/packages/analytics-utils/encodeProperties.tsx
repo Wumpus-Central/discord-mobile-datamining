@@ -1,6 +1,3 @@
-// === Module 662: encodeProperties ===
-
-// Module 662 (encodeProperties)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/analytics-utils/encodeProperties.tsx");
 
 export const encodeProperties = function encodeProperties(arg0) {

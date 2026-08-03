@@ -1,6 +1,3 @@
-// === Module 15040: PreviewItem ===
-
-// Module 15040 (PreviewItem)
 import importAllResult from "noop";
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import withEqualityFn from "withEqualityFn";

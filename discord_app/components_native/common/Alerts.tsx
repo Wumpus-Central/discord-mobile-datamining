@@ -1,6 +1,3 @@
-// === Module 15764: StyleSheet ===
-
-// Module 15764 (StyleSheet)
 import importAllResult from "shallowEqual";
 import get_ActivityIndicator from "module_5642";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,6 +1,3 @@
-// === Module 16571: useHighlightedCreatorGuildDetails ===
-
-// Module 16571 (useHighlightedCreatorGuildDetails)
 import noop from "noop";
 import { MarketingURLs } from "ME";
 

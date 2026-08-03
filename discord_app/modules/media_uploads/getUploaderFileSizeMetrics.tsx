@@ -1,6 +1,3 @@
-// === Module 6193: sum ===
-
-// Module 6193 (sum)
 function sum(arg0) {
 
 }

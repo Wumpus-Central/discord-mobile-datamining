@@ -1,6 +1,3 @@
-// === Module 6212: isSoundboardSectionNitroLocked ===
-
-// Module 6212 (isSoundboardSectionNitroLocked)
 const result = require("keys").fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {

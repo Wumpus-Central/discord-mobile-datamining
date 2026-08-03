@@ -1,6 +1,3 @@
-// === Module 16168: getAppMajorVersion ===
-
-// Module 16168 (getAppMajorVersion)
 import getConstants from "getConstants";
 
 getConstants = getConstants.getConstants();

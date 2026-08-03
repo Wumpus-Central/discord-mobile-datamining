@@ -1,6 +1,3 @@
-// === Module 6921: ChairIllocon ===
-
-// Module 6921 (ChairIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ChairIllocon.native.tsx");

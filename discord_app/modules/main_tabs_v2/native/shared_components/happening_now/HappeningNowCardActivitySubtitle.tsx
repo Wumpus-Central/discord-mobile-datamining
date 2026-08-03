@@ -1,6 +1,3 @@
-// === Module 15094: HappeningNowVoiceCardSubtitle ===
-
-// Module 15094 (HappeningNowVoiceCardSubtitle)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";

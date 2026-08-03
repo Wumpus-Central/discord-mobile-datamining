@@ -1,6 +1,3 @@
-// === Module 15815: useLaunchPadPullTabMinimized ===
-
-// Module 15815 (useLaunchPadPullTabMinimized)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 

@@ -1,6 +1,3 @@
-// === Module 6503: getPromotionIdOverride ===
-
-// Module 6503 (getPromotionIdOverride)
 import { Store } from "initialize";
 
 let c0;

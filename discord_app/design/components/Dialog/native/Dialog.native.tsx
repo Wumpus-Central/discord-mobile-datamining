@@ -1,6 +1,3 @@
-// === Module 4586: Dialog ===
-
-// Module 4586 (Dialog)
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 12526: CheckIcon ===
-
-// Module 12526 (CheckIcon)
 import _slicedToArray from "_slicedToArray";
 import PremiumTier0LogoSmall from "PremiumTier0LogoSmall";
 import { View } from "usePremiumPlanPrice";

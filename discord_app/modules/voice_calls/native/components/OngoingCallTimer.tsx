@@ -1,6 +1,3 @@
-// === Module 12873: OnGoingCallTimer ===
-
-// Module 12873 (OnGoingCallTimer)
 import "noop";
 import callConnect from "callConnect";
 import { jsx } from "jsxProd";

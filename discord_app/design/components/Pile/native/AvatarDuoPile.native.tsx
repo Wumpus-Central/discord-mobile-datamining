@@ -1,6 +1,3 @@
-// === Module 13239: AvatarDuoPile ===
-
-// Module 13239 (AvatarDuoPile)
 import "noop";
 import { jsx } from "jsxProd";
 

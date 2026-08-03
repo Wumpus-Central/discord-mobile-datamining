@@ -1,6 +1,3 @@
-// === Module 10786: VolumeSlider ===
-
-// Module 10786 (VolumeSlider)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources";

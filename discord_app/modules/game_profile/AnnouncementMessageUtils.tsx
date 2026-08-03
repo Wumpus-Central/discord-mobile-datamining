@@ -1,6 +1,3 @@
-// === Module 8661: toAnnouncementMessages ===
-
-// Module 8661 (toAnnouncementMessages)
 import { isMessageComponentsV2 } from "hasFlag";
 
 const re4 = /^#{1,3}\s+(.+)$/;

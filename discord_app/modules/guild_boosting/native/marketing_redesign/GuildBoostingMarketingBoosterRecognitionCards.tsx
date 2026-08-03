@@ -1,6 +1,3 @@
-// === Module 12677: Card ===
-
-// Module 12677 (Card)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

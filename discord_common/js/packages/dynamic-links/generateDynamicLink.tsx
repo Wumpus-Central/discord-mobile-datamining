@@ -1,6 +1,3 @@
-// === Module 12447: generateDynamicLink ===
-
-// Module 12447 (generateDynamicLink)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 

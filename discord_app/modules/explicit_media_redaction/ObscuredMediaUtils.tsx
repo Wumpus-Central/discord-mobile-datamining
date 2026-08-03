@@ -1,6 +1,3 @@
-// === Module 5880: getEligibleHarmTypesConfigsForContext ===
-
-// Module 5880 (getEligibleHarmTypesConfigsForContext)
 import _slicedToArray from "_slicedToArray";
 import getUserAgnosticState from "getUserAgnosticState";
 import ensureGuildLoaded from "ensureGuildLoaded";

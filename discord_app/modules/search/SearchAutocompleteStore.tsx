@@ -1,6 +1,3 @@
-// === Module 10118: handleUserSearchResults ===
-
-// Module 10118 (handleUserSearchResults)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

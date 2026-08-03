@@ -1,6 +1,3 @@
-// === Module 7975: useCutoutBackgroundColor ===
-
-// Module 7975 (useCutoutBackgroundColor)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

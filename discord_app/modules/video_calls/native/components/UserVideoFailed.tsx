@@ -1,6 +1,3 @@
-// === Module 15989: UserVideoFailed ===
-
-// Module 15989 (UserVideoFailed)
 import { View } from "get ActivityIndicator";
 import { VideoToggleState } from "ME";
 import jsxProd from "jsxProd";

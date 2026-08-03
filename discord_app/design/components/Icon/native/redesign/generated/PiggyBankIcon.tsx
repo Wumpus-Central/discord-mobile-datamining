@@ -1,6 +1,3 @@
-// === Module 11132: PiggyBankIcon ===
-
-// Module 11132 (PiggyBankIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 8838: UserRowSubLabel ===
-
-// Module 8838 (UserRowSubLabel)
 import importAllResult from "handleRelationshipAddError";
 import { View } from "presentAddedFriendToast";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

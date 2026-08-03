@@ -1,6 +1,3 @@
-// === Module 5222: useCustomKeyboardHeight ===
-
-// Module 5222 (useCustomKeyboardHeight)
 const result = require("set").fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
 
 export default function useCustomKeyboardHeight() {

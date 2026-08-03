@@ -1,6 +1,3 @@
-// === Module 14153: QuestDockDismissalNotification ===
-
-// Module 14153 (QuestDockDismissalNotification)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

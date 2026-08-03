@@ -1,6 +1,3 @@
-// === Module 14583: MyTableRow ===
-
-// Module 14583 (MyTableRow)
 import _slicedToArray from "_slicedToArray";
 import TableRadioRow from "TableRadioRow";
 import get_ActivityIndicator from "TableCheckboxRow";

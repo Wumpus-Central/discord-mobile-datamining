@@ -1,6 +1,3 @@
-// === Module 11253: BotsBanner ===
-
-// Module 11253 (BotsBanner)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15875: Loading ===
-
-// Module 15875 (Loading)
 import _slicedToArray from "_slicedToArray";
 import loadInviteSuggestions from "loadInviteSuggestions";
 import { View } from "module_10496";

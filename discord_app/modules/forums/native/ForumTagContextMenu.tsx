@@ -1,6 +1,3 @@
-// === Module 9679: ForumTagContextMenu ===
-
-// Module 9679 (ForumTagContextMenu)
 import { jsx } from "jsxProd";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/forums/native/ForumTagContextMenu.tsx");

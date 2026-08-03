@@ -1,6 +1,3 @@
-// === Module 11182: dispatcher ===
-
-// Module 11182 (dispatcher)
 const result = require("set").fileFinishedImporting("actions/TypingActionCreators.tsx");
 
 export default {

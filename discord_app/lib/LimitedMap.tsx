@@ -1,6 +1,3 @@
-// === Module 7898: LimitedMap ===
-
-// Module 7898 (LimitedMap)
 class LimitedMap extends Map {
   constructor(arg0) {
     tmp = new LimitedMap(new.target);

@@ -1,6 +1,3 @@
-// === Module 10221: InstantInviteUsesLabel ===
-
-// Module 10221 (InstantInviteUsesLabel)
 import "noop";
 import { jsxs } from "jsxProd";
 

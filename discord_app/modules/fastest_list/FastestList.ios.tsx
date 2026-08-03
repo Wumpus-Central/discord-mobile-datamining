@@ -1,6 +1,3 @@
-// === Module 9265: noop ===
-
-// Module 9265 (noop)
 import importAllResult from "noop";
 import { RefreshControl } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

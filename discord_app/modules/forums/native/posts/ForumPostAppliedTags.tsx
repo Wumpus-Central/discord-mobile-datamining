@@ -1,6 +1,3 @@
-// === Module 11204: ForumPostAppliedTagPills ===
-
-// Module 11204 (ForumPostAppliedTagPills)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

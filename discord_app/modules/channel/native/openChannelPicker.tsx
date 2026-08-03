@@ -1,6 +1,3 @@
-// === Module 10415: openChannelPicker ===
-
-// Module 10415 (openChannelPicker)
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

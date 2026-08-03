@@ -1,6 +1,3 @@
-// === Module 15395: sendMessageWithEmbed ===
-
-// Module 15395 (sendMessageWithEmbed)
 const result = require("set").fileFinishedImporting("modules/content_inventory/reactionUtils.tsx");
 
 export const sendMessageWithEmbed = function sendMessageWithEmbed(channel) {

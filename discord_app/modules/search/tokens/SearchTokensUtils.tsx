@@ -1,6 +1,3 @@
-// === Module 10120: ANSWER_IN_REGEX ===
-
-// Module 10120 (ANSWER_IN_REGEX)
 const result = require("set").fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
 
 export const ANSWER_IN_REGEX = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i;

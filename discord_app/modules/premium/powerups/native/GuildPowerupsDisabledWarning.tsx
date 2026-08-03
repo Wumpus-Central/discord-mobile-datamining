@@ -1,6 +1,3 @@
-// === Module 11650: GuildPowerupsDisabledWarning ===
-
-// Module 11650 (GuildPowerupsDisabledWarning)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

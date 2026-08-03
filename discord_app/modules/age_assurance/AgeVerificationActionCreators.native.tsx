@@ -1,6 +1,3 @@
-// === Module 6750: openIncodeAgeVerificationModal ===
-
-// Module 6750 (openIncodeAgeVerificationModal)
 import SafetyToastType from "SafetyToastType";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import set from "set";

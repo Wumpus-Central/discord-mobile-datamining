@@ -1,6 +1,3 @@
-// === Module 11581: GuildProgressHeader ===
-
-// Module 11581 (GuildProgressHeader)
 import closure_3 from "Steps";
 import module_8308 from "module_8308";
 import { View } from "metadata";

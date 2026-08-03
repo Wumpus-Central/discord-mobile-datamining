@@ -1,6 +1,3 @@
-// === Module 7856: createGiftIntentSystemMessage ===
-
-// Module 7856 (createGiftIntentSystemMessage)
 import createCacheKey from "createCacheKey";
 
 let closure_3 = createCacheKey.createNativeStyleProperties({ iconTintColor: require("Themes").colors.BACKGROUND_BRAND, iconDividerColor: require("Themes").colors.ICON_STRONG });

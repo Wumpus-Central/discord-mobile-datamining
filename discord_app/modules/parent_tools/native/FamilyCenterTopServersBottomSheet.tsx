@@ -1,6 +1,3 @@
-// === Module 13948: GuildRow ===
-
-// Module 13948 (GuildRow)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

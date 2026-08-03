@@ -1,6 +1,3 @@
-// === Module 4713: LockIcon ===
-
-// Module 4713 (LockIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

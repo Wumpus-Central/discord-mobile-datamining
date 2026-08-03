@@ -1,6 +1,3 @@
-// === Module 9278: useConversationBackoffRef ===
-
-// Module 9278 (useConversationBackoffRef)
 import noop from "noop";
 import CONVERSATION_COLORS from "CONVERSATION_COLORS";
 

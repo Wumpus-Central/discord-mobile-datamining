@@ -1,6 +1,3 @@
-// === Module 9428: CustomEmojiContent ===
-
-// Module 9428 (CustomEmojiContent)
 import initializeSearch from "initializeSearch";
 import get_ActivityIndicator from "EmojiTypes";
 import computeRolesForGuild from "computeRolesForGuild";

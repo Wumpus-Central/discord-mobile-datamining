@@ -1,6 +1,3 @@
-// === Module 9671: getAutocompleteOptions ===
-
-// Module 9671 (getAutocompleteOptions)
 import handleInit from "handleInit";
 import closure_4 from "handleInit";
 import closure_5 from "set";

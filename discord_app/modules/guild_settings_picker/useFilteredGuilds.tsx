@@ -1,6 +1,3 @@
-// === Module 13053: useFilteredGuilds ===
-
-// Module 13053 (useFilteredGuilds)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import insertUnsortedGuilds from "insertUnsortedGuilds";

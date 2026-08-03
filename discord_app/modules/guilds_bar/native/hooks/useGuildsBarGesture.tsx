@@ -1,6 +1,3 @@
-// === Module 14957: getDropIndex ===
-
-// Module 14957 (getDropIndex)
 import withEqualityFn from "withEqualityFn";
 import closure_4 from "t";
 import { Dimensions } from "Themes";

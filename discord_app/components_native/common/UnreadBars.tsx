@@ -1,6 +1,3 @@
-// === Module 15033: componentWillEnter ===
-
-// Module 15033 (componentWillEnter)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

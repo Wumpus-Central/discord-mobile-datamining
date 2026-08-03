@@ -1,6 +1,3 @@
-// === Module 13120: LeaveServerAlert ===
-
-// Module 13120 (LeaveServerAlert)
 import { GuildFeatures } from "ME";
 import jsxProd from "jsxProd";
 

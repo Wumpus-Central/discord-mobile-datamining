@@ -1,6 +1,3 @@
-// === Module 11539: ? ===
-
-// Module 11539
 import importAllResult from "getSystemLocale";
 import { View } from "Button";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

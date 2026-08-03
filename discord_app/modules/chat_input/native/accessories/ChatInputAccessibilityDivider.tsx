@@ -1,6 +1,3 @@
-// === Module 11436: ChatInputAccessibilityDivider ===
-
-// Module 11436 (ChatInputAccessibilityDivider)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

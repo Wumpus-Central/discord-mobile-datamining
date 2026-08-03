@@ -1,6 +1,3 @@
-// === Module 6558: goToStandalonePremiumCheckout ===
-
-// Module 6558 (goToStandalonePremiumCheckout)
 import ME from "ME";
 
 let c3;

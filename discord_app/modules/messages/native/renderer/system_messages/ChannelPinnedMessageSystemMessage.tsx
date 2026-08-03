@@ -1,6 +1,3 @@
-// === Module 7770: createChannelPinnedMessageSystemMessage ===
-
-// Module 7770 (createChannelPinnedMessageSystemMessage)
 const result = require("getSystemLocale").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
 
 export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {

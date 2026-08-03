@@ -1,6 +1,3 @@
-// === Module 5013: anyoneHasFlagInContext ===
-
-// Module 5013 (anyoneHasFlagInContext)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

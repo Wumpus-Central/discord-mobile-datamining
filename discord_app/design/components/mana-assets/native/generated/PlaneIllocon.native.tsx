@@ -1,6 +1,3 @@
-// === Module 7391: PlaneIllocon ===
-
-// Module 7391 (PlaneIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PlaneIllocon.native.tsx");

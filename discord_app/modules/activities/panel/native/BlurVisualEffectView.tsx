@@ -1,6 +1,3 @@
-// === Module 15873: ? ===
-
-// Module 15873
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import hexToRgba from "hexToRgba";

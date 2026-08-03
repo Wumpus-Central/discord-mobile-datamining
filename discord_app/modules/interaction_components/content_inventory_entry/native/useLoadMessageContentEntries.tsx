@@ -1,6 +1,3 @@
-// === Module 10906: fetchColors ===
-
-// Module 10906 (fetchColors)
 import _slicedToArray from "_slicedToArray";
 import areArraysShallowlyEqual from "areArraysShallowlyEqual";
 import noop from "noop";

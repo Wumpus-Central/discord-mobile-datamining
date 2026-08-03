@@ -1,6 +1,3 @@
-// === Module 3880: __DiscordCreateDateFormatter ===
-
-// Module 3880 (__DiscordCreateDateFormatter)
 if (null != global.__DiscordCreateDateFormatter) {
   let __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;
 } else {

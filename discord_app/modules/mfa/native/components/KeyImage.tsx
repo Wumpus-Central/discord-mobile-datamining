@@ -1,6 +1,3 @@
-// === Module 13789: KeyImage ===
-
-// Module 13789 (KeyImage)
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 1853: parseSkuIdFromServerData ===
-
-// Module 1853 (parseSkuIdFromServerData)
 const result = require("set").fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
 
 export const parseSkuIdFromServerData = function parseSkuIdFromServerData(skuId) {

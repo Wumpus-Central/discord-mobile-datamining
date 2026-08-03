@@ -1,6 +1,3 @@
-// === Module 1937: fromServerArray ===
-
-// Module 1937 (fromServerArray)
 import isValueEqual from "isValueEqual";
 import { GuildRoleRecordTypeTag } from "GuildRoleRecordTypeTag";
 

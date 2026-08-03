@@ -1,6 +1,3 @@
-// === Module 11520: getOrRefreshPushSyncToken ===
-
-// Module 11520 (getOrRefreshPushSyncToken)
 import timestamp from "timestamp";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";

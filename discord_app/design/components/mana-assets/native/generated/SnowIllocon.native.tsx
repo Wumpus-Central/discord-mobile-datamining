@@ -1,6 +1,3 @@
-// === Module 7503: SnowIllocon ===
-
-// Module 7503 (SnowIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/SnowIllocon.native.tsx");

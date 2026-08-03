@@ -1,6 +1,3 @@
-// === Module 7712: items ===
-
-// Module 7712 (items)
 let obj = {
   getTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;

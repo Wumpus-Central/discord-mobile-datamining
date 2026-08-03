@@ -1,6 +1,3 @@
-// === Module 5945: handlePostConnectionOpen ===
-
-// Module 5945 (handlePostConnectionOpen)
 import importDefaultResult from "result";
 
 let obj = importDefault;

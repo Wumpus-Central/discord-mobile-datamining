@@ -1,6 +1,3 @@
-// === Module 12822: getIconURL ===
-
-// Module 12822 (getIconURL)
 import "createExecutable";
 
 let c2 = "xbox:";

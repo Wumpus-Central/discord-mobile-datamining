@@ -1,6 +1,3 @@
-// === Module 6661: ImageGraphic ===
-
-// Module 6661 (ImageGraphic)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

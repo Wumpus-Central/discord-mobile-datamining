@@ -1,6 +1,3 @@
-// === Module 8441: useTooltip ===
-
-// Module 8441 (useTooltip)
 import _slicedToArray from "_slicedToArray";
 import v1 from "v1";
 import noop from "noop";

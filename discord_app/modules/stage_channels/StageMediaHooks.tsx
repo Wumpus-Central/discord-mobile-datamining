@@ -1,6 +1,3 @@
-// === Module 5011: useStageHasMedia ===
-
-// Module 5011 (useStageHasMedia)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateVoiceState from "updateVoiceState";
 import getActiveStageChannelIds from "getActiveStageChannelIds";

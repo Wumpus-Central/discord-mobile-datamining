@@ -1,6 +1,3 @@
-// === Module 15281: Username ===
-
-// Module 15281 (Username)
 import { View } from "get ActivityIndicator";
 import filterPlayingActivities from "filterPlayingActivities";
 import jsxProd from "jsxProd";

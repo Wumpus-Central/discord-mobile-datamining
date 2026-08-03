@@ -1,6 +1,3 @@
-// === Module 9132: MaskedBadge ===
-
-// Module 9132 (MaskedBadge)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

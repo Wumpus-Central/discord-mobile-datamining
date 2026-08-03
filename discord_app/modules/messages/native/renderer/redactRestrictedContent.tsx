@@ -1,6 +1,3 @@
-// === Module 7888: nodeToText ===
-
-// Module 7888 (nodeToText)
 function nodeToText(content) {
   let str = "";
   if (null != content) {

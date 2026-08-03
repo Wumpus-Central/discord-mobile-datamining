@@ -1,6 +1,3 @@
-// === Module 10688: _initialize ===
-
-// Module 10688 (_initialize)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import "initialize";

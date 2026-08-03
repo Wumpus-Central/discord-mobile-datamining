@@ -1,6 +1,3 @@
-// === Module 6360: BlockedPaymentsCountryActionSheet ===
-
-// Module 6360 (BlockedPaymentsCountryActionSheet)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 16688: _fetchBasicGuild ===
-
-// Module 16688 (_fetchBasicGuild)
 import sendRequest from "sendRequest";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getGuild from "getGuild";

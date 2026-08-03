@@ -1,6 +1,3 @@
-// === Module 11187: action ===
-
-// Module 11187 (action)
 import _slicedToArray from "_slicedToArray";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import reinjectEphemerals from "reinjectEphemerals";

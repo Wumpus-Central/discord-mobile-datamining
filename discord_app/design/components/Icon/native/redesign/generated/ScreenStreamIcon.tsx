@@ -1,6 +1,3 @@
-// === Module 6624: ScreenStreamIcon ===
-
-// Module 6624 (ScreenStreamIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

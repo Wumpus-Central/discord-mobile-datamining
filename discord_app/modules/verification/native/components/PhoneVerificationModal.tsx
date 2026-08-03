@@ -1,6 +1,3 @@
-// === Module 9241: PhoneVerificationModal ===
-
-// Module 9241 (PhoneVerificationModal)
 import HeaderBackImage from "HeaderBackImage";
 import "noop";
 import { VerificationModalScenes } from "ME";

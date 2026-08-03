@@ -1,6 +1,3 @@
-// === Module 5230: TableRowIcon ===
-
-// Module 5230 (TableRowIcon)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "noop";
 import { View } from "get ActivityIndicator";

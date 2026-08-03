@@ -1,6 +1,3 @@
-// === Module 7979: EditCollectiblesPickerList ===
-
-// Module 7979 (EditCollectiblesPickerList)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

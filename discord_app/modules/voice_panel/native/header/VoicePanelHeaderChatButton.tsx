@@ -1,6 +1,3 @@
-// === Module 15977: VoicePanelHeaderChatButton ===
-
-// Module 15977 (VoicePanelHeaderChatButton)
 import noop from "noop";
 import { ComponentActions } from "ME";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 14888: _scorePassword ===
-
-// Module 14888 (_scorePassword)
 import closure_4 from "t";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";

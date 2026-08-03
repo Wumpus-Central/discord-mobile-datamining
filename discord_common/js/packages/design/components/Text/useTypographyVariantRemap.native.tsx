@@ -1,6 +1,3 @@
-// === Module 4198: useTypographyVariantRemap ===
-
-// Module 4198 (useTypographyVariantRemap)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 
 export const useTypographyVariantRemap = function useTypographyVariantRemap(variant, arg1) {

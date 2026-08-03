@@ -1,6 +1,3 @@
-// === Module 15954: useVoicePanelCardUserStateIcons ===
-
-// Module 15954 (useVoicePanelCardUserStateIcons)
 import noop from "noop";
 import createRTCConnection from "createRTCConnection";
 import updateVoiceState from "updateVoiceState";

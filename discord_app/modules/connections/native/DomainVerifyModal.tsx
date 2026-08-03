@@ -1,6 +1,3 @@
-// === Module 9003: DomainScreen ===
-
-// Module 9003 (DomainScreen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "NavigationStack";

@@ -1,6 +1,3 @@
-// === Module 5000: officialApplicationIds ===
-
-// Module 5000 (officialApplicationIds)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

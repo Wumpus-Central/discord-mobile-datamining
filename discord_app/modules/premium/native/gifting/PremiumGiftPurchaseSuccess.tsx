@@ -1,6 +1,3 @@
-// === Module 9801: PremiumGiftSuccessBody ===
-
-// Module 9801 (PremiumGiftSuccessBody)
 import PremiumGiftBackgroundAnimation from "PremiumGiftBackgroundAnimation";
 import { View } from "_copy";
 import addSku from "addSku";

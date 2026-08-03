@@ -1,6 +1,3 @@
-// === Module 10544: CircleWithCutout ===
-
-// Module 10544 (CircleWithCutout)
 import "noop";
 import jsxProd from "jsxProd";
 

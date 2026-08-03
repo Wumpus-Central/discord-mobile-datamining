@@ -1,6 +1,3 @@
-// === Module 9391: getEmojiPickerDataRowItemNativeSection ===
-
-// Module 9391 (getEmojiPickerDataRowItemNativeSection)
 const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemNativeSection.tsx");
 
 export default function getEmojiPickerDataRowItemNativeSection(isSectionNitroLocked) {

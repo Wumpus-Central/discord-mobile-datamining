@@ -1,6 +1,3 @@
-// === Module 9972: PollEmoji ===
-
-// Module 9972 (PollEmoji)
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import importAllResult from "Directions";

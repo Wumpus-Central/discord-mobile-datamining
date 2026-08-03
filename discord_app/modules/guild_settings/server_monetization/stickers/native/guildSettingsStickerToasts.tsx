@@ -1,6 +1,3 @@
-// === Module 16437: showGuildSettingsStickerError ===
-
-// Module 16437 (showGuildSettingsStickerError)
 const result = require("getSystemLocale").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/guildSettingsStickerToasts.tsx");
 
 export const showGuildSettingsStickerError = function showGuildSettingsStickerError() {

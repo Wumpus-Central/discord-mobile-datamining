@@ -1,6 +1,3 @@
-// === Module 15942: triggerIOSHaptic ===
-
-// Module 15942 (triggerIOSHaptic)
 import { IS_IOS } from "VoicePanelModes";
 
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/triggerIOSHaptic.tsx");

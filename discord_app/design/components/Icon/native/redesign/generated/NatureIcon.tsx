@@ -1,6 +1,3 @@
-// === Module 9444: NatureIcon ===
-
-// Module 9444 (NatureIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

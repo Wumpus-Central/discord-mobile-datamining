@@ -1,6 +1,3 @@
-// === Module 15569: stripPossessive ===
-
-// Module 15569 (stripPossessive)
 import set from "MAX_MESSAGE_SEARCH_RESULTS_OFFSET";
 
 function stripPossessive(str) {

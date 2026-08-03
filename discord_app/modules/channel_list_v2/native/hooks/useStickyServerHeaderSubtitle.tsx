@@ -1,6 +1,3 @@
-// === Module 15139: useStickyServerHeaderSubtitle ===
-
-// Module 15139 (useStickyServerHeaderSubtitle)
 import handleInviteData from "handleInviteData";
 import { GuildFeatures } from "ME";
 

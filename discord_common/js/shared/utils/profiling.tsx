@@ -1,6 +1,3 @@
-// === Module 655: mark ===
-
-// Module 655 (mark)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/profiling.tsx");
 
 export function mark(arg0) {

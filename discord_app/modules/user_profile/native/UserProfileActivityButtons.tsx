@@ -1,6 +1,3 @@
-// === Module 12037: JoinActivityButton ===
-
-// Module 12037 (JoinActivityButton)
 import handleInviteData from "handleInviteData";
 import "getEmbeddedActivityLocationChannelId";
 import participantFromServer from "participantFromServer";

@@ -1,6 +1,3 @@
-// === Module 15284: YouBarButtonIcon ===
-
-// Module 15284 (YouBarButtonIcon)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";

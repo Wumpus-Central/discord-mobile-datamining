@@ -1,6 +1,3 @@
-// === Module 1907: items ===
-
-// Module 1907 (items)
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 

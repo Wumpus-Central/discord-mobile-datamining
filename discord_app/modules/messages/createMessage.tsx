@@ -1,6 +1,3 @@
-// === Module 6042: createMessage ===
-
-// Module 6042 (createMessage)
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";
 import createdAt from "createdAt";

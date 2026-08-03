@@ -1,6 +1,3 @@
-// === Module 10618: getEmbeddedActivityJoinability ===
-
-// Module 10618 (getEmbeddedActivityJoinability)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

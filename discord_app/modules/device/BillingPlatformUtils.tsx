@@ -1,6 +1,3 @@
-// === Module 3852: isPremiumGiftingSupported ===
-
-// Module 3852 (isPremiumGiftingSupported)
 const result = require("set").fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 
 export const isPremiumGiftingSupported = function isPremiumGiftingSupported() {

@@ -1,6 +1,3 @@
-// === Module 5641: ActivityIndicator ===
-
-// Module 5641 (ActivityIndicator)
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

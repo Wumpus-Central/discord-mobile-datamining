@@ -1,6 +1,3 @@
-// === Module 7109: GameDiversityTier3SmallBadge ===
-
-// Module 7109 (GameDiversityTier3SmallBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier3SmallBadge.native.tsx");

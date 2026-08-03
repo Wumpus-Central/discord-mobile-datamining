@@ -1,6 +1,3 @@
-// === Module 16197: ActivityFeedbackReasons ===
-
-// Module 16197 (ActivityFeedbackReasons)
 import "noop";
 import { ActivityFeedbackReasons } from "items3";
 import { AnalyticEvents } from "ME";

@@ -1,6 +1,3 @@
-// === Module 11139: getInlineForwardOptions ===
-
-// Module 11139 (getInlineForwardOptions)
 import { MessageReferenceTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");

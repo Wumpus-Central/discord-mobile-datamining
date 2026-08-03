@@ -1,6 +1,3 @@
-// === Module 12893: nativeMuteChanged ===
-
-// Module 12893 (nativeMuteChanged)
 import importDefaultResult from "handleAudioRouteChanged";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import importDefaultResult1 from "dispatcher";

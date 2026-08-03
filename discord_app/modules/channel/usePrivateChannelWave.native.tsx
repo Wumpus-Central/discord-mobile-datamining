@@ -1,6 +1,3 @@
-// === Module 15054: usePrivateChannelWave ===
-
-// Module 15054 (usePrivateChannelWave)
 import getDmHasMessageHistory from "getDmHasMessageHistory";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

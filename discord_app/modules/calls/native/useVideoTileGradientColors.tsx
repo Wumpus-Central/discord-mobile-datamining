@@ -1,6 +1,3 @@
-// === Module 7992: rgbToHex ===
-
-// Module 7992 (rgbToHex)
 import noop from "noop";
 import { ThemeTypes } from "ME";
 

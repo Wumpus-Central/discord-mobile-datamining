@@ -1,6 +1,3 @@
-// === Module 3829: has ===
-
-// Module 3829 (has)
 const result = require("set").fileFinishedImporting("utils/BasicPermissionUtils.tsx");
 const prototype = function BasicPermissionUtils() {
   return Object.create(new.target.prototype);

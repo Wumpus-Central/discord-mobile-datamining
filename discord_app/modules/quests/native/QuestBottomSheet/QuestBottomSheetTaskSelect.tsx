@@ -1,6 +1,3 @@
-// === Module 14203: QuestBottomSheetTaskSelect ===
-
-// Module 14203 (QuestBottomSheetTaskSelect)
 import "noop";
 import { QuestTaskPlatform } from "QuestsExperimentLocations";
 import jsxProd from "jsxProd";

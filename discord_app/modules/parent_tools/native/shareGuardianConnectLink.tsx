@@ -1,6 +1,3 @@
-// === Module 13928: shareGuardianConnectLink ===
-
-// Module 13928 (shareGuardianConnectLink)
 import { FAMILY_CENTER_REQUEST_QR_CODE_URL as closure_3 } from "items";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/parent_tools/native/shareGuardianConnectLink.tsx");

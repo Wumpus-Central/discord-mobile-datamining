@@ -1,6 +1,3 @@
-// === Module 1415: GuildNSFWContentLevel ===
-
-// Module 1415 (GuildNSFWContentLevel)
 import isValueEqual from "isValueEqual";
 import ME from "ME";
 import set from "getAvatarURL";

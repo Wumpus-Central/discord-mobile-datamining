@@ -1,6 +1,3 @@
-// === Module 9324: items ===
-
-// Module 9324 (items)
 import PremiumFeaturesCards from "PremiumFeaturesCards";
 import get_ActivityIndicator from "getPremiumPlanItem";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 530: sendRequest ===
-
-// Module 530 (sendRequest)
 import set from "fails";
 
 function sendRequest(arg0, url) {

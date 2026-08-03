@@ -1,6 +1,3 @@
-// === Module 4216: createExecutable ===
-
-// Module 4216 (createExecutable)
 import "toJS";
 import createFromServer from "createFromServer";
 import createdAt from "createdAt";

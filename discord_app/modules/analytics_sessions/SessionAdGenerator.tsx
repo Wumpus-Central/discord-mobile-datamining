@@ -1,6 +1,3 @@
-// === Module 6009: getOrRefreshAdSession ===
-
-// Module 6009 (getOrRefreshAdSession)
 const require = arg1;
 let closure_3 = 12 * require("set").Millis.HOUR;
 let c4 = null;

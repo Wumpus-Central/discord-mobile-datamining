@@ -1,6 +1,3 @@
-// === Module 6693: transitionToGuild ===
-
-// Module 6693 (transitionToGuild)
 import { Routes } from "ME";
 
 let result = require("LayoutAnimation").fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");

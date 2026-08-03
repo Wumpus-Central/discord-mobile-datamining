@@ -1,6 +1,3 @@
-// === Module 14199: useVideoExternallyPaused ===
-
-// Module 14199 (useVideoExternallyPaused)
 import setContent from "setContent";
 
 const require = arg1;

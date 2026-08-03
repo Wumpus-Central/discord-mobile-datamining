@@ -1,6 +1,3 @@
-// === Module 15876: keyExtractor ===
-
-// Module 15876 (keyExtractor)
 import noop from "noop";
 import { Fonts } from "ME";
 import jsxProd from "jsxProd";

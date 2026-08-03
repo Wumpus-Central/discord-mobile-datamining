@@ -1,6 +1,3 @@
-// === Module 11036: GuildRaidLockdownFeedbackActionSheet ===
-
-// Module 11036 (GuildRaidLockdownFeedbackActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { AnalyticEvents } from "ME";

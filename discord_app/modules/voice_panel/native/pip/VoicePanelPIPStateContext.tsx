@@ -1,6 +1,3 @@
-// === Module 15940: context ===
-
-// Module 15940 (context)
 import importAllResult from "noop";
 
 let c0 = importAllResult;

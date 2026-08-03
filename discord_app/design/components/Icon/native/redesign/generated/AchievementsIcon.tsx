@@ -1,6 +1,3 @@
-// === Module 13669: AchievementsIcon ===
-
-// Module 13669 (AchievementsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

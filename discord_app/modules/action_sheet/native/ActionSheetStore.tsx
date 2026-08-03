@@ -1,6 +1,3 @@
-// === Module 3886: setContent ===
-
-// Module 3886 (setContent)
 import { Store } from "initialize";
 
 let array = new Array();

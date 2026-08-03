@@ -1,6 +1,3 @@
-// === Module 9184: UserVerification ===
-
-// Module 9184 (UserVerification)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

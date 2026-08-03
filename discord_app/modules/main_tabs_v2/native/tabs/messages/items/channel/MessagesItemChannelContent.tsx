@@ -1,6 +1,3 @@
-// === Module 15052: MessagesItemChannelContentIcon ===
-
-// Module 15052 (MessagesItemChannelContentIcon)
 import { View } from "useMessagePreview";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";

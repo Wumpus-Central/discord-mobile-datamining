@@ -1,6 +1,3 @@
-// === Module 4720: HubIcon ===
-
-// Module 4720 (HubIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

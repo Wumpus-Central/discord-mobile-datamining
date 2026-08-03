@@ -1,6 +1,3 @@
-// === Module 11321: AppDetailsOverflowMenu ===
-
-// Module 11321 (AppDetailsOverflowMenu)
 import "noop";
 import { jsx } from "jsxProd";
 

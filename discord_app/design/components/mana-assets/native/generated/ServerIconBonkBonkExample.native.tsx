@@ -1,6 +1,3 @@
-// === Module 7455: ServerIconBonkBonkExample ===
-
-// Module 7455 (ServerIconBonkBonkExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconBonkBonkExample.native.tsx");

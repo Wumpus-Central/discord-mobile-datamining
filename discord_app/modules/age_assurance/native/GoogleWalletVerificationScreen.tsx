@@ -1,6 +1,3 @@
-// === Module 7621: GoogleWalletVerificationScreen ===
-
-// Module 7621 (GoogleWalletVerificationScreen)
 import useNavigation from "useNavigation";
 import _slicedToArray from "_slicedToArray";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 10800: VoiceProcessingOptions ===
-
-// Module 10800 (VoiceProcessingOptions)
 import "noop";
 import { View } from "set";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

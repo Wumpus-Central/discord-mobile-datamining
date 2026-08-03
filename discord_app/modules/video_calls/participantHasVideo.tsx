@@ -1,6 +1,3 @@
-// === Module 10056: canRenderParticipantVideo ===
-
-// Module 10056 (canRenderParticipantVideo)
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import ParticipantTypes from "ParticipantTypes";

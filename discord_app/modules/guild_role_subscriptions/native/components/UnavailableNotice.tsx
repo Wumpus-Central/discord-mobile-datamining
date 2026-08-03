@@ -1,6 +1,3 @@
-// === Module 15426: UnavailableNotice ===
-
-// Module 15426 (UnavailableNotice)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

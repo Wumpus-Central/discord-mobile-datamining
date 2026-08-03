@@ -1,6 +1,3 @@
-// === Module 12309: BlockedDomainActionSheet ===
-
-// Module 12309 (BlockedDomainActionSheet)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

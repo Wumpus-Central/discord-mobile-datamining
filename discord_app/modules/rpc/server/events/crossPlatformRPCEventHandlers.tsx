@@ -1,6 +1,3 @@
-// === Module 13594: messageEventsValidation ===
-
-// Module 13594 (messageEventsValidation)
 import addApplication from "addApplication";
 import initialize from "initialize";
 import { getGuildIconURL } from "GuildNSFWContentLevel";

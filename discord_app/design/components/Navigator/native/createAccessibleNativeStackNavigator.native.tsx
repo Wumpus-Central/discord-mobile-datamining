@@ -1,6 +1,3 @@
-// === Module 13235: navigatorFactory ===
-
-// Module 13235 (navigatorFactory)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import Link from "Link";

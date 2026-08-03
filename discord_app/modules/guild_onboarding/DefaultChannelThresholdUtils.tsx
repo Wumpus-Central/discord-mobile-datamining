@@ -1,6 +1,3 @@
-// === Module 8283: _isDefaultChannelThresholdMetAfterDelete ===
-
-// Module 8283 (_isDefaultChannelThresholdMetAfterDelete)
 import fetchOnboardingPrompts from "fetchOnboardingPrompts";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleUpdate from "handleUpdate";

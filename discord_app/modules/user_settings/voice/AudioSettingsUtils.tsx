@@ -1,6 +1,3 @@
-// === Module 8849: snapVolumeToDefault ===
-
-// Module 8849 (snapVolumeToDefault)
 import { ProtoAudioSettingsContextTypes as closure_2 } from "MAX_FAVORITES";
 
 let result = require("AudioSettingsDefaultVolumes").fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");

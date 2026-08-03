@@ -1,6 +1,3 @@
-// === Module 4523: performRedirect ===
-
-// Module 4523 (performRedirect)
 import sendRequest from "sendRequest";
 import ME from "ME";
 import { PaymentSourceTypes } from "sum";

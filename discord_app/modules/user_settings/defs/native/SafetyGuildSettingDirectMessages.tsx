@@ -1,6 +1,3 @@
-// === Module 14684: toggle ===
-
-// Module 14684 (toggle)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";

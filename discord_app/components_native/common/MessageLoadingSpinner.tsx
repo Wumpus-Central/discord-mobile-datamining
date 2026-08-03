@@ -1,6 +1,3 @@
-// === Module 10576: result ===
-
-// Module 10576 (result)
 import "noop";
 import { jsx } from "jsxProd";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 7858: getCurrentTime ===
-
-// Module 7858 (getCurrentTime)
 import getHash from "getHash";
 import initialize from "initialize";
 import recomputeAffinities from "recomputeAffinities";

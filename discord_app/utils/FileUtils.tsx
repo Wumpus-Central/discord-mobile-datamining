@@ -1,6 +1,3 @@
-// === Module 4731: getUploadFileSizeSum ===
-
-// Module 4731 (getUploadFileSizeSum)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

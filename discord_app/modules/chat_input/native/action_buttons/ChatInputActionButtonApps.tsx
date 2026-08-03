@@ -1,6 +1,3 @@
-// === Module 11415: ? ===
-
-// Module 11415
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { ChatInputActionType } from "TextAreaCta";

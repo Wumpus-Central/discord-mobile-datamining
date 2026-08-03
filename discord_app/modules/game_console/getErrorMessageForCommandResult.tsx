@@ -1,6 +1,3 @@
-// === Module 16209: ? ===
-
-// Module 16209
 import { GameConsoleCommandResultErrorCodes as closure_3 } from "XBOX_URL_BASE";
 
 const result = require("combined").fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");

@@ -1,6 +1,3 @@
-// === Module 8104: OverrideProfileFrameLayer ===
-
-// Module 8104 (OverrideProfileFrameLayer)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO";

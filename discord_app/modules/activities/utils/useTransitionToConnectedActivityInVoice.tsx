@@ -1,6 +1,3 @@
-// === Module 15901: useTransitionToConnectedActivityInVoice ===
-
-// Module 15901 (useTransitionToConnectedActivityInVoice)
 import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

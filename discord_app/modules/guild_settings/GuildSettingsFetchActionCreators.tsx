@@ -1,6 +1,3 @@
-// === Module 8315: _fetchGuildIntegrationsApplications ===
-
-// Module 8315 (_fetchGuildIntegrationsApplications)
 import dispatcher from "dispatcher";
 import { BasicApplicationRecord } from "createExecutable";
 import createdAt from "createdAt";

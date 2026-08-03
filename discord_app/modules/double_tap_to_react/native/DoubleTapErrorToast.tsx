@@ -1,6 +1,3 @@
-// === Module 7758: DoubleTapErrorToastIcon ===
-
-// Module 7758 (DoubleTapErrorToastIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { EmojiDisabledReasons } from "set";

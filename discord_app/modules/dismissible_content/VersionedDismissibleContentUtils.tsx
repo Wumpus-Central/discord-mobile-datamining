@@ -1,6 +1,3 @@
-// === Module 1370: getVersionedDismissibleContentCurrentVersion ===
-
-// Module 1370 (getVersionedDismissibleContentCurrentVersion)
 import participantFromServer from "participantFromServer";
 import getMarketingBySurface from "getMarketingBySurface";
 

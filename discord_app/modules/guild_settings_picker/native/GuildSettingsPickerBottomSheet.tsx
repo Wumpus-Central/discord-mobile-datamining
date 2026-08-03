@@ -1,6 +1,3 @@
-// === Module 13047: GuildSettingsPickerBottomSheet ===
-
-// Module 13047 (GuildSettingsPickerBottomSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

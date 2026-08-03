@@ -1,6 +1,3 @@
-// === Module 15355: ? ===
-
-// Module 15355
 import dispatcher from "dispatcher";
 import { Endpoints } from "ME";
 

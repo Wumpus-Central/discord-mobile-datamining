@@ -1,6 +1,3 @@
-// === Module 13266: shouldRun ===
-
-// Module 13266 (shouldRun)
 import expandEventProperties from "expandEventProperties";
 import "getIntervalMs";
 import importDefaultResult1 from "TelemetryChannel";

@@ -1,6 +1,3 @@
-// === Module 1866: items ===
-
-// Module 1866 (items)
 import { ensureValidMode } from "ensureValidMode";
 
 let c4 = new require("module_38")("libdiscoreExperiments");

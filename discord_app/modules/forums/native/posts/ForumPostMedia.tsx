@@ -1,6 +1,3 @@
-// === Module 11200: ForumPostMediaAndroid ===
-
-// Module 11200 (ForumPostMediaAndroid)
 import _slicedToArray from "_slicedToArray";
 import AccessibilityAnnouncer from "AccessibilityAnnouncer";
 import get_ActivityIndicator from "AgeVerificationModalEntryPoint";

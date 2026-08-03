@@ -1,6 +1,3 @@
-// === Module 9024: styles ===
-
-// Module 9024 (styles)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { Permissions } from "ME";

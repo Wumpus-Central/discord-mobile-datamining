@@ -1,6 +1,3 @@
-// === Module 8274: useStageChannelUpsellCardStore ===
-
-// Module 8274 (useStageChannelUpsellCardStore)
 import { GUILD_EVENT_STAGE_UPSELL_CARD_KEY as closure_2 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import identity from "identity";
 

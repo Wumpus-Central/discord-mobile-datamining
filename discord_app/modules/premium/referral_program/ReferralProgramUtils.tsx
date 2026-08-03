@@ -1,6 +1,3 @@
-// === Module 7841: getReferralTrialOfferExpirationCopy ===
-
-// Module 7841 (getReferralTrialOfferExpirationCopy)
 import emitChanges from "emitChanges";
 import { ContentDismissActionType } from "ContentDismissActionType";
 

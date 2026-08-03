@@ -1,6 +1,3 @@
-// === Module 6510: getSearchSessionId ===
-
-// Module 6510 (getSearchSessionId)
 class SettingSearchSessionAnalyticsManager {
 }
 const prototype = SettingSearchSessionAnalyticsManager.prototype;

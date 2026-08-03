@@ -1,6 +1,3 @@
-// === Module 12638: _updateGuildRoleSubscriptionGroupListing ===
-
-// Module 12638 (_updateGuildRoleSubscriptionGroupListing)
 import set from "set";
 import { Endpoints } from "ME";
 import { PriceTierTypes } from "sum";

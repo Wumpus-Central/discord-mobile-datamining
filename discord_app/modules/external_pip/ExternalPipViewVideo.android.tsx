@@ -1,6 +1,3 @@
-// === Module 15851: ExternalPipViewVideoUnavailable ===
-
-// Module 15851 (ExternalPipViewVideoUnavailable)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "useExternalPipParticipant";
 import get_ActivityIndicator from "updateVideoSize";

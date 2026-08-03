@@ -1,6 +1,3 @@
-// === Module 6007: initialize ===
-
-// Module 6007 (initialize)
 import init from "init";
 import { DeviceSettingsStore } from "initialize";
 

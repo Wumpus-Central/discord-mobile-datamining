@@ -1,6 +1,3 @@
-// === Module 14361: items ===
-
-// Module 14361 (items)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";

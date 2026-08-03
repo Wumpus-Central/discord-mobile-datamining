@@ -1,6 +1,3 @@
-// === Module 10880: RootThemeContextProvider ===
-
-// Module 10880 (RootThemeContextProvider)
 import noop from "noop";
 import { ThemeTypes } from "sum";
 import { jsx } from "jsxProd";

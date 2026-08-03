@@ -1,6 +1,3 @@
-// === Module 11389: PollDurationRadioGroup ===
-
-// Module 11389 (PollDurationRadioGroup)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

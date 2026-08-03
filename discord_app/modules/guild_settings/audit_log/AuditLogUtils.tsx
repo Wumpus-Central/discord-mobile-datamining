@@ -1,6 +1,3 @@
-// === Module 16395: getPermissionChanges ===
-
-// Module 16395 (getPermissionChanges)
 import getEmojiToGroupId from "getEmojiToGroupId";
 import handleUpdate from "handleUpdate";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";

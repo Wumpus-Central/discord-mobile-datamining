@@ -1,6 +1,3 @@
-// === Module 15585: MuteButton ===
-
-// Module 15585 (MuteButton)
 import importAllResult from "registerAsset";
 import { View } from "IconButton";
 import initialize from "initialize";

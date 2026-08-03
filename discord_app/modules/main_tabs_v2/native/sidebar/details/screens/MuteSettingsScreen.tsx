@@ -1,6 +1,3 @@
-// === Module 15712: UnmuteOptions ===
-
-// Module 15712 (UnmuteOptions)
 import importAllResult from "computeChannelName";
 import { View } from "Text";
 import ensureGuildLoaded from "ensureGuildLoaded";

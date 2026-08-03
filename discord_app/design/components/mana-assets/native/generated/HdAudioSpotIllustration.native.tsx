@@ -1,6 +1,3 @@
-// === Module 7229: HdAudioSpotIllustration ===
-
-// Module 7229 (HdAudioSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/HdAudioSpotIllustration.native.tsx");

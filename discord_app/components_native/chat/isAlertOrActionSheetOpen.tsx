@@ -1,6 +1,3 @@
-// === Module 9522: isAlertOrActionSheetOpen ===
-
-// Module 9522 (isAlertOrActionSheetOpen)
 import setContent from "setContent";
 import getAlert from "getAlert";
 

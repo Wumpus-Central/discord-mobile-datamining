@@ -1,6 +1,3 @@
-// === Module 15827: renderChannelWrapper ===
-
-// Module 15827 (renderChannelWrapper)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8475: badgeVariants ===
-
-// Module 8475 (badgeVariants)
 const require = arg1;
 let obj = {};
 obj = { imageSource: null };

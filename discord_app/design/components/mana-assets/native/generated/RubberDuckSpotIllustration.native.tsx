@@ -1,6 +1,3 @@
-// === Module 7427: RubberDuckSpotIllustration ===
-
-// Module 7427 (RubberDuckSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/RubberDuckSpotIllustration.native.tsx");

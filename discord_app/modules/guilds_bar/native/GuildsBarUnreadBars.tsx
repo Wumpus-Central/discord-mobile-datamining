@@ -1,6 +1,3 @@
-// === Module 15032: checkNodeAndIterate ===
-
-// Module 15032 (checkNodeAndIterate)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "set";
 import { View } from "module_4054";

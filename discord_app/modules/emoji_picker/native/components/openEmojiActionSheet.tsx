@@ -1,6 +1,3 @@
-// === Module 9419: openEmojiActionSheet ===
-
-// Module 9419 (openEmojiActionSheet)
 import { EMOJI_URL_BASE_SIZE } from "set";
 
 let result = require("dismissGlobalKeyboard").fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");

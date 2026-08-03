@@ -1,6 +1,3 @@
-// === Module 11072: _transformClientActionToApiAction ===
-
-// Module 11072 (_transformClientActionToApiAction)
 import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

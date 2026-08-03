@@ -1,6 +1,3 @@
-// === Module 15725: MessageRequestRowSenderDetails ===
-
-// Module 15725 (MessageRequestRowSenderDetails)
 import "noop";
 import { View } from "get ActivityIndicator";
 import upsertRelationship from "upsertRelationship";

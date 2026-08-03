@@ -1,6 +1,3 @@
-// === Module 15544: SearchableMembersScreen ===
-
-// Module 15544 (SearchableMembersScreen)
 import importAllResult from "dismissGlobalKeyboard";
 import { View } from "useFullscreenPlaceholderCount";
 import { EVERYONE_CHANNEL_ID } from "getMemberListId";

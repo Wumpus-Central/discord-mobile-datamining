@@ -1,6 +1,3 @@
-// === Module 16620: FormEmojiPicker ===
-
-// Module 16620 (FormEmojiPicker)
 import "set";
 import { Fonts } from "ME";
 import { EmojiIntention } from "set";

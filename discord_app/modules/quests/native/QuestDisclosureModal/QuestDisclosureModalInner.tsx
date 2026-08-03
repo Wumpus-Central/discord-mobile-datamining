@@ -1,6 +1,3 @@
-// === Module 14152: QuestDisclosureModalInner ===
-
-// Module 14152 (QuestDisclosureModalInner)
 import { View } from "set";
 import { HelpdeskArticles } from "ME";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 6216: _fetchReferralEligibleUsers ===
-
-// Module 6216 (_fetchReferralEligibleUsers)
 import dispatcher from "dispatcher";
 import createdAt from "createdAt";
 import handleConnectionOpen from "handleConnectionOpen";

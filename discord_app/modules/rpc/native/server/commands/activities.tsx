@@ -1,6 +1,3 @@
-// === Module 13588: RPC_LOCAL_SCOPE ===
-
-// Module 13588 (RPC_LOCAL_SCOPE)
 import validateOpenInviteDialog from "validateOpenInviteDialog";
 import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 1300: getTextStyles ===
-
-// Module 1300 (getTextStyles)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { getThemedRippleConfig } from "semanticColor";

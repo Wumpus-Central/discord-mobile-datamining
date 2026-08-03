@@ -1,6 +1,3 @@
-// === Module 10360: uriScheme ===
-
-// Module 10360 (uriScheme)
 import set from "set";
 
 const require = arg1;

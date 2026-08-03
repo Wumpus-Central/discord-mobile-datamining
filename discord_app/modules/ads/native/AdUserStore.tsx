@@ -1,6 +1,3 @@
-// === Module 6019: adUser ===
-
-// Module 6019 (adUser)
 import { Store } from "initialize";
 
 let c1 = false;

@@ -1,6 +1,3 @@
-// === Module 13561: ACTIVITY_SHARE_LINK_MODAL ===
-
-// Module 13561 (ACTIVITY_SHARE_LINK_MODAL)
 const ACTIVITY_SHARE_LINK_MODAL = "ACTIVITY_SHARE_LINK_MODAL";
 const result = require("ActivityShareLinkModal").fileFinishedImporting("modules/activities/openActivityShareLinkModal.native.tsx");
 

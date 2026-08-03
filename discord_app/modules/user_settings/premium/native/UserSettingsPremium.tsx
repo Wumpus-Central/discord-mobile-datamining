@@ -1,6 +1,3 @@
-// === Module 6330: UserSettingsPremium ===
-
-// Module 6330 (UserSettingsPremium)
 import _fetchUserOffer from "_fetchUserOffer";
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "useSettingNavigationRoute";

@@ -1,6 +1,3 @@
-// === Module 11786: _requestAndSyncContacts ===
-
-// Module 11786 (_requestAndSyncContacts)
 import ME from "ME";
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";

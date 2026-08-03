@@ -1,6 +1,3 @@
-// === Module 4704: ForumLockIcon ===
-
-// Module 4704 (ForumLockIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

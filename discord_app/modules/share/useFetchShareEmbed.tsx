@@ -1,6 +1,3 @@
-// === Module 13059: useFetchShareEmbed ===
-
-// Module 13059 (useFetchShareEmbed)
 import batchUpdates from "batchUpdates";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

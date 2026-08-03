@@ -1,6 +1,3 @@
-// === Module 15870: triggerIOSHaptic ===
-
-// Module 15870 (triggerIOSHaptic)
 import { IS_IOS } from "MIN_PAN_GESTURE_MOVE";
 
 let result = require("set").fileFinishedImporting("modules/panels/morphable/native/triggerIOSHaptic.tsx");

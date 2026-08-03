@@ -1,6 +1,3 @@
-// === Module 8114: set ===
-
-// Module 8114 (set)
 import set from "set";
 
 let set = new Set(Object.values(require("LEGACY_BADGE_ID_MAP").LEGACY_BADGE_ID_MAP));

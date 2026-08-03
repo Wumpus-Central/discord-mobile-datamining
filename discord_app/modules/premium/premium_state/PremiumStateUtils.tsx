@@ -1,6 +1,3 @@
-// === Module 1889: parseServerPremiumState ===
-
-// Module 1889 (parseServerPremiumState)
 const result = require("set").fileFinishedImporting("modules/premium/premium_state/PremiumStateUtils.tsx");
 
 export const parseServerPremiumState = function parseServerPremiumState(premium_state) {

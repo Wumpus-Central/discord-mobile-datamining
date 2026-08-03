@@ -1,6 +1,3 @@
-// === Module 11047: ? ===
-
-// Module 11047
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const result = require("showTooManyUserGuildsAlert").fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");

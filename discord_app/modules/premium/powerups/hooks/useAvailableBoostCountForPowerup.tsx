@@ -1,6 +1,3 @@
-// === Module 11640: useAvailableBoostCountForPowerup ===
-
-// Module 11640 (useAvailableBoostCountForPowerup)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

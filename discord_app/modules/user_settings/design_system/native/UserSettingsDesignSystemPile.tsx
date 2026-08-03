@@ -1,6 +1,3 @@
-// === Module 14611: SampleCard ===
-
-// Module 14611 (SampleCard)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

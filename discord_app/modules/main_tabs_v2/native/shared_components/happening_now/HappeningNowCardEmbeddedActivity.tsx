@@ -1,6 +1,3 @@
-// === Module 15100: HappeningNowCardEmbeddedActivity ===
-
-// Module 15100 (HappeningNowCardEmbeddedActivity)
 import _slicedToArray from "_slicedToArray";
 import encodeProperties from "encodeProperties";
 import { View } from "module_4054";

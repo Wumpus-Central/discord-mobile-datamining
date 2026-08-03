@@ -1,6 +1,3 @@
-// === Module 1475: getDimensionsStoreStateForEntry ===
-
-// Module 1475 (getDimensionsStoreStateForEntry)
 import { Dimensions } from "get ActivityIndicator";
 import keys from "keys";
 import importDefaultResult from "subscribeToKeyboardUIStore";

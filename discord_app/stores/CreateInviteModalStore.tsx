@@ -1,6 +1,3 @@
-// === Module 8353: updateWithLatestInvite ===
-
-// Module 8353 (updateWithLatestInvite)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import map from "map";

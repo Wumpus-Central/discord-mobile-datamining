@@ -1,6 +1,3 @@
-// === Module 11251: AppsBaner ===
-
-// Module 11251 (AppsBaner)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

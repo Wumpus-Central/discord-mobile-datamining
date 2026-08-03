@@ -1,6 +1,3 @@
-// === Module 1862: createGuildRecordFromRust ===
-
-// Module 1862 (createGuildRecordFromRust)
 import isValueEqual from "isValueEqual";
 import { LibdiscoreStore } from "identity";
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";

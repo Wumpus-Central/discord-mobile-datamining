@@ -1,6 +1,3 @@
-// === Module 14086: BountiesModalAdvertiserCtaContent ===
-
-// Module 14086 (BountiesModalAdvertiserCtaContent)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import BackgroundBlurView from "BackgroundBlurView";
 import get_ActivityIndicator from "getQuestContentName";

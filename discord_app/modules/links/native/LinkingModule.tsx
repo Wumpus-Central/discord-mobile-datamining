@@ -1,6 +1,3 @@
-// === Module 3887: ? ===
-
-// Module 3887
 import { NativeModules } from "get ActivityIndicator";
 
 let result = require("enforcing").fileFinishedImporting("modules/links/native/LinkingModule.tsx");

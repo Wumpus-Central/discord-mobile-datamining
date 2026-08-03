@@ -1,6 +1,3 @@
-// === Module 8390: AVERAGE_FONT_WIDTH_RATIO ===
-
-// Module 8390 (AVERAGE_FONT_WIDTH_RATIO)
 import importAllResult from "getNodeText";
 import get_ActivityIndicator from "Text";
 import { MIN_PRISM_GRADIENT_WIDTH } from "items3";

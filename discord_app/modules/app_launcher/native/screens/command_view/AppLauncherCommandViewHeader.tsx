@@ -1,6 +1,3 @@
-// === Module 11345: DEFAULT_CONTENT_PADDING ===
-
-// Module 11345 (DEFAULT_CONTENT_PADDING)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";

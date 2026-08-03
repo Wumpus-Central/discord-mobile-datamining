@@ -1,6 +1,3 @@
-// === Module 16542: useGuildApplication ===
-
-// Module 16542 (useGuildApplication)
 import fetchApplication from "fetchApplication";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

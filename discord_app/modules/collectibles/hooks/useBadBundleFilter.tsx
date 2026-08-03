@@ -1,6 +1,3 @@
-// === Module 14122: useBadBundleFilter ===
-
-// Module 14122 (useBadBundleFilter)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import map from "map";
 

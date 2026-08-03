@@ -1,6 +1,3 @@
-// === Module 7265: LongMessageSpotIllustration ===
-
-// Module 7265 (LongMessageSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/LongMessageSpotIllustration.native.tsx");

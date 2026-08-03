@@ -1,6 +1,3 @@
-// === Module 15955: ChannelButtonIcons ===
-
-// Module 15955 (ChannelButtonIcons)
 import importAllResult from "registerAsset";
 import { View } from "dismissPanel";
 import addApplication from "addApplication";

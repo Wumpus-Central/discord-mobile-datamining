@@ -1,6 +1,3 @@
-// === Module 5832: fromServer ===
-
-// Module 5832 (fromServer)
 import fromServer from "fromServer";
 import { CountdownTimerBlockRecord } from "fromServer";
 import { FeaturedBlockRecord } from "fromServer";

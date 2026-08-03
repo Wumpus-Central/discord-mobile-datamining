@@ -1,6 +1,3 @@
-// === Module 13196: ActionSheetPresenter ===
-
-// Module 13196 (ActionSheetPresenter)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";

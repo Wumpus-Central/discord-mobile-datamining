@@ -1,6 +1,3 @@
-// === Module 11723: defaultCountFormatter ===
-
-// Module 11723 (defaultCountFormatter)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";

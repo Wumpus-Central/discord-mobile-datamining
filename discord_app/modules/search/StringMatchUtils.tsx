@@ -1,6 +1,3 @@
-// === Module 14728: calculateJaroWinklerDistance ===
-
-// Module 14728 (calculateJaroWinklerDistance)
 function calculateJaroWinklerDistance(formatted, arg1) {
   const diff = Math.floor(Math.max(formatted.length, arg1.length) / 2) - 1;
   const items = [];

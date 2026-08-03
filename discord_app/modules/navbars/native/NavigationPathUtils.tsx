@@ -1,6 +1,3 @@
-// === Module 11888: SpecialNavigationPath ===
-
-// Module 11888 (SpecialNavigationPath)
 import { Routes } from "ME";
 
 let obj = { FRIENDS: 0, [0]: "FRIENDS" };

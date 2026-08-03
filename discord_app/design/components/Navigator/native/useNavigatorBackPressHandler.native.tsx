@@ -1,6 +1,3 @@
-// === Module 5153: useNavigatorBackPressHandler ===
-
-// Module 5153 (useNavigatorBackPressHandler)
 import noop from "noop";
 
 const require = arg1;

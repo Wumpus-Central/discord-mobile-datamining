@@ -1,6 +1,3 @@
-// === Module 9002: CrunchyrollLinkDiscordError ===
-
-// Module 9002 (CrunchyrollLinkDiscordError)
 import "noop";
 import { CrunchyrollLinkModalScenes as closure_2 } from "CrunchyrollLinkModalScenes";
 import { jsx } from "jsxProd";

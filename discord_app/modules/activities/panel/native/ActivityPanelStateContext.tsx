@@ -1,6 +1,3 @@
-// === Module 15863: useActivityWebViewLock ===
-
-// Module 15863 (useActivityWebViewLock)
 import createFakeSharedValue from "createFakeSharedValue";
 import createFakeSharedValue from "createFakeSharedValue";
 import createFakeSharedValue from "createFakeSharedValue";

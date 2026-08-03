@@ -1,6 +1,3 @@
-// === Module 5006: selectVoiceChannelAdditional ===
-
-// Module 5006 (selectVoiceChannelAdditional)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import recomputeGuild from "recomputeGuild";

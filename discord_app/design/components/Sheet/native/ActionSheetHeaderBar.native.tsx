@@ -1,6 +1,3 @@
-// === Module 5503: ActionSheetHeaderBar ===
-
-// Module 5503 (ActionSheetHeaderBar)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

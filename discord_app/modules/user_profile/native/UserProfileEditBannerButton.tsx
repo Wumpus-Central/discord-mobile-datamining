@@ -1,6 +1,3 @@
-// === Module 13711: ProfilePreviewButton ===
-
-// Module 13711 (ProfilePreviewButton)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

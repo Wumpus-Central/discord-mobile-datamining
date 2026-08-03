@@ -1,6 +1,3 @@
-// === Module 6254: validatePurchase ===
-
-// Module 6254 (validatePurchase)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import reset from "reset";
 import set from "set";

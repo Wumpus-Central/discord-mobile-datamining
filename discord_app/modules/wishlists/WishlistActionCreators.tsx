@@ -1,6 +1,3 @@
-// === Module 8690: extraWishlistParams ===
-
-// Module 8690 (extraWishlistParams)
 import fromServer from "fromServer";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";

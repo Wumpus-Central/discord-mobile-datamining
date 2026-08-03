@@ -1,6 +1,3 @@
-// === Module 11012: UserExperimentDebugView ===
-
-// Module 11012 (UserExperimentDebugView)
 import Background from "Background";
 import importAllResult from "module_9250";
 import { View } from "getNoResultsSource";

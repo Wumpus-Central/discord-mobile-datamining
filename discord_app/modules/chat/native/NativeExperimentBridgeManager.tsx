@@ -1,6 +1,3 @@
-// === Module 16680: syncYYTextReplacementExperiment ===
-
-// Module 16680 (syncYYTextReplacementExperiment)
 import { NativeModules } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
 import fetchFingerprint from "fetchFingerprint";

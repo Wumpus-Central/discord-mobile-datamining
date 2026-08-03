@@ -1,6 +1,3 @@
-// === Module 10947: TopicsIcon ===
-
-// Module 10947 (TopicsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

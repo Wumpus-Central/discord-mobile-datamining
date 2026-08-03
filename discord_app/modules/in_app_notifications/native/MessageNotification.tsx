@@ -1,6 +1,3 @@
-// === Module 10292: ? ===
-
-// Module 10292
 import importAllResult from "checkReactionResponse";
 import { View } from "context";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

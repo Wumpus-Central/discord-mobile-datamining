@@ -1,6 +1,3 @@
-// === Module 9965: ForLaterMessageRow ===
-
-// Module 9965 (ForLaterMessageRow)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

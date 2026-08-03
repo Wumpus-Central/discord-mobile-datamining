@@ -1,6 +1,3 @@
-// === Module 9028: ApplicationDetailsEntry ===
-
-// Module 9028 (ApplicationDetailsEntry)
 import "Text";
 import { View } from "RobotIcon";
 import jsxProd from "jsxProd";

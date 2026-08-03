@@ -1,6 +1,3 @@
-// === Module 10914: useMessagePreviewHeightStore ===
-
-// Module 10914 (useMessagePreviewHeightStore)
 import keys from "keys";
 
 const obj = keys.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));

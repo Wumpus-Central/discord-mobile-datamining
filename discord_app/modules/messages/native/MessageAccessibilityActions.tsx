@@ -1,6 +1,3 @@
-// === Module 7754: MessageAccessibilityAction ===
-
-// Module 7754 (MessageAccessibilityAction)
 import recomputeGuild from "recomputeGuild";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";

@@ -1,6 +1,3 @@
-// === Module 3998: TeenScreenTimeRive ===
-
-// Module 3998 (TeenScreenTimeRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

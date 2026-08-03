@@ -1,6 +1,3 @@
-// === Module 12871: id ===
-
-// Module 12871 (id)
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";

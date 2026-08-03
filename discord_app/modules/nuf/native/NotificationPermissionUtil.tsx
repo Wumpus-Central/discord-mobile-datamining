@@ -1,6 +1,3 @@
-// === Module 11519: _requestPushNotificationPermission ===
-
-// Module 11519 (_requestPushNotificationPermission)
 import _slicedToArray from "_slicedToArray";
 import EventActionType from "EventActionType";
 import noop from "noop";

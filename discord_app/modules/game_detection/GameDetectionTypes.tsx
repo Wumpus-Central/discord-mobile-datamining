@@ -1,6 +1,3 @@
-// === Module 4227: GameTheme ===
-
-// Module 4227 (GameTheme)
 import "toJS";
 import { createExecutable } from "createExecutable";
 

@@ -1,6 +1,3 @@
-// === Module 4774: _shouldConvertToWebP ===
-
-// Module 4774 (_shouldConvertToWebP)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

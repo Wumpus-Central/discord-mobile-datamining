@@ -1,6 +1,3 @@
-// === Module 8074: NameplateInner ===
-
-// Module 8074 (NameplateInner)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8755: AvatarDecorationProductPreview ===
-
-// Module 8755 (AvatarDecorationProductPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

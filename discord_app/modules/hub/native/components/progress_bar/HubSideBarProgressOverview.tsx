@@ -1,6 +1,3 @@
-// === Module 15200: HubSidebarProgressOverview ===
-
-// Module 15200 (HubSidebarProgressOverview)
 import "noop";
 import items from "items";
 import { jsx } from "jsxProd";

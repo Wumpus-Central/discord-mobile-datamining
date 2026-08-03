@@ -1,6 +1,3 @@
-// === Module 5059: dedupeEmojisByNameOrId ===
-
-// Module 5059 (dedupeEmojisByNameOrId)
 let result = require("set").fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
 
 export default function dedupeEmojisByNameOrId(arg0) {

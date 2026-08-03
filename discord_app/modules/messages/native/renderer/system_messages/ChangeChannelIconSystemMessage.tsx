@@ -1,6 +1,3 @@
-// === Module 7769: createChangeChannelIconSystemMessage ===
-
-// Module 7769 (createChangeChannelIconSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

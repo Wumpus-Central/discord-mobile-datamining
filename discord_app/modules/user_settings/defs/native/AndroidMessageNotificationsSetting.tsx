@@ -1,6 +1,3 @@
-// === Module 14470: useAndroidMessageNotificationsSettingValue ===
-
-// Module 14470 (useAndroidMessageNotificationsSettingValue)
 import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore";
 import createToggle from "createToggle";
 

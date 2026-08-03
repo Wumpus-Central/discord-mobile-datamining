@@ -1,6 +1,3 @@
-// === Module 10477: useShowChannelOptInNotice ===
-
-// Module 10477 (useShowChannelOptInNotice)
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { NULL_STRING_GUILD_ID } from "ME";
 import { ChannelFlags } from "set";

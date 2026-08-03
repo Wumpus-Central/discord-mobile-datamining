@@ -1,6 +1,3 @@
-// === Module 14852: MountMeasure ===
-
-// Module 14852 (MountMeasure)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

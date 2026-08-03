@@ -1,6 +1,3 @@
-// === Module 15194: GuildHomeChannelRow ===
-
-// Module 15194 (GuildHomeChannelRow)
 import noop from "noop";
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";

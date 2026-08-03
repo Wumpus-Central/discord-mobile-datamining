@@ -1,6 +1,3 @@
-// === Module 13127: _fetchGuildForPopout ===
-
-// Module 13127 (_fetchGuildForPopout)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

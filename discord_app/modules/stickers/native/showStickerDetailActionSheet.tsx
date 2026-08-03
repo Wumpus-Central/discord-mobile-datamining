@@ -1,6 +1,3 @@
-// === Module 9651: hideStickerDetailActionSheet ===
-
-// Module 9651 (hideStickerDetailActionSheet)
 const sticker_detail_action_sheet = "sticker_detail_action_sheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/stickers/native/showStickerDetailActionSheet.tsx");
 

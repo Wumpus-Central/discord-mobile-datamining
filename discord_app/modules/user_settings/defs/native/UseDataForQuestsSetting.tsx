@@ -1,6 +1,3 @@
-// === Module 14669: toggle ===
-
-// Module 14669 (toggle)
 import createToggle from "createToggle";
 
 const toggle = createToggle.createToggle({

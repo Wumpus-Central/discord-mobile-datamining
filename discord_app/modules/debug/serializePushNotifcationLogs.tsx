@@ -1,6 +1,3 @@
-// === Module 10366: serializePushNotificationLogs ===
-
-// Module 10366 (serializePushNotificationLogs)
 import ME from "ME";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 15141: FavoritesGuildActionSheet ===
-
-// Module 15141 (FavoritesGuildActionSheet)
 import "noop";
 import jsxProd from "jsxProd";
 

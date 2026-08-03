@@ -1,6 +1,3 @@
-// === Module 14126: ListEdgeSpacer ===
-
-// Module 14126 (ListEdgeSpacer)
 import _slicedToArray from "_slicedToArray";
 import Layer from "Layer";
 import { View } from "getQuestContentName";

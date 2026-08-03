@@ -1,6 +1,3 @@
-// === Module 7848: createReferralTrialEmbedRedeemable ===
-
-// Module 7848 (createReferralTrialEmbedRedeemable)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";

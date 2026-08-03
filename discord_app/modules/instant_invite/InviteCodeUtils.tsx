@@ -1,6 +1,3 @@
-// === Module 4179: readSnowflake ===
-
-// Module 4179 (readSnowflake)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

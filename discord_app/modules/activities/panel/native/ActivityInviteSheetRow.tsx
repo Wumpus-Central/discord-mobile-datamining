@@ -1,6 +1,3 @@
-// === Module 15877: ? ===
-
-// Module 15877
 import { View } from "getAvatarURL";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

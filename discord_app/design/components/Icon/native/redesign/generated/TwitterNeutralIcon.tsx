@@ -1,6 +1,3 @@
-// === Module 11470: TwitterNeutralIcon ===
-
-// Module 11470 (TwitterNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

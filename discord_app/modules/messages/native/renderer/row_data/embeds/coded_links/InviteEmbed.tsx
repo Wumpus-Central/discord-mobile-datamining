@@ -1,6 +1,3 @@
-// === Module 12372: createInviteEmbed ===
-
-// Module 12372 (createInviteEmbed)
 import updateInvite from "updateInvite";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

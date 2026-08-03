@@ -1,6 +1,3 @@
-// === Module 14512: radio ===
-
-// Module 14512 (radio)
 import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
 import createToggle from "createToggle";
 

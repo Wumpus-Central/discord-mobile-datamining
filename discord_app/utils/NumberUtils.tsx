@@ -1,6 +1,3 @@
-// === Module 1851: shortenAndLocalizeNumber ===
-
-// Module 1851 (shortenAndLocalizeNumber)
 let c2 = 1000000;
 let result = require("set").fileFinishedImporting("utils/NumberUtils.tsx");
 

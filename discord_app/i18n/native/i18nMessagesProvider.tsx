@@ -1,6 +1,3 @@
-// === Module 16761: i18nManager ===
-
-// Module 16761 (i18nManager)
 import set from "set";
 import set from "enforcing";
 

@@ -1,6 +1,3 @@
-// === Module 5872: set ===
-
-// Module 5872 (set)
 import set from "set";
 
 const obj = { WEB_AND_IOS: null, ANDROID: null, QUEST_VR: null, OTHER: null, ALL: null };

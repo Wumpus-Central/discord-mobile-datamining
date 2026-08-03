@@ -1,6 +1,3 @@
-// === Module 6561: AccountCreditTier ===
-
-// Module 6561 (AccountCreditTier)
 import "noop";
 import { View } from "get ActivityIndicator";
 import addEntitlement from "addEntitlement";

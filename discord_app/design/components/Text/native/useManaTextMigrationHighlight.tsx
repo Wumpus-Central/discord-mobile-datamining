@@ -1,6 +1,3 @@
-// === Module 4191: useManaTextMigrationHighlight ===
-
-// Module 4191 (useManaTextMigrationHighlight)
 import { StyleSheet } from "get ActivityIndicator";
 import importDefaultResult from "getUserAgnosticState";
 import handleThemeChange from "handleThemeChange";

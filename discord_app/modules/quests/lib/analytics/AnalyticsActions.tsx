@@ -1,6 +1,3 @@
-// === Module 6006: trackQuestEvent ===
-
-// Module 6006 (trackQuestEvent)
 import trackHeartbeat from "trackHeartbeat";
 import initialize from "initialize";
 import refreshSourceMapCookie from "refreshSourceMapCookie";

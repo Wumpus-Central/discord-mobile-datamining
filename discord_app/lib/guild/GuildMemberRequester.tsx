@@ -1,6 +1,3 @@
-// === Module 5020: acknowledge ===
-
-// Module 5020 (acknowledge)
 class GuildMemberRequestState {
   constructor(arg0, arg1) {
     closure_0 = global;

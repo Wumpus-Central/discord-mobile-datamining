@@ -1,6 +1,3 @@
-// === Module 6663: BuyNitroPurchaseButton ===
-
-// Module 6663 (BuyNitroPurchaseButton)
 import _slicedToArray from "_slicedToArray";
 import BuyNitroPurchaseButtonLegalDisclaimer from "BuyNitroPurchaseButtonLegalDisclaimer";
 import { View } from "module_4533";

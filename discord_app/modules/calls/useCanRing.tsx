@@ -1,6 +1,3 @@
-// === Module 8924: useCanRingToGuildVoiceChannel ===
-
-// Module 8924 (useCanRingToGuildVoiceChannel)
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";
 import ensureGuildLoaded from "ensureGuildLoaded";

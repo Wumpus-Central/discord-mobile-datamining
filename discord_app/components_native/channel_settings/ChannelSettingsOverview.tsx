@@ -1,6 +1,3 @@
-// === Module 15661: PinImage ===
-
-// Module 15661 (PinImage)
 import GuildNSFWContentLevel from "GuildNSFWContentLevel";
 import importAllResult from "AbortCodes";
 import { View } from "set";

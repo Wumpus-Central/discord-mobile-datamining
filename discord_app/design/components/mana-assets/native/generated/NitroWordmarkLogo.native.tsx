@@ -1,6 +1,3 @@
-// === Module 7349: NitroWordmarkLogo ===
-
-// Module 7349 (NitroWordmarkLogo)
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 16421: EmojiRow ===
-
-// Module 16421 (EmojiRow)
 import _slicedToArray from "_slicedToArray";
 import getAvatarURL from "getAvatarURL";
 import get_ActivityIndicator from "dispatcher";

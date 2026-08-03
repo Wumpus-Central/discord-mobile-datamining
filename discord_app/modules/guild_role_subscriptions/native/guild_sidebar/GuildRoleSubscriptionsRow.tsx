@@ -1,6 +1,3 @@
-// === Module 15192: GuildRoleSubscriptionsRow ===
-
-// Module 15192 (GuildRoleSubscriptionsRow)
 import noop from "noop";
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";

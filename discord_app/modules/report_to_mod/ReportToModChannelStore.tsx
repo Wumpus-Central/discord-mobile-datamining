@@ -1,6 +1,3 @@
-// === Module 11879: useReportToModChannelFiltersStore ===
-
-// Module 11879 (useReportToModChannelFiltersStore)
 import keys from "keys";
 import createJSONStorage from "createJSONStorage";
 import createJSONStorage from "createJSONStorage";

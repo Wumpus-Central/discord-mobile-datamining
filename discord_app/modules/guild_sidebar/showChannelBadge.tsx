@@ -1,6 +1,3 @@
-// === Module 15213: showChannelBadge ===
-
-// Module 15213 (showChannelBadge)
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
 
 export default function showChannelBadge(isNewChannel) {

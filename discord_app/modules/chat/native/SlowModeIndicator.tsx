@@ -1,6 +1,3 @@
-// === Module 11442: ? ===
-
-// Module 11442
 import importAllResult from "noop";
 import setCooldown from "setCooldown";
 import jsxProd from "jsxProd";

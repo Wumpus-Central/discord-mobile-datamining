@@ -1,6 +1,3 @@
-// === Module 4613: PillWrapper ===
-
-// Module 4613 (PillWrapper)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "SUBTLE_SPRING";

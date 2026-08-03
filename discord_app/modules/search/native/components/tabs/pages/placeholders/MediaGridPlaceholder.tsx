@@ -1,6 +1,3 @@
-// === Module 15507: MediaGridPlaceholderItem ===
-
-// Module 15507 (MediaGridPlaceholderItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import MessageEmbedTypes from "MessageEmbedTypes";

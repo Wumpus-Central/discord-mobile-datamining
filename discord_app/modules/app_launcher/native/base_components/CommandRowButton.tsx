@@ -1,6 +1,3 @@
-// === Module 11292: CommandRowIcon ===
-
-// Module 11292 (CommandRowIcon)
 import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

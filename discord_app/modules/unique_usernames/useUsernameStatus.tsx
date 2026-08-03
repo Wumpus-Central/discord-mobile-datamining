@@ -1,6 +1,3 @@
-// === Module 13810: useUsernameStatus ===
-
-// Module 13810 (useUsernameStatus)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

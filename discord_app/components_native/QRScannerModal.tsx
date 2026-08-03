@@ -1,6 +1,3 @@
-// === Module 13026: DCDQRScanner ===
-
-// Module 13026 (DCDQRScanner)
 import _slicedToArray from "_slicedToArray";
 import module_4533 from "module_4533";
 import get_ActivityIndicator from "FAMILY_CENTER_REQUEST_MODAL_KEY";

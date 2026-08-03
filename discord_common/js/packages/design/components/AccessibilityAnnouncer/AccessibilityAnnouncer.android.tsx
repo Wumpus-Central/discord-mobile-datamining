@@ -1,6 +1,3 @@
-// === Module 3906: AccessibilityAnnouncer ===
-
-// Module 3906 (AccessibilityAnnouncer)
 import { AccessibilityInfo } from "get ActivityIndicator";
 
 let result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx");

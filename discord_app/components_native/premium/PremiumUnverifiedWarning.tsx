@@ -1,6 +1,3 @@
-// === Module 12621: render ===
-
-// Module 12621 (render)
 import importDefaultResult from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

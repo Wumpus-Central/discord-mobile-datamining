@@ -1,6 +1,3 @@
-// === Module 15838: LaunchpadChannelIcon ===
-
-// Module 15838 (LaunchpadChannelIcon)
 import "set";
 import { View } from "ChannelContent";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 14257: NavigateForwardButton ===
-
-// Module 14257 (NavigateForwardButton)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

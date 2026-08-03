@@ -1,6 +1,3 @@
-// === Module 5976: canBypassSlowmodeHelper ===
-
-// Module 5976 (canBypassSlowmodeHelper)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 

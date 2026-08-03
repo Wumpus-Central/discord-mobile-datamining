@@ -1,6 +1,3 @@
-// === Module 9514: isNewMessageGroup ===
-
-// Module 9514 (isNewMessageGroup)
 import ME from "ME";
 
 let c3;

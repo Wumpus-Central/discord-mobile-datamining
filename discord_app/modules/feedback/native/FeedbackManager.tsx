@@ -1,6 +1,3 @@
-// === Module 16189: prototype ===
-
-// Module 16189 (prototype)
 import addApplication from "addApplication";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";

@@ -1,6 +1,3 @@
-// === Module 10520: transitionToActivity ===
-
-// Module 10520 (transitionToActivity)
 import { setVoiceChatDrawerState } from "VoiceChatDrawerState";
 import participantFromServer from "participantFromServer";
 import { ActivityPanelModes } from "ActivityPanelModes";

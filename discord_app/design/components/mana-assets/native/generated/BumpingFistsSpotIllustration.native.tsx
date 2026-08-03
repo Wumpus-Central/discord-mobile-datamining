@@ -1,6 +1,3 @@
-// === Module 6905: BumpingFistsSpotIllustration ===
-
-// Module 6905 (BumpingFistsSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BumpingFistsSpotIllustration.native.tsx");

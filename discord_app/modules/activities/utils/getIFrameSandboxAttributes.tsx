@@ -1,6 +1,3 @@
-// === Module 10679: getIFrameSandboxAttributes ===
-
-// Module 10679 (getIFrameSandboxAttributes)
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
 const result = require("set").fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
 

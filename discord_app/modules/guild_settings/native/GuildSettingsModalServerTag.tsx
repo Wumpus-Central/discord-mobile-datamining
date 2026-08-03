@@ -1,6 +1,3 @@
-// === Module 16442: GuildSettingsModalServerTag ===
-
-// Module 16442 (GuildSettingsModalServerTag)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import TableSwitchRow from "TableSwitchRow";
 import presentAddedFriendToast from "presentAddedFriendToast";

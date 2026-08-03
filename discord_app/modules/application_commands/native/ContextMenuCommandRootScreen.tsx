@@ -1,6 +1,3 @@
-// === Module 15717: ContextMenuCommandRootScreen ===
-
-// Module 15717 (ContextMenuCommandRootScreen)
 import _slicedToArray from "_slicedToArray";
 import module_9250 from "module_9250";
 import { View } from "ContextMenuCommandItem";

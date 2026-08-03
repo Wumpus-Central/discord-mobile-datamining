@@ -1,6 +1,3 @@
-// === Module 14085: BountiesScrollIndicatorAnimation ===
-
-// Module 14085 (BountiesScrollIndicatorAnimation)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

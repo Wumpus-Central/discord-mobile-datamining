@@ -1,6 +1,3 @@
-// === Module 9221: SplitTextInput ===
-
-// Module 9221 (SplitTextInput)
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
 

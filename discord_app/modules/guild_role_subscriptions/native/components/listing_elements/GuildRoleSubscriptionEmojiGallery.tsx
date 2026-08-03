@@ -1,6 +1,3 @@
-// === Module 14275: EmojiGallery ===
-
-// Module 14275 (EmojiGallery)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

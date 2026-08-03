@@ -1,6 +1,3 @@
-// === Module 16258: handleAppStateUpdate ===
-
-// Module 16258 (handleAppStateUpdate)
 import ME from "ME";
 import "initialize";
 

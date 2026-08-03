@@ -1,6 +1,3 @@
-// === Module 11573: ChatBeginningRowIcon ===
-
-// Module 11573 (ChatBeginningRowIcon)
 import TextIcon from "TextIcon";
 import participantFromServer from "participantFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";

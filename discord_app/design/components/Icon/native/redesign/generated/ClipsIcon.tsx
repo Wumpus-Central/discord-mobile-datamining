@@ -1,6 +1,3 @@
-// === Module 14022: ClipsIcon ===
-
-// Module 14022 (ClipsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

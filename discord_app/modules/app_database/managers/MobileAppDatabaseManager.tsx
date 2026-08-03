@@ -1,6 +1,3 @@
-// === Module 5934: appDatabaseManager ===
-
-// Module 5934 (appDatabaseManager)
 const items = [
   {
     name: "Channels",

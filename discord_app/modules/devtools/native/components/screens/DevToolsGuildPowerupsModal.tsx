@@ -1,6 +1,3 @@
-// === Module 14817: ? ===
-
-// Module 14817
 import { jsx } from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 import importAllResult from "noop";

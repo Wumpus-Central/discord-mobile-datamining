@@ -1,6 +1,3 @@
-// === Module 11177: useChatInputRefs ===
-
-// Module 11177 (useChatInputRefs)
 import useKeyboardType from "useKeyboardType";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import { DraftType } from "handleChanged";

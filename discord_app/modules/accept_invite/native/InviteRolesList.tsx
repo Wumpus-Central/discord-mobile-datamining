@@ -1,6 +1,3 @@
-// === Module 11836: InviteRolesList ===
-
-// Module 11836 (InviteRolesList)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

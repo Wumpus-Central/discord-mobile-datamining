@@ -1,6 +1,3 @@
-// === Module 4529: map ===
-
-// Module 4529 (map)
 import { DraftType } from "handleChanged";
 import { MAX_UPLOAD_COUNT } from "ME";
 import { Store } from "initialize";

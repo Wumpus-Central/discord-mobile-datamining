@@ -1,6 +1,3 @@
-// === Module 10798: UserSettingsVoiceOverlay ===
-
-// Module 10798 (UserSettingsVoiceOverlay)
 import "noop";
 import getUserAgnosticState from "getUserAgnosticState";
 import { jsx } from "jsxProd";

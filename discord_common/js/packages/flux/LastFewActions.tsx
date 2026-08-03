@@ -1,6 +1,3 @@
-// === Module 594: add ===
-
-// Module 594 (add)
 let closure_0 = [];
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/LastFewActions.tsx");
 

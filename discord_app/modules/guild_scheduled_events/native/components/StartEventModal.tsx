@@ -1,6 +1,3 @@
-// === Module 8339: NavigationBar ===
-
-// Module 8339 (NavigationBar)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
 import canManageResource from "canManageResource";

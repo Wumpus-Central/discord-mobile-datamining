@@ -1,6 +1,3 @@
-// === Module 6644: ServerGridIcon ===
-
-// Module 6644 (ServerGridIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

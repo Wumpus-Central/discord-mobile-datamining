@@ -1,6 +1,3 @@
-// === Module 4716: VoiceLockIcon ===
-
-// Module 4716 (VoiceLockIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 16619: GuildRoleSubscriptionBenefitModalHeader ===
-
-// Module 16619 (GuildRoleSubscriptionBenefitModalHeader)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 6786: _requestGoogleWalletVerification ===
-
-// Module 6786 (_requestGoogleWalletVerification)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 8191: getUserAgnosticState ===
-
-// Module 8191 (getUserAgnosticState)
 import { DeviceSettingsStore } from "initialize";
 
 let closure_2 = {};

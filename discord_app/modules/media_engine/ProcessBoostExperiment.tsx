@@ -1,6 +1,3 @@
-// === Module 12890: apexExperiment ===
-
-// Module 12890 (apexExperiment)
 import { ProcessPriority } from "DesktopSources";
 import ApexExperiment from "ApexExperiment";
 

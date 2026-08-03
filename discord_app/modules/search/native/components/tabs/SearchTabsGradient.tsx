@@ -1,6 +1,3 @@
-// === Module 15576: SearchTabsGradient ===
-
-// Module 15576 (SearchTabsGradient)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

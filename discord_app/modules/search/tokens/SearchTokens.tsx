@@ -1,6 +1,3 @@
-// === Module 10117: getShortcuts ===
-
-// Module 10117 (getShortcuts)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

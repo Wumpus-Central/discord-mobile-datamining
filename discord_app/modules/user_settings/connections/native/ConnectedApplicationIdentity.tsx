@@ -1,6 +1,3 @@
-// === Module 14012: ConnectedApplicationIdentity ===
-
-// Module 14012 (ConnectedApplicationIdentity)
 import createCacheKey from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";

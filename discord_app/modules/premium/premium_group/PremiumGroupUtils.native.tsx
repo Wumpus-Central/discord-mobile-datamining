@@ -1,6 +1,3 @@
-// === Module 7836: getPremiumGroupInviteEmbedText ===
-
-// Module 7836 (getPremiumGroupInviteEmbedText)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
 

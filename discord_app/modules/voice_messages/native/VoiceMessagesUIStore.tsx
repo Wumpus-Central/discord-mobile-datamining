@@ -1,6 +1,3 @@
-// === Module 11167: VoiceMessageRecordingStatus ===
-
-// Module 11167 (VoiceMessageRecordingStatus)
 import VoiceMessageAnimationState from "VoiceMessageAnimationState";
 import keys from "keys";
 

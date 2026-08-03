@@ -1,6 +1,3 @@
-// === Module 5966: getDeviceMetadata ===
-
-// Module 5966 (getDeviceMetadata)
 const result = require("set").fileFinishedImporting("modules/device/getDeviceMetadata.native.tsx");
 
 export default function getDeviceMetadata() {

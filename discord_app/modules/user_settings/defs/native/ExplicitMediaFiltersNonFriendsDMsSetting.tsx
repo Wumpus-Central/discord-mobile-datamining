@@ -1,6 +1,3 @@
-// === Module 13879: useObscuredContentNonFriendsDmSettingValue ===
-
-// Module 13879 (useObscuredContentNonFriendsDmSettingValue)
 import { MobileSetting } from "MobileSetting";
 import createToggle from "createToggle";
 

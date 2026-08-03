@@ -1,6 +1,3 @@
-// === Module 9076: ApplicationStreamActivityStatus ===
-
-// Module 9076 (ApplicationStreamActivityStatus)
 import "noop";
 import jsxProd from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 14655: onRenderFirstOrbsItem ===
-
-// Module 14655 (onRenderFirstOrbsItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

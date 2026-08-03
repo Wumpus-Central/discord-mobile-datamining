@@ -1,6 +1,3 @@
-// === Module 6615: handleFormClose ===
-
-// Module 6615 (handleFormClose)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { FormStates } from "ME";
 import { Store } from "initialize";

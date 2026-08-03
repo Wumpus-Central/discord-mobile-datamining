@@ -1,6 +1,3 @@
-// === Module 13898: toggle ===
-
-// Module 13898 (toggle)
 import { FriendDiscoveryFlags } from "ME";
 import createToggle from "createToggle";
 

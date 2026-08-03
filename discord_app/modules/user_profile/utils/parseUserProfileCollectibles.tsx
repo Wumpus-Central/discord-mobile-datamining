@@ -1,6 +1,3 @@
-// === Module 5924: parseUserProfileCollectibles ===
-
-// Module 5924 (parseUserProfileCollectibles)
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 
 export default function parseUserProfileCollectibles(collectibles) {

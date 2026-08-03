@@ -1,6 +1,3 @@
-// === Module 12489: TieredTenureBadgePerkCard ===
-
-// Module 12489 (TieredTenureBadgePerkCard)
 import frozen from "frozen";
 import { View } from "Text";
 import mergeGuildAvatar from "mergeGuildAvatar";

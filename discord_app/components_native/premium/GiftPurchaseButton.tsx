@@ -1,6 +1,3 @@
-// === Module 12619: GiftPurchaseButton ===
-
-// Module 12619 (GiftPurchaseButton)
 import jsxProd from "jsxProd";
 import set from "set";
 import { View } from "CollapsingText";

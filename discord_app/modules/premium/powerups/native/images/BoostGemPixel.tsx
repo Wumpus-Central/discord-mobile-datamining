@@ -1,6 +1,3 @@
-// === Module 12601: BoostGemPixel ===
-
-// Module 12601 (BoostGemPixel)
 import "noop";
 import jsxProd from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 9649: __INTERNAL_VIEW_CONFIG ===
-
-// Module 9649 (__INTERNAL_VIEW_CONFIG)
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "APNGStickerView", validAttributes: { url: true } };

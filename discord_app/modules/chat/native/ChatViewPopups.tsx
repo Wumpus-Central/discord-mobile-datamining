@@ -1,6 +1,3 @@
-// === Module 11756: ChatViewPopups ===
-
-// Module 11756 (ChatViewPopups)
 import importAllResult from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 15536: createSearchResultLinkPreviewReactRules ===
-
-// Module 15536 (createSearchResultLinkPreviewReactRules)
 const result = require("set").fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
 
 export const createSearchResultLinkPreviewReactRules = function createSearchResultLinkPreviewReactRules() {

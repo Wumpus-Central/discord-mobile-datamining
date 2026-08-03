@@ -1,6 +1,3 @@
-// === Module 8919: SecureFramesUserVerificationBottomSheet ===
-
-// Module 8919 (SecureFramesUserVerificationBottomSheet)
 import Button from "Button";
 import trackRTCPanelViewed from "trackRTCPanelViewed";
 import get_ActivityIndicator from "getNickname";

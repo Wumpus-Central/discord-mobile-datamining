@@ -1,6 +1,3 @@
-// === Module 6089: collectThreadMetadata ===
-
-// Module 6089 (collectThreadMetadata)
 import updateFromGuild from "updateFromGuild";
 import updateState from "updateState";
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";

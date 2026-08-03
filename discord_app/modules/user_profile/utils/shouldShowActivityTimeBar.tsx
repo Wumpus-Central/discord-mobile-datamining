@@ -1,6 +1,3 @@
-// === Module 12012: shouldShowActivityTimeBar ===
-
-// Module 12012 (shouldShowActivityTimeBar)
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/shouldShowActivityTimeBar.tsx");

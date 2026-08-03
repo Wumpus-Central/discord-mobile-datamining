@@ -1,6 +1,3 @@
-// === Module 11277: PlaceholderAppRow ===
-
-// Module 11277 (PlaceholderAppRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

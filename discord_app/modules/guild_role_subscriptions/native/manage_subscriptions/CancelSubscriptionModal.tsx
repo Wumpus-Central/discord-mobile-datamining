@@ -1,6 +1,3 @@
-// === Module 15441: CancelSubscriptionModal ===
-
-// Module 15441 (CancelSubscriptionModal)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

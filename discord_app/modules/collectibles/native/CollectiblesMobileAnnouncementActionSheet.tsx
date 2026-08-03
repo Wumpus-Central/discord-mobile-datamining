@@ -1,6 +1,3 @@
-// === Module 15794: CatEarsBackdrop ===
-
-// Module 15794 (CatEarsBackdrop)
 import metadata from "metadata";
 import get_ActivityIndicator from "QUICK_SWITCHER";
 import { CollectiblesMobileShopScreen as closure_6 } from "items";

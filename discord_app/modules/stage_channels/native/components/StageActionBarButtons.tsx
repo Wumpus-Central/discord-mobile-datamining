@@ -1,6 +1,3 @@
-// === Module 10715: AgeVerificationSpeakerActionSheet ===
-
-// Module 10715 (AgeVerificationSpeakerActionSheet)
 import asyncRequireImpl from "asyncRequireImpl";
 import MusicSlashIcon from "MusicSlashIcon";
 import { View } from "registerAsset";

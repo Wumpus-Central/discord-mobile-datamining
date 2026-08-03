@@ -1,6 +1,3 @@
-// === Module 6082: trackForumChannelSeenBatch ===
-
-// Module 6082 (trackForumChannelSeenBatch)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleChanged from "handleChanged";
 import { DraftType } from "handleChanged";

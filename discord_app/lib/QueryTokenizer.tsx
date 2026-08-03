@@ -1,6 +1,3 @@
-// === Module 10122: getMatch ===
-
-// Module 10122 (getMatch)
 function getMatch(str, arg1, index) {
   let tmp3;
   if (null == arg1) {

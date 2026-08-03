@@ -1,6 +1,3 @@
-// === Module 7873: defaultRules ===
-
-// Module 7873 (defaultRules)
 const require = arg1;
 function defaultRules(uri) {
   let obj = {};

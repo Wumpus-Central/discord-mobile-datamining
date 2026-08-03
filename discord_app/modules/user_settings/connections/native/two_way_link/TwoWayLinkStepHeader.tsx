@@ -1,6 +1,3 @@
-// === Module 8948: TwoWayLinkStepHeader ===
-
-// Module 8948 (TwoWayLinkStepHeader)
 import "noop";
 import { jsx } from "jsxProd";
 

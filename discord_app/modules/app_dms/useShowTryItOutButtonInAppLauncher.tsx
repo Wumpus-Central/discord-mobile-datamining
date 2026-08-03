@@ -1,6 +1,3 @@
-// === Module 11335: useShowTryItOutButtonInAppLauncher ===
-
-// Module 11335 (useShowTryItOutButtonInAppLauncher)
 const result = require("canLaunchFrame").fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
 
 export default function useShowTryItOutButtonInAppLauncher(arg0) {

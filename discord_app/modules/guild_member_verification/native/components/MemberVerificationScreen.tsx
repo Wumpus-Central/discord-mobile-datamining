@@ -1,6 +1,3 @@
-// === Module 15595: Loading ===
-
-// Module 15595 (Loading)
 import closure_4 from "makeAuthenticated";
 import { View } from "useSafeAreaInsets";
 import comparator from "comparator";

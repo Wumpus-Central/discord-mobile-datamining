@@ -1,6 +1,3 @@
-// === Module 16240: getData ===
-
-// Module 16240 (getData)
 import handleChanged from "handleChanged";
 import _slicedToArray from "_slicedToArray";
 import DISCORD_EPOCH from "DISCORD_EPOCH";

@@ -1,6 +1,3 @@
-// === Module 14201: StyleSheet ===
-
-// Module 14201 (StyleSheet)
 import PressableBase from "PressableBase";
 import get_ActivityIndicator from "useWatchTaskPressHandler";
 import mergeGuildAvatar from "mergeGuildAvatar";

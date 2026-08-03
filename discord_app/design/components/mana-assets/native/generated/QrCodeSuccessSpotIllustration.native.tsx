@@ -1,6 +1,3 @@
-// === Module 7419: QrCodeSuccessSpotIllustration ===
-
-// Module 7419 (QrCodeSuccessSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/QrCodeSuccessSpotIllustration.native.tsx");

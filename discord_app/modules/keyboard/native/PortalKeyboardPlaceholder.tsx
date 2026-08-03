@@ -1,6 +1,3 @@
-// === Module 11426: PortalKeyboardPlaceholderInner ===
-
-// Module 11426 (PortalKeyboardPlaceholderInner)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

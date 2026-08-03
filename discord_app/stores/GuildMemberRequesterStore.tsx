@@ -1,6 +1,3 @@
-// === Module 5019: handleConnectionReset ===
-
-// Module 5019 (handleConnectionReset)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import importDefaultResult from "trackCommunicationDisabled";
 import { Store } from "initialize";

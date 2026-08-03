@@ -1,6 +1,3 @@
-// === Module 4183: get defaultRules ===
-
-// Module 4183 (get defaultRules)
 import importDefaultResult from "apply";
 import importDefaultResult1 from "apply";
 import importDefaultResult2 from "apply";

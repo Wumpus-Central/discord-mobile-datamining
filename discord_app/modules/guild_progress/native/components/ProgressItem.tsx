@@ -1,6 +1,3 @@
-// === Module 11583: ProgressItem ===
-
-// Module 11583 (ProgressItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";

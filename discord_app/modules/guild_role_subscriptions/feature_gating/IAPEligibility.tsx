@@ -1,6 +1,3 @@
-// === Module 5092: items ===
-
-// Module 5092 (items)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

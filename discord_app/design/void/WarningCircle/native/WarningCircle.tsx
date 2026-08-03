@@ -1,6 +1,3 @@
-// === Module 13164: WarningCircle ===
-
-// Module 13164 (WarningCircle)
 import "noop";
 import { jsx } from "jsxProd";
 

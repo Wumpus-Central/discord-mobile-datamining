@@ -1,6 +1,3 @@
-// === Module 13254: BadgeColors ===
-
-// Module 13254 (BadgeColors)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

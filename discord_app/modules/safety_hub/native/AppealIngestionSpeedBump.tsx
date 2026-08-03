@@ -1,6 +1,3 @@
-// === Module 11102: AppealIngestionSpeedBump ===
-
-// Module 11102 (AppealIngestionSpeedBump)
 import "noop";
 import { View } from "get ActivityIndicator";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";

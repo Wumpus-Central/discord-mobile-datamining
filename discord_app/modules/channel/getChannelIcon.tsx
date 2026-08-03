@@ -1,6 +1,3 @@
-// === Module 12035: getChannelIconURL ===
-
-// Module 12035 (getChannelIconURL)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ChannelTypes } from "ME";

@@ -1,6 +1,3 @@
-// === Module 12020: parseProviderRouteHeadlessSessionId ===
-
-// Module 12020 (parseProviderRouteHeadlessSessionId)
 import _slicedToArray from "_slicedToArray";
 
 let c3 = "h:";

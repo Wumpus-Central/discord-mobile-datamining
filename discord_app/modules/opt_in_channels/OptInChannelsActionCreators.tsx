@@ -1,6 +1,3 @@
-// === Module 5133: _persistOptInChannelUpdates2 ===
-
-// Module 5133 (_persistOptInChannelUpdates2)
 import closure_3 from "MAX_FAVORITES";
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 9883: CirclePlayIcon ===
-
-// Module 9883 (CirclePlayIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

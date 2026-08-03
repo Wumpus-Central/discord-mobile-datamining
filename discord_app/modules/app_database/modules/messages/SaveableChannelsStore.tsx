@@ -1,6 +1,3 @@
-// === Module 5739: handleSelectedChannelStoreChanged ===
-
-// Module 5739 (handleSelectedChannelStoreChanged)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import "clearAll";

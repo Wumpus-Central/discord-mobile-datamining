@@ -1,6 +1,3 @@
-// === Module 504: logger ===
-
-// Module 504 (logger)
 import sum from "sum";
 
 let c3;

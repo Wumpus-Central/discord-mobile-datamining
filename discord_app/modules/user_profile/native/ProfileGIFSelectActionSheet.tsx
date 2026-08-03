@@ -1,6 +1,3 @@
-// === Module 13729: ProfileGIFSelectActionSheet ===
-
-// Module 13729 (ProfileGIFSelectActionSheet)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "createCacheKey";
 import noop from "noop";

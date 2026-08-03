@@ -1,6 +1,3 @@
-// === Module 7251: InkQuill3dIllustration ===
-
-// Module 7251 (InkQuill3dIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/InkQuill3dIllustration.native.tsx");

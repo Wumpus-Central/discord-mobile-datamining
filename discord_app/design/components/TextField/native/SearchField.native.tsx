@@ -1,6 +1,3 @@
-// === Module 9248: SearchField ===
-
-// Module 9248 (SearchField)
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
 

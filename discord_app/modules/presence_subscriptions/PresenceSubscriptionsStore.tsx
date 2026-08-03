@@ -1,6 +1,3 @@
-// === Module 10495: handleConnectionOpenOrResumed ===
-
-// Module 10495 (handleConnectionOpenOrResumed)
 import _slicedToArray from "_slicedToArray";
 import sortActivity from "sortActivity";
 import { INVITE_EXPIRATION_MS } from "items3";

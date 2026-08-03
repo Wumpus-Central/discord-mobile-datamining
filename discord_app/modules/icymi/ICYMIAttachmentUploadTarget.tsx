@@ -1,6 +1,3 @@
-// === Module 4770: getCreateAttachmentURL ===
-
-// Module 4770 (getCreateAttachmentURL)
 import ME from "ME";
 
 let c3;

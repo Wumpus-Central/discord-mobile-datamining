@@ -1,6 +1,3 @@
-// === Module 11317: PlaceholderCommandRow ===
-
-// Module 11317 (PlaceholderCommandRow)
 import ME from "ME";
 import PermissionOverwriteType from "PermissionOverwriteType";
 import { View } from "useSafeAreaInsets";

@@ -1,6 +1,3 @@
-// === Module 16033: VoicePanelMaxCapacityAlert ===
-
-// Module 16033 (VoicePanelMaxCapacityAlert)
 import "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { jsx } from "jsxProd";

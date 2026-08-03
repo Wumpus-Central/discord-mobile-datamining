@@ -1,6 +1,3 @@
-// === Module 15021: useChannelUnreadBadgeState ===
-
-// Module 15021 (useChannelUnreadBadgeState)
 import guildHasCommunity from "guildHasCommunity";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

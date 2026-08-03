@@ -1,6 +1,3 @@
-// === Module 11099: items ===
-
-// Module 11099 (items)
 import module_3890 from "module_3890";
 import { View } from "TableRowGroupTitle";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";

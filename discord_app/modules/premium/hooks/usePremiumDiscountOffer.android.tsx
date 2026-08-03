@@ -1,6 +1,3 @@
-// === Module 6262: usePremiumDiscountOffer ===
-
-// Module 6262 (usePremiumDiscountOffer)
 import updateProduct from "updateProduct";
 import GuildFeatures from "GuildFeatures";
 

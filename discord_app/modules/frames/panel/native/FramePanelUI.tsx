@@ -1,6 +1,3 @@
-// === Module 15890: renderActivityOrPIP ===
-
-// Module 15890 (renderActivityOrPIP)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

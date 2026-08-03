@@ -1,6 +1,3 @@
-// === Module 16214: isExperimentEnabled ===
-
-// Module 16214 (isExperimentEnabled)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";

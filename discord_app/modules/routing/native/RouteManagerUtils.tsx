@@ -1,6 +1,3 @@
-// === Module 10882: voiceRouteRewriter ===
-
-// Module 10882 (voiceRouteRewriter)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { setVoiceChatDrawerState } from "VoiceChatDrawerState";
 import { isGuildSelectableChannelType as closure_6 } from "createChannelRecord";

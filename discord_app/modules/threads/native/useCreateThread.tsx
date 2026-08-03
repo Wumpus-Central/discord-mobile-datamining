@@ -1,6 +1,3 @@
-// === Module 9583: useCreateThread ===
-
-// Module 9583 (useCreateThread)
 import getIsPrivate from "getIsPrivate";
 import noop from "noop";
 import { DraftType } from "handleChanged";

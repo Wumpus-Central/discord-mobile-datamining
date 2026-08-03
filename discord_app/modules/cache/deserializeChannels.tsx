@@ -1,6 +1,3 @@
-// === Module 1928: deserializeChannels ===
-
-// Module 1928 (deserializeChannels)
 import _slicedToArray from "_slicedToArray";
 
 function deserializeChannels(arg0) {

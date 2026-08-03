@@ -1,6 +1,3 @@
-// === Module 11821: sum ===
-
-// Module 11821 (sum)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import "enqueue";
 

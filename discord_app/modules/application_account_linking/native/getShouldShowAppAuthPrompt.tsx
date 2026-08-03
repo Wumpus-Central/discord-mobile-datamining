@@ -1,6 +1,3 @@
-// === Module 10969: getShouldShowAppAuthPrompt ===
-
-// Module 10969 (getShouldShowAppAuthPrompt)
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";
 

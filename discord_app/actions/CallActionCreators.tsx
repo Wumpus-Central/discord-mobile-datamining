@@ -1,6 +1,3 @@
-// === Module 8926: ? ===
-
-// Module 8926
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

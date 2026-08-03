@@ -1,6 +1,3 @@
-// === Module 14628: Spacing ===
-
-// Module 14628 (Spacing)
 import PressableBase from "PressableBase";
 import { View } from "openCollectiblesShop";
 import { CollectiblesMobileShopScreen as closure_5 } from "items";

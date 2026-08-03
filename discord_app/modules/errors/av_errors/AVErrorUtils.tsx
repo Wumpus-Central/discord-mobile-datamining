@@ -1,6 +1,3 @@
-// === Module 16700: getReportInboundErrors ===
-
-// Module 16700 (getReportInboundErrors)
 import updateAveragedStatsHelper from "updateAveragedStatsHelper";
 
 const require = arg1;

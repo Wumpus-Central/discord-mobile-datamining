@@ -1,6 +1,3 @@
-// === Module 685: MAX_FAVORITES ===
-
-// Module 685 (MAX_FAVORITES)
 const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsConstants.tsx");
 
 export const MAX_FAVORITES = 250;

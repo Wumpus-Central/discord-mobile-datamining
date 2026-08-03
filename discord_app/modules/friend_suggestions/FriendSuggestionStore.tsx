@@ -1,6 +1,3 @@
-// === Module 5952: initialize ===
-
-// Module 5952 (initialize)
 import createdAt from "createdAt";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";

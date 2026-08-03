@@ -1,6 +1,3 @@
-// === Module 12246: CoachmarkImage ===
-
-// Module 12246 (CoachmarkImage)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

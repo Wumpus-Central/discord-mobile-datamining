@@ -1,6 +1,3 @@
-// === Module 8224: useGuildScheduledEventUserCount ===
-
-// Module 8224 (useGuildScheduledEventUserCount)
 import { useEffect } from "noop";
 import scheduledEventSort from "scheduledEventSort";
 

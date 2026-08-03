@@ -1,6 +1,3 @@
-// === Module 10234: items1 ===
-
-// Module 10234 (items1)
 import _slicedToArray from "_slicedToArray";
 import withContent from "withContent";
 import closure_5 from "withContent";

@@ -1,6 +1,3 @@
-// === Module 15439: emphasisHook ===
-
-// Module 15439 (emphasisHook)
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 import _slicedToArray from "_slicedToArray";
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";

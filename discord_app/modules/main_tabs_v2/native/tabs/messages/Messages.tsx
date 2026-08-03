@@ -1,6 +1,3 @@
-// === Module 15042: ? ===
-
-// Module 15042
 import importAllResult from "useIsMobileVisualRefreshExperimentEnabled";
 import { View } from "useCommonTriggerPoint";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

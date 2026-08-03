@@ -1,6 +1,3 @@
-// === Module 5053: computeRolesForGuild ===
-
-// Module 5053 (computeRolesForGuild)
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import { hasPermission } from "GuildRoleRecordTypeTag";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

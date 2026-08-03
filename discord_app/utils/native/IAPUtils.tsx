@@ -1,6 +1,3 @@
-// === Module 6335: serializePurchaseResponse ===
-
-// Module 6335 (serializePurchaseResponse)
 import updateProduct from "updateProduct";
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
 import mergeGuildAvatar from "mergeGuildAvatar";

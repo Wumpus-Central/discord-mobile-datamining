@@ -1,6 +1,3 @@
-// === Module 10936: SlashBoxIcon ===
-
-// Module 10936 (SlashBoxIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

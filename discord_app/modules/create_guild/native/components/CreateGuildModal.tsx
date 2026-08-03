@@ -1,6 +1,3 @@
-// === Module 11814: CreateGuildModal ===
-
-// Module 11814 (CreateGuildModal)
 import JoinServerContainer from "JoinServerContainer";
 import { Keyboard } from "SeeMoreFooter";
 import comparator from "comparator";

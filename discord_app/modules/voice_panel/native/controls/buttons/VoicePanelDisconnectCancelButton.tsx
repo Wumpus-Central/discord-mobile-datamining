@@ -1,6 +1,3 @@
-// === Module 16037: DisconnectCancelButton ===
-
-// Module 16037 (DisconnectCancelButton)
 import _slicedToArray from "_slicedToArray";
 import AnimatedButtonWrapper from "AnimatedButtonWrapper";
 import participantFromServer from "participantFromServer";

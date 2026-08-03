@@ -1,6 +1,3 @@
-// === Module 8786: GiftBackgroundSelect ===
-
-// Module 8786 (GiftBackgroundSelect)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

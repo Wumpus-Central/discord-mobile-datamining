@@ -1,6 +1,3 @@
-// === Module 14518: _handleUploadDebugLogSettingPress ===
-
-// Module 14518 (_handleUploadDebugLogSettingPress)
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "get ActivityIndicator";
 import { DebugLogCategory } from "ME";

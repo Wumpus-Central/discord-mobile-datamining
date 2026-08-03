@@ -1,6 +1,3 @@
-// === Module 7041: FireIllocon ===
-
-// Module 7041 (FireIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/FireIllocon.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 14054: ItemSeparator ===
-
-// Module 14054 (ItemSeparator)
 import BountiesScrollPromptFooter from "BountiesScrollPromptFooter";
 import getRevealProgress from "getRevealProgress";
 import get_ActivityIndicator from "apexExperiment";

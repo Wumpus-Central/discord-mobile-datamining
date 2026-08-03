@@ -1,6 +1,3 @@
-// === Module 5825: fromServer ===
-
-// Module 5825 (fromServer)
 import { CollectiblesMarketingBadgeRecord as closure_2 } from "fromServer";
 import { CollectiblesMarketingBannerRecord as closure_3 } from "fromServer";
 import { CollectiblesMarketingCoachmarkRecord as closure_4 } from "fromServer";

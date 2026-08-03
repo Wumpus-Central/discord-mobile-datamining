@@ -1,6 +1,3 @@
-// === Module 10055: u ===
-
-// Module 10055 (u)
 let fn2 = require;
 const fn = function u(get) {
   if (globalThis._WORKLET) {

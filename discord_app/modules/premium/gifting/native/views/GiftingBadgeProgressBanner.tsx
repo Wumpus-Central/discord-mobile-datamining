@@ -1,6 +1,3 @@
-// === Module 9727: GiftingBadgeProgressBanner ===
-
-// Module 9727 (GiftingBadgeProgressBanner)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

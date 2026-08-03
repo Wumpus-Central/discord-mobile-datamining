@@ -1,6 +1,3 @@
-// === Module 15994: ActivityItemEmptyCard ===
-
-// Module 15994 (ActivityItemEmptyCard)
 import Themes from "Themes";
 import importAllResult from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";

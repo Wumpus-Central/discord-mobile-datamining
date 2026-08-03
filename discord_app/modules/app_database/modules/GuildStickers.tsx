@@ -1,6 +1,3 @@
-// === Module 5099: getAsync ===
-
-// Module 5099 (getAsync)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import set from "items";
 

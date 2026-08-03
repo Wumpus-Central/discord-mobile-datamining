@@ -1,6 +1,3 @@
-// === Module 15316: getNotificationCenterItemBody ===
-
-// Module 15316 (getNotificationCenterItemBody)
 import scheduledEventSort from "scheduledEventSort";
 import { isGuildEventEnded } from "scheduledEventSort";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

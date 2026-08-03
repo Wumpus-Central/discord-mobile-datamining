@@ -1,6 +1,3 @@
-// === Module 8788: LottieType ===
-
-// Module 8788 (LottieType)
 import { PremiumGiftStyles } from "GuildFeatures";
 
 const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };

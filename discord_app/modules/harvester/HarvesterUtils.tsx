@@ -1,6 +1,3 @@
-// === Module 13909: harvestDisabled ===
-
-// Module 13909 (harvestDisabled)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";

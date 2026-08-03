@@ -1,6 +1,3 @@
-// === Module 10689: CallWithVoiceChat ===
-
-// Module 10689 (CallWithVoiceChat)
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
 import _slicedToArray from "_slicedToArray";
 import asyncRequireImpl from "asyncRequireImpl";

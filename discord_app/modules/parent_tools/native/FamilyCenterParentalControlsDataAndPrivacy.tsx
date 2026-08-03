@@ -1,6 +1,3 @@
-// === Module 13981: FamilyCenterParentalControlsDataAndPrivacy ===
-
-// Module 13981 (FamilyCenterParentalControlsDataAndPrivacy)
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
 import { MobileSetting } from "MobileSetting";

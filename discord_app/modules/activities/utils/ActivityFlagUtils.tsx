@@ -1,6 +1,3 @@
-// === Module 10490: computeActivityFlags ===
-
-// Module 10490 (computeActivityFlags)
 import ME from "ME";
 
 let c3;

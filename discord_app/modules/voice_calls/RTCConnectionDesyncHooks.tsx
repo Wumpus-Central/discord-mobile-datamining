@@ -1,6 +1,3 @@
-// === Module 15221: useEnsureSyncedChannelVoiceStates ===
-
-// Module 15221 (useEnsureSyncedChannelVoiceStates)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getParticipants from "getParticipants";

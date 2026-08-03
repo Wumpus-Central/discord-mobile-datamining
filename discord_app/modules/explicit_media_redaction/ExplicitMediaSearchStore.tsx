@@ -1,6 +1,3 @@
-// === Module 5879: handleSearchMessagesSuccess ===
-
-// Module 5879 (handleSearchMessagesSuccess)
 import { Store } from "initialize";
 
 const require = arg1;

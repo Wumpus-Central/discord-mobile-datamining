@@ -1,6 +1,3 @@
-// === Module 6094: handleInit ===
-
-// Module 6094 (handleInit)
 import handleInit from "handleInit";
 import { AnalyticEvents } from "ME";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 5723: trackRoundtrip ===
-
-// Module 5723 (trackRoundtrip)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import handleConnectionInfoChange from "handleConnectionInfoChange";

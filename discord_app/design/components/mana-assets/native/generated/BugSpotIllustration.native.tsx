@@ -1,6 +1,3 @@
-// === Module 6901: BugSpotIllustration ===
-
-// Module 6901 (BugSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BugSpotIllustration.native.tsx");

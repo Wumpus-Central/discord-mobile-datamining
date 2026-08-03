@@ -1,6 +1,3 @@
-// === Module 13685: MagicDoorIcon ===
-
-// Module 13685 (MagicDoorIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

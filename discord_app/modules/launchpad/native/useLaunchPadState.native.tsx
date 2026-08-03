@@ -1,6 +1,3 @@
-// === Module 15809: useLaunchPadState ===
-
-// Module 15809 (useLaunchPadState)
 import noop from "noop";
 import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";
 import setLaunchPadPullTabExclusionRect from "setLaunchPadPullTabExclusionRect";

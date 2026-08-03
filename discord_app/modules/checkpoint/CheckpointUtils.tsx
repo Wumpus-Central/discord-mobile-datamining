@@ -1,6 +1,3 @@
-// === Module 7925: items ===
-
-// Module 7925 (items)
 const items = [require("sleep").TimeUnits.HOURS, require("sleep").TimeUnits.MINUTES];
 const result = require("getSystemLocale").fileFinishedImporting("modules/checkpoint/CheckpointUtils.tsx");
 

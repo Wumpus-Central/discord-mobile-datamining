@@ -1,6 +1,3 @@
-// === Module 15669: MessagePreview ===
-
-// Module 15669 (MessagePreview)
 import noop from "noop";
 import messages from "messages";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 15288: ConnectionBannerIcon ===
-
-// Module 15288 (ConnectionBannerIcon)
 import _slicedToArray from "_slicedToArray";
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "LinearGradient";

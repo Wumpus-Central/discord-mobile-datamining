@@ -1,6 +1,3 @@
-// === Module 7955: getArchivedAvatarURL ===
-
-// Module 7955 (getArchivedAvatarURL)
 import { Endpoints } from "ME";
 
 function getArchivedAvatarURL(allowWebp) {

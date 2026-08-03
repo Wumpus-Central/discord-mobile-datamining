@@ -1,6 +1,3 @@
-// === Module 10403: ChatInputReplyBarNoAuthor ===
-
-// Module 10403 (ChatInputReplyBarNoAuthor)
 import importAllResult from "processColorStrings";
 import get_ActivityIndicator from "useDisplayNameStyles";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,6 +1,3 @@
-// === Module 10171: openSafetyToolsActionSheet ===
-
-// Module 10171 (openSafetyToolsActionSheet)
 import { getSafetyToolsActionSheetKey as closure_3 } from "LOCATION_CONTEXT_MOBILE";
 
 const result = require("SafetyToolsActionSheet").fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 587: stringifyErrors ===
-
-// Module 587 (stringifyErrors)
 function stringifyErrors(arr) {
   let closure_0 = arr;
   let str = "";

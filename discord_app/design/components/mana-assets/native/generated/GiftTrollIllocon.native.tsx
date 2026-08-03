@@ -1,6 +1,3 @@
-// === Module 7195: GiftTrollIllocon ===
-
-// Module 7195 (GiftTrollIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GiftTrollIllocon.native.tsx");

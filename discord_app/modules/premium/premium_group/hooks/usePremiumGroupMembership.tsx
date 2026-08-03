@@ -1,6 +1,3 @@
-// === Module 12538: usePremiumGroupMembership ===
-
-// Module 12538 (usePremiumGroupMembership)
 import { useEffect } from "noop";
 import handleMutationStart from "handleMutationStart";
 

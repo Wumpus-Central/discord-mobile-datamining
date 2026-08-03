@@ -1,6 +1,3 @@
-// === Module 11388: usePollDurationOptions ===
-
-// Module 11388 (usePollDurationOptions)
 import { PollDurations } from "POLL_ATTACHMENT_FOLDER";
 
 const result = require("set").fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");

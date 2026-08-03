@@ -1,6 +1,3 @@
-// === Module 14136: useIsMobileQuestDockRenderedBase ===
-
-// Module 14136 (useIsMobileQuestDockRenderedBase)
 import closure_3 from "QuestsExperimentLocations";
 import getIsEligibleForQuests from "getIsEligibleForQuests";
 import setContent from "setContent";

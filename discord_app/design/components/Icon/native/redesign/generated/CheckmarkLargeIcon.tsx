@@ -1,6 +1,3 @@
-// === Module 4145: CheckmarkLargeIcon ===
-
-// Module 4145 (CheckmarkLargeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

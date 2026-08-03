@@ -1,6 +1,3 @@
-// === Module 14178: hasVideoEnded ===
-
-// Module 14178 (hasVideoEnded)
 import getSystemLocale from "getSystemLocale";
 import importAllResult from "CONFIG_NEVER_ANIMATE_TIMING";
 import get_ActivityIndicator from "CONFIG_NEVER_ANIMATE";

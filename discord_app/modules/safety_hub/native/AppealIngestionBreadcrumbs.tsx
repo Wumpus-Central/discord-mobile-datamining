@@ -1,6 +1,3 @@
-// === Module 11110: AppealIngestionBreadcrumbs ===
-
-// Module 11110 (AppealIngestionBreadcrumbs)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

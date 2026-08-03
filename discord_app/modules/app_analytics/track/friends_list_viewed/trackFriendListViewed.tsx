@@ -1,6 +1,3 @@
-// === Module 15602: trackFriendsListViewed ===
-
-// Module 15602 (trackFriendsListViewed)
 import { AnalyticEvents } from "ME";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/app_analytics/track/friends_list_viewed/trackFriendListViewed.tsx");

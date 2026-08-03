@@ -1,6 +1,3 @@
-// === Module 15700: renderLabel ===
-
-// Module 15700 (renderLabel)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

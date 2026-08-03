@@ -1,6 +1,3 @@
-// === Module 7940: EditAvatarDecorationInner ===
-
-// Module 7940 (EditAvatarDecorationInner)
 import set from "set";
 import getSystemLocale from "getSystemLocale";
 import { View } from "Background";

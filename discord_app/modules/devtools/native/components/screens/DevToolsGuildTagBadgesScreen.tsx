@@ -1,6 +1,3 @@
-// === Module 14821: items ===
-
-// Module 14821 (items)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

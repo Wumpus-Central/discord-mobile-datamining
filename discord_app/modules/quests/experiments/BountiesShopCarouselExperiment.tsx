@@ -1,6 +1,3 @@
-// === Module 14116: BountiesShopCarouselExperimentVariation ===
-
-// Module 14116 (BountiesShopCarouselExperimentVariation)
 import ApexExperiment from "ApexExperiment";
 
 let obj = { BASE: 0, [0]: "BASE", POPULARITY: 1, [1]: "POPULARITY", RECENCY: 2, [2]: "RECENCY" };

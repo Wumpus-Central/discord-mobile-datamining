@@ -1,6 +1,3 @@
-// === Module 15122: showThreadLongPressActionSheet ===
-
-// Module 15122 (showThreadLongPressActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/threads/native/components/showThreadLongPressActionSheet.tsx");
 
 export default function showThreadLongPressActionSheet(channelId) {

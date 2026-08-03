@@ -1,6 +1,3 @@
-// === Module 11894: useFavoritesGuildCategoryAddAction ===
-
-// Module 11894 (useFavoritesGuildCategoryAddAction)
 import getFavoritesAwareGuildName from "getFavoritesAwareGuildName";
 import noop from "noop";
 import { ChannelTypes } from "ME";

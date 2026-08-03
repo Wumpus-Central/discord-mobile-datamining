@@ -1,6 +1,3 @@
-// === Module 4143: DownloadIcon ===
-
-// Module 4143 (DownloadIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

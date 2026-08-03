@@ -1,6 +1,3 @@
-// === Module 13754: useUserAvailableGuildsWithTags ===
-
-// Module 13754 (useUserAvailableGuildsWithTags)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

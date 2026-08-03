@@ -1,6 +1,3 @@
-// === Module 12088: applicationWidgetStaticFieldConfigSchema ===
-
-// Module 12088 (applicationWidgetStaticFieldConfigSchema)
 import { z } from "module_12089";
 import { z as z2 } from "module_12089";
 import { z as z3 } from "module_12089";

@@ -1,6 +1,3 @@
-// === Module 15360: ICYMIInfoScreen ===
-
-// Module 15360 (ICYMIInfoScreen)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "jsxProd";
 import metadata from "metadata";

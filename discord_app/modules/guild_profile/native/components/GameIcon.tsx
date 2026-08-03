@@ -1,6 +1,3 @@
-// === Module 11959: styles ===
-
-// Module 11959 (styles)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

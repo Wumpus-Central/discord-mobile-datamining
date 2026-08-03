@@ -1,6 +1,3 @@
-// === Module 4389: updateUserGuildSettingsInternal ===
-
-// Module 4389 (updateUserGuildSettingsInternal)
 import initialize from "initialize";
 import storeThread from "storeThread";
 import createChannelRecord from "createChannelRecord";

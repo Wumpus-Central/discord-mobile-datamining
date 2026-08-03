@@ -1,6 +1,3 @@
-// === Module 8736: VariantOption ===
-
-// Module 8736 (VariantOption)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

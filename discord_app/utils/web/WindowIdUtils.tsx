@@ -1,6 +1,3 @@
-// === Module 5194: getWindowId ===
-
-// Module 5194 (getWindowId)
 const result = require("set").fileFinishedImporting("utils/web/WindowIdUtils.tsx");
 
 export const getWindowId = function getWindowId(defaultView) {

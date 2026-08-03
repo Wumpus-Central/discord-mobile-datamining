@@ -1,6 +1,3 @@
-// === Module 14906: RegistrationBailoutButton ===
-
-// Module 14906 (RegistrationBailoutButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

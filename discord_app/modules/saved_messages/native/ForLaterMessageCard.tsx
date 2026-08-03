@@ -1,6 +1,3 @@
-// === Module 9954: ForLaterDeletedMessageCard ===
-
-// Module 9954 (ForLaterDeletedMessageCard)
 import closure_3 from "jsxProd";
 import importAllResult from "t";
 import { View } from "expandEventProperties";

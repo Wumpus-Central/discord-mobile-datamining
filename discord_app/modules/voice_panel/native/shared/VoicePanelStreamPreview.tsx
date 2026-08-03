@@ -1,6 +1,3 @@
-// === Module 12043: VoicePanelStreamPreview ===
-
-// Module 12043 (VoicePanelStreamPreview)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import reset from "reset";

@@ -1,6 +1,3 @@
-// === Module 8531: SteamReviewRow ===
-
-// Module 8531 (SteamReviewRow)
 import noop from "noop";
 import get_ActivityIndicator from "SteamReleaseStatus";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8519: XboxNeutralIcon ===
-
-// Module 8519 (XboxNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

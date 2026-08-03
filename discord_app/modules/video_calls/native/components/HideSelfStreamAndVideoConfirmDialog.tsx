@@ -1,6 +1,3 @@
-// === Module 16053: HideSelfStreamAndVideoConfirmDialog ===
-
-// Module 16053 (HideSelfStreamAndVideoConfirmDialog)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { SelfStreamAndVideoAlertType as closure_4 } from "SelfStreamAndVideoAlertType";

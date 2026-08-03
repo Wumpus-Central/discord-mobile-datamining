@@ -1,6 +1,3 @@
-// === Module 16758: handleAppStateChanged ===
-
-// Module 16758 (handleAppStateChanged)
 import fetchFingerprint from "fetchFingerprint";
 import getState from "getState";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 5037: QuestsExperimentLocations ===
-
-// Module 5037 (QuestsExperimentLocations)
 import sendRequest from "sendRequest";
 import apply from "apply";
 import set from "Quests";

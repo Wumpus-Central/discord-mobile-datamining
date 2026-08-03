@@ -1,6 +1,3 @@
-// === Module 12299: EndEventActionSheet ===
-
-// Module 12299 (EndEventActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { EXPLICIT_END_EVENT_SHEET_KEY as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";

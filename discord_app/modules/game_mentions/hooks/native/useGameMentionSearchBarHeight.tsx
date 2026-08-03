@@ -1,6 +1,3 @@
-// === Module 11501: useGameMentionSearchBarHeight ===
-
-// Module 11501 (useGameMentionSearchBarHeight)
 import { StyleSheet } from "get ActivityIndicator";
 
 let c3 = "text-sm/semibold";

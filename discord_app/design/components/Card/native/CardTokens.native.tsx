@@ -1,6 +1,3 @@
-// === Module 5227: createCardShadowToken ===
-
-// Module 5227 (createCardShadowToken)
 const result = require("set").fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");
 
 export const createCardShadowToken = function createCardShadowToken(arg0) {

@@ -1,6 +1,3 @@
-// === Module 16407: HomeIcon ===
-
-// Module 16407 (HomeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

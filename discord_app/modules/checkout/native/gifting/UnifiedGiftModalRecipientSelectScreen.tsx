@@ -1,6 +1,3 @@
-// === Module 8821: UnifiedGiftModalRecipientSelectScreen ===
-
-// Module 8821 (UnifiedGiftModalRecipientSelectScreen)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UserRowModes } from "UserRowModes";

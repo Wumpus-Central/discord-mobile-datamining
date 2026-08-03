@@ -1,6 +1,3 @@
-// === Module 9193: ResendEmail ===
-
-// Module 9193 (ResendEmail)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "handleLogout";

@@ -1,6 +1,3 @@
-// === Module 13681: InventoryIcon ===
-
-// Module 13681 (InventoryIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

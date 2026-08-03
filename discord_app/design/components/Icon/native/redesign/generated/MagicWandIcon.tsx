@@ -1,6 +1,3 @@
-// === Module 10330: MagicWandIcon ===
-
-// Module 10330 (MagicWandIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

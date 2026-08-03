@@ -1,6 +1,3 @@
-// === Module 9584: FormSubmitErrorType ===
-
-// Module 9584 (FormSubmitErrorType)
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", EmptyTags: 2, [2]: "EmptyTags", ApiValidation: 3, [3]: "ApiValidation" };
 const result = require("set").fileFinishedImporting("modules/forums/FormError.tsx");
 

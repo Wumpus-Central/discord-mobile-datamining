@@ -1,6 +1,3 @@
-// === Module 12791: initialize ===
-
-// Module 12791 (initialize)
 import initialize from "initialize";
 import { AnalyticEvents } from "ME";
 import { Store } from "initialize";

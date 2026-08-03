@@ -1,6 +1,3 @@
-// === Module 6219: openPremiumPlanSelectionActionSheet ===
-
-// Module 6219 (openPremiumPlanSelectionActionSheet)
 import { PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY as closure_3 } from "GuildFeatures";
 
 const result = require("Header").fileFinishedImporting("modules/premium/native/openPremiumPlanSelectionActionSheet.tsx");

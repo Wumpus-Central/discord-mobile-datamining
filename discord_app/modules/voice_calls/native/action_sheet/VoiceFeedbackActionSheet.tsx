@@ -1,6 +1,3 @@
-// === Module 16200: trackOpen ===
-
-// Module 16200 (trackOpen)
 import "noop";
 import { AnalyticEvents } from "ME";
 import FeedbackRating from "FeedbackRating";

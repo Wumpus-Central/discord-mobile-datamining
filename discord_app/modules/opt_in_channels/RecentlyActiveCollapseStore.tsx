@@ -1,6 +1,3 @@
-// === Module 5789: set ===
-
-// Module 5789 (set)
 import { PersistedStore } from "initialize";
 import set from "set";
 

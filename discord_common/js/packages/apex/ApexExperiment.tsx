@@ -1,6 +1,3 @@
-// === Module 1350: logger ===
-
-// Module 1350 (logger)
 import _slicedToArray from "_slicedToArray";
 import { useEffect } from "noop";
 

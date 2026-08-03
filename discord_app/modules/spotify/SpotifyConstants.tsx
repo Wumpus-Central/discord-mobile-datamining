@@ -1,6 +1,3 @@
-// === Module 8179: WEB_OPEN ===
-
-// Module 8179 (WEB_OPEN)
 import set from "set";
 import set from "set";
 

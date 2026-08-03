@@ -1,6 +1,3 @@
-// === Module 5114: getBaseAnimationData ===
-
-// Module 5114 (getBaseAnimationData)
 import closure_3 from "ME";
 import { NativeModules } from "asyncRequireImpl";
 import handleConnectionOpen from "handleConnectionOpen";

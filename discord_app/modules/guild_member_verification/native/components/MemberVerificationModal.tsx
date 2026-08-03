@@ -1,6 +1,3 @@
-// === Module 9152: MemberVerificationModal ===
-
-// Module 9152 (MemberVerificationModal)
 import module_5642 from "module_5642";
 import { View } from "openMemberVerificationSuccessAlert";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

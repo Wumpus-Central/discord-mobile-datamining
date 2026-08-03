@@ -1,6 +1,3 @@
-// === Module 16358: updateVoiceSettings ===
-
-// Module 16358 (updateVoiceSettings)
 import fetchFingerprint from "fetchFingerprint";
 import bitrate from "bitrate";
 import ensureGuildLoaded from "ensureGuildLoaded";

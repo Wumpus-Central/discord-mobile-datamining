@@ -1,6 +1,3 @@
-// === Module 10701: useGlobalStatusIndicatorState ===
-
-// Module 10701 (useGlobalStatusIndicatorState)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT";

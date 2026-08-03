@@ -1,6 +1,3 @@
-// === Module 12241: RemediatedUserNotice ===
-
-// Module 12241 (RemediatedUserNotice)
 import "noop";
 import { View } from "get ActivityIndicator";
 import upsertRelationship from "upsertRelationship";

@@ -1,6 +1,3 @@
-// === Module 15720: Modal ===
-
-// Module 15720 (Modal)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 6002: _rewardRedemptionInstructionsFromServer ===
-
-// Module 6002 (_rewardRedemptionInstructionsFromServer)
 function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_platform) {
   const obj = {};
   const keys = Object.keys(redemption_instructions_by_platform);

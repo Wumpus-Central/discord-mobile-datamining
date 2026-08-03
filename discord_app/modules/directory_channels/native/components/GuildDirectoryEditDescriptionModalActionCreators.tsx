@@ -1,6 +1,3 @@
-// === Module 10079: ? ===
-
-// Module 10079
 let c3 = "GUILD_DIRECTORY_EDIT_DESCRIPTION_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionModalActionCreators.tsx");
 

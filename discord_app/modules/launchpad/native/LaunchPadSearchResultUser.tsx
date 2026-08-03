@@ -1,6 +1,3 @@
-// === Module 15842: user ===
-
-// Module 15842 (user)
 import importAllResult from "PressableBase";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import _getSystemLocale from "_getSystemLocale";

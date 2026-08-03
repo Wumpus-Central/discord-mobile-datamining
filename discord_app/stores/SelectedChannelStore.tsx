@@ -1,6 +1,3 @@
-// === Module 1931: handleConnectionOpen ===
-
-// Module 1931 (handleConnectionOpen)
 import createChannelRecord from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 4407: shouldShowAgeGateForVoiceChannel ===
-
-// Module 4407 (shouldShowAgeGateForVoiceChannel)
 import { isGuildNSFW } from "GuildNSFWContentLevel";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import initialize from "initialize";

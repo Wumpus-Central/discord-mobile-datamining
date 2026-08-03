@@ -1,6 +1,3 @@
-// === Module 5843: fromServer ===
-
-// Module 5843 (fromServer)
 let prototype;
 prototype = function ShelfBlockRecord(show_button) {
   let category_sku_id;

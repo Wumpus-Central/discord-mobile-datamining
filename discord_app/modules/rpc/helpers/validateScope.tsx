@@ -1,6 +1,3 @@
-// === Module 13578: validateScope ===
-
-// Module 13578 (validateScope)
 import { RPC_SCOPE_CONFIG } from "RPC_SCOPE_CONFIG";
 
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");

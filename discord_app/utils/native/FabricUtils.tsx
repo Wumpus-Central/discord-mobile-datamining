@@ -1,6 +1,3 @@
-// === Module 4057: isFabric ===
-
-// Module 4057 (isFabric)
 const result = require("set").fileFinishedImporting("utils/native/FabricUtils.tsx");
 
 export const isFabric = function isFabric() {

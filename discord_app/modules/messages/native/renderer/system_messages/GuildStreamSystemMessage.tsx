@@ -1,6 +1,3 @@
-// === Module 7794: createGuildStreamSystemMessage ===
-
-// Module 7794 (createGuildStreamSystemMessage)
 import { StreamTypes } from "StreamIssueReportReasons";
 
 const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildStreamSystemMessage.tsx");

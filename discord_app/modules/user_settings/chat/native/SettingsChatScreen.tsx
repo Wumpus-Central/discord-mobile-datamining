@@ -1,6 +1,3 @@
-// === Module 14438: VideoUploadQualityNitroUpsell ===
-
-// Module 14438 (VideoUploadQualityNitroUpsell)
 import module_13697 from "module_13697";
 import { View } from "dispatcher";
 import mergeGuildAvatar from "mergeGuildAvatar";

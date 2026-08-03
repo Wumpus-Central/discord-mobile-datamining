@@ -1,6 +1,3 @@
-// === Module 9095: ActionButton ===
-
-// Module 9095 (ActionButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

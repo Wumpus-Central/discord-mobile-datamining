@@ -1,6 +1,3 @@
-// === Module 14248: useFetchListingsForGuild ===
-
-// Module 14248 (useFetchListingsForGuild)
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

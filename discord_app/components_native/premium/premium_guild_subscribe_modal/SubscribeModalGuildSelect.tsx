@@ -1,6 +1,3 @@
-// === Module 5030: SubscribeModalGuildSelect ===
-
-// Module 5030 (SubscribeModalGuildSelect)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import { ScrollView } from "PressableBase";

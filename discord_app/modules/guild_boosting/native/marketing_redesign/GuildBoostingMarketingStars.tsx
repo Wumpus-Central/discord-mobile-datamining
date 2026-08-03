@@ -1,6 +1,3 @@
-// === Module 12661: StarsBackgroundSvg ===
-
-// Module 12661 (StarsBackgroundSvg)
 import "noop";
 import jsxProd from "jsxProd";
 

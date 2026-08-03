@@ -1,6 +1,3 @@
-// === Module 16262: handleConnectionOpen ===
-
-// Module 16262 (handleConnectionOpen)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleUpdateUser from "handleUpdateUser";
 import ME from "ME";

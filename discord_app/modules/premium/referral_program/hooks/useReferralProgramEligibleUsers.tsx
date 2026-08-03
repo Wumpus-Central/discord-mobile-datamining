@@ -1,6 +1,3 @@
-// === Module 12497: useReferralProgramEligibleUsers ===
-
-// Module 12497 (useReferralProgramEligibleUsers)
 import module_38 from "module_38";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

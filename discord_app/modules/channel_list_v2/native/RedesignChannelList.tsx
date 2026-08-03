@@ -1,6 +1,3 @@
-// === Module 15118: GuildChannels ===
-
-// Module 15118 (GuildChannels)
 import setLevels from "setLevels";
 import importAllResult from "shouldSkipSection";
 import { View } from "registerGuildVisibilityMethod";

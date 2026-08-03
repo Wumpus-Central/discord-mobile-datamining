@@ -1,6 +1,3 @@
-// === Module 7831: createInGameMessageNuxSystemMessage ===
-
-// Module 7831 (createInGameMessageNuxSystemMessage)
 import addApplication from "addApplication";
 import { HelpdeskArticles } from "ME";
 

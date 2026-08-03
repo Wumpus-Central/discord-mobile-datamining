@@ -1,6 +1,3 @@
-// === Module 11675: GuildPowerupsSinglePerkCard ===
-
-// Module 11675 (GuildPowerupsSinglePerkCard)
 import "noop";
 import { jsx } from "jsxProd";
 

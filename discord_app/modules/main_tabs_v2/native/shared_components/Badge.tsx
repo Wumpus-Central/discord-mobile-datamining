@@ -1,6 +1,3 @@
-// === Module 9133: DEFAULT_BADGE_SIZE ===
-
-// Module 9133 (DEFAULT_BADGE_SIZE)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

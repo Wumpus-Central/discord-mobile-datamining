@@ -1,6 +1,3 @@
-// === Module 11818: SeeMoreFooter ===
-
-// Module 11818 (SeeMoreFooter)
 import Text from "Text";
 import useNavigation from "useNavigation";
 import get_ActivityIndicator from "getSystemLocale";

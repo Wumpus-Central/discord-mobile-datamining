@@ -1,6 +1,3 @@
-// === Module 12502: ProgressWheel ===
-
-// Module 12502 (ProgressWheel)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

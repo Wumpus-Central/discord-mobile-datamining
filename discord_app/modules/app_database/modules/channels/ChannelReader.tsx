@@ -1,6 +1,3 @@
-// === Module 1927: getSync ===
-
-// Module 1927 (getSync)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let c3 = new require("set")("ChannelReader");

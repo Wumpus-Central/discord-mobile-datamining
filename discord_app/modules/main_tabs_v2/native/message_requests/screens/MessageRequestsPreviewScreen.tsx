@@ -1,6 +1,3 @@
-// === Module 15743: MessageRequestsScreen ===
-
-// Module 15743 (MessageRequestsScreen)
 import noop from "noop";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { ME } from "ME";

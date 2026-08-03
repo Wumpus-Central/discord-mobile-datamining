@@ -1,6 +1,3 @@
-// === Module 13815: route ===
-
-// Module 13815 (route)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createToggle from "createToggle";
 

@@ -1,6 +1,3 @@
-// === Module 16582: GuildSettingsRoleSubscriptionsGroupEditInner ===
-
-// Module 16582 (GuildSettingsRoleSubscriptionsGroupEditInner)
 import closure_4 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import Content from "Content";

@@ -1,6 +1,3 @@
-// === Module 9443: ? ===
-
-// Module 9443
 import { EmojiCategories } from "EmojiCategoryTypes";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

@@ -1,6 +1,3 @@
-// === Module 9792: GiftingSKUSelectScreen ===
-
-// Module 9792 (GiftingSKUSelectScreen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

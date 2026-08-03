@@ -1,6 +1,3 @@
-// === Module 11807: ContactSyncBackToLanding ===
-
-// Module 11807 (ContactSyncBackToLanding)
 let result = require("handleNameInputScreenOrSuggestions").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 
 export default function ContactSyncBackToLanding(arg0) {

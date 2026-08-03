@@ -1,6 +1,3 @@
-// === Module 4208: handleUpdate ===
-
-// Module 4208 (handleUpdate)
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 

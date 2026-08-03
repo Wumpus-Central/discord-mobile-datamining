@@ -1,6 +1,3 @@
-// === Module 4139: SendMessageIcon ===
-
-// Module 4139 (SendMessageIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

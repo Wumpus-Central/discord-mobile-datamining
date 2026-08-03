@@ -1,6 +1,3 @@
-// === Module 10451: LikelyAtoWarningBanner ===
-
-// Module 10451 (LikelyAtoWarningBanner)
 import LikelyAtoMoreTipsModalActionItems from "LikelyAtoMoreTipsModalActionItems";
 import { SafetyWarningTypes } from "handleConnectionOpen";
 import LIKELY_ATO_MORE_TIPS_MODAL_KEY from "LIKELY_ATO_MORE_TIPS_MODAL_KEY";

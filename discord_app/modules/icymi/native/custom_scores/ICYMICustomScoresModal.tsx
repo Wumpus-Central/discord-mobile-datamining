@@ -1,6 +1,3 @@
-// === Module 15347: ICYMICustomScoresModal ===
-
-// Module 15347 (ICYMICustomScoresModal)
 import "noop";
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";

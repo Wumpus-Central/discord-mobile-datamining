@@ -1,6 +1,3 @@
-// === Module 8173: useMediaShareActions ===
-
-// Module 8173 (useMediaShareActions)
 import transitionToChannel from "transitionToChannel";
 import filterStaffGuild from "filterStaffGuild";
 import ensureGuildLoaded from "ensureGuildLoaded";

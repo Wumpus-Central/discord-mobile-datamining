@@ -1,6 +1,3 @@
-// === Module 14968: MiniGuildIcon ===
-
-// Module 14968 (MiniGuildIcon)
 import importAllResult from "module_4054";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

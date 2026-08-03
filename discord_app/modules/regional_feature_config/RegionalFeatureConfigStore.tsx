@@ -1,6 +1,3 @@
-// === Module 3873: getRegionalFeatureConfig ===
-
-// Module 3873 (getRegionalFeatureConfig)
 import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME";
 import { Store } from "initialize";
 

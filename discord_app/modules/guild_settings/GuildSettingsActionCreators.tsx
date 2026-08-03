@@ -1,6 +1,3 @@
-// === Module 8308: ? ===
-
-// Module 8308
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import initialize from "initialize";
 import closure_5 from "initialize";

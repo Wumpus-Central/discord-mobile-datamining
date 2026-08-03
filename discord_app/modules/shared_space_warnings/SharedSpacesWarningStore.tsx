@@ -1,6 +1,3 @@
-// === Module 12806: useSharedSpacesWarningStore ===
-
-// Module 12806 (useSharedSpacesWarningStore)
 import keys from "keys";
 import createJSONStorage from "createJSONStorage";
 import createJSONStorage from "createJSONStorage";

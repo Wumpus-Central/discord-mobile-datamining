@@ -1,6 +1,3 @@
-// === Module 13714: showCustomColorPickerActionSheet ===
-
-// Module 13714 (showCustomColorPickerActionSheet)
 const CustomColorPicker = "CustomColorPicker";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/color_picker/native/showCustomColorPickerActionSheet.tsx");
 

@@ -1,6 +1,3 @@
-// === Module 6299: commonTriggerPointConfiguration ===
-
-// Module 6299 (commonTriggerPointConfiguration)
 import { AnalyticEvents } from "ME";
 
 const commonTriggerPointConfiguration = new require("registeredExperimentIds").CommonTriggerPointConfiguration([], require("ExperimentBuckets").CommonTriggerPoints.PAYMENT_FLOW_STARTED, { location: "payment flow started" });

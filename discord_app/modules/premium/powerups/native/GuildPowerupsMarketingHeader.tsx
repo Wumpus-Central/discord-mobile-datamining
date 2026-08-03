@@ -1,6 +1,3 @@
-// === Module 12658: PerkText ===
-
-// Module 12658 (PerkText)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

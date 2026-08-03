@@ -1,6 +1,3 @@
-// === Module 11283: TrackSectionHeader ===
-
-// Module 11283 (TrackSectionHeader)
 import handleDismissWithDismissed from "handleDismissWithDismissed";
 
 const require = arg1;

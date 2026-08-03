@@ -1,6 +1,3 @@
-// === Module 14794: isValidClipboardCode ===
-
-// Module 14794 (isValidClipboardCode)
 import Text from "Text";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

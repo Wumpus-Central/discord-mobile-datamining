@@ -1,6 +1,3 @@
-// === Module 11066: getPromiseableActionHandlers ===
-
-// Module 11066 (getPromiseableActionHandlers)
 import "noop";
 import AutomodEventType from "AutomodEventType";
 import { jsx } from "jsxProd";

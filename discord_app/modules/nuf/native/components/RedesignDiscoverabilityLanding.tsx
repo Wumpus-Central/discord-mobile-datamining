@@ -1,6 +1,3 @@
-// === Module 16301: RedesignDiscoverabilityLanding ===
-
-// Module 16301 (RedesignDiscoverabilityLanding)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

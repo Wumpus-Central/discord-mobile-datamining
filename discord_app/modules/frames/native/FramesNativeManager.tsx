@@ -1,6 +1,3 @@
-// === Module 10633: postMessageToWebView ===
-
-// Module 10633 (postMessageToWebView)
 import closure_3 from "WebView";
 import map from "map";
 import { ComponentActions } from "ME";

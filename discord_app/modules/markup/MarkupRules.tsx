@@ -1,6 +1,3 @@
-// === Module 4626: parseLink ===
-
-// Module 4626 (parseLink)
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 14517: _emailSupport ===
-
-// Module 14517 (_emailSupport)
 import combined from "combined";
 import _getSystemLocale from "_getSystemLocale";
 

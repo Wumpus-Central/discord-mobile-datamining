@@ -1,6 +1,3 @@
-// === Module 4767: getCreateAttachmentURL ===
-
-// Module 4767 (getCreateAttachmentURL)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 

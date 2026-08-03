@@ -1,6 +1,3 @@
-// === Module 13573: fetchStoreListingsForApplications ===
-
-// Module 13573 (fetchStoreListingsForApplications)
 import addApplication from "addApplication";
 import addSku from "addSku";
 import addRegularStoreListing from "addRegularStoreListing";

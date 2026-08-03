@@ -1,6 +1,3 @@
-// === Module 8040: redeemGiftCode ===
-
-// Module 8040 (redeemGiftCode)
 import sendRequest from "sendRequest";
 import ME from "ME";
 

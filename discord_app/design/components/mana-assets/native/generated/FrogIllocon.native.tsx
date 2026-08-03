@@ -1,6 +1,3 @@
-// === Module 7049: FrogIllocon ===
-
-// Module 7049 (FrogIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 10840: CameraButton ===
-
-// Module 10840 (CameraButton)
 import "noop";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 9956: validateJumpWithAlert ===
-
-// Module 9956 (validateJumpWithAlert)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import upsertRelationship from "upsertRelationship";

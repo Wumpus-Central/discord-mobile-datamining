@@ -1,6 +1,3 @@
-// === Module 15636: handleBackButtonPress ===
-
-// Module 15636 (handleBackButtonPress)
 import useUserProfileOverscrollStyles from "useUserProfileOverscrollStyles";
 import closure_4 from "n";
 import get_ActivityIndicator from "PlatformTypes";

@@ -1,6 +1,3 @@
-// === Module 7595: VoiceFiltersSpotIllustration ===
-
-// Module 7595 (VoiceFiltersSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/VoiceFiltersSpotIllustration.native.tsx");

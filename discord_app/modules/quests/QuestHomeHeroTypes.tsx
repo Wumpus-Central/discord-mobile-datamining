@@ -1,6 +1,3 @@
-// === Module 9504: questHomeHeroFromServer ===
-
-// Module 9504 (questHomeHeroFromServer)
 const result = require("set").fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
 
 export const questHomeHeroFromServer = function questHomeHeroFromServer(c7) {

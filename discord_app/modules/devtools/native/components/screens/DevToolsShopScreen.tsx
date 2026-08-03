@@ -1,6 +1,3 @@
-// === Module 14834: DevToolsShopScreen ===
-
-// Module 14834 (DevToolsShopScreen)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import getUserAgnosticState from "getUserAgnosticState";

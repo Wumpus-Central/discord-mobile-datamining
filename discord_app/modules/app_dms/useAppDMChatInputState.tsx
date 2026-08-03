@@ -1,6 +1,3 @@
-// === Module 10147: items ===
-
-// Module 10147 (items)
 import noop from "noop";
 import { useQueryState } from "getIndexKey";
 import addApplication from "addApplication";

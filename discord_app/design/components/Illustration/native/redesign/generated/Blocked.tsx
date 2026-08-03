@@ -1,6 +1,3 @@
-// === Module 13852: getBlockedSource ===
-
-// Module 13852 (getBlockedSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

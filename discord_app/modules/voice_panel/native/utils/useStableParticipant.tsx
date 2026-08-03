@@ -1,6 +1,3 @@
-// === Module 15952: areStableParticipantsEqual ===
-
-// Module 15952 (areStableParticipantsEqual)
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

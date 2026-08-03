@@ -1,6 +1,3 @@
-// === Module 13478: checkForNewerBuild ===
-
-// Module 13478 (checkForNewerBuild)
 import UPDATE_CHECK_INTERVAL from "UPDATE_CHECK_INTERVAL";
 import { Store } from "initialize";
 

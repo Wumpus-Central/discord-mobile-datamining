@@ -1,6 +1,3 @@
-// === Module 16444: PX_16 ===
-
-// Module 16444 (PX_16)
 import _slicedToArray from "_slicedToArray";
 import GuildProfileLoadingError from "GuildProfileLoadingError";
 import { View } from "asyncRequireImpl";

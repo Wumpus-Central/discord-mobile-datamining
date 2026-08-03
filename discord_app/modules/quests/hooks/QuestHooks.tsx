@@ -1,6 +1,3 @@
-// === Module 10505: useQuests ===
-
-// Module 10505 (useQuests)
 import set from "set";
 import supportedConsoles from "supportedConsoles";
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource";

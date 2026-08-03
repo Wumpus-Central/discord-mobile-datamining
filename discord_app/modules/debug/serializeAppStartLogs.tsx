@@ -1,6 +1,3 @@
-// === Module 10367: getDisplayName ===
-
-// Module 10367 (getDisplayName)
 function getDisplayName(tag) {
   if (null == tag.tag) {
     let str3 = tag.label;

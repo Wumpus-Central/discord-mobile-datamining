@@ -1,6 +1,3 @@
-// === Module 12486: usePremiumPrimaryGradientColors ===
-
-// Module 12486 (usePremiumPrimaryGradientColors)
 const result = require("set").fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
 
 export default function usePremiumPrimaryGradientColors() {

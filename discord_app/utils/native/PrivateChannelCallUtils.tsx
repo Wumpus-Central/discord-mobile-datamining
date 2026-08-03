@@ -1,6 +1,3 @@
-// === Module 4403: openChannelCallModal ===
-
-// Module 4403 (openChannelCallModal)
 import upsertRelationship from "upsertRelationship";
 import runAfterInteractions from "runAfterInteractions";
 import setContent from "setContent";

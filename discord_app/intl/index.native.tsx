@@ -1,6 +1,3 @@
-// === Module 1236: getSystemLocale ===
-
-// Module 1236 (getSystemLocale)
 import "noop";
 import { Fonts } from "ME";
 import { jsx } from "jsxProd";

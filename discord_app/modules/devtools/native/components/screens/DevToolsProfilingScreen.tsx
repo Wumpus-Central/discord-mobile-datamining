@@ -1,6 +1,3 @@
-// === Module 14777: DevToolsProfilingScreen ===
-
-// Module 14777 (DevToolsProfilingScreen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

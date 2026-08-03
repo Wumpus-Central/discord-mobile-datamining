@@ -1,6 +1,3 @@
-// === Module 10729: GroupArrowDownIcon ===
-
-// Module 10729 (GroupArrowDownIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 4264: initialize ===
-
-// Module 4264 (initialize)
 import { DeviceTypes } from "DesktopSources";
 import { Store } from "initialize";
 

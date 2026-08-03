@@ -1,6 +1,3 @@
-// === Module 5886: resolveGoreSettingWithDefaults ===
-
-// Module 5886 (resolveGoreSettingWithDefaults)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { HelpdeskArticles } from "ME";

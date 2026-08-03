@@ -1,6 +1,3 @@
-// === Module 9450: ObjectIcon ===
-
-// Module 9450 (ObjectIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

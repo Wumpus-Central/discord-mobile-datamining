@@ -1,6 +1,3 @@
-// === Module 5845: fromServer ===
-
-// Module 5845 (fromServer)
 let prototype;
 prototype = function WideBannerBlockRecord(arg0) {
   const obj = Object.create(new.target.prototype);

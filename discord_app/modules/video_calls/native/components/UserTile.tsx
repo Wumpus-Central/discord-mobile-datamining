@@ -1,6 +1,3 @@
-// === Module 10584: UserTile ===
-
-// Module 10584 (UserTile)
 import Emoji from "Emoji";
 import importAllResult from "getSystemLocale";
 import { View } from "registerAsset";

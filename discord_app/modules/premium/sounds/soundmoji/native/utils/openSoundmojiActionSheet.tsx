@@ -1,6 +1,3 @@
-// === Module 11140: openSoundmojiActionSheet ===
-
-// Module 11140 (openSoundmojiActionSheet)
 const result = require("SoundmojiActionSheet").fileFinishedImporting("modules/premium/sounds/soundmoji/native/utils/openSoundmojiActionSheet.tsx");
 
 export default function openSoundmojiActionSheet(arg0) {

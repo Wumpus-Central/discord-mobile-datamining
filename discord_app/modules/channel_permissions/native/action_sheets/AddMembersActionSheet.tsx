@@ -1,6 +1,3 @@
-// === Module 8288: _toPropertyKey ===
-
-// Module 8288 (_toPropertyKey)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import presentAddedFriendToast from "presentAddedFriendToast";

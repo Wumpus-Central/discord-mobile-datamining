@@ -1,6 +1,3 @@
-// === Module 13907: toggle ===
-
-// Module 13907 (toggle)
 import hasConsented from "hasConsented";
 import { Consents } from "ME";
 import createToggle from "createToggle";

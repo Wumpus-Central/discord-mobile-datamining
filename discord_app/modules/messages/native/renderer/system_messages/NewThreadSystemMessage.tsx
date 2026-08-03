@@ -1,6 +1,3 @@
-// === Module 7798: createNewThreadSystemMessage ===
-
-// Module 7798 (createNewThreadSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

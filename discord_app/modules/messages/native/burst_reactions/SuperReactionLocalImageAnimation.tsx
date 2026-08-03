@@ -1,6 +1,3 @@
-// === Module 9345: SuperReactionLocalImageAnimation ===
-
-// Module 9345 (SuperReactionLocalImageAnimation)
 import "noop";
 import { jsx } from "jsxProd";
 

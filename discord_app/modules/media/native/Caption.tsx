@@ -1,6 +1,3 @@
-// === Module 8107: Caption ===
-
-// Module 8107 (Caption)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

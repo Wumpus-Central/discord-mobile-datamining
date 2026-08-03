@@ -1,6 +1,3 @@
-// === Module 6917: CatIllocon ===
-
-// Module 6917 (CatIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/CatIllocon.native.tsx");

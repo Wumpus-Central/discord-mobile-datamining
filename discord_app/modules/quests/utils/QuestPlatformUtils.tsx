@@ -1,6 +1,3 @@
-// === Module 10510: supportedConsoles ===
-
-// Module 10510 (supportedConsoles)
 import { QuestTaskPlatform } from "QuestsExperimentLocations";
 import ME from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 10228: useFavoritesAccess ===
-
-// Module 10228 (useFavoritesAccess)
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initializeFromUserSettings from "initializeFromUserSettings";

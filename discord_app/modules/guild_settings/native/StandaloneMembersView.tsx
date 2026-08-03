@@ -1,6 +1,3 @@
-// === Module 15460: StandaloneMembersView ===
-
-// Module 15460 (StandaloneMembersView)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

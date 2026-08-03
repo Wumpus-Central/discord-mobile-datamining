@@ -1,6 +1,3 @@
-// === Module 16128: CaptchaModal ===
-
-// Module 16128 (CaptchaModal)
 import noop from "noop";
 import get_ActivityIndicator from "trackRegTransition";
 import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore";

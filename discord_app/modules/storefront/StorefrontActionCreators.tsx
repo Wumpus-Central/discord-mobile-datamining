@@ -1,6 +1,3 @@
-// === Module 8692: shouldFetchStorefrontPromotions ===
-
-// Module 8692 (shouldFetchStorefrontPromotions)
 import parseSkuIds from "parseSkuIds";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
 import "resetStoreState";

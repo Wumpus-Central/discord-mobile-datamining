@@ -1,6 +1,3 @@
-// === Module 13980: FamilyCenterParentalControlsContentAndSocial ===
-
-// Module 13980 (FamilyCenterParentalControlsContentAndSocial)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";

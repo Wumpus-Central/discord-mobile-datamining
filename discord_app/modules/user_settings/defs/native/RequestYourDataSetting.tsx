@@ -1,6 +1,3 @@
-// === Module 13908: useIsHarvestRequestDisabled ===
-
-// Module 13908 (useIsHarvestRequestDisabled)
 import { ActivityIndicator } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

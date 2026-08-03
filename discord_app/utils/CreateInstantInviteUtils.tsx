@@ -1,6 +1,3 @@
-// === Module 16657: getInvitableChannelForGuild ===
-
-// Module 16657 (getInvitableChannelForGuild)
 import comparator from "comparator";
 import closure_2 from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

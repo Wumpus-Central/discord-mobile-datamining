@@ -1,6 +1,3 @@
-// === Module 16234: HolidayEmojiAnimationType ===
-
-// Module 16234 (HolidayEmojiAnimationType)
 const result = require("set").fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
 
 export default {

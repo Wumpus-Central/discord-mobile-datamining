@@ -1,6 +1,3 @@
-// === Module 3866: explicitContentFromProto ===
-
-// Module 3866 (explicitContentFromProto)
 import updateExistingSettings from "updateExistingSettings";
 import MAX_FAVORITES from "MAX_FAVORITES";
 import items from "items";

@@ -1,6 +1,3 @@
-// === Module 5248: ACTION_SHEET_START_HEIGHT_RATIO ===
-
-// Module 5248 (ACTION_SHEET_START_HEIGHT_RATIO)
 const result = require("set").fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
 
 export const ACTION_SHEET_START_HEIGHT_RATIO = 0.6;

@@ -1,6 +1,3 @@
-// === Module 13011: AddFriendModalScene ===
-
-// Module 13011 (AddFriendModalScene)
 import _slicedToArray from "_slicedToArray";
 import HeaderActionButton from "HeaderActionButton";
 import get_ActivityIndicator from "getSystemLocale";

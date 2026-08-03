@@ -1,6 +1,3 @@
-// === Module 11961: FireIcon ===
-
-// Module 11961 (FireIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

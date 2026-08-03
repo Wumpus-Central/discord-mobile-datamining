@@ -1,6 +1,3 @@
-// === Module 15631: handleConfirm ===
-
-// Module 15631 (handleConfirm)
 import getSystemLocale from "getSystemLocale";
 import "noop";
 import jsxProd from "jsxProd";

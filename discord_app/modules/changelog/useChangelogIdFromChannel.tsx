@@ -1,6 +1,3 @@
-// === Module 11538: useChangelogIdFromChannel ===
-
-// Module 11538 (useChangelogIdFromChannel)
 import reinjectEphemerals from "reinjectEphemerals";
 
 const require = arg1;

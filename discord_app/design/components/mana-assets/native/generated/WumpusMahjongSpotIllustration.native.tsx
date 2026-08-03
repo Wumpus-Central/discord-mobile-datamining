@@ -1,6 +1,3 @@
-// === Module 7619: WumpusMahjongSpotIllustration ===
-
-// Module 7619 (WumpusMahjongSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/WumpusMahjongSpotIllustration.native.tsx");

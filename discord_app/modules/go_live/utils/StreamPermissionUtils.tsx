@@ -1,6 +1,3 @@
-// === Module 6014: canStreamInChannel ===
-
-// Module 6014 (canStreamInChannel)
 import set from "set";
 import { ChannelRecordBase } from "createChannelRecord";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";

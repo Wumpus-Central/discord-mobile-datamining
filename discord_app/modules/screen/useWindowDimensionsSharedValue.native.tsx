@@ -1,6 +1,3 @@
-// === Module 14856: mutable ===
-
-// Module 14856 (mutable)
 import module_4054 from "module_4054";
 import useWindowDimensions from "useWindowDimensions";
 import module_4054 from "module_4054";

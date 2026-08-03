@@ -1,6 +1,3 @@
-// === Module 10166: useSafetyToolsButtonTooltipForChannel ===
-
-// Module 10166 (useSafetyToolsButtonTooltipForChannel)
 import { SafetyWarningTypes } from "handleConnectionOpen";
 
 const HOUR = require("set").Millis.HOUR;

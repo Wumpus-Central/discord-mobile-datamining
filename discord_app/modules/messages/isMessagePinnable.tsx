@@ -1,6 +1,3 @@
-// === Module 9572: isMessagePinnable ===
-
-// Module 9572 (isMessagePinnable)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 

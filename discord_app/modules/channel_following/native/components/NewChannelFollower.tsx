@@ -1,6 +1,3 @@
-// === Module 10412: NewChannelFollower ===
-
-// Module 10412 (NewChannelFollower)
 import asyncRequireImpl from "asyncRequireImpl";
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "AccessibilityAnnouncer";

@@ -1,6 +1,3 @@
-// === Module 7828: createPollResultSystemMessage ===
-
-// Module 7828 (createPollResultSystemMessage)
 import { EMOJI_URL_BASE_SIZE } from "set";
 
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");

@@ -1,6 +1,3 @@
-// === Module 8937: useGameConsoleAccounts ===
-
-// Module 8937 (useGameConsoleAccounts)
 import set from "set";
 import { PlatformTypes } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 9669: HorizontalAutocompleteWrapper ===
-
-// Module 9669 (HorizontalAutocompleteWrapper)
 import noop from "noop";
 import { FlatList } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

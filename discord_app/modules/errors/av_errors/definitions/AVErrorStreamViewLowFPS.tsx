@@ -1,6 +1,3 @@
-// === Module 16699: AVErrorStreamViewLowFPSDefinition ===
-
-// Module 16699 (AVErrorStreamViewLowFPSDefinition)
 import getParticipants from "getParticipants";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";

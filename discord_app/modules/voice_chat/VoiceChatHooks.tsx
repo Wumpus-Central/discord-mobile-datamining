@@ -1,6 +1,3 @@
-// === Module 10253: useIsConnectedToVoiceChannel ===
-
-// Module 10253 (useIsConnectedToVoiceChannel)
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";
 

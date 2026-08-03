@@ -1,6 +1,3 @@
-// === Module 7159: GemLevel3Illocon ===
-
-// Module 7159 (GemLevel3Illocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GemLevel3Illocon.native.tsx");

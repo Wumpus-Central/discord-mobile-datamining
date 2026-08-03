@@ -1,6 +1,3 @@
-// === Module 15597: RedirectUnauthenticated ===
-
-// Module 15597 (RedirectUnauthenticated)
 import "noop";
 import { Routes } from "ME";
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";

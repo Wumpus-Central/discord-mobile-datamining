@@ -1,6 +1,3 @@
-// === Module 15106: HappeningNowCardCreateChannel ===
-
-// Module 15106 (HappeningNowCardCreateChannel)
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "registerAsset";
 import comparator from "comparator";

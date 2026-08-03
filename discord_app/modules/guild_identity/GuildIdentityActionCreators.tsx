@@ -1,6 +1,3 @@
-// === Module 9817: _saveGuildIdentityChanges ===
-
-// Module 9817 (_saveGuildIdentityChanges)
 import SafetyScannedUploadSurface from "SafetyScannedUploadSurface";
 import { Endpoints } from "ME";
 

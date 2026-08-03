@@ -1,6 +1,3 @@
-// === Module 10571: map ===
-
-// Module 10571 (map)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionInfoChange from "handleConnectionInfoChange";

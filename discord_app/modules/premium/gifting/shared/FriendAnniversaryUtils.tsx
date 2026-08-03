@@ -1,6 +1,3 @@
-// === Module 7859: FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS ===
-
-// Module 7859 (FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS)
 const result = require("set").fileFinishedImporting("modules/premium/gifting/shared/FriendAnniversaryUtils.tsx");
 
 export const FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS = 7;

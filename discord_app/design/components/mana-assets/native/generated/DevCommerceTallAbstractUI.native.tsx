@@ -1,6 +1,3 @@
-// === Module 6965: DevCommerceTallAbstractUI ===
-
-// Module 6965 (DevCommerceTallAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/DevCommerceTallAbstractUI.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 14643: feedBlock ===
-
-// Module 14643 (feedBlock)
 import Text from "Text";
 import get_ActivityIndicator from "context";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

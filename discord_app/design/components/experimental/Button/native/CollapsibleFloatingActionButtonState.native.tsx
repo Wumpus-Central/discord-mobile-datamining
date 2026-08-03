@@ -1,6 +1,3 @@
-// === Module 8248: useCollapsibleFloatingActionButtonState ===
-
-// Module 8248 (useCollapsibleFloatingActionButtonState)
 import noop from "noop";
 
 const require = arg1;

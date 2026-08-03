@@ -1,6 +1,3 @@
-// === Module 10789: SoundboardVolume ===
-
-// Module 10789 (SoundboardVolume)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";

@@ -1,6 +1,3 @@
-// === Module 6919: CaterpillarIllocon ===
-
-// Module 6919 (CaterpillarIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx");

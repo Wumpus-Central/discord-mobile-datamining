@@ -1,6 +1,3 @@
-// === Module 7201: GiftingTier2LargeBadge ===
-
-// Module 7201 (GiftingTier2LargeBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier2LargeBadge.native.tsx");

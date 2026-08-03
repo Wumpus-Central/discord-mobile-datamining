@@ -1,6 +1,3 @@
-// === Module 10317: ConnectedInAppNotificationSettingsScreen ===
-
-// Module 10317 (ConnectedInAppNotificationSettingsScreen)
 import importAllResult from "noop";
 import { isMultiUserDM } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

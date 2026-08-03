@@ -1,6 +1,3 @@
-// === Module 14185: logger ===
-
-// Module 14185 (logger)
 const logger = new require("log").Logger("MobileCustomMuxIntegration");
 let c4 = "1.0.0";
 const Cloudflare = "Cloudflare";

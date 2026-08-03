@@ -1,6 +1,3 @@
-// === Module 14793: ClipboardCopyInput ===
-
-// Module 14793 (ClipboardCopyInput)
 import jsxProd from "jsxProd";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

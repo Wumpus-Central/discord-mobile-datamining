@@ -1,6 +1,3 @@
-// === Module 9116: maybeShowDiscardChangesAlert ===
-
-// Module 9116 (maybeShowDiscardChangesAlert)
 const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
 
 export default function maybeShowDiscardChangesAlert(onHasEdits) {

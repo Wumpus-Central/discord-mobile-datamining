@@ -1,6 +1,3 @@
-// === Module 14818: setWarningBoosts ===
-
-// Module 14818 (setWarningBoosts)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import updateUserGuildSettings from "updateUserGuildSettings";
 import get_ActivityIndicator from "TableSwitchRow";

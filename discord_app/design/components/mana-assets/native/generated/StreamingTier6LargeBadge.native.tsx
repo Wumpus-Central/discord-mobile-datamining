@@ -1,6 +1,3 @@
-// === Module 7547: StreamingTier6LargeBadge ===
-
-// Module 7547 (StreamingTier6LargeBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/StreamingTier6LargeBadge.native.tsx");

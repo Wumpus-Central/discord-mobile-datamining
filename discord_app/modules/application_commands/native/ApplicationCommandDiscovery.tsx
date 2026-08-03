@@ -1,6 +1,3 @@
-// === Module 11505: ApplicationCommandDiscovery ===
-
-// Module 11505 (ApplicationCommandDiscovery)
 import _slicedToArray from "_slicedToArray";
 import apply from "apply";
 import get_ActivityIndicator from "getSystemLocale";

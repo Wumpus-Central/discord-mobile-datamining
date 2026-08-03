@@ -1,6 +1,3 @@
-// === Module 11209: num2 ===
-
-// Module 11209 (num2)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

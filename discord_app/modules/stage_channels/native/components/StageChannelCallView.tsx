@@ -1,6 +1,3 @@
-// === Module 10847: StageChannelCallBackground ===
-
-// Module 10847 (StageChannelCallBackground)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

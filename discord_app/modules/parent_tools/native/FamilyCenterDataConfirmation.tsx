@@ -1,6 +1,3 @@
-// === Module 11126: RowGroup ===
-
-// Module 11126 (RowGroup)
 import "XSmallIcon";
 import jsxProd from "jsxProd";
 

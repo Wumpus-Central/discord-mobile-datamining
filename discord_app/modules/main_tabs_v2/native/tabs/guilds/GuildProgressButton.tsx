@@ -1,6 +1,3 @@
-// === Module 15188: GuildProgressButton ===
-
-// Module 15188 (GuildProgressButton)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

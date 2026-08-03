@@ -1,6 +1,3 @@
-// === Module 14296: toggle ===
-
-// Module 14296 (toggle)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
 

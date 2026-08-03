@@ -1,6 +1,3 @@
-// === Module 8511: BattlenetNeutralIcon ===
-
-// Module 8511 (BattlenetNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

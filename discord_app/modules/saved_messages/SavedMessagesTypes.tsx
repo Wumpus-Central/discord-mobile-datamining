@@ -1,6 +1,3 @@
-// === Module 9565: SavedMessageSortTypes ===
-
-// Module 9565 (SavedMessageSortTypes)
 const result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
 
 export const SavedMessageSortTypes = { ALL: "ALL", REMINDER: "REMINDER", BOOKMARK: "BOOKMARK" };

@@ -1,6 +1,3 @@
-// === Module 7891: nativeStyleProperties ===
-
-// Module 7891 (nativeStyleProperties)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 3831: hasFlag ===
-
-// Module 3831 (hasFlag)
 import "toJS";
 import ME from "ME";
 

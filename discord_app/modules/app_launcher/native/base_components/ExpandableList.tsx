@@ -1,6 +1,3 @@
-// === Module 11295: ExpandableList ===
-
-// Module 11295 (ExpandableList)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

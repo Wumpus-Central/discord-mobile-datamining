@@ -1,6 +1,3 @@
-// === Module 4697: TextLockIcon ===
-
-// Module 4697 (TextLockIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

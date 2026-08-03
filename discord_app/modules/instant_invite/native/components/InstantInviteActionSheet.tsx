@@ -1,6 +1,3 @@
-// === Module 8361: Loading ===
-
-// Module 8361 (Loading)
 import module_12256 from "module_12256";
 import getInviteURL from "getInviteURL";
 import get_ActivityIndicator from "initialize";

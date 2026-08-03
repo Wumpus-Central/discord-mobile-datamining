@@ -1,6 +1,3 @@
-// === Module 13955: FamilyCenterActivityGiftRow ===
-
-// Module 13955 (FamilyCenterActivityGiftRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 12792: initialize ===
-
-// Module 12792 (initialize)
 import filterPlayingActivities from "filterPlayingActivities";
 import { StatusTypes } from "ME";
 import { PersistedStore } from "initialize";

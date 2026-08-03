@@ -1,6 +1,3 @@
-// === Module 9035: RobotIcon ===
-
-// Module 9035 (RobotIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

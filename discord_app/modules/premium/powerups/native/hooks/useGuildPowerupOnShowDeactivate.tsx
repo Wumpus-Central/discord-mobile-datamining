@@ -1,6 +1,3 @@
-// === Module 11644: useGuildPowerupOnShowDeactivate ===
-
-// Module 11644 (useGuildPowerupOnShowDeactivate)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

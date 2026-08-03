@@ -1,6 +1,3 @@
-// === Module 9895: LongPressMessageChatItemPreview ===
-
-// Module 9895 (LongPressMessageChatItemPreview)
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 

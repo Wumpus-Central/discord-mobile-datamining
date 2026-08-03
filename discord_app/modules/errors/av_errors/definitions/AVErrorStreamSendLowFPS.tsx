@@ -1,6 +1,3 @@
-// === Module 16703: AVErrorStreamSendLowFPSDefinition ===
-
-// Module 16703 (AVErrorStreamSendLowFPSDefinition)
 import getParticipants from "getParticipants";
 import reset from "reset";
 import initialize from "initialize";

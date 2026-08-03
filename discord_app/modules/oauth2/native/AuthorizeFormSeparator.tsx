@@ -1,6 +1,3 @@
-// === Module 9022: AuthorizeFormSeparator ===
-
-// Module 9022 (AuthorizeFormSeparator)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

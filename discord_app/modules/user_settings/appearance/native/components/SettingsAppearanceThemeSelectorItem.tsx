@@ -1,6 +1,3 @@
-// === Module 14309: GradientThemeBackground ===
-
-// Module 14309 (GradientThemeBackground)
 import "getSystemLocale";
 import { View } from "useCheckboxA11yNative";
 import handleThemeChange from "handleThemeChange";

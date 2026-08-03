@@ -1,6 +1,3 @@
-// === Module 9654: getStickerDiscoverableGuild ===
-
-// Module 9654 (getStickerDiscoverableGuild)
 import { Endpoints } from "ME";
 
 const result = require("_startLurking").fileFinishedImporting("modules/messages/getStickerDiscoverableGuild.tsx");

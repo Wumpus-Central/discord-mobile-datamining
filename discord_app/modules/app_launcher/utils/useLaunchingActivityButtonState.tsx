@@ -1,6 +1,3 @@
-// === Module 11332: useLaunchingActivityButtonState ===
-
-// Module 11332 (useLaunchingActivityButtonState)
 import noop from "noop";
 import participantFromServer from "participantFromServer";
 import map from "map";

@@ -1,6 +1,3 @@
-// === Module 7297: NitroCoinStackSpotIllustration ===
-
-// Module 7297 (NitroCoinStackSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/NitroCoinStackSpotIllustration.native.tsx");

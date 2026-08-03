@@ -1,6 +1,3 @@
-// === Module 12587: PricingSubheadingCopy ===
-
-// Module 12587 (PricingSubheadingCopy)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "SubscriptionPlans";

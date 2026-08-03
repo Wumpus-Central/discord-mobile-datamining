@@ -1,6 +1,3 @@
-// === Module 6831: ActivatedGem3dIllustration ===
-
-// Module 6831 (ActivatedGem3dIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ActivatedGem3dIllustration.native.tsx");

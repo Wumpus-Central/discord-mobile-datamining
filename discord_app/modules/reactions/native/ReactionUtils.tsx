@@ -1,6 +1,3 @@
-// === Module 9323: handleOutOfSuperReactions ===
-
-// Module 9323 (handleOutOfSuperReactions)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
 import handleConnectionOpen from "handleConnectionOpen";

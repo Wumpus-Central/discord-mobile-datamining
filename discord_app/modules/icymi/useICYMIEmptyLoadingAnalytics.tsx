@@ -1,6 +1,3 @@
-// === Module 15380: useICYMIEmptyLoadingAnalytics ===
-
-// Module 15380 (useICYMIEmptyLoadingAnalytics)
 import noop from "noop";
 
 const require = arg1;

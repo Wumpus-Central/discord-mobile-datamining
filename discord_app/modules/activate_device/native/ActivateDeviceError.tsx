@@ -1,6 +1,3 @@
-// === Module 13044: ActivateDeviceError ===
-
-// Module 13044 (ActivateDeviceError)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

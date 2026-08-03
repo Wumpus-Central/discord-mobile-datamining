@@ -1,6 +1,3 @@
-// === Module 16613: items ===
-
-// Module 16613 (items)
 import noop from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
 

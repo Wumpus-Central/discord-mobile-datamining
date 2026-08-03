@@ -1,6 +1,3 @@
-// === Module 13070: ServerTagPreviewActionSheet ===
-
-// Module 13070 (ServerTagPreviewActionSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { GuildProfileFetchStatus } from "handleUpdateStart";

@@ -1,6 +1,3 @@
-// === Module 7329: NitroRocketNameplateAbstractUI ===
-
-// Module 7329 (NitroRocketNameplateAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/NitroRocketNameplateAbstractUI.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 8141: MediaViewerDimensionsProvider ===
-
-// Module 8141 (MediaViewerDimensionsProvider)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

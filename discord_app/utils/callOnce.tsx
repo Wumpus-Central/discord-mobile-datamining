@@ -1,6 +1,3 @@
-// === Module 5958: callOnce ===
-
-// Module 5958 (callOnce)
 const result = require("set").fileFinishedImporting("utils/callOnce.tsx");
 
 export function callOnce(outer1_1) {

@@ -1,6 +1,3 @@
-// === Module 16581: GuildSubscriptionEnableMonetization ===
-
-// Module 16581 (GuildSubscriptionEnableMonetization)
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { jsx } from "jsxProd";

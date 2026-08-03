@@ -1,6 +1,3 @@
-// === Module 13698: SearchListSectionLabel ===
-
-// Module 13698 (SearchListSectionLabel)
 import importAllResult from "set";
 import { View } from "SettingSearchBar";
 import zustandStore from "zustandStore";

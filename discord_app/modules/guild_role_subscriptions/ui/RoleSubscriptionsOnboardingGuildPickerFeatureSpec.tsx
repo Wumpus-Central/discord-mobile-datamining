@@ -1,6 +1,3 @@
-// === Module 13049: ? ===
-
-// Module 13049
 import getHash from "getHash";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 

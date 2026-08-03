@@ -1,6 +1,3 @@
-// === Module 5528: accountLinkAuthorizationStarted ===
-
-// Module 5528 (accountLinkAuthorizationStarted)
 const result = require("set").fileFinishedImporting("modules/application_account_linking/AccountLinkingActionCreators.tsx");
 
 export const accountLinkAuthorizationStarted = function accountLinkAuthorizationStarted(id, accountLinkCallbacks) {

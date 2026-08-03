@@ -1,6 +1,3 @@
-// === Module 16294: prototype ===
-
-// Module 16294 (prototype)
 import ContactSyncModes from "ContactSyncModes";
 import initialize from "initialize";
 import "initialize";

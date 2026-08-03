@@ -1,6 +1,3 @@
-// === Module 4638: getSoundmojiASTFromString ===
-
-// Module 4638 (getSoundmojiASTFromString)
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import reinjectEphemerals from "reinjectEphemerals";
 import { MessageStates } from "ME";

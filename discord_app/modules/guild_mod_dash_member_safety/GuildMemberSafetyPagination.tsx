@@ -1,6 +1,3 @@
-// === Module 5782: items ===
-
-// Module 5782 (items)
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 

@@ -1,6 +1,3 @@
-// === Module 5980: extractActivityBookmarkParams ===
-
-// Module 5980 (extractActivityBookmarkParams)
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
 export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {

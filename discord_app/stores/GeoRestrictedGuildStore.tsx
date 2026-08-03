@@ -1,6 +1,3 @@
-// === Module 12817: getGeoRestrictedGuilds ===
-
-// Module 12817 (getGeoRestrictedGuilds)
 import { Store } from "initialize";
 
 let closure_0 = [];

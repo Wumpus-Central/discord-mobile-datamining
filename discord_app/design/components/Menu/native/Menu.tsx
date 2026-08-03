@@ -1,6 +1,3 @@
-// === Module 13192: NOOP ===
-
-// Module 13192 (NOOP)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CONFIG_NEVER_ANIMATE";
 import get_ActivityIndicator from "generateBoxShadowStyle";

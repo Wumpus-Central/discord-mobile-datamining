@@ -1,6 +1,3 @@
-// === Module 9395: getEmojiPickerDataRowItemSlimEmoji ===
-
-// Module 9395 (getEmojiPickerDataRowItemSlimEmoji)
 const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx");
 
 export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked) {

@@ -1,6 +1,3 @@
-// === Module 5996: progressFromServer ===
-
-// Module 5996 (progressFromServer)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

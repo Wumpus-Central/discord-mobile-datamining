@@ -1,6 +1,3 @@
-// === Module 9070: AcceptRequestConfirmationModal ===
-
-// Module 9070 (AcceptRequestConfirmationModal)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

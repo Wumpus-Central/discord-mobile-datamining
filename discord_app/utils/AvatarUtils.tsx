@@ -1,6 +1,3 @@
-// === Module 1416: getAvatarURL ===
-
-// Module 1416 (getAvatarURL)
 import ME from "ME";
 import { AVATAR_DECORATION_SIZE } from "DECORATION_TO_AVATAR_RATIO";
 import set from "set";

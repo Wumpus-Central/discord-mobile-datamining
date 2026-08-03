@@ -1,6 +1,3 @@
-// === Module 15476: result ===
-
-// Module 15476 (result)
 import _fetchGuildJoinRequests from "_fetchGuildJoinRequests";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

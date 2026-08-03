@@ -1,6 +1,3 @@
-// === Module 12419: GuildScheduledEventPreview ===
-
-// Module 12419 (GuildScheduledEventPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

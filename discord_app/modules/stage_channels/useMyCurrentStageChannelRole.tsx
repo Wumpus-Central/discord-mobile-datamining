@@ -1,6 +1,3 @@
-// === Module 10839: useMyCurrentStageChannelRole ===
-
-// Module 10839 (useMyCurrentStageChannelRole)
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";

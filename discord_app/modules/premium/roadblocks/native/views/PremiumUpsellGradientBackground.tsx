@@ -1,6 +1,3 @@
-// === Module 9394: PremiumUpsellGradientBackground ===
-
-// Module 9394 (PremiumUpsellGradientBackground)
 import "noop";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";

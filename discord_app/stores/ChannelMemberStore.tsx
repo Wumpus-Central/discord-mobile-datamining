@@ -1,6 +1,3 @@
-// === Module 6059: getMemberListId ===
-
-// Module 6059 (getMemberListId)
 import getHash from "getHash";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";

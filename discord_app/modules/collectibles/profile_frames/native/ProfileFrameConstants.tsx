@@ -1,6 +1,3 @@
-// === Module 8102: PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO ===
-
-// Module 8102 (PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO)
 const result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx");
 
 export const PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO = 0.625;

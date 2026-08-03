@@ -1,6 +1,3 @@
-// === Module 5729: isClickstreamEnabled ===
-
-// Module 5729 (isClickstreamEnabled)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";

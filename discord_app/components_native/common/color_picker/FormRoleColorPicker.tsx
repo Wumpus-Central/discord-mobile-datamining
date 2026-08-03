@@ -1,6 +1,3 @@
-// === Module 14965: FormRoleColorPicker ===
-
-// Module 14965 (FormRoleColorPicker)
 import noop from "noop";
 import { DEFAULT_ROLE_COLOR } from "ME";
 import { jsx } from "jsxProd";

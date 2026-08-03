@@ -1,6 +1,3 @@
-// === Module 11702: loadMessageRequestData ===
-
-// Module 11702 (loadMessageRequestData)
 import initialize from "initialize";
 import reinjectEphemerals from "reinjectEphemerals";
 import generateOldThreadCutoff from "generateOldThreadCutoff";

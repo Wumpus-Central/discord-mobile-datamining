@@ -1,6 +1,3 @@
-// === Module 9013: ServerIcon ===
-
-// Module 9013 (ServerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 6293: create ===
-
-// Module 6293 (create)
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 

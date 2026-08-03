@@ -1,6 +1,3 @@
-// === Module 7646: Divider ===
-
-// Module 7646 (Divider)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

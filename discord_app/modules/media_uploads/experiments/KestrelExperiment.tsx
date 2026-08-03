@@ -1,6 +1,3 @@
-// === Module 4772: getKestrelConfig ===
-
-// Module 4772 (getKestrelConfig)
 import ApexExperiment from "ApexExperiment";
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } });

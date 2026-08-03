@@ -1,6 +1,3 @@
-// === Module 11309: _getPrimaryAppCommand ===
-
-// Module 11309 (_getPrimaryAppCommand)
 import ScoreMethod from "ScoreMethod";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

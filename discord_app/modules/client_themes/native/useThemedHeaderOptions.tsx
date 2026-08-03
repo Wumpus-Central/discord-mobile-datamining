@@ -1,6 +1,3 @@
-// === Module 15599: headerBackground ===
-
-// Module 15599 (headerBackground)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

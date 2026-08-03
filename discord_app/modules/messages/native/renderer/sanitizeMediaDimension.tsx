@@ -1,6 +1,3 @@
-// === Module 7890: sanitizeMediaDimension ===
-
-// Module 7890 (sanitizeMediaDimension)
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");
 
 export const sanitizeMediaDimension = function sanitizeMediaDimension(height) {

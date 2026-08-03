@@ -1,6 +1,3 @@
-// === Module 13744: COLLECTIBLES_PREVIEW_SIZE ===
-
-// Module 13744 (COLLECTIBLES_PREVIEW_SIZE)
 import _slicedToArray from "_slicedToArray";
 import FormControlText from "FormControlText";
 import { View } from "asyncRequireImpl";

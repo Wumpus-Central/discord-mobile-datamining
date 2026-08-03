@@ -1,6 +1,3 @@
-// === Module 13140: set ===
-
-// Module 13140 (set)
 const result = require("set").fileFinishedImporting("modules/premium/SKUListing.tsx");
 
 export default function SKUListing(skuId, skuFeatures) {

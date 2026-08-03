@@ -1,6 +1,3 @@
-// === Module 11249: BannerBase ===
-
-// Module 11249 (BannerBase)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";

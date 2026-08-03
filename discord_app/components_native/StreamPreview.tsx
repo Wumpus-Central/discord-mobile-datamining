@@ -1,6 +1,3 @@
-// === Module 10864: render ===
-
-// Module 10864 (render)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";

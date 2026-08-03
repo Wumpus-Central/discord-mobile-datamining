@@ -1,6 +1,3 @@
-// === Module 9138: SearchEntrypointAnalyticsLocations ===
-
-// Module 9138 (SearchEntrypointAnalyticsLocations)
 import MessageEmbedTypes from "MessageEmbedTypes";
 
 let SearchHistoryItemTypes;

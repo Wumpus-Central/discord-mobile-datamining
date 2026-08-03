@@ -1,6 +1,3 @@
-// === Module 15477: CreateThreadViewInner ===
-
-// Module 15477 (CreateThreadViewInner)
 import setCooldown from "setCooldown";
 import getBestActiveInput from "getBestActiveInput";
 import importAllResult from "TableSwitchRow";

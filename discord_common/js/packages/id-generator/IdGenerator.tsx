@@ -1,6 +1,3 @@
-// === Module 510: generate ===
-
-// Module 510 (generate)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {
   constructor() {

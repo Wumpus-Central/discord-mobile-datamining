@@ -1,6 +1,3 @@
-// === Module 16208: syncLocalState ===
-
-// Module 16208 (syncLocalState)
 import updateVoiceState from "updateVoiceState";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

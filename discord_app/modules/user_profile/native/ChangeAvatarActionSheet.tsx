@@ -1,6 +1,3 @@
-// === Module 13728: ChangeAvatarActionSheet ===
-
-// Module 13728 (ChangeAvatarActionSheet)
 import "noop";
 import { View } from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";

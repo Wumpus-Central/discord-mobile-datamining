@@ -1,6 +1,3 @@
-// === Module 15045: MessageRequestAnimation ===
-
-// Module 15045 (MessageRequestAnimation)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import processChannel from "processChannel";

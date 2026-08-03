@@ -1,6 +1,3 @@
-// === Module 6030: getClipBaseProperties ===
-
-// Module 6030 (getClipBaseProperties)
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import reset from "reset";
 import createRTCConnection from "createRTCConnection";

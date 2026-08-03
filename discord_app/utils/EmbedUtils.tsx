@@ -1,6 +1,3 @@
-// === Module 4526: getEffectiveVideoProvider ===
-
-// Module 4526 (getEffectiveVideoProvider)
 import ME from "ME";
 import { EMBED_TYPES_WITH_PARSEABLE_FIELDS as closure_6 } from "MessageEmbedTypes";
 

@@ -1,6 +1,3 @@
-// === Module 4682: items ===
-
-// Module 4682 (items)
 import set from "set";
 
 const items = [{ field_type: require("MAX_RESULTS_PER_PAGE").VerificationFormFieldTypes.VERIFICATION }];

@@ -1,6 +1,3 @@
-// === Module 15848: FreezeAfterLayoutPipView ===
-
-// Module 15848 (FreezeAfterLayoutPipView)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import module_8138 from "module_8138";

@@ -1,6 +1,3 @@
-// === Module 12396: getAskToJoinText ===
-
-// Module 12396 (getAskToJoinText)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ActivityActionTypes } from "ME";
 

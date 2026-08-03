@@ -1,6 +1,3 @@
-// === Module 9147: maybeMarkSeen ===
-
-// Module 9147 (maybeMarkSeen)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let obj = { IMMEDIATE: 0, [0]: "IMMEDIATE", IMMEDIATE_WITH_COOLDOWN: 1, [1]: "IMMEDIATE_WITH_COOLDOWN", IMMEDIATE_WITH_DELAY: 2, [2]: "IMMEDIATE_WITH_DELAY" };

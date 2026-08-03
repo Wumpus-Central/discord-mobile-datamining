@@ -1,6 +1,3 @@
-// === Module 11754: WaveformBar ===
-
-// Module 11754 (WaveformBar)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "set";
 import get_ActivityIndicator from "Text";

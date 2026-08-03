@@ -1,6 +1,3 @@
-// === Module 6172: queryGamesAutocomplete ===
-
-// Module 6172 (queryGamesAutocomplete)
 import set from "set";
 import importDefaultResult from "debounce";
 

@@ -1,6 +1,3 @@
-// === Module 9898: retrySendMessage ===
-
-// Module 9898 (retrySendMessage)
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
 
 let result = require("_executeCommand").fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");

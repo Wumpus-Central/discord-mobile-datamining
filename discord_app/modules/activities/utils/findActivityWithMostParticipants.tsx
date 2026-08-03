@@ -1,6 +1,3 @@
-// === Module 15078: findActivityWithMostParticipants ===
-
-// Module 15078 (findActivityWithMostParticipants)
 import upsertRelationship from "upsertRelationship";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");

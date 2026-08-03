@@ -1,6 +1,3 @@
-// === Module 15629: UserSettingsFriendRequests ===
-
-// Module 15629 (UserSettingsFriendRequests)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

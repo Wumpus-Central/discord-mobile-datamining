@@ -1,6 +1,3 @@
-// === Module 9062: getConsoleIcon ===
-
-// Module 9062 (getConsoleIcon)
 import { VoicePlatforms } from "ParticipantTypes";
 
 let PLAYSTATION;

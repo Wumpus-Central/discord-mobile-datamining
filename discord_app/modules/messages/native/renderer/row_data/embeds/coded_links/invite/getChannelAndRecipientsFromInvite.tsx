@@ -1,6 +1,3 @@
-// === Module 9512: getChannelAndRecipientsFromInvite ===
-
-// Module 9512 (getChannelAndRecipientsFromInvite)
 import { createChannelRecordFromInvite as closure_0 } from "createChannelRecord";
 
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/getChannelAndRecipientsFromInvite.tsx");

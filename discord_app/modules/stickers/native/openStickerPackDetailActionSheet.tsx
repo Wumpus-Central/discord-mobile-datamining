@@ -1,6 +1,3 @@
-// === Module 9639: openStickerPackDetailActionSheet ===
-
-// Module 9639 (openStickerPackDetailActionSheet)
 import { AnalyticEvents } from "ME";
 
 const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/stickers/native/openStickerPackDetailActionSheet.tsx");

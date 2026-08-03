@@ -1,6 +1,3 @@
-// === Module 10999: showModal ===
-
-// Module 10999 (showModal)
 import merged from "map";
 
 const require = arg1;

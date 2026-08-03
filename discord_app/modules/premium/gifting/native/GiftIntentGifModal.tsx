@@ -1,6 +1,3 @@
-// === Module 11020: _sendGiftIntentGif ===
-
-// Module 11020 (_sendGiftIntentGif)
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
 import module_9607 from "module_9607";

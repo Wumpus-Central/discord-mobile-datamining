@@ -1,6 +1,3 @@
-// === Module 10306: inlineChannelMentionReact ===
-
-// Module 10306 (inlineChannelMentionReact)
 import "noop";
 import { jsxs } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15249: useCanShowGameClaimCoachmark ===
-
-// Module 15249 (useCanShowGameClaimCoachmark)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 

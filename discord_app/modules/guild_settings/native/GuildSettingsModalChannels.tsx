@@ -1,6 +1,3 @@
-// === Module 16459: ChannelItem ===
-
-// Module 16459 (ChannelItem)
 import importAllResult from "registerAsset";
 import get_ActivityIndicator from "Form";
 import ensureGuildLoaded from "ensureGuildLoaded";

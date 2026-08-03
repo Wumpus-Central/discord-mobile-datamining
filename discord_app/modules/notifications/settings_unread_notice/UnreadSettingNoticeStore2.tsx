@@ -1,6 +1,3 @@
-// === Module 10469: startInterval ===
-
-// Module 10469 (startInterval)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

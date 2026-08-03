@@ -1,6 +1,3 @@
-// === Module 12169: formatDurationNarrow ===
-
-// Module 12169 (formatDurationNarrow)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

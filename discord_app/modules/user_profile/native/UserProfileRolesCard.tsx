@@ -1,6 +1,3 @@
-// === Module 5542: RoleDot ===
-
-// Module 5542 (RoleDot)
 import initialize from "initialize";
 import { View } from "Text";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

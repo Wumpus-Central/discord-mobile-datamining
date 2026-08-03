@@ -1,6 +1,3 @@
-// === Module 9148: getIsWindowSmall ===
-
-// Module 9148 (getIsWindowSmall)
 const result = require("set").fileFinishedImporting("modules/screen/native/useIsWindowSmall.tsx");
 
 export default function getIsWindowSmall() {

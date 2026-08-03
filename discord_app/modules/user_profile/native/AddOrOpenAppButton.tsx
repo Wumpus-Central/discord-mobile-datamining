@@ -1,6 +1,3 @@
-// === Module 12000: AddAppButton ===
-
-// Module 12000 (AddAppButton)
 import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import _slicedToArray from "_slicedToArray";
 import fetchApplication from "fetchApplication";

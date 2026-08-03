@@ -1,6 +1,3 @@
-// === Module 10471: MaxForumPostReactions ===
-
-// Module 10471 (MaxForumPostReactions)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

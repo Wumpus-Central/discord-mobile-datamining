@@ -1,6 +1,3 @@
-// === Module 10940: navigateToLastChannel ===
-
-// Module 10940 (navigateToLastChannel)
 const result = require("transitionToChannel").fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 
 export default function navigateToLastChannel() {

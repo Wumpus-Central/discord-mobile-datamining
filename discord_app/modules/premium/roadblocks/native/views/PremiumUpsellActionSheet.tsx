@@ -1,6 +1,3 @@
-// === Module 6203: AlwaysCompressImagesSwitch ===
-
-// Module 6203 (AlwaysCompressImagesSwitch)
 import useAPNGPlayerControls from "useAPNGPlayerControls";
 import getSystemLocale from "getSystemLocale";
 import { View } from "getKestrelConfig";

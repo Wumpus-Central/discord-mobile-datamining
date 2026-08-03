@@ -1,6 +1,3 @@
-// === Module 5988: set ===
-
-// Module 5988 (set)
 import { Store } from "initialize";
 import set from "set";
 

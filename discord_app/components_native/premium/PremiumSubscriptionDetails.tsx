@@ -1,6 +1,3 @@
-// === Module 6514: handleCancelSubscription ===
-
-// Module 6514 (handleCancelSubscription)
 import registerAsset from "registerAsset";
 import updateProduct from "updateProduct";
 import closure_5 from "registerAsset";

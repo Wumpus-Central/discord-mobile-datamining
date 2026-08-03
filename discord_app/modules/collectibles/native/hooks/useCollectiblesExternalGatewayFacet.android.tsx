@@ -1,6 +1,3 @@
-// === Module 8749: useCollectiblesExternalGatewayFacet ===
-
-// Module 8749 (useCollectiblesExternalGatewayFacet)
 import { useMemo } from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

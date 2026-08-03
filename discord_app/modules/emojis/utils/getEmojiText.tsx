@@ -1,6 +1,3 @@
-// === Module 10407: getEmojiText ===
-
-// Module 10407 (getEmojiText)
 const result = require("set").fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");
 
 export default function getEmojiText(id) {

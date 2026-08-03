@@ -1,6 +1,3 @@
-// === Module 8827: UserFlashListActions ===
-
-// Module 8827 (UserFlashListActions)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

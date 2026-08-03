@@ -1,6 +1,3 @@
-// === Module 11674: GuildPowerupPerksSection ===
-
-// Module 11674 (GuildPowerupPerksSection)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

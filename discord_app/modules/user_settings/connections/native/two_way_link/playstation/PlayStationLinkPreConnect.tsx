@@ -1,6 +1,3 @@
-// === Module 8980: PlayStationLinkPreConnect ===
-
-// Module 8980 (PlayStationLinkPreConnect)
 import noop from "noop";
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes";
 import { jsx } from "jsxProd";

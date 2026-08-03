@@ -1,6 +1,3 @@
-// === Module 15417: NotificationNudgeBottomSheet ===
-
-// Module 15417 (NotificationNudgeBottomSheet)
 import noop from "noop";
 import { View } from "set";
 import EventActionType from "EventActionType";

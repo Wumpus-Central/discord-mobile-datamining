@@ -1,6 +1,3 @@
-// === Module 16592: usePriceTiers ===
-
-// Module 16592 (usePriceTiers)
 import _slicedToArray from "_slicedToArray";
 import isIterable from "isIterable";
 import identity from "identity";

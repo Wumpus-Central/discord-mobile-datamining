@@ -1,6 +1,3 @@
-// === Module 6210: useAPNGPlayerControls ===
-
-// Module 6210 (useAPNGPlayerControls)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

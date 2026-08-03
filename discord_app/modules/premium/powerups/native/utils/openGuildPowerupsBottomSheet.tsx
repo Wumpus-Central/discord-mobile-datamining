@@ -1,6 +1,3 @@
-// === Module 11622: openGuildPowerupsBottomSheet ===
-
-// Module 11622 (openGuildPowerupsBottomSheet)
 const GUILD_POWERUPS_BOTTOM_SHEET_KEY = "GUILD_POWERUPS_BOTTOM_SHEET_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsBottomSheet.tsx");
 

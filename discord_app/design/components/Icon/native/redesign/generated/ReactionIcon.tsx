@@ -1,6 +1,3 @@
-// === Module 6579: ReactionIcon ===
-
-// Module 6579 (ReactionIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

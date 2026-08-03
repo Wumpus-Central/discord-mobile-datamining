@@ -1,6 +1,3 @@
-// === Module 4123: experiment ===
-
-// Module 4123 (experiment)
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import createExperiment from "createExperiment";
 

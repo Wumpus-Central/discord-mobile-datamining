@@ -1,6 +1,3 @@
-// === Module 10994: setBuildOverrideForBranch ===
-
-// Module 10994 (setBuildOverrideForBranch)
 import module_4533 from "module_4533";
 import getCurrentBuildOverride from "getCurrentBuildOverride";
 import set from "set";

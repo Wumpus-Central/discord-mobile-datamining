@@ -1,6 +1,3 @@
-// === Module 15614: MediaKeyboardAccessoriesContainer ===
-
-// Module 15614 (MediaKeyboardAccessoriesContainer)
 import noop from "noop";
 import initialize from "initialize";
 import { jsx } from "jsxProd";

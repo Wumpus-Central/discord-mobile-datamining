@@ -1,6 +1,3 @@
-// === Module 9609: doSearchRequest ===
-
-// Module 9609 (doSearchRequest)
 import _getSystemLocale from "_getSystemLocale";
 import getFormatFromUrl from "getFormatFromUrl";
 import ME from "ME";

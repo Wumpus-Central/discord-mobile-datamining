@@ -1,6 +1,3 @@
-// === Module 3863: resetCache ===
-
-// Module 3863 (resetCache)
 import importDefaultResult from "_getSystemLocale";
 import importDefaultResult1 from "dispatcher";
 import importDefaultResult2 from "dispatcher";

@@ -1,6 +1,3 @@
-// === Module 8054: items ===
-
-// Module 8054 (items)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 16784: installRNGHMountReactionsBridge ===
-
-// Module 16784 (installRNGHMountReactionsBridge)
 let c3 = false;
 const result = require("set").fileFinishedImporting("modules/gesture_handlers/native/RNGHMountReactionsBridge.native.tsx");
 

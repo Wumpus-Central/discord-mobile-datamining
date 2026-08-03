@@ -1,6 +1,3 @@
-// === Module 6667: presentBuyNitroPurchaseSuccess ===
-
-// Module 6667 (presentBuyNitroPurchaseSuccess)
 import "noop";
 import { reset } from "usePremiumPlanPurchasedStore";
 import { PremiumTypes } from "GuildFeatures";

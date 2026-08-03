@@ -1,6 +1,3 @@
-// === Module 590: getClass ===
-
-// Module 590 (getClass)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { Store } from "initialize";
 import set from "Storage";

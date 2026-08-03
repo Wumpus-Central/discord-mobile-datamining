@@ -1,6 +1,3 @@
-// === Module 9842: PremiumGiftAnalytics ===
-
-// Module 9842 (PremiumGiftAnalytics)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

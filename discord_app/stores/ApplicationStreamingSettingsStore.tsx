@@ -1,6 +1,3 @@
-// === Module 4283: ApplicationStreamPresets ===
-
-// Module 4283 (ApplicationStreamPresets)
 import RESOLUTION_720 from "RESOLUTION_720";
 import { MediaEngineContextTypes } from "DesktopSources";
 import { PersistedStore } from "initialize";

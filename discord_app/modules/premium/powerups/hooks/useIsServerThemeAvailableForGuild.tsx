@@ -1,6 +1,3 @@
-// === Module 13069: useIsServerThemeAvailableForGuild ===
-
-// Module 13069 (useIsServerThemeAvailableForGuild)
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx");
 
 export default function useIsServerThemeAvailableForGuild(guildId, GuildThemeNuxTrigger) {

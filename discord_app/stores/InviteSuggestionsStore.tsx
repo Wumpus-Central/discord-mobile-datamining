@@ -1,6 +1,3 @@
-// === Module 10100: _computeRows ===
-
-// Module 10100 (_computeRows)
 import handleConnectionOpen from "handleConnectionOpen";
 import recomputeAffinities from "recomputeAffinities";
 import ensureGuildLoaded from "ensureGuildLoaded";

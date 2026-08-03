@@ -1,6 +1,3 @@
-// === Module 13551: ? ===
-
-// Module 13551
 import { getGuildIconURL } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";

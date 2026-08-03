@@ -1,6 +1,3 @@
-// === Module 9080: ActivityStatusText ===
-
-// Module 9080 (ActivityStatusText)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

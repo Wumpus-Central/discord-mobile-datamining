@@ -1,6 +1,3 @@
-// === Module 13851: BlockedUsersList ===
-
-// Module 13851 (BlockedUsersList)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import upsertRelationship from "upsertRelationship";

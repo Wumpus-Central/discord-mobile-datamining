@@ -1,6 +1,3 @@
-// === Module 9460: BackspaceIcon ===
-
-// Module 9460 (BackspaceIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

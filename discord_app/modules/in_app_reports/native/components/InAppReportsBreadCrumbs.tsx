@@ -1,6 +1,3 @@
-// === Module 12421: Breadcrumbs ===
-
-// Module 12421 (Breadcrumbs)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

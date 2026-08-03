@@ -1,6 +1,3 @@
-// === Module 8231: canViewInviteModal ===
-
-// Module 8231 (canViewInviteModal)
 import { Permissions } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");

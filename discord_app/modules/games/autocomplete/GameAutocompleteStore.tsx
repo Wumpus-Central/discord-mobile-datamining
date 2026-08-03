@@ -1,6 +1,3 @@
-// === Module 6164: set ===
-
-// Module 6164 (set)
 import { Store } from "initialize";
 import set from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH";
 

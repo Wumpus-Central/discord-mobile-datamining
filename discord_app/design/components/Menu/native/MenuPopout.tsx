@@ -1,6 +1,3 @@
-// === Module 13195: MenuPopout ===
-
-// Module 13195 (MenuPopout)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

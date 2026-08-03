@@ -1,6 +1,3 @@
-// === Module 10283: playInAppMessageSound ===
-
-// Module 10283 (playInAppMessageSound)
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled";
 import { InAppNotificationTypes } from "ME";

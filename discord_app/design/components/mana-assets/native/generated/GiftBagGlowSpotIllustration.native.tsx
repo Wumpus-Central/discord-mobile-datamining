@@ -1,6 +1,3 @@
-// === Module 7171: GiftBagGlowSpotIllustration ===
-
-// Module 7171 (GiftBagGlowSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GiftBagGlowSpotIllustration.native.tsx");

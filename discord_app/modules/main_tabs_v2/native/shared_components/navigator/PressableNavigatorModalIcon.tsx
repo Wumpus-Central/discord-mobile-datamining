@@ -1,6 +1,3 @@
-// === Module 9134: PressableNavigatorModalIcon ===
-
-// Module 9134 (PressableNavigatorModalIcon)
 import { jsx } from "jsxProd";
 
 const result = require("GenericHeaderTitle").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");

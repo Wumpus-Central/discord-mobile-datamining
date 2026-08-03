@@ -1,6 +1,3 @@
-// === Module 14634: FeaturedFirstCardCoachmarkAnchor ===
-
-// Module 14634 (FeaturedFirstCardCoachmarkAnchor)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

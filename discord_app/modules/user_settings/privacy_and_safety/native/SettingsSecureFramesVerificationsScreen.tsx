@@ -1,6 +1,3 @@
-// === Module 14668: VerificationListItem ===
-
-// Module 14668 (VerificationListItem)
 import noop from "noop";
 import { View } from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 1219: initialize ===
-
-// Module 1219 (initialize)
 import { Store } from "initialize";
 
 class BrowserHandoffStore extends Store {

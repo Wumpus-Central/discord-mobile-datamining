@@ -1,6 +1,3 @@
-// === Module 14855: DraggableContainer ===
-
-// Module 14855 (DraggableContainer)
 import importAllResult from "noop";
 import initialize from "initialize";
 import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES";

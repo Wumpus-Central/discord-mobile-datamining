@@ -1,6 +1,3 @@
-// === Module 12831: checkGuildIsHub ===
-
-// Module 12831 (checkGuildIsHub)
 import set from "set";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";

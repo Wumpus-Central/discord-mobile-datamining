@@ -1,6 +1,3 @@
-// === Module 6236: PremiumPill ===
-
-// Module 6236 (PremiumPill)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

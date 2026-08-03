@@ -1,6 +1,3 @@
-// === Module 8340: useStartEvent ===
-
-// Module 8340 (useStartEvent)
 import V6OrEarlierAPIError from "V6OrEarlierAPIError";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

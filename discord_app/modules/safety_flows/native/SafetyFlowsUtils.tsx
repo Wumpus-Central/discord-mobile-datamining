@@ -1,6 +1,3 @@
-// === Module 16732: fetchAndUpdateTask ===
-
-// Module 16732 (fetchAndUpdateTask)
 import module_4399 from "module_4399";
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";

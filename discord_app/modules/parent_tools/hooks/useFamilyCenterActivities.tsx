@@ -1,6 +1,3 @@
-// === Module 13944: useActionsForDisplayType ===
-
-// Module 13944 (useActionsForDisplayType)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import { TeenActionDisplayType } from "items";
 

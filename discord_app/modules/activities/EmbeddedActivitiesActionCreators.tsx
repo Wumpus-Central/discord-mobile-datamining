@@ -1,6 +1,3 @@
-// === Module 5701: _runPrimaryAppCommandOrJoinEmbeddedActivity ===
-
-// Module 5701 (_runPrimaryAppCommandOrJoinEmbeddedActivity)
 import createExecutable from "createExecutable";
 import { getOrFetchApplicationCommandIndexForTarget as closure_4 } from "getIndexKey";
 import addApplication from "addApplication";

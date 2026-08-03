@@ -1,6 +1,3 @@
-// === Module 15473: ApplicationStatusIcon ===
-
-// Module 15473 (ApplicationStatusIcon)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

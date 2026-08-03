@@ -1,6 +1,3 @@
-// === Module 10484: handleActivityStateChanged ===
-
-// Module 10484 (handleActivityStateChanged)
 import updateActivities from "updateActivities";
 import filterPlayingActivities from "filterPlayingActivities";
 import ME from "ME";

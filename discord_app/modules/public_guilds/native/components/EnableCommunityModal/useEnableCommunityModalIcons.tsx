@@ -1,6 +1,3 @@
-// === Module 16529: safetyCheck ===
-
-// Module 16529 (safetyCheck)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ThemeTypes } from "sum";

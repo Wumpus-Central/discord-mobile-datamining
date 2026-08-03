@@ -1,6 +1,3 @@
-// === Module 15935: PIPReferenceDimensions ===
-
-// Module 15935 (PIPReferenceDimensions)
 import getParticipants from "getParticipants";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";

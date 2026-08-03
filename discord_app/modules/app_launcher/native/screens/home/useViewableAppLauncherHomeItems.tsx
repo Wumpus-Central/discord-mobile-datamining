@@ -1,6 +1,3 @@
-// === Module 11274: useViewableAppLauncherHomeItems ===
-
-// Module 11274 (useViewableAppLauncherHomeItems)
 import noop from "noop";
 import handleDismissWithDismissed from "handleDismissWithDismissed";
 

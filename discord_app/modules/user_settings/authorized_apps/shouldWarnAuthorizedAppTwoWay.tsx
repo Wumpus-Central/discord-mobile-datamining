@@ -1,6 +1,3 @@
-// === Module 11706: isAuthorizedAppTwoWay ===
-
-// Module 11706 (isAuthorizedAppTwoWay)
 const result = require("set").fileFinishedImporting("modules/user_settings/authorized_apps/shouldWarnAuthorizedAppTwoWay.tsx");
 
 export default function isAuthorizedAppTwoWay(arg0) {

@@ -1,6 +1,3 @@
-// === Module 5734: result ===
-
-// Module 5734 (result)
 const result = 30 * require("set").Millis.MINUTE;
 let c0 = result;
 const result1 = require("set").fileFinishedImporting("modules/analytics_sessions/SessionUtils.tsx");

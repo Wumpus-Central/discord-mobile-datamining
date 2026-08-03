@@ -1,6 +1,3 @@
-// === Module 12628: openForumExplicitMediaWarning ===
-
-// Module 12628 (openForumExplicitMediaWarning)
 import { jsx } from "jsxProd";
 
 const result = require("ForumExplicitMediaAlert").fileFinishedImporting("modules/forums/openForumExplicitMediaWarning.native.tsx");

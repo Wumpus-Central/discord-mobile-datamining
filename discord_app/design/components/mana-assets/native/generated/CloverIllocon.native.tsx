@@ -1,6 +1,3 @@
-// === Module 6929: CloverIllocon ===
-
-// Module 6929 (CloverIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/CloverIllocon.native.tsx");

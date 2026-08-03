@@ -1,6 +1,3 @@
-// === Module 1356: getProtoFieldClass ===
-
-// Module 1356 (getProtoFieldClass)
 const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsProtoUtils.tsx");
 
 export const getProtoFieldClass = function getProtoFieldClass(PreloadedUserSettings, closure_0) {

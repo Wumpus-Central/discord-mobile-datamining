@@ -1,6 +1,3 @@
-// === Module 585: convertStringArrayToSkemaErrorItems ===
-
-// Module 585 (convertStringArrayToSkemaErrorItems)
 import _slicedToArray from "_slicedToArray";
 
 function convertStringArrayToSkemaErrorItems(arr) {

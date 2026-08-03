@@ -1,6 +1,3 @@
-// === Module 4097: _getMessageFromRateLimit ===
-
-// Module 4097 (_getMessageFromRateLimit)
 import "prototype";
 
 const require = arg1;

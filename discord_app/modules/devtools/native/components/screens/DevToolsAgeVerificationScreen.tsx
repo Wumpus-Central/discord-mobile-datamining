@@ -1,6 +1,3 @@
-// === Module 14826: showAgeVerificationTestModal ===
-
-// Module 14826 (showAgeVerificationTestModal)
 import Themes from "Themes";
 import "noop";
 import { ScrollView } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 16181: handleDmSettingsUpsellShow ===
-
-// Module 16181 (handleDmSettingsUpsellShow)
 import { Endpoints } from "ME";
 import "initialize";
 

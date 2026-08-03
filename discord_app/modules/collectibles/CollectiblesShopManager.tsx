@@ -1,6 +1,3 @@
-// === Module 12231: chunk ===
-
-// Module 12231 (chunk)
 import getFetchState from "getFetchState";
 import closure_3 from "getFetchState";
 import set from "_maybeFetchProductsWithSkus";

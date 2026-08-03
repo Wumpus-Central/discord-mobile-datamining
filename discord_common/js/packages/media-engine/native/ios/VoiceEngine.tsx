@@ -1,6 +1,3 @@
-// === Module 4243: logger ===
-
-// Module 4243 (logger)
 import { Platform } from "get ActivityIndicator";
 import { VoiceEngine } from "constants";
 import { VoiceEngineEmitter } from "constants";

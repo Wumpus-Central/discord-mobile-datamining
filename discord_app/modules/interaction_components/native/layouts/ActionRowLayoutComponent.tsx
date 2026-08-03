@@ -1,6 +1,3 @@
-// === Module 16242: ActionRowLayoutComponent ===
-
-// Module 16242 (ActionRowLayoutComponent)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

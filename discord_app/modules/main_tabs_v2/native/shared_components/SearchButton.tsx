@@ -1,6 +1,3 @@
-// === Module 11483: SEARCH_BAR_HEIGHT ===
-
-// Module 11483 (SEARCH_BAR_HEIGHT)
 import "noop";
 import { Pressable } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

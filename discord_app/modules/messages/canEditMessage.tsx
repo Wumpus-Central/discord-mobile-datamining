@@ -1,6 +1,3 @@
-// === Module 10000: canEditMessage ===
-
-// Module 10000 (canEditMessage)
 import ME from "ME";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 7757: canReactToMessageInternal ===
-
-// Module 7757 (canReactToMessageInternal)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import recomputeGuild from "recomputeGuild";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

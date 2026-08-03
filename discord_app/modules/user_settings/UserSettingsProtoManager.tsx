@@ -1,6 +1,3 @@
-// === Module 13537: handleConnectionOpen ===
-
-// Module 13537 (handleConnectionOpen)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 

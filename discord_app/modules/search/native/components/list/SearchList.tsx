@@ -1,6 +1,3 @@
-// === Module 15510: keyExtractor ===
-
-// Module 15510 (keyExtractor)
 import importAllResult from "MemberRowPlaceholderItem";
 import get_ActivityIndicator from "module_15537";
 import MessageEmbedTypes from "MessageEmbedTypes";

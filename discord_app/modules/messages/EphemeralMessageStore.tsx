@@ -1,6 +1,3 @@
-// === Module 4412: dropChannelIfEmpty ===
-
-// Module 4412 (dropChannelIfEmpty)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { MessageFlags } from "ME";
 import { Store } from "initialize";

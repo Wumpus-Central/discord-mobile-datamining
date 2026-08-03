@@ -1,6 +1,3 @@
-// === Module 12704: componentDidMount ===
-
-// Module 12704 (componentDidMount)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

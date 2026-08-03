@@ -1,6 +1,3 @@
-// === Module 9236: trackUserAvatarUpdated ===
-
-// Module 9236 (trackUserAvatarUpdated)
 import { AnalyticEvents } from "ME";
 
 const result = require("expandEventProperties").fileFinishedImporting("modules/user_profile/utils/trackUserAvatarUpdated.tsx");

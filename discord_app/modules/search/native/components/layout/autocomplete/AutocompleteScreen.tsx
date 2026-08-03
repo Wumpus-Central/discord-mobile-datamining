@@ -1,6 +1,3 @@
-// === Module 15581: ? ===
-
-// Module 15581
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getMatch";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 11293: useTrackSearchItems ===
-
-// Module 11293 (useTrackSearchItems)
 import noop from "noop";
 
 const require = arg1;

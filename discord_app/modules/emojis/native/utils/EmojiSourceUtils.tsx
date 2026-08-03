@@ -1,6 +1,3 @@
-// === Module 15092: _getEmojiSource ===
-
-// Module 15092 (_getEmojiSource)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 

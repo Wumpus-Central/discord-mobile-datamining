@@ -1,6 +1,3 @@
-// === Module 11576: ChannelAccessInfo ===
-
-// Module 11576 (ChannelAccessInfo)
 import ShieldUserIcon from "ShieldUserIcon";
 import { View } from "GroupIcon";
 import { isGuildOwner } from "GuildNSFWContentLevel";

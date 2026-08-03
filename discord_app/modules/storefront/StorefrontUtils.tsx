@@ -1,6 +1,3 @@
-// === Module 5670: useSKUPrice ===
-
-// Module 5670 (useSKUPrice)
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 10007: EmptyCustomizeCommunity ===
-
-// Module 10007 (EmptyCustomizeCommunity)
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "initialize";
 import getEmojiToGroupId from "getEmojiToGroupId";

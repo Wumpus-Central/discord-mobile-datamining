@@ -1,6 +1,3 @@
-// === Module 8833: useGradientBottom ===
-
-// Module 8833 (useGradientBottom)
 import noop from "noop";
 import createCacheKey from "createCacheKey";
 

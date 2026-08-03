@@ -1,6 +1,3 @@
-// === Module 3986: CheckpointKnickKnacksRive ===
-
-// Module 3986 (CheckpointKnickKnacksRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

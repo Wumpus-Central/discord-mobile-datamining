@@ -1,6 +1,3 @@
-// === Module 16284: DefaultAvatarButton ===
-
-// Module 16284 (DefaultAvatarButton)
 import "noop";
 import { View } from "set";
 import jsxProd from "jsxProd";

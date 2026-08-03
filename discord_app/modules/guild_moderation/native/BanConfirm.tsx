@@ -1,6 +1,3 @@
-// === Module 11056: items ===
-
-// Module 11056 (items)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "TextArea";
 import get_ActivityIndicator from "context";

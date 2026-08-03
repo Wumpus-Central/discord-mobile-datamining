@@ -1,6 +1,3 @@
-// === Module 15607: useOnMessageSend ===
-
-// Module 15607 (useOnMessageSend)
 import noop from "noop";
 import { MessageStates } from "ME";
 

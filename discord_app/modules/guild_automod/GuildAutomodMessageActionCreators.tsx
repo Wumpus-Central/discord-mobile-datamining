@@ -1,6 +1,3 @@
-// === Module 9525: removeAutomodMessageNotice ===
-
-// Module 9525 (removeAutomodMessageNotice)
 const result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");
 
 export const removeAutomodMessageNotice = function removeAutomodMessageNotice(messageId) {

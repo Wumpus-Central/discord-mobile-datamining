@@ -1,6 +1,3 @@
-// === Module 11993: ClearAfterOptionsActionSheet ===
-
-// Module 11993 (ClearAfterOptionsActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

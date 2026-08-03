@@ -1,6 +1,3 @@
-// === Module 10089: ListSelectionItem ===
-
-// Module 10089 (ListSelectionItem)
 import "noop";
 import { jsx } from "jsxProd";
 

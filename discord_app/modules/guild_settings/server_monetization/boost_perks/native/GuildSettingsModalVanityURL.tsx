@@ -1,6 +1,3 @@
-// === Module 16505: componentDidMount ===
-
-// Module 16505 (componentDidMount)
 import get_ActivityIndicator from "registerAsset";
 import FormStates from "FormStates";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

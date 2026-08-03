@@ -1,6 +1,3 @@
-// === Module 11926: useShouldShowPremiumProfileFrameEA ===
-
-// Module 11926 (useShouldShowPremiumProfileFrameEA)
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx");
 
 export default function useShouldShowPremiumProfileFrameEA(location) {

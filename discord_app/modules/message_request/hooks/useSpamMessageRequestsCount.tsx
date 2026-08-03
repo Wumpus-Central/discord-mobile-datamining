@@ -1,6 +1,3 @@
-// === Module 15734: useSpamMessageRequestCount ===
-
-// Module 15734 (useSpamMessageRequestCount)
 import processChannel from "processChannel";
 
 const require = arg1;

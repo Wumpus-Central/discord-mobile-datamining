@@ -1,6 +1,3 @@
-// === Module 11247: useEmbeddedApps ===
-
-// Module 11247 (useEmbeddedApps)
 import noop from "noop";
 import sortActivity from "sortActivity";
 import mergeGuildAvatar from "mergeGuildAvatar";

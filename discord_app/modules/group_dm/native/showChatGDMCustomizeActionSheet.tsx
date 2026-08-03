@@ -1,6 +1,3 @@
-// === Module 9112: showChatGDMCustomizeActionSheet ===
-
-// Module 9112 (showChatGDMCustomizeActionSheet)
 const result = require("ChatGDMCustomizeActionSheet").fileFinishedImporting("modules/group_dm/native/showChatGDMCustomizeActionSheet.tsx");
 
 export default function showChatGDMCustomizeActionSheet(closure_0) {

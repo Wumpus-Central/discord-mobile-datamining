@@ -1,6 +1,3 @@
-// === Module 6229: PremiumPlanActionSheetHeader ===
-
-// Module 6229 (PremiumPlanActionSheetHeader)
 import "set";
 import { View } from "registerAsset";
 import GuildFeatures from "GuildFeatures";

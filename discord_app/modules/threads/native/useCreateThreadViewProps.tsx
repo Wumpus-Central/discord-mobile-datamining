@@ -1,6 +1,3 @@
-// === Module 10440: useCreateThreadViewProps ===
-
-// Module 10440 (useCreateThreadViewProps)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 let require = arg1;

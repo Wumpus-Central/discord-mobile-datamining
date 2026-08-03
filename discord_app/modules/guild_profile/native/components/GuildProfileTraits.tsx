@@ -1,6 +1,3 @@
-// === Module 11966: TraitEmoji ===
-
-// Module 11966 (TraitEmoji)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

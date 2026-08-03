@@ -1,6 +1,3 @@
-// === Module 9619: ChevronLargeLeftIcon ===
-
-// Module 9619 (ChevronLargeLeftIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

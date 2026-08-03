@@ -1,6 +1,3 @@
-// === Module 11222: setAppLauncherA11yFocusReturnRef ===
-
-// Module 11222 (setAppLauncherA11yFocusReturnRef)
 import importAllResult from "collectGuildAnalyticsMetadata";
 import { View } from "module_11235";
 import { AnalyticEvents } from "ME";

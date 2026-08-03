@@ -1,6 +1,3 @@
-// === Module 13584: ? ===
-
-// Module 13584
 import getApplicationFlags from "getApplicationFlags";
 import ME from "ME";
 import createRPCCommand from "createRPCCommand";

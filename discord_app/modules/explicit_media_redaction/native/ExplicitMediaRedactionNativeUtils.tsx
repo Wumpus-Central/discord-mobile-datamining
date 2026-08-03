@@ -1,6 +1,3 @@
-// === Module 13871: handleSensitiveMediaFilterPress ===
-
-// Module 13871 (handleSensitiveMediaFilterPress)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY";
 import { SearchMediaTypes } from "MessageEmbedTypes";

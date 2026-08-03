@@ -1,6 +1,3 @@
-// === Module 5983: trackingConfigWithDefaults ===
-
-// Module 5983 (trackingConfigWithDefaults)
 import fetchFingerprint from "fetchFingerprint";
 import { LinkType } from "LinkType";
 

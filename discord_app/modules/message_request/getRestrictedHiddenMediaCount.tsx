@@ -1,6 +1,3 @@
-// === Module 15749: getRestrictedHiddenMediaCount ===
-
-// Module 15749 (getRestrictedHiddenMediaCount)
 let result = require("set").fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");
 
 export default function getRestrictedHiddenMediaCount(message) {

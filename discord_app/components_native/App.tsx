@@ -1,6 +1,3 @@
-// === Module 13477: App ===
-
-// Module 13477 (App)
 import closure_3 from "ApexExperiment";
 import { NativeModules } from "handleSetLocationMetadata";
 import checkForNewerBuild from "checkForNewerBuild";

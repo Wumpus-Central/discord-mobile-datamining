@@ -1,6 +1,3 @@
-// === Module 10486: updateActivities ===
-
-// Module 10486 (updateActivities)
 import { Store } from "initialize";
 
 function updateActivities() {

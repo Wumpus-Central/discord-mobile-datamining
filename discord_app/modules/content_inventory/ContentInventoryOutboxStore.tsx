@@ -1,6 +1,3 @@
-// === Module 8697: map ===
-
-// Module 8697 (map)
 import { Store } from "initialize";
 import set from "dispatcher";
 

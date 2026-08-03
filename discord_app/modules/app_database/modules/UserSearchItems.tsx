@@ -1,6 +1,3 @@
-// === Module 5947: getAll ===
-
-// Module 5947 (getAll)
 import ME from "ME";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import recomputeAffinities from "recomputeAffinities";

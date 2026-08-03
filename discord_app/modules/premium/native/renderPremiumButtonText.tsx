@@ -1,6 +1,3 @@
-// === Module 12620: PremiumText ===
-
-// Module 12620 (PremiumText)
 import "noop";
 import { View } from "get ActivityIndicator";
 import GuildFeatures from "GuildFeatures";

@@ -1,6 +1,3 @@
-// === Module 6222: createFromOrder ===
-
-// Module 6222 (createFromOrder)
 import "toJS";
 import { BaseInvoiceRecord } from "createFromServer";
 import createFromServer from "createFromServer";

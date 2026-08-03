@@ -1,6 +1,3 @@
-// === Module 14160: maybeRefreshAd ===
-
-// Module 14160 (maybeRefreshAd)
 import noop from "noop";
 import initializeState from "initializeState";
 

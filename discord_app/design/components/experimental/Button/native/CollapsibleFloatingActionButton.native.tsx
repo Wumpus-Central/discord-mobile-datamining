@@ -1,6 +1,3 @@
-// === Module 8246: CollapsableButton ===
-
-// Module 8246 (CollapsableButton)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA";

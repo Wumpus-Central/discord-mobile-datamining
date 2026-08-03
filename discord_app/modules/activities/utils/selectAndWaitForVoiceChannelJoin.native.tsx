@@ -1,6 +1,3 @@
-// === Module 10668: _selectAndWaitForVoiceChannelJoin ===
-
-// Module 10668 (_selectAndWaitForVoiceChannelJoin)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import handleConnectionOpen from "handleConnectionOpen";
 

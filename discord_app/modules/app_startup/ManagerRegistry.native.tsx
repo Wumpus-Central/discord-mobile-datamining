@@ -1,6 +1,3 @@
-// === Module 16141: ? ===
-
-// Module 16141
 import set from "populateMap";
 import set from "handleMessageCreate";
 

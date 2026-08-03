@@ -1,6 +1,3 @@
-// === Module 5974: createEmptyState ===
-
-// Module 5974 (createEmptyState)
 let obj = { type: "line", children: null };
 let items = [Object.freeze({ text: "" })];
 obj[1] = Object.freeze(items);

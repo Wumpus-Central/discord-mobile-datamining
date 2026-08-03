@@ -1,6 +1,3 @@
-// === Module 15310: ForYouFooter ===
-
-// Module 15310 (ForYouFooter)
 import addApplication from "addApplication";
 import handleSupportedURL from "handleSupportedURL";
 import importAllResult from "hasFlag";

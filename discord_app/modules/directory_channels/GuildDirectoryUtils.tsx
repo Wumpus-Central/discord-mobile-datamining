@@ -1,6 +1,3 @@
-// === Module 10069: guildDirectoryEntryFromServer ===
-
-// Module 10069 (guildDirectoryEntryFromServer)
 import { DirectoryEntryTypes } from "DirectoryEntryTypes";
 
 const result = require("apply").fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");

@@ -1,6 +1,3 @@
-// === Module 15570: snowballStem ===
-
-// Module 15570 (snowballStem)
 import module_15571 from "module_15571";
 
 let closure_0 = module_15571.newStemmer("english");

@@ -1,6 +1,3 @@
-// === Module 13882: useGoreContentNonFriendsDmSettingValue ===
-
-// Module 13882 (useGoreContentNonFriendsDmSettingValue)
 import createToggle from "createToggle";
 
 function useGoreContentNonFriendsDmSettingValue() {

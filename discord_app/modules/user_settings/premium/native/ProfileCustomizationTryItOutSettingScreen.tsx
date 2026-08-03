@@ -1,6 +1,3 @@
-// === Module 14619: ProfileCustomizationTryItOutSettingScreen ===
-
-// Module 14619 (ProfileCustomizationTryItOutSettingScreen)
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "_saveProfileChanges";
 import mergeGuildAvatar from "mergeGuildAvatar";

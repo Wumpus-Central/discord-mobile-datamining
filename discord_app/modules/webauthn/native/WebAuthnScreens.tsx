@@ -1,6 +1,3 @@
-// === Module 13774: getScreens ===
-
-// Module 13774 (getScreens)
 import { WebAuthnScreens } from "WebAuthnScreens";
 import { jsx } from "jsxProd";
 

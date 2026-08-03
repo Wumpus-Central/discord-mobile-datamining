@@ -1,6 +1,3 @@
-// === Module 12016: FlashIcon ===
-
-// Module 12016 (FlashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

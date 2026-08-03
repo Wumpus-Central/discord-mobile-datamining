@@ -1,6 +1,3 @@
-// === Module 2025: messagesProxy ===
-
-// Module 2025 (messagesProxy)
 import module_1274 from "module_1274";
 import module_1274 from "module_1274";
 

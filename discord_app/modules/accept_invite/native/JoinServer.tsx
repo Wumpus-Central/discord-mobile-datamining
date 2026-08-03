@@ -1,6 +1,3 @@
-// === Module 9231: OrSeparator ===
-
-// Module 9231 (OrSeparator)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";

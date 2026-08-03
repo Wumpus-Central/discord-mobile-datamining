@@ -1,6 +1,3 @@
-// === Module 11234: completeAppLauncherOnboarding ===
-
-// Module 11234 (completeAppLauncherOnboarding)
 let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/utils/completeAppLauncherOnboarding.tsx");
 
 export default function completeAppLauncherOnboarding(dismissAction) {

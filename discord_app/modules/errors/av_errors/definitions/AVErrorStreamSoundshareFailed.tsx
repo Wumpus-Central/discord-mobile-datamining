@@ -1,6 +1,3 @@
-// === Module 16705: AVErrorStreamSoundshareFailedDefinition ===
-
-// Module 16705 (AVErrorStreamSoundshareFailedDefinition)
 import reset from "reset";
 import getHookError from "getHookError";
 import { MediaEngineHookTypes } from "ME";

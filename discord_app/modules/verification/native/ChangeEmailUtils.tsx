@@ -1,6 +1,3 @@
-// === Module 9234: _saveEmail ===
-
-// Module 9234 (_saveEmail)
 import set from "set";
 import ChangeEmailFields from "ChangeEmailFields";
 

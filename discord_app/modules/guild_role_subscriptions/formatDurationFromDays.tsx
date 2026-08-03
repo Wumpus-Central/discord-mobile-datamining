@@ -1,6 +1,3 @@
-// === Module 16553: formatDurationFromDays ===
-
-// Module 16553 (formatDurationFromDays)
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
 
 export default function formatDurationFromDays(days) {

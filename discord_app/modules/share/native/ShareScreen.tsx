@@ -1,6 +1,3 @@
-// === Module 13058: getAttachmentsRestriction ===
-
-// Module 13058 (getAttachmentsRestriction)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import HeaderBackImage from "HeaderBackImage";
 import allSettled from "allSettled";

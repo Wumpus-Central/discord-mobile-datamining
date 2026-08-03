@@ -1,6 +1,3 @@
-// === Module 10698: CALL_ACTION_BAR_HEIGHT ===
-
-// Module 10698 (CALL_ACTION_BAR_HEIGHT)
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");
 
 export const CALL_ACTION_BAR_HEIGHT = 112;

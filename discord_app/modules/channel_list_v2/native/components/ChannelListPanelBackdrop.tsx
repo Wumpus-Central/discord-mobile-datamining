@@ -1,6 +1,3 @@
-// === Module 15227: ChannelListPanelBackdrop ===
-
-// Module 15227 (ChannelListPanelBackdrop)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { DM_WIDTH } from "ME";

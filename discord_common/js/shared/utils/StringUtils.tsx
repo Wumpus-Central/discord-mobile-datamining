@@ -1,6 +1,3 @@
-// === Module 1857: cssValueToNumber ===
-
-// Module 1857 (cssValueToNumber)
 const re2 = /[\u0300-\u036f]/g;
 const re3 = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
 if (null == String.prototype.normalize) {

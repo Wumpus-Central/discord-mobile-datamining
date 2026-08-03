@@ -1,6 +1,3 @@
-// === Module 9797: RewardPreview ===
-
-// Module 9797 (RewardPreview)
 import useNavigation from "useNavigation";
 import get_ActivityIndicator from "LinearGradient";
 import map from "map";

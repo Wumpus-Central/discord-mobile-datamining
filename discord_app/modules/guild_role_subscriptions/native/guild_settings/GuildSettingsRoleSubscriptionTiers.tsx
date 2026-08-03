@@ -1,6 +1,3 @@
-// === Module 16598: DraftBadge ===
-
-// Module 16598 (DraftBadge)
 import HeaderBackImage from "HeaderBackImage";
 import render from "render";
 import get_ActivityIndicator from "getBenefitKey";

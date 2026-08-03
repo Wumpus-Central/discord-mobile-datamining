@@ -1,6 +1,3 @@
-// === Module 16068: executeRunnable ===
-
-// Module 16068 (executeRunnable)
 import createFastConnectSocket from "createFastConnectSocket";
 import linkFromAppsFlyer from "linkFromAppsFlyer";
 

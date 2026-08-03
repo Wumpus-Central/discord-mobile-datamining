@@ -1,6 +1,3 @@
-// === Module 10328: NotificationSettingsMuteBanner ===
-
-// Module 10328 (NotificationSettingsMuteBanner)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

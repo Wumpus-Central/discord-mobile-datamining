@@ -1,6 +1,3 @@
-// === Module 8816: useFetchClaimableGiftingPromotionRewardSkuIds ===
-
-// Module 8816 (useFetchClaimableGiftingPromotionRewardSkuIds)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";

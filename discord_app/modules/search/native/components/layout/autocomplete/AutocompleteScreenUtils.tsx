@@ -1,6 +1,3 @@
-// === Module 15582: getSearchQueryChannelIds ===
-
-// Module 15582 (getSearchQueryChannelIds)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

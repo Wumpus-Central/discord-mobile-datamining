@@ -1,6 +1,3 @@
-// === Module 8819: SelectedUserField ===
-
-// Module 8819 (SelectedUserField)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

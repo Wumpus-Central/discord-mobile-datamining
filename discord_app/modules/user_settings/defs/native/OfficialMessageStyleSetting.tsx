@@ -1,6 +1,3 @@
-// === Module 14367: useOfficialMessageStyleSettingValue ===
-
-// Module 14367 (useOfficialMessageStyleSettingValue)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";

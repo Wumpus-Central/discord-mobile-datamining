@@ -1,6 +1,3 @@
-// === Module 5841: fromServer ===
-
-// Module 5841 (fromServer)
 let prototype;
 prototype = function ImmersiveBannerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);

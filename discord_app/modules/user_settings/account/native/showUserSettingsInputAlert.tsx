@@ -1,6 +1,3 @@
-// === Module 13846: showUserSettingsInputAlert ===
-
-// Module 13846 (showUserSettingsInputAlert)
 import "noop";
 import { jsx } from "jsxProd";
 

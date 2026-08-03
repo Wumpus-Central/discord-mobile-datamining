@@ -1,6 +1,3 @@
-// === Module 8112: getProfileProperties ===
-
-// Module 8112 (getProfileProperties)
 import map from "map";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";

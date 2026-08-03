@@ -1,6 +1,3 @@
-// === Module 10344: NotificationSettingsMessageUnreadActionSheet ===
-
-// Module 10344 (NotificationSettingsMessageUnreadActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UnreadSetting } from "ReadStateTypes";

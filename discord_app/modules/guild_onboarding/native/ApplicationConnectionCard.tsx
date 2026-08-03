@@ -1,6 +1,3 @@
-// === Module 5518: ApplicationConnectionCard ===
-
-// Module 5518 (ApplicationConnectionCard)
 import noop from "noop";
 import addApplication from "addApplication";
 import { AnalyticEvents } from "ME";

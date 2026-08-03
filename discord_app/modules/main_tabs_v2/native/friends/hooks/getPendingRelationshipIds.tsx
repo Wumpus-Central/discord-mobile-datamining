@@ -1,6 +1,3 @@
-// === Module 15632: filterFromPending ===
-
-// Module 15632 (filterFromPending)
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
 

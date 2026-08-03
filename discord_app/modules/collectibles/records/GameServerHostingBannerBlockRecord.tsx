@@ -1,6 +1,3 @@
-// === Module 5839: fromServer ===
-
-// Module 5839 (fromServer)
 let prototype;
 prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {
   const obj = Object.create(new.target.prototype);

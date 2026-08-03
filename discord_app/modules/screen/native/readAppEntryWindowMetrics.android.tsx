@@ -1,6 +1,3 @@
-// === Module 1846: readWindowSizeForAppEntry ===
-
-// Module 1846 (readWindowSizeForAppEntry)
 const result = require("set").fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
 
 export const readWindowSizeForAppEntry = function readWindowSizeForAppEntry(appEntryKey) {

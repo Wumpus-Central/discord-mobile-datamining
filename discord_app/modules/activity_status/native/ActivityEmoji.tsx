@@ -1,6 +1,3 @@
-// === Module 9094: ActivityEmoji ===
-
-// Module 9094 (ActivityEmoji)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

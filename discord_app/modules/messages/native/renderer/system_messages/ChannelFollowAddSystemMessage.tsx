@@ -1,6 +1,3 @@
-// === Module 7793: createChannelFollowAddSystemMessage ===
-
-// Module 7793 (createChannelFollowAddSystemMessage)
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx");
 
 export const createChannelFollowAddSystemMessage = function createChannelFollowAddSystemMessage(roleStyle) {

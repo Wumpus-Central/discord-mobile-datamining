@@ -1,6 +1,3 @@
-// === Module 10980: useTrackQuestEventWithImpression ===
-
-// Module 10980 (useTrackQuestEventWithImpression)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

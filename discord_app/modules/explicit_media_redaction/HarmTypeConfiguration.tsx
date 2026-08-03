@@ -1,6 +1,3 @@
-// === Module 5881: ContentHarmType ===
-
-// Module 5881 (ContentHarmType)
 import ME from "ME";
 
 let MessageAttachmentFlags;

@@ -1,6 +1,3 @@
-// === Module 9769: HeroMedia ===
-
-// Module 9769 (HeroMedia)
 import expandEventProperties from "expandEventProperties";
 import Button from "Button";
 import get_ActivityIndicator from "getSystemLocale";

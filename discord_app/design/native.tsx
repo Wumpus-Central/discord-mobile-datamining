@@ -1,6 +1,3 @@
-// === Module 13190: AccessibilityAnnouncer ===
-
-// Module 13190 (AccessibilityAnnouncer)
 const result = require("TABLE_ROW_HEIGHT").fileFinishedImporting("design/native.tsx");
 
 export const AccessibilityAnnouncer = require("AccessibilityAnnouncer").AccessibilityAnnouncer;

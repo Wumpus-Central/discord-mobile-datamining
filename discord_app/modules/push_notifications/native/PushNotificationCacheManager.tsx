@@ -1,6 +1,3 @@
-// === Module 16328: prototype ===
-
-// Module 16328 (prototype)
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";

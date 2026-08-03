@@ -1,6 +1,3 @@
-// === Module 8454: useSelectedDismissibleContentShared ===
-
-// Module 8454 (useSelectedDismissibleContentShared)
 import noop from "noop";
 import set from "set";
 import { ContentDismissActionType } from "ContentDismissActionType";

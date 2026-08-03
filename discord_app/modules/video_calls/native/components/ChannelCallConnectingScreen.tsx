@@ -1,6 +1,3 @@
-// === Module 10778: VoiceSettingsActionSheet ===
-
-// Module 10778 (VoiceSettingsActionSheet)
 import VoiceChatCallScreenHeaderIconInner from "VoiceChatCallScreenHeaderIconInner";
 import { View } from "useIsVoiceChannelFull";
 import set from "set";

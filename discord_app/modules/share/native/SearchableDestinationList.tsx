@@ -1,6 +1,3 @@
-// === Module 9919: SearchableDestinationList ===
-
-// Module 9919 (SearchableDestinationList)
 import _slicedToArray from "_slicedToArray";
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "Placeholder";

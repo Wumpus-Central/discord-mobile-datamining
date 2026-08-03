@@ -1,6 +1,3 @@
-// === Module 8036: updateGiftCode ===
-
-// Module 8036 (updateGiftCode)
 import frozen from "frozen";
 import ME from "ME";
 import { Store } from "initialize";

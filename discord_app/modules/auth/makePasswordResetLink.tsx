@@ -1,6 +1,3 @@
-// === Module 9213: makePasswordResetLink ===
-
-// Module 9213 (makePasswordResetLink)
 import { Routes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/auth/makePasswordResetLink.tsx");

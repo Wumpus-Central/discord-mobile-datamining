@@ -1,6 +1,3 @@
-// === Module 15672: ChannelPermissionSettingsBasicView ===
-
-// Module 15672 (ChannelPermissionSettingsBasicView)
 import CirclePlusIcon from "CirclePlusIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getRoleRowData from "getRoleRowData";

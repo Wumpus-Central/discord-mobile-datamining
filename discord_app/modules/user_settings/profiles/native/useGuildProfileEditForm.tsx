@@ -1,6 +1,3 @@
-// === Module 13760: useGuildProfileEditForm ===
-
-// Module 13760 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import V6OrEarlierAPIError from "V6OrEarlierAPIError";

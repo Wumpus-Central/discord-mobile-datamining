@@ -1,6 +1,3 @@
-// === Module 12795: updateTtl ===
-
-// Module 12795 (updateTtl)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PersistedStore } from "initialize";

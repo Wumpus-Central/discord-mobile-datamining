@@ -1,6 +1,3 @@
-// === Module 5215: DropdownOptionRow ===
-
-// Module 5215 (DropdownOptionRow)
 import Button from "Button";
 import { View } from "Background";
 import getEmojiToGroupId from "getEmojiToGroupId";

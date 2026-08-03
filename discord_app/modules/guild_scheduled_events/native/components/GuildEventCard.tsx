@@ -1,6 +1,3 @@
-// === Module 8333: GuildEventCardControls ===
-
-// Module 8333 (GuildEventCardControls)
 import { View } from "get ActivityIndicator";
 import createRTCConnection from "createRTCConnection";
 import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort";

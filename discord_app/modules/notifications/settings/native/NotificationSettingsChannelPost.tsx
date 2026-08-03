@@ -1,6 +1,3 @@
-// === Module 10346: NotificationSettingsChannelPost ===
-
-// Module 10346 (NotificationSettingsChannelPost)
 import "noop";
 import { View } from "get ActivityIndicator";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

@@ -1,6 +1,3 @@
-// === Module 8325: useGuildEvents ===
-
-// Module 8325 (useGuildEvents)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

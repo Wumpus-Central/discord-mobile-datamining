@@ -1,6 +1,3 @@
-// === Module 14929: showPushNotificationPromptModal ===
-
-// Module 14929 (showPushNotificationPromptModal)
 import { PermissionStateType } from "set";
 import { NUF_NOTIFICATION_MODAL_KEY as closure_4 } from "NewUserTypes";
 

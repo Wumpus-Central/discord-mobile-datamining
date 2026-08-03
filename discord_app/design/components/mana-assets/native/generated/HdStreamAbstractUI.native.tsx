@@ -1,6 +1,3 @@
-// === Module 7231: HdStreamAbstractUI ===
-
-// Module 7231 (HdStreamAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/HdStreamAbstractUI.native.tsx");

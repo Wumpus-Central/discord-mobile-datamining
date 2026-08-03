@@ -1,6 +1,3 @@
-// === Module 7899: validateComponent ===
-
-// Module 7899 (validateComponent)
 const result = require("getSystemLocale").fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
 
 export default function validateComponent(type, arg1, modal) {

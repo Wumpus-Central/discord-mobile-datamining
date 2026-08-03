@@ -1,6 +1,3 @@
-// === Module 10132: useSwipeToReplySettingValue ===
-
-// Module 10132 (useSwipeToReplySettingValue)
 import ME from "ME";
 import createToggle from "createToggle";
 

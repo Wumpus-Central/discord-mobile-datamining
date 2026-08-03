@@ -1,6 +1,3 @@
-// === Module 7742: getForwardInfo ===
-
-// Module 7742 (getForwardInfo)
 import getGuild from "getGuild";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

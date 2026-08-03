@@ -1,6 +1,3 @@
-// === Module 16283: AddAvatarScreen ===
-
-// Module 16283 (AddAvatarScreen)
 import closure_3 from "ME";
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";

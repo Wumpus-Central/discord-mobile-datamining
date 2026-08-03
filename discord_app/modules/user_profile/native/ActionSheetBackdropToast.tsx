@@ -1,6 +1,3 @@
-// === Module 12248: ActionSheetBackdropToast ===
-
-// Module 12248 (ActionSheetBackdropToast)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO";

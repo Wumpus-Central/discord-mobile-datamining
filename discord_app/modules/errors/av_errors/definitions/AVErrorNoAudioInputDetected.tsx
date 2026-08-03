@@ -1,6 +1,3 @@
-// === Module 16696: AVErrorNoAudioInputDetectedDefinition ===
-
-// Module 16696 (AVErrorNoAudioInputDetectedDefinition)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";

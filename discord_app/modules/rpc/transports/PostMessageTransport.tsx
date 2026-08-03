@@ -1,6 +1,3 @@
-// === Module 10638: map ===
-
-// Module 10638 (map)
 import closure_3 from "set";
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";

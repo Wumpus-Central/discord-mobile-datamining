@@ -1,6 +1,3 @@
-// === Module 8234: EditGuildEventRecurrenceModal ===
-
-// Module 8234 (EditGuildEventRecurrenceModal)
 import Themes from "Themes";
 import _slicedToArray from "_slicedToArray";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 11602: useGuildPowerupRollbackNotificationConfig ===
-
-// Module 11602 (useGuildPowerupRollbackNotificationConfig)
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 
 const require = arg1;

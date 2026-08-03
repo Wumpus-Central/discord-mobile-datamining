@@ -1,6 +1,3 @@
-// === Module 9346: PremiumUpsellTooltipActionSheet ===
-
-// Module 9346 (PremiumUpsellTooltipActionSheet)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

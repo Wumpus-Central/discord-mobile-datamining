@@ -1,6 +1,3 @@
-// === Module 502: enforcing ===
-
-// Module 502 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeFastConnectModule");

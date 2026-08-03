@@ -1,6 +1,3 @@
-// === Module 8035: getGiftStyleUrl ===
-
-// Module 8035 (getGiftStyleUrl)
 import get_ActivityIndicator from "registerAsset";
 import fetchFingerprint from "fetchFingerprint";
 import updateGiftCode from "updateGiftCode";

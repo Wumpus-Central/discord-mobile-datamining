@@ -1,6 +1,3 @@
-// === Module 1875: setPremiumTypeActual ===
-
-// Module 1875 (setPremiumTypeActual)
 import GuildFeatures from "GuildFeatures";
 import { PersistedStore } from "initialize";
 

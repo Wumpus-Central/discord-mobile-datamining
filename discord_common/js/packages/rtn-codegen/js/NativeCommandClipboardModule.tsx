@@ -1,6 +1,3 @@
-// === Module 9528: enforcing ===
-
-// Module 9528 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeCommandClipboardModule");

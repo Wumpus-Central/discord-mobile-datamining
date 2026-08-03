@@ -1,6 +1,3 @@
-// === Module 12417: ChannelPreview ===
-
-// Module 12417 (ChannelPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 11270: AppRowLabel ===
-
-// Module 11270 (AppRowLabel)
 import TwinButtons from "TwinButtons";
 import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive";
 import get_ActivityIndicator from "getSystemLocale";

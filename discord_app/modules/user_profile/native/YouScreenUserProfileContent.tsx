@@ -1,6 +1,3 @@
-// === Module 15653: YouAvatar ===
-
-// Module 15653 (YouAvatar)
 import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled";
 import DismissibleContent from "DismissibleContent";
 import get_ActivityIndicator from "UserProfileAnalyticsProvider";

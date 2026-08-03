@@ -1,6 +1,3 @@
-// === Module 5949: recomputeAffinities ===
-
-// Module 5949 (recomputeAffinities)
 import upsertRelationship from "upsertRelationship";
 import { USER_AFFINITY_TTL } from "result";
 import { PersistedStore } from "initialize";

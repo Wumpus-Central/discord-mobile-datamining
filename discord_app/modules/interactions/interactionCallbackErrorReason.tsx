@@ -1,6 +1,3 @@
-// === Module 4417: interactionCallbackErrorReason ===
-
-// Module 4417 (interactionCallbackErrorReason)
 import addApplication from "addApplication";
 
 const require = arg1;

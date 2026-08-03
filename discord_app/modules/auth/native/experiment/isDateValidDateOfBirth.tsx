@@ -1,6 +1,3 @@
-// === Module 14914: isDateValidDateOfBirth ===
-
-// Module 14914 (isDateValidDateOfBirth)
 const result = require("set").fileFinishedImporting("modules/auth/native/experiment/isDateValidDateOfBirth.tsx");
 
 export default function isDateValidDateOfBirth(arg0) {

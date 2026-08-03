@@ -1,6 +1,3 @@
-// === Module 4287: traceEvent ===
-
-// Module 4287 (traceEvent)
 const result = require("set").fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
 class SoundshareStatsAggregator {
   constructor() {

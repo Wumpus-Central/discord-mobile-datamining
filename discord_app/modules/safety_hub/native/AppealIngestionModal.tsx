@@ -1,6 +1,3 @@
-// === Module 11101: AppealIngestionModal ===
-
-// Module 11101 (AppealIngestionModal)
 import closure_4 from "SafetyHubView";
 import _slicedToArray from "_slicedToArray";
 import getSystemLocale from "getSystemLocale";

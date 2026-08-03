@@ -1,6 +1,3 @@
-// === Module 14952: useDrawerOpen ===
-
-// Module 14952 (useDrawerOpen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

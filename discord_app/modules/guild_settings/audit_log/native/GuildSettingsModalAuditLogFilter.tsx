@@ -1,6 +1,3 @@
-// === Module 16402: GuildSettingsModalAuditLogFilter ===
-
-// Module 16402 (GuildSettingsModalAuditLogFilter)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import { View } from "FormRadio";

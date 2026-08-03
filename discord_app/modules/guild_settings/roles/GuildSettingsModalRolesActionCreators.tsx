@@ -1,6 +1,3 @@
-// === Module 16479: updateGuildRole ===
-
-// Module 16479 (updateGuildRole)
 import set from "set";
 import { Endpoints } from "ME";
 

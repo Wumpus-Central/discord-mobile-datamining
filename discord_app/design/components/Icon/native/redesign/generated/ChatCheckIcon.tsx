@@ -1,6 +1,3 @@
-// === Module 13937: ChatCheckIcon ===
-
-// Module 13937 (ChatCheckIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 4367: sendSMS ===
-
-// Module 4367 (sendSMS)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let c3;

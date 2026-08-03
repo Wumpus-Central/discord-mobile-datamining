@@ -1,6 +1,3 @@
-// === Module 3821: getUncachedChannelPermissions ===
-
-// Module 3821 (getUncachedChannelPermissions)
 import initialize from "initialize";
 import closure_5 from "initialize";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";

@@ -1,6 +1,3 @@
-// === Module 12401: _getPresenceActivityInviteCoverImageURL ===
-
-// Module 12401 (_getPresenceActivityInviteCoverImageURL)
 import noop from "noop";
 import getCoverImageURL from "getCoverImageURL";
 

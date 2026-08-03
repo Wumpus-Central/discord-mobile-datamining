@@ -1,6 +1,3 @@
-// === Module 7405: PrivacyShieldWithLaptopBannerSpotIllustration ===
-
-// Module 7405 (PrivacyShieldWithLaptopBannerSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PrivacyShieldWithLaptopBannerSpotIllustration.native.tsx");

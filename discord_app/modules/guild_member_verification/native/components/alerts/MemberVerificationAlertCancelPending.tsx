@@ -1,6 +1,3 @@
-// === Module 9164: MemberVerificationAlertCancelPending ===
-
-// Module 9164 (MemberVerificationAlertCancelPending)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

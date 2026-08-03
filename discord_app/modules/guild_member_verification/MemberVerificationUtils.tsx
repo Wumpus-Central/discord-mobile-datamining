@@ -1,6 +1,3 @@
-// === Module 4681: isValidFormResponse ===
-
-// Module 4681 (isValidFormResponse)
 import items from "items";
 import { GuildFeatures } from "ME";
 

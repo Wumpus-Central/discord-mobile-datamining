@@ -1,6 +1,3 @@
-// === Module 4249: pathJoin ===
-
-// Module 4249 (pathJoin)
 const result = require("set").fileFinishedImporting("utils/PathUtils.tsx");
 
 export const pathJoin = function pathJoin(closure_1, closure_13) {

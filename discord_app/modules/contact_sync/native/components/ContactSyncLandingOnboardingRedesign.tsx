@@ -1,6 +1,3 @@
-// === Module 11797: ContactSyncLandingOnboardingRedesign ===
-
-// Module 11797 (ContactSyncLandingOnboardingRedesign)
 import closure_3 from "createCacheKey";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

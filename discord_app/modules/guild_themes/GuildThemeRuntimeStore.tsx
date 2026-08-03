@@ -1,6 +1,3 @@
-// === Module 4079: snapshotSelectedGuildId ===
-
-// Module 4079 (snapshotSelectedGuildId)
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";

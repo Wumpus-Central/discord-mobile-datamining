@@ -1,6 +1,3 @@
-// === Module 9211: useLoginReset ===
-
-// Module 9211 (useLoginReset)
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 

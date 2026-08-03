@@ -1,6 +1,3 @@
-// === Module 12789: isLatest ===
-
-// Module 12789 (isLatest)
 import hasFlag from "hasFlag";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 

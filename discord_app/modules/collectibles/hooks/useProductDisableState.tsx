@@ -1,6 +1,3 @@
-// === Module 8770: useProductDisableState ===
-
-// Module 8770 (useProductDisableState)
 import reset from "reset";
 
 const require = arg1;

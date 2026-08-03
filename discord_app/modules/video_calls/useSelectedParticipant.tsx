@@ -1,6 +1,3 @@
-// === Module 10252: useSelectedParticipant ===
-
-// Module 10252 (useSelectedParticipant)
 import getParticipants from "getParticipants";
 
 const require = arg1;

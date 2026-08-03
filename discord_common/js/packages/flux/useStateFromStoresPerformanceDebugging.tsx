@@ -1,6 +1,3 @@
-// === Module 14779: hasExceededThreshold ===
-
-// Module 14779 (hasExceededThreshold)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

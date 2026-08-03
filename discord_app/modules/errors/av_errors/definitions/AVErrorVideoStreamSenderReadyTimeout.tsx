@@ -1,6 +1,3 @@
-// === Module 16710: AVErrorVideoStreamSenderReadyTimeoutDefinition ===
-
-// Module 16710 (AVErrorVideoStreamSenderReadyTimeoutDefinition)
 import fetchFingerprint from "fetchFingerprint";
 import makeTimeoutKey from "makeTimeoutKey";
 

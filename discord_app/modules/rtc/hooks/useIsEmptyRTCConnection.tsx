@@ -1,6 +1,3 @@
-// === Module 8923: useIsStreamRTCConnectionEmpty ===
-
-// Module 8923 (useIsStreamRTCConnectionEmpty)
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";

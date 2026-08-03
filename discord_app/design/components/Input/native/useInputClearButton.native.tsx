@@ -1,6 +1,3 @@
-// === Module 6738: useInputClearButton ===
-
-// Module 6738 (useInputClearButton)
 import "noop";
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

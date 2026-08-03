@@ -1,6 +1,3 @@
-// === Module 9520: isLinkTrusted ===
-
-// Module 9520 (isLinkTrusted)
 const result = require("set").fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(target) {

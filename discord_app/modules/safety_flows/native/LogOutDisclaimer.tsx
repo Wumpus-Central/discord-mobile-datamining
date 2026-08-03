@@ -1,6 +1,3 @@
-// === Module 16733: LogOutDisclaimer ===
-
-// Module 16733 (LogOutDisclaimer)
 import { jsx } from "jsxProd";
 
 const result = require("Text").fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");

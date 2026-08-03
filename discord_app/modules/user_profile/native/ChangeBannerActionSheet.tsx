@@ -1,6 +1,3 @@
-// === Module 13712: ChangeBannerColorRow ===
-
-// Module 13712 (ChangeBannerColorRow)
 import closure_3 from "jsxProd";
 import UserProfileUpsellButton from "UserProfileUpsellButton";
 import { View } from "TableRowInner";

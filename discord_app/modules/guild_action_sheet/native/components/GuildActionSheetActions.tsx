@@ -1,6 +1,3 @@
-// === Module 13068: HideMutedChannelsOption ===
-
-// Module 13068 (HideMutedChannelsOption)
 import getSystemLocale from "getSystemLocale";
 import { View } from "initialize";
 import guildHasCommunity from "guildHasCommunity";

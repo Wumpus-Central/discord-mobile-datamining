@@ -1,6 +1,3 @@
-// === Module 16179: timeout ===
-
-// Module 16179 (timeout)
 import filterPlayingActivities from "filterPlayingActivities";
 import ME from "ME";
 import "initialize";

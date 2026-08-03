@@ -1,6 +1,3 @@
-// === Module 8305: _toPropertyKey ===
-
-// Module 8305 (_toPropertyKey)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import RemoveIcon from "RemoveIcon";

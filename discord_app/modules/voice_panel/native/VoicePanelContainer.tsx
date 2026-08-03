@@ -1,6 +1,3 @@
-// === Module 15899: VoicePanel ===
-
-// Module 15899 (VoicePanel)
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import withEqualityFn from "withEqualityFn";

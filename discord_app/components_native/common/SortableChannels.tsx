@@ -1,6 +1,3 @@
-// === Module 16462: render ===
-
-// Module 16462 (render)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

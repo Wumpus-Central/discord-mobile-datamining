@@ -1,6 +1,3 @@
-// === Module 16487: GuildSettingsRoleEditDisplay ===
-
-// Module 16487 (GuildSettingsRoleEditDisplay)
 import AsyncFromSyncIterator from "AsyncFromSyncIterator";
 import { View } from "items";
 import { isEveryoneRole } from "GuildRoleRecordTypeTag";

@@ -1,6 +1,3 @@
-// === Module 13658: RefreshIcon ===
-
-// Module 13658 (RefreshIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

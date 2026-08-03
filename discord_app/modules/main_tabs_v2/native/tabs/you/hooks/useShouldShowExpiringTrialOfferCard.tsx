@@ -1,6 +1,3 @@
-// === Module 15655: useShouldShowExpiringTrialOfferCard ===
-
-// Module 15655 (useShouldShowExpiringTrialOfferCard)
 import clearDismissUntil from "clearDismissUntil";
 import { NoticeTypes } from "ME";
 import { PremiumSubscriptionSKUs } from "GuildFeatures";

@@ -1,6 +1,3 @@
-// === Module 13003: ChannelListMagnifyingGlassIcon ===
-
-// Module 13003 (ChannelListMagnifyingGlassIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

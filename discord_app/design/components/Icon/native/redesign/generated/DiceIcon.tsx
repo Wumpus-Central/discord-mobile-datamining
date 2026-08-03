@@ -1,6 +1,3 @@
-// === Module 8711: DiceIcon ===
-
-// Module 8711 (DiceIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

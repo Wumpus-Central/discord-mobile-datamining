@@ -1,6 +1,3 @@
-// === Module 11446: memoResult1 ===
-
-// Module 11446 (memoResult1)
 import importAllResult from "useSafeAreaInsets";
 import { Platform } from "useGradientBottom";
 import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes";

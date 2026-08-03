@@ -1,6 +1,3 @@
-// === Module 9905: longPressMessageHandleReply ===
-
-// Module 9905 (longPressMessageHandleReply)
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getState from "getState";

@@ -1,6 +1,3 @@
-// === Module 8448: renderTooltipItem ===
-
-// Module 8448 (renderTooltipItem)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";

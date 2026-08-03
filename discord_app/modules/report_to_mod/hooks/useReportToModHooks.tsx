@@ -1,6 +1,3 @@
-// === Module 9574: useIsReportToModEnabled ===
-
-// Module 9574 (useIsReportToModEnabled)
 import { useEffect } from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import reinjectEphemerals from "reinjectEphemerals";

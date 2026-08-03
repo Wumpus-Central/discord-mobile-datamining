@@ -1,6 +1,3 @@
-// === Module 15638: isYouNavFloating ===
-
-// Module 15638 (isYouNavFloating)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

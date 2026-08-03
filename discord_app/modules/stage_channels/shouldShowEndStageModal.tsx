@@ -1,6 +1,3 @@
-// === Module 10726: shouldShowEndStageModal ===
-
-// Module 10726 (shouldShowEndStageModal)
 import fetchFingerprint from "fetchFingerprint";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";

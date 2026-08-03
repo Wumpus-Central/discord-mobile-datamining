@@ -1,6 +1,3 @@
-// === Module 16046: VoicePanelDrawerToggleButton ===
-
-// Module 16046 (VoicePanelDrawerToggleButton)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 10559: useVideoStreamError ===
-
-// Module 10559 (useVideoStreamError)
 import fetchFingerprint from "fetchFingerprint";
 import isAVErrorContextOfType from "isAVErrorContextOfType";
 import { MediaEngineContextTypes } from "DesktopSources";

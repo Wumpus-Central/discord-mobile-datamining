@@ -1,6 +1,3 @@
-// === Module 15923: openSoundboardSoundPreviewActionSheet ===
-
-// Module 15923 (openSoundboardSoundPreviewActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/soundboard/native/utils/openSoundboardSoundPreviewActionSheet.tsx");
 
 export default function openSoundboardSoundPreviewActionSheet(channelId, sound) {

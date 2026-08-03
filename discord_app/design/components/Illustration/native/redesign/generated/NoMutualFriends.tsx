@@ -1,6 +1,3 @@
-// === Module 11719: getNoMutualFriendsSource ===
-
-// Module 11719 (getNoMutualFriendsSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

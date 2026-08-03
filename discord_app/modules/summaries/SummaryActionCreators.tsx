@@ -1,6 +1,3 @@
-// === Module 9559: fetchSummary ===
-
-// Module 9559 (fetchSummary)
 import ME from "ME";
 import noop from "noop";
 import _handleConnectionOpen from "_handleConnectionOpen";

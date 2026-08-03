@@ -1,6 +1,3 @@
-// === Module 9301: DCDChatItem ===
-
-// Module 9301 (DCDChatItem)
 import _slicedToArray from "_slicedToArray";
 import LinearGradient from "LinearGradient";
 import get_ActivityIndicator from "map";

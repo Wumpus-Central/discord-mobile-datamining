@@ -1,6 +1,3 @@
-// === Module 5541: useProfileThemeValues ===
-
-// Module 5541 (useProfileThemeValues)
 import { useMemo } from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

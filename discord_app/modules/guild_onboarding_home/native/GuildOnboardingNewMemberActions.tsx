@@ -1,6 +1,3 @@
-// === Module 15454: MemberActionRow ===
-
-// Module 15454 (MemberActionRow)
 import preload from "preload";
 import { View } from "getAvatarURL";
 import getEmojiToGroupId from "getEmojiToGroupId";

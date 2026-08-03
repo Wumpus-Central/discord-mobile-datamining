@@ -1,6 +1,3 @@
-// === Module 5566: Divider ===
-
-// Module 5566 (Divider)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";

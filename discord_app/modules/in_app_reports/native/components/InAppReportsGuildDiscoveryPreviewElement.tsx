@@ -1,6 +1,3 @@
-// === Module 12420: GuildDiscoveryPreviewElement ===
-
-// Module 12420 (GuildDiscoveryPreviewElement)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

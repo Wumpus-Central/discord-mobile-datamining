@@ -1,6 +1,3 @@
-// === Module 699: withEqualityFn ===
-
-// Module 699 (withEqualityFn)
 import identity from "identity";
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });

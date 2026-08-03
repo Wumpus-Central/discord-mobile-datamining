@@ -1,6 +1,3 @@
-// === Module 11375: AppLauncherUserOption ===
-
-// Module 11375 (AppLauncherUserOption)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

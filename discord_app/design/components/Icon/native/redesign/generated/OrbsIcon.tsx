@@ -1,6 +1,3 @@
-// === Module 8714: OrbsIcon ===
-
-// Module 8714 (OrbsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

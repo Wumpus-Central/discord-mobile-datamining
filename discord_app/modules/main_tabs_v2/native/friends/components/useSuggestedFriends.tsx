@@ -1,6 +1,3 @@
-// === Module 15063: useSuggestedFriends ===
-
-// Module 15063 (useSuggestedFriends)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import initialize from "initialize";

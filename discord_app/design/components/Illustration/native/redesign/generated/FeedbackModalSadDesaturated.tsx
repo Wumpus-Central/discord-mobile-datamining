@@ -1,6 +1,3 @@
-// === Module 9538: getFeedbackModalSadDesaturatedSource ===
-
-// Module 9538 (getFeedbackModalSadDesaturatedSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

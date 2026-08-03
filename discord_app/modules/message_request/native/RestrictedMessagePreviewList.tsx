@@ -1,6 +1,3 @@
-// === Module 15747: HiddenMedia ===
-
-// Module 15747 (HiddenMedia)
 import RestrictedBlockedMessageGroup from "RestrictedBlockedMessageGroup";
 import { View } from "DCDChatItem";
 import reinjectEphemerals from "reinjectEphemerals";

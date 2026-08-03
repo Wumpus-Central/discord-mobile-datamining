@@ -1,6 +1,3 @@
-// === Module 7139: GameplayAbstractUI ===
-
-// Module 7139 (GameplayAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GameplayAbstractUI.native.tsx");

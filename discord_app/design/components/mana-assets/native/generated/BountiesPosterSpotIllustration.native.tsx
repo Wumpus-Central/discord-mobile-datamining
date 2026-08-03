@@ -1,6 +1,3 @@
-// === Module 6895: BountiesPosterSpotIllustration ===
-
-// Module 6895 (BountiesPosterSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx");

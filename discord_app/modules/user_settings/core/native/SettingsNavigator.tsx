@@ -1,6 +1,3 @@
-// === Module 15752: LeftAlignedHeaderTitle ===
-
-// Module 15752 (LeftAlignedHeaderTitle)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getDeviceMetadata";
 import { View } from "QUICK_SWITCHER";

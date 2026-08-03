@@ -1,6 +1,3 @@
-// === Module 10148: ConfirmStartCall ===
-
-// Module 10148 (ConfirmStartCall)
 import "noop";
 import jsxProd from "jsxProd";
 

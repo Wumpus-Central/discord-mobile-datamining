@@ -1,6 +1,3 @@
-// === Module 8360: openInstantInviteActionSheet ===
-
-// Module 8360 (openInstantInviteActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
 
 export default function openInstantInviteActionSheet(invite_channel_id) {

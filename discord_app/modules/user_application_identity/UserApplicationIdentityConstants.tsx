@@ -1,6 +1,3 @@
-// === Module 4876: items1 ===
-
-// Module 4876 (items1)
 let obj = { RIOT_GAMES: "1443033465766281327", BATTLENET: "1356665549089800303" };
 obj = {
   applicationId: obj.RIOT_GAMES,

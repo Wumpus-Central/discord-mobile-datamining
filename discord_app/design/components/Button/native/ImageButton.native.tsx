@@ -1,6 +1,3 @@
-// === Module 12287: ImageButton ===
-
-// Module 12287 (ImageButton)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

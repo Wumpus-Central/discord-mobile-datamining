@@ -1,6 +1,3 @@
-// === Module 15312: LightbulbIcon ===
-
-// Module 15312 (LightbulbIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 11421: useChatInputFloatingBounce ===
-
-// Module 11421 (useChatInputFloatingBounce)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import TextAreaCta from "TextAreaCta";

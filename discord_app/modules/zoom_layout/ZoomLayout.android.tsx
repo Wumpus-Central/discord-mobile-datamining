@@ -1,6 +1,3 @@
-// === Module 10577: ? ===
-
-// Module 10577
 import importAllResult from "noop";
 import { PixelRatio } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

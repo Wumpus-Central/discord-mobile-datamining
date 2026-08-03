@@ -1,6 +1,3 @@
-// === Module 7465: ServerIconGeargrindExample ===
-
-// Module 7465 (ServerIconGeargrindExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconGeargrindExample.native.tsx");

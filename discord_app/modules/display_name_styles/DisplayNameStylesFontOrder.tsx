@@ -1,6 +1,3 @@
-// === Module 14372: items ===
-
-// Module 14372 (items)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 10249: VoiceChatDrawerState ===
-
-// Module 10249 (VoiceChatDrawerState)
 import noop from "noop";
 import participantFromServer from "participantFromServer";
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";

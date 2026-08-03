@@ -1,6 +1,3 @@
-// === Module 12637: _fetchSubscriptionsSettings ===
-
-// Module 12637 (_fetchSubscriptionsSettings)
 import _slicedToArray from "_slicedToArray";
 import _deletePaymentSource from "_deletePaymentSource";
 import { AnalyticEvents } from "ME";

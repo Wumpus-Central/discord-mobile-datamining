@@ -1,6 +1,3 @@
-// === Module 6614: openUserSettings ===
-
-// Module 6614 (openUserSettings)
 import handleFormClose from "handleFormClose";
 import { UserSettingsSections } from "ME";
 

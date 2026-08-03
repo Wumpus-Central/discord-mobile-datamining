@@ -1,6 +1,3 @@
-// === Module 9645: StickerPackInformationPopout ===
-
-// Module 9645 (StickerPackInformationPopout)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

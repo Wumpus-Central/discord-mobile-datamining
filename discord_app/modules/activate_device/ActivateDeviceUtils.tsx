@@ -1,6 +1,3 @@
-// === Module 13035: clientIdToActivateDevicePlatform ===
-
-// Module 13035 (clientIdToActivateDevicePlatform)
 import { PlatformTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activate_device/ActivateDeviceUtils.tsx");

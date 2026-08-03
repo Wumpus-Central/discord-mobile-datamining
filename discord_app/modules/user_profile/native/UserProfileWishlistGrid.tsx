@@ -1,6 +1,3 @@
-// === Module 12204: WishlistEmptyState ===
-
-// Module 12204 (WishlistEmptyState)
 import get from "get";
 import Themes from "Themes";
 import { View } from "timestamp";

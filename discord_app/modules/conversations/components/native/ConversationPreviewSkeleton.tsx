@@ -1,6 +1,3 @@
-// === Module 9297: ConversationPreviewSkeleton ===
-
-// Module 9297 (ConversationPreviewSkeleton)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { MOBILE_PREVIEW_MESSAGE_COUNT as closure_5 } from "CONVERSATION_COLORS";

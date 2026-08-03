@@ -1,6 +1,3 @@
-// === Module 8175: map ===
-
-// Module 8175 (map)
 import { Store } from "initialize";
 
 const require = arg1;

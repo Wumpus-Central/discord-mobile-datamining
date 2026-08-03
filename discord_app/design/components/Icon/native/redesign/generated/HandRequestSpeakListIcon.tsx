@@ -1,6 +1,3 @@
-// === Module 10740: HandRequestSpeakListIcon ===
-
-// Module 10740 (HandRequestSpeakListIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

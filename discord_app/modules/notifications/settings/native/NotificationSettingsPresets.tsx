@@ -1,6 +1,3 @@
-// === Module 10329: NotificationSettingsPresets ===
-
-// Module 10329 (NotificationSettingsPresets)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

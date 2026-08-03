@@ -1,6 +1,3 @@
-// === Module 13101: items ===
-
-// Module 13101 (items)
 import "noop";
 import jsxProd from "jsxProd";
 

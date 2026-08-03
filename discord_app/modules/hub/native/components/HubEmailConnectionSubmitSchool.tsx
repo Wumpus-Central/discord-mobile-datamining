@@ -1,6 +1,3 @@
-// === Module 11852: HubEmailConnectionSubmitSchool ===
-
-// Module 11852 (HubEmailConnectionSubmitSchool)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 9005: FreeFormLabel ===
-
-// Module 9005 (FreeFormLabel)
 import "noop";
 import { jsx } from "jsxProd";
 

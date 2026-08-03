@@ -1,6 +1,3 @@
-// === Module 10954: render ===
-
-// Module 10954 (render)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import WEB_OPEN from "WEB_OPEN";

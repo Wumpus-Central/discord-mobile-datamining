@@ -1,6 +1,3 @@
-// === Module 16172: handleChannelSelect ===
-
-// Module 16172 (handleChannelSelect)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";

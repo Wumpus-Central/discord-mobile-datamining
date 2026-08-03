@@ -1,6 +1,3 @@
-// === Module 8870: VideoDisabledSvgIcon ===
-
-// Module 8870 (VideoDisabledSvgIcon)
 import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

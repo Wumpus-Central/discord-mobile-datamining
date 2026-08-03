@@ -1,6 +1,3 @@
-// === Module 16253: closeIFrameModal ===
-
-// Module 16253 (closeIFrameModal)
 import { INTERACTION_IFRAME_MODAL_KEY as closure_2 } from "INTERACTION_IFRAME_MODAL_KEY";
 
 const result = require("dispatcher").fileFinishedImporting("modules/interaction_components/closeIFrameModal.native.tsx");

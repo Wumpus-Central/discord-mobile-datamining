@@ -1,6 +1,3 @@
-// === Module 15201: GuildMemberDashChannelRow ===
-
-// Module 15201 (GuildMemberDashChannelRow)
 import noop from "noop";
 import ME from "ME";
 import { StaticChannelRoute } from "set";

@@ -1,6 +1,3 @@
-// === Module 4213: initialize ===
-
-// Module 4213 (initialize)
 import map from "map";
 import gameFromServer from "gameFromServer";
 import setLibraryApplications from "setLibraryApplications";

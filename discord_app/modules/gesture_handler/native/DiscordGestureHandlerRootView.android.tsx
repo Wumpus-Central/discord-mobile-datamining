@@ -1,6 +1,3 @@
-// === Module 13628: DiscordGestureHandlerRootView ===
-
-// Module 13628 (DiscordGestureHandlerRootView)
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

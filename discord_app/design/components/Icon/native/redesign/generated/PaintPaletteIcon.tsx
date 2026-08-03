@@ -1,6 +1,3 @@
-// === Module 6647: PaintPaletteIcon ===
-
-// Module 6647 (PaintPaletteIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

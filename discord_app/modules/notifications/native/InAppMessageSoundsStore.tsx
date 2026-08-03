@@ -1,6 +1,3 @@
-// === Module 10284: isInAppMessageSoundsEnabled ===
-
-// Module 10284 (isInAppMessageSoundsEnabled)
 import identity from "identity";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";

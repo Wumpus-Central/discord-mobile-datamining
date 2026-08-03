@@ -1,6 +1,3 @@
-// === Module 8000: getDisplayFilename ===
-
-// Module 8000 (getDisplayFilename)
 const result = require("set").fileFinishedImporting("modules/messages/getDisplayFilename.tsx");
 
 export default function getDisplayFilename(title) {

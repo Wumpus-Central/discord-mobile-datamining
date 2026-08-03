@@ -1,6 +1,3 @@
-// === Module 15754: useAutoSettingsSearchSessionAnalytics ===
-
-// Module 15754 (useAutoSettingsSearchSessionAnalytics)
 import noop from "noop";
 import getState from "getState";
 import zustandStore from "zustandStore";

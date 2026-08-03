@@ -1,6 +1,3 @@
-// === Module 10714: ScheduleEventPrompt ===
-
-// Module 10714 (ScheduleEventPrompt)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

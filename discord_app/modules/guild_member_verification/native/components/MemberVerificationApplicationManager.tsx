@@ -1,6 +1,3 @@
-// === Module 16228: prototype ===
-
-// Module 16228 (prototype)
 import handleConnectionOpen from "handleConnectionOpen";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import "initialize";

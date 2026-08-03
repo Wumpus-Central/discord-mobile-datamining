@@ -1,6 +1,3 @@
-// === Module 3840: createFromServer ===
-
-// Module 3840 (createFromServer)
 import "toJS";
 import GuildFeatures from "GuildFeatures";
 

@@ -1,6 +1,3 @@
-// === Module 10337: NotificationSettingsMessageNotificationGuildActionSheet ===
-
-// Module 10337 (NotificationSettingsMessageNotificationGuildActionSheet)
 import "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserNotificationSettings } from "ME";

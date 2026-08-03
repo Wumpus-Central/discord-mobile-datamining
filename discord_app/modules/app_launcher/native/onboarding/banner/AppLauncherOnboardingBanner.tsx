@@ -1,6 +1,3 @@
-// === Module 11236: AppLauncherOnboardingBanner ===
-
-// Module 11236 (AppLauncherOnboardingBanner)
 import "noop";
 import { jsx } from "jsxProd";
 

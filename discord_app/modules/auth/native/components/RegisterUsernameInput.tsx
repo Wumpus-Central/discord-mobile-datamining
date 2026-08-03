@@ -1,6 +1,3 @@
-// === Module 14903: UsernameStatusMessage ===
-
-// Module 14903 (UsernameStatusMessage)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 12371: createActivityMessageEmbed ===
-
-// Module 12371 (createActivityMessageEmbed)
 const result = require("set").fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {

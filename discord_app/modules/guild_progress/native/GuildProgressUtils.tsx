@@ -1,6 +1,3 @@
-// === Module 11579: useIOSCompletionStates ===
-
-// Module 11579 (useIOSCompletionStates)
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

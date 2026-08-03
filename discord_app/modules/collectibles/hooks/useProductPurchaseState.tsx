@@ -1,6 +1,3 @@
-// === Module 8719: getProductPurchaseState ===
-
-// Module 8719 (getProductPurchaseState)
 import map from "map";
 
 const require = arg1;

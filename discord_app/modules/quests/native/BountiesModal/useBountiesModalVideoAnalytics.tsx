@@ -1,6 +1,3 @@
-// === Module 14069: useBountiesModalVideoAnalytics ===
-
-// Module 14069 (useBountiesModalVideoAnalytics)
 import noop from "noop";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import { AnalyticEvents } from "ME";

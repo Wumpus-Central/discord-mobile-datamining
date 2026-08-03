@@ -1,6 +1,3 @@
-// === Module 11676: GuildPowerupsPerkCard ===
-
-// Module 11676 (GuildPowerupsPerkCard)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 16475: width ===
-
-// Module 16475 (width)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import get_ActivityIndicator from "Button";

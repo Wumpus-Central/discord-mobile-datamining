@@ -1,6 +1,3 @@
-// === Module 12188: createNitroSuggestedSku ===
-
-// Module 12188 (createNitroSuggestedSku)
 import _slicedToArray from "_slicedToArray";
 import createFromServer from "createFromServer";
 import { isCollectiblesWishlistItemRecord as closure_5 } from "createCollectiblesItemFromServerResponse";

@@ -1,6 +1,3 @@
-// === Module 15931: getMemoizedParticipant ===
-
-// Module 15931 (getMemoizedParticipant)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getParticipants from "getParticipants";

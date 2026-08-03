@@ -1,6 +1,3 @@
-// === Module 6699: map ===
-
-// Module 6699 (map)
 import createFromServer from "createFromServer";
 import { InviteTargetTypes } from "InviteSendStates";
 import { Store } from "initialize";

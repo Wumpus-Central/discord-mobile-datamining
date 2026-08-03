@@ -1,6 +1,3 @@
-// === Module 654: u ===
-
-// Module 654 (u)
 let _Date = Date;
 if (Date.now) {
   let nowResult = _Date.now();

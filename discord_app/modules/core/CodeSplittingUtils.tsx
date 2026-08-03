@@ -1,6 +1,3 @@
-// === Module 3857: ? ===
-
-// Module 3857
 import loaderMaker from "loaderMaker";
 
 loaderMaker.setAwaitOnline(require("awaitOnline").awaitOnline);

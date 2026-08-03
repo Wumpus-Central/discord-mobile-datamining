@@ -1,6 +1,3 @@
-// === Module 5651: encodeUserIdForWebAuthn ===
-
-// Module 5651 (encodeUserIdForWebAuthn)
 const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");
 
 export const encodeUserIdForWebAuthn = function encodeUserIdForWebAuthn(c1) {

@@ -1,6 +1,3 @@
-// === Module 16165: handleConnectionOpen ===
-
-// Module 16165 (handleConnectionOpen)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import handleClearCaches from "handleClearCaches";
 import "initialize";

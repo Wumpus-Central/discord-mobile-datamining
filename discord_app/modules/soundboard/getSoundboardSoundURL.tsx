@@ -1,6 +1,3 @@
-// === Module 13614: getSoundboardSoundURL ===
-
-// Module 13614 (getSoundboardSoundURL)
 import { Endpoints } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/soundboard/getSoundboardSoundURL.tsx");

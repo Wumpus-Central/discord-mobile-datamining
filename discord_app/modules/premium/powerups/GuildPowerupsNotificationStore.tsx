@@ -1,6 +1,3 @@
-// === Module 11597: getState ===
-
-// Module 11597 (getState)
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

@@ -1,6 +1,3 @@
-// === Module 14651: CollectiblesShopHeaderTitle ===
-
-// Module 14651 (CollectiblesShopHeaderTitle)
 import ref from "ref";
 import { View } from "CheckmarkSmallIcon";
 import mergeGuildAvatar from "mergeGuildAvatar";

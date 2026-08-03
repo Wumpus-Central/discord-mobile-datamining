@@ -1,6 +1,3 @@
-// === Module 5640: SceneLoadingIndicator ===
-
-// Module 5640 (SceneLoadingIndicator)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

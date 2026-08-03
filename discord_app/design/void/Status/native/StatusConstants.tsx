@@ -1,6 +1,3 @@
-// === Module 1298: STATUS_PADDING ===
-
-// Module 1298 (STATUS_PADDING)
 const result = require("set").fileFinishedImporting("design/void/Status/native/StatusConstants.tsx");
 
 export const STATUS_PADDING = 3;

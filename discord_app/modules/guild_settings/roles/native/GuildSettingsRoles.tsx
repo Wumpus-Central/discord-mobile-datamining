@@ -1,6 +1,3 @@
-// === Module 16465: ConnectedGuildSettingsModalRoles ===
-
-// Module 16465 (ConnectedGuildSettingsModalRoles)
 import PressableBase from "PressableBase";
 import setRoleJustCreated from "setRoleJustCreated";
 import get_ActivityIndicator from "createTextStyle";

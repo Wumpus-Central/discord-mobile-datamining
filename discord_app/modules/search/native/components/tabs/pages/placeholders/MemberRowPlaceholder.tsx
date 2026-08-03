@@ -1,6 +1,3 @@
-// === Module 15539: MemberRowPlaceholderItem ===
-
-// Module 15539 (MemberRowPlaceholderItem)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

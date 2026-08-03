@@ -1,6 +1,3 @@
-// === Module 12889: getKrispModel ===
-
-// Module 12889 (getKrispModel)
 const result = require("set").fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");
 
 export const getKrispModel = function getKrispModel() {

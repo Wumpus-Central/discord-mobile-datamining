@@ -1,6 +1,3 @@
-// === Module 3905: ManaContext ===
-
-// Module 3905 (ManaContext)
 import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD";
 
 const result = require("useCheckboxA11yNative").fileFinishedImporting("../discord_common/js/packages/design/native.tsx");

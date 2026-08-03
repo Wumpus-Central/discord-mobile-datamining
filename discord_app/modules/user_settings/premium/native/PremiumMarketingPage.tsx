@@ -1,6 +1,3 @@
-// === Module 12514: PremiumMarketingPage ===
-
-// Module 12514 (PremiumMarketingPage)
 import Text from "Text";
 import MarketingComponentType from "MarketingComponentType";
 import get_ActivityIndicator from "module_4054";

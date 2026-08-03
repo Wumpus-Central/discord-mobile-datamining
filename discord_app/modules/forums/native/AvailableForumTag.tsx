@@ -1,6 +1,3 @@
-// === Module 9890: AvailableForumTag ===
-
-// Module 9890 (AvailableForumTag)
 import noop from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import { EMOJI_URL_BASE_SIZE } from "set";

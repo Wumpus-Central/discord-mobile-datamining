@@ -1,6 +1,3 @@
-// === Module 10076: GuildDirectoryCreateOrAddHeader ===
-
-// Module 10076 (GuildDirectoryCreateOrAddHeader)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "useRefValue";
 import get_ActivityIndicator from "Button";

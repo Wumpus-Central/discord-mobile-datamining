@@ -1,6 +1,3 @@
-// === Module 10514: getVideoQuestWatchCtaText ===
-
-// Module 10514 (getVideoQuestWatchCtaText)
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import initializeState from "initializeState";
 import _toPropertyKey from "_toPropertyKey";

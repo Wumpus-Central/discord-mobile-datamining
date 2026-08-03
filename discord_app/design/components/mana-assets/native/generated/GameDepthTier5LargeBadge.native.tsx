@@ -1,6 +1,3 @@
-// === Module 7075: GameDepthTier5LargeBadge ===
-
-// Module 7075 (GameDepthTier5LargeBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GameDepthTier5LargeBadge.native.tsx");

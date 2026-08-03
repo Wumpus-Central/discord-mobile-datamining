@@ -1,6 +1,3 @@
-// === Module 16781: importDefaultResult2 ===
-
-// Module 16781 (importDefaultResult2)
 import getUserAgnosticState from "getUserAgnosticState";
 import importDefaultResult from "fromServer";
 import importDefaultResult1 from "parseServerGuildSticker";

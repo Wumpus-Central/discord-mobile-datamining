@@ -1,6 +1,3 @@
-// === Module 3973: getDerivedStateFromError ===
-
-// Module 3973 (getDerivedStateFromError)
 import { Component } from "noop";
 
 class RiveErrorBoundary extends Component {

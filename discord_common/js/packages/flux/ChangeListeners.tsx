@@ -1,6 +1,3 @@
-// === Module 592: has ===
-
-// Module 592 (has)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/ChangeListeners.tsx");
 class ChangeListeners {
   constructor() {

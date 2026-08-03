@@ -1,6 +1,3 @@
-// === Module 11325: useSortedSectionCommands ===
-
-// Module 11325 (useSortedSectionCommands)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { CommandListSortOrder } from "CommandListSortOrder";

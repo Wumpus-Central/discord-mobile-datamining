@@ -1,6 +1,3 @@
-// === Module 13845: route ===
-
-// Module 13845 (route)
 import noop from "noop";
 import ME from "ME";
 import createToggle from "createToggle";

@@ -1,6 +1,3 @@
-// === Module 11107: AppealSignalRadioRow ===
-
-// Module 11107 (AppealSignalRadioRow)
 import "noop";
 import { View } from "set";
 import SafetyHubView from "SafetyHubView";

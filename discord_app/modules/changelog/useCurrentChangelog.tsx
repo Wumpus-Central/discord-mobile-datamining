@@ -1,6 +1,3 @@
-// === Module 7871: useChangelog ===
-
-// Module 7871 (useChangelog)
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";

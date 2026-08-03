@@ -1,6 +1,3 @@
-// === Module 8754: ProfileFrameUserPreview ===
-
-// Module 8754 (ProfileFrameUserPreview)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 9078: TvIcon ===
-
-// Module 9078 (TvIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

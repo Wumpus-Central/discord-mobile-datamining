@@ -1,6 +1,3 @@
-// === Module 9562: LongPressMessageActionSheet ===
-
-// Module 9562 (LongPressMessageActionSheet)
 import handleEdit from "handleEdit";
 import initialize from "initialize";
 import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod";

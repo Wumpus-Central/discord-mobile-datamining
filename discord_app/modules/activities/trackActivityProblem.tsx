@@ -1,6 +1,3 @@
-// === Module 16199: trackActivityProblem ===
-
-// Module 16199 (trackActivityProblem)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/trackActivityProblem.tsx");

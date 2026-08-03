@@ -1,6 +1,3 @@
-// === Module 8915: SecureFramesCodeGrid ===
-
-// Module 8915 (SecureFramesCodeGrid)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

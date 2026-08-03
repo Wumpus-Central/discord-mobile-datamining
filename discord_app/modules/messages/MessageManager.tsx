@@ -1,6 +1,3 @@
-// === Module 9913: fetchMessages ===
-
-// Module 9913 (fetchMessages)
 import _slicedToArray from "_slicedToArray";
 import getParticipants from "getParticipants";
 import _handleConnectionOpen from "_handleConnectionOpen";

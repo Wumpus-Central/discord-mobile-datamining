@@ -1,6 +1,3 @@
-// === Module 7483: SeverHubAbstractUI ===
-
-// Module 7483 (SeverHubAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/SeverHubAbstractUI.native.tsx");

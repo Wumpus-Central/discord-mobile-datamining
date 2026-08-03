@@ -1,6 +1,3 @@
-// === Module 13990: AuthorizedAppScreen ===
-
-// Module 13990 (AuthorizedAppScreen)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

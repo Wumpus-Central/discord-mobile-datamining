@@ -1,6 +1,3 @@
-// === Module 13019: OneTimeLoginModal ===
-
-// Module 13019 (OneTimeLoginModal)
 import closure_3 from "ME";
 import CircleErrorIcon from "CircleErrorIcon";
 import get_ActivityIndicator from "useAlertStore";

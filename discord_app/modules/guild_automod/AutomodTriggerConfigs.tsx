@@ -1,6 +1,3 @@
-// === Module 16400: AutomodTriggerType ===
-
-// Module 16400 (AutomodTriggerType)
 import noop from "noop";
 import AutomodEventType from "AutomodEventType";
 import set from "getSystemLocale";

@@ -1,6 +1,3 @@
-// === Module 12984: apexExperiment ===
-
-// Module 12984 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 let obj = { resetSilenceWarningOnDeviceChange: false, resetSilenceWarningAfterNMinutes: "ct", enableHardwareSilenceWarning: "Array" };

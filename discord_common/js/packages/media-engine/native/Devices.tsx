@@ -1,6 +1,3 @@
-// === Module 4360: sanitizeDevices ===
-
-// Module 4360 (sanitizeDevices)
 import AudioSubsystems from "AudioSubsystems";
 
 let c3;

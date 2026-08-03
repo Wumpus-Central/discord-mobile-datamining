@@ -1,6 +1,3 @@
-// === Module 13762: GuildProfileEmptyState ===
-
-// Module 13762 (GuildProfileEmptyState)
 import SvgComponent from "SvgComponent";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

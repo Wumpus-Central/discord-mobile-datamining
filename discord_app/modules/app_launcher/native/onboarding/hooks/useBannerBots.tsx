@@ -1,6 +1,3 @@
-// === Module 11254: useBannerBots ===
-
-// Module 11254 (useBannerBots)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import initialize from "initialize";

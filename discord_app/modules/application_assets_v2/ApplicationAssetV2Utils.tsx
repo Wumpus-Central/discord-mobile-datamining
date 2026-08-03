@@ -1,6 +1,3 @@
-// === Module 12182: getApplicationAssetUrl ===
-
-// Module 12182 (getApplicationAssetUrl)
 let result = require("set").fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 
 export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1, asset_id, width) {

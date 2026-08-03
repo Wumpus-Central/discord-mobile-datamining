@@ -1,6 +1,3 @@
-// === Module 8453: useOverlayTrackedGames ===
-
-// Module 8453 (useOverlayTrackedGames)
 const result = require("set").fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
 
 export function useOverlayTrackedGames() {

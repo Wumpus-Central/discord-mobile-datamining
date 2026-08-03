@@ -1,6 +1,3 @@
-// === Module 6152: _uploadMessageAttachments ===
-
-// Module 6152 (_uploadMessageAttachments)
 import closure_3 from "set";
 import initialize from "initialize";
 import set from "nativeEventEmitter";

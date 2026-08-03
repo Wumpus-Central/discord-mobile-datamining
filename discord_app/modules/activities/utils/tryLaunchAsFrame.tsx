@@ -1,6 +1,3 @@
-// === Module 10651: tryLaunchAsFrame ===
-
-// Module 10651 (tryLaunchAsFrame)
 import addApplication from "addApplication";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 7632: useIsGoogleWalletEnabled ===
-
-// Module 7632 (useIsGoogleWalletEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

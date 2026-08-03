@@ -1,6 +1,3 @@
-// === Module 13838: TwoFASetupScan ===
-
-// Module 13838 (TwoFASetupScan)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

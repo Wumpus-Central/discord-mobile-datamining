@@ -1,6 +1,3 @@
-// === Module 6143: set ===
-
-// Module 6143 (set)
 let result = require("set").fileFinishedImporting("utils/MemoizerUtils.tsx");
 
 export default {

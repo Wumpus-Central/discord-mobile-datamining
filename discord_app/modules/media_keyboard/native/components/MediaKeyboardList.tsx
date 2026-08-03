@@ -1,6 +1,3 @@
-// === Module 9696: NativeModules ===
-
-// Module 9696 (NativeModules)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "isActionPickSupported";
 import get_ActivityIndicator from "BottomSheetModal";

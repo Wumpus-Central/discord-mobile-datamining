@@ -1,6 +1,3 @@
-// === Module 14142: useYouBarHorizontalMargin ===
-
-// Module 14142 (useYouBarHorizontalMargin)
 import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
 
 let c3;

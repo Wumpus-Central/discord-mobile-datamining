@@ -1,6 +1,3 @@
-// === Module 5060: ? ===
-
-// Module 5060
 const require = arg1;
 const obj = {
   setEmojiLocale(locale) {

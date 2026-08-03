@@ -1,6 +1,3 @@
-// === Module 14279: pressable ===
-
-// Module 14279 (pressable)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";

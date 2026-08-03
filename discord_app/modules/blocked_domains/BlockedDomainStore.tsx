@@ -1,6 +1,3 @@
-// === Module 8205: isBlockedDomain ===
-
-// Module 8205 (isBlockedDomain)
 import { AnalyticEvents } from "ME";
 
 const prototype = function BlockedDomainStore() {

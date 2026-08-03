@@ -1,6 +1,3 @@
-// === Module 4291: destroy ===
-
-// Module 4291 (destroy)
 import _slicedToArray from "_slicedToArray";
 import Video from "Video";
 import DesktopSources from "DesktopSources";

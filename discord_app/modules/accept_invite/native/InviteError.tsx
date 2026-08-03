@@ -1,6 +1,3 @@
-// === Module 11837: InviteErrorBase ===
-
-// Module 11837 (InviteErrorBase)
 import "set";
 import get_ActivityIndicator from "GuildIconSizes";
 import ME from "ME";

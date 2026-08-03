@@ -1,6 +1,3 @@
-// === Module 10004: smartOutput ===
-
-// Module 10004 (smartOutput)
 const result = require("set").fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
 export const smartOutput = function smartOutput(node, output, state) {

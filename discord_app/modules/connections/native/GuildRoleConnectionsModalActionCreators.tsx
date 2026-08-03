@@ -1,6 +1,3 @@
-// === Module 10026: openGuildRoleConnectionsModal ===
-
-// Module 10026 (openGuildRoleConnectionsModal)
 const ROLE_CONNECTIONS_MODAL_KEY = "ROLE_CONNECTIONS_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModalActionCreators.tsx");
 

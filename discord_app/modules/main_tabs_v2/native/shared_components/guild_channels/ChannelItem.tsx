@@ -1,6 +1,3 @@
-// === Module 15522: LaunchpadChannelIcon ===
-
-// Module 15522 (LaunchpadChannelIcon)
 import "computeChannelName";
 import { View } from "FacepileGroupDMAvatar";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

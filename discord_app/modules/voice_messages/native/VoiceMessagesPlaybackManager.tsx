@@ -1,6 +1,3 @@
-// === Module 13615: _terminate ===
-
-// Module 13615 (_terminate)
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import handleConnectionOpen from "handleConnectionOpen";

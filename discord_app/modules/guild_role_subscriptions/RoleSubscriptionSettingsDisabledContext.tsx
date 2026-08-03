@@ -1,6 +1,3 @@
-// === Module 16587: useRoleSubscriptionSettingsDisabled ===
-
-// Module 16587 (useRoleSubscriptionSettingsDisabled)
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionSettingsDisabledContext.tsx");
 
 export { default } from "context";

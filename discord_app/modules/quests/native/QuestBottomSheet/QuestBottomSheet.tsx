@@ -1,6 +1,3 @@
-// === Module 14162: QuestBottomSheet ===
-
-// Module 14162 (QuestBottomSheet)
 import NonInlineConsoleConnection from "NonInlineConsoleConnection";
 import importDefaultResult from "getApplicationIdsByTaskTypes";
 import { useState } from "getApplicationIdsByTaskTypes";

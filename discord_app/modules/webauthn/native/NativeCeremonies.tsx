@@ -1,6 +1,3 @@
-// === Module 9206: _promptForRegisterCredential ===
-
-// Module 9206 (_promptForRegisterCredential)
 import set from "set";
 import { NativeModules } from "get ActivityIndicator";
 

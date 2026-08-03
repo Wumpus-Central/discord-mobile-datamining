@@ -1,6 +1,3 @@
-// === Module 11633: HeadphonesIcon ===
-
-// Module 11633 (HeadphonesIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

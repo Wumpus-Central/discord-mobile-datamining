@@ -1,6 +1,3 @@
-// === Module 7463: ServerIconEyespyExample ===
-
-// Module 7463 (ServerIconEyespyExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconEyespyExample.native.tsx");

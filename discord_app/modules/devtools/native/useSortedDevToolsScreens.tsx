@@ -1,6 +1,3 @@
-// === Module 13654: getSortedDevToolsScreens ===
-
-// Module 13654 (getSortedDevToolsScreens)
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
 

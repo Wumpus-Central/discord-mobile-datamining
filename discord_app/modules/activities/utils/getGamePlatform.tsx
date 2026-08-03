@@ -1,6 +1,3 @@
-// === Module 15594: getGamePlatform ===
-
-// Module 15594 (getGamePlatform)
 import ME from "ME";
 
 let c3;

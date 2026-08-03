@@ -1,6 +1,3 @@
-// === Module 13835: TwoFASetupLanding ===
-
-// Module 13835 (TwoFASetupLanding)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

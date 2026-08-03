@@ -1,6 +1,3 @@
-// === Module 6843: AppleIllocon ===
-
-// Module 6843 (AppleIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/AppleIllocon.native.tsx");

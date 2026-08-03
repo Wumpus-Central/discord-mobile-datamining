@@ -1,6 +1,3 @@
-// === Module 15291: ConnectionFineIcon ===
-
-// Module 15291 (ConnectionFineIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

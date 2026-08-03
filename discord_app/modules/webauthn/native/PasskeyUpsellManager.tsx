@@ -1,6 +1,3 @@
-// === Module 13776: handlePasskeyUpsellShow ===
-
-// Module 13776 (handlePasskeyUpsellShow)
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import hasFetchedCredentials from "hasFetchedCredentials";

@@ -1,6 +1,3 @@
-// === Module 9795: useGiftingPromotionDefaultSelectionV2 ===
-
-// Module 9795 (useGiftingPromotionDefaultSelectionV2)
 const result = require("set").fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx");
 
 export const useGiftingPromotionDefaultSelectionV2 = function useGiftingPromotionDefaultSelectionV2(claimableRewards, selectedGiftingPromotionReward) {

@@ -1,6 +1,3 @@
-// === Module 15302: NotificationCenterBannerImpl ===
-
-// Module 15302 (NotificationCenterBannerImpl)
 import _slicedToArray from "_slicedToArray";
 import noop from "DismissibleContent";
 import { View } from "apexExperiment";

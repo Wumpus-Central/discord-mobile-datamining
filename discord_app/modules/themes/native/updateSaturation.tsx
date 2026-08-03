@@ -1,6 +1,3 @@
-// === Module 13522: updateSaturation ===
-
-// Module 13522 (updateSaturation)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/themes/native/updateSaturation.tsx");

@@ -1,6 +1,3 @@
-// === Module 5736: getDeviceMetadata ===
-
-// Module 5736 (getDeviceMetadata)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleClearCaches from "handleClearCaches";
 import getHash from "getHash";

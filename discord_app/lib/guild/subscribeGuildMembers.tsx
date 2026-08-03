@@ -1,6 +1,3 @@
-// === Module 6074: subscribeGuildMembers ===
-
-// Module 6074 (subscribeGuildMembers)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { jsx } from "jsxProd";

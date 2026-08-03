@@ -1,6 +1,3 @@
-// === Module 16640: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
-
-// Module 16640 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

@@ -1,6 +1,3 @@
-// === Module 15813: useLaunchpadAnimatedStyles ===
-
-// Module 15813 (useLaunchpadAnimatedStyles)
 import { LAUNCH_PAD_SPRING_CONFIG } from "LAUNCH_PAD_SPRING_CONFIG";
 import set from "set";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 14607: BackdropCard ===
-
-// Module 14607 (BackdropCard)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

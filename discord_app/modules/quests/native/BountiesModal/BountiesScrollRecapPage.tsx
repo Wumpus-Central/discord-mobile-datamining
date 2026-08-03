@@ -1,6 +1,3 @@
-// === Module 14096: BountiesRecapOrbsBackground ===
-
-// Module 14096 (BountiesRecapOrbsBackground)
 import "noop";
 import get_ActivityIndicator from "Button";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

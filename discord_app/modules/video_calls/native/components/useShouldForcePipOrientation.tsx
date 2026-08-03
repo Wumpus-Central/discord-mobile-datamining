@@ -1,6 +1,3 @@
-// === Module 10535: useShouldForcePipOrientation ===
-
-// Module 10535 (useShouldForcePipOrientation)
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";

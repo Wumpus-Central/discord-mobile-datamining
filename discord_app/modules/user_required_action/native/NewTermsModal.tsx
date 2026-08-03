@@ -1,6 +1,3 @@
-// === Module 16371: handleTouch ===
-
-// Module 16371 (handleTouch)
 import closure_3 from "ME";
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";

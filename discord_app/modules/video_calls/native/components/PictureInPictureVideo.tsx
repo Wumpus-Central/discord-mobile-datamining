@@ -1,6 +1,3 @@
-// === Module 10553: areParticipantsEqual ===
-
-// Module 10553 (areParticipantsEqual)
 import registerAsset from "registerAsset";
 import importAllResult from "isWatchTogetherApplication";
 import get_ActivityIndicator from "apply";

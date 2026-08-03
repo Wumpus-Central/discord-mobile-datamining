@@ -1,6 +1,3 @@
-// === Module 5852: addEntitlement ===
-
-// Module 5852 (addEntitlement)
 import createFromServer from "createFromServer";
 import setLibraryApplications from "setLibraryApplications";
 import addSku from "addSku";

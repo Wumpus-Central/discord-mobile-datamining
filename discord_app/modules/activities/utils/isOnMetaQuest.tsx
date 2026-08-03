@@ -1,6 +1,3 @@
-// === Module 12022: isOnMetaQuest ===
-
-// Module 12022 (isOnMetaQuest)
 import { ActivityGamePlatforms } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/isOnMetaQuest.tsx");

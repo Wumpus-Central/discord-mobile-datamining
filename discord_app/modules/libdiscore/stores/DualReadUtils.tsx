@@ -1,6 +1,3 @@
-// === Module 1864: deepEqualImpl ===
-
-// Module 1864 (deepEqualImpl)
 import { AnalyticEvents } from "ME";
 
 function deepEqualImpl(getTime, getTime2, map, arg3) {

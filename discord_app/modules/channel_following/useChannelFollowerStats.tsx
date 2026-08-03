@@ -1,6 +1,3 @@
-// === Module 9892: useChannelFollowerStats ===
-
-// Module 9892 (useChannelFollowerStats)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getFollowerStatsForChannel from "getFollowerStatsForChannel";

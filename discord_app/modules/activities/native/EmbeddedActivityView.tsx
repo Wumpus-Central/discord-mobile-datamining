@@ -1,6 +1,3 @@
-// === Module 10671: useBaseActivityView ===
-
-// Module 10671 (useBaseActivityView)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "set";
 import get_ActivityIndicator from "getSafeArea";

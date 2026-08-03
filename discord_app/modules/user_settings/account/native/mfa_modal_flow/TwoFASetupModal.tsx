@@ -1,6 +1,3 @@
-// === Module 13832: TwoFAModalSetupSections ===
-
-// Module 13832 (TwoFAModalSetupSections)
 import NavigationStack from "NavigationStack";
 import { View } from "useInitialValue";
 import { TwoFAModalSetupSections } from "frozen";

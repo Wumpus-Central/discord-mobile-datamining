@@ -1,6 +1,3 @@
-// === Module 10817: coercePlatformTypeToConsoleType ===
-
-// Module 10817 (coercePlatformTypeToConsoleType)
 import { GameConsoleTypes } from "XBOX_URL_BASE";
 import { PlatformTypes } from "ME";
 

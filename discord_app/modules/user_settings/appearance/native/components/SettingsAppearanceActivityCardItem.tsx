@@ -1,6 +1,3 @@
-// === Module 14329: ActivityCardItem ===
-
-// Module 14329 (ActivityCardItem)
 import "noop";
 import get_ActivityIndicator from "set";
 import _getSystemLocale from "_getSystemLocale";

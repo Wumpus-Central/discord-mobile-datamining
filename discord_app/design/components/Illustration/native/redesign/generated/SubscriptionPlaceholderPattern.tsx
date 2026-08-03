@@ -1,6 +1,3 @@
-// === Module 12553: getSubscriptionPlaceholderPatternSource ===
-
-// Module 12553 (getSubscriptionPlaceholderPatternSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 5971: rebuild ===
-
-// Module 5971 (rebuild)
 import getEmojiToGroupId from "getEmojiToGroupId";
 import rebuild from "rebuild";
 import ensureGuildLoaded from "ensureGuildLoaded";

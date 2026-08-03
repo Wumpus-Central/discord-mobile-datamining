@@ -1,6 +1,3 @@
-// === Module 10496: ? ===
-
-// Module 10496
 import sendRequest from "sendRequest";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";

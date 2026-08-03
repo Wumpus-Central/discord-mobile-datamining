@@ -1,6 +1,3 @@
-// === Module 14462: NotificationPermissionSettingsHeader ===
-
-// Module 14462 (NotificationPermissionSettingsHeader)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

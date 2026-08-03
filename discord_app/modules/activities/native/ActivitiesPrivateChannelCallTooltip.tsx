@@ -1,6 +1,3 @@
-// === Module 11891: ActivitiesPrivateChannelCallTooltip ===
-
-// Module 11891 (ActivitiesPrivateChannelCallTooltip)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

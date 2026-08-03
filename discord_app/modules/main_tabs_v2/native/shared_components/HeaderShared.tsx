@@ -1,6 +1,3 @@
-// === Module 9127: GenericHeaderTitle ===
-
-// Module 9127 (GenericHeaderTitle)
 import importAllResult from "ChannelHeader";
 import get_ActivityIndicator from "shallowEqual";
 import { MIN_HEADER_HEIGHT } from "MIN_HEADER_HEIGHT";

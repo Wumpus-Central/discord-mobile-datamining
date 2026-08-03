@@ -1,6 +1,3 @@
-// === Module 5993: frozen ===
-
-// Module 5993 (frozen)
 const frozen = Object.freeze({
   getItem(arg0) {
     const Storage = require(595) /* Storage */.Storage;

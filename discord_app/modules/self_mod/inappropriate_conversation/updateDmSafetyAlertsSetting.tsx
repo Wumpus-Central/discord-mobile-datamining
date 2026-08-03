@@ -1,6 +1,3 @@
-// === Module 13885: updateDmSafetyAlertsSetting ===
-
-// Module 13885 (updateDmSafetyAlertsSetting)
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
 
 export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(arg0) {

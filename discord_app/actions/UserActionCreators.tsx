@@ -1,6 +1,3 @@
-// === Module 7989: _fetchProfile ===
-
-// Module 7989 (_fetchProfile)
 import timestamp from "timestamp";
 import createdAt from "createdAt";
 import mergeGuildAvatar from "mergeGuildAvatar";

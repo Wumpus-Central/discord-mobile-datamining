@@ -1,6 +1,3 @@
-// === Module 13931: ConnectGuardianCard ===
-
-// Module 13931 (ConnectGuardianCard)
 import Button from "Button";
 import { View } from "Text";
 import mergeGuildAvatar from "mergeGuildAvatar";

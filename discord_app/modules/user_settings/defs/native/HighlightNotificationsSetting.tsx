@@ -1,6 +1,3 @@
-// === Module 14500: useHighlightNotifications ===
-
-// Module 14500 (useHighlightNotifications)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import createToggle from "createToggle";
 

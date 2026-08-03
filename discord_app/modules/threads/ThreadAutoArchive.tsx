@@ -1,6 +1,3 @@
-// === Module 6188: getAutoArchiveOptions ===
-
-// Module 6188 (getAutoArchiveOptions)
 import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_3 } from "AbortCodes";
 
 function getAutoArchiveOptions() {

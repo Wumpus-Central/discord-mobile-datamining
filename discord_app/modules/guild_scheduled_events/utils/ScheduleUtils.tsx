@@ -1,6 +1,3 @@
-// === Module 8214: getRRule ===
-
-// Module 8214 (getRRule)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { RecurrenceOptions } from "RecurrenceOptions";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";

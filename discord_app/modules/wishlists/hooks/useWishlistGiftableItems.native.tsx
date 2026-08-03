@@ -1,6 +1,3 @@
-// === Module 8700: set ===
-
-// Module 8700 (set)
 import noop from "noop";
 import set from "set";
 

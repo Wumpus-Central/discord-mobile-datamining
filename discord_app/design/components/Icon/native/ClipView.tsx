@@ -1,6 +1,3 @@
-// === Module 7974: SolidCutout ===
-
-// Module 7974 (SolidCutout)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

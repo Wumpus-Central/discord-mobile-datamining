@@ -1,6 +1,3 @@
-// === Module 14289: volumeSlider ===
-
-// Module 14289 (volumeSlider)
 import createToggle from "createToggle";
 
 const volumeSlider = createToggle.createVolumeSlider({

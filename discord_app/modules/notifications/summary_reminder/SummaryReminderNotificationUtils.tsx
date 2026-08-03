@@ -1,6 +1,3 @@
-// === Module 14494: onSummaryReminderNotificationSettingsChanged ===
-
-// Module 14494 (onSummaryReminderNotificationSettingsChanged)
 import { NotificationSettingsUpdateType as closure_3 } from "AccountNotificationFlags";
 import { AnalyticEvents } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 11433: useChatInputFloatingWidth ===
-
-// Module 11433 (useChatInputFloatingWidth)
 import noop from "noop";
 import { CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG as closure_3 } from "TextAreaCta";
 

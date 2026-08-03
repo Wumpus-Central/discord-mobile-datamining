@@ -1,6 +1,3 @@
-// === Module 9799: PremiumGiftSuccess ===
-
-// Module 9799 (PremiumGiftSuccess)
 import set from "set";
 import { View } from "PremiumGiftDMSuccessBody";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";

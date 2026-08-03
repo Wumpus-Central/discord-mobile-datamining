@@ -1,6 +1,3 @@
-// === Module 13805: SafetyHubViolationsHeader ===
-
-// Module 13805 (SafetyHubViolationsHeader)
 import _slicedToArray from "_slicedToArray";
 import module_4399 from "module_4399";
 import get_ActivityIndicator from "useIsNewClassification";

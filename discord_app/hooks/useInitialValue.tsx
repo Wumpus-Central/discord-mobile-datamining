@@ -1,6 +1,3 @@
-// === Module 5507: useInitialValue ===
-
-// Module 5507 (useInitialValue)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("hooks/useInitialValue.tsx");

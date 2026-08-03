@@ -1,6 +1,3 @@
-// === Module 14597: UserSettingsDesignSystemToast ===
-
-// Module 14597 (UserSettingsDesignSystemToast)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

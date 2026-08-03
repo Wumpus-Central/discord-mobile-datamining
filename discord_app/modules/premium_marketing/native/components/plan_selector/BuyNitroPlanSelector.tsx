@@ -1,6 +1,3 @@
-// === Module 12452: BuyNitroPlanSelector ===
-
-// Module 12452 (BuyNitroPlanSelector)
 import "formatSingleCurrencyPrice";
 import { View } from "TableRadioRow";
 import updateProduct from "updateProduct";

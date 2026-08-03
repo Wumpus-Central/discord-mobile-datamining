@@ -1,6 +1,3 @@
-// === Module 9156: usePreviewDisabledGuild ===
-
-// Module 9156 (usePreviewDisabledGuild)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import get from "get";

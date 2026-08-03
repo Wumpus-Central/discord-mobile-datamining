@@ -1,6 +1,3 @@
-// === Module 13558: set ===
-
-// Module 13558 (set)
 import closure_3 from "items3";
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";

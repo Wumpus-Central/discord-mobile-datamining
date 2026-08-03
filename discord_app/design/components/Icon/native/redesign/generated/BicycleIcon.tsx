@@ -1,6 +1,3 @@
-// === Module 9448: BicycleIcon ===
-
-// Module 9448 (BicycleIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

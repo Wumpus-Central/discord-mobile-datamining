@@ -1,6 +1,3 @@
-// === Module 14867: ScreenRecordingActionSheet ===
-
-// Module 14867 (ScreenRecordingActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { useScreenRecordingStore } from "useScreenRecordingStore";

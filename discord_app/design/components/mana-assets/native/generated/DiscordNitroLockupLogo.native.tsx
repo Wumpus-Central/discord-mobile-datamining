@@ -1,6 +1,3 @@
-// === Module 6985: DiscordNitroLockupLogo ===
-
-// Module 6985 (DiscordNitroLockupLogo)
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

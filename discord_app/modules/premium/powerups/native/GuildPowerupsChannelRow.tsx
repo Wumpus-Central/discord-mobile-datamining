@@ -1,6 +1,3 @@
-// === Module 15203: GuildPowerupsChannelRowIndicator ===
-
-// Module 15203 (GuildPowerupsChannelRowIndicator)
 import BoostTier2Icon from "BoostTier2Icon";
 import { View } from "getSystemLocale";
 import jsxProd from "set";

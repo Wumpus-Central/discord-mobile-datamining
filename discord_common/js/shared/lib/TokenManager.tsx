@@ -1,6 +1,3 @@
-// === Module 707: setSecondaryToken ===
-
-// Module 707 (setSecondaryToken)
 import sum from "sum";
 
 let c3;

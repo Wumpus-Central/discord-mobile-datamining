@@ -1,6 +1,3 @@
-// === Module 11559: ? ===
-
-// Module 11559
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

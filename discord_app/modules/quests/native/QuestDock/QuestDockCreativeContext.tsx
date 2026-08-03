@@ -1,6 +1,3 @@
-// === Module 14223: getDeliveredQuest ===
-
-// Module 14223 (getDeliveredQuest)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

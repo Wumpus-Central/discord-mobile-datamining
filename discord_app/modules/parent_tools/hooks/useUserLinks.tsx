@@ -1,6 +1,3 @@
-// === Module 6258: useUserIdsForLinkStatus ===
-
-// Module 6258 (useUserIdsForLinkStatus)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";

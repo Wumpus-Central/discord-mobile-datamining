@@ -1,6 +1,3 @@
-// === Module 13974: FamilyCenterPendingLinkRow ===
-
-// Module 13974 (FamilyCenterPendingLinkRow)
 import "registerAsset";
 import { View } from "registerAsset";
 import { UserLinkStatus } from "items";

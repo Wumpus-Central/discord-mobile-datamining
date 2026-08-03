@@ -1,6 +1,3 @@
-// === Module 16673: getBackoffJitter ===
-
-// Module 16673 (getBackoffJitter)
 import updateImpressionCaches from "updateImpressionCaches";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import closure_5 from "set";

@@ -1,6 +1,3 @@
-// === Module 8029: computeAllowedForUser ===
-
-// Module 8029 (computeAllowedForUser)
 import { ChannelRecordBase } from "createChannelRecord";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";

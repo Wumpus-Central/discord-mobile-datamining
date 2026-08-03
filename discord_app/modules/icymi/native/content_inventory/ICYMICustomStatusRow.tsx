@@ -1,6 +1,3 @@
-// === Module 15403: UploadPlaceholder ===
-
-// Module 15403 (UploadPlaceholder)
 import SolidCutout from "SolidCutout";
 import ActivityEmoji from "ActivityEmoji";
 import { View } from "DISPLAY_NAME_STYLES_FONT_FAMILY_MAP";

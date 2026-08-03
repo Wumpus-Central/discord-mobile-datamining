@@ -1,6 +1,3 @@
-// === Module 8732: useRedeemVirtualCurrency ===
-
-// Module 8732 (useRedeemVirtualCurrency)
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 9820: useVirtualCurrencyBalanceAnimationData ===
-
-// Module 9820 (useVirtualCurrencyBalanceAnimationData)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

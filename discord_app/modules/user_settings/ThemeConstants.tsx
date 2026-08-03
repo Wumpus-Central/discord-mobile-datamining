@@ -1,6 +1,3 @@
-// === Module 1305: SystemThemeState ===
-
-// Module 1305 (SystemThemeState)
 import { ThemeTypes } from "ME";
 
 let obj = { DARK: "dark", LIGHT: "light", NO_PREFERENCE: "unknown" };

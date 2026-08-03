@@ -1,6 +1,3 @@
-// === Module 7684: ? ===
-
-// Module 7684
 import isFabric from "isFabric";
 
 if (isFabric.isFabric()) {

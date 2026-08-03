@@ -1,6 +1,3 @@
-// === Module 15488: SearchFilterPrefixRow ===
-
-// Module 15488 (SearchFilterPrefixRow)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 11927: useCanGiftProduct ===
-
-// Module 11927 (useCanGiftProduct)
 let result = require("getItemRecordsFromPurchases").fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
 export const useCanGiftProduct = function useCanGiftProduct(product) {

@@ -1,6 +1,3 @@
-// === Module 4409: useAgeVerificationRunner ===
-
-// Module 4409 (useAgeVerificationRunner)
 import fetchFingerprint from "fetchFingerprint";
 import _slicedToArray from "_slicedToArray";
 import dispatcher from "dispatcher";

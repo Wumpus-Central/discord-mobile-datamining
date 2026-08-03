@@ -1,6 +1,3 @@
-// === Module 16250: _openInteractionIframeModal ===
-
-// Module 16250 (_openInteractionIframeModal)
 import set from "set";
 import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "INTERACTION_IFRAME_MODAL_KEY";
 

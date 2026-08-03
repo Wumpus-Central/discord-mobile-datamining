@@ -1,6 +1,3 @@
-// === Module 7909: getAttachmentObscurityProps ===
-
-// Module 7909 (getAttachmentObscurityProps)
 import { MessageAttachmentFlags } from "ME";
 
 const result = require("getEligibleHarmTypesConfigsForContext").fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");

@@ -1,6 +1,3 @@
-// === Module 10046: GuildNSFW ===
-
-// Module 10046 (GuildNSFW)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

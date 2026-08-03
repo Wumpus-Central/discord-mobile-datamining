@@ -1,6 +1,3 @@
-// === Module 15428: useTrackRoleSubscriptionUpsellAnalytics ===
-
-// Module 15428 (useTrackRoleSubscriptionUpsellAnalytics)
 import noop from "noop";
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 import { AnalyticEvents } from "ME";

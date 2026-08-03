@@ -1,6 +1,3 @@
-// === Module 14923: _decodeEncodedUserRecord ===
-
-// Module 14923 (_decodeEncodedUserRecord)
 import _slicedToArray from "_slicedToArray";
 import asyncGeneratorStep from "asyncGeneratorStep";
 import createdAt from "createdAt";

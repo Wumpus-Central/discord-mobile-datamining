@@ -1,6 +1,3 @@
-// === Module 10224: PlusLargeIcon ===
-
-// Module 10224 (PlusLargeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 10924: ChatPlusIcon ===
-
-// Module 10924 (ChatPlusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

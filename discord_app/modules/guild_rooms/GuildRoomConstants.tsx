@@ -1,6 +1,3 @@
-// === Module 16220: getName ===
-
-// Module 16220 (getName)
 import { ytIYuY as IE3e0y } from "messagesProxy";
 import { ytIYuY as IE3e0y } from "messagesProxy";
 import { ytIYuY as IE3e0y } from "messagesProxy";

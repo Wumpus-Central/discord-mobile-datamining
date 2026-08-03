@@ -1,6 +1,3 @@
-// === Module 12870: PrivateChannelSubtitle ===
-
-// Module 12870 (PrivateChannelSubtitle)
 import "Button";
 import { View } from "getSystemLocale";
 import participantFromServer from "participantFromServer";

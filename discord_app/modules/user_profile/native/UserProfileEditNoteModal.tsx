@@ -1,6 +1,3 @@
-// === Module 12062: UserProfileEditNoteModal ===
-
-// Module 12062 (UserProfileEditNoteModal)
 import "noop";
 import { jsx } from "jsxProd";
 

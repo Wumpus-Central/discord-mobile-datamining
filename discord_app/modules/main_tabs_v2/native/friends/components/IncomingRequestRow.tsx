@@ -1,6 +1,3 @@
-// === Module 15622: IncomingRequestRow ===
-
-// Module 15622 (IncomingRequestRow)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import addApplication from "addApplication";

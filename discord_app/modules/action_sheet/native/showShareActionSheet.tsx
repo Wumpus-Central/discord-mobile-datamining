@@ -1,6 +1,3 @@
-// === Module 8200: showShareActionSheet ===
-
-// Module 8200 (showShareActionSheet)
 import PlatformTypes from "PlatformTypes";
 
 if (PlatformTypes.isAndroid()) {

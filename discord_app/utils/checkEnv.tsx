@@ -1,6 +1,3 @@
-// === Module 16: ? ===
-
-// Module 16
 if (null == window.GLOBAL_ENV) {
   const _window = window;
   window.GLOBAL_ENV = {};

@@ -1,6 +1,3 @@
-// === Module 11668: PX_16 ===
-
-// Module 11668 (PX_16)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 12766: handleConnectionOpen ===
-
-// Module 12766 (handleConnectionOpen)
 import getHash from "getHash";
 import initialize from "initialize";
 import { Store } from "initialize";

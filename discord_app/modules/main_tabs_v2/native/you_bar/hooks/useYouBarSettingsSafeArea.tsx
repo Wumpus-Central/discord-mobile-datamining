@@ -1,6 +1,3 @@
-// === Module 6563: useYouBarSettingsCustomHeaderPaddingTop ===
-
-// Module 6563 (useYouBarSettingsCustomHeaderPaddingTop)
 const result = require("PlatformTypes").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx");
 
 export const useYouBarSettingsCustomHeaderPaddingTop = function useYouBarSettingsCustomHeaderPaddingTop() {

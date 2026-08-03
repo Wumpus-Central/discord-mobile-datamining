@@ -1,6 +1,3 @@
-// === Module 11763: useWelcomeScreenEnabled ===
-
-// Module 11763 (useWelcomeScreenEnabled)
 import { isGuildTextChannelType } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

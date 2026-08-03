@@ -1,6 +1,3 @@
-// === Module 7980: ? ===
-
-// Module 7980
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

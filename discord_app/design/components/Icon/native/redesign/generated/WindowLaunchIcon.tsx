@@ -1,6 +1,3 @@
-// === Module 10195: WindowLaunchIcon ===
-
-// Module 10195 (WindowLaunchIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

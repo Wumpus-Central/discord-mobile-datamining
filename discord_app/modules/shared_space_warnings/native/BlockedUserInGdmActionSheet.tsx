@@ -1,6 +1,3 @@
-// === Module 12808: getUserCalloutRowText ===
-
-// Module 12808 (getUserCalloutRowText)
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "CircleCheckIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";

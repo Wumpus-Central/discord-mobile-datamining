@@ -1,6 +1,3 @@
-// === Module 14092: BountiesModalEndedCtaButtons ===
-
-// Module 14092 (BountiesModalEndedCtaButtons)
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 

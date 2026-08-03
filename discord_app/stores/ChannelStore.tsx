@@ -1,6 +1,3 @@
-// === Module 1372: ensureGuildLoaded ===
-
-// Module 1372 (ensureGuildLoaded)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import hasChannel from "hasChannel";

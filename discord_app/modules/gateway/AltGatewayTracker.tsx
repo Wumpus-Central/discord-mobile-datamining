@@ -1,6 +1,3 @@
-// === Module 12717: shouldUseAltGateway ===
-
-// Module 12717 (shouldUseAltGateway)
 let closure_1 = require("getCachedUseAltGateway")();
 const result = require("set").fileFinishedImporting("modules/gateway/AltGatewayTracker.tsx");
 class AltGatewayTracker {

@@ -1,6 +1,3 @@
-// === Module 15900: VoicePanelController ===
-
-// Module 15900 (VoicePanelController)
 import trackDeviceChanged from "trackDeviceChanged";
 import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE";
 import { AppState } from "ActivityPanelModes";

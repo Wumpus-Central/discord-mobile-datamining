@@ -1,6 +1,3 @@
-// === Module 7707: Arrow ===
-
-// Module 7707 (Arrow)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

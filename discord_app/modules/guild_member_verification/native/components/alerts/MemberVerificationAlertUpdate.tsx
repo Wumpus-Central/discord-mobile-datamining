@@ -1,6 +1,3 @@
-// === Module 9169: MemberVerificationAlertUpdate ===
-
-// Module 9169 (MemberVerificationAlertUpdate)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { DownloadLinks } from "ME";

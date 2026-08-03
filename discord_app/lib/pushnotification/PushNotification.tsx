@@ -1,6 +1,3 @@
-// === Module 10708: NativeModules ===
-
-// Module 10708 (NativeModules)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const NativeModules = get_ActivityIndicator.NativeModules;

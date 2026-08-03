@@ -1,6 +1,3 @@
-// === Module 10672: doesOrientationMatchLockState ===
-
-// Module 10672 (doesOrientationMatchLockState)
 import { OrientationLockState } from "items3";
 
 const result = require("set").fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");

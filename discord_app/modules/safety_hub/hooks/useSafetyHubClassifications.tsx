@@ -1,6 +1,3 @@
-// === Module 11091: useSafetyHubClassifications ===
-
-// Module 11091 (useSafetyHubClassifications)
 import noop from "noop";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
 import { ViolationType } from "SafetyHubView";

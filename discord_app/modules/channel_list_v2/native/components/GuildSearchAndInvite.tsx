@@ -1,6 +1,3 @@
-// === Module 11464: handleInviteDisabledPress ===
-
-// Module 11464 (handleInviteDisabledPress)
 import importAllResult from "SPRING_CONFIG";
 import { View } from "module_10065";
 import ensureGuildLoaded from "ensureGuildLoaded";

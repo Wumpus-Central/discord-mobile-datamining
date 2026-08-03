@@ -1,6 +1,3 @@
-// === Module 15836: ChannelSubtitle ===
-
-// Module 15836 (ChannelSubtitle)
 import "noop";
 import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";
 import { jsx } from "jsxProd";

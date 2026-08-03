@@ -1,6 +1,3 @@
-// === Module 13750: EditNameplateInner ===
-
-// Module 13750 (EditNameplateInner)
 import _slicedToArray from "_slicedToArray";
 import useFetchPurchases from "useFetchPurchases";
 import { View } from "getSystemLocale";

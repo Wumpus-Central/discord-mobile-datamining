@@ -1,6 +1,3 @@
-// === Module 5928: shouldRemoveSelfMention ===
-
-// Module 5928 (shouldRemoveSelfMention)
 import { MessageTypesSets } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/messages/shouldRemoveSelfMention.tsx");

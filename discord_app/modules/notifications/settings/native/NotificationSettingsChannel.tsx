@@ -1,6 +1,3 @@
-// === Module 10325: NotificationSettingsChannel ===
-
-// Module 10325 (NotificationSettingsChannel)
 import NotificationSettingsChannelPost from "NotificationSettingsChannelPost";
 import { View } from "NotificationSettingsMessageNotification";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

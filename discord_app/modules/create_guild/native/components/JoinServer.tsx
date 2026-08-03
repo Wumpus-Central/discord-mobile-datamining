@@ -1,6 +1,3 @@
-// === Module 11825: JoinServerContainer ===
-
-// Module 11825 (JoinServerContainer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";

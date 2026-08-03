@@ -1,6 +1,3 @@
-// === Module 9378: PremiumUpsellItem ===
-
-// Module 9378 (PremiumUpsellItem)
 import usePremiumUpsellConfig from "usePremiumUpsellConfig";
 import importAllResult from "AccessibilityAnnouncer";
 import get_ActivityIndicator from "registerAsset";

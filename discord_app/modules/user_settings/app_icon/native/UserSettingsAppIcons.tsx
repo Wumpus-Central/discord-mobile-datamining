@@ -1,6 +1,3 @@
-// === Module 14506: ? ===
-
-// Module 14506
 import items from "items";
 import { View } from "openPremiumModal";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 5657: getChannelIdForGuildTransition ===
-
-// Module 5657 (getChannelIdForGuildTransition)
 import shouldShowOnboarding from "shouldShowOnboarding";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

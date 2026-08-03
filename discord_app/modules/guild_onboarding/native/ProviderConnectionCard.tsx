@@ -1,6 +1,3 @@
-// === Module 5535: ProviderConnectionCard ===
-
-// Module 5535 (ProviderConnectionCard)
 import getPlatformUserUrl from "getPlatformUserUrl";
 import noop from "noop";
 import { AnalyticEvents } from "ME";

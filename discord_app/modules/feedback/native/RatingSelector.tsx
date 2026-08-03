@@ -1,6 +1,3 @@
-// === Module 9536: RatingSelector ===
-
-// Module 9536 (RatingSelector)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import FeedbackRating from "FeedbackRating";

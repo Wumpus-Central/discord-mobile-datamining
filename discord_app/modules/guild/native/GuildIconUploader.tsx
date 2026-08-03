@@ -1,6 +1,3 @@
-// === Module 10102: renderIcon ===
-
-// Module 10102 (renderIcon)
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
 import jsxProd from "jsxProd";

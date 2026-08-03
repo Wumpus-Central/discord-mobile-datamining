@@ -1,6 +1,3 @@
-// === Module 12250: getAppCrashSource ===
-
-// Module 12250 (getAppCrashSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

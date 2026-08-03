@@ -1,6 +1,3 @@
-// === Module 8939: onConnectToConsole ===
-
-// Module 8939 (onConnectToConsole)
 import noop from "noop";
 import ME from "ME";
 

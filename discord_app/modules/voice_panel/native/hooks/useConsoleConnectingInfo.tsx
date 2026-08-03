@@ -1,6 +1,3 @@
-// === Module 16017: useConsoleConnectingInfo ===
-
-// Module 16017 (useConsoleConnectingInfo)
 import set from "set";
 import handleUpdate from "handleUpdate";
 

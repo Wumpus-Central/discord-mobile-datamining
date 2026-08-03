@@ -1,6 +1,3 @@
-// === Module 15840: handleVoiceOrStageChannelConnectPress ===
-
-// Module 15840 (handleVoiceOrStageChannelConnectPress)
 import _getSystemLocale from "_getSystemLocale";
 import importAllResult from "transitionTo";
 import { View } from "shouldShowMembershipVerificationGate";

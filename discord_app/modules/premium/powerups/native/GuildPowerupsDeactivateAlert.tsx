@@ -1,6 +1,3 @@
-// === Module 11645: GuildPowerupsDeactivateAlert ===
-
-// Module 11645 (GuildPowerupsDeactivateAlert)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

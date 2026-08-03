@@ -1,6 +1,3 @@
-// === Module 8446: AnimatedRenderItem ===
-
-// Module 8446 (AnimatedRenderItem)
 import noop from "noop";
 import jsxProd from "jsxProd";
 import { createElement } from "noop";

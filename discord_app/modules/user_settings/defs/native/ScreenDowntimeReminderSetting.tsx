@@ -1,6 +1,3 @@
-// === Module 14495: toggle ===
-
-// Module 14495 (toggle)
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import createToggle from "createToggle";
 

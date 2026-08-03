@@ -1,6 +1,3 @@
-// === Module 16355: setVerifyTimezone ===
-
-// Module 16355 (setVerifyTimezone)
 import "initialize";
 
 let require = arg1;

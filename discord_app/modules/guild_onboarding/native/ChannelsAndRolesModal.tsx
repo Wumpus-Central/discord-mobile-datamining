@@ -1,6 +1,3 @@
-// === Module 10005: ChannelsAndRolesScreen ===
-
-// Module 10005 (ChannelsAndRolesScreen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

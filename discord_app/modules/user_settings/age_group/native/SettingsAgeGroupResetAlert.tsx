@@ -1,6 +1,3 @@
-// === Module 13824: SettingsAgeGroupResetAlert ===
-
-// Module 13824 (SettingsAgeGroupResetAlert)
 import presentAddedFriendToast from "presentAddedFriendToast";
 import jsxProd from "jsxProd";
 

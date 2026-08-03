@@ -1,6 +1,3 @@
-// === Module 11788: trackNUFStep ===
-
-// Module 11788 (trackNUFStep)
 import { AnalyticEvents } from "ME";
 
 let c3 = 0;

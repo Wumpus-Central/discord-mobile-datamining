@@ -1,6 +1,3 @@
-// === Module 7569: SwordAndStoneSpotIllustration ===
-
-// Module 7569 (SwordAndStoneSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/SwordAndStoneSpotIllustration.native.tsx");

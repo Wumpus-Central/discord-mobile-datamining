@@ -1,6 +1,3 @@
-// === Module 7730: getEmbedThemeColors ===
-
-// Module 7730 (getEmbedThemeColors)
 import noop from "noop";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 8320: getChannelA11yLabel ===
-
-// Module 8320 (getChannelA11yLabel)
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

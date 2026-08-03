@@ -1,6 +1,3 @@
-// === Module 12040: isActivityJoinableOnCurrentPlatform ===
-
-// Module 12040 (isActivityJoinableOnCurrentPlatform)
 import ME from "ME";
 
 let c3;

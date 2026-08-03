@@ -1,6 +1,3 @@
-// === Module 9276: useConversationsHeaderButton ===
-
-// Module 9276 (useConversationsHeaderButton)
 import set from "set";
 import noop from "noop";
 import removePendingListFetch from "removePendingListFetch";

@@ -1,6 +1,3 @@
-// === Module 12566: PremiumGroupEducationActionSheet ===
-
-// Module 12566 (PremiumGroupEducationActionSheet)
 import { View } from "get ActivityIndicator";
 import { HELP_CENTER_LINK } from "SubscriptionStatusTypes";
 import jsxProd from "jsxProd";

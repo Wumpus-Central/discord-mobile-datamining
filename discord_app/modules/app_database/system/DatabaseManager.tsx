@@ -1,6 +1,3 @@
-// === Module 1923: databaseName ===
-
-// Module 1923 (databaseName)
 import getUserId from "getUserId";
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";

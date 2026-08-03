@@ -1,6 +1,3 @@
-// === Module 16324: onPostConnectionOpen ===
-
-// Module 16324 (onPostConnectionOpen)
 import dropChannelIfEmpty from "dropChannelIfEmpty";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";

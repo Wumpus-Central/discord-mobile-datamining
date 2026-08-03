@@ -1,6 +1,3 @@
-// === Module 8335: useGuildEventRecurrences ===
-
-// Module 8335 (useGuildEventRecurrences)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import scheduledEventSort from "scheduledEventSort";

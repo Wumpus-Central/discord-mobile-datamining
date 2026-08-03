@@ -1,6 +1,3 @@
-// === Module 9426: _updateEmoji ===
-
-// Module 9426 (_updateEmoji)
 import closure_3 from "MAX_FAVORITES";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import _handleConnectionOpen from "_handleConnectionOpen";

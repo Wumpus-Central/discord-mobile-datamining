@@ -1,6 +1,3 @@
-// === Module 5134: UserNotificationSettings ===
-
-// Module 5134 (UserNotificationSettings)
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";

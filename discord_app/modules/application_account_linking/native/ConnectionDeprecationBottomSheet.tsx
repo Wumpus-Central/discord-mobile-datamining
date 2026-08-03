@@ -1,6 +1,3 @@
-// === Module 15790: ConnectionIcon ===
-
-// Module 15790 (ConnectionIcon)
 import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
 import { View } from "IncentivizedAccountLinkConfirmationBottomSheet";
 import addApplication from "addApplication";

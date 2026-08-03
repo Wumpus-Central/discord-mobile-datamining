@@ -1,6 +1,3 @@
-// === Module 13132: GuildActionSheetProgress ===
-
-// Module 13132 (GuildActionSheetProgress)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

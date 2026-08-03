@@ -1,6 +1,3 @@
-// === Module 14806: PremiumPerksList ===
-
-// Module 14806 (PremiumPerksList)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

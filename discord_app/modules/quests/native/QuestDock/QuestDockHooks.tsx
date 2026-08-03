@@ -1,6 +1,3 @@
-// === Module 14137: useQuestDockModeAnimatedReaction ===
-
-// Module 14137 (useQuestDockModeAnimatedReaction)
 import _slicedToArray from "_slicedToArray";
 import AdUserActionType from "AdUserActionType";
 import QuestDockMode from "QuestDockMode";

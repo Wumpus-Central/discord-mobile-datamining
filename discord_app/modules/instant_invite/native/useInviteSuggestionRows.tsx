@@ -1,6 +1,3 @@
-// === Module 12249: rows ===
-
-// Module 12249 (rows)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

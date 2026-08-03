@@ -1,6 +1,3 @@
-// === Module 10035: _putRoleConnectionsConfigurations ===
-
-// Module 10035 (_putRoleConnectionsConfigurations)
 import set from "set";
 import { Endpoints } from "ME";
 

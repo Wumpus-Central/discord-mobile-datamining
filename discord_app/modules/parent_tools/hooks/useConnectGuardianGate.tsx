@@ -1,6 +1,3 @@
-// === Module 16303: useConnectGuardianGate ===
-
-// Module 16303 (useConnectGuardianGate)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";

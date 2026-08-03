@@ -1,6 +1,3 @@
-// === Module 10307: Timestamp ===
-
-// Module 10307 (Timestamp)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

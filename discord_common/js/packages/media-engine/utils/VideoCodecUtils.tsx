@@ -1,6 +1,3 @@
-// === Module 4349: items ===
-
-// Module 4349 (items)
 import { ExperimentFlags } from "DesktopSources";
 
 let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];

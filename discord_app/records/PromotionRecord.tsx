@@ -1,6 +1,3 @@
-// === Module 6266: createFromServer ===
-
-// Module 6266 (createFromServer)
 import "toJS";
 
 const require = arg1;

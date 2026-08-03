@@ -1,6 +1,3 @@
-// === Module 8225: getGuildEventsForCurrentUser ===
-
-// Module 8225 (getGuildEventsForCurrentUser)
 import closure_2 from "set";
 import handleConnectionOpen from "handleConnectionOpen";
 import scheduledEventSort from "scheduledEventSort";

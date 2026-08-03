@@ -1,6 +1,3 @@
-// === Module 4076: handleEnd ===
-
-// Module 4076 (handleEnd)
 import fetchFingerprint from "fetchFingerprint";
 import GuildThemePreviewOrigin from "GuildThemePreviewOrigin";
 import { Store } from "initialize";

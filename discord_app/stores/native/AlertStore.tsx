@@ -1,6 +1,3 @@
-// === Module 9523: getAlert ===
-
-// Module 9523 (getAlert)
 import { Store } from "initialize";
 
 let c0 = null;

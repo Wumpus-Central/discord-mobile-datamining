@@ -1,6 +1,3 @@
-// === Module 12973: hasPerformanceForKrispFullband ===
-
-// Module 12973 (hasPerformanceForKrispFullband)
 const result = require("set").fileFinishedImporting("modules/device/hasPerformanceForKrispFullband.tsx");
 
 export default function hasPerformanceForKrispFullband() {

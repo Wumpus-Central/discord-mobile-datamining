@@ -1,6 +1,3 @@
-// === Module 10582: useStreamError ===
-
-// Module 10582 (useStreamError)
 import isAVErrorContextOfType from "isAVErrorContextOfType";
 
 const require = arg1;

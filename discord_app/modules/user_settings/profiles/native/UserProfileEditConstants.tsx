@@ -1,6 +1,3 @@
-// === Module 13709: UserProfileEditAutoFocusElement ===
-
-// Module 13709 (UserProfileEditAutoFocusElement)
 const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/UserProfileEditConstants.tsx");
 
 export const UserProfileEditAutoFocusElement = { AVATAR: "AVATAR", BIO: "BIO" };

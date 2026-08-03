@@ -1,6 +1,3 @@
-// === Module 6566: usePromotionMarketingComponent ===
-
-// Module 6566 (usePromotionMarketingComponent)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import emitChanges from "emitChanges";

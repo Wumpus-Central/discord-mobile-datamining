@@ -1,6 +1,3 @@
-// === Module 15514: SearchHistoryRemoveIcon ===
-
-// Module 15514 (SearchHistoryRemoveIcon)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import importAllResult from "GroupDMRow";
 import { View } from "MagnifyingGlassIcon";

@@ -1,6 +1,3 @@
-// === Module 13241: Badge ===
-
-// Module 13241 (Badge)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";

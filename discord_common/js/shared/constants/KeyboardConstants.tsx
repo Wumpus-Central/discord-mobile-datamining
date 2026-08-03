@@ -1,6 +1,3 @@
-// === Module 5765: items ===
-
-// Module 5765 (items)
 import set from "set";
 
 const items = [require("module_5766").Key.F6, "f6"];

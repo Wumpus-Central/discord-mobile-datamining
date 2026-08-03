@@ -1,6 +1,3 @@
-// === Module 14076: TranscriptOutlineIcon ===
-
-// Module 14076 (TranscriptOutlineIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

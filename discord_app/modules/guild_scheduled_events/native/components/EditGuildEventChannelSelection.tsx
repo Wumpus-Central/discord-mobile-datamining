@@ -1,6 +1,3 @@
-// === Module 8272: EditGuildEventChannelSelection ===
-
-// Module 8272 (EditGuildEventChannelSelection)
 import "Text";
 import { View } from "LocationIcon";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

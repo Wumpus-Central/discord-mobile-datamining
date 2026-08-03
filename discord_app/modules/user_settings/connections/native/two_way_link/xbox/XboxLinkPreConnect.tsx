@@ -1,6 +1,3 @@
-// === Module 8949: XboxLinkPreConnect ===
-
-// Module 8949 (XboxLinkPreConnect)
 import noop from "noop";
 import { XboxLinkModalScenes } from "XboxLinkModalScenes";
 import { PlatformTypes } from "ME";

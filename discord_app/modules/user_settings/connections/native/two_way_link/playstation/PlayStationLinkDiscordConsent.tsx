@@ -1,6 +1,3 @@
-// === Module 8982: PlayStationLinkDiscordConsent ===
-
-// Module 8982 (PlayStationLinkDiscordConsent)
 import noop from "noop";
 import { PlayStationLinkModalScenes as closure_3 } from "PlayStationLinkModalScenes";
 import { PlatformTypes } from "ME";

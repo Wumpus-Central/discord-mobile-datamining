@@ -1,6 +1,3 @@
-// === Module 14924: enforcing ===
-
-// Module 14924 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAuthenticationModule");

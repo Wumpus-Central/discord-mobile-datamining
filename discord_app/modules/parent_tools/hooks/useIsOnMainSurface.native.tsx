@@ -1,6 +1,3 @@
-// === Module 15846: getIsOnMainSurface ===
-
-// Module 15846 (getIsOnMainSurface)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import set from "getRootNavigationRef";

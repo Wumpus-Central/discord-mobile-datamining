@@ -1,6 +1,3 @@
-// === Module 5673: formatSingleCurrencyPrice ===
-
-// Module 5673 (formatSingleCurrencyPrice)
 import _getSystemLocale from "_getSystemLocale";
 import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
 import { SubscriptionIntervalTypes } from "GuildFeatures";

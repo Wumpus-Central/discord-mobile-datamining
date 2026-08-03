@@ -1,6 +1,3 @@
-// === Module 7577: TentSpotIllustration ===
-
-// Module 7577 (TentSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/TentSpotIllustration.native.tsx");

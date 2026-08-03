@@ -1,6 +1,3 @@
-// === Module 11735: ApplicationIconAndName ===
-
-// Module 11735 (ApplicationIconAndName)
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
 

@@ -1,6 +1,3 @@
-// === Module 5526: useAuthorizedAppsTokens ===
-
-// Module 5526 (useAuthorizedAppsTokens)
 import noop from "noop";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";

@@ -1,6 +1,3 @@
-// === Module 9553: closeActionSheet ===
-
-// Module 9553 (closeActionSheet)
 import _slicedToArray from "_slicedToArray";
 import BottomSheetModal from "BottomSheetModal";
 import { View } from "RedesignBottomSheetTitleHeaderBase";

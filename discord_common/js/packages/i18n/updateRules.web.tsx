@@ -1,6 +1,3 @@
-// === Module 16118: updateRules ===
-
-// Module 16118 (updateRules)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 4174: parseQuery ===
-
-// Module 4174 (parseQuery)
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
 import items from "items";

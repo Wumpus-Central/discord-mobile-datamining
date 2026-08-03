@@ -1,6 +1,3 @@
-// === Module 14893: useAuthFlowBackHandler ===
-
-// Module 14893 (useAuthFlowBackHandler)
 import noop from "noop";
 import { RegistrationTransitionActionTypes as closure_3 } from "RegistrationTransitionActionTypes";
 

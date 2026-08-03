@@ -1,6 +1,3 @@
-// === Module 12639: useGuildEligibleForGuildProducts ===
-
-// Module 12639 (useGuildEligibleForGuildProducts)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

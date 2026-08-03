@@ -1,6 +1,3 @@
-// === Module 11282: LearnMoreAboutAppsSection ===
-
-// Module 11282 (LearnMoreAboutAppsSection)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";

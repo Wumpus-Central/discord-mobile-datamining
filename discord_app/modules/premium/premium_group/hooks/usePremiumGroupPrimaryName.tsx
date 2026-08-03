@@ -1,6 +1,3 @@
-// === Module 12537: usePremiumGroupPrimaryName ===
-
-// Module 12537 (usePremiumGroupPrimaryName)
 const result = require("nameFromUser").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 
 export default function usePremiumGroupPrimaryName() {

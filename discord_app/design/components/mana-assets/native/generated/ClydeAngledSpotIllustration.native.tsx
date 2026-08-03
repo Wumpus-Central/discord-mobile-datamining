@@ -1,6 +1,3 @@
-// === Module 6931: ClydeAngledSpotIllustration ===
-
-// Module 6931 (ClydeAngledSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ClydeAngledSpotIllustration.native.tsx");

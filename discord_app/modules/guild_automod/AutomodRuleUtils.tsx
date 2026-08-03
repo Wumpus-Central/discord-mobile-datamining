@@ -1,6 +1,3 @@
-// === Module 16397: getNewAutomodRuleMockId ===
-
-// Module 16397 (getNewAutomodRuleMockId)
 import fetchFingerprint from "fetchFingerprint";
 import { getRuleCountByTriggerType } from "withEqualityFn";
 import AutomodEventType from "AutomodEventType";

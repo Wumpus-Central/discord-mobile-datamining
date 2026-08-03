@@ -1,6 +1,3 @@
-// === Module 12453: useBuyNitroPlanLabelRenderer ===
-
-// Module 12453 (useBuyNitroPlanLabelRenderer)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";

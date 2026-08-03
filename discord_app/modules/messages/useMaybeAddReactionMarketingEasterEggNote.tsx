@@ -1,6 +1,3 @@
-// === Module 9424: useMaybeAddReactionMarketingEasterEggNote ===
-
-// Module 9424 (useMaybeAddReactionMarketingEasterEggNote)
 const result = require("set").fileFinishedImporting("modules/messages/useMaybeAddReactionMarketingEasterEggNote.tsx");
 
 export default function useMaybeAddReactionMarketingEasterEggNote(arg0) {

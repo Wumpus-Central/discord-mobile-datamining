@@ -1,6 +1,3 @@
-// === Module 10695: useCurrentUserStageRoles ===
-
-// Module 10695 (useCurrentUserStageRoles)
 import fetchFingerprint from "fetchFingerprint";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 

@@ -1,6 +1,3 @@
-// === Module 9317: componentDidMount ===
-
-// Module 9317 (componentDidMount)
 import importAllResult from "apply";
 import get_ActivityIndicator from "computeScrollData";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

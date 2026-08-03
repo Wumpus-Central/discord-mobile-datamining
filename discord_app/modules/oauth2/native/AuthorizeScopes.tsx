@@ -1,6 +1,3 @@
-// === Module 9023: Scope ===
-
-// Module 9023 (Scope)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

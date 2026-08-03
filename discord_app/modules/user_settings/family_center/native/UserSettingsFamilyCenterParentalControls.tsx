@@ -1,6 +1,3 @@
-// === Module 13979: FamilyCenterParentalControlsSettings ===
-
-// Module 13979 (FamilyCenterParentalControlsSettings)
 import _slicedToArray from "_slicedToArray";
 import FamilyCenterParentalControlsDataAndPrivacy from "FamilyCenterParentalControlsDataAndPrivacy";
 import get_ActivityIndicator from "GenericHeaderTitle";

@@ -1,6 +1,3 @@
-// === Module 15627: SuggestedFriendsScreen ===
-
-// Module 15627 (SuggestedFriendsScreen)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

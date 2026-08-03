@@ -1,6 +1,3 @@
-// === Module 12688: PendingCancellationWarning ===
-
-// Module 12688 (PendingCancellationWarning)
 import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "Text";

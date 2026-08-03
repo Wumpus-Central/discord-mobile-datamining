@@ -1,6 +1,3 @@
-// === Module 12073: RibbonIcon ===
-
-// Module 12073 (RibbonIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

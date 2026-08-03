@@ -1,6 +1,3 @@
-// === Module 14441: onImageDescriptionSettingValueChange ===
-
-// Module 14441 (onImageDescriptionSettingValueChange)
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import createToggle from "createToggle";
 

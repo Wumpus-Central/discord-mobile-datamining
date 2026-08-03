@@ -1,6 +1,3 @@
-// === Module 4694: BookCheckIcon ===
-
-// Module 4694 (BookCheckIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

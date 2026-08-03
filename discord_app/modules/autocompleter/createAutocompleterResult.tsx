@@ -1,6 +1,3 @@
-// === Module 6175: HeaderRecord ===
-
-// Module 6175 (HeaderRecord)
 import HeaderRecord from "HeaderRecord";
 
 let c0;

@@ -1,6 +1,3 @@
-// === Module 15180: PX_8 ===
-
-// Module 15180 (PX_8)
 import closure_3 from "jsxProd";
 import { View } from "Text";
 import ME from "ME";

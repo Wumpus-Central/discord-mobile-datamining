@@ -1,6 +1,3 @@
-// === Module 9844: _handleDocumentSelection ===
-
-// Module 9844 (_handleDocumentSelection)
 import getSystemLocale from "getSystemLocale";
 import { AnalyticEvents } from "ME";
 

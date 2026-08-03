@@ -1,6 +1,3 @@
-// === Module 10239: InboxIcon ===
-
-// Module 10239 (InboxIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

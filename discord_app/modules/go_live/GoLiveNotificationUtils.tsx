@@ -1,6 +1,3 @@
-// === Module 14476: onGoLiveNotificationSettingsChanged ===
-
-// Module 14476 (onGoLiveNotificationSettingsChanged)
 import { AnalyticEvents } from "ME";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 

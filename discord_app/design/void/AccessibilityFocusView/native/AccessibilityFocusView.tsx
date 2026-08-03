@@ -1,6 +1,3 @@
-// === Module 13178: AccessibilityFocusView ===
-
-// Module 13178 (AccessibilityFocusView)
 import "noop";
 import { jsx } from "jsxProd";
 import set from "set";

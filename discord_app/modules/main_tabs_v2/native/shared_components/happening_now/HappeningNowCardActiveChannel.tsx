@@ -1,6 +1,3 @@
-// === Module 15104: ? ===
-
-// Module 15104
 import importAllResult from "getChannelIcon";
 import { View } from "computeChannelName";
 import truncateOldMessageData from "truncateOldMessageData";

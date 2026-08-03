@@ -1,6 +1,3 @@
-// === Module 6298: PaymentFlowStep ===
-
-// Module 6298 (PaymentFlowStep)
 import ME from "ME";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 9808: useAvatarDecorationPreviewSizes ===
-
-// Module 9808 (useAvatarDecorationPreviewSizes)
 let result = require("set").fileFinishedImporting("modules/collectibles/native/useAvatarDecorationPreviewSizes.tsx");
 
 export const useAvatarDecorationPreviewSizes = function useAvatarDecorationPreviewSizes() {

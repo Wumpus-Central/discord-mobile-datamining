@@ -1,6 +1,3 @@
-// === Module 15303: YouBarNavigatorScreens ===
-
-// Module 15303 (YouBarNavigatorScreens)
 import encodeProperties from "encodeProperties";
 import initialize from "initialize";
 import { View } from "ChannelListLayoutTypes";

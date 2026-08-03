@@ -1,6 +1,3 @@
-// === Module 9964: HeaderIcon ===
-
-// Module 9964 (HeaderIcon)
 import { View } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";

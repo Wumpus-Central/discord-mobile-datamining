@@ -1,6 +1,3 @@
-// === Module 13644: AccessibilityPreferencesContextProvider ===
-
-// Module 13644 (AccessibilityPreferencesContextProvider)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 6714: openStageChannelSettings ===
-
-// Module 6714 (openStageChannelSettings)
 import { setIsOnStartStageScreen } from "setIsOnStartStageScreen";
 import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH";
 

@@ -1,6 +1,3 @@
-// === Module 11550: set ===
-
-// Module 11550 (set)
 import set from "set";
 
 let set = new Set(["GB"]);

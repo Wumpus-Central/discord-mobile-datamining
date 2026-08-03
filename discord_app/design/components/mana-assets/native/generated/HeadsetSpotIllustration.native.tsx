@@ -1,6 +1,3 @@
-// === Module 7235: HeadsetSpotIllustration ===
-
-// Module 7235 (HeadsetSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/HeadsetSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 10763: canStreamWithSettings ===
-
-// Module 10763 (canStreamWithSettings)
 import RESOLUTION_720 from "RESOLUTION_720";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 14809: TestView ===
-
-// Module 14809 (TestView)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { ScrollView } from "NativePaymentContextProvider";

@@ -1,6 +1,3 @@
-// === Module 8781: UnsupportedFeatureModal ===
-
-// Module 8781 (UnsupportedFeatureModal)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

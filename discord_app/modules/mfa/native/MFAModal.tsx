@@ -1,6 +1,3 @@
-// === Module 14783: MFAModal ===
-
-// Module 14783 (MFAModal)
 import module_4399 from "module_4399";
 import set from "set";
 import get_ActivityIndicator from "NavigationStack";

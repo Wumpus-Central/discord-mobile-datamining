@@ -1,6 +1,3 @@
-// === Module 9710: MediaKeyboardEmptyState ===
-
-// Module 9710 (MediaKeyboardEmptyState)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { NativePermissionStatus } from "NativePermissionStatus";

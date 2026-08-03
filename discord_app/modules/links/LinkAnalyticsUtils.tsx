@@ -1,6 +1,3 @@
-// === Module 8209: SERVER_INVITE ===
-
-// Module 8209 (SERVER_INVITE)
 import { AnalyticEvents } from "ME";
 
 let closure_4 = { MESSAGE: "Discord Message Link", CHANNEL: "Discord Channel Link", SERVER_INVITE: "Discord Server Invite", GIFT: "Discord Gift Link", UNKNOWN: "Unknown", DISCOVERY: "Discord Discovery Link" };

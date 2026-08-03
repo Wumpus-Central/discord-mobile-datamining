@@ -1,6 +1,3 @@
-// === Module 13579: getInitialSubscriptionPayload ===
-
-// Module 13579 (getInitialSubscriptionPayload)
 import participantFromServer from "participantFromServer";
 import map from "map";
 import initializeState from "initializeState";

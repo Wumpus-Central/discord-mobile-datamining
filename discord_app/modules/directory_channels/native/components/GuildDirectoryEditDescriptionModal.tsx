@@ -1,6 +1,3 @@
-// === Module 10080: GuildDirectoryEditDescription ===
-
-// Module 10080 (GuildDirectoryEditDescription)
 import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT";
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

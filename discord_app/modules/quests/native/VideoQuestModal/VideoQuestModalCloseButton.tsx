@@ -1,6 +1,3 @@
-// === Module 14191: VideoQuestModalCloseButton ===
-
-// Module 14191 (VideoQuestModalCloseButton)
 import { jsx } from "jsxProd";
 
 const result = require("PressableBase").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");

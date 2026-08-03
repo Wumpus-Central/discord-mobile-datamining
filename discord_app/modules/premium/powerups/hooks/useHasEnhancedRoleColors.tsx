@@ -1,6 +1,3 @@
-// === Module 4632: useHasEnhancedRoleColors ===
-
-// Module 4632 (useHasEnhancedRoleColors)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

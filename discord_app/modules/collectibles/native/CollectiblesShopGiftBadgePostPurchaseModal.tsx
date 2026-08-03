@@ -1,6 +1,3 @@
-// === Module 11915: CollectiblesShopGiftBadgePostPurchaseModal ===
-
-// Module 11915 (CollectiblesShopGiftBadgePostPurchaseModal)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

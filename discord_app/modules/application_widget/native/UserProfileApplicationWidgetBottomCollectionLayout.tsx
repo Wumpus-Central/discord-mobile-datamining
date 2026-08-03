@@ -1,6 +1,3 @@
-// === Module 12174: CollectionItem ===
-
-// Module 12174 (CollectionItem)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8377: useUserProfileBannerHeight ===
-
-// Module 8377 (useUserProfileBannerHeight)
 import { BANNER_ASPECT_RATIO } from "ARBITRARY_LARGE_OFFSET";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");

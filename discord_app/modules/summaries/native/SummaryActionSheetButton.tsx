@@ -1,6 +1,3 @@
-// === Module 10949: SummaryActionSheetButton ===
-
-// Module 10949 (SummaryActionSheetButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

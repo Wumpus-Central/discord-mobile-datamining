@@ -1,6 +1,3 @@
-// === Module 9353: maybeFetchTopEmojisByGuild ===
-
-// Module 9353 (maybeFetchTopEmojisByGuild)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import initialize from "initialize";

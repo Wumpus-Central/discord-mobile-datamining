@@ -1,6 +1,3 @@
-// === Module 6086: getForumChannelSessionId ===
-
-// Module 6086 (getForumChannelSessionId)
 class ForumSessionAnalyticsManager {
 }
 ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(arg0) {

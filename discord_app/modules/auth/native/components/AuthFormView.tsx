@@ -1,6 +1,3 @@
-// === Module 9224: AuthFormView ===
-
-// Module 9224 (AuthFormView)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

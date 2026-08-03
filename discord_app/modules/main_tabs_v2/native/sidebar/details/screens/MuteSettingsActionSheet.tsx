@@ -1,6 +1,3 @@
-// === Module 10319: MuteSettings ===
-
-// Module 10319 (MuteSettings)
 import set from "set";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

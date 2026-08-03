@@ -1,6 +1,3 @@
-// === Module 15688: ChannelsFollowedIcon ===
-
-// Module 15688 (ChannelsFollowedIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

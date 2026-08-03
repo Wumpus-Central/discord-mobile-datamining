@@ -1,6 +1,3 @@
-// === Module 12912: apexExperiment ===
-
-// Module 12912 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 let obj = { showPTTJoinTooltip: false, showPTTIconIndicator: false, showPTTNoKeybindWarning: false, showPTTSpeakingIndicator: false };

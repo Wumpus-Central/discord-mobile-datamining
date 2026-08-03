@@ -1,6 +1,3 @@
-// === Module 8221: openGuildEventDetails ===
-
-// Module 8221 (openGuildEventDetails)
 import asyncRequireImpl from "asyncRequireImpl";
 import { EXPLICIT_END_EVENT_SHEET_KEY as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { GUILD_EVENT_INFO_ACTION_SHEET_KEY as closure_5 } from "CREATE_GUILD_EVENT_MODAL_KEY";

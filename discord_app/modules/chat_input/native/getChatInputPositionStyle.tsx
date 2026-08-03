@@ -1,6 +1,3 @@
-// === Module 11434: getChatInputPositionStyle ===
-
-// Module 11434 (getChatInputPositionStyle)
 let obj = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 obj.top = undefined;

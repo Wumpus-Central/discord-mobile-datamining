@@ -1,6 +1,3 @@
-// === Module 6781: UnknownGameIcon ===
-
-// Module 6781 (UnknownGameIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

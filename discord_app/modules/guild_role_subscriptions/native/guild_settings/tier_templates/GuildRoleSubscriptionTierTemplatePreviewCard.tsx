@@ -1,6 +1,3 @@
-// === Module 16646: ContentHeader ===
-
-// Module 16646 (ContentHeader)
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get_ActivityIndicator from "_getTemplates";
 import ME from "ME";

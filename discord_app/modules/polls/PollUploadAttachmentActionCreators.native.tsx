@@ -1,6 +1,3 @@
-// === Module 11392: _handlePollGifAttachmentAdd ===
-
-// Module 11392 (_handlePollGifAttachmentAdd)
 import openImagePickerUnhandled from "openImagePickerUnhandled";
 import { DraftType } from "handleChanged";
 import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER";

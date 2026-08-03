@@ -1,6 +1,3 @@
-// === Module 8008: ? ===
-
-// Module 8008
 import apply from "apply";
 
 const memoizeResult = apply.memoize(function buildPollResources(arg0) {

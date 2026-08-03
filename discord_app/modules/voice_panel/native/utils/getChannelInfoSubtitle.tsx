@@ -1,6 +1,3 @@
-// === Module 15960: getChannelInfoSubtitle ===
-
-// Module 15960 (getChannelInfoSubtitle)
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx");
 
 export default function getChannelInfoSubtitle(arg0, arg1, arg2) {

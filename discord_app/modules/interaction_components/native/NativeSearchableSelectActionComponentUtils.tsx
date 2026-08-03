@@ -1,6 +1,3 @@
-// === Module 7906: transformSearchableSelectOptions ===
-
-// Module 7906 (transformSearchableSelectOptions)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

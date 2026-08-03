@@ -1,6 +1,3 @@
-// === Module 6081: listKey ===
-
-// Module 6081 (listKey)
 import _slicedToArray from "_slicedToArray";
 import { ALL_CHANNEL_TYPES } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

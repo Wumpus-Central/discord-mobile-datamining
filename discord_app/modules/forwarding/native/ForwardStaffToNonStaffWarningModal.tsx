@@ -1,6 +1,3 @@
-// === Module 9912: ForwardStaffToNonStaffWarningModal ===
-
-// Module 9912 (ForwardStaffToNonStaffWarningModal)
 import jsxProd from "jsxProd";
 
 let c3;

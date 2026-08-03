@@ -1,6 +1,3 @@
-// === Module 12409: createSafetyPolicyNoticeEmbed ===
-
-// Module 12409 (createSafetyPolicyNoticeEmbed)
 import { Image } from "get ActivityIndicator";
 import { MessageEmbedTypes } from "ME";
 import { SafetyHubPolicyNoticeKeys } from "SafetyHubView";

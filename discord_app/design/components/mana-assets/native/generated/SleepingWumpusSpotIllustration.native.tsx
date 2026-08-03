@@ -1,6 +1,3 @@
-// === Module 7497: SleepingWumpusSpotIllustration ===
-
-// Module 7497 (SleepingWumpusSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/SleepingWumpusSpotIllustration.native.tsx");

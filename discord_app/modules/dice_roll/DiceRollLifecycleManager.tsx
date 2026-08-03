@@ -1,6 +1,3 @@
-// === Module 16180: finishRoll ===
-
-// Module 16180 (finishRoll)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import INITIAL_STATE from "INITIAL_STATE";

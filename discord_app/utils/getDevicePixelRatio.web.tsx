@@ -1,6 +1,3 @@
-// === Module 8467: getDevicePixelRatio ===
-
-// Module 8467 (getDevicePixelRatio)
 const result = require("set").fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");
 
 export default function getDevicePixelRatio() {

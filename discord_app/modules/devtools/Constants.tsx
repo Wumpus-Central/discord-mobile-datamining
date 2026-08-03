@@ -1,6 +1,3 @@
-// === Module 710: STORAGE_KEY_LOG_DISPATCHES ===
-
-// Module 710 (STORAGE_KEY_LOG_DISPATCHES)
 import unsafe_getRawColor from "unsafe_getRawColor";
 
 const result = 2 * unsafe_getRawColor.getRadii().xl;

@@ -1,6 +1,3 @@
-// === Module 3861: set ===
-
-// Module 3861 (set)
 import "prototype";
 import set from "getSystemLocale";
 

@@ -1,6 +1,3 @@
-// === Module 9227: BackgroundImage ===
-
-// Module 9227 (BackgroundImage)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

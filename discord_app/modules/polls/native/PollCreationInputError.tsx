@@ -1,6 +1,3 @@
-// === Module 11404: PollCreationInputError ===
-
-// Module 11404 (PollCreationInputError)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

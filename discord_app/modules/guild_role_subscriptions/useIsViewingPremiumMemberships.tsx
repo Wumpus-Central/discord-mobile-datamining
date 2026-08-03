@@ -1,6 +1,3 @@
-// === Module 11889: useIsViewingPremiumMemberships ===
-
-// Module 11889 (useIsViewingPremiumMemberships)
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";
 

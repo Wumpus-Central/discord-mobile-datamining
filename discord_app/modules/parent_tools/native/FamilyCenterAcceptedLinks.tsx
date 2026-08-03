@@ -1,6 +1,3 @@
-// === Module 13965: FamilyCenterAcceptedLinkRow ===
-
-// Module 13965 (FamilyCenterAcceptedLinkRow)
 import "registerAsset";
 import { View } from "asyncRequireImpl";
 import items from "items";

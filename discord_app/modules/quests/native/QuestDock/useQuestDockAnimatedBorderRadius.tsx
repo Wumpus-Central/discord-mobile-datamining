@@ -1,6 +1,3 @@
-// === Module 14225: useQuestDockAnimatedBorderRadius ===
-
-// Module 14225 (useQuestDockAnimatedBorderRadius)
 import noop from "noop";
 
 const require = arg1;

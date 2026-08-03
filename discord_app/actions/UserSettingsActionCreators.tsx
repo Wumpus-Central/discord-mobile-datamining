@@ -1,6 +1,3 @@
-// === Module 6209: saveGuildFolders ===
-
-// Module 6209 (saveGuildFolders)
 import closure_3 from "SystemThemeState";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import initialize from "initialize";

@@ -1,6 +1,3 @@
-// === Module 7790: createUserPremiumGuildSubscriptionSystemMessage ===
-
-// Module 7790 (createUserPremiumGuildSubscriptionSystemMessage)
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
 
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {

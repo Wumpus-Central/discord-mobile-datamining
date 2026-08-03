@@ -1,6 +1,3 @@
-// === Module 12304: openGuildProductLink ===
-
-// Module 12304 (openGuildProductLink)
 const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
 
 export const openGuildProductLink = function openGuildProductLink(closure_0, closure_1) {

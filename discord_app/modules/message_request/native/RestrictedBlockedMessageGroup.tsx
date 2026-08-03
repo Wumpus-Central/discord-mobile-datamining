@@ -1,6 +1,3 @@
-// === Module 15750: RestrictedBlockedMessageGroup ===
-
-// Module 15750 (RestrictedBlockedMessageGroup)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

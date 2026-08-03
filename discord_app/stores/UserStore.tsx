@@ -1,6 +1,3 @@
-// === Module 1874: mergeGuildAvatar ===
-
-// Module 1874 (mergeGuildAvatar)
 import setPremiumTypeActual from "setPremiumTypeActual";
 import createdAt from "createdAt";
 import fetchFingerprint from "fetchFingerprint";

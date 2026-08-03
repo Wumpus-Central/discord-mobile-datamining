@@ -1,6 +1,3 @@
-// === Module 11762: handleInviteData ===
-
-// Module 11762 (handleInviteData)
 import { Store } from "initialize";
 
 function handleInviteData(invite) {

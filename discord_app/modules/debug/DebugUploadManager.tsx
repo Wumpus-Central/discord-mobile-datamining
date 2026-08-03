@@ -1,6 +1,3 @@
-// === Module 10362: _uploadDebugLogFiles ===
-
-// Module 10362 (_uploadDebugLogFiles)
 import V6OrEarlierAPIError from "V6OrEarlierAPIError";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Endpoints } from "ME";

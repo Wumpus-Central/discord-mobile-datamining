@@ -1,6 +1,3 @@
-// === Module 8490: ? ===
-
-// Module 8490
 const result = require("GetButton").fileFinishedImporting("modules/game_profile/GameProfileActionCreators.native.tsx");
 
 export default {

@@ -1,6 +1,3 @@
-// === Module 10587: VoiceChannelEffectAnimationType ===
-
-// Module 10587 (VoiceChannelEffectAnimationType)
 const result = require("set").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsConstants.tsx");
 
 export const VoiceChannelEffectAnimationType = { PREMIUM: 0, [0]: "PREMIUM", BASIC: 1, [1]: "BASIC" };

@@ -1,6 +1,3 @@
-// === Module 5680: getOrbPriceFromPrices ===
-
-// Module 5680 (getOrbPriceFromPrices)
 import ME from "ME";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
 import { ConstraintReasonCode } from "ConstraintReasonCode";

@@ -1,6 +1,3 @@
-// === Module 11227: useActivityShelfItems ===
-
-// Module 11227 (useActivityShelfItems)
 import noop from "noop";
 import initialize from "initialize";
 

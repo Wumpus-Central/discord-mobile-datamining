@@ -1,6 +1,3 @@
-// === Module 717: _private ===
-
-// Module 717 (_private)
 import set from "set";
 
 let set = {

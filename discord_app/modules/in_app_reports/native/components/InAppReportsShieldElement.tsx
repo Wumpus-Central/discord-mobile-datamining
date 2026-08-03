@@ -1,6 +1,3 @@
-// === Module 7714: ShieldElement ===
-
-// Module 7714 (ShieldElement)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

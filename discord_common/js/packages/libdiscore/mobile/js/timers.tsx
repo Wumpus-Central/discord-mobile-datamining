@@ -1,6 +1,3 @@
-// === Module 1873: setTimeout ===
-
-// Module 1873 (setTimeout)
 function setTimeout(arg0, arg1) {
   let num = arg1;
   if (arg1 == null) {

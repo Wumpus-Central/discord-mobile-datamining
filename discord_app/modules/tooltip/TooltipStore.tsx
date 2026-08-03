@@ -1,6 +1,3 @@
-// === Module 10713: set ===
-
-// Module 10713 (set)
 import { StorageKeys } from "ME";
 import { Store } from "initialize";
 import set from "initialize";

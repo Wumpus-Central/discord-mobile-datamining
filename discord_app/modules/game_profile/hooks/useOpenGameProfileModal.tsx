@@ -1,6 +1,3 @@
-// === Module 8485: useOpenGameProfileModal ===
-
-// Module 8485 (useOpenGameProfileModal)
 const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
 
 export default function useOpenGameProfileModal(arg0) {

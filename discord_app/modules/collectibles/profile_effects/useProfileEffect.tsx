@@ -1,6 +1,3 @@
-// === Module 8070: useProfileEffect ===
-
-// Module 8070 (useProfileEffect)
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";

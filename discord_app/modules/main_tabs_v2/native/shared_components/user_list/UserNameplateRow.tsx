@@ -1,6 +1,3 @@
-// === Module 8757: UserNameplateRow ===
-
-// Module 8757 (UserNameplateRow)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

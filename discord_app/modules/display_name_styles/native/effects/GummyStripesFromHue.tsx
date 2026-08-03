@@ -1,6 +1,3 @@
-// === Module 14382: AnimatedStripe ===
-
-// Module 14382 (AnimatedStripe)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 15165: useGuildPowerupsCoachmark ===
-
-// Module 15165 (useGuildPowerupsCoachmark)
 import messagesProxy from "messagesProxy";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

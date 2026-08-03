@@ -1,6 +1,3 @@
-// === Module 7533: StreamingTier2SmallBadge ===
-
-// Module 7533 (StreamingTier2SmallBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/StreamingTier2SmallBadge.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 11137: jumpToReferencedMessage ===
-
-// Module 11137 (jumpToReferencedMessage)
 const result = require("set").fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
 
 export default function jumpToReferencedMessage(messageReference) {

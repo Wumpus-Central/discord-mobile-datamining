@@ -1,6 +1,3 @@
-// === Module 13847: renderContent ===
-
-// Module 13847 (renderContent)
 import jsxProd from "jsxProd";
 import { PureComponent } from "noop";
 import importAllResult from "noop";

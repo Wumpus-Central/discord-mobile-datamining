@@ -1,6 +1,3 @@
-// === Module 15393: items ===
-
-// Module 15393 (items)
 import module_8189 from "module_8189";
 import { View } from "Screenshot";
 import mergeGuildAvatar from "mergeGuildAvatar";

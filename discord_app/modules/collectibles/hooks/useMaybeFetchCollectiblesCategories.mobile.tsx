@@ -1,6 +1,3 @@
-// === Module 7963: useMaybeFetchCollectiblesCategories ===
-
-// Module 7963 (useMaybeFetchCollectiblesCategories)
 import getUserAgnosticState from "getUserAgnosticState";
 
 const require = arg1;

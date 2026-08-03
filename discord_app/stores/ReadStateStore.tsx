@@ -1,6 +1,3 @@
-// === Module 4205: generateOldThreadCutoff ===
-
-// Module 4205 (generateOldThreadCutoff)
 import getHash from "getHash";
 import ReadStateTypes from "ReadStateTypes";
 import participantFromServer from "participantFromServer";

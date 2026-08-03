@@ -1,6 +1,3 @@
-// === Module 13867: SensitiveContentFiltersTeenNotice ===
-
-// Module 13867 (SensitiveContentFiltersTeenNotice)
 import "noop";
 import { SafetySettingsNoticeType } from "SafetyToastType";
 import { jsx } from "jsxProd";

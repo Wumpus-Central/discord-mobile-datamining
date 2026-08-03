@@ -1,6 +1,3 @@
-// === Module 6654: SparklesIcon ===
-
-// Module 6654 (SparklesIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

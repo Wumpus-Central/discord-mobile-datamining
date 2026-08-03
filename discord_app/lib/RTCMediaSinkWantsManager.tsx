@@ -1,6 +1,3 @@
-// === Module 12881: getDefaultWants ===
-
-// Module 12881 (getDefaultWants)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import { VideoToggleState } from "ME";

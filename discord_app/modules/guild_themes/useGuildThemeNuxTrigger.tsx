@@ -1,6 +1,3 @@
-// === Module 15159: useGuildThemeNuxTrigger ===
-
-// Module 15159 (useGuildThemeNuxTrigger)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { DismissibleContentGroupName as closure_4 } from "ContentDismissActionType";

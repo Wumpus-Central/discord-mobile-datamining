@@ -1,6 +1,3 @@
-// === Module 15389: MediaMosaicVideo ===
-
-// Module 15389 (MediaMosaicVideo)
 import apply from "apply";
 import preload from "preload";
 import get_ActivityIndicator from "CONFIG_NEVER_ANIMATE_TIMING";

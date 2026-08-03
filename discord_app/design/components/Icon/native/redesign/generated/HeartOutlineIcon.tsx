@@ -1,6 +1,3 @@
-// === Module 8717: HeartOutlineIcon ===
-
-// Module 8717 (HeartOutlineIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

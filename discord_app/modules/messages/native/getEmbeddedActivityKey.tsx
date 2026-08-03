@@ -1,6 +1,3 @@
-// === Module 9319: getEmbeddedActivityKey ===
-
-// Module 9319 (getEmbeddedActivityKey)
 const result = require("set").fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");
 
 export default function getEmbeddedActivityKey(location) {

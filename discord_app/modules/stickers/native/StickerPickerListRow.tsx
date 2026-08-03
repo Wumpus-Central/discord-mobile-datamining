@@ -1,6 +1,3 @@
-// === Module 9646: STICKER_SIZE ===
-
-// Module 9646 (STICKER_SIZE)
 import _slicedToArray from "_slicedToArray";
 import "PressableBase";
 import { View } from "__INTERNAL_VIEW_CONFIG";

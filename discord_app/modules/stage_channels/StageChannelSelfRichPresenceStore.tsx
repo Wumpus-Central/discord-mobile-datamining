@@ -1,6 +1,3 @@
-// === Module 10487: handleUpdateActivity ===
-
-// Module 10487 (handleUpdateActivity)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import createRTCConnection from "createRTCConnection";

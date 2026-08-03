@@ -1,6 +1,3 @@
-// === Module 10226: _addChannelToFavorites ===
-
-// Module 10226 (_addChannelToFavorites)
 import _slicedToArray from "_slicedToArray";
 import StarIcon from "StarIcon";
 import { jsx } from "jsxProd";

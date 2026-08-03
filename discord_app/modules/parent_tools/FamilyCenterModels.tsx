@@ -1,6 +1,3 @@
-// === Module 1895: frozen ===
-
-// Module 1895 (frozen)
 import "toJS";
 
 const require = arg1;

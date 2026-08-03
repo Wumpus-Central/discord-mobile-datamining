@@ -1,6 +1,3 @@
-// === Module 16008: VoicePanelPIP ===
-
-// Module 16008 (VoicePanelPIP)
 import wrapChildrenDefault from "wrapChildrenDefault";
 import importAllResult from "triggerIOSHaptic";
 import get_ActivityIndicator from "Directions";

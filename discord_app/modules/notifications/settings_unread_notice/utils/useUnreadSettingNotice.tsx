@@ -1,6 +1,3 @@
-// === Module 10468: useUnreadSettingNotice ===
-
-// Module 10468 (useUnreadSettingNotice)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING as closure_5 } from "createChannelRecord";

@@ -1,6 +1,3 @@
-// === Module 6202: openPremiumUpsellActionSheet ===
-
-// Module 6202 (openPremiumUpsellActionSheet)
 const PremiumUpsellActionSheetKey = "PremiumUpsellActionSheetKey";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx");
 

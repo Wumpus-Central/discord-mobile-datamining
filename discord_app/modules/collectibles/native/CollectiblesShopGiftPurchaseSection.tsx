@@ -1,6 +1,3 @@
-// === Module 11901: CollectiblesShopGiftPurchaseSection ===
-
-// Module 11901 (CollectiblesShopGiftPurchaseSection)
 import context from "context";
 import isPremiumGiftingSupported from "isPremiumGiftingSupported";
 import dispatcher from "dispatcher";

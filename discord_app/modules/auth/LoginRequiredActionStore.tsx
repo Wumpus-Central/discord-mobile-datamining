@@ -1,6 +1,3 @@
-// === Module 1365: handleUpdateUser ===
-
-// Module 1365 (handleUpdateUser)
 import { PersistedStore } from "initialize";
 
 function handleUpdateUser(user) {

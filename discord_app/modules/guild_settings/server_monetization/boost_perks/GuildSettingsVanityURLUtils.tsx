@@ -1,6 +1,3 @@
-// === Module 16380: getErrorMessageFromErrorCode ===
-
-// Module 16380 (getErrorMessageFromErrorCode)
 import ME from "ME";
 
 let c3;

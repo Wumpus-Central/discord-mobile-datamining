@@ -1,6 +1,3 @@
-// === Module 12665: ProgressBarMarkerInnerContent ===
-
-// Module 12665 (ProgressBarMarkerInnerContent)
 import noop from "noop";
 import get_ActivityIndicator from "getGuildTierFromGuild";
 import { BoostedGuildTiers } from "ME";

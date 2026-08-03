@@ -1,6 +1,3 @@
-// === Module 10996: BundleUpdaterManager ===
-
-// Module 10996 (BundleUpdaterManager)
 import resolveAssetSource from "resolveAssetSource";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";

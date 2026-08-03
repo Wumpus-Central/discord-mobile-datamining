@@ -1,6 +1,3 @@
-// === Module 9008: Label ===
-
-// Module 9008 (Label)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

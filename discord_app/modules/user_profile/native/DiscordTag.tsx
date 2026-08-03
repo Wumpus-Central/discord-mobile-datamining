@@ -1,6 +1,3 @@
-// === Module 9465: DiscordTag ===
-
-// Module 9465 (DiscordTag)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

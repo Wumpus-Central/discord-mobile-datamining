@@ -1,6 +1,3 @@
-// === Module 15173: isFavoritesSection ===
-
-// Module 15173 (isFavoritesSection)
 import { AnalyticEvents } from "ME";
 
 const result = require("collectGuildAnalyticsMetadata").fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");

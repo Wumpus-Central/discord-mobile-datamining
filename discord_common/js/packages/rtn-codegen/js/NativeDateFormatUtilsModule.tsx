@@ -1,6 +1,3 @@
-// === Module 3881: enforcing ===
-
-// Module 3881 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeDateFormatUtilsModule");

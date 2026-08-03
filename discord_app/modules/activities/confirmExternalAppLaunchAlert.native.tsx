@@ -1,6 +1,3 @@
-// === Module 10666: ConfirmActivityGateContent ===
-
-// Module 10666 (ConfirmActivityGateContent)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PRIVATE_APPS_HELP_ARTICLE } from "items3";

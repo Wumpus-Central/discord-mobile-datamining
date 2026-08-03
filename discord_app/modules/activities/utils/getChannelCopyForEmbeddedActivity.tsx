@@ -1,6 +1,3 @@
-// === Module 9087: getChannelCopyForEmbeddedActivity ===
-
-// Module 9087 (getChannelCopyForEmbeddedActivity)
 const result = require("set").fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
 
 export default function getChannelCopyForEmbeddedActivity(arg0) {

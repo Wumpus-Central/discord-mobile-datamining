@@ -1,6 +1,3 @@
-// === Module 14909: getWumpTrashSource ===
-
-// Module 14909 (getWumpTrashSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

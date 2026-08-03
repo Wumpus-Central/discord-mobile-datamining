@@ -1,6 +1,3 @@
-// === Module 6080: patchThread ===
-
-// Module 6080 (patchThread)
 import listKey from "listKey";
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";

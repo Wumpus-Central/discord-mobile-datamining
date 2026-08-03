@@ -1,6 +1,3 @@
-// === Module 14482: onFriendOnlineNotificationSettingsChanged ===
-
-// Module 14482 (onFriendOnlineNotificationSettingsChanged)
 import { NotificationSettingsUpdateType as closure_3 } from "AccountNotificationFlags";
 import { AnalyticEvents } from "ME";
 

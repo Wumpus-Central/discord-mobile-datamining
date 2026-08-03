@@ -1,6 +1,3 @@
-// === Module 14288: volumeSlider ===
-
-// Module 14288 (volumeSlider)
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

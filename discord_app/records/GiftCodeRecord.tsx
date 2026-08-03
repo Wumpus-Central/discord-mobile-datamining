@@ -1,6 +1,3 @@
-// === Module 8037: frozen ===
-
-// Module 8037 (frozen)
 import "toJS";
 import createFromServer from "createFromServer";
 import closure_4 from "createFromServer";

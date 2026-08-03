@@ -1,6 +1,3 @@
-// === Module 15527: SearchListContentAuthor ===
-
-// Module 15527 (SearchListContentAuthor)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

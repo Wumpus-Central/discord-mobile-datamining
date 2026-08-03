@@ -1,6 +1,3 @@
-// === Module 4091: createFromServer ===
-
-// Module 4091 (createFromServer)
 import "toJS";
 
 let GuildBoostSlotRecord;

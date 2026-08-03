@@ -1,6 +1,3 @@
-// === Module 15152: useIsGuildThemePerkEnabled ===
-
-// Module 15152 (useIsGuildThemePerkEnabled)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { GuildFeatures } from "ME";

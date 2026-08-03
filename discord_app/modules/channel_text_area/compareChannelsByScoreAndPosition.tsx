@@ -1,6 +1,3 @@
-// === Module 12651: compareChannelsByScoreAndPosition ===
-
-// Module 12651 (compareChannelsByScoreAndPosition)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelTypes } from "ME";
 

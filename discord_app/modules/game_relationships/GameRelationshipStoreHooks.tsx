@@ -1,6 +1,3 @@
-// === Module 12068: useGameRelationshipsByType ===
-
-// Module 12068 (useGameRelationshipsByType)
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import { RelationshipTypes } from "ME";

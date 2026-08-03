@@ -1,6 +1,3 @@
-// === Module 8927: handleRelationshipAddError ===
-
-// Module 8927 (handleRelationshipAddError)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 3838: getEmojiUnavailableReason ===
-
-// Module 3838 (getEmojiUnavailableReason)
 import closure_3 from "set";
 import createChannelRecord from "createChannelRecord";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

@@ -1,6 +1,3 @@
-// === Module 15933: useSelfHasVideo ===
-
-// Module 15933 (useSelfHasVideo)
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

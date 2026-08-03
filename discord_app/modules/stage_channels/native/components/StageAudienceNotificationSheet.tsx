@@ -1,6 +1,3 @@
-// === Module 7636: handleDismiss ===
-
-// Module 7636 (handleDismiss)
 import "registerAsset";
 import { View } from "registerAsset";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";

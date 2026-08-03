@@ -1,6 +1,3 @@
-// === Module 1934: initialize ===
-
-// Module 1934 (initialize)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildSettingsSections } from "ME";

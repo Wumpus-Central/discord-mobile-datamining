@@ -1,6 +1,3 @@
-// === Module 4871: filterPlayingActivities ===
-
-// Module 4871 (filterPlayingActivities)
 import upsertAccount from "upsertAccount";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import gameFromServer from "gameFromServer";

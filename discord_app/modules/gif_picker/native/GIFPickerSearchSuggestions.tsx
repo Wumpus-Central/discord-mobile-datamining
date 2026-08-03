@@ -1,6 +1,3 @@
-// === Module 9617: ? ===
-
-// Module 9617
 import { View } from "get ActivityIndicator";
 import getFormatFromUrl from "getFormatFromUrl";
 import jsxProd from "jsxProd";

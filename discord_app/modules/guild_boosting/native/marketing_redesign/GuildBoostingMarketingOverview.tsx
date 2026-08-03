@@ -1,6 +1,3 @@
-// === Module 12655: GuildBoostingMarketingOverview ===
-
-// Module 12655 (GuildBoostingMarketingOverview)
 import _slicedToArray from "_slicedToArray";
 import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta";
 import { ScrollView } from "fetchSubscriptionPlansForSKU";

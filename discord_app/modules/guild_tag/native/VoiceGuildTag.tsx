@@ -1,6 +1,3 @@
-// === Module 15133: VoiceGuildTagChiplet ===
-
-// Module 15133 (VoiceGuildTagChiplet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

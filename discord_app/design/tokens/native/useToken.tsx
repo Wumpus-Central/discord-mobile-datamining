@@ -1,6 +1,3 @@
-// === Module 3897: map ===
-
-// Module 3897 (map)
 const require = arg1;
 const map = new Map();
 const keys = Object.keys(require("Themes").colors);

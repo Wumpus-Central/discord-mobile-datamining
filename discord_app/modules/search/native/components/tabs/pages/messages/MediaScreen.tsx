@@ -1,6 +1,3 @@
-// === Module 15549: ? ===
-
-// Module 15549
 import importAllResult from "BaseMessagesScreen";
 import handleReaction from "handleReaction";
 import prototype from "prototype";

@@ -1,6 +1,3 @@
-// === Module 11848: ? ===
-
-// Module 11848
 import sendRequest from "sendRequest";
 import { Endpoints } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 12324: MediaModalOverlayHeader ===
-
-// Module 12324 (MediaModalOverlayHeader)
 import "MoreVerticalIcon";
 import get_ActivityIndicator from "ContextMenu";
 import jsxProd from "set";

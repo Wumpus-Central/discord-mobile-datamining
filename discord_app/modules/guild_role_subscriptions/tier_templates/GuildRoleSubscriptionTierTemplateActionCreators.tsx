@@ -1,6 +1,3 @@
-// === Module 16652: _getTemplates ===
-
-// Module 16652 (_getTemplates)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

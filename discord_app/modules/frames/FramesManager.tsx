@@ -1,6 +1,3 @@
-// === Module 10634: prototype ===
-
-// Module 10634 (prototype)
 import map from "map";
 import ME from "ME";
 import "initialize";

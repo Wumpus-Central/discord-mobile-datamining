@@ -1,6 +1,3 @@
-// === Module 15271: RemoveMultiAccountUserButton ===
-
-// Module 15271 (RemoveMultiAccountUserButton)
 import DragIcon from "DragIcon";
 import initialize from "initialize";
 import importAllResult from "validateMultiAccountTokens";

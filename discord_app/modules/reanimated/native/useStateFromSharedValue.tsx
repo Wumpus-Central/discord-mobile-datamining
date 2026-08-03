@@ -1,6 +1,3 @@
-// === Module 8122: map ===
-
-// Module 8122 (map)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

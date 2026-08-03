@@ -1,6 +1,3 @@
-// === Module 10683: EmbeddedActivityBackgroundImageWithOverlay ===
-
-// Module 10683 (EmbeddedActivityBackgroundImageWithOverlay)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

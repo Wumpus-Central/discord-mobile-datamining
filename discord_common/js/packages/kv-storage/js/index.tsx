@@ -1,6 +1,3 @@
-// === Module 1908: ? ===
-
-// Module 1908
 import set from "set";
 import set from "prefix";
 

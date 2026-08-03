@@ -1,6 +1,3 @@
-// === Module 11809: _startContactSyncForDiscoverability ===
-
-// Module 11809 (_startContactSyncForDiscoverability)
 import ME from "ME";
 import ContactSyncModes from "ContactSyncModes";
 import set from "set";

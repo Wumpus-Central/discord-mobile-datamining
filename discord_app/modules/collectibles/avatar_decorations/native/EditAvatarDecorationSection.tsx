@@ -1,6 +1,3 @@
-// === Module 7966: memoResult1 ===
-
-// Module 7966 (memoResult1)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { isAvatarDecorationRecord } from "fromServer";

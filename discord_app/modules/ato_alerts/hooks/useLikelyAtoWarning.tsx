@@ -1,6 +1,3 @@
-// === Module 10450: useLikelyAtoWarning ===
-
-// Module 10450 (useLikelyAtoWarning)
 import { SafetyWarningTypes } from "handleConnectionOpen";
 
 const result = require("useIsMessageRequest").fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");

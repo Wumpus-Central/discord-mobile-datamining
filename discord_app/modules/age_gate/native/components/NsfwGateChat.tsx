@@ -1,6 +1,3 @@
-// === Module 11771: NsfwGateChat ===
-
-// Module 11771 (NsfwGateChat)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

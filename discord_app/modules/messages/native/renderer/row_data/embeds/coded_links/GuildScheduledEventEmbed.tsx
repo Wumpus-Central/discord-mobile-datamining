@@ -1,6 +1,3 @@
-// === Module 12377: createGuildScheduledEventEmbed ===
-
-// Module 12377 (createGuildScheduledEventEmbed)
 import _slicedToArray from "_slicedToArray";
 import { processColor } from "getSystemLocale";
 import scheduledEventSort from "scheduledEventSort";

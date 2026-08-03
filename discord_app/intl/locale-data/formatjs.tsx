@@ -1,6 +1,3 @@
-// === Module 3742: formatjsLocales ===
-
-// Module 3742 (formatjsLocales)
 const result = require("prop").fileFinishedImporting("intl/locale-data/formatjs.tsx");
 
 export const formatjsLocales = {

@@ -1,6 +1,3 @@
-// === Module 15693: WebhookPlusIcon ===
-
-// Module 15693 (WebhookPlusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

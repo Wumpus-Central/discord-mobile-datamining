@@ -1,6 +1,3 @@
-// === Module 15267: YouStatusRadioGroup ===
-
-// Module 15267 (YouStatusRadioGroup)
 import importAllResult from "_setUserStatus";
 import get_ActivityIndicator from "registerAsset";
 import initialize from "initialize";

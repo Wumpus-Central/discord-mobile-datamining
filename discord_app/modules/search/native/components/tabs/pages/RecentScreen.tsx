@@ -1,6 +1,3 @@
-// === Module 15500: ClearAllHistory ===
-
-// Module 15500 (ClearAllHistory)
 import _slicedToArray from "_slicedToArray";
 import deserialize from "deserialize";
 import importAllResult from "SearchTokenTypes";

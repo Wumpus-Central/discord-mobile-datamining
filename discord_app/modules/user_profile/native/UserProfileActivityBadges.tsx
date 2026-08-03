@@ -1,6 +1,3 @@
-// === Module 12008: TimestampBadge ===
-
-// Module 12008 (TimestampBadge)
 import "set";
 import { View } from "Text";
 import { ActivityTypes } from "ME";

@@ -1,6 +1,3 @@
-// === Module 7894: transformToRowGeneratedComponent ===
-
-// Module 7894 (transformToRowGeneratedComponent)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { processColor } from "set";
 import { CheckpointVersions } from "CheckpointPersonas";

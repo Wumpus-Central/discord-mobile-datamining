@@ -1,6 +1,3 @@
-// === Module 15939: usePanelOpenState ===
-
-// Module 15939 (usePanelOpenState)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import withEqualityFn from "withEqualityFn";

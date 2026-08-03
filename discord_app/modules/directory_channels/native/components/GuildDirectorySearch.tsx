@@ -1,6 +1,3 @@
-// === Module 10067: DefaultState ===
-
-// Module 10067 (DefaultState)
 import _slicedToArray from "_slicedToArray";
 import HeaderBackImage from "HeaderBackImage";
 import get_ActivityIndicator from "module_10107";

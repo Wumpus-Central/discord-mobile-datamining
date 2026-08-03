@@ -1,6 +1,3 @@
-// === Module 13820: SettingsAgeGroupHeader ===
-
-// Module 13820 (SettingsAgeGroupHeader)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { MobileSetting } from "MobileSetting";

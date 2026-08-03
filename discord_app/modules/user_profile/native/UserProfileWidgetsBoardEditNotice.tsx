@@ -1,6 +1,3 @@
-// === Module 12069: UserProfileWidgetsBoardEditNotice ===
-
-// Module 12069 (UserProfileWidgetsBoardEditNotice)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

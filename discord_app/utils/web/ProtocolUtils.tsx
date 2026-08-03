@@ -1,6 +1,3 @@
-// === Module 12449: launchMobile ===
-
-// Module 12449 (launchMobile)
 import { os } from "format";
 
 let family;

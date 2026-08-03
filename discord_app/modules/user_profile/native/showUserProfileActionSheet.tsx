@@ -1,6 +1,3 @@
-// === Module 8363: showUserProfileActionSheet ===
-
-// Module 8363 (showUserProfileActionSheet)
 import explicitContentFromProto from "explicitContentFromProto";
 import upsertRelationship from "upsertRelationship";
 

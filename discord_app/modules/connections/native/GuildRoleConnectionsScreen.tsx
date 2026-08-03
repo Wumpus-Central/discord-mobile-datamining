@@ -1,6 +1,3 @@
-// === Module 10028: GuildRoleConnectionsScreen ===
-
-// Module 10028 (GuildRoleConnectionsScreen)
 import _slicedToArray from "_slicedToArray";
 import asyncRequireImpl from "asyncRequireImpl";
 import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";

@@ -1,6 +1,3 @@
-// === Module 1845: enforcing ===
-
-// Module 1845 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeKeyboardModule");

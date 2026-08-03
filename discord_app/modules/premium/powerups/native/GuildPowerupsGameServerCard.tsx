@@ -1,6 +1,3 @@
-// === Module 11679: GuildPowerupsGameServerCard ===
-
-// Module 11679 (GuildPowerupsGameServerCard)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

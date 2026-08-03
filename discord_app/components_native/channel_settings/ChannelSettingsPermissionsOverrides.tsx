@@ -1,6 +1,3 @@
-// === Module 15678: ChannelSettingsPermissionsOverrides ===
-
-// Module 15678 (ChannelSettingsPermissionsOverrides)
 import computeChannelName from "computeChannelName";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import fromString from "fromString";

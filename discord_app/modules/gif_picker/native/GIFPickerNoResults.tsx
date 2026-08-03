@@ -1,6 +1,3 @@
-// === Module 9621: ? ===
-
-// Module 9621
 import importAllResult from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

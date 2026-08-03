@@ -1,6 +1,3 @@
-// === Module 13870: useExplicitContentSettingOrDefault ===
-
-// Module 13870 (useExplicitContentSettingOrDefault)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 
 const require = arg1;

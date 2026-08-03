@@ -1,6 +1,3 @@
-// === Module 14725: useAutoScrollToSearchResultSetting ===
-
-// Module 14725 (useAutoScrollToSearchResultSetting)
 import noop from "noop";
 import zustandStore from "zustandStore";
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";

@@ -1,6 +1,3 @@
-// === Module 8540: OpenCriticRatingCircle ===
-
-// Module 8540 (OpenCriticRatingCircle)
 import { jsx } from "jsxProd";
 
 let result = require("set").fileFinishedImporting("modules/game_profile/native/components/OpenCriticRatingCircle.tsx");

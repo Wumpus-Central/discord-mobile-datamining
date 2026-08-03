@@ -1,6 +1,3 @@
-// === Module 11677: GuildPowerupsMultiPerkCard ===
-
-// Module 11677 (GuildPowerupsMultiPerkCard)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 11649: useGuildPowerupConfigureCallback ===
-
-// Module 11649 (useGuildPowerupConfigureCallback)
 import noop from "noop";
 import ME from "ME";
 

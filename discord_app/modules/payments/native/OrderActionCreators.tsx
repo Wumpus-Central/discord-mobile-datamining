@@ -1,6 +1,3 @@
-// === Module 6226: getOrders ===
-
-// Module 6226 (getOrders)
 import _createGatewayCheckoutContext from "_createGatewayCheckoutContext";
 import { OrderStatus } from "CustomCheckoutFlow";
 import { Endpoints } from "ME";

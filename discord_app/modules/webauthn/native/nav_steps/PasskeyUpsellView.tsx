@@ -1,6 +1,3 @@
-// === Module 13775: PasskeyUpsellView ===
-
-// Module 13775 (PasskeyUpsellView)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import get_ActivityIndicator from "Text";

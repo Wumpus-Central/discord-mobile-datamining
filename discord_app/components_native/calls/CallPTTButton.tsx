@@ -1,6 +1,3 @@
-// === Module 10425: CallPTTButtonLooks ===
-
-// Module 10425 (CallPTTButtonLooks)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 14895: useFocusRefOnNavigation ===
-
-// Module 14895 (useFocusRefOnNavigation)
 import noop from "noop";
 
 const require = arg1;

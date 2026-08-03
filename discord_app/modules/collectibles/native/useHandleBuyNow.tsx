@@ -1,6 +1,3 @@
-// === Module 11923: useHandleBuyNow ===
-
-// Module 11923 (useHandleBuyNow)
 import useMobileCollectiblesPurchaseSKU from "useMobileCollectiblesPurchaseSKU";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

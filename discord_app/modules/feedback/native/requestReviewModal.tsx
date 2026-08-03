@@ -1,6 +1,3 @@
-// === Module 12770: _showAndroidRatingRequest ===
-
-// Module 12770 (_showAndroidRatingRequest)
 import set from "set";
 import { NativeModules } from "get ActivityIndicator";
 

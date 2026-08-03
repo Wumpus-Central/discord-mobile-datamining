@@ -1,6 +1,3 @@
-// === Module 7467: ServerIconLilQuackSPondverseExample ===
-
-// Module 7467 (ServerIconLilQuackSPondverseExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconLilQuackSPondverseExample.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 15574: useSearchSegmentedControlState ===
-
-// Module 15574 (useSearchSegmentedControlState)
 import noop from "noop";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 8190: apexExperiment ===
-
-// Module 8190 (apexExperiment)
 import getUserAgnosticState from "getUserAgnosticState";
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";

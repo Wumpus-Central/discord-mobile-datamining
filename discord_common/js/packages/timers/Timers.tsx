@@ -1,6 +1,3 @@
-// === Module 4078: start ===
-
-// Module 4078 (start)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 class Timeout {

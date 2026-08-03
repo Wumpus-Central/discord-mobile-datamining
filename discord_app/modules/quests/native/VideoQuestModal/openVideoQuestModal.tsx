@@ -1,6 +1,3 @@
-// === Module 14166: openVideoQuestModal ===
-
-// Module 14166 (openVideoQuestModal)
 const result = require("VideoQuestModalSteps").fileFinishedImporting("modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx");
 
 export default function openVideoQuestModal(questId) {

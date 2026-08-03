@@ -1,6 +1,3 @@
-// === Module 16373: dispatcher ===
-
-// Module 16373 (dispatcher)
 const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalChannelsActionCreators.tsx");
 
 export default {

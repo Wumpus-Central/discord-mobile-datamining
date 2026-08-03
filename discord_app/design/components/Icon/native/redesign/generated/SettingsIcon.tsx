@@ -1,6 +1,3 @@
-// === Module 9020: SettingsIcon ===
-
-// Module 9020 (SettingsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

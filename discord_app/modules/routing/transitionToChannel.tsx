@@ -1,6 +1,3 @@
-// === Module 4201: transitionToChannel ===
-
-// Module 4201 (transitionToChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Routes } from "ME";
 

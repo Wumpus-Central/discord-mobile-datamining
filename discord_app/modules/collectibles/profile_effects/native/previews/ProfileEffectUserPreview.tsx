@@ -1,6 +1,3 @@
-// === Module 8079: ProfileEffectUserPreview ===
-
-// Module 8079 (ProfileEffectUserPreview)
 import "noop";
 import { jsx } from "jsxProd";
 

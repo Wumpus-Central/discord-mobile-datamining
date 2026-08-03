@@ -1,6 +1,3 @@
-// === Module 8782: UnifiedGiftModal ===
-
-// Module 8782 (UnifiedGiftModal)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

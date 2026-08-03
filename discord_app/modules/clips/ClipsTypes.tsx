@@ -1,6 +1,3 @@
-// === Module 4250: ClipSignalTypes ===
-
-// Module 4250 (ClipSignalTypes)
 let obj = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
 const result = require("set").fileFinishedImporting("modules/clips/ClipsTypes.tsx");
 

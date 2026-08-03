@@ -1,6 +1,3 @@
-// === Module 15792: map ===
-
-// Module 15792 (map)
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { Store } from "initialize";
 import set from "dispatcher";

@@ -1,6 +1,3 @@
-// === Module 6664: BuyNitroPurchaseButtonCrossfadeLayer ===
-
-// Module 6664 (BuyNitroPurchaseButtonCrossfadeLayer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";

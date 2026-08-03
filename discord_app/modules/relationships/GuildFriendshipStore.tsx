@@ -1,6 +1,3 @@
-// === Module 12794: resetStates ===
-
-// Module 12794 (resetStates)
 import { Store } from "initialize";
 
 function resetStates() {

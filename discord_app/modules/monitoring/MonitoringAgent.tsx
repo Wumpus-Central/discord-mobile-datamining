@@ -1,6 +1,3 @@
-// === Module 5870: set ===
-
-// Module 5870 (set)
 import { Endpoints } from "ME";
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";

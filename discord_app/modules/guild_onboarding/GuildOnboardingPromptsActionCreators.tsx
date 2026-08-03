@@ -1,6 +1,3 @@
-// === Module 5118: fetchOnboardingPrompts ===
-
-// Module 5118 (fetchOnboardingPrompts)
 import serverPromptToClientPrompt from "serverPromptToClientPrompt";
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

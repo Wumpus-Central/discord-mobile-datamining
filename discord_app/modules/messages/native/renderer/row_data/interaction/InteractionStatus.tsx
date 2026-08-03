@@ -1,6 +1,3 @@
-// === Module 7996: createInteractionStatus ===
-
-// Module 7996 (createInteractionStatus)
 let closure_2 = { LOADING: 0, [0]: "LOADING", FAILED: 1, [1]: "FAILED", EPHEMERAL_SUCCESS: 999, [999]: "EPHEMERAL_SUCCESS" };
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx");
 

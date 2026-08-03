@@ -1,6 +1,3 @@
-// === Module 4293: on ===
-
-// Module 4293 (on)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
 class TypedEventEmitter {
   constructor() {

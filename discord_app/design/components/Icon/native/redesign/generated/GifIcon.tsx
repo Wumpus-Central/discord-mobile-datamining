@@ -1,6 +1,3 @@
-// === Module 9625: GifIcon ===
-
-// Module 9625 (GifIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

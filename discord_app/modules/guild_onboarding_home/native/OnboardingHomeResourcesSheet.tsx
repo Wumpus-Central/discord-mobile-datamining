@@ -1,6 +1,3 @@
-// === Module 15452: OnboardingHomeResourcesSheet ===
-
-// Module 15452 (OnboardingHomeResourcesSheet)
 import "noop";
 import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY";
 import { jsx } from "jsxProd";

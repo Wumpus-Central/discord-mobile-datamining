@@ -1,6 +1,3 @@
-// === Module 15091: HAPPENING_NOW_CONTENT_HEIGHT ===
-
-// Module 15091 (HAPPENING_NOW_CONTENT_HEIGHT)
 import closure_3 from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
 import _slicedToArray from "_slicedToArray";
 import ActivityEmoji from "ActivityEmoji";

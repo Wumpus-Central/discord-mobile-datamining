@@ -1,6 +1,3 @@
-// === Module 7642: RowButtonWrapper ===
-
-// Module 7642 (RowButtonWrapper)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

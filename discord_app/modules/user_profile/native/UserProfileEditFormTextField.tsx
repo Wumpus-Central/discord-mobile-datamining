@@ -1,6 +1,3 @@
-// === Module 13731: UserProfileEditFormTextField ===
-
-// Module 13731 (UserProfileEditFormTextField)
 import "noop";
 import { jsx } from "jsxProd";
 

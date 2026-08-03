@@ -1,6 +1,3 @@
-// === Module 9618: FavoritesSearch ===
-
-// Module 9618 (FavoritesSearch)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Text";
 import { View } from "PressableBase";

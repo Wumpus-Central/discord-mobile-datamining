@@ -1,6 +1,3 @@
-// === Module 11362: Item ===
-
-// Module 11362 (Item)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "t";
 import { View } from "module_38";

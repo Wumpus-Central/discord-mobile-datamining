@@ -1,6 +1,3 @@
-// === Module 14125: useIsCarouselInView ===
-
-// Module 14125 (useIsCarouselInView)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

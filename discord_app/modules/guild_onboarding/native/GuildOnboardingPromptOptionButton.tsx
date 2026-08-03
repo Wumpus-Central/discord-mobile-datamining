@@ -1,6 +1,3 @@
-// === Module 5206: PromptOptionButton ===
-
-// Module 5206 (PromptOptionButton)
 import _slicedToArray from "_slicedToArray";
 import Emoji from "Emoji";
 import { View } from "useCheckboxA11yNative";

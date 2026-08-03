@@ -1,6 +1,3 @@
-// === Module 1882: createdAt ===
-
-// Module 1882 (createdAt)
 import "toJS";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";

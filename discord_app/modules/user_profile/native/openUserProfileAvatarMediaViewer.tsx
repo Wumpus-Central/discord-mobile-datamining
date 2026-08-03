@@ -1,6 +1,3 @@
-// === Module 8118: openUserProfileAvatarMediaViewer ===
-
-// Module 8118 (openUserProfileAvatarMediaViewer)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AVATAR_MAX_SIZE } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 12310: URLCallout ===
-
-// Module 12310 (URLCallout)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

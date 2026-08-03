@@ -1,6 +1,3 @@
-// === Module 8245: PressableScale ===
-
-// Module 8245 (PressableScale)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

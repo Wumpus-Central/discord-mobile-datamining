@@ -1,6 +1,3 @@
-// === Module 10532: initialize ===
-
-// Module 10532 (initialize)
 import handleConnectionOpen from "handleConnectionOpen";
 import { VoiceCallOverlayType } from "BOX_MODE_ACTIONSHEET_WIDTH";
 import { Store } from "initialize";

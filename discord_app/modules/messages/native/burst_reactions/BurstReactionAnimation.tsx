@@ -1,6 +1,3 @@
-// === Module 6141: BurstReactionAnimation ===
-
-// Module 6141 (BurstReactionAnimation)
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";

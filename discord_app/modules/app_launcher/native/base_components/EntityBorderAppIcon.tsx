@@ -1,6 +1,3 @@
-// === Module 11244: EntityBorderAppIcon ===
-
-// Module 11244 (EntityBorderAppIcon)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

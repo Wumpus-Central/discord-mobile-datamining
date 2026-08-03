@@ -1,6 +1,3 @@
-// === Module 9037: ShieldIcon ===
-
-// Module 9037 (ShieldIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

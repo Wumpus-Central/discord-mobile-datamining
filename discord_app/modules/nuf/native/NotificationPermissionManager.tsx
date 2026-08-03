@@ -1,6 +1,3 @@
-// === Module 16304: haveNotSeenPromptSince ===
-
-// Module 16304 (haveNotSeenPromptSince)
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { NativeModules } from "expandEventProperties";
 import storeThread from "storeThread";

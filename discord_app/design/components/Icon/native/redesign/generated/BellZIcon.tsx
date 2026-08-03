@@ -1,6 +1,3 @@
-// === Module 14994: BellZIcon ===
-
-// Module 14994 (BellZIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

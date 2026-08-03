@@ -1,6 +1,3 @@
-// === Module 15732: useListHasSingleMessageRequest ===
-
-// Module 15732 (useListHasSingleMessageRequest)
 import noop from "noop";
 import processChannel from "processChannel";
 import closure_5 from "processChannel";

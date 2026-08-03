@@ -1,6 +1,3 @@
-// === Module 13036: _createTwoWayLink ===
-
-// Module 13036 (_createTwoWayLink)
 import module_38 from "module_38";
 import noop from "noop";
 

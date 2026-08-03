@@ -1,6 +1,3 @@
-// === Module 9623: GIFPickerItemView ===
-
-// Module 9623 (GIFPickerItemView)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

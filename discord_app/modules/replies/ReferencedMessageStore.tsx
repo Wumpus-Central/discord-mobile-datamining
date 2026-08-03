@@ -1,6 +1,3 @@
-// === Module 5860: processMessage ===
-
-// Module 5860 (processMessage)
 import _slicedToArray from "_slicedToArray";
 import removePendingListFetch from "removePendingListFetch";
 import ensureGuildLoaded from "ensureGuildLoaded";

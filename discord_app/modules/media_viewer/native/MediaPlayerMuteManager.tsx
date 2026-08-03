@@ -1,6 +1,3 @@
-// === Module 8128: nativeEventEmitter ===
-
-// Module 8128 (nativeEventEmitter)
 import get_ActivityIndicator from "get ActivityIndicator";
 import keys from "keys";
 

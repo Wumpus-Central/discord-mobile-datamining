@@ -1,6 +1,3 @@
-// === Module 14027: toggle ===
-
-// Module 14027 (toggle)
 import noop from "noop";
 import { FriendSourceFlags } from "ME";
 import createToggle from "createToggle";

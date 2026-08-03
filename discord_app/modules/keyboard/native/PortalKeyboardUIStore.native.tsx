@@ -1,6 +1,3 @@
-// === Module 4060: zustandStore ===
-
-// Module 4060 (zustandStore)
 const zustandStore = require("defaultStatesAreEqual").createZustandStore(() => ({ keyboard: null, state: require(4063) /* PortalKeyboardState */.PortalKeyboardState.EMPTY, renderers: [] }));
 const result = require("v1").fileFinishedImporting("modules/keyboard/native/PortalKeyboardUIStore.native.tsx");
 

@@ -1,6 +1,3 @@
-// === Module 8741: PreviewProfileTrigger ===
-
-// Module 8741 (PreviewProfileTrigger)
 import initialize from "initialize";
 import apexExperiment from "apexExperiment";
 import noop from "apexExperiment";

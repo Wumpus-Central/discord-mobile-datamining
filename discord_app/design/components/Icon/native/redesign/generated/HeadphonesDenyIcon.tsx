@@ -1,6 +1,3 @@
-// === Module 8872: HeadphonesDenyIcon ===
-
-// Module 8872 (HeadphonesDenyIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

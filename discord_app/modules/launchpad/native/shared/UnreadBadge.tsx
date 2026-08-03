@@ -1,6 +1,3 @@
-// === Module 15829: ? ===
-
-// Module 15829
 import { View } from "get ActivityIndicator";
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
 import { UnreadSetting } from "ReadStateTypes";

@@ -1,6 +1,3 @@
-// === Module 9837: NameplatePreview ===
-
-// Module 9837 (NameplatePreview)
 import noop from "noop";
 import { View } from "Text";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

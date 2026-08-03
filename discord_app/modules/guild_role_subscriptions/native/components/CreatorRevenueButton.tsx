@@ -1,6 +1,3 @@
-// === Module 9375: CreatorRevenueButton ===
-
-// Module 9375 (CreatorRevenueButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

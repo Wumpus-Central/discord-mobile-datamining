@@ -1,6 +1,3 @@
-// === Module 10955: asString ===
-
-// Module 10955 (asString)
 import ME from "ME";
 import initialize from "initialize";
 import isProtocolRegistered from "isProtocolRegistered";

@@ -1,6 +1,3 @@
-// === Module 5718: trackInvite ===
-
-// Module 5718 (trackInvite)
 import ClickArea from "ClickArea";
 import trackRoundtrip from "trackRoundtrip";
 import _handleConnectionOpen from "_handleConnectionOpen";

@@ -1,6 +1,3 @@
-// === Module 15765: getStores ===
-
-// Module 15765 (getStores)
 class ModalRegistry {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);

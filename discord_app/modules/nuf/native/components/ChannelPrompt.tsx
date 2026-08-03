@@ -1,6 +1,3 @@
-// === Module 11862: ChannelPrompt ===
-
-// Module 11862 (ChannelPrompt)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
 import module_9004 from "module_9004";

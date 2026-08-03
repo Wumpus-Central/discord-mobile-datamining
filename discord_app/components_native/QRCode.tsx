@@ -1,6 +1,3 @@
-// === Module 12262: frozen ===
-
-// Module 12262 (frozen)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

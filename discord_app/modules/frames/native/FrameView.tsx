@@ -1,6 +1,3 @@
-// === Module 15892: FrameView ===
-
-// Module 15892 (FrameView)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import map from "map";

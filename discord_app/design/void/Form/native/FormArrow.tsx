@@ -1,6 +1,3 @@
-// === Module 5239: FormArrow ===
-
-// Module 5239 (FormArrow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

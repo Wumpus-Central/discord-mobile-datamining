@@ -1,6 +1,3 @@
-// === Module 6879: BeakerIllocon ===
-
-// Module 6879 (BeakerIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BeakerIllocon.native.tsx");

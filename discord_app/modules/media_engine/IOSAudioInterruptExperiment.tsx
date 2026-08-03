@@ -1,6 +1,3 @@
-// === Module 12981: getIOSAudioInterruptExperimentConfig ===
-
-// Module 12981 (getIOSAudioInterruptExperimentConfig)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

@@ -1,6 +1,3 @@
-// === Module 15625: AddFriendsContactSyncEmptyState ===
-
-// Module 15625 (AddFriendsContactSyncEmptyState)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

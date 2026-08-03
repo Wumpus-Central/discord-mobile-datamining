@@ -1,6 +1,3 @@
-// === Module 4126: getCustomThemesName ===
-
-// Module 4126 (getCustomThemesName)
 import handleThemeChange from "handleThemeChange";
 import validateSavedTheme from "validateSavedTheme";
 import reset from "reset";

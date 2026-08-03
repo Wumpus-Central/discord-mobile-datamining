@@ -1,6 +1,3 @@
-// === Module 11951: RedditNeutralIcon ===
-
-// Module 11951 (RedditNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

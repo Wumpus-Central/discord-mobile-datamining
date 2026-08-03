@@ -1,6 +1,3 @@
-// === Module 15761: BurstReactionAnimationContainerInner ===
-
-// Module 15761 (BurstReactionAnimationContainerInner)
 import _slicedToArray from "_slicedToArray";
 import ManaContext from "ManaContext";
 import get_ActivityIndicator from "Text";

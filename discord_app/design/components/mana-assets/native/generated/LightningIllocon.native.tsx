@@ -1,6 +1,3 @@
-// === Module 7263: LightningIllocon ===
-
-// Module 7263 (LightningIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/LightningIllocon.native.tsx");

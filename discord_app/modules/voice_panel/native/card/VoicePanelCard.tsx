@@ -1,6 +1,3 @@
-// === Module 15980: SelfStreamCard ===
-
-// Module 15980 (SelfStreamCard)
 import map from "map";
 import importAllResult from "watchStream";
 import { StyleSheet } from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 14073: hasVideoEnded ===
-
-// Module 14073 (hasVideoEnded)
 import set from "set";
 import importAllResult from "module_1208";
 import get_ActivityIndicator from "initialize";

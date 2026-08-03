@@ -1,6 +1,3 @@
-// === Module 4082: str11 ===
-
-// Module 4082 (str11)
 let obj = { SELECT_GAME: "select-game", SERVER_SETTINGS: "server-settings" };
 obj = { type: "go-to-step", step: obj.SERVER_SETTINGS };
 obj = { type: "go-to-step", step: obj.SELECT_GAME };

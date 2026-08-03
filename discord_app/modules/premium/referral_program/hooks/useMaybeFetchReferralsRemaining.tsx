@@ -1,6 +1,3 @@
-// === Module 7843: useMaybeFetchReferralsRemaining ===
-
-// Module 7843 (useMaybeFetchReferralsRemaining)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import emitChanges from "emitChanges";

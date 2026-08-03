@@ -1,6 +1,3 @@
-// === Module 16795: promise ===
-
-// Module 16795 (promise)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

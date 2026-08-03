@@ -1,6 +1,3 @@
-// === Module 5097: parseServerGuildSticker ===
-
-// Module 5097 (parseServerGuildSticker)
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
 import { LibdiscoreStore } from "identity";

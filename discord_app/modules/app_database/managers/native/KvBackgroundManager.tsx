@@ -1,6 +1,3 @@
-// === Module 16188: handleAppStateUpdate ===
-
-// Module 16188 (handleAppStateUpdate)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import initialize from "initialize";

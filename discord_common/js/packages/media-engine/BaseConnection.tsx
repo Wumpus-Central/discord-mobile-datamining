@@ -1,6 +1,3 @@
-// === Module 4301: destroy ===
-
-// Module 4301 (destroy)
 import BaseConnectionEvent from "BaseConnectionEvent";
 import DesktopSources from "DesktopSources";
 import "on";

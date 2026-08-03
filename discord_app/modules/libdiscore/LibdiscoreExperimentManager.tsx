@@ -1,6 +1,3 @@
-// === Module 16720: experimentStoreUpdateHandler ===
-
-// Module 16720 (experimentStoreUpdateHandler)
 import initialize from "initialize";
 import "initialize";
 

@@ -1,6 +1,3 @@
-// === Module 12056: UserProfileNote ===
-
-// Module 12056 (UserProfileNote)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

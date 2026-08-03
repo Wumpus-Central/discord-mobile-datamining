@@ -1,6 +1,3 @@
-// === Module 4756: isPhotoKitAsset ===
-
-// Module 4756 (isPhotoKitAsset)
 const result = require("set").fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
 export const isPhotoKitAsset = function isPhotoKitAsset(closure_0, outer1_1) {

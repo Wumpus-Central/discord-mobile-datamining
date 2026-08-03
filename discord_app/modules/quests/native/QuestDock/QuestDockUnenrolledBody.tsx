@@ -1,6 +1,3 @@
-// === Module 14238: QUEST_DOCK_EXPANDED_PADDING_BOTTOM ===
-
-// Module 14238 (QUEST_DOCK_EXPANDED_PADDING_BOTTOM)
 import closure_3 from "QuestsExperimentLocations";
 import importAllResult from "_manuallyStartConsoleQuest";
 import { View } from "items";

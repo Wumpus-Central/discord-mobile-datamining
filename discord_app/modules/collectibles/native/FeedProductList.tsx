@@ -1,6 +1,3 @@
-// === Module 14638: SkeletonGrid ===
-
-// Module 14638 (SkeletonGrid)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

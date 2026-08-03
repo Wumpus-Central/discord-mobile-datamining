@@ -1,6 +1,3 @@
-// === Module 10707: StageChannelRaiseHandAck ===
-
-// Module 10707 (StageChannelRaiseHandAck)
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import set from "set";
 import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint";

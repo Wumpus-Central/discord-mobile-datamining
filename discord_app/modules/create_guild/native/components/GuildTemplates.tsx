@@ -1,6 +1,3 @@
-// === Module 11815: GuildTemplatesHeader ===
-
-// Module 11815 (GuildTemplatesHeader)
 import _slicedToArray from "_slicedToArray";
 import SafeAreaPaddingView from "SafeAreaPaddingView";
 import get_ActivityIndicator from "ListSelectionItem";

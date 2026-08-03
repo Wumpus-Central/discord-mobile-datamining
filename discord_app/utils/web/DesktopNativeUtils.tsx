@@ -1,6 +1,3 @@
-// === Module 5201: sanitizeFilename ===
-
-// Module 5201 (sanitizeFilename)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "set";
 import { NativeFeatures } from "ME";

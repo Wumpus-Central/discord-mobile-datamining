@@ -1,6 +1,3 @@
-// === Module 6665: BuyNitroPurchaseButtonLegalDisclaimer ===
-
-// Module 6665 (BuyNitroPurchaseButtonLegalDisclaimer)
 import "noop";
 import ME from "ME";
 import { jsx } from "jsxProd";

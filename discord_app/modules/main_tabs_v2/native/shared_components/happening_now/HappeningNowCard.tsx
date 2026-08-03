@@ -1,6 +1,3 @@
-// === Module 14331: HAPPENING_NOW_CARD_MARGIN_RIGHT ===
-
-// Module 14331 (HAPPENING_NOW_CARD_MARGIN_RIGHT)
 import "noop";
 import { View } from "get ActivityIndicator";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";

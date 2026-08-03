@@ -1,6 +1,3 @@
-// === Module 15860: t ===
-
-// Module 15860 (t)
 import set from "set";
 import set from "set";
 

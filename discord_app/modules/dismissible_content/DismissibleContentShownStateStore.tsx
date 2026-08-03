@@ -1,6 +1,3 @@
-// === Module 1364: withContent ===
-
-// Module 1364 (withContent)
 import handleUpdateUser from "handleUpdateUser";
 import handleRequiredAction from "handleRequiredAction";
 import identity from "identity";

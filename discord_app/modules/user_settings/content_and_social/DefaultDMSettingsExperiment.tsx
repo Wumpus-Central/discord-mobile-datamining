@@ -1,6 +1,3 @@
-// === Module 14688: shouldAgeVerifyForDMDefaultOff ===
-
-// Module 14688 (shouldAgeVerifyForDMDefaultOff)
 const result = require("useAgeVerificationRunner").fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
 
 export const shouldAgeVerifyForDMDefaultOff = function shouldAgeVerifyForDMDefaultOff() {

@@ -1,6 +1,3 @@
-// === Module 16023: useControlsTranslation ===
-
-// Module 16023 (useControlsTranslation)
 import noop from "noop";
 import { MODE_CHANGE_PHYSICS } from "VoicePanelModes";
 import { CALL_TILE_GUTTER } from "CARD_SIZE";

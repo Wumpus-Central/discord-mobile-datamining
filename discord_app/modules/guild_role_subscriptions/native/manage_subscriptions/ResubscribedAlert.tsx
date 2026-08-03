@@ -1,6 +1,3 @@
-// === Module 14254: ResubscribedAlert ===
-
-// Module 14254 (ResubscribedAlert)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

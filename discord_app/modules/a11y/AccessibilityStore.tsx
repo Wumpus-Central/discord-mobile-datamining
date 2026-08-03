@@ -1,6 +1,3 @@
-// === Module 4185: maybeApplyNoTextColorForLightCustomTheme ===
-
-// Module 4185 (maybeApplyNoTextColorForLightCustomTheme)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import handleThemeChange from "handleThemeChange";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";

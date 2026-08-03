@@ -1,6 +1,3 @@
-// === Module 9647: Sticker ===
-
-// Module 9647 (Sticker)
 import "noop";
 import { PixelRatio } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";

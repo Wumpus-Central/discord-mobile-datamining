@@ -1,6 +1,3 @@
-// === Module 15908: useInviteMembersCallback ===
-
-// Module 15908 (useInviteMembersCallback)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";

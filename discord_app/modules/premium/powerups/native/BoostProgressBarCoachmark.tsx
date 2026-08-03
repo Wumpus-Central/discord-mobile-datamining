@@ -1,6 +1,3 @@
-// === Module 15161: BoostProgressBarCoachmark ===
-
-// Module 15161 (BoostProgressBarCoachmark)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

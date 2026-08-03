@@ -1,6 +1,3 @@
-// === Module 12657: GuildBoostingMarketingCtaBar ===
-
-// Module 12657 (GuildBoostingMarketingCtaBar)
 import StarsBackgroundSvg from "StarsBackgroundSvg";
 import useGuildAppliedBoostCount from "useGuildAppliedBoostCount";
 import { View } from "roundFPCountdownUnits";

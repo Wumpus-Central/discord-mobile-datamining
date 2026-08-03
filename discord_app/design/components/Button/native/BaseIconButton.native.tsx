@@ -1,6 +1,3 @@
-// === Module 6686: BaseIconButton ===
-
-// Module 6686 (BaseIconButton)
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

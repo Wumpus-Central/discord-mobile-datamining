@@ -1,6 +1,3 @@
-// === Module 9834: CircleQuestionIcon ===
-
-// Module 9834 (CircleQuestionIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

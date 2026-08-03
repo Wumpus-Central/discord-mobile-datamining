@@ -1,6 +1,3 @@
-// === Module 7983: useEditBannerSource ===
-
-// Module 7983 (useEditBannerSource)
 let result = require("int2hslRaw").fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
 export const useEditBannerSource = function useEditBannerSource(arg0) {

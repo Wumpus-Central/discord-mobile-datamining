@@ -1,6 +1,3 @@
-// === Module 11659: getGuildPowerupsBoostInfoText ===
-
-// Module 11659 (getGuildPowerupsBoostInfoText)
 import { BoostInfoType } from "BoostedGuildTiers";
 
 const result = require("messagesProxy").fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupsBoostInfoText.tsx");

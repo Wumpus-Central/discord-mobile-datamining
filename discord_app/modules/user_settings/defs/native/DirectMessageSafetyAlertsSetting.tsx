@@ -1,6 +1,3 @@
-// === Module 13884: toggle ===
-
-// Module 13884 (toggle)
 import { MobileSetting } from "MobileSetting";
 import createToggle from "createToggle";
 

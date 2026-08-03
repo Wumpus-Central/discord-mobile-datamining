@@ -1,6 +1,3 @@
-// === Module 13844: getSMSBackupDisabledMessage ===
-
-// Module 13844 (getSMSBackupDisabledMessage)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";

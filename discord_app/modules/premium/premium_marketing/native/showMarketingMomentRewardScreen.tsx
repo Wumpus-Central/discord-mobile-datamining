@@ -1,6 +1,3 @@
-// === Module 12450: _showMarketingMomentRewardScreen ===
-
-// Module 12450 (_showMarketingMomentRewardScreen)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 

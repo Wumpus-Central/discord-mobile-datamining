@@ -1,6 +1,3 @@
-// === Module 10466: MoreYouCanDoRow ===
-
-// Module 10466 (MoreYouCanDoRow)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15245: useGuildActionRows ===
-
-// Module 15245 (useGuildActionRows)
 import _slicedToArray from "_slicedToArray";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";

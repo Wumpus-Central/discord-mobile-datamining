@@ -1,6 +1,3 @@
-// === Module 5525: useGetOrFetchApplications ===
-
-// Module 5525 (useGetOrFetchApplications)
 import noop from "noop";
 import addApplication from "addApplication";
 

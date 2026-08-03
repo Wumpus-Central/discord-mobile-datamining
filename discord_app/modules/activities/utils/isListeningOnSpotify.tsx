@@ -1,6 +1,3 @@
-// === Module 9088: isListeningOnSpotify ===
-
-// Module 9088 (isListeningOnSpotify)
 import ME from "ME";
 import { isSpotifyParty } from "WEB_OPEN";
 

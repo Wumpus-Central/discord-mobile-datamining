@@ -1,6 +1,3 @@
-// === Module 9238: UserSettingsConfirmPasswordWrapped ===
-
-// Module 9238 (UserSettingsConfirmPasswordWrapped)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Button";

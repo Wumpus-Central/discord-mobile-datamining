@@ -1,6 +1,3 @@
-// === Module 4237: getComboId ===
-
-// Module 4237 (getComboId)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import addSku from "addSku";

@@ -1,6 +1,3 @@
-// === Module 9441: EXPRESSION_FOOTER_HEIGHT ===
-
-// Module 9441 (EXPRESSION_FOOTER_HEIGHT)
 import importAllResult from "noop";
 import { EmojiCategoryTypes } from "EmojiCategoryTypes";
 import ME from "ME";

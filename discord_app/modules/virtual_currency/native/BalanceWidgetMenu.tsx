@@ -1,6 +1,3 @@
-// === Module 14812: BalanceWidget ===
-
-// Module 14812 (BalanceWidget)
 import ref from "ref";
 import { View } from "module_8728";
 import { AnalyticEvents } from "ME";

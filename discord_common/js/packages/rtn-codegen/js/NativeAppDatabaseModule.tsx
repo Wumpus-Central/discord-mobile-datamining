@@ -1,6 +1,3 @@
-// === Module 1925: enforcing ===
-
-// Module 1925 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAppDatabaseModule");

@@ -1,6 +1,3 @@
-// === Module 10508: useAdContentImpressionTrackerProps ===
-
-// Module 10508 (useAdContentImpressionTrackerProps)
 import noop from "noop";
 import initializeState from "initializeState";
 

@@ -1,6 +1,3 @@
-// === Module 13476: enforcing ===
-
-// Module 13476 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeSystraceModule");

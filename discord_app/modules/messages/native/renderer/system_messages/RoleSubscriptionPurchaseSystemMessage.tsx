@@ -1,6 +1,3 @@
-// === Module 7809: createRoleSubscriptionPurchaseSystemMessage ===
-
-// Module 7809 (createRoleSubscriptionPurchaseSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { SystemChannelFlags } from "ME";

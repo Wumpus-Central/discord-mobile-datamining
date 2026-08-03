@@ -1,6 +1,3 @@
-// === Module 15047: getMessagesItemChannelSizes ===
-
-// Module 15047 (getMessagesItemChannelSizes)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

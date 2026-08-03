@@ -1,6 +1,3 @@
-// === Module 11226: useActivityApplications ===
-
-// Module 11226 (useActivityApplications)
 import noop from "noop";
 
 const require = arg1;

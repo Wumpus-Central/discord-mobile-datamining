@@ -1,6 +1,3 @@
-// === Module 11162: ? ===
-
-// Module 11162
 import { Endpoints } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/private_channel_recipient/PrivateChannelRecipientActionCreators.tsx");

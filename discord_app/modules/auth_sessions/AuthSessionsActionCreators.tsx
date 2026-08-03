@@ -1,6 +1,3 @@
-// === Module 13999: _fetchAuthSessions ===
-
-// Module 13999 (_fetchAuthSessions)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

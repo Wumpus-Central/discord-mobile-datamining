@@ -1,6 +1,3 @@
-// === Module 12811: showVoiceChannelBlockedUserWarning ===
-
-// Module 12811 (showVoiceChannelBlockedUserWarning)
 import getState from "getState";
 import useSharedSpacesWarningStore from "useSharedSpacesWarningStore";
 import { VoiceChannelWarningSurfaces as closure_6 } from "GdmWarningMedium";

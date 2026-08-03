@@ -1,6 +1,3 @@
-// === Module 13727: useUploadAvatar ===
-
-// Module 13727 (useUploadAvatar)
 import defaultAreStatesEqual from "defaultAreStatesEqual";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

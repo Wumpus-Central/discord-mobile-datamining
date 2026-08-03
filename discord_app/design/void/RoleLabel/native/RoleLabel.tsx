@@ -1,6 +1,3 @@
-// === Module 9598: RoleLabel ===
-
-// Module 9598 (RoleLabel)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

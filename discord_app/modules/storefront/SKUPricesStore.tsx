@@ -1,6 +1,3 @@
-// === Module 5671: resetStoreState ===
-
-// Module 5671 (resetStoreState)
 import _getSystemLocale from "_getSystemLocale";
 import { Store } from "initialize";
 

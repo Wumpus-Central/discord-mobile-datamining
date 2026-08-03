@@ -1,6 +1,3 @@
-// === Module 11832: LoginHandoffSource ===
-
-// Module 11832 (LoginHandoffSource)
 import { StaticChannelRoute } from "set";
 import { UserSettingsPath } from "MAX_FAVORITES";
 

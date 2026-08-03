@@ -1,6 +1,3 @@
-// === Module 16184: DmSettingsUpsellActionSheet ===
-
-// Module 16184 (DmSettingsUpsellActionSheet)
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import get_ActivityIndicator from "dispatcher";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

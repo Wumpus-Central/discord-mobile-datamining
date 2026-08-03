@@ -1,6 +1,3 @@
-// === Module 13849: route ===
-
-// Module 13849 (route)
 import noop from "noop";
 import hasFetchedCredentials from "hasFetchedCredentials";
 import mergeGuildAvatar from "mergeGuildAvatar";

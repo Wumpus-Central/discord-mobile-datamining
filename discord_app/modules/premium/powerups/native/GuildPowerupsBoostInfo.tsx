@@ -1,6 +1,3 @@
-// === Module 11658: GuildPowerupsBoostInfo ===
-
-// Module 11658 (GuildPowerupsBoostInfo)
 import { View } from "get ActivityIndicator";
 import { BoostInfoType } from "BoostedGuildTiers";
 import jsxProd from "jsxProd";

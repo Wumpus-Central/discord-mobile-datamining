@@ -1,6 +1,3 @@
-// === Module 16570: GuildServerSubscriberCount ===
-
-// Module 16570 (GuildServerSubscriberCount)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

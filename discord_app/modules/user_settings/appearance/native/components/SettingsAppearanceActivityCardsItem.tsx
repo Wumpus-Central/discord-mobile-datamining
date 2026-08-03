@@ -1,6 +1,3 @@
-// === Module 14328: ActivityCardsItem ===
-
-// Module 14328 (ActivityCardsItem)
 import "noop";
 import { jsx } from "jsxProd";
 

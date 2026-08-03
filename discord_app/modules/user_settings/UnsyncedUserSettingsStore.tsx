@@ -1,6 +1,3 @@
-// === Module 1304: CHANNEL_SIDEBAR_WIDTH ===
-
-// Module 1304 (CHANNEL_SIDEBAR_WIDTH)
 import { SystemThemeState } from "SystemThemeState";
 import { ListDensityMode } from "MAX_FAVORITES";
 import ME from "ME";

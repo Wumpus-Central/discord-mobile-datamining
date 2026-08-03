@@ -1,6 +1,3 @@
-// === Module 12199: VerifiedIcon ===
-
-// Module 12199 (VerifiedIcon)
 import importAllResult from "getPlatformUserUrl";
 import get_ActivityIndicator from "useIsMobileVisualRefreshExperimentEnabled";
 import _getSystemLocale from "_getSystemLocale";

@@ -1,6 +1,3 @@
-// === Module 10434: ChatViewWrapperAnimatedKeyboard ===
-
-// Module 10434 (ChatViewWrapperAnimatedKeyboard)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

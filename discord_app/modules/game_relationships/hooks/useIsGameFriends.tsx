@@ -1,6 +1,3 @@
-// === Module 12186: useIsGameFriends ===
-
-// Module 12186 (useIsGameFriends)
 import _slicedToArray from "_slicedToArray";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import { RelationshipTypes } from "ME";

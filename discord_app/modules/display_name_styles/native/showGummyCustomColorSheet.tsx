@@ -1,6 +1,3 @@
-// === Module 14380: showGummyCustomColorSheet ===
-
-// Module 14380 (showGummyCustomColorSheet)
 const DisplayNameStylesGummyCustomColorSheet = "DisplayNameStylesGummyCustomColorSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/display_name_styles/native/showGummyCustomColorSheet.tsx");
 

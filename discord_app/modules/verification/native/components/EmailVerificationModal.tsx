@@ -1,6 +1,3 @@
-// === Module 9187: closeModal ===
-
-// Module 9187 (closeModal)
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
 import mergeGuildAvatar from "mergeGuildAvatar";

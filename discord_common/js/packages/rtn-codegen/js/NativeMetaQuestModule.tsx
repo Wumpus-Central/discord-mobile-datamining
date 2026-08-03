@@ -1,6 +1,3 @@
-// === Module 670: enforcing ===
-
-// Module 670 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeMetaQuestModule");

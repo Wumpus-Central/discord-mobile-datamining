@@ -1,6 +1,3 @@
-// === Module 5517: ConnectionCard ===
-
-// Module 5517 (ConnectionCard)
 import "noop";
 import { OnboardingConnectionType } from "serverPromptToClientPrompt";
 import { jsx } from "jsxProd";

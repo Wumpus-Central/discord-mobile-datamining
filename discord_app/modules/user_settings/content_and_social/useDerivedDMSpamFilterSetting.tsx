@@ -1,6 +1,3 @@
-// === Module 13889: useDerivedDmSpamFilterSettingValue ===
-
-// Module 13889 (useDerivedDmSpamFilterSettingValue)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items";
 

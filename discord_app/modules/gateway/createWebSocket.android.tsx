@@ -1,6 +1,3 @@
-// === Module 12714: createWebSocket ===
-
-// Module 12714 (createWebSocket)
 const result = require("set").fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");
 
 export default function createWebSocket(url) {

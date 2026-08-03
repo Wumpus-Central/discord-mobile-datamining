@@ -1,6 +1,3 @@
-// === Module 8868: setAudioOutputDevice ===
-
-// Module 8868 (setAudioOutputDevice)
 const result = require("set").fileFinishedImporting("modules/voice_calls/native/AudioManagerActionCreator.tsx");
 
 export const setAudioOutputDevice = function setAudioOutputDevice(device) {

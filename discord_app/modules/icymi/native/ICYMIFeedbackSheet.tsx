@@ -1,6 +1,3 @@
-// === Module 15367: ICYMIFeedbackSheet ===
-
-// Module 15367 (ICYMIFeedbackSheet)
 import "noop";
 import { jsx } from "jsxProd";
 

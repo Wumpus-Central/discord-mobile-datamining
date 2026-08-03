@@ -1,6 +1,3 @@
-// === Module 11791: RedesignContactSyncDiscoverabilityFooter ===
-
-// Module 11791 (RedesignContactSyncDiscoverabilityFooter)
 import { HelpdeskArticles } from "ME";
 import { jsx } from "jsxProd";
 

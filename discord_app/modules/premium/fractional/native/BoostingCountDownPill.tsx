@@ -1,6 +1,3 @@
-// === Module 12567: handlePress ===
-
-// Module 12567 (handlePress)
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 12211: UserProfileWishlistSuggestionsGridContent ===
-
-// Module 12211 (UserProfileWishlistSuggestionsGridContent)
 import v1 from "v1";
 import { View } from "context";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,6 +1,3 @@
-// === Module 8468: useProfilePrimaryColor ===
-
-// Module 8468 (useProfilePrimaryColor)
 import _slicedToArray from "_slicedToArray";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

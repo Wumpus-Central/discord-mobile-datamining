@@ -1,6 +1,3 @@
-// === Module 12398: getCoverImageFromActivity ===
-
-// Module 12398 (getCoverImageFromActivity)
 import { ACTIVITY_INVITE_COVER_IMAGE_SIZE as closure_2 } from "items3";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getCoverImageFromActivity.tsx");

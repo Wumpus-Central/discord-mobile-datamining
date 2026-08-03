@@ -1,6 +1,3 @@
-// === Module 10300: importDefaultResult1 ===
-
-// Module 10300 (importDefaultResult1)
 import importDefaultResult from "merge";
 import importDefaultResult1 from "merge";
 

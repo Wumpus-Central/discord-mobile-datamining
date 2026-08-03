@@ -1,6 +1,3 @@
-// === Module 12772: getFirstInstallTimeMillis ===
-
-// Module 12772 (getFirstInstallTimeMillis)
 import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;

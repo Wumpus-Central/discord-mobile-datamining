@@ -1,6 +1,3 @@
-// === Module 14875: NavigatorWithCaptchaHook ===
-
-// Module 14875 (NavigatorWithCaptchaHook)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "PlatformTypes";
 import get_ActivityIndicator from "context";

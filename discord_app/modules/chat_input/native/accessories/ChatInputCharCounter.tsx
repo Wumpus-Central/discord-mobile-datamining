@@ -1,6 +1,3 @@
-// === Module 11531: ChatInputCharCounter ===
-
-// Module 11531 (ChatInputCharCounter)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 12233: isShoppableCollectibleSku ===
-
-// Module 12233 (isShoppableCollectibleSku)
 const result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookUtils.tsx");
 
 export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stateFromStores) {

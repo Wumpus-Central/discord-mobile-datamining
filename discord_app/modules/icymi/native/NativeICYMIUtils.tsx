@@ -1,6 +1,3 @@
-// === Module 15357: pushICYMIInfoModal ===
-
-// Module 15357 (pushICYMIInfoModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/icymi/native/NativeICYMIUtils.tsx");
 
 export const pushICYMIInfoModal = function pushICYMIInfoModal(arg0) {

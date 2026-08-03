@@ -1,6 +1,3 @@
-// === Module 4536: markAccessibilityFocus ===
-
-// Module 4536 (markAccessibilityFocus)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("modules/a11y/native/markAccessibilityFocus.tsx");

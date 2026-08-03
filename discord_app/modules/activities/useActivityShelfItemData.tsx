@@ -1,6 +1,3 @@
-// === Module 15991: useActivityShelfItemData ===
-
-// Module 15991 (useActivityShelfItemData)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemData.tsx");

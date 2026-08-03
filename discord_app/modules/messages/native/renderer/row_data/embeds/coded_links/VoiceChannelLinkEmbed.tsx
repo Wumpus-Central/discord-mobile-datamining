@@ -1,6 +1,3 @@
-// === Module 12386: createVoiceChannelLinkEmbed ===
-
-// Module 12386 (createVoiceChannelLinkEmbed)
 import _slicedToArray from "_slicedToArray";
 import { Image } from "get ActivityIndicator";
 import { getGuildAcronym } from "GuildNSFWContentLevel";

@@ -1,6 +1,3 @@
-// === Module 9214: getError ===
-
-// Module 9214 (getError)
 const result = require("set").fileFinishedImporting("modules/auth/native/getError.tsx");
 
 export default function getError(arg0, arg1) {

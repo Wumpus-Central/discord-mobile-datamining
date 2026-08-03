@@ -1,6 +1,3 @@
-// === Module 8407: TieredTenureBadgeItem ===
-
-// Module 8407 (TieredTenureBadgeItem)
 import useSafeAreaInsets from "useSafeAreaInsets";
 import { View } from "trackImpression";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 14917: AgeGateUnderage ===
-
-// Module 14917 (AgeGateUnderage)
 import noop from "noop";
 import { View } from "Button";
 import { HelpdeskArticles } from "ME";

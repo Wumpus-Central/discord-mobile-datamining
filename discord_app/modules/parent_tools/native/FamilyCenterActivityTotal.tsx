@@ -1,6 +1,3 @@
-// === Module 13945: FamilyCenterActivityTotal ===
-
-// Module 13945 (FamilyCenterActivityTotal)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 14268: useTrialIntervalOptions ===
-
-// Module 14268 (useTrialIntervalOptions)
 import noop from "noop";
 import { TIER_TRIAL_INTERVALS } from "MAX_SUBSCRIPTION_TIERS";
 import { SubscriptionIntervalTypes } from "GuildFeatures";

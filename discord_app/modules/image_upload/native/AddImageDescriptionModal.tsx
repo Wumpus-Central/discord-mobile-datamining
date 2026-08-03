@@ -1,6 +1,3 @@
-// === Module 9861: AddDescription ===
-
-// Module 9861 (AddDescription)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "TextArea";

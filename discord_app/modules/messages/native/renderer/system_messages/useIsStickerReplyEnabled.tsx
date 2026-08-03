@@ -1,6 +1,3 @@
-// === Module 7784: computeIsStickerReplyEnabled ===
-
-// Module 7784 (computeIsStickerReplyEnabled)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";

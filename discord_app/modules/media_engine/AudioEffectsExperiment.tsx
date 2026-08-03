@@ -1,6 +1,3 @@
-// === Module 12978: apexExperiment ===
-
-// Module 12978 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 let obj = { probeAudioEffects: false };

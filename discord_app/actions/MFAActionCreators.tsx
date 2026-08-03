@@ -1,6 +1,3 @@
-// === Module 13794: ? ===
-
-// Module 13794
 import getVerificationKey from "getVerificationKey";
 import { Endpoints } from "ME";
 

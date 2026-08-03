@@ -1,6 +1,3 @@
-// === Module 7838: createReferralSystemMessage ===
-
-// Module 7838 (createReferralSystemMessage)
 import emitChanges from "emitChanges";
 import fetchFingerprint from "fetchFingerprint";
 import createCacheKey from "createCacheKey";

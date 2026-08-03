@@ -1,6 +1,3 @@
-// === Module 4215: applicationId ===
-
-// Module 4215 (applicationId)
 import "toJS";
 import createExecutable from "createExecutable";
 import { createExecutable } from "createExecutable";

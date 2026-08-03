@@ -1,6 +1,3 @@
-// === Module 15137: useChannelListSpecs ===
-
-// Module 15137 (useChannelListSpecs)
 import noop from "noop";
 import hairlineWidth from "hairlineWidth";
 

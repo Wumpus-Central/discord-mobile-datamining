@@ -1,6 +1,3 @@
-// === Module 6671: useCreateSubscriptionParams ===
-
-// Module 6671 (useCreateSubscriptionParams)
 import noop from "noop";
 
 const require = arg1;

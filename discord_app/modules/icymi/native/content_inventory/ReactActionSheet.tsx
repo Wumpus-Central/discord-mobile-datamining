@@ -1,6 +1,3 @@
-// === Module 15399: AddEmojiButton ===
-
-// Module 15399 (AddEmojiButton)
 import set from "set";
 import SendMessageIcon from "SendMessageIcon";
 import useWindowDimensions from "useWindowDimensions";

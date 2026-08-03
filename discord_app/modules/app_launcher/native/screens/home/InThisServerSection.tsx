@@ -1,6 +1,3 @@
-// === Module 11297: AppInThisServer ===
-
-// Module 11297 (AppInThisServer)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

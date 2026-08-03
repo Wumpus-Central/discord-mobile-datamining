@@ -1,6 +1,3 @@
-// === Module 14173: QUEST_PROGRESS_DIAMETER_BY_SIZE ===
-
-// Module 14173 (QUEST_PROGRESS_DIAMETER_BY_SIZE)
 import noop from "noop";
 import importDefaultResult from "noop";
 import { View } from "get ActivityIndicator";

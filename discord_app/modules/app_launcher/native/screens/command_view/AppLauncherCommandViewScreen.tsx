@@ -1,6 +1,3 @@
-// === Module 11344: AppLauncherCommandViewFooter ===
-
-// Module 11344 (AppLauncherCommandViewFooter)
 import closure_4 from "getIndexKey";
 import getCommandContext from "getCommandContext";
 import LinearGradient from "LinearGradient";

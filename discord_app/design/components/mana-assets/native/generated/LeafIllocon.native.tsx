@@ -1,6 +1,3 @@
-// === Module 7261: LeafIllocon ===
-
-// Module 7261 (LeafIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/LeafIllocon.native.tsx");

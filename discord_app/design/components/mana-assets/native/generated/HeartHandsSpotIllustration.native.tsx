@@ -1,6 +1,3 @@
-// === Module 7237: HeartHandsSpotIllustration ===
-
-// Module 7237 (HeartHandsSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/HeartHandsSpotIllustration.native.tsx");

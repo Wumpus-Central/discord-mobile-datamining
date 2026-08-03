@@ -1,6 +1,3 @@
-// === Module 6658: openBuyNitroPerkDetails ===
-
-// Module 6658 (openBuyNitroPerkDetails)
 import { Image } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

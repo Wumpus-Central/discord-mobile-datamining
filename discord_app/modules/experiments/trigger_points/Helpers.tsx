@@ -1,6 +1,3 @@
-// === Module 6300: registeredExperimentIds ===
-
-// Module 6300 (registeredExperimentIds)
 import initialize from "initialize";
 import { CommonTriggerPoints } from "ExperimentBuckets";
 

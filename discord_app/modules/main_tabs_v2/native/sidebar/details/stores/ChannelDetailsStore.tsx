@@ -1,6 +1,3 @@
-// === Module 9137: useChannelDetailsStore ===
-
-// Module 9137 (useChannelDetailsStore)
 import keys from "keys";
 
 let closure_2 = { isSearchActive: false, searchActiveSource: "initial" };

@@ -1,6 +1,3 @@
-// === Module 7845: useHasActiveTrial ===
-
-// Module 7845 (useHasActiveTrial)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
 import emitChanges from "emitChanges";

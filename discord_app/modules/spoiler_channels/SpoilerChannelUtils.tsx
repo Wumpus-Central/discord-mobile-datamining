@@ -1,6 +1,3 @@
-// === Module 7732: isChannelSpoilerGated ===
-
-// Module 7732 (isChannelSpoilerGated)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import initialize from "initialize";
 

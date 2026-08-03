@@ -1,6 +1,3 @@
-// === Module 15259: NsfwGateGuildSidebar ===
-
-// Module 15259 (NsfwGateGuildSidebar)
 import set from "set";
 import { View } from "getSystemLocale";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

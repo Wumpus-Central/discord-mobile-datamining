@@ -1,6 +1,3 @@
-// === Module 8913: SecureFramesExistingVerificationsHelpMessage ===
-
-// Module 8913 (SecureFramesExistingVerificationsHelpMessage)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

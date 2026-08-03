@@ -1,6 +1,3 @@
-// === Module 6755: HeaderActionButton ===
-
-// Module 6755 (HeaderActionButton)
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

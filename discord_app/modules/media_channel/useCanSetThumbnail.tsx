@@ -1,6 +1,3 @@
-// === Module 9856: useCanSetThumbnail ===
-
-// Module 9856 (useCanSetThumbnail)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

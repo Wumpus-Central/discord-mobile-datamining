@@ -1,6 +1,3 @@
-// === Module 8921: XLargeBoldIcon ===
-
-// Module 8921 (XLargeBoldIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

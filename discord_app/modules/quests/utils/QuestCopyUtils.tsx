@@ -1,6 +1,3 @@
-// === Module 9500: getContextualEntrypointHeading ===
-
-// Module 9500 (getContextualEntrypointHeading)
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 
 let c3;

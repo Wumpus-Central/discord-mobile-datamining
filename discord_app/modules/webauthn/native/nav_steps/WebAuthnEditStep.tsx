@@ -1,6 +1,3 @@
-// === Module 13787: EditCredentialModal ===
-
-// Module 13787 (EditCredentialModal)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

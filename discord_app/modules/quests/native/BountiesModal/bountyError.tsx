@@ -1,6 +1,3 @@
-// === Module 14066: set ===
-
-// Module 14066 (set)
 import { BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS as closure_3 } from "BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS";
 import set from "dispatcher";
 

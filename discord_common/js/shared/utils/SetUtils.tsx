@@ -1,6 +1,3 @@
-// === Module 1414: areSetsEqual ===
-
-// Module 1414 (areSetsEqual)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");
 
 export const areSetsEqual = function areSetsEqual(set, set1) {

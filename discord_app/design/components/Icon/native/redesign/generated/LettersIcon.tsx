@@ -1,6 +1,3 @@
-// === Module 6650: LettersIcon ===
-
-// Module 6650 (LettersIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

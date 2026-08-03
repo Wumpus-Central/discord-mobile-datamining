@@ -1,6 +1,3 @@
-// === Module 9611: shouldRefreshAttachmentUrl ===
-
-// Module 9611 (shouldRefreshAttachmentUrl)
 import sendRequest from "sendRequest";
 import { Endpoints } from "ME";
 import set from "set";

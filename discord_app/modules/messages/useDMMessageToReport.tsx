@@ -1,6 +1,3 @@
-// === Module 11700: useDMMessageToReport ===
-
-// Module 11700 (useDMMessageToReport)
 const result = require("loadMessageRequestData").fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
 
 export const useDMMessageToReport = function useDMMessageToReport(channel, id, arg2) {

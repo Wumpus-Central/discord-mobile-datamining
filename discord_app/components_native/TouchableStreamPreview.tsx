@@ -1,6 +1,3 @@
-// === Module 10863: StreamPreviewContainer ===
-
-// Module 10863 (StreamPreviewContainer)
 import transitionToStream from "transitionToStream";
 import get_ActivityIndicator from "module_5005";
 import set from "set";

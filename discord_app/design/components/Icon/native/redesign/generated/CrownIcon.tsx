@@ -1,6 +1,3 @@
-// === Module 9096: CrownIcon ===
-
-// Module 9096 (CrownIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

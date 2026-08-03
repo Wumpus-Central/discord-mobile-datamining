@@ -1,6 +1,3 @@
-// === Module 8869: VoiceBadges ===
-
-// Module 8869 (VoiceBadges)
 import getSystemLocale from "getSystemLocale";
 import sortActivity from "sortActivity";
 import jsxProd from "Button";

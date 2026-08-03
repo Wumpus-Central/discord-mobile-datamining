@@ -1,6 +1,3 @@
-// === Module 7015: EmojiSlotsAbstractUI ===
-
-// Module 7015 (EmojiSlotsAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/EmojiSlotsAbstractUI.native.tsx");

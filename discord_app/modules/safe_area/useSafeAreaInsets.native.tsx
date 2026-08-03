@@ -1,6 +1,3 @@
-// === Module 1581: useSafeAreaInsets ===
-
-// Module 1581 (useSafeAreaInsets)
 const result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
 
 export default function useSafeAreaInsets() {

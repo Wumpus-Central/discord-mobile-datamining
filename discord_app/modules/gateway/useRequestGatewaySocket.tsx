@@ -1,6 +1,3 @@
-// === Module 13633: useRequestGatewaySocket ===
-
-// Module 13633 (useRequestGatewaySocket)
 import noop from "noop";
 
 const result = require("setRequestedBy").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");

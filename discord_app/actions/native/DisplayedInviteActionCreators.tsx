@@ -1,6 +1,3 @@
-// === Module 8659: showInvite ===
-
-// Module 8659 (showInvite)
 const result = require("generateAcceptInviteOptions").fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 
 export const showInvite = function showInvite(code, username, arg2) {

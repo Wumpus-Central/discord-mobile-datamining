@@ -1,6 +1,3 @@
-// === Module 10372: showNotification ===
-
-// Module 10372 (showNotification)
 import set from "set";
 import get_ActivityIndicator from "get ActivityIndicator";
 import refreshSourceMapCookie from "refreshSourceMapCookie";

@@ -1,6 +1,3 @@
-// === Module 5688: useIsVibegrationsGuildEnabled ===
-
-// Module 5688 (useIsVibegrationsGuildEnabled)
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 import ApexExperiment from "ApexExperiment";
 

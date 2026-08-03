@@ -1,6 +1,3 @@
-// === Module 15654: CoachmarkImage ===
-
-// Module 15654 (CoachmarkImage)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

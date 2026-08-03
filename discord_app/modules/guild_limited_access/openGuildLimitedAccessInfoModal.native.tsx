@@ -1,6 +1,3 @@
-// === Module 12991: openGuildLimitedAccessInfoModal ===
-
-// Module 12991 (openGuildLimitedAccessInfoModal)
 import "noop";
 import { Keyboard } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

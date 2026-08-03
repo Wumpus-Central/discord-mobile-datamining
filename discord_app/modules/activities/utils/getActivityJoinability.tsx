@@ -1,6 +1,3 @@
-// === Module 12039: getActivityJoinability ===
-
-// Module 12039 (getActivityJoinability)
 import ME from "ME";
 
 let c3;

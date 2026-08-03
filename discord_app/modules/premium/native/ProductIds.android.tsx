@@ -1,6 +1,3 @@
-// === Module 5679: SubscriptionPlans ===
-
-// Module 5679 (SubscriptionPlans)
 import GuildFeatures from "GuildFeatures";
 import isMetaQuest from "isMetaQuest";
 

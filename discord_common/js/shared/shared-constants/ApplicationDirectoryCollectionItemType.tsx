@@ -1,6 +1,3 @@
-// === Module 8033: set ===
-
-// Module 8033 (set)
 import set from "set";
 
 const obj = { ALL: null };

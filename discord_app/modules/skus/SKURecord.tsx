@@ -1,6 +1,3 @@
-// === Module 4232: createFromServer ===
-
-// Module 4232 (createFromServer)
 import "toJS";
 import createExecutable from "createExecutable";
 import { THE_GAME_AWARD_WINNER_SKUS as closure_4 } from "set";

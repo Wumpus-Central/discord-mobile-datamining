@@ -1,6 +1,3 @@
-// === Module 12184: useIsMobileGameCollectionExperimentEnabled ===
-
-// Module 12184 (useIsMobileGameCollectionExperimentEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

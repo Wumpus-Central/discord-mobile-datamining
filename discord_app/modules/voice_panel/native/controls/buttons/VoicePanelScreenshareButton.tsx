@@ -1,6 +1,3 @@
-// === Module 16043: MobilePhoneShareIcon ===
-
-// Module 16043 (MobilePhoneShareIcon)
 import set from "set";
 import { Image } from "AnimatedButtonWrapper";
 import ensureGuildLoaded from "ensureGuildLoaded";

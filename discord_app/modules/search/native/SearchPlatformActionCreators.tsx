@@ -1,6 +1,3 @@
-// === Module 11474: ? ===
-
-// Module 11474
 import { SearchTypes } from "ME";
 import handleSearchQuery from "handleSearchQuery";
 import prototype from "prototype";

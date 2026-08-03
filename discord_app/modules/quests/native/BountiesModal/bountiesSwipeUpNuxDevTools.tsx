@@ -1,6 +1,3 @@
-// === Module 14060: FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY ===
-
-// Module 14060 (FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY)
 let c2 = "devtools-force-bounties-swipe-up-nux";
 const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/bountiesSwipeUpNuxDevTools.tsx");
 

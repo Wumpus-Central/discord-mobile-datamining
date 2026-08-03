@@ -1,6 +1,3 @@
-// === Module 712: Themes ===
-
-// Module 712 (Themes)
 const Themes = require("items")._private.Themes;
 const SemanticColors = require("_private")._private.SemanticColors;
 const SemanticColorExperiments = require("_private")._private.SemanticColorExperiments;

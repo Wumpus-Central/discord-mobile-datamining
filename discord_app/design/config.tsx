@@ -1,6 +1,3 @@
-// === Module 5637: designConfig ===
-
-// Module 5637 (designConfig)
 const obj = {
   getDefaultLinkInterceptor() {
 

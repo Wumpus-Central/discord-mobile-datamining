@@ -1,6 +1,3 @@
-// === Module 8063: StaticEffect ===
-
-// Module 8063 (StaticEffect)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "useProfileEffect";

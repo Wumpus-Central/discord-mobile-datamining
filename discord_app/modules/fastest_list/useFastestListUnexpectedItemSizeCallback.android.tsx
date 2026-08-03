@@ -1,6 +1,3 @@
-// === Module 9253: useFastestListUnexpectedItemSizeCallback ===
-
-// Module 9253 (useFastestListUnexpectedItemSizeCallback)
 import noop from "noop";
 
 const require = arg1;

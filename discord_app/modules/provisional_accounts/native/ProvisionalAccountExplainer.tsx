@@ -1,6 +1,3 @@
-// === Module 11734: ChatProvisionalAccountExplainerCard ===
-
-// Module 11734 (ChatProvisionalAccountExplainerCard)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

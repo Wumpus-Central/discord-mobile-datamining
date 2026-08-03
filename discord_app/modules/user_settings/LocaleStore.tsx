@@ -1,6 +1,3 @@
-// === Module 1946: _getSystemLocale ===
-
-// Module 1946 (_getSystemLocale)
 import initialize from "initialize";
 import { setAppLocale } from "_setAppLocale";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";

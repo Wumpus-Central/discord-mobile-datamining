@@ -1,6 +1,3 @@
-// === Module 8300: getNoResultsAltSource ===
-
-// Module 8300 (getNoResultsAltSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

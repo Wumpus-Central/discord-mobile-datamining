@@ -1,6 +1,3 @@
-// === Module 10155: openLoadingIndicatorDebugBody ===
-
-// Module 10155 (openLoadingIndicatorDebugBody)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_4054";
 import { View } from "Text";

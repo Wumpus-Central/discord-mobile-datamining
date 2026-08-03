@@ -1,6 +1,3 @@
-// === Module 15171: shouldSkipSection ===
-
-// Module 15171 (shouldSkipSection)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "module_4054";
 import get_ActivityIndicator from "shallowEqual";

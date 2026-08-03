@@ -1,6 +1,3 @@
-// === Module 4278: updateAveragedStatsHelper ===
-
-// Module 4278 (updateAveragedStatsHelper)
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import { Store } from "initialize";

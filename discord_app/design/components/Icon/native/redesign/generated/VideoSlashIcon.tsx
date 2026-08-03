@@ -1,6 +1,3 @@
-// === Module 12051: VideoSlashIcon ===
-
-// Module 12051 (VideoSlashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

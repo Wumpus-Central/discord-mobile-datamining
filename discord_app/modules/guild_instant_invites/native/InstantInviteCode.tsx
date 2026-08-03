@@ -1,6 +1,3 @@
-// === Module 10214: InstantInviteDetails ===
-
-// Module 10214 (InstantInviteDetails)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { createChannelRecordFromInvite as closure_5 } from "createChannelRecord";

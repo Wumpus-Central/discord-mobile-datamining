@@ -1,6 +1,3 @@
-// === Module 16034: VoicePanelNsfwAlert ===
-
-// Module 16034 (VoicePanelNsfwAlert)
 import "noop";
 import { isGuildNSFW } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

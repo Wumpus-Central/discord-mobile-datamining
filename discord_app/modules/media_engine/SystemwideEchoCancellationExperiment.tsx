@@ -1,6 +1,3 @@
-// === Module 12921: getSystemwideEchoCancellationExperimentConfig ===
-
-// Module 12921 (getSystemwideEchoCancellationExperimentConfig)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

@@ -1,6 +1,3 @@
-// === Module 9951: keyExtractor ===
-
-// Module 9951 (keyExtractor)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "set";

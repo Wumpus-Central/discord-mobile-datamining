@@ -1,6 +1,3 @@
-// === Module 4648: TIMESTAMP_FORMATS ===
-
-// Module 4648 (TIMESTAMP_FORMATS)
 let obj = {
   t(date) {
     return require(3863) /* resetCache */.dateFormat(date, "LT");

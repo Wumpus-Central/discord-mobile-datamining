@@ -1,6 +1,3 @@
-// === Module 10736: ChannelCallNavigatorIcon ===
-
-// Module 10736 (ChannelCallNavigatorIcon)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { resetFocusTimer } from "VoiceChatDrawerState";

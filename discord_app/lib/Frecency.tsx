@@ -1,6 +1,3 @@
-// === Module 4277: DEFAULT_FRECENCY ===
-
-// Module 4277 (DEFAULT_FRECENCY)
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
   return Math.ceil(arg0 * (arg1 / numOfRecentUses.numOfRecentUses));
 }

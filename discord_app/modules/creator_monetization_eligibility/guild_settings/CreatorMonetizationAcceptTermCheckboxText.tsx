@@ -1,6 +1,3 @@
-// === Module 16577: getCreatorMonetizationAcceptTermsCheckboxText ===
-
-// Module 16577 (getCreatorMonetizationAcceptTermsCheckboxText)
 import { HelpdeskArticles } from "ME";
 
 const result = require("combined").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/CreatorMonetizationAcceptTermCheckboxText.tsx");

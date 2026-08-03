@@ -1,6 +1,3 @@
-// === Module 14721: onNotifyFriendsOnProfileUpdateSettingsChanged ===
-
-// Module 14721 (onNotifyFriendsOnProfileUpdateSettingsChanged)
 import { NotificationSettingsUpdateType as closure_3 } from "AccountNotificationFlags";
 import { AnalyticEvents } from "ME";
 

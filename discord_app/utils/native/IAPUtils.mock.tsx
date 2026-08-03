@@ -1,6 +1,3 @@
-// === Module 6357: items ===
-
-// Module 6357 (items)
 const result = require("set").fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 
 export default {

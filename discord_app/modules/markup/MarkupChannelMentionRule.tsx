@@ -1,6 +1,3 @@
-// === Module 4634: getChannel ===
-
-// Module 4634 (getChannel)
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

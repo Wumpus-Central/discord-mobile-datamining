@@ -1,6 +1,3 @@
-// === Module 10876: useStageChannelParticipantsList ===
-
-// Module 10876 (useStageChannelParticipantsList)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getParticipants from "getParticipants";

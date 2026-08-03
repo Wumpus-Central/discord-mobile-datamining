@@ -1,6 +1,3 @@
-// === Module 11416: EnteringAnimation ===
-
-// Module 11416 (EnteringAnimation)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

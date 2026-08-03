@@ -1,6 +1,3 @@
-// === Module 10890: getMatchData ===
-
-// Module 10890 (getMatchData)
 import ME from "ME";
 import identity from "identity";
 

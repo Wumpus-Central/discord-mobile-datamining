@@ -1,6 +1,3 @@
-// === Module 11477: setAutocompleteOptions ===
-
-// Module 11477 (setAutocompleteOptions)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Permissions } from "ME";
 import { Store } from "initialize";

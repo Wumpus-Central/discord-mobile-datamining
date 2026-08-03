@@ -1,6 +1,3 @@
-// === Module 8969: error ===
-
-// Module 8969 (error)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8201: enforcing ===
-
-// Module 8201 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeShareManagerModule");

@@ -1,6 +1,3 @@
-// === Module 1377: handleStageInstanceCreateOrUpdate ===
-
-// Module 1377 (handleStageInstanceCreateOrUpdate)
 import { GuildScheduledEventPrivacyLevel as closure_0 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { Store } from "initialize";
 

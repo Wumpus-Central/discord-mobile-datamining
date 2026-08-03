@@ -1,6 +1,3 @@
-// === Module 15659: ConnectedCreateThreadHeaderButton ===
-
-// Module 15659 (ConnectedCreateThreadHeaderButton)
 import importAllResult from "useSafeAreaInsets";
 import { View } from "useNavigatorBackPressHandler";
 import ensureGuildLoaded from "ensureGuildLoaded";

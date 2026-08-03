@@ -1,6 +1,3 @@
-// === Module 16755: externalFingerprint ===
-
-// Module 16755 (externalFingerprint)
 import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;

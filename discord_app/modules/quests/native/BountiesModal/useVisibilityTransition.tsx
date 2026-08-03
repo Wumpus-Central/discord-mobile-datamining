@@ -1,6 +1,3 @@
-// === Module 14057: useVisibilityTransition ===
-
-// Module 14057 (useVisibilityTransition)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

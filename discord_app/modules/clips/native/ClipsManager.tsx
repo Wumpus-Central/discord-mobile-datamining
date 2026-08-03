@@ -1,6 +1,3 @@
-// === Module 16665: showClipsToast ===
-
-// Module 16665 (showClipsToast)
 import { CLIPS_TOAST_DURATION } from "result";
 import "handleRTCConnectionState";
 

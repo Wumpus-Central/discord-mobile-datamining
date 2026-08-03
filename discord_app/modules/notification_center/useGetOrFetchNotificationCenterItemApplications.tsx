@@ -1,6 +1,3 @@
-// === Module 15307: set ===
-
-// Module 15307 (set)
 import noop from "noop";
 import set from "useGetOrFetchApplications";
 

@@ -1,6 +1,3 @@
-// === Module 10371: BugReporterFeatureActionSheet ===
-
-// Module 10371 (BugReporterFeatureActionSheet)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "SearchField";
 import { View } from "RedesignBottomSheetTitleHeaderBase";

@@ -1,6 +1,3 @@
-// === Module 5055: initialize ===
-
-// Module 5055 (initialize)
 import { PersistedStore } from "initialize";
 
 let obj = { topEmojisByGuildId: {} };

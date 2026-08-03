@@ -1,6 +1,3 @@
-// === Module 15690: WebhookItem ===
-
-// Module 15690 (WebhookItem)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import importAllResult from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";

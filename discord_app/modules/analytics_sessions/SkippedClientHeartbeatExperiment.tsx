@@ -1,6 +1,3 @@
-// === Module 5733: shouldLogClientHeartbeatSkipped ===
-
-// Module 5733 (shouldLogClientHeartbeatSkipped)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

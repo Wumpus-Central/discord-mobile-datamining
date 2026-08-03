@@ -1,6 +1,3 @@
-// === Module 4705: ImageIcon ===
-
-// Module 4705 (ImageIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

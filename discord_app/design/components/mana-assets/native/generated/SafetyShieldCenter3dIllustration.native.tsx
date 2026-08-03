@@ -1,6 +1,3 @@
-// === Module 7437: SafetyShieldCenter3dIllustration ===
-
-// Module 7437 (SafetyShieldCenter3dIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/SafetyShieldCenter3dIllustration.native.tsx");

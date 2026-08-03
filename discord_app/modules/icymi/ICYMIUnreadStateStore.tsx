@@ -1,6 +1,3 @@
-// === Module 8187: initialize ===
-
-// Module 8187 (initialize)
 import { DeviceSettingsStore } from "initialize";
 
 const require = arg1;

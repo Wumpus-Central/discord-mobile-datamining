@@ -1,6 +1,3 @@
-// === Module 11040: canToggleCommunicationDisableOnUser ===
-
-// Module 11040 (canToggleCommunicationDisableOnUser)
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

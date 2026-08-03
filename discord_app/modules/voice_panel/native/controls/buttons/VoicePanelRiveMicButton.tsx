@@ -1,6 +1,3 @@
-// === Module 10812: VoicePanelRiveMicButton ===
-
-// Module 10812 (VoicePanelRiveMicButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

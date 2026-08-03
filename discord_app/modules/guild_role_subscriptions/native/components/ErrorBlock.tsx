@@ -1,6 +1,3 @@
-// === Module 11397: ErrorBlock ===
-
-// Module 11397 (ErrorBlock)
 import "noop";
 import { jsx } from "jsxProd";
 

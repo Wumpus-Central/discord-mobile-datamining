@@ -1,6 +1,3 @@
-// === Module 6305: PremiumActivatedAlert ===
-
-// Module 6305 (PremiumActivatedAlert)
 import "registerAsset";
 import get_ActivityIndicator from "registerAsset";
 import { SubscriptionStatusTypes } from "ME";

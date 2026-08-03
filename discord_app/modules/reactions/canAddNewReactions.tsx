@@ -1,6 +1,3 @@
-// === Module 10001: ? ===
-
-// Module 10001
 import recomputeGuild from "recomputeGuild";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";

@@ -1,6 +1,3 @@
-// === Module 11457: DoubleTapToReactChatInputBannerInner ===
-
-// Module 11457 (DoubleTapToReactChatInputBannerInner)
 import SelectedDismissibleContent from "SelectedDismissibleContent";
 import encodeProperties from "encodeProperties";
 import { View } from "XSmallIcon";

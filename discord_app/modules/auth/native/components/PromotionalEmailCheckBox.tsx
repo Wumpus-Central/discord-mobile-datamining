@@ -1,6 +1,3 @@
-// === Module 14916: PromotionalEmailCheckBox ===
-
-// Module 14916 (PromotionalEmailCheckBox)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import setPromoEmailConsentState from "setPromoEmailConsentState";

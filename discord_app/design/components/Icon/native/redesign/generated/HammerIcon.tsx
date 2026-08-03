@@ -1,6 +1,3 @@
-// === Module 9033: HammerIcon ===
-
-// Module 9033 (HammerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

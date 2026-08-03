@@ -1,6 +1,3 @@
-// === Module 8836: useScaledRowHeight ===
-
-// Module 8836 (useScaledRowHeight)
 let result = require("Themes").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx");
 
 export default function useScaledRowHeight() {

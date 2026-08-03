@@ -1,6 +1,3 @@
-// === Module 16309: isNativeAppStoreAgeSignalsEnabled ===
-
-// Module 16309 (isNativeAppStoreAgeSignalsEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

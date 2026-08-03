@@ -1,6 +1,3 @@
-// === Module 10335: NotificationSettingsMockMessage ===
-
-// Module 10335 (NotificationSettingsMockMessage)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

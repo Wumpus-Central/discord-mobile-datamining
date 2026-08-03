@@ -1,6 +1,3 @@
-// === Module 8735: getProductName ===
-
-// Module 8735 (getProductName)
 const result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");
 
 export const getProductName = function getProductName(product) {

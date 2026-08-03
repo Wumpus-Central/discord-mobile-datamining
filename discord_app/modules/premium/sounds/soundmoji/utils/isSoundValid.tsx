@@ -1,6 +1,3 @@
-// === Module 4644: isSoundValid ===
-
-// Module 4644 (isSoundValid)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";

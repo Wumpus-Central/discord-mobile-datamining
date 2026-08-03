@@ -1,6 +1,3 @@
-// === Module 11027: MentionableSelectComponentActionSheet ===
-
-// Module 11027 (MentionableSelectComponentActionSheet)
 import DiscordTag from "DiscordTag";
 import { View } from "ShieldUserIcon";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

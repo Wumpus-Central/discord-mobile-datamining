@@ -1,6 +1,3 @@
-// === Module 8137: MediaModal ===
-
-// Module 8137 (MediaModal)
 import IMPACT_LIGHT from "IMPACT_LIGHT";
 import get_ActivityIndicator from "handleOrientationChange";
 import module_8138 from "module_8138";

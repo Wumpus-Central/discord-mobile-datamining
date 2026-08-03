@@ -1,6 +1,3 @@
-// === Module 10972: trackApplicationOpen ===
-
-// Module 10972 (trackApplicationOpen)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/trackApplicationOpen.tsx");

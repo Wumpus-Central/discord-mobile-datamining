@@ -1,6 +1,3 @@
-// === Module 14557: useBugReporterExperimentSettingPredicate ===
-
-// Module 14557 (useBugReporterExperimentSettingPredicate)
 import zustandStore from "zustandStore";
 import createToggle from "createToggle";
 

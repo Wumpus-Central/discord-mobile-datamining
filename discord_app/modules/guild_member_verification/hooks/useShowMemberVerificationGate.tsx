@@ -1,6 +1,3 @@
-// === Module 4680: shouldShowMembershipVerificationGate ===
-
-// Module 4680 (shouldShowMembershipVerificationGate)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

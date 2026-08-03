@@ -1,6 +1,3 @@
-// === Module 15000: areHomeDrawerGuildTypingStatesEqual ===
-
-// Module 15000 (areHomeDrawerGuildTypingStatesEqual)
 import storeThread from "storeThread";
 import { isThread } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

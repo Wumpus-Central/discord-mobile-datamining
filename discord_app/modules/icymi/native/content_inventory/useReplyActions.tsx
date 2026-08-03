@@ -1,6 +1,3 @@
-// === Module 15398: useReplyActions ===
-
-// Module 15398 (useReplyActions)
 import set from "set";
 import getSystemLocale from "getSystemLocale";
 import ensureGuildLoaded from "ensureGuildLoaded";

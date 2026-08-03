@@ -1,6 +1,3 @@
-// === Module 10161: useIsForumChannelSearchActive ===
-
-// Module 10161 (useIsForumChannelSearchActive)
 import initialize from "initialize";
 
 const require = arg1;

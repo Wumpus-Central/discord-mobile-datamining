@@ -1,6 +1,3 @@
-// === Module 16520: getIntroHeaderSource ===
-
-// Module 16520 (getIntroHeaderSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

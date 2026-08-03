@@ -1,6 +1,3 @@
-// === Module 6585: fetchCurrentAppIcon ===
-
-// Module 6585 (fetchCurrentAppIcon)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "ME";
 import noop from "noop";

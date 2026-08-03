@@ -1,6 +1,3 @@
-// === Module 11176: RefreshChatInputCoachmark ===
-
-// Module 11176 (RefreshChatInputCoachmark)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";

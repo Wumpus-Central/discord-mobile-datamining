@@ -1,6 +1,3 @@
-// === Module 16051: GameConsoleAccountButton ===
-
-// Module 16051 (GameConsoleAccountButton)
 import SoundboardIcon from "SoundboardIcon";
 import TableRowGroupTitle from "TableRowGroupTitle";
 import participantFromServer from "participantFromServer";

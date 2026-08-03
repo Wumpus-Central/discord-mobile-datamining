@@ -1,6 +1,3 @@
-// === Module 9805: CancelButton ===
-
-// Module 9805 (CancelButton)
 import BalanceWidgetPill from "BalanceWidgetPill";
 import _toArray from "_toArray";
 import importDefaultResult1 from "importDefaultResult1";

@@ -1,6 +1,3 @@
-// === Module 8885: initialize ===
-
-// Module 8885 (initialize)
 import { PersistedStore } from "initialize";
 
 const require = arg1;

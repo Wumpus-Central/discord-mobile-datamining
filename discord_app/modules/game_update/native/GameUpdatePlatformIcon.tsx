@@ -1,6 +1,3 @@
-// === Module 11939: GameUpdatePlatformIcon ===
-
-// Module 11939 (GameUpdatePlatformIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15349: ICYMICustomScoreChannelRow ===
-
-// Module 15349 (ICYMICustomScoreChannelRow)
 import _slicedToArray from "_slicedToArray";
 import TableRowInner from "TableRowInner";
 import { View } from "asyncRequireImpl";

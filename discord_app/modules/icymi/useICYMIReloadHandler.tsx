@@ -1,6 +1,3 @@
-// === Module 15379: useICYMIReloadHandler ===
-
-// Module 15379 (useICYMIReloadHandler)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import noop from "noop";
 

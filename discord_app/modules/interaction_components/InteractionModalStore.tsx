@@ -1,6 +1,3 @@
-// === Module 13481: getModalState ===
-
-// Module 13481 (getModalState)
 import { Store } from "initialize";
 
 const require = arg1;

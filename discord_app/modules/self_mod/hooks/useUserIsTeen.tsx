@@ -1,6 +1,3 @@
-// === Module 7713: useUserIsTeen ===
-
-// Module 7713 (useUserIsTeen)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

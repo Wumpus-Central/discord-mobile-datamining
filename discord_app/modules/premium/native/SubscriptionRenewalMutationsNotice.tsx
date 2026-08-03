@@ -1,6 +1,3 @@
-// === Module 6551: SubscriptionRenewalMutationsNotice ===
-
-// Module 6551 (SubscriptionRenewalMutationsNotice)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { isNoneSubscription } from "createFromServer";

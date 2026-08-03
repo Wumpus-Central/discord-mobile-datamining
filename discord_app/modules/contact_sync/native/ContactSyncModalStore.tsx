@@ -1,6 +1,3 @@
-// === Module 11782: ContactSyncModes ===
-
-// Module 11782 (ContactSyncModes)
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContactPermissions } from "ContactSyncLandingPage";

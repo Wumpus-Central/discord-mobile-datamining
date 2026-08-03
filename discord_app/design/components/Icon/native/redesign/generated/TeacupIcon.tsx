@@ -1,6 +1,3 @@
-// === Module 13679: TeacupIcon ===
-
-// Module 13679 (TeacupIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

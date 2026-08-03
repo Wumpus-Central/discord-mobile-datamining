@@ -1,6 +1,3 @@
-// === Module 13939: FamilyCenterActivityCardPrefaceText ===
-
-// Module 13939 (FamilyCenterActivityCardPrefaceText)
 import importAllResult from "asyncRequireImpl";
 import { View } from "module_4399";
 import items from "items";

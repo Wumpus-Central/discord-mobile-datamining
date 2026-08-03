@@ -1,6 +1,3 @@
-// === Module 11975: ? ===
-
-// Module 11975
 import importAllResult from "_copy";
 import { View } from "useProfileTheme";
 import mergeGuildAvatar from "mergeGuildAvatar";

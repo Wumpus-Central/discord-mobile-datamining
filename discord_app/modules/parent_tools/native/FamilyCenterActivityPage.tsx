@@ -1,6 +1,3 @@
-// === Module 13922: FamilyCenterActivityPage ===
-
-// Module 13922 (FamilyCenterActivityPage)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

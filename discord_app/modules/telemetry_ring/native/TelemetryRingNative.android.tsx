@@ -1,6 +1,3 @@
-// === Module 13270: TelemetryChannel ===
-
-// Module 13270 (TelemetryChannel)
 const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingNative.android.tsx");
 
 export default {

@@ -1,6 +1,3 @@
-// === Module 8831: styles ===
-
-// Module 8831 (styles)
 import noop from "noop";
 import createCacheKey from "createCacheKey";
 

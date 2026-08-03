@@ -1,6 +1,3 @@
-// === Module 14364: SettingsAccessibilityScreen ===
-
-// Module 14364 (SettingsAccessibilityScreen)
 import noop from "noop";
 import updateExistingSettings from "updateExistingSettings";
 import { MobileSetting } from "MobileSetting";

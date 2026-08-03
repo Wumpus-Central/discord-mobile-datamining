@@ -1,6 +1,3 @@
-// === Module 16787: AppShare ===
-
-// Module 16787 (AppShare)
 import _slicedToArray from "_slicedToArray";
 import isMetaQuest from "isMetaQuest";
 import get_ActivityIndicator from "GestureWrapper";

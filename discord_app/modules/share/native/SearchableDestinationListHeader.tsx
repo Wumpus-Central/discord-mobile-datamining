@@ -1,6 +1,3 @@
-// === Module 9918: SearchableDestinationListHeader ===
-
-// Module 9918 (SearchableDestinationListHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

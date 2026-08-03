@@ -1,6 +1,3 @@
-// === Module 14237: EnrolledBodyWatchTask ===
-
-// Module 14237 (EnrolledBodyWatchTask)
 import closure_3 from "QUEST_DOCK_COLLAPSED_HEIGHT";
 import importAllResult from "useSafeAreaInsets";
 import { View } from "useQuestRewardClaimHandler";

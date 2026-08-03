@@ -1,6 +1,3 @@
-// === Module 8963: getApplicationDetailsText ===
-
-// Module 8963 (getApplicationDetailsText)
 import { MarketingURLs } from "ME";
 
 let result = require("getSystemLocale").fileFinishedImporting("modules/oauth2/Utils.tsx");

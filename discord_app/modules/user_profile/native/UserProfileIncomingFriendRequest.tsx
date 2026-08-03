@@ -1,6 +1,3 @@
-// === Module 12237: UserProfileIncomingFriendRequest ===
-
-// Module 12237 (UserProfileIncomingFriendRequest)
 import noop from "noop";
 import { View } from "set";
 import jsxProd from "jsxProd";

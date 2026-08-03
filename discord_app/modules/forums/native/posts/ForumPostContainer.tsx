@@ -1,6 +1,3 @@
-// === Module 11212: useForumPostContainerPressedIn ===
-
-// Module 11212 (useForumPostContainerPressedIn)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

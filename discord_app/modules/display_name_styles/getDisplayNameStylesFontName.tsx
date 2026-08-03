@@ -1,6 +1,3 @@
-// === Module 13733: getDisplayNameStylesFontName ===
-
-// Module 13733 (getDisplayNameStylesFontName)
 const obj = {};
 obj[require("DisplayNameFont").DisplayNameFont.DEFAULT] = require("messagesProxy").ZEL6mz;
 obj[require("DisplayNameFont").DisplayNameFont.CHERRY_BOMB] = require("messagesProxy").rN7cuX;

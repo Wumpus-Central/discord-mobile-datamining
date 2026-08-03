@@ -1,6 +1,3 @@
-// === Module 14851: ScrollBenchmark ===
-
-// Module 14851 (ScrollBenchmark)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 6700: createFromServer ===
-
-// Module 6700 (createFromServer)
 import "toJS";
 
 let InviteRecord;

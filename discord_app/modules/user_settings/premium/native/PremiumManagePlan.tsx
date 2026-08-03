@@ -1,6 +1,3 @@
-// === Module 12547: ManagePlanHeader ===
-
-// Module 12547 (ManagePlanHeader)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import AccessibilityAnnouncer from "AccessibilityAnnouncer";
 import Themes from "Themes";

@@ -1,6 +1,3 @@
-// === Module 15871: BaseActivityPanelFocusedView ===
-
-// Module 15871 (BaseActivityPanelFocusedView)
 import importAllResult from "wrapChildrenDefault";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import ensureGuildLoaded from "ensureGuildLoaded";

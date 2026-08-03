@@ -1,6 +1,3 @@
-// === Module 15816: TabButton ===
-
-// Module 15816 (TabButton)
 import set from "set";
 import importAllResult from "jsxProd";
 import { View } from "updateVoiceState";

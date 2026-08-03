@@ -1,6 +1,3 @@
-// === Module 10290: NotificationWrapper ===
-
-// Module 10290 (NotificationWrapper)
 import DISCORD_EPOCH from "DISCORD_EPOCH";
 import NotificationAvatar from "NotificationAvatar";
 import get_ActivityIndicator from "AlertNotification";

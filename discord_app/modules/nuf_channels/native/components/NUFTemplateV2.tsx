@@ -1,6 +1,3 @@
-// === Module 12845: NUFActionSheetTemplate ===
-
-// Module 12845 (NUFActionSheetTemplate)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

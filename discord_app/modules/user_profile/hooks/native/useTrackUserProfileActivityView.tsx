@@ -1,6 +1,3 @@
-// === Module 12026: useTrackUserProfileActivityView ===
-
-// Module 12026 (useTrackUserProfileActivityView)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import map from "map";

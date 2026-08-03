@@ -1,6 +1,3 @@
-// === Module 16754: _handleIncomingURL ===
-
-// Module 16754 (_handleIncomingURL)
 import timestamp from "timestamp";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";

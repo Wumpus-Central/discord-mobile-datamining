@@ -1,6 +1,3 @@
-// === Module 14366: useRoleColorSettingValue ===
-
-// Module 14366 (useRoleColorSettingValue)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";

@@ -1,6 +1,3 @@
-// === Module 12604: GiftingSectionTitle ===
-
-// Module 12604 (GiftingSectionTitle)
 import getSystemLocale from "getSystemLocale";
 import importAllResult from "useBlockedPaymentsConfig";
 import get_ActivityIndicator from "apply";

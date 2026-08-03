@@ -1,6 +1,3 @@
-// === Module 8534: getOpenCriticTierText ===
-
-// Module 8534 (getOpenCriticTierText)
 const result = require("metadata").fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {

@@ -1,6 +1,3 @@
-// === Module 13185: RoleDot ===
-
-// Module 13185 (RoleDot)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

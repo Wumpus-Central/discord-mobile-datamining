@@ -1,6 +1,3 @@
-// === Module 14205: PremiumRewardFillGradient ===
-
-// Module 14205 (PremiumRewardFillGradient)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

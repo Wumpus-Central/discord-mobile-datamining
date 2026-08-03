@@ -1,6 +1,3 @@
-// === Module 10002: handleMessagesTapImage ===
-
-// Module 10002 (handleMessagesTapImage)
 import processMessage from "processMessage";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

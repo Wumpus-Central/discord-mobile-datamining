@@ -1,6 +1,3 @@
-// === Module 16162: _backgroundSync ===
-
-// Module 16162 (_backgroundSync)
 import _slicedToArray from "_slicedToArray";
 import getState from "getState";
 import createChannelRecord from "createChannelRecord";

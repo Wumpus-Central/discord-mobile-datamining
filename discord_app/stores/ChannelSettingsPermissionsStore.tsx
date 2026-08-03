@@ -1,6 +1,3 @@
-// === Module 15673: init ===
-
-// Module 15673 (init)
 import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";

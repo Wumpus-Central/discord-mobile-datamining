@@ -1,6 +1,3 @@
-// === Module 10115: prototype ===
-
-// Module 10115 (prototype)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 15151: useShouldShowGuildThemeMemberCoachmark ===
-
-// Module 15151 (useShouldShowGuildThemeMemberCoachmark)
 import { GUILD_THEME_POWERUP_BOOST_PRICE as closure_3 } from "BoostedGuildTiers";
 
 const result = require("experiment").fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");

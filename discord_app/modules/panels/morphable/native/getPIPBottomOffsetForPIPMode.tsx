@@ -1,6 +1,3 @@
-// === Module 15759: PIP_WINDOW_OFFSET ===
-
-// Module 15759 (PIP_WINDOW_OFFSET)
 import { PIP_WINDOW_OFFSET } from "MIN_PAN_GESTURE_MOVE";
 
 const fn = function _(arg0) {

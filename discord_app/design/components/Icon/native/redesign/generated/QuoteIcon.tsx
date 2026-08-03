@@ -1,6 +1,3 @@
-// === Module 12076: QuoteIcon ===
-
-// Module 12076 (QuoteIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

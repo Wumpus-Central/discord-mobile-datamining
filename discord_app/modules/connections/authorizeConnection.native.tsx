@@ -1,6 +1,3 @@
-// === Module 8974: authorizeConnection ===
-
-// Module 8974 (authorizeConnection)
 import { GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE as closure_3 } from "OperatorTypes";
 import { PlatformTypes } from "ME";
 

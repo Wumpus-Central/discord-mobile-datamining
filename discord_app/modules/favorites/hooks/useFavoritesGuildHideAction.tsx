@@ -1,6 +1,3 @@
-// === Module 15142: useFavoritesGuildHideAction ===
-
-// Module 15142 (useFavoritesGuildHideAction)
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 import { Routes } from "ME";

@@ -1,6 +1,3 @@
-// === Module 15402: CustomStatusEntryRow ===
-
-// Module 15402 (CustomStatusEntryRow)
 import "noop";
 import { jsx } from "jsxProd";
 

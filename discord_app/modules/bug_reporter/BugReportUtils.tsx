@@ -1,6 +1,3 @@
-// === Module 10361: _fetchBugReportConfig ===
-
-// Module 10361 (_fetchBugReportConfig)
 import _uploadDebugLogFiles from "_uploadDebugLogFiles";
 import handleThemeChange from "handleThemeChange";
 import ME from "ME";

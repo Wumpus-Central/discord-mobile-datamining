@@ -1,6 +1,3 @@
-// === Module 10068: getSearchState ===
-
-// Module 10068 (getSearchState)
 import { Store } from "initialize";
 
 const require = arg1;

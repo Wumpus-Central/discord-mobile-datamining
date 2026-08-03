@@ -1,6 +1,3 @@
-// === Module 4753: fromFileUri ===
-
-// Module 4753 (fromFileUri)
 import { NativeModules } from "get ActivityIndicator";
 import "fromBlob";
 

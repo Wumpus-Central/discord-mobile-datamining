@@ -1,6 +1,3 @@
-// === Module 4611: BaseButton ===
-
-// Module 4611 (BaseButton)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

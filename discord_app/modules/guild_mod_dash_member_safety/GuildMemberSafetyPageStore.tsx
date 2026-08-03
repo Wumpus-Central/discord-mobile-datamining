@@ -1,6 +1,3 @@
-// === Module 5756: getSearchIndex ===
-
-// Module 5756 (getSearchIndex)
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";

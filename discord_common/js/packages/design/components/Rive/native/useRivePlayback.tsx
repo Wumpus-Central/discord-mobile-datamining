@@ -1,6 +1,3 @@
-// === Module 3970: useRivePlayback ===
-
-// Module 3970 (useRivePlayback)
 import noop from "noop";
 import { AppState } from "get ActivityIndicator";
 

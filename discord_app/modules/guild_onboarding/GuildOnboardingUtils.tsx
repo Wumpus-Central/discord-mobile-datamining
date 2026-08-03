@@ -1,6 +1,3 @@
-// === Module 5126: isChattableChannel ===
-
-// Module 5126 (isChattableChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import set from "set";
 import comparator from "comparator";

@@ -1,6 +1,3 @@
-// === Module 5931: getRelativeTimestamp ===
-
-// Module 5931 (getRelativeTimestamp)
 const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/notification_center/NotificationCenterUtils.tsx");
 
 export const getRelativeTimestamp = function getRelativeTimestamp(extractTimestampResult, flag) {

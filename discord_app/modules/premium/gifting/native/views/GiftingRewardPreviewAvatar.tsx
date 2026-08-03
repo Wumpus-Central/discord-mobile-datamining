@@ -1,6 +1,3 @@
-// === Module 9798: GiftingRewardPreviewAvatar ===
-
-// Module 9798 (GiftingRewardPreviewAvatar)
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import mergeGuildAvatar from "mergeGuildAvatar";

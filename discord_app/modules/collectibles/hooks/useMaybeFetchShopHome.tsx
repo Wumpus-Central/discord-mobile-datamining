@@ -1,6 +1,3 @@
-// === Module 14625: useMaybeFetchCollectiblesShopHome ===
-
-// Module 14625 (useMaybeFetchCollectiblesShopHome)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getHash from "getHash";

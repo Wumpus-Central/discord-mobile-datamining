@@ -1,6 +1,3 @@
-// === Module 15773: newMessageFromHistory ===
-
-// Module 15773 (newMessageFromHistory)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import handleConnectionOpen from "handleConnectionOpen";

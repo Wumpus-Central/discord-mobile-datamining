@@ -1,6 +1,3 @@
-// === Module 8276: ChannelTypeRow ===
-
-// Module 8276 (ChannelTypeRow)
 import Form from "Form";
 import AnnouncementsIcon from "AnnouncementsIcon";
 import get_ActivityIndicator from "VoiceNormalIcon";

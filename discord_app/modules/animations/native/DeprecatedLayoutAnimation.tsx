@@ -1,6 +1,3 @@
-// === Module 5221: LayoutAnimation ===
-
-// Module 5221 (LayoutAnimation)
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import obj from "module_150";

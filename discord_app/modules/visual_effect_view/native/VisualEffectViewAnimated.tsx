@@ -1,6 +1,3 @@
-// === Module 4593: animatedComponent ===
-
-// Module 4593 (animatedComponent)
 import animatedComponent from "isBlurDisabled";
 import importDefaultResult from "module_4054";
 

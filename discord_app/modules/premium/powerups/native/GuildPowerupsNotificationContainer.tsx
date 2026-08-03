@@ -1,6 +1,3 @@
-// === Module 11660: Tier3OverrideNotice ===
-
-// Module 11660 (Tier3OverrideNotice)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 15691: handleWebhookCreateUpdate ===
-
-// Module 15691 (handleWebhookCreateUpdate)
 import { Store } from "initialize";
 
 function handleWebhookCreateUpdate(arg0) {

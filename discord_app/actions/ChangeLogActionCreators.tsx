@@ -1,6 +1,3 @@
-// === Module 7872: cacheBustParam ===
-
-// Module 7872 (cacheBustParam)
 import explicitContentFromProto from "explicitContentFromProto";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import { Endpoints } from "ME";

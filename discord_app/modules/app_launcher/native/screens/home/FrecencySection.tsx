@@ -1,6 +1,3 @@
-// === Module 11240: Placeholder ===
-
-// Module 11240 (Placeholder)
 import ApplicationCommandSectionType from "ApplicationCommandSectionType";
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
 import get_ActivityIndicator from "collectGuildAnalyticsMetadata";

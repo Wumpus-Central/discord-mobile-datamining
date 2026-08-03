@@ -1,6 +1,3 @@
-// === Module 8857: getLastUsedVideoBackgroundOption ===
-
-// Module 8857 (getLastUsedVideoBackgroundOption)
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";

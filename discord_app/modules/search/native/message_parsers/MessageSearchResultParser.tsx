@@ -1,6 +1,3 @@
-// === Module 15567: prototype ===
-
-// Module 15567 (prototype)
 import hasFlag from "hasFlag";
 import { EMBED_TYPES_WITHOUT_DESCRIPTION as closure_3 } from "MessageEmbedTypes";
 

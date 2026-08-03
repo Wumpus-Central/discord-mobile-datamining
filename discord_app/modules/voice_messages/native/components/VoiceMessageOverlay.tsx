@@ -1,6 +1,3 @@
-// === Module 11752: LockPill ===
-
-// Module 11752 (LockPill)
 import useSafeAreaInsets from "useSafeAreaInsets";
 import importAllResult from "result";
 import get_ActivityIndicator from "createCacheKey";

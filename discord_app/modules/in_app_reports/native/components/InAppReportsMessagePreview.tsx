@@ -1,6 +1,3 @@
-// === Module 7717: MessagePreview ===
-
-// Module 7717 (MessagePreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

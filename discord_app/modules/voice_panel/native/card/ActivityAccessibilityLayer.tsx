@@ -1,6 +1,3 @@
-// === Module 15992: FocusedActivityAccessibilityLayer ===
-
-// Module 15992 (FocusedActivityAccessibilityLayer)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

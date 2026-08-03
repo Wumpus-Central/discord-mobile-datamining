@@ -1,6 +1,3 @@
-// === Module 7870: LHeading ===
-
-// Module 7870 (LHeading)
 import importAllResult from "getLocalizedLink";
 import get_ActivityIndicator from "XNeutralIcon";
 import _getSystemLocale from "_getSystemLocale";

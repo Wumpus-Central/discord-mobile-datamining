@@ -1,6 +1,3 @@
-// === Module 7475: ServerIconStarblasterExample ===
-
-// Module 7475 (ServerIconStarblasterExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ServerIconStarblasterExample.native.tsx");

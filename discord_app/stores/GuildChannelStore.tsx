@@ -1,6 +1,3 @@
-// === Module 1932: comparator ===
-
-// Module 1932 (comparator)
 import isSubscriptionGated from "isSubscriptionGated";
 import initializeFromUserSettings from "initializeFromUserSettings";
 import { createFavoritesGuildChannelRecord as closure_6 } from "createFavoritesGuildChannelRecord";

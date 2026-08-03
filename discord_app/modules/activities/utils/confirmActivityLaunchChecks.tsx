@@ -1,6 +1,3 @@
-// === Module 10661: getOrFetchApplicationForLaunch ===
-
-// Module 10661 (getOrFetchApplicationForLaunch)
 import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import participantFromServer from "participantFromServer";

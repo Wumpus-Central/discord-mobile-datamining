@@ -1,6 +1,3 @@
-// === Module 14673: route ===
-
-// Module 14673 (route)
 import noop from "noop";
 import createToggle from "createToggle";
 

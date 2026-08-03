@@ -1,6 +1,3 @@
-// === Module 14942: SidebarCoachmarkOverlayLayer ===
-
-// Module 14942 (SidebarCoachmarkOverlayLayer)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

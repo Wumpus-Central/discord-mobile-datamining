@@ -1,6 +1,3 @@
-// === Module 5547: _copy ===
-
-// Module 5547 (_copy)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _copy() {

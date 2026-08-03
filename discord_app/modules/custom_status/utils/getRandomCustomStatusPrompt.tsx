@@ -1,6 +1,3 @@
-// === Module 11985: getRandomCustomStatusPrompt ===
-
-// Module 11985 (getRandomCustomStatusPrompt)
 import StatusTypes from "StatusTypes";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 7397: PotionSpotIllustration ===
-
-// Module 7397 (PotionSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PotionSpotIllustration.native.tsx");

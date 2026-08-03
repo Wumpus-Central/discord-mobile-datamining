@@ -1,6 +1,3 @@
-// === Module 14013: Integration ===
-
-// Module 14013 (Integration)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import combined from "combined";
 import importAllResult from "getPlatformUserUrl";

@@ -1,6 +1,3 @@
-// === Module 14135: ESTIMATED_CARD_HEIGHT ===
-
-// Module 14135 (ESTIMATED_CARD_HEIGHT)
 import initializeState from "initializeState";
 import useAdContentImpressionTrackerProps from "useAdContentImpressionTrackerProps";
 import importAllResult from "useIsMobileQuestDockRenderedBase";

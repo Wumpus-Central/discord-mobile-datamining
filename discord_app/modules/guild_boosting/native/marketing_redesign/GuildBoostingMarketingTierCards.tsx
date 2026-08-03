@@ -1,6 +1,3 @@
-// === Module 12669: TierFeatures ===
-
-// Module 12669 (TierFeatures)
 import Button from "Button";
 import importAllResult from "BoostedGuildTiers";
 import { View } from "createCacheKey";

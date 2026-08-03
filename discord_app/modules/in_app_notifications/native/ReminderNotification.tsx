@@ -1,6 +1,3 @@
-// === Module 10392: NotificationAvatar ===
-
-// Module 10392 (NotificationAvatar)
 import importAllResult from "module_38";
 import { View } from "PreviewIcon";
 import ensureGuildLoaded from "ensureGuildLoaded";

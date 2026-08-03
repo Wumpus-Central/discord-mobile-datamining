@@ -1,6 +1,3 @@
-// === Module 11584: openGuildPowerupsModal ===
-
-// Module 11584 (openGuildPowerupsModal)
 let c3 = 0;
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
 

@@ -1,6 +1,3 @@
-// === Module 14868: StopIcon ===
-
-// Module 14868 (StopIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 14973: computeGuildsBarCutout ===
-
-// Module 14973 (computeGuildsBarCutout)
 import { PixelRatio } from "get ActivityIndicator";
 import { GUILD_ITEM_SIZE } from "GUILD_ITEM_SIZE";
 

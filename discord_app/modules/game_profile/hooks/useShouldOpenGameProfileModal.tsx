@@ -1,6 +1,3 @@
-// === Module 8486: useShouldOpenGameProfileModal ===
-
-// Module 8486 (useShouldOpenGameProfileModal)
 import noop from "noop";
 import map from "map";
 import { AnalyticEvents } from "ME";

@@ -1,6 +1,3 @@
-// === Module 11214: ForumPostListBody ===
-
-// Module 11214 (ForumPostListBody)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET";

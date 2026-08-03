@@ -1,6 +1,3 @@
-// === Module 4537: getAlertModalItemKey ===
-
-// Module 4537 (getAlertModalItemKey)
 import sum from "sum";
 import _slicedToArray from "_slicedToArray";
 import _toArray from "_toArray";

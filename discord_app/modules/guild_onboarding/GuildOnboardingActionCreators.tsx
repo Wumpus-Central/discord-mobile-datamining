@@ -1,6 +1,3 @@
-// === Module 5124: _updateOnboardingResponses ===
-
-// Module 5124 (_updateOnboardingResponses)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";

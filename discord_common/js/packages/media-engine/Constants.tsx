@@ -1,6 +1,3 @@
-// === Module 4254: DesktopSources ===
-
-// Module 4254 (DesktopSources)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
 
 export const DesktopSources = require("SystemServiceNotAvailableError").DesktopSources;

@@ -1,6 +1,3 @@
-// === Module 11544: ? ===
-
-// Module 11544
 import useIsMessageRequestRestrictedViewer from "useIsMessageRequestRestrictedViewer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";

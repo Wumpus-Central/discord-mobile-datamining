@@ -1,6 +1,3 @@
-// === Module 11160: map ===
-
-// Module 11160 (map)
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
 

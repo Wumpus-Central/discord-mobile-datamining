@@ -1,6 +1,3 @@
-// === Module 9217: MobilePhoneIcon ===
-
-// Module 9217 (MobilePhoneIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

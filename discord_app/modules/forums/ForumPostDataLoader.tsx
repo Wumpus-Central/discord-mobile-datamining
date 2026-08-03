@@ -1,6 +1,3 @@
-// === Module 6068: loadForumPostData ===
-
-// Module 6068 (loadForumPostData)
 import ME from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { computeThreadIdsSnapshot } from "maybeRebuildState";

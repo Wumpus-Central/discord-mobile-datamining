@@ -1,6 +1,3 @@
-// === Module 11048: GuildEnableCommunicationAlert ===
-
-// Module 11048 (GuildEnableCommunicationAlert)
 import closure_3 from "getFriendlyDurationString";
 import _slicedToArray from "_slicedToArray";
 import "componentDidMount";

@@ -1,6 +1,3 @@
-// === Module 15146: handleAddToFavorites ===
-
-// Module 15146 (handleAddToFavorites)
 import "noop";
 import jsxProd from "jsxProd";
 

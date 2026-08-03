@@ -1,6 +1,3 @@
-// === Module 6329: PremiumModal ===
-
-// Module 6329 (PremiumModal)
 import "noop";
 import { UserSettingsSections } from "ME";
 import { jsx } from "jsxProd";

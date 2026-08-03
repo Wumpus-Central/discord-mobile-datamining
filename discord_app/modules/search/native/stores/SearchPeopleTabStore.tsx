@@ -1,6 +1,3 @@
-// === Module 11478: teardown ===
-
-// Module 11478 (teardown)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleChannelSelect from "handleChannelSelect";
 import { Store } from "initialize";

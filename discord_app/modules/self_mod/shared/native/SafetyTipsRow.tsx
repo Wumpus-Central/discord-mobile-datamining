@@ -1,6 +1,3 @@
-// === Module 7626: SafetyTipsRow ===
-
-// Module 7626 (SafetyTipsRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

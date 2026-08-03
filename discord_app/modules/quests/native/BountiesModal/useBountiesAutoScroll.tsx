@@ -1,6 +1,3 @@
-// === Module 14061: set ===
-
-// Module 14061 (set)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { AppState } from "get ActivityIndicator";

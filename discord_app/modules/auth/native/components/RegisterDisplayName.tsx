@@ -1,6 +1,3 @@
-// === Module 14898: RegisterDisplayName ===
-
-// Module 14898 (RegisterDisplayName)
 import closure_3 from "useRegistrationUIStore";
 import _slicedToArray from "_slicedToArray";
 import module_13813 from "module_13813";

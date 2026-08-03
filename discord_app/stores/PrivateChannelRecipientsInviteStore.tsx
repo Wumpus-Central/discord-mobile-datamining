@@ -1,6 +1,3 @@
-// === Module 12826: performQuery ===
-
-// Module 12826 (performQuery)
 import getHash from "getHash";
 import recomputeAffinities from "recomputeAffinities";
 import { PrivateChannelRecord } from "createChannelRecord";

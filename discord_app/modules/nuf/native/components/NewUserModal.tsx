@@ -1,6 +1,3 @@
-// === Module 16297: NewUserModal ===
-
-// Module 16297 (NewUserModal)
 import _slicedToArray from "_slicedToArray";
 import headerTitle from "headerTitle";
 import { NativeModules } from "RedesignAddAvatarModal";

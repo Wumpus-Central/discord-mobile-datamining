@@ -1,6 +1,3 @@
-// === Module 11315: AppLauncherApplicationViewScreenInner ===
-
-// Module 11315 (AppLauncherApplicationViewScreenInner)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import getIndexKey from "getIndexKey";

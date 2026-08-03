@@ -1,6 +1,3 @@
-// === Module 12228: ShopThisLookCard ===
-
-// Module 12228 (ShopThisLookCard)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "openCollectiblesShop";
 import getFetchState from "getFetchState";

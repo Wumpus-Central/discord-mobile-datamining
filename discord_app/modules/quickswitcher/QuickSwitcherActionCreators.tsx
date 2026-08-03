@@ -1,6 +1,3 @@
-// === Module 9921: trackClose ===
-
-// Module 9921 (trackClose)
 import setLibraryApplications from "setLibraryApplications";
 import _slicedToArray from "_slicedToArray";
 import { InAppNavigationType } from "fromType";

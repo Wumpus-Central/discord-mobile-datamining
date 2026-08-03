@@ -1,6 +1,3 @@
-// === Module 11435: ChatInputScrimGradient ===
-
-// Module 11435 (ChatInputScrimGradient)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

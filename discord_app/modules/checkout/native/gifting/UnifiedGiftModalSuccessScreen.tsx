@@ -1,6 +1,3 @@
-// === Module 11903: UnifiedGiftModalSuccessScreen ===
-
-// Module 11903 (UnifiedGiftModalSuccessScreen)
 import noop from "noop";
 import { Image } from "get ActivityIndicator";
 import { UserSettingsSections } from "ME";

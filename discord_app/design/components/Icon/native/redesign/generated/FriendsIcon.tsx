@@ -1,6 +1,3 @@
-// === Module 3895: FriendsIcon ===
-
-// Module 3895 (FriendsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

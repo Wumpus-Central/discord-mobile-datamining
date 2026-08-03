@@ -1,6 +1,3 @@
-// === Module 9274: ParagraphField ===
-
-// Module 9274 (ParagraphField)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { MAX_PARAGRAPH_RESPONSE_LENGTH as closure_3 } from "items";

@@ -1,6 +1,3 @@
-// === Module 6799: AccountAgeTier2LargeBadge ===
-
-// Module 6799 (AccountAgeTier2LargeBadge)
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/AccountAgeTier2LargeBadge.native.tsx");

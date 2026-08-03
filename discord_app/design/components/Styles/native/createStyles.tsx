@@ -1,6 +1,3 @@
-// === Module 4193: createCacheKey ===
-
-// Module 4193 (createCacheKey)
 import _slicedToArray from "_slicedToArray";
 import { processColor } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

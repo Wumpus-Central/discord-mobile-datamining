@@ -1,6 +1,3 @@
-// === Module 14479: toggle ===
-
-// Module 14479 (toggle)
 import { AnalyticEvents } from "ME";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 import createToggle from "createToggle";

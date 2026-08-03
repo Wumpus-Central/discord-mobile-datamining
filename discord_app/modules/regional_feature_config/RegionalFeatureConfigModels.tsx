@@ -1,6 +1,3 @@
-// === Module 3878: isFeatureTeenByDefault ===
-
-// Module 3878 (isFeatureTeenByDefault)
 class SettingsConfig {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);

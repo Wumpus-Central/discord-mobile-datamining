@@ -1,6 +1,3 @@
-// === Module 14823: fuzzySearchToggle ===
-
-// Module 14823 (fuzzySearchToggle)
 import _slicedToArray from "_slicedToArray";
 import SearchField from "SearchField";
 import { ScrollView } from "Stack";

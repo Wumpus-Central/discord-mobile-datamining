@@ -1,6 +1,3 @@
-// === Module 5997: questFromServerV2 ===
-
-// Module 5997 (questFromServerV2)
 const result = require("questCtaConfigFromServer").fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
 export const questFromServerV2 = function questFromServerV2(id) {

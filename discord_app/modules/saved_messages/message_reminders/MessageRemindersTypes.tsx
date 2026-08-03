@@ -1,6 +1,3 @@
-// === Module 9959: items ===
-
-// Module 9959 (items)
 const items = [
   {
     getDueAt() {

@@ -1,6 +1,3 @@
-// === Module 16729: SafetyFlowsModal ===
-
-// Module 16729 (SafetyFlowsModal)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

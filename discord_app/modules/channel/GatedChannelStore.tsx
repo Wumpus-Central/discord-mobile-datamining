@@ -1,6 +1,3 @@
-// === Module 1933: isSubscriptionGated ===
-
-// Module 1933 (isSubscriptionGated)
 import initialize from "initialize";
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import { hasPermission } from "GuildRoleRecordTypeTag";

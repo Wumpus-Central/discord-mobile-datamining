@@ -1,6 +1,3 @@
-// === Module 15331: ForYouSuggestedFriendRow ===
-
-// Module 15331 (ForYouSuggestedFriendRow)
 import renderChannelPressableWrapper from "renderChannelPressableWrapper";
 import { View } from "getSystemLocale";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

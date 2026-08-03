@@ -1,6 +1,3 @@
-// === Module 16440: showGuildSettingsModalStickerInfoActionSheet ===
-
-// Module 16440 (showGuildSettingsModalStickerInfoActionSheet)
 const GuildSettingsModalStickerInfoActionSheet = "GuildSettingsModalStickerInfoActionSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx");
 

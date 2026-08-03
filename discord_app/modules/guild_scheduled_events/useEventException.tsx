@@ -1,6 +1,3 @@
-// === Module 8219: useEventException ===
-
-// Module 8219 (useEventException)
 import scheduledEventSort from "scheduledEventSort";
 
 const require = arg1;

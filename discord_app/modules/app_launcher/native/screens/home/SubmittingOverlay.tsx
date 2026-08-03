@@ -1,6 +1,3 @@
-// === Module 11248: SubmittingOverlay ===
-
-// Module 11248 (SubmittingOverlay)
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 

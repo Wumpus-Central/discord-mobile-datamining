@@ -1,6 +1,3 @@
-// === Module 11893: useInappropriateConversationsTiers ===
-
-// Module 11893 (useInappropriateConversationsTiers)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SafetyWarningTypes } from "handleConnectionOpen";
 

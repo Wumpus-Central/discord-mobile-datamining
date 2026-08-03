@@ -1,6 +1,3 @@
-// === Module 12458: BuyNitroMarketingFooter ===
-
-// Module 12458 (BuyNitroMarketingFooter)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

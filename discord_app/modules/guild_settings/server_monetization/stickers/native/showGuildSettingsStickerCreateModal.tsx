@@ -1,6 +1,3 @@
-// === Module 16434: showGuildSettingsStickerCreateModal ===
-
-// Module 16434 (showGuildSettingsStickerCreateModal)
 const result = require("GuildSettingsStickerCreateModal").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/showGuildSettingsStickerCreateModal.tsx");
 
 export default function showGuildSettingsStickerCreateModal(closure_0) {

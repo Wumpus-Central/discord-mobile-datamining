@@ -1,6 +1,3 @@
-// === Module 5015: buildStageChannelUserRoles ===
-
-// Module 5015 (buildStageChannelUserRoles)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 15103: useEnsureHydratedUsers ===
-
-// Module 15103 (useEnsureHydratedUsers)
 import noop from "noop";
 import handleConnectionReset from "handleConnectionReset";
 import mergeGuildAvatar from "mergeGuildAvatar";

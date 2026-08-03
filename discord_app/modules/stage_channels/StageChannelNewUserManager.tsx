@@ -1,6 +1,3 @@
-// === Module 12438: _initialize ===
-
-// Module 12438 (_initialize)
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";

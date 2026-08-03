@@ -1,6 +1,3 @@
-// === Module 9075: useGameMentionsAsPlainText ===
-
-// Module 9075 (useGameMentionsAsPlainText)
 import noop from "noop";
 import map from "map";
 import mergeGuildAvatar from "mergeGuildAvatar";

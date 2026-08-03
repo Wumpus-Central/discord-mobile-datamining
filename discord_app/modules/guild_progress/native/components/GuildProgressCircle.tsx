@@ -1,6 +1,3 @@
-// === Module 11698: GuildProgressCircle ===
-
-// Module 11698 (GuildProgressCircle)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

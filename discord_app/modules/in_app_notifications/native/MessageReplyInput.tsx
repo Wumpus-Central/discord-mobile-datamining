@@ -1,6 +1,3 @@
-// === Module 10402: AnimatedChatInputReplyBar ===
-
-// Module 10402 (AnimatedChatInputReplyBar)
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import rebuild from "rebuild";

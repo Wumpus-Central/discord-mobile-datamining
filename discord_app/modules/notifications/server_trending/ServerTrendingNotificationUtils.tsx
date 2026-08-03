@@ -1,6 +1,3 @@
-// === Module 14489: onServerTrendingNotificationSettingsChanged ===
-
-// Module 14489 (onServerTrendingNotificationSettingsChanged)
 import { NotificationSettingsUpdateType as closure_3 } from "AccountNotificationFlags";
 import { AnalyticEvents } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 15019: ? ===
-
-// Module 15019
 import importAllResult from "FacepileGroupDMAvatar";
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";

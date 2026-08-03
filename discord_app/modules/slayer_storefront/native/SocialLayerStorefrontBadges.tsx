@@ -1,6 +1,3 @@
-// === Module 9775: ExclusiveBadge ===
-
-// Module 9775 (ExclusiveBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

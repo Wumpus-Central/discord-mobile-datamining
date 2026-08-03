@@ -1,6 +1,3 @@
-// === Module 7816: createStageRaiseHandSystemMessage ===
-
-// Module 7816 (createStageRaiseHandSystemMessage)
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

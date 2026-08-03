@@ -1,6 +1,3 @@
-// === Module 4231: createFromServer ===
-
-// Module 4231 (createFromServer)
 import "toJS";
 import createFromServer from "createFromServer";
 import createdAt from "createdAt";

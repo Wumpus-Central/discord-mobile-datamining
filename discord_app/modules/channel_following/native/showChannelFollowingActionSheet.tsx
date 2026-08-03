@@ -1,6 +1,3 @@
-// === Module 10411: showChannelFollowingActionSheet ===
-
-// Module 10411 (showChannelFollowingActionSheet)
 import "noop";
 import { jsx } from "jsxProd";
 

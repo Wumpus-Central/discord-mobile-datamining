@@ -1,6 +1,3 @@
-// === Module 14090: BountiesEndCardPressableCta ===
-
-// Module 14090 (BountiesEndCardPressableCta)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { END_CARD_IMAGE_SIZE } from "END_CARD_IMAGE_SIZE";

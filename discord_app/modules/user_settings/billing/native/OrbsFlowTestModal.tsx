@@ -1,6 +1,3 @@
-// === Module 14811: BalanceWidgetMenuSection ===
-
-// Module 14811 (BalanceWidgetMenuSection)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "BalanceWidgetPill";
 import get_ActivityIndicator from "TextInput";

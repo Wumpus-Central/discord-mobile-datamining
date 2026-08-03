@@ -1,6 +1,3 @@
-// === Module 10269: useFocusModeEnabled ===
-
-// Module 10269 (useFocusModeEnabled)
 import filterPlayingActivities from "filterPlayingActivities";
 import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
 import ME from "ME";

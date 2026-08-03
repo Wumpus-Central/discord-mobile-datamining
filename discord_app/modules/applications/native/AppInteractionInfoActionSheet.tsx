@@ -1,6 +1,3 @@
-// === Module 9977: AppInteractionInfoActionSheet ===
-
-// Module 9977 (AppInteractionInfoActionSheet)
 import set from "set";
 import { View } from "Button";
 import createdAt from "createdAt";

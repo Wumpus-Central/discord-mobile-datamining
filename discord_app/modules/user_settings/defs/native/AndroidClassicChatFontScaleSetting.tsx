@@ -1,6 +1,3 @@
-// === Module 14351: toggle ===
-
-// Module 14351 (toggle)
 import { useFontScaleStore } from "DEFAULT_FONT_SCALE_STORE_STATE";
 import createToggle from "createToggle";
 

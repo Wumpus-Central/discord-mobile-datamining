@@ -1,6 +1,3 @@
-// === Module 16238: _handleInteractionModalCreate ===
-
-// Module 16238 (_handleInteractionModalCreate)
 import onClose from "onClose";
 import addApplication from "addApplication";
 import deleteNonce from "deleteNonce";

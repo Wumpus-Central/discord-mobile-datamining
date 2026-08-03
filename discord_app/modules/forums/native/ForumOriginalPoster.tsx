@@ -1,6 +1,3 @@
-// === Module 11077: ForumOriginalPoster ===
-
-// Module 11077 (ForumOriginalPoster)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

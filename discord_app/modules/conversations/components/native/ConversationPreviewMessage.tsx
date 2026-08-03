@@ -1,6 +1,3 @@
-// === Module 9300: modifyRow ===
-
-// Module 9300 (modifyRow)
 import noop from "noop";
 import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

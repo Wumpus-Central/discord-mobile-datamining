@@ -1,6 +1,3 @@
-// === Module 15934: calculatePIPState ===
-
-// Module 15934 (calculatePIPState)
 import getParticipants from "getParticipants";
 import reset from "reset";
 import { VoicePanelModes } from "VoicePanelModes";

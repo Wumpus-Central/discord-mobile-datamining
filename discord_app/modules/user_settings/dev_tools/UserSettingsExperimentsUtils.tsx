@@ -1,6 +1,3 @@
-// === Module 11013: matchesDeep ===
-
-// Module 11013 (matchesDeep)
 function matchesDeep(item10014, item10021) {
   if (Array.isArray(item10014)) {
     const obj2 = item10014[Symbol.iterator]();

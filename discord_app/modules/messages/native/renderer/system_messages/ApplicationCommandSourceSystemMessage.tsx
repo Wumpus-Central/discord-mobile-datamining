@@ -1,6 +1,3 @@
-// === Module 7796: createApplicationCommandSourceSystemMessage ===
-
-// Module 7796 (createApplicationCommandSourceSystemMessage)
 import { MessageTypes } from "ME";
 import { COMMAND_SENTINEL } from "regExp";
 

@@ -1,6 +1,3 @@
-// === Module 5848: pushLayer ===
-
-// Module 5848 (pushLayer)
 const result = require("set").fileFinishedImporting("actions/LayerActionCreators.tsx");
 
 export const pushLayer = function pushLayer(component) {

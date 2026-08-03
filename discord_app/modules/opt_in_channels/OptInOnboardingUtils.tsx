@@ -1,6 +1,3 @@
-// === Module 10012: optIntoAllChannelsForExistingMember ===
-
-// Module 10012 (optIntoAllChannelsForExistingMember)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import comparator from "comparator";
 import closure_6 from "comparator";

@@ -1,6 +1,3 @@
-// === Module 15756: SuspendedUserSafetyHubPage ===
-
-// Module 15756 (SuspendedUserSafetyHubPage)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { SafetyHubLinks } from "SafetyHubView";

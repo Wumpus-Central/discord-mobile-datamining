@@ -1,6 +1,3 @@
-// === Module 6056: canReportMessageToMods ===
-
-// Module 6056 (canReportMessageToMods)
 import handleLoadThreadsSuccess from "handleLoadThreadsSuccess";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

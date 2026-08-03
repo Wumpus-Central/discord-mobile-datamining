@@ -1,6 +1,3 @@
-// === Module 13613: getVolumeForSound ===
-
-// Module 13613 (getVolumeForSound)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 
 const require = arg1;

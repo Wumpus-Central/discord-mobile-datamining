@@ -1,6 +1,3 @@
-// === Module 5990: useConsoleQuestUIStore ===
-
-// Module 5990 (useConsoleQuestUIStore)
 import keys from "keys";
 
 let closure_0 = [];

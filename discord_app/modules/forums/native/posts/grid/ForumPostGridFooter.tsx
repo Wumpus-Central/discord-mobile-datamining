@@ -1,6 +1,3 @@
-// === Module 11208: ForumPostGridFooter ===
-
-// Module 11208 (ForumPostGridFooter)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { AnalyticsObjects } from "ME";

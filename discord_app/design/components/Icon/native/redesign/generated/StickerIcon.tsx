@@ -1,6 +1,3 @@
-// === Module 6632: StickerIcon ===
-
-// Module 6632 (StickerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

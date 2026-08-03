@@ -1,6 +1,3 @@
-// === Module 13812: isRateLimited ===
-
-// Module 13812 (isRateLimited)
 import { Store } from "initialize";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };

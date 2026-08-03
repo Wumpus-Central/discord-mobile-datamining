@@ -1,6 +1,3 @@
-// === Module 5540: GuildOnboardingCompleted ===
-
-// Module 5540 (GuildOnboardingCompleted)
 import module_4054 from "module_4054";
 import get_ActivityIndicator from "isDiscordFrontendDevelopment";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,6 +1,3 @@
-// === Module 4234: getPricesFromServer ===
-
-// Module 4234 (getPricesFromServer)
 import { getPriceFromServer } from "createFromServer";
 
 const result = require("set").fileFinishedImporting("modules/skus/utils/getPricesFromServer.tsx");

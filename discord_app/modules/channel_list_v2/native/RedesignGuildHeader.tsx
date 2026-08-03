@@ -1,6 +1,3 @@
-// === Module 15138: GuildInfoHeader ===
-
-// Module 15138 (GuildInfoHeader)
 import importAllResult from "createCacheKey";
 import get_ActivityIndicator from "MINIMUM_HIT_AREA";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

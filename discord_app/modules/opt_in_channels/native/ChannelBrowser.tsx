@@ -1,6 +1,3 @@
-// === Module 10013: keyExtractor ===
-
-// Module 10013 (keyExtractor)
 import FormCheckbox from "FormCheckbox";
 import importAllResult from "optIntoAllChannelsForExistingMember";
 import { View } from "UNSAFE_isDismissibleContentDismissed";

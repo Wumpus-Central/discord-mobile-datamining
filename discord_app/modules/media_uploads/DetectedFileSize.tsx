@@ -1,6 +1,3 @@
-// === Module 4771: _getDetectedFileSize ===
-
-// Module 4771 (_getDetectedFileSize)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _getDetectedFileSize() {

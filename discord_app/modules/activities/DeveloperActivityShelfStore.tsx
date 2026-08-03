@@ -1,6 +1,3 @@
-// === Module 5695: initialize ===
-
-// Module 5695 (initialize)
 import { ApplicationFlags } from "ME";
 import { PersistedStore } from "initialize";
 

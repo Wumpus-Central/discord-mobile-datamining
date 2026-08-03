@@ -1,6 +1,3 @@
-// === Module 12070: WidgetRenderer ===
-
-// Module 12070 (WidgetRenderer)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "WidgetType";
 import get_ActivityIndicator from "useIsMobileVisualRefreshExperimentEnabled";

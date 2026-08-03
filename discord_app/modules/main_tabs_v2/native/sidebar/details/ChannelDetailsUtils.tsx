@@ -1,6 +1,3 @@
-// === Module 10934: getChannelDetailsButtons ===
-
-// Module 10934 (getChannelDetailsButtons)
 import { ChannelDetailsButtonTypes } from "ChannelDetailsNavigatorScreens";
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");

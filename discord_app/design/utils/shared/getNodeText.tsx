@@ -1,6 +1,3 @@
-// === Module 3900: getNodeText ===
-
-// Module 3900 (getNodeText)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("design/utils/shared/getNodeText.tsx");

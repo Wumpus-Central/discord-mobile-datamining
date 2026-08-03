@@ -1,6 +1,3 @@
-// === Module 4702: ForumSpoilerIcon ===
-
-// Module 4702 (ForumSpoilerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

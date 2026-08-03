@@ -1,6 +1,3 @@
-// === Module 12644: useGuildShopPreviewVisible ===
-
-// Module 12644 (useGuildShopPreviewVisible)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 

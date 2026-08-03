@@ -1,6 +1,3 @@
-// === Module 7948: _saveProfileChanges ===
-
-// Module 7948 (_saveProfileChanges)
 import AccessibilityAnnouncer from "AccessibilityAnnouncer";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 13661: HashmarkIcon ===
-
-// Module 13661 (HashmarkIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

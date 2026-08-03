@@ -1,6 +1,3 @@
-// === Module 11680: useGameServerPowerupStatus ===
-
-// Module 11680 (useGameServerPowerupStatus)
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 

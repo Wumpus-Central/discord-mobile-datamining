@@ -1,6 +1,3 @@
-// === Module 5792: handleChange ===
-
-// Module 5792 (handleChange)
 import { PersistedStore } from "initialize";
 
 function handleChange(expand) {

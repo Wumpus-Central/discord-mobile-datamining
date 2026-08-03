@@ -1,6 +1,3 @@
-// === Module 13577: ? ===
-
-// Module 13577
 import getInitialSubscriptionPayload from "getInitialSubscriptionPayload";
 import ME from "ME";
 

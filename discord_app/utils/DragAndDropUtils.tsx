@@ -1,6 +1,3 @@
-// === Module 11524: calculatePositionDeltas ===
-
-// Module 11524 (calculatePositionDeltas)
 function calculatePositionDeltas(arg0) {
   let ascending;
   let existingPositionGetter;

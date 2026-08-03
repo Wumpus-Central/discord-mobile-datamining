@@ -1,6 +1,3 @@
-// === Module 12588: GuildBoostingGuildListItem ===
-
-// Module 12588 (GuildBoostingGuildListItem)
 import "set";
 import get_ActivityIndicator from "getSystemLocale";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 7718: setOptions ===
-
-// Module 7718 (setOptions)
 import handleThemeChange from "handleThemeChange";
 import Changeset from "Changeset";
 

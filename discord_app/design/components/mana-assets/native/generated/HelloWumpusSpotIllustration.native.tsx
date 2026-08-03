@@ -1,6 +1,3 @@
-// === Module 7243: HelloWumpusSpotIllustration ===
-
-// Module 7243 (HelloWumpusSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/HelloWumpusSpotIllustration.native.tsx");

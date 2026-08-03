@@ -1,6 +1,3 @@
-// === Module 9257: useFastestListSections ===
-
-// Module 9257 (useFastestListSections)
 import noop from "noop";
 
 const result = require("ITEM").fileFinishedImporting("modules/fastest_list/useFastestListSections.android.tsx");

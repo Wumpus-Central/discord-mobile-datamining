@@ -1,6 +1,3 @@
-// === Module 8987: PlayStationLinkError ===
-
-// Module 8987 (PlayStationLinkError)
 import "noop";
 import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkModalScenes";
 import { AbortCodes } from "ME";

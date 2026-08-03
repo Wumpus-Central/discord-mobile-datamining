@@ -1,6 +1,3 @@
-// === Module 12308: ? ===
-
-// Module 12308
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/blocked_domains/BlockedDomainModalActionCreators.native.tsx");
 
 export default {

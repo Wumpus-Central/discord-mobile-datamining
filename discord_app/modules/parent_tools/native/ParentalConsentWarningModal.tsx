@@ -1,6 +1,3 @@
-// === Module 16318: ParentalConsentWarningModal ===
-
-// Module 16318 (ParentalConsentWarningModal)
 import addVersionedDismissedContent from "addVersionedDismissedContent";
 import { View } from "expandEventProperties";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";

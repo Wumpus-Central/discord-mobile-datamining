@@ -1,6 +1,3 @@
-// === Module 3822: initialize ===
-
-// Module 3822 (initialize)
 import { isGuildLurker } from "GuildNSFWContentLevel";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

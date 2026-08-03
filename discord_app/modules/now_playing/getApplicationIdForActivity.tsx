@@ -1,6 +1,3 @@
-// === Module 12820: getApplicationIdForActivity ===
-
-// Module 12820 (getApplicationIdForActivity)
 import { SpotifyApplication } from "getIconURL";
 import { TWITCH_APPLICATION_ID_PREFIX as closure_3 } from "getIconURL";
 import { XBOX_APPLICATION_ID_PREFIX as closure_4 } from "getIconURL";

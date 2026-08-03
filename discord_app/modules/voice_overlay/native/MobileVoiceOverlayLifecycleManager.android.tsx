@@ -1,6 +1,3 @@
-// === Module 13601: importDefaultResult1 ===
-
-// Module 13601 (importDefaultResult1)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

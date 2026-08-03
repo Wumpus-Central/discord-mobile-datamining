@@ -1,6 +1,3 @@
-// === Module 7724: handleMessageSendFailedAutomod ===
-
-// Module 7724 (handleMessageSendFailedAutomod)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
 import ME from "ME";

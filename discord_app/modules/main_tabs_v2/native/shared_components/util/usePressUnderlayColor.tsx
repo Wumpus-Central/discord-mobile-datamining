@@ -1,6 +1,3 @@
-// === Module 15834: usePressUnderlayColor ===
-
-// Module 15834 (usePressUnderlayColor)
 import { DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR as closure_3 } from "CHANNEL_THEME_COLOR_PALETTE";
 
 const result = require("map").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");

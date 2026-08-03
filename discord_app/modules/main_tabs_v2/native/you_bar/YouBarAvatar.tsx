@@ -1,6 +1,3 @@
-// === Module 15280: YouBarAvatarLarge ===
-
-// Module 15280 (YouBarAvatarLarge)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CutoutableAvatarDecoration";

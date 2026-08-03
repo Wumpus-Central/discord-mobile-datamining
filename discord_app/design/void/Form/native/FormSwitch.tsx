@@ -1,6 +1,3 @@
-// === Module 7655: FormSwitch ===
-
-// Module 7655 (FormSwitch)
 import "noop";
 import { Switch } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 13483: map ===
-
-// Module 13483 (map)
 import getHash from "getHash";
 import initialize from "initialize";
 import getUserAgnosticState from "getUserAgnosticState";

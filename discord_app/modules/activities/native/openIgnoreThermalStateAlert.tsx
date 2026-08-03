@@ -1,6 +1,3 @@
-// === Module 10550: openIgnoreThermalStateAlert ===
-
-// Module 10550 (openIgnoreThermalStateAlert)
 import "noop";
 import { jsx } from "jsxProd";
 

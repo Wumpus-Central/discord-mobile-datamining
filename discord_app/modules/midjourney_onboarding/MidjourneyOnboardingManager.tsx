@@ -1,6 +1,3 @@
-// === Module 16667: handleChannelCreate ===
-
-// Module 16667 (handleChannelCreate)
 import _safeTransitionTo from "_safeTransitionTo";
 import { MIDJOURNEY_GUILD_ID } from "MIDJOURNEY_GUILD_ID";
 import { Routes } from "ME";

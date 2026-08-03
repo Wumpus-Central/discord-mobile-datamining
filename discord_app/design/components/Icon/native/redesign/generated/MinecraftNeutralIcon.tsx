@@ -1,6 +1,3 @@
-// === Module 8515: MinecraftNeutralIcon ===
-
-// Module 8515 (MinecraftNeutralIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

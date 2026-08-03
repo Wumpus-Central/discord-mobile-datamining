@@ -1,6 +1,3 @@
-// === Module 11105: AppealIngestionPolicySummary ===
-
-// Module 11105 (AppealIngestionPolicySummary)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

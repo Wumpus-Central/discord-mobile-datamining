@@ -1,6 +1,3 @@
-// === Module 3896: BaseIconImage ===
-
-// Module 3896 (BaseIconImage)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

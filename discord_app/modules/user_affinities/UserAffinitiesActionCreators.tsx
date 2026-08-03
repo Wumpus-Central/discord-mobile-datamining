@@ -1,6 +1,3 @@
-// === Module 8825: fetchUserAffinitiesV2 ===
-
-// Module 8825 (fetchUserAffinitiesV2)
 import hasConsented from "hasConsented";
 import recomputeAffinities from "recomputeAffinities";
 import ME from "ME";

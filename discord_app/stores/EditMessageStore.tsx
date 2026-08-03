@@ -1,6 +1,3 @@
-// === Module 5970: initialize ===
-
-// Module 5970 (initialize)
 import reinjectEphemerals from "reinjectEphemerals";
 import { Store } from "initialize";
 

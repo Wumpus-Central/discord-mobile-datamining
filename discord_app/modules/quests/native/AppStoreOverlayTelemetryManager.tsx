@@ -1,6 +1,3 @@
-// === Module 10511: handleAppStateUpdate ===
-
-// Module 10511 (handleAppStateUpdate)
 import { AnalyticEvents } from "ME";
 import "initialize";
 

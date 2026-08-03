@@ -1,6 +1,3 @@
-// === Module 13623: _getKeyForFileId ===
-
-// Module 13623 (_getKeyForFileId)
 import reinjectEphemerals from "reinjectEphemerals";
 import _slicedToArray from "_slicedToArray";
 import hasFlag from "hasFlag";

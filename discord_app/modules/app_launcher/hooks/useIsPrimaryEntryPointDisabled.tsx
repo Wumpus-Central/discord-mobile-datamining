@@ -1,6 +1,3 @@
-// === Module 11334: useIsPrimaryEntryPointDisabled ===
-
-// Module 11334 (useIsPrimaryEntryPointDisabled)
 import createExecutable from "createExecutable";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

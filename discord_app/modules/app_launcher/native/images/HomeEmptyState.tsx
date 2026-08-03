@@ -1,6 +1,3 @@
-// === Module 11299: SvgComponent ===
-
-// Module 11299 (SvgComponent)
 import "noop";
 import jsxProd from "jsxProd";
 

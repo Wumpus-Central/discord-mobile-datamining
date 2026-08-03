@@ -1,6 +1,3 @@
-// === Module 15471: JoinRequestActionSheet ===
-
-// Module 15471 (JoinRequestActionSheet)
 import importAllResult from "trackMemberApplicationViewed";
 import { View } from "int2hslRaw";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

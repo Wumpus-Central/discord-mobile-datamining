@@ -1,6 +1,3 @@
-// === Module 14577: UserSettingsDesignSystemButtonGroup ===
-
-// Module 14577 (UserSettingsDesignSystemButtonGroup)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

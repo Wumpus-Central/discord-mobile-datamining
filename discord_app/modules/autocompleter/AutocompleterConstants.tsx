@@ -1,6 +1,3 @@
-// === Module 5104: HeaderRecord ===
-
-// Module 5104 (HeaderRecord)
 const result = require("set").fileFinishedImporting("modules/autocompleter/AutocompleterConstants.tsx");
 
 export const HeaderRecord = function HeaderRecord(id) {

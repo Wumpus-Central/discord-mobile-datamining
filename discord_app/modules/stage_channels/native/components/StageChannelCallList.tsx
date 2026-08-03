@@ -1,6 +1,3 @@
-// === Module 10850: StageChannelCallList ===
-
-// Module 10850 (StageChannelCallList)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "getIsScreenLandscape";
 import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH";

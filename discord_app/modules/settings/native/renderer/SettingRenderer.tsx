@@ -1,6 +1,3 @@
-// === Module 13701: GuildSelectDefaultIcon ===
-
-// Module 13701 (GuildSelectDefaultIcon)
 import Text from "Text";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "useHighlightSettingItem";

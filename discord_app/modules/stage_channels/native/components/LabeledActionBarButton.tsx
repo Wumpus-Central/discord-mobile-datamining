@@ -1,6 +1,3 @@
-// === Module 10818: IconPosition ===
-
-// Module 10818 (IconPosition)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

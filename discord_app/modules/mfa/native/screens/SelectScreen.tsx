@@ -1,6 +1,3 @@
-// === Module 14785: SelectScreen ===
-
-// Module 14785 (SelectScreen)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { SELECT_NAMES } from "get webauthn";

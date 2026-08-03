@@ -1,6 +1,3 @@
-// === Module 15799: PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID ===
-
-// Module 15799 (PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID)
 import _slicedToArray from "_slicedToArray";
 import getGiftingBadgeProgressPercent from "getGiftingBadgeProgressPercent";
 import map from "map";

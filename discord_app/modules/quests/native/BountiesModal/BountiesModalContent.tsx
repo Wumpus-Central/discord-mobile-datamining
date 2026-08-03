@@ -1,6 +1,3 @@
-// === Module 14107: BountiesModalContentInner ===
-
-// Module 14107 (BountiesModalContentInner)
 import ME from "ME";
 import useBountiesModalVideoAnalytics from "useBountiesModalVideoAnalytics";
 import { View } from "fetchBountiesAndDispatch";

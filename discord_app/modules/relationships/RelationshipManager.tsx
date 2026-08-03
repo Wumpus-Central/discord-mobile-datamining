@@ -1,6 +1,3 @@
-// === Module 16329: handleRelationshipAdd ===
-
-// Module 16329 (handleRelationshipAdd)
 import { RelationshipTypes } from "ME";
 import "initialize";
 

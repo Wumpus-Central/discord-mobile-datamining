@@ -1,6 +1,3 @@
-// === Module 5803: updateCategoriesAndProducts ===
-
-// Module 5803 (updateCategoriesAndProducts)
 import _getSystemLocale from "_getSystemLocale";
 import fromServer from "fromServer";
 import { Store } from "initialize";

@@ -1,6 +1,3 @@
-// === Module 10338: NotificationSettingsMessageNotificationActionSheet ===
-
-// Module 10338 (NotificationSettingsMessageNotificationActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UserNotificationSettings } from "ME";

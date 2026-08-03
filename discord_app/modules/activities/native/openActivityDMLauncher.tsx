@@ -1,6 +1,3 @@
-// === Module 13137: _openActivityDMLauncher ===
-
-// Module 13137 (_openActivityDMLauncher)
 import _handleUsePrimaryEntryPointAppCommand from "_handleUsePrimaryEntryPointAppCommand";
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 

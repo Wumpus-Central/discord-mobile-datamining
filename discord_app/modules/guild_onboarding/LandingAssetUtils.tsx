@@ -1,6 +1,3 @@
-// === Module 5122: replaceFlagIconAndFlagColor ===
-
-// Module 5122 (replaceFlagIconAndFlagColor)
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/LandingAssetUtils.tsx");
 
 export default function replaceFlagIconAndFlagColor(layers, p) {

@@ -1,6 +1,3 @@
-// === Module 13597: voiceSettingsEventHandlers ===
-
-// Module 13597 (voiceSettingsEventHandlers)
 import importDefaultResult from "createVoiceSettingsEventHandlers";
 
 const importDefaultResultResult = require("createVoiceSettingsEventHandlers")(require("validateSocketClient").getDeprecatedVoiceSettings, require("validateSocketClient").getVoiceSettings);

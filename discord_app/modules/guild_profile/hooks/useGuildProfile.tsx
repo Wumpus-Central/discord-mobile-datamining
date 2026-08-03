@@ -1,6 +1,3 @@
-// === Module 8286: useGuildProfile ===
-
-// Module 8286 (useGuildProfile)
 import set from "set";
 import noop from "noop";
 import handleUpdateStart from "handleUpdateStart";

@@ -1,6 +1,3 @@
-// === Module 714: _private ===
-
-// Module 714 (_private)
 import set from "set";
 
 const Themes = require("items")._private.Themes;

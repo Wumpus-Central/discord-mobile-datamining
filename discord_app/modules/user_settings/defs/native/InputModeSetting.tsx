@@ -1,6 +1,3 @@
-// === Module 14284: pressable ===
-
-// Module 14284 (pressable)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { InputModes } from "DesktopSources";
 import createToggle from "createToggle";

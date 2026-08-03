@@ -1,6 +1,3 @@
-// === Module 11527: set ===
-
-// Module 11527 (set)
 import noop from "noop";
 import getRegionalFeatureConfig from "getRegionalFeatureConfig";
 import set from "set";

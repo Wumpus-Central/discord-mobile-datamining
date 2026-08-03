@@ -1,6 +1,3 @@
-// === Module 16344: preloadStaffMembers ===
-
-// Module 16344 (preloadStaffMembers)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PRELOAD_SERVER_ID } from "PRELOAD_SERVER_ID";

@@ -1,6 +1,3 @@
-// === Module 14894: RegisterPhoneOrEmailInput ===
-
-// Module 14894 (RegisterPhoneOrEmailInput)
 import noop from "noop";
 import handleSetLocationMetadata from "handleSetLocationMetadata";
 import useRegistrationUIStore from "useRegistrationUIStore";

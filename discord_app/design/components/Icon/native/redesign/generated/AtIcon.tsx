@@ -1,6 +1,3 @@
-// === Module 4708: AtIcon ===
-
-// Module 4708 (AtIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 14169: items ===
-
-// Module 14169 (items)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

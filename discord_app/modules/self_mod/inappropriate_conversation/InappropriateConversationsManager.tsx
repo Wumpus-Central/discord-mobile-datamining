@@ -1,6 +1,3 @@
-// === Module 16672: fadeIn ===
-
-// Module 16672 (fadeIn)
 import createSoundForPack from "createSoundForPack";
 import "initialize";
 

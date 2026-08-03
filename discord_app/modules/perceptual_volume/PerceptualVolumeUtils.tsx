@@ -1,6 +1,3 @@
-// === Module 4642: perceptualToAmplitude ===
-
-// Module 4642 (perceptualToAmplitude)
 let result = require("set").fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
 
 export const perceptualToAmplitude = function perceptualToAmplitude(arg0) {

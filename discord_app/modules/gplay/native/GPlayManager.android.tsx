@@ -1,6 +1,3 @@
-// === Module 6301: handleConnectionStateUpdated ===
-
-// Module 6301 (handleConnectionStateUpdated)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_5 from "usePremiumPlanPurchasedStore";
 import "SubscriptionPlans";

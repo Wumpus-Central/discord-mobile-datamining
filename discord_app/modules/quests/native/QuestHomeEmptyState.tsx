@@ -1,6 +1,3 @@
-// === Module 14109: QuestHomeEmptyState ===
-
-// Module 14109 (QuestHomeEmptyState)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { VerticalGradient } from "ME";

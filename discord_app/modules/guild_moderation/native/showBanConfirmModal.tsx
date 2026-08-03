@@ -1,6 +1,3 @@
-// === Module 11062: showBanConfirmModal ===
-
-// Module 11062 (showBanConfirmModal)
 const result = require("BanConfirmModal").fileFinishedImporting("modules/guild_moderation/native/showBanConfirmModal.tsx");
 
 export default function showBanConfirmModal(closure_0) {

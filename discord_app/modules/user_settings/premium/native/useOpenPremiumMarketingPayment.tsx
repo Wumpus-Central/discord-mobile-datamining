@@ -1,6 +1,3 @@
-// === Module 12544: useOpenPremiumMarketingPayment ===
-
-// Module 12544 (useOpenPremiumMarketingPayment)
 import noop from "noop";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";

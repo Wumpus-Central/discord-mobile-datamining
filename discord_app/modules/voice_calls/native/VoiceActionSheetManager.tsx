@@ -1,6 +1,3 @@
-// === Module 12842: _initialize ===
-
-// Module 12842 (_initialize)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import updateVoiceState from "updateVoiceState";
 import "initialize";

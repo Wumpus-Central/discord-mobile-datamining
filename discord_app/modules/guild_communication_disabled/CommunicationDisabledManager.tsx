@@ -1,6 +1,3 @@
-// === Module 11568: clearGuildMemberTimeout ===
-
-// Module 11568 (clearGuildMemberTimeout)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import closure_5 from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";

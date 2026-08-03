@@ -1,6 +1,3 @@
-// === Module 11508: useCommandDiscoveryManager ===
-
-// Module 11508 (useCommandDiscoveryManager)
 import keys from "keys";
 
 const obj = keys.create(() => ({ initialSectionId: "r" }));

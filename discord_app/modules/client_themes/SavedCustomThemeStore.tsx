@@ -1,6 +1,3 @@
-// === Module 4127: validateSavedTheme ===
-
-// Module 4127 (validateSavedTheme)
 import SystemThemeState from "SystemThemeState";
 import { PersistedStore } from "initialize";
 

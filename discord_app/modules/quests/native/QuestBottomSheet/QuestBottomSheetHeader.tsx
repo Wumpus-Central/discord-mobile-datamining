@@ -1,6 +1,3 @@
-// === Module 14163: QuestBottomSheetHeader ===
-
-// Module 14163 (QuestBottomSheetHeader)
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
 import { View } from "SCREEN_READER_ENABLED_GETTER";

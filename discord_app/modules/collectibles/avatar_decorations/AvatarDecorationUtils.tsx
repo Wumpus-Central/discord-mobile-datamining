@@ -1,6 +1,3 @@
-// === Module 1852: parseAvatarDecorationData ===
-
-// Module 1852 (parseAvatarDecorationData)
 let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
 
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {

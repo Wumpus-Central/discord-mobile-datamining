@@ -1,6 +1,3 @@
-// === Module 15328: ForYouRecentActivitySectionHeader ===
-
-// Module 15328 (ForYouRecentActivitySectionHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

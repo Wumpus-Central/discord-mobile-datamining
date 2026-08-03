@@ -1,6 +1,3 @@
-// === Module 14829: SelectMenuNativeComponent ===
-
-// Module 14829 (SelectMenuNativeComponent)
 import "noop";
 import { jsx } from "jsxProd";
 import isFabric from "isFabric";

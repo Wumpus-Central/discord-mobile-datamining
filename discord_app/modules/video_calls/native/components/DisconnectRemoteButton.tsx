@@ -1,6 +1,3 @@
-// === Module 10820: DisconnectRemoteButton ===
-
-// Module 10820 (DisconnectRemoteButton)
 import "noop";
 import set from "set";
 import { jsx } from "jsxProd";

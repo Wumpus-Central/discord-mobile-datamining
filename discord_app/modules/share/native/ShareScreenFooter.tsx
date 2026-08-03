@@ -1,6 +1,3 @@
-// === Module 13063: ShareScreenFooter ===
-
-// Module 13063 (ShareScreenFooter)
 import "noop";
 import { jsx } from "jsxProd";
 

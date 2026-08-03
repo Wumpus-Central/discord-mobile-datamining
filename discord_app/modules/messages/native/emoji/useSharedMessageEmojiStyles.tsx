@@ -1,6 +1,3 @@
-// === Module 9422: styles ===
-
-// Module 9422 (styles)
 import createCacheKey from "createCacheKey";
 
 let obj = { emojiContainer: { flexDirection: "row", alignItems: "center" }, emojiDescriptionWrapper: { flexDirection: "column", flex: 1 }, emojiWrapper: { marginLeft: -8, marginRight: 8 }, emojiIcon: null, divider: null, ctaButton: null };

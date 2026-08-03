@@ -1,6 +1,3 @@
-// === Module 11737: useProvisionalAccountApplication ===
-
-// Module 11737 (useProvisionalAccountApplication)
 import recountRelationshipTypes from "recountRelationshipTypes";
 
 const require = arg1;

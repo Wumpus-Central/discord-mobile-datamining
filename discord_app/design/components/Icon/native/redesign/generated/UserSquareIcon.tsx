@@ -1,6 +1,3 @@
-// === Module 6618: UserSquareIcon ===
-
-// Module 6618 (UserSquareIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

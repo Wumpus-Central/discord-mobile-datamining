@@ -1,6 +1,3 @@
-// === Module 5719: updateSubmittedGuildJoinRequestTotal ===
-
-// Module 5719 (updateSubmittedGuildJoinRequestTotal)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate";
 import { Store } from "initialize";

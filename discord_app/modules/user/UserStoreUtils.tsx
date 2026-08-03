@@ -1,6 +1,3 @@
-// === Module 1880: validatePremiumType ===
-
-// Module 1880 (validatePremiumType)
 import { Environments } from "Environments";
 import ME from "ME";
 

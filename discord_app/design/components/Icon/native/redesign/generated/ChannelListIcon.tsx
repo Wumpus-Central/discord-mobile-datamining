@@ -1,6 +1,3 @@
-// === Module 16378: ChannelListIcon ===
-
-// Module 16378 (ChannelListIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

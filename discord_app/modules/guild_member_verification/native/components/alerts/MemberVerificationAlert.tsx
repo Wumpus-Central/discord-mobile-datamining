@@ -1,6 +1,3 @@
-// === Module 9161: MemberVerificationAlert ===
-
-// Module 9161 (MemberVerificationAlert)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

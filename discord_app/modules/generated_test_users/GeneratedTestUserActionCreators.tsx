@@ -1,6 +1,3 @@
-// === Module 13691: _getGeneratedPoolById ===
-
-// Module 13691 (_getGeneratedPoolById)
 import handleLogout from "handleLogout";
 import createdAt from "createdAt";
 import handleAddUser from "handleAddUser";

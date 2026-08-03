@@ -1,6 +1,3 @@
-// === Module 13527: _initialize ===
-
-// Module 13527 (_initialize)
 import { NativeModules } from "expandEventProperties";
 import initialize from "initialize";
 import closure_5 from "initialize";

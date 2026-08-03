@@ -1,6 +1,3 @@
-// === Module 9246: CountrySelectModal ===
-
-// Module 9246 (CountrySelectModal)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

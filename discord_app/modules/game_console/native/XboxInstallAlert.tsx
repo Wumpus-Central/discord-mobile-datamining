@@ -1,6 +1,3 @@
-// === Module 9061: XboxInstallAlert ===
-
-// Module 9061 (XboxInstallAlert)
 import "noop";
 import XBOX_URL_BASE from "XBOX_URL_BASE";
 import { jsx } from "jsxProd";

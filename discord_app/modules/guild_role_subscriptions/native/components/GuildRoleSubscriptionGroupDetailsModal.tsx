@@ -1,6 +1,3 @@
-// === Module 16591: Content ===
-
-// Module 16591 (Content)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "set";

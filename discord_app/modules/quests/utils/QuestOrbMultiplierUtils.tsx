@@ -1,6 +1,3 @@
-// === Module 9498: items ===
-
-// Module 9498 (items)
 let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
 obj = { NITRO: "nitro", CREPE: "crepe" };
 const items = [, ];

@@ -1,6 +1,3 @@
-// === Module 1593: enforcing ===
-
-// Module 1593 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeSafeAreaInsetsModule");

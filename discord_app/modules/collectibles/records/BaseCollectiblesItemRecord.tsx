@@ -1,6 +1,3 @@
-// === Module 1900: fromServer ===
-
-// Module 1900 (fromServer)
 import "toJS";
 
 let prototype;

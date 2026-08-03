@@ -1,6 +1,3 @@
-// === Module 15195: GuildRolesAndChannelsRow ===
-
-// Module 15195 (GuildRolesAndChannelsRow)
 import renderChannelBadge from "renderChannelBadge";
 import { View } from "asyncRequireImpl";
 import guildHasCommunity from "guildHasCommunity";

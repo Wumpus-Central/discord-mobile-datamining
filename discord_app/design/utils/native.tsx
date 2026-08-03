@@ -1,6 +1,3 @@
-// === Module 3899: getNodeText ===
-
-// Module 3899 (getNodeText)
 const result = require("chainCallbacks").fileFinishedImporting("design/utils/native.tsx");
 
 export const getNodeText = require("getNodeText").getNodeText;

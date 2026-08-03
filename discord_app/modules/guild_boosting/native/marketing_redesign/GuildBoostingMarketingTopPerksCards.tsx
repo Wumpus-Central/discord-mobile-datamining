@@ -1,6 +1,3 @@
-// === Module 12682: items ===
-
-// Module 12682 (items)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

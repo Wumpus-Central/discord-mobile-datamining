@@ -1,6 +1,3 @@
-// === Module 13034: useActivateDeviceStepTracking ===
-
-// Module 13034 (useActivateDeviceStepTracking)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

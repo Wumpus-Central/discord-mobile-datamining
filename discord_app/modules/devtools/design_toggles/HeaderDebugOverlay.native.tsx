@@ -1,6 +1,3 @@
-// === Module 5148: useHeaderDebugOverlay ===
-
-// Module 5148 (useHeaderDebugOverlay)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

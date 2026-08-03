@@ -1,6 +1,3 @@
-// === Module 5858: getEmptyActivityFormatter ===
-
-// Module 5858 (getEmptyActivityFormatter)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import items from "items";
 

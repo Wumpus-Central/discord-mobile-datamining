@@ -1,6 +1,3 @@
-// === Module 10202: componentDidMount ===
-
-// Module 10202 (componentDidMount)
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";

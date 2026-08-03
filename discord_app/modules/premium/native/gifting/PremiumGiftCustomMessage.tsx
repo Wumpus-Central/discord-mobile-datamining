@@ -1,6 +1,3 @@
-// === Module 8820: GiftCustomMessage ===
-
-// Module 8820 (GiftCustomMessage)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { CUSTOM_GIFT_MESSAGE_MAX_LENGTH as closure_4 } from "GuildFeatures";

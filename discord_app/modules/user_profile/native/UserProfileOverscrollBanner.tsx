@@ -1,6 +1,3 @@
-// === Module 8387: UserProfileOverscrollBanner ===
-
-// Module 8387 (UserProfileOverscrollBanner)
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

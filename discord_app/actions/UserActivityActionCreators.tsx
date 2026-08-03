@@ -1,6 +1,3 @@
-// === Module 10958: _getMetadata ===
-
-// Module 10958 (_getMetadata)
 import sendRequest from "sendRequest";
 import sortActivity from "sortActivity";
 import { Endpoints } from "ME";

@@ -1,6 +1,3 @@
-// === Module 15667: AutoArchiveDurationOptions ===
-
-// Module 15667 (AutoArchiveDurationOptions)
 import { ChannelFlags } from "set";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

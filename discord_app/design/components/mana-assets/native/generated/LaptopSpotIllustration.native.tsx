@@ -1,6 +1,3 @@
-// === Module 7257: LaptopSpotIllustration ===
-
-// Module 7257 (LaptopSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/LaptopSpotIllustration.native.tsx");

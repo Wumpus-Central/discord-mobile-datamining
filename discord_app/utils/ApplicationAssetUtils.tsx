@@ -1,6 +1,3 @@
-// === Module 7921: updateAssets ===
-
-// Module 7921 (updateAssets)
 import _slicedToArray from "_slicedToArray";
 import timestamp from "timestamp";
 import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";

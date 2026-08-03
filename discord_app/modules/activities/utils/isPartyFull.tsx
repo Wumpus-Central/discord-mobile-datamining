@@ -1,6 +1,3 @@
-// === Module 10963: isPartyFull ===
-
-// Module 10963 (isPartyFull)
 const result = require("set").fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");
 
 export const isPartyFull = function isPartyFull(partySize) {

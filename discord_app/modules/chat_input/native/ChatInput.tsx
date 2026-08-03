@@ -1,6 +1,3 @@
-// === Module 11165: ChatInput ===
-
-// Module 11165 (ChatInput)
 import INITIAL_STATE from "INITIAL_STATE";
 import getChatInputMaxHeight from "getChatInputMaxHeight";
 import importAllResult from "jsxProd";

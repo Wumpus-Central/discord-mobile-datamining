@@ -1,6 +1,3 @@
-// === Module 16326: handleChange ===
-
-// Module 16326 (handleChange)
 import participantFromServer from "participantFromServer";
 import reset from "reset";
 import createRTCConnection from "createRTCConnection";

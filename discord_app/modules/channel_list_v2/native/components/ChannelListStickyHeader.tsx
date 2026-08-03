@@ -1,6 +1,3 @@
-// === Module 15140: ChannelListStickyHeader ===
-
-// Module 15140 (ChannelListStickyHeader)
 import Text from "Text";
 import get_ActivityIndicator from "MobileLurkerServerPreviewExperiment";
 import initialize from "initialize";

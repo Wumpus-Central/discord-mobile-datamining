@@ -1,6 +1,3 @@
-// === Module 11965: GuildProfileGameRow ===
-
-// Module 11965 (GuildProfileGameRow)
 import noop from "noop";
 import { View } from "TableRowGroupTitle";
 import { jsx } from "jsxProd";

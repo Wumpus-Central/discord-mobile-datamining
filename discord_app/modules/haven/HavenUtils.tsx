@@ -1,6 +1,3 @@
-// === Module 12835: parseParticipant ===
-
-// Module 12835 (parseParticipant)
 function parseParticipant(userId) {
   return { userId: userId.user_id, position: userId.position, avatar: userId.avatar };
 }

@@ -1,6 +1,3 @@
-// === Module 7692: normalizeChannelPropertyForCompare ===
-
-// Module 7692 (normalizeChannelPropertyForCompare)
 import { createChannelRecordFromInvite as closure_9 } from "createChannelRecord";
 import createFromServer from "createFromServer";
 import createdAt from "createdAt";

@@ -1,6 +1,3 @@
-// === Module 11351: set ===
-
-// Module 11351 (set)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

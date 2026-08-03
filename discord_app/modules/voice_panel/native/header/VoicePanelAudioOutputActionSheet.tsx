@@ -1,6 +1,3 @@
-// === Module 8867: VoicePanelAudioPhoneOutputSection ===
-
-// Module 8867 (VoicePanelAudioPhoneOutputSection)
 import importAllResult from "useGameConsoleAccounts";
 import { ScrollView } from "TableRowIcon";
 import set from "set";

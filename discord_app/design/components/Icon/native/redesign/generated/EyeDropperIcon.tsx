@@ -1,6 +1,3 @@
-// === Module 14384: EyeDropperIcon ===
-
-// Module 14384 (EyeDropperIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

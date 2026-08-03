@@ -1,6 +1,3 @@
-// === Module 13532: inferImportanceFromBehavior ===
-
-// Module 13532 (inferImportanceFromBehavior)
 import items2 from "items2";
 
 let c3;

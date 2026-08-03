@@ -1,6 +1,3 @@
-// === Module 9597: _initialize ===
-
-// Module 9597 (_initialize)
 import "initialize";
 
 const require = arg1;

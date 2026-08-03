@@ -1,6 +1,3 @@
-// === Module 10556: useParticipantTileTapGesture ===
-
-// Module 10556 (useParticipantTileTapGesture)
 const result = require("set").fileFinishedImporting("modules/video_calls/native/useParticipantTileTapGesture.tsx");
 
 export default function useParticipantTileTapGesture(arg0) {

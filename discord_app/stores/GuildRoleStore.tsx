@@ -1,6 +1,3 @@
-// === Module 1935: createGuildRoleRecordFromRust ===
-
-// Module 1935 (createGuildRoleRecordFromRust)
 import { constructInPlace } from "isValueEqual";
 import { LibdiscoreStore } from "identity";
 import { getGuildEveryoneRoleId } from "GuildNSFWContentLevel";

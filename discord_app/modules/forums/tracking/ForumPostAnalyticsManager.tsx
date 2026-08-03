@@ -1,6 +1,3 @@
-// === Module 6088: handleThreadCreate ===
-
-// Module 6088 (handleThreadCreate)
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

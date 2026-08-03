@@ -1,6 +1,3 @@
-// === Module 7145: GemInHandSpotIllustration ===
-
-// Module 7145 (GemInHandSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GemInHandSpotIllustration.native.tsx");

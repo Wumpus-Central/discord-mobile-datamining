@@ -1,6 +1,3 @@
-// === Module 4725: set ===
-
-// Module 4725 (set)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import _slicedToArray from "_slicedToArray";

@@ -1,6 +1,3 @@
-// === Module 16629: GuildPremiumRoleSubscribeButton ===
-
-// Module 16629 (GuildPremiumRoleSubscribeButton)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

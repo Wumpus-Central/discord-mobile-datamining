@@ -1,6 +1,3 @@
-// === Module 16245: MainAreaCanUpload ===
-
-// Module 16245 (MainAreaCanUpload)
 import ME from "ME";
 import initialize from "initialize";
 import { View } from "isInteractionComponent";

@@ -1,6 +1,3 @@
-// === Module 8319: getEventLocationIconSource ===
-
-// Module 8319 (getEventLocationIconSource)
 const result = require("getChannelIcon").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");
 
 export const getEventLocationIconSource = function getEventLocationIconSource(event, channel, stateFromStores2) {

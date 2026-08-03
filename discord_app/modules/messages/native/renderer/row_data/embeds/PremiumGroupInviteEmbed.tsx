@@ -1,6 +1,3 @@
-// === Module 7834: createPremiumGroupInviteEmbed ===
-
-// Module 7834 (createPremiumGroupInviteEmbed)
 import SubscriptionStatusTypes from "SubscriptionStatusTypes";
 
 let c3;

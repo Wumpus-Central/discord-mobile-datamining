@@ -1,6 +1,3 @@
-// === Module 14974: GuildsBarGuildJoinRequestBadge ===
-
-// Module 14974 (GuildsBarGuildJoinRequestBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 3844: addSubscriptionPlan ===
-
-// Module 3844 (addSubscriptionPlan)
 import createFromServer from "createFromServer";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";

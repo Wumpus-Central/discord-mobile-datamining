@@ -1,6 +1,3 @@
-// === Module 16458: SyncingToGamesItem ===
-
-// Module 16458 (SyncingToGamesItem)
 import "noop";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

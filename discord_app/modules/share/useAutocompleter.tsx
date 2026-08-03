@@ -1,6 +1,3 @@
-// === Module 9924: useAutocompleter ===
-
-// Module 9924 (useAutocompleter)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

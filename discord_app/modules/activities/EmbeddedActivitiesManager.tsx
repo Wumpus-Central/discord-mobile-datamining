@@ -1,6 +1,3 @@
-// === Module 10626: getShelfItemTrackingProperties ===
-
-// Module 10626 (getShelfItemTrackingProperties)
 import createRTCConnection from "createRTCConnection";
 import getParticipants from "getParticipants";
 import { GUILD_VOCAL_CHANNEL_TYPES } from "createChannelRecord";

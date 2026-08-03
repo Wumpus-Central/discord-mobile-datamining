@@ -1,6 +1,3 @@
-// === Module 1916: open ===
-
-// Module 1916 (open)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 13138: ProductCatalogFeature ===
-
-// Module 13138 (ProductCatalogFeature)
 import GuildFeatures from "GuildFeatures";
 import "set";
 import importDefaultResult1 from "set";

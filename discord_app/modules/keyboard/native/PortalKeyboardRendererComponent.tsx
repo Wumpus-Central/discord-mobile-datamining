@@ -1,6 +1,3 @@
-// === Module 15610: ? ===
-
-// Module 15610
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 11447: VOICE_PANEL_DRAWER_MAX_WIDTH ===
-
-// Module 11447 (VOICE_PANEL_DRAWER_MAX_WIDTH)
 import { VOICE_PANEL_DRAWER_MAX_WIDTH } from "VoicePanelModes";
 import { EDGE_GUTTER } from "CARD_SIZE";
 import { CONTROLS_MAX_WIDTH } from "VoicePanelControlsModes";

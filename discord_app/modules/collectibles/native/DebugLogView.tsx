@@ -1,6 +1,3 @@
-// === Module 14656: DebugLogView ===
-
-// Module 14656 (DebugLogView)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import getUserAgnosticState from "getUserAgnosticState";

@@ -1,6 +1,3 @@
-// === Module 3841: handlePaymentSourceCreateEnd ===
-
-// Module 3841 (handlePaymentSourceCreateEnd)
 import { FallbackCurrencyCountry } from "ME";
 import { Store } from "initialize";
 

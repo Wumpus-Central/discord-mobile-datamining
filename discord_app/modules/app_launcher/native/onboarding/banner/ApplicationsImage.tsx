@@ -1,6 +1,3 @@
-// === Module 11238: ApplicationsImage ===
-
-// Module 11238 (ApplicationsImage)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

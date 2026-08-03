@@ -1,6 +1,3 @@
-// === Module 6688: MarketingPageBannerTile ===
-
-// Module 6688 (MarketingPageBannerTile)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

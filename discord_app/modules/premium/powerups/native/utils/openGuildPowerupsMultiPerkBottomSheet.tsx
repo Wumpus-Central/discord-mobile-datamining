@@ -1,6 +1,3 @@
-// === Module 11651: openGuildPowerupsMultiPerkBottomSheet ===
-
-// Module 11651 (openGuildPowerupsMultiPerkBottomSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsMultiPerkBottomSheet.tsx");
 
 export default function openGuildPowerupsMultiPerkBottomSheet(arg0) {

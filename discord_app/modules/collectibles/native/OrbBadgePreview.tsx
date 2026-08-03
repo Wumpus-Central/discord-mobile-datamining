@@ -1,6 +1,3 @@
-// === Module 8761: OrbBadgePreview ===
-
-// Module 8761 (OrbBadgePreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

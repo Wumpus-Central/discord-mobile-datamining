@@ -1,6 +1,3 @@
-// === Module 7693: ? ===
-
-// Module 7693
 import set from "set";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";

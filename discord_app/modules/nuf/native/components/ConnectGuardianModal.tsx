@@ -1,6 +1,3 @@
-// === Module 16302: ConnectGuardianModal ===
-
-// Module 16302 (ConnectGuardianModal)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";

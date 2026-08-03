@@ -1,6 +1,3 @@
-// === Module 8878: MicrophoneSlashIcon ===
-
-// Module 8878 (MicrophoneSlashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

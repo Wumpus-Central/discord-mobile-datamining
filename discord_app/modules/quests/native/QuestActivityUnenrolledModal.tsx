@@ -1,6 +1,3 @@
-// === Module 15881: QuestActivityUnenrolledModalInner ===
-
-// Module 15881 (QuestActivityUnenrolledModalInner)
 import set from "set";
 import registerAsset from "registerAsset";
 import getAvatarURL from "getAvatarURL";

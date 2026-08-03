@@ -1,6 +1,3 @@
-// === Module 1868: fluxApi ===
-
-// Module 1868 (fluxApi)
 import isBlockedDomain from "isBlockedDomain";
 
 isBlockedDomain = isBlockedDomain.getFluxApi();

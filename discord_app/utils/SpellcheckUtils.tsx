@@ -1,6 +1,3 @@
-// === Module 5196: _setEnabled ===
-
-// Module 5196 (_setEnabled)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import set from "set";
 import set from "set";

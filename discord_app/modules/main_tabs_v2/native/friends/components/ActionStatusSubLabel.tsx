@@ -1,6 +1,3 @@
-// === Module 15334: announceActioned ===
-
-// Module 15334 (announceActioned)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

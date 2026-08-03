@@ -1,6 +1,3 @@
-// === Module 7904: MIN_REREQUEST_TIME ===
-
-// Module 7904 (MIN_REREQUEST_TIME)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

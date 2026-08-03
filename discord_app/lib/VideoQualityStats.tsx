@@ -1,6 +1,3 @@
-// === Module 6031: parseEncoder ===
-
-// Module 6031 (parseEncoder)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

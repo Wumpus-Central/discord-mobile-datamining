@@ -1,6 +1,3 @@
-// === Module 9655: _openStickersPremiumUpsellAlert ===
-
-// Module 9655 (_openStickersPremiumUpsellAlert)
 import fetchSubscriptionPlansForSKU from "fetchSubscriptionPlansForSKU";
 import "noop";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 12511: roundFPCountdownUnits ===
-
-// Module 12511 (roundFPCountdownUnits)
 function roundFPCountdownUnits(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);

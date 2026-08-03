@@ -1,6 +1,3 @@
-// === Module 4228: setLibraryApplications ===
-
-// Module 4228 (setLibraryApplications)
 import createFromServer from "createFromServer";
 import fetchFingerprint from "fetchFingerprint";
 import { LibraryApplicationFlags } from "ME";

@@ -1,6 +1,3 @@
-// === Module 14971: useGuildsBarBottomRightBadge ===
-
-// Module 14971 (useGuildsBarBottomRightBadge)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

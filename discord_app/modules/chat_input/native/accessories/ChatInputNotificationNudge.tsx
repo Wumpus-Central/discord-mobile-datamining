@@ -1,6 +1,3 @@
-// === Module 11516: ChatInputNotificationNudgeImpl ===
-
-// Module 11516 (ChatInputNotificationNudgeImpl)
 import _slicedToArray from "_slicedToArray";
 import noop from "getOrRefreshPushSyncToken";
 import { View } from "_requestPushNotificationPermission";

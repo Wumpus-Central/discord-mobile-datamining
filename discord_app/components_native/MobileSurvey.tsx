@@ -1,6 +1,3 @@
-// === Module 15771: MobileSurvey ===
-
-// Module 15771 (MobileSurvey)
 import closure_3 from "createCacheKey";
 import noop from "noop";
 import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";

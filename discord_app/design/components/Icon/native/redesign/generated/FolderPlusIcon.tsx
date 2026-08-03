@@ -1,6 +1,3 @@
-// === Module 15148: FolderPlusIcon ===
-
-// Module 15148 (FolderPlusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 4684: isRoleRequired ===
-
-// Module 4684 (isRoleRequired)
 import { GUILD_NON_CATEGORY_CHANNEL_TYPES as closure_2 } from "createChannelRecord";
 import { Permissions } from "sum";
 

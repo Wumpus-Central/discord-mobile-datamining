@@ -1,6 +1,3 @@
-// === Module 16639: ActionableNotice ===
-
-// Module 16639 (ActionableNotice)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

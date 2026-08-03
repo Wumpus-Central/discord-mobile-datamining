@@ -1,6 +1,3 @@
-// === Module 11356: FlashListWrapper ===
-
-// Module 11356 (FlashListWrapper)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

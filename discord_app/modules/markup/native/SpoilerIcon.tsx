@@ -1,6 +1,3 @@
-// === Module 11201: Spoiler ===
-
-// Module 11201 (Spoiler)
 import "noop";
 import jsxProd from "jsxProd";
 

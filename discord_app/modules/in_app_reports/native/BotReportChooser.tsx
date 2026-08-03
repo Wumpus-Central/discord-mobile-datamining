@@ -1,6 +1,3 @@
-// === Module 11979: ReportAppProfile ===
-
-// Module 11979 (ReportAppProfile)
 import "noop";
 import addApplication from "addApplication";
 import jsxProd from "jsxProd";

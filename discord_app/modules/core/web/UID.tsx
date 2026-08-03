@@ -1,6 +1,3 @@
-// === Module 9313: uid ===
-
-// Module 9313 (uid)
 const result = require("set").fileFinishedImporting("modules/core/web/UID.tsx");
 
 export const uid = function uid() {

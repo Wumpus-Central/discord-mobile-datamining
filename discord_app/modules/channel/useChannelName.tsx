@@ -1,6 +1,3 @@
-// === Module 4384: computeChannelName ===
-
-// Module 4384 (computeChannelName)
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import upsertRelationship from "upsertRelationship";

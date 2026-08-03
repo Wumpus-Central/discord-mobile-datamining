@@ -1,6 +1,3 @@
-// === Module 14196: VideoQuestModalHeader ===
-
-// Module 14196 (VideoQuestModalHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { useVideoQuestUIStore } from "_toPropertyKey";

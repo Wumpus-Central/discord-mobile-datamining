@@ -1,6 +1,3 @@
-// === Module 4380: MAX_THUMBNAIL_COUNT ===
-
-// Module 4380 (MAX_THUMBNAIL_COUNT)
 const result = require("set").fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 
 export const MAX_THUMBNAIL_COUNT = 4;

@@ -1,6 +1,3 @@
-// === Module 10473: UnreadSettingNoticeImpressionTracking ===
-
-// Module 10473 (UnreadSettingNoticeImpressionTracking)
 const result = require("set").fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeImpressionTracking.tsx");
 
 export default function UnreadSettingNoticeImpressionTracking(id) {

@@ -1,6 +1,3 @@
-// === Module 10529: isAgeRestrictedClassificationReference ===
-
-// Module 10529 (isAgeRestrictedClassificationReference)
 let result = require("set").fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
 
 export const isAgeRestrictedClassificationReference = function isAgeRestrictedClassificationReference(contentClassification) {

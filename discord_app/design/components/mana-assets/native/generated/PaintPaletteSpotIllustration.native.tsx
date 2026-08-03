@@ -1,6 +1,3 @@
-// === Module 7383: PaintPaletteSpotIllustration ===
-
-// Module 7383 (PaintPaletteSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PaintPaletteSpotIllustration.native.tsx");

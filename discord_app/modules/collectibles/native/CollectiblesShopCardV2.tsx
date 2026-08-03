@@ -1,6 +1,3 @@
-// === Module 8670: CollectiblesShopCardInternalV2 ===
-
-// Module 8670 (CollectiblesShopCardInternalV2)
 import importAllResult from "useCanPurchaseFrames";
 import get_ActivityIndicator from "useTrackShopCardClick";
 import handleThemeChange from "handleThemeChange";

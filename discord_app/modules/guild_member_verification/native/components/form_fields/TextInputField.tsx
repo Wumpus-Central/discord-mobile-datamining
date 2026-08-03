@@ -1,6 +1,3 @@
-// === Module 9273: TextInputField ===
-
-// Module 9273 (TextInputField)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { MAX_TEXT_RESPONSE_LENGTH } from "items";

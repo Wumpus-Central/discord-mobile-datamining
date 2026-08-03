@@ -1,6 +1,3 @@
-// === Module 16010: VoicePanelPIPPushToTalkOverlay ===
-
-// Module 16010 (VoicePanelPIPPushToTalkOverlay)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { PUSH_TO_TALK_PIP_PHYSICS } from "VoicePanelModes";

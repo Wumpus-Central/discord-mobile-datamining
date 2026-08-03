@@ -1,6 +1,3 @@
-// === Module 8369: UseAnimatedPosition ===
-
-// Module 8369 (UseAnimatedPosition)
 import useWindowDimensions from "useWindowDimensions";
 import importAllResult from "useBottomSheetRef";
 import get_ActivityIndicator from "context";

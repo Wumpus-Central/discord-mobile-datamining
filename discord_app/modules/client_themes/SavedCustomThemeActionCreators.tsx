@@ -1,6 +1,3 @@
-// === Module 14300: fetchUserCustomThemes ===
-
-// Module 14300 (fetchUserCustomThemes)
 import validateSavedTheme from "validateSavedTheme";
 import { Endpoints } from "ME";
 

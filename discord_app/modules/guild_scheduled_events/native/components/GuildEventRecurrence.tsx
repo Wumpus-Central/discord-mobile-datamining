@@ -1,6 +1,3 @@
-// === Module 8337: GuildEventRecurrence ===
-
-// Module 8337 (GuildEventRecurrence)
 import registerAsset from "registerAsset";
 import { View } from "openCreateOrEditGuildEventModal";
 import ensureGuildLoaded from "ensureGuildLoaded";

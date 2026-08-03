@@ -1,6 +1,3 @@
-// === Module 10031: OAuth2AuthorizeModal ===
-
-// Module 10031 (OAuth2AuthorizeModal)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

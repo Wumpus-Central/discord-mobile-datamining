@@ -1,6 +1,3 @@
-// === Module 14204: NonInlineConsoleConnection ===
-
-// Module 14204 (NonInlineConsoleConnection)
 import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource";
 import { View } from "AdCreativeType";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 8828: useScaledActionHeight ===
-
-// Module 8828 (useScaledActionHeight)
 const result = require("Themes").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledActionHeight.tsx");
 
 export default function useScaledActionHeight() {

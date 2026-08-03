@@ -1,6 +1,3 @@
-// === Module 7896: isInteractionComponent ===
-
-// Module 7896 (isInteractionComponent)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "useMountLayoutEffect";
 import deleteNonce from "deleteNonce";

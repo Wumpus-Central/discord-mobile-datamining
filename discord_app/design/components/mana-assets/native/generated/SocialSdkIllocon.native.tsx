@@ -1,6 +1,3 @@
-// === Module 7507: SocialSdkIllocon ===
-
-// Module 7507 (SocialSdkIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/SocialSdkIllocon.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 10323: MutedUntilText ===
-
-// Module 10323 (MutedUntilText)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 16155: handleAppStateUpdate ===
-
-// Module 16155 (handleAppStateUpdate)
 import FreemiumAppIconIds from "FreemiumAppIconIds";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { getIconById } from "items";

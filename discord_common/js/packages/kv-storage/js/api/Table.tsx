@@ -1,6 +1,3 @@
-// === Module 1912: fromDatabaseTransaction ===
-
-// Module 1912 (fromDatabaseTransaction)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

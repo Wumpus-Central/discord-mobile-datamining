@@ -1,6 +1,3 @@
-// === Module 10568: ResizeMode ===
-
-// Module 10568 (ResizeMode)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

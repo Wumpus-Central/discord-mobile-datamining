@@ -1,6 +1,3 @@
-// === Module 15235: CreatorMonetizationOnboardingV2UpsellActionSheet ===
-
-// Module 15235 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { GuildSettingsSections } from "ME";

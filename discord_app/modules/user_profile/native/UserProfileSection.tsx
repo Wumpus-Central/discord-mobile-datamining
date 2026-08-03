@@ -1,6 +1,3 @@
-// === Module 10044: UserProfileSection ===
-
-// Module 10044 (UserProfileSection)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

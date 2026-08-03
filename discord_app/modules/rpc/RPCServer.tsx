@@ -1,6 +1,3 @@
-// === Module 13600: registerTransport ===
-
-// Module 13600 (registerTransport)
 import prototype from "prototype";
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import ME from "ME";

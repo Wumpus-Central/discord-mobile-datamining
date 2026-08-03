@@ -1,6 +1,3 @@
-// === Module 8708: useWishlistButtonState ===
-
-// Module 8708 (useWishlistButtonState)
 import isNullOrEmpty from "isNullOrEmpty";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

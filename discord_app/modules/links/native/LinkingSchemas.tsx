@@ -1,6 +1,3 @@
-// === Module 3889: LINKING_SCHEMAS ===
-
-// Module 3889 (LINKING_SCHEMAS)
 obj = { bestbuy: obj };
 obj = { regex: /(?:^https?:\/\/)(?:www\.)?bestbuy\.com(?:\/(.*))?$/i, protocol: "bestbuy://" };
 const values = Object.values(obj);

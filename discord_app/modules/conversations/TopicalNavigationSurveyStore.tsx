@@ -1,6 +1,3 @@
-// === Module 9280: initialize ===
-
-// Module 9280 (initialize)
 import { DeviceSettingsStore } from "initialize";
 
 let c0 = 0;

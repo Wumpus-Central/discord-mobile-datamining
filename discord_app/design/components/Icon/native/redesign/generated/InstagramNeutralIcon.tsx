@@ -1,6 +1,3 @@
-// === Module 7879: InstagramNeutralIcon ===
-
-// Module 7879 (InstagramNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

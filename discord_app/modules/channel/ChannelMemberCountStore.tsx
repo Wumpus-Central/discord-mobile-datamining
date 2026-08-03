@@ -1,6 +1,3 @@
-// === Module 10163: initialize ===
-
-// Module 10163 (initialize)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { PersistedStore } from "initialize";

@@ -1,6 +1,3 @@
-// === Module 4244: constants ===
-
-// Module 4244 (constants)
 import importDefaultResult from "enforcing";
 
 const constants = require("enforcing").getConstants();

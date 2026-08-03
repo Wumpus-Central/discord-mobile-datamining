@@ -1,6 +1,3 @@
-// === Module 1233: safeDispatch ===
-
-// Module 1233 (safeDispatch)
 let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
 class ComponentDispatcher {
   constructor() {

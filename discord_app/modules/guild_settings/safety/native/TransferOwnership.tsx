@@ -1,6 +1,3 @@
-// === Module 11052: TransferOwnership ===
-
-// Module 11052 (TransferOwnership)
 import closure_3 from "TransferOwnershipModalScenes";
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";

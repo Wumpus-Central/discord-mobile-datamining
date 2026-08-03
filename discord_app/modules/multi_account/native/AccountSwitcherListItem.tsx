@@ -1,6 +1,3 @@
-// === Module 14883: AccountStatusIcon ===
-
-// Module 14883 (AccountStatusIcon)
 import "noop";
 import get_ActivityIndicator from "nameFromUser";
 import createdAt from "createdAt";

@@ -1,6 +1,3 @@
-// === Module 7844: useHasDiscountApplied ===
-
-// Module 7844 (useHasDiscountApplied)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import reset from "reset";

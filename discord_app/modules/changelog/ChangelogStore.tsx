@@ -1,6 +1,3 @@
-// === Module 4204: handleUserSettingsProtoStoreChange ===
-
-// Module 4204 (handleUserSettingsProtoStoreChange)
 import _getSystemLocale from "_getSystemLocale";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY";

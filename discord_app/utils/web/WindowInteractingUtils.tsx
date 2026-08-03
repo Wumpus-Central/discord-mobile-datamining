@@ -1,6 +1,3 @@
-// === Module 5195: INTERACTION_EVENTS ===
-
-// Module 5195 (INTERACTION_EVENTS)
 let c0 = null;
 const result = require("set").fileFinishedImporting("utils/web/WindowInteractingUtils.tsx");
 

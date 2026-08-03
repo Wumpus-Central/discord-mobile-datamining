@@ -1,6 +1,3 @@
-// === Module 11812: GuildTemplateId ===
-
-// Module 11812 (GuildTemplateId)
 import ME from "ME";
 
 let c3;

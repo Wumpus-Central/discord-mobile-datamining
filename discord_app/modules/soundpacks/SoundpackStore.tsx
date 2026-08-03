@@ -1,6 +1,3 @@
-// === Module 10286: Soundpacks ===
-
-// Module 10286 (Soundpacks)
 import { Soundpacks } from "Soundpacks";
 import { PersistedStore } from "initialize";
 

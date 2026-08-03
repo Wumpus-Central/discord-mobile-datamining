@@ -1,6 +1,3 @@
-// === Module 6507: _fetchUserOffer ===
-
-// Module 6507 (_fetchUserOffer)
 import dispatcher from "dispatcher";
 import createFromServer from "createFromServer";
 import { PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID as closure_5 } from "GuildFeatures";

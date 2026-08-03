@@ -1,6 +1,3 @@
-// === Module 8206: set ===
-
-// Module 8206 (set)
 import { SPOTIFY_HOSTNAMES } from "WEB_OPEN";
 import { Store } from "initialize";
 import set from "isDiscordProxiedAssetUrl";

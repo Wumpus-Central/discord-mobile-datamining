@@ -1,6 +1,3 @@
-// === Module 13994: UserSettingsAuthedAppPermissions ===
-
-// Module 13994 (UserSettingsAuthedAppPermissions)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

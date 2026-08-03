@@ -1,6 +1,3 @@
-// === Module 10790: hasPermissionToPlaySound ===
-
-// Module 10790 (hasPermissionToPlaySound)
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { SILENT_JOIN_LEAVE_CHANNEL_TYPES as closure_5 } from "createChannelRecord";

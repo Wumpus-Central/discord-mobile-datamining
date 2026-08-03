@@ -1,6 +1,3 @@
-// === Module 11725: GuildIconPile ===
-
-// Module 11725 (GuildIconPile)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

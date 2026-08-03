@@ -1,6 +1,3 @@
-// === Module 11727: confirmCancelFriendRequest ===
-
-// Module 11727 (confirmCancelFriendRequest)
 import "noop";
 import { jsx } from "jsxProd";
 

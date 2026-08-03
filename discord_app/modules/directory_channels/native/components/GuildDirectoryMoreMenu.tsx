@@ -1,6 +1,3 @@
-// === Module 10078: GuildDirectoryMoreMenu ===
-
-// Module 10078 (GuildDirectoryMoreMenu)
 import "noop";
 import { jsx } from "jsxProd";
 

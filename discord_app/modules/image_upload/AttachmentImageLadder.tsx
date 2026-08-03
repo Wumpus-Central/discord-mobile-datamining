@@ -1,6 +1,3 @@
-// === Module 1848: items ===
-
-// Module 1848 (items)
 const items = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];
 let result = require("set").fileFinishedImporting("modules/image_upload/AttachmentImageLadder.tsx");
 

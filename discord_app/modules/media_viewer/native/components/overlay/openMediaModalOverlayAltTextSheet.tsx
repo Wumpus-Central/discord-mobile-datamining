@@ -1,6 +1,3 @@
-// === Module 10912: openMediaModalOverlayAltTextSheet ===
-
-// Module 10912 (openMediaModalOverlayAltTextSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx");
 
 export default function openMediaModalOverlayAltTextSheet(description) {

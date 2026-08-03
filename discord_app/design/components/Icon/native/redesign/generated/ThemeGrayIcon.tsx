@@ -1,6 +1,3 @@
-// === Module 15268: ThemeGrayIcon ===
-
-// Module 15268 (ThemeGrayIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

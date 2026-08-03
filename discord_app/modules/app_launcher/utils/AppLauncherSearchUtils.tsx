@@ -1,6 +1,3 @@
-// === Module 11255: useApplicationsInContext ===
-
-// Module 11255 (useApplicationsInContext)
 import _slicedToArray from "_slicedToArray";
 import _getEmbedApplication from "_getEmbedApplication";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";

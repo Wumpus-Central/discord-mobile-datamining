@@ -1,6 +1,3 @@
-// === Module 8042: GiftCodeRedeemStart ===
-
-// Module 8042 (GiftCodeRedeemStart)
 import Text from "Text";
 import getSubscriptionPlans from "getSubscriptionPlans";
 import get_ActivityIndicator from "nameFromUser";

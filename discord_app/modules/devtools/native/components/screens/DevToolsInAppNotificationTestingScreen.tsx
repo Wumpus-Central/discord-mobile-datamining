@@ -1,6 +1,3 @@
-// === Module 14842: handleResetInAppNotificationExpandNux ===
-
-// Module 14842 (handleResetInAppNotificationExpandNux)
 import MAX_TIMES_SHOWN from "MAX_TIMES_SHOWN";
 import { ScrollView } from "updateUserGuildSettings";
 import loadSavedGuildStickers from "loadSavedGuildStickers";

@@ -1,6 +1,3 @@
-// === Module 653: u ===
-
-// Module 653 (u)
 import u from "u";
 
 try {

@@ -1,6 +1,3 @@
-// === Module 11225: useAppLauncherOnboardingContent ===
-
-// Module 11225 (useAppLauncherOnboardingContent)
 import _slicedToArray from "_slicedToArray";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import ensureGuildLoaded from "ensureGuildLoaded";

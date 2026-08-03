@@ -1,6 +1,3 @@
-// === Module 4206: getParticipants ===
-
-// Module 4206 (getParticipants)
 import _slicedToArray from "_slicedToArray";
 import participantFromServer from "participantFromServer";
 import closure_5 from "set";

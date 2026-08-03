@@ -1,6 +1,3 @@
-// === Module 12218: UserProfilePrivateBanner ===
-
-// Module 12218 (UserProfilePrivateBanner)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

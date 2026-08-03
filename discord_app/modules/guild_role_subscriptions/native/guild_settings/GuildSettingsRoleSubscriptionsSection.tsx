@@ -1,6 +1,3 @@
-// === Module 16382: HasCreatedListingsSection ===
-
-// Module 16382 (HasCreatedListingsSection)
 import "noop";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import mergeGuildAvatar from "mergeGuildAvatar";

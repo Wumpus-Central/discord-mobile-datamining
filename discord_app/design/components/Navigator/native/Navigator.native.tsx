@@ -1,6 +1,3 @@
-// === Module 5574: NavigationStack ===
-
-// Module 5574 (NavigationStack)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "useNavigationTheme";

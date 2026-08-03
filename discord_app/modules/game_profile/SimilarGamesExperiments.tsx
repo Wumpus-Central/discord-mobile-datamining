@@ -1,6 +1,3 @@
-// === Module 8522: apexExperiment ===
-
-// Module 8522 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";
 

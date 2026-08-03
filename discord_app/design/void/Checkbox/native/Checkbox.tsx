@@ -1,6 +1,3 @@
-// === Module 13148: Checkbox ===
-
-// Module 13148 (Checkbox)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

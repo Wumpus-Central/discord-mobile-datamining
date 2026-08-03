@@ -1,6 +1,3 @@
-// === Module 13156: NewTag ===
-
-// Module 13156 (NewTag)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { HorizontalGradient } from "ME";

@@ -1,6 +1,3 @@
-// === Module 11420: FadeTransitionItem ===
-
-// Module 11420 (FadeTransitionItem)
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { CHAT_INPUT_TIMING_CONFIG } from "TextAreaCta";

@@ -1,6 +1,3 @@
-// === Module 6721: RowType ===
-
-// Module 6721 (RowType)
 import ME from "ME";
 
 let c3;

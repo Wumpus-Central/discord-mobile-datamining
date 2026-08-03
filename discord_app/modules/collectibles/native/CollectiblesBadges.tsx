@@ -1,6 +1,3 @@
-// === Module 7971: NewBadge ===
-
-// Module 7971 (NewBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { PremiumTypes } from "GuildFeatures";

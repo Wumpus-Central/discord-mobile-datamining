@@ -1,6 +1,3 @@
-// === Module 16325: _terminate ===
-
-// Module 16325 (_terminate)
 import GuildFeatures from "GuildFeatures";
 import _getSystemLocale from "_getSystemLocale";
 import mergeGuildAvatar from "mergeGuildAvatar";

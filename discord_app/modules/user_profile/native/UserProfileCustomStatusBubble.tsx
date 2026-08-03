@@ -1,6 +1,3 @@
-// === Module 11981: EmojiImage ===
-
-// Module 11981 (EmojiImage)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "QUICK_SWITCHER";
 import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";

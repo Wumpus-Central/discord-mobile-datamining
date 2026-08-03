@@ -1,6 +1,3 @@
-// === Module 14519: _serializeIntlData ===
-
-// Module 14519 (_serializeIntlData)
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "set";
 import ME from "ME";

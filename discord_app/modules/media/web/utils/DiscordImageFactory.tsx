@@ -1,6 +1,3 @@
-// === Module 4775: create ===
-
-// Module 4775 (create)
 const result = require("set").fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
 const prototype = function DiscordImageFactory() {
   return Object.create(new.target.prototype);

@@ -1,6 +1,3 @@
-// === Module 15817: HistorySeparator ===
-
-// Module 15817 (HistorySeparator)
 import importAllResult from "renderCategoryItem";
 import get_ActivityIndicator from "transitionToChannel";
 import ensureGuildLoaded from "ensureGuildLoaded";

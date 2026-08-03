@@ -1,6 +1,3 @@
-// === Module 5026: ButtonGroup ===
-
-// Module 5026 (ButtonGroup)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

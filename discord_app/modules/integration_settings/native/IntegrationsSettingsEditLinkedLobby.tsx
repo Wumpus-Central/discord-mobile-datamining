@@ -1,6 +1,3 @@
-// === Module 15701: EditLinkedLobby ===
-
-// Module 15701 (EditLinkedLobby)
 import Button from "Button";
 import { View } from "Form";
 import mergeGuildAvatar from "mergeGuildAvatar";

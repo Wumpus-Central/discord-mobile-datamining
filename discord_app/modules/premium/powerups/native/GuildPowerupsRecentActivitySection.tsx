@@ -1,6 +1,3 @@
-// === Module 11684: GuildPowerupsRecentActivityRow ===
-
-// Module 11684 (GuildPowerupsRecentActivityRow)
 import { View } from "getSystemLocale";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";

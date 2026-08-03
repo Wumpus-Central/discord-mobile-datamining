@@ -1,6 +1,3 @@
-// === Module 4162: HapticFeedbackTypes ===
-
-// Module 4162 (HapticFeedbackTypes)
 const result = require("set").fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");
 
 export const HapticFeedbackTypes = require("IMPACT_LIGHT");

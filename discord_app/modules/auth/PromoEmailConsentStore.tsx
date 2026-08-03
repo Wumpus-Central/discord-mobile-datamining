@@ -1,6 +1,3 @@
-// === Module 5646: setPromoEmailConsentState ===
-
-// Module 5646 (setPromoEmailConsentState)
 import keys from "keys";
 
 const obj = keys.create(() => ({ required: false, checked: false, preChecked: false }));

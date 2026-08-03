@@ -1,6 +1,3 @@
-// === Module 5855: items ===
-
-// Module 5855 (items)
 import set from "set";
 
 const items = [, , ];

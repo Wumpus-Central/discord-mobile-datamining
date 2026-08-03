@@ -1,6 +1,3 @@
-// === Module 1580: setIsAnyChatInputFocused ===
-
-// Module 1580 (setIsAnyChatInputFocused)
 let c0 = false;
 const result = require("set").fileFinishedImporting("modules/keyboard/native/ChatInputFocused.tsx");
 

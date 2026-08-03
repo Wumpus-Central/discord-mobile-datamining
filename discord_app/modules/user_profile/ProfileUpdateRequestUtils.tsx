@@ -1,6 +1,3 @@
-// === Module 9812: getProfileChangesForUpdateRequest ===
-
-// Module 9812 (getProfileChangesForUpdateRequest)
 const result = require("CollectiblesItemType").fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
 export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(outer1_0, id) {

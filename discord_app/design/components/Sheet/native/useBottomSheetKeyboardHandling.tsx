@@ -1,6 +1,3 @@
-// === Module 6748: useBottomSheetKeyboardHandling ===
-
-// Module 6748 (useBottomSheetKeyboardHandling)
 import noop from "noop";
 
 const require = arg1;

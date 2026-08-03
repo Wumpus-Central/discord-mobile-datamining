@@ -1,6 +1,3 @@
-// === Module 5010: canJoinVoiceChannel ===
-
-// Module 5010 (canJoinVoiceChannel)
 import { isPrivate } from "createChannelRecord";
 import { BasicPermissions } from "ME";
 

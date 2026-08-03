@@ -1,6 +1,3 @@
-// === Module 12437: _initialize ===
-
-// Module 12437 (_initialize)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";

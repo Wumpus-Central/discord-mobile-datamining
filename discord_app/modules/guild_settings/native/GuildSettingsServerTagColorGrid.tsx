@@ -1,6 +1,3 @@
-// === Module 16450: GuildSettingsServerTagColorGrid ===
-
-// Module 16450 (GuildSettingsServerTagColorGrid)
 import "noop";
 import { View } from "get ActivityIndicator";
 import items from "items";

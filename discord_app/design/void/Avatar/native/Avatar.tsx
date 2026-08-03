@@ -1,6 +1,3 @@
-// === Module 13176: getStatusSize ===
-
-// Module 13176 (getStatusSize)
 import importAllResult from "noop";
 import { View } from "registerAsset";
 import { StatusTypes } from "ME";

@@ -1,6 +1,3 @@
-// === Module 15228: ScreenAlignedThemedGradient ===
-
-// Module 15228 (ScreenAlignedThemedGradient)
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

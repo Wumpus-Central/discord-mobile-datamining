@@ -1,6 +1,3 @@
-// === Module 10086: _onAddDirectoryGuildEntry ===
-
-// Module 10086 (_onAddDirectoryGuildEntry)
 import GuildDirectoryAddAlert from "GuildDirectoryAddAlert";
 import "noop";
 import { jsx } from "jsxProd";

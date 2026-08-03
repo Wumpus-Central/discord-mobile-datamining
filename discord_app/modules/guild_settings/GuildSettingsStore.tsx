@@ -1,6 +1,3 @@
-// === Module 8309: handleFormInit ===
-
-// Module 8309 (handleFormInit)
 import { set } from "isValueEqual";
 import handleUpdateStart from "handleUpdateStart";
 import { createChannelRecordFromInvite as closure_15 } from "createChannelRecord";

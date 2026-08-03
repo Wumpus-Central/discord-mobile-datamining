@@ -1,6 +1,3 @@
-// === Module 6161: useSelectedDestinationChannel ===
-
-// Module 6161 (useSelectedDestinationChannel)
 import computeChannelName from "computeChannelName";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import createChannelRecord from "createChannelRecord";

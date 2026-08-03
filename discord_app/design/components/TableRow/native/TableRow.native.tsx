@@ -1,6 +1,3 @@
-// === Module 5224: TableRowInner ===
-
-// Module 5224 (TableRowInner)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import jsxProd from "jsxProd";

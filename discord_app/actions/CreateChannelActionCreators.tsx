@@ -1,6 +1,3 @@
-// === Module 8279: ? ===
-
-// Module 8279
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import ME from "ME";
 import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES";

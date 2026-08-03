@@ -1,6 +1,3 @@
-// === Module 16213: handleSelectedGuildChange ===
-
-// Module 16213 (handleSelectedGuildChange)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";

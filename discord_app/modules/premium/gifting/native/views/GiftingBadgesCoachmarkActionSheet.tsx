@@ -1,6 +1,3 @@
-// === Module 15788: HasBadgeCoachmark ===
-
-// Module 15788 (HasBadgeCoachmark)
 import initialize from "initialize";
 import get_ActivityIndicator from "metadata";
 import map from "map";

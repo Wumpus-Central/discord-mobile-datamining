@@ -1,6 +1,3 @@
-// === Module 16614: showCreateBenefitModal ===
-
-// Module 16614 (showCreateBenefitModal)
 import resetImperatively from "resetImperatively";
 
 const require = arg1;

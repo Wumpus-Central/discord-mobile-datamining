@@ -1,6 +1,3 @@
-// === Module 12828: retryFailedUsers ===
-
-// Module 12828 (retryFailedUsers)
 import isVoiceMuted from "isVoiceMuted";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";

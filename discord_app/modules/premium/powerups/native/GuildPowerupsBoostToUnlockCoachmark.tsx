@@ -1,6 +1,3 @@
-// === Module 15164: GuildPowerupsBoostToUnlockCoachmark ===
-
-// Module 15164 (GuildPowerupsBoostToUnlockCoachmark)
 import noop from "noop";
 
 const require = arg1;

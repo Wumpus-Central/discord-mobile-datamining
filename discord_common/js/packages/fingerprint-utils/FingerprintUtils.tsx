@@ -1,6 +1,3 @@
-// === Module 513: extractId ===
-
-// Module 513 (extractId)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx");
 
 export const extractId = function extractId(fingerprint) {

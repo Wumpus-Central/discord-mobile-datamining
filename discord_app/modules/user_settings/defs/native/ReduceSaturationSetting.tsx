@@ -1,6 +1,3 @@
-// === Module 14392: slider ===
-
-// Module 14392 (slider)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";

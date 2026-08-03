@@ -1,6 +1,3 @@
-// === Module 16456: getDerivedStateFromProps ===
-
-// Module 16456 (getDerivedStateFromProps)
 import get_ActivityIndicator from "module_4533";
 import handleFormInit from "handleFormInit";
 import ME from "ME";

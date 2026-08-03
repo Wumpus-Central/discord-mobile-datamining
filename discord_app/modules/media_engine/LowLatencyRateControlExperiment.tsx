@@ -1,6 +1,3 @@
-// === Module 12922: getLowLatencyRateControlExperimentConfig ===
-
-// Module 12922 (getLowLatencyRateControlExperimentConfig)
 let obj = { 1: null };
 obj[1] = { enabled: true };
 let closure_0 = require("getUnitId")({ kind: "user", name: "2025-10-low-latency-rate-control", defaultConfig: { enabled: false }, variations: obj });

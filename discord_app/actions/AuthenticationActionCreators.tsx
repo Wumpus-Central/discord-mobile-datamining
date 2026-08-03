@@ -1,6 +1,3 @@
-// === Module 5645: handleLogout ===
-
-// Module 5645 (handleLogout)
 import closure_5 from "str2";
 import { setPromoEmailConsentState } from "setPromoEmailConsentState";
 import fetchFingerprint from "fetchFingerprint";

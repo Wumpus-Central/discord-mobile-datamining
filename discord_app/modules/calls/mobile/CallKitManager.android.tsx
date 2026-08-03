@@ -1,6 +1,3 @@
-// === Module 13525: _initialize ===
-
-// Module 13525 (_initialize)
 import "initialize";
 
 class CallKitLifecycleManager extends tmp2 {

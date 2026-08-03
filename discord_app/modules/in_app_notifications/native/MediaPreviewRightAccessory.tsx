@@ -1,6 +1,3 @@
-// === Module 10347: VideoBadge ===
-
-// Module 10347 (VideoBadge)
 import isValidImageAttachment from "isValidImageAttachment";
 import get_ActivityIndicator from "VoiceMessageIcon";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

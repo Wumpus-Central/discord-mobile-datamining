@@ -1,6 +1,3 @@
-// === Module 5556: ActionSheetCloseButton ===
-
-// Module 5556 (ActionSheetCloseButton)
 import "noop";
 import { jsx } from "jsxProd";
 

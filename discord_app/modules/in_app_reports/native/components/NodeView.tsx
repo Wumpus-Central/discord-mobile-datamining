@@ -1,6 +1,3 @@
-// === Module 7705: HeaderView ===
-
-// Module 7705 (HeaderView)
 import ShieldElement from "ShieldElement";
 import PressableBase from "PressableBase";
 import get_ActivityIndicator from "CircleInformationIcon";

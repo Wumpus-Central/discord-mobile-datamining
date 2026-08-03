@@ -1,6 +1,3 @@
-// === Module 9709: MediaKeyboardLimitedPickerNotice ===
-
-// Module 9709 (MediaKeyboardLimitedPickerNotice)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

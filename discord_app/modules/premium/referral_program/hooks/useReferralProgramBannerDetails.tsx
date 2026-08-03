@@ -1,6 +1,3 @@
-// === Module 12494: MAX_REFERRALS_SENT ===
-
-// Module 12494 (MAX_REFERRALS_SENT)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import emitChanges from "emitChanges";

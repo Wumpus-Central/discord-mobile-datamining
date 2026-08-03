@@ -1,6 +1,3 @@
-// === Module 9594: ForumComposerHeader ===
-
-// Module 9594 (ForumComposerHeader)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

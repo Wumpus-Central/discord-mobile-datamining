@@ -1,6 +1,3 @@
-// === Module 5098: parseServerPackSticker ===
-
-// Module 5098 (parseServerPackSticker)
 import _slicedToArray from "_slicedToArray";
 import { TypeTag } from "TypeTag";
 import { LibdiscoreStore } from "identity";

@@ -1,6 +1,3 @@
-// === Module 14241: MAX_SUBSCRIPTION_TIERS ===
-
-// Module 14241 (MAX_SUBSCRIPTION_TIERS)
 import { SubscriptionIntervalTypes } from "GuildFeatures";
 
 const items = [{ interval: SubscriptionIntervalTypes.DAY, interval_count: 1 }, { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 }];

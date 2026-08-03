@@ -1,6 +1,3 @@
-// === Module 7772: getSystemMessageUserJoinMobile ===
-
-// Module 7772 (getSystemMessageUserJoinMobile)
 import _slicedToArray from "_slicedToArray";
 import hasFlag from "hasFlag";
 import fetchFingerprint from "fetchFingerprint";

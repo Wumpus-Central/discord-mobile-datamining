@@ -1,6 +1,3 @@
-// === Module 5693: getURLForApplication ===
-
-// Module 5693 (getURLForApplication)
 import reset from "reset";
 import initialize from "initialize";
 

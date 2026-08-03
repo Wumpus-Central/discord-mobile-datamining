@@ -1,6 +1,3 @@
-// === Module 6833: ActivitiesIllocon ===
-
-// Module 6833 (ActivitiesIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ActivitiesIllocon.native.tsx");

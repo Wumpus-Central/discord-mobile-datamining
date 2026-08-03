@@ -1,6 +1,3 @@
-// === Module 6554: GoogleManagementLink ===
-
-// Module 6554 (GoogleManagementLink)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";

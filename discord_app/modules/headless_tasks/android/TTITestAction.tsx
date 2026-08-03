@@ -1,6 +1,3 @@
-// === Module 16790: sendReply ===
-
-// Module 16790 (sendReply)
 import importDefaultResult from "ensureGuildLoaded";
 import { applicationReady } from "linkFromAppsFlyer";
 import getHash from "getHash";

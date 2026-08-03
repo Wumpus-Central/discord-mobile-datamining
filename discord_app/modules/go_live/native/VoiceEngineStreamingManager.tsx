@@ -1,6 +1,3 @@
-// === Module 4371: handleThumbnailUpload ===
-
-// Module 4371 (handleThumbnailUpload)
 import closure_3 from "ME";
 import { Linking } from "isStreamKey";
 import reset from "reset";

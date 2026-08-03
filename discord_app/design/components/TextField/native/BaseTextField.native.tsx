@@ -1,6 +1,3 @@
-// === Module 6745: BaseTextField ===
-
-// Module 6745 (BaseTextField)
 import importAllResult from "noop";
 import jsxProd from "jsxProd";
 

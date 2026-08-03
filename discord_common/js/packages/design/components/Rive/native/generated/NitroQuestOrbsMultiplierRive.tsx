@@ -1,6 +1,3 @@
-// === Module 3994: NitroQuestOrbsMultiplierRive ===
-
-// Module 3994 (NitroQuestOrbsMultiplierRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

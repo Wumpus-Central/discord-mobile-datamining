@@ -1,6 +1,3 @@
-// === Module 15223: transformParticipantToSortedVoiceState ===
-
-// Module 15223 (transformParticipantToSortedVoiceState)
 import _slicedToArray from "_slicedToArray";
 import initializeFromUserSettings from "initializeFromUserSettings";
 import ensureGuildLoaded from "ensureGuildLoaded";

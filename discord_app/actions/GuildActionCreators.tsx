@@ -1,6 +1,3 @@
-// === Module 5109: showTooManyUserGuildsAlert ===
-
-// Module 5109 (showTooManyUserGuildsAlert)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import comparator from "comparator";
 import set from "set";

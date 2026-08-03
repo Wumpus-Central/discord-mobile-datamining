@@ -1,6 +1,3 @@
-// === Module 15407: ExploreServersRow ===
-
-// Module 15407 (ExploreServersRow)
 import module_4054 from "module_4054";
 import _slicedToArray from "_slicedToArray";
 import LinearGradient from "LinearGradient";

@@ -1,6 +1,3 @@
-// === Module 4873: set ===
-
-// Module 4873 (set)
 import toString from "toString";
 import { Store } from "initialize";
 import set from "getPlatformUserUrl";

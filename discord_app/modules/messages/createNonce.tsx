@@ -1,6 +1,3 @@
-// === Module 6043: snowflakeSequence ===
-
-// Module 6043 (snowflakeSequence)
 let c2 = 0;
 const snowflakeSequence = new require("DISCORD_EPOCH").SnowflakeSequence();
 const result = require("set").fileFinishedImporting("modules/messages/createNonce.tsx");

@@ -1,6 +1,3 @@
-// === Module 11215: ForumPostMessageContent ===
-
-// Module 11215 (ForumPostMessageContent)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

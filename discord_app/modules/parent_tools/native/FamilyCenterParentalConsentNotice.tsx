@@ -1,6 +1,3 @@
-// === Module 13923: FamilyCenterParentalConsentNotice ===
-
-// Module 13923 (FamilyCenterParentalConsentNotice)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

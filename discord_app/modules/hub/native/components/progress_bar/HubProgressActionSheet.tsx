@@ -1,6 +1,3 @@
-// === Module 11778: HubProgressActionSheet ===
-
-// Module 11778 (HubProgressActionSheet)
 import registerAsset from "registerAsset";
 import { View } from "ProgressItem";
 import comparator from "comparator";

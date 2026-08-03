@@ -1,6 +1,3 @@
-// === Module 11395: useTrackPollCreationEvents ===
-
-// Module 11395 (useTrackPollCreationEvents)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 14522: ChangeLogScreen ===
-
-// Module 14522 (ChangeLogScreen)
 import importAllResult from "useWindowDimensions";
 import { View } from "Button";
 import { AnalyticEvents } from "ME";

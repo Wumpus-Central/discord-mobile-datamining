@@ -1,6 +1,3 @@
-// === Module 14912: ExternalLink ===
-
-// Module 14912 (ExternalLink)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

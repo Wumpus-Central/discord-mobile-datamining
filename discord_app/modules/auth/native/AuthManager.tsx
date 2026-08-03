@@ -1,6 +1,3 @@
-// === Module 14928: _initialize ===
-
-// Module 14928 (_initialize)
 import NewUserTypes from "NewUserTypes";
 import get_ActivityIndicator from "set";
 import { PermissionStateType } from "set";

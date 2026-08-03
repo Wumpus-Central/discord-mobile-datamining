@@ -1,6 +1,3 @@
-// === Module 15679: getPermissionOptions ===
-
-// Module 15679 (getPermissionOptions)
 import { VOICE_THREAD_PARENT_CHANNEL_TYPES as closure_4 } from "createChannelRecord";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";

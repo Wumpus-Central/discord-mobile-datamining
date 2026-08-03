@@ -1,6 +1,3 @@
-// === Module 10107: ? ===
-
-// Module 10107
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "fromGuildPropertiesWithAdditionalFields";

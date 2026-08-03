@@ -1,6 +1,3 @@
-// === Module 13808: UsernameStatusMessage ===
-
-// Module 13808 (UsernameStatusMessage)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import sendRequest from "sendRequest";

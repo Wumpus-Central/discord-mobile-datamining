@@ -1,6 +1,3 @@
-// === Module 9535: shuffleProblems ===
-
-// Module 9535 (shuffleProblems)
 import FeedbackRating from "FeedbackRating";
 import { AnalyticEvents } from "ME";
 

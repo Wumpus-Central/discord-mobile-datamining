@@ -1,6 +1,3 @@
-// === Module 13696: SettingsDesignSystemsScreen ===
-
-// Module 13696 (SettingsDesignSystemsScreen)
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";

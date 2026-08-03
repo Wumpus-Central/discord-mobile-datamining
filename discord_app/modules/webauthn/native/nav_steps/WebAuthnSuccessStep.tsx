@@ -1,6 +1,3 @@
-// === Module 13792: WebAuthnSuccessStep ===
-
-// Module 13792 (WebAuthnSuccessStep)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

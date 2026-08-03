@@ -1,6 +1,3 @@
-// === Module 15855: BaseActivityPanelController ===
-
-// Module 15855 (BaseActivityPanelController)
 import set from "set";
 import getIsTabletActivitySurface from "getIsTabletActivitySurface";
 import addApplication from "addApplication";

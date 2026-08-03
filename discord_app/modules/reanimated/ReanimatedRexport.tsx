@@ -1,6 +1,3 @@
-// === Module 4054: ? ===
-
-// Module 4054
 import PlatformTypes from "PlatformTypes";
 
 if (PlatformTypes.isAndroid()) {

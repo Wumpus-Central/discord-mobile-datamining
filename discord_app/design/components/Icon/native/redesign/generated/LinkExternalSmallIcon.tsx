@@ -1,6 +1,3 @@
-// === Module 7627: LinkExternalSmallIcon ===
-
-// Module 7627 (LinkExternalSmallIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

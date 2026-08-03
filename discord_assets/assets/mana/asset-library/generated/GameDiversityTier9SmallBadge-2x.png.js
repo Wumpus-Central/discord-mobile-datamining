@@ -1,6 +1,3 @@
-// === Module 7134: vanityUrl ===
-
-// Module 7134 (vanityUrl)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier9SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/8261e318385fc446e880fd0b63d2c557a87bea24d95df80018eafc0981dbaf86.png";

@@ -1,6 +1,3 @@
-// === Module 10293: NativeMessagePreviewContent ===
-
-// Module 10293 (NativeMessagePreviewContent)
 import getSystemLocale from "getSystemLocale";
 import { View } from "MessageEmbedTypes";
 import ensureGuildLoaded from "ensureGuildLoaded";

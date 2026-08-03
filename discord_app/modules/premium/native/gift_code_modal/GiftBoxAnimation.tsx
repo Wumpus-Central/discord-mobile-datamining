@@ -1,6 +1,3 @@
-// === Module 12346: GiftBoxAnimation ===
-
-// Module 12346 (GiftBoxAnimation)
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { PremiumGiftStyles } from "GuildFeatures";

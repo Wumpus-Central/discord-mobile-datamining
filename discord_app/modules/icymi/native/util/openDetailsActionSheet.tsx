@@ -1,6 +1,3 @@
-// === Module 15384: openDetailsActionSheet ===
-
-// Module 15384 (openDetailsActionSheet)
 const result = require("ItemDetailsActionSheet").fileFinishedImporting("modules/icymi/native/util/openDetailsActionSheet.tsx");
 
 export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {

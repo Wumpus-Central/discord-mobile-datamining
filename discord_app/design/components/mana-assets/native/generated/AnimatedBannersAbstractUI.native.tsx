@@ -1,6 +1,3 @@
-// === Module 6839: AnimatedBannersAbstractUI ===
-
-// Module 6839 (AnimatedBannersAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/AnimatedBannersAbstractUI.native.tsx");

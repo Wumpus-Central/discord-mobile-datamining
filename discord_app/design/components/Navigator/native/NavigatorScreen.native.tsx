@@ -1,6 +1,3 @@
-// === Module 5636: NavigatorScreen ===
-
-// Module 5636 (NavigatorScreen)
 import { jsxs } from "jsxProd";
 import importAllResult from "noop";
 

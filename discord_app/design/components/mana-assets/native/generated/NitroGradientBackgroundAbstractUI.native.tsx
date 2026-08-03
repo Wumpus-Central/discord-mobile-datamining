@@ -1,6 +1,3 @@
-// === Module 7313: NitroGradientBackgroundAbstractUI ===
-
-// Module 7313 (NitroGradientBackgroundAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/NitroGradientBackgroundAbstractUI.native.tsx");

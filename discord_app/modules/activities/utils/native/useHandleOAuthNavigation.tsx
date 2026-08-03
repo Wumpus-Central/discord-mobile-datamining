@@ -1,6 +1,3 @@
-// === Module 15862: useHandleOAuthNavigation ===
-
-// Module 15862 (useHandleOAuthNavigation)
 import noop from "noop";
 import { ComponentActions } from "ME";
 import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "OAUTH2_AUTHORIZE_MODAL_KEY";

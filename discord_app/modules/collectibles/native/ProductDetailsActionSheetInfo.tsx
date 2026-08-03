@@ -1,6 +1,3 @@
-// === Module 8766: ProductNameAndDescription ===
-
-// Module 8766 (ProductNameAndDescription)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

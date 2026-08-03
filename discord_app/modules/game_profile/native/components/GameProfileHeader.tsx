@@ -1,6 +1,3 @@
-// === Module 8526: GameProfileHeader ===
-
-// Module 8526 (GameProfileHeader)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

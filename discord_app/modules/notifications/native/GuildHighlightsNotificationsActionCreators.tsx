@@ -1,6 +1,3 @@
-// === Module 9529: openGuildHighlightNotificationForPush ===
-
-// Module 9529 (openGuildHighlightNotificationForPush)
 import { NotificationUserFeedbackReasons as closure_3 } from "NotificationUserFeedbackReasons";
 import { AnalyticEvents } from "ME";
 

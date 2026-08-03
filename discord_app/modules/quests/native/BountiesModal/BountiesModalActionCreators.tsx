@@ -1,6 +1,3 @@
-// === Module 14052: BOUNTIES_MODAL_KEY ===
-
-// Module 14052 (BOUNTIES_MODAL_KEY)
 const BOUNTIES_MODAL = "BOUNTIES_MODAL";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalActionCreators.tsx");
 

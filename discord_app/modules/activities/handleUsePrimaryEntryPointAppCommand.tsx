@@ -1,6 +1,3 @@
-// === Module 10656: _handleUsePrimaryEntryPointAppCommand ===
-
-// Module 10656 (_handleUsePrimaryEntryPointAppCommand)
 import getEmbeddedActivitiesManager from "getEmbeddedActivitiesManager";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";

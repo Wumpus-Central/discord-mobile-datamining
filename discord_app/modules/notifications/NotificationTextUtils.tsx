@@ -1,6 +1,3 @@
-// === Module 10263: shouldNotifyBase ===
-
-// Module 10263 (shouldNotifyBase)
 import participantFromServer from "participantFromServer";
 import initialize from "initialize";
 import processChannel from "processChannel";

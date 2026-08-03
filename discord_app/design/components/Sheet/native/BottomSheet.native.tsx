@@ -1,6 +1,3 @@
-// === Module 5247: Background ===
-
-// Module 5247 (Background)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ActionSheetHeaderBar";
 import get_ActivityIndicator from "useBottomSheetImperativeHandle";

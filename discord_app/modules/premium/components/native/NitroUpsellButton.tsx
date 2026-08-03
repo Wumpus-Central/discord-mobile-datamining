@@ -1,6 +1,3 @@
-// === Module 8437: ? ===
-
-// Module 8437
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

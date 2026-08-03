@@ -1,6 +1,3 @@
-// === Module 9676: SelectedDismissibleContent ===
-
-// Module 9676 (SelectedDismissibleContent)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import jsxProd from "jsxProd";

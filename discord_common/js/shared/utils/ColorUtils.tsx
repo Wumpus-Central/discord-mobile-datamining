@@ -1,6 +1,3 @@
-// === Module 688: int2hslRaw ===
-
-// Module 688 (int2hslRaw)
 function int2hslRaw(initialColor) {
   const result = (initialColor >> 16 & 255) / 255;
   let result1 = (initialColor >> 8 & 255) / 255;

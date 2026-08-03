@@ -1,6 +1,3 @@
-// === Module 10565: getStreamFailedSource ===
-
-// Module 10565 (getStreamFailedSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

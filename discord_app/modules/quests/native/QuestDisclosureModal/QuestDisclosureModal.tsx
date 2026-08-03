@@ -1,6 +1,3 @@
-// === Module 14151: CloseButton ===
-
-// Module 14151 (CloseButton)
 import { jsx } from "jsxProd";
 
 function CloseButton() {

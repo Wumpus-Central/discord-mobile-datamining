@@ -1,6 +1,3 @@
-// === Module 12623: getGiftingBadgeProgressPercent ===
-
-// Module 12623 (getGiftingBadgeProgressPercent)
 import { getSingleRequirementThreshold as closure_2 } from "map";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

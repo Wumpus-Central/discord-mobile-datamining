@@ -1,6 +1,3 @@
-// === Module 4734: _getAttachmentFile ===
-
-// Module 4734 (_getAttachmentFile)
 import items from "items";
 
 const require = arg1;

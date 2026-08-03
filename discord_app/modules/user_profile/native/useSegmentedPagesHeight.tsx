@@ -1,6 +1,3 @@
-// === Module 12190: usePageHeights ===
-
-// Module 12190 (usePageHeights)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

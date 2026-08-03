@@ -1,6 +1,3 @@
-// === Module 15865: BaseActivityPanelPIPView ===
-
-// Module 15865 (BaseActivityPanelPIPView)
 import importAllResult from "u";
 import { View } from "useWindowDimensions";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

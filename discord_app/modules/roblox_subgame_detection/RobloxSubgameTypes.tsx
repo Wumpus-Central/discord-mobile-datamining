@@ -1,6 +1,3 @@
-// === Module 4365: ROBLOX_PROTOCOL_URL ===
-
-// Module 4365 (ROBLOX_PROTOCOL_URL)
 class ROBLOX_PROTOCOL_URL {
   constructor(arg0) {
     return "roblox://placeId=" + global;

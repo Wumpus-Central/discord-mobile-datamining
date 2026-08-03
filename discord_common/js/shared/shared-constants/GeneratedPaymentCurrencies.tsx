@@ -1,6 +1,3 @@
-// === Module 6356: GeneratedPaymentCurrencies ===
-
-// Module 6356 (GeneratedPaymentCurrencies)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx");
 
 export const GeneratedPaymentCurrencies = {};

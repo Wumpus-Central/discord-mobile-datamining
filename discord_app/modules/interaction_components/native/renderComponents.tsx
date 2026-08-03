@@ -1,6 +1,3 @@
-// === Module 16241: renderComponents ===
-
-// Module 16241 (renderComponents)
 import "noop";
 import { jsx } from "jsxProd";
 

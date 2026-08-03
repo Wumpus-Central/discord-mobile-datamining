@@ -1,6 +1,3 @@
-// === Module 4717: VoiceWarningIcon ===
-
-// Module 4717 (VoiceWarningIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

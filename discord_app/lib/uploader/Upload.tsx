@@ -1,6 +1,3 @@
-// === Module 4726: cancel ===
-
-// Module 4726 (cancel)
 import { EventEmitter } from "EventEmitter";
 
 let obj = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };

@@ -1,6 +1,3 @@
-// === Module 14229: QuestDockMode ===
-
-// Module 14229 (QuestDockMode)
 import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { QuestDockMode } from "QuestsExperimentLocations";

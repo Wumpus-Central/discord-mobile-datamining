@@ -1,6 +1,3 @@
-// === Module 15531: PollBadge ===
-
-// Module 15531 (PollBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

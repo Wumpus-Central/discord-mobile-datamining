@@ -1,6 +1,3 @@
-// === Module 10227: getNextPositionFromChannels ===
-
-// Module 10227 (getNextPositionFromChannels)
 import { resetFatigueCooldown } from "withContent";
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

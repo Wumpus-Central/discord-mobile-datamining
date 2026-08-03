@@ -1,6 +1,3 @@
-// === Module 12906: mode ===
-
-// Module 12906 (mode)
 import { Store } from "initialize";
 
 const AUTO = require("ME").VideoQualityMode.AUTO;

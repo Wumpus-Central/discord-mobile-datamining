@@ -1,6 +1,3 @@
-// === Module 9067: useIsFriendRequestAlertsV2Enabled ===
-
-// Module 9067 (useIsFriendRequestAlertsV2Enabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

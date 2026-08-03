@@ -1,6 +1,3 @@
-// === Module 10192: SafetyTipsContainer ===
-
-// Module 10192 (SafetyTipsContainer)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

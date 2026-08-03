@@ -1,6 +1,3 @@
-// === Module 16190: optOutEligibilityCheck ===
-
-// Module 16190 (optOutEligibilityCheck)
 import set from "set";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";

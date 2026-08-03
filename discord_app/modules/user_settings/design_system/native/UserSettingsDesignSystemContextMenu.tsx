@@ -1,6 +1,3 @@
-// === Module 14593: DemoContextMenu ===
-
-// Module 14593 (DemoContextMenu)
 import noop from "noop";
 import get_ActivityIndicator from "Text";
 import jsxProd from "jsxProd";

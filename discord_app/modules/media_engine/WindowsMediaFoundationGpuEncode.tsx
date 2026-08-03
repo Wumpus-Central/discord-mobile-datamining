@@ -1,6 +1,3 @@
-// === Module 12970: getWmfGpuEncode ===
-
-// Module 12970 (getWmfGpuEncode)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

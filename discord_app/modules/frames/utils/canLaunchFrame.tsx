@@ -1,6 +1,3 @@
-// === Module 10519: canLaunchFrame ===
-
-// Module 10519 (canLaunchFrame)
 import { ApplicationFlags } from "ME";
 
 const result = require("getApplicationFlags").fileFinishedImporting("modules/frames/utils/canLaunchFrame.tsx");

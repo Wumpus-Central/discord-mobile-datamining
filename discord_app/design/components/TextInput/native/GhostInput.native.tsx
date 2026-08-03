@@ -1,6 +1,3 @@
-// === Module 13232: GhostInput ===
-
-// Module 13232 (GhostInput)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

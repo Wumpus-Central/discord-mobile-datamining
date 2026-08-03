@@ -1,6 +1,3 @@
-// === Module 14389: useShowLinkDecorationsSettingValue ===
-
-// Module 14389 (useShowLinkDecorationsSettingValue)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
 

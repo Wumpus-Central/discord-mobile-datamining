@@ -1,6 +1,3 @@
-// === Module 13159: OverflowSquircle ===
-
-// Module 13159 (OverflowSquircle)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

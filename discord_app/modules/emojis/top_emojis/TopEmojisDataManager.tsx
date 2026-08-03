@@ -1,6 +1,3 @@
-// === Module 16186: handleInteraction ===
-
-// Module 16186 (handleInteraction)
 import handleConnectionOpen from "handleConnectionOpen";
 import { EmojiInteractionPoint } from "set";
 import "initialize";

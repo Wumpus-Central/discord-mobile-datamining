@@ -1,6 +1,3 @@
-// === Module 14148: WreathIcon ===
-
-// Module 14148 (WreathIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

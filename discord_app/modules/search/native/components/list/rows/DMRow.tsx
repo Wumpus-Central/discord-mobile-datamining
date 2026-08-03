@@ -1,6 +1,3 @@
-// === Module 15511: FriendPresence ===
-
-// Module 15511 (FriendPresence)
 import sortActivity from "sortActivity";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "SearchListRow";

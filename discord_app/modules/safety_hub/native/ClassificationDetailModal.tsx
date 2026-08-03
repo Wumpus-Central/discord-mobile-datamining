@@ -1,6 +1,3 @@
-// === Module 11083: ClassificationDetailModal ===
-
-// Module 11083 (ClassificationDetailModal)
 import noop from "noop";
 import { UserSettingsSections } from "ME";
 import { AccountSettingsTabs } from "AccountSettingsTabs";

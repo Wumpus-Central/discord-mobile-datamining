@@ -1,6 +1,3 @@
-// === Module 13257: _defaultMessages ===
-
-// Module 13257 (_defaultMessages)
 import module_1274 from "module_1274";
 import importDefaultResult from "messagesProxy";
 import chainMessagesObjectsResult from "messagesProxy";

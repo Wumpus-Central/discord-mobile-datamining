@@ -1,6 +1,3 @@
-// === Module 16419: initialize ===
-
-// Module 16419 (initialize)
 import prototype from "prototype";
 import handleConnectionOpen from "handleConnectionOpen";
 import importDefaultResult from "priv";

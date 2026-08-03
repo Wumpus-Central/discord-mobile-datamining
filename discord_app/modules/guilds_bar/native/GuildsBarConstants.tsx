@@ -1,6 +1,3 @@
-// === Module 14959: GUILD_ITEM_SIZE ===
-
-// Module 14959 (GUILD_ITEM_SIZE)
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarConstants.tsx");
 
 export const GUILD_ITEM_SIZE = 48;

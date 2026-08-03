@@ -1,6 +1,3 @@
-// === Module 5115: shouldShowOnboarding ===
-
-// Module 5115 (shouldShowOnboarding)
 import { ME } from "ME";
 import { Store } from "initialize";
 

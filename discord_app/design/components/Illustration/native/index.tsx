@@ -1,6 +1,3 @@
-// === Module 6541: getIllustrationSource ===
-
-// Module 6541 (getIllustrationSource)
 const result = require("set").fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
 export const getIllustrationSource = function getIllustrationSource(theme, light) {

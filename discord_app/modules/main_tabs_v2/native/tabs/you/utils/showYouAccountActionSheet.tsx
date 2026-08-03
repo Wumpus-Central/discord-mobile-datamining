@@ -1,6 +1,3 @@
-// === Module 15265: showYouAccountActionSheet ===
-
-// Module 15265 (showYouAccountActionSheet)
 import { YOU_ACCOUNT_ACTION_SHEET_KEY as closure_3 } from "YOU_SCREEN_ID";
 
 const result = require("YouStatusRadioGroup").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx");

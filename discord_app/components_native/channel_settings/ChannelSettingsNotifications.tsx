@@ -1,6 +1,3 @@
-// === Module 10318: ChannelSettingsNotificationsGuard ===
-
-// Module 10318 (ChannelSettingsNotificationsGuard)
 import importAllResult from "computeChannelName";
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

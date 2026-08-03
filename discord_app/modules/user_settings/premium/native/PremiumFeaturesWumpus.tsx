@@ -1,6 +1,3 @@
-// === Module 9339: PremiumFeaturesWumpus ===
-
-// Module 9339 (PremiumFeaturesWumpus)
 import noop from "noop";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";

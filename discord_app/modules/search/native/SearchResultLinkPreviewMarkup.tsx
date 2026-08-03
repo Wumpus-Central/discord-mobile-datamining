@@ -1,6 +1,3 @@
-// === Module 15535: NativeSearchResultLinkPreviewParser ===
-
-// Module 15535 (NativeSearchResultLinkPreviewParser)
 import importDefaultResult from "combineMarkupRules";
 import createSearchResultLinkPreviewReactRules from "createSearchResultLinkPreviewReactRules";
 import importAllResult from "reactParserFor";

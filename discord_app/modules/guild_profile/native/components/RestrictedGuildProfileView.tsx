@@ -1,6 +1,3 @@
-// === Module 8465: RestrictedGuildProfileView ===
-
-// Module 8465 (RestrictedGuildProfileView)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

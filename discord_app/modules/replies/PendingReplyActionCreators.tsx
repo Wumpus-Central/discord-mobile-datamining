@@ -1,6 +1,3 @@
-// === Module 9577: createPendingReply ===
-
-// Module 9577 (createPendingReply)
 const result = require("set").fileFinishedImporting("modules/replies/PendingReplyActionCreators.tsx");
 
 export const createPendingReply = function createPendingReply(arg0) {

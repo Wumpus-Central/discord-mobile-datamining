@@ -1,6 +1,3 @@
-// === Module 11507: ApplicationSectionHeader ===
-
-// Module 11507 (ApplicationSectionHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

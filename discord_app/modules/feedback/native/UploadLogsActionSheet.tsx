@@ -1,6 +1,3 @@
-// === Module 16196: UploadLogsActionSheet ===
-
-// Module 16196 (UploadLogsActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

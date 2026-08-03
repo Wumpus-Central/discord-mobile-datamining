@@ -1,6 +1,3 @@
-// === Module 13183: Spacer ===
-
-// Module 13183 (Spacer)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

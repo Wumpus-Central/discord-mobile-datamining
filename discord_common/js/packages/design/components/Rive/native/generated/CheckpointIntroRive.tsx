@@ -1,6 +1,3 @@
-// === Module 3984: CheckpointIntroRive ===
-
-// Module 3984 (CheckpointIntroRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

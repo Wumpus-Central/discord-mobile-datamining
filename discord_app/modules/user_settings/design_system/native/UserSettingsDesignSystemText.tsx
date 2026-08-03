@@ -1,6 +1,3 @@
-// === Module 14568: UserSettingsDesignSystemText ===
-
-// Module 14568 (UserSettingsDesignSystemText)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

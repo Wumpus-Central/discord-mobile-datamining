@@ -1,6 +1,3 @@
-// === Module 1476: subscribeToKeyboardUIStore ===
-
-// Module 1476 (subscribeToKeyboardUIStore)
 const result = require("set").fileFinishedImporting("modules/keyboard/native/subscribeToKeyboardUIStore.tsx");
 
 export default function subscribeToKeyboardUIStore(arg0) {

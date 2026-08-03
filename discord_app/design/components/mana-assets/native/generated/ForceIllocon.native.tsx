@@ -1,6 +1,3 @@
-// === Module 7047: ForceIllocon ===
-
-// Module 7047 (ForceIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ForceIllocon.native.tsx");

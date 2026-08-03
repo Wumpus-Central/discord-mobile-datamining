@@ -1,6 +1,3 @@
-// === Module 4519: getStripe ===
-
-// Module 4519 (getStripe)
 import _typeof from "_typeof";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";

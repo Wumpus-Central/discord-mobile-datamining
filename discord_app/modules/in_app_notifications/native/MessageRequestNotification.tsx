@@ -1,6 +1,3 @@
-// === Module 10396: MessageRequestInAppNotification ===
-
-// Module 10396 (MessageRequestInAppNotification)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 4645: getSoundFromSounds ===
-
-// Module 4645 (getSoundFromSounds)
 import reinjectEphemerals from "reinjectEphemerals";
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
 

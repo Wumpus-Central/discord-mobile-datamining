@@ -1,6 +1,3 @@
-// === Module 12790: updateGuildState ===
-
-// Module 12790 (updateGuildState)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

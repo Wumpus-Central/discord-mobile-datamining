@@ -1,6 +1,3 @@
-// === Module 13146: getWideBannerDismissibleContentVersion ===
-
-// Module 13146 (getWideBannerDismissibleContentVersion)
 import map from "map";
 import { CollectibleShopTab } from "items";
 

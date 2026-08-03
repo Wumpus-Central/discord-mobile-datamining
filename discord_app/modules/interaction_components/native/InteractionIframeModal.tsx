@@ -1,6 +1,3 @@
-// === Module 16252: InteractionIframeModal ===
-
-// Module 16252 (InteractionIframeModal)
 import _slicedToArray from "_slicedToArray";
 import getBotLabel from "getBotLabel";
 import { View } from "XLargeIcon";

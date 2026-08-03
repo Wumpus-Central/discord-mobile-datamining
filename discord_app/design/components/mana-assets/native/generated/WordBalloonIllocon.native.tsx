@@ -1,6 +1,3 @@
-// === Module 7611: WordBalloonIllocon ===
-
-// Module 7611 (WordBalloonIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/WordBalloonIllocon.native.tsx");

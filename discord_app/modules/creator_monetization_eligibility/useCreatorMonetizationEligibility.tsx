@@ -1,6 +1,3 @@
-// === Module 16575: useCreatorMonetizationEligibility ===
-
-// Module 16575 (useCreatorMonetizationEligibility)
 import prototype from "prototype";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

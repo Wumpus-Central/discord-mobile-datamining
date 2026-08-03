@@ -1,6 +1,3 @@
-// === Module 15219: FavoritesGuildCoachmarkMenuItemContent ===
-
-// Module 15219 (FavoritesGuildCoachmarkMenuItemContent)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import initializeFromUserSettings from "initializeFromUserSettings";

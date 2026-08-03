@@ -1,6 +1,3 @@
-// === Module 16730: OverviewScreen ===
-
-// Module 16730 (OverviewScreen)
 import set from "set";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

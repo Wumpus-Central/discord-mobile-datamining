@@ -1,6 +1,3 @@
-// === Module 11229: useActivityShelfItemsSorting ===
-
-// Module 11229 (useActivityShelfItemsSorting)
 import noop from "noop";
 
 const require = arg1;

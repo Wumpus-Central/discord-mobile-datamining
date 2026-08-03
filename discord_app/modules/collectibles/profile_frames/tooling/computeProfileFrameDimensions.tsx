@@ -1,6 +1,3 @@
-// === Module 8095: computeProfileFrameDimensions ===
-
-// Module 8095 (computeProfileFrameDimensions)
 const result = require("ProfileFrameLayerAnchor").fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
 
 export const computeProfileFrameDimensions = function computeProfileFrameDimensions(closure_4) {

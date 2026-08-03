@@ -1,6 +1,3 @@
-// === Module 8685: fromServer ===
-
-// Module 8685 (fromServer)
 import "toJS";
 import createExecutable from "createExecutable";
 import fromServer from "fromServer";

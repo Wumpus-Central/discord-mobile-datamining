@@ -1,6 +1,3 @@
-// === Module 5906: ? ===
-
-// Module 5906
 import module_1208 from "module_1208";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Endpoints } from "ME";

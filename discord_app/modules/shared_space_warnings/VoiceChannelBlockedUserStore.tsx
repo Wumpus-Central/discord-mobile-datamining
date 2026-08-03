@@ -1,6 +1,3 @@
-// === Module 12804: init ===
-
-// Module 12804 (init)
 import upsertRelationship from "upsertRelationship";
 import updateVoiceState from "updateVoiceState";
 import { Store } from "initialize";

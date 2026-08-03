@@ -1,6 +1,3 @@
-// === Module 8048: useFetchCollectiblesProduct ===
-
-// Module 8048 (useFetchCollectiblesProduct)
 import _slicedToArray from "_slicedToArray";
 import { useEffect } from "noop";
 import addSku from "addSku";

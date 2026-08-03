@@ -1,6 +1,3 @@
-// === Module 4290: BaseConnectionEvent ===
-
-// Module 4290 (BaseConnectionEvent)
 import DesktopSources from "DesktopSources";
 
 let closure_2 = DesktopSources.MediaEngineImplementations;

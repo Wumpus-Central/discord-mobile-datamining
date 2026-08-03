@@ -1,6 +1,3 @@
-// === Module 7774: saferParse ===
-
-// Module 7774 (saferParse)
 function saferParse(arg0, arg1, inline) {
   let ast;
   let hasBailedAst;

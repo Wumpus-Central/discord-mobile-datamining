@@ -1,6 +1,3 @@
-// === Module 14550: _writeCaches ===
-
-// Module 14550 (_writeCaches)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { ChannelLoader } from "ensureGuildLoaded";
 import handleClearCaches from "handleClearCaches";

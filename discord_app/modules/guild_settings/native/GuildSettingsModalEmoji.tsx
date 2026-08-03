@@ -1,6 +1,3 @@
-// === Module 16418: computeEmojiItem ===
-
-// Module 16418 (computeEmojiItem)
 import _slicedToArray from "_slicedToArray";
 import getEmptyServerSettingsEmojiSource from "getEmptyServerSettingsEmojiSource";
 import get_ActivityIndicator from "HeaderRow";

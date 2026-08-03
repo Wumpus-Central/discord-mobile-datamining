@@ -1,6 +1,3 @@
-// === Module 9914: getMessageLimit ===
-
-// Module 9914 (getMessageLimit)
 import { MAX_MESSAGES_PER_CHANNEL } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/messages/getAdaptiveMessageLimit.native.tsx");

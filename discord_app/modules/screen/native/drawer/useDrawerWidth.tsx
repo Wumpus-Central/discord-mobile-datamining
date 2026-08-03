@@ -1,6 +1,3 @@
-// === Module 10904: sum ===
-
-// Module 10904 (sum)
 import { DM_WIDTH } from "ME";
 
 const sum = 260 + DM_WIDTH;

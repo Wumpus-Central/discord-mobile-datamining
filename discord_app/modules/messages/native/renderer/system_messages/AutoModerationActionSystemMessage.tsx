@@ -1,6 +1,3 @@
-// === Module 7800: createAutoModerationActionSystemMessage ===
-
-// Module 7800 (createAutoModerationActionSystemMessage)
 import get_ActivityIndicator from "DATE_CONFIG";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

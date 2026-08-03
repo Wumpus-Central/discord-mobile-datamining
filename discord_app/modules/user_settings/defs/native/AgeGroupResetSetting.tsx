@@ -1,6 +1,3 @@
-// === Module 13823: pressable ===
-
-// Module 13823 (pressable)
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";
 

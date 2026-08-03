@@ -1,6 +1,3 @@
-// === Module 8038: resolveGiftCode ===
-
-// Module 8038 (resolveGiftCode)
 import GuildFeatures from "GuildFeatures";
 import addApplication from "addApplication";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

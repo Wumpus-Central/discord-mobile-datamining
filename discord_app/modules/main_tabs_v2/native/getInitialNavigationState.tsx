@@ -1,6 +1,3 @@
-// === Module 4046: getInitialGuildState ===
-
-// Module 4046 (getInitialGuildState)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";

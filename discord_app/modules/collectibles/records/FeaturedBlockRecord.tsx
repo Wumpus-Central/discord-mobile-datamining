@@ -1,6 +1,3 @@
-// === Module 5835: fromServer ===
-
-// Module 5835 (fromServer)
 import { FeaturedCategorySubblockRecord as closure_2 } from "fromServer";
 
 let prototype;

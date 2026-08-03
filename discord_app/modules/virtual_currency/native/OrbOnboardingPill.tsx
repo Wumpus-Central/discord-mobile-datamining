@@ -1,6 +1,3 @@
-// === Module 14813: OrbOnboardingPill ===
-
-// Module 14813 (OrbOnboardingPill)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

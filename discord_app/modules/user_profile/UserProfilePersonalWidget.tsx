@@ -1,6 +1,3 @@
-// === Module 5907: isFieldEmpty ===
-
-// Module 5907 (isFieldEmpty)
 function isFieldEmpty(title) {
   let tmp = "" === title.title.trim();
   if (tmp) {

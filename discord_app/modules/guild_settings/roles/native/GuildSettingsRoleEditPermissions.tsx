@@ -1,6 +1,3 @@
-// === Module 16495: GuildSettingsRoleEditPermission ===
-
-// Module 16495 (GuildSettingsRoleEditPermission)
 import _slicedToArray from "_slicedToArray";
 import SearchField from "SearchField";
 import get_ActivityIndicator from "getPermissionOptions";

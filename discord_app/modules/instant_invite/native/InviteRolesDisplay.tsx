@@ -1,6 +1,3 @@
-// === Module 10219: InviteRolesDisplay ===
-
-// Module 10219 (InviteRolesDisplay)
 import "noop";
 import { View } from "get ActivityIndicator";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

@@ -1,6 +1,3 @@
-// === Module 7832: createJoinRequestNotificationSystemMessage ===
-
-// Module 7832 (createJoinRequestNotificationSystemMessage)
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

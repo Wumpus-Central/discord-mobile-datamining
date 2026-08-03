@@ -1,6 +1,3 @@
-// === Module 16317: maybePresentModal ===
-
-// Module 16317 (maybePresentModal)
 import setContent from "setContent";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import initialize from "initialize";

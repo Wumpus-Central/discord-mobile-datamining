@@ -1,6 +1,3 @@
-// === Module 4538: wrapChildrenDefault ===
-
-// Module 4538 (wrapChildrenDefault)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8989: TwoWayLinkError ===
-
-// Module 8989 (TwoWayLinkError)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

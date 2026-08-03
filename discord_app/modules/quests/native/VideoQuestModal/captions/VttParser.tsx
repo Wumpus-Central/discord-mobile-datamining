@@ -1,6 +1,3 @@
-// === Module 14189: prototype ===
-
-// Module 14189 (prototype)
 const prototype = function VttParserError(arg0, error) {
   tmp = new tmp(arg0, new.target);
   // ThrowIfThisInitialized (0x7c)

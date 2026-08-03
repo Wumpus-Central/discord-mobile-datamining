@@ -1,6 +1,3 @@
-// === Module 8668: _navigateToGameAnnouncement ===
-
-// Module 8668 (_navigateToGameAnnouncement)
 import generateAcceptInviteOptions from "generateAcceptInviteOptions";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";

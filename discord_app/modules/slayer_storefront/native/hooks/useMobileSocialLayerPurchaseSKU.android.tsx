@@ -1,6 +1,3 @@
-// === Module 9773: useMobileSocialLayerPurchaseSKU ===
-
-// Module 9773 (useMobileSocialLayerPurchaseSKU)
 import noop from "noop";
 import { PriceSetAssignmentPurchaseTypes as closure_4 } from "ME";
 

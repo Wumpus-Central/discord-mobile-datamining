@@ -1,6 +1,3 @@
-// === Module 10700: useIsInvitedToSpeak ===
-
-// Module 10700 (useIsInvitedToSpeak)
 import fetchFingerprint from "fetchFingerprint";
 import handleConnectionOpen from "handleConnectionOpen";
 

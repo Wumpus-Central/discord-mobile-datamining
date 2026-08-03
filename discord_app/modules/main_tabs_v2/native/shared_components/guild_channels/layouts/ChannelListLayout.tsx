@@ -1,6 +1,3 @@
-// === Module 10299: getLayoutStyles ===
-
-// Module 10299 (getLayoutStyles)
 function getLayoutStyles(layout, launchpad) {
   let flag = launchpad;
   if (launchpad === undefined) {

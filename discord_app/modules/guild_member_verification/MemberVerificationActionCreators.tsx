@@ -1,6 +1,3 @@
-// === Module 5187: _fetchVerificationForm ===
-
-// Module 5187 (_fetchVerificationForm)
 import closure_3 from "ME";
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

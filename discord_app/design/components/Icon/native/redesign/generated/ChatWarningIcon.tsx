@@ -1,6 +1,3 @@
-// === Module 11558: ChatWarningIcon ===
-
-// Module 11558 (ChatWarningIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

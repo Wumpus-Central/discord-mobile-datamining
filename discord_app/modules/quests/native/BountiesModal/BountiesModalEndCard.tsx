@@ -1,6 +1,3 @@
-// === Module 14108: BountiesModalEndCard ===
-
-// Module 14108 (BountiesModalEndCard)
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 15837: useTextChannelPressEvents ===
-
-// Module 15837 (useTextChannelPressEvents)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 

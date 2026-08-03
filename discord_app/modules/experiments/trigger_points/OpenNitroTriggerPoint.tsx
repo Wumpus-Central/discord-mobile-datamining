@@ -1,6 +1,3 @@
-// === Module 12461: commonTriggerPointConfiguration ===
-
-// Module 12461 (commonTriggerPointConfiguration)
 const commonTriggerPointConfiguration = new require("registeredExperimentIds").CommonTriggerPointConfiguration([], require("ExperimentBuckets").CommonTriggerPoints.OPEN_NITRO, { location: "open nitro tab/settings" });
 const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/OpenNitroTriggerPoint.tsx");
 

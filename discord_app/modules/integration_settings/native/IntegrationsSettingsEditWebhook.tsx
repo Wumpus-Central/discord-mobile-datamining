@@ -1,6 +1,3 @@
-// === Module 15699: componentDidMount ===
-
-// Module 15699 (componentDidMount)
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import upsertRelationship from "upsertRelationship";

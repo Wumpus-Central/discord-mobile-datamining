@@ -1,6 +1,3 @@
-// === Module 8729: useFetchVirtualCurrencyBalance ===
-
-// Module 8729 (useFetchVirtualCurrencyBalance)
 import { useEffect } from "noop";
 import redeemError from "redeemError";
 

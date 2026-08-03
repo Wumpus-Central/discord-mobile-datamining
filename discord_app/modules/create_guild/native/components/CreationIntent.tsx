@@ -1,6 +1,3 @@
-// === Module 11817: CreationIntent ===
-
-// Module 11817 (CreationIntent)
 import set from "set";
 import get_ActivityIndicator from "ListSelectionItem";
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";

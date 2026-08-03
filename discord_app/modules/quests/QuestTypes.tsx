@@ -1,6 +1,3 @@
-// === Module 5040: QuestsVisibleMessagesChangedSource ===
-
-// Module 5040 (QuestsVisibleMessagesChangedSource)
 import set from "set";
 
 const values = Object.values(require("QuestRewardCodePlatforms").QuestRewardCodePlatforms);

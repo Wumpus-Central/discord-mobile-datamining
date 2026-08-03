@@ -1,6 +1,3 @@
-// === Module 8756: NameplateUser ===
-
-// Module 8756 (NameplateUser)
 import Button from "Button";
 import { View } from "AVERAGE_FONT_WIDTH_RATIO";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

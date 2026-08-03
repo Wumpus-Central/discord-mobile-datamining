@@ -1,6 +1,3 @@
-// === Module 6099: _generateAnimationSource ===
-
-// Module 6099 (_generateAnimationSource)
 import items from "items";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

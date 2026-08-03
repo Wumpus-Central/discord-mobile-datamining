@@ -1,6 +1,3 @@
-// === Module 9563: handleSelectedGuildChange ===
-
-// Module 9563 (handleSelectedGuildChange)
 import handleConnectionOpen from "handleConnectionOpen";
 import { PersistedStore } from "initialize";
 

@@ -1,6 +1,3 @@
-// === Module 6715: setIsOnStartStageScreen ===
-
-// Module 6715 (setIsOnStartStageScreen)
 import noop from "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";

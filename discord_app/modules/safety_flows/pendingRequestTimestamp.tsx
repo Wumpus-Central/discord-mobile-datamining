@@ -1,6 +1,3 @@
-// === Module 16745: SENT_TIMESTAMP_FORMATTER ===
-
-// Module 16745 (SENT_TIMESTAMP_FORMATTER)
 function SENT_TIMESTAMP_FORMATTER() {
   const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
   const intl = require(1236) /* getSystemLocale */.intl;

@@ -1,6 +1,3 @@
-// === Module 6552: SubscriptionAccountHoldNotice ===
-
-// Module 6552 (SubscriptionAccountHoldNotice)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { SubscriptionStatusTypes } from "ME";

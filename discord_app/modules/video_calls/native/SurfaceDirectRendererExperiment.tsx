@@ -1,6 +1,3 @@
-// === Module 10569: ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT ===
-
-// Module 10569 (ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT)
 import fetchFingerprint from "fetchFingerprint";
 import ApexExperiment from "ApexExperiment";
 

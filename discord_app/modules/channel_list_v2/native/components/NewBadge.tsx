@@ -1,6 +1,3 @@
-// === Module 11463: NewBadge ===
-
-// Module 11463 (NewBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

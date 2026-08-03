@@ -1,6 +1,3 @@
-// === Module 698: expandEventProperties ===
-
-// Module 698 (expandEventProperties)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import withEqualityFn from "withEqualityFn";
 import refreshSourceMapCookie from "refreshSourceMapCookie";

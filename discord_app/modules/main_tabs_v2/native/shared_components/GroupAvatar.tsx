@@ -1,6 +1,3 @@
-// === Module 12044: AnimatedContainer ===
-
-// Module 12044 (AnimatedContainer)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

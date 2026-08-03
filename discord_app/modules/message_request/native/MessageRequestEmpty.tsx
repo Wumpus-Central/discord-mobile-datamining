@@ -1,6 +1,3 @@
-// === Module 15735: MessageRequestEmpty ===
-
-// Module 15735 (MessageRequestEmpty)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 6167: getAutocompleterBoosterMap ===
-
-// Module 6167 (getAutocompleterBoosterMap)
 import handleUserUpdate from "handleUserUpdate";
 import fromPath from "fromPath";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";

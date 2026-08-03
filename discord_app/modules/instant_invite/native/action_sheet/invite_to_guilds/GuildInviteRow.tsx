@@ -1,6 +1,3 @@
-// === Module 12225: ? ===
-
-// Module 12225
 import { View } from "get ActivityIndicator";
 import { useGuildInviteSendStates } from "setSendState";
 import { InviteSendStates } from "InviteSendStates";

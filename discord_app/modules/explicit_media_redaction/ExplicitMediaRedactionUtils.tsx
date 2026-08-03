@@ -1,6 +1,3 @@
-// === Module 5865: redactionSettingToRenderedString ===
-
-// Module 5865 (redactionSettingToRenderedString)
 import getUserAgnosticState from "getUserAgnosticState";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getFpMessageInfo from "getFpMessageInfo";

@@ -1,6 +1,3 @@
-// === Module 15929: isVoicePanelParticipantFocusable ===
-
-// Module 15929 (isVoicePanelParticipantFocusable)
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
 import reset from "reset";

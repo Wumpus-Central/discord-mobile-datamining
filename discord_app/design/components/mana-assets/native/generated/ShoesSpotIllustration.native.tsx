@@ -1,6 +1,3 @@
-// === Module 7491: ShoesSpotIllustration ===
-
-// Module 7491 (ShoesSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ShoesSpotIllustration.native.tsx");

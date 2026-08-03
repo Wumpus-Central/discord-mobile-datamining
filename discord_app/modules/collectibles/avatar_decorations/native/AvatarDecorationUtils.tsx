@@ -1,6 +1,3 @@
-// === Module 7939: getDecorationSizeForAvatarSize ===
-
-// Module 7939 (getDecorationSizeForAvatarSize)
 import { DECORATION_TO_AVATAR_RATIO as closure_3 } from "DECORATION_TO_AVATAR_RATIO";
 
 let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");

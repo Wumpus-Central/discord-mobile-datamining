@@ -1,6 +1,3 @@
-// === Module 12728: supportsZstd ===
-
-// Module 12728 (supportsZstd)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 11130: CreditCardIcon ===
-
-// Module 11130 (CreditCardIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

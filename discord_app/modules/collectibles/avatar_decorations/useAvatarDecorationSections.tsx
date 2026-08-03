@@ -1,6 +1,3 @@
-// === Module 7965: useAvatarDecorationSections ===
-
-// Module 7965 (useAvatarDecorationSections)
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

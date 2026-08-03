@@ -1,6 +1,3 @@
-// === Module 15050: ? ===
-
-// Module 15050
 import { View } from "get ActivityIndicator";
 import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
 import { UnreadSetting } from "ReadStateTypes";

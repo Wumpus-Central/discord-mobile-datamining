@@ -1,6 +1,3 @@
-// === Module 15628: FriendRequestsSettingsScreen ===
-
-// Module 15628 (FriendRequestsSettingsScreen)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

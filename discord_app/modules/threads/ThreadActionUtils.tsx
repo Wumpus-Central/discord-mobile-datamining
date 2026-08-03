@@ -1,6 +1,3 @@
-// === Module 3828: doesThreadMembersActionAffectMe ===
-
-// Module 3828 (doesThreadMembersActionAffectMe)
 import fetchFingerprint from "fetchFingerprint";
 
 const result = require("set").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");

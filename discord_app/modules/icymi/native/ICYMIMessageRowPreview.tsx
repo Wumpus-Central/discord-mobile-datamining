@@ -1,6 +1,3 @@
-// === Module 15388: ICYMIMessageRowPreview ===
-
-// Module 15388 (ICYMIMessageRowPreview)
 import importAllResult from "noop";
 import { MessageEmbedTypes } from "ME";
 import { jsx } from "jsxProd";

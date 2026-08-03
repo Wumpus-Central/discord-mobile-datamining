@@ -1,6 +1,3 @@
-// === Module 11340: CommandListSortButton ===
-
-// Module 11340 (CommandListSortButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { CommandListSortOrder } from "CommandListSortOrder";

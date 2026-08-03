@@ -1,6 +1,3 @@
-// === Module 10348: NOTIFICATION_MAX_WIDTH ===
-
-// Module 10348 (NOTIFICATION_MAX_WIDTH)
 import noop from "noop";
 import set from "set";
 import { AnalyticEvents } from "ME";

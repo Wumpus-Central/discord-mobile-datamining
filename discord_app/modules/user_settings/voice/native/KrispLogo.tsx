@@ -1,6 +1,3 @@
-// === Module 10805: handleKrispLinkPressed ===
-
-// Module 10805 (handleKrispLinkPressed)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";

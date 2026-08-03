@@ -1,6 +1,3 @@
-// === Module 11847: HubEmailConnectionContent ===
-
-// Module 11847 (HubEmailConnectionContent)
 import closure_3 from "HubEmailConnectionSteps";
 import _slicedToArray from "_slicedToArray";
 import HubEmailConnectionDescriptionActionsheet from "HubEmailConnectionDescriptionActionsheet";

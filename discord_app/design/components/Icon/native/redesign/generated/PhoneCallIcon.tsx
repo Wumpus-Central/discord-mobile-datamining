@@ -1,6 +1,3 @@
-// === Module 9092: PhoneCallIcon ===
-
-// Module 9092 (PhoneCallIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

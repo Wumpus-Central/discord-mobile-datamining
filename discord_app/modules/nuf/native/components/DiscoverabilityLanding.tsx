@@ -1,6 +1,3 @@
-// === Module 11865: DiscoverabilityLanding ===
-
-// Module 11865 (DiscoverabilityLanding)
 import Button from "Button";
 import get_ActivityIndicator from "Form";
 import { useContactSyncModalStore } from "ContactSyncModes";

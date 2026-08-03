@@ -1,6 +1,3 @@
-// === Module 13536: processColor ===
-
-// Module 13536 (processColor)
 import _slicedToArray from "_slicedToArray";
 import { processColor } from "getSystemLocale";
 import participantFromServer from "participantFromServer";

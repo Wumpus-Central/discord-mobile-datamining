@@ -1,6 +1,3 @@
-// === Module 15805: useNativeThemeUpdater ===
-
-// Module 15805 (useNativeThemeUpdater)
 import noop from "noop";
 import handleThemeChange from "handleThemeChange";
 

@@ -1,6 +1,3 @@
-// === Module 13242: CarouselPagination ===
-
-// Module 13242 (CarouselPagination)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

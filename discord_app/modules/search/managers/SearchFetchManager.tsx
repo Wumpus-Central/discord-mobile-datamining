@@ -1,6 +1,3 @@
-// === Module 10127: create ===
-
-// Module 10127 (create)
 import { AbstractSearchFetchManager } from "cleanUp";
 
 class SearchFetchManager extends AbstractSearchFetchManager {

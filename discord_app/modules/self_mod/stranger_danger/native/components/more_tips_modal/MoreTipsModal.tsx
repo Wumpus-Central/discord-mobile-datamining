@@ -1,6 +1,3 @@
-// === Module 10456: MoreTipsModalScreen ===
-
-// Module 10456 (MoreTipsModalScreen)
 import set from "set";
 import get_ActivityIndicator from "trackViewedEvent";
 import handleConnectionOpen from "handleConnectionOpen";

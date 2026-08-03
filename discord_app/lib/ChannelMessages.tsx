@@ -1,6 +1,3 @@
-// === Module 4864: mergeMessage ===
-
-// Module 4864 (mergeMessage)
 import ME from "ME";
 
 let c4;

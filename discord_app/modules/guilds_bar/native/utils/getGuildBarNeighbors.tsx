@@ -1,6 +1,3 @@
-// === Module 15017: getGuildBarNeighbors ===
-
-// Module 15017 (getGuildBarNeighbors)
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 
 const require = arg1;

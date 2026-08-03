@@ -1,6 +1,3 @@
-// === Module 7833: createPremiumGroupInviteSystemMessage ===
-
-// Module 7833 (createPremiumGroupInviteSystemMessage)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createCacheKey from "createCacheKey";

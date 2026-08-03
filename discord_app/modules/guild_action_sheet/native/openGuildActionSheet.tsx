@@ -1,6 +1,3 @@
-// === Module 13065: openGuildActionSheet ===
-
-// Module 13065 (openGuildActionSheet)
 import ME from "ME";
 
 let c3;

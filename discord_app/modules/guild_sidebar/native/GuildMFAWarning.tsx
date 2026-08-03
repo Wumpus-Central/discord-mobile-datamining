@@ -1,6 +1,3 @@
-// === Module 15190: handlePress ===
-
-// Module 15190 (handlePress)
 import closure_3 from "createCacheKey";
 import "noop";
 import { Image } from "get ActivityIndicator";

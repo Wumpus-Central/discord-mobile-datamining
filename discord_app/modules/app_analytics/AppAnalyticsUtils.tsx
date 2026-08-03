@@ -1,6 +1,3 @@
-// === Module 4388: collectGuildAnalyticsMetadata ===
-
-// Module 4388 (collectGuildAnalyticsMetadata)
 import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

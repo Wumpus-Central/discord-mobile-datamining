@@ -1,6 +1,3 @@
-// === Module 16539: ChannelSetupScreen ===
-
-// Module 16539 (ChannelSetupScreen)
 import asyncRequireImpl from "asyncRequireImpl";
 import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
 import handleFormInit from "handleFormInit";

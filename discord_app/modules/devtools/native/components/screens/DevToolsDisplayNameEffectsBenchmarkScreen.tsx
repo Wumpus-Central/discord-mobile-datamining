@@ -1,6 +1,3 @@
-// === Module 14843: effectName ===
-
-// Module 14843 (effectName)
 import _slicedToArray from "_slicedToArray";
 import FRAME_BUDGET_MS from "FRAME_BUDGET_MS";
 import get_ActivityIndicator from "DisplayNameStyleColorPreset";

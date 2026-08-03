@@ -1,6 +1,3 @@
-// === Module 6021: _fetchAdUser ===
-
-// Module 6021 (_fetchAdUser)
 import enforcing from "enforcing";
 import adUser from "adUser";
 import ME from "ME";

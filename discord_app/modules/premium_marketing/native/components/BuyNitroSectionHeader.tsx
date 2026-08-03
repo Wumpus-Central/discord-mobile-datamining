@@ -1,6 +1,3 @@
-// === Module 6676: BuyNitroSectionHeader ===
-
-// Module 6676 (BuyNitroSectionHeader)
 import jsxProd from "jsxProd";
 
 let c3;

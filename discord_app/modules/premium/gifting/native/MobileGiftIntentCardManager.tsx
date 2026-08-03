@@ -1,6 +1,3 @@
-// === Module 16323: isChannelEligible ===
-
-// Module 16323 (isChannelEligible)
 import recomputeAffinities from "recomputeAffinities";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";

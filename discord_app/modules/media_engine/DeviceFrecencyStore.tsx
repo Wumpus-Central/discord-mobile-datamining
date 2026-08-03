@@ -1,6 +1,3 @@
-// === Module 4268: DeviceTypes ===
-
-// Module 4268 (DeviceTypes)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import DesktopSources from "DesktopSources";

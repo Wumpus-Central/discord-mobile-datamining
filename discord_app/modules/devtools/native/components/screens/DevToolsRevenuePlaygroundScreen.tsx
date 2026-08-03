@@ -1,6 +1,3 @@
-// === Module 14803: describeServerError ===
-
-// Module 14803 (describeServerError)
 import recomputeAffinities from "recomputeAffinities";
 import serializePurchaseResponse from "serializePurchaseResponse";
 import TableRowGroupTitle from "TableRowGroupTitle";

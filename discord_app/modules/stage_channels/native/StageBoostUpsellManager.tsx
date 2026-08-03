@@ -1,6 +1,3 @@
-// === Module 16340: handleVoiceChannelSelect ===
-
-// Module 16340 (handleVoiceChannelSelect)
 import setContent from "setContent";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

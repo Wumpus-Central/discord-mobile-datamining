@@ -1,6 +1,3 @@
-// === Module 11603: useShouldShowFileUploadRollback ===
-
-// Module 11603 (useShouldShowFileUploadRollback)
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { PowerupActiveStatusType } from "BoostedGuildTiers";
 

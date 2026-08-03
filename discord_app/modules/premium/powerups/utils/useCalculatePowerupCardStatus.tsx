@@ -1,6 +1,3 @@
-// === Module 11624: useCalculatePowerupCardStatus ===
-
-// Module 11624 (useCalculatePowerupCardStatus)
 import noop from "noop";
 import { PowerupActiveStatusType } from "BoostedGuildTiers";
 

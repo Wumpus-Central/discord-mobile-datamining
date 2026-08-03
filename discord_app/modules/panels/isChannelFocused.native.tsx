@@ -1,6 +1,3 @@
-// === Module 10267: getFocusedChannelId ===
-
-// Module 10267 (getFocusedChannelId)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getParticipants from "getParticipants";

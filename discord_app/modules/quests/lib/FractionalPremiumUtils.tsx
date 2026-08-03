@@ -1,6 +1,3 @@
-// === Module 9499: getDurationStringOfFractionalPremium ===
-
-// Module 9499 (getDurationStringOfFractionalPremium)
 const result = require("QuestRewardTypes").fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
 export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {

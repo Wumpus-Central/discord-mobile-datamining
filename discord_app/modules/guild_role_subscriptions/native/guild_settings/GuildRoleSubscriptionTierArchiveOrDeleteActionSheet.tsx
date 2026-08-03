@@ -1,6 +1,3 @@
-// === Module 16599: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
-
-// Module 16599 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

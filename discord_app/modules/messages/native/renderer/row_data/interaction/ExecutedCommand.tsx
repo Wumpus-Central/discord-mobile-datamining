@@ -1,6 +1,3 @@
-// === Module 8016: createExecutedCommand ===
-
-// Module 8016 (createExecutedCommand)
 import { processColor } from "get ActivityIndicator";
 import createdAt from "createdAt";
 import ensureGuildLoaded from "ensureGuildLoaded";

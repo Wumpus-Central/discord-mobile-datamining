@@ -1,6 +1,3 @@
-// === Module 14484: onFriendGamingActivityNotificationSettingsChanged ===
-
-// Module 14484 (onFriendGamingActivityNotificationSettingsChanged)
 import { NotificationSettingsUpdateType as closure_3 } from "AccountNotificationFlags";
 import { AnalyticEvents } from "ME";
 

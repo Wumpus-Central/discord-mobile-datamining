@@ -1,6 +1,3 @@
-// === Module 15087: HappeningNowCardUnifiedVC ===
-
-// Module 15087 (HappeningNowCardUnifiedVC)
 import "noop";
 import participantFromServer from "participantFromServer";
 import reset from "reset";

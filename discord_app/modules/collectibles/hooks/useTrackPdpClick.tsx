@@ -1,6 +1,3 @@
-// === Module 8745: useTrackPdpClick ===
-
-// Module 8745 (useTrackPdpClick)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 12837: splitAgeRestrictedActivities ===
-
-// Module 12837 (splitAgeRestrictedActivities)
 const result = require("set").fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 
 export default function splitAgeRestrictedActivities(arg0, arg1) {

@@ -1,6 +1,3 @@
-// === Module 3855: getBraintreeSDK ===
-
-// Module 3855 (getBraintreeSDK)
 import getClient from "getClient";
 import { PaymentSettings } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 10696: useStageChannelConnectAction ===
-
-// Module 10696 (useStageChannelConnectAction)
 const obj = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
 const result = require("set").fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
 

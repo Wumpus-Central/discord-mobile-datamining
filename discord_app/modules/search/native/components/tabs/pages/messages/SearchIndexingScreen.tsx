@@ -1,6 +1,3 @@
-// === Module 15555: SearchIndexingScreen ===
-
-// Module 15555 (SearchIndexingScreen)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 11373: UsernameText ===
-
-// Module 11373 (UsernameText)
 import "noop";
 import jsxProd from "jsxProd";
 

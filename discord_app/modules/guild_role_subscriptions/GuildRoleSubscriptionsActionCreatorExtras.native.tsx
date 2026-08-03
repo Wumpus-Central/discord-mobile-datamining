@@ -1,6 +1,3 @@
-// === Module 16602: NEW_LISTING_EDIT_STATE_ID ===
-
-// Module 16602 (NEW_LISTING_EDIT_STATE_ID)
 import usePriceTiers from "usePriceTiers";
 import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
 

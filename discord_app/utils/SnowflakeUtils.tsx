@@ -1,6 +1,3 @@
-// === Module 11: DISCORD_EPOCH ===
-
-// Module 11 (DISCORD_EPOCH)
 const result = require("set").fileFinishedImporting("utils/SnowflakeUtils.tsx");
 
 export default {

@@ -1,6 +1,3 @@
-// === Module 8707: useSelectedVariantIndex ===
-
-// Module 8707 (useSelectedVariantIndex)
 import identity from "identity";
 
 let closure_2 = identity.createWithEqualityFn(() => {

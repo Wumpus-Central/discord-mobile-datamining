@@ -1,6 +1,3 @@
-// === Module 11468: TiktokNeutralIcon ===
-
-// Module 11468 (TiktokNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

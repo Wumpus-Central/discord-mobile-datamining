@@ -1,6 +1,3 @@
-// === Module 9223: EyeSlashIcon ===
-
-// Module 9223 (EyeSlashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

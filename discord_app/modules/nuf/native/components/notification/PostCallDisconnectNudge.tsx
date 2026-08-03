@@ -1,6 +1,3 @@
-// === Module 15418: PostCallDisconnectNudge ===
-
-// Module 15418 (PostCallDisconnectNudge)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";

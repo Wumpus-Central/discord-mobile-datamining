@@ -1,6 +1,3 @@
-// === Module 9296: ConversationListItemBase ===
-
-// Module 9296 (ConversationListItemBase)
 import importAllResult from "ConversationPreviewBlockedMessage";
 import { View } from "getSystemLocale";
 import removePendingListFetch from "removePendingListFetch";

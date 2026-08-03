@@ -1,6 +1,3 @@
-// === Module 12317: OverlayMuteButton ===
-
-// Module 12317 (OverlayMuteButton)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "MediaModalOverlayHeader";
 import get_ActivityIndicator from "ObscuredView";

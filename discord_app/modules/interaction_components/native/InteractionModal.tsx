@@ -1,6 +1,3 @@
-// === Module 16239: onClose ===
-
-// Module 16239 (onClose)
 import "noop";
 import get_ActivityIndicator from "Button";
 import { InteractionModalState } from "getModalState";

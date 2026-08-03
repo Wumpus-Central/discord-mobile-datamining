@@ -1,6 +1,3 @@
-// === Module 11280: RecommendationAppRow ===
-
-// Module 11280 (RecommendationAppRow)
 import "noop";
 import { jsx } from "jsxProd";
 

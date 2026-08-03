@@ -1,6 +1,3 @@
-// === Module 5753: timeRequire ===
-
-// Module 5753 (timeRequire)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/timeRequire.native.tsx");
 
 export default function timeRequire(arg0, arg1) {

@@ -1,6 +1,3 @@
-// === Module 5100: rebuild ===
-
-// Module 5100 (rebuild)
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

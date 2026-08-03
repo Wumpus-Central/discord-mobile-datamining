@@ -1,6 +1,3 @@
-// === Module 1337: defineProperty ===
-
-// Module 1337 (defineProperty)
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 import { MessageType as MessageType2 } from "module_1307";

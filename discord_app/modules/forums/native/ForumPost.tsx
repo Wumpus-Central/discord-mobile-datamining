@@ -1,6 +1,3 @@
-// === Module 11191: ForumPostGrid ===
-
-// Module 11191 (ForumPostGrid)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import { useForumChannelStore } from "set";

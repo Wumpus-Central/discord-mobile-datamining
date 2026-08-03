@@ -1,6 +1,3 @@
-// === Module 15124: getChannelMode ===
-
-// Module 15124 (getChannelMode)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "BookCheckIcon";
 import sortActivity from "sortActivity";

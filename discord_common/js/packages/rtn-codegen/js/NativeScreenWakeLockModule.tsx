@@ -1,6 +1,3 @@
-// === Module 10674: enforcing ===
-
-// Module 10674 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeScreenWakeLockModule");

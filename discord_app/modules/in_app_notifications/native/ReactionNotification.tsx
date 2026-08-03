@@ -1,6 +1,3 @@
-// === Module 10375: ReactionNotificationBody ===
-
-// Module 10375 (ReactionNotificationBody)
 import PreviewIcon from "PreviewIcon";
 import { View } from "extractMetadataFromNotification";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

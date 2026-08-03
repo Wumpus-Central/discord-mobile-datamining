@@ -1,6 +1,3 @@
-// === Module 15603: getTrackFriendsListViewedData ===
-
-// Module 15603 (getTrackFriendsListViewedData)
 import { useContactSyncStore } from "setStoredContacts";
 import initialize from "initialize";
 import recountRelationshipTypes from "recountRelationshipTypes";

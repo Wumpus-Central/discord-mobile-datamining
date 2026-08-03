@@ -1,6 +1,3 @@
-// === Module 7990: preloadUserBannerImage ===
-
-// Module 7990 (preloadUserBannerImage)
 const result = require("set").fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 
 export default function preloadUserBannerImage(user) {

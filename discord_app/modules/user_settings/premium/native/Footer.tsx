@@ -1,6 +1,3 @@
-// === Module 12543: Footer ===
-
-// Module 12543 (Footer)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

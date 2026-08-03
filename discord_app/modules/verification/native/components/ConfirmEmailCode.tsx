@@ -1,6 +1,3 @@
-// === Module 9199: ConfirmEmailCode ===
-
-// Module 9199 (ConfirmEmailCode)
 import closure_3 from "ChangeEmailFields";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

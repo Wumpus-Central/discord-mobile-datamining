@@ -1,6 +1,3 @@
-// === Module 15449: ResourcesRow ===
-
-// Module 15449 (ResourcesRow)
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY";

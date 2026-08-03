@@ -1,6 +1,3 @@
-// === Module 9641: ? ===
-
-// Module 9641
 import { View } from "get ActivityIndicator";
 import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
 import jsxProd from "jsxProd";

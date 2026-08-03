@@ -1,6 +1,3 @@
-// === Module 14876: headerTitle ===
-
-// Module 14876 (headerTitle)
 import closure_3 from "RegistrationTransitionActionTypes";
 import "ChangePhoneReason";
 import isRateLimited from "isRateLimited";

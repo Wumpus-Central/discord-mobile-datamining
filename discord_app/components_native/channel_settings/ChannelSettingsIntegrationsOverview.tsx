@@ -1,6 +1,3 @@
-// === Module 15687: LinkedLobbyFormSection ===
-
-// Module 15687 (LinkedLobbyFormSection)
 import "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelSettingsSections } from "ME";

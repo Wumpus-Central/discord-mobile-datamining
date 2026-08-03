@@ -1,6 +1,3 @@
-// === Module 13667: PoolIdInput ===
-
-// Module 13667 (PoolIdInput)
 import fetchFingerprint from "fetchFingerprint";
 import _getGeneratedPoolById from "_getGeneratedPoolById";
 import InventoryIcon from "InventoryIcon";

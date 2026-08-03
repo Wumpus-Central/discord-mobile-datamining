@@ -1,6 +1,3 @@
-// === Module 3773: momentLocales ===
-
-// Module 3773 (momentLocales)
 const result = require("t").fileFinishedImporting("intl/locale-data/moment.tsx");
 
 export const momentLocales = {

@@ -1,6 +1,3 @@
-// === Module 11976: useCustomStatusActivityForUser ===
-
-// Module 11976 (useCustomStatusActivityForUser)
 import fetchFingerprint from "fetchFingerprint";
 import sortActivity from "sortActivity";
 import { ActivityTypes } from "ME";

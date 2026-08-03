@@ -1,6 +1,3 @@
-// === Module 10169: trackViewedEvent ===
-
-// Module 10169 (trackViewedEvent)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { AnalyticEvents } from "ME";
 

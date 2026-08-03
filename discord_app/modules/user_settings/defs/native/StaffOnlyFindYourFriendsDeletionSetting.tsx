@@ -1,6 +1,3 @@
-// === Module 13891: setFindYourFriendsDeletionIsLoading ===
-
-// Module 13891 (setFindYourFriendsDeletionIsLoading)
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

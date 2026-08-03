@@ -1,6 +1,3 @@
-// === Module 12430: SettingsUpsellsTableRow ===
-
-// Module 12430 (SettingsUpsellsTableRow)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "openUserSettings";

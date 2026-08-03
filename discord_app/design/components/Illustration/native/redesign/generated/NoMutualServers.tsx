@@ -1,6 +1,3 @@
-// === Module 11713: getNoMutualServersSource ===
-
-// Module 11713 (getNoMutualServersSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

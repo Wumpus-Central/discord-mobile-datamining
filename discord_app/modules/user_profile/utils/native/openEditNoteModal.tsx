@@ -1,6 +1,3 @@
-// === Module 12061: openEditNoteModal ===
-
-// Module 12061 (openEditNoteModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_profile/utils/native/openEditNoteModal.tsx");
 
 export default function openEditNoteModal(closure_0) {

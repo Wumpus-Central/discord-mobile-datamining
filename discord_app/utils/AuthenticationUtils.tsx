@@ -1,6 +1,3 @@
-// === Module 1352: getToken ===
-
-// Module 1352 (getToken)
 const result = require("set").fileFinishedImporting("utils/AuthenticationUtils.tsx");
 
 export const getToken = function getToken() {

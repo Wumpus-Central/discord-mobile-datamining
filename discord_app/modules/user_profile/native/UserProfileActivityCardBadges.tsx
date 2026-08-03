@@ -1,6 +1,3 @@
-// === Module 12007: UserProfileActivityCardBadges ===
-
-// Module 12007 (UserProfileActivityCardBadges)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ActivityTypes } from "ME";

@@ -1,6 +1,3 @@
-// === Module 13984: OverlappingSchedulesWarning ===
-
-// Module 13984 (OverlappingSchedulesWarning)
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import setsEqual from "setsEqual";

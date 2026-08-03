@@ -1,6 +1,3 @@
-// === Module 597: enforcing ===
-
-// Module 597 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeCacheModule");

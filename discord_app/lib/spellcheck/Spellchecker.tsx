@@ -1,6 +1,3 @@
-// === Module 5197: normalizeLocale ===
-
-// Module 5197 (normalizeLocale)
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";

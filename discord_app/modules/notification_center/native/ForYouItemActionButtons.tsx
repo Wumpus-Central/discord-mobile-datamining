@@ -1,6 +1,3 @@
-// === Module 15315: focusChatInput ===
-
-// Module 15315 (focusChatInput)
 import closure_3 from "ME";
 import handleSupportedURL from "handleSupportedURL";
 import { View } from "_sendWave";

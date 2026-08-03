@@ -1,6 +1,3 @@
-// === Module 16144: DEFAULT_EXPIRATION_DAYS ===
-
-// Module 16144 (DEFAULT_EXPIRATION_DAYS)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 

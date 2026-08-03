@@ -1,6 +1,3 @@
-// === Module 4746: PermissionsAlertModal ===
-
-// Module 4746 (PermissionsAlertModal)
 import "noop";
 import jsxProd from "jsxProd";
 

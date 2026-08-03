@@ -1,6 +1,3 @@
-// === Module 16305: NotificationReactivationActionSheet ===
-
-// Module 16305 (NotificationReactivationActionSheet)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { EventActionType } from "EventActionType";

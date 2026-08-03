@@ -1,6 +1,3 @@
-// === Module 6095: handleInit ===
-
-// Module 6095 (handleInit)
 import _slicedToArray from "_slicedToArray";
 import handlePermissionsChange from "handlePermissionsChange";
 import handleConnectionOpen from "handleConnectionOpen";

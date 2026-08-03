@@ -1,6 +1,3 @@
-// === Module 1939: compareGuildRoles ===
-
-// Module 1939 (compareGuildRoles)
 function compareGuildRoles(guildId, id) {
   guildId = guildId.guildId;
   if (guildId.id === guildId) {

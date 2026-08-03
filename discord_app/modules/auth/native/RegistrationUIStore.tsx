@@ -1,6 +1,3 @@
-// === Module 14877: useRegistrationUIStore ===
-
-// Module 14877 (useRegistrationUIStore)
 import keys from "keys";
 
 let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessibilityRole" }));

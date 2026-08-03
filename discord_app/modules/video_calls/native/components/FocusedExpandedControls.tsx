@@ -1,6 +1,3 @@
-// === Module 10822: ExpandedControlItemIcon ===
-
-// Module 10822 (ExpandedControlItemIcon)
 import "stopScreenshare";
 import get_ActivityIndicator from "_handleToggleVideo";
 import reset from "reset";

@@ -1,6 +1,3 @@
-// === Module 10272: NativeEventEmitter ===
-
-// Module 10272 (NativeEventEmitter)
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;

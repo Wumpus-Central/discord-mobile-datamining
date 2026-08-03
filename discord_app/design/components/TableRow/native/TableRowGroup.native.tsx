@@ -1,6 +1,3 @@
-// === Module 5558: TableRowGroupTitle ===
-
-// Module 5558 (TableRowGroupTitle)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 8684: get ===
-
-// Module 8684 (get)
 import fromServer from "fromServer";
 import closure_5 from "fromServer";
 import { Store } from "initialize";

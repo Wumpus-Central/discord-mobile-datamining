@@ -1,6 +1,3 @@
-// === Module 15175: initialize ===
-
-// Module 15175 (initialize)
 import { GuildScheduledEventStatus } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { PersistedStore } from "initialize";
 

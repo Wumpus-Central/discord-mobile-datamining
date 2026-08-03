@@ -1,6 +1,3 @@
-// === Module 9920: makeAutocompleterSearchParams ===
-
-// Module 9920 (makeAutocompleterSearchParams)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import _handleConnectionOpen from "_handleConnectionOpen";

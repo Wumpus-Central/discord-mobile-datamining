@@ -1,6 +1,3 @@
-// === Module 14145: useYouBarTotalHeight ===
-
-// Module 14145 (useYouBarTotalHeight)
 import { YOU_BAR_HEIGHT } from "CONNECTION_BANNER_HEIGHT";
 
 const result = require("useConnectionBannerHeight").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");

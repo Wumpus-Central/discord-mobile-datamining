@@ -1,6 +1,3 @@
-// === Module 11465: InvitesDisabledAlertModal ===
-
-// Module 11465 (InvitesDisabledAlertModal)
 import "noop";
 import { jsx } from "jsxProd";
 

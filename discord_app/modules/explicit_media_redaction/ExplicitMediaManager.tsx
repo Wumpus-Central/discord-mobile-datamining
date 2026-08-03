@@ -1,6 +1,3 @@
-// === Module 5876: resetManager ===
-
-// Module 5876 (resetManager)
 import processMessage from "processMessage";
 import { ReferencedMessageState } from "processMessage";
 import fetchFingerprint from "fetchFingerprint";

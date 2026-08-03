@@ -1,6 +1,3 @@
-// === Module 8084: _activityFromSetting ===
-
-// Module 8084 (_activityFromSetting)
 import { useMemo } from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import { ActivityTypes } from "ME";

@@ -1,6 +1,3 @@
-// === Module 7021: ExperimentalCustomUrlAbstractUI ===
-
-// Module 7021 (ExperimentalCustomUrlAbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ExperimentalCustomUrlAbstractUI.native.tsx");

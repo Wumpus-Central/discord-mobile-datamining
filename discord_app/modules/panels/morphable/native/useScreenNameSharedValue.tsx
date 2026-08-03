@@ -1,6 +1,3 @@
-// === Module 15859: useScreenNameSharedValue ===
-
-// Module 15859 (useScreenNameSharedValue)
 import noop from "noop";
 
 const require = arg1;

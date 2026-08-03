@@ -1,6 +1,3 @@
-// === Module 4739: requestPermissionCore ===
-
-// Module 4739 (requestPermissionCore)
 import { NativePermissionBaseUtils } from "requestAuthorization";
 
 class NativePermissionDesktopNullUtils extends NativePermissionBaseUtils {

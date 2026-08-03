@@ -1,6 +1,3 @@
-// === Module 16169: openChangelog ===
-
-// Module 16169 (openChangelog)
 import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY";
 
 const result = require("module_4399").fileFinishedImporting("modules/changelog/openChangelog.native.tsx");

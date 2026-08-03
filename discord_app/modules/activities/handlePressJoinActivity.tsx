@@ -1,6 +1,3 @@
-// === Module 10654: handlePressJoinActivity ===
-
-// Module 10654 (handlePressJoinActivity)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createExecutable from "createExecutable";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 10653: prototype ===
-
-// Module 10653 (prototype)
 const result = require("set").fileFinishedImporting("modules/errors/EmbeddedActivityClientError.tsx");
 const prototype = function EmbeddedActivityClientError(reason, detailCode) {
   const obj = Object.create(new.target.prototype);

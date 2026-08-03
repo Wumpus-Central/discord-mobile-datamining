@@ -1,6 +1,3 @@
-// === Module 10351: LocationText ===
-
-// Module 10351 (LocationText)
 import noop from "noop";
 import { View } from "XSmallIcon";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

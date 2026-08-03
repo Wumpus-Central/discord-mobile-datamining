@@ -1,6 +1,3 @@
-// === Module 14026: toggle ===
-
-// Module 14026 (toggle)
 import noop from "noop";
 import ME from "ME";
 import createToggle from "createToggle";

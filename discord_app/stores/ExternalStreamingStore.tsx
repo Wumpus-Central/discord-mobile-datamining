@@ -1,6 +1,3 @@
-// === Module 10488: makeTwitchRequest ===
-
-// Module 10488 (makeTwitchRequest)
 import sendRequest from "sendRequest";
 import closure_4 from "set";
 import initialize from "initialize";

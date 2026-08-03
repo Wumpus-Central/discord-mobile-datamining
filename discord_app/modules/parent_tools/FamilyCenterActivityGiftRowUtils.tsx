@@ -1,6 +1,3 @@
-// === Module 13954: getGiftRowDisplayInfo ===
-
-// Module 13954 (getGiftRowDisplayInfo)
 const result = require("formatSingleCurrencyPrice").fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
 
 export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {

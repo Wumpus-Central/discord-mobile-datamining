@@ -1,6 +1,3 @@
-// === Module 16557: HowItWorksCard ===
-
-// Module 16557 (HowItWorksCard)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

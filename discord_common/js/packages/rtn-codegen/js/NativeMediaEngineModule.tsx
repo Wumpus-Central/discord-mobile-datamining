@@ -1,6 +1,3 @@
-// === Module 4245: enforcing ===
-
-// Module 4245 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeMediaEngineModule");

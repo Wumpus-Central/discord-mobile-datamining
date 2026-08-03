@@ -1,6 +1,3 @@
-// === Module 12181: getApplicationsFromConfigs ===
-
-// Module 12181 (getApplicationsFromConfigs)
 import module_1208 from "module_1208";
 import updateApplicationConfigs from "updateApplicationConfigs";
 import { FetchState } from "updateApplicationConfigs";

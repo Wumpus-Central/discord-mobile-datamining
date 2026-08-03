@@ -1,6 +1,3 @@
-// === Module 14214: MobileQuestPreviewContainer ===
-
-// Module 14214 (MobileQuestPreviewContainer)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

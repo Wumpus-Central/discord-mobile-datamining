@@ -1,6 +1,3 @@
-// === Module 15868: OrientationLockState ===
-
-// Module 15868 (OrientationLockState)
 import { OrientationLockState } from "items3";
 import { LANDSCAPE_ACTIVITY_ASPECT_RATIO } from "ActivityPanelModes";
 

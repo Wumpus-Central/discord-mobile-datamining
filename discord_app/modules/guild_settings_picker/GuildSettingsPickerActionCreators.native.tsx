@@ -1,6 +1,3 @@
-// === Module 13046: openGuildSettingsPickerModal ===
-
-// Module 13046 (openGuildSettingsPickerModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerActionCreators.native.tsx");
 
 export const openGuildSettingsPickerModal = function openGuildSettingsPickerModal(arg0) {

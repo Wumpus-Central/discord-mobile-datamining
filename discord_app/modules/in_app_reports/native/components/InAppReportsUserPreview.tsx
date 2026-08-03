@@ -1,6 +1,3 @@
-// === Module 12415: UserPreview ===
-
-// Module 12415 (UserPreview)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 5238: FormSubLabel ===
-
-// Module 5238 (FormSubLabel)
 import "noop";
 import { jsx } from "jsxProd";
 

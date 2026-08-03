@@ -1,6 +1,3 @@
-// === Module 8976: CloseButton ===
-
-// Module 8976 (CloseButton)
 import noop from "noop";
 import { PlayStationLinkModalScenes as closure_4 } from "PlayStationLinkModalScenes";
 import { jsx } from "jsxProd";

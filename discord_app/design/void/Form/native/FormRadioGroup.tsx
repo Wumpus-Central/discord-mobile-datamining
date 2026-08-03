@@ -1,6 +1,3 @@
-// === Module 7662: FormRadioGroup ===
-
-// Module 7662 (FormRadioGroup)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

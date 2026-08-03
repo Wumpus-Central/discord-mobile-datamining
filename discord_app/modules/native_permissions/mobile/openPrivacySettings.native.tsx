@@ -1,6 +1,3 @@
-// === Module 4744: openPrivacySettings ===
-
-// Module 4744 (openPrivacySettings)
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 15011: getMediaIcon ===
-
-// Module 15011 (getMediaIcon)
 import importAllResult from "canConnectToChannel";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

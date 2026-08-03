@@ -1,6 +1,3 @@
-// === Module 12491: useNextTenureBadge ===
-
-// Module 12491 (useNextTenureBadge)
 import GuildFeatures from "GuildFeatures";
 
 let c3;

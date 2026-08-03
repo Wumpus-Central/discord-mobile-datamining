@@ -1,6 +1,3 @@
-// === Module 11038: ? ===
-
-// Module 11038
 import importAllResult from "showModerateUserActionSheet";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

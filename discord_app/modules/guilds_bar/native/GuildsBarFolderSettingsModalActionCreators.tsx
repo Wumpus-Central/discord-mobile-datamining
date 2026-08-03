@@ -1,6 +1,3 @@
-// === Module 14962: showGuildsBarFolderModal ===
-
-// Module 14962 (showGuildsBarFolderModal)
 const GUILD_FOLDER_SETTINGS_MODAL_KEY = "GUILD_FOLDER_SETTINGS_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderSettingsModalActionCreators.tsx");
 

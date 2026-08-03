@@ -1,6 +1,3 @@
-// === Module 11761: useShowWelcomeModal ===
-
-// Module 11761 (useShowWelcomeModal)
 import noop from "noop";
 import handleInviteData from "handleInviteData";
 import { NO_WELCOME_SCREEN } from "handleInviteData";

@@ -1,6 +1,3 @@
-// === Module 9994: StampIcon ===
-
-// Module 9994 (StampIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

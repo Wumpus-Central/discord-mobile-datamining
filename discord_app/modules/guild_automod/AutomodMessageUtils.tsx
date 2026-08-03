@@ -1,6 +1,3 @@
-// === Module 5769: getDecisionOutcomeFromMessage ===
-
-// Module 5769 (getDecisionOutcomeFromMessage)
 import _slicedToArray from "_slicedToArray";
 import Feedback from "Feedback";
 import ensureGuildLoaded from "ensureGuildLoaded";

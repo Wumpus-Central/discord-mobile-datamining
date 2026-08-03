@@ -1,6 +1,3 @@
-// === Module 663: ImpressionNames ===
-
-// Module 663 (ImpressionNames)
 import { WebAnalyticsEvents } from "sum";
 
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx");

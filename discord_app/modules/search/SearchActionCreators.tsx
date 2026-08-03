@@ -1,6 +1,3 @@
-// === Module 10123: ? ===
-
-// Module 10123
 let result = require("dispatcher").fileFinishedImporting("modules/search/SearchActionCreators.tsx");
 
 export default {

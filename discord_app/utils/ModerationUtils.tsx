@@ -1,6 +1,3 @@
-// === Module 13887: mapColorToHighlightColor ===
-
-// Module 13887 (mapColorToHighlightColor)
 import ME from "ME";
 import { ExplicitContentFilterTypes as closure_5 } from "items";
 

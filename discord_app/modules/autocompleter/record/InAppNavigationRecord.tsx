@@ -1,6 +1,3 @@
-// === Module 5036: fromType ===
-
-// Module 5036 (fromType)
 import "toJS";
 import { Routes } from "ME";
 import { RewardFilterTypes } from "QuestsExperimentLocations";

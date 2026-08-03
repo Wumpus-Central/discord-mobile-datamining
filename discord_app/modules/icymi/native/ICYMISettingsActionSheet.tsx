@@ -1,6 +1,3 @@
-// === Module 15346: ICYMISettingsActionSheet ===
-
-// Module 15346 (ICYMISettingsActionSheet)
 import filterStaffGuild from "filterStaffGuild";
 import "set";
 import { View } from "TableRowInner";

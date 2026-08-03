@@ -1,6 +1,3 @@
-// === Module 14739: TestLocaleSelector ===
-
-// Module 14739 (TestLocaleSelector)
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
 import Text from "Text";

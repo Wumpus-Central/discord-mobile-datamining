@@ -1,6 +1,3 @@
-// === Module 16069: linkFromAppsFlyer ===
-
-// Module 16069 (linkFromAppsFlyer)
 import onStageConnectionError from "onStageConnectionError";
 import closure_5 from "timestamp";
 import module_16070 from "module_16070";

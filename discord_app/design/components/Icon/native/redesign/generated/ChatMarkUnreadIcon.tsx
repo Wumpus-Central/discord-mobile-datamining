@@ -1,6 +1,3 @@
-// === Module 9988: ChatMarkUnreadIcon ===
-
-// Module 9988 (ChatMarkUnreadIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

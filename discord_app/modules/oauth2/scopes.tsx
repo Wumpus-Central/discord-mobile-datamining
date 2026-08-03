@@ -1,6 +1,3 @@
-// === Module 8959: items ===
-
-// Module 8959 (items)
 let items = [
   () => {
     const intl = require(1236) /* getSystemLocale */.intl;

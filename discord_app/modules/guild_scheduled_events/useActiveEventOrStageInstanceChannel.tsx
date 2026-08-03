@@ -1,6 +1,3 @@
-// === Module 15177: useActiveEventOrStageInstanceChannel ===
-
-// Module 15177 (useActiveEventOrStageInstanceChannel)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 16132: HcaptchaModal ===
-
-// Module 16132 (HcaptchaModal)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import siteKey from "siteKey";
 import get_ActivityIndicator from "Text";

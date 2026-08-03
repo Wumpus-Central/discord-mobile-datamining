@@ -1,6 +1,3 @@
-// === Module 10675: useDispatchOpenActivity ===
-
-// Module 10675 (useDispatchOpenActivity)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/activities/useDispatchOpenActivity.tsx");

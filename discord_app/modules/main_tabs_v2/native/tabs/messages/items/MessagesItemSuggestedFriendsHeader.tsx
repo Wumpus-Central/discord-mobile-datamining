@@ -1,6 +1,3 @@
-// === Module 15112: sum ===
-
-// Module 15112 (sum)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

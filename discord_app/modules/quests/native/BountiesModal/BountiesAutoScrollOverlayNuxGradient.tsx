@@ -1,6 +1,3 @@
-// === Module 14095: BountiesAutoScrollOverlayNuxGradient ===
-
-// Module 14095 (BountiesAutoScrollOverlayNuxGradient)
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

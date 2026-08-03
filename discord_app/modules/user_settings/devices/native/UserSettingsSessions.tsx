@@ -1,6 +1,3 @@
-// === Module 13998: UserSettingsSessions ===
-
-// Module 13998 (UserSettingsSessions)
 import _slicedToArray from "_slicedToArray";
 import PressableBase from "PressableBase";
 import get_ActivityIndicator from "Text";

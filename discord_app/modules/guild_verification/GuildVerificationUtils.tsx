@@ -1,6 +1,3 @@
-// === Module 12445: inviteGuildHasPendingMemberDisabledVerification ===
-
-// Module 12445 (inviteGuildHasPendingMemberDisabledVerification)
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import ME from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 10139: ForumChannelCloseSearchButton ===
-
-// Module 10139 (ForumChannelCloseSearchButton)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import initialize from "initialize";

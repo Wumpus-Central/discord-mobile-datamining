@@ -1,6 +1,3 @@
-// === Module 8230: canEveryoneRoleViewEvent ===
-
-// Module 8230 (canEveryoneRoleViewEvent)
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

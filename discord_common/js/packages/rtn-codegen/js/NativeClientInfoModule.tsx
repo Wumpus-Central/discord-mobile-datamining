@@ -1,6 +1,3 @@
-// === Module 672: enforcing ===
-
-// Module 672 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeClientInfoModule");

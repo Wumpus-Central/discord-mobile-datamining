@@ -1,6 +1,3 @@
-// === Module 3988: ExpressiveButtonRive ===
-
-// Module 3988 (ExpressiveButtonRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 13872: ExplicitMediaSettingsActionSheet ===
-
-// Module 13872 (ExplicitMediaSettingsActionSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

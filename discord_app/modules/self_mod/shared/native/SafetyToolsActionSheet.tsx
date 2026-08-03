@@ -1,6 +1,3 @@
-// === Module 10173: SafetyToolsActionSheet ===
-
-// Module 10173 (SafetyToolsActionSheet)
 import module_3890 from "module_3890";
 import { View } from "SafetyToolsCrisisTextLineActionSheet";
 import upsertRelationship from "upsertRelationship";

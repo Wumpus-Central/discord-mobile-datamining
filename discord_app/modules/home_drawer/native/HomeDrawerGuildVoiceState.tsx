@@ -1,6 +1,3 @@
-// === Module 14998: VoiceUsers ===
-
-// Module 14998 (VoiceUsers)
 import apply from "apply";
 import { View } from "useIsHomeDrawerChannelInChannelList";
 import comparator from "comparator";

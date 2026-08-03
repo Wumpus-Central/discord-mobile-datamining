@@ -1,6 +1,3 @@
-// === Module 16499: Header ===
-
-// Module 16499 (Header)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "TableSwitchRow";

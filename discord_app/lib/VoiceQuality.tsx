@@ -1,6 +1,3 @@
-// === Module 12894: start ===
-
-// Module 12894 (start)
 import _slicedToArray from "_slicedToArray";
 import "on";
 

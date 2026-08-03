@@ -1,6 +1,3 @@
-// === Module 12006: isOnPlayStation ===
-
-// Module 12006 (isOnPlayStation)
 import { ActivityGamePlatforms } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/isOnPlayStation.tsx");

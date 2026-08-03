@@ -1,6 +1,3 @@
-// === Module 10418: items ===
-
-// Module 10418 (items)
 import "noop";
 import { Image } from "set";
 import jsxProd from "jsxProd";

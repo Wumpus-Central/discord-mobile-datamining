@@ -1,6 +1,3 @@
-// === Module 12750: getInitialState ===
-
-// Module 12750 (getInitialState)
 import filterPlayingActivities from "filterPlayingActivities";
 import "shouldCommit";
 

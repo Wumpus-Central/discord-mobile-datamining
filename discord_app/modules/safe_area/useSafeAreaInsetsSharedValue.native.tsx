@@ -1,6 +1,3 @@
-// === Module 10436: _loop ===
-
-// Module 10436 (_loop)
 import module_4054 from "module_4054";
 import useSafeAreaInsets from "useSafeAreaInsets";
 import module_4054 from "module_4054";

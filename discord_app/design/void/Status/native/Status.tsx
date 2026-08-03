@@ -1,6 +1,3 @@
-// === Module 13167: Status ===
-
-// Module 13167 (Status)
 import _slicedToArray from "_slicedToArray";
 import "module_4054";
 import get_ActivityIndicator from "STATUS_PADDING";

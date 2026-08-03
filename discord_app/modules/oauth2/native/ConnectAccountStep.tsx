@@ -1,6 +1,3 @@
-// === Module 8971: ConnectAccountStep ===
-
-// Module 8971 (ConnectAccountStep)
 import authorizeConnection from "authorizeConnection";
 import { View } from "getSystemLocale";
 import addApplication from "addApplication";

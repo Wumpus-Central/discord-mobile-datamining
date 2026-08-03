@@ -1,6 +1,3 @@
-// === Module 9146: prototype ===
-
-// Module 9146 (prototype)
 import { AnalyticsFeedItemSeenManager } from "maybeMarkSeen";
 
 const prototype = function ForumChannelSeenManager(channelId) {

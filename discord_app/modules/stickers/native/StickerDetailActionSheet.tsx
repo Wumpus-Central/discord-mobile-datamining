@@ -1,6 +1,3 @@
-// === Module 9652: StandardStickerDetail ===
-
-// Module 9652 (StandardStickerDetail)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import explicitContentFromProto from "explicitContentFromProto";
 import importAllResult from "getSystemLocale";

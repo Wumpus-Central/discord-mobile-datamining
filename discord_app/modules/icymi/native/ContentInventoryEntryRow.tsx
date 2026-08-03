@@ -1,6 +1,3 @@
-// === Module 15392: ContentInventoryEntryRow ===
-
-// Module 15392 (ContentInventoryEntryRow)
 import "noop";
 import upsertRelationship from "upsertRelationship";
 import { jsx } from "jsxProd";

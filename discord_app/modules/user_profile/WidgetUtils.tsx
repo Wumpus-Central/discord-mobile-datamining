@@ -1,6 +1,3 @@
-// === Module 5903: findGameWidget ===
-
-// Module 5903 (findGameWidget)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

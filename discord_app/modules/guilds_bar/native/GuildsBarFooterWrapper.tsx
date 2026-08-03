@@ -1,6 +1,3 @@
-// === Module 15026: GuildsBarFooterWrapper ===
-
-// Module 15026 (GuildsBarFooterWrapper)
 import { GUILD_ITEM_HIT_SLOP } from "GUILD_ITEM_SIZE";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 11022: MessageGameIconActionSheet ===
-
-// Module 11022 (MessageGameIconActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import addApplication from "addApplication";

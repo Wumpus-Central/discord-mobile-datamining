@@ -1,6 +1,3 @@
-// === Module 10019: PlatformIcon ===
-
-// Module 10019 (PlatformIcon)
 import _getSystemLocale from "_getSystemLocale";
 import apply from "apply";
 import getAvatarURL from "getAvatarURL";

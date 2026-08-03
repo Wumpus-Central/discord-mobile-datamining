@@ -1,6 +1,3 @@
-// === Module 6137: replaceAnimationColors ===
-
-// Module 6137 (replaceAnimationColors)
 import apply from "apply";
 
 const memoizeResult = apply.memoize((str) => {

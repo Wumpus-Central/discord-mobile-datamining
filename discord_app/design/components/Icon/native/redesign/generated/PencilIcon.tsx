@@ -1,6 +1,3 @@
-// === Module 9111: PencilIcon ===
-
-// Module 9111 (PencilIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 9776: ClydeIcon ===
-
-// Module 9776 (ClydeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

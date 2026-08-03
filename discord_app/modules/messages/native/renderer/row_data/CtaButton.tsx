@@ -1,6 +1,3 @@
-// === Module 12411: createCtaButton ===
-
-// Module 12411 (createCtaButton)
 import getFpMessageInfo from "getFpMessageInfo";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 14070: isSourceError ===
-
-// Module 14070 (isSourceError)
 let closure_2 = [-1000, -1003, -1004, -1008];
 const result = require("set").fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
 

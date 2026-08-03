@@ -1,6 +1,3 @@
-// === Module 15155: _saveGuildThemeNuxPreference ===
-
-// Module 15155 (_saveGuildThemeNuxPreference)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 

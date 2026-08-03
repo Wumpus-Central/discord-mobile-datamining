@@ -1,6 +1,3 @@
-// === Module 11050: closeModal ===
-
-// Module 11050 (closeModal)
 import encodeProperties from "encodeProperties";
 import noop from "noop";
 import TransferOwnershipModalScenes from "TransferOwnershipModalScenes";

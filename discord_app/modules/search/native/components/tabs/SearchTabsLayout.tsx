@@ -1,6 +1,3 @@
-// === Module 15497: NoSearchResultsScreen ===
-
-// Module 15497 (NoSearchResultsScreen)
 import importAllResult from "Directions";
 import { View } from "useSearchSegmentedControlState";
 import handleReaction from "handleReaction";

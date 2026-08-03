@@ -1,6 +1,3 @@
-// === Module 16435: GuildSettingsStickerCreateModal ===
-
-// Module 16435 (GuildSettingsStickerCreateModal)
 import "noop";
 import { jsx } from "jsxProd";
 

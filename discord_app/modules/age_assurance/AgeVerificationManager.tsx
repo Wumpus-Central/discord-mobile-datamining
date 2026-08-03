@@ -1,6 +1,3 @@
-// === Module 16153: handleMessageCreate ===
-
-// Module 16153 (handleMessageCreate)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
 import handleConnectionOpen from "handleConnectionOpen";

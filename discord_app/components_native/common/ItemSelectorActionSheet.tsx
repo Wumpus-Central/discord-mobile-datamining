@@ -1,6 +1,3 @@
-// === Module 8250: ItemSelectorActionSheet ===
-
-// Module 8250 (ItemSelectorActionSheet)
 import "noop";
 import jsxProd from "jsxProd";
 

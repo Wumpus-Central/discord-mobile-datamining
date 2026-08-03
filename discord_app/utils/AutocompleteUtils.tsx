@@ -1,6 +1,3 @@
-// === Module 5035: NOOP ===
-
-// Module 5035 (NOOP)
 import fuzzysearch from "fuzzysearch";
 import fromType from "fromType";
 import getEmojiToGroupId from "getEmojiToGroupId";

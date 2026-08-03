@@ -1,6 +1,3 @@
-// === Module 6963: D20SpotIllustration ===
-
-// Module 6963 (D20SpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/D20SpotIllustration.native.tsx");

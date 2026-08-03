@@ -1,6 +1,3 @@
-// === Module 16146: onClose ===
-
-// Module 16146 (onClose)
 import AgeGateUnderage from "AgeGateUnderage";
 import handleConnectionOpen from "handleConnectionOpen";
 import result from "result";

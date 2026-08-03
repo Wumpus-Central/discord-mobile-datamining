@@ -1,6 +1,3 @@
-// === Module 10664: ConfirmActivityGateContent ===
-
-// Module 10664 (ConfirmActivityGateContent)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 14920: useAuthWebsocket ===
-
-// Module 14920 (useAuthWebsocket)
 import RemoteAuthStep from "RemoteAuthStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

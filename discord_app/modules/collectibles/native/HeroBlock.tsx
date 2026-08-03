@@ -1,6 +1,3 @@
-// === Module 14632: SkeletonLoading ===
-
-// Module 14632 (SkeletonLoading)
 import useFilteredAndSortedProducts from "useFilteredAndSortedProducts";
 import get_ActivityIndicator from "hexToRgba";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

@@ -1,6 +1,3 @@
-// === Module 15005: TypingSubtitle ===
-
-// Module 15005 (TypingSubtitle)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

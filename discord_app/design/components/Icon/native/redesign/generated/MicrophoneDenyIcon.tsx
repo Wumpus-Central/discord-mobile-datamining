@@ -1,6 +1,3 @@
-// === Module 8876: MicrophoneDenyIcon ===
-
-// Module 8876 (MicrophoneDenyIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

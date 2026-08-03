@@ -1,6 +1,3 @@
-// === Module 13572: validateTransportType ===
-
-// Module 13572 (validateTransportType)
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCErrors } from "ME";
 

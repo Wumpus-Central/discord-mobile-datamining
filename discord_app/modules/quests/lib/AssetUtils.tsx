@@ -1,6 +1,3 @@
-// === Module 9490: resolveAsset ===
-
-// Module 9490 (resolveAsset)
 import QuestsExperimentLocations from "QuestsExperimentLocations";
 import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_5 } from "ME";
 

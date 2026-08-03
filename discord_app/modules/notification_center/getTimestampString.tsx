@@ -1,6 +1,3 @@
-// === Module 5932: getDurationString ===
-
-// Module 5932 (getDurationString)
 function getDurationString(seconds) {
   seconds = seconds.seconds;
   const formatter = seconds.getFormatter();

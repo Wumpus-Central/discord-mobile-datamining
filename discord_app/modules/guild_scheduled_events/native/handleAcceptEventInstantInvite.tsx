@@ -1,6 +1,3 @@
-// === Module 9521: handleAcceptEventInstantInvite ===
-
-// Module 9521 (handleAcceptEventInstantInvite)
 import scheduledEventSort from "scheduledEventSort";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 13895: onClose ===
-
-// Module 13895 (onClose)
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

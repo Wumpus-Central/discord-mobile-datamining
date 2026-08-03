@@ -1,6 +1,3 @@
-// === Module 16321: isParentalConsentWarningFetchEnabled ===
-
-// Module 16321 (isParentalConsentWarningFetchEnabled)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

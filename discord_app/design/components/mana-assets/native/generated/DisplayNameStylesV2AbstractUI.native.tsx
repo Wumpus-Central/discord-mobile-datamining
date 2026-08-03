@@ -1,6 +1,3 @@
-// === Module 7005: DisplayNameStylesV2AbstractUI ===
-
-// Module 7005 (DisplayNameStylesV2AbstractUI)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/DisplayNameStylesV2AbstractUI.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 6567: fetchActivePromotions ===
-
-// Module 6567 (fetchActivePromotions)
 import ME from "ME";
 import _getSystemLocale from "_getSystemLocale";
 import createFromServer from "createFromServer";

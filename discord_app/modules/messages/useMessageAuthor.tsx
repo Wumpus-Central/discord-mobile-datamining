@@ -1,6 +1,3 @@
-// === Module 4422: useNullableMessageAuthor ===
-
-// Module 4422 (useNullableMessageAuthor)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

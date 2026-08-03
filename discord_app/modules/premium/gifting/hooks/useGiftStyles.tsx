@@ -1,6 +1,3 @@
-// === Module 8785: useGiftStyles ===
-
-// Module 8785 (useGiftStyles)
 import { PremiumGiftStyles } from "GuildFeatures";
 
 const result = require("set").fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");

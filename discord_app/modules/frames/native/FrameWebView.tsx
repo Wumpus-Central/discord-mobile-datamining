@@ -1,6 +1,3 @@
-// === Module 15894: FrameWebView ===
-
-// Module 15894 (FrameWebView)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

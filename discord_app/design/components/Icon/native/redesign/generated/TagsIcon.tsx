@@ -1,6 +1,3 @@
-// === Module 10382: TagsIcon ===
-
-// Module 10382 (TagsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

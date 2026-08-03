@@ -1,6 +1,3 @@
-// === Module 12041: getStreamURL ===
-
-// Module 12041 (getStreamURL)
 import { validStreamURL } from "items3";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getStreamURL.tsx");

@@ -1,6 +1,3 @@
-// === Module 11949: BlueskyNeutralIcon ===
-
-// Module 11949 (BlueskyNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

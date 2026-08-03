@@ -1,6 +1,3 @@
-// === Module 9864: SpoilerIcon ===
-
-// Module 9864 (SpoilerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

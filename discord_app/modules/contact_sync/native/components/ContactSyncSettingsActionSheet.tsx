@@ -1,6 +1,3 @@
-// === Module 11792: ContactSyncSettingsActionSheet ===
-
-// Module 11792 (ContactSyncSettingsActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import ContactSyncModes from "ContactSyncModes";

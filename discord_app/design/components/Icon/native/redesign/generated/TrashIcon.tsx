@@ -1,6 +1,3 @@
-// === Module 4152: TrashIcon ===
-
-// Module 4152 (TrashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

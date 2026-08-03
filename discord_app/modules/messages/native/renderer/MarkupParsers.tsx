@@ -1,6 +1,3 @@
-// === Module 7869: parseEmbedTitleMarkup ===
-
-// Module 7869 (parseEmbedTitleMarkup)
 import { MessageTypes } from "ME";
 import importDefaultResult from "priv";
 

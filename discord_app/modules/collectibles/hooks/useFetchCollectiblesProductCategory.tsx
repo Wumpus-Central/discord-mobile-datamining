@@ -1,6 +1,3 @@
-// === Module 9809: useFetchCollectiblesProductCategory ===
-
-// Module 9809 (useFetchCollectiblesProductCategory)
 import _slicedToArray from "_slicedToArray";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 

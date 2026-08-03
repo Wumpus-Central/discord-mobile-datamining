@@ -1,6 +1,3 @@
-// === Module 11710: useUserProfileMutuals ===
-
-// Module 11710 (useUserProfileMutuals)
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
 import recomputeAffinities from "recomputeAffinities";

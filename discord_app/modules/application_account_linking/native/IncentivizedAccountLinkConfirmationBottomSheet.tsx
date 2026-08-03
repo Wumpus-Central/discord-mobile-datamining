@@ -1,6 +1,3 @@
-// === Module 15793: IncentivizedAccountLinkConfirmationBottomSheet ===
-
-// Module 15793 (IncentivizedAccountLinkConfirmationBottomSheet)
 import "messagesProxy";
 import { Image } from "combined";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

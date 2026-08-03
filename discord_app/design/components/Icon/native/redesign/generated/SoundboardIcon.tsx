@@ -1,6 +1,3 @@
-// === Module 6635: SoundboardIcon ===
-
-// Module 6635 (SoundboardIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 11231: result ===
-
-// Module 11231 (result)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";

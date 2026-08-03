@@ -1,6 +1,3 @@
-// === Module 15071: useMessagesFlatData ===
-
-// Module 15071 (useMessagesFlatData)
 import noop from "noop";
 
 const require = arg1;

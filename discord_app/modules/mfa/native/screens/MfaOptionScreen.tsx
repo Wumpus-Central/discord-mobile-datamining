@@ -1,6 +1,3 @@
-// === Module 14787: MFAOptionScreen ===
-
-// Module 14787 (MFAOptionScreen)
 import { ScrollView } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 

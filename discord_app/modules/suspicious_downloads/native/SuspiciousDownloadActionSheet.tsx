@@ -1,6 +1,3 @@
-// === Module 12307: SuspiciousDownloadActionSheet ===
-
-// Module 12307 (SuspiciousDownloadActionSheet)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 12351: GiftCodeRedeemError ===
-
-// Module 12351 (GiftCodeRedeemError)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

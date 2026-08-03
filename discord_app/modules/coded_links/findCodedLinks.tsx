@@ -1,6 +1,3 @@
-// === Module 4177: getPathsFromURL ===
-
-// Module 4177 (getPathsFromURL)
 import updateInvite from "updateInvite";
 import { PRIMARY_DOMAIN } from "ME";
 import { CollectibleShopTab } from "items";

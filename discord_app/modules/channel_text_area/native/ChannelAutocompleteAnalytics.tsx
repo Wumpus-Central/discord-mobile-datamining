@@ -1,6 +1,3 @@
-// === Module 11503: iOSTrackAutocompleteOpen ===
-
-// Module 11503 (iOSTrackAutocompleteOpen)
 import { AnalyticEvents } from "ME";
 
 const result = require("collectGuildAnalyticsMetadata").fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx");

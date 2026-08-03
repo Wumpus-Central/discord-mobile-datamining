@@ -1,6 +1,3 @@
-// === Module 12031: UserRow ===
-
-// Module 12031 (UserRow)
 import "noop";
 import sortActivity from "sortActivity";
 import { jsx } from "jsxProd";

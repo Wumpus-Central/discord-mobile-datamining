@@ -1,6 +1,3 @@
-// === Module 0: Discord ===
-
-// Module 0 (Discord)
 import module_1 from "createFastConnectSocket";
 import createFastConnectSocket from "promise";
 import toLocaleLowerCase from "toLocaleLowerCase";

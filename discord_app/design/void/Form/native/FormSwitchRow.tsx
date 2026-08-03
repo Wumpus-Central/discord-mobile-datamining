@@ -1,6 +1,3 @@
-// === Module 7657: FormSwitchRow ===
-
-// Module 7657 (FormSwitchRow)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

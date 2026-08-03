@@ -1,6 +1,3 @@
-// === Module 1342: b64ToProto ===
-
-// Module 1342 (b64ToProto)
 import _slicedToArray from "_slicedToArray";
 import { ZERO_STRING_GUILD_ID } from "ME";
 

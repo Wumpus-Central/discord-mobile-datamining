@@ -1,6 +1,3 @@
-// === Module 13280: toLocaleLowerCase ===
-
-// Module 13280 (toLocaleLowerCase)
 import addLikelySubtags from "addLikelySubtags";
 import module_13377 from "module_13377";
 

@@ -1,6 +1,3 @@
-// === Module 9482: useCaptchaStore ===
-
-// Module 9482 (useCaptchaStore)
 import _slicedToArray from "_slicedToArray";
 import keys from "keys";
 

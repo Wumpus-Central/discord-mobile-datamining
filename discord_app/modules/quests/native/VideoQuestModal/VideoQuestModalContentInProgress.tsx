@@ -1,6 +1,3 @@
-// === Module 14172: importDefaultResult1 ===
-
-// Module 14172 (importDefaultResult1)
 import getContextualEntrypointHeading from "getContextualEntrypointHeading";
 import importAllResult from "SafeAreaPaddingView";
 import get_ActivityIndicator from "CONFIG_NEVER_ANIMATE_TIMING";

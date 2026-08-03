@@ -1,6 +1,3 @@
-// === Module 8658: map ===
-
-// Module 8658 (map)
 import fetchFingerprint from "fetchFingerprint";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import InviteSendStates from "InviteSendStates";

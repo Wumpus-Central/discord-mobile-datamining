@@ -1,6 +1,3 @@
-// === Module 5964: getHermesInstrumentedStatsSummary ===
-
-// Module 5964 (getHermesInstrumentedStatsSummary)
 import { NativeModules } from "get ActivityIndicator";
 import { ProcessUtils } from "ElectronProcessType";
 

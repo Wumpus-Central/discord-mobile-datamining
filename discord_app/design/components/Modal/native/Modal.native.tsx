@@ -1,6 +1,3 @@
-// === Module 11136: Modal ===
-
-// Module 11136 (Modal)
 import "noop";
 import { jsx } from "jsxProd";
 

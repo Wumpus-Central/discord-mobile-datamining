@@ -1,6 +1,3 @@
-// === Module 10960: result ===
-
-// Module 10960 (result)
 const result = 2 * require("set").Millis.HOUR;
 const result1 = require("set").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
 

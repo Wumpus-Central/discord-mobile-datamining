@@ -1,6 +1,3 @@
-// === Module 4199: remapTypographyVariant ===
-
-// Module 4199 (remapTypographyVariant)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

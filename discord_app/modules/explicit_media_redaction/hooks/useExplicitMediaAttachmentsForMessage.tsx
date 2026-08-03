@@ -1,6 +1,3 @@
-// === Module 9901: useRedactableMediaAttachmentsForMessage ===
-
-// Module 9901 (useRedactableMediaAttachmentsForMessage)
 import reinjectEphemerals from "reinjectEphemerals";
 
 const require = arg1;

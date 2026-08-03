@@ -1,6 +1,3 @@
-// === Module 5805: fromServer ===
-
-// Module 5805 (fromServer)
 import _slicedToArray from "_slicedToArray";
 import fromServer from "fromServer";
 import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse";

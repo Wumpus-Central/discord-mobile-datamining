@@ -1,6 +1,3 @@
-// === Module 11881: EmojiIcon ===
-
-// Module 11881 (EmojiIcon)
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "set";
 import getEmojiToGroupId from "getEmojiToGroupId";

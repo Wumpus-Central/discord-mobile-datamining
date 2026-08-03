@@ -1,6 +1,3 @@
-// === Module 12645: canReviewGuildMemberApplications ===
-
-// Module 12645 (canReviewGuildMemberApplications)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";

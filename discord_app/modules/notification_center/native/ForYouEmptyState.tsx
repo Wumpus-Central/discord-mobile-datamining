@@ -1,6 +1,3 @@
-// === Module 15340: ForYouEmptyState ===
-
-// Module 15340 (ForYouEmptyState)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

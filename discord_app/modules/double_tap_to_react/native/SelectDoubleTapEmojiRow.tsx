@@ -1,6 +1,3 @@
-// === Module 11495: num2 ===
-
-// Module 11495 (num2)
 import importAllResult from "ReactionIcon";
 import { View } from "EMOJI_PICKER_ACTION_SHEET_KEY";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,6 +1,3 @@
-// === Module 13255: EmptyState ===
-
-// Module 13255 (EmptyState)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { Fonts } from "ME";

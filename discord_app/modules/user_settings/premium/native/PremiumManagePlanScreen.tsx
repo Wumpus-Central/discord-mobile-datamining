@@ -1,6 +1,3 @@
-// === Module 14035: PremiumPlanSelectSettingScreen ===
-
-// Module 14035 (PremiumPlanSelectSettingScreen)
 import "noop";
 import { jsx } from "jsxProd";
 

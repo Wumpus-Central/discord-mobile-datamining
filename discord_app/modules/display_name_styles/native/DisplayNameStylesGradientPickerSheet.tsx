@@ -1,6 +1,3 @@
-// === Module 14383: DisplayNameStylesColorPickerSheet ===
-
-// Module 14383 (DisplayNameStylesColorPickerSheet)
 import _slicedToArray from "_slicedToArray";
 import int2hslRaw from "int2hslRaw";
 import get_ActivityIndicator from "getSystemLocale";

@@ -1,6 +1,3 @@
-// === Module 11279: ? ===
-
-// Module 11279
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import createdAt from "createdAt";

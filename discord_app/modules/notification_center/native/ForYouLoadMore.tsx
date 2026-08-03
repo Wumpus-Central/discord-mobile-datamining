@@ -1,6 +1,3 @@
-// === Module 15339: ForYouLoadMore ===
-
-// Module 15339 (ForYouLoadMore)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import _validate from "_validate";

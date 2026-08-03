@@ -1,6 +1,3 @@
-// === Module 15489: getSearchTokenLabel ===
-
-// Module 15489 (getSearchTokenLabel)
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
 import ME from "ME";

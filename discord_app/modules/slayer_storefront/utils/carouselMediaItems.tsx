@@ -1,6 +1,3 @@
-// === Module 9771: WEB_HERO_WIDTH_PX ===
-
-// Module 9771 (WEB_HERO_WIDTH_PX)
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/utils/carouselMediaItems.tsx");
 
 export const WEB_HERO_WIDTH_PX = 747;

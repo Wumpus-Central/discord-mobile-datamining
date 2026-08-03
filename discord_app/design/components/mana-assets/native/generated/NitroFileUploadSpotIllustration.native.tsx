@@ -1,6 +1,3 @@
-// === Module 7307: NitroFileUploadSpotIllustration ===
-
-// Module 7307 (NitroFileUploadSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/NitroFileUploadSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 8760: NitroIcon ===
-
-// Module 8760 (NitroIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

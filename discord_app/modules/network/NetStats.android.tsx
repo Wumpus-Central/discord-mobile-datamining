@@ -1,6 +1,3 @@
-// === Module 5724: receiveNetworkInfoformation ===
-
-// Module 5724 (receiveNetworkInfoformation)
 import ME from "ME";
 import get_ActivityIndicator from "set";
 import _handleConnectionOpen from "_handleConnectionOpen";

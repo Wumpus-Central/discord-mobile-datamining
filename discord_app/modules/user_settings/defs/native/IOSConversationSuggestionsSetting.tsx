@@ -1,6 +1,3 @@
-// === Module 13899: toggle ===
-
-// Module 13899 (toggle)
 import noop from "noop";
 import identity from "identity";
 import createToggle from "createToggle";

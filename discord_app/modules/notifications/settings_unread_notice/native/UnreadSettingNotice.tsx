@@ -1,6 +1,3 @@
-// === Module 10472: UnreadSettingNoticeConnected ===
-
-// Module 10472 (UnreadSettingNoticeConnected)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ChannelNotificationSettingsFlags as closure_4 } from "MAX_FAVORITES";

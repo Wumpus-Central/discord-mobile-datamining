@@ -1,6 +1,3 @@
-// === Module 14048: FilterFooter ===
-
-// Module 14048 (FilterFooter)
 import _slicedToArray from "_slicedToArray";
 import context from "context";
 import { View } from "BottomSheetModal";

@@ -1,6 +1,3 @@
-// === Module 8068: allowableMinInterval ===
-
-// Module 8068 (allowableMinInterval)
 import noop from "noop";
 
 const result = require("useMountLayoutEffect").fileFinishedImporting("modules/collectibles/profile_effects/useClock.tsx");

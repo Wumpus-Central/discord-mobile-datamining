@@ -1,6 +1,3 @@
-// === Module 3980: CheckpointCardRive ===
-
-// Module 3980 (CheckpointCardRive)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";

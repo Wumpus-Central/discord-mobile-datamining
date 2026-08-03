@@ -1,6 +1,3 @@
-// === Module 14891: submitDateOfBirth ===
-
-// Module 14891 (submitDateOfBirth)
 import { AgeGateAnalyticAction } from "result";
 import ME from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 10524: useIsActivityFocused ===
-
-// Module 10524 (useIsActivityFocused)
 import getParticipants from "getParticipants";
 import participantFromServer from "participantFromServer";
 

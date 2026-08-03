@@ -1,6 +1,3 @@
-// === Module 11940: ScreenIcon ===
-
-// Module 11940 (ScreenIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

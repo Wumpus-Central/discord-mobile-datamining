@@ -1,6 +1,3 @@
-// === Module 6713: connectToStage ===
-
-// Module 6713 (connectToStage)
 import handleConnectionOpen from "handleConnectionOpen";
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";

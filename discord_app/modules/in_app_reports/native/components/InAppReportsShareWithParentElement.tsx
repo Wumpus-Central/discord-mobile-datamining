@@ -1,6 +1,3 @@
-// === Module 12425: parents ===
-
-// Module 12425 (parents)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

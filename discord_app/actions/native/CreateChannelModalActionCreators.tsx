@@ -1,6 +1,3 @@
-// === Module 8280: ? ===
-
-// Module 8280
 import { CREATEABLE_NON_VOCAL_CHANNEL_NAME_TYPES as closure_3 } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 

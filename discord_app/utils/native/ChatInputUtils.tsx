@@ -1,6 +1,3 @@
-// === Module 4052: getBestActiveInput ===
-
-// Module 4052 (getBestActiveInput)
 function getBestActiveInput() {
   let str;
   if (0 !== map1.size) {

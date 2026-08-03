@@ -1,6 +1,3 @@
-// === Module 13013: ErrorMessage ===
-
-// Module 13013 (ErrorMessage)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "Button";

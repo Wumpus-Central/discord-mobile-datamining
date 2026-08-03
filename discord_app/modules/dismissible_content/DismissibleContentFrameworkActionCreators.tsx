@@ -1,6 +1,3 @@
-// === Module 10233: handleDCShownToUser ===
-
-// Module 10233 (handleDCShownToUser)
 const result = require("set").fileFinishedImporting("modules/dismissible_content/DismissibleContentFrameworkActionCreators.tsx");
 
 export const handleDCShownToUser = function handleDCShownToUser(dismissibleContent, guildId) {

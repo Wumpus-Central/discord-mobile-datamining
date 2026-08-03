@@ -1,6 +1,3 @@
-// === Module 7942: handleFormOpen ===
-
-// Module 7942 (handleFormOpen)
 import ME from "ME";
 import { Store } from "initialize";
 import set from "ANALYTICS_NAME";

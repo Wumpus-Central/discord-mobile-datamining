@@ -1,6 +1,3 @@
-// === Module 11553: ChatInputGuard ===
-
-// Module 11553 (ChatInputGuard)
 import Button from "Button";
 import get_ActivityIndicator from "componentDidMount";
 import { updateChatInputContainerHeight as closure_6 } from "updateChatInputContainerHeight";

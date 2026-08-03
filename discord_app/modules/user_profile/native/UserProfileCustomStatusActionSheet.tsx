@@ -1,6 +1,3 @@
-// === Module 11991: UserProfileCustomStatusActionSheet ===
-
-// Module 11991 (UserProfileCustomStatusActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 15086: useLiveStageData ===
-
-// Module 15086 (useLiveStageData)
 import noop from "noop";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import ensureGuildLoaded from "ensureGuildLoaded";

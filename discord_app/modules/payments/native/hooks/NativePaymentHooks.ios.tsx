@@ -1,6 +1,3 @@
-// === Module 6669: useNativeIAPPayments ===
-
-// Module 6669 (useNativeIAPPayments)
 import reset from "reset";
 import _slicedToArray from "_slicedToArray";
 import _deletePaymentSource from "_deletePaymentSource";

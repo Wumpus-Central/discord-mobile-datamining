@@ -1,6 +1,3 @@
-// === Module 13060: _sendShareMessage ===
-
-// Module 13060 (_sendShareMessage)
 import dispatcher from "dispatcher";
 import { DraftType } from "handleChanged";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";

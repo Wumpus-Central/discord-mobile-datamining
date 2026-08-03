@@ -1,6 +1,3 @@
-// === Module 11142: getSoundboardEmojiUrl ===
-
-// Module 11142 (getSoundboardEmojiUrl)
 const result = require("set").fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
 
 export default function getSoundboardEmojiUrl(emojiId) {

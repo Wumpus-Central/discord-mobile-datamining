@@ -1,6 +1,3 @@
-// === Module 15016: getGuildsBarGuildAccessibilityActions ===
-
-// Module 15016 (getGuildsBarGuildAccessibilityActions)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 

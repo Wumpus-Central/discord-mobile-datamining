@@ -1,6 +1,3 @@
-// === Module 8223: GuildScheduledEventDetailsActionSheet ===
-
-// Module 8223 (GuildScheduledEventDetailsActionSheet)
 import _slicedToArray from "_slicedToArray";
 import usePrimaryActionButtonType from "usePrimaryActionButtonType";
 import { View } from "useSafeAreaInsets";

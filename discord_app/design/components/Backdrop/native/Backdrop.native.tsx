@@ -1,6 +1,3 @@
-// === Module 4592: Backdrop ===
-
-// Module 4592 (Backdrop)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

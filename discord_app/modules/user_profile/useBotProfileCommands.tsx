@@ -1,6 +1,3 @@
-// === Module 11973: useBotProfileCommands ===
-
-// Module 11973 (useBotProfileCommands)
 import noop from "noop";
 
 const require = arg1;

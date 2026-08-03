@@ -1,6 +1,3 @@
-// === Module 6662: BuyNitroPlanPriceDetails ===
-
-// Module 6662 (BuyNitroPlanPriceDetails)
 import "noop";
 import { View } from "get ActivityIndicator";
 import updateProduct from "updateProduct";

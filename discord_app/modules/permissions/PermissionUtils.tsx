@@ -1,6 +1,3 @@
-// === Module 15683: getGuildPermissionSpec ===
-
-// Module 15683 (getGuildPermissionSpec)
 import { Permissions } from "sum";
 
 function getGuildPermissionSpec(permissionOptions) {

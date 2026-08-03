@@ -1,6 +1,3 @@
-// === Module 9909: ForwardModal ===
-
-// Module 9909 (ForwardModal)
 import filterStaffGuild from "filterStaffGuild";
 import HapticFeedbackTypes from "HapticFeedbackTypes";
 import useNavigatorBackPressHandler from "useNavigatorBackPressHandler";

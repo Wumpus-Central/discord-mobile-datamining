@@ -1,6 +1,3 @@
-// === Module 14631: block ===
-
-// Module 14631 (block)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

@@ -1,6 +1,3 @@
-// === Module 11331: Tag ===
-
-// Module 11331 (Tag)
 import createExecutable from "createExecutable";
 import useGetOrFetchApplications from "useGetOrFetchApplications";
 import AppLauncherEntrypoint from "AppLauncherEntrypoint";

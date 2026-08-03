@@ -1,6 +1,3 @@
-// === Module 15135: VOICE_USER_SUMMARY_HEIGHT ===
-
-// Module 15135 (VOICE_USER_SUMMARY_HEIGHT)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";

@@ -1,6 +1,3 @@
-// === Module 9011: validateHandle ===
-
-// Module 9011 (validateHandle)
 import { PlatformTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");

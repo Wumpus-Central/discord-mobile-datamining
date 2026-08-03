@@ -1,6 +1,3 @@
-// === Module 5801: getSettings ===
-
-// Module 5801 (getSettings)
 import { Store } from "initialize";
 
 const require = arg1;

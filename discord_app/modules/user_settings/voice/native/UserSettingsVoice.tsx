@@ -1,6 +1,3 @@
-// === Module 10779: UserSettingsVoice ===
-
-// Module 10779 (UserSettingsVoice)
 import "noop";
 import { View } from "set";
 import { isMobileOverlaySupported } from "getUserAgnosticState";

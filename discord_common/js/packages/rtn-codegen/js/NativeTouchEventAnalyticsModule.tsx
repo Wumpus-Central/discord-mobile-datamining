@@ -1,6 +1,3 @@
-// === Module 13622: enforcing ===
-
-// Module 13622 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTouchEventAnalyticsModule");

@@ -1,6 +1,3 @@
-// === Module 11479: matchGroupDMRecipients ===
-
-// Module 11479 (matchGroupDMRecipients)
 import _slicedToArray from "_slicedToArray";
 import NoResults from "NoResults";
 import { View } from "UserFlashListActions";

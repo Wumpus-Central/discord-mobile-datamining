@@ -1,6 +1,3 @@
-// === Module 15695: getWebhookEmptySource ===
-
-// Module 15695 (getWebhookEmptySource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 15847: jsx ===
-
-// Module 15847 (jsx)
 import jsxProd from "jsxProd";
 import set from "set";
 import importDefaultResult from "jsx";

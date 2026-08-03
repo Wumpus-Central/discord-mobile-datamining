@@ -1,6 +1,3 @@
-// === Module 5748: fromMessage ===
-
-// Module 5748 (fromMessage)
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";

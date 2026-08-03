@@ -1,6 +1,3 @@
-// === Module 7984: useDominantRGBFromImage ===
-
-// Module 7984 (useDominantRGBFromImage)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "set";

@@ -1,6 +1,3 @@
-// === Module 10474: updateChannelUnreadSettings ===
-
-// Module 10474 (updateChannelUnreadSettings)
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { AnalyticsObjects } from "ME";
 import { UnreadSetting } from "ReadStateTypes";

@@ -1,6 +1,3 @@
-// === Module 11281: ViewAllRow ===
-
-// Module 11281 (ViewAllRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

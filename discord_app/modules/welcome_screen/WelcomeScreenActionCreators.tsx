@@ -1,6 +1,3 @@
-// === Module 11764: _fetchWelcomeScreen ===
-
-// Module 11764 (_fetchWelcomeScreen)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 

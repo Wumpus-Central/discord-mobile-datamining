@@ -1,6 +1,3 @@
-// === Module 12330: clamp ===
-
-// Module 12330 (clamp)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";

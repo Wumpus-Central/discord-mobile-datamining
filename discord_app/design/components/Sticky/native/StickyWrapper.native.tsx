@@ -1,6 +1,3 @@
-// === Module 10442: StickyWrapper ===
-
-// Module 10442 (StickyWrapper)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

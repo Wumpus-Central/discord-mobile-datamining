@@ -1,6 +1,3 @@
-// === Module 14156: UndoIcon ===
-
-// Module 14156 (UndoIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

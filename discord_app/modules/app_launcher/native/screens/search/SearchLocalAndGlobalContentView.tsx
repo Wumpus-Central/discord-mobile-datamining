@@ -1,6 +1,3 @@
-// === Module 11291: getApplicationIdFromApplicationItem ===
-
-// Module 11291 (getApplicationIdFromApplicationItem)
 import EmptyState from "EmptyState";
 import importAllResult from "useApplicationsInContext";
 import { View } from "useScaledRowHeight";

@@ -1,6 +1,3 @@
-// === Module 7768: createChangeChannelNameSystemMessage ===
-
-// Module 7768 (createChangeChannelNameSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 16717: updateRegion ===
-
-// Module 16717 (updateRegion)
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 12634: computeHasRoleSubscriptionsInGuild ===
-
-// Module 12634 (computeHasRoleSubscriptionsInGuild)
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

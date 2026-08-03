@@ -1,6 +1,3 @@
-// === Module 6361: BlockedPaymentsCountryDisplay ===
-
-// Module 6361 (BlockedPaymentsCountryDisplay)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";

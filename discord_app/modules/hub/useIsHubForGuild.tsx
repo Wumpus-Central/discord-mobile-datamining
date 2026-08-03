@@ -1,6 +1,3 @@
-// === Module 11486: useIsHubForGuild ===
-
-// Module 11486 (useIsHubForGuild)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

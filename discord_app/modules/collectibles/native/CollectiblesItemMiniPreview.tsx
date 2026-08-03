@@ -1,6 +1,3 @@
-// === Module 8752: PX_8 ===
-
-// Module 8752 (PX_8)
 import { View } from "NameplateInner";
 import { isAvatarDecorationRecord } from "fromServer";
 import { isNameplateRecord } from "fromServer";

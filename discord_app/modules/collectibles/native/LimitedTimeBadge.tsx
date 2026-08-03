@@ -1,6 +1,3 @@
-// === Module 8713: LimitedTimeBadge ===
-
-// Module 8713 (LimitedTimeBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";

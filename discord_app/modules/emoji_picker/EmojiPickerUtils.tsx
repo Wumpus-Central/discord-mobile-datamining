@@ -1,6 +1,3 @@
-// === Module 9351: initializeSearch ===
-
-// Module 9351 (initializeSearch)
 import getSystemLocale from "getSystemLocale";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

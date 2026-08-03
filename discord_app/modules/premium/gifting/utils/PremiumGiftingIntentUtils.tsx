@@ -1,6 +1,3 @@
-// === Module 11019: GiftIntentType ===
-
-// Module 11019 (GiftIntentType)
 import { GiftIntentType } from "GuildFeatures";
 import { AnalyticsLocations } from "ME";
 

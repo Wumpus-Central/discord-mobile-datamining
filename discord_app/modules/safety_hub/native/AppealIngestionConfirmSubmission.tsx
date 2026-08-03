@@ -1,6 +1,3 @@
-// === Module 11109: AppealIngestionConfirmSubmission ===
-
-// Module 11109 (AppealIngestionConfirmSubmission)
 import "set";
 import { View } from "AppealIngestionActivitySummary";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";

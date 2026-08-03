@@ -1,6 +1,3 @@
-// === Module 10475: OptInChannelBanner ===
-
-// Module 10475 (OptInChannelBanner)
 import Button from "Button";
 import get_ActivityIndicator from "Text";
 import _handleConnectionOpen from "_handleConnectionOpen";

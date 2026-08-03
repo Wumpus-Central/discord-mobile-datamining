@@ -1,6 +1,3 @@
-// === Module 16171: handleGuildCreate ===
-
-// Module 16171 (handleGuildCreate)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

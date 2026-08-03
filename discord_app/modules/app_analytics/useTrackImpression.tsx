@@ -1,6 +1,3 @@
-// === Module 8436: trackImpression ===
-
-// Module 8436 (trackImpression)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

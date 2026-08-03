@@ -1,6 +1,3 @@
-// === Module 13758: UserProfileUpsellCard ===
-
-// Module 13758 (UserProfileUpsellCard)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { Gradients } from "items";

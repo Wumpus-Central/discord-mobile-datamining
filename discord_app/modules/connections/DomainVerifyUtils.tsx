@@ -1,6 +1,3 @@
-// === Module 9009: EXAMPLE_DOMAIN ===
-
-// Module 9009 (EXAMPLE_DOMAIN)
 const result = require("set").fileFinishedImporting("modules/connections/DomainVerifyUtils.tsx");
 
 export const EXAMPLE_DOMAIN = "example.com";

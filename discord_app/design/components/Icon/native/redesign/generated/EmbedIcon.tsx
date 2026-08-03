@@ -1,6 +1,3 @@
-// === Module 9031: EmbedIcon ===
-
-// Module 9031 (EmbedIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

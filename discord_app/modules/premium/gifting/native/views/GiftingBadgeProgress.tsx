@@ -1,6 +1,3 @@
-// === Module 9840: GiftingBadgeProgressBar ===
-
-// Module 9840 (GiftingBadgeProgressBar)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { getSingleRequirementThreshold as closure_4 } from "map";

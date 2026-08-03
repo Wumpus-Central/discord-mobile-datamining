@@ -1,6 +1,3 @@
-// === Module 11900: OrbCheckoutAmountTag ===
-
-// Module 11900 (OrbCheckoutAmountTag)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

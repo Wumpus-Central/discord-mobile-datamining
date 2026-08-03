@@ -1,6 +1,3 @@
-// === Module 13961: useUserIsTeenAgeGroup ===
-
-// Module 13961 (useUserIsTeenAgeGroup)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 15038: useGuildsBarSelectedGuildScroller ===
-
-// Module 15038 (useGuildsBarSelectedGuildScroller)
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 

@@ -1,6 +1,3 @@
-// === Module 6364: getUnderlyingIOSExceptionRecursively ===
-
-// Module 6364 (getUnderlyingIOSExceptionRecursively)
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {
     const tmp2 = getUnderlyingIOSExceptionRecursively(NSUnderlyingError.userInfo.NSUnderlyingError);

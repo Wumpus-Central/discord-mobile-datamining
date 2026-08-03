@@ -1,6 +1,3 @@
-// === Module 6913: CampfireSpotIllustration ===
-
-// Module 6913 (CampfireSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/CampfireSpotIllustration.native.tsx");

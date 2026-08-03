@@ -1,6 +1,3 @@
-// === Module 6681: items ===
-
-// Module 6681 (items)
 const obj = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" };
 const items = [, ];
 ({ MIDNIGHT: arr[0], DARK: arr[1] } = obj);

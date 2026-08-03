@@ -1,6 +1,3 @@
-// === Module 5904: initialize ===
-
-// Module 5904 (initialize)
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

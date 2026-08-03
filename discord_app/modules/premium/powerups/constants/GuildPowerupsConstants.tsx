@@ -1,6 +1,3 @@
-// === Module 4081: BoostedGuildTiers ===
-
-// Module 4081 (BoostedGuildTiers)
 import { BoostedGuildFeatures } from "GuildFeatures";
 import ME from "ME";
 import set from "str11";

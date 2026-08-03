@@ -1,6 +1,3 @@
-// === Module 13693: FileUpIcon ===
-
-// Module 13693 (FileUpIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

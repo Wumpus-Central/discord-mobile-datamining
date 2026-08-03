@@ -1,6 +1,3 @@
-// === Module 16066: MediaInfo ===
-
-// Module 16066 (MediaInfo)
 import PlayIcon from "PlayIcon";
 import trackInvite from "trackInvite";
 import get_ActivityIndicator from "AnimatedChild";

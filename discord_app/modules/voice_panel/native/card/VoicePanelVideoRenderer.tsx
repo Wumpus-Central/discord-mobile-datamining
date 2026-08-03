@@ -1,6 +1,3 @@
-// === Module 15981: VoicePanelModes ===
-
-// Module 15981 (VoicePanelModes)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "useVideoSpinnerTimer";
 import { PixelRatio } from "context";

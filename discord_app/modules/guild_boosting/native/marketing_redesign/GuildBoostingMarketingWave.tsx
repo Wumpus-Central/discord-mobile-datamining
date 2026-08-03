@@ -1,6 +1,3 @@
-// === Module 12662: GuildBoostingMarketingWave ===
-
-// Module 12662 (GuildBoostingMarketingWave)
 import "noop";
 import { jsx } from "jsxProd";
 

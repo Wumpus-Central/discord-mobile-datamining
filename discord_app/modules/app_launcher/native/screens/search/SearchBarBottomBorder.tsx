@@ -1,6 +1,3 @@
-// === Module 11284: usePinnedSearchBarBottomBorder ===
-
-// Module 11284 (usePinnedSearchBarBottomBorder)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

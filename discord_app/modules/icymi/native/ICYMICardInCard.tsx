@@ -1,6 +1,3 @@
-// === Module 15385: CutoutGuildIconWithUserCustom ===
-
-// Module 15385 (CutoutGuildIconWithUserCustom)
 import getIconForChannel from "getIconForChannel";
 import { View } from "Text";
 import ensureGuildLoaded from "ensureGuildLoaded";

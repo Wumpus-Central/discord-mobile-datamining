@@ -1,6 +1,3 @@
-// === Module 14443: radio ===
-
-// Module 14443 (radio)
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH";
 import createToggle from "createToggle";

@@ -1,6 +1,3 @@
-// === Module 11921: NitroAcquiredHeader ===
-
-// Module 11921 (NitroAcquiredHeader)
 import Background from "Background";
 import get_ActivityIndicator from "combined";
 import { HelpdeskArticles } from "ME";

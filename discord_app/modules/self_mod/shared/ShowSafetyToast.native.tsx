@@ -1,6 +1,3 @@
-// === Module 10194: showSafetyToast ===
-
-// Module 10194 (showSafetyToast)
 const result = require("ShieldIcon").fileFinishedImporting("modules/self_mod/shared/ShowSafetyToast.native.tsx");
 
 export const showSafetyToast = function showSafetyToast(arg0) {

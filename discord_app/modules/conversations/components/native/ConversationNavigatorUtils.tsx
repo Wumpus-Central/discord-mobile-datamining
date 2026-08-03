@@ -1,6 +1,3 @@
-// === Module 9293: closeConversationsAndJumpToMessage ===
-
-// Module 9293 (closeConversationsAndJumpToMessage)
 const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");
 
 export const closeConversationsAndJumpToMessage = function closeConversationsAndJumpToMessage(channelId, id) {

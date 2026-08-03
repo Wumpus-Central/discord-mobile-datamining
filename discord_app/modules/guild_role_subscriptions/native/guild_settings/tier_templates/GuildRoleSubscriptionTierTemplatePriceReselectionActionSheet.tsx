@@ -1,6 +1,3 @@
-// === Module 16651: PriceOptionRow ===
-
-// Module 16651 (PriceOptionRow)
 import _slicedToArray from "_slicedToArray";
 import BottomSheetModal from "BottomSheetModal";
 import get_ActivityIndicator from "useSafeAreaInsets";

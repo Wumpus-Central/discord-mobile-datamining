@@ -1,6 +1,3 @@
-// === Module 14681: useAuthorizedSlayerApplications ===
-
-// Module 14681 (useAuthorizedSlayerApplications)
 import noop from "noop";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";

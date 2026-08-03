@@ -1,6 +1,3 @@
-// === Module 16609: EmojiAlias ===
-
-// Module 16609 (EmojiAlias)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

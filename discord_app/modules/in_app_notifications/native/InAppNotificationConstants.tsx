@@ -1,6 +1,3 @@
-// === Module 10275: set ===
-
-// Module 10275 (set)
 import { Easing } from "module_4054";
 import set from "set";
 

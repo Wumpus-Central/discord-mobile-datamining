@@ -1,6 +1,3 @@
-// === Module 10547: useIsActivitiesEnabledForCurrentPlatform ===
-
-// Module 10547 (useIsActivitiesEnabledForCurrentPlatform)
 const result = require("set").fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");
 
 export const useIsActivitiesEnabledForCurrentPlatform = function useIsActivitiesEnabledForCurrentPlatform() {

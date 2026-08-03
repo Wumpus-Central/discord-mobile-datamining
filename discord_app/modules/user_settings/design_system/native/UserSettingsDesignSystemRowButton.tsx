@@ -1,6 +1,3 @@
-// === Module 14579: UserSettingsDesignSystemRowButton ===
-
-// Module 14579 (UserSettingsDesignSystemRowButton)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

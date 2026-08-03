@@ -1,6 +1,3 @@
-// === Module 8935: ShieldLockIcon ===
-
-// Module 8935 (ShieldLockIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

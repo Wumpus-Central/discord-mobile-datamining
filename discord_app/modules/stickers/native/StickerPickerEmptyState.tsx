@@ -1,6 +1,3 @@
-// === Module 9661: EmptyStateSticker ===
-
-// Module 9661 (EmptyStateSticker)
 import _slicedToArray from "_slicedToArray";
 import IMPACT_LIGHT from "IMPACT_LIGHT";
 import { View } from "PressableBase";

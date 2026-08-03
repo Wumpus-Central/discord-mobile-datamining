@@ -1,6 +1,3 @@
-// === Module 11808: AddPhoneScreen ===
-
-// Module 11808 (AddPhoneScreen)
 import ContactSyncModes from "ContactSyncModes";
 import _slicedToArray from "_slicedToArray";
 import VerifyPhone from "VerifyPhone";

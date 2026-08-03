@@ -1,6 +1,3 @@
-// === Module 6774: MethodsScreen ===
-
-// Module 6774 (MethodsScreen)
 import closure_3 from "jsxProd";
 import HeaderBackImage from "HeaderBackImage";
 import ModalContent from "ModalContent";

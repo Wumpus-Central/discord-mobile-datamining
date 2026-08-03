@@ -1,6 +1,3 @@
-// === Module 14165: useWatchTaskPressHandler ===
-
-// Module 14165 (useWatchTaskPressHandler)
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import noop from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";

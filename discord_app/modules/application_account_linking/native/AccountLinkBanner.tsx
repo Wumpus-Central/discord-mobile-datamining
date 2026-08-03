@@ -1,6 +1,3 @@
-// === Module 15184: AccountLinkLargeBanner ===
-
-// Module 15184 (AccountLinkLargeBanner)
 import get_ActivityIndicator from "Button";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContentDismissActionType } from "ContentDismissActionType";

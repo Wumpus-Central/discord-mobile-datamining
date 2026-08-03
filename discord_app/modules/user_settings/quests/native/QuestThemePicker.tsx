@@ -1,6 +1,3 @@
-// === Module 14217: QuestThemePicker ===
-
-// Module 14217 (QuestThemePicker)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "Text";
 import initialize from "initialize";

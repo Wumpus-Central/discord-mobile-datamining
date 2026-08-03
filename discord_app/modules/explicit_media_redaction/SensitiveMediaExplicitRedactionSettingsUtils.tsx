@@ -1,6 +1,3 @@
-// === Module 5884: resolveExplicitContentSettingWithDefaults ===
-
-// Module 5884 (resolveExplicitContentSettingWithDefaults)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ExplicitContentFilterTypes } from "items";
 

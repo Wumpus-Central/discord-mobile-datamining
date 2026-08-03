@@ -1,6 +1,3 @@
-// === Module 12424: InAppReportsUpsellsTableRow ===
-
-// Module 12424 (InAppReportsUpsellsTableRow)
 import "noop";
 import { jsx } from "jsxProd";
 

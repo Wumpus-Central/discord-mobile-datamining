@@ -1,6 +1,3 @@
-// === Module 4131: UserPlusIcon ===
-
-// Module 4131 (UserPlusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

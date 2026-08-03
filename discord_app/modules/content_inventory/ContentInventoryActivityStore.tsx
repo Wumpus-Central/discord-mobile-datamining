@@ -1,6 +1,3 @@
-// === Module 12004: entryToKey ===
-
-// Module 12004 (entryToKey)
 import sortActivity from "sortActivity";
 import map from "map";
 import { ActivityTypes } from "ME";

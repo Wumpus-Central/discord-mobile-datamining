@@ -1,6 +1,3 @@
-// === Module 15433: TruncatedText ===
-
-// Module 15433 (TruncatedText)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "set";

@@ -1,6 +1,3 @@
-// === Module 9283: fetchSurveyIfNeeded ===
-
-// Module 9283 (fetchSurveyIfNeeded)
 import handleInviteData from "handleInviteData";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

@@ -1,6 +1,3 @@
-// === Module 9081: isGameActivity ===
-
-// Module 9081 (isGameActivity)
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/isGameActivity.tsx");

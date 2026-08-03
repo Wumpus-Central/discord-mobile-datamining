@@ -1,6 +1,3 @@
-// === Module 5012: getActiveStageChannelIds ===
-
-// Module 5012 (getActiveStageChannelIds)
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

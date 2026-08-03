@@ -1,6 +1,3 @@
-// === Module 10902: computeGlobalSpoilerDisplay ===
-
-// Module 10902 (computeGlobalSpoilerDisplay)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 

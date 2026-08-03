@@ -1,6 +1,3 @@
-// === Module 4049: useBaseAppContainerDimensions ===
-
-// Module 4049 (useBaseAppContainerDimensions)
 import noop from "noop";
 
 const require = arg1;

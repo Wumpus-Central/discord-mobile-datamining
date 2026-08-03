@@ -1,6 +1,3 @@
-// === Module 12525: PremiumFeaturesCardBackground ===
-
-// Module 12525 (PremiumFeaturesCardBackground)
 import _slicedToArray from "_slicedToArray";
 import isMetaQuest from "isMetaQuest";
 import get_ActivityIndicator from "registerAsset";

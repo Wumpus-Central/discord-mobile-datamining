@@ -1,6 +1,3 @@
-// === Module 8847: trackDeviceChanged ===
-
-// Module 8847 (trackDeviceChanged)
 import handleConnectionOpen from "handleConnectionOpen";
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";

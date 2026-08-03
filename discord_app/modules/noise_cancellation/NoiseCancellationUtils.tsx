@@ -1,6 +1,3 @@
-// === Module 10802: getNoiseCancellationDeferredToSystem ===
-
-// Module 10802 (getNoiseCancellationDeferredToSystem)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 
 const require = arg1;

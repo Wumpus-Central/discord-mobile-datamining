@@ -1,6 +1,3 @@
-// === Module 16644: SelectEmojiRolesActionSheet ===
-
-// Module 16644 (SelectEmojiRolesActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "Text";

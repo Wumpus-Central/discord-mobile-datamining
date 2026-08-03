@@ -1,6 +1,3 @@
-// === Module 5184: TermsFieldListItem ===
-
-// Module 5184 (TermsFieldListItem)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

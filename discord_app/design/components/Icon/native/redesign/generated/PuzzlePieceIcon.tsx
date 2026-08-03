@@ -1,6 +1,3 @@
-// === Module 14004: PuzzlePieceIcon ===
-
-// Module 14004 (PuzzlePieceIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

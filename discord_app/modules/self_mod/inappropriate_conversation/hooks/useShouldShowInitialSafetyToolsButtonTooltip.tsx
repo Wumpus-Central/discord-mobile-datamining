@@ -1,6 +1,3 @@
-// === Module 10167: useShouldShowInitialSafetyToolsButtonTooltip ===
-
-// Module 10167 (useShouldShowInitialSafetyToolsButtonTooltip)
 import handleConnectionOpen from "handleConnectionOpen";
 
 const require = arg1;

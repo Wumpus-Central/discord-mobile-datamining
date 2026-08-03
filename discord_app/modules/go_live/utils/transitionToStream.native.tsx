@@ -1,6 +1,3 @@
-// === Module 4398: transitionToStream ===
-
-// Module 4398 (transitionToStream)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

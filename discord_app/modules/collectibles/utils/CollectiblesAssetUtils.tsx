@@ -1,6 +1,3 @@
-// === Module 1854: parseSkuIdFromServerData ===
-
-// Module 1854 (parseSkuIdFromServerData)
 let c2 = "media/v1/collectibles-shop";
 let result = require("parseSkuIdFromServerData").fileFinishedImporting("modules/collectibles/utils/CollectiblesAssetUtils.tsx");
 

@@ -1,6 +1,3 @@
-// === Module 16215: handleSelectedChannelStoreChange ===
-
-// Module 16215 (handleSelectedChannelStoreChange)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";

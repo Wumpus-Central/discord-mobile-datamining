@@ -1,6 +1,3 @@
-// === Module 8025: numberParts ===
-
-// Module 8025 (numberParts)
 const result = require("set").fileFinishedImporting("intl/number-parts.tsx");
 const obj = Object.create(null);
 obj[0] = { group: " ", decimal: "," };

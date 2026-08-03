@@ -1,6 +1,3 @@
-// === Module 10831: SingleScreenshare ===
-
-// Module 10831 (SingleScreenshare)
 import "noop";
 import VoiceChatDrawerState from "VoiceChatDrawerState";
 import { jsx } from "jsxProd";

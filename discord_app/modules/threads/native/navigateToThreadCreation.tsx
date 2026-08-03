@@ -1,6 +1,3 @@
-// === Module 9843: navigateToThreadCreation ===
-
-// Module 9843 (navigateToThreadCreation)
 let result = require("transitionToChannel").fileFinishedImporting("modules/threads/native/navigateToThreadCreation.tsx");
 
 export const navigateToThreadCreation = function navigateToThreadCreation(channel, Message) {

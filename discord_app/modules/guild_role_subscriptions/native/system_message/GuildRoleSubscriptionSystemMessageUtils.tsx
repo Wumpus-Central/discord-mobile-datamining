@@ -1,6 +1,3 @@
-// === Module 11032: handleRoleSubscriptionPurchaseSystemMessageCtaClicked ===
-
-// Module 11032 (handleRoleSubscriptionPurchaseSystemMessageCtaClicked)
 import { AnalyticEvents } from "ME";
 
 const result = require("identityHook").fileFinishedImporting("modules/guild_role_subscriptions/native/system_message/GuildRoleSubscriptionSystemMessageUtils.tsx");

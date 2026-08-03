@@ -1,6 +1,3 @@
-// === Module 16363: PhoneThenEmailInterstitial ===
-
-// Module 16363 (PhoneThenEmailInterstitial)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import Overview from "Overview";
 import { View } from "showSimpleActionSheet";

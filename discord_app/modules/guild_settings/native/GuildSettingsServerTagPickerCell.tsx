@@ -1,6 +1,3 @@
-// === Module 16448: GuildSettingsServerTagPickerCell ===
-
-// Module 16448 (GuildSettingsServerTagPickerCell)
 import "noop";
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

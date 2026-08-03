@@ -1,6 +1,3 @@
-// === Module 11561: ? ===
-
-// Module 11561
 import { Image } from "ChatInputGuard";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { TextAreaCta } from "TextAreaCta";

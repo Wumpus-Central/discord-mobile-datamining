@@ -1,6 +1,3 @@
-// === Module 14797: UserSettingsJSError ===
-
-// Module 14797 (UserSettingsJSError)
 import "noop";
 import { jsx } from "jsxProd";
 

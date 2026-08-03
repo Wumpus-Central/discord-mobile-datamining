@@ -1,6 +1,3 @@
-// === Module 8023: _executeCommand ===
-
-// Module 8023 (_executeCommand)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import _getSystemLocale from "_getSystemLocale";

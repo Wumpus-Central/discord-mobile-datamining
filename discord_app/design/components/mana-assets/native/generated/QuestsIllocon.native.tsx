@@ -1,6 +1,3 @@
-// === Module 7421: QuestsIllocon ===
-
-// Module 7421 (QuestsIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/QuestsIllocon.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 5505: NavScrim ===
-
-// Module 5505 (NavScrim)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

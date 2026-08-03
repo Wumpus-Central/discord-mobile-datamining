@@ -1,6 +1,3 @@
-// === Module 15786: DisplayNameStylesFlywheelMobileActionSheet ===
-
-// Module 15786 (DisplayNameStylesFlywheelMobileActionSheet)
 import ActionSheetHeaderBar from "ActionSheetHeaderBar";
 import { View } from "Background";
 import mergeGuildAvatar from "mergeGuildAvatar";

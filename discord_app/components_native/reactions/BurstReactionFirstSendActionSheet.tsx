@@ -1,6 +1,3 @@
-// === Module 6138: onDismiss ===
-
-// Module 6138 (onDismiss)
 import "dispatcher";
 import get_ActivityIndicator from "onDismiss";
 import jsxProd from "jsxProd";

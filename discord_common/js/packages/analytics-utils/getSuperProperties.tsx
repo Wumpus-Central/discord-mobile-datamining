@@ -1,6 +1,3 @@
-// === Module 664: getOS ===
-
-// Module 664 (getOS)
 import { getSystemLocale } from "getSystemLocale";
 
 function getOS() {

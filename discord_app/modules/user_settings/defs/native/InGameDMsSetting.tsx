@@ -1,6 +1,3 @@
-// === Module 14696: radio ===
-
-// Module 14696 (radio)
 import noop from "noop";
 import createToggle from "createToggle";
 

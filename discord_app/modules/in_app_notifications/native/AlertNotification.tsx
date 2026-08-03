@@ -1,6 +1,3 @@
-// === Module 10374: AlertNotification ===
-
-// Module 10374 (AlertNotification)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 9102: useRecipientsLabel ===
-
-// Module 9102 (useRecipientsLabel)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

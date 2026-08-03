@@ -1,6 +1,3 @@
-// === Module 16050: NOOP ===
-
-// Module 16050 (NOOP)
 import importAllResult from "VoiceProcessingOptions";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes";

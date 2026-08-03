@@ -1,6 +1,3 @@
-// === Module 4098: prototype ===
-
-// Module 4098 (prototype)
 import { AbortCodes } from "ME";
 
 const prototype = function ClientOutdatedAcceptGiftError(arg0) {

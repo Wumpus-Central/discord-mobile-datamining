@@ -1,6 +1,3 @@
-// === Module 7273: MapleIllocon ===
-
-// Module 7273 (MapleIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/MapleIllocon.native.tsx");

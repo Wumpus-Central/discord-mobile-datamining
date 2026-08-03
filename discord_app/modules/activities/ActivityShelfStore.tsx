@@ -1,6 +1,3 @@
-// === Module 10627: initialize ===
-
-// Module 10627 (initialize)
 import { PersistedStore } from "initialize";
 
 let closure_0 = { usageByApplicationId: {}, shelfOrder: [] };

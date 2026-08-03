@@ -1,6 +1,3 @@
-// === Module 4129: useTheme ===
-
-// Module 4129 (useTheme)
 import { ThemeTypes } from "ME";
 
 function useTheme() {

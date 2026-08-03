@@ -1,6 +1,3 @@
-// === Module 15387: MessageRowContent ===
-
-// Module 15387 (MessageRowContent)
 import importAllResult from "MediaMosaicVideo";
 import { View } from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 8389: DisplayName ===
-
-// Module 8389 (DisplayName)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "getRootNavigationRef";
 import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY";

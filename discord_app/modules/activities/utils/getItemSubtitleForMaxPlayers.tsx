@@ -1,6 +1,3 @@
-// === Module 11337: getItemSubtitleForMaxPlayers ===
-
-// Module 11337 (getItemSubtitleForMaxPlayers)
 const result = require("set").fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
 
 export default function getItemSubtitleForMaxPlayers(arg0) {

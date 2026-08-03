@@ -1,6 +1,3 @@
-// === Module 651: logger ===
-
-// Module 651 (logger)
 import { EventEmitter } from "EventEmitter";
 
 const logger = new require("log").Logger("Flux");

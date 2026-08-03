@@ -1,6 +1,3 @@
-// === Module 14985: HomeDrawerDMsRow ===
-
-// Module 14985 (HomeDrawerDMsRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import sortActivity from "sortActivity";

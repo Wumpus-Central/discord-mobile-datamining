@@ -1,6 +1,3 @@
-// === Module 14213: QuestCardPreview ===
-
-// Module 14213 (QuestCardPreview)
 import { jsx } from "jsxProd";
 
 const result = require("QuestsVisibleMessagesChangedSource").fileFinishedImporting("modules/user_settings/quests/native/QuestCardPreview.tsx");

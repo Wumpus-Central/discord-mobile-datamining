@@ -1,6 +1,3 @@
-// === Module 15237: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
-
-// Module 15237 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "ACTION_SHEET_HEIGHT_HALF";

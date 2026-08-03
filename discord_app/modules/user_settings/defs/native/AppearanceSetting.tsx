@@ -1,6 +1,3 @@
-// === Module 14297: useAppearanceSettingTrailing ===
-
-// Module 14297 (useAppearanceSettingTrailing)
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import { ActiveThemeType } from "SystemThemeState";
 import createToggle from "createToggle";

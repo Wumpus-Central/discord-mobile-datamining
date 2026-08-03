@@ -1,6 +1,3 @@
-// === Module 7624: GetStartedScreen ===
-
-// Module 7624 (GetStartedScreen)
 import SafetyHubView from "SafetyHubView";
 import "AgeVerificationModalEntryPoint";
 import get_ActivityIndicator from "openIncodeAgeVerificationModal";

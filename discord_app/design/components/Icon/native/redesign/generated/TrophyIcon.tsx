@@ -1,6 +1,3 @@
-// === Module 6652: TrophyIcon ===
-
-// Module 6652 (TrophyIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

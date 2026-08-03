@@ -1,6 +1,3 @@
-// === Module 15736: getPendingSource ===
-
-// Module 15736 (getPendingSource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

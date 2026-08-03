@@ -1,6 +1,3 @@
-// === Module 9290: PaperIcon ===
-
-// Module 9290 (PaperIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

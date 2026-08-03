@@ -1,6 +1,3 @@
-// === Module 642: areStatesEqual ===
-
-// Module 642 (areStatesEqual)
 import closure_3 from "keys";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

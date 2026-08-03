@@ -1,6 +1,3 @@
-// === Module 15918: getSectionLabel ===
-
-// Module 15918 (getSectionLabel)
 import importAllResult from "registerAsset";
 import { View } from "GuildIconSizes";
 import mergeGuildAvatar from "mergeGuildAvatar";

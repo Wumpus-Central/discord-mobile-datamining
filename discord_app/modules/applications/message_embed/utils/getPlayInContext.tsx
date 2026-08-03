@@ -1,6 +1,3 @@
-// === Module 11150: usePlayInContext ===
-
-// Module 11150 (usePlayInContext)
 import participantFromServer from "participantFromServer";
 import handleConnectionOpen from "handleConnectionOpen";
 

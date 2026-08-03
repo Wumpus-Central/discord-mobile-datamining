@@ -1,6 +1,3 @@
-// === Module 9573: countContentTypes ===
-
-// Module 9573 (countContentTypes)
 const result = require("set").fileFinishedImporting("modules/messages/countContentTypes.tsx");
 
 export default function countContentTypes(content) {

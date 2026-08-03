@@ -1,6 +1,3 @@
-// === Module 12390: getJoinOrStartButtonState ===
-
-// Module 12390 (getJoinOrStartButtonState)
 import noop from "noop";
 
 const require = arg1;

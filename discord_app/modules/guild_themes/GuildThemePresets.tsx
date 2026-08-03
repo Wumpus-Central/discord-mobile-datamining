@@ -1,6 +1,3 @@
-// === Module 4041: set ===
-
-// Module 4041 (set)
 import { ThemeTypes } from "sum";
 import set from "items";
 

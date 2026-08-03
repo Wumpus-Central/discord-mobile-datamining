@@ -1,6 +1,3 @@
-// === Module 7744: transformReactions ===
-
-// Module 7744 (transformReactions)
 const result = require("getAvatarURL").fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
 export default function transformReactions(arg0) {

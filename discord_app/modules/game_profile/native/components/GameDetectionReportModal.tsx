@@ -1,6 +1,3 @@
-// === Module 11957: ReportContent ===
-
-// Module 11957 (ReportContent)
 import _slicedToArray from "_slicedToArray";
 import TextArea from "TextArea";
 import get_ActivityIndicator from "TextInput";

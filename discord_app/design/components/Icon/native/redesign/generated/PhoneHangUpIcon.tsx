@@ -1,6 +1,3 @@
-// === Module 9139: PhoneHangUpIcon ===
-
-// Module 9139 (PhoneHangUpIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

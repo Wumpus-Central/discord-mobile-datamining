@@ -1,6 +1,3 @@
-// === Module 12441: deferJoinActivityApplication ===
-
-// Module 12441 (deferJoinActivityApplication)
 const result = require("set").fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
 
 export default function deferJoinActivityApplication(arg0) {

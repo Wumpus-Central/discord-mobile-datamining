@@ -1,6 +1,3 @@
-// === Module 8344: render ===
-
-// Module 8344 (render)
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

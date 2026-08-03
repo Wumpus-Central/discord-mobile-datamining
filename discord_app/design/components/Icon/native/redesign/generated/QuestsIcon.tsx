@@ -1,6 +1,3 @@
-// === Module 14044: QuestsIcon ===
-
-// Module 14044 (QuestsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

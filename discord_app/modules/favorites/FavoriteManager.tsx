@@ -1,6 +1,3 @@
-// === Module 16354: handleChannelDelete ===
-
-// Module 16354 (handleChannelDelete)
 import "initialize";
 
 const require = arg1;

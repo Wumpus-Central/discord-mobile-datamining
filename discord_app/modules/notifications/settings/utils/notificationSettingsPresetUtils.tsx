@@ -1,6 +1,3 @@
-// === Module 4392: Presets ===
-
-// Module 4392 (Presets)
 import { UserNotificationSettings } from "ME";
 import { UnreadSetting } from "ReadStateTypes";
 

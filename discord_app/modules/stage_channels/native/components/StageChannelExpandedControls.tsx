@@ -1,6 +1,3 @@
-// === Module 10821: ? ===
-
-// Module 10821
 import { View } from "get ActivityIndicator";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";

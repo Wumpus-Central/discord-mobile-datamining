@@ -1,6 +1,3 @@
-// === Module 14504: SettingsItemAppIcon ===
-
-// Module 14504 (SettingsItemAppIcon)
 import "noop";
 import { getIconById } from "items";
 import { jsx } from "jsxProd";

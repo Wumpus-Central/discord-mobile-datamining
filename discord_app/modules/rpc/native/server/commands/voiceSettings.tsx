@@ -1,6 +1,3 @@
-// === Module 13591: items ===
-
-// Module 13591 (items)
 let obj = {};
 obj = { scope: null, handler: null };
 obj = {};

@@ -1,6 +1,3 @@
-// === Module 9434: EmojiOptionsActionSheet ===
-
-// Module 9434 (EmojiOptionsActionSheet)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

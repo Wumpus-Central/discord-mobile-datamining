@@ -1,6 +1,3 @@
-// === Module 12457: ? ===
-
-// Module 12457
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
 import addEntitlement from "addEntitlement";

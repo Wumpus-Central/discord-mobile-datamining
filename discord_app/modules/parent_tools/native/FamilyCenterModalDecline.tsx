@@ -1,6 +1,3 @@
-// === Module 13976: FamilyCenterModalDeclineScreen ===
-
-// Module 13976 (FamilyCenterModalDeclineScreen)
 import ButtonGroup from "ButtonGroup";
 import { View } from "FamilyCenterUsernameHeader";
 import jsxProd from "HeaderBackImage";

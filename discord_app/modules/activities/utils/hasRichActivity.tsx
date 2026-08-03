@@ -1,6 +1,3 @@
-// === Module 4281: hasRichActivity ===
-
-// Module 4281 (hasRichActivity)
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");

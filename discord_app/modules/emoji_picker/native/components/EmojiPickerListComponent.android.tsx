@@ -1,6 +1,3 @@
-// === Module 9410: ? ===
-
-// Module 9410
 import importAllResult from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import { EmojiCategoryTypes } from "EmojiCategoryTypes";

@@ -1,6 +1,3 @@
-// === Module 10546: useIsActivitiesAvailableInShelf ===
-
-// Module 10546 (useIsActivitiesAvailableInShelf)
 import noop from "noop";
 
 const require = arg1;

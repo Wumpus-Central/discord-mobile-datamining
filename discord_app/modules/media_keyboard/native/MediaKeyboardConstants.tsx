@@ -1,6 +1,3 @@
-// === Module 1576: DRAG_HANDLE ===
-
-// Module 1576 (DRAG_HANDLE)
 import isMetaQuest from "isMetaQuest";
 
 if (isMetaQuest.isMetaQuest()) {

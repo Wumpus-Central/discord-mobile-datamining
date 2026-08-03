@@ -1,6 +1,3 @@
-// === Module 8075: getNameplateAssets ===
-
-// Module 8075 (getNameplateAssets)
 const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
 
 export const getNameplateAssets = function getNameplateAssets(nameplate) {

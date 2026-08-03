@@ -1,6 +1,3 @@
-// === Module 15121: ThreadChannel ===
-
-// Module 15121 (ThreadChannel)
 import importAllResult from "initialize";
 import { View } from "inlineStyles";
 import storeThread from "storeThread";

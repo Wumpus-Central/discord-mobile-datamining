@@ -1,6 +1,3 @@
-// === Module 9363: PortalKeyboardFooterIOS ===
-
-// Module 9363 (PortalKeyboardFooterIOS)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

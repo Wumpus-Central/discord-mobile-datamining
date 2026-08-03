@@ -1,6 +1,3 @@
-// === Module 15824: renderItemJSX ===
-
-// Module 15824 (renderItemJSX)
 import importAllResult from "renderChannelBadge";
 import { View } from "GuildIconSizes";
 import _getSystemLocale from "_getSystemLocale";

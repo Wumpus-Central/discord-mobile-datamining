@@ -1,6 +1,3 @@
-// === Module 13755: UserPrimaryGuildListBottomSheet ===
-
-// Module 13755 (UserPrimaryGuildListBottomSheet)
 import importAllResult from "set";
 import { View } from "noop";
 import { GuildTagBadgeSize } from "items";

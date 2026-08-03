@@ -1,6 +1,3 @@
-// === Module 13971: FamilyCenterModalDisconnectScreen ===
-
-// Module 13971 (FamilyCenterModalDisconnectScreen)
 import _slicedToArray from "_slicedToArray";
 import FamilyCenterInlineWarningNotice from "FamilyCenterInlineWarningNotice";
 import { View } from "registerAsset";

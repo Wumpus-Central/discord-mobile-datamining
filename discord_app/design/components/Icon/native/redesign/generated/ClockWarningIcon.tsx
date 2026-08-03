@@ -1,6 +1,3 @@
-// === Module 11058: ClockWarningIcon ===
-
-// Module 11058 (ClockWarningIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 13692: fromServer ===
-
-// Module 13692 (fromServer)
 import "toJS";
 
 let GeneratedTestPoolRecord;

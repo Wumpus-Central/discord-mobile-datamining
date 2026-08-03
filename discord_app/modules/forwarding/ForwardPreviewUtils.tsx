@@ -1,6 +1,3 @@
-// === Module 9933: useForwardPreviewContent ===
-
-// Module 9933 (useForwardPreviewContent)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 
 const require = arg1;

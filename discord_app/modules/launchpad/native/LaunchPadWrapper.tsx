@@ -1,6 +1,3 @@
-// === Module 15812: LaunchPadWrapper ===
-
-// Module 15812 (LaunchPadWrapper)
 import _slicedToArray from "_slicedToArray";
 import LAUNCH_PAD_PULL_TAB_BORDER_RADIUS from "LAUNCH_PAD_PULL_TAB_BORDER_RADIUS";
 import get_ActivityIndicator from "useRefValue";

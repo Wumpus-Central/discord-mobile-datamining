@@ -1,6 +1,3 @@
-// === Module 10997: useGuildProfileCTA ===
-
-// Module 10997 (useGuildProfileCTA)
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

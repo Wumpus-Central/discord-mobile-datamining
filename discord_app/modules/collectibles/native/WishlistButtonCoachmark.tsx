@@ -1,6 +1,3 @@
-// === Module 14635: WishlistButtonCoachmark ===
-
-// Module 14635 (WishlistButtonCoachmark)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";

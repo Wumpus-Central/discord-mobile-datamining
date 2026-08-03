@@ -1,6 +1,3 @@
-// === Module 4691: ThreadLockIcon ===
-
-// Module 4691 (ThreadLockIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

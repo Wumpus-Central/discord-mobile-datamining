@@ -1,6 +1,3 @@
-// === Module 11402: openEditPollCreationImageAltTextModal ===
-
-// Module 11402 (openEditPollCreationImageAltTextModal)
 let c3 = "edit-poll-creation-image-alt-text-modal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/polls/native/EditPollCreationImageAltTextModalActionCreators.tsx");
 

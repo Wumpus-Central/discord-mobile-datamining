@@ -1,6 +1,3 @@
-// === Module 6355: productSK2ToIAPProduct ===
-
-// Module 6355 (productSK2ToIAPProduct)
 import closure_2 from "set";
 import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
 import set from "DEFAULT_COUNTRY_CODE_NAME";

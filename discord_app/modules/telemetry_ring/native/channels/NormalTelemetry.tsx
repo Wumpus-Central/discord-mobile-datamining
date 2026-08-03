@@ -1,6 +1,3 @@
-// === Module 13274: NormalTelemetryImpl ===
-
-// Module 13274 (NormalTelemetryImpl)
 import importDefaultResult from "append";
 import importDefaultResult1 from "TelemetryChannel";
 

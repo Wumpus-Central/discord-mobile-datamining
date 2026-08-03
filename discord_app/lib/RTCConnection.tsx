@@ -1,6 +1,3 @@
-// === Module 4267: getEventHistoryString ===
-
-// Module 4267 (getEventHistoryString)
 import fetchFingerprint from "fetchFingerprint";
 import DeviceTypes from "DeviceTypes";
 import updateAveragedStatsHelper from "updateAveragedStatsHelper";

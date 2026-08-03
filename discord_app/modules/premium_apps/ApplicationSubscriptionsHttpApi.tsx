@@ -1,6 +1,3 @@
-// === Module 10658: _getApplicationSubscriptionGroupListingsForApplication ===
-
-// Module 10658 (_getApplicationSubscriptionGroupListingsForApplication)
 import set from "set";
 import { Endpoints } from "ME";
 

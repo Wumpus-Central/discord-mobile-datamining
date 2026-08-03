@@ -1,6 +1,3 @@
-// === Module 7312: vanityUrl ===
-
-// Module 7312 (vanityUrl)
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroGoldBadgeSmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/8d6f4e64d63fcdc67ecf1ab786bdd61d53f4bf88e531860f3ee8e3a0da2e1f2c.png";

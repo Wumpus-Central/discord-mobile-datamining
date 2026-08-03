@@ -1,6 +1,3 @@
-// === Module 15613: useMediaKeyboardConfig ===
-
-// Module 15613 (useMediaKeyboardConfig)
 import noop from "noop";
 import { MediaKeyboardTarget } from "DRAG_HANDLE";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 9922: dispatcher ===
-
-// Module 9922 (dispatcher)
 let result = require("set").fileFinishedImporting("actions/DimensionActionCreators.tsx");
 
 export default {

@@ -1,6 +1,3 @@
-// === Module 15703: handleSetRegion ===
-
-// Module 15703 (handleSetRegion)
 import _toArray from "_toArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import initialize from "initialize";

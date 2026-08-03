@@ -1,6 +1,3 @@
-// === Module 697: getGlobalObject ===
-
-// Module 697 (getGlobalObject)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
 
 export const getGlobalObject = function getGlobalObject() {

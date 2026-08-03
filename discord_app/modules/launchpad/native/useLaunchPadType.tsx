@@ -1,6 +1,3 @@
-// === Module 10493: useLaunchPadType ===
-
-// Module 10493 (useLaunchPadType)
 import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
 
 const result = require("create").fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");

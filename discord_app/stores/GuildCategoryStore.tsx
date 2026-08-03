@@ -1,6 +1,3 @@
-// === Module 5131: setIndex ===
-
-// Module 5131 (setIndex)
 import initializeFromUserSettings from "initializeFromUserSettings";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

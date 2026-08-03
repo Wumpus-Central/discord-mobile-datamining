@@ -1,6 +1,3 @@
-// === Module 15998: ActivityActionOverlay ===
-
-// Module 15998 (ActivityActionOverlay)
 import Button from "Button";
 import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
 import jsxProd from "useActivityUsers";

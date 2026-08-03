@@ -1,6 +1,3 @@
-// === Module 14348: CircleMinusIcon ===
-
-// Module 14348 (CircleMinusIcon)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

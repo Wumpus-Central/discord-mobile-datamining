@@ -1,6 +1,3 @@
-// === Module 8007: NativeShadowType ===
-
-// Module 8007 (NativeShadowType)
 const result = require("set").fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
 
 export const NativeShadowType = { NONE: 0, [0]: "NONE", LOW: 1, [1]: "LOW", HIGH: 2, [2]: "HIGH" };

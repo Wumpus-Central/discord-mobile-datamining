@@ -1,6 +1,3 @@
-// === Module 4294: Video ===
-
-// Module 4294 (Video)
 class Video {
   constructor(arg0) {
     return require("logger")(global, Video.onContainerResized);

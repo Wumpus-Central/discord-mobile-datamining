@@ -1,6 +1,3 @@
-// === Module 13652: navigateToDevTools ===
-
-// Module 13652 (navigateToDevTools)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";

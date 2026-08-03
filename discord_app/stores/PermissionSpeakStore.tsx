@@ -1,6 +1,3 @@
-// === Module 12823: initialize ===
-
-// Module 12823 (initialize)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Store } from "initialize";

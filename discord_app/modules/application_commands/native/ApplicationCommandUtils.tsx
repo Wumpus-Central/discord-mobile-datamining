@@ -1,6 +1,3 @@
-// === Module 11405: getApplicationCommandsIconSource ===
-
-// Module 11405 (getApplicationCommandsIconSource)
 import { DraftType } from "handleChanged";
 import map from "map";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";

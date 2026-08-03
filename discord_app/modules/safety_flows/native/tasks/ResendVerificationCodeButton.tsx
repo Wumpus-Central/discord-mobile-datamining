@@ -1,6 +1,3 @@
-// === Module 16737: ResendVerificationCodeButton ===
-
-// Module 16737 (ResendVerificationCodeButton)
 import _getCurrentTask from "_getCurrentTask";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

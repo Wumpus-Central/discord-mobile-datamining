@@ -1,6 +1,3 @@
-// === Module 13949: FamilyCenterActivitySectionHeader ===
-
-// Module 13949 (FamilyCenterActivitySectionHeader)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

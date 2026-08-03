@@ -1,6 +1,3 @@
-// === Module 10843: Text ===
-
-// Module 10843 (Text)
 import importAllResult from "SafeAreaPaddingView";
 import get_ActivityIndicator from "open";
 import ensureGuildLoaded from "ensureGuildLoaded";

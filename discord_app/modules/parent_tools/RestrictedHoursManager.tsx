@@ -1,6 +1,3 @@
-// === Module 16139: scheduleUpcomingWarning ===
-
-// Module 16139 (scheduleUpcomingWarning)
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";

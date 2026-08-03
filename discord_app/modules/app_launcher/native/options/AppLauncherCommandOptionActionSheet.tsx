@@ -1,6 +1,3 @@
-// === Module 11357: AppLauncherCommandOptionActionSheet ===
-
-// Module 11357 (AppLauncherCommandOptionActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";

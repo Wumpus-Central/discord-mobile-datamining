@@ -1,6 +1,3 @@
-// === Module 10124: createRequestPayload ===
-
-// Module 10124 (createRequestPayload)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { SearchTypes } from "ME";

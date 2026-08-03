@@ -1,6 +1,3 @@
-// === Module 14575: ComparisonRow ===
-
-// Module 14575 (ComparisonRow)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

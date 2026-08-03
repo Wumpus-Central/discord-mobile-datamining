@@ -1,6 +1,3 @@
-// === Module 11828: createHandoffTokenWithLoadingModal ===
-
-// Module 11828 (createHandoffTokenWithLoadingModal)
 import _createHandoffToken from "_createHandoffToken";
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";

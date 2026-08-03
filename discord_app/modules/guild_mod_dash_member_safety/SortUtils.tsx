@@ -1,6 +1,3 @@
-// === Module 5761: getSortValueForMember ===
-
-// Module 5761 (getSortValueForMember)
 const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/SortUtils.tsx");
 
 export const getSortValueForMember = function getSortValueForMember(joinedAt, ORDER_BY_UNSPECIFIED) {

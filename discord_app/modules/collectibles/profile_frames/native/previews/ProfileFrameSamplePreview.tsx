@@ -1,6 +1,3 @@
-// === Module 8703: filterLayer ===
-
-// Module 8703 (filterLayer)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";

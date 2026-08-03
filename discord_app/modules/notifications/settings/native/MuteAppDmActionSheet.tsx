@@ -1,6 +1,3 @@
-// === Module 11707: MuteAppDMActionSheet ===
-
-// Module 11707 (MuteAppDMActionSheet)
 import "noop";
 import { View } from "set";
 import jsxProd from "jsxProd";

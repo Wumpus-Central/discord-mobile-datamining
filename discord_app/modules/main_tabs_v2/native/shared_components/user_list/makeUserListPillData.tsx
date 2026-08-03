@@ -1,6 +1,3 @@
-// === Module 8826: makeUserListPillData ===
-
-// Module 8826 (makeUserListPillData)
 import "noop";
 import { jsx } from "jsxProd";
 

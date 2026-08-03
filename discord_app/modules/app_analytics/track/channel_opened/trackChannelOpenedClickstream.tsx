@@ -1,6 +1,3 @@
-// === Module 6090: trackChannelOpenedClickstream ===
-
-// Module 6090 (trackChannelOpenedClickstream)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 import { StaticChannelRoute } from "set";

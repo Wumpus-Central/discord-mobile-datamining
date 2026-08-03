@@ -1,6 +1,3 @@
-// === Module 13778: PasskeyUpsellFullModal ===
-
-// Module 13778 (PasskeyUpsellFullModal)
 import "noop";
 import { WebAuthnScreens } from "WebAuthnScreens";
 import { jsx } from "jsxProd";

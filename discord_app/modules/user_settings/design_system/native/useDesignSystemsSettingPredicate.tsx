@@ -1,6 +1,3 @@
-// === Module 14566: useDesignSystemsSettingPredicate ===
-
-// Module 14566 (useDesignSystemsSettingPredicate)
 const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/useDesignSystemsSettingPredicate.tsx");
 
 export const useDesignSystemsSettingPredicate = function useDesignSystemsSettingPredicate() {

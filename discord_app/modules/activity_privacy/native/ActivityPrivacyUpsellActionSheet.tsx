@@ -1,6 +1,3 @@
-// === Module 14717: ActivityPrivacyUpsellActionSheet ===
-
-// Module 14717 (ActivityPrivacyUpsellActionSheet)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

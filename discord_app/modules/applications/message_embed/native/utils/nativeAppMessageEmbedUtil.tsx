@@ -1,6 +1,3 @@
-// === Module 11152: items ===
-
-// Module 11152 (items)
 import hexToRgba from "hexToRgba";
 import hexToRgba from "hexToRgba";
 

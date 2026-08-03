@@ -1,6 +1,3 @@
-// === Module 16136: useFormattedEndTime ===
-
-// Module 16136 (useFormattedEndTime)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

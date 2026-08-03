@@ -1,6 +1,3 @@
-// === Module 8762: SegmentedControlPage ===
-
-// Module 8762 (SegmentedControlPage)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

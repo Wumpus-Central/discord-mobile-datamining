@@ -1,6 +1,3 @@
-// === Module 15253: GuildUpsellChannelList ===
-
-// Module 15253 (GuildUpsellChannelList)
 import set from "set";
 import { View } from "handleJoinGuild";
 import closure_6 from "set";

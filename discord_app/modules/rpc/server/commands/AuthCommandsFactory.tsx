@@ -1,6 +1,3 @@
-// === Module 13590: authorizeWithPrompt ===
-
-// Module 13590 (authorizeWithPrompt)
 import _slicedToArray from "_slicedToArray";
 import closure_5 from "RPC_SCOPE_CONFIG";
 import addApplication from "addApplication";

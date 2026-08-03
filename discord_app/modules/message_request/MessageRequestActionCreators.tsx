@@ -1,6 +1,3 @@
-// === Module 10176: _acceptMessageRequest ===
-
-// Module 10176 (_acceptMessageRequest)
 import handleLogout from "handleLogout";
 import { Endpoints } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 12013: ActiveTimestamp ===
-
-// Module 12013 (ActiveTimestamp)
 import set from "set";
 import { View } from "RetryIcon";
 import _getSystemLocale from "_getSystemLocale";

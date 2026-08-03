@@ -1,6 +1,3 @@
-// === Module 4036: getThemeForColor ===
-
-// Module 4036 (getThemeForColor)
 import items1 from "items1";
 import SystemThemeState from "SystemThemeState";
 import { ThemeTypes } from "sum";

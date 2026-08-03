@@ -1,6 +1,3 @@
-// === Module 12002: useComputedImagesForActivity ===
-
-// Module 12002 (useComputedImagesForActivity)
 import { useEffect } from "noop";
 import addApplication from "addApplication";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 5016: useIsStageSpeakingDisabledForCurrentUser ===
-
-// Module 5016 (useIsStageSpeakingDisabledForCurrentUser)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";

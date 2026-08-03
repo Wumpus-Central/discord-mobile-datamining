@@ -1,6 +1,3 @@
-// === Module 7625: useIsManualAgeVerificationHidden ===
-
-// Module 7625 (useIsManualAgeVerificationHidden)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

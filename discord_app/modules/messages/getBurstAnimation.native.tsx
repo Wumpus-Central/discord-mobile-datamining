@@ -1,6 +1,3 @@
-// === Module 6100: items ===
-
-// Module 6100 (items)
 let closure_0 = arg1;
 let obj = {
   load() {

@@ -1,6 +1,3 @@
-// === Module 4114: handleInviteData ===
-
-// Module 4114 (handleInviteData)
 import { Store } from "initialize";
 
 function handleInviteData(invite) {

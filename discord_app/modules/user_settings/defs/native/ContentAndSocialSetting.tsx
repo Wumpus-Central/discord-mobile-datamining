@@ -1,6 +1,3 @@
-// === Module 14675: route ===
-
-// Module 14675 (route)
 import createToggle from "createToggle";
 
 obj = {

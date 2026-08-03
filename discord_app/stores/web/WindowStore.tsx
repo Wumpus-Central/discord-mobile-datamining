@@ -1,6 +1,3 @@
-// === Module 12994: map ===
-
-// Module 12994 (map)
 import { Store } from "initialize";
 import set from "getWindowId";
 

@@ -1,6 +1,3 @@
-// === Module 11461: useShowConnectedUserLimit ===
-
-// Module 11461 (useShowConnectedUserLimit)
 import { MAX_STAGE_VOICE_USER_LIMIT as closure_2 } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/useShowConnectedUserLimit.tsx");

@@ -1,6 +1,3 @@
-// === Module 16274: push ===
-
-// Module 16274 (push)
 import { SWITCH_ACCOUNTS_MODAL_KEY } from "MAX_ACCOUNTS";
 import ME from "ME";
 import "_initialize";

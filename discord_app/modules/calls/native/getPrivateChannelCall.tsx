@@ -1,6 +1,3 @@
-// === Module 8839: getPrivateChannelCall ===
-
-// Module 8839 (getPrivateChannelCall)
 import updateVoiceState from "updateVoiceState";
 import { NOOP_NULL } from "ME";
 

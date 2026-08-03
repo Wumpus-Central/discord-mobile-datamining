@@ -1,6 +1,3 @@
-// === Module 7183: GiftCardRight3dIllustration ===
-
-// Module 7183 (GiftCardRight3dIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GiftCardRight3dIllustration.native.tsx");

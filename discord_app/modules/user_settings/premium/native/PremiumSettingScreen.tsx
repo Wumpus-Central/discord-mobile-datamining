@@ -1,6 +1,3 @@
-// === Module 14033: PremiumScreen ===
-
-// Module 14033 (PremiumScreen)
 import "noop";
 import { jsx } from "jsxProd";
 

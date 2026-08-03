@@ -1,6 +1,3 @@
-// === Module 5873: enforcing ===
-
-// Module 5873 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeMetricMonitorModule");

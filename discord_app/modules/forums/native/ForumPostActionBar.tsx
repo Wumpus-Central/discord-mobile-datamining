@@ -1,6 +1,3 @@
-// === Module 10470: ForumPostActionBar ===
-
-// Module 10470 (ForumPostActionBar)
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
 import { View } from "getSystemLocale";

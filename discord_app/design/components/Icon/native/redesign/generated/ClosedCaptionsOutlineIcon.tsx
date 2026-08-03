@@ -1,6 +1,3 @@
-// === Module 14074: ClosedCaptionsOutlineIcon ===
-
-// Module 14074 (ClosedCaptionsOutlineIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

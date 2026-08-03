@@ -1,6 +1,3 @@
-// === Module 14112: BountiesNuxPromoSheet ===
-
-// Module 14112 (BountiesNuxPromoSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 4137: LinkIcon ===
-
-// Module 4137 (LinkIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

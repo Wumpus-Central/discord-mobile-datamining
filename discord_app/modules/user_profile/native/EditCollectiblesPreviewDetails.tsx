@@ -1,6 +1,3 @@
-// === Module 7978: EditCollectiblesPreviewDescription ===
-
-// Module 7978 (EditCollectiblesPreviewDescription)
 import "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";

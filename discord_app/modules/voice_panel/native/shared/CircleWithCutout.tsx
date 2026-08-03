@@ -1,6 +1,3 @@
-// === Module 16036: getBadgeLeft ===
-
-// Module 16036 (getBadgeLeft)
 import { PixelRatio } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import importAllResult from "noop";

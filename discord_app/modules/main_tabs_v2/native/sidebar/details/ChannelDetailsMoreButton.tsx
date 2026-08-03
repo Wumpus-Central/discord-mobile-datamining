@@ -1,6 +1,3 @@
-// === Module 15586: MoreButton ===
-
-// Module 15586 (MoreButton)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

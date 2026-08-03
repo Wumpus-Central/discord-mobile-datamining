@@ -1,6 +1,3 @@
-// === Module 15874: ? ===
-
-// Module 15874
 import updateActivities from "updateActivities";
 import filterPlayingActivities from "filterPlayingActivities";
 import { jsx } from "jsxProd";

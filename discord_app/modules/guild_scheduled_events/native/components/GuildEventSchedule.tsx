@@ -1,6 +1,3 @@
-// === Module 8238: GuildEventSchedule ===
-
-// Module 8238 (GuildEventSchedule)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

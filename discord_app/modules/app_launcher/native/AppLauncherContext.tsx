@@ -1,6 +1,3 @@
-// === Module 10938: context ===
-
-// Module 10938 (context)
 import importAllResult from "noop";
 
 const require = arg1;

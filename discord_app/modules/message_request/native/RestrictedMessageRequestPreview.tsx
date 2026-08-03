@@ -1,6 +1,3 @@
-// === Module 15744: RestrictedMessageRequestPreview ===
-
-// Module 15744 (RestrictedMessageRequestPreview)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 4420: messageAttachmentToUnfurledMediaItem ===
-
-// Module 4420 (messageAttachmentToUnfurledMediaItem)
 import { MessageAttachmentFlags } from "ME";
 
 function messageAttachmentToUnfurledMediaItem(flags) {

@@ -1,6 +1,3 @@
-// === Module 10216: useInviteActions ===
-
-// Module 10216 (useInviteActions)
 import getMore from "get more";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";

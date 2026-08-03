@@ -1,6 +1,3 @@
-// === Module 16263: resolveMessageCodedLinks ===
-
-// Module 16263 (resolveMessageCodedLinks)
 import queueMessageLinkFetch from "queueMessageLinkFetch";
 import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
 import updateInvite from "updateInvite";

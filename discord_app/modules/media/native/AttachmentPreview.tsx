@@ -1,6 +1,3 @@
-// === Module 9868: AttachmentIcon ===
-
-// Module 9868 (AttachmentIcon)
 import importAllResult from "getUploadFileSizeSum";
 import get_ActivityIndicator from "registerAsset";
 import jsxProd from "set";

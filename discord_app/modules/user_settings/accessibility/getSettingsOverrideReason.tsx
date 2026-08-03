@@ -1,6 +1,3 @@
-// === Module 14365: getSettingsOverrideReason ===
-
-// Module 14365 (getSettingsOverrideReason)
 import updateExistingSettings from "updateExistingSettings";
 import { SettingsOverrideReasonKeys as closure_3 } from "MAX_FAVORITES";
 

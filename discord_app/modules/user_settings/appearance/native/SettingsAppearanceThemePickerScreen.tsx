@@ -1,6 +1,3 @@
-// === Module 14302: ThemeTypes ===
-
-// Module 14302 (ThemeTypes)
 import useSegmentedControlState from "useSegmentedControlState";
 import useWindowDimensions from "useWindowDimensions";
 import { View } from "ThemeDarkIcon";

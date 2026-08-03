@@ -1,6 +1,3 @@
-// === Module 9509: canShowVoiceChannelListInviteEmbed ===
-
-// Module 9509 (canShowVoiceChannelListInviteEmbed)
 import { processColor } from "frozen";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import _toTimestampMs from "_toTimestampMs";

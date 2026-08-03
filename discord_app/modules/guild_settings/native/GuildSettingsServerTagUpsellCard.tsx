@@ -1,6 +1,3 @@
-// === Module 16443: GuildSettingsServerTagUpsellCard ===
-
-// Module 16443 (GuildSettingsServerTagUpsellCard)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

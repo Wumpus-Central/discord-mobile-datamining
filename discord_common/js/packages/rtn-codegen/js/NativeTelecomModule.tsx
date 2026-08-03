@@ -1,6 +1,3 @@
-// === Module 16348: enforcing ===
-
-// Module 16348 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTelecomModule");

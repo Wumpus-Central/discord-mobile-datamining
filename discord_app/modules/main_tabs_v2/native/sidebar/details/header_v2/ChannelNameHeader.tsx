@@ -1,6 +1,3 @@
-// === Module 15587: DirectMessageIcon ===
-
-// Module 15587 (DirectMessageIcon)
 import importAllResult from "allowChannelAccess";
 import { View } from "Text";
 import ensureGuildLoaded from "ensureGuildLoaded";

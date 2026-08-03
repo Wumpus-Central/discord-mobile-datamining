@@ -1,6 +1,3 @@
-// === Module 11358: AppLauncherList ===
-
-// Module 11358 (AppLauncherList)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

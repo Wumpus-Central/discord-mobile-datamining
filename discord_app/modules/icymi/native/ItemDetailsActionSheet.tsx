@@ -1,6 +1,3 @@
-// === Module 15350: ItemDetailsActionSheet ===
-
-// Module 15350 (ItemDetailsActionSheet)
 import "set";
 import { View } from "TableRowGroupTitle";
 import ensureGuildLoaded from "ensureGuildLoaded";

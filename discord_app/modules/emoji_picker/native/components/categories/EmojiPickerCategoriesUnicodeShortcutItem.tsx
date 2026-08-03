@@ -1,6 +1,3 @@
-// === Module 9457: EmojiPickerCategoriesUnicodeShortcutItem ===
-
-// Module 9457 (EmojiPickerCategoriesUnicodeShortcutItem)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 14047: QuestHomeHeaderTitle ===
-
-// Module 14047 (QuestHomeHeaderTitle)
 import FilterFooter from "FilterFooter";
 import { View } from "openCollectiblesShop";
 import { QuestHomeSortMethods } from "QuestsExperimentLocations";

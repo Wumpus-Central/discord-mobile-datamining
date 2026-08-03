@@ -1,6 +1,3 @@
-// === Module 8730: redeemError ===
-
-// Module 8730 (redeemError)
 import { Store } from "initialize";
 
 let object = importDefault;

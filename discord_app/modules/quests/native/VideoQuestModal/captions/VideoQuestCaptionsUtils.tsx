@@ -1,6 +1,3 @@
-// === Module 14190: findActiveCaption ===
-
-// Module 14190 (findActiveCaption)
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");
 
 export const findActiveCaption = function findActiveCaption(arg0, currentTime) {

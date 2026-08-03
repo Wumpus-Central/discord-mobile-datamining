@@ -1,6 +1,3 @@
-// === Module 6093: setActiveCommand ===
-
-// Module 6093 (setActiveCommand)
 import fetchFingerprint from "fetchFingerprint";
 import handleInit from "handleInit";
 import { Endpoints } from "ME";

@@ -1,6 +1,3 @@
-// === Module 16161: handleMessageCreate ===
-
-// Module 16161 (handleMessageCreate)
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";

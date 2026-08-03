@@ -1,6 +1,3 @@
-// === Module 10575: videoStreamTimedOut ===
-
-// Module 10575 (videoStreamTimedOut)
 const result = require("set").fileFinishedImporting("modules/errors/VideoStreamReadyActionCreators.tsx");
 
 export const videoStreamTimedOut = function videoStreamTimedOut(current, closure_1, closure_6, closure_2) {

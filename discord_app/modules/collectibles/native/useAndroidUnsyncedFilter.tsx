@@ -1,6 +1,3 @@
-// === Module 14123: useAndroidUnsyncedFilter ===
-
-// Module 14123 (useAndroidUnsyncedFilter)
 import getUserAgnosticState from "getUserAgnosticState";
 import updateProduct from "updateProduct";
 

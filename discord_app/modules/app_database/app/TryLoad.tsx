@@ -1,6 +1,3 @@
-// === Module 1926: _tryLoadAsync ===
-
-// Module 1926 (_tryLoadAsync)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _tryLoadAsync() {

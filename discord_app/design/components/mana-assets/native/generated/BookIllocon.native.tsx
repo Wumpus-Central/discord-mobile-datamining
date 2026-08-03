@@ -1,6 +1,3 @@
-// === Module 6887: BookIllocon ===
-
-// Module 6887 (BookIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BookIllocon.native.tsx");

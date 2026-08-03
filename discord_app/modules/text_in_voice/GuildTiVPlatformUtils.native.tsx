@@ -1,6 +1,3 @@
-// === Module 6723: getSystemLocale ===
-
-// Module 6723 (getSystemLocale)
 const result = require("set").fileFinishedImporting("modules/text_in_voice/GuildTiVPlatformUtils.native.tsx");
 
 export default {

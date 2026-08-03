@@ -1,6 +1,3 @@
-// === Module 5658: makeSortedChannel ===
-
-// Module 5658 (makeSortedChannel)
 import processChannel from "processChannel";
 import closure_4 from "processChannel";
 import { isPrivate } from "createChannelRecord";

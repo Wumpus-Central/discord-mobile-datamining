@@ -1,6 +1,3 @@
-// === Module 14786: AndroidAuthRadioGroup ===
-
-// Module 14786 (AndroidAuthRadioGroup)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { NativeModules } from "get ActivityIndicator";

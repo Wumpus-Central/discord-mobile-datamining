@@ -1,6 +1,3 @@
-// === Module 12652: trackSearchStart ===
-
-// Module 12652 (trackSearchStart)
 import getEmojiToGroupId from "getEmojiToGroupId";
 import ME from "ME";
 

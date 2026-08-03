@@ -1,6 +1,3 @@
-// === Module 4709: AnnouncementsWarningIcon ===
-
-// Module 4709 (AnnouncementsWarningIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

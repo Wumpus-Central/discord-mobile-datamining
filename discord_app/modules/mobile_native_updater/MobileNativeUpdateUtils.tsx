@@ -1,6 +1,3 @@
-// === Module 13064: _checkForNewerBuild ===
-
-// Module 13064 (_checkForNewerBuild)
 import set from "set";
 import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL";
 

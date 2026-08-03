@@ -1,6 +1,3 @@
-// === Module 14915: PrivacyPolicyDescription ===
-
-// Module 14915 (PrivacyPolicyDescription)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { usePromoEmailConsentStore } from "setPromoEmailConsentState";

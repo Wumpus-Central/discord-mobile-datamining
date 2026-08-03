@@ -1,6 +1,3 @@
-// === Module 8488: useResolveGameForProfile ===
-
-// Module 8488 (useResolveGameForProfile)
 let result = require("useResolveGame").fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
 
 export default function useResolveGameForProfile(arg0) {

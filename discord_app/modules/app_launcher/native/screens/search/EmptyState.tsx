@@ -1,6 +1,3 @@
-// === Module 11296: EmptyState ===
-
-// Module 11296 (EmptyState)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

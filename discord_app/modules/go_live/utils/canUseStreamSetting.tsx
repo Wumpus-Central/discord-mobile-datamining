@@ -1,6 +1,3 @@
-// === Module 10765: canUseStreamSetting ===
-
-// Module 10765 (canUseStreamSetting)
 import { StreamQualities } from "GuildFeatures";
 
 let result = require("getGuildTierFromGuild").fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");

@@ -1,6 +1,3 @@
-// === Module 5137: incrementVersion ===
-
-// Module 5137 (incrementVersion)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

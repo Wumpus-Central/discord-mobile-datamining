@@ -1,6 +1,3 @@
-// === Module 8933: openClearAllIncomingRequestsConfirmationModal ===
-
-// Module 8933 (openClearAllIncomingRequestsConfirmationModal)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(incomingPendingRequestCount) {

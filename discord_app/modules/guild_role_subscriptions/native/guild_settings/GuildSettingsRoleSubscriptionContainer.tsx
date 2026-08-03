@@ -1,6 +1,3 @@
-// === Module 16597: ApplicationRejectedNotice ===
-
-// Module 16597 (ApplicationRejectedNotice)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

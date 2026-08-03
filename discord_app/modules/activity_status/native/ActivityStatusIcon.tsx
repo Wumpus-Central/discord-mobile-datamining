@@ -1,6 +1,3 @@
-// === Module 9077: ActivityStatusIcon ===
-
-// Module 9077 (ActivityStatusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

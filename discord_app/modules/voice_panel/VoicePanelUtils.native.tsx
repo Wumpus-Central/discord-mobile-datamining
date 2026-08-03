@@ -1,6 +1,3 @@
-// === Module 10703: isVoicePanelEnabled ===
-
-// Module 10703 (isVoicePanelEnabled)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import withEqualityFn from "withEqualityFn";

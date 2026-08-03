@@ -1,6 +1,3 @@
-// === Module 9927: t ===
-
-// Module 9927 (t)
 import { PixelRatio } from "get ActivityIndicator";
 
 const value = PixelRatio.get();

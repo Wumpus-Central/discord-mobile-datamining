@@ -1,6 +1,3 @@
-// === Module 15179: getFastListRecyclerKey ===
-
-// Module 15179 (getFastListRecyclerKey)
 import "Divider";
 import { View } from "CategoryChannel";
 import getActiveStageChannelIds from "getActiveStageChannelIds";

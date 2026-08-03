@@ -1,6 +1,3 @@
-// === Module 1208: ? ===
-
-// Module 1208
 import { NativeModules } from "get ActivityIndicator";
 import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing";
 

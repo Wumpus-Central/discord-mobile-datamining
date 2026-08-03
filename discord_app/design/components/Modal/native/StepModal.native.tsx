@@ -1,6 +1,3 @@
-// === Module 13236: StepModal ===
-
-// Module 13236 (StepModal)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

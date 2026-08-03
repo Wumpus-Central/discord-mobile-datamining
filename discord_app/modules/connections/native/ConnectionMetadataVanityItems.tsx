@@ -1,6 +1,3 @@
-// === Module 10037: PaypalVanityTag ===
-
-// Module 10037 (PaypalVanityTag)
 import "noop";
 import { View } from "get ActivityIndicator";
 import OperatorTypes from "OperatorTypes";

@@ -1,6 +1,3 @@
-// === Module 11732: UserProfileAlertUserReported ===
-
-// Module 11732 (UserProfileAlertUserReported)
 import "noop";
 import { jsx } from "jsxProd";
 

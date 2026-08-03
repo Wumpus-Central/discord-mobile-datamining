@@ -1,6 +1,3 @@
-// === Module 13625: USE_ALT_GATEWAY_KEY ===
-
-// Module 13625 (USE_ALT_GATEWAY_KEY)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enableAltGateway: false } };

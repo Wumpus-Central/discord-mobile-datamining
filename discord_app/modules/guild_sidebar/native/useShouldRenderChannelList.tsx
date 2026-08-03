@@ -1,6 +1,3 @@
-// === Module 15251: useShouldRenderChannelList ===
-
-// Module 15251 (useShouldRenderChannelList)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleClearCaches from "handleClearCaches";

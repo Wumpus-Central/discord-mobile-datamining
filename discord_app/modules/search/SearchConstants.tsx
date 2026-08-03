@@ -1,6 +1,3 @@
-// === Module 9108: MessageEmbedTypes ===
-
-// Module 9108 (MessageEmbedTypes)
 import ME from "ME";
 import set from "set";
 

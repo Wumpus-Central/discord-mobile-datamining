@@ -1,6 +1,3 @@
-// === Module 16151: ExistingUserAgeGateConfirm ===
-
-// Module 16151 (ExistingUserAgeGateConfirm)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

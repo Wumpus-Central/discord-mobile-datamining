@@ -1,6 +1,3 @@
-// === Module 1212: initialize ===
-
-// Module 1212 (initialize)
 import _slicedToArray from "_slicedToArray";
 import "_toPropertyKey";
 import fetchFingerprint from "fetchFingerprint";

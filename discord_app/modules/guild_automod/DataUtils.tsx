@@ -1,6 +1,3 @@
-// === Module 11073: _transformMetadataToCamelCase ===
-
-// Module 11073 (_transformMetadataToCamelCase)
 const result = require("set").fileFinishedImporting("modules/guild_automod/DataUtils.tsx");
 
 export const _transformMetadataToCamelCase = function _transformMetadataToCamelCase(body) {

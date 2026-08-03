@@ -1,6 +1,3 @@
-// === Module 4727: items ===
-
-// Module 4727 (items)
 const items = [
   {
     reName: /\.jpe?g$/i,

@@ -1,6 +1,3 @@
-// === Module 8282: _updatePermission ===
-
-// Module 8282 (_updatePermission)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

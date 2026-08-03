@@ -1,6 +1,3 @@
-// === Module 16019: getConsoleConnectingText ===
-
-// Module 16019 (getConsoleConnectingText)
 import { PlatformTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");

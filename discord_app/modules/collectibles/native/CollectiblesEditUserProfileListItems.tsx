@@ -1,6 +1,3 @@
-// === Module 7968: EditCollectibleListItem ===
-
-// Module 7968 (EditCollectibleListItem)
 import initialize from "initialize";
 import { View } from "registerAsset";
 import mergeGuildAvatar from "mergeGuildAvatar";

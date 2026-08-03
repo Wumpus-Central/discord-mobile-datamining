@@ -1,6 +1,3 @@
-// === Module 4394: hasPendingMemberAction ===
-
-// Module 4394 (hasPendingMemberAction)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

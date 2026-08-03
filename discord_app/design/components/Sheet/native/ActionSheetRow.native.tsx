@@ -1,6 +1,3 @@
-// === Module 5557: ActionSheetRowIcon ===
-
-// Module 5557 (ActionSheetRowIcon)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

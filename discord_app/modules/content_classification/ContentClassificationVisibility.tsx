@@ -1,6 +1,3 @@
-// === Module 11148: ContentClassificationVisibility ===
-
-// Module 11148 (ContentClassificationVisibility)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

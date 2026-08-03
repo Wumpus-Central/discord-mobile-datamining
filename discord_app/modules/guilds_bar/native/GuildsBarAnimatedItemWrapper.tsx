@@ -1,6 +1,3 @@
-// === Module 14969: UnreadIndicator ===
-
-// Module 14969 (UnreadIndicator)
 import noop from "noop";
 import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE";
 import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE";

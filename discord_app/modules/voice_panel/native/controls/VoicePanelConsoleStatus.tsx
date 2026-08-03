@@ -1,6 +1,3 @@
-// === Module 16022: VoicePanelConsoleStatus ===
-
-// Module 16022 (VoicePanelConsoleStatus)
 import VoicePanelVisualEffectView from "VoicePanelVisualEffectView";
 import { EDGE_GUTTER } from "CARD_SIZE";
 import { CONTROLS_HEIGHT } from "VoicePanelControlsModes";

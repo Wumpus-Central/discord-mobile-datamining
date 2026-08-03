@@ -1,6 +1,3 @@
-// === Module 11596: maybeGetPerkPurchaseablePopoutDCF ===
-
-// Module 11596 (maybeGetPerkPurchaseablePopoutDCF)
 import guildPowerupsAckNotification from "guildPowerupsAckNotification";
 import addVersionedDismissedContent from "addVersionedDismissedContent";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";

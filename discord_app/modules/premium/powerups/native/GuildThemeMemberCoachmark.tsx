@@ -1,6 +1,3 @@
-// === Module 15162: GuildThemeMemberCoachmark ===
-
-// Module 15162 (GuildThemeMemberCoachmark)
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

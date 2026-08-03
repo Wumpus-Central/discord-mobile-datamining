@@ -1,6 +1,3 @@
-// === Module 5107: sortByMatchScore ===
-
-// Module 5107 (sortByMatchScore)
 const result = require("set").fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");
 
 export default function sortByMatchScore(score, score2) {

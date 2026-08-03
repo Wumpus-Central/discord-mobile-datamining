@@ -1,6 +1,3 @@
-// === Module 6698: initialize ===
-
-// Module 6698 (initialize)
 import { PersistedStore } from "initialize";
 
 let c0 = null;

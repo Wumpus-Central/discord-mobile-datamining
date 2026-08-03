@@ -1,6 +1,3 @@
-// === Module 7792: createUserPremiumGuildSubscriptionTierAchievedSystemMessage ===
-
-// Module 7792 (createUserPremiumGuildSubscriptionTierAchievedSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

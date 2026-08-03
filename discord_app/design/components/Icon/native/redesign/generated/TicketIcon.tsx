@@ -1,6 +1,3 @@
-// === Module 14243: TicketIcon ===
-
-// Module 14243 (TicketIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

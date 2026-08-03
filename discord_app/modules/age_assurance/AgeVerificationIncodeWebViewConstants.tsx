@@ -1,6 +1,3 @@
-// === Module 6753: AGE_VERIFICATION_INCODE_PATH ===
-
-// Module 6753 (AGE_VERIFICATION_INCODE_PATH)
 let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
 let c1 = "Verification.Result";
 let c2 = "Verification.CaptureComplete";

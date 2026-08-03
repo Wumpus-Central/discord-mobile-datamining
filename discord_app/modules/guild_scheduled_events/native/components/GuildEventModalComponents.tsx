@@ -1,6 +1,3 @@
-// === Module 8239: GuildEventTopic ===
-
-// Module 8239 (GuildEventTopic)
 import registerAsset from "registerAsset";
 import { View } from "registerAsset";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";

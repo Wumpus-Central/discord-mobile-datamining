@@ -1,6 +1,3 @@
-// === Module 14194: renderDefaultButton ===
-
-// Module 14194 (renderDefaultButton)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "getQuestContentName";
 import initializeState from "initializeState";

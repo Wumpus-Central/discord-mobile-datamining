@@ -1,6 +1,3 @@
-// === Module 12869: useSelectedActiveStream ===
-
-// Module 12869 (useSelectedActiveStream)
 import getParticipants from "getParticipants";
 import reset from "reset";
 

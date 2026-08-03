@@ -1,6 +1,3 @@
-// === Module 9055: _transferToPlaystationWithAlert ===
-
-// Module 9055 (_transferToPlaystationWithAlert)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

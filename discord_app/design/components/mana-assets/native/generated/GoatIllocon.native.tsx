@@ -1,6 +1,3 @@
-// === Module 7221: GoatIllocon ===
-
-// Module 7221 (GoatIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 6779: GoogleNeutralIcon ===
-
-// Module 6779 (GoogleNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

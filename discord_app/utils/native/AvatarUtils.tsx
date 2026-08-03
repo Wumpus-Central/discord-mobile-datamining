@@ -1,6 +1,3 @@
-// === Module 1419: ensureAvatarSource ===
-
-// Module 1419 (ensureAvatarSource)
 import get_ActivityIndicator from "registerAsset";
 import set from "registerAsset";
 

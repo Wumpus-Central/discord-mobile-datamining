@@ -1,6 +1,3 @@
-// === Module 12058: getNote ===
-
-// Module 12058 (getNote)
 import isValueEqual from "isValueEqual";
 import { LibdiscoreStore } from "identity";
 import { LibdiscoreBatchStoreRefactorExperiment } from "items";

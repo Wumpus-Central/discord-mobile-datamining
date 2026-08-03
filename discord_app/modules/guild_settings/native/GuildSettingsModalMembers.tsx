@@ -1,6 +1,3 @@
-// === Module 15463: items ===
-
-// Module 15463 (items)
 import DISCORD_EPOCH from "DISCORD_EPOCH";
 import importAllResult from "nameFromUser";
 import { View } from "RolePill";

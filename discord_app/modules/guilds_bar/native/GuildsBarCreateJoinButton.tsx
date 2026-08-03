@@ -1,6 +1,3 @@
-// === Module 15030: handleCreateJoinGuildPress ===
-
-// Module 15030 (handleCreateJoinGuildPress)
 import jsxProd from "jsxProd";
 import { View } from "CirclePlusIcon";
 import ME from "ME";

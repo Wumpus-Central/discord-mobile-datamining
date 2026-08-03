@@ -1,6 +1,3 @@
-// === Module 14686: useAllowFriendsFromMutualGuildsOnly ===
-
-// Module 14686 (useAllowFriendsFromMutualGuildsOnly)
 import noop from "noop";
 
 const require = arg1;

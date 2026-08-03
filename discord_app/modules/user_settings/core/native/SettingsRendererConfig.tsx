@@ -1,6 +1,3 @@
-// === Module 13704: frozen ===
-
-// Module 13704 (frozen)
 let ACCESSIBILITY;
 let ACCOUNT;
 let ACCOUNT_AGE_GROUP_ADULT;

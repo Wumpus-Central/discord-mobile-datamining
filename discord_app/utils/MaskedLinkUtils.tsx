@@ -1,6 +1,3 @@
-// === Module 8204: isLinkTrusted ===
-
-// Module 8204 (isLinkTrusted)
 import isBlockedDomain from "isBlockedDomain";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

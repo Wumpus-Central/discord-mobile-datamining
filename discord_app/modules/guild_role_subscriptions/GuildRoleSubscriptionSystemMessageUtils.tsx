@@ -1,6 +1,3 @@
-// === Module 7778: identityHook ===
-
-// Module 7778 (identityHook)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getJoinButtonLabels from "getJoinButtonLabels";

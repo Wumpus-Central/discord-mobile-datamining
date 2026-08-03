@@ -1,6 +1,3 @@
-// === Module 9266: dispatcher ===
-
-// Module 9266 (dispatcher)
 const result = require("set").fileFinishedImporting("actions/native/PhoneVerificationActionCreators.tsx");
 
 export default {

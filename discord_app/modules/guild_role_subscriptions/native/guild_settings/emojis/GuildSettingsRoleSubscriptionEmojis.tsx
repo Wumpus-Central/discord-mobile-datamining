@@ -1,6 +1,3 @@
-// === Module 16642: GuildSettingsRoleSubscriptionEmojisInner ===
-
-// Module 16642 (GuildSettingsRoleSubscriptionEmojisInner)
 import "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { jsx } from "jsxProd";

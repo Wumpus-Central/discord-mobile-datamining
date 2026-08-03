@@ -1,6 +1,3 @@
-// === Module 11414: MediaKeyboardButtonIcon ===
-
-// Module 11414 (MediaKeyboardButtonIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

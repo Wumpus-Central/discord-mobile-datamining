@@ -1,6 +1,3 @@
-// === Module 5553: showSimpleActionSheet ===
-
-// Module 5553 (showSimpleActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
 
 export const showSimpleActionSheet = function showSimpleActionSheet(key) {

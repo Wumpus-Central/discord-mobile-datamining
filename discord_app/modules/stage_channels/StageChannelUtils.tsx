@@ -1,6 +1,3 @@
-// === Module 6720: fillChunk ===
-
-// Module 6720 (fillChunk)
 import createRTCConnection from "createRTCConnection";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import { RequestToSpeakPermissionStates as closure_6 } from "MAX_STAGE_TOPIC_LENGTH";

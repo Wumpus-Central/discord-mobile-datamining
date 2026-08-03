@@ -1,6 +1,3 @@
-// === Module 9421: Emoji ===
-
-// Module 9421 (Emoji)
 import noop from "noop";
 import { View } from "_updateEmoji";
 import handleConnectionOpen from "handleConnectionOpen";

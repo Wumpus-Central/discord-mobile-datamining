@@ -1,6 +1,3 @@
-// === Module 11517: set ===
-
-// Module 11517 (set)
 import { DeviceSettingsStore } from "initialize";
 import set from "dispatcher";
 

@@ -1,6 +1,3 @@
-// === Module 9986: ArrowAngleLeftUpIcon ===
-
-// Module 9986 (ArrowAngleLeftUpIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

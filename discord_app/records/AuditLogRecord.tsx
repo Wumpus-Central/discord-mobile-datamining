@@ -1,6 +1,3 @@
-// === Module 16394: getTargetType ===
-
-// Module 16394 (getTargetType)
 import "toJS";
 import ME from "ME";
 

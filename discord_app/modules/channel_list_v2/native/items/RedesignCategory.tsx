@@ -1,6 +1,3 @@
-// === Module 15120: renderCategoryItem ===
-
-// Module 15120 (renderCategoryItem)
 import useFavoritesGuildCategoryAddAction from "useFavoritesGuildCategoryAddAction";
 import { View } from "initialize";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 9370: NsfwGateGuild ===
-
-// Module 9370 (NsfwGateGuild)
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

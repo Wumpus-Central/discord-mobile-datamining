@@ -1,6 +1,3 @@
-// === Module 16300: DiscoverabilityLandingScene ===
-
-// Module 16300 (DiscoverabilityLandingScene)
 import getSystemLocale from "getSystemLocale";
 import { View } from "SkipHeaderButton";
 import { useContactSyncModalStore } from "ContactSyncModes";

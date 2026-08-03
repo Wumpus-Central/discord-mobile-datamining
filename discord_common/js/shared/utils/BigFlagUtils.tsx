@@ -1,6 +1,3 @@
-// === Module 506: fromString ===
-
-// Module 506 (fromString)
 import _slicedToArray from "_slicedToArray";
 import tmp6Result from "_slicedToArray";
 

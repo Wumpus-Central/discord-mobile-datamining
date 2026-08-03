@@ -1,6 +1,3 @@
-// === Module 13665: DevToolsLoggingFlagsScreen ===
-
-// Module 13665 (DevToolsLoggingFlagsScreen)
 import { ScrollView } from "get ActivityIndicator";
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import jsxProd from "jsxProd";

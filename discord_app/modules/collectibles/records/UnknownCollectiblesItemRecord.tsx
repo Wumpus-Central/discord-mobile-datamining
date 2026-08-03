@@ -1,6 +1,3 @@
-// === Module 5811: fromServer ===
-
-// Module 5811 (fromServer)
 import "fromServer";
 
 const require = arg1;

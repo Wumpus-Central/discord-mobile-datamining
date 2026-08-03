@@ -1,6 +1,3 @@
-// === Module 12656: GuildBoostingMarketingPersistentCta ===
-
-// Module 12656 (GuildBoostingMarketingPersistentCta)
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

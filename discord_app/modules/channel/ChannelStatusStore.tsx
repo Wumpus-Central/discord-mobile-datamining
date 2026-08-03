@@ -1,6 +1,3 @@
-// === Module 5787: handleConnectionReset ===
-
-// Module 5787 (handleConnectionReset)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import { Store } from "initialize";
 import set from "set";

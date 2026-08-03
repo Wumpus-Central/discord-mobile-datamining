@@ -1,6 +1,3 @@
-// === Module 8726: BalanceWidgetMode ===
-
-// Module 8726 (BalanceWidgetMode)
 const result = require("set").fileFinishedImporting("modules/virtual_currency/types.tsx");
 
 export const BalanceWidgetMode = { DEFAULT: "DEFAULT", HIGHLIGHTED: "HIGHLIGHTED", SELECTED: "SELECTED" };

@@ -1,6 +1,3 @@
-// === Module 15714: SearchNavigatorScreen ===
-
-// Module 15714 (SearchNavigatorScreen)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 4361: Video ===
-
-// Module 4361 (Video)
 import DesktopSources from "DesktopSources";
 import "on";
 

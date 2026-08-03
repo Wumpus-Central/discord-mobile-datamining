@@ -1,6 +1,3 @@
-// === Module 7987: useDisplayProfile ===
-
-// Module 7987 (useDisplayProfile)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

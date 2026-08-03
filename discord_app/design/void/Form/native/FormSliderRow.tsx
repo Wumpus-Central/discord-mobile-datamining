@@ -1,6 +1,3 @@
-// === Module 7663: FormSliderRow ===
-
-// Module 7663 (FormSliderRow)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

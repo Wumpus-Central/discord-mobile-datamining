@@ -1,6 +1,3 @@
-// === Module 12832: isUserSettingsOpen ===
-
-// Module 12832 (isUserSettingsOpen)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

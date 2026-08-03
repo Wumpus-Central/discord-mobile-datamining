@@ -1,6 +1,3 @@
-// === Module 9480: _manuallyStartConsoleQuest ===
-
-// Module 9480 (_manuallyStartConsoleQuest)
 import initializeState from "initializeState";
 import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore";
 import set from "set";

@@ -1,6 +1,3 @@
-// === Module 10281: experiment ===
-
-// Module 10281 (experiment)
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Automod Mention Raid Limit", config: { enabled: true } }];

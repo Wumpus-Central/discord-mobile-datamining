@@ -1,6 +1,3 @@
-// === Module 9172: ListViewIcon ===
-
-// Module 9172 (ListViewIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15230: GuildRoleSubscriptionsUpsellActionSheet ===
-
-// Module 15230 (GuildRoleSubscriptionsUpsellActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { GuildSettingsSections } from "ME";

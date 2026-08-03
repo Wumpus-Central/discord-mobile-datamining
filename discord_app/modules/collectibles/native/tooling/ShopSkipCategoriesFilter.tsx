@@ -1,6 +1,3 @@
-// === Module 14836: ShopSkipCategoriesFilter ===
-
-// Module 14836 (ShopSkipCategoriesFilter)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

@@ -1,6 +1,3 @@
-// === Module 4596: BLUR_EFFECT_NAMES ===
-
-// Module 4596 (BLUR_EFFECT_NAMES)
 import DCDDeviceManager from "DCDDeviceManager";
 import importDefaultResult from "map";
 

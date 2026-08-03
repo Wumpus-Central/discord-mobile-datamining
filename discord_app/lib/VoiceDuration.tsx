@@ -1,6 +1,3 @@
-// === Module 12897: start ===
-
-// Module 12897 (start)
 let closure_2 = [1, 100, 1000, 10000];
 let closure_3 = [100, 500, 1000, 5000];
 let result = require("set").fileFinishedImporting("lib/VoiceDuration.tsx");

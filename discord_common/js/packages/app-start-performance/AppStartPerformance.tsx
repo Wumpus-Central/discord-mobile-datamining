@@ -1,6 +1,3 @@
-// === Module 10: isTracing ===
-
-// Module 10 (isTracing)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let fn = globalThis.__getTotalRequireTime;

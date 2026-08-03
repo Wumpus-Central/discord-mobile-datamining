@@ -1,6 +1,3 @@
-// === Module 16040: VoicePanelNoVideoPermissionsAlert ===
-
-// Module 16040 (VoicePanelNoVideoPermissionsAlert)
 import "noop";
 import { jsx } from "jsxProd";
 

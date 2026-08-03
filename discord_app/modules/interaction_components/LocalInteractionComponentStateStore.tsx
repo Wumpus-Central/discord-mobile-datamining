@@ -1,6 +1,3 @@
-// === Module 7897: getInteractionComponentStates ===
-
-// Module 7897 (getInteractionComponentStates)
 import { Store } from "initialize";
 
 let c0 = new require("LimitedMap")(196606);

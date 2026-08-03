@@ -1,6 +1,3 @@
-// === Module 12459: BuyNitroTriggerPointEffect ===
-
-// Module 12459 (BuyNitroTriggerPointEffect)
 const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroTriggerPointEffect.tsx");
 
 export const BuyNitroTriggerPointEffect = function BuyNitroTriggerPointEffect() {

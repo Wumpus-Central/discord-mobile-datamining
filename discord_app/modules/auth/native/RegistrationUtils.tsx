@@ -1,6 +1,3 @@
-// === Module 14885: trackRegTransition ===
-
-// Module 14885 (trackRegTransition)
 import noop from "noop";
 import updateInvite from "updateInvite";
 import getDisplayedInviteCode from "getDisplayedInviteCode";

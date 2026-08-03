@@ -1,6 +1,3 @@
-// === Module 9506: getVoiceInviteEmbedRenderInfo ===
-
-// Module 9506 (getVoiceInviteEmbedRenderInfo)
 import noop from "noop";
 import updateInvite from "updateInvite";
 import getVoiceStatesForGuild from "getVoiceStatesForGuild";

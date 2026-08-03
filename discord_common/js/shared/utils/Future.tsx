@@ -1,6 +1,3 @@
-// === Module 5705: Future ===
-
-// Module 5705 (Future)
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
 
 export const Future = function Future() {

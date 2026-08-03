@@ -1,6 +1,3 @@
-// === Module 9593: MediaPostThumbnailActionSheet ===
-
-// Module 9593 (MediaPostThumbnailActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

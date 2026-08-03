@@ -1,6 +1,3 @@
-// === Module 11708: useGetApplicationFromBotUserId ===
-
-// Module 11708 (useGetApplicationFromBotUserId)
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
 

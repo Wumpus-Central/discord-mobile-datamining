@@ -1,6 +1,3 @@
-// === Module 15670: ConnectedChannelSettingsInstantInvites ===
-
-// Module 15670 (ConnectedChannelSettingsInstantInvites)
 import _slicedToArray from "_slicedToArray";
 import module_9250 from "module_9250";
 import { View } from "SceneLoadingIndicator";

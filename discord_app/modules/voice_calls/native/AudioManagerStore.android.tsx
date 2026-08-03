@@ -1,6 +1,3 @@
-// === Module 8844: nativeEventEmitter ===
-
-// Module 8844 (nativeEventEmitter)
 import { RTCConnectionStates } from "ME";
 import { MediaEngineContextTypes } from "DesktopSources";
 import enforcing from "enforcing";

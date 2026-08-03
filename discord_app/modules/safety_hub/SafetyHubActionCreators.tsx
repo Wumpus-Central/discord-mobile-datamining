@@ -1,6 +1,3 @@
-// === Module 11092: _getSafetyHubData ===
-
-// Module 11092 (_getSafetyHubData)
 import dispatcher from "dispatcher";
 import fetchFingerprint from "fetchFingerprint";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";

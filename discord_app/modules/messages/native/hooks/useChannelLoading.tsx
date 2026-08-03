@@ -1,6 +1,3 @@
-// === Module 10915: useChannelLoading ===
-
-// Module 10915 (useChannelLoading)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

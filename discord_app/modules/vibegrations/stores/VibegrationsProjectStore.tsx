@@ -1,6 +1,3 @@
-// === Module 5687: handleProjectUpsert ===
-
-// Module 5687 (handleProjectUpsert)
 import _slicedToArray from "_slicedToArray";
 import { Store } from "initialize";
 

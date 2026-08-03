@@ -1,6 +1,3 @@
-// === Module 14967: findGuildSectionIndex ===
-
-// Module 14967 (findGuildSectionIndex)
 import module_14992 from "module_14992";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import initialize from "initialize";

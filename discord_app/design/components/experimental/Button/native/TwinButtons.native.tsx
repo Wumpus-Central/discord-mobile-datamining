@@ -1,6 +1,3 @@
-// === Module 8242: TwinButtons ===
-
-// Module 8242 (TwinButtons)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

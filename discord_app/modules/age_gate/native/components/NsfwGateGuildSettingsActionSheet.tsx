@@ -1,6 +1,3 @@
-// === Module 13066: NsfwGateGuildSettingsActionSheet ===
-
-// Module 13066 (NsfwGateGuildSettingsActionSheet)
 import "noop";
 import jsxProd from "jsxProd";
 

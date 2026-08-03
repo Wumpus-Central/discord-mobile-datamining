@@ -1,6 +1,3 @@
-// === Module 8904: savePersistentCodesEnabled ===
-
-// Module 8904 (savePersistentCodesEnabled)
 import ME from "ME";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

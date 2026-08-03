@@ -1,6 +1,3 @@
-// === Module 6214: emitChanges ===
-
-// Module 6214 (emitChanges)
 import emitChanges from "emitChanges";
 import createFromServer from "createFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";

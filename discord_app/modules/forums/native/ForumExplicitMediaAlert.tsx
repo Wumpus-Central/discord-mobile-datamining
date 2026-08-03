@@ -1,6 +1,3 @@
-// === Module 12629: ForumExplicitMediaAlert ===
-
-// Module 12629 (ForumExplicitMediaAlert)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 7821: isPublicSystemMessage ===
-
-// Module 7821 (isPublicSystemMessage)
 import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY";
 import { AnalyticEvents } from "ME";
 

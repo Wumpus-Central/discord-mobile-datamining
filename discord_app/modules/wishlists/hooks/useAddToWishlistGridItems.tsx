@@ -1,6 +1,3 @@
-// === Module 12213: useAddToWishlistGridItems ===
-
-// Module 12213 (useAddToWishlistGridItems)
 import noop from "noop";
 import { PremiumSubscriptionSKUs } from "GuildFeatures";
 

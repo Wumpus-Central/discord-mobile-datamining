@@ -1,6 +1,3 @@
-// === Module 10259: DesktopNotificationTypes ===
-
-// Module 10259 (DesktopNotificationTypes)
 import ME from "ME";
 import { DeviceSettingsStore } from "initialize";
 

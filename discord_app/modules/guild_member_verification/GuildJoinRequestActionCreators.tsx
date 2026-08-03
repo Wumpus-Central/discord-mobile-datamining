@@ -1,6 +1,3 @@
-// === Module 9165: _fetchGuildJoinRequests ===
-
-// Module 9165 (_fetchGuildJoinRequests)
 import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE";
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord";
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";

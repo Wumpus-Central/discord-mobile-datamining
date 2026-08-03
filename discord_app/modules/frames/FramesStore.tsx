@@ -1,6 +1,3 @@
-// === Module 5690: map ===
-
-// Module 5690 (map)
 import { FrameLayoutModes } from "FrameLayoutModes";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { Store } from "initialize";

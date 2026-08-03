@@ -1,6 +1,3 @@
-// === Module 11647: useDeactivateWarningText ===
-
-// Module 11647 (useDeactivateWarningText)
 import noop from "noop";
 import handleInviteData from "handleInviteData";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

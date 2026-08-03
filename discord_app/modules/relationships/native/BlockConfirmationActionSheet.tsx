@@ -1,6 +1,3 @@
-// === Module 10463: BlockedInformationTable ===
-
-// Module 10463 (BlockedInformationTable)
 import asyncRequireImpl from "asyncRequireImpl";
 import importAllResult from "context";
 import { View } from "Button";

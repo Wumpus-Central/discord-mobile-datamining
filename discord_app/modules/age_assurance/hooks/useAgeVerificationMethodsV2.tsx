@@ -1,6 +1,3 @@
-// === Module 6783: useAgeVerificationMethodsV2 ===
-
-// Module 6783 (useAgeVerificationMethodsV2)
 import dispatcher from "dispatcher";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

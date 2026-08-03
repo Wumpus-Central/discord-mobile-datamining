@@ -1,6 +1,3 @@
-// === Module 10074: GuildDirectoryAddModal ===
-
-// Module 10074 (GuildDirectoryAddModal)
 import "noop";
 import { GuildDirectoryCreate } from "GuildDirectoryCreate";
 import { jsx } from "jsxProd";

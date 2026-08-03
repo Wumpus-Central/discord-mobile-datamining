@@ -1,6 +1,3 @@
-// === Module 5944: okAsync ===
-
-// Module 5944 (okAsync)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import HELLO_KEY from "HELLO_KEY";
 import set from "timestamp";

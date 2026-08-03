@@ -1,6 +1,3 @@
-// === Module 15390: thumbHashToRGBA ===
-
-// Module 15390 (thumbHashToRGBA)
 function thumbHashToRGBA(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {

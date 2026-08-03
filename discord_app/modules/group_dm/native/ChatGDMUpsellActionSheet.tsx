@@ -1,6 +1,3 @@
-// === Module 10927: ChatGDMUpsellActionSheet ===
-
-// Module 10927 (ChatGDMUpsellActionSheet)
 import noop from "noop";
 import { View } from "LinkIcon";
 import jsxProd from "jsxProd";

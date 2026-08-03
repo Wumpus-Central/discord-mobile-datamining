@@ -1,6 +1,3 @@
-// === Module 13649: SafeAreaReporter ===
-
-// Module 13649 (SafeAreaReporter)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

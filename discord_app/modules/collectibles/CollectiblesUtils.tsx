@@ -1,6 +1,3 @@
-// === Module 5815: getItemRecordsFromPurchases ===
-
-// Module 5815 (getItemRecordsFromPurchases)
 import { isAvatarDecorationRecord } from "fromServer";
 import { isNameplateRecord } from "fromServer";
 import { isProfileEffectRecord } from "fromServer";

@@ -1,6 +1,3 @@
-// === Module 16662: InviteSelectActionSheet ===
-
-// Module 16662 (InviteSelectActionSheet)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

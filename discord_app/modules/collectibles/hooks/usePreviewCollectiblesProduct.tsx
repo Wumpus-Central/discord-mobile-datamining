@@ -1,6 +1,3 @@
-// === Module 8746: usePreviewCollectibleProduct ===
-
-// Module 8746 (usePreviewCollectibleProduct)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { isAvatarDecorationRecord } from "fromServer";

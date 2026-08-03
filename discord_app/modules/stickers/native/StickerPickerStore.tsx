@@ -1,6 +1,3 @@
-// === Module 9635: useStickerPickerStore ===
-
-// Module 9635 (useStickerPickerStore)
 import keys from "keys";
 
 let obj = keys.create((arg0) => {

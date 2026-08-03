@@ -1,6 +1,3 @@
-// === Module 11188: chatInputSendMessage ===
-
-// Module 11188 (chatInputSendMessage)
 import closure_3 from "ME";
 import { DraftType } from "handleChanged";
 import setCooldown from "setCooldown";

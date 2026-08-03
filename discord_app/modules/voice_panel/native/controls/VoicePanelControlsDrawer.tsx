@@ -1,6 +1,3 @@
-// === Module 16049: renderChat ===
-
-// Module 16049 (renderChat)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "set";

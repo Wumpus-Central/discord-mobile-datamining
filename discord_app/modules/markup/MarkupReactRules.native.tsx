@@ -1,6 +1,3 @@
-// === Module 4184: MarkupText ===
-
-// Module 4184 (MarkupText)
 import showUserProfileActionSheet from "showUserProfileActionSheet";
 import get_ActivityIndicator from "getRootNavigationRef";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

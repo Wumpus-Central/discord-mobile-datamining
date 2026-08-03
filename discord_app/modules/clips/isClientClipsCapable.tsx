@@ -1,6 +1,3 @@
-// === Module 4253: isClientClipsCapable ===
-
-// Module 4253 (isClientClipsCapable)
 import { Features } from "DesktopSources";
 
 const result = require("set").fileFinishedImporting("modules/clips/isClientClipsCapable.tsx");

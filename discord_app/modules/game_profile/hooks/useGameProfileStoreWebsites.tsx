@@ -1,6 +1,3 @@
-// === Module 8499: set ===
-
-// Module 8499 (set)
 import noop from "noop";
 import set from "buildSteamStoreUrl";
 

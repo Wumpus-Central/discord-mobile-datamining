@@ -1,6 +1,3 @@
-// === Module 11805: ContactSyncInviteFriends ===
-
-// Module 11805 (ContactSyncInviteFriends)
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 649: connectStores ===
-
-// Module 649 (connectStores)
 import "_objectWithoutProperties";
 import noop from "noop";
 import { jsx } from "jsxProd";

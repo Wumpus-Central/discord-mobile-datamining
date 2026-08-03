@@ -1,6 +1,3 @@
-// === Module 8061: ProfileEffectSample ===
-
-// Module 8061 (ProfileEffectSample)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

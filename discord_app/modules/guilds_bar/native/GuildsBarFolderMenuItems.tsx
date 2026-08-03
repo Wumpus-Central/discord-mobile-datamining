@@ -1,6 +1,3 @@
-// === Module 14961: getGuildFolderMenuItems ===
-
-// Module 14961 (getGuildFolderMenuItems)
 import markGuildsAsRead from "markGuildsAsRead";
 import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { AnalyticsSections } from "ME";

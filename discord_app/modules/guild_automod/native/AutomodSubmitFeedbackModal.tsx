@@ -1,6 +1,3 @@
-// === Module 11071: Navbar ===
-
-// Module 11071 (Navbar)
 import _slicedToArray from "_slicedToArray";
 import AutomodAlertActionType from "AutomodAlertActionType";
 import { View } from "collectGuildAnalyticsMetadata";

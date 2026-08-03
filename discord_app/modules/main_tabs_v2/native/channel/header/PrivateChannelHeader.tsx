@@ -1,6 +1,3 @@
-// === Module 10154: GroupDmMemberCount ===
-
-// Module 10154 (GroupDmMemberCount)
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import sortActivity from "sortActivity";

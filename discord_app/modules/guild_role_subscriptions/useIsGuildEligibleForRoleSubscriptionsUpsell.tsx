@@ -1,6 +1,3 @@
-// === Module 15240: useIsGuildEligibleForRoleSubscriptionsUpsell ===
-
-// Module 15240 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

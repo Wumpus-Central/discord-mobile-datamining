@@ -1,6 +1,3 @@
-// === Module 14117: _search ===
-
-// Module 14117 (_search)
 import set from "set";
 import { Endpoints } from "ME";
 

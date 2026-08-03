@@ -1,6 +1,3 @@
-// === Module 13581: handler ===
-
-// Module 13581 (handler)
 import _getSystemLocale from "_getSystemLocale";
 
 let obj = {};

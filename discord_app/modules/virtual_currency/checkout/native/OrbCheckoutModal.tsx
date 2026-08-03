@@ -1,6 +1,3 @@
-// === Module 11916: OrbCheckoutModalContent ===
-
-// Module 11916 (OrbCheckoutModalContent)
 import HeaderBackImage from "HeaderBackImage";
 import noop from "HeaderBackImage";
 import ME from "ME";

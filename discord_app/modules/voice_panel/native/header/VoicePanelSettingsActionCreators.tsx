@@ -1,6 +1,3 @@
-// === Module 15957: VOICE_PANEL_SETTINGS_ACTION_SHEET_KEY ===
-
-// Module 15957 (VOICE_PANEL_SETTINGS_ACTION_SHEET_KEY)
 const VoicePanelSettingsActionSheet = "VoicePanelSettingsActionSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx");
 

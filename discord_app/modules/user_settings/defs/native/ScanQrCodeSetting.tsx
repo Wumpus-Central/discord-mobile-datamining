@@ -1,6 +1,3 @@
-// === Module 14029: pressable ===
-
-// Module 14029 (pressable)
 import { NativePermissionTypes } from "NativePermissionStatus";
 import apply from "apply";
 import importDefaultResult from "module_4399";

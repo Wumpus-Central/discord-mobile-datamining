@@ -1,6 +1,3 @@
-// === Module 14599: Sample ===
-
-// Module 14599 (Sample)
 import _slicedToArray from "_slicedToArray";
 import SettingsIcon from "SettingsIcon";
 import { ScrollView } from "SearchField";

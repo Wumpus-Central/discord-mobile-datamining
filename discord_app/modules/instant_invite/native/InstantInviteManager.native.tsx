@@ -1,6 +1,3 @@
-// === Module 16257: prototype ===
-
-// Module 16257 (prototype)
 import "initialize";
 
 let require = arg1;

@@ -1,6 +1,3 @@
-// === Module 9101: FacepileGroupDMAvatar ===
-
-// Module 9101 (FacepileGroupDMAvatar)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

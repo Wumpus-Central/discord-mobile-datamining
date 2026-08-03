@@ -1,6 +1,3 @@
-// === Module 10130: getSession ===
-
-// Module 10130 (getSession)
 let result = require("set").fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
 class AbstractSearchSessionAnalyticsManager {
   constructor() {

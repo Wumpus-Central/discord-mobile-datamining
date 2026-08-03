@@ -1,6 +1,3 @@
-// === Module 11451: getCurrentAndNextResourceChannel ===
-
-// Module 11451 (getCurrentAndNextResourceChannel)
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 15308: setTab ===
-
-// Module 15308 (setTab)
 const result = require("set").fileFinishedImporting("modules/notification_center/NotificationCenterStoreActions.tsx");
 
 export const setTab = function setTab(BROWSE) {

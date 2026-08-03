@@ -1,6 +1,3 @@
-// === Module 5866: getFpMessageInfo ===
-
-// Module 5866 (getFpMessageInfo)
 import { Store } from "initialize";
 
 const require = arg1;

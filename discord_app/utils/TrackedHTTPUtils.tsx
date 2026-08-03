@@ -1,6 +1,3 @@
-// === Module 5003: ? ===
-
-// Module 5003
 import _objectWithoutProperties from "_objectWithoutProperties";
 
 const require = arg1;

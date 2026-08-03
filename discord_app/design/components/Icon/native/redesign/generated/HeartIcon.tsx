@@ -1,6 +1,3 @@
-// === Module 8681: HeartIcon ===
-
-// Module 8681 (HeartIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

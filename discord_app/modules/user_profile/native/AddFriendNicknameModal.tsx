@@ -1,6 +1,3 @@
-// === Module 12235: AddFriendNicknameModal ===
-
-// Module 12235 (AddFriendNicknameModal)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 8818: LockedRecipientField ===
-
-// Module 8818 (LockedRecipientField)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

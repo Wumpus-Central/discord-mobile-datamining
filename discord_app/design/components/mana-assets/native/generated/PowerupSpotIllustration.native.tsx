@@ -1,6 +1,3 @@
-// === Module 7401: PowerupSpotIllustration ===
-
-// Module 7401 (PowerupSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/PowerupSpotIllustration.native.tsx");

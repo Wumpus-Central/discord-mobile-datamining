@@ -1,6 +1,3 @@
-// === Module 14733: useToggleDismissibleContentDismissState ===
-
-// Module 14733 (useToggleDismissibleContentDismissState)
 import handleConnectionOpen from "handleConnectionOpen";
 
 require("noop").useCallback;

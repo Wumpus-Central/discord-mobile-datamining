@@ -1,6 +1,3 @@
-// === Module 8961: _getDisclosures ===
-
-// Module 8961 (_getDisclosures)
 import set from "set";
 import { Endpoints } from "ME";
 

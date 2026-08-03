@@ -1,6 +1,3 @@
-// === Module 8218: getExistingRsvp ===
-
-// Module 8218 (getExistingRsvp)
 import fetchFingerprint from "fetchFingerprint";
 import scheduledEventSort from "scheduledEventSort";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";

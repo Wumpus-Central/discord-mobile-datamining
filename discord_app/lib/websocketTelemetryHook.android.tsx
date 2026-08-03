@@ -1,6 +1,3 @@
-// === Module 16756: installWebsocketTelemetryHook ===
-
-// Module 16756 (installWebsocketTelemetryHook)
 const result = require("set").fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
 
 export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {

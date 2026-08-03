@@ -1,6 +1,3 @@
-// === Module 15513: GroupDMRow ===
-
-// Module 15513 (GroupDMRow)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

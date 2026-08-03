@@ -1,6 +1,3 @@
-// === Module 5674: CurrencyCodes ===
-
-// Module 5674 (CurrencyCodes)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { CurrencyCodes } from "sum";

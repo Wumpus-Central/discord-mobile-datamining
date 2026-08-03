@@ -1,6 +1,3 @@
-// === Module 4516: _getClientSecret ===
-
-// Module 4516 (_getClientSecret)
 import getSystemLocale from "getSystemLocale";
 import ME from "ME";
 import sum from "sum";

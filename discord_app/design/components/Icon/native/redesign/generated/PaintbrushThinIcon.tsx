@@ -1,6 +1,3 @@
-// === Module 15373: PaintbrushThinIcon ===
-
-// Module 15373 (PaintbrushThinIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

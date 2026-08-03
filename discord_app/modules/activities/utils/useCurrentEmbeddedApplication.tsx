@@ -1,6 +1,3 @@
-// === Module 10616: useCurrentEmbeddedApplication ===
-
-// Module 10616 (useCurrentEmbeddedApplication)
 import _slicedToArray from "_slicedToArray";
 
 const result = require("useGetOrFetchApplications").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");

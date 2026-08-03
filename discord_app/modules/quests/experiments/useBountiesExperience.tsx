@@ -1,6 +1,3 @@
-// === Module 10895: useBountiesExperience ===
-
-// Module 10895 (useBountiesExperience)
 const result = require("apexExperiment").fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
 
 export const useBountiesExperience = function useBountiesExperience(VIDEO_MODAL_MOBILE) {

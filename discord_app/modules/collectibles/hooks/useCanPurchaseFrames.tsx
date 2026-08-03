@@ -1,6 +1,3 @@
-// === Module 8709: useCanPurchaseFrames ===
-
-// Module 8709 (useCanPurchaseFrames)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 

@@ -1,6 +1,3 @@
-// === Module 11193: ForumPostGridHeader ===
-
-// Module 11193 (ForumPostGridHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET";

@@ -1,6 +1,3 @@
-// === Module 8342: _navigateToEvent ===
-
-// Module 8342 (_navigateToEvent)
 import ME from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";

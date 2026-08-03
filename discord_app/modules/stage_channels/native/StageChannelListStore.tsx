@@ -1,6 +1,3 @@
-// === Module 10851: useActiveSpeakerPillScrollHandler ===
-
-// Module 10851 (useActiveSpeakerPillScrollHandler)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import identity from "identity";

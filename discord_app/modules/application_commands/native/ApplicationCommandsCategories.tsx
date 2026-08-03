@@ -1,6 +1,3 @@
-// === Module 11509: ApplicationCommandsCategories ===
-
-// Module 11509 (ApplicationCommandsCategories)
 import importAllResult from "noop";
 import get_ActivityIndicator from "AccessibilityAnnouncer";
 import handleThemeChange from "handleThemeChange";

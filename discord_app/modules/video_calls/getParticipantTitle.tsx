@@ -1,6 +1,3 @@
-// === Module 10854: getParticipantTitle ===
-
-// Module 10854 (getParticipantTitle)
 import { ParticipantTypes } from "ParticipantTypes";
 
 let result = require("getNickname").fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");

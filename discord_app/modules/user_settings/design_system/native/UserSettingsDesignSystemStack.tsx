@@ -1,6 +1,3 @@
-// === Module 14605: StackBlock ===
-
-// Module 14605 (StackBlock)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

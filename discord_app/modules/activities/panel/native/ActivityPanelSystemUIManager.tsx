@@ -1,6 +1,3 @@
-// === Module 15886: BaseActivityPanelSystemUIManager ===
-
-// Module 15886 (BaseActivityPanelSystemUIManager)
 import importAllResult from "noop";
 import { ActivityPanelModes } from "ActivityPanelModes";
 import jsxProd from "jsxProd";

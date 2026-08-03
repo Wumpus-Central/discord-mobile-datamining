@@ -1,6 +1,3 @@
-// === Module 8940: ? ===
-
-// Module 8940
 let c3 = "USER_SETTINGS_CONNECTIONS_XBOX_LINK_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx");
 

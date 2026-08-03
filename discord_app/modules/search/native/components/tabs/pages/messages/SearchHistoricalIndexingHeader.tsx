@@ -1,6 +1,3 @@
-// === Module 15554: HistoricalIndexingHeader ===
-
-// Module 15554 (HistoricalIndexingHeader)
 import noop from "noop";
 import _getSystemLocale from "_getSystemLocale";
 import MessageEmbedTypes from "MessageEmbedTypes";

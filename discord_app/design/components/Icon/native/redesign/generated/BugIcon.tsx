@@ -1,6 +1,3 @@
-// === Module 14558: BugIcon ===
-
-// Module 14558 (BugIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

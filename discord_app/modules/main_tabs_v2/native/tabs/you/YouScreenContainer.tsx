@@ -1,6 +1,3 @@
-// === Module 15635: ? ===
-
-// Module 15635
 import { View } from "get ActivityIndicator";
 import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
 import { jsx } from "jsxProd";

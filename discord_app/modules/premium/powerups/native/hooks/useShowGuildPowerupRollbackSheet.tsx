@@ -1,6 +1,3 @@
-// === Module 11616: useShowGuildPowerupRollbackSheet ===
-
-// Module 11616 (useShowGuildPowerupRollbackSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";

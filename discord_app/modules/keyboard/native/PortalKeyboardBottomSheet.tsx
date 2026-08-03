@@ -1,6 +1,3 @@
-// === Module 11267: PortalKeyboardBottomSheetHeader ===
-
-// Module 11267 (PortalKeyboardBottomSheetHeader)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "dismissGlobalKeyboard";
 import get_ActivityIndicator from "HapticFeedbackTypes";

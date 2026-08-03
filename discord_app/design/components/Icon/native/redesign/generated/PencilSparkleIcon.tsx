@@ -1,6 +1,3 @@
-// === Module 9866: PencilSparkleIcon ===
-
-// Module 9866 (PencilSparkleIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

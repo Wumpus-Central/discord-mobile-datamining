@@ -1,6 +1,3 @@
-// === Module 11271: HeroMedia ===
-
-// Module 11271 (HeroMedia)
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";

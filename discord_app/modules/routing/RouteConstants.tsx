@@ -1,6 +1,3 @@
-// === Module 677: INVITE ===
-
-// Module 677 (INVITE)
 import { CollectibleShopTab } from "items";
 import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID";
 import getAuthenticationPath from "getAuthenticationPath";

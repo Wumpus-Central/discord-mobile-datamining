@@ -1,6 +1,3 @@
-// === Module 8311: canUseMobileServerTagSettings ===
-
-// Module 8311 (canUseMobileServerTagSettings)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";

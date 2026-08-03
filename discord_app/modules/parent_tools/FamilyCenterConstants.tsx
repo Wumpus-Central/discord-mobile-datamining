@@ -1,6 +1,3 @@
-// === Module 5799: items ===
-
-// Module 5799 (items)
 import getAuthenticationPath from "getAuthenticationPath";
 
 const require = arg1;

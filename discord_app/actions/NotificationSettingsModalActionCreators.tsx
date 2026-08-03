@@ -1,6 +1,3 @@
-// === Module 5139: ? ===
-
-// Module 5139
 import dispatcher from "dispatcher";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { Endpoints } from "ME";

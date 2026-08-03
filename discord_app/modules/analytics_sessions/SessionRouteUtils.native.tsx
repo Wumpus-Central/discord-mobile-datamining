@@ -1,6 +1,3 @@
-// === Module 5728: isActiveUserRoute ===
-
-// Module 5728 (isActiveUserRoute)
 const result = require("set").fileFinishedImporting("modules/analytics_sessions/SessionRouteUtils.native.tsx");
 
 export function isActiveUserRoute() {

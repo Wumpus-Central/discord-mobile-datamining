@@ -1,6 +1,3 @@
-// === Module 7826: createGuildReportRaidSystemMessage ===
-
-// Module 7826 (createGuildReportRaidSystemMessage)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

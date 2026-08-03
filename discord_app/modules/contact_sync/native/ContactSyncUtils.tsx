@@ -1,6 +1,3 @@
-// === Module 11785: _uploadContacts ===
-
-// Module 11785 (_uploadContacts)
 import closure_3 from "ME";
 import { NativeModules } from "module_4399";
 import set from "set";

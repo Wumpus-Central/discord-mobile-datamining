@@ -1,6 +1,3 @@
-// === Module 10235: computeIsFavoritesGuildEnabled ===
-
-// Module 10235 (computeIsFavoritesGuildEnabled)
 import initializeFromUserSettings from "initializeFromUserSettings";
 
 const require = arg1;

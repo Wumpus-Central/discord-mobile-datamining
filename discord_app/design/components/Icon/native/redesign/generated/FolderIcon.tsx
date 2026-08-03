@@ -1,6 +1,3 @@
-// === Module 4693: FolderIcon ===
-
-// Module 4693 (FolderIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

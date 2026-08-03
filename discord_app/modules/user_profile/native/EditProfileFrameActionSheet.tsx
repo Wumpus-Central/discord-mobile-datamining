@@ -1,6 +1,3 @@
-// === Module 13745: EditProfileFrameInner ===
-
-// Module 13745 (EditProfileFrameInner)
 import _slicedToArray from "_slicedToArray";
 import useFetchPurchases from "useFetchPurchases";
 import get_ActivityIndicator from "getSystemLocale";

@@ -1,6 +1,3 @@
-// === Module 11898: ProfileEffectAssetPreview ===
-
-// Module 11898 (ProfileEffectAssetPreview)
 import FRACTIONAL_NITRO_COIN_SIZE from "FRACTIONAL_NITRO_COIN_SIZE";
 import { View } from "CollectiblesItemType";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";

@@ -1,6 +1,3 @@
-// === Module 12819: _handlePresenceUpdate ===
-
-// Module 12819 (_handlePresenceUpdate)
 import recomputeAffinities from "recomputeAffinities";
 import sortActivity from "sortActivity";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 6140: BurstReactionAnimationPreview ===
-
-// Module 6140 (BurstReactionAnimationPreview)
 import "noop";
 import { jsx } from "jsxProd";
 

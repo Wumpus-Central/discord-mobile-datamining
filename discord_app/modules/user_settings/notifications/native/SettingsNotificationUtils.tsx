@@ -1,6 +1,3 @@
-// === Module 14461: hasAndroidNotificationChannels ===
-
-// Module 14461 (hasAndroidNotificationChannels)
 const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationUtils.tsx");
 
 export const hasAndroidNotificationChannels = function hasAndroidNotificationChannels() {

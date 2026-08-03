@@ -1,6 +1,3 @@
-// === Module 9992: PinIcon ===
-
-// Module 9992 (PinIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 8716: WishlistButtonBase ===
-
-// Module 8716 (WishlistButtonBase)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";

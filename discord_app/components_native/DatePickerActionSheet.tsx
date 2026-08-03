@@ -1,6 +1,3 @@
-// === Module 8257: ActionSheetHeader ===
-
-// Module 8257 (ActionSheetHeader)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import { View } from "CollapsingText";

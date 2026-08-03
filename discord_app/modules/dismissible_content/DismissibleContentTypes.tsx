@@ -1,6 +1,3 @@
-// === Module 1359: isSingleUseDismissibleContent ===
-
-// Module 1359 (isSingleUseDismissibleContent)
 function isSingleUseDismissibleContent(item10020) {
   let hasItem = items1.includes(item10020);
   if (!hasItem) {

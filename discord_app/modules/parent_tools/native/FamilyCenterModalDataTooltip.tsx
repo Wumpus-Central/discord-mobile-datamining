@@ -1,6 +1,3 @@
-// === Module 13941: Row ===
-
-// Module 13941 (Row)
 import getEmptyActivityFormatter from "getEmptyActivityFormatter";
 import { View } from "messagesProxy";
 import jsxProd from "ModalContent";

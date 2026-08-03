@@ -1,6 +1,3 @@
-// === Module 3839: getPremiumPlanItem ===
-
-// Module 3839 (getPremiumPlanItem)
 import create from "create";
 import closure_4 from "t";
 import { isNoneSubscription } from "createFromServer";

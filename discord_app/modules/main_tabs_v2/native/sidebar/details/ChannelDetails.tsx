@@ -1,6 +1,3 @@
-// === Module 15482: PX_8 ===
-
-// Module 15482 (PX_8)
 import importAllResult from "DCDDeviceManager";
 import get_ActivityIndicator from "useSafeAreaInsets";
 import prototype from "prototype";

@@ -1,6 +1,3 @@
-// === Module 9089: unpackStageChannelParty ===
-
-// Module 9089 (unpackStageChannelParty)
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

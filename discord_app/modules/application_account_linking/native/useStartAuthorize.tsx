@@ -1,6 +1,3 @@
-// === Module 5522: useStartAuthorize ===
-
-// Module 5522 (useStartAuthorize)
 import useAuthorizedAppsTokens from "useAuthorizedAppsTokens";
 import noop from "noop";
 import { AuthorizeFlow } from "AuthorizeFlow";

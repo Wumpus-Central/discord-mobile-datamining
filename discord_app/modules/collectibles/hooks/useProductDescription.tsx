@@ -1,6 +1,3 @@
-// === Module 8767: getBundleDescription ===
-
-// Module 8767 (getBundleDescription)
 import { useMemo } from "noop";
 
 function getBundleDescription(bundledProducts) {

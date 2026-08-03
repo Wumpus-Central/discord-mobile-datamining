@@ -1,6 +1,3 @@
-// === Module 12375: createGroupDMInvite ===
-
-// Module 12375 (createGroupDMInvite)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 1480: useNavigation ===
-
-// Module 1480 (useNavigation)
 function useNavigation() {
   return require(1481) /* Link */.useNavigation();
 }

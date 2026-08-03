@@ -1,6 +1,3 @@
-// === Module 11432: useVoiceMessageTooltip ===
-
-// Module 11432 (useVoiceMessageTooltip)
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
 import VoiceMessageRecordingStatus from "VoiceMessageRecordingStatus";

@@ -1,6 +1,3 @@
-// === Module 9821: forwardRef ===
-
-// Module 9821 (forwardRef)
 import closure_2 from "noop";
 import noop from "noop";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 16747: handleUserApplicationIdentityGatewayEvent ===
-
-// Module 16747 (handleUserApplicationIdentityGatewayEvent)
 import "initialize";
 
 const require = arg1;

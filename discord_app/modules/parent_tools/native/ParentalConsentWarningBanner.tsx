@@ -1,6 +1,3 @@
-// === Module 15845: StyleSheet ===
-
-// Module 15845 (StyleSheet)
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "Text";
 import { FamilyCenterSubPages } from "items";

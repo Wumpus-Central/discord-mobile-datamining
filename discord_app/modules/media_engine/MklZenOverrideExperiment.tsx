@@ -1,6 +1,3 @@
-// === Module 12982: getMklZenOverrideExperimentConfig ===
-
-// Module 12982 (getMklZenOverrideExperimentConfig)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

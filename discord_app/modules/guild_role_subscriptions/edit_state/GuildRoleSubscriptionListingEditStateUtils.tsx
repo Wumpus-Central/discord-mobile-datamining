@@ -1,6 +1,3 @@
-// === Module 14263: getRoleEmojis ===
-
-// Module 14263 (getRoleEmojis)
 import closure_4 from "AllChannelAccessOptions";
 import _slicedToArray from "_slicedToArray";
 import batchUpdates from "batchUpdates";

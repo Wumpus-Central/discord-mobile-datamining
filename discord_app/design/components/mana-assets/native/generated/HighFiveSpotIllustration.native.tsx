@@ -1,6 +1,3 @@
-// === Module 7247: HighFiveSpotIllustration ===
-
-// Module 7247 (HighFiveSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/HighFiveSpotIllustration.native.tsx");

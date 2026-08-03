@@ -1,6 +1,3 @@
-// === Module 4100: useGuildAppliedBoostCount ===
-
-// Module 4100 (useGuildAppliedBoostCount)
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

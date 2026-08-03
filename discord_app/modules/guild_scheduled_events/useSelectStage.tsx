@@ -1,6 +1,3 @@
-// === Module 12292: useSelectStage ===
-
-// Module 12292 (useSelectStage)
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

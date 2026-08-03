@@ -1,6 +1,3 @@
-// === Module 7736: createDefaultReaction ===
-
-// Module 7736 (createDefaultReaction)
 import { HelpdeskArticles } from "ME";
 
 let result = require("registerAsset").fileFinishedImporting("modules/messages/native/renderer/row_data/ForumPostActions.tsx");

@@ -1,6 +1,3 @@
-// === Module 12382: createGuildTemplateEmbed ===
-
-// Module 12382 (createGuildTemplateEmbed)
 import { Image } from "get ActivityIndicator";
 import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";

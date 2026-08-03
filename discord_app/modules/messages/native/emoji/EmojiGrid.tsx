@@ -1,6 +1,3 @@
-// === Module 9437: Emoji ===
-
-// Module 9437 (Emoji)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

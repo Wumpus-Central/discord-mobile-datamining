@@ -1,6 +1,3 @@
-// === Module 15993: ActivitiesDebugOverlay ===
-
-// Module 15993 (ActivitiesDebugOverlay)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

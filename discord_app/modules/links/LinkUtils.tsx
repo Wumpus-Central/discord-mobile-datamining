@@ -1,6 +1,3 @@
-// === Module 4385: ME ===
-
-// Module 4385 (ME)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

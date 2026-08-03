@@ -1,6 +1,3 @@
-// === Module 15501: deserialize ===
-
-// Module 15501 (deserialize)
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { PersistedStore } from "initialize";
 

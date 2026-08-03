@@ -1,6 +1,3 @@
-// === Module 6171: UserSearchWorkerManager ===
-
-// Module 6171 (UserSearchWorkerManager)
 import get_ActivityIndicator from "get ActivityIndicator";
 import set from "set";
 

@@ -1,6 +1,3 @@
-// === Module 15299: NotificationCenterActionSheet ===
-
-// Module 15299 (NotificationCenterActionSheet)
 import registerAsset from "registerAsset";
 import findOrCreateMessageRecord from "findOrCreateMessageRecord";
 import { UserSettingsSections } from "ME";

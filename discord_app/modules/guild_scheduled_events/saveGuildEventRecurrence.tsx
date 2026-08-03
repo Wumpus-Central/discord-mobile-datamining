@@ -1,6 +1,3 @@
-// === Module 8235: saveGuildEventRecurrence ===
-
-// Module 8235 (saveGuildEventRecurrence)
 let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
 export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {

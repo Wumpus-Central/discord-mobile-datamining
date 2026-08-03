@@ -1,6 +1,3 @@
-// === Module 16496: RolePermissionTemplatesActionSheet ===
-
-// Module 16496 (RolePermissionTemplatesActionSheet)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

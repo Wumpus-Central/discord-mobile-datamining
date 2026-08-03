@@ -1,6 +1,3 @@
-// === Module 11694: _handleBoostPress ===
-
-// Module 11694 (_handleBoostPress)
 import PremiumGuildSubscribeModalScenes from "PremiumGuildSubscribeModalScenes";
 import LockIcon from "LockIcon";
 import { View } from "Button";

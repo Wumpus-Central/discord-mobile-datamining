@@ -1,6 +1,3 @@
-// === Module 16335: scheduleNextNotification ===
-
-// Module 16335 (scheduleNextNotification)
 import getTimeSafe from "getTimeSafe";
 import "initialize";
 

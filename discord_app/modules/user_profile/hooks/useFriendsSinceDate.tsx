@@ -1,6 +1,3 @@
-// === Module 11972: useFriendsSinceDate ===
-
-// Module 11972 (useFriendsSinceDate)
 import _getSystemLocale from "_getSystemLocale";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";

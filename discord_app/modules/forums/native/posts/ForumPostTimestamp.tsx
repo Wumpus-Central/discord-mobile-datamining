@@ -1,6 +1,3 @@
-// === Module 11205: ForumPostTimestamp ===
-
-// Module 11205 (ForumPostTimestamp)
 import "noop";
 import { useForumChannelStore } from "set";
 import { jsx } from "jsxProd";

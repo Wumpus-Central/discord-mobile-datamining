@@ -1,6 +1,3 @@
-// === Module 7: report ===
-
-// Module 7 (report)
 let c0 = new require("Deque")(5000);
 let tmp2 = new require("Deque")(5000);
 const result = require("set").fileFinishedImporting("modules/debug/LogAggregator.tsx");

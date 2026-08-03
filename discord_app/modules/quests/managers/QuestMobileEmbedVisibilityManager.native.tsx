@@ -1,6 +1,3 @@
-// === Module 16678: log ===
-
-// Module 16678 (log)
 import _slicedToArray from "_slicedToArray";
 import setContent from "setContent";
 import getParticipants from "getParticipants";

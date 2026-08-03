@@ -1,6 +1,3 @@
-// === Module 9271: EnvelopeIcon ===
-
-// Module 9271 (EnvelopeIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 10663: confirmActivityChangeModal ===
-
-// Module 10663 (confirmActivityChangeModal)
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

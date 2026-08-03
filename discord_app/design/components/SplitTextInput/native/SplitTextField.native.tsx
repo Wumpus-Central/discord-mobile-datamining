@@ -1,6 +1,3 @@
-// === Module 9222: SplitTextField ===
-
-// Module 9222 (SplitTextField)
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

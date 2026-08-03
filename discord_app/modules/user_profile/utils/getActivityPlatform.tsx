@@ -1,6 +1,3 @@
-// === Module 12021: PlatformTypes ===
-
-// Module 12021 (PlatformTypes)
 import { PlatformTypes } from "ME";
 import set from "isListeningOnSpotify";
 

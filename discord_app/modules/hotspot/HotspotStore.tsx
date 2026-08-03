@@ -1,6 +1,3 @@
-// === Module 5654: set ===
-
-// Module 5654 (set)
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
 import { PersistedStore } from "initialize";
 import set from "get";

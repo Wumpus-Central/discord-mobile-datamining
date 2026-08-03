@@ -1,6 +1,3 @@
-// === Module 8059: BundleStaticPreviewContent ===
-
-// Module 8059 (BundleStaticPreviewContent)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { BUNDLE_PREVIEW_CONFIG } from "SAMPLE_PROFILE_ASPECT_RATIO";

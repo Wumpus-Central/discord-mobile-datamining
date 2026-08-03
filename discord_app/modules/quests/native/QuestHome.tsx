@@ -1,6 +1,3 @@
-// === Module 14051: EmptyStateNoQuestsAvailable ===
-
-// Module 14051 (EmptyStateNoQuestsAvailable)
 import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement";
 import importAllResult from "Button";
 import get_ActivityIndicator from "SurveyActionTypes";

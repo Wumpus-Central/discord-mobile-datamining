@@ -1,6 +1,3 @@
-// === Module 5111: openQuarantineModeInfoModal ===
-
-// Module 5111 (openQuarantineModeInfoModal)
 import "noop";
 import { Keyboard } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 12535: BetaPill ===
-
-// Module 12535 (BetaPill)
 import { View } from "get ActivityIndicator";
 import { Gradients } from "items";
 import jsxProd from "jsxProd";

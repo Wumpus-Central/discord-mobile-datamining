@@ -1,6 +1,3 @@
-// === Module 11738: ChatBeginningRowJoinRequest ===
-
-// Module 11738 (ChatBeginningRowJoinRequest)
 import "noop";
 import { View } from "set";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

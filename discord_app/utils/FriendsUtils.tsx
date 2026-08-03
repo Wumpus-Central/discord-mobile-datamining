@@ -1,6 +1,3 @@
-// === Module 8931: validateDiscordTag ===
-
-// Module 8931 (validateDiscordTag)
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
 

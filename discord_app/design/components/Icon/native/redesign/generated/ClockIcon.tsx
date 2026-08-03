@@ -1,6 +1,3 @@
-// === Module 4157: ClockIcon ===
-
-// Module 4157 (ClockIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

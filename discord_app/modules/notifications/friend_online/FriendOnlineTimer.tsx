@@ -1,6 +1,3 @@
-// === Module 16670: _reportSessionMeaningfullyOnline ===
-
-// Module 16670 (_reportSessionMeaningfullyOnline)
 import set from "set";
 import filterPlayingActivities from "filterPlayingActivities";
 import initialize from "initialize";

@@ -1,6 +1,3 @@
-// === Module 8824: _toPropertyKey ===
-
-// Module 8824 (_toPropertyKey)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import closure_5 from "set";

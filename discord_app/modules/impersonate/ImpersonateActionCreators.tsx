@@ -1,6 +1,3 @@
-// === Module 5125: updateImpersonating ===
-
-// Module 5125 (updateImpersonating)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

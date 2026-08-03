@@ -1,6 +1,3 @@
-// === Module 11685: useMaybeGetSortedBoosts ===
-
-// Module 11685 (useMaybeGetSortedBoosts)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleModifyingAppliedBoostStart from "handleModifyingAppliedBoostStart";

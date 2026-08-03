@@ -1,6 +1,3 @@
-// === Module 1930: CHANGELOG_MODAL_KEY ===
-
-// Module 1930 (CHANGELOG_MODAL_KEY)
 const result = require("set").fileFinishedImporting("modules/changelog/ChangelogConstants.tsx");
 
 export const CHANGELOG_MODAL_KEY = "CHANGELOG_MODAL";

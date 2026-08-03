@@ -1,6 +1,3 @@
-// === Module 10939: useDefaultAppLauncherWidth ===
-
-// Module 10939 (useDefaultAppLauncherWidth)
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 
 const result = require("AppLauncherEntrypoint").fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");

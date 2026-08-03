@@ -1,6 +1,3 @@
-// === Module 16206: handleChannelPreload ===
-
-// Module 16206 (handleChannelPreload)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { isStaticChannelRoute } from "set";
 import "initialize";

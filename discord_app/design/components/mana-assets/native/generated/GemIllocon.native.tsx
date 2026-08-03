@@ -1,6 +1,3 @@
-// === Module 7143: GemIllocon ===
-
-// Module 7143 (GemIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GemIllocon.native.tsx");

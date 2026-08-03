@@ -1,6 +1,3 @@
-// === Module 13593: unsupportedCommand ===
-
-// Module 13593 (unsupportedCommand)
 import { RPCErrors } from "ME";
 
 let obj = {

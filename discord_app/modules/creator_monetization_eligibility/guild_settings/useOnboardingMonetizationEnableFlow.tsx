@@ -1,6 +1,3 @@
-// === Module 16573: useOnboardingMonetizationEnableFlow ===
-
-// Module 16573 (useOnboardingMonetizationEnableFlow)
 import noop from "noop";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import mergeGuildAvatar from "mergeGuildAvatar";

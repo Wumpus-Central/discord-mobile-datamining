@@ -1,6 +1,3 @@
-// === Module 16748: makeLogLine ===
-
-// Module 16748 (makeLogLine)
 import ME from "ME";
 import "initialize";
 

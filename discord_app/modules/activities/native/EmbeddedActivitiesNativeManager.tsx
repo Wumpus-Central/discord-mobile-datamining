@@ -1,6 +1,3 @@
-// === Module 10623: postMessageToWebView ===
-
-// Module 10623 (postMessageToWebView)
 import items3 from "items3";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";

@@ -1,6 +1,3 @@
-// === Module 11661: useGuildPowerupTier3OverrideConfig ===
-
-// Module 11661 (useGuildPowerupTier3OverrideConfig)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

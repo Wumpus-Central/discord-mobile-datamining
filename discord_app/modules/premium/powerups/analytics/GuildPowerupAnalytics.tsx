@@ -1,6 +1,3 @@
-// === Module 11648: ModalType ===
-
-// Module 11648 (ModalType)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

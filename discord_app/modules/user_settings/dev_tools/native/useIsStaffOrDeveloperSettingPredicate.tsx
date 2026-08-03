@@ -1,6 +1,3 @@
-// === Module 13892: useStaffOrDeveloperSettingPredicate ===
-
-// Module 13892 (useStaffOrDeveloperSettingPredicate)
 import init from "init";
 
 const require = arg1;

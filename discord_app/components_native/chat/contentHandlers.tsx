@@ -1,6 +1,3 @@
-// === Module 10919: onTapMention ===
-
-// Module 10919 (onTapMention)
 import importDefaultResult from "castNativeSyntheticEventData";
 
 const require = arg1;

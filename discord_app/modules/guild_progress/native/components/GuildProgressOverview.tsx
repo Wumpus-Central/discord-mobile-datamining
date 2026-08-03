@@ -1,6 +1,3 @@
-// === Module 13133: GuildProgressOverviewView ===
-
-// Module 13133 (GuildProgressOverviewView)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

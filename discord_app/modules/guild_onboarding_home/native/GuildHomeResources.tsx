@@ -1,6 +1,3 @@
-// === Module 15457: ResourceChannelRow ===
-
-// Module 15457 (ResourceChannelRow)
 import getDefaultRules from "get defaultRules";
 import get_ActivityIndicator from "PressableBase";
 import ensureGuildLoaded from "ensureGuildLoaded";

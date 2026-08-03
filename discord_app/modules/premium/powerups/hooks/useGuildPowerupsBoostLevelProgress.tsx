@@ -1,6 +1,3 @@
-// === Module 4119: useGuildPowerupBoostLevelProgress ===
-
-// Module 4119 (useGuildPowerupBoostLevelProgress)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
 

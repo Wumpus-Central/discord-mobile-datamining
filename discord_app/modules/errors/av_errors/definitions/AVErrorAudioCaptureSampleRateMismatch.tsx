@@ -1,6 +1,3 @@
-// === Module 16709: AVErrorAudioCaptureSampleRateMismatchDefinition ===
-
-// Module 16709 (AVErrorAudioCaptureSampleRateMismatchDefinition)
 import updateAveragedStatsHelper from "updateAveragedStatsHelper";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";

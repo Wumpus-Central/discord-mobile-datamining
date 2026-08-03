@@ -1,6 +1,3 @@
-// === Module 14674: DataAndPrivacySettings ===
-
-// Module 14674 (DataAndPrivacySettings)
 import noop from "noop";
 import hasConsented from "hasConsented";
 import { MobileSetting } from "MobileSetting";

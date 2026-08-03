@@ -1,6 +1,3 @@
-// === Module 9889: ForumPostTagsActionSheet ===
-
-// Module 9889 (ForumPostTagsActionSheet)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

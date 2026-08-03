@@ -1,6 +1,3 @@
-// === Module 1454: awaitOnline ===
-
-// Module 1454 (awaitOnline)
 let closure_2 = [];
 let c3 = false;
 const obj = {};

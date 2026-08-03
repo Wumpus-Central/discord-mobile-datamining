@@ -1,6 +1,3 @@
-// === Module 16540: FinishingTouchesScreen ===
-
-// Module 16540 (FinishingTouchesScreen)
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
 import get_ActivityIndicator from "EnableCommunityModalSteps";

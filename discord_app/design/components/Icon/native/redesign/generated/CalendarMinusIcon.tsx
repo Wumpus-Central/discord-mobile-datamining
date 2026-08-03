@@ -1,6 +1,3 @@
-// === Module 15490: CalendarMinusIcon ===
-
-// Module 15490 (CalendarMinusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 14388: useValue ===
-
-// Module 14388 (useValue)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
 

@@ -1,6 +1,3 @@
-// === Module 11409: CHAT_INPUT_TIMING_CONFIG ===
-
-// Module 11409 (CHAT_INPUT_TIMING_CONFIG)
 import renderChatInputActionButtonGiftAndThread from "renderChatInputActionButtonGiftAndThread";
 import importAllResult from "ImageIcon";
 import TextAreaCta from "TextAreaCta";

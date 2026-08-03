@@ -1,6 +1,3 @@
-// === Module 15496: SearchFreezeContainer ===
-
-// Module 15496 (SearchFreezeContainer)
 import { View } from "get ActivityIndicator";
 import prototype from "prototype";
 import jsxProd from "jsxProd";

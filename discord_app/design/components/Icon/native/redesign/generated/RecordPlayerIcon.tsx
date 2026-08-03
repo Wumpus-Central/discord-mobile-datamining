@@ -1,6 +1,3 @@
-// === Module 13689: RecordPlayerIcon ===
-
-// Module 13689 (RecordPlayerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

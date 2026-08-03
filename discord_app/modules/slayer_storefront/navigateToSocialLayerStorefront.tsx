@@ -1,6 +1,3 @@
-// === Module 6690: navigateToSocialLayerStorefrontWithGuildPreview ===
-
-// Module 6690 (navigateToSocialLayerStorefrontWithGuildPreview)
 import getPrice from "getPrice";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";

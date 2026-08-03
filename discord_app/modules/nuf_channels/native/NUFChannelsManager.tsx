@@ -1,6 +1,3 @@
-// === Module 12843: _initialize ===
-
-// Module 12843 (_initialize)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";

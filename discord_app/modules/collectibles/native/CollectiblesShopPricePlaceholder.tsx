@@ -1,6 +1,3 @@
-// === Module 8734: CollectiblesShopPricePlaceholder ===
-
-// Module 8734 (CollectiblesShopPricePlaceholder)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

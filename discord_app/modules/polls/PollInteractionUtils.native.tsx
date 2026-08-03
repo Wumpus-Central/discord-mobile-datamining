@@ -1,6 +1,3 @@
-// === Module 9971: showVotesForAnswer ===
-
-// Module 9971 (showVotesForAnswer)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/polls/PollInteractionUtils.native.tsx");
 
 export const showVotesForAnswer = function showVotesForAnswer(initialAnswerId) {

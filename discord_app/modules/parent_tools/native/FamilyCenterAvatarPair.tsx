@@ -1,6 +1,3 @@
-// === Module 13972: FamilyCenterAvatarPair ===
-
-// Module 13972 (FamilyCenterAvatarPair)
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

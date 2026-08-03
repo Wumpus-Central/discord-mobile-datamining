@@ -1,6 +1,3 @@
-// === Module 10432: ? ===
-
-// Module 10432
 import apexExperiment from "apexExperiment";
 
 if (apexExperiment.isAnimatedAndroidKeyboard()) {

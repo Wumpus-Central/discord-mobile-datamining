@@ -1,6 +1,3 @@
-// === Module 5025: isVersionEqual ===
-
-// Module 5025 (isVersionEqual)
 const result = require("set").fileFinishedImporting("utils/SecondaryIndexMapUtils.tsx");
 
 export const isVersionEqual = function isVersionEqual(arg0, arg1) {

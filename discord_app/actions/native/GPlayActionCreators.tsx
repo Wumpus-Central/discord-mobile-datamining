@@ -1,6 +1,3 @@
-// === Module 6303: getPlanIdForProduct ===
-
-// Module 6303 (getPlanIdForProduct)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importDefaultResult from "updateProduct";
 import setGPlayAnalytics from "setGPlayAnalytics";

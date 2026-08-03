@@ -1,6 +1,3 @@
-// === Module 9586: parsedItemUsesEveryoneRole ===
-
-// Module 9586 (parsedItemUsesEveryoneRole)
 import _slicedToArray from "_slicedToArray";
 import getMemberListId from "getMemberListId";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

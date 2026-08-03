@@ -1,6 +1,3 @@
-// === Module 9723: usePremiumProductPricingString ===
-
-// Module 9723 (usePremiumProductPricingString)
 import updateProduct from "updateProduct";
 import { PRICE_PLACEHOLDER } from "GuildFeatures";
 

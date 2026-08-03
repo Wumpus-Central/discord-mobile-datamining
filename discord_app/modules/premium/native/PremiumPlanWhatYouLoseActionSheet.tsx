@@ -1,6 +1,3 @@
-// === Module 6539: WhatYouLoseItem ===
-
-// Module 6539 (WhatYouLoseItem)
 import Background from "Background";
 import { View } from "registerAsset";
 import { PremiumTypes } from "GuildFeatures";

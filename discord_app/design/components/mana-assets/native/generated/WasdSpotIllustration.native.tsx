@@ -1,6 +1,3 @@
-// === Module 7597: WasdSpotIllustration ===
-
-// Module 7597 (WasdSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/WasdSpotIllustration.native.tsx");

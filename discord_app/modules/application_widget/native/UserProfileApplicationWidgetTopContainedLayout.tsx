@@ -1,6 +1,3 @@
-// === Module 12171: UserProfileApplicationWidgetTopContainedLayout ===
-
-// Module 12171 (UserProfileApplicationWidgetTopContainedLayout)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

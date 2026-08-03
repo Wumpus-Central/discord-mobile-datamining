@@ -1,6 +1,3 @@
-// === Module 7922: handleFetchEmbeddedActivityShelfSuccess ===
-
-// Module 7922 (handleFetchEmbeddedActivityShelfSuccess)
 import { Store } from "initialize";
 
 function handleFetchEmbeddedActivityShelfSuccess(assets) {

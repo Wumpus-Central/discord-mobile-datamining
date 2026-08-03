@@ -1,6 +1,3 @@
-// === Module 11744: ? ===
-
-// Module 11744
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

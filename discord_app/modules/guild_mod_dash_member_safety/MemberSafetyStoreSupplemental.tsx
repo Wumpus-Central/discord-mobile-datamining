@@ -1,6 +1,3 @@
-// === Module 5762: hasMemberSupplemental ===
-
-// Module 5762 (hasMemberSupplemental)
 let closure_2 = {};
 const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyStoreSupplemental.tsx");
 

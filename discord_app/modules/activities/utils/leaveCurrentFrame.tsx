@@ -1,6 +1,3 @@
-// === Module 10631: leaveCurrentFrame ===
-
-// Module 10631 (leaveCurrentFrame)
 import map from "map";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/leaveCurrentFrame.tsx");

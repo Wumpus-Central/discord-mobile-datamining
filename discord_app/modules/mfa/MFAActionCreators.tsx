@@ -1,6 +1,3 @@
-// === Module 14781: openMFAModal ===
-
-// Module 14781 (openMFAModal)
 import { SELECT_NAMES } from "get webauthn";
 
 const result = require("finishMFACheck").fileFinishedImporting("modules/mfa/MFAActionCreators.tsx");

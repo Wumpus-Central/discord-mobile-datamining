@@ -1,6 +1,3 @@
-// === Module 12009: HourglassIcon ===
-
-// Module 12009 (HourglassIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

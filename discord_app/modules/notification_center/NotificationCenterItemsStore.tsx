@@ -1,6 +1,3 @@
-// === Module 5929: _validate ===
-
-// Module 5929 (_validate)
 import getHash from "getHash";
 import { isGuildEventEnded } from "scheduledEventSort";
 import hasFlag from "hasFlag";

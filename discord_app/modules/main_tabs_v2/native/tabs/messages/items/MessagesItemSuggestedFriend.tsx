@@ -1,6 +1,3 @@
-// === Module 15059: getMessagesItemSuggestedFriendHeight ===
-
-// Module 15059 (getMessagesItemSuggestedFriendHeight)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Text";
 import { View } from "PressableBase";

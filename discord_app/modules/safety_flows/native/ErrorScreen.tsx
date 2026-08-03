@@ -1,6 +1,3 @@
-// === Module 16746: ErrorScreen ===
-
-// Module 16746 (ErrorScreen)
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

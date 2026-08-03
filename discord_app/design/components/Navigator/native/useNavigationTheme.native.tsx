@@ -1,6 +1,3 @@
-// === Module 5643: useNavigationTheme ===
-
-// Module 5643 (useNavigationTheme)
 import noop from "noop";
 
 const require = arg1;

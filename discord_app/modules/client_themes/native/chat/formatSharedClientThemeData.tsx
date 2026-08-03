@@ -1,6 +1,3 @@
-// === Module 8009: formatSharedClientThemeData ===
-
-// Module 8009 (formatSharedClientThemeData)
 import { Image } from "get ActivityIndicator";
 
 const result = require("getSystemLocale").fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");

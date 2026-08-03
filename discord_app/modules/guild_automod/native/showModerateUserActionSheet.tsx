@@ -1,6 +1,3 @@
-// === Module 11037: showModerateUserActionSheet ===
-
-// Module 11037 (showModerateUserActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_automod/native/showModerateUserActionSheet.tsx");
 
 export default function showModerateUserActionSheet(arg0) {

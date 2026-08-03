@@ -1,6 +1,3 @@
-// === Module 6770: AgeVerificationQuestUnsupportedAlertModal ===
-
-// Module 6770 (AgeVerificationQuestUnsupportedAlertModal)
 import "noop";
 import { jsx } from "jsxProd";
 

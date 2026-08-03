@@ -1,6 +1,3 @@
-// === Module 11367: AppLauncherSelectOptionFormRow ===
-
-// Module 11367 (AppLauncherSelectOptionFormRow)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

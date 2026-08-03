@@ -1,6 +1,3 @@
-// === Module 7813: createStageEndSystemMessage ===
-
-// Module 7813 (createStageEndSystemMessage)
 const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageEndSystemMessage.tsx");
 
 export const createStageEndSystemMessage = function createStageEndSystemMessage(roleStyle) {

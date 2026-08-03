@@ -1,6 +1,3 @@
-// === Module 9827: BalanceCounter ===
-
-// Module 9827 (BalanceCounter)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import closure_8 from "noop";

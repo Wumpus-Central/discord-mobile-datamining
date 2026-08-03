@@ -1,6 +1,3 @@
-// === Module 14685: useDefaultGuildsRestricted ===
-
-// Module 14685 (useDefaultGuildsRestricted)
 const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
 
 export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() {

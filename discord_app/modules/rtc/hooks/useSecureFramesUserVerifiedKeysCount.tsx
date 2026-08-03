@@ -1,6 +1,3 @@
-// === Module 8914: useSecureFramesUserVerifiedKeysCount ===
-
-// Module 8914 (useSecureFramesUserVerifiedKeysCount)
 import noop from "noop";
 import initialize from "initialize";
 

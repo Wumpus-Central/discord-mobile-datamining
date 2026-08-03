@@ -1,6 +1,3 @@
-// === Module 6640: VideoIcon ===
-
-// Module 6640 (VideoIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

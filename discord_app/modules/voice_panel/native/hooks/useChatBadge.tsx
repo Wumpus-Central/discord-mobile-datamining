@@ -1,6 +1,3 @@
-// === Module 15978: useChatBadge ===
-
-// Module 15978 (useChatBadge)
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 
 const require = arg1;

@@ -1,6 +1,3 @@
-// === Module 11452: _fetchGuildHomeSettings ===
-
-// Module 11452 (_fetchGuildHomeSettings)
 import closure_3 from "ME";
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";

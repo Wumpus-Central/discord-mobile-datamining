@@ -1,6 +1,3 @@
-// === Module 10261: setsEqual ===
-
-// Module 10261 (setsEqual)
 import set from "messagesProxy";
 
 function setsEqual(set, set2) {

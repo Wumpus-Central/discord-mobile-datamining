@@ -1,6 +1,3 @@
-// === Module 8493: _getDeepLinkUrl ===
-
-// Module 8493 (_getDeepLinkUrl)
 import _slicedToArray from "_slicedToArray";
 import _openURL from "_openURL";
 import noop from "noop";

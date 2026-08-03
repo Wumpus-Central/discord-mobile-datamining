@@ -1,6 +1,3 @@
-// === Module 6682: componentDidMount ===
-
-// Module 6682 (componentDidMount)
 import { StatusBar } from "get ActivityIndicator";
 
 class StatusBarAndroid extends StatusBar {

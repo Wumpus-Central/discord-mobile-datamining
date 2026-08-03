@@ -1,6 +1,3 @@
-// === Module 9046: XboxLinkDiscordError ===
-
-// Module 9046 (XboxLinkDiscordError)
 import "noop";
 import { XboxLinkModalScenes } from "XboxLinkModalScenes";
 import { jsx } from "jsxProd";

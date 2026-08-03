@@ -1,6 +1,3 @@
-// === Module 11626: GuildPowerupsBoostGem ===
-
-// Module 11626 (GuildPowerupsBoostGem)
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

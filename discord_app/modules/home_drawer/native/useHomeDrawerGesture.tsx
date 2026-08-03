@@ -1,6 +1,3 @@
-// === Module 14948: HOME_DRAWER_FLING_PHYSICS ===
-
-// Module 14948 (HOME_DRAWER_FLING_PHYSICS)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import withEqualityFn from "withEqualityFn";

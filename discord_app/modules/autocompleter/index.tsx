@@ -1,6 +1,3 @@
-// === Module 6166: sortByMatchScore ===
-
-// Module 6166 (sortByMatchScore)
 import HeaderRecord from "HeaderRecord";
 
 const result = require("HeaderRecord").fileFinishedImporting("modules/autocompleter/index.tsx");

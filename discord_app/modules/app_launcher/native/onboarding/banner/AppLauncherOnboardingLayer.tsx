@@ -1,6 +1,3 @@
-// === Module 11235: ? ===
-
-// Module 11235
 import { View } from "get ActivityIndicator";
 import { useBestActiveChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight";
 import { jsx } from "jsxProd";

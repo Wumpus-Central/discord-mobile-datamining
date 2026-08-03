@@ -1,6 +1,3 @@
-// === Module 7153: GemLevel1SpotIllustration ===
-
-// Module 7153 (GemLevel1SpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/GemLevel1SpotIllustration.native.tsx");

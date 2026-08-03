@@ -1,6 +1,3 @@
-// === Module 647: defaultAreStatesEqual ===
-
-// Module 647 (defaultAreStatesEqual)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

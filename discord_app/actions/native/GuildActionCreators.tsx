@@ -1,6 +1,3 @@
-// === Module 16478: batchChannelUpdate ===
-
-// Module 16478 (batchChannelUpdate)
 import { Endpoints } from "ME";
 
 function batchChannelUpdate(outer1_0) {

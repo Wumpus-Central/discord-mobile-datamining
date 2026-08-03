@@ -1,6 +1,3 @@
-// === Module 10385: ThreadNotificationsBottomSheet ===
-
-// Module 10385 (ThreadNotificationsBottomSheet)
 import { getThreadNotificationOptions as closure_3 } from "AbortCodes";
 import { jsx } from "jsxProd";
 

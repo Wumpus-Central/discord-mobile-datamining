@@ -1,6 +1,3 @@
-// === Module 12436: EndStageActionSheet ===
-
-// Module 12436 (EndStageActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { EXPLICIT_END_STAGE_SHEET_KEY as closure_4 } from "MAX_STAGE_TOPIC_LENGTH";

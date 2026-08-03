@@ -1,6 +1,3 @@
-// === Module 7857: createGiftIntentEmbed ===
-
-// Module 7857 (createGiftIntentEmbed)
 import getCurrentTime from "getCurrentTime";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { GiftIntentType } from "GuildFeatures";

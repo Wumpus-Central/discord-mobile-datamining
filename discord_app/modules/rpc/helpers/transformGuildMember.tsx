@@ -1,6 +1,3 @@
-// === Module 13595: transformGuildMember ===
-
-// Module 13595 (transformGuildMember)
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/transformGuildMember.tsx");
 
 export default function transformGuildMember(userId) {

@@ -1,6 +1,3 @@
-// === Module 13475: installSystrace ===
-
-// Module 13475 (installSystrace)
 import { Systrace } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/systrace/native/installSystrace.tsx");

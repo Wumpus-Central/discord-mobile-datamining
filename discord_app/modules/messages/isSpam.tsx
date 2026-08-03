@@ -1,6 +1,3 @@
-// === Module 5768: isSpamSupported ===
-
-// Module 5768 (isSpamSupported)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 

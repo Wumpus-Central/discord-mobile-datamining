@@ -1,6 +1,3 @@
-// === Module 10929: TimerIcon ===
-
-// Module 10929 (TimerIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

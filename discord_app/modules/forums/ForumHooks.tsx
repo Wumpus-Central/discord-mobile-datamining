@@ -1,6 +1,3 @@
-// === Module 9142: useLoadForumUnreadCounts ===
-
-// Module 9142 (useLoadForumUnreadCounts)
 import updateState from "updateState";
 import AbortCodes from "AbortCodes";
 import getEmojiToGroupId from "getEmojiToGroupId";

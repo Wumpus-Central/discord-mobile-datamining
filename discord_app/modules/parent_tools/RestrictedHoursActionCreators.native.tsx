@@ -1,6 +1,3 @@
-// === Module 16134: closeRestrictedHoursModal ===
-
-// Module 16134 (closeRestrictedHoursModal)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

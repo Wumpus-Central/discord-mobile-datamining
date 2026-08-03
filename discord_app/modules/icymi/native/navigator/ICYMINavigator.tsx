@@ -1,6 +1,3 @@
-// === Module 15341: ICYMINavigator ===
-
-// Module 15341 (ICYMINavigator)
 import jsxProd from "jsxProd";
 import createNativeStackNavigator from "createNativeStackNavigator";
 

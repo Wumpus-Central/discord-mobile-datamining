@@ -1,6 +1,3 @@
-// === Module 9590: AutocompleteFormDivider ===
-
-// Module 9590 (AutocompleteFormDivider)
 import "noop";
 import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord";
 import comparator from "comparator";

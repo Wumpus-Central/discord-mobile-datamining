@@ -1,6 +1,3 @@
-// === Module 9678: AppliedForumTag ===
-
-// Module 9678 (AppliedForumTag)
 import "noop";
 import { View } from "get ActivityIndicator";
 import getEmojiToGroupId from "getEmojiToGroupId";

@@ -1,6 +1,3 @@
-// === Module 8953: XboxLinkDiscordConsent ===
-
-// Module 8953 (XboxLinkDiscordConsent)
 import noop from "noop";
 import { XboxLinkModalScenes } from "XboxLinkModalScenes";
 import { PlatformTypes } from "ME";

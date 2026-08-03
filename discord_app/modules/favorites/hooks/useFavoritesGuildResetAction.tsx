@@ -1,6 +1,3 @@
-// === Module 15143: useFavoritesGuildResetAction ===
-
-// Module 15143 (useFavoritesGuildResetAction)
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 import { Routes } from "ME";

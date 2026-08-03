@@ -1,6 +1,3 @@
-// === Module 14208: Footer ===
-
-// Module 14208 (Footer)
 import Background from "Background";
 import { View } from "items";
 import ME from "ME";

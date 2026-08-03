@@ -1,6 +1,3 @@
-// === Module 8356: getDefaultInviteExpiration ===
-
-// Module 8356 (getDefaultInviteExpiration)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
 import createExperiment from "createExperiment";

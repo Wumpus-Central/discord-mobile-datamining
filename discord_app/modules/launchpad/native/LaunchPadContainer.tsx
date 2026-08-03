@@ -1,6 +1,3 @@
-// === Module 15808: LaunchPadContainer ===
-
-// Module 15808 (LaunchPadContainer)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";

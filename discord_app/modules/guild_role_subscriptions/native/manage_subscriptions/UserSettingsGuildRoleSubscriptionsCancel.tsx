@@ -1,6 +1,3 @@
-// === Module 14262: WhatYouLose ===
-
-// Module 14262 (WhatYouLose)
 import closure_4 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import notSupported from "notSupported";

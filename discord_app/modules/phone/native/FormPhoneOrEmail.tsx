@@ -1,6 +1,3 @@
-// === Module 9245: CountryCodeSelector ===
-
-// Module 9245 (CountryCodeSelector)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

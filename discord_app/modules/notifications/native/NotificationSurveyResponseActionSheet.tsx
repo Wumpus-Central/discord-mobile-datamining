@@ -1,6 +1,3 @@
-// === Module 9555: onClose ===
-
-// Module 9555 (onClose)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import ME from "ME";

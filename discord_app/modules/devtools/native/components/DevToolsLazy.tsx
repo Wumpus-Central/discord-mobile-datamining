@@ -1,6 +1,3 @@
-// === Module 13650: NativeModules ===
-
-// Module 13650 (NativeModules)
 import jsxProd from "jsxProd";
 import noop from "noop";
 import { NativeModules } from "get ActivityIndicator";

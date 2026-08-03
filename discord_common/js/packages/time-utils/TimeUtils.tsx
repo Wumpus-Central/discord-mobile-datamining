@@ -1,6 +1,3 @@
-// === Module 4269: sleep ===
-
-// Module 4269 (sleep)
 import asyncGeneratorStep from "asyncGeneratorStep";
 import tryCatch from "tryCatch";
 

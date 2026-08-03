@@ -1,6 +1,3 @@
-// === Module 7637: ScrollHandlingActionSheet ===
-
-// Module 7637 (ScrollHandlingActionSheet)
 import "noop";
 import { jsx } from "jsxProd";
 

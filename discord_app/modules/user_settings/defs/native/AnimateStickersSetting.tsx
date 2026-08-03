@@ -1,6 +1,3 @@
-// === Module 14398: radio ===
-
-// Module 14398 (radio)
 import noop from "noop";
 import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
 import createToggle from "createToggle";

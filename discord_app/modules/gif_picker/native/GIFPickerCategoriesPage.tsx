@@ -1,6 +1,3 @@
-// === Module 9626: ? ===
-
-// Module 9626
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import getFormatFromUrl from "getFormatFromUrl";

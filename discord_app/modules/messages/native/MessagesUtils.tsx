@@ -1,6 +1,3 @@
-// === Module 9320: getVisibleMessages ===
-
-// Module 9320 (getVisibleMessages)
 import _copy from "_copy";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { updateShouldShowJumpToPresentButton as closure_5 } from "updateChatInputContainerHeight";

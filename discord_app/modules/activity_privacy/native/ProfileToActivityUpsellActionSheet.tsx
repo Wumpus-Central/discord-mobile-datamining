@@ -1,6 +1,3 @@
-// === Module 13902: ProfileToActivityUpsellActionSheet ===
-
-// Module 13902 (ProfileToActivityUpsellActionSheet)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 12209: navigateToPremiumHomePage ===
-
-// Module 12209 (navigateToPremiumHomePage)
 import ME from "ME";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 4279: initialize ===
-
-// Module 4279 (initialize)
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import importDefaultResult from "_detectH265HardwareDecode";

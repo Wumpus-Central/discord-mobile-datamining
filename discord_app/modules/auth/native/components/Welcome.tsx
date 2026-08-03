@@ -1,6 +1,3 @@
-// === Module 14879: InviteCard ===
-
-// Module 14879 (InviteCard)
 import nameFromUser from "nameFromUser";
 import get_ActivityIndicator from "module_38";
 import isUnderageAnonymous from "isUnderageAnonymous";

@@ -1,6 +1,3 @@
-// === Module 15575: getItemKey ===
-
-// Module 15575 (getItemKey)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

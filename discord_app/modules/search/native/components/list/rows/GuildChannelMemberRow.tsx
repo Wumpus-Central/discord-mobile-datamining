@@ -1,6 +1,3 @@
-// === Module 15538: GuildChannelMemberRow ===
-
-// Module 15538 (GuildChannelMemberRow)
 import "noop";
 import { jsx } from "jsxProd";
 

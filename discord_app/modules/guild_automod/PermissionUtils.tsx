@@ -1,6 +1,3 @@
-// === Module 15682: canCurrentUserManageMessageFilters ===
-
-// Module 15682 (canCurrentUserManageMessageFilters)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";

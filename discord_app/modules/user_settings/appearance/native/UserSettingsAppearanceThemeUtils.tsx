@@ -1,6 +1,3 @@
-// === Module 14218: handleSaveTheme ===
-
-// Module 14218 (handleSaveTheme)
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import reset from "reset";
 import handleThemeChange from "handleThemeChange";

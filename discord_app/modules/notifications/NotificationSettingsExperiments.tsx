@@ -1,6 +1,3 @@
-// === Module 13535: knownExperimentConfigs ===
-
-// Module 13535 (knownExperimentConfigs)
 import ApexExperiment from "ApexExperiment";
 
 let obj = { "2026-05-noisier-notif-settings-defaults": null };

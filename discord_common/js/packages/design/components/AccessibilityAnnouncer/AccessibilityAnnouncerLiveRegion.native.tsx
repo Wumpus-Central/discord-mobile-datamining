@@ -1,6 +1,3 @@
-// === Module 3907: updateAccessibilityAnnouncerLiveRegionMessage ===
-
-// Module 3907 (updateAccessibilityAnnouncerLiveRegionMessage)
 import { Text } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import keys from "keys";

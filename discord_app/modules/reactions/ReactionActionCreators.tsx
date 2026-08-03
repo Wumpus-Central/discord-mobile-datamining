@@ -1,6 +1,3 @@
-// === Module 6079: checkReactionResponse ===
-
-// Module 6079 (checkReactionResponse)
 import set from "set";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

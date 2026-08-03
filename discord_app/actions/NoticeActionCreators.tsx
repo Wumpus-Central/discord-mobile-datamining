@@ -1,6 +1,3 @@
-// === Module 15657: dispatcher ===
-
-// Module 15657 (dispatcher)
 const result = require("set").fileFinishedImporting("actions/NoticeActionCreators.tsx");
 
 export default {

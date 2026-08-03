@@ -1,6 +1,3 @@
-// === Module 8954: XBOX_URL_BASE ===
-
-// Module 8954 (XBOX_URL_BASE)
 import set from "set";
 
 const items = [require("set").OAuth2Scopes.VOICE, require("set").OAuth2Scopes.DM_CHANNELS_READ, require("set").OAuth2Scopes.GUILDS, require("set").OAuth2Scopes.GUILDS_MEMBERS_READ, require("set").OAuth2Scopes.IDENTIFY, require("set").OAuth2Scopes.CONNECTIONS, require("set").OAuth2Scopes.ACTIVITIES_READ];

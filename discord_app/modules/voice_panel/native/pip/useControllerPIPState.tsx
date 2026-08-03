@@ -1,6 +1,3 @@
-// === Module 15932: useControllerPIPState ===
-
-// Module 15932 (useControllerPIPState)
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import participantFromServer from "participantFromServer";

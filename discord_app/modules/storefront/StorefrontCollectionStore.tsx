@@ -1,6 +1,3 @@
-// === Module 12230: getFetchState ===
-
-// Module 12230 (getFetchState)
 import { Store } from "initialize";
 
 let closure_0 = {};

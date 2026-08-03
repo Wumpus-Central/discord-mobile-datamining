@@ -1,6 +1,3 @@
-// === Module 12636: useUnmountAbortSignal ===
-
-// Module 12636 (useUnmountAbortSignal)
 const result = require("set").fileFinishedImporting("hooks/useUnmountAbortSignal.tsx");
 
 export default function useUnmountAbortSignal() {

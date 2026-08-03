@@ -1,6 +1,3 @@
-// === Module 14377: DisplayNameStylesFontPickerSheet ===
-
-// Module 14377 (DisplayNameStylesFontPickerSheet)
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import get_ActivityIndicator from "getSystemLocale";

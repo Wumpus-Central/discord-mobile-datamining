@@ -1,6 +1,3 @@
-// === Module 7721: generateBlockedGroupRowData ===
-
-// Module 7721 (generateBlockedGroupRowData)
 import { SeparatorAction } from "Changeset";
 import { UNSAFE_Colors } from "sum";
 import apply from "apply";

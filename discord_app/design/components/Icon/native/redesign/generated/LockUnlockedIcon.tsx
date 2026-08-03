@@ -1,6 +1,3 @@
-// === Module 10380: LockUnlockedIcon ===
-
-// Module 10380 (LockUnlockedIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

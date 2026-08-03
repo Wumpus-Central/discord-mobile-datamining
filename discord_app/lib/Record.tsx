@@ -1,6 +1,3 @@
-// === Module 1883: toJS ===
-
-// Module 1883 (toJS)
 let Record;
 class Record {
 }

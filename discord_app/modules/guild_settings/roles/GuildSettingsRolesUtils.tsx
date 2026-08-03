@@ -1,6 +1,3 @@
-// === Module 16476: ADD_MEMBER_QUERY_LIMIT ===
-
-// Module 16476 (ADD_MEMBER_QUERY_LIMIT)
 import noop from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";

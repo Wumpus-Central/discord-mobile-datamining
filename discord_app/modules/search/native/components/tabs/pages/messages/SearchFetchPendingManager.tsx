@@ -1,6 +1,3 @@
-// === Module 15553: useSearchFetchPendingManager ===
-
-// Module 15553 (useSearchFetchPendingManager)
 import noop from "noop";
 
 let closure_3 = function SearchFetchPendingManager() {

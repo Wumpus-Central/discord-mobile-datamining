@@ -1,6 +1,3 @@
-// === Module 16738: UpdateAppScreen ===
-
-// Module 16738 (UpdateAppScreen)
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

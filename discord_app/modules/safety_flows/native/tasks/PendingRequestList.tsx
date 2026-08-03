@@ -1,6 +1,3 @@
-// === Module 16744: PendingRequestRow ===
-
-// Module 16744 (PendingRequestRow)
 import dispatcher from "dispatcher";
 import get_ActivityIndicator from "registerAsset";
 import mergeGuildAvatar from "mergeGuildAvatar";

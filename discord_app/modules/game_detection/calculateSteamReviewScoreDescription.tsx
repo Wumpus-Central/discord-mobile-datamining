@@ -1,6 +1,3 @@
-// === Module 8532: calculateSteamReviewScoreDescription ===
-
-// Module 8532 (calculateSteamReviewScoreDescription)
 const result = require("set").fileFinishedImporting("modules/game_detection/calculateSteamReviewScoreDescription.tsx");
 
 export const calculateSteamReviewScoreDescription = function calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating) {

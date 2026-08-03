@@ -1,6 +1,3 @@
-// === Module 6022: enforcing ===
-
-// Module 6022 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAdsModule");

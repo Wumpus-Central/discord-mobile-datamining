@@ -1,6 +1,3 @@
-// === Module 15144: FavoritesGuildHeaderActionButton ===
-
-// Module 15144 (FavoritesGuildHeaderActionButton)
 import "noop";
 import { jsx } from "jsxProd";
 

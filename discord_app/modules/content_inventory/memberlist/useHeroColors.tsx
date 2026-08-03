@@ -1,6 +1,3 @@
-// === Module 7916: useHeroColors ===
-
-// Module 7916 (useHeroColors)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

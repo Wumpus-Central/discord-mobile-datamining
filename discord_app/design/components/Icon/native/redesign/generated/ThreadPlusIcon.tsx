@@ -1,6 +1,3 @@
-// === Module 11411: ThreadPlusIcon ===
-
-// Module 11411 (ThreadPlusIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

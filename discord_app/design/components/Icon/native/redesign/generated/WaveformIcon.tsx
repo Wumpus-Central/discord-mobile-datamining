@@ -1,6 +1,3 @@
-// === Module 10310: WaveformIcon ===
-
-// Module 10310 (WaveformIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

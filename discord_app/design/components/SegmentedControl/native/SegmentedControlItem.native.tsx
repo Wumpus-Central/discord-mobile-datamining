@@ -1,6 +1,3 @@
-// === Module 8765: SegmentedControlItem ===
-
-// Module 8765 (SegmentedControlItem)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

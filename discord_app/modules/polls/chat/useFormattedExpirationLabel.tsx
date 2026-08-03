@@ -1,6 +1,3 @@
-// === Module 8003: formatExpirationLabel ===
-
-// Module 8003 (formatExpirationLabel)
 function formatExpirationLabel(expiry) {
   const tmp2 = importDefault(3775)();
   if (expiry > tmp2) {

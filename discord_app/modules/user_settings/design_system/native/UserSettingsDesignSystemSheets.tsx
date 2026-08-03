@@ -1,6 +1,3 @@
-// === Module 14613: DemoActionSheet ===
-
-// Module 14613 (DemoActionSheet)
 import _slicedToArray from "_slicedToArray";
 import NUFChannelIllustration from "NUFChannelIllustration";
 import { ScrollView } from "PromoSheet";

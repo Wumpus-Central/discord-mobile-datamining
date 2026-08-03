@@ -1,6 +1,3 @@
-// === Module 15415: useNotificationPermissionPrompt ===
-
-// Module 15415 (useNotificationPermissionPrompt)
 import noop from "noop";
 import handleUpdateUser from "handleUpdateUser";
 import _handleConnectionOpen from "_handleConnectionOpen";

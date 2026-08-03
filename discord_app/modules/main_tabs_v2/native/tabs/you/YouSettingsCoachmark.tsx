@@ -1,6 +1,3 @@
-// === Module 15639: YouSettingsCoachmark ===
-
-// Module 15639 (YouSettingsCoachmark)
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx");
 
 export default function YouSettingsCoachmark(buttonRef) {

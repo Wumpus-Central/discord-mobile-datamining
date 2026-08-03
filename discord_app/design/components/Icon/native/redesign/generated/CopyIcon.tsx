@@ -1,6 +1,3 @@
-// === Module 4141: CopyIcon ===
-
-// Module 4141 (CopyIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 13567: items ===
-
-// Module 13567 (items)
 import _slicedToArray from "_slicedToArray";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 10247: ChannelVoiceChatModal ===
-
-// Module 10247 (ChannelVoiceChatModal)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 10901: getMessageJumpData ===
-
-// Module 10901 (getMessageJumpData)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";

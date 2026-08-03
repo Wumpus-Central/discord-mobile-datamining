@@ -1,6 +1,3 @@
-// === Module 14245: GuildRoleSubscriptionsSectionHeader ===
-
-// Module 14245 (GuildRoleSubscriptionsSectionHeader)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

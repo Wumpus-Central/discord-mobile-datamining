@@ -1,6 +1,3 @@
-// === Module 6557: MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG ===
-
-// Module 6557 (MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG)
 import { CustomCheckoutFlow } from "CustomCheckoutFlow";
 import ME from "ME";
 

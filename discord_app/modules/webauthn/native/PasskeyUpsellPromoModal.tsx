@@ -1,6 +1,3 @@
-// === Module 13781: PasskeyUpsellPromoModal ===
-
-// Module 13781 (PasskeyUpsellPromoModal)
 import "noop";
 import { WebAuthnScreens } from "WebAuthnScreens";
 import { jsx } from "jsxProd";

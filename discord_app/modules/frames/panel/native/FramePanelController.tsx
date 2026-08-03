@@ -1,6 +1,3 @@
-// === Module 15888: FramePanelController ===
-
-// Module 15888 (FramePanelController)
 import "noop";
 import addApplication from "addApplication";
 import map from "map";

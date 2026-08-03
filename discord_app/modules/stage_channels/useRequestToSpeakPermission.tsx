@@ -1,6 +1,3 @@
-// === Module 10728: useRequestToSpeakPermission ===
-
-// Module 10728 (useRequestToSpeakPermission)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

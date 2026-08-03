@@ -1,6 +1,3 @@
-// === Module 11116: CtaButtonType ===
-
-// Module 11116 (CtaButtonType)
 import initialize from "initialize";
 
 const require = arg1;

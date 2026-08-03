@@ -1,6 +1,3 @@
-// === Module 4255: SystemServiceNotAvailableError ===
-
-// Module 4255 (SystemServiceNotAvailableError)
 class SystemServiceNotAvailableError extends Error {
   constructor() {
     tmp = new tmp("System service not available", new.target);

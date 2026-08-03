@@ -1,6 +1,3 @@
-// === Module 15985: useCameraEncodeError ===
-
-// Module 15985 (useCameraEncodeError)
 import fetchFingerprint from "fetchFingerprint";
 import isAVErrorContextOfType from "isAVErrorContextOfType";
 

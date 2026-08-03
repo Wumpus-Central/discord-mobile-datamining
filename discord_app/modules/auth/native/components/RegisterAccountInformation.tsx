@@ -1,6 +1,3 @@
-// === Module 14899: RegisterAccountInformation ===
-
-// Module 14899 (RegisterAccountInformation)
 import updateInvite from "updateInvite";
 import _slicedToArray from "_slicedToArray";
 import trackRegTransition from "trackRegTransition";

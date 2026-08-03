@@ -1,6 +1,3 @@
-// === Module 16339: prototype ===
-
-// Module 16339 (prototype)
 import "initialize";
 
 let prototype = function SettingTreeManagerLifecycleManager() {

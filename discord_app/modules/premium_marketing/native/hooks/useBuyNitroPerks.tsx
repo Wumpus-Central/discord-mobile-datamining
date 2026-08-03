@@ -1,6 +1,3 @@
-// === Module 6578: useBuyNitroPerks ===
-
-// Module 6578 (useBuyNitroPerks)
 import registerAsset from "registerAsset";
 import { Gradients } from "items";
 import GuildFeatures from "GuildFeatures";

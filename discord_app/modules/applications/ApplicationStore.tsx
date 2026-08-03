@@ -1,6 +1,3 @@
-// === Module 4230: addApplication ===
-
-// Module 4230 (addApplication)
 import _slicedToArray from "_slicedToArray";
 import createExecutable from "createExecutable";
 import { PersistedStore } from "initialize";

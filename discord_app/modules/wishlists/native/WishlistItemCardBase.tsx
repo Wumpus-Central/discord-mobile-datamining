@@ -1,6 +1,3 @@
-// === Module 8680: SourceIcon ===
-
-// Module 8680 (SourceIcon)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

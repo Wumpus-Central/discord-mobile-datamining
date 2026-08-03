@@ -1,6 +1,3 @@
-// === Module 4280: sortActivity ===
-
-// Module 4280 (sortActivity)
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";

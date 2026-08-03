@@ -1,6 +1,3 @@
-// === Module 7253: KeyRingSpotIllustration ===
-
-// Module 7253 (KeyRingSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/KeyRingSpotIllustration.native.tsx");

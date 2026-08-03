@@ -1,6 +1,3 @@
-// === Module 11849: HubEmailConnectionDescriptionActionsheet ===
-
-// Module 11849 (HubEmailConnectionDescriptionActionsheet)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 8174: filterStaffGuild ===
-
-// Module 8174 (filterStaffGuild)
 import _slicedToArray from "_slicedToArray";
 import map from "map";
 import getHash from "getHash";

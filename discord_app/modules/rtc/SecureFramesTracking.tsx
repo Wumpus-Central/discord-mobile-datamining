@@ -1,6 +1,3 @@
-// === Module 8911: trackRTCPanelViewed ===
-
-// Module 8911 (trackRTCPanelViewed)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 

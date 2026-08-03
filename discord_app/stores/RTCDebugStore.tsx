@@ -1,6 +1,3 @@
-// === Module 10844: updateStats ===
-
-// Module 10844 (updateStats)
 import _slicedToArray from "_slicedToArray";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";

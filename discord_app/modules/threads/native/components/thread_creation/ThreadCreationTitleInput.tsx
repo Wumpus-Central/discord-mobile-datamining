@@ -1,6 +1,3 @@
-// === Module 15478: ? ===
-
-// Module 15478
 import importAllResult from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { MAX_CHANNEL_NAME_LENGTH } from "ME";

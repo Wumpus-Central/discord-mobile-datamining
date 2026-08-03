@@ -1,6 +1,3 @@
-// === Module 12394: getRemoteJoinFooterLabel ===
-
-// Module 12394 (getRemoteJoinFooterLabel)
 import { ActivityGamePlatforms } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");

@@ -1,6 +1,3 @@
-// === Module 8674: useCurrentUser ===
-
-// Module 8674 (useCurrentUser)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

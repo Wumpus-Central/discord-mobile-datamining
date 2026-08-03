@@ -1,6 +1,3 @@
-// === Module 15358: ICYMIInfoModal ===
-
-// Module 15358 (ICYMIInfoModal)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

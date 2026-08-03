@@ -1,6 +1,3 @@
-// === Module 12602: PremiumPlanSelectYearlyUpsellModal ===
-
-// Module 12602 (PremiumPlanSelectYearlyUpsellModal)
 import _slicedToArray from "_slicedToArray";
 import getPremiumPlanItem from "getPremiumPlanItem";
 import get_ActivityIndicator from "Button";

@@ -1,6 +1,3 @@
-// === Module 10893: openChannelCallModalForChannelId ===
-
-// Module 10893 (openChannelCallModalForChannelId)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

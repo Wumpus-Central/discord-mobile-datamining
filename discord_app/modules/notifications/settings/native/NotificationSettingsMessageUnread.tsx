@@ -1,6 +1,3 @@
-// === Module 10340: NotificationSettingsMessageUnread ===
-
-// Module 10340 (NotificationSettingsMessageUnread)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

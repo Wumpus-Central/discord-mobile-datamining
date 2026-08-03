@@ -1,6 +1,3 @@
-// === Module 4047: useChatLayout ===
-
-// Module 4047 (useChatLayout)
 import noop from "noop";
 
 let require = arg1;

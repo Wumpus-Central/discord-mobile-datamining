@@ -1,6 +1,3 @@
-// === Module 16254: onPostConnectionOpen ===
-
-// Module 16254 (onPostConnectionOpen)
 import set from "set";
 import { NativeModules } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

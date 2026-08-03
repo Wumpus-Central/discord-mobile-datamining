@@ -1,6 +1,3 @@
-// === Module 6217: createFromServer ===
-
-// Module 6217 (createFromServer)
 import "toJS";
 import GuildFeatures from "GuildFeatures";
 

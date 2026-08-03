@@ -1,6 +1,3 @@
-// === Module 14492: onUpcomingServerEventNotificationSettingsChanged ===
-
-// Module 14492 (onUpcomingServerEventNotificationSettingsChanged)
 import { NotificationSettingsUpdateType as closure_3 } from "AccountNotificationFlags";
 import { AnalyticEvents } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 12573: FEATURES_PREMIUM_GUILD_USER ===
-
-// Module 12573 (FEATURES_PREMIUM_GUILD_USER)
 import "HeadphonesIcon";
 import get_ActivityIndicator from "StickerIcon";
 import insertUnsortedGuilds from "insertUnsortedGuilds";

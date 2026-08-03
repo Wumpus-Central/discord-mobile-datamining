@@ -1,6 +1,3 @@
-// === Module 12752: rateLimit ===
-
-// Module 12752 (rateLimit)
 const result = require("set").fileFinishedImporting("lib/rateLimit.tsx");
 
 export default function rateLimit(arg0, arg1, arg2) {

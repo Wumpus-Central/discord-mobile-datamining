@@ -1,6 +1,3 @@
-// === Module 11366: AttachmentPreviewAppLauncher ===
-
-// Module 11366 (AttachmentPreviewAppLauncher)
 import noop from "noop";
 import { View } from "set";
 import { DraftType } from "handleChanged";

@@ -1,6 +1,3 @@
-// === Module 11534: useShouldBlockDMInputForQuarantinedUser ===
-
-// Module 11534 (useShouldBlockDMInputForQuarantinedUser)
 import reinjectEphemerals from "reinjectEphemerals";
 import { UserFlags } from "ME";
 

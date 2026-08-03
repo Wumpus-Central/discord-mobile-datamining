@@ -1,6 +1,3 @@
-// === Module 8724: memoResult1 ===
-
-// Module 8724 (memoResult1)
 import importAllResult from "useCurrentUser";
 import { View } from "TagIcon";
 import updateProduct from "updateProduct";

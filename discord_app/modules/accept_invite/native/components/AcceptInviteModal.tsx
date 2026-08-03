@@ -1,6 +1,3 @@
-// === Module 16143: AcceptInviteModal ===
-
-// Module 16143 (AcceptInviteModal)
 import noop from "noop";
 import { CreateGuildModalStates } from "NUXGuildTemplatesAnalytics";
 import { jsx } from "jsxProd";

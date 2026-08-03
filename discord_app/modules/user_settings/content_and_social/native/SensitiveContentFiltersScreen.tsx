@@ -1,6 +1,3 @@
-// === Module 13864: UserSettingsSensitiveContentFilters ===
-
-// Module 13864 (UserSettingsSensitiveContentFilters)
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import jsxProd from "jsxProd";

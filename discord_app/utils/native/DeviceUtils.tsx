@@ -1,6 +1,3 @@
-// === Module 4173: DCDDeviceManager ===
-
-// Module 4173 (DCDDeviceManager)
 import set from "set";
 import set from "enforcing";
 

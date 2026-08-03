@@ -1,6 +1,3 @@
-// === Module 9628: AnalyticsIcon ===
-
-// Module 9628 (AnalyticsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

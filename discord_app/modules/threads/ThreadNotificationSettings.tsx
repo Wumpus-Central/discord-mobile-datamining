@@ -1,6 +1,3 @@
-// === Module 10266: computeThreadNotificationSetting ===
-
-// Module 10266 (computeThreadNotificationSetting)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import storeThread from "storeThread";

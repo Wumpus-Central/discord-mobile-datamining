@@ -1,6 +1,3 @@
-// === Module 15134: VoiceUsersItem ===
-
-// Module 15134 (VoiceUsersItem)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 15904: trackActivityThermalStateNoticeShown ===
-
-// Module 15904 (trackActivityThermalStateNoticeShown)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 import participantFromServer from "participantFromServer";

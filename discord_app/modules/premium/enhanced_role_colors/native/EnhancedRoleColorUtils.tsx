@@ -1,6 +1,3 @@
-// === Module 7749: processColorStrings ===
-
-// Module 7749 (processColorStrings)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { processColor } from "get ActivityIndicator";

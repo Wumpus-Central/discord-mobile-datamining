@@ -1,6 +1,3 @@
-// === Module 9012: styles ===
-
-// Module 9012 (styles)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

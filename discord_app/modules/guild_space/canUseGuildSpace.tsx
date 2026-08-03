@@ -1,6 +1,3 @@
-// === Module 5664: isGuildSpaceAdmin ===
-
-// Module 5664 (isGuildSpaceAdmin)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 

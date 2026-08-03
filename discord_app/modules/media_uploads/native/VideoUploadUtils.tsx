@@ -1,6 +1,3 @@
-// === Module 4758: toString ===
-
-// Module 4758 (toString)
 import { VideoCompressionQuality } from "CHANNEL_SIDEBAR_WIDTH";
 
 let closure_1 = new require("timestamp")("VideoUploadUtils.tsx");

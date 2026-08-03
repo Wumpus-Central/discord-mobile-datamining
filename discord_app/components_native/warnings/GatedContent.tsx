@@ -1,6 +1,3 @@
-// === Module 10047: GatedContent ===
-
-// Module 10047 (GatedContent)
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

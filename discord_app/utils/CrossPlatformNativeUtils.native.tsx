@@ -1,6 +1,3 @@
-// === Module 4187: set ===
-
-// Module 4187 (set)
 const result = require("set").fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
 
 export default {

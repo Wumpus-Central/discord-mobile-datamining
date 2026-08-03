@@ -1,6 +1,3 @@
-// === Module 16173: showTakeoverModal ===
-
-// Module 16173 (showTakeoverModal)
 import { TAKEOVER_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE";
 
 const result = require("module_4399").fileFinishedImporting("modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx");

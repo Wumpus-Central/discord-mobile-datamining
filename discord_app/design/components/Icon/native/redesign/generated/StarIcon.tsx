@@ -1,6 +1,3 @@
-// === Module 9430: StarIcon ===
-
-// Module 9430 (StarIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

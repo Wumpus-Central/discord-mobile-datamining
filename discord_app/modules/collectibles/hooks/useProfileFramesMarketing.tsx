@@ -1,6 +1,3 @@
-// === Module 15796: deriveProfileFramesMarketing ===
-
-// Module 15796 (deriveProfileFramesMarketing)
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

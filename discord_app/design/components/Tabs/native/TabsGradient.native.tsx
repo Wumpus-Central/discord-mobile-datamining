@@ -1,6 +1,3 @@
-// === Module 11876: TabsGradient ===
-
-// Module 11876 (TabsGradient)
 import noop from "noop";
 import { HorizontalGradient } from "ME";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 16740: ParentalConsentConnectionNavbar ===
-
-// Module 16740 (ParentalConsentConnectionNavbar)
 import "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

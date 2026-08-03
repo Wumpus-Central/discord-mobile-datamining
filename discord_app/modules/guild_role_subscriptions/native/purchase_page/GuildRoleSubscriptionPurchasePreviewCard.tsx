@@ -1,6 +1,3 @@
-// === Module 15437: ContentHeader ===
-
-// Module 15437 (ContentHeader)
 import _slicedToArray from "_slicedToArray";
 import "TruncatedText";
 import get_ActivityIndicator from "getChannelIcon";

@@ -1,6 +1,3 @@
-// === Module 7451: ServerBannerTheCrewExample ===
-
-// Module 7451 (ServerBannerTheCrewExample)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ServerBannerTheCrewExample.native.tsx");

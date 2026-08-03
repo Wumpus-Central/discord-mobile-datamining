@@ -1,6 +1,3 @@
-// === Module 10174: useLastChannelMessage ===
-
-// Module 10174 (useLastChannelMessage)
 import reinjectEphemerals from "reinjectEphemerals";
 
 const require = arg1;

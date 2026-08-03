@@ -1,6 +1,3 @@
-// === Module 9136: JoinCallButton ===
-
-// Module 9136 (JoinCallButton)
 import "apply";
 import { View } from "initialize";
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";

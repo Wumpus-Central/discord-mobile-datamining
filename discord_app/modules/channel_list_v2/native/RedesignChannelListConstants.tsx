@@ -1,6 +1,3 @@
-// === Module 10298: hairlineWidth ===
-
-// Module 10298 (hairlineWidth)
 import PlatformTypes from "PlatformTypes";
 
 let c2 = "text-xs/medium";

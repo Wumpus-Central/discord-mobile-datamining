@@ -1,6 +1,3 @@
-// === Module 11042: handleStopEditingRoles ===
-
-// Module 11042 (handleStopEditingRoles)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { FormStates } from "ME";
 import { Store } from "initialize";

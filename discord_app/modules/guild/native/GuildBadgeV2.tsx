@@ -1,6 +1,3 @@
-// === Module 8474: GuildBadgeV2 ===
-
-// Module 8474 (GuildBadgeV2)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 13970: FamilyCenterRequestorDetails ===
-
-// Module 13970 (FamilyCenterRequestorDetails)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

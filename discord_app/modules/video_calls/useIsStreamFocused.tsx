@@ -1,6 +1,3 @@
-// === Module 10686: useIsStreamFocused ===
-
-// Module 10686 (useIsStreamFocused)
 import getParticipants from "getParticipants";
 import { isStreamParticipant } from "ParticipantTypes";
 

@@ -1,6 +1,3 @@
-// === Module 5853: _fetchUserEntitlements ===
-
-// Module 5853 (_fetchUserEntitlements)
 import set from "set";
 import { Endpoints } from "ME";
 

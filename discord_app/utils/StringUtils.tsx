@@ -1,6 +1,3 @@
-// === Module 1856: isNullOrEmpty ===
-
-// Module 1856 (isNullOrEmpty)
 const result = require("set").fileFinishedImporting("utils/StringUtils.tsx");
 
 export const isNullOrEmpty = function isNullOrEmpty(application_id) {

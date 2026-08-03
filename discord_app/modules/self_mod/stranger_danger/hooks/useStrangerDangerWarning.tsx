@@ -1,6 +1,3 @@
-// === Module 10445: useStrangerDangerWarning ===
-
-// Module 10445 (useStrangerDangerWarning)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SafetyWarningTypes } from "handleConnectionOpen";
 

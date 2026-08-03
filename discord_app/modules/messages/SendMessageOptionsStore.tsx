@@ -1,6 +1,3 @@
-// === Module 9576: getOptions ===
-
-// Module 9576 (getOptions)
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
 import { Store } from "initialize";
 

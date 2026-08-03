@@ -1,6 +1,3 @@
-// === Module 11164: ChatTTITracker ===
-
-// Module 11164 (ChatTTITracker)
 import jsxProd from "jsxProd";
 
 let c3;

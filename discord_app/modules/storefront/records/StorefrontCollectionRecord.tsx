@@ -1,6 +1,3 @@
-// === Module 5822: fromServer ===
-
-// Module 5822 (fromServer)
 import fromServer from "fromServer";
 import { AssetDisplayConfigRecord } from "fromServer";
 import closure_2 from "fromServer";

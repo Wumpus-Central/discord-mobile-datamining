@@ -1,6 +1,3 @@
-// === Module 15990: VoicePanelAnimatedActivityCardInner ===
-
-// Module 15990 (VoicePanelAnimatedActivityCardInner)
 import ActivityItemEmptyCard from "ActivityItemEmptyCard";
 import importAllResult from "context";
 import participantFromServer from "participantFromServer";

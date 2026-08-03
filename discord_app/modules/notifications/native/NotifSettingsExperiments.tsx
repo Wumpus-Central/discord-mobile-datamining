@@ -1,6 +1,3 @@
-// === Module 13531: apexExperiment ===
-
-// Module 13531 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true, clearDeclarative: false } };

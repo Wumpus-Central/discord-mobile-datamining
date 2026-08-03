@@ -1,6 +1,3 @@
-// === Module 14250: getRoleSubscriptionPlanId ===
-
-// Module 14250 (getRoleSubscriptionPlanId)
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/subscriptionUtils.tsx");
 
 export const getRoleSubscriptionPlanId = function getRoleSubscriptionPlanId(items) {

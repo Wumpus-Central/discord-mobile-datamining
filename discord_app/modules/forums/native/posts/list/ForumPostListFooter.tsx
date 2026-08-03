@@ -1,6 +1,3 @@
-// === Module 11217: ForumPostListFooter ===
-
-// Module 11217 (ForumPostListFooter)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { AnalyticsObjects } from "ME";

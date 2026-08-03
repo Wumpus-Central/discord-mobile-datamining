@@ -1,6 +1,3 @@
-// === Module 9902: useEnabledHarmTypesBitmaskForChannelAndAuthorId ===
-
-// Module 9902 (useEnabledHarmTypesBitmaskForChannelAndAuthorId)
 import noop from "noop";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import ensureGuildLoaded from "ensureGuildLoaded";

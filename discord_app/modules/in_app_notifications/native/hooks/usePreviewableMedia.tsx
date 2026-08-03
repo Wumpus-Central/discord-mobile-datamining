@@ -1,6 +1,3 @@
-// === Module 10309: VoiceMessageIcon ===
-
-// Module 10309 (VoiceMessageIcon)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import ME from "ME";

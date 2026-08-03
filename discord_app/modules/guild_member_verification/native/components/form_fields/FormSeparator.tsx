@@ -1,6 +1,3 @@
-// === Module 9179: FormSeparator ===
-
-// Module 9179 (FormSeparator)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

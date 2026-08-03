@@ -1,6 +1,3 @@
-// === Module 4589: _updateAccessibilityFocusLock ===
-
-// Module 4589 (_updateAccessibilityFocusLock)
 import { NativeModules } from "get ActivityIndicator";
 import "initialize";
 

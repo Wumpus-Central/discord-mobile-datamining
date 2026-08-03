@@ -1,6 +1,3 @@
-// === Module 5923: getTieredTenureBadgeData ===
-
-// Module 5923 (getTieredTenureBadgeData)
 import { TENURE_BADGES } from "GuildFeatures";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");

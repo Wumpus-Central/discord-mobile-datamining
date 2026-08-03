@@ -1,6 +1,3 @@
-// === Module 15378: createItem ===
-
-// Module 15378 (createItem)
 import noop from "noop";
 import filterStaffGuild from "filterStaffGuild";
 

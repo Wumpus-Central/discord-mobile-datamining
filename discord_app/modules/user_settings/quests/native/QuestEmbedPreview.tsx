@@ -1,6 +1,3 @@
-// === Module 14215: QuestEmbedPreview ===
-
-// Module 14215 (QuestEmbedPreview)
 import noop from "noop";
 import hasFlag from "hasFlag";
 import mergeGuildAvatar from "mergeGuildAvatar";

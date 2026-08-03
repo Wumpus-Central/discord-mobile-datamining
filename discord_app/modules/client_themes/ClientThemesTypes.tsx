@@ -1,6 +1,3 @@
-// === Module 4007: ClientThemeType ===
-
-// Module 4007 (ClientThemeType)
 import { PROTO_THEME_MAP_WEB_REFRESH as closure_3 } from "SystemThemeState";
 
 const result = require("create").fileFinishedImporting("modules/client_themes/ClientThemesTypes.tsx");

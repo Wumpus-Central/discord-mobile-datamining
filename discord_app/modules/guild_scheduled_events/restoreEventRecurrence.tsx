@@ -1,6 +1,3 @@
-// === Module 12289: restoreEventRecurrence ===
-
-// Module 12289 (restoreEventRecurrence)
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/restoreEventRecurrence.tsx");
 
 export default function restoreEventRecurrence(arg0, guild_id, id, c2) {

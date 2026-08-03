@@ -1,6 +1,3 @@
-// === Module 8778: ShopGiftModalKey ===
-
-// Module 8778 (ShopGiftModalKey)
 let c3 = "Shop Gift Modal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/collectibles/native/openGiftModal.tsx");
 

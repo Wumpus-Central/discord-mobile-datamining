@@ -1,6 +1,3 @@
-// === Module 10856: VoiceStatus ===
-
-// Module 10856 (VoiceStatus)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

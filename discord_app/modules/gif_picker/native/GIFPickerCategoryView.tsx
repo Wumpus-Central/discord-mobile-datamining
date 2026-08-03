@@ -1,6 +1,3 @@
-// === Module 9627: GIFPickerCategoryView ===
-
-// Module 9627 (GIFPickerCategoryView)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

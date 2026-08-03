@@ -1,6 +1,3 @@
-// === Module 5677: GPlayConnectionState ===
-
-// Module 5677 (GPlayConnectionState)
 const result = require("set").fileFinishedImporting("modules/gplay/native/Constants.tsx");
 
 export const GPlayConnectionState = { DISCONNECTED: 0, [0]: "DISCONNECTED", CONNECTING: 1, [1]: "CONNECTING", CONNECTED: 2, [2]: "CONNECTED", ERROR: 3, [3]: "ERROR" };

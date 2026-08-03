@@ -1,6 +1,3 @@
-// === Module 9662: ? ===
-
-// Module 9662
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "apply";
 import { View } from "useStickerPickerListData";

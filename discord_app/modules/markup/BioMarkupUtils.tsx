@@ -1,6 +1,3 @@
-// === Module 9016: parseBioReact ===
-
-// Module 9016 (parseBioReact)
 import importDefaultResult from "combineMarkupRules";
 import importAllResult from "reactParserFor";
 import importDefaultResult1 from "get defaultRules";

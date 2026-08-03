@@ -1,6 +1,3 @@
-// === Module 4286: initialize ===
-
-// Module 4286 (initialize)
 import { DeviceSettingsStore } from "initialize";
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };

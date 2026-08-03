@@ -1,6 +1,3 @@
-// === Module 9616: dispatcher ===
-
-// Module 9616 (dispatcher)
 const result = require("set").fileFinishedImporting("modules/tooltip/TooltipActionCreators.tsx");
 
 export default {

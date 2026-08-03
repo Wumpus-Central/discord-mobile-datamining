@@ -1,6 +1,3 @@
-// === Module 10585: recentlyUsedEmojis ===
-
-// Module 10585 (recentlyUsedEmojis)
 import { EMOJI_PICKER_EMOJI_TO_SHOW_COUNT as closure_4 } from "ParticipantTypes";
 import apply from "apply";
 import { Store } from "initialize";

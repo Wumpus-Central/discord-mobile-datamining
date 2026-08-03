@@ -1,6 +1,3 @@
-// === Module 14690: toggle ===
-
-// Module 14690 (toggle)
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import createToggle from "createToggle";
 

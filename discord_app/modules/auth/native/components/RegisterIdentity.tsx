@@ -1,6 +1,3 @@
-// === Module 14886: RegisterIdentityBase ===
-
-// Module 14886 (RegisterIdentityBase)
 import closure_3 from "RegistrationTransitionActionTypes";
 import _slicedToArray from "_slicedToArray";
 import AuthFormView from "AuthFormView";

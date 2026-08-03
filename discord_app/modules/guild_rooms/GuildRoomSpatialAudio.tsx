@@ -1,6 +1,3 @@
-// === Module 16226: computeLivingRoomWorldPoints ===
-
-// Module 16226 (computeLivingRoomWorldPoints)
 import fetchFingerprint from "fetchFingerprint";
 import handleSelectedChannelStoreChange from "handleSelectedChannelStoreChange";
 import getName from "getName";

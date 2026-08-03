@@ -1,6 +1,3 @@
-// === Module 15097: HappeningNowAvatarStack ===
-
-// Module 15097 (HappeningNowAvatarStack)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

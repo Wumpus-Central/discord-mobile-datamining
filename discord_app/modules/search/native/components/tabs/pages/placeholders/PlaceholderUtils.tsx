@@ -1,6 +1,3 @@
-// === Module 15556: getAdjustedPlaceholderCount ===
-
-// Module 15556 (getAdjustedPlaceholderCount)
 const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");
 
 export const getAdjustedPlaceholderCount = function getAdjustedPlaceholderCount(numResults) {

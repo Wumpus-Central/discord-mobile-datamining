@@ -1,6 +1,3 @@
-// === Module 3854: _createGatewayCheckoutContext ===
-
-// Module 3854 (_createGatewayCheckoutContext)
 import set from "set";
 import { PaymentGateways } from "sum";
 

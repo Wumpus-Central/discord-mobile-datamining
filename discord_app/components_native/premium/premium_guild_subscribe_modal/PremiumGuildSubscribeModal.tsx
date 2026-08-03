@@ -1,6 +1,3 @@
-// === Module 5028: PremiumGuildSubscribeModal ===
-
-// Module 5028 (PremiumGuildSubscribeModal)
 import _slicedToArray from "_slicedToArray";
 import PendingCancellationWarning from "PendingCancellationWarning";
 import handleThemeChange from "handleThemeChange";

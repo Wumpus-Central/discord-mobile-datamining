@@ -1,6 +1,3 @@
-// === Module 15034: useIsFavoritesGuildVisible ===
-
-// Module 15034 (useIsFavoritesGuildVisible)
 import handleConnectionOpen from "handleConnectionOpen";
 import initializeFromUserSettings from "initializeFromUserSettings";
 

@@ -1,6 +1,3 @@
-// === Module 3885: sanitizeURLPart ===
-
-// Module 3885 (sanitizeURLPart)
 import module_3887 from "module_3887";
 import { Linking } from "handleSupportedURL";
 import setContent from "setContent";

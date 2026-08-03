@@ -1,6 +1,3 @@
-// === Module 16446: GuildSettingsServerTagBadgeGrid ===
-
-// Module 16446 (GuildSettingsServerTagBadgeGrid)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { GuildTagBadgeSize } from "items";

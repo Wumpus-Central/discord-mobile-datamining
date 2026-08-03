@@ -1,6 +1,3 @@
-// === Module 16120: isAnalyticsEndpoint ===
-
-// Module 16120 (isAnalyticsEndpoint)
 import getHash from "getHash";
 import { AbortCodes } from "ME";
 import ApexExperiment from "ApexExperiment";

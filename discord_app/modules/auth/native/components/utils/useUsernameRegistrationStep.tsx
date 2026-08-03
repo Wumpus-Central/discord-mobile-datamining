@@ -1,6 +1,3 @@
-// === Module 14902: useUsernameRegistrationStep ===
-
-// Module 14902 (useUsernameRegistrationStep)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import isRateLimited from "isRateLimited";

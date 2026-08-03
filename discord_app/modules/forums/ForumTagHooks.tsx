@@ -1,6 +1,3 @@
-// === Module 6055: useAvailableTags ===
-
-// Module 6055 (useAvailableTags)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

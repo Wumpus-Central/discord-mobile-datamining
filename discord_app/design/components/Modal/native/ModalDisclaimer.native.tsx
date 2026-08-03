@@ -1,6 +1,3 @@
-// === Module 13238: ModalDisclaimer ===
-
-// Module 13238 (ModalDisclaimer)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

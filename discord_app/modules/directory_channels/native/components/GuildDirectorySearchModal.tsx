@@ -1,6 +1,3 @@
-// === Module 10066: GuildDirectorySearchModal ===
-
-// Module 10066 (GuildDirectorySearchModal)
 import "noop";
 import { jsx } from "jsxProd";
 

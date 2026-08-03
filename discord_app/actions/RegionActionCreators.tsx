@@ -1,6 +1,3 @@
-// === Module 15664: ? ===
-
-// Module 15664
 import { Endpoints } from "ME";
 
 const result = require("dispatcher").fileFinishedImporting("actions/RegionActionCreators.tsx");

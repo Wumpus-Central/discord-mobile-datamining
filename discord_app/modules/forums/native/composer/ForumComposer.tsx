@@ -1,6 +1,3 @@
-// === Module 9582: Tags ===
-
-// Module 9582 (Tags)
 import handleThemeChange from "handleThemeChange";
 import useSafeAreaInsetsKeyboardAware from "useSafeAreaInsetsKeyboardAware";
 import closure_5 from "jsxProd";

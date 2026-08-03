@@ -1,6 +1,3 @@
-// === Module 8852: _getFilterBlob ===
-
-// Module 8852 (_getFilterBlob)
 import module_38 from "module_38";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleSyncedStoresUpdate from "handleSyncedStoresUpdate";

@@ -1,6 +1,3 @@
-// === Module 8771: useVirtualCurrencyData ===
-
-// Module 8771 (useVirtualCurrencyData)
 import noop from "noop";
 
 const require = arg1;

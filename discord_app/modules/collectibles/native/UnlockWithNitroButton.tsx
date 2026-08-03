@@ -1,6 +1,3 @@
-// === Module 11928: UnlockWithNitroButton ===
-
-// Module 11928 (UnlockWithNitroButton)
 import "noop";
 import updateProduct from "updateProduct";
 import map from "map";

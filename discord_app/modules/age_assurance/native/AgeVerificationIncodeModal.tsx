@@ -1,6 +1,3 @@
-// === Module 6754: AgeVerificationIncodeModal ===
-
-// Module 6754 (AgeVerificationIncodeModal)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

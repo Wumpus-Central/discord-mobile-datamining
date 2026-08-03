@@ -1,6 +1,3 @@
-// === Module 4738: get ===
-
-// Module 4738 (get)
 let prototype;
 prototype = function ProcessArgs() {
   return Object.create(new.target.prototype);

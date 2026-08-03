@@ -1,6 +1,3 @@
-// === Module 7485: ShareNitroSpotIllustration ===
-
-// Module 7485 (ShareNitroSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ShareNitroSpotIllustration.native.tsx");

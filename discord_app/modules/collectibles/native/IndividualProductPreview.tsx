@@ -1,6 +1,3 @@
-// === Module 8753: ProfilePreviewWrapper ===
-
-// Module 8753 (ProfilePreviewWrapper)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import items from "items";

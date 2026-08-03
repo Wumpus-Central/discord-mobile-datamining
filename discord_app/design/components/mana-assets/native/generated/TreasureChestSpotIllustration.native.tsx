@@ -1,6 +1,3 @@
-// === Module 7585: TreasureChestSpotIllustration ===
-
-// Module 7585 (TreasureChestSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/TreasureChestSpotIllustration.native.tsx");

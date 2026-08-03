@@ -1,6 +1,3 @@
-// === Module 10792: VoiceChannelEffectSentLocation ===
-
-// Module 10792 (VoiceChannelEffectSentLocation)
 import getEmojiToGroupId from "getEmojiToGroupId";
 import handleConnectionOpen from "handleConnectionOpen";
 import initialize from "initialize";

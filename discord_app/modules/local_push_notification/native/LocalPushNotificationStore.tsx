@@ -1,6 +1,3 @@
-// === Module 12785: set ===
-
-// Module 12785 (set)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import recomputeGuild from "recomputeGuild";
 import LocalNotificationTypes from "LocalNotificationTypes";

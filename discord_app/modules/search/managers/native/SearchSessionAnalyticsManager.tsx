@@ -1,6 +1,3 @@
-// === Module 10129: _initialize ===
-
-// Module 10129 (_initialize)
 import { SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB as closure_2 } from "SearchEntrypointAnalyticsLocations";
 import "getSession";
 

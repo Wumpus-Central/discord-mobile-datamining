@@ -1,6 +1,3 @@
-// === Module 11554: ? ===
-
-// Module 11554
 import importAllResult from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";

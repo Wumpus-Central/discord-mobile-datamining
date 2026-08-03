@@ -1,6 +1,3 @@
-// === Module 11423: PremiumAnimatedGiftButton ===
-
-// Module 11423 (PremiumAnimatedGiftButton)
 import noop from "noop";
 import { useRef } from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

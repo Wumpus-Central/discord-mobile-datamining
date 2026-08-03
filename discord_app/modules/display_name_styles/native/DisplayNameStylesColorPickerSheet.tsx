@@ -1,6 +1,3 @@
-// === Module 14386: DisplayNameStylesColorPickerSheet ===
-
-// Module 14386 (DisplayNameStylesColorPickerSheet)
 import _slicedToArray from "_slicedToArray";
 import apply from "apply";
 import get_ActivityIndicator from "messagesProxy";

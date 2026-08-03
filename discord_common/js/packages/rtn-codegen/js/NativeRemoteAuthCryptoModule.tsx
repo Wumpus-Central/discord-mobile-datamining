@@ -1,6 +1,3 @@
-// === Module 14922: enforcing ===
-
-// Module 14922 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeRemoteAuthCryptoModule");

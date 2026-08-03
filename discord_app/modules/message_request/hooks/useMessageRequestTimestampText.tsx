@@ -1,6 +1,3 @@
-// === Module 15726: useMessageRequestTimestampText ===
-
-// Module 15726 (useMessageRequestTimestampText)
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 
 const require = arg1;

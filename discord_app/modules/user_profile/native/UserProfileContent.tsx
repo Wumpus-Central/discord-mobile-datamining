@@ -1,6 +1,3 @@
-// === Module 12065: CustomStatusBubble ===
-
-// Module 12065 (CustomStatusBubble)
 import useBadges from "useBadges";
 import importAllResult from "asyncRequireImpl";
 import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";

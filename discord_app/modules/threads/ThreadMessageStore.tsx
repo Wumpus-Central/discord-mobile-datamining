@@ -1,6 +1,3 @@
-// === Module 6070: updateState ===
-
-// Module 6070 (updateState)
 import createChannelRecord from "createChannelRecord";
 import hasFlag from "hasFlag";
 import createdAt from "createdAt";

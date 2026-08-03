@@ -1,6 +1,3 @@
-// === Module 13028: BuildOverrideModal ===
-
-// Module 13028 (BuildOverrideModal)
 import "noop";
 import get_ActivityIndicator from "module_4399";
 import getCurrentBuildOverride from "getCurrentBuildOverride";

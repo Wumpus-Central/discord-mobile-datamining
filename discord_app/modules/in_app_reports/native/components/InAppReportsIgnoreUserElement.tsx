@@ -1,6 +1,3 @@
-// === Module 12423: IgnoreUserElement ===
-
-// Module 12423 (IgnoreUserElement)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import upsertRelationship from "upsertRelationship";

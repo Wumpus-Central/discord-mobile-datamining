@@ -1,6 +1,3 @@
-// === Module 8323: GuildEventsListHeader ===
-
-// Module 8323 (GuildEventsListHeader)
 import Background from "Background";
 import { View } from "expandEventProperties";
 import generateOldThreadCutoff from "generateOldThreadCutoff";

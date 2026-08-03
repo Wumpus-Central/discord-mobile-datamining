@@ -1,6 +1,3 @@
-// === Module 8180: isPlayedGameEntry ===
-
-// Module 8180 (isPlayedGameEntry)
 const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
 
 export const isPlayedGameEntry = function isPlayedGameEntry(content_type) {

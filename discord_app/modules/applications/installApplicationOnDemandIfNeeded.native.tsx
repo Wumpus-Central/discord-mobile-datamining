@@ -1,6 +1,3 @@
-// === Module 11219: _installApplicationOnDemandIfNeeded ===
-
-// Module 11219 (_installApplicationOnDemandIfNeeded)
 import fetchApplication from "fetchApplication";
 import createExecutable from "createExecutable";
 import addApplication from "addApplication";

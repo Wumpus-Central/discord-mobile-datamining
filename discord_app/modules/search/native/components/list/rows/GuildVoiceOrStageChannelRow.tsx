@@ -1,6 +1,3 @@
-// === Module 15515: GuildVoiceChannelSubtitle ===
-
-// Module 15515 (GuildVoiceChannelSubtitle)
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";

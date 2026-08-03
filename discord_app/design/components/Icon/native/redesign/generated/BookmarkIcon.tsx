@@ -1,6 +1,3 @@
-// === Module 9968: BookmarkIcon ===
-
-// Module 9968 (BookmarkIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

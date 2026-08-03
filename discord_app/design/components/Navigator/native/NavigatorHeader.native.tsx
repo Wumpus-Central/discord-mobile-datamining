@@ -1,6 +1,3 @@
-// === Module 5147: HeaderBackImage ===
-
-// Module 5147 (HeaderBackImage)
 import closure_3 from "createCacheKey";
 import "noop";
 import get_ActivityIndicator from "NAV_BAR_HEIGHT";

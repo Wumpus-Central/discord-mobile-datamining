@@ -1,6 +1,3 @@
-// === Module 8505: SteamNeutralIcon ===
-
-// Module 8505 (SteamNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

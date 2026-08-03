@@ -1,6 +1,3 @@
-// === Module 16605: orderify ===
-
-// Module 16605 (orderify)
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
 import usePriceTiers from "usePriceTiers";

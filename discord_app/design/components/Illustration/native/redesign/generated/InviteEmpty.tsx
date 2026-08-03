@@ -1,6 +1,3 @@
-// === Module 16510: getInviteEmptySource ===
-
-// Module 16510 (getInviteEmptySource)
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

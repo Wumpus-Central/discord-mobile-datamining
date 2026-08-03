@@ -1,6 +1,3 @@
-// === Module 14501: Row ===
-
-// Module 14501 (Row)
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import insertUnsortedGuilds from "insertUnsortedGuilds";

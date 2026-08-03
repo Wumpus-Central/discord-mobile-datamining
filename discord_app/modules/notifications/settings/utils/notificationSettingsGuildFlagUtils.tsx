@@ -1,6 +1,3 @@
-// === Module 10332: updateGuildPreset ===
-
-// Module 10332 (updateGuildPreset)
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserNotificationSettings } from "ME";
 import { GuildNotificationSettingsFlags as closure_5 } from "MAX_FAVORITES";

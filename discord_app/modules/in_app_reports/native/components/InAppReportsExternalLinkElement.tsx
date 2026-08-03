@@ -1,6 +1,3 @@
-// === Module 12432: ExternalLinkItem ===
-
-// Module 12432 (ExternalLinkItem)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

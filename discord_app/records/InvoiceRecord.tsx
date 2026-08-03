@@ -1,6 +1,3 @@
-// === Module 3848: createFromServer ===
-
-// Module 3848 (createFromServer)
 import "toJS";
 
 const require = arg1;

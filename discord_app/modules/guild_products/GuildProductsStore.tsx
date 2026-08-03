@@ -1,6 +1,3 @@
-// === Module 12779: secondaryIndexMap ===
-
-// Module 12779 (secondaryIndexMap)
 import { Store } from "initialize";
 
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };

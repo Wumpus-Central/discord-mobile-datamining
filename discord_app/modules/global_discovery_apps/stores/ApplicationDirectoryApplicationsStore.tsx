@@ -1,6 +1,3 @@
-// === Module 5521: set ===
-
-// Module 5521 (set)
 import createExecutable from "createExecutable";
 import { Store } from "initialize";
 import set from "dispatcher";

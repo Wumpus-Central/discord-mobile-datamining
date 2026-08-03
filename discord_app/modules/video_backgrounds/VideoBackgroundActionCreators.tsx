@@ -1,6 +1,3 @@
-// === Module 8855: _fetchVideoFilterAssets ===
-
-// Module 8855 (_fetchVideoFilterAssets)
 import dispatcher from "dispatcher";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";

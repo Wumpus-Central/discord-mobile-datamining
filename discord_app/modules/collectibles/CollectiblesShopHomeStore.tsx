@@ -1,6 +1,3 @@
-// === Module 5847: map ===
-
-// Module 5847 (map)
 import { Store } from "initialize";
 
 let closure_0 = [];

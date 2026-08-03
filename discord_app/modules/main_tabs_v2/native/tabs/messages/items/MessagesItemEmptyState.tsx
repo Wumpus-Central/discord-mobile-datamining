@@ -1,6 +1,3 @@
-// === Module 15110: MESSAGES_ITEM_EMPTY_STATE_HEIGHT ===
-
-// Module 15110 (MESSAGES_ITEM_EMPTY_STATE_HEIGHT)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

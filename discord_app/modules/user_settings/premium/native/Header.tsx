@@ -1,6 +1,3 @@
-// === Module 12522: Header ===
-
-// Module 12522 (Header)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

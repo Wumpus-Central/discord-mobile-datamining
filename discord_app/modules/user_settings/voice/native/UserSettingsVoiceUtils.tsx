@@ -1,6 +1,3 @@
-// === Module 10801: handleAutomaticGainControlChange ===
-
-// Module 10801 (handleAutomaticGainControlChange)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import ME from "ME";
 

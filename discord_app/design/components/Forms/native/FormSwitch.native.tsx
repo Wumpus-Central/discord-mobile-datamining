@@ -1,6 +1,3 @@
-// === Module 5560: FormSwitch ===
-
-// Module 5560 (FormSwitch)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

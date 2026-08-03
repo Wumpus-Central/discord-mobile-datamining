@@ -1,6 +1,3 @@
-// === Module 4712: AnnouncementsIcon ===
-
-// Module 4712 (AnnouncementsIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

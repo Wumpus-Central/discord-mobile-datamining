@@ -1,6 +1,3 @@
-// === Module 7998: transformMessageAttachments ===
-
-// Module 7998 (transformMessageAttachments)
 import { AttachmentType } from "Changeset";
 import { MessageAttachmentFlags } from "ME";
 

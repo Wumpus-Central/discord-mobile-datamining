@@ -1,6 +1,3 @@
-// === Module 3902: useFocus ===
-
-// Module 3902 (useFocus)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

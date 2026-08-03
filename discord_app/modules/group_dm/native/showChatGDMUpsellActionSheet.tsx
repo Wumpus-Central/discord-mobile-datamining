@@ -1,6 +1,3 @@
-// === Module 10926: showChatGDMUpsellActionSheet ===
-
-// Module 10926 (showChatGDMUpsellActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/group_dm/native/showChatGDMUpsellActionSheet.tsx");
 
 export default function showChatGDMUpsellActionSheet(arg0) {

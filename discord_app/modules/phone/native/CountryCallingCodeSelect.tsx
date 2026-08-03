@@ -1,6 +1,3 @@
-// === Module 9247: CountryCallingCodeSelect ===
-
-// Module 9247 (CountryCallingCodeSelect)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "module_9250";

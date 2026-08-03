@@ -1,6 +1,3 @@
-// === Module 12242: FlatFriendButton ===
-
-// Module 12242 (FlatFriendButton)
 import "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "handleRelationshipAddError";
 import upsertRelationship from "upsertRelationship";

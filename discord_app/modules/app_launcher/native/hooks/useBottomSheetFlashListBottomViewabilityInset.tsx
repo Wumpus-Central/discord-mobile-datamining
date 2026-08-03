@@ -1,6 +1,3 @@
-// === Module 11285: useBottomSheetFlashListBottomViewabilityInset ===
-
-// Module 11285 (useBottomSheetFlashListBottomViewabilityInset)
 import noop from "noop";
 
 const require = arg1;

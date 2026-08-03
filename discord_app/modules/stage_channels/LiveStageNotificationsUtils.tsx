@@ -1,6 +1,3 @@
-// === Module 8345: useCanSendStageStartNotification ===
-
-// Module 8345 (useCanSendStageStartNotification)
 import handleInviteData from "handleInviteData";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

@@ -1,6 +1,3 @@
-// === Module 9838: PostPurchaseFooter ===
-
-// Module 9838 (PostPurchaseFooter)
 import GiftingBadgeIcon from "GiftingBadgeIcon";
 import { View } from "HapticFeedbackTypes";
 import map from "map";

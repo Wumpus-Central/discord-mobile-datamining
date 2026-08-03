@@ -1,6 +1,3 @@
-// === Module 5027: openApplyBoostModal ===
-
-// Module 5027 (openApplyBoostModal)
 const PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY = "PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("actions/native/BoostingActionCreators.tsx");
 

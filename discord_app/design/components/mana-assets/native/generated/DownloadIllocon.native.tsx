@@ -1,6 +1,3 @@
-// === Module 7013: DownloadIllocon ===
-
-// Module 7013 (DownloadIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/DownloadIllocon.native.tsx");

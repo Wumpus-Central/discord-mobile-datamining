@@ -1,6 +1,3 @@
-// === Module 14147: QuestDockContextMenuActionSheet ===
-
-// Module 14147 (QuestDockContextMenuActionSheet)
 import useQuests from "useQuests";
 import "emitClickEventWithCreative";
 import { UserSettingsSections } from "ME";

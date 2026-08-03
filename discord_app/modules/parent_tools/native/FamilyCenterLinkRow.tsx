@@ -1,6 +1,3 @@
-// === Module 13968: FamilyCenterLinkRow ===
-
-// Module 13968 (FamilyCenterLinkRow)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UserLinkStatus } from "items";

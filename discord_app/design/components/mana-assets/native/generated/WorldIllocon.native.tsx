@@ -1,6 +1,3 @@
-// === Module 7613: WorldIllocon ===
-
-// Module 7613 (WorldIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/WorldIllocon.native.tsx");

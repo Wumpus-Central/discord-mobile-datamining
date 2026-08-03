@@ -1,6 +1,3 @@
-// === Module 4236: set ===
-
-// Module 4236 (set)
 import set from "set";
 
 const obj = { ELIGIBLE_FOR_ATTEMPTS: null, ELIGIBLE_FOR_FULFILLMENT: null };

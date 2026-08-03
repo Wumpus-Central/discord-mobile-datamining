@@ -1,6 +1,3 @@
-// === Module 15588: ChannelDetailsLinkedLobby ===
-
-// Module 15588 (ChannelDetailsLinkedLobby)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { HelpdeskArticles } from "ME";

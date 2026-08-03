@@ -1,6 +1,3 @@
-// === Module 10545: useIsFiveButtonLayout ===
-
-// Module 10545 (useIsFiveButtonLayout)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 

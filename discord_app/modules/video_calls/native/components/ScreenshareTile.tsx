@@ -1,6 +1,3 @@
-// === Module 10555: ScreenShareTile ===
-
-// Module 10555 (ScreenShareTile)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { NOOP } from "ME";

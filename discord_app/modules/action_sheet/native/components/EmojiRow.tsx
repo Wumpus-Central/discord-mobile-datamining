@@ -1,6 +1,3 @@
-// === Module 9980: EmojiRow ===
-
-// Module 9980 (EmojiRow)
 import "noop";
 import { View } from "QUICK_SWITCHER";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";

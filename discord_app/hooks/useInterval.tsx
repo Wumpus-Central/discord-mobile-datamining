@@ -1,6 +1,3 @@
-// === Module 6243: useInterval ===
-
-// Module 6243 (useInterval)
 import noop from "noop";
 
 let c3;

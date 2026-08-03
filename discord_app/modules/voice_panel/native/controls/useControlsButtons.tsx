@@ -1,6 +1,3 @@
-// === Module 16025: useControlsButtons ===
-
-// Module 16025 (useControlsButtons)
 import VOICE_PANEL_DRAWER_MAX_WIDTH from "VOICE_PANEL_DRAWER_MAX_WIDTH";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import VoicePanelControlsModes from "VoicePanelControlsModes";

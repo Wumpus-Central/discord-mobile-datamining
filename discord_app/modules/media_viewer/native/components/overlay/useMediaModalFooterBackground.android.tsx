@@ -1,6 +1,3 @@
-// === Module 12331: useMediaModalFooterBackground ===
-
-// Module 12331 (useMediaModalFooterBackground)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

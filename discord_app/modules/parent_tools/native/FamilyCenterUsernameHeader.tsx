@@ -1,6 +1,3 @@
-// === Module 13942: FamilyCenterUsernameHeader ===
-
-// Module 13942 (FamilyCenterUsernameHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

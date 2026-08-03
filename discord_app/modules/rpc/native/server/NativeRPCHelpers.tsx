@@ -1,6 +1,3 @@
-// === Module 10644: validateSocketClient ===
-
-// Module 10644 (validateSocketClient)
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCCloseCodes } from "ME";
 import importDefaultResult from "set";

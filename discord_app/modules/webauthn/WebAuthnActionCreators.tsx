@@ -1,6 +1,3 @@
-// === Module 5649: _fetchWebAuthnConditionalChallenge ===
-
-// Module 5649 (_fetchWebAuthnConditionalChallenge)
 import ImpressionNames from "ImpressionNames";
 import { Endpoints } from "ME";
 

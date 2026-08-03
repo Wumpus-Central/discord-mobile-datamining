@@ -1,6 +1,3 @@
-// === Module 8397: PerLetterEffect ===
-
-// Module 8397 (PerLetterEffect)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

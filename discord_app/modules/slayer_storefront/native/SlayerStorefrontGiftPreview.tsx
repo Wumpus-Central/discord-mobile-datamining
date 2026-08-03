@@ -1,6 +1,3 @@
-// === Module 8055: WarningBox ===
-
-// Module 8055 (WarningBox)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

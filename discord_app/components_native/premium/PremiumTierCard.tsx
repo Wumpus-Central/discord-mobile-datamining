@@ -1,6 +1,3 @@
-// === Module 12616: textLogoTier2 ===
-
-// Module 12616 (textLogoTier2)
 import "set";
 import get_ActivityIndicator from "registerAsset";
 import { getPremiumGradientColor } from "items";

@@ -1,6 +1,3 @@
-// === Module 11642: _launchGuildBoostFlowOrAlert ===
-
-// Module 11642 (_launchGuildBoostFlowOrAlert)
 import getSystemLocale from "getSystemLocale";
 import reset from "reset";
 import ME from "ME";

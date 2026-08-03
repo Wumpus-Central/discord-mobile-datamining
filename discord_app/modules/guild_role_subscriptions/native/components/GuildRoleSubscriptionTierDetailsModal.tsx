@@ -1,6 +1,3 @@
-// === Module 16632: Content ===
-
-// Module 16632 (Content)
 import _slicedToArray from "_slicedToArray";
 import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
 import { UPLOAD_MEDIUM_SIZE } from "ME";

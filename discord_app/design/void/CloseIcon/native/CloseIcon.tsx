@@ -1,6 +1,3 @@
-// === Module 13151: Close ===
-
-// Module 13151 (Close)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15656: YouExpiringTrialOfferCard ===
-
-// Module 15656 (YouExpiringTrialOfferCard)
 import Text from "Text";
 import { View } from "useShouldShowExpiringTrialOfferCard";
 import clearDismissUntil from "clearDismissUntil";

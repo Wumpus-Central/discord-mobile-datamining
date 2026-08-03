@@ -1,6 +1,3 @@
-// === Module 16513: ConnectedGuildSettingsModalBans ===
-
-// Module 16513 (ConnectedGuildSettingsModalBans)
 import _slicedToArray from "_slicedToArray";
 import _copy from "_copy";
 import get_ActivityIndicator from "TableRowArrow";

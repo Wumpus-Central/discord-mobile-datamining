@@ -1,6 +1,3 @@
-// === Module 14709: useGoreContentNonFriendsDmSettingValue ===
-
-// Module 14709 (useGoreContentNonFriendsDmSettingValue)
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import createToggle from "createToggle";
 

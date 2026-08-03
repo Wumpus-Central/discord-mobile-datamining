@@ -1,6 +1,3 @@
-// === Module 10478: ChatOverlays ===
-
-// Module 10478 (ChatOverlays)
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChatOverlays } from "ChatOverlays";

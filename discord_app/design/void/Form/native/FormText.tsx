@@ -1,6 +1,3 @@
-// === Module 7656: FormTextColors ===
-
-// Module 7656 (FormTextColors)
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";

@@ -1,6 +1,3 @@
-// === Module 9321: updateChatInputContainerHeight ===
-
-// Module 9321 (updateChatInputContainerHeight)
 import keys from "keys";
 
 let chatInputContainerHeight = "chatInputContainerHeight";

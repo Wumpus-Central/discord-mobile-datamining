@@ -1,6 +1,3 @@
-// === Module 12032: AvatarPile ===
-
-// Module 12032 (AvatarPile)
 import noop from "noop";
 import jsxProd from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 5704: handleUserSettingsProtoStoreChange ===
-
-// Module 5704 (handleUserSettingsProtoStoreChange)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
 import { UserSettingsTypes } from "MAX_FAVORITES";

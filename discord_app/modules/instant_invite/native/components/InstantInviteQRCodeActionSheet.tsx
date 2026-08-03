@@ -1,6 +1,3 @@
-// === Module 12261: InstantInviteQRCodeActionSheet ===
-
-// Module 12261 (InstantInviteQRCodeActionSheet)
 import noop from "noop";
 import { View } from "set";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

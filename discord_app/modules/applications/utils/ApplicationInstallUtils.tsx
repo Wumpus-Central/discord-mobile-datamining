@@ -1,6 +1,3 @@
-// === Module 8034: canInstallApplication ===
-
-// Module 8034 (canInstallApplication)
 import getIndexKey from "getIndexKey";
 import { BuiltInSectionId } from "TRUE_OPTION_NAME";
 

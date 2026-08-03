@@ -1,6 +1,3 @@
-// === Module 15002: VoiceSubtitle ===
-
-// Module 15002 (VoiceSubtitle)
 import "noop";
 import { jsx } from "jsxProd";
 

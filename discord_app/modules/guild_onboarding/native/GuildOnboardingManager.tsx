@@ -1,6 +1,3 @@
-// === Module 16212: prototype ===
-
-// Module 16212 (prototype)
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import handleConnectionOpen from "handleConnectionOpen";

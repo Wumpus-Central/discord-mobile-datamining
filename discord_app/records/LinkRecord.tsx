@@ -1,6 +1,3 @@
-// === Module 6169: fromPath ===
-
-// Module 6169 (fromPath)
 import "toJS";
 import { Routes } from "ME";
 

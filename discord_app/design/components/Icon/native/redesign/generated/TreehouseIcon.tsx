@@ -1,6 +1,3 @@
-// === Module 13671: TreehouseIcon ===
-
-// Module 13671 (TreehouseIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

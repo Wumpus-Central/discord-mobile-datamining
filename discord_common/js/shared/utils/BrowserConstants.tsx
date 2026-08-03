@@ -1,6 +1,3 @@
-// === Module 12878: parsed ===
-
-// Module 12878 (parsed)
 import { version as str } from "format";
 
 if (str == null) {

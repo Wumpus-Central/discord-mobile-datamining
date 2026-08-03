@@ -1,6 +1,3 @@
-// === Module 9446: FoodIcon ===
-
-// Module 9446 (FoodIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

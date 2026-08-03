@@ -1,6 +1,3 @@
-// === Module 10615: ActivityTileInner ===
-
-// Module 10615 (ActivityTileInner)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ManaContext from "ManaContext";
 import "context";

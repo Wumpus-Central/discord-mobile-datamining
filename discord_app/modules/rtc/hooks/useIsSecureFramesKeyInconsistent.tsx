@@ -1,6 +1,3 @@
-// === Module 8912: useIsSecureFramesKeyInconsistent ===
-
-// Module 8912 (useIsSecureFramesKeyInconsistent)
 import noop from "noop";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";

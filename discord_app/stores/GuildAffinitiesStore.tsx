@@ -1,6 +1,3 @@
-// === Module 8184: initialize ===
-
-// Module 8184 (initialize)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { PersistedStore } from "initialize";
 

@@ -1,6 +1,3 @@
-// === Module 6564: useIsWindowLarge ===
-
-// Module 6564 (useIsWindowLarge)
 const result = require("set").fileFinishedImporting("modules/screen/native/useIsWindowLarge.tsx");
 
 export default function useIsWindowLarge() {

@@ -1,6 +1,3 @@
-// === Module 1922: prefix ===
-
-// Module 1922 (prefix)
 let MessageDao;
 class MessageDao {
   constructor(arg0, arg1, arg2) {

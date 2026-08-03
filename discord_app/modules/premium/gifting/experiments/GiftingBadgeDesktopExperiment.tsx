@@ -1,6 +1,3 @@
-// === Module 12624: apexExperiment ===
-
-// Module 12624 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

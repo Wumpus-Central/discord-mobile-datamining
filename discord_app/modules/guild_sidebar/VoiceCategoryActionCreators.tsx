@@ -1,6 +1,3 @@
-// === Module 15187: voiceCategoryExpand ===
-
-// Module 15187 (voiceCategoryExpand)
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/VoiceCategoryActionCreators.tsx");
 
 export const voiceCategoryExpand = function voiceCategoryExpand(guildId) {

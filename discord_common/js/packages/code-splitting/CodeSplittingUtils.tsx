@@ -1,6 +1,3 @@
-// === Module 3858: loaderMaker ===
-
-// Module 3858 (loaderMaker)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";

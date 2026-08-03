@@ -1,6 +1,3 @@
-// === Module 12444: ? ===
-
-// Module 12444
 import updateInvite from "updateInvite";
 import importDefaultResult from "apply";
 

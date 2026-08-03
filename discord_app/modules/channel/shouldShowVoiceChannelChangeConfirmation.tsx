@@ -1,6 +1,3 @@
-// === Module 12440: shouldShowVoiceChannelChangeConfirmation ===
-
-// Module 12440 (shouldShowVoiceChannelChangeConfirmation)
 import set from "set";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import fetchFingerprint from "fetchFingerprint";

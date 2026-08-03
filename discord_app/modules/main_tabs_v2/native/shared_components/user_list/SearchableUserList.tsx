@@ -1,6 +1,3 @@
-// === Module 8823: SearchableUserList ===
-
-// Module 8823 (SearchableUserList)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "module_8293";

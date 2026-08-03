@@ -1,6 +1,3 @@
-// === Module 10428: Changeset ===
-
-// Module 10428 (Changeset)
 import { RowType } from "Changeset";
 
 const result = require("set").fileFinishedImporting("modules/messages/native/VisibleMessagesWindowHandler.tsx");

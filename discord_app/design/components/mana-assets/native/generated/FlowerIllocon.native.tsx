@@ -1,6 +1,3 @@
-// === Module 7045: FlowerIllocon ===
-
-// Module 7045 (FlowerIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/FlowerIllocon.native.tsx");

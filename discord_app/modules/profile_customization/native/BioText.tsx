@@ -1,6 +1,3 @@
-// === Module 11971: LinkButton ===
-
-// Module 11971 (LinkButton)
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";

@@ -1,6 +1,3 @@
-// === Module 1450: handleImageLoad ===
-
-// Module 1450 (handleImageLoad)
 import _slicedToArray from "_slicedToArray";
 import fails from "fails";
 import ME from "ME";

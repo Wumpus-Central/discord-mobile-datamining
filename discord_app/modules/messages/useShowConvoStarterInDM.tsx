@@ -1,6 +1,3 @@
-// === Module 11440: MAX_MESSAGES_ALLOWED_FOR_GREETING ===
-
-// Module 11440 (MAX_MESSAGES_ALLOWED_FOR_GREETING)
 import { useRef } from "noop";
 import processChannel from "processChannel";
 import reinjectEphemerals from "reinjectEphemerals";

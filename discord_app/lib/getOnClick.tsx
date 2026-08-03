@@ -1,6 +1,3 @@
-// === Module 8211: openInviteModal ===
-
-// Module 8211 (openInviteModal)
 import _runPrimaryAppCommandOrJoinEmbeddedActivity from "_runPrimaryAppCommandOrJoinEmbeddedActivity";
 import fetchFingerprint from "fetchFingerprint";
 import addApplication from "addApplication";

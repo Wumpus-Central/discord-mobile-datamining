@@ -1,6 +1,3 @@
-// === Module 13814: formatUsernameLiveCheckValidation ===
-
-// Module 13814 (formatUsernameLiveCheckValidation)
 const result = require("getSystemLocale").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
 export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(arg0) {

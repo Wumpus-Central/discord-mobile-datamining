@@ -1,6 +1,3 @@
-// === Module 8364: InformationTable ===
-
-// Module 8364 (InformationTable)
 import getNickname from "getNickname";
 import importAllResult from "useDisplayProfile";
 import { View } from "useTheme";

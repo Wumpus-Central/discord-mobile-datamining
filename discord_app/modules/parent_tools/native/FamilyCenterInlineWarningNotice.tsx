@@ -1,6 +1,3 @@
-// === Module 13924: FamilyCenterInlineWarningNotice ===
-
-// Module 13924 (FamilyCenterInlineWarningNotice)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

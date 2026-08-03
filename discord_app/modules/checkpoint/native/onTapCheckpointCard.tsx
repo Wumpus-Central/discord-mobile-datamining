@@ -1,6 +1,3 @@
-// === Module 11146: onTapCheckpointCard ===
-
-// Module 11146 (onTapCheckpointCard)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 

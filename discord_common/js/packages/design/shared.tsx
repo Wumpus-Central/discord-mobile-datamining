@@ -1,6 +1,3 @@
-// === Module 4008: ? ===
-
-// Module 4008
 import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD";
 
 const result = require("context").fileFinishedImporting("../discord_common/js/packages/design/shared.tsx");

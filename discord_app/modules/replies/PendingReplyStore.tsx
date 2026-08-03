@@ -1,6 +1,3 @@
-// === Module 5969: getState ===
-
-// Module 5969 (getState)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";

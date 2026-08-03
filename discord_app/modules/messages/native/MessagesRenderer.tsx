@@ -1,6 +1,3 @@
-// === Module 10911: handleTapShowAltText ===
-
-// Module 10911 (handleTapShowAltText)
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import getMessageJumpData from "getMessageJumpData";
 import importAllResult from "apply";

@@ -1,6 +1,3 @@
-// === Module 4754: fromBlob ===
-
-// Module 4754 (fromBlob)
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let prototype;

@@ -1,6 +1,3 @@
-// === Module 8883: computeCallVerification ===
-
-// Module 8883 (computeCallVerification)
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";

@@ -1,6 +1,3 @@
-// === Module 15294: CoachmarkImg ===
-
-// Module 15294 (CoachmarkImg)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { Image } from "get ActivityIndicator";

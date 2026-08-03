@@ -1,6 +1,3 @@
-// === Module 14138: QuestDockMode ===
-
-// Module 14138 (QuestDockMode)
 import { QuestDockMode } from "QuestsExperimentLocations";
 import { PersistedStore } from "initialize";
 

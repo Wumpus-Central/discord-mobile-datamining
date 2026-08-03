@@ -1,6 +1,3 @@
-// === Module 8294: BottomSheetTextInput ===
-
-// Module 8294 (BottomSheetTextInput)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

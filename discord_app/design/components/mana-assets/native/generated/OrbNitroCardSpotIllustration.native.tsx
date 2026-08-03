@@ -1,6 +1,3 @@
-// === Module 7375: OrbNitroCardSpotIllustration ===
-
-// Module 7375 (OrbNitroCardSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/OrbNitroCardSpotIllustration.native.tsx");

@@ -1,6 +1,3 @@
-// === Module 15338: ForYouUnreadClearedState ===
-
-// Module 15338 (ForYouUnreadClearedState)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

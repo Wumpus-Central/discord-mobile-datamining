@@ -1,6 +1,3 @@
-// === Module 8341: createStageChannelForEvent ===
-
-// Module 8341 (createStageChannelForEvent)
 import ME from "ME";
 import { createChannelRecordFromServer as closure_4 } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

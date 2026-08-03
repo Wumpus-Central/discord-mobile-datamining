@@ -1,6 +1,3 @@
-// === Module 11646: useGuildPowerupOnDeactivate ===
-
-// Module 11646 (useGuildPowerupOnDeactivate)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnDeactivate.tsx");

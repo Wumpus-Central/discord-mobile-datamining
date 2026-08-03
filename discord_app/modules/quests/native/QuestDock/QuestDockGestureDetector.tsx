@@ -1,6 +1,3 @@
-// === Module 14226: useQuestDockSwipeGesture ===
-
-// Module 14226 (useQuestDockSwipeGesture)
 import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";

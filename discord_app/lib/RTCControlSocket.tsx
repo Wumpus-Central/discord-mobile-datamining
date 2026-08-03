@@ -1,6 +1,3 @@
-// === Module 12884: noop ===
-
-// Module 12884 (noop)
 import refreshSourceMapCookie from "refreshSourceMapCookie";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import DesktopSources from "DesktopSources";

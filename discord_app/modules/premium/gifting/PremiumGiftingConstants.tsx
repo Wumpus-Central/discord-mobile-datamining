@@ -1,6 +1,3 @@
-// === Module 11905: GIFT_STYLE_DESCRIPTIONS ===
-
-// Module 11905 (GIFT_STYLE_DESCRIPTIONS)
 let BOX;
 let CAKE;
 let CHEST;

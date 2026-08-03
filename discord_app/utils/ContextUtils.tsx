@@ -1,6 +1,3 @@
-// === Module 6225: createDefinedContext ===
-
-// Module 6225 (createDefinedContext)
 import noop from "noop";
 import { jsx } from "jsxProd";
 

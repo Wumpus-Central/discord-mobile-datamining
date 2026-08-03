@@ -1,6 +1,3 @@
-// === Module 12976: normalizeKey ===
-
-// Module 12976 (normalizeKey)
 import _slicedToArray from "_slicedToArray";
 import closure_3 from "set";
 import refreshSourceMapCookie from "refreshSourceMapCookie";

@@ -1,6 +1,3 @@
-// === Module 13737: ColorSwatch ===
-
-// Module 13737 (ColorSwatch)
 import "EditProfileThemeActionSheet";
 import { View } from "showCustomColorPickerActionSheet";
 import jsxProd from "MoreHorizontalIcon";

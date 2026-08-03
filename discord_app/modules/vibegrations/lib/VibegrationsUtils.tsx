@@ -1,6 +1,3 @@
-// === Module 5686: vibegrationsAppIdFromTopic ===
-
-// Module 5686 (vibegrationsAppIdFromTopic)
 import handleProjectUpsert from "handleProjectUpsert";
 import addApplication from "addApplication";
 import comparator from "comparator";

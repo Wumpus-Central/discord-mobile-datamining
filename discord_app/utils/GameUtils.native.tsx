@@ -1,6 +1,3 @@
-// === Module 8494: set ===
-
-// Module 8494 (set)
 let c0 = "not supported";
 const result = require("set").fileFinishedImporting("utils/GameUtils.native.tsx");
 

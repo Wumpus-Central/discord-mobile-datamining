@@ -1,6 +1,3 @@
-// === Module 15822: useSimpleGuildSize ===
-
-// Module 15822 (useSimpleGuildSize)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");

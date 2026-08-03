@@ -1,6 +1,3 @@
-// === Module 8523: ObscuredSurface ===
-
-// Module 8523 (ObscuredSurface)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

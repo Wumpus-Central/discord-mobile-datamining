@@ -1,6 +1,3 @@
-// === Module 5246: RedesignBottomSheetTitleHeaderBase ===
-
-// Module 5246 (RedesignBottomSheetTitleHeaderBase)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

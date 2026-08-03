@@ -1,6 +1,3 @@
-// === Module 13538: migrateHotspotLocation ===
-
-// Module 13538 (migrateHotspotLocation)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelNoticeTypes } from "ME";
 import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS";

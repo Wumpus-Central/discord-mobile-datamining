@@ -1,6 +1,3 @@
-// === Module 5570: GuildIconSizes ===
-
-// Module 5570 (GuildIconSizes)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { ExpressionSourceGuildRecord as closure_5 } from "getEmojiSourceData";

@@ -1,6 +1,3 @@
-// === Module 9284: overrideSurvey ===
-
-// Module 9284 (overrideSurvey)
 import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
 import { SURVEY_REFETCH_INTERVAL } from "fetchSurveyIfNeeded";
 import ME from "ME";

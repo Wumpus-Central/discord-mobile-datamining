@@ -1,6 +1,3 @@
-// === Module 14697: SettingsEmoji ===
-
-// Module 14697 (SettingsEmoji)
 import jsxProd from "jsxProd";
 import "noop";
 import { AnalyticEvents } from "ME";

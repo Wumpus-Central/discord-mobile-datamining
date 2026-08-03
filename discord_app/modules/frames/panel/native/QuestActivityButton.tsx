@@ -1,6 +1,3 @@
-// === Module 15879: QuestActivityButtonInner ===
-
-// Module 15879 (QuestActivityButtonInner)
 import importAllResult from "play";
 import { View } from "contextMenuButton";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

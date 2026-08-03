@@ -1,6 +1,3 @@
-// === Module 16336: _initialize ===
-
-// Module 16336 (_initialize)
 import { subscribeToIntlLoadingSuccess as closure_2 } from "_setAppLocale";
 import "initialize";
 

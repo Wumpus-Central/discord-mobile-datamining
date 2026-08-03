@@ -1,6 +1,3 @@
-// === Module 11259: _getEmbedApplication ===
-
-// Module 11259 (_getEmbedApplication)
 import getLastFetchTimeMs from "getLastFetchTimeMs";
 import getUserAgnosticState from "getUserAgnosticState";
 import _getSystemLocale from "_getSystemLocale";

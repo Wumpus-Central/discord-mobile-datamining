@@ -1,6 +1,3 @@
-// === Module 6168: handleUserUpdate ===
-
-// Module 6168 (handleUserUpdate)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

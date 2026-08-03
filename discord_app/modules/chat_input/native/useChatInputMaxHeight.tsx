@@ -1,6 +1,3 @@
-// === Module 11173: getChatInputMaxHeight ===
-
-// Module 11173 (getChatInputMaxHeight)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";

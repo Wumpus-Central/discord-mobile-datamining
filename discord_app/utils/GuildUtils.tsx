@@ -1,6 +1,3 @@
-// === Module 5108: getGuildNameSuggestion ===
-
-// Module 5108 (getGuildNameSuggestion)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import importDefaultResult from "priv";

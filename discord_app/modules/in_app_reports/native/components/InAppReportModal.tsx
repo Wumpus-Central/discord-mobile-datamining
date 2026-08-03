@@ -1,6 +1,3 @@
-// === Module 7702: InAppReportModal ===
-
-// Module 7702 (InAppReportModal)
 import HeaderActionButton from "HeaderActionButton";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,6 +1,3 @@
-// === Module 6909: ButterflyIllocon ===
-
-// Module 6909 (ButterflyIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");

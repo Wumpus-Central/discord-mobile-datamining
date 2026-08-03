@@ -1,6 +1,3 @@
-// === Module 13706: ProfileCustomizationSubsection ===
-
-// Module 13706 (ProfileCustomizationSubsection)
 import zustandStore from "zustandStore";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";

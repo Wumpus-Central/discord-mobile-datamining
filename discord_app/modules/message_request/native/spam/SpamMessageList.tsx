@@ -1,6 +1,3 @@
-// === Module 15740: PendingSpamMessageRequestRow ===
-
-// Module 15740 (PendingSpamMessageRequestRow)
 import Form from "Form";
 import get_ActivityIndicator from "registerAsset";
 import { AnalyticEvents } from "ME";

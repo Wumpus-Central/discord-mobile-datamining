@@ -1,6 +1,3 @@
-// === Module 16600: useArchiveOrDelete ===
-
-// Module 16600 (useArchiveOrDelete)
 import getSystemLocale from "getSystemLocale";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

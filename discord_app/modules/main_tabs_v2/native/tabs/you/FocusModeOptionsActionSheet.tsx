@@ -1,6 +1,3 @@
-// === Module 15275: label ===
-
-// Module 15275 (label)
 import "noop";
 import jsxProd from "jsxProd";
 

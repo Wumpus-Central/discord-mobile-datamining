@@ -1,6 +1,3 @@
-// === Module 1410: date ===
-
-// Module 1410 (date)
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields";
 
 const obj = { id: "373", name: "Favorites", description: "The place for all your favorite channels!", joinedAt: null, maxMembers: 500000 };

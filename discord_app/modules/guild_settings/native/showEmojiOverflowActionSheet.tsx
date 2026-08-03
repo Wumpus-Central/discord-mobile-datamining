@@ -1,6 +1,3 @@
-// === Module 16422: showEmojiOverflowActionSheet ===
-
-// Module 16422 (showEmojiOverflowActionSheet)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_settings/native/showEmojiOverflowActionSheet.tsx");
 
 export default function showEmojiOverflowActionSheet(arg0) {

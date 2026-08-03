@@ -1,6 +1,3 @@
-// === Module 10364: getPushNotificationLogs ===
-
-// Module 10364 (getPushNotificationLogs)
 import fetchFingerprint from "fetchFingerprint";
 
 const result = require("set").fileFinishedImporting("modules/debug/getPushNotificationLogs.android.tsx");

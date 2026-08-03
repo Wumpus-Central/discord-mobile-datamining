@@ -1,6 +1,3 @@
-// === Module 1412: isValueEqual ===
-
-// Module 1412 (isValueEqual)
 import { TypeTag } from "TypeTag";
 import importDefaultResult from "TypeTag";
 

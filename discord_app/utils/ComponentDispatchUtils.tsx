@@ -1,6 +1,3 @@
-// === Module 1231: ComponentDispatcher ===
-
-// Module 1231 (ComponentDispatcher)
 import { ComponentActionsKeyed } from "ME";
 
 let c3 = new require("safeDispatch")("ComponentDispatchUtils");

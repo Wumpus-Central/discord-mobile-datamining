@@ -1,6 +1,3 @@
-// === Module 9664: useStickerPickerListData ===
-
-// Module 9664 (useStickerPickerListData)
 import noop from "noop";
 import { useStickerPickerStore } from "useStickerPickerStore";
 import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";

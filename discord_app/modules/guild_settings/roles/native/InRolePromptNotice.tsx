@@ -1,6 +1,3 @@
-// === Module 16493: InRolePromptNotice ===
-
-// Module 16493 (InRolePromptNotice)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { RoleFlags } from "ME";

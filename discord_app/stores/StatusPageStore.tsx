@@ -1,6 +1,3 @@
-// === Module 12829: initialize ===
-
-// Module 12829 (initialize)
 import { Store } from "initialize";
 
 const require = arg1;

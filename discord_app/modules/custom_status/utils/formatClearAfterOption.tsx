@@ -1,6 +1,3 @@
-// === Module 11994: formatClearAfterOption ===
-
-// Module 11994 (formatClearAfterOption)
 import { ClearAfterValues } from "StatusTypes";
 
 let result = require("getSystemLocale").fileFinishedImporting("modules/custom_status/utils/formatClearAfterOption.tsx");

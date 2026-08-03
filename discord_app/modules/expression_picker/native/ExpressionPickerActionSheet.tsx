@@ -1,6 +1,3 @@
-// === Module 9600: ExpressionPickerActionSheet ===
-
-// Module 9600 (ExpressionPickerActionSheet)
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO";

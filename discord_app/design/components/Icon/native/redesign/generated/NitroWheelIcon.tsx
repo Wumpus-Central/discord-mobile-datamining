@@ -1,6 +1,3 @@
-// === Module 6630: NitroWheelIcon ===
-
-// Module 6630 (NitroWheelIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

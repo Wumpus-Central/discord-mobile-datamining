@@ -1,6 +1,3 @@
-// === Module 11984: StatusTypes ===
-
-// Module 11984 (StatusTypes)
 import { StatusTypes } from "sum";
 
 const frozen = Object.freeze({ MINUTES_30: 1800000, HOURS_1: 3600000, HOURS_4: 14400000, TODAY: "TODAY", DONT_CLEAR: "DONT_CLEAR" });

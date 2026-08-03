@@ -1,6 +1,3 @@
-// === Module 10326: useChannelPresetSettings ===
-
-// Module 10326 (useChannelPresetSettings)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

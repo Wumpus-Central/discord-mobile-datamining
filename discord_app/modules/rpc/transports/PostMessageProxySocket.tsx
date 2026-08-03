@@ -1,6 +1,3 @@
-// === Module 10649: send ===
-
-// Module 10649 (send)
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCCloseCodes } from "ME";
 import "checkRpcVersion";

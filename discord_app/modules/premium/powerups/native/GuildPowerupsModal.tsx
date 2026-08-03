@@ -1,6 +1,3 @@
-// === Module 11585: GuildPowerupsModal ===
-
-// Module 11585 (GuildPowerupsModal)
 import messagesProxy from "messagesProxy";
 import get_ActivityIndicator from "Background";
 import BoostedGuildTiers from "BoostedGuildTiers";

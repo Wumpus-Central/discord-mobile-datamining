@@ -1,6 +1,3 @@
-// === Module 7882: checkSpoilerEmbeds ===
-
-// Module 7882 (checkSpoilerEmbeds)
 import ME from "ME";
 import set from "Version";
 

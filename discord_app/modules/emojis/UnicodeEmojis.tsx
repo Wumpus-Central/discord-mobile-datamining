@@ -1,6 +1,3 @@
-// === Module 3834: parseRawEmojiObject ===
-
-// Module 3834 (parseRawEmojiObject)
 import defaultImageSrcGenerator from "defaultImageSrcGenerator";
 import module_917631 from "module_917631";
 import module_127988 from "module_127988";

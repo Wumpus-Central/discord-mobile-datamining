@@ -1,6 +1,3 @@
-// === Module 1347: isPerModeThemingActive ===
-
-// Module 1347 (isPerModeThemingActive)
 import handleThemeChange from "handleThemeChange";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import { SystemThemeState } from "SystemThemeState";

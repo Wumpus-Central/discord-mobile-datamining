@@ -1,6 +1,3 @@
-// === Module 6087: setFilterTagIds ===
-
-// Module 6087 (setFilterTagIds)
 import "ensureGuildLoaded";
 import set from "set";
 

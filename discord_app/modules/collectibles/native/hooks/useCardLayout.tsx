@@ -1,6 +1,3 @@
-// === Module 14639: useCardLayout ===
-
-// Module 14639 (useCardLayout)
 let result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
 
 export const useCardLayout = function useCardLayout() {

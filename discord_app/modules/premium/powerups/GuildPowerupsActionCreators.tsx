@@ -1,6 +1,3 @@
-// === Module 11593: guildPowerupsAckNotification ===
-
-// Module 11593 (guildPowerupsAckNotification)
 import BoostedGuildTiers from "BoostedGuildTiers";
 import { Endpoints } from "ME";
 

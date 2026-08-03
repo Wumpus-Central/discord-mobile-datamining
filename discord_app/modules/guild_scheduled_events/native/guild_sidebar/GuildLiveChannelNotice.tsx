@@ -1,6 +1,3 @@
-// === Module 15178: UserSummaryRow ===
-
-// Module 15178 (UserSummaryRow)
 import importAllResult from "Text";
 import { View } from "MINIMUM_HIT_AREA";
 import getActiveStageChannelIds from "getActiveStageChannelIds";

@@ -1,6 +1,3 @@
-// === Module 11746: useChatPlaceholderAnimatedStyles ===
-
-// Module 11746 (useChatPlaceholderAnimatedStyles)
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 
 const require = arg1;

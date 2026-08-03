@@ -1,6 +1,3 @@
-// === Module 11935: useFetchCollectiblesProducts ===
-
-// Module 11935 (useFetchCollectiblesProducts)
 import _slicedToArray from "_slicedToArray";
 import { useEffect } from "noop";
 import addSku from "addSku";

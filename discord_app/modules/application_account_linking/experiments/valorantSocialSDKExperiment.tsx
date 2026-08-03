@@ -1,6 +1,3 @@
-// === Module 4221: getIsValorantSocialSDKEnabled ===
-
-// Module 4221 (getIsValorantSocialSDKEnabled)
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";

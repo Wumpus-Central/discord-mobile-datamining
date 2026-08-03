@@ -1,6 +1,3 @@
-// === Module 9083: MusicIcon ===
-
-// Module 9083 (MusicIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

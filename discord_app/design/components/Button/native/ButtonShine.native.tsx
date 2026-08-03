@@ -1,6 +1,3 @@
-// === Module 4614: useShineEffectStyles ===
-
-// Module 4614 (useShineEffectStyles)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

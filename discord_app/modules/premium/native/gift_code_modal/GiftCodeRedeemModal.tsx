@@ -1,6 +1,3 @@
-// === Module 8041: GiftCodeRedeemModal ===
-
-// Module 8041 (GiftCodeRedeemModal)
 import "noop";
 import updateGiftCode from "updateGiftCode";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 4059: useKeyboardType ===
-
-// Module 4059 (useKeyboardType)
 import noop from "noop";
 
 const require = arg1;

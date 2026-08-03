@@ -1,6 +1,3 @@
-// === Module 15642: CoachmarkImg ===
-
-// Module 15642 (CoachmarkImg)
 import noop from "noop";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { jsx } from "jsxProd";

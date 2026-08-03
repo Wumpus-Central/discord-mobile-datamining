@@ -1,6 +1,3 @@
-// === Module 8244: InputButton ===
-
-// Module 8244 (InputButton)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { Text } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

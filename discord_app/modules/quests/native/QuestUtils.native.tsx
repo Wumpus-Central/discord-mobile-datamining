@@ -1,6 +1,3 @@
-// === Module 10974: openRewardClaimBottomSheet ===
-
-// Module 10974 (openRewardClaimBottomSheet)
 import closure_3 from "jsxProd";
 import "module_9186";
 import zustandStore from "zustandStore";

@@ -1,6 +1,3 @@
-// === Module 8285: handleUpdateStart ===
-
-// Module 8285 (handleUpdateStart)
 import { ChannelTypes } from "ME";
 import { Store } from "initialize";
 

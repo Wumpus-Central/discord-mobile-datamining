@@ -1,6 +1,3 @@
-// === Module 7271: MailboxSpotIllustration ===
-
-// Module 7271 (MailboxSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx");

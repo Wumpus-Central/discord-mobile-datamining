@@ -1,6 +1,3 @@
-// === Module 4531: handleConnectionOpen ===
-
-// Module 4531 (handleConnectionOpen)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Store } from "initialize";
 import set from "initialize";

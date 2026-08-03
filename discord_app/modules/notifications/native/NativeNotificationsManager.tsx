@@ -1,6 +1,3 @@
-// === Module 16668: getDeliveredNotifications ===
-
-// Module 16668 (getDeliveredNotifications)
 import timestamp from "timestamp";
 import { NativeModules } from "get ActivityIndicator";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";

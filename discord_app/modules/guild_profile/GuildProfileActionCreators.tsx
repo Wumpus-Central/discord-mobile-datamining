@@ -1,6 +1,3 @@
-// === Module 8287: _fetchGuildTopGames ===
-
-// Module 8287 (_fetchGuildTopGames)
 import dispatcher from "dispatcher";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

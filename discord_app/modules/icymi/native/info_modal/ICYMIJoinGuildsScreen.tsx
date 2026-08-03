@@ -1,6 +1,3 @@
-// === Module 15376: SelectedServerIcon ===
-
-// Module 15376 (SelectedServerIcon)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import set from "set";
 import preload from "preload";

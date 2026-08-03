@@ -1,6 +1,3 @@
-// === Module 10191: SafetyToolsSafetyTipsActionSheet ===
-
-// Module 10191 (SafetyToolsSafetyTipsActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { getInappropriateConversationsSafetyTips as closure_4 } from "LOCATION_CONTEXT_MOBILE";

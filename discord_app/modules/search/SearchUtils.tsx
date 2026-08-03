@@ -1,6 +1,3 @@
-// === Module 10116: SearchTokenTypes ===
-
-// Module 10116 (SearchTokenTypes)
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

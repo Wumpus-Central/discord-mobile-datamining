@@ -1,6 +1,3 @@
-// === Module 4866: insertionIndex ===
-
-// Module 4866 (insertionIndex)
 const result = require("set").fileFinishedImporting("utils/SortedArrayUtils.tsx");
 
 export const insertionIndex = function insertionIndex(arg0, arg1, arg2) {

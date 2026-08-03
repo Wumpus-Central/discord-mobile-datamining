@@ -1,6 +1,3 @@
-// === Module 15263: PrivateProfileCoachmarkImage ===
-
-// Module 15263 (PrivateProfileCoachmarkImage)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { UserSettingsSections } from "ME";

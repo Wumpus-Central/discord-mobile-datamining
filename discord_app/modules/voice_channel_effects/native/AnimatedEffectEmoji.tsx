@@ -1,6 +1,3 @@
-// === Module 10614: Emoji ===
-
-// Module 10614 (Emoji)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

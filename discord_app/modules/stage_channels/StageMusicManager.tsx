@@ -1,6 +1,3 @@
-// === Module 10718: checkVoiceStates ===
-
-// Module 10718 (checkVoiceStates)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import importDefaultResult from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";

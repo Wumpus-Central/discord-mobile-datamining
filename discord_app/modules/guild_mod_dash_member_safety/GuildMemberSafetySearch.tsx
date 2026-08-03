@@ -1,6 +1,3 @@
-// === Module 5780: hasStringMatch ===
-
-// Module 5780 (hasStringMatch)
 import _slicedToArray from "_slicedToArray";
 import set from "isEqual";
 

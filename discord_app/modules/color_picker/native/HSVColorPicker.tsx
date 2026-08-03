@@ -1,6 +1,3 @@
-// === Module 13718: HSVColorPicker ===
-
-// Module 13718 (HSVColorPicker)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

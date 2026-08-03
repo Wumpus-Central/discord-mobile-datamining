@@ -1,6 +1,3 @@
-// === Module 4525: transformMessagePoll ===
-
-// Module 4525 (transformMessagePoll)
 const result = require("set").fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
 
 export default function transformMessagePoll(expiry) {

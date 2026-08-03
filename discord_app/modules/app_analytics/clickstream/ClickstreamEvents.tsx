@@ -1,6 +1,3 @@
-// === Module 5731: getClickstreamDrainEvent ===
-
-// Module 5731 (getClickstreamDrainEvent)
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");

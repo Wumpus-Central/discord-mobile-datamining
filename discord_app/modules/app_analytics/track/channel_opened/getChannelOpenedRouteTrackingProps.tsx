@@ -1,6 +1,3 @@
-// === Module 15592: getChannelOpenedRouteTrackingProps ===
-
-// Module 15592 (getChannelOpenedRouteTrackingProps)
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

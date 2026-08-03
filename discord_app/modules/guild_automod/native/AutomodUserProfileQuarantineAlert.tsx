@@ -1,6 +1,3 @@
-// === Module 11074: ChatBlockedAlert ===
-
-// Module 11074 (ChatBlockedAlert)
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import "openUserSettings";

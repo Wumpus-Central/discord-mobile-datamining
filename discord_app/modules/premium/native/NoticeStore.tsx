@@ -1,6 +1,3 @@
-// === Module 12793: clearDismissUntil ===
-
-// Module 12793 (clearDismissUntil)
 import emitChanges from "emitChanges";
 import { PremiumSubscriptionSKUs } from "GuildFeatures";
 import { NoticeTypes } from "ME";

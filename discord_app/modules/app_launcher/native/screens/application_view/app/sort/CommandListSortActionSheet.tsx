@@ -1,6 +1,3 @@
-// === Module 11341: CommandListSortActionSheet ===
-
-// Module 11341 (CommandListSortActionSheet)
 import "noop";
 import { CommandListSortOrder } from "CommandListSortOrder";
 import { jsx } from "jsxProd";

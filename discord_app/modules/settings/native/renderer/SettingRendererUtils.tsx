@@ -1,6 +1,3 @@
-// === Module 13702: onRouteSettingOnPress ===
-
-// Module 13702 (onRouteSettingOnPress)
 import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import { AnalyticsPages } from "ME";
 

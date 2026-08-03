@@ -1,6 +1,3 @@
-// === Module 9484: get1PShopApplicationIdForSKU ===
-
-// Module 9484 (get1PShopApplicationIdForSKU)
 import { COLLECTIBLES_APPLICATION_ID as closure_2 } from "ME";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
 import ContentDismissActionType from "ContentDismissActionType";

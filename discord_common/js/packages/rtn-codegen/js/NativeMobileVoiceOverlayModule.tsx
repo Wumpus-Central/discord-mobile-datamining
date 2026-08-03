@@ -1,6 +1,3 @@
-// === Module 13608: enforcing ===
-
-// Module 13608 (enforcing)
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeMobileVoiceOverlayModule");

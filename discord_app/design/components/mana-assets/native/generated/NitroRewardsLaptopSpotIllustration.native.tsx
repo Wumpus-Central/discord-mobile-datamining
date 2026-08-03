@@ -1,6 +1,3 @@
-// === Module 7325: NitroRewardsLaptopSpotIllustration ===
-
-// Module 7325 (NitroRewardsLaptopSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/NitroRewardsLaptopSpotIllustration.native.tsx");

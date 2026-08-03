@@ -1,6 +1,3 @@
-// === Module 13841: TwoFASetupSuccess ===
-
-// Module 13841 (TwoFASetupSuccess)
 import closure_3 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

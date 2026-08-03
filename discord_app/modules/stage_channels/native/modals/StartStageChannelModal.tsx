@@ -1,6 +1,3 @@
-// === Module 8343: closeModal ===
-
-// Module 8343 (closeModal)
 import closure_4 from "MAX_STAGE_TOPIC_LENGTH";
 import GuildStageChannelSelection from "GuildStageChannelSelection";
 import importAllResult from "HotspotStore";

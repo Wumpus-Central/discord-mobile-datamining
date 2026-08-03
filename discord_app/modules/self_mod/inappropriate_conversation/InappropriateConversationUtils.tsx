@@ -1,6 +1,3 @@
-// === Module 10168: getSafetyAlertsSettingOrDefault ===
-
-// Module 10168 (getSafetyAlertsSettingOrDefault)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleConnectionOpen from "handleConnectionOpen";

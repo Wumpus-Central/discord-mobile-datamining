@@ -1,6 +1,3 @@
-// === Module 12046: getUserProfileLiveActivities ===
-
-// Module 12046 (getUserProfileLiveActivities)
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");

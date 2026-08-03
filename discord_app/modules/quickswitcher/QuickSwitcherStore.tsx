@@ -1,6 +1,3 @@
-// === Module 6163: handleConnectionOpen ===
-
-// Module 6163 (handleConnectionOpen)
 import set from "set";
 import rebuild from "rebuild";
 import handleThemeChange from "handleThemeChange";

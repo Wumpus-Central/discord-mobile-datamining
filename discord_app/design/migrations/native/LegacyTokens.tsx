@@ -1,6 +1,3 @@
-// === Module 5034: result ===
-
-// Module 5034 (result)
 import { Platform } from "get ActivityIndicator";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";

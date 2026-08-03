@@ -1,6 +1,3 @@
-// === Module 16494: isRolePowerful ===
-
-// Module 16494 (isRolePowerful)
 import { hasPermission } from "GuildRoleRecordTypeTag";
 import ME from "ME";
 

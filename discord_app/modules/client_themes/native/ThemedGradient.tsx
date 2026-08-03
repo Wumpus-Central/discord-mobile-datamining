@@ -1,6 +1,3 @@
-// === Module 4723: getMixedGradientColor ===
-
-// Module 4723 (getMixedGradientColor)
 import ClientThemeType from "ClientThemeType";
 import { View } from "getGuildIdFromNavigationState";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";

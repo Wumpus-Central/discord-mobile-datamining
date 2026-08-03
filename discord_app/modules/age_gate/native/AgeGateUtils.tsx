@@ -1,6 +1,3 @@
-// === Module 9369: GuildNSFWContentLevel ===
-
-// Module 9369 (GuildNSFWContentLevel)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import mergeGuildAvatar from "mergeGuildAvatar";

@@ -1,6 +1,3 @@
-// === Module 12173: UserProfileApplicationWidgetBottomProgressLayout ===
-
-// Module 12173 (UserProfileApplicationWidgetBottomProgressLayout)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

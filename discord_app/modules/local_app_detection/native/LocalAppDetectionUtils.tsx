@@ -1,6 +1,3 @@
-// === Module 12783: isGameCommunityUpsellMultiExperimentEnabled ===
-
-// Module 12783 (isGameCommunityUpsellMultiExperimentEnabled)
 import PlatformTypes from "PlatformTypes";
 import hasConsented from "hasConsented";
 import ME from "ME";

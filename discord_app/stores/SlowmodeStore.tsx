@@ -1,6 +1,3 @@
-// === Module 5975: setCooldown ===
-
-// Module 5975 (setCooldown)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Store } from "initialize";

@@ -1,6 +1,3 @@
-// === Module 5007: recomputeGuild ===
-
-// Module 5007 (recomputeGuild)
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

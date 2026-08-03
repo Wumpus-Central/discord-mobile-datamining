@@ -1,6 +1,3 @@
-// === Module 8462: memoResult1 ===
-
-// Module 8462 (memoResult1)
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

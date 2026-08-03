@@ -1,6 +1,3 @@
-// === Module 6077: reactionKey ===
-
-// Module 6077 (reactionKey)
 import initialize from "initialize";
 import createdAt from "createdAt";
 import ensureGuildLoaded from "ensureGuildLoaded";

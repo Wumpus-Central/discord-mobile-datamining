@@ -1,6 +1,3 @@
-// === Module 10277: apexExperiment ===
-
-// Module 10277 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true }, 3: { enabled: false } };

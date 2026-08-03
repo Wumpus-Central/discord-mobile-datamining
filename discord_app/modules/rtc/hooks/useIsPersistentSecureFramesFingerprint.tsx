@@ -1,6 +1,3 @@
-// === Module 8909: useIsPersistentSecureFramesFingerprint ===
-
-// Module 8909 (useIsPersistentSecureFramesFingerprint)
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

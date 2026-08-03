@@ -1,6 +1,3 @@
-// === Module 5192: openContextMenu ===
-
-// Module 5192 (openContextMenu)
 import { AppContext } from "ME";
 
 function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {

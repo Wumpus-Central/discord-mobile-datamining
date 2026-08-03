@@ -1,6 +1,3 @@
-// === Module 11541: hasNavigatedAway ===
-
-// Module 11541 (hasNavigatedAway)
 import MobileLurkerServerPreviewExperiment from "MobileLurkerServerPreviewExperiment";
 import createRTCConnection from "createRTCConnection";
 import handleConnectionOpen from "handleConnectionOpen";

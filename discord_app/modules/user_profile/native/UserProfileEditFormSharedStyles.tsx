@@ -1,6 +1,3 @@
-// === Module 13722: styles ===
-
-// Module 13722 (styles)
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
 import createCacheKey from "createCacheKey";
 

@@ -1,6 +1,3 @@
-// === Module 13896: pressable ===
-
-// Module 13896 (pressable)
 import { AnalyticEvents } from "ME";
 import createToggle from "createToggle";
 

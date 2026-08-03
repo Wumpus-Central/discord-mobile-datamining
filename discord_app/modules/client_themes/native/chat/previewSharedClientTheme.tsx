@@ -1,6 +1,3 @@
-// === Module 11154: handleTapPreviewSharedClientTheme ===
-
-// Module 11154 (handleTapPreviewSharedClientTheme)
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/client_themes/native/chat/previewSharedClientTheme.tsx");
 
 export const handleTapPreviewSharedClientTheme = function handleTapPreviewSharedClientTheme(message) {

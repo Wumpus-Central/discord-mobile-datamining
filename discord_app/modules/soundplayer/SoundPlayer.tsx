@@ -1,6 +1,3 @@
-// === Module 15772: MuteDeafen ===
-
-// Module 15772 (MuteDeafen)
 import closure_2 from "jsxProd";
 import participantFromServer from "participantFromServer";
 import { NO_ACTIVITIES } from "participantFromServer";

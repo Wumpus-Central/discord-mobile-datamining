@@ -1,6 +1,3 @@
-// === Module 10072: useCanManageGuildDirectoryEntry ===
-
-// Module 10072 (useCanManageGuildDirectoryEntry)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

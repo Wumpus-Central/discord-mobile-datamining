@@ -1,6 +1,3 @@
-// === Module 16618: ChannelRow ===
-
-// Module 16618 (ChannelRow)
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
 import { View } from "initialize";

@@ -1,6 +1,3 @@
-// === Module 9200: LinkButton ===
-
-// Module 9200 (LinkButton)
 import fetchFingerprint from "fetchFingerprint";
 import KeyIcon from "KeyIcon";
 import handleLogout from "handleLogout";

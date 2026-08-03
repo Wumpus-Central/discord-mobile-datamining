@@ -1,6 +1,3 @@
-// === Module 9306: ThumbsUpIcon ===
-
-// Module 9306 (ThumbsUpIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

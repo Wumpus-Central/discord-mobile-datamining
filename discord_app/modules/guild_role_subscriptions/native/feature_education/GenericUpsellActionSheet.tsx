@@ -1,6 +1,3 @@
-// === Module 15233: GenericUpsellActionSheet ===
-
-// Module 15233 (GenericUpsellActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";

@@ -1,6 +1,3 @@
-// === Module 12301: getOne ===
-
-// Module 12301 (getOne)
 import getAssetURL from "getAssetURL";
 import { Store } from "initialize";
 

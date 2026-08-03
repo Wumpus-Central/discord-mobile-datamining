@@ -1,6 +1,3 @@
-// === Module 3830: upsertRelationship ===
-
-// Module 3830 (upsertRelationship)
 import _slicedToArray from "_slicedToArray";
 import hasFlag from "hasFlag";
 import mergeGuildAvatar from "mergeGuildAvatar";

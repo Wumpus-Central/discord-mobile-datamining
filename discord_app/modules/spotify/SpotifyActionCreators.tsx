@@ -1,6 +1,3 @@
-// === Module 10957: apiRequest ===
-
-// Module 10957 (apiRequest)
 import isProtocolRegistered from "isProtocolRegistered";
 import WEB_OPEN from "WEB_OPEN";
 import ME from "ME";

@@ -1,6 +1,3 @@
-// === Module 16028: AnimatedButtonWrapper ===
-
-// Module 16028 (AnimatedButtonWrapper)
 import noop from "noop";
 import { MODE_CHANGE_PHYSICS } from "VoicePanelModes";
 import { jsx } from "jsxProd";

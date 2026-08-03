@@ -1,6 +1,3 @@
-// === Module 5244: RowCheckmark ===
-
-// Module 5244 (RowCheckmark)
 import "noop";
 import { jsx } from "jsxProd";
 

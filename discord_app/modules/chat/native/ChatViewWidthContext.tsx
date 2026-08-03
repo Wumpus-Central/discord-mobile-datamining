@@ -1,6 +1,3 @@
-// === Module 10905: context ===
-
-// Module 10905 (context)
 import importAllResult from "noop";
 
 const context = require("noop").createContext(null);

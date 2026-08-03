@@ -1,6 +1,3 @@
-// === Module 5862: initialize ===
-
-// Module 5862 (initialize)
 import { DeviceSettingsStore } from "initialize";
 
 let c0 = true;

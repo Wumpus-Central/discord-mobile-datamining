@@ -1,6 +1,3 @@
-// === Module 7941: usePendingAvatarSettings ===
-
-// Module 7941 (usePendingAvatarSettings)
 import handleFormOpen from "handleFormOpen";
 
 require("noop").useCallback;

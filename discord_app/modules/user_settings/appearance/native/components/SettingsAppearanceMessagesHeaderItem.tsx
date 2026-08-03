@@ -1,6 +1,3 @@
-// === Module 14327: MessagesHeaderItem ===
-
-// Module 14327 (MessagesHeaderItem)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

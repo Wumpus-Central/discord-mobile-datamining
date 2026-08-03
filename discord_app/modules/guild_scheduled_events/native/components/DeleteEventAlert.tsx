@@ -1,6 +1,3 @@
-// === Module 8349: DeleteEventAlert ===
-
-// Module 8349 (DeleteEventAlert)
 import initialize from "initialize";
 import "noop";
 import scheduledEventSort from "scheduledEventSort";

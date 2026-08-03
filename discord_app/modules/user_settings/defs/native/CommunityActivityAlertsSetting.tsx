@@ -1,6 +1,3 @@
-// === Module 14498: route ===
-
-// Module 14498 (route)
 import computeAlertSettings from "computeAlertSettings";
 import createToggle from "createToggle";
 

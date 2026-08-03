@@ -1,6 +1,3 @@
-// === Module 5143: _getBackgroundGradientColor ===
-
-// Module 5143 (_getBackgroundGradientColor)
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get from "get";
 import hexToRgba from "hexToRgba";

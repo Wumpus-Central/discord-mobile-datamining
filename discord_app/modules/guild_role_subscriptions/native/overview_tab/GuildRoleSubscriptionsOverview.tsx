@@ -1,6 +1,3 @@
-// === Module 15425: serverNameHook ===
-
-// Module 15425 (serverNameHook)
 import noop from "noop";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import initialize from "initialize";

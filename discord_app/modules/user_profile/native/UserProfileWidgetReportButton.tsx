@@ -1,6 +1,3 @@
-// === Module 12078: UserProfileWidgetReportButton ===
-
-// Module 12078 (UserProfileWidgetReportButton)
 import "noop";
 import { Pressable } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

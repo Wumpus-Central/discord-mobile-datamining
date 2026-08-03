@@ -1,6 +1,3 @@
-// === Module 9311: updateContextMenuState ===
-
-// Module 9311 (updateContextMenuState)
 import noop from "noop";
 import keys from "keys";
 

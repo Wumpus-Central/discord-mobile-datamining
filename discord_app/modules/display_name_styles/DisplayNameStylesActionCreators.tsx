@@ -1,6 +1,3 @@
-// === Module 14376: markDisplayNameStyleFontSeen ===
-
-// Module 14376 (markDisplayNameStyleFontSeen)
 const result = require("set").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesActionCreators.tsx");
 
 export const markDisplayNameStyleFontSeen = function markDisplayNameStyleFontSeen(fontId) {

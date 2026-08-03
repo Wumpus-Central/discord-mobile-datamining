@@ -1,6 +1,3 @@
-// === Module 11948: getGameProfileWebsiteData ===
-
-// Module 11948 (getGameProfileWebsiteData)
 import { jsx } from "jsxProd";
 
 const result = require("GlobeEarthIcon").fileFinishedImporting("modules/game_profile/native/utils/getGameProfileWebsiteData.tsx");

@@ -1,6 +1,3 @@
-// === Module 16654: ConnectedNotificationSettings ===
-
-// Module 16654 (ConnectedNotificationSettings)
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "MuteSettings";
 import { View } from "collectGuildAnalyticsMetadata";

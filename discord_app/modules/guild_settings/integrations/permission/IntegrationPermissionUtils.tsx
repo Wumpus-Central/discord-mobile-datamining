@@ -1,6 +1,3 @@
-// === Module 5708: commandPermissions ===
-
-// Module 5708 (commandPermissions)
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

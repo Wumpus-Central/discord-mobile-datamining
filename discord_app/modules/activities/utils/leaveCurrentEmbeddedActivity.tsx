@@ -1,6 +1,3 @@
-// === Module 12631: leaveCurrentEmbeddedActivity ===
-
-// Module 12631 (leaveCurrentEmbeddedActivity)
 import participantFromServer from "participantFromServer";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");

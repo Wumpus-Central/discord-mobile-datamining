@@ -1,6 +1,3 @@
-// === Module 10889: initialize ===
-
-// Module 10889 (initialize)
 import _handleConnectionOpen from "_handleConnectionOpen";
 import getMatchData from "getMatchData";
 import { Routes } from "ME";

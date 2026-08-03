@@ -1,6 +1,3 @@
-// === Module 12254: stateFromStores ===
-
-// Module 12254 (stateFromStores)
 import "noop";
 import { View } from "get ActivityIndicator";
 import updateWithLatestInvite from "updateWithLatestInvite";

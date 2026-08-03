@@ -1,6 +1,3 @@
-// === Module 6577: useBuyNitroListData ===
-
-// Module 6577 (useBuyNitroListData)
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

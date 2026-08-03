@@ -1,6 +1,3 @@
-// === Module 9420: MessageStandardEmojiActionSheet ===
-
-// Module 9420 (MessageStandardEmojiActionSheet)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { AnalyticEvents } from "ME";

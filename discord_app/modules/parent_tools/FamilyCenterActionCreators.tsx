@@ -1,6 +1,3 @@
-// === Module 5800: maybeFetchCollectiblesForInvoices ===
-
-// Module 5800 (maybeFetchCollectiblesForInvoices)
 import dispatcher from "dispatcher";
 import getSettings from "getSettings";
 import { FamilyCenterAction } from "items";

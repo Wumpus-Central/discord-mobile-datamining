@@ -1,6 +1,3 @@
-// === Module 13666: CacheLogEntry ===
-
-// Module 13666 (CacheLogEntry)
 import { ScrollView } from "get ActivityIndicator";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import jsxProd from "jsxProd";

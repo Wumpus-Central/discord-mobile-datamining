@@ -1,6 +1,3 @@
-// === Module 11500: ChannelAutocompleteEmojiUpsell ===
-
-// Module 11500 (ChannelAutocompleteEmojiUpsell)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { EMOJI_URL_BASE_SIZE } from "set";

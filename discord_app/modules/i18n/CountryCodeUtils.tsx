@@ -1,6 +1,3 @@
-// === Module 3874: DEFAULT_COUNTRY_CODE_NAME ===
-
-// Module 3874 (DEFAULT_COUNTRY_CODE_NAME)
 let c3 = "United States";
 let closure_4 = {
   AF() {

@@ -1,6 +1,3 @@
-// === Module 13807: route ===
-
-// Module 13807 (route)
 import "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";

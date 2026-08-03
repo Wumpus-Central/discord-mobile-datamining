@@ -1,6 +1,3 @@
-// === Module 5972: regExp ===
-
-// Module 5972 (regExp)
 const regExp = new RegExp("^" + "@silent" + "(\\s|$)");
 const result = require("set").fileFinishedImporting("modules/suppress_notifications/parseContentForSuppressNotifications.tsx");
 

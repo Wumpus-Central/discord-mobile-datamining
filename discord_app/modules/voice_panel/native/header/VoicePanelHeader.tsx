@@ -1,6 +1,3 @@
-// === Module 15948: MusicMuteButton ===
-
-// Module 15948 (MusicMuteButton)
 import registerAsset from "registerAsset";
 import importAllResult from "Themes";
 import get_ActivityIndicator from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 12049: SoundboardSlashIcon ===
-
-// Module 12049 (SoundboardSlashIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

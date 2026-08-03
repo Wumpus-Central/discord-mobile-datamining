@@ -1,6 +1,3 @@
-// === Module 11237: ActivitiesBanner ===
-
-// Module 11237 (ActivitiesBanner)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { jsx } from "jsxProd";

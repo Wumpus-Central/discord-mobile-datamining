@@ -1,6 +1,3 @@
-// === Module 11005: ? ===
-
-// Module 11005
 import _handleConnectionOpen from "_handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Endpoints } from "ME";

@@ -1,6 +1,3 @@
-// === Module 4603: CONFIG_NEVER_ANIMATE ===
-
-// Module 4603 (CONFIG_NEVER_ANIMATE)
 import { CONFIG_NEVER_ANIMATE } from "CONFIG_NEVER_ANIMATE";
 
 function withSpring(value, SUBTLE_SPRING, fn, fn2) {

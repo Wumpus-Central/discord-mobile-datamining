@@ -1,6 +1,3 @@
-// === Module 12395: getApplicationFromMessage ===
-
-// Module 12395 (getApplicationFromMessage)
 import createExecutable from "createExecutable";
 import { SpotifyApplication } from "getIconURL";
 import { isSpotifyParty } from "WEB_OPEN";

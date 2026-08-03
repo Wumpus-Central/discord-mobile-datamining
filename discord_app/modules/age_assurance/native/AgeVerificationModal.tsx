@@ -1,6 +1,3 @@
-// === Module 6772: AgeVerifyScreen ===
-
-// Module 6772 (AgeVerifyScreen)
 import noop from "noop";
 import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "set";
 import { jsx } from "jsxProd";

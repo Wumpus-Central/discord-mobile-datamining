@@ -1,6 +1,3 @@
-// === Module 4724: getIsScreenLandscape ===
-
-// Module 4724 (getIsScreenLandscape)
 import noop from "noop";
 import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
 

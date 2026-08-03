@@ -1,6 +1,3 @@
-// === Module 10942: handleMessagesTapGameMention ===
-
-// Module 10942 (handleMessagesTapGameMention)
 const result = require("set").fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");
 
 export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {

@@ -1,6 +1,3 @@
-// === Module 16014: useDrawerToggle ===
-
-// Module 16014 (useDrawerToggle)
 import noop from "noop";
 import { VoicePanelControlsModes } from "VoicePanelControlsModes";
 

@@ -1,6 +1,3 @@
-// === Module 11843: HubEmailConnectionModal ===
-
-// Module 11843 (HubEmailConnectionModal)
 import "getSystemLocale";
 import { HubEmailConnectionSteps } from "HubEmailConnectionSteps";
 import { jsx } from "jsxProd";

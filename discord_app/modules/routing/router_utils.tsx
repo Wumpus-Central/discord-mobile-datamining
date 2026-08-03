@@ -1,6 +1,3 @@
-// === Module 1222: transitionTo ===
-
-// Module 1222 (transitionTo)
 import ME from "ME";
 import _extends from "_extends";
 

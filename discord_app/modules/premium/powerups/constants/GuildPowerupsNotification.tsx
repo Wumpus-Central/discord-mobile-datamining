@@ -1,6 +1,3 @@
-// === Module 11600: GUILD_POWERUP_NOTIFICATION_COOLDOWN ===
-
-// Module 11600 (GUILD_POWERUP_NOTIFICATION_COOLDOWN)
 const result = require("set").fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
 
 export const GUILD_POWERUP_NOTIFICATION_COOLDOWN = 21600000;

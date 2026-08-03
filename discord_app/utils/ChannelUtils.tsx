@@ -1,6 +1,3 @@
-// === Module 4376: allowChannelAccess ===
-
-// Module 4376 (allowChannelAccess)
 import createChannelRecord from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

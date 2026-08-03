@@ -1,6 +1,3 @@
-// === Module 7699: _showReportModal ===
-
-// Module 7699 (_showReportModal)
 import asyncRequireImpl from "asyncRequireImpl";
 
 const require = arg1;

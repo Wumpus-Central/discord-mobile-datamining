@@ -1,6 +1,3 @@
-// === Module 15024: items ===
-
-// Module 15024 (items)
 import importAllResult from "noop";
 import { GUILD_ITEM_BADGE_SIZE } from "GUILD_ITEM_SIZE";
 import { jsx } from "jsxProd";

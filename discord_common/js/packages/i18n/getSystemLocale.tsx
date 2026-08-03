@@ -1,6 +1,3 @@
-// === Module 665: getSystemLocale ===
-
-// Module 665 (getSystemLocale)
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
 
 export const getSystemLocale = function getSystemLocale() {

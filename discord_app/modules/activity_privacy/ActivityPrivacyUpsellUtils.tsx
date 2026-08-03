@@ -1,6 +1,3 @@
-// === Module 13901: computeAffectedGuilds ===
-
-// Module 13901 (computeAffectedGuilds)
 import handleChannelSelect from "handleChannelSelect";
 import handleInviteData from "handleInviteData";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

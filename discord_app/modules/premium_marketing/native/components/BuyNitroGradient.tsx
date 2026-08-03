@@ -1,6 +1,3 @@
-// === Module 6678: BuyNitroGradient ===
-
-// Module 6678 (BuyNitroGradient)
 import "noop";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";

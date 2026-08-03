@@ -1,6 +1,3 @@
-// === Module 1417: DECORATION_TO_AVATAR_RATIO ===
-
-// Module 1417 (DECORATION_TO_AVATAR_RATIO)
 import { AvatarSizes } from "frozen";
 
 const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx");

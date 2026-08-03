@@ -1,6 +1,3 @@
-// === Module 4707: GroupIcon ===
-
-// Module 4707 (GroupIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

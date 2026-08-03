@@ -1,6 +1,3 @@
-// === Module 10552: PopoutMenuRow ===
-
-// Module 10552 (PopoutMenuRow)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";

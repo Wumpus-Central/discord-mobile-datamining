@@ -1,6 +1,3 @@
-// === Module 8304: AddModerators ===
-
-// Module 8304 (AddModerators)
 import _slicedToArray from "_slicedToArray";
 import Permissions from "Permissions";
 import { View } from "Button";

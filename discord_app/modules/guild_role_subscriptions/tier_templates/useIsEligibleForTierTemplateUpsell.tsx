@@ -1,6 +1,3 @@
-// === Module 15241: useIsEligibleForTierTemplateUpsell ===
-
-// Module 15241 (useIsEligibleForTierTemplateUpsell)
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

@@ -1,6 +1,3 @@
-// === Module 8140: THUMBNAIL_MARGIN ===
-
-// Module 8140 (THUMBNAIL_MARGIN)
 const result = require("set").fileFinishedImporting("modules/media_viewer/native/Constants.tsx");
 
 export const THUMBNAIL_MARGIN = 2;

@@ -1,6 +1,3 @@
-// === Module 11566: ? ===
-
-// Module 11566
 import { GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK as closure_3 } from "getFriendlyDurationString";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

@@ -1,6 +1,3 @@
-// === Module 16349: handleChannelDelete ===
-
-// Module 16349 (handleChannelDelete)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import "initialize";

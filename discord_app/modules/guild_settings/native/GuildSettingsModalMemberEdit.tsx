@@ -1,6 +1,3 @@
-// === Module 11041: GuildSettingsModalMemberEditScene ===
-
-// Module 11041 (GuildSettingsModalMemberEditScene)
 import importAllResult from "Text";
 import get_ActivityIndicator from "TableCheckboxRow";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

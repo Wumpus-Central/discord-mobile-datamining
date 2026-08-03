@@ -1,6 +1,3 @@
-// === Module 14731: SettingSegmentedControl ===
-
-// Module 14731 (SettingSegmentedControl)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

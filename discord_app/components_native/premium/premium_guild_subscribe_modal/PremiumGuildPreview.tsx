@@ -1,6 +1,3 @@
-// === Module 12690: PremiumGuildTierPill ===
-
-// Module 12690 (PremiumGuildTierPill)
 import "initialize";
 import get_ActivityIndicator from "Button";
 import handleThemeChange from "handleThemeChange";

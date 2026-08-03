@@ -1,6 +1,3 @@
-// === Module 15907: hideLiveChannelNotice ===
-
-// Module 15907 (hideLiveChannelNotice)
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx");
 
 export const hideLiveChannelNotice = function hideLiveChannelNotice(arg0) {

@@ -1,6 +1,3 @@
-// === Module 9923: apexExperiment ===
-
-// Module 9923 (apexExperiment)
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ApexExperiment from "ApexExperiment";
 

@@ -1,6 +1,3 @@
-// === Module 12755: hydrateGuild ===
-
-// Module 12755 (hydrateGuild)
 import { createChannelRecordFromServer as closure_3 } from "createChannelRecord";
 
 function hydrateGuild(guild) {

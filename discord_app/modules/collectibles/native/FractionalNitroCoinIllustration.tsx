@@ -1,6 +1,3 @@
-// === Module 8723: FRACTIONAL_NITRO_COIN_SIZE ===
-
-// Module 8723 (FRACTIONAL_NITRO_COIN_SIZE)
 import "noop";
 import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
 import { jsx } from "jsxProd";

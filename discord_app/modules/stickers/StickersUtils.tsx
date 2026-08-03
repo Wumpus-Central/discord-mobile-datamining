@@ -1,6 +1,3 @@
-// === Module 4528: getStickerExtensionFromFormatType ===
-
-// Module 4528 (getStickerExtensionFromFormatType)
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import map from "map";

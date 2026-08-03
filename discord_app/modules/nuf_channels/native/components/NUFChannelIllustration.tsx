@@ -1,6 +1,3 @@
-// === Module 12846: NUFChannelIllustration ===
-
-// Module 12846 (NUFChannelIllustration)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "Text";

@@ -1,6 +1,3 @@
-// === Module 14253: FormSeparator ===
-
-// Module 14253 (FormSeparator)
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

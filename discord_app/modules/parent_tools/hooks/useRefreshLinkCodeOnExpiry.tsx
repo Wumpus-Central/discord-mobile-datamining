@@ -1,6 +1,3 @@
-// === Module 13927: useRefreshLinkCodeOnExpiry ===
-
-// Module 13927 (useRefreshLinkCodeOnExpiry)
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");

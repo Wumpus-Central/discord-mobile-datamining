@@ -1,6 +1,3 @@
-// === Module 14935: convertPortraitToLandscapeScreens ===
-
-// Module 14935 (convertPortraitToLandscapeScreens)
 const result = require("CommonActions").fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
 
 export const convertPortraitToLandscapeScreens = function convertPortraitToLandscapeScreens() {

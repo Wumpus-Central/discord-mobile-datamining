@@ -1,6 +1,3 @@
-// === Module 15516: ChannelSubtitle ===
-
-// Module 15516 (ChannelSubtitle)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 15182: fetchUnclaimedGames ===
-
-// Module 15182 (fetchUnclaimedGames)
 import closure_3 from "initialize";
 import importDefaultResult from "getMap";
 import { Endpoints } from "ME";

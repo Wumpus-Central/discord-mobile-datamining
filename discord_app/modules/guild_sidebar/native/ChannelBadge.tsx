@@ -1,6 +1,3 @@
-// === Module 15214: ChannelBadge ===
-
-// Module 15214 (ChannelBadge)
 import "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";

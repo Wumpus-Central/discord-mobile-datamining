@@ -1,6 +1,3 @@
-// === Module 15887: ? ===
-
-// Module 15887
 import map from "map";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

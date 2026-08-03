@@ -1,6 +1,3 @@
-// === Module 10727: RequestToSpeakRow ===
-
-// Module 10727 (RequestToSpeakRow)
 import TableRowGroupTitle from "TableRowGroupTitle";
 import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint";
 import { View } from "useIsStageSpeakingDisabledForCurrentUser";

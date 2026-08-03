@@ -1,6 +1,3 @@
-// === Module 9029: GlobeEarthIcon ===
-
-// Module 9029 (GlobeEarthIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 7865: createEphemeralIndication ===
-
-// Module 7865 (createEphemeralIndication)
 import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod";
 import ME from "ME";
 

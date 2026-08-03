@@ -1,6 +1,3 @@
-// === Module 8404: useTieredTenureBadgeClickHandler ===
-
-// Module 8404 (useTieredTenureBadgeClickHandler)
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";

@@ -1,6 +1,3 @@
-// === Module 11657: GuildPowerupsSectionHeader ===
-
-// Module 11657 (GuildPowerupsSectionHeader)
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

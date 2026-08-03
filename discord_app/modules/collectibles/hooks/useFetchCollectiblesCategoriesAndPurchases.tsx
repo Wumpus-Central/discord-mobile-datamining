@@ -1,6 +1,3 @@
-// === Module 7961: useFetchPurchases ===
-
-// Module 7961 (useFetchPurchases)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getHash from "getHash";

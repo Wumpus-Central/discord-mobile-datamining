@@ -1,6 +1,3 @@
-// === Module 10295: PreviewIcon ===
-
-// Module 10295 (PreviewIcon)
 import importAllResult from "useTheme";
 import { View } from "map";
 import upsertRelationship from "upsertRelationship";

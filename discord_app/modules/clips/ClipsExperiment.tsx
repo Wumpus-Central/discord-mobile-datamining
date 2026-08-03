@@ -1,6 +1,3 @@
-// === Module 4252: apexExperiment ===
-
-// Module 4252 (apexExperiment)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";

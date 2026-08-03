@@ -1,6 +1,3 @@
-// === Module 11306: useFrecentApps ===
-
-// Module 11306 (useFrecentApps)
 import noop from "noop";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
 import { FetchState } from "recomputeFromAppTokens";

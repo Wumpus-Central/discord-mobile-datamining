@@ -1,6 +1,3 @@
-// === Module 8171: handleOrientationChange ===
-
-// Module 8171 (handleOrientationChange)
 import noop from "noop";
 import { AppState } from "get ActivityIndicator";
 import keys from "keys";

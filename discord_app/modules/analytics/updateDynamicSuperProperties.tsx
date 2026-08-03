@@ -1,6 +1,3 @@
-// === Module 16122: updateDynamicSuperProperties ===
-
-// Module 16122 (updateDynamicSuperProperties)
 let result = require("module_9488").fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {

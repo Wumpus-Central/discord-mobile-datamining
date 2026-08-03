@@ -1,6 +1,3 @@
-// === Module 9068: openAcceptFriendRequestConfirmModal ===
-
-// Module 9068 (openAcceptFriendRequestConfirmModal)
 import { ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID as closure_3 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";

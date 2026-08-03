@@ -1,6 +1,3 @@
-// === Module 11615: useGuildPowerupsNewBadge ===
-
-// Module 11615 (useGuildPowerupsNewBadge)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

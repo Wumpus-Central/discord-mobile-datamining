@@ -1,6 +1,3 @@
-// === Module 5031: insertUnsortedGuilds ===
-
-// Module 5031 (insertUnsortedGuilds)
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";

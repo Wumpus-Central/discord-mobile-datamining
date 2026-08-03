@@ -1,6 +1,3 @@
-// === Module 16204: newGetEnglishMessageText ===
-
-// Module 16204 (newGetEnglishMessageText)
 const result = require("set").fileFinishedImporting("intl/migration.tsx");
 
 export const improperGetEnglishIntlMessageText = function newGetEnglishMessageText(code) {

@@ -1,6 +1,3 @@
-// === Module 14400: LanguageIcon ===
-
-// Module 14400 (LanguageIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

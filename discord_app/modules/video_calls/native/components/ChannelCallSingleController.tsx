@@ -1,6 +1,3 @@
-// === Module 10830: ChannelCallSingleController ===
-
-// Module 10830 (ChannelCallSingleController)
 import noop from "noop";
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";

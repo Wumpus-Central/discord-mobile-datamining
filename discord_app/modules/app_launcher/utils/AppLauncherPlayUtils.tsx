@@ -1,6 +1,3 @@
-// === Module 10894: _launchActivityInBotDM ===
-
-// Module 10894 (_launchActivityInBotDM)
 import set from "set";
 
 const require = arg1;

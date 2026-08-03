@@ -1,6 +1,3 @@
-// === Module 5644: openAgeGateModal ===
-
-// Module 5644 (openAgeGateModal)
 import { AgeGateAnalyticAction } from "result";
 import ME from "ME";
 

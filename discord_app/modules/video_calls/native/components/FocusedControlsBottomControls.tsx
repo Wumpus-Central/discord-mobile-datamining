@@ -1,6 +1,3 @@
-// === Module 10711: FocusedControlsExpanded ===
-
-// Module 10711 (FocusedControlsExpanded)
 import _slicedToArray from "_slicedToArray";
 import DismissibleContent from "DismissibleContent";
 import get_ActivityIndicator from "ActionSheetHeaderBar";

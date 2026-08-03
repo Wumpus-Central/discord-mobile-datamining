@@ -1,6 +1,3 @@
-// === Module 11790: headerTitle ===
-
-// Module 11790 (headerTitle)
 import getState from "getState";
 import ContactSyncLandingImage from "ContactSyncLandingImage";
 import useSafeAreaInsets from "useSafeAreaInsets";

@@ -1,6 +1,3 @@
-// === Module 15198: HubItem ===
-
-// Module 15198 (HubItem)
 import "UserPlusIcon";
 import { View } from "PlusMediumIcon";
 import comparator from "comparator";

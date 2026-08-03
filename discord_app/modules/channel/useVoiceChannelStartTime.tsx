@@ -1,6 +1,3 @@
-// === Module 15218: useStartTime ===
-
-// Module 15218 (useStartTime)
 import noop from "noop";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import handleConnectionOpen from "handleConnectionOpen";

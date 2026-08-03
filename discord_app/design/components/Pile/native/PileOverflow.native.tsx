@@ -1,6 +1,3 @@
-// === Module 9946: map ===
-
-// Module 9946 (map)
 import "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";

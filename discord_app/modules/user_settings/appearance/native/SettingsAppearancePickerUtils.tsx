@@ -1,6 +1,3 @@
-// === Module 14335: getMaxColors ===
-
-// Module 14335 (getMaxColors)
 import noop from "noop";
 import { ThemeTypes } from "sum";
 

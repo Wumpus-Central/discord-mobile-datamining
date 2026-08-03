@@ -1,6 +1,3 @@
-// === Module 16016: getDrawerSpec ===
-
-// Module 16016 (getDrawerSpec)
 function getDrawerSpec(height, top) {
   const diff = height - top;
   return { minHeight: importDefault(9927)(0.65 * diff), maxHeight: diff };

@@ -1,6 +1,3 @@
-// === Module 16332: _terminate ===
-
-// Module 16332 (_terminate)
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import initialize from "initialize";
 import { Features } from "DesktopSources";

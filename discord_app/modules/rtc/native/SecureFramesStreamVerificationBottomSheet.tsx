@@ -1,6 +1,3 @@
-// === Module 8916: SecureFramesStreamVerificationBottomSheet ===
-
-// Module 8916 (SecureFramesStreamVerificationBottomSheet)
 import noop from "noop";
 import initialize from "initialize";
 import { AnalyticsSections } from "ME";

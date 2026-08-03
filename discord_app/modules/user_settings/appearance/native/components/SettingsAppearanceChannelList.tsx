@@ -1,6 +1,3 @@
-// === Module 14325: ChannelListPreview ===
-
-// Module 14325 (ChannelListPreview)
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

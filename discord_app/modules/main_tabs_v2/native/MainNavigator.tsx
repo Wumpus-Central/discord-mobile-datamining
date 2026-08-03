@@ -1,6 +1,3 @@
-// === Module 14872: getAuthComponent ===
-
-// Module 14872 (getAuthComponent)
 import useNativeThemeUpdater from "useNativeThemeUpdater";
 import importAllResult from "HeaderWithBorder";
 import { View } from "module_15635";

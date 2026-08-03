@@ -1,6 +1,3 @@
-// === Module 12998: filterOutMessageRequestsAndSpam ===
-
-// Module 12998 (filterOutMessageRequestsAndSpam)
 import processChannel from "processChannel";
 import closure_3 from "processChannel";
 

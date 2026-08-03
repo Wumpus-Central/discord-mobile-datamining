@@ -1,6 +1,3 @@
-// === Module 13005: MarkupGameMention ===
-
-// Module 13005 (MarkupGameMention)
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

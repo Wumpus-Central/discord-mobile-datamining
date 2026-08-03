@@ -1,6 +1,3 @@
-// === Module 8024: getString ===
-
-// Module 8024 (getString)
 import { TRUE_OPTION_NAME } from "TRUE_OPTION_NAME";
 
 function getString(arg0, arg1) {

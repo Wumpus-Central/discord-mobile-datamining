@@ -1,6 +1,3 @@
-// === Module 11705: UserSettingsAuthedAppDeleteWarningModal ===
-
-// Module 11705 (UserSettingsAuthedAppDeleteWarningModal)
 import jsxProd from "jsxProd";
 
 let c3;

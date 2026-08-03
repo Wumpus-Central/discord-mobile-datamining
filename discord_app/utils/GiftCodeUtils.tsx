@@ -1,6 +1,3 @@
-// === Module 4428: _resolveGiftCode ===
-
-// Module 4428 (_resolveGiftCode)
 import closure_3 from "GuildFeatures";
 import _slicedToArray from "_slicedToArray";
 import handleSubscribeFailure from "handleSubscribeFailure";

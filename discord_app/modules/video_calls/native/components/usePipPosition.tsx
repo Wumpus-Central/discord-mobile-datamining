@@ -1,6 +1,3 @@
-// === Module 10533: usePipPosition ===
-
-// Module 10533 (usePipPosition)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

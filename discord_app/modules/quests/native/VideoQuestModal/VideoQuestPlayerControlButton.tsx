@@ -1,6 +1,3 @@
-// === Module 14078: VideoQuestPlayerControlButton ===
-
-// Module 14078 (VideoQuestPlayerControlButton)
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import importAllResult from "noop";

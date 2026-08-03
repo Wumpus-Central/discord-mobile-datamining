@@ -1,6 +1,3 @@
-// === Module 11799: ContactSyncError ===
-
-// Module 11799 (ContactSyncError)
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

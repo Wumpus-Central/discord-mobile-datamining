@@ -1,6 +1,3 @@
-// === Module 15287: ? ===
-
-// Module 15287
 import { View } from "LinearGradient";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT";

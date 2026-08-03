@@ -1,6 +1,3 @@
-// === Module 9237: showInvalidUsernameToast ===
-
-// Module 9237 (showInvalidUsernameToast)
 const result = require("registerAsset").fileFinishedImporting("modules/user_settings/account/native/showInvalidUsernameToastNative.tsx");
 
 export const showInvalidUsernameToast = function showInvalidUsernameToast() {

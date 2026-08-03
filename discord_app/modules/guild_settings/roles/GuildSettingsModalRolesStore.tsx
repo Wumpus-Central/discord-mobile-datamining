@@ -1,6 +1,3 @@
-// === Module 16466: handleGuildRoleCreateOrUpdate ===
-
-// Module 16466 (handleGuildRoleCreateOrUpdate)
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { FormStates } from "ME";

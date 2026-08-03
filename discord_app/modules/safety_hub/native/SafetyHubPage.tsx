@@ -1,6 +1,3 @@
-// === Module 13799: AutomatedUnderageAppealStatus ===
-
-// Module 13799 (AutomatedUnderageAppealStatus)
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "useMountLayoutEffect";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";

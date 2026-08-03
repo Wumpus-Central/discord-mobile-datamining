@@ -1,6 +1,3 @@
-// === Module 9680: IdIcon ===
-
-// Module 9680 (IdIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

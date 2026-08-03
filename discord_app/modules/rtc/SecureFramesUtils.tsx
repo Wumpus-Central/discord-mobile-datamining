@@ -1,6 +1,3 @@
-// === Module 8901: getCurrentUserSigningKey ===
-
-// Module 8901 (getCurrentUserSigningKey)
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";

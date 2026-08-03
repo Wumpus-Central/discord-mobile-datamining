@@ -1,6 +1,3 @@
-// === Module 8306: EditGuildEventStepHeader ===
-
-// Module 8306 (EditGuildEventStepHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

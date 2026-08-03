@@ -1,6 +1,3 @@
-// === Module 6627: SuperReactionIcon ===
-
-// Module 6627 (SuperReactionIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

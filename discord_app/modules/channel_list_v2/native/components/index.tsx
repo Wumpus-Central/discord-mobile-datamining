@@ -1,6 +1,3 @@
-// === Module 11458: renderChannelBadge ===
-
-// Module 11458 (renderChannelBadge)
 const result = require("module_11460").fileFinishedImporting("modules/channel_list_v2/native/components/index.tsx");
 
 export const renderChannelBadge = require("renderChannelBadge").renderChannelBadge;

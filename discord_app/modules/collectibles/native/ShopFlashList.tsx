@@ -1,6 +1,3 @@
-// === Module 14654: ShopEmptyState ===
-
-// Module 14654 (ShopEmptyState)
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

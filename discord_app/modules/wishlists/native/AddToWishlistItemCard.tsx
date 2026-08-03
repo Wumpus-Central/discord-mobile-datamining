@@ -1,6 +1,3 @@
-// === Module 12217: AddToWishlistItemCard ===
-
-// Module 12217 (AddToWishlistItemCard)
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

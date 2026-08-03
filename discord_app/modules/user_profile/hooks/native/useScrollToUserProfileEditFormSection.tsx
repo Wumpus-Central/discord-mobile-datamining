@@ -1,6 +1,3 @@
-// === Module 13725: useScrollToUserProfileEditFormSection ===
-
-// Module 13725 (useScrollToUserProfileEditFormSection)
 import noop from "noop";
 import { findNodeHandle } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

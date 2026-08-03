@@ -1,6 +1,3 @@
-// === Module 14591: UserSettingsDesignSystemTabs ===
-
-// Module 14591 (UserSettingsDesignSystemTabs)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

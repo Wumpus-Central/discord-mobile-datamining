@@ -1,6 +1,3 @@
-// === Module 8044: getSubscriptionPlans ===
-
-// Module 8044 (getSubscriptionPlans)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import addSubscriptionPlan from "addSubscriptionPlan";

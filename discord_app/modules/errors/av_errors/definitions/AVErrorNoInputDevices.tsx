@@ -1,6 +1,3 @@
-// === Module 16698: AVErrorNoInputDevicesDefinition ===
-
-// Module 16698 (AVErrorNoInputDevicesDefinition)
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createRTCConnection from "createRTCConnection";

@@ -1,6 +1,3 @@
-// === Module 9455: ExpressionPickerCategories ===
-
-// Module 9455 (ExpressionPickerCategories)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

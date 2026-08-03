@@ -1,6 +1,3 @@
-// === Module 6987: DiscordQuestsLockupLogo ===
-
-// Module 6987 (DiscordQuestsLockupLogo)
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 

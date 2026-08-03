@@ -1,6 +1,3 @@
-// === Module 16551: useIsMFAEnabled ===
-
-// Module 16551 (useIsMFAEnabled)
 import handleFormInit from "handleFormInit";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MFALevels } from "ME";

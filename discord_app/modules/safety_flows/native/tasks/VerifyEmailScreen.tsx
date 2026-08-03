@@ -1,6 +1,3 @@
-// === Module 16736: onTaskComplete ===
-
-// Module 16736 (onTaskComplete)
 import fetchAndUpdateTask from "fetchAndUpdateTask";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

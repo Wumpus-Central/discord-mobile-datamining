@@ -1,6 +1,3 @@
-// === Module 15665: getSecondsSliderLabel ===
-
-// Module 15665 (getSecondsSliderLabel)
 const result = require("set").fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 
 export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPerUser, arg1, intl) {

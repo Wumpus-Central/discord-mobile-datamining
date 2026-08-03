@@ -1,6 +1,3 @@
-// === Module 14381: DisplayNameStylesGummyCustomColorSheet ===
-
-// Module 14381 (DisplayNameStylesGummyCustomColorSheet)
 import noop from "noop";
 import { View } from "set";
 import items3 from "items3";

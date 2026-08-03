@@ -1,6 +1,3 @@
-// === Module 11512: ApplicationCommandList ===
-
-// Module 11512 (ApplicationCommandList)
 import noop from "noop";
 import { FlatList } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

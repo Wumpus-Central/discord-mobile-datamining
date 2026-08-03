@@ -1,6 +1,3 @@
-// === Module 14158: UnsendIcon ===
-
-// Module 14158 (UnsendIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

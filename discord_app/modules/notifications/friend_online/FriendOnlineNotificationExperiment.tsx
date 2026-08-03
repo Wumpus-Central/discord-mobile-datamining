@@ -1,6 +1,3 @@
-// === Module 14481: apexExperiment ===
-
-// Module 14481 (apexExperiment)
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { showSettingsToggle: true } };

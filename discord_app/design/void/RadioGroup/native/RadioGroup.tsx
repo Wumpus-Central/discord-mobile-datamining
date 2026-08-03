@@ -1,6 +1,3 @@
-// === Module 13157: RadioEmpty ===
-
-// Module 13157 (RadioEmpty)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { NOOP } from "sum";

@@ -1,6 +1,3 @@
-// === Module 13165: getAnimatedTypingTranslateX ===
-
-// Module 13165 (getAnimatedTypingTranslateX)
 import STATUS_PADDING from "STATUS_PADDING";
 
 let c3;

@@ -1,6 +1,3 @@
-// === Module 15129: AudienceItem ===
-
-// Module 15129 (AudienceItem)
 import { View } from "get ActivityIndicator";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import jsxProd from "jsxProd";

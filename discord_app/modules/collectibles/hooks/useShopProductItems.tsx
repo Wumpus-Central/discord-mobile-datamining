@@ -1,6 +1,3 @@
-// === Module 8049: firstAvatarDecoration ===
-
-// Module 8049 (firstAvatarDecoration)
 import noop from "noop";
 
 const require = arg1;

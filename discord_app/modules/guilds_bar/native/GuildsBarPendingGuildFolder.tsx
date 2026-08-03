@@ -1,6 +1,3 @@
-// === Module 14982: ? ===
-
-// Module 14982
 import importAllResult from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";

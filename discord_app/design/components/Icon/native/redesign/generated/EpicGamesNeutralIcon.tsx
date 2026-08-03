@@ -1,6 +1,3 @@
-// === Module 8507: EpicGamesNeutralIcon ===
-
-// Module 8507 (EpicGamesNeutralIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

@@ -1,6 +1,3 @@
-// === Module 14014: set ===
-
-// Module 14014 (set)
 import set from "set";
 
 const items = [, , , ];

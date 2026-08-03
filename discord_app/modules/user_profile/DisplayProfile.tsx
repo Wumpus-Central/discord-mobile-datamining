@@ -1,6 +1,3 @@
-// === Module 7991: premiumSince ===
-
-// Module 7991 (premiumSince)
 import { PremiumTypes } from "GuildFeatures";
 
 const result = require("getPremiumPlanItem").fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");

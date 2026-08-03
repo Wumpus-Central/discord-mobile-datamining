@@ -1,6 +1,3 @@
-// === Module 14537: getClientInfo ===
-
-// Module 14537 (getClientInfo)
 import getCurrentBuildOverride from "getCurrentBuildOverride";
 import jsxProd from "jsxProd";
 import createToggle from "createToggle";

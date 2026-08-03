@@ -1,6 +1,3 @@
-// === Module 13827: componentWillUnmount ===
-
-// Module 13827 (componentWillUnmount)
 import get_ActivityIndicator from "Text";
 import handleUpdateUser from "handleUpdateUser";
 import handleFormClose from "handleFormClose";

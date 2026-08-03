@@ -1,6 +1,3 @@
-// === Module 9941: ModalActionButton ===
-
-// Module 9941 (ModalActionButton)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 11372: RoleIcon ===
-
-// Module 11372 (RoleIcon)
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getRoleMemberCount from "getRoleMemberCount";

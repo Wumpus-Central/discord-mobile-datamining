@@ -1,6 +1,3 @@
-// === Module 6211: __INTERNAL_VIEW_CONFIG ===
-
-// Module 6211 (__INTERNAL_VIEW_CONFIG)
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 

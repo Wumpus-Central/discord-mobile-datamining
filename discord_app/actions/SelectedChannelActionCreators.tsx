@@ -1,6 +1,3 @@
-// === Module 5005: ? ===
-
-// Module 5005
 import set from "set";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

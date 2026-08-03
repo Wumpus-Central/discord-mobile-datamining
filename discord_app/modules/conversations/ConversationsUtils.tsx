@@ -1,6 +1,3 @@
-// === Module 5864: mapConversation ===
-
-// Module 5864 (mapConversation)
 const result = require("set").fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
 
 export const mapConversation = function mapConversation(summary_map) {

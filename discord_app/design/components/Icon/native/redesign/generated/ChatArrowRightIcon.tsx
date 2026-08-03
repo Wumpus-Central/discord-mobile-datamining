@@ -1,6 +1,3 @@
-// === Module 9961: ChatArrowRightIcon ===
-
-// Module 9961 (ChatArrowRightIcon)
 import "noop";
 import { jsx } from "jsxProd";
 

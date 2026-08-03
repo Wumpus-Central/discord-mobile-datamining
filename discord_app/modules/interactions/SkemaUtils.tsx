@@ -1,6 +1,3 @@
-// === Module 7902: getFirstSkemaFieldError ===
-
-// Module 7902 (getFirstSkemaFieldError)
 import _slicedToArray from "_slicedToArray";
 
 function getFirstSkemaFieldError(errors, arg1) {

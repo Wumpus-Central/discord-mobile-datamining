@@ -1,6 +1,3 @@
-// === Module 16187: handleDeletedEntityIds ===
-
-// Module 16187 (handleDeletedEntityIds)
 import getEmojiToGroupId from "getEmojiToGroupId";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,6 +1,3 @@
-// === Module 13785: useAuthSessions ===
-
-// Module 13785 (useAuthSessions)
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import handleInit from "handleInit";

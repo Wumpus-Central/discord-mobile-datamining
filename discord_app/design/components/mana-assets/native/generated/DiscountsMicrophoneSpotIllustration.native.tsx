@@ -1,6 +1,3 @@
-// === Module 6995: DiscountsMicrophoneSpotIllustration ===
-
-// Module 6995 (DiscountsMicrophoneSpotIllustration)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/DiscountsMicrophoneSpotIllustration.native.tsx");

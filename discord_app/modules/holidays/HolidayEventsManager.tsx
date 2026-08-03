@@ -1,6 +1,3 @@
-// === Module 16230: updateSoundpack ===
-
-// Module 16230 (updateSoundpack)
 import initialize from "initialize";
 import Soundpacks from "Soundpacks";
 import { Soundpacks } from "Soundpacks";

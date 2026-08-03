@@ -1,6 +1,3 @@
-// === Module 13187: NitroWheel ===
-
-// Module 13187 (NitroWheel)
 import "noop";
 import { jsx } from "jsxProd";
 

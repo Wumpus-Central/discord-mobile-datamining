@@ -1,6 +1,3 @@
-// === Module 11619: openGuildPowerupRollbackSheet ===
-
-// Module 11619 (openGuildPowerupRollbackSheet)
 const GUILD_POWERUP_ROLLBACK_SHEET_KEY = "GUILD_POWERUP_ROLLBACK_SHEET_KEY";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupRollbackSheet.tsx");
 

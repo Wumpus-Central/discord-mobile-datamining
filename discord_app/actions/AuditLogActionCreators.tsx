@@ -1,6 +1,3 @@
-// === Module 16403: makeRequest ===
-
-// Module 16403 (makeRequest)
 import AuditLogActions from "AuditLogActions";
 import ME from "ME";
 

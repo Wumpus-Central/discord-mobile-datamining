@@ -1,6 +1,3 @@
-// === Module 6186: getIsPrivate ===
-
-// Module 6186 (getIsPrivate)
 import snowflakeSequence from "snowflakeSequence";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import dispatcher from "dispatcher";

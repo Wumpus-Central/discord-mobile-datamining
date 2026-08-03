@@ -1,6 +1,3 @@
-// === Module 14228: ? ===
-
-// Module 14228
 import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";

@@ -1,6 +1,3 @@
-// === Module 10888: saveLastRoute ===
-
-// Module 10888 (saveLastRoute)
 import initialize from "initialize";
 import { Routes } from "ME";
 

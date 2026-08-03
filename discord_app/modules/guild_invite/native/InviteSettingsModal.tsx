@@ -1,6 +1,3 @@
-// === Module 16656: AdvancedInstantInviteScreen ===
-
-// Module 16656 (AdvancedInstantInviteScreen)
 import _slicedToArray from "_slicedToArray";
 import dispatcher from "dispatcher";
 import ensureGuildLoaded from "ensureGuildLoaded";

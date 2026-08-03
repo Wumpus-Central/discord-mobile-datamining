@@ -1,6 +1,3 @@
-// === Module 4605: CollapsingText ===
-
-// Module 4605 (CollapsingText)
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "set";
 import get_ActivityIndicator from "getNodeText";

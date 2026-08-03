@@ -1,6 +1,3 @@
-// === Module 12551: GuildBoostSlotCooldown ===
-
-// Module 12551 (GuildBoostSlotCooldown)
 import initialize from "initialize";
 import get_ActivityIndicator from "GuildIconSizes";
 import handleThemeChange from "handleThemeChange";

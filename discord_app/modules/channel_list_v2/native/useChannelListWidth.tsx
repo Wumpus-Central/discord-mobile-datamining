@@ -1,6 +1,3 @@
-// === Module 14953: useChannelListWidth ===
-
-// Module 14953 (useChannelListWidth)
 const result = require("map").fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 
 export default function useChannelListWidth() {

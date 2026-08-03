@@ -1,6 +1,3 @@
-// === Module 8098: useProfileFrame ===
-
-// Module 8098 (useProfileFrame)
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";
 import { isProfileFrameRecord } from "fromServer";

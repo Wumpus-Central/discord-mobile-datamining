@@ -1,6 +1,3 @@
-// === Module 11560: ? ===
-
-// Module 11560
 import importAllResult from "noop";
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";

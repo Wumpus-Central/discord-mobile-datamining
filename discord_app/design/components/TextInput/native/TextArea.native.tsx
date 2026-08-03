@@ -1,6 +1,3 @@
-// === Module 7649: TextArea ===
-
-// Module 7649 (TextArea)
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
 

@@ -1,6 +1,3 @@
-// === Module 15410: ICYMIHeader ===
-
-// Module 15410 (ICYMIHeader)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

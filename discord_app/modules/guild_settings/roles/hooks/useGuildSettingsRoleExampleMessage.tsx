@@ -1,6 +1,3 @@
-// === Module 16491: useGuildSettingsRoleExampleMessage ===
-
-// Module 16491 (useGuildSettingsRoleExampleMessage)
 import noop from "noop";
 import createdAt from "createdAt";
 import { MessageStates } from "ME";

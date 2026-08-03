@@ -1,6 +1,3 @@
-// === Module 10515: formatWatchRemainingDurationShort ===
-
-// Module 10515 (formatWatchRemainingDurationShort)
 const result = require("set").fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
 
 export const formatWatchRemainingDurationShort = function formatWatchRemainingDurationShort(targetSeconds) {

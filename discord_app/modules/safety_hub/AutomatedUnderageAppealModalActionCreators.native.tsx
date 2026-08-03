@@ -1,6 +1,3 @@
-// === Module 11098: ? ===
-
-// Module 11098
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import SafetyHubView from "SafetyHubView";
 import { AGE_VERIFICATION_GET_STARTED_MODAL_KEY as closure_6 } from "set";

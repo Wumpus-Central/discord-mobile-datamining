@@ -1,6 +1,3 @@
-// === Module 6881: BeeIllocon ===
-
-// Module 6881 (BeeIllocon)
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");

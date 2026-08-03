@@ -1,6 +1,3 @@
-// === Module 10979: useClaimOrFetchRewardCode ===
-
-// Module 10979 (useClaimOrFetchRewardCode)
 import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

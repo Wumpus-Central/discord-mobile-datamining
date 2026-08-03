@@ -1,6 +1,3 @@
-// === Module 11620: GuildPowerupRollbackSheet ===
-
-// Module 11620 (GuildPowerupRollbackSheet)
 import { jsx } from "jsxProd";
 
 const result = require("Button").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");

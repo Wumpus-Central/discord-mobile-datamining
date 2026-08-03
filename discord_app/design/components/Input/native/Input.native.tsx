@@ -1,6 +1,3 @@
-// === Module 6731: Input ===
-
-// Module 6731 (Input)
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

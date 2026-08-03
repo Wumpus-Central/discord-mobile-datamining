@@ -1,6 +1,3 @@
-// === Module 12513: LargeCountDownPill ===
-
-// Module 12513 (LargeCountDownPill)
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,6 +1,3 @@
-// === Module 16549: EligibilityActionSheet ===
-
-// Module 16549 (EligibilityActionSheet)
 import noop from "noop";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";

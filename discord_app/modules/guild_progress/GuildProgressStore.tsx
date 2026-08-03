@@ -1,6 +1,3 @@
-// === Module 11580: completeStep ===
-
-// Module 11580 (completeStep)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

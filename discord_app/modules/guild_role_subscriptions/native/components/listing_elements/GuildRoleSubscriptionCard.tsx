@@ -1,6 +1,3 @@
-// === Module 14273: SectionTitle ===
-
-// Module 14273 (SectionTitle)
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";

@@ -1,6 +1,3 @@
-// === Module 10479: isVoiceEmbeddedActivity ===
-
-// Module 10479 (isVoiceEmbeddedActivity)
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

@@ -1,6 +1,3 @@
-// === Module 7874: ChangeLogLink ===
-
-// Module 7874 (ChangeLogLink)
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

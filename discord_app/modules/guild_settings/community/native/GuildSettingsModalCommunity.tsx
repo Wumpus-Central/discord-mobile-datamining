@@ -1,6 +1,3 @@
-// === Module 16518: GuildSettingsModalCommunity ===
-
-// Module 16518 (GuildSettingsModalCommunity)
 import computeChannelName from "computeChannelName";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

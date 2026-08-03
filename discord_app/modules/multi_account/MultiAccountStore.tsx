@@ -1,6 +1,3 @@
-// === Module 11521: initialize ===
-
-// Module 11521 (initialize)
 import { MAX_ACCOUNTS } from "MAX_ACCOUNTS";
 import { PersistedStore } from "initialize";
 

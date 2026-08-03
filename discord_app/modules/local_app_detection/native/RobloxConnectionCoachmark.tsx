@@ -1,6 +1,3 @@
-// === Module 15779: RobloxIcon ===
-
-// Module 15779 (RobloxIcon)
 import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed";
 import getSystemLocale from "getSystemLocale";
 import { View } from "Stack";

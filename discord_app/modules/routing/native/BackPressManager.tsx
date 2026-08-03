@@ -1,6 +1,3 @@
-// === Module 13524: handleBackPress ===
-
-// Module 13524 (handleBackPress)
 import "initialize";
 
 function handleBackPress() {

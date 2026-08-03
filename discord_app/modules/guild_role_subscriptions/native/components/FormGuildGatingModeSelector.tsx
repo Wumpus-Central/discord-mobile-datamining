@@ -1,6 +1,3 @@
-// === Module 16586: FormGuildGatingModeSelector ===
-
-// Module 16586 (FormGuildGatingModeSelector)
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,6 +1,3 @@
-// === Module 13796: RestrictedAccountRedirect ===
-
-// Module 13796 (RestrictedAccountRedirect)
 import importAllResult from "noop";
 import { View } from "set";
 import upsertRelationship from "upsertRelationship";

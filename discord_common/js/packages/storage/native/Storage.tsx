@@ -1,6 +1,3 @@
-// === Module 596: parseValue ===
-
-// Module 596 (parseValue)
 import closure_2 from "set";
 import get_ActivityIndicator from "get ActivityIndicator";
 import enforcing from "enforcing";

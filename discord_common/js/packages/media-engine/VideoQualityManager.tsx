@@ -1,6 +1,3 @@
-// === Module 4302: WantsVideoQuality ===
-
-// Module 4302 (WantsVideoQuality)
 import DesktopSources from "DesktopSources";
 
 let VideoQualityMode;
