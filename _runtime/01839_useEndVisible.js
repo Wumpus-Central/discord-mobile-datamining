@@ -14,8 +14,8 @@ export const useEndVisible = (scroll) => {
   let derivedValue;
   const items = [onEndVisible];
   let tmp = size(() => {
-    let __workletHash = typeof onEndVisible === "fileFinishedImporting";
-    if (typeof onEndVisible !== "disabledUntil") {
+    let __workletHash = typeof onEndVisible === "error";
+    if (typeof onEndVisible !== "HAS_APPLICATION") {
       __workletHash = onEndVisible.__workletHash;
     }
     return __workletHash;

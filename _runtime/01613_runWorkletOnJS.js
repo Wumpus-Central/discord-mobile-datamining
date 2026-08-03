@@ -168,7 +168,7 @@ function runOnJS(__remoteFunction) {
                                           __remoteFunction = tmp.__remoteFunction;
                                           tmp5 = __remoteFunction;
                                         }
-                                        if (typeof tmp5 === "fileFinishedImporting") {
+                                        if (typeof tmp5 === "error") {
                                           _scheduleRemoteFunctionOnJS = outer1_0._scheduleHostFunctionOnJS;
                                         } else {
                                           _scheduleRemoteFunctionOnJS = outer1_0._scheduleRemoteFunctionOnJS;
@@ -189,7 +189,7 @@ function runOnJS(__remoteFunction) {
                                   __remoteFunction = tmp.__remoteFunction;
                                   tmp5 = __remoteFunction;
                                 }
-                                if (typeof tmp5 === "fileFinishedImporting") {
+                                if (typeof tmp5 === "error") {
                                   _scheduleRemoteFunctionOnJS = outer1_0._scheduleHostFunctionOnJS;
                                 } else {
                                   _scheduleRemoteFunctionOnJS = outer1_0._scheduleRemoteFunctionOnJS;
@@ -221,7 +221,7 @@ function runOnJS(__remoteFunction) {
                           __remoteFunction = tmp.__remoteFunction;
                           tmp5 = __remoteFunction;
                         }
-                        if (typeof tmp5 === "fileFinishedImporting") {
+                        if (typeof tmp5 === "error") {
                           _scheduleRemoteFunctionOnJS = outer1_0._scheduleHostFunctionOnJS;
                         } else {
                           _scheduleRemoteFunctionOnJS = outer1_0._scheduleRemoteFunctionOnJS;
@@ -253,7 +253,7 @@ function runOnJS(__remoteFunction) {
                   __remoteFunction = tmp.__remoteFunction;
                   tmp5 = __remoteFunction;
                 }
-                if (typeof tmp5 === "fileFinishedImporting") {
+                if (typeof tmp5 === "error") {
                   _scheduleRemoteFunctionOnJS = outer1_0._scheduleHostFunctionOnJS;
                 } else {
                   _scheduleRemoteFunctionOnJS = outer1_0._scheduleRemoteFunctionOnJS;
@@ -285,7 +285,7 @@ function runOnJS(__remoteFunction) {
           __remoteFunction = __remoteFunction.__remoteFunction;
           tmp4 = __remoteFunction;
         }
-        if (typeof tmp4 === "fileFinishedImporting") {
+        if (typeof tmp4 === "error") {
           let _scheduleRemoteFunctionOnJS = __remoteFunction._scheduleHostFunctionOnJS;
         } else {
           _scheduleRemoteFunctionOnJS = __remoteFunction._scheduleRemoteFunctionOnJS;

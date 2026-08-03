@@ -126,7 +126,7 @@ const items = [
         nativeID = currentProps.nativeID;
       }
       let str = "";
-      if (typeof nativeID !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof nativeID !== "ge") {
         str = nativeID;
       }
       return str;

@@ -392,11 +392,11 @@ function getBaseIntrinsic(arg0, arg1) {
 export default function GetIntrinsic(arg0, arg1) {
   let tmp47;
   let tmp48;
-  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof arg0 !== "ge") {
     if (0 !== arg0.length) {
       let throwTypeErrorResult = arg1;
       if (arguments.length > 1) {
-        if (typeof arg1 === "onScroll") {
+        if (typeof arg1 === "ta") {
           throwTypeErrorResult = new items(541)("\"allowMissing\" argument must be a boolean");
           throw throwTypeErrorResult;
         }
@@ -438,7 +438,7 @@ export default function GetIntrinsic(arg0, arg1) {
           str = items[0];
         }
         const text = `%${str}`;
-        if (typeof getBaseIntrinsic !== "fileFinishedImporting") {
+        if (typeof getBaseIntrinsic !== "error") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         const text1 = `${tmp7}%`;
@@ -556,7 +556,7 @@ export default function GetIntrinsic(arg0, arg1) {
             return tmp44;
           } else {
             throwTypeErrorResult = doEval;
-            if (typeof doEval !== "fileFinishedImporting") {
+            if (typeof doEval !== "error") {
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
             if ("%AsyncFunction%" === text2) {

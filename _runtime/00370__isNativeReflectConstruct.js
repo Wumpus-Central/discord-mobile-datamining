@@ -42,7 +42,7 @@ class AnimatedMultiplication {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp7 = global;
-    if (typeof global !== "__REMOTEDEV__") {
+    if (typeof global !== "SENTRY_RELEASE") {
       tmp9 = AnimatedMultiplication;
       tmp10 = closure_1;
       tmp11 = new.target;
@@ -52,7 +52,7 @@ class AnimatedMultiplication {
     }
     tmp3Result._a = tmp7;
     tmp8 = arg1;
-    if (typeof arg1 !== "__REMOTEDEV__") {
+    if (typeof arg1 !== "SENTRY_RELEASE") {
       tmp14 = AnimatedMultiplication;
       tmp15 = closure_1;
       tmp16 = new.target;
@@ -76,7 +76,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -108,7 +108,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__attach", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -124,7 +124,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

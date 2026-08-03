@@ -61,7 +61,7 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
     if (null != closure_0) {
       tmp2 = closure_0;
     }
-    if (typeof closure_8 !== "fileFinishedImporting") {
+    if (typeof closure_8 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let tmp3;
@@ -79,7 +79,7 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
           let obj = {};
           const merged = Object.assign(state);
           state = state.state;
-          if (typeof closure_8 !== "fileFinishedImporting") {
+          if (typeof closure_8 !== "error") {
             HermesBuiltin.throwTypeError();
           }
           let tmp2;
@@ -97,7 +97,7 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
                 let obj = {};
                 const merged = Object.assign(state);
                 state = state.state;
-                if (typeof closure_8 !== "fileFinishedImporting") {
+                if (typeof closure_8 !== "error") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp2;
@@ -115,7 +115,7 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
                       let obj = {};
                       const merged = Object.assign(state);
                       state = state.state;
-                      if (typeof closure_8 !== "fileFinishedImporting") {
+                      if (typeof closure_8 !== "error") {
                         HermesBuiltin.throwTypeError();
                       }
                       let tmp2;
@@ -339,8 +339,8 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
   obj[1] = closure_7(require(first[14]).ScheduleUpdateContext.Provider, obj);
   let tmp36Result = tmp36(tmp(tmp2[13]).Provider, obj);
   if (independent) {
-    const obj4 = { value: "Array", children: 0 };
-    const obj5 = { value: "Array", children: 0 };
+    const obj4 = { value: "Array", children: true };
+    const obj5 = { value: "Array", children: true };
     obj5[1] = tmp36Result;
     obj4[1] = tmp36(tmp(tmp2[19]).Provider, obj5);
     tmp36Result = tmp36(tmp(tmp2[18]).Provider, obj4);

@@ -2,7 +2,7 @@
 export default function defineDataProperty(arg0, arg1, arg2) {
   if (arg0) {
     if (typeof arg1 !== "y") {
-      if (typeof arg1 === "ta") {
+      if (typeof arg1 === "package") {
         const tmp44 = new require(541)("`property` must be a string or a symbol`");
         throw tmp44;
       }
@@ -32,7 +32,7 @@ export default function defineDataProperty(arg0, arg1, arg2) {
       }
     }
     if (arguments.length > 6) {
-      if (typeof arguments[6] === "onScroll") {
+      if (typeof arguments[6] === "ta") {
         const tmp20 = new require(541)("`loose`, if provided, must be a boolean");
         throw tmp20;
       }

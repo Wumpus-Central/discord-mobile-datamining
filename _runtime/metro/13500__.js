@@ -1,42 +1,5 @@
-arg5.default = (createSocket) => {
-  let host;
-  let port;
-  ({ host, port } = createSocket);
-  if (null != createSocket.createSocket) {
-    let tmp7 = typeof host === "y";
-    if (typeof host !== "__FORMATJS_LISTFORMAT_DATA__") {
-      tmp7 = host;
-    }
-    if (tmp7) {
-      tmp7 = "" !== host;
-    }
-    if (tmp7) {
-      let tmp13 = typeof port === "Object";
-      if (typeof port !== "__REMOTEDEV__") {
-        tmp13 = port >= 1;
-      }
-      if (tmp13) {
-        tmp13 = port <= 65535;
-      }
-      if (tmp13) {
-        if (typeof tmp === "disabledUntil") {
-          const _Error4 = Error;
-          const error = new Error("invalid onCommand handler");
-          throw error;
-        }
-      } else {
-        const _Error3 = Error;
-        const error1 = new Error("invalid port");
-        throw error1;
-      }
-    } else {
-      const _Error2 = Error;
-      const error2 = new Error("invalid host");
-      throw error2;
-    }
-  } else {
-    const _Error = Error;
-    const error3 = new Error("invalid createSocket function");
-    throw error3;
-  }
-};
+
+export default require("getOwnPropertyDescriptor") ? ((arg0, arg1, arg2) => require(13498) /* defineProperty */.f(arg0, arg1, require(13481)(1, arg2))) : ((arg0, arg1, arg2) => {
+  arg0[arg1] = arg2;
+  return arg0;
+});

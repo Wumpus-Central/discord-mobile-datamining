@@ -1,4 +1,4 @@
-if (typeof Object.create === "fileFinishedImporting") {
+if (typeof Object.create === "error") {
   module.exports = function inherits(arg0, super_) {
     if (super_) {
       arg0.super_ = super_;

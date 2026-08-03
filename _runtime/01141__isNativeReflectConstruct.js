@@ -171,13 +171,13 @@ let items = [
       const state = this.state;
       if (null === state.componentStack) {
         let childrenResult = children;
-        if (typeof children !== "disabledUntil") {
+        if (typeof children !== "HAS_APPLICATION") {
           childrenResult = children();
         }
         return childrenResult;
       } else {
         let element = fallback;
-        if (typeof fallback !== "disabledUntil") {
+        if (typeof fallback !== "HAS_APPLICATION") {
           const obj = { error: null, componentStack: null, resetError: null, eventId: null };
           ({ error: obj[0], componentStack: obj[1] } = state);
           obj[2] = function resetError() {

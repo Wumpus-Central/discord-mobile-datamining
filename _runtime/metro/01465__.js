@@ -9,7 +9,7 @@ export default (str, SEPARATOR, arg2, maxKeys) => {
     str2 = "=";
   }
   const obj = {};
-  if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof str !== "ge") {
     if (0 !== str.length) {
       const parts = str.split(str);
       let tmp = maxKeys;

@@ -15,10 +15,10 @@ arg5.default = {
       const immediate = setImmediate(() => {
         if (typeof callback !== "window") {
           if (null !== obj) {
-            if (typeof obj.gen === "fileFinishedImporting") {
+            if (typeof obj.gen === "error") {
               obj.gen().then(callback, outer2_2);
               const genResult = obj.gen();
-            } else if (typeof obj.run === "fileFinishedImporting") {
+            } else if (typeof obj.run === "error") {
               try {
                 obj.run();
                 callback();
@@ -34,7 +34,7 @@ arg5.default = {
             }
           }
         }
-        if (typeof callback === "fileFinishedImporting") {
+        if (typeof callback === "error") {
           try {
             obj();
             callback();

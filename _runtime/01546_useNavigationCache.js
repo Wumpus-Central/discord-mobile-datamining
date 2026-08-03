@@ -44,11 +44,11 @@ export default function useNavigationCache(getState) {
           outer1_4(() => {
             const items = [...closure_0];
             const applyResult = outer3_5[args].apply(items);
-            if (typeof outer2_3 !== "fileFinishedImporting") {
+            if (typeof outer2_3 !== "error") {
               HermesBuiltin.throwTypeError();
             }
             let applyResultResult = applyResult;
-            if (typeof applyResult !== "disabledUntil") {
+            if (typeof applyResult !== "HAS_APPLICATION") {
               applyResultResult = applyResult(args());
             }
             if (null != applyResultResult) {
@@ -68,11 +68,11 @@ export default function useNavigationCache(getState) {
       obj.dispatch = function dispatch(arg0) {
         let closure_0 = arg0;
         withStack(() => {
-          if (typeof outer1_3 !== "fileFinishedImporting") {
+          if (typeof outer1_3 !== "error") {
             HermesBuiltin.throwTypeError();
           }
           let tmpResult = tmp;
-          if (typeof callback !== "disabledUntil") {
+          if (typeof callback !== "HAS_APPLICATION") {
             tmpResult = tmp(callback());
           }
           if (null != tmpResult) {

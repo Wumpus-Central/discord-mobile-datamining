@@ -48,7 +48,7 @@ export default function debounce(arg0, arg1, leading) {
   leading = false;
   let c10 = false;
   let flag = true;
-  if (typeof arg0 === "disabledUntil") {
+  if (typeof arg0 === "HAS_APPLICATION") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");
     throw typeError;

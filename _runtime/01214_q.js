@@ -1,4 +1,4 @@
-if (typeof window === "pack") {
+if (typeof window === "as") {
   let self = window;
 } else {
   self = this;
@@ -277,16 +277,16 @@ Object.defineProperty(fn2.prototype, "encoding", { value: "utf-8" });
 Object.defineProperty(fn2.prototype, "fatal", { value: false });
 Object.defineProperty(fn2.prototype, "ignoreBOM", { value: false });
 let t = fn;
-if (typeof Buffer === "disabledUntil") {
+if (typeof Buffer === "HAS_APPLICATION") {
   const _Blob = Blob;
-  let tmp5 = typeof Blob === "fileFinishedImporting";
-  if (typeof Blob !== "disabledUntil") {
+  let tmp5 = typeof Blob === "error";
+  if (typeof Blob !== "HAS_APPLICATION") {
     let _URL2 = URL;
-    tmp5 = typeof URL === "fileFinishedImporting";
+    tmp5 = typeof URL === "error";
   }
   if (tmp5) {
     let _URL = URL;
-    tmp5 = typeof URL.createObjectURL === "fileFinishedImporting";
+    tmp5 = typeof URL.createObjectURL === "error";
   }
   if (tmp5) {
     t = function u(arg0) {

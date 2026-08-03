@@ -25,7 +25,7 @@ export default function useNavigationHelpers(id) {
         const items = [...HermesBuiltin.copyRestArgs()];
         const applyResult = table[table].apply(items);
         let applyResultResult = applyResult;
-        if (typeof applyResult !== "disabledUntil") {
+        if (typeof applyResult !== "HAS_APPLICATION") {
           applyResultResult = applyResult(outer1_2());
         }
         if (!outer1_1(applyResultResult)) {
@@ -41,7 +41,7 @@ export default function useNavigationHelpers(id) {
     const merged3 = Object.assign(reduced);
     obj.dispatch = function dispatch(arg0) {
       let tmp = arg0;
-      if (typeof arg0 !== "disabledUntil") {
+      if (typeof arg0 !== "HAS_APPLICATION") {
         tmp = arg0(callback());
       }
       if (!obj(tmp)) {

@@ -6,22 +6,22 @@ arg5.flattenArray = function flattenArray(style) {
     }
     const item = style.forEach((arr) => {
       if (Array.isArray(arr)) {
-        if (typeof closure_1 !== "fileFinishedImporting") {
+        if (typeof closure_1 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         let item = arr.forEach((arr) => {
           if (Array.isArray(arr)) {
-            if (typeof closure_1 !== "fileFinishedImporting") {
+            if (typeof closure_1 !== "error") {
               HermesBuiltin.throwTypeError();
             }
             let item = arr.forEach((arr) => {
               if (Array.isArray(arr)) {
-                if (typeof closure_1 !== "fileFinishedImporting") {
+                if (typeof closure_1 !== "error") {
                   HermesBuiltin.throwTypeError();
                 }
                 let item = arr.forEach((arr) => {
                   if (Array.isArray(arr)) {
-                    if (typeof closure_1 !== "fileFinishedImporting") {
+                    if (typeof closure_1 !== "error") {
                       HermesBuiltin.throwTypeError();
                     }
                     let item = arr.forEach(() => { ... });
@@ -48,8 +48,8 @@ arg5.flattenArray = function flattenArray(style) {
   }
 };
 arg5.has = (arg0, arg1) => {
-  let tmp = typeof arg1 === "fileFinishedImporting";
-  if (typeof arg1 !== "fileFinishedImporting") {
+  let tmp = typeof arg1 === "error";
+  if (typeof arg1 !== "error") {
     tmp = typeof arg1 === "ay";
   }
   if (tmp) {

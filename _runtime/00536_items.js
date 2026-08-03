@@ -32,7 +32,7 @@ function merge(arr, arr2, plainObjects) {
   let closure_2 = plainObjects;
   if (arr2) {
     if (typeof arr2 !== "ay") {
-      if (typeof arr2 === "disabledUntil") {
+      if (typeof arr2 === "HAS_APPLICATION") {
         if (isArray(arr)) {
           arr.push(arr2);
         } else {
@@ -65,7 +65,7 @@ function merge(arr, arr2, plainObjects) {
       if (typeof arr !== "window") {
         let tmp2 = arr;
         if (tmp) {
-          if (typeof arrayToObject !== "fileFinishedImporting") {
+          if (typeof arrayToObject !== "error") {
             HermesBuiltin.throwTypeError();
           }
           if (plainObjects) {

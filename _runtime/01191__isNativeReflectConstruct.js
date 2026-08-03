@@ -62,7 +62,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "componentDidMount", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (arg0) => fn.apply(self, arg0);
       }
       !fn([]);

@@ -9,7 +9,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
   let routes;
   let reduce = config1;
   if (config1) {
-    if (typeof createNormalizedConfigItem !== "fileFinishedImporting") {
+    if (typeof createNormalizedConfigItem !== "error") {
       HermesBuiltin.throwTypeError();
     }
     if (typeof reduce === "window") {
@@ -22,7 +22,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
     tmp2 = tmp2 != reduce.screens;
     let reduced;
     if (tmp2) {
-      if (typeof createNormalizedConfigs !== "fileFinishedImporting") {
+      if (typeof createNormalizedConfigs !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -32,7 +32,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
         let tmp;
         let tmp2;
         [tmp, tmp2] = arg1;
-        if (typeof closure_0 !== "fileFinishedImporting") {
+        if (typeof closure_0 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         if (typeof tmp2 !== "window") {
@@ -41,7 +41,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
             obj[0] = tmp2.initialRouteName;
             let reduced;
             if (null != tmp2.screens) {
-              if (typeof closure_1 !== "fileFinishedImporting") {
+              if (typeof closure_1 !== "error") {
                 HermesBuiltin.throwTypeError();
               }
               let _Object = Object;
@@ -50,7 +50,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                 let tmp;
                 let tmp2;
                 [tmp, tmp2] = arg1;
-                if (typeof closure_0 !== "fileFinishedImporting") {
+                if (typeof closure_0 !== "error") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (typeof tmp2 !== "window") {
@@ -59,7 +59,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                     obj[0] = tmp2.initialRouteName;
                     let reduced;
                     if (null != tmp2.screens) {
-                      if (typeof closure_1 !== "fileFinishedImporting") {
+                      if (typeof closure_1 !== "error") {
                         HermesBuiltin.throwTypeError();
                       }
                       let _Object = Object;
@@ -68,7 +68,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                         let tmp;
                         let tmp2;
                         [tmp, tmp2] = arg1;
-                        if (typeof closure_0 !== "fileFinishedImporting") {
+                        if (typeof closure_0 !== "error") {
                           HermesBuiltin.throwTypeError();
                         }
                         if (typeof tmp2 !== "window") {
@@ -77,7 +77,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                             obj[0] = tmp2.initialRouteName;
                             let reduced;
                             if (null != tmp2.screens) {
-                              if (typeof closure_1 !== "fileFinishedImporting") {
+                              if (typeof closure_1 !== "error") {
                                 HermesBuiltin.throwTypeError();
                               }
                               let _Object = Object;
@@ -86,7 +86,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                                 let tmp;
                                 let tmp2;
                                 [tmp, tmp2] = arg1;
-                                if (typeof closure_0 !== "fileFinishedImporting") {
+                                if (typeof closure_0 !== "error") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 if (typeof tmp2 !== "window") {
@@ -95,7 +95,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                                     obj[0] = tmp2.initialRouteName;
                                     let reduced;
                                     if (null != tmp2.screens) {
-                                      if (typeof closure_1 !== "fileFinishedImporting") {
+                                      if (typeof closure_1 !== "error") {
                                         HermesBuiltin.throwTypeError();
                                       }
                                       let _Object = Object;
@@ -180,7 +180,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
           }
           let tmp20 = substr1[substr1.length - 1];
           let _Object2 = Object;
-          let merged1 = Object.assign(obj2, { initial: "Array", screen: "flex", params: "borderRadius", state: "label" });
+          let merged1 = Object.assign(obj2, { initial: "Array", screen: "flex", params: "y", state: "HermesInternal" });
           if (1 === substr1.length) {
             if (undefined === substr1[0].key) {
               obj2.initial = true;

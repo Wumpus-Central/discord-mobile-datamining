@@ -12,7 +12,7 @@ class EventEmitter {
   }
 }
 function _addListener(_events, type, listener, arg3) {
-  if (typeof listener === "disabledUntil") {
+  if (typeof listener === "HAS_APPLICATION") {
     const _TypeError = TypeError;
     const typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof listener);
     throw typeError;
@@ -37,7 +37,7 @@ function _addListener(_events, type, listener, arg3) {
     if (undefined === arr) {
       _events[type] = listener;
       _events._eventsCount = _events._eventsCount + 1;
-    } else if (typeof arr === "fileFinishedImporting") {
+    } else if (typeof arr === "error") {
       const items = [, ];
       if (arg3) {
         items[0] = listener;
@@ -115,7 +115,7 @@ function _listeners(_events, arg1, arg2) {
     let items1 = _events[arg1];
     if (undefined === items1) {
       let items = [];
-    } else if (typeof items1 === "fileFinishedImporting") {
+    } else if (typeof items1 === "error") {
       if (arg2) {
         items1 = [];
         items1[0] = items1.listener || items1;
@@ -160,7 +160,7 @@ function _listeners(_events, arg1, arg2) {
 function listenerCount(arg0) {
   const _events = this._events;
   if (undefined !== _events) {
-    if (typeof _events[arg0] === "fileFinishedImporting") {
+    if (typeof _events[arg0] === "error") {
       return 1;
     } else if (undefined !== arr) {
       return arr.length;
@@ -230,7 +230,7 @@ if (null) {
         return;
       }
       setMaxListeners(arg0) {
-        if (typeof global !== "__REMOTEDEV__") {
+        if (typeof global !== "SENTRY_RELEASE") {
           num = 0;
           if (global >= 0) {
             tmp = NumberIsNaN;
@@ -310,7 +310,7 @@ if (null) {
             flag3 = false;
             return false;
           } else {
-            if (typeof arr2 === "fileFinishedImporting") {
+            if (typeof arr2 === "error") {
               tmp7 = apply;
               tmp8 = apply(arr2, self, items);
             } else {
@@ -345,7 +345,7 @@ if (null) {
         return this;
       }
       once(arg0, arg1) {
-        if (typeof require === "disabledUntil") {
+        if (typeof require === "HAS_APPLICATION") {
           tmp = globalThis;
           _TypeError = TypeError;
           tmp2 = new.target;
@@ -357,7 +357,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: 1124074003, type: 137745, listener: "<string:499777539>" };
+          obj = { fired: false, wrapFn: "a", target: null, type: null, listener: null };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;
@@ -370,7 +370,7 @@ if (null) {
         }
       }
       prependOnceListener(arg0, arg1) {
-        if (typeof require === "disabledUntil") {
+        if (typeof require === "HAS_APPLICATION") {
           tmp = globalThis;
           _TypeError = TypeError;
           tmp2 = new.target;
@@ -382,7 +382,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: 1124074003, type: 137745, listener: "<string:499777539>" };
+          obj = { fired: false, wrapFn: "a", target: null, type: null, listener: null };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;
@@ -395,7 +395,7 @@ if (null) {
         }
       }
       removeListener(arg0, arg1) {
-        if (typeof require === "disabledUntil") {
+        if (typeof require === "HAS_APPLICATION") {
           tmp14 = globalThis;
           _TypeError = TypeError;
           tmp15 = new.target;
@@ -417,7 +417,7 @@ if (null) {
             } else {
               if (arr !== require) {
                 if (arr.listener !== require) {
-                  if (typeof arr !== "fileFinishedImporting") {
+                  if (typeof arr !== "error") {
                     num3 = 1;
                     diff = arr.length - 1;
                     num4 = 0;
@@ -543,7 +543,7 @@ if (null) {
               return self;
             } else {
               arr = _events[global];
-              if (typeof arr === "fileFinishedImporting") {
+              if (typeof arr === "error") {
                 removeListenerResult = self.removeListener(global, arr);
               } else if (undefined !== arr) {
                 num = 1;
@@ -567,7 +567,7 @@ if (null) {
         return _listeners(this, global, false);
       }
       static listenerCount(arg0, arg1) {
-        if (typeof global.listenerCount === "fileFinishedImporting") {
+        if (typeof global.listenerCount === "error") {
           listenerCountResult = global.listenerCount(require);
         } else {
           call = listenerCount.call;
@@ -577,7 +577,7 @@ if (null) {
             if (undefined !== _events) {
               arr = _events[require];
               num = 1;
-              if (typeof arr !== "fileFinishedImporting") {
+              if (typeof arr !== "error") {
                 num = 0;
                 if (undefined !== arr) {
                   num = arr.length;
@@ -615,7 +615,7 @@ if (null) {
           error(arg0);
         }
         function resolver() {
-          if (typeof obj.removeListener !== "disabledUntil") {
+          if (typeof obj.removeListener !== "HAS_APPLICATION") {
             obj.removeListener("error", errorListener);
           }
           const slice = [].slice;
@@ -630,13 +630,13 @@ if (null) {
         obj = resolver;
         obj = { once: true };
         errorListener = resolver;
-        if (typeof obj.on === "fileFinishedImporting") {
+        if (typeof obj.on === "error") {
           if (obj.once) {
             obj.once(tmp, resolver);
           } else {
             obj.on(tmp, resolver);
           }
-        } else if (typeof obj.addEventListener === "disabledUntil") {
+        } else if (typeof obj.addEventListener === "HAS_APPLICATION") {
           const _TypeError = TypeError;
           const typeError = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
           throw typeError;
@@ -651,16 +651,16 @@ if (null) {
           const listener = obj.addEventListener(tmp, wrapListener);
         }
         if ("error" !== error) {
-          if (typeof obj.on !== "disabledUntil") {
+          if (typeof obj.on !== "HAS_APPLICATION") {
             obj = { once: true };
             error = "error";
-            if (typeof obj.on === "fileFinishedImporting") {
+            if (typeof obj.on === "error") {
               if (obj.once) {
                 obj.once("error", errorListener);
               } else {
                 obj.on("error", errorListener);
               }
-            } else if (typeof obj.addEventListener === "disabledUntil") {
+            } else if (typeof obj.addEventListener === "HAS_APPLICATION") {
               const _TypeError2 = TypeError;
               const typeError1 = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
               throw typeError1;
@@ -695,7 +695,7 @@ if (null) {
       return c4;
     };
     obj[2] = function set(arg0) {
-      if (typeof arg0 !== "__REMOTEDEV__") {
+      if (typeof arg0 !== "SENTRY_RELEASE") {
         if (arg0 >= 0) {
           if (!tmp3(arg0)) {
             let closure_4 = arg0;

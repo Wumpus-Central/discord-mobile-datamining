@@ -1,6 +1,6 @@
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.replaceExports = function replaceExports(arg0, arg1, arg2) {
-  if (typeof arg0[arg1] !== "disabledUntil") {
+  if (typeof arg0[arg1] !== "HAS_APPLICATION") {
     try {
       arg0[arg1] = arg2;
       if (arg0.default === tmp4) {

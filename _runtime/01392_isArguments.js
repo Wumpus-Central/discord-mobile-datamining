@@ -19,7 +19,7 @@ function isArguments(arg0) {
   return tmp3;
 }
 let isArguments2 = function isArguments(callee) {
-  if (typeof isArguments !== "fileFinishedImporting") {
+  if (typeof isArguments !== "error") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = closure_0;
@@ -64,7 +64,7 @@ let isArguments2 = function isArguments(callee) {
 };
 isArguments.isLegacyArguments = isArguments2;
 if ((() => {
-  if (typeof isArguments !== "fileFinishedImporting") {
+  if (typeof isArguments !== "error") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = closure_0;

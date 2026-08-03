@@ -107,7 +107,7 @@ export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelop
   }
 };
 export const parseEnvelope = function parseEnvelope(arr) {
-  if (typeof arr === "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof arr === "ge") {
     function readJson() {
       let length = lib.indexOf(10);
       if (length < 0) {
@@ -131,7 +131,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
     while (_require.length) {
       let json1 = readJson();
       let length;
-      if (typeof json1.length !== "__REMOTEDEV__") {
+      if (typeof json1.length !== "SENTRY_RELEASE") {
         length = json1.length;
       }
       let items1 = [json1, ];
@@ -180,7 +180,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
         const obj5 = callback(outer1_1[1]);
       }
       callback = sum;
-    } else if (typeof json === "__FORMATJS_LISTFORMAT_DATA__") {
+    } else if (typeof json === "ge") {
       arr = arr.push(json);
     } else {
       const sentryCarrier1 = callback(outer1_1[1]).getSentryCarrier(callback(outer1_1[2]).GLOBAL_OBJ);

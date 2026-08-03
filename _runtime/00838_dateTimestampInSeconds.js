@@ -20,13 +20,13 @@ arg5.browserPerformanceTimeOrigin = function browserPerformanceTimeOrigin() {
       tmp7Result = tmp7(831);
       const safeDateNowResult = tmp7Result.safeDateNow();
       const timeOrigin = _performance.timeOrigin;
-      if (typeof timeOrigin === "__REMOTEDEV__") {
+      if (typeof timeOrigin === "SENTRY_RELEASE") {
         const timing = _performance.timing;
         let navigationStart;
         if (timing != null) {
           navigationStart = timing.navigationStart;
         }
-        if (typeof navigationStart === "__REMOTEDEV__") {
+        if (typeof navigationStart === "SENTRY_RELEASE") {
           navigationStart = safeDateNowResult - result;
         } else {
           const _Math2 = Math;

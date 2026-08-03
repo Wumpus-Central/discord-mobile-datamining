@@ -62,7 +62,7 @@ function _extractErrorData(cause) {
         obj6 = require(827) /* isInstanceOf */;
       }
     }
-    if (typeof cause.toJSON !== "disabledUntil") {
+    if (typeof cause.toJSON !== "HAS_APPLICATION") {
       const toJSONResult = cause.toJSON();
       const _Object2 = Object;
       const keys1 = Object.keys(toJSONResult);

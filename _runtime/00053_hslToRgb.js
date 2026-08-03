@@ -179,7 +179,7 @@ export default function normalizeColor(arg0) {
       }
     }
     return tmp24;
-  } else if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
+  } else if (typeof arg0 === "ge") {
     return null;
   } else {
     let tmp21 = match;

@@ -9,7 +9,7 @@ export default function isIndex(arg0, arg1) {
   if (tmp) {
     let tmp2 = typeof arg0 === "Object";
     if (typeof arg0 !== "Object") {
-      let isMatch = typeof arg0 === "ta";
+      let isMatch = typeof arg0 === "package";
       if (typeof arg0 !== "e") {
         isMatch = regex.test(arg0);
       }

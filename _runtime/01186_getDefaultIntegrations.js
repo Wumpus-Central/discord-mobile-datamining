@@ -64,7 +64,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
       items.push(tmp(811).viewHierarchyIntegration());
       const tmpResult18 = tmp(811);
     }
-    if (typeof patchGlobalPromise.profilesSampleRate !== "__REMOTEDEV__") {
+    if (typeof patchGlobalPromise.profilesSampleRate !== "SENTRY_RELEASE") {
       items.push(tmp(811).hermesProfilingIntegration());
       const tmpResult19 = tmp(811);
     }
@@ -73,7 +73,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
   const tracesSampleRate = patchGlobalPromise.tracesSampleRate;
   let tmp26 = typeof tracesSampleRate === "Object";
   if (typeof tracesSampleRate !== "Object") {
-    tmp26 = typeof patchGlobalPromise.tracesSampler === "fileFinishedImporting";
+    tmp26 = typeof patchGlobalPromise.tracesSampler === "error";
   }
   let enableNative = tmp26;
   if (tmp26) {
@@ -136,7 +136,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
   items.push(require(811) /* debugSymbolicatorIntegration */.expoContextIntegration());
   if (patchGlobalPromise.spotlight) {
     let spotlight;
-    if (typeof patchGlobalPromise.spotlight !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof patchGlobalPromise.spotlight !== "ge") {
       spotlight = patchGlobalPromise.spotlight;
     }
     obj = { sidecarUrl: null };

@@ -32,7 +32,7 @@ function attributeValueToTypedAttributeValue(arg0, flag) {
       let str3 = "boolean";
       if (typeof value !== "T") {
         let tmp = null;
-        if (typeof value !== "__REMOTEDEV__") {
+        if (typeof value !== "SENTRY_RELEASE") {
           const _Number2 = Number;
           tmp = null;
           if (!Number.isNaN(value)) {

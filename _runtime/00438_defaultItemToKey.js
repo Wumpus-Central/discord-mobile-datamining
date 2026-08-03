@@ -10,7 +10,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function defaultItemToKey(key) {
-  if (typeof key.key === "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof key.key === "ge") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected 'id' of item to be a string, got: " + typeof key);
     throw typeError;

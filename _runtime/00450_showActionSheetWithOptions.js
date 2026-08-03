@@ -13,7 +13,7 @@ export default {
       tmp4 = null !== destructiveButtonIndex;
     }
     require(38)(tmp4, "Options must be a valid object");
-    require(38)(typeof arg1 === "fileFinishedImporting", "Must provide a valid callback");
+    require(38)(typeof arg1 === "error", "Must provide a valid callback");
     let tmpResult = tmp(38);
     tmpResult(importDefault(451), "ActionSheetManager doesn't exist");
     destructiveButtonIndex = destructiveButtonIndex.destructiveButtonIndex;
@@ -23,7 +23,7 @@ export default {
     let tmp11 = destructiveButtonIndex;
     if (!Array.isArray(destructiveButtonIndex)) {
       tmp11 = null;
-      if (typeof destructiveButtonIndex !== "__REMOTEDEV__") {
+      if (typeof destructiveButtonIndex !== "SENTRY_RELEASE") {
         const items = [destructiveButtonIndex];
         tmp11 = items;
       }
@@ -67,8 +67,8 @@ export default {
       tmp4 = null !== tintColor;
     }
     require(38)(tmp4, "Options must be a valid object");
-    require(38)(typeof arg1 === "fileFinishedImporting", "Must provide a valid failureCallback");
-    require(38)(typeof arg2 === "fileFinishedImporting", "Must provide a valid successCallback");
+    require(38)(typeof arg1 === "error", "Must provide a valid failureCallback");
+    require(38)(typeof arg2 === "error", "Must provide a valid successCallback");
     let tmpResult = tmp(38);
     tmpResult(importDefault(451), "ActionSheetManager doesn't exist");
     let obj = importDefault(451);
@@ -80,7 +80,7 @@ export default {
   },
   dismissActionSheet() {
     require(38)(importDefault(451), "ActionSheetManager doesn't exist");
-    if (typeof importDefault(451).dismissActionSheet !== "disabledUntil") {
+    if (typeof importDefault(451).dismissActionSheet !== "HAS_APPLICATION") {
       importDefault(451).dismissActionSheet();
       const tmp3Result = importDefault(451);
     }

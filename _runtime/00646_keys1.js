@@ -24,7 +24,7 @@ function createImpl(arg0) {
 
 export const create = (arg0) => {
   if (arg0) {
-    if (typeof tmp !== "fileFinishedImporting") {
+    if (typeof tmp !== "error") {
       HermesBuiltin.throwTypeError();
     }
     store = store(645).createStore(arg0);

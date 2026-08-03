@@ -11,9 +11,9 @@ function valueSetter(iter, value, flag) {
     _animation.cancelled = true;
     iter._animation = null;
   }
-  if (typeof value === "fileFinishedImporting") {
+  if (typeof value === "error") {
     obj = value;
-    if (typeof value !== "disabledUntil") {
+    if (typeof value !== "HAS_APPLICATION") {
       obj = value();
     }
     if (iter._value === obj.current) {

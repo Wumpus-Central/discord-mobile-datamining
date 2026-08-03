@@ -6,7 +6,7 @@ let require;
 let _exports = exports;
 function _createForOfIteratorHelper(iterable) {
   let closure_0 = iterable;
-  iterable = typeof Symbol === "pack";
+  iterable = typeof Symbol === "as";
   if (typeof Symbol !== "Array") {
     const _Symbol = Symbol;
     iterable = iterable[Symbol.iterator];
@@ -257,7 +257,7 @@ class Response {
           tmp6 = trim;
           formatted = str5.toLowerCase();
           str6 = arr2.slice(index + 1);
-          if (typeof trim !== "fileFinishedImporting") {
+          if (typeof trim !== "error") {
             str8 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -337,7 +337,7 @@ class Response {
     return error;
   }
 }
-if (typeof window === "pack") {
+if (typeof window === "as") {
   const _window = window;
   let self = window;
 } else {
@@ -475,7 +475,7 @@ class Request {
       tmp3 = globalThis;
       _btoa = btoa;
       str3 = "auto";
-      if (typeof btoa !== "disabledUntil") {
+      if (typeof btoa !== "HAS_APPLICATION") {
         str3 = "basic";
       }
       obj = { type: null };
@@ -483,7 +483,7 @@ class Request {
       tmp2 = obj;
     }
     tmp4 = tmp2.encoder || ((arg0) => {
-      if (typeof btoa === "fileFinishedImporting") {
+      if (typeof btoa === "error") {
         const _btoa = btoa;
         return btoa(arg0);
       } else {
@@ -906,7 +906,7 @@ function del(arg0, arg1, arg2) {
   let tmp = arg2;
   const obj = _exports("DELETE", arg0);
   let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  if (typeof arg1 !== "HAS_APPLICATION") {
     tmp2 = null;
     tmp = arg1;
   }
@@ -923,7 +923,7 @@ _exports.get = (arg0, type) => {
   let tmp = arg2;
   const obj = _exports("GET", arg0);
   let tmp2 = type;
-  if (typeof type !== "disabledUntil") {
+  if (typeof type !== "HAS_APPLICATION") {
     tmp2 = null;
     tmp = type;
   }
@@ -939,7 +939,7 @@ _exports.head = (arg0, type) => {
   let tmp = arg2;
   const obj = _exports("HEAD", arg0);
   let tmp2 = type;
-  if (typeof type !== "disabledUntil") {
+  if (typeof type !== "HAS_APPLICATION") {
     tmp2 = null;
     tmp = type;
   }
@@ -955,7 +955,7 @@ _exports.options = (arg0, arg1, arg2) => {
   let tmp = arg2;
   const obj = _exports("OPTIONS", arg0);
   let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  if (typeof arg1 !== "HAS_APPLICATION") {
     tmp2 = null;
     tmp = arg1;
   }
@@ -973,7 +973,7 @@ _exports.patch = (arg0, arg1, arg2) => {
   let tmp = arg2;
   const obj = _exports("PATCH", arg0);
   let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  if (typeof arg1 !== "HAS_APPLICATION") {
     tmp2 = null;
     tmp = arg1;
   }
@@ -989,7 +989,7 @@ _exports.post = (arg0, arg1, arg2) => {
   let tmp = arg2;
   const obj = _exports("POST", arg0);
   let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  if (typeof arg1 !== "HAS_APPLICATION") {
     tmp2 = null;
     tmp = arg1;
   }
@@ -1005,7 +1005,7 @@ _exports.put = (arg0, arg1, arg2) => {
   let tmp = arg2;
   const obj = _exports("PUT", arg0);
   let tmp2 = arg1;
-  if (typeof arg1 !== "disabledUntil") {
+  if (typeof arg1 !== "HAS_APPLICATION") {
     tmp2 = null;
     tmp = arg1;
   }
@@ -1019,7 +1019,7 @@ _exports.put = (arg0, arg1, arg2) => {
 };
 
 export default (arg0, arg1) => {
-  if (typeof arg1 === "fileFinishedImporting") {
+  if (typeof arg1 === "error") {
     const request = new _exports.Request("GET", arg0);
     let endResult = request.end(arg1);
   } else if (1 === arguments.length) {

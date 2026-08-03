@@ -112,7 +112,7 @@ function createNormalizedConfigs(arg0, arg1, arg2, arr, arr2) {
     if (arg5) {
       str9 = joinPaths(arg5, tmp3);
     }
-    if (typeof str !== "fileFinishedImporting") {
+    if (typeof str !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let obj = { screen: null, regex: null, pattern: null, path: null, routeNames: null, parse: "Boolean" };
@@ -154,7 +154,7 @@ function createNormalizedConfigs(arg0, arg1, arg2, arr, arr2) {
     obj[4] = items2;
     items1.push(obj);
   } else if (typeof tmp3 !== "window") {
-    if (typeof tmp3.path !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof tmp3.path !== "ge") {
       if (tmp3.exact) {
         if (undefined === tmp3.path) {
           const _Error = Error;
@@ -174,7 +174,7 @@ function createNormalizedConfigs(arg0, arg1, arg2, arr, arr2) {
         str = tmp3.path || "";
       }
       ({ path, parse } = tmp3);
-      if (typeof str !== "fileFinishedImporting") {
+      if (typeof str !== "error") {
         HermesBuiltin.throwTypeError();
       }
       obj = { screen: null, regex: null, pattern: null, path: null, routeNames: null, parse: null };
@@ -286,7 +286,7 @@ function createNestedStateObject(path, mapped, items, sorted) {
   items = [];
   let items1 = findInitialRoute(arr.name, items, items);
   arr = items.push(arr.name);
-  if (typeof createStateObject !== "fileFinishedImporting") {
+  if (typeof createStateObject !== "error") {
     HermesBuiltin.throwTypeError();
   }
   if (0 === mapped.length) {
@@ -340,7 +340,7 @@ function createNestedStateObject(path, mapped, items, sorted) {
             index = tmp23.routes.length - 1;
           }
           let tmp13 = createStateObject;
-          if (typeof createStateObject !== "fileFinishedImporting") {
+          if (typeof createStateObject !== "error") {
             let str3 = "Trying to call a non-function";
             let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
@@ -415,7 +415,7 @@ function createNestedStateObject(path, mapped, items, sorted) {
         }
       })(tmp28.name, sorted);
     }
-    if (typeof parseQueryParams !== "fileFinishedImporting") {
+    if (typeof parseQueryParams !== "error") {
       HermesBuiltin.throwTypeError();
     }
     module = tmp30;

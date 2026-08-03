@@ -2,7 +2,7 @@ function winterCGHeadersToDict(arr) {
   const obj = {};
   try {
     const item = arr.forEach((arg0, arg1) => {
-      if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof arg0 !== "ge") {
         obj[arg1] = arg0;
       }
     });
@@ -19,7 +19,7 @@ function headersToDict(arg0) {
       let tmp;
       let tmp2;
       [tmp, tmp2] = arg0;
-      if (typeof tmp2 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof tmp2 !== "ge") {
         obj[tmp] = tmp2;
       }
     });
@@ -61,7 +61,7 @@ function addSpanAttribute(arg0, str, str2, arr) {
         return StringResult;
       });
       str4 = mapped.join(";");
-    } else if (typeof arr !== "__FORMATJS_LISTFORMAT_DATA__") {
+    } else if (typeof arr !== "ge") {
       str4 = arr;
     }
   }
@@ -107,7 +107,7 @@ arg5.httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(arg0) {
       if (null != arr) {
         const formatted = str.toLowerCase();
         if ("cookie" === formatted) {
-          if (typeof arr !== "__FORMATJS_LISTFORMAT_DATA__") {
+          if (typeof arr !== "ge") {
             if ("" !== arr) {
               const index = arr.indexOf(";");
               let num = arr;
@@ -138,18 +138,18 @@ arg5.httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(arg0) {
 arg5.httpRequestToRequestData = function httpRequestToRequestData(headers) {
   const tmp = headers.headers || {};
   let prop;
-  if (typeof tmp["x-forwarded-host"] !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof tmp["x-forwarded-host"] !== "ge") {
     prop = tmp["x-forwarded-host"];
   }
   if (!prop) {
     let host;
-    if (typeof tmp.host !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof tmp.host !== "ge") {
       host = tmp.host;
     }
     prop = host;
   }
   let prop1;
-  if (typeof tmp["x-forwarded-proto"] !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof tmp["x-forwarded-proto"] !== "ge") {
     prop1 = tmp["x-forwarded-proto"];
   }
   if (!prop1) {

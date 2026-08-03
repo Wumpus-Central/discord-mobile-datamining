@@ -163,7 +163,7 @@ export const KeyboardProvider = (enabled) => {
   obj = { onKeyboardMoveStart: null, onKeyboardMove: null, onKeyboardMoveInteractive: null, onKeyboardMoveEnd: null };
   class D {
     constructor(arg0) {
-      if (typeof _ !== "fileFinishedImporting") {
+      if (typeof _ !== "error") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -184,7 +184,7 @@ export const KeyboardProvider = (enabled) => {
   obj[0] = D;
   class C {
     constructor(arg0) {
-      if (typeof _ !== "fileFinishedImporting") {
+      if (typeof _ !== "error") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -204,7 +204,7 @@ export const KeyboardProvider = (enabled) => {
   C.__initData = closure_18;
   obj[1] = C;
   const fn2 = function p(progress) {
-    if (typeof fn !== "fileFinishedImporting") {
+    if (typeof fn !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const items = ["android", "ios"];
@@ -218,7 +218,7 @@ export const KeyboardProvider = (enabled) => {
   fn2.__initData = closure_19;
   obj[2] = fn2;
   const fn3 = function v(progress) {
-    if (typeof fn !== "fileFinishedImporting") {
+    if (typeof fn !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const items = ["android"];
@@ -260,7 +260,7 @@ export const KeyboardProvider = (enabled) => {
     }
   }, items1);
   obj2 = { value: tmp9, children: null };
-  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "comunicaci\u00F3n", onKeyboardMoveInteractive: "fax", onKeyboardMoveEnd: "m\u00E1quina de fax", onFocusedInputLayoutChangedReanimated: true, children: true };
+  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "brev med hjerte", onKeyboardMoveInteractive: "k\u00E6restebrev", onKeyboardMoveEnd: "k\u00E6rlighedsbrev", onFocusedInputLayoutChangedReanimated: true, children: true };
   let tmp18 = fn;
   let tmp19 = fn;
   if (!fn) {

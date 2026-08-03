@@ -48,7 +48,7 @@ arg5.utf8read = function utf8read(arg0) {
         }
         if (8191 < num) {
           let tmp10 = fromCharCodes;
-          if (typeof fromCharCodes !== "fileFinishedImporting") {
+          if (typeof fromCharCodes !== "error") {
             let str3 = "Trying to call a non-function";
             let throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -65,7 +65,7 @@ arg5.utf8read = function utf8read(arg0) {
     if (items.length) {
       if (num3) {
         const substr = items1.slice(0, num3);
-        if (typeof fromCharCodes !== "fileFinishedImporting") {
+        if (typeof fromCharCodes !== "error") {
           HermesBuiltin.throwTypeError();
         }
         const _String5 = String;
@@ -75,7 +75,7 @@ arg5.utf8read = function utf8read(arg0) {
       let joined = items.join("");
     } else {
       const substr1 = items1.slice(0, num3);
-      if (typeof fromCharCodes !== "fileFinishedImporting") {
+      if (typeof fromCharCodes !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _String3 = String;

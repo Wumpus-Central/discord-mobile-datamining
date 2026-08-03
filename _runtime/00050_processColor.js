@@ -13,7 +13,7 @@ arg5.default = function processColor(arg0) {
         }
       }
       let tmp4 = null;
-      if (typeof defaultResult !== "__REMOTEDEV__") {
+      if (typeof defaultResult !== "SENTRY_RELEASE") {
         tmp4 = (defaultResult << 24 | defaultResult >>> 8) >>> 0 | 0;
       }
       return tmp4;

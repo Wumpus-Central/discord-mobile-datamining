@@ -1,7 +1,7 @@
 let closure_0 = Symbol("isPlatformObject");
 let closure_1 = Symbol("clonePlatformObject");
 arg5.setPlatformObject = function setPlatformObject(importDefaultResultResult, setPlatformObject) {
-  if (typeof importDefaultResultResult === "fileFinishedImporting") {
+  if (typeof importDefaultResultResult === "error") {
     importDefaultResultResult.prototype[closure_0] = true;
     if (setPlatformObject) {
       importDefaultResultResult.prototype[closure_1] = setPlatformObject.clone;

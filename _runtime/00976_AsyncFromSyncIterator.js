@@ -117,21 +117,21 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
     tmp = !flag;
   }
   if (tmp) {
-    if (typeof promptFeedback.responseId !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof promptFeedback.responseId !== "ge") {
       toolCalls.responseId = promptFeedback.responseId;
     }
-    if (typeof promptFeedback.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (typeof promptFeedback.modelVersion !== "ge") {
       toolCalls.responseModel = promptFeedback.modelVersion;
     }
     const usageMetadata = promptFeedback.usageMetadata;
     if (usageMetadata) {
-      if (typeof usageMetadata.promptTokenCount !== "__REMOTEDEV__") {
+      if (typeof usageMetadata.promptTokenCount !== "SENTRY_RELEASE") {
         toolCalls.promptTokens = usageMetadata.promptTokenCount;
       }
-      if (typeof usageMetadata.candidatesTokenCount !== "__REMOTEDEV__") {
+      if (typeof usageMetadata.candidatesTokenCount !== "SENTRY_RELEASE") {
         toolCalls.completionTokens = usageMetadata.candidatesTokenCount;
       }
-      if (typeof usageMetadata.totalTokenCount !== "__REMOTEDEV__") {
+      if (typeof usageMetadata.totalTokenCount !== "SENTRY_RELEASE") {
         toolCalls.totalTokens = usageMetadata.totalTokenCount;
       }
     }

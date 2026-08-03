@@ -2,7 +2,7 @@ import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 
 const require = arg1;
-const f23384 = (state) => {
+const f23453 = (state) => {
   state = undefined;
   if (state != null) {
     state = state.state;
@@ -19,7 +19,7 @@ const f23384 = (state) => {
       ({ screen: obj[0], params: obj[1] } = state);
       let tmp3;
       if (state.screen) {
-        tmp3 = f23384(state.params);
+        tmp3 = f23453(state.params);
       }
       obj = { routes: null };
       obj[2] = tmp3;
@@ -53,7 +53,7 @@ export default function useLinkProps(to) {
     let obj = { name: null, params: null, state: null };
     ({ screen: obj7[0], params: obj7[1] } = to);
     const params2 = to.params;
-    if (typeof closure_4 !== "fileFinishedImporting") {
+    if (typeof closure_4 !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let state;
@@ -78,7 +78,7 @@ export default function useLinkProps(to) {
           state = obj;
         } else {
           const params = params2.params;
-          if (typeof tmp12 !== "fileFinishedImporting") {
+          if (typeof tmp12 !== "error") {
             HermesBuiltin.throwTypeError();
           }
           let state1;

@@ -8,7 +8,7 @@ let fn = function n(delayMs, _nextAnimation, reduceMotion) {
   let obj = _require(1646);
   const fn = function s() {
     let tmpResult = table;
-    if (typeof table !== "disabledUntil") {
+    if (typeof table !== "HAS_APPLICATION") {
       tmpResult = tmp();
     }
     const delayMs = tmpResult;

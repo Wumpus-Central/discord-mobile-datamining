@@ -188,7 +188,7 @@ export const init = function init(maxQueueSize) {
         }
       }
       let str = "";
-      if (typeof url !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof url !== "ge") {
         str = tmpResult.data.url;
       }
       if ("http" === tmp5) {

@@ -157,7 +157,7 @@ let items = [
       const self = this;
       let fn;
       fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", this);
-      if (typeof fn !== "disabledUntil") {
+      if (typeof fn !== "HAS_APPLICATION") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [platform, arg1, arg2, arg3];

@@ -44,7 +44,7 @@ const items = [
       Share(38)(tmp16, "Invalid title: title should be a string.");
       obj = { title: message.title, message: null };
       message = undefined;
-      if (typeof message.message !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof message.message !== "ge") {
         message = message.message;
       }
       obj[1] = message;

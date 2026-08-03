@@ -43,7 +43,7 @@ arg5.default = function getPathFromState(index, config) {
       if (config != null) {
         screens1 = config.screens;
       }
-      if (typeof tmp7 !== "fileFinishedImporting") {
+      if (typeof tmp7 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -80,7 +80,7 @@ arg5.default = function getPathFromState(index, config) {
           }
           let tmp10Result;
           if (tmp2.screens) {
-            if (typeof outer1_6 !== "fileFinishedImporting") {
+            if (typeof outer1_6 !== "error") {
               HermesBuiltin.throwTypeError();
             }
             let _Object = Object;
@@ -117,7 +117,7 @@ arg5.default = function getPathFromState(index, config) {
                 }
                 let tmp10Result;
                 if (tmp2.screens) {
-                  if (typeof outer1_6 !== "fileFinishedImporting") {
+                  if (typeof outer1_6 !== "error") {
                     HermesBuiltin.throwTypeError();
                   }
                   let _Object = Object;
@@ -154,7 +154,7 @@ arg5.default = function getPathFromState(index, config) {
                       }
                       let tmp10Result;
                       if (tmp2.screens) {
-                        if (typeof outer1_6 !== "fileFinishedImporting") {
+                        if (typeof outer1_6 !== "error") {
                           HermesBuiltin.throwTypeError();
                         }
                         let _Object = Object;
@@ -191,7 +191,7 @@ arg5.default = function getPathFromState(index, config) {
                             }
                             let tmp10Result;
                             if (tmp2.screens) {
-                              if (typeof outer1_6 !== "fileFinishedImporting") {
+                              if (typeof outer1_6 !== "error") {
                                 HermesBuiltin.throwTypeError();
                               }
                               let _Object = Object;
@@ -279,13 +279,13 @@ arg5.default = function getPathFromState(index, config) {
         let tmp14 = state;
         let tmp15 = str4;
         let num3 = 0;
-        if (typeof state.index !== "__REMOTEDEV__") {
+        if (typeof state.index !== "SENTRY_RELEASE") {
           num3 = state.index;
         }
         let tmp16 = state.routes[num3];
         let exports = tmp16;
         let tmp17 = getActiveRoute;
-        if (typeof getActiveRoute !== "fileFinishedImporting") {
+        if (typeof getActiveRoute !== "error") {
           let str10 = "Trying to call a non-function";
           let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
         }
@@ -297,7 +297,7 @@ arg5.default = function getPathFromState(index, config) {
         let tmp19 = tmp18;
         if (tmp18.state) {
           let state2 = tmp18.state;
-          if (typeof tmp17 !== "fileFinishedImporting") {
+          if (typeof tmp17 !== "error") {
             let str11 = "Trying to call a non-function";
             let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
           }
@@ -375,7 +375,7 @@ arg5.default = function getPathFromState(index, config) {
                   let parts = str6.split("/");
                   let found = parts.filter((str) => str.startsWith(":"));
                   let item = found.forEach((str) => {
-                    if (typeof getParamName !== "fileFinishedImporting") {
+                    if (typeof getParamName !== "error") {
                       HermesBuiltin.throwTypeError();
                     }
                     const replaced = str.replace(/^:/, "").replace(/\?$/, "");
@@ -445,7 +445,7 @@ arg5.default = function getPathFromState(index, config) {
         if (undefined !== tmp25[tmp26.name]) {
           let parts1 = joined.split("/");
           let mapped = parts1.map((str) => {
-            if (typeof getParamName !== "fileFinishedImporting") {
+            if (typeof getParamName !== "error") {
               HermesBuiltin.throwTypeError();
             }
             str = "";

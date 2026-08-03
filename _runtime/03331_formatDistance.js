@@ -1,37 +1,24 @@
-let closure_0 = { about: "k\u00F6r\u00FClbel\u00FCl", over: "t\u00F6bb mint", almost: "majdnem", lessthan: "kevesebb mint" };
-let closure_1 = { xseconds: " m\u00E1sodperc", halfaminute: "f\u00E9l perc", xminutes: " perc", xhours: " \u00F3ra", xdays: " nap", xweeks: " h\u00E9t", xmonths: " h\u00F3nap", xyears: " \u00E9v" };
-let closure_2 = { xseconds: { "-1": " m\u00E1sodperccel ezel\u0151tt", 1: " m\u00E1sodperc m\u00FAlva", 0: " m\u00E1sodperce" }, halfaminute: { "-1": "f\u00E9l perccel ezel\u0151tt", 1: "f\u00E9l perc m\u00FAlva", 0: "f\u00E9l perce" }, xminutes: { "-1": " perccel ezel\u0151tt", 1: " perc m\u00FAlva", 0: " perce" }, xhours: { "-1": " \u00F3r\u00E1val ezel\u0151tt", 1: " \u00F3ra m\u00FAlva", 0: " \u00F3r\u00E1ja" }, xdays: { "-1": " nappal ezel\u0151tt", 1: " nap m\u00FAlva", 0: " napja" }, xweeks: { "-1": " h\u00E9ttel ezel\u0151tt", 1: " h\u00E9t m\u00FAlva", 0: " hete" }, xmonths: { "-1": " h\u00F3nappal ezel\u0151tt", 1: " h\u00F3nap m\u00FAlva", 0: " h\u00F3napja" }, xyears: { "-1": " \u00E9vvel ezel\u0151tt", 1: " \u00E9v m\u00FAlva", 0: " \u00E9ve" } };
+let closure_0 = { lessThanXSeconds: { one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u0441\u0435\u043A\u0443\u043D\u0434\u0430", other: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438" }, xSeconds: { one: "1 \u0441\u0435\u043A\u0443\u043D\u0434\u0430", other: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438" }, halfAMinute: "\u043F\u043E\u043B\u043E\u0432\u0438\u043D \u043C\u0438\u043D\u0443\u0442\u0430", lessThanXMinutes: { one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u043C\u0438\u043D\u0443\u0442\u0430", other: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 {{count}} \u043C\u0438\u043D\u0443\u0442\u0438" }, xMinutes: { one: "1 \u043C\u0438\u043D\u0443\u0442\u0430", other: "{{count}} \u043C\u0438\u043D\u0443\u0442\u0438" }, aboutXHours: { one: "\u043E\u043A\u043E\u043B\u043E \u0447\u0430\u0441", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0447\u0430\u0441\u0430" }, xHours: { one: "1 \u0447\u0430\u0441", other: "{{count}} \u0447\u0430\u0441\u0430" }, xDays: { one: "1 \u0434\u0435\u043D", other: "{{count}} \u0434\u043D\u0438" }, aboutXWeeks: { one: "\u043E\u043A\u043E\u043B\u043E \u0441\u0435\u0434\u043C\u0438\u0446\u0430", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0441\u0435\u0434\u043C\u0438\u0446\u0438" }, xWeeks: { one: "1 \u0441\u0435\u0434\u043C\u0438\u0446\u0430", other: "{{count}} \u0441\u0435\u0434\u043C\u0438\u0446\u0438" }, aboutXMonths: { one: "\u043E\u043A\u043E\u043B\u043E \u043C\u0435\u0441\u0435\u0446", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u043C\u0435\u0441\u0435\u0446\u0430" }, xMonths: { one: "1 \u043C\u0435\u0441\u0435\u0446", other: "{{count}} \u043C\u0435\u0441\u0435\u0446\u0430" }, aboutXYears: { one: "\u043E\u043A\u043E\u043B\u043E \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, xYears: { one: "1 \u0433\u043E\u0434\u0438\u043D\u0430", other: "{{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, overXYears: { one: "\u043D\u0430\u0434 \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043D\u0430\u0434 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, almostXYears: { one: "\u043F\u043E\u0447\u0442\u0438 \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043F\u043E\u0447\u0442\u0438 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" } };
 
-export default function formatDistance(str, arg1, addSuffix) {
-  const match = str.match(/about|over|almost|lessthan/i);
-  if (match) {
-    str = str.replace(match[0], "");
-  }
-  addSuffix = undefined;
-  if (null != addSuffix) {
-    addSuffix = addSuffix.addSuffix;
-  }
-  const formatted = str.toLowerCase();
-  let num;
-  if (null != addSuffix) {
-    num = addSuffix.comparison;
-  }
-  if (!num) {
-    num = 0;
-  }
-  if (true === addSuffix) {
-    let tmp5 = table3[formatted][num];
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof table[arg0] === "y") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `преди ${tmp}`;
+        }
+        text = `след ${tmp}`;
+      }
+    }
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
   } else {
-    tmp5 = table2[formatted];
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
+    const str = tmp.other;
   }
-  let sum = tmp5;
-  if ("halfaminute" !== formatted) {
-    sum = arg1 + tmp5;
-  }
-  let text = sum;
-  if (match) {
-    text = `${closure_0[str3.toLowerCase(str3)]} ${tmp7}`;
-  }
-  return text;
 };
 export default exports.default;

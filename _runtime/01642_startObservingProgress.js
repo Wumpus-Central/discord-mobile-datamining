@@ -52,7 +52,7 @@ function createLayoutAnimationManager() {
         const result1 = obj3.set(arg0, mutableUI);
         value = mutableUI;
       } else {
-        if (typeof outer1_5 !== "fileFinishedImporting") {
+        if (typeof outer1_5 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value.removeListener(arg0 + 1000000000);
@@ -65,7 +65,7 @@ function createLayoutAnimationManager() {
         if (arg0) {
           set.delete(set);
           set2.delete(set);
-          if (typeof outer2_5 !== "fileFinishedImporting") {
+          if (typeof outer2_5 !== "error") {
             HermesBuiltin.throwTypeError();
           }
           mutableUI.removeListener(set + 1000000000);
@@ -82,7 +82,7 @@ function createLayoutAnimationManager() {
           callback.callback(tmp14);
         }
       };
-      if (typeof outer1_4 !== "fileFinishedImporting") {
+      if (typeof outer1_4 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       map = arg0;
@@ -114,7 +114,7 @@ function createLayoutAnimationManager() {
     stop(arg0) {
       const value = map1.get(arg0);
       if (value) {
-        if (typeof outer1_5 !== "fileFinishedImporting") {
+        if (typeof outer1_5 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value.removeListener(arg0 + 1000000000);
@@ -128,7 +128,7 @@ createLayoutAnimationManager.__closure = obj;
 createLayoutAnimationManager.__workletHash = 8526874600063;
 createLayoutAnimationManager.__initData = { code: "function createLayoutAnimationManager_Pnpm_animationsManagerTs3(){const{LayoutAnimationType,makeMutableUI,stopObservingProgress,withStyleAnimation,startObservingProgress,IS_ANDROID}=this.__closure;const currentAnimationForTag=new Map();const mutableValuesForTag=new Map();const startActually=function(tag,type,yogaValues,config){if(type===LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS){global.ProgressTransitionRegister.onTransitionStart(tag,yogaValues);return;}const style=config(yogaValues);let currentAnimation=style.animations;const previousAnimation=currentAnimationForTag.get(tag);if(previousAnimation){currentAnimation={...previousAnimation,...style.animations};}currentAnimationForTag.set(tag,currentAnimation);let value=mutableValuesForTag.get(tag);if(value===undefined){value=makeMutableUI(style.initialValues);mutableValuesForTag.set(tag,value);}else{stopObservingProgress(tag,value);value._value=style.initialValues;}const animation=withStyleAnimation(currentAnimation);animation.callback=function(finished){if(finished){currentAnimationForTag.delete(tag);mutableValuesForTag.delete(tag);const shouldRemoveView=type===LayoutAnimationType.EXITING;stopObservingProgress(tag,value,shouldRemoveView);}style.callback&&style.callback(finished===undefined?false:finished);};startObservingProgress(tag,value,type);value.value=animation;};let start;if(IS_ANDROID){start=function(tag,type,yogaValues,config){return requestAnimationFrame(function(){startActually(tag,type,yogaValues,config);});};}else{start=startActually;}return{start:start,stop:function(tag){const value=mutableValuesForTag.get(tag);if(!value){return;}stopObservingProgress(tag,value);}};}" };
 const fn = function t() {
-  if (typeof createLayoutAnimationManager !== "fileFinishedImporting") {
+  if (typeof createLayoutAnimationManager !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const map = new Map();
@@ -157,7 +157,7 @@ const fn = function t() {
         const result1 = obj3.set(arg0, mutableUI);
         value = mutableUI;
       } else {
-        if (typeof outer1_5 !== "fileFinishedImporting") {
+        if (typeof outer1_5 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value.removeListener(arg0 + 1000000000);
@@ -170,7 +170,7 @@ const fn = function t() {
         if (arg0) {
           set.delete(set);
           set2.delete(set);
-          if (typeof outer2_5 !== "fileFinishedImporting") {
+          if (typeof outer2_5 !== "error") {
             HermesBuiltin.throwTypeError();
           }
           mutableUI.removeListener(set + 1000000000);
@@ -187,7 +187,7 @@ const fn = function t() {
           callback.callback(tmp14);
         }
       };
-      if (typeof outer1_4 !== "fileFinishedImporting") {
+      if (typeof outer1_4 !== "error") {
         HermesBuiltin.throwTypeError();
       }
       map = arg0;
@@ -219,7 +219,7 @@ const fn = function t() {
     stop(arg0) {
       const value = map1.get(arg0);
       if (value) {
-        if (typeof outer1_5 !== "fileFinishedImporting") {
+        if (typeof outer1_5 !== "error") {
           HermesBuiltin.throwTypeError();
         }
         value.removeListener(arg0 + 1000000000);

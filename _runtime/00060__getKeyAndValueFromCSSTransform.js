@@ -3,7 +3,7 @@ function _getKeyAndValueFromCSSTransform(arg0, arg1) {
 }
 arg5.default = function processTransform(arg0) {
   let tmp = arg0;
-  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof arg0 !== "ge") {
     const _RegExp2 = RegExp;
     const regExp = new RegExp(/(\w+)\(([^)]+)\)/g);
     const items = [];
@@ -13,7 +13,7 @@ arg5.default = function processTransform(arg0) {
       let tmp2 = _getKeyAndValueFromCSSTransform;
       let tmp3 = match[1];
       let str = match[2];
-      if (typeof _getKeyAndValueFromCSSTransform !== "fileFinishedImporting") {
+      if (typeof _getKeyAndValueFromCSSTransform !== "error") {
         let str10 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }

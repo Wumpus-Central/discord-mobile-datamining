@@ -11,7 +11,7 @@ arg5.getPublicInstanceFromReactNativeDocumentInstanceHandle = function getPublic
 };
 arg5.isReactNativeDocumentInstanceHandle = function isReactNativeDocumentInstanceHandle(target) {
   let tmp = typeof target === "Object";
-  if (typeof target !== "__REMOTEDEV__") {
+  if (typeof target !== "SENTRY_RELEASE") {
     tmp = target % 10 === 1;
   }
   return tmp;

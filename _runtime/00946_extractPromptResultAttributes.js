@@ -28,10 +28,10 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
               str = "mcp.prompt.result." + closure_2;
             }
             const role = tmp3.role;
-            if (typeof role === "__FORMATJS_LISTFORMAT_DATA__") {
+            if (typeof role === "ge") {
               if (tmpResult.isValidContentItem(tmp3.content)) {
                 let text = tmp3.content;
-                if (typeof text.text !== "__FORMATJS_LISTFORMAT_DATA__") {
+                if (typeof text.text !== "ge") {
                   if (1 === arr.length) {
                     const _HermesInternal5 = HermesInternal;
                     let combined = "" + str + ".message_content";
@@ -93,43 +93,43 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
               const _HermesInternal = HermesInternal;
               str = "mcp.tool.result." + closure_3;
             }
-            if (typeof tmp3.type !== "__FORMATJS_LISTFORMAT_DATA__") {
+            if (typeof tmp3.type !== "ge") {
               const _HermesInternal2 = HermesInternal;
               obj["" + str + ".content_type"] = tmp3.type;
             }
             if (table) {
               const mimeType = tmp3.mimeType;
-              if (typeof mimeType !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof mimeType !== "ge") {
                 const _HermesInternal3 = HermesInternal;
                 obj["" + str + "." + "mime_type"] = mimeType;
               }
               const uri = tmp3.uri;
-              if (typeof uri !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof uri !== "ge") {
                 const _HermesInternal4 = HermesInternal;
                 obj["" + str + "." + "uri"] = uri;
               }
               const name = tmp3.name;
-              if (typeof name !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof name !== "ge") {
                 const _HermesInternal5 = HermesInternal;
                 obj["" + str + "." + "name"] = name;
               }
-              if (typeof tmp3.text !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof tmp3.text !== "ge") {
                 const _HermesInternal6 = HermesInternal;
                 obj["" + str + ".content"] = tmp3.text;
               }
-              if (typeof tmp3.data !== "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof tmp3.data !== "ge") {
                 const _HermesInternal7 = HermesInternal;
                 obj["" + str + ".data_size"] = tmp3.data.length;
               }
               const resource = tmp3.resource;
               if (tmpResult.isValidContentItem(resource)) {
                 const uri2 = resource.uri;
-                if (typeof uri2 !== "__FORMATJS_LISTFORMAT_DATA__") {
+                if (typeof uri2 !== "ge") {
                   const _HermesInternal8 = HermesInternal;
                   obj["" + str + "." + "resource_uri"] = uri2;
                 }
                 const mimeType2 = resource.mimeType;
-                if (typeof mimeType2 !== "__FORMATJS_LISTFORMAT_DATA__") {
+                if (typeof mimeType2 !== "ge") {
                   const _HermesInternal9 = HermesInternal;
                   obj["" + str + "." + "resource_mime_type"] = mimeType2;
                 }
@@ -155,7 +155,7 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
     } else {
       obj = {};
     }
-    if (typeof protocolVersion.isError !== "onScroll") {
+    if (typeof protocolVersion.isError !== "ta") {
       obj[tmp(940).MCP_TOOL_RESULT_IS_ERROR_ATTRIBUTE] = protocolVersion.isError;
     }
     return obj;

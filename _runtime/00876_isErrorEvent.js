@@ -33,7 +33,7 @@ function estimateMetricSizeInBytes(name) {
           num4 = 8;
           if (typeof first !== "Object") {
             let num7 = 0;
-            if (typeof first !== "onScroll") {
+            if (typeof first !== "ta") {
               num7 = 4;
             }
             num4 = num7;
@@ -48,7 +48,7 @@ function estimateMetricSizeInBytes(name) {
           num2 = 8;
           if (typeof arg0 !== "Object") {
             let num6 = 0;
-            if (typeof arg0 !== "onScroll") {
+            if (typeof arg0 !== "ta") {
               num6 = 4;
             }
             num2 = num6;
@@ -85,7 +85,7 @@ function estimateLogSizeInBytes(message) {
           num4 = 8;
           if (typeof first !== "Object") {
             let num7 = 0;
-            if (typeof first !== "onScroll") {
+            if (typeof first !== "ta") {
               num7 = 4;
             }
             num4 = num7;
@@ -100,7 +100,7 @@ function estimateLogSizeInBytes(message) {
           num2 = 8;
           if (typeof arg0 !== "Object") {
             let num6 = 0;
-            if (typeof arg0 !== "onScroll") {
+            if (typeof arg0 !== "ta") {
               num6 = 4;
             }
             num2 = num6;
@@ -127,15 +127,15 @@ _classCallCheck = undefined;
 class Client {
   constructor(arg0) {
     self = this;
-    tmp = f67392(this, c4);
+    tmp = f67513(this, c4);
     this._options = global;
     this._integrations = {};
     this._numProcessing = 0;
     this._outcomes = {};
     this._hooks = {};
     this._eventProcessors = [];
-    tmp2 = f67410;
-    tmp3 = f67406;
+    tmp2 = f67531;
+    tmp3 = f67527;
     obj = require("makePromiseBuffer");
     transportOptions = global.transportOptions;
     bufferSize = undefined;
@@ -1165,7 +1165,7 @@ items[27] = {
       const parseSampleRateResult = obj.parseSampleRate(sampleRate);
     }
     if (undefined === type.type) {
-      if (typeof parseSampleRateResult !== "__REMOTEDEV__") {
+      if (typeof parseSampleRateResult !== "SENTRY_RELEASE") {
         if (obj4.safeMathRandom() > parseSampleRateResult) {
           self.recordDroppedEvent("sample_rate", "error");
           let _HermesInternal = HermesInternal;

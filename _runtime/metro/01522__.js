@@ -1,7 +1,7 @@
 
 export default (arr) => {
-  if (typeof arr !== "__FORMATJS_LISTFORMAT_DATA__") {
-    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+  if (typeof arr !== "ge") {
+    if (typeof arg1 !== "ge") {
       if ("" === arg1) {
         const items = [arr];
         return items;

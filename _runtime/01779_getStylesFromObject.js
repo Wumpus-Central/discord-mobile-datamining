@@ -138,7 +138,7 @@ function compareAndFormatDifferences(arg0, arg1) {
       let tmp25 = checkEqual;
       let arr4 = arg0[tmp4];
       let arr5 = arg1[tmp4];
-      if (typeof checkEqual !== "fileFinishedImporting") {
+      if (typeof checkEqual !== "error") {
         let str2 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -157,7 +157,7 @@ function compareAndFormatDifferences(arg0, arg1) {
                 let arr2 = arr4[num3];
                 let arr3 = arr5[num3];
                 let sum1 = num3;
-                if (typeof checkEqual !== "fileFinishedImporting") {
+                if (typeof checkEqual !== "error") {
                   let str4 = "Trying to call a non-function";
                   let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
                 }
@@ -249,7 +249,7 @@ function compareAndFormatDifferences(arg0, arg1) {
                     let tmp28 = checkEqual;
                     let arr6 = arr4[tmp7];
                     let arr7 = arr5[tmp7];
-                    if (typeof checkEqual !== "fileFinishedImporting") {
+                    if (typeof checkEqual !== "error") {
                       let str3 = "Trying to call a non-function";
                       let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
                     }

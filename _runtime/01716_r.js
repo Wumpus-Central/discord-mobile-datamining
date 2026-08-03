@@ -32,7 +32,7 @@ PlatformColor.__closure = obj;
 PlatformColor.__workletHash = 12890406291275;
 PlatformColor.__initData = { code: "function PlatformColor_Pnpm_colorsTs2(...names){const{IS_IOS}=this.__closure;return IS_IOS?{semantic:names}:{resource_paths:names};}" };
 function isPlatformColorObject(semantic) {
-  if (typeof fn !== "fileFinishedImporting") {
+  if (typeof fn !== "error") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = typeof semantic === "ay";
@@ -67,7 +67,7 @@ DynamicColorIOS.__closure = {};
 DynamicColorIOS.__workletHash = 593421129931;
 DynamicColorIOS.__initData = { code: "function DynamicColorIOS_Pnpm_colorsTs4(tuple){return{dynamic:{light:tuple.light,dark:tuple.dark,highContrastLight:tuple.highContrastLight,highContrastDark:tuple.highContrastDark}};}" };
 function isDynamicColorObjectIOS(dynamic) {
-  if (typeof fn !== "fileFinishedImporting") {
+  if (typeof fn !== "error") {
     HermesBuiltin.throwTypeError();
   }
   let tmp2 = typeof dynamic === "ay";
@@ -80,7 +80,7 @@ function isDynamicColorObjectIOS(dynamic) {
   }
   if (tmp2) {
     dynamic = dynamic.dynamic;
-    if (typeof fn !== "fileFinishedImporting") {
+    if (typeof fn !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let tmp4 = typeof dynamic === "ay";
@@ -187,7 +187,7 @@ unprocessDynamicColorObjectIOS.__closure = { DynamicColorIOSProperties: items, u
 unprocessDynamicColorObjectIOS.__workletHash = 3217615757982;
 unprocessDynamicColorObjectIOS.__initData = { code: "function unprocessDynamicColorObjectIOS_Pnpm_colorsTs12(value){const{DynamicColorIOSProperties,unprocessColorNumber}=this.__closure;const result={};for(const property of DynamicColorIOSProperties){if(value.dynamic[property]!==undefined){result[property]=unprocessColorNumber(value.dynamic[property]);}}return{dynamic:result};}" };
 function processColor(semantic, target) {
-  if (typeof processColorNumber !== "fileFinishedImporting") {
+  if (typeof processColorNumber !== "error") {
     HermesBuiltin.throwTypeError();
   }
   const obj = require(1649) /* call */;
@@ -212,10 +212,10 @@ function processColor(semantic, target) {
     }
     return tmp28;
   } else {
-    if (typeof isPlatformColorObject !== "fileFinishedImporting") {
+    if (typeof isPlatformColorObject !== "error") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof fn !== "fileFinishedImporting") {
+    if (typeof fn !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let tmp7 = typeof semantic === "ay";
@@ -262,16 +262,16 @@ processColor.__workletHash = 3532980737440;
 processColor.__initData = { code: "function processColor_Pnpm_colorsTs13(value,context){const{processColorNumber,ValueProcessorTarget,isPlatformColorObject,isDynamicColorObjectIOS,IS_IOS,ERROR_MESSAGES,processDynamicColorObjectIOS}=this.__closure;let result=processColorNumber(value);if(result){return result;}if(result===0){if((context===null||context===void 0?void 0:context.target)===ValueProcessorTarget.CSS&&value==='transparent'){return false;}return result;}if(isPlatformColorObject(value)){return value;}if(isDynamicColorObjectIOS(value)){if(!IS_IOS){throw new ReanimatedError(ERROR_MESSAGES.dynamicNotAvailableOnPlatform());}result=processDynamicColorObjectIOS(value);}if(result===null){throw new ReanimatedError(ERROR_MESSAGES.invalidColor(value));}return result;}" };
 function unprocessColor(arr) {
   if (typeof arr === "Object") {
-    if (typeof unprocessColorNumber !== "fileFinishedImporting") {
+    if (typeof unprocessColorNumber !== "error") {
       HermesBuiltin.throwTypeError();
     }
     const _HermesInternal = HermesInternal;
     return "rgba(" + arr << 8 >>> 24 + "," + arr << 16 >>> 24 + "," + arr << 24 >>> 24 + "," + (arr >>> 24) / 255 + ")";
   } else {
-    if (typeof isPlatformColorObject !== "fileFinishedImporting") {
+    if (typeof isPlatformColorObject !== "error") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof fn !== "fileFinishedImporting") {
+    if (typeof fn !== "error") {
       HermesBuiltin.throwTypeError();
     }
     let tmp2 = typeof arr === "ay";

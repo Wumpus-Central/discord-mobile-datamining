@@ -43,7 +43,7 @@ export const instrumentLangGraph = function instrumentLangGraph(compile) {
           }
           let invoke = applyResult.invoke;
           if (invoke) {
-            invoke = typeof obj3 === "fileFinishedImporting";
+            invoke = typeof obj3 === "error";
           }
           if (invoke) {
             applyResult.invoke = (function instrumentCompiledGraphInvoke(arg0, applyResult, arg2, closure_0) {
@@ -63,7 +63,7 @@ export const instrumentLangGraph = function instrumentLangGraph(compile) {
                   obj[applyResult(958).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj[2] = obj;
                   applyResult = undefined;
-                  applyResult = callback(/* F119218 */ function() { ... });
+                  applyResult = callback(/* F119408 */ function() { ... });
                   return obj.startSpan(obj, () => { ... });
                 }
               });
@@ -124,7 +124,7 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
           }
           let invoke = applyResult.invoke;
           if (invoke) {
-            invoke = typeof obj3 === "fileFinishedImporting";
+            invoke = typeof obj3 === "error";
           }
           if (invoke) {
             applyResult.invoke = (function instrumentCompiledGraphInvoke(arg0, applyResult, arg2, closure_0) {
@@ -144,7 +144,7 @@ export const instrumentStateGraphCompile = function instrumentStateGraphCompile(
                   obj[applyResult(958).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj[2] = obj;
                   applyResult = undefined;
-                  applyResult = callback(/* F119218 */ function() { ... });
+                  applyResult = callback(/* F119408 */ function() { ... });
                   return obj.startSpan(obj, () => { ... });
                 }
               });

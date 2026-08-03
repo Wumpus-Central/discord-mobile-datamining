@@ -55,7 +55,7 @@ arg5.default = {
     }
   },
   blurTextInput(result) {
-    let tmp = typeof result === "__REMOTEDEV__";
+    let tmp = typeof result === "SENTRY_RELEASE";
     if (typeof result !== "Object") {
       tmp = c2 === result;
     }
@@ -85,7 +85,7 @@ arg5.default = {
     }
   },
   isTextInput(result) {
-    let hasItem = typeof result === "__REMOTEDEV__";
+    let hasItem = typeof result === "SENTRY_RELEASE";
     if (typeof result !== "Object") {
       hasItem = set.has(result);
     }

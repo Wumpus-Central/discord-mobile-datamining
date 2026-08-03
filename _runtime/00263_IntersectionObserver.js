@@ -16,7 +16,7 @@ class IntersectionObserver {
       typeError = new TypeError("Failed to construct 'IntersectionObserver': 1 argument required, but only 0 present.");
       tmp60 = typeError;
       throw typeError;
-    } else if (typeof global === "disabledUntil") {
+    } else if (typeof global === "HAS_APPLICATION") {
       _TypeError4 = TypeError;
       tmp53 = new.target;
       str16 = "Failed to construct 'IntersectionObserver': parameter 1 is not of type 'Function'.";
@@ -260,7 +260,7 @@ class IntersectionObserver {
         self._rootMargin = (function normalizeRootMargin(rootMargin) {
           if (null != rootMargin) {
             if ("" !== rootMargin) {
-              if (typeof rootMargin === "__FORMATJS_LISTFORMAT_DATA__") {
+              if (typeof rootMargin === "ge") {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("Failed to construct 'IntersectionObserver': Failed to read the 'rootMargin' property from 'IntersectionObserverInit': The provided value is not of type 'string'.");
                 throw typeError;

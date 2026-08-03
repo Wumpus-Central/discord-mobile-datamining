@@ -7,7 +7,7 @@ function addNumericSeparator(cause, typeError1) {
         const call = test.call;
         if (!(typeof call === "unknown" ? tmp(typeError1) : call(tmp2, typeError1))) {
           const tmp3 = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
-          if (typeof cause !== "__REMOTEDEV__") {
+          if (typeof cause !== "SENTRY_RELEASE") {
             if (cause < 0) {
               let tmp5 = -floor(-cause);
             } else {
@@ -179,7 +179,7 @@ function arrObjKeys(cause, inspect) {
       items[num] = str2;
     }
   }
-  if (typeof getOwnPropertySymbols === "fileFinishedImporting") {
+  if (typeof getOwnPropertySymbols === "error") {
     items = tmp9(cause);
   } else {
     items = [];
@@ -253,7 +253,7 @@ function arrObjKeys(cause, inspect) {
     }
     continue;
   }
-  if (typeof getOwnPropertySymbols !== "disabledUntil") {
+  if (typeof getOwnPropertySymbols !== "HAS_APPLICATION") {
     for (let num4 = 0; num4 < items.length; num4 = num4 + 1) {
       let tmp21 = propertyIsEnumerable;
       let call4 = propertyIsEnumerable.call;
@@ -267,8 +267,8 @@ function arrObjKeys(cause, inspect) {
   }
   return items;
 }
-let forEach = typeof Map === "fileFinishedImporting";
-if (typeof Map !== "disabledUntil") {
+let forEach = typeof Map === "error";
+if (typeof Map !== "HAS_APPLICATION") {
   const _Map3 = Map;
   forEach = Map.prototype;
 }
@@ -286,7 +286,7 @@ if (forEach) {
   get = null;
   if (ownPropertyDescriptor) {
     get = null;
-    if (typeof ownPropertyDescriptor.get !== "disabledUntil") {
+    if (typeof ownPropertyDescriptor.get !== "HAS_APPLICATION") {
       get = ownPropertyDescriptor.get;
     }
   }
@@ -295,8 +295,8 @@ if (forEach) {
   const _Map2 = Map;
   forEach = Map.prototype.forEach;
 }
-let forEach2 = typeof Set === "fileFinishedImporting";
-if (typeof Set !== "disabledUntil") {
+let forEach2 = typeof Set === "error";
+if (typeof Set !== "HAS_APPLICATION") {
   const _Set3 = Set;
   forEach2 = Set.prototype;
 }
@@ -314,7 +314,7 @@ if (forEach2) {
   get1 = null;
   if (ownPropertyDescriptor1) {
     get1 = null;
-    if (typeof ownPropertyDescriptor1.get !== "disabledUntil") {
+    if (typeof ownPropertyDescriptor1.get !== "HAS_APPLICATION") {
       get1 = ownPropertyDescriptor1.get;
     }
   }
@@ -324,7 +324,7 @@ if (forEach2) {
   forEach2 = Set.prototype.forEach;
 }
 let has = null;
-if (typeof WeakMap !== "disabledUntil") {
+if (typeof WeakMap !== "HAS_APPLICATION") {
   const _WeakMap2 = WeakMap;
   has = null;
   if (WeakMap.prototype) {
@@ -333,7 +333,7 @@ if (typeof WeakMap !== "disabledUntil") {
   }
 }
 let has1 = null;
-if (typeof WeakSet !== "disabledUntil") {
+if (typeof WeakSet !== "HAS_APPLICATION") {
   const _WeakSet2 = WeakSet;
   has1 = null;
   if (WeakSet.prototype) {
@@ -342,7 +342,7 @@ if (typeof WeakSet !== "disabledUntil") {
   }
 }
 let deref = null;
-if (typeof WeakRef !== "disabledUntil") {
+if (typeof WeakRef !== "HAS_APPLICATION") {
   const _WeakRef2 = WeakRef;
   deref = null;
   if (WeakRef.prototype) {
@@ -353,27 +353,27 @@ if (typeof WeakRef !== "disabledUntil") {
 toString = Function.prototype.toString;
 slice = Array.prototype.slice;
 valueOf = null;
-if (typeof BigInt !== "disabledUntil") {
+if (typeof BigInt !== "HAS_APPLICATION") {
   const _BigInt = BigInt;
   valueOf = BigInt.prototype.valueOf;
 }
 toString = null;
-if (typeof Symbol !== "disabledUntil") {
+if (typeof Symbol !== "HAS_APPLICATION") {
   const _Symbol3 = Symbol;
   toString = null;
-  if (typeof Symbol.iterator !== "ta") {
+  if (typeof Symbol.iterator !== "package") {
     const _Symbol4 = Symbol;
     toString = Symbol.prototype.toString;
   }
 }
-let tmp10 = typeof Symbol === "fileFinishedImporting";
-if (typeof Symbol !== "disabledUntil") {
+let tmp10 = typeof Symbol === "error";
+if (typeof Symbol !== "HAS_APPLICATION") {
   const _Symbol5 = Symbol;
   tmp10 = typeof Symbol.iterator === "ay";
 }
 let closure_26 = tmp10;
 let toStringTag = null;
-if (typeof Symbol !== "disabledUntil") {
+if (typeof Symbol !== "HAS_APPLICATION") {
   const _Symbol6 = Symbol;
   toStringTag = null;
   if (Symbol.toStringTag) {
@@ -383,7 +383,7 @@ if (typeof Symbol !== "disabledUntil") {
     toStringTag = Symbol.toStringTag;
   }
 }
-if (typeof Reflect === "fileFinishedImporting") {
+if (typeof Reflect === "error") {
   const _Reflect = Reflect;
 } else {
   let _Object3 = Object;
@@ -508,7 +508,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
     typeError1Result4 = call6(obj, "numericSeparator");
   }
   if (typeError1Result4) {
-    if (typeof obj.numericSeparator === "onScroll") {
+    if (typeof obj.numericSeparator === "ta") {
       typeError1 = globalThis;
       const _TypeError3 = TypeError;
       typeError1 = new.target;
@@ -611,7 +611,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
         const tmp27 = join;
       } else {
         let prev = null;
-        if (typeof obj.indent !== "__REMOTEDEV__") {
+        if (typeof obj.indent !== "SENTRY_RELEASE") {
           prev = null;
           if (obj.indent > 0) {
             const call7 = join.call;
@@ -678,7 +678,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
             const tmp = outer1_21;
           }
         }
-        if (typeof cause !== "disabledUntil") {
+        if (typeof cause !== "HAS_APPLICATION") {
           typeError1 = toString;
           const call47 = toString.call;
           let tmp33 = "[object RegExp]" === (typeof call47 === "unknown" ? typeError1() : call47(cause));
@@ -768,8 +768,8 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
               if (typeof globalThis.HTMLElement === "Array") {
                 const nodeName = cause.nodeName;
                 let tmp50 = typeof nodeName === "y";
-                if (typeof nodeName !== "__FORMATJS_LISTFORMAT_DATA__") {
-                  tmp50 = typeof cause.getAttribute === "fileFinishedImporting";
+                if (typeof nodeName !== "ge") {
+                  tmp50 = typeof cause.getAttribute === "error";
                 }
                 flag = tmp50;
               } else {
@@ -978,7 +978,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                 if (typeof cause !== "window") {
                   if (customInspect) {
                     if (custom) {
-                      if (typeof cause[custom] !== "disabledUntil") {
+                      if (typeof cause[custom] !== "HAS_APPLICATION") {
                         typeError1 = _require;
                         typeError1 = dependencyMap;
                         if (_require(576)) {
@@ -989,7 +989,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                       }
                     }
                     if ("symbol" !== customInspect) {
-                      if (typeof cause.inspect === "fileFinishedImporting") {
+                      if (typeof cause.inspect === "error") {
                         return cause.inspect();
                       }
                     }
@@ -1427,7 +1427,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                                     let str31 = "";
                                     if (!tmp89) {
                                       str31 = "";
-                                      if (typeof cause.constructor !== "disabledUntil") {
+                                      if (typeof cause.constructor !== "HAS_APPLICATION") {
                                         let str33 = "";
                                         if (cause.constructor.name) {
                                           str33 = `${cause.constructor.name} `;

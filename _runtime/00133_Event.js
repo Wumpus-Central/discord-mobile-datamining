@@ -30,7 +30,7 @@ class Event {
       tmp20 = arg1;
       if (null != arg1) {
         if (typeof arg1 !== "ay") {
-          if (typeof arg1 === "disabledUntil") {
+          if (typeof arg1 === "HAS_APPLICATION") {
             tmp10 = globalThis;
             _TypeError = TypeError;
             tmp11 = new.target;

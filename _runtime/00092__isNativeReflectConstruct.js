@@ -66,7 +66,7 @@ let items = [
           let fn = tmpResult;
           if (2) {
             fn = tmpResult;
-            if (typeof tmpResult !== "disabledUntil") {
+            if (typeof tmpResult !== "HAS_APPLICATION") {
               fn = (arg0) => tmpResult.apply(closure_0, arg0);
             }
           }
@@ -83,7 +83,7 @@ let items = [
           let fn = tmpResult;
           if (2) {
             fn = tmpResult;
-            if (typeof tmpResult !== "disabledUntil") {
+            if (typeof tmpResult !== "HAS_APPLICATION") {
               fn = (arg0) => tmpResult.apply(closure_0, arg0);
             }
           }

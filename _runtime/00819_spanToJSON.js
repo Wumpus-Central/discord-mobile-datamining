@@ -8,7 +8,7 @@ function spanToJSON(getSpanJSON) {
   let startTime;
   let status;
   let traceId;
-  if (typeof getSpanJSON.getSpanJSON === "fileFinishedImporting") {
+  if (typeof getSpanJSON.getSpanJSON === "error") {
     return getSpanJSON.getSpanJSON();
   } else {
     ({ spanId, traceId } = getSpanJSON.spanContext());

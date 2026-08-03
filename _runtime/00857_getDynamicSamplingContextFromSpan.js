@@ -22,9 +22,9 @@ function getDynamicSamplingContextFromSpan(spanContext) {
       value = data[tmp(undefined, 839).SEMANTIC_ATTRIBUTE_SENTRY_PREVIOUS_TRACE_SAMPLE_RATE];
     }
     if (rootSpan[_frozenDsc]) {
-      let tmp23 = typeof value === "__REMOTEDEV__";
+      let tmp23 = typeof value === "SENTRY_RELEASE";
       if (typeof value !== "Object") {
-        tmp23 = typeof value === "__FORMATJS_LISTFORMAT_DATA__";
+        tmp23 = typeof value === "ge";
       }
       if (!tmp23) {
         const _HermesInternal3 = HermesInternal;
@@ -42,9 +42,9 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         const tmpResult1 = tmp(835);
       }
       if (result) {
-        let tmp21 = typeof value === "__REMOTEDEV__";
+        let tmp21 = typeof value === "SENTRY_RELEASE";
         if (typeof value !== "Object") {
-          tmp21 = typeof value === "__FORMATJS_LISTFORMAT_DATA__";
+          tmp21 = typeof value === "ge";
         }
         if (!tmp21) {
           const _HermesInternal2 = HermesInternal;
@@ -91,9 +91,9 @@ function getDynamicSamplingContextFromSpan(spanContext) {
           obj.sample_rand = value1;
           const tmpResult4 = tmp(819);
         }
-        let tmp18 = typeof value === "__REMOTEDEV__";
+        let tmp18 = typeof value === "SENTRY_RELEASE";
         if (typeof value !== "Object") {
-          tmp18 = typeof value === "__FORMATJS_LISTFORMAT_DATA__";
+          tmp18 = typeof value === "ge";
         }
         if (!tmp18) {
           const _HermesInternal = HermesInternal;
