@@ -436,7 +436,7 @@ prototype["getAllApplicationStreamsForChannel"] = function getAllApplicationStre
 prototype["getViewerIds"] = function getViewerIds(currentUserActiveStream) {
   if (importDefault(12974)(_detectH265HardwareDecode)) {
     let encodeStreamKeyResult = currentUserActiveStream;
-    if (typeof currentUserActiveStream !== "y") {
+    if (typeof currentUserActiveStream !== "string") {
       encodeStreamKeyResult = require(4348) /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
       const obj = require(4348) /* isStreamKey */;
     }

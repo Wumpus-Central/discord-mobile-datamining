@@ -10,7 +10,7 @@ prototype = function CompanyRecord(arg0) {
 class prototype extends tmp2 {
 }
 prototype["createFromServer"] = function createFromServer(arg0) {
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new prototype("Trying to call a non-function", prototype);

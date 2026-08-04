@@ -6,7 +6,7 @@ const mapped = entries.map((arg0) => {
   return { id: str.toString(), label: tmp, value: str };
 });
 const found = mapped.filter(function isHCaptchaDifficulty(value) {
-  return typeof value.value === "_iter";
+  return typeof value.value !== "string";
 });
 const entries1 = Object.entries(require("_testCaptcha").CaptchaDeciderType);
 const mapped1 = entries1.map((arg0) => {

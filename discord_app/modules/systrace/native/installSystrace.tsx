@@ -15,12 +15,12 @@ export const installSystrace = function installSystrace() {
       }
       return flag;
     };
-    Systrace.beginEvent = (arg0) => {
+    Systrace.beginEvent = (fn) => {
       const _default = callback(13573).default;
       if (_default != null) {
-        let tmp2 = arg0;
-        if (typeof arg0 !== "y") {
-          tmp2 = arg0();
+        let tmp2 = fn;
+        if (typeof fn !== "string") {
+          tmp2 = fn();
         }
         _default.beginEvent(tmp2);
       }
@@ -31,13 +31,13 @@ export const installSystrace = function installSystrace() {
         _default.endEvent();
       }
     };
-    Systrace.beginAsyncEvent = (arg0) => {
+    Systrace.beginAsyncEvent = (fn) => {
       const _default = callback(13573).default;
       let num;
       if (_default != null) {
-        let tmp2 = arg0;
-        if (typeof arg0 !== "y") {
-          tmp2 = arg0();
+        let tmp2 = fn;
+        if (typeof fn !== "string") {
+          tmp2 = fn();
         }
         num = _default.beginAsyncEvent(tmp2);
       }
@@ -46,12 +46,12 @@ export const installSystrace = function installSystrace() {
       }
       return num;
     };
-    Systrace.endAsyncEvent = (arg0, arg1) => {
+    Systrace.endAsyncEvent = (fn) => {
       const _default = callback(13573).default;
       if (_default != null) {
-        let tmp2 = arg0;
-        if (typeof arg0 !== "y") {
-          tmp2 = arg0();
+        let tmp2 = fn;
+        if (typeof fn !== "string") {
+          tmp2 = fn();
         }
         _default.endAsyncEvent(tmp2, arg1);
       }
@@ -60,7 +60,7 @@ export const installSystrace = function installSystrace() {
       const _default = callback(13573).default;
       if (_default != null) {
         let tmp2 = pending_js_to_native_queue;
-        if (typeof pending_js_to_native_queue !== "y") {
+        if (typeof pending_js_to_native_queue !== "string") {
           tmp2 = pending_js_to_native_queue();
         }
         _default.counterEvent(tmp2, length);

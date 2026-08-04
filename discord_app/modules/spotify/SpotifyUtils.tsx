@@ -9,9 +9,9 @@ let c9;
 let error;
 let metroImportAll;
 const require = arg1;
-function asString(arg0) {
-  if (typeof arg0 === "y") {
-    return arg0;
+function asString(str) {
+  if (typeof str === "string") {
+    return str;
   } else {
     const _Error = Error;
     const error = new Error("value is not a string");
@@ -87,7 +87,7 @@ function _getSpotifyMetadataFromActivity() {
               throw error;
             } else {
               let context_uri;
-              if (typeof lib.context_uri !== "_iter") {
+              if (typeof lib.context_uri === "string") {
                 context_uri = lib.context_uri;
               }
               obj = { context_uri: null, album_id: null, artist_ids: null, type: null, button_urls: null };

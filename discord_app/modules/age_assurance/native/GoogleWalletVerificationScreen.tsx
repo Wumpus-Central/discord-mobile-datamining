@@ -31,182 +31,131 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
   }, items);
   const items1 = [callback];
   callback1 = React.useCallback(callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
+    let closure_1 = tmp3;
+    let v0 = 1;
+    yield outer1_0(outer1_2[7]).requestGoogleWalletVerification();
+    if (1 === tmp7) {
+      v0 = 0;
+      let code;
+      if (lib != null) {
+        code = lib.code;
       }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp3;
-            let request_json = tmp7;
-            request_json = undefined;
-            closure_1 = undefined;
-            let lib;
-            let v0;
-            v0 = 1;
-            c4 = 2;
-            c5 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(outer1_2[7]).requestGoogleWalletVerification();
-            return obj1;
+      if ("CANCELLED" === code) {
+        let obj11 = outer1_1(outer1_2[8]);
+        const obj2 = { name: null, tags: null };
+        obj2[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+        obj2[1] = ["reason:user_cancelled"];
+        obj11.increment(obj2);
+        v0();
+        let c5 = 3;
+        const obj3 = { value: null, done: true };
+        obj3[0] = undefined;
+        return obj3;
+      } else {
+        let reason;
+        if (lib != null) {
+          const body = lib.body;
+          if (body != null) {
+            reason = body.reason;
           }
+        }
+        if ("unsupported_issuing_country" === reason) {
+          let obj7 = outer1_1(outer1_2[8]);
+          let obj4 = { name: null, tags: null };
+          obj4[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+          obj4[1] = ["reason:unsupported_issuing_country"];
+          obj7.increment(obj4);
+          const obj5 = { type: "error", message: null };
+          const intl = outer1_0(outer1_2[10]).intl;
+          obj5[1] = intl.string(outer1_1(outer1_2[11]).Pf5xUq);
+          lib(obj5);
+          c5 = 3;
+          const obj6 = { value: null, done: true };
+          obj6[0] = undefined;
+          return obj6;
         } else {
-          if (1 === tmp7) {
-            v0 = 0;
-            let code;
-            if (lib != null) {
-              code = lib.code;
+          v0 = (function getFailureReason(closure_2) {
+            let status;
+            if (closure_2 != null) {
+              status = closure_2.status;
             }
-            if ("CANCELLED" === code) {
-              let obj11 = outer1_1(outer1_2[8]);
-              const obj2 = { name: null, tags: null };
-              obj2[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
-              obj2[1] = ["reason:user_cancelled"];
-              obj11.increment(obj2);
-              v0();
-              c5 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = undefined;
-              return obj3;
-            } else {
-              let reason;
-              if (lib != null) {
-                const body = lib.body;
-                if (body != null) {
-                  reason = body.reason;
+            let str = "rate_limited";
+            if (429 !== status) {
+              let code;
+              if (closure_2 != null) {
+                code = closure_2.code;
+              }
+              let str3 = "unknown";
+              if (null != code) {
+                str3 = "unknown";
+                if (closure_2.code in closure_9) {
+                  str3 = tmp3[closure_2.code];
                 }
               }
-              if ("unsupported_issuing_country" === reason) {
-                let obj7 = outer1_1(outer1_2[8]);
-                let obj4 = { name: null, tags: null };
-                obj4[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
-                obj4[1] = ["reason:unsupported_issuing_country"];
-                obj7.increment(obj4);
-                const obj5 = { type: "error", message: null };
-                const intl = outer1_0(outer1_2[10]).intl;
-                obj5[1] = intl.string(outer1_1(outer1_2[11]).Pf5xUq);
-                lib(obj5);
-                c5 = 3;
-                const obj6 = { value: null, done: true };
-                obj6[0] = undefined;
-                return obj6;
-              } else {
-                v0 = (function getFailureReason(closure_2) {
-                  let status;
-                  if (closure_2 != null) {
-                    status = closure_2.status;
-                  }
-                  let str = "rate_limited";
-                  if (429 !== status) {
-                    let code;
-                    if (closure_2 != null) {
-                      code = closure_2.code;
-                    }
-                    let str3 = "unknown";
-                    if (null != code) {
-                      str3 = "unknown";
-                      if (closure_2.code in closure_9) {
-                        str3 = tmp3[closure_2.code];
-                      }
-                    }
-                    str = str3;
-                  }
-                  return str;
-                })(lib);
-                obj7 = { name: null, tags: null };
-                obj7[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
-                const _HermesInternal = HermesInternal;
-                const items = ["reason:" + v0];
-                obj7[1] = items;
-                outer1_1(outer1_2[8]).increment(obj7);
-                const obj8 = { type: "error", message: null };
-                const intl2 = outer1_0(outer1_2[10]).intl;
-                obj8[1] = intl2.string(outer1_1(outer1_2[11])["+pwfOA"]);
-                lib(obj8);
-                c5 = 3;
-                const obj19 = outer1_1(outer1_2[8]);
-              }
+              str = str3;
             }
-          } else if (2 === tmp7) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 0;
-              c5 = 3;
-              const obj9 = { value: null, done: true };
-              obj9[0] = arg1;
-              return obj9;
-            } else {
-              request_json = arg1.request_json;
-              obj4 = outer1_0(outer1_2[7]);
-              c4 = 3;
-              c5 = 1;
-              const obj10 = { value: null, done: false };
-              obj10[0] = obj4.getGoogleWalletCredential(request_json);
-              return obj10;
-            }
-          } else if (3 === tmp7) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 0;
-              c5 = 3;
-              obj11 = { value: null, done: true };
-              obj11[0] = arg1;
-              return obj11;
-            } else {
-              closure_1 = arg1;
-              obj1 = outer1_0(outer1_2[7]);
-              c4 = 4;
-              c5 = 1;
-              const obj12 = { value: null, done: false };
-              obj12[0] = obj1.verifyGoogleWalletCredential(closure_1);
-              return obj12;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            v0 = 0;
-          }
-          v0 = 0;
+            return str;
+          })(lib);
+          obj7 = { name: null, tags: null };
+          obj7[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+          const _HermesInternal = HermesInternal;
+          const items = ["reason:" + v0];
+          obj7[1] = items;
+          outer1_1(outer1_2[8]).increment(obj7);
+          const obj8 = { type: "error", message: null };
+          const intl2 = outer1_0(outer1_2[10]).intl;
+          obj8[1] = intl2.string(outer1_1(outer1_2[11])["+pwfOA"]);
+          lib(obj8);
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp45) {
-        lib = tmp45;
-        if (tmp4 === v0) {
-          c5 = tmp2;
-          throw tmp45;
-        } else {
-          c4 = tmp;
+          const obj19 = outer1_1(outer1_2[8]);
         }
       }
+    } else if (2 === tmp7) {
+      if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 0;
+        c5 = 3;
+        const obj9 = { value: null, done: true };
+        obj9[0] = arg1;
+        return obj9;
+      } else {
+        const request_json = arg1.request_json;
+        obj4 = outer1_0(outer1_2[7]);
+        let c4 = 3;
+        c5 = 1;
+        const obj10 = { value: null, done: false };
+        obj10[0] = obj4.getGoogleWalletCredential(request_json);
+        return obj10;
+      }
+    } else if (3 === tmp7) {
+      if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 0;
+        c5 = 3;
+        obj11 = { value: null, done: true };
+        obj11[0] = arg1;
+        return obj11;
+      } else {
+        closure_1 = arg1;
+        const obj1 = outer1_0(outer1_2[7]);
+        c4 = 4;
+        c5 = 1;
+        const obj12 = { value: null, done: false };
+        obj12[0] = obj1.verifyGoogleWalletCredential(closure_1);
+        return obj12;
+      }
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      v0 = 0;
     }
+    v0 = 0;
+    return arg1;
   }), items1);
   React = React.useRef(false);
   const items2 = [navigation, callback1];

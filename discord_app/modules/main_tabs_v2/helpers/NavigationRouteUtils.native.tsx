@@ -73,7 +73,7 @@ function isModalOpen(voiceChannelKey) {
       } else {
         if (null == voiceChannelKey) {
           let tmp5 = null != tmp2;
-        } else if (typeof voiceChannelKey === "y") {
+        } else if (typeof voiceChannelKey === "string") {
           let key;
           if (tmp2 != null) {
             key = tmp2.key;

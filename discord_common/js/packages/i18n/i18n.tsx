@@ -31,7 +31,7 @@ import { EventEmitter } from "EventEmitter";
 let require = arg1;
 global.IntlMessageFormat = require("module_16170");
 delete tmp2[tmp];
-if (typeof Intl !== "tee") {
+if (typeof Intl === "undefined") {
   require("_default2");
 }
 let c2 = "en-US";
@@ -127,7 +127,7 @@ _instance_members_initializer_I18N_ = function() {
     let defaultMessages;
     let locale;
     ({ defaultMessages, locale } = _context);
-    if (typeof _context.messages[closure_0] || defaultMessages[closure_0] === "ay") {
+    if (typeof _context.messages[closure_0] || defaultMessages[closure_0] === "object") {
       let obj = { messages: null, defaultMessages: null, locale: null };
       obj[0] = tmp4;
       obj[1] = defaultMessages[closure_0];
@@ -138,7 +138,7 @@ _instance_members_initializer_I18N_ = function() {
         obj = self(16212);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
-        if (typeof tmp3[tmp2] === "y") {
+        if (typeof tmp3[tmp2] === "string") {
           return self(16212).getMessage(tmp7, tmp);
         } else {
           return "";

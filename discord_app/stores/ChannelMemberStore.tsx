@@ -520,7 +520,7 @@ prototype2["get"] = function get(guildId, listId) {
   }
   let tmp2 = tmp[listId];
   if (null == tmp2) {
-    if (typeof MemberList !== "find") {
+    if (typeof MemberList !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(MemberList.prototype);

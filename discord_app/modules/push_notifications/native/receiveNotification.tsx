@@ -232,89 +232,26 @@ function _connectToStage2() {
     let c7 = 0;
     let c5 = 0;
     return (function*(arg0, arg1) {
-      if (c7 === 2) {
+      const dependencyMap = tmp3;
+      yield outer1_20();
+      let c5 = 1;
+      const obj2 = callback(7696);
+      yield obj2.connectOrLurkStage(callback, closure_1, true);
+      if (2 === tmp7) {
+        c5 = 0;
+        callback2();
+        let c7 = 3;
+      } else if (arg0 === 1) {
         c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const dependencyMap = tmp3;
-              let closure_2 = tmp7;
-              closure_2 = undefined;
-              c6 = 1;
-              c7 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_20();
-              return obj1;
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              let c5 = 1;
-              obj2 = callback(7696);
-              c6 = 3;
-              c7 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj2.connectOrLurkStage(callback, closure_1, true);
-              return obj3;
-            }
-          } else {
-            if (2 === tmp7) {
-              c5 = 0;
-              callback2();
-              c7 = 3;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              closure_2 = arg1;
-              obj = callback(7696);
-              obj.navigateToStage(closure_2, null);
-              c5 = 0;
-            }
-            c5 = 0;
-            c7 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          }
-        } catch (tmp27) {
-          let mergeGuildAvatar = tmp27;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp27;
-          } else {
-            c6 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        let closure_2 = arg1;
+        const obj = callback(7696);
+        obj.navigateToStage(closure_2, null);
+        c5 = 0;
       }
+      c5 = 0;
+      return arg1;
     })();
   });
   const _connectToStage2 = tmp;

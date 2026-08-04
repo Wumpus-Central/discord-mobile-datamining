@@ -43,10 +43,10 @@ export default function ParentalConsentConnectionScreen() {
   }
   let str = "";
   let str2 = "";
-  if (typeof component.link_code !== "_iter") {
+  if (typeof component.link_code === "string") {
     str2 = component.link_code;
   }
-  if (typeof component.link_code_expires_at !== "_iter") {
+  if (typeof component.link_code_expires_at === "string") {
     str = component.link_code_expires_at;
   }
   const arr = Array.isArray(component.pending_requests) ? component.pending_requests : [];

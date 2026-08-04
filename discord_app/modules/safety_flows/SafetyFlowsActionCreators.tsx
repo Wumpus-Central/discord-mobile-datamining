@@ -5,69 +5,18 @@ const require = arg1;
 function _getCurrentTask() {
   const self = this;
   const tmp = callback(function*() {
-    if (dependencyMap === 2) {
-      dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        dependencyMap = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_0 = tmp4;
-            closure_0 = undefined;
-            const obj1 = { url: null, trackedActionData: null, rejectWithError: true };
-            obj1[0] = outer1_4.SAFETY_FLOWS_TASK;
-            const obj2 = { event: null };
-            obj2[0] = outer1_0(503).NetworkActionNames.USER_VERIFY;
-            obj1[1] = obj2;
-            v0 = 1;
-            dependencyMap = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = v0(5094).get(obj1);
-            return obj3;
-          }
-        } else if (arg0 === 1) {
-          dependencyMap = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          dependencyMap = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        } else {
-          closure_0 = arg1;
-          let body = null;
-          if (204 !== closure_0.status) {
-            body = closure_0.body;
-          }
-          dependencyMap = 3;
-          obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        }
-      } catch (tmp10) {
-        dependencyMap = tmp;
-        throw tmp10;
-      }
+    let closure_0 = tmp4;
+    const obj1 = { url: null, trackedActionData: null, rejectWithError: true };
+    obj1[0] = outer1_4.SAFETY_FLOWS_TASK;
+    const obj2 = { event: null };
+    obj2[0] = outer1_0(503).NetworkActionNames.USER_VERIFY;
+    obj1[1] = obj2;
+    closure_0 = yield v0(5094).get(obj1);
+    let body = null;
+    if (204 !== closure_0.status) {
+      body = closure_0.body;
     }
+    return body;
   });
   const _getCurrentTask = tmp;
   const apply = tmp.apply;
@@ -85,63 +34,14 @@ function _completeTask() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0, body) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: true };
-              obj1[0] = outer1_4.SAFETY_FLOWS_TASK;
-              obj1[1] = callback;
-              const obj2 = { event: null };
-              obj2[0] = callback(503).NetworkActionNames.USER_VERIFY;
-              obj1[2] = obj2;
-              dependencyMap = 1;
-              v0 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = v0(5094).post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp5) {
-          v0 = tmp;
-          throw tmp5;
-        }
-      }
+      const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: true };
+      obj1[0] = outer1_4.SAFETY_FLOWS_TASK;
+      obj1[1] = callback;
+      const obj2 = { event: null };
+      obj2[0] = callback(503).NetworkActionNames.USER_VERIFY;
+      obj1[2] = obj2;
+      yield v0(5094).post(obj1);
+      return body.body;
     })();
   });
   const _completeTask = tmp;

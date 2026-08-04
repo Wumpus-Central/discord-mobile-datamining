@@ -36,7 +36,7 @@ export const NitroSupergraphicLogo = function NitroSupergraphicLogo(color) {
       obj[0] = ICON_STRONG;
       tmp6 = obj;
     }
-    tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "y";
+    tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj1 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj1[1] = { uri: importDefault(6490) };

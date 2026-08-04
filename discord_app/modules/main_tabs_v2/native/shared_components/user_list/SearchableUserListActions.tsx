@@ -60,8 +60,8 @@ export const useUserListActionsProps = function useUserListActionsProps(actions)
     if (undefined !== paddingBottom) {
       num2 = paddingBottom;
     }
-    if (typeof num !== "V") {
-      if (typeof num2 !== "V") {
+    if (typeof num === "number") {
+      if (typeof num2 === "number") {
         let num3 = 0;
         if (null != actions) {
           num3 = 0;

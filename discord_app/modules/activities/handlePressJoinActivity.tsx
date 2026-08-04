@@ -68,170 +68,205 @@ function _maybeJoinEmbeddedActivity() {
       let c5;
       let c6;
       let c7;
-      let dependencyMap = tmp5;
-      let callback2 = tmp2;
-      let callback;
-      callback2 = undefined;
-      dependencyMap = undefined;
-      c3 = undefined;
-      c4 = undefined;
-      c5 = undefined;
-      c6 = undefined;
-      c7 = undefined;
-      ({ channelId: c0, applicationId: c1, launchId: c2, inputApplication: c3, analyticsLocations: c4, launchingComponentId: c5, sectionName: c6, inviterUserId: c7 } = callback);
-      let currentUser;
-      let embeddedActivitiesForChannel;
-      let id;
-      function _handleCanJoin() {
-        const self = this;
-        const tmp = v2(function*() {
-          if (c0 === 2) {
-            c0 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
             if (arg0 === 1) {
+              c4 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
+              c4 = 3;
+              obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              let dependencyMap = tmp5;
+              let callback2 = tmp2;
+              let callback;
+              callback2 = undefined;
+              dependencyMap = undefined;
+              c3 = undefined;
+              c4 = undefined;
+              c5 = undefined;
+              c6 = undefined;
+              c7 = undefined;
+              ({ channelId: c0, applicationId: c1, launchId: c2, inputApplication: c3, analyticsLocations: c4, launchingComponentId: c5, sectionName: c6, inviterUserId: c7 } = callback);
+              let currentUser;
+              let updateVoiceState;
+              let embeddedActivitiesForChannel;
+              let id;
+              function _handleCanJoin() {
+                const self = this;
+                const tmp = v2(function*() {
+                  if (c0 === 2) {
+                    c0 = 3;
+                    HermesBuiltin.throwTypeError();
+                  } else if (tmp3 === 3) {
+                    if (arg0 === 1) {
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      let obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } else {
+                    try {
+                      c0 = 2;
+                      if (0 === v0) {
+                        if (arg0 === 1) {
+                          c0 = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          c0 = 3;
+                          obj = { value: null, done: true };
+                          obj[0] = arg1;
+                          return obj;
+                        } else if (null != outer1_8) {
+                          const obj1 = { applicationId: null, activityChannelId: null, locationObject: null, analyticsLocations: null, componentId: null, sectionName: null, inviterUserId: null };
+                          obj1[0] = outer1_8.applicationId;
+                          obj1[1] = c0;
+                          obj1[2] = {};
+                          obj1[3] = outer1_4;
+                          obj1[4] = outer1_5;
+                          obj1[5] = outer1_6;
+                          obj1[6] = outer1_7;
+                          v0 = 1;
+                          c0 = 1;
+                          const obj2 = { value: null, done: false };
+                          obj2[0] = v0(outer1_2[14])(obj1);
+                          return obj2;
+                        }
+                      } else if (arg0 === 1) {
+                        c0 = 3;
+                        throw arg1;
+                      } else if (arg0 === 2) {
+                        c0 = 3;
+                        obj = { value: null, done: true };
+                        obj[0] = arg1;
+                        return obj;
+                      }
+                      c0 = 3;
+                      return { value: "HermesInternal", done: null };
+                    } catch (tmp13) {
+                      c0 = tmp;
+                      throw tmp13;
+                    }
+                  }
+                });
+                const _handleCanJoin = tmp;
+                const apply = tmp.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              }
+              c3 = 1;
+              c4 = 1;
+              return { value: "ct", done: "Array" };
             }
           } else {
-            try {
-              c0 = 2;
-              if (0 === v0) {
-                if (arg0 === 1) {
-                  c0 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c0 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else if (null != outer1_8) {
-                  const obj1 = { applicationId: null, activityChannelId: null, locationObject: null, analyticsLocations: null, componentId: null, sectionName: null, inviterUserId: null };
-                  obj1[0] = outer1_8.applicationId;
-                  obj1[1] = c0;
-                  obj1[2] = {};
-                  obj1[3] = outer1_4;
-                  obj1[4] = outer1_5;
-                  obj1[5] = outer1_6;
-                  obj1[6] = outer1_7;
-                  v0 = 1;
-                  c0 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = v0(outer1_2[14])(obj1);
-                  return obj2;
-                }
-              } else if (arg0 === 1) {
-                c0 = 3;
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                c4 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                c0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
+                c4 = 3;
+                let obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(callback);
+                currentUser = embeddedActivitiesForChannel.find((applicationId) => {
+                  let tmp = applicationId.applicationId === c1;
+                  if (tmp) {
+                    tmp = null == c2 || applicationId.launchId === tmp2;
+                    const tmp4 = null == c2 || applicationId.launchId === tmp2;
+                  }
+                  return tmp;
+                });
+                updateVoiceState = c3;
+                if (null == updateVoiceState) {
+                  let obj4 = callback2(5611);
+                  c3 = 2;
+                  c4 = 1;
+                  let obj2 = { value: null, done: false };
+                  obj2[0] = obj4.fetchApplication(callback2);
+                  return obj2;
+                }
               }
-              c0 = 3;
-              return { value: "HermesInternal", done: null };
-            } catch (tmp13) {
-              c0 = tmp;
-              throw tmp13;
-            }
-          }
-        });
-        const _handleCanJoin = tmp;
-        const apply = tmp.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      }
-      c3 = 1;
-      c4 = 1;
-      yield "ct";
-      if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          let obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
-        } else {
-          embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(callback);
-          currentUser = embeddedActivitiesForChannel.find((applicationId) => {
-            let tmp = applicationId.applicationId === c1;
-            if (tmp) {
-              tmp = null == c2 || applicationId.launchId === tmp2;
-              const tmp4 = null == c2 || applicationId.launchId === tmp2;
-            }
-            return tmp;
-          });
-          let updateVoiceState = c3;
-          if (null == updateVoiceState) {
-            let obj4 = callback2(5611);
-            c3 = 2;
-            c4 = 1;
-            let obj2 = { value: null, done: false };
-            obj2[0] = obj4.fetchApplication(callback2);
-            return obj2;
-          }
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        embeddedActivitiesForChannel = arg1;
-        updateVoiceState = c4.createFromServer(embeddedActivitiesForChannel);
-      }
-      if (null != currentUser) {
-        if (null != updateVoiceState) {
-          id = currentUser.getCurrentUser();
-          id = undefined;
-          if (id != null) {
-            id = id.id;
-          }
-          let obj3 = { embeddedActivityJoinability: null, handleCanJoin: null };
-          obj4 = { userId: null, application: null, channelId: null, currentUser: null, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
-          obj4[0] = id;
-          obj4[1] = updateVoiceState;
-          obj4[2] = callback;
-          obj4[3] = id;
-          obj3 = callback(10530);
-          obj4[4] = obj3.getIsActivitiesEnabledForCurrentPlatform();
-          obj4[5] = c5;
-          obj4[6] = updateVoiceState;
-          obj4[7] = c7;
-          obj4[8] = c6;
-          obj3[0] = callback2(10533)(obj4);
-          obj3[1] = function handleCanJoin() {
-            const self = this;
-            const apply = _handleCanJoin.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             } else {
-              applyArgumentsResult = apply(self, arguments);
+              embeddedActivitiesForChannel = arg1;
+              updateVoiceState = c4.createFromServer(embeddedActivitiesForChannel);
             }
-            return applyArgumentsResult;
-          };
-          id(obj3);
-          const tmp49 = id;
-          const tmp52 = callback2(10533);
+            if (null != currentUser) {
+              if (null != updateVoiceState) {
+                id = currentUser.getCurrentUser();
+                id = undefined;
+                if (id != null) {
+                  id = id.id;
+                }
+                let obj3 = { embeddedActivityJoinability: null, handleCanJoin: null };
+                obj4 = { userId: null, application: null, channelId: null, currentUser: null, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
+                obj4[0] = id;
+                obj4[1] = updateVoiceState;
+                obj4[2] = callback;
+                obj4[3] = id;
+                obj3 = callback(10530);
+                obj4[4] = obj3.getIsActivitiesEnabledForCurrentPlatform();
+                obj4[5] = c5;
+                obj4[6] = updateVoiceState;
+                obj4[7] = c7;
+                obj4[8] = c6;
+                obj3[0] = callback2(10533)(obj4);
+                obj3[1] = function handleCanJoin() {
+                  const self = this;
+                  const apply = _handleCanJoin.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                id(obj3);
+                const tmp49 = id;
+                const tmp52 = callback2(10533);
+              }
+            }
+            c4 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp31) {
+          c4 = tmp;
+          throw tmp31;
         }
       }
-      c4 = 3;
-      yield "HermesInternal";
     })();
     iter.next();
     return iter;

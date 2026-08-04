@@ -37,7 +37,7 @@ let merged = Object.assign(require("noop").memo((fade) => {
     tmp3 = fade;
   }
   const usesSmallCache = fade.usesSmallCache;
-  if (typeof source === "Object") {
+  if (typeof source === "number") {
     let obj = {};
     const merged = Object.assign(fade);
     return <closure_2 />;

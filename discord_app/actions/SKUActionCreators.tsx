@@ -258,95 +258,30 @@ function _fetchTestSKUsForApplication() {
     let c4 = 0;
     let c5 = 0;
     const iter = (function*(arg0, body) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let _httpGetWithCountryCodeQuery = tmp5;
-              body = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              body = undefined;
-              c4 = 1;
-              c5 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = body;
-              return obj1;
-            } else {
-              if (!obj12.isTestModeForApplication(callback)) {
-                if (flag) {
-                  const _Error = Error;
-                  const error = new Error("this should only be used in test mode");
-                  throw error;
-                }
-              }
-              let obj4 = callback(body[5]);
-              const obj2 = { url: null, rejectWithError: null };
-              obj2[0] = closure_7.APPLICATION_SKUS(callback);
-              let obj6 = callback(body[6]);
-              obj2[1] = obj6.rejectWithMigratedError();
-              c4 = 2;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj4.httpGetWithCountryCodeQuery(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            body = body.body;
-            obj = flag(body[4]);
-            const obj5 = { type: "SKUS_FETCH_SUCCESS", skus: null };
-            obj5[1] = body;
-            obj.dispatch(obj5);
-            c5 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          }
-        } catch (tmp28) {
-          c5 = tmp;
-          throw tmp28;
+      body = tmp2;
+      if (flag === undefined) {
+        flag = true;
+      }
+      yield "ct";
+      if (!obj12.isTestModeForApplication(callback)) {
+        if (flag) {
+          const _Error = Error;
+          const error = new Error("this should only be used in test mode");
+          throw error;
         }
       }
+      const obj4 = callback(body[5]);
+      const obj2 = { url: null, rejectWithError: null };
+      obj2[0] = closure_7.APPLICATION_SKUS(callback);
+      const obj6 = callback(body[6]);
+      obj2[1] = obj6.rejectWithMigratedError();
+      yield obj4.httpGetWithCountryCodeQuery(obj2);
+      body = body.body;
+      const obj = flag(body[4]);
+      const obj5 = { type: "SKUS_FETCH_SUCCESS", skus: null };
+      obj5[1] = body;
+      obj.dispatch(obj5);
+      return body;
     })();
     iter.next();
     return iter;

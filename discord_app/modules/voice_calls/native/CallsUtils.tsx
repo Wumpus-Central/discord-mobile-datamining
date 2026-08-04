@@ -24,106 +24,62 @@ function _handleToggleVideo() {
     let c4 = 0;
     let c5 = 0;
     const iter = (function*(arg0) {
-      if (limit === 2) {
-        limit = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      let channelVideoLimit = 0;
+      let closure_2 = tmp2;
+      if (flag3 === undefined) {
+        flag3 = true;
+      }
+      yield "ct";
+      if (1 === tmp5) {
         if (arg0 === 1) {
+          let limit = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          limit = 3;
+          const obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          limit = 2;
-          if (0 === reachedLimit) {
-            if (arg0 === 1) {
-              limit = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              limit = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let channelVideoLimit = 0;
-              let closure_2 = tmp2;
-              let flag3;
-              if (flag3 === undefined) {
-                flag3 = true;
-              }
-              closure_2 = undefined;
-              channelVideoLimit = undefined;
-              reachedLimit = undefined;
-              limit = undefined;
-              reachedLimit = 1;
-              limit = 1;
-              return { value: "ct", done: "Array" };
+          closure_2 = videoEnabled.isVideoEnabled();
+          channelVideoLimit = callback(channelVideoLimit[12]).getChannelVideoLimit(callback);
+          let reachedLimit = channelVideoLimit.reachedLimit;
+          limit = channelVideoLimit.limit;
+          if (reachedLimit) {
+            if (flag3) {
+              const obj5 = flag3(channelVideoLimit[13]);
+              const obj2 = { title: null, body: null };
+              const intl = callback(channelVideoLimit[14]).intl;
+              obj2[0] = intl.string(callback(channelVideoLimit[14]).t["3ffmE+"]);
+              const intl2 = callback(channelVideoLimit[14]).intl;
+              const obj3 = { limit: null };
+              obj3[0] = limit.toString();
+              obj2[1] = intl2.formatToPlainString(callback(channelVideoLimit[14]).t.x9mtl4, obj3);
+              obj5.show(obj2);
             }
+          } else if (closure_2) {
+            let tmp12Result = tmp12(tmp13[16]);
+            tmp12Result.setVideoEnabled(false);
           } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                limit = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                limit = 3;
-                const obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                closure_2 = videoEnabled.isVideoEnabled();
-                channelVideoLimit = callback(channelVideoLimit[12]).getChannelVideoLimit(callback);
-                reachedLimit = channelVideoLimit.reachedLimit;
-                limit = channelVideoLimit.limit;
-                if (reachedLimit) {
-                  if (flag3) {
-                    let obj5 = flag3(channelVideoLimit[13]);
-                    const obj2 = { title: null, body: null };
-                    const intl = callback(channelVideoLimit[14]).intl;
-                    obj2[0] = intl.string(callback(channelVideoLimit[14]).t["3ffmE+"]);
-                    const intl2 = callback(channelVideoLimit[14]).intl;
-                    const obj3 = { limit: null };
-                    obj3[0] = limit.toString();
-                    obj2[1] = intl2.formatToPlainString(callback(channelVideoLimit[14]).t.x9mtl4, obj3);
-                    obj5.show(obj2);
-                  }
-                } else if (closure_2) {
-                  let tmp12Result = tmp12(tmp13[16]);
-                  tmp12Result.setVideoEnabled(false);
-                } else {
-                  tmp12Result = tmp12(tmp13[15]);
-                  reachedLimit = 2;
-                  limit = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = tmp12Result.requestPermission(constants.CAMERA);
-                  return obj4;
-                }
-                limit = 3;
-                const obj12 = callback(channelVideoLimit[12]);
-              }
-            } else if (arg0 === 1) {
-              limit = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              if (arg1) {
-                obj = flag3(channelVideoLimit[16]);
-                obj.setVideoEnabled(true);
-              }
-            }
-            limit = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
+            tmp12Result = tmp12(tmp13[15]);
+            reachedLimit = 2;
+            limit = 1;
+            const obj4 = { value: null, done: false };
+            obj4[0] = tmp12Result.requestPermission(constants.CAMERA);
+            return obj4;
           }
-        } catch (tmp31) {
-          limit = tmp;
-          throw tmp31;
+          limit = 3;
+          const obj12 = callback(channelVideoLimit[12]);
+        }
+      } else if (arg0 === 1) {
+        limit = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        if (arg1) {
+          const obj = flag3(channelVideoLimit[16]);
+          obj.setVideoEnabled(true);
         }
       }
+      return arg1;
     })();
     iter.next();
     return iter;

@@ -6,7 +6,7 @@ prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(is_dismissible) {
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

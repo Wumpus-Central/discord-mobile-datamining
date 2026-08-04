@@ -252,117 +252,42 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
             let dependencyMap = 1;
             v0 = 2;
             c5 = 1;
-            let obj1 = { value: null, done: false };
+            const obj1 = { value: null, done: false };
             obj1[0] = v0(function*() {
-              if (table === 2) {
-                table = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp4 === 3) {
-                if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  return { value: "HermesInternal", done: null };
-                }
-              } else {
-                try {
-                  table = 2;
-                  if (0 === closure_2) {
-                    if (arg0 === 1) {
-                      table = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      table = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      let closure_1 = tmp5;
-                      let closure_0 = tmp2;
-                      closure_0 = undefined;
-                      closure_1 = undefined;
-                      closure_2 = undefined;
-                      closure_2 = 1;
-                      table = 1;
-                      const obj1 = { value: null, done: false };
-                      obj1[0] = callback();
-                      return obj1;
-                    }
-                  } else if (1 === tmp5) {
-                    if (arg0 === 1) {
-                      table = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      table = 3;
-                      const obj2 = { value: null, done: true };
-                      obj2[0] = arg1;
-                      return obj2;
-                    } else {
-                      closure_0 = arg1;
-                      let gpus;
-                      if (closure_0 != null) {
-                        gpus = closure_0.gpus;
-                      }
-                      if (null != gpus) {
-                        const gpus1 = closure_0.gpus;
-                        const mapped = gpus1.map((brand) => brand.brand);
-                        closure_1 = mapped.filter((arg0) => {
-                          let tmp = null != arg0;
-                          if (tmp) {
-                            tmp = "" !== arg0;
-                          }
-                          return tmp;
-                        });
-                        const obj3 = { gpuModels: null, classification: null };
-                        obj3[0] = closure_1;
-                        obj3[1] = outer1_0.classifyHardware(closure_1);
-                        table = 3;
-                        const obj4 = { value: null, done: true };
-                        obj4[0] = obj3;
-                        return obj4;
-                      } else {
-                        const processUtils = gpuModels(table[19]).processUtils;
-                        closure_2 = 2;
-                        table = 1;
-                        const obj5 = { value: null, done: false };
-                        obj5[0] = processUtils.getSystemInfo();
-                        return obj5;
-                      }
-                    }
-                  } else if (arg0 === 1) {
-                    table = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    table = 3;
-                    const obj6 = { value: null, done: true };
-                    obj6[0] = arg1;
-                    return obj6;
-                  } else {
-                    const gpus2 = arg1.gpus;
-                    closure_2 = gpus2.map((model) => model.model);
-                    obj = { gpuModels: null, classification: null };
-                    obj[0] = closure_2;
-                    obj[1] = outer1_0.classifyHardware(closure_2);
-                    table = 3;
-                    const obj7 = { value: null, done: true };
-                    obj7[0] = obj;
-                    return obj7;
-                  }
-                } catch (tmp22) {
-                  table = tmp;
-                  throw tmp22;
-                }
+              let closure_0 = tmp2;
+              closure_0 = yield callback();
+              if (closure_0 != null) {
+                const gpus = closure_0.gpus;
               }
+              if (null != gpus) {
+                const gpus1 = closure_0.gpus;
+                const mapped = gpus1.map((brand) => brand.brand);
+                let closure_1 = mapped.filter((arg0) => {
+                  let tmp = null != arg0;
+                  if (tmp) {
+                    tmp = "" !== arg0;
+                  }
+                  return tmp;
+                });
+                const obj3 = { gpuModels: null, classification: null };
+                obj3[0] = closure_1;
+                obj3[1] = outer1_0.classifyHardware(closure_1);
+                return obj3;
+              }
+              const processUtils = gpuModels(table[19]).processUtils;
+              yield processUtils.getSystemInfo();
+              const gpus2 = arg1.gpus;
+              const obj = { gpuModels: null, classification: null };
+              obj[0] = closure_2;
+              obj[1] = outer1_0.classifyHardware(closure_2);
+              return obj;
             })();
             return obj1;
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
           c5 = 3;
-          let obj2 = { value: null, done: true };
+          const obj2 = { value: null, done: true };
           obj2[0] = outer1_14.UNKNOWN;
           return obj2;
         } else if (arg0 === 1) {
@@ -378,11 +303,11 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           closure_0 = arg1;
           gpuModels = closure_0.gpuModels;
           classification = closure_0.classification;
-          let obj4 = { classification: null, version: null, gpu_models: null, clip_runtime: null };
+          const obj4 = { classification: null, version: null, gpu_models: null, clip_runtime: null };
           obj4[0] = classification;
           obj4[1] = outer1_13;
           obj4[2] = gpuModels;
-          let obj7 = outer1_1(698);
+          const obj7 = outer1_1(698);
           obj4[3] = outer1_0(4821).getClipsRuntime("classifyHardwareAndTrack");
           obj7.track(outer1_15.CLIPS_HARDWARE_CLASSIFICATION, obj4);
           dependencyMap = 0;

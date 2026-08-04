@@ -131,7 +131,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(require(
     ({ channelId, searchQueryString } = arg0);
     let value = map.get(id);
     if (value == null) {
-      if (typeof GuildMemberSearchManager !== "find") {
+      if (typeof GuildMemberSearchManager !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(GuildMemberSearchManager.prototype);

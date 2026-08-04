@@ -55,78 +55,23 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
       let c3 = 0;
       let c4 = 0;
       return (function*(arg0) {
-        if (c4 === 2) {
-          c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === error) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let addedPhone = tmp5;
-                let codeIntercepted = tmp2;
-                let lib;
-                codeIntercepted = undefined;
-                addedPhone = undefined;
-                error = undefined;
-                lib(true);
-                outer1_1(undefined);
-                let obj2 = lib(outer1_2[15]);
-                error = 1;
-                c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = obj2.verifyPhone(lib);
-                return obj1;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              lib = arg1;
-              codeIntercepted = lib.codeIntercepted;
-              addedPhone = lib.addedPhone;
-              error = lib.error;
-              codeIntercepted(error);
-              let tmp7 = addedPhone;
-              if (addedPhone) {
-                tmp7 = codeIntercepted;
-              }
-              if (!tmp7) {
-                lib(false);
-              }
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = codeIntercepted;
-              return obj;
-            }
-          } catch (tmp19) {
-            c4 = tmp;
-            throw tmp19;
-          }
+        let addedPhone = tmp5;
+        let codeIntercepted = tmp2;
+        lib(true);
+        outer1_1(undefined);
+        const obj2 = lib(outer1_2[15]);
+        lib = yield obj2.verifyPhone(lib);
+        codeIntercepted = lib.codeIntercepted;
+        addedPhone = lib.addedPhone;
+        codeIntercepted(error);
+        let tmp7 = addedPhone;
+        if (addedPhone) {
+          tmp7 = codeIntercepted;
         }
+        if (!tmp7) {
+          lib(false);
+        }
+        return codeIntercepted;
       })();
     });
     const _handleCodeEntered = tmp;

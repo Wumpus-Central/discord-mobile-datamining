@@ -165,7 +165,7 @@ class FocusedControlsBottomDrawer {
     diff1 = bound - sum;
     if (tmp5) {
       tmp17 = EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y;
-      if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y !== "find") {
+      if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y !== "function") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -174,7 +174,7 @@ class FocusedControlsBottomDrawer {
       diff2 = diff1 - (top + 54 + 12);
     } else {
       tmp13 = EXTENDED_CONTROLS_OFFSET_Y;
-      if (typeof EXTENDED_CONTROLS_OFFSET_Y !== "find") {
+      if (typeof EXTENDED_CONTROLS_OFFSET_Y !== "function") {
         str = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -188,7 +188,7 @@ class FocusedControlsBottomDrawer {
       }
       diff2 = diff1 - (sum1 + num2);
     }
-    if (typeof EXTENDED_CONTROLS_OFFSET_Y !== "find") {
+    if (typeof EXTENDED_CONTROLS_OFFSET_Y !== "function") {
       str3 = "Trying to call a non-function";
       throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
@@ -200,7 +200,7 @@ class FocusedControlsBottomDrawer {
       num5 = 48;
     }
     sum3 = sum2 + num5 + bottom;
-    if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y !== "find") {
+    if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y !== "function") {
       str4 = "Trying to call a non-function";
       throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
     }

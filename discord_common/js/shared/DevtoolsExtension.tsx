@@ -2,7 +2,7 @@ const result = require("set").fileFinishedImporting("../discord_common/js/shared
 
 export const logFluxAction = function logFluxAction(description, durationMs) {
   let __DISCORD_DEVTOOLS = null;
-  if (typeof window !== "Array") {
+  if (typeof window !== "undefined") {
     const _window = window;
     __DISCORD_DEVTOOLS = window.__DISCORD_DEVTOOLS;
   }
@@ -15,7 +15,7 @@ export const logFluxAction = function logFluxAction(description, durationMs) {
 };
 export const reportEvent = function reportEvent(arg0) {
   let __DISCORD_DEVTOOLS = null;
-  if (typeof window !== "Array") {
+  if (typeof window !== "undefined") {
     const _window = window;
     __DISCORD_DEVTOOLS = window.__DISCORD_DEVTOOLS;
   }
@@ -28,7 +28,7 @@ export const reportEvent = function reportEvent(arg0) {
 };
 export const notifyStoreCreated = function notifyStoreCreated(arg0) {
   let __DISCORD_DEVTOOLS = null;
-  if (typeof window !== "Array") {
+  if (typeof window !== "undefined") {
     const _window = window;
     __DISCORD_DEVTOOLS = window.__DISCORD_DEVTOOLS;
   }
@@ -43,7 +43,7 @@ export const notifyStoreCreated = function notifyStoreCreated(arg0) {
 };
 export const notifyStoreChange = function notifyStoreChange(arg0) {
   let __DISCORD_DEVTOOLS = null;
-  if (typeof window !== "Array") {
+  if (typeof window !== "undefined") {
     const _window = window;
     __DISCORD_DEVTOOLS = window.__DISCORD_DEVTOOLS;
   }

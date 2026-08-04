@@ -7,31 +7,31 @@ let c5;
 let closure_6;
 let error;
 const require = arg1;
-function isAnimatedBackgroundOption(type) {
-  let tmp = typeof type === "Object";
-  if (typeof type !== "V") {
-    tmp = type in closure_5;
+function isAnimatedBackgroundOption(closure_0) {
+  let tmp = typeof closure_0 === "number";
+  if (typeof closure_0 === "number") {
+    tmp = closure_0 in closure_5;
   }
   if (tmp) {
-    let hasItem = closure_7.includes(type);
+    let hasItem = closure_7.includes(closure_0);
   } else {
-    let tmp3 = null != type && typeof type === "ay";
+    let tmp3 = null != closure_0 && typeof closure_0 === "object";
     if (tmp3) {
-      tmp3 = "id" in type;
+      tmp3 = "id" in closure_0;
     }
     if (tmp3) {
-      let flag = type.type === constants.BACKGROUND;
+      let flag = closure_0.type === constants.BACKGROUND;
       if (!flag) {
-        type = type.type;
+        const type = closure_0.type;
         flag = false;
       }
       tmp3 = flag;
     }
     hasItem = tmp3;
     if (hasItem) {
-      let isAnimatedIconHashResult = require(1416) /* getAvatarURL */.isAnimatedIconHash(type.asset);
+      let isAnimatedIconHashResult = require(1416) /* getAvatarURL */.isAnimatedIconHash(closure_0.asset);
       if (!isAnimatedIconHashResult) {
-        isAnimatedIconHashResult = tmp6(1416).isVideoAssetHash(type.asset);
+        isAnimatedIconHashResult = tmp6(1416).isVideoAssetHash(closure_0.asset);
         const tmp6Result = tmp6(1416);
       }
       hasItem = isAnimatedIconHashResult;
@@ -44,7 +44,7 @@ function isAnimatedBackgroundOption(type) {
 function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   let str = "None";
   if (null != lastUsedVideoBackgroundOption) {
-    let tmp = null != lastUsedVideoBackgroundOption && typeof lastUsedVideoBackgroundOption === "ay";
+    let tmp = null != lastUsedVideoBackgroundOption && typeof lastUsedVideoBackgroundOption === "object";
     if (tmp) {
       tmp = "id" in lastUsedVideoBackgroundOption;
     }
@@ -97,7 +97,7 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
 const result = require("VideoFilterType").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
 
 export const isCustomBackgroundOption = function isCustomBackgroundOption(videoBackgroundOptionFromProto) {
-  let tmp = null != videoBackgroundOptionFromProto && typeof videoBackgroundOptionFromProto === "ay";
+  let tmp = null != videoBackgroundOptionFromProto && typeof videoBackgroundOptionFromProto === "object";
   if (tmp) {
     tmp = "id" in videoBackgroundOptionFromProto;
   }
@@ -112,8 +112,8 @@ export const isCustomBackgroundOption = function isCustomBackgroundOption(videoB
   return tmp;
 };
 export const isDefaultBackgroundOption = function isDefaultBackgroundOption(videoBackgroundOptionFromProto) {
-  let tmp = typeof videoBackgroundOptionFromProto === "Object";
-  if (typeof videoBackgroundOptionFromProto !== "V") {
+  let tmp = typeof videoBackgroundOptionFromProto === "number";
+  if (typeof videoBackgroundOptionFromProto === "number") {
     tmp = videoBackgroundOptionFromProto in closure_5;
   }
   return tmp;
@@ -155,21 +155,21 @@ export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdate
   obj[11] = isAnimatedBackgroundOption(closure_0);
   importDefault(698).track(AnalyticEvents.VIDEO_EFFECT_UPDATED, obj);
 };
-export const trackBackgroundOptionAdded = function trackBackgroundOptionAdded(type, is_video, is_from_tenor) {
+export const trackBackgroundOptionAdded = function trackBackgroundOptionAdded(closure_0, is_video, is_from_tenor) {
   let obj = importDefault(698);
-  obj = { is_animated: isAnimatedBackgroundOption(type), is_video, is_from_tenor };
+  obj = { is_animated: isAnimatedBackgroundOption(closure_0), is_video, is_from_tenor };
   obj.track(AnalyticEvents.VIDEO_BACKGROUND_ADDED, obj);
 };
-export const trackBackgroundOptionDeleted = function trackBackgroundOptionDeleted(type) {
+export const trackBackgroundOptionDeleted = function trackBackgroundOptionDeleted(closure_0) {
   let obj = importDefault(698);
-  obj = { is_animated: isAnimatedBackgroundOption(type) };
+  obj = { is_animated: isAnimatedBackgroundOption(closure_0) };
   obj.track(AnalyticEvents.VIDEO_BACKGROUND_DELETED, obj);
 };
 export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(closure_0) {
   if (null == closure_0) {
     let obj = { oneofKind: "r" };
   } else {
-    let tmp = null != closure_0 && typeof closure_0 === "ay";
+    let tmp = null != closure_0 && typeof closure_0 === "object";
     if (tmp) {
       tmp = "id" in closure_0;
     }

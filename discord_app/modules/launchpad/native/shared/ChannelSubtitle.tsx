@@ -56,7 +56,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     obj = { opacity: null };
     obj[0] = num;
     obj[4] = obj;
-    if (typeof subtitle === "y") {
+    if (typeof subtitle === "string") {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;

@@ -76,8 +76,8 @@ obj = {
 };
 obj = {
   isSemanticColor(backgroundColor) {
-    let tmp = typeof backgroundColor === "ay";
-    if (typeof backgroundColor !== "window") {
+    let tmp = typeof backgroundColor === "object";
+    if (typeof backgroundColor === "object") {
       tmp = null !== backgroundColor;
     }
     if (tmp) {
@@ -91,7 +91,7 @@ obj = {
   resolveSemanticColor(theme, TEXT_FEEDBACK_CRITICAL, semanticColorContextFromThemeContext) {
     let tmp = (function sanitizeTheme(theme) {
       let tmp = theme;
-      if (typeof theme !== "_iter") {
+      if (typeof theme === "string") {
         const formatted = theme.toUpperCase();
         if (formatted in table) {
           tmp = table[formatted];

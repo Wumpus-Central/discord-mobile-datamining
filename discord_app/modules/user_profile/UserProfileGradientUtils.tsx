@@ -126,7 +126,7 @@ export const calculateGradientSplitColors = function calculateGradientSplitColor
 };
 export const getUserProfileGradientContainerColors = function getUserProfileGradientContainerColors(result, result1, closure_2) {
   let int2rgbaResult1 = closure_2;
-  if (typeof closure_2 === "y") {
+  if (typeof closure_2 === "string") {
     let int2rgbaResult = int2rgbaResult1;
     if (null != result) {
       int2rgbaResult = require(688) /* int2hslRaw */.int2rgba(result, 1);

@@ -79,7 +79,7 @@ const memoResult = importAllResult.memo(function RecommendationBanner(arg0) {
   let obj = importDefault(1416);
   const applicationIconSource = obj.getApplicationIconSource({ id: applicationId, icon: applicationIcon, bot: applicationBot, botIconFirst: true });
   importDefault(8045);
-  if (typeof applicationIconSource !== "Object") {
+  if (typeof applicationIconSource !== "number") {
     let uri;
     if (applicationIconSource != null) {
       uri = applicationIconSource.uri;

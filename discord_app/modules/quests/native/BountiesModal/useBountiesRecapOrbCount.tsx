@@ -55,7 +55,7 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
         if (result <= 0.1) {
           let obj = { count: 0, revealed: false };
         } else {
-          if (typeof enabled !== "find") {
+          if (typeof enabled !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let num2 = 0;

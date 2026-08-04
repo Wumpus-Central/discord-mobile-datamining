@@ -114,7 +114,7 @@ class VoiceChannelHeader {
     items3[0] = tmp14(require("Button").Icon, obj3);
     obj4 = { style: tmp.middle, children: null };
     tmp14Result = formatToPlainStringResult;
-    if (typeof formatToPlainStringResult !== "_iter") {
+    if (typeof formatToPlainStringResult === "string") {
       obj5 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-md/semibold", color: "text-overlay-light", children: null };
       obj5[4] = formatToPlainStringResult;
       tmp14Result = tmp14(require("Text").Text, obj5);
@@ -122,7 +122,7 @@ class VoiceChannelHeader {
     items4 = [, ];
     items4[0] = tmp14Result;
     tmp14Result1 = name;
-    if (typeof name !== "_iter") {
+    if (typeof name === "string") {
       obj6 = { lineClamp: 1, lineBreakMode: "tail", variant: "text-xs/medium", color: "text-overlay-light", children: null };
       obj6[4] = name;
       tmp14Result1 = tmp14(require("Text").Text, obj6);

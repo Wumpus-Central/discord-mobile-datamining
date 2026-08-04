@@ -23,12 +23,12 @@ function guildJoinRequestsIndex(joinRequestId) {
   let applicationStatus;
   let guildId;
   const items = [];
-  if (typeof StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_ID !== "find") {
+  if (typeof StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_ID !== "function") {
     HermesBuiltin.throwTypeError();
   }
   items.push("guild-join-request=" + joinRequestId.joinRequestId);
   ({ guildId, applicationStatus } = joinRequestId);
-  if (typeof StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS !== "find") {
+  if (typeof StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS !== "function") {
     HermesBuiltin.throwTypeError();
   }
   items.push("guild-" + guildId + "-" + applicationStatus);
@@ -105,7 +105,7 @@ prototype["getRequest"] = function getRequest(arg0) {
   return table3[arg0];
 };
 prototype["getRequests"] = function getRequests(guildId, applicationStatus) {
-  if (typeof StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS !== "find") {
+  if (typeof StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_STATUS !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const combined = "guild-" + guildId + "-" + applicationStatus;

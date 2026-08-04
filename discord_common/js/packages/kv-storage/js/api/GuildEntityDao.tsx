@@ -23,7 +23,7 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof GuildEntityDao !== "find") {
+  if (typeof GuildEntityDao !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(GuildEntityDao.prototype);
@@ -108,7 +108,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   let closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof outer1_3 !== "find") {
+    if (typeof outer1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(outer1_3.prototype);
@@ -118,7 +118,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
   const table = this.table;
-  if (typeof GuildEntityDaoTransaction !== "find") {
+  if (typeof GuildEntityDaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(GuildEntityDaoTransaction.prototype);
@@ -154,7 +154,7 @@ class GuildEntityDaoTransaction {
 const prototype2 = GuildEntityDaoTransaction.prototype;
 GuildEntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   const tableTransaction = new require(1912) /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
-  if (typeof GuildEntityDaoTransaction !== "find") {
+  if (typeof GuildEntityDaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(GuildEntityDaoTransaction.prototype);

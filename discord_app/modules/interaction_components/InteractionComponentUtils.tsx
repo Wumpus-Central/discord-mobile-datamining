@@ -21197,7 +21197,7 @@ function transformComponent(accessory, items) {
       let tmp45;
       if (null != accessory.emoji) {
         let emoji = accessory.emoji;
-        if (typeof getEmoji !== "find") {
+        if (typeof getEmoji !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj = { id: null, name: null, animated: null, src: null };
@@ -21240,7 +21240,7 @@ function transformComponent(accessory, items) {
         let tmp2;
         if (null != label.emoji) {
           const emoji = label.emoji;
-          if (typeof outer1_5 !== "find") {
+          if (typeof outer1_5 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           obj = { id: null, name: null, animated: null, src: null };
@@ -21770,9 +21770,9 @@ export const deserializeComponentUploadId = function deserializeComponentUploadI
     let tmp7 = null;
     if ("component-upload" === type) {
       tmp7 = null;
-      if (typeof tmp4.containerId !== "_iter") {
+      if (typeof tmp4.containerId === "string") {
         tmp7 = null;
-        if (typeof tmp4.uniqueId !== "_iter") {
+        if (typeof tmp4.uniqueId === "string") {
           tmp7 = parsed;
         }
       }

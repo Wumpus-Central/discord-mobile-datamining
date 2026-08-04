@@ -24,75 +24,28 @@ function GuildDirectoryNicknameUpsell(arg0) {
   function _handleSubmit() {
     const self = this;
     const tmp = first(function*() {
-      if (c5 === 2) {
+      const callback = tmp3;
+      outer1_2(null);
+      const obj1 = { nick: null };
+      obj1[0] = c3;
+      c3 = 1;
+      const obj2 = outer1_0(outer1_2[12]);
+      yield obj2.updateGuildSelfMember(outer1_0, obj1);
+      if (1 === tmp7) {
+        c3 = 0;
+        let closure_0 = callback2;
+        const aPIError = new outer1_0(outer1_2[13]).APIError(closure_0);
+        callback2(aPIError);
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const callback = tmp3;
-              let closure_0 = tmp7;
-              outer1_2(null);
-              const obj1 = { nick: null };
-              obj1[0] = c3;
-              c3 = 1;
-              let obj2 = outer1_0(outer1_2[12]);
-              c4 = 2;
-              c5 = 1;
-              obj2 = { value: null, done: false };
-              obj2[0] = obj2.updateGuildSelfMember(outer1_0, obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              closure_0 = callback2;
-              const aPIError = new outer1_0(outer1_2[13]).APIError(closure_0);
-              callback2(aPIError);
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              callback();
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp30) {
-          callback2 = tmp30;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp30;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        callback();
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     });
     const _handleSubmit = tmp;
     const apply = tmp.apply;

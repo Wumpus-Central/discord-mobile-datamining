@@ -303,93 +303,50 @@ function _saveLastUsedBackgroundOption() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      const dependencyMap = tmp2;
+      const PreloadedUserSettingsActionCreators = lib(outer1_2[9]).PreloadedUserSettingsActionCreators;
+      yield PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", (arg0) => {
+        arg0.videoBackgroundFilterDesktop = callback(tmp2[8]).getVideoBackgroundProtoFromOption(callback);
+      }, lib(outer1_2[9]).UserSettingsDelay.FREQUENT_USER_ACTION);
+      if (1 === tmp5) {
         if (arg0 === 1) {
+          let c4 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c4 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const dependencyMap = tmp2;
-              let lib2 = tmp5;
-              lib2 = undefined;
-              const PreloadedUserSettingsActionCreators = lib(outer1_2[9]).PreloadedUserSettingsActionCreators;
-              c3 = 1;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", (arg0) => {
-                arg0.videoBackgroundFilterDesktop = callback(tmp2[8]).getVideoBackgroundProtoFromOption(callback);
-              }, lib(outer1_2[9]).UserSettingsDelay.FREQUENT_USER_ACTION);
-              return obj1;
-            }
+          if (obj12.isCustomBackgroundOption(lib)) {
+            const HTTP = lib(530).HTTP;
+            let obj3 = { url: null, rejectWithError: false };
+            obj3[0] = closure_6.VIDEO_FILTER_ASSET_LAST_USED(lib.id);
+            let c3 = 2;
+            c4 = 1;
+            const obj4 = { value: null, done: false };
+            obj4[0] = HTTP.post(obj3);
+            return obj4;
           } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                if (obj12.isCustomBackgroundOption(lib)) {
-                  const HTTP = lib(530).HTTP;
-                  let obj3 = { url: null, rejectWithError: false };
-                  obj3[0] = closure_6.VIDEO_FILTER_ASSET_LAST_USED(lib.id);
-                  c3 = 2;
-                  c4 = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = HTTP.post(obj3);
-                  return obj4;
-                } else {
-                  obj3 = lib2(709);
-                  const obj5 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: null };
-                  obj5[1] = lib;
-                  obj3.dispatch(obj5);
-                  c4 = 3;
-                }
-                obj12 = lib(9084);
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              lib2 = arg1;
-              obj = lib2(709);
-              const obj6 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: null };
-              obj6[1] = lib2.body;
-              obj.dispatch(obj6);
-            }
+            obj3 = lib2(709);
+            const obj5 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: null };
+            obj5[1] = lib;
+            obj3.dispatch(obj5);
             c4 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
           }
-        } catch (tmp20) {
-          c4 = tmp;
-          throw tmp20;
+          obj12 = lib(9084);
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        lib2 = arg1;
+        const obj = lib2(709);
+        const obj6 = { type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: null };
+        obj6[1] = lib2.body;
+        obj.dispatch(obj6);
       }
+      return arg1;
     })();
   });
   const _saveLastUsedBackgroundOption = tmp;

@@ -586,8 +586,8 @@ class BaseActivityWebView {
           if (url != null) {
             const origin = url.origin;
           }
-          let tmp = typeof parsed === "ay";
-          if (typeof parsed !== "window") {
+          let tmp = typeof parsed === "object";
+          if (typeof parsed === "object") {
             tmp = null != origin;
           }
           if (tmp) {

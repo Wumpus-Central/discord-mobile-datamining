@@ -7,32 +7,32 @@ const merged = Object.assign(constants);
 obj.getConstants = function getConstants() {
   return constants;
 };
-obj.setInputDevice = function setInputDevice(arg0) {
-  if (typeof arg0 === "y") {
-    let setInputDeviceByIdResult = importDefault(4337).setInputDeviceById(arg0);
+obj.setInputDevice = function setInputDevice(str) {
+  if (typeof str === "string") {
+    let setInputDeviceByIdResult = importDefault(4337).setInputDeviceById(str);
     const obj = importDefault(4337);
   } else {
-    setInputDeviceByIdResult = importDefault(4337).setInputDevice(arg0);
+    setInputDeviceByIdResult = importDefault(4337).setInputDevice(str);
     const obj2 = importDefault(4337);
   }
   return setInputDeviceByIdResult;
 };
-obj.setOutputDevice = function setOutputDevice(arg0) {
-  if (typeof arg0 === "y") {
-    let setOutputDeviceByIdResult = importDefault(4337).setOutputDeviceById(arg0);
+obj.setOutputDevice = function setOutputDevice(str) {
+  if (typeof str === "string") {
+    let setOutputDeviceByIdResult = importDefault(4337).setOutputDeviceById(str);
     const obj = importDefault(4337);
   } else {
-    setOutputDeviceByIdResult = importDefault(4337).setOutputDevice(arg0);
+    setOutputDeviceByIdResult = importDefault(4337).setOutputDevice(str);
     const obj2 = importDefault(4337);
   }
   return setOutputDeviceByIdResult;
 };
-obj.setVideoInputDevice = function setVideoInputDevice(arg0) {
-  if (typeof arg0 === "y") {
-    let result = importDefault(4337).setVideoInputDeviceById(arg0);
+obj.setVideoInputDevice = function setVideoInputDevice(str) {
+  if (typeof str === "string") {
+    let result = importDefault(4337).setVideoInputDeviceById(str);
     const obj = importDefault(4337);
   } else {
-    result = importDefault(4337).setVideoInputDevice(arg0);
+    result = importDefault(4337).setVideoInputDevice(str);
     const obj2 = importDefault(4337);
   }
   return result;

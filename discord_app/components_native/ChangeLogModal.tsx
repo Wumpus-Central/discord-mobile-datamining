@@ -154,7 +154,7 @@ ListItem.prototype["render"] = function render() {
   const items = [callback(View, obj), ];
   obj = { style: tmp.listText, children: null };
   let childrenResult = children;
-  if (typeof children !== "three_button_mouse") {
+  if (typeof children === "function") {
     const obj1 = { style: null };
     obj1[0] = tmp.listText;
     childrenResult = children(obj1);

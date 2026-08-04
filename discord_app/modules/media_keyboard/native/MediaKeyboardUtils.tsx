@@ -145,132 +145,69 @@ function _handleAttachFile() {
       let c3;
       let c4;
       let c5;
-      if (v02 === 2) {
-        v02 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      const callback = tmp2;
+      ({ channel: c0, uploadLimit: c1, extensions: c2, onDismissKeyboard: c3, onRestoreKeyboard: c4, onSelectFiles: c5 } = lib);
+      yield "ct";
+      v0();
+      const obj2 = { type: null, channel_id: null, guild_id: null };
+      obj2[0] = constants2.ATTACH_FILE;
+      obj2[1] = lib.id;
+      obj2[2] = lib.guild_id;
+      callback(698).track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj2);
+      const obj8 = callback(698);
+      let obj3 = { pickMultiple: null, extensions: null };
+      obj3[0] = callback > 1;
+      obj3[1] = dependencyMap;
+      yield lib(10080).handleDocumentSelection(obj3);
+      if (2 === tmp5) {
         if (arg0 === 1) {
+          let v02 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          v02 = 3;
+          const obj5 = { value: null, done: true };
+          obj5[0] = arg1;
+          return obj5;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v02 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v02 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let dependencyMap = tmp5;
-              let callback = tmp2;
-              let lib;
-              callback = undefined;
-              dependencyMap = undefined;
-              v0 = undefined;
-              v02 = undefined;
-              let callback2;
-              ({ channel: c0, uploadLimit: c1, extensions: c2, onDismissKeyboard: c3, onRestoreKeyboard: c4, onSelectFiles: c5 } = lib);
-              let length;
-              let handleConnectionOpen;
-              v0 = 1;
+          const length = arg1;
+          v02();
+          if (null != length) {
+            if (length.length >= 1) {
+              const _Array = Array;
+              v0 = 3;
               v02 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v02 = 3;
-              let obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              v0();
-              let obj2 = { type: null, channel_id: null, guild_id: null };
-              obj2[0] = constants2.ATTACH_FILE;
-              obj2[1] = lib.id;
-              obj2[2] = lib.guild_id;
-              callback(698).track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj2);
-              const obj8 = callback(698);
-              let obj3 = { pickMultiple: null, extensions: null };
-              obj3[0] = callback > 1;
-              obj3[1] = dependencyMap;
-              v0 = 2;
-              v02 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = lib(10080).handleDocumentSelection(obj3);
-              return obj4;
-            }
-          } else {
-            if (2 === tmp5) {
-              if (arg0 === 1) {
-                v02 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                v02 = 3;
-                const obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
-              } else {
-                length = arg1;
-                v02();
-                if (null != length) {
-                  if (length.length >= 1) {
-                    const _Array = Array;
-                    v0 = 3;
-                    v02 = 1;
-                    const obj6 = { value: null, done: false };
-                    obj6[0] = Promise.all(Array.from(length).map((() => {
-                      let closure_0 = v3((arg0) => {
-                        let closure_0 = arg0;
-                        let c6 = 0;
-                        let c7 = 0;
-                        return (/* F119326 */ function*() { ... })();
-                      });
-                      return function() {
-                        const self = this;
-                        const apply = closure_0.apply;
-                        if (typeof apply === "unknown") {
-                          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                        } else {
-                          applyArgumentsResult = apply(self, arguments);
-                        }
-                        return applyArgumentsResult;
-                      };
-                    })()));
-                    return obj6;
+              const obj6 = { value: null, done: false };
+              obj6[0] = Promise.all(Array.from(length).map((() => {
+                let closure_0 = v3((arg0) => {
+                  let closure_0 = arg0;
+                  let c6 = 0;
+                  let c7 = 0;
+                  return (/* F119326 */ function*() { ... })();
+                });
+                return function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
                   }
-                }
-                v02 = 3;
-              }
-            } else if (arg0 === 1) {
-              v02 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              handleConnectionOpen = arg1;
-              callback2(handleConnectionOpen);
+                  return applyArgumentsResult;
+                };
+              })()));
+              return obj6;
             }
-            v02 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
           }
-        } catch (tmp15) {
-          v02 = tmp;
-          throw tmp15;
+          v02 = 3;
         }
+      } else if (arg0 === 1) {
+        v02 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        let handleConnectionOpen = arg1;
+        callback2(handleConnectionOpen);
       }
+      return arg1;
     })();
     iter.next();
     return iter;

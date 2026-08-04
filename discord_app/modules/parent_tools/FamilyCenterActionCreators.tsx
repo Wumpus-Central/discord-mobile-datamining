@@ -747,134 +747,34 @@ export default {
   },
   fetchLinkedUsers() {
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj4 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              obj4 = undefined;
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_7.FAMILY_CENTER_LINKED_USERS;
-              obj1[1] = outer1_0(530).rejectWithMigratedError();
-              dependencyMap = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            body = arg1.body;
-            obj4 = { linkedUsers: null, users: null };
-            obj4[0] = body.linked_users;
-            obj4[1] = body.users;
-            const obj5 = { type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" };
-            const merged = Object.assign(obj4);
-            obj4(709).dispatch(obj5);
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = obj4;
-            return obj;
-          }
-        } catch (tmp6) {
-          c3 = tmp;
-          throw tmp6;
-        }
-      }
+      let obj4 = tmp2;
+      let body = tmp5;
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_7.FAMILY_CENTER_LINKED_USERS;
+      obj1[1] = outer1_0(530).rejectWithMigratedError();
+      yield HTTP.get(obj1);
+      body = arg1.body;
+      obj4 = { linkedUsers: null, users: null };
+      obj4[0] = body.linked_users;
+      obj4[1] = body.users;
+      const obj5 = { type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" };
+      const merged = Object.assign(obj4);
+      obj4(709).dispatch(obj5);
+      return obj4;
     })();
   },
   getConnectionPrerequisites(closure_0, closure_1) {
     return callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = v0(outer1_2[6]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: true };
-              obj1[0] = outer1_7.FAMILY_CENTER_CONNECTION_PREREQUISITES;
-              const obj2 = { teen_id: null, link_code: null };
-              obj2[0] = v0;
-              obj2[1] = c1;
-              obj1[1] = obj2;
-              c1 = 1;
-              v0 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1.body;
-            return obj;
-          }
-        } catch (tmp5) {
-          v0 = tmp;
-          throw tmp5;
-        }
-      }
+      const HTTP = v0(outer1_2[6]).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: true };
+      obj1[0] = outer1_7.FAMILY_CENTER_CONNECTION_PREREQUISITES;
+      const obj2 = { teen_id: null, link_code: null };
+      obj2[0] = v0;
+      obj2[1] = c1;
+      obj1[1] = obj2;
+      yield HTTP.get(obj1);
+      return arg1.body;
     })();
   },
   setPendingConnection(teenId, linkCode) {
@@ -889,77 +789,26 @@ export default {
     let closure_0 = userId;
     let closure_1 = linkCode;
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj5 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              obj5 = undefined;
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = outer1_7.FAMILY_CENTER_LINKED_USERS;
-              const obj2 = { recipient_id: null, code: null };
-              obj2[0] = outer1_0;
-              obj2[1] = outer1_1;
-              obj1[1] = obj2;
-              obj1[2] = outer1_0(530).rejectWithMigratedError();
-              dependencyMap = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1.body;
-            obj5 = { linkedUsers: null, users: null };
-            obj5[0] = body.linked_users;
-            obj5[1] = body.users;
-            let obj6 = outer1_1(709);
-            obj6 = { type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" };
-            const merged = Object.assign(obj5);
-            obj6.dispatch(obj6);
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = obj5;
-            return obj;
-          }
-        } catch (tmp6) {
-          c3 = tmp;
-          throw tmp6;
-        }
-      }
+      let obj5 = tmp2;
+      let body = tmp5;
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = outer1_7.FAMILY_CENTER_LINKED_USERS;
+      const obj2 = { recipient_id: null, code: null };
+      obj2[0] = outer1_0;
+      obj2[1] = outer1_1;
+      obj1[1] = obj2;
+      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      yield HTTP.post(obj1);
+      body = arg1.body;
+      obj5 = { linkedUsers: null, users: null };
+      obj5[0] = body.linked_users;
+      obj5[1] = body.users;
+      let obj6 = outer1_1(709);
+      obj6 = { type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" };
+      const merged = Object.assign(obj5);
+      obj6.dispatch(obj6);
+      return obj5;
     })();
   },
   fetchTeenActivity(arg0) {
@@ -1168,136 +1017,81 @@ export default {
     let closure_2 = startId;
     const callback = event_id;
     return callback(function*() {
-      if (c9 === 2) {
-        c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c9 = 2;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_7 = tmp2;
-              let closure_6 = tmp5;
-              let teen_audit_log;
-              let obj4;
-              const HTTP = outer1_0(outer1_2[6]).HTTP;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_7.FAMILY_CENTER_TEEN_ACTIVITY_MORE(outer1_0, outer1_1, outer1_2, outer1_3);
-              obj1[1] = outer1_0(outer1_2[6]).rejectWithMigratedError();
-              c8 = 1;
-              c9 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c9 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c9 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            teen_audit_log = arg1.body.teen_audit_log;
-            obj4 = { teenId: null, rangeStartId: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
-            obj4[0] = teen_audit_log.teen_user_id;
-            obj4[1] = teen_audit_log.range_start_id;
-            obj4[2] = teen_audit_log.actions;
-            obj4[3] = teen_audit_log.users;
-            obj4[4] = teen_audit_log.guilds;
-            const top_user_activities = teen_audit_log.top_user_activities;
-            teen_audit_log = top_user_activities;
-            if (top_user_activities == null) {
-              teen_audit_log = [];
-            }
-            obj4[5] = teen_audit_log;
-            const top_guild_activities = teen_audit_log.top_guild_activities;
-            obj4 = top_guild_activities;
-            if (top_guild_activities == null) {
-              obj4 = [];
-            }
-            obj4[6] = obj4;
-            let amount;
-            if (teen_audit_log != null) {
-              const total_spend = teen_audit_log.total_spend;
-              if (total_spend != null) {
-                amount = total_spend.amount;
-              }
-            }
-            let c2 = amount;
-            if (amount == null) {
-              c2 = null;
-            }
-            obj4[7] = c2;
-            let currency;
-            if (teen_audit_log != null) {
-              const total_spend2 = teen_audit_log.total_spend;
-              if (total_spend2 != null) {
-                currency = total_spend2.currency;
-              }
-            }
-            let c3 = currency;
-            if (currency == null) {
-              c3 = null;
-            }
-            obj4[8] = c3;
-            let invoices;
-            if (teen_audit_log != null) {
-              invoices = teen_audit_log.invoices;
-            }
-            let getSettings = invoices;
-            if (invoices == null) {
-              getSettings = [];
-            }
-            obj4[9] = getSettings;
-            let gifts;
-            if (teen_audit_log != null) {
-              gifts = teen_audit_log.gifts;
-            }
-            let closure_5 = gifts;
-            if (gifts == null) {
-              closure_5 = [];
-            }
-            obj4[10] = closure_5;
-            obj = outer1_1(outer1_2[7]);
-            const obj5 = { action: null, selected_teen_id: null, action_display_type: null };
-            obj5[0] = outer1_5.LoadMore;
-            obj5[1] = teen_audit_log;
-            obj5[2] = obj4;
-            obj.track(outer1_6.FAMILY_CENTER_ACTION, obj5);
-            obj2 = outer1_1(outer1_2[5]);
-            const obj6 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS", familyCenterTeenActivity: null };
-            obj6[1] = obj4;
-            obj2.dispatch(obj6);
-            c9 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = teen_audit_log;
-            return obj7;
-          }
-        } catch (tmp34) {
-          c9 = tmp;
-          throw tmp34;
+      let closure_7 = tmp2;
+      let closure_6 = tmp5;
+      const HTTP = outer1_0(outer1_2[6]).HTTP;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_7.FAMILY_CENTER_TEEN_ACTIVITY_MORE(outer1_0, outer1_1, outer1_2, outer1_3);
+      obj1[1] = outer1_0(outer1_2[6]).rejectWithMigratedError();
+      yield HTTP.get(obj1);
+      let teen_audit_log = arg1.body.teen_audit_log;
+      let obj4 = { teenId: null, rangeStartId: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
+      obj4[0] = teen_audit_log.teen_user_id;
+      obj4[1] = teen_audit_log.range_start_id;
+      obj4[2] = teen_audit_log.actions;
+      obj4[3] = teen_audit_log.users;
+      obj4[4] = teen_audit_log.guilds;
+      const top_user_activities = teen_audit_log.top_user_activities;
+      teen_audit_log = top_user_activities;
+      if (top_user_activities == null) {
+        teen_audit_log = [];
+      }
+      obj4[5] = teen_audit_log;
+      const top_guild_activities = teen_audit_log.top_guild_activities;
+      obj4 = top_guild_activities;
+      if (top_guild_activities == null) {
+        obj4 = [];
+      }
+      obj4[6] = obj4;
+      if (teen_audit_log != null) {
+        const total_spend = teen_audit_log.total_spend;
+        if (total_spend != null) {
+          const amount = total_spend.amount;
         }
       }
+      let c2 = amount;
+      if (amount == null) {
+        c2 = null;
+      }
+      obj4[7] = c2;
+      if (teen_audit_log != null) {
+        const total_spend2 = teen_audit_log.total_spend;
+        if (total_spend2 != null) {
+          const currency = total_spend2.currency;
+        }
+      }
+      let c3 = currency;
+      if (currency == null) {
+        c3 = null;
+      }
+      obj4[8] = c3;
+      if (teen_audit_log != null) {
+        const invoices = teen_audit_log.invoices;
+      }
+      let getSettings = invoices;
+      if (invoices == null) {
+        getSettings = [];
+      }
+      obj4[9] = getSettings;
+      if (teen_audit_log != null) {
+        const gifts = teen_audit_log.gifts;
+      }
+      let closure_5 = gifts;
+      if (gifts == null) {
+        closure_5 = [];
+      }
+      obj4[10] = closure_5;
+      const obj = outer1_1(outer1_2[7]);
+      const obj5 = { action: null, selected_teen_id: null, action_display_type: null };
+      obj5[0] = outer1_5.LoadMore;
+      obj5[1] = teen_audit_log;
+      obj5[2] = obj4;
+      obj.track(outer1_6.FAMILY_CENTER_ACTION, obj5);
+      const obj2 = outer1_1(outer1_2[5]);
+      const obj6 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS", familyCenterTeenActivity: null };
+      obj6[1] = obj4;
+      obj2.dispatch(obj6);
+      return teen_audit_log;
     })();
   },
   selectTab(REQUESTS) {

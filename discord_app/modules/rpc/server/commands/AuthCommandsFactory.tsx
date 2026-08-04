@@ -197,7 +197,7 @@ function _authorizeWithPrompt() {
                       throwTypeErrorResult = c7;
                       closure_23 = [];
                       throwTypeErrorResult = c7;
-                      if (typeof c7 === "y") {
+                      if (typeof c7 === "string") {
                         throwTypeErrorResult = c7;
                         const parts = c7.split(" ");
                         closure_23 = parts.filter((arg0) => arg0.length > 0);
@@ -710,7 +710,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                 delete tmp2[tmp];
                 let Storage2 = socket(outer2_3[9]).Storage;
                 let result = Storage2.set(outer2_16, obj);
-                if (typeof _authorize !== "find") {
+                if (typeof _authorize !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 obj = { client_id: id, scope: IDENTIFY, response_type: "token", signal, isSocketRpcPrivateScope: false };

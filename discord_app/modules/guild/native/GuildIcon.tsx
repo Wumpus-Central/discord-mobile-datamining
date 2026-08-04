@@ -115,7 +115,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     let tmp16 = uri;
   } else if (null != tmp15) {
     uri = tmp15;
-    if (typeof tmp15 !== "Object") {
+    if (typeof tmp15 !== "number") {
       uri = tmp15.uri;
     }
     tmp16 = uri;
@@ -129,7 +129,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     let tmp19 = uri1;
   } else if (null != tmp4) {
     let uri2 = tmp4;
-    if (typeof tmp4 !== "Object") {
+    if (typeof tmp4 !== "number") {
       uri2 = tmp4.uri;
     }
     tmp19 = uri2;
@@ -175,7 +175,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
       let tmp11 = uri;
     } else if (null != tmp4) {
       uri = tmp4;
-      if (typeof tmp4 !== "Object") {
+      if (typeof tmp4 !== "number") {
         uri = tmp4.uri;
       }
       tmp11 = uri;
@@ -183,7 +183,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     if (!c14) {
       if (c13) {
         if (preloadAnimation) {
-          if (typeof tmp11 !== "_iter") {
+          if (typeof tmp11 === "string") {
             const obj3 = icon(flag[10]);
             icon(flag[10]).preload(tmp11).then(() => {
               const timerId = setTimeout(() => {

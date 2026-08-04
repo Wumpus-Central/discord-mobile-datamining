@@ -461,7 +461,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   return { value: "HermesInternal", done: null };
                 } else {
                   closure_1 = closure_0.button_urls[closure_2];
-                  if (typeof closure_1 === "_iter") {
+                  if (typeof closure_1 !== "string") {
                     v0 = 0;
                     c5 = 3;
                     return { value: "HermesInternal", done: null };

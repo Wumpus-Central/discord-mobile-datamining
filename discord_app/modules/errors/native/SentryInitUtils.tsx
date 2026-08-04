@@ -163,13 +163,13 @@ function filterError(event_id, originalException) {
   }
   if (flag) {
     event_id = event_id.event_id;
-    let tmp17 = typeof event_id === "y";
-    if (typeof event_id !== "_iter") {
+    let tmp17 = typeof event_id === "string";
+    if (typeof event_id === "string") {
       tmp17 = 0 !== event_id.length;
     }
     if (tmp17) {
       importDefault(1208).markCrashHandled(event_id);
-      let obj = importDefault(1208);
+      const obj = importDefault(1208);
     }
   } else {
     let originalException2;
@@ -197,97 +197,52 @@ function filterError(event_id, originalException) {
       trackCrash(event_id, originalException, false);
     }
     return callback(function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let closure_1 = tmp3;
+      let closure_0 = tmp3;
+      let c2 = 1;
+      const ZoomedInTelemetry = outer1_0(table[6]).ZoomedInTelemetry;
+      const items = [ZoomedInTelemetry.flushNow(), ];
+      const promise = new Promise((arg0) => setTimeout(arg0, 200));
+      items[1] = promise;
+      yield Promise.race(items);
+      if (1 === tmp7) {
+        c2 = 0;
+        outer1_19(outer1_0, outer1_1);
+        let c4 = 3;
+      } else if (2 === tmp7) {
         if (arg0 === 1) {
+          c4 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c2 = 0;
+          c4 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+          table = 3;
+          c4 = 1;
+          const obj3 = { value: null, done: false };
+          obj3[0] = (function maybeBackfillMissingBreadcrumbsFromTelemetryRing(closure_0) {
+            const self = this;
+            const apply = closure_15.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
-              let closure_1 = tmp3;
-              let closure_0 = tmp3;
-              let c2 = 1;
-              const ZoomedInTelemetry = outer1_0(table[6]).ZoomedInTelemetry;
-              const items = [ZoomedInTelemetry.flushNow(), ];
-              const promise = new Promise((arg0) => setTimeout(arg0, 200));
-              items[1] = promise;
-              table = 2;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = Promise.race(items);
-              return obj1;
+              applyArgumentsResult = apply(self, arguments);
             }
-          } else {
-            if (1 === tmp7) {
-              c2 = 0;
-              outer1_19(outer1_0, outer1_1);
-              c4 = 3;
-            } else if (2 === tmp7) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c2 = 0;
-                c4 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                table = 3;
-                c4 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = (function maybeBackfillMissingBreadcrumbsFromTelemetryRing(closure_0) {
-                  const self = this;
-                  const apply = closure_15.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(closure_0);
-                return obj3;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c2 = 0;
-            }
-            c2 = 0;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp17) {
-          if (tmp4 === c2) {
-            c4 = tmp2;
-            throw tmp17;
-          } else {
-            table = tmp;
-          }
+            return applyArgumentsResult;
+          })(closure_0);
+          return obj3;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c2 = 0;
       }
+      c2 = 0;
+      return arg1;
     })();
   }
   return null;
@@ -310,7 +265,7 @@ function getCrashErrorMessage(exception) {
       prop = extra2.persisted_error_message;
     }
     let message;
-    if (typeof prop !== "_iter") {
+    if (typeof prop === "string") {
       if (prop.length > 0) {
         message = prop;
       }
@@ -340,7 +295,7 @@ function getCrashErrorMessage(exception) {
     }
     if (message == null) {
       let tmp2;
-      if (typeof prop1 !== "_iter") {
+      if (typeof prop1 === "string") {
         if (prop1.length > 0) {
           tmp2 = prop1;
         }
@@ -366,7 +321,7 @@ function getErrorStackTrace(exception) {
       prop = extra2.persisted_error_stack;
     }
     let tmp6;
-    if (typeof prop !== "_iter") {
+    if (typeof prop === "string") {
       if (prop.length > 0) {
         tmp6 = prop;
       }
@@ -393,7 +348,7 @@ function getErrorStackTrace(exception) {
       prop1 = extra.persisted_error_stack;
     }
     let tmp4;
-    if (typeof prop1 !== "_iter") {
+    if (typeof prop1 === "string") {
       if (prop1.length > 0) {
         tmp4 = prop1;
       }
@@ -440,8 +395,8 @@ function trackCrash(event, hint, arg2) {
     const _Math = Math;
     if (Math.random() > num) {
       const event_id = event.event_id;
-      tmp7 = typeof event_id === "y";
-      if (typeof event_id !== "_iter") {
+      tmp7 = typeof event_id === "string";
+      if (typeof event_id === "string") {
         tmp7 = 0 !== event_id.length;
       }
       if (tmp7) {
@@ -461,7 +416,7 @@ function trackCrash(event, hint, arg2) {
   const timestamp = event.timestamp;
   let result;
   if (null != timestamp) {
-    if (typeof timestamp !== "V") {
+    if (typeof timestamp === "number") {
       const _isNaN = isNaN;
       if (!isNaN(timestamp)) {
         result = 1000 * timestamp;
@@ -470,7 +425,7 @@ function trackCrash(event, hint, arg2) {
     const _Date = Date;
     if (timestamp instanceof Date) {
       result = timestamp.getTime();
-    } else if (typeof timestamp !== "_iter") {
+    } else if (typeof timestamp === "string") {
       const _Date3 = Date;
       const parsed = Date.parse(timestamp);
       const _Number = Number;
@@ -495,7 +450,7 @@ function trackCrash(event, hint, arg2) {
     obj[2] = result;
     const native_exit_reason = extra.native_exit_reason;
     let tmp27 = null;
-    if (typeof native_exit_reason !== "_iter") {
+    if (typeof native_exit_reason === "string") {
       tmp27 = null;
       if (native_exit_reason.length > 0) {
         tmp27 = native_exit_reason;
@@ -504,7 +459,7 @@ function trackCrash(event, hint, arg2) {
     obj[3] = tmp27;
     const prop1 = extra.native_exit_description;
     let tmp28 = null;
-    if (typeof prop1 !== "_iter") {
+    if (typeof prop1 === "string") {
       tmp28 = null;
       if (prop1.length > 0) {
         tmp28 = prop1;
@@ -513,7 +468,7 @@ function trackCrash(event, hint, arg2) {
     obj[4] = tmp28;
     const prop2 = extra.native_tombstone_hash;
     let tmp29 = null;
-    if (typeof prop2 !== "_iter") {
+    if (typeof prop2 === "string") {
       tmp29 = null;
       if (prop2.length > 0) {
         tmp29 = prop2;
@@ -522,7 +477,7 @@ function trackCrash(event, hint, arg2) {
     obj[5] = tmp29;
     const prop3 = extra.native_tombstone_cause;
     let tmp30 = null;
-    if (typeof prop3 !== "_iter") {
+    if (typeof prop3 === "string") {
       tmp30 = null;
       if (prop3.length > 0) {
         tmp30 = prop3;
@@ -531,7 +486,7 @@ function trackCrash(event, hint, arg2) {
     obj[6] = tmp30;
     const native_tombstone = extra.native_tombstone;
     let tmp31 = null;
-    if (typeof native_tombstone !== "_iter") {
+    if (typeof native_tombstone === "string") {
       tmp31 = null;
       if (native_tombstone.length > 0) {
         tmp31 = native_tombstone;
@@ -540,7 +495,7 @@ function trackCrash(event, hint, arg2) {
     obj[7] = tmp31;
     const prop4 = extra.native_tombstone_group_by;
     let tmp32 = null;
-    if (typeof prop4 !== "_iter") {
+    if (typeof prop4 === "string") {
       tmp32 = null;
       if (prop4.length > 0) {
         tmp32 = prop4;
@@ -549,7 +504,7 @@ function trackCrash(event, hint, arg2) {
     obj[8] = tmp32;
     const prop5 = extra.native_tombstone_origin;
     let tmp33 = null;
-    if (typeof prop5 !== "_iter") {
+    if (typeof prop5 === "string") {
       tmp33 = null;
       if (prop5.length > 0) {
         tmp33 = prop5;
@@ -560,7 +515,7 @@ function trackCrash(event, hint, arg2) {
     obj[11] = getErrorStackTrace(event);
     const prop6 = extra.persisted_error_message;
     let tmp36 = null;
-    if (typeof prop6 !== "_iter") {
+    if (typeof prop6 === "string") {
       tmp36 = null;
       if (prop6.length > 0) {
         tmp36 = prop6;
@@ -569,7 +524,7 @@ function trackCrash(event, hint, arg2) {
     obj[12] = tmp36;
     const prop7 = extra.persisted_error_stack;
     let tmp37 = null;
-    if (typeof prop7 !== "_iter") {
+    if (typeof prop7 === "string") {
       tmp37 = null;
       if (prop7.length > 0) {
         tmp37 = prop7;
@@ -594,8 +549,8 @@ function trackCrash(event, hint, arg2) {
     const tmp22 = level;
   }
   const event_id2 = event.event_id;
-  let tmp39 = typeof event_id2 === "y";
-  if (typeof event_id2 !== "_iter") {
+  let tmp39 = typeof event_id2 === "string";
+  if (typeof event_id2 === "string") {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {

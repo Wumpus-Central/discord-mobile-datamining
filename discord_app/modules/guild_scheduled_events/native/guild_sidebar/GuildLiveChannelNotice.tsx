@@ -301,7 +301,7 @@ obj.react = require("inlineChannelMentionReact").inlineChannelMentionReact;
 obj.channelMention = obj;
 obj.guild = {
   react(content, output, state) {
-    if (typeof content.content === "y") {
+    if (typeof content.content === "string") {
       content = content.content;
     } else {
       content = require(9471) /* smartOutput */.smartOutput(content, output, state);

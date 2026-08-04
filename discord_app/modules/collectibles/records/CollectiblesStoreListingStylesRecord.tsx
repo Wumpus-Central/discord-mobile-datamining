@@ -27,7 +27,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     const tmp = callback2(6920);
     return tmp(callback(688).int2hex(color));
   });
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp5 = new prototype("Trying to call a non-function", confetti_colors, prototype, new.target);

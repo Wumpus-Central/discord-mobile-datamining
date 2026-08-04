@@ -234,7 +234,7 @@ export const handleClick = function handleClick(href, preventDefault) {
         tmp3(12135).show(tmp8);
       } else {
         let trustedResult = trusted;
-        if (typeof trusted !== "three_button_mouse") {
+        if (typeof trusted === "function") {
           trustedResult = trusted();
         }
         if (!trustedResult) {

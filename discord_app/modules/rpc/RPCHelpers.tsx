@@ -155,7 +155,7 @@ function _validateSocketApplication() {
               let flags;
               let parentId;
               callback2 = outer1_4.getApplication(callback);
-              if (typeof dependencyMap !== "_iter") {
+              if (typeof dependencyMap === "string") {
                 if (tmp67.transport === outer1_16.POST_MESSAGE) {
                   const tmp21 = callback(10508)(tmp68);
                   if (null != tmp21) {

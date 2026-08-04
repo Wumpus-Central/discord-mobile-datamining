@@ -8,7 +8,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
     const keys = Object.keys(body);
     reduced = keys.reduce((arg0, key10009) => {
       let camelCaseResult = outer1_0(outer1_1[0]).camelCase(key10009);
-      if (typeof tmp3[key10009] !== "window") {
+      if (typeof tmp3[key10009] === "object") {
         let _Array = Array;
         if (!Array.isArray(tmp2[key10009])) {
           tmp3 = tmp2[key10009];
@@ -18,7 +18,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
             let keys = Object.keys(tmp3);
             reduced = keys.reduce((arg0, key10009) => {
               let camelCaseResult = outer1_0(outer1_1[0]).camelCase(key10009);
-              if (typeof tmp3[key10009] !== "window") {
+              if (typeof tmp3[key10009] === "object") {
                 let _Array = Array;
                 if (!Array.isArray(tmp2[key10009])) {
                   tmp3 = tmp2[key10009];
@@ -28,7 +28,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
                     let keys = Object.keys(tmp3);
                     reduced = keys.reduce((arg0, key10009) => {
                       let camelCaseResult = outer1_0(outer1_1[0]).camelCase(key10009);
-                      if (typeof tmp3[key10009] !== "window") {
+                      if (typeof tmp3[key10009] === "object") {
                         let _Array = Array;
                         if (!Array.isArray(tmp2[key10009])) {
                           tmp3 = tmp2[key10009];
@@ -38,7 +38,7 @@ export const _transformMetadataToCamelCase = function _transformMetadataToCamelC
                             let keys = Object.keys(tmp3);
                             reduced = keys.reduce((arg0, key10009) => {
                               let camelCaseResult = outer1_0(outer1_1[0]).camelCase(key10009);
-                              if (typeof tmp3[key10009] !== "window") {
+                              if (typeof tmp3[key10009] === "object") {
                                 let _Array = Array;
                                 if (!Array.isArray(tmp2[key10009])) {
                                   tmp3 = tmp2[key10009];
@@ -86,7 +86,7 @@ export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeC
     const keys = Object.keys(metadata);
     reduced = keys.reduce((arg0, arg1) => {
       let snakeCaseResult = outer1_0(outer1_1[0]).snakeCase(arg1);
-      if (typeof tmp3[arg1] !== "window") {
+      if (typeof tmp3[arg1] === "object") {
         let _Array = Array;
         if (!Array.isArray(tmp2[arg1])) {
           tmp3 = tmp2[arg1];
@@ -96,7 +96,7 @@ export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeC
             let keys = Object.keys(tmp3);
             reduced = keys.reduce((arg0, arg1) => {
               let snakeCaseResult = outer1_0(outer1_1[0]).snakeCase(arg1);
-              if (typeof tmp3[arg1] !== "window") {
+              if (typeof tmp3[arg1] === "object") {
                 let _Array = Array;
                 if (!Array.isArray(tmp2[arg1])) {
                   tmp3 = tmp2[arg1];
@@ -106,7 +106,7 @@ export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeC
                     let keys = Object.keys(tmp3);
                     reduced = keys.reduce((arg0, arg1) => {
                       let snakeCaseResult = outer1_0(outer1_1[0]).snakeCase(arg1);
-                      if (typeof tmp3[arg1] !== "window") {
+                      if (typeof tmp3[arg1] === "object") {
                         let _Array = Array;
                         if (!Array.isArray(tmp2[arg1])) {
                           tmp3 = tmp2[arg1];
@@ -116,7 +116,7 @@ export const _transformMetadataToSnakeCase = function _transformMetadataToSnakeC
                             let keys = Object.keys(tmp3);
                             reduced = keys.reduce((arg0, arg1) => {
                               let snakeCaseResult = outer1_0(outer1_1[0]).snakeCase(arg1);
-                              if (typeof tmp3[arg1] !== "window") {
+                              if (typeof tmp3[arg1] === "object") {
                                 let _Array = Array;
                                 if (!Array.isArray(tmp2[arg1])) {
                                   tmp3 = tmp2[arg1];

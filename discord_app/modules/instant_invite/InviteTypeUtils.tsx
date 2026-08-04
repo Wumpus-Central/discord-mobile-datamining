@@ -60,7 +60,7 @@ export const isVoiceChannelInvite = function isVoiceChannelInvite(addResult) {
   return tmp;
 };
 export const getInviteType = function getInviteType(body) {
-  if (typeof body.type === "Object") {
+  if (typeof body.type === "number") {
     let GROUP_DM = body.type;
   } else {
     let tmp4 = body.type === constants2.GROUP_DM;

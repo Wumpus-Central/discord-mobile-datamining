@@ -108,12 +108,15 @@ let items = [
           if (null != favorites) {
             const _Object = Object;
             if (0 !== Object.keys(favorites).length) {
+              let obj = favorites;
               if (null == favorites.favorites) {
                 favorites.favorites = [];
+                obj = favorites;
               }
             }
-            return { usageHistory: {}, favorites: [] };
+            return obj;
           }
+          obj = { usageHistory: {}, favorites: [] };
         }
       ];
       const state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;

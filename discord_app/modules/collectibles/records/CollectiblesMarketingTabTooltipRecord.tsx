@@ -9,7 +9,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);
   ({ dismissible_content: obj.dismissibleContent, ref_target_background: obj.refTargetBackground, badge_icon: obj.badgeIcon, badge_text: obj.badgeText, show_hover_gradient: obj.showHoverGradient } = arg0);
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(prototype.prototype);

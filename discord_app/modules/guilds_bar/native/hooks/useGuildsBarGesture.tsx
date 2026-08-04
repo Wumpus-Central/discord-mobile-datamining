@@ -562,66 +562,20 @@ export default function useGuildsBarGesture() {
                       }
                       obj.moveById(id, tmp2, tmp6, closure_5);
                       node2(function*() {
-                        if (v0 === 2) {
+                        let c3 = 1;
+                        const obj1 = v0(outer1_2[22]);
+                        yield obj1.saveGuildFolders(outer1_7.getCompatibleGuildFolders());
+                        if (1 === tmp6) {
+                          c3 = 0;
                           v0 = 3;
-                          HermesBuiltin.throwTypeError();
-                        } else if (tmp5 === 3) {
-                          if (arg0 === 1) {
-                            throw arg1;
-                          } else if (arg0 === 2) {
-                            let obj = { value: null, done: true };
-                            obj[0] = arg1;
-                            return obj;
-                          } else {
-                            return { value: "HermesInternal", done: null };
-                          }
-                        } else {
-                          try {
-                            v0 = 2;
-                            if (0 === c1) {
-                              if (arg0 === 1) {
-                                v0 = 3;
-                                throw arg1;
-                              } else if (arg0 === 2) {
-                                v0 = 3;
-                                obj = { value: null, done: true };
-                                obj[0] = arg1;
-                                return obj;
-                              } else {
-                                let c3 = 1;
-                                let obj1 = v0(outer1_2[22]);
-                                c1 = 2;
-                                v0 = 1;
-                                obj1 = { value: null, done: false };
-                                obj1[0] = obj1.saveGuildFolders(outer1_7.getCompatibleGuildFolders());
-                                return obj1;
-                              }
-                            } else {
-                              if (1 === tmp6) {
-                                c3 = 0;
-                                v0 = 3;
-                              } else if (arg0 === 1) {
-                                v0 = 3;
-                                throw arg1;
-                              } else if (arg0 !== 2) {
-                                c3 = 0;
-                              }
-                              c3 = 0;
-                              v0 = 3;
-                              obj = { value: null, done: true };
-                              obj[0] = arg1;
-                              return obj;
-                            }
-                          } catch (tmp11) {
-                            let closure_2 = tmp11;
-                            if (tmp3 === c3) {
-                              v0 = tmp2;
-                              throw tmp11;
-                            } else {
-                              c1 = tmp;
-                            }
-                          }
+                        } else if (arg0 === 1) {
+                          v0 = 3;
+                          throw arg1;
+                        } else if (arg0 !== 2) {
+                          c3 = 0;
                         }
+                        c3 = 0;
+                        return arg1;
                       })();
                     }
                     const state = outer1_9.getState();

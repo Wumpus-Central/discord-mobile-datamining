@@ -74,7 +74,7 @@ export default function AppLauncherUserOption(option) {
       channel,
       onUserPress(user) {
         user = user.user;
-        if (typeof user === "y") {
+        if (typeof user === "string") {
           callback2(user);
         } else {
           callback2(user.id);

@@ -102,92 +102,43 @@ function _setGuildIncidentActions() {
     let c6 = 0;
     let c5 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let tmp5 = callback2;
-              if (!callback2) {
-                tmp5 = tmp26;
-              }
-              let createGuildRecordFromRust = tmp27;
-              if (collectGuildAnalyticsMetadata == null) {
-                createGuildRecordFromRust = c5;
-              }
-              let toISOStringResult = null;
-              if (tmp5) {
-                let obj2 = callback2(3867)();
-                toISOStringResult = obj2.add(tmp8, "hours").toISOString();
-                const addResult = obj2.add(tmp8, "hours");
-              }
-              let tmp12 = null;
-              if (callback2) {
-                tmp12 = toISOStringResult;
-              }
-              const obj1 = { invites_disabled_until: null, dms_disabled_until: null, lockdown_duration_hours: null };
-              obj1[0] = tmp12;
-              let tmp13 = null;
-              if (dependencyMap) {
-                tmp13 = toISOStringResult;
-              }
-              obj1[1] = tmp13;
-              let tmp14 = null;
-              if (tmp5) {
-                tmp14 = tmp8;
-              }
-              obj1[2] = tmp14;
-              const HTTP = callback(530).HTTP;
-              obj2 = { url: null, body: null, rejectWithError: null };
-              obj2[0] = outer1_7.GUILD_INCIDENT_ACTIONS(callback);
-              obj2[1] = obj1;
-              obj2[2] = callback(530).rejectWithMigratedError();
-              c6 = 1;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.put(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp18) {
-          c5 = tmp;
-          throw tmp18;
-        }
+      let tmp5 = callback2;
+      if (!callback2) {
+        tmp5 = tmp26;
       }
+      let createGuildRecordFromRust = tmp27;
+      if (collectGuildAnalyticsMetadata == null) {
+        createGuildRecordFromRust = c5;
+      }
+      let toISOStringResult = null;
+      if (tmp5) {
+        let obj2 = callback2(3867)();
+        toISOStringResult = obj2.add(tmp8, "hours").toISOString();
+        const addResult = obj2.add(tmp8, "hours");
+      }
+      let tmp12 = null;
+      if (callback2) {
+        tmp12 = toISOStringResult;
+      }
+      const obj1 = { invites_disabled_until: null, dms_disabled_until: null, lockdown_duration_hours: null };
+      obj1[0] = tmp12;
+      let tmp13 = null;
+      if (dependencyMap) {
+        tmp13 = toISOStringResult;
+      }
+      obj1[1] = tmp13;
+      let tmp14 = null;
+      if (tmp5) {
+        tmp14 = tmp8;
+      }
+      obj1[2] = tmp14;
+      const HTTP = callback(530).HTTP;
+      obj2 = { url: null, body: null, rejectWithError: null };
+      obj2[0] = outer1_7.GUILD_INCIDENT_ACTIONS(callback);
+      obj2[1] = obj1;
+      obj2[2] = callback(530).rejectWithMigratedError();
+      yield HTTP.put(obj2);
+      return arg1;
     })();
   });
   const _setGuildIncidentActions = tmp;

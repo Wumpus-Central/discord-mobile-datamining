@@ -386,7 +386,7 @@ class ChannelListImpl {
     }
     obj.recentsSectionNumber = RECENTS;
     obj.favoritesSectionNumber = FAVORITES;
-    if (typeof ChannelListCategoryNoParent !== "find") {
+    if (typeof ChannelListCategoryNoParent !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -414,7 +414,7 @@ class ChannelListImpl {
     } else {
       tmp24 = new.target;
       tmp23 = ChannelListRecentsCategory;
-      if (typeof ChannelListRecentsCategory !== "find") {
+      if (typeof ChannelListRecentsCategory !== "function") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -449,7 +449,7 @@ class ChannelListImpl {
     obj.recentsCategory = tmp31;
     throwTypeErrorResult2 = new.target;
     tmp35 = ChannelListVoiceChannelsCategory;
-    if (typeof ChannelListVoiceChannelsCategory !== "find") {
+    if (typeof ChannelListVoiceChannelsCategory !== "function") {
       str3 = "Trying to call a non-function";
       throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
@@ -473,7 +473,7 @@ class ChannelListImpl {
     obj.voiceChannelsCategory = tmp37;
     tmp39 = ChannelListGuildActionSection;
     tmp40 = items3.length > 0;
-    if (typeof ChannelListGuildActionSection !== "find") {
+    if (typeof ChannelListGuildActionSection !== "function") {
       str4 = "Trying to call a non-function";
       throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
     }
@@ -487,7 +487,7 @@ class ChannelListImpl {
     }
     obj.guildActionSection = obj3;
     tmp44 = ChannelListChannelNoticeSection;
-    if (typeof ChannelListChannelNoticeSection !== "find") {
+    if (typeof ChannelListChannelNoticeSection !== "function") {
       str5 = "Trying to call a non-function";
       throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
     }

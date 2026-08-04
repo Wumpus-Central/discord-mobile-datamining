@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo((visible) => {
       const tmp17 = dependencyMap;
     } else if ("onError" === type) {
       let str = value;
-      if (typeof value !== "V") {
+      if (typeof value === "number") {
         str = value.toString();
       }
       str = "2";

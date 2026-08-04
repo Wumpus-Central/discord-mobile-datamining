@@ -61,7 +61,7 @@ class AssetChooser extends PureComponent {
               obj2 = undefined;
               base64 = undefined;
               ({ size, onChooseAsset: obj2 } = outer1_0.props);
-              if (typeof size === "Object") {
+              if (typeof size === "number") {
                 const obj1 = { size: null };
                 obj1[0] = size;
                 let tmp15 = obj1;

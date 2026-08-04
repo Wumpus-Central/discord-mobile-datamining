@@ -25,7 +25,7 @@ function upsertAccount(accountId, accessToken) {
     const _HermesInternal2 = HermesInternal;
     tmp4.info("Updated account access token: " + accountId);
   } else {
-    if (typeof SpotifySocket !== "find") {
+    if (typeof SpotifySocket !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SpotifySocket.prototype);
@@ -798,13 +798,13 @@ prototype["handleMessage"] = function handleMessage(data) {
   let payloads;
   let uri;
   data = data.data;
-  if (typeof data !== "_iter") {
+  if (typeof data === "string") {
     const _JSON = JSON;
     const parsed = JSON.parse(data);
     ({ uri, payloads } = parsed);
     if (parsed.type === message) {
       const self = this;
-      if (typeof uri !== "_iter") {
+      if (typeof uri === "string") {
         if (uri.startsWith(c22)) {
           const _decodeURIComponent = decodeURIComponent;
           self.connectionId = decodeURIComponent(uri.split(tmp15)[1]);

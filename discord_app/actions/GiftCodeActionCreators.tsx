@@ -224,91 +224,43 @@ export default {
     }
     const importDefault = tmp;
     return callback(function*() {
-      if (c5 === 2) {
+      let closure_1 = tmp3;
+      const obj1 = { type: "GIFT_CODES_FETCH", skuId: null, subscriptionPlanId: null };
+      obj1[1] = outer1_0;
+      obj1[2] = outer1_1;
+      outer1_1(outer1_2[6]).dispatch(obj1);
+      let c3 = 1;
+      const HTTP = outer1_0(outer1_2[11]).HTTP;
+      const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
+      obj2[0] = outer1_8.USER_GIFT_CODES;
+      let obj3 = { sku_id: null, subscription_plan_id: null };
+      obj3[0] = outer1_0;
+      obj3[1] = outer1_1;
+      obj2[1] = obj3;
+      yield HTTP.get(obj2);
+      if (1 === tmp7) {
+        c3 = 0;
+        obj3 = outer1_1(outer1_2[6]);
+        const obj5 = { type: "GIFT_CODES_FETCH_FAILURE", skuId: null, subscriptionPlanId: null };
+        obj5[1] = body;
+        obj5[2] = closure_1;
+        obj3.dispatch(obj5);
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp3;
-              let body = tmp7;
-              body = undefined;
-              const obj1 = { type: "GIFT_CODES_FETCH", skuId: null, subscriptionPlanId: null };
-              obj1[1] = outer1_0;
-              obj1[2] = outer1_1;
-              outer1_1(outer1_2[6]).dispatch(obj1);
-              let c3 = 1;
-              const HTTP = outer1_0(outer1_2[11]).HTTP;
-              const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
-              obj2[0] = outer1_8.USER_GIFT_CODES;
-              let obj3 = { sku_id: null, subscription_plan_id: null };
-              obj3[0] = outer1_0;
-              obj3[1] = outer1_1;
-              obj2[1] = obj3;
-              c4 = 2;
-              c5 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj2);
-              return obj4;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              obj3 = outer1_1(outer1_2[6]);
-              const obj5 = { type: "GIFT_CODES_FETCH_FAILURE", skuId: null, subscriptionPlanId: null };
-              obj5[1] = body;
-              obj5[2] = closure_1;
-              obj3.dispatch(obj5);
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              obj = outer1_1(outer1_2[6]);
-              const obj6 = { type: "GIFT_CODES_FETCH_SUCCESS", giftCodes: null, skuId: null, subscriptionPlanId: null };
-              obj6[1] = body.body;
-              obj6[2] = body;
-              obj6[3] = closure_1;
-              obj.dispatch(obj6);
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          }
-        } catch (tmp23) {
-          let closure_2 = tmp23;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp23;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        body = arg1;
+        const obj = outer1_1(outer1_2[6]);
+        const obj6 = { type: "GIFT_CODES_FETCH_SUCCESS", giftCodes: null, skuId: null, subscriptionPlanId: null };
+        obj6[1] = body.body;
+        obj6[2] = body;
+        obj6[3] = closure_1;
+        obj.dispatch(obj6);
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     })();
   },
   createGiftCode(skuId, subscriptionPlanId, giftStyle) {
@@ -324,173 +276,67 @@ export default {
     }
     const dependencyMap = tmp2;
     return callback(function*() {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp3;
-              let closure_0 = tmp7;
-              closure_0 = undefined;
-              const obj1 = { type: "GIFT_CODE_CREATE_START", skuId: null, subscriptionPlanId: null };
-              obj1[1] = outer1_0;
-              obj1[2] = outer1_1;
-              outer1_1(outer1_2[6]).dispatch(obj1);
-              let c3 = 1;
-              const HTTP = outer1_0(outer1_2[11]).HTTP;
-              const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-              obj2[0] = outer1_8.USER_GIFT_CODE_CREATE;
-              const obj3 = { sku_id: null, subscription_plan_id: null, gift_style: null };
-              obj3[0] = outer1_0;
-              obj3[1] = outer1_1;
-              obj3[2] = outer1_2;
-              obj2[1] = obj3;
-              c4 = 2;
-              c5 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = HTTP.post(obj2);
-              return obj4;
-            }
-          } else if (1 === tmp7) {
-            c3 = 0;
-            obj4 = outer1_1(outer1_2[6]);
-            const obj5 = { type: "GIFT_CODE_CREATE_FAILURE", skuId: null, subscriptionPlanId: null };
-            obj5[1] = closure_0;
-            obj5[2] = closure_1;
-            obj4.dispatch(obj5);
-            c5 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            closure_0 = arg1;
-            obj = outer1_1(outer1_2[6]);
-            const obj7 = { type: "GIFT_CODE_CREATE_SUCCESS", giftCode: null };
-            obj7[1] = closure_0.body;
-            obj.dispatch(obj7);
-            c3 = 0;
-            c5 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = closure_0.body;
-            return obj8;
-          }
-        } catch (tmp22) {
-          let closure_2 = tmp22;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp22;
-          } else {
-            c4 = tmp;
-          }
-        }
-      }
+      let closure_1 = tmp3;
+      const obj1 = { type: "GIFT_CODE_CREATE_START", skuId: null, subscriptionPlanId: null };
+      obj1[1] = outer1_0;
+      obj1[2] = outer1_1;
+      outer1_1(outer1_2[6]).dispatch(obj1);
+      let c3 = 1;
+      const HTTP = outer1_0(outer1_2[11]).HTTP;
+      const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
+      obj2[0] = outer1_8.USER_GIFT_CODE_CREATE;
+      const obj3 = { sku_id: null, subscription_plan_id: null, gift_style: null };
+      obj3[0] = outer1_0;
+      obj3[1] = outer1_1;
+      obj3[2] = outer1_2;
+      obj2[1] = obj3;
+      yield HTTP.post(obj2);
+      c3 = 0;
+      const obj4 = outer1_1(outer1_2[6]);
+      const obj5 = { type: "GIFT_CODE_CREATE_FAILURE", skuId: null, subscriptionPlanId: null };
+      obj5[1] = closure_0;
+      obj5[2] = closure_1;
+      obj4.dispatch(obj5);
+      closure_0 = yield "HermesInternal";
+      const obj = outer1_1(outer1_2[6]);
+      const obj7 = { type: "GIFT_CODE_CREATE_SUCCESS", giftCode: null };
+      obj7[1] = closure_0.body;
+      obj.dispatch(obj7);
+      c3 = 0;
+      return closure_0.body;
     })();
   },
   revokeGiftCode(code) {
     let closure_0 = code;
     return callback(function*() {
-      if (c4 === 2) {
+      let closure_0 = tmp3;
+      const obj1 = { type: "GIFT_CODE_REVOKE", code: null };
+      obj1[1] = outer1_0;
+      v0(outer1_2[6]).dispatch(obj1);
+      let c3 = 1;
+      const HTTP = outer1_0(outer1_2[11]).HTTP;
+      const obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
+      obj2[0] = outer1_8.USER_GIFT_CODE_REVOKE(outer1_0);
+      yield HTTP.del(obj2);
+      if (1 === tmp7) {
+        c3 = 0;
+        const obj3 = v0(outer1_2[6]);
+        const obj4 = { type: "GIFT_CODE_REVOKE_FAILURE", code: null };
+        obj4[1] = closure_0;
+        obj3.dispatch(obj4);
+        let c4 = 3;
+      } else if (arg0 === 1) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_0 = tmp3;
-              const obj1 = { type: "GIFT_CODE_REVOKE", code: null };
-              obj1[1] = outer1_0;
-              v0(outer1_2[6]).dispatch(obj1);
-              let c3 = 1;
-              const HTTP = outer1_0(outer1_2[11]).HTTP;
-              const obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
-              obj2[0] = outer1_8.USER_GIFT_CODE_REVOKE(outer1_0);
-              v0 = 2;
-              c4 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.del(obj2);
-              return obj3;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              obj3 = v0(outer1_2[6]);
-              const obj4 = { type: "GIFT_CODE_REVOKE_FAILURE", code: null };
-              obj4[1] = closure_0;
-              obj3.dispatch(obj4);
-              c4 = 3;
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              obj = v0(outer1_2[6]);
-              const obj5 = { type: "GIFT_CODE_REVOKE_SUCCESS", code: null };
-              obj5[1] = closure_0;
-              obj.dispatch(obj5);
-              c3 = 0;
-            }
-            c3 = 0;
-            c4 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          }
-        } catch (tmp19) {
-          let closure_2 = tmp19;
-          if (tmp4 === c3) {
-            c4 = tmp2;
-            throw tmp19;
-          } else {
-            v0 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const obj = v0(outer1_2[6]);
+        const obj5 = { type: "GIFT_CODE_REVOKE_SUCCESS", code: null };
+        obj5[1] = closure_0;
+        obj.dispatch(obj5);
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     })();
   },
   openNativeGiftCodeModal(arg0) {

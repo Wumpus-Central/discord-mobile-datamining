@@ -186,7 +186,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
             items5 = [{ type: "text", text: "" }];
           } else if (tmp2(1906).ApplicationCommandOptionType.ROLE === type) {
             if (null != found) {
-              if (typeof found.value !== "_iter") {
+              if (typeof found.value === "string") {
                 if (found.value in roles) {
                   const obj2 = { type: "roleMention", roleId: null };
                   obj2[1] = found.value;
@@ -203,7 +203,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
                 const items8 = [{ type: "textMention", text: "@everyone" }];
                 return items8;
               } else {
-                if (typeof found.value !== "_iter") {
+                if (typeof found.value === "string") {
                   if (found.value in roles) {
                     const obj3 = { type: "roleMention", roleId: null };
                     obj3[1] = found.value;

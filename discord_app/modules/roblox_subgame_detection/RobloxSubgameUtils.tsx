@@ -12,78 +12,11 @@ function _openRobloxURLWithRootPlaceId() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp5;
-              const callback = tmp2;
-              let closure_0;
-              let obj4 = outer1_1(outer1_2[5]);
-              c3 = 1;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj4.getRobloxSubgameURL(closure_0);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_0 = arg1;
-              c3 = 2;
-              c4 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = callback(table[6])(closure_0);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp14) {
-          c4 = tmp;
-          throw tmp14;
-        }
-      }
+      const callback = tmp2;
+      const obj4 = outer1_1(outer1_2[5]);
+      closure_0 = yield obj4.getRobloxSubgameURL(closure_0);
+      yield callback(table[6])(closure_0);
+      return arg1;
     })();
   });
   const _openRobloxURLWithRootPlaceId = tmp;

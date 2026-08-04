@@ -114,7 +114,7 @@ class PostMessageTransport extends EventEmitter {
         }
       }
     };
-    tmp4.handleFrame = function handleFrame(origin, source, arg2) {
+    tmp4.handleFrame = function handleFrame(origin, source, str) {
       if (origin.origin !== source.source.origin) {
         let obj = { closeCode: null };
         obj[0] = outer1_9.INVALID_ORIGIN;
@@ -122,10 +122,10 @@ class PostMessageTransport extends EventEmitter {
         throw tmp24;
       } else {
         try {
-          let parsed = arg2;
-          if (typeof arg2 !== "_iter") {
+          let parsed = str;
+          if (typeof str === "string") {
             const _JSON = JSON;
-            parsed = JSON.parse(arg2);
+            parsed = JSON.parse(str);
           }
           obj = closure_0;
           const onFrameHandled = closure_0.onFrameHandled;

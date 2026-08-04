@@ -54,7 +54,7 @@ function BenefitShowCase(arg0) {
   let title;
   ({ title, description } = arg0);
   let tmp3 = title;
-  if (typeof title !== "_iter") {
+  if (typeof title === "string") {
     let obj = { variant: "text-md/semibold", color: "text-default", children: null };
     obj[2] = title;
     tmp3 = callback2(require(4281) /* Text */.Text, obj);

@@ -62,7 +62,7 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
   if (date1 == null) {
     tmp19 = date3;
   }
-  if (typeof MarketingComponentRecord !== "find") {
+  if (typeof MarketingComponentRecord !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }

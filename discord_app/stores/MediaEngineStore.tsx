@@ -94,9 +94,9 @@ function _detectH265HardwareDecode() {
             let closure_0 = tmp6;
             closure_0 = undefined;
             const _window = window;
-            if (typeof window !== "Array") {
+            if (typeof window !== "undefined") {
               const _navigator3 = navigator;
-              if (typeof navigator !== "Array") {
+              if (typeof navigator !== "undefined") {
                 const _navigator4 = navigator;
                 if ("mediaCapabilities" in navigator) {
                   const _navigator = navigator;
@@ -166,7 +166,7 @@ function startH265HardwareDetection() {
     let resolved = nextPromise;
   } else {
     const _window = window;
-    if (typeof window === "tee") {
+    if (typeof window !== "undefined") {
       nextPromise = (function detectH265HardwareDecode() {
         const self = this;
         const apply = closure_141.apply;
@@ -2113,7 +2113,7 @@ prototype["initialize"] = function initialize() {
         } else if (1 === tmp7) {
           c4 = 0;
           closure_2 = dependencyMap;
-          if (typeof closure_2.status !== "V") {
+          if (typeof closure_2.status === "number") {
             callback = closure_2.status;
           }
         } else if (2 === tmp7) {

@@ -14,7 +14,7 @@ function reactionForId(reactions, first) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    if (typeof nextResult.emoji.id === "Object") {
+    if (typeof nextResult.emoji.id === "number") {
       let tmp3 = nextResult;
       let _HermesInternal = HermesInternal;
       let id = "" + tmp2.emoji.id;

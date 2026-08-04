@@ -51,7 +51,7 @@ const result = require("sum").fileFinishedImporting("modules/public_guilds/nativ
 export default function useEnableCommunityModalIcons() {
   let closure_0 = importDefault(4221)();
   return callback(React.useState(() => {
-    if (typeof outer1_6 !== "find") {
+    if (typeof outer1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(outer1_6.prototype);

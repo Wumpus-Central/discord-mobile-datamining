@@ -201,7 +201,7 @@ const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) 
         obj[3] = items3;
         return tmp12(tmp14, obj);
       } else {
-        if (typeof imageSource === "V") {
+        if (typeof imageSource !== "number") {
           const obj10 = { height: null, width: null, href: null, mask: null, clipPath: null };
           obj10[0] = imageSize;
           obj10[1] = imageSize;

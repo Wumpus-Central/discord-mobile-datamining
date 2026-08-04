@@ -114,59 +114,9 @@ prototype["many"] = function many(items) {
         let c2 = 0;
         let c3 = 0;
         return (function*(arg0) {
-          if (c3 === 2) {
-            c3 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  const items = [_slicedToArray, ];
-                  c2 = 1;
-                  c3 = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = outer1_1.get(_slicedToArray);
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                items[1] = arg1;
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = items;
-                return obj;
-              }
-            } catch (tmp9) {
-              c3 = tmp;
-              throw tmp9;
-            }
-          }
+          const items = [_slicedToArray, ];
+          items[1] = yield outer1_1.get(_slicedToArray);
+          return items;
         })();
       });
       return function(arg0) {
@@ -195,59 +145,9 @@ prototype["many"] = function many(items) {
         let c2 = 0;
         let c3 = 0;
         return (function*(arg0) {
-          if (c3 === 2) {
-            c3 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c3 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  const items = [_slicedToArray, ];
-                  c2 = 1;
-                  c3 = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = outer1_1.get(_slicedToArray);
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                items[1] = arg1;
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = items;
-                return obj;
-              }
-            } catch (tmp9) {
-              c3 = tmp;
-              throw tmp9;
-            }
-          }
+          const items = [_slicedToArray, ];
+          items[1] = yield outer1_1.get(_slicedToArray);
+          return items;
         })();
       });
       return function(arg0) {

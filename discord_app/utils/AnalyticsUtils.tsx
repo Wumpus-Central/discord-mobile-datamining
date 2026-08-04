@@ -72,7 +72,7 @@ function expandEventProperties(arg0) {
       const source = obj.source;
       obj = {};
       const merged = Object.assign(callback(obj, closure_5));
-      if (typeof source === "y") {
+      if (typeof source === "string") {
         obj = { source: null };
         obj[0] = source;
         let obj1 = obj;
@@ -87,7 +87,7 @@ function expandEventProperties(arg0) {
     const _location = obj.location;
     obj2 = {};
     const merged2 = Object.assign(callback(obj, closure_4));
-    if (typeof _location === "y") {
+    if (typeof _location === "string") {
       const obj3 = { location: null };
       obj3[0] = _location;
       let obj4 = obj3;
@@ -123,13 +123,13 @@ function addBreadcrumb(arg0) {
     obj.addBreadcrumb(obj);
   }
 }
-function expandLocation(arg0) {
-  if (typeof arg0 === "y") {
+function expandLocation(str) {
+  if (typeof str === "string") {
     let obj = { location: null };
-    obj[0] = arg0;
+    obj[0] = str;
   } else {
     obj = { location: null, location_page: null, location_section: null, location_object: null, location_object_type: null };
-    ({ page: obj2[0], page: obj2[1], section: obj2[2], object: obj2[3], objectType: obj2[4] } = arg0);
+    ({ page: obj2[0], page: obj2[1], section: obj2[2], object: obj2[3], objectType: obj2[4] } = str);
   }
   return obj;
 }

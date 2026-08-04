@@ -90,7 +90,7 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
         return obj;
       } else {
         const flattenResult = closure_5.flatten(tmp);
-        if (typeof flattenResult.marginBottom === "Object") {
+        if (typeof flattenResult.marginBottom === "number") {
           obj = {};
           const merged = Object.assign(flattenResult);
           obj.marginBottom = flattenResult.marginBottom + first;
@@ -112,7 +112,7 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
       return obj;
     } else {
       const flattenResult = closure_5.flatten(tmp);
-      if (typeof flattenResult.marginBottom === "Object") {
+      if (typeof flattenResult.marginBottom === "number") {
         obj = {};
         const merged = Object.assign(flattenResult);
         obj.marginBottom = flattenResult.marginBottom + first;

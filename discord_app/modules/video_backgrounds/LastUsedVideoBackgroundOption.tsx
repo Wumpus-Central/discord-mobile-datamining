@@ -15,7 +15,7 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
   const obj = require(9084) /* isAnimatedBackgroundOption */;
   const tmp2 = require;
   if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
-    if (typeof videoBackgroundOptionFromProto === "V") {
+    if (typeof videoBackgroundOptionFromProto !== "number") {
       let tmp7 = videoBackgroundOptionFromProto;
     } else {
       tmp7 = null;
@@ -47,7 +47,7 @@ export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgro
       const obj = stateFromStores1(outer1_2[3]);
       const tmp4 = stateFromStores1;
       if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
-        if (typeof videoBackgroundOptionFromProto === "V") {
+        if (typeof videoBackgroundOptionFromProto !== "number") {
           let tmp9 = videoBackgroundOptionFromProto;
         } else {
           tmp9 = null;

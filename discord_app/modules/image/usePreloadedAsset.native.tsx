@@ -70,7 +70,7 @@ export default function usePreloadedAsset(arg0) {
         }
         const _setTimeout = setTimeout;
         const timeout = setTimeout(() => {
-          if (typeof complete !== "find") {
+          if (typeof complete !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (!c0) {
@@ -85,7 +85,7 @@ export default function usePreloadedAsset(arg0) {
             let preloadResult = outer1_6.preload(tmp);
           }
           preloadResult.then(() => {
-            if (typeof complete !== "find") {
+            if (typeof complete !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (!c0) {
@@ -95,7 +95,7 @@ export default function usePreloadedAsset(arg0) {
               outer1_5(obj);
             }
           }, () => {
-            if (typeof complete !== "find") {
+            if (typeof complete !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (!c0) {

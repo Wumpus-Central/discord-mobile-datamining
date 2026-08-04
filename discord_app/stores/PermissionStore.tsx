@@ -393,12 +393,12 @@ prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
 prototype["canWithPartialContext"] = function canWithPartialContext(MANAGE_MESSAGES, channelId) {
   const self = this;
   if ("channelId" in channelId) {
-    if (typeof channelId.channelId === "y") {
+    if (typeof channelId.channelId === "string") {
       let canResult = self.can(MANAGE_MESSAGES, store.getChannel(channelId.channelId));
     }
     return canResult;
   }
-  canResult = "guildId" in channelId && typeof channelId.guildId === "y";
+  canResult = "guildId" in channelId && typeof channelId.guildId === "string";
   if (canResult) {
     canResult = self.can(MANAGE_MESSAGES, store2.getGuild(channelId.guildId));
   }

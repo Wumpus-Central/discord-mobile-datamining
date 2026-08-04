@@ -26,7 +26,7 @@ AvailablePlanRecord["createFromServer"] = function createFromServer(arg0) {
   if (add_on_plans == null) {
     add_on_plans = [];
   }
-  if (typeof AvailablePlanRecord !== "find") {
+  if (typeof AvailablePlanRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new AvailablePlanRecord("Trying to call a non-function", AvailablePlanRecord, new.target, id, quantity, price, total);
@@ -171,7 +171,7 @@ CheckoutContextRecord["createFromOrder"] = function createFromOrder(checkout_con
       available_plans = [];
     }
     let mapped = available_plans.map(AvailablePlanRecord.createFromServer);
-    if (typeof CheckoutContextRecord !== "find") {
+    if (typeof CheckoutContextRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp10 = new CheckoutContextRecord("Trying to call a non-function", available_plans, CheckoutContextRecord, new.target, payment_sources, country, allowed_currencies, mapped);

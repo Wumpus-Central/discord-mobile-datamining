@@ -264,12 +264,12 @@ function NumericalConfigRule(existingPendingConfiguration) {
     obj[0] = map.metadataRow;
     fieldTextHook = mapped.Children;
     map = fieldTextHook.map;
-    mapped = map(intl.format(fieldTextHook, obj), (arg0, arg1) => {
-      let tmp = arg0;
-      if (typeof arg0 !== "_iter") {
+    mapped = map(intl.format(fieldTextHook, obj), (str) => {
+      let tmp = str;
+      if (typeof str === "string") {
         const obj = { variant: "text-md/semibold", style: null, children: null };
         obj[1] = map.metadataRowText;
-        obj[2] = arg0;
+        obj[2] = str;
         const _HermesInternal = HermesInternal;
         tmp = onInputValueChange(metadataField(outer1_2[20]).Text, obj, "t-" + arg1);
       }

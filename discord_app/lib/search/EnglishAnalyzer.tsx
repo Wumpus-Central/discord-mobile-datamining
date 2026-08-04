@@ -56,7 +56,7 @@ function highlightAST(content, arg1, arg2) {
       return arg0;
     });
   } else {
-    if (typeof content.content !== "_iter") {
+    if (typeof content.content === "string") {
       if ("codeBlock" !== content.type) {
         const items1 = [];
         const parts = content.content.split(/(\W+)/g);

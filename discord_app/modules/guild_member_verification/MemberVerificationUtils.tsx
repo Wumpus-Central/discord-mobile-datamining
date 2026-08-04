@@ -19,14 +19,14 @@ export const isValidFormResponse = function isValidFormResponse(required) {
           if (tmp4(4105).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
             if (tmp4(4105).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
               if (tmp4(4105).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
-                return typeof response === "Object";
+                return typeof response === "number";
               } else {
                 return tmp4(1351).assertNever(field_type);
               }
             }
           }
-          let tmp2 = typeof response === "y";
-          if (typeof response !== "_iter") {
+          let tmp2 = typeof response === "string";
+          if (typeof response === "string") {
             tmp2 = "" !== response.trim();
           }
           return tmp2;

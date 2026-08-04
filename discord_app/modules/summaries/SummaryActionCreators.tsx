@@ -676,81 +676,35 @@ function useChannelSummaries(channelIds) {
     function _fetch() {
       const self = this;
       const tmp = outer2_3(function*() {
-        if (c4 === 2) {
-          c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
+        let closure_0 = tmp3;
+        let c3 = 1;
+        yield outer2_15();
+        if (1 === tmp7) {
+          c3 = 0;
+          outer2_17(outer1_2.split(","));
+          let c1 = 2;
+          let c4 = 1;
+        } else if (2 === tmp7) {
           if (arg0 === 1) {
+            c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c4 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
           } else {
+            c4 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === c1) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_0 = tmp3;
-                let c3 = 1;
-                c1 = 3;
-                c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer2_15();
-                return obj1;
-              }
-            } else {
-              if (1 === tmp7) {
-                c3 = 0;
-                outer2_17(outer1_2.split(","));
-                c1 = 2;
-                c4 = 1;
-              } else if (2 === tmp7) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj2 = { value: null, done: true };
-                  obj2[0] = arg1;
-                  return obj2;
-                } else {
-                  c4 = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c3 = 0;
-              }
-              c3 = 0;
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp14) {
-            let closure_2 = tmp14;
-            if (tmp4 === c3) {
-              c4 = tmp2;
-              throw tmp14;
-            } else {
-              c1 = tmp;
-            }
-          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c3 = 0;
         }
+        c3 = 0;
+        return arg1;
       });
       const _fetch = tmp;
       const apply = tmp.apply;
@@ -774,7 +728,7 @@ function useChannelSummaries(channelIds) {
       })();
     }
   }, items2);
-  let obj = channelIds(memo[12]);
+  const obj = channelIds(memo[12]);
   const items3 = [handleQuickSwitcherUpdate];
   return channelIds(memo[12]).useStateFromStoresArray(items3, () => handleQuickSwitcherUpdate.topSummaries(), []);
 }
@@ -925,81 +879,35 @@ export const useMaybeFetchChannelAffinitiesAndSummaries = function useMaybeFetch
     function _fetch() {
       const self = this;
       const tmp = outer2_3(function*() {
-        if (c4 === 2) {
-          c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
+        let closure_0 = tmp3;
+        let c3 = 1;
+        yield outer2_15();
+        if (1 === tmp7) {
+          c3 = 0;
+          outer2_17(outer1_2.split(","));
+          let c1 = 2;
+          let c4 = 1;
+        } else if (2 === tmp7) {
           if (arg0 === 1) {
+            c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c4 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
           } else {
+            c4 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === c1) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_0 = tmp3;
-                let c3 = 1;
-                c1 = 3;
-                c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer2_15();
-                return obj1;
-              }
-            } else {
-              if (1 === tmp7) {
-                c3 = 0;
-                outer2_17(outer1_2.split(","));
-                c1 = 2;
-                c4 = 1;
-              } else if (2 === tmp7) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj2 = { value: null, done: true };
-                  obj2[0] = arg1;
-                  return obj2;
-                } else {
-                  c4 = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c3 = 0;
-              }
-              c3 = 0;
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp14) {
-            let closure_2 = tmp14;
-            if (tmp4 === c3) {
-              c4 = tmp2;
-              throw tmp14;
-            } else {
-              c1 = tmp;
-            }
-          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c3 = 0;
         }
+        c3 = 0;
+        return arg1;
       });
       const _fetch = tmp;
       const apply = tmp.apply;

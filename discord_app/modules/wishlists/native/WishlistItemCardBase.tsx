@@ -80,7 +80,7 @@ export default function WishlistItemCardBase(username) {
     containerBackground = obj1.useUserProfileColors({ theme, primaryColor, secondaryColor }).containerBackground;
   }
   const items = [tmp.card, { backgroundColor: containerBackground }, ];
-  if (typeof size === "ay") {
+  if (typeof size === "object") {
     obj = { width: null, height: null };
     ({ width: obj4[0], height: obj4[1] } = size);
   } else {

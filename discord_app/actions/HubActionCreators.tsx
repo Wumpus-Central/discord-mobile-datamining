@@ -53,79 +53,30 @@ export default {
     let closure_1 = arg1;
     let closure_2 = outer1_02;
     return callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === v02) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj5 = v02(outer1_2[2]);
-              const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
-              obj1[0] = outer1_4.HUB_EMAIL_VERIFY_SEND;
-              const obj2 = { email: null, guild_id: null, allow_multiple_guilds: null, use_verification_code: true };
-              obj2[0] = v0;
-              obj2[1] = outer1_2;
-              obj2[2] = v02;
-              obj1[1] = obj2;
-              const obj3 = { event: null, properties: null };
-              obj3[0] = v0(outer1_2[3]).NetworkActionNames.HUB_EMAIL_VERIFY_SEND;
-              obj3[1] = function properties(body) {
-                let has_matching_guild;
-                if (body != null) {
-                  body = body.body;
-                  if (body != null) {
-                    has_matching_guild = body.has_matching_guild;
-                  }
-                }
-                return v3(table[4]).exact({ has_matching_guild });
-              };
-              obj1[2] = obj3;
-              obj1[3] = v0(outer1_2[5]).rejectWithMigratedError();
-              v02 = 1;
-              v0 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = obj5.post(obj1);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1.body;
-            return obj;
+      const obj5 = v02(outer1_2[2]);
+      const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
+      obj1[0] = outer1_4.HUB_EMAIL_VERIFY_SEND;
+      const obj2 = { email: null, guild_id: null, allow_multiple_guilds: null, use_verification_code: true };
+      obj2[0] = v0;
+      obj2[1] = outer1_2;
+      obj2[2] = v02;
+      obj1[1] = obj2;
+      const obj3 = { event: null, properties: null };
+      obj3[0] = v0(outer1_2[3]).NetworkActionNames.HUB_EMAIL_VERIFY_SEND;
+      obj3[1] = function properties(body) {
+        let has_matching_guild;
+        if (body != null) {
+          body = body.body;
+          if (body != null) {
+            has_matching_guild = body.has_matching_guild;
           }
-        } catch (tmp5) {
-          v0 = tmp;
-          throw tmp5;
         }
-      }
+        return v3(table[4]).exact({ has_matching_guild });
+      };
+      obj1[2] = obj3;
+      obj1[3] = v0(outer1_2[5]).rejectWithMigratedError();
+      yield obj5.post(obj1);
+      return arg1.body;
     })();
   },
   verify(arg0) {

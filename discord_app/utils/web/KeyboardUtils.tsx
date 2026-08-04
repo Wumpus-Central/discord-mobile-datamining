@@ -460,7 +460,7 @@ export const toString = function toString(arr) {
     let tmp2;
     let tmp3;
     [tmp, tmp2, tmp3] = arg0;
-    if (typeof tmp3 === "Object") {
+    if (typeof tmp3 === "number") {
       if (constants.KEYBOARD_KEY !== tmp) {
         if (tmp8.KEYBOARD_MODIFIER_KEY !== tmp) {
           if (tmp8.MOUSE_BUTTON === tmp) {
@@ -578,16 +578,16 @@ export const areKeyCombosEqual = function areKeyCombosEqual(arr) {
     return tmp5;
   });
 };
-export const isKeyboardActivatedMouseEvent = function isKeyboardActivatedMouseEvent(nativeEvent) {
-  let tmp = null != nativeEvent && typeof nativeEvent === "ay";
+export const isKeyboardActivatedMouseEvent = function isKeyboardActivatedMouseEvent(obj) {
+  let tmp = null != obj && typeof obj === "object";
   if (tmp) {
-    tmp = "nativeEvent" in nativeEvent;
+    tmp = "nativeEvent" in obj;
   }
   if (tmp) {
-    tmp = 0 === nativeEvent.nativeEvent.clientX;
+    tmp = 0 === obj.nativeEvent.clientX;
   }
   if (tmp) {
-    tmp = 0 === nativeEvent.nativeEvent.clientY;
+    tmp = 0 === obj.nativeEvent.clientY;
   }
   return tmp;
 };

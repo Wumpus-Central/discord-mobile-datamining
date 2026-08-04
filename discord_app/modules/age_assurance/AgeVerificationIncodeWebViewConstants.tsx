@@ -23,17 +23,17 @@ export const readInjectedIncodeParams = function readInjectedIncodeParams() {
   let sessionToken;
   let theme;
   if (null != window[c0]) {
-    if (typeof tmp !== "window") {
+    if (typeof tmp === "object") {
       ({ schemaVersion, apiUrl, sessionToken, consentId, interviewId, theme, method } = tmp);
       if (null == schemaVersion) {
         let tmp2 = null;
-        if (typeof apiUrl !== "_iter") {
+        if (typeof apiUrl === "string") {
           tmp2 = null;
-          if (typeof sessionToken !== "_iter") {
+          if (typeof sessionToken === "string") {
             tmp2 = null;
-            if (typeof consentId !== "_iter") {
+            if (typeof consentId === "string") {
               tmp2 = null;
-              if (typeof interviewId !== "_iter") {
+              if (typeof interviewId === "string") {
                 if (null == theme) {
                   const obj = { apiUrl: null, sessionToken: null, consentId: null, interviewId: null, theme: null, method: null };
                   obj[0] = apiUrl;
@@ -71,14 +71,14 @@ export const buildIncodeParamsInjection = function buildIncodeParamsInjection(ar
   const json = JSON.stringify(JSON.stringify(obj));
   return "if (window.location.origin === " + JSON.stringify(arg1) + ") { window." + c0 + " = JSON.parse(" + json + "); } true;";
 };
-export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(arg0) {
-  if (null == arg0) {
+export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str) {
+  if (null == str) {
     return null;
   } else {
-    let parsed = arg0;
-    if (typeof arg0 !== "_iter") {
+    let parsed = str;
+    if (typeof str === "string") {
       const _JSON = JSON;
-      parsed = JSON.parse(arg0);
+      parsed = JSON.parse(str);
     }
     let eventType;
     if (parsed != null) {
@@ -86,7 +86,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(arg0
     }
     if (eventType === c2) {
       let tmp10 = null;
-      if (typeof parsed.interviewId !== "_iter") {
+      if (typeof parsed.interviewId === "string") {
         tmp10 = null;
         if (0 !== parsed.interviewId.length) {
           let obj = { kind: "capture_complete", interviewId: null };
@@ -102,7 +102,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(arg0
       }
       if (eventType1 === c3) {
         let tmp9 = null;
-        if (typeof parsed.previousInterviewId !== "_iter") {
+        if (typeof parsed.previousInterviewId === "string") {
           tmp9 = null;
           if (0 !== parsed.previousInterviewId.length) {
             obj = { kind: "fallback_request", previousInterviewId: null };

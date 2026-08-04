@@ -74,7 +74,7 @@ prototype["createFromServer"] = function createFromServer(subscription_id) {
     if (flag == null) {
       flag = false;
     }
-    if (typeof prototype !== "find") {
+    if (typeof prototype !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp13 = new prototype("Trying to call a non-function", renewal_line_items, tmp6, renewal_info, obj, tmp5, prototype, new.target);

@@ -71,117 +71,54 @@ prototype["getAsync"] = function getAsync(arg0) {
   let closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp5 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp3;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            closure_1 = undefined;
-            dependencyMap = undefined;
-            c3 = undefined;
-            let _slicedToArray;
-            let ensureGuildLoaded;
-            let _handleConnectionOpen;
-            let dependencyMap2;
-            let fetchFingerprint;
-            let length;
-            let set;
-            const _performance2 = performance;
-            closure_0 = performance.now();
-            const obj7 = outer1_1(c3[11]);
-            let items = [outer1_1(c3[11]).basicChannels(outer1_0).getKvEntries(), ];
-            const basicChannelsResult = outer1_1(c3[11]).basicChannels(outer1_0);
-            const obj9 = outer1_1(c3[11]);
-            items[1] = outer1_1(c3[11]).syncedBasicChannels(outer1_0).getKvEntries();
-            dependencyMap = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(items);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          closure_1 = arg1;
-          dependencyMap = outer1_4(closure_1, 2);
-          c3 = 32;
-          _slicedToArray = 5;
-          const _performance = performance;
-          ensureGuildLoaded = performance.now() - closure_0;
-          _handleConnectionOpen = (function groupStatuses(_slicedToArray) {
-            const items = [];
-            const items1 = [];
-            while (tmp !== undefined) {
-              let tmp3 = callback;
-              let tmp4 = callback(tmp2, 2);
-              let first = tmp4[0];
-              let arr3 = items1;
-              if (tmp4[1]) {
-                arr3 = items;
-              }
-              let tmp6 = first;
-              let arr = arr3.push(first);
-              continue;
-            }
-            const items2 = [items, items1];
-            return items2;
-          })(_slicedToArray);
-          dependencyMap2 = outer1_4(_handleConnectionOpen, 2);
-          fetchFingerprint = 32;
-          length = 5;
-          const _Set = Set;
-          set = new Set(fetchFingerprint);
-          closure_1.synced = set;
-          const _HermesInternal = HermesInternal;
-          outer1_15.verbose("loaded in " + ensureGuildLoaded + "ms (guilds: " + c3.length + ", synced: " + set.size + " unsynced: " + length.length + ")");
-          const obj3 = { all: null, stale: null, channels: null };
-          obj3[0] = c3;
-          obj3[1] = length;
-          obj3[2] = c3.filter((arg0) => {
-            let tmp;
-            [tmp, ] = arg0;
-            return set.has(tmp);
-          });
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = obj3;
-          return obj;
+    let closure_1 = tmp3;
+    let closure_0 = tmp2;
+    const _performance2 = performance;
+    closure_0 = performance.now();
+    const obj7 = outer1_1(c3[11]);
+    let items = [outer1_1(c3[11]).basicChannels(outer1_0).getKvEntries(), ];
+    const basicChannelsResult = outer1_1(c3[11]).basicChannels(outer1_0);
+    const obj9 = outer1_1(c3[11]);
+    items[1] = outer1_1(c3[11]).syncedBasicChannels(outer1_0).getKvEntries();
+    closure_1 = yield Promise.all(items);
+    let _slicedToArray = 5;
+    const _performance = performance;
+    let ensureGuildLoaded = performance.now() - closure_0;
+    let _handleConnectionOpen = (function groupStatuses(_slicedToArray) {
+      const items = [];
+      const items1 = [];
+      while (tmp !== undefined) {
+        let tmp3 = callback;
+        let tmp4 = callback(tmp2, 2);
+        let first = tmp4[0];
+        let arr3 = items1;
+        if (tmp4[1]) {
+          arr3 = items;
         }
-      } catch (tmp7) {
-        c3 = tmp;
-        throw tmp7;
+        let tmp6 = first;
+        let arr = arr3.push(first);
+        continue;
       }
-    }
+      const items2 = [items, items1];
+      return items2;
+    })(_slicedToArray);
+    const dependencyMap2 = outer1_4(_handleConnectionOpen, 2);
+    let fetchFingerprint = 32;
+    const length = 5;
+    const _Set = Set;
+    const set = new Set(fetchFingerprint);
+    closure_1.synced = set;
+    const _HermesInternal = HermesInternal;
+    outer1_15.verbose("loaded in " + ensureGuildLoaded + "ms (guilds: " + c3.length + ", synced: " + set.size + " unsynced: " + length.length + ")");
+    const obj3 = { all: null, stale: null, channels: null };
+    obj3[0] = c3;
+    obj3[1] = length;
+    obj3[2] = c3.filter((arg0) => {
+      let tmp;
+      [tmp, ] = arg0;
+      return set.has(tmp);
+    });
+    return obj3;
   })();
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel, closure_0) {

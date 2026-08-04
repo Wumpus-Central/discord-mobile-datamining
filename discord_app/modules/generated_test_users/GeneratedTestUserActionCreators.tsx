@@ -13,83 +13,34 @@ function _getGeneratedPoolById() {
     let c3 = 0;
     let c2 = 0;
     return (function*(arg0, arg1) {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+      const callback = callback2;
+      const obj1 = { url: null, trackedActionData: null, rejectWithError: false };
+      obj1[0] = outer1_6.GENERATED_POOL_BY_ID(callback);
+      let obj2 = { event: null };
+      obj2[0] = callback(503).NetworkActionNames.USER_LOGIN;
+      obj1[1] = obj2;
+      const value = callback2(5094).get(obj1);
+      const obj6 = callback2(5094);
+      yield value.then((body) => {
+        body = body.body;
+        if (body.ok) {
+          const users = body.users;
+          let obj = { type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS", pool: null, users: null };
+          const GeneratedTestPoolRecord = callback(13789).GeneratedTestPoolRecord;
+          const obj2 = outer1_1(709);
+          obj[1] = GeneratedTestPoolRecord.fromServer(body.generated_pool).setPassword(callback);
+          obj[2] = users.map((arg0) => new createdAt(arg0));
+          obj2.dispatch(obj);
+          const fromServerResult = GeneratedTestPoolRecord.fromServer(body.generated_pool);
         } else {
-          return { value: "HermesInternal", done: null };
+          obj = outer1_1(7707);
+          obj.showFailedToast(outer1_7.GENERIC_ERROR);
         }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const callback = callback2;
-              const obj1 = { url: null, trackedActionData: null, rejectWithError: false };
-              obj1[0] = outer1_6.GENERATED_POOL_BY_ID(callback);
-              let obj2 = { event: null };
-              obj2[0] = callback(503).NetworkActionNames.USER_LOGIN;
-              obj1[1] = obj2;
-              const value = callback2(5094).get(obj1);
-              const obj6 = callback2(5094);
-              c3 = 1;
-              dependencyMap = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = value.then((body) => {
-                body = body.body;
-                if (body.ok) {
-                  const users = body.users;
-                  let obj = { type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS", pool: null, users: null };
-                  const GeneratedTestPoolRecord = callback(13789).GeneratedTestPoolRecord;
-                  const obj2 = outer1_1(709);
-                  obj[1] = GeneratedTestPoolRecord.fromServer(body.generated_pool).setPassword(callback);
-                  obj[2] = users.map((arg0) => new createdAt(arg0));
-                  obj2.dispatch(obj);
-                  const fromServerResult = GeneratedTestPoolRecord.fromServer(body.generated_pool);
-                } else {
-                  obj = outer1_1(7707);
-                  obj.showFailedToast(outer1_7.GENERIC_ERROR);
-                }
-              }).catch(() => {
-                callback2(7707).showFailedToast(constants.GENERIC_ERROR);
-                return null;
-              });
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp5) {
-          dependencyMap = tmp;
-          throw tmp5;
-        }
-      }
+      }).catch(() => {
+        callback2(7707).showFailedToast(constants.GENERIC_ERROR);
+        return null;
+      });
+      return arg1;
     })();
   });
   const _getGeneratedPoolById = tmp;

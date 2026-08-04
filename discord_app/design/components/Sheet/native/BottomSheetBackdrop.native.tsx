@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo((animatedIndex) => {
       close();
     } else if ("collapse" === tmp3) {
       snapToIndex(num3);
-    } else if (typeof tmp3 !== "V") {
+    } else if (typeof tmp3 === "number") {
       snapToIndex(tmp3);
     }
   }, items);

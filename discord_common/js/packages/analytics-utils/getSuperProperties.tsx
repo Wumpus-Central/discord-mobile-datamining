@@ -239,7 +239,7 @@ export const getCampaignParams = function getCampaignParams(arg0) {
       const match = regExp.exec(tmp);
       let str7 = "";
       if (null !== match) {
-        if (typeof match[1] === "y") {
+        if (typeof match[1] === "string") {
           const _decodeURIComponent = decodeURIComponent;
           str7 = decodeURIComponent(match[1]).replace(/\+/g, " ");
           const str8 = decodeURIComponent(match[1]);

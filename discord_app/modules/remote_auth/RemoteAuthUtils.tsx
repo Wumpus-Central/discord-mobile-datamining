@@ -10,91 +10,31 @@ function _decodeEncodedUserRecord() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0, str) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw str;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = str;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === createdAt) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw str;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = str;
-              return obj;
-            } else {
-              let asyncGeneratorStep = tmp2;
-              let dependencyMap = tmp5;
-              let callback = table;
-              table = undefined;
-              dependencyMap = undefined;
-              asyncGeneratorStep = undefined;
-              createdAt = undefined;
-              c5 = undefined;
-              let closure_6;
-              let obj2 = callback(table[3]);
-              createdAt = 1;
-              c5 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj2.decryptEncodedCiphertext(callback, callback);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw str;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = str;
-            return obj2;
-          } else {
-            callback = str;
-            table = str.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
-            if (null == table) {
-              const _Error = Error;
-              const error = new Error("Invalid encoded user record.");
-              throw error;
-            } else {
-              dependencyMap = dependencyMap(table, 5);
-              asyncGeneratorStep = 5;
-              createdAt = 1882;
-              c5 = 15022;
-              closure_6 = 2;
-              const obj3 = { id: null, discriminator: null, avatar: null, username: null };
-              obj3[0] = asyncGeneratorStep;
-              obj3[1] = createdAt;
-              let tmp7 = null;
-              let tmp42 = createdAt;
-              if ("0" !== c5) {
-                tmp7 = c5;
-              }
-              obj3[2] = tmp7;
-              obj3[3] = closure_6;
-              tmp42 = new tmp42(obj3);
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = tmp42;
-              return obj;
-            }
-          }
-        } catch (tmp25) {
-          c5 = tmp;
-          throw tmp25;
-        }
+      let asyncGeneratorStep = tmp2;
+      let dependencyMap = tmp5;
+      let callback = table;
+      const obj2 = callback(table[3]);
+      callback = yield obj2.decryptEncodedCiphertext(callback, callback);
+      table = str.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+      if (null == table) {
+        const _Error = Error;
+        const error = new Error("Invalid encoded user record.");
+        throw error;
       }
+      dependencyMap = dependencyMap(table, 5);
+      asyncGeneratorStep = 5;
+      let closure_6 = 2;
+      const obj3 = { id: null, discriminator: null, avatar: null, username: null };
+      obj3[0] = asyncGeneratorStep;
+      obj3[1] = createdAt;
+      let tmp7 = null;
+      if ("0" !== c5) {
+        tmp7 = c5;
+      }
+      obj3[2] = tmp7;
+      obj3[3] = closure_6;
+      tmp42 = new tmp42(obj3);
+      return tmp42;
     })();
   });
   const _decodeEncodedUserRecord = tmp;

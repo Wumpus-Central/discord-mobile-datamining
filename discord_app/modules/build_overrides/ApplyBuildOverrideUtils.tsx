@@ -238,80 +238,13 @@ function _applyPublicBuildOverride() {
 function _clearBuildOverride() {
   const self = this;
   const tmp = importDefaultResult(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp2;
-            let closure_0 = tmp5;
-            closure_0 = undefined;
-            const HTTP = outer1_0(outer1_1[3]).HTTP;
-            const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-            obj1[0] = outer1_0(outer1_1[4]).getAPIEndpoint(outer1_5);
-            v0 = 1;
-            c3 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.del(obj1);
-            return obj2;
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            closure_0 = arg1;
-            v0 = 2;
-            c3 = 1;
-            const obj4 = { value: null, done: false };
-            obj4[0] = v0(closure_0);
-            return obj4;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = arg1;
-          return obj5;
-        } else {
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_0;
-          return obj;
-        }
-      } catch (tmp11) {
-        c3 = tmp;
-        throw tmp11;
-      }
-    }
+    let closure_1 = tmp2;
+    const HTTP = outer1_0(outer1_1[3]).HTTP;
+    const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+    obj1[0] = outer1_0(outer1_1[4]).getAPIEndpoint(outer1_5);
+    let closure_0 = yield HTTP.del(obj1);
+    yield v0(closure_0);
+    return closure_0;
   });
   const _clearBuildOverride = tmp;
   const apply = tmp.apply;

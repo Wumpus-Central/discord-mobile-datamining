@@ -151,7 +151,7 @@ export const maybeCreateSingleForwardForMessage = function maybeCreateSingleForw
   if (importDefault(5827)(message)) {
     const first = message.messageSnapshots[0];
     if (null != first) {
-      if (typeof MessageForward !== "find") {
+      if (typeof MessageForward !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const obj = Object.create(MessageForward.prototype);

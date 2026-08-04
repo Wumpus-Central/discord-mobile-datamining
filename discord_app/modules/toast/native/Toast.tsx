@@ -28,7 +28,7 @@ function ToastIcon(recolorLegacyIcon) {
     const obj1 = { size: "sm", color: null };
     obj1[1] = token;
     let tmp8 = callback2(IconComponent, obj1);
-  } else if (typeof icon === "find") {
+  } else if (typeof icon === "function") {
     const obj2 = { children: null };
     obj2[0] = icon();
     tmp8 = callback2(closure_6, obj2);
@@ -46,7 +46,7 @@ function ToastIcon(recolorLegacyIcon) {
 function ToastContent(content) {
   content = content.content;
   const tmp = createCacheKey();
-  if (typeof content === "find") {
+  if (typeof content === "function") {
     let obj = { style: null, children: null };
     obj[0] = tmp.contentContainer;
     obj[1] = content();

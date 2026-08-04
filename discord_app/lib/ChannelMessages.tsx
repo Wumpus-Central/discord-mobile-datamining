@@ -53,7 +53,7 @@ class MessageCache {
 const prototype = MessageCache.prototype;
 prototype["clone"] = function clone() {
   const self = this;
-  if (typeof MessageCache !== "find") {
+  if (typeof MessageCache !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(MessageCache.prototype);
@@ -226,7 +226,7 @@ class ChannelMessages {
     obj[2] = require("GuildThemeSourcePreference").JumpType.ANIMATED;
     obj[21] = [];
     tmp2 = MessageCache;
-    if (typeof MessageCache !== "find") {
+    if (typeof MessageCache !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -236,7 +236,7 @@ class ChannelMessages {
     obj1._wasAtEdge = false;
     obj1._isCacheBefore = true;
     obj[22] = obj1;
-    if (typeof tmp2 !== "find") {
+    if (typeof tmp2 !== "function") {
       str2 = "Trying to call a non-function";
       throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
     }
@@ -265,13 +265,13 @@ ChannelMessages["hasPresent"] = function hasPresent(arg0) {
 ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
   let tmp2 = ChannelMessages._channelMessages[channelId];
   if (null == tmp2) {
-    if (typeof tmp !== "find") {
+    if (typeof tmp !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(tmp.prototype);
     obj[2] = require(4217) /* GuildThemeSourcePreference */.JumpType.ANIMATED;
     obj[21] = [];
-    if (typeof MessageCache !== "find") {
+    if (typeof MessageCache !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(tmp6.prototype);
@@ -280,7 +280,7 @@ ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
     obj._wasAtEdge = false;
     obj._isCacheBefore = true;
     obj[22] = obj;
-    if (typeof MessageCache !== "find") {
+    if (typeof MessageCache !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj1 = Object.create(MessageCache.prototype);
@@ -312,18 +312,18 @@ ChannelMessages["clearCache"] = function clearCache(arg0) {
 ChannelMessages["commit"] = function commit(channelId) {
   ChannelMessages._channelMessages[channelId.channelId] = channelId;
 };
-prototype2["mutate"] = function mutate(ready, flag) {
+prototype2["mutate"] = function mutate(obj, flag) {
   if (flag === undefined) {
     flag = false;
   }
   const self = this;
-  if (typeof ChannelMessages !== "find") {
+  if (typeof ChannelMessages !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let obj = Object.create(ChannelMessages.prototype);
+  obj = Object.create(ChannelMessages.prototype);
   obj[2] = require(4217) /* GuildThemeSourcePreference */.JumpType.ANIMATED;
   obj[21] = [];
-  if (typeof MessageCache !== "find") {
+  if (typeof MessageCache !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(tmp3.prototype);
@@ -332,7 +332,7 @@ prototype2["mutate"] = function mutate(ready, flag) {
   obj._wasAtEdge = false;
   obj._isCacheBefore = true;
   obj[22] = obj;
-  if (typeof MessageCache !== "find") {
+  if (typeof MessageCache !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj1 = Object.create(MessageCache.prototype);
@@ -375,61 +375,61 @@ prototype2["mutate"] = function mutate(ready, flag) {
     cloneResult1 = _before;
   }
   obj._before = cloneResult1;
-  if (ready instanceof Function) {
+  if (obj instanceof Function) {
     ({ ready: tmp2.ready, jumpType: tmp2.jumpType, jumpTargetId: tmp2.jumpTargetId, jumpTargetOffset: tmp2.jumpTargetOffset, jumpSequenceId: tmp2.jumpSequenceId, jumped: tmp2.jumped, jumpedToPresent: tmp2.jumpedToPresent, jumpFlash: tmp2.jumpFlash, jumpReturnTargetId: tmp2.jumpReturnTargetId, onJumpComplete: tmp2.onJumpComplete, focusTargetId: tmp2.focusTargetId, focusSequenceId: tmp2.focusSequenceId, hasMoreBefore: tmp2.hasMoreBefore, hasMoreAfter: tmp2.hasMoreAfter, loadingMore: tmp2.loadingMore, revealedMessageId: tmp2.revealedMessageId, cached: tmp2.cached, hasFetched: tmp2.hasFetched, error: tmp2.error, initialScrollSequenceId: tmp2.initialScrollSequenceId, suppressRowAnimationSequenceId: tmp2.suppressRowAnimationSequenceId } = self);
-    ready(obj);
-  } else if (typeof ready !== "window") {
-    if (undefined !== ready.ready) {
-      ready = true === ready.ready;
+    obj(obj);
+  } else if (typeof obj === "object") {
+    if (undefined !== obj.ready) {
+      let ready = true === obj.ready;
     } else {
       ready = self.ready;
     }
     obj.ready = ready;
-    obj.jumpType = undefined !== ready.jumpType ? ready.jumpType : self.jumpType;
-    obj.jumpTargetId = undefined !== ready.jumpTargetId ? ready.jumpTargetId : self.jumpTargetId;
-    obj.jumpTargetOffset = undefined !== ready.jumpTargetOffset ? ready.jumpTargetOffset : self.jumpTargetOffset;
-    obj.jumpSequenceId = undefined !== ready.jumpSequenceId ? ready.jumpSequenceId : self.jumpSequenceId;
-    if (undefined !== ready.jumped) {
-      let jumped = true === ready.jumped;
+    obj.jumpType = undefined !== obj.jumpType ? obj.jumpType : self.jumpType;
+    obj.jumpTargetId = undefined !== obj.jumpTargetId ? obj.jumpTargetId : self.jumpTargetId;
+    obj.jumpTargetOffset = undefined !== obj.jumpTargetOffset ? obj.jumpTargetOffset : self.jumpTargetOffset;
+    obj.jumpSequenceId = undefined !== obj.jumpSequenceId ? obj.jumpSequenceId : self.jumpSequenceId;
+    if (undefined !== obj.jumped) {
+      let jumped = true === obj.jumped;
     } else {
       jumped = self.jumped;
     }
     obj.jumped = jumped;
-    if (undefined !== ready.jumpedToPresent) {
-      let jumpedToPresent = true === ready.jumpedToPresent;
+    if (undefined !== obj.jumpedToPresent) {
+      let jumpedToPresent = true === obj.jumpedToPresent;
     } else {
       jumpedToPresent = self.jumpedToPresent;
     }
     obj.jumpedToPresent = jumpedToPresent;
-    if (undefined !== ready.jumpFlash) {
-      let jumpFlash = true === ready.jumpFlash;
+    if (undefined !== obj.jumpFlash) {
+      let jumpFlash = true === obj.jumpFlash;
     } else {
       jumpFlash = self.jumpFlash;
     }
     obj.jumpFlash = jumpFlash;
-    obj.jumpReturnTargetId = undefined !== ready.jumpReturnTargetId ? ready.jumpReturnTargetId : self.jumpReturnTargetId;
-    obj.focusTargetId = undefined !== ready.focusTargetId ? ready.focusTargetId : self.focusTargetId;
-    obj.focusSequenceId = undefined !== ready.focusSequenceId ? ready.focusSequenceId : self.focusSequenceId;
-    if (undefined !== ready.hasMoreBefore) {
-      let hasMoreBefore = true === ready.hasMoreBefore;
+    obj.jumpReturnTargetId = undefined !== obj.jumpReturnTargetId ? obj.jumpReturnTargetId : self.jumpReturnTargetId;
+    obj.focusTargetId = undefined !== obj.focusTargetId ? obj.focusTargetId : self.focusTargetId;
+    obj.focusSequenceId = undefined !== obj.focusSequenceId ? obj.focusSequenceId : self.focusSequenceId;
+    if (undefined !== obj.hasMoreBefore) {
+      let hasMoreBefore = true === obj.hasMoreBefore;
     } else {
       hasMoreBefore = self.hasMoreBefore;
     }
     obj.hasMoreBefore = hasMoreBefore;
-    if (undefined !== ready.hasMoreAfter) {
-      let hasMoreAfter = true === ready.hasMoreAfter;
+    if (undefined !== obj.hasMoreAfter) {
+      let hasMoreAfter = true === obj.hasMoreAfter;
     } else {
       hasMoreAfter = self.hasMoreAfter;
     }
     obj.hasMoreAfter = hasMoreAfter;
-    obj.loadingMore = undefined !== ready.loadingMore ? ready.loadingMore : self.loadingMore;
-    obj.revealedMessageId = undefined !== ready.revealedMessageId ? ready.revealedMessageId : self.revealedMessageId;
-    obj.cached = undefined !== ready.cached ? ready.cached : self.cached;
-    obj.hasFetched = undefined !== ready.hasFetched ? ready.hasFetched : self.hasFetched;
-    obj.error = undefined !== ready.error ? ready.error : self.error;
-    obj.onJumpComplete = undefined !== ready.onJumpComplete ? ready.onJumpComplete : self.onJumpComplete;
-    obj.initialScrollSequenceId = undefined !== ready.initialScrollSequenceId ? ready.initialScrollSequenceId : self.initialScrollSequenceId;
-    obj.suppressRowAnimationSequenceId = undefined !== ready.suppressRowAnimationSequenceId ? ready.suppressRowAnimationSequenceId : self.suppressRowAnimationSequenceId;
+    obj.loadingMore = undefined !== obj.loadingMore ? obj.loadingMore : self.loadingMore;
+    obj.revealedMessageId = undefined !== obj.revealedMessageId ? obj.revealedMessageId : self.revealedMessageId;
+    obj.cached = undefined !== obj.cached ? obj.cached : self.cached;
+    obj.hasFetched = undefined !== obj.hasFetched ? obj.hasFetched : self.hasFetched;
+    obj.error = undefined !== obj.error ? obj.error : self.error;
+    obj.onJumpComplete = undefined !== obj.onJumpComplete ? obj.onJumpComplete : self.onJumpComplete;
+    obj.initialScrollSequenceId = undefined !== obj.initialScrollSequenceId ? obj.initialScrollSequenceId : self.initialScrollSequenceId;
+    obj.suppressRowAnimationSequenceId = undefined !== obj.suppressRowAnimationSequenceId ? obj.suppressRowAnimationSequenceId : self.suppressRowAnimationSequenceId;
   }
   return obj;
 };

@@ -50,7 +50,7 @@ prototype["_clearIdleCallback"] = function _clearIdleCallback() {
 let result = require("_trackAppBackgrounded").fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
 
 export const createDispatcherWorkScheduler = function createDispatcherWorkScheduler() {
-  if (typeof DispatcherWorkScheduler !== "find") {
+  if (typeof DispatcherWorkScheduler !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let importDefault;

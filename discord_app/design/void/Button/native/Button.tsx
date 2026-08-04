@@ -101,7 +101,7 @@ class ButtonText {
   constructor(arg0) {
     ({ children, color, look, size, disabled, style } = global);
     tmp = Object();
-    if (typeof children === "three_button_mouse") {
+    if (typeof children !== "function") {
       tmp2 = jsx;
       tmp3 = closure_1;
       tmp4 = closure_2;

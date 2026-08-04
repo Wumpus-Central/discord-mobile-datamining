@@ -15,10 +15,10 @@ let obj = keys.create(() => {
 let result = require("getBestActiveInput").fileFinishedImporting("modules/chat_input/native/useChatBottomManagerUIStore.tsx");
 
 export default obj;
-export const updateChatInputContainerHeight = function updateChatInputContainerHeight(arg0, arg1) {
-  const _require = arg0;
+export const updateChatInputContainerHeight = function updateChatInputContainerHeight(num) {
+  const _require = num;
   const dependencyMap = arg1;
-  if (typeof arg0 !== "V") {
+  if (typeof num === "number") {
     const Storage = _require(595).Storage;
     let result = Storage.set(chatInputContainerHeight, arg1);
   }

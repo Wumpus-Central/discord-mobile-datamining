@@ -174,7 +174,7 @@ class CloudUpload extends tmp5 {
     tmp5.loaded = 0;
     tmp5.reactNativeFilePrepped = false;
     tmp6 = UploadAnalytics;
-    if (typeof UploadAnalytics !== "find") {
+    if (typeof UploadAnalytics !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -231,7 +231,7 @@ class CloudUpload extends tmp5 {
       tmp5._libdiscoreEnabled = false;
       return tmp5;
     } else {
-      if (typeof tmp5.origin === "y") {
+      if (typeof tmp5.origin === "string") {
         origin = tmp5.origin;
       } else {
         origin = require("cancel").UploadOrigin[tmp5.origin];
@@ -249,7 +249,7 @@ class CloudUpload extends tmp5 {
     this.error = undefined;
     this.startTime = undefined;
     tmp = UploadAnalytics;
-    if (typeof UploadAnalytics !== "find") {
+    if (typeof UploadAnalytics !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -336,185 +336,88 @@ prototype["supportsResume"] = function supportsResume() {
 prototype["uploadFileToCloud"] = function uploadFileToCloud() {
   const self = this;
   return callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else if (null == v0.responseUrl) {
-            const _Error = Error;
-            const error = new Error("_uploadFileToCloud - responseUrl is not set");
-            throw error;
-          } else {
-            const _HermesInternal3 = HermesInternal;
-            const combined = "Uploading " + obj8.id;
-            if (obj8.item.platform === v0(outer1_2[9]).UploadPlatform.REACT_NATIVE) {
-              const _HermesInternal2 = HermesInternal;
-              let combined1 = "filename=" + obj8.item.filename + ", uri=" + obj8.item.uri;
-            } else {
-              const _HermesInternal = HermesInternal;
-              combined1 = "filename=" + obj8.item.file.name;
-            }
-            outer1_12.log(combined, combined1);
-            if (obj8.item.platform === v0(outer1_2[9]).UploadPlatform.REACT_NATIVE) {
-              const obj1 = { type: null, uri: null, name: null };
-              obj1[0] = obj8.item.mimeType;
-              obj1[1] = obj8.item.uri;
-              obj1[2] = obj8.item.filename;
-              let str6 = "application/octet-stream";
-              if (null != obj1.type) {
-                str6 = "application/octet-stream";
-                if ("application/json" !== obj1.type) {
-                  str6 = obj1.type;
-                }
-              }
-              let str4 = str6;
-              let file = obj1;
-            } else {
-              file = obj8.item.file;
-              str4 = "application/octet-stream";
-            }
-            if (tmp26Result.canUploadNatively(obj8.item)) {
-              const libdiscoreHttpClient = new tmp26(tmp27[10]).LibdiscoreHttpClient();
-              obj8._uploadHttpClient = libdiscoreHttpClient;
-              obj8._libdiscoreEnabled = true;
-              outer1_12.log("Using libdiscore client for file upload");
-            }
-            c1 = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj8.uploadFileWithResumption(obj8.responseUrl, file, str4);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp17) {
-        v0 = tmp;
-        throw tmp17;
-      }
+    if (null == v0.responseUrl) {
+      const _Error = Error;
+      const error = new Error("_uploadFileToCloud - responseUrl is not set");
+      throw error;
     }
+    const _HermesInternal3 = HermesInternal;
+    const combined = "Uploading " + obj8.id;
+    if (obj8.item.platform === v0(outer1_2[9]).UploadPlatform.REACT_NATIVE) {
+      const _HermesInternal2 = HermesInternal;
+      let combined1 = "filename=" + obj8.item.filename + ", uri=" + obj8.item.uri;
+    } else {
+      const _HermesInternal = HermesInternal;
+      combined1 = "filename=" + obj8.item.file.name;
+    }
+    outer1_12.log(combined, combined1);
+    if (obj8.item.platform === v0(outer1_2[9]).UploadPlatform.REACT_NATIVE) {
+      const obj1 = { type: null, uri: null, name: null };
+      obj1[0] = obj8.item.mimeType;
+      obj1[1] = obj8.item.uri;
+      obj1[2] = obj8.item.filename;
+      let str6 = "application/octet-stream";
+      if (null != obj1.type) {
+        str6 = "application/octet-stream";
+        if ("application/json" !== obj1.type) {
+          str6 = obj1.type;
+        }
+      }
+      let str4 = str6;
+      let file = obj1;
+    } else {
+      file = obj8.item.file;
+      str4 = "application/octet-stream";
+    }
+    if (tmp26Result.canUploadNatively(obj8.item)) {
+      const libdiscoreHttpClient = new tmp26(tmp27[10]).LibdiscoreHttpClient();
+      obj8._uploadHttpClient = libdiscoreHttpClient;
+      obj8._libdiscoreEnabled = true;
+      outer1_12.log("Using libdiscore client for file upload");
+    }
+    yield obj8.uploadFileWithResumption(obj8.responseUrl, file, str4);
+    return arg1;
   })();
 };
 prototype["getResumePosition"] = function getResumePosition(responseUrl) {
   let closure_0 = responseUrl;
   const self = this;
   return callback(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const obj1 = { url: null, headers: null, rejectWithError: true, retries: 0, timeout: null, signal: null };
-            obj1[0] = c0;
-            obj1[1] = { "Content-Range": "bytes */*" };
-            const obj2 = { deadline: null };
-            obj2[0] = 30 * v0(outer1_2[11]).Millis.SECOND;
-            obj1[4] = obj2;
-            obj1[5] = v0._abortController.signal;
-            const _uploadHttpClient = v0._uploadHttpClient;
-            const doUploadResult = _uploadHttpClient.doUpload(obj1);
-            v0 = 1;
-            c0 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = _uploadHttpClient.doUpload(obj1).then((status) => {
-              if (200 !== status.status) {
-                if (201 !== status.status) {
-                  let currentSize = outer1_14.rejectionHandler("status_check")(status);
-                }
-                return currentSize;
-              }
-              currentSize = c1.currentSize;
-            }).catch((status) => {
-              if (status instanceof v3(outer1_2[8]).HTTPResponseError) {
-                if (308 === status.status) {
-                  let str = status.headers.range;
-                  if (str == null) {
-                    str = "";
-                  }
-                  const parseRangeHeaderResult = c1.parseRangeHeader(str);
-                  let num2 = 0;
-                  if (null != parseRangeHeaderResult) {
-                    num2 = parseRangeHeaderResult[1] + 1;
-                  }
-                  return num2;
-                }
-              }
-              return outer1_14.rejectionHandler("status_check")(status);
-            });
-            return obj3;
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        } else {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+    const obj1 = { url: null, headers: null, rejectWithError: true, retries: 0, timeout: null, signal: null };
+    obj1[0] = c0;
+    obj1[1] = { "Content-Range": "bytes */*" };
+    const obj2 = { deadline: null };
+    obj2[0] = 30 * v0(outer1_2[11]).Millis.SECOND;
+    obj1[4] = obj2;
+    obj1[5] = v0._abortController.signal;
+    const _uploadHttpClient = v0._uploadHttpClient;
+    const doUploadResult = _uploadHttpClient.doUpload(obj1);
+    yield _uploadHttpClient.doUpload(obj1).then((status) => {
+      if (200 !== status.status) {
+        if (201 !== status.status) {
+          let currentSize = outer1_14.rejectionHandler("status_check")(status);
         }
-      } catch (tmp5) {
-        c0 = tmp;
-        throw tmp5;
+        return currentSize;
       }
-    }
+      currentSize = c1.currentSize;
+    }).catch((status) => {
+      if (status instanceof v3(outer1_2[8]).HTTPResponseError) {
+        if (308 === status.status) {
+          let str = status.headers.range;
+          if (str == null) {
+            str = "";
+          }
+          const parseRangeHeaderResult = c1.parseRangeHeader(str);
+          let num2 = 0;
+          if (null != parseRangeHeaderResult) {
+            num2 = parseRangeHeaderResult[1] + 1;
+          }
+          return num2;
+        }
+      }
+      return outer1_14.rejectionHandler("status_check")(status);
+    });
+    return arg1;
   })();
 };
 prototype["startOrResumeUpload"] = function startOrResumeUpload(c3, outer1_4) {
@@ -717,7 +620,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       responseUrl = c3.responseUrl;
                       c5 = 2;
                       c6 = 1;
-                      let obj1 = { value: null, done: false };
+                      const obj1 = { value: null, done: false };
                       obj1[0] = c3.ensureFreshResponseUrl();
                       return obj1;
                     }
@@ -732,7 +635,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                         let obj8 = iter4(next[14]);
                         c5 = 5;
                         c6 = 1;
-                        let obj2 = { value: null, done: false };
+                        const obj2 = { value: null, done: false };
                         obj2[0] = obj8.awaitOnline();
                         return obj2;
                       }
@@ -761,57 +664,8 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                           c6 = 1;
                           const obj4 = { value: null, done: false };
                           obj4[0] = c3.trackTime("resumptionCheckTimeMs", _loop(function*() {
-                            if (c0 === 2) {
-                              c0 = 3;
-                              HermesBuiltin.throwTypeError();
-                            } else if (tmp3 === 3) {
-                              if (arg0 === 1) {
-                                throw arg1;
-                              } else if (arg0 === 2) {
-                                let obj = { value: null, done: true };
-                                obj[0] = arg1;
-                                return obj;
-                              } else {
-                                return { value: "HermesInternal", done: null };
-                              }
-                            } else {
-                              try {
-                                c0 = 2;
-                                if (0 === c1) {
-                                  if (arg0 === 1) {
-                                    c0 = 3;
-                                    throw arg1;
-                                  } else if (arg0 === 2) {
-                                    c0 = 3;
-                                    obj = { value: null, done: true };
-                                    obj[0] = arg1;
-                                    return obj;
-                                  } else {
-                                    c1 = 1;
-                                    c0 = 1;
-                                    const obj1 = { value: null, done: false };
-                                    obj1[0] = outer1_3.getResumePosition(outer1_3.responseUrl);
-                                    return obj1;
-                                  }
-                                } else if (arg0 === 1) {
-                                  c0 = 3;
-                                  throw arg1;
-                                } else if (arg0 === 2) {
-                                  c0 = 3;
-                                  const obj2 = { value: null, done: true };
-                                  obj2[0] = arg1;
-                                  return obj2;
-                                } else {
-                                  c0 = 3;
-                                  obj = { value: null, done: true };
-                                  obj[0] = arg1;
-                                  return obj;
-                                }
-                              } catch (tmp6) {
-                                c0 = tmp;
-                                throw tmp6;
-                              }
-                            }
+                            yield outer1_3.getResumePosition(outer1_3.responseUrl);
+                            return arg1;
                           }));
                           return obj4;
                         }
@@ -1003,66 +857,15 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
 prototype["getSize"] = function getSize() {
   const self = this;
   return callback(function*() {
-    if (c1 === 2) {
-      c1 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c1 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let fileSize;
-            const getFileSize = outer1_0(table[15]).getFileSize;
-            if (getFileSize != null) {
-              fileSize = getFileSize(outer1_0.item.uri);
-            }
-            table = 1;
-            c1 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = fileSize;
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c1 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          let c0 = arg1;
-          if (arg1 == null) {
-            c0 = 0;
-          }
-          c1 = 3;
-          obj = { value: null, done: true };
-          obj[0] = c0;
-          return obj;
-        }
-      } catch (tmp12) {
-        c1 = tmp;
-        throw tmp12;
-      }
+    const getFileSize = outer1_0(table[15]).getFileSize;
+    if (getFileSize != null) {
+      const fileSize = getFileSize(outer1_0.item.uri);
     }
+    let c0 = yield fileSize;
+    if (arg1 == null) {
+      c0 = 0;
+    }
+    return c0;
   })();
 };
 prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
@@ -1345,69 +1148,20 @@ prototype["upload"] = function upload() {
                         outer1_12.log("Requesting upload url for " + outer1_0.id);
                         c7 = 6;
                         status = 1;
-                        let obj4 = { value: null, done: false };
+                        const obj4 = { value: null, done: false };
                         obj4[0] = outer1_0.trackTime("getUploadUrlTimeMs", outer1_5(function*() {
-                          if (v0 === 2) {
-                            v0 = 3;
-                            HermesBuiltin.throwTypeError();
-                          } else if (tmp3 === 3) {
-                            if (arg0 === 1) {
-                              throw arg1;
-                            } else if (arg0 === 2) {
-                              let obj = { value: null, done: true };
-                              obj[0] = arg1;
-                              return obj;
-                            } else {
-                              return { value: "HermesInternal", done: null };
-                            }
-                          } else {
-                            try {
-                              v0 = 2;
-                              if (0 === c1) {
-                                if (arg0 === 1) {
-                                  v0 = 3;
-                                  throw arg1;
-                                } else if (arg0 === 2) {
-                                  v0 = 3;
-                                  obj = { value: null, done: true };
-                                  obj[0] = arg1;
-                                  return obj;
-                                } else {
-                                  const createAttachmentURL = outer1_2.getCreateAttachmentURL(v0.channelId);
-                                  const HTTP = v0(table[8]).HTTP;
-                                  const obj1 = { url: null, body: null };
-                                  obj1[0] = createAttachmentURL;
-                                  const obj2 = { files: null };
-                                  const items = [c1];
-                                  obj2[0] = items;
-                                  obj1[1] = obj2;
-                                  const merged = Object.assign(v0.createAttachmentUrlRetryOpts());
-                                  obj1.rejectWithError = false;
-                                  c1 = 1;
-                                  v0 = 1;
-                                  const obj3 = { value: null, done: false };
-                                  obj3[0] = HTTP.post(obj1);
-                                  return obj3;
-                                }
-                              } else if (arg0 === 1) {
-                                v0 = 3;
-                                throw arg1;
-                              } else if (arg0 === 2) {
-                                v0 = 3;
-                                const obj4 = { value: null, done: true };
-                                obj4[0] = arg1;
-                                return obj4;
-                              } else {
-                                v0 = 3;
-                                obj = { value: null, done: true };
-                                obj[0] = arg1;
-                                return obj;
-                              }
-                            } catch (tmp5) {
-                              v0 = tmp;
-                              throw tmp5;
-                            }
-                          }
+                          const createAttachmentURL = outer1_2.getCreateAttachmentURL(v0.channelId);
+                          const HTTP = v0(table[8]).HTTP;
+                          const obj1 = { url: null, body: null };
+                          obj1[0] = createAttachmentURL;
+                          const obj2 = { files: null };
+                          const items = [c1];
+                          obj2[0] = items;
+                          obj1[1] = obj2;
+                          const merged = Object.assign(v0.createAttachmentUrlRetryOpts());
+                          obj1.rejectWithError = false;
+                          yield HTTP.post(obj1);
+                          return arg1;
                         }));
                         return obj4;
                       }
@@ -1498,57 +1252,8 @@ prototype["upload"] = function upload() {
                 status = 1;
                 const obj8 = { value: null, done: false };
                 obj8[0] = c0.trackTime("uploadTimeMs", outer1_5(function*() {
-                  if (c0 === 2) {
-                    c0 = 3;
-                    HermesBuiltin.throwTypeError();
-                  } else if (tmp3 === 3) {
-                    if (arg0 === 1) {
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      let obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      return { value: "HermesInternal", done: null };
-                    }
-                  } else {
-                    try {
-                      c0 = 2;
-                      if (0 === c1) {
-                        if (arg0 === 1) {
-                          c0 = 3;
-                          throw arg1;
-                        } else if (arg0 === 2) {
-                          c0 = 3;
-                          obj = { value: null, done: true };
-                          obj[0] = arg1;
-                          return obj;
-                        } else {
-                          c1 = 1;
-                          c0 = 1;
-                          const obj1 = { value: null, done: false };
-                          obj1[0] = c0.uploadFileToCloud();
-                          return obj1;
-                        }
-                      } else if (arg0 === 1) {
-                        c0 = 3;
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        c0 = 3;
-                        const obj2 = { value: null, done: true };
-                        obj2[0] = arg1;
-                        return obj2;
-                      } else {
-                        c0 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      }
-                    } catch (tmp6) {
-                      c0 = tmp;
-                      throw tmp6;
-                    }
-                  }
+                  yield c0.uploadFileToCloud();
+                  return arg1;
                 }));
                 return obj8;
               }
@@ -1661,7 +1366,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                   const _HermesInternal6 = HermesInternal;
                   throwTypeErrorResult = outer1_12.log("reactNativeCompressAndExtractData() file already prepped - " + outer1_0.id);
                   c4 = 3;
-                  let obj1 = { value: null, done: true };
+                  const obj1 = { value: null, done: true };
                   obj1[0] = outer1_0;
                   return obj1;
                 } else {
@@ -1676,63 +1381,14 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                   c4 = 1;
                   let obj2 = { value: null, done: false };
                   obj2[0] = outer1_0.trackTime("compressTimeMs", outer1_5(function*() {
-                    if (c1 === 2) {
-                      c1 = 3;
-                      HermesBuiltin.throwTypeError();
-                    } else if (tmp3 === 3) {
-                      if (arg0 === 1) {
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        let obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      } else {
-                        return { value: "HermesInternal", done: null };
-                      }
-                    } else {
-                      try {
-                        c1 = 2;
-                        if (0 === c2) {
-                          if (arg0 === 1) {
-                            c1 = 3;
-                            throw arg1;
-                          } else if (arg0 === 2) {
-                            c1 = 3;
-                            obj = { value: null, done: true };
-                            obj[0] = arg1;
-                            return obj;
-                          } else {
-                            let obj2 = size(name[21]);
-                            const reactNativeFileIndex = outer1_0.reactNativeFileIndex;
-                            let c0 = reactNativeFileIndex;
-                            if (reactNativeFileIndex == null) {
-                              c0 = 0;
-                            }
-                            c2 = 1;
-                            c1 = 1;
-                            const obj1 = { value: null, done: false };
-                            obj1[0] = obj2.getAttachmentFile(outer1_0, c0);
-                            return obj1;
-                          }
-                        } else if (arg0 === 1) {
-                          c1 = 3;
-                          throw arg1;
-                        } else if (arg0 === 2) {
-                          c1 = 3;
-                          obj2 = { value: null, done: true };
-                          obj2[0] = arg1;
-                          return obj2;
-                        } else {
-                          c1 = 3;
-                          obj = { value: null, done: true };
-                          obj[0] = arg1;
-                          return obj;
-                        }
-                      } catch (tmp10) {
-                        c1 = tmp;
-                        throw tmp10;
-                      }
+                    const obj2 = size(name[21]);
+                    const reactNativeFileIndex = outer1_0.reactNativeFileIndex;
+                    let c0 = reactNativeFileIndex;
+                    if (reactNativeFileIndex == null) {
+                      c0 = 0;
                     }
+                    yield obj2.getAttachmentFile(outer1_0, c0);
+                    return arg1;
                   }));
                   return obj2;
                 }

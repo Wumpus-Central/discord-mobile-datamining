@@ -56,7 +56,7 @@ function AlertModalBackdrop() {
   });
   let fn = function t() {
     let value = tmp4.get();
-    if (typeof outer1_26 !== "find") {
+    if (typeof outer1_26 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = { opacity: null };
@@ -149,7 +149,7 @@ class AlertModal {
         obj = c7;
         result = 2 * Math.max(top, bottom);
         value = c7.get();
-        if (typeof outer1_26 !== "find") {
+        if (typeof outer1_26 !== "function") {
           str4 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -191,7 +191,7 @@ class AlertModal {
             num3 = 0.1;
             num = 1 - 0.1 * obj4.get();
           }
-          if (typeof tmp3 !== "find") {
+          if (typeof tmp3 !== "function") {
             str5 = "Trying to call a non-function";
             throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
@@ -216,7 +216,7 @@ class AlertModal {
             num4 = 50;
             diff1 = 50 - 50 * obj4.get();
           }
-          if (typeof tmp3 !== "find") {
+          if (typeof tmp3 !== "function") {
             str6 = "Trying to call a non-function";
             throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
           }

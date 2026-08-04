@@ -22,72 +22,26 @@ export default function ExistingUserAgeGateConfirm(age) {
   function _handleConfirm() {
     const self = this;
     const tmp = _handleConfirm(function*() {
-      if (c4 === 2) {
+      let closure_0 = tmp3;
+      outer1_2(true);
+      let c3 = 1;
+      yield outer1_0();
+      if (1 === tmp7) {
+        c3 = 0;
+        arr = arr.pop();
+        callback(false);
+        let c4 = 3;
+      } else if (arg0 === 1) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+        throw arg1;
+      } else if (arg0 !== 2) {
+        if (arg1.shouldShowError) {
+          arr = arr.pop();
         }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === arr) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_0 = tmp3;
-              outer1_2(true);
-              let c3 = 1;
-              arr = 2;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0();
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              arr = arr.pop();
-              callback(false);
-              c4 = 3;
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              if (arg1.shouldShowError) {
-                arr = arr.pop();
-              }
-              c3 = 0;
-            }
-            c3 = 0;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp21) {
-          callback = tmp21;
-          if (tmp4 === c3) {
-            c4 = tmp2;
-            throw tmp21;
-          } else {
-            arr = tmp;
-          }
-        }
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     });
     _handleConfirm = tmp;
     const apply = tmp.apply;
@@ -107,7 +61,7 @@ export default function ExistingUserAgeGateConfirm(age) {
   const intl = onConfirm(1236).intl;
   obj[3] = intl.format(onConfirm(1236).t.wumolR, { age: age.age });
   const items = [callback2(onConfirm(4281).Text, obj), , ];
-  let obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
+  const obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
   const intl2 = onConfirm(1236).intl;
   const obj2 = { helpURL: null };
   const tmp2 = callback(React.useState(false), 2);

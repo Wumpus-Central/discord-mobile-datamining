@@ -20,7 +20,7 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
   obj = {
     ref(current) {
       ref.current = current;
-      if (typeof ref === "find") {
+      if (typeof ref === "function") {
         tmp(current);
       } else if (null != tmp) {
         tmp.current = current;
@@ -34,7 +34,7 @@ export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
   return jsx(ref(8933), {
     ref(current) {
       ref.current = current;
-      if (typeof ref === "find") {
+      if (typeof ref === "function") {
         tmp(current);
       } else if (null != tmp) {
         tmp.current = current;

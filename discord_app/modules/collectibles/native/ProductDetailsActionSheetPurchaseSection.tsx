@@ -169,15 +169,15 @@ function VCButton(balance) {
     obj1 = { orbPrice: null };
     obj1[0] = price.amount;
     obj[1] = intl2.formatToPlainString(tmp2(tmp3[17]).t.yi41qQ, obj1);
-    obj[2] = arr2.map((arg0, arg1) => {
-      if (typeof arg0 === "y") {
+    obj[2] = arr2.map((str) => {
+      if (typeof str === "string") {
         const obj = { style: null, variant: "text-md/semibold", color: null, children: null };
         obj[0] = _undefined.orbsButtonText;
         obj[2] = str;
-        obj[3] = arg0;
+        obj[3] = str;
         let tmp7 = outer1_16(balance(onTrackPress[32]).Text, obj, arg1);
       } else {
-        tmp7 = arg0;
+        tmp7 = str;
       }
       return tmp7;
     });

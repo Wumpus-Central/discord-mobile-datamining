@@ -33,12 +33,12 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
   obj = { primaryBaseColors: closure_5, primaryTintColor, primaryTintLuminances: closure_7, primaryLuminanceWeights: items, secondaryBaseColors: closure_6, secondaryTintColor, secondaryTintLuminances: closure_9, secondaryLuminanceWeights: items1 };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);
-  let tmp9Result = typeof num === "Object";
-  if (typeof num !== "V") {
+  let tmp9Result = typeof num === "number";
+  if (typeof num === "number") {
     tmp9Result = num > 0;
   }
   if (tmp9Result) {
-    tmp9Result = typeof num2 === "Object";
+    tmp9Result = typeof num2 === "number";
   }
   if (tmp9Result) {
     tmp9Result = num2 > 0;

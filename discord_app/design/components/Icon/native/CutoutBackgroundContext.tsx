@@ -19,7 +19,7 @@ export const CutoutBackgroundProvider = function CutoutBackgroundProvider(childr
   let token = null;
   if (null !== backgroundColor) {
     token = obj.useToken(tmp5);
-    if (typeof backgroundColor !== "_iter") {
+    if (typeof backgroundColor === "string") {
       token = backgroundColor;
     }
   }

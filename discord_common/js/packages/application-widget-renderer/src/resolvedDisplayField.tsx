@@ -30,7 +30,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
     if (null != str) {
       str3 = "";
       if ("" !== str.value) {
-        if (typeof str.value === "Object") {
+        if (typeof str.value === "number") {
           let formatResult = numberFormat.format(str.value);
         } else {
           formatResult = str.value;
@@ -44,7 +44,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
     if (null != iter) {
       str5 = "\u2013";
       if ("" !== iter.value) {
-        if (typeof iter.value === "Object") {
+        if (typeof iter.value === "number") {
           iter = iter.value;
           let formatResult1 = numberFormat.format(iter);
         } else {

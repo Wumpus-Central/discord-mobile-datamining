@@ -268,7 +268,7 @@ prototype["applyQualityConstraints"] = function applyQualityConstraints() {
 };
 prototype["initializeStreamParameters"] = function initializeStreamParameters(items) {
   const self = this;
-  const found = items.filter((type) => (type.type === constants.VIDEO || type.type === tmp.SCREEN) && typeof type.rid === "y");
+  const found = items.filter((type) => (type.type === constants.VIDEO || type.type === tmp.SCREEN) && typeof type.rid === "string");
   this.videoStreamParameters = found.map((ssrc) => {
     const videoQualityManager = self.videoQualityManager;
     const quality = videoQualityManager.getQuality(ssrc.ssrc);
@@ -369,64 +369,13 @@ prototype["getRemoteVideoSinkPixelCount"] = function getRemoteVideoSinkPixelCoun
 prototype["emitStats"] = function emitStats() {
   const self = this;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            table = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0.getStats();
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          closure_0 = arg1;
-          if (null != closure_0) {
-            closure_0.emit(outer1_0(table[5]).BaseConnectionEvent.Stats, closure_0);
-          }
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_0;
-          return obj;
-        }
-      } catch (tmp18) {
-        c3 = tmp;
-        throw tmp18;
-      }
+    let closure_1 = tmp5;
+    let closure_0 = tmp2;
+    closure_0 = yield outer1_0.getStats();
+    if (null != closure_0) {
+      closure_0.emit(outer1_0(table[5]).BaseConnectionEvent.Stats, closure_0);
     }
+    return closure_0;
   })();
 };
 prototype["getSpatialAudioEnabled"] = function getSpatialAudioEnabled() {

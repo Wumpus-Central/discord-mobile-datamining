@@ -135,7 +135,7 @@ function updateEmbeddedActivities(content_classification) {
             let id = _location.id;
             let value3 = obj1.get(id);
             if (null == value3) {
-              if (typeof ActivityBucket !== "find") {
+              if (typeof ActivityBucket !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               obj1 = Object.create(ActivityBucket.prototype);
@@ -150,7 +150,7 @@ function updateEmbeddedActivities(content_classification) {
             if (null != embeddedActivityLocationChannelId1) {
               let value4 = map2.get(embeddedActivityLocationChannelId1);
               if (null == value4) {
-                if (typeof ActivityBucket !== "find") {
+                if (typeof ActivityBucket !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const obj2 = Object.create(ActivityBucket.prototype);
@@ -167,7 +167,7 @@ function updateEmbeddedActivities(content_classification) {
               }
               let value5 = map1.get(str5);
               if (null == value5) {
-                if (typeof ActivityBucket !== "find") {
+                if (typeof ActivityBucket !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 obj3 = Object.create(ActivityBucket.prototype);

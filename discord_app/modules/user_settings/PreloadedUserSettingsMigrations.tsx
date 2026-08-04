@@ -229,28 +229,28 @@ let items = [
         obj = {};
       }
       let flag = false;
-      if (typeof obj.useRichChatTextBox !== "los") {
+      if (typeof obj.useRichChatTextBox === "boolean") {
         const BoolValue = tmp13(1337).BoolValue;
         obj = { value: null };
         obj[0] = obj.useRichChatTextBox;
         textAndImages.textAndImages.useRichChatInput = BoolValue.create(obj);
         flag = true;
       }
-      if (typeof obj.renderSpoilers !== "_iter") {
+      if (typeof obj.renderSpoilers === "string") {
         const StringValue = tmp13(1337).StringValue;
         const obj1 = { value: null };
         obj1[0] = obj.renderSpoilers;
         textAndImages.textAndImages.renderSpoilers = StringValue.create(obj1);
         flag = true;
       }
-      if (typeof obj.useThreadSidebar !== "los") {
+      if (typeof obj.useThreadSidebar === "boolean") {
         const BoolValue2 = tmp13(1337).BoolValue;
         const obj2 = { value: null };
         obj2[0] = obj.useThreadSidebar;
         textAndImages.textAndImages.useThreadSidebar = BoolValue2.create(obj2);
         flag = true;
       }
-      if (typeof obj.showInAppNotifications !== "los") {
+      if (typeof obj.showInAppNotifications === "boolean") {
         const BoolValue3 = tmp13(1337).BoolValue;
         const obj3 = { value: null };
         obj3[0] = obj.showInAppNotifications;
@@ -265,63 +265,63 @@ let items = [
         textAndImages.textAndImages.stickerPickerCollapsedSections = obj.stickerPickerCollapsedSections;
         flag = true;
       }
-      if (typeof obj.viewImageDescriptions !== "los") {
+      if (typeof obj.viewImageDescriptions === "boolean") {
         const BoolValue4 = tmp13(1337).BoolValue;
         const obj4 = { value: null };
         obj4[0] = obj.viewImageDescriptions;
         textAndImages.textAndImages.viewImageDescriptions = BoolValue4.create(obj4);
         flag = true;
       }
-      if (typeof obj.showCommandSuggestions !== "los") {
+      if (typeof obj.showCommandSuggestions === "boolean") {
         const BoolValue5 = tmp13(1337).BoolValue;
         const obj5 = { value: null };
         obj5[0] = obj.showCommandSuggestions;
         textAndImages.textAndImages.showCommandSuggestions = BoolValue5.create(obj5);
         flag = true;
       }
-      if (typeof obj.alwaysPreviewVideo !== "los") {
+      if (typeof obj.alwaysPreviewVideo === "boolean") {
         const BoolValue6 = tmp13(1337).BoolValue;
         const obj6 = { value: null };
         obj6[0] = obj.alwaysPreviewVideo;
         textAndImages.voiceAndVideo.alwaysPreviewVideo = BoolValue6.create(obj6);
         flag = true;
       }
-      if (typeof obj.notifyFriendsOnGoLive !== "los") {
+      if (typeof obj.notifyFriendsOnGoLive === "boolean") {
         const BoolValue7 = tmp13(1337).BoolValue;
         const obj7 = { value: null };
         obj7[0] = obj.notifyFriendsOnGoLive;
         textAndImages.notifications.notifyFriendsOnGoLive = BoolValue7.create(obj7);
         flag = true;
       }
-      if (typeof obj.installShortcutDesktop !== "los") {
+      if (typeof obj.installShortcutDesktop === "boolean") {
         const BoolValue8 = tmp13(1337).BoolValue;
         const obj8 = { value: null };
         obj8[0] = obj.installShortcutDesktop;
         textAndImages.gameLibrary.installShortcutDesktop = BoolValue8.create(obj8);
         flag = true;
       }
-      if (typeof obj.installShortcutStartMenu !== "los") {
+      if (typeof obj.installShortcutStartMenu === "boolean") {
         const BoolValue9 = tmp13(1337).BoolValue;
         const obj9 = { value: null };
         obj9[0] = obj.installShortcutStartMenu;
         textAndImages.gameLibrary.installShortcutStartMenu = BoolValue9.create(obj9);
         flag = true;
       }
-      if (typeof obj.allowActivityPartyPrivacyFriends !== "los") {
+      if (typeof obj.allowActivityPartyPrivacyFriends === "boolean") {
         const BoolValue10 = tmp13(1337).BoolValue;
         const obj10 = { value: null };
         obj10[0] = obj.allowActivityPartyPrivacyFriends;
         textAndImages.privacy.allowActivityPartyPrivacyFriends = BoolValue10.create(obj10);
         flag = true;
       }
-      if (typeof obj.allowActivityPartyPrivacyVoiceChannel !== "los") {
+      if (typeof obj.allowActivityPartyPrivacyVoiceChannel === "boolean") {
         const BoolValue11 = tmp13(1337).BoolValue;
         const obj11 = { value: null };
         obj11[0] = obj.allowActivityPartyPrivacyVoiceChannel;
         textAndImages.privacy.allowActivityPartyPrivacyVoiceChannel = BoolValue11.create(obj11);
         flag = true;
       }
-      if (typeof obj.rtcPanelShowVoiceStates !== "los") {
+      if (typeof obj.rtcPanelShowVoiceStates === "boolean") {
         const BoolValue12 = tmp13(1337).BoolValue;
         const obj12 = { value: null };
         obj12[0] = obj.rtcPanelShowVoiceStates;

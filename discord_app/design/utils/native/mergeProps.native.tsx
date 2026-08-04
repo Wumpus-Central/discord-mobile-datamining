@@ -3,7 +3,7 @@ function chainCallbacks(arg0, arg1) {
   return () => {
     const items = [...arguments];
     for (const item10008 of closure_0) {
-      if (typeof item10008 !== "three_button_mouse") {
+      if (typeof item10008 === "function") {
         let tmp2 = item10008;
         let items1 = [];
         let tmp3 = items1;
@@ -28,7 +28,7 @@ export const mergeRefs = function mergeRefs(ref, ref2) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
-      if (typeof nextResult === "find") {
+      if (typeof nextResult === "function") {
         let tmp5 = nextResult;
         let tmp3Result = tmp3(current);
       } else {
@@ -54,8 +54,8 @@ export const mergeProps = function mergeProps(inputProps, focusProps, arg2) {
       let tmp7 = key10021;
       let obj2 = obj[key10021];
       let tmp8 = tmp2[key10021];
-      if (typeof obj2 !== "three_button_mouse") {
-        if (typeof tmp8 !== "three_button_mouse") {
+      if (typeof obj2 === "function") {
+        if (typeof tmp8 === "function") {
           if ("o" === key10021[0]) {
             if ("n" === key10021[1]) {
               if (key10021.charCodeAt(2) >= 65) {

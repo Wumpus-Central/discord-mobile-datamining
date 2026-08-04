@@ -20,89 +20,42 @@ export default function AddModeratorsActionSheet(channel) {
   function _handleAddModeratorsPressed() {
     const self = this;
     const tmp = outer1_3(function*() {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+      let c1 = tmp3;
+      let c0 = 0;
+      c1 = 0;
+      const _Object = Object;
+      const values = Object.values(outer1_1);
+      const found = values.filter((row) => null != row.row.id);
+      let c3 = 1;
+      const mapped = found.map((row) => {
+        row = row.row;
+        if (row.rowType === outer2_8.ROLE) {
+          closure_1 = closure_1 + 1;
+          let moderatorOverwrite = outer2_0(outer2_2[11]).createModeratorOverwrite(row.id, outer2_0(outer2_2[12]).PermissionOverwriteType.ROLE, c0);
+          const obj2 = outer2_0(outer2_2[11]);
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_0 = closure_0 + 1;
+          moderatorOverwrite = outer2_0(outer2_2[11]).createModeratorOverwrite(row.id, outer2_0(outer2_2[12]).PermissionOverwriteType.MEMBER, c0);
+          const obj = outer2_0(outer2_2[11]);
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c1 = tmp3;
-              let c0 = tmp7;
-              c0 = 0;
-              c1 = 0;
-              const _Object = Object;
-              const values = Object.values(outer1_1);
-              const found = values.filter((row) => null != row.row.id);
-              let c3 = 1;
-              const mapped = found.map((row) => {
-                row = row.row;
-                if (row.rowType === outer2_8.ROLE) {
-                  closure_1 = closure_1 + 1;
-                  let moderatorOverwrite = outer2_0(outer2_2[11]).createModeratorOverwrite(row.id, outer2_0(outer2_2[12]).PermissionOverwriteType.ROLE, c0);
-                  const obj2 = outer2_0(outer2_2[11]);
-                } else {
-                  closure_0 = closure_0 + 1;
-                  moderatorOverwrite = outer2_0(outer2_2[11]).createModeratorOverwrite(row.id, outer2_0(outer2_2[12]).PermissionOverwriteType.MEMBER, c0);
-                  const obj = outer2_0(outer2_2[11]);
-                }
-                return moderatorOverwrite;
-              });
-              c4 = 2;
-              c5 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(outer1_2[13]).savePermissionUpdates(outer1_0.id, mapped);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              obj = outer1_0(outer1_2[14]);
-              const result = obj.memberOrRoleAddedToast(c1, c0);
-              obj1 = outer1_1(outer1_2[15]);
-              obj1.hideActionSheet();
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            let obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          }
-        } catch (tmp19) {
-          let closure_2 = tmp19;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp19;
-          } else {
-            c4 = tmp;
-          }
-        }
+        return moderatorOverwrite;
+      });
+      yield outer1_0(outer1_2[13]).savePermissionUpdates(outer1_0.id, mapped);
+      if (1 === tmp7) {
+        c3 = 0;
+        let c5 = 3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        let obj = outer1_0(outer1_2[14]);
+        const result = obj.memberOrRoleAddedToast(c1, c0);
+        const obj1 = outer1_1(outer1_2[15]);
+        obj1.hideActionSheet();
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     });
     const _handleAddModeratorsPressed = tmp;
     const apply = tmp.apply;

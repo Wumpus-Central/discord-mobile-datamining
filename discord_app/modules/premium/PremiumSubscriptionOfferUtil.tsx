@@ -47,7 +47,7 @@ export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperie
   const premiumDiscountOffer = require(7263) /* usePremiumDiscountOffer */.usePremiumDiscountOffer();
   const obj3 = require(7263) /* usePremiumDiscountOffer */;
   const premiumGroupDiscountOffer = require(7263) /* usePremiumDiscountOffer */.usePremiumGroupDiscountOffer();
-  if (typeof useHasDiscountApplied !== "find") {
+  if (typeof useHasDiscountApplied !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj4 = require(7263) /* usePremiumDiscountOffer */;
@@ -188,7 +188,7 @@ export const useFetchChurnUserDiscountOffer = function useFetchChurnUserDiscount
 export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
   const items = [reset];
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => store.getPremiumTypeSubscription());
-  if (typeof useHasDiscountApplied !== "find") {
+  if (typeof useHasDiscountApplied !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = require(589) /* initialize */;

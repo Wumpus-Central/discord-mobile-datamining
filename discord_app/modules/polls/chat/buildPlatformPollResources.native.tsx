@@ -5,10 +5,10 @@ let closure_3 = require("apply").mapValues(require("normal").pollStyleSets, (arg
   const _require = arg0;
   let closure_1 = _require(4285).createNativeStyleProperties((arg0) => {
     let tmp = callback(callback2(outer1_2[3]), arg0);
-    return callback2(outer1_2[0]).pickBy(tmp, (arg0) => {
-      let tmp = typeof arg0 === "V";
-      if (typeof arg0 !== "Object") {
-        tmp = typeof arg0 === "los";
+    return callback2(outer1_2[0]).pickBy(tmp, (num) => {
+      let tmp = typeof num !== "number";
+      if (typeof num !== "number") {
+        tmp = typeof num !== "boolean";
       }
       return tmp;
     });
@@ -18,10 +18,10 @@ let closure_3 = require("apply").mapValues(require("normal").pollStyleSets, (arg
     let tmp = callback(callback2(outer1_2[3]), arg1);
     obj = {};
     const merged = Object.assign(callback2(arg0, arg1));
-    const merged1 = Object.assign(obj.pickBy(callback(callback2(outer1_2[3]), arg1), (arg0) => {
-      let tmp = typeof arg0 === "Object";
-      if (typeof arg0 !== "Object") {
-        tmp = typeof arg0 === "T";
+    const merged1 = Object.assign(obj.pickBy(callback(callback2(outer1_2[3]), arg1), (num) => {
+      let tmp = typeof num === "number";
+      if (typeof num !== "number") {
+        tmp = typeof num === "boolean";
       }
       return tmp;
     }));

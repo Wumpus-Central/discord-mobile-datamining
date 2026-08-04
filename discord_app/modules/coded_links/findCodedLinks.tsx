@@ -350,7 +350,7 @@ function findCodedLinks(str) {
     const _default = combined(4275).default;
     const parseToASTResult = combined(4275).default.parseToAST(str, true, { allowLinks: true });
     combined(7906).walkAst(parseToASTResult, (type) => {
-      let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "y";
+      let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
       }
@@ -796,9 +796,9 @@ function findCodedLinks(str) {
                       }
                       if (null != formatted) {
                         ({ applicationId, skuId } = formatted);
-                        formatted = typeof applicationId === "y";
-                        if (typeof applicationId !== "_iter") {
-                          formatted = typeof skuId === "y";
+                        formatted = typeof applicationId === "string";
+                        if (typeof applicationId === "string") {
+                          formatted = typeof skuId === "string";
                         }
                         if (formatted) {
                           formatted = globalThis;
@@ -1095,7 +1095,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
     const _default = combined(4275).default;
     const parseToASTResult = combined(4275).default.parseToAST(str, true, { allowLinks: true });
     combined(7906).walkAst(parseToASTResult, (type) => {
-      let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "y";
+      let tmp = type.type === combined(outer1_1[8]).AST_KEY.LINK && typeof type.target === "string";
       if (tmp) {
         tmp = type.target.length > 0;
       }
@@ -1541,9 +1541,9 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
                       }
                       if (null != formatted) {
                         ({ applicationId, skuId } = formatted);
-                        formatted = typeof applicationId === "y";
-                        if (typeof applicationId !== "_iter") {
-                          formatted = typeof skuId === "y";
+                        formatted = typeof applicationId === "string";
+                        if (typeof applicationId === "string") {
+                          formatted = typeof skuId === "string";
                         }
                         if (formatted) {
                           formatted = globalThis;

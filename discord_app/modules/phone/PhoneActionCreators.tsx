@@ -89,91 +89,40 @@ export default {
       flag2 = false;
     }
     return flag2(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              const fingerprint = outer1_4.getFingerprint();
-              let tmp15 = null != fingerprint;
-              if (tmp15) {
-                tmp15 = "" !== fingerprint;
-              }
-              const obj1 = {};
-              if (tmp15) {
-                obj1["X-Fingerprint"] = fingerprint;
-              }
-              if (c3) {
-                obj1.authorization = "";
-              }
-              let obj5 = outer1_1(5094);
-              const obj2 = { url: null, headers: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-              obj2[0] = outer1_6.VERIFY_PHONE;
-              obj2[1] = obj1;
-              const obj3 = { phone: null, code: null };
-              obj3[0] = outer1_0;
-              obj3[1] = outer1_1;
-              obj2[2] = obj3;
-              const obj4 = { event: null };
-              obj4[0] = outer1_0(503).NetworkActionNames.USER_VERIFY_PHONE;
-              obj2[4] = obj4;
-              obj2[5] = outer1_0(530).rejectWithMigratedError();
-              dependencyMap = 1;
-              c3 = 1;
-              obj5 = { value: null, done: false };
-              obj5[0] = obj5.post(obj2);
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            body = arg1;
-            if (dependencyMap) {
-              obj = outer1_1(709);
-              const obj7 = { type: "MODAL_POP", key: null };
-              obj7[1] = outer1_5;
-              obj.dispatch(obj7);
-            }
-            c3 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = body.body;
-            return obj8;
-          }
-        } catch (tmp25) {
-          c3 = tmp;
-          throw tmp25;
-        }
+      let closure_1 = tmp2;
+      let body = tmp5;
+      const fingerprint = outer1_4.getFingerprint();
+      let tmp15 = null != fingerprint;
+      if (tmp15) {
+        tmp15 = "" !== fingerprint;
       }
+      const obj1 = {};
+      if (tmp15) {
+        obj1["X-Fingerprint"] = fingerprint;
+      }
+      if (c3) {
+        obj1.authorization = "";
+      }
+      const obj5 = outer1_1(5094);
+      const obj2 = { url: null, headers: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+      obj2[0] = outer1_6.VERIFY_PHONE;
+      obj2[1] = obj1;
+      const obj3 = { phone: null, code: null };
+      obj3[0] = outer1_0;
+      obj3[1] = outer1_1;
+      obj2[2] = obj3;
+      const obj4 = { event: null };
+      obj4[0] = outer1_0(503).NetworkActionNames.USER_VERIFY_PHONE;
+      obj2[4] = obj4;
+      obj2[5] = outer1_0(530).rejectWithMigratedError();
+      body = yield obj5.post(obj2);
+      if (dependencyMap) {
+        const obj = outer1_1(709);
+        const obj7 = { type: "MODAL_POP", key: null };
+        obj7[1] = outer1_5;
+        obj.dispatch(obj7);
+      }
+      return body.body;
     })();
   }
 };

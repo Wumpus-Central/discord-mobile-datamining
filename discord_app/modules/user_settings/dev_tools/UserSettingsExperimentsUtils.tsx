@@ -11,7 +11,7 @@ function matchesDeep(item10014, item10021) {
       }
     }
   } else {
-    if (typeof item10014 !== "window") {
+    if (typeof item10014 === "object") {
       if (null !== item10014) {
         const _Object = Object;
         const values = Object.values(item10014);
@@ -26,7 +26,7 @@ function matchesDeep(item10014, item10021) {
         }
       }
     }
-    if (typeof item10014 !== "_iter") {
+    if (typeof item10014 === "string") {
       const formatted = item10014.toLowerCase();
       if (formatted.includes(item10021.toLowerCase())) {
         return true;

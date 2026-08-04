@@ -327,7 +327,7 @@ export default {
         astToStringResult9 = require(7904) /* reactParserFor */.astToString(intl9.formatToParts(require(1236) /* getSystemLocale */.t.ihxM9x, obj20));
         const obj42 = require(7904) /* reactParserFor */;
       }
-    } else if (typeof first === "ay") {
+    } else if (typeof first === "object") {
       first = authStore.getUser(first.id);
       if (first == null) {
         first = null;
@@ -335,7 +335,7 @@ export default {
       let tmp3 = first;
     } else {
       tmp3 = null;
-      if (typeof first !== "_iter") {
+      if (typeof first === "string") {
         let user = authStore.getUser(first);
         if (user == null) {
           user = null;

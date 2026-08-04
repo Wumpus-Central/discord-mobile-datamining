@@ -17,121 +17,57 @@ function _fetchVerificationForm() {
     let c8 = 0;
     let c6 = 0;
     return (function*(arg0, arg1) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === currentUser) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let initialize = tmp3;
-              let closure_3 = tmp5;
-              let lib;
-              let body;
-              body = lib;
-              if (lib == null) {
-                body = inviteKeyForGuildId.getInviteKeyForGuildId(tmp63);
-              }
-              currentUser = currentUser.getCurrentUser();
-              let id;
-              if (currentUser != null) {
-                id = currentUser.id;
-              }
-              inviteKeyForGuildId = 1;
-              const HTTP = callback(outer1_2[6]).HTTP;
-              const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = outer1_9.GUILD_MEMBER_VERIFICATION(callback);
-              const obj2 = { with_guild: null, invite_code: null };
-              obj2[0] = !outer1_5.isMember(callback, id);
-              let result;
-              if (null != body) {
-                let obj7 = callback(outer1_2[7]);
-                result = obj7.parseInviteCodeFromInviteKey(tmp27);
-              }
-              obj2[1] = result;
-              obj1[1] = obj2;
-              let obj8 = callback(outer1_2[6]);
-              obj1[3] = obj8.rejectWithMigratedError();
-              currentUser = 2;
-              c8 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (1 === tmp8) {
-            inviteKeyForGuildId = 0;
-            obj3 = lib(body[8]);
-            const obj4 = { type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: null };
-            obj4[1] = callback;
-            obj3.dispatch(obj4);
-            c8 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            inviteKeyForGuildId = 0;
-            c8 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            lib = arg1;
-            if (null == lib.body) {
-              throw lib;
-            } else {
-              body = lib.body;
-              const obj6 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: null, form: null };
-              obj6[1] = callback;
-              obj7 = { version: null, description: null, formFields: null, guild: null, profile: null };
-              obj7[0] = body.version;
-              obj7[1] = body.description;
-              obj7[2] = body.form_fields;
-              obj7[3] = body.guild;
-              let guildProfileFromServer = null;
-              if (null != body.profile) {
-                obj = callback(body[9]);
-                guildProfileFromServer = obj.buildGuildProfileFromServer(body.profile);
-              }
-              obj7[4] = guildProfileFromServer;
-              obj6[2] = obj7;
-              lib(body[8]).dispatch(obj6);
-              inviteKeyForGuildId = 0;
-              c8 = 3;
-              obj8 = { value: null, done: true };
-              obj8[0] = body;
-              return obj8;
-            }
-          }
-        } catch (tmp41) {
-          let trackCommunicationDisabled = tmp41;
-          if (tmp4 === inviteKeyForGuildId) {
-            c8 = tmp2;
-            throw tmp41;
-          } else {
-            currentUser = tmp;
-          }
-        }
+      let initialize = tmp3;
+      let closure_3 = tmp5;
+      let body = lib;
+      if (lib == null) {
+        body = inviteKeyForGuildId.getInviteKeyForGuildId(tmp63);
       }
+      if (currentUser != null) {
+        const id = currentUser.id;
+      }
+      inviteKeyForGuildId = 1;
+      const HTTP = callback(outer1_2[6]).HTTP;
+      const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = outer1_9.GUILD_MEMBER_VERIFICATION(callback);
+      const obj2 = { with_guild: null, invite_code: null };
+      obj2[0] = !outer1_5.isMember(callback, id);
+      if (null != body) {
+        let obj7 = callback(outer1_2[7]);
+        const result = obj7.parseInviteCodeFromInviteKey(tmp27);
+      }
+      obj2[1] = result;
+      obj1[1] = obj2;
+      const obj8 = callback(outer1_2[6]);
+      obj1[3] = obj8.rejectWithMigratedError();
+      yield HTTP.get(obj1);
+      inviteKeyForGuildId = 0;
+      const obj3 = lib(body[8]);
+      const obj4 = { type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: null };
+      obj4[1] = callback;
+      obj3.dispatch(obj4);
+      lib = yield "HermesInternal";
+      if (null == lib.body) {
+        throw lib;
+      }
+      body = lib.body;
+      const obj6 = { type: "MEMBER_VERIFICATION_FORM_UPDATE", guildId: null, form: null };
+      obj6[1] = callback;
+      obj7 = { version: null, description: null, formFields: null, guild: null, profile: null };
+      obj7[0] = body.version;
+      obj7[1] = body.description;
+      obj7[2] = body.form_fields;
+      obj7[3] = body.guild;
+      let guildProfileFromServer = null;
+      if (null != body.profile) {
+        const obj = callback(body[9]);
+        guildProfileFromServer = obj.buildGuildProfileFromServer(body.profile);
+      }
+      obj7[4] = guildProfileFromServer;
+      obj6[2] = obj7;
+      lib(body[8]).dispatch(obj6);
+      inviteKeyForGuildId = 0;
+      return body;
     })();
   });
   const _fetchVerificationForm = tmp;

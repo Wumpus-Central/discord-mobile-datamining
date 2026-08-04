@@ -424,132 +424,38 @@ function _getOrCreateOrder() {
       let c6;
       let c7;
       let c8;
-      if (constants === 2) {
-        constants = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          constants = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c2 = tmp4;
-              c1 = 0;
-              c0 = undefined;
-              c1 = undefined;
-              c2 = undefined;
-              c3 = undefined;
-              constants = undefined;
-              c5 = undefined;
-              let logger;
-              let callback;
-              c8 = undefined;
-              ({ skuId: c0, paymentGateway: c1, recipientUserId: c2, purchaseType: c3, isGift: c4, giftInfo: c5, createdAfter: c6, subscriptionPlanId: c7, externalGatewayFacet: c8 } = c0);
-              let lib;
-              let id;
-              c3 = 1;
-              constants = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp4) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const obj2 = { isGift: null, status: null, skuId: null, createdAfter: null };
-              obj2[0] = constants;
-              obj2[1] = constants.DRAFT;
-              obj2[2] = c0;
-              obj2[3] = logger;
-              c3 = 2;
-              constants = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = callback(obj2);
-              return obj3;
-            }
-          } else if (2 === tmp4) {
-            if (arg0 === 1) {
-              constants = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              lib = arg1;
-              if (lib.length > 0) {
-                id = lib[0];
-                const obj5 = { orderId: null, skuId: null, isGift: null };
-                obj5[0] = id.id;
-                obj5[1] = c0;
-                obj5[2] = constants;
-                logger.info("reusing existing draft order", obj5);
-                constants = 3;
-                const obj6 = { value: null, done: true };
-                obj6[0] = id;
-                return obj6;
-              } else {
-                const obj7 = { paymentGateway: null, recipientUserId: null, isGift: null, giftInfo: null, orderLineItems: null, externalGatewayFacet: null };
-                obj7[0] = c1;
-                obj7[1] = c2;
-                obj7[2] = constants;
-                obj7[3] = c5;
-                const obj8 = { sku_id: null, quantity: 1, purchase_type: null, subscription_plan_id: null };
-                obj8[0] = c0;
-                obj8[2] = c3;
-                obj8[3] = callback;
-                const items = [obj8];
-                obj7[4] = items;
-                obj7[5] = c8;
-                c3 = 3;
-                constants = 1;
-                const obj9 = { value: null, done: false };
-                obj9[0] = lib(obj7);
-                return obj9;
-              }
-            }
-          } else if (arg0 === 1) {
-            constants = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            constants = 3;
-            const obj10 = { value: null, done: true };
-            obj10[0] = arg1;
-            return obj10;
-          } else {
-            constants = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp20) {
-          constants = tmp;
-          throw tmp20;
-        }
+      c1 = 0;
+      ({ skuId: c0, paymentGateway: c1, recipientUserId: c2, purchaseType: c3, isGift: c4, giftInfo: c5, createdAfter: c6, subscriptionPlanId: c7, externalGatewayFacet: c8 } = c0);
+      yield "ct";
+      const obj2 = { isGift: null, status: null, skuId: null, createdAfter: null };
+      obj2[0] = constants;
+      obj2[1] = constants.DRAFT;
+      obj2[2] = c0;
+      obj2[3] = logger;
+      const lib = yield callback(obj2);
+      if (lib.length > 0) {
+        const id = lib[0];
+        const obj5 = { orderId: null, skuId: null, isGift: null };
+        obj5[0] = id.id;
+        obj5[1] = c0;
+        obj5[2] = constants;
+        logger.info("reusing existing draft order", obj5);
+        return id;
       }
+      const obj7 = { paymentGateway: null, recipientUserId: null, isGift: null, giftInfo: null, orderLineItems: null, externalGatewayFacet: null };
+      obj7[0] = c1;
+      obj7[1] = c2;
+      obj7[2] = constants;
+      obj7[3] = c5;
+      const obj8 = { sku_id: null, quantity: 1, purchase_type: null, subscription_plan_id: null };
+      obj8[0] = c0;
+      obj8[2] = c3;
+      obj8[3] = callback;
+      const items = [obj8];
+      obj7[4] = items;
+      obj7[5] = c8;
+      yield lib(obj7);
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -1136,69 +1042,17 @@ function _discardOrder() {
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp4;
-              let lib;
-              const HTTP = lib(table[4]).HTTP;
-              const obj1 = { url: null, rejectWithError: false };
-              obj1[0] = outer1_5.ORDER_DISCARD(lib);
-              table = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            lib = arg1;
-            if (null == lib.body) {
-              const _Error = Error;
-              const error = new Error("Invalid discard order response");
-              throw error;
-            } else {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = lib.body;
-              return obj;
-            }
-          }
-        } catch (tmp19) {
-          c3 = tmp;
-          throw tmp19;
-        }
+      let closure_1 = tmp4;
+      const HTTP = lib(table[4]).HTTP;
+      const obj1 = { url: null, rejectWithError: false };
+      obj1[0] = outer1_5.ORDER_DISCARD(lib);
+      lib = yield HTTP.post(obj1);
+      if (null == lib.body) {
+        const _Error = Error;
+        const error = new Error("Invalid discard order response");
+        throw error;
       }
+      return lib.body;
     })();
   });
   const _discardOrder = tmp;
@@ -1218,92 +1072,45 @@ function _cancelSigningAndDiscardOrder() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      const table = tmp3;
+      let c4 = 1;
+      yield outer1_21(callback);
+      if (1 === tmp7) {
+        c4 = 0;
+        let closure_1 = _createGatewayCheckoutContext;
+        let obj3 = callback(table[5]);
+        const obj2 = { tags: null, extra: null };
+        obj2[0] = { source: "OrderActionCreators_cancelSigningAndDiscardOrder" };
+        obj3 = { orderId: null };
+        obj3[0] = callback;
+        obj2[1] = obj3;
+        const result = obj3.captureBillingException(closure_1, obj2);
+        let c6 = 3;
+      } else if (2 === tmp7) {
         if (arg0 === 1) {
+          c6 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c4 = 0;
+          c6 = 3;
+          const obj4 = { value: null, done: true };
+          obj4[0] = arg1;
+          return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          let c5 = 3;
+          c6 = 1;
+          const obj5 = { value: null, done: false };
+          obj5[0] = callback2(callback);
+          return obj5;
         }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp3;
-              let closure_1 = tmp7;
-              let c4 = 1;
-              c5 = 2;
-              c6 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_21(callback);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              closure_1 = _createGatewayCheckoutContext;
-              let obj3 = callback(table[5]);
-              const obj2 = { tags: null, extra: null };
-              obj2[0] = { source: "OrderActionCreators_cancelSigningAndDiscardOrder" };
-              obj3 = { orderId: null };
-              obj3[0] = callback;
-              obj2[1] = obj3;
-              const result = obj3.captureBillingException(closure_1, obj2);
-              c6 = 3;
-            } else if (2 === tmp7) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 0;
-                c6 = 3;
-                const obj4 = { value: null, done: true };
-                obj4[0] = arg1;
-                return obj4;
-              } else {
-                c5 = 3;
-                c6 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = callback2(callback);
-                return obj5;
-              }
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp23) {
-          _createGatewayCheckoutContext = tmp23;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp23;
-          } else {
-            c5 = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _cancelSigningAndDiscardOrder = tmp;

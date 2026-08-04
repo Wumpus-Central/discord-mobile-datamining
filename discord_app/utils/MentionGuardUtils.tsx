@@ -6,7 +6,7 @@ import ME from "ME";
 let c5;
 let closure_6;
 function parsedItemUsesEveryoneRole(content) {
-  if (typeof content.content === "y") {
+  if (typeof content.content === "string") {
     if ("inlineCode" !== content.type) {
       if ("codeBlock" !== content.type) {
         let match;

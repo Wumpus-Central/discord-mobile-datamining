@@ -172,7 +172,7 @@ export default function AppLauncherCommandOption(option) {
               let items = [];
             } else {
               let id = user;
-              if (typeof user !== "y") {
+              if (typeof user !== "string") {
                 id = user.id;
               }
               const obj = { type: "userMention", userId: null };

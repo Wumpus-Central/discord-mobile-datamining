@@ -60,7 +60,7 @@ function MarkupLink(arg0) {
   obj[3] = function onPress(stopPropagation) {
     const target = node.target;
     let tmp = null;
-    if (typeof target !== "_iter") {
+    if (typeof target === "string") {
       const url = outer1_1(outer1_2[26]).safeParseWithQuery(target);
       let formatResult = null;
       if (null != url) {
@@ -95,7 +95,7 @@ function MarkupLink(arg0) {
   obj[4] = function onLongPress(stopPropagation) {
     const target = node.target;
     let tmp = null;
-    if (typeof target !== "_iter") {
+    if (typeof target === "string") {
       const url = outer1_1(outer1_2[26]).safeParseWithQuery(target);
       let formatResult = null;
       if (null != url) {
@@ -325,7 +325,7 @@ function MarkupInlineCode(arg0) {
   if (tmp4) {
     fn = () => {
       const content = node.content;
-      if (typeof content !== "_iter") {
+      if (typeof content === "string") {
         node(outer1_2[22]).copy(content);
         const obj = node(outer1_2[22]);
         const result = node(outer1_2[23]).presentCopiedToClipboard();
@@ -683,7 +683,7 @@ export default function createRules() {
   return {
     [closure_0(closure_2[44]).AST_KEY.TEXT]: {
       react(content, output, textColor) {
-        if (typeof content.content === "y") {
+        if (typeof content.content === "string") {
           content = content.content;
         } else {
           textColor = undefined;
@@ -1146,7 +1146,7 @@ export default function createRules() {
               return outer1_17(start(level[12]).Text, obj, "list-" + level.key + "-item-" + arg1);
             } else {
               let str = start2.ordered;
-              if (typeof str !== "los") {
+              if (typeof str === "boolean") {
                 if (start2.ordered) {
                   str = closure_5;
                 }
@@ -1220,7 +1220,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[44]).AST_KEY.SILENT_PREFIX]: {
       react(content, output, textColor) {
-        if (typeof content.content === "y") {
+        if (typeof content.content === "string") {
           content = content.content;
         } else {
           textColor = undefined;
@@ -1242,7 +1242,7 @@ export default function createRules() {
 };
 export { MarkupText };
 export const plainMentionRenderer = function plainMentionRenderer(content, output, state) {
-  if (typeof content.content === "y") {
+  if (typeof content.content === "string") {
     content = content.content;
   } else {
     content = require(9471) /* smartOutput */.smartOutput(content, output, state);
@@ -1252,7 +1252,7 @@ export const plainMentionRenderer = function plainMentionRenderer(content, outpu
 };
 export const plainSpoilerRenderer = function plainSpoilerRenderer(content) {
   let str = "\u2588\u2588\u2588";
-  if (typeof content.content !== "_iter") {
+  if (typeof content.content === "string") {
     str = content.content.replace(/[^\n]/g, "\u2588");
     const str2 = content.content;
   }

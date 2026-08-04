@@ -879,7 +879,7 @@ function createMessageContent(message) {
                 obj24[3] = merged.flags;
                 obj24[4] = message.type;
                 if (null != message.nonce) {
-                  if (typeof message.nonce === "_iter") {
+                  if (typeof message.nonce !== "string") {
                     merged = globalThis;
                     const _String = String;
                     let nonce = String(message.nonce);

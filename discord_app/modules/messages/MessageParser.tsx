@@ -80,7 +80,7 @@ function rebuild(arr) {
         }
       }
     })(obj, content, _undefined);
-    if (typeof content.content === "y") {
+    if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
         obj = { position: null, length: null, id: null };
@@ -176,7 +176,7 @@ function parseAndRebuild(content, arg1, arg2) {
         }
       }
     })(obj, content, _undefined);
-    if (typeof content.content === "y") {
+    if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
         obj = { position: null, length: null, id: null };
@@ -429,7 +429,7 @@ function unparseWithMeta(content, id, isNotification) {
         }
       }
     })(obj, content, _undefined);
-    if (typeof content.content === "y") {
+    if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
         obj = { position: null, length: null, id: null };
@@ -940,7 +940,7 @@ obj[13] = {
 };
 let obj4 = {};
 obj4.match = function match(arg0, textExclusions) {
-  if (typeof textExclusions.textExclusions !== "_iter") {
+  if (typeof textExclusions.textExclusions === "string") {
     if ("" !== textExclusions.textExclusions) {
       const result = str7(4724).textMarkupPatternWithExclusions(textExclusions.textExclusions);
       let match = result.exec(arg0);

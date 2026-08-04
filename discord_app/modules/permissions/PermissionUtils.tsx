@@ -390,7 +390,7 @@ function getGuildPermissionSpec(permissionOptions) {
   str45 = str46.toString();
   const intl47 = tmp3(1236).intl;
   obj44[0] = intl47.string(tmp3(1236).t.PGvZqX);
-  if (typeof tmp3(1236).t.UJxMrK === "y") {
+  if (typeof tmp3(1236).t.UJxMrK === "string") {
     let UJxMrK = tmp3(1236).t.UJxMrK;
   } else {
     const intl55 = tmp3(1236).intl;
@@ -675,11 +675,11 @@ export const generateChannelEventsSection = function generateChannelEventsSectio
 export const renderDescription = function renderDescription(str) {
   if (null == str) {
     return str;
-  } else if (typeof str === "y") {
+  } else if (typeof str === "string") {
     let trimmed = str.trim();
   } else {
     trimmed = str;
-    if (typeof str !== "three_button_mouse") {
+    if (typeof str === "function") {
       const intl = require(1236) /* getSystemLocale */.intl;
       trimmed = intl.format(str, {});
     }

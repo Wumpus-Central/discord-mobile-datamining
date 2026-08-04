@@ -11,16 +11,16 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
       if (item10009.subscriptionPlanId === arg0.subscriptionPlanId) {
         let tmp4 = item10009;
         let tmp5 = arg0;
-        if (tmp3.subscriptionPlanPrice === tmp2.subscriptionPlanPrice) {
+        if (tmp3.subscriptionPlanPrice === arg0.subscriptionPlanPrice) {
           let tmp6 = item10009;
           let tmp7 = arg0;
-          if (tmp3.amount === tmp2.amount) {
+          if (tmp3.amount === arg0.amount) {
             let tmp8 = items;
             let tmp9 = set;
             let obj2 = items(set[0]);
             let tmp10 = item10009;
             let tmp11 = arg0;
-            if (obj2.isEqual(tmp3.discounts, tmp2.discounts)) {
+            if (obj2.isEqual(tmp3.discounts, arg0.discounts)) {
               let tmp12 = set;
               let tmp13 = item10009;
               let addResult = set.add(tmp.subscriptionPlanId);

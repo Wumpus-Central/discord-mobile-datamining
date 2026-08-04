@@ -51,38 +51,38 @@ function syncHourCycleToIntlConfig() {
     continue;
   }
 }
-function differenceInCalendarDays(arg0, arg1) {
-  let tmp = typeof arg0 === "y";
-  if (typeof arg0 !== "y") {
-    tmp = typeof arg0 === "Object";
+function differenceInCalendarDays(str, str2) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    tmp = typeof str === "number";
   }
   if (!tmp) {
     const _Date = Date;
-    tmp = arg0 instanceof Date;
+    tmp = str instanceof Date;
   }
-  let date = arg0;
+  let date = str;
   if (!tmp) {
     let obj = { d: null };
-    obj[0] = arg0;
+    obj[0] = str;
     tmp2.error("Invalid date given to startOfDay", obj);
     const _Date2 = Date;
     date = new Date();
   }
   const date1 = new Date(date);
   const time = date1.getTime();
-  let tmp10 = typeof arg1 === "y";
+  let tmp10 = typeof str2 === "string";
   const result = Math.floor((time - 60000 * date1.getTimezoneOffset()) / c4) * c4;
-  if (typeof arg1 !== "y") {
-    tmp10 = typeof arg1 === "Object";
+  if (typeof str2 !== "string") {
+    tmp10 = typeof str2 === "number";
   }
   if (!tmp10) {
     const _Date3 = Date;
-    tmp10 = arg1 instanceof Date;
+    tmp10 = str2 instanceof Date;
   }
-  let date2 = arg1;
+  let date2 = str2;
   if (!tmp10) {
     obj = { d: null };
-    obj[0] = arg1;
+    obj[0] = str2;
     tmp2.error("Invalid date given to startOfDay", obj);
     const _Date4 = Date;
     date2 = new Date();

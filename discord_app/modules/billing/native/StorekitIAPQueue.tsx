@@ -81,72 +81,24 @@ prototype["fetchSubscriptions"] = function fetchSubscriptions(arg0) {
     const _self = arg1;
     const _queue = _self._queue;
     _queue.push(outer1_2(function*() {
-      if (c5 === 2) {
+      const callback2 = tmp3;
+      let c3 = 1;
+      yield outer2_4.getItems(outer1_0);
+      if (1 === tmp7) {
+        c3 = 0;
+        callback2(closure_2);
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const callback2 = tmp3;
-              let callback = tmp7;
-              callback = undefined;
-              let c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer2_4.getItems(outer1_0);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              callback2(closure_2);
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              const found = arg1.filter((subscription) => null != subscription.subscription);
-              callback = found.map(outer2_5);
-              callback(callback);
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp21) {
-          closure_2 = tmp21;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp21;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const found = arg1.filter((subscription) => null != subscription.subscription);
+        const callback = found.map(outer2_5);
+        callback(callback);
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     }));
   });
 };
@@ -159,78 +111,30 @@ prototype["fetchProducts"] = function fetchProducts(arg0) {
     const _self = arg1;
     const _queue = _self._queue;
     _queue.push(outer1_2(function*() {
-      if (c5 === 2) {
+      const dependencyMap = tmp3;
+      let c3 = 1;
+      let obj1 = callback(7343);
+      obj1 = { skus: null };
+      obj1[0] = outer1_0;
+      const products = obj1.getProducts(obj1);
+      yield products.then((arr) => {
+        const found = arr.filter((type) => "iap" === type.type);
+        return found.map((countryCode) => (function mapToIAPProduct() { ... })(countryCode));
+      });
+      if (1 === tmp7) {
+        c3 = 0;
+        dependencyMap(closure_2);
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const dependencyMap = tmp3;
-              let callback = tmp7;
-              callback = undefined;
-              let c3 = 1;
-              let obj1 = callback(7343);
-              obj1 = { skus: null };
-              obj1[0] = outer1_0;
-              const products = obj1.getProducts(obj1);
-              c4 = 2;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = products.then((arr) => {
-                const found = arr.filter((type) => "iap" === type.type);
-                return found.map((countryCode) => (function mapToIAPProduct() { ... })(countryCode));
-              });
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              dependencyMap(closure_2);
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              callback = arg1;
-              callback(callback);
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp21) {
-          closure_2 = tmp21;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp21;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        callback = arg1;
+        callback(callback);
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     }));
   });
 };

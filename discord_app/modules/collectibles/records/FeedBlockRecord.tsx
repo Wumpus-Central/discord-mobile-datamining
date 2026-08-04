@@ -6,7 +6,7 @@ prototype = function FeedBlockRecord(arg0) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

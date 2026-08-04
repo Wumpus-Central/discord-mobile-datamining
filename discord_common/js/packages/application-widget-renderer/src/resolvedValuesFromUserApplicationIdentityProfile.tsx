@@ -34,7 +34,7 @@ function resolvedValuesFromPrimary(data) {
       let tmp6 = callback(tmp3, 2);
       [tmp7, tmp8] = tmp6;
       let tmp9 = tmp8;
-      if (typeof tmp8 === "y") {
+      if (typeof tmp8 === "string") {
         let tmp22 = tmp7;
         obj = { type: null, value: null };
         let tmp23 = require;
@@ -45,7 +45,7 @@ function resolvedValuesFromPrimary(data) {
         obj[tmp7] = obj;
       } else {
         let tmp30 = tmp8;
-        if (typeof tmp9 === "Object") {
+        if (typeof tmp9 === "number") {
           let tmp18 = tmp7;
           obj = { type: null, value: null };
           let tmp19 = require;
@@ -56,7 +56,7 @@ function resolvedValuesFromPrimary(data) {
           obj[tmp7] = obj;
         } else {
           let tmp31 = tmp8;
-          if (typeof tmp9 !== "window") {
+          if (typeof tmp9 === "object") {
             let tmp32 = tmp8;
             if ("url" in tmp9) {
               let tmp10 = tmp8;

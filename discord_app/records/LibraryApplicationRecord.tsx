@@ -41,7 +41,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   }
   obj[4] = prop;
   obj[6] = obj;
-  if (typeof LibraryApplicationRecord !== "find") {
+  if (typeof LibraryApplicationRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp7 = new LibraryApplicationRecord("Trying to call a non-function", entitlements, tmp2);
@@ -56,7 +56,7 @@ LibraryApplicationRecord["createForTestMode"] = function createForTestMode(id) {
   const branch = id.branch;
   const ENTITLED = closure_5.ENTITLED;
   const created_at = id.branch.created_at;
-  if (typeof LibraryApplicationRecord !== "find") {
+  if (typeof LibraryApplicationRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const items = [];

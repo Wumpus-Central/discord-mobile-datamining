@@ -5,76 +5,22 @@ const require = arg1;
 function _requestAgeSignalChallenge() {
   const self = this;
   const tmp = callback(function*() {
-    if (c2 === 2) {
-      c2 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === nonce) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let body = tmp2;
-            body = undefined;
-            nonce = undefined;
-            const HTTP = outer1_0(table[2]).HTTP;
-            const obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-            obj1[0] = outer1_3.AGE_SIGNAL_CHALLENGE;
-            obj1[1] = {};
-            nonce = 1;
-            c2 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.post(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          c2 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c2 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          body = arg1;
-          body = body.body;
-          nonce = undefined;
-          if (body != null) {
-            nonce = body.nonce;
-          }
-          let tmp12;
-          if (typeof nonce !== "_iter") {
-            if (nonce.length > 0) {
-              tmp12 = nonce;
-            }
-          }
-          c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = tmp12;
-          return obj;
-        }
-      } catch (tmp17) {
-        c2 = tmp;
-        throw tmp17;
+    let body = tmp2;
+    const HTTP = outer1_0(table[2]).HTTP;
+    const obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+    obj1[0] = outer1_3.AGE_SIGNAL_CHALLENGE;
+    obj1[1] = {};
+    body = yield HTTP.post(obj1);
+    body = body.body;
+    if (body != null) {
+      const nonce = body.nonce;
+    }
+    if (typeof nonce === "string") {
+      if (nonce.length > 0) {
+        const tmp12 = nonce;
       }
     }
+    return tmp12;
   });
   const _requestAgeSignalChallenge = tmp;
   const apply = tmp.apply;

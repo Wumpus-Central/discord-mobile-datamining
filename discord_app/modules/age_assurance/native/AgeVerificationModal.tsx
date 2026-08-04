@@ -27,7 +27,7 @@ function AgeVerifyScreen(uri) {
   const onMessage = callback.useCallback((nativeEvent) => {
     if (null != nativeEvent.nativeEvent.data) {
       try {
-        if (typeof nativeEvent.nativeEvent.data === "y") {
+        if (typeof nativeEvent.nativeEvent.data === "string") {
           const _JSON = JSON;
           let data = JSON.parse(nativeEvent.nativeEvent.data);
         } else {

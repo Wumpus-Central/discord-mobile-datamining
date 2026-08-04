@@ -79,7 +79,7 @@ obj = {
         }, 2 * tmp3(687).Millis.MINUTE);
         preflight.then(() => {
           const result = 10 * startTimeout(outer1_2[3]).Millis.SECOND;
-          if (typeof startTimeout !== "find") {
+          if (typeof startTimeout !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const timerId = setTimeout(() => {
@@ -95,7 +95,7 @@ obj = {
         }).catch(() => nonce(outer1_2[2]).setFailed(nonce));
         const nextPromise = preflight.then(() => {
           const result = 10 * startTimeout(outer1_2[3]).Millis.SECOND;
-          if (typeof startTimeout !== "find") {
+          if (typeof startTimeout !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const timerId = setTimeout(() => {

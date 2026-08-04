@@ -33,7 +33,7 @@ prototype = function ShelfBlockRecord(show_button) {
 }.prototype;
 prototype["fromServer"] = function fromServer(show_button) {
   let category_sku_id;
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

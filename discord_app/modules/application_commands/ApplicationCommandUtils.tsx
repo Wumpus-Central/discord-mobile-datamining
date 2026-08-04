@@ -621,13 +621,13 @@ export const hasAccess = function hasAccess(arg0) {
       const id = guild.id;
       if (null != commandLevelPermissions) {
         const tmp4 = hasAccessGivenPerms(selfMember, id, commandLevelPermissions);
-        if (typeof tmp4 === "T") {
+        if (typeof tmp4 === "boolean") {
           return tmp4;
         }
       }
       const tmp6 = hasAccessGivenPerms(selfMember, id, tmp);
-      let tmp7 = typeof tmp6 === "T";
-      if (typeof tmp6 !== "los") {
+      let tmp7 = typeof tmp6 === "boolean";
+      if (typeof tmp6 === "boolean") {
         tmp7 = !tmp6;
       }
       let tmp8 = !tmp7;

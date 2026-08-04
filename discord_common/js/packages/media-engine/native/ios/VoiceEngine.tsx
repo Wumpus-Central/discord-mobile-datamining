@@ -485,7 +485,7 @@ const f74397 = (arg0) => {
   return arg0;
 };
 require("constants").VoiceEngine.setBroadcastThumbnailCallback = (arg0, arg1, arg2, arg3) => {
-  if (typeof f74397 !== "find") {
+  if (typeof f74397 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const _null = arg3;

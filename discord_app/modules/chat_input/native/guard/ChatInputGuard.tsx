@@ -122,7 +122,7 @@ export default function ChatInputGuard(type) {
     let tmp13Result = null;
     if (null != subtext2) {
       tmp13Result = null;
-      if (typeof subtext2 !== "_iter") {
+      if (typeof subtext2 === "string") {
         tmp13Result = null;
         if (subtext2.length > 0) {
           obj = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };

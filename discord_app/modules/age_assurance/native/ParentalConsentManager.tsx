@@ -299,92 +299,44 @@ prototype["performAgeCheck"] = function performAgeCheck() {
 prototype["forwardAgeSignal"] = function forwardAgeSignal(closure_2) {
   let closure_0 = closure_2;
   return callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
+    let closure_1 = tmp3;
+    let c3 = 1;
+    yield outer1_0(outer1_2[15]).getAgeSignalIntegrityToken(outer1_0);
+    if (1 === tmp7) {
+      c3 = 0;
+      closure_1 = closure_2;
+      let obj4 = outer1_1(outer1_2[14]);
+      const obj2 = { tags: null };
+      obj2[0] = { source: "parental_consent_manager", step: "submit_age_signal" };
+      obj4.captureException(closure_1, obj2);
+      let c5 = 3;
+    } else if (2 === tmp7) {
       if (arg0 === 1) {
+        c5 = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        c3 = 0;
+        c5 = 3;
+        const obj3 = { value: null, done: true };
+        obj3[0] = arg1;
+        return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        let closure_0 = arg1;
+        const obj1 = outer1_0(outer1_2[16]);
+        let c4 = 3;
+        c5 = 1;
+        obj4 = { value: null, done: false };
+        obj4[0] = obj1.submitAgeSignal(closure_0, closure_0);
+        return obj4;
       }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp3;
-            let closure_0 = tmp7;
-            closure_0 = undefined;
-            let c3 = 1;
-            c4 = 2;
-            c5 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(outer1_2[15]).getAgeSignalIntegrityToken(outer1_0);
-            return obj1;
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            closure_1 = closure_2;
-            let obj4 = outer1_1(outer1_2[14]);
-            const obj2 = { tags: null };
-            obj2[0] = { source: "parental_consent_manager", step: "submit_age_signal" };
-            obj4.captureException(closure_1, obj2);
-            c5 = 3;
-          } else if (2 === tmp7) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 0;
-              c5 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              closure_0 = arg1;
-              obj1 = outer1_0(outer1_2[16]);
-              c4 = 3;
-              c5 = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = obj1.submitAgeSignal(closure_0, closure_0);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            c3 = 0;
-          }
-          c3 = 0;
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp25) {
-        closure_2 = tmp25;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp25;
-        } else {
-          c4 = tmp;
-        }
-      }
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      c3 = 0;
     }
+    c3 = 0;
+    return arg1;
   })();
 };
 const parentalConsentManager = new ParentalConsentManager();

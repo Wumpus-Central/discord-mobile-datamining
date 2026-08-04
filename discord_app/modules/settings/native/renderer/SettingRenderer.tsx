@@ -276,7 +276,7 @@ let closure_18 = importAllResult.memo((arg0) => {
     let tmp13;
     if (null != trailing) {
       tmp10Result = trailing;
-      if (typeof trailing !== "_iter") {
+      if (typeof trailing === "string") {
         const obj1 = { text: null };
         obj1[0] = trailing;
         tmp10Result = tmp10(tmp(tmp2[12]).TableRow.TrailingText, obj1);
@@ -381,7 +381,7 @@ let closure_21 = importAllResult.memo((arg0) => {
   let tmp12;
   if (null != trailing) {
     tmp10Result = trailing;
-    if (typeof trailing !== "_iter") {
+    if (typeof trailing === "string") {
       const obj1 = { text: null };
       obj1[0] = trailing;
       tmp10Result = tmp10(tmp(5315).TableRow.TrailingText, obj1);
@@ -472,13 +472,13 @@ let closure_24 = importAllResult.memo((arg0) => {
   const value = useValue();
   const options = useOptions();
   let combined = value;
-  if (typeof value !== "V") {
+  if (typeof value === "number") {
     let _HermesInternal = HermesInternal;
     combined = "" + value;
   }
   obj = { title, defaultValue: combined, onChange: onValueChange, hasIcons: false, children: null };
   obj[4] = options.map((label) => {
-    if (typeof label.value === "Object") {
+    if (typeof label.value === "number") {
       const _HermesInternal = HermesInternal;
       let combined = "" + label.value;
     } else {

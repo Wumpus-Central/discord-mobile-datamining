@@ -22,7 +22,7 @@ BaseInvoiceRecord["createFromServer"] = function createFromServer(currency) {
   let total;
   ({ total, subtotal, tax, invoice_items } = currency);
   let mapped = invoice_items.map((skuId) => ({ skuId: skuId.sku_id, quantity: skuId.quantity, description: skuId.description }));
-  if (typeof BaseInvoiceRecord !== "find") {
+  if (typeof BaseInvoiceRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new BaseInvoiceRecord("Trying to call a non-function", invoice_items, BaseInvoiceRecord, new.target, total, subtotal, tax);
@@ -71,7 +71,7 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
     });
     let found = mapped.filter((arg0) => null != arg0);
     ({ total, subtotal, tax, currency } = invoice_preview);
-    if (typeof BaseInvoiceRecord !== "find") {
+    if (typeof BaseInvoiceRecord !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const tmp5 = new BaseInvoiceRecord("Trying to call a non-function", BaseInvoiceRecord, new.target, total, subtotal, tax, currency, found);
@@ -139,7 +139,7 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   const tmp6 = new.target;
   obj[8] = new Date(body.subscription_period_end);
   ({ status: obj[9], orbs_reward: obj[10], checkout_context: obj[11] } = body);
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp8 = new InvoiceRecord(obj, tmp3, Date, Date, tmp6);
@@ -169,7 +169,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
   const orbs_reward = invoice_items.orbs_reward;
   obj[9] = orbs_reward;
   obj[10] = invoice_items.checkout_context;
-  if (typeof InvoiceRecord !== "find") {
+  if (typeof InvoiceRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp9 = new InvoiceRecord(obj, tmp3, tmp5, tmp7, orbs_reward, InvoiceRecord);

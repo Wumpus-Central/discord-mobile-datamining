@@ -29,7 +29,7 @@ let obj1 = { alignItems: "center", gap: require("Themes").space.PX_8 };
 createCacheKey[4] = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_8, alignItems: "center", marginBottom: 48 };
 let obj2 = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_8, alignItems: "center", marginBottom: 48 };
 createCacheKey[5] = { textDecorationLine: "underline", textDecorationColor: require("Themes").colors.TEXT_DEFAULT, flexShrink: 1 };
-let obj3 = { textDecorationLine: "underline", textDecorationColor: require("Themes").colors.TEXT_DEFAULT, flexShrink: 1 };
+const obj3 = { textDecorationLine: "underline", textDecorationColor: require("Themes").colors.TEXT_DEFAULT, flexShrink: 1 };
 createCacheKey[6] = { width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, alignSelf: "center" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let obj4 = { width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, alignSelf: "center" };
@@ -127,105 +127,49 @@ export default function OneTimeLoginModal(token) {
   }, items3);
   const items4 = [token, callback2, callback3];
   callback4 = callback.useCallback(height(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp3;
-            let str = tmp7;
-            str = undefined;
-            let c3 = 1;
-            if (null == outer1_0) {
-              outer1_1(outer1_2[13]).track(outer1_11.ONE_TIME_LOGIN_ERROR, { source: "native_modal", error_reason: "missing_token", error_message: "No token provided" });
-              outer1_6();
-              c3 = 0;
-              c5 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = undefined;
-              return obj1;
-            } else if (outer1_8.isAuthenticated()) {
-              outer1_7();
-              c3 = 0;
-              c5 = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = undefined;
-              return obj2;
-            } else {
-              let obj4 = outer1_1(outer1_2[13]);
-              obj4.track(outer1_11.ONE_TIME_LOGIN_ATTEMPTED, { source: "native_modal" });
-              let obj5 = outer1_1(outer1_2[22]);
-              c4 = 2;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj5.oneTimeLogin(tmp54);
-              return obj3;
-            }
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            outer1_1 = closure_2;
-            const _Error = Error;
-            str = "Login failed";
-            if (outer1_1 instanceof Error) {
-              str = outer1_1.message;
-            }
-            obj2 = outer1_1(outer1_2[13]);
-            obj4 = { source: "native_modal", error_reason: "api_error", error_message: null };
-            obj4[2] = str;
-            obj2.track(outer1_11.ONE_TIME_LOGIN_ERROR, obj4);
-            outer1_6();
-            c5 = 3;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            obj = outer1_1(outer1_2[13]);
-            obj.track(outer1_11.LOGIN_SUCCESSFUL, { source: "native_modal", login_method: "one_time_login" });
-            const _setTimeout = setTimeout;
-            const timerId = setTimeout(() => {
-              tmp3(tmp44[14]).popWithKey("ONE_TIME_LOGIN_MODAL");
-            }, 1500);
-            c3 = 0;
-          }
-          c3 = 0;
-          c5 = 3;
-          obj5 = { value: null, done: true };
-          obj5[0] = arg1;
-          return obj5;
-        }
-      } catch (tmp44) {
-        closure_2 = tmp44;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp44;
-        } else {
-          c4 = tmp;
-        }
-      }
+    let closure_1 = tmp3;
+    let c3 = 1;
+    if (null == outer1_0) {
+      outer1_1(outer1_2[13]).track(outer1_11.ONE_TIME_LOGIN_ERROR, { source: "native_modal", error_reason: "missing_token", error_message: "No token provided" });
+      outer1_6();
+      c3 = 0;
     }
+    if (outer1_8.isAuthenticated()) {
+      outer1_7();
+      c3 = 0;
+    }
+    let obj4 = outer1_1(outer1_2[13]);
+    obj4.track(outer1_11.ONE_TIME_LOGIN_ATTEMPTED, { source: "native_modal" });
+    const obj5 = outer1_1(outer1_2[22]);
+    yield obj5.oneTimeLogin(tmp54);
+    if (1 === tmp7) {
+      c3 = 0;
+      outer1_1 = closure_2;
+      const _Error = Error;
+      let str = "Login failed";
+      if (outer1_1 instanceof Error) {
+        str = outer1_1.message;
+      }
+      const obj2 = outer1_1(outer1_2[13]);
+      obj4 = { source: "native_modal", error_reason: "api_error", error_message: null };
+      obj4[2] = str;
+      obj2.track(outer1_11.ONE_TIME_LOGIN_ERROR, obj4);
+      outer1_6();
+      let c5 = 3;
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      const obj = outer1_1(outer1_2[13]);
+      obj.track(outer1_11.LOGIN_SUCCESSFUL, { source: "native_modal", login_method: "one_time_login" });
+      const _setTimeout = setTimeout;
+      const timerId = setTimeout(() => {
+        tmp3(tmp44[14]).popWithKey("ONE_TIME_LOGIN_MODAL");
+      }, 1500);
+      c3 = 0;
+    }
+    c3 = 0;
+    return arg1;
   }), items4);
   const items5 = [callback4];
   const effect1 = callback.useEffect(() => {

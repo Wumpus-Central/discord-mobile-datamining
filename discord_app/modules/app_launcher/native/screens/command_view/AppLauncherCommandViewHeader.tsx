@@ -122,7 +122,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   let str = scrollOffsetY(3989).useToken(section(712).colors.BACKGROUND_BASE_LOW);
   let tmp10 = memo;
   const obj7 = scrollOffsetY(3989);
-  if (typeof memo !== "Object") {
+  if (typeof memo !== "number") {
     let uri;
     if (memo != null) {
       uri = memo.uri;

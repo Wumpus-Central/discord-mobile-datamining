@@ -56,7 +56,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "find") {
+      if (typeof SearchCountState !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
@@ -70,7 +70,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "find") {
+      if (typeof SearchCountState !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
@@ -84,7 +84,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "find") {
+      if (typeof SearchCountState !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);

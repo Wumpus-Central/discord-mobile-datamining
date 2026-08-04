@@ -264,7 +264,7 @@ function ProfileBadge(source) {
   const formatToPlainStringResult = intl.formatToPlainString(source(label[19]).t.A0LN9t, { badgeLabel: label });
   let tmp10 = themeType === UserProfileThemeTypes.YOU_SCREEN;
   if (tmp10) {
-    tmp10 = typeof id === "y";
+    tmp10 = typeof id === "string";
   }
   let tmp11 = null;
   if (tmp10) {
@@ -273,7 +273,7 @@ function ProfileBadge(source) {
     obj[1] = id;
     tmp11 = callback(id(tmp5[20]), obj);
   }
-  let tmp14 = themeType === UserProfileThemeTypes.YOU_SCREEN && typeof id === "y";
+  let tmp14 = themeType === UserProfileThemeTypes.YOU_SCREEN && typeof id === "string";
   if (tmp14) {
     tmp14 = "orb_profile_badge" === id;
   }

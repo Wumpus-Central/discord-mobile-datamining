@@ -181,119 +181,74 @@ let obj = {
       flag = false;
     }
     return callback(function*() {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      let id = tmp2;
+      id = outer1_6.getId();
+      const validUsers = outer1_5.getValidUsers();
+      const sorted = validUsers.sort((id, id2) => {
+        let num = -1;
+        if (id.id !== closure_0) {
+          let num2 = 0;
+          if (id2.id === tmp) {
+            num2 = 1;
+          }
+          num = num2;
+        }
+        return num;
+      });
+      yield Promise.all(sorted.map(outer1_15));
+      if (1 === tmp5) {
         if (arg0 === 1) {
+          let dependencyMap = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          dependencyMap = 3;
+          let obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp5;
-              let id = tmp2;
-              id = undefined;
-              closure_1 = undefined;
-              v0 = undefined;
-              id = outer1_6.getId();
-              const validUsers = outer1_5.getValidUsers();
-              const sorted = validUsers.sort((id, id2) => {
-                let num = -1;
-                if (id.id !== closure_0) {
-                  let num2 = 0;
-                  if (id2.id === tmp) {
-                    num2 = 1;
-                  }
-                  num = num2;
-                }
-                return num;
-              });
-              v0 = 1;
-              dependencyMap = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(sorted.map(outer1_15));
-              return obj1;
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                dependencyMap = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                dependencyMap = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
+          let closure_1 = arg1;
+          if (closure_1.length >= 1) {
+            if (null != closure_1[0]) {
+              const HTTP = outer1_0(530).HTTP;
+              const obj3 = { url: null, body: null, rejectWithError: false };
+              obj3[0] = outer1_9.DEVICES_SYNC;
+              if (closure_1) {
+                let tmp9 = outer1_11;
               } else {
-                closure_1 = arg1;
-                if (closure_1.length >= 1) {
-                  if (null != closure_1[0]) {
-                    const HTTP = outer1_0(530).HTTP;
-                    const obj3 = { url: null, body: null, rejectWithError: false };
-                    obj3[0] = outer1_9.DEVICES_SYNC;
-                    if (closure_1) {
-                      let tmp9 = outer1_11;
-                    } else {
-                      tmp9 = outer1_12();
-                    }
-                    const obj4 = { provider: null, token: null, push_sync_tokens: null, bypass_server_throttling_supported: null, bundle_id: null };
-                    obj4[0] = tmp9;
-                    obj4[1] = outer1_0;
-                    obj4[2] = closure_1.filter(outer1_0(1351).isNotNullish);
-                    obj2 = outer1_0(500);
-                    let isAndroidResult = obj2.isAndroid();
-                    if (isAndroidResult) {
-                      isAndroidResult = !outer1_13;
-                    }
-                    obj4[3] = isAndroidResult;
-                    obj4[4] = outer1_10;
-                    obj3[1] = obj4;
-                    v0 = 2;
-                    dependencyMap = 1;
-                    const obj5 = { value: null, done: false };
-                    obj5[0] = HTTP.put(obj3);
-                    return obj5;
-                  }
-                }
-                dependencyMap = 3;
+                tmp9 = outer1_12();
               }
-            } else if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              v0 = arg1;
-              if (v0.body.invalid_push_sync_tokens.length > 0) {
-                const result = v0(11698).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-                const obj9 = v0(11698);
+              const obj4 = { provider: null, token: null, push_sync_tokens: null, bypass_server_throttling_supported: null, bundle_id: null };
+              obj4[0] = tmp9;
+              obj4[1] = outer1_0;
+              obj4[2] = closure_1.filter(outer1_0(1351).isNotNullish);
+              obj2 = outer1_0(500);
+              let isAndroidResult = obj2.isAndroid();
+              if (isAndroidResult) {
+                isAndroidResult = !outer1_13;
               }
+              obj4[3] = isAndroidResult;
+              obj4[4] = outer1_10;
+              obj3[1] = obj4;
+              let v0 = 2;
+              dependencyMap = 1;
+              const obj5 = { value: null, done: false };
+              obj5[0] = HTTP.put(obj3);
+              return obj5;
             }
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
           }
-        } catch (tmp23) {
-          dependencyMap = tmp;
-          throw tmp23;
+          dependencyMap = 3;
+        }
+      } else if (arg0 === 1) {
+        dependencyMap = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        v0 = arg1;
+        if (v0.body.invalid_push_sync_tokens.length > 0) {
+          const result = v0(11698).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
+          const obj9 = v0(11698);
         }
       }
+      return arg1;
     })();
   },
   unregisterDevice(token) {

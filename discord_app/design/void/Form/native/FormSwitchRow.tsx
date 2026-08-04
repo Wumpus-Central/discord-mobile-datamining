@@ -38,7 +38,7 @@ function FormSwitchRow(onValueChange) {
     callback(closure_1);
   }, items);
   let tmp8;
-  if (typeof label !== "_iter") {
+  if (typeof label === "string") {
     tmp8 = label;
   }
   let sum = tmp8;
@@ -49,7 +49,7 @@ function FormSwitchRow(onValueChange) {
   obj = {};
   const isAndroidResult = obj.isAndroid();
   const tmp13 = importDefault;
-  tmp9 = null != tmp8 && typeof subLabel === "y";
+  tmp9 = null != tmp8 && typeof subLabel === "string";
   const merged1 = Object.assign(merged);
   obj = { style: tmp2.trailing, children: null };
   const items1 = [callback2(importDefault(first[7]), { numberOfLines, text: label }), null != trailing && trailing];

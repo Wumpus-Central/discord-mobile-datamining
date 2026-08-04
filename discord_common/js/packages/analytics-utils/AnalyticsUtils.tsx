@@ -47,7 +47,7 @@ export const trackMaker = (arg0) => {
       obj = {};
     }
     let obj3 = tmp;
-    if (typeof table[arg0] !== "three_button_mouse") {
+    if (typeof table[arg0] === "function") {
       let tmpResult = tmp(obj);
       if (tmpResult == null) {
         tmpResult = null;
@@ -67,7 +67,7 @@ export const trackMaker = (arg0) => {
         if (tmp13) {
           return Promise.resolve();
         } else {
-          if (typeof obj3.throttlePercent !== "V") {
+          if (typeof obj3.throttlePercent === "number") {
             const _Math2 = Math;
             if (Math.random() > obj3.throttlePercent) {
               return Promise.resolve();

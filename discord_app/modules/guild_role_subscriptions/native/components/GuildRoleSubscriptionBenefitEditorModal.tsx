@@ -139,72 +139,25 @@ const forwardRefResult = importAllResult.forwardRef((benefitType) => {
   function _handleDelete() {
     const self = this;
     const tmp = first1(function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_0 = tmp3;
-              let c3 = 1;
-              const onDelete = outer1_0.onDelete;
-              let onDeleteResult;
-              if (onDelete != null) {
-                onDeleteResult = onDelete();
-              }
-              c1 = 2;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = onDeleteResult;
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              c4 = 3;
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              closure_0.onClose();
-              c3 = 0;
-            }
-            c3 = 0;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp13) {
-          let closure_2 = tmp13;
-          if (tmp4 === c3) {
-            c4 = tmp2;
-            throw tmp13;
-          } else {
-            c1 = tmp;
-          }
-        }
+      let closure_0 = tmp3;
+      let c3 = 1;
+      const onDelete = outer1_0.onDelete;
+      if (onDelete != null) {
+        const onDeleteResult = onDelete();
       }
+      yield onDeleteResult;
+      if (1 === tmp7) {
+        c3 = 0;
+        let c4 = 3;
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        closure_0.onClose();
+        c3 = 0;
+      }
+      c3 = 0;
+      return arg1;
     });
     const _handleDelete = tmp;
     const apply = tmp.apply;

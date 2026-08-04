@@ -93,7 +93,7 @@ function _signOrder() {
             if (c5 instanceof callback(530).HTTPResponseError) {
               if (400 === c5.status) {
                 if ((function isOrderShape(body) {
-                  let tmp = null != body && typeof body === "ay";
+                  let tmp = null != body && typeof body === "object";
                   if (tmp) {
                     tmp = "id" in body;
                   }

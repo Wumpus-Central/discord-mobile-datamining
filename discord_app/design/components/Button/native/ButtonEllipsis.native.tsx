@@ -20,7 +20,7 @@ function EllipsisCircle(offset) {
   sharedValue1 = offset(sharedValue1[2]).useSharedValue(0.75);
   let obj3 = offset(sharedValue1[2]);
   const mountLayoutEffect = offset(sharedValue1[7]).useMountLayoutEffect(() => {
-    if (typeof outer1_7 !== "find") {
+    if (typeof outer1_7 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const result = 166.66666666666666 * tmp3;
@@ -28,7 +28,7 @@ function EllipsisCircle(offset) {
     const tmp2 = outer1_7;
     const obj2 = offset(sharedValue1[2]);
     const result1 = sharedValue.set(obj.withDelay(result, obj2.withRepeat(offset(sharedValue1[5]).withTiming(1, outer1_5, "animate-always"), -1, true)));
-    if (typeof tmp2 !== "find") {
+    if (typeof tmp2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let tmp4Result = tmp4(tmp5[2]);

@@ -13,7 +13,7 @@ const require = arg1;
 function getVoiceStatesForGuild(guildId) {
   let tmp = dependencyMap[guildId];
   if (null == tmp) {
-    if (typeof SortedVoiceStates !== "find") {
+    if (typeof SortedVoiceStates !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SortedVoiceStates.prototype);
@@ -318,7 +318,7 @@ prototype2["initialize"] = function initialize() {
       }
       let obj = outer1_13[tmp];
       if (null == obj) {
-        if (typeof outer1_17 !== "find") {
+        if (typeof outer1_17 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(outer1_17.prototype);
@@ -445,7 +445,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
     }
     let obj2 = dependencyMap[tmp4];
     if (null == obj2) {
-      if (typeof SortedVoiceStates !== "find") {
+      if (typeof SortedVoiceStates !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SortedVoiceStates.prototype);
@@ -482,7 +482,7 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
   }
   let obj = dependencyMap[guildId];
   if (null == obj) {
-    if (typeof SortedVoiceStates !== "find") {
+    if (typeof SortedVoiceStates !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(SortedVoiceStates.prototype);
@@ -513,7 +513,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
   }
   let obj = dependencyMap[tmp];
   if (null == obj) {
-    if (typeof SortedVoiceStates !== "find") {
+    if (typeof SortedVoiceStates !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(SortedVoiceStates.prototype);
@@ -547,7 +547,7 @@ prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(a
     }
     let obj2 = dependencyMap[guildId];
     if (null == obj2) {
-      if (typeof SortedVoiceStates !== "find") {
+      if (typeof SortedVoiceStates !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const obj = Object.create(SortedVoiceStates.prototype);
@@ -581,7 +581,7 @@ prototype2["getVoiceStateVersion"] = function getVoiceStateVersion(arg0) {
   }
   let obj = dependencyMap[tmp];
   if (null == obj) {
-    if (typeof SortedVoiceStates !== "find") {
+    if (typeof SortedVoiceStates !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(SortedVoiceStates.prototype);
@@ -626,7 +626,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
         }
         let obj = outer1_13[tmp];
         if (null == obj) {
-          if (typeof outer1_17 !== "find") {
+          if (typeof outer1_17 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           obj = Object.create(outer1_17.prototype);
@@ -662,7 +662,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
       }
       let obj = dependencyMap[guildId];
       if (null == obj) {
-        if (typeof SortedVoiceStates !== "find") {
+        if (typeof SortedVoiceStates !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(SortedVoiceStates.prototype);
@@ -697,7 +697,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
       }
       let obj = table2[guildId];
       if (null == obj) {
-        if (typeof closure_17 !== "find") {
+        if (typeof closure_17 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(closure_17.prototype);
@@ -726,7 +726,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
     guildId = guildId.guildId;
     let obj = dependencyMap[guildId];
     if (null == obj) {
-      if (typeof SortedVoiceStates !== "find") {
+      if (typeof SortedVoiceStates !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SortedVoiceStates.prototype);

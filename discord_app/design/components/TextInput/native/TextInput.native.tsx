@@ -28,7 +28,7 @@ const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
   if (!tmp3Result.isAndroid()) {
     if (accessibilityLabel == null) {
       let tmp9;
-      if (typeof label !== "_iter") {
+      if (typeof label === "string") {
         tmp9 = label;
       }
       accessibilityLabel = tmp9;

@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/app_analytics/nativ
 export const useTrackNavigatorScreenImpression = function useTrackNavigatorScreenImpression(impressionProperties, params) {
   impressionProperties = impressionProperties.impressionProperties;
   let impressionPropertiesResult = impressionProperties;
-  if (typeof impressionProperties !== "three_button_mouse") {
+  if (typeof impressionProperties === "function") {
     impressionPropertiesResult = impressionProperties(params.params);
   }
   const obj = { type: null, name: null, properties: null };

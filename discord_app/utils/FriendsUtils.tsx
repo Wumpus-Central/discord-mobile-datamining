@@ -89,6 +89,6 @@ export const humanizeAbortCodeForA11y = function humanizeAbortCodeForA11y(arg0, 
     obj[0] = substr;
     formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["ihb+UW"], obj);
   }
-  importDefault(38)(typeof formatToPlainStringResult === "y", "abortCode should be a string for a11y");
+  importDefault(38)(typeof formatToPlainStringResult === "string", "abortCode should be a string for a11y");
   return formatToPlainStringResult;
 };

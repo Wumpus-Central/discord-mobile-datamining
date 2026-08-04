@@ -120,92 +120,45 @@ function _setAppIcon() {
     let c7 = 0;
     let c5 = 0;
     return (function*(arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let _slicedToArray = tmp3;
-              let dependencyMap = tmp5;
-              let c5 = 1;
-              let obj3 = outer1_13;
-              let setIconResult;
-              if (outer1_13 != null) {
-                setIconResult = obj3.setIcon(tmp27);
-              }
-              c6 = 2;
-              c7 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = setIconResult;
-              return obj1;
-            }
-          } else {
-            if (1 === tmp8) {
-              c5 = 0;
-              dependencyMap = closure_4;
-              obj1 = callback2(3986);
-              const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
-              const intl = callback(1236).intl;
-              obj2[1] = intl.string(callback(1236).t["c76eo/"]);
-              obj1.open(obj2);
-              const _HermesInternal = HermesInternal;
-              logger.warn("Error changing users app icon: " + dependencyMap);
-              c7 = 3;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              callback2(709).dispatch({ type: "APP_ICON_UPDATED" });
-              const obj8 = callback2(709);
-              obj3 = { icon_id: null, user_premium_tier: null, icon_premium_tier: null };
-              obj3[0] = callback;
-              obj3[1] = callback2;
-              let TIER_2 = null;
-              if (callback !== callback(7584).FreemiumAppIconIds.DEFAULT) {
-                TIER_2 = TIER_2.TIER_2;
-              }
-              obj3[2] = TIER_2;
-              callback2(698).track(constants.APP_ICON_UPDATED, obj3);
-              c5 = 0;
-              const obj9 = callback2(698);
-            }
-            c5 = 0;
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp30) {
-          closure_4 = tmp30;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp30;
-          } else {
-            c6 = tmp;
-          }
-        }
+      let _slicedToArray = tmp3;
+      let dependencyMap = tmp5;
+      let c5 = 1;
+      let obj3 = outer1_13;
+      if (outer1_13 != null) {
+        const setIconResult = obj3.setIcon(tmp27);
       }
+      yield setIconResult;
+      if (1 === tmp8) {
+        c5 = 0;
+        dependencyMap = closure_4;
+        const obj1 = callback2(3986);
+        const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+        const intl = callback(1236).intl;
+        obj2[1] = intl.string(callback(1236).t["c76eo/"]);
+        obj1.open(obj2);
+        const _HermesInternal = HermesInternal;
+        logger.warn("Error changing users app icon: " + dependencyMap);
+        let c7 = 3;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        callback2(709).dispatch({ type: "APP_ICON_UPDATED" });
+        const obj8 = callback2(709);
+        obj3 = { icon_id: null, user_premium_tier: null, icon_premium_tier: null };
+        obj3[0] = callback;
+        obj3[1] = callback2;
+        let TIER_2 = null;
+        if (callback !== callback(7584).FreemiumAppIconIds.DEFAULT) {
+          TIER_2 = TIER_2.TIER_2;
+        }
+        obj3[2] = TIER_2;
+        callback2(698).track(constants.APP_ICON_UPDATED, obj3);
+        c5 = 0;
+        const obj9 = callback2(698);
+      }
+      c5 = 0;
+      return arg1;
     })();
   });
   const _setAppIcon = tmp;
@@ -381,94 +334,43 @@ export const useAppIcons = function useAppIcons() {
   const tmp3 = callback(React.useState([]), 2);
   [tmp6, closure_1] = callback(React.useState([]), 2);
   const dependencyMap = React.useCallback(callback2(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_2 = tmp3;
-            let callback2 = tmp7;
-            let callback;
-            callback2 = undefined;
-            closure_2 = undefined;
-            let c4 = 1;
-            let availableIcons;
-            if (outer1_13 != null) {
-              availableIcons = outer1_13.getAvailableIcons();
-            }
-            c5 = 2;
-            v0 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = availableIcons;
-            return obj1;
-          }
-        } else {
-          if (1 === tmp7) {
-            c4 = 0;
-            const outer1_3 = _slicedToArray;
-            obj1 = outer1_1(outer1_2[14]);
-            const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
-            const intl = outer1_0(outer1_2[15]).intl;
-            obj2[1] = intl.string(outer1_0(outer1_2[15]).t["c76eo/"]);
-            obj1.open(obj2);
-            const _HermesInternal = HermesInternal;
-            outer1_12.warn("Error fetching available app icons: " + outer1_3);
-            v0 = 3;
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            callback = arg1.map((id) => id.id);
-            callback2 = outer1_7().filter((id) => closure_0.includes(id.id));
-            const arr = outer1_7();
-            closure_2 = outer1_8().filter((id) => closure_0.includes(id.id));
-            callback2(closure_2);
-            callback = 0;
-            const items = [v0()];
-            const sum = callback + 1;
-            callback = sum;
-            callback = HermesBuiltin.arraySpread(callback2, sum);
-            callback(items);
-            c4 = 0;
-            const arr2 = outer1_8();
-          }
-          c4 = 0;
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp20) {
-        _slicedToArray = tmp20;
-        if (tmp4 === c4) {
-          v0 = tmp2;
-          throw tmp20;
-        } else {
-          c5 = tmp;
-        }
-      }
+    let closure_2 = tmp3;
+    let c4 = 1;
+    if (outer1_13 != null) {
+      const availableIcons = outer1_13.getAvailableIcons();
     }
+    yield availableIcons;
+    if (1 === tmp7) {
+      c4 = 0;
+      const outer1_3 = _slicedToArray;
+      const obj1 = outer1_1(outer1_2[14]);
+      const obj2 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+      const intl = outer1_0(outer1_2[15]).intl;
+      obj2[1] = intl.string(outer1_0(outer1_2[15]).t["c76eo/"]);
+      obj1.open(obj2);
+      const _HermesInternal = HermesInternal;
+      outer1_12.warn("Error fetching available app icons: " + outer1_3);
+      let v0 = 3;
+    } else if (arg0 === 1) {
+      v0 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      let callback = arg1.map((id) => id.id);
+      const callback2 = outer1_7().filter((id) => closure_0.includes(id.id));
+      const arr = outer1_7();
+      closure_2 = outer1_8().filter((id) => closure_0.includes(id.id));
+      callback2(closure_2);
+      callback = 0;
+      const items = [v0()];
+      const sum = callback + 1;
+      callback = sum;
+      callback = HermesBuiltin.arraySpread(callback2, sum);
+      callback(items);
+      c4 = 0;
+      const arr2 = outer1_8();
+    }
+    c4 = 0;
+    return arg1;
   }), []);
   importDefault(4711)(() => {
     dependencyMap();

@@ -25,80 +25,27 @@ function _getReportMenu() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let sendRequest = tmp4;
-              let lib;
-              const HTTP = lib(outer1_2[5]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: false };
-              obj1[0] = outer1_7.GET_REPORT_MENU(outer1_19(lib));
-              let variant;
-              if (closure_1 != null) {
-                variant = tmp20.variant;
-              }
-              let tmp12;
-              if (null != variant) {
-                const obj2 = { variant: null };
-                obj2[0] = tmp20.variant;
-                tmp12 = obj2;
-              }
-              obj1[1] = tmp12;
-              c4 = 1;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            lib = arg1;
-            const body = lib.body;
-            let closure_2 = body;
-            if (body == null) {
-              const _JSON = JSON;
-              closure_2 = JSON.parse(lib.text);
-            }
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_2;
-            return obj;
-          }
-        } catch (tmp13) {
-          c5 = tmp;
-          throw tmp13;
-        }
+      let sendRequest = tmp4;
+      const HTTP = lib(outer1_2[5]).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: false };
+      obj1[0] = outer1_7.GET_REPORT_MENU(outer1_19(lib));
+      if (closure_1 != null) {
+        const variant = tmp20.variant;
       }
+      if (null != variant) {
+        const obj2 = { variant: null };
+        obj2[0] = tmp20.variant;
+        const tmp12 = obj2;
+      }
+      obj1[1] = tmp12;
+      lib = yield HTTP.get(obj1);
+      const body = lib.body;
+      let closure_2 = body;
+      if (body == null) {
+        const _JSON = JSON;
+        closure_2 = JSON.parse(lib.text);
+      }
+      return closure_2;
     })();
   });
   const _getReportMenu = tmp;
@@ -118,80 +65,27 @@ function _getReportMenuForModeratorReport() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let sendRequest = tmp4;
-              let lib;
-              const HTTP = lib(outer1_2[5]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: false };
-              obj1[0] = outer1_7.GET_REPORT_MENU(outer1_20(lib));
-              let variant;
-              if (closure_1 != null) {
-                variant = tmp20.variant;
-              }
-              let tmp12;
-              if (null != variant) {
-                const obj2 = { variant: null };
-                obj2[0] = tmp20.variant;
-                tmp12 = obj2;
-              }
-              obj1[1] = tmp12;
-              c4 = 1;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            lib = arg1;
-            const body = lib.body;
-            let closure_2 = body;
-            if (body == null) {
-              const _JSON = JSON;
-              closure_2 = JSON.parse(lib.text);
-            }
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_2;
-            return obj;
-          }
-        } catch (tmp13) {
-          c5 = tmp;
-          throw tmp13;
-        }
+      let sendRequest = tmp4;
+      const HTTP = lib(outer1_2[5]).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: false };
+      obj1[0] = outer1_7.GET_REPORT_MENU(outer1_20(lib));
+      if (closure_1 != null) {
+        const variant = tmp20.variant;
       }
+      if (null != variant) {
+        const obj2 = { variant: null };
+        obj2[0] = tmp20.variant;
+        const tmp12 = obj2;
+      }
+      obj1[1] = tmp12;
+      lib = yield HTTP.get(obj1);
+      const body = lib.body;
+      let closure_2 = body;
+      if (body == null) {
+        const _JSON = JSON;
+        closure_2 = JSON.parse(lib.text);
+      }
+      return closure_2;
     })();
   });
   const _getReportMenuForModeratorReport = tmp;
@@ -211,80 +105,27 @@ function _getUnauthenticatedReportMenu() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let sendRequest = tmp4;
-              let lib;
-              const HTTP = lib(outer1_2[5]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: false };
-              obj1[0] = outer1_7.GET_UNAUTHENTICATED_REPORT_MENU(outer1_18(lib));
-              let variant;
-              if (closure_1 != null) {
-                variant = tmp20.variant;
-              }
-              let tmp12;
-              if (null != variant) {
-                const obj2 = { variant: null };
-                obj2[0] = tmp20.variant;
-                tmp12 = obj2;
-              }
-              obj1[1] = tmp12;
-              c4 = 1;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            lib = arg1;
-            const body = lib.body;
-            let closure_2 = body;
-            if (body == null) {
-              const _JSON = JSON;
-              closure_2 = JSON.parse(lib.text);
-            }
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_2;
-            return obj;
-          }
-        } catch (tmp13) {
-          c5 = tmp;
-          throw tmp13;
-        }
+      let sendRequest = tmp4;
+      const HTTP = lib(outer1_2[5]).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: false };
+      obj1[0] = outer1_7.GET_UNAUTHENTICATED_REPORT_MENU(outer1_18(lib));
+      if (closure_1 != null) {
+        const variant = tmp20.variant;
       }
+      if (null != variant) {
+        const obj2 = { variant: null };
+        obj2[0] = tmp20.variant;
+        const tmp12 = obj2;
+      }
+      obj1[1] = tmp12;
+      lib = yield HTTP.get(obj1);
+      const body = lib.body;
+      let closure_2 = body;
+      if (body == null) {
+        const _JSON = JSON;
+        closure_2 = JSON.parse(lib.text);
+      }
+      return closure_2;
     })();
   });
   const _getUnauthenticatedReportMenu = tmp;
@@ -404,65 +245,16 @@ function _verifyUnauthenticatedReport() {
     let c4 = 0;
     let c3 = 0;
     return (function*(arg0, body) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const HTTP = callback(table[5]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
-              obj1[0] = outer1_7.VERIFY_UNAUTHENTICATED_REPORT(callback);
-              const obj2 = { name: null, email: null, code: null };
-              obj2[0] = callback;
-              obj2[1] = closure_1;
-              obj2[2] = table;
-              obj1[1] = obj2;
-              c4 = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp5) {
-          c3 = tmp;
-          throw tmp5;
-        }
-      }
+      const HTTP = callback(table[5]).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: false };
+      obj1[0] = outer1_7.VERIFY_UNAUTHENTICATED_REPORT(callback);
+      const obj2 = { name: null, email: null, code: null };
+      obj2[0] = callback;
+      obj2[1] = closure_1;
+      obj2[2] = table;
+      obj1[1] = obj2;
+      yield HTTP.post(obj1);
+      return body.body;
     })();
   });
   const _verifyUnauthenticatedReport = tmp;
@@ -477,60 +269,11 @@ function _verifyUnauthenticatedReport() {
 function _getDsaExperiment() {
   const self = this;
   const tmp = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const HTTP = v0(outer1_2[5]).HTTP;
-            const obj1 = { url: null, rejectWithError: false };
-            obj1[0] = outer1_7.DSA_EXPERIMENT_UNAUTHENTICATED;
-            c1 = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp8) {
-        v0 = tmp;
-        throw tmp8;
-      }
-    }
+    const HTTP = v0(outer1_2[5]).HTTP;
+    const obj1 = { url: null, rejectWithError: false };
+    obj1[0] = outer1_7.DSA_EXPERIMENT_UNAUTHENTICATED;
+    yield HTTP.get(obj1);
+    return arg1;
   });
   const _getDsaExperiment = tmp;
   const apply = tmp.apply;
@@ -544,60 +287,11 @@ function _getDsaExperiment() {
 function _fetchUrfCapabilities() {
   const self = this;
   const tmp = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const HTTP = v0(outer1_2[5]).HTTP;
-            const obj1 = { url: null, rejectWithError: false };
-            obj1[0] = outer1_7.DSA_CAPABILITIES;
-            c1 = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp8) {
-        v0 = tmp;
-        throw tmp8;
-      }
-    }
+    const HTTP = v0(outer1_2[5]).HTTP;
+    const obj1 = { url: null, rejectWithError: false };
+    obj1[0] = outer1_7.DSA_CAPABILITIES;
+    yield HTTP.get(obj1);
+    return arg1;
   });
   const _fetchUrfCapabilities = tmp;
   const apply = tmp.apply;
@@ -615,63 +309,14 @@ function _submitReportSecondLook() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0, body) {
-      if (c1 === 2) {
-        c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c1 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const HTTP = callback(table[5]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
-              obj1[0] = outer1_7.SUBMIT_REPORT_SECOND_LOOK;
-              const obj2 = { token: null };
-              obj2[0] = callback;
-              obj1[1] = obj2;
-              table = 1;
-              c1 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = body;
-            return obj4;
-          } else {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp9) {
-          c1 = tmp;
-          throw tmp9;
-        }
-      }
+      const HTTP = callback(table[5]).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: false };
+      obj1[0] = outer1_7.SUBMIT_REPORT_SECOND_LOOK;
+      const obj2 = { token: null };
+      obj2[0] = callback;
+      obj1[1] = obj2;
+      yield HTTP.post(obj1);
+      return body.body;
     })();
   });
   const _submitReportSecondLook = tmp;

@@ -534,84 +534,17 @@ function _getSubscriptionInvoice() {
     const iter = (function*(arg0) {
       let c0;
       let c1;
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let body = tmp5;
-              c1 = tmp2;
-              let callback;
-              c1 = undefined;
-              ({ subscriptionId: c0, preventFetch: c1 } = callback);
-              body = undefined;
-              c3 = 1;
-              c4 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else if (c1) {
-              c4 = 3;
-              return { value: null, done: true };
-            } else {
-              const HTTP = callback(body[7]).HTTP;
-              const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
-              obj2[0] = closure_12.BILLING_SUBSCRIPTION_INVOICE(callback);
-              c3 = 2;
-              c4 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = createFromServer.createInvoiceFromServer(body.body);
-            return obj;
-          }
-        } catch (tmp16) {
-          c4 = tmp;
-          throw tmp16;
-        }
+      c1 = tmp2;
+      ({ subscriptionId: c0, preventFetch: c1 } = callback);
+      yield "ct";
+      if (c1) {
+        return null;
       }
+      const HTTP = callback(body[7]).HTTP;
+      const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
+      obj2[0] = closure_12.BILLING_SUBSCRIPTION_INVOICE(callback);
+      body = yield HTTP.get(obj2);
+      return createFromServer.createInvoiceFromServer(body.body);
     })();
     iter.next();
     return iter;
@@ -651,78 +584,30 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
     function _loadPreview() {
       const self = this;
       const tmp = outer2_6(function*() {
-        if (c5 === 2) {
+        let closure_1 = tmp3;
+        let v0 = 1;
+        v0(null);
+        yield outer1_1();
+        if (1 === tmp7) {
+          v0 = 0;
+          outer1_1 = closure_2;
+          if (!closure_0) {
+            v0(tmp16);
+            outer1_2(null);
+          }
+          let c5 = 3;
+        } else if (arg0 === 1) {
           c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
+          throw arg1;
+        } else if (arg0 !== 2) {
+          closure_0 = arg1;
+          if (!closure_0) {
+            outer1_2(closure_0);
           }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_1 = tmp3;
-                let closure_0 = tmp7;
-                closure_0 = undefined;
-                let v0 = 1;
-                v0(null);
-                c4 = 2;
-                c5 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_1();
-                return obj1;
-              }
-            } else {
-              if (1 === tmp7) {
-                v0 = 0;
-                outer1_1 = closure_2;
-                if (!closure_0) {
-                  v0(tmp16);
-                  outer1_2(null);
-                }
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                closure_0 = arg1;
-                if (!closure_0) {
-                  outer1_2(closure_0);
-                }
-                v0 = 0;
-              }
-              v0 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp26) {
-            closure_2 = tmp26;
-            if (tmp4 === v0) {
-              c5 = tmp2;
-              throw tmp26;
-            } else {
-              c4 = tmp;
-            }
-          }
+          v0 = 0;
         }
+        v0 = 0;
+        return arg1;
       });
       const _loadPreview = tmp;
       const apply = tmp.apply;
@@ -792,78 +677,30 @@ export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscript
     function _loadPreview() {
       const self = this;
       const tmp = outer2_6(function*() {
-        if (c5 === 2) {
+        let closure_1 = tmp3;
+        let v0 = 1;
+        v0(null);
+        yield outer1_1();
+        if (1 === tmp7) {
+          v0 = 0;
+          outer1_1 = closure_2;
+          if (!closure_0) {
+            v0(tmp16);
+            outer1_2(null);
+          }
+          let c5 = 3;
+        } else if (arg0 === 1) {
           c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
+          throw arg1;
+        } else if (arg0 !== 2) {
+          closure_0 = arg1;
+          if (!closure_0) {
+            outer1_2(closure_0);
           }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_1 = tmp3;
-                let closure_0 = tmp7;
-                closure_0 = undefined;
-                let v0 = 1;
-                v0(null);
-                c4 = 2;
-                c5 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_1();
-                return obj1;
-              }
-            } else {
-              if (1 === tmp7) {
-                v0 = 0;
-                outer1_1 = closure_2;
-                if (!closure_0) {
-                  v0(tmp16);
-                  outer1_2(null);
-                }
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                closure_0 = arg1;
-                if (!closure_0) {
-                  outer1_2(closure_0);
-                }
-                v0 = 0;
-              }
-              v0 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp26) {
-            closure_2 = tmp26;
-            if (tmp4 === v0) {
-              c5 = tmp2;
-              throw tmp26;
-            } else {
-              c4 = tmp;
-            }
-          }
+          v0 = 0;
         }
+        v0 = 0;
+        return arg1;
       });
       const _loadPreview = tmp;
       const apply = tmp.apply;
@@ -1012,78 +849,30 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
     function _loadPreview() {
       const self = this;
       const tmp = outer2_6(function*() {
-        if (c5 === 2) {
+        let closure_1 = tmp3;
+        let v0 = 1;
+        v0(null);
+        yield outer1_1();
+        if (1 === tmp7) {
+          v0 = 0;
+          outer1_1 = closure_2;
+          if (!closure_0) {
+            v0(tmp16);
+            outer1_2(null);
+          }
+          let c5 = 3;
+        } else if (arg0 === 1) {
           c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
+          throw arg1;
+        } else if (arg0 !== 2) {
+          closure_0 = arg1;
+          if (!closure_0) {
+            outer1_2(closure_0);
           }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_1 = tmp3;
-                let closure_0 = tmp7;
-                closure_0 = undefined;
-                let v0 = 1;
-                v0(null);
-                c4 = 2;
-                c5 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_1();
-                return obj1;
-              }
-            } else {
-              if (1 === tmp7) {
-                v0 = 0;
-                outer1_1 = closure_2;
-                if (!closure_0) {
-                  v0(tmp16);
-                  outer1_2(null);
-                }
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                closure_0 = arg1;
-                if (!closure_0) {
-                  outer1_2(closure_0);
-                }
-                v0 = 0;
-              }
-              v0 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp26) {
-            closure_2 = tmp26;
-            if (tmp4 === v0) {
-              c5 = tmp2;
-              throw tmp26;
-            } else {
-              c4 = tmp;
-            }
-          }
+          v0 = 0;
         }
+        v0 = 0;
+        return arg1;
       });
       const _loadPreview = tmp;
       const apply = tmp.apply;
@@ -1141,78 +930,30 @@ export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(prev
     function _loadPreview() {
       const self = this;
       const tmp = outer2_6(function*() {
-        if (c5 === 2) {
+        let closure_1 = tmp3;
+        let v0 = 1;
+        v0(null);
+        yield outer1_1();
+        if (1 === tmp7) {
+          v0 = 0;
+          outer1_1 = closure_2;
+          if (!closure_0) {
+            v0(tmp16);
+            outer1_2(null);
+          }
+          let c5 = 3;
+        } else if (arg0 === 1) {
           c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
+          throw arg1;
+        } else if (arg0 !== 2) {
+          closure_0 = arg1;
+          if (!closure_0) {
+            outer1_2(closure_0);
           }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_1 = tmp3;
-                let closure_0 = tmp7;
-                closure_0 = undefined;
-                let v0 = 1;
-                v0(null);
-                c4 = 2;
-                c5 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_1();
-                return obj1;
-              }
-            } else {
-              if (1 === tmp7) {
-                v0 = 0;
-                outer1_1 = closure_2;
-                if (!closure_0) {
-                  v0(tmp16);
-                  outer1_2(null);
-                }
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                closure_0 = arg1;
-                if (!closure_0) {
-                  outer1_2(closure_0);
-                }
-                v0 = 0;
-              }
-              v0 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp26) {
-            closure_2 = tmp26;
-            if (tmp4 === v0) {
-              c5 = tmp2;
-              throw tmp26;
-            } else {
-              c4 = tmp;
-            }
-          }
+          v0 = 0;
         }
+        v0 = 0;
+        return arg1;
       });
       const _loadPreview = tmp;
       const apply = tmp.apply;

@@ -4,9 +4,9 @@ const result = require("set").fileFinishedImporting("design/utils/shared/getNode
 function getNodeText(children) {
   let mapped = children;
   let tmp = children;
-  if (typeof children !== "y") {
+  if (typeof children !== "string") {
     tmp = mapped;
-    if (typeof mapped !== "Object") {
+    if (typeof mapped !== "number") {
       const _Array = Array;
       if (mapped instanceof Array) {
         mapped = mapped.map(getNodeText);

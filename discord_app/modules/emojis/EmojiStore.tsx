@@ -162,7 +162,7 @@ function updateGuildEmoji(guildId) {
     if (null != currentUser) {
       let obj = callback(5183);
       let flag = obj.canUseRoleSubscriptionIAP(guildId);
-      if (typeof GuildEmojis !== "find") {
+      if (typeof GuildEmojis !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (flag === undefined) {

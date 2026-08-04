@@ -10,71 +10,21 @@ function _addRestrictedScheduleRule() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0, body) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let asyncGeneratorStep = tmp2;
-              const table = tmp5;
-              body = undefined;
-              const HTTP = callback(outer1_2[2]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = c4.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULE(callback);
-              obj1[1] = body;
-              obj1[2] = callback(outer1_2[2]).rejectWithMigratedError();
-              c4 = 1;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.post(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            body = body.body;
-            obj = body(table[3]);
-            const obj4 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: null, restrictedSchedule: null };
-            obj4[1] = callback;
-            obj4[2] = body;
-            obj.dispatch(obj4);
-            c5 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp13) {
-          c5 = tmp;
-          throw tmp13;
-        }
-      }
+      let asyncGeneratorStep = tmp2;
+      const table = tmp5;
+      const HTTP = callback(outer1_2[2]).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = c4.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULE(callback);
+      obj1[1] = body;
+      obj1[2] = callback(outer1_2[2]).rejectWithMigratedError();
+      yield HTTP.post(obj1);
+      body = body.body;
+      const obj = body(table[3]);
+      const obj4 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: null, restrictedSchedule: null };
+      obj4[1] = callback;
+      obj4[2] = body;
+      obj.dispatch(obj4);
+      return body;
     })();
   });
   const _addRestrictedScheduleRule = tmp;
@@ -95,71 +45,21 @@ function _updateRestrictedScheduleRule() {
     let c5 = 0;
     let c6 = 0;
     return (function*(arg0, body) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let closure_4 = tmp2;
-              let asyncGeneratorStep = tmp5;
-              body = undefined;
-              const HTTP = callback(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = outer1_4.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(callback, body);
-              obj1[1] = dependencyMap;
-              obj1[2] = callback(530).rejectWithMigratedError();
-              c5 = 1;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.patch(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            body = body.body;
-            obj = body(709);
-            const obj4 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: null, restrictedSchedule: null };
-            obj4[1] = callback;
-            obj4[2] = body;
-            obj.dispatch(obj4);
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp13) {
-          c6 = tmp;
-          throw tmp13;
-        }
-      }
+      let closure_4 = tmp2;
+      let asyncGeneratorStep = tmp5;
+      const HTTP = callback(530).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = outer1_4.FAMILY_CENTER_RESTRICTED_SCHEDULE_RULES(callback, body);
+      obj1[1] = dependencyMap;
+      obj1[2] = callback(530).rejectWithMigratedError();
+      yield HTTP.patch(obj1);
+      body = body.body;
+      const obj = body(709);
+      const obj4 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: null, restrictedSchedule: null };
+      obj4[1] = callback;
+      obj4[2] = body;
+      obj.dispatch(obj4);
+      return body;
     })();
   });
   const _updateRestrictedScheduleRule = tmp;

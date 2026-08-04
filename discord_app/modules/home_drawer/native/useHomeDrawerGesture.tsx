@@ -515,7 +515,7 @@ export const useHomeGesture = function useHomeGesture() {
             const runOnJSResult = enableHome(gestureState[6]).runOnJS(enableHome(gestureState[9]).triggerHapticFeedback);
           }
         }
-        if (typeof settleDrawer !== "find") {
+        if (typeof settleDrawer !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let num5 = 0;
@@ -545,7 +545,7 @@ export const useHomeGesture = function useHomeGesture() {
           const runOnJSResult1 = enableHome(gestureState[6]).runOnJS(enableHome(gestureState[9]).triggerHapticFeedback);
         }
       }
-      if (typeof shouldOpenFromPosition !== "find") {
+      if (typeof shouldOpenFromPosition !== "function") {
         HermesBuiltin.throwTypeError();
       }
       flag = 0 !== shouldOpenFromPosition.get();
@@ -572,7 +572,7 @@ export const useHomeGesture = function useHomeGesture() {
         tmp = obj.get() < outer1_4;
       }
       if (tmp) {
-        if (typeof shouldOpenFromPosition !== "find") {
+        if (typeof shouldOpenFromPosition !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp5 = 0 !== obj.get();
@@ -587,7 +587,7 @@ export const useHomeGesture = function useHomeGesture() {
           }
           tmp5 = tmp7;
         }
-        if (typeof tmp3 !== "find") {
+        if (typeof tmp3 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let num2 = 0;

@@ -15,69 +15,23 @@ function MaybeClearBuildOverride() {
   function _clearOverride() {
     const self = this;
     const tmp = outer1_3(function*() {
-      if (c4 === 2) {
+      const callback = tmp3;
+      let c3 = 1;
+      outer1_0(true);
+      const obj1 = outer1_0(outer1_2[8]);
+      yield obj1.clearBuildOverride();
+      if (1 === tmp7) {
+        c3 = 0;
+        callback(false);
+        let c4 = 3;
+      } else if (arg0 === 1) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const callback = tmp3;
-              let c3 = 1;
-              outer1_0(true);
-              let obj1 = outer1_0(outer1_2[8]);
-              c1 = 2;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.clearBuildOverride();
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              callback(false);
-              c4 = 3;
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c3 = 0;
-            }
-            c3 = 0;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp16) {
-          let closure_2 = tmp16;
-          if (tmp4 === c3) {
-            c4 = tmp2;
-            throw tmp16;
-          } else {
-            c1 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     });
     const _clearOverride = tmp;
     const apply = tmp.apply;

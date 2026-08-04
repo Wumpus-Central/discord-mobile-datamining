@@ -124,7 +124,7 @@ const searchGuildChannelTabStore = new SearchGuildChannelTabStore(require("dispa
     ({ guildId, searchQueryString } = id);
     let value = map.get(id);
     if (value == null) {
-      if (typeof GuildChannelSearchManager !== "find") {
+      if (typeof GuildChannelSearchManager !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(GuildChannelSearchManager.prototype);

@@ -116,7 +116,7 @@ class BenefitsSection {
       return null;
     } else {
       formatToPlainStringResult = label;
-      if (typeof label !== "y") {
+      if (typeof label !== "string") {
         tmp11 = guildId;
         tmp12 = closure_3;
         intl = require("getSystemLocale").intl;

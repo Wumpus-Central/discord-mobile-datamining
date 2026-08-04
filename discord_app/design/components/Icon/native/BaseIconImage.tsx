@@ -29,7 +29,7 @@ export const BaseIconImage = function BaseIconImage(source) {
       obj[0] = color;
       tmp3 = obj;
     }
-    tmp2 = null != color && typeof color === "y";
+    tmp2 = null != color && typeof color === "string";
   }
   style = [table[str], tmp3, ];
   style[2] = style;

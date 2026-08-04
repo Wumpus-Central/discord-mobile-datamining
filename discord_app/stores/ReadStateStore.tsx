@@ -652,8 +652,8 @@ function getThreadAckMessageTimestamp(guildId, channelId) {
           const _isNaN = isNaN;
           now = isNaN(_Date);
           let joinedAt = _Date;
-        } else if (typeof joinedAt2 !== "y") {
-          if (typeof _Date.joinedAt !== "V") {
+        } else if (typeof joinedAt2 !== "string") {
+          if (typeof _Date.joinedAt === "number") {
             const _isNaN6 = isNaN;
             if (!isNaN(_Date.joinedAt)) {
               joinedAt = _Date.joinedAt;
@@ -1083,7 +1083,7 @@ ReadState["get"] = function get(channelId) {
     value = value.get(channelId);
   }
   if (null == value) {
-    if (typeof tmp2 !== "find") {
+    if (typeof tmp2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let CHANNEL2 = CHANNEL;
@@ -2374,13 +2374,13 @@ prototype2["getAckTimestamp"] = function getAckTimestamp() {
               const time = joinedAt2.getTime();
               const _isNaN3 = isNaN;
               let joinedAt = time;
-            } else if (typeof joinedAt2 === "y") {
+            } else if (typeof joinedAt2 === "string") {
               const _Date = Date;
               const date = new Date(guild.joinedAt);
               const time1 = date.getTime();
               const _isNaN2 = isNaN;
               joinedAt = time1;
-            } else if (typeof guild.joinedAt !== "V") {
+            } else if (typeof guild.joinedAt === "number") {
               const _isNaN5 = isNaN;
               if (!isNaN(guild.joinedAt)) {
                 joinedAt = guild.joinedAt;
@@ -2675,13 +2675,13 @@ prototype3["isNewForumThread"] = function isNewForumThread(id, parent_id, guild)
               const time = joinedAt2.getTime();
               const _isNaN2 = isNaN;
               let joinedAt = time;
-            } else if (typeof joinedAt2 === "y") {
+            } else if (typeof joinedAt2 === "string") {
               const _Date = Date;
               const date = new Date(guild.joinedAt);
               const time1 = date.getTime();
               const _isNaN = isNaN;
               joinedAt = time1;
-            } else if (typeof guild.joinedAt !== "V") {
+            } else if (typeof guild.joinedAt === "number") {
               const _isNaN3 = isNaN;
               if (!isNaN(guild.joinedAt)) {
                 joinedAt = guild.joinedAt;

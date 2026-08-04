@@ -53,7 +53,7 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
   }
   obj[5] = tmp11;
   let tmp7Result = label;
-  if (typeof label !== "_iter") {
+  if (typeof label === "string") {
     obj = { text: null, style: null };
     obj[0] = label;
     obj[1] = tmp.formLabel;

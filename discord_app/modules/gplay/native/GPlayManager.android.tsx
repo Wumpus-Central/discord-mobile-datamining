@@ -186,55 +186,90 @@ function _handleDowngradeCommand() {
     let c3 = 0;
     let c4 = 0;
     const iter = (function*(arg0) {
-      let c1 = 0;
-      let downgradeCommand;
-      downgradeCommand = downgradeCommand.downgradeCommand;
-      let c3 = 1;
-      let c4 = 1;
-      yield "ct";
-      if (1 === tmp4) {
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          c4 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          c4 = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
-        } else if (constants.EXECUTE === downgradeCommand) {
-          c3 = 2;
-          c4 = 1;
-          const obj2 = { value: null, done: false };
-          obj2[0] = (function executePendingDowngrade() {
-            const self = this;
-            const apply = closure_36.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })();
-          return obj2;
-        } else if (constants.CLEAR === tmp27) {
-          callback();
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          const _Error = Error;
-          const _HermesInternal = HermesInternal;
-          const error = new Error("Invalid downgrade state " + downgradeCommand);
-          throw error;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_2 = tmp4;
+              let c1 = 0;
+              let downgradeCommand;
+              downgradeCommand = downgradeCommand.downgradeCommand;
+              c3 = 1;
+              c4 = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else {
+            if (1 === tmp4) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else if (constants.EXECUTE === downgradeCommand) {
+                c3 = 2;
+                c4 = 1;
+                const obj2 = { value: null, done: false };
+                obj2[0] = (function executePendingDowngrade() {
+                  const self = this;
+                  const apply = closure_36.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })();
+                return obj2;
+              } else if (constants.CLEAR === tmp27) {
+                callback();
+              } else {
+                const _Error = Error;
+                const _HermesInternal = HermesInternal;
+                const error = new Error("Invalid downgrade state " + downgradeCommand);
+                throw error;
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+            c4 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp19) {
+          c4 = tmp;
+          throw tmp19;
+        }
       }
-      c4 = 3;
-      yield "HermesInternal";
     })();
     iter.next();
     return iter;

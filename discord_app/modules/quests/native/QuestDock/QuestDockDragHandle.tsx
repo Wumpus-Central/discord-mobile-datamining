@@ -65,7 +65,7 @@ const memoResult = importAllResult.memo(function QuestDockDragHandle(arg0) {
   const fn2 = function u() {
     let obj = activeQuestDockMode;
     const value = activeQuestDockMode.get();
-    if (typeof outer1_10 !== "find") {
+    if (typeof outer1_10 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let num = 0;

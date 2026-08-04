@@ -232,71 +232,25 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     let c5 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (c5 === 2) {
+      let closure_2 = tmp3;
+      let c3 = 1;
+      yield outer1_14(callback);
+      if (1 === tmp7) {
+        c3 = 0;
+        const obj1 = callback(isGift[11]);
+        const result = obj1.showCheckoutOrderErrorModal(() => outer1_14(closure_0), () => {
+          callback2(false);
+          callback();
+        });
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
-              let c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_14(callback);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              obj1 = callback(isGift[11]);
-              const result = obj1.showCheckoutOrderErrorModal(() => outer1_14(closure_0), () => {
-                callback2(false);
-                callback();
-              });
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp15) {
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp15;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     })();
   });
   let items1 = [callback, onOrderRetryCancellation];

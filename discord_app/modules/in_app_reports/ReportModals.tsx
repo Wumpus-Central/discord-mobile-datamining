@@ -14,72 +14,27 @@ function _submitHamReportForFirstDM() {
     let c5 = 0;
     let c4 = 0;
     return (function*(arg0, arg1) {
-      if (c5 === 2) {
+      let closure_2 = tmp4;
+      const callback = closure_1;
+      let c4 = 1;
+      const obj1 = { name: null, record: null };
+      obj1[0] = callback(outer1_2[5]).ReportNames.FIRST_DM;
+      obj1[1] = callback;
+      yield callback(outer1_2[7]).submitHeadlessReport(obj1, { variant: "_first_dm_ham_v1" });
+      if (1 === tmp7) {
+        c4 = 0;
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+        throw arg1;
+      } else if (arg0 !== 2) {
+        if (callback != null) {
+          callback();
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp4;
-              const callback = closure_1;
-              let c4 = 1;
-              const obj1 = { name: null, record: null };
-              obj1[0] = callback(outer1_2[5]).ReportNames.FIRST_DM;
-              obj1[1] = callback;
-              c3 = 2;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = callback(outer1_2[7]).submitHeadlessReport(obj1, { variant: "_first_dm_ham_v1" });
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              if (callback != null) {
-                callback();
-              }
-              c4 = 0;
-            }
-            c4 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp10) {
-          if (tmp3 === c4) {
-            c5 = tmp2;
-            throw tmp10;
-          } else {
-            c3 = tmp;
-          }
-        }
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _submitHamReportForFirstDM = tmp;
@@ -101,76 +56,31 @@ function _submitReportForInappropriateConversationSafetyAlert() {
     let c6 = 0;
     let c5 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c6 === 2) {
+      let ReportNames = tmp4;
+      const callback = callback2;
+      callback2 = dependencyMap;
+      let c5 = 1;
+      const obj1 = { name: null, record: null };
+      obj1[0] = callback(7831).ReportNames.MESSAGE;
+      obj1[1] = callback;
+      yield callback(7834).submitHeadlessReport(obj1, { variant: "safety_alerts_headless_v1" });
+      if (1 === tmp7) {
+        c5 = 0;
+        if (callback2 != null) {
+          callback2();
+        }
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+        throw arg1;
+      } else if (arg0 !== 2) {
+        if (callback != null) {
+          callback();
         }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let ReportNames = tmp4;
-              const callback = callback2;
-              callback2 = dependencyMap;
-              let c5 = 1;
-              const obj1 = { name: null, record: null };
-              obj1[0] = callback(7831).ReportNames.MESSAGE;
-              obj1[1] = callback;
-              c4 = 2;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = callback(7834).submitHeadlessReport(obj1, { variant: "safety_alerts_headless_v1" });
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c5 = 0;
-              if (callback2 != null) {
-                callback2();
-              }
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              if (callback != null) {
-                callback();
-              }
-              c5 = 0;
-            }
-            c5 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp12) {
-          if (tmp3 === c5) {
-            c6 = tmp2;
-            throw tmp12;
-          } else {
-            c4 = tmp;
-          }
-        }
+        c5 = 0;
       }
+      c5 = 0;
+      return arg1;
     })();
   });
   const _submitReportForInappropriateConversationSafetyAlert = tmp;

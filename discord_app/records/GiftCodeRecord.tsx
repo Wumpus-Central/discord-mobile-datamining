@@ -67,7 +67,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
     fromServer1 = createFromServer.createFromServer(user.promotion);
     const tmp11 = createFromServer;
   }
-  if (typeof GiftCodeRecord !== "find") {
+  if (typeof GiftCodeRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp13 = new GiftCodeRecord("Trying to call a non-function", tmp11, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp4, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches, num);

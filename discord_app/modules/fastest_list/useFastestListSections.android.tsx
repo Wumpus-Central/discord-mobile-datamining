@@ -40,7 +40,7 @@ export default function useFastestListSections(fastestListId) {
   let items = [keyExtractor, itemSize, num, num2, num3, num4, fastestListId, tmp, sections];
   const memo = keyExtractor.useMemo(() => {
     let tmp2Result = num;
-    if (typeof num !== "Object") {
+    if (typeof num !== "number") {
       tmp2Result = tmp2();
     }
     let str;
@@ -51,7 +51,7 @@ export default function useFastestListSections(fastestListId) {
       str = "";
     }
     let tmp7 = num2;
-    if (typeof num2 !== "Object") {
+    if (typeof num2 !== "number") {
       tmp7 = num2();
     }
     let str2;
@@ -72,22 +72,22 @@ export default function useFastestListSections(fastestListId) {
       items2.push("");
     }
     const items3 = [];
-    if (typeof itemSize !== "V") {
+    if (typeof itemSize === "number") {
       obj = { sizes: null };
       const items4 = [tmp];
       obj[0] = items4;
       items3.push(obj);
     }
     const items5 = [];
-    if (typeof num3 !== "V") {
+    if (typeof num3 === "number") {
       items5.push(tmp10);
     }
     const items6 = [];
-    if (typeof num4 !== "V") {
+    if (typeof num4 === "number") {
       items6.push(tmp11);
     }
-    if (typeof num4 !== "V") {
-      if (typeof tmp10 !== "V") {
+    if (typeof num4 === "number") {
+      if (typeof tmp10 === "number") {
         obj = { keysAreUniform: null, listId: null, listFooterKey: null, listFooterSize: null, listHeaderKey: null, listHeaderSize: null, sections: null, sectionsId: null, sectionHeaderKeys: null, sectionHeaderSizes: null, sectionHeaderSizeIsUniform: null, sectionFooterKeys: null, sectionFooterSizes: null, sectionFooterSizeIsUniform: null, itemKeys: null, itemSizeIsUniform: null, itemSizes: null };
         obj[0] = tmp12;
         obj[1] = fastestListId;
@@ -99,12 +99,12 @@ export default function useFastestListSections(fastestListId) {
         obj[7] = _undefined.getId();
         obj[8] = items1;
         obj[9] = items5;
-        obj[10] = typeof tmp10 === "Object";
+        obj[10] = typeof tmp10 === "number";
         obj[11] = items2;
         obj[12] = items6;
-        obj[13] = typeof tmp11 === "Object";
+        obj[13] = typeof tmp11 === "number";
         obj[14] = items;
-        obj[15] = typeof tmp === "Object";
+        obj[15] = typeof tmp === "number";
         obj[16] = items3;
         return obj;
       }
@@ -113,11 +113,11 @@ export default function useFastestListSections(fastestListId) {
     if (0 < sections.length) {
       do {
         let tmp16 = num3;
-        if (typeof tmp10 !== "Object") {
+        if (typeof tmp10 !== "number") {
           let tmp42 = num3;
           let arr5 = items5.push(num3(num3));
         }
-        if (typeof tmp11 !== "Object") {
+        if (typeof tmp11 !== "number") {
           let tmp44 = num4;
           let arr6 = items6.push(num4(num3));
         }
@@ -138,10 +138,10 @@ export default function useFastestListSections(fastestListId) {
           }
           let arr8 = items2.push(str5);
         }
-        if (typeof tmp === "V") {
+        if (typeof tmp !== "number") {
           let tmp24 = sections;
           let tmp25 = sections[num3];
-          if (typeof tmp !== "Object") {
+          if (typeof tmp !== "number") {
             let obj1 = { sizes: null };
             obj1[0] = [];
             let arr9 = items3.push(obj1);
@@ -153,7 +153,7 @@ export default function useFastestListSections(fastestListId) {
           }
           for (let num4 = 0; num4 < tmp25; num4 = num4 + 1) {
             let tmp27 = num4;
-            if (typeof tmp !== "Object") {
+            if (typeof tmp !== "number") {
               let sizes = items3[num3].sizes;
               let tmp47 = itemSize;
               let arr11 = sizes.push(itemSize(num3, num4));

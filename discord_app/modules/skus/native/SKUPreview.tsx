@@ -15,7 +15,7 @@ class CollectiblesPreview {
       size = require("SourceIcon").DEFAULT_ITEM_SIZE;
     }
     size2 = size;
-    if (typeof size !== "V") {
+    if (typeof size === "number") {
       obj = { width: null, height: null };
       obj[0] = size;
       obj[1] = size;
@@ -140,7 +140,7 @@ class SocialLayerStorefrontSKUPreview {
       DEFAULT_ITEM_SIZE = require("SourceIcon").DEFAULT_ITEM_SIZE;
     }
     size = DEFAULT_ITEM_SIZE;
-    if (typeof DEFAULT_ITEM_SIZE !== "V") {
+    if (typeof DEFAULT_ITEM_SIZE === "number") {
       obj = { width: null, height: null };
       obj[0] = DEFAULT_ITEM_SIZE;
       obj[1] = DEFAULT_ITEM_SIZE;
@@ -170,7 +170,7 @@ class PremiumSKUPreview {
       DEFAULT_ITEM_SIZE = require("SourceIcon").DEFAULT_ITEM_SIZE;
     }
     size = DEFAULT_ITEM_SIZE;
-    if (typeof DEFAULT_ITEM_SIZE !== "V") {
+    if (typeof DEFAULT_ITEM_SIZE === "number") {
       obj = { width: null, height: null };
       obj[0] = DEFAULT_ITEM_SIZE;
       obj[1] = DEFAULT_ITEM_SIZE;

@@ -102,7 +102,7 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
       let closure_3;
       let fn;
       let onClose;
-      if (typeof fn !== "find") {
+      if (typeof fn !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = onClose(paths[3]);

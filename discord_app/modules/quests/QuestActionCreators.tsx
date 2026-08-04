@@ -478,134 +478,67 @@ function _sendHeartbeat() {
       let c4;
       let c5;
       let terminal;
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === body) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              terminal = tmp3;
-              let dependencyMap = tmp7;
-              let callback;
-              let callback2;
-              dependencyMap = undefined;
-              terminal = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              ({ questId: c0, streamKey: c1, applicationId: c2, terminal } = callback);
-              if (terminal === undefined) {
-                terminal = false;
-              }
-              ({ executablePath: c4, executableFingerprint: c5 } = callback);
-              body = undefined;
-              body = 1;
-              c7 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c5 = 1;
-              let obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-              obj2[0] = closure_13.QUESTS_HEARTBEAT(callback);
-              const obj3 = { stream_key: null, application_id: null, terminal: null, executable_path: null, executable_fingerprint: null };
-              obj3[0] = callback2;
-              obj3[1] = dependencyMap;
-              obj3[2] = terminal;
-              obj3[3] = c4;
-              obj3[4] = c5;
-              obj2[1] = obj3;
-              let obj4 = { event: null, properties: null };
-              obj4[0] = callback(503).NetworkActionNames.QUEST_HEARTBEAT;
-              const obj5 = { quest_id: null, application_id: null, terminal: null, is_overlay: false, stack_trace: null, is_playtime_eligible: true };
-              obj5[0] = callback;
-              obj5[1] = dependencyMap;
-              obj5[2] = terminal;
-              const _Error = Error;
-              const error = new Error();
-              const stack = error.stack;
-              callback2 = stack;
-              if (stack == null) {
-                callback2 = "";
-              }
-              obj5[4] = callback2;
-              obj4[1] = obj5;
-              obj2[2] = obj4;
-              body = 3;
-              c7 = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = callback2(5094).post(obj2);
-              return obj6;
-            }
-          } else {
-            if (2 === tmp7) {
-              c5 = 0;
-              c7 = c4;
-              obj4 = callback2(709);
-              const obj7 = { type: "QUESTS_SEND_HEARTBEAT_FAILURE", error: null, questId: null, streamKey: null };
-              const tmp29 = new callback2(4185)(c7);
-              obj7[1] = tmp29;
-              obj7[2] = callback;
-              obj7[3] = callback2;
-              obj4.dispatch(obj7);
-              c7 = 3;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              obj = callback2(709);
-              const obj8 = { type: "QUESTS_SEND_HEARTBEAT_SUCCESS", userStatus: null, questId: null, streamKey: null };
-              obj2 = callback(7087);
-              obj8[1] = obj2.questUserStatusFromServer(body.body);
-              obj8[2] = callback;
-              obj8[3] = callback2;
-              obj.dispatch(obj8);
-              c5 = 0;
-            }
-            c5 = 0;
-            c7 = 3;
-            const obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
-          }
-        } catch (tmp35) {
-          c4 = tmp35;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp35;
-          } else {
-            body = tmp;
-          }
-        }
+      terminal = tmp3;
+      ({ questId: c0, streamKey: c1, applicationId: c2, terminal } = callback);
+      if (terminal === undefined) {
+        terminal = false;
       }
+      ({ executablePath: c4, executableFingerprint: c5 } = callback);
+      yield "ct";
+      c5 = 1;
+      let obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
+      obj2[0] = closure_13.QUESTS_HEARTBEAT(callback);
+      const obj3 = { stream_key: null, application_id: null, terminal: null, executable_path: null, executable_fingerprint: null };
+      obj3[0] = callback2;
+      obj3[1] = dependencyMap;
+      obj3[2] = terminal;
+      obj3[3] = c4;
+      obj3[4] = c5;
+      obj2[1] = obj3;
+      let obj4 = { event: null, properties: null };
+      obj4[0] = callback(503).NetworkActionNames.QUEST_HEARTBEAT;
+      const obj5 = { quest_id: null, application_id: null, terminal: null, is_overlay: false, stack_trace: null, is_playtime_eligible: true };
+      obj5[0] = callback;
+      obj5[1] = dependencyMap;
+      obj5[2] = terminal;
+      const _Error = Error;
+      const error = new Error();
+      const stack = error.stack;
+      callback2 = stack;
+      if (stack == null) {
+        callback2 = "";
+      }
+      obj5[4] = callback2;
+      obj4[1] = obj5;
+      obj2[2] = obj4;
+      yield callback2(5094).post(obj2);
+      if (2 === tmp7) {
+        c5 = 0;
+        let c7 = c4;
+        obj4 = callback2(709);
+        const obj7 = { type: "QUESTS_SEND_HEARTBEAT_FAILURE", error: null, questId: null, streamKey: null };
+        const tmp29 = new callback2(4185)(c7);
+        obj7[1] = tmp29;
+        obj7[2] = callback;
+        obj7[3] = callback2;
+        obj4.dispatch(obj7);
+        c7 = 3;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const body = arg1;
+        const obj = callback2(709);
+        const obj8 = { type: "QUESTS_SEND_HEARTBEAT_SUCCESS", userStatus: null, questId: null, streamKey: null };
+        obj2 = callback(7087);
+        obj8[1] = obj2.questUserStatusFromServer(body.body);
+        obj8[2] = callback;
+        obj8[3] = callback2;
+        obj.dispatch(obj8);
+        c5 = 0;
+      }
+      c5 = 0;
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -736,7 +669,7 @@ function _enrollInQuest() {
             if ((function isCaptchaError(closure_2) {
               let tmp = closure_2 instanceof callback(table[18]).CaptchaCancelError;
               if (!tmp) {
-                let tmp3 = null != closure_2 && typeof closure_2 === "ay";
+                let tmp3 = null != closure_2 && typeof closure_2 === "object";
                 if (tmp3) {
                   let tmp4 = 400 === closure_2.status;
                   if (tmp4) {
@@ -1190,105 +1123,43 @@ function _completeQuestPreview() {
     let c7 = 0;
     let c5 = 0;
     const iter = (function*(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let initializeState = tmp3;
-              let body = tmp7;
-              let num7;
-              if (num7 === undefined) {
-                num7 = 1;
-              }
-              body = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let c5 = 1;
-              const HTTP = callback(body[9]).HTTP;
-              let obj2 = { url: null, body: null, rejectWithError: false };
-              obj2[0] = closure_13.QUESTS_PREVIEW_COMPLETE(callback);
-              const obj3 = { percent: null };
-              obj3[0] = num7;
-              obj2[1] = obj3;
-              c6 = 3;
-              c7 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = HTTP.post(obj2);
-              return obj4;
-            }
-          } else {
-            if (2 === tmp7) {
-              c5 = 0;
-              initializeState = closure_4;
-              obj4 = num7(body[10]);
-              const obj5 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-              const tmp27 = new num7(body[11])(initializeState);
-              obj5[1] = tmp27;
-              obj5[2] = callback;
-              obj4.dispatch(obj5);
-              c7 = 3;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              obj = num7(body[10]);
-              const obj6 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-              obj2 = callback(body[14]);
-              obj6[1] = obj2.questUserStatusFromServer(body.body);
-              obj.dispatch(obj6);
-              c5 = 0;
-            }
-            c5 = 0;
-            c7 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          }
-        } catch (tmp32) {
-          closure_4 = tmp32;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp32;
-          } else {
-            c6 = tmp;
-          }
-        }
+      let initializeState = tmp3;
+      if (num7 === undefined) {
+        num7 = 1;
       }
+      yield "ct";
+      let c5 = 1;
+      const HTTP = callback(body[9]).HTTP;
+      let obj2 = { url: null, body: null, rejectWithError: false };
+      obj2[0] = closure_13.QUESTS_PREVIEW_COMPLETE(callback);
+      const obj3 = { percent: null };
+      obj3[0] = num7;
+      obj2[1] = obj3;
+      yield HTTP.post(obj2);
+      if (2 === tmp7) {
+        c5 = 0;
+        initializeState = closure_4;
+        const obj4 = num7(body[10]);
+        const obj5 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
+        const tmp27 = new num7(body[11])(initializeState);
+        obj5[1] = tmp27;
+        obj5[2] = callback;
+        obj4.dispatch(obj5);
+        let c7 = 3;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        body = arg1;
+        const obj = num7(body[10]);
+        const obj6 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
+        obj2 = callback(body[14]);
+        obj6[1] = obj2.questUserStatusFromServer(body.body);
+        obj.dispatch(obj6);
+        c5 = 0;
+      }
+      c5 = 0;
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -1310,85 +1181,37 @@ function _resetQuestPreviewStatus() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
+      let dependencyMap = tmp3;
+      let c4 = 1;
+      const HTTP = callback(outer1_2[9]).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: false };
+      obj1[0] = outer1_13.QUESTS_PREVIEW_STATUS(callback);
+      obj1[1] = {};
+      yield HTTP.del(obj1);
+      if (1 === tmp7) {
+        c4 = 0;
+        dependencyMap = initializeState;
+        let obj4 = lib(709);
+        const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
+        const tmp27 = new lib(4185)(dependencyMap);
+        obj3[1] = tmp27;
+        obj3[2] = callback;
+        obj4.dispatch(obj3);
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let dependencyMap = tmp3;
-              let lib = tmp7;
-              lib = undefined;
-              let c4 = 1;
-              const HTTP = callback(outer1_2[9]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
-              obj1[0] = outer1_13.QUESTS_PREVIEW_STATUS(callback);
-              obj1[1] = {};
-              c5 = 2;
-              c6 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              dependencyMap = initializeState;
-              let obj4 = lib(709);
-              const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-              const tmp27 = new lib(4185)(dependencyMap);
-              obj3[1] = tmp27;
-              obj3[2] = callback;
-              obj4.dispatch(obj3);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              lib = arg1;
-              obj = lib(709);
-              obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-              obj2 = callback(7087);
-              obj4[1] = obj2.questUserStatusFromServer(lib.body);
-              obj.dispatch(obj4);
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          }
-        } catch (tmp31) {
-          initializeState = tmp31;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp31;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        lib = arg1;
+        const obj = lib(709);
+        obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
+        const obj2 = callback(7087);
+        obj4[1] = obj2.questUserStatusFromServer(lib.body);
+        obj.dispatch(obj4);
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _resetQuestPreviewStatus = tmp;
@@ -1408,86 +1231,38 @@ function _resetQuestDismissibilityStatus() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
+      let dependencyMap = tmp3;
+      let c4 = 1;
+      outer1_1(outer1_2[10]).dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
+      const HTTP = callback(outer1_2[9]).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: false };
+      obj1[0] = outer1_13.QUESTS_PREVIEW_DISMISSIBILITY(callback);
+      obj1[1] = {};
+      yield HTTP.del(obj1);
+      if (1 === tmp7) {
+        c4 = 0;
+        dependencyMap = initializeState;
+        let obj4 = lib(709);
+        const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
+        const tmp27 = new lib(4185)(dependencyMap);
+        obj3[1] = tmp27;
+        obj3[2] = callback;
+        obj4.dispatch(obj3);
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let dependencyMap = tmp3;
-              let lib = tmp7;
-              lib = undefined;
-              let c4 = 1;
-              outer1_1(outer1_2[10]).dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
-              const HTTP = callback(outer1_2[9]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
-              obj1[0] = outer1_13.QUESTS_PREVIEW_DISMISSIBILITY(callback);
-              obj1[1] = {};
-              c5 = 2;
-              c6 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              dependencyMap = initializeState;
-              let obj4 = lib(709);
-              const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-              const tmp27 = new lib(4185)(dependencyMap);
-              obj3[1] = tmp27;
-              obj3[2] = callback;
-              obj4.dispatch(obj3);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              lib = arg1;
-              obj = lib(709);
-              obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
-              obj2 = callback(7087);
-              obj4[1] = obj2.questUserStatusFromServer(lib.body);
-              obj.dispatch(obj4);
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          }
-        } catch (tmp31) {
-          initializeState = tmp31;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp31;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        lib = arg1;
+        const obj = lib(709);
+        obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
+        const obj2 = callback(7087);
+        obj4[1] = obj2.questUserStatusFromServer(lib.body);
+        obj.dispatch(obj4);
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _resetQuestDismissibilityStatus = tmp;
@@ -2430,65 +2205,14 @@ function _fetchQuest() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp2;
-              let closure_1 = tmp5;
-              let lib;
-              const HTTP = lib(outer1_2[9]).HTTP;
-              const obj1 = { url: null, rejectWithError: false };
-              obj1[0] = outer1_13.QUEST(lib);
-              c3 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            lib = arg1;
-            obj = lib(table[14]);
-            c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = obj.questConfigFromServer(lib.body);
-            return obj4;
-          }
-        } catch (tmp15) {
-          c4 = tmp;
-          throw tmp15;
-        }
-      }
+      const table = tmp2;
+      let closure_1 = tmp5;
+      const HTTP = lib(outer1_2[9]).HTTP;
+      const obj1 = { url: null, rejectWithError: false };
+      obj1[0] = outer1_13.QUEST(lib);
+      lib = yield HTTP.get(obj1);
+      const obj = lib(table[14]);
+      return obj.questConfigFromServer(lib.body);
     })();
   });
   const _fetchQuest = tmp;

@@ -70,138 +70,38 @@ export default {
     let closure_0 = outer1_0;
     let closure_1 = outer1_1;
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_10.GUILD_EVENT(outer1_0, outer1_1);
-              const obj8 = outer1_0(4522);
-              obj1[1] = outer1_0(530).rejectWithMigratedError();
-              dependencyMap = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj8.httpGetWithCountryCodeQuery(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            body = arg1.body;
-            obj = outer1_1(709);
-            const obj4 = { type: "FETCH_GUILD_EVENT", guildScheduledEvent: null };
-            obj4[1] = body;
-            obj.dispatch(obj4);
-            c3 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp12) {
-          c3 = tmp;
-          throw tmp12;
-        }
-      }
+      let closure_1 = tmp2;
+      let body = tmp5;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_10.GUILD_EVENT(outer1_0, outer1_1);
+      const obj8 = outer1_0(4522);
+      obj1[1] = outer1_0(530).rejectWithMigratedError();
+      yield obj8.httpGetWithCountryCodeQuery(obj1);
+      body = arg1.body;
+      const obj = outer1_1(709);
+      const obj4 = { type: "FETCH_GUILD_EVENT", guildScheduledEvent: null };
+      obj4[1] = body;
+      obj.dispatch(obj4);
+      return body;
     })();
   },
   fetchGuildEventsForGuild(first) {
     let closure_0 = first;
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_10.GUILD_EVENTS_FOR_GUILD(outer1_0);
-              obj1[1] = outer1_0(530).rejectWithMigratedError();
-              const obj9 = outer1_0(530);
-              dependencyMap = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = outer1_0(4522).httpGetWithCountryCodeQuery(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            body = arg1.body;
-            obj = outer1_1(709);
-            const obj4 = { type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: null, guildScheduledEvents: null };
-            obj4[1] = body;
-            obj4[2] = body;
-            obj.dispatch(obj4);
-            c3 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          }
-        } catch (tmp13) {
-          c3 = tmp;
-          throw tmp13;
-        }
-      }
+      let closure_1 = tmp2;
+      let body = tmp5;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_10.GUILD_EVENTS_FOR_GUILD(outer1_0);
+      obj1[1] = outer1_0(530).rejectWithMigratedError();
+      const obj9 = outer1_0(530);
+      yield outer1_0(4522).httpGetWithCountryCodeQuery(obj1);
+      body = arg1.body;
+      const obj = outer1_1(709);
+      const obj4 = { type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: null, guildScheduledEvents: null };
+      obj4[1] = body;
+      obj4[2] = body;
+      obj.dispatch(obj4);
+      return body;
     })();
   },
   fetchGuildEventUserCounts(arg0, arg1, found) {
@@ -209,78 +109,27 @@ export default {
     let closure_1 = arg1;
     let closure_2 = found;
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj5 = tmp2;
-              let body = tmp5;
-              body = undefined;
-              obj5 = undefined;
-              const obj1 = { url: null, query: null, rejectWithError: null };
-              obj1[0] = outer1_10.GUILD_EVENT_USER_COUNTS(outer1_0, outer1_1);
-              const obj2 = { guild_scheduled_event_exception_ids: null };
-              obj2[0] = dependencyMap;
-              obj1[1] = obj2;
-              obj1[2] = outer1_0(530).rejectWithMigratedError();
-              const HTTP = outer1_0(530).HTTP;
-              dependencyMap = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1.body;
-            obj5 = { eventCount: null, recurrenceCounts: null };
-            obj5[0] = body.guild_scheduled_event_count;
-            obj5[1] = body.guild_scheduled_event_exception_counts;
-            let obj6 = outer1_1(709);
-            obj6 = { type: "GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS", guildId: null, eventId: null, counts: null };
-            obj6[1] = body;
-            obj6[2] = obj5;
-            obj6[3] = obj5;
-            obj6.dispatch(obj6);
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = obj5;
-            return obj;
-          }
-        } catch (tmp6) {
-          c3 = tmp;
-          throw tmp6;
-        }
-      }
+      let obj5 = tmp2;
+      let body = tmp5;
+      const obj1 = { url: null, query: null, rejectWithError: null };
+      obj1[0] = outer1_10.GUILD_EVENT_USER_COUNTS(outer1_0, outer1_1);
+      const obj2 = { guild_scheduled_event_exception_ids: null };
+      obj2[0] = dependencyMap;
+      obj1[1] = obj2;
+      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      const HTTP = outer1_0(530).HTTP;
+      yield HTTP.get(obj1);
+      body = arg1.body;
+      obj5 = { eventCount: null, recurrenceCounts: null };
+      obj5[0] = body.guild_scheduled_event_count;
+      obj5[1] = body.guild_scheduled_event_exception_counts;
+      let obj6 = outer1_1(709);
+      obj6 = { type: "GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS", guildId: null, eventId: null, counts: null };
+      obj6[1] = body;
+      obj6[2] = obj5;
+      obj6[3] = obj5;
+      obj6.dispatch(obj6);
+      return obj5;
     })();
   },
   cancelGuildEvent(arg0, arg1) {

@@ -127,110 +127,59 @@ function _handleRegistrationSubmit() {
     let c8 = 0;
     let c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (state === 2) {
-        state = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+      let authenticationErrorsFromAPIError = tmp3;
+      const result = outer1_4.registrationUsernameSuggestion();
+      const registrationOptions = state.getState().registrationOptions;
+      let tmp37 = null;
+      if (!obj10.isNullOrEmpty(result)) {
+        tmp37 = registrationOptions.username === result;
+      }
+      let obj1 = {};
+      const merged = Object.assign(registrationOptions);
+      obj1.usedUsernameSuggestion = tmp37;
+      if (state.required) {
+        obj1.promoEmailConsent = state;
+      }
+      v02(true);
+      v0({});
+      v0 = 1;
+      let obj3 = callback(14989);
+      yield obj3.registerFull(obj1);
+      if (1 === tmp7) {
+        v0 = 0;
+        v0 = closure_5;
+        v02(false);
+        if (v0 instanceof callback(4184).APIError) {
+          obj1 = callback(8286);
+          authenticationErrorsFromAPIError = obj1.getAuthenticationErrorsFromAPIError(v0);
+          v0(authenticationErrorsFromAPIError);
+          closure_5 = callback3(callback);
+          if (null != closure_5) {
+            callback2(15026)(callback2, dependencyMap, authenticationErrorsFromAPIError, closure_5);
+          }
+          state = 3;
         } else {
+          state = 3;
           return { value: "HermesInternal", done: null };
         }
-      } else {
-        try {
-          state = 2;
-          if (0 === v02) {
-            if (arg0 === 1) {
-              state = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              state = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let authenticationErrorsFromAPIError = tmp3;
-              let obj1 = tmp7;
-              obj1 = undefined;
-              authenticationErrorsFromAPIError = undefined;
-              let closure_5;
-              const result = outer1_4.registrationUsernameSuggestion();
-              const registrationOptions = state.getState().registrationOptions;
-              let tmp37 = null;
-              if (!obj10.isNullOrEmpty(result)) {
-                tmp37 = registrationOptions.username === result;
-              }
-              obj1 = {};
-              const merged = Object.assign(registrationOptions);
-              obj1.usedUsernameSuggestion = tmp37;
-              state = outer1_5.getState();
-              if (state.required) {
-                obj1.promoEmailConsent = state;
-              }
-              v02(true);
-              v0({});
-              v0 = 1;
-              let obj3 = callback(14989);
-              v02 = 2;
-              state = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj3.registerFull(obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp7) {
-              v0 = 0;
-              v0 = closure_5;
-              v02(false);
-              if (v0 instanceof callback(4184).APIError) {
-                obj1 = callback(8286);
-                authenticationErrorsFromAPIError = obj1.getAuthenticationErrorsFromAPIError(v0);
-                v0(authenticationErrorsFromAPIError);
-                closure_5 = callback3(callback);
-                if (null != closure_5) {
-                  callback2(15026)(callback2, dependencyMap, authenticationErrorsFromAPIError, closure_5);
-                }
-                state = 3;
-              } else {
-                state = 3;
-                return { value: "HermesInternal", done: null };
-              }
-            } else if (arg0 === 1) {
-              state = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              obj3 = { step: null, actionType: null, overrideRegistrationOptions: null };
-              obj3[0] = callback3(callback);
-              obj3[1] = constants2.SUCCESS;
-              obj3[2] = obj1;
-              dependencyMap(obj3);
-              const obj4 = { step: null, actionType: null, overrideRegistrationOptions: null };
-              obj4[0] = constants.REGISTER;
-              obj4[1] = constants2.SUCCESS;
-              obj4[2] = obj1;
-              dependencyMap(obj4);
-              v0 = 0;
-            }
-            v0 = 0;
-            state = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp49) {
-          closure_5 = tmp49;
-          if (tmp4 === v0) {
-            state = tmp2;
-            throw tmp49;
-          } else {
-            v02 = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        state = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        obj3 = { step: null, actionType: null, overrideRegistrationOptions: null };
+        obj3[0] = callback3(callback);
+        obj3[1] = constants2.SUCCESS;
+        obj3[2] = obj1;
+        dependencyMap(obj3);
+        const obj4 = { step: null, actionType: null, overrideRegistrationOptions: null };
+        obj4[0] = constants.REGISTER;
+        obj4[1] = constants2.SUCCESS;
+        obj4[2] = obj1;
+        dependencyMap(obj4);
+        v0 = 0;
       }
+      v0 = 0;
+      return arg1;
     })();
   });
   const _handleRegistrationSubmit = tmp;

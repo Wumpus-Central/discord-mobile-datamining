@@ -202,7 +202,7 @@ prototype2["ensureSound"] = function ensureSound() {
       let closure_0 = arg0;
       let closure_1 = arg1;
       ({ name, usage, _volume } = closure_0);
-      if (typeof outer1_4 !== "find") {
+      if (typeof outer1_4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const fn = (arg0) => {

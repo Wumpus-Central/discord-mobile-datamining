@@ -136,58 +136,8 @@ prototype["getAfterRefresh"] = function getAfterRefresh(outer1_13) {
   let closure_0 = outer1_13;
   const self = this;
   return callback(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === parsePromise) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            parsePromise = parsePromise.parsePromise;
-            parsePromise = 1;
-            c0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = parsePromise.then(() => c1.get(c0));
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp6) {
-        c0 = tmp;
-        throw tmp6;
-      }
-    }
+    yield parsePromise.then(() => c1.get(c0));
+    return arg1;
   })();
 };
 prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1) {
@@ -335,25 +285,25 @@ prototype["set"] = function set(arg0, value) {
   this.setRaw(arg0, JSON.stringify(value));
   this.storage[arg0] = { parsed: true, value };
 };
-prototype["setRaw"] = function setRaw(arg0, arg1) {
-  if (typeof arg0 === "_iter") {
+prototype["setRaw"] = function setRaw(str, str2) {
+  if (typeof str !== "string") {
     const _Error2 = Error;
     const error = new Error("Key must be a string");
     throw error;
-  } else if (typeof arg1 === "_iter") {
+  } else if (typeof str2 !== "string") {
     const _Error = Error;
     const error1 = new Error("value must be a string");
     throw error1;
   } else {
     const self = this;
     const obj = { parsed: false, rawData: null };
-    obj[1] = arg1;
-    this.storage[arg0] = obj;
+    obj[1] = str2;
+    this.storage[str] = obj;
     const secureKeys = this.secureKeys;
-    if (secureKeys.has(arg0)) {
-      const result = DCDStrongboxManager.setItem(arg0, arg1);
+    if (secureKeys.has(str)) {
+      const result = DCDStrongboxManager.setItem(str, str2);
     } else {
-      const result1 = enforcing.setItem(arg0, arg1);
+      const result1 = enforcing.setItem(str, str2);
     }
   }
 };

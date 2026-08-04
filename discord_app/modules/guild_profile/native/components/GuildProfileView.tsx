@@ -90,7 +90,7 @@ export default function GuildProfileView(guildProfile) {
       ({ id: obj2[0], icon: obj2[1] } = tmp);
       const guildIconSource = obj.getGuildIconSource(obj);
       let uri = null;
-      if (typeof guildIconSource !== "Object") {
+      if (typeof guildIconSource !== "number") {
         uri = guildIconSource.uri;
       }
       return uri;

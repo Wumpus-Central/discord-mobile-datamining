@@ -241,7 +241,7 @@ function AnimatedWrapper(children) {
       obj2 = connected;
       value = mode.get();
       value1 = connected.get();
-      if (typeof outer1_54 !== "find") {
+      if (typeof outer1_54 !== "function") {
         str3 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -1105,7 +1105,7 @@ const memoResult = importAllResult.memo(function VoicePanelUI() {
           value1 = obj.get();
           tmp23 = useSharedValue;
           value2 = useSharedValue.get();
-          if (typeof c30 !== "find") {
+          if (typeof c30 !== "function") {
             str = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }

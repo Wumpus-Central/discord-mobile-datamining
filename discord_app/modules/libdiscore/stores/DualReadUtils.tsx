@@ -1,49 +1,49 @@
 import { AnalyticEvents } from "ME";
 
-function deepEqualImpl(getTime, getTime2, map, arg3) {
-  if (getTime === getTime2) {
+function deepEqualImpl(set, set1, map, arg3) {
+  if (set === set1) {
     return true;
   } else {
     if (arg3) {
-      if (undefined === getTime) {
-        if (null === getTime2) {
+      if (undefined === set) {
+        if (null === set1) {
           return true;
         }
       }
     }
-    if (typeof getTime !== "window") {
-      if (typeof getTime2 !== "window") {
-        if (null !== getTime) {
-          if (null !== getTime2) {
-            if (map.has(getTime)) {
-              return map.get(getTime) === getTime2;
+    if (typeof set === "object") {
+      if (typeof set1 === "object") {
+        if (null !== set) {
+          if (null !== set1) {
+            if (map.has(set)) {
+              return map.get(set) === set1;
             } else {
-              const result = map.set(getTime, getTime2);
+              const result = map.set(set, set1);
               const _Date = Date;
-              if (getTime instanceof Date) {
+              if (set instanceof Date) {
                 const _Date2 = Date;
-                if (getTime2 instanceof Date) {
-                  const time = getTime.getTime();
-                  return time === getTime2.getTime();
+                if (set1 instanceof Date) {
+                  const time = set.getTime();
+                  return time === set1.getTime();
                 }
               }
               const _Set = Set;
-              if (getTime instanceof Set) {
+              if (set instanceof Set) {
                 const _Set2 = Set;
-                if (getTime2 instanceof Set) {
-                  return require(1414) /* areSetsEqual */.areSetsEqual(getTime, getTime2);
+                if (set1 instanceof Set) {
+                  return require(1414) /* areSetsEqual */.areSetsEqual(set, set1);
                 }
               }
               const _Array = Array;
-              if (Array.isArray(getTime)) {
+              if (Array.isArray(set)) {
                 const _Array2 = Array;
-                if (Array.isArray(getTime2)) {
-                  if (getTime.length !== getTime2.length) {
+                if (Array.isArray(set1)) {
+                  if (set.length !== set1.length) {
                     return false;
                   } else {
                     let num4 = 0;
-                    if (0 < getTime.length) {
-                      while (deepEqualImpl(getTime[num4], getTime2[num4], map, false)) {
+                    if (0 < set.length) {
+                      while (deepEqualImpl(set[num4], set1[num4], map, false)) {
                         num4 = num4 + 1;
                       }
                       return false;
@@ -53,13 +53,13 @@ function deepEqualImpl(getTime, getTime2, map, arg3) {
                 }
               }
               const _Array3 = Array;
-              if (!Array.isArray(getTime)) {
+              if (!Array.isArray(set)) {
                 const _Array4 = Array;
-                if (!Array.isArray(getTime2)) {
+                if (!Array.isArray(set1)) {
                   const _Object = Object;
-                  const keys = Object.keys(getTime);
+                  const keys = Object.keys(set);
                   const _Object2 = Object;
-                  if (keys.length !== Object.keys(getTime2).length) {
+                  if (keys.length !== Object.keys(set1).length) {
                     return false;
                   } else {
                     const iter = keys[Symbol.iterator]();
@@ -68,13 +68,13 @@ function deepEqualImpl(getTime, getTime2, map, arg3) {
                       let tmp7 = nextResult;
                       let _Object3 = Object;
                       let call = hasOwnProperty.call;
-                      if (typeof call === "unknown" ? hasOwnProperty(nextResult) : call(getTime2, nextResult)) {
+                      if (typeof call === "unknown" ? hasOwnProperty(nextResult) : call(set1, nextResult)) {
                         let tmp9 = deepEqualImpl;
                         let tmp10 = nextResult;
                         let num = 0;
                         let tmp11 = map;
                         let flag = false;
-                        if (deepEqualImpl(getTime[tmp7], getTime2[tmp7], map, false)) {
+                        if (deepEqualImpl(set[tmp7], set1[tmp7], map, false)) {
                           continue;
                         } else {
                           let tmp12 = iter;
@@ -100,8 +100,8 @@ function deepEqualImpl(getTime, getTime2, map, arg3) {
     return false;
   }
 }
-function deepEqual(getTime, getTime2) {
-  return deepEqualImpl(getTime, getTime2, new Map(), true);
+function deepEqual(set, set1) {
+  return deepEqualImpl(set, set1, new Map(), true);
 }
 function doDualReadValidation(arr, derived, derived2) {
   if (derived.derived.length !== derived2.derived.length) {
@@ -218,22 +218,22 @@ function validateRecord(arg0, obj, arg2) {
     return obj;
   }
 }
-function isPlainObject(arg0) {
-  let isArray = typeof arg0 === "window";
-  if (typeof arg0 !== "window") {
-    isArray = null === arg0;
+function isPlainObject(obj) {
+  let isArray = typeof obj !== "object";
+  if (typeof obj === "object") {
+    isArray = null === obj;
   }
   if (!isArray) {
     const _Array = Array;
-    isArray = Array.isArray(arg0);
+    isArray = Array.isArray(obj);
   }
   if (!isArray) {
     const _Date = Date;
-    isArray = arg0 instanceof Date;
+    isArray = obj instanceof Date;
   }
   if (!isArray) {
     const _Set = Set;
-    isArray = arg0 instanceof Set;
+    isArray = obj instanceof Set;
   }
   return !isArray;
 }
@@ -313,9 +313,9 @@ function logErrorsToAnalytics(arg0, items) {
                   let tmp17 = tmp8;
                   if (tmp8 !== tmp15) {
                     let tmp44 = tmp8;
-                    if (typeof tmp8 !== "window") {
+                    if (typeof tmp8 === "object") {
                       let tmp45 = tmp15;
-                      if (typeof tmp16 === "ay") {
+                      if (typeof tmp16 === "object") {
                         let _Array = Array;
                         let tmp25 = tmp8;
                         if (Array.isArray(tmp8)) {
@@ -430,9 +430,9 @@ function logErrorsToAnalytics(arg0, items) {
                           let tmp9 = item10034;
                           if (null !== tmp7.shadowValue) {
                             let tmp10 = item10034;
-                            if (typeof tmp7.primaryValue !== "window") {
+                            if (typeof tmp7.primaryValue === "object") {
                               let tmp30 = item10034;
-                              if (typeof tmp7.shadowValue === "ay") {
+                              if (typeof tmp7.shadowValue === "object") {
                                 let _Array = Array;
                                 let tmp15 = item10034;
                                 if (Array.isArray(tmp7.primaryValue)) {
@@ -494,18 +494,18 @@ function logErrorsToAnalytics(arg0, items) {
     const obj2 = importAll(594);
   }
 }
-function getType(arg0) {
-  if (null === arg0) {
+function getType(obj) {
+  if (null === obj) {
     return "null";
-  } else if (typeof arg0 === "ay") {
+  } else if (typeof obj === "object") {
     const _Array = Array;
     let str = "object";
-    if (Array.isArray(arg0)) {
+    if (Array.isArray(obj)) {
       str = "array";
     }
     let tmp2 = str;
   } else {
-    tmp2 = typeof arg0;
+    tmp2 = typeof obj;
   }
 }
 let map = new Map();
@@ -543,9 +543,9 @@ export const runDualReadValidation = function runDualReadValidation(arg0, Kkv, a
                 function impl(primaryValue, shadowValue) {
                   const impl = shadowValue;
                   if (!outer1_6(primaryValue, shadowValue)) {
-                    if (typeof primaryValue !== "window") {
+                    if (typeof primaryValue === "object") {
                       if (null !== primaryValue) {
-                        if (typeof shadowValue !== "window") {
+                        if (typeof shadowValue === "object") {
                           if (null !== shadowValue) {
                             if (map.has(primaryValue)) {
                               const value = obj.get(primaryValue);

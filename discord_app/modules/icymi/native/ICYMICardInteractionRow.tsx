@@ -606,7 +606,8 @@ export default function ICYMICardInteractionRow(message) {
         tmp25Result,
         memo.map((reaction) => {
               let obj = { messageId: guild.id, channel: message, reaction, count: reaction.type === guild(flag2[34]).ReactionTypes.BURST ? reaction.burst_count : reaction.count, isBurstReaction: reaction.type === guild(flag2[34]).ReactionTypes.BURST, handleItemInteracted: callback };
-              obj = { children: tmp(outer1_22, obj) };
+              obj = { children: null };
+              obj[0] = outer1_16(outer1_22, obj);
               return outer1_16(id, obj, "reaction-" + arg1);
             }),
 

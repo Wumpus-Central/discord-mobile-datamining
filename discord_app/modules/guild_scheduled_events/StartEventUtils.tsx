@@ -227,91 +227,125 @@ function _setEventAsActive() {
     let c4 = 0;
     let c5 = 0;
     const iter = (function*(arg0) {
-      let entity_type = tmp5;
-      let channel_id = tmp2;
-      let flag;
-      if (flag === undefined) {
-        flag = false;
-      }
-      channel_id = undefined;
-      entity_type = undefined;
-      let name;
-      let id;
-      let guild_id;
-      name = 1;
-      id = 1;
-      yield "ct";
-      if (1 === tmp5) {
+      if (id === 2) {
+        id = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          id = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          id = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          channel_id = lib.channel_id;
-          entity_type = lib.entity_type;
-          name = lib.name;
-          id = lib.id;
-          guild_id = lib.guild_id;
-          if (constants.STAGE_INSTANCE === entity_type) {
-            flag(channel_id[7])(null != channel_id, "channel_id is required");
-            const obj8 = lib(channel_id[8]);
-            name = 2;
-            id = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj8.startStageInstance(channel_id, name, constants2.GUILD_ONLY, flag, id);
-            return obj2;
-          } else if (constants.VOICE === tmp54) {
-            flag(channel_id[7])(null != channel_id, "channel_id is required");
-            let obj5 = flag(channel_id[9]);
-            name = 3;
-            id = 1;
-            let obj3 = { value: null, done: false };
-            obj3[0] = obj5.startEvent(id, guild_id);
-            return obj3;
-          } else if (constants.EXTERNAL === tmp54) {
-            obj3 = flag(channel_id[9]);
-            name = 4;
-            id = 1;
-            const obj4 = { value: null, done: false };
-            obj4[0] = obj3.startEvent(id, guild_id);
-            return obj4;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          id = 2;
+          if (0 === name) {
+            if (arg0 === 1) {
+              id = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              id = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let entity_type = tmp5;
+              let channel_id = tmp2;
+              let flag;
+              if (flag === undefined) {
+                flag = false;
+              }
+              channel_id = undefined;
+              entity_type = undefined;
+              name = undefined;
+              id = undefined;
+              let guild_id;
+              name = 1;
+              id = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                id = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                id = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                channel_id = lib.channel_id;
+                entity_type = lib.entity_type;
+                name = lib.name;
+                id = lib.id;
+                guild_id = lib.guild_id;
+                if (constants.STAGE_INSTANCE === entity_type) {
+                  flag(channel_id[7])(null != channel_id, "channel_id is required");
+                  const obj8 = lib(channel_id[8]);
+                  name = 2;
+                  id = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = obj8.startStageInstance(channel_id, name, constants2.GUILD_ONLY, flag, id);
+                  return obj2;
+                } else if (constants.VOICE === tmp54) {
+                  flag(channel_id[7])(null != channel_id, "channel_id is required");
+                  let obj5 = flag(channel_id[9]);
+                  name = 3;
+                  id = 1;
+                  let obj3 = { value: null, done: false };
+                  obj3[0] = obj5.startEvent(id, guild_id);
+                  return obj3;
+                } else if (constants.EXTERNAL === tmp54) {
+                  obj3 = flag(channel_id[9]);
+                  name = 4;
+                  id = 1;
+                  const obj4 = { value: null, done: false };
+                  obj4[0] = obj3.startEvent(id, guild_id);
+                  return obj4;
+                }
+              }
+            } else if (2 === tmp5) {
+              if (arg0 === 1) {
+                id = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                id = 3;
+                obj5 = { value: null, done: true };
+                obj5[0] = arg1;
+                return obj5;
+              }
+            } else if (3 === tmp5) {
+              if (arg0 === 1) {
+                id = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                id = 3;
+                const obj6 = { value: null, done: true };
+                obj6[0] = arg1;
+                return obj6;
+              }
+            } else if (arg0 === 1) {
+              id = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              id = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+            id = 3;
+            return { value: "HermesInternal", done: null };
           }
+        } catch (tmp41) {
+          id = tmp;
+          throw tmp41;
         }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          id = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          id = 3;
-          obj5 = { value: null, done: true };
-          obj5[0] = arg1;
-          return obj5;
-        }
-      } else if (3 === tmp5) {
-        if (arg0 === 1) {
-          id = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          id = 3;
-          const obj6 = { value: null, done: true };
-          obj6[0] = arg1;
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        id = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        id = 3;
-        const obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
       }
-      id = 3;
-      yield "HermesInternal";
     })();
     iter.next();
     return iter;

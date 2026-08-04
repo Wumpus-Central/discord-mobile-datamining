@@ -47,7 +47,7 @@ export default function LabeledDataBlock(arg0) {
   obj[1] = items1;
   const items2 = [closure_4(View, obj), ];
   tmp4Result = children;
-  if (typeof children !== "_iter") {
+  if (typeof children === "string") {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.data;
     obj3[1] = children;

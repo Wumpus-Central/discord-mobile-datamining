@@ -627,62 +627,13 @@ function _getGuildRoleSubscriptionsSettings() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0, body) {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              const HTTP = callback(530).HTTP;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_3.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(callback);
-              let obj3 = callback(530);
-              obj1[1] = obj3.rejectWithMigratedError();
-              c2 = 1;
-              dependencyMap = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp9) {
-          dependencyMap = tmp;
-          throw tmp9;
-        }
-      }
+      const HTTP = callback(530).HTTP;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_3.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(callback);
+      const obj3 = callback(530);
+      obj1[1] = obj3.rejectWithMigratedError();
+      yield HTTP.get(obj1);
+      return body.body;
     })();
   });
   const _getGuildRoleSubscriptionsSettings = tmp;

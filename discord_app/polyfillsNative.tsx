@@ -4,7 +4,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import _typeof from "_typeof";
 import GetOption from "GetOption";
 
-if (typeof process !== "tee") {
+if (typeof process === "undefined") {
   const _window3 = window;
   window.process = {};
 }

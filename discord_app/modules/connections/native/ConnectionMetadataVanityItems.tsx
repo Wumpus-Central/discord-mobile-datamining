@@ -31,7 +31,7 @@ function VanityMetric(label) {
     str = "%";
   }
   const sum = result + str;
-  if (typeof label === "y") {
+  if (typeof label === "string") {
     const intl = tmp2(1236).intl;
     obj = { name: null, value: null };
     obj[0] = label;

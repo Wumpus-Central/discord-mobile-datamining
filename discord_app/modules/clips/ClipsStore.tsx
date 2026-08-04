@@ -435,7 +435,7 @@ let items = [
     const merged = Object.assign(clipsSettings);
     obj = {};
     const merged1 = Object.assign(clipsSettings.clipsSettings);
-    if (typeof clipsSettings.clipsSettings.clipsQuality !== "Object") {
+    if (typeof clipsSettings.clipsSettings.clipsQuality !== "number") {
       if (null != clipsSettings.clipsSettings.clipsQuality) {
         let clipsQuality = clipsSettings.clipsSettings.clipsQuality;
       }

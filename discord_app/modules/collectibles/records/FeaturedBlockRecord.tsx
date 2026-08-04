@@ -17,7 +17,7 @@ prototype = function FeaturedBlockRecord(subblocks) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(subblocks) {
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

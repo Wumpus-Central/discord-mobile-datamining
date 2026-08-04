@@ -117,62 +117,11 @@ prototype2["startupLoad"] = function startupLoad(arg0, arg1, arg2, outer1_9) {
   let closure_2 = arg2;
   const callback = outer1_9;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            let obj2 = outer1_1(table[7]);
-            table = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = obj2.messages(outer1_0).getLatest(outer1_1, table, c3);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          closure_0 = arg1;
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = new outer1_9(closure_0);
-          return obj;
-        }
-      } catch (tmp17) {
-        c3 = tmp;
-        throw tmp17;
-      }
-    }
+    let closure_1 = tmp5;
+    let closure_0 = tmp2;
+    const obj2 = outer1_1(table[7]);
+    closure_0 = yield obj2.messages(outer1_0).getLatest(outer1_1, table, c3);
+    return new outer1_9(closure_0);
   })();
 };
 prototype2["load"] = function load(arg0, arg1, arg2) {

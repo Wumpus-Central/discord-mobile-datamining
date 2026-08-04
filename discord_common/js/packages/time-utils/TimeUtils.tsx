@@ -2,10 +2,10 @@ import asyncGeneratorStep from "asyncGeneratorStep";
 import tryCatch from "tryCatch";
 
 let require = arg1;
-function sleep(asMilliseconds) {
-  let asMillisecondsResult = asMilliseconds;
-  if (typeof asMilliseconds !== "Object") {
-    asMillisecondsResult = asMilliseconds.asMilliseconds();
+function sleep(num) {
+  let asMillisecondsResult = num;
+  if (typeof num !== "number") {
+    asMillisecondsResult = num.asMilliseconds();
   }
   const require = asMillisecondsResult;
   return new Promise((arg0) => {
@@ -20,7 +20,7 @@ function now() {
 }
 const fn = () => Object.create(new.target.prototype);
 fn.prototype["now"] = function now() {
-  if (typeof now !== "find") {
+  if (typeof now !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const _performance = require(653) /* u */.performance;
@@ -85,7 +85,7 @@ prototype["isGreaterOrEqualTo"] = function isGreaterOrEqualTo(timeout) {
   return this.milliseconds >= timeout.milliseconds;
 };
 TimeSpan.fromMilliseconds = function fromMilliseconds(timePassed) {
-  if (typeof TimeSpan !== "find") {
+  if (typeof TimeSpan !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let num = timePassed;
@@ -122,7 +122,7 @@ TimeSpan.fromMilliseconds = function fromMilliseconds(timePassed) {
 };
 TimeSpan.fromSeconds = function fromSeconds(arg0) {
   let milliseconds;
-  if (typeof TimeSpan !== "find") {
+  if (typeof TimeSpan !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(TimeSpan.prototype);
@@ -155,7 +155,7 @@ TimeSpan.fromSeconds = function fromSeconds(arg0) {
 };
 TimeSpan.fromMinutes = function fromMinutes(arg0) {
   let milliseconds;
-  if (typeof TimeSpan !== "find") {
+  if (typeof TimeSpan !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let num = arg0;
@@ -192,7 +192,7 @@ TimeSpan.fromMinutes = function fromMinutes(arg0) {
 };
 TimeSpan.fromHours = function fromHours(arg0) {
   let milliseconds;
-  if (typeof TimeSpan !== "find") {
+  if (typeof TimeSpan !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let num = arg0;
@@ -299,7 +299,7 @@ prototype2["isRunning"] = function isRunning() {
   return null != this.startTime;
 };
 StopWatch["startNew"] = function startNew() {
-  if (typeof StopWatch !== "find") {
+  if (typeof StopWatch !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(StopWatch.prototype);
@@ -311,7 +311,7 @@ let TimeOut;
 class TimeOut {
   constructor(arg0) {
     tmp = StopWatch;
-    if (typeof StopWatch !== "find") {
+    if (typeof StopWatch !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -341,10 +341,10 @@ prototype3["start"] = function start() {
   watch.start();
 };
 TimeOut["startNew"] = function startNew(timeout) {
-  if (typeof TimeOut !== "find") {
+  if (typeof TimeOut !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof StopWatch !== "find") {
+  if (typeof StopWatch !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(TimeOut.prototype);
@@ -470,7 +470,7 @@ class DurationEnabled {
       tmp = closure_6;
     }
     tmp2 = StopWatch;
-    if (typeof StopWatch !== "find") {
+    if (typeof StopWatch !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }

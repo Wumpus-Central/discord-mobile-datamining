@@ -106,7 +106,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
         guildMemberAvatarURLSimple = obj.getUserAvatarURL(member.user, false, 24);
       }
       let assetUriForEmbed = guildMemberAvatarURLSimple;
-      if (typeof guildMemberAvatarURLSimple !== "V") {
+      if (typeof guildMemberAvatarURLSimple === "number") {
         assetUriForEmbed = guild(outer1_2[17]).getAssetUriForEmbed(guildMemberAvatarURLSimple);
         const obj6 = guild(outer1_2[17]);
       }

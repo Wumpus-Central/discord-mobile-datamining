@@ -23,7 +23,7 @@ prototype = function WishlistRecommendationRecord(skus) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(skus) {
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp4 = new prototype("Trying to call a non-function", tmp3, tmp2, tmp);

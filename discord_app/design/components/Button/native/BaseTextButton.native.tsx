@@ -102,7 +102,7 @@ let c4 = importAllResult;
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0, arg1) => {
   let obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
-  if (typeof getTextPlatformLineHeight !== "find") {
+  if (typeof getTextPlatformLineHeight !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp;

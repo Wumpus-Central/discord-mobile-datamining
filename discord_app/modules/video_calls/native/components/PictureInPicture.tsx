@@ -60,7 +60,7 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   let obj3 = insets(ref[12]);
   const fn = function w() {
     const obj = { marginTop: insets.top, marginBottom: null };
-    if (typeof outer1_10 !== "find") {
+    if (typeof outer1_10 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj[1] = insets(ref[13]).withSpring(insets.bottom, { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined });

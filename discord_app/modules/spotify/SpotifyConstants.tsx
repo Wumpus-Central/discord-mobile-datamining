@@ -71,20 +71,20 @@ export const SpotifyResourceTypes = obj;
 export const SpotifyActionTypes = { USER_ACTIVITY_PLAY: "user_activity_play", USER_ACTIVITY_SYNC: "user_activity_sync", EMBED_SYNC: "embed_sync" };
 export const SPOTIFY_HOSTNAMES = ["open.spotify.com", "www.spotify.com"];
 export const SpotifyEndpoints = frozen;
-export const getSpotifyResourceType = function getSpotifyResourceType(arg0) {
-  if (typeof arg0 === "_iter") {
+export const getSpotifyResourceType = function getSpotifyResourceType(str) {
+  if (typeof str !== "string") {
     return null;
-  } else if ("track" === arg0) {
+  } else if ("track" === str) {
     return obj.TRACK;
-  } else if ("artist" === arg0) {
+  } else if ("artist" === str) {
     return obj.ARTIST;
-  } else if ("album" === arg0) {
+  } else if ("album" === str) {
     return obj.ALBUM;
-  } else if ("playlist" === arg0) {
+  } else if ("playlist" === str) {
     return obj.PLAYLIST;
-  } else if ("episode" === arg0) {
+  } else if ("episode" === str) {
     return obj.EPISODE;
-  } else if ("show" === arg0) {
+  } else if ("show" === str) {
     return obj.SHOW;
   } else {
     return null;

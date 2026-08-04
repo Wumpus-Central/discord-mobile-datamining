@@ -44,7 +44,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
   } else {
     let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75 };
     obj[0] = require(9711) /* getLayoutStyles */.getLayoutStyles(layout).messagePreview.text.variant;
-    if (typeof subtitle === "y") {
+    if (typeof subtitle === "string") {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;

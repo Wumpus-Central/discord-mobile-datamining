@@ -75,74 +75,28 @@ export const useInviteActions = function useInviteActions(invite) {
   obj1[0] = intl3.string(invite(1236).t.v6Yazx);
   obj1[1] = onInviteRevoked(9609).revoke;
   dependencyMap = callback(function*() {
-    if (c4 === 2) {
+    let closure_0 = tmp3;
+    let c3 = 1;
+    yield v0(outer1_2[12]).revokeInvite(outer1_0);
+    if (1 === tmp7) {
+      c3 = 0;
+      const obj1 = v0(outer1_2[13]);
+      const obj2 = { key: "ERROR_ANOTHER_TRY", content: null };
+      const intl = outer1_0(outer1_2[4]).intl;
+      obj2[1] = intl.string(outer1_0(outer1_2[4]).t.CKsXk3);
+      obj1.open(obj2);
+      let c4 = 3;
+    } else if (arg0 === 1) {
       c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
+      throw arg1;
+    } else if (arg0 !== 2) {
+      if (v0 != null) {
+        tmp9(closure_0);
       }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_0 = tmp3;
-            let c3 = 1;
-            v0 = 2;
-            c4 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = v0(outer1_2[12]).revokeInvite(outer1_0);
-            return obj1;
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            obj1 = v0(outer1_2[13]);
-            const obj2 = { key: "ERROR_ANOTHER_TRY", content: null };
-            const intl = outer1_0(outer1_2[4]).intl;
-            obj2[1] = intl.string(outer1_0(outer1_2[4]).t.CKsXk3);
-            obj1.open(obj2);
-            c4 = 3;
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            if (v0 != null) {
-              tmp9(closure_0);
-            }
-            c3 = 0;
-          }
-          c3 = 0;
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp24) {
-        let closure_2 = tmp24;
-        if (tmp4 === c3) {
-          c4 = tmp2;
-          throw tmp24;
-        } else {
-          v0 = tmp;
-        }
-      }
+      c3 = 0;
     }
+    c3 = 0;
+    return arg1;
   });
   obj1[3] = function() {
     const self = this;

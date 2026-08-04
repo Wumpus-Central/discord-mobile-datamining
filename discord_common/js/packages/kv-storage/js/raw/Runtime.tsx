@@ -63,7 +63,7 @@ prototype["resolveOperation"] = function resolveOperation(value, ok) {
   if (ok.ok) {
     value.resolve(ok.data);
   } else {
-    if (typeof ok.data === "y") {
+    if (typeof ok.data === "string") {
       const _Error = Error;
       let data = new Error(ok.data);
     } else {

@@ -482,7 +482,7 @@ const threadMemberListStore = new ThreadMemberListStore(require("dispatcher"), {
       parent_id = channel.parent_id;
     }
     if (null != parent_id) {
-      if (typeof MemberList !== "find") {
+      if (typeof MemberList !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = Object.create(MemberList.prototype);

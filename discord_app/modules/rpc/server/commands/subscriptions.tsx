@@ -57,7 +57,7 @@ let obj = {
               } else if (outer1_1(13675)(outer1_1.authorization.scopes, tmp67.scope)) {
                 const obj2 = { event: null, scope: null, application_id: null, socket_scope: null };
                 obj2[0] = dependencyMap;
-                if (typeof tmp67.scope === "ay") {
+                if (typeof tmp67.scope === "object") {
                   const _JSON = JSON;
                   let scope = JSON.stringify(tmp67.scope);
                 } else {

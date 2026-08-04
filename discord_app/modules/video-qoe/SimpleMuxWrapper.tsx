@@ -37,7 +37,7 @@ prototype["endSession"] = function endSession() {
   const self = this;
   if (this.isMonitoring) {
     try {
-      if (typeof importDefault(14284).destroyMonitor !== "three_button_mouse") {
+      if (typeof importDefault(14284).destroyMonitor === "function") {
         tmp(14284).destroyMonitor(self.videoElement);
         const tmpResult = tmp(14284);
       }
@@ -52,7 +52,7 @@ prototype["destroy"] = function destroy() {
   const self = this;
   if (this.isMonitoring) {
     try {
-      if (typeof importDefault(14284).destroyMonitor !== "three_button_mouse") {
+      if (typeof importDefault(14284).destroyMonitor === "function") {
         tmp(14284).destroyMonitor(self.videoElement);
         const tmpResult = tmp(14284);
       }

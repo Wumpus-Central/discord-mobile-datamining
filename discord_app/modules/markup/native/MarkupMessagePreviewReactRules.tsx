@@ -6,7 +6,7 @@ let c4;
 let c5;
 const require = arg1;
 function defaultReactFn(content, output, state) {
-  if (typeof content.content === "y") {
+  if (typeof content.content === "string") {
     content = content.content;
   } else {
     content = require(9471) /* smartOutput */.smartOutput(content, output, state);

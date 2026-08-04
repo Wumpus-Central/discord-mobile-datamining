@@ -31,7 +31,7 @@ hasVideoEnded.__closure = {};
 hasVideoEnded.__workletHash = 3281537893520;
 hasVideoEnded.__initData = { code: "function hasVideoEnded_VideoQuestPlayerTsx1(currentTime,videoDuration){return currentTime>=videoDuration-1;}" };
 function canSeekForward(arg0, arg1, arg2, arg3) {
-  if (typeof hasVideoEnded !== "find") {
+  if (typeof hasVideoEnded !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp2 = !tmp;
@@ -248,7 +248,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   }
   if (tmp22) {
     ({ timestampSec, duration } = tmp16);
-    if (typeof closure_17 !== "find") {
+    if (typeof closure_17 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     tmp22 = timestampSec >= duration - 1;
@@ -285,7 +285,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   tmp3Result = tmp3(4146);
   class G {
     constructor() {
-      if (typeof shouldShowControls !== "find") {
+      if (typeof shouldShowControls !== "function") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -663,10 +663,10 @@ const memoResult = importAllResult.memo((onLoad) => {
   }, items14);
   if (!tmp51) {
     ({ timestampSec: timestampSec2, maxTimestampSec, duration: duration2 } = tmp16);
-    if (typeof closure_18 !== "find") {
+    if (typeof closure_18 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof closure_17 !== "find") {
+    if (typeof closure_17 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let tmp55 = !tmp54;

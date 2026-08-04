@@ -4,7 +4,7 @@ import set from "registerAsset";
 let NativeModules;
 let obj1;
 function ensureAvatarSource(source) {
-  if (typeof source === "Object") {
+  if (typeof source === "number") {
     let assetSource = closure_2.resolveAssetSource(source);
   } else {
     const _Array = Array;

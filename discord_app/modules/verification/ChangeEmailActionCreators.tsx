@@ -9,66 +9,17 @@ function _confirmEmailChange() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0, body) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              let obj5 = v0(5094);
-              const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-              obj1[0] = outer1_4.USER_EMAIL_VERIFY_CODE;
-              const obj2 = { code: null };
-              obj2[0] = callback;
-              obj1[1] = obj2;
-              const obj3 = { event: null };
-              obj3[0] = callback(503).NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE;
-              obj1[2] = obj3;
-              dependencyMap = 1;
-              v0 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = obj5.post(obj1);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          } else {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
-            return obj;
-          }
-        } catch (tmp5) {
-          v0 = tmp;
-          throw tmp5;
-        }
-      }
+      const obj5 = v0(5094);
+      const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
+      obj1[0] = outer1_4.USER_EMAIL_VERIFY_CODE;
+      const obj2 = { code: null };
+      obj2[0] = callback;
+      obj1[1] = obj2;
+      const obj3 = { event: null };
+      obj3[0] = callback(503).NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE;
+      obj1[2] = obj3;
+      yield obj5.post(obj1);
+      return body.body;
     })();
   });
   const _confirmEmailChange = tmp;

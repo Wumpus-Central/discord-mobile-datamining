@@ -471,7 +471,7 @@ function transformInboundVideoStats(height, id, id) {
 let c2 = 1000;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/transformStats.tsx");
 
-export default function transformStats(mediaEngineConnectionId, arg1, id) {
+export default function transformStats(mediaEngineConnectionId, str, id) {
   let audio;
   let inboundBitrateEstimate;
   let video;
@@ -480,10 +480,10 @@ export default function transformStats(mediaEngineConnectionId, arg1, id) {
   const dependencyMap = arg3;
   let c2 = null;
   let closure_3 = null;
-  let parsed = arg1;
-  if (typeof arg1 !== "_iter") {
+  let parsed = str;
+  if (typeof str === "string") {
     const _JSON = JSON;
-    parsed = JSON.parse(arg1);
+    parsed = JSON.parse(str);
   }
   const items = [];
   if (null != parsed.outbound) {

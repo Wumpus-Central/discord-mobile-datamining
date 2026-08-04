@@ -31,7 +31,7 @@ prototype["format"] = function format(arg0) {
     const first = tmp2[0];
     const intlMessage2 = self.intlMessage;
     const formatResult = intlMessage2.format(first);
-    if (typeof closure_3 !== "find") {
+    if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const hasItem = formatResult.includes("\n\n");
@@ -55,7 +55,7 @@ prototype["astFormat"] = function astFormat(arg0) {
   const unsafeContext = callback(this.getContext(arg0), 2);
   const context = unsafeContext[0];
   const intlMessage = this.intlMessage;
-  if (typeof closure_4 !== "find") {
+  if (typeof closure_4 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   return require(intlMessage.format(context) + "\n\n", { inline: false, context, unsafeContext: unsafeContext[1] });
@@ -153,7 +153,7 @@ export const getMessage = function getMessage(str) {
     const isMatch = regex.test(str2);
     const isMatch1 = regex2.test(str2);
     if (isMatch) {
-      if (typeof FormattedMessage !== "find") {
+      if (typeof FormattedMessage !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let replaced = str2;

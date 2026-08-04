@@ -46,7 +46,7 @@ prototype["ensure"] = function ensure(messageId, emoji, reactionType) {
   const combined = "" + messageId + ":" + name + ":" + id + ":" + reactionType;
   let tmp3 = dependencyMap[combined];
   if (tmp3 == null) {
-    if (typeof prototype !== "find") {
+    if (typeof prototype !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(prototype.prototype);

@@ -272,7 +272,7 @@ const memoResult = importAllResult.memo((style) => {
   ({ source, user, channel, animate: animate2, size: size2 } = obj);
   if (null != source) {
     let sourceResult = source;
-    if (typeof source !== "three_button_mouse") {
+    if (typeof source === "function") {
       sourceResult = source(animate2);
     }
     let avatarSource = sourceResult;
@@ -282,7 +282,7 @@ const memoResult = importAllResult.memo((style) => {
     let obj1 = require(12218) /* getChannelIconURL */;
     const channelIconURL = obj1.getChannelIconURL(channel, size2);
     let tmp13 = channelIconURL;
-    if (typeof channelIconURL !== "Object") {
+    if (typeof channelIconURL !== "number") {
       tmp13 = channelIconURL;
       if (null != channelIconURL) {
         obj = { uri: null };
@@ -335,7 +335,7 @@ const memoResult = importAllResult.memo((style) => {
       obj2[0] = items1;
       obj2[1] = avatarSource;
       let tmp22;
-      if (typeof source !== "V") {
+      if (typeof source === "number") {
         tmp22 = source;
       }
       obj2[2] = tmp22;
@@ -349,7 +349,7 @@ const memoResult = importAllResult.memo((style) => {
     if (source === source1) {
       return true;
     } else {
-      if (typeof source1 === "V") {
+      if (typeof source1 !== "number") {
         if (typeof source1 === typeof source) {
           const _Array2 = Array;
           if (Array.isArray(source1)) {
@@ -369,9 +369,9 @@ const memoResult = importAllResult.memo((style) => {
               }
             }
           }
-          let tmp3 = typeof source1 === "window";
-          if (typeof source1 !== "window") {
-            tmp3 = typeof source === "window";
+          let tmp3 = typeof source1 !== "object";
+          if (typeof source1 === "object") {
+            tmp3 = typeof source !== "object";
           }
           if (!tmp3) {
             tmp3 = tmp(643)(source1, source);

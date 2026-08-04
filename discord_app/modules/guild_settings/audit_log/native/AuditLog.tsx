@@ -144,7 +144,7 @@ prototype["renderTitle"] = function renderTitle() {
         return tmp8Result;
       }
       if (log.targetType === outer1_10.GUILD) {
-        if (typeof target !== "window") {
+        if (typeof target === "object") {
           if (obj6.isGuildRecord(tmp5)) {
             const obj1 = { variant: "text-md/medium", color: "text-default", children: null };
             obj1[2] = tmp5.name;
@@ -164,7 +164,7 @@ prototype["renderTitle"] = function renderTitle() {
     }
     obj[4] = str;
     if (null != subtarget.channel) {
-      if (typeof subtarget.channel !== "y") {
+      if (typeof subtarget.channel !== "string") {
         const tmp5Result = tmp5(tmp2[22]);
         let channel = tmp5Result.computeChannelName(subtarget.channel, mergeGuildAvatar, upsertRelationship, true);
       }

@@ -46,7 +46,7 @@ function AnimatedToast(toast) {
   let tmp10 = null != content;
   const isScreenReaderEnabled = merged(cleanUp[11]).useIsScreenReaderEnabled();
   if (tmp10) {
-    tmp10 = typeof content === "y";
+    tmp10 = typeof content === "string";
   }
   c10 = tmp10;
   const position = merged.position;

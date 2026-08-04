@@ -76,173 +76,123 @@ function _fetchCollectiblesCategories() {
     let c9 = 0;
     let c7 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c9 === 2) {
-        c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c9 = 2;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let aPIError = tmp3;
-              let getUserAgnosticState = tmp5;
-              let map;
-              getUserAgnosticState = undefined;
-              aPIError = undefined;
-              let tmp = callback;
-              tmp = closure_2;
-              map = lib;
-              if (lib == null) {
-                map = {};
-              }
-              const obj1 = { type: "COLLECTIBLES_CATEGORIES_FETCH", options: null };
-              obj1[1] = map;
-              callback(closure_2[17]).dispatch(obj1);
-              const obj17 = callback(closure_2[17]);
-              const fetchCollectiblesOptionsQuery = lib(closure_2[19]).buildFetchCollectiblesOptionsQuery(tmp97);
-              const value = outer1_4.get("shop_show_debug_overlay");
-              map = value;
-              let logPerf;
-              if (lib != null) {
-                logPerf = tmp97.logPerf;
-              }
-              if (logPerf) {
-                let sessionId;
-                if (tmp99 != null) {
-                  sessionId = tmp99.sessionId;
-                }
-                let obj2 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
-                obj2[0] = sessionId;
-                obj2[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_STARTED;
-                let tab;
-                if (tmp99 != null) {
-                  tab = tmp99.tab;
-                }
-                obj2[2] = tab;
-                let includeUnpublished;
-                if (tmp97 != null) {
-                  includeUnpublished = tmp97.includeUnpublished;
-                }
-                obj2[3] = includeUnpublished;
-                let noCache;
-                if (tmp97 != null) {
-                  noCache = tmp97.noCache;
-                }
-                obj2[4] = noCache;
-                lib(closure_2[20]).trackShopPerf(obj2);
-                const obj11 = lib(closure_2[20]);
-              }
-              if (value) {
-                const _JSON = JSON;
-                const _HermesInternal3 = HermesInternal;
-                v0("fetchCollectiblesCategories started: " + JSON.stringify(fetchCollectiblesOptionsQuery, null, 2));
-              }
-              v0 = 1;
-              const HTTP = lib(closure_2[21]).HTTP;
-              const obj3 = { url: null, query: null, rejectWithError: true };
-              obj3[0] = outer1_16.COLLECTIBLES_CATEGORIES_V2;
-              obj3[1] = fetchCollectiblesOptionsQuery;
-              c8 = 2;
-              c9 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj3);
-              return obj4;
-            }
-          } else {
-            if (1 === tmp8) {
-              v0 = 0;
-              aPIError = new lib(closure_2[22]).APIError(updateCategoriesAndProducts);
-              let obj5 = lib(closure_2[23]);
-              const result = obj5.captureOrIgnoreApiError(aPIError);
-              let obj6 = callback(closure_2[17]);
-              obj5 = { type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: null };
-              obj5[1] = aPIError;
-              obj6.dispatch(obj5);
-              if (map) {
-                const _HermesInternal2 = HermesInternal;
-                v0("fetchCollectiblesCategories failed: " + aPIError.message);
-              }
-              c9 = 3;
-            } else if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              getUserAgnosticState = arg1;
-              let logPerf1;
-              if (lib != null) {
-                logPerf1 = lib.logPerf;
-              }
-              if (logPerf1) {
-                obj = lib(closure_2[20]);
-                let sessionId1;
-                if (closure_2 != null) {
-                  sessionId1 = closure_2.sessionId;
-                }
-                obj6 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
-                obj6[0] = sessionId1;
-                obj6[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_COMPLETED;
-                let tab1;
-                if (closure_2 != null) {
-                  tab1 = closure_2.tab;
-                }
-                obj6[2] = tab1;
-                let includeUnpublished1;
-                if (lib != null) {
-                  includeUnpublished1 = lib.includeUnpublished;
-                }
-                obj6[3] = includeUnpublished1;
-                let noCache1;
-                if (lib != null) {
-                  noCache1 = lib.noCache;
-                }
-                obj6[4] = noCache1;
-                obj.trackShopPerf(obj6);
-              }
-              if (map) {
-                const _HermesInternal = HermesInternal;
-                v0("fetchCollectiblesCategories completed " + getUserAgnosticState.body.categories.length + " categories");
-              }
-              obj2 = callback(closure_2[17]);
-              const obj7 = { type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: null, noOp: null };
-              obj7[1] = closure_10.fromServer(getUserAgnosticState.body);
-              obj7[2] = callback;
-              obj2.dispatch(obj7);
-              v0 = 0;
-            }
-            v0 = 0;
-            c9 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
-          }
-        } catch (tmp86) {
-          updateCategoriesAndProducts = tmp86;
-          if (tmp4 === v0) {
-            c9 = tmp2;
-            throw tmp86;
-          } else {
-            c8 = tmp;
-          }
-        }
+      let aPIError = tmp3;
+      let getUserAgnosticState = tmp5;
+      let tmp = callback;
+      tmp = closure_2;
+      let map = lib;
+      if (lib == null) {
+        map = {};
       }
+      const obj1 = { type: "COLLECTIBLES_CATEGORIES_FETCH", options: null };
+      obj1[1] = map;
+      callback(closure_2[17]).dispatch(obj1);
+      const obj17 = callback(closure_2[17]);
+      const fetchCollectiblesOptionsQuery = lib(closure_2[19]).buildFetchCollectiblesOptionsQuery(tmp97);
+      const value = outer1_4.get("shop_show_debug_overlay");
+      map = value;
+      if (lib != null) {
+        const logPerf = tmp97.logPerf;
+      }
+      if (logPerf) {
+        let sessionId;
+        if (tmp99 != null) {
+          sessionId = tmp99.sessionId;
+        }
+        let obj2 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+        obj2[0] = sessionId;
+        obj2[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_STARTED;
+        let tab;
+        if (tmp99 != null) {
+          tab = tmp99.tab;
+        }
+        obj2[2] = tab;
+        let includeUnpublished;
+        if (tmp97 != null) {
+          includeUnpublished = tmp97.includeUnpublished;
+        }
+        obj2[3] = includeUnpublished;
+        let noCache;
+        if (tmp97 != null) {
+          noCache = tmp97.noCache;
+        }
+        obj2[4] = noCache;
+        lib(closure_2[20]).trackShopPerf(obj2);
+        const obj11 = lib(closure_2[20]);
+      }
+      if (value) {
+        const _JSON = JSON;
+        const _HermesInternal3 = HermesInternal;
+        v0("fetchCollectiblesCategories started: " + JSON.stringify(fetchCollectiblesOptionsQuery, null, 2));
+      }
+      v0 = 1;
+      const HTTP = lib(closure_2[21]).HTTP;
+      const obj3 = { url: null, query: null, rejectWithError: true };
+      obj3[0] = outer1_16.COLLECTIBLES_CATEGORIES_V2;
+      obj3[1] = fetchCollectiblesOptionsQuery;
+      yield HTTP.get(obj3);
+      if (1 === tmp8) {
+        v0 = 0;
+        aPIError = new lib(closure_2[22]).APIError(updateCategoriesAndProducts);
+        let obj5 = lib(closure_2[23]);
+        const result = obj5.captureOrIgnoreApiError(aPIError);
+        let obj6 = callback(closure_2[17]);
+        obj5 = { type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: null };
+        obj5[1] = aPIError;
+        obj6.dispatch(obj5);
+        if (map) {
+          const _HermesInternal2 = HermesInternal;
+          v0("fetchCollectiblesCategories failed: " + aPIError.message);
+        }
+        let c9 = 3;
+      } else if (arg0 === 1) {
+        c9 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        getUserAgnosticState = arg1;
+        let logPerf1;
+        if (lib != null) {
+          logPerf1 = lib.logPerf;
+        }
+        if (logPerf1) {
+          const obj = lib(closure_2[20]);
+          let sessionId1;
+          if (closure_2 != null) {
+            sessionId1 = closure_2.sessionId;
+          }
+          obj6 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+          obj6[0] = sessionId1;
+          obj6[1] = lib(closure_2[20]).CollectiblesShopPerfCheckpoint.CATEGORIES_FETCH_COMPLETED;
+          let tab1;
+          if (closure_2 != null) {
+            tab1 = closure_2.tab;
+          }
+          obj6[2] = tab1;
+          let includeUnpublished1;
+          if (lib != null) {
+            includeUnpublished1 = lib.includeUnpublished;
+          }
+          obj6[3] = includeUnpublished1;
+          let noCache1;
+          if (lib != null) {
+            noCache1 = lib.noCache;
+          }
+          obj6[4] = noCache1;
+          obj.trackShopPerf(obj6);
+        }
+        if (map) {
+          const _HermesInternal = HermesInternal;
+          v0("fetchCollectiblesCategories completed " + getUserAgnosticState.body.categories.length + " categories");
+        }
+        obj2 = callback(closure_2[17]);
+        const obj7 = { type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: null, noOp: null };
+        obj7[1] = closure_10.fromServer(getUserAgnosticState.body);
+        obj7[2] = callback;
+        obj2.dispatch(obj7);
+        v0 = 0;
+      }
+      v0 = 0;
+      return arg1;
     })();
   });
   const _fetchCollectiblesCategories = tmp;
@@ -402,132 +352,80 @@ function _fetchCollectiblesProduct() {
     let c7 = 0;
     let c5 = 0;
     return (function*(arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let map = tmp3;
-              let aPIError = tmp7;
-              let lib;
-              aPIError = undefined;
-              const obj1 = { type: "COLLECTIBLES_PRODUCT_FETCH", skuId: null, startedAt: null };
-              obj1[1] = callback;
-              const _Date3 = Date;
-              obj1[2] = Date.now();
-              lib(outer1_2[17]).dispatch(obj1);
-              let locale = 1;
-              const obj2 = { locale: null };
-              obj2[0] = locale.locale;
-              let countryCode;
-              if (lib != null) {
-                countryCode = tmp56.countryCode;
-              }
-              if (null !== countryCode) {
-                let countryCode1;
-                if (tmp56 != null) {
-                  countryCode1 = tmp56.countryCode;
-                }
-                obj2.country_code = countryCode1;
-              }
-              let paymentGateway;
-              if (lib != null) {
-                paymentGateway = tmp56.paymentGateway;
-              }
-              if (null !== paymentGateway) {
-                let paymentGateway1;
-                if (tmp56 != null) {
-                  paymentGateway1 = tmp56.paymentGateway;
-                }
-                obj2.payment_gateway = paymentGateway1;
-              }
-              let includeBundles;
-              if (lib != null) {
-                includeBundles = tmp56.includeBundles;
-              }
-              if (null !== includeBundles) {
-                let includeBundles1;
-                if (tmp56 != null) {
-                  includeBundles1 = tmp56.includeBundles;
-                }
-                obj2.include_bundles = includeBundles1;
-              }
-              const HTTP = callback(outer1_2[21]).HTTP;
-              let obj3 = { url: null, rejectWithError: true, query: null };
-              obj3[0] = outer1_16.COLLECTIBLES_PRODUCTS(callback);
-              obj3[2] = obj2;
-              c6 = 2;
-              c7 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj3);
-              return obj4;
-            }
-          } else {
-            if (1 === tmp7) {
-              locale = 0;
-              map = getUserAgnosticState;
-              aPIError = new callback(aPIError[22]).APIError(map);
-              obj3 = callback(aPIError[23]);
-              const result = obj3.captureOrIgnoreApiError(aPIError);
-              obj4 = lib(aPIError[17]);
-              const obj5 = { type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: null, error: null, endedAt: null };
-              obj5[1] = callback;
-              obj5[2] = aPIError;
-              const _Date2 = Date;
-              obj5[3] = Date.now();
-              obj4.dispatch(obj5);
-              c7 = 3;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              lib = arg1;
-              obj = lib(aPIError[17]);
-              const obj6 = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
-              obj6[1] = callback;
-              obj6[2] = fromServer.fromServer(lib.body);
-              const _Date = Date;
-              obj6[3] = Date.now();
-              obj.dispatch(obj6);
-              locale = 0;
-            }
-            locale = 0;
-            c7 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          }
-        } catch (tmp45) {
-          getUserAgnosticState = tmp45;
-          if (tmp4 === locale) {
-            c7 = tmp2;
-            throw tmp45;
-          } else {
-            c6 = tmp;
-          }
-        }
+      let map = tmp3;
+      const obj1 = { type: "COLLECTIBLES_PRODUCT_FETCH", skuId: null, startedAt: null };
+      obj1[1] = callback;
+      const _Date3 = Date;
+      obj1[2] = Date.now();
+      lib(outer1_2[17]).dispatch(obj1);
+      let locale = 1;
+      const obj2 = { locale: null };
+      obj2[0] = locale.locale;
+      if (lib != null) {
+        const countryCode = tmp56.countryCode;
       }
+      if (null !== countryCode) {
+        let countryCode1;
+        if (tmp56 != null) {
+          countryCode1 = tmp56.countryCode;
+        }
+        obj2.country_code = countryCode1;
+      }
+      if (lib != null) {
+        const paymentGateway = tmp56.paymentGateway;
+      }
+      if (null !== paymentGateway) {
+        let paymentGateway1;
+        if (tmp56 != null) {
+          paymentGateway1 = tmp56.paymentGateway;
+        }
+        obj2.payment_gateway = paymentGateway1;
+      }
+      if (lib != null) {
+        const includeBundles = tmp56.includeBundles;
+      }
+      if (null !== includeBundles) {
+        let includeBundles1;
+        if (tmp56 != null) {
+          includeBundles1 = tmp56.includeBundles;
+        }
+        obj2.include_bundles = includeBundles1;
+      }
+      const HTTP = callback(outer1_2[21]).HTTP;
+      let obj3 = { url: null, rejectWithError: true, query: null };
+      obj3[0] = outer1_16.COLLECTIBLES_PRODUCTS(callback);
+      obj3[2] = obj2;
+      yield HTTP.get(obj3);
+      if (1 === tmp7) {
+        locale = 0;
+        map = getUserAgnosticState;
+        aPIError = new callback(aPIError[22]).APIError(map);
+        obj3 = callback(aPIError[23]);
+        const result = obj3.captureOrIgnoreApiError(aPIError);
+        const obj4 = lib(aPIError[17]);
+        const obj5 = { type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: null, error: null, endedAt: null };
+        obj5[1] = callback;
+        obj5[2] = aPIError;
+        const _Date2 = Date;
+        obj5[3] = Date.now();
+        obj4.dispatch(obj5);
+        let c7 = 3;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        lib = arg1;
+        const obj = lib(aPIError[17]);
+        const obj6 = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
+        obj6[1] = callback;
+        obj6[2] = fromServer.fromServer(lib.body);
+        const _Date = Date;
+        obj6[3] = Date.now();
+        obj.dispatch(obj6);
+        locale = 0;
+      }
+      locale = 0;
+      return arg1;
     })();
   });
   const _fetchCollectiblesProduct = tmp;
@@ -935,108 +833,45 @@ function _fetchCollectiblesMarketings() {
     let c6 = 0;
     let c4 = 0;
     const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let body = tmp3;
-              let obj2 = tmp7;
-              let PROD;
-              PROD = PROD.release;
-              if (PROD === undefined) {
-                PROD = callback(outer1_2[26]).CollectiblesMarketingReleaseType.PROD;
-              }
-              obj2 = undefined;
-              body = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              obj2(body[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-              obj2 = { platform: null };
-              obj2[0] = PROD(body[27]).CollectiblesMarketingPlatform.MOBILE;
-              if (PROD !== PROD(body[26]).CollectiblesMarketingReleaseType.PROD) {
-                obj2.release = PROD;
-              }
-              let c4 = 1;
-              const HTTP = PROD(body[21]).HTTP;
-              let obj3 = { url: null, query: null, rejectWithError: true };
-              obj3[0] = constants.COLLECTIBLES_MARKETING;
-              obj3[1] = obj2;
-              c5 = 3;
-              c6 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj3);
-              return obj4;
-            }
-          } else {
-            if (2 === tmp7) {
-              c4 = 0;
-              obj3 = PROD(body[23]);
-              const aPIError = new PROD(body[22]).APIError(map);
-              const result = obj3.captureOrIgnoreApiError(aPIError);
-              obj4 = obj2(body[17]);
-              obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              obj = obj2(body[17]);
-              const obj5 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: null };
-              obj5[1] = closure_11.fromServer(body.body);
-              obj.dispatch(obj5);
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          }
-        } catch (tmp44) {
-          map = tmp44;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp44;
-          } else {
-            c5 = tmp;
-          }
-        }
+      let body = tmp3;
+      PROD = PROD.release;
+      if (PROD === undefined) {
+        PROD = callback(outer1_2[26]).CollectiblesMarketingReleaseType.PROD;
       }
+      yield "ct";
+      obj2(body[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
+      obj2 = { platform: null };
+      obj2[0] = PROD(body[27]).CollectiblesMarketingPlatform.MOBILE;
+      if (PROD !== PROD(body[26]).CollectiblesMarketingReleaseType.PROD) {
+        obj2.release = PROD;
+      }
+      let c4 = 1;
+      const HTTP = PROD(body[21]).HTTP;
+      let obj3 = { url: null, query: null, rejectWithError: true };
+      obj3[0] = constants.COLLECTIBLES_MARKETING;
+      obj3[1] = obj2;
+      yield HTTP.get(obj3);
+      if (2 === tmp7) {
+        c4 = 0;
+        obj3 = PROD(body[23]);
+        const aPIError = new PROD(body[22]).APIError(map);
+        const result = obj3.captureOrIgnoreApiError(aPIError);
+        const obj4 = obj2(body[17]);
+        obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+        let c6 = 3;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        body = arg1;
+        const obj = obj2(body[17]);
+        const obj5 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: null };
+        obj5[1] = closure_11.fromServer(body.body);
+        obj.dispatch(obj5);
+        c4 = 0;
+      }
+      c4 = 0;
+      return arg1;
     })();
     iter.next();
     return iter;
@@ -1060,158 +895,108 @@ function _fetchCollectiblesShopHome() {
     let c9 = 0;
     let c7 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c9 === 2) {
-        c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c9 = 2;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let _getSystemLocale = tmp3;
-              let aPIError = tmp7;
-              let body;
-              aPIError = undefined;
-              const obj1 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: null, options: null };
-              obj1[1] = callback;
-              body = lib;
-              if (lib == null) {
-                body = {};
-              }
-              obj1[2] = body;
-              lib(closure_2[17]).dispatch(obj1);
-              let obj8 = callback(closure_2[19]);
-              let logPerf;
-              const fetchCollectiblesOptionsQuery = obj8.buildFetchCollectiblesOptionsQuery(tmp81, callback);
-              if (lib != null) {
-                logPerf = tmp81.logPerf;
-              }
-              if (logPerf) {
-                let sessionId;
-                if (tmp82 != null) {
-                  sessionId = tmp82.sessionId;
-                }
-                let obj2 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
-                obj2[0] = sessionId;
-                obj2[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_STARTED;
-                let tab;
-                if (tmp82 != null) {
-                  tab = tmp82.tab;
-                }
-                obj2[2] = tab;
-                let includeUnpublished;
-                if (tmp81 != null) {
-                  includeUnpublished = tmp81.includeUnpublished;
-                }
-                obj2[3] = includeUnpublished;
-                let noCache;
-                if (tmp81 != null) {
-                  noCache = tmp81.noCache;
-                }
-                obj2[4] = noCache;
-                callback(closure_2[20]).trackShopPerf(obj2);
-                const obj10 = callback(closure_2[20]);
-              }
-              let c7 = 1;
-              const HTTP = callback(closure_2[21]).HTTP;
-              const obj3 = { url: null, query: null, rejectWithError: true };
-              obj3[0] = outer1_16.COLLECTIBLES_SHOP;
-              obj3[1] = fetchCollectiblesOptionsQuery;
-              c8 = 2;
-              c9 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj3);
-              return obj4;
-            }
-          } else {
-            if (1 === tmp7) {
-              c7 = 0;
-              _getSystemLocale = updateCategoriesAndProducts;
-              aPIError = new callback(closure_2[22]).APIError(_getSystemLocale);
-              let obj5 = callback(closure_2[23]);
-              const result = obj5.captureOrIgnoreApiError(aPIError);
-              let obj6 = lib(closure_2[17]);
-              obj5 = { type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: null, error: null };
-              obj5[1] = callback;
-              obj5[2] = aPIError;
-              obj6.dispatch(obj5);
-              c9 = 3;
-            } else if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              let logPerf1;
-              if (lib != null) {
-                logPerf1 = lib.logPerf;
-              }
-              if (logPerf1) {
-                obj = callback(closure_2[20]);
-                let sessionId1;
-                if (closure_2 != null) {
-                  sessionId1 = closure_2.sessionId;
-                }
-                obj6 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
-                obj6[0] = sessionId1;
-                obj6[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_COMPLETED;
-                let tab1;
-                if (closure_2 != null) {
-                  tab1 = closure_2.tab;
-                }
-                obj6[2] = tab1;
-                let includeUnpublished1;
-                if (lib != null) {
-                  includeUnpublished1 = lib.includeUnpublished;
-                }
-                obj6[3] = includeUnpublished1;
-                let noCache1;
-                if (lib != null) {
-                  noCache1 = lib.noCache;
-                }
-                obj6[4] = noCache1;
-                obj.trackShopPerf(obj6);
-              }
-              obj2 = lib(closure_2[17]);
-              const obj7 = { type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: null, shopHome: null };
-              obj7[1] = callback;
-              obj7[2] = closure_14.fromServer(body.body);
-              obj2.dispatch(obj7);
-              c7 = 0;
-            }
-            c7 = 0;
-            c9 = 3;
-            obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
-          }
-        } catch (tmp70) {
-          updateCategoriesAndProducts = tmp70;
-          if (tmp4 === c7) {
-            c9 = tmp2;
-            throw tmp70;
-          } else {
-            c8 = tmp;
-          }
-        }
+      let _getSystemLocale = tmp3;
+      const obj1 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: null, options: null };
+      obj1[1] = callback;
+      let body = lib;
+      if (lib == null) {
+        body = {};
       }
+      obj1[2] = body;
+      lib(closure_2[17]).dispatch(obj1);
+      const obj8 = callback(closure_2[19]);
+      const fetchCollectiblesOptionsQuery = obj8.buildFetchCollectiblesOptionsQuery(tmp81, callback);
+      if (lib != null) {
+        const logPerf = tmp81.logPerf;
+      }
+      if (logPerf) {
+        let sessionId;
+        if (tmp82 != null) {
+          sessionId = tmp82.sessionId;
+        }
+        let obj2 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+        obj2[0] = sessionId;
+        obj2[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_STARTED;
+        let tab;
+        if (tmp82 != null) {
+          tab = tmp82.tab;
+        }
+        obj2[2] = tab;
+        let includeUnpublished;
+        if (tmp81 != null) {
+          includeUnpublished = tmp81.includeUnpublished;
+        }
+        obj2[3] = includeUnpublished;
+        let noCache;
+        if (tmp81 != null) {
+          noCache = tmp81.noCache;
+        }
+        obj2[4] = noCache;
+        callback(closure_2[20]).trackShopPerf(obj2);
+        const obj10 = callback(closure_2[20]);
+      }
+      let c7 = 1;
+      const HTTP = callback(closure_2[21]).HTTP;
+      const obj3 = { url: null, query: null, rejectWithError: true };
+      obj3[0] = outer1_16.COLLECTIBLES_SHOP;
+      obj3[1] = fetchCollectiblesOptionsQuery;
+      yield HTTP.get(obj3);
+      if (1 === tmp7) {
+        c7 = 0;
+        _getSystemLocale = updateCategoriesAndProducts;
+        const aPIError = new callback(closure_2[22]).APIError(_getSystemLocale);
+        let obj5 = callback(closure_2[23]);
+        const result = obj5.captureOrIgnoreApiError(aPIError);
+        let obj6 = lib(closure_2[17]);
+        obj5 = { type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: null, error: null };
+        obj5[1] = callback;
+        obj5[2] = aPIError;
+        obj6.dispatch(obj5);
+        let c9 = 3;
+      } else if (arg0 === 1) {
+        c9 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        body = arg1;
+        let logPerf1;
+        if (lib != null) {
+          logPerf1 = lib.logPerf;
+        }
+        if (logPerf1) {
+          const obj = callback(closure_2[20]);
+          let sessionId1;
+          if (closure_2 != null) {
+            sessionId1 = closure_2.sessionId;
+          }
+          obj6 = { sessionId: null, checkpoint: null, tab: null, unpublishedCategoriesShown: null, cacheDisabled: null };
+          obj6[0] = sessionId1;
+          obj6[1] = callback(closure_2[20]).CollectiblesShopPerfCheckpoint.SHOP_HOME_FETCH_COMPLETED;
+          let tab1;
+          if (closure_2 != null) {
+            tab1 = closure_2.tab;
+          }
+          obj6[2] = tab1;
+          let includeUnpublished1;
+          if (lib != null) {
+            includeUnpublished1 = lib.includeUnpublished;
+          }
+          obj6[3] = includeUnpublished1;
+          let noCache1;
+          if (lib != null) {
+            noCache1 = lib.noCache;
+          }
+          obj6[4] = noCache1;
+          obj.trackShopPerf(obj6);
+        }
+        obj2 = lib(closure_2[17]);
+        const obj7 = { type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: null, shopHome: null };
+        obj7[1] = callback;
+        obj7[2] = closure_14.fromServer(body.body);
+        obj2.dispatch(obj7);
+        c7 = 0;
+      }
+      c7 = 0;
+      return arg1;
     })();
   });
   const _fetchCollectiblesShopHome = tmp;
@@ -1345,124 +1130,74 @@ function _maybeFetchCollectiblesShopTabLayout() {
     const iter = (function*(arg0) {
       let c0;
       let c1;
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let layoutFetchError = tmp3;
+      ({ tab: c0, abortSignal: c1 } = callback);
+      yield "ct";
+      if (1 === tmp7) {
         if (arg0 === 1) {
+          let c6 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c6 = 3;
+          const obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let layoutFetchError = tmp3;
-              let callback2 = tmp7;
-              let callback;
-              callback2 = undefined;
-              ({ tab: c0, abortSignal: c1 } = callback);
-              layoutFetchError = undefined;
-              let body;
-              let c4;
-              c5 = 1;
-              c6 = 1;
-              return { value: "ct", done: "Array" };
+          if (!items.isFetchingLayout(callback)) {
+            layoutFetchError = items.getLayoutFetchError(callback);
+            let status;
+            if (layoutFetchError != null) {
+              status = layoutFetchError.status;
             }
-          } else {
-            if (1 === tmp7) {
-              if (arg0 === 1) {
-                c6 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c6 = 3;
-                const obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                if (!items.isFetchingLayout(callback)) {
-                  layoutFetchError = items.getLayoutFetchError(callback);
-                  let status;
-                  if (layoutFetchError != null) {
-                    status = layoutFetchError.status;
-                  }
-                  if (404 !== status) {
-                    let status1;
-                    if (layoutFetchError != null) {
-                      status1 = layoutFetchError.status;
-                    }
-                    if (429 !== status1) {
-                      c4 = 1;
-                      const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: null };
-                      obj2[1] = callback;
-                      callback2(layoutFetchError[17]).dispatch(obj2);
-                      const HTTP = callback(layoutFetchError[21]).HTTP;
-                      let obj3 = { url: null, rejectWithError: true, signal: null };
-                      obj3[0] = closure_16.COLLECTIBLES_SHOP_TAB_LAYOUT(callback);
-                      obj3[2] = callback2;
-                      c5 = 3;
-                      c6 = 1;
-                      const obj4 = { value: null, done: false };
-                      obj4[0] = HTTP.get(obj3);
-                      return obj4;
-                    }
-                  }
-                }
-                c6 = 3;
+            if (404 !== status) {
+              let status1;
+              if (layoutFetchError != null) {
+                status1 = layoutFetchError.status;
               }
-            } else if (2 === tmp7) {
-              c4 = 0;
-              c5 = body;
-              const aPIError = new callback(layoutFetchError[22]).APIError(c5);
-              c4 = aPIError;
-              obj3 = callback2(layoutFetchError[17]);
-              const obj5 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: null, apiError: null };
-              obj5[1] = callback;
-              obj5[2] = c4;
-              obj3.dispatch(obj5);
-              throw c4;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              body = arg1;
-              obj = callback2(layoutFetchError[17]);
-              const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: null, layoutId: null };
-              obj6[1] = callback;
-              obj6[2] = body.body.layout_id;
-              obj.dispatch(obj6);
-              c4 = 0;
+              if (429 !== status1) {
+                let c4 = 1;
+                const obj2 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: null };
+                obj2[1] = callback;
+                callback2(layoutFetchError[17]).dispatch(obj2);
+                const HTTP = callback(layoutFetchError[21]).HTTP;
+                let obj3 = { url: null, rejectWithError: true, signal: null };
+                obj3[0] = closure_16.COLLECTIBLES_SHOP_TAB_LAYOUT(callback);
+                obj3[2] = callback2;
+                let c5 = 3;
+                c6 = 1;
+                const obj4 = { value: null, done: false };
+                obj4[0] = HTTP.get(obj3);
+                return obj4;
+              }
             }
-            c4 = 0;
-            c6 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
           }
-        } catch (tmp39) {
-          body = tmp39;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp39;
-          } else {
-            c5 = tmp;
-          }
+          c6 = 3;
         }
+      } else if (2 === tmp7) {
+        c4 = 0;
+        c5 = body;
+        const aPIError = new callback(layoutFetchError[22]).APIError(c5);
+        c4 = aPIError;
+        obj3 = callback2(layoutFetchError[17]);
+        const obj5 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: null, apiError: null };
+        obj5[1] = callback;
+        obj5[2] = c4;
+        obj3.dispatch(obj5);
+        throw c4;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        body = arg1;
+        const obj = callback2(layoutFetchError[17]);
+        const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: null, layoutId: null };
+        obj6[1] = callback;
+        obj6[2] = body.body.layout_id;
+        obj.dispatch(obj6);
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
     iter.next();
     return iter;

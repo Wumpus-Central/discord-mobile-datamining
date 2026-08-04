@@ -124,60 +124,11 @@ function _putRoleConnectionsConfigurations() {
 function _fetchUserApplicationRoleConnections() {
   const self = this;
   const tmp = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const HTTP = v0(outer1_2[2]).HTTP;
-            const obj1 = { url: null, rejectWithError: false };
-            obj1[0] = outer1_4.APPLICATION_USER_ROLE_CONNECTIONS;
-            c1 = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1.body;
-          return obj;
-        }
-      } catch (tmp8) {
-        v0 = tmp;
-        throw tmp8;
-      }
-    }
+    const HTTP = v0(outer1_2[2]).HTTP;
+    const obj1 = { url: null, rejectWithError: false };
+    obj1[0] = outer1_4.APPLICATION_USER_ROLE_CONNECTIONS;
+    yield HTTP.get(obj1);
+    return arg1.body;
   });
   const _fetchUserApplicationRoleConnections = tmp;
   const apply = tmp.apply;

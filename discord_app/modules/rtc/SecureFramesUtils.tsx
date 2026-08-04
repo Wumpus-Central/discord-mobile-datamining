@@ -33,59 +33,10 @@ function _getCurrentUserSigningKey() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const staticAuthSessionId = outer1_5.getStaticAuthSessionId();
-              v0(table[19])(null != staticAuthSessionId, "[getCurrentUserPublicKey] session id should not be null");
-              table = 1;
-              v0 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_6.getMLSSigningKey(staticAuthSessionId, closure_0);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp13) {
-          v0 = tmp;
-          throw tmp13;
-        }
-      }
+      const staticAuthSessionId = outer1_5.getStaticAuthSessionId();
+      v0(table[19])(null != staticAuthSessionId, "[getCurrentUserPublicKey] session id should not be null");
+      yield outer1_6.getMLSSigningKey(staticAuthSessionId, closure_0);
+      return arg1;
     })();
   });
   const _getCurrentUserSigningKey = tmp;

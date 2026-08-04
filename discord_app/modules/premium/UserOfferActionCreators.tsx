@@ -273,94 +273,34 @@ function _fetchUserOffer() {
 function _fetchExistingChurnDiscountOffer() {
   const self = this;
   const tmp = callback(function*() {
-    if (c6 === 2) {
-      c6 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const dependencyMap = tmp3;
-            let fromServer = tmp7;
-            let closure_0;
-            fromServer = undefined;
-            outer1_1(outer1_2[5]).dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
-            let c4 = 1;
-            const HTTP = outer1_0(outer1_2[7]).HTTP;
-            const obj1 = { url: null, rejectWithError: true };
-            obj1[0] = outer1_7.CHURN_USER_OFFER;
-            c5 = 2;
-            c6 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else if (1 === tmp7) {
-          c4 = 0;
-          let obj5 = fromServer(709);
-          obj5.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
-          c6 = 3;
-          return { value: "HermesInternal", done: null };
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          const offer = arg1.body.offer;
-          closure_0 = offer;
-          if (offer == null) {
-            closure_0 = null;
-          }
-          fromServer = null;
-          if (null != closure_0) {
-            fromServer = c4.createFromServer(closure_0);
-          }
-          obj = fromServer(709);
-          const obj4 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: null };
-          obj4[1] = fromServer;
-          obj.dispatch(obj4);
-          obj5 = { userDiscountOffer: null };
-          obj5[0] = fromServer;
-          c4 = 0;
-          c6 = 3;
-          const obj6 = { value: null, done: true };
-          obj6[0] = obj5;
-          return obj6;
-        }
-      } catch (tmp28) {
-        let dispatcher = tmp28;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp28;
-        } else {
-          c5 = tmp;
-        }
-      }
+    const dependencyMap = tmp3;
+    outer1_1(outer1_2[5]).dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
+    let c4 = 1;
+    const HTTP = outer1_0(outer1_2[7]).HTTP;
+    const obj1 = { url: null, rejectWithError: true };
+    obj1[0] = outer1_7.CHURN_USER_OFFER;
+    yield HTTP.get(obj1);
+    c4 = 0;
+    let obj5 = fromServer(709);
+    obj5.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
+    yield "HermesInternal";
+    const offer = arg1.body.offer;
+    let closure_0 = offer;
+    if (offer == null) {
+      closure_0 = null;
     }
+    fromServer = null;
+    if (null != closure_0) {
+      fromServer = c4.createFromServer(closure_0);
+    }
+    const obj = fromServer(709);
+    const obj4 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: null };
+    obj4[1] = fromServer;
+    obj.dispatch(obj4);
+    obj5 = { userDiscountOffer: null };
+    obj5[0] = fromServer;
+    c4 = 0;
+    return obj5;
   });
   const _fetchExistingChurnDiscountOffer = tmp;
   const apply = tmp.apply;
@@ -374,85 +314,37 @@ function _fetchExistingChurnDiscountOffer() {
 function _fetchChurnDiscountOffer() {
   const self = this;
   const tmp = callback(function*() {
-    if (c6 === 2) {
+    const table = tmp3;
+    let closure_0 = null;
+    let c4 = 1;
+    const HTTP = outer1_0(outer1_2[7]).HTTP;
+    const obj1 = { url: null, rejectWithError: true };
+    obj1[0] = outer1_7.CHURN_USER_OFFER;
+    yield HTTP.post(obj1);
+    if (1 === tmp7) {
+      c4 = 0;
+      let c6 = 3;
+    } else if (arg0 === 1) {
       c6 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
+      throw arg1;
+    } else if (arg0 !== 2) {
+      const offer = arg1.body.offer;
+      closure_0 = offer;
+      if (offer == null) {
+        closure_0 = null;
       }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const table = tmp3;
-            let callback = tmp7;
-            callback = undefined;
-            let closure_0 = null;
-            let c4 = 1;
-            const HTTP = outer1_0(outer1_2[7]).HTTP;
-            const obj1 = { url: null, rejectWithError: true };
-            obj1[0] = outer1_7.CHURN_USER_OFFER;
-            c5 = 2;
-            c6 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.post(obj1);
-            return obj2;
-          }
-        } else {
-          if (1 === tmp7) {
-            c4 = 0;
-            c6 = 3;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            const offer = arg1.body.offer;
-            closure_0 = offer;
-            if (offer == null) {
-              closure_0 = null;
-            }
-            callback = closure_0;
-            if (null != callback) {
-              closure_0 = c4.createFromServer(callback);
-              obj = callback(table[5]);
-              const obj3 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: null };
-              obj3[1] = closure_0;
-              obj.dispatch(obj3);
-            }
-            c4 = 0;
-          }
-          c4 = 0;
-          c6 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        }
-      } catch (tmp25) {
-        let dispatcher = tmp25;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp25;
-        } else {
-          c5 = tmp;
-        }
+      const callback = closure_0;
+      if (null != callback) {
+        closure_0 = c4.createFromServer(callback);
+        const obj = callback(table[5]);
+        const obj3 = { type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: null };
+        obj3[1] = closure_0;
+        obj.dispatch(obj3);
       }
+      c4 = 0;
     }
+    c4 = 0;
+    return arg1;
   });
   const _fetchChurnDiscountOffer = tmp;
   const apply = tmp.apply;

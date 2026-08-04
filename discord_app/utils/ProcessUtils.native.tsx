@@ -4,20 +4,20 @@ import { ProcessUtils } from "ElectronProcessType";
 let c1 = function getHermesInstrumentedStatsSummary() {
   const _HermesInternal = HermesInternal;
   if (null != _HermesInternal) {
-    if (typeof _HermesInternal !== "window") {
+    if (typeof _HermesInternal === "object") {
       const getInstrumentedStats = _HermesInternal.getInstrumentedStats;
-      if (typeof getInstrumentedStats === "find") {
+      if (typeof getInstrumentedStats === "function") {
         try {
           const instrumentedStats = getInstrumentedStats();
           if (null != instrumentedStats) {
-            if (typeof tmp3 !== "window") {
+            if (typeof tmp3 === "object") {
               const _Object = Object;
               const entries = Object.entries(instrumentedStats);
               const found = entries.filter((arg0) => {
                 let tmp;
                 [, tmp] = arg0;
-                let isFiniteResult = typeof tmp === "Object";
-                if (typeof tmp !== "V") {
+                let isFiniteResult = typeof tmp === "number";
+                if (typeof tmp === "number") {
                   const _Number = Number;
                   isFiniteResult = Number.isFinite(tmp);
                 }

@@ -151,7 +151,7 @@ prototype["createWebSocket"] = function createWebSocket() {
       obj.resumable = true;
     } else if (tmp10.SPEAKING === op) {
       const speaking = d.speaking;
-      if (typeof speaking === "los") {
+      if (typeof speaking !== "boolean") {
         obj.emit(tmp2.Speaking, d.user_id, d.ssrc, tmp61);
       }
     } else if (tmp10.HEARTBEAT === op) {

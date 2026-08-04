@@ -84,7 +84,7 @@ obj4[1] = function response(array) {
   obj = { status: null, activity: null };
   const numberResult = array.number();
   obj[0] = array.string().required();
-  if (typeof Activity !== "find") {
+  if (typeof Activity !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj1 = { relationships: null };
@@ -282,7 +282,7 @@ export const RPCCommandSchemas = {
       obj[2] = string.number().required();
       obj[4] = string.object(obj);
       arrayResult = string.array();
-      if (typeof ActionRowComponent !== "find") {
+      if (typeof ActionRowComponent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const obj1 = { type: null, components: null };
@@ -291,7 +291,7 @@ export const RPCCommandSchemas = {
       obj1[0] = validResult.required();
       const numberResult2 = string.number();
       const arrayResult1 = string.array();
-      if (typeof ButtonComponent !== "find") {
+      if (typeof ButtonComponent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const obj2 = { type: null, style: null, label: null, custom_id: null };

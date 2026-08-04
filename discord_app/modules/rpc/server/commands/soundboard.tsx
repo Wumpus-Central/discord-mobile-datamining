@@ -19,65 +19,14 @@ obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler() {
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let sounds2 = tmp2;
-            sounds2 = undefined;
-            closure_1 = undefined;
-            let obj2 = outer1_0(table[6]);
-            table = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = obj2.maybeFetchSoundboardSounds();
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          sounds2 = sounds.getSounds();
-          closure_1 = [];
-          const item = sounds2.forEach((arr) => arr.forEach((arg0) => arr.push(outer1_0(outer1_2[7]).soundboardSoundToAPI(arg0))));
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_1;
-          return obj;
-        }
-      } catch (tmp13) {
-        c3 = tmp;
-        throw tmp13;
-      }
-    }
+    let closure_1 = tmp5;
+    let sounds2 = tmp2;
+    const obj2 = outer1_0(table[6]);
+    yield obj2.maybeFetchSoundboardSounds();
+    sounds2 = sounds.getSounds();
+    closure_1 = [];
+    const item = sounds2.forEach((arr) => arr.forEach((arg0) => arr.push(outer1_0(outer1_2[7]).soundboardSoundToAPI(arg0))));
+    return closure_1;
   })();
 };
 obj[RPCCommands.GET_SOUNDBOARD_SOUNDS] = obj;

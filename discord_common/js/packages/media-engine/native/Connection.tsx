@@ -93,29 +93,29 @@ class Connection extends tmp4 {
     tmp.lastExecutedTransitionId = -1;
     tmp.currentVideoCodec = null;
     tmp.lastDesktopEncodingOptions = null;
-    tmp.handleSpeakingNative = function handleSpeakingNative(hasItem) {
-      if (typeof arg1 === "los") {
-        tmp.handleSpeakingFlags(hasItem, arg1, arg2);
+    tmp.handleSpeakingNative = function handleSpeakingNative(hasItem, flag) {
+      if (typeof flag !== "boolean") {
+        tmp.handleSpeakingFlags(hasItem, flag, arg2);
       }
     };
     tmp.handleNativeMuteChanged = function handleNativeMuteChanged(arg0) {
       tmp.emit(tmp(outer1_2[6]).BaseConnectionEvent.NativeMuteChanged, arg0);
     };
-    tmp.handleSpeakingFlags = function handleSpeakingFlags(hasItem, arg1, arg2) {
+    tmp.handleSpeakingFlags = function handleSpeakingFlags(hasItem, flag, arg2) {
       let NONE = tmp.localSpeakingFlags[hasItem];
       if (NONE == null) {
         NONE = outer1_16.NONE;
       }
       const experimentFlags = obj.experimentFlags;
       if (!experimentFlags.has(outer1_5.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS)) {
-        obj.localSpeakingFlags[hasItem] = arg1;
+        obj.localSpeakingFlags[hasItem] = flag;
         if (hasItem === obj.userId) {
           let audioSSRC = obj.audioSSRC;
         } else {
           audioSSRC = obj.remoteAudioSSRCs[hasItem];
         }
-        obj.emit(tmp(outer1_2[6]).BaseConnectionEvent.Speaking, hasItem, arg1, audioSSRC, arg2);
-        let tmp11 = arg1 & outer1_16.SOUNDSHARE;
+        obj.emit(tmp(outer1_2[6]).BaseConnectionEvent.Speaking, hasItem, flag, audioSSRC, arg2);
+        let tmp11 = flag & outer1_16.SOUNDSHARE;
         if (tmp11) {
           tmp11 = false === obj.soundshareSentSpeakingEvent;
         }
@@ -1258,16 +1258,16 @@ prototype["setForceAudioInput"] = function setForceAudioInput(closure_0, flag, a
   const conn = this.conn;
   conn.setPTTActive(closure_0, flag, flag2);
 };
-prototype["setSpeakingFlags"] = function setSpeakingFlags(hasItem, arg1) {
+prototype["setSpeakingFlags"] = function setSpeakingFlags(hasItem, flag) {
   const self = this;
   if (null != this.conn.setRemoteUserSpeakingStatus) {
     const conn2 = self.conn;
-    const result = conn2.setRemoteUserSpeakingStatus(hasItem, arg1);
+    const result = conn2.setRemoteUserSpeakingStatus(hasItem, flag);
   } else if (null != self.conn.setRemoteUserSpeaking) {
     const conn = self.conn;
-    const result1 = conn.setRemoteUserSpeaking(hasItem, (arg1 & constants6.VOICE) === constants6.VOICE);
+    const result1 = conn.setRemoteUserSpeaking(hasItem, (flag & constants6.VOICE) === constants6.VOICE);
   }
-  self.handleSpeakingFlags(hasItem, arg1);
+  self.handleSpeakingFlags(hasItem, flag);
 };
 prototype["clearAllSpeaking"] = function clearAllSpeaking() {
 

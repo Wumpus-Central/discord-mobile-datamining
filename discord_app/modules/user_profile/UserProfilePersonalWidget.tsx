@@ -294,7 +294,7 @@ export const createDefaultPersonalWidget = function createDefaultPersonalWidget(
   items1 = [{ key: `field-${+closure_3}`, title: "", description: "" }];
   items[1] = obj;
   obj[0] = items;
-  if (typeof UserProfilePersonalWidget !== "find") {
+  if (typeof UserProfilePersonalWidget !== "function") {
     HermesBuiltin.throwTypeError();
   }
   ({ header, sections, id } = obj);

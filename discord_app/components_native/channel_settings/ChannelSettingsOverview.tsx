@@ -516,91 +516,42 @@ class ChannelSettingsOverview extends PureComponent {
     });
     closure_0 = tmp;
     tmp.handleConfirmDeleteChannel = GuildNSFWContentLevel(function*() {
-      if (c6 === 2) {
+      let closure_2 = tmp3;
+      let c4 = 1;
+      yield outer1_1(outer1_2[33]).deleteChannel(outer1_0.props.channel.id);
+      if (1 === tmp7) {
+        c4 = 0;
+        closure_2 = GuildNSFWContentLevel;
+        const aPIError = new outer1_0(outer1_2[49]).APIError(closure_2);
+        const anyErrorMessage = aPIError.getAnyErrorMessage();
+        let navigation = anyErrorMessage;
+        if (anyErrorMessage == null) {
+          const intl = outer1_0(outer1_2[30]).intl;
+          navigation = intl.string(outer1_0(outer1_2[30]).t.CKsXk3);
+        }
+        const obj2 = { key: "CHANNEL_SETTINGS_DELETE_CHANNEL_ERROR", content: null };
+        obj2[1] = navigation;
+        outer1_1(outer1_2[34]).open(obj2);
+        let c6 = 3;
+        const obj5 = outer1_1(outer1_2[34]);
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const obj = outer1_0(outer1_2[48]);
+        navigation = obj.getRootNavigationRef();
+        const obj1 = navigation;
+        let isReadyResult;
+        if (navigation != null) {
+          isReadyResult = obj1.isReady();
         }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp3;
-              let anyErrorMessage = tmp7;
-              let navigation;
-              anyErrorMessage = undefined;
-              let c4 = 1;
-              c5 = 2;
-              c6 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_1(outer1_2[33]).deleteChannel(outer1_0.props.channel.id);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              closure_2 = GuildNSFWContentLevel;
-              const aPIError = new outer1_0(outer1_2[49]).APIError(closure_2);
-              anyErrorMessage = aPIError.getAnyErrorMessage();
-              navigation = anyErrorMessage;
-              if (anyErrorMessage == null) {
-                const intl = outer1_0(outer1_2[30]).intl;
-                navigation = intl.string(outer1_0(outer1_2[30]).t.CKsXk3);
-              }
-              const obj2 = { key: "CHANNEL_SETTINGS_DELETE_CHANNEL_ERROR", content: null };
-              obj2[1] = navigation;
-              outer1_1(outer1_2[34]).open(obj2);
-              c6 = 3;
-              const obj5 = outer1_1(outer1_2[34]);
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              obj = outer1_0(outer1_2[48]);
-              navigation = obj.getRootNavigationRef();
-              obj1 = navigation;
-              let isReadyResult;
-              if (navigation != null) {
-                isReadyResult = obj1.isReady();
-              }
-              if (isReadyResult) {
-                navigation.goBack();
-              }
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          }
-        } catch (tmp39) {
-          GuildNSFWContentLevel = tmp39;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp39;
-          } else {
-            c5 = tmp;
-          }
+        if (isReadyResult) {
+          navigation.goBack();
         }
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     });
     tmp.handlePressTag = function handlePressTag(tag) {
       tmp.pushScreen(outer1_25.EDIT_FORUM_TAG, { tag });

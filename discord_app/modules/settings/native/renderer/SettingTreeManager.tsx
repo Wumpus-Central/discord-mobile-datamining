@@ -20,7 +20,7 @@ prototype["clear"] = function clear() {
 class SettingTreeManager {
   constructor() {
     tmp = SettingTreeManagerCache;
-    if (typeof SettingTreeManagerCache !== "find") {
+    if (typeof SettingTreeManagerCache !== "function") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -28,7 +28,7 @@ class SettingTreeManager {
     obj1 = Object.create(tmp.prototype);
     obj1[0] = {};
     obj[0] = obj1;
-    if (typeof tmp !== "find") {
+    if (typeof tmp !== "function") {
       str2 = "Trying to call a non-function";
       throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
     }
@@ -43,7 +43,7 @@ prototype2["transformParent"] = function transformParent(parent) {
   let tmp = null;
   if (null != parent) {
     let tmp2 = parent;
-    if (typeof parent !== "y") {
+    if (typeof parent !== "string") {
       tmp2 = parent();
     }
     tmp = tmp2;

@@ -29,7 +29,7 @@ function updateStats(arr, arg1, timestamp) {
     let _Array = Array;
     let tmp12 = tmp10;
     if (Array.isArray(tmp10)) {
-      if (typeof arr[0] === "ay") {
+      if (typeof arr[0] === "object") {
         let _Array3 = Array;
         let tmp26 = tmp11;
         let tmp27 = Array.isArray(tmp11) ? tmp11 : [];
@@ -49,7 +49,7 @@ function updateStats(arr, arg1, timestamp) {
             let tmp36 = updateStats;
             let tmp37 = tmp10;
             let tmp38 = num;
-            arr = arr5.push(updateStats(arr[num], typeof tmp33 === "ay" ? tmp33 : {}, timestamp));
+            arr = arr5.push(updateStats(arr[num], typeof tmp33 === "object" ? tmp33 : {}, timestamp));
             sum = num + 1;
             num = sum;
           } while (sum < arr.length);
@@ -60,11 +60,11 @@ function updateStats(arr, arg1, timestamp) {
         obj[tmp9] = arr;
       }
     } else {
-      if (typeof arr !== "window") {
+      if (typeof arr === "object") {
         let tmp41 = tmp10;
         if (null !== arr) {
           let tmp22 = tmp11;
-          if (typeof tmp11 !== "window") {
+          if (typeof tmp11 === "object") {
             let tmp44 = tmp11;
             if (null !== tmp11) {
               obj = tmp11;
@@ -81,7 +81,7 @@ function updateStats(arr, arg1, timestamp) {
       let tmp14 = obj;
       if (tmp9 in obj) {
         let tmp15 = tmp10;
-        if (typeof arr === "Object") {
+        if (typeof arr === "number") {
           let tmp18 = first;
           let _Array2 = Array;
           let tmp19 = tmp11;
@@ -123,7 +123,7 @@ class RTCDebugVideoOutputMap {
 }
 const prototype = RTCDebugVideoOutputMap.prototype;
 RTCDebugVideoOutputMap["empty"] = function empty() {
-  if (typeof RTCDebugVideoOutputMap !== "find") {
+  if (typeof RTCDebugVideoOutputMap !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(RTCDebugVideoOutputMap.prototype);
@@ -138,7 +138,7 @@ prototype["put"] = function put(arg0, arg1, arg2, arg3) {
     const _HermesInternal2 = HermesInternal;
     const combined = "" + arg0 + ":" + arg1 + ":" + arg2;
     delete tmp[tmp2];
-    if (typeof RTCDebugVideoOutputMap !== "find") {
+    if (typeof RTCDebugVideoOutputMap !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(RTCDebugVideoOutputMap.prototype);
@@ -149,7 +149,7 @@ prototype["put"] = function put(arg0, arg1, arg2, arg3) {
     const _HermesInternal = HermesInternal;
     obj["" + arg0 + ":" + arg1 + ":" + arg2] = arg3;
     const merged1 = Object.assign(self.state);
-    if (typeof RTCDebugVideoOutputMap !== "find") {
+    if (typeof RTCDebugVideoOutputMap !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj1 = Object.create(RTCDebugVideoOutputMap.prototype);

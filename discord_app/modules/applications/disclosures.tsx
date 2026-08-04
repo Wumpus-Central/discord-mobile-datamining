@@ -9,69 +9,18 @@ function _getDisclosures() {
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let lib;
-              const result = c3.APPLICATION_DISCLOSURES(lib);
-              const HTTP = lib(outer1_1[2]).HTTP;
-              const obj1 = { url: null, retries: 3, rejectWithError: null };
-              obj1[0] = result;
-              obj1[2] = lib(outer1_1[2]).rejectWithMigratedError();
-              c2 = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            lib = arg1;
-            obj = { disclosures: null, ackedDisclosures: null, allAcked: null };
-            obj[0] = lib.body.disclosures;
-            obj[1] = lib.body.acked_disclosures;
-            obj[2] = lib.body.all_acked;
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = obj;
-            return obj4;
-          }
-        } catch (tmp10) {
-          c3 = tmp;
-          throw tmp10;
-        }
-      }
+      let closure_1 = tmp2;
+      const result = c3.APPLICATION_DISCLOSURES(lib);
+      const HTTP = lib(outer1_1[2]).HTTP;
+      const obj1 = { url: null, retries: 3, rejectWithError: null };
+      obj1[0] = result;
+      obj1[2] = lib(outer1_1[2]).rejectWithMigratedError();
+      lib = yield HTTP.get(obj1);
+      const obj = { disclosures: null, ackedDisclosures: null, allAcked: null };
+      obj[0] = lib.body.disclosures;
+      obj[1] = lib.body.acked_disclosures;
+      obj[2] = lib.body.all_acked;
+      return obj;
     })();
   });
   const _getDisclosures = tmp;

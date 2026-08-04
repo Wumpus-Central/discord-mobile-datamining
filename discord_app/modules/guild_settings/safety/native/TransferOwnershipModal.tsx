@@ -44,58 +44,9 @@ export default function TransferOwnershipModal(guild) {
         let c2 = 0;
         let c1 = 0;
         return (function*(arg0) {
-          if (id2 === 2) {
-            id2 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              id2 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  id2 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  id2 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  let obj2 = outer2_1(outer2_2[10]);
-                  c2 = 1;
-                  id2 = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = obj2.transferOwnership(id.id, id2.id, outer2_6.EMAIL, id);
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
-                id2 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                id2 = 3;
-                obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                id2 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-            } catch (tmp12) {
-              id2 = tmp;
-              throw tmp12;
-            }
-          }
+          const obj2 = outer2_1(outer2_2[10]);
+          yield obj2.transferOwnership(id.id, id2.id, outer2_6.EMAIL, id);
+          return arg1;
         })();
       });
       obj[0] = function() {

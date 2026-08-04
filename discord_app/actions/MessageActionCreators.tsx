@@ -557,7 +557,7 @@ let obj14 = {
       extraProperties = null;
     }
     ({ isPreload, returnMessageId, skipLocalFetch, jumpType, avoidInitialScroll, onJumpComplete } = arg0);
-    if (typeof context !== "_iter") {
+    if (typeof context === "string") {
       obj14.trackJump(channelId, messageId, context, extraProperties);
     }
     if (MediaPlayerManager != null) {
@@ -713,7 +713,7 @@ let obj14 = {
         if (jump != null) {
           messageId = jump.messageId;
         }
-        if (typeof RemoteFetch !== "find") {
+        if (typeof RemoteFetch !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj1 = Object.create(RemoteFetch.prototype);
@@ -1393,7 +1393,7 @@ let obj14 = {
     if (arg4 === undefined) {
       flag = false;
     }
-    if (typeof str === "y") {
+    if (typeof str === "string") {
       let obj = { content: null, invalidEmojis: null, validNonShortcutEmojis: null, tts: null };
       obj[0] = str;
       obj[1] = [];

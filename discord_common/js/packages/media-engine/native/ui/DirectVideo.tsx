@@ -171,7 +171,7 @@ export default function DirectVideo(streamId, onContainerResized) {
         ref.info("attaching srcObject for " + current);
         value = store.get(current);
         if (null == value) {
-          if (typeof ref !== "find") {
+          if (typeof ref !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const obj = Object.create(ref.prototype);

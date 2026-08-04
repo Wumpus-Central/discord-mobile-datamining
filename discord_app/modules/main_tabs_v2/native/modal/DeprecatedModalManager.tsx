@@ -42,7 +42,7 @@ function pushFirstOpenModal(arg0, arg1) {
     if (store != null) {
       getProps = store.getProps;
     }
-    if (typeof getProps === "find") {
+    if (typeof getProps === "function") {
       let tmp7 = key;
       let store2 = key.store;
       let props = store2.getProps();

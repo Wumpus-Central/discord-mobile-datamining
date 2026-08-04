@@ -228,7 +228,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
           tmp12 = outer1_54;
           runOnJSResult = tmp2Result.runOnJS(isScrollVisible);
           tmp13 = id;
-          if (typeof outer1_54 !== "find") {
+          if (typeof outer1_54 !== "function") {
             str = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -874,7 +874,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       value = store3.get();
       scaleChange = scaleChange.scaleChange;
       const value1 = store11.get();
-      if (typeof outer1_17 !== "find") {
+      if (typeof outer1_17 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let sum = scaleChange;
@@ -960,7 +960,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
         let value = store3.get();
         value = store3.get();
         const value1 = store11.get();
-        if (typeof outer1_17 !== "find") {
+        if (typeof outer1_17 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const sum = 1 + result;

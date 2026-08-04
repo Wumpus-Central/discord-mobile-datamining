@@ -42,7 +42,7 @@ function useDominantRGBFromImage(arg0, arg1) {
     }
     if (tmp2) {
       if (null == first(tmp5[8]).cachedDominantColors[closure_0]) {
-        if (typeof tmp === "Object") {
+        if (typeof tmp === "number") {
           const ImageManager = outer1_6.ImageManager;
           let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(outer1_7.resolveAssetSource(tmp));
         } else {
@@ -233,15 +233,15 @@ let c4 = importAllResult;
 ({ EMPTY_STRING_SNOWFLAKE_ID: metroImportAll, NOOP: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
-const memoizeResult = require("useDisplayProfile").memoize((arg0) => {
+const memoizeResult = require("useDisplayProfile").memoize((num) => {
   let tmp = null;
-  if (null != arg0) {
+  if (null != num) {
     tmp = null;
-    if ("" !== arg0) {
-      let tmp2 = arg0;
-      if (typeof arg0 !== "Object") {
+    if ("" !== num) {
+      let tmp2 = num;
+      if (typeof num !== "number") {
         const obj = { uri: null };
-        obj[0] = arg0;
+        obj[0] = num;
         tmp2 = obj;
       }
       tmp = tmp2;

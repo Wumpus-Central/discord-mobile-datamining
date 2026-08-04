@@ -110,72 +110,20 @@ function _refreshAttachmentUrl() {
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp4;
-              let lib;
-              const HTTP = lib(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = outer1_4.ATTACHMENTS_REFRESH_URLS;
-              const obj2 = { attachment_urls: null };
-              const items = [lib];
-              obj2[0] = items;
-              obj1[1] = obj2;
-              obj1[2] = lib(530).rejectWithMigratedError();
-              dependencyMap = 1;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            lib = arg1;
-            let refreshed;
-            if (lib.ok) {
-              refreshed = lib.body.refreshed_urls[0].refreshed;
-            }
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = refreshed;
-            return obj;
-          }
-        } catch (tmp10) {
-          c3 = tmp;
-          throw tmp10;
-        }
+      let closure_1 = tmp4;
+      const HTTP = lib(530).HTTP;
+      const obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = outer1_4.ATTACHMENTS_REFRESH_URLS;
+      const obj2 = { attachment_urls: null };
+      const items = [lib];
+      obj2[0] = items;
+      obj1[1] = obj2;
+      obj1[2] = lib(530).rejectWithMigratedError();
+      lib = yield HTTP.post(obj1);
+      if (lib.ok) {
+        const refreshed = lib.body.refreshed_urls[0].refreshed;
       }
+      return refreshed;
     })();
   });
   const _refreshAttachmentUrl = tmp;

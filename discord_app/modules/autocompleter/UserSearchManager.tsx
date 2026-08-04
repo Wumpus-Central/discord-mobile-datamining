@@ -992,7 +992,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(handleUserSea
     const error = new Error("SearchContextManager: No webworker initialized");
     throw error;
   } else {
-    if (typeof UserSearchContext !== "find") {
+    if (typeof UserSearchContext !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (num === undefined) {

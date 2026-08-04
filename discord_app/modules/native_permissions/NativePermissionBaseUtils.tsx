@@ -24,93 +24,37 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
   let closure_2 = arg2;
   const self = this;
   return self(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === obj) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let c1 = tmp5;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            c1 = undefined;
-            obj = undefined;
-            if (typeof outer1_1 === "three_button_mouse") {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              const error = new Error("requestAuthorization: Was provided with not a function for " + outer1_0 + ".");
-              throw error;
-            } else {
-              const obj1 = { type: null };
-              obj1[0] = outer1_0;
-              outer1_1(obj[4]).track(outer1_8.PERMISSIONS_REQUESTED, obj1);
-              obj = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = tmp46();
-              return obj2;
-            }
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          closure_0 = arg1;
-          let tmp10 = closure_0 === outer1_7.AUTHORIZED;
-          if (!tmp10) {
-            tmp10 = closure_0 === outer1_7.LIMITED;
-          }
-          outer1_1 = tmp10;
-          if (outer1_1) {
-            let DENIED = tmp14.ACCEPTED;
-          } else {
-            DENIED = tmp14.DENIED;
-          }
-          obj = DENIED;
-          obj = outer1_1(obj[5]);
-          obj.setPermission(closure_0, obj);
-          let showAuthorizationError = !outer1_1;
-          if (!outer1_1) {
-            showAuthorizationError = obj.showAuthorizationError;
-          }
-          if (showAuthorizationError) {
-            c3.showAlert(outer1_0);
-          }
-          c3 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = outer1_1;
-          return obj4;
-        }
-      } catch (tmp36) {
-        c3 = tmp;
-        throw tmp36;
-      }
+    let c1 = tmp5;
+    let closure_0 = tmp2;
+    if (typeof outer1_1 !== "function") {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("requestAuthorization: Was provided with not a function for " + outer1_0 + ".");
+      throw error;
     }
+    const obj1 = { type: null };
+    obj1[0] = outer1_0;
+    outer1_1(obj[4]).track(outer1_8.PERMISSIONS_REQUESTED, obj1);
+    closure_0 = yield tmp46();
+    let tmp10 = closure_0 === outer1_7.AUTHORIZED;
+    if (!tmp10) {
+      tmp10 = closure_0 === outer1_7.LIMITED;
+    }
+    outer1_1 = tmp10;
+    if (outer1_1) {
+      let DENIED = tmp14.ACCEPTED;
+    } else {
+      DENIED = tmp14.DENIED;
+    }
+    obj.setPermission(closure_0, obj);
+    let showAuthorizationError = !outer1_1;
+    if (!outer1_1) {
+      showAuthorizationError = obj.showAuthorizationError;
+    }
+    if (showAuthorizationError) {
+      c3.showAlert(outer1_0);
+    }
+    return outer1_1;
   })();
 };
 prototype["requestPermission"] = function requestPermission(arg0, arg1) {

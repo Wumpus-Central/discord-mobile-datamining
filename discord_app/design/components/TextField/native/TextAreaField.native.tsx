@@ -77,7 +77,7 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
     }
     obj4 = { variant: "text-xs/semibold", color: null, accessibilityLabel: null, children: null };
     obj4[1] = str;
-    if (typeof label.label === "y") {
+    if (typeof label.label === "string") {
       const intl2 = _8Q_k1s(1236).intl;
       obj = { label: null, remainingCharacters: null };
       label = label.label;

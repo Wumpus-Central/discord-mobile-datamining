@@ -28,72 +28,26 @@ export const useClaimOrFetchRewardCode = function useClaimOrFetchRewardCode(isCl
     let c7 = 0;
     let c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (v0 === 2) {
+      let useTrackQuestEventWithImpression = tmp3;
+      let c6 = 1;
+      outer1_9(true);
+      const obj1 = callback(questContent[3]);
+      yield obj1.claimQuestReward(callback, closure_1, closure_2);
+      if (1 === tmp7) {
+        c6 = 0;
+        v0(true);
+        outer1_9(false);
         v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let useTrackQuestEventWithImpression = tmp3;
-              let c6 = 1;
-              outer1_9(true);
-              let obj1 = callback(questContent[3]);
-              c4 = 2;
-              v0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.claimQuestReward(callback, closure_1, closure_2);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c6 = 0;
-              v0(true);
-              outer1_9(false);
-              v0 = 3;
-            } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              v0(false);
-              outer1_9(false);
-              c6 = 0;
-            }
-            c6 = 0;
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp26) {
-          let noop = tmp26;
-          if (tmp4 === c6) {
-            v0 = tmp2;
-            throw tmp26;
-          } else {
-            c4 = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        v0(false);
+        outer1_9(false);
+        c6 = 0;
       }
+      c6 = 0;
+      return arg1;
     })();
   });
   const claimCode = preview.useCallback(function() {

@@ -61,7 +61,7 @@ function _stopLurkingAll() {
                 obj1.dispatch(obj1);
                 table = 1;
                 v0 = 1;
-                let obj2 = { value: null, done: false };
+                const obj2 = { value: null, done: false };
                 obj2[0] = Promise.all(found.map((() => {
                   let closure_0 = outer1_3((arg0) => {
                     let closure_0 = arg0;
@@ -120,48 +120,85 @@ function _stopLurking() {
     let c3 = 0;
     let c4 = 0;
     const iter = (function*() {
-      let table = tmp4;
-      let callback;
-      if (callback === undefined) {
-        const tmp19 = null;
-      }
-      callback = tmp19;
-      table = undefined;
-      let c3 = 1;
-      let guildId = 1;
-      yield "ct";
-      if (1 === tmp4) {
+      if (guildId === 2) {
+        guildId = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          guildId = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          guildId = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          let closure_1 = initialize.lurkingGuildIds();
-          if (0 !== closure_1.length) {
-            const items = [callback, guildId.getGuildId()];
-            table = items.filter(callback(table[6]).isNotNullish);
-            c3 = 2;
-            guildId = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = callback2(table);
-            return obj2;
-          }
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        guildId = 3;
-        throw arg1;
-      } else if (arg0 === 2) {
-        guildId = 3;
-        const obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+      } else {
+        try {
+          guildId = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              guildId = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              guildId = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let table = tmp4;
+              let closure_1 = 0;
+              let callback;
+              let tmp19 = callback;
+              if (callback === undefined) {
+                tmp19 = null;
+              }
+              callback = tmp19;
+              closure_1 = undefined;
+              table = undefined;
+              c3 = 1;
+              guildId = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else {
+            if (1 === tmp4) {
+              if (arg0 === 1) {
+                guildId = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                guildId = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                closure_1 = initialize.lurkingGuildIds();
+                if (0 !== closure_1.length) {
+                  const items = [callback, guildId.getGuildId()];
+                  table = items.filter(callback(table[6]).isNotNullish);
+                  c3 = 2;
+                  guildId = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = callback2(table);
+                  return obj2;
+                }
+              }
+            } else if (arg0 === 1) {
+              guildId = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              guildId = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+            guildId = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp20) {
+          guildId = tmp;
+          throw tmp20;
+        }
       }
-      guildId = 3;
-      yield "HermesInternal";
     })();
     iter.next();
     return iter;

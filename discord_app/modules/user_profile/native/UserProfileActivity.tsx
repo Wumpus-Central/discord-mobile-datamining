@@ -31,7 +31,7 @@ const require = arg1;
 function ActivityCardText(children) {
   const merged = Object.assign(children, Object.create(null));
   let trimmed = str;
-  if (typeof children.children !== "_iter") {
+  if (typeof children.children === "string") {
     trimmed = str.trim();
   }
   let tmp3 = null;

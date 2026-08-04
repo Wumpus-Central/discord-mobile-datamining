@@ -146,153 +146,42 @@ prototype["measureAsync"] = function measureAsync(outer1_5) {
   let closure_0 = outer1_5;
   const self = this;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            if (outer1_1.start_ > 0) {
-              c3 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = v0(outer1_4[1]).timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
-              return obj1;
-            } else {
-              outer1_1.recordStart_();
-              let obj2 = v0(outer1_4[1]);
-              v0 = 1;
-              c3 = 1;
-              obj2 = { value: null, done: false };
-              obj2[0] = obj2.timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
-              return obj2;
-            }
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          closure_0 = arg1;
-          closure_1.recordEnd_();
-          outer1_6();
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_0;
-          return obj;
-        }
-      } catch (tmp24) {
-        c3 = tmp;
-        throw tmp24;
-      }
+    let closure_1 = tmp5;
+    let closure_0 = tmp2;
+    if (outer1_1.start_ > 0) {
+      return v0(outer1_4[1]).timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
     }
+    outer1_1.recordStart_();
+    const obj2 = v0(outer1_4[1]);
+    closure_0 = yield obj2.timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
+    closure_1.recordEnd_();
+    outer1_6();
+    return closure_0;
   })();
 };
 prototype["measureAsyncWithoutNesting"] = function measureAsyncWithoutNesting(arg0) {
   let closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === v0) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            closure_1 = undefined;
-            if (outer1_1.start_ > 0) {
-              let obj3 = v0(outer1_4[1]);
-              c3 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = obj3.timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
-              return obj1;
-            } else {
-              outer1_1.recordStart_();
-              const _Date2 = Date;
-              closure_0 = Date.now();
-              const _HermesInternal2 = HermesInternal;
-              v0(outer1_4[1]).mark(outer1_1.emoji, "Start " + outer1_1.name);
-              v0 = 1;
-              c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = outer1_0();
-              return obj2;
-            }
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          closure_1 = arg1;
-          const _HermesInternal = HermesInternal;
-          const _Date = Date;
-          const combined = "Finish " + closure_1.name;
-          v0(outer1_4[1]).mark(closure_1.emoji, combined, Date.now() - closure_0);
-          closure_1.recordEnd_();
-          outer1_6();
-          c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_1;
-          return obj;
-        }
-      } catch (tmp11) {
-        c3 = tmp;
-        throw tmp11;
-      }
+    let closure_1 = tmp5;
+    let closure_0 = tmp2;
+    if (outer1_1.start_ > 0) {
+      const obj3 = v0(outer1_4[1]);
+      return obj3.timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
     }
+    outer1_1.recordStart_();
+    const _Date2 = Date;
+    closure_0 = Date.now();
+    const _HermesInternal2 = HermesInternal;
+    v0(outer1_4[1]).mark(outer1_1.emoji, "Start " + outer1_1.name);
+    closure_1 = yield outer1_0();
+    const _HermesInternal = HermesInternal;
+    const _Date = Date;
+    const combined = "Finish " + closure_1.name;
+    v0(outer1_4[1]).mark(closure_1.emoji, combined, Date.now() - closure_0);
+    closure_1.recordEnd_();
+    outer1_6();
+    return closure_1;
   })();
 };
 class TTIEvent {
@@ -384,7 +273,7 @@ prototype3["record"] = function record() {
 };
 const prototype4 = function TTITrackers() {
   const tmp = TTITimer;
-  if (typeof TTITimer !== "find") {
+  if (typeof TTITimer !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(new.target.prototype);
@@ -392,77 +281,77 @@ const prototype4 = function TTITrackers() {
   obj.emoji = "\u2757";
   obj.name = "Load index.tsx";
   obj[0] = obj;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj1 = Object.create(tmp.prototype);
   obj1.emoji = "\u{1F4BE}";
   obj1.name = "Load fast_connect native module";
   obj[1] = obj1;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj2 = Object.create(tmp.prototype);
   obj2.emoji = "\u{1F310}";
   obj2.name = "Fast Connect IDENTIFY";
   obj[2] = obj2;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj3 = Object.create(tmp.prototype);
   obj3.emoji = "\u{1F3C3}";
   obj3.name = "Load Imports";
   obj[3] = obj3;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj4 = Object.create(tmp.prototype);
   obj4.emoji = "\u{1F3C3}";
   obj4.name = "Initial Initialization";
   obj[4] = obj4;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj5 = Object.create(tmp.prototype);
   obj5.emoji = "\u{1F4BE}";
   obj5.name = "Load Storage";
   obj[5] = obj5;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj6 = Object.create(tmp.prototype);
   obj6.emoji = "\u{1F4BE}";
   obj6.name = "Parse Storage";
   obj[6] = obj6;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj7 = Object.create(tmp.prototype);
   obj7.emoji = "\u{1F4BE}";
   obj7.name = "Load Mini Cache";
   obj[7] = obj7;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj8 = Object.create(tmp.prototype);
   obj8.emoji = "\u{1F4BE}";
   obj8.name = "Fetch Guild Cache";
   obj[8] = obj8;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj9 = Object.create(tmp.prototype);
   obj9.emoji = "\u{1F4BE}";
   obj9.name = "Fetch Initial Guild Channels Cache";
   obj[9] = obj9;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj10 = Object.create(tmp.prototype);
   obj10.emoji = "\u{1F4BE}";
   obj10.name = "Load Cached Messages";
   obj[10] = obj10;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj11 = Object.create(TTIEvent.prototype);
@@ -471,7 +360,7 @@ const prototype4 = function TTITrackers() {
   obj11.onlyOnce = false;
   obj11.alwaysRecord = false;
   obj[11] = obj11;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj12 = Object.create(TTIEvent.prototype);
@@ -480,7 +369,7 @@ const prototype4 = function TTITrackers() {
   obj12.onlyOnce = false;
   obj12.alwaysRecord = false;
   obj[12] = obj12;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj13 = Object.create(TTIEvent.prototype);
@@ -489,7 +378,7 @@ const prototype4 = function TTITrackers() {
   obj13.onlyOnce = false;
   obj13.alwaysRecord = true;
   obj[13] = obj13;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj14 = Object.create(TTIEvent.prototype);
@@ -498,7 +387,7 @@ const prototype4 = function TTITrackers() {
   obj14.onlyOnce = true;
   obj14.alwaysRecord = false;
   obj[14] = obj14;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj15 = Object.create(TTIEvent.prototype);
@@ -507,14 +396,14 @@ const prototype4 = function TTITrackers() {
   obj15.onlyOnce = true;
   obj15.alwaysRecord = false;
   obj[15] = obj15;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj16 = Object.create(tmp.prototype);
   obj16.emoji = "\u{1F3A8}";
   obj16.name = "RowGenerator.generate()";
   obj[16] = obj16;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj17 = Object.create(TTIEvent.prototype);
@@ -523,7 +412,7 @@ const prototype4 = function TTITrackers() {
   obj17.onlyOnce = false;
   obj17.alwaysRecord = true;
   obj[17] = obj17;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj18 = Object.create(TTIEvent.prototype);
@@ -532,7 +421,7 @@ const prototype4 = function TTITrackers() {
   obj18.onlyOnce = true;
   obj18.alwaysRecord = false;
   obj[18] = obj18;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj19 = Object.create(TTIEvent.prototype);
@@ -541,7 +430,7 @@ const prototype4 = function TTITrackers() {
   obj19.onlyOnce = false;
   obj19.alwaysRecord = false;
   obj[19] = obj19;
-  if (typeof TTIEvent !== "find") {
+  if (typeof TTIEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj20 = Object.create(TTIEvent.prototype);
@@ -550,150 +439,150 @@ const prototype4 = function TTITrackers() {
   obj20.onlyOnce = false;
   obj20.alwaysRecord = false;
   obj[20] = obj20;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj21 = Object.create(tmp.prototype);
   obj21.emoji = "\u{1F310}";
   obj21.name = "Initial Guild";
   obj[21] = obj21;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj22 = Object.create(tmp.prototype);
   obj22.emoji = "\u{1F4BE}";
   obj22.name = "Load Lazy Cache";
   obj[22] = obj22;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj23 = Object.create(tmp.prototype);
   obj23.emoji = "\u{1F4BE}";
   obj23.name = "Fetch Lazy Cache";
   obj[23] = obj23;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj24 = Object.create(tmp.prototype);
   obj24.emoji = "\u{1F4BE}";
   obj24.name = "Parse Lazy Cache";
   obj[24] = obj24;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj25 = Object.create(tmp.prototype);
   obj25.emoji = "\u{1F4BE}";
   obj25.name = "Fetch Stale Channels";
   obj[25] = obj25;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj26 = Object.create(tmp.prototype);
   obj26.emoji = "\u{1F4BE}";
   obj26.name = "Deserialize Cache";
   obj[26] = obj26;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj27 = Object.create(tmp.prototype);
   obj27.emoji = "\u{1F4BE}";
   obj27.name = "Dispatch Lazy Cache";
   obj[27] = obj27;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj28 = Object.create(tmp.prototype);
   obj28.emoji = "\u{1F310}";
   obj28.name = "Parse READY";
   obj[28] = obj28;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj29 = Object.create(tmp.prototype);
   obj29.emoji = "\u{1F310}";
   obj29.name = "READY";
   obj[29] = obj29;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj30 = Object.create(tmp.prototype);
   obj30.emoji = "\u{1F310}";
   obj30.name = "Hydrate READY";
   obj[30] = obj30;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj31 = Object.create(tmp.prototype);
   obj31.emoji = "\u{1F310}";
   obj31.name = "Dispatch READY";
   obj[31] = obj31;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj32 = Object.create(tmp.prototype);
   obj32.emoji = "\u{1F310}";
   obj32.name = "Parse READY Supplemental";
   obj[32] = obj32;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj33 = Object.create(tmp.prototype);
   obj33.emoji = "\u{1F310}";
   obj33.name = "READY Supplemental";
   obj[33] = obj33;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj34 = Object.create(tmp.prototype);
   obj34.emoji = "\u{1F310}";
   obj34.name = "Hydrate READY Supplemental";
   obj[34] = obj34;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj35 = Object.create(tmp.prototype);
   obj35.emoji = "\u{1F310}";
   obj35.name = "Dispatch READY Supplemental";
   obj[35] = obj35;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj36 = Object.create(tmp.prototype);
   obj36.emoji = "\u{1F310}";
   obj36.name = "Fetch messages";
   obj[36] = obj36;
-  if (typeof tmp !== "find") {
+  if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj37 = Object.create(tmp.prototype);
   obj37.emoji = "\u{1F310}";
   obj37.name = "Dispatch messages";
   obj[37] = obj37;
-  if (typeof TTIImportEvent !== "find") {
+  if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = { polyfillsEnd: Object.create(tmp42.prototype), sentryEnd: null, appStateChangeStart: null, appStateChangeEnd: null, loadMiniCacheStart: null, loadStorageStart: null, loadStorageEnd: null };
-  if (typeof TTIImportEvent !== "find") {
+  if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj[1] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "find") {
+  if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj[2] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "find") {
+  if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj[3] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "find") {
+  if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj[4] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "find") {
+  if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj[5] = Object.create(TTIImportEvent.prototype);
-  if (typeof TTIImportEvent !== "find") {
+  if (typeof TTIImportEvent !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj[6] = Object.create(TTIImportEvent.prototype);

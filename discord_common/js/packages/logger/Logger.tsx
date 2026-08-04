@@ -135,66 +135,14 @@ class Logger {
       let c4 = 0;
       let c5 = 0;
       return (function*(arg0, arg1) {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_3 = tmp5;
-                let asyncGeneratorStep = tmp2;
-                let logger;
-                asyncGeneratorStep = undefined;
-                const _Date2 = Date;
-                logger = Date.now();
-                c4 = 1;
-                c5 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = logger();
-                return obj1;
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              asyncGeneratorStep = arg1;
-              const _Date = Date;
-              logger.log(closure_0, Date.now() - logger + "ms");
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = asyncGeneratorStep;
-              return obj;
-            }
-          } catch (tmp16) {
-            c5 = tmp;
-            throw tmp16;
-          }
-        }
+        let closure_3 = tmp5;
+        let asyncGeneratorStep = tmp2;
+        const _Date2 = Date;
+        const logger = Date.now();
+        asyncGeneratorStep = yield logger();
+        const _Date = Date;
+        logger.log(closure_0, Date.now() - logger + "ms");
+        return asyncGeneratorStep;
       })();
     });
     obj.timeAsync = function() {

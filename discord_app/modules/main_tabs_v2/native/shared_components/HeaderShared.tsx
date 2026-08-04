@@ -186,7 +186,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
     const items = [_undefined.headerWrapper, gradientTop, { paddingTop: num, minHeight: num + outer1_5 }, navigation];
     return items;
   }, items);
-  if (typeof headerTitle === "y") {
+  if (typeof headerTitle === "string") {
     let tmp6 = renderGenericTitle;
   } else {
     tmp6 = headerTitle;
@@ -206,7 +206,7 @@ const memoResult = importAllResult.memo(function HeaderInner(style) {
   obj[1] = navigation.isFocused() && navigation.canGoBack();
   obj[2] = text;
   const items1 = [fn(obj), , , ];
-  if (typeof headerTitle !== "y") {
+  if (typeof headerTitle !== "string") {
     let name = options.title;
     if (name == null) {
       name = style.route.name;

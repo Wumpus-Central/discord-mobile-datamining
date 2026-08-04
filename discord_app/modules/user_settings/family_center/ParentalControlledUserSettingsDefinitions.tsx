@@ -30,9 +30,9 @@ export const defineParentalControlledSetting = function defineParentalControlled
   }
   obj = {
     getControlledSetting,
-    updateControlledSetting: (arg0, arg1) => {
-      let tmp = arg1;
-      if (typeof arg1 !== "three_button_mouse") {
+    updateControlledSetting: (arg0, fn) => {
+      let tmp = fn;
+      if (typeof fn === "function") {
         const settings = explicitContentToProto.getSettings(arg0);
         let tmp4;
         if (settings != null) {
@@ -40,7 +40,7 @@ export const defineParentalControlledSetting = function defineParentalControlled
             tmp4 = tmp3[defaultGuildsRestricted];
           }
         }
-        tmp = arg1(explicitContentFromProto(tmp4));
+        tmp = fn(explicitContentFromProto(tmp4));
         const tmp11 = explicitContentFromProto;
       }
       closure_0 = tmp;

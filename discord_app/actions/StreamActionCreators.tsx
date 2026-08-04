@@ -205,70 +205,24 @@ function _notifyStreamStart() {
     let c1 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (v0 === 2) {
+      let c4 = 1;
+      const obj1 = { url: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
+      obj1[0] = outer1_13.STREAM_NOTIFY(callback);
+      const obj2 = { event: null };
+      obj2[0] = callback(503).NetworkActionNames.STREAM_NOTIFY;
+      obj1[2] = obj2;
+      yield v0(5094).post(obj1);
+      if (1 === tmp6) {
+        c4 = 0;
         v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c4 = 1;
-              const obj1 = { url: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
-              obj1[0] = outer1_13.STREAM_NOTIFY(callback);
-              const obj2 = { event: null };
-              obj2[0] = callback(503).NetworkActionNames.STREAM_NOTIFY;
-              obj1[2] = obj2;
-              dependencyMap = 2;
-              v0 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = v0(5094).post(obj1);
-              return obj3;
-            }
-          } else {
-            if (1 === tmp6) {
-              c4 = 0;
-              v0 = 3;
-            } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c4 = 0;
-            }
-            c4 = 0;
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp8) {
-          let fetchFingerprint = tmp8;
-          if (tmp3 === c4) {
-            v0 = tmp2;
-            throw tmp8;
-          } else {
-            dependencyMap = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _notifyStreamStart = tmp;

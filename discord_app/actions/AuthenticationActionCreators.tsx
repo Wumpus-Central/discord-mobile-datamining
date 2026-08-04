@@ -711,75 +711,24 @@ obj = {
   verify(arg0) {
     let closure_0 = arg0;
     return callback(function*() {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let closure_0 = tmp5;
-              closure_0 = undefined;
-              let obj7 = outer1_1(5094);
-              const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
-              obj1[0] = outer1_9.VERIFY;
-              const obj2 = { token: null };
-              obj2[0] = outer1_0;
-              obj1[1] = obj2;
-              const obj3 = { event: null };
-              obj3[0] = outer1_0(503).NetworkActionNames.USER_VERIFY;
-              obj1[2] = obj3;
-              obj1[3] = outer1_0(530).rejectWithMigratedError();
-              c2 = 1;
-              dependencyMap = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = obj7.post(obj1);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            closure_0 = arg1;
-            obj = outer1_1(709);
-            const obj6 = { type: "LOGIN_SUCCESS", token: null };
-            obj6[1] = closure_0.body.token;
-            obj.dispatch(obj6);
-            dependencyMap = 3;
-            obj7 = { value: null, done: true };
-            obj7[0] = closure_0.body.user_id;
-            return obj7;
-          }
-        } catch (tmp13) {
-          dependencyMap = tmp;
-          throw tmp13;
-        }
-      }
+      let closure_1 = tmp2;
+      let closure_0 = tmp5;
+      const obj7 = outer1_1(5094);
+      const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
+      obj1[0] = outer1_9.VERIFY;
+      const obj2 = { token: null };
+      obj2[0] = outer1_0;
+      obj1[1] = obj2;
+      const obj3 = { event: null };
+      obj3[0] = outer1_0(503).NetworkActionNames.USER_VERIFY;
+      obj1[2] = obj3;
+      obj1[3] = outer1_0(530).rejectWithMigratedError();
+      closure_0 = yield obj7.post(obj1);
+      const obj = outer1_1(709);
+      const obj6 = { type: "LOGIN_SUCCESS", token: null };
+      obj6[1] = closure_0.body.token;
+      obj.dispatch(obj6);
+      return closure_0.body.user_id;
     })();
   },
   authorizePayment(token) {
@@ -956,73 +905,24 @@ obj = {
     let require;
     ({ method: require, code: importDefault, ticket: importAll, password: dependencyMap, token: closure_4, source: closure_5 } = arg0);
     return callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === v02) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj5 = v02(outer1_3[8]);
-              obj5.dispatch({ type: "LOGIN_MFA" });
-              const obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
-              obj1[0] = outer1_9.RESET_PASSWORD;
-              const obj2 = { code: null, ticket: null, password: null, token: null, source: null, method: null };
-              obj2[0] = v02;
-              obj2[1] = outer1_2;
-              obj2[2] = outer1_3;
-              obj2[3] = outer1_4;
-              obj2[4] = outer1_5;
-              obj2[5] = v0;
-              obj1[1] = obj2;
-              const obj3 = { event: null, properties: null };
-              obj3[0] = v0(outer1_3[13]).NetworkActionNames.USER_RESET_PASSWORD;
-              obj3[1] = { mfa: true };
-              obj1[3] = obj3;
-              v02 = 1;
-              v0 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = v02(outer1_3[12]).post(obj1);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1.body.token;
-            return obj;
-          }
-        } catch (tmp5) {
-          v0 = tmp;
-          throw tmp5;
-        }
-      }
+      const obj5 = v02(outer1_3[8]);
+      obj5.dispatch({ type: "LOGIN_MFA" });
+      const obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
+      obj1[0] = outer1_9.RESET_PASSWORD;
+      const obj2 = { code: null, ticket: null, password: null, token: null, source: null, method: null };
+      obj2[0] = v02;
+      obj2[1] = outer1_2;
+      obj2[2] = outer1_3;
+      obj2[3] = outer1_4;
+      obj2[4] = outer1_5;
+      obj2[5] = v0;
+      obj1[1] = obj2;
+      const obj3 = { event: null, properties: null };
+      obj3[0] = v0(outer1_3[13]).NetworkActionNames.USER_RESET_PASSWORD;
+      obj3[1] = { mfa: true };
+      obj1[3] = obj3;
+      yield v02(outer1_3[12]).post(obj1);
+      return arg1.body.token;
     })();
   },
   forgotPassword(outer1_6) {

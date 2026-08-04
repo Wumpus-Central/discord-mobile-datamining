@@ -225,7 +225,7 @@ function computePermissions(excludeGuildPermissions) {
     return closure_23;
   } else {
     let id = user;
-    if (typeof user !== "y") {
+    if (typeof user !== "string") {
       id = user.id;
     }
     if (context instanceof closure_8) {

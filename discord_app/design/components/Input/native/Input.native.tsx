@@ -33,7 +33,7 @@ export const Input = function Input(arg0) {
   const tmp = createCacheKey();
   ({ label, labelTrailing, labelId, description, errorMessage, required } = arg0);
   ({ children, containerStyle } = arg0);
-  if (typeof label !== "_iter") {
+  if (typeof label === "string") {
     if (true === required) {
       const intl = require(1236) /* getSystemLocale */.intl;
       const _HermesInternal = HermesInternal;

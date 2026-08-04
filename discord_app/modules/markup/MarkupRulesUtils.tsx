@@ -1,7 +1,7 @@
 const result = require("set").fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
 export const smartOutput = function smartOutput(node, output, state) {
-  if (typeof node.content !== "y") {
+  if (typeof node.content !== "string") {
     if (undefined !== node.content) {
       let content = output(node.content, state);
     }

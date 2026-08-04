@@ -394,170 +394,121 @@ function _getSession() {
     const iter = (function*() {
       let createdAtTimestamp;
       let uuid;
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let c3 = tmp3;
+      if (flag === undefined) {
+        flag = true;
+      }
+      yield "ct";
+      if (1 === tmp7) {
         if (arg0 === 1) {
+          let c7 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c7 = 3;
+          let obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c3 = tmp3;
-              uuid = tmp7;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              let callback2;
-              uuid = undefined;
-              c3 = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "ct", done: "Array" };
+          uuid = null;
+          let tmp21 = null;
+          if ("loaded" === obj4.state) {
+            const session = obj4.session;
+            uuid = undefined;
+            if (session != null) {
+              uuid = session.uuid;
             }
+            tmp21 = uuid;
+          }
+          c3 = tmp21;
+          let socket = 1;
+          if ("uninitialized" === obj4.state) {
+            let callback2 = outer1_29;
+            let Storage = callback(outer1_2[15]).Storage;
+            let c6 = 3;
+            c7 = 1;
+            let obj2 = { value: null, done: false };
+            obj2[0] = Storage.getAfterRefresh(outer1_13);
+            return obj2;
           } else {
-            if (1 === tmp7) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                let obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                uuid = null;
-                let tmp21 = null;
-                if ("loaded" === obj4.state) {
-                  const session = obj4.session;
-                  uuid = undefined;
-                  if (session != null) {
-                    uuid = session.uuid;
-                  }
-                  tmp21 = uuid;
-                }
-                c3 = tmp21;
-                let socket = 1;
-                if ("uninitialized" === obj4.state) {
-                  callback2 = outer1_29;
-                  let Storage = callback(outer1_2[15]).Storage;
-                  c6 = 3;
-                  c7 = 1;
-                  let obj2 = { value: null, done: false };
-                  obj2[0] = Storage.getAfterRefresh(outer1_13);
-                  return obj2;
-                } else {
-                  uuid = obj4.session;
-                  socket = 0;
-                }
-              }
-            } else if (2 === tmp7) {
-              socket = 0;
-              socket = closure_5;
-              obj1 = callback2(uuid[10]);
-              obj1.captureException(socket);
-              const _Date = Date;
-              callback2 = Date.now();
-              if (callback3()) {
-                let isSessionExpiredResult = null == tmp30;
-                if (!isSessionExpiredResult) {
-                  let obj3 = flag(uuid[16]);
-                  isSessionExpiredResult = obj3.isSessionExpired(uuid);
-                }
-                if (isSessionExpiredResult) {
-                  obj3 = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
-                  let obj5 = flag(uuid[20]);
-                  obj3[0] = obj5.v4();
-                  obj3[1] = callback2;
-                  obj3[2] = callback2;
-                  obj3[3] = flag(uuid[16]).CLIENT_SESSION_STORAGE_VERSION;
-                  uuid = obj3;
-                  let c18 = 0;
-                }
-                uuid.lastUsedTimestamp = callback2;
-                (function maybeFlushSessionToStorage(c2) {
-                  const nowResult = performance.now();
-                  if (nowResult - c18 >= closure_12) {
-                    try {
-                      const Storage = flag(_null[15]).Storage;
-                      const result = Storage.set(closure_13, c2);
-                      c18 = nowResult;
-                    } catch (tmp7) {
-                      callback(_null[10]).captureException(tmp7);
-                      const obj = callback(_null[10]);
-                    }
-                  }
-                })(uuid);
-              } else {
-                let isSessionExpiredResult1 = null != tmp30;
-                if (isSessionExpiredResult1) {
-                  obj2 = flag(uuid[16]);
-                  isSessionExpiredResult1 = obj2.isSessionExpired(uuid);
-                }
-                if (isSessionExpiredResult1) {
-                  uuid = null;
-                }
-              }
-              obj4 = { state: "loaded", session: null };
-              obj4[1] = outer1_2;
-              let tmp61 = null != outer1_2;
-              if (tmp61) {
-                tmp61 = c3 !== uuid.uuid;
-              }
-              if (tmp61) {
-                tmp61 = flag;
-              }
-              if (tmp61) {
-                socket = socket.getSocket();
-                if (socket != null) {
-                  ({ createdAtTimestamp, uuid } = uuid);
-                  let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, callback(outer1_2[17]).clientLaunchId);
-                }
-              }
-              c7 = 3;
-              obj5 = { value: null, done: true };
-              obj5[0] = outer1_2;
-              return obj5;
-            } else if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              callback2(arg1);
-            }
+            uuid = obj4.session;
             socket = 0;
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp81) {
-          closure_5 = tmp81;
-          if (tmp4 === socket) {
-            c7 = tmp2;
-            throw tmp81;
-          } else {
-            c6 = tmp;
           }
         }
+      } else if (2 === tmp7) {
+        socket = 0;
+        socket = closure_5;
+        obj1 = callback2(uuid[10]);
+        obj1.captureException(socket);
+        const _Date = Date;
+        callback2 = Date.now();
+        if (callback3()) {
+          let isSessionExpiredResult = null == tmp30;
+          if (!isSessionExpiredResult) {
+            let obj3 = flag(uuid[16]);
+            isSessionExpiredResult = obj3.isSessionExpired(uuid);
+          }
+          if (isSessionExpiredResult) {
+            obj3 = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
+            let obj5 = flag(uuid[20]);
+            obj3[0] = obj5.v4();
+            obj3[1] = callback2;
+            obj3[2] = callback2;
+            obj3[3] = flag(uuid[16]).CLIENT_SESSION_STORAGE_VERSION;
+            uuid = obj3;
+            let c18 = 0;
+          }
+          uuid.lastUsedTimestamp = callback2;
+          (function maybeFlushSessionToStorage(c2) {
+            const nowResult = performance.now();
+            if (nowResult - c18 >= closure_12) {
+              try {
+                const Storage = flag(_null[15]).Storage;
+                const result = Storage.set(closure_13, c2);
+                c18 = nowResult;
+              } catch (tmp7) {
+                callback(_null[10]).captureException(tmp7);
+                const obj = callback(_null[10]);
+              }
+            }
+          })(uuid);
+        } else {
+          let isSessionExpiredResult1 = null != tmp30;
+          if (isSessionExpiredResult1) {
+            obj2 = flag(uuid[16]);
+            isSessionExpiredResult1 = obj2.isSessionExpired(uuid);
+          }
+          if (isSessionExpiredResult1) {
+            uuid = null;
+          }
+        }
+        obj4 = { state: "loaded", session: null };
+        obj4[1] = outer1_2;
+        let tmp61 = null != outer1_2;
+        if (tmp61) {
+          tmp61 = c3 !== uuid.uuid;
+        }
+        if (tmp61) {
+          tmp61 = flag;
+        }
+        if (tmp61) {
+          socket = socket.getSocket();
+          if (socket != null) {
+            ({ createdAtTimestamp, uuid } = uuid);
+            let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, callback(outer1_2[17]).clientLaunchId);
+          }
+        }
+        c7 = 3;
+        obj5 = { value: null, done: true };
+        obj5[0] = outer1_2;
+        return obj5;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        callback2(arg1);
       }
+      socket = 0;
+      return arg1;
     })();
     iter.next();
     return iter;

@@ -103,7 +103,7 @@ export const isCustomReactionEmojiId = function isCustomReactionEmojiId(emojiId)
   }
   if (!tmp) {
     return tmp;
-  } else if (typeof emojiId === "Object") {
+  } else if (typeof emojiId === "number") {
     let tmp2 = 0 !== emojiId;
   } else {
     const _String = String;

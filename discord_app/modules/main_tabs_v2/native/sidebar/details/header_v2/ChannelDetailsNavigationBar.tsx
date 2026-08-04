@@ -276,12 +276,7 @@ let closure_24 = importAllResult.forwardRef((cleanUp, ref) => {
       obj = { duration: 200, easing: null };
       Easing = tmp2(tmp3[30]).Easing;
       obj[1] = Easing.bezier(0.25, 0.1, 0.25, 1);
-      fn = function n(arg0) {
-        if (arg0) {
-          outer1_0(outer1_2[30]).runOnJS(closure_1)();
-          const obj = outer1_0(outer1_2[30]);
-        }
-      };
+      fn = function n() { ... };
       obj1 = { runOnJS: tmp2(tmp3[30]).runOnJS, cleanUp };
       fn.__closure = obj1;
       fn.__workletHash = 10411737901360;

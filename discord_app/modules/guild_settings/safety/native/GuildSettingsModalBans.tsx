@@ -55,7 +55,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
     paddingBottom = flattenResult.paddingBottom;
   }
   let num = 0;
-  if (typeof paddingBottom !== "V") {
+  if (typeof paddingBottom === "number") {
     num = paddingBottom + tmp6(tmp3[8]).space.PX_16;
   }
   const DeveloperMode = tmp2(tmp3[11]).DeveloperMode;

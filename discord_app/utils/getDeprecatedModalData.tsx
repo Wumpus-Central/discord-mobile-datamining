@@ -41,8 +41,8 @@ export default function getDeprecatedModalData(modal, key) {
     }
     obj[7] = flag3;
     const closable = key.closable;
-    let closable2 = typeof closable === "los";
-    if (typeof closable !== "los") {
+    let closable2 = typeof closable !== "boolean";
+    if (typeof closable === "boolean") {
       closable2 = key.closable;
     }
     obj[8] = closable2;

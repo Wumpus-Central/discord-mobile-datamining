@@ -696,74 +696,29 @@ export const useAutomaticForumSearch = function useAutomaticForumSearch(channel,
               if (!isSearchLoading) {
                 const _setTimeout = setTimeout;
                 user = setTimeout(flag(function*() {
-                  if (c0 === 2) {
+                  outer1_7.current = outer1_5;
+                  outer1_8.current = c1;
+                  let c2 = 1;
+                  const obj1 = outer2_1(outer2_2[33]);
+                  yield obj1.searchForumPosts(c0.guild_id, c0.id, outer1_5, c1, c2);
+                  if (1 === tmp6) {
+                    c2 = 0;
                     c0 = 3;
-                    HermesBuiltin.throwTypeError();
-                  } else if (tmp5 === 3) {
-                    if (arg0 === 1) {
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      let obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
-                    } else {
-                      return { value: "HermesInternal", done: null };
-                    }
-                  } else {
-                    try {
-                      c0 = 2;
-                      if (0 === c1) {
-                        if (arg0 === 1) {
-                          c0 = 3;
-                          throw arg1;
-                        } else if (arg0 === 2) {
-                          c0 = 3;
-                          obj = { value: null, done: true };
-                          obj[0] = arg1;
-                          return obj;
-                        } else {
-                          outer1_7.current = outer1_5;
-                          outer1_8.current = c1;
-                          let c2 = 1;
-                          let obj1 = outer2_1(outer2_2[33]);
-                          c1 = 2;
-                          c0 = 1;
-                          obj1 = { value: null, done: false };
-                          obj1[0] = obj1.searchForumPosts(c0.guild_id, c0.id, outer1_5, c1, c2);
-                          return obj1;
-                        }
-                      } else {
-                        if (1 === tmp6) {
-                          c2 = 0;
-                          c0 = 3;
-                        } else if (arg0 === 1) {
-                          c0 = 3;
-                          throw arg1;
-                        } else if (arg0 !== 2) {
-                          c2 = 0;
-                        }
-                        c2 = 0;
-                        c0 = 3;
-                        obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      }
-                    } catch (tmp18) {
-                      if (tmp3 === c2) {
-                        c0 = tmp2;
-                        throw tmp18;
-                      } else {
-                        c1 = tmp;
-                      }
-                    }
+                  } else if (arg0 === 1) {
+                    c0 = 3;
+                    throw arg1;
+                  } else if (arg0 !== 2) {
+                    c2 = 0;
                   }
+                  c2 = 0;
+                  return arg1;
                 }), 350);
                 return () => clearTimeout(closure_0);
               }
             }
           } else {
             tagFilter(tagSetting[33]).clearForumSearch(user.id);
-            let obj = tagFilter(tagSetting[33]);
+            const obj = tagFilter(tagSetting[33]);
           }
         }
       }

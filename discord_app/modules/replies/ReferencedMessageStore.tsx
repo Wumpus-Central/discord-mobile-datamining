@@ -187,7 +187,7 @@ prototype2["set"] = function set(arg0, arg1, arg2) {
   const _channelCaches = this._channelCaches;
   let value = _channelCaches.get(arg0);
   if (null == value) {
-    if (typeof ChannelReferencedMessageCache !== "find") {
+    if (typeof ChannelReferencedMessageCache !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(ChannelReferencedMessageCache.prototype);

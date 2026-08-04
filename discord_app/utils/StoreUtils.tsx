@@ -18,178 +18,130 @@ function _httpGetWithCountryCodeQuery() {
     let c7 = 0;
     let c8 = 0;
     const iter = (function*(arg0) {
-      if (merged === 2) {
-        merged = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      let paymentSourceId = tmp2;
+      if (flag === undefined) {
+        flag = true;
+      }
+      yield "ct";
+      if (1 === tmp5) {
         if (arg0 === 1) {
+          let merged = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          merged = 3;
+          let obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          merged = 2;
-          if (0 === closure_7) {
-            if (arg0 === 1) {
-              merged = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              merged = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let premiumTypeSubscription = tmp5;
-              let paymentSourceId = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              let c2;
-              let arr;
-              let defaultBillingCountryCode;
-              paymentSourceId = undefined;
-              premiumTypeSubscription = undefined;
-              closure_7 = undefined;
-              closure_7 = 1;
-              merged = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                merged = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                merged = 3;
-                let obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                c2 = arr.isAuthenticated();
-                if (flag) {
-                  if (c2) {
-                    arr = [];
-                    if (!paymentSourceId.hasFetchedPaymentSources) {
-                      const paymentSourcesFetchRequest = defaultBillingCountryCode.paymentSourcesFetchRequest;
-                      arr = paymentSourcesFetchRequest;
-                      if (paymentSourcesFetchRequest == null) {
-                        let obj2 = obj3(flag[10]);
-                        arr = obj2.fetchPaymentSources();
-                      }
-                      arr = arr.push(arr);
-                    }
-                    if (!defaultBillingCountryCode.ipCountryCodeLoaded) {
-                      obj3 = obj3(flag[10]);
-                      arr = arr.push(obj3.fetchIpCountryCode());
-                    }
-                    arr.push((function waitForSubscriptionsToBeFetched() {
-                      let closure_0;
-                      closure_0 = _null((arg0) => {
-                        let closure_0 = arg0;
-                        let c2 = 0;
-                        let c3 = 0;
-                        return (/* F119524 */ function*() { ... })();
-                      });
-                      return new Promise(function() {
-                        const self = this;
-                        const apply = closure_0.apply;
-                        if (typeof apply === "unknown") {
-                          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                        } else {
-                          applyArgumentsResult = apply(self, arguments);
-                        }
-                        return applyArgumentsResult;
-                      });
-                    })());
-                    const items = [Promise.allSettled(arr), ];
-                    const promise = new Promise((arg0) => setTimeout(arg0, 10000));
-                    items[1] = promise;
-                    closure_7 = 2;
-                    merged = 1;
-                    obj2 = { value: null, done: false };
-                    obj2[0] = Promise.race(items);
-                    return obj2;
-                  }
+          let c2 = arr.isAuthenticated();
+          if (flag) {
+            if (c2) {
+              arr = [];
+              if (!paymentSourceId.hasFetchedPaymentSources) {
+                const paymentSourcesFetchRequest = defaultBillingCountryCode.paymentSourcesFetchRequest;
+                arr = paymentSourcesFetchRequest;
+                if (paymentSourcesFetchRequest == null) {
+                  let obj2 = obj3(flag[10]);
+                  arr = obj2.fetchPaymentSources();
                 }
+                arr = arr.push(arr);
               }
-            } else if (arg0 === 1) {
-              merged = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              merged = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-            defaultBillingCountryCode = paymentSourceId.getDefaultBillingCountryCode();
-            const defaultPaymentSource = paymentSourceId.defaultPaymentSource;
-            let id;
-            if (defaultPaymentSource != null) {
-              id = defaultPaymentSource.id;
-            }
-            c2 = id;
-            if (id == null) {
-              c2 = null;
-            }
-            paymentSourceId = c2;
-            premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
-            let tmp19 = null != premiumTypeSubscription;
-            if (tmp19) {
-              tmp19 = null != premiumTypeSubscription.paymentSourceId;
-            }
-            if (tmp19) {
-              paymentSourceId = premiumTypeSubscription.paymentSourceId;
-            }
-            if (null === defaultBillingCountryCode) {
-              const ipCountryCode = defaultBillingCountryCode.ipCountryCode;
-              defaultBillingCountryCode = ipCountryCode;
-              if (ipCountryCode == null) {
-                defaultBillingCountryCode = null;
+              if (!defaultBillingCountryCode.ipCountryCodeLoaded) {
+                obj3 = obj3(flag[10]);
+                arr = arr.push(obj3.fetchIpCountryCode());
               }
+              arr.push((function waitForSubscriptionsToBeFetched() {
+                let closure_0;
+                closure_0 = _null((arg0) => {
+                  let closure_0 = arg0;
+                  let c2 = 0;
+                  let c3 = 0;
+                  return (/* F119524 */ function*() { ... })();
+                });
+                return new Promise(function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                });
+              })());
+              const items = [Promise.allSettled(arr), ];
+              const promise = new Promise((arg0) => setTimeout(arg0, 10000));
+              items[1] = promise;
+              let closure_7 = 2;
+              merged = 1;
+              obj2 = { value: null, done: false };
+              obj2[0] = Promise.race(items);
+              return obj2;
             }
-            closure_7 = {};
-            if (null != defaultBillingCountryCode) {
-              closure_7.country_code = defaultBillingCountryCode;
-            }
-            if (null != paymentSourceId) {
-              closure_7.payment_source_id = paymentSourceId;
-            }
-            if (null != defaultBillingCountryCode) {
-              if (typeof obj3 !== "_iter") {
-                obj3 = { url: null, oldFormErrors: true, rejectWithError: false };
-                obj3[0] = obj3;
-              }
-              if (typeof obj3.query === "y") {
-                const _Error = Error;
-                const error = new Error("string query not supported");
-                throw error;
-              } else {
-                const obj4 = {};
-                merged = closure_7;
-                merged = obj4;
-                merged = Object.assign(closure_7);
-                merged = obj3;
-                merged = obj4;
-                merged = Object.assign(obj3.query);
-                obj3.query = obj4;
-              }
-            }
-            const HTTP = obj3(flag[11]).HTTP;
-            merged = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = HTTP.get(obj3);
-            return obj5;
           }
-        } catch (tmp87) {
-          throw tmp87;
+        }
+      } else if (arg0 === 1) {
+        merged = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        merged = 3;
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      }
+      defaultBillingCountryCode = paymentSourceId.getDefaultBillingCountryCode();
+      const defaultPaymentSource = paymentSourceId.defaultPaymentSource;
+      if (defaultPaymentSource != null) {
+        const id = defaultPaymentSource.id;
+      }
+      c2 = id;
+      if (id == null) {
+        c2 = null;
+      }
+      paymentSourceId = c2;
+      premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
+      let tmp19 = null != premiumTypeSubscription;
+      if (tmp19) {
+        tmp19 = null != premiumTypeSubscription.paymentSourceId;
+      }
+      if (tmp19) {
+        paymentSourceId = premiumTypeSubscription.paymentSourceId;
+      }
+      if (null === defaultBillingCountryCode) {
+        const ipCountryCode = defaultBillingCountryCode.ipCountryCode;
+        defaultBillingCountryCode = ipCountryCode;
+        if (ipCountryCode == null) {
+          defaultBillingCountryCode = null;
         }
       }
+      if (null != defaultBillingCountryCode) {
+        closure_7.country_code = defaultBillingCountryCode;
+      }
+      if (null != paymentSourceId) {
+        closure_7.payment_source_id = paymentSourceId;
+      }
+      if (null != defaultBillingCountryCode) {
+        if (typeof obj3 === "string") {
+          obj3 = { url: null, oldFormErrors: true, rejectWithError: false };
+          obj3[0] = obj3;
+        }
+        if (typeof obj3.query === "string") {
+          const _Error = Error;
+          const error = new Error("string query not supported");
+          throw error;
+        } else {
+          const obj4 = {};
+          merged = closure_7;
+          merged = obj4;
+          merged = Object.assign(closure_7);
+          merged = obj3;
+          merged = obj4;
+          merged = Object.assign(obj3.query);
+          obj3.query = obj4;
+        }
+      }
+      const HTTP = obj3(flag[11]).HTTP;
+      return HTTP.get(obj3);
     })();
     iter.next();
     return iter;
@@ -232,7 +184,7 @@ export const getAssetURL = function getAssetURL(closure_7, mimeType, arg2, mp4) 
     str = "png";
   }
   let id = mimeType;
-  if (typeof mimeType !== "y") {
+  if (typeof mimeType !== "string") {
     id = mimeType.id;
   }
   if (null != CDN_HOST) {

@@ -47,66 +47,16 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   source = source.source;
   importDefault(4490).pushLazy(callback(function*() {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === paths) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
-            closure_0 = undefined;
-            paths = 1;
-            c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(paths[10])(paths[9], paths.paths);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c3 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c3 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          closure_0 = arg1.default;
-          if (closure_0 === outer1_8.AUTH) {
-            obj = { animation: null };
-            obj[0] = outer1_0(paths[11]).ModalAnimation.SLIDE_IN_OUT;
-            outer1_0.modalConfig = obj;
-          }
-          c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = outer1_0;
-          return obj3;
-        }
-      } catch (tmp16) {
-        c3 = tmp;
-        throw tmp16;
-      }
+    let closure_1 = tmp5;
+    let closure_0 = tmp2;
+    yield outer1_0(paths[10])(paths[9], paths.paths);
+    closure_0 = arg1.default;
+    if (closure_0 === outer1_8.AUTH) {
+      const obj = { animation: null };
+      obj[0] = outer1_0(paths[11]).ModalAnimation.SLIDE_IN_OUT;
+      outer1_0.modalConfig = obj;
     }
+    return outer1_0;
   }), { source }, closure_7);
 };
 prototype["handleAgeGateModalClose"] = function handleAgeGateModalClose() {

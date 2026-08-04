@@ -131,70 +131,23 @@ function BountiesModalContentInner(bounty) {
     flushProgress = bountyVideoProgressPersistence.flushProgress;
     const items5 = [bounty.id, sourceQuestContent];
     const callback = obj.useCallback(memo(function*() {
-      if (c5 === 2) {
+      let closure_1 = tmp3;
+      let c3 = 1;
+      yield outer1_0(outer1_2[17]).claimBountyReward(outer1_0.id, outer1_1);
+      if (1 === tmp7) {
+        c3 = 0;
+        let closure_0 = closure_2;
+        const obj1 = outer1_0(outer1_2[18]);
+        const result = obj1.openBountyRewardClaimErrorToast(closure_0);
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp3;
-              let closure_0 = tmp7;
-              let c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(outer1_2[17]).claimBountyReward(outer1_0.id, outer1_1);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              closure_0 = closure_2;
-              obj1 = outer1_0(outer1_2[18]);
-              const result = obj1.openBountyRewardClaimErrorToast(closure_0);
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp20) {
-          closure_2 = tmp20;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp20;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     }), items5);
     tmp9Result = tmp9(14170);
     obj = { bountyId: null, sourceQuestContent: null, rewardDurationMs: null, initialPlaybackTimeSec: null, initialMaxVideoProgressSec: null, initialVideoDurationSec: null, wasPreloaded: false, startupPath: "carousel", verticalScrollingPosition: null };

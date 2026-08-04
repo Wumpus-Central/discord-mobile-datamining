@@ -162,7 +162,7 @@ function getTrackUserProfileProperties(userId) {
       const badges = displayProfile.getBadges();
       if (badges != null) {
         const mapped1 = badges.map((id) => id.id);
-        found = mapped1.filter((arg0) => typeof arg0 === "y");
+        found = mapped1.filter((str) => typeof str === "string");
       }
     }
     if (found == null) {

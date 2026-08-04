@@ -11,7 +11,7 @@ function SearchListSectionLabel(label) {
   label = label.label;
   let obj = { style: callback().spacer, children: null };
   let tmpResult = label;
-  if (typeof label !== "_iter") {
+  if (typeof label === "string") {
     obj = { title: null };
     obj[0] = label;
     tmpResult = tmp(require(5649) /* TableRowGroupTitle */.TableRowGroupTitle, obj);
@@ -22,7 +22,7 @@ function SearchListSectionLabel(label) {
 function SearchListSectionSubLabel(subLabel) {
   subLabel = subLabel.subLabel;
   let obj = { style: callback().subLabel, children: null };
-  if (typeof subLabel === "y") {
+  if (typeof subLabel === "string") {
     obj = { variant: "text-xs/normal", color: "text-muted", children: null };
     obj[2] = subLabel;
     let tmpResult = tmp(require(4281) /* Text */.Text, obj);
@@ -85,7 +85,7 @@ function keyExtractor(type) {
     }
   }
   let label = arg1;
-  if (typeof type.label !== "_iter") {
+  if (typeof type.label === "string") {
     label = type.label;
   }
   return "" + type.type + "-" + label;

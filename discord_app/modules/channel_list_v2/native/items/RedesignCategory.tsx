@@ -50,7 +50,7 @@ function renderCategoryItem(arg0) {
   obj[2] = closure_8;
   items[1] = obj;
   let tmp2 = name;
-  if (typeof name !== "_iter") {
+  if (typeof name === "string") {
     let str = "text-subtle";
     if (muted) {
       str = "text-muted";

@@ -26,84 +26,42 @@ let closure_4 = importDefaultResult((arg0) => {
   let c3 = 0;
   let c4 = 0;
   const iter = (function*(arg0) {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
+    let callback = tmp2;
+    attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
+    yield "ct";
+    if (1 === tmp5) {
       if (arg0 === 1) {
+        let c4 = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        c4 = 3;
+        let obj1 = { value: null, done: true };
+        obj1[0] = arg1;
+        return obj1;
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const dependencyMap = tmp5;
-            let callback = tmp2;
-            let attachmentUrl;
-            attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
-            callback = undefined;
-            c3 = 1;
+        if (null != attachmentUrl) {
+          if ("" !== attachmentUrl) {
+            const obj3 = attachmentUrl(9661);
+            let c3 = 2;
             c4 = 1;
-            return { value: "ct", done: "Array" };
+            const obj2 = { value: null, done: false };
+            obj2[0] = obj3.maybeRefreshAttachmentUrl(attachmentUrl);
+            return obj2;
           }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              let obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              if (null != attachmentUrl) {
-                if ("" !== attachmentUrl) {
-                  let obj3 = attachmentUrl(9661);
-                  c3 = 2;
-                  c4 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = obj3.maybeRefreshAttachmentUrl(attachmentUrl);
-                  return obj2;
-                }
-              }
-              c4 = 3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            callback = arg1;
-            obj = callback(8859);
-            obj.trackLinkClicked(callback);
-            obj1 = callback(3982);
-            obj1.openURL(callback);
-          }
-          c4 = 3;
-          obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
         }
-      } catch (tmp25) {
-        c4 = tmp;
-        throw tmp25;
+        c4 = 3;
       }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      callback = arg1;
+      const obj = callback(8859);
+      obj.trackLinkClicked(callback);
+      obj1 = callback(3982);
+      obj1.openURL(callback);
     }
+    return arg1;
   })();
   iter.next();
   return iter;
@@ -123,83 +81,41 @@ let closure_3 = importDefaultResult((arg0) => {
   let c3 = 0;
   let c4 = 0;
   const iter = (function*(arg0) {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
+    let callback = tmp2;
+    attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
+    yield "ct";
+    if (1 === tmp5) {
       if (arg0 === 1) {
+        let c4 = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        c4 = 3;
+        const obj1 = { value: null, done: true };
+        obj1[0] = arg1;
+        return obj1;
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const dependencyMap = tmp5;
-            let callback = tmp2;
-            let attachmentUrl;
-            attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
-            callback = undefined;
-            c3 = 1;
+        if (null != attachmentUrl) {
+          if ("" !== attachmentUrl) {
+            let obj2 = attachmentUrl(9661);
+            let c3 = 2;
             c4 = 1;
-            return { value: "ct", done: "Array" };
+            obj2 = { value: null, done: false };
+            obj2[0] = obj2.maybeRefreshAttachmentUrl(attachmentUrl);
+            return obj2;
           }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              if (null != attachmentUrl) {
-                if ("" !== attachmentUrl) {
-                  let obj2 = attachmentUrl(9661);
-                  c3 = 2;
-                  c4 = 1;
-                  obj2 = { value: null, done: false };
-                  obj2[0] = obj2.maybeRefreshAttachmentUrl(attachmentUrl);
-                  return obj2;
-                }
-              }
-              c4 = 3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            callback = arg1;
-            obj = { urlString: null };
-            obj[0] = callback;
-            callback(10971)(obj);
-          }
-          c4 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
         }
-      } catch (tmp22) {
-        c4 = tmp;
-        throw tmp22;
+        c4 = 3;
       }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      callback = arg1;
+      const obj = { urlString: null };
+      obj[0] = callback;
+      callback(10971)(obj);
     }
+    return arg1;
   })();
   iter.next();
   return iter;

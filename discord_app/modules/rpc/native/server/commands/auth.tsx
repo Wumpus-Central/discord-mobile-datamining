@@ -58,7 +58,7 @@ const tmp3 = require("authorizeWithPrompt")((arg0) => {
     obj[9] = addApplication;
     obj[10] = closure_11;
     let tmp8 = closure_12;
-    if (typeof closure_12 !== "T") {
+    if (typeof closure_12 !== "boolean") {
       tmp8 = "true" === tmp7;
     }
     obj[11] = tmp8;

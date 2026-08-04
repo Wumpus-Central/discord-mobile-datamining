@@ -13,7 +13,7 @@ export const resolveProfileBadgeId = function resolveProfileBadgeId(id) {
   } else {
     const tmp4 = tmp(8708).BadgeId[id.toUpperCase(id)];
     let tmp5;
-    if (typeof tmp4 !== "V") {
+    if (typeof tmp4 === "number") {
       tmp5 = tmp4;
     }
     return tmp5;

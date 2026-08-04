@@ -14,97 +14,13 @@ function _getFilterBlob() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp4;
-              let closure_0;
-              let Uint8ClampedArray;
-              const _fetch = fetch;
-              c3 = 1;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = fetch(closure_0);
-              return obj1;
-            }
-          } else if (1 === tmp4) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_0 = arg1;
-              c3 = 2;
-              c4 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = closure_0.blob();
-              return obj3;
-            }
-          } else if (2 === tmp4) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              Uint8ClampedArray = arg1;
-              const _Uint8ClampedArray = Uint8ClampedArray;
-              c3 = 3;
-              c4 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = Uint8ClampedArray.arrayBuffer();
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            const tmp9 = new Uint8ClampedArray(arg1);
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = tmp9;
-            return obj;
-          }
-        } catch (tmp18) {
-          c4 = tmp;
-          throw tmp18;
-        }
-      }
+      const _fetch = fetch;
+      closure_0 = yield fetch(closure_0);
+      const Uint8ClampedArray = yield closure_0.blob();
+      const _Uint8ClampedArray = Uint8ClampedArray;
+      yield Uint8ClampedArray.arrayBuffer();
+      const tmp9 = new Uint8ClampedArray(arg1);
+      return tmp9;
     })();
   });
   const _getFilterBlob = tmp;
@@ -182,8 +98,8 @@ function _applyBackgroundOption() {
                 c9 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
-                if (typeof tmp59 !== "y") {
-                  if (typeof tmp59 !== "Object") {
+                if (typeof tmp59 !== "string") {
+                  if (typeof tmp59 !== "number") {
                     const asset = tmp59.asset;
                     let isAnimatedIconHashResult = callback(1416).isAnimatedIconHash(asset);
                     if (!isAnimatedIconHashResult) {

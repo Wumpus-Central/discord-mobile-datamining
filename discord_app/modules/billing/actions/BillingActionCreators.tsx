@@ -553,68 +553,17 @@ function _fetchPayment() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp2;
-              const callback = tmp5;
-              let lib;
-              const HTTP = lib(outer1_2[9]).HTTP;
-              const obj1 = { url: null, rejectWithError: true };
-              obj1[0] = outer1_10.BILLING_PAYMENT(lib);
-              c3 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            lib = arg1;
-            obj = callback(table[8]);
-            const obj4 = { type: "BILLING_PAYMENT_FETCH_SUCCESS", payment: null };
-            obj4[1] = lib.body;
-            obj.dispatch(obj4);
-            c4 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = lib;
-            return obj5;
-          }
-        } catch (tmp16) {
-          c4 = tmp;
-          throw tmp16;
-        }
-      }
+      const table = tmp2;
+      const callback = tmp5;
+      const HTTP = lib(outer1_2[9]).HTTP;
+      const obj1 = { url: null, rejectWithError: true };
+      obj1[0] = outer1_10.BILLING_PAYMENT(lib);
+      lib = yield HTTP.get(obj1);
+      const obj = callback(table[8]);
+      const obj4 = { type: "BILLING_PAYMENT_FETCH_SUCCESS", payment: null };
+      obj4[1] = lib.body;
+      obj.dispatch(obj4);
+      return lib;
     })();
   });
   const _fetchPayment = tmp;
@@ -866,81 +815,33 @@ function _fetchSubscriptions() {
 function _getPerksRelevance() {
   const self = this;
   const tmp = callback(function*() {
-    if (c5 === 2) {
+    const callback = tmp3;
+    outer1_1(outer1_2[8]).wait(() => {
+      tmp3(tmp19[8]).dispatch({ type: "BILLING_PERKS_RELEVANCE_FETCH_START" });
+    });
+    let c3 = 1;
+    const HTTP = outer1_0(outer1_2[9]).HTTP;
+    const obj1 = { url: null, rejectWithError: true };
+    obj1[0] = outer1_10.BILLING_PERKS_RELEVANCE;
+    yield HTTP.get(obj1);
+    if (1 === tmp7) {
+      c3 = 0;
+      let obj3 = callback(709);
+      obj3.dispatch({ type: "BILLING_PERKS_RELEVANCE_FETCH_FAIL" });
+      let c5 = 3;
+    } else if (arg0 === 1) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp3;
-            let body = tmp7;
-            body = undefined;
-            outer1_1(outer1_2[8]).wait(() => {
-              tmp3(tmp19[8]).dispatch({ type: "BILLING_PERKS_RELEVANCE_FETCH_START" });
-            });
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[9]).HTTP;
-            const obj1 = { url: null, rejectWithError: true };
-            obj1[0] = outer1_10.BILLING_PERKS_RELEVANCE;
-            c4 = 2;
-            c5 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            let obj3 = callback(709);
-            obj3.dispatch({ type: "BILLING_PERKS_RELEVANCE_FETCH_FAIL" });
-            c5 = 3;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            body = arg1;
-            obj = callback(709);
-            obj3 = { type: "BILLING_PERKS_RELEVANCE_FETCH_SUCCESS", res: null };
-            obj3[1] = body.body;
-            obj.dispatch(obj3);
-            c3 = 0;
-          }
-          c3 = 0;
-          c5 = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
-          return obj4;
-        }
-      } catch (tmp19) {
-        const dependencyMap = tmp19;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp19;
-        } else {
-          c4 = tmp;
-        }
-      }
+      throw arg1;
+    } else if (arg0 !== 2) {
+      const body = arg1;
+      const obj = callback(709);
+      obj3 = { type: "BILLING_PERKS_RELEVANCE_FETCH_SUCCESS", res: null };
+      obj3[1] = body.body;
+      obj.dispatch(obj3);
+      c3 = 0;
     }
+    c3 = 0;
+    return arg1;
   });
   const _getPerksRelevance = tmp;
   const apply = tmp.apply;
@@ -1562,93 +1463,36 @@ function _redirectedPaymentSucceeded() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp5;
-              let closure_1 = tmp2;
-              closure_1 = undefined;
-              closure_2 = undefined;
-              c3 = 1;
-              c4 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_25(callback);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_1 = arg1;
-            let body;
-            if (closure_1 != null) {
-              body = closure_1.body;
-            }
-            if (null == body) {
-              throw callback(closure_2[14]).dispatchConfirmationError("could not fetch payment");
-            } else {
-              closure_2 = createFromServer.createFromServer(closure_1.body.payment_source);
-              if (set.has(closure_2.type)) {
-                let status;
-                if (closure_1 != null) {
-                  body = closure_1.body;
-                  if (body != null) {
-                    status = body.status;
-                  }
-                }
-                if (status === constants2.FAILED) {
-                  let obj3 = callback(closure_2[14]);
-                  throw obj3.dispatchConfirmationError("payment failed");
-                } else {
-                  let result = closure_2.paymentGateway !== constants.STRIPE;
-                  if (!result) {
-                    obj1 = callback(closure_2[15]);
-                    result = obj1.paymentIntentSucceeded(callback);
-                  }
-                  c4 = 3;
-                  obj3 = { value: null, done: true };
-                  obj3[0] = result;
-                  return obj3;
-                }
-              } else {
-                obj = callback(closure_2[14]);
-                throw obj.dispatchConfirmationError("unsupported redirect payment source");
-              }
-            }
-          }
-        } catch (tmp32) {
-          c4 = tmp;
-          throw tmp32;
+      let closure_2 = tmp5;
+      let closure_1 = tmp2;
+      closure_1 = yield outer1_25(callback);
+      if (closure_1 != null) {
+        let body = closure_1.body;
+      }
+      if (null == body) {
+        throw callback(closure_2[14]).dispatchConfirmationError("could not fetch payment");
+      }
+      closure_2 = createFromServer.createFromServer(closure_1.body.payment_source);
+      if (!set.has(closure_2.type)) {
+        const obj = callback(closure_2[14]);
+        throw obj.dispatchConfirmationError("unsupported redirect payment source");
+      }
+      if (closure_1 != null) {
+        body = closure_1.body;
+        if (body != null) {
+          const status = body.status;
         }
       }
+      if (status === constants2.FAILED) {
+        const obj3 = callback(closure_2[14]);
+        throw obj3.dispatchConfirmationError("payment failed");
+      }
+      let result = closure_2.paymentGateway !== constants.STRIPE;
+      if (!result) {
+        const obj1 = callback(closure_2[15]);
+        result = obj1.paymentIntentSucceeded(callback);
+      }
+      return result;
     })();
   });
   const _redirectedPaymentSucceeded = tmp;

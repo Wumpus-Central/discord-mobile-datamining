@@ -65,7 +65,7 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body) {
         substr = uri1;
       }
     }
-    tmp3 = undefined !== uri && typeof body.body.uri === "y";
+    tmp3 = undefined !== uri && typeof body.body.uri === "string";
   }
 };
 

@@ -185,78 +185,26 @@ function _fetchGuildJoinRequestsForUser() {
     let c5 = 0;
     let c6 = 0;
     return (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_4 = tmp2;
-              let MAX_RESULTS_PER_PAGE = tmp5;
-              let closure_2;
-              MAX_RESULTS_PER_PAGE = undefined;
-              const HTTP = callback(outer1_2[7]).HTTP;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_8.GUILD_JOIN_REQUESTS_FOR_USER(callback, callback2);
-              obj1[1] = callback(outer1_2[7]).rejectWithMigratedError();
-              c5 = 1;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            closure_2 = arg1;
-            const body = closure_2.body;
-            closure_2 = body;
-            if (body == null) {
-              closure_2 = [];
-            }
-            MAX_RESULTS_PER_PAGE = closure_2.map(c6);
-            obj = callback2(closure_2[6]);
-            const obj4 = { type: "GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS", guildId: null, userId: null, requests: null };
-            obj4[1] = callback;
-            obj4[2] = callback2;
-            obj4[3] = MAX_RESULTS_PER_PAGE;
-            obj.dispatch(obj4);
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = closure_2;
-            return obj5;
-          }
-        } catch (tmp16) {
-          c6 = tmp;
-          throw tmp16;
-        }
+      let closure_4 = tmp2;
+      let MAX_RESULTS_PER_PAGE = tmp5;
+      const HTTP = callback(outer1_2[7]).HTTP;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_8.GUILD_JOIN_REQUESTS_FOR_USER(callback, callback2);
+      obj1[1] = callback(outer1_2[7]).rejectWithMigratedError();
+      let closure_2 = yield HTTP.get(obj1);
+      const body = closure_2.body;
+      closure_2 = body;
+      if (body == null) {
+        closure_2 = [];
       }
+      MAX_RESULTS_PER_PAGE = closure_2.map(c6);
+      const obj = callback2(closure_2[6]);
+      const obj4 = { type: "GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS", guildId: null, userId: null, requests: null };
+      obj4[1] = callback;
+      obj4[2] = callback2;
+      obj4[3] = MAX_RESULTS_PER_PAGE;
+      obj.dispatch(obj4);
+      return closure_2;
     })();
   });
   const _fetchGuildJoinRequestsForUser = tmp;
@@ -784,71 +732,19 @@ function _fetchJoinRequestForInterview() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp2;
-              let callback = tmp5;
-              let lib;
-              callback = undefined;
-              const HTTP = lib(outer1_2[7]).HTTP;
-              const obj1 = { url: null, rejectWithError: null };
-              obj1[0] = outer1_8.JOIN_REQUEST(lib);
-              obj1[1] = lib(outer1_2[7]).rejectWithMigratedError();
-              c3 = 1;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            lib = arg1;
-            callback = callback2(lib.body);
-            obj = callback(table[6]);
-            const obj4 = { type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: null };
-            obj4[1] = callback;
-            obj.dispatch(obj4);
-            c4 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = lib;
-            return obj5;
-          }
-        } catch (tmp14) {
-          c4 = tmp;
-          throw tmp14;
-        }
-      }
+      const table = tmp2;
+      let callback = tmp5;
+      const HTTP = lib(outer1_2[7]).HTTP;
+      const obj1 = { url: null, rejectWithError: null };
+      obj1[0] = outer1_8.JOIN_REQUEST(lib);
+      obj1[1] = lib(outer1_2[7]).rejectWithMigratedError();
+      lib = yield HTTP.get(obj1);
+      callback = callback2(lib.body);
+      const obj = callback(table[6]);
+      const obj4 = { type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: null };
+      obj4[1] = callback;
+      obj.dispatch(obj4);
+      return lib;
     })();
   });
   const _fetchJoinRequestForInterview = tmp;
@@ -868,92 +764,25 @@ function _createOrEnterJoinRequestInterview() {
     let c4 = 0;
     let c5 = 0;
     const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let user = tmp5;
-              let body = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              body = undefined;
-              user = undefined;
-              v0 = 1;
-              c5 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const HTTP = callback(body[7]).HTTP;
-              const obj2 = { url: null, rejectWithError: null };
-              obj2[0] = closure_8.JOIN_REQUEST_INTERVIEW(callback);
-              obj2[1] = callback(body[7]).rejectWithMigratedError();
-              v0 = 2;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1;
-            user = v0(body.body);
-            const obj5 = { type: "CHANNEL_CREATE", channel: null };
-            obj5[1] = user;
-            flag(body[6]).dispatch(obj5);
-            if (flag) {
-              obj = flag(body[11]);
-              const privateChannel = obj.selectPrivateChannel(user.id);
-            }
-            c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = user.id;
-            return obj6;
-          }
-        } catch (tmp15) {
-          c5 = tmp;
-          throw tmp15;
-        }
+      let body = tmp2;
+      if (flag === undefined) {
+        flag = true;
       }
+      yield "ct";
+      const HTTP = callback(body[7]).HTTP;
+      const obj2 = { url: null, rejectWithError: null };
+      obj2[0] = closure_8.JOIN_REQUEST_INTERVIEW(callback);
+      obj2[1] = callback(body[7]).rejectWithMigratedError();
+      body = yield HTTP.post(obj2);
+      const user = v0(body.body);
+      const obj5 = { type: "CHANNEL_CREATE", channel: null };
+      obj5[1] = user;
+      flag(body[6]).dispatch(obj5);
+      if (flag) {
+        const obj = flag(body[11]);
+        const privateChannel = obj.selectPrivateChannel(user.id);
+      }
+      return user.id;
     })();
     iter.next();
     return iter;

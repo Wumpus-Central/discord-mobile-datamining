@@ -33,7 +33,7 @@ export const formatPrice = (arg0, arg1, arg2) => {
     const merged = Object.assign(callback2(obj, closure_2));
     let toNumberResult = arg0;
     if (tmp) {
-      if (typeof convertToMajorCurrencyUnits !== "find") {
+      if (typeof convertToMajorCurrencyUnits !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (null == obj[arg1]) {

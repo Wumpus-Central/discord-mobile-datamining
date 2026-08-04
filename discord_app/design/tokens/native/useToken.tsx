@@ -18,7 +18,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
   if (tmp3 == BACKGROUND_BASE_LOW) {
     return BACKGROUND_BASE_LOW;
   } else {
-    if (typeof BACKGROUND_BASE_LOW !== "window") {
+    if (typeof BACKGROUND_BASE_LOW === "object") {
       if (tmp3 !== BACKGROUND_BASE_LOW) {
         if ("resolve" in BACKGROUND_BASE_LOW) {
           const internal = importDefault(712).internal;
@@ -55,7 +55,7 @@ export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
         result = obj4.set(combined, semanticColor);
         let tmp14 = semanticColor;
       }
-    } else if (typeof BACKGROUND_BASE_LOW === "y") {
+    } else if (typeof BACKGROUND_BASE_LOW === "string") {
       tmp14 = BACKGROUND_BASE_LOW;
       if ("#" !== BACKGROUND_BASE_LOW[0]) {
         semanticColor = value;

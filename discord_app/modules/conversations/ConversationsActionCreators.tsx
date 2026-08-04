@@ -20,140 +20,178 @@ function _fetchChannelConversations() {
       let c5;
       let limit2;
       let throwOnError;
-      c5 = tmp3;
-      limit2 = tmp7;
-      let callback;
-      let callback2;
-      let dependencyMap;
-      c3 = undefined;
-      limit2 = undefined;
-      c5 = undefined;
-      let c6;
-      let hydrateMessages;
-      ({ channelId: c0, guildId: c1, direction: c2, anchor: c3, limit: limit2 } = callback);
-      if (limit2 === undefined) {
-        limit2 = c6;
-      }
-      ({ isJump: c5, throwOnError } = callback);
-      if (throwOnError === undefined) {
-        throwOnError = false;
-      }
-      c6 = throwOnError;
-      hydrateMessages = tmp94.hydrateMessages;
-      let c8;
-      let obj3;
-      let conversations;
-      hydrateMessages = 1;
-      c8 = 1;
-      yield "ct";
-      if (1 === tmp7) {
+      if (c8 === 2) {
+        c8 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          c8 = 3;
           throw body;
         } else if (arg0 === 2) {
-          c8 = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = body;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
         } else {
-          if (obj15.isTopicalNavEnabled(callback2, "fetch_channel_conversations")) {
-            const _HermesInternal = HermesInternal;
-            c8 = "" + dependencyMap + ":" + c3 + ":" + limit2 + ":" + true === c5;
-            if (!limit2.isListFetchPending(callback, c8)) {
-              let obj4 = callback2(709);
-              let obj2 = { type: "CONVERSATIONS_FETCH_START", channelId: null, direction: null, requestKey: null, isJump: null };
-              obj2[1] = callback;
-              obj2[2] = dependencyMap;
-              obj2[3] = c8;
-              callback2 = c5;
-              if (c5 == null) {
-                callback2 = false;
-              }
-              obj2[4] = callback2;
-              obj4.dispatch(obj2);
-              obj3 = { limit: null };
-              obj3[0] = limit2;
-              if (null != c3) {
-                if ("before" === dependencyMap) {
-                  obj3.before = c3;
-                } else if ("after" === dependencyMap) {
-                  obj3.after = c3;
-                } else {
-                  obj3.around = c3;
-                }
-              }
-              if (null != hydrateMessages) {
-                obj3.include_messages = true;
-                let limit = hydrateMessages.limit;
-                dependencyMap = limit;
-                if (limit == null) {
-                  dependencyMap = undefined;
-                }
-                obj3.message_limit = dependencyMap;
-                const tmp60 = obj3;
-              }
-              c6 = 1;
-              const HTTP = callback(530).HTTP;
-              obj4 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
-              obj4[0] = hydrateMessages.CHANNEL_CONVERSATIONS(callback);
-              obj4[1] = obj3;
-              hydrateMessages = 3;
-              c8 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.get(obj4);
-              return obj5;
-            }
-          }
-          obj15 = callback(8365);
+          return { value: "HermesInternal", done: null };
         }
-      } else if (2 === tmp7) {
-        c6 = 0;
-        obj2 = callback2(709);
-        const obj6 = { type: "CONVERSATIONS_FETCH_FAILURE", channelId: null, requestKey: null };
-        obj6[1] = callback;
-        obj6[2] = c8;
-        obj2.dispatch(obj6);
-        if (c6) {
-          const _Error = Error;
-          const error = new Error("Failed to fetch conversations");
-          throw error;
-        }
-      } else if (arg0 === 1) {
-        c8 = 3;
-        throw body;
-      } else if (arg0 === 2) {
-        c6 = 0;
-        c8 = 3;
-        const obj7 = { value: null, done: true };
-        obj7[0] = body;
-        return obj7;
       } else {
-        conversations = body.body.conversations;
-        const obj8 = { type: "CONVERSATIONS_FETCH_SUCCESS", channelId: null, rawConversations: null, direction: null, requestKey: null, anchor: null, isJump: null, fullyHydrated: null };
-        obj8[1] = callback;
-        obj8[2] = conversations;
-        obj8[3] = dependencyMap;
-        obj8[4] = c8;
-        obj8[5] = c3;
-        c3 = c5;
-        if (c5 == null) {
-          c3 = false;
+        try {
+          c8 = 2;
+          if (0 === hydrateMessages) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              c5 = tmp3;
+              limit2 = tmp7;
+              let callback;
+              let callback2;
+              let dependencyMap;
+              c3 = undefined;
+              limit2 = undefined;
+              c5 = undefined;
+              let c6;
+              hydrateMessages = undefined;
+              ({ channelId: c0, guildId: c1, direction: c2, anchor: c3, limit: limit2 } = callback);
+              if (limit2 === undefined) {
+                limit2 = c6;
+              }
+              ({ isJump: c5, throwOnError } = callback);
+              if (throwOnError === undefined) {
+                throwOnError = false;
+              }
+              c6 = throwOnError;
+              hydrateMessages = tmp94.hydrateMessages;
+              c8 = undefined;
+              let obj3;
+              let conversations;
+              hydrateMessages = 1;
+              c8 = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else {
+            if (1 === tmp7) {
+              if (arg0 === 1) {
+                c8 = 3;
+                throw body;
+              } else if (arg0 === 2) {
+                c8 = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = body;
+                return obj1;
+              } else {
+                if (obj15.isTopicalNavEnabled(callback2, "fetch_channel_conversations")) {
+                  const _HermesInternal = HermesInternal;
+                  c8 = "" + dependencyMap + ":" + c3 + ":" + limit2 + ":" + true === c5;
+                  if (!limit2.isListFetchPending(callback, c8)) {
+                    let obj4 = callback2(709);
+                    let obj2 = { type: "CONVERSATIONS_FETCH_START", channelId: null, direction: null, requestKey: null, isJump: null };
+                    obj2[1] = callback;
+                    obj2[2] = dependencyMap;
+                    obj2[3] = c8;
+                    callback2 = c5;
+                    if (c5 == null) {
+                      callback2 = false;
+                    }
+                    obj2[4] = callback2;
+                    obj4.dispatch(obj2);
+                    obj3 = { limit: null };
+                    obj3[0] = limit2;
+                    if (null != c3) {
+                      if ("before" === dependencyMap) {
+                        obj3.before = c3;
+                      } else if ("after" === dependencyMap) {
+                        obj3.after = c3;
+                      } else {
+                        obj3.around = c3;
+                      }
+                    }
+                    if (null != hydrateMessages) {
+                      obj3.include_messages = true;
+                      let limit = hydrateMessages.limit;
+                      dependencyMap = limit;
+                      if (limit == null) {
+                        dependencyMap = undefined;
+                      }
+                      obj3.message_limit = dependencyMap;
+                      const tmp60 = obj3;
+                    }
+                    c6 = 1;
+                    const HTTP = callback(530).HTTP;
+                    obj4 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
+                    obj4[0] = hydrateMessages.CHANNEL_CONVERSATIONS(callback);
+                    obj4[1] = obj3;
+                    hydrateMessages = 3;
+                    c8 = 1;
+                    const obj5 = { value: null, done: false };
+                    obj5[0] = HTTP.get(obj4);
+                    return obj5;
+                  }
+                }
+                obj15 = callback(8365);
+              }
+            } else if (2 === tmp7) {
+              c6 = 0;
+              obj2 = callback2(709);
+              const obj6 = { type: "CONVERSATIONS_FETCH_FAILURE", channelId: null, requestKey: null };
+              obj6[1] = callback;
+              obj6[2] = c8;
+              obj2.dispatch(obj6);
+              if (c6) {
+                const _Error = Error;
+                const error = new Error("Failed to fetch conversations");
+                throw error;
+              }
+            } else if (arg0 === 1) {
+              c8 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c6 = 0;
+              c8 = 3;
+              const obj7 = { value: null, done: true };
+              obj7[0] = body;
+              return obj7;
+            } else {
+              conversations = body.body.conversations;
+              const obj8 = { type: "CONVERSATIONS_FETCH_SUCCESS", channelId: null, rawConversations: null, direction: null, requestKey: null, anchor: null, isJump: null, fullyHydrated: null };
+              obj8[1] = callback;
+              obj8[2] = conversations;
+              obj8[3] = dependencyMap;
+              obj8[4] = c8;
+              obj8[5] = c3;
+              c3 = c5;
+              if (c5 == null) {
+                c3 = false;
+              }
+              obj8[6] = c3;
+              limit = undefined;
+              if (hydrateMessages != null) {
+                limit = hydrateMessages.limit;
+              }
+              obj8[7] = null == limit;
+              callback2(709).dispatch(obj8);
+              c6 = 0;
+              c8 = 3;
+              obj = { value: null, done: true };
+              obj[0] = conversations;
+              return obj;
+            }
+            c8 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp70) {
+          if (tmp4 === c6) {
+            c8 = tmp2;
+            throw tmp70;
+          } else {
+            hydrateMessages = tmp;
+          }
         }
-        obj8[6] = c3;
-        limit = undefined;
-        if (hydrateMessages != null) {
-          limit = hydrateMessages.limit;
-        }
-        obj8[7] = null == limit;
-        callback2(709).dispatch(obj8);
-        c6 = 0;
-        c8 = 3;
-        const obj = { value: null, done: true };
-        obj[0] = conversations;
-        return obj;
       }
-      c8 = 3;
-      yield "HermesInternal";
     })();
     iter.next();
     return iter;

@@ -12,7 +12,7 @@ const require = arg1;
 function handleConnectionOpen() {
   let Storage = require(595) /* Storage */.Storage;
   const id = store.getId();
-  if (typeof SETTINGS_MIGRATION_KEY !== "find") {
+  if (typeof SETTINGS_MIGRATION_KEY !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (!Storage.get("AudioContextSettingsMigrated:" + id)) {
@@ -170,7 +170,7 @@ function handleSetLocalMute(arg0) {
             const _String = String;
             const _Date = Date;
             tmp9[arg1].modifiedAt = String(Date.now());
-            if (typeof outer1_10 !== "find") {
+            if (typeof outer1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (first === outer1_8.STREAM) {
@@ -201,7 +201,7 @@ function handleSetLocalMute(arg0) {
             tmp19 = tmp9[arg1].volume !== USER2 || tmp9[arg1].muted || tmp9[arg1].soundboardMuted;
           } else {
             const AudioContextSetting = tmp5(tmp6[8]).AudioContextSetting;
-            if (typeof outer1_10 !== "find") {
+            if (typeof outer1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (first === outer1_8.STREAM) {
@@ -251,7 +251,7 @@ function handleSetLocalSoundboardMute(userId) {
             const _String = String;
             const _Date = Date;
             tmp9[arg1].modifiedAt = String(Date.now());
-            if (typeof outer1_10 !== "find") {
+            if (typeof outer1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (first === outer1_8.STREAM) {
@@ -282,7 +282,7 @@ function handleSetLocalSoundboardMute(userId) {
             tmp19 = tmp9[arg1].volume !== USER2 || tmp9[arg1].muted || tmp9[arg1].soundboardMuted;
           } else {
             const AudioContextSetting = tmp5(tmp6[8]).AudioContextSetting;
-            if (typeof outer1_10 !== "find") {
+            if (typeof outer1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (first === outer1_8.STREAM) {
@@ -345,7 +345,7 @@ let closure_12 = require("apply").debounce(() => {
           const _String = String;
           const _Date = Date;
           tmp9[arg1].modifiedAt = String(Date.now());
-          if (typeof outer1_10 !== "find") {
+          if (typeof outer1_10 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (first === outer1_8.STREAM) {
@@ -376,7 +376,7 @@ let closure_12 = require("apply").debounce(() => {
           tmp19 = tmp9[arg1].volume !== USER2 || tmp9[arg1].muted || tmp9[arg1].soundboardMuted;
         } else {
           const AudioContextSetting = tmp5(tmp6[8]).AudioContextSetting;
-          if (typeof outer1_10 !== "find") {
+          if (typeof outer1_10 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (first === outer1_8.STREAM) {

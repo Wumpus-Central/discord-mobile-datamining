@@ -770,83 +770,38 @@ export default {
       flag = false;
     }
     return callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_0 = tmp3;
-              let obj1 = { type: "THREAD_UPDATE", channel: null };
-              const obj2 = { flags: null };
-              obj2[0] = v0;
-              obj1[1] = outer1_0.merge(obj2);
-              v0(709).dispatch(obj1);
-              const obj3 = { flags: null };
-              obj3[0] = v0;
-              if (dependencyMap) {
-                obj3.archived = false;
-              }
-              dependencyMap = 1;
-              const HTTP = outer1_0(530).HTTP;
-              const obj4 = { url: null, body: null, rejectWithError: true };
-              obj4[0] = outer1_12.CHANNEL(outer1_0.id);
-              obj4[1] = obj3;
-              v0 = 2;
-              c3 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.patch(obj4);
-              return obj5;
-            }
-          } else {
-            if (1 === tmp7) {
-              dependencyMap = 0;
-              obj1 = v0(709);
-              const obj6 = { type: "THREAD_UPDATE", channel: null };
-              obj6[1] = closure_0;
-              obj1.dispatch(obj6);
-              c3 = 3;
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              dependencyMap = 0;
-            }
-            dependencyMap = 0;
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp17) {
-          if (tmp4 === dependencyMap) {
-            c3 = tmp2;
-            throw tmp17;
-          } else {
-            v0 = tmp;
-          }
-        }
+      let closure_0 = tmp3;
+      let obj1 = { type: "THREAD_UPDATE", channel: null };
+      const obj2 = { flags: null };
+      obj2[0] = v0;
+      obj1[1] = outer1_0.merge(obj2);
+      v0(709).dispatch(obj1);
+      const obj3 = { flags: null };
+      obj3[0] = v0;
+      if (dependencyMap) {
+        obj3.archived = false;
       }
+      dependencyMap = 1;
+      const HTTP = outer1_0(530).HTTP;
+      const obj4 = { url: null, body: null, rejectWithError: true };
+      obj4[0] = outer1_12.CHANNEL(outer1_0.id);
+      obj4[1] = obj3;
+      yield HTTP.patch(obj4);
+      if (1 === tmp7) {
+        dependencyMap = 0;
+        obj1 = v0(709);
+        const obj6 = { type: "THREAD_UPDATE", channel: null };
+        obj6[1] = closure_0;
+        obj1.dispatch(obj6);
+        let c3 = 3;
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw arg1;
+      } else if (arg0 !== 2) {
+        dependencyMap = 0;
+      }
+      dependencyMap = 0;
+      return arg1;
     })();
   },
   replacePin(fetchFingerprint, closure_0) {
@@ -1173,94 +1128,37 @@ export default {
       MATCH_SOME = _require(1383).ThreadSearchTagSetting.MATCH_SOME;
     }
     return callback(function*() {
-      if (first_messages === 2) {
-        first_messages = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          first_messages = 2;
-          if (0 === members) {
-            if (arg0 === 1) {
-              first_messages = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              first_messages = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let threads = tmp3;
-              let body = tmp2;
-              body = undefined;
-              threads = undefined;
-              members = undefined;
-              first_messages = undefined;
-              let most_recent_messages;
-              let joined;
-              if (null != first_messages) {
-                if (tmp37.size > 0) {
-                  const _Array = Array;
-                  joined = Array.from(tmp37).join(",");
-                  const arr = Array.from(tmp37);
-                }
-              }
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: null };
-              obj1[0] = outer1_12.THREAD_SEARCH(outer1_1);
-              const obj2 = { name: null, tag: null, tag_setting: null };
-              obj2[0] = dependencyMap;
-              obj2[1] = joined;
-              obj2[2] = outer1_4;
-              obj1[1] = obj2;
-              let obj5 = outer1_0(530);
-              obj1[2] = obj5.rejectWithMigratedError();
-              members = 1;
-              first_messages = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            first_messages = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            first_messages = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1.body;
-            threads = body.threads;
-            members = body.members;
-            first_messages = body.first_messages;
-            most_recent_messages = body.most_recent_messages;
-            obj5 = { type: "LOAD_THREADS_SUCCESS", threads: null, members: null, guildId: null, firstMessages: null, mostRecentMessages: null };
-            obj5[1] = threads;
-            obj5[2] = members;
-            obj5[3] = body;
-            obj5[4] = first_messages;
-            obj5[5] = most_recent_messages;
-            outer1_1(709).dispatch(obj5);
-            first_messages = 3;
-            obj = { value: null, done: true };
-            obj[0] = threads.map((id) => id.id);
-            return obj;
-          }
-        } catch (tmp16) {
-          first_messages = tmp;
-          throw tmp16;
+      let threads = tmp3;
+      let body = tmp2;
+      if (null != first_messages) {
+        if (tmp37.size > 0) {
+          const _Array = Array;
+          const joined = Array.from(tmp37).join(",");
+          const arr = Array.from(tmp37);
         }
       }
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, query: null, rejectWithError: null };
+      obj1[0] = outer1_12.THREAD_SEARCH(outer1_1);
+      const obj2 = { name: null, tag: null, tag_setting: null };
+      obj2[0] = dependencyMap;
+      obj2[1] = joined;
+      obj2[2] = outer1_4;
+      obj1[1] = obj2;
+      let obj5 = outer1_0(530);
+      obj1[2] = obj5.rejectWithMigratedError();
+      yield HTTP.get(obj1);
+      body = arg1.body;
+      threads = body.threads;
+      const most_recent_messages = body.most_recent_messages;
+      obj5 = { type: "LOAD_THREADS_SUCCESS", threads: null, members: null, guildId: null, firstMessages: null, mostRecentMessages: null };
+      obj5[1] = threads;
+      obj5[2] = members;
+      obj5[3] = body;
+      obj5[4] = first_messages;
+      obj5[5] = most_recent_messages;
+      outer1_1(709).dispatch(obj5);
+      return threads.map((id) => id.id);
     })();
   },
   summarizeThread(isThread) {

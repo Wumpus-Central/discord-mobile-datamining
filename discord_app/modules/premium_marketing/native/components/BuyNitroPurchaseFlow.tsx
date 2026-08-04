@@ -41,123 +41,76 @@ function BuyNitroPurchaseRunner(item) {
     function _runPurchase() {
       const self = this;
       const tmp = hasEmittedPaymentFlowStartedRef(function*() {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_1 = tmp3;
-                if (outer1_12) {
-                  let priceString;
-                  if (outer1_11 != null) {
-                    const checkoutContextRecord = outer1_11.checkoutContextRecord;
-                    if (checkoutContextRecord != null) {
-                      let obj4 = outer2_0(6780);
-                      const availablePlanForItems = checkoutContextRecord.getAvailablePlanForItems(obj4.getSubscriptionItemsForProduct(outer1_0.productId));
-                      if (availablePlanForItems != null) {
-                        priceString = availablePlanForItems.getPriceString();
-                      }
-                    }
-                  }
-                  let c0 = priceString;
-                  if (priceString == null) {
-                    c0 = null;
-                  }
-                  if (null != c5) {
-                    if (null != tmp35) {
-                      if (tmp35 !== c5) {
-                        outer1_7(tmp35);
-                        c5 = 3;
-                        let obj1 = { value: null, done: true };
-                        obj1[0] = undefined;
-                        return obj1;
-                      }
-                    }
-                  }
-                }
-                const obj7 = outer2_1(698);
-                let obj2 = { from_step: null, to_step: null, subscription_plan_gateway_plan_id: null, sku_id: null };
-                obj2[0] = outer2_0(7295).PaymentFlowStep.PLAN_SELECT;
-                obj2[1] = outer2_0(7295).PaymentFlowStep.EXTERNAL_PAYMENT;
-                obj2[2] = outer1_0.productId;
-                obj2[3] = outer1_0;
-                obj7.track(outer2_8.PAYMENT_FLOW_STEP, outer2_0(7295).getPaymentFlowStepAnalyticsFields(outer1_1, obj2));
-                let c4 = 1;
-                const obj3 = { productId: null, analyticsLocation: null, analyticsLoadId: null, analyticsLocations: null, orderId: null };
-                obj3[0] = outer1_0.productId;
-                obj3[1] = outer1_1.location;
-                obj3[2] = c2;
-                obj3[3] = outer1_1;
-                let id;
-                if (outer1_11 != null) {
-                  id = outer1_11.id;
-                }
-                obj3[4] = id;
-                c2 = 2;
-                c5 = 1;
-                obj4 = { value: null, done: false };
-                obj4[0] = outer1_13(obj3);
-                return obj4;
+        let closure_1 = tmp3;
+        if (outer1_12) {
+          let priceString;
+          if (outer1_11 != null) {
+            const checkoutContextRecord = outer1_11.checkoutContextRecord;
+            if (checkoutContextRecord != null) {
+              const obj4 = outer2_0(6780);
+              const availablePlanForItems = checkoutContextRecord.getAvailablePlanForItems(obj4.getSubscriptionItemsForProduct(outer1_0.productId));
+              if (availablePlanForItems != null) {
+                priceString = availablePlanForItems.getPriceString();
               }
-            } else {
-              if (1 === tmp7) {
-                c4 = 0;
-                if (sum instanceof outer2_1(7257)) {
-                  obj1 = outer2_0(4604);
-                  const subscriptions = obj1.fetchSubscriptions();
-                  obj2 = outer2_1(4624);
-                  const obj5 = { title: null, body: null, hideActionSheet: true };
-                  const intl = outer2_0(1236).intl;
-                  obj5[0] = intl.string(outer2_0(1236).t["U+H+kd"]);
-                  const intl2 = outer2_0(1236).intl;
-                  obj5[1] = intl2.string(outer2_0(1236).t.F9ktNa);
-                  obj2.show(obj5);
-                }
-                outer1_6();
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c4 = 0;
-              }
-              c4 = 0;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
             }
-          } catch (tmp55) {
-            sum = tmp55;
-            if (tmp4 === c4) {
-              c5 = tmp2;
-              throw tmp55;
-            } else {
-              c2 = tmp;
+          }
+          let c0 = priceString;
+          if (priceString == null) {
+            c0 = null;
+          }
+          if (null != c5) {
+            if (null != tmp35) {
+              if (tmp35 !== c5) {
+                outer1_7(tmp35);
+                c5 = 3;
+                let obj1 = { value: null, done: true };
+                obj1[0] = undefined;
+                return obj1;
+              }
             }
           }
         }
+        const obj7 = outer2_1(698);
+        let obj2 = { from_step: null, to_step: null, subscription_plan_gateway_plan_id: null, sku_id: null };
+        obj2[0] = outer2_0(7295).PaymentFlowStep.PLAN_SELECT;
+        obj2[1] = outer2_0(7295).PaymentFlowStep.EXTERNAL_PAYMENT;
+        obj2[2] = outer1_0.productId;
+        obj2[3] = outer1_0;
+        obj7.track(outer2_8.PAYMENT_FLOW_STEP, outer2_0(7295).getPaymentFlowStepAnalyticsFields(outer1_1, obj2));
+        let c4 = 1;
+        const obj3 = { productId: null, analyticsLocation: null, analyticsLoadId: null, analyticsLocations: null, orderId: null };
+        obj3[0] = outer1_0.productId;
+        obj3[1] = outer1_1.location;
+        obj3[2] = c2;
+        obj3[3] = outer1_1;
+        if (outer1_11 != null) {
+          const id = outer1_11.id;
+        }
+        obj3[4] = id;
+        yield outer1_13(obj3);
+        if (1 === tmp7) {
+          c4 = 0;
+          if (sum instanceof outer2_1(7257)) {
+            obj1 = outer2_0(4604);
+            const subscriptions = obj1.fetchSubscriptions();
+            obj2 = outer2_1(4624);
+            const obj5 = { title: null, body: null, hideActionSheet: true };
+            const intl = outer2_0(1236).intl;
+            obj5[0] = intl.string(outer2_0(1236).t["U+H+kd"]);
+            const intl2 = outer2_0(1236).intl;
+            obj5[1] = intl2.string(outer2_0(1236).t.F9ktNa);
+            obj2.show(obj5);
+          }
+          outer1_6();
+          c5 = 3;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c4 = 0;
+        }
+        c4 = 0;
+        return arg1;
       });
       const _runPurchase = tmp;
       const apply = tmp.apply;

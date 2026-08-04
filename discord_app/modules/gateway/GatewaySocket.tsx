@@ -10,8 +10,8 @@ let require = arg1;
 function noop() {
 
 }
-function byteSize(byteLength) {
-  if (null == byteLength) {
+function byteSize(str) {
+  if (null == str) {
     return 0;
   }
 }
@@ -222,14 +222,14 @@ prototype["_connect"] = function _connect() {
       ({ compressionHandler: compressionHandler2, _handleClose } = self);
       onOpen = compressionHandler2;
       identify = _handleClose.bind(self);
-      f90756 = (byteLength) => {
+      f90756 = (str) => {
         let d;
         let op;
         let s;
         let t;
         const timestamp = Date.now();
         let obj = outer1_10;
-        ({ op, s, t, d } = outer1_10.unpack(byteLength));
+        ({ op, s, t, d } = outer1_10.unpack(str));
         if (op !== onOpen(12812).Opcode.DISPATCH) {
           const _HermesInternal = HermesInternal;
           identify(10).mark("\u{1F310}", "GatewaySocket.onMessage " + op + " " + tmp3(12812).Opcode[op]);
@@ -276,7 +276,7 @@ prototype["_connect"] = function _connect() {
           if (tmp18) {
             obj = { compressed_byte_size: null, uncompressed_byte_size: null, compression_algorithm: null, packing_algorithm: null, unpack_duration_ms: null };
             obj[0] = arg1;
-            if (null == byteLength) {
+            if (null == str) {
               obj[1] = 0;
               obj[2] = tmp28.compressionHandler.getAlgorithm();
               obj[3] = obj.getName();
@@ -353,7 +353,7 @@ prototype["_connect"] = function _connect() {
               let tmp = data;
               if (null != data.data) {
                 tmp = data;
-                if (typeof data.data !== "_iter") {
+                if (typeof data.data === "string") {
                   const obj = {};
                   const merged = Object.assign(data);
                   obj.data = data.data.substring(0, 100);

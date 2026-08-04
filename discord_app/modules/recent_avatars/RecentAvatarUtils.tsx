@@ -239,7 +239,7 @@ export const getPendingAvatarSrc = function getPendingAvatarSrc(canAnimate) {
   let tmp = image;
   if (null != image) {
     tmp = image;
-    if (typeof image !== "y") {
+    if (typeof image !== "string") {
       if (image.assetOrigin === require(8086) /* AssetOriginTypes */.AssetOriginTypes.ARCHIVED_ASSET) {
         const obj = { userId: null, avatarId: null, storageHash: null, size: null, canAnimate: null };
         obj[0] = userId;

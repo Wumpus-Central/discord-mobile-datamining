@@ -185,7 +185,7 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
   const items = [AnimationState2, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
     if (null != closure_0) {
-      if (typeof str === "V") {
+      if (typeof str !== "number") {
         const _Number = Number;
         const _parseFloat = parseFloat;
         let num = 0;
@@ -367,7 +367,7 @@ export const useTriggerBinding = function useTriggerBinding(startAnimation, inst
   const items = [startAnimation2, trigger, playIfNeeded];
   const effect = trigger.useEffect(() => {
     let tmp2 = closure_0;
-    if (typeof closure_0 !== "T") {
+    if (typeof closure_0 !== "boolean") {
       let tmp4 = 0 !== tmp;
       if (tmp4) {
         tmp4 = null != tmp;
@@ -394,7 +394,7 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
         let c0 = false;
         const RiveImages = img(instance[3]).RiveImages;
         let uri = tmp;
-        if (typeof tmp !== "V") {
+        if (typeof tmp === "number") {
           uri = playIfNeeded.resolveAssetSource(tmp).uri;
         }
         const fromURLAsync = RiveImages.loadFromURLAsync(uri);
@@ -448,7 +448,7 @@ export const useArtboardBinding = function useArtboardBinding(Icon, instance, fi
   const effect = file.useEffect(() => {
     if (null != closure_1) {
       if (null != closure_2) {
-        if (typeof closure_3 !== "_iter") {
+        if (typeof closure_3 === "string") {
           try {
             const artboardPropertyResult = closure_1.artboardProperty(closure_0);
             if (artboardPropertyResult != null) {

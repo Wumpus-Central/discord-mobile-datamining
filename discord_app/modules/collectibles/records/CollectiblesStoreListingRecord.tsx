@@ -51,7 +51,7 @@ prototype["fromServer"] = function fromServer(styles) {
     tmp5 = obj;
   }
   obj.styles = tmp5;
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }

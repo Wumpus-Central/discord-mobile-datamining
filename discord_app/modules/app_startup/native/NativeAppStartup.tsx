@@ -52,109 +52,64 @@ function getInitialURLs() {
 function _getInitialURLs() {
   const self = this;
   const tmp = callback(function*() {
-    if (dependencyMap === 2) {
-      dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
+    let arr = tmp2;
+    arr = [];
+    const DeepLinkManager = outer1_10.DeepLinkManager;
+    yield DeepLinkManager.getInitialURL();
+    if (1 === tmp5) {
       if (arg0 === 1) {
+        let dependencyMap = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        dependencyMap = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        dependencyMap = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp5;
-            let arr = tmp2;
-            closure_1 = undefined;
-            c2 = undefined;
-            dependencyMap = undefined;
-            arr = [];
-            const DeepLinkManager = outer1_10.DeepLinkManager;
-            c2 = 1;
-            dependencyMap = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = DeepLinkManager.getInitialURL();
-            return obj1;
-          }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_1 = arg1;
-              if (null != closure_1) {
-                if (null != closure_1.url) {
-                  if (callback(closure_1.url)) {
-                    let push = arr(16851).DeeplinkSource;
-                    if (closure_1.isDeferred) {
-                      let AppsFlyer = push.AppsFlyerDeferred;
-                    } else {
-                      AppsFlyer = push.AppsFlyer;
-                    }
-                    c2 = AppsFlyer;
-                    push = arr.push;
-                    const obj3 = { url: null, source: null };
-                    obj3[0] = closure_1.url;
-                    obj3[1] = c2;
-                    arr = push(obj3);
-                  } else {
-                    const obj4 = { url: null, source: null };
-                    obj4[0] = closure_1.url;
-                    obj4[1] = arr(16851).DeeplinkSource.OS;
-                    arr = arr.push(obj4);
-                    dependencyMap = 3;
-                  }
-                }
+        let closure_1 = arg1;
+        if (null != closure_1) {
+          if (null != closure_1.url) {
+            if (callback(closure_1.url)) {
+              let push = arr(16851).DeeplinkSource;
+              if (closure_1.isDeferred) {
+                let AppsFlyer = push.AppsFlyerDeferred;
+              } else {
+                AppsFlyer = push.AppsFlyer;
               }
-              c2 = 2;
-              dependencyMap = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = initialURL.getInitialURL();
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            dependencyMap = arg1;
-            if (null != dependencyMap) {
-              const obj6 = { url: null, source: null };
-              obj6[0] = dependencyMap;
-              obj6[1] = arr(16851).DeeplinkSource.ReactNativeLinking;
-              arr.push(obj6);
+              let c2 = AppsFlyer;
+              push = arr.push;
+              const obj3 = { url: null, source: null };
+              obj3[0] = closure_1.url;
+              obj3[1] = c2;
+              arr = push(obj3);
+            } else {
+              const obj4 = { url: null, source: null };
+              obj4[0] = closure_1.url;
+              obj4[1] = arr(16851).DeeplinkSource.OS;
+              arr = arr.push(obj4);
+              dependencyMap = 3;
             }
           }
-          dependencyMap = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
         }
-      } catch (tmp36) {
-        dependencyMap = tmp;
-        throw tmp36;
+        c2 = 2;
+        dependencyMap = 1;
+        const obj5 = { value: null, done: false };
+        obj5[0] = initialURL.getInitialURL();
+        return obj5;
+      }
+    } else if (arg0 === 1) {
+      dependencyMap = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      dependencyMap = arg1;
+      if (null != dependencyMap) {
+        const obj6 = { url: null, source: null };
+        obj6[0] = dependencyMap;
+        obj6[1] = arr(16851).DeeplinkSource.ReactNativeLinking;
+        arr.push(obj6);
       }
     }
+    return arg1;
   });
   const _getInitialURLs = tmp;
   const apply = tmp.apply;
@@ -417,81 +372,33 @@ function loadStorage() {
 function _loadStorage() {
   const self = this;
   const tmp = callback(function*() {
-    if (c5 === 2) {
+    let callback = tmp3;
+    let dependencyMap = 1;
+    const loadStorage2 = outer1_1(9).loadStorage;
+    loadStorage2.recordStart();
+    let Storage = outer1_0(595).Storage;
+    yield Storage.refresh([], outer1_18);
+    if (1 === tmp7) {
+      dependencyMap = 0;
+      callback = closure_2;
+      logger.error("Unable to load Storage", callback);
+      let c5 = 3;
+    } else if (arg0 === 1) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let callback = tmp3;
-            let closure_0 = tmp7;
-            closure_0 = undefined;
-            let dependencyMap = 1;
-            const loadStorage2 = outer1_1(9).loadStorage;
-            loadStorage2.recordStart();
-            let Storage = outer1_0(595).Storage;
-            c4 = 2;
-            c5 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = Storage.refresh([], outer1_18);
-            return obj1;
-          }
-        } else {
-          if (1 === tmp7) {
-            dependencyMap = 0;
-            callback = closure_2;
-            logger.error("Unable to load Storage", callback);
-            c5 = 3;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            closure_0 = arg1;
-            const loadStorage = callback(9).loadStorage;
-            loadStorage.recordEnd();
-            const parseStorage = callback(9).parseStorage;
-            parseStorage.measureAsync(() => {
-              const Storage = callback(table[35]).Storage;
-              return Storage.parse(callback);
-            });
-            dependencyMap = 0;
-          }
-          dependencyMap = 0;
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp23) {
-        closure_2 = tmp23;
-        if (tmp4 === dependencyMap) {
-          c5 = tmp2;
-          throw tmp23;
-        } else {
-          c4 = tmp;
-        }
-      }
+      throw arg1;
+    } else if (arg0 !== 2) {
+      let closure_0 = arg1;
+      const loadStorage = callback(9).loadStorage;
+      loadStorage.recordEnd();
+      const parseStorage = callback(9).parseStorage;
+      parseStorage.measureAsync(() => {
+        const Storage = callback(table[35]).Storage;
+        return Storage.parse(callback);
+      });
+      dependencyMap = 0;
     }
+    dependencyMap = 0;
+    return arg1;
   });
   const _loadStorage = tmp;
   const apply = tmp.apply;

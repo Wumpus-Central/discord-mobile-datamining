@@ -102,7 +102,7 @@ obj[5] = {
     let mapped = content;
     if (null != content) {
       mapped = content;
-      if (typeof content !== "y") {
+      if (typeof content !== "string") {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
@@ -132,7 +132,7 @@ obj[5] = {
     let mapped1 = inContent;
     if (null != inContent) {
       mapped1 = inContent;
-      if (typeof inContent !== "y") {
+      if (typeof inContent !== "string") {
         const _Array2 = Array;
         let arr4 = inContent;
         if (!(inContent instanceof Array)) {
@@ -171,7 +171,7 @@ obj[6] = {
     let mapped = content;
     if (null != content) {
       mapped = content;
-      if (typeof content !== "y") {
+      if (typeof content !== "string") {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
@@ -201,7 +201,7 @@ obj[6] = {
     let mapped1 = inContent;
     if (null != inContent) {
       mapped1 = inContent;
-      if (typeof inContent !== "y") {
+      if (typeof inContent !== "string") {
         const _Array2 = Array;
         let arr4 = inContent;
         if (!(inContent instanceof Array)) {
@@ -240,7 +240,7 @@ obj[7] = {
     let mapped = content;
     if (null != content) {
       mapped = content;
-      if (typeof content !== "y") {
+      if (typeof content !== "string") {
         const _Array = Array;
         let arr2 = content;
         if (!(content instanceof Array)) {
@@ -270,7 +270,7 @@ obj[7] = {
     let mapped1 = inContent;
     if (null != inContent) {
       mapped1 = inContent;
-      if (typeof inContent !== "y") {
+      if (typeof inContent !== "string") {
         const _Array2 = Array;
         let arr4 = inContent;
         if (!(inContent instanceof Array)) {
@@ -356,15 +356,15 @@ let obj2 = {
 let result = require("parseRawEmojiObject").fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
 
 export default obj;
-export const decorateWithIcon = function decorateWithIcon(arg0) {
-  let mapped = arg0;
-  if (null != arg0) {
-    mapped = arg0;
-    if (typeof arg0 !== "y") {
+export const decorateWithIcon = function decorateWithIcon(str) {
+  let mapped = str;
+  if (null != str) {
+    mapped = str;
+    if (typeof str !== "string") {
       const _Array = Array;
-      let arr2 = arg0;
-      if (!(arg0 instanceof Array)) {
-        const items = [arg0];
+      let arr2 = str;
+      if (!(str instanceof Array)) {
+        const items = [str];
         arr2 = items;
       }
       mapped = arr2.map((type) => {

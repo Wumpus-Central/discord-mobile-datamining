@@ -165,7 +165,7 @@ let items = [
       const found = entries.filter((arg0) => {
         let tmp;
         [, tmp] = arg0;
-        return null != tmp && typeof tmp === "ay";
+        return null != tmp && typeof tmp === "object";
       });
       fromEntriesResult = Object.fromEntries(found.map((arg0) => {
         let tmp;

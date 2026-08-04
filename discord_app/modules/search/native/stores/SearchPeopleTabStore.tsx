@@ -158,7 +158,7 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(require("dispatche
     let obj = map;
     let value = map.get(id);
     if (value == null) {
-      if (typeof PeopleSearchManager !== "find") {
+      if (typeof PeopleSearchManager !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(PeopleSearchManager.prototype);

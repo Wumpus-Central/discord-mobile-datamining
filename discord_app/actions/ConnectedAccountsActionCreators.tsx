@@ -48,101 +48,49 @@ let obj = {
     }
     ({ location: importDefault, twoWayLinkType: dependencyMap, userCode: dispatcher, twoWayLink: set, successRedirect: closure_5, handle: closure_6 } = obj);
     return callback(function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp2;
-              let state = tmp5;
-              let body;
-              state = undefined;
-              const obj1 = { platform_type: null, location: null };
-              obj1[0] = outer1_0;
-              obj1[1] = outer1_1;
-              outer1_1(outer1_2[6]).track(outer1_8.CONNECTED_ACCOUNT_INITIATED, obj1);
-              const _URLSearchParams = URLSearchParams;
-              const result = outer1_6.CONNECTIONS_AUTHORIZE(outer1_0);
-              const str11 = new URLSearchParams();
-              if (null != c3) {
-                str11.append("two_way_user_code", tmp55);
-              }
-              if (null != outer1_5) {
-                str11.append("success_redirect", tmp16);
-              }
-              if (null != outer1_2) {
-                str11.append("two_way_link_type", tmp18);
-                str11.append("two_way_link", "true");
-              } else if (null != c4) {
-                const _String = String;
-                str11.append("two_way_link", String(tmp19));
-              }
-              if (null != outer1_6) {
-                str11.append("handle", tmp23);
-              }
-              const text = `${tmp50}?`;
-              const text1 = `${tmp50}?${str11.toString()}`;
-              const HTTP = outer1_0(outer1_2[4]).HTTP;
-              const obj2 = { url: null, oldFormErrors: true, rejectWithError: null };
-              obj2[0] = text1;
-              let obj3 = outer1_0(outer1_2[4]);
-              obj2[2] = obj3.rejectWithMigratedError();
-              c3 = 1;
-              c4 = 1;
-              obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            body = arg1;
-            const url = body.body.url;
-            body = url;
-            if (url == null) {
-              body = "";
-            }
-            state = outer1_0(outer1_2[7]).getCallbackParamsFromURL(body).state;
-            if (null != state) {
-              const result1 = c4.addPendingAuthorizedState(state);
-            }
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body;
-            return obj;
-          }
-        } catch (tmp31) {
-          c4 = tmp;
-          throw tmp31;
-        }
+      let closure_2 = tmp2;
+      let state = tmp5;
+      const obj1 = { platform_type: null, location: null };
+      obj1[0] = outer1_0;
+      obj1[1] = outer1_1;
+      outer1_1(outer1_2[6]).track(outer1_8.CONNECTED_ACCOUNT_INITIATED, obj1);
+      const _URLSearchParams = URLSearchParams;
+      const result = outer1_6.CONNECTIONS_AUTHORIZE(outer1_0);
+      const str11 = new URLSearchParams();
+      if (null != c3) {
+        str11.append("two_way_user_code", tmp55);
       }
+      if (null != outer1_5) {
+        str11.append("success_redirect", tmp16);
+      }
+      if (null != outer1_2) {
+        str11.append("two_way_link_type", tmp18);
+        str11.append("two_way_link", "true");
+      } else if (null != c4) {
+        const _String = String;
+        str11.append("two_way_link", String(tmp19));
+      }
+      if (null != outer1_6) {
+        str11.append("handle", tmp23);
+      }
+      const text = `${tmp50}?`;
+      const text1 = `${tmp50}?${str11.toString()}`;
+      const HTTP = outer1_0(outer1_2[4]).HTTP;
+      const obj2 = { url: null, oldFormErrors: true, rejectWithError: null };
+      obj2[0] = text1;
+      const obj3 = outer1_0(outer1_2[4]);
+      obj2[2] = obj3.rejectWithMigratedError();
+      let body = yield HTTP.get(obj2);
+      const url = body.body.url;
+      body = url;
+      if (url == null) {
+        body = "";
+      }
+      state = outer1_0(outer1_2[7]).getCallbackParamsFromURL(body).state;
+      if (null != state) {
+        const result1 = c4.addPendingAuthorizedState(state);
+      }
+      return body;
     })();
   },
   callback,

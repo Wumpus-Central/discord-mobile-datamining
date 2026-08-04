@@ -32,16 +32,16 @@ let closure_32;
 let closure_33;
 let closure_34;
 const require = arg1;
-function getPermissionChanges(arg0, arg1) {
+function getPermissionChanges(str, str2) {
   let num = 0;
-  if (typeof arg0 !== "_iter") {
-    num = arg0;
+  if (typeof str === "string") {
+    num = str;
   }
   const obj = importAll(506);
   let tmpResult = tmp(506);
   let num2 = 0;
-  if (typeof arg1 !== "_iter") {
-    num2 = arg1;
+  if (typeof str2 === "string") {
+    num2 = str2;
   }
   const deserializeResult = importAll(506).deserialize(num);
   tmpResult = tmp(506);
@@ -3053,11 +3053,11 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (role.FLAGS === key19) {
                                 ({ oldValue: oldValue14, newValue: newValue14 } = newValue);
                                 let num6 = 0;
-                                if (typeof oldValue14 !== "V") {
+                                if (typeof oldValue14 === "number") {
                                   num6 = oldValue14;
                                 }
                                 let num7 = 0;
-                                if (typeof newValue14 !== "V") {
+                                if (typeof newValue14 === "number") {
                                   num7 = newValue14;
                                 }
                                 role = outer2_2;
@@ -3324,7 +3324,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                     role = newValue7;
                                     if (null != newValue7) {
                                       role = newValue7;
-                                      if (typeof newValue7 !== "window") {
+                                      if (typeof newValue7 === "object") {
                                         if (null == newValue7.keyword_filter) {
                                           const _JSON3 = JSON;
                                           let json = JSON.stringify(newValue7);
@@ -3347,7 +3347,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                     role = oldValue7;
                                     if (null != oldValue7) {
                                       role = oldValue7;
-                                      if (typeof oldValue7 !== "window") {
+                                      if (typeof oldValue7 === "object") {
                                         if (null == oldValue7.keyword_filter) {
                                           const _JSON4 = JSON;
                                           let json1 = JSON.stringify(oldValue7);

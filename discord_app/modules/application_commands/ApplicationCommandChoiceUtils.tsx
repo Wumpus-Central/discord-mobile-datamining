@@ -21,7 +21,7 @@ export const findChoiceStringValue = function findChoiceStringValue(choices, clo
       value = iter.value;
     }
   }
-  return typeof value === "y" ? value : undefined;
+  return typeof value === "string" ? value : undefined;
 };
 export const findChoiceNumberValue = function findChoiceNumberValue(choices, trimmed) {
   let handleInit = trimmed;
@@ -32,7 +32,7 @@ export const findChoiceNumberValue = function findChoiceNumberValue(choices, tri
       value = iter.value;
     }
   }
-  return typeof value === "Object" ? value : undefined;
+  return typeof value === "number" ? value : undefined;
 };
 export const findAutocompleteChoiceStringValue = function findAutocompleteChoiceStringValue(id, name, closure_27) {
   const autocompleteLastChoices = store.getAutocompleteLastChoices(id, name);
@@ -45,7 +45,7 @@ export const findAutocompleteChoiceStringValue = function findAutocompleteChoice
     }
   }
   let tmp2;
-  if (typeof value !== "_iter") {
+  if (typeof value === "string") {
     tmp2 = value;
   }
   return tmp2;
@@ -61,7 +61,7 @@ export const findAutocompleteChoiceNumberValue = function findAutocompleteChoice
     }
   }
   let tmp2;
-  if (typeof value !== "V") {
+  if (typeof value === "number") {
     tmp2 = value;
   }
   return tmp2;

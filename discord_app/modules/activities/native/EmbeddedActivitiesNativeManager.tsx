@@ -30,70 +30,23 @@ function _postMessageToWebView() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
+      const table = tmp3;
+      let c4 = 1;
+      yield outer1_10.injectJavaScript(outer1_1(outer1_2[10])(closure_0));
+      if (1 === tmp7) {
+        c4 = 0;
+        closure_0 = items3;
+        const obj1 = callback(table[11]);
+        obj1.captureException(closure_0);
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp3;
-              const callback = tmp7;
-              let c4 = 1;
-              c5 = 2;
-              c6 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_10.injectJavaScript(outer1_1(outer1_2[10])(closure_0));
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              closure_0 = items3;
-              obj1 = callback(table[11]);
-              obj1.captureException(closure_0);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp20) {
-          items3 = tmp20;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp20;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _postMessageToWebView = tmp;
@@ -172,8 +125,8 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
           const url = selfEmbeddedActivityForLocation.url;
         }
         const iframeId = self.iframeId;
-        let tmp14 = typeof parsed === "ay";
-        if (typeof parsed !== "window") {
+        let tmp14 = typeof parsed === "object";
+        if (typeof parsed === "object") {
           tmp14 = null != tmp11;
         }
         if (tmp14) {

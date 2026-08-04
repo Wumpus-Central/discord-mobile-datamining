@@ -12,7 +12,7 @@ function getStyleProp(style, borderRadius) {
           return tmp5;
         }
       } else if (null != style) {
-        if (typeof style !== "window") {
+        if (typeof style === "object") {
           return style[borderRadius];
         }
       }

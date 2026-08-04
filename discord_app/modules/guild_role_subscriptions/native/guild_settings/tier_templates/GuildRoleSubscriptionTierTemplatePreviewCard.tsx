@@ -28,7 +28,7 @@ function Separator() {
 function BenefitShowCase(children) {
   const title = children.title;
   let tmp3 = title;
-  if (typeof title !== "_iter") {
+  if (typeof title === "string") {
     let obj = { variant: "text-md/semibold", color: "text-default", children: null };
     obj[2] = title;
     tmp3 = callback(require(4281) /* Text */.Text, obj);

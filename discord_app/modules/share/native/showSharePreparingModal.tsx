@@ -11,7 +11,7 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
     let obj = callback(paths[1]);
     obj = {
       onCancel() {
-        if (typeof closure_3 !== "find") {
+        if (typeof closure_3 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!c1) {
@@ -35,7 +35,7 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
 
   };
   return () => {
-    if (typeof settleLoader !== "find") {
+    if (typeof settleLoader !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!callback) {

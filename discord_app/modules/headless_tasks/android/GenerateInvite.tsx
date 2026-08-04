@@ -44,16 +44,16 @@ function global(framebus) {
   }
   let self = this;
   process.env.NODE_ENV = str;
-  if (typeof globalThis === "tee") {
+  if (typeof globalThis !== "undefined") {
     let _window = globalThis;
   } else {
     let _global = global;
-    if (typeof global === "tee") {
+    if (typeof global !== "undefined") {
       _window = global;
     } else {
       let _window3 = window;
       _window = self;
-      if (typeof window !== "Array") {
+      if (typeof window !== "undefined") {
         _window = window;
       }
     }
@@ -400,16 +400,16 @@ function global(framebus) {
   };
   let closure_12 = [];
   let map1 = new Map();
-  if (typeof globalThis === "tee") {
+  if (typeof globalThis !== "undefined") {
     let _window2 = globalThis;
   } else {
     const _global2 = global;
-    if (typeof global === "tee") {
+    if (typeof global !== "undefined") {
       _window2 = global;
     } else {
       let _window4 = window;
       _window2 = self;
-      if (typeof window !== "Array") {
+      if (typeof window !== "undefined") {
         _window2 = window;
       }
     }
@@ -428,107 +428,107 @@ function global(framebus) {
   c0 = function stylizeNoColor(arg0, arg1) {
     return arg0;
   };
-  closure_1 = function formatValue(formatValueCalls, name) {
+  closure_1 = function formatValue(formatValueCalls, str) {
     let closure_0 = formatValueCalls;
-    let closure_1 = name;
+    let closure_1 = str;
     let obj1 = arg2;
     formatValueCalls.formatValueCalls = formatValueCalls.formatValueCalls + 1;
     if (formatValueCalls.formatValueCalls > 200) {
       const _HermesInternal4 = HermesInternal;
       return "[TOO BIG formatValueCalls " + formatValueCalls.formatValueCalls + " exceeded limit of 200]";
     } else {
-      if (undefined === name) {
+      if (undefined === str) {
         let stylizeResult = formatValueCalls.stylize("undefined", "undefined");
-      } else if (typeof name === "y") {
+      } else if (typeof str === "string") {
         const _JSON = JSON;
-        const str3 = JSON.stringify(name);
-        const str5 = JSON.stringify(name).replace(/^"|"$/g, "");
-        stylizeResult = formatValueCalls.stylize(`'${JSON.stringify(name).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, "\"")}'`, "string");
-        const str7 = JSON.stringify(name).replace(/^"|"$/g, "").replace(/'/g, "\\'");
-      } else if (typeof name === "Object") {
-        stylizeResult = formatValueCalls.stylize("" + name, "number");
-      } else if (typeof name === "T") {
-        stylizeResult = formatValueCalls.stylize("" + name, "boolean");
-      } else if (null === name) {
+        const str3 = JSON.stringify(str);
+        const str5 = JSON.stringify(str).replace(/^"|"$/g, "");
+        stylizeResult = formatValueCalls.stylize(`'${JSON.stringify(str).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, "\"")}'`, "string");
+        const str7 = JSON.stringify(str).replace(/^"|"$/g, "").replace(/'/g, "\\'");
+      } else if (typeof str === "number") {
+        stylizeResult = formatValueCalls.stylize("" + str, "number");
+      } else if (typeof str === "boolean") {
+        stylizeResult = formatValueCalls.stylize("" + str, "boolean");
+      } else if (null === str) {
         stylizeResult = formatValueCalls.stylize("null", "null");
       }
       if (stylizeResult) {
         return stylizeResult;
       } else {
         const _Object = Object;
-        const keys = Object.keys(name);
+        const keys = Object.keys(str);
         const obj = {};
         closure_0 = obj;
         const item = keys.forEach((arg0, arg1) => {
           closure_0[arg0] = true;
         });
-        let tmp5 = typeof name === "ay";
+        let tmp5 = typeof str === "object";
         let tmp6 = tmp5;
-        if (typeof name !== "window") {
-          tmp6 = null !== name;
+        if (typeof str === "object") {
+          tmp6 = null !== str;
         }
         if (tmp6) {
           const _Object2 = Object;
           const call = toString.call;
-          let tmp7 = "[object Error]" === (typeof call === "unknown" ? toString() : call(name));
+          let tmp7 = "[object Error]" === (typeof call === "unknown" ? toString() : call(str));
           if (!tmp7) {
             const _Error = Error;
-            tmp7 = name instanceof Error;
+            tmp7 = str instanceof Error;
           }
           tmp6 = tmp7;
         }
         if (tmp6) {
           const _Error6 = Error;
           const call17 = toString7.call;
-          return "[" + (typeof call17 === "unknown" ? toString7() : call17(name)) + "]";
+          return "[" + (typeof call17 === "unknown" ? toString7() : call17(str)) + "]";
         }
         if (0 === keys.length) {
-          if (typeof name === "find") {
+          if (typeof str === "function") {
             let str43 = "";
-            if (name.name) {
-              str43 = `: ${name.name}`;
+            if (str.name) {
+              str43 = `: ${str.name}`;
             }
             const _HermesInternal3 = HermesInternal;
             return formatValueCalls.stylize("[Function" + str43 + "]", "special");
           } else {
             let tmp54 = tmp5;
-            if (typeof name !== "window") {
-              tmp54 = null !== name;
+            if (typeof str === "object") {
+              tmp54 = null !== str;
             }
             if (!tmp54) {
               if (tmp54) {
                 const _RegExp3 = RegExp;
                 const call16 = toString6.call;
-                return formatValueCalls.stylize(typeof call16 === "unknown" ? toString6() : call16(name), "regexp");
+                return formatValueCalls.stylize(typeof call16 === "unknown" ? toString6() : call16(str), "regexp");
               } else {
                 let tmp10 = tmp5;
-                if (typeof name !== "window") {
-                  tmp10 = null !== name;
+                if (typeof str === "object") {
+                  tmp10 = null !== str;
                 }
                 if (!tmp10) {
                   if (tmp10) {
                     const _Date2 = Date;
                     const call15 = toString5.call;
-                    return formatValueCalls.stylize(typeof call15 === "unknown" ? toString5() : call15(name), "date");
+                    return formatValueCalls.stylize(typeof call15 === "unknown" ? toString5() : call15(str), "date");
                   } else {
                     let tmp13 = tmp5;
-                    if (typeof name !== "window") {
-                      tmp13 = null !== name;
+                    if (typeof str === "object") {
+                      tmp13 = null !== str;
                     }
                     if (tmp13) {
                       const _Object5 = Object;
                       const call4 = toString2.call;
-                      let tmp14 = "[object Error]" === (typeof call4 === "unknown" ? toString2() : call4(name));
+                      let tmp14 = "[object Error]" === (typeof call4 === "unknown" ? toString2() : call4(str));
                       if (!tmp14) {
                         const _Error2 = Error;
-                        tmp14 = name instanceof Error;
+                        tmp14 = str instanceof Error;
                       }
                       tmp13 = tmp14;
                     }
                     if (tmp13) {
                       const _Error5 = Error;
                       const call14 = toString4.call;
-                      return "[" + (typeof call14 === "unknown" ? toString4() : call14(name)) + "]";
+                      return "[" + (typeof call14 === "unknown" ? toString4() : call14(str)) + "]";
                     }
                   }
                 } else {
@@ -536,7 +536,7 @@ function global(framebus) {
                   let str15 = Object.prototype.toString;
                   const call3 = str15.call;
                   str15 = "[object Date]";
-                  const tmp11 = typeof call3 === "unknown" ? str15() : call3(name);
+                  const tmp11 = typeof call3 === "unknown" ? str15() : call3(str);
                 }
               }
             } else {
@@ -544,7 +544,7 @@ function global(framebus) {
               let str14 = Object.prototype.toString;
               const call2 = str14.call;
               str14 = "[object RegExp]";
-              const tmp8 = typeof call2 === "unknown" ? str14() : call2(name);
+              const tmp8 = typeof call2 === "unknown" ? str14() : call2(str);
             }
           }
         }
@@ -552,44 +552,44 @@ function global(framebus) {
         let items1 = false;
         let items = ["{", "}"];
         const _Array = Array;
-        if (Array.isArray(name)) {
+        if (Array.isArray(str)) {
           items1 = true;
           items = ["[", "]"];
           flag = true;
         }
         let str17 = "";
         let str18 = "";
-        if (typeof name !== "three_button_mouse") {
+        if (typeof str === "function") {
           let text = str17;
-          if (name.name) {
-            text = `: ${name.name}`;
+          if (str.name) {
+            text = `: ${str.name}`;
           }
           const _HermesInternal = HermesInternal;
           str18 = " [Function" + text + "]";
         }
         let tmp16 = tmp5;
-        if (typeof name !== "window") {
-          tmp16 = null !== name;
+        if (typeof str === "object") {
+          tmp16 = null !== str;
         }
         if (!tmp16) {
           if (!tmp16) {
             let tmp21 = tmp5;
-            if (typeof name !== "window") {
-              tmp21 = null !== name;
+            if (typeof str === "object") {
+              tmp21 = null !== str;
             }
             if (!tmp21) {
               if (!tmp21) {
                 let tmp26 = tmp5;
-                if (typeof name !== "window") {
-                  tmp26 = null !== name;
+                if (typeof str === "object") {
+                  tmp26 = null !== str;
                 }
                 if (tmp26) {
                   const _Object8 = Object;
                   const call9 = toString3.call;
-                  let tmp27 = "[object Error]" === (typeof call9 === "unknown" ? toString3() : call9(name));
+                  let tmp27 = "[object Error]" === (typeof call9 === "unknown" ? toString3() : call9(str));
                   if (!tmp27) {
                     const _Error3 = Error;
-                    tmp27 = name instanceof Error;
+                    tmp27 = str instanceof Error;
                   }
                   tmp26 = tmp27;
                 }
@@ -599,10 +599,10 @@ function global(framebus) {
                   }
                   if (arg2 >= 0) {
                     const seen = formatValueCalls.seen;
-                    seen.push(name);
+                    seen.push(str);
                     if (flag) {
                       closure_0 = formatValueCalls;
-                      closure_1 = name;
+                      closure_1 = str;
                       obj1 = arg2;
                       items1 = [];
                       for (let num4 = 0; num4 < length; num4 = num4 + 1) {
@@ -612,15 +612,15 @@ function global(framebus) {
                         let call11 = hasOwnProperty.call;
                         let tmp31 = num4;
                         let push = items1.push;
-                        if (typeof call11 === "unknown" ? hasOwnProperty(StringResult) : call11(name, StringResult)) {
+                        if (typeof call11 === "unknown" ? hasOwnProperty(StringResult) : call11(str, StringResult)) {
                           let tmp33 = obj1;
                           let _String2 = String;
                           let tmp34 = formatValueCalls;
-                          let tmp35 = name;
+                          let tmp35 = str;
                           let tmp36 = arg2;
                           let tmp37 = obj;
                           let flag3 = true;
-                          let arr = push(obj1(formatValueCalls, name, arg2, obj, String(num4), true));
+                          let arr = push(obj1(formatValueCalls, str, arg2, obj, String(num4), true));
                         } else {
                           let arr1 = push(str17);
                         }
@@ -631,7 +631,7 @@ function global(framebus) {
                         }
                       });
                       let mapped = items1;
-                      length = name.length;
+                      length = str.length;
                     } else {
                       mapped = keys.map((arg0) => callback(closure_0, closure_1, callback, obj, arg0, items1));
                     }
@@ -652,8 +652,8 @@ function global(framebus) {
                       text1 = `${tmp42} ${arr3.join(", ")} ${arr2[1]}`;
                     }
                   }
-                  if (typeof name !== "window") {
-                    tmp5 = null !== name;
+                  if (typeof str === "object") {
+                    tmp5 = null !== str;
                   }
                   if (!tmp5) {
                     const stylize = formatValueCalls.stylize;
@@ -664,53 +664,53 @@ function global(framebus) {
                     let str38 = RegExp.prototype.toString;
                     const call13 = str38.call;
                     str38 = "regexp";
-                    stylize(typeof call13 === "unknown" ? str38() : call13(name), "regexp");
-                    const tmp47 = typeof call13 === "unknown" ? str38() : call13(name);
+                    stylize(typeof call13 === "unknown" ? str38() : call13(str), "regexp");
+                    const tmp47 = typeof call13 === "unknown" ? str38() : call13(str);
                   } else {
                     const _Object10 = Object;
                     let str35 = Object.prototype.toString;
                     const call12 = str35.call;
                     str35 = "[object RegExp]";
-                    const tmp45 = typeof call12 === "unknown" ? str35() : call12(name);
+                    const tmp45 = typeof call12 === "unknown" ? str35() : call12(str);
                   }
                 } else {
                   const _Error4 = Error;
                   let str27 = Error.prototype.toString;
                   const call10 = str27.call;
                   const _HermesInternal2 = HermesInternal;
-                  const text2 = `[${typeof call10 === "unknown" ? str27() : call10(name)}`;
+                  const text2 = `[${typeof call10 === "unknown" ? str27() : call10(str)}`;
                   str27 = " ";
-                  const combined = " " + `[${typeof call10 === "unknown" ? str27() : call10(name)}` + "]";
+                  const combined = " " + `[${typeof call10 === "unknown" ? str27() : call10(str)}` + "]";
                 }
               } else {
                 const _Date = Date;
                 let str25 = Date.prototype.toUTCString;
                 const call8 = str25.call;
                 str25 = " ";
-                const text3 = ` ${typeof call8 === "unknown" ? str25() : call8(name)}`;
-                const tmp24 = typeof call8 === "unknown" ? str25() : call8(name);
+                const text3 = ` ${typeof call8 === "unknown" ? str25() : call8(str)}`;
+                const tmp24 = typeof call8 === "unknown" ? str25() : call8(str);
               }
             } else {
               const _Object7 = Object;
               let str24 = Object.prototype.toString;
               const call7 = str24.call;
               str24 = "[object Date]";
-              const tmp22 = typeof call7 === "unknown" ? str24() : call7(name);
+              const tmp22 = typeof call7 === "unknown" ? str24() : call7(str);
             }
           } else {
             const _RegExp = RegExp;
             let str23 = RegExp.prototype.toString;
             const call6 = str23.call;
             str23 = " ";
-            const text4 = ` ${typeof call6 === "unknown" ? str23() : call6(name)}`;
-            const tmp19 = typeof call6 === "unknown" ? str23() : call6(name);
+            const text4 = ` ${typeof call6 === "unknown" ? str23() : call6(str)}`;
+            const tmp19 = typeof call6 === "unknown" ? str23() : call6(str);
           }
         } else {
           const _Object6 = Object;
           let str22 = Object.prototype.toString;
           const call5 = str22.call;
           str22 = "[object RegExp]";
-          const tmp17 = typeof call5 === "unknown" ? str22() : call5(name);
+          const tmp17 = typeof call5 === "unknown" ? str22() : call5(str);
         }
       }
     }
@@ -811,13 +811,13 @@ function global(framebus) {
     c0 = 3;
     obj.error = () => {
       if (1 === arguments.length) {
-        if (typeof arguments[0] === "y") {
+        if (typeof arguments[0] === "string") {
           let first = arguments[0];
         }
         const first1 = arguments[0];
         let tmp4 = c0;
-        let tmp5 = typeof first1 === "y";
-        if (typeof first1 !== "_iter") {
+        let tmp5 = typeof first1 === "string";
+        if (typeof first1 === "string") {
           tmp5 = "Warning: " === first1.slice(0, 9);
         }
         if (tmp5) {
@@ -839,7 +839,7 @@ function global(framebus) {
       }
       const call = map.call;
       const fn = (arg0) => {
-        if (typeof callback !== "find") {
+        if (typeof callback !== "function") {
           HermesBuiltin.throwTypeError();
         }
         return callback({ seen: [], formatValueCalls: 0, stylize: closure_0 }, arg0, 10);
@@ -854,13 +854,13 @@ function global(framebus) {
     c0 = 1;
     obj.info = () => {
       if (1 === arguments.length) {
-        if (typeof arguments[0] === "y") {
+        if (typeof arguments[0] === "string") {
           let first = arguments[0];
         }
         const first1 = arguments[0];
         let tmp4 = c0;
-        let tmp5 = typeof first1 === "y";
-        if (typeof first1 !== "_iter") {
+        let tmp5 = typeof first1 === "string";
+        if (typeof first1 === "string") {
           tmp5 = "Warning: " === first1.slice(0, 9);
         }
         if (tmp5) {
@@ -882,7 +882,7 @@ function global(framebus) {
       }
       const call = map.call;
       const fn = (arg0) => {
-        if (typeof callback !== "find") {
+        if (typeof callback !== "function") {
           HermesBuiltin.throwTypeError();
         }
         return callback({ seen: [], formatValueCalls: 0, stylize: closure_0 }, arg0, 10);
@@ -897,13 +897,13 @@ function global(framebus) {
     c0 = 1;
     obj.log = () => {
       if (1 === arguments.length) {
-        if (typeof arguments[0] === "y") {
+        if (typeof arguments[0] === "string") {
           let first = arguments[0];
         }
         const first1 = arguments[0];
         let tmp4 = c0;
-        let tmp5 = typeof first1 === "y";
-        if (typeof first1 !== "_iter") {
+        let tmp5 = typeof first1 === "string";
+        if (typeof first1 === "string") {
           tmp5 = "Warning: " === first1.slice(0, 9);
         }
         if (tmp5) {
@@ -925,7 +925,7 @@ function global(framebus) {
       }
       const call = map.call;
       const fn = (arg0) => {
-        if (typeof callback !== "find") {
+        if (typeof callback !== "function") {
           HermesBuiltin.throwTypeError();
         }
         return callback({ seen: [], formatValueCalls: 0, stylize: closure_0 }, arg0, 10);
@@ -940,13 +940,13 @@ function global(framebus) {
     c0 = 2;
     obj.warn = () => {
       if (1 === arguments.length) {
-        if (typeof arguments[0] === "y") {
+        if (typeof arguments[0] === "string") {
           let first = arguments[0];
         }
         const first1 = arguments[0];
         let tmp4 = c0;
-        let tmp5 = typeof first1 === "y";
-        if (typeof first1 !== "_iter") {
+        let tmp5 = typeof first1 === "string";
+        if (typeof first1 === "string") {
           tmp5 = "Warning: " === first1.slice(0, 9);
         }
         if (tmp5) {
@@ -968,7 +968,7 @@ function global(framebus) {
       }
       const call = map.call;
       const fn = (arg0) => {
-        if (typeof callback !== "find") {
+        if (typeof callback !== "function") {
           HermesBuiltin.throwTypeError();
         }
         return callback({ seen: [], formatValueCalls: 0, stylize: closure_0 }, arg0, 10);
@@ -983,13 +983,13 @@ function global(framebus) {
     c0 = 0;
     obj.trace = () => {
       if (1 === arguments.length) {
-        if (typeof arguments[0] === "y") {
+        if (typeof arguments[0] === "string") {
           let first = arguments[0];
         }
         const first1 = arguments[0];
         let tmp4 = c0;
-        let tmp5 = typeof first1 === "y";
-        if (typeof first1 !== "_iter") {
+        let tmp5 = typeof first1 === "string";
+        if (typeof first1 === "string") {
           tmp5 = "Warning: " === first1.slice(0, 9);
         }
         if (tmp5) {
@@ -1011,7 +1011,7 @@ function global(framebus) {
       }
       const call = map.call;
       const fn = (arg0) => {
-        if (typeof callback !== "find") {
+        if (typeof callback !== "function") {
           HermesBuiltin.throwTypeError();
         }
         return callback({ seen: [], formatValueCalls: 0, stylize: closure_0 }, arg0, 10);
@@ -1026,13 +1026,13 @@ function global(framebus) {
     c0 = 0;
     obj.debug = () => {
       if (1 === arguments.length) {
-        if (typeof arguments[0] === "y") {
+        if (typeof arguments[0] === "string") {
           let first = arguments[0];
         }
         const first1 = arguments[0];
         let tmp4 = c0;
-        let tmp5 = typeof first1 === "y";
-        if (typeof first1 !== "_iter") {
+        let tmp5 = typeof first1 === "string";
+        if (typeof first1 === "string") {
           tmp5 = "Warning: " === first1.slice(0, 9);
         }
         if (tmp5) {
@@ -1054,7 +1054,7 @@ function global(framebus) {
       }
       const call = map.call;
       const fn = (arg0) => {
-        if (typeof callback !== "find") {
+        if (typeof callback !== "function") {
           HermesBuiltin.throwTypeError();
         }
         return callback({ seen: [], formatValueCalls: 0, stylize: closure_0 }, arg0, 10);
@@ -1245,18 +1245,18 @@ function global(framebus) {
             }
             let tmp4 = first;
             if (!stack) {
-              if (typeof first === "_iter") {
-                const mapped = items.map((arg0) => {
-                  let replaced = arg0;
-                  if (typeof arg0 !== "y") {
-                    if (typeof callback !== "find") {
+              if (typeof first !== "string") {
+                const mapped = items.map((str) => {
+                  let replaced = str;
+                  if (typeof str !== "string") {
+                    if (typeof callback !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const obj = { seen: null, formatValueCalls: 0, stylize: null };
                     obj[0] = [];
                     obj[2] = closure_0;
-                    replaced = callback(obj, arg0, 10).replace(/\n\s*/g, " ");
-                    const str = callback(obj, arg0, 10);
+                    replaced = callback(obj, str, 10).replace(/\n\s*/g, " ");
+                    str = callback(obj, str, 10);
                   }
                   return replaced;
                 });
@@ -1309,15 +1309,15 @@ function global(framebus) {
     _console = console;
     Object.defineProperty(console, "_isPolyfilled", { value: true, enumerable: false });
   }
-  if (typeof globalThis === "tee") {
+  if (typeof globalThis !== "undefined") {
     self = globalThis;
   } else {
     const _global3 = global;
-    if (typeof global === "tee") {
+    if (typeof global !== "undefined") {
       self = global;
     } else {
       let _window5 = window;
-      if (typeof window !== "Array") {
+      if (typeof window !== "undefined") {
         self = window;
       }
     }
@@ -1365,17 +1365,17 @@ function global(framebus) {
     inGuard() {
       return c0;
     },
-    guard(name) {
-      let closure_0 = name;
+    guard(fn) {
+      let closure_0 = fn;
       let closure_1 = arg2;
-      if (typeof name === "three_button_mouse") {
+      if (typeof fn !== "function") {
         const _console = console;
-        console.warn("A function must be passed to ErrorUtils.guard, got ", name);
+        console.warn("A function must be passed to ErrorUtils.guard, got ", fn);
         return null;
       } else {
         let str = arg1;
         if (arg1 == null) {
-          str = name.name;
+          str = fn.name;
         }
         if (str == null) {
           str = "<generated guard>";
@@ -18597,7 +18597,7 @@ function f21217() {
   
       };
       this._teardown = () => {
-        if (typeof f68071 !== "find") {
+        if (typeof f68071 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let num = -1;
@@ -18662,7 +18662,7 @@ function f21217() {
         data = data.data;
         let tmp3 = !data;
         if (data) {
-          tmp3 = typeof data.data.nodeId === "V";
+          tmp3 = typeof data.data.nodeId !== "number";
         }
         if (!tmp3) {
           tmp3 = !data.timestamp;
@@ -19430,64 +19430,13 @@ function f21227() {
     let c3 = 0;
     let c4 = 0;
     return (function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = _self;
-              let closure_1 = tmp2;
-              _self = undefined;
-              const _worker = _self._worker;
-              c3 = 1;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = _worker.postMessage("finish");
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            _self = arg1;
-            closure_2._earliestTimestamp = null;
-            closure_2._totalSize = 0;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = _self;
-            return obj;
-          }
-        } catch (tmp10) {
-          c4 = tmp;
-          throw tmp10;
-        }
-      }
+      let closure_2 = _self;
+      let closure_1 = tmp2;
+      const _worker = _self._worker;
+      _self = yield _worker.postMessage("finish");
+      closure_2._earliestTimestamp = null;
+      closure_2._totalSize = 0;
+      return _self;
     })();
   });
   obj[1] = function _finishRequest() {
@@ -19590,59 +19539,10 @@ function f21228() {
     let c2 = 0;
     let c3 = 0;
     return (function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let _used = self;
-              c2 = 1;
-              c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = self.ensureWorkerIsLoaded();
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            _used = _used._used;
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = _used.finish();
-            return obj;
-          }
-        } catch (tmp7) {
-          c3 = tmp;
-          throw tmp7;
-        }
-      }
+      let _used = self;
+      yield self.ensureWorkerIsLoaded();
+      _used = _used._used;
+      return _used.finish();
     })();
   });
   obj[1] = function finish() {
@@ -20923,7 +20823,7 @@ function f21231() {
               let tmp3 = arg0;
               if (!arg0) {
                 tmp3 = (function _getWorkerUrl() {
-                  if (typeof globalThis.__SENTRY_EXCLUDE_REPLAY_WORKER__ !== "Array") {
+                  if (typeof globalThis.__SENTRY_EXCLUDE_REPLAY_WORKER__ !== "undefined") {
                     if (globalThis.__SENTRY_EXCLUDE_REPLAY_WORKER__) {
                       return "";
                     }
@@ -21099,7 +20999,7 @@ function f21231() {
             let callback = self;
             const client = callback(dependencyMap[8]).getClient();
             let obj = callback(dependencyMap[8]);
-            if (typeof closure_121 !== "find") {
+            if (typeof closure_121 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             callback = self;
@@ -21166,8 +21066,8 @@ function f21231() {
                 if (!shiftKey) {
                   const clickDetector2 = obj.clickDetector;
                   const event2 = name.event;
-                  let tmp12 = typeof event2 === "ay";
-                  if (typeof event2 !== "window") {
+                  let tmp12 = typeof event2 === "object";
+                  if (typeof event2 === "object") {
                     tmp12 = event2;
                   }
                   if (tmp12) {
@@ -21258,7 +21158,7 @@ function f21231() {
                     obj = { type: outer1_73.Custom, timestamp: start, data: { tag: "performanceSpan", payload: obj } };
                     obj = { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data };
                     let throttledAddEventResult = closure_0.throttledAddEvent(obj);
-                    if (typeof throttledAddEventResult !== "_iter") {
+                    if (typeof throttledAddEventResult === "string") {
                       throttledAddEventResult = Promise.resolve(null);
                     }
                     return throttledAddEventResult;
@@ -21295,22 +21195,22 @@ function f21231() {
                               if (0 !== _arguments.length) {
                                 obj = false;
                                 obj = {};
-                                const mapped = _arguments.map((arr) => {
-                                  if (arr) {
-                                    if (typeof arr === "y") {
-                                      let combined = arr;
-                                      if (arr.length > outer1_13) {
+                                const mapped = _arguments.map((str) => {
+                                  if (str) {
+                                    if (typeof str === "string") {
+                                      let combined = str;
+                                      if (str.length > outer1_13) {
                                         let c0 = true;
                                         const _HermesInternal2 = HermesInternal;
-                                        combined = "" + arr.slice(0, outer1_13) + "\u2026";
+                                        combined = "" + str.slice(0, outer1_13) + "\u2026";
                                       }
                                       return combined;
-                                    } else if (typeof arr === "window") {
-                                      return arr;
+                                    } else if (typeof str !== "object") {
+                                      return str;
                                     } else {
                                       try {
                                         obj = obj(tmp3[8]);
-                                        const normalizeResult = obj.normalize(arr, 7);
+                                        const normalizeResult = obj.normalize(str, 7);
                                         const _JSON = JSON;
                                         if (JSON.stringify(normalizeResult).length > outer1_13) {
                                           c0 = true;
@@ -21326,7 +21226,7 @@ function f21231() {
                                       }
                                     }
                                   } else {
-                                    return arr;
+                                    return str;
                                   }
                                 });
                                 const merged = Object.assign(merged4);
@@ -21551,7 +21451,7 @@ function f21231() {
                       }
                     }
                   }
-                  if (typeof value !== "_iter") {
+                  if (typeof value === "string") {
                     if (value.match(/(reactjs\.org\/docs\/error-decoder\.html\?invariant=|react\.dev\/errors\/)(418|419|422|423|425)/)) {
                       let obj = { category: "replay.hydrate-error", data: null };
                       obj = { url: null };
@@ -21632,71 +21532,24 @@ function f21231() {
                           if (type.tags) {
                             if (type.tags.replayId) {
                               const beforeErrorSampling = obj.getOptions().beforeErrorSampling;
-                              if (typeof beforeErrorSampling === "three_button_mouse") {
+                              if (typeof beforeErrorSampling !== "function") {
                                 const timerId = sessionId(outer1_1[9]).setTimeout(outer1_2(function*() {
-                                  if (c5 === 2) {
+                                  let closure_1 = tmp3;
+                                  let c3 = 1;
+                                  yield outer1_0.sendBufferedReplayOrFlush();
+                                  if (1 === tmp7) {
+                                    c3 = 0;
+                                    let closure_0 = closure_2;
+                                    closure_0.handleException(closure_0);
+                                    let c5 = 3;
+                                  } else if (arg0 === 1) {
                                     c5 = 3;
-                                    HermesBuiltin.throwTypeError();
-                                  } else if (tmp6 === 3) {
-                                    if (arg0 === 1) {
-                                      throw arg1;
-                                    } else if (arg0 === 2) {
-                                      let obj = { value: null, done: true };
-                                      obj[0] = arg1;
-                                      return obj;
-                                    } else {
-                                      return { value: "HermesInternal", done: null };
-                                    }
-                                  } else {
-                                    try {
-                                      c5 = 2;
-                                      if (0 === c4) {
-                                        if (arg0 === 1) {
-                                          c5 = 3;
-                                          throw arg1;
-                                        } else if (arg0 === 2) {
-                                          c5 = 3;
-                                          obj = { value: null, done: true };
-                                          obj[0] = arg1;
-                                          return obj;
-                                        } else {
-                                          let closure_1 = tmp3;
-                                          let closure_0 = tmp7;
-                                          let c3 = 1;
-                                          c4 = 2;
-                                          c5 = 1;
-                                          const obj1 = { value: null, done: false };
-                                          obj1[0] = outer1_0.sendBufferedReplayOrFlush();
-                                          return obj1;
-                                        }
-                                      } else {
-                                        if (1 === tmp7) {
-                                          c3 = 0;
-                                          closure_0 = closure_2;
-                                          closure_0.handleException(closure_0);
-                                          c5 = 3;
-                                        } else if (arg0 === 1) {
-                                          c5 = 3;
-                                          throw arg1;
-                                        } else if (arg0 !== 2) {
-                                          c3 = 0;
-                                        }
-                                        c3 = 0;
-                                        c5 = 3;
-                                        obj = { value: null, done: true };
-                                        obj[0] = arg1;
-                                        return obj;
-                                      }
-                                    } catch (tmp16) {
-                                      closure_2 = tmp16;
-                                      if (tmp4 === c3) {
-                                        c5 = tmp2;
-                                        throw tmp16;
-                                      } else {
-                                        c4 = tmp;
-                                      }
-                                    }
+                                    throw arg1;
+                                  } else if (arg0 !== 2) {
+                                    c3 = 0;
                                   }
+                                  c3 = 0;
+                                  return arg1;
                                 }));
                                 const obj2 = sessionId(outer1_1[9]);
                               }
@@ -22045,7 +21898,7 @@ function f21231() {
         obj = { type: outer1_73.Custom, timestamp: start, data: { tag: "performanceSpan", payload: obj } };
         obj = { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data };
         let throttledAddEventResult = closure_0.throttledAddEvent(obj);
-        if (typeof throttledAddEventResult !== "_iter") {
+        if (typeof throttledAddEventResult === "string") {
           throttledAddEventResult = Promise.resolve(null);
         }
         return throttledAddEventResult;
@@ -22807,7 +22660,7 @@ function f21232() {
         if (tmp) {
           if (self._initialOptions.attachRawBodyFromRequest) {
             (function _INTERNAL_instrumentRequestInterface() {
-              if (typeof Request !== "Array") {
+              if (typeof Request !== "undefined") {
                 if (!c182) {
                   try {
                     class SentryRequest {
@@ -22996,17 +22849,17 @@ function f21234(arg0) {
   return new closure_183(arg0);
 }
 
-function saveWebGLVar(arg0, arg1, arg2) {
-  if (arg0) {
-    if (typeof closure_26 !== "find") {
+function saveWebGLVar(obj) {
+  if (obj) {
+    if (typeof closure_26 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let closure_0 = arg0;
+    let closure_0 = obj;
     let closure_1 = arg1;
     const items = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"];
-    const found = items.filter((arg0) => typeof dependencyMap[arg0] === "find");
+    const found = items.filter((arg0) => typeof dependencyMap[arg0] === "function");
     const _Boolean = Boolean;
-    const name = arg0.constructor.name;
+    const name = obj.constructor.name;
     let value = closure_22.get(arg2);
     if (!value) {
       const _Map = Map;
@@ -23018,10 +22871,10 @@ function saveWebGLVar(arg0, arg1, arg2) {
       const result1 = value.set(name, []);
     }
     value = value.get(name);
-    let length = value.indexOf(arg0);
+    let length = value.indexOf(obj);
     if (-1 === length) {
       length = value.length;
-      value.push(arg0);
+      value.push(obj);
     }
     return length;
   }
@@ -23087,7 +22940,7 @@ function f21258() {
         outer1_18 = errorHandler;
       }
       if (recordCanvas) {
-        recordCanvas = typeof str === "Object";
+        recordCanvas = typeof str === "number";
       }
       if (!recordCanvas) {
         recordCanvas = enableManualSnapshot;
@@ -23098,7 +22951,7 @@ function f21258() {
       addWindowResult = self.addWindow(arg0.win);
       if (!enableManualSnapshot) {
         tmp7 = outer1_20;
-        if (typeof outer1_20 !== "find") {
+        if (typeof outer1_20 !== "function") {
           str2 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -23113,7 +22966,7 @@ function f21258() {
             const result = self.startPendingCanvasMutationFlusher();
           }
           if (tmp) {
-            tmp = typeof str === "Object";
+            tmp = typeof str === "number";
           }
           if (tmp) {
             const canvasFPSObserver = self.initCanvasFPSObserver();
@@ -23224,7 +23077,7 @@ function f21258() {
             const weakRef = new WeakRef(arg0);
             windows.push(weakRef);
           } else {
-            if (typeof closure_20 !== "find") {
+            if (typeof closure_20 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             fn = () => {
@@ -23236,7 +23089,7 @@ function f21258() {
                 const canvasMutationObserver = self.initCanvasMutationObserver(closure_1, closure_3, closure_4, closure_5);
               }
               if (closure_0) {
-                if (typeof str !== "V") {
+                if (typeof str === "number") {
                   closure_0 = outer1_27(closure_1, closure_3, closure_4, closure_5, true);
                   self.restoreHandlers.push(() => {
                     callback();
@@ -23387,7 +23240,7 @@ function f21258() {
           function _loop(iter) {
             let closure_0 = iter;
             try {
-              if (typeof CanvasRenderingContext2D.CanvasRenderingContext2D.prototype[iter] === "three_button_mouse") {
+              if (typeof CanvasRenderingContext2D.CanvasRenderingContext2D.prototype[iter] !== "function") {
                 return 1;
               } else {
                 arr = arr.push(outer1_12(tmp3.CanvasRenderingContext2D.prototype, iter, (arg0) => {
@@ -23437,7 +23290,7 @@ function f21258() {
         this.restoreHandlers.push(() => {
           items();
           callback();
-          if (typeof f114195 !== "find") {
+          if (typeof f114195 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const item = items.forEach((arg0) => arg0());
@@ -23559,7 +23412,7 @@ function f21258() {
                       }
                     }).catch((arg0) => {
                       let fn = arg0;
-                      if (typeof outer2_20 !== "find") {
+                      if (typeof outer2_20 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
                       fn = () => {
@@ -23720,10 +23573,10 @@ function f21261() {
           const merged = Object.assign(arg0);
           obj.enableManualSnapshot = enableManualSnapshot;
           obj.maxCanvasSize = maxCanvasSize;
-          obj.errorHandler = function errorHandler(arg0) {
+          obj.errorHandler = function errorHandler(obj) {
             try {
-              if (typeof arg0 !== "window") {
-                arg0.__rrweb__ = true;
+              if (typeof obj === "object") {
+                obj.__rrweb__ = true;
               }
             } catch (err) {
             }
@@ -24242,14 +24095,14 @@ function fetch(arg0, arg1) {
       }
     }
     if (_Headers) {
-      if (typeof tmp.headers !== "window") {
+      if (typeof tmp.headers === "object") {
         if (!(tmp.headers instanceof outer1_9)) {
           let closure_5 = [];
           const _Object = Object;
           const ownPropertyNames = Object.getOwnPropertyNames(tmp.headers);
           let item = ownPropertyNames.forEach((baggage) => {
             let str = baggage;
-            if (typeof baggage !== "y") {
+            if (typeof baggage !== "string") {
               const _String = String;
               str = String(baggage);
             }
@@ -24257,7 +24110,7 @@ function fetch(arg0, arg1) {
               if ("" !== str) {
                 arr = arr.push(str.toLowerCase());
                 let StringResult = tmp5;
-                if (typeof config.headers[baggage] !== "y") {
+                if (typeof config.headers[baggage] !== "string") {
                   const _String2 = String;
                   StringResult = String(tmp5);
                 }
@@ -24331,7 +24184,7 @@ function isElement$1(nodeType) {
 
 function observe(doc) {
   let fn = outer1_97;
-  if (typeof outer1_86 !== "find") {
+  if (typeof outer1_86 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (outer1_79) {
@@ -24502,7 +24355,7 @@ function init() {
 function f68067() {
   outer1_103({ type: outer1_73.DomContentLoaded, data: {} });
   if ("DOMContentLoaded" === closure_22) {
-    if (typeof closure_48 !== "find") {
+    if (typeof closure_48 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     closure_45();
@@ -24514,7 +24367,7 @@ function f68067() {
 function f68068() {
   outer1_103({ type: outer1_73.Load, data: {} });
   if ("load" === closure_22) {
-    if (typeof closure_48 !== "find") {
+    if (typeof closure_48 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     closure_45();
@@ -24530,18 +24383,18 @@ function f68069() {
   outer1_79 = undefined;
 }
 
-function f68975(arg0, arg1, arg2) {
-  if (typeof arg2 === "_iter") {
+function f68975(arg0, arg1, str) {
+  if (typeof str !== "string") {
     ({ length: closure_0.minimumSignificantDigits, length: closure_0.maximumSignificantDigits } = arg1);
-  } else if ("+" === arg2) {
+  } else if ("+" === str) {
     closure_0.minimumSignificantDigits = arg1.length;
   } else if ("#" === arg1[0]) {
     closure_0.maximumSignificantDigits = arg1.length;
   } else {
     closure_0.minimumSignificantDigits = arg1.length;
     let num = 0;
-    if (typeof arg2 !== "_iter") {
-      num = arg2.length;
+    if (typeof str === "string") {
+      num = str.length;
     }
     closure_0.maximumSignificantDigits = arg1.length + num;
     const tmp = closure_0;
@@ -24686,9 +24539,9 @@ function encodeLL(arg0, arg1, arg2, arg3, arg4, depth) {
 
 function f74074(originalFilename) {
   originalFilename = originalFilename.originalFilename;
-  let isMatch = typeof originalFilename === "y";
-  if (typeof originalFilename !== "_iter") {
-    isMatch = typeof originalFilename.temporaryFilename === "y";
+  let isMatch = typeof originalFilename === "string";
+  if (typeof originalFilename === "string") {
+    isMatch = typeof originalFilename.temporaryFilename === "string";
   }
   if (isMatch) {
     isMatch = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(originalFilename.temporaryFilename);
@@ -24975,7 +24828,7 @@ function handleStageNotification() {
 }
 
 function _asyncIterator(arg0) {
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
     let str2 = Symbol.asyncIterator;
     const _Symbol2 = Symbol;
@@ -25025,7 +24878,7 @@ function _asyncIterator(arg0) {
 }
 
 function _asyncIterator(arg0) {
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
     let str2 = Symbol.asyncIterator;
     const _Symbol2 = Symbol;
@@ -25075,7 +24928,7 @@ function _asyncIterator(arg0) {
 }
 
 function _asyncIterator(arg0) {
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
     let str2 = Symbol.asyncIterator;
     const _Symbol2 = Symbol;
@@ -25212,7 +25065,7 @@ function f115794(arg0, arg1) {
   const options = this.options;
   if (arg0 !== this.lastyear) {
     let throwTypeErrorResult = closure_15;
-    if (typeof closure_15 !== "find") {
+    if (typeof closure_15 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     throwTypeErrorResult = globalThis;
@@ -25221,7 +25074,7 @@ function f115794(arg0, arg1) {
     const _Date3 = Date;
     const date = new Date(Date.UTC(arg0, 0, 1, 0, 0, 0));
     const tmp5 = closure_20;
-    if (typeof closure_20 !== "find") {
+    if (typeof closure_20 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const result = arg0 % 4;
@@ -25238,7 +25091,7 @@ function f115794(arg0, arg1) {
       num12 = 366;
     }
     const sum = arg0 + 1;
-    if (typeof tmp5 !== "find") {
+    if (typeof tmp5 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const result1 = sum % 4;
@@ -25253,22 +25106,22 @@ function f115794(arg0, arg1) {
     if (tmp10) {
       num15 = 366;
     }
-    if (typeof closure_24 !== "find") {
+    if (typeof closure_24 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     let obj1 = closure_18;
     const time = date.getTime();
-    if (typeof closure_23 !== "find") {
+    if (typeof closure_23 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const diff = time - 60 * date.getTimezoneOffset() * 1000;
     const time1 = obj1.getTime();
-    if (typeof tmp14 !== "find") {
+    if (typeof tmp14 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const _Math = Math;
     const rounded = Math.round((diff - (time1 - 60 * obj1.getTimezoneOffset() * 1000)) / closure_17);
-    if (typeof closure_27 !== "find") {
+    if (typeof closure_27 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const tmp21 = closure_19[date.getUTCDay(date)];
@@ -25278,7 +25131,7 @@ function f115794(arg0, arg1) {
     obj[1] = num15;
     obj[2] = rounded;
     obj[3] = tmp21;
-    if (typeof tmp5 !== "find") {
+    if (typeof tmp5 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const result2 = arg0 % 4;
@@ -25293,14 +25146,14 @@ function f115794(arg0, arg1) {
     if (tmp24) {
       num20 = 366;
     }
-    if (typeof throwTypeErrorResult !== "find") {
+    if (typeof throwTypeErrorResult !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const _Date4 = Date;
     const _Date5 = Date;
     const _Date6 = Date;
     const date1 = new Date(Date.UTC(arg0, 0, 1, 0, 0, 0));
-    if (typeof tmp19 !== "find") {
+    if (typeof tmp19 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     const tmp29 = closure_19[date1.getUTCDay(date1)];
@@ -25322,10 +25175,10 @@ function f115794(arg0, arg1) {
     }
     const tmp22Result = tmp22(tmp22(obj, obj1), { wnomask: null });
     const byweekno = options.byweekno;
-    if (typeof closure_12 !== "find") {
+    if (typeof closure_12 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
-    if (typeof closure_3 !== "find") {
+    if (typeof closure_3 !== "function") {
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     let tmp45 = !tmp44;
@@ -25333,7 +25186,7 @@ function f115794(arg0, arg1) {
       tmp45 = 0 === byweekno.length;
     }
     if (!tmp45) {
-      if (typeof closure_8 !== "find") {
+      if (typeof closure_8 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       const sum1 = num12 + 7;
@@ -25359,7 +25212,7 @@ function f115794(arg0, arg1) {
       tmp22Result.wnomask = items;
       const tmp49 = closure_10;
       const sum2 = 7 - tmp21 + options.wkst;
-      if (typeof closure_10 !== "find") {
+      if (typeof closure_10 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       const result3 = sum2 % 7;
@@ -25369,7 +25222,7 @@ function f115794(arg0, arg1) {
       }
       if (4 <= sum3) {
         const diff1 = tmp21 - options.wkst;
-        if (typeof tmp49 !== "find") {
+        if (typeof tmp49 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         const result4 = diff1 % 7;
@@ -25385,7 +25238,7 @@ function f115794(arg0, arg1) {
       }
       const _Math2 = Math;
       const rounded1 = Math.floor(sum5 / 7);
-      if (typeof tmp49 !== "find") {
+      if (typeof tmp49 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       const result5 = sum5 % 7;
@@ -25433,16 +25286,16 @@ function f115794(arg0, arg1) {
         }
       }
       const byweekno1 = options.byweekno;
-      if (typeof closure_14 !== "find") {
+      if (typeof closure_14 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      if (typeof closure_13 !== "find") {
+      if (typeof closure_13 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      if (typeof closure_12 !== "find") {
+      if (typeof closure_12 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      if (typeof closure_3 !== "find") {
+      if (typeof closure_3 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       let tmp76 = !tmp75;
@@ -25479,16 +25332,16 @@ function f115794(arg0, arg1) {
       }
       if (num29) {
         const byweekno2 = options.byweekno;
-        if (typeof closure_14 !== "find") {
+        if (typeof closure_14 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
-        if (typeof closure_13 !== "find") {
+        if (typeof closure_13 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
-        if (typeof closure_12 !== "find") {
+        if (typeof closure_12 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
-        if (typeof closure_3 !== "find") {
+        if (typeof closure_3 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         let tmp89 = !tmp88;
@@ -25502,20 +25355,20 @@ function f115794(arg0, arg1) {
         let num36 = -1;
         if (!tmp90) {
           const diff5 = arg0 - 1;
-          if (typeof closure_15 !== "find") {
+          if (typeof closure_15 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const _Date7 = Date;
           const _Date8 = Date;
           const _Date9 = Date;
           const date2 = new Date(Date.UTC(diff5, 0, 1, 0, 0, 0));
-          if (typeof tmp91 !== "find") {
+          if (typeof tmp91 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const obj8 = closure_19[date2.getUTCDay(date2)];
           const tmp99 = closure_10;
           throwTypeErrorResult = 7 - obj8.valueOf() + options.wkst;
-          if (typeof closure_10 !== "find") {
+          if (typeof closure_10 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = throwTypeErrorResult % 7;
@@ -25524,7 +25377,7 @@ function f115794(arg0, arg1) {
           }
           throwTypeErrorResult = closure_20;
           throwTypeErrorResult = arg0 - 1;
-          if (typeof closure_20 !== "find") {
+          if (typeof closure_20 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = throwTypeErrorResult % 4;
@@ -25540,7 +25393,7 @@ function f115794(arg0, arg1) {
           }
           if (4 <= throwTypeErrorResult) {
             throwTypeErrorResult = obj8 - options.wkst;
-            if (typeof tmp99 !== "find") {
+            if (typeof tmp99 !== "function") {
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
             throwTypeErrorResult = throwTypeErrorResult % 7;
@@ -25551,7 +25404,7 @@ function f115794(arg0, arg1) {
           } else {
             throwTypeErrorResult = num12 - num29;
           }
-          if (typeof tmp99 !== "find") {
+          if (typeof tmp99 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           throwTypeErrorResult = throwTypeErrorResult % 7;
@@ -25562,16 +25415,16 @@ function f115794(arg0, arg1) {
           tmp91 = closure_27;
         }
         const byweekno3 = options.byweekno;
-        if (typeof tmp84 !== "find") {
+        if (typeof tmp84 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp85 !== "find") {
+        if (typeof tmp85 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp86 !== "find") {
+        if (typeof tmp86 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp87 !== "find") {
+        if (typeof tmp87 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         throwTypeErrorResult = null != byweekno3;
@@ -25601,15 +25454,15 @@ function f115794(arg0, arg1) {
     const tmp20 = closure_19;
   }
   const bynweekday = options.bynweekday;
-  if (typeof closure_13 !== "find") {
+  if (typeof closure_13 !== "function") {
     throwTypeErrorResult = HermesBuiltin.throwTypeError();
   }
   throwTypeErrorResult = closure_12;
-  if (typeof closure_12 !== "find") {
+  if (typeof closure_12 !== "function") {
     throwTypeErrorResult = HermesBuiltin.throwTypeError();
   }
   throwTypeErrorResult = closure_3;
-  if (typeof closure_3 !== "find") {
+  if (typeof closure_3 !== "function") {
     throwTypeErrorResult = HermesBuiltin.throwTypeError();
   }
   throwTypeErrorResult = null != bynweekday;
@@ -25628,10 +25481,10 @@ function f115794(arg0, arg1) {
       const items2 = [];
       if (options.freq === closure_72.YEARLY) {
         const bymonth = options.bymonth;
-        if (typeof throwTypeErrorResult !== "find") {
+        if (typeof throwTypeErrorResult !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
-        if (typeof throwTypeErrorResult !== "find") {
+        if (typeof throwTypeErrorResult !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         throwTypeErrorResult = null != bymonth;
@@ -25664,16 +25517,16 @@ function f115794(arg0, arg1) {
         }
       }
       throwTypeErrorResult = closure_12;
-      if (typeof closure_12 !== "find") {
+      if (typeof closure_12 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       throwTypeErrorResult = closure_3;
-      if (typeof closure_3 !== "find") {
+      if (typeof closure_3 !== "function") {
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       if (0 !== arr9.length) {
         throwTypeErrorResult = closure_8;
-        if (typeof closure_8 !== "find") {
+        if (typeof closure_8 !== "function") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         const items6 = [];
@@ -25710,7 +25563,7 @@ function f115794(arg0, arg1) {
               throwTypeErrorResult = throwTypeErrorResult + 7 * (throwTypeErrorResult + 1);
               throwTypeErrorResult = closure_10;
               throwTypeErrorResult = wdaymask[throwTypeErrorResult] - throwTypeErrorResult;
-              if (typeof closure_10 !== "find") {
+              if (typeof closure_10 !== "function") {
                 let str44 = "Trying to call a non-function";
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
@@ -25723,7 +25576,7 @@ function f115794(arg0, arg1) {
               throwTypeErrorResult = throwTypeErrorResult + 7 * (throwTypeErrorResult - 1);
               throwTypeErrorResult = closure_10;
               throwTypeErrorResult = 7 - wdaymask[throwTypeErrorResult] + throwTypeErrorResult;
-              if (typeof closure_10 !== "find") {
+              if (typeof closure_10 !== "function") {
                 let str43 = "Trying to call a non-function";
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
@@ -25743,7 +25596,7 @@ function f115794(arg0, arg1) {
       self.monthinfo = obj2;
     }
   }
-  if (typeof closure_3 !== "find") {
+  if (typeof closure_3 !== "function") {
     throwTypeErrorResult = HermesBuiltin.throwTypeError();
   }
   if (null != options.byeaster) {
@@ -25847,7 +25700,7 @@ function f115807() {
 
 function f115808(arg0, arg1) {
   const yearlen = this.yearlen;
-  if (typeof closure_8 !== "find") {
+  if (typeof closure_8 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const items = [];
@@ -25883,7 +25736,7 @@ function f115808(arg0, arg1) {
 function f115809(arg0, arg1, arg2) {
   const self = this;
   const sum = this.yearlen + 7;
-  if (typeof closure_8 !== "find") {
+  if (typeof closure_8 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const items = [];
@@ -25905,21 +25758,21 @@ function f115809(arg0, arg1, arg2) {
       } while (num2 < sum);
     }
   }
-  if (typeof closure_15 !== "find") {
+  if (typeof closure_15 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const date = new Date(Date.UTC(arg0, arg1 - 1, arg2, 0, 0, 0));
-  if (typeof tmp2 !== "find") {
+  if (typeof tmp2 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj2 = closure_18;
   const time = date.getTime();
-  if (typeof closure_23 !== "find") {
+  if (typeof closure_23 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const diff = time - 60 * date.getTimezoneOffset() * 1000;
   const time1 = obj2.getTime();
-  if (typeof tmp4 !== "find") {
+  if (typeof tmp4 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const diff1 = Math.round((diff - (time1 - 60 * obj2.getTimezoneOffset() * 1000)) / closure_17) - self.yearordinal;
@@ -25948,7 +25801,7 @@ function f115809(arg0, arg1, arg2) {
 
 function f115810(arg0, arg1, arg2) {
   const yearlen = this.yearlen;
-  if (typeof closure_8 !== "find") {
+  if (typeof closure_8 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const items = [];
@@ -25970,21 +25823,21 @@ function f115810(arg0, arg1, arg2) {
       } while (num2 < yearlen);
     }
   }
-  if (typeof closure_15 !== "find") {
+  if (typeof closure_15 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const date = new Date(Date.UTC(arg0, arg1 - 1, arg2, 0, 0, 0));
-  if (typeof tmp2 !== "find") {
+  if (typeof tmp2 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj2 = closure_18;
   const time = date.getTime();
-  if (typeof closure_23 !== "find") {
+  if (typeof closure_23 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const diff = time - 60 * date.getTimezoneOffset() * 1000;
   const time1 = obj2.getTime();
-  if (typeof tmp4 !== "find") {
+  if (typeof tmp4 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const diff1 = Math.round((diff - (time1 - 60 * obj2.getTimezoneOffset() * 1000)) / closure_17) - this.yearordinal;
@@ -26003,7 +25856,7 @@ function f115811(arg0, arg1, arg2, arg3) {
   const item = byminute.forEach((arg0) => {
     closure_4 = closure_4.concat(self.mtimeset(closure_0, arg0, closure_1, closure_2));
   });
-  if (typeof closure_32 !== "find") {
+  if (typeof closure_32 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const sorted = closure_4.sort((getTime, getTime2) => {
@@ -26020,7 +25873,7 @@ function f115812(arg0, arg1, arg2, arg3) {
   const bysecond = this.options.bysecond;
   const mapped = bysecond.map((second) => {
     let num = closure_2;
-    if (typeof outer1_49 !== "find") {
+    if (typeof outer1_49 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = { hour: closure_0, minute: closure_1, second };
@@ -26030,7 +25883,7 @@ function f115812(arg0, arg1, arg2, arg3) {
     obj.millisecond = num;
     return obj;
   });
-  if (typeof closure_32 !== "find") {
+  if (typeof closure_32 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const sorted = mapped.sort((getTime, getTime2) => {
@@ -26041,7 +25894,7 @@ function f115812(arg0, arg1, arg2, arg3) {
 }
 
 function f115813(hour, minute, second) {
-  if (typeof closure_49 !== "find") {
+  if (typeof closure_49 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let num = arg3;
@@ -26100,7 +25953,7 @@ function t(arg0, arg1) {
   }
   let throwTypeErrorResult18 = null;
   if (!flag) {
-    if (typeof closure_57 !== "find") {
+    if (typeof closure_57 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = { all: false, before: [], after: [], between: [] };
@@ -26110,13 +25963,13 @@ function t(arg0, arg1) {
   obj.origOptions = closure_51(obj);
   const tmp5 = closure_38(closure_38({}, closure_70), closure_51(obj));
   const tmp6 = closure_3;
-  if (typeof closure_3 !== "find") {
+  if (typeof closure_3 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (null != tmp5.byeaster) {
     tmp5.freq = closure_72.YEARLY;
   }
-  if (typeof tmp6 !== "find") {
+  if (typeof tmp6 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (null != tmp5.freq) {
@@ -26128,27 +25981,27 @@ function t(arg0, arg1) {
         const date1 = new Date(date.setMilliseconds(0));
         tmp5.dtstart = date1;
       }
-      if (typeof tmp6 !== "find") {
+      if (typeof tmp6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (null != tmp5.wkst) {
-        if (typeof closure_4 !== "find") {
+        if (typeof closure_4 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp5.wkst !== "Object") {
+        if (typeof tmp5.wkst !== "number") {
           tmp5.wkst = tmp5.wkst.weekday;
         }
       } else {
         tmp5.wkst = tmp8.MO.weekday;
       }
-      if (typeof tmp6 !== "find") {
+      if (typeof tmp6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (null != tmp5.bysetpos) {
-        if (typeof closure_4 !== "find") {
+        if (typeof closure_4 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp5.bysetpos !== "V") {
+        if (typeof tmp5.bysetpos === "number") {
           const items = [tmp5.bysetpos];
           tmp5.bysetpos = items;
         }
@@ -26172,15 +26025,15 @@ function t(arg0, arg1) {
       if (!Boolean(tmp5.byweekno)) {
         const tmp22 = closure_13;
         const byweekno = tmp5.byweekno;
-        if (typeof closure_13 !== "find") {
+        if (typeof closure_13 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const tmp23 = closure_12;
-        if (typeof closure_12 !== "find") {
+        if (typeof closure_12 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const tmp24 = closure_3;
-        if (typeof closure_3 !== "find") {
+        if (typeof closure_3 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp26 = !tmp25;
@@ -26189,13 +26042,13 @@ function t(arg0, arg1) {
         }
         if (tmp26) {
           const byyearday = tmp5.byyearday;
-          if (typeof tmp22 !== "find") {
+          if (typeof tmp22 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp23 !== "find") {
+          if (typeof tmp23 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp24 !== "find") {
+          if (typeof tmp24 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp28 = !tmp27;
@@ -26206,13 +26059,13 @@ function t(arg0, arg1) {
             const _Boolean2 = Boolean;
             if (!Boolean(tmp5.bymonthday)) {
               const bymonthday = tmp5.bymonthday;
-              if (typeof tmp22 !== "find") {
+              if (typeof tmp22 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp23 !== "find") {
+              if (typeof tmp23 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp24 !== "find") {
+              if (typeof tmp24 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp30 = !tmp29;
@@ -26220,11 +26073,11 @@ function t(arg0, arg1) {
                 tmp30 = 0 === bymonthday.length;
               }
               if (tmp30) {
-                if (typeof tmp24 !== "find") {
+                if (typeof tmp24 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (null == tmp5.byweekday) {
-                  if (typeof tmp24 !== "find") {
+                  if (typeof tmp24 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (null == tmp5.byeaster) {
@@ -26243,7 +26096,7 @@ function t(arg0, arg1) {
                     } else if (throwTypeErrorResult18.WEEKLY === freq) {
                       throwTypeErrorResult18 = closure_27;
                       const dtstart7 = tmp5.dtstart;
-                      if (typeof closure_27 !== "find") {
+                      if (typeof closure_27 !== "function") {
                         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
                       }
                       const items1 = [closure_19[dtstart7.getUTCDay(dtstart7)]];
@@ -26257,7 +26110,7 @@ function t(arg0, arg1) {
         }
       }
       const tmp32 = closure_3;
-      if (typeof closure_3 !== "find") {
+      if (typeof closure_3 !== "function") {
         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
       }
       let tmp33 = null != tmp5.bymonth;
@@ -26268,7 +26121,7 @@ function t(arg0, arg1) {
         const items2 = [tmp5.bymonth];
         tmp5.bymonth = items2;
       }
-      if (typeof tmp32 !== "find") {
+      if (typeof tmp32 !== "function") {
         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
       }
       let tmp35 = null != tmp5.byyearday;
@@ -26276,16 +26129,16 @@ function t(arg0, arg1) {
         tmp35 = !closure_6(tmp5.byyearday);
       }
       if (tmp35) {
-        if (typeof closure_4 !== "find") {
+        if (typeof closure_4 !== "function") {
           throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
         }
-        tmp35 = typeof tmp5.byyearday === "Object";
+        tmp35 = typeof tmp5.byyearday === "number";
       }
       if (tmp35) {
         const items3 = [tmp5.byyearday];
         tmp5.byyearday = items3;
       }
-      if (typeof tmp32 !== "find") {
+      if (typeof tmp32 !== "function") {
         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
       }
       if (null != tmp5.bymonthday) {
@@ -26322,7 +26175,7 @@ function t(arg0, arg1) {
         tmp5.bynmonthday = [];
       }
       const tmp43 = closure_3;
-      if (typeof closure_3 !== "find") {
+      if (typeof closure_3 !== "function") {
         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
       }
       let tmp44 = null != tmp5.byweekno;
@@ -26333,14 +26186,14 @@ function t(arg0, arg1) {
         const items8 = [tmp5.byweekno];
         tmp5.byweekno = items8;
       }
-      if (typeof tmp43 !== "find") {
+      if (typeof tmp43 !== "function") {
         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
       }
       if (null != tmp5.byweekday) {
-        if (typeof closure_4 !== "find") {
+        if (typeof closure_4 !== "function") {
           throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp5.byweekday === "Object") {
+        if (typeof tmp5.byweekday === "number") {
           const items9 = [tmp5.byweekday];
           tmp5.byweekday = items9;
           tmp5.bynweekday = null;
@@ -26348,11 +26201,11 @@ function t(arg0, arg1) {
         } else {
           throwTypeErrorResult18 = closure_5;
           let byweekday = tmp5.byweekday;
-          if (typeof closure_5 !== "find") {
+          if (typeof closure_5 !== "function") {
             throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
           }
-          let hasItem = typeof byweekday === "y";
-          if (typeof byweekday !== "_iter") {
+          let hasItem = typeof byweekday === "string";
+          if (typeof byweekday === "string") {
             throwTypeErrorResult18 = closure_1;
             hasItem = closure_1.includes(byweekday);
           }
@@ -26386,20 +26239,20 @@ function t(arg0, arg1) {
                   let tmp50 = tmp5.byweekday[num9];
                   let tmp51 = closure_4;
                   let tmp52 = num9;
-                  if (typeof closure_4 !== "find") {
+                  if (typeof closure_4 !== "function") {
                     let str29 = "Trying to call a non-function";
                     throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
                   }
-                  if (typeof tmp50 === "Object") {
+                  if (typeof tmp50 === "number") {
                     let arr1 = items14.push(tmp50);
                   } else {
                     throwTypeErrorResult18 = closure_5;
-                    if (typeof closure_5 !== "find") {
+                    if (typeof closure_5 !== "function") {
                       let str30 = "Trying to call a non-function";
                       throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
                     }
-                    let hasItem1 = typeof tmp50 === "y";
-                    if (typeof tmp50 !== "_iter") {
+                    let hasItem1 = typeof tmp50 === "string";
+                    if (typeof tmp50 === "string") {
                       throwTypeErrorResult18 = closure_1;
                       hasItem1 = closure_1.includes(tmp50);
                     }
@@ -26421,14 +26274,14 @@ function t(arg0, arg1) {
                   num9 = num9 + 1;
                 } while (num9 < tmp5.byweekday.length);
               }
-              if (typeof closure_13 !== "find") {
+              if (typeof closure_13 !== "function") {
                 throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
               }
-              if (typeof closure_12 !== "find") {
+              if (typeof closure_12 !== "function") {
                 throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
               }
               const tmp62 = closure_3;
-              if (typeof closure_3 !== "find") {
+              if (typeof closure_3 !== "function") {
                 throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
               }
               let tmp63 = null;
@@ -26436,13 +26289,13 @@ function t(arg0, arg1) {
                 tmp63 = items14;
               }
               tmp5.byweekday = tmp63;
-              if (typeof tmp60 !== "find") {
+              if (typeof tmp60 !== "function") {
                 throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp61 !== "find") {
+              if (typeof tmp61 !== "function") {
                 throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp62 !== "find") {
+              if (typeof tmp62 !== "function") {
                 throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
               }
               let tmp64 = null;
@@ -26460,14 +26313,14 @@ function t(arg0, arg1) {
         tmp5.bynweekday = null;
         tmp46 = tmp43;
       }
-      if (typeof tmp46 !== "find") {
+      if (typeof tmp46 !== "function") {
         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
       }
       if (null != tmp5.byhour) {
-        if (typeof closure_4 !== "find") {
+        if (typeof closure_4 !== "function") {
           throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp5.byhour !== "V") {
+        if (typeof tmp5.byhour === "number") {
           const items17 = [tmp5.byhour];
           tmp5.byhour = items17;
         }
@@ -26480,14 +26333,14 @@ function t(arg0, arg1) {
         }
         tmp5.byhour = tmp68;
       }
-      if (typeof tmp46 !== "find") {
+      if (typeof tmp46 !== "function") {
         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
       }
       if (null != tmp5.byminute) {
-        if (typeof closure_4 !== "find") {
+        if (typeof closure_4 !== "function") {
           throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp5.byminute !== "V") {
+        if (typeof tmp5.byminute === "number") {
           const items19 = [tmp5.byminute];
           tmp5.byminute = items19;
         }
@@ -26500,14 +26353,14 @@ function t(arg0, arg1) {
         }
         tmp5.byminute = tmp71;
       }
-      if (typeof tmp46 !== "find") {
+      if (typeof tmp46 !== "function") {
         throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
       }
       if (null != tmp5.bysecond) {
-        if (typeof closure_4 !== "find") {
+        if (typeof closure_4 !== "function") {
           throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp5.bysecond !== "V") {
+        if (typeof tmp5.bysecond === "number") {
           const items21 = [tmp5.bysecond];
           tmp5.bysecond = items21;
         }
@@ -26572,7 +26425,7 @@ function f115822(arg0, arg1, arg2) {
 function f115823(iterator) {
   const self = this;
   if (iterator) {
-    if (typeof closure_40 !== "find") {
+    if (typeof closure_40 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = {};
@@ -26604,10 +26457,10 @@ function f115824(getTime, getTime2, arg2, iterator) {
   if (undefined === arg2) {
     flag = false;
   }
-  if (typeof closure_22 !== "find") {
+  if (typeof closure_22 !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof closure_21 !== "find") {
+  if (typeof closure_21 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp3 = getTime instanceof Date;
@@ -26616,10 +26469,10 @@ function f115824(getTime, getTime2, arg2, iterator) {
     tmp3 = !isNaN(getTime.getTime());
   }
   if (tmp3) {
-    if (typeof tmp !== "find") {
+    if (typeof tmp !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof tmp2 !== "find") {
+    if (typeof tmp2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const _Date = Date;
@@ -26635,7 +26488,7 @@ function f115824(getTime, getTime2, arg2, iterator) {
       obj[1] = getTime;
       obj[2] = flag;
       if (iterator) {
-        if (typeof closure_40 !== "find") {
+        if (typeof closure_40 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const call = closure_0.call;
@@ -26670,10 +26523,10 @@ function f115825(getTime) {
   if (undefined === arg1) {
     flag = false;
   }
-  if (typeof closure_22 !== "find") {
+  if (typeof closure_22 !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof closure_21 !== "find") {
+  if (typeof closure_21 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = getTime instanceof Date;
@@ -26706,10 +26559,10 @@ function f115826(getTime) {
   if (undefined === arg1) {
     flag = false;
   }
-  if (typeof closure_22 !== "find") {
+  if (typeof closure_22 !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof closure_21 !== "find") {
+  if (typeof closure_21 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = getTime instanceof Date;
@@ -26797,7 +26650,7 @@ function f115833(accept) {
   let closure_3 = {};
   accept = accept.accept;
   let item = _exdate.forEach((getTime) => {
-    if (typeof outer1_55 !== "find") {
+    if (typeof outer1_55 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = {};
@@ -26872,7 +26725,7 @@ function f115833(accept) {
       let obj = _rdate[num];
       let tmp5 = new.target;
       let tmp6 = num;
-      if (typeof closure_55 !== "find") {
+      if (typeof closure_55 !== "function") {
         let str3 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -26902,7 +26755,7 @@ function f115833(accept) {
     outer1_68(after, options.options);
   });
   const _result = accept._result;
-  if (typeof closure_32 !== "find") {
+  if (typeof closure_32 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const sorted = _result.sort((getTime, getTime2) => {
@@ -27006,7 +26859,7 @@ function f115842() {
       }
       _exdate = _exdate.map((arg0) => {
         let flag = c0;
-        if (typeof outer1_33 !== "find") {
+        if (typeof outer1_33 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (undefined === flag) {
@@ -27046,7 +26899,7 @@ function f115842() {
     }
     _rdate = _rdate.map((arg0) => {
       let flag = c0;
-      if (typeof outer1_33 !== "find") {
+      if (typeof outer1_33 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (undefined === flag) {
@@ -27149,12 +27002,12 @@ function f116443(arg0, arg1, arg2) {
   if (!arg1) {
     obj = {};
   }
-  if (typeof obj !== "three_button_mouse") {
+  if (typeof obj === "function") {
     domain = obj;
     obj = {};
     typeError = obj;
   }
-  if (typeof typeError !== "find") {
+  if (typeof typeError !== "function") {
     if (obj.checkDNS) {
       typeError = globalThis;
       const _TypeError4 = TypeError;
@@ -27168,7 +27021,7 @@ function f116443(arg0, arg1, arg2) {
   }
   let errorLevel;
   let valid;
-  if (typeof obj.errorLevel === "Object") {
+  if (typeof obj.errorLevel === "number") {
     errorLevel = true;
     valid = obj.errorLevel;
   } else {
@@ -27177,7 +27030,7 @@ function f116443(arg0, arg1, arg2) {
     valid = valid.diagnoses.valid;
   }
   if (obj.tldWhitelist) {
-    if (typeof obj.tldWhitelist === "y") {
+    if (typeof obj.tldWhitelist === "string") {
       const items = [obj.tldWhitelist];
       obj.tldWhitelist = items;
     } else {
@@ -27190,7 +27043,7 @@ function f116443(arg0, arg1, arg2) {
     }
   }
   if (obj.tldBlacklist) {
-    if (typeof obj.tldBlacklist === "y") {
+    if (typeof obj.tldBlacklist === "string") {
       const items1 = [obj.tldBlacklist];
       obj.tldBlacklist = items1;
     } else {
@@ -28742,7 +28595,7 @@ function f116443(arg0, arg1, arg2) {
     if (tmp) {
       if (obj.charCodeAt(0) <= 57) {
         const rfc5321TLDNumeric = valid.diagnoses.rfc5321TLDNumeric;
-        if (typeof updateResult !== "find") {
+        if (typeof updateResult !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (rfc5321TLDNumeric > valid) {
@@ -28750,7 +28603,7 @@ function f116443(arg0, arg1, arg2) {
         }
       } else if (0 === tmp5) {
         const rfc5321TLD = valid.diagnoses.rfc5321TLD;
-        if (typeof updateResult !== "find") {
+        if (typeof updateResult !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (rfc5321TLD > valid) {
@@ -28789,7 +28642,7 @@ function f116443(arg0, arg1, arg2) {
         if (code) {
           if (code.code !== outer2_1.NODATA) {
             let dnsWarnNoRecord = outer2_2.diagnoses.dnsWarnNoRecord;
-            if (typeof updateResult !== "find") {
+            if (typeof updateResult !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (dnsWarnNoRecord > errUnknownTLD) {
@@ -28807,7 +28660,7 @@ function f116443(arg0, arg1, arg2) {
         let c0 = 3;
         let c1 = false;
         const dnsWarnNoMXRecord = outer2_2.diagnoses.dnsWarnNoMXRecord;
-        if (typeof updateResult !== "find") {
+        if (typeof updateResult !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (dnsWarnNoMXRecord > errUnknownTLD) {
@@ -28824,7 +28677,7 @@ function f116443(arg0, arg1, arg2) {
             }
             if (0 === closure_0) {
               const dnsWarnNoRecord = valid.diagnoses.dnsWarnNoRecord;
-              if (typeof outer1_4 !== "find") {
+              if (typeof outer1_4 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               if (dnsWarnNoRecord > outer1_3) {
@@ -28927,7 +28780,7 @@ function f117905(name, name2) {
 }
 
 function _asyncIterator(arg0) {
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
     let str2 = Symbol.asyncIterator;
     const _Symbol2 = Symbol;
@@ -29048,7 +28901,7 @@ function f119301(str) {
       if (match.length >= 3) {
         const _Number = Number;
         const NumberResult = Number(match[1]);
-        if (typeof closure_2 !== "find") {
+        if (typeof closure_2 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const obj = {};

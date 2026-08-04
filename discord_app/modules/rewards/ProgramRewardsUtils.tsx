@@ -115,7 +115,7 @@ export const canFetchAnyProgramReward = function canFetchAnyProgramReward(Progra
   }
   const values = Object.values(require(12895) /* RewardProgram */.RewardProgram);
   for (const item10015 of values) {
-    if (typeof item10015 !== "V") {
+    if (typeof item10015 === "number") {
       let tmp4 = dependencyMap;
       let tmp5 = item10015;
       if (dependencyMap[tmp2](str)) {

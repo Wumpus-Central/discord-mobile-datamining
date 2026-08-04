@@ -13,7 +13,7 @@ prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(unpublished_at) {
-  if (typeof prototype !== "find") {
+  if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

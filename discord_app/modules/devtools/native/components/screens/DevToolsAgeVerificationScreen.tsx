@@ -20,83 +20,35 @@ function showAgeVerificationTestModal() {
 function _showAgeVerificationTestModal() {
   const self = this;
   const tmp = callback(function*() {
-    if (c5 === 2) {
+    const callback = tmp3;
+    let c3 = 1;
+    let obj2 = outer1_0(outer1_2[6]);
+    yield obj2.requestAgeVerification({});
+    if (1 === tmp7) {
+      c3 = 0;
+      const obj1 = callback(3986);
+      obj1.open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
+      let c5 = 3;
+    } else if (arg0 === 1) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp3;
-            let lib = tmp7;
-            lib = undefined;
-            let c3 = 1;
-            let obj2 = outer1_0(outer1_2[6]);
-            c4 = 2;
-            c5 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = obj2.requestAgeVerification({});
-            return obj1;
-          }
-        } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            obj1 = callback(3986);
-            obj1.open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
-            c5 = 3;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            lib = arg1;
-            obj2 = { webviewUrl: null, verificationRequestId: null, verificationVendorName: null, incodeParameters: null, onComplete: null, entryPoint: null };
-            obj2[0] = lib.verification_webview_url;
-            obj2[1] = lib.verification_request_id;
-            obj2[2] = lib.verification_vendor_name;
-            obj2[3] = lib.incode_parameters;
-            obj2[4] = function onComplete() {
-              tmp3(tmp15[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
-            };
-            obj2[5] = lib(7722).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
-            callback(7720).showAgeVerification(obj2);
-            c3 = 0;
-            const obj7 = callback(7720);
-          }
-          c3 = 0;
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp15) {
-        const dependencyMap = tmp15;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp15;
-        } else {
-          c4 = tmp;
-        }
-      }
+      throw arg1;
+    } else if (arg0 !== 2) {
+      const lib = arg1;
+      obj2 = { webviewUrl: null, verificationRequestId: null, verificationVendorName: null, incodeParameters: null, onComplete: null, entryPoint: null };
+      obj2[0] = lib.verification_webview_url;
+      obj2[1] = lib.verification_request_id;
+      obj2[2] = lib.verification_vendor_name;
+      obj2[3] = lib.incode_parameters;
+      obj2[4] = function onComplete() {
+        tmp3(tmp15[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
+      };
+      obj2[5] = lib(7722).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
+      callback(7720).showAgeVerification(obj2);
+      c3 = 0;
+      const obj7 = callback(7720);
     }
+    c3 = 0;
+    return arg1;
   });
   const _showAgeVerificationTestModal = tmp;
   const apply = tmp.apply;

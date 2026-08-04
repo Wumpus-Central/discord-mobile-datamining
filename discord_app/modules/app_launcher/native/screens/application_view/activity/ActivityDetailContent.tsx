@@ -106,109 +106,61 @@ function TryItOutButton(botUserId) {
   const items = [botUserId, applicationId, analyticsLocations];
   let str = "primary";
   callback = React.useCallback(callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
+    let closure_1 = tmp3;
+    const obj1 = { application_id: null, button_action: null };
+    obj1[0] = outer1_1;
+    obj1[1] = outer1_0(9467).EntryPointCommandButtonActions.OPEN_APP_DM;
+    outer1_1(698).track(outer1_10.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, obj1);
+    const _setTimeout = setTimeout;
+    ref.current = setTimeout(() => {
+      v0(true);
+    }, 250);
+    let dependencyMap = 1;
+    const obj8 = outer1_1(698);
+    const obj2 = { recipientIds: null };
+    obj2[0] = outer1_0;
+    yield outer1_1(4295).openPrivateChannel(obj2);
+    if (1 === tmp7) {
+      dependencyMap = 0;
+      const _clearTimeout = clearTimeout;
+      clearTimeout(ref.current);
+      dependencyMap(false);
+      let c5 = 3;
+    } else if (2 === tmp7) {
       if (arg0 === 1) {
+        c5 = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
+        dependencyMap = 0;
+        c5 = 3;
+        const obj4 = { value: null, done: true };
+        obj4[0] = arg1;
+        return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        let closure_0 = arg1;
+        const obj5 = { targetApplicationId: null, channelId: null, analyticsLocations: null };
+        obj5[0] = closure_1;
+        obj5[1] = closure_0;
+        obj5[2] = closure_2;
+        ref = 3;
+        c5 = 1;
+        const obj6 = { value: null, done: false };
+        obj6[0] = outer1_1(10882)(obj5);
+        return obj6;
       }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === ref) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_1 = tmp3;
-            let closure_0 = tmp7;
-            closure_0 = undefined;
-            const obj1 = { application_id: null, button_action: null };
-            obj1[0] = outer1_1;
-            obj1[1] = outer1_0(9467).EntryPointCommandButtonActions.OPEN_APP_DM;
-            outer1_1(698).track(outer1_10.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, obj1);
-            const _setTimeout = setTimeout;
-            ref.current = setTimeout(() => {
-              v0(true);
-            }, 250);
-            let dependencyMap = 1;
-            const obj8 = outer1_1(698);
-            const obj2 = { recipientIds: null };
-            obj2[0] = outer1_0;
-            ref = 2;
-            c5 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = outer1_1(4295).openPrivateChannel(obj2);
-            return obj3;
-          }
-        } else {
-          if (1 === tmp7) {
-            dependencyMap = 0;
-            const _clearTimeout = clearTimeout;
-            clearTimeout(ref.current);
-            dependencyMap(false);
-            c5 = 3;
-          } else if (2 === tmp7) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 0;
-              c5 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              closure_0 = arg1;
-              const obj5 = { targetApplicationId: null, channelId: null, analyticsLocations: null };
-              obj5[0] = closure_1;
-              obj5[1] = closure_0;
-              obj5[2] = closure_2;
-              ref = 3;
-              c5 = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = outer1_1(10882)(obj5);
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            dependencyMap = 0;
-          }
-          dependencyMap = 0;
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp21) {
-        closure_2 = tmp21;
-        if (tmp4 === dependencyMap) {
-          c5 = tmp2;
-          throw tmp21;
-        } else {
-          ref = tmp;
-        }
-      }
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      dependencyMap = 0;
     }
+    dependencyMap = 0;
+    return arg1;
   }), items);
   if ("channel" === botUserId.context.type) {
     str = "secondary";
   }
-  let obj = { size: "lg", loading: tmp[0], variant: str, text: null, onPress: null };
+  const obj = { size: "lg", loading: tmp[0], variant: str, text: null, onPress: null };
   const intl = botUserId(1236).intl;
   obj[3] = intl.string(botUserId(1236).t.AUM8hY);
   obj[4] = callback;

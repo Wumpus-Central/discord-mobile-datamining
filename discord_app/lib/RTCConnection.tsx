@@ -1274,7 +1274,7 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
               tmp19 = cameraDurationStats.camera_enabled_duration > 0;
             }
             if (tmp19) {
-              let obj1 = {};
+              const obj1 = {};
               let merged1 = Object.assign(cameraDurationStats);
               obj1.media_session_id = self.getMediaSessionId();
               importDefault(_videoQuality2[41]).track(constants.VIDEO_CALL_ENDED, obj1);
@@ -1504,66 +1504,14 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
       _require = undefined;
       infoResult = callback;
       _require = callback(function*() {
-        if (c1 === 2) {
-          c1 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c1 = 2;
-            if (0 === _systemResources) {
-              if (arg0 === 1) {
-                c1 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c1 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                _systemResources = _systemResources._systemResources;
-                let batteryLevelStats;
-                if (_systemResources != null) {
-                  batteryLevelStats = _systemResources.getBatteryLevelStats();
-                }
-                _systemResources = 1;
-                c1 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = batteryLevelStats;
-                return obj1;
-              }
-            } else if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              let closure_0 = arg1;
-              if (arg1 == null) {
-                closure_0 = { batteryUsageRounded: null };
-              }
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = closure_0;
-              return obj;
-            }
-          } catch (tmp9) {
-            c1 = tmp;
-            throw tmp9;
-          }
+        if (_systemResources != null) {
+          const batteryLevelStats = _systemResources.getBatteryLevelStats();
         }
+        let closure_0 = yield batteryLevelStats;
+        if (arg1 == null) {
+          closure_0 = { batteryUsageRounded: null };
+        }
+        return closure_0;
       });
       let items1 = [
         (function() {

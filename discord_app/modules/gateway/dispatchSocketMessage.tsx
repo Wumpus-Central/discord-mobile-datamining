@@ -1476,7 +1476,7 @@ defineSimpleDispatch(["USER_SETTINGS_PROTO_UPDATE"], (settings) => {
   obj = obj(1342);
   const b64ToProtoWithTypeResult = obj.b64ToProtoWithType(settings.settings.type, settings.settings.proto);
   if (null != b64ToProtoWithTypeResult) {
-    if (typeof b64ToProtoWithTypeResult === "y") {
+    if (typeof b64ToProtoWithTypeResult === "string") {
       const _Error = Error;
       throw Error("UserSettingsProto must not be a string");
     } else {

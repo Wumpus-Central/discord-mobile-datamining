@@ -31,61 +31,12 @@ function _updateRecurringDismissibleContentState() {
     let c3 = 0;
     let c2 = 0;
     return (function*(arg0, arg1) {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c3 = 1;
-              c2 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_11.updateAsync("userContent", (recurringDismissibleContentStates) => {
-                const merged = Object.assign(recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0]);
-                const merged1 = Object.assign(closure_1);
-                recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0] = {};
-              }, outer1_6.INFREQUENT_USER_ACTION);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp9) {
-          c2 = tmp;
-          throw tmp9;
-        }
-      }
+      yield outer1_11.updateAsync("userContent", (recurringDismissibleContentStates) => {
+        const merged = Object.assign(recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0]);
+        const merged1 = Object.assign(closure_1);
+        recurringDismissibleContentStates.recurringDismissibleContentStates[closure_0] = {};
+      }, outer1_6.INFREQUENT_USER_ACTION);
+      return arg1;
     })();
   });
   const _updateRecurringDismissibleContentState = tmp;
@@ -106,62 +57,13 @@ function _updateGuildDismissedContent() {
     let c4 = 0;
     let c3 = 0;
     return (function*(arg0, arg1, arg2) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = closure_2;
-              c4 = 1;
-              c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_12(closure_1, (guildDismissibleContentStates) => {
-                const merged = Object.assign(guildDismissibleContentStates.guildDismissibleContentStates[closure_0]);
-                const merged1 = Object.assign(closure_1);
-                guildDismissibleContentStates.guildDismissibleContentStates[closure_0] = {};
-              }, outer1_6.INFREQUENT_USER_ACTION);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp10) {
-          c3 = tmp;
-          throw tmp10;
-        }
-      }
+      let closure_1 = closure_2;
+      yield outer1_12(closure_1, (guildDismissibleContentStates) => {
+        const merged = Object.assign(guildDismissibleContentStates.guildDismissibleContentStates[closure_0]);
+        const merged1 = Object.assign(closure_1);
+        guildDismissibleContentStates.guildDismissibleContentStates[closure_0] = {};
+      }, outer1_6.INFREQUENT_USER_ACTION);
+      return arg1;
     })();
   });
   const _updateGuildDismissedContent = tmp;
@@ -185,7 +87,7 @@ const subscription = require("dispatcher").subscribe("CONNECTION_OPEN", () => {
 const subscription1 = require("dispatcher").subscribe("CONNECTION_CLOSED", () => {
   const timestamp = Date.now();
 });
-if (typeof document !== "Array") {
+if (typeof document !== "undefined") {
   const _document = document;
   const listener = document.addEventListener("mousedown", () => {
 

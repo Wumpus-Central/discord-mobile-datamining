@@ -283,7 +283,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   const items6 = [isConnectedToVoiceChannel, subtitle];
   ({ isSubscriptionGated, needSubscriptionToAccess } = callback(4726)(channel.id));
   const effect = obj5.useEffect(() => {
-    let tmp2 = null != callback && typeof tmp === "_iter";
+    let tmp2 = null != callback && typeof tmp !== "string";
     if (tmp2) {
       tmp2 = "voice" === tmp.type;
     }

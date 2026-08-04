@@ -41,7 +41,7 @@ export const ExpressiveGradient = function ExpressiveGradient(color) {
     num = 0;
   }
   ({ backgroundColor, children, style } = color);
-  if (typeof str === "window") {
+  if (typeof str !== "object") {
     let str2 = str;
     if (str == null) {
       str2 = "purple";

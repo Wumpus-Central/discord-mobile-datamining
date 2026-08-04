@@ -1467,7 +1467,7 @@ export const useProgressState = function useProgressState(quest) {
   if (userStatus3 != null) {
     claimedAt = userStatus3.claimedAt;
   }
-  if (typeof useQuestTaskDetails !== "find") {
+  if (typeof useQuestTaskDetails !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let closure_0 = quest;
@@ -1535,7 +1535,7 @@ export const useQuestCompletionDetails = function useQuestCompletionDetails(ques
   let obj = _require(589);
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  if (typeof useQuestTaskDetails !== "find") {
+  if (typeof useQuestTaskDetails !== "function") {
     HermesBuiltin.throwTypeError();
   }
   _require = quest;
@@ -1623,7 +1623,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
   let _require = userStatus;
   const items = [userStatus];
   const memo = React.useMemo(() => userStatus(outer1_2[23]).getThirdPartyTaskDetails(userStatus), items);
-  if (typeof useQuestTaskDetails !== "find") {
+  if (typeof useQuestTaskDetails !== "function") {
     HermesBuiltin.throwTypeError();
   }
   _require = userStatus;

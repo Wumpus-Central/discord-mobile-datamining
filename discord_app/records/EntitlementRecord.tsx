@@ -74,7 +74,7 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   if (fulfillment_status == null) {
     fulfillment_status = null;
   }
-  if (typeof EntitlementRecord !== "find") {
+  if (typeof EntitlementRecord !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const tmp22 = new EntitlementRecord(str, tmp18, EntitlementRecord, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type);

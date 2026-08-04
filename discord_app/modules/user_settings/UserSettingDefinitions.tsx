@@ -33,10 +33,10 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
   };
   obj = {
     getSetting,
-    updateSetting: (arg0) => {
-      let tmp2 = arg0;
-      if (typeof arg0 !== "three_button_mouse") {
-        tmp2 = arg0(getSetting());
+    updateSetting: (fn) => {
+      let tmp2 = fn;
+      if (typeof fn === "function") {
+        tmp2 = fn(getSetting());
       }
       return f73583(tmp2);
     },
@@ -105,10 +105,10 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
       }
       return stateFromStores;
     },
-    updateSetting: (arg0) => {
-      let tmp2 = arg0;
-      if (typeof arg0 !== "three_button_mouse") {
-        tmp2 = arg0(getSetting());
+    updateSetting: (fn) => {
+      let tmp2 = fn;
+      if (typeof fn === "function") {
+        tmp2 = fn(getSetting());
       }
       return f73583(tmp2);
     }
@@ -141,10 +141,10 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
       }
       return tmp2;
     },
-    updateSetting: (arg0) => {
-      let tmp2 = arg0;
-      if (typeof arg0 !== "three_button_mouse") {
-        tmp2 = arg0(getSetting());
+    updateSetting: (fn) => {
+      let tmp2 = fn;
+      if (typeof fn === "function") {
+        tmp2 = fn(getSetting());
       }
       return f73583(tmp2);
     }

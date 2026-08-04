@@ -118,14 +118,14 @@ export const SearchListCardContent = function SearchListCardContent(arg0) {
   ({ label, subLabel } = arg0);
   let obj = { style: createCacheKey().content, children: null };
   let tmp3 = label;
-  if (typeof label !== "_iter") {
+  if (typeof label === "string") {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
     obj[3] = label;
     tmp3 = callback(require(4281) /* Text */.Text, obj);
   }
   const items = [tmp3, ];
   let tmp4 = subLabel;
-  if (typeof subLabel !== "_iter") {
+  if (typeof subLabel === "string") {
     obj = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: null };
     obj[3] = subLabel;
     tmp4 = callback(require(4281) /* Text */.Text, obj);

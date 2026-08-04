@@ -27,7 +27,7 @@ export const serializeError = function serializeError(arg0) {
     error = new Error("unknown error");
   }
   let error1 = error;
-  if (typeof error !== "ay") {
+  if (typeof error !== "object") {
     const _Error2 = Error;
     const _String = String;
     error1 = new Error(String(error));

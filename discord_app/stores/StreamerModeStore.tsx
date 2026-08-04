@@ -152,7 +152,7 @@ obj = {
     obj = { [value.key]: value.value };
     const merged1 = Object.assign(obj, obj);
     if ("enabled" === value.key) {
-      if (typeof value.value === "T") {
+      if (typeof value.value === "boolean") {
         obj = { enabled: null, automatic: false };
         obj[0] = value.value;
         importDefault(698).track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);

@@ -52,12 +52,12 @@ function ObjectKV(obj) {
         value = iter.value;
       }
       value = obj;
-      if (typeof value !== "V") {
+      if (typeof value === "number") {
         value = obj.at(-1).value;
       }
     }
     if (null != value) {
-      if (typeof value === "ay") {
+      if (typeof value === "object") {
         obj = { title: null, children: null };
         obj[0] = tmp;
         obj = { obj: null };
@@ -69,7 +69,7 @@ function ObjectKV(obj) {
     }
     const obj1 = { style: row.row, children: null };
     const items = [tmp, ": ", ];
-    if (typeof outer1_17 !== "find") {
+    if (typeof outer1_17 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     items[2] = "" + value;

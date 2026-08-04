@@ -146,103 +146,57 @@ function useCreateSubscription(planId) {
   }, items4);
   obj = {
     createSubscription: React.useCallback(callback(function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let closure_0 = tmp3;
+      v0(outer1_2[18])(c4, "cannot connect to IAP API");
+      v0(outer1_2[18])(null != outer1_5, "plan not found");
+      let c3 = 1;
+      yield v0(outer1_2[10]).restoreAndApplyPurchases();
+      if (1 === tmp7) {
+        c3 = 0;
+        outer1_13.error("error consuming pending purchases but we'll try to let user purchase");
+        outer1_7();
+        const genericSubscription = outer1_0(outer1_2[10]).createGenericSubscription(outer1_5);
+        v0 = 2;
+        c4 = 1;
+        const obj6 = outer1_0(outer1_2[10]);
+      } else if (2 === tmp7) {
         if (arg0 === 1) {
+          c4 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c4 = 3;
+          let obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          obj2 = outer1_0(outer1_2[19]);
+          v0 = 4;
+          c4 = 1;
+          const obj3 = { value: null, done: false };
+          obj3[0] = obj2.fetchSubscriptions();
+          return obj3;
         }
+      } else if (3 === tmp7) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw arg1;
+        } else if (arg0 !== 2) {
+          c3 = 0;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
       } else {
-        try {
-          c4 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_0 = tmp3;
-              v0(outer1_2[18])(c4, "cannot connect to IAP API");
-              v0(outer1_2[18])(null != outer1_5, "plan not found");
-              let c3 = 1;
-              v0 = 3;
-              c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = v0(outer1_2[10]).restoreAndApplyPurchases();
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              outer1_13.error("error consuming pending purchases but we'll try to let user purchase");
-              outer1_7();
-              const genericSubscription = outer1_0(outer1_2[10]).createGenericSubscription(outer1_5);
-              v0 = 2;
-              c4 = 1;
-              const obj6 = outer1_0(outer1_2[10]);
-            } else if (2 === tmp7) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                obj2 = outer1_0(outer1_2[19]);
-                v0 = 4;
-                c4 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = obj2.fetchSubscriptions();
-                return obj3;
-              }
-            } else if (3 === tmp7) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                c3 = 0;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c4 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-            c3 = 0;
-            c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          }
-        } catch (tmp30) {
-          let closure_2 = tmp30;
-          if (tmp4 === c3) {
-            c4 = tmp2;
-            throw tmp30;
-          } else {
-            v0 = tmp;
-          }
-        }
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
+      c3 = 0;
+      return arg1;
     }), items5),
     nativePaymentsConnected: first
   };
@@ -322,81 +276,14 @@ function useCancelSubscription(arg0, arg1) {
   isGenericIapConnected = tmp12;
   obj = {
     cancelSubscription: memo.useCallback(callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp5;
-              let closure_0 = tmp2;
-              closure_0 = undefined;
-              outer1_1(38)(outer1_5, "Cannot update subscription");
-              outer1_1(38)(dependencyMap, "Cannot connect to IAP API");
-              outer1_1(38)(null != outer1_6, "Subscription not found");
-              dependencyMap = 1;
-              c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(6792).cancelGenericSubscription(outer1_6.requestIdentifier, outer1_6.subscriptionId, outer1_1);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_0 = arg1;
-              obj2 = outer1_0(4604);
-              dependencyMap = 2;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj2.fetchSubscriptions();
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_0;
-            return obj;
-          }
-        } catch (tmp11) {
-          c3 = tmp;
-          throw tmp11;
-        }
-      }
+      let closure_0 = tmp2;
+      outer1_1(38)(outer1_5, "Cannot update subscription");
+      outer1_1(38)(dependencyMap, "Cannot connect to IAP API");
+      outer1_1(38)(null != outer1_6, "Subscription not found");
+      closure_0 = yield outer1_0(6792).cancelGenericSubscription(outer1_6.requestIdentifier, outer1_6.subscriptionId, outer1_1);
+      const obj2 = outer1_0(4604);
+      yield obj2.fetchSubscriptions();
+      return closure_0;
     }), items5),
     nativePaymentsConnected: first
   };
@@ -475,82 +362,15 @@ function useResubscribeSubscription(arg0) {
   React = tmp12;
   obj = {
     resubscribeSubscription: React.useCallback(stateFromStores(function*() {
-      if (isACOM === 2) {
-        isACOM = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          isACOM = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              isACOM = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              isACOM = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp5;
-              let closure_0 = tmp2;
-              closure_0 = undefined;
-              outer1_1(38)(outer1_4, "Cannot update subscription");
-              outer1_1(38)(outer1_1, "Cannot connect to IAP API");
-              outer1_1(38)(null != outer1_5, "Subscription not found");
-              outer1_1(38)(null != isACOM, "Subscription not found");
-              dependencyMap = 1;
-              isACOM = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(6792).resubscribeGenericSubscription(outer1_5, isACOM.isACOM);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              isACOM = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              isACOM = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_0 = arg1;
-              obj2 = outer1_0(4604);
-              dependencyMap = 2;
-              isACOM = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj2.fetchSubscriptions();
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            isACOM = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            isACOM = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            isACOM = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_0;
-            return obj;
-          }
-        } catch (tmp11) {
-          isACOM = tmp;
-          throw tmp11;
-        }
-      }
+      let closure_0 = tmp2;
+      outer1_1(38)(outer1_4, "Cannot update subscription");
+      outer1_1(38)(outer1_1, "Cannot connect to IAP API");
+      outer1_1(38)(null != outer1_5, "Subscription not found");
+      outer1_1(38)(null != isACOM, "Subscription not found");
+      closure_0 = yield outer1_0(6792).resubscribeGenericSubscription(outer1_5, isACOM.isACOM);
+      const obj2 = outer1_0(4604);
+      yield obj2.fetchSubscriptions();
+      return closure_0;
     }), items5),
     nativePaymentsConnected: first
   };

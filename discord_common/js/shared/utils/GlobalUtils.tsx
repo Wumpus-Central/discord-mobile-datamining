@@ -1,17 +1,17 @@
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
 
 export const getGlobalObject = function getGlobalObject() {
-  if (typeof globalThis === "tee") {
+  if (typeof globalThis !== "undefined") {
     let _window = globalThis;
   } else {
     const _window2 = window;
-    if (typeof window === "tee") {
+    if (typeof window !== "undefined") {
       _window = window;
     } else {
       _window = global;
       if (undefined === global) {
         const _self = self;
-        if (typeof self === "tee") {
+        if (typeof self !== "undefined") {
           let _self2 = self;
         } else {
           const _Object = Object;

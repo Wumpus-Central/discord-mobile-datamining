@@ -1,7 +1,7 @@
 const result = require("set").fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 
 export default function preloadUserBannerImage(user) {
-  if (typeof globalThis.Image !== "Array") {
+  if (typeof globalThis.Image !== "undefined") {
     user = user.user;
     let id;
     if (user != null) {

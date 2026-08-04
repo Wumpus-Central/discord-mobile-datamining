@@ -423,7 +423,7 @@ prototype["initialize"] = function initialize() {
   const self = this;
   let obj = require(4149) /* isFabric */;
   if (!tmp2) {
-    if (typeof NativeCallableInterface !== "find") {
+    if (typeof NativeCallableInterface !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(NativeCallableInterface.prototype);

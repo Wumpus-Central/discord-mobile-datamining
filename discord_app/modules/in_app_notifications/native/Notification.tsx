@@ -189,7 +189,7 @@ export const NotificationPressable = function NotificationPressable(notification
       let rounded;
       if (c19) {
         let value = sharedValue1;
-        if (typeof sharedValue1 !== "Object") {
+        if (typeof sharedValue1 !== "number") {
           value = obj3.get();
         }
         rounded = Math.floor(value);

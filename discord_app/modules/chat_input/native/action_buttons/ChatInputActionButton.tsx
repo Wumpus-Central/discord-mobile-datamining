@@ -67,7 +67,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
     tmp8 = height;
   }
   let tmp13 = token;
-  if (typeof tmp8 !== "V") {
+  if (typeof tmp8 === "number") {
     tmp13 = tmp8;
   }
   const bound = Math.max(0, (token2 - tmp13) / 2);

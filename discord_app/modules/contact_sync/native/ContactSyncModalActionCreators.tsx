@@ -860,66 +860,16 @@ export const openContactSyncModalOnboarding = function openContactSyncModalOnboa
     obj[0] = require(11950) /* Steps */.CONTACT_SYNC_ONBOARDING_LOCATION;
     obj[0] = obj;
     require(11950) /* Steps */.trackFlowStart(obj);
-    let obj2 = require(11950) /* Steps */;
+    const obj2 = require(11950) /* Steps */;
     importDefault(4490).pushLazy(callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === paths) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp5;
-              let callback = tmp2;
-              callback = undefined;
-              paths = 1;
-              c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(paths[20])(paths[19], paths.paths);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            callback = arg1.default;
-            obj = { animation: null };
-            obj[0] = callback(paths[22]).ModalAnimation.SLIDE_IN_OUT;
-            callback.modalConfig = obj;
-            c3 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = callback;
-            return obj3;
-          }
-        } catch (tmp15) {
-          c3 = tmp;
-          throw tmp15;
-        }
-      }
+      let closure_1 = tmp5;
+      let callback = tmp2;
+      yield outer1_0(paths[20])(paths[19], paths.paths);
+      callback = arg1.default;
+      const obj = { animation: null };
+      obj[0] = callback(paths[22]).ModalAnimation.SLIDE_IN_OUT;
+      callback.modalConfig = obj;
+      return callback;
     }), {}, closure_20);
   } else {
     obj = require(8987) /* showInstantInviteActionSheet */;

@@ -937,83 +937,32 @@ export default {
     let closure_1 = id2;
     let closure_2 = arg2;
     return callback(function*() {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+      let closure_1 = tmp2;
+      let closure_0 = tmp5;
+      const icon = c2.icon;
+      const tmp32 = outer1_5(c2, outer1_4);
+      if (null === icon) {
+        const tmp13 = icon;
       } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let closure_0 = tmp5;
-              closure_0 = undefined;
-              const icon = c2.icon;
-              const tmp32 = outer1_5(c2, outer1_4);
-              if (null === icon) {
-                const tmp13 = icon;
-              } else {
-                let startsWithResult;
-                if (icon != null) {
-                  startsWithResult = icon.startsWith("data:");
-                }
-              }
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = outer1_16.GUILD_ROLE(outer1_0, outer1_1);
-              const obj2 = {};
-              const merged = Object.assign(tmp32);
-              obj2.icon = tmp13;
-              obj2.unicode_emoji = c2.unicodeEmoji;
-              obj1[1] = obj2;
-              let obj5 = outer1_0(530);
-              obj1[3] = obj5.rejectWithMigratedError();
-              c2 = 1;
-              dependencyMap = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.patch(obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            closure_0 = arg1;
-            obj = outer1_1(5847);
-            const result = obj.checkGuildTemplateDirty(closure_0);
-            dependencyMap = 3;
-            obj5 = { value: null, done: true };
-            obj5[0] = closure_0;
-            return obj5;
-          }
-        } catch (tmp23) {
-          dependencyMap = tmp;
-          throw tmp23;
+        let startsWithResult;
+        if (icon != null) {
+          startsWithResult = icon.startsWith("data:");
         }
       }
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = outer1_16.GUILD_ROLE(outer1_0, outer1_1);
+      const obj2 = {};
+      const merged = Object.assign(tmp32);
+      obj2.icon = tmp13;
+      obj2.unicode_emoji = c2.unicodeEmoji;
+      obj1[1] = obj2;
+      const obj5 = outer1_0(530);
+      obj1[3] = obj5.rejectWithMigratedError();
+      closure_0 = yield HTTP.patch(obj1);
+      const obj = outer1_1(5847);
+      const result = obj.checkGuildTemplateDirty(closure_0);
+      return closure_0;
     })();
   },
   updateRolePermissions(c0, c1, permissions) {
@@ -1035,136 +984,34 @@ export default {
     let closure_0 = arg0;
     let closure_1 = arg1;
     return callback(function*() {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let closure_0 = tmp5;
-              closure_0 = undefined;
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = outer1_16.GUILD_CHANNELS(outer1_0);
-              obj1[1] = outer1_1;
-              obj1[3] = outer1_0(530).rejectWithMigratedError();
-              c2 = 1;
-              dependencyMap = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.patch(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            closure_0 = arg1;
-            obj = outer1_1(5847);
-            const result = obj.checkGuildTemplateDirty(closure_0);
-            dependencyMap = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = closure_0;
-            return obj4;
-          }
-        } catch (tmp12) {
-          dependencyMap = tmp;
-          throw tmp12;
-        }
-      }
+      let closure_1 = tmp2;
+      let closure_0 = tmp5;
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = outer1_16.GUILD_CHANNELS(outer1_0);
+      obj1[1] = outer1_1;
+      obj1[3] = outer1_0(530).rejectWithMigratedError();
+      closure_0 = yield HTTP.patch(obj1);
+      const obj = outer1_1(5847);
+      const result = obj.checkGuildTemplateDirty(closure_0);
+      return closure_0;
     })();
   },
   batchRoleUpdate(arg0, arg1) {
     let closure_0 = arg0;
     let closure_1 = arg1;
     return callback(function*() {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp2;
-              let closure_0 = tmp5;
-              closure_0 = undefined;
-              const HTTP = outer1_0(530).HTTP;
-              const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = outer1_16.GUILD_ROLES(outer1_0);
-              obj1[1] = outer1_1;
-              obj1[3] = outer1_0(530).rejectWithMigratedError();
-              c2 = 1;
-              dependencyMap = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.patch(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            closure_0 = arg1;
-            obj = outer1_1(5847);
-            const result = obj.checkGuildTemplateDirty(closure_0);
-            dependencyMap = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = closure_0;
-            return obj4;
-          }
-        } catch (tmp12) {
-          dependencyMap = tmp;
-          throw tmp12;
-        }
-      }
+      let closure_1 = tmp2;
+      let closure_0 = tmp5;
+      const HTTP = outer1_0(530).HTTP;
+      const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = outer1_16.GUILD_ROLES(outer1_0);
+      obj1[1] = outer1_1;
+      obj1[3] = outer1_0(530).rejectWithMigratedError();
+      closure_0 = yield HTTP.patch(obj1);
+      const obj = outer1_1(5847);
+      const result = obj.checkGuildTemplateDirty(closure_0);
+      return closure_0;
     })();
   },
   requestMembers(arg0) {
@@ -1772,61 +1619,12 @@ export default {
   getGuildRoleConnectionsConfigurations(guildId) {
     let closure_0 = guildId;
     return callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = v0(outer1_3[16]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = outer1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(v0);
-              obj1[2] = v0(outer1_3[16]).rejectWithMigratedError();
-              c1 = 1;
-              v0 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1.body;
-            return obj;
-          }
-        } catch (tmp5) {
-          v0 = tmp;
-          throw tmp5;
-        }
-      }
+      const HTTP = v0(outer1_3[16]).HTTP;
+      const obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = outer1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(v0);
+      obj1[2] = v0(outer1_3[16]).rejectWithMigratedError();
+      yield HTTP.get(obj1);
+      return arg1.body;
     })();
   }
 };

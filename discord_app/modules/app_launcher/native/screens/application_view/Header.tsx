@@ -58,7 +58,7 @@ export default function Header(application) {
   tmpResult = tmp(3989);
   let str = tmpResult.useToken(importDefault(712).colors.BACKGROUND_BASE_LOW);
   let tmp7 = appLauncherIconSource;
-  if (typeof appLauncherIconSource !== "Object") {
+  if (typeof appLauncherIconSource !== "number") {
     let uri;
     if (appLauncherIconSource != null) {
       uri = appLauncherIconSource.uri;

@@ -28,7 +28,7 @@ class PersistedStore extends r10016 {
     };
     tmp4 = require("throttle");
     tmp3.throttledCallback = tmp4((arg0) => _undefined.callback(arg0), tmp3.getClass().throttleDelay, { leading: false });
-    if (typeof tmp3.getClass().persistKey === "_iter") {
+    if (typeof tmp3.getClass().persistKey !== "string") {
       tmp15 = globalThis;
       _Error3 = Error;
       _HermesInternal3 = HermesInternal;
@@ -39,7 +39,7 @@ class PersistedStore extends r10016 {
       error = new Error("" + tmp3.getClass().name + " initialized without a `persistKey`. Add one so we know where to save your stuff!");
       tmp19 = error;
       throw error;
-    } else if (typeof tmp3.initialize === "three_button_mouse") {
+    } else if (typeof tmp3.initialize !== "function") {
       tmp10 = globalThis;
       _Error2 = Error;
       _HermesInternal2 = HermesInternal;
@@ -50,7 +50,7 @@ class PersistedStore extends r10016 {
       error1 = new Error("" + tmp3.getClass().name + " initialized without an `initialize` method. Add one that accepts the initial cached state.");
       tmp14 = error1;
       throw error1;
-    } else if (typeof tmp3.getState === "three_button_mouse") {
+    } else if (typeof tmp3.getState !== "function") {
       tmp5 = globalThis;
       _Error = Error;
       _HermesInternal = HermesInternal;

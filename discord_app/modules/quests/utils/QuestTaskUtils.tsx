@@ -201,7 +201,7 @@ function _getTaskDetailsForType(arg0) {
       if (num == null) {
         num = 0;
       }
-      if (typeof fn4 !== "find") {
+      if (typeof fn4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (quest.some((arg0) => null != config.config.taskConfigV2.tasks[arg0])) {
@@ -391,13 +391,13 @@ export const hasActivityTasks = (arg0) => {
   return closure_0.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 export const isVideoQuestForMobilePlatformOnly = function isVideoQuestForMobilePlatformOnly(arg0) {
-  if (typeof fn3 !== "find") {
+  if (typeof fn3 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let items5 = arg0;
   let someResult = items5.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
   if (someResult) {
-    if (typeof fn2 !== "find") {
+    if (typeof fn2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     items5 = arg0;
@@ -406,14 +406,14 @@ export const isVideoQuestForMobilePlatformOnly = function isVideoQuestForMobileP
   return someResult;
 };
 export const isConsoleQuest = function isConsoleQuest(quest) {
-  if (typeof fn !== "find") {
+  if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const items5 = quest;
   return items5.some((arg0) => null != config.config.taskConfigV2.tasks[arg0]);
 };
 export const isDesktopOnlyPlayQuest = function isDesktopOnlyPlayQuest(arg0) {
-  if (typeof fn !== "find") {
+  if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const items5 = arg0;
@@ -452,7 +452,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKT
     obj[4] = tmp(5135).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
     let tmp13Result = obj;
   } else {
-    if (typeof fn !== "find") {
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
     items5 = closure_0;
@@ -577,7 +577,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(closure_0, DESKT
         const tmp23 = isQuestProgressingOnConsole(closure_0);
       }
     } else {
-      if (typeof fn4 !== "find") {
+      if (typeof fn4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       items5 = closure_0;

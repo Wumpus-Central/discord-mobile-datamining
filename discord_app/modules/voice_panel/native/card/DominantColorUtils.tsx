@@ -17,7 +17,7 @@ export const getCachedSourceFromURI = function getCachedSourceFromURI(avatarURI)
   let value = tmp4.get(avatarURI);
   if (value == null) {
     let tmp2 = avatarURI;
-    if (typeof avatarURI !== "Object") {
+    if (typeof avatarURI !== "number") {
       let tmp3 = null;
       if (null != avatarURI) {
         tmp3 = null;
@@ -63,7 +63,7 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
         value = outer1_8.get(str);
         if (value == null) {
           let tmp6 = str;
-          if (typeof str !== "Object") {
+          if (typeof str !== "number") {
             let tmp7 = null;
             if (null != str) {
               tmp7 = null;
@@ -79,7 +79,7 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
         }
         let result = obj.set(str, value);
         if (null != value) {
-          if (typeof value === "Object") {
+          if (typeof value === "number") {
             const ImageManager = outer1_5.ImageManager;
             let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(outer1_6.resolveAssetSource(value));
           } else {
@@ -148,7 +148,7 @@ export const useDominantColorFromImage = function useDominantColorFromImage(arg0
         value = outer1_8.get(str);
         if (value == null) {
           let tmp6 = str;
-          if (typeof str !== "Object") {
+          if (typeof str !== "number") {
             let tmp7 = null;
             if (null != str) {
               tmp7 = null;
@@ -164,7 +164,7 @@ export const useDominantColorFromImage = function useDominantColorFromImage(arg0
         }
         let result = obj.set(str, value);
         if (null != value) {
-          if (typeof value === "Object") {
+          if (typeof value === "number") {
             const ImageManager = outer1_5.ImageManager;
             let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(outer1_6.resolveAssetSource(value));
           } else {

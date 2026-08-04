@@ -34,58 +34,9 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0) {
-      if (c1 === 2) {
-        c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c1 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj2 = callback(table[7]);
-              table = 1;
-              c1 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj2.confirmEmailChange(callback);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp8) {
-          c1 = tmp;
-          throw tmp8;
-        }
-      }
+      const obj2 = callback(table[7]);
+      yield obj2.confirmEmailChange(callback);
+      return arg1;
     })();
   });
   obj[0] = function() {

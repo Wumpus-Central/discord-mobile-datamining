@@ -47,7 +47,7 @@ export const makeLazy = function makeLazy(memo) {
         tmp2Result = tmp2();
       } else {
         tmp3 = outer1_6;
-        if (typeof outer1_6 !== "find") {
+        if (typeof outer1_6 !== "function") {
           str3 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -121,7 +121,7 @@ export const makeLazyWithPreload = function makeLazyWithPreload(arg0) {
           tmp14Result = renderLoader();
         } else {
           tmp3 = outer1_6;
-          if (typeof outer1_6 !== "find") {
+          if (typeof outer1_6 !== "function") {
             str3 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }

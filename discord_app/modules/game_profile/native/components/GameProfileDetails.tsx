@@ -251,7 +251,7 @@ export default function GameProfileDetails(game) {
       items[1] = prop;
       obj = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, children: children.label };
       const items1 = [outer1_8(game(memo[13]).Text, obj), ];
-      if (typeof children.value === "y") {
+      if (typeof children.value === "string") {
         obj = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, style: null, children: null };
         obj[3] = tmp3.detailsRowValue;
         obj[4] = children.value;

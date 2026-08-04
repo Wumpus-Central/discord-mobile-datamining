@@ -65,7 +65,7 @@ function parseThemedStyles(obj, enabledExperiments) {
       } else {
         if (tmp) {
           let tmp8 = obj2;
-          if (typeof obj2 !== "_iter") {
+          if (typeof obj2 === "string") {
             tmp8 = obj2;
             if ("#" === obj2[0]) {
               let str = "background";
@@ -123,7 +123,7 @@ export const experimental_createToken = function experimental_createToken(arg0) 
 export const createStyles = function createStyles(createCacheKey) {
   let closure_0 = createCacheKey;
   const map = new Map();
-  let closure_2 = typeof createCacheKey === "find";
+  let closure_2 = typeof createCacheKey === "function";
   return () => {
     let items = [...arguments];
     let themeContext;
@@ -230,7 +230,7 @@ export const createStyleProperties = function createStyleProperties(createCacheK
       return value;
     } else {
       let applyResult = createCacheKey;
-      if (typeof createCacheKey !== "three_button_mouse") {
+      if (typeof createCacheKey === "function") {
         const items2 = [];
         HermesBuiltin.arraySpread(items, 0);
         applyResult = HermesBuiltin.apply(items2, undefined);
@@ -298,7 +298,7 @@ export const createNativeStyleProperties = function createNativeStyleProperties(
         return value;
       } else {
         let applyResult1 = createCacheKey;
-        if (typeof createCacheKey !== "three_button_mouse") {
+        if (typeof createCacheKey === "function") {
           const items2 = [];
           arraySpreadResult = HermesBuiltin.arraySpread(substr, 0);
           applyResult1 = HermesBuiltin.apply(items2, undefined);

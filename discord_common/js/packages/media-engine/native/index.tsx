@@ -1334,10 +1334,10 @@ prototype["exportClipToFile"] = function exportClipToFile(arg0, arg1, arg2) {
     rejectResult = new Promise((arg0, arg1) => {
       let closure_0 = arg0;
       let closure_1 = arg1;
-      exportClipToFile(closure_0, closure_1, closure_2, (arg0, arg1) => {
-        if (typeof arg0 === "y") {
+      exportClipToFile(closure_0, closure_1, closure_2, (str) => {
+        if (typeof str === "string") {
           const obj = { filepath: null, formattedForUpload: null };
-          obj[0] = arg0;
+          obj[0] = str;
           obj[1] = true === arg1;
           callback(obj);
         } else {
@@ -1839,68 +1839,17 @@ prototype["releaseNativeDesktopVideoSourcePickerStream"] = function releaseNativ
 };
 prototype["getSystemMicrophoneMode"] = function getSystemMicrophoneMode() {
   return callback2(function*() {
-    if (c1 === 2) {
-      c1 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c1 = 2;
-        if (0 === table) {
-          if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let systemMicrophoneMode;
-            let obj2 = outer1_0(table[8]);
-            const voiceEngine = obj2.getVoiceEngine();
-            const getSystemMicrophoneMode = voiceEngine.getSystemMicrophoneMode;
-            if (getSystemMicrophoneMode != null) {
-              systemMicrophoneMode = getSystemMicrophoneMode();
-            }
-            table = 1;
-            c1 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = systemMicrophoneMode;
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c1 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c1 = 3;
-          obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          let c0 = arg1;
-          if (arg1 == null) {
-            c0 = "";
-          }
-          c1 = 3;
-          obj = { value: null, done: true };
-          obj[0] = c0;
-          return obj;
-        }
-      } catch (tmp11) {
-        c1 = tmp;
-        throw tmp11;
-      }
+    const obj2 = outer1_0(table[8]);
+    const voiceEngine = obj2.getVoiceEngine();
+    const getSystemMicrophoneMode = voiceEngine.getSystemMicrophoneMode;
+    if (getSystemMicrophoneMode != null) {
+      const systemMicrophoneMode = getSystemMicrophoneMode();
     }
+    let c0 = yield systemMicrophoneMode;
+    if (arg1 == null) {
+      c0 = "";
+    }
+    return c0;
   })();
 };
 prototype["showSystemCaptureConfigurationUI"] = function showSystemCaptureConfigurationUI(arg0) {
@@ -1916,127 +1865,27 @@ prototype["fetchAsyncResources"] = function fetchAsyncResources() {
 prototype["getDeviceOSVolume"] = function getDeviceOSVolume(arg0) {
   let closure_0 = arg0;
   return callback2(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let deviceOSVolume;
-            let obj2 = v0(outer1_2[8]);
-            const voiceEngine = obj2.getVoiceEngine();
-            const getDeviceOSVolume = voiceEngine.getDeviceOSVolume;
-            if (getDeviceOSVolume != null) {
-              deviceOSVolume = getDeviceOSVolume(v0);
-            }
-            c1 = 1;
-            v0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = deviceOSVolume;
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp11) {
-        v0 = tmp;
-        throw tmp11;
-      }
+    const obj2 = v0(outer1_2[8]);
+    const voiceEngine = obj2.getVoiceEngine();
+    const getDeviceOSVolume = voiceEngine.getDeviceOSVolume;
+    if (getDeviceOSVolume != null) {
+      const deviceOSVolume = getDeviceOSVolume(v0);
     }
+    yield deviceOSVolume;
+    return arg1;
   })();
 };
 prototype["getDeviceOSMuted"] = function getDeviceOSMuted(arg0) {
   let closure_0 = arg0;
   return callback2(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let deviceOSMuted;
-            let obj2 = v0(outer1_2[8]);
-            const voiceEngine = obj2.getVoiceEngine();
-            const getDeviceOSMuted = voiceEngine.getDeviceOSMuted;
-            if (getDeviceOSMuted != null) {
-              deviceOSMuted = getDeviceOSMuted(v0);
-            }
-            c1 = 1;
-            v0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = deviceOSMuted;
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          v0 = 3;
-          obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp11) {
-        v0 = tmp;
-        throw tmp11;
-      }
+    const obj2 = v0(outer1_2[8]);
+    const voiceEngine = obj2.getVoiceEngine();
+    const getDeviceOSMuted = voiceEngine.getDeviceOSMuted;
+    if (getDeviceOSMuted != null) {
+      const deviceOSMuted = getDeviceOSMuted(v0);
     }
+    yield deviceOSMuted;
+    return arg1;
   })();
 };
 prototype["getDeviceAudioEffects"] = function getDeviceAudioEffects(arg0) {

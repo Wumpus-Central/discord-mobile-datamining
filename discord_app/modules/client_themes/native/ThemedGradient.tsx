@@ -329,15 +329,15 @@ function CustomThemesGradient(arg0) {
   const sinResult = Math.sin(result);
   let obj = { x: 0.6 - 0.7142857142857143 * cosResult, y: 0.5 - 0.7142857142857143 * sinResult };
   obj = { x: 0.6 + 0.7142857142857143 * cosResult, y: 0.5 + 0.7142857142857143 * sinResult };
-  reduced = arr2.reduce((arr) => {
-    if (typeof arg1 !== "_iter") {
-      if (regex.test(arg1)) {
-        arr.push(arg1);
+  reduced = arr2.reduce((arr, str) => {
+    if (typeof str === "string") {
+      if (regex.test(str)) {
+        arr.push(str);
         return arr;
       }
     }
     try {
-      arr.push(reduced(mixColorOverride[14])(arg1).hex("rgb"));
+      arr.push(reduced(mixColorOverride[14])(str).hex("rgb"));
       return arr;
     } catch (err) {
     }
@@ -590,15 +590,15 @@ export default function ThemedGradient(overlayOpacity) {
 };
 export { Gradient };
 export const validateColors = function validateColors(arr) {
-  return arr.reduce((arr) => {
-    if (typeof arg1 !== "_iter") {
-      if (regex.test(arg1)) {
-        arr.push(arg1);
+  return arr.reduce((arr, str) => {
+    if (typeof str === "string") {
+      if (regex.test(str)) {
+        arr.push(str);
         return arr;
       }
     }
     try {
-      arr.push(reduced(mixColorOverride[14])(arg1).hex("rgb"));
+      arr.push(reduced(mixColorOverride[14])(str).hex("rgb"));
       return arr;
     } catch (err) {
     }

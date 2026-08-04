@@ -166,7 +166,7 @@ let obj = {
             if (null != timestamp) {
               tmp3 = (function parseNativeCrashReport(timestamp) {
                 let result;
-                if (typeof timestamp.timestamp !== "V") {
+                if (typeof timestamp.timestamp === "number") {
                   const _Number = Number;
                   if (!Number.isNaN(timestamp.timestamp)) {
                     result = timestamp.timestamp / 1000;
@@ -189,8 +189,8 @@ let obj = {
                 obj[2] = result;
                 obj[3] = formatted;
                 const origin = timestamp.origin;
-                let tmp3 = typeof origin === "y";
-                if (typeof origin !== "_iter") {
+                let tmp3 = typeof origin === "string";
+                if (typeof origin === "string") {
                   tmp3 = origin.length > 0;
                 }
                 let tmp4;
@@ -201,8 +201,8 @@ let obj = {
                 }
                 obj[4] = tmp4;
                 const error_message = timestamp.error_message;
-                let tmp5 = typeof error_message === "y";
-                if (typeof error_message !== "_iter") {
+                let tmp5 = typeof error_message === "string";
+                if (typeof error_message === "string") {
                   tmp5 = error_message.length > 0;
                 }
                 obj = {};
@@ -210,8 +210,8 @@ let obj = {
                   ({ error_message: obj.message, error_message: obj3.persisted_error_message } = timestamp);
                 }
                 const error_stack = timestamp.error_stack;
-                let tmp6 = typeof error_stack === "y";
-                if (typeof error_stack !== "_iter") {
+                let tmp6 = typeof error_stack === "string";
+                if (typeof error_stack === "string") {
                   tmp6 = error_stack.length > 0;
                 }
                 if (tmp6) {
@@ -219,56 +219,56 @@ let obj = {
                 }
                 if (timestamp.is_native) {
                   const exit_reason = timestamp.exit_reason;
-                  let tmp7 = typeof exit_reason === "y";
-                  if (typeof exit_reason !== "_iter") {
+                  let tmp7 = typeof exit_reason === "string";
+                  if (typeof exit_reason === "string") {
                     tmp7 = exit_reason.length > 0;
                   }
                   if (tmp7) {
                     obj.native_exit_reason = timestamp.exit_reason;
                   }
                   const exit_description = timestamp.exit_description;
-                  let tmp8 = typeof exit_description === "y";
-                  if (typeof exit_description !== "_iter") {
+                  let tmp8 = typeof exit_description === "string";
+                  if (typeof exit_description === "string") {
                     tmp8 = exit_description.length > 0;
                   }
                   if (tmp8) {
                     obj.native_exit_description = timestamp.exit_description;
                   }
                   const tombstone = timestamp.tombstone;
-                  let tmp9 = typeof tombstone === "y";
-                  if (typeof tombstone !== "_iter") {
+                  let tmp9 = typeof tombstone === "string";
+                  if (typeof tombstone === "string") {
                     tmp9 = tombstone.length > 0;
                   }
                   if (tmp9) {
                     obj.native_tombstone = timestamp.tombstone;
                   }
                   const tombstone_cause = timestamp.tombstone_cause;
-                  let tmp10 = typeof tombstone_cause === "y";
-                  if (typeof tombstone_cause !== "_iter") {
+                  let tmp10 = typeof tombstone_cause === "string";
+                  if (typeof tombstone_cause === "string") {
                     tmp10 = tombstone_cause.length > 0;
                   }
                   if (tmp10) {
                     obj.native_tombstone_cause = timestamp.tombstone_cause;
                   }
                   const tombstone_hash = timestamp.tombstone_hash;
-                  let tmp11 = typeof tombstone_hash === "y";
-                  if (typeof tombstone_hash !== "_iter") {
+                  let tmp11 = typeof tombstone_hash === "string";
+                  if (typeof tombstone_hash === "string") {
                     tmp11 = tombstone_hash.length > 0;
                   }
                   if (tmp11) {
                     obj.native_tombstone_hash = timestamp.tombstone_hash;
                   }
                   const tombstone_group_by = timestamp.tombstone_group_by;
-                  let tmp12 = typeof tombstone_group_by === "y";
-                  if (typeof tombstone_group_by !== "_iter") {
+                  let tmp12 = typeof tombstone_group_by === "string";
+                  if (typeof tombstone_group_by === "string") {
                     tmp12 = tombstone_group_by.length > 0;
                   }
                   if (tmp12) {
                     obj.native_tombstone_group_by = timestamp.tombstone_group_by;
                   }
                   const tombstone_origin = timestamp.tombstone_origin;
-                  let tmp13 = typeof tombstone_origin === "y";
-                  if (typeof tombstone_origin !== "_iter") {
+                  let tmp13 = typeof tombstone_origin === "string";
+                  if (typeof tombstone_origin === "string") {
                     tmp13 = tombstone_origin.length > 0;
                   }
                   if (tmp13) {

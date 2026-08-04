@@ -18,7 +18,7 @@ function sendStatus(message) {
 }
 function getErrorDetails(headers) {
   if (null != headers) {
-    if (typeof headers !== "window") {
+    if (typeof headers === "object") {
       const _Set = Set;
       const set = new Set();
       let prototypeOf = headers;
@@ -612,7 +612,7 @@ let closure_3 = importDefaultResult((arg0) => {
             if (1 === tmp9) {
               let getHash = createGuildRecordFromRust;
               c9 = 0;
-              if (typeof lib === "y") {
+              if (typeof lib === "string") {
                 const _fetch3 = fetch;
                 const obj8 = { method: "PUT", body: null, headers: null };
                 const _JSON3 = JSON;
@@ -642,7 +642,7 @@ let closure_3 = importDefaultResult((arg0) => {
                     let closure_4 = result;
                     if (arg0 === 2) {
                       c9 = 0;
-                      if (typeof lib === "y") {
+                      if (typeof lib === "string") {
                         const _fetch = fetch;
                         const obj11 = { method: "PUT", body: null, headers: null };
                         const _JSON = JSON;
@@ -719,7 +719,7 @@ let closure_3 = importDefaultResult((arg0) => {
                 callback("success", "Backchannel reply sent");
               }
               c9 = 0;
-              if (typeof lib === "y") {
+              if (typeof lib === "string") {
                 const _fetch2 = fetch;
                 const obj18 = { method: "PUT", body: null, headers: null };
                 const _JSON2 = JSON;
@@ -764,69 +764,19 @@ closure_0 = importDefaultResult((arg0) => {
   let c3 = 0;
   let c4 = 0;
   return (function*(arg0) {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_2 = tmp5;
-            let closure_1 = tmp2;
-            let parsed;
-            const _TextDecoder = TextDecoder;
-            const textDecoder = new TextDecoder("utf-8");
-            const _JSON = JSON;
-            parsed = JSON.parse(textDecoder.decode(callback(outer1_2[19]).base64decode(parsed.actionData)));
-            const obj1 = {};
-            const merged = Object.assign(parsed);
-            obj1.user = "redacted";
-            outer1_11.log("Received TTI Test Action", obj1);
-            c3 = 1;
-            c4 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = outer1_5.promise;
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          outer1_12[parsed.type](parsed);
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = Promise.resolve();
-          return obj;
-        }
-      } catch (tmp15) {
-        c4 = tmp;
-        throw tmp15;
-      }
-    }
+    let closure_2 = tmp5;
+    let closure_1 = tmp2;
+    const _TextDecoder = TextDecoder;
+    const textDecoder = new TextDecoder("utf-8");
+    const _JSON = JSON;
+    parsed = JSON.parse(textDecoder.decode(callback(outer1_2[19]).base64decode(parsed.actionData)));
+    const obj1 = {};
+    const merged = Object.assign(parsed);
+    obj1.user = "redacted";
+    outer1_11.log("Received TTI Test Action", obj1);
+    yield outer1_5.promise;
+    outer1_12[parsed.type](parsed);
+    return Promise.resolve();
   })();
 });
 const tmp2 = new require("processCallbacks")("TTITestAction");

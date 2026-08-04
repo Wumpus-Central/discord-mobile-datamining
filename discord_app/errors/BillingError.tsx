@@ -126,7 +126,7 @@ class BillingError extends tmp4 {
       }
       continue;
     }
-    tmp44 = null != global.body && typeof global.body.payment_id === "y";
+    tmp44 = null != global.body && typeof global.body.payment_id === "string";
     if (tmp44) {
       tmp.paymentId = global.body.payment_id;
     }
@@ -161,7 +161,7 @@ const result = set.fileFinishedImporting("errors/BillingError.tsx");
 export default BillingError;
 export const ErrorCodes = obj;
 export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8BillingAddressSkemaErrorToBillingError(c8) {
-  if (typeof c8 !== "y") {
+  if (typeof c8 !== "string") {
     let code;
     if (c8 != null) {
       const body = c8.body;

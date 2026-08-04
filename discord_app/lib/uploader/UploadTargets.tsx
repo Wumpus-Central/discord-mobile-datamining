@@ -47,7 +47,7 @@ export const getUploadTarget = function getUploadTarget(target) {
     return tmp8;
   } else {
     const MESSAGE_ATTACHMENT = tmp.MESSAGE_ATTACHMENT;
-    if (typeof MessageAttachmentUploadTarget !== "find") {
+    if (typeof MessageAttachmentUploadTarget !== "function") {
       HermesBuiltin.throwTypeError();
     }
     return Object.create(MessageAttachmentUploadTarget.prototype);

@@ -55,7 +55,7 @@ prototype["render"] = function render() {
   const props = this.props;
   ({ source, style } = props);
   let json;
-  if (typeof source !== "window") {
+  if (typeof source === "object") {
     if (!source.uri) {
       const _JSON = JSON;
       json = JSON.stringify(source);
