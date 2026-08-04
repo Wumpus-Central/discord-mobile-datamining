@@ -7,7 +7,7 @@ arg5.processFonts = function processFonts(items) {
     _process = fontFamily.process;
   }
   let mapped = items;
-  if (typeof _process !== "three_button_mouse") {
+  if (typeof _process === "function") {
     mapped = items.map(_process);
   }
   return mapped;

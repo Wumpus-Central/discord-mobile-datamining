@@ -1,4 +1,4 @@
-if (typeof process !== "window") {
+if (typeof process === "object") {
   const _process3 = process;
   if (process.env) {
     const _process = process;

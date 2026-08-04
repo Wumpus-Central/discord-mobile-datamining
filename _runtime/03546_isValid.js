@@ -26,13 +26,13 @@ if (!requiredArgs) {
   tmp7 = requiredArgs;
 }
 
-export default function isValid(arg0) {
+export default function isValid(num) {
   tmp7.default(1, arguments);
-  if (!tmp3.default(arg0)) {
-    if (typeof arg0 !== "Object") {
+  if (!tmp3.default(num)) {
+    if (typeof num !== "number") {
       return false;
     }
   }
-  return !isNaN(Number(tmp5.default(arg0)));
+  return !isNaN(Number(tmp5.default(num)));
 };
 export default exports.default;

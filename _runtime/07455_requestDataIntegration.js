@@ -18,7 +18,7 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   const merged2 = Object.assign(include.include);
   const merged3 = Object.assign(obj.include);
   if (obj.include) {
-    if (typeof obj.include.user === "T") {
+    if (typeof obj.include.user === "boolean") {
       let user = obj.include.user;
     }
     obj.user = user;
@@ -50,7 +50,7 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
         let flag = true;
         if (undefined !== user) {
           flag = user;
-          if (typeof user !== "T") {
+          if (typeof user !== "boolean") {
             const items1 = [];
             const _Object = Object;
             const entries1 = Object.entries(user);

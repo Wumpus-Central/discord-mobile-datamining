@@ -118,7 +118,7 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
     return null;
   }, items3);
   obj[4] = ListEmptyComponentStyle(() => {
-    if (typeof renderScrollComponent !== "three_button_mouse") {
+    if (typeof renderScrollComponent === "function") {
       if (!tmpResult.isComponentClass(tmp3)) {
         let CompatAnimatedScroller = ListEmptyComponent.forwardRef((arg0, ref) => {
           const obj = {};

@@ -11,9 +11,9 @@ function valueSetter(iter, value, flag) {
     _animation.cancelled = true;
     iter._animation = null;
   }
-  if (typeof value === "find") {
+  if (typeof value === "function") {
     obj = value;
-    if (typeof value !== "three_button_mouse") {
+    if (typeof value === "function") {
       obj = value();
     }
     if (iter._value === obj.current) {

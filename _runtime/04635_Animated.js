@@ -235,7 +235,7 @@ const forwardRefResult = importDefaultResult.forwardRef(function InnerScreen(act
             }
           }
         }
-        if (typeof setRef !== "find") {
+        if (typeof setRef !== "function") {
           HermesBuiltin.throwTypeError();
         }
         closure_1.current = viewConfig;

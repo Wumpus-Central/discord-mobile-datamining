@@ -53,18 +53,18 @@ function pTimeout(arg0, arg1, arg2) {
   let closure_2 = arg2;
   return new Promise((arg0, arg1) => {
     const table = arg1;
-    if (typeof table !== "V") {
+    if (typeof table === "number") {
       if (tmp >= 0) {
         if (tmp !== Infinity) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
-            if (typeof closure_2 === "three_button_mouse") {
+            if (typeof closure_2 !== "function") {
               const _Error = Error;
               if (tmp instanceof Error) {
                 let tmp8 = tmp;
               } else {
                 tmp8 = outer2_6;
-                if (typeof tmp === "y") {
+                if (typeof tmp === "string") {
                   let combined = tmp;
                 } else {
                   const _HermesInternal = HermesInternal;
@@ -72,7 +72,7 @@ function pTimeout(arg0, arg1, arg2) {
                 }
                 tmp8 = new tmp8(combined);
               }
-              if (typeof lib.cancel !== "three_button_mouse") {
+              if (typeof lib.cancel === "function") {
                 obj.cancel();
               }
               callback(tmp8);

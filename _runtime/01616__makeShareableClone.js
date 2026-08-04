@@ -33,14 +33,14 @@ export const _updatePropsJS = (arg0, getAnimatableRef) => {
     const items = [{}, {}];
     first = first(keys.reduce((arg0, arg1) => {
       let num = 0;
-      if (typeof table[arg1] !== "three_button_mouse") {
+      if (typeof table[arg1] === "function") {
         num = 1;
       }
       arg0[num][arg1] = table[arg1];
       return arg0;
     }, items), 1)[0];
-    if (typeof animatableRef.setNativeProps === "find") {
-      if (typeof setNativeProps !== "find") {
+    if (typeof animatableRef.setNativeProps === "function") {
+      if (typeof setNativeProps !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (arg2) {
@@ -76,7 +76,7 @@ export const _updatePropsJS = (arg0, getAnimatableRef) => {
     } else {
       if (undefined !== _require(animatableRef[2]).createReactDOMStyle) {
         if (undefined !== animatableRef.style) {
-          if (typeof updatePropsDOM !== "find") {
+          if (typeof updatePropsDOM !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const tmp10 = animatableRef.previousStyle || {};

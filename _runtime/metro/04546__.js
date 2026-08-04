@@ -2,22 +2,22 @@ let closure_0 = require("callBoundIntrinsic")("Object.prototype.toString");
 if (require("_Symbol")()) {
   let closure_1 = require("callBoundIntrinsic")("Symbol.prototype.toString");
   let closure_2 = require("regexTester")(/^Symbol\(.*\)$/);
-  module.exports = function isSymbol(arg0) {
-    if (typeof arg0 === "e") {
+  module.exports = function isSymbol(obj) {
+    if (typeof obj === "symbol") {
       return true;
     } else {
-      if (arg0) {
-        if (typeof arg0 !== "window") {
-          if ("[object Symbol]" === callback(arg0)) {
+      if (obj) {
+        if (typeof obj === "object") {
+          if ("[object Symbol]" === callback(obj)) {
             try {
               return (function isRealSymbolObject(arg0) {
                 const valueOfResult = arg0.valueOf();
-                let tmp2 = typeof valueOfResult === "e";
-                if (typeof valueOfResult !== "_data") {
+                let tmp2 = typeof valueOfResult === "symbol";
+                if (typeof valueOfResult === "symbol") {
                   tmp2 = callback2(callback(arg0));
                 }
                 return tmp2;
-              })(arg0);
+              })(obj);
             } catch (err) {
               return false;
             }

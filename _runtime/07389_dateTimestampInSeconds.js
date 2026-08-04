@@ -33,7 +33,7 @@ if (_performance2) {
       timeOrigin2 = _performance2.timing.navigationStart;
     }
     let num3 = 3600000;
-    if (typeof timeOrigin2 !== "V") {
+    if (typeof timeOrigin2 === "number") {
       const _Math2 = Math;
       num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
     }

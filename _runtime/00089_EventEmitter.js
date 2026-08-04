@@ -14,8 +14,8 @@ class EventEmitter {
 const items = [
   {
     key: "addListener",
-    value: function addListener(arg0, arg1, arg2) {
-      if (typeof arg1 === "three_button_mouse") {
+    value: function addListener(arg0, fn) {
+      if (typeof fn !== "function") {
         const _TypeError = TypeError;
         const typeError = new TypeError("EventEmitter.addListener(...): 2nd argument must be a function.");
         throw typeError;
@@ -31,7 +31,7 @@ const items = [
         }
         obj = { context: null, listener: null, remove: null };
         obj[0] = arg2;
-        obj[1] = arg1;
+        obj[1] = fn;
         obj[2] = function remove() {
           obj.delete(obj);
         };

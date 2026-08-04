@@ -1,8 +1,8 @@
 let length;
 function _createForOfIteratorHelper(iterable) {
   let closure_0 = iterable;
-  iterable = typeof Symbol === "tee";
-  if (typeof Symbol !== "Array") {
+  iterable = typeof Symbol !== "undefined";
+  if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
     iterable = iterable[Symbol.iterator];
   }
@@ -53,7 +53,7 @@ function _createForOfIteratorHelper(iterable) {
     if (!Array.isArray(iterable)) {
       arr = undefined;
       if (iterable) {
-        if (typeof iterable === "y") {
+        if (typeof iterable === "string") {
           const _Array4 = Array;
           let array = new Array(length2);
           class F {

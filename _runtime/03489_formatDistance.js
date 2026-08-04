@@ -2,7 +2,7 @@ let closure_0 = { lessThanXSeconds: { one: "mindre \u00E4n en sekund", other: "m
 let closure_1 = ["noll", "en", "tv\u00E5", "tre", "fyra", "fem", "sex", "sju", "\u00E5tta", "nio", "tio", "elva", "tolv"];
 
 export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof table[arg0] === "y") {
+  if (typeof table[arg0] === "string") {
     let tmp8 = tmp;
     if (null != addSuffix) {
       tmp8 = tmp;

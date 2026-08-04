@@ -163,7 +163,7 @@ export const KeyboardProvider = (enabled) => {
   obj = { onKeyboardMoveStart: null, onKeyboardMove: null, onKeyboardMoveInteractive: null, onKeyboardMoveEnd: null };
   class D {
     constructor(arg0) {
-      if (typeof _ !== "find") {
+      if (typeof _ !== "function") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -184,7 +184,7 @@ export const KeyboardProvider = (enabled) => {
   obj[0] = D;
   class C {
     constructor(arg0) {
-      if (typeof _ !== "find") {
+      if (typeof _ !== "function") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -204,7 +204,7 @@ export const KeyboardProvider = (enabled) => {
   C.__initData = closure_18;
   obj[1] = C;
   const fn2 = function p(progress) {
-    if (typeof fn !== "find") {
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const items = ["android", "ios"];
@@ -218,7 +218,7 @@ export const KeyboardProvider = (enabled) => {
   fn2.__initData = closure_19;
   obj[2] = fn2;
   const fn3 = function v(progress) {
-    if (typeof fn !== "find") {
+    if (typeof fn !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const items = ["android"];

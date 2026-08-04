@@ -10,7 +10,7 @@ arg5.default = function extractFill(arg0, arg1, arr) {
   if (null != fill) {
     arr.push("fill");
     if (!fill) {
-      if (typeof fill !== "Object") {
+      if (typeof fill !== "number") {
         let tmp5 = obj;
       }
       arg0.fill = tmp5;

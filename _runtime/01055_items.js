@@ -54,7 +54,7 @@ arg5.onINP = (arg0) => {
         if (observeResult) {
           observeResult.observe({ type: "first-input", buffered: true });
           closure_2.onHidden(() => {
-            if (typeof handleEntries !== "find") {
+            if (typeof handleEntries !== "function") {
               HermesBuiltin.throwTypeError();
             }
             const callback = observeResult.takeRecords();

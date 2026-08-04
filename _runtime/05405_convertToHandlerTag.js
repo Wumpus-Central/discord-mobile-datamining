@@ -5,13 +5,13 @@ let c3;
 let c4;
 let c5;
 const require = arg1;
-function convertToHandlerTag(handlerTag) {
-  if (typeof handlerTag === "Object") {
-    return handlerTag;
-  } else if (handlerTag instanceof require(5407) /* _isNativeReflectConstruct */.BaseGesture) {
-    let num = handlerTag.handlerTag;
+function convertToHandlerTag(num) {
+  if (typeof num === "number") {
+    return num;
+  } else if (num instanceof require(5407) /* _isNativeReflectConstruct */.BaseGesture) {
+    num = num.handlerTag;
   } else {
-    const current = handlerTag.current;
+    const current = num.current;
     num = undefined;
     if (current != null) {
       num = current.handlerTag;

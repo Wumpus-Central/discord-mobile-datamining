@@ -1,7 +1,7 @@
 const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
 export default (str) => {
-  if (typeof str === "_iter") {
+  if (typeof str !== "string") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a string");
     throw typeError;

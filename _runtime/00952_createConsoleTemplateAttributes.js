@@ -12,7 +12,7 @@ arg5.createConsoleTemplateAttributes = function createConsoleTemplateAttributes(
 };
 arg5.formatConsoleArgs = function formatConsoleArgs(args, arg1, arg2) {
   if ("util" in _require(821).GLOBAL_OBJ) {
-    if (typeof tmp(821).GLOBAL_OBJ.util.format === "find") {
+    if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(821).GLOBAL_OBJ.util;
       const format = util.format;
       const items = [];

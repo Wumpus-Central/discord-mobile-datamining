@@ -71,10 +71,10 @@ class QuotaExceededError {
 }
 _inherits(QuotaExceededError, _wrapNativeSuper(Error));
 let closure_9 = _createClass(QuotaExceededError);
-if (typeof global.crypto !== "ay") {
+if (typeof global.crypto !== "object") {
   global.crypto = {};
 }
-if (typeof global.crypto.getRandomValues !== "find") {
+if (typeof global.crypto.getRandomValues !== "function") {
   global.crypto.getRandomValues = function getRandomValues(uint8Array) {
     if (!(uint8Array instanceof Int8Array)) {
       const _Uint8Array = Uint8Array;

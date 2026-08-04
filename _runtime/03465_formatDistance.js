@@ -24,7 +24,7 @@ export default function formatDistance(arg0, arg1, addSuffix) {
           other2 = replace.other;
         }
         let past = other2;
-        if (typeof other2 !== "y") {
+        if (typeof other2 !== "string") {
           past = other2.past;
         }
         const _String = String;
@@ -48,7 +48,7 @@ export default function formatDistance(arg0, arg1, addSuffix) {
         other3 = replace.other;
       }
       let str4 = other3;
-      if (typeof other3 !== "y") {
+      if (typeof other3 !== "string") {
         str4 = other3.future;
       }
       replace = str4.replace;
@@ -75,7 +75,7 @@ export default function formatDistance(arg0, arg1, addSuffix) {
     other = replace.other;
   }
   let str = other;
-  if (typeof other !== "y") {
+  if (typeof other !== "string") {
     str = other.regular;
   }
   return str.replace("{{count}}", String(replaced));

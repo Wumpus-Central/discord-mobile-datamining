@@ -1,9 +1,10 @@
 const self = this;
 function toDotPath(path) {
   const items = [];
-  const mapped = path.map((key) => {
-    if (typeof key !== "window") {
-      key = key.key;
+  const mapped = path.map((obj) => {
+    let key = obj;
+    if (typeof obj === "object") {
+      key = obj.key;
     }
     return key;
   });
@@ -11,13 +12,13 @@ function toDotPath(path) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    if (typeof nextResult === "Object") {
+    if (typeof nextResult === "number") {
       let tmp11 = nextResult;
       let _HermesInternal3 = HermesInternal;
       let arr = items.push("[" + tmp3 + "]");
     } else {
       let tmp13 = nextResult;
-      if (typeof tmp3 === "e") {
+      if (typeof tmp3 === "symbol") {
         let _JSON2 = JSON;
         let _String = String;
         let tmp9 = nextResult;
@@ -280,7 +281,7 @@ if (self2) {
                   let tmp3 = num;
                   let tmp4 = tmp10;
                   let diff = items.length - 1;
-                  if (typeof tmp === "y") {
+                  if (typeof tmp === "string") {
                     if (tmp10.properties == null) {
                       tmp10.properties = {};
                     }

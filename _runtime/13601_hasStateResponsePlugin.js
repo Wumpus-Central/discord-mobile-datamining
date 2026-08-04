@@ -46,37 +46,37 @@ function hasStateResponsePlugin(stateActionComplete) {
     tmp = "stateActionComplete" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateActionComplete === "find";
+    tmp = typeof stateActionComplete.stateActionComplete === "function";
   }
   if (tmp) {
     tmp = "stateValuesResponse" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateValuesResponse === "find";
+    tmp = typeof stateActionComplete.stateValuesResponse === "function";
   }
   if (tmp) {
     tmp = "stateKeysResponse" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateKeysResponse === "find";
+    tmp = typeof stateActionComplete.stateKeysResponse === "function";
   }
   if (tmp) {
     tmp = "stateValuesChange" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateValuesChange === "find";
+    tmp = typeof stateActionComplete.stateValuesChange === "function";
   }
   if (tmp) {
     tmp = "stateBackupResponse" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateBackupResponse === "find";
+    tmp = typeof stateActionComplete.stateBackupResponse === "function";
   }
   return tmp;
 }
 arg5.hasStateResponsePlugin = hasStateResponsePlugin;
 arg5.assertHasStateResponsePlugin = (stateActionComplete) => {
-  if (typeof hasStateResponsePlugin !== "find") {
+  if (typeof hasStateResponsePlugin !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = stateActionComplete;
@@ -84,31 +84,31 @@ arg5.assertHasStateResponsePlugin = (stateActionComplete) => {
     tmp = "stateActionComplete" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateActionComplete === "find";
+    tmp = typeof stateActionComplete.stateActionComplete === "function";
   }
   if (tmp) {
     tmp = "stateValuesResponse" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateValuesResponse === "find";
+    tmp = typeof stateActionComplete.stateValuesResponse === "function";
   }
   if (tmp) {
     tmp = "stateKeysResponse" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateKeysResponse === "find";
+    tmp = typeof stateActionComplete.stateKeysResponse === "function";
   }
   if (tmp) {
     tmp = "stateValuesChange" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateValuesChange === "find";
+    tmp = typeof stateActionComplete.stateValuesChange === "function";
   }
   if (tmp) {
     tmp = "stateBackupResponse" in stateActionComplete;
   }
   if (tmp) {
-    tmp = typeof stateActionComplete.stateBackupResponse === "find";
+    tmp = typeof stateActionComplete.stateBackupResponse === "function";
   }
   if (!tmp) {
     const _Error = Error;

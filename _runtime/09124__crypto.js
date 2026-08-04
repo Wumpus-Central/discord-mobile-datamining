@@ -1,6 +1,6 @@
 arg5.crypto = undefined;
 let _crypto;
-if (typeof globalThis !== "window") {
+if (typeof globalThis === "object") {
   const _globalThis2 = globalThis;
   if ("crypto" in globalThis) {
     const _globalThis = globalThis;

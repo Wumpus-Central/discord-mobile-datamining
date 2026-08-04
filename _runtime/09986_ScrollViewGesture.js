@@ -284,10 +284,10 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
     }
   }
   const tmpResult6 = vertical(snapEnabled[3]);
-  V.__closure = { translation, withDecay: vertical(snapEnabled[3]).withDecay, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "Object", maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit: callback };
+  V.__closure = { translation, withDecay: vertical(snapEnabled[3]).withDecay, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit: callback };
   V.__workletHash = 205523855173;
   V.__initData = fixedDirection;
-  const items3 = [callback1, size, dataLength, loop, snapEnabled, translation, pagingEnabled, maxScrollDistancePerSwipe, typeof maxScrollDistancePerSwipe === "Object"];
+  const items3 = [callback1, size, dataLength, loop, snapEnabled, translation, pagingEnabled, maxScrollDistancePerSwipe, typeof maxScrollDistancePerSwipe === "number"];
   const callback2 = loop.useCallback(V, items3);
   const fn2 = function z(arg0) {
     if (arg0) {
@@ -298,7 +298,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       }
     }
   };
-  const obj1 = { translation, withDecay: vertical(snapEnabled[3]).withDecay, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "Object", maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit: callback };
+  const obj1 = { translation, withDecay: vertical(snapEnabled[3]).withDecay, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit: callback };
   fn2.__closure = { touching: sharedValue2, onScrollEnd, runOnJS: vertical(snapEnabled[3]).runOnJS };
   fn2.__workletHash = 13381002348098;
   fn2.__initData = size;
@@ -512,7 +512,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
           const _Math11 = Math;
           const _Math12 = Math;
           const result = Math.round((iter.value + tmp10 * Math.sign(sum)) / size) * size;
-          if (typeof withProcessTranslation !== "find") {
+          if (typeof withProcessTranslation !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let result1 = result;
@@ -543,7 +543,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
           const _Math5 = Math;
           const _Math6 = Math;
           const result2 = Math.round((iter.value + tmp13 * Math.sign(sum)) / size) * size;
-          if (typeof withProcessTranslation !== "find") {
+          if (typeof withProcessTranslation !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let result3 = result2;
@@ -568,10 +568,10 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       iter2 = derivedValue;
     }
   }
-  yn.__closure = { panOffset: sharedValue1, isHorizontal: derivedValue, scrollEndVelocity: sharedValue5, fixedDirection, scrollEndTranslation: sharedValue4, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "Object", maxScrollDistancePerSwipe, size, translation, withSpring: callback1, withProcessTranslation, onScrollEnd, minScrollDistancePerSwipeIsSet: typeof minScrollDistancePerSwipe === "Object", minScrollDistancePerSwipe, endWithSpring: callback2, loop, touching: sharedValue2 };
+  yn.__closure = { panOffset: sharedValue1, isHorizontal: derivedValue, scrollEndVelocity: sharedValue5, fixedDirection, scrollEndTranslation: sharedValue4, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, translation, withSpring: callback1, withProcessTranslation, onScrollEnd, minScrollDistancePerSwipeIsSet: typeof minScrollDistancePerSwipe === "number", minScrollDistancePerSwipe, endWithSpring: callback2, loop, touching: sharedValue2 };
   yn.__workletHash = 14460845775334;
   yn.__initData = sharedValue2;
-  const items10 = [size, loop, sharedValue2, sharedValue1, translation, derivedValue, sharedValue5, sharedValue4, fixedDirection, typeof maxScrollDistancePerSwipe === "Object", maxScrollDistancePerSwipe, typeof maxScrollDistancePerSwipe === "Object", minScrollDistancePerSwipe, callback2, callback1, onScrollEnd];
+  const items10 = [size, loop, sharedValue2, sharedValue1, translation, derivedValue, sharedValue5, sharedValue4, fixedDirection, typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, typeof maxScrollDistancePerSwipe === "number", minScrollDistancePerSwipe, callback2, callback1, onScrollEnd];
   const tmp21 = scrollAnimationDuration(En, items8);
   let tmp22 = scrollAnimationDuration(bn, items9);
   const tmp23 = scrollAnimationDuration(yn, items10);

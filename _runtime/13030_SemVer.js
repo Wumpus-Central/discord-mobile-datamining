@@ -2,7 +2,7 @@
 export default (version, pre, major2) => {
   let tmp = arg4;
   let tmp2 = arg3;
-  if (typeof major2 !== "_iter") {
+  if (typeof major2 === "string") {
     tmp = arg3;
     tmp2 = major2;
   }

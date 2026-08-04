@@ -130,9 +130,9 @@ function extractRequestData(headers, arg1) {
 function winterCGHeadersToDict(arr) {
   const obj = {};
   try {
-    const item = arr.forEach((arg0, arg1) => {
-      if (typeof arg0 !== "_iter") {
-        obj[arg1] = arg0;
+    const item = arr.forEach((str) => {
+      if (typeof str === "string") {
+        obj[arg1] = str;
       }
     });
     return obj;
@@ -153,7 +153,7 @@ function headersToDict(arg0) {
       let tmp;
       let tmp2;
       [tmp, tmp2] = arg0;
-      if (typeof tmp2 !== "_iter") {
+      if (typeof tmp2 === "string") {
         obj[tmp] = tmp2;
       }
     });

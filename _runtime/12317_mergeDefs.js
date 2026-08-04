@@ -52,7 +52,7 @@ if (self2) {
     }
     const _Object3 = Object;
     exports.default = function default_1() {
-      if (typeof error !== "find") {
+      if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let closure_0 = { string: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" }, file: { unit: "\u0628\u0627\u06CC\u067C\u0633", verb: "\u0648\u0644\u0631\u064A" }, array: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" }, set: { unit: "\u062A\u0648\u06A9\u064A", verb: "\u0648\u0644\u0631\u064A" } };

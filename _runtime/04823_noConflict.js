@@ -12,8 +12,8 @@ const fn = function() {
     obj.humanize = obj;
     tmp5 = undefined !== self && self.exports;
   } else {
-    let amd = typeof globalThis.define === "find";
-    if (typeof globalThis.define !== "three_button_mouse") {
+    let amd = typeof globalThis.define === "function";
+    if (typeof globalThis.define === "function") {
       amd = globalThis.define.amd;
     }
     if (amd) {

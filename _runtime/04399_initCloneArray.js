@@ -3,7 +3,7 @@ export default function initCloneArray(arg0) {
   let length = arg0.length;
   const constructor = new arg0.constructor(length);
   if (length) {
-    length = typeof arg0[0] === "y";
+    length = typeof arg0[0] === "string";
   }
   if (!length) {
     if (length) {

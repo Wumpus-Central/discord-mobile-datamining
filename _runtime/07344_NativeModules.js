@@ -68,64 +68,14 @@ export const getProducts = (skus) => {
   }
   if (length) {
     closure_1 = callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp5;
-              let closure_0 = tmp2;
-              closure_0 = undefined;
-              let obj3 = outer1_0(7346);
-              const androidModule = obj3.getAndroidModule();
-              dependencyMap = 1;
-              c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = androidModule.getItemsByType(outer1_7, outer1_0);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1.map(outer1_0(7351).singleProductAndroidMap);
-            obj = outer1_0(7346);
-            c3 = 3;
-            obj3 = { value: null, done: true };
-            obj3[0] = obj.fillProductsWithAdditionalData(closure_0);
-            return obj3;
-          }
-        } catch (tmp17) {
-          c3 = tmp;
-          throw tmp17;
-        }
-      }
+      let closure_1 = tmp5;
+      let closure_0 = tmp2;
+      const obj3 = outer1_0(7346);
+      const androidModule = obj3.getAndroidModule();
+      yield androidModule.getItemsByType(outer1_7, outer1_0);
+      closure_0 = arg1.map(outer1_0(7351).singleProductAndroidMap);
+      const obj = outer1_0(7346);
+      return obj.fillProductsWithAdditionalData(closure_0);
     });
     let rejectResult = (function android() {
       const self = this;
@@ -151,97 +101,24 @@ export const getSubscriptions = (skus) => {
   }
   if (length) {
     closure_1 = callback(function*() {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === closure_2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let c1 = tmp5;
-              let androidModuleType = tmp2;
-              androidModuleType = undefined;
-              c1 = undefined;
-              closure_2 = undefined;
-              androidModuleType = outer1_0(7346).getAndroidModuleType();
-              const obj10 = outer1_0(7346);
-              const androidModule = outer1_0(7346).getAndroidModule();
-              closure_2 = 1;
-              c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = androidModule.getItemsByType(outer1_6, outer1_0);
-              return obj1;
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              const outer1_1 = arg1;
-              if ("android" === outer1_0) {
-                c3 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = outer1_8(outer1_1, outer1_0(7345).SubscriptionPlatform.android);
-                return obj3;
-              } else if ("amazon" === tmp35) {
-                const dependencyMap = outer1_1;
-                obj2 = outer1_0(7346);
-                closure_2 = 2;
-                c3 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = obj2.fillProductsWithAdditionalData(dependencyMap);
-                return obj4;
-              } else {
-                const _Error = Error;
-                const _HermesInternal = HermesInternal;
-                const error = new Error("getSubscriptions received unknown platform " + outer1_0 + ". Verify the logic in getAndroidModuleType");
-                throw error;
-              }
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            closure_2 = arg1;
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = outer1_8(closure_2, outer1_0(7345).SubscriptionPlatform.amazon);
-            return obj;
-          }
-        } catch (tmp28) {
-          c3 = tmp;
-          throw tmp28;
-        }
+      let androidModuleType = tmp2;
+      androidModuleType = outer1_0(7346).getAndroidModuleType();
+      const obj10 = outer1_0(7346);
+      const androidModule = outer1_0(7346).getAndroidModule();
+      const outer1_1 = yield androidModule.getItemsByType(outer1_6, outer1_0);
+      if ("android" === outer1_0) {
+        return outer1_8(outer1_1, outer1_0(7345).SubscriptionPlatform.android);
       }
+      if ("amazon" !== tmp35) {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error = new Error("getSubscriptions received unknown platform " + outer1_0 + ". Verify the logic in getAndroidModuleType");
+        throw error;
+      }
+      const dependencyMap = outer1_1;
+      const obj2 = outer1_0(7346);
+      let closure_2 = yield obj2.fillProductsWithAdditionalData(dependencyMap);
+      return outer1_8(closure_2, outer1_0(7345).SubscriptionPlatform.amazon);
     });
     let rejectResult = (function android() {
       const self = this;
@@ -823,60 +700,10 @@ export const deepLinkToSubscriptions = (arg0) => {
 };
 export const getStorefront = () => {
   let closure_0 = callback(function*() {
-    if (c2 === 2) {
-      c2 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_0 = {};
-            c1 = 1;
-            c2 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_4.getStorefront();
-            return obj1;
-          }
-        } else if (arg0 === 1) {
-          c2 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c2 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          closure_0.countryCode = arg1;
-          closure_0.currency = null;
-          c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_0;
-          return obj;
-        }
-      } catch (tmp9) {
-        c2 = tmp;
-        throw tmp9;
-      }
-    }
+    let closure_0 = {};
+    closure_0.countryCode = yield outer1_4.getStorefront();
+    closure_0.currency = null;
+    return closure_0;
   });
   return (function android() {
     const self = this;

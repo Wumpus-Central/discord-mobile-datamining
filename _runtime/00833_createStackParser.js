@@ -128,13 +128,14 @@ arg5.getFramesFromEvent = function getFramesFromEvent(exception) {
     }
   }
 };
-arg5.getFunctionName = function getFunctionName(name) {
+arg5.getFunctionName = function getFunctionName(fn) {
   try {
-    if (name) {
-      name = typeof name === "find";
+    let name = fn;
+    if (fn) {
+      name = typeof fn === "function";
     }
     if (name) {
-      name = name.name;
+      name = fn.name;
     }
     if (!name) {
       name = c4;

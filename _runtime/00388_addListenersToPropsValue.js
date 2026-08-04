@@ -97,12 +97,12 @@ export default function createAnimatedPropsHook(arg0) {
     }, items);
     const items1 = [obj];
     obj = {};
-    const tmp3 = outer1_5((getScrollableNode) => {
+    const tmp3 = outer1_5((arg0) => {
       let obj;
-      let closure_0 = getScrollableNode;
-      obj.setNativeView(getScrollableNode);
+      let closure_0 = arg0;
+      obj.setNativeView(arg0);
       items.current = () => {
-        let isPublicInstanceResult = getScrollableNode(outer3_3[9]).isPublicInstance(getScrollableNode);
+        let isPublicInstanceResult = callback(outer3_3[9]).isPublicInstance(callback);
         if (!isPublicInstanceResult) {
           let tmpResult = tmp(tmp2[9]);
           let nativeScrollRef;
@@ -140,12 +140,12 @@ export default function createAnimatedPropsHook(arg0) {
           }
           obj6 = items(tmp2[3]);
         } else {
-          if (typeof obj !== "window") {
+          if (typeof obj === "object") {
             let setNativeProps;
             if (obj != null) {
               setNativeProps = obj.setNativeProps;
             }
-            if (typeof setNativeProps !== "three_button_mouse") {
+            if (typeof setNativeProps === "function") {
               if (isPublicInstanceResult) {
                 if (items) {
                   obj.setNativeProps(obj5.__getAnimatedValue());
@@ -169,20 +169,20 @@ export default function createAnimatedPropsHook(arg0) {
           return tmp2();
         }
       };
-      const tmp2 = (function getEventTarget(getScrollableNode) {
-        let scrollableNode = getScrollableNode;
-        if (typeof getScrollableNode !== "window") {
-          getScrollableNode = undefined;
-          if (getScrollableNode != null) {
-            getScrollableNode = getScrollableNode.getScrollableNode;
+      const tmp2 = (function getEventTarget(obj) {
+        let scrollableNode = obj;
+        if (typeof obj === "object") {
+          let getScrollableNode;
+          if (obj != null) {
+            getScrollableNode = obj.getScrollableNode;
           }
-          scrollableNode = getScrollableNode;
-          if (typeof getScrollableNode !== "three_button_mouse") {
-            scrollableNode = getScrollableNode.getScrollableNode();
+          scrollableNode = obj;
+          if (typeof getScrollableNode === "function") {
+            scrollableNode = obj.getScrollableNode();
           }
         }
         return scrollableNode;
-      })(getScrollableNode);
+      })(arg0);
       let closure_1 = tmp2;
       items = [];
       const result = obj.__getNativeAnimatedEventTuples();
@@ -217,12 +217,12 @@ export default function createAnimatedPropsHook(arg0) {
     obj.collapsable = false;
     const items2 = [
       obj,
-      callback2(outer1_3[7])(outer1_5((getScrollableNode) => {
+      callback2(outer1_3[7])(outer1_5((arg0) => {
         let obj;
-        let closure_0 = getScrollableNode;
-        obj.setNativeView(getScrollableNode);
+        let closure_0 = arg0;
+        obj.setNativeView(arg0);
         items.current = () => {
-          let isPublicInstanceResult = getScrollableNode(outer3_3[9]).isPublicInstance(getScrollableNode);
+          let isPublicInstanceResult = callback(outer3_3[9]).isPublicInstance(callback);
           if (!isPublicInstanceResult) {
             let tmpResult = tmp(tmp2[9]);
             let nativeScrollRef;
@@ -260,12 +260,12 @@ export default function createAnimatedPropsHook(arg0) {
             }
             obj6 = items(tmp2[3]);
           } else {
-            if (typeof obj !== "window") {
+            if (typeof obj === "object") {
               let setNativeProps;
               if (obj != null) {
                 setNativeProps = obj.setNativeProps;
               }
-              if (typeof setNativeProps !== "three_button_mouse") {
+              if (typeof setNativeProps === "function") {
                 if (isPublicInstanceResult) {
                   if (items) {
                     obj.setNativeProps(obj5.__getAnimatedValue());
@@ -289,20 +289,20 @@ export default function createAnimatedPropsHook(arg0) {
             return tmp2();
           }
         };
-        const tmp2 = (function getEventTarget(getScrollableNode) {
-          let scrollableNode = getScrollableNode;
-          if (typeof getScrollableNode !== "window") {
-            getScrollableNode = undefined;
-            if (getScrollableNode != null) {
-              getScrollableNode = getScrollableNode.getScrollableNode;
+        const tmp2 = (function getEventTarget(obj) {
+          let scrollableNode = obj;
+          if (typeof obj === "object") {
+            let getScrollableNode;
+            if (obj != null) {
+              getScrollableNode = obj.getScrollableNode;
             }
-            scrollableNode = getScrollableNode;
-            if (typeof getScrollableNode !== "three_button_mouse") {
-              scrollableNode = getScrollableNode.getScrollableNode();
+            scrollableNode = obj;
+            if (typeof getScrollableNode === "function") {
+              scrollableNode = obj.getScrollableNode();
             }
           }
           return scrollableNode;
-        })(getScrollableNode);
+        })(arg0);
         let closure_1 = tmp2;
         items = [];
         const result = obj.__getNativeAnimatedEventTuples();

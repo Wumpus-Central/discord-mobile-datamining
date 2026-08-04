@@ -233,7 +233,7 @@ if (isJest.shouldBeUseWeb()) {
   obj = { get: null, set: null };
   obj[0] = maybeThrowError;
   obj[1] = function set() {
-    if (typeof maybeThrowError !== "find") {
+    if (typeof maybeThrowError !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (obj.isJest()) {
@@ -250,7 +250,7 @@ if (isJest.shouldBeUseWeb()) {
 } else {
   obj = { code: "function pnpm_ProgressTransitionManagerTs9(){const{createProgressTransitionRegister}=this.__closure;global.ProgressTransitionRegister=createProgressTransitionRegister();}" };
   let fn = function n() {
-    if (typeof createProgressTransitionRegister !== "find") {
+    if (typeof createProgressTransitionRegister !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const map = new Map();

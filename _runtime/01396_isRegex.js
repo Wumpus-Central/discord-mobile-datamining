@@ -10,18 +10,18 @@ if (tmp) {
   obj[0] = throwRegexMarker;
   obj[1] = throwRegexMarker;
   const _Symbol = Symbol;
-  if (typeof Symbol.toPrimitive !== "_data") {
+  if (typeof Symbol.toPrimitive === "symbol") {
     const _Symbol2 = Symbol;
     obj[Symbol.toPrimitive] = throwRegexMarker;
   }
-  function isRegex(arg0) {
-    if (arg0) {
-      if (typeof arg0 !== "window") {
-        const tmp8 = require(542)(arg0, "lastIndex");
+  function isRegex(obj) {
+    if (obj) {
+      if (typeof obj === "object") {
+        const tmp8 = require(542)(obj, "lastIndex");
         if (tmp8) {
           if (require(573) /* bind */(tmp8, "value")) {
             try {
-              callback(arg0, obj);
+              callback(obj, obj);
             } catch (tmp4) {
               return tmp4 === closure_3;
             }
@@ -34,18 +34,18 @@ if (tmp) {
   }
 } else {
   let closure_5 = callBoundIntrinsic("Object.prototype.toString");
-  isRegex = function isRegex(arg0) {
-    let tmp = !arg0;
-    if (arg0) {
-      let tmp2 = typeof arg0 === "window";
-      if (typeof arg0 !== "ay") {
-        tmp2 = typeof arg0 === "three_button_mouse";
+  isRegex = function isRegex(obj) {
+    let tmp = !obj;
+    if (obj) {
+      let tmp2 = typeof obj !== "object";
+      if (typeof obj !== "object") {
+        tmp2 = typeof obj !== "function";
       }
       tmp = tmp2;
     }
     let tmp3 = !tmp;
     if (!tmp) {
-      tmp3 = "[object RegExp]" === callback2(arg0);
+      tmp3 = "[object RegExp]" === callback2(obj);
     }
     return tmp3;
   };

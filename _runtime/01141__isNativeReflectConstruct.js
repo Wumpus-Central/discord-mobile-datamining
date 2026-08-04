@@ -171,13 +171,13 @@ let items = [
       const state = this.state;
       if (null === state.componentStack) {
         let childrenResult = children;
-        if (typeof children !== "three_button_mouse") {
+        if (typeof children === "function") {
           childrenResult = children();
         }
         return childrenResult;
       } else {
         let element = fallback;
-        if (typeof fallback !== "three_button_mouse") {
+        if (typeof fallback === "function") {
           const obj = { error: null, componentStack: null, resetError: null, eventId: null };
           ({ error: obj[0], componentStack: obj[1] } = state);
           obj[2] = function resetError() {

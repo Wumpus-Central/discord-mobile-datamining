@@ -1,6 +1,6 @@
 arg5.memoBuilder = function memoBuilder() {
-  let closure_0 = typeof WeakSet === "find";
-  if (typeof WeakSet === "find") {
+  let closure_0 = typeof WeakSet === "function";
+  if (typeof WeakSet === "function") {
     const _WeakSet = WeakSet;
     let weakSet = new WeakSet();
   } else {

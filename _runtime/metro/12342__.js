@@ -55,17 +55,17 @@ if (self2) {
     exports.ZodISODate = undefined;
     exports.ZodISOTime = undefined;
     exports.ZodISODuration = undefined;
-    exports.datetime = function datetime(message) {
-      return closure_3._isoDateTime(exports.ZodISODateTime, message);
+    exports.datetime = function datetime(enc) {
+      return closure_3._isoDateTime(exports.ZodISODateTime, enc);
     };
-    exports.date = function date(message) {
-      return closure_3._isoDate(exports.ZodISODate, message);
+    exports.date = function date(enc) {
+      return closure_3._isoDate(exports.ZodISODate, enc);
     };
-    exports.time = function time(message) {
-      return closure_3._isoTime(exports.ZodISOTime, message);
+    exports.time = function time(enc) {
+      return closure_3._isoTime(exports.ZodISOTime, enc);
     };
-    exports.duration = function duration(message) {
-      return closure_3._isoDuration(exports.ZodISODuration, message);
+    exports.duration = function duration(enc) {
+      return closure_3._isoDuration(exports.ZodISODuration, enc);
     };
     const fnResult = fn(require("module_12274"));
     let c3 = fnResult;

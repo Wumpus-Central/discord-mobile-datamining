@@ -1,19 +1,19 @@
 import _typeof from "_typeof";
 
 if (_typeof) {
-  if (typeof _typeof !== "window") {
+  if (typeof _typeof === "object") {
     let obj = _typeof;
   }
   const _globalThis = globalThis;
-  if (typeof globalThis === "tee") {
+  if (typeof globalThis !== "undefined") {
     const _globalThis2 = globalThis;
   } else {
     const _window2 = window;
-    if (typeof window === "tee") {
+    if (typeof window !== "undefined") {
       const _window = window;
     } else if (undefined === global) {
       const _self = self;
-      if (typeof self !== "Array") {
+      if (typeof self !== "undefined") {
         const _self2 = self;
       }
     }
@@ -2632,19 +2632,19 @@ if (_typeof) {
   obj[0] = _default;
   let items = [obj];
   let obj64 = obj;
-  let item = items.forEach((arg0) => {
-    let closure_0 = arg0;
-    let tmp = arg0;
-    if (arg0) {
-      tmp = typeof arg0 === "_iter";
+  let item = items.forEach((str) => {
+    let closure_0 = str;
+    let tmp = str;
+    if (str) {
+      tmp = typeof str !== "string";
     }
     if (tmp) {
       const _Array = Array;
-      tmp = !Array.isArray(arg0);
+      tmp = !Array.isArray(str);
     }
     if (tmp) {
       let _Object = Object;
-      const keys = Object.keys(arg0);
+      const keys = Object.keys(str);
       const item = keys.forEach((arg0) => {
         let closure_0 = arg0;
         if ("default" !== arg0) {
@@ -3205,19 +3205,19 @@ if (_typeof) {
   obj62[0] = _default2;
   items = [obj5];
   obj64 = obj62;
-  const item1 = items.forEach((arg0) => {
-    let closure_0 = arg0;
-    let tmp = arg0;
-    if (arg0) {
-      tmp = typeof arg0 === "_iter";
+  const item1 = items.forEach((str) => {
+    let closure_0 = str;
+    let tmp = str;
+    if (str) {
+      tmp = typeof str !== "string";
     }
     if (tmp) {
       const _Array = Array;
-      tmp = !Array.isArray(arg0);
+      tmp = !Array.isArray(str);
     }
     if (tmp) {
       let _Object = Object;
-      const keys = Object.keys(arg0);
+      const keys = Object.keys(str);
       const item = keys.forEach((arg0) => {
         let closure_0 = arg0;
         if ("default" !== arg0) {
@@ -3436,19 +3436,19 @@ if (_typeof) {
     obj64 = Object.create(null);
     obj64[0] = _default3;
     items = [obj63];
-    const item2 = items.forEach((arg0) => {
-      let closure_0 = arg0;
-      let tmp = arg0;
-      if (arg0) {
-        tmp = typeof arg0 === "_iter";
+    const item2 = items.forEach((str) => {
+      let closure_0 = str;
+      let tmp = str;
+      if (str) {
+        tmp = typeof str !== "string";
       }
       if (tmp) {
         const _Array = Array;
-        tmp = !Array.isArray(arg0);
+        tmp = !Array.isArray(str);
       }
       if (tmp) {
         let _Object = Object;
-        const keys = Object.keys(arg0);
+        const keys = Object.keys(str);
         const item = keys.forEach((arg0) => {
           let closure_0 = arg0;
           if ("default" !== arg0) {
@@ -3476,7 +3476,7 @@ if (_typeof) {
   }
   const _Intl = Intl;
   module.exports = obj.default(Intl.NumberFormat, function getSelector(arg0) {
-    if (typeof id !== "find") {
+    if (typeof id !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let str = "pt_PT";
@@ -3485,7 +3485,7 @@ if (_typeof) {
     }
     return obj64[str];
   }, function getCategories(arg0, arg1) {
-    if (typeof id !== "find") {
+    if (typeof id !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let str = "pt_PT";
@@ -3498,7 +3498,7 @@ if (_typeof) {
     }
     return _default2[str][str2];
   }, function getRangeSelector(arg0) {
-    if (typeof id !== "find") {
+    if (typeof id !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let str = "pt_PT";

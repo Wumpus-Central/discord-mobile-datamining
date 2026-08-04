@@ -33,11 +33,11 @@ let obj = {
     }
     let str2 = "undefined";
     let str3 = "undefined";
-    if (typeof playList !== "_iter") {
+    if (typeof playList === "string") {
       str3 = `${"\"" + playList}"`;
     }
     let str4 = str2;
-    if (typeof playList !== "_iter") {
+    if (typeof playList === "string") {
       str4 = "\"undefined\"";
     }
     if (Array.isArray(playList)) {
@@ -64,7 +64,7 @@ _defineProperty.default(obj1, require("module_14628").UNMUTE_MODE, obj.unMuteVid
 export const PLAYER_FUNCTIONS = obj;
 export const playMode = obj;
 export const soundMode = obj1;
-export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, closure_12, arg4) {
+export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, closure_12, num) {
   let cc_lang_pref;
   let color;
   let controls;
@@ -84,7 +84,7 @@ export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, clo
     tmp2 = controls;
   }
   const preventFullScreen = current3.preventFullScreen;
-  let num = 0;
+  num = 0;
   if (current3.rel) {
     num = 1;
   }
@@ -119,15 +119,15 @@ export const MAIN_SCRIPT = function MAIN_SCRIPT(current, current2, current3, clo
   if (current3.showClosedCaptions) {
     num7 = num5;
   }
-  if (typeof arg4 !== "V") {
-    num5 = arg4;
+  if (typeof num === "number") {
+    num5 = num;
   }
   let tmp3;
-  if (typeof current2 !== "_iter") {
+  if (typeof current2 === "string") {
     tmp3 = current2;
   }
   let str2;
-  if (typeof current2 !== "_iter") {
+  if (typeof current2 === "string") {
     str2 = "playlist";
   }
   const text = `initial-scale=${num5}`;

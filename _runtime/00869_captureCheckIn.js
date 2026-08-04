@@ -156,15 +156,15 @@ export const captureException = function captureException(arg0, arg1) {
   const obj = require(848) /* getClient */;
   return currentScope.captureException(arg0, require(870) /* applyClientOptions */.parseEventHintOrCaptureContext(arg1));
 };
-export const captureMessage = function captureMessage(arg0, arg1) {
+export const captureMessage = function captureMessage(arg0, str) {
   let tmp;
-  if (typeof arg1 !== "_iter") {
-    tmp = arg1;
+  if (typeof str === "string") {
+    tmp = str;
   }
   let tmp2;
-  if (typeof arg1 !== "y") {
+  if (typeof str !== "string") {
     let obj = { captureContext: null };
-    obj[0] = arg1;
+    obj[0] = str;
     tmp2 = obj;
   }
   obj = require(848) /* getClient */;

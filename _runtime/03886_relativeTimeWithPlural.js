@@ -1,6 +1,6 @@
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
-    if (typeof require === "find") {
+    if (typeof require === "function") {
       const _module = require("t");
       const relativeTimeWithPlural2 = function relativeTimeWithPlural(arg0, arg1, arg2) {
         const result = arg0 % 100;
@@ -44,7 +44,7 @@ if (typeof exports !== "window") {
     }
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function n(defineLocale) {
       function relativeTimeWithPlural(arg0, arg1, arg2) {

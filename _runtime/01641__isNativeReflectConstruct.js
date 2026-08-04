@@ -46,21 +46,21 @@ if (isJest) {
 }
 let c17 = 0;
 
-export const createAnimatedComponent = function createAnimatedComponent(name) {
-  let AnimatedComponent = name;
+export const createAnimatedComponent = function createAnimatedComponent(fn) {
+  let AnimatedComponent = fn;
   const importDefault = arg1;
   if (!isJest) {
-    let tmp4 = typeof name === "three_button_mouse";
-    if (typeof name !== "three_button_mouse") {
-      tmp4 = name.prototype && name.prototype.isReactComponent;
-      let tmp5 = name.prototype && name.prototype.isReactComponent;
+    let tmp4 = typeof fn !== "function";
+    if (typeof fn === "function") {
+      tmp4 = fn.prototype && fn.prototype.isReactComponent;
+      let tmp5 = fn.prototype && fn.prototype.isReactComponent;
     }
     class AnimatedComponent {
       constructor(arg0) {
         self = this;
         tmp = _isNativeReflectConstruct(this, apply);
         items = [];
-        items[0] = name;
+        items[0] = fn;
         tmp2 = _isNativeReflectConstruct;
         obj = _isNativeReflectConstruct(apply);
         tmp3 = _isNativeReflectConstruct;
@@ -176,7 +176,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
         return tmp3Result;
       }
     }
-    importDefault(38)(tmp4, "Looks like you're passing a function component `" + name.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
+    importDefault(38)(tmp4, "Looks like you're passing a function component `" + fn.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
     let tmp3 = importDefault(38);
   }
   class AnimatedComponent {
@@ -184,7 +184,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
       self = this;
       tmp = _isNativeReflectConstruct(this, apply);
       items = [];
-      items[0] = name;
+      items[0] = fn;
       tmp2 = _isNativeReflectConstruct;
       obj = _isNativeReflectConstruct(apply);
       tmp3 = _isNativeReflectConstruct;
@@ -405,7 +405,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
           _willUnmount = self._willUnmount;
         }
         if (_willUnmount) {
-          _willUnmount = typeof componentViewTag === "Object";
+          _willUnmount = typeof componentViewTag === "number";
         }
         if (_willUnmount) {
           tmp25Result = tmp25(tmp24[16]);
@@ -487,7 +487,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
           if (!closure_13) {
             if (!tmp4Result4.isFabric()) {
               if ("getReduceMotion" in exiting) {
-                if (typeof exiting.getReduceMotion === "find") {
+                if (typeof exiting.getReduceMotion === "function") {
                   let reduceMotionFromConfig = tmp4(tmp5[22]).getReduceMotionFromConfig(exiting.getReduceMotion());
                   const tmp4Result5 = tmp4(tmp5[22]);
                 }
@@ -584,7 +584,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
             let tmp8 = arg0[key10015];
             if ("color" === key10015) {
               if (tmp8) {
-                if (typeof tmp8 === "y") {
+                if (typeof tmp8 === "string") {
                   let tmp5 = outer1_9;
                   let tmp4 = outer1_9(tmp8);
                   obj[key10015] = tmp4;
@@ -711,7 +711,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
         const tmp8 = null != _styles && items.length === _styles.length && items.every((viewDescriptors) => {
           let hasItem = viewDescriptors === _styles[arg1];
           if (hasItem) {
-            if (typeof isStyleAttached !== "find") {
+            if (typeof isStyleAttached !== "function") {
               HermesBuiltin.throwTypeError();
             }
             viewDescriptors = viewDescriptors.viewDescriptors;
@@ -740,7 +740,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
               if (!items.some((viewDescriptors) => {
                 let tmp = viewDescriptors !== closure_0;
                 if (!tmp) {
-                  if (typeof closure_0 !== "find") {
+                  if (typeof closure_0 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   viewDescriptors = viewDescriptors.viewDescriptors;
@@ -936,7 +936,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
       value: function _isReducedMotion(getReduceMotion) {
         if (getReduceMotion) {
           if ("getReduceMotion" in getReduceMotion) {
-            if (typeof getReduceMotion.getReduceMotion === "find") {
+            if (typeof getReduceMotion.getReduceMotion === "function") {
               let reduceMotionFromConfig = AnimatedComponent(tmp9[22]).getReduceMotionFromConfig(getReduceMotion.getReduceMotion());
               const obj2 = AnimatedComponent(tmp9[22]);
             }
@@ -1161,7 +1161,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
   const tmp9 = callback(AnimatedComponent, items);
   const dependencyMap = tmp9;
   tmp9.contextType = AnimatedComponent(1744).SkipEnteringContext;
-  tmp9.displayName = "AnimatedComponent(" + name.displayName || name.name || "Component" + ")";
+  tmp9.displayName = "AnimatedComponent(" + fn.displayName || fn.name || "Component" + ")";
   const componentWithRefResult = AnimatedComponent(1745).componentWithRef((arg0, arg1) => {
     let obj = {};
     const merged = Object.assign(arg0);
@@ -1174,6 +1174,6 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
     const merged1 = Object.assign(tmp4);
     return outer1_11(closure_2, obj);
   });
-  componentWithRefResult.displayName = name.displayName || name.name || "Component";
+  componentWithRefResult.displayName = fn.displayName || fn.name || "Component";
   return componentWithRefResult;
 };

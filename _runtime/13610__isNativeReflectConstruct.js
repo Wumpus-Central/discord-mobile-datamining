@@ -26,7 +26,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-if (typeof WeakMap !== "three_button_mouse") {
+if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
   const weakMap = new WeakMap();
   const _WeakMap2 = WeakMap;
@@ -37,7 +37,7 @@ if (!noop) {
   obj[0] = noop;
   let value = obj;
   if (null !== noop) {
-    if (typeof noop === "ay") {
+    if (typeof noop === "object") {
       if (!weakMap) {
         value = obj;
         const keys = Object.keys();

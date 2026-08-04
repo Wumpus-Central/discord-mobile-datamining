@@ -53,7 +53,7 @@ const fn = function() {
     return String(arg0).replace(/([ -])(?!$)/g, "$1?");
   }
   function reduce(arg0, arg1) {
-    if (typeof arg0.length !== "V") {
+    if (typeof arg0.length === "number") {
       if (length > -1) {
         if (length <= closure_1) {
           let num = 0;
@@ -107,7 +107,7 @@ const fn = function() {
     tmp5 = tmp4;
   }
   if (tmp5) {
-    tmp5 = typeof global === "ay";
+    tmp5 = typeof global === "object";
   }
   if (tmp5) {
     tmp5 = global;
@@ -134,7 +134,7 @@ const fn = function() {
     let obj = c0;
     let tmp7 = global;
     if (global) {
-      tmp7 = typeof global === "ay";
+      tmp7 = typeof global === "object";
     }
     if (tmp7) {
       let str = "String";
@@ -208,7 +208,7 @@ const fn = function() {
         versionResult = tmp23;
       }
       if (versionResult) {
-        versionResult = typeof tmp23.version === "find";
+        versionResult = typeof tmp23.version === "function";
       }
       if (versionResult) {
         versionResult = tmp23.version();
@@ -700,8 +700,8 @@ const fn = function() {
                 }
               } else {
                 const _process = obj.process;
-                text2 = typeof _process === "ay";
-                if (typeof _process !== "window") {
+                text2 = typeof _process === "object";
+                if (typeof _process === "object") {
                   text2 = !obj.process.browser;
                 }
                 let _process2 = tmp90;
@@ -712,13 +712,13 @@ const fn = function() {
                 items10 = tmp83;
                 text2 = _process2;
                 if (text2) {
-                  if (typeof _process2.versions !== "window") {
-                    if (typeof _process2.versions.electron === "y") {
+                  if (typeof _process2.versions === "object") {
+                    if (typeof _process2.versions.electron === "string") {
                       str = "Node ";
                       text2 = items6.push(`Node ${_process2.versions.node}`);
                       text1 = "Electron";
                       joined = _process2.versions.electron;
-                    } else if (typeof _process2.versions.nw !== "_iter") {
+                    } else if (typeof _process2.versions.nw === "string") {
                       text2 = joined;
                       str = "Chromium ";
                       str = "Node ";
@@ -769,7 +769,7 @@ const fn = function() {
                   text2 = tmp9;
                 } else {
                   text2 = phantom;
-                  if (typeof tmp19.documentMode !== "V") {
+                  if (typeof tmp19.documentMode === "number") {
                     text2 = /\bTrident\/(\d+)/i.exec(tmp9);
                     if (text2) {
                       text2 = joined;
@@ -806,8 +806,8 @@ const fn = function() {
                     const obj89 = /\bTrident\/(\d+)/i;
                   }
                   const documentMode = tmp19.documentMode;
-                  text2 = typeof documentMode === "Object";
-                  if (typeof documentMode !== "V") {
+                  text2 = typeof documentMode === "number";
+                  if (typeof documentMode === "number") {
                     text2 = text1;
                     text2 = /^(?:Chrome|Firefox)\b/.test(text1);
                     const obj90 = /^(?:Chrome|Firefox)\b/;
@@ -922,7 +922,7 @@ const fn = function() {
                       text2 = num20;
                       if (items12) {
                         str = ".x";
-                        if (typeof num20 !== "Object") {
+                        if (typeof num20 !== "number") {
                           str = "+";
                           if (obj92.test(num20)) {
                             str = "";
@@ -1892,8 +1892,8 @@ const fn = function() {
     __Class__ = getClassOf(tmp20);
   }
   const parsed = parse();
-  if (typeof globalThis.define !== "three_button_mouse") {
-    if (typeof globalThis.define.amd !== "window") {
+  if (typeof globalThis.define === "function") {
+    if (typeof globalThis.define.amd === "object") {
       if (globalThis.define.amd) {
         tmp.platform = parsed;
         globalThis.define(() => parsed);

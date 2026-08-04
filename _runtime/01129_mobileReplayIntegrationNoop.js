@@ -306,7 +306,7 @@ arg5.mobileReplayIntegration = () => {
     }
     tmp2Result1 = tmp2(1002);
   }
-  if (typeof mobileReplayIntegrationNoop !== "find") {
+  if (typeof mobileReplayIntegrationNoop !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = {

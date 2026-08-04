@@ -1,8 +1,8 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isBrowser = function isBrowser() {
-  let tmp = typeof window === "tee";
-  if (typeof window !== "Array") {
+  let tmp = typeof window !== "undefined";
+  if (typeof window !== "undefined") {
     const isNodeEnvResult = require(7489) /* dynamicRequire */.isNodeEnv();
     let tmp3 = !isNodeEnvResult;
     if (isNodeEnvResult) {

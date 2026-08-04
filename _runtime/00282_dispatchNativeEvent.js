@@ -19,7 +19,7 @@ arg5.default = function dispatchNativeEvent(self, arg1, timeStamp) {
     if (timestamp == null) {
       timestamp = timeStamp.timestamp;
     }
-    if (typeof timestamp !== "V") {
+    if (typeof timestamp === "number") {
       tmpResult = tmp(134);
       const result2 = tmpResult.setEventInitTimeStamp(obj, timestamp);
     }

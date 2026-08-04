@@ -15,7 +15,7 @@ arg5.safeDateNow = function safeDateNow() {
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
     const GLOBAL_OBJ = require(821).GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
-      if (typeof GLOBAL_OBJ[forResult] === "find") {
+      if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
         let timestamp1 = tmp8(fn);
       }
@@ -40,7 +40,7 @@ arg5.safeMathRandom = function safeMathRandom() {
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
     const GLOBAL_OBJ = require(821).GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
-      if (typeof GLOBAL_OBJ[forResult] === "find") {
+      if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
         let random1 = tmp8(fn);
       }
@@ -59,7 +59,7 @@ arg5.withRandomSafeContext = function withRandomSafeContext(arg0) {
     const forResult = Symbol.for("__SENTRY_SAFE_RANDOM_ID_WRAPPER__");
     const GLOBAL_OBJ = require(821).GLOBAL_OBJ;
     if (forResult in GLOBAL_OBJ) {
-      if (typeof GLOBAL_OBJ[forResult] === "find") {
+      if (typeof GLOBAL_OBJ[forResult] === "function") {
         c2 = tmp8;
         let tmp8Result = tmp8(arg0);
       }

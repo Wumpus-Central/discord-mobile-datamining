@@ -13,80 +13,16 @@ closure_0 = importDefaultResult((arg0) => {
   let c5 = 0;
   let c6 = 0;
   const iter = (function*(arg0) {
-    if (c6 === 2) {
-      c6 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_3 = tmp5;
-            let closure_4 = tmp2;
-            let sku;
-            sku = sku.sku;
-            c5 = 1;
-            c6 = 1;
-            return { value: "ct", done: "Array" };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let obj2 = callback(outer1_1[3]);
-            const result = obj2.checkNativeAndroidAvailable();
-            let closure_2 = outer1_2;
-            const openURL = outer1_2.openURL;
-            c5 = 2;
-            c6 = 1;
-            obj2 = { value: null, done: false };
-            obj2[0] = outer1_3.getPackageName();
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          const _HermesInternal = HermesInternal;
-          c6 = 3;
-          obj = { value: null, done: true };
-          obj[0] = openURL("https://play.google.com/store/account/subscriptions?package=" + arg1 + "&sku=" + sku);
-          return obj;
-        }
-      } catch (tmp18) {
-        c6 = tmp;
-        throw tmp18;
-      }
-    }
+    let closure_4 = tmp2;
+    sku = sku.sku;
+    yield "ct";
+    const obj2 = callback(outer1_1[3]);
+    const result = obj2.checkNativeAndroidAvailable();
+    let closure_2 = outer1_2;
+    const openURL = outer1_2.openURL;
+    yield outer1_3.getPackageName();
+    const _HermesInternal = HermesInternal;
+    return openURL("https://play.google.com/store/account/subscriptions?package=" + arg1 + "&sku=" + sku);
   })();
   iter.next();
   return iter;

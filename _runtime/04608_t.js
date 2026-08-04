@@ -54,9 +54,9 @@ let fn = function t(exports, React) {
     return prototype;
   };
   let emptyFunctionWithReset = function _typeof(arg0) {
-    if (typeof Symbol !== "three_button_mouse") {
+    if (typeof Symbol === "function") {
       let _Symbol = Symbol;
-      if (typeof Symbol.iterator === "e") {
+      if (typeof Symbol.iterator === "symbol") {
         let fn = (arg0) => typeof arg0;
       }
       return fn(arg0);
@@ -64,7 +64,7 @@ let fn = function t(exports, React) {
     fn = (arg0) => {
       if (arg0) {
         const _Symbol = Symbol;
-        if (typeof Symbol !== "three_button_mouse") {
+        if (typeof Symbol === "function") {
           const _Symbol3 = Symbol;
           if (arg0.constructor === Symbol) {
             const _Symbol2 = Symbol;
@@ -123,8 +123,8 @@ let fn = function t(exports, React) {
         let tmp6 = iterable;
         if (iterable) {
           const _Symbol = Symbol;
-          iterable = typeof Symbol === "tee";
-          if (typeof Symbol !== "Array") {
+          iterable = typeof Symbol !== "undefined";
+          if (typeof Symbol !== "undefined") {
             const _Symbol2 = Symbol;
             iterable = iterable[Symbol.iterator];
           }
@@ -222,7 +222,7 @@ let fn = function t(exports, React) {
       }
     } else {
       if (iterable) {
-        if (typeof iterable !== "y") {
+        if (typeof iterable !== "string") {
           const _Object = Object;
           let call = toString.call;
           let arr = typeof call === "unknown" ? toString() : call(iterable);
@@ -332,7 +332,7 @@ let fn = function t(exports, React) {
   function isEqual(arg0, arg1) {
     let length;
     let length2;
-    if (typeof isUnknownObject !== "find") {
+    if (typeof isUnknownObject !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let tmp2 = null !== arg0;
@@ -340,7 +340,7 @@ let fn = function t(exports, React) {
       tmp2 = "object" === emptyFunctionWithReset(arg0);
     }
     if (tmp2) {
-      if (typeof isUnknownObject !== "find") {
+      if (typeof isUnknownObject !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp4 = null !== arg1;
@@ -420,7 +420,7 @@ let fn = function t(exports, React) {
         let tmp = arguments[1];
       }
       if (null !== elements) {
-        if (typeof isUnknownObject !== "find") {
+        if (typeof isUnknownObject !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp4 = null !== elements;
@@ -428,16 +428,16 @@ let fn = function t(exports, React) {
           tmp4 = "object" === emptyFunctionWithReset(elements);
         }
         if (tmp4) {
-          tmp4 = typeof elements.elements === "find";
+          tmp4 = typeof elements.elements === "function";
         }
         if (tmp4) {
-          tmp4 = typeof elements.createToken === "find";
+          tmp4 = typeof elements.createToken === "function";
         }
         if (tmp4) {
-          tmp4 = typeof elements.createPaymentMethod === "find";
+          tmp4 = typeof elements.createPaymentMethod === "function";
         }
         if (tmp4) {
-          tmp4 = typeof elements.confirmCardPayment === "find";
+          tmp4 = typeof elements.confirmCardPayment === "function";
         }
         if (!tmp4) {
           const _Error = Error;
@@ -455,7 +455,7 @@ let fn = function t(exports, React) {
         let tmp = arguments[1];
       }
       let c0 = tmp;
-      if (typeof isUnknownObject !== "find") {
+      if (typeof isUnknownObject !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp5 = null !== elements;
@@ -463,7 +463,7 @@ let fn = function t(exports, React) {
         tmp5 = "object" === emptyFunctionWithReset(elements);
       }
       if (tmp5) {
-        tmp5 = typeof elements.then === "find";
+        tmp5 = typeof elements.then === "function";
       }
       if (tmp5) {
         let obj = { tag: "async", stripePromise: null };
@@ -574,7 +574,7 @@ let fn = function t(exports, React) {
         }
       }, items1);
       tmp5 = usePrevious;
-      if (typeof usePrevious !== "find") {
+      if (typeof usePrevious !== "function") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -600,7 +600,7 @@ let fn = function t(exports, React) {
           console.warn("Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.");
         }
       }, items3);
-      if (typeof tmp5 !== "find") {
+      if (typeof tmp5 !== "function") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -619,12 +619,12 @@ let fn = function t(exports, React) {
       items5[2] = first.elements;
       effect4 = obj.useEffect(() => {
         if (value.elements) {
-          if (typeof outer1_11 !== "find") {
+          if (typeof outer1_11 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const options = tmp3;
           let closure_2 = ["clientSecret", "fonts"];
-          if (typeof outer1_8 !== "find") {
+          if (typeof outer1_8 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp7 = null !== tmp3;
@@ -636,7 +636,7 @@ let fn = function t(exports, React) {
             const _Object = Object;
             const keys = Object.keys(tmp3);
             reduced = keys.reduce((arg0, arg1) => {
-              if (typeof outer1_8 !== "find") {
+              if (typeof outer1_8 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp2 = null !== tmp;
@@ -691,7 +691,7 @@ let fn = function t(exports, React) {
       items6[0] = first.stripe;
       effect5 = obj.useEffect(() => {
         const stripe = value.stripe;
-        if (typeof outer1_15 !== "find") {
+        if (typeof outer1_15 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let registerAppInfo = stripe;
@@ -715,12 +715,12 @@ let fn = function t(exports, React) {
   }
   class ElementsConsumer {
     constructor(arg0) {
-      if (typeof useElementsContextWithUseCase !== "find") {
+      if (typeof useElementsContextWithUseCase !== "function") {
         str4 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       context = c0.useContext(c16);
-      if (typeof parseElementsContext !== "find") {
+      if (typeof parseElementsContext !== "function") {
         str5 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -803,7 +803,7 @@ let fn = function t(exports, React) {
                 const checkout = initCheckout.initCheckout(outer1_1);
                 checkout.then((on) => {
                   if (on) {
-                    if (typeof outer1_7 !== "find") {
+                    if (typeof outer1_7 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let closure_1 = on;
@@ -839,7 +839,7 @@ let fn = function t(exports, React) {
           let checkout = stripe.initCheckout(ref2);
           checkout.then((on) => {
             if (on) {
-              if (typeof closure_7 !== "find") {
+              if (typeof closure_7 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               stripe = stripe.stripe;
@@ -860,7 +860,7 @@ let fn = function t(exports, React) {
         }
       }, items1);
       tmp8 = safeSetContext;
-      if (typeof safeSetContext !== "find") {
+      if (typeof safeSetContext !== "function") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -886,7 +886,7 @@ let fn = function t(exports, React) {
           console.warn("Unsupported prop change on CheckoutProvider: You cannot change the `stripe` prop after setting it.");
         }
       }, items3);
-      if (typeof tmp8 !== "find") {
+      if (typeof tmp8 !== "function") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -901,7 +901,7 @@ let fn = function t(exports, React) {
       current2 = ref1.current;
       current = current2;
       checkoutSdk = first1.checkoutSdk;
-      if (typeof tmp8 !== "find") {
+      if (typeof tmp8 !== "function") {
         str3 = "Trying to call a non-function";
         throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
       }
@@ -962,7 +962,7 @@ let fn = function t(exports, React) {
       items7[0] = first1.stripe;
       effect6 = obj.useEffect(() => {
         const stripe = first1.stripe;
-        if (typeof outer1_15 !== "find") {
+        if (typeof outer1_15 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let registerAppInfo = stripe;
@@ -1011,7 +1011,7 @@ let fn = function t(exports, React) {
     let combined = "".concat(formatted + address.slice(1), "Element");
     const tmp3 = arg1 ? (function ServerElement(id) {
       combined = "mounts <".concat(combined, ">");
-      if (typeof outer1_23 !== "find") {
+      if (typeof outer1_23 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = address;
@@ -1026,7 +1026,7 @@ let fn = function t(exports, React) {
         }
       }
       if (context) {
-        if (typeof outer1_21 !== "find") {
+        if (typeof outer1_21 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context) {
@@ -1036,7 +1036,7 @@ let fn = function t(exports, React) {
           throw error1;
         }
       } else {
-        if (typeof outer1_17 !== "find") {
+        if (typeof outer1_17 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context1) {
@@ -1073,7 +1073,7 @@ let fn = function t(exports, React) {
       let ref14 = onReady;
       ({ onChange, onEscape, onClick, onLoadError, onLoaderStart, onNetworksChange, onConfirm, onCancel, onShippingAddressChange, onShippingRateChange } = options);
       let combined = "mounts <".concat(ref14, ">");
-      if (typeof outer1_23 !== "find") {
+      if (typeof outer1_23 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const context = address.useContext(outer1_20);
@@ -1087,7 +1087,7 @@ let fn = function t(exports, React) {
         }
       }
       if (context) {
-        if (typeof outer1_21 !== "find") {
+        if (typeof outer1_21 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         context1 = context;
@@ -1098,7 +1098,7 @@ let fn = function t(exports, React) {
           throw error1;
         }
       } else {
-        if (typeof outer1_17 !== "find") {
+        if (typeof outer1_17 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (!context1) {
@@ -1123,7 +1123,7 @@ let fn = function t(exports, React) {
       let closure_5 = tmp18[1];
       let closure_6 = obj2.useRef(null);
       const ref = obj2.useRef(null);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1162,7 +1162,7 @@ let fn = function t(exports, React) {
 
         };
       }, items1);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1201,7 +1201,7 @@ let fn = function t(exports, React) {
 
         };
       }, items3);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1240,7 +1240,7 @@ let fn = function t(exports, React) {
 
         };
       }, items5);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1279,7 +1279,7 @@ let fn = function t(exports, React) {
 
         };
       }, items7);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1318,7 +1318,7 @@ let fn = function t(exports, React) {
 
         };
       }, items9);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1357,7 +1357,7 @@ let fn = function t(exports, React) {
 
         };
       }, items11);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1396,7 +1396,7 @@ let fn = function t(exports, React) {
 
         };
       }, items13);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1435,7 +1435,7 @@ let fn = function t(exports, React) {
 
         };
       }, items15);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1474,7 +1474,7 @@ let fn = function t(exports, React) {
 
         };
       }, items17);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1513,7 +1513,7 @@ let fn = function t(exports, React) {
 
         };
       }, items19);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1552,7 +1552,7 @@ let fn = function t(exports, React) {
 
         };
       }, items21);
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         combined = HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1599,7 +1599,7 @@ let fn = function t(exports, React) {
         }
         tmp70 = onReady;
       }
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         combined = HermesBuiltin.throwTypeError();
       }
       options = first;
@@ -1688,7 +1688,7 @@ let fn = function t(exports, React) {
           }
         }
       }, items26);
-      if (typeof outer1_7 !== "find") {
+      if (typeof outer1_7 !== "function") {
         combined = HermesBuiltin.throwTypeError();
       }
       ref14 = obj2.useRef(options);
@@ -1700,12 +1700,12 @@ let fn = function t(exports, React) {
       const items28 = [options, current];
       const effect27 = obj2.useEffect(() => {
         if (ref.current) {
-          if (typeof outer2_11 !== "find") {
+          if (typeof outer2_11 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const options = tmp3;
           let closure_2 = ["paymentRequest"];
-          if (typeof outer2_8 !== "find") {
+          if (typeof outer2_8 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp7 = null !== tmp3;
@@ -1717,7 +1717,7 @@ let fn = function t(exports, React) {
             let _Object = Object;
             const keys = Object.keys(tmp3);
             reduced = keys.reduce((arg0, arg1) => {
-              if (typeof outer1_8 !== "find") {
+              if (typeof outer1_8 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp2 = null !== tmp;
@@ -1773,7 +1773,7 @@ let fn = function t(exports, React) {
       }, items28);
       const layoutEffect1 = obj2.useLayoutEffect(() => () => {
         if (ref.current) {
-          if (typeof tmp.current.destroy !== "three_button_mouse") {
+          if (typeof tmp.current.destroy === "function") {
             try {
               const current = tmp.current;
               current.destroy();
@@ -1811,7 +1811,7 @@ let fn = function t(exports, React) {
   const elementComponent18 = createElementComponent("affirmMessage", tmp9);
   exports.AddressElement = elementComponent15;
   exports.AffirmMessageElement = elementComponent18;
-  exports.AfterpayClearpayMessageElement = createElementComponent("afterpayClearpayMessage", typeof window === "Array");
+  exports.AfterpayClearpayMessageElement = createElementComponent("afterpayClearpayMessage", typeof window === "undefined");
   exports.AuBankAccountElement = elementComponent;
   exports.CardCvcElement = elementComponent4;
   exports.CardElement = elementComponent1;
@@ -1821,11 +1821,11 @@ let fn = function t(exports, React) {
   exports.CurrencySelectorElement = elementComponent12;
   exports.Elements = Elements;
   exports.ElementsConsumer = ElementsConsumer;
-  exports.EmbeddedCheckout = typeof window === "Array" ? (function EmbeddedCheckoutServerElement(arg0) {
+  exports.EmbeddedCheckout = typeof window === "undefined" ? (function EmbeddedCheckoutServerElement(arg0) {
     let className;
     let id;
     ({ id, className } = arg0);
-    if (typeof useEmbeddedCheckoutContext !== "find") {
+    if (typeof useEmbeddedCheckoutContext !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = React;
@@ -1843,7 +1843,7 @@ let fn = function t(exports, React) {
     let className;
     let id;
     ({ id, className } = arg0);
-    if (typeof useEmbeddedCheckoutContext !== "find") {
+    if (typeof useEmbeddedCheckoutContext !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = embeddedCheckout;
@@ -1913,7 +1913,7 @@ let fn = function t(exports, React) {
             if (!tmp.current) {
               tmp3.stripePromise.then((current) => {
                 if (current) {
-                  if (typeof setStripeAndInitEmbeddedCheckout !== "find") {
+                  if (typeof setStripeAndInitEmbeddedCheckout !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   current = outer1_4.current;
@@ -1978,7 +1978,7 @@ let fn = function t(exports, React) {
     }, items2);
     const items3 = [ref];
     const effect2 = options.useEffect(() => {
-      if (typeof outer1_15 !== "find") {
+      if (typeof outer1_15 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let registerAppInfo = obj;
@@ -1993,7 +1993,7 @@ let fn = function t(exports, React) {
         obj.registerAppInfo({ name: "react-stripe-js", version: "3.7.0", url: "https://stripe.com/docs/stripe-js/react" });
       }
     }, items3);
-    if (typeof current !== "find") {
+    if (typeof current !== "function") {
       HermesBuiltin.throwTypeError();
     }
     options = stripe;
@@ -2015,7 +2015,7 @@ let fn = function t(exports, React) {
         console.warn("Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.");
       }
     }, items5);
-    if (typeof current !== "find") {
+    if (typeof current !== "function") {
       HermesBuiltin.throwTypeError();
     }
     ref2 = obj.useRef(options);
@@ -2079,7 +2079,7 @@ let fn = function t(exports, React) {
   exports.ShippingAddressElement = elementComponent16;
   exports.useCheckout = function useCheckout() {
     const context = React.useContext(context1);
-    if (typeof parseCheckoutSdkContext !== "find") {
+    if (typeof parseCheckoutSdkContext !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (context) {
@@ -2100,11 +2100,11 @@ let fn = function t(exports, React) {
     obj = React;
   };
   exports.useElements = function useElements() {
-    if (typeof useElementsContextWithUseCase !== "find") {
+    if (typeof useElementsContextWithUseCase !== "function") {
       HermesBuiltin.throwTypeError();
     }
     context = React.useContext(context);
-    if (typeof parseElementsContext !== "find") {
+    if (typeof parseElementsContext !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (context) {
@@ -2117,7 +2117,7 @@ let fn = function t(exports, React) {
     }
   };
   exports.useStripe = function useStripe() {
-    if (typeof useElementsOrCheckoutSdkContextWithUseCase !== "find") {
+    if (typeof useElementsOrCheckoutSdkContextWithUseCase !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const context = React.useContext(context1);
@@ -2131,7 +2131,7 @@ let fn = function t(exports, React) {
       }
     }
     if (context) {
-      if (typeof parseCheckoutSdkContext !== "find") {
+      if (typeof parseCheckoutSdkContext !== "function") {
         HermesBuiltin.throwTypeError();
       }
       context1 = context;
@@ -2142,7 +2142,7 @@ let fn = function t(exports, React) {
         throw error1;
       }
     } else {
-      if (typeof parseElementsContext !== "find") {
+      if (typeof parseElementsContext !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (!context1) {
@@ -2155,18 +2155,18 @@ let fn = function t(exports, React) {
     return context1.stripe;
   };
 };
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
     fn(exports, require("noop"));
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["exports", "react"], fn);
   }
 }
 let self = this;
-if (typeof globalThis !== "Array") {
+if (typeof globalThis !== "undefined") {
   self = globalThis;
 }
 let obj = {};

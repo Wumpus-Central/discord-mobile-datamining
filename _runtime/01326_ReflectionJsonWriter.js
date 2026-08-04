@@ -66,24 +66,24 @@ let items = [
   },
   {
     key: "field",
-    value: function field(kind, arg1, enumAsInteger) {
+    value: function field(kind, obj, enumAsInteger) {
       let length;
       let length2;
       let str6;
       let tmp56;
       const self = this;
       if ("map" == kind.kind) {
-        let tmp49 = typeof arg1 === "ay";
-        if (typeof arg1 !== "window") {
+        let tmp49 = typeof obj === "object";
+        if (typeof obj === "object") {
           let scalarResult = null;
-          tmp49 = null !== arg1;
+          tmp49 = null !== obj;
         }
         ReflectionJsonWriter(1316).assert(tmp49);
         const kind3 = kind.V.kind;
-        let obj = {};
+        obj = {};
         if ("scalar" === kind3) {
           const _Object2 = Object;
-          const entries = Object.entries(arg1);
+          const entries = Object.entries(obj);
           const tmp95 = entries[Symbol.iterator]();
           while (tmp95 !== undefined) {
             let tmp99 = _slicedToArray;
@@ -106,7 +106,7 @@ let items = [
           const V = kind.V;
           const TResult = V.T();
           const _Object = Object;
-          const entries1 = Object.entries(arg1);
+          const entries1 = Object.entries(obj);
           const tmp77 = entries1[Symbol.iterator]();
           while (tmp77 !== undefined) {
             let tmp81 = _slicedToArray;
@@ -130,7 +130,7 @@ let items = [
           scalarResult = V2.T();
           scalarResult = globalThis;
           const _Object4 = Object;
-          scalarResult = Object.entries(arg1);
+          scalarResult = Object.entries(obj);
           scalarResult = scalarResult[Symbol.iterator]();
           while (scalarResult !== undefined) {
             let tmp54 = _slicedToArray;
@@ -145,7 +145,7 @@ let items = [
             let tmp62 = undefined === tmp56;
             if (!tmp62) {
               let tmp63 = tmp56;
-              tmp62 = typeof tmp57 === "Object";
+              tmp62 = typeof tmp57 === "number";
             }
             let assertResult2 = obj8.assert(tmp62);
             let tmp65 = tmp56;
@@ -176,16 +176,16 @@ let items = [
       } else if (kind.repeat) {
         obj = ReflectionJsonWriter(1316);
         const _Array = Array;
-        obj.assert(Array.isArray(arg1));
+        obj.assert(Array.isArray(obj));
         const kind2 = kind.kind;
         const items = [];
         if ("scalar" === kind2) {
           let num4 = 0;
-          if (0 < arg1.length) {
+          if (0 < obj.length) {
             do {
               let tmp37 = self;
               let flag2 = true;
-              let scalarResult1 = self.scalar(kind.T, arg1[num4], kind.name, kind.opt, true);
+              let scalarResult1 = self.scalar(kind.T, obj[num4], kind.name, kind.opt, true);
               let tmp39 = ReflectionJsonWriter;
               let tmp40 = ReflectionJsonWriter;
               let tmp41 = dependencyMap;
@@ -194,27 +194,27 @@ let items = [
               let assertResult5 = obj5.assert(undefined !== scalarResult1);
               let arr = items.push(scalarResult1);
               num4 = num4 + 1;
-              length2 = arg1.length;
+              length2 = obj.length;
             } while (num4 < length2);
           }
         } else if ("enum" === kind2) {
           const TResult1 = kind.T();
-          for (let num2 = 0; num2 < arg1.length; num2 = num2 + 1) {
+          for (let num2 = 0; num2 < obj.length; num2 = num2 + 1) {
             let tmp23 = ReflectionJsonWriter;
             let tmp24 = ReflectionJsonWriter;
             let tmp25 = dependencyMap;
             let tmp26 = dependencyMap;
             let obj3 = ReflectionJsonWriter(1316);
-            let tmp27 = undefined === arg1[num2];
+            let tmp27 = undefined === obj[num2];
             let tmp28 = num2;
             if (!tmp27) {
-              tmp27 = typeof arg1[num2] === "Object";
+              tmp27 = typeof obj[num2] === "number";
             }
             let assertResult6 = obj3.assert(tmp27);
             let tmp30 = self;
             let tmp31 = TResult1;
             let flag = true;
-            let enumResult1 = self.enum(TResult1, arg1[num2], kind.name, kind.opt, true, enumAsInteger.enumAsInteger);
+            let enumResult1 = self.enum(TResult1, obj[num2], kind.name, kind.opt, true, enumAsInteger.enumAsInteger);
             let tmp33 = tmp23;
             let tmp34 = tmp25;
             let tmp24Result = tmp24(1316);
@@ -224,12 +224,12 @@ let items = [
         } else if ("message" === kind2) {
           scalarResult = kind.T();
           let num = 0;
-          if (0 < arg1.length) {
+          if (0 < obj.length) {
             do {
               let tmp12 = self;
               let tmp13 = scalarResult;
               let tmp14 = enumAsInteger;
-              let messageResult1 = self.message(scalarResult, arg1[num], kind.name, enumAsInteger);
+              let messageResult1 = self.message(scalarResult, obj[num], kind.name, enumAsInteger);
               let tmp16 = ReflectionJsonWriter;
               let tmp17 = ReflectionJsonWriter;
               let tmp18 = dependencyMap;
@@ -238,7 +238,7 @@ let items = [
               let assertResult8 = obj2.assert(undefined !== messageResult1);
               let arr1 = items.push(messageResult1);
               num = num + 1;
-              length = arg1.length;
+              length = obj.length;
             } while (num < length);
           }
         }
@@ -255,14 +255,14 @@ let items = [
       } else {
         kind = kind.kind;
         if ("scalar" === kind) {
-          scalarResult = self.scalar(kind.T, arg1, kind.name, kind.opt, enumAsInteger.emitDefaultValues);
+          scalarResult = self.scalar(kind.T, obj, kind.name, kind.opt, enumAsInteger.emitDefaultValues);
         } else if ("enum" === kind) {
-          scalarResult = self.enum(kind.T(), arg1, kind.name, kind.opt, enumAsInteger.emitDefaultValues, enumAsInteger.enumAsInteger);
+          scalarResult = self.enum(kind.T(), obj, kind.name, kind.opt, enumAsInteger.emitDefaultValues, enumAsInteger.enumAsInteger);
         } else if ("message" === kind) {
           scalarResult = self;
-          scalarResult = arg1;
+          scalarResult = obj;
           scalarResult = enumAsInteger;
-          scalarResult = self.message(kind.T(), arg1, kind.name, enumAsInteger);
+          scalarResult = self.message(kind.T(), obj, kind.name, enumAsInteger);
         }
       }
       return scalarResult;
@@ -275,7 +275,7 @@ let items = [
       if ("google.protobuf.NullValue" == arg0[0]) {
         return null;
       } else if (undefined !== key10009) {
-        ReflectionJsonWriter(1316).assert(typeof key10009 === "Object");
+        ReflectionJsonWriter(1316).assert(typeof key10009 === "number");
         const obj2 = ReflectionJsonWriter(1316);
         const _Number = Number;
         ReflectionJsonWriter(1316).assert(Number.isInteger(key10009));
@@ -341,7 +341,7 @@ let items = [
                         let tmp19 = str5;
                       } else {
                         tmp7Result = tmp7(1316);
-                        tmp7Result.assert(typeof tmp === "y");
+                        tmp7Result.assert(typeof tmp === "string");
                         tmp19 = tmp;
                       }
                       return tmp19;
@@ -350,7 +350,7 @@ let items = [
                         let tmp16 = !tmp5;
                         const tmp17 = !tmp5;
                       } else {
-                        tmp7(1316).assert(typeof tmp === "T");
+                        tmp7(1316).assert(typeof tmp === "boolean");
                         tmp16 = tmp;
                         const tmp7Result1 = tmp7(1316);
                       }
@@ -375,12 +375,12 @@ let items = [
                               }
                             }
                           }
-                          let tmp11 = typeof tmp === "Object";
-                          if (typeof tmp !== "Object") {
-                            tmp11 = typeof tmp === "y";
+                          let tmp11 = typeof tmp === "number";
+                          if (typeof tmp !== "number") {
+                            tmp11 = typeof tmp === "string";
                           }
                           if (!tmp11) {
-                            tmp11 = typeof tmp === "accessibilityLabel";
+                            tmp11 = typeof tmp === "bigint";
                           }
                           tmp7(1316).assert(tmp11);
                           const PbLong = tmp7(1314).PbLong;
@@ -388,12 +388,12 @@ let items = [
                           return str2.toString();
                         }
                       }
-                      let tmp13 = typeof tmp === "Object";
-                      if (typeof tmp !== "Object") {
-                        tmp13 = typeof tmp === "y";
+                      let tmp13 = typeof tmp === "number";
+                      if (typeof tmp !== "number") {
+                        tmp13 = typeof tmp === "string";
                       }
                       if (!tmp13) {
-                        tmp13 = typeof tmp === "accessibilityLabel";
+                        tmp13 = typeof tmp === "bigint";
                       }
                       tmp7(1316).assert(tmp13);
                       const PbULong = tmp7(1314).PbULong;
@@ -408,7 +408,7 @@ let items = [
                     }
                     let str6 = num2;
                   } else {
-                    tmp7(1316).assert(typeof tmp === "Object");
+                    tmp7(1316).assert(typeof tmp === "number");
                     const _Number = Number;
                     str6 = "NaN";
                     if (!Number.isNaN(tmp)) {

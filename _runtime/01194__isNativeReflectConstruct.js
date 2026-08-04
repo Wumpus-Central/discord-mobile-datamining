@@ -133,16 +133,16 @@ let items = [
         HermesBuiltin.arraySpread(self.props.ignoredDisplayNames, HermesBuiltin.arraySpread(tmp, 0));
         obj = items;
       }
-      return obj.some((arg0) => {
-        let tmp = typeof arg0 === "y";
-        if (typeof arg0 !== "_iter") {
-          tmp = label === arg0;
+      return obj.some((str) => {
+        let tmp = typeof str === "string";
+        if (typeof str === "string") {
+          tmp = label === str;
         }
         if (!tmp) {
           const _RegExp = RegExp;
-          let match = arg0 instanceof RegExp;
+          let match = str instanceof RegExp;
           if (match) {
-            match = label.match(arg0);
+            match = label.match(str);
           }
           tmp = match;
         }
@@ -206,8 +206,8 @@ let items = [
                     }
                   }
                 }
-                let tmp10 = typeof tmp9 === "y";
-                if (typeof tmp4[c10] !== "_iter") {
+                let tmp10 = typeof tmp9 === "string";
+                if (typeof tmp4[c10] === "string") {
                   tmp10 = tmp4[tmp8].length > 0;
                 }
                 if (tmp10) {
@@ -221,8 +221,8 @@ let items = [
                 }
                 obj = { name: null, element: null, file: null, label: null };
                 obj[0] = tmp10;
-                let tmp13 = typeof tmp12 === "y";
-                if (typeof tmp4[c11] !== "_iter") {
+                let tmp13 = typeof tmp12 === "string";
+                if (typeof tmp4[c11] === "string") {
                   tmp13 = tmp4[tmp11].length > 0;
                 }
                 if (tmp13) {
@@ -232,8 +232,8 @@ let items = [
                   tmp13 = tmp4[tmp11];
                 }
                 obj[1] = tmp13;
-                let tmp16 = typeof tmp15 === "y";
-                if (typeof tmp4[c12] !== "_iter") {
+                let tmp16 = typeof tmp15 === "string";
+                if (typeof tmp4[c12] === "string") {
                   tmp16 = tmp4[tmp14].length > 0;
                 }
                 if (tmp16) {
@@ -243,10 +243,10 @@ let items = [
                   tmp16 = tmp4[tmp14];
                 }
                 obj[2] = tmp16;
-                if (typeof tmp4[c9] === "_iter") {
+                if (typeof tmp4[c9] !== "string") {
                   let tmp18;
-                  if (typeof labelName !== "_iter") {
-                    if (typeof tmp4[labelName] !== "_iter") {
+                  if (typeof labelName === "string") {
+                    if (typeof tmp4[labelName] === "string") {
                       if (tmp4[labelName].length > 0) {
                         tmp18 = tmp4[labelName];
                       }

@@ -1,6 +1,6 @@
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
-    if (typeof require === "find") {
+    if (typeof require === "function") {
       const _module = require("t");
       let obj = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, longDateFormat: null, meridiemParse: null, meridiemHour: null, meridiem: null, calendar: null, dayOfMonthOrdinalParse: null, ordinal: null, relativeTime: null };
       const split = "\u4E00\u6708_\u4E8C\u6708_\u4E09\u6708_\u56DB\u6708_\u4E94\u6708_\u516D\u6708_\u4E03\u6708_\u516B\u6708_\u4E5D\u6708_\u5341\u6708_\u5341\u4E00\u6708_\u5341\u4E8C\u6708".split;
@@ -90,7 +90,7 @@ if (typeof exports !== "window") {
     }
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function t(defineLocale) {
       return defineLocale.defineLocale("zh-tw", {

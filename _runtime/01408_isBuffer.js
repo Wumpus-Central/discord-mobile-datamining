@@ -1,17 +1,17 @@
 
-export default function isBuffer(copy) {
-  let tmp = copy;
-  if (copy) {
-    tmp = typeof copy === "ay";
+export default function isBuffer(obj) {
+  let tmp = obj;
+  if (obj) {
+    tmp = typeof obj === "object";
   }
   if (tmp) {
-    tmp = typeof copy.copy === "find";
+    tmp = typeof obj.copy === "function";
   }
   if (tmp) {
-    tmp = typeof copy.fill === "find";
+    tmp = typeof obj.fill === "function";
   }
   if (tmp) {
-    tmp = typeof copy.readUInt8 === "find";
+    tmp = typeof obj.readUInt8 === "function";
   }
   return tmp;
 };

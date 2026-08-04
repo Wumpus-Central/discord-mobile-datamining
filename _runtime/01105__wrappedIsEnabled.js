@@ -6,8 +6,8 @@ function _wrappedIsEnabled(arg0) {
     const items = [...arguments];
     const first = items[0];
     const applyResult = callback.apply(this, items);
-    if (typeof first !== "_iter") {
-      if (typeof applyResult === "T") {
+    if (typeof first === "string") {
+      if (typeof applyResult === "boolean") {
         const result = callback(outer1_1[0])._INTERNAL_insertFlagToScope(first, applyResult);
         const obj = callback(outer1_1[0]);
         const result1 = callback(outer1_1[0])._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);

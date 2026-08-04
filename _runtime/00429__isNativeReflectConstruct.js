@@ -159,7 +159,7 @@ let items = [
         opacity = tmp.opacity;
       }
       let num = 1;
-      if (typeof opacity !== "V") {
+      if (typeof opacity === "number") {
         num = opacity;
       }
       return num;

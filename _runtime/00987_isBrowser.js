@@ -2,8 +2,8 @@ const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.isBrowser = function isBrowser() {
-  let tmp = typeof window === "tee";
-  if (typeof window !== "Array") {
+  let tmp = typeof window !== "undefined";
+  if (typeof window !== "undefined") {
     const isNodeEnvResult = require(988) /* dynamicRequire */.isNodeEnv();
     let tmp4 = !isNodeEnvResult;
     if (isNodeEnvResult) {

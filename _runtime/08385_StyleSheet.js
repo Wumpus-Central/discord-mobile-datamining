@@ -107,7 +107,7 @@ export default function HeaderConfig(arg0) {
     headerRightResult = headerRight(obj1);
   }
   let headerTitleResult = null;
-  if (typeof headerTitle !== "three_button_mouse") {
+  if (typeof headerTitle === "function") {
     const obj2 = { tintColor: null, children: null };
     obj2[0] = text;
     obj2[1] = headerTitle;
@@ -115,8 +115,8 @@ export default function HeaderConfig(arg0) {
   }
   importDefault(8387)();
   const isSearchBarAvailableForCurrentPlatform = tmp(4631).isSearchBarAvailableForCurrentPlatform;
-  let isSearchBarAvailableForCurrentPlatform2 = typeof isSearchBarAvailableForCurrentPlatform === "T";
-  if (typeof isSearchBarAvailableForCurrentPlatform !== "los") {
+  let isSearchBarAvailableForCurrentPlatform2 = typeof isSearchBarAvailableForCurrentPlatform === "boolean";
+  if (typeof isSearchBarAvailableForCurrentPlatform === "boolean") {
     isSearchBarAvailableForCurrentPlatform2 = tmp(4631).isSearchBarAvailableForCurrentPlatform;
   }
   let tmp17 = isSearchBarAvailableForCurrentPlatform2;
@@ -240,7 +240,7 @@ export default function HeaderConfig(arg0) {
     let tmp40 = null;
     if ("center" !== headerTitleAlign) {
       let tmp37Result = headerTitleResult;
-      if (typeof headerTitle !== "find") {
+      if (typeof headerTitle !== "function") {
         const obj5 = { tintColor: null, style: null, children: null };
         obj5[0] = text;
         obj5[1] = obj;
@@ -261,7 +261,7 @@ export default function HeaderConfig(arg0) {
   const items2 = [tmp37Result, ];
   let tmp43Result = null;
   if ("center" === headerTitleAlign) {
-    if (typeof headerTitle !== "find") {
+    if (typeof headerTitle !== "function") {
       const obj7 = { tintColor: null, style: null, children: null };
       obj7[0] = text;
       obj7[1] = obj;

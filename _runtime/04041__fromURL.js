@@ -13,67 +13,18 @@ function _fromURL() {
     let c5 = 0;
     let c6 = 0;
     const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_4 = tmp5;
-              let closure_3 = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              c5 = 1;
-              c6 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let tmp12;
-            if (closure_1) {
-              obj = { data: null };
-              obj[0] = closure_1;
-              tmp12 = obj;
-            }
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = outer1_3.fromURL(closure_0, flag, tmp12);
-            return obj2;
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
+      let closure_4 = tmp5;
+      let closure_3 = tmp2;
+      if (flag === undefined) {
+        flag = true;
       }
+      yield "ct";
+      if (closure_1) {
+        const obj = { data: null };
+        obj[0] = closure_1;
+        const tmp12 = obj;
+      }
+      return outer1_3.fromURL(closure_0, flag, tmp12);
     })();
     iter.next();
     return iter;
@@ -96,68 +47,18 @@ _fromFileURL = function _fromFileURL(arg0) {
     let c5 = 0;
     let c6 = 0;
     const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_4 = tmp5;
-              let closure_3 = tmp2;
-              let c1;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              c5 = 1;
-              c6 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let tmp12;
-            if (c1) {
-              obj = { data: null };
-              obj[0] = c1;
-              tmp12 = obj;
-            }
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = outer1_3.fromFileURL(closure_0, flag, tmp12);
-            return obj2;
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
+      let closure_4 = tmp5;
+      let closure_3 = tmp2;
+      if (flag === undefined) {
+        flag = true;
       }
+      yield "ct";
+      if (c1) {
+        const obj = { data: null };
+        obj[0] = c1;
+        const tmp12 = obj;
+      }
+      return outer1_3.fromFileURL(closure_0, flag, tmp12);
     })();
     iter.next();
     return iter;
@@ -180,67 +81,18 @@ _fromResource = function _fromResource() {
     let c5 = 0;
     let c6 = 0;
     const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_4 = tmp5;
-              let closure_3 = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              c5 = 1;
-              c6 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let tmp12;
-            if (closure_1) {
-              obj = { data: null };
-              obj[0] = closure_1;
-              tmp12 = obj;
-            }
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = outer1_3.fromResource(closure_0, flag, tmp12);
-            return obj2;
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
+      let closure_4 = tmp5;
+      let closure_3 = tmp2;
+      if (flag === undefined) {
+        flag = true;
       }
+      yield "ct";
+      if (closure_1) {
+        const obj = { data: null };
+        obj[0] = closure_1;
+        const tmp12 = obj;
+      }
+      return outer1_3.fromResource(closure_0, flag, tmp12);
     })();
     iter.next();
     return iter;
@@ -263,67 +115,18 @@ _fromBytes = function _fromBytes() {
     let c5 = 0;
     let c6 = 0;
     const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_4 = tmp5;
-              let closure_3 = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              c5 = 1;
-              c6 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let tmp12;
-            if (closure_1) {
-              obj = { data: null };
-              obj[0] = closure_1;
-              tmp12 = obj;
-            }
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = outer1_3.fromBytes(closure_0, flag, tmp12);
-            return obj2;
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
+      let closure_4 = tmp5;
+      let closure_3 = tmp2;
+      if (flag === undefined) {
+        flag = true;
       }
+      yield "ct";
+      if (closure_1) {
+        const obj = { data: null };
+        obj[0] = closure_1;
+        const tmp12 = obj;
+      }
+      return outer1_3.fromBytes(closure_0, flag, tmp12);
     })();
     iter.next();
     return iter;
@@ -398,12 +201,12 @@ function _fromSource() {
               return obj1;
             } else {
               let tmp71 = null;
-              if (typeof closure_0 !== "V") {
+              if (typeof closure_0 === "number") {
                 tmp71 = closure_0;
               }
               c3 = tmp71;
               uri = null;
-              if (typeof closure_0 !== "window") {
+              if (typeof closure_0 === "object") {
                 uri = closure_0.uri;
               }
               if (c3) {

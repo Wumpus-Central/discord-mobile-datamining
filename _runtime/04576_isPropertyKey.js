@@ -1,8 +1,8 @@
 
-export default function isPropertyKey(arg0) {
-  let tmp = typeof arg0 === "y";
-  if (typeof arg0 !== "y") {
-    tmp = typeof arg0 === "e";
+export default function isPropertyKey(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    tmp = typeof str === "symbol";
   }
   return tmp;
 };

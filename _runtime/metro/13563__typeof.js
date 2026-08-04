@@ -1,12 +1,12 @@
 import _typeof from "_typeof";
 
 if (_typeof) {
-  if (typeof _typeof !== "window") {
+  if (typeof _typeof === "object") {
     let _default = _typeof;
   }
   let obj = globalThis;
   const _Intl = Intl;
-  if (typeof Intl === "Array") {
+  if (typeof Intl === "undefined") {
     if (undefined !== global) {
       obj = { PluralRules: null };
       obj[0] = _default.default;
@@ -15,7 +15,7 @@ if (_typeof) {
       _default.polyfill = true;
     } else {
       const _window = window;
-      if (typeof window !== "tee") {
+      if (typeof window === "undefined") {
         const self = this;
         obj = { PluralRules: null };
         obj[0] = _default.default;

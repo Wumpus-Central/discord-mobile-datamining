@@ -4,7 +4,7 @@ function nativeTypeMatches(arg0, arg1) {
 arg5.safeValidate = (arr, nativeType) => {
   nativeType = nativeType.nativeType;
   return arr.some((str) => {
-    if (typeof nativeType !== "find") {
+    if (typeof nativeType !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let flag = true;

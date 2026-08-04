@@ -191,7 +191,7 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
                               (function captureJsonRpcErrorResponse(error) {
                                 try {
                                   if (error) {
-                                    if (typeof error !== "window") {
+                                    if (typeof error === "object") {
                                       if ("code" in error) {
                                         if ("message" in error) {
                                           if (-32603 === error.code) {

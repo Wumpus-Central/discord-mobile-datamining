@@ -785,7 +785,7 @@ let items = [
             obj11[0] = merged.takeScreenshotButton;
             obj11[1] = function onPress() {
               onCancel(props2[17]).hideFeedbackButton();
-              if (typeof onCancel !== "find") {
+              if (typeof onCancel !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               if (onFormClose) {

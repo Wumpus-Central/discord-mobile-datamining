@@ -26,7 +26,7 @@ c0 = true;
 
 export default function formatRelative(arg0, arg1) {
   let tmpResult = tmp;
-  if (typeof obj[arg0] !== "three_button_mouse") {
+  if (typeof obj[arg0] === "function") {
     tmpResult = tmp(arg1);
   }
   return tmpResult;

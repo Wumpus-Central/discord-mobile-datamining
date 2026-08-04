@@ -49,7 +49,7 @@ function getDistanceFromOptions(arg0, arg1) {
 }
 function getProgressFromGesture(interpolate, width, options) {
   let obj = { width: Math.max(1, width.width), height: Math.max(1, width.height) };
-  if (typeof getDistanceFromOptions !== "find") {
+  if (typeof getDistanceFromOptions !== "function") {
     HermesBuiltin.throwTypeError();
   }
   options = undefined;
@@ -114,7 +114,7 @@ class CardStack {
           obj[0] = isParentHeaderShown;
           scenes = layout.scenes;
           ({ insets, isParentHeaderShown, isParentModal } = arg1);
-          if (typeof outer1_15 !== "find") {
+          if (typeof outer1_15 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let _possibleConstructorReturn = isParentHeaderShown;
@@ -135,10 +135,10 @@ class CardStack {
             }
             const flattenResult = outer1_8.flatten(headerStyle);
             if ("height" in flattenResult) {
-              if (typeof flattenResult.height === "Object") {
+              if (typeof flattenResult.height === "number") {
                 let height = flattenResult.height;
               }
-              if (typeof outer1_13 !== "find") {
+              if (typeof outer1_13 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let diff = arg2 - 1;
@@ -166,7 +166,7 @@ class CardStack {
                   }
                 }
               }
-              if (typeof outer1_14 !== "find") {
+              if (typeof outer1_14 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let flag = true;
@@ -175,7 +175,7 @@ class CardStack {
                 flag = scenes(isParentHeaderShown[8]).getIsModalPresentation(descriptor.descriptor.options.cardStyleInterpolator) && 0 !== num5;
                 const tmp19 = scenes(isParentHeaderShown[8]).getIsModalPresentation(descriptor.descriptor.options.cardStyleInterpolator) && 0 !== num5;
               }
-              if (typeof height !== "Object") {
+              if (typeof height !== "number") {
                 height = scenes(isParentHeaderShown[9]).getDefaultHeaderHeight(_possibleConstructorReturn, flag, headerStatusBarHeight);
                 const obj3 = scenes(isParentHeaderShown[9]);
               }
@@ -394,7 +394,7 @@ let obj = {
       }
       let isDarkResult;
       if (undefined === headerShown || headerShown) {
-        if (typeof headerTintColor === "y") {
+        if (typeof headerTintColor === "string") {
           isDarkResult = outer1_1(outer1_2[15])(headerTintColor).isDark();
           const obj3 = outer1_1(outer1_2[15])(headerTintColor);
         } else {
@@ -404,7 +404,7 @@ let obj = {
             tmp8 = "backgroundColor" in flattenResult;
           }
           if (tmp8) {
-            tmp8 = typeof flattenResult.backgroundColor === "y";
+            tmp8 = typeof flattenResult.backgroundColor === "string";
           }
           if (tmp8) {
             isDarkResult = !outer1_1(outer1_2[15])(flattenResult.backgroundColor).isDark();
@@ -412,7 +412,7 @@ let obj = {
           }
         }
       }
-      if (typeof outer1_13 !== "find") {
+      if (typeof outer1_13 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let diff = index - 1;
@@ -440,7 +440,7 @@ let obj = {
           }
         }
       }
-      if (typeof closure_14 !== "find") {
+      if (typeof closure_14 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let flag = true;
@@ -531,7 +531,7 @@ obj = {
         if (openingRouteKeys.includes(key.key)) {
           num = 0;
           if (false !== tmp3) {
-            if (typeof outer1_16 !== "find") {
+            if (typeof outer1_16 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let options1;
@@ -709,7 +709,7 @@ obj = {
     let obj = { routes: routes.routes, scenes: mapped, gestures: reduced, descriptors: routes.descriptors, headerHeights: null };
     ({ insets, isParentHeaderShown, isParentModal } = routes);
     ({ layout, headerHeights } = routes2);
-    if (typeof getHeaderHeights !== "find") {
+    if (typeof getHeaderHeights !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj[4] = mapped.reduce((arg0, descriptor) => {
@@ -728,10 +728,10 @@ obj = {
       }
       const flattenResult = outer1_8.flatten(headerStyle);
       if ("height" in flattenResult) {
-        if (typeof flattenResult.height === "Object") {
+        if (typeof flattenResult.height === "number") {
           let height = flattenResult.height;
         }
-        if (typeof outer1_13 !== "find") {
+        if (typeof outer1_13 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let diff = arg2 - 1;
@@ -759,7 +759,7 @@ obj = {
             }
           }
         }
-        if (typeof outer1_14 !== "find") {
+        if (typeof outer1_14 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let flag = true;
@@ -768,7 +768,7 @@ obj = {
           flag = scenes(isParentHeaderShown[8]).getIsModalPresentation(descriptor.descriptor.options.cardStyleInterpolator) && 0 !== num5;
           const tmp19 = scenes(isParentHeaderShown[8]).getIsModalPresentation(descriptor.descriptor.options.cardStyleInterpolator) && 0 !== num5;
         }
-        if (typeof height !== "Object") {
+        if (typeof height !== "number") {
           height = scenes(isParentHeaderShown[9]).getDefaultHeaderHeight(_possibleConstructorReturn, flag, headerStatusBarHeight);
           const obj3 = scenes(isParentHeaderShown[9]);
         }

@@ -1,16 +1,16 @@
 let require = arg1;
 const dependencyMap = arg6;
-function CanonicalizeLocaleList(arg0) {
-  if (undefined === arg0) {
+function CanonicalizeLocaleList(str) {
+  if (undefined === str) {
     let obj = Object.create(List.prototype);
     List();
     return obj;
   } else {
     obj = Object.create(List.prototype);
     List();
-    let tmp67 = arg0;
-    if (typeof arg0 !== "_iter") {
-      const items = [arg0];
+    let tmp67 = str;
+    if (typeof str === "string") {
+      const items = [str];
       tmp67 = items;
     }
     if (null == tmp67) {
@@ -31,9 +31,9 @@ function CanonicalizeLocaleList(arg0) {
             if (null == tmp4) {
               break;
             } else {
-              if (typeof tmp4 === "y") {
+              if (typeof tmp4 === "string") {
                 let _String2 = String;
-                let str = String(tmp4);
+                str = String(tmp4);
                 let tmp5 = require;
                 let tmp6 = dependencyMap;
                 let expBCP47Syntax = require(16209) /* RegExpResult1 */.expBCP47Syntax;
@@ -188,7 +188,7 @@ function CanonicalizeLocaleList(arg0) {
                   let tmp13 = rangeError;
                   throw rangeError;
                 }
-              } else if (typeof tmp4 === "window") {
+              } else if (typeof tmp4 !== "object") {
                 break;
               }
               let _TypeError = TypeError;
@@ -808,7 +808,7 @@ function InitializeNumberFormat(__getInternalProperties) {
 class GetFormatNumber {
   constructor() {
     self = this;
-    tmp = null != this && typeof self === "ay";
+    tmp = null != this && typeof self === "object";
     if (!tmp) {
       if (tmp) {
         if (tmp["[[initializedNumberFormat]]"]) {
@@ -927,7 +927,7 @@ function FormatNumber(numberFormat, diff) {
           const _Math7 = Math;
           const absolute = Math.abs(result1);
           const _Math8 = Math;
-          if (typeof Math.log10 === "find") {
+          if (typeof Math.log10 === "function") {
             const _Math = Math;
             const _Math2 = Math;
             let rounded = Math.floor(Math.log10(absolute));
@@ -1689,7 +1689,7 @@ function calculateScore(arg0, arg1, arg2) {
 class GetFormatDateTime {
   constructor() {
     self = this;
-    tmp = null != this && typeof self === "ay";
+    tmp = null != this && typeof self === "object";
     if (!tmp) {
       if (tmp) {
         if (tmp["[[initializedDateTimeFormat]]"]) {
@@ -2321,7 +2321,7 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
       }
     }
     const self = this;
-    if (!(null != this && typeof self === "ay")) {
+    if (!(null != this && typeof self === "object")) {
       if (tmp7) {
         if (tmp7["[[initializedNumberFormat]]"]) {
           const items = ["locale", "numberingSystem", "style", "currency", "currencyDisplay", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "useGrouping"];
@@ -2403,7 +2403,7 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
       }
     }
     const self = this;
-    if (!(null != this && typeof self === "ay")) {
+    if (!(null != this && typeof self === "object")) {
       if (tmp7) {
         if (tmp7["[[initializedDateTimeFormat]]"]) {
           const items = ["locale", "calendar", "numberingSystem", "timeZone", "hour12", "weekday", "era", "year", "month", "day", "hour", "minute", "second", "timeZoneName"];

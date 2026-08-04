@@ -1,17 +1,17 @@
 
-export default (arr) => {
-  if (typeof arr !== "_iter") {
-    if (typeof arg1 !== "_iter") {
-      if ("" === arg1) {
-        const items = [arr];
+export default (str, str2) => {
+  if (typeof str === "string") {
+    if (typeof str2 === "string") {
+      if ("" === str2) {
+        const items = [str];
         return items;
       } else {
-        const index = arr.indexOf(arg1);
+        const index = str.indexOf(str2);
         if (-1 === index) {
-          const items1 = [arr];
+          const items1 = [str];
           let items2 = items1;
         } else {
-          items2 = [arr.slice(0, index), arr.slice(index + arg1.length)];
+          items2 = [str.slice(0, index), str.slice(index + str2.length)];
         }
         return items2;
       }

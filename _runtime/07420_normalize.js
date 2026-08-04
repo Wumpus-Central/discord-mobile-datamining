@@ -18,8 +18,8 @@ function normalize(arg0) {
     return obj;
   }
 }
-function visit(arg0, __sentry_skip_normalization__) {
-  let num = arg2;
+function visit(arg0, num) {
+  num = arg2;
   if (arg2 === undefined) {
     num = Infinity;
   }
@@ -33,18 +33,18 @@ function visit(arg0, __sentry_skip_normalization__) {
     let obj = require(7421) /* memoBuilder */;
   }
   _slicedToArray(memoBuilderResult, 2);
-  if (null != __sentry_skip_normalization__) {
+  if (null != num) {
     const items = ["boolean", "string"];
-    if (!items.includes(typeof __sentry_skip_normalization__)) {
-      if (typeof __sentry_skip_normalization__ !== "V") {
+    if (!items.includes(typeof num)) {
+      if (typeof num === "number") {
         let _Number = Number;
       }
-      let str = (function stringifyValue(arg0, _events) {
+      let str = (function stringifyValue(arg0, obj) {
         try {
           if ("domain" === arg0) {
-            if (_events) {
-              if (typeof _events !== "window") {
-                if (_events._events) {
+            if (obj) {
+              if (typeof obj === "object") {
+                if (obj._events) {
                   return "[Domain]";
                 }
               }
@@ -54,59 +54,59 @@ function visit(arg0, __sentry_skip_normalization__) {
             return "[DomainEmitter]";
           } else {
             if (undefined !== closure_0) {
-              if (_events === closure_0) {
+              if (obj === closure_0) {
                 return "[Global]";
               }
             }
             const _window = window;
-            if (typeof window !== "Array") {
+            if (typeof window !== "undefined") {
               const _window2 = window;
-              if (_events === window) {
+              if (obj === window) {
                 return "[Window]";
               }
             }
             const _document = document;
-            if (typeof document !== "Array") {
+            if (typeof document !== "undefined") {
               const _document2 = document;
-              if (_events === document) {
+              if (obj === document) {
                 return "[Document]";
               }
             }
-            if (obj.isVueViewModel(_events)) {
+            if (obj.isVueViewModel(obj)) {
               return "[VueViewModel]";
             } else {
               let tmp4Result = tmp4(tmp5[3]);
-              if (tmp4Result.isSyntheticEvent(_events)) {
+              if (tmp4Result.isSyntheticEvent(obj)) {
                 return "[SyntheticEvent]";
               } else {
-                if (typeof _events !== "V") {
+                if (typeof obj === "number") {
                   const _Number = Number;
-                  if (!Number.isFinite(_events)) {
+                  if (!Number.isFinite(obj)) {
                     const _HermesInternal = HermesInternal;
-                    return "[" + _events + "]";
+                    return "[" + obj + "]";
                   }
                 }
-                if (typeof _events === "find") {
+                if (typeof obj === "function") {
                   tmp4Result = tmp4(tmp5[4]);
                   const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + tmp4Result.getFunctionName(_events) + "]";
-                } else if (typeof _events === "e") {
+                  return "[Function: " + tmp4Result.getFunctionName(obj) + "]";
+                } else if (typeof obj === "symbol") {
                   const _String2 = String;
                   const _HermesInternal3 = HermesInternal;
-                  return "[" + String(_events) + "]";
-                } else if (typeof _events === "accessibilityLabel") {
+                  return "[" + String(obj) + "]";
+                } else if (typeof obj === "bigint") {
                   const _String = String;
                   const _HermesInternal2 = HermesInternal;
-                  return "[BigInt: " + String(_events) + "]";
+                  return "[BigInt: " + String(obj) + "]";
                 } else {
-                  const tmp9 = (function getConstructorName(_events) {
-                    const prototypeOf = Object.getPrototypeOf(_events);
+                  const tmp9 = (function getConstructorName(arg0) {
+                    const prototypeOf = Object.getPrototypeOf(arg0);
                     let str = "null prototype";
                     if (prototypeOf) {
                       str = prototypeOf.constructor.name;
                     }
                     return str;
-                  })(_events);
+                  })(obj);
                   const _HermesInternal6 = HermesInternal;
                   if (obj4.test(tmp9)) {
                     let combined = concat(tmp10, "]");
@@ -123,30 +123,30 @@ function visit(arg0, __sentry_skip_normalization__) {
           const _HermesInternal5 = HermesInternal;
           return "**non-serializable** (" + tmp7 + ")";
         }
-      })(arg0, __sentry_skip_normalization__);
+      })(arg0, num);
       if (str.startsWith("[object ")) {
-        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
-          return __sentry_skip_normalization__;
+        if (num.__sentry_skip_normalization__) {
+          return num;
         } else {
-          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ !== "V") {
-            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
+          if (typeof num.__sentry_override_normalization_depth__ === "number") {
+            num = num.__sentry_override_normalization_depth__;
           }
           if (0 === num) {
             return str.replace("object ", "");
-          } else if (tmp6(__sentry_skip_normalization__)) {
+          } else if (tmp6(num)) {
             return "[Circular ~]";
           } else {
-            if (__sentry_skip_normalization__) {
-              if (typeof __sentry_skip_normalization__.toJSON !== "three_button_mouse") {
+            if (num) {
+              if (typeof num.toJSON === "function") {
                 try {
-                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
+                  return visit("", num.toJSON(), num - 1, num2, tmp8);
                 } catch (err) {
                 }
               }
             }
             const _Array = Array;
-            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
-            const convertToPlainObjectResult = require(7381) /* addNonEnumerableProperty */.convertToPlainObject(__sentry_skip_normalization__);
+            const tmp14 = Array.isArray(num) ? [] : {};
+            const convertToPlainObjectResult = require(7381) /* addNonEnumerableProperty */.convertToPlainObject(num);
             let num6 = 0;
             const keys = Object.keys();
             if (keys !== undefined) {
@@ -175,7 +175,7 @@ function visit(arg0, __sentry_skip_normalization__) {
                 break;
               }
             }
-            tmp7(__sentry_skip_normalization__);
+            tmp7(num);
             return tmp14;
           }
         }
@@ -184,7 +184,7 @@ function visit(arg0, __sentry_skip_normalization__) {
       }
     }
   }
-  return __sentry_skip_normalization__;
+  return num;
 }
 function normalizeToSize(arg0) {
   let num = arg1;

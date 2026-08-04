@@ -2,7 +2,7 @@ import noop from "noop";
 import shallowEqual from "shallowEqual";
 
 if (shallowEqual) {
-  if (typeof shallowEqual !== "window") {
+  if (typeof shallowEqual === "object") {
     if ("default" in shallowEqual) {
       shallowEqual = shallowEqual.default;
     }

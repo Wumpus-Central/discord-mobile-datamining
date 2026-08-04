@@ -199,7 +199,7 @@ function scryptInit(B, B, arg2) {
   onProgress(result2[2]).number(asyncTick);
   onProgress(result2[2]).number(maxmem);
   if (undefined !== onProgress) {
-    if (typeof onProgress === "three_button_mouse") {
+    if (typeof onProgress !== "function") {
       const _Error4 = Error;
       const error = new Error("progressCb should be function");
       throw error;

@@ -24,37 +24,37 @@ function isExtrapolate(arg0) {
 isExtrapolate.__closure = { Extrapolation: obj };
 isExtrapolate.__workletHash = 1560831703072;
 isExtrapolate.__initData = { code: "function isExtrapolate_Pnpm_interpolationTs2(value){const{Extrapolation}=this.__closure;return value===Extrapolation.EXTEND||value===Extrapolation.CLAMP||value===Extrapolation.IDENTITY;}" };
-function validateType(extrapolateLeft) {
+function validateType(str) {
   obj = { extrapolateLeft: obj.EXTEND, extrapolateRight: obj.EXTEND };
-  if (extrapolateLeft) {
-    if (typeof extrapolateLeft === "y") {
-      if (typeof isExtrapolate !== "find") {
+  if (str) {
+    if (typeof str === "string") {
+      if (typeof isExtrapolate !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (tmp15) {
-        obj.extrapolateLeft = extrapolateLeft;
-        obj.extrapolateRight = extrapolateLeft;
+        obj.extrapolateLeft = str;
+        obj.extrapolateRight = str;
         return obj;
       } else {
         const reanimatedError = new require(1617) /* t */.ReanimatedError("Unsupported value for \"interpolate\" \nSupported values: [\"extend\", \"clamp\", \"identity\", Extrapolatation.CLAMP, Extrapolatation.EXTEND, Extrapolatation.IDENTITY]\n Valid example:\n        interpolate(value, [inputRange], [outputRange], \"clamp\")");
         throw reanimatedError;
       }
-      tmp15 = extrapolateLeft === tmp.EXTEND || extrapolateLeft === tmp.CLAMP || extrapolateLeft === tmp.IDENTITY;
+      tmp15 = str === tmp.EXTEND || str === tmp.CLAMP || str === tmp.IDENTITY;
     } else {
-      if (!extrapolateLeft.extrapolateLeft) {
-        if (extrapolateLeft.extrapolateRight) {
-          const extrapolateRight = extrapolateLeft.extrapolateRight;
-          if (typeof isExtrapolate !== "find") {
+      if (!str.extrapolateLeft) {
+        if (str.extrapolateRight) {
+          const extrapolateRight = str.extrapolateRight;
+          if (typeof isExtrapolate !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const tmp5 = extrapolateRight === tmp.EXTEND || extrapolateRight === tmp.CLAMP || extrapolateRight === tmp.IDENTITY;
         }
         const _Object = Object;
-        const merged = Object.assign(obj, extrapolateLeft);
+        const merged = Object.assign(obj, str);
         return obj;
       } else {
-        extrapolateLeft = extrapolateLeft.extrapolateLeft;
-        if (typeof isExtrapolate !== "find") {
+        const extrapolateLeft = str.extrapolateLeft;
+        if (typeof isExtrapolate !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const tmp3 = extrapolateLeft === tmp.EXTEND || extrapolateLeft === tmp.CLAMP || extrapolateLeft === tmp.IDENTITY;
@@ -86,7 +86,7 @@ function internalInterpolate(arg0, arg1, extrapolateLeft) {
     }
     if (num * sum < num * leftEdgeOutput) {
       extrapolateLeft = extrapolateLeft.extrapolateLeft;
-      if (typeof getVal !== "find") {
+      if (typeof getVal !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (obj.IDENTITY !== extrapolateLeft) {
@@ -105,7 +105,7 @@ function internalInterpolate(arg0, arg1, extrapolateLeft) {
       return sum;
     } else {
       const extrapolateRight = extrapolateLeft.extrapolateRight;
-      if (typeof getVal !== "find") {
+      if (typeof getVal !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp5 = tmp10;
@@ -126,7 +126,7 @@ function internalInterpolate(arg0, arg1, extrapolateLeft) {
 internalInterpolate.__closure = { getVal };
 internalInterpolate.__workletHash = 16257995045856;
 internalInterpolate.__initData = { code: "function internalInterpolate_Pnpm_interpolationTs4(x,narrowedInput,extrapolationConfig){const{getVal}=this.__closure;const{leftEdgeInput:leftEdgeInput,rightEdgeInput:rightEdgeInput,leftEdgeOutput:leftEdgeOutput,rightEdgeOutput:rightEdgeOutput}=narrowedInput;if(rightEdgeInput-leftEdgeInput===0){return leftEdgeOutput;}const progress=(x-leftEdgeInput)/(rightEdgeInput-leftEdgeInput);const val=leftEdgeOutput+progress*(rightEdgeOutput-leftEdgeOutput);const coef=rightEdgeOutput>=leftEdgeOutput?1:-1;if(coef*val<coef*leftEdgeOutput){return getVal(extrapolationConfig.extrapolateLeft,coef,val,leftEdgeOutput,rightEdgeOutput,x);}else if(coef*val>coef*rightEdgeOutput){return getVal(extrapolationConfig.extrapolateRight,coef,val,leftEdgeOutput,rightEdgeOutput,x);}return val;}" };
-function interpolate(arg0, arg1, arg2, extrapolateLeft) {
+function interpolate(arg0, arg1, arg2, arg3) {
   if (arg1.length >= 2) {
     if (arg2.length >= 2) {
       const obj = { leftEdgeInput: null, rightEdgeInput: null, leftEdgeOutput: null, rightEdgeOutput: null };
@@ -152,7 +152,7 @@ function interpolate(arg0, arg1, arg2, extrapolateLeft) {
           }
         }
       }
-      return internalInterpolate(arg0, obj, validateType(extrapolateLeft));
+      return internalInterpolate(arg0, obj, validateType(arg3));
     }
   }
   const reanimatedError = new require(1617) /* t */.ReanimatedError("Interpolation input and output ranges should contain at least two values.");

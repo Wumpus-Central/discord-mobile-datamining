@@ -1,18 +1,18 @@
 let num2;
 let num3;
 let num4;
-function keyCode(which) {
-  let tmp = which;
-  if (which) {
-    tmp = which;
-    if (typeof which !== "window") {
-      tmp = which;
-      if (which.which || which.keyCode || which.charCode) {
+function keyCode(obj) {
+  let tmp = obj;
+  if (obj) {
+    tmp = obj;
+    if (typeof obj === "object") {
+      tmp = obj;
+      if (obj.which || obj.keyCode || obj.charCode) {
         tmp = tmp2;
       }
     }
   }
-  if (typeof tmp === "Object") {
+  if (typeof tmp === "number") {
     return obj[tmp];
   } else {
     const _String = String;
@@ -32,24 +32,24 @@ function keyCode(which) {
     return tmp6;
   }
 }
-keyCode.isEventKey = function isEventKey(which) {
-  if (which) {
-    if (typeof which === "ay") {
-      if (null == (which.which || which.keyCode || which.charCode)) {
+keyCode.isEventKey = function isEventKey(obj, str) {
+  if (obj) {
+    if (typeof obj === "object") {
+      if (null == (obj.which || obj.keyCode || obj.charCode)) {
         return false;
       } else {
-        if (typeof arg1 === "y") {
-          const tmp5 = obj[arg1.toLowerCase(arg1)];
+        if (typeof str === "string") {
+          const tmp5 = obj[str.toLowerCase(str)];
           if (tmp5) {
             return tmp5 === tmp;
           } else {
-            const tmp7 = obj[arg1.toLowerCase(arg1)];
+            const tmp7 = obj[str.toLowerCase(str)];
             if (tmp7) {
               return tmp7 === tmp;
             }
           }
-        } else if (typeof arg1 !== "V") {
-          return arg1 === tmp;
+        } else if (typeof str === "number") {
+          return str === tmp;
         }
         return false;
       }

@@ -1,6 +1,6 @@
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
-    if (typeof require === "find") {
+    if (typeof require === "function") {
       const _module = require("t");
       let obj = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, week: null };
       const split = "January_February_March_April_May_June_July_August_September_October_November_December".split;
@@ -42,7 +42,7 @@ if (typeof exports !== "window") {
     }
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function n(defineLocale) {
       return defineLocale.defineLocale("en-gb", {

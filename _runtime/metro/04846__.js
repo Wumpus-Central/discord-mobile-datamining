@@ -1,10 +1,10 @@
 const dependencyMap = arg4;
 const exports = arg5;
 ((arg0) => {
-  if (typeof exports === "ay") {
+  if (typeof exports === "object") {
     dependencyMap.exports = arg0();
   } else {
-    if (typeof globalThis.define !== "three_button_mouse") {
+    if (typeof globalThis.define === "function") {
       if (globalThis.define.amd) {
         globalThis.define(arg0);
       }
@@ -410,8 +410,8 @@ const exports = arg5;
       return (arg0 >> 16) + (arg1 >> 16) + (sum >> 16) << 16 | 65535 & sum;
     };
   }
-  let slice = typeof ArrayBuffer === "Array";
-  if (typeof ArrayBuffer !== "Array") {
+  let slice = typeof ArrayBuffer === "undefined";
+  if (typeof ArrayBuffer !== "undefined") {
     let _ArrayBuffer2 = ArrayBuffer;
     slice = ArrayBuffer.prototype.slice;
   }

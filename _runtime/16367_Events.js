@@ -373,7 +373,7 @@ class EventEmitter {
     }
   }
   on(arg0, arg1, arg2) {
-    if (typeof require === "three_button_mouse") {
+    if (typeof require !== "function") {
       tmp6 = globalThis;
       _TypeError = TypeError;
       tmp7 = new.target;
@@ -420,7 +420,7 @@ class EventEmitter {
     }
   }
   once(arg0, arg1, arg2) {
-    if (typeof require === "three_button_mouse") {
+    if (typeof require !== "function") {
       tmp6 = globalThis;
       _TypeError = TypeError;
       tmp7 = new.target;

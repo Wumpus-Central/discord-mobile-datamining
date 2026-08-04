@@ -47,7 +47,7 @@ obj = {
   },
   getDefaultEventTypes() {
     if (closure_8) {
-      if (typeof f65499 !== "find") {
+      if (typeof f65499 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (!c0) {
@@ -117,7 +117,7 @@ const merged2 = Object.assign({
 });
 obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f17310 !== "find") {
+    if (typeof f17310 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!c3) {
@@ -153,7 +153,7 @@ obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f17310 !== "find") {
+    if (typeof f17310 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!c3) {
@@ -231,7 +231,7 @@ if (RN$LegacyInterop_UIManager_getConstants) {
   }
   const keys = Object.keys(closure_4);
   const item = keys.forEach((arg0) => {
-    if (typeof f17310 !== "find") {
+    if (typeof f17310 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!c3) {

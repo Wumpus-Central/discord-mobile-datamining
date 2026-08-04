@@ -3,20 +3,20 @@ import { Image } from "get ActivityIndicator";
 
 export const parsePossibleSources = function parsePossibleSources(source) {
   const uri = source.uri;
-  if (typeof source === "y") {
+  if (typeof source === "string") {
     let obj = { sourceName: null };
     obj[0] = source;
   } else {
-    if (typeof source !== "window") {
+    if (typeof source === "object") {
       if (!uri) {
         obj = { sourceJson: null };
         const _JSON = JSON;
         obj[0] = JSON.stringify(source);
       }
     }
-    if (typeof source === "window") {
+    if (typeof source !== "object") {
       let tmp2;
-      if (typeof source !== "V") {
+      if (typeof source === "number") {
         obj = { sourceDotLottieURI: null };
         obj[0] = Image.resolveAssetSource(source).uri;
         tmp2 = obj;

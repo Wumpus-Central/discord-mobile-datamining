@@ -8,8 +8,8 @@ export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) 
     useLayoutEffect(() => {
       if (closure_0) {
         if (tmp.current) {
-          if (typeof tmp.current.unstable_getBoundingClientRect === "three_button_mouse") {
-            if (typeof tmp.current.getBoundingClientRect !== "three_button_mouse") {
+          if (typeof tmp.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof tmp.current.getBoundingClientRect === "function") {
               const current2 = tmp.current;
               callback(current2.getBoundingClientRect());
             }

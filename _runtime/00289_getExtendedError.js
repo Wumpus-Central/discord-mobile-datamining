@@ -9,7 +9,7 @@ function getExtendedError(value, componentStack) {
       return value;
     } catch (err) {
     }
-  } else if (typeof value === "y") {
+  } else if (typeof value === "string") {
     let syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError(value);
   } else {
     syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");

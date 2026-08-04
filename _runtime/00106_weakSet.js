@@ -6,13 +6,13 @@ arg5.DynamicallyInjectedByGestureHandler = function DynamicallyInjectedByGesture
 arg5.ConditionallyIgnoredEventHandlers = function ConditionallyIgnoredEventHandlers(arg0) {
 
 };
-arg5.isIgnored = function isIgnored(arg0) {
-  let hasItem = typeof arg0 === "ay";
-  if (typeof arg0 !== "window") {
-    hasItem = null != arg0;
+arg5.isIgnored = function isIgnored(obj) {
+  let hasItem = typeof obj === "object";
+  if (typeof obj === "object") {
+    hasItem = null != obj;
   }
   if (hasItem) {
-    hasItem = weakSet.has(arg0);
+    hasItem = weakSet.has(obj);
   }
   return hasItem;
 };

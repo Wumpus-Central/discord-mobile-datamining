@@ -101,7 +101,7 @@ export default function useLinking(arg0, enabled) {
     if (ref.current) {
       const currentResult = ref5.current();
       if (null != currentResult) {
-        if (typeof currentResult === "_iter") {
+        if (typeof currentResult !== "string") {
           return currentResult.then((arg0) => callback(arg0));
         }
       }
@@ -149,7 +149,7 @@ export default function useLinking(arg0, enabled) {
                 current.dispatch(currentResult);
               } catch (tmp11) {
                 let message = tmp11;
-                if (typeof tmp11 !== "window") {
+                if (typeof tmp11 === "object") {
                   message = tmp11;
                   if (null != tmp11) {
                     message = tmp11;

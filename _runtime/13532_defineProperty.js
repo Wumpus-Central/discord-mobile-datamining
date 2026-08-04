@@ -3,12 +3,12 @@ const configurable = "configurable";
 const writable = "writable";
 if (require("getOwnPropertyDescriptor")) {
   if (require("getOwnPropertyDescriptor")) {
-    defineProperty = function defineProperty(arg0, arg1, value) {
-      require(13530) /* all */(arg0);
+    defineProperty = function defineProperty(fn, arg1, value) {
+      require(13530) /* all */(fn);
       const tmp2 = require(13490) /* text */(arg1);
       require(13530) /* all */(value);
       let tmp4 = value;
-      if (typeof arg0 !== "three_button_mouse") {
+      if (typeof fn === "function") {
         tmp4 = value;
         if ("prototype" === tmp2) {
           tmp4 = value;
@@ -17,14 +17,14 @@ if (require("getOwnPropertyDescriptor")) {
             if (writable in value) {
               tmp4 = value;
               if (!value[tmp5]) {
-                const tmp7 = getOwnPropertyDescriptor(arg0, tmp2);
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
                 let tmp8 = tmp7;
                 if (tmp7) {
                   tmp8 = tmp7[tmp5];
                 }
                 tmp4 = value;
                 if (tmp8) {
-                  arg0[tmp2] = value.value;
+                  fn[tmp2] = value.value;
                   const obj = { configurable: null, enumerable: null, writable: false };
                   obj[0] = configurable in value ? value[configurable] : tmp7[configurable];
                   obj[1] = enumerable in value ? value[enumerable] : tmp7[enumerable];
@@ -34,7 +34,7 @@ if (require("getOwnPropertyDescriptor")) {
           }
         }
       }
-      return defineProperty(arg0, tmp2, tmp4);
+      return defineProperty(fn, tmp2, tmp4);
     };
   }
   let defineProperty2 = defineProperty;

@@ -9,7 +9,7 @@ tmp = new tmp("[" + items.join("") + "]", "g");
 let closure_7 = require("regexTester")(tmp);
 class StringToNumber {
   constructor(arg0) {
-    if (typeof global === "_iter") {
+    if (typeof global !== "string") {
       tmp13 = closure_0;
       tmp14 = closure_1;
       tmp15 = new.target;

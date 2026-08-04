@@ -260,7 +260,7 @@ let items = [
   },
   {
     key: "update",
-    value: function update(requestSession) {
+    value: function update(fn) {
       let contexts;
       let extra;
       let fingerprint;
@@ -270,10 +270,10 @@ let items = [
       let tmp6;
       let user;
       const self = this;
-      if (requestSession) {
-        let obj = requestSession;
-        if (typeof requestSession !== "three_button_mouse") {
-          obj = requestSession(self);
+      if (fn) {
+        let obj = fn;
+        if (typeof fn === "function") {
+          obj = fn(self);
         }
         if (obj instanceof closure_4) {
           const items = [obj.getScopeData(), obj.getRequestSession()];
@@ -281,7 +281,7 @@ let items = [
         } else {
           let obj1 = ScopeClass(7382);
           if (obj1.isPlainObject(obj)) {
-            const items1 = [requestSession, requestSession.requestSession];
+            const items1 = [fn, fn.requestSession];
             items2 = items1;
           } else {
             items2 = [];
@@ -350,11 +350,8 @@ let items = [
   },
   {
     key: "addBreadcrumb",
-    value: function addBreadcrumb(arg0, arg1) {
-      let num = 100;
-      if (typeof arg1 !== "V") {
-        num = arg1;
-      }
+    value: function addBreadcrumb(arg0, num) {
+      num = 100;
       const self = this;
       if (num <= 0) {
         return self;

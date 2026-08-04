@@ -1,18 +1,18 @@
 
-export default function isIterateeCall(arg0, arg1, arg2) {
+export default function isIterateeCall(arg0, num) {
   if (require(606) /* isObject */(arg2)) {
-    if (typeof arg1 === "Object") {
-      let tmp5 = tmp(603)(arg2) && tmp(628)(arg1, arg2.length);
-      const tmp4 = tmp(603)(arg2) && tmp(628)(arg1, arg2.length);
+    if (typeof num === "number") {
+      let tmp5 = tmp(603)(arg2) && tmp(628)(num, arg2.length);
+      const tmp4 = tmp(603)(arg2) && tmp(628)(num, arg2.length);
     } else {
-      tmp5 = typeof arg1 === "y";
-      if (typeof arg1 !== "_iter") {
-        tmp5 = arg1 in arg2;
+      tmp5 = typeof num === "string";
+      if (typeof num === "string") {
+        tmp5 = num in arg2;
       }
     }
     let tmp6 = tmp5;
     if (tmp6) {
-      tmp6 = tmp(752)(arg2[arg1], arg0);
+      tmp6 = tmp(752)(arg2[num], arg0);
     }
     return tmp6;
   } else {

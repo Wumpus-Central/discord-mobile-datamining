@@ -3,7 +3,7 @@ import "module_0";
 
 let f93537 = global;
 function U(arg0, arg1) {
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol2 = Symbol;
     if (arg1[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -13,25 +13,25 @@ function U(arg0, arg1) {
   }
   tmp = U(arg0, arg1);
 }
-function Pe(arg0, arg1) {
-  if (arg0) {
+function Pe(str) {
+  if (str) {
     let length = arg1;
-    if (typeof arg0 === "y") {
+    if (typeof str === "string") {
       if (tmp10) {
-        length = arg0.length;
+        length = str.length;
       }
       const _Array3 = Array;
       let array = new Array(length);
       for (let num5 = 0; num5 < length; num5 = num5 + 1) {
-        array[num5] = arg0[num5];
+        array[num5] = str[num5];
       }
       return array;
     } else {
       const _Object = Object;
       const call = toString.call;
-      let name = typeof call === "unknown" ? toString() : call(arg0).slice(8, -1);
+      let name = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
       if (tmp) {
-        name = arg0.constructor.name;
+        name = str.constructor.name;
       }
       if ("Map" !== name) {
         if ("Set" !== name) {
@@ -40,12 +40,12 @@ function Pe(arg0, arg1) {
           }
           let length2 = length;
           if (tmp3) {
-            length2 = arg0.length;
+            length2 = str.length;
           }
           const _Array = Array;
           array = new Array(length2);
           for (let num3 = 0; num3 < length2; num3 = num3 + 1) {
-            array[num3] = arg0[num3];
+            array[num3] = str[num3];
           }
           return array;
         }
@@ -72,7 +72,7 @@ function V(iterable) {
   }
   if (!tmp) {
     const _Symbol = Symbol;
-    if (typeof Symbol === "Array") {
+    if (typeof Symbol === "undefined") {
       let arr;
       tmp = arr;
     } else {
@@ -109,7 +109,7 @@ function X(arg0) {
   return fn(arg0);
 }
 function De(arg0, key10009) {
-  if (typeof Reflect !== "Array") {
+  if (typeof Reflect !== "undefined") {
     const _Reflect2 = Reflect;
     if (Reflect.get) {
       const _Reflect = Reflect;
@@ -223,7 +223,7 @@ function ue(arg0) {
     let _Object2 = Object;
     let tmp3 = tmp2;
     let combined = keys;
-    if (typeof Object.getOwnPropertySymbols !== "three_button_mouse") {
+    if (typeof Object.getOwnPropertySymbols === "function") {
       let _Object3 = Object;
       let ownPropertySymbols = Object.getOwnPropertySymbols(tmp2);
       combined = keys.concat(ownPropertySymbols.filter((arg0) => Object.getOwnPropertyDescriptor(closure_1, arg0).enumerable));
@@ -245,7 +245,7 @@ function pt(arg0, arg1, arg2, arg3) {
 
 }
 f93537 = () => {
-  if (typeof f93544 !== "find") {
+  if (typeof f93544 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (c0) {
@@ -303,7 +303,7 @@ f93537 = (arg0, arg1) => {
     constructor(arg0, arg1) {
       self = this;
       tmp = c0;
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol3 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol2 = Symbol;
@@ -326,7 +326,7 @@ f93537 = (arg0, arg1) => {
           return tmpResult;
         }
       }
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol4 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol = Symbol;
@@ -341,12 +341,12 @@ f93537 = (arg0, arg1) => {
     }
   }
   let c0 = ve;
-  if (typeof f93544 !== "find") {
+  if (typeof f93544 !== "function") {
     class ve {
       constructor(arg0, arg1) {
         self = this;
         tmp = c0;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -369,7 +369,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -390,7 +390,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0, arg1) {
         self = this;
         tmp = c0;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -413,7 +413,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -443,7 +443,7 @@ f93537 = (arg0, arg1) => {
     constructor(arg0, arg1) {
       self = this;
       tmp = c0;
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol3 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol2 = Symbol;
@@ -469,7 +469,7 @@ f93537 = (arg0, arg1) => {
           return tmpResult;
         }
       }
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol4 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol = Symbol;
@@ -491,12 +491,12 @@ f93537 = (arg0, arg1) => {
     }
   }
   let c0 = ae;
-  if (typeof f93544 !== "find") {
+  if (typeof f93544 !== "function") {
     class ae {
       constructor(arg0, arg1) {
         self = this;
         tmp = c0;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -522,7 +522,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -550,7 +550,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0, arg1) {
         self = this;
         tmp = c0;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -576,7 +576,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -621,12 +621,12 @@ f93537 = (arg0, arg1) => {
       self.listeners = {};
     }
     if (self.listeners[target.type]) {
-      return arr.forEach((handleEvent) => {
+      return arr.forEach((fn) => {
         closure_0.currentTarget = self;
-        if (typeof handleEvent === "find") {
-          handleEvent(tmp);
+        if (typeof fn === "function") {
+          fn(tmp);
         } else {
-          handleEvent.handleEvent(tmp);
+          fn.handleEvent(tmp);
         }
       });
     } else if (self.parentNode) {
@@ -681,7 +681,7 @@ f93537 = (arg0, arg1) => {
     nodeType = nodeType.nodeType;
     if (3 === nodeType) {
       let str37 = str36;
-      if (typeof nodeType.data !== "y") {
+      if (typeof nodeType.data !== "string") {
         str37 = "";
         if (str36) {
           str37 = str36.toString();
@@ -704,7 +704,7 @@ f93537 = (arg0, arg1) => {
         let tmp25 = arg0[key10026];
         if (tmp25) {
           let _Symbol = Symbol;
-          if (typeof Symbol !== "Array") {
+          if (typeof Symbol !== "undefined") {
             let _Symbol2 = Symbol;
             let str14 = "symbol";
           }
@@ -801,7 +801,7 @@ f93537 = (arg0, arg1) => {
           if ("style" === name) {
             const items4 = value;
             let tmp = value;
-            if (typeof value !== "y") {
+            if (typeof value !== "string") {
               let c1 = "";
               const _Object = Object;
               const keys = Object.keys(value);
@@ -814,7 +814,7 @@ f93537 = (arg0, arg1) => {
           }
           let str2 = str;
           const text = `${name}="`;
-          if (typeof str !== "y") {
+          if (typeof str !== "string") {
             str2 = "";
             if (str) {
               str2 = str.toString();
@@ -851,7 +851,7 @@ f93537 = (arg0, arg1) => {
           if ("style" === name) {
             const items4 = value;
             let tmp = value;
-            if (typeof value !== "y") {
+            if (typeof value !== "string") {
               let c1 = "";
               const _Object = Object;
               const keys = Object.keys(value);
@@ -864,7 +864,7 @@ f93537 = (arg0, arg1) => {
           }
           let str2 = str;
           const text = `${name}="`;
-          if (typeof str !== "y") {
+          if (typeof str !== "string") {
             str2 = "";
             if (str) {
               str2 = str.toString();
@@ -901,7 +901,7 @@ f93537 = (arg0, arg1) => {
             str25 = nodeType.innerText;
           }
           let str26 = str25;
-          if (typeof str25 !== "y") {
+          if (typeof str25 !== "string") {
             str26 = "";
             if (str25) {
               str26 = str25.toString();
@@ -918,7 +918,7 @@ f93537 = (arg0, arg1) => {
     }
   }
   let closure_1 = br;
-  if (typeof f93544 !== "find") {
+  if (typeof f93544 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (closure_0) {
@@ -937,7 +937,7 @@ f93537 = (arg0, arg1) => {
     constructor(arg0, arg1, arg2) {
       self = this;
       tmp = I;
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol3 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol2 = Symbol;
@@ -986,7 +986,7 @@ f93537 = (arg0, arg1) => {
           return tmpResult;
         }
       }
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol4 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol = Symbol;
@@ -1090,7 +1090,7 @@ f93537 = (arg0, arg1) => {
         return type;
       }
       type = null;
-      if (typeof value !== "_iter") {
+      if (typeof value === "string") {
         type = value;
       }
       return;
@@ -1133,50 +1133,29 @@ f93537 = (arg0, arg1) => {
       c0 = arg0.split(" ");
       items = [];
       c1 = items;
-      tmp = c0(this, (nodeType) => {
-        if (1 === nodeType.nodeType) {
-          let closure_0 = nodeType.className || "".split(" ");
-          if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-            items.push(nodeType);
-          }
-          const str = nodeType.className || "";
-        }
-      });
+      tmp = c0(this, () => { ... });
       return items;
     }
     getElementsByTagName(arg0) {
       toLowerCase = arg0.toLowerCase();
       items = [];
       toLowerCase = items;
-      tmp = toLowerCase(this.childNodes, (nodeType) => {
-        let tmp = 1 === nodeType.nodeType;
-        if (tmp) {
-          let tmp3 = "*" === closure_0;
-          if (!tmp3) {
-            tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-            const str2 = nodeType.tagName;
-          }
-          tmp = tmp3;
-        }
-        if (tmp) {
-          items.push(nodeType);
-        }
-      });
+      tmp = toLowerCase(this.childNodes, () => { ... });
       return items;
     }
     contains(arg0) {
       closure_0 = arg0;
-      tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+      tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
       return tmp;
     }
   }
   let closure_3 = I;
-  if (typeof f93544 !== "find") {
+  if (typeof f93544 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -1225,7 +1204,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -1329,7 +1308,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -1372,40 +1351,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -1416,7 +1374,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -1465,7 +1423,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -1569,7 +1527,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -1612,52 +1570,31 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
     callback = 0;
     let lib = tmp(0);
   }
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -1706,7 +1643,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -1810,7 +1747,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -1853,40 +1790,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -1897,7 +1813,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -1946,7 +1862,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -2050,7 +1966,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -2093,40 +2009,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2136,12 +2031,12 @@ f93537 = (arg0, arg1) => {
     callback(obj.exports, lib);
   }
   callback = lib.exports;
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -2190,7 +2085,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -2294,7 +2189,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -2337,40 +2232,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2381,7 +2255,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -2430,7 +2304,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -2534,7 +2408,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -2577,40 +2451,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2619,12 +2472,12 @@ f93537 = (arg0, arg1) => {
     lib = obj;
     callback(obj.exports, lib);
   }
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -2673,7 +2526,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -2777,7 +2630,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -2820,40 +2673,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -2864,7 +2696,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -2913,7 +2745,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -3017,7 +2849,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -3060,40 +2892,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -3102,12 +2913,12 @@ f93537 = (arg0, arg1) => {
     lib = obj;
     callback(obj.exports, lib);
   }
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -3156,7 +2967,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -3260,7 +3071,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -3303,40 +3114,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -3347,7 +3137,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -3396,7 +3186,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -3500,7 +3290,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -3543,40 +3333,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -3585,12 +3354,12 @@ f93537 = (arg0, arg1) => {
     lib = obj1;
     callback(obj1.exports, lib);
   }
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -3639,7 +3408,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -3743,7 +3512,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -3786,40 +3555,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -3830,7 +3578,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0, arg1, arg2) {
         self = this;
         tmp = I;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -3879,7 +3627,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -3983,7 +3731,7 @@ f93537 = (arg0, arg1) => {
           return type;
         }
         type = null;
-        if (typeof value !== "_iter") {
+        if (typeof value === "string") {
           type = value;
         }
         return;
@@ -4026,40 +3774,19 @@ f93537 = (arg0, arg1) => {
         c0 = arg0.split(" ");
         items = [];
         c1 = items;
-        tmp = c0(this, (nodeType) => {
-          if (1 === nodeType.nodeType) {
-            let closure_0 = nodeType.className || "".split(" ");
-            if (closure_0.every((arg0) => -1 !== closure_0.indexOf(arg0))) {
-              items.push(nodeType);
-            }
-            const str = nodeType.className || "";
-          }
-        });
+        tmp = c0(this, () => { ... });
         return items;
       }
       getElementsByTagName(arg0) {
         toLowerCase = arg0.toLowerCase();
         items = [];
         toLowerCase = items;
-        tmp = toLowerCase(this.childNodes, (nodeType) => {
-          let tmp = 1 === nodeType.nodeType;
-          if (tmp) {
-            let tmp3 = "*" === closure_0;
-            if (!tmp3) {
-              tmp3 = nodeType.tagName.toLowerCase() === tmp2;
-              const str2 = nodeType.tagName;
-            }
-            tmp = tmp3;
-          }
-          if (tmp) {
-            items.push(nodeType);
-          }
-        });
+        tmp = toLowerCase(this.childNodes, () => { ... });
         return items;
       }
       contains(arg0) {
         closure_0 = arg0;
-        tmp = closure_0(this, (arg0) => closure_0 === arg0) || false;
+        tmp = closure_0(this, /* F110284 */ function() { ... }) || false;
         return tmp;
       }
     }
@@ -4086,7 +3813,7 @@ f93537 = (arg0, arg1) => {
     constructor(arg0) {
       self = this;
       tmp = c0;
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol3 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol2 = Symbol;
@@ -4108,7 +3835,7 @@ f93537 = (arg0, arg1) => {
           return tmpResult;
         }
       }
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol4 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol = Symbol;
@@ -4120,17 +3847,17 @@ f93537 = (arg0, arg1) => {
     }
     toString() {
       childNodes = this.childNodes;
-      mapped = childNodes.map((arg0) => String(arg0));
+      mapped = childNodes.map(() => { ... });
       return mapped.join("");
     }
   }
   let callback = K;
-  if (typeof f93544 !== "find") {
+  if (typeof f93544 !== "function") {
     class K {
       constructor(arg0) {
         self = this;
         tmp = c0;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4152,7 +3879,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4164,7 +3891,7 @@ f93537 = (arg0, arg1) => {
       }
       toString() {
         childNodes = this.childNodes;
-        mapped = childNodes.map((arg0) => String(arg0));
+        mapped = childNodes.map(() => { ... });
         return mapped.join("");
       }
     }
@@ -4175,7 +3902,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0) {
         self = this;
         tmp = c0;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4197,7 +3924,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4209,19 +3936,19 @@ f93537 = (arg0, arg1) => {
       }
       toString() {
         childNodes = this.childNodes;
-        mapped = childNodes.map((arg0) => String(arg0));
+        mapped = childNodes.map(() => { ... });
         return mapped.join("");
       }
     }
     callback = 0;
     let obj = tmp(0);
   }
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class K {
       constructor(arg0) {
         self = this;
         tmp = c0;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4243,7 +3970,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4255,7 +3982,7 @@ f93537 = (arg0, arg1) => {
       }
       toString() {
         childNodes = this.childNodes;
-        mapped = childNodes.map((arg0) => String(arg0));
+        mapped = childNodes.map(() => { ... });
         return mapped.join("");
       }
     }
@@ -4266,7 +3993,7 @@ f93537 = (arg0, arg1) => {
       constructor(arg0) {
         self = this;
         tmp = c0;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4288,7 +4015,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4300,7 +4027,7 @@ f93537 = (arg0, arg1) => {
       }
       toString() {
         childNodes = this.childNodes;
-        mapped = childNodes.map((arg0) => String(arg0));
+        mapped = childNodes.map(() => { ... });
         return mapped.join("");
       }
     }
@@ -4344,7 +4071,7 @@ f93537 = (arg0, arg1) => {
     constructor() {
       self = this;
       tmp = Ue;
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol3 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol2 = Symbol;
@@ -4373,7 +4100,7 @@ f93537 = (arg0, arg1) => {
           return tmpResult;
         }
       }
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         _Symbol4 = Symbol;
         if (tmp[Symbol.hasInstance]) {
           _Symbol = Symbol;
@@ -4384,12 +4111,12 @@ f93537 = (arg0, arg1) => {
       return;
     }
   }
-  if (typeof f93544 !== "find") {
+  if (typeof f93544 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4418,7 +4145,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4436,7 +4163,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4465,7 +4192,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4479,12 +4206,12 @@ f93537 = (arg0, arg1) => {
     callback = 0;
     let obj6 = tmp(0);
   }
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4513,7 +4240,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4531,7 +4258,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4560,7 +4287,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4577,12 +4304,12 @@ f93537 = (arg0, arg1) => {
     callback(obj.exports, obj6);
   }
   callback = obj6.exports;
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4611,7 +4338,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4629,7 +4356,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4658,7 +4385,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4675,12 +4402,12 @@ f93537 = (arg0, arg1) => {
     callback(obj.exports, obj6);
   }
   obj6 = obj6.exports;
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4709,7 +4436,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4727,7 +4454,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4756,7 +4483,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4773,12 +4500,12 @@ f93537 = (arg0, arg1) => {
     callback(obj.exports, obj6);
   }
   let closure_2 = obj6.exports;
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4807,7 +4534,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4825,7 +4552,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4854,7 +4581,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4871,12 +4598,12 @@ f93537 = (arg0, arg1) => {
     callback(obj1.exports, obj6);
   }
   const _exports = obj6.exports;
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4905,7 +4632,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4923,7 +4650,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -4952,7 +4679,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -4969,12 +4696,12 @@ f93537 = (arg0, arg1) => {
     callback(obj2.exports, obj6);
   }
   let closure_4 = obj6.exports;
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -5003,7 +4730,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -5021,7 +4748,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -5050,7 +4777,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -5067,12 +4794,12 @@ f93537 = (arg0, arg1) => {
     callback(obj3.exports, obj6);
   }
   let closure_5 = obj6.exports;
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -5101,7 +4828,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -5119,7 +4846,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -5148,7 +4875,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -5164,12 +4891,12 @@ f93537 = (arg0, arg1) => {
     obj6 = obj4;
     callback(obj4.exports, obj6);
   }
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -5198,7 +4925,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -5216,7 +4943,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -5245,7 +4972,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -5261,12 +4988,12 @@ f93537 = (arg0, arg1) => {
     obj6 = obj5;
     callback(obj5.exports, obj6);
   }
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     class Ue {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -5295,7 +5022,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -5313,7 +5040,7 @@ f93537 = (arg0, arg1) => {
       constructor() {
         self = this;
         tmp = Ue;
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol3 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol2 = Symbol;
@@ -5342,7 +5069,7 @@ f93537 = (arg0, arg1) => {
             return tmpResult;
           }
         }
-        if (typeof Symbol !== "Array") {
+        if (typeof Symbol !== "undefined") {
           _Symbol4 = Symbol;
           if (tmp[Symbol.hasInstance]) {
             _Symbol = Symbol;
@@ -5401,7 +5128,7 @@ f93545 = () => {
 
 };
 f93537 = (arg0, arg1) => {
-  if (typeof f93545 !== "find") {
+  if (typeof f93545 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (!obj) {
@@ -5430,7 +5157,7 @@ for (const key10058 in obj) {
   continue;
 }
 f93537 = obj;
-if (typeof obj === "ay") {
+if (typeof obj === "object") {
   const ownPropertyNames = getOwnPropertyNames(obj);
   let num = 0;
   if (0 < ownPropertyNames.length) {
@@ -5478,7 +5205,7 @@ class G {
     } else {
       tmp4 = obj;
     }
-    if (typeof tmp3 !== "find") {
+    if (typeof tmp3 !== "function") {
       str2 = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -5531,8 +5258,8 @@ let obj3 = {
     if (timing) {
       navigationStart = timing.navigationStart;
     }
-    if (typeof navigationStart !== "V") {
-      if (typeof _performance.now === "find") {
+    if (typeof navigationStart === "number") {
+      if (typeof _performance.now === "function") {
         let sum = navigationStart + _performance.now();
       }
       const _Math = Math;
@@ -5549,7 +5276,7 @@ function ee() {
       getRandomValues = _crypto.getRandomValues;
     }
   }
-  if (typeof getRandomValues === "find") {
+  if (typeof getRandomValues === "function") {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(32);
     let items = uint8Array;
@@ -5777,11 +5504,11 @@ class N {
 }
 class F {
   constructor(arg0) {
-    if (typeof re !== "find") {
+    if (typeof re !== "function") {
       str2 = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
-    if (typeof global !== "_iter") {
+    if (typeof global === "string") {
       str3 = "";
       if ("" !== global) {
         tmp = global.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
@@ -5803,7 +5530,7 @@ class F {
 }
 let closure_44 = F;
 function re(str) {
-  if (typeof str !== "_iter") {
+  if (typeof str === "string") {
     if ("" !== str) {
       str = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
       let first;
@@ -5869,13 +5596,13 @@ function Nt(requestEndDate, getMetricsFor) {
   let url;
   if (requestEndDate) {
     if (requestEndDate.requestEndDate) {
-      if (typeof closure_44 !== "find") {
+      if (typeof closure_44 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof re !== "find") {
+      if (typeof re !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof requestEndDate.url !== "_iter") {
+      if (typeof requestEndDate.url === "string") {
         if ("" !== str) {
           const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
           let first;
@@ -5901,7 +5628,7 @@ function Nt(requestEndDate, getMetricsFor) {
         if (!isNaN(requestEndDate.duration)) {
           num2 = requestEndDate.duration;
         }
-        if (typeof getMetricsFor.getMetricsFor === "find") {
+        if (typeof getMetricsFor.getMetricsFor === "function") {
           let HttpList = getMetricsFor.getMetricsFor(requestEndDate.mediaType).HttpList;
         } else {
           const dashMetrics = getMetricsFor.getDashMetrics();
@@ -5976,7 +5703,7 @@ function Ct(arg0, arg1, arg2) {
 let c57 = 0;
 let fn2 = function r() {
   const self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -5995,7 +5722,7 @@ let fn2 = function r() {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -6145,7 +5872,7 @@ let fn3 = function r(pm) {
   let self = this;
   let closure_0 = pm;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -6236,7 +5963,7 @@ let fn3 = function r(pm) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -6283,7 +6010,7 @@ let fn4 = function r(on) {
   let self = this;
   let closure_0 = on;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -6386,7 +6113,7 @@ let fn4 = function r(on) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -6397,7 +6124,7 @@ let fn4 = function r(on) {
 };
 let fn5 = function r(pm) {
   const self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -6428,7 +6155,7 @@ let fn5 = function r(pm) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -6469,7 +6196,7 @@ N(fn5, items4);
 let fn6 = function r(pm) {
   let self = this;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -6555,7 +6282,7 @@ let fn6 = function r(pm) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -6640,7 +6367,7 @@ N(fn6, items5);
 let fn7 = function r(pm) {
   const self = this;
   let closure_0 = pm;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -6668,7 +6395,7 @@ let fn7 = function r(pm) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -6726,7 +6453,7 @@ let c64 = 300000;
 let fn8 = function r(disableRebufferTracking) {
   const self = this;
   let closure_0 = disableRebufferTracking;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -6787,7 +6514,7 @@ let fn8 = function r(disableRebufferTracking) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -6799,7 +6526,7 @@ let fn8 = function r(disableRebufferTracking) {
 const fn9 = function r(pm) {
   let self = this;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -6860,7 +6587,7 @@ const fn9 = function r(pm) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -6881,8 +6608,8 @@ const items7 = [
             if (null !== self._lastCheckedTime) {
               if (self._lastPlayheadTime === self.pm.data.player_playhead_time) {
                 const sustainedRebufferThreshold = self.pm.sustainedRebufferThreshold;
-                let tmp5 = typeof sustainedRebufferThreshold === "Object";
-                if (typeof sustainedRebufferThreshold !== "V") {
+                let tmp5 = typeof sustainedRebufferThreshold === "number";
+                if (typeof sustainedRebufferThreshold === "number") {
                   tmp5 = tmp4 >= self.pm.sustainedRebufferThreshold;
                 }
                 if (tmp5) {
@@ -6935,8 +6662,8 @@ const items7 = [
         const diff = self.pm.data.player_playhead_time - self._lastPlayheadTime;
         const diff1 = viewer_time.viewer_time - self._lastPlayheadTimeUpdatedTime;
         const minimumRebufferDuration = self.pm.minimumRebufferDuration;
-        let tmp3 = typeof minimumRebufferDuration === "Object";
-        if (typeof minimumRebufferDuration !== "V") {
+        let tmp3 = typeof minimumRebufferDuration === "number";
+        if (typeof minimumRebufferDuration === "number") {
           tmp3 = diff > 0;
         }
         if (tmp3) {
@@ -6967,7 +6694,7 @@ const fn10 = function r(pm) {
   let self = this;
   let closure_0 = pm;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -7023,7 +6750,7 @@ const fn10 = function r(pm) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -7067,7 +6794,7 @@ const fn11 = function r(on) {
   let self = this;
   let closure_0 = on;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -7181,7 +6908,7 @@ const fn11 = function r(on) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -7194,7 +6921,7 @@ const fn12 = function r(on) {
   let self = this;
   let closure_0 = on;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -7220,7 +6947,7 @@ const fn12 = function r(on) {
           }
         }
         if (self.isSeeking) {
-          if (typeof a !== "find") {
+          if (typeof a !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const nowResult = outer1_27.now();
@@ -7249,7 +6976,7 @@ const fn12 = function r(on) {
         on.send("seeking");
       });
       on.on("seeked", () => {
-        if (typeof a !== "find") {
+        if (typeof a !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const nowResult = outer1_27.now();
@@ -7270,7 +6997,7 @@ const fn12 = function r(on) {
       });
       on.on("viewend", () => {
         if (self.isSeeking) {
-          if (typeof a !== "find") {
+          if (typeof a !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const nowResult = outer1_27.now();
@@ -7301,7 +7028,7 @@ const fn12 = function r(on) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -7318,7 +7045,7 @@ const fn13 = function r(pm) {
   let self = this;
   let closure_0 = pm;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -7407,7 +7134,7 @@ const fn13 = function r(pm) {
         self._currentAdRequestNumber = +self._currentAdRequestNumber + 1;
         const _adRequests = self._adRequests;
         const merged = Object.assign({ ad_request_id: `generatedAdRequestId${tmp}` }, arg1);
-        if (typeof outer1_70 !== "find") {
+        if (typeof outer1_70 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         _adRequests.push(merged);
@@ -7428,7 +7155,7 @@ const fn13 = function r(pm) {
         self._currentAdResponseNumber = +self._currentAdResponseNumber + 1;
         const merged = Object.assign({ ad_request_id: `generatedAdRequestId${tmp}` }, arg1);
         const _adResponses = self._adResponses;
-        if (typeof outer1_70 !== "find") {
+        if (typeof outer1_70 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         _adResponses.push(merged);
@@ -7510,7 +7237,7 @@ const fn13 = function r(pm) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -7551,10 +7278,10 @@ const items9 = [
       if (this.inPrerollPosition()) {
         if (!self.pm.data.view_preroll_ad_tag_hostname) {
           if (ad_tag_url.ad_tag_url) {
-            if (typeof re !== "find") {
+            if (typeof re !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof ad_tag_url.ad_tag_url !== "_iter") {
+            if (typeof ad_tag_url.ad_tag_url === "string") {
               if ("" !== str) {
                 const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                 let first;
@@ -7575,8 +7302,8 @@ const items9 = [
                   let tmp6 = null;
                   if (null != items) {
                     const _Symbol = Symbol;
-                    iterable = typeof Symbol === "tee";
-                    if (typeof Symbol !== "Array") {
+                    iterable = typeof Symbol !== "undefined";
+                    if (typeof Symbol !== "undefined") {
                       const _Symbol2 = Symbol;
                       iterable = items[Symbol.iterator];
                     }
@@ -7681,10 +7408,10 @@ const items9 = [
         }
         if (!self.pm.data.view_preroll_ad_asset_hostname) {
           if (ad_tag_url.ad_asset_url) {
-            if (typeof re !== "find") {
+            if (typeof re !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof ad_tag_url.ad_asset_url !== "_iter") {
+            if (typeof ad_tag_url.ad_asset_url === "string") {
               if ("" !== str4) {
                 const str5 = str4.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                 let first1;
@@ -7705,8 +7432,8 @@ const items9 = [
                   let tmp6 = null;
                   if (null != items) {
                     const _Symbol = Symbol;
-                    iterable = typeof Symbol === "tee";
-                    if (typeof Symbol !== "Array") {
+                    iterable = typeof Symbol !== "undefined";
+                    if (typeof Symbol !== "undefined") {
                       const _Symbol2 = Symbol;
                       iterable = items[Symbol.iterator];
                     }
@@ -7851,7 +7578,7 @@ const fn14 = function r(one) {
   let self = this;
   let closure_0 = one;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -7902,7 +7629,7 @@ const fn14 = function r(one) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -7916,10 +7643,10 @@ const fn15 = function e(arg0) {
   let closure_0 = arg0;
   const fn = function i(arg0, arg1, arg2) {
     let tmp2 = arg1;
-    if (typeof document === "tee") {
+    if (typeof document !== "undefined") {
       if (arguments.length > 1) {
         const tmp26 = lib({ path: "/" }, fn.defaults, arg2);
-        if (typeof tmp26.expires !== "V") {
+        if (typeof tmp26.expires === "number") {
           const _Date = Date;
           const date = new Date();
           date.setMilliseconds(date.getMilliseconds() + 86400000 * tmp26.expires);
@@ -8061,10 +7788,10 @@ f93537 = () => {
 };
 const fn16 = function i(arg0, arg1, arg2) {
   let tmp2 = arg1;
-  if (typeof document === "tee") {
+  if (typeof document !== "undefined") {
     if (arguments.length > 1) {
       const tmp26 = lib({ path: "/" }, fn.defaults, arg2);
-      if (typeof tmp26.expires !== "V") {
+      if (typeof tmp26.expires === "number") {
         const _Date = Date;
         const date = new Date();
         date.setMilliseconds(date.getMilliseconds() + 86400000 * tmp26.expires);
@@ -8219,8 +7946,8 @@ function tr() {
             let tmp6 = null;
             if (null != items) {
               const _Symbol = Symbol;
-              iterable = typeof Symbol === "tee";
-              if (typeof Symbol !== "Array") {
+              iterable = typeof Symbol !== "undefined";
+              if (typeof Symbol !== "undefined") {
                 const _Symbol2 = Symbol;
                 iterable = items[Symbol.iterator];
               }
@@ -8348,8 +8075,8 @@ function rr(arg0) {
             let tmp6 = null;
             if (null != items) {
               const _Symbol = Symbol;
-              iterable = typeof Symbol === "tee";
-              if (typeof Symbol !== "Array") {
+              iterable = typeof Symbol !== "undefined";
+              if (typeof Symbol !== "undefined") {
                 const _Symbol2 = Symbol;
                 iterable = items[Symbol.iterator];
               }
@@ -8458,7 +8185,7 @@ function rr(arg0) {
 }
 let closure_79 = G(obj2.exports);
 function or() {
-  if (typeof sr !== "find") {
+  if (typeof sr !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const _navigator = mod7.default.navigator;
@@ -8525,7 +8252,7 @@ for (const key10238 in obj14) {
 }
 const fn17 = (arg0, arg1) => {
   if (undefined !== f93537) {
-    if (typeof f93545 !== "find") {
+    if (typeof f93545 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!obj) {
@@ -8535,7 +8262,7 @@ const fn17 = (arg0, arg1) => {
     }
     const _exports = obj.exports;
     const _document = document;
-    if (typeof document === "tee") {
+    if (typeof document !== "undefined") {
       __GLOBAL_DOCUMENT_CACHE_4 = document;
     } else {
       __GLOBAL_DOCUMENT_CACHE_4 = tmp["__GLOBAL_DOCUMENT_CACHE@4"];
@@ -8810,8 +8537,8 @@ class $ {
         for (const key10005 in arg0) {
           let tmp = key10005;
           let arr = arg0[key10005];
-          let tmp2 = typeof arr === "y";
-          if (typeof arr !== "_iter") {
+          let tmp2 = typeof arr === "string";
+          if (typeof arr === "string") {
             tmp2 = arr.length > 51200;
           }
           if (!tmp2) {
@@ -8836,7 +8563,7 @@ class $ {
     return json;
   }
 }
-let closure_87 = typeof G(obj16.exports).default.exitPictureInPicture === "find" ? ((arg0) => arg0.length <= 57344) : ((arg0) => false);
+let closure_87 = typeof G(obj16.exports).default.exitPictureInPicture === "function" ? ((arg0) => arg0.length <= 57344) : ((arg0) => false);
 function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
   let closure_0 = arg3;
   if (arg2) {
@@ -8901,7 +8628,7 @@ const fn18 = function r(mux, envKey) {
   if (arguments.length > 2) {
     const self = this;
     const _Symbol = Symbol;
-    if (typeof Symbol !== "Array") {
+    if (typeof Symbol !== "undefined") {
       const _Symbol5 = Symbol;
       if (tmp2[Symbol.hasInstance]) {
         const _Symbol4 = Symbol;
@@ -9104,10 +8831,10 @@ const fn18 = function r(mux, envKey) {
           }
         }
         obj[11] = version1;
-        if (typeof or !== "find") {
+        if (typeof or !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof sr !== "find") {
+        if (typeof sr !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _navigator = mod7.default.navigator;
@@ -9173,7 +8900,7 @@ const fn18 = function r(mux, envKey) {
       }
     }
     const _Symbol2 = Symbol;
-    if (typeof Symbol !== "Array") {
+    if (typeof Symbol !== "undefined") {
       const _Symbol6 = Symbol;
       if (tmp2[Symbol.hasInstance]) {
         const _Symbol3 = Symbol;
@@ -9203,7 +8930,7 @@ const items10 = [
               }
             }
             if (view_id) {
-              if (typeof view_id !== "window") {
+              if (typeof view_id === "object") {
                 if (self.disableCookies) {
                   let obj = {};
                 } else {
@@ -9444,8 +9171,8 @@ const items10 = [
                       let tmp6 = null;
                       if (null != items) {
                         const _Symbol = Symbol;
-                        iterable = typeof Symbol === "tee";
-                        if (typeof Symbol !== "Array") {
+                        iterable = typeof Symbol !== "undefined";
+                        if (typeof Symbol !== "undefined") {
                           const _Symbol2 = Symbol;
                           iterable = items[Symbol.iterator];
                         }
@@ -9592,10 +9319,10 @@ const items10 = [
       let tmp2 = !tmp;
       if (!tmp) {
         let obj = arg2;
-        let tmp3 = "request_response_headers" === arr || typeof obj === "window";
+        let tmp3 = "request_response_headers" === arr || typeof obj !== "object";
         obj = arg3;
         if (!tmp3) {
-          tmp3 = typeof obj === "window";
+          tmp3 = typeof obj !== "object";
         }
         if (!tmp3) {
           if (!obj) {
@@ -9633,7 +9360,7 @@ N(fn18, items10);
 const fn19 = function r(on) {
   const self = this;
   let closure_0 = on;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -9721,7 +9448,7 @@ const fn19 = function r(on) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -9734,7 +9461,7 @@ const fn20 = function r(on) {
   let self = this;
   let closure_0 = on;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -9806,7 +9533,7 @@ const fn20 = function r(on) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -9818,7 +9545,7 @@ const fn20 = function r(on) {
 const fn21 = function r(on) {
   const self = this;
   let closure_0 = on;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -9874,7 +9601,7 @@ const fn21 = function r(on) {
         }
       });
       on.on("requestcompleted", (arg0, request_type) => {
-        if (typeof t !== "find") {
+        if (typeof t !== "function") {
           HermesBuiltin.throwTypeError();
         }
         if (null != request_type) {
@@ -9934,7 +9661,7 @@ const fn21 = function r(on) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -9947,7 +9674,7 @@ const fn22 = function r(on) {
   let self = this;
   let closure_0 = on;
   self = this;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
@@ -10008,7 +9735,7 @@ const fn22 = function r(on) {
       throw typeError;
     }
   }
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
     if (tmp[Symbol.hasInstance]) {
       const _Symbol = Symbol;
@@ -10024,7 +9751,7 @@ class t {
   constructor(arg0, arg1, arg2) {
     self = this;
     tmp3 = bind;
-    if (typeof Symbol !== "Array") {
+    if (typeof Symbol !== "undefined") {
       _Symbol3 = Symbol;
       if (tmp3[Symbol.hasInstance]) {
         _Symbol2 = Symbol;
@@ -10602,11 +10329,11 @@ class t {
                                                                       str39 = "destroy";
                                                                       onResult4 = obj.on("destroy", obj.destroy);
                                                                       _window = window;
-                                                                      if (typeof window !== "Array") {
+                                                                      if (typeof window !== "undefined") {
                                                                         _window2 = window;
-                                                                        if (typeof window.addEventListener !== "three_button_mouse") {
+                                                                        if (typeof window.addEventListener === "function") {
                                                                           _window3 = window;
-                                                                          if (typeof window.removeEventListener !== "three_button_mouse") {
+                                                                          if (typeof window.removeEventListener === "function") {
                                                                             fn2 = function f() {
                                                                               let WINDOW_HIDDEN = undefined !== obj.data.view_start;
                                                                               obj.mux.WINDOW_HIDDEN = "hidden" === document.visibilityState;
@@ -10929,7 +10656,7 @@ class t {
         throw typeError;
       }
     }
-    if (typeof Symbol !== "Array") {
+    if (typeof Symbol !== "undefined") {
       _Symbol4 = Symbol;
       if (tmp3[Symbol.hasInstance]) {
         _Symbol = Symbol;
@@ -10945,13 +10672,13 @@ t.prototype = Object.create(fn2.prototype, { constructor: { value: t, writable: 
 Le(t, fn2);
 f93537 = t;
 create = (function Rt() {
-  if (typeof Reflect !== "Array") {
+  if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
       const _Reflect = Reflect;
       if (!Reflect.construct.sham) {
         const _Proxy = Proxy;
-        if (typeof Proxy === "find") {
+        if (typeof Proxy === "function") {
           return true;
         } else {
           try {
@@ -10993,7 +10720,7 @@ f93537 = function() {
   } else {
     if (constructResult) {
       const _Symbol = Symbol;
-      if (typeof Symbol !== "Array") {
+      if (typeof Symbol !== "undefined") {
         const _Symbol2 = Symbol;
         let str = "symbol";
       }
@@ -11080,10 +10807,10 @@ const items11 = [
         }
         merged.video_source_url = merged.video_source_url || merged.player_source_url;
         if (merged.video_source_url) {
-          if (typeof re !== "find") {
+          if (typeof re !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (typeof merged.video_source_url !== "_iter") {
+          if (typeof merged.video_source_url === "string") {
             if ("" !== str) {
               const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
               let first;
@@ -11104,8 +10831,8 @@ const items11 = [
                 let tmp6 = null;
                 if (null != items) {
                   const _Symbol = Symbol;
-                  iterable = typeof Symbol === "tee";
-                  if (typeof Symbol !== "Array") {
+                  iterable = typeof Symbol !== "undefined";
+                  if (typeof Symbol !== "undefined") {
                     const _Symbol2 = Symbol;
                     iterable = items[Symbol.iterator];
                   }
@@ -11237,7 +10964,7 @@ const items11 = [
     value() {
       const self = this;
       let stateData = this.getStateData();
-      if (typeof this.stateDataTranslator !== "three_button_mouse") {
+      if (typeof this.stateDataTranslator === "function") {
         try {
           stateData = self.stateDataTranslator(stateData);
         } catch (tmp4) {
@@ -11425,7 +11152,7 @@ const items11 = [
                 const item1 = audioTracks.forEach((name) => {
                   obj3[arg1] = { name: name.name, language: name.lang, bitrate: name.bitrate };
                 });
-                if (typeof outer1_52 !== "find") {
+                if (typeof outer1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (stats) {
@@ -11447,7 +11174,7 @@ const items11 = [
                 } else {
                   obj = {};
                   ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
-                  if (typeof outer1_51 !== "find") {
+                  if (typeof outer1_51 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   for (const key10049 in sessionData) {
@@ -11470,13 +11197,13 @@ const items11 = [
                   obj3[2] = requestStart;
                   obj3[3] = responseStart;
                   obj3[4] = responseEnd;
-                  if (typeof outer1_44 !== "find") {
+                  if (typeof outer1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "find") {
+                  if (typeof outer1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof url !== "_iter") {
+                  if (typeof url === "string") {
                     if ("" !== url) {
                       const str4 = url.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                       let first;
@@ -11488,12 +11215,12 @@ const items11 = [
                       const tmp16 = url.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                     }
                     obj3[6] = items[0];
-                    if (typeof outer1_53 !== "find") {
+                    if (typeof outer1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let tmp20;
                     if (networkDetails) {
-                      if (typeof networkDetails.getAllResponseHeaders !== "three_button_mouse") {
+                      if (typeof networkDetails.getAllResponseHeaders === "function") {
                         let str5 = networkDetails.getAllResponseHeaders();
                         const obj4 = {};
                         obj2 = obj4;
@@ -11549,7 +11276,7 @@ const items11 = [
                         Object.defineProperty(obj2, arg0, Object.getOwnPropertyDescriptor(obj3, arg0));
                       });
                     }
-                    if (typeof tmp8 !== "find") {
+                    if (typeof tmp8 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj2.emit(obj3, "requestcompleted", obj2);
@@ -11570,7 +11297,7 @@ const items11 = [
                 let responseStart;
                 let stats;
                 ({ details, networkDetails, stats } = level);
-                if (typeof outer1_52 !== "find") {
+                if (typeof outer1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (stats) {
@@ -11592,7 +11319,7 @@ const items11 = [
                 } else {
                   let obj = {};
                   ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
-                  if (typeof s !== "find") {
+                  if (typeof s !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   const _parseInt = parseInt;
@@ -11620,13 +11347,13 @@ const items11 = [
                   obj[3] = responseStart;
                   obj[4] = responseEnd;
                   obj[5] = level.level;
-                  if (typeof outer1_44 !== "find") {
+                  if (typeof outer1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "find") {
+                  if (typeof outer1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof details.url !== "_iter") {
+                  if (typeof details.url === "string") {
                     if ("" !== str) {
                       const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                       let first;
@@ -11638,12 +11365,12 @@ const items11 = [
                       const tmp22 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                     }
                     obj[7] = items[0];
-                    if (typeof outer1_53 !== "find") {
+                    if (typeof outer1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let tmp26;
                     if (networkDetails) {
-                      if (typeof networkDetails.getAllResponseHeaders !== "three_button_mouse") {
+                      if (typeof networkDetails.getAllResponseHeaders === "function") {
                         let str3 = networkDetails.getAllResponseHeaders();
                         obj = {};
                         if (!str3) {
@@ -11687,7 +11414,7 @@ const items11 = [
                       tmp32 = sum;
                     }
                     obj[14] = tmp32;
-                    if (typeof tmp19 !== "find") {
+                    if (typeof tmp19 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj.emit(closure_1, "requestcompleted", obj);
@@ -11701,7 +11428,7 @@ const items11 = [
                 let networkDetails;
                 let stats;
                 ({ networkDetails, stats } = details);
-                if (typeof outer1_52 !== "find") {
+                if (typeof outer1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (stats) {
@@ -11725,13 +11452,13 @@ const items11 = [
                   obj = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_type: "manifest", request_hostname: null, request_response_headers: null };
                   obj[0] = arg0;
                   ({ bytesLoaded: obj3[1], requestStart: obj3[2], responseStart: obj3[3], responseEnd: obj3[4] } = obj);
-                  if (typeof outer1_44 !== "find") {
+                  if (typeof outer1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "find") {
+                  if (typeof outer1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof details.details.url !== "_iter") {
+                  if (typeof details.details.url === "string") {
                     if ("" !== str) {
                       const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                       let first;
@@ -11743,12 +11470,12 @@ const items11 = [
                       const tmp10 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                     }
                     obj[6] = items[0];
-                    if (typeof outer1_53 !== "find") {
+                    if (typeof outer1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let tmp14;
                     if (networkDetails) {
-                      if (typeof networkDetails.getAllResponseHeaders !== "three_button_mouse") {
+                      if (typeof networkDetails.getAllResponseHeaders === "function") {
                         let str3 = networkDetails.getAllResponseHeaders();
                         obj = {};
                         if (!str3) {
@@ -11778,7 +11505,7 @@ const items11 = [
                       }
                     }
                     obj[7] = tmp14;
-                    if (typeof tmp7 !== "find") {
+                    if (typeof tmp7 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj.emit(closure_1, "requestcompleted", obj);
@@ -11800,7 +11527,7 @@ const items11 = [
                 if (!stats) {
                   stats = frag.stats;
                 }
-                if (typeof outer1_52 !== "find") {
+                if (typeof outer1_52 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 if (stats) {
@@ -11823,12 +11550,12 @@ const items11 = [
                   let obj = {};
                   ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
                   if (networkDetails) {
-                    if (typeof outer1_53 !== "find") {
+                    if (typeof outer1_53 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     let tmp8;
                     if (networkDetails) {
-                      if (typeof networkDetails.getAllResponseHeaders !== "three_button_mouse") {
+                      if (typeof networkDetails.getAllResponseHeaders === "function") {
                         let str = networkDetails.getAllResponseHeaders();
                         obj = {};
                         if (!str) {
@@ -11900,18 +11627,18 @@ const items11 = [
                     } else {
                       obj.request_type = frag.type;
                     }
-                    if (typeof u !== "find") {
+                    if (typeof u !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj.emit(closure_1, "requestcompleted", obj);
                   } else {
-                    if (typeof outer1_44 !== "find") {
+                    if (typeof outer1_44 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    if (typeof outer1_45 !== "find") {
+                    if (typeof outer1_45 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
-                    if (typeof networkDetails.responseURL !== "_iter") {
+                    if (typeof networkDetails.responseURL === "string") {
                       if ("" !== str3) {
                         const str4 = str3.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                         let first;
@@ -11931,7 +11658,7 @@ const items11 = [
               hlsjs.on(tmp.Events.FRAG_LOADED, fn4);
               const fn5 = function c(arg0, frag) {
                 frag = frag.frag;
-                if (typeof s !== "find") {
+                if (typeof s !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const parsed = parseInt(tmp.version);
@@ -11950,7 +11677,7 @@ const items11 = [
                 if (tmp5) {
                   programDateTime = frag.pdt;
                 }
-                if (typeof u !== "find") {
+                if (typeof u !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 mux.emit(closure_1, "fragmentchange", { currentFragmentPDT: programDateTime, currentFragmentStart: secondsToMs(frag.start) });
@@ -11976,12 +11703,12 @@ const items11 = [
                   str = "";
                 }
                 if (networkDetails) {
-                  if (typeof outer1_53 !== "find") {
+                  if (typeof outer1_53 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let tmp3;
                   if (networkDetails) {
-                    if (typeof networkDetails.getAllResponseHeaders !== "three_button_mouse") {
+                    if (typeof networkDetails.getAllResponseHeaders === "function") {
                       let str2 = networkDetails.getAllResponseHeaders();
                       let obj = {};
                       if (!str2) {
@@ -12015,13 +11742,13 @@ const items11 = [
                   obj = { request_error: null, request_url: null, request_hostname: null, request_id: null, request_type: null, request_error_code: null, request_error_text: null };
                   obj[0] = details;
                   obj[1] = str;
-                  if (typeof outer1_44 !== "find") {
+                  if (typeof outer1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "find") {
+                  if (typeof outer1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof str !== "_iter") {
+                  if (typeof str === "string") {
                     if ("" !== str) {
                       const str4 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                       let first;
@@ -12085,7 +11812,7 @@ const items11 = [
                       text = response.text;
                     }
                     obj[6] = text;
-                    if (typeof tmp7 !== "find") {
+                    if (typeof tmp7 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj.emit(closure_1, "requestfailed", obj);
@@ -12161,7 +11888,7 @@ const items11 = [
                   obj[0] = type;
                   obj[1] = details;
                   obj[2] = sum6 + "".concat(str38);
-                  if (typeof u !== "find") {
+                  if (typeof u !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   obj.emit(closure_1, "error", obj);
@@ -12178,13 +11905,13 @@ const items11 = [
                   str = "";
                 }
                 const obj = { request_event_type, request_url: str, request_type: "media", request_hostname: null };
-                if (typeof outer1_44 !== "find") {
+                if (typeof outer1_44 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof outer1_45 !== "find") {
+                if (typeof outer1_45 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof str !== "_iter") {
+                if (typeof str === "string") {
                   if ("" !== str) {
                     const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                     let first;
@@ -12196,7 +11923,7 @@ const items11 = [
                     const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                   }
                   obj[3] = items[0];
-                  if (typeof u !== "find") {
+                  if (typeof u !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   mux.emit(closure_1, "requestcanceled", obj);
@@ -12225,7 +11952,7 @@ const items11 = [
                           videoCodec = tmp.videoCodec;
                         }
                         obj[5] = videoCodec;
-                        if (typeof tmp7 !== "find") {
+                        if (typeof tmp7 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         mux.emit(closure_1, "renditionchange", obj);
@@ -12270,7 +11997,7 @@ const items11 = [
         const hlsjs = self.hlsjs;
         let tmp = hlsjs;
         if (hlsjs) {
-          tmp = typeof hlsjs._stopMuxMonitor === "find";
+          tmp = typeof hlsjs._stopMuxMonitor === "function";
         }
         if (tmp) {
           hlsjs._stopMuxMonitor();
@@ -12291,7 +12018,7 @@ const items11 = [
           self.dashjs = dashjs.dashjs;
           const mux = self.mux;
           dashjs = dashjs.dashjs;
-          if (typeof Ct !== "find") {
+          if (typeof Ct !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const id = self.id;
@@ -12334,13 +12061,13 @@ const items11 = [
                   data = {};
                 }
                 const obj = { request_event_type: type, request_start: 0, request_response_start: 0, request_response_end: 0, request_bytes_loaded: -1, request_type: "manifest", request_hostname: null, request_url: null };
-                if (typeof outer1_44 !== "find") {
+                if (typeof outer1_44 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof outer1_45 !== "find") {
+                if (typeof outer1_45 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof data.url !== "_iter") {
+                if (typeof data.url === "string") {
                   if ("" !== str) {
                     const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                     let first;
@@ -12353,7 +12080,7 @@ const items11 = [
                   }
                   obj[6] = items[0];
                   obj[7] = str;
-                  if (typeof o !== "find") {
+                  if (typeof o !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   mux.emit(id, "requestcompleted", obj);
@@ -12397,7 +12124,7 @@ const items11 = [
                 }
                 const tmp5 = outer1_54(request, dashjs);
                 obj = { request_event_type: type, request_start: tmp5.requestStart, request_response_start: tmp5.requestResponseStart, request_response_end: tmp5.requestResponseEnd, request_bytes_loaded: -1, request_type: `${type2}_init`, request_response_headers: tmp5.requestResponseHeaders, request_hostname: tmp5.requestHostname, request_id: tmp5.requestId, request_url: tmp5.requestUrl, request_media_duration: tmp5.requestMediaDuration, request_rendition_lists: tmp2 };
-                if (typeof o !== "find") {
+                if (typeof o !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 obj.emit(id, "requestcompleted", obj);
@@ -12410,11 +12137,11 @@ const items11 = [
                   let type;
                   fragmentModel = fragmentModel.fragmentModel;
                   ({ type, chunk } = fragmentModel);
-                  if (typeof f !== "find") {
+                  if (typeof f !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let tmp = null;
-                  if (typeof fragmentModel.getRequests !== "three_button_mouse") {
+                  if (typeof fragmentModel.getRequests === "function") {
                     const requests = fragmentModel.getRequests({ state: "executed" });
                     let tmp2 = null;
                     if (0 !== requests.length) {
@@ -12462,7 +12189,7 @@ const items11 = [
                   obj = {};
                 }
                 obj = { request_event_type: type, request_start: requestStart, request_response_start: requestResponseStart, request_response_end: requestResponseEnd, request_bytes_loaded: requestBytesLoaded, request_type: type2, request_response_headers: requestResponseHeaders, request_hostname: requestHostname, request_id: requestId, request_url: requestUrl, request_media_start_time: start, request_media_duration: requestMediaDuration, request_current_level: obj.currentLevel, request_labeled_bitrate: obj.renditionBitrate, request_video_width: obj.renditionWidth, request_video_height: obj.renditionHeight };
-                if (typeof o !== "find") {
+                if (typeof o !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 mux.emit(id, "requestcompleted", obj);
@@ -12475,11 +12202,11 @@ const items11 = [
                   let type;
                   fragmentModel = fragmentModel.fragmentModel;
                   ({ type, chunk } = fragmentModel);
-                  if (typeof f !== "find") {
+                  if (typeof f !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let tmp = null;
-                  if (typeof fragmentModel.getRequests !== "three_button_mouse") {
+                  if (typeof fragmentModel.getRequests === "function") {
                     const requests = fragmentModel.getRequests({ state: "executed" });
                     let tmp2 = null;
                     if (0 !== requests.length) {
@@ -12493,14 +12220,14 @@ const items11 = [
               let closure_10 = { video: "Array", audio: "call", totalBitrate: "alignItems" };
               const fn4 = function x(newQuality) {
                 let obj = newQuality;
-                if (typeof newQuality.newQuality === "Object") {
+                if (typeof newQuality.newQuality === "number") {
                   const mediaType = newQuality.mediaType;
                   if ("audio" === mediaType) {
                     obj = dashjs;
                     const bitrateInfoListFor = dashjs.getBitrateInfoListFor(mediaType);
                     const found = bitrateInfoListFor.find((qualityIndex) => qualityIndex.qualityIndex === obj.newQuality);
                     if (found) {
-                      if (typeof found.bitrate !== "V") {
+                      if (typeof found.bitrate === "number") {
                         obj = {};
                         outer1_48(obj, found);
                         obj = { codec: null };
@@ -12528,7 +12255,7 @@ const items11 = [
                         closure_10[mediaType] = obj;
                         let tmp6;
                         if (closure_10.video) {
-                          if (typeof tmp22.video.bitrate !== "V") {
+                          if (typeof tmp22.video.bitrate === "number") {
                             if (tmp22.video.width) {
                               if (tmp22.video.height) {
                                 const bitrate = tmp22.video.bitrate;
@@ -12542,7 +12269,7 @@ const items11 = [
                                   obj1[0] = sum;
                                   obj1[1] = tmp22.video.height;
                                   obj1[2] = tmp22.video.width;
-                                  if (typeof outer1_55 !== "find") {
+                                  if (typeof outer1_55 !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   const match = tmp22.video.codec.match(/.*codecs\*?="(.*)"/);
@@ -12556,14 +12283,14 @@ const items11 = [
                                   tmp6 = obj1;
                                   const str7 = tmp22.video.codec;
                                 }
-                                tmp9 = tmp22.audio && typeof tmp22.audio.bitrate === "Object";
+                                tmp9 = tmp22.audio && typeof tmp22.audio.bitrate === "number";
                               }
                             }
                             log2.warn("have bitrate info for video but missing width/height");
                           }
                         }
                         if (tmp6) {
-                          if (typeof o !== "find") {
+                          if (typeof o !== "function") {
                             HermesBuiltin.throwTypeError();
                           }
                           obj.emit(obj, "renditionchange", tmp6);
@@ -12586,13 +12313,13 @@ const items11 = [
                   request = {};
                 }
                 const obj = { request_event_type: `${request.type}_${request.action}`, request_url: request.url, request_type: mediaType, request_hostname: null };
-                if (typeof outer1_44 !== "find") {
+                if (typeof outer1_44 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof outer1_45 !== "find") {
+                if (typeof outer1_45 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof request.url !== "_iter") {
+                if (typeof request.url === "string") {
                   if ("" !== str) {
                     const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                     let first;
@@ -12604,7 +12331,7 @@ const items11 = [
                     const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                   }
                   obj[3] = items[0];
-                  if (typeof o !== "find") {
+                  if (typeof o !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   mux.emit(id, "requestcanceled", obj);
@@ -12646,13 +12373,13 @@ const items11 = [
                   let obj = { request_error: null, request_url: null, request_hostname: null, request_type: null, request_error_code: null, request_error_text: null };
                   obj[0] = `${obj.type}_${obj.action}`;
                   obj[1] = request.url;
-                  if (typeof outer1_44 !== "find") {
+                  if (typeof outer1_44 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof outer1_45 !== "find") {
+                  if (typeof outer1_45 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
-                  if (typeof request.url !== "_iter") {
+                  if (typeof request.url === "string") {
                     if ("" !== str9) {
                       const str = str9.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
                       let first;
@@ -12666,7 +12393,7 @@ const items11 = [
                     obj[2] = items[0];
                     obj[3] = request.mediaType;
                     ({ status: obj5[4], statusText: obj5[5] } = response);
-                    if (typeof tmp20 !== "find") {
+                    if (typeof tmp20 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     mux.emit(id, "requestfailed", obj);
@@ -12698,7 +12425,7 @@ const items11 = [
                   }
                   obj[1] = message;
                   obj[2] = sum;
-                  if (typeof o !== "find") {
+                  if (typeof o !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   mux.emit(id, "error", obj);
@@ -12742,7 +12469,7 @@ const items11 = [
         const dashjs = self.dashjs;
         let tmp = dashjs;
         if (dashjs) {
-          tmp = typeof dashjs._stopMuxMonitor === "find";
+          tmp = typeof dashjs._stopMuxMonitor === "function";
         }
         if (tmp) {
           dashjs._stopMuxMonitor();
@@ -12794,7 +12521,7 @@ class Ve {
   }
   processLine(arg0) {
     index = global.indexOf(":");
-    if (typeof Ii !== "find") {
+    if (typeof Ii !== "function") {
       str9 = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -12892,7 +12619,7 @@ class Ve {
                     if (c113 === first) {
                       tmp40 = Li;
                       arr5 = items1[1];
-                      if (typeof Li !== "find") {
+                      if (typeof Li !== "function") {
                         str12 = "Trying to call a non-function";
                         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
                       }
@@ -12926,7 +12653,7 @@ class Ve {
                         tmp7 = obj;
                       }
                       tmp10 = Me;
-                      if (typeof Me !== "find") {
+                      if (typeof Me !== "function") {
                         str13 = "Trying to call a non-function";
                         throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
                       }
@@ -12961,7 +12688,7 @@ class Ve {
     } else {
       tmp31 = _t;
       str10 = items1[1];
-      if (typeof _t !== "find") {
+      if (typeof _t !== "function") {
         str11 = "Trying to call a non-function";
         throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
       }
@@ -13035,17 +12762,17 @@ class Ve {
 }
 function ct(arg0, arg1) {
   let parts1;
-  if (typeof Jr !== "find") {
+  if (typeof Jr !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const str = arg1[0];
   const str2 = arg1[0].replace("#EXT-X-", "");
   const replaced = arg1[0].replace("#EXT-X-", "").toLowerCase().replace(/-(\w)/g, (arg0) => arg0[1].toUpperCase());
-  if (typeof Oi !== "find") {
+  if (typeof Oi !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (arr.indexOf("=") > -1) {
-    if (typeof Pi !== "find") {
+    if (typeof Pi !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const parts = arg1[1].split(",");
@@ -13058,7 +12785,7 @@ function ct(arg0, arg1) {
         let tmp8 = Ai;
         let tmp9 = num;
         let tmp10 = merged;
-        if (typeof Ai !== "find") {
+        if (typeof Ai !== "function") {
           let str20 = "Trying to call a non-function";
           let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
         }
@@ -13073,11 +12800,11 @@ function ct(arg0, arg1) {
           tmp7 = merged;
         }
       }
-      if (typeof Jr !== "find") {
+      if (typeof Jr !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const replaced1 = parts1[0].toLowerCase().replace(/-(\w)/g, (arg0) => arg0[1].toUpperCase());
-      if (typeof _t !== "find") {
+      if (typeof _t !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if ("yes" !== parts1[1].toLowerCase()) {
@@ -13101,7 +12828,7 @@ function ct(arg0, arg1) {
     let merged1 = Object.assign(tmp7, {});
     const str7 = arg1[1];
   } else {
-    if (typeof _t !== "find") {
+    if (typeof _t !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if ("yes" !== arg1[1].toLowerCase()) {
@@ -13146,7 +12873,7 @@ let closure_122 = {};
 function ne(key10009) {
   let closure_0 = key10009;
   let closure_1 = arguments;
-  if (typeof key10009 === "y") {
+  if (typeof key10009 === "string") {
     if (ne.hasOwnProperty(key10009)) {
       const timerId = GResult.default.setTimeout(() => {
         const call = splice.call;
@@ -13161,7 +12888,7 @@ function ne(key10009) {
     } else {
       tmp11.warn(`\`${key10009}\` is an unknown task`);
     }
-  } else if (typeof key10009 === "find") {
+  } else if (typeof key10009 === "function") {
     const timerId1 = GResult.default.setTimeout(() => {
       key10009(outer1_123);
     }, 0);
@@ -13190,7 +12917,7 @@ let merged = Object.assign(ne, {
     let obj = ne;
     let closure_0 = ne;
     let merged = arg1;
-    if (typeof se !== "find") {
+    if (typeof se !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (videoElement) {
@@ -13217,8 +12944,8 @@ let merged = Object.assign(ne, {
           let tmp6 = null;
           if (null != items) {
             const _Symbol = Symbol;
-            iterable = typeof Symbol === "tee";
-            if (typeof Symbol !== "Array") {
+            iterable = typeof Symbol !== "undefined";
+            if (typeof Symbol !== "undefined") {
               const _Symbol2 = Symbol;
               iterable = items[Symbol.iterator];
             }
@@ -13346,7 +13073,7 @@ let merged = Object.assign(ne, {
               tmp = secondsToMs(closure_2.currentTime);
             }
             let currentSrc = self.hlsjs && self.hlsjs.url;
-            let source = self.dashjs && typeof self.dashjs.getSource === "find";
+            let source = self.dashjs && typeof self.dashjs.getSource === "function";
             if (source) {
               const dashjs = self.dashjs;
               source = dashjs.getSource();
@@ -13384,7 +13111,7 @@ let merged = Object.assign(ne, {
               if (tmp > 0) {
                 const startDate = closure_2.getStartDate();
                 if (startDate) {
-                  if (typeof startDate.getTime !== "three_button_mouse") {
+                  if (typeof startDate.getTime === "function") {
                     if (startDate.getTime()) {
                       const time = startDate.getTime();
                       obj.player_program_time = time + tmp;
@@ -13442,7 +13169,7 @@ let merged = Object.assign(ne, {
             store.emit(closure_3, "destroy");
           };
           defineProperty.mux.swapElement = (nodeName) => {
-            if (typeof outer1_31 !== "find") {
+            if (typeof outer1_31 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (nodeName) {
@@ -13469,8 +13196,8 @@ let merged = Object.assign(ne, {
                   let tmp6 = null;
                   if (null != items) {
                     const _Symbol = Symbol;
-                    iterable = typeof Symbol === "tee";
-                    if (typeof Symbol !== "Array") {
+                    iterable = typeof Symbol !== "undefined";
+                    if (typeof Symbol !== "undefined") {
                       const _Symbol2 = Symbol;
                       iterable = items[Symbol.iterator];
                     }
@@ -13675,7 +13402,7 @@ let merged = Object.assign(ne, {
     tmp4 = videoElement;
   },
   destroyMonitor(videoElement) {
-    if (typeof se !== "find") {
+    if (typeof se !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (videoElement) {
@@ -13702,8 +13429,8 @@ let merged = Object.assign(ne, {
           let tmp6 = null;
           if (null != items) {
             const _Symbol = Symbol;
-            iterable = typeof Symbol === "tee";
-            if (typeof Symbol !== "Array") {
+            iterable = typeof Symbol !== "undefined";
+            if (typeof Symbol !== "undefined") {
               const _Symbol2 = Symbol;
               iterable = items[Symbol.iterator];
             }
@@ -13799,7 +13526,7 @@ let merged = Object.assign(ne, {
         const first = tmp5[0];
         if (first) {
           if (first.mux) {
-            if (typeof first.mux.destroy === "find") {
+            if (typeof first.mux.destroy === "function") {
               const mux = first.mux;
               mux.destroy();
             }
@@ -13914,7 +13641,7 @@ let merged = Object.assign(ne, {
     safeCall: function ut(arg0, arg1, arg2, arg3) {
       let applyResult = arg3;
       if (arg0) {
-        if (typeof arg0[arg1] !== "three_button_mouse") {
+        if (typeof arg0[arg1] === "function") {
           try {
             applyResult = arg0[arg1].apply(arg0, arg2);
             const obj = arg0[arg1];
@@ -13940,7 +13667,7 @@ let merged = Object.assign(ne, {
           str = "";
           if (GResult1.default) {
             str = "";
-            if (typeof tmp2.default.getComputedStyle !== "three_button_mouse") {
+            if (typeof tmp2.default.getComputedStyle === "function") {
               let hasItem = weakMap;
               if (weakMap) {
                 hasItem = obj.has(arg0);

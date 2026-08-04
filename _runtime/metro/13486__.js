@@ -4,8 +4,8 @@ export default !require("module_13482")(() => {
 
   };
   const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult === "three_button_mouse";
-  if (typeof bindResult !== "three_button_mouse") {
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
     hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
   }
   return hasOwnPropertyResult;

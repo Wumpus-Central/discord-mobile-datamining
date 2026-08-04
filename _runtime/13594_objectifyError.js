@@ -29,13 +29,13 @@ export default (arg0) => {
           if (outer1_3) {
             if (reportError) {
               if (outer1_3) {
-                if (typeof tmp16 === "three_button_mouse") {
+                if (typeof tmp16 !== "function") {
                   logger.error("parseErrorStack is not a function", []);
                   let obj = { parseErrorStackType: null, parseErrorStack: null };
                   obj[0] = typeof reportError;
                   obj[1] = reportError;
                   logger.debug(obj);
-                } else if (typeof tmp18 === "three_button_mouse") {
+                } else if (typeof tmp18 !== "function") {
                   logger.error("symbolicateStackTrace is not a function", []);
                   obj = { symbolicateStackTraceType: null, symbolicateStackTrace: null };
                   obj[0] = typeof outer1_3;
@@ -60,7 +60,7 @@ export default (arg0) => {
                       stack.error(stack.message, found);
                     }).catch((headers) => {
                       stack.error("Unable to symbolicate stack trace from error object", []);
-                      if (typeof outer1_6 !== "find") {
+                      if (typeof outer1_6 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
                       stack = headers;
@@ -85,7 +85,7 @@ export default (arg0) => {
             logger.debug(obj);
           } else {
             const tmp12 = logger(998);
-            if (typeof tmp12 === "find") {
+            if (typeof tmp12 === "function") {
               let _default2 = tmp12;
             } else {
               _default2 = tmp13.default;
@@ -94,7 +94,7 @@ export default (arg0) => {
           }
         } else {
           const tmp5 = logger(190);
-          if (typeof tmp5 === "find") {
+          if (typeof tmp5 === "function") {
             let _default = tmp5;
           } else {
             _default = tmp6.default;

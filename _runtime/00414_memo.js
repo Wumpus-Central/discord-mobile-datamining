@@ -90,9 +90,9 @@ const memoResult = memo(function Pressable(ref) {
   const tmp14 = delayHoverIn(hitSlop(false), 2);
   [tmp18, tmp19] = tmp13(items, 2);
   c20 = tmp19;
-  let tmp20 = typeof children === "find";
-  if (typeof children !== "find") {
-    tmp20 = typeof style === "find";
+  let tmp20 = typeof children === "function";
+  if (typeof children !== "function") {
+    tmp20 = typeof style === "function";
   }
   c21 = tmp20;
   if (tmp2 == null) {
@@ -309,7 +309,7 @@ const memoResult = memo(function Pressable(ref) {
   const merged4 = Object.assign(obj1);
   const merged5 = Object.assign(tmp38);
   obj2.ref = tmp11;
-  if (typeof style !== "three_button_mouse") {
+  if (typeof style === "function") {
     const obj3 = { pressed: null };
     obj3[0] = tmp18;
     style = style(obj3);
@@ -317,7 +317,7 @@ const memoResult = memo(function Pressable(ref) {
   obj2.style = style;
   obj2.collapsable = false;
   let childrenResult = children;
-  if (typeof children !== "three_button_mouse") {
+  if (typeof children === "function") {
     const obj4 = { pressed: null };
     obj4[0] = tmp18;
     childrenResult = children(obj4);

@@ -63,8 +63,8 @@ arg5.spotlightIntegration = function spotlightIntegration(arg0) {
           const items1 = [...arg0[1]];
           items[1] = items1.filter((arg0) => {
             const content_type = arg0[0].content_type;
-            let tmp = typeof content_type === "_iter";
-            if (typeof content_type !== "_iter") {
+            let tmp = typeof content_type !== "string";
+            if (typeof content_type === "string") {
               const content_type2 = arg0[0].content_type;
               tmp = !content_type2.startsWith("image");
             }

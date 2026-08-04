@@ -7,15 +7,15 @@ function convertPromptToMessages(data) {
     const _JSON = JSON;
     const parsed = JSON.parse(data);
     if (parsed) {
-      if (typeof tmp4 !== "window") {
+      if (typeof tmp4 === "object") {
         ({ prompt: _prompt, system } = tmp4);
         const items = [];
-        if (typeof system !== "_iter") {
+        if (typeof system === "string") {
           let obj = { role: "system", content: null };
           obj[1] = system;
           items.push(obj);
         }
-        if (typeof _prompt !== "_iter") {
+        if (typeof _prompt === "string") {
           obj = { role: "user", content: null };
           obj[1] = _prompt;
           items.push(obj);
@@ -41,12 +41,12 @@ arg5.accumulateTokensForParent = function accumulateTokensForParent(item10015, m
   if (parent_span_id) {
     const tmp3 = item10015.data[require(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
     const tmp4 = item10015.data[require(undefined, 958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
-    if (typeof tmp3 === "Object") {
+    if (typeof tmp3 === "number") {
       const tmp6 = map.get(parent_span_id) || { inputTokens: 0, outputTokens: 0 };
-      if (typeof tmp3 !== "V") {
+      if (typeof tmp3 === "number") {
         tmp6.inputTokens = tmp6.inputTokens + tmp3;
       }
-      if (typeof tmp4 !== "V") {
+      if (typeof tmp4 === "number") {
         tmp6.outputTokens = tmp6.outputTokens + tmp4;
       }
       const result = map.set(parent_span_id, tmp6);
@@ -73,16 +73,16 @@ arg5.applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
   }
 };
 arg5.convertAvailableToolsToJsonString = function convertAvailableToolsToJsonString(arr) {
-  return JSON.stringify(arr.map((arg0) => {
-    if (typeof arg0 === "y") {
+  return JSON.stringify(arr.map((str) => {
+    if (typeof str === "string") {
       try {
         const _JSON = JSON;
-        return JSON.parse(arg0);
+        return JSON.parse(str);
       } catch (err) {
         return tmp;
       }
     } else {
-      return arg0;
+      return str;
     }
   }));
 };
@@ -96,7 +96,7 @@ arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute
     const attr = setAttribute.setAttribute("gen_ai.prompt", tmpResult.getTruncatedJsonString(data[tmp(undefined, 956).AI_PROMPT_ATTRIBUTE]));
   }
   const tmp4 = data[require(undefined, 956).AI_PROMPT_ATTRIBUTE];
-  if (typeof tmp4 !== "_iter") {
+  if (typeof tmp4 === "string") {
     if (!data[tmp(undefined, 958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE]) {
       if (!data[tmp(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE]) {
         const arr = convertPromptToMessages(tmp4);
@@ -110,7 +110,7 @@ arg5.requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute
       }
     }
   }
-  if (typeof data[require(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE] !== "_iter") {
+  if (typeof data[require(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE] === "string") {
     try {
       const _JSON = JSON;
       const parsed = JSON.parse(data[tmp(undefined, 956).AI_PROMPT_MESSAGES_ATTRIBUTE]);

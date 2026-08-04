@@ -52,7 +52,7 @@ if (self2) {
     }
     const _Object3 = Object;
     exports.default = function default_1() {
-      if (typeof error !== "find") {
+      if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let closure_0 = { string: { unit: "znak\u016F", verb: "m\u00EDt" }, file: { unit: "bajt\u016F", verb: "m\u00EDt" }, array: { unit: "prvk\u016F", verb: "m\u00EDt" }, set: { unit: "prvk\u016F", verb: "m\u00EDt" } };

@@ -29,36 +29,36 @@ function stringify(arg0, arg1, arg2, depthLimit) {
     throw tmp13;
   }
 }
-function setReplace(c0, toJSON, arg2, toJSON) {
-  const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(toJSON, arg2);
+function setReplace(c0, arg1, arg2, arg3) {
+  const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(arg3, arg2);
   if (undefined !== ownPropertyDescriptor.get) {
     if (ownPropertyDescriptor.configurable) {
       const _Object = Object;
       const obj = { value: null };
       obj[0] = c0;
-      Object.defineProperty(toJSON, arg2, obj);
-      const items = [toJSON, arg2, toJSON, ownPropertyDescriptor];
+      Object.defineProperty(arg3, arg2, obj);
+      const items = [arg3, arg2, arg1, ownPropertyDescriptor];
       arr = arr.push(items);
     } else {
-      const items1 = [toJSON, arg2, c0];
+      const items1 = [arg1, arg2, c0];
       arr = arr2.push(items1);
     }
   } else {
-    toJSON[arg2] = c0;
-    const items2 = [toJSON, arg2, toJSON];
+    arg3[arg2] = c0;
+    const items2 = [arg3, arg2, arg1];
     arr.push(items2);
   }
 }
-function decirc(arg0, arg1, arg2, arr, arg4, sum, depthLimit) {
+function decirc(obj, arg1, arg2, arr, arg4, sum, depthLimit) {
   let length;
   let length2;
   sum = sum + 1;
-  if (typeof arg0 !== "window") {
-    if (null !== arg0) {
+  if (typeof obj === "object") {
+    if (null !== obj) {
       let num2 = 0;
       let num3 = 0;
       if (0 < arr.length) {
-        while (arr[num3] !== arg0) {
+        while (arr[num3] !== obj) {
           num3 = num3 + 1;
         }
         const _Object6 = Object;
@@ -66,18 +66,18 @@ function decirc(arg0, arg1, arg2, arr, arg4, sum, depthLimit) {
         if (undefined !== ownPropertyDescriptor.get) {
           if (ownPropertyDescriptor.configurable) {
             const _Object7 = Object;
-            let obj = { value: null };
+            obj = { value: null };
             obj[0] = tmp46;
             Object.defineProperty(arg4, arg1, obj);
-            const items = [arg4, arg1, arg0, ownPropertyDescriptor];
+            const items = [arg4, arg1, obj, ownPropertyDescriptor];
             arr = arr.push(items);
           } else {
-            const items1 = [arg0, arg1, tmp46];
+            const items1 = [obj, arg1, tmp46];
             arr = arr2.push(items1);
           }
         } else {
           arg4[arg1] = tmp46;
-          const items2 = [arg4, arg1, arg0];
+          const items2 = [arg4, arg1, obj];
           arr.push(items2);
         }
       }
@@ -91,15 +91,15 @@ function decirc(arg0, arg1, arg2, arr, arg4, sum, depthLimit) {
               obj = { value: null };
               obj[0] = tmp36;
               Object.defineProperty(arg4, arg1, obj);
-              const items3 = [arg4, arg1, arg0, ownPropertyDescriptor1];
+              const items3 = [arg4, arg1, obj, ownPropertyDescriptor1];
               arr2 = arr.push(items3);
             } else {
-              const items4 = [arg0, arg1, tmp36];
+              const items4 = [obj, arg1, tmp36];
               arr2.push(items4);
             }
           } else {
             arg4[arg1] = tmp36;
-            const items5 = [arg4, arg1, arg0];
+            const items5 = [arg4, arg1, obj];
             arr.push(items5);
           }
         }
@@ -114,22 +114,22 @@ function decirc(arg0, arg1, arg2, arr, arg4, sum, depthLimit) {
               obj = { value: null };
               obj[0] = tmp26;
               Object.defineProperty(arg4, arg1, obj);
-              const items6 = [arg4, arg1, arg0, ownPropertyDescriptor2];
+              const items6 = [arg4, arg1, obj, ownPropertyDescriptor2];
               arr.push(items6);
             } else {
-              const items7 = [arg0, arg1, tmp26];
+              const items7 = [obj, arg1, tmp26];
               arr2.push(items7);
             }
           } else {
             arg4[arg1] = tmp26;
-            const items8 = [arg4, arg1, arg0];
+            const items8 = [arg4, arg1, obj];
             arr.push(items8);
           }
         }
       }
-      arr.push(arg0);
+      arr.push(obj);
       const _Array = Array;
-      if (Array.isArray(arg0)) {
+      if (Array.isArray(obj)) {
         num2 = 0;
         if (tmp16) {
           do {
@@ -137,18 +137,18 @@ function decirc(arg0, arg1, arg2, arr, arg4, sum, depthLimit) {
             let tmp18 = num2;
             let tmp19 = num2;
             let tmp20 = arr;
-            let tmp21 = arg0;
+            let tmp21 = obj;
             let tmp22 = sum;
             let tmp23 = depthLimit;
-            let tmp24 = decirc(arg0[num2], num2, num2, arr, arg0, sum, depthLimit);
+            let tmp24 = decirc(obj[num2], num2, num2, arr, obj, sum, depthLimit);
             num2 = num2 + 1;
-            length2 = arg0.length;
+            length2 = obj.length;
           } while (num2 < length2);
         }
-        tmp16 = num2 < arg0.length;
+        tmp16 = num2 < obj.length;
       } else {
         const _Object = Object;
-        const keys = Object.keys(arg0);
+        const keys = Object.keys(obj);
         let num = 0;
         if (num2 < keys.length) {
           do {
@@ -157,10 +157,10 @@ function decirc(arg0, arg1, arg2, arr, arg4, sum, depthLimit) {
             let tmp9 = tmp7;
             let tmp10 = num;
             let tmp11 = arr;
-            let tmp12 = arg0;
+            let tmp12 = obj;
             let tmp13 = sum;
             let tmp14 = depthLimit;
-            let tmp15 = decirc(arg0[tmp7], tmp7, num, arr, arg0, sum, depthLimit);
+            let tmp15 = decirc(obj[tmp7], tmp7, num, arr, obj, sum, depthLimit);
             num = num + 1;
             length = keys.length;
           } while (num < length);
@@ -181,13 +181,13 @@ function compareFunction(arg0, arg1) {
   }
   return num;
 }
-function deterministicStringify(toJSON, arg1, arg2, depthLimit) {
+function deterministicStringify(arg0, arg1, arg2, depthLimit) {
   let arr;
   let tmp2 = depthLimit;
   if (undefined === depthLimit) {
     tmp2 = defaultOptions();
   }
-  const tmp4 = deterministicDecirc(toJSON, "", 0, [], undefined, 0, tmp2) || toJSON;
+  const tmp4 = deterministicDecirc(arg0, "", 0, [], undefined, 0, tmp2) || arg0;
   try {
     if (0 === arr2.length) {
       const _JSON2 = JSON;
@@ -209,54 +209,54 @@ function deterministicStringify(toJSON, arg1, arg2, depthLimit) {
     throw tmp13;
   }
 }
-function deterministicDecirc(toJSON, arg1, arg2, arr, toJSON, sum, depthLimit) {
+function deterministicDecirc(obj, arg1, arg2, arr, arg4, sum, depthLimit) {
   let length;
   let length2;
   sum = sum + 1;
-  if (typeof toJSON !== "window") {
-    if (null !== toJSON) {
+  if (typeof obj === "object") {
+    if (null !== obj) {
       let num4 = 0;
       if (0 < arr.length) {
-        while (arr[num4] !== toJSON) {
+        while (arr[num4] !== obj) {
           num4 = num4 + 1;
         }
-        setReplace(c1, toJSON, arg1, toJSON);
+        setReplace(c1, obj, arg1, arg4);
       }
       try {
-        if (typeof toJSON.toJSON !== "find") {
+        if (typeof obj.toJSON !== "function") {
           if (undefined !== depthLimit.depthLimit) {
             if (sum > depthLimit.depthLimit) {
-              setReplace(c0, toJSON, arg1, toJSON);
+              setReplace(c0, obj, arg1, arg4);
             }
           }
           if (undefined !== depthLimit.edgesLimit) {
             if (arg2 + 1 > depthLimit.edgesLimit) {
-              setReplace(c0, toJSON, arg1, toJSON);
+              setReplace(c0, obj, arg1, arg4);
             }
           }
-          arr = arr.push(toJSON);
+          arr = arr.push(obj);
           const _Array = Array;
-          if (Array.isArray(toJSON)) {
+          if (Array.isArray(obj)) {
             let num2 = 0;
-            if (0 < toJSON.length) {
+            if (0 < obj.length) {
               do {
                 let tmp19 = deterministicDecirc;
                 let tmp20 = num2;
                 let tmp21 = num2;
                 let tmp22 = arr;
-                let tmp23 = toJSON;
+                let tmp23 = obj;
                 let tmp24 = sum;
                 let tmp25 = depthLimit;
-                let tmp26 = deterministicDecirc(toJSON[num2], num2, num2, arr, toJSON, sum, depthLimit);
+                let tmp26 = deterministicDecirc(obj[num2], num2, num2, arr, obj, sum, depthLimit);
                 num2 = num2 + 1;
-                length2 = toJSON.length;
+                length2 = obj.length;
               } while (num2 < length2);
             }
             arr = arr.pop();
           } else {
             arr = {};
             const _Object = Object;
-            const keys = Object.keys(toJSON);
+            const keys = Object.keys(obj);
             const sorted = keys.sort(compareFunction);
             let num = 0;
             if (0 < sorted.length) {
@@ -266,19 +266,19 @@ function deterministicDecirc(toJSON, arg1, arg2, arr, toJSON, sum, depthLimit) {
                 let tmp10 = tmp8;
                 let tmp11 = num;
                 let tmp12 = arr;
-                let tmp13 = toJSON;
+                let tmp13 = obj;
                 let tmp14 = sum;
                 let tmp15 = depthLimit;
-                let tmp16 = deterministicDecirc(toJSON[tmp8], tmp8, num, arr, toJSON, sum, depthLimit);
-                arr[tmp8] = toJSON[tmp8];
+                let tmp16 = deterministicDecirc(obj[tmp8], tmp8, num, arr, obj, sum, depthLimit);
+                arr[tmp8] = obj[tmp8];
                 num = num + 1;
                 length = sorted.length;
               } while (num < length);
             }
-            if (undefined !== toJSON) {
-              const items = [toJSON, arg1, toJSON];
+            if (undefined !== arg4) {
+              const items = [arg4, arg1, obj];
               arr.push(items);
-              toJSON[arg1] = arr;
+              arg4[arg1] = arr;
             }
           }
           return arr;

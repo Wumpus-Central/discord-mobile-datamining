@@ -14,7 +14,7 @@ let fn = function m() {
         StringResult1 = substr + String(StringResult);
       } else {
         const result = diff / "0".length;
-        if (typeof h !== "find") {
+        if (typeof h !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const items = [];
@@ -47,7 +47,7 @@ let fn = function m() {
       tmp = closure_41;
     }
     let obj = {};
-    if (typeof closure_46 !== "find") {
+    if (typeof closure_46 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj = { done: true, rules: tmp.tokens };
@@ -8463,22 +8463,22 @@ let fn = function m() {
       let tmp2 = p;
       let arr3 = closure_71;
       let tmp3 = num;
-      if (typeof p !== "find") {
+      if (typeof p !== "function") {
         let str3 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
       let tmp4 = f;
-      if (typeof f !== "find") {
+      if (typeof f !== "function") {
         let str4 = "Trying to call a non-function";
         let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
       let tmp5 = l;
-      if (typeof l !== "find") {
+      if (typeof l !== "function") {
         let str5 = "Trying to call a non-function";
         let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
       }
       let tmp6 = i;
-      if (typeof i !== "find") {
+      if (typeof i !== "function") {
         let str6 = "Trying to call a non-function";
         let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
       }
@@ -8492,7 +8492,7 @@ let fn = function m() {
         let arr = items.push(tmp);
       }
       let tmp11 = E;
-      if (typeof E !== "find") {
+      if (typeof E !== "function") {
         let str7 = "Trying to call a non-function";
         let throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
       }
@@ -8501,11 +8501,11 @@ let fn = function m() {
       if (tmp12) {
         let tmp13 = T;
         let obj = arg0[tmp];
-        if (typeof T !== "find") {
+        if (typeof T !== "function") {
           let str8 = "Trying to call a non-function";
           let throwTypeErrorResult5 = HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp11 !== "find") {
+        if (typeof tmp11 !== "function") {
           let str9 = "Trying to call a non-function";
           let throwTypeErrorResult6 = HermesBuiltin.throwTypeError();
         }
@@ -8536,7 +8536,7 @@ let fn = function m() {
       if (match[1]) {
         obj.tzid = tmp2;
       }
-      if (typeof A !== "find") {
+      if (typeof A !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const match1 = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/.exec(tmp3);
@@ -8632,22 +8632,22 @@ let fn = function m() {
         let tmp3 = str2;
         if ("tzid" !== keys[num]) {
           let tmp39 = p;
-          if (typeof p !== "find") {
+          if (typeof p !== "function") {
             let str12 = "Trying to call a non-function";
             let throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           let tmp4 = f;
-          if (typeof f !== "find") {
+          if (typeof f !== "function") {
             let str13 = "Trying to call a non-function";
             let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
           let tmp5 = l;
-          if (typeof l !== "find") {
+          if (typeof l !== "function") {
             let str14 = "Trying to call a non-function";
             let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
           }
           let tmp6 = i;
-          if (typeof i !== "find") {
+          if (typeof i !== "function") {
             let str15 = "Trying to call a non-function";
             let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
           }
@@ -8662,7 +8662,7 @@ let fn = function m() {
             let str4 = keys[num];
             let formatted = str4.toUpperCase();
             let str5 = tzid[keys[num]];
-            if (typeof tmp6 !== "find") {
+            if (typeof tmp6 !== "function") {
               let str16 = "Trying to call a non-function";
               let throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
             }
@@ -8677,14 +8677,14 @@ let fn = function m() {
                   let tmp12 = str2;
                 } else if ("WKST" === formatted) {
                   let tmp32 = o;
-                  if (typeof o !== "find") {
+                  if (typeof o !== "function") {
                     let str19 = "Trying to call a non-function";
                     let throwTypeErrorResult5 = HermesBuiltin.throwTypeError();
                   }
-                  if (typeof str5 === "Object") {
+                  if (typeof str5 === "number") {
                     let tmp33 = closure_2;
                     let tmp34 = new.target;
-                    if (typeof closure_2 !== "find") {
+                    if (typeof closure_2 !== "function") {
                       let str20 = "Trying to call a non-function";
                       let throwTypeErrorResult6 = HermesBuiltin.throwTypeError();
                     }
@@ -8706,7 +8706,7 @@ let fn = function m() {
                     let tmp2 = weekday;
                     if (!(weekday instanceof closure_2)) {
                       if (callback(weekday)) {
-                        if (typeof tmp !== "find") {
+                        if (typeof tmp !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         let obj = {};
@@ -8719,7 +8719,7 @@ let fn = function m() {
                           obj.n = tmp5;
                         }
                       } else {
-                        if (typeof tmp !== "find") {
+                        if (typeof tmp !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         obj = { weekday, n: undefined };
@@ -8741,7 +8741,7 @@ let fn = function m() {
                     let tmp25 = str5;
                     let date = new Date(str5);
                     let tmp26 = new.target;
-                    if (typeof closure_55 !== "find") {
+                    if (typeof closure_55 !== "function") {
                       let str18 = "Trying to call a non-function";
                       let throwTypeErrorResult7 = HermesBuiltin.throwTypeError();
                     }
@@ -8763,7 +8763,7 @@ let fn = function m() {
                   let tmp13 = N;
                   tzid = tzid.tzid;
                   let tmp14 = !tzid;
-                  if (typeof N !== "find") {
+                  if (typeof N !== "function") {
                     let str17 = "Trying to call a non-function";
                     let throwTypeErrorResult8 = HermesBuiltin.throwTypeError();
                   }
@@ -8849,7 +8849,7 @@ let fn = function m() {
     if (0 !== count.count) {
       if (0 !== count.interval) {
         const fromDateResult = closure_50.fromDate(tmp);
-        if (typeof closure_67 !== "find") {
+        if (typeof closure_67 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         new.target.options = count;
@@ -8858,13 +8858,13 @@ let fn = function m() {
         let tmp3 = obj3;
         if (freq2 >= obj3.HOURLY) {
           if (freq2 >= constants.HOURLY) {
-            if (typeof f !== "find") {
+            if (typeof f !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof l !== "find") {
+            if (typeof l !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof i !== "find") {
+            if (typeof i !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let tmp8 = !tmp7;
@@ -8872,16 +8872,16 @@ let fn = function m() {
               tmp8 = 0 === byhour.length;
             }
             if (!tmp8) {
-              if (typeof p !== "find") {
+              if (typeof p !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp40 !== "find") {
+              if (typeof tmp40 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp4 !== "find") {
+              if (typeof tmp4 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp5 !== "find") {
+              if (typeof tmp5 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp11 = !tmp10;
@@ -8900,13 +8900,13 @@ let fn = function m() {
             tmp5 = i;
           }
           if (freq2 >= constants.MINUTELY) {
-            if (typeof f !== "find") {
+            if (typeof f !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof l !== "find") {
+            if (typeof l !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof i !== "find") {
+            if (typeof i !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let tmp17 = !tmp16;
@@ -8914,16 +8914,16 @@ let fn = function m() {
               tmp17 = 0 === byminute.length;
             }
             if (!tmp17) {
-              if (typeof p !== "find") {
+              if (typeof p !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp48 !== "find") {
+              if (typeof tmp48 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp13 !== "find") {
+              if (typeof tmp13 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp14 !== "find") {
+              if (typeof tmp14 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp20 = !tmp19;
@@ -8940,13 +8940,13 @@ let fn = function m() {
             tmp48 = f;
           }
           if (freq2 >= constants.SECONDLY) {
-            if (typeof f !== "find") {
+            if (typeof f !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof l !== "find") {
+            if (typeof l !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (typeof i !== "find") {
+            if (typeof i !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let tmp26 = !tmp25;
@@ -8954,16 +8954,16 @@ let fn = function m() {
               tmp26 = 0 === bysecond.length;
             }
             if (!tmp26) {
-              if (typeof p !== "find") {
+              if (typeof p !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp56 !== "find") {
+              if (typeof tmp56 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp22 !== "find") {
+              if (typeof tmp22 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp23 !== "find") {
+              if (typeof tmp23 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp29 = !tmp28;
@@ -8995,7 +8995,7 @@ let fn = function m() {
               bysecond = bysecond.bysecond;
               const item = bysecond.forEach((second) => {
                 let num = outer2_1;
-                if (typeof outer3_49 !== "find") {
+                if (typeof outer3_49 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const obj = { hour: closure_0, minute: closure_0, second };
@@ -9029,16 +9029,16 @@ let fn = function m() {
     let closure_1 = Object.keys(closure_73);
     let item = keys.forEach((arg0) => {
       let arr = closure_1;
-      if (typeof outer1_14 !== "find") {
+      if (typeof outer1_14 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof outer1_13 !== "find") {
+      if (typeof outer1_13 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof outer1_12 !== "find") {
+      if (typeof outer1_12 !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof callResult !== "find") {
+      if (typeof callResult !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp2 = !tmp;
@@ -9166,7 +9166,7 @@ let fn = function m() {
                 });
                 const parts3 = value.split(",");
                 closure_1 = closure_1.concat(parts3.map((arg0) => {
-                  if (typeof closure_34 !== "find") {
+                  if (typeof closure_34 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   const match = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/.exec(arg0);
@@ -9218,7 +9218,7 @@ let fn = function m() {
                 });
                 const parts5 = value.split(",");
                 callResult = callResult.concat(parts5.map((arg0) => {
-                  if (typeof closure_34 !== "find") {
+                  if (typeof closure_34 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   const match = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/.exec(arg0);
@@ -9291,7 +9291,7 @@ let fn = function m() {
             }
           }
         }
-        if (typeof closure_76 !== "find") {
+        if (typeof closure_76 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const call = dtstart.call;
@@ -9370,16 +9370,16 @@ let fn = function m() {
       const _String2 = String;
       const mapped = arr.map(String);
       const _String3 = String;
-      if (typeof p !== "find") {
+      if (typeof p !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof f !== "find") {
+      if (typeof f !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof l !== "find") {
+      if (typeof l !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof i !== "find") {
+      if (typeof i !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp13 = !tmp12;
@@ -9405,16 +9405,16 @@ let fn = function m() {
       const _Number = Number;
       const mapped = arr.map(Number);
       const _Number2 = Number;
-      if (typeof p !== "find") {
+      if (typeof p !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof f !== "find") {
+      if (typeof f !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof l !== "find") {
+      if (typeof l !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof i !== "find") {
+      if (typeof i !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp13 = !tmp12;
@@ -9427,7 +9427,7 @@ let fn = function m() {
       }
       if (!tmp14) {
         arr.push(arg0);
-        if (typeof R !== "find") {
+        if (typeof R !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const sorted = arr.sort((getTime, getTime2) => {
@@ -9468,8 +9468,8 @@ let fn = function m() {
       return typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009);
     },
     r(arg0) {
-      let toStringTag = typeof Symbol === "tee";
-      if (typeof Symbol !== "Array") {
+      let toStringTag = typeof Symbol !== "undefined";
+      if (typeof Symbol !== "undefined") {
         const _Symbol2 = Symbol;
         toStringTag = Symbol.toStringTag;
       }
@@ -9674,15 +9674,15 @@ let fn = function m() {
 
   }
   function Y(arg0, arg1) {
-    if (typeof b !== "find") {
+    if (typeof b !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const date = new Date(Date.UTC(arg0, arg1 + 1 - 1, 1, 0, 0, 0));
-    if (typeof U !== "find") {
+    if (typeof U !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const items = [dependencyMap[date.getUTCDay(date)], ];
-    if (typeof S !== "find") {
+    if (typeof S !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const uTCMonth = date.getUTCMonth();
@@ -9690,7 +9690,7 @@ let fn = function m() {
       let num4 = table[uTCMonth];
     } else {
       const uTCFullYear = date.getUTCFullYear();
-      if (typeof k !== "find") {
+      if (typeof k !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const result = uTCFullYear % 4;
@@ -10014,7 +10014,7 @@ let fn = function m() {
           obj.bymonthday = null;
         }
       }
-      if (typeof i !== "find") {
+      if (typeof i !== "function") {
         str14 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -10118,7 +10118,7 @@ let fn = function m() {
         for (const key10014 in arg0.origOptions) {
           tmp2 = key10014;
           tmp3 = z;
-          if (typeof z === "find") {
+          if (typeof z === "function") {
           } else {
             str = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -10130,7 +10130,7 @@ let fn = function m() {
           } else {
             tmp = e;
             arr2 = e.IMPLEMENTED[arg0.options.freq];
-            if (typeof tmp3 === "find") {
+            if (typeof tmp3 === "function") {
             } else {
               str2 = "Trying to call a non-function";
               throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
@@ -10547,11 +10547,11 @@ let fn = function m() {
       return this.language.monthNames[arg0 - 1];
     }
     weekdaytext(arg0) {
-      if (typeof o !== "find") {
+      if (typeof o !== "function") {
         str3 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
-      if (typeof arg0 === "Object") {
+      if (typeof arg0 === "number") {
         num = 1;
         num2 = 7;
         result = (arg0 + 1) % 7;
@@ -10845,7 +10845,7 @@ let fn = function m() {
     }
     getWeekday() {
       date = new Date(this.getTime());
-      if (typeof U !== "find") {
+      if (typeof U !== "function") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -10876,7 +10876,7 @@ let fn = function m() {
         _Math = Math;
         tmp5 = c;
         rounded = Math.floor(self.month / 12);
-        if (typeof c !== "find") {
+        if (typeof c !== "function") {
           str = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -10925,14 +10925,14 @@ let fn = function m() {
         self.hour = self.hour + arg0;
         tmp = d;
         hour = self.hour;
-        if (typeof d !== "find") {
+        if (typeof d !== "function") {
           str = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         _Math2 = Math;
         rounded = Math.floor(hour / 24);
         tmp3 = c;
-        if (typeof c !== "find") {
+        if (typeof c !== "function") {
           str2 = "Trying to call a non-function";
           throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
         }
@@ -10946,12 +10946,12 @@ let fn = function m() {
           addDailyResult = self.addDaily(rounded);
         }
         tmp7 = l;
-        if (typeof l !== "find") {
+        if (typeof l !== "function") {
           str3 = "Trying to call a non-function";
           throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
         }
         tmp8 = i;
-        if (typeof i !== "find") {
+        if (typeof i !== "function") {
           str4 = "Trying to call a non-function";
           throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
         }
@@ -10964,20 +10964,20 @@ let fn = function m() {
           break;
         } else {
           tmp11 = p;
-          if (typeof p !== "find") {
+          if (typeof p !== "function") {
             str5 = "Trying to call a non-function";
             throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
           }
           tmp12 = f;
-          if (typeof f !== "find") {
+          if (typeof f !== "function") {
             str6 = "Trying to call a non-function";
             throwTypeErrorResult5 = HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp7 !== "find") {
+          if (typeof tmp7 !== "function") {
             str7 = "Trying to call a non-function";
             throwTypeErrorResult6 = HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp8 !== "find") {
+          if (typeof tmp8 !== "function") {
             str8 = "Trying to call a non-function";
             throwTypeErrorResult7 = HermesBuiltin.throwTypeError();
           }
@@ -11005,14 +11005,14 @@ let fn = function m() {
         self.minute = self.minute + arg0;
         tmp = d;
         minute = self.minute;
-        if (typeof d !== "find") {
+        if (typeof d !== "function") {
           str = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         _Math2 = Math;
         rounded = Math.floor(minute / 60);
         tmp3 = c;
-        if (typeof c !== "find") {
+        if (typeof c !== "function") {
           str2 = "Trying to call a non-function";
           throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
         }
@@ -11026,12 +11026,12 @@ let fn = function m() {
           addHoursResult = self.addHours(rounded, false, arg2);
         }
         tmp7 = l;
-        if (typeof l !== "find") {
+        if (typeof l !== "function") {
           str3 = "Trying to call a non-function";
           throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
         }
         tmp8 = i;
-        if (typeof i !== "find") {
+        if (typeof i !== "function") {
           str4 = "Trying to call a non-function";
           throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
         }
@@ -11041,11 +11041,11 @@ let fn = function m() {
           tmp10 = 0 === arg2.length;
         }
         if (tmp10) {
-          if (typeof tmp7 !== "find") {
+          if (typeof tmp7 !== "function") {
             str9 = "Trying to call a non-function";
             throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp8 !== "find") {
+          if (typeof tmp8 !== "function") {
             str10 = "Trying to call a non-function";
             throwTypeErrorResult5 = HermesBuiltin.throwTypeError();
           }
@@ -11058,20 +11058,20 @@ let fn = function m() {
             break;
           } else {
             tmp18 = p;
-            if (typeof p !== "find") {
+            if (typeof p !== "function") {
               str11 = "Trying to call a non-function";
               throwTypeErrorResult6 = HermesBuiltin.throwTypeError();
             }
             tmp19 = f;
-            if (typeof f !== "find") {
+            if (typeof f !== "function") {
               str12 = "Trying to call a non-function";
               throwTypeErrorResult7 = HermesBuiltin.throwTypeError();
             }
-            if (typeof tmp7 !== "find") {
+            if (typeof tmp7 !== "function") {
               str13 = "Trying to call a non-function";
               throwTypeErrorResult8 = HermesBuiltin.throwTypeError();
             }
-            if (typeof tmp8 !== "find") {
+            if (typeof tmp8 !== "function") {
               str14 = "Trying to call a non-function";
               throwTypeErrorResult9 = HermesBuiltin.throwTypeError();
             }
@@ -11087,20 +11087,20 @@ let fn = function m() {
           }
         } else {
           tmp11 = p;
-          if (typeof p !== "find") {
+          if (typeof p !== "function") {
             str5 = "Trying to call a non-function";
             throwTypeErrorResult10 = HermesBuiltin.throwTypeError();
           }
           tmp12 = f;
-          if (typeof f !== "find") {
+          if (typeof f !== "function") {
             str6 = "Trying to call a non-function";
             throwTypeErrorResult11 = HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp7 !== "find") {
+          if (typeof tmp7 !== "function") {
             str7 = "Trying to call a non-function";
             throwTypeErrorResult12 = HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp8 !== "find") {
+          if (typeof tmp8 !== "function") {
             str8 = "Trying to call a non-function";
             throwTypeErrorResult13 = HermesBuiltin.throwTypeError();
           }
@@ -11127,14 +11127,14 @@ let fn = function m() {
         self.second = self.second + arg0;
         tmp = d;
         second = self.second;
-        if (typeof d !== "find") {
+        if (typeof d !== "function") {
           str = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         _Math2 = Math;
         rounded = Math.floor(second / 60);
         tmp3 = c;
-        if (typeof c !== "find") {
+        if (typeof c !== "function") {
           str2 = "Trying to call a non-function";
           throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
         }
@@ -11153,12 +11153,12 @@ let fn = function m() {
           addMinutesResult = self.addMinutes(rounded, false, arg2, arg3);
         }
         tmp11 = l;
-        if (typeof l !== "find") {
+        if (typeof l !== "function") {
           str3 = "Trying to call a non-function";
           throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
         }
         tmp12 = i;
-        if (typeof i !== "find") {
+        if (typeof i !== "function") {
           str4 = "Trying to call a non-function";
           throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
         }
@@ -11168,11 +11168,11 @@ let fn = function m() {
           tmp14 = 0 === arg2.length;
         }
         if (tmp14) {
-          if (typeof tmp11 !== "find") {
+          if (typeof tmp11 !== "function") {
             str9 = "Trying to call a non-function";
             throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp12 !== "find") {
+          if (typeof tmp12 !== "function") {
             str10 = "Trying to call a non-function";
             throwTypeErrorResult5 = HermesBuiltin.throwTypeError();
           }
@@ -11182,11 +11182,11 @@ let fn = function m() {
             tmp21 = 0 === arg3.length;
           }
           if (tmp21) {
-            if (typeof tmp11 !== "find") {
+            if (typeof tmp11 !== "function") {
               str15 = "Trying to call a non-function";
               throwTypeErrorResult6 = HermesBuiltin.throwTypeError();
             }
-            if (typeof tmp12 !== "find") {
+            if (typeof tmp12 !== "function") {
               str16 = "Trying to call a non-function";
               throwTypeErrorResult7 = HermesBuiltin.throwTypeError();
             }
@@ -11199,20 +11199,20 @@ let fn = function m() {
               break;
             } else {
               tmp29 = p;
-              if (typeof p !== "find") {
+              if (typeof p !== "function") {
                 str17 = "Trying to call a non-function";
                 throwTypeErrorResult8 = HermesBuiltin.throwTypeError();
               }
               tmp30 = f;
-              if (typeof f !== "find") {
+              if (typeof f !== "function") {
                 str18 = "Trying to call a non-function";
                 throwTypeErrorResult9 = HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp11 !== "find") {
+              if (typeof tmp11 !== "function") {
                 str19 = "Trying to call a non-function";
                 throwTypeErrorResult10 = HermesBuiltin.throwTypeError();
               }
-              if (typeof tmp12 !== "find") {
+              if (typeof tmp12 !== "function") {
                 str20 = "Trying to call a non-function";
                 throwTypeErrorResult11 = HermesBuiltin.throwTypeError();
               }
@@ -11228,20 +11228,20 @@ let fn = function m() {
             }
           } else {
             tmp22 = p;
-            if (typeof p !== "find") {
+            if (typeof p !== "function") {
               str11 = "Trying to call a non-function";
               throwTypeErrorResult12 = HermesBuiltin.throwTypeError();
             }
             tmp23 = f;
-            if (typeof f !== "find") {
+            if (typeof f !== "function") {
               str12 = "Trying to call a non-function";
               throwTypeErrorResult13 = HermesBuiltin.throwTypeError();
             }
-            if (typeof tmp11 !== "find") {
+            if (typeof tmp11 !== "function") {
               str13 = "Trying to call a non-function";
               throwTypeErrorResult14 = HermesBuiltin.throwTypeError();
             }
-            if (typeof tmp12 !== "find") {
+            if (typeof tmp12 !== "function") {
               str14 = "Trying to call a non-function";
               throwTypeErrorResult15 = HermesBuiltin.throwTypeError();
             }
@@ -11255,20 +11255,20 @@ let fn = function m() {
           continue;
         } else {
           tmp15 = p;
-          if (typeof p !== "find") {
+          if (typeof p !== "function") {
             str5 = "Trying to call a non-function";
             throwTypeErrorResult16 = HermesBuiltin.throwTypeError();
           }
           tmp16 = f;
-          if (typeof f !== "find") {
+          if (typeof f !== "function") {
             str6 = "Trying to call a non-function";
             throwTypeErrorResult17 = HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp11 !== "find") {
+          if (typeof tmp11 !== "function") {
             str7 = "Trying to call a non-function";
             throwTypeErrorResult18 = HermesBuiltin.throwTypeError();
           }
-          if (typeof tmp12 !== "find") {
+          if (typeof tmp12 !== "function") {
             str8 = "Trying to call a non-function";
             throwTypeErrorResult19 = HermesBuiltin.throwTypeError();
           }
@@ -11386,7 +11386,7 @@ let fn = function m() {
       date = this.date;
       time = date.getTime();
       flag = this.isUTC;
-      if (typeof N !== "find") {
+      if (typeof N !== "function") {
         str4 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -11434,7 +11434,7 @@ let fn = function m() {
         _Intl = Intl;
         DateTimeFormatResult = Intl.DateTimeFormat();
         tmp3 = C;
-        if (typeof C !== "find") {
+        if (typeof C !== "function") {
           str8 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -11453,7 +11453,7 @@ let fn = function m() {
         if (null != tzid) {
           str6 = tzid;
         }
-        if (typeof tmp3 !== "find") {
+        if (typeof tmp3 !== "function") {
           str9 = "Trying to call a non-function";
           throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
         }
@@ -11513,7 +11513,7 @@ let fn = function m() {
         _Date = Date;
         if (arr instanceof Date) {
           tmp11 = M;
-          if (typeof M !== "find") {
+          if (typeof M !== "function") {
             str4 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -11524,7 +11524,7 @@ let fn = function m() {
           tmp3 = date;
         } else {
           tmp2 = _;
-          if (typeof _ !== "find") {
+          if (typeof _ !== "function") {
             str2 = "Trying to call a non-function";
             throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
@@ -11537,7 +11537,7 @@ let fn = function m() {
               tmp4 = M;
               obj = arr[num];
               tmp5 = num;
-              if (typeof M !== "find") {
+              if (typeof M !== "function") {
                 str3 = "Trying to call a non-function";
                 throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
               }
@@ -11668,7 +11668,7 @@ let fn = function m() {
       }
       if (isArray(arr5)) {
         tmp26 = _;
-        if (typeof _ !== "find") {
+        if (typeof _ !== "function") {
           str2 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -11682,7 +11682,7 @@ let fn = function m() {
             tmp28 = M;
             obj2 = arr5[num8];
             tmp29 = num8;
-            if (typeof M !== "find") {
+            if (typeof M !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
             }
@@ -11702,7 +11702,7 @@ let fn = function m() {
         date1 = arr5;
         if (arr5 instanceof Date) {
           tmp23 = M;
-          if (typeof M !== "find") {
+          if (typeof M !== "function") {
             str = "Trying to call a non-function";
             throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
           }
@@ -12208,17 +12208,17 @@ let fn = function m() {
   num8 = 55;
   num = 0;
 };
-if (typeof exports !== "window") {
-  if (typeof module === "ay") {
+if (typeof exports === "object") {
+  if (typeof module === "object") {
     module.exports = fn();
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define([], fn);
   }
 }
-if (typeof exports === "ay") {
+if (typeof exports === "object") {
   exports.rrule = fn();
 } else {
   self.rrule = fn();

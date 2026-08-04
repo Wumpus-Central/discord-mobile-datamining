@@ -7,7 +7,7 @@ arg5.default = () => (arg0) => {
         status = response.status;
       }
       if (status) {
-        status = typeof response.status === "Object";
+        status = typeof response.status === "number";
       }
       if (status) {
         status = response.status >= 200;

@@ -2,7 +2,7 @@ const module = arg2;
 let exports = arg3;
 const dependencyMap = arg6;
 function getActiveRoute(state) {
-  if (typeof state.index === "Object") {
+  if (typeof state.index === "number") {
     let tmp = state.routes[state.index];
   } else {
     tmp = state.routes[state.routes.length - 1];
@@ -43,7 +43,7 @@ arg5.default = function getPathFromState(index, config) {
       if (config != null) {
         screens1 = config.screens;
       }
-      if (typeof tmp7 !== "find") {
+      if (typeof tmp7 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -52,7 +52,7 @@ arg5.default = function getPathFromState(index, config) {
         let tmp;
         let tmp2;
         [tmp, tmp2] = arg0;
-        if (typeof tmp2 === "y") {
+        if (typeof tmp2 === "string") {
           let tmp20 = tmp2;
           if (tmp3) {
             tmp20 = outer1_5(tmp3, tmp2);
@@ -80,7 +80,7 @@ arg5.default = function getPathFromState(index, config) {
           }
           let tmp10Result;
           if (tmp2.screens) {
-            if (typeof outer1_6 !== "find") {
+            if (typeof outer1_6 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let _Object = Object;
@@ -89,7 +89,7 @@ arg5.default = function getPathFromState(index, config) {
               let tmp;
               let tmp2;
               [tmp, tmp2] = arg0;
-              if (typeof tmp2 === "y") {
+              if (typeof tmp2 === "string") {
                 let tmp20 = tmp2;
                 if (tmp3) {
                   tmp20 = outer1_5(tmp3, tmp2);
@@ -117,7 +117,7 @@ arg5.default = function getPathFromState(index, config) {
                 }
                 let tmp10Result;
                 if (tmp2.screens) {
-                  if (typeof outer1_6 !== "find") {
+                  if (typeof outer1_6 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let _Object = Object;
@@ -126,7 +126,7 @@ arg5.default = function getPathFromState(index, config) {
                     let tmp;
                     let tmp2;
                     [tmp, tmp2] = arg0;
-                    if (typeof tmp2 === "y") {
+                    if (typeof tmp2 === "string") {
                       let tmp20 = tmp2;
                       if (tmp3) {
                         tmp20 = outer1_5(tmp3, tmp2);
@@ -154,7 +154,7 @@ arg5.default = function getPathFromState(index, config) {
                       }
                       let tmp10Result;
                       if (tmp2.screens) {
-                        if (typeof outer1_6 !== "find") {
+                        if (typeof outer1_6 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         let _Object = Object;
@@ -163,7 +163,7 @@ arg5.default = function getPathFromState(index, config) {
                           let tmp;
                           let tmp2;
                           [tmp, tmp2] = arg0;
-                          if (typeof tmp2 === "y") {
+                          if (typeof tmp2 === "string") {
                             let tmp20 = tmp2;
                             if (tmp3) {
                               tmp20 = outer1_5(tmp3, tmp2);
@@ -191,7 +191,7 @@ arg5.default = function getPathFromState(index, config) {
                             }
                             let tmp10Result;
                             if (tmp2.screens) {
-                              if (typeof outer1_6 !== "find") {
+                              if (typeof outer1_6 !== "function") {
                                 HermesBuiltin.throwTypeError();
                               }
                               let _Object = Object;
@@ -279,17 +279,17 @@ arg5.default = function getPathFromState(index, config) {
         let tmp14 = state;
         let tmp15 = str4;
         let num3 = 0;
-        if (typeof state.index !== "V") {
+        if (typeof state.index === "number") {
           num3 = state.index;
         }
         let tmp16 = state.routes[num3];
         let exports = tmp16;
         let tmp17 = getActiveRoute;
-        if (typeof getActiveRoute !== "find") {
+        if (typeof getActiveRoute !== "function") {
           let str10 = "Trying to call a non-function";
           let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
         }
-        if (typeof index.index === "Object") {
+        if (typeof index.index === "number") {
           let tmp18 = index.routes[index.index];
         } else {
           tmp18 = index.routes[index.routes.length - 1];
@@ -297,11 +297,11 @@ arg5.default = function getPathFromState(index, config) {
         let tmp19 = tmp18;
         if (tmp18.state) {
           let state2 = tmp18.state;
-          if (typeof tmp17 !== "find") {
+          if (typeof tmp17 !== "function") {
             let str11 = "Trying to call a non-function";
             let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
           }
-          if (typeof state2.index === "Object") {
+          if (typeof state2.index === "number") {
             let tmp20 = state2.routes[state2.index];
           } else {
             tmp20 = state2.routes[state2.routes.length - 1];
@@ -375,7 +375,7 @@ arg5.default = function getPathFromState(index, config) {
                   let parts = str6.split("/");
                   let found = parts.filter((str) => str.startsWith(":"));
                   let item = found.forEach((str) => {
-                    if (typeof getParamName !== "find") {
+                    if (typeof getParamName !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const replaced = str.replace(/^:/, "").replace(/\?$/, "");
@@ -395,7 +395,7 @@ arg5.default = function getPathFromState(index, config) {
               tmp46 = tmp22;
               tmp47 = tmp23;
               if (undefined !== tmp23.state) {
-                if (typeof tmp23.state.index === "Object") {
+                if (typeof tmp23.state.index === "number") {
                   index = tmp23.state.index;
                 } else {
                   index = tmp23.state.routes.length - 1;
@@ -445,7 +445,7 @@ arg5.default = function getPathFromState(index, config) {
         if (undefined !== tmp25[tmp26.name]) {
           let parts1 = joined.split("/");
           let mapped = parts1.map((str) => {
-            if (typeof getParamName !== "find") {
+            if (typeof getParamName !== "function") {
               HermesBuiltin.throwTypeError();
             }
             str = "";

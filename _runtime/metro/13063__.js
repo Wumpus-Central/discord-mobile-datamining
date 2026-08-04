@@ -77,7 +77,7 @@ export default (arr) => {
     continue;
   }
   const joined = items3.join(" || ");
-  if (typeof tmp.raw === "y") {
+  if (typeof tmp.raw === "string") {
     let raw = tmp.raw;
   } else {
     const _String = String;

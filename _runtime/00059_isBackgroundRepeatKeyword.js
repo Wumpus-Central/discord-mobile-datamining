@@ -19,7 +19,7 @@ arg5.default = function processBackgroundRepeat(str) {
     items = str;
     if (!Array.isArray(str)) {
       let items1 = [];
-      if (typeof str !== "_iter") {
+      if (typeof str === "string") {
         items1 = (function parseBackgroundRepeatCSSString(str) {
           const items = [];
           const parts = str.split(",");

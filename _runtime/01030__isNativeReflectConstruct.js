@@ -31,7 +31,7 @@ class BrowserClient {
     self = this;
     tmp = apply;
     tmp2 = _isNativeReflectConstruct(this, apply);
-    if (typeof globalThis.__SENTRY_RELEASE__ === "y") {
+    if (typeof globalThis.__SENTRY_RELEASE__ === "string") {
       id = globalThis.__SENTRY_RELEASE__;
     } else {
       tmp16 = BrowserClient;
@@ -157,7 +157,7 @@ let items = [
       const self = this;
       let fn;
       fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", this);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [platform, arg1, arg2, arg3];
@@ -168,7 +168,7 @@ let items = [
 
 export const BrowserClient = _createClass(BrowserClient, items);
 export const applyDefaultOptions = function applyDefaultOptions(arg0) {
-  if (typeof globalThis.__SENTRY_RELEASE__ === "y") {
+  if (typeof globalThis.__SENTRY_RELEASE__ === "string") {
     let id = globalThis.__SENTRY_RELEASE__;
   } else {
     const SENTRY_RELEASE = BrowserClient(1028).WINDOW.SENTRY_RELEASE;

@@ -65,7 +65,7 @@ export const useVisibleRanges = function useVisibleRanges(total) {
       negativeRange = [];
     }
     const negativeRange1 = obj.negativeRange;
-    if (typeof windowSize !== "find") {
+    if (typeof windowSize !== "function") {
       HermesBuiltin.throwTypeError();
     }
     positiveRange1 = negativeRange1;
@@ -80,7 +80,7 @@ export const useVisibleRanges = function useVisibleRanges(total) {
         positiveRange = [];
       }
       positiveRange1 = obj.positiveRange;
-      if (typeof tmp9 !== "find") {
+      if (typeof tmp9 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       tmp11 = positiveRange.length === positiveRange1.length && positiveRange.every((arg0, arg1) => arg0 === positiveRange1[arg1]);

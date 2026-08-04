@@ -18,27 +18,27 @@ export const Custom = (activeDotStyle) => {
   const data = activeDotStyle.data;
   let num = activeDotStyle.size;
   ({ renderItem: closure_6, onPress: closure_7, customReanimatedStyle: closure_8, carouselName: closure_9 } = activeDotStyle);
-  if (typeof num !== "y") {
+  if (typeof num !== "string") {
     let width;
     if (dotStyle != null) {
       width = dotStyle.width;
     }
-    if (typeof width !== "y") {
+    if (typeof width !== "string") {
       let height;
       if (dotStyle != null) {
         height = dotStyle.height;
       }
-      if (typeof height !== "y") {
+      if (typeof height !== "string") {
         let width1;
         if (activeDotStyle != null) {
           width1 = activeDotStyle.width;
         }
-        if (typeof width1 !== "y") {
+        if (typeof width1 !== "string") {
           let height1;
           if (activeDotStyle != null) {
             height1 = activeDotStyle.height;
           }
-          if (typeof height1 !== "y") {
+          if (typeof height1 !== "string") {
             let num2 = num;
             if (num == null) {
               num2 = 0;

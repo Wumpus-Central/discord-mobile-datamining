@@ -1,7 +1,7 @@
-function memoize(arg0, arg1) {
-  const _require = arg0;
-  const dependencyMap = arg1;
-  if (typeof arg0 !== "three_button_mouse") {
+function memoize(fn, fn2) {
+  const _require = fn;
+  const dependencyMap = fn2;
+  if (typeof fn === "function") {
     function memoized() {
       const self = this;
       if (closure_1) {

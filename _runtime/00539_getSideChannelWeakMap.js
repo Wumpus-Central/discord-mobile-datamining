@@ -13,27 +13,27 @@ if (tmp) {
           throw tmp3;
         }
       },
-      delete(arg0) {
+      delete(obj) {
         if (obj) {
-          if (arg0) {
+          if (obj) {
             if (closure_0) {
-              return outer1_6(tmp, arg0);
+              return outer1_6(tmp, obj);
             }
           }
           return false;
         }
         if (outer1_0(outer1_1[4])) {
           if (closure_1) {
-            return obj.delete(arg0);
+            return obj.delete(obj);
           }
         }
       },
-      get(arg0) {
+      get(obj) {
         if (obj) {
-          if (arg0) {
-            if (typeof arg0 === "ay") {
+          if (obj) {
+            if (typeof obj === "object") {
               if (closure_0) {
-                let value = outer1_3(tmp, arg0);
+                let value = outer1_3(tmp, obj);
               }
               return value;
             }
@@ -41,15 +41,15 @@ if (tmp) {
         }
         value = closure_1;
         if (closure_1) {
-          value = obj.get(arg0);
+          value = obj.get(obj);
         }
       },
-      has(arg0) {
+      has(obj) {
         if (obj) {
-          if (arg0) {
-            if (typeof arg0 === "ay") {
+          if (obj) {
+            if (typeof obj === "object") {
               if (closure_0) {
-                let hasItem = outer1_5(tmp, arg0);
+                let hasItem = outer1_5(tmp, obj);
               }
               return hasItem;
             }
@@ -57,19 +57,19 @@ if (tmp) {
         }
         hasItem = set;
         if (hasItem) {
-          hasItem = set.has(arg0);
+          hasItem = set.has(obj);
         }
       },
-      set(arg0, arg1) {
+      set(obj) {
         if (obj) {
-          if (arg0) {
+          if (obj) {
             let tmp6 = closure_0;
             if (!closure_0) {
               tmp = new tmp();
               closure_0 = tmp;
               tmp6 = tmp;
             }
-            outer1_4(tmp6, arg0, arg1);
+            outer1_4(tmp6, obj, arg1);
           }
         }
         if (outer1_0(outer1_1[4])) {
@@ -79,7 +79,7 @@ if (tmp) {
             closure_1 = tmp4;
             obj = tmp4;
           }
-          const result = obj.set(arg0, arg1);
+          const result = obj.set(obj, arg1);
         }
       }
     };

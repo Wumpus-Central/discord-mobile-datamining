@@ -121,7 +121,7 @@ class AnimatedProps {
         }
         if ("style" === tmp10) {
           tmp17 = tmp11;
-          if (typeof tmp11 !== "window") {
+          if (typeof tmp11 === "object") {
             tmp17 = tmp11;
             if (null != tmp11) {
               tmp18 = closure_1;
@@ -290,7 +290,7 @@ let items = [
         let __addChildResult = obj.__addChild(self);
       }
       let fn = callback4(callback3(self.prototype), "__attach", self);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -315,7 +315,7 @@ let items = [
         let __removeChildResult = obj.__removeChild(self);
       }
       let fn = callback4(callback3(self.prototype), "__detach", self);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -340,7 +340,7 @@ let items = [
         self.__isNative = true;
         let fn;
         fn = callback4(callback3(self.prototype), "__setPlatformConfig", self);
-        if (typeof fn !== "three_button_mouse") {
+        if (typeof fn === "function") {
           fn = (items) => fn.apply(self, items);
         }
         const items = [arg0];
@@ -357,16 +357,16 @@ let items = [
   },
   {
     key: "setNativeView",
-    value: function setNativeView(getScrollableNode) {
+    value: function setNativeView(arg0) {
       const self = this;
       const _target = this._target;
       let instance;
       if (_target != null) {
         instance = _target.instance;
       }
-      if (instance !== getScrollableNode) {
+      if (instance !== arg0) {
         const obj = { instance: null, connectedViewTag: null };
-        obj[0] = getScrollableNode;
+        obj[0] = arg0;
         self._target = obj;
         if (self.__isNative) {
           callback5(self, closure_11)[closure_11](obj);

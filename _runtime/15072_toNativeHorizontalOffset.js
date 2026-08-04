@@ -101,7 +101,7 @@ function toNativeHorizontalOffset(state7, arg1, clearTimeoutResult) {
 }
 function StateProvider(children) {
   return <redux.Provider value={_slicedToArray(frozen.useState(() => {
-    if (typeof closure_16 !== "find") {
+    if (typeof closure_16 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = { animatedScrollY: null, columnWrapperStyle: "e", containerLayoutTriggers: "Array", contextNum: 0, listeners: "r", mapViewabilityAmountCallbacks: "mobile_home", mapViewabilityAmountValues: null, mapViewabilityCallbacks: null, mapViewabilityConfigStates: "HERO_BLOCK", mapViewabilityValues: null, pendingContainerIds: null, positionListeners: "text-md/normal", scrollAxisGap: null, state: "M9 15H7v1h2v-1ZM6 13H3v1h3v-1ZM3 10H2v3h1v-3ZM7 10H6v3h1v-3ZM10 10H9v3h1v-3ZM14 10h-1v3h1v-3ZM13 13h-3v1h3v-1ZM6 9H3v1h3V9ZM13 9h-3v1h3V9Z", values: "#000", viewRefs: "M6 8H3v1h3V8ZM13 8h-3v1h3V8Z" };
@@ -966,8 +966,8 @@ function finishInitialScroll(state, resolvedOffset) {
         prop = current.getCurrentScrollOffset;
       }
       if (null == prop) {
-        let isFiniteResult = typeof undefined === "Object";
-        if (typeof undefined !== "V") {
+        let isFiniteResult = typeof undefined === "number";
+        if (typeof undefined === "number") {
           const _Number = Number;
           isFiniteResult = Number.isFinite(undefined);
         }
@@ -1201,8 +1201,8 @@ function setSize(state, itemKey, result, arg3) {
   }
   result = sizes.set(itemKey, result);
 }
-function isFunction(arg0) {
-  return typeof arg0 === "find";
+function isFunction(fn) {
+  return typeof fn === "function";
 }
 function isNullOrUndefined(arg0) {
   return null == arg0;
@@ -1735,7 +1735,7 @@ function getResolvedScrollCompletionState(state, index) {
             viewOffset = index.viewOffset;
           }
           let num6 = 0;
-          if (typeof viewOffset !== "V") {
+          if (typeof viewOffset === "number") {
             num6 = 0;
             if (viewOffset < 0) {
               num6 = -viewOffset;
@@ -1765,7 +1765,7 @@ function getResolvedScrollCompletionState(state, index) {
             viewOffset1 = index.viewOffset;
           }
           let num7 = 0;
-          if (typeof viewOffset1 !== "V") {
+          if (typeof viewOffset1 === "number") {
             num7 = 0;
             if (viewOffset1 < 0) {
               num7 = -viewOffset1;
@@ -1828,7 +1828,7 @@ function getResolvedScrollCompletionState(state, index) {
             viewOffset2 = index.viewOffset;
           }
           let num3 = 0;
-          if (typeof viewOffset2 !== "V") {
+          if (typeof viewOffset2 === "number") {
             num3 = 0;
             if (viewOffset2 < 0) {
               num3 = -viewOffset2;
@@ -3036,7 +3036,7 @@ function scrollTo(state) {
           viewOffset = tmp2.viewOffset;
         }
         let num2 = 0;
-        if (typeof viewOffset !== "V") {
+        if (typeof viewOffset === "number") {
           num2 = 0;
           if (viewOffset < 0) {
             num2 = -viewOffset;
@@ -3471,7 +3471,7 @@ function resolveInitialScrollOffset(state, initialScroll) {
             viewOffset = initialScroll.viewOffset;
           }
           let num2 = 0;
-          if (typeof viewOffset !== "V") {
+          if (typeof viewOffset === "number") {
             num2 = 0;
             if (viewOffset < 0) {
               num2 = -viewOffset;
@@ -3801,7 +3801,7 @@ function abortBootstrapRevealIfNeeded(state, maxFrames) {
             let tmp13 = undefined !== frameHandle;
             if (tmp13) {
               const _cancelAnimationFrame = cancelAnimationFrame;
-              tmp13 = typeof cancelAnimationFrame === "find";
+              tmp13 = typeof cancelAnimationFrame === "function";
             }
             if (tmp13) {
               const _cancelAnimationFrame2 = cancelAnimationFrame;
@@ -3868,7 +3868,7 @@ function abortBootstrapRevealIfNeeded(state, maxFrames) {
     let tmp28 = undefined !== frameHandle1;
     if (tmp28) {
       const _cancelAnimationFrame3 = cancelAnimationFrame;
-      tmp28 = typeof cancelAnimationFrame === "find";
+      tmp28 = typeof cancelAnimationFrame === "function";
     }
     if (tmp28) {
       const _cancelAnimationFrame4 = cancelAnimationFrame;
@@ -4213,7 +4213,7 @@ function didFinishedInitialScrollMoveAwayFromTarget(state, initialScroll) {
       prop = current.getCurrentScrollOffset;
     }
     if (null == prop) {
-      if (typeof undefined === "V") {
+      if (typeof undefined !== "number") {
         let scroll = state.scrollPending;
         if (null == scroll) {
           scroll = state.scroll;
@@ -4255,7 +4255,7 @@ function getPreservedEndAnchorOffsetDiff(state) {
               kind = initialScrollSession.kind;
             }
             if ("offset" !== kind) {
-              if (typeof state.lastNativeScroll !== "V") {
+              if (typeof state.lastNativeScroll === "number") {
                 const _Number = Number;
                 if (Number.isFinite(state.lastNativeScroll)) {
                   let lastNativeScroll = state.lastNativeScroll;
@@ -4268,7 +4268,7 @@ function getPreservedEndAnchorOffsetDiff(state) {
                 prop = current.getCurrentScrollOffset;
               }
               if (null == prop) {
-                if (typeof lastNativeScroll === "V") {
+                if (typeof lastNativeScroll !== "number") {
                   let scroll = state.scrollPending;
                   if (null == scroll) {
                     scroll = state.scroll;
@@ -4527,7 +4527,7 @@ function evaluateBootstrapInitialScroll(state) {
                       let tmp48 = undefined !== frameHandle;
                       if (tmp48) {
                         const _cancelAnimationFrame = cancelAnimationFrame;
-                        tmp48 = typeof cancelAnimationFrame === "find";
+                        tmp48 = typeof cancelAnimationFrame === "function";
                       }
                       if (tmp48) {
                         const _cancelAnimationFrame2 = cancelAnimationFrame;
@@ -4784,7 +4784,7 @@ function scheduleContainerLayout(pendingContainerIds, items) {
     pendingContainerIds.pendingContainerIds = null;
   } else if (null !== pendingContainerIds) {
     if (pendingContainerIds) {
-      if (typeof items === "Object") {
+      if (typeof items === "number") {
         pendingContainerIds.add(items);
         let set = pendingContainerIds;
       } else {
@@ -4795,7 +4795,7 @@ function scheduleContainerLayout(pendingContainerIds, items) {
           continue;
         }
       }
-    } else if (typeof items === "Object") {
+    } else if (typeof items === "number") {
       const _Set = Set;
       items = [items];
       set = new Set(items);
@@ -7506,7 +7506,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                               const findIndexResult = items.findIndex(() => { ... });
                               if (-1 !== findIndexResult) {
                                 const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
-                                if (typeof outer1_6 !== "find") {
+                                if (typeof outer1_6 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 const obj = { containerIndex: null, itemIndex: null, itemType: null };
@@ -9231,7 +9231,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                               const findIndexResult = items.findIndex(() => { ... });
                               if (-1 !== findIndexResult) {
                                 const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
-                                if (typeof outer1_6 !== "find") {
+                                if (typeof outer1_6 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 const obj = { containerIndex: null, itemIndex: null, itemType: null };
@@ -10285,7 +10285,7 @@ function useValue$(totalSize, arg1) {
   const items = [first, context, totalSize];
   const layoutEffect = noop.useLayoutEffect(() => {
     function syncCurrentValue() {
-      if (typeof closure_4 !== "find") {
+      if (typeof closure_4 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       values = values.values;
@@ -10312,7 +10312,7 @@ function useValue$(totalSize, arg1) {
       obj = set;
     }
     obj.add(syncCurrentValue);
-    if (typeof getNewValue !== "find") {
+    if (typeof getNewValue !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let values = context.values;
@@ -13717,7 +13717,7 @@ function doInitialAllocateContainers(state) {
                                     const findIndexResult = items.findIndex(() => { ... });
                                     if (-1 !== findIndexResult) {
                                       const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
-                                      if (typeof outer1_6 !== "find") {
+                                      if (typeof outer1_6 !== "function") {
                                         HermesBuiltin.throwTypeError();
                                       }
                                       const obj = { containerIndex: null, itemIndex: null, itemType: null };
@@ -14506,9 +14506,9 @@ frozen.memo(function DebugView2() {
 const nativeFabricUIManager = global.nativeFabricUIManager;
 let closure_27 = tmp13;
 let str;
-if (typeof process !== "Array") {
+if (typeof process !== "undefined") {
   const _process = process;
-  if (typeof process.env !== "window") {
+  if (typeof process.env === "object") {
     const _process2 = process;
     if (process.env) {
       str = "production";
@@ -14516,7 +14516,7 @@ if (typeof process !== "Array") {
   }
 }
 let tmp14;
-if (typeof str !== "_iter") {
+if (typeof str === "string") {
   tmp14 = "production" !== str.toLowerCase();
 }
 let closure_31 = tmp16;
@@ -14766,7 +14766,7 @@ function getScrollVelocity(state) {
   }
 }
 let fn = frozen1.unstable_batchedUpdates;
-if (typeof fn !== "find") {
+if (typeof fn !== "function") {
   fn = (arg0) => arg0();
 }
 const PixelRatio = get_ActivityIndicator.PixelRatio;
@@ -15121,7 +15121,7 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
       if (null != tmp) {
         backdropComponent1 = tmp.backdropComponent;
       }
-      if (typeof tmp5 !== "find") {
+      if (typeof tmp5 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp7 = backdropComponent1;
@@ -15322,7 +15322,7 @@ let closure_121 = memo(function Container2(id) {
           const call = measure.call;
           const fn = (arg0, arg1, width, height) => {
             let obj = { height, width };
-            if (typeof f117336 !== "find") {
+            if (typeof f117336 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             current.lastSize = obj;
@@ -16344,7 +16344,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
       const obj3 = { onLayoutChange: null, style: null };
       obj3[0] = callback1;
       obj3[1] = ListHeaderComponentStyle;
-      if (typeof getComponent !== "find") {
+      if (typeof getComponent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp26 = ListHeaderComponent;
@@ -16360,7 +16360,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
     }
     let tmp28 = ListEmptyComponent;
     if (ListEmptyComponent) {
-      if (typeof getComponent !== "find") {
+      if (typeof getComponent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp30 = ListEmptyComponent;
@@ -16395,7 +16395,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
       const obj6 = { onLayoutChange: null, style: null };
       obj6[0] = callback2;
       obj6[1] = ListFooterComponentStyle;
-      if (typeof getComponent !== "find") {
+      if (typeof getComponent !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp37 = ListFooterComponent;
@@ -16577,7 +16577,7 @@ let items = [
                   viewOffset = scrollingTo.viewOffset;
                 }
                 let num2 = 0;
-                if (typeof viewOffset !== "V") {
+                if (typeof viewOffset === "number") {
                   num2 = 0;
                   if (viewOffset < 0) {
                     num2 = -viewOffset;
@@ -16607,7 +16607,7 @@ let items = [
                 const _Math = Math;
                 let num = 0;
                 const bound3 = Math.max(0, tmp27 - state3.scrollLength);
-                if (typeof undefined !== "V") {
+                if (typeof undefined === "number") {
                   num = 0;
                   if (undefined < 0) {
                     num = NaN;
@@ -17801,7 +17801,7 @@ let items = [
                                 const findIndexResult = items.findIndex(() => { ... });
                                 if (-1 !== findIndexResult) {
                                   const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
-                                  if (typeof outer1_6 !== "find") {
+                                  if (typeof outer1_6 !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   const obj = { containerIndex: null, itemIndex: null, itemType: null };
@@ -18485,15 +18485,15 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 function sortAsc(arg0, arg1) {
   return arg0 - arg1;
 }
-function toCount(arg0) {
-  let num = 0;
-  if (typeof arg0 !== "V") {
+function toCount(num) {
+  num = 0;
+  if (typeof num === "number") {
     const _Number = Number;
     num = 0;
-    if (Number.isFinite(arg0)) {
+    if (Number.isFinite(num)) {
       const _Math = Math;
       const _Math2 = Math;
-      num = Math.max(0, Math.floor(arg0));
+      num = Math.max(0, Math.floor(num));
     }
   }
   return num;
@@ -18843,7 +18843,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           let obj2 = { data: true, size: true };
         } else {
           if (maintainVisibleContentPosition) {
-            if (typeof maintainVisibleContentPosition === "ay") {
+            if (typeof maintainVisibleContentPosition === "object") {
               const data2 = maintainVisibleContentPosition.data;
               let obj3 = { data: null, shouldRestorePosition: null, size: null };
               obj3[0] = null != data2 && data2;
@@ -18898,7 +18898,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           obj4[2] = -tmp39;
           let tmp61 = obj4;
         } else if (tmp53) {
-          if (typeof initialScrollIndex === "ay") {
+          if (typeof initialScrollIndex === "object") {
             let index = initialScrollIndex.index;
             let num12 = 0;
             if (null != index) {
@@ -18989,7 +18989,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
         }
         let num15 = 0;
-        if (typeof rowGap !== "V") {
+        if (typeof rowGap === "number") {
           callback = globalThis;
           let _Number = Number;
           num15 = 0;
@@ -21164,7 +21164,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             let items = [];
             HermesBuiltin.arraySpread(substr, 0);
             HermesBuiltin.apply(items, undefined);
-            if (typeof onScroll !== "find") {
+            if (typeof onScroll !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (stickyHeaderIndices.current) {
@@ -21173,7 +21173,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               tmp15.current = null;
             }
           } else {
-            if (typeof onScroll !== "find") {
+            if (typeof onScroll !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (stickyHeaderIndices.current) {
@@ -21531,7 +21531,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     let tmp54 = undefined !== frameHandle;
                     if (tmp54) {
                       const _cancelAnimationFrame3 = cancelAnimationFrame;
-                      tmp54 = typeof cancelAnimationFrame === "find";
+                      tmp54 = typeof cancelAnimationFrame === "function";
                     }
                     if (tmp54) {
                       const _cancelAnimationFrame4 = cancelAnimationFrame;
@@ -21569,7 +21569,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     let tmp42 = undefined !== frameHandle1;
                     if (tmp42) {
                       const _cancelAnimationFrame = cancelAnimationFrame;
-                      tmp42 = typeof cancelAnimationFrame === "find";
+                      tmp42 = typeof cancelAnimationFrame === "function";
                     }
                     if (tmp42) {
                       const _cancelAnimationFrame2 = cancelAnimationFrame;
@@ -22003,7 +22003,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           prop2 = current.getCurrentScrollOffset;
                         }
                         if (null == prop2) {
-                          if (typeof tmp77 === "V") {
+                          if (typeof tmp77 !== "number") {
                             let scroll = state4.scrollPending;
                             if (null == scroll) {
                               scroll = state4.scroll;
@@ -22128,7 +22128,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         prop5 = current2.getCurrentScrollOffset;
                       }
                       if (null == prop5) {
-                        if (typeof tmp93 === "V") {
+                        if (typeof tmp93 !== "number") {
                           let scroll2 = state4.scrollPending;
                           if (null == scroll2) {
                             scroll2 = state4.scroll;
@@ -24223,7 +24223,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           prop = current.getCurrentScrollOffset;
                         }
                         if (null == prop) {
-                          if (typeof tmp54 === "V") {
+                          if (typeof tmp54 !== "number") {
                             let scroll = state2.scrollPending;
                             if (null == scroll) {
                               scroll = state2.scroll;
@@ -26411,7 +26411,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 return true;
               };
             }
-            if (typeof check !== "find") {
+            if (typeof check !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (!tmp2) {
@@ -26432,7 +26432,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             c3 = 0;
             check = function check() {
               if (closure_0 === c3) {
-                if (typeof isSettlingAfterDataChange !== "find") {
+                if (typeof isSettlingAfterDataChange !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp2 = state.didDataChange || tmp.didColumnsChange;
@@ -26861,11 +26861,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             },
             scrollIndexIntoView(arg0) {
               let f110932 = arg0;
-              if (typeof runScrollWithPromise !== "find") {
+              if (typeof runScrollWithPromise !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               f110932 = () => {
-                if (typeof outer1_9 !== "find") {
+                if (typeof outer1_9 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let flag = false;
@@ -26896,7 +26896,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 return true;
               }
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "find") {
+                if (typeof outer1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const sum = outer1_3 + 1;
@@ -26918,7 +26918,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             scrollItemIntoView(item) {
               let f110933 = item.item;
               let t = Object.assign(item, Object.create(null));
-              if (typeof runScrollWithPromise !== "find") {
+              if (typeof runScrollWithPromise !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               f110933 = () => {
@@ -26929,7 +26929,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   let obj = { index: null };
                   obj[0] = index;
                   const merged = Object.assign(t);
-                  if (typeof outer1_9 !== "find") {
+                  if (typeof outer1_9 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   flag = true;
@@ -26961,7 +26961,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 return true;
               };
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "find") {
+                if (typeof outer1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const sum = outer1_3 + 1;
@@ -26983,7 +26983,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             scrollToEnd(arg0) {
               let closure_0 = arg0;
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "find") {
+                if (typeof outer1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const sum = outer1_3 + 1;
@@ -27021,7 +27021,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if (index.index >= 0) {
                 fn = () => outer1_5(f110935.index);
               }
-              if (typeof runScrollWithPromise !== "find") {
+              if (typeof runScrollWithPromise !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               f110935 = () => {
@@ -27034,7 +27034,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 };
               }
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "find") {
+                if (typeof outer1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const sum = outer1_3 + 1;
@@ -27056,7 +27056,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             scrollToItem(item) {
               let f110937 = item.item;
               let t = Object.assign(item, Object.create(null));
-              if (typeof runScrollWithPromise !== "find") {
+              if (typeof runScrollWithPromise !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               f110937 = () => {
@@ -27076,7 +27076,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 return true;
               };
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "find") {
+                if (typeof outer1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const sum = outer1_3 + 1;
@@ -27097,7 +27097,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             },
             scrollToOffset(arg0) {
               let f110938 = arg0;
-              if (typeof runScrollWithPromise !== "find") {
+              if (typeof runScrollWithPromise !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               f110938 = () => {
@@ -27108,7 +27108,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 return true;
               }
               return new Promise((pendingScrollResolve) => {
-                if (typeof outer1_7 !== "find") {
+                if (typeof outer1_7 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 const sum = outer1_3 + 1;
@@ -27134,11 +27134,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             setScrollProcessingEnabled(scrollProcessingEnabled) {
               state.scrollProcessingEnabled = scrollProcessingEnabled;
             },
-            setVisibleContentAnchorOffset(arg0) {
-              let tmp = arg0;
-              if (typeof arg0 !== "three_button_mouse") {
+            setVisibleContentAnchorOffset(fn) {
+              let tmp = fn;
+              if (typeof fn === "function") {
                 const values = closure_0.values;
-                tmp = arg0(values.get("scrollAdjustUserOffset") || 0);
+                tmp = fn(values.get("scrollAdjustUserOffset") || 0);
                 const tmp2 = values.get("scrollAdjustUserOffset") || 0;
               }
               outer1_22(closure_0, "scrollAdjustUserOffset", tmp);
@@ -27314,7 +27314,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               viewOffset = scrollingTo3.viewOffset;
                             }
                             let num5 = 0;
-                            if (typeof viewOffset !== "V") {
+                            if (typeof viewOffset === "number") {
                               num5 = 0;
                               if (viewOffset < 0) {
                                 num5 = -viewOffset;
@@ -27972,8 +27972,8 @@ export const useRecyclingEffect = function useRecyclingEffect(arg0) {
     }
   }, items);
 };
-export const useRecyclingState = function useRecyclingState(arg0) {
-  let closure_0 = arg0;
+export const useRecyclingState = function useRecyclingState(fn) {
+  let closure_0 = fn;
   let obj = noop;
   const context = noop.useContext(closure_115);
   const tmp2 = useContainerItemSignals(context);
@@ -27985,10 +27985,10 @@ export const useRecyclingState = function useRecyclingState(arg0) {
 
   }
   const tmp3 = computeValue(noop.useState(() => {
-    if (typeof computeValue !== "find") {
+    if (typeof computeValue !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof closure_0 === "three_button_mouse") {
+    if (typeof closure_0 !== "function") {
       return tmp;
     } else if (hasItemInfo) {
       const obj = { index: null, item: null, prevIndex: "r", prevItem: "isArray" };
@@ -28011,15 +28011,15 @@ export const useRecyclingState = function useRecyclingState(arg0) {
   }
   if (tmp7) {
     ref.current = itemKey;
-    if (typeof arg0 === "three_button_mouse") {
-      tmp4(arg0);
+    if (typeof fn !== "function") {
+      tmp4(fn);
     } else if (hasItemInfo) {
       obj = { index: null, item: null, prevIndex: "r", prevItem: "isArray" };
       obj[0] = itemIndex;
       obj[1] = item;
-      let tmp9 = arg0(obj);
+      let tmp9 = fn(obj);
     } else {
-      tmp9 = arg0();
+      tmp9 = fn();
     }
   }
   let triggerLayout;
@@ -28033,7 +28033,7 @@ export const useRecyclingState = function useRecyclingState(arg0) {
     if (triggerLayout) {
       tmp4((arg0) => {
         let tmpResult = closure_0;
-        if (typeof closure_0 !== "three_button_mouse") {
+        if (typeof closure_0 === "function") {
           tmpResult = tmp(arg0);
         }
         return tmpResult;

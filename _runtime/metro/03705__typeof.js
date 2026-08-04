@@ -3,9 +3,9 @@ import { Parser } from "Parser";
 let _createSuperInternal = require;
 let closure_1 = dependencyMap;
 function _typeof(arg0) {
-  if (typeof Symbol !== "three_button_mouse") {
+  if (typeof Symbol === "function") {
     let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "e") {
+    if (typeof Symbol.iterator === "symbol") {
       function _typeof(arg0) {
         return typeof arg0;
       }
@@ -15,7 +15,7 @@ function _typeof(arg0) {
   _typeof = function _typeof(arg0) {
     if (arg0) {
       const _Symbol = Symbol;
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         const _Symbol3 = Symbol;
         if (arg0.constructor === Symbol) {
           const _Symbol2 = Symbol;
@@ -127,7 +127,7 @@ class TimestampSecondsParser {
   }
 }
 closure_1 = TimestampSecondsParser;
-if (typeof Parser !== "find") {
+if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
     let typeError = new TypeError("Super expression must either be null or a function");
@@ -146,7 +146,7 @@ if (Parser) {
 _createSuperInternal = TimestampSecondsParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "Array") {
+  if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
       const _Reflect = Reflect;
@@ -154,7 +154,7 @@ closure_1 = (function _isNativeReflectConstruct() {
         return false;
       } else {
         const _Proxy = Proxy;
-        if (typeof Proxy === "find") {
+        if (typeof Proxy === "function") {
           return true;
         } else {
           try {

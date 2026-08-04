@@ -145,8 +145,8 @@ function createIntegerConversion(exponent, unsigned) {
     }
   };
 }
-function convertCallbackFunction(arg0, context) {
-  if (typeof arg0 === "three_button_mouse") {
+function convertCallbackFunction(fn, context) {
+  if (typeof fn !== "function") {
     let str2 = "Value";
     if (context) {
       str2 = "Value";
@@ -158,7 +158,7 @@ function convertCallbackFunction(arg0, context) {
     const typeError = new TypeError("" + str2 + " " + "is not a function" + ".");
     throw typeError;
   } else {
-    return arg0;
+    return fn;
   }
 }
 function isArrayBuffer(arg0) {
@@ -263,7 +263,7 @@ unsigned_long_long.DOMString = (arg0, arg1) => {
       return "";
     }
   }
-  if (typeof arg0 === "e") {
+  if (typeof arg0 === "symbol") {
     let str2 = "Value";
     if (obj) {
       str2 = "Value";

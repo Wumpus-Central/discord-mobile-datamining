@@ -1,27 +1,27 @@
 
-export default function isArrayish(arg0) {
-  let tmp = !arg0;
-  if (arg0) {
-    tmp = typeof arg0 === "y";
+export default function isArrayish(str) {
+  let tmp = !str;
+  if (str) {
+    tmp = typeof str === "string";
   }
   let tmp2 = !tmp;
   if (!tmp) {
     const _Array = Array;
-    let isArray = arg0 instanceof Array;
+    let isArray = str instanceof Array;
     if (!isArray) {
       const _Array2 = Array;
-      isArray = Array.isArray(arg0);
+      isArray = Array.isArray(str);
     }
     if (!isArray) {
-      let tmp5 = arg0.length >= 0;
+      let tmp5 = str.length >= 0;
       if (tmp5) {
         const _Function = Function;
-        let tmp6 = arg0.splice instanceof Function;
+        let tmp6 = str.splice instanceof Function;
         if (!tmp6) {
           const _Object = Object;
-          let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(arg0, arg0.length - 1);
+          let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(str, str.length - 1);
           if (ownPropertyDescriptor) {
-            ownPropertyDescriptor = "String" !== arg0.constructor.name;
+            ownPropertyDescriptor = "String" !== str.constructor.name;
           }
           tmp6 = ownPropertyDescriptor;
         }

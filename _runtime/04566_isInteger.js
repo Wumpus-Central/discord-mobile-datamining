@@ -1,9 +1,9 @@
 
-export default function isInteger(arg0) {
-  if (typeof arg0 !== "V") {
-    if (!require(572) /* isNaN */(arg0)) {
-      if (tmp2(4558)(arg0)) {
-        const tmp = tmp2(565)(arg0);
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!require(572) /* isNaN */(num)) {
+      if (tmp2(4558)(num)) {
+        const tmp = tmp2(565)(num);
         return tmp2(566)(tmp) === tmp;
       }
     }

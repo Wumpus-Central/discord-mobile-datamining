@@ -46,7 +46,7 @@ class Range {
         if (self.set.length > 1) {
           set = self.set;
           self.set = set.filter((arg0) => {
-            if (typeof closure_5 !== "find") {
+            if (typeof closure_5 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             return "<0.0.0-0" !== arg0[0].value;
@@ -175,16 +175,16 @@ let items = [
         let parts = str7.split(" ");
         let mapped = parts.map((str) => {
           options = options.options;
-          if (typeof outer1_8 !== "find") {
+          if (typeof outer1_8 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           self(outer1_1[6])("comp", str, options);
-          if (typeof outer1_12 !== "find") {
+          if (typeof outer1_12 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const parts = str.trim().split(/\s+/);
           const mapped = parts.map((str) => {
-            if (typeof outer1_13 !== "find") {
+            if (typeof outer1_13 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let closure_0 = str;
@@ -202,7 +202,7 @@ let items = [
             }
             return str.replace(tmp3, (arg0, str, str2, str3) => {
               str(str[6])("caret", str, arg0, str, str2, str3, arg4);
-              if (typeof outer1_9 !== "find") {
+              if (typeof outer1_9 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp5 = !str;
@@ -214,7 +214,7 @@ let items = [
               }
               str3 = "";
               if (!tmp5) {
-                if (typeof tmp4 !== "find") {
+                if (typeof tmp4 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp6 = !str2;
@@ -228,7 +228,7 @@ let items = [
                   const _HermesInternal9 = HermesInternal;
                   str3 = ">=" + str + ".0.0" + str + " <" + +str + 1 + ".0.0-0";
                 } else {
-                  if (typeof tmp4 !== "find") {
+                  if (typeof tmp4 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let tmp7 = !str3;
@@ -287,13 +287,13 @@ let items = [
           });
           const str2 = mapped.join(" ");
           self(outer1_1[6])("caret", str2);
-          if (typeof outer1_10 !== "find") {
+          if (typeof outer1_10 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           str = str.trim();
           const parts1 = str2.trim().split(/\s+/);
           const mapped1 = parts1.map((str) => {
-            if (typeof outer1_11 !== "find") {
+            if (typeof outer1_11 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let closure_0 = str;
@@ -306,7 +306,7 @@ let items = [
             }
             return str.replace(tmp2, (arg0, str, str2, str3) => {
               str(outer1_1[6])("tilde", str, arg0, str, str2, str3, arg4);
-              if (typeof outer1_9 !== "find") {
+              if (typeof outer1_9 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp5 = !str;
@@ -318,7 +318,7 @@ let items = [
               }
               str3 = "";
               if (!tmp5) {
-                if (typeof tmp4 !== "find") {
+                if (typeof tmp4 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp6 = !str2;
@@ -332,7 +332,7 @@ let items = [
                   const _HermesInternal4 = HermesInternal;
                   str3 = ">=" + str + ".0.0 <" + +str + 1 + ".0.0-0";
                 } else {
-                  if (typeof tmp4 !== "find") {
+                  if (typeof tmp4 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let tmp7 = !str3;
@@ -361,13 +361,13 @@ let items = [
           });
           const str4 = mapped1.join(" ");
           self(outer1_1[6])("tildes", str4);
-          if (typeof outer1_14 !== "find") {
+          if (typeof outer1_14 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           self(outer1_1[6])("replaceXRanges", str4, options);
           const parts2 = str4.split(/\s+/);
           const mapped2 = parts2.map((str) => {
-            if (typeof outer1_15 !== "find") {
+            if (typeof outer1_15 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let closure_1 = tmp;
@@ -383,7 +383,7 @@ let items = [
               let combined = arg0;
               str = arg1;
               str(tmp[6])("xRange", str, arg0, arg1, str, str2, str3, arg5);
-              if (typeof outer1_9 !== "find") {
+              if (typeof outer1_9 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp6 = !str;
@@ -395,7 +395,7 @@ let items = [
               }
               let tmp7 = tmp6;
               if (!tmp6) {
-                if (typeof tmp5 !== "find") {
+                if (typeof tmp5 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp8 = !str2;
@@ -409,7 +409,7 @@ let items = [
               }
               let tmp9 = tmp7;
               if (!tmp7) {
-                if (typeof tmp5 !== "find") {
+                if (typeof tmp5 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp10 = !str3;
@@ -490,7 +490,7 @@ let items = [
           });
           const str5 = mapped2.join(" ");
           self(outer1_1[6])("xrange", str5);
-          if (typeof outer1_16 !== "find") {
+          if (typeof outer1_16 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           self(outer1_1[6])("replaceStars", str5, options);
@@ -502,7 +502,7 @@ let items = [
         let parts1 = mapped.join(" ").split(/\s+/);
         let mapped1 = parts1.map((str) => {
           const options = self.options;
-          if (typeof outer1_17 !== "find") {
+          if (typeof outer1_17 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           self(outer1_1[6])("replaceGTE0", str, options);
@@ -558,7 +558,7 @@ let items = [
         const self = this;
         return this.set.some((arr) => {
           let set = arr;
-          if (typeof outer1_7 !== "find") {
+          if (typeof outer1_7 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           set = closure_1;
@@ -579,7 +579,7 @@ let items = [
           if (flag) {
             set = set.set;
             flag = set.some((arr) => {
-              if (typeof outer2_7 !== "find") {
+              if (typeof outer2_7 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               arr = closure_1;
@@ -618,7 +618,7 @@ let items = [
       let tmp = prerelease;
       if (prerelease) {
         const self = this;
-        if (typeof tmp !== "_iter") {
+        if (typeof tmp === "string") {
           try {
             tmp = new Range(13022)(tmp, self.options);
           } catch (err) {
@@ -682,7 +682,7 @@ function replaceGTE0(arg0, arg1) {
 function hyphenReplace(includePrerelease) {
   let closure_0 = includePrerelease;
   return (arg0, arg1, str, str2, str3, arg5, arg6, arg7, arg8, str4, str5) => {
-    if (typeof outer1_9 !== "find") {
+    if (typeof outer1_9 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let tmp2 = !str;
@@ -693,7 +693,7 @@ function hyphenReplace(includePrerelease) {
       tmp2 = "*" === str;
     }
     if (tmp2) {
-      if (typeof tmp !== "find") {
+      if (typeof tmp !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let str17 = arg8;
@@ -708,7 +708,7 @@ function hyphenReplace(includePrerelease) {
         const _HermesInternal10 = HermesInternal;
         return "" + "" + " " + "".trim();
       } else {
-        if (typeof tmp !== "find") {
+        if (typeof tmp !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp23 = !str4;
@@ -724,7 +724,7 @@ function hyphenReplace(includePrerelease) {
           let combined = "<" + +str17 + 1 + ".0.0-0";
           const tmp38 = +str17;
         } else {
-          if (typeof tmp !== "find") {
+          if (typeof tmp !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let tmp25 = !str5;
@@ -750,7 +750,7 @@ function hyphenReplace(includePrerelease) {
         }
       }
     } else {
-      if (typeof tmp !== "find") {
+      if (typeof tmp !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp4 = !str2;
@@ -768,7 +768,7 @@ function hyphenReplace(includePrerelease) {
         const _HermesInternal4 = HermesInternal;
         let combined1 = ">=" + str + ".0.0" + str14;
       } else {
-        if (typeof tmp !== "find") {
+        if (typeof tmp !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp6 = !str3;

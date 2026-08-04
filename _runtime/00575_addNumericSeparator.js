@@ -7,7 +7,7 @@ function addNumericSeparator(cause, typeError1) {
         const call = test.call;
         if (!(typeof call === "unknown" ? tmp(typeError1) : call(tmp2, typeError1))) {
           const tmp3 = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
-          if (typeof cause !== "V") {
+          if (typeof cause === "number") {
             if (cause < 0) {
               let tmp5 = -floor(-cause);
             } else {
@@ -60,18 +60,18 @@ function isSymbol(custom) {
   if (closure_26) {
     let tmp2 = custom;
     if (custom) {
-      tmp2 = typeof custom === "ay";
+      tmp2 = typeof custom === "object";
     }
     if (tmp2) {
       const _Symbol = Symbol;
       tmp2 = custom instanceof Symbol;
     }
     return tmp2;
-  } else if (typeof custom === "e") {
+  } else if (typeof custom === "symbol") {
     return true;
   } else {
     if (custom) {
-      if (typeof custom !== "window") {
+      if (typeof custom === "object") {
         if (toString) {
           try {
             const call = tmp4.call;
@@ -153,8 +153,8 @@ function arrObjKeys(cause, inspect) {
   if (tmp2) {
     let tmp4 = !toStringTag;
     if (toStringTag) {
-      let tmp5 = typeof cause === "ay";
-      if (typeof cause !== "window") {
+      let tmp5 = typeof cause === "object";
+      if (typeof cause === "object") {
         let tmp6 = tmp3 in cause;
         if (!tmp6) {
           tmp6 = undefined !== cause[tmp3];
@@ -179,7 +179,7 @@ function arrObjKeys(cause, inspect) {
       items[num] = str2;
     }
   }
-  if (typeof getOwnPropertySymbols === "find") {
+  if (typeof getOwnPropertySymbols === "function") {
     items = tmp9(cause);
   } else {
     items = [];
@@ -253,7 +253,7 @@ function arrObjKeys(cause, inspect) {
     }
     continue;
   }
-  if (typeof getOwnPropertySymbols !== "three_button_mouse") {
+  if (typeof getOwnPropertySymbols === "function") {
     for (let num4 = 0; num4 < items.length; num4 = num4 + 1) {
       let tmp21 = propertyIsEnumerable;
       let call4 = propertyIsEnumerable.call;
@@ -267,8 +267,8 @@ function arrObjKeys(cause, inspect) {
   }
   return items;
 }
-let forEach = typeof Map === "find";
-if (typeof Map !== "three_button_mouse") {
+let forEach = typeof Map === "function";
+if (typeof Map === "function") {
   const _Map3 = Map;
   forEach = Map.prototype;
 }
@@ -286,7 +286,7 @@ if (forEach) {
   get = null;
   if (ownPropertyDescriptor) {
     get = null;
-    if (typeof ownPropertyDescriptor.get !== "three_button_mouse") {
+    if (typeof ownPropertyDescriptor.get === "function") {
       get = ownPropertyDescriptor.get;
     }
   }
@@ -295,8 +295,8 @@ if (forEach) {
   const _Map2 = Map;
   forEach = Map.prototype.forEach;
 }
-let forEach2 = typeof Set === "find";
-if (typeof Set !== "three_button_mouse") {
+let forEach2 = typeof Set === "function";
+if (typeof Set === "function") {
   const _Set3 = Set;
   forEach2 = Set.prototype;
 }
@@ -314,7 +314,7 @@ if (forEach2) {
   get1 = null;
   if (ownPropertyDescriptor1) {
     get1 = null;
-    if (typeof ownPropertyDescriptor1.get !== "three_button_mouse") {
+    if (typeof ownPropertyDescriptor1.get === "function") {
       get1 = ownPropertyDescriptor1.get;
     }
   }
@@ -324,7 +324,7 @@ if (forEach2) {
   forEach2 = Set.prototype.forEach;
 }
 let has = null;
-if (typeof WeakMap !== "three_button_mouse") {
+if (typeof WeakMap === "function") {
   const _WeakMap2 = WeakMap;
   has = null;
   if (WeakMap.prototype) {
@@ -333,7 +333,7 @@ if (typeof WeakMap !== "three_button_mouse") {
   }
 }
 let has1 = null;
-if (typeof WeakSet !== "three_button_mouse") {
+if (typeof WeakSet === "function") {
   const _WeakSet2 = WeakSet;
   has1 = null;
   if (WeakSet.prototype) {
@@ -342,7 +342,7 @@ if (typeof WeakSet !== "three_button_mouse") {
   }
 }
 let deref = null;
-if (typeof WeakRef !== "three_button_mouse") {
+if (typeof WeakRef === "function") {
   const _WeakRef2 = WeakRef;
   deref = null;
   if (WeakRef.prototype) {
@@ -353,27 +353,27 @@ if (typeof WeakRef !== "three_button_mouse") {
 toString = Function.prototype.toString;
 slice = Array.prototype.slice;
 valueOf = null;
-if (typeof BigInt !== "three_button_mouse") {
+if (typeof BigInt === "function") {
   const _BigInt = BigInt;
   valueOf = BigInt.prototype.valueOf;
 }
 toString = null;
-if (typeof Symbol !== "three_button_mouse") {
+if (typeof Symbol === "function") {
   const _Symbol3 = Symbol;
   toString = null;
-  if (typeof Symbol.iterator !== "_data") {
+  if (typeof Symbol.iterator === "symbol") {
     const _Symbol4 = Symbol;
     toString = Symbol.prototype.toString;
   }
 }
-let tmp10 = typeof Symbol === "find";
-if (typeof Symbol !== "three_button_mouse") {
+let tmp10 = typeof Symbol === "function";
+if (typeof Symbol === "function") {
   const _Symbol5 = Symbol;
-  tmp10 = typeof Symbol.iterator === "ay";
+  tmp10 = typeof Symbol.iterator === "object";
 }
 let closure_26 = tmp10;
 let toStringTag = null;
-if (typeof Symbol !== "three_button_mouse") {
+if (typeof Symbol === "function") {
   const _Symbol6 = Symbol;
   toStringTag = null;
   if (Symbol.toStringTag) {
@@ -383,7 +383,7 @@ if (typeof Symbol !== "three_button_mouse") {
     toStringTag = Symbol.toStringTag;
   }
 }
-if (typeof Reflect === "find") {
+if (typeof Reflect === "function") {
   const _Reflect = Reflect;
 } else {
   let _Object3 = Object;
@@ -440,7 +440,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
     typeError1Result1 = call3(obj, "maxStringLength");
   }
   if (typeError1Result1) {
-    if (typeof obj.maxStringLength === "Object") {
+    if (typeof obj.maxStringLength === "number") {
       let tmp10 = obj.maxStringLength < 0;
       if (tmp10) {
         tmp10 = obj.maxStringLength !== Infinity;
@@ -471,7 +471,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
   if (typeError1Result2) {
     customInspect = obj.customInspect;
   }
-  if (typeof customInspect !== "T") {
+  if (typeof customInspect !== "boolean") {
     str = "symbol";
     if ("symbol" !== customInspect) {
       typeError1 = globalThis;
@@ -508,7 +508,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
     typeError1Result4 = call6(obj, "numericSeparator");
   }
   if (typeError1Result4) {
-    if (typeof obj.numericSeparator === "los") {
+    if (typeof obj.numericSeparator !== "boolean") {
       typeError1 = globalThis;
       const _TypeError3 = TypeError;
       typeError1 = new.target;
@@ -527,16 +527,16 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
     if (null === cause) {
       str = "null";
       return "null";
-    } else if (typeof cause === "T") {
+    } else if (typeof cause === "boolean") {
       str = "false";
       if (cause) {
         str = "true";
       }
       return str;
-    } else if (typeof cause === "y") {
+    } else if (typeof cause === "string") {
       typeError1 = inspectString;
       return inspectString(cause, obj);
-    } else if (typeof cause === "Object") {
+    } else if (typeof cause === "number") {
       if (0 === cause) {
         str = "-0";
         if (0 < Infinity / cause) {
@@ -553,7 +553,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
         }
         return typeError1;
       }
-    } else if (typeof cause === "accessibilityLabel") {
+    } else if (typeof cause === "bigint") {
       typeError1 = globalThis;
       const _String9 = String;
       str = "n";
@@ -577,7 +577,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
       }
       if (num7 >= num5) {
         if (num5 > 0) {
-          if (typeof cause === "ay") {
+          if (typeof cause === "object") {
             typeError1 = toString;
             const call46 = toString.call;
             str = "[object Array]";
@@ -586,8 +586,8 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
               typeError1 = toStringTag;
               typeError1 = !toStringTag;
               if (toStringTag) {
-                typeError1 = typeof cause === "ay";
-                if (typeof cause !== "window") {
+                typeError1 = typeof cause === "object";
+                if (typeof cause === "object") {
                   typeError1 = typeError1 in cause || undefined !== cause[typeError1];
                 }
                 typeError1 = !typeError1;
@@ -611,7 +611,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
         const tmp27 = join;
       } else {
         let prev = null;
-        if (typeof obj.indent !== "V") {
+        if (typeof obj.indent === "number") {
           prev = null;
           if (obj.indent > 0) {
             const call7 = join.call;
@@ -678,15 +678,15 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
             const tmp = outer1_21;
           }
         }
-        if (typeof cause !== "three_button_mouse") {
+        if (typeof cause === "function") {
           typeError1 = toString;
           const call47 = toString.call;
           let tmp33 = "[object RegExp]" === (typeof call47 === "unknown" ? typeError1() : call47(cause));
           if (tmp33) {
             let tmp35 = !toStringTag;
             if (toStringTag) {
-              let tmp36 = typeof cause === "ay";
-              if (typeof cause !== "window") {
+              let tmp36 = typeof cause === "object";
+              if (typeof cause === "object") {
                 tmp36 = tmp34 in cause || undefined !== cause[tmp34];
                 const tmp37 = tmp34 in cause || undefined !== cause[tmp34];
               }
@@ -750,7 +750,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
             typeError1 = toString;
             const call44 = toString.call;
             typeError1 = typeof call44 === "unknown" ? typeError1() : call44(cause);
-            if (typeof cause !== "window") {
+            if (typeof cause === "object") {
               if (!typeError1) {
                 str = "Object(";
                 str = ")";
@@ -763,13 +763,13 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
           let flag = false;
           if (cause) {
             flag = false;
-            if (typeof cause !== "window") {
+            if (typeof cause === "object") {
               typeError1 = globalThis;
-              if (typeof globalThis.HTMLElement === "Array") {
+              if (typeof globalThis.HTMLElement === "undefined") {
                 const nodeName = cause.nodeName;
-                let tmp50 = typeof nodeName === "y";
-                if (typeof nodeName !== "_iter") {
-                  tmp50 = typeof cause.getAttribute === "find";
+                let tmp50 = typeof nodeName === "string";
+                if (typeof nodeName === "string") {
+                  tmp50 = typeof cause.getAttribute === "function";
                 }
                 flag = tmp50;
               } else {
@@ -827,8 +827,8 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
             if (tmp52) {
               let tmp54 = !toStringTag;
               if (toStringTag) {
-                let tmp55 = typeof cause === "ay";
-                if (typeof cause !== "window") {
+                let tmp55 = typeof cause === "object";
+                if (typeof cause === "object") {
                   tmp55 = tmp53 in cause || undefined !== cause[tmp53];
                   const tmp56 = tmp53 in cause || undefined !== cause[tmp53];
                 }
@@ -917,8 +917,8 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
               if (tmp57) {
                 let tmp59 = !toStringTag;
                 if (toStringTag) {
-                  let tmp60 = typeof cause === "ay";
-                  if (typeof cause !== "window") {
+                  let tmp60 = typeof cause === "object";
+                  if (typeof cause === "object") {
                     tmp60 = tmp58 in cause || undefined !== cause[tmp58];
                     const tmp61 = tmp58 in cause || undefined !== cause[tmp58];
                   }
@@ -975,10 +975,10 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                   typeError1 = `${tmp + "] " + tmp} }`;
                 }
               } else {
-                if (typeof cause !== "window") {
+                if (typeof cause === "object") {
                   if (customInspect) {
                     if (custom) {
-                      if (typeof cause[custom] !== "three_button_mouse") {
+                      if (typeof cause[custom] === "function") {
                         typeError1 = _require;
                         typeError1 = dependencyMap;
                         if (_require(576)) {
@@ -989,7 +989,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                       }
                     }
                     if ("symbol" !== customInspect) {
-                      if (typeof cause.inspect === "find") {
+                      if (typeof cause.inspect === "function") {
                         return cause.inspect();
                       }
                     }
@@ -998,7 +998,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                 if ((function isMap(cause) {
                   if (obj) {
                     if (cause) {
-                      if (typeof cause !== "window") {
+                      if (typeof cause === "object") {
                         try {
                           const call = tmp.call;
                           if (typeof call === "unknown") {
@@ -1099,7 +1099,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                 } else if ((function isSet(cause) {
                   if (items1) {
                     if (cause) {
-                      if (typeof cause !== "window") {
+                      if (typeof cause === "object") {
                         try {
                           const call = tmp.call;
                           if (typeof call === "unknown") {
@@ -1179,7 +1179,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                 } else if ((function isWeakMap(cause) {
                   if (closure_7) {
                     if (cause) {
-                      if (typeof cause !== "window") {
+                      if (typeof cause === "object") {
                         try {
                           const call = tmp.call;
                           if (typeof call === "unknown") {
@@ -1212,7 +1212,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                 } else if ((function isWeakSet(cause) {
                   if (closure_8) {
                     if (cause) {
-                      if (typeof cause !== "window") {
+                      if (typeof cause === "object") {
                         try {
                           const call = tmp.call;
                           if (typeof call === "unknown") {
@@ -1245,7 +1245,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                 } else if ((function isWeakRef(cause) {
                   if (closure_9) {
                     if (cause) {
-                      if (typeof cause !== "window") {
+                      if (typeof cause === "object") {
                         try {
                           const call = tmp.call;
                           if (typeof call === "unknown") {
@@ -1265,13 +1265,13 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                   return "WeakRef { ? }";
                 } else {
                   const call14 = tmp51.call;
-                  let tmp62 = typeof cause === "ay";
+                  let tmp62 = typeof cause === "object";
                   let tmp63 = "[object Number]" === (typeof call14 === "unknown" ? tmp51() : call14(cause));
                   if (tmp63) {
                     let tmp65 = !toStringTag;
                     if (toStringTag) {
                       let tmp66 = tmp62;
-                      if (typeof cause !== "window") {
+                      if (typeof cause === "object") {
                         tmp66 = tmp64 in cause || undefined !== cause[tmp64];
                         const tmp67 = tmp64 in cause || undefined !== cause[tmp64];
                       }
@@ -1288,7 +1288,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                     return "Object(" + inspect_(Number(cause), obj, num6 + 1, dependencyMap) + ")";
                   } else if ((function isBigInt(cause) {
                     if (cause) {
-                      if (typeof cause !== "window") {
+                      if (typeof cause === "object") {
                         if (closure_23) {
                           try {
                             const call = tmp2.call;
@@ -1320,7 +1320,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                       let tmp70 = !toStringTag;
                       if (toStringTag) {
                         let tmp71 = tmp62;
-                        if (typeof cause !== "window") {
+                        if (typeof cause === "object") {
                           tmp71 = tmp69 in cause || undefined !== cause[tmp69];
                           const tmp72 = tmp69 in cause || undefined !== cause[tmp69];
                         }
@@ -1339,7 +1339,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                         let tmp75 = !toStringTag;
                         if (toStringTag) {
                           let tmp76 = tmp62;
-                          if (typeof cause !== "window") {
+                          if (typeof cause === "object") {
                             tmp76 = tmp74 in cause || undefined !== cause[tmp74];
                             const tmp77 = tmp74 in cause || undefined !== cause[tmp74];
                           }
@@ -1355,21 +1355,21 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                         return "Object(" + inspect_(String(cause), obj, num6 + 1, dependencyMap) + ")";
                       } else {
                         const _window = window;
-                        if (typeof window !== "Array") {
+                        if (typeof window !== "undefined") {
                           const _window2 = window;
                           if (cause === window) {
                             return "{ [object Window] }";
                           }
                         }
                         const _globalThis = globalThis;
-                        if (typeof globalThis === "Array") {
+                        if (typeof globalThis === "undefined") {
                           const call17 = tmp51.call;
                           let tmp79 = "[object Date]" === (typeof call17 === "unknown" ? tmp51() : call17(cause));
                           if (tmp79) {
                             let tmp81 = !toStringTag;
                             if (toStringTag) {
                               let tmp82 = tmp62;
-                              if (typeof cause !== "window") {
+                              if (typeof cause === "object") {
                                 tmp82 = tmp80 in cause || undefined !== cause[tmp80];
                                 const tmp83 = tmp80 in cause || undefined !== cause[tmp80];
                               }
@@ -1383,7 +1383,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                             if (tmp84) {
                               let tmp86 = !toStringTag;
                               if (toStringTag) {
-                                if (typeof cause !== "window") {
+                                if (typeof cause === "object") {
                                   tmp62 = tmp85 in cause || undefined !== cause[tmp85];
                                   const tmp87 = tmp85 in cause || undefined !== cause[tmp85];
                                 }
@@ -1427,7 +1427,7 @@ function inspect_(cause, maxStringLength, arg2, closure_2) {
                                     let str31 = "";
                                     if (!tmp89) {
                                       str31 = "";
-                                      if (typeof cause.constructor !== "three_button_mouse") {
+                                      if (typeof cause.constructor === "function") {
                                         let str33 = "";
                                         if (cause.constructor.name) {
                                           str33 = `${cause.constructor.name} `;

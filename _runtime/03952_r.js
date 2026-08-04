@@ -4,8 +4,8 @@ let fn = () => {
     let _exports = arg0;
     let closure_1 = _exports2;
     let closure_2 = firstResult2;
-    let tmp = typeof fn === "find";
-    if (typeof fn !== "three_button_mouse") {
+    let tmp = typeof fn === "function";
+    if (typeof fn === "function") {
       tmp = fn;
     }
     let closure_3 = tmp;
@@ -67,8 +67,8 @@ let fn = () => {
                         call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
                       }
                     } else {
-                      let tmp4 = typeof outer2_0 === "find";
-                      if (typeof outer2_0 !== "three_button_mouse") {
+                      let tmp4 = typeof outer2_0 === "function";
+                      if (typeof outer2_0 === "function") {
                         tmp4 = outer2_0;
                       }
                       if (tmp4) {
@@ -91,8 +91,8 @@ let fn = () => {
                     call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
                   }
                 } else {
-                  let tmp4 = typeof outer2_0 === "find";
-                  if (typeof outer2_0 !== "three_button_mouse") {
+                  let tmp4 = typeof outer2_0 === "function";
+                  if (typeof outer2_0 === "function") {
                     tmp4 = outer2_0;
                   }
                   if (tmp4) {
@@ -115,8 +115,8 @@ let fn = () => {
                 call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
               }
             } else {
-              let tmp4 = typeof outer2_0 === "find";
-              if (typeof outer2_0 !== "three_button_mouse") {
+              let tmp4 = typeof outer2_0 === "function";
+              if (typeof outer2_0 === "function") {
                 tmp4 = outer2_0;
               }
               if (tmp4) {
@@ -161,8 +161,8 @@ let fn = () => {
           }
           break;
         } else {
-          let tmp3 = typeof fn === "find";
-          if (typeof fn !== "three_button_mouse") {
+          let tmp3 = typeof fn === "function";
+          if (typeof fn === "function") {
             tmp3 = fn;
           }
           if (tmp3) {
@@ -230,8 +230,8 @@ let fn = () => {
                     call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
                   }
                 } else {
-                  let tmp4 = typeof outer2_0 === "find";
-                  if (typeof outer2_0 !== "three_button_mouse") {
+                  let tmp4 = typeof outer2_0 === "function";
+                  if (typeof outer2_0 === "function") {
                     tmp4 = outer2_0;
                   }
                   if (tmp4) {
@@ -254,8 +254,8 @@ let fn = () => {
                 call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
               }
             } else {
-              let tmp4 = typeof outer2_0 === "find";
-              if (typeof outer2_0 !== "three_button_mouse") {
+              let tmp4 = typeof outer2_0 === "function";
+              if (typeof outer2_0 === "function") {
                 tmp4 = outer2_0;
               }
               if (tmp4) {
@@ -279,8 +279,8 @@ let fn = () => {
             call(_exports, fn, obj, _exports2, tmp12, tmp2, tmp, tmp13);
           }
         } else {
-          let tmp3 = typeof fn === "find";
-          if (typeof fn !== "three_button_mouse") {
+          let tmp3 = typeof fn === "function";
+          if (typeof fn === "function") {
             tmp3 = fn;
           }
           if (!arg1) {
@@ -851,9 +851,7 @@ let fn = () => {
           }
           arr2 = this._events[global];
           if (arr2) {
-            item = arr2.forEach((apply) => {
-              apply.apply(undefined, items);
-            });
+            item = arr2.forEach(() => { ... });
           }
           return;
         }
@@ -879,21 +877,18 @@ let fn = () => {
   items30 = [
     (arg0, arg1, arg2) => {
       let _Promise = null;
-      if (typeof Promise !== "Array") {
+      if (typeof Promise !== "undefined") {
         _Promise = Promise;
       }
       class ExtendedPromise {
         constructor(arg0) {
           self = this;
           self = this;
-          if (typeof global === "three_button_mouse") {
+          if (typeof global !== "function") {
             obj = self;
             tmp = new.target;
             tmp2 = new.target;
-            promise = new self.Promise((_resolveFunction, _rejectFunction) => {
-              self._resolveFunction = _resolveFunction;
-              self._rejectFunction = _rejectFunction;
-            });
+            promise = new self.Promise(() => { ... });
             tmp4 = promise;
             self._promise = promise;
             obj = global;
@@ -904,9 +899,7 @@ let fn = () => {
             self._onReject = obj.onReject || obj.defaultOnReject;
             if (obj.shouldCatchExceptions(obj)) {
               _promise = self._promise;
-              catchPromise = _promise.catch(() => {
-
-              });
+              catchPromise = _promise.catch(/* F118209 */ function() { ... });
             }
             _resetStateResult = self._resetState();
           } else {
@@ -999,14 +992,9 @@ let fn = () => {
             tmp2 = closure_0;
             _Promise = closure_0.Promise;
             resolveResult = _Promise.resolve();
-            nextPromise = resolveResult.then(() => self._onResolve(closure_0));
-            nextPromise1 = nextPromise.then((arg0) => {
-              self._resolveFunction(arg0);
-            });
-            catchPromise = nextPromise1.catch((arg0) => {
-              self._resetState();
-              self.reject(arg0);
-            });
+            nextPromise = resolveResult.then(() => { ... });
+            nextPromise1 = nextPromise.then(() => { ... });
+            catchPromise = nextPromise1.catch(() => { ... });
           }
           return self;
         }
@@ -1019,12 +1007,9 @@ let fn = () => {
             tmp2 = closure_0;
             _Promise = closure_0.Promise;
             resolveResult = _Promise.resolve();
-            nextPromise = resolveResult.then(() => self._onReject(closure_0));
-            nextPromise1 = nextPromise.then((arg0) => {
-              self._setResolved();
-              self._resolveFunction(arg0);
-            });
-            catchPromise = nextPromise1.catch((arg0) => self._rejectFunction(arg0));
+            nextPromise = resolveResult.then(() => { ... });
+            nextPromise1 = nextPromise.then(() => { ... });
+            catchPromise = nextPromise1.catch(() => { ... });
           }
           return self;
         }
@@ -1082,13 +1067,13 @@ let fn = () => {
             length = arguments.length;
           } while (num < length);
         }
-        let item = items.forEach((arg0) => {
-          let closure_0 = arg0;
-          if (typeof arg0 !== "window") {
+        let item = items.forEach((obj) => {
+          let closure_0 = obj;
+          if (typeof obj === "object") {
             const _Object = Object;
-            const keys = Object.keys(arg0);
+            const keys = Object.keys(obj);
             const item = keys.forEach((arg0) => {
-              table[arg0] = table[arg0];
+              obj[arg0] = obj[arg0];
             });
           }
         });
@@ -1226,7 +1211,7 @@ let fn = () => {
             } while (num < length);
           }
           let onceResult;
-          if (typeof items[items.length - 1] !== "three_button_mouse") {
+          if (typeof items[items.length - 1] === "function") {
             onceResult = outer1_1.once(lib.deferred(items.pop()));
           }
           return outer1_2.promiseOrCallback(lib.apply(this, items), onceResult);
@@ -1247,7 +1232,7 @@ let fn = () => {
         const found = ownPropertyNames.filter((str) => {
           let tmp = "constructor" !== str;
           if (tmp) {
-            tmp = typeof ctor.prototype[str] === "find";
+            tmp = typeof ctor.prototype[str] === "function";
           }
           let tmp4 = closure_2;
           const index = closure_1.indexOf(str);
@@ -1276,7 +1261,7 @@ let fn = () => {
               } while (num < length);
             }
             let onceResult;
-            if (typeof items[items.length - 1] !== "three_button_mouse") {
+            if (typeof items[items.length - 1] === "function") {
               onceResult = outer1_1.once(lib.deferred(items.pop()));
             }
             return outer1_2.promiseOrCallback(lib.apply(this, items), onceResult);
@@ -1289,7 +1274,7 @@ let fn = () => {
     { "./lib/deferred": 37, "./lib/once": 38, "./lib/promise-or-callback": 39 }
   ];
   items40 = [
-    function(arg0, arg1, arg2) {
+    function(arg0, arg1, obj) {
       const fn = (arg0) => {
         let concat;
         let concat2;
@@ -1341,25 +1326,25 @@ let fn = () => {
           if (undefined === arg1) {
             flag = true;
           }
-          let amd = typeof define === "find";
-          if (typeof define !== "three_button_mouse") {
+          let amd = typeof define === "function";
+          if (typeof define === "function") {
             const _window4 = window;
             amd = window.define.amd;
           }
           if (amd) {
             const _window = window;
-            let amd1 = typeof define2 === "find";
-            if (typeof define2 !== "three_button_mouse") {
+            let amd1 = typeof define2 === "function";
+            if (typeof define2 === "function") {
               const _window5 = window;
               amd1 = window.define.amd;
             }
             if (amd1) {
               const _window2 = window;
-              amd1 = typeof window.requirejs === "find";
+              amd1 = typeof window.requirejs === "function";
             }
             if (amd1) {
               const _window3 = window;
-              amd1 = typeof window.requirejs.config === "find";
+              amd1 = typeof window.requirejs.config === "function";
             }
             if (amd1) {
               let obj = { paths: null };
@@ -1454,7 +1439,7 @@ let fn = () => {
             c0 = 0;
             c0 = 1;
             c0 = 2;
-            if (typeof Symbol !== "three_button_mouse") {
+            if (typeof Symbol === "function") {
               let _Symbol = Symbol;
               obj[Symbol.iterator] = /* F118220 */ function() { ... };
             }
@@ -1483,16 +1468,16 @@ let fn = () => {
           });
         };
       };
-      if (typeof arg2 !== "window") {
+      if (typeof obj === "object") {
         if (undefined !== arg1) {
-          fn(arg2);
+          fn(obj);
         }
       }
       let self = this;
-      if (typeof globalThis !== "Array") {
+      if (typeof globalThis !== "undefined") {
         self = globalThis;
       }
-      let obj = {};
+      obj = {};
       self.loadAxo = obj;
       fn(obj);
     },
@@ -1732,11 +1717,11 @@ let fn = () => {
   ];
   items46 = [
     (arg0, arg1, arg2) => {
-      arg2.isValidInputType = function isValidInputType(arg0) {
-        let tmp = typeof arg0 === "y";
-        if (typeof arg0 !== "y") {
+      arg2.isValidInputType = function isValidInputType(str) {
+        let tmp = typeof str === "string";
+        if (typeof str !== "string") {
           const _String = String;
-          tmp = arg0 instanceof String;
+          tmp = str instanceof String;
         }
         return tmp;
       };
@@ -1776,8 +1761,8 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       arg2.Framebus = undefined;
       let Framebus = arg0("./lib");
-      let _Promise = typeof window === "tee";
-      if (typeof window !== "Array") {
+      let _Promise = typeof window !== "undefined";
+      if (typeof window !== "undefined") {
         let _window = window;
         _Promise = window.Promise;
       }
@@ -1876,7 +1861,7 @@ let fn = () => {
               tmp3 = arg1;
               tmp4 = arg2;
               tmp5 = arg1;
-              if (typeof arg1 !== "three_button_mouse") {
+              if (typeof arg1 === "function") {
                 tmp4 = arg1;
               }
               tmp6 = namespaceEventResult;
@@ -1889,9 +1874,7 @@ let fn = () => {
               if (flag) {
                 if (self.limitBroadcastToFramesArray) {
                   result = self.targetFramesAsWindows();
-                  item = result.forEach((arg0) => {
-                    origin.sendMessage(arg0, closure_1, origin);
-                  });
+                  item = result.forEach(() => { ... });
                   flag = true;
                 } else {
                   obj = { origin: null, frame: null };
@@ -1916,17 +1899,7 @@ let fn = () => {
           closure_0 = arg0;
           closure_1 = arg1;
           self = this;
-          promise = new closure_0.Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            if (!self.emit(closure_0, closure_1, (arg0) => {
-              callback(arg0);
-            })) {
-              const _Error = Error;
-              const concat = "Listener not added for \"".concat;
-              const error = new Error("Listener not added for \"".concat(closure_0, "\""));
-              arg1(error);
-            }
-          });
+          promise = new closure_0.Promise(() => { ... });
           return promise;
         }
         on(arg0, arg1) {
@@ -1945,34 +1918,7 @@ let fn = () => {
             if (!result) {
               fn = arg1;
               if (self.hasAdditionalChecksForOnListeners) {
-                fn = function d() {
-                  let length;
-                  const items = [];
-                  let num = 0;
-                  if (0 < arguments.length) {
-                    do {
-                      items[num] = arguments[num];
-                      num = num + 1;
-                      length = arguments.length;
-                    } while (num < length);
-                  }
-                  const self = this;
-                  let self2 = this;
-                  if (this) {
-                    self2 = self.origin;
-                  }
-                  let result = self.passesVerifyDomainCheck(self2);
-                  if (result) {
-                    let source = self;
-                    if (self) {
-                      source = self.source;
-                    }
-                    result = self.hasMatchingTargetFrame(source);
-                  }
-                  if (result) {
-                    callback.apply(undefined, items);
-                  }
-                };
+                fn = function d() { ... };
               }
               listeners = self.listeners;
               obj = { eventName: null, handler: null, originalHandler: null };
@@ -2087,13 +2033,8 @@ let fn = () => {
         targetFramesAsWindows() {
           if (this.limitBroadcastToFramesArray) {
             targetFrames = this.targetFrames;
-            mapped = targetFrames.map((contentWindow) => {
-              if (contentWindow instanceof globalThis.HTMLIFrameElement) {
-                contentWindow = contentWindow.contentWindow;
-              }
-              return contentWindow;
-            });
-            found = mapped.filter((arg0) => arg0);
+            mapped = targetFrames.map(() => { ... });
+            found = mapped.filter(/* F118233 */ function() { ... });
           } else {
             found = [];
           }
@@ -2106,7 +2047,7 @@ let fn = () => {
             result = self.targetFramesAsWindows();
             tmp = globalThis;
             _Boolean = Boolean;
-            return Boolean(result.find((arg0) => arg0 === closure_0));
+            return Boolean(result.find(/* F118234 */ function() { ... }));
           } else {
             flag = true;
             return true;
@@ -2176,7 +2117,7 @@ let fn = () => {
         let tmp = c1;
         if (!c1) {
           const _window = window;
-          tmp = typeof window === "Array";
+          tmp = typeof window === "undefined";
         }
         if (!tmp) {
           c1 = true;
@@ -2387,7 +2328,7 @@ let fn = () => {
   items57 = [
     (arg0, arg1, arg2) => {
       arg2.isntString = function isntString(data) {
-        return typeof data === "_iter";
+        return typeof data !== "string";
       };
     },
     {}
@@ -2416,10 +2357,10 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       arg2.packagePayload = undefined;
       let closure_0 = arg0("./");
-      arg2.packagePayload = function packagePayload(namespaceEventResult, closure_0, eventData, eventData) {
+      arg2.packagePayload = function packagePayload(namespaceEventResult, closure_0, eventData, fn) {
         const obj = { event: namespaceEventResult, origin: closure_0 };
-        if (typeof eventData !== "three_button_mouse") {
-          obj.reply = closure_0.subscribeReplier(eventData, closure_0);
+        if (typeof fn === "function") {
+          obj.reply = closure_0.subscribeReplier(fn, closure_0);
         }
         obj.eventData = eventData;
         try {
@@ -2467,15 +2408,15 @@ let fn = () => {
       arg2.subscribeReplier = undefined;
       let closure_0 = arg0("../framebus");
       let closure_1 = fn(arg0("@braintree/uuid"));
-      arg2.subscribeReplier = function subscribeReplier(eventData, origin) {
-        let Framebus = eventData;
+      arg2.subscribeReplier = function subscribeReplier(fn, origin) {
+        let Framebus = fn;
         let closure_1 = origin;
         const defaultResult = closure_1.default();
         let closure_2 = defaultResult;
         Framebus = Framebus.Framebus;
         function replier(arg0, arg1) {
-          eventData(arg0, arg1);
-          const Framebus = eventData.Framebus;
+          lib(arg0, arg1);
+          const Framebus = lib.Framebus;
           Framebus.target({ origin: closure_1 }).off(closure_2, replier);
         }
         Framebus.target({ origin }).on(defaultResult, replier);
@@ -2488,11 +2429,11 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       arg2.subscriptionArgsInvalid = undefined;
       let closure_0 = arg0("./");
-      arg2.subscriptionArgsInvalid = function subscriptionArgsInvalid(namespaceEventResult, arg1, origin) {
+      arg2.subscriptionArgsInvalid = function subscriptionArgsInvalid(namespaceEventResult, fn, origin) {
         let isntStringResult = closure_0.isntString(namespaceEventResult);
         if (!isntStringResult) {
-          isntStringResult = typeof arg1 === "three_button_mouse";
-          if (typeof arg1 !== "three_button_mouse") {
+          isntStringResult = typeof fn !== "function";
+          if (typeof fn === "function") {
             isntStringResult = closure_0.isntString(origin);
           }
         }
@@ -2566,8 +2507,8 @@ let fn = () => {
       arg2.isSamsungBrowser = undefined;
       arg2.isIE9 = undefined;
       arg2.isIos = undefined;
-      let userAgent = typeof window === "tee";
-      if (typeof window !== "Array") {
+      let userAgent = typeof window !== "undefined";
+      if (typeof window !== "undefined") {
         const _window2 = window;
         userAgent = window.navigator;
       }
@@ -2779,11 +2720,7 @@ let fn = () => {
             obj1 = { method: "get", endpoint: "payment_methods/amex_rewards_balance", data: null };
             obj1[2] = tmp13;
             requestResult = _client.request(obj1);
-            catchPromise = requestResult.catch((originalError) => {
-              obj = { type: constants.AMEX_NETWORK_ERROR.type, code: constants.AMEX_NETWORK_ERROR.code, message: "A network error occurred when getting the American Express rewards balance.", details: obj };
-              obj = { originalError };
-              return Promise.reject(new closure_0(obj));
-            });
+            catchPromise = requestResult.catch(() => { ... });
           } else {
             tmp3 = globalThis;
             _Promise = Promise;
@@ -2813,11 +2750,7 @@ let fn = () => {
             obj1[1] = global.nonce;
             obj[2] = obj1;
             requestResult = _client.request(obj);
-            catchPromise = requestResult.catch((originalError) => {
-              obj = { type: constants.AMEX_NETWORK_ERROR.type, code: constants.AMEX_NETWORK_ERROR.code, message: "A network error occurred when getting the American Express Checkout nonce profile.", details: obj };
-              obj = { originalError };
-              return Promise.reject(new closure_0(obj));
-            });
+            catchPromise = requestResult.catch(() => { ... });
           } else {
             tmp = globalThis;
             _Promise = Promise;
@@ -2897,10 +2830,7 @@ let fn = () => {
             resolved = Promise.resolve();
           } else {
             _createPromise = self._createPromise;
-            fn = function(_client) {
-              this._client = _client;
-              const result = this._setMerchantIdentifier();
-            };
+            fn = () => { ... };
             resolved = _createPromise.then(fn.bind(self));
           }
           return resolved;
@@ -2925,9 +2855,7 @@ let fn = () => {
             result = self._createPaymentRequestSynchronously(global);
           } else {
             _waitForClientResult = self._waitForClient();
-            fn = function() {
-              return this._createPaymentRequestSynchronously(closure_0);
-            };
+            fn = () => { ... };
             result = _waitForClientResult.then(fn.bind(self));
           }
           return result;
@@ -2935,18 +2863,7 @@ let fn = () => {
         _createPaymentRequestSynchronously(arg0) {
           _client = this._client;
           applePayWeb = _client.getConfiguration().gatewayConfiguration.applePayWeb;
-          obj = {
-            countryCode: applePayWeb.countryCode,
-            currencyCode: applePayWeb.currencyCode,
-            merchantCapabilities: tmp,
-            supportedNetworks: supportedNetworks.map((arg0) => {
-                  let str = "masterCard";
-                  if ("mastercard" !== arg0) {
-                    str = arg0;
-                  }
-                  return str;
-                })
-          };
+          obj = { countryCode: applePayWeb.countryCode, currencyCode: applePayWeb.currencyCode, merchantCapabilities: tmp, supportedNetworks: supportedNetworks.map(/* F114589 */ function() { ... }) };
           tmp = applePayWeb.merchantCapabilities || ["supports3DS"];
           supportedNetworks = applePayWeb.supportedNetworks;
           return Object.assign({}, obj, global);
@@ -2958,54 +2875,9 @@ let fn = () => {
           if (global) {
             if (global.validationURL) {
               _waitForClientResult = self._waitForClient();
-              nextPromise = _waitForClientResult.then(() => {
-                const applePayWebSession = { validationUrl: validationURL.validationURL, domainName: null, merchantIdentifier: null };
-                let hostname = validationURL.domainName;
-                if (!hostname) {
-                  const _window = window;
-                  hostname = window.location.hostname;
-                }
-                applePayWebSession[1] = hostname;
-                let merchantIdentifier = tmp.merchantIdentifier;
-                if (!merchantIdentifier) {
-                  merchantIdentifier = self.merchantIdentifier;
-                }
-                applePayWebSession[2] = merchantIdentifier;
-                if (null != validationURL.displayName) {
-                  applePayWebSession.displayName = tmp.displayName;
-                }
-                const _client = self._client;
-                return _client.request({ method: "post", endpoint: "apple_pay_web/sessions", data: { _meta: { source: "apple-pay" }, applePayWebSession } });
-              });
-              nextPromise1 = nextPromise.then((arg0) => {
-                self.sendEvent(self._client, "applepay.performValidation.succeeded");
-                return Promise.resolve(arg0);
-              });
-              catchPromise = nextPromise1.catch((code) => {
-                self.sendEvent(self._client, "applepay.performValidation.failed");
-                if ("CLIENT_REQUEST_ERROR" === code.code) {
-                  let obj = { type: null, code: null, message: null, details: null };
-                  obj[0] = outer1_2.APPLE_PAY_MERCHANT_VALIDATION_FAILED.type;
-                  obj[1] = outer1_2.APPLE_PAY_MERCHANT_VALIDATION_FAILED.code;
-                  obj[2] = outer1_2.APPLE_PAY_MERCHANT_VALIDATION_FAILED.message;
-                  obj = { originalError: null };
-                  obj[0] = code.details.originalError;
-                  obj[3] = obj;
-                  const tmp8 = new closure_0(obj);
-                  let rejectResult = Promise.reject(tmp8);
-                } else {
-                  obj = { type: null, code: null, message: null, details: null };
-                  obj[0] = outer1_2.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.type;
-                  obj[1] = outer1_2.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.code;
-                  obj[2] = outer1_2.APPLE_PAY_MERCHANT_VALIDATION_NETWORK.message;
-                  const obj1 = { originalError: null };
-                  obj1[0] = code;
-                  obj[3] = obj1;
-                  const tmp17 = new closure_0(obj);
-                  rejectResult = Promise.reject(tmp17);
-                }
-                return rejectResult;
-              });
+              nextPromise = _waitForClientResult.then(() => { ... });
+              nextPromise1 = nextPromise.then(() => { ... });
+              catchPromise = nextPromise1.catch(() => { ... });
             }
             return catchPromise;
           }
@@ -3019,25 +2891,9 @@ let fn = () => {
           self = this;
           if (global.token) {
             _waitForClientResult = self._waitForClient();
-            nextPromise = _waitForClientResult.then(() => {
-              const _client = self._client;
-              let obj = { method: "post", endpoint: "payment_methods/apple_payment_tokens", data: null };
-              obj = { _meta: { source: "apple-pay" }, applePaymentToken: null };
-              obj = { paymentData: btoa(JSON.stringify(token.token.paymentData)) };
-              obj[1] = Object.assign({}, token.token, obj);
-              obj[2] = obj;
-              return _client.request(obj);
-            });
-            nextPromise1 = nextPromise.then((arg0) => {
-              self.sendEvent(self._client, "applepay.tokenize.succeeded");
-              return Promise.resolve(arg0.applePayCards[0]);
-            });
-            catchPromise = nextPromise1.catch((originalError) => {
-              self.sendEvent(self._client, "applepay.tokenize.failed");
-              obj = { type: outer1_2.APPLE_PAY_TOKENIZATION.type, code: outer1_2.APPLE_PAY_TOKENIZATION.code, message: outer1_2.APPLE_PAY_TOKENIZATION.message, details: obj };
-              obj = { originalError };
-              return Promise.reject(new closure_0(obj));
-            });
+            nextPromise = _waitForClientResult.then(() => { ... });
+            nextPromise1 = nextPromise.then(() => { ... });
+            catchPromise = nextPromise1.catch(() => { ... });
           } else {
             tmp = globalThis;
             _Promise = Promise;
@@ -3350,74 +3206,12 @@ let fn = () => {
                 const tmp4 = _configuration.authorizationFingerprint || _configuration.authorization;
               }
               obj.url = _clientApiBaseUrl + tmp.endpoint;
-              obj.sendAnalyticsEvent = (arg0) => {
-                outer1_12.sendEvent(str5, arg0);
-              };
-              obj1._request(obj, (arg0, errors, httpStatus) => {
-                if (-1 === httpStatus) {
-                  let tmp2 = new outer2_4(outer2_13.CLIENT_REQUEST_TIMEOUT);
-                } else if (401 === httpStatus) {
-                  tmp2 = new outer2_4(outer2_13.CLIENT_AUTHORIZATION_INVALID);
-                } else if (403 === httpStatus) {
-                  tmp2 = new outer2_4(outer2_13.CLIENT_AUTHORIZATION_INSUFFICIENT);
-                } else if (429 === httpStatus) {
-                  tmp2 = new outer2_4(outer2_13.CLIENT_RATE_LIMITED);
-                } else if (httpStatus >= 500) {
-                  tmp2 = new outer2_4(outer2_13.CLIENT_GATEWAY_NETWORK);
-                } else {
-                  let tmp = httpStatus < 200;
-                  if (!tmp) {
-                    tmp = httpStatus >= 400;
-                  }
-                  if (tmp) {
-                    let obj = { type: null, code: null, message: null };
-                    obj[0] = outer2_13.CLIENT_REQUEST_ERROR.type;
-                    obj[1] = outer2_13.CLIENT_REQUEST_ERROR.code;
-                    obj[2] = outer2_13.CLIENT_REQUEST_ERROR.message;
-                    tmp2 = outer2_5(arg0, obj);
-                  }
-                }
-                let tmp28;
-                if (tmp2) {
-                  tmp2.details = tmp2.details || {};
-                  tmp2.details.httpStatus = httpStatus;
-                  tmp28 = tmp2;
-                }
-                if (tmp28) {
-                  callback2(tmp28);
-                } else {
-                  if ("graphQLApi" === str5) {
-                    if (errors.errors) {
-                      obj = { type: null, code: null, message: null };
-                      obj[0] = outer2_13.CLIENT_GRAPHQL_REQUEST_ERROR.type;
-                      obj[1] = outer2_13.CLIENT_GRAPHQL_REQUEST_ERROR.code;
-                      obj[2] = outer2_13.CLIENT_GRAPHQL_REQUEST_ERROR.message;
-                      callback2(outer2_5(errors.errors, obj));
-                    }
-                  }
-                  obj = { _httpStatus: null };
-                  obj[0] = httpStatus;
-                  const tmp32 = outer2_11(obj, errors);
-                  let creditCards = closure_3;
-                  if (closure_3) {
-                    creditCards = tmp32.creditCards;
-                  }
-                  if (creditCards) {
-                    creditCards = tmp32.creditCards.length > 0;
-                  }
-                  if (creditCards) {
-                    const result = str5._findOrCreateFraudnetJSON(tmp32.creditCards[0].nonce);
-                    const obj1 = { src: null, forceScriptReload: true };
-                    obj1[0] = outer2_21;
-                    const script = outer2_18.loadScript(obj1);
-                  }
-                  callback(tmp32);
-                }
-              });
+              obj.sendAnalyticsEvent = function sendAnalyticsEvent() { ... };
+              obj1._request(obj, () => { ... });
             }
           });
           tmp = promise;
-          if (typeof module !== "three_button_mouse") {
+          if (typeof module === "function") {
             tmp2 = c9;
             tmp3 = c10;
             closure_1 = c9(c10(module));
@@ -4311,10 +4105,10 @@ let fn = () => {
         const input = obj.input;
         if (authenticationInsight.creditCard) {
           if (authenticationInsight.creditCard.options) {
-            if (typeof authenticationInsight.creditCard.options.validate === "T") {
+            if (typeof authenticationInsight.creditCard.options.validate === "boolean") {
               let flag = authenticationInsight.creditCard.options.validate;
             }
-            if (typeof flag !== "los") {
+            if (typeof flag === "boolean") {
               const obj2 = { validate: null };
               obj2[0] = flag;
               input.options = assign(obj2, input.options);
@@ -4433,10 +4227,10 @@ let fn = () => {
         const input = obj.input;
         if (authenticationInsight.creditCard) {
           if (authenticationInsight.creditCard.options) {
-            if (typeof authenticationInsight.creditCard.options.validate === "T") {
+            if (typeof authenticationInsight.creditCard.options.validate === "boolean") {
               let flag = authenticationInsight.creditCard.options.validate;
             }
-            if (typeof flag !== "los") {
+            if (typeof flag === "boolean") {
               const obj2 = { validate: null };
               obj2[0] = flag;
               input.options = assign(obj2, input.options);
@@ -4484,17 +4278,8 @@ let fn = () => {
             features = this._config.features;
             closure_0 = module;
             tmp7 = closure_1;
-            someResult = features.some((arg0) => table[arg0] === table);
-            someResult1 = closure_1.some((str) => {
-              const parts = str.split(".");
-              return undefined !== parts.reduce((arg0, arg1) => {
-                let tmp = arg0;
-                if (arg0) {
-                  tmp = arg0[arg1];
-                }
-                return tmp;
-              }, closure_0);
-            });
+            someResult = features.some(() => { ... });
+            someResult1 = closure_1.some(() => { ... });
             tmp9 = !someResult1;
             if (!someResult1) {
               tmp9 = someResult;
@@ -4555,44 +4340,14 @@ let fn = () => {
           keys = Object.keys(_data);
           item = keys.forEach((arg0) => {
             let tmp = outer1_2(arg0);
-            if (typeof tmp6[arg0] === "ay") {
+            if (typeof tmp6[arg0] === "object") {
               tmp6 = tmp2[arg0];
               let obj = {};
               let _Object = Object;
               let keys = Object.keys(tmp6);
-              let item = keys.forEach((arg0) => {
-                let tmp = outer1_2(arg0);
-                if (typeof tmp6[arg0] === "ay") {
-                  tmp6 = tmp2[arg0];
-                  let obj = {};
-                  let _Object = Object;
-                  let keys = Object.keys(tmp6);
-                  let item = keys.forEach((arg0) => {
-                    let tmp = outer1_2(arg0);
-                    if (typeof tmp6[arg0] === "ay") {
-                      tmp6 = tmp2[arg0];
-                      let obj = {};
-                      let _Object = Object;
-                      let keys = Object.keys(tmp6);
-                      let item = keys.forEach(() => { ... });
-                      obj[tmp] = obj;
-                    } else if (typeof tmp2[arg0] === "Object") {
-                      let _String = String;
-                      obj[tmp] = String(tmp2[arg0]);
-                    } else {
-                      obj[tmp] = tmp2[arg0];
-                    }
-                  });
-                  obj[tmp] = obj;
-                } else if (typeof tmp2[arg0] === "Object") {
-                  let _String = String;
-                  obj[tmp] = String(tmp2[arg0]);
-                } else {
-                  obj[tmp] = tmp2[arg0];
-                }
-              });
+              let item = keys.forEach(() => { ... });
               obj[tmp] = obj;
-            } else if (typeof tmp2[arg0] === "Object") {
+            } else if (typeof tmp2[arg0] === "number") {
               let _String = String;
               obj[tmp] = String(tmp2[arg0]);
             } else {
@@ -4747,22 +4502,22 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      module.exports = (str) => {
-        if (typeof str === "_iter") {
+      module.exports = (str, str2) => {
+        if (typeof str !== "string") {
           const _Error = Error;
           const error = new Error("Method must be a string");
           throw error;
         } else {
           let tmp2 = "get" !== str.toLowerCase();
           if (tmp2) {
-            tmp2 = null != arg1;
+            tmp2 = null != str2;
           }
-          let tmp3 = arg1;
+          let tmp3 = str2;
           if (tmp2) {
-            let json = arg1;
-            if (typeof arg1 !== "y") {
+            let json = str2;
+            if (typeof str2 !== "string") {
               const _JSON = JSON;
-              json = JSON.stringify(arg1);
+              json = JSON.stringify(str2);
             }
             tmp3 = json;
           }
@@ -4774,8 +4529,8 @@ let fn = () => {
   ];
   items = [
     (arg0, arg1, arg2) => {
-      let _XMLHttpRequest = typeof window === "tee";
-      if (typeof window !== "Array") {
+      let _XMLHttpRequest = typeof window !== "undefined";
+      if (typeof window !== "undefined") {
         const _window2 = window;
         _XMLHttpRequest = window.XMLHttpRequest;
       }
@@ -5306,11 +5061,11 @@ let fn = () => {
         u[7] = u[7] + tmp11 | 0;
       }
       function C(addEntropy) {
-        if (typeof window !== "Array") {
+        if (typeof window !== "undefined") {
           const _window3 = window;
           if (window.performance) {
             const _window = window;
-            if (typeof window.performance.now === "find") {
+            if (typeof window.performance.now === "function") {
               const _window2 = window;
               const _performance = window.performance;
               addEntropy.addEntropy(_performance.now(), 0, "loadtime");
@@ -5787,7 +5542,7 @@ let fn = () => {
           return this;
         },
         update(toBitsResult) {
-          if (typeof toBitsResult !== "_iter") {
+          if (typeof toBitsResult === "string") {
             const utf8String = obj.codec.utf8String;
             toBitsResult = utf8String.toBits(toBitsResult);
           }
@@ -5804,7 +5559,7 @@ let fn = () => {
             throw invalid;
           } else {
             const _Uint32Array2 = Uint32Array;
-            if (typeof Uint32Array === "tee") {
+            if (typeof Uint32Array !== "undefined") {
               const _Uint32Array = Uint32Array;
               const uint32Array = new Uint32Array(combined);
               let diff = 512 + h - (512 + h & 511);
@@ -6149,7 +5904,7 @@ let fn = () => {
                   while (true) {
                     let num7 = tmp13;
                     let tmp11 = num8;
-                    if (typeof _performance[num8] !== "Object") {
+                    if (typeof _performance[num8] !== "number") {
                       num7 = 1;
                     }
                     let sum1 = num8 + 1;
@@ -6474,11 +6229,11 @@ let fn = () => {
         },
         U() {
           const self = this;
-          if (typeof window !== "Array") {
+          if (typeof window !== "undefined") {
             const _window3 = window;
             if (window.performance) {
               const _window = window;
-              if (typeof window.performance.now === "find") {
+              if (typeof window.performance.now === "function") {
                 const _window2 = window;
                 const _performance = window.performance;
                 self.addEntropy(_performance.now(), 1, "loadtime");
@@ -6534,11 +6289,11 @@ let fn = () => {
           }
           const items = [clientX, arg0.touches[0] || arg0.changedTouches[0].pageY || arg0.touches[0] || arg0.changedTouches[0].clientY];
           this.addEntropy(items, 1, "touch");
-          if (typeof window !== "Array") {
+          if (typeof window !== "undefined") {
             const _window3 = window;
             if (window.performance) {
               const _window = window;
-              if (typeof window.performance.now === "find") {
+              if (typeof window.performance.now === "function") {
                 const _window2 = window;
                 const _performance = window.performance;
                 self.addEntropy(_performance.now(), 0, "loadtime");
@@ -6549,11 +6304,11 @@ let fn = () => {
         },
         V() {
           const self = this;
-          if (typeof window !== "Array") {
+          if (typeof window !== "undefined") {
             const _window3 = window;
             if (window.performance) {
               const _window = window;
-              if (typeof window.performance.now === "find") {
+              if (typeof window.performance.now === "function") {
                 const _window2 = window;
                 const _performance = window.performance;
                 self.addEntropy(_performance.now(), 2, "loadtime");
@@ -6566,18 +6321,18 @@ let fn = () => {
           const self = this;
           if (window.orientation) {
             const _window = window;
-            if (typeof orientation !== "V") {
+            if (typeof orientation === "number") {
               self.addEntropy(orientation, 1, "accelerometer");
             }
           }
           if (accelerationIncludingGravity.accelerationIncludingGravity.x || accelerationIncludingGravity.accelerationIncludingGravity.y || accelerationIncludingGravity.accelerationIncludingGravity.z) {
             self.addEntropy(tmp, 2, "accelerometer");
           }
-          if (typeof window !== "Array") {
+          if (typeof window !== "undefined") {
             const _window4 = window;
             if (window.performance) {
               const _window2 = window;
-              if (typeof window.performance.now === "find") {
+              if (typeof window.performance.now === "function") {
                 const _window3 = window;
                 const _performance = window.performance;
                 self.addEntropy(_performance.now(), 0, "loadtime");
@@ -6613,9 +6368,9 @@ let fn = () => {
             }
           }
           let _window = window;
-          if (typeof window !== "Array") {
+          if (typeof window !== "undefined") {
             let _Uint32Array2 = Uint32Array;
-            if (typeof Uint32Array !== "Array") {
+            if (typeof Uint32Array !== "undefined") {
               const _Uint32Array3 = Uint32Array;
               const uint32Array1 = new Uint32Array(32);
               const _window8 = window;
@@ -6648,8 +6403,8 @@ let fn = () => {
         }
       } catch (tmp24) {
         const _window7 = window;
-        let _console = typeof window === "tee";
-        if (typeof window !== "Array") {
+        let _console = typeof window !== "undefined";
+        if (typeof window !== "undefined") {
           const _window9 = window;
           _console = window.console;
         }
@@ -6766,9 +6521,7 @@ let fn = () => {
             resolved = Promise.resolve();
           } else {
             _createPromise = self._createPromise;
-            fn = function(_client) {
-              this._client = _client;
-            };
+            fn = () => { ... };
             resolved = _createPromise.then(fn.bind(self));
           }
           return resolved;
@@ -6797,27 +6550,7 @@ let fn = () => {
           self = _getDefaultConfigResult;
           if (global.allowedPaymentMethods) {
             prop = global.allowedPaymentMethods;
-            item = prop.forEach((type) => {
-              const tmp = outer1_3(obj.allowedPaymentMethods, "type", type.type);
-              if (tmp) {
-                let closure_1 = tmp;
-                const _Object = Object;
-                const keys = Object.keys(tmp);
-                const item = keys.forEach((arg0) => {
-                  if (typeof tmp[arg0] === "ay") {
-                    type[arg0] = tmp({}, tmp[arg0], type[arg0]);
-                  } else {
-                    let tmp2 = type[arg0];
-                    if (!tmp2) {
-                      tmp2 = tmp[arg0];
-                    }
-                    type[arg0] = tmp2;
-                    const tmp5 = type;
-                  }
-                });
-                obj = type;
-              }
-            });
+            item = prop.forEach(() => { ... });
           }
           return assign({}, _getDefaultConfigResult, global);
         }
@@ -6826,9 +6559,7 @@ let fn = () => {
           closure_0 = global;
           if (this._useDeferredClient) {
             _waitForClientResult = self._waitForClient();
-            fn = function() {
-              return this._createPaymentDataRequestSyncronously(closure_0);
-            };
+            fn = () => { ... };
             nextPromise = _waitForClientResult.then(fn.bind(self));
           } else {
             nextPromise = self._createPaymentDataRequestSyncronously(global);
@@ -6854,48 +6585,8 @@ let fn = () => {
           closure_0 = global;
           self = this;
           resolved = Promise.resolve();
-          nextPromise = resolved.then(() => {
-            if (2 === closure_0.apiVersion) {
-              let token = tmp.paymentMethodData.tokenizationData.token;
-            } else {
-              token = tmp.paymentMethodToken.token;
-            }
-            const parsed = JSON.parse(token);
-            const error = parsed.error;
-            if (error) {
-              let rejectResult = Promise.reject(error);
-            } else {
-              let obj = closure_0;
-              closure_0.sendEvent(self._createPromise, "google-payment.parseResponse.succeeded");
-              if (parsed.paypalAccounts) {
-                obj.sendEvent(tmp3._createPromise, "google-payment.parseResponse.succeeded.paypal");
-                obj = { nonce: null, type: null, description: null };
-                ({ nonce: obj4[0], type: obj4[1], description: obj4[2] } = parsed.paypalAccounts[0]);
-                rejectResult = Promise.resolve(obj);
-              } else {
-                const first = parsed.androidPayCards[0];
-                obj.sendEvent(tmp3._createPromise, "google-payment.parseResponse.succeeded.google-payment");
-                obj = { nonce: null, type: null, description: null, details: null, binData: null };
-                ({ nonce: obj2[0], type: obj2[1], description: obj2[2] } = first);
-                const obj1 = { cardType: null, lastFour: null, lastTwo: null, isNetworkTokenized: null, bin: null };
-                obj1[0] = first.details.cardType;
-                obj1[1] = first.details.lastFour;
-                obj1[2] = first.details.lastTwo;
-                obj1[3] = first.details.isNetworkTokenized;
-                obj1[4] = first.details.bin;
-                obj[3] = obj1;
-                obj[4] = first.binData;
-                rejectResult = Promise.resolve(obj);
-              }
-            }
-            return rejectResult;
-          });
-          return nextPromise.catch((originalError) => {
-            closure_0.sendEvent(self._createPromise, "google-payment.parseResponse.failed");
-            obj = { code: outer1_6.GOOGLE_PAYMENT_GATEWAY_ERROR.code, message: outer1_6.GOOGLE_PAYMENT_GATEWAY_ERROR.message, type: outer1_6.GOOGLE_PAYMENT_GATEWAY_ERROR.type, details: obj };
-            obj = { originalError };
-            return Promise.reject(new outer1_5(obj));
-          });
+          nextPromise = resolved.then(() => { ... });
+          return nextPromise.catch(() => { ... });
         }
         teardown() {
           tmp = c2(this, c7(GooglePayment.prototype));
@@ -6962,30 +6653,30 @@ let fn = () => {
       let closure_0 = global("../../lib/braintree-error");
       let closure_1 = global("../shared/errors");
       const allowedAttributes = global("../shared/constants").allowedAttributes;
-      module.exports = function attributeValidationError(key10009) {
+      module.exports = function attributeValidationError(key10009, str) {
         if (allowedAttributes.hasOwnProperty(key10009)) {
-          if (null == arg1) {
+          if (null == str) {
             if (!tmp10) {
               let obj = { type: null, code: null, message: null };
               obj[0] = constants.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.type;
               obj[1] = constants.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.code;
-              obj[2] = `Value "${arg1}" is not allowed for "${key10009}" attribute.`;
+              obj[2] = `Value "${str}" is not allowed for "${key10009}" attribute.`;
               let tmp7 = new closure_0(obj);
             }
           } else if ("string" === tmp[key10009]) {
-            let tmp13 = typeof arg1 === "y";
-            if (typeof arg1 !== "y") {
-              tmp13 = typeof arg1 === "Object";
+            let tmp13 = typeof str === "string";
+            if (typeof str !== "string") {
+              tmp13 = typeof str === "number";
             }
             let flag = tmp13;
           } else {
             flag = false;
             if ("boolean" === tmp[key10009]) {
               const _String = String;
-              let tmp12 = "true" === String(arg1);
+              let tmp12 = "true" === String(str);
               if (!tmp12) {
                 const _String2 = String;
-                tmp12 = "false" === String(arg1);
+                tmp12 = "false" === String(str);
               }
               flag = tmp12;
             }
@@ -7243,10 +6934,7 @@ let fn = () => {
               tmp20 = tmp19;
               self._bus = tmp19;
               _destructor = self._destructor;
-              result = _destructor.registerFunctionForTeardown(() => {
-                const _bus = self._bus;
-                _bus.teardown();
-              });
+              result = _destructor.registerFunctionForTeardown(() => { ... });
               tmp22 = c19;
               sendEvent = c19.sendEvent;
               _clientPromise = self._clientPromise;
@@ -7259,231 +6947,46 @@ let fn = () => {
               }
               _Object2 = Object;
               keys = Object.keys(global.fields);
-              fn = function(key10009) {
-                let obj = key10009;
-                const allowedFields = outer1_10.allowedFields;
-                if (allowedFields.hasOwnProperty(key10009)) {
-                  let element = tmp11;
-                  if (typeof obj.fields[key10009].container || obj.fields[key10009].selector !== "_iter") {
-                    const _document = document;
-                    element = document.querySelector(tmp11);
-                  }
-                  if (element) {
-                    if (1 === element.nodeType) {
-                      if (element.querySelector("iframe[name^=\"braintree-\"]")) {
-                        obj = { type: null, code: null, message: null, details: null };
-                        obj[0] = outer1_11.HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME.type;
-                        obj[1] = outer1_11.HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME.code;
-                        obj[2] = outer1_11.HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME.message;
-                        obj = { fieldSelector: null, fieldContainer: null, fieldKey: null };
-                        ({ selector: obj12[0], container: obj12[1] } = tmp10);
-                        obj[2] = key10009;
-                        obj[3] = obj;
-                        const tmp50 = new closure_7(obj);
-                        throw tmp50;
-                      } else {
-                        let obj2 = outer1_22;
-                        let transformToSlotResult = element;
-                        if (outer1_22.isShadowElement(element)) {
-                          transformToSlotResult = obj2.transformToSlot(element, "height: 100%");
-                        }
-                        if (tmp10.maxlength) {
-                          if (typeof tmp10.maxlength === "V") {
-                            const obj1 = { type: null, code: null, message: "The value for maxlength must be a number.", details: null };
-                            obj1[0] = outer1_11.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type;
-                            obj1[1] = outer1_11.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code;
-                            obj2 = { fieldKey: null };
-                            obj2[0] = key10009;
-                            obj1[3] = obj2;
-                            const tmp43 = new closure_7(obj1);
-                            throw tmp43;
-                          }
-                        }
-                        if (tmp10.minlength) {
-                          if (typeof tmp10.minlength === "V") {
-                            const obj3 = { type: null, code: null, message: "The value for minlength must be a number.", details: null };
-                            obj3[0] = outer1_11.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type;
-                            obj3[1] = outer1_11.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code;
-                            const obj4 = { fieldKey: null };
-                            obj4[0] = key10009;
-                            obj3[3] = obj4;
-                            const tmp36 = new closure_7(obj3);
-                            throw tmp36;
-                          }
-                        }
-                        const obj5 = { type: null, name: null, style: null, title: null };
-                        obj5[0] = key10009;
-                        obj5[1] = `braintree-hosted-field-${key10009}`;
-                        obj5[2] = tmp.defaultIFrameStyle;
-                        let iframeTitle = tmp10.iframeTitle;
-                        if (!iframeTitle) {
-                          iframeTitle = `Secure Credit Card Frame - ${tmp.allowedFields[key10009].label}`;
-                        }
-                        const self = this;
-                        obj5[3] = iframeTitle;
-                        const tmp13Result = obj(obj5);
-                        let closure_1 = tmp13Result;
-                        const _bus = this._bus;
-                        _bus.addTargetFrame(tmp13Result);
-                        const push = this._injectedNodes.push;
-                        push.apply(this._injectedNodes, outer1_18(closure_7, tmp13Result, transformToSlotResult, () => {
-                          outer1_3.focus(closure_0);
-                        }));
-                        this._setupLabelFocus(key10009, element);
-                        const obj6 = { frameElement: null, containerElement: null };
-                        obj6[0] = tmp13Result;
-                        obj6[1] = element;
-                        obj[key10009] = obj6;
-                        const promise = new Promise((arg0) => {
-                          outer1_5[closure_0] = arg0;
-                        });
-                        items.push(promise);
-                        const obj7 = { isEmpty: true, isValid: false, isPotentiallyValid: true, isFocused: false, container: null };
-                        obj7[4] = element;
-                        this._state.fields[key10009] = obj7;
-                        const _setTimeout = setTimeout;
-                        const timerId = setTimeout(() => {
-                          closure_1.src = outer1_2;
-                        }, 0);
-                      }
-                    }
-                  }
-                  const obj8 = { type: null, code: null, message: null, details: null };
-                  obj8[0] = outer1_11.HOSTED_FIELDS_INVALID_FIELD_SELECTOR.type;
-                  obj8[1] = outer1_11.HOSTED_FIELDS_INVALID_FIELD_SELECTOR.code;
-                  obj8[2] = outer1_11.HOSTED_FIELDS_INVALID_FIELD_SELECTOR.message;
-                  const obj9 = { fieldSelector: null, fieldContainer: null, fieldKey: null };
-                  ({ selector: obj14[0], container: obj14[1] } = obj.fields[key10009]);
-                  obj9[2] = key10009;
-                  obj8[3] = obj9;
-                  const tmp57 = new closure_7(obj8);
-                  throw tmp57;
-                } else {
-                  obj = { type: null, code: null, message: null };
-                  obj[0] = outer1_11.HOSTED_FIELDS_INVALID_FIELD_KEY.type;
-                  obj[1] = outer1_11.HOSTED_FIELDS_INVALID_FIELD_KEY.code;
-                  obj[2] = `"${key10009}" is not a valid field.`;
-                  const tmp7 = new closure_7(obj);
-                  throw tmp7;
-                }
-              };
+              fn = () => { ... };
               item = keys.forEach(fn.bind(self));
               if (self._merchantConfigurationOptions.styles) {
                 _Object3 = Object;
                 keys1 = Object.keys(self._merchantConfigurationOptions.styles);
-                item1 = keys1.forEach((arg0) => {
-                  if (typeof self._merchantConfigurationOptions.styles[arg0] !== "_iter") {
-                    self._merchantConfigurationOptions.styles[arg0] = outer1_9(tmp);
-                  }
-                });
+                item1 = keys1.forEach(() => { ... });
               }
               _bus = self._bus;
               tmp27 = events;
-              onResult = _bus.on(events.REMOVE_FOCUS_INTERCEPTS, (id) => {
-                if (id) {
-                  id = id.id;
-                }
-                closure_29(id);
-              });
+              onResult = _bus.on(events.REMOVE_FOCUS_INTERCEPTS, () => { ... });
               _bus2 = self._bus;
               tmp29 = c28;
               obj4 = { onRemoveFocusIntercepts: null, onTriggerInputFocus: null };
-              obj4[0] = function onRemoveFocusIntercepts(id) {
-                const _bus = self._bus;
-                _bus.emit(outer1_16.REMOVE_FOCUS_INTERCEPTS, { id });
-              };
-              obj4[1] = function onTriggerInputFocus(arg0) {
-                self.focus(arg0);
-              };
+              obj4[0] = function onRemoveFocusIntercepts() { ... };
+              obj4[1] = function onTriggerInputFocus() { ... };
               onResult1 = _bus2.on(events.TRIGGER_FOCUS_CHANGE, c28.createFocusChangeHandler(tmp, obj4));
               _bus3 = self._bus;
-              onResult2 = _bus3.on(events.READY_FOR_CLIENT, (arg0) => {
-                let closure_0 = arg0;
-                self._clientPromise.then((arg0) => {
-                  callback(arg0);
-                });
-              });
+              onResult2 = _bus3.on(events.READY_FOR_CLIENT, () => { ... });
               _bus4 = self._bus;
-              onResult3 = _bus4.on(events.CARD_FORM_ENTRY_HAS_BEGUN, () => {
-                outer1_19.sendEvent(self._clientPromise, "hosted-fields.input.started");
-              });
+              onResult3 = _bus4.on(events.CARD_FORM_ENTRY_HAS_BEGUN, () => { ... });
               _bus5 = self._bus;
-              onResult4 = _bus5.on(events.BIN_AVAILABLE, (bin) => {
-                self._emit("binAvailable", { bin });
-              });
+              onResult4 = _bus5.on(events.BIN_AVAILABLE, () => { ... });
               _setTimeout = setTimeout;
               tmp34 = INTEGRATION_TIMEOUT_MS;
-              f114648 = setTimeout(() => {
-                outer1_19.sendEvent(self._clientPromise, "custom.hosted-fields.load.timed-out");
-                self._emit("timeout");
-              }, INTEGRATION_TIMEOUT_MS);
+              f114648 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
               _Promise = Promise;
               allPromises = Promise.all(items);
-              nextPromise = allPromises.then((arg0) => {
-                clearTimeout(closure_1);
-                let c0;
-                const tmp2 = obj({}, self._merchantConfigurationOptions);
-                c0 = tmp2;
-                tmp2.fields = obj({}, tmp2.fields);
-                const keys = Object.keys(tmp2.fields);
-                const item = keys.forEach((arg0) => {
-                  _undefined.fields[arg0] = _undefined({}, _undefined.fields[arg0]);
-                  delete tmp2[tmp];
-                });
-                arg0[0](tmp2);
-                const result = self._cleanUpFocusIntercepts();
-                self._emit("ready");
-              });
+              nextPromise = allPromises.then(() => { ... });
               _bus6 = self._bus;
-              onResult5 = _bus6.on(events.FRAME_READY, (arg0, arg1) => {
-                dependencyMap[arg0.field](arg1);
-              });
+              onResult5 = _bus6.on(events.FRAME_READY, () => { ... });
               _bus7 = self._bus;
               closure_0 = obj;
-              fn2 = function(merchantPayload) {
-                merchantPayload = merchantPayload.merchantPayload;
-                const emittedBy = merchantPayload.emittedBy;
-                const containerElement = merchantPayload[emittedBy].containerElement;
-                const keys = Object.keys(merchantPayload.fields);
-                const item = keys.forEach((arg0) => {
-                  merchantPayload.fields[arg0].container = merchantPayload[arg0].containerElement;
-                });
-                const classList = containerElement.classList;
-                classList.toggle(outer1_10.externalClasses.FOCUSED, merchantPayload.fields[emittedBy].isFocused);
-                const classList2 = containerElement.classList;
-                classList2.toggle(outer1_10.externalClasses.VALID, merchantPayload.fields[emittedBy].isValid);
-                const classList3 = containerElement.classList;
-                classList3.toggle(outer1_10.externalClasses.INVALID, !merchantPayload.fields[emittedBy].isPotentiallyValid);
-                this._state = { cards: merchantPayload.cards, fields: merchantPayload.fields };
-                this._emit(merchantPayload.type, merchantPayload);
-              };
+              fn2 = () => { ... };
               onResult6 = _bus7.on(events.INPUT_EVENT, fn2.bind(self));
               _destructor2 = self._destructor;
-              result1 = _destructor2.registerFunctionForTeardown(() => {
-                let length;
-                let num = 0;
-                if (0 < self._injectedNodes.length) {
-                  do {
-                    let tmp = self;
-                    let tmp2 = self._injectedNodes[num];
-                    let parentNode = tmp2.parentNode;
-                    let removeChildResult = parentNode.removeChild(tmp2);
-                    let classList = parentNode.classList;
-                    let tmp4 = outer1_10;
-                    let removeResult = classList.remove(outer1_10.externalClasses.FOCUSED, outer1_10.externalClasses.INVALID, outer1_10.externalClasses.VALID);
-                    num = num + 1;
-                    length = self._injectedNodes.length;
-                  } while (num < length);
-                }
-              });
+              result1 = _destructor2.registerFunctionForTeardown(() => { ... });
               _destructor3 = self._destructor;
-              result2 = _destructor3.registerFunctionForTeardown(() => {
-                callback();
-              });
+              result2 = _destructor3.registerFunctionForTeardown(() => { ... });
               _destructor4 = self._destructor;
-              result3 = _destructor4.registerFunctionForTeardown(() => {
-                outer1_24(self, outer1_21(outer1_30.prototype).concat(outer1_21(outer1_17.prototype)));
-              });
+              result3 = _destructor4.registerFunctionForTeardown(() => { ... });
               return;
             }
           }
@@ -7493,9 +6996,7 @@ let fn = () => {
         }
         _setupLabelFocus(arg0, arg1) {
           closure_0 = global;
-          triggerFocus = function triggerFocus() {
-            self.focus(closure_0);
-          };
+          triggerFocus = function triggerFocus() { ... };
           self = this;
           obj = c23(module);
           if (null != module.id) {
@@ -7516,7 +7017,7 @@ let fn = () => {
               str = "label";
               combined = obj2.concat(c14(module, "label"));
               call = combined;
-              found = combined.filter((arg0, arg1, arr) => arr.indexOf(arg0) === arg1);
+              found = combined.filter(() => { ... });
               call = found;
               num = 0;
               c2 = 0;
@@ -7534,24 +7035,7 @@ let fn = () => {
                 } while (sum < length);
               }
               _destructor = this._destructor;
-              result = _destructor.registerFunctionForTeardown(() => {
-                let length;
-                let sum;
-                let c2 = 0;
-                if (0 < combined1.length) {
-                  do {
-                    let tmp = combined1;
-                    let tmp2 = c2;
-                    let obj = combined1[c2];
-                    let tmp3 = triggerFocus;
-                    let removed = obj.removeEventListener("click", triggerFocus, false);
-                    let tmp5 = c2;
-                    sum = c2 + 1;
-                    c2 = sum;
-                    length = combined1.length;
-                  } while (sum < length);
-                }
-              });
+              result = _destructor.registerFunctionForTeardown(() => { ... });
             } else {
               _Array = Array;
               slice = Array.prototype.slice;
@@ -7567,13 +7051,7 @@ let fn = () => {
         _getAnyFieldContainer() {
           self = this;
           keys = Object.keys(this._fields);
-          return keys.reduce((arg0, arg1) => {
-            let containerElement = arg0;
-            if (!arg0) {
-              containerElement = self._fields[arg1].containerElement;
-            }
-            return containerElement;
-          }, null);
+          return keys.reduce(() => { ... }, null);
         }
         _cleanUpFocusIntercepts() {
           self = this;
@@ -7587,10 +7065,7 @@ let fn = () => {
             first = c14(self._getAnyFieldContainer(), "form")[0];
             if (first) {
               tmp5 = c28;
-              fn = function(id) {
-                const _bus = this._bus;
-                _bus.emit(constants.REMOVE_FOCUS_INTERCEPTS, { id });
-              };
+              fn = () => { ... };
               result = c28.removeExtraFocusElements(first, fn.bind(self));
             } else {
               _bus = self._bus;
@@ -7611,45 +7086,22 @@ let fn = () => {
             self = this;
             global.details.invalidFields = {};
             invalidFieldKeys = global.details.invalidFieldKeys;
-            fn = function(arg0) {
-              details.details.invalidFields[arg0] = this._fields[arg0].containerElement;
-            };
+            fn = () => { ... };
             item = invalidFieldKeys.forEach(fn.bind(this));
           }
           return;
         }
         getChallenges() {
           _clientPromise = this._clientPromise;
-          return _clientPromise.then((getConfiguration) => getConfiguration.getConfiguration().gatewayConfiguration.challenges);
+          return _clientPromise.then(() => { ... });
         }
         getSupportedCardTypes() {
           _clientPromise = this._clientPromise;
-          return _clientPromise.then((getConfiguration) => {
-            const supportedCardTypes = getConfiguration.getConfiguration().gatewayConfiguration.creditCards.supportedCardTypes;
-            return supportedCardTypes.map((arg0) => {
-              let str = "Mastercard";
-              if ("MasterCard" !== arg0) {
-                str = arg0;
-              }
-              return str;
-            });
-          });
+          return _clientPromise.then(() => { ... });
         }
         teardown() {
           self = this;
-          promise = new Promise((arg0, arg1) => {
-            const _self = arg0;
-            let closure_1 = arg1;
-            const _destructor = _self._destructor;
-            _destructor.teardown((arg0) => {
-              outer2_19.sendEvent(lib._clientPromise, "custom.hosted-fields.teardown-completed");
-              if (arg0) {
-                callback(arg0);
-              } else {
-                lib();
-              }
-            });
-          });
+          promise = new Promise(() => { ... });
           return promise;
         }
         tokenize(arg0) {
@@ -7658,21 +7110,7 @@ let fn = () => {
           if (!global) {
             closure_0 = {};
           }
-          promise = new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            const _self = arg1;
-            const _bus = _self._bus;
-            _bus.emit(outer1_16.TOKENIZATION_REQUEST, closure_0, (arg0) => {
-              const first = arg0[0];
-              if (first) {
-                const result = lib._attachInvalidFieldContainersToError(first);
-                const tmp12 = new outer2_7(first);
-                lib(tmp12);
-              } else {
-                callback(tmp2);
-              }
-            });
-          });
+          promise = new Promise(() => { ... });
           return promise;
         }
         addClass(arg0, arg1) {
@@ -7848,10 +7286,7 @@ let fn = () => {
           } else {
             tmp = new.target;
             tmp2 = new.target;
-            rejectResult = new _Promise((arg0) => {
-              const _bus = self._bus;
-              _bus.emit(outer1_16.SET_MONTH_OPTIONS, closure_0, arg0);
-            });
+            rejectResult = new _Promise(() => { ... });
           }
           return rejectResult;
         }
@@ -7980,31 +7415,7 @@ let fn = () => {
                 tmp17 = globalThis;
                 _setTimeout = setTimeout;
                 num = 5;
-                timerId = setTimeout(() => {
-                  const containerElement = tmp.containerElement;
-                  const size = containerElement.getBoundingClientRect();
-                  const rounded = Math.floor(size.height / 2);
-                  const rounded1 = Math.floor(size.width / 2);
-                  let diff = window.innerHeight - rounded;
-                  if (!diff) {
-                    const _document = document;
-                    diff = document.documentElement.clientHeight - rounded;
-                  }
-                  let tmp5 = size.top < diff && size.right > rounded1 && size.bottom > rounded;
-                  if (tmp5) {
-                    const _window = window;
-                    let diff1 = window.innerWidth - rounded1;
-                    if (!diff1) {
-                      const _document2 = document;
-                      diff1 = document.documentElement.clientWidth - rounded1;
-                    }
-                    tmp5 = size.left < diff1;
-                  }
-                  if (!tmp5) {
-                    const containerElement2 = tmp.containerElement;
-                    containerElement2.scrollIntoView();
-                  }
-                }, 5);
+                timerId = setTimeout(() => { ... }, 5);
               }
             } else {
               tmp8 = c7;
@@ -8462,7 +7873,7 @@ let fn = () => {
         return arg0;
       }
       let assign = assignPolyfill;
-      if (typeof Object.assign !== "three_button_mouse") {
+      if (typeof Object.assign === "function") {
         const _Object = Object;
         assign = Object.assign;
       }
@@ -8659,7 +8070,7 @@ let fn = () => {
                         reduced = items;
                       } else {
                         reduced = arr;
-                        if (typeof arr !== "window") {
+                        if (typeof arr === "object") {
                           const _Object = Object;
                           const keys = Object.keys(arr);
                           reduced = keys.reduce(() => { ... }, {});
@@ -8671,13 +8082,13 @@ let fn = () => {
                   reduced = items;
                 } else {
                   reduced = arr;
-                  if (typeof arr !== "window") {
+                  if (typeof arr === "object") {
                     const _Object = Object;
                     const keys = Object.keys(arr);
                     reduced = keys.reduce((arg0, str) => {
                       str = str.replace(/([a-z\d])([A-Z])/g, "$1_$2");
                       let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
-                      if (typeof arr[str] === "ay") {
+                      if (typeof arr[str] === "object") {
                         arr = tmp2[str];
                         let items;
                         if (null === arr) {
@@ -8688,7 +8099,7 @@ let fn = () => {
                           let _Array = Array;
                           if (!Array.isArray(arr)) {
                             reduced = arr;
-                            if (typeof arr !== "window") {
+                            if (typeof arr === "object") {
                               let _Object = Object;
                               let keys = Object.keys(arr);
                               reduced = keys.reduce(() => { ... }, {});
@@ -8712,13 +8123,13 @@ let fn = () => {
             reduced = items;
           } else {
             reduced = arr;
-            if (typeof arr !== "window") {
+            if (typeof arr === "object") {
               const _Object = Object;
               const keys = Object.keys(arr);
               reduced = keys.reduce((arg0, str) => {
                 str = str.replace(/([a-z\d])([A-Z])/g, "$1_$2");
                 let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
-                if (typeof arr[str] === "ay") {
+                if (typeof arr[str] === "object") {
                   arr = tmp2[str];
                   let items;
                   if (null === arr) {
@@ -8729,13 +8140,13 @@ let fn = () => {
                     let _Array = Array;
                     if (!Array.isArray(arr)) {
                       reduced = arr;
-                      if (typeof arr !== "window") {
+                      if (typeof arr === "object") {
                         let _Object = Object;
                         let keys = Object.keys(arr);
                         reduced = keys.reduce((arg0, str) => {
                           str = str.replace(/([a-z\d])([A-Z])/g, "$1_$2");
                           let formatted = str.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
-                          if (typeof arr[str] === "ay") {
+                          if (typeof arr[str] === "object") {
                             arr = tmp2[str];
                             let items;
                             if (null === arr) {
@@ -8746,7 +8157,7 @@ let fn = () => {
                               let _Array = Array;
                               if (!Array.isArray(arr)) {
                                 reduced = arr;
-                                if (typeof arr !== "window") {
+                                if (typeof arr === "object") {
                                   let _Object = Object;
                                   let keys = Object.keys(arr);
                                   reduced = keys.reduce(() => { ... }, {});
@@ -8782,7 +8193,7 @@ let fn = () => {
                         reduced = items;
                       } else {
                         reduced = arr;
-                        if (typeof arr !== "window") {
+                        if (typeof arr === "object") {
                           const _Object = Object;
                           const keys = Object.keys(arr);
                           reduced = keys.reduce(() => { ... }, {});
@@ -8953,7 +8364,7 @@ let fn = () => {
           return;
         }
         registerFunctionForTeardown(arg0) {
-          if (typeof global !== "three_button_mouse") {
+          if (typeof global === "function") {
             self = this;
             _teardownRegistry = this._teardownRegistry;
             arr = _teardownRegistry.push(global);
@@ -8976,11 +8387,7 @@ let fn = () => {
             flag = true;
             self._isTearingDown = true;
             tmp = closure_0;
-            fn = (arg0) => {
-              if (typeof closure_0 !== "three_button_mouse") {
-                tmp(arg0);
-              }
-            };
+            fn = () => { ... };
             tmp2 = closure_0(self._teardownRegistry, fn.bind(self));
           }
           return;
@@ -9843,7 +9250,7 @@ let fn = () => {
       module.exports = (arg0) => {
         let closure_0 = arg0;
         const keys = Object.keys(arg0);
-        return keys.filter((arg0) => typeof table[arg0] === "find");
+        return keys.filter((arg0) => typeof table[arg0] === "function");
       };
     },
     {}
@@ -9881,7 +9288,7 @@ let fn = () => {
             let tmp = arg0[key10012];
             let tmp2 = key10012;
             if (!arg1) {
-              if (typeof tmp === "ay") {
+              if (typeof tmp === "object") {
                 let tmp6 = stringify;
                 let arr = items.push(stringify(tmp, tmp8));
                 continue;
@@ -9895,8 +9302,8 @@ let fn = () => {
               continue;
             } else {
               if (arg0) {
-                if (typeof arg0 !== "window") {
-                  if (typeof arg0.length !== "V") {
+                if (typeof arg0 === "object") {
+                  if (typeof arg0.length === "number") {
                     let _Object = Object;
                     let call = toString.call;
                     if (typeof call === "unknown") {
@@ -9948,7 +9355,7 @@ let fn = () => {
           if (!_redirectUrl) {
             str = "";
           }
-          let tmp2 = null != body && typeof body === "ay";
+          let tmp2 = null != body && typeof body === "object";
           if (tmp2) {
             let flag = false;
             const keys = Object.keys();
@@ -10133,7 +9540,7 @@ let fn = () => {
         }
       }
       let _atob = atobPolyfill;
-      if (typeof atob !== "three_button_mouse") {
+      if (typeof atob === "function") {
         _atob = atob;
       }
       module.exports = {
@@ -10170,19 +9577,8 @@ let fn = () => {
         _initialize() {
           self = this;
           _client = this._client;
-          f114695 = setTimeout(() => {
-            outer1_4.sendEvent(_client, "local-payment.load.timed-out");
-          }, INTEGRATION_TIMEOUT_MS);
-          promise = new Promise((arg0) => {
-            const _self = arg0;
-            let obj = { name: "localpaymentlandingpage", dispatchFrameUrl: `${`${closure_0._assetsUrl}/html/dispatch-frame`}${closure_2(closure_0._isDebug)}.html`, openFrameUrl: _self._loadingFrameUrl };
-            obj = self.create(obj, (_frameService) => {
-              callback._frameService = _frameService;
-              clearTimeout(outer1_2);
-              outer2_4.sendEvent(outer1_1, "local-payment.load.succeeded");
-              callback(callback);
-            });
-          });
+          f114695 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
+          promise = new Promise(() => { ... });
           return promise;
         }
         startPayment(arg0) {
@@ -10197,7 +9593,7 @@ let fn = () => {
           str = true;
           if (global) {
             obj = global.blikOptions || {};
-            if (typeof global.paymentType === "y") {
+            if (typeof global.paymentType === "string") {
               str2 = global.paymentType;
               paymentType = str2.toLowerCase();
             } else {
@@ -10431,7 +9827,7 @@ let fn = () => {
             tmp74 = new.target;
             tmp75 = new reject(c11.LOCAL_PAYMENT_START_PAYMENT_MISSING_REQUIRED_OPTION);
             tmp76 = tmp75;
-            if (typeof str !== "_iter") {
+            if (typeof str === "string") {
               str29 = "Missing required '";
               str30 = "' option.";
               tmp75.details = `Missing required '${str}' option.`;
@@ -10525,7 +9921,7 @@ let fn = () => {
             tmp67 = tmp66;
             reject = tmp66;
             obj13 = global.blikOptions || {};
-            if (typeof global.paymentType === "y") {
+            if (typeof global.paymentType === "string") {
               str25 = global.paymentType;
               paymentType2 = str25.toLowerCase();
             } else {
@@ -10548,11 +9944,7 @@ let fn = () => {
               _isRedirectFlow = self._isRedirectFlow;
             }
             if (!_isRedirectFlow) {
-              self._startPaymentCallback = self._createStartPaymentCallback((arg0) => {
-                tmp66.resolve(arg0);
-              }, (arg0) => {
-                tmp66.reject(arg0);
-              });
+              self._startPaymentCallback = self._createStartPaymentCallback(() => { ... }, () => { ... });
               _frameService = self._frameService;
               num15 = size.width;
               if (!num15) {
@@ -10567,91 +9959,8 @@ let fn = () => {
             obj7 = { method: "post", endpoint: "local_payments/create", data: null };
             obj7[2] = obj;
             requestResult = _client.request(obj7);
-            nextPromise = requestResult.then((paymentResource) => {
-              let _client;
-              let _paymentType;
-              const blikOptions = paymentResource;
-              const redirectUrl = paymentResource.paymentResource.redirectUrl;
-              const sendEvent = outer1_4.sendEvent;
-              ({ _client, _paymentType } = self);
-              if (self._isRedirectFlow) {
-                sendEvent(_client, `${_paymentType}.local-payment.start-payment.redirected`);
-              } else {
-                sendEvent(_client, `${_paymentType}.local-payment.start-payment.opened`);
-              }
-              let obj = blikOptions;
-              self._startPaymentOptions = blikOptions;
-              const obj2 = blikOptions.blikOptions || {};
-              if (typeof obj.paymentType === "y") {
-                let paymentType = obj.paymentType.toLowerCase();
-                const str3 = obj.paymentType;
-              } else {
-                paymentType = obj.paymentType;
-              }
-              if ("blik" === paymentType) {
-                let hasOwnPropertyResult = obj2.hasOwnProperty("level_0");
-                if (!hasOwnPropertyResult) {
-                  hasOwnPropertyResult = obj2.hasOwnProperty("oneClick");
-                }
-                let hasItem = hasOwnPropertyResult;
-              } else {
-                const items = ["pay_upon_invoice", "mbway", "bancomatpay"];
-                hasItem = items.includes(paymentType);
-              }
-              if (hasItem) {
-                tmp._authorizationInProgress = false;
-                if (typeof redirectUrl !== "_iter") {
-                  if (redirectUrl.length) {
-                    const tmp20 = new tmp66(outer1_11.LOCAL_PAYMENT_START_PAYMENT_DEFERRED_PAYMENT_FAILED);
-                    tmp66.reject(tmp20);
-                  }
-                }
-                obj = { paymentId: null };
-                obj[0] = paymentResource.paymentResource.paymentToken;
-                const onPaymentStartResult = obj.onPaymentStart(obj);
-                if (onPaymentStartResult instanceof Promise) {
-                  promise.then(() => {
-                    closure_1.resolve();
-                  });
-                } else {
-                  tmp66.resolve();
-                }
-              } else if (tmp._isRedirectFlow) {
-                const _window = window;
-                window.location.href = paymentResource.paymentResource.redirectUrl;
-              } else {
-                obj = { paymentId: null };
-                obj[0] = paymentResource.paymentResource.paymentToken;
-                obj.onPaymentStart(obj, () => {
-                  const _frameService = outer1_3._frameService;
-                  _frameService.redirect(paymentResource.paymentResource.redirectUrl);
-                });
-              }
-            });
-            catchPromise = nextPromise.catch((details) => {
-              if (!self._isRedirectFlow) {
-                const _frameService = tmp2._frameService;
-                _frameService.close();
-              }
-              self._authorizationInProgress = false;
-              if (422 !== tmp) {
-                let obj = { type: null, code: null, message: null };
-                obj[0] = outer1_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.type;
-                obj[1] = outer1_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.code;
-                obj[2] = outer1_11.LOCAL_PAYMENT_START_PAYMENT_FAILED.message;
-                tmp66.reject(outer1_7(details, obj));
-              } else {
-                obj = { type: null, code: null, message: null, details: null };
-                obj[0] = outer1_11.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.type;
-                obj[1] = outer1_11.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.code;
-                obj[2] = outer1_11.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.message;
-                obj = { originalError: null };
-                obj[0] = details;
-                obj[3] = obj;
-                const tmp18 = new tmp66(obj);
-                tmp66.reject(tmp18);
-              }
-            });
+            nextPromise = requestResult.then(() => { ... });
+            catchPromise = nextPromise.catch(() => { ... });
             rejectResult = tmp66;
           }
           return rejectResult;
@@ -10695,21 +10004,8 @@ let fn = () => {
                 obj = { endpoint: "payment_methods/paypal_accounts", method: "post", data: null };
                 obj[2] = self._formatTokenizeData(queryItems);
                 requestResult = _client.request(obj);
-                nextPromise = requestResult.then((arg0) => {
-                  const sendEvent = outer1_4.sendEvent;
-                  const _paymentType = self._paymentType;
-                  const result = self._formatTokenizePayload(arg0);
-                  if (window.popupBridge) {
-                    sendEvent(tmp3, `${_paymentType}.local-payment.tokenization.success-popupbridge`);
-                  } else {
-                    sendEvent(tmp3, `${_paymentType}.local-payment.tokenization.success`);
-                  }
-                  return result;
-                });
-                rejectResult = nextPromise.catch((arg0) => {
-                  outer1_4.sendEvent(_client, `${self._paymentType}.local-payment.tokenization.failed`);
-                  return Promise.reject(outer1_7(arg0, { type: outer1_11.LOCAL_PAYMENT_TOKENIZATION_FAILED.type, code: outer1_11.LOCAL_PAYMENT_TOKENIZATION_FAILED.code, message: outer1_11.LOCAL_PAYMENT_TOKENIZATION_FAILED.message }));
-                });
+                nextPromise = requestResult.then(() => { ... });
+                rejectResult = nextPromise.catch(() => { ... });
               }
             }
             return rejectResult;
@@ -10741,54 +10037,7 @@ let fn = () => {
           closure_1 = module;
           self = this;
           _client = this._client;
-          return (code, errorcode) => {
-            let obj = self;
-            self._authorizationInProgress = false;
-            if (code) {
-              if ("FRAME_SERVICE_FRAME_CLOSED" === code.code) {
-                if (errorcode) {
-                  if ("processing_error" === errorcode.errorcode) {
-                    outer1_4.sendEvent(_client, `${obj._paymentType}.local-payment.failed-in-window`);
-                    const tmp36 = new callback(outer1_11.LOCAL_PAYMENT_START_PAYMENT_FAILED);
-                    callback(tmp36);
-                  }
-                }
-                outer1_4.sendEvent(_client, `${obj._paymentType}.local-payment.tokenization.closed.by-user`);
-                const tmp25 = new callback(outer1_11.LOCAL_PAYMENT_WINDOW_CLOSED);
-                callback(tmp25);
-              } else {
-                code = code.code;
-                if (code) {
-                  code = code.code;
-                  code = code.indexOf("FRAME_SERVICE_FRAME_OPEN_FAILED") > -1;
-                }
-                if (code) {
-                  obj = { code: null, type: null, message: null, details: null };
-                  obj[0] = outer1_11.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.code;
-                  obj[1] = outer1_11.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.type;
-                  obj[2] = outer1_11.LOCAL_PAYMENT_WINDOW_OPEN_FAILED.message;
-                  obj = { originalError: null };
-                  obj[0] = code;
-                  obj[3] = obj;
-                  const tmp14 = new callback(obj);
-                  callback(tmp14);
-                }
-              }
-            } else if (errorcode) {
-              const _window = window;
-              if (!window.popupBridge) {
-                let _frameService = obj._frameService;
-                _frameService.redirect(obj._loadingFrameUrl);
-              }
-              const tokenizeResult = obj.tokenize(errorcode);
-              const nextPromise = obj.tokenize(errorcode).then(closure_0);
-              obj.tokenize(errorcode).then(closure_0).catch(callback).then(() => {
-                _frameService = _frameService._frameService;
-                _frameService.close();
-              });
-              const catchPromise = obj.tokenize(errorcode).then(closure_0).catch(callback);
-            }
-          };
+          return () => { ... };
         }
         _formatTokenizePayload(arg0) {
           first = {};
@@ -10944,7 +10193,7 @@ let fn = () => {
           obj._authInProgress = false;
           if (window.popupBridge) {
             _window = window;
-            if (typeof window.popupBridge.getReturnUrlPrefix === "find") {
+            if (typeof window.popupBridge.getReturnUrlPrefix === "function") {
               _window2 = window;
               popupBridge = window.popupBridge;
               str2 = "return";
@@ -10962,31 +10211,7 @@ let fn = () => {
         }
         _initialize() {
           self = this;
-          promise = new Promise((arg0) => {
-            const _self = arg0;
-            const timeout = setTimeout(() => {
-              outer1_4.sendEvent(lib._client, "masterpass.load.timed-out");
-            }, outer1_8);
-            let obj = { name: outer1_7.LANDING_FRAME_NAME, height: outer1_7.POPUP_HEIGHT, width: outer1_7.POPUP_WIDTH, dispatchFrameUrl: null, openFrameUrl: null };
-            let str = ".min";
-            let str2 = ".min";
-            const text = `${closure_0._assetsUrl}/html/dispatch-frame`;
-            if (_self._isDebug) {
-              str2 = "";
-            }
-            obj[3] = text + str2 + ".html";
-            const text1 = `${tmp2._assetsUrl}/html/masterpass-landing-frame`;
-            if (_self._isDebug) {
-              str = "";
-            }
-            obj[4] = text1 + str + ".html";
-            obj = self.create(obj, (_frameService) => {
-              lib._frameService = _frameService;
-              clearTimeout(closure_1);
-              outer2_4.sendEvent(lib._client, "masterpass.load.succeeded");
-              lib(lib);
-            });
-          });
+          promise = new Promise(() => { ... });
           return promise;
         }
         tokenize(arg0) {
@@ -11024,12 +10249,7 @@ let fn = () => {
               } else {
                 tmp7 = new.target;
                 tmp8 = new.target;
-                rejectResult = new _Promise((arg0, arg1) => {
-                  const result = self._navigateFrameToLoadingPage(frameOptions);
-                  result.catch(arg1);
-                  const _frameService = self._frameService;
-                  _frameService.open(frameOptions.frameOptions, self._createFrameOpenHandler(arg0, arg1));
-                });
+                rejectResult = new _Promise(() => { ... });
               }
             }
             return rejectResult;
@@ -11045,92 +10265,14 @@ let fn = () => {
           _client = this._client;
           obj = { originUrl: `${window.location.protocol}//${window.location.hostname}`, subtotal: global.subtotal, currencyCode: global.currencyCode, callbackUrl: this._callbackUrl };
           requestResult = _client.request({ method: "post", endpoint: "masterpass/request_token", data: { requestToken: obj } });
-          nextPromise = requestResult.then((requestToken) => {
-            let str = ".min";
-            const text = `${self._assetsUrl}/html/masterpass-loading-frame`;
-            if (self._isDebug) {
-              str = "";
-            }
-            const _client = tmp._client;
-            const combined = text + str + ".html?";
-            const gatewayConfiguration = _client.getConfiguration().gatewayConfiguration;
-            const tmp4 = obj.config || {};
-            self = tmp4;
-            obj = { environment: gatewayConfiguration.environment, requestToken: requestToken.requestToken, callbackUrl: tmp._callbackUrl, merchantCheckoutId: gatewayConfiguration.masterpass.merchantCheckoutId, allowedCardTypes: gatewayConfiguration.masterpass.supportedNetworks, version: outer1_7.MASTERPASS_VERSION };
-            const keys = Object.keys(tmp4);
-            const item = keys.forEach((arg0) => {
-              if (typeof tmp4[arg0] !== "find") {
-                obj[arg0] = tmp[arg0];
-              }
-            });
-            const keys1 = Object.keys(obj);
-            const mapped = keys1.map((arg0) => arg0 + "=" + obj[arg0]);
-            const _frameService = tmp._frameService;
-            _frameService.redirect(combined + mapped.join("&"));
-          });
-          return nextPromise.catch((details) => {
-            self._closeWindow();
-            if (422 === tmp) {
-              let rejectResult = Promise.reject(outer1_6(details, outer1_2.MASTERPASS_INVALID_PAYMENT_OPTION));
-            } else {
-              rejectResult = Promise.reject(outer1_6(details, outer1_2.MASTERPASS_FLOW_FAILED));
-            }
-            return rejectResult;
-          });
+          nextPromise = requestResult.then(() => { ... });
+          return nextPromise.catch(() => { ... });
         }
         _createFrameOpenHandler(arg0, arg1) {
           closure_0 = global;
           closure_1 = module;
           self = this;
-          return window.popupBridge ? ((arg0, queryItems) => {
-            self._authInProgress = false;
-            if (arg0) {
-              outer1_4.sendEvent(obj._client, "masterpass.tokenization.closed-popupbridge.by-user");
-              callback(outer1_6(arg0, self.MASTERPASS_POPUP_CLOSED));
-            } else if (queryItems.queryItems) {
-              const _tokenizeMasterpassResult = obj._tokenizeMasterpass(queryItems.queryItems);
-              obj._tokenizeMasterpass(queryItems.queryItems).then(closure_0).catch(callback);
-              const nextPromise = obj._tokenizeMasterpass(queryItems.queryItems).then(closure_0);
-            } else {
-              outer1_4.sendEvent(obj._client, "masterpass.tokenization.failed-popupbridge");
-              const tmp9 = new callback(self.MASTERPASS_FLOW_FAILED);
-              callback(tmp9);
-            }
-            return tmp12;
-          }) : ((code) => {
-            let obj = self;
-            if (code) {
-              obj._authInProgress = false;
-              if ("FRAME_SERVICE_FRAME_CLOSED" === code.code) {
-                outer1_4.sendEvent(obj._client, "masterpass.tokenization.closed.by-user");
-                const tmp33 = new callback(self.MASTERPASS_POPUP_CLOSED);
-                callback(tmp33);
-              } else {
-                if (code.code) {
-                  code = code.code;
-                  if (code.indexOf("FRAME_SERVICE_FRAME_OPEN_FAILED") > -1) {
-                    outer1_4.sendEvent(obj._client, "masterpass.tokenization.failed.to-open");
-                    obj = { code: null, type: null, message: null, details: null };
-                    obj[0] = self.MASTERPASS_POPUP_OPEN_FAILED.code;
-                    obj[1] = self.MASTERPASS_POPUP_OPEN_FAILED.type;
-                    obj[2] = self.MASTERPASS_POPUP_OPEN_FAILED.message;
-                    obj = { originalError: null };
-                    obj[0] = code;
-                    obj[3] = obj;
-                    const tmp23 = new callback(obj);
-                    callback(tmp23);
-                  }
-                }
-                outer1_4.sendEvent(obj._client, "masterpass.tokenization.failed");
-                obj._closeWindow();
-                callback(outer1_6(code, self.MASTERPASS_FLOW_FAILED));
-              }
-              return tmp12;
-            } else {
-              const _tokenizeMasterpassResult = obj._tokenizeMasterpass(arg1);
-              obj._tokenizeMasterpass(arg1).then(closure_0).catch(callback);
-            }
-          });
+          return window.popupBridge ? (() => { ... }) : (() => { ... });
         }
         _tokenizeMasterpass(arg0) {
           self = this;
@@ -11152,13 +10294,7 @@ let fn = () => {
           } else {
             items = [, , ];
             ({ oauth_verifier: arr[0], oauth_token: arr[1], checkout_resource_url: arr[2] } = global);
-            if (items.some((arg0) => {
-              let tmp = null == arg0;
-              if (!tmp) {
-                tmp = "null" === arg0;
-              }
-              return tmp;
-            })) {
+            if (items.some(() => { ... })) {
               tmp2 = c4;
               str = "masterpass.tokenization.closed.missing-payload";
               sendEventResult1 = c4.sendEvent(self._client, "masterpass.tokenization.closed.missing-payload");
@@ -11181,28 +10317,8 @@ let fn = () => {
               obj[0] = obj1;
               obj[2] = obj;
               requestResult = _client.request(obj);
-              nextPromise = requestResult.then((arg0) => {
-                self._closeWindow();
-                const sendEvent = outer1_4.sendEvent;
-                const _client = self._client;
-                if (window.popupBridge) {
-                  sendEvent(_client, "masterpass.tokenization.success-popupbridge");
-                } else {
-                  sendEvent(_client, "masterpass.tokenization.success");
-                }
-                return arg0.masterpassCards[0];
-              });
-              rejectResult = nextPromise.catch((arg0) => {
-                self._closeWindow();
-                const sendEvent = outer1_4.sendEvent;
-                const _client = self._client;
-                if (window.popupBridge) {
-                  sendEvent(_client, "masterpass.tokenization.failed-popupbridge");
-                } else {
-                  sendEvent(_client, "masterpass.tokenization.failed");
-                }
-                return Promise.reject(outer1_6(arg0, outer1_2.MASTERPASS_ACCOUNT_TOKENIZATION_FAILED));
-              });
+              nextPromise = requestResult.then(() => { ... });
+              rejectResult = nextPromise.catch(() => { ... });
             }
           }
           return rejectResult;
@@ -11215,13 +10331,7 @@ let fn = () => {
         }
         teardown() {
           self = this;
-          promise = new Promise((arg0) => {
-            const _frameService = self._frameService;
-            _frameService.teardown();
-            outer1_5(self, outer1_3(outer1_9.prototype));
-            outer1_4.sendEvent(self._client, "masterpass.teardown-completed");
-            arg0();
-          });
+          promise = new Promise(() => { ... });
           return promise;
         }
       }
@@ -11348,9 +10458,7 @@ let fn = () => {
           self._googleMerchantId = "18278000977346790994";
           self._supportedPaymentMethods = self._constructDefaultSupportedPaymentMethods();
           keys = Object.keys(self._supportedPaymentMethods);
-          fn = function(arg0) {
-            return this._supportedPaymentMethods[arg0];
-          };
+          fn = () => { ... };
           self._defaultSupportedPaymentMethods = keys.map(fn.bind(self));
           obj = { channel: self._componentId };
           tmp4 = new framebus(obj);
@@ -11373,12 +10481,7 @@ let fn = () => {
             obj = { supportedMethods: "basic-card", data: null };
             obj1 = { supportedNetworks: null };
             supportedCardTypes = creditCards.supportedCardTypes;
-            obj1[0] = supportedCardTypes.reduce((arr) => {
-              if (arg1 in closure_14) {
-                arr.push(tmp[arg1]);
-              }
-              return arr;
-            }, []);
+            obj1[0] = supportedCardTypes.reduce(() => { ... }, []);
             obj[1] = obj1;
             obj.basicCard = obj;
           }
@@ -11411,37 +10514,7 @@ let fn = () => {
             _Promise = Promise;
             tmp2 = new.target;
             tmp3 = new.target;
-            rejectResult = new Promise((arg0) => {
-              let _componentId;
-              let _frame;
-              let closure_0 = arg0;
-              let _bus = self._bus;
-              _bus.on(outer1_12.FRAME_READY, (arg0) => {
-                arg0(_client._client);
-              });
-              let _bus2 = self._bus;
-              _bus2.on(outer1_12.FRAME_CAN_MAKE_REQUESTS, () => {
-                lib.sendEvent(outer1_1._client, "payment-request.initialized");
-                let _bus = outer1_1._bus;
-                _bus.on(outer2_12.SHIPPING_ADDRESS_CHANGE, (shippingAddress) => {
-                  obj = { target: obj, updateWith() { ... } };
-                  obj = { shippingAddress };
-                  closure_1._emit("shippingAddressChange", obj);
-                  closure_1._emit("shippingaddresschange", obj);
-                });
-                const _bus2 = outer1_1._bus;
-                _bus2.on(outer2_12.SHIPPING_OPTION_CHANGE, (shippingOption) => {
-                  obj = { target: obj, updateWith() { ... } };
-                  obj = { shippingOption };
-                  closure_1._emit("shippingOptionChange", obj);
-                  closure_1._emit("shippingoptionchange", obj);
-                });
-                lib(outer1_1);
-              });
-              ({ _frame, _componentId } = self);
-              _frame.src = `${`${closure_0.gatewayConfiguration.assetsUrl}/web/3.112.1/html/payment-request-frame`}${outer1_7(closure_0.isDebug)}.html#${_componentId}`;
-              body.appendChild(self._frame);
-            });
+            rejectResult = new Promise(() => { ... });
           }
           return rejectResult;
         }
@@ -11475,36 +10548,7 @@ let fn = () => {
         tokenize(arg0) {
           closure_0 = global;
           self = this;
-          promise = new Promise((arg0, arg1) => {
-            let obj = arg0;
-            const _self = arg1;
-            const _bus = _self._bus;
-            let _defaultSupportedPaymentMethods = obj.supportedPaymentMethods;
-            if (!_defaultSupportedPaymentMethods) {
-              _defaultSupportedPaymentMethods = _self._defaultSupportedPaymentMethods;
-            }
-            obj = { supportedPaymentMethods: _defaultSupportedPaymentMethods, details: tmp.details, options: tmp.options };
-            _bus.emit(outer1_12.PAYMENT_REQUEST_INITIALIZED, obj, (arg0) => {
-              let tmp;
-              let tmp2;
-              [tmp, tmp2] = arg0;
-              if (tmp) {
-                lib2(lib2._formatTokenizationError(tmp));
-              } else {
-                lib.sendEvent(lib2._client, "payment-request.tokenize.succeeded");
-                let obj = { nonce: null, type: null, description: null, details: null, binData: null };
-                ({ nonce: obj[0], type: obj[1], description: obj[2] } = tmp2);
-                obj = { rawPaymentResponse: null, cardType: null, lastFour: null, lastTwo: null };
-                obj[0] = tmp2.details.rawPaymentResponse;
-                obj[1] = tmp2.details.cardType;
-                obj[2] = tmp2.details.lastFour;
-                obj[3] = tmp2.details.lastTwo;
-                obj[3] = obj;
-                obj[4] = tmp2.binData;
-                lib(obj);
-              }
-            });
-          });
+          promise = new Promise(() => { ... });
           return promise;
         }
         canMakePayment(arg0) {
@@ -11516,32 +10560,11 @@ let fn = () => {
               _Promise2 = Promise;
               tmp7 = new.target;
               tmp8 = new.target;
-              promise = new Promise((arg0, arg1) => {
-                const supportedPaymentMethods = arg0;
-                let closure_1 = arg1;
-                const _bus = self._bus;
-                let _defaultSupportedPaymentMethods = supportedPaymentMethods.supportedPaymentMethods;
-                if (!_defaultSupportedPaymentMethods) {
-                  _defaultSupportedPaymentMethods = self._defaultSupportedPaymentMethods;
-                }
-                _bus.emit(outer1_12.CAN_MAKE_PAYMENT, { supportedPaymentMethods: _defaultSupportedPaymentMethods, details: supportedPaymentMethods.details, options: supportedPaymentMethods.options }, (arg0) => {
-                  let tmp;
-                  let tmp2;
-                  [tmp, tmp2] = arg0;
-                  if (tmp) {
-                    callback(outer1_2._formatCanMakePaymentError(tmp));
-                  } else {
-                    lib.sendEvent(outer1_2._client, `payment-request.can-make-payment.${tmp2}`);
-                    lib(tmp2);
-                  }
-                });
-              });
+              promise = new Promise(() => { ... });
               tmp17 = promise;
             } else {
               prop = global.supportedPaymentMethods;
-              item = prop.forEach((supportedMethods) => {
-                supportedMethods = supportedMethods.supportedMethods;
-              });
+              item = prop.forEach(() => { ... });
               tmp6 = assign;
             }
             _Promise3 = tmp2.Promise;
@@ -11843,35 +10866,11 @@ let fn = () => {
           }
           obj1 = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: c3.create(global.authorization), name: "PayPal Checkout" };
           obj2 = c2.create(obj1);
-          fn = function(getConfiguration) {
-            const self = this;
-            let rejectResult = getConfiguration;
-            this._configuration = getConfiguration.getConfiguration();
-            if (!this._merchantAccountId) {
-              if (self._configuration.gatewayConfiguration.paypalEnabled) {
-                if (true === self._configuration.gatewayConfiguration.paypal.environmentNoNetwork) {
-                  const tmp12 = new closure_5(constants.PAYPAL_SANDBOX_ACCOUNT_NOT_LINKED);
-                  self._setupError = tmp12;
-                }
-              } else {
-                const tmp6 = new closure_5(constants.PAYPAL_NOT_ENABLED);
-                self._setupError = tmp6;
-              }
-            }
-            if (self._setupError) {
-              rejectResult = Promise.reject(self._setupError);
-            } else {
-              closure_0.sendEvent(rejectResult, "paypal-checkout.initialized");
-              self._frameServicePromise = self._setupFrameService(rejectResult);
-            }
-            return rejectResult;
-          };
+          fn = () => { ... };
           self._clientPromise = obj2.then(fn.bind(self));
           if (global.client) {
             _clientPromise = self._clientPromise;
-            fn2 = function() {
-              return this;
-            };
+            fn2 = /* F114728 */ function() { ... };
             nextPromise = _clientPromise.then(fn2.bind(self));
           } else {
             tmp4 = globalThis;
@@ -11886,19 +10885,12 @@ let fn = () => {
           tmp = new closure_4();
           assign = tmp;
           configuration = global.getConfiguration();
-          f114729 = setTimeout(() => {
-            getConfiguration.sendEvent(getConfiguration, "paypal-checkout.frame-service.timed-out");
-            tmp.reject(new outer1_5(outer1_7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED));
-          }, INTEGRATION_TIMEOUT_MS);
+          f114729 = setTimeout(() => { ... }, INTEGRATION_TIMEOUT_MS);
           obj._assetsUrl = `${tmp2.gatewayConfiguration.paypal.assetsUrl}/web/3.112.1`;
           obj._isDebug = configuration.isDebug;
           obj._loadingFrameUrl = `${`${obj._assetsUrl}/html/paypal-landing-frame`}${c12(obj._isDebug)}.html`;
           obj = { name: "braintreepaypallanding", dispatchFrameUrl: `${`${obj._assetsUrl}/html/dispatch-frame`}${c12(obj._isDebug)}.html`, openFrameUrl: obj._loadingFrameUrl };
-          fn = function(_frameService) {
-            this._frameService = _frameService;
-            clearTimeout(closure_2);
-            tmp.resolve();
-          };
+          fn = () => { ... };
           obj1 = c9.create(obj, fn.bind(obj));
           return tmp;
         }
@@ -11913,14 +10905,7 @@ let fn = () => {
               str = "paypal-checkout.createPayment";
               sendEventResult = closure_0.sendEvent(this._clientPromise, "paypal-checkout.createPayment");
               result = this._createPaymentResource(global);
-              nextPromise = result.then((paymentResource) => {
-                if ("checkout" === flow.flow) {
-                  let tokenId = outer1_14.parse(paymentResource.paymentResource.redirectUrl).token;
-                } else {
-                  tokenId = paymentResource.agreementSetup.tokenId;
-                }
-                return tokenId;
-              });
+              nextPromise = result.then(() => { ... });
             }
             return nextPromise;
           }
@@ -11947,38 +10932,8 @@ let fn = () => {
             sendEventResult = closure_0.sendEvent(self._clientPromise, "paypal-checkout.credit.offered");
           }
           _clientPromise = self._clientPromise;
-          nextPromise = _clientPromise.then((request) => {
-            obj = { endpoint: closure_3, method: "post", data: self._formatPaymentResourceData(closure_0, obj) };
-            return request.request(obj).then((arg0) => {
-              closure_2.intentFromCreatePayment = intent.intent;
-              return arg0;
-            });
-          });
-          return nextPromise.catch((details) => {
-            if (self._setupError) {
-              let rejectResult = Promise.reject(tmp._setupError);
-            } else {
-              if (422 === tmp3) {
-                let obj = { type: null, code: null, message: null, details: null };
-                obj[0] = outer1_7.PAYPAL_INVALID_PAYMENT_OPTION.type;
-                obj[1] = outer1_7.PAYPAL_INVALID_PAYMENT_OPTION.code;
-                obj[2] = outer1_7.PAYPAL_INVALID_PAYMENT_OPTION.message;
-                obj = { originalError: null };
-                obj[0] = details;
-                obj[3] = obj;
-                const tmp18 = new outer1_5(obj);
-                rejectResult = Promise.reject(tmp18);
-              } else {
-                obj = { type: null, code: null, message: null };
-                obj[0] = outer1_7.PAYPAL_FLOW_FAILED.type;
-                obj[1] = outer1_7.PAYPAL_FLOW_FAILED.code;
-                obj[2] = outer1_7.PAYPAL_FLOW_FAILED.message;
-                rejectResult = Promise.reject(outer1_6(details, obj));
-              }
-              tmp3 = details.details && details.details.httpStatus;
-            }
-            return rejectResult;
-          });
+          nextPromise = _clientPromise.then(() => { ... });
+          return nextPromise.catch(() => { ... });
         }
         updatePayment(arg0) {
           self = this;
@@ -11994,29 +10949,8 @@ let fn = () => {
                 str3 = "paypal-checkout.updatePayment";
                 sendEventResult = sendEvent(_clientPromise, "paypal-checkout.updatePayment");
                 _clientPromise = self._clientPromise;
-                nextPromise = _clientPromise.then((request) => request.request({ endpoint: "paypal_hermes/patch_payment_resource", method: "post", data: self._formatUpdatePaymentData(closure_0) }));
-                catchPromise = nextPromise.catch((details) => {
-                  if (422 === tmp) {
-                    closure_0.sendEvent(self._clientPromise, "paypal-checkout.updatePayment.invalid");
-                    let obj = { type: null, code: null, message: null, details: null };
-                    obj[0] = outer1_7.PAYPAL_INVALID_PAYMENT_OPTION.type;
-                    obj[1] = outer1_7.PAYPAL_INVALID_PAYMENT_OPTION.code;
-                    obj[2] = outer1_7.PAYPAL_INVALID_PAYMENT_OPTION.message;
-                    obj = { originalError: null };
-                    obj[0] = details;
-                    obj[3] = obj;
-                    const tmp13 = new outer1_5(obj);
-                    let rejectResult = Promise.reject(tmp13);
-                  } else {
-                    closure_0.sendEvent(self._clientPromise, `paypal-checkout.updatePayment.${outer1_7.PAYPAL_FLOW_FAILED.code}`);
-                    obj = { type: null, code: null, message: null };
-                    obj[0] = outer1_7.PAYPAL_FLOW_FAILED.type;
-                    obj[1] = outer1_7.PAYPAL_FLOW_FAILED.code;
-                    obj[2] = outer1_7.PAYPAL_FLOW_FAILED.message;
-                    rejectResult = Promise.reject(outer1_6(details, obj));
-                  }
-                  return rejectResult;
-                });
+                nextPromise = _clientPromise.then(() => { ... });
+                catchPromise = nextPromise.catch(() => { ... });
               } else {
                 str = "paypal-checkout.updatePayment.inconsistent-currencies";
                 sendEventResult1 = sendEvent(_clientPromise, "paypal-checkout.updatePayment.inconsistent-currencies");
@@ -12071,11 +11005,7 @@ let fn = () => {
             rejectResult = Promise.reject(tmp25);
           } else {
             tmp = INTEGRATION_TIMEOUT_MS;
-            item = INTEGRATION_TIMEOUT_MS.forEach((key10009) => {
-              if (!closure_0.hasOwnProperty(key10009)) {
-                let closure_1 = key10009;
-              }
-            });
+            item = INTEGRATION_TIMEOUT_MS.forEach(() => { ... });
             tmp3 = assign;
             if (assign) {
               tmp9 = globalThis;
@@ -12105,58 +11035,9 @@ let fn = () => {
               str = "paypal-checkout.startVaultInitiatedCheckout.started";
               sendEventResult1 = _addModalBackdrop.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.started");
               result = self._waitForVaultInitiatedCheckoutDependencies();
-              nextPromise = result.then(() => {
-                const tmp = new outer1_4();
-                let closure_0 = tmp;
-                const result = self._createPaymentResource(closure_0, { returnUrl: self._constructVaultCheckutUrl("redirect-frame"), cancelUrl: self._constructVaultCheckutUrl("cancel-frame") });
-                let _frameService = self._frameService;
-                const obj = { returnUrl: self._constructVaultCheckutUrl("redirect-frame"), cancelUrl: self._constructVaultCheckutUrl("cancel-frame") };
-                _frameService.open({}, self._createFrameServiceCallback(tmp));
-                return result.then((paymentResource) => {
-                  const _frameService = outer1_2._frameService;
-                  _frameService.redirect(paymentResource.paymentResource.redirectUrl);
-                  return closure_0;
-                });
-              });
-              catchPromise = nextPromise.catch((code) => {
-                self._vaultInitiatedCheckoutInProgress = false;
-                self._removeModalBackdrop();
-                if ("FRAME_SERVICE_FRAME_CLOSED" === code.code) {
-                  closure_0.sendEvent(tmp._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.canceled.by-customer");
-                  const tmp25 = new outer1_5(outer1_7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_CANCELED);
-                  let rejectResult = Promise.reject(tmp25);
-                } else {
-                  if (tmp._frameService) {
-                    const _frameService = tmp._frameService;
-                    _frameService.close();
-                  }
-                  if (code.code) {
-                    code = code.code;
-                    if (code.indexOf("FRAME_SERVICE_FRAME_OPEN_FAILED") > -1) {
-                      closure_0.sendEvent(tmp._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.failed.popup-not-opened");
-                      let obj = { code: null, type: null, message: null, details: null };
-                      obj[0] = outer1_7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.code;
-                      obj[1] = outer1_7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.type;
-                      obj[2] = outer1_7.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.message;
-                      obj = { originalError: null };
-                      obj[0] = code;
-                      obj[3] = obj;
-                      const tmp16 = new outer1_5(obj);
-                      rejectResult = Promise.reject(tmp16);
-                    }
-                  }
-                  rejectResult = Promise.reject(code);
-                }
-                return rejectResult;
-              });
-              rejectResult = catchPromise.then((arg0) => {
-                const _frameService = self._frameService;
-                _frameService.close();
-                self._vaultInitiatedCheckoutInProgress = false;
-                self._removeModalBackdrop();
-                closure_0.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.succeeded");
-                return Promise.resolve(arg0);
-              });
+              nextPromise = result.then(() => { ... });
+              catchPromise = nextPromise.catch(() => { ... });
+              rejectResult = catchPromise.then(() => { ... });
             }
           }
           return rejectResult;
@@ -12187,9 +11068,7 @@ let fn = () => {
               str5 = "0.7";
               self._modalBackdrop.style.opacity = "0.7";
               _modalBackdrop2 = self._modalBackdrop;
-              fn = function() {
-                const result = this.focusVaultInitiatedCheckoutWindow();
-              };
+              fn = () => { ... };
               str6 = "click";
               listener = _modalBackdrop2.addEventListener("click", fn.bind(self));
             }
@@ -12217,47 +11096,23 @@ let fn = () => {
             sendEventResult = c0.sendEvent(self._clientPromise, "paypal-checkout.startVaultInitiatedCheckout.canceled.by-merchant");
           }
           result = self._waitForVaultInitiatedCheckoutDependencies();
-          fn = function() {
-            const _frameService = this._frameService;
-            _frameService.close();
-          };
+          fn = () => { ... };
           return result.then(fn.bind(self));
         }
         focusVaultInitiatedCheckoutWindow() {
           result = this._waitForVaultInitiatedCheckoutDependencies();
-          fn = function() {
-            const _frameService = this._frameService;
-            _frameService.focus();
-          };
+          fn = () => { ... };
           return result.then(fn.bind(this));
         }
         _createFrameServiceCallback(arg0) {
           closure_0 = global;
           self = this;
-          return (arg0, arg1) => {
-            if (arg0) {
-              closure_0.reject(arg0);
-            } else if (arg1) {
-              const _frameService = self._frameService;
-              _frameService.redirect(self._loadingFrameUrl);
-              const obj = { paymentToken: null, payerID: null, paymentID: null, orderID: null };
-              ({ token: obj[0], PayerID: obj[1], paymentId: obj[2], orderId: obj[3] } = arg1);
-              const tokenizePaymentResult = self.tokenizePayment(obj);
-              self.tokenizePayment(obj).then((arg0) => {
-                closure_0.resolve(arg0);
-              }).catch((arg0) => {
-                closure_0.reject(arg0);
-              });
-              const nextPromise = self.tokenizePayment(obj).then((arg0) => {
-                closure_0.resolve(arg0);
-              });
-            }
-          };
+          return () => { ... };
         }
         _waitForVaultInitiatedCheckoutDependencies() {
           self = this;
           _clientPromise = this._clientPromise;
-          return _clientPromise.then(() => self._frameServicePromise);
+          return _clientPromise.then(() => { ... });
         }
         _constructVaultCheckutUrl(arg0) {
           text = `${this._assetsUrl}/html/${global}`;
@@ -12277,36 +11132,13 @@ let fn = () => {
           obj.vault = flag;
           sendEventResult = c0.sendEvent(self._clientPromise, "paypal-checkout.tokenization.started");
           _clientPromise = self._clientPromise;
-          nextPromise = _clientPromise.then((request) => {
-            obj = { endpoint: "payment_methods/paypal_accounts", method: "post", data: self._formatTokenizeData(obj, closure_3) };
-            return request.request(obj);
-          });
-          nextPromise1 = nextPromise.then((arg0) => {
-            let obj = self._formatTokenizePayload(arg0);
-            obj = outer1_0;
-            outer1_0.sendEvent(self._clientPromise, "paypal-checkout.tokenization.success");
-            if (obj.creditFinancingOffered) {
-              obj.sendEvent(self._clientPromise, "paypal-checkout.credit.accepted");
-            }
-            return obj;
-          });
-          return nextPromise1.catch((arg0) => {
-            if (self._setupError) {
-              let rejectResult = Promise.reject(tmp._setupError);
-            } else {
-              outer1_0.sendEvent(tmp._clientPromise, "paypal-checkout.tokenization.failed");
-              const obj = { type: null, code: null, message: null };
-              obj[0] = outer1_7.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.type;
-              obj[1] = outer1_7.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.code;
-              obj[2] = outer1_7.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.message;
-              rejectResult = Promise.reject(outer1_6(arg0, obj));
-            }
-            return rejectResult;
-          });
+          nextPromise = _clientPromise.then(() => { ... });
+          nextPromise1 = nextPromise.then(() => { ... });
+          return nextPromise1.catch(() => { ... });
         }
         getClientId() {
           _clientPromise = this._clientPromise;
-          return _clientPromise.then((getConfiguration) => getConfiguration.getConfiguration().gatewayConfiguration.paypal.clientId);
+          return _clientPromise.then(() => { ... });
         }
         loadPayPalSDK(arg0) {
           closure_0 = global;
@@ -12354,15 +11186,10 @@ let fn = () => {
               tmp6.intent = str6;
               tmp6.currency = tmp6.currency || "USD";
             }
-            self._paypalScript.onload = () => {
-              promise.resolve();
-            };
+            self._paypalScript.onload = function onload() { ... };
             _Object = Object;
             keys = Object.keys(dataAttributes);
-            fn = function(arg0) {
-              const _paypalScript = this._paypalScript;
-              const attr = _paypalScript.setAttribute(`data-${arg0.replace(/^data\-/, "")}`, dataAttributes[arg0]);
-            };
+            fn = () => { ... };
             item = keys.forEach(fn.bind(self));
             if (tmp6["client-id"]) {
               _Promise = Promise;
@@ -12370,26 +11197,9 @@ let fn = () => {
             } else {
               resolved = self.getClientId();
             }
-            fn2 = function(client_id) {
-              const self = this;
-              closure_0["client-id"] = client_id;
-              if (tmp2) {
-                const _paypalScript = self._paypalScript;
-                const attr = _paypalScript.setAttribute("data-user-id-token", fingerprint);
-                const obj = { id: null, userIdToken: null, amount: null, currency: null, merchantId: null };
-                obj[0] = client_id;
-                obj[1] = fingerprint;
-                obj[2] = dataAttributes.amount;
-                ({ currency: obj[3], merchant-id: obj[4] } = tmp);
-                self._attachPreloadPixel(obj);
-              }
-              self._paypalScript.src = outer1_14.queryify("https://www.paypal.com/sdk/js?", closure_0);
-              head.insertBefore(self._paypalScript, document.head.firstElementChild);
-            };
+            fn2 = () => { ... };
             nextPromise = resolved.then(fn2.bind(self));
-            fn3 = function() {
-              return this;
-            };
+            fn3 = /* F114752 */ function() { ... };
             return promise.then(fn3.bind(self));
           } else {
             if (dataAttributes["client-metadata-id"]) {
@@ -12507,16 +11317,7 @@ let fn = () => {
           everyResult = !currency;
           if (currency) {
             shippingOptions = global.shippingOptions;
-            everyResult = shippingOptions.every((amount) => {
-              let tmp = amount.amount && amount.amount.currency;
-              if (tmp) {
-                const formatted = currency.currency.toLowerCase();
-                tmp = formatted === amount.amount.currency.toLowerCase();
-                const str = currency.currency;
-                const str2 = amount.amount.currency;
-              }
-              return tmp;
-            });
+            everyResult = shippingOptions.every(() => { ... });
           }
           return everyResult;
         }
@@ -12662,18 +11463,8 @@ let fn = () => {
             removeChildResult = parentNode.removeChild(self._paypalScript);
           }
           _frameServicePromise = self._frameServicePromise;
-          catchPromise = _frameServicePromise.catch(() => {
-
-          });
-          return catchPromise.then(() => {
-            if (self._frameService) {
-              const _frameService = self._frameService;
-              let teardownResult = _frameService.teardown();
-            } else {
-              teardownResult = Promise.resolve();
-            }
-            return teardownResult;
-          });
+          catchPromise = _frameServicePromise.catch(/* F114754 */ function() { ... });
+          return catchPromise.then(() => { ... });
         }
       }
       let closure_0 = global("../lib/analytics");
@@ -12718,12 +11509,7 @@ let fn = () => {
           promise = new Promise((arg0) => {
             const _self = arg0;
             let obj = { name: outer1_6.LANDING_FRAME_NAME, dispatchFrameUrl: `${`${closure_0._assetsUrl}/html/dispatch-frame`}${outer1_3(closure_0._isDebug)}.html`, openFrameUrl: _self._loadingFrameUrl };
-            obj = self.create(obj, (_frameService) => {
-              callback._frameService = _frameService;
-              clearTimeout(outer1_2);
-              outer2_8.sendEvent(outer1_1, "paypal.load.succeeded");
-              callback(callback);
-            });
+            obj = self.create(obj, () => { ... });
           });
           return promise;
         }
@@ -13003,7 +11789,7 @@ let fn = () => {
           popupBridge = window.popupBridge;
           if (popupBridge) {
             _window = window;
-            popupBridge = typeof window.popupBridge.getReturnUrlPrefix === "find";
+            popupBridge = typeof window.popupBridge.getReturnUrlPrefix === "function";
           }
           if (popupBridge) {
             _window2 = window;
@@ -13158,36 +11944,16 @@ let fn = () => {
           self = this;
           obj = { authorization: global.authorization, client: global.client, debug: global.debug, assetsUrl: c1.create(global.authorization), name: "PreferredPaymentMethods" };
           obj = c2.create(obj);
-          this._clientPromise = obj.catch((_setupError) => {
-            self._setupError = _setupError;
-            return Promise.reject(_setupError);
-          });
+          this._clientPromise = obj.catch(() => { ... });
           sendEventResult = self.sendEvent(this._clientPromise, "preferred-payment-methods.initialized");
           return Promise.resolve(this);
         }
         fetchPreferredPaymentMethods() {
           self = this;
           _clientPromise = this._clientPromise;
-          nextPromise = _clientPromise.then((request) => {
-            let closure_0 = request;
-            return request.request({ api: "graphQLApi", data: { query: "query PreferredPaymentMethods { preferredPaymentMethods { paypalPreferred venmoPreferred } }" } });
-          });
-          nextPromise1 = nextPromise.then((data) => {
-            const paypalPreferred = data.data.preferredPaymentMethods.paypalPreferred;
-            const venmoPreferred = data.data.preferredPaymentMethods.venmoPreferred;
-            outer1_0.sendEvent(closure_0, `preferred-payment-methods.paypal.api-detected.${paypalPreferred}`);
-            outer1_0.sendEvent(closure_0, `preferred-payment-methods.venmo.api-detected.${venmoPreferred}`);
-            return { paypalPreferred, venmoPreferred };
-          });
-          return nextPromise1.catch(() => {
-            if (self._setupError) {
-              let rejectResult = Promise.reject(tmp._setupError);
-            } else {
-              outer1_0.sendEvent(closure_0, "preferred-payment-methods.api-error");
-              rejectResult = { paypalPreferred: false, venmoPreferred: false };
-            }
-            return rejectResult;
-          });
+          nextPromise = _clientPromise.then(() => { ... });
+          nextPromise1 = nextPromise.then(() => { ... });
+          return nextPromise1.catch(() => { ... });
         }
       }
       let closure_0 = global("../lib/analytics");
@@ -13389,36 +12155,15 @@ let fn = () => {
               if (MANDATE_TYPE_ENUM.includes(global.mandateType)) {
                 tmp14 = c3;
                 mandate = c3.createMandate(self._client, tmp);
-                nextPromise = mandate.then((approvalUrl) => {
-                  outer1_5.sendEvent(self._client, "sepa.create-mandate.success");
-                  if (self._isRedirectFlow) {
-                    let redirectPageResult = outer1_3.redirectPage(approvalUrl.approvalUrl);
-                  } else {
-                    ({ last4: closure_0.last4, bankReferenceToken: closure_0.bankReferenceToken } = approvalUrl);
-                    const obj = { approvalUrl: null, assetsUrl: null };
-                    obj[0] = approvalUrl.approvalUrl;
-                    obj[1] = tmp._assetsUrl;
-                    redirectPageResult = outer1_3.openPopup(tmp._client, obj);
-                  }
-                  return redirectPageResult;
-                });
+                nextPromise = mandate.then(() => { ... });
                 if (self._isRedirectFlow) {
                   tmp16 = globalThis;
                   _Promise2 = Promise;
                   resolved = Promise.resolve();
                 } else {
-                  nextPromise1 = nextPromise.then(() => {
-                    outer1_5.sendEvent(self._client, "sepa.mandate.approved");
-                    return outer1_3.handleApproval(self._client, { bankReferenceToken: mandateType.bankReferenceToken, last4: mandateType.last4, customerId: mandateType.customerId, mandateType: mandateType.mandateType, merchantAccountId: mandateType.merchantAccountId });
-                  });
-                  nextPromise2 = nextPromise1.then((arg0) => {
-                    outer1_5.sendEvent(self._client, "sepa.tokenization.success");
-                    return Promise.resolve(arg0);
-                  });
-                  resolved = nextPromise2.catch((arg0) => {
-                    outer1_5.sendEvent(self._client, `sepa.${arg0.details}.failed`);
-                    return Promise.reject(arg0);
-                  });
+                  nextPromise1 = nextPromise.then(() => { ... });
+                  nextPromise2 = nextPromise1.then(() => { ... });
+                  resolved = nextPromise2.catch(() => { ... });
                 }
                 tmp17 = resolved;
               } else {
@@ -13580,9 +12325,7 @@ let fn = () => {
             resolved = Promise.resolve();
           } else {
             _createPromise = self._createPromise;
-            fn = function(_client) {
-              this._client = _client;
-            };
+            fn = () => { ... };
             resolved = _createPromise.then(fn.bind(self));
           }
           return resolved;
@@ -13609,25 +12352,11 @@ let fn = () => {
             result1 = self._formatVerifyCardOptions(global);
             Promise = result1;
             _formatLookupDataResult = self._formatLookupData(result1);
-            nextPromise = _formatLookupDataResult.then((arg0) => {
-              self.sendEvent(self._createPromise, "three-d-secure.verification-flow.started");
-              return self._performLookup(result1.nonce, arg0);
-            });
-            nextPromise1 = nextPromise.then((arg0) => {
-              self.sendEvent(self._createPromise, `three-d-secure.verification-flow.3ds-version.${arg0.lookup.threeDSecureVersion}`);
-              return self._onLookupComplete(arg0, result1);
-            });
-            nextPromise2 = nextPromise1.then((arg0) => self.initializeChallengeWithLookupResponse(arg0, result1));
-            nextPromise3 = nextPromise2.then((arg0) => {
-              const result = self._resetVerificationState();
-              self.sendEvent(self._createPromise, "three-d-secure.verification-flow.completed");
-              return arg0;
-            });
-            rejectResult = nextPromise3.catch((arg0) => {
-              const result = self._resetVerificationState();
-              self.sendEvent(self._createPromise, "three-d-secure.verification-flow.failed");
-              return Promise.reject(arg0);
-            });
+            nextPromise = _formatLookupDataResult.then(() => { ... });
+            nextPromise1 = nextPromise.then(() => { ... });
+            nextPromise2 = nextPromise1.then(() => { ... });
+            nextPromise3 = nextPromise2.then(() => { ... });
+            rejectResult = nextPromise3.catch(() => { ... });
           }
           return rejectResult;
         }
@@ -13645,7 +12374,7 @@ let fn = () => {
         }
         _resetVerificationState() {
           obj = { _verifyCardInProgress: false, _verifyCardPromisePlus: null };
-          if (typeof obj._reloadThreeDSecure !== "three_button_mouse") {
+          if (typeof obj._reloadThreeDSecure === "function") {
             _reloadThreeDSecureResult = obj._reloadThreeDSecure();
           }
           return;
@@ -13655,32 +12384,7 @@ let fn = () => {
           self = this;
           c2 = `payment_methods/${global}/three_d_secure/lookup`;
           _waitForClientResult = this._waitForClient();
-          return _waitForClientResult.then(() => {
-            const _client = self._client;
-            return _client.request({ endpoint: closure_2, method: "post", data: closure_0 }).catch((details) => {
-              let httpStatus = details;
-              if (details) {
-                httpStatus = details.details;
-              }
-              if (httpStatus) {
-                httpStatus = details.details.httpStatus;
-              }
-              if (404 === httpStatus) {
-                let THREEDS_LOOKUP_ERROR = outer1_6.THREEDS_LOOKUP_TOKENIZED_CARD_NOT_FOUND_ERROR;
-                let str = "three-d-secure.verification-flow.lookup-failed.404";
-              } else if (422 === httpStatus) {
-                THREEDS_LOOKUP_ERROR = outer1_6.THREEDS_LOOKUP_VALIDATION_ERROR;
-                str = "three-d-secure.verification-flow.lookup-failed.422";
-              } else {
-                THREEDS_LOOKUP_ERROR = outer1_6.THREEDS_LOOKUP_ERROR;
-                str = "three-d-secure.verification-flow.lookup-failed";
-              }
-              outer1_1.sendEvent(_createPromise._createPromise, str);
-              obj = { type: THREEDS_LOOKUP_ERROR.type, code: THREEDS_LOOKUP_ERROR.code, message: THREEDS_LOOKUP_ERROR.message, details: obj };
-              obj = { originalError: details };
-              return Promise.reject(new outer1_2(obj));
-            });
-          });
+          return _waitForClientResult.then(() => { ... });
         }
         _existsAndIsNumeric(arg0) {
           isArray = null == global;
@@ -13690,11 +12394,11 @@ let fn = () => {
             isArray = Array.isArray(global);
           }
           if (!isArray) {
-            isArray = typeof global === "T";
+            isArray = typeof global === "boolean";
           }
           if (!isArray) {
-            tmp3 = typeof global === "y";
-            if (typeof global !== "_iter") {
+            tmp3 = typeof global === "string";
+            if (typeof global === "string") {
               str = "";
               tmp3 = "" === global.trim();
             }
@@ -13764,11 +12468,7 @@ let fn = () => {
           self._verifyCardPromisePlus = _verifyCardPromisePlus;
           result = self._handleLookupResponse(global, obj);
           prop = self._verifyCardPromisePlus;
-          return prop.then((arg0) => {
-            outer1_1.sendEvent(self._createPromise, `three-d-secure.verification-flow.liability-shifted.${String(arg0.liabilityShifted)}`);
-            outer1_1.sendEvent(self._createPromise, `three-d-secure.verification-flow.liability-shift-possible.${String(arg0.liabilityShiftPossible)}`);
-            return arg0;
-          });
+          return prop.then(() => { ... });
         }
         _handleLookupResponse(arg0, arg1) {
           acsUrl = global.lookup;
@@ -13923,9 +12623,7 @@ let fn = () => {
           obj = { channel: tmp, verifyDomain: lookupResponse };
           obj2 = new framebus(obj);
           c4 = `${`${this._assetsUrl}/html/three-d-secure-authentication-complete-frame.html?channel=`}${encodeURIComponent(tmp)}&`;
-          onResult = obj2.on(c13, (arg0) => {
-            arg0({ clientConfiguration: closure_1, nonce: lookupResponse.nonce, acsUrl: lookupResponse.acsUrl, pareq: lookupResponse.pareq, termUrl: `${`${lookupResponse.termUrl}&three_d_secure_version=`}${outer1_14}&authentication_complete_base_url=${encodeURIComponent(closure_4)}`, md: lookupResponse.md, parentUrl: closure_2 });
-          });
+          onResult = obj2.on(c13, () => { ... });
           onResult1 = obj2.on(c11.AUTHENTICATION_COMPLETE, global.handleAuthResponse);
           return obj2;
         }
@@ -14104,9 +12802,7 @@ let fn = () => {
           } else {
             callResult = call(self, global);
           }
-          onResult = self.on(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, (arg0, arg1) => {
-            callback("authentication-iframe-available", arg0, arg1);
-          });
+          onResult = self.on(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, () => { ... });
           return;
         }
         _createCardinalConfigurationOptions(arg0) {
@@ -14119,9 +12815,7 @@ let fn = () => {
         }
         _addV1IframeToPage() {
           obj = { element: this._v1Modal };
-          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, () => {
-
-          });
+          _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, /* F114800 */ function() { ... });
           return;
         }
         _setupFrameworkSpecificListeners() {
@@ -14181,9 +12875,7 @@ let fn = () => {
                 tmp15 = InlineIframeFramework;
                 obj = { element: null };
                 obj[0] = element;
-                _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, () => {
-                  callback();
-                });
+                _emitResult = this._emit(InlineIframeFramework.events.AUTHENTICATION_IFRAME_AVAILABLE, obj, () => { ... });
               }
             }
           }
@@ -14232,14 +12924,7 @@ let fn = () => {
         _createIframe(arg0) {
           closure_0 = global;
           self = this;
-          obj = {
-            nonce: global.nonce,
-            lookupResponse: global.lookupResponse,
-            showLoader: global.showLoader,
-            handleAuthResponse(arg0) {
-                  self._handleAuthResponse(arg0, closure_0);
-                }
-          };
+          obj = { nonce: global.nonce, lookupResponse: global.lookupResponse, showLoader: global.showLoader, handleAuthResponse() { ... } };
           _setupV1ElementsResult = this._setupV1Elements(obj);
           return this._v1Iframe;
         }
@@ -14248,16 +12933,14 @@ let fn = () => {
           _v1Bus = this._v1Bus;
           teardownResult = _v1Bus.teardown();
           removeFrameResult = module.removeFrame();
-          fn = function() {
-            const result = this._handleV1AuthResponse(closure_0);
-          };
+          fn = () => { ... };
           tmp3 = c1(fn.bind(this))();
           return;
         }
         _checkForFrameworkSpecificVerifyCardErrors(arg0) {
           str = "an addFrame function";
-          if (typeof global.addFrame !== "three_button_mouse") {
-            if (typeof global.removeFrame !== "find") {
+          if (typeof global.addFrame === "function") {
+            if (typeof global.removeFrame !== "function") {
               str = "a removeFrame function";
             }
           }
@@ -14280,12 +12963,7 @@ let fn = () => {
           _formatLookupData = closure_0.prototype._formatLookupData;
           call = _formatLookupData.call;
           promise = typeof call === "unknown" ? _formatLookupData(global) : call(self, global);
-          return promise.then((arg0) => {
-            if (tmp2) {
-              arg0.customer = self.transformV1CustomerBillingAddress(tmp.customer);
-            }
-            return arg0;
-          });
+          return promise.then(() => { ... });
         }
         _presentChallenge(arg0, arg1) {
           obj = { showLoader: module.showLoader, lookupResponse: global.lookup, nonce: global.paymentMethod.nonce, removeFrame: module.removeFrame };
@@ -14324,27 +13002,13 @@ let fn = () => {
         }
         setUpEventListeners(arg0) {
           closure_0 = global;
-          onResult = this.on(SongbirdFramework.events.LOOKUP_COMPLETE, (arg0, arg1) => {
-            callback("lookup-complete", arg0, arg1);
-          });
-          onResult1 = this.on(SongbirdFramework.events.CUSTOMER_CANCELED, () => {
-            callback("customer-canceled");
-          });
-          onResult2 = this.on(SongbirdFramework.events["UI.CLOSE"], () => {
-            callback("authentication-modal-close");
-          });
-          onResult3 = this.on(SongbirdFramework.events["UI.RENDER"], () => {
-            callback("authentication-modal-render");
-          });
-          onResult4 = this.on(SongbirdFramework.events["UI.RENDERHIDDEN"], () => {
-            callback("authentication-modal-render-hidden");
-          });
-          onResult5 = this.on(SongbirdFramework.events["UI.LOADING.CLOSE"], () => {
-            callback("authentication-modal-loader-close");
-          });
-          onResult6 = this.on(SongbirdFramework.events["UI.LOADING.RENDER"], () => {
-            callback("authentication-modal-loader-render");
-          });
+          onResult = this.on(SongbirdFramework.events.LOOKUP_COMPLETE, () => { ... });
+          onResult1 = this.on(SongbirdFramework.events.CUSTOMER_CANCELED, () => { ... });
+          onResult2 = this.on(SongbirdFramework.events["UI.CLOSE"], () => { ... });
+          onResult3 = this.on(SongbirdFramework.events["UI.RENDER"], () => { ... });
+          onResult4 = this.on(SongbirdFramework.events["UI.RENDERHIDDEN"], () => { ... });
+          onResult5 = this.on(SongbirdFramework.events["UI.LOADING.CLOSE"], () => { ... });
+          onResult6 = this.on(SongbirdFramework.events["UI.LOADING.RENDER"], () => { ... });
           return;
         }
         prepareLookup(arg0) {
@@ -14352,32 +13016,17 @@ let fn = () => {
           assign = assign({}, global);
           self = this;
           dfReferenceId = this.getDfReferenceId();
-          nextPromise = dfReferenceId.then((dfReferenceId) => {
-            closure_1.dfReferenceId = dfReferenceId;
-          });
-          nextPromise1 = nextPromise.then(() => self._triggerCardinalBinProcess(bin.bin));
-          catchPromise = nextPromise1.catch(() => {
-
-          });
-          nextPromise2 = catchPromise.then(() => self._waitForClient());
-          return nextPromise2.then(() => {
-            let _client;
-            ({ _clientMetadata: closure_1.clientMetadata, _client } = self);
-            closure_1.authorizationFingerprint = _client.getConfiguration().authorizationFingerprint;
-            closure_1.braintreeLibraryVersion = "braintree/web/3.112.1";
-            return closure_1;
-          });
+          nextPromise = dfReferenceId.then(() => { ... });
+          nextPromise1 = nextPromise.then(() => { ... });
+          catchPromise = nextPromise1.catch(/* F114814 */ function() { ... });
+          nextPromise2 = catchPromise.then(() => { ... });
+          return nextPromise2.then(() => { ... });
         }
         initializeChallengeWithLookupResponse(arg0, arg1) {
           closure_0 = global;
           closure_1 = module;
           setupSongbirdResult = this.setupSongbird();
-          fn = function() {
-            const self = this;
-            const initializeChallengeWithLookupResponse = ctor.prototype.initializeChallengeWithLookupResponse;
-            const call = initializeChallengeWithLookupResponse.call;
-            return typeof call === "unknown" ? initializeChallengeWithLookupResponse(ctor, closure_1) : call(self, ctor, closure_1);
-          };
+          fn = () => { ... };
           return setupSongbirdResult.then(fn.bind(this));
         }
         handleSongbirdError(arg0) {
@@ -14395,13 +13044,7 @@ let fn = () => {
           now = Date.now();
           Cardinal = window.Cardinal;
           triggerResult = Cardinal.trigger("bin.process", global);
-          return triggerResult.then((Status) => {
-            self._clientMetadata.issuerDeviceDataCollectionTimeElapsed = Date.now() - closure_1;
-            if (Status) {
-              Status = Status.Status;
-            }
-            self._clientMetadata.issuerDeviceDataCollectionResult = Status;
-          });
+          return triggerResult.then(() => { ... });
         }
         transformBillingAddress(arg0, arg1) {
           if (module) {
@@ -14426,32 +13069,13 @@ let fn = () => {
           return element;
         }
         _createV1IframeModal(arg0) {
-          closeHandler = function closeHandler() {
-            const parentNode = closure_0.parentNode;
-            parentNode.removeChild(closure_0);
-            self.cancelVerifyCard(outer1_7.THREEDS_CARDINAL_SDK_CANCELED);
-            const removed = document.removeEventListener("keyup", self._onV1Keyup);
-            self._onV1Keyup = null;
-          };
+          closeHandler = function closeHandler() { ... };
           result = this._createV1IframeModalElement(global);
           closure_0 = result;
           element = result.querySelector("[data-braintree-v1-fallback-close-button]");
           element1 = result.querySelector("[data-braintree-v1-fallback-backdrop]");
           self = this;
-          this._onV1Keyup = (key) => {
-            let parentNode = "Escape" === key.key;
-            if (parentNode) {
-              parentNode = closure_0.parentNode;
-            }
-            if (parentNode) {
-              const parentNode2 = closure_0.parentNode;
-              parentNode2.removeChild(closure_0);
-              self.cancelVerifyCard(outer1_7.THREEDS_CARDINAL_SDK_CANCELED);
-              const _document = document;
-              const removed = document.removeEventListener("keyup", self._onV1Keyup);
-              self._onV1Keyup = null;
-            }
-          };
+          this._onV1Keyup = function _onV1Keyup() { ... };
           if (element) {
             str = "click";
             listener = element.addEventListener("click", closeHandler);
@@ -14488,26 +13112,8 @@ let fn = () => {
             str = "reason-unknown";
             self._v2SetupFailureReason = "reason-unknown";
             _loadCardinalScriptResult = self._loadCardinalScript(obj);
-            nextPromise = _loadCardinalScriptResult.then(() => {
-              let obj = self;
-              if (window.Cardinal) {
-                obj = { setupOptions: null, setupStartTime: null };
-                obj[0] = obj;
-                obj[1] = closure_2;
-                let result = obj._configureCardinalSdk(obj);
-              } else {
-                obj._v2SetupFailureReason = "cardinal-global-unavailable";
-                const tmp5 = new outer1_3(outer1_7.THREEDS_CARDINAL_SDK_SETUP_FAILED);
-                result = Promise.reject(tmp5);
-              }
-              return result;
-            });
-            catchPromise = nextPromise.catch((arg0) => {
-              self._getDfReferenceIdPromisePlus.reject(outer1_4(arg0, { type: outer1_7.THREEDS_CARDINAL_SDK_SETUP_FAILED.type, code: outer1_7.THREEDS_CARDINAL_SDK_SETUP_FAILED.code, message: outer1_7.THREEDS_CARDINAL_SDK_SETUP_FAILED.message }));
-              window.clearTimeout(self._songbirdSetupTimeoutReference);
-              outer1_5.sendEvent(self._client, "three-d-secure.cardinal-sdk.init.setup-failed");
-              self.handleSongbirdError(`cardinal-sdk-setup-failed.${self._v2SetupFailureReason}`);
-            });
+            nextPromise = _loadCardinalScriptResult.then(() => { ... });
+            catchPromise = nextPromise.catch(() => { ... });
           }
           return self._songbirdPromise;
         }
@@ -14515,29 +13121,9 @@ let fn = () => {
           closure_0 = global;
           self = this;
           _waitForClientResult = this._waitForClient();
-          nextPromise = _waitForClientResult.then(() => {
-            const _client = self._client;
-            return _client.getConfiguration().gatewayConfiguration.threeDSecure;
-          });
-          nextPromise1 = nextPromise.then((jwt) => {
-            const result = self._createCardinalConfigurationOptions(closure_0.setupOptions);
-            const item = outer1_12.forEach((arg0) => {
-              let closure_0 = arg0;
-              cardinalListener.setCardinalListener(arg0, () => {
-                outer1_1._emit(outer2_14.events[closure_0.toUpperCase(closure_0)]);
-              });
-            });
-            self.setCardinalListener("payments.setupComplete", self._createPaymentsSetupCompleteCallback());
-            const result1 = self._setupFrameworkSpecificListeners();
-            Cardinal.configure(result);
-            Cardinal2.setup("init", { jwt: jwt.cardinalAuthenticationJWT });
-            self._clientMetadata.cardinalDeviceDataCollectionTimeElapsed = Date.now() - closure_0.setupStartTime;
-            self.setCardinalListener("payments.validated", self._createPaymentsValidatedCallback());
-          });
-          return nextPromise1.catch((arg0) => {
-            self._v2SetupFailureReason = "cardinal-configuration-threw-error";
-            return Promise.reject(arg0);
-          });
+          nextPromise = _waitForClientResult.then(() => { ... });
+          nextPromise1 = nextPromise.then(() => { ... });
+          return nextPromise1.catch(() => { ... });
         }
         setCardinalListener(arg0, arg1) {
           _cardinalEvents = this._cardinalEvents;
@@ -14573,22 +13159,8 @@ let fn = () => {
           closure_0 = global;
           self = this;
           _waitForClientResult = this._waitForClient();
-          nextPromise = _waitForClientResult.then(() => {
-            timeout = timeout.timeout;
-            const src = self._getCardinalScriptSource();
-            if (!timeout) {
-              timeout = outer1_10;
-            }
-            self._songbirdSetupTimeoutReference = window.setTimeout(() => {
-              outer1_5.sendEvent(closure_1._client, "three-d-secure.cardinal-sdk.init.setup-timeout");
-              closure_1.handleSongbirdError("cardinal-sdk-setup-timeout");
-            }, timeout);
-            return outer1_6.loadScript({ src });
-          });
-          return nextPromise.catch((arg0) => {
-            self._v2SetupFailureReason = "songbird-js-failed-to-load";
-            return Promise.reject(outer1_4(arg0, outer1_7.THREEDS_CARDINAL_SDK_SCRIPT_LOAD_FAILED));
-          });
+          nextPromise = _waitForClientResult.then(() => { ... });
+          return nextPromise.catch(() => { ... });
         }
         _getCardinalScriptSource() {
           _client = this._client;
@@ -14606,12 +13178,7 @@ let fn = () => {
         }
         _createPaymentsSetupCompleteCallback() {
           self = this;
-          return (sessionId) => {
-            self._getDfReferenceIdPromisePlus.resolve(sessionId.sessionId);
-            window.clearTimeout(self._songbirdSetupTimeoutReference);
-            outer1_5.sendEvent(self._createPromise, "three-d-secure.cardinal-sdk.init.setup-completed");
-            self._songbirdPromise.resolve();
-          };
+          return () => { ... };
         }
         getDfReferenceId() {
           return this._getDfReferenceIdPromisePlus;
@@ -14645,66 +13212,13 @@ let fn = () => {
           }
           sendEventResult1 = c5.sendEvent(self._createPromise, "three-d-secure.verification-flow.upgrade-payment-method.started");
           _waitForClientResult = self._waitForClient();
-          nextPromise = _waitForClientResult.then(() => {
-            const _client = self._client;
-            obj = { method: "post", endpoint: closure_4, data: obj };
-            obj = { jwt: closure_1, paymentMethodNonce: nonce };
-            return _client.request(obj);
-          });
-          nextPromise1 = nextPromise.then((paymentMethod) => {
-            let _lookupPaymentMethod = paymentMethod.paymentMethod;
-            if (!_lookupPaymentMethod) {
-              _lookupPaymentMethod = self._lookupPaymentMethod;
-            }
-            const _formatAuthResponseResult = self._formatAuthResponse(_lookupPaymentMethod, paymentMethod.threeDSecureInfo);
-            _formatAuthResponseResult.rawCardinalSDKVerificationData = closure_0;
-            outer1_5.sendEvent(self._client, "three-d-secure.verification-flow.upgrade-payment-method.succeeded");
-            return Promise.resolve(_formatAuthResponseResult);
-          });
-          return nextPromise1.catch((originalError) => {
-            obj = { type: outer1_7.THREEDS_JWT_AUTHENTICATION_FAILED.type, code: outer1_7.THREEDS_JWT_AUTHENTICATION_FAILED.code, message: outer1_7.THREEDS_JWT_AUTHENTICATION_FAILED.message, details: obj };
-            obj = { originalError };
-            outer1_5.sendEvent(self._client, "three-d-secure.verification-flow.upgrade-payment-method.errored");
-            return Promise.reject(new nonce(obj));
-          });
+          nextPromise = _waitForClientResult.then(() => { ... });
+          nextPromise1 = nextPromise.then(() => { ... });
+          return nextPromise1.catch(() => { ... });
         }
         _createPaymentsValidatedCallback() {
           self = this;
-          return (ActionCode) => {
-            let obj = outer1_5;
-            outer1_5.sendEvent(self._createPromise, `three-d-secure.verification-flow.cardinal-sdk.action-code.${ActionCode.ActionCode.toLowerCase()}`);
-            if (self._verifyCardPromisePlus) {
-              ActionCode = ActionCode.ActionCode;
-              if ("SUCCESS" !== ActionCode) {
-                if ("NOACTION" !== ActionCode) {
-                  if ("FAILURE" !== ActionCode) {
-                    if ("ERROR" === ActionCode) {
-                      obj.sendEvent(obj2._createPromise, "three-d-secure.verification-flow.canceled");
-                      const tmp3 = new outer1_3(outer1_7.THREEDS_CARDINAL_SDK_CANCELED);
-                      obj = { originalError: null };
-                      obj = { code: null, description: null };
-                      ({ ErrorNumber: obj4[0], ErrorDescription: obj4[1] } = ActionCode);
-                      obj[0] = obj;
-                      tmp3.details = obj;
-                      obj2._verifyCardPromisePlus.reject(tmp3);
-                      const _verifyCardPromisePlus = obj2._verifyCardPromisePlus;
-                    }
-                  }
-                }
-              }
-              const result = obj2._performJWTValidation(ActionCode, arg1);
-              result.then((arg0) => {
-                closure_0._verifyCardPromisePlus.resolve(arg0);
-              }).catch((arg0) => {
-                closure_0._verifyCardPromisePlus.reject(arg0);
-              });
-              const nextPromise = result.then((arg0) => {
-                closure_0._verifyCardPromisePlus.resolve(arg0);
-              });
-            } else {
-              obj2.handleSongbirdError(`cardinal-sdk-setup-error.number-${ActionCode.ErrorNumber}`);
-            }
-          };
+          return () => { ... };
         }
         _checkForVerifyCardError(arg0, arg1) {
           if (global.bin) {
@@ -14731,8 +13245,8 @@ let fn = () => {
         }
         _checkForFrameworkSpecificVerifyCardErrors(arg0, arg1) {
           onLookupComplete = global.onLookupComplete;
-          ignoreOnLookupCompleteRequirement = typeof onLookupComplete === "find";
-          if (typeof onLookupComplete !== "find") {
+          ignoreOnLookupCompleteRequirement = typeof onLookupComplete === "function";
+          if (typeof onLookupComplete !== "function") {
             tmp = module;
             ignoreOnLookupCompleteRequirement = module.ignoreOnLookupCompleteRequirement;
           }
@@ -14769,27 +13283,7 @@ let fn = () => {
           _onLookupComplete = closure_0.prototype._onLookupComplete;
           call = _onLookupComplete.call;
           promise = typeof call === "unknown" ? _onLookupComplete(global) : call(self, global);
-          return promise.then((arg0) => {
-            let closure_0 = arg0;
-            return new Promise((arg0, arg1) => {
-              let closure_0 = arg0;
-              let acsUrl = closure_0.lookup;
-              if (acsUrl) {
-                acsUrl = tmp.lookup.acsUrl;
-              }
-              function next() {
-                callback(callback);
-              }
-              closure_0.requiresUserAuthentication = Boolean(acsUrl);
-              const prop = outer1_1._verifyCardPromisePlus;
-              prop.catch(arg1);
-              if (closure_0.onLookupComplete) {
-                closure_0.onLookupComplete(tmp, next);
-              } else {
-                outer1_1._emit(outer2_14.events.LOOKUP_COMPLETE, tmp, next);
-              }
-            });
-          });
+          return promise.then(() => { ... });
         }
         _presentChallenge(arg0) {
           _songbirdInitFailed = this._songbirdInitFailed;
@@ -14820,54 +13314,7 @@ let fn = () => {
           _formatLookupData = closure_0.prototype._formatLookupData;
           call = _formatLookupData.call;
           promise = typeof call === "unknown" ? _formatLookupData(global) : call(self, global);
-          return promise.then((arg0) => {
-            arg0.additionalInfo = closure_0.additionalInformation;
-            if (closure_0.accountType) {
-              arg0.accountType = tmp.accountType;
-            }
-            if (closure_0.challengeRequested) {
-              arg0.challengeRequested = tmp.challengeRequested;
-            }
-            if (closure_0.requestedExemptionType) {
-              let obj = outer1_13;
-              if (outer1_13.includes(tmp.requestedExemptionType)) {
-                arg0.requestedExemptionType = tmp.requestedExemptionType;
-              } else {
-                obj = { code: null, type: null, message: null };
-                obj[0] = outer1_7.THREEDS_REQUESTED_EXEMPTION_TYPE_INVALID.code;
-                obj[1] = outer1_7.THREEDS_REQUESTED_EXEMPTION_TYPE_INVALID.type;
-                const text = `requestedExemptionType \`${tmp.requestedExemptionType}`;
-                obj[2] = `${`requestedExemptionType \`${tmp.requestedExemptionType}`}\` is not a valid exemption. The accepted values are: \`${obj.join("`, `")}\``;
-                const tmp8 = new outer1_3(obj);
-                throw tmp8;
-              }
-            }
-            if (closure_0.customFields) {
-              arg0.customFields = tmp.customFields;
-            }
-            if (closure_0.dataOnlyRequested) {
-              arg0.dataOnlyRequested = tmp.dataOnlyRequested;
-            }
-            if (closure_0.exemptionRequested) {
-              arg0.exemptionRequested = tmp.exemptionRequested;
-            }
-            if (closure_0.requestVisaDAF) {
-              arg0.requestVisaDAF = tmp.requestVisaDAF;
-            }
-            if (closure_0.bin) {
-              arg0.bin = tmp.bin;
-            }
-            if (null != closure_0.cardAdd) {
-              arg0.cardAdd = tmp.cardAdd;
-            }
-            if (null != closure_0.cardAddChallengeRequested) {
-              arg0.cardAdd = tmp.cardAddChallengeRequested;
-            }
-            if (closure_0.merchantName) {
-              arg0.merchantName = tmp.merchantName;
-            }
-            return self.prepareLookup(arg0);
-          });
+          return promise.then(() => { ... });
         }
         cancelVerifyCard(arg0) {
           self = this;
@@ -14876,24 +13323,11 @@ let fn = () => {
           cancelVerifyCard = closure_0.prototype.cancelVerifyCard;
           call = cancelVerifyCard.call;
           promise = typeof call === "unknown" ? cancelVerifyCard() : call(self);
-          return promise.then((arg0) => {
-            if (self._verifyCardPromisePlus) {
-              let tmp2 = closure_0;
-              if (!closure_0) {
-                tmp2 = new outer1_3(outer1_7.THREEDS_VERIFY_CARD_CANCELED_BY_MERCHANT);
-              }
-              closure_0 = tmp2;
-              tmp._verifyCardPromisePlus.reject(closure_0);
-              const _verifyCardPromisePlus = tmp._verifyCardPromisePlus;
-            }
-            return arg0;
-          });
+          return promise.then(() => { ... });
         }
         _removeSongbirdListeners() {
           _cardinalEvents = this._cardinalEvents;
-          item = _cardinalEvents.forEach((arg0) => {
-            Cardinal.off(arg0);
-          });
+          item = _cardinalEvents.forEach(() => { ... });
           this._cardinalEvents = [];
           return;
         }
@@ -14910,9 +13344,7 @@ let fn = () => {
           self = this;
           now = Date.now();
           teardownResult = this.teardown();
-          return teardownResult.then(() => {
-            const result = self._configureCardinalSdk({ setupOptions: self.originalSetupOptions, setupStartTime: closure_1 });
-          });
+          return teardownResult.then(() => { ... });
         }
       }
       const globalResult = global("./base");
@@ -14952,15 +13384,7 @@ let fn = () => {
           tmp3 = new c3[global.framework](global);
           self._framework = tmp3;
           _framework = self._framework;
-          setUpEventListenersResult = _framework.setUpEventListeners(() => {
-            const _emit = self._emit;
-            const apply = _emit.apply;
-            if (typeof apply === "unknown") {
-              HermesBuiltin.applyArguments(tmp);
-            } else {
-              apply(tmp, arguments);
-            }
-          });
+          setUpEventListenersResult = _framework.setUpEventListeners(() => { ... });
           return;
         }
         verifyCard(arg0) {
@@ -14973,7 +13397,7 @@ let fn = () => {
         }
         initializeChallengeWithLookupResponse(arg0) {
           parsed = global;
-          if (typeof global !== "_iter") {
+          if (typeof global === "string") {
             tmp2 = globalThis;
             _JSON = JSON;
             parsed = JSON.parse(global);
@@ -14984,7 +13408,7 @@ let fn = () => {
         prepareLookup(arg0) {
           _framework = this._framework;
           prepareLookupResult = _framework.prepareLookup(global);
-          return prepareLookupResult.then((arg0) => JSON.stringify(arg0));
+          return prepareLookupResult.then(() => { ... });
         }
         cancelVerifyCard() {
           _framework = this._framework;
@@ -15213,44 +13637,13 @@ let fn = () => {
             obj[1] = obj1;
             obj[2] = obj;
             requestResult = client.request(obj);
-            nextPromise = requestResult.then((arg0) => {
-              self.sendEvent(client, "unionpay.capabilities-received");
-              return arg0;
-            });
-            rejectResult = nextPromise.catch((details) => {
-              self.sendEvent(client, "unionpay.capabilities-failed");
-              if (403 === tmp) {
-                let rejectResult = Promise.reject(details);
-              } else {
-                let obj = { type: null, code: null, message: null, details: null };
-                obj[0] = outer1_7.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.type;
-                obj[1] = outer1_7.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.code;
-                obj[2] = outer1_7.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.message;
-                obj = { originalError: null };
-                obj[0] = details;
-                obj[3] = obj;
-                const tmp9 = new client(obj);
-                rejectResult = Promise.reject(tmp9);
-              }
-              return rejectResult;
-            });
+            nextPromise = requestResult.then(() => { ... });
+            rejectResult = nextPromise.catch(() => { ... });
           } else if (hostedFields) {
             if (hostedFields._bus) {
               result = self._initializeHostedFields();
               self = result.then;
-              selfResult = self(() => new Promise((arg0, arg1) => {
-                let _bus = arg0;
-                let closure_1 = arg1;
-                _bus = _bus._bus;
-                _bus.emit(outer1_8.HOSTED_FIELDS_FETCH_CAPABILITIES, { hostedFields: closure_2 }, (err) => {
-                  if (err.err) {
-                    const tmp7 = new callback2(err.err);
-                    callback2(tmp7);
-                  } else {
-                    callback(err.payload);
-                  }
-                });
-              }));
+              selfResult = self(() => { ... });
             } else {
               tmp10 = globalThis;
               _Promise2 = Promise;
@@ -15297,22 +13690,7 @@ let fn = () => {
                 } else {
                   tmp29 = new.target;
                   tmp30 = new.target;
-                  rejectResult = new _Promise4((arg0, arg1) => {
-                    const _self = arg0;
-                    let closure_1 = arg1;
-                    const result = _self._initializeHostedFields();
-                    result.then(() => {
-                      _bus = _bus._bus;
-                      _bus.emit(outer2_8.HOSTED_FIELDS_ENROLL, { hostedFields: outer1_3, mobile: outer1_2 }, (err) => {
-                        if (err.err) {
-                          const tmp7 = new callback2(err.err);
-                          callback2(tmp7);
-                        } else {
-                          callback(err.payload);
-                        }
-                      });
-                    });
-                  });
+                  rejectResult = new _Promise4(() => { ... });
                 }
                 tmp38 = rejectResult;
               } else {
@@ -15354,30 +13732,8 @@ let fn = () => {
                   obj1 = { method: "post", endpoint: "union_pay_enrollments", data: null };
                   obj1[2] = obj;
                   requestResult = client.request(obj1);
-                  nextPromise = requestResult.then((enrollmentId) => {
-                    self.sendEvent(client, "unionpay.enrollment-succeeded");
-                    return { enrollmentId: enrollmentId.unionPayEnrollmentId, smsCodeRequired: enrollmentId.smsCodeRequired };
-                  });
-                  return nextPromise.catch((details) => {
-                    let tmp2 = details;
-                    if (403 !== (details.details && details.details.httpStatus)) {
-                      if (tmp < 500) {
-                        const tmp13 = new client(outer1_7.UNIONPAY_ENROLLMENT_CUSTOMER_INPUT_INVALID);
-                        let obj = { originalError: null };
-                        obj[0] = details;
-                        tmp13.details = obj;
-                        tmp2 = tmp13;
-                      } else {
-                        const tmp7 = new client(outer1_7.UNIONPAY_ENROLLMENT_NETWORK_ERROR);
-                        obj = { originalError: null };
-                        obj[0] = details;
-                        tmp7.details = obj;
-                        tmp2 = tmp7;
-                      }
-                    }
-                    self.sendEvent(client, "unionpay.enrollment-failed");
-                    return Promise.reject(tmp2);
-                  });
+                  nextPromise = requestResult.then(() => { ... });
+                  return nextPromise.catch(() => { ... });
                 }
               }
               tmp8 = globalThis;
@@ -15450,32 +13806,8 @@ let fn = () => {
             obj3 = { method: "post", endpoint: "payment_methods/credit_cards", data: null };
             obj3[2] = obj;
             requestResult = client.request(obj3);
-            nextPromise = requestResult.then((arg0) => {
-              delete tmp[tmp2];
-              delete tmp[tmp2];
-              card.sendEvent(client, "unionpay.nonce-received");
-              return arg0.creditCards[0];
-            });
-            rejectResult = nextPromise.catch((details) => {
-              card.sendEvent(client, "unionpay.nonce-failed");
-              let tmp3 = details;
-              if (403 !== (details.details && details.details.httpStatus)) {
-                if (tmp < 500) {
-                  const tmp14 = new self(outer1_7.UNIONPAY_FAILED_TOKENIZATION);
-                  let obj = { originalError: null };
-                  obj[0] = details;
-                  tmp14.details = obj;
-                  tmp3 = tmp14;
-                } else {
-                  const tmp8 = new self(outer1_7.UNIONPAY_TOKENIZATION_NETWORK_ERROR);
-                  obj = { originalError: null };
-                  obj[0] = details;
-                  tmp8.details = obj;
-                  tmp3 = tmp8;
-                }
-              }
-              return Promise.reject(tmp3);
-            });
+            nextPromise = requestResult.then(() => { ... });
+            rejectResult = nextPromise.catch(() => { ... });
           } else {
             tmp = globalThis;
             if (hostedFields) {
@@ -15483,22 +13815,7 @@ let fn = () => {
               if (hostedFields._bus) {
                 tmp16 = new.target;
                 tmp17 = new.target;
-                _Promise2 = new _Promise2((arg0, arg1) => {
-                  let closure_0 = arg0;
-                  const _self = arg1;
-                  const result = _self._initializeHostedFields();
-                  result.then(() => {
-                    _bus = _bus._bus;
-                    _bus.emit(outer2_8.HOSTED_FIELDS_TOKENIZE, closure_0, (err) => {
-                      if (err.err) {
-                        const tmp7 = new callback2(err.err);
-                        callback2(tmp7);
-                      } else {
-                        callback(err.payload);
-                      }
-                    });
-                  });
-                });
+                _Promise2 = new _Promise2(() => { ... });
               } else {
                 tmp9 = self;
                 tmp10 = c7;
@@ -15542,23 +13859,7 @@ let fn = () => {
             _Promise = Promise;
             tmp2 = new.target;
             tmp3 = new.target;
-            promise = new Promise((arg0) => {
-              let assetsUrl = arg0;
-              const client = self._options.client;
-              assetsUrl = client.getConfiguration().gatewayConfiguration.assetsUrl;
-              const client2 = self._options.client;
-              const isDebug = client2.getConfiguration().isDebug;
-              let obj = { channel: closure_2, verifyDomain: outer1_4 };
-              self._bus = new closure_2(obj);
-              obj = { name: `${self.HOSTED_FIELDS_FRAME_NAME}_${closure_2}`, src: `${`${assetsUrl}/web/3.112.1/html/unionpay-hosted-fields-frame`}${outer1_5(isDebug)}.html`, height: 0, width: 0 };
-              self._hostedFieldsFrame = outer1_9(obj);
-              const _bus = self._bus;
-              _bus.on(outer1_12, (arg0) => {
-                arg0(outer1_3._options.client);
-                assetsUrl();
-              });
-              body.appendChild(self._hostedFieldsFrame);
-            });
+            promise = new Promise(() => { ... });
             tmp5 = promise;
             self._hostedFieldsInitializePromise = promise;
           }
@@ -15717,25 +14018,8 @@ let fn = () => {
           }
           obj3 = { query: c8, variables: { input: { usBankAccount: obj } } };
           requestResult = _client.request({ api: "graphQLApi", data: obj3 });
-          nextPromise = requestResult.then((data) => {
-            outer1_4.sendEvent(_client, "usbankaccount.bankdetails.tokenization.succeeded");
-            const paymentMethod = data.data.tokenizeUsBankAccount.paymentMethod;
-            return Promise.resolve({ nonce: paymentMethod.id, details: {}, description: `US bank account ending in - ${paymentMethod.details.last4}`, type: "us_bank_account" });
-          });
-          return nextPromise.catch((details) => {
-            let tmp2 = _client;
-            if (401 === (details.details && details.details.httpStatus)) {
-              let US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR = outer1_3.BRAINTREE_API_ACCESS_RESTRICTED;
-            } else if (tmp < 500) {
-              US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR = outer1_2.US_BANK_ACCOUNT_FAILED_TOKENIZATION;
-            } else {
-              US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR = outer1_2.US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR;
-            }
-            tmp2 = new tmp2(US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR);
-            tmp2.details = { originalError: details };
-            outer1_4.sendEvent(_client, "usbankaccount.bankdetails.tokenization.failed");
-            return Promise.reject(tmp2);
-          });
+          nextPromise = requestResult.then(() => { ... });
+          return nextPromise.catch(() => { ... });
         }
         _tokenizeBankLogin(arg0) {
           self = this;
@@ -15773,59 +14057,7 @@ let fn = () => {
               _Promise3 = Promise;
               tmp14 = new.target;
               tmp15 = new.target;
-              rejectResult1 = new Promise((arg0, arg1) => {
-                let closure_0 = arg0;
-                const _self = arg1;
-                _self._loadPlaid((arg0, create) => {
-                  if (arg0) {
-                    callback(arg0);
-                  } else {
-                    let obj = { clientName: null, apiVersion: "v2", env: null, key: null, product: "auth", selectAccount: true, onExit: null, onSuccess: null };
-                    obj[0] = bankLogin.bankLogin.displayName;
-                    let str = "sandbox";
-                    if (outer1_3) {
-                      str = "production";
-                    }
-                    obj[2] = str;
-                    obj[3] = outer1_4.publicKey;
-                    obj[6] = function onExit() {
-                      outer1_1._isTokenizingBankLogin = false;
-                      outer2_4.sendEvent(outer1_2, "usbankaccount.banklogin.tokenization.closed.by-user");
-                      callback(new closure_0(outer2_2.US_BANK_ACCOUNT_LOGIN_CLOSED));
-                    };
-                    obj[7] = function onSuccess(publicToken, account_id) {
-                      const bankLogin = outer1_0.bankLogin;
-                      let obj = { publicToken, accountId: null, accountType: null, achMandate: null, billingAddress: null };
-                      let str = "plaid_account_id";
-                      if (outer1_3) {
-                        str = account_id.account_id;
-                      }
-                      obj[1] = str;
-                      obj[2] = account_id.account.subtype.toUpperCase();
-                      obj[3] = outer1_0.mandateText;
-                      let tmp2 = bankLogin.billingAddress || {};
-                      obj[4] = { streetAddress: tmp2.streetAddress, extendedAddress: tmp2.extendedAddress, city: tmp2.locality, state: tmp2.region, zipCode: tmp2.postalCode };
-                      if ("personal" === bankLogin.ownershipType) {
-                        obj = { firstName: null, lastName: null };
-                        ({ firstName: obj3[0], lastName: obj3[1] } = bankLogin);
-                        obj.individualOwner = obj;
-                      } else if ("business" === bankLogin.ownershipType) {
-                        obj = { businessName: null };
-                        obj[0] = bankLogin.businessName;
-                        obj.businessOwner = obj;
-                      }
-                      const obj1 = { query: outer2_9, variables: { input: { usBankLogin: obj } } };
-                      const requestResult = outer1_2.request({ api: "graphQLApi", data: { query: outer2_9, variables: { input: { usBankLogin: obj } } } });
-                      const str2 = account_id.account.subtype;
-                      const tmp = outer1_0;
-                      outer1_2.request({ api: "graphQLApi", data: { query: outer2_9, variables: { input: { usBankLogin: obj } } } }).then(() => { ... }).catch(() => { ... });
-                    };
-                    obj = create.create(obj);
-                    obj.open();
-                    plaid.sendEvent(outer1_2, "usbankaccount.banklogin.tokenization.started");
-                  }
-                });
-              });
+              rejectResult1 = new Promise(() => { ... });
             }
             tmp23 = rejectResult1;
           } else {
@@ -15859,29 +14091,9 @@ let fn = () => {
             if (element) {
               script = element;
               c1 = tmp;
-              loadHandler2 = function loadHandler() {
-                const readyState = this.readyState;
-                let tmp = readyState;
-                if (readyState) {
-                  tmp = "loaded" !== readyState;
-                }
-                if (tmp) {
-                  tmp = "complete" !== readyState;
-                }
-                if (!tmp) {
-                  const removed = element1.removeEventListener("error", errorHandler);
-                  const removed1 = element1.removeEventListener("load", loadHandler);
-                  const removed2 = element1.removeEventListener("readystatechange", loadHandler);
-                  const _window = window;
-                  tmp(null, window.Plaid);
-                }
-              };
+              loadHandler2 = function loadHandler() { ... };
               loadHandler = loadHandler2;
-              errorHandler2 = function errorHandler() {
-                const parentNode = element1.parentNode;
-                parentNode.removeChild(element1);
-                tmp(new element1(loadHandler.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED));
-              };
+              errorHandler2 = function errorHandler() { ... };
               errorHandler = errorHandler2;
               str7 = "error";
               listener = element.addEventListener("error", errorHandler2);
@@ -15899,28 +14111,8 @@ let fn = () => {
               element1.async = true;
               script = element1;
               c1 = tmp;
-              loadHandler = function loadHandler() {
-                const readyState = this.readyState;
-                let tmp = readyState;
-                if (readyState) {
-                  tmp = "loaded" !== readyState;
-                }
-                if (tmp) {
-                  tmp = "complete" !== readyState;
-                }
-                if (!tmp) {
-                  const removed = element1.removeEventListener("error", errorHandler);
-                  const removed1 = element1.removeEventListener("load", loadHandler);
-                  const removed2 = element1.removeEventListener("readystatechange", loadHandler);
-                  const _window = window;
-                  tmp(null, window.Plaid);
-                }
-              };
-              errorHandler = function errorHandler() {
-                const parentNode = element1.parentNode;
-                parentNode.removeChild(element1);
-                tmp(new element1(loadHandler.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED));
-              };
+              loadHandler = function loadHandler() { ... };
+              errorHandler = function errorHandler() { ... };
               str4 = "error";
               listener3 = element1.addEventListener("error", errorHandler);
               str5 = "load";
@@ -16036,41 +14228,8 @@ let fn = () => {
               obj[1] = obj;
               obj[1] = obj;
               const requestResult = getConfiguration.request(obj);
-              let catchPromise = getConfiguration.request(obj).then(() => {
-                getConfiguration.sendEvent(getConfiguration, "vault-manager.delete-payment-method.succeeded");
-              }).catch((details) => {
-                const originalError = details.details.originalError;
-                getConfiguration.sendEvent(getConfiguration, "vault-manager.delete-payment-method.failed");
-                let first = originalError[0];
-                if (first) {
-                  first = "NOT_FOUND" === originalError[0].extensions.errorClass;
-                }
-                let tmp3;
-                if (first) {
-                  let obj = { type: null, code: null, message: null, details: null };
-                  obj[0] = outer2_2.VAULT_MANAGER_PAYMENT_METHOD_NONCE_NOT_FOUND.type;
-                  obj[1] = outer2_2.VAULT_MANAGER_PAYMENT_METHOD_NONCE_NOT_FOUND.code;
-                  obj[2] = `A payment method for payment method nonce \`${closure_0}\` could not be found.`;
-                  obj = { originalError: null };
-                  obj[0] = originalError;
-                  obj[3] = obj;
-                  tmp3 = new outer2_1(obj);
-                }
-                if (!tmp3) {
-                  obj = { type: null, code: null, message: null, details: null };
-                  obj[0] = outer2_2.VAULT_MANAGER_DELETE_PAYMENT_METHOD_UNKNOWN_ERROR.type;
-                  obj[1] = outer2_2.VAULT_MANAGER_DELETE_PAYMENT_METHOD_UNKNOWN_ERROR.code;
-                  obj[2] = `An unknown error occured when attempting to delete the payment method assocaited with the payment method nonce \`${closure_0}\`.`;
-                  const obj1 = { originalError: null };
-                  obj1[0] = originalError;
-                  obj[3] = obj1;
-                  tmp3 = new outer2_1(obj);
-                }
-                return Promise.reject(tmp3);
-              });
-              const nextPromise = getConfiguration.request(obj).then(() => {
-                getConfiguration.sendEvent(getConfiguration, "vault-manager.delete-payment-method.succeeded");
-              });
+              let catchPromise = getConfiguration.request(obj).then(() => { ... }).catch(() => { ... });
+              const nextPromise = getConfiguration.request(obj).then(() => { ... });
             } else {
               const tmp6 = new outer1_1(outer1_2.VAULT_MANAGER_DELETE_PAYMENT_METHOD_NONCE_REQUIRES_CLIENT_TOKEN);
               catchPromise = Promise.reject(tmp6);
@@ -16262,7 +14421,7 @@ let fn = () => {
 
             }
             function unknownErrorHandler(err) {
-              if (typeof removeListeners !== "find") {
+              if (typeof removeListeners !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const bus = lib.bus;
@@ -16273,7 +14432,7 @@ let fn = () => {
               launchDesktopPromiseRejectFunction({ allowUIToHandleError: false, reason: "UNKNOWN_ERROR", err });
             }
             function customerCancelledHandler() {
-              if (typeof removeListeners !== "find") {
+              if (typeof removeListeners !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const bus = lib.bus;
@@ -16285,7 +14444,7 @@ let fn = () => {
               launchDesktopPromiseRejectFunction({ allowUIToHandleError: false, reason: "CUSTOMER_CANCELED" });
             }
             _self.completedHandler = (arg0) => {
-              if (typeof removeListeners !== "find") {
+              if (typeof removeListeners !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const bus = lib.bus;
@@ -16482,10 +14641,7 @@ let fn = () => {
                     const promise = new obj.Promise((arg0, arg1) => {
                       let closure_0 = arg0;
                       let closure_1 = arg1;
-                      const timerId = setTimeout(() => {
-                        const pollForStatusChangeResult = outer1_2.pollForStatusChange(closure_0, closure_1);
-                        outer1_2.pollForStatusChange(closure_0, closure_1).then(closure_0).catch(closure_1);
-                      }, 1000);
+                      const timerId = setTimeout(() => { ... }, 1000);
                     });
                     return promise;
                   }
@@ -16613,14 +14769,14 @@ let fn = () => {
           let closure_0 = client;
           return closure_1.verify({ name: "Venmo", client: client.client, authorization: client.authorization }).then(() => {
             if (client.profileId) {
-              if (typeof tmp.profileId === "_iter") {
+              if (typeof tmp.profileId !== "string") {
                 const tmp17 = new outer1_5(outer1_4.VENMO_INVALID_PROFILE_ID);
                 let rejectResult = Promise.reject(tmp17);
               }
               return rejectResult;
             }
             if (client.deepLinkReturnUrl) {
-              if (typeof tmp.deepLinkReturnUrl === "_iter") {
+              if (typeof tmp.deepLinkReturnUrl !== "string") {
                 const tmp10 = new outer1_5(outer1_4.VENMO_INVALID_DEEP_LINK_RETURN_URL);
                 rejectResult = Promise.reject(tmp10);
               }
@@ -17061,106 +15217,14 @@ let fn = () => {
             sendEventResult1 = obj.sendEvent(self._createPromise, "venmo.appswitch.return-in-new-tab");
           } else if (self._useDesktopQRFlow) {
             _createPromise = self._createPromise;
-            self._createPromise = _createPromise.then((getConfiguration) => {
-              const _self = getConfiguration;
-              const gatewayConfiguration = getConfiguration.getConfiguration().gatewayConfiguration;
-              const obj = { url: `${gatewayConfiguration.assetsUrl}/web/${outer1_18}/html/venmo-desktop-frame.html`, environment: null, profileId: null, paymentMethodUsage: null, displayName: null, Promise: null, apiRequest: null, sendEvent: null, verifyDomain: null };
-              let str = "SANDBOX";
-              if ("production" === gatewayConfiguration.environment) {
-                str = "PRODUCTION";
-              }
-              obj[1] = str;
-              obj[2] = _self._profileId || gatewayConfiguration.payWithVenmo.merchantId;
-              ({ _paymentMethodUsage: obj[3], _displayName: obj[4] } = _self);
-              obj[5] = Promise;
-              obj[6] = function apiRequest(query, variables) {
-                return getConfiguration.request({ api: "graphQLApi", data: { query, variables } }).then((data) => data.data);
-              };
-              obj[7] = function sendEvent(arg0) {
-                getConfiguration.sendEvent(getConfiguration._createPromise, arg0);
-              };
-              obj[8] = outer1_6;
-              const tmp = outer1_16;
-              const tmp2 = _self;
-              const tmpResult = outer1_16(obj);
-              return outer1_16(obj).then((_venmoDesktopInstance) => {
-                getConfiguration._venmoDesktopInstance = _venmoDesktopInstance;
-                self.sendEvent(getConfiguration._createPromise, "venmo.desktop-flow.presented");
-                return getConfiguration;
-              }).catch(() => {
-                self.sendEvent(getConfiguration._createPromise, "venmo.desktop-flow.setup-failed");
-                getConfiguration._useDesktopQRFlow = false;
-                return getConfiguration;
-              });
-            });
+            self._createPromise = _createPromise.then(() => { ... });
           } else if (self._shouldCreateVenmoPaymentContext) {
             num = 250;
             self._mobilePollingInterval = 250;
             num2 = 300000;
             self._mobilePollingExpiresThreshold = 300000;
             _createPromise1 = self._createPromise;
-            self._createPromise = _createPromise1.then((getConfiguration) => {
-              const _self = getConfiguration;
-              let obj = _self;
-              let str = "mobile-payment-context";
-              if (_self._cannotHaveReturnUrls) {
-                str = "manual-return";
-              }
-              const configuration = getConfiguration.getConfiguration();
-              obj = { assetsUrl: configuration.gatewayConfiguration.assetsUrl, debug: configuration.isDebug };
-              const setupDesktopWebLoginResult = outer1_13.setupDesktopWebLogin(obj);
-              const nextPromise = outer1_13.setupDesktopWebLogin(obj).then((_frameServiceInstance) => {
-                closure_0._frameServiceInstance = _frameServiceInstance;
-              });
-              const str2 = configuration.gatewayConfiguration.environment;
-              obj._mobilePollingContextEnvironment = str2.toUpperCase();
-              const result = obj._createVenmoPaymentContext(getConfiguration);
-              const catchPromise = outer1_13.setupDesktopWebLogin(obj).then((_frameServiceInstance) => {
-                closure_0._frameServiceInstance = _frameServiceInstance;
-              }).catch((arg0) => arg0);
-              const items = [
-                catchPromise,
-                result.then(() => {
-                  self.sendEvent(getConfiguration._createPromise, `venmo.${str}.presented`);
-                  return getConfiguration;
-                }).catch((details) => {
-                  self.sendEvent(getConfiguration._createPromise, `venmo.${str}.setup-failed`);
-                  const obj = { type: outer2_4.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED.type, code: outer2_4.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED.code, message: null, details: null };
-                  let extensions = details.details;
-                  let tmp2 = outer2_9;
-                  if (extensions) {
-                    extensions = details.details.originalError;
-                  }
-                  if (extensions) {
-                    extensions = details.details.originalError[0];
-                  }
-                  if (extensions) {
-                    extensions = details.details.originalError[0].extensions;
-                  }
-                  if (extensions) {
-                    extensions = "VALIDATION" === details.details.originalError[0].extensions.errorClass;
-                  }
-                  if (extensions) {
-                    extensions = "user_error" === details.details.originalError[0].extensions.errorType;
-                  }
-                  if (extensions) {
-                    let message = details.details.originalError[0].message;
-                  } else {
-                    message = outer2_4.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED.message;
-                  }
-                  obj[2] = message;
-                  obj[3] = { originalError: details };
-                  tmp2 = new tmp2(obj);
-                  return Promise.reject(tmp2);
-                })
-              ];
-              const nextPromise1 = result.then(() => {
-                self.sendEvent(getConfiguration._createPromise, `venmo.${str}.presented`);
-                return getConfiguration;
-              });
-              const allResult = outer1_11.all(items);
-              return outer1_11.all(items).then((arg0) => Promise.resolve(arg0[1])).catch((arg0) => Promise.reject(arg0));
-            });
+            self._createPromise = _createPromise1.then(() => { ... });
           }
           return;
         }
@@ -17186,7 +15250,7 @@ let fn = () => {
               obj1[1] = obj2;
               obj[1] = obj1;
               requestResult = global.request(obj);
-              nextPromise = requestResult.then((data) => data.data.createVenmoQRCodePaymentContext.venmoQRCodePaymentContext);
+              nextPromise = requestResult.then(() => { ... });
             } else {
               if (self._collectCustomerBillingAddress) {
                 if (!global.getConfiguration().gatewayConfiguration.payWithVenmo.enrichedCustomerDataEnabled) {
@@ -17203,9 +15267,7 @@ let fn = () => {
               }
               if (self._lineItems) {
                 _lineItems = self._lineItems;
-                item = _lineItems.forEach((unitTaxAmount) => {
-                  unitTaxAmount.unitTaxAmount = unitTaxAmount.unitTaxAmount || "0";
-                });
+                item = _lineItems.forEach(() => { ... });
               }
               obj = { subTotalAmount: null, discountAmount: null, taxAmount: null, shippingAmount: null, totalAmount: null, lineItems: null };
               ({ _subTotalAmount: obj[0], _discountAmount: obj[1], _taxAmount: obj[2], _shippingAmount: obj[3], _totalAmount: obj[4], _lineItems: obj[5] } = self);
@@ -17223,7 +15285,7 @@ let fn = () => {
               obj6 = { collectCustomerBillingAddress: null, collectCustomerShippingAddress: null, transactionDetails: null };
               ({ _collectCustomerBillingAddress: obj5[0], _collectCustomerShippingAddress: obj5[1] } = self);
               tmp12 = undefined;
-              if (keys.some((arg0) => undefined !== obj[arg0])) {
+              if (keys.some(() => { ... })) {
                 tmp12 = obj;
               }
               obj7 = { api: "graphQLApi", data: null };
@@ -17234,25 +15296,9 @@ let fn = () => {
               obj4[1] = obj8;
               obj7[1] = obj4;
               requestResult1 = global.request(obj7);
-              nextPromise = requestResult1.then((data) => data.data.createVenmoPaymentContext.venmoPaymentContext);
+              nextPromise = requestResult1.then(() => { ... });
             }
-            return nextPromise.then((expiresAt) => {
-              const date = new Date(expiresAt.expiresAt);
-              let result = 0.6666 * (date - new Date(expiresAt.createdAt));
-              clearTimeout(self._refreshPaymentContextTimeout);
-              self._refreshPaymentContextTimeout = setTimeout(() => {
-                if (!obj._tokenizationInProgress) {
-                  const result = obj._createVenmoPaymentContext(closure_0, true);
-                }
-              }, result);
-              let _tokenizationInProgress = closure_1;
-              if (closure_1) {
-                _tokenizationInProgress = tmp4._tokenizationInProgress;
-              }
-              if (!_tokenizationInProgress) {
-                ({ status: tmp4._venmoPaymentContextStatus, id: tmp4._venmoPaymentContextId } = expiresAt);
-              }
-            });
+            return nextPromise.then(() => { ... });
           } else {
             tmp = globalThis;
             _Promise = Promise;
@@ -17280,7 +15326,7 @@ let fn = () => {
               _window5 = window;
               if (window.popupBridge) {
                 _window6 = window;
-                if (typeof window.popupBridge.open === "find") {
+                if (typeof window.popupBridge.open === "function") {
                   tmp11 = c0;
                   str3 = "venmo.appswitch.start.popup-bridge";
                   sendEventResult1 = c0.sendEvent(self._createPromise, "venmo.appswitch.start.popup-bridge");
@@ -17315,65 +15361,7 @@ let fn = () => {
         }
         getUrl() {
           _createPromise = this._createPromise;
-          fn = function(getConfiguration) {
-            const self = this;
-            const configuration = getConfiguration.getConfiguration();
-            let str = this._deepLinkReturnUrl;
-            if (!str) {
-              const _window = window;
-              const _window2 = window;
-              str = window.location.href.replace(window.location.hash, "");
-              const str2 = window.location.href;
-            }
-            let obj = {};
-            const payWithVenmo = configuration.gatewayConfiguration.payWithVenmo;
-            const analyticsMetadata = configuration.analyticsMetadata;
-            const accessToken = payWithVenmo.accessToken;
-            obj = { version: analyticsMetadata.sdkVersion, integration: analyticsMetadata.integration, platform: analyticsMetadata.platform, sessionId: analyticsMetadata.sessionId };
-            self._isDebug = configuration.isDebug;
-            self._assetsUrl = configuration.gatewayConfiguration.assetsUrl;
-            let replaced = str.replace(/#*$/, "");
-            if (!self._venmoPaymentContextId) {
-              if (!self._shouldIncludeReturnUrls()) {
-                if (!self._useAllowDesktopWebLogin) {
-                  obj["x-success"] = "NOOP";
-                  obj["x-cancel"] = "NOOP";
-                  obj["x-error"] = "NOOP";
-                }
-                if (self._allowAndroidRecreation) {
-                  obj.allowAndroidRecreation = 1;
-                } else {
-                  obj.allowAndroidRecreation = 0;
-                }
-                const _window3 = window;
-                obj.ua = window.navigator.userAgent;
-                obj.braintree_merchant_id = self._profileId || payWithVenmo.merchantId;
-                obj.braintree_access_token = accessToken;
-                obj.braintree_environment = payWithVenmo.environment;
-                const _btoa = btoa;
-                const _JSON = JSON;
-                obj.braintree_sdk_data = btoa(JSON.stringify({ _meta: obj }));
-                obj = { useAllowDesktopWebLogin: null, mobileWebFallBack: null };
-                ({ _useAllowDesktopWebLogin: obj3[0], _mobileWebFallBack: obj3[1] } = self);
-                const text = `${closure_12(obj3)}?`;
-                return `${closure_12(obj3)}?` + closure_5.stringify(obj);
-              }
-              if (self._useAllowDesktopWebLogin) {
-                replaced = `${self._assetsUrl + "/web/" + closure_18}/html/redirect-frame.html`;
-              }
-              obj["x-success"] = `${tmp3}#venmoSuccess=1`;
-              obj["x-cancel"] = `${tmp3}#venmoCancel=1`;
-              obj["x-error"] = `${tmp3}#venmoError=1`;
-            } else {
-              const _venmoPaymentContextId = self._venmoPaymentContextId;
-              if (self._shouldUseLegacyFlow) {
-                let text1 = `${accessToken}|pcid:${_venmoPaymentContextId}`;
-              } else {
-                obj.resource_id = _venmoPaymentContextId;
-                text1 = accessToken;
-              }
-            }
-          };
+          fn = () => { ... };
           return _createPromise.then(fn.bind(this));
         }
         isBrowserSupported() {
@@ -17393,12 +15381,7 @@ let fn = () => {
             str = str2.substring(1);
           }
           parts = str.split("&");
-          reduced = parts.reduce((arg0, str) => {
-            const parts = str.split("=");
-            str = decodeURIComponent(parts[0]);
-            arg0[callback(decodeURIComponent(parts[0]).replace(/\W/g, ""))] = decodeURIComponent(parts[1]);
-            return arg0;
-          }, {});
+          reduced = parts.reduce(() => { ... }, {});
           if (reduced.resourceId) {
             reduced.id = reduced.resourceId;
           }
@@ -17447,31 +15430,8 @@ let fn = () => {
             } else {
               result = self._tokenizeForMobileWithHashChangeListeners(obj);
             }
-            nextPromise = result.then((arg0) => {
-              const _self = arg0;
-              return _self._createPromise.then((arg0) => closure_0._createVenmoPaymentContext(arg0)).then(() => {
-                closure_0._tokenizationInProgress = false;
-                let obj = { nonce: closure_0.paymentMethodNonce, type: "VenmoAccount", details: null };
-                obj = { username: `@${closure_0.username || "".replace("@", "")}`, paymentContextId: tmp.id };
-                obj[2] = obj;
-                if (closure_0.payerInfo) {
-                  obj.details.payerInfo = tmp.payerInfo;
-                  let str2 = tmp.payerInfo.userName;
-                  if (!str2) {
-                    str2 = "";
-                  }
-                  obj.details.payerInfo.userName = `@${str2.replace("@", "")}`;
-                }
-                return obj;
-              });
-            });
-            rejectResult = nextPromise.catch((arg0) => {
-              const _self = arg0;
-              return _self._createPromise.then((arg0) => closure_0._createVenmoPaymentContext(arg0)).then(() => {
-                closure_0._tokenizationInProgress = false;
-                return Promise.reject(closure_0);
-              });
-            });
+            nextPromise = result.then(() => { ... });
+            rejectResult = nextPromise.catch(() => { ... });
           }
           return rejectResult;
         }
@@ -17514,69 +15474,25 @@ let fn = () => {
           tmp2 = new c11();
           this._tokenizePromise = tmp2;
           url = this.getUrl();
-          return url.then((venmoUrl) => {
-            const cancelTokenization = self.cancelTokenization;
-            const _checkPaymentContextStatus = self._checkPaymentContextStatus;
-            const _checkPaymentContextStatusAndProcessResult = self._checkPaymentContextStatusAndProcessResult;
-            const obj = { checkForStatusChange: _checkPaymentContextStatusAndProcessResult.bind(self), cancelTokenization: cancelTokenization.bind(self), frameServiceInstance: self._frameServiceInstance, venmoUrl, debug: self._isDebug, checkPaymentContextStatus: _checkPaymentContextStatus.bind(self) };
-            const runWebLoginResult = outer1_13.runWebLogin({ checkForStatusChange: _checkPaymentContextStatusAndProcessResult.bind(self), cancelTokenization: cancelTokenization.bind(self), frameServiceInstance: self._frameServiceInstance, venmoUrl, debug: self._isDebug, checkPaymentContextStatus: _checkPaymentContextStatus.bind(self) });
-            outer1_13.runWebLogin({ checkForStatusChange: _checkPaymentContextStatusAndProcessResult.bind(self), cancelTokenization: cancelTokenization.bind(self), frameServiceInstance: self._frameServiceInstance, venmoUrl, debug: self._isDebug, checkPaymentContextStatus: _checkPaymentContextStatus.bind(self) }).then((paymentMethodId) => {
-              outer1_0.sendEvent(closure_0._createPromise, "venmo.tokenize.web-login.success");
-              closure_0._tokenizePromise.resolve({ paymentMethodNonce: paymentMethodId.paymentMethodId, username: paymentMethodId.userName, payerInfo: paymentMethodId.payerInfo, id: closure_0._venmoPaymentContextId });
-            }).catch((arg0) => {
-              outer1_0.sendEvent(closure_0._createPromise, "venmo.tokenize.web-login.failure");
-              closure_0._tokenizePromise.reject(arg0);
-            });
-            return self._tokenizePromise;
-          });
+          return url.then(() => { ... });
         }
         _queryPaymentContextStatus(arg0) {
           closure_0 = global;
           self = this;
           _createPromise = this._createPromise;
-          nextPromise = _createPromise.then((request) => {
-            const data = { query: self._shouldUseLegacyFlow ? tmp.LEGACY_VENMO_PAYMENT_CONTEXT_STATUS_QUERY : tmp.VENMO_PAYMENT_CONTEXT_STATUS_QUERY, variables: obj };
-            return request.request({ api: "graphQLApi", data });
-          });
-          return nextPromise.then((data) => data.data.node);
+          nextPromise = _createPromise.then(() => { ... });
+          return nextPromise.then(() => { ... });
         }
         _checkPaymentContextStatusAndProcessResult(arg0) {
           closure_0 = global;
           self = this;
           result = this._checkPaymentContextStatus();
-          return result.then((status) => {
-            status = status.status;
-            if (status !== self._venmoPaymentContextStatus) {
-              tmp._venmoPaymentContextStatus = status;
-              closure_0.sendEvent(tmp._createPromise, "venmo.tokenize.web-login.status-change");
-              if ("APPROVED" === status) {
-                return Promise.resolve(status);
-              } else if ("CANCELED" === status) {
-                const tmp17 = new outer1_9(outer1_4.VENMO_CUSTOMER_CANCELED);
-                return Promise.reject(tmp17);
-              } else if ("FAILED" === status) {
-                const tmp10 = new outer1_9(outer1_4.VENMO_TOKENIZATION_FAILED);
-                return Promise.reject(tmp10);
-              }
-            }
-            return new Promise((arg0, arg1) => {
-              if (closure_0 < _maxRetryCount._maxRetryCount) {
-                closure_0 = closure_0 + 1;
-                const result = _maxRetryCount._checkPaymentContextStatusAndProcessResult(closure_0);
-                let catchPromise = result.then(arg0).catch(arg1);
-                const nextPromise = result.then(arg0);
-              } else {
-                const tmp5 = new outer1_9(outer1_4.VENMO_TOKENIZATION_FAILED);
-                catchPromise = arg1(tmp5);
-              }
-              return catchPromise;
-            });
-          });
+          return result.then(() => { ... });
         }
         _checkPaymentContextStatus() {
           result = this._queryPaymentContextStatus(this._venmoPaymentContextId);
-          catchPromise = result.catch((details) => Promise.reject(new closure_9({ type: constants.VENMO_NETWORK_ERROR.type, code: constants.VENMO_NETWORK_ERROR.code, message: constants.VENMO_NETWORK_ERROR.message, details })));
-          return catchPromise.then((arg0) => Promise.resolve(arg0));
+          catchPromise = result.catch(() => { ... });
+          return catchPromise.then(() => { ... });
         }
         _pollForStatusChange() {
           self = this;
@@ -17592,35 +15508,8 @@ let fn = () => {
             rejectResult = Promise.reject(tmp6);
           } else {
             result = self._queryPaymentContextStatus(self._venmoPaymentContextId);
-            catchPromise = result.catch((originalError) => {
-              obj = { type: constants.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.type, code: constants.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.code, message: constants.VENMO_MOBILE_POLLING_TOKENIZATION_NETWORK_ERROR.message, details: obj };
-              obj = { originalError };
-              return Promise.reject(new closure_9(obj));
-            });
-            rejectResult = catchPromise.then((status) => {
-              if (status.status !== self._venmoPaymentContextStatus) {
-                tmp._venmoPaymentContextStatus = str;
-                self.sendEvent(tmp._createPromise, `venmo.tokenize.manual-return.status-change.${str.toLowerCase()}`);
-                if ("EXPIRED" !== str) {
-                  if ("FAILED" !== str) {
-                    if ("CANCELED" !== str) {
-                      if ("APPROVED" === str) {
-                        return Promise.resolve(status);
-                      }
-                    }
-                  }
-                }
-                const tmp11 = new outer1_9(outer1_4["VENMO_MOBILE_POLLING_TOKENIZATION_" + str]);
-                return Promise.reject(tmp11);
-              }
-              return new Promise((arg0, arg1) => {
-                let closure_1 = arg1;
-                const timerId = setTimeout(() => {
-                  const _pollForStatusChangeResult = closure_0._pollForStatusChange();
-                  closure_0._pollForStatusChange().then(closure_0).catch(closure_1);
-                }, arg0._mobilePollingInterval);
-              });
-            });
+            catchPromise = result.catch(() => { ... });
+            rejectResult = catchPromise.then(() => { ... });
           }
           return rejectResult;
         }
@@ -17631,19 +15520,10 @@ let fn = () => {
           tmp2 = new c11();
           this._tokenizePromise = tmp2;
           _pollForStatusChangeResult = this._pollForStatusChange();
-          nextPromise = _pollForStatusChangeResult.then((paymentMethodId) => {
-            self.sendEvent(self._createPromise, "venmo.tokenize.manual-return.success");
-            self._tokenizePromise.resolve({ paymentMethodNonce: paymentMethodId.paymentMethodId, username: paymentMethodId.userName, payerInfo: paymentMethodId.payerInfo, id: self._venmoPaymentContextId });
-          });
-          catchPromise = nextPromise.catch((arg0) => {
-            self.sendEvent(self._createPromise, "venmo.tokenize.manual-return.failure");
-            self._tokenizePromise.reject(arg0);
-          });
+          nextPromise = _pollForStatusChangeResult.then(() => { ... });
+          catchPromise = nextPromise.catch(() => { ... });
           url = this.getUrl();
-          return url.then((arg0) => {
-            self.appSwitch(arg0);
-            return self._tokenizePromise;
-          });
+          return url.then(() => { ... });
         }
         _shouldUseRedirectStrategy() {
           tmp = c2.isIos();
@@ -17657,29 +15537,7 @@ let fn = () => {
         _tokenizeForMobileWithHashChangeListeners(arg0) {
           self = this;
           closure_0 = global;
-          completeFlow = function completeFlow(arg0) {
-            const result = self.processHashChangeFlowResults(arg0);
-            result.catch((arg0) => {
-              let closure_0 = arg0;
-            }).then((arg0) => {
-              let _ignoreHistoryChanges = outer1_3._ignoreHistoryChanges;
-              if (!_ignoreHistoryChanges) {
-                const _window = window;
-                _ignoreHistoryChanges = window.location.hash === obj._previousHash;
-              }
-              if (!_ignoreHistoryChanges) {
-                const _window2 = window;
-                window.location.hash = obj._previousHash;
-              }
-              const result = obj._removeVisibilityEventListener();
-              if (c0) {
-                _tokenizePromise.reject(c0);
-              } else {
-                _tokenizePromise.resolve(arg0);
-              }
-              delete tmp2[tmp];
-            });
-          };
+          completeFlow = function completeFlow() { ... };
           self = this;
           if (this.hasTokenizationResult()) {
             return self.processHashChangeFlowResults();
@@ -17696,73 +15554,14 @@ let fn = () => {
             tmp8 = globalThis;
             _window = window;
             self._previousHash = window.location.hash;
-            self._onHashChangeListener = (newURL) => {
-              const tmp = newURL.newURL.split("#")[1];
-              if (self._hasTokenizationResult(tmp)) {
-                let c1 = true;
-                const _clearTimeout = clearTimeout;
-                clearTimeout(closure_2);
-                let c0;
-                let result = self.processHashChangeFlowResults(tmp);
-                result.catch((arg0) => {
-                  let closure_0 = arg0;
-                }).then((arg0) => {
-                  let _ignoreHistoryChanges = outer1_3._ignoreHistoryChanges;
-                  if (!_ignoreHistoryChanges) {
-                    const _window = window;
-                    _ignoreHistoryChanges = window.location.hash === obj._previousHash;
-                  }
-                  if (!_ignoreHistoryChanges) {
-                    const _window2 = window;
-                    window.location.hash = obj._previousHash;
-                  }
-                  const result = obj._removeVisibilityEventListener();
-                  if (c0) {
-                    _tokenizePromise.reject(c0);
-                  } else {
-                    _tokenizePromise.resolve(arg0);
-                  }
-                  delete tmp2[tmp];
-                });
-                const catchPromise = result.catch((arg0) => {
-                  let closure_0 = arg0;
-                });
-              }
-            };
+            self._onHashChangeListener = function _onHashChangeListener() { ... };
             _window2 = window;
             flag = false;
             str2 = "hashchange";
             listener = window.addEventListener("hashchange", self._onHashChangeListener, false);
-            self._visibilityChangeListener = () => {
-              let DEFAULT_PROCESS_RESULTS_DELAY = processResultsDelay.processResultsDelay;
-              if (!DEFAULT_PROCESS_RESULTS_DELAY) {
-                DEFAULT_PROCESS_RESULTS_DELAY = self.DEFAULT_PROCESS_RESULTS_DELAY;
-              }
-              if (!tmp2) {
-                const _setTimeout = setTimeout;
-                const timeout = setTimeout(completeFlow, DEFAULT_PROCESS_RESULTS_DELAY);
-              }
-            };
+            self._visibilityChangeListener = function _visibilityChangeListener() { ... };
             url = self.getUrl();
-            return url.then((arg0) => {
-              self.appSwitch(arg0);
-              const timerId = setTimeout(() => {
-                const _document = window.document;
-                let str = "visibilitychange";
-                if (undefined === window.document.hidden) {
-                  const _window = window;
-                  str = "msvisibilitychange";
-                  if (undefined === window.document.msHidden) {
-                    const _window2 = window;
-                    if (undefined !== window.document.webkitHidden) {
-                      str = "webkitvisibilitychange";
-                    }
-                  }
-                }
-                const listener = _document.addEventListener(str, obj._visibilityChangeListener);
-              }, self.DOCUMENT_VISIBILITY_CHANGE_EVENT_DELAY);
-              return self._tokenizePromise;
-            });
+            return url.then(() => { ... });
           }
         }
         _tokenizeForDesktopQRFlow() {
@@ -17771,83 +15570,26 @@ let fn = () => {
           tmp2 = new c11();
           this._tokenizePromise = tmp2;
           _createPromise = this._createPromise;
-          nextPromise = _createPromise.then(() => {
-            const _venmoDesktopInstance = self._venmoDesktopInstance;
-            return _venmoDesktopInstance.launchDesktopFlow();
-          });
-          nextPromise1 = nextPromise.then((arg0) => {
-            const _venmoDesktopInstance = self._venmoDesktopInstance;
-            _venmoDesktopInstance.hideDesktopFlow();
-            self.sendEvent(self._createPromise, "venmo.tokenize.desktop.success");
-            self._tokenizePromise.resolve(arg0);
-          });
-          catchPromise = nextPromise1.catch((originalError) => {
-            self.sendEvent(self._createPromise, "venmo.tokenize.desktop.failure");
-            if (self._venmoDesktopInstance) {
-              const _venmoDesktopInstance = tmp._venmoDesktopInstance;
-              _venmoDesktopInstance.hideDesktopFlow();
-            }
-            if (originalError) {
-              if ("CUSTOMER_CANCELED" === originalError.reason) {
-                const tmp10 = new outer1_9(outer1_4.VENMO_DESKTOP_CANCELED);
-                tmp._tokenizePromise.reject(tmp10);
-                const _tokenizePromise2 = tmp._tokenizePromise;
-              }
-            }
-            obj = { type: outer1_4.VENMO_DESKTOP_UNKNOWN_ERROR.type, code: outer1_4.VENMO_DESKTOP_UNKNOWN_ERROR.code, message: outer1_4.VENMO_DESKTOP_UNKNOWN_ERROR.message, details: obj };
-            obj = { originalError };
-            self._tokenizePromise.reject(new outer1_9(obj));
-          });
+          nextPromise = _createPromise.then(() => { ... });
+          nextPromise1 = nextPromise.then(() => { ... });
+          catchPromise = nextPromise1.catch(() => { ... });
           return this._tokenizePromise;
         }
         _cancelMobilePaymentContext() {
           self = this;
           _createPromise = this._createPromise;
-          return _createPromise.then((request) => {
-            let _venmoPaymentContextId = self;
-            if (self._venmoPaymentContextId) {
-              let obj = outer1_17;
-              obj = { api: "graphQLApi", data: null };
-              obj = { query: null, variables: null };
-              obj[0] = _venmoPaymentContextId._shouldUseLegacyFlow ? obj.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : obj.UPDATE_PAYMENT_CONTEXT_QUERY;
-              obj = { input: null };
-              const obj1 = { id: null, status: "CANCELED" };
-              _venmoPaymentContextId = _venmoPaymentContextId._venmoPaymentContextId;
-              obj1[0] = _venmoPaymentContextId;
-              obj[0] = obj1;
-              obj[1] = obj;
-              obj[1] = obj;
-              request.request(obj);
-              const tmp2 = _venmoPaymentContextId._shouldUseLegacyFlow ? obj.LEGACY_UPDATE_PAYMENT_CONTEXT_QUERY : obj.UPDATE_PAYMENT_CONTEXT_QUERY;
-            } else {
-              return Promise.resolve();
-            }
-          });
+          return _createPromise.then(() => { ... });
         }
         _cancelVenmoDesktopContext() {
           self = this;
           _createPromise = this._createPromise;
-          return _createPromise.then(() => {
-            if (self._venmoDesktopInstance) {
-              const _venmoDesktopInstance = self._venmoDesktopInstance;
-              const result = _venmoDesktopInstance.updateVenmoDesktopPaymentContext("CANCELED");
-            }
-            return Promise.resolve();
-          });
+          return _createPromise.then(() => { ... });
         }
         teardown() {
           self = this;
           result = this._removeVisibilityEventListener();
           _createPromise = this._createPromise;
-          fn = function() {
-            if (self._venmoDesktopInstance) {
-              const _venmoDesktopInstance = obj._venmoDesktopInstance;
-              _venmoDesktopInstance.teardown();
-            }
-            clearTimeout(self._refreshPaymentContextTimeout);
-            const result = obj._cancelMobilePaymentContext();
-            outer1_8(this, outer1_7(outer1_19.prototype));
-          };
+          fn = () => { ... };
           return _createPromise.then(fn.bind(this));
         }
         _removeVisibilityEventListener() {
@@ -17880,70 +15622,12 @@ let fn = () => {
             str = str2.substring(1);
           }
           parts = str.split("&");
-          reduced = parts.reduce((arg0, str) => {
-            const parts = str.split("=");
-            str = decodeURIComponent(parts[0]);
-            arg0[callback(decodeURIComponent(parts[0]).replace(/\W/g, ""))] = decodeURIComponent(parts[1]);
-            return arg0;
-          }, {});
+          reduced = parts.reduce(() => { ... }, {});
           if (reduced.resourceId) {
             reduced.id = reduced.resourceId;
           }
           f114892 = reduced;
-          promise = new Promise((arg0, arg1) => {
-            const _self = arg0;
-            const venmoSuccess = arg1;
-            let obj = _self;
-            if (_self._shouldUseLegacyFlow) {
-              if (venmoSuccess.venmoSuccess) {
-                self.sendEvent(obj._createPromise, "venmo.appswitch.handle.success");
-                arg0(tmp2);
-              } else if (tmp2.venmoError) {
-                self.sendEvent(obj._createPromise, "venmo.appswitch.handle.error");
-                obj = { type: null, code: null, message: null, details: null };
-                obj[0] = outer1_4.VENMO_APP_FAILED.type;
-                obj[1] = outer1_4.VENMO_APP_FAILED.code;
-                obj[2] = outer1_4.VENMO_APP_FAILED.message;
-                obj = { originalError: null };
-                const obj1 = { message: null, code: null };
-                const _decodeURIComponent = decodeURIComponent;
-                obj1[0] = decodeURIComponent(tmp2.errorMessage);
-                obj1[1] = tmp2.errorCode;
-                obj[0] = obj1;
-                obj[3] = obj;
-                const tmp30 = new outer1_9(obj);
-                arg1(tmp30);
-              } else {
-                const sendEvent = self.sendEvent;
-                if (tmp2.venmoCancel) {
-                  sendEvent(_createPromise, "venmo.appswitch.handle.cancel");
-                  const tmp17 = new outer1_9(outer1_4.VENMO_APP_CANCELED);
-                  arg1(tmp17);
-                } else {
-                  sendEvent(_createPromise, "venmo.appswitch.cancel-or-unavailable");
-                  const tmp9 = new outer1_9(outer1_4.VENMO_CANCELED);
-                  arg1(tmp9);
-                }
-              }
-            } else {
-              const _pollForStatusChangeResult = obj._pollForStatusChange();
-              obj._pollForStatusChange().then((paymentMethodId) => {
-                self.sendEvent(lib._createPromise, "venmo.appswitch.handle.payment-context-status-query.success");
-                return lib({ paymentMethodNonce: paymentMethodId.paymentMethodId, username: paymentMethodId.userName, payerInfo: paymentMethodId.payerInfo, id: lib._venmoPaymentContextId });
-              }).catch((type) => {
-                if (type.type === outer2_4.VENMO_MOBILE_POLLING_TOKENIZATION_CANCELED.type) {
-                  callback(type);
-                }
-                self.sendEvent(lib._createPromise, "venmo.process-results.payment-context-status-query-failed");
-                lib(callback);
-              });
-              const nextPromise = obj._pollForStatusChange().then((paymentMethodId) => {
-                self.sendEvent(lib._createPromise, "venmo.appswitch.handle.payment-context-status-query.success");
-                return lib({ paymentMethodNonce: paymentMethodId.paymentMethodId, username: paymentMethodId.userName, payerInfo: paymentMethodId.payerInfo, id: lib._venmoPaymentContextId });
-              });
-            }
-            const result = obj._clearFragmentParameters();
-          });
+          promise = new Promise(() => { ... });
           return promise;
         }
         _clearFragmentParameters() {
@@ -17951,8 +15635,8 @@ let fn = () => {
             tmp = globalThis;
             _window = window;
             replaceState = window.history.replaceState;
-            hash = typeof replaceState === "find";
-            if (typeof replaceState !== "three_button_mouse") {
+            hash = typeof replaceState === "function";
+            if (typeof replaceState === "function") {
               _window4 = window;
               hash = window.location.hash;
             }
@@ -18064,13 +15748,7 @@ let fn = () => {
             tmp8.settings.payment = payment;
             if (!tmp8.settings.payment.cardBrands) {
               supportedCardTypes = gatewayConfiguration.visaCheckout.supportedCardTypes;
-              tmp8.settings.payment.cardBrands = supportedCardTypes.reduce((arr, key10009) => {
-                let combined = arr;
-                if (closure_6.hasOwnProperty(key10009)) {
-                  combined = arr.concat(closure_6[key10009]);
-                }
-                return combined;
-              }, []);
+              tmp8.settings.payment.cardBrands = supportedCardTypes.reduce(() => { ... }, []);
             }
             return tmp8;
           } else {
@@ -18097,16 +15775,8 @@ let fn = () => {
                 obj[1] = obj1;
                 obj[2] = obj;
                 requestResult = _client.request(obj);
-                nextPromise = requestResult.then((arg0) => {
-                  outer1_1.sendEvent(self._client, "visacheckout.tokenize.succeeded");
-                  return arg0.visaCheckoutCards[0];
-                });
-                catchPromise = nextPromise.catch((originalError) => {
-                  outer1_1.sendEvent(self._client, "visacheckout.tokenize.failed");
-                  obj = { type: outer1_2.VISA_CHECKOUT_TOKENIZATION.type, code: outer1_2.VISA_CHECKOUT_TOKENIZATION.code, message: outer1_2.VISA_CHECKOUT_TOKENIZATION.message, details: obj };
-                  obj = { originalError };
-                  return Promise.reject(new self(obj));
-                });
+                nextPromise = requestResult.then(() => { ... });
+                catchPromise = nextPromise.catch(() => { ... });
               }
               return catchPromise;
             }
@@ -18134,24 +15804,24 @@ let fn = () => {
   obj[248] = items;
   return fn(obj, {}, [136])(136);
 };
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
     module.exports = fn();
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define([], fn);
   }
 }
-if (typeof window === "tee") {
+if (typeof window !== "undefined") {
   let _window = window;
 } else {
   _window = global;
   if (undefined === global) {
     let _self = self;
     let _self2 = globalThis;
-    if (typeof self !== "Array") {
+    if (typeof self !== "undefined") {
       _self2 = self;
     }
     _window = _self2;

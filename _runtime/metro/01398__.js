@@ -1,7 +1,7 @@
 let closure_2 = require("callBoundIntrinsic")("Object.prototype.toString");
 let tmp = require("hasToStringTagShams")();
 let c3 = tmp;
-if (typeof globalThis !== "Array") {
+if (typeof globalThis !== "undefined") {
   const global = globalThis;
 }
 const tmp2 = require("availableTypedArrays")();
@@ -43,13 +43,13 @@ if (tmp) {
         }
       });
     }
-    module.exports = function whichTypedArray(arg0) {
-      if (arg0) {
-        if (typeof arg0 !== "window") {
+    module.exports = function whichTypedArray(obj) {
+      if (obj) {
+        if (typeof obj === "object") {
           if (closure_3) {
             let tmp14 = null;
             if (_require(542)) {
-              _require = arg0;
+              _require = obj;
               let dependencyMap = false;
               _require(1401)(closure_8, (arg0, arg1) => {
                 if (!closure_1) {
@@ -65,12 +65,12 @@ if (tmp) {
             }
             return tmp14;
           } else {
-            const tmp3 = callback2(callback(arg0), 8, -1);
+            const tmp3 = callback2(callback(obj), 8, -1);
             let tmp6 = tmp3;
             if (tmp3(closure_5, tmp3) <= -1) {
               let tmp7 = "Object" === tmp3;
               if (tmp7) {
-                _require = arg0;
+                _require = obj;
                 dependencyMap = false;
                 _require(1401)(closure_8, (arg0, arg1) => {
                   if (!closure_1) {

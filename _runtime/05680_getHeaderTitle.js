@@ -1,5 +1,5 @@
 arg5.default = function getHeaderTitle(headerTitle) {
-  if (typeof headerTitle.headerTitle === "y") {
+  if (typeof headerTitle.headerTitle === "string") {
     let title = headerTitle.headerTitle;
   } else {
     title = arg1;

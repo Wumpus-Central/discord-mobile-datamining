@@ -13,9 +13,9 @@ function merge(arg0, obj) {
           let tmp3 = tmp2;
           if (arg0.hasOwnProperty(key10005)) {
             let tmp4 = arg0[key10005];
-            let tmp5 = typeof tmp2 === "ay";
-            if (typeof tmp2 !== "window") {
-              tmp5 = typeof tmp4 === "ay";
+            let tmp5 = typeof tmp2 === "object";
+            if (typeof tmp2 === "object") {
+              tmp5 = typeof tmp4 === "object";
             }
             tmp3 = tmp2;
             if (tmp5) {
@@ -353,9 +353,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
                         let tmp67 = tmp66;
                         if (obj10.hasOwnProperty(tmp65)) {
                           let tmp68 = obj10[tmp65];
-                          let tmp69 = typeof tmp66 === "ay";
-                          if (typeof tmp66 !== "window") {
-                            tmp69 = typeof tmp68 === "ay";
+                          let tmp69 = typeof tmp66 === "object";
+                          if (typeof tmp66 === "object") {
+                            tmp69 = typeof tmp68 === "object";
                           }
                           tmp67 = tmp66;
                           if (tmp69) {
@@ -384,9 +384,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
                 obj2 = prop[key10058];
                 str4 = obj2;
                 if (bubblingEventTypes.hasOwnProperty(key10058)) {
-                  let tmp61 = typeof obj2 === "ay";
-                  if (typeof obj2 !== "window") {
-                    tmp61 = typeof bubblingEventTypes[key10058] === "ay";
+                  let tmp61 = typeof obj2 === "object";
+                  if (typeof obj2 === "object") {
+                    tmp61 = typeof bubblingEventTypes[key10058] === "object";
                   }
                   str4 = obj2;
                 }
@@ -416,9 +416,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
                       let tmp75 = obj11;
                       if (directEventTypes2.hasOwnProperty(tmp74)) {
                         let obj12 = directEventTypes2[tmp74];
-                        let tmp76 = typeof obj11 === "ay";
-                        if (typeof obj11 !== "window") {
-                          tmp76 = typeof obj12 === "ay";
+                        let tmp76 = typeof obj11 === "object";
+                        if (typeof obj11 === "object") {
+                          tmp76 = typeof obj12 === "object";
                         }
                         tmp75 = obj11;
                         if (tmp76) {
@@ -441,9 +441,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
                                     let tmp82 = tmp81;
                                     if (obj12.hasOwnProperty(tmp80)) {
                                       let tmp83 = obj12[tmp80];
-                                      let tmp84 = typeof tmp81 === "ay";
-                                      if (typeof tmp81 !== "window") {
-                                        tmp84 = typeof tmp83 === "ay";
+                                      let tmp84 = typeof tmp81 === "object";
+                                      if (typeof tmp81 === "object") {
+                                        tmp84 = typeof tmp83 === "object";
                                       }
                                       tmp82 = tmp81;
                                       if (tmp84) {
@@ -2946,9 +2946,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
               let tmp88 = obj14;
               if (viewManagerConfig.hasOwnProperty(key10171)) {
                 let obj15 = viewManagerConfig[key10171];
-                let tmp89 = typeof obj14 === "ay";
-                if (typeof obj14 !== "window") {
-                  tmp89 = typeof obj15 === "ay";
+                let tmp89 = typeof obj14 === "object";
+                if (typeof obj14 === "object") {
+                  tmp89 = typeof obj15 === "object";
                 }
                 tmp88 = obj14;
                 if (tmp89) {
@@ -2971,9 +2971,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
                             let tmp95 = tmp94;
                             if (obj15.hasOwnProperty(tmp93)) {
                               let tmp96 = obj15[tmp93];
-                              let tmp97 = typeof tmp94 === "ay";
-                              if (typeof tmp94 !== "window") {
-                                tmp97 = typeof tmp96 === "ay";
+                              let tmp97 = typeof tmp94 === "object";
+                              if (typeof tmp94 === "object") {
+                                tmp97 = typeof tmp96 === "object";
                               }
                               tmp95 = tmp94;
                               if (tmp97) {

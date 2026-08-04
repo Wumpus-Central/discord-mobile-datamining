@@ -13,7 +13,7 @@ class URLSearchParamsImpl {
     this._list = [];
     this._url = null;
     if (!flag) {
-      flag = typeof first === "_iter";
+      flag = typeof first !== "string";
     }
     if (!flag) {
       str = "?";
@@ -51,7 +51,7 @@ class URLSearchParamsImpl {
         }
       }
     } else {
-      if (typeof substr !== "window") {
+      if (typeof substr === "object") {
         _Object2 = Object;
         if (null === Object.getPrototypeOf(substr)) {
           _Object = Object;

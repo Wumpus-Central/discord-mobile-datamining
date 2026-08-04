@@ -5,7 +5,7 @@ export default function formatDistance(arg0, arg1, arg2) {
   if (!arg2) {
     obj = {};
   }
-  if (typeof table[arg0] === "y") {
+  if (typeof table[arg0] === "string") {
     if (!obj.addSuffix) {
       return tmp2;
     } else {

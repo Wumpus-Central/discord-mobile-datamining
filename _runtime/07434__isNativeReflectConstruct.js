@@ -90,7 +90,7 @@ let items = [
         }
       }
       let fn = _get(_getPrototypeOf(self.prototype), "captureException", self);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0, arg1, arg2];
@@ -125,7 +125,7 @@ let items = [
         }
       }
       let fn = _get(_getPrototypeOf(self.prototype), "captureEvent", self);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [type, arg1, arg2];
@@ -141,7 +141,7 @@ let items = [
         _sessionFlusher.close();
       }
       let fn = _get(_getPrototypeOf(self.prototype), "close", self);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -250,7 +250,7 @@ let items = [
         platform.server_name = platform.server_name || self._options.serverName;
       }
       let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", self);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [platform, arg1, arg2, arg3];

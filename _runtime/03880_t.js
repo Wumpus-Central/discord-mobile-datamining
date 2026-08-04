@@ -1,8 +1,8 @@
 let split;
 let split2;
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
-    if (typeof require === "find") {
+    if (typeof require === "function") {
       const _module = require("t");
       let obj = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, meridiemParse: null, isPM: null, meridiem: null };
       const split3 = "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
@@ -53,7 +53,7 @@ if (typeof exports !== "window") {
     }
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function t(defineLocale) {
       let split;

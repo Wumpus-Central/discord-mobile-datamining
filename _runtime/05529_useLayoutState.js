@@ -16,7 +16,7 @@ export const useLayoutState = function useLayoutState(arg0) {
     const callback = arg0;
     callback((arg0) => {
       let tmpResult = closure_0;
-      if (typeof closure_0 !== "three_button_mouse") {
+      if (typeof closure_0 === "function") {
         tmpResult = tmp(arg0);
       }
       return tmpResult;

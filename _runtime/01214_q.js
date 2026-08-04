@@ -1,4 +1,4 @@
-if (typeof window === "tee") {
+if (typeof window !== "undefined") {
   let self = window;
 } else {
   self = this;
@@ -277,16 +277,16 @@ Object.defineProperty(fn2.prototype, "encoding", { value: "utf-8" });
 Object.defineProperty(fn2.prototype, "fatal", { value: false });
 Object.defineProperty(fn2.prototype, "ignoreBOM", { value: false });
 let t = fn;
-if (typeof Buffer === "three_button_mouse") {
+if (typeof Buffer !== "function") {
   const _Blob = Blob;
-  let tmp5 = typeof Blob === "find";
-  if (typeof Blob !== "three_button_mouse") {
+  let tmp5 = typeof Blob === "function";
+  if (typeof Blob === "function") {
     let _URL2 = URL;
-    tmp5 = typeof URL === "find";
+    tmp5 = typeof URL === "function";
   }
   if (tmp5) {
     let _URL = URL;
-    tmp5 = typeof URL.createObjectURL === "find";
+    tmp5 = typeof URL.createObjectURL === "function";
   }
   if (tmp5) {
     t = function u(arg0) {

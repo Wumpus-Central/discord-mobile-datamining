@@ -23,7 +23,7 @@ export default function createAnimatedComponent(displayName) {
       items[0] = style;
       items[1] = style;
       obj = {};
-      tmp5 = outer1_3(() => style(style[5])(style, style), items);
+      tmp5 = outer1_3(() => { ... }, items);
       merged = Object.assign(first);
       merged1 = Object.assign(passthroughAnimatedPropExplicitValues);
       obj.style = tmp5;
@@ -53,7 +53,7 @@ export const unstable_createAnimatedComponentWithAllowlist = function unstable_c
       items[0] = style;
       items[1] = style;
       obj = {};
-      tmp5 = outer1_3(() => style(style[5])(style, style), items);
+      tmp5 = outer1_3(() => { ... }, items);
       merged = Object.assign(first);
       merged1 = Object.assign(passthroughAnimatedPropExplicitValues);
       obj.style = tmp5;

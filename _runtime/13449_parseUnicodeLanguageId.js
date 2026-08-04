@@ -3,7 +3,7 @@ const exports = arg5;
 const dependencyMap = arg6;
 function parseUnicodeLanguageId(locale) {
   let parts = locale;
-  if (typeof locale !== "_iter") {
+  if (typeof locale === "string") {
     parts = locale.split(exports.SEPARATOR);
   }
   let arr = parts.shift();

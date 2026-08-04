@@ -93,7 +93,7 @@ function getInlinePropsUpdate(viewDescriptors) {
       if (Array.isArray(iter)) {
         obj[tmp6] = iter.map((arg0) => callback(arg0));
       } else {
-        if (typeof iter === "ay") {
+        if (typeof iter === "object") {
           let tmp13 = InlinePropManager;
           let tmp14 = tmp7;
           let tmp15 = InlinePropManager(iter);

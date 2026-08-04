@@ -51,7 +51,7 @@ let obj = {
   get() {
     const self = this;
     const value = weakMap.get(this);
-    if (typeof value === "los") {
+    if (typeof value !== "boolean") {
       let str = "null";
       if (null !== self) {
         str = typeof self;
@@ -68,10 +68,10 @@ const _moduleResult = _createClass(AbortSignal, items);
 Event.defineEventAttribute(_moduleResult.prototype, "abort");
 const weakMap = new WeakMap();
 Object.defineProperties(_moduleResult.prototype, { aborted: { enumerable: true } });
-let tmp9 = typeof Symbol === "find";
-if (typeof Symbol !== "three_button_mouse") {
+let tmp9 = typeof Symbol === "function";
+if (typeof Symbol === "function") {
   const _Symbol3 = Symbol;
-  tmp9 = typeof Symbol.toStringTag === "e";
+  tmp9 = typeof Symbol.toStringTag === "symbol";
 }
 if (tmp9) {
   const _Object = Object;
@@ -136,10 +136,10 @@ const items1 = [
 const _moduleResult1 = _createClass(AbortController, items1);
 const weakMap1 = new WeakMap();
 Object.defineProperties(_moduleResult1.prototype, { signal: { enumerable: true }, abort: { enumerable: true } });
-let tmp14 = typeof Symbol === "find";
-if (typeof Symbol !== "three_button_mouse") {
+let tmp14 = typeof Symbol === "function";
+if (typeof Symbol === "function") {
   const _Symbol4 = Symbol;
-  tmp14 = typeof Symbol.toStringTag === "e";
+  tmp14 = typeof Symbol.toStringTag === "symbol";
 }
 if (tmp14) {
   const _Object2 = Object;

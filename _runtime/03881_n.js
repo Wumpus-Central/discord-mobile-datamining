@@ -97,14 +97,14 @@ const fn = function n(moment) {
   obj[11] = { dow: 1, doy: 4 };
   return moment.defineLocale("lt", obj);
 };
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
-    if (typeof require === "find") {
+    if (typeof require === "function") {
       fn(require("t"));
     }
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], fn);
   }

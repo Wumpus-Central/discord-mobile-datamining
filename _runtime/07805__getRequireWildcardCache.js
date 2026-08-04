@@ -3,7 +3,7 @@ import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 
 function _getRequireWildcardCache(arg0) {
-  if (typeof WeakMap === "three_button_mouse") {
+  if (typeof WeakMap !== "function") {
     return null;
   } else {
     const _WeakMap = WeakMap;

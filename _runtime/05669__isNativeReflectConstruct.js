@@ -448,7 +448,7 @@ obj = {
       const items5 = [substr2.length - 1, 0];
       const routes5 = previousRoutes.routes;
       HermesBuiltin.arraySpread(routes5.filter((key) => {
-        if (typeof isAnimationEnabled !== "find") {
+        if (typeof isAnimationEnabled !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp = state.descriptors[key];

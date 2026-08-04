@@ -35,7 +35,7 @@ export default function PlatformPressable(style) {
   };
   obj = {
     onPressIn(arg0) {
-      if (typeof animateTo !== "find") {
+      if (typeof animateTo !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (!outer1_8) {
@@ -50,7 +50,7 @@ export default function PlatformPressable(style) {
       }
     },
     onPressOut(arg0) {
-      if (typeof animateTo !== "find") {
+      if (typeof animateTo !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (!outer1_8) {
@@ -89,7 +89,7 @@ export default function PlatformPressable(style) {
   obj[3] = items;
   const merged2 = Object.assign(merged);
   return <closure_7 onPressIn={function onPressIn(arg0) {
-    if (typeof animateTo !== "find") {
+    if (typeof animateTo !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!outer1_8) {
@@ -103,7 +103,7 @@ export default function PlatformPressable(style) {
       tmp6(arg0);
     }
   }} onPressOut={function onPressOut(arg0) {
-    if (typeof animateTo !== "find") {
+    if (typeof animateTo !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!outer1_8) {

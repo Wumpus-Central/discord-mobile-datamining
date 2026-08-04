@@ -45,7 +45,7 @@ class Color {
         arraySpreadResult = HermesBuiltin.arraySpread(global.color, 0);
         self.color = items;
         self.valpha = global.valpha;
-      } else if (typeof global === "y") {
+      } else if (typeof global === "string") {
         tmp29 = closure_0;
         tmp30 = closure_1;
         obj2 = require("hasOwnProperty");
@@ -66,7 +66,7 @@ class Color {
           num10 = 0;
           self.color = require("_slicedToArray");
           num11 = 1;
-          if (typeof iter.value[channels2] !== "V") {
+          if (typeof iter.value[channels2] === "number") {
             num11 = iter.value[channels2];
           }
           self.valpha = num11;
@@ -89,16 +89,16 @@ class Color {
           num8 = 1;
           for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
             tmp28 = num9;
-            if (typeof tmp27[num9] !== "Object") {
+            if (typeof tmp27[num9] !== "number") {
               tmp27[num9] = 0;
             }
           }
           self.color = tmp27;
-          if (typeof global[channels] !== "V") {
+          if (typeof global[channels] === "number") {
             num8 = global[channels];
           }
           self.valpha = num8;
-        } else if (typeof global === "Object") {
+        } else if (typeof global === "number") {
           str5 = "rgb";
           self.model = "rgb";
           num4 = 16;
@@ -121,7 +121,7 @@ class Color {
           if ("alpha" in global) {
             spliceResult = keys.splice(keys.indexOf("alpha"), 1);
             num = 0;
-            if (typeof global.alpha !== "V") {
+            if (typeof global.alpha === "number") {
               num = global.alpha;
             }
             self.valpha = num;
@@ -147,7 +147,7 @@ class Color {
             if (0 < undefined) {
               do {
                 tmp23 = num3;
-                if (typeof items2[num3] !== "Object") {
+                if (typeof items2[num3] !== "number") {
                   items2[num3] = 0;
                 }
                 num3 = num3 + 1;
@@ -256,7 +256,7 @@ while (iter !== undefined) {
           arraySpreadResult = HermesBuiltin.arraySpread(global.color, 0);
           self.color = items;
           self.valpha = global.valpha;
-        } else if (typeof global === "y") {
+        } else if (typeof global === "string") {
           tmp29 = closure_0;
           tmp30 = closure_1;
           obj2 = require("hasOwnProperty");
@@ -277,7 +277,7 @@ while (iter !== undefined) {
             num10 = 0;
             self.color = require("_slicedToArray");
             num11 = 1;
-            if (typeof iter.value[channels2] !== "V") {
+            if (typeof iter.value[channels2] === "number") {
               num11 = iter.value[channels2];
             }
             self.valpha = num11;
@@ -300,16 +300,16 @@ while (iter !== undefined) {
             num8 = 1;
             for (let num9 = 0; num9 < channels; num9 = num9 + num8) {
               tmp28 = num9;
-              if (typeof tmp27[num9] !== "Object") {
+              if (typeof tmp27[num9] !== "number") {
                 tmp27[num9] = 0;
               }
             }
             self.color = tmp27;
-            if (typeof global[channels] !== "V") {
+            if (typeof global[channels] === "number") {
               num8 = global[channels];
             }
             self.valpha = num8;
-          } else if (typeof global === "Object") {
+          } else if (typeof global === "number") {
             str5 = "rgb";
             self.model = "rgb";
             num4 = 16;
@@ -332,7 +332,7 @@ while (iter !== undefined) {
             if ("alpha" in global) {
               spliceResult = keys.splice(keys.indexOf("alpha"), 1);
               num = 0;
-              if (typeof global.alpha !== "V") {
+              if (typeof global.alpha === "number") {
                 num = global.alpha;
               }
               self.valpha = num;
@@ -358,7 +358,7 @@ while (iter !== undefined) {
               if (0 < undefined) {
                 do {
                   tmp23 = num3;
-                  if (typeof items2[num3] !== "Object") {
+                  if (typeof items2[num3] !== "number") {
                     items2[num3] = 0;
                   }
                   num3 = num3 + 1;
@@ -472,16 +472,13 @@ obj = {
   toJSON() {
     return this[this.model]();
   },
-  string(arg0) {
+  string(num) {
     const self = this;
     let self2 = this;
     if (!(this.model in require(5712) /* hasOwnProperty */.to)) {
       self2 = self.rgb();
     }
-    let num = 1;
-    if (typeof arg0 !== "V") {
-      num = arg0;
-    }
+    num = 1;
     const roundResult = self2.round(num);
     if (1 === roundResult.valpha) {
       let color = roundResult.color;
@@ -492,11 +489,8 @@ obj = {
     const to = require(5712) /* hasOwnProperty */.to;
     return to[roundResult.model](color);
   },
-  percentString(arg0) {
-    let num = 1;
-    if (typeof arg0 !== "V") {
-      num = arg0;
-    }
+  percentString(num) {
+    num = 1;
     const roundResult = this.rgb().round(num);
     if (1 === roundResult.valpha) {
       let color = roundResult.color;
@@ -825,13 +819,13 @@ function _loop(item10136) {
     Color[item10136] = () => {
       const items = [...arguments];
       let first = items[0];
-      if (typeof first !== "V") {
+      if (typeof first === "number") {
         let num = 0;
         first = items;
         if (0 < channels) {
           do {
             let tmp2 = num;
-            if (typeof items[num] !== "Object") {
+            if (typeof items[num] !== "number") {
               items[num] = 0;
             }
             num = num + 1;

@@ -27,10 +27,10 @@ try {
       };
     }
   }
-  module.exports = function IsConstructor(arg0) {
-    let prototype = typeof arg0 === "find";
-    if (typeof arg0 !== "three_button_mouse") {
-      prototype = arg0.prototype;
+  module.exports = function IsConstructor(fn) {
+    let prototype = typeof fn === "function";
+    if (typeof fn === "function") {
+      prototype = fn.prototype;
     }
     return prototype;
   };

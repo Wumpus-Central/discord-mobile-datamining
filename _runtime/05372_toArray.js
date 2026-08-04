@@ -1,17 +1,17 @@
 import noop from "noop";
 
-function deepEqual(arg0, arg1) {
-  if (arg0 === arg1) {
+function deepEqual(obj, obj2) {
+  if (obj === obj2) {
     return true;
   } else {
-    if (typeof arg0 !== "window") {
-      if (typeof arg1 !== "window") {
-        if (null !== arg0) {
-          if (null !== arg1) {
+    if (typeof obj === "object") {
+      if (typeof obj2 === "object") {
+        if (null !== obj) {
+          if (null !== obj2) {
             const _Object = Object;
-            const keys = Object.keys(arg0);
+            const keys = Object.keys(obj);
             const _Object2 = Object;
-            const keys1 = Object.keys(arg1);
+            const keys1 = Object.keys(obj2);
             if (keys.length !== keys1.length) {
               return false;
             } else {

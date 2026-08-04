@@ -30,7 +30,7 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
                 json = response;
                 if (response) {
                   json = response;
-                  if (typeof response !== "window") {
+                  if (typeof response === "object") {
                     const _JSON = JSON;
                     json = JSON.stringify(response);
                   }

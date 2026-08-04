@@ -43,88 +43,24 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
           let c6 = 0;
           let c7 = 0;
           const iter = (function*(arg0) {
-            if (c7 === 2) {
-              c7 = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c7 = 2;
-                if (0 === c6) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    let closure_5 = closure_0;
-                    let closure_4 = closure_0;
-                    let closure_3 = tmp2;
-                    closure_0 = closure_1;
-                    closure_1 = closure_2;
-                    closure_2 = undefined;
-                    c6 = 1;
-                    c7 = 1;
-                    return { value: "ct", done: "Array" };
-                  }
-                } else if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    const obj1 = { value: null, done: true };
-                    obj1[0] = arg1;
-                    return obj1;
-                  } else {
-                    const call = self.call;
-                    const items = [closure_5, closure_0];
-                    HermesBuiltin.arraySpread(closure_1, 2);
-                    c6 = 2;
-                    c7 = 1;
-                    const obj2 = { value: null, done: false };
-                    obj2[0] = HermesBuiltin.apply(items, self);
-                    return obj2;
-                  }
-                } else if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  const obj3 = { value: null, done: true };
-                  obj3[0] = arg1;
-                  return obj3;
-                } else {
-                  closure_2 = arg1;
-                  const result = obj(outer3_1[4]).wrapTransportOnMessage(closure_0, closure_0);
-                  const obj7 = obj(outer3_1[4]);
-                  obj(outer3_1[4]).wrapTransportSend(closure_0, closure_0);
-                  const obj8 = obj(outer3_1[4]);
-                  obj(outer3_1[4]).wrapTransportOnClose(closure_0);
-                  const obj9 = obj(outer3_1[4]);
-                  obj(outer3_1[4]).wrapTransportError(closure_0);
-                  c7 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = closure_2;
-                  return obj;
-                }
-              } catch (tmp21) {
-                c7 = tmp;
-                throw tmp21;
-              }
-            }
+            let closure_5 = closure_0;
+            let closure_4 = closure_0;
+            let closure_3 = tmp2;
+            closure_0 = closure_1;
+            closure_1 = closure_2;
+            yield "ct";
+            const call = self.call;
+            const items = [closure_5, closure_0];
+            HermesBuiltin.arraySpread(closure_1, 2);
+            closure_2 = yield HermesBuiltin.apply(items, self);
+            const result = obj(outer3_1[4]).wrapTransportOnMessage(closure_0, closure_0);
+            const obj7 = obj(outer3_1[4]);
+            obj(outer3_1[4]).wrapTransportSend(closure_0, closure_0);
+            const obj8 = obj(outer3_1[4]);
+            obj(outer3_1[4]).wrapTransportOnClose(closure_0);
+            const obj9 = obj(outer3_1[4]);
+            obj(outer3_1[4]).wrapTransportError(closure_0);
+            return closure_2;
           })();
           iter.next();
           return iter;

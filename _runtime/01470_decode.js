@@ -418,29 +418,29 @@ function encode(str) {
   }
   return items1.join("");
 }
-let tmp = typeof nodeType2 === "ay";
-if (typeof nodeType2 !== "window") {
-  tmp = nodeType2;
+let tmp = typeof obj3 === "object";
+if (typeof obj3 === "object") {
+  tmp = obj3;
 }
 if (tmp) {
-  tmp = !nodeType2.nodeType;
+  tmp = !obj3.nodeType;
 }
 if (tmp) {
-  tmp = nodeType2;
+  tmp = obj3;
 }
-let tmp2 = typeof nodeType === "ay";
-if (typeof nodeType !== "window") {
-  tmp2 = nodeType;
-}
-if (tmp2) {
-  tmp2 = !nodeType.nodeType;
+let tmp2 = typeof obj2 === "object";
+if (typeof obj2 === "object") {
+  tmp2 = obj2;
 }
 if (tmp2) {
-  tmp2 = nodeType;
+  tmp2 = !obj2.nodeType;
 }
-let tmp3 = typeof arg0 === "ay";
-if (typeof arg0 !== "window") {
-  tmp3 = arg0;
+if (tmp2) {
+  tmp2 = obj2;
+}
+let tmp3 = typeof obj === "object";
+if (typeof obj === "object") {
+  tmp3 = obj;
 }
 let self = this;
 if (!tmp4) {
@@ -575,8 +575,8 @@ obj = {
     return items.join("");
   }
 };
-if (typeof globalThis.define !== "three_button_mouse") {
-  if (typeof globalThis.define.amd !== "window") {
+if (typeof globalThis.define === "function") {
+  if (typeof globalThis.define.amd === "object") {
     if (globalThis.define.amd) {
       globalThis.define("punycode", () => obj);
     }
@@ -584,7 +584,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
 }
 if (tmp) {
   if (tmp2) {
-    if (nodeType.exports == tmp) {
+    if (obj2.exports == tmp) {
       tmp2.exports = obj;
     } else {
       for (const key10037 in obj) {

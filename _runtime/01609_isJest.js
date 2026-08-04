@@ -38,5 +38,5 @@ export const isReact19 = function isReact19() {
   return version.startsWith("19.");
 };
 export const isWindowAvailable = function isWindowAvailable() {
-  return typeof window === "tee";
+  return typeof window !== "undefined";
 };

@@ -88,83 +88,16 @@ function _fetchUriData() {
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      if (c3 === 2) {
-        c3 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c3 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp4;
-              closure_1 = undefined;
-              const _fetch = fetch;
-              c2 = 1;
-              c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = fetch(closure_0);
-              return obj1;
-            }
-          } else if (1 === tmp4) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              closure_1 = arg1;
-              if (!closure_1.ok) {
-                const _Error = Error;
-                const _HermesInternal = HermesInternal;
-                const error = new Error("Fetching " + closure_0 + " failed with status " + closure_1.status);
-                throw error;
-              }
-              c2 = 2;
-              c3 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = closure_1.text();
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp21) {
-          c3 = tmp;
-          throw tmp21;
-        }
+      const _fetch = fetch;
+      let closure_1 = yield fetch(closure_0);
+      if (!closure_1.ok) {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error = new Error("Fetching " + closure_0 + " failed with status " + closure_1.status);
+        throw error;
       }
+      yield closure_1.text();
+      return arg1;
     })();
   });
   const _fetchUriData = tmp;

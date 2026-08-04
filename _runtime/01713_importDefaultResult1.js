@@ -195,7 +195,7 @@ const items = [
       if (getScrollableNode) {
         const scrollableNode = _componentRef.getScrollableNode();
         let tmp16 = scrollableNode;
-        if (typeof scrollableNode !== "Object") {
+        if (typeof scrollableNode !== "number") {
           let num4 = NativeEventsManager(1714).findNodeHandle(scrollableNode);
           if (num4 == null) {
             num4 = -1;

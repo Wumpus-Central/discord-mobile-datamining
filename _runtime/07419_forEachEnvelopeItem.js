@@ -22,7 +22,7 @@ export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
   return items;
 };
 export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
-  if (typeof data.data === "y") {
+  if (typeof data.data === "string") {
     data = data.data;
     let __SENTRY__ = require;
     let encodePolyfill = dependencyMap;
@@ -103,7 +103,7 @@ export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelop
   }
 };
 export const parseEnvelope = function parseEnvelope(arr) {
-  if (typeof arr === "_iter") {
+  if (typeof arr !== "string") {
     function readJson() {
       let length = lib.indexOf(10);
       if (length < 0) {
@@ -127,7 +127,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
     while (_require.length) {
       let json1 = readJson();
       let length;
-      if (typeof json1.length !== "V") {
+      if (typeof json1.length === "number") {
         length = json1.length;
       }
       let items1 = [json1, ];
@@ -161,8 +161,8 @@ export const parseEnvelope = function parseEnvelope(arr) {
 export const serializeEnvelope = function serializeEnvelope(arg0) {
   function append(json) {
     let arr = callback;
-    if (typeof callback === "y") {
-      if (typeof json === "y") {
+    if (typeof callback === "string") {
+      if (typeof json === "string") {
         let sum = arr + json;
       } else {
         if (callback(outer1_1[1]).GLOBAL_OBJ.__SENTRY__) {
@@ -177,7 +177,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
         encodePolyfillResult = textEncoder.encode(arr);
       }
       callback = sum;
-    } else if (typeof json === "_iter") {
+    } else if (typeof json !== "string") {
       arr = arr.push(json);
     } else {
       let __SENTRY__ = callback;
@@ -196,7 +196,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
   const _require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = _require;
-    if (typeof _require !== "y") {
+    if (typeof _require !== "string") {
       tmp22 = (function concatBuffers(arr) {
         const uint8Array = new Uint8Array(arr.reduce((arg0, arg1) => arg0 + arg1.length, 0));
         let num = 0;
@@ -217,7 +217,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
     append("\n" + JSON.stringify(tmp8[0]) + "\n");
-    if (typeof tmp8[1] !== "y") {
+    if (typeof tmp8[1] !== "string") {
       const _Uint8Array = Uint8Array;
       if (!(tmp10 instanceof Uint8Array)) {
         try {

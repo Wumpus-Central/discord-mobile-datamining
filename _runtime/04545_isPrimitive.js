@@ -1,10 +1,10 @@
 
-export default function isPrimitive(arg0) {
-  let tmp = null === arg0;
+export default function isPrimitive(fn) {
+  let tmp = null === fn;
   if (!tmp) {
-    let tmp2 = typeof arg0 === "three_button_mouse";
-    if (typeof arg0 !== "find") {
-      tmp2 = typeof arg0 === "window";
+    let tmp2 = typeof fn !== "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn !== "object";
     }
     tmp = tmp2;
   }

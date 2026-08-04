@@ -6,7 +6,7 @@ if (prop) {
 }
 if (prop) {
   const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "e";
+  prop = typeof Symbol.iterator === "symbol";
 }
 
 export default prop;

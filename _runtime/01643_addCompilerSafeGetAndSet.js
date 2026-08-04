@@ -13,13 +13,13 @@ function addCompilerSafeGetAndSet(prototype) {
     enumerable: false
   };
   obj = {
-    value(__isAnimationDefinition) {
-      if (typeof __isAnimationDefinition !== "three_button_mouse") {
-        if (!__isAnimationDefinition.__isAnimationDefinition) {
-          obj.value = __isAnimationDefinition(obj.value);
+    value(fn) {
+      if (typeof fn === "function") {
+        if (!fn.__isAnimationDefinition) {
+          obj.value = fn(obj.value);
         }
       }
-      obj.value = __isAnimationDefinition;
+      obj.value = fn;
     },
     configurable: false,
     enumerable: false
@@ -75,11 +75,11 @@ function makeMutableUI(initialValues) {
   };
   obj._animation = null;
   obj._isReanimatedSharedValue = true;
-  if (typeof hideInternalValueProp !== "find") {
+  if (typeof hideInternalValueProp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   Object.defineProperty(obj, "_value", { configurable: false, enumerable: false });
-  if (typeof addCompilerSafeGetAndSet !== "find") {
+  if (typeof addCompilerSafeGetAndSet !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = {
@@ -90,13 +90,13 @@ function makeMutableUI(initialValues) {
     enumerable: false
   };
   obj = {
-    value(__isAnimationDefinition) {
-      if (typeof __isAnimationDefinition !== "three_button_mouse") {
-        if (!__isAnimationDefinition.__isAnimationDefinition) {
-          obj.value = __isAnimationDefinition(obj.value);
+    value(fn) {
+      if (typeof fn === "function") {
+        if (!fn.__isAnimationDefinition) {
+          obj.value = fn(obj.value);
         }
       }
-      obj.value = __isAnimationDefinition;
+      obj.value = fn;
     },
     configurable: false,
     enumerable: false
@@ -152,11 +152,11 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
     map.delete(arg0);
   };
   obj._isReanimatedSharedValue = true;
-  if (typeof hideInternalValueProp !== "find") {
+  if (typeof hideInternalValueProp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   Object.defineProperty(obj, "_value", { configurable: false, enumerable: false });
-  if (typeof addCompilerSafeGetAndSet !== "find") {
+  if (typeof addCompilerSafeGetAndSet !== "function") {
     HermesBuiltin.throwTypeError();
   }
   obj = {
@@ -167,13 +167,13 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
     enumerable: false
   };
   obj = {
-    value(__isAnimationDefinition) {
-      if (typeof __isAnimationDefinition !== "three_button_mouse") {
-        if (!__isAnimationDefinition.__isAnimationDefinition) {
-          obj.value = __isAnimationDefinition(obj.value);
+    value(fn) {
+      if (typeof fn === "function") {
+        if (!fn.__isAnimationDefinition) {
+          obj.value = fn(obj.value);
         }
       }
-      obj.value = __isAnimationDefinition;
+      obj.value = fn;
     },
     configurable: false,
     enumerable: false
@@ -254,11 +254,11 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
     throw reanimatedError;
   };
   obj._isReanimatedSharedValue = true;
-  if (typeof hideInternalValueProp !== "find") {
+  if (typeof hideInternalValueProp !== "function") {
     HermesBuiltin.throwTypeError();
   }
   Object.defineProperty(obj, "_value", { configurable: false, enumerable: false });
-  if (typeof addCompilerSafeGetAndSet !== "find") {
+  if (typeof addCompilerSafeGetAndSet !== "function") {
     HermesBuiltin.throwTypeError();
   }
   Object.defineProperties(obj, {
@@ -270,13 +270,13 @@ export const makeMutable = isJest ? (function makeMutableWeb(prototype) {
       enumerable: false
     },
     set: {
-      value(__isAnimationDefinition) {
-        if (typeof __isAnimationDefinition !== "three_button_mouse") {
-          if (!__isAnimationDefinition.__isAnimationDefinition) {
-            obj.value = __isAnimationDefinition(obj.value);
+      value(fn) {
+        if (typeof fn === "function") {
+          if (!fn.__isAnimationDefinition) {
+            obj.value = fn(obj.value);
           }
         }
-        obj.value = __isAnimationDefinition;
+        obj.value = fn;
       },
       configurable: false,
       enumerable: false

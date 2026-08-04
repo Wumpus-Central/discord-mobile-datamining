@@ -39,7 +39,7 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
               const first = args[0];
               const substr = args.slice(1);
               if ("assert" !== level) {
-                let tmp9 = args.length > 1 && typeof args[0] === "y";
+                let tmp9 = args.length > 1 && typeof args[0] === "string";
                 if (tmp9) {
                   let tmpResult = tmp(tmp2[5]);
                   tmp9 = !tmpResult.hasConsoleSubstitutions(args[0]);

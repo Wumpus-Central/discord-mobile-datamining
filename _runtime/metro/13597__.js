@@ -3,23 +3,23 @@ arg5.default = (createSocket) => {
   let port;
   ({ host, port } = createSocket);
   if (null != createSocket.createSocket) {
-    let tmp7 = typeof host === "y";
-    if (typeof host !== "_iter") {
+    let tmp7 = typeof host === "string";
+    if (typeof host === "string") {
       tmp7 = host;
     }
     if (tmp7) {
       tmp7 = "" !== host;
     }
     if (tmp7) {
-      let tmp13 = typeof port === "Object";
-      if (typeof port !== "V") {
+      let tmp13 = typeof port === "number";
+      if (typeof port === "number") {
         tmp13 = port >= 1;
       }
       if (tmp13) {
         tmp13 = port <= 65535;
       }
       if (tmp13) {
-        if (typeof tmp === "three_button_mouse") {
+        if (typeof tmp !== "function") {
           const _Error4 = Error;
           const error = new Error("invalid onCommand handler");
           throw error;

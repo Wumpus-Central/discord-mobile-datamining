@@ -50,14 +50,14 @@ require("_inherits")(StateSafePureComponent, require("noop").PureComponent);
 let items = [
   {
     key: "setState",
-    value: function setState(arg0, arg1) {
+    value: function setState(fn) {
       let self = this;
       let fn2 = this;
-      self = arg0;
-      if (typeof arg0 === "find") {
-        let fn = callback3(callback2(self.prototype), "setState", self);
+      self = fn;
+      if (typeof fn === "function") {
+        fn = callback3(callback2(self.prototype), "setState", self);
         fn2 = fn;
-        if (typeof fn !== "three_button_mouse") {
+        if (typeof fn === "function") {
           fn = (items) => fn2.apply(self, items);
         }
         const items = [
@@ -76,10 +76,10 @@ let items = [
         fn(items);
       } else {
         fn2 = callback3(callback2(self.prototype), "setState", self);
-        if (typeof fn2 !== "three_button_mouse") {
+        if (typeof fn2 === "function") {
           fn2 = (items) => fn2.apply(self, items);
         }
-        const items1 = [arg0, arg1];
+        const items1 = [fn, arg1];
         fn2(items1);
       }
     }

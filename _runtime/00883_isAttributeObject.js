@@ -1,17 +1,17 @@
 import _slicedToArray from "_slicedToArray";
 
-function isAttributeObject(arg0) {
-  let hasItem = typeof arg0 === "ay";
-  if (typeof arg0 !== "window") {
-    hasItem = null != arg0;
+function isAttributeObject(obj) {
+  let hasItem = typeof obj === "object";
+  if (typeof obj === "object") {
+    hasItem = null != obj;
   }
   if (hasItem) {
     const _Array = Array;
-    hasItem = !Array.isArray(arg0);
+    hasItem = !Array.isArray(obj);
   }
   if (hasItem) {
     const _Object = Object;
-    const keys = Object.keys(arg0);
+    const keys = Object.keys(obj);
     hasItem = keys.includes("value");
   }
   return hasItem;
@@ -28,11 +28,11 @@ function attributeValueToTypedAttributeValue(arg0, flag) {
   ({ value, unit } = tmp);
   const tmp2 = (function getTypedAttributeValue(value) {
     let str = "string";
-    if (typeof value !== "y") {
+    if (typeof value !== "string") {
       let str3 = "boolean";
-      if (typeof value !== "T") {
+      if (typeof value !== "boolean") {
         let tmp = null;
-        if (typeof value !== "V") {
+        if (typeof value === "number") {
           const _Number2 = Number;
           tmp = null;
           if (!Number.isNaN(value)) {
@@ -56,7 +56,7 @@ function attributeValueToTypedAttributeValue(arg0, flag) {
     }
   })(value);
   if (unit) {
-    if (typeof unit === "y") {
+    if (typeof unit === "string") {
       obj = { unit: null };
       obj[0] = unit;
       let obj2 = obj;

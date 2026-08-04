@@ -102,48 +102,48 @@ let items = [
       let tmp6 = tmp5.borderRadius || 0;
       const borderTopLeftRadius = tmp5.borderTopLeftRadius;
       let tmp7 = tmp6;
-      if (typeof borderTopLeftRadius !== "V") {
+      if (typeof borderTopLeftRadius === "number") {
         tmp7 = borderTopLeftRadius;
       }
       const items = [tmp7, , , , , , , ];
       const borderTopLeftRadius2 = tmp5.borderTopLeftRadius;
       let tmp8 = tmp6;
-      if (typeof borderTopLeftRadius2 !== "V") {
+      if (typeof borderTopLeftRadius2 === "number") {
         tmp8 = borderTopLeftRadius2;
       }
       items[1] = tmp8;
       const borderTopRightRadius = tmp5.borderTopRightRadius;
       let tmp9 = tmp6;
-      if (typeof borderTopRightRadius !== "V") {
+      if (typeof borderTopRightRadius === "number") {
         tmp9 = borderTopRightRadius;
       }
       items[2] = tmp9;
       const borderTopRightRadius2 = tmp5.borderTopRightRadius;
       let tmp10 = tmp6;
-      if (typeof borderTopRightRadius2 !== "V") {
+      if (typeof borderTopRightRadius2 === "number") {
         tmp10 = borderTopRightRadius2;
       }
       items[3] = tmp10;
       const borderBottomRightRadius = tmp5.borderBottomRightRadius;
       let tmp11 = tmp6;
-      if (typeof borderBottomRightRadius !== "V") {
+      if (typeof borderBottomRightRadius === "number") {
         tmp11 = borderBottomRightRadius;
       }
       items[4] = tmp11;
       const borderBottomRightRadius2 = tmp5.borderBottomRightRadius;
       let tmp12 = tmp6;
-      if (typeof borderBottomRightRadius2 !== "V") {
+      if (typeof borderBottomRightRadius2 === "number") {
         tmp12 = borderBottomRightRadius2;
       }
       items[5] = tmp12;
       const borderBottomLeftRadius = tmp5.borderBottomLeftRadius;
       let tmp13 = tmp6;
-      if (typeof borderBottomLeftRadius !== "V") {
+      if (typeof borderBottomLeftRadius === "number") {
         tmp13 = borderBottomLeftRadius;
       }
       items[6] = tmp13;
       const borderBottomLeftRadius2 = tmp5.borderBottomLeftRadius;
-      if (typeof borderBottomLeftRadius2 !== "V") {
+      if (typeof borderBottomLeftRadius2 === "number") {
         tmp6 = borderBottomLeftRadius2;
       }
       items[7] = tmp6;
@@ -160,7 +160,7 @@ let items = [
         mapped = colors.map(closure_9);
       }
       obj[1] = mapped;
-      if (typeof convertPoint !== "find") {
+      if (typeof convertPoint !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp22 = start;
@@ -173,7 +173,7 @@ let items = [
         tmp22 = obj;
       }
       obj[2] = tmp22;
-      if (typeof convertPoint !== "find") {
+      if (typeof convertPoint !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp24 = end;
@@ -192,7 +192,7 @@ let items = [
       }
       obj[4] = substr;
       obj[5] = useAngle;
-      if (typeof convertPoint !== "find") {
+      if (typeof convertPoint !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let tmp27 = angleCenter;

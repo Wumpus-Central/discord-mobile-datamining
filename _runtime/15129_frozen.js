@@ -372,7 +372,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         let activeStickyIndex = tmp.activeStickyIndex;
         const activeStickyIndex2 = state.activeStickyIndex;
         if (activeStickyIndex) {
-          if (typeof activeStickyIndex.set === "find") {
+          if (typeof activeStickyIndex.set === "function") {
             let result = activeStickyIndex.set(activeStickyIndex2);
           } else {
             activeStickyIndex.value = activeStickyIndex2;
@@ -381,7 +381,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         let isAtEnd = tmp.isAtEnd;
         const isAtEnd2 = state.isAtEnd;
         if (isAtEnd) {
-          if (typeof isAtEnd.set === "find") {
+          if (typeof isAtEnd.set === "function") {
             const result1 = isAtEnd.set(isAtEnd2);
           } else {
             isAtEnd.value = isAtEnd2;
@@ -390,7 +390,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         let isAtStart = tmp.isAtStart;
         const isAtStart2 = state.isAtStart;
         if (isAtStart) {
-          if (typeof isAtStart.set === "find") {
+          if (typeof isAtStart.set === "function") {
             const result2 = isAtStart.set(isAtStart2);
           } else {
             isAtStart.value = isAtStart2;
@@ -399,7 +399,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         let isNearEnd = tmp.isNearEnd;
         const isNearEnd2 = state.isNearEnd;
         if (isNearEnd) {
-          if (typeof isNearEnd.set === "find") {
+          if (typeof isNearEnd.set === "function") {
             const result3 = isNearEnd.set(isNearEnd2);
           } else {
             isNearEnd.value = isNearEnd2;
@@ -408,7 +408,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         let isNearStart = tmp.isNearStart;
         const isNearStart2 = state.isNearStart;
         if (isNearStart) {
-          if (typeof isNearStart.set === "find") {
+          if (typeof isNearStart.set === "function") {
             const result4 = isNearStart.set(isNearStart2);
           } else {
             isNearStart.value = isNearStart2;
@@ -417,7 +417,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         let isWithinMaintainScrollAtEndThreshold = tmp.isWithinMaintainScrollAtEndThreshold;
         const isWithinMaintainScrollAtEndThreshold2 = state.isWithinMaintainScrollAtEndThreshold;
         if (isWithinMaintainScrollAtEndThreshold) {
-          if (typeof isWithinMaintainScrollAtEndThreshold.set === "find") {
+          if (typeof isWithinMaintainScrollAtEndThreshold.set === "function") {
             const result5 = isWithinMaintainScrollAtEndThreshold.set(isWithinMaintainScrollAtEndThreshold2);
           } else {
             isWithinMaintainScrollAtEndThreshold.value = isWithinMaintainScrollAtEndThreshold2;
@@ -426,7 +426,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
         const scrollOffset = tmp.scrollOffset;
         const scroll = state.scroll;
         if (scrollOffset) {
-          if (typeof scrollOffset.set === "find") {
+          if (typeof scrollOffset.set === "function") {
             const result6 = scrollOffset.set(scroll);
           } else {
             scrollOffset.value = scroll;
@@ -437,7 +437,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
           listenResult = state.listen("activeStickyIndex", (value) => {
             const activeStickyIndex = closure_1.activeStickyIndex;
             if (activeStickyIndex) {
-              if (typeof activeStickyIndex.set === "find") {
+              if (typeof activeStickyIndex.set === "function") {
                 const result = activeStickyIndex.set(value);
               } else {
                 activeStickyIndex.value = value;
@@ -451,7 +451,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
           listenResult1 = state.listen("isAtEnd", (value) => {
             const isAtEnd = closure_1.isAtEnd;
             if (isAtEnd) {
-              if (typeof isAtEnd.set === "find") {
+              if (typeof isAtEnd.set === "function") {
                 const result = isAtEnd.set(value);
               } else {
                 isAtEnd.value = value;
@@ -465,7 +465,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
           listenResult2 = state.listen("isAtStart", (value) => {
             const isAtStart = closure_1.isAtStart;
             if (isAtStart) {
-              if (typeof isAtStart.set === "find") {
+              if (typeof isAtStart.set === "function") {
                 const result = isAtStart.set(value);
               } else {
                 isAtStart.value = value;
@@ -479,7 +479,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
           listenResult3 = state.listen("isNearEnd", (value) => {
             const isNearEnd = closure_1.isNearEnd;
             if (isNearEnd) {
-              if (typeof isNearEnd.set === "find") {
+              if (typeof isNearEnd.set === "function") {
                 const result = isNearEnd.set(value);
               } else {
                 isNearEnd.value = value;
@@ -493,7 +493,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
           listenResult4 = state.listen("isNearStart", (value) => {
             const isNearStart = closure_1.isNearStart;
             if (isNearStart) {
-              if (typeof isNearStart.set === "find") {
+              if (typeof isNearStart.set === "function") {
                 const result = isNearStart.set(value);
               } else {
                 isNearStart.value = value;
@@ -507,7 +507,7 @@ export const AnimatedLegendList = typedMemo(frozen.forwardRef(function AnimatedL
           listenResult5 = state.listen("isWithinMaintainScrollAtEndThreshold", (value) => {
             const isWithinMaintainScrollAtEndThreshold = closure_1.isWithinMaintainScrollAtEndThreshold;
             if (isWithinMaintainScrollAtEndThreshold) {
-              if (typeof isWithinMaintainScrollAtEndThreshold.set === "find") {
+              if (typeof isWithinMaintainScrollAtEndThreshold.set === "function") {
                 const result = isWithinMaintainScrollAtEndThreshold.set(value);
               } else {
                 isWithinMaintainScrollAtEndThreshold.value = value;

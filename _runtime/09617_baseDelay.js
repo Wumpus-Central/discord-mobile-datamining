@@ -1,8 +1,8 @@
 
-export default function baseDelay(arg0, arg1, arg2) {
-  let closure_0 = arg0;
+export default function baseDelay(fn) {
+  let closure_0 = fn;
   let closure_1 = arg2;
-  if (typeof arg0 === "three_button_mouse") {
+  if (typeof fn !== "function") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");
     throw typeError;

@@ -13,7 +13,7 @@ arg5.profiler = {
           const logger3 = tmp(7375).logger;
           logger3.warn("Profiler is not available on profiling integration.");
         }
-        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "find" && typeof integrationByName._profiler.stop === "find";
+        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "function" && typeof integrationByName._profiler.stop === "function";
       } else if (tmp(7403).DEBUG_BUILD) {
         const logger2 = tmp(7375).logger;
         logger2.warn("ProfilingIntegration is not available");
@@ -35,7 +35,7 @@ arg5.profiler = {
           const logger3 = tmp(7375).logger;
           logger3.warn("Profiler is not available on profiling integration.");
         }
-        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "find" && typeof integrationByName._profiler.stop === "find";
+        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "function" && typeof integrationByName._profiler.stop === "function";
       } else if (tmp(7403).DEBUG_BUILD) {
         const logger2 = tmp(7375).logger;
         logger2.warn("ProfilingIntegration is not available");

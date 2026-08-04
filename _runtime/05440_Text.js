@@ -26,7 +26,7 @@ export const Text = (arg0) => {
     function handler(current) {
       closure_1.current = current;
       if (closure_0) {
-        if (typeof tmp === "find") {
+        if (typeof tmp === "function") {
           tmp(current);
         } else {
           tmp.current = current;

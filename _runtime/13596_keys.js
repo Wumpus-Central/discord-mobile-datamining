@@ -220,16 +220,16 @@ const items1 = [
         const plugins = self.plugins;
         const item = plugins.forEach((onDisconnect) => onDisconnect.onDisconnect && onDisconnect.onDisconnect());
       }
-      function onMessage(arg0) {
-        if (typeof arg0 === "y") {
+      function onMessage(str) {
+        if (typeof str === "string") {
           const _JSON2 = JSON;
-          let parsed = JSON.parse(arg0);
+          let parsed = JSON.parse(str);
         } else {
           const _Buffer = Buffer;
-          parsed = arg0;
-          if (Buffer.isBuffer(arg0)) {
+          parsed = str;
+          if (Buffer.isBuffer(str)) {
             const _JSON = JSON;
-            parsed = JSON.parse(arg0.toString());
+            parsed = JSON.parse(str.toString());
           }
         }
         if (closure_5) {
@@ -246,7 +246,7 @@ const items1 = [
         if ("custom" === parsed.type) {
           const customCommands = tmp5.customCommands;
           const found = customCommands.filter((command) => {
-            if (typeof parsed.payload === "y") {
+            if (typeof parsed.payload === "string") {
               let tmp2 = command.command === tmp.payload;
             } else {
               tmp2 = command.command === tmp.payload.command;
@@ -255,7 +255,7 @@ const items1 = [
           });
           const item1 = found.forEach((handler) => {
             let args;
-            if (typeof parsed.payload !== "window") {
+            if (typeof parsed.payload === "object") {
               args = parsed.payload.args;
             }
             return handler.handler(args);
@@ -312,23 +312,23 @@ const items1 = [
   },
   {
     key: "use",
-    value: function use(bind) {
+    value: function use(fn) {
       let self = this;
       self = this;
-      if (typeof bind === "three_button_mouse") {
+      if (typeof fn !== "function") {
         const _Error3 = Error;
         let error = new Error("plugins must be a function");
         throw error;
       } else {
-        const tmp19 = bind.bind(self)(self);
+        const tmp19 = fn.bind(self)(self);
         const dependencyMap = tmp19;
-        if (typeof tmp19 === "window") {
+        if (typeof tmp19 !== "object") {
           let _Error2 = Error;
           let error1 = new Error("plugins must return an object");
           throw error1;
         } else {
           if (tmp19.features) {
-            if (typeof tmp19.features === "window") {
+            if (typeof tmp19.features !== "object") {
               let _Error = Error;
               const error2 = new Error("features must be an object");
               throw error2;
@@ -339,10 +339,10 @@ const items1 = [
               const _Object = Object;
               const keys = Object.keys(tmp19.features);
               const item = keys.forEach((arg0) => {
-                if (typeof closure_0 !== "find") {
+                if (typeof closure_0 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof tmp19.features[arg0] === "three_button_mouse") {
+                if (typeof tmp19.features[arg0] !== "function") {
                   const _Error2 = Error;
                   const _HermesInternal2 = HermesInternal;
                   const error = new Error("feature " + arg0 + " is not a function");
@@ -374,18 +374,19 @@ const items1 = [
   },
   {
     key: "onCustomCommand",
-    value: function onCustomCommand(command) {
+    value: function onCustomCommand(str) {
       let args;
       let description;
       let handler;
       let title;
       let self = this;
       self = this;
-      if (typeof command === "y") {
+      if (typeof str === "string") {
         handler = arg1;
+        let command = str;
       } else {
-        command = command.command;
-        ({ handler, title, description, args } = command);
+        command = str.command;
+        ({ handler, title, description, args } = str);
       }
       if (tmp) {
         if (handler) {

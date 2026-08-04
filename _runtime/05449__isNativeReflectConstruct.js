@@ -398,7 +398,7 @@ class DrawerLayout {
             str3 = "no-hide-descendants";
           }
           obj2[1] = str3;
-          if (typeof obj.props.children === "find") {
+          if (typeof obj.props.children === "function") {
             const props2 = obj.props;
             let children = props2.children(obj.openValue);
           } else {

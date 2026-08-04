@@ -4,12 +4,12 @@ function getMatchRanking(arg0, arg1, keepDiacritics) {
   const text = `${arg0}`;
   let defaultResult = text;
   if (!keepDiacritics.keepDiacritics) {
-    defaultResult = tmp5.default(`${arg0}`);
+    defaultResult = tmp4.default(`${arg0}`);
   }
   const text1 = `${arg1}`;
   let defaultResult1 = text1;
   if (!keepDiacritics.keepDiacritics) {
-    defaultResult1 = tmp5.default(`${arg1}`);
+    defaultResult1 = tmp4.default(`${arg1}`);
   }
   if (defaultResult1.length > defaultResult.length) {
     let NO_MATCH = obj.NO_MATCH;
@@ -29,7 +29,6 @@ function getMatchRanking(arg0, arg1, keepDiacritics) {
     } else if (1 === formatted.length) {
       NO_MATCH = obj.NO_MATCH;
     } else {
-      let c0 = "";
       let parts = str2.split(" ");
       let item = parts.forEach((str) => {
         const parts = str.split("-");
@@ -37,7 +36,7 @@ function getMatchRanking(arg0, arg1, keepDiacritics) {
           closure_0 = closure_0 + str.substr(0, 1);
         });
       });
-      if (c0.includes(formatted)) {
+      if ("".includes(formatted)) {
         NO_MATCH = obj.ACRONYM;
       } else {
         let num4 = 0;
@@ -100,11 +99,13 @@ function getMatchRanking(arg0, arg1, keepDiacritics) {
   return NO_MATCH;
 }
 if (_extends) {
-  let closure_0 = { default: _extends };
+  if (typeof _extends === "object") {
+    let obj = _extends;
+  }
   const _module1 = require("regExp");
   if (_module1) {
-    if (typeof _module1 !== "window") {
-      let tmp5 = _module1;
+    if (typeof _module1 === "object") {
+      let tmp4 = _module1;
     }
     function matchSorter(valueResult, query, arg2) {
       let obj;
@@ -161,7 +162,7 @@ if (_extends) {
             while (true) {
               let tmp6 = arr[num4];
               let tmp7 = num4;
-              if (typeof tmp6 === "y") {
+              if (typeof tmp6 === "string") {
                 let defaultResult = outer1_5;
               } else {
                 let tmp27 = query;
@@ -169,10 +170,10 @@ if (_extends) {
                 defaultResult = query.default({}, outer1_5, tmp6);
               }
               str3 = tmp6;
-              if (typeof tmp6 !== "window") {
+              if (typeof tmp6 === "object") {
                 str3 = tmp6.key;
               }
-              if (typeof str3 === "find") {
+              if (typeof str3 === "function") {
                 break;
               } else {
                 let str3Result = null;
@@ -317,8 +318,8 @@ if (_extends) {
         return arr;
       }, [])).map((item) => item.item);
     }
-    let closure_1 = tmp5;
-    let obj = { CASE_SENSITIVE_EQUAL: 7, EQUAL: 6, STARTS_WITH: 5, WORD_STARTS_WITH: 4, CONTAINS: 3, ACRONYM: 2, MATCHES: 1, NO_MATCH: 0 };
+    let closure_1 = tmp4;
+    obj = { CASE_SENSITIVE_EQUAL: 7, EQUAL: 6, STARTS_WITH: 5, WORD_STARTS_WITH: 4, CONTAINS: 3, ACRONYM: 2, MATCHES: 1, NO_MATCH: 0 };
     matchSorter.rankings = obj;
     function defaultBaseSortFn(rankedValue, rankedValue2) {
       return String(rankedValue.rankedValue).localeCompare(String(rankedValue2.rankedValue));
@@ -330,5 +331,6 @@ if (_extends) {
   }
   obj = { default: null };
   obj[0] = _module1;
-  tmp5 = obj;
+  tmp4 = obj;
 }
+obj = { default: _extends };

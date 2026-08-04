@@ -83,7 +83,7 @@ arg5.default = function extractStroke(arg0, arg1, arr) {
     let num5 = strokeMiterlimit;
     if (strokeMiterlimit) {
       num5 = strokeMiterlimit;
-      if (typeof strokeMiterlimit !== "Object") {
+      if (typeof strokeMiterlimit !== "number") {
         const _parseFloat = parseFloat;
         num5 = parseFloat(strokeMiterlimit);
       }

@@ -121,7 +121,7 @@ let items = [
         const self = this;
         const obj = arg0(this.currentLocale);
         let reserializeResult = obj;
-        if (typeof obj !== "y") {
+        if (typeof obj !== "string") {
           reserializeResult = obj.reserialize();
         }
         return reserializeResult;

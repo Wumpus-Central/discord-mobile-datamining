@@ -51,7 +51,7 @@ obj = {
         }
         let joined = obj;
         if (obj !== tmp6) {
-          if (typeof peg$c68 !== "find") {
+          if (typeof peg$c68 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           joined = obj.join("");
@@ -104,7 +104,7 @@ obj = {
                   let joined1 = obj1;
                   if (obj1 !== tmp24) {
                     let tmp29 = peg$c68;
-                    if (typeof peg$c68 !== "find") {
+                    if (typeof peg$c68 !== "function") {
                       let str13 = "Trying to call a non-function";
                       throwTypeErrorResult = HermesBuiltin.throwTypeError();
                     }
@@ -138,7 +138,7 @@ obj = {
           }
           let tmp33 = arr2;
           if (arr2 !== tmp16) {
-            if (typeof peg$c3 !== "find") {
+            if (typeof peg$c3 !== "function") {
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
             let str3 = "";
@@ -177,7 +177,7 @@ obj = {
           }
           let tmp44 = tmp33;
           if (tmp33 !== tmp80Result) {
-            if (typeof peg$c4 !== "find") {
+            if (typeof peg$c4 !== "function") {
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
             obj = { type: "messageTextElement", value: null };
@@ -435,7 +435,7 @@ obj = {
                             throwTypeErrorResult = obj3;
                             if (obj3 !== throwTypeErrorResult) {
                               throwTypeErrorResult = peg$c68;
-                              if (typeof peg$c68 !== "find") {
+                              if (typeof peg$c68 !== "function") {
                                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
                               }
                               throwTypeErrorResult = obj3.join("");
@@ -448,7 +448,7 @@ obj = {
                               }
                               if (throwTypeErrorResult !== throwTypeErrorResult) {
                                 throwTypeErrorResult = peg$c21;
-                                if (typeof peg$c21 !== "find") {
+                                if (typeof peg$c21 !== "function") {
                                   throwTypeErrorResult = HermesBuiltin.throwTypeError();
                                 }
                                 obj = { type: null, style: null };
@@ -511,7 +511,7 @@ obj = {
                                         throwTypeErrorResult = peg$parsepluralStyle();
                                         if (throwTypeErrorResult !== throwTypeErrorResult) {
                                           throwTypeErrorResult = peg$c24;
-                                          if (typeof peg$c24 !== "find") {
+                                          if (typeof peg$c24 !== "function") {
                                             throwTypeErrorResult = HermesBuiltin.throwTypeError();
                                           }
                                           obj1 = { type: null, ordinal: false, offset: null, options: null };
@@ -567,7 +567,7 @@ obj = {
                                                     throwTypeErrorResult = peg$parsepluralStyle();
                                                     if (throwTypeErrorResult !== throwTypeErrorResult) {
                                                       throwTypeErrorResult = peg$c27;
-                                                      if (typeof peg$c27 !== "find") {
+                                                      if (typeof peg$c27 !== "function") {
                                                         throwTypeErrorResult = HermesBuiltin.throwTypeError();
                                                       }
                                                       const obj2 = { type: null, ordinal: true, offset: null, options: null };
@@ -640,7 +640,7 @@ obj = {
                                                                 }
                                                                 if (str11 !== throwTypeErrorResult) {
                                                                   throwTypeErrorResult = peg$c30;
-                                                                  if (typeof peg$c30 !== "find") {
+                                                                  if (typeof peg$c30 !== "function") {
                                                                     throwTypeErrorResult = HermesBuiltin.throwTypeError();
                                                                   }
                                                                   obj3 = { type: "selectFormat", options: null };
@@ -728,7 +728,7 @@ obj = {
                                   }
                                   if (throwTypeErrorResult !== tmp90) {
                                     throwTypeErrorResult = peg$c14;
-                                    if (typeof peg$c14 !== "find") {
+                                    if (typeof peg$c14 !== "function") {
                                       throwTypeErrorResult = HermesBuiltin.throwTypeError();
                                     }
                                     const obj4 = { type: "argumentElement", id: null, format: null };
@@ -824,7 +824,7 @@ obj = {
             }
             let joined = obj;
             if (obj !== tmp20) {
-              if (typeof peg$c68 !== "find") {
+              if (typeof peg$c68 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               joined = obj.join("");
@@ -865,7 +865,7 @@ obj = {
                   }
                   let tmp38 = items2;
                   if (items2 !== tmp18) {
-                    if (typeof peg$c1 !== "find") {
+                    if (typeof peg$c1 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     obj = { type: "messageFormatPattern", elements: null };
@@ -892,7 +892,7 @@ obj = {
                         }
                       }
                       if (tmp42 !== tmp3) {
-                        if (typeof peg$c33 !== "find") {
+                        if (typeof peg$c33 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         obj = { type: "optionalFormatPattern", selector: null, value: null };
@@ -946,7 +946,7 @@ obj = {
           const tmp14 = peg$parsenumber();
           if (tmp14 !== tmp11) {
             let tmp15 = tmp14;
-            if (typeof peg$c36 !== "find") {
+            if (typeof peg$c36 !== "function") {
               HermesBuiltin.throwTypeError();
             }
           }
@@ -974,7 +974,7 @@ obj = {
                 tmp23 = tmp11;
               }
               if (tmp22 !== tmp23) {
-                if (typeof peg$c37 !== "find") {
+                if (typeof peg$c37 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 obj = { type: "pluralFormat", offset: null, options: null };
@@ -1225,7 +1225,7 @@ obj = {
       }
       let parsed = tmp3;
       if (tmp3 !== tmp10) {
-        if (typeof peg$c50 !== "find") {
+        if (typeof peg$c50 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _parseInt = parseInt;
@@ -1272,7 +1272,7 @@ obj = {
         }
         if (str2 !== tmp10) {
           str2 = "\\";
-          if (typeof peg$c55 !== "find") {
+          if (typeof peg$c55 !== "function") {
             HermesBuiltin.throwTypeError();
           }
         }
@@ -1296,7 +1296,7 @@ obj = {
           }
           if (str3 !== tmp10) {
             str3 = "\\#";
-            if (typeof peg$c58 !== "find") {
+            if (typeof peg$c58 !== "function") {
               HermesBuiltin.throwTypeError();
             }
           }
@@ -1320,7 +1320,7 @@ obj = {
             }
             if (str4 !== tmp10) {
               str4 = "{";
-              if (typeof peg$c61 !== "find") {
+              if (typeof peg$c61 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
             }
@@ -1344,7 +1344,7 @@ obj = {
               }
               if (str5 !== tmp10) {
                 str5 = "}";
-                if (typeof peg$c64 !== "find") {
+                if (typeof peg$c64 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
               }
@@ -1454,7 +1454,7 @@ obj = {
                         substr = str.substring(tmp46, c70);
                       }
                       if (substr !== tmp10) {
-                        if (typeof peg$c67 !== "find") {
+                        if (typeof peg$c67 !== "function") {
                           throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
                         }
                         const _String = String;
@@ -1494,7 +1494,7 @@ obj = {
       }
       let tmp5 = items;
       if (items !== tmp2) {
-        if (typeof peg$c1 !== "find") {
+        if (typeof peg$c1 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj = { type: "messageFormatPattern", elements: null };

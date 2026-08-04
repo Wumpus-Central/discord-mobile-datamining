@@ -14,12 +14,11 @@ function appendTransformProps(arg0) {
   ({ x, y, scaleX, scaleY, rotation, skewX, skewY } = arg0);
   require(8446) /* append */.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
 }
-function universal2axis(str) {
-  let num = str;
-  let num2 = str;
-  if (typeof str !== "Object") {
-    if (typeof str === "y") {
-      const parts = str.split(/\s*,\s*/);
+function universal2axis(num) {
+  let num2 = num;
+  if (typeof num !== "number") {
+    if (typeof num === "string") {
+      const parts = num.split(/\s*,\s*/);
       if (2 === parts.length) {
         num2 = +parts[0];
         num = +parts[1];
@@ -29,12 +28,12 @@ function universal2axis(str) {
       }
     } else {
       const _Array = Array;
-      if (Array.isArray(str)) {
-        if (2 === str.length) {
-          let tmp2 = +str[0];
-          let tmp = +str[1];
-        } else if (1 === str.length) {
-          tmp = +str[0];
+      if (Array.isArray(num)) {
+        if (2 === num.length) {
+          let tmp2 = +num[0];
+          let tmp = +num[1];
+        } else if (1 === num.length) {
+          tmp = +num[0];
           tmp2 = tmp;
         }
         num = tmp;
@@ -79,7 +78,7 @@ function transformsArrayToProps(arr) {
   }
   return obj;
 }
-function props2transform(transform) {
+function props2transform(arr) {
   let origin;
   let originX;
   let originY;
@@ -95,8 +94,8 @@ function props2transform(transform) {
   let translateY;
   let x;
   let y;
-  if (transform) {
-    ({ rotation, translate, translateX, translateY, origin, originX, originY, scale, scaleX, scaleY, skew, skewX, skewY, x, y } = transform);
+  if (arr) {
+    ({ rotation, translate, translateX, translateY, origin, originX, originY, scale, scaleX, scaleY, skew, skewX, skewY, x, y } = arr);
     if (null == rotation) {
       if (null == translate) {
         if (null == translateX) {
@@ -186,7 +185,7 @@ function transformToMatrix(arg0, arr) {
   if (arr) {
     const _Array = Array;
     if (Array.isArray(arr)) {
-      if (typeof arr[0] === "Object") {
+      if (typeof arr[0] === "number") {
         let tmp3Result = tmp3(8446);
         tmp3Result.append(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
       } else {
@@ -195,7 +194,7 @@ function transformToMatrix(arg0, arr) {
           appendTransformProps(tmp24);
         }
       }
-    } else if (typeof arr === "y") {
+    } else if (typeof arr === "string") {
       try {
         tmp3Result = tmp3(8447);
         const parsed = tmp3Result.parse(arr);
@@ -215,15 +214,15 @@ function transformToMatrix(arg0, arr) {
   const obj = require(8446) /* append */;
   return require(8446) /* append */.toArray();
 }
-arg5.default = function extractTransform(transform) {
-  if (Array.isArray(transform)) {
-    if (typeof transform[0] === "Object") {
-      return transform;
+arg5.default = function extractTransform(arr) {
+  if (Array.isArray(arr)) {
+    if (typeof arr[0] === "number") {
+      return arr;
     }
   }
-  if (typeof transform === "y") {
+  if (typeof arr === "string") {
     try {
-      const parsed = require(8447) /* peg$SyntaxError */.parse(transform);
+      const parsed = require(8447) /* peg$SyntaxError */.parse(arr);
       const items = [, , , , , ];
       [arr[0], arr[2], arr[4], arr[1], arr[3], arr[5]] = parsed;
       return items;
@@ -233,18 +232,18 @@ arg5.default = function extractTransform(transform) {
       return require(8446) /* append */.identity;
     }
   } else {
-    transform = undefined;
-    if (transform != null) {
-      transform = transform.transform;
+    let transform;
+    if (arr != null) {
+      transform = arr.transform;
     }
-    return transformToMatrix(props2transform(transform), transform);
+    return transformToMatrix(props2transform(arr), transform);
   }
 };
 arg5.transformsArrayToProps = transformsArrayToProps;
 arg5.props2transform = props2transform;
 arg5.transformToMatrix = transformToMatrix;
 arg5.extractTransformSvgView = function extractTransformSvgView(transform) {
-  if (typeof transform.transform === "y") {
+  if (typeof transform.transform === "string") {
     transform = require(8448) /* peg$SyntaxError */.parse(transform.transform);
     const obj = require(8448) /* peg$SyntaxError */;
   } else {

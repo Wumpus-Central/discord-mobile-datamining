@@ -30,7 +30,7 @@ arg5.isPerformanceResourceTiming = function isPerformanceResourceTiming(entryTyp
     tmp = "initiatorType" in entryType;
   }
   if (tmp) {
-    tmp = typeof entryType.nextHopProtocol === "y";
+    tmp = typeof entryType.nextHopProtocol === "string";
   }
   if (tmp) {
     let tmp2 = "fetch" === entryType.initiatorType;

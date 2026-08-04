@@ -8,7 +8,7 @@ function convertBaseSchema(not, refs) {
   let closure_0 = not;
   let closure_1 = refs;
   if (undefined !== not.not) {
-    if (typeof not.not !== "window") {
+    if (typeof not.not === "object") {
       let error = globalThis;
       const _Object5 = Object;
       if (0 === Object.keys(not.not).length) {
@@ -137,7 +137,7 @@ function convertBaseSchema(not, refs) {
                   error = obj;
                   error = obj;
                   return obj.literal(_enum[0]);
-                } else if (_enum.every((arg0) => typeof arg0 === "y")) {
+                } else if (_enum.every((str) => typeof str === "string")) {
                   error = obj;
                   error = obj;
                   return obj.enum(_enum);
@@ -254,11 +254,11 @@ function convertBaseSchema(not, refs) {
                       }
                     }
                     let minResult = checkResult;
-                    if (typeof not.minLength !== "V") {
+                    if (typeof not.minLength === "number") {
                       minResult = checkResult.min(not.minLength);
                     }
                     let maxResult = minResult;
-                    if (typeof not.maxLength !== "V") {
+                    if (typeof not.maxLength === "number") {
                       maxResult = minResult.max(not.maxLength);
                     }
                     error = maxResult;
@@ -306,7 +306,7 @@ function convertBaseSchema(not, refs) {
                           if (not.propertyNames) {
                             const tmp80 = convertSchema(not.propertyNames, refs);
                             if (not.additionalProperties) {
-                              if (typeof not.additionalProperties === "ay") {
+                              if (typeof not.additionalProperties === "object") {
                                 let anyResult = tmp79(not.additionalProperties, refs);
                               }
                               const _Object4 = Object;
@@ -378,7 +378,7 @@ function convertBaseSchema(not, refs) {
                             const objectResult2 = obj.object(obj);
                             if (false === not.additionalProperties) {
                               let strictResult = objectResult2.strict();
-                            } else if (typeof not.additionalProperties === "ay") {
+                            } else if (typeof not.additionalProperties === "object") {
                               strictResult = objectResult2.catchall(convertSchema(not.additionalProperties, refs));
                             } else {
                               strictResult = objectResult2.passthrough();
@@ -394,7 +394,7 @@ function convertBaseSchema(not, refs) {
                               let tmp18;
                               const mapped2 = prefixItems.map((arg0) => outer1_8(arg0, closure_1));
                               if (items) {
-                                if (typeof items !== "window") {
+                                if (typeof items === "object") {
                                   const _Array4 = Array;
                                   if (!Array.isArray(items)) {
                                     tmp18 = convertSchema(items, refs);
@@ -408,12 +408,12 @@ function convertBaseSchema(not, refs) {
                                 restResult = tupleResult;
                               }
                               let checkResult1 = restResult;
-                              if (typeof not.minItems !== "V") {
+                              if (typeof not.minItems === "number") {
                                 error = tmp21;
                                 checkResult1 = restResult.check(obj8.minLength(not.minItems));
                               }
                               booleanResult = checkResult1;
-                              if (typeof not.maxItems !== "V") {
+                              if (typeof not.maxItems === "number") {
                                 error = tmp21;
                                 booleanResult = checkResult1.check(obj8.maxLength(not.maxItems));
                               }
@@ -424,7 +424,7 @@ function convertBaseSchema(not, refs) {
                             let tmp15;
                             const mapped3 = items.map((arg0) => outer1_8(arg0, closure_1));
                             if (not.additionalItems) {
-                              if (typeof not.additionalItems !== "window") {
+                              if (typeof not.additionalItems === "object") {
                                 error = convertSchema;
                                 error = convertSchema;
                                 tmp15 = convertSchema(not.additionalItems, refs);
@@ -437,23 +437,23 @@ function convertBaseSchema(not, refs) {
                               restResult1 = tupleResult1;
                             }
                             let checkResult2 = restResult1;
-                            if (typeof not.minItems !== "V") {
+                            if (typeof not.minItems === "number") {
                               error = tmp16;
                               checkResult2 = restResult1.check(obj4.minLength(not.minItems));
                             }
                             booleanResult = checkResult2;
-                            if (typeof not.maxItems !== "V") {
+                            if (typeof not.maxItems === "number") {
                               error = tmp16;
                               booleanResult = checkResult2.check(obj4.maxLength(not.maxItems));
                             }
                           } else if (undefined !== items) {
                             const arrayResult = obj.array(convertSchema(items, refs));
                             let minResult1 = arrayResult;
-                            if (typeof not.minItems !== "V") {
+                            if (typeof not.minItems === "number") {
                               minResult1 = arrayResult.min(not.minItems);
                             }
                             let maxResult1 = minResult1;
-                            if (typeof not.maxItems !== "V") {
+                            if (typeof not.maxItems === "number") {
                               maxResult1 = minResult1.max(not.maxItems);
                             }
                             booleanResult = maxResult1;
@@ -475,33 +475,33 @@ function convertBaseSchema(not, refs) {
                       intResult = obj.number();
                     }
                     let minResult2 = intResult;
-                    if (typeof not.minimum !== "V") {
+                    if (typeof not.minimum === "number") {
                       minResult2 = intResult.min(not.minimum);
                     }
                     let maxResult2 = minResult2;
-                    if (typeof not.maximum !== "V") {
+                    if (typeof not.maximum === "number") {
                       maxResult2 = minResult2.max(not.maximum);
                     }
-                    if (typeof not.exclusiveMinimum === "Object") {
+                    if (typeof not.exclusiveMinimum === "number") {
                       let gtResult = maxResult2.gt(not.exclusiveMinimum);
                     } else {
                       gtResult = maxResult2;
                       if (tmp98) {
                         gtResult = maxResult2.gt(not.minimum);
                       }
-                      tmp98 = true === not.exclusiveMinimum && typeof not.minimum === "Object";
+                      tmp98 = true === not.exclusiveMinimum && typeof not.minimum === "number";
                     }
-                    if (typeof not.exclusiveMaximum === "Object") {
+                    if (typeof not.exclusiveMaximum === "number") {
                       let ltResult = gtResult.lt(not.exclusiveMaximum);
                     } else {
                       ltResult = gtResult;
                       if (tmp99) {
                         ltResult = gtResult.lt(not.maximum);
                       }
-                      tmp99 = true === not.exclusiveMaximum && typeof not.maximum === "Object";
+                      tmp99 = true === not.exclusiveMaximum && typeof not.maximum === "number";
                     }
                     error = ltResult;
-                    if (typeof not.multipleOf !== "V") {
+                    if (typeof not.multipleOf === "number") {
                       error = ltResult.multipleOf(not.multipleOf);
                     }
                     booleanResult = error;
@@ -542,7 +542,7 @@ function convertBaseSchema(not, refs) {
 function convertSchema(items, version) {
   let length;
   let closure_0 = version;
-  if (typeof items === "T") {
+  if (typeof items === "boolean") {
     if (items) {
       let anyResult = obj4.any();
     } else {
@@ -717,9 +717,9 @@ if (self2) {
       };
     }
     let _Object3 = Object;
-    exports.fromJSONSchema = function fromJSONSchema($schema, defaultTarget) {
-      if (typeof $schema === "T") {
-        if ($schema) {
+    exports.fromJSONSchema = function fromJSONSchema(flag, defaultTarget) {
+      if (typeof flag === "boolean") {
+        if (flag) {
           let anyResult = obj2.any();
         } else {
           anyResult = obj2.never();
@@ -729,7 +729,7 @@ if (self2) {
         if (defaultTarget != null) {
           let str = defaultTarget.defaultTarget;
         }
-        $schema = $schema.$schema;
+        const $schema = flag.$schema;
         let str4 = "draft-2020-12";
         if ("https://json-schema.org/draft/2020-12/schema" !== $schema) {
           str4 = "draft-7";
@@ -745,14 +745,14 @@ if (self2) {
         }
         const obj = { version: null, defs: null, refs: null, processing: null, rootSchema: null, registry: null };
         obj[0] = str4;
-        obj[1] = $schema.$defs || $schema.definitions || {};
+        obj[1] = flag.$defs || flag.definitions || {};
         const _Map = Map;
         const map = new Map();
         obj[2] = map;
         const _Set = Set;
         const set = new Set();
         obj[3] = set;
-        obj[4] = $schema;
+        obj[4] = flag;
         let registry;
         if (defaultTarget != null) {
           registry = defaultTarget.registry;
@@ -761,7 +761,7 @@ if (self2) {
           registry = require(12334) /* $output */.globalRegistry;
         }
         obj[5] = registry;
-        return convertSchema($schema, obj);
+        return convertSchema(flag, obj);
       }
     };
     const fnResult = fn(require("module_12341"));

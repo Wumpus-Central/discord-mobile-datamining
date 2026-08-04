@@ -193,41 +193,41 @@ function processChatCompletionChunk(id, responseId) {
     continue;
   }
 }
-function processResponsesApiEvent(type, responsesApiToolCalls, arg2, setStatus) {
-  if (type) {
-    if (typeof type === "ay") {
+function processResponsesApiEvent(obj, responsesApiToolCalls, arg2, setStatus) {
+  if (obj) {
+    if (typeof obj === "object") {
       const _Error = Error;
-      if (type instanceof Error) {
-        let obj = { code: null, message: "internal_error" };
+      if (obj instanceof Error) {
+        obj = { code: null, message: "internal_error" };
         obj[0] = require(840) /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
         setStatus.setStatus(obj);
         obj = { mechanism: null };
         obj[0] = { handled: false, type: "auto.ai.openai.stream-response" };
-        require(869) /* captureCheckIn */.captureException(type, obj);
-      } else if ("type" in type) {
+        require(869) /* captureCheckIn */.captureException(obj, obj);
+      } else if ("type" in obj) {
         const RESPONSE_EVENT_TYPES = require(964) /* items */.RESPONSE_EVENT_TYPES;
-        if (RESPONSE_EVENT_TYPES.includes(type.type)) {
+        if (RESPONSE_EVENT_TYPES.includes(obj.type)) {
           let output_text = arg2;
           if (arg2) {
-            let tmp6 = "response.output_item.done" === type.type;
+            let tmp6 = "response.output_item.done" === obj.type;
             if (tmp6) {
-              tmp6 = "item" in type;
+              tmp6 = "item" in obj;
             }
             if (tmp6) {
               const prop = responsesApiToolCalls.responsesApiToolCalls;
-              prop.push(type.item);
+              prop.push(obj.item);
             }
-            if ("response.output_text.delta" === type.type) {
-              if ("delta" in type) {
-                if (type.delta) {
+            if ("response.output_text.delta" === obj.type) {
+              if ("delta" in obj) {
+                if (obj.delta) {
                   const responseTexts = responsesApiToolCalls.responseTexts;
-                  responseTexts.push(type.delta);
+                  responseTexts.push(obj.delta);
                 }
               }
             }
           }
-          if ("response" in type) {
-            const response = type.response;
+          if ("response" in obj) {
+            const response = obj.response;
             let responseId = response.id;
             if (responseId == null) {
               responseId = responsesApiToolCalls.responseId;
@@ -262,7 +262,7 @@ function processResponsesApiEvent(type, responsesApiToolCalls, arg2, setStatus) 
           }
         } else {
           const eventTypes = responsesApiToolCalls.eventTypes;
-          eventTypes.push(type.type);
+          eventTypes.push(obj.type);
         }
       }
     }

@@ -12,72 +12,24 @@ export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
   let asyncGeneratorStep = tmp[1];
   callback2(() => {
     callback = callback(function*() {
-      if (c5 === 2) {
+      let _slicedToArray = tmp3;
+      let c3 = 1;
+      yield outer2_4.isScreenReaderEnabled();
+      if (1 === tmp7) {
+        c3 = 0;
+        const _console = console;
+        console.warn("Could not read accessibility info: defaulting to false");
+        let c5 = 3;
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let _slicedToArray = tmp3;
-              let asyncGeneratorStep = tmp7;
-              asyncGeneratorStep = undefined;
-              let c3 = 1;
-              c4 = 2;
-              c5 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer2_4.isScreenReaderEnabled();
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c3 = 0;
-              const _console = console;
-              console.warn("Could not read accessibility info: defaulting to false");
-              c5 = 3;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              asyncGeneratorStep = arg1;
-              outer1_0(asyncGeneratorStep);
-              c3 = 0;
-            }
-            c3 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp16) {
-          let closure_2 = tmp16;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp16;
-          } else {
-            c4 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        let asyncGeneratorStep = arg1;
+        outer1_0(asyncGeneratorStep);
+        c3 = 0;
       }
+      c3 = 0;
+      return arg1;
     });
     (function checkStatus() {
       const self = this;

@@ -18,7 +18,7 @@ const items = [
       const result = _map.set(arg0, first);
       let tmp3 = first;
       if (first) {
-        tmp3 = typeof first === "ay";
+        tmp3 = typeof first === "object";
       }
       if (tmp3) {
         tmp3 = "id" in first;
@@ -48,7 +48,7 @@ const items = [
       const value = _map.get(arg0);
       let tmp2 = value;
       if (value) {
-        tmp2 = typeof value === "ay";
+        tmp2 = typeof value === "object";
       }
       if (tmp2) {
         tmp2 = "id" in value;

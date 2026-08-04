@@ -11,90 +11,20 @@ closure_0 = importDefaultResult((arg0) => {
     let c1;
     let c2;
     let useSandbox;
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c2 = tmp5;
-            c1 = tmp2;
-            c0 = undefined;
-            c1 = undefined;
-            c2 = undefined;
-            c3 = undefined;
-            ({ developerSecret: c0, userId: c1, receiptId: c2, useSandbox } = c0);
-            if (useSandbox === undefined) {
-              useSandbox = true;
-            }
-            c3 = useSandbox;
-            c4 = undefined;
-            c3 = 1;
-            c4 = 1;
-            return { value: "ct", done: "Array" };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let str = "";
-            if (c3) {
-              str = "sandbox/";
-            }
-            const _HermesInternal = HermesInternal;
-            c4 = "https://appstore-sdk.amazon.com/" + str + "version/1.0/verifyReceiptId/developer/" + c0 + "/user/" + c1 + "/receiptId/" + c2;
-            let obj2 = callback(outer1_1[2]);
-            c3 = 2;
-            c4 = 1;
-            obj2 = { value: null, done: false };
-            obj2[0] = obj2.enhancedFetch(c4);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-      } catch (tmp16) {
-        c4 = tmp;
-        throw tmp16;
-      }
+    c1 = tmp2;
+    ({ developerSecret: c0, userId: c1, receiptId: c2, useSandbox } = c0);
+    if (useSandbox === undefined) {
+      useSandbox = true;
     }
+    yield "ct";
+    let str = "";
+    if (c3) {
+      str = "sandbox/";
+    }
+    const _HermesInternal = HermesInternal;
+    const obj2 = callback(outer1_1[2]);
+    yield obj2.enhancedFetch(c4);
+    return arg1;
   })();
   iter.next();
   return iter;
@@ -141,59 +71,11 @@ closure_0 = importDefaultResult((arg0) => {
   let c3 = 0;
   let c4 = 0;
   const iter = (function*(arg0) {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let closure_2 = tmp5;
-            let closure_1 = tmp2;
-            let isAmazonDevice;
-            isAmazonDevice = isAmazonDevice.isAmazonDevice;
-            c3 = 1;
-            c4 = 1;
-            return { value: "ct", done: "Array" };
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
-        } else {
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = outer1_2.deepLinkToSubscriptions(isAmazonDevice);
-          return obj;
-        }
-      } catch (tmp11) {
-        c4 = tmp;
-        throw tmp11;
-      }
-    }
+    let closure_2 = tmp5;
+    let closure_1 = tmp2;
+    isAmazonDevice = isAmazonDevice.isAmazonDevice;
+    yield "ct";
+    return outer1_2.deepLinkToSubscriptions(isAmazonDevice);
   })();
   iter.next();
   return iter;

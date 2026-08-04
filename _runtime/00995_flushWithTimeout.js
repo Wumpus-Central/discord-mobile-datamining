@@ -18,75 +18,28 @@ function _flushWithTimeout() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      if (c6 === 2) {
+      let closure_2 = tmp3;
+      let c4 = 1;
+      const debug3 = callback(outer1_1[1]).debug;
+      debug3.log("Flushing events...");
+      const obj1 = callback(outer1_1[2]);
+      yield obj1.flush(callback);
+      if (1 === tmp7) {
+        c4 = 0;
+        callback = closure_3;
+        const debug2 = callback(824).debug;
+        debug2.log("Error while flushing events:\n", callback);
+        let c6 = 3;
+      } else if (arg0 === 1) {
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_2 = tmp3;
-              const dependencyMap = tmp7;
-              let c4 = 1;
-              const debug3 = callback(outer1_1[1]).debug;
-              debug3.log("Flushing events...");
-              let obj1 = callback(outer1_1[2]);
-              c5 = 2;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj1.flush(callback);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              callback = closure_3;
-              const debug2 = callback(824).debug;
-              debug2.log("Error while flushing events:\n", callback);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              const debug = callback(824).debug;
-              debug.log("Done flushing events");
-              c4 = 0;
-            }
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp26) {
-          closure_3 = tmp26;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp26;
-          } else {
-            c5 = tmp;
-          }
-        }
+        throw arg1;
+      } else if (arg0 !== 2) {
+        const debug = callback(824).debug;
+        debug.log("Done flushing events");
+        c4 = 0;
       }
+      c4 = 0;
+      return arg1;
     })();
   });
   const _flushWithTimeout = tmp;
@@ -164,7 +117,7 @@ function _flushIfServerless() {
                   if (obj1 != null) {
                     cloudflareWaitUntil = obj1.cloudflareWaitUntil;
                   }
-                  if (typeof cloudflareWaitUntil === "find") {
+                  if (typeof cloudflareWaitUntil === "function") {
                     obj1.cloudflareWaitUntil(v0(num4));
                   }
                 }
@@ -175,8 +128,8 @@ function _flushIfServerless() {
                     obj2.vercelWaitUntil(v0(num4));
                   } else {
                     const _process = process;
-                    let tmp22 = typeof process === "tee";
-                    if (typeof process !== "Array") {
+                    let tmp22 = typeof process !== "undefined";
+                    if (typeof process !== "undefined") {
                       const _process7 = process;
                       let NETLIFY = process.env.FUNCTIONS_WORKER_RUNTIME;
                       if (!NETLIFY) {

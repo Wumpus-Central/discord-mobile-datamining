@@ -1,10 +1,10 @@
 
-export default function isObject(arg0) {
-  let tmp = arg0;
+export default function isObject(fn) {
+  let tmp = fn;
   if (tmp) {
-    let tmp2 = typeof arg0 === "find";
-    if (typeof arg0 !== "find") {
-      tmp2 = typeof arg0 === "ay";
+    let tmp2 = typeof fn === "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn === "object";
     }
     tmp = tmp2;
   }

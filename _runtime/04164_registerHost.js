@@ -34,7 +34,7 @@ function reducer(arg0, type) {
   const merged = Object.assign(arg0);
   if (portalName(4160).ACTIONS.REGISTER_HOST === type) {
     const hostName4 = type.hostName;
-    if (typeof registerHost !== "find") {
+    if (typeof registerHost !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (!(hostName4 in obj)) {
@@ -49,7 +49,7 @@ function reducer(arg0, type) {
     ({ hostName: hostName2, portalName: portalName2, node } = type);
     portalName = portalName2;
     if (!(hostName2 in obj)) {
-      if (typeof registerHost !== "find") {
+      if (typeof registerHost !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (!(hostName2 in obj)) {
@@ -69,7 +69,7 @@ function reducer(arg0, type) {
     return obj;
   } else if (tmp4(4160).ACTIONS.REMOVE_PORTAL === type) {
     ({ hostName, portalName } = type);
-    if (typeof removePortal !== "find") {
+    if (typeof removePortal !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (hostName in obj) {

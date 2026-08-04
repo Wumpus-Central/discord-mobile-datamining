@@ -258,7 +258,7 @@ let items = [
     key: "render",
     value: function render() {
       const self = this;
-      if (typeof this.props.hitSlop === "Object") {
+      if (typeof this.props.hitSlop === "number") {
         let obj = { top: null, left: null, bottom: null, right: null };
         obj[0] = self.props.hitSlop;
         obj[1] = self.props.hitSlop;

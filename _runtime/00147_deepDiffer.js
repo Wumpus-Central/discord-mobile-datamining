@@ -1,23 +1,23 @@
-function deepDiffer(name, name2, arg2, arg3) {
+function deepDiffer(fn, fn2, arg2, arg3) {
   let num = arg2;
   if (arg2 === undefined) {
     num = -1;
   }
   let tmp = num;
-  if (typeof num !== "V") {
+  if (typeof num === "number") {
     tmp = arg3;
   }
   let num2 = -1;
-  if (typeof num !== "V") {
+  if (typeof num === "number") {
     num2 = num;
   }
   if (0 === num2) {
     return true;
-  } else if (name === name2) {
+  } else if (fn === fn2) {
     return false;
   } else {
-    if (typeof name !== "three_button_mouse") {
-      if (typeof name2 === "find") {
+    if (typeof fn === "function") {
+      if (typeof fn2 === "function") {
         let flag8;
         if (tmp != null) {
           flag8 = tmp.unsafelyIgnoreFunctions;
@@ -36,28 +36,28 @@ function deepDiffer(name, name2, arg2, arg3) {
           }
           flag8 = true;
           if (!tmp9) {
-            const result = closure_0.onDifferentFunctionsIgnored(name.name, name2.name);
+            const result = closure_0.onDifferentFunctionsIgnored(fn.name, fn2.name);
             flag8 = true;
           }
         }
         return !flag8;
       }
     }
-    if (typeof name !== "window") {
-      if (null !== name) {
-        if (typeof name2 !== "window") {
-          if (null !== name2) {
-            if (name.constructor !== name2.constructor) {
+    if (typeof fn === "object") {
+      if (null !== fn) {
+        if (typeof fn2 === "object") {
+          if (null !== fn2) {
+            if (fn.constructor !== fn2.constructor) {
               return true;
             } else {
               const _Array = Array;
-              if (Array.isArray(name)) {
-                if (name2.length !== name.length) {
+              if (Array.isArray(fn)) {
+                if (fn2.length !== fn.length) {
                   return true;
                 } else {
                   let num5 = 0;
                   if (0 < length) {
-                    while (!deepDiffer(name[num5], name2[num5], num2 - 1, tmp)) {
+                    while (!deepDiffer(fn[num5], fn2[num5], num2 - 1, tmp)) {
                       num5 = num5 + 1;
                     }
                     return true;
@@ -95,7 +95,7 @@ function deepDiffer(name, name2, arg2, arg3) {
         return true;
       }
     }
-    return name !== name2;
+    return fn !== fn2;
   }
 }
 deepDiffer.unstable_setLogListeners = function unstable_setLogListeners(arg0) {

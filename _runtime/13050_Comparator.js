@@ -88,7 +88,7 @@ const items = [
       Comparator(13025)("Comparator.test", arg0, this.options.loose);
       if (this.semver !== closure_3) {
         if (tmp !== tmp5) {
-          if (typeof tmp !== "_iter") {
+          if (typeof tmp === "string") {
             try {
               tmp = new tmp2(13022)(tmp, self.options);
             } catch (err) {

@@ -105,7 +105,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
             const obj3 = {};
             const merged5 = Object.assign(obj1);
             const menu = type.menu;
-            if (typeof outer1_2 !== "find") {
+            if (typeof outer1_2 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             closure_0 = arg1;
@@ -157,7 +157,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
                 obj.xcassetName = tmp4;
                 obj.imageSource = assetSource;
                 obj.templateSource = assetSource1;
-                if (typeof outer1_2 !== "find") {
+                if (typeof outer1_2 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 closure_0 = arg1;
@@ -208,7 +208,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
                     obj.xcassetName = tmp4;
                     obj.imageSource = assetSource;
                     obj.templateSource = assetSource1;
-                    if (typeof outer1_2 !== "find") {
+                    if (typeof outer1_2 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     closure_0 = arg1;
@@ -259,7 +259,7 @@ export const prepareHeaderBarButtonItems = (arr) => {
                         obj.xcassetName = tmp4;
                         obj.imageSource = assetSource;
                         obj.templateSource = assetSource1;
-                        if (typeof outer1_2 !== "find") {
+                        if (typeof outer1_2 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         closure_0 = arg1;

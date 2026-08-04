@@ -3,7 +3,7 @@ arg5.createSquare = function createSquare(bottom) {
 };
 arg5.normalizeRect = function normalizeRect(hitSlop) {
   let tmp = hitSlop;
-  if (typeof hitSlop !== "V") {
+  if (typeof hitSlop === "number") {
     const obj = { bottom: null, left: null, right: null, top: null };
     obj[0] = hitSlop;
     obj[1] = hitSlop;

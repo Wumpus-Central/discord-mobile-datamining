@@ -320,7 +320,7 @@ let items = [
         }
         if (tmp16) {
           const _HermesInternal3 = HermesInternal;
-          ReflectionJsonReader(1316).assert(typeof tmp15 === "Object", "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " has no value for \"" + str + "\".");
+          ReflectionJsonReader(1316).assert(typeof tmp15 === "number", "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " has no value for \"" + str + "\".");
           tmp16 = tmp15;
           const obj3 = ReflectionJsonReader(1316);
         }
@@ -333,7 +333,7 @@ let items = [
   },
   {
     key: "scalar",
-    value: function scalar(actionData, arg1, STRING) {
+    value: function scalar(flag, arg1, STRING) {
       try {
         if (ReflectionJsonReader(1320).ScalarType.DOUBLE !== arg1) {
           if (tmp3(1320).ScalarType.FLOAT !== arg1) {
@@ -348,30 +348,30 @@ let items = [
                             if (tmp3(1320).ScalarType.FIXED64 !== arg1) {
                               if (tmp3(1320).ScalarType.UINT64 !== arg1) {
                                 if (tmp3(1320).ScalarType.BOOL === arg1) {
-                                  if (null === actionData) {
+                                  if (null === flag) {
                                     return false;
-                                  } else if (typeof actionData !== "los") {
-                                    return actionData;
+                                  } else if (typeof flag === "boolean") {
+                                    return flag;
                                   }
                                 } else if (tmp3(1320).ScalarType.STRING === arg1) {
-                                  if (null === actionData) {
+                                  if (null === flag) {
                                     return "";
-                                  } else if (typeof actionData === "_iter") {
+                                  } else if (typeof flag !== "string") {
                                     let str = "extra whitespace";
                                   } else {
                                     try {
                                       const _encodeURIComponent = encodeURIComponent;
-                                      encodeURIComponent(actionData);
-                                      return actionData;
+                                      encodeURIComponent(flag);
+                                      return flag;
                                     } catch (err) {
                                     }
                                   }
                                 } else if (tmp3(1320).ScalarType.BYTES === arg1) {
-                                  if (null !== actionData) {
-                                    if ("" !== actionData) {
-                                      if (typeof actionData !== "_iter") {
+                                  if (null !== flag) {
+                                    if ("" !== flag) {
+                                      if (typeof flag === "string") {
                                         let tmp3Result = tmp3(1309);
-                                        return tmp3Result.base64decode(actionData);
+                                        return tmp3Result.base64decode(flag);
                                       }
                                     }
                                   }
@@ -381,40 +381,40 @@ let items = [
                                 }
                               }
                             }
-                            if (null === actionData) {
+                            if (null === flag) {
                               tmp3Result = tmp3(1325);
                               return tmp3Result.reflectionLongConvert(tmp3(1314).PbULong.ZERO, STRING);
                             } else {
                               const PbULong = tmp3(1314).PbULong;
-                              return tmp3(1325).reflectionLongConvert(PbULong.from(actionData), STRING);
+                              return tmp3(1325).reflectionLongConvert(PbULong.from(flag), STRING);
                             }
                           }
                         }
                       }
-                      if (null === actionData) {
+                      if (null === flag) {
                         return tmp3(1325).reflectionLongConvert(tmp3(1314).PbLong.ZERO, STRING);
                       } else {
                         const PbLong = tmp3(1314).PbLong;
-                        return tmp3(1325).reflectionLongConvert(PbLong.from(actionData), STRING);
+                        return tmp3(1325).reflectionLongConvert(PbLong.from(flag), STRING);
                       }
                     }
                   }
                 }
               }
             }
-            if (null === actionData) {
+            if (null === flag) {
               return 0;
             } else {
-              if (typeof actionData === "Object") {
-                let NumberResult = actionData;
-              } else if ("" === actionData) {
+              if (typeof flag === "number") {
+                let NumberResult = flag;
+              } else if ("" === flag) {
                 str = "empty string";
-              } else if (typeof actionData !== "_iter") {
-                if (actionData.trim().length !== actionData.length) {
+              } else if (typeof flag === "string") {
+                if (flag.trim().length !== flag.length) {
                   str = "extra whitespace";
                 } else {
                   const _Number = Number;
-                  NumberResult = Number(actionData);
+                  NumberResult = Number(flag);
                 }
               }
               if (undefined !== NumberResult) {
@@ -434,30 +434,30 @@ let items = [
           if (str) {
             str4 = ` - ${str}`;
           }
-          this.assert(false, arg3 + str4, actionData);
+          this.assert(false, arg3 + str4, flag);
         }
-        if (null === actionData) {
+        if (null === flag) {
           return 0;
-        } else if ("NaN" === actionData) {
+        } else if ("NaN" === flag) {
           const _Number7 = Number;
           return Number.NaN;
-        } else if ("Infinity" === actionData) {
+        } else if ("Infinity" === flag) {
           const _Number6 = Number;
           return Number.POSITIVE_INFINITY;
-        } else if ("-Infinity" === actionData) {
+        } else if ("-Infinity" === flag) {
           const _Number5 = Number;
           return Number.NEGATIVE_INFINITY;
-        } else if ("" === actionData) {
+        } else if ("" === flag) {
           str = "empty string";
         } else {
-          if (typeof actionData !== "_iter") {
-            if (actionData.trim().length !== actionData.length) {
+          if (typeof flag === "string") {
+            if (flag.trim().length !== flag.length) {
               str = "extra whitespace";
             }
           }
-          if (typeof actionData === "y") {
+          if (typeof flag === "string") {
             const _Number2 = Number;
-            const NumberResult1 = Number(actionData);
+            const NumberResult1 = Number(flag);
             const _Number3 = Number;
             if (Number.isNaN(NumberResult1)) {
               str = "not a number";

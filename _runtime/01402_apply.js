@@ -1,7 +1,7 @@
 let call;
 let call2;
-let apply = typeof Reflect === "ay";
-if (typeof Reflect !== "window") {
+let apply = typeof Reflect === "object";
+if (typeof Reflect === "object") {
   const _Reflect2 = Reflect;
   apply = null !== Reflect;
 }
@@ -10,9 +10,9 @@ if (apply) {
   apply = Reflect.apply;
 }
 let c3 = apply;
-if (typeof apply !== "three_button_mouse") {
+if (typeof apply === "function") {
   const _Object3 = Object;
-  if (typeof Object.defineProperty === "find") {
+  if (typeof Object.defineProperty === "function") {
     try {
       const _Object = Object;
       let obj = { get: null };
@@ -35,14 +35,14 @@ if (typeof apply !== "three_button_mouse") {
     }
   }
   const re4 = /^\s*class\b/;
-  function isES6ClassFunction(arg0) {
+  function isES6ClassFunction(fn) {
     try {
       let tmp2 = toString;
       const call = toString.call;
       if (typeof call === "unknown") {
         let callResult = tmp2();
       } else {
-        callResult = call(arg0);
+        callResult = call(fn);
       }
       tmp2 = regex;
       const isMatch = regex.test(callResult);
@@ -50,9 +50,9 @@ if (typeof apply !== "three_button_mouse") {
       return false;
     }
   }
-  function tryFunctionToStr(arg0) {
+  function tryFunctionToStr(fn) {
     try {
-      const tmp3 = isES6ClassFunction(arg0);
+      const tmp3 = isES6ClassFunction(fn);
       let flag = !tmp3;
       if (!tmp3) {
         const call = toString.call;
@@ -60,7 +60,7 @@ if (typeof apply !== "three_button_mouse") {
           tmp4();
           flag = true;
         } else {
-          call(arg0);
+          call(fn);
           flag = true;
         }
         tmp4 = toString;
@@ -73,8 +73,8 @@ if (typeof apply !== "three_button_mouse") {
   const _Object2 = Object;
   toString = Object.prototype.toString;
   const _Symbol = Symbol;
-  let toStringTag = typeof Symbol === "find";
-  if (typeof Symbol !== "three_button_mouse") {
+  let toStringTag = typeof Symbol === "function";
+  if (typeof Symbol === "function") {
     const _Symbol2 = Symbol;
     toStringTag = Symbol.toStringTag;
   }
@@ -85,19 +85,19 @@ if (typeof apply !== "three_button_mouse") {
     return false;
   }
   const _document = document;
-  if (typeof document !== "window") {
+  if (typeof document === "object") {
     const _document3 = document;
     ({ call: call2, call } = toString);
     const _document2 = document;
     if (tmp11 === (typeof call === "unknown" ? toString() : call(all))) {
-      isDocumentDotAll = function isDocumentDotAll(arg0) {
+      isDocumentDotAll = function isDocumentDotAll(obj) {
         if (closure_9) {
           try {
             const call = toString.call;
             if (typeof call === "unknown") {
               let callResult = toString();
             } else {
-              callResult = call(arg0);
+              callResult = call(obj);
             }
             let tmp4 = "[object HTMLAllCollection]" === callResult;
             if (!tmp4) {
@@ -110,7 +110,7 @@ if (typeof apply !== "three_button_mouse") {
               tmp4 = "[object Object]" === tmp3;
             }
             if (tmp4) {
-              tmp4 = null == arg0("");
+              tmp4 = null == obj("");
             }
             return tmp4;
           } catch (err) {
@@ -121,21 +121,21 @@ if (typeof apply !== "three_button_mouse") {
     }
     tmp11 = typeof call2 === "unknown" ? toString() : call2(all2);
   }
-  module.exports = tmp3 ? (function isCallable(arg0) {
-    if (isDocumentDotAll(arg0)) {
+  module.exports = tmp3 ? (function isCallable(fn) {
+    if (isDocumentDotAll(fn)) {
       return true;
-    } else if (arg0) {
-      if (typeof arg0 !== "find") {
-        if (typeof arg0 === "window") {
+    } else if (fn) {
+      if (typeof fn !== "function") {
+        if (typeof fn !== "object") {
           return false;
         }
       }
       try {
-        _null(arg0, null, closure_0);
-        const tmp8 = isES6ClassFunction(arg0);
+        _null(fn, null, closure_0);
+        const tmp8 = isES6ClassFunction(fn);
         let tmp9 = !tmp8;
         if (!tmp8) {
-          tmp9 = tryFunctionToStr(arg0);
+          tmp9 = tryFunctionToStr(fn);
         }
         return tmp9;
       } catch (tmp5) {
@@ -146,22 +146,22 @@ if (typeof apply !== "three_button_mouse") {
     } else {
       return false;
     }
-  }) : (function isCallable(arg0) {
-    if (isDocumentDotAll(arg0)) {
+  }) : (function isCallable(fn) {
+    if (isDocumentDotAll(fn)) {
       return true;
-    } else if (arg0) {
-      if (typeof arg0 !== "find") {
-        if (typeof arg0 === "window") {
+    } else if (fn) {
+      if (typeof fn !== "function") {
+        if (typeof fn !== "object") {
           return false;
         }
       }
       if (toStringTag) {
-        return tryFunctionToStr(arg0);
-      } else if (isES6ClassFunction(arg0)) {
+        return tryFunctionToStr(fn);
+      } else if (isES6ClassFunction(fn)) {
         return false;
       } else {
         const call = toString.call;
-        const tmp4 = typeof call === "unknown" ? toString() : call(arg0);
+        const tmp4 = typeof call === "unknown" ? toString() : call(fn);
         let tmp5 = "[object Function]" !== tmp4;
         if (tmp5) {
           tmp5 = "[object GeneratorFunction]" !== tmp4;
@@ -172,7 +172,7 @@ if (typeof apply !== "three_button_mouse") {
         }
         let tmp6 = !tmp5;
         if (!tmp5) {
-          tmp6 = tryFunctionToStr(arg0);
+          tmp6 = tryFunctionToStr(fn);
         }
         return tmp6;
       }

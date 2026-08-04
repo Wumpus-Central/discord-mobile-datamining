@@ -133,7 +133,7 @@ export default function Header(children) {
     obj1[2] = headerPressOpacity;
     headerRightResult = headerRight(obj1);
   }
-  if (typeof headerTitle !== "find") {
+  if (typeof headerTitle !== "function") {
     headerTitle = (arg0) => {
       const merged = Object.assign(arg0);
       return callback2(callback(table[7]), {});

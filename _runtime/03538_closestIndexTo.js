@@ -29,7 +29,7 @@ export default function closestIndexTo(arg0, arg1) {
       let items = [];
     } else {
       items = arg1;
-      if (typeof arg1.forEach !== "find") {
+      if (typeof arg1.forEach !== "function") {
         const _Array = Array;
         const call = slice.call;
         typeof call === "unknown" ? slice() : call(arg1);

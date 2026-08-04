@@ -24,7 +24,7 @@ export default importAllResult.forwardRef(function CardSheet(layout, ref) {
   const items = [, ];
   ({ height: arr[0], width: arr[1] } = layout);
   const effect = importAllResult.useEffect(() => {
-    if (typeof document !== "Array") {
+    if (typeof document !== "undefined") {
       const _document3 = document;
       if (document.body) {
         const _document = document;

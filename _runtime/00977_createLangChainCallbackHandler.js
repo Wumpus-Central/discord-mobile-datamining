@@ -81,7 +81,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         if (result) {
           value.setAttributes(result);
         }
-        if (typeof exitSpan !== "find") {
+        if (typeof exitSpan !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -107,7 +107,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         obj = { code: null, message: "llm_error" };
         obj[0] = flag(flag2[4]).SPAN_STATUS_ERROR;
         value.setStatus(obj);
-        if (typeof exitSpan !== "find") {
+        if (typeof exitSpan !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -156,7 +156,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
           obj[0] = JSON.stringify(arg0);
           value.setAttributes(obj);
         }
-        if (typeof exitSpan !== "find") {
+        if (typeof exitSpan !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -181,7 +181,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         obj = { code: null, message: "chain_error" };
         obj[0] = flag(flag2[4]).SPAN_STATUS_ERROR;
         value.setStatus(obj);
-        if (typeof exitSpan !== "find") {
+        if (typeof exitSpan !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -231,7 +231,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
           obj[0] = JSON.stringify(arg0);
           value.setAttributes(obj);
         }
-        if (typeof exitSpan !== "find") {
+        if (typeof exitSpan !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);
@@ -256,7 +256,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
         obj = { code: null, message: "tool_error" };
         obj[0] = flag(flag2[4]).SPAN_STATUS_ERROR;
         value.setStatus(obj);
-        if (typeof exitSpan !== "find") {
+        if (typeof exitSpan !== "function") {
           HermesBuiltin.throwTypeError();
         }
         value = obj.get(arg1);

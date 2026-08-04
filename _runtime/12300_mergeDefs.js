@@ -52,7 +52,7 @@ if (self2) {
     }
     const _Object3 = Object;
     exports.default = function default_1() {
-      if (typeof typeLabel !== "find") {
+      if (typeof typeLabel !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let closure_0 = { string: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA", gender: "f" }, number: { label: "\u05DE\u05E1\u05E4\u05E8", gender: "m" }, boolean: { label: "\u05E2\u05E8\u05DA \u05D1\u05D5\u05DC\u05D9\u05D0\u05E0\u05D9", gender: "m" }, bigint: { label: "BigInt", gender: "m" }, date: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA", gender: "m" }, array: { label: "\u05DE\u05E2\u05E8\u05DA", gender: "m" }, object: { label: "\u05D0\u05D5\u05D1\u05D9\u05D9\u05E7\u05D8", gender: "m" }, null: { label: "\u05E2\u05E8\u05DA \u05E8\u05D9\u05E7 (null)", gender: "m" }, undefined: { label: "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05DE\u05D5\u05D2\u05D3\u05E8 (undefined)", gender: "m" }, symbol: { label: "\u05E1\u05D9\u05DE\u05D1\u05D5\u05DC (Symbol)", gender: "m" }, function: { label: "\u05E4\u05D5\u05E0\u05E7\u05E6\u05D9\u05D4", gender: "f" }, map: { label: "\u05DE\u05E4\u05D4 (Map)", gender: "f" }, set: { label: "\u05E7\u05D1\u05D5\u05E6\u05D4 (Set)", gender: "f" }, file: { label: "\u05E7\u05D5\u05D1\u05E5", gender: "m" }, promise: { label: "Promise", gender: "m" }, NaN: { label: "NaN", gender: "m" }, unknown: { label: "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05D9\u05D3\u05D5\u05E2", gender: "m" }, value: { label: "\u05E2\u05E8\u05DA", gender: "m" } };
@@ -550,14 +550,14 @@ if (self2) {
               if (str == null) {
                 str = "array";
               }
-              if (typeof tmp6 !== "find") {
+              if (typeof tmp6 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               code = typeLabel;
-              if (typeof code !== "find") {
+              if (typeof code !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof typeEntry !== "find") {
+              if (typeof typeEntry !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let tmp9;
@@ -1138,14 +1138,14 @@ if (self2) {
               if (str == null) {
                 str = "array";
               }
-              if (typeof tmp6 !== "find") {
+              if (typeof tmp6 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               code = typeLabel;
-              if (typeof code !== "find") {
+              if (typeof code !== "function") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof typeEntry !== "find") {
+              if (typeof typeEntry !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               tmp9 = undefined;

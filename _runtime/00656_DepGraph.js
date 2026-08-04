@@ -124,7 +124,7 @@ DepGraph.prototype = {
   },
   clone() {
     const self = this;
-    if (typeof self !== "find") {
+    if (typeof self !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const obj = { nodes: {}, outgoingEdges: {}, incomingEdges: {}, circular: undefined };
@@ -179,7 +179,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "find") {
+            if (typeof closure_1 !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -276,7 +276,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "find") {
+            if (typeof closure_1 !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -378,7 +378,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "find") {
+            if (typeof closure_1 !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -464,7 +464,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "find") {
+            if (typeof closure_1 !== "function") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }

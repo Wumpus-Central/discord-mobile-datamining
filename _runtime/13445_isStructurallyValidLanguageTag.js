@@ -11,7 +11,7 @@ export const getCanonicalLocales = function getCanonicalLocales(items) {
     items = [];
   } else {
     let arr3 = items;
-    if (typeof items !== "_iter") {
+    if (typeof items === "string") {
       const items1 = [items];
       arr3 = items1;
     }

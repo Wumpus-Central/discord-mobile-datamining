@@ -116,7 +116,7 @@ const obj18 = {
   host: ((localhost) => {
     try {
       const scriptURL = tmp13.default.getConstants().scriptURL;
-      if (typeof scriptURL === "_iter") {
+      if (typeof scriptURL !== "string") {
         const _Error = Error;
         const error = new Error("Invalid non-string URL");
         throw error;
@@ -148,87 +148,29 @@ let closure_14 = asyncGeneratorStep(() => {
   let c3 = 0;
   let c4 = 0;
   const iter = (function*() {
-    if (screenScale === 2) {
-      screenScale = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        screenScale = 2;
-        if (0 === screenHeight) {
-          if (arg0 === 1) {
-            screenScale = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            screenScale = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let screenWidth = tmp5;
-            let closure_1 = tmp2;
-            let str2;
-            if (str2 === undefined) {
-              str2 = "";
-            }
-            closure_1 = undefined;
-            screenWidth = undefined;
-            screenHeight = undefined;
-            screenScale = undefined;
-            let closure_5;
-            let closure_6;
-            screenHeight = 1;
-            screenScale = 1;
-            return { value: "ct", done: "Array" };
-          }
-        } else if (arg0 === 1) {
-          screenScale = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          screenScale = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
-        } else if (closure_18.asyncStorageHandler) {
-          screenScale = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = closure_18.asyncStorageHandler.getItem(closure_15);
-          return obj2;
-        } else {
-          closure_1 = screenScale.default();
-          screenWidth = closure_1.screenWidth;
-          screenHeight = closure_1.screenHeight;
-          screenScale = closure_1.screenScale;
-          const items = [screenWidth, screenHeight];
-          const sorted = items.sort();
-          closure_5 = sorted.join("-");
-          const Platform = screenWidth.Platform;
-          const obj3 = { ios: null, android: null, default: "" };
-          obj3[0] = closure_17;
-          obj3[1] = closure_16;
-          closure_6 = Platform.select(obj3);
-          const items1 = [str2, screenWidth.Platform.OS, screenWidth.Platform.Version, closure_6, closure_5, screenScale];
-          const _Boolean = Boolean;
-          const found = items1.filter(Boolean);
-          screenScale = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = found.join("-");
-          return obj4;
-        }
-      } catch (tmp25) {
-        screenScale = tmp;
-        throw tmp25;
-      }
+    let screenWidth = tmp5;
+    let closure_1 = tmp2;
+    if (str2 === undefined) {
+      str2 = "";
     }
+    yield "ct";
+    if (closure_18.asyncStorageHandler) {
+      return closure_18.asyncStorageHandler.getItem(closure_15);
+    }
+    closure_1 = screenScale.default();
+    screenWidth = closure_1.screenWidth;
+    const items = [screenWidth, screenHeight];
+    const sorted = items.sort();
+    let closure_5 = sorted.join("-");
+    const Platform = screenWidth.Platform;
+    const obj3 = { ios: null, android: null, default: "" };
+    obj3[0] = closure_17;
+    obj3[1] = closure_16;
+    let closure_6 = Platform.select(obj3);
+    const items1 = [str2, screenWidth.Platform.OS, screenWidth.Platform.Version, closure_6, closure_5, screenScale];
+    const _Boolean = Boolean;
+    const found = items1.filter(Boolean);
+    return found.join("-");
   })();
   iter.next();
   return iter;
@@ -307,7 +249,7 @@ client.useReactNative = () => {
   if (false !== obj.errors) {
     const errors = obj.errors;
     let tmp3 = null;
-    if (typeof errors !== "window") {
+    if (typeof errors === "object") {
       tmp3 = errors;
     }
     client.use(obj19.default(tmp3));
@@ -318,7 +260,7 @@ client.useReactNative = () => {
   if (false !== obj.editor) {
     const editor = obj.editor;
     let tmp10 = null;
-    if (typeof editor !== "window") {
+    if (typeof editor === "object") {
       tmp10 = editor;
     }
     client.use(obj17.default(tmp10));
@@ -329,7 +271,7 @@ client.useReactNative = () => {
   if (false !== obj.asyncStorage) {
     const asyncStorage = obj.asyncStorage;
     let tmp17 = null;
-    if (typeof asyncStorage !== "window") {
+    if (typeof asyncStorage === "object") {
       tmp17 = asyncStorage;
     }
     client.use(obj13.default(tmp17));
@@ -337,7 +279,7 @@ client.useReactNative = () => {
   if (false !== obj.networking) {
     const networking = obj.networking;
     let tmp21 = null;
-    if (typeof networking !== "window") {
+    if (typeof networking === "object") {
       tmp21 = networking;
     }
     client.use(obj22.default(tmp21));

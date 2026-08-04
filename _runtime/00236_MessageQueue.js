@@ -1,21 +1,21 @@
 let closure_0 = global;
 closure_0 = undefined;
 if (true === global.RN$Bridgeless) {
-  let fn = (arg0, arg1) => {
-    let closure_0 = arg1;
-    if (typeof arg1 === "three_button_mouse") {
+  let fn = (arg0, fn) => {
+    let closure_0 = fn;
+    if (typeof fn !== "function") {
       const result = closure_0.RN$registerCallableModule(arg0, () => closure_0);
     } else {
-      const result1 = closure_0.RN$registerCallableModule(arg0, arg1);
+      const result1 = closure_0.RN$registerCallableModule(arg0, fn);
     }
   };
 } else {
   closure_0 = require("MessageQueue").default;
-  fn = (MobileVoiceOverlayManager, closure_5) => {
-    if (typeof closure_5 === "three_button_mouse") {
-      const result = closure_0.registerCallableModule(MobileVoiceOverlayManager, closure_5);
+  fn = (MobileVoiceOverlayManager, fn) => {
+    if (typeof fn !== "function") {
+      const result = closure_0.registerCallableModule(MobileVoiceOverlayManager, fn);
     } else {
-      const result1 = closure_0.registerLazyCallableModule(MobileVoiceOverlayManager, closure_5);
+      const result1 = closure_0.registerLazyCallableModule(MobileVoiceOverlayManager, fn);
     }
   };
 }

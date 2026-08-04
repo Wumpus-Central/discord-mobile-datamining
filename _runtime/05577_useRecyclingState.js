@@ -18,7 +18,7 @@ export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
   const callback2 = tmp3;
   callback3(() => {
     let tmpResult = closure_0;
-    if (typeof closure_0 !== "three_button_mouse") {
+    if (typeof closure_0 === "function") {
       tmpResult = tmp();
     }
     _slicedToArray.current = tmpResult;
@@ -29,10 +29,10 @@ export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
   const items = [tmp3];
   const items1 = [
     tmp.current,
-    callback2((arg0, arg1) => {
-      let tmp = arg0;
-      if (typeof arg0 !== "three_button_mouse") {
-        tmp = arg0(tmp.current);
+    callback2((fn) => {
+      let tmp = fn;
+      if (typeof fn === "function") {
+        tmp = fn(tmp.current);
       }
       if (tmp !== tmp.current) {
         tmp2.current = tmp;

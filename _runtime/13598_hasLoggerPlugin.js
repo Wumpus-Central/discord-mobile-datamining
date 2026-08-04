@@ -48,37 +48,37 @@ function hasLoggerPlugin(log) {
     tmp = "log" in log;
   }
   if (tmp) {
-    tmp = typeof log.log === "find";
+    tmp = typeof log.log === "function";
   }
   if (tmp) {
     tmp = "logImportant" in log;
   }
   if (tmp) {
-    tmp = typeof log.logImportant === "find";
+    tmp = typeof log.logImportant === "function";
   }
   if (tmp) {
     tmp = "debug" in log;
   }
   if (tmp) {
-    tmp = typeof log.debug === "find";
+    tmp = typeof log.debug === "function";
   }
   if (tmp) {
     tmp = "warn" in log;
   }
   if (tmp) {
-    tmp = typeof log.warn === "find";
+    tmp = typeof log.warn === "function";
   }
   if (tmp) {
     tmp = "error" in log;
   }
   if (tmp) {
-    tmp = typeof log.error === "find";
+    tmp = typeof log.error === "function";
   }
   return tmp;
 }
 arg5.hasLoggerPlugin = hasLoggerPlugin;
 arg5.assertHasLoggerPlugin = (log) => {
-  if (typeof hasLoggerPlugin !== "find") {
+  if (typeof hasLoggerPlugin !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = log;
@@ -86,31 +86,31 @@ arg5.assertHasLoggerPlugin = (log) => {
     tmp = "log" in log;
   }
   if (tmp) {
-    tmp = typeof log.log === "find";
+    tmp = typeof log.log === "function";
   }
   if (tmp) {
     tmp = "logImportant" in log;
   }
   if (tmp) {
-    tmp = typeof log.logImportant === "find";
+    tmp = typeof log.logImportant === "function";
   }
   if (tmp) {
     tmp = "debug" in log;
   }
   if (tmp) {
-    tmp = typeof log.debug === "find";
+    tmp = typeof log.debug === "function";
   }
   if (tmp) {
     tmp = "warn" in log;
   }
   if (tmp) {
-    tmp = typeof log.warn === "find";
+    tmp = typeof log.warn === "function";
   }
   if (tmp) {
     tmp = "error" in log;
   }
   if (tmp) {
-    tmp = typeof log.error === "find";
+    tmp = typeof log.error === "function";
   }
   if (!tmp) {
     const _Error = Error;

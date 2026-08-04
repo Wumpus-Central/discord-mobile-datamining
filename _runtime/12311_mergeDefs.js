@@ -52,7 +52,7 @@ if (self2) {
     }
     const _Object3 = Object;
     exports.default = function default_1() {
-      if (typeof error !== "find") {
+      if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let closure_0 = { string: { unit: { one: "simbolis", few: "simboliai", many: "simboli\u0173" }, verb: { smaller: { inclusive: "turi b\u016Bti ne ilgesn\u0117 kaip", notInclusive: "turi b\u016Bti trumpesn\u0117 kaip" }, bigger: { inclusive: "turi b\u016Bti ne trumpesn\u0117 kaip", notInclusive: "turi b\u016Bti ilgesn\u0117 kaip" } } }, file: { unit: { one: "baitas", few: "baitai", many: "bait\u0173" }, verb: { smaller: { inclusive: "turi b\u016Bti ne didesnis kaip", notInclusive: "turi b\u016Bti ma\u017Eesnis kaip" }, bigger: { inclusive: "turi b\u016Bti ne ma\u017Eesnis kaip", notInclusive: "turi b\u016Bti didesnis kaip" } } }, array: { unit: { one: "element\u0105", few: "elementus", many: "element\u0173" }, verb: { smaller: { inclusive: "turi tur\u0117ti ne daugiau kaip", notInclusive: "turi tur\u0117ti ma\u017Eiau kaip" }, bigger: { inclusive: "turi tur\u0117ti ne ma\u017Eiau kaip", notInclusive: "turi tur\u0117ti daugiau kaip" } } }, set: { unit: { one: "element\u0105", few: "elementus", many: "element\u0173" }, verb: { smaller: { inclusive: "turi tur\u0117ti ne daugiau kaip", notInclusive: "turi tur\u0117ti ma\u017Eiau kaip" }, bigger: { inclusive: "turi tur\u0117ti ne ma\u017Eiau kaip", notInclusive: "turi tur\u0117ti daugiau kaip" } } } };
@@ -77,7 +77,7 @@ if (self2) {
               if (str == null) {
                 str = "reik\u0161m\u0117";
               }
-              if (typeof tmp3 !== "find") {
+              if (typeof tmp3 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let str2 = str.charAt(0);
@@ -501,7 +501,7 @@ if (self2) {
               if (str == null) {
                 str = "reik\u0161m\u0117";
               }
-              if (typeof tmp3 !== "find") {
+              if (typeof tmp3 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               str2 = str.charAt(0);
@@ -905,7 +905,7 @@ if (self2) {
               if (str == null) {
                 str = "reik\u0161m\u0117";
               }
-              if (typeof tmp3 !== "find") {
+              if (typeof tmp3 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               str2 = str.charAt(0);

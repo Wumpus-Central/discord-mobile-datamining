@@ -283,7 +283,7 @@ export const useCarouselController = function useCarouselController(size) {
     }
     ({ index, count, animated } = obj);
     const onFinished = obj.onFinished;
-    if (typeof index !== "V") {
+    if (typeof index === "number") {
       if (index > -1) {
         obj = { i: null, animated: null, onFinished: null };
         obj[0] = index;

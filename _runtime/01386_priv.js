@@ -22,7 +22,7 @@ class LRUCache {
     tmp = LRUCache;
     if (this instanceof LRUCache) {
       obj = global;
-      if (typeof global !== "V") {
+      if (typeof global === "number") {
         obj = { max: null };
         obj[0] = global;
       }
@@ -34,7 +34,7 @@ class LRUCache {
       tmp5 = priv(self, "max", obj.max);
       tmp6 = !tmp5;
       if (tmp5) {
-        tmp6 = typeof tmp5 === "V";
+        tmp6 = typeof tmp5 !== "number";
       }
       if (!tmp6) {
         num = 0;
@@ -45,7 +45,7 @@ class LRUCache {
         tmp4Result = tmp4(self, "max", Infinity);
       }
       tmp8 = obj.length || naiveLength;
-      if (typeof tmp8 !== "find") {
+      if (typeof tmp8 !== "function") {
         tmp8 = naiveLength;
       }
       str2 = "lengthCalculator";
@@ -758,13 +758,13 @@ function Entry(key, value, length, now) {
   { key, value, length, now }.maxAge = num;
 }
 let closure_3 = {};
-let closure_2 = typeof Symbol === "find" ? ((arg0) => Symbol.for(arg0)) : ((arg0) => "_" + arg0);
+let closure_2 = typeof Symbol === "function" ? ((arg0) => Symbol.for(arg0)) : ((arg0) => "_" + arg0);
 let obj = {
   set(max) {
     let num = max;
     let tmp = !max;
     if (max) {
-      tmp = typeof num === "V";
+      tmp = typeof num !== "number";
     }
     if (!tmp) {
       tmp = num <= 0;
@@ -796,7 +796,7 @@ obj = {
     let num = max;
     let tmp = !max;
     if (max) {
-      tmp = typeof num === "V";
+      tmp = typeof num !== "number";
     }
     if (!tmp) {
       tmp = num < 0;
@@ -814,9 +814,9 @@ obj = {
 };
 Object.defineProperty(LRUCache.prototype, "maxAge", obj);
 Object.defineProperty(LRUCache.prototype, "lengthCalculator", {
-  set(arg0) {
-    let tmp = arg0;
-    if (typeof arg0 !== "find") {
+  set(fn) {
+    let tmp = fn;
+    if (typeof fn !== "function") {
       tmp = naiveLength;
     }
     let self = this;

@@ -32,7 +32,7 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
         } else {
           items1 = [];
         }
-        mapped = items1.map((arg0) => outer1_0(outer1_1[2]).normalizeSnapPoint(arg0, value.value));
+        mapped = items1.map(() => { ... });
         tmp3 = closure_4;
         if (closure_4) {
           iter2 = closure_3;
@@ -57,7 +57,7 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
               if (!mapped.includes(diff)) {
                 arr = mapped.push(diff);
               }
-              sorted = mapped.sort((arg0, arg1) => arg1 - arg0);
+              sorted = mapped.sort(() => { ... });
               tmp8 = useSharedValue;
               useSharedValue.value = sorted.indexOf(diff);
               return sorted;
@@ -96,7 +96,7 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
         length = items.length;
         tmp = !length;
         if (length) {
-          tmp = !items.find((arg0) => typeof arg0 === "y");
+          tmp = !items.find(/* F104862 */ function() { ... });
         }
         return !tmp;
       }

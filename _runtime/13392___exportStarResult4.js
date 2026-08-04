@@ -1,13 +1,13 @@
 const require = arg1;
 const dependencyMap = arg6;
-arg5.GetOption = function GetOption(arg0, arg1, arg2, arr) {
-  if (typeof arg0 === "window") {
+arg5.GetOption = function GetOption(obj, arg1, arg2, arr) {
+  if (typeof obj !== "object") {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("Options must be an object");
     throw typeError;
   } else {
     let str = tmp27;
-    if (undefined !== arg0[arg1]) {
+    if (undefined !== obj[arg1]) {
       str = "boolean";
       if ("boolean" !== arg2) {
         if ("string" !== arg2) {

@@ -10,7 +10,7 @@ try {
   if (tmp6) {
     let setDunder = _module;
     if (setDunder) {
-      setDunder = typeof _module.set === "find";
+      setDunder = typeof _module.set === "function";
     }
     if (setDunder) {
       const items = [_module.set];

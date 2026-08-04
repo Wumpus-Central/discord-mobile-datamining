@@ -206,64 +206,100 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       let c3 = 0;
       let c4 = 0;
       const iter = (function*() {
-        let data = tmp2;
-        let animated;
-        let obj1 = animated;
-        if (animated === undefined) {
-          obj1 = {};
-        }
-        animated = obj1.animated;
-        data = undefined;
-        let c3 = 1;
-        let c4 = 1;
-        yield "ct";
-        if (1 === tmp5) {
+        if (c4 === 2) {
+          c4 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           } else {
-            data = engagedIndices.props.data;
-            if (data) {
-              if (data.length > 0) {
-                let asyncGeneratorStep = data.length - 1;
-                engagedIndices = engagedIndices.getEngagedIndices();
-                if (!engagedIndices.includes(asyncGeneratorStep)) {
-                  const obj3 = { index: null, animated: null };
-                  obj3[0] = asyncGeneratorStep;
-                  obj3[1] = animated;
-                  c3 = 2;
-                  c4 = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = outer1_13.scrollToIndex(obj3);
-                  return obj4;
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let asyncGeneratorStep = tmp5;
+                let data = tmp2;
+                let animated;
+                let obj1 = animated;
+                if (animated === undefined) {
+                  obj1 = {};
                 }
+                animated = obj1.animated;
+                data = undefined;
+                asyncGeneratorStep = undefined;
+                c3 = 1;
+                c4 = 1;
+                return { value: "ct", done: "Array" };
               }
+            } else {
+              if (1 === tmp5) {
+                if (arg0 === 1) {
+                  c4 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c4 = 3;
+                  const obj2 = { value: null, done: true };
+                  obj2[0] = arg1;
+                  return obj2;
+                } else {
+                  data = engagedIndices.props.data;
+                  if (data) {
+                    if (data.length > 0) {
+                      asyncGeneratorStep = data.length - 1;
+                      engagedIndices = engagedIndices.getEngagedIndices();
+                      if (!engagedIndices.includes(asyncGeneratorStep)) {
+                        const obj3 = { index: null, animated: null };
+                        obj3[0] = asyncGeneratorStep;
+                        obj3[1] = animated;
+                        c3 = 2;
+                        c4 = 1;
+                        const obj4 = { value: null, done: false };
+                        obj4[0] = outer1_13.scrollToIndex(obj3);
+                        return obj4;
+                      }
+                    }
+                  }
+                }
+              } else if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              }
+              outer1_7(() => {
+                const current = data.current;
+                if (current != null) {
+                  const obj = { animated: null };
+                  obj[0] = animated;
+                  current.scrollToEnd(obj);
+                }
+              }, 0);
+              c4 = 3;
+              return { value: "HermesInternal", done: null };
             }
+          } catch (tmp17) {
+            c4 = tmp;
+            throw tmp17;
           }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
         }
-        outer1_7(() => {
-          const current = data.current;
-          if (current != null) {
-            const obj = { animated: null };
-            obj[0] = animated;
-            current.scrollToEnd(obj);
-          }
-        }, 0);
-        c4 = 3;
-        yield "HermesInternal";
       })();
       iter.next();
       return iter;
@@ -343,7 +379,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 if (outer2_3.current) {
                   callback();
                 } else if (5 <= arg0) {
-                  if (typeof finishScrollToIndex !== "find") {
+                  if (typeof finishScrollToIndex !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   let maxScrollOffset = getFinalOffset();

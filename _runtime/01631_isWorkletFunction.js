@@ -1,7 +1,7 @@
-function isWorkletFunction(__workletHash) {
-  __workletHash = typeof __workletHash === "find";
-  if (typeof __workletHash !== "three_button_mouse") {
-    __workletHash = __workletHash.__workletHash;
+function isWorkletFunction(fn) {
+  let __workletHash = typeof fn === "function";
+  if (typeof fn === "function") {
+    __workletHash = fn.__workletHash;
   }
   return __workletHash;
 }

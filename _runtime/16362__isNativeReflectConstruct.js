@@ -56,7 +56,7 @@ class PQueue {
     tmp3Result._resolveIdle = empty;
     obj = { carryoverConcurrencyCount: false, intervalCap: Infinity, interval: 0, concurrency: Infinity, autoStart: true, queueClass: require("PriorityQueue").default };
     merged = Object.assign(obj, global);
-    if (typeof merged.intervalCap !== "V") {
+    if (typeof merged.intervalCap === "number") {
       num = 1;
       if (merged.intervalCap >= 1) {
         if (undefined !== merged.interval) {
@@ -288,15 +288,15 @@ const items = [
     get() {
       return this._concurrency;
     },
-    set(_concurrency) {
-      if (typeof _concurrency !== "V") {
-        if (_concurrency >= 1) {
+    set(num) {
+      if (typeof num === "number") {
+        if (num >= 1) {
           const self = this;
-          this._concurrency = _concurrency;
+          this._concurrency = num;
           this._processQueue();
         }
       }
-      const typeError = new TypeError("Expected `concurrency` to be a number from 1 and up, got `" + _concurrency + "` (" + typeof _concurrency + ")");
+      const typeError = new TypeError("Expected `concurrency` to be a number from 1 and up, got `" + num + "` (" + typeof num + ")");
       throw typeError;
     }
   },
@@ -321,166 +321,117 @@ c4 = asyncGeneratorStep(function(arg0) {
   let c5 = 0;
   let c6 = 0;
   const iter = (function*(arg0) {
-    if (c6 === 2) {
-      c6 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
+    let closure_4 = closure_0;
+    let closure_3 = tmp2;
+    closure_3 = closure_0;
+    if (obj1 === undefined) {
+      obj1 = {};
+    }
+    yield "ct";
+    closure_0 = closure_4;
+    const promise = new Promise((arg0, arg1) => {
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      closure_0 = obj1(function*() {
+        if (c5 === 2) {
+          c5 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
           if (arg0 === 1) {
-            c6 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value: null, done: true };
+            let obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_4 = closure_0;
-            let closure_3 = tmp2;
-            closure_3 = closure_0;
-            let obj1;
-            if (obj1 === undefined) {
-              obj1 = {};
-            }
-            closure_0 = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "ct", done: "Array" };
+            return { value: "HermesInternal", done: null };
           }
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          let obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
         } else {
-          closure_0 = closure_4;
-          const promise = new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            let closure_1 = arg1;
-            closure_0 = obj1(function*() {
-              if (c5 === 2) {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
                 c5 = 3;
-                HermesBuiltin.throwTypeError();
-              } else if (tmp6 === 3) {
-                if (arg0 === 1) {
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  return { value: "HermesInternal", done: null };
-                }
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
               } else {
-                try {
-                  c5 = 2;
-                  if (0 === c4) {
-                    if (arg0 === 1) {
-                      c5 = 3;
-                      throw arg1;
-                    } else if (arg0 === 2) {
-                      c5 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
-                      return obj;
+                const dependencyMap = tmp3;
+                lib._pendingCount = lib._pendingCount + 1;
+                lib._intervalCount = lib._intervalCount + 1;
+                let c3 = 1;
+                if (undefined !== lib._timeout) {
+                  const resolved = Promise.resolve(dependencyMap());
+                  if (undefined === outer2_2.timeout) {
+                    let timeout = lib._timeout;
+                  } else {
+                    timeout = tmp23.timeout;
+                  }
+                  lib(16363).default(resolved, timeout, () => {
+                    if (undefined === tmp29.throwOnTimeout) {
+                      let throwOnTimeout = _throwOnTimeout._throwOnTimeout;
                     } else {
-                      const dependencyMap = tmp3;
-                      lib._pendingCount = lib._pendingCount + 1;
-                      lib._intervalCount = lib._intervalCount + 1;
-                      let c3 = 1;
-                      if (undefined !== lib._timeout) {
-                        const resolved = Promise.resolve(dependencyMap());
-                        if (undefined === outer2_2.timeout) {
-                          let timeout = lib._timeout;
-                        } else {
-                          timeout = tmp23.timeout;
-                        }
-                        lib(16363).default(resolved, timeout, () => {
-                          if (undefined === tmp29.throwOnTimeout) {
-                            let throwOnTimeout = _throwOnTimeout._throwOnTimeout;
-                          } else {
-                            throwOnTimeout = tmp.throwOnTimeout;
-                          }
-                          if (throwOnTimeout) {
-                            tmp3(outer2_8);
-                          }
-                        });
-                        lib = outer1_0;
-                        c4 = 2;
-                        c5 = 1;
-                        const obj2 = lib(16363);
-                      }
-                      dependencyMap();
+                      throwOnTimeout = tmp.throwOnTimeout;
                     }
-                  } else {
-                    if (1 === tmp7) {
-                      c3 = 0;
-                      outer1_1(closure_2);
-                      lib._next();
-                      c5 = 3;
-                    } else if (arg0 === 1) {
-                      c5 = 3;
-                      throw arg1;
-                    } else if (arg0 !== 2) {
-                      lib(arg1);
-                      c3 = 0;
+                    if (throwOnTimeout) {
+                      tmp3(outer2_8);
                     }
-                    c3 = 0;
-                    c5 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  }
-                } catch (tmp29) {
-                  closure_2 = tmp29;
-                  if (tmp4 === c3) {
-                    c5 = tmp2;
-                    throw tmp29;
-                  } else {
-                    c4 = tmp;
-                  }
+                  });
+                  lib = outer1_0;
+                  c4 = 2;
+                  c5 = 1;
+                  const obj2 = lib(16363);
                 }
+                dependencyMap();
               }
-            });
-            const _queue = closure_3._queue;
-            _queue.enqueue(function run() {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
+            } else {
+              if (1 === tmp7) {
+                c3 = 0;
+                outer1_1(closure_2);
+                lib._next();
+                c5 = 3;
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                lib(arg1);
+                c3 = 0;
               }
-              return applyArgumentsResult;
-            }, obj1);
-            closure_3._tryToStartAnother();
-            closure_3.emit("add");
-          });
-          c6 = 3;
-          obj = { value: null, done: true };
-          obj[0] = promise;
-          return obj;
+              c3 = 0;
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp29) {
+            closure_2 = tmp29;
+            if (tmp4 === c3) {
+              c5 = tmp2;
+              throw tmp29;
+            } else {
+              c4 = tmp;
+            }
+          }
         }
-      } catch (tmp15) {
-        c6 = tmp;
-        throw tmp15;
-      }
-    }
+      });
+      const _queue = closure_3._queue;
+      _queue.enqueue(function run() {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      }, obj1);
+      closure_3._tryToStartAnother();
+      closure_3.emit("add");
+    });
+    return promise;
   })();
   iter.next();
   return iter;

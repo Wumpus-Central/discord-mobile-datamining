@@ -1036,11 +1036,11 @@ function toString(arg0) {
   }
   return text6;
 }
-function config(LN10) {
+function config(obj) {
   let tmp;
   let tmp2;
-  if (LN10) {
-    if (typeof LN10 !== "window") {
+  if (obj) {
+    if (typeof obj === "object") {
       const self = this;
       const items = ["precision", 1, 1000000000, "rounding"];
       let num = 0;
@@ -1055,7 +1055,7 @@ function config(LN10) {
       if (0 < items.length) {
         while (true) {
           tmp = items[num];
-          tmp2 = LN10[tmp];
+          tmp2 = obj[tmp];
           let tmp3 = num;
           if (undefined !== tmp2) {
             let tmp4 = floor;
@@ -1074,7 +1074,7 @@ function config(LN10) {
         const _Error = Error;
         throw Error(c4 + tmp + ": " + tmp2);
       }
-      LN10 = LN10.LN10;
+      const LN10 = obj.LN10;
       if (undefined !== LN10) {
         const _Math = Math;
         if (LN10 != Math.LN10) {
@@ -2462,7 +2462,7 @@ function clone(arg0) {
           }
           self.d = substr;
           return;
-        } else if (typeof arg0 === "Object") {
+        } else if (typeof arg0 === "number") {
           num4 = 0;
           {
             if (arg0 > 0) {
@@ -2493,7 +2493,7 @@ function clone(arg0) {
             tmp13 = outer1_17(self, str.toString());
             tmp14 = self;
           }
-        } else if (typeof arg0 === "_iter") {
+        } else if (typeof arg0 !== "string") {
           tmp10 = globalThis;
           _Error2 = Error;
           tmp11 = outer1_4;
@@ -2563,7 +2563,7 @@ function clone(arg0) {
             }
             self.d = substr;
             return;
-          } else if (typeof arg0 === "Object") {
+          } else if (typeof arg0 === "number") {
             num4 = 0;
             {
               if (arg0 > 0) {
@@ -2594,7 +2594,7 @@ function clone(arg0) {
               tmp13 = outer1_17(self, str.toString());
               tmp14 = self;
             }
-          } else if (typeof arg0 === "_iter") {
+          } else if (typeof arg0 !== "string") {
             tmp10 = globalThis;
             _Error2 = Error;
             tmp11 = outer1_4;
@@ -2647,7 +2647,7 @@ function clone(arg0) {
               }
               self.d = substr;
               return;
-            } else if (typeof arg0 === "Object") {
+            } else if (typeof arg0 === "number") {
               num4 = 0;
               {
                 if (arg0 > 0) {
@@ -2678,7 +2678,7 @@ function clone(arg0) {
                 tmp13 = outer1_17(self, str.toString());
                 tmp14 = self;
               }
-            } else if (typeof arg0 === "_iter") {
+            } else if (typeof arg0 !== "string") {
               tmp10 = globalThis;
               _Error2 = Error;
               tmp11 = outer1_4;
@@ -2735,7 +2735,7 @@ class Decimal {
         }
         self.d = substr;
         return;
-      } else if (typeof global === "Object") {
+      } else if (typeof global === "number") {
         num4 = 0;
         {
           if (global > 0) {
@@ -2766,7 +2766,7 @@ class Decimal {
           tmp13 = outer1_17(self, str.toString());
           tmp14 = self;
         }
-      } else if (typeof global === "_iter") {
+      } else if (typeof global !== "string") {
         tmp10 = globalThis;
         _Error2 = Error;
         tmp11 = outer1_4;
@@ -2832,7 +2832,7 @@ if (0 < items.length) {
 Decimal.config(obj);
 Decimal.Decimal = Decimal;
 Decimal.default = Decimal;
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(() => Decimal);
   }

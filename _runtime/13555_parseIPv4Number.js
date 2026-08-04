@@ -404,7 +404,7 @@ function parseHost(buffer, arg1) {
         }
         tmp = "" === parts[parts.length - 1] && parts.length > 1;
       })(str);
-      if (typeof tmp5 === "Object") {
+      if (typeof tmp5 === "number") {
         str = tmp5;
       }
       return str;
@@ -416,7 +416,7 @@ function serializeHost(host) {
   let str = "";
   let num = 1;
   let rounded = host;
-  if (typeof host === "Object") {
+  if (typeof host === "number") {
     do {
       let _String = String;
       let text = `${String(tmp2 % 256)}${``}`;

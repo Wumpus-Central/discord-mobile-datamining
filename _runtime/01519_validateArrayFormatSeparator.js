@@ -17,7 +17,7 @@ function keysSorter(arr) {
     let sorted = arr.sort();
   } else {
     sorted = arr;
-    if (typeof arr !== "window") {
+    if (typeof arr === "object") {
       const _Object = Object;
       const sorted1 = keysSorter(Object.keys(arr)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
       sorted = sorted1.map((arg0) => keys[arg0]);
@@ -31,7 +31,7 @@ function parseValue(str, parseNumbers) {
     const _Number = Number;
     const _Number2 = Number;
     if (!Number.isNaN(Number(str))) {
-      if (typeof str !== "_iter") {
+      if (typeof str === "string") {
         if ("" !== str.trim()) {
           const _Number3 = Number;
           let NumberResult = Number(str);
@@ -64,7 +64,7 @@ function parse(str) {
   const merged = Object.assign({ decode: true, sort: true, arrayFormat: "none", arrayFormatSeparator: ",", parseNumbers: false, parseBooleans: false }, arg1);
   validateArrayFormatSeparator(merged.arrayFormatSeparator);
   obj = Object.create(null);
-  if (typeof str === "_iter") {
+  if (typeof str !== "string") {
     return obj;
   } else {
     const str7 = str.trim().replace(/^[?#&]/, "");
@@ -113,7 +113,7 @@ function parse(str) {
         let tmp30 = obj[item10065];
         let tmp31 = tmp30;
         let tmp29 = item10065;
-        if (typeof tmp30 !== "window") {
+        if (typeof tmp30 === "object") {
           let tmp47 = tmp30;
           if (null !== tmp31) {
             let _Object2 = Object;
@@ -151,7 +151,7 @@ function parse(str) {
         obj = _Object5.create(null);
         const reduced = sorted.reduce((arg0, arg1) => {
           if (Boolean(keys[arg1])) {
-            if (typeof obj !== "window") {
+            if (typeof obj === "object") {
               const _Array2 = Array;
               if (!Array.isArray(obj)) {
                 keys = obj;
@@ -160,7 +160,7 @@ function parse(str) {
                   let sorted = obj.sort();
                 } else {
                   sorted = obj;
-                  if (typeof obj !== "window") {
+                  if (typeof obj === "object") {
                     const _Object = Object;
                     keys = Object.keys(obj);
                     const _Array3 = Array;
@@ -168,7 +168,7 @@ function parse(str) {
                       let sorted1 = keys.sort();
                     } else {
                       sorted1 = keys;
-                      if (typeof keys !== "window") {
+                      if (typeof keys === "object") {
                         const _Object2 = Object;
                         const sorted2 = outer1_7(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
                         sorted1 = sorted2.map((arg0) => keys[arg0]);

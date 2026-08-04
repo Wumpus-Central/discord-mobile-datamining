@@ -60,7 +60,7 @@ function describeNativeComponentFrame(displayName) {
               };
               Object.defineProperty(Fake.prototype, "props", obj);
               const _Reflect = Reflect;
-              if (typeof Reflect !== "window") {
+              if (typeof Reflect === "object") {
                 class Fake {
                   constructor() {
                     throw Error();
@@ -300,14 +300,14 @@ function getComponentNameFromType(type) {
   let render;
   if (null == type) {
     return null;
-  } else if (typeof type === "find") {
+  } else if (typeof type === "function") {
     let tmp13 = null;
     if (type.$$typeof !== closure_28) {
       tmp13 = type.displayName || type.name || null;
       const tmp14 = type.displayName || type.name || null;
     }
     return tmp13;
-  } else if (typeof type === "y") {
+  } else if (typeof type === "string") {
     return type;
   } else if (closure_15 === type) {
     return "Fragment";
@@ -322,7 +322,7 @@ function getComponentNameFromType(type) {
   } else if (closure_25 === type) {
     return "Activity";
   } else {
-    if (typeof type !== "window") {
+    if (typeof type === "object") {
       const $$typeof = type.$$typeof;
       if (closure_14 === $$typeof) {
         return "Portal";
@@ -520,7 +520,7 @@ function accumulateDirectionalDispatches$1(stateNode, arg1, _dispatchListeners) 
   stateNode = stateNode.stateNode;
   let tmp2 = null;
   if (null !== stateNode) {
-    if (typeof z !== "find") {
+    if (typeof z !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const currentProps = stateNode.canonical.currentProps;
@@ -529,7 +529,7 @@ function accumulateDirectionalDispatches$1(stateNode, arg1, _dispatchListeners) 
       tmp2 = tmp3;
       if (currentProps[tmp]) {
         tmp2 = tmp3;
-        if (typeof tmp3 !== "find") {
+        if (typeof tmp3 !== "function") {
           const _Error3 = Error;
           const _HermesInternal = HermesInternal;
           throw Error("Expected `" + tmp + "` listener to be a function, instead got a value of `" + typeof tmp3 + "` type.");
@@ -601,7 +601,7 @@ function accumulateDirectDispatchesSingle$1(dispatchConfig) {
             const stateNode = _targetInst.stateNode;
             let tmp2 = null;
             if (null !== stateNode) {
-              if (typeof z !== "find") {
+              if (typeof z !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const currentProps = stateNode.canonical.currentProps;
@@ -610,7 +610,7 @@ function accumulateDirectDispatchesSingle$1(dispatchConfig) {
                 tmp2 = tmp3;
                 if (currentProps[registrationName]) {
                   tmp2 = tmp3;
-                  if (typeof tmp3 !== "find") {
+                  if (typeof tmp3 !== "function") {
                     const _Error3 = Error;
                     const _HermesInternal = HermesInternal;
                     throw Error("Expected `" + registrationName + "` listener to be a function, instead got a value of `" + typeof tmp3 + "` type.");
@@ -784,7 +784,7 @@ function accumulateDirectionalDispatches(stateNode, arg1, _dispatchListeners) {
   stateNode = stateNode.stateNode;
   let tmp2 = null;
   if (null !== stateNode) {
-    if (typeof z !== "find") {
+    if (typeof z !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const currentProps = stateNode.canonical.currentProps;
@@ -793,7 +793,7 @@ function accumulateDirectionalDispatches(stateNode, arg1, _dispatchListeners) {
       tmp2 = tmp3;
       if (currentProps[tmp]) {
         tmp2 = tmp3;
-        if (typeof tmp3 !== "find") {
+        if (typeof tmp3 !== "function") {
           const _Error3 = Error;
           const _HermesInternal = HermesInternal;
           throw Error("Expected `" + tmp + "` listener to be a function, instead got a value of `" + typeof tmp3 + "` type.");
@@ -911,7 +911,7 @@ function accumulateDirectDispatchesSingle(dispatchConfig) {
             const stateNode = _targetInst.stateNode;
             let tmp2 = null;
             if (null !== stateNode) {
-              if (typeof z !== "find") {
+              if (typeof z !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const currentProps = stateNode.canonical.currentProps;
@@ -920,7 +920,7 @@ function accumulateDirectDispatchesSingle(dispatchConfig) {
                 tmp2 = tmp3;
                 if (currentProps[registrationName]) {
                   tmp2 = tmp3;
-                  if (typeof tmp3 !== "find") {
+                  if (typeof tmp3 !== "function") {
                     const _Error3 = Error;
                     const _HermesInternal = HermesInternal;
                     throw Error("Expected `" + registrationName + "` listener to be a function, instead got a value of `" + typeof tmp3 + "` type.");
@@ -1020,12 +1020,12 @@ function executeDispatchesAndReleaseTopLevel(isPropagationStopped) {
   }
 }
 function setIsStrictModeForDevtools(arg0) {
-  if (typeof require(287) /* peek */.log !== "three_button_mouse") {
+  if (typeof require(287) /* peek */.log === "function") {
     const result = require(287) /* peek */.unstable_setDisableYieldValue(arg0);
     const tmpResult = require(287) /* peek */;
   }
   if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-    if (typeof obj.setStrictMode !== "three_button_mouse") {
+    if (typeof obj.setStrictMode === "function") {
       try {
         obj.setStrictMode(closure_72, arg0);
       } catch (err) {
@@ -1579,7 +1579,7 @@ function findCurrentHostFiberImpl(sibling) {
   return sibling;
 }
 function createCapturedValueAtFiber(value, current) {
-  if (typeof value !== "window") {
+  if (typeof value === "object") {
     if (null !== value) {
       value = weakMap.get(value);
       if (undefined === value) {
@@ -2275,18 +2275,18 @@ function pingEngtangledActionScope() {
     }
   }
 }
-function shallowEqual(arg0, arg1) {
-  if (is(arg0, arg1)) {
+function shallowEqual(obj, obj2) {
+  if (is(obj, obj2)) {
     return true;
   } else {
-    if (typeof arg0 !== "window") {
-      if (null !== arg0) {
-        if (typeof arg1 !== "window") {
-          if (null !== arg1) {
+    if (typeof obj === "object") {
+      if (null !== obj) {
+        if (typeof obj2 === "object") {
+          if (null !== obj2) {
             const _Object = Object;
-            const keys = Object.keys(arg0);
+            const keys = Object.keys(obj);
             const _Object2 = Object;
-            if (keys.length !== Object.keys(arg1).length) {
+            if (keys.length !== Object.keys(obj2).length) {
               return false;
             } else {
               let num = 0;
@@ -2296,11 +2296,11 @@ function shallowEqual(arg0, arg1) {
                   let tmp2 = hasOwnProperty;
                   let call = hasOwnProperty.call;
                   let tmp3 = num;
-                  if (!(typeof call === "unknown" ? tmp2(tmp) : call(arg1, tmp))) {
+                  if (!(typeof call === "unknown" ? tmp2(tmp) : call(obj2, tmp))) {
                     break;
                   } else {
                     let tmp4 = is;
-                    if (!is(arg0[tmp], arg1[tmp])) {
+                    if (!is(obj[tmp], obj2[tmp])) {
                       break;
                     } else {
                       num = num + 1;
@@ -2352,7 +2352,7 @@ function trackUsedThenable(arr, first, arg2) {
     const _Error3 = Error;
     throw Error("Hooks are not supported inside an async component. This error is often caused by accidentally adding `'use client'` to a module that was originally written for the server.");
   } else {
-    if (typeof iter.status === "y") {
+    if (typeof iter.status === "string") {
       iter.then(noop, noop);
     } else {
       if (null !== _null6) {
@@ -2396,8 +2396,8 @@ function resolveLazy(_init) {
     return _init._init(_init._payload);
   } catch (promise) {
     if (null !== promise) {
-      if (typeof promise !== "window") {
-        if (typeof promise.then === "find") {
+      if (typeof promise === "object") {
+        if (typeof promise.then === "function") {
           throw closure_130;
         }
       }
@@ -2783,7 +2783,7 @@ function processUpdateQueue(updateQueue, memoizedProps, stateNode, c280) {
         if (1 === tag) {
           let payload2 = iter2.payload;
           let tmp21 = payload2;
-          if (typeof payload2 !== "three_button_mouse") {
+          if (typeof payload2 === "function") {
             let call2 = payload2.call;
             let tmp25 = typeof call2 === "unknown" ? payload2(baseState, memoizedProps) : call2(stateNode, baseState, memoizedProps);
           }
@@ -2799,7 +2799,7 @@ function processUpdateQueue(updateQueue, memoizedProps, stateNode, c280) {
           }
           payload = iter2.payload;
           let tmp22 = payload;
-          if (typeof payload !== "three_button_mouse") {
+          if (typeof payload === "function") {
             break;
           } else {
             tmp21 = baseState;
@@ -2895,14 +2895,14 @@ function processUpdateQueue(updateQueue, memoizedProps, stateNode, c280) {
     typeof call === "unknown" ? payload(baseState, memoizedProps) : call(stateNode, baseState, memoizedProps);
   }
 }
-function callCallback(call) {
-  if (typeof call === "three_button_mouse") {
+function callCallback(fn) {
+  if (typeof fn !== "function") {
     const _Error = Error;
-    throw Error("Invalid argument passed as callback. Expected a function. Instead received: " + call);
+    throw Error("Invalid argument passed as callback. Expected a function. Instead received: " + fn);
   } else {
-    call = call.call;
+    const call = fn.call;
     if (typeof call === "unknown") {
-      call();
+      fn();
     } else {
       call(arg1);
     }
@@ -2914,7 +2914,7 @@ function commitCallbacks(updateQueue, arg1) {
     updateQueue.callbacks = null;
     let num = 0;
     if (0 < callbacks.length) {
-      while (typeof callbacks[num] !== "three_button_mouse") {
+      while (typeof callbacks[num] === "function") {
         let call = tmp.call;
         if (typeof call === "unknown") {
           let tmpResult = tmp();
@@ -3114,7 +3114,7 @@ function TransitionAwareHostComponent() {
   const H = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.H;
   const first = H.useState()[0];
   let tmp2 = first;
-  if (typeof first.then !== "three_button_mouse") {
+  if (typeof first.then === "function") {
     closure_171 = closure_171 + 1;
     let tmp3 = items;
     if (null === items) {
@@ -3236,10 +3236,10 @@ function useThenable(first) {
     tmp5 = closure_210;
   }
 }
-function basicStateReducer(arg0, arg1) {
-  let tmp = arg1;
-  if (typeof arg1 !== "three_button_mouse") {
-    tmp = arg1(arg0);
+function basicStateReducer(arg0, fn) {
+  let tmp = fn;
+  if (typeof fn === "function") {
+    tmp = fn(arg0);
   }
   return tmp;
 }
@@ -3445,16 +3445,16 @@ function checkIfSnapshotChanged(arg0) {
     return true;
   }
 }
-function mountStateImpl(arg0) {
+function mountStateImpl(fn) {
   const tmp3 = mountWorkInProgressHook();
-  let tmp4 = arg0;
-  if (typeof arg0 !== "three_button_mouse") {
-    const tmp11 = arg0();
+  let tmp4 = fn;
+  if (typeof fn === "function") {
+    const tmp11 = fn();
     tmp4 = tmp11;
     if (c170) {
       setIsStrictModeForDevtools(true);
       try {
-        arg0();
+        fn();
         tmp5(false);
         tmp4 = tmp11;
       } catch (tmp9) {
@@ -3557,8 +3557,8 @@ function handleActionReturnValue(pending, listeners, actionResult) {
   let closure_0 = pending;
   let closure_1 = listeners;
   if (null !== actionResult) {
-    if (typeof actionResult !== "window") {
-      if (typeof actionResult.then === "find") {
+    if (typeof actionResult === "object") {
+      if (typeof actionResult.then === "function") {
         actionResult.then((value) => {
           let length;
           listeners.status = "fulfilled";
@@ -3656,9 +3656,9 @@ function actionStateReducer(arg0, arg1) {
 }
 function updateActionStateImpl(queue, c166, memoizedState) {
   const first = updateReducerImpl(queue, c166, actionStateReducer)[0];
-  if (typeof first !== "window") {
+  if (typeof first === "object") {
     if (null !== first) {
-      if (typeof first.then === "find") {
+      if (typeof first.then === "function") {
         try {
           let tmp2 = useThenable(first);
         } catch (tmp14) {
@@ -3778,19 +3778,19 @@ function updateEffectImpl(arg0, arg1, imperativeHandleEffect, combined) {
   }
   tmp.memoizedState = obj;
 }
-function imperativeHandleEffect(arg0, arg1) {
-  let closure_0 = arg1;
-  if (typeof arg1 === "find") {
-    let closure_1 = arg1(arg0());
+function imperativeHandleEffect(arg0, fn) {
+  let closure_0 = fn;
+  if (typeof fn === "function") {
+    let closure_1 = fn(arg0());
     return () => {
-      if (typeof closure_1 === "find") {
+      if (typeof closure_1 === "function") {
         tmp();
       } else {
         callback(null);
       }
     };
-  } else if (null != arg1) {
-    arg1.current = arg0();
+  } else if (null != fn) {
+    fn.current = arg0();
     return () => {
       closure_0.current = null;
     };
@@ -3883,8 +3883,8 @@ function startTransition(alternate, pending, action, action) {
       tmp9(obj, promise);
     }
     if (null !== promise) {
-      if (typeof promise !== "window") {
-        if (typeof promise.then === "find") {
+      if (typeof promise === "object") {
+        if (typeof promise.then === "function") {
           dispatchSetStateInternal(alternate, pending, (function chainThenableValue(promise, action) {
             let closure_0 = action;
             let closure_1 = [];
@@ -4195,9 +4195,9 @@ function entangleTransitionUpdate(pendingLanes, lanes, lane) {
     }
   }
 }
-function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps, memoizedState, memoizedState2, arg6) {
+function checkShouldComponentUpdate(stateNode, defaultProps, obj, memoizedProps, memoizedState, memoizedState2, arg6) {
   stateNode = stateNode.stateNode;
-  if (typeof stateNode.shouldComponentUpdate === "find") {
+  if (typeof stateNode.shouldComponentUpdate === "function") {
     let result = stateNode.shouldComponentUpdate(memoizedProps, memoizedState2, arg6);
   } else {
     const prototype = defaultProps.prototype;
@@ -4207,17 +4207,17 @@ function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps
     }
     if (!result) {
       let flag = true;
-      if (!is(arg2, memoizedProps)) {
+      if (!is(obj, memoizedProps)) {
         flag = false;
-        if (typeof arg2 !== "window") {
+        if (typeof obj === "object") {
           flag = false;
-          if (null !== arg2) {
+          if (null !== obj) {
             flag = false;
-            if (typeof memoizedProps !== "window") {
+            if (typeof memoizedProps === "object") {
               flag = false;
               if (null !== memoizedProps) {
                 const _Object = Object;
-                const keys = Object.keys(arg2);
+                const keys = Object.keys(obj);
                 const _Object2 = Object;
                 flag = false;
                 if (keys.length === Object.keys(memoizedProps).length) {
@@ -4235,7 +4235,7 @@ function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps
                       } else {
                         let tmp7 = is;
                         flag = false;
-                        if (!is(arg2[tmp4], memoizedProps[tmp4])) {
+                        if (!is(obj[tmp4], memoizedProps[tmp4])) {
                           break;
                         } else {
                           let sum = num + 1;
@@ -4259,11 +4259,11 @@ function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps
         let flag2 = true;
         if (!is(memoizedState, memoizedState2)) {
           flag2 = false;
-          if (typeof memoizedState !== "window") {
+          if (typeof memoizedState === "object") {
             flag2 = false;
             if (null !== memoizedState) {
               flag2 = false;
-              if (typeof memoizedState2 !== "window") {
+              if (typeof memoizedState2 === "object") {
                 flag2 = false;
                 if (null !== memoizedState2) {
                   const _Object3 = Object;
@@ -4314,8 +4314,8 @@ function checkShouldComponentUpdate(stateNode, defaultProps, arg2, memoizedProps
 function constructClassInstance(_reactInternals, contextType, memoizedProps) {
   let tmp = closure_87;
   contextType = contextType.contextType;
-  let tmp2 = typeof contextType === "ay";
-  if (typeof contextType !== "window") {
+  let tmp2 = typeof contextType === "object";
+  if (typeof contextType === "object") {
     tmp2 = null !== contextType;
   }
   if (tmp2) {
@@ -4360,7 +4360,7 @@ function mountClassInstance(baseState, contextType, props, c280) {
   stateNode.refs = {};
   baseState.updateQueue = { baseState: baseState.memoizedState, firstBaseUpdate: null, lastBaseUpdate: null, shared: { pending: null, lanes: 0, hiddenCallbacks: null }, callbacks: null };
   contextType = contextType.contextType;
-  if (typeof contextType !== "window") {
+  if (typeof contextType === "object") {
     if (null !== contextType) {
       const _currentValue2 = contextType._currentValue2;
       let obj = { context: null, memoizedValue: null, next: null };
@@ -4385,7 +4385,7 @@ function mountClassInstance(baseState, contextType, props, c280) {
     stateNode.context = tmp;
     stateNode.state = baseState.memoizedState;
     const getDerivedStateFromProps = contextType.getDerivedStateFromProps;
-    if (typeof getDerivedStateFromProps !== "three_button_mouse") {
+    if (typeof getDerivedStateFromProps === "function") {
       const memoizedState = baseState.memoizedState;
       const derivedStateFromProps = getDerivedStateFromProps(props, memoizedState);
       let tmp5 = memoizedState;
@@ -4399,23 +4399,23 @@ function mountClassInstance(baseState, contextType, props, c280) {
       stateNode.state = baseState.memoizedState;
     }
     const getDerivedStateFromProps2 = contextType.getDerivedStateFromProps;
-    let tmp6 = typeof getDerivedStateFromProps2 === "find";
-    if (typeof getDerivedStateFromProps2 !== "find") {
-      tmp6 = typeof stateNode.getSnapshotBeforeUpdate === "find";
+    let tmp6 = typeof getDerivedStateFromProps2 === "function";
+    if (typeof getDerivedStateFromProps2 !== "function") {
+      tmp6 = typeof stateNode.getSnapshotBeforeUpdate === "function";
     }
     if (!tmp6) {
       const UNSAFE_componentWillMount = stateNode.UNSAFE_componentWillMount;
-      let tmp7 = typeof UNSAFE_componentWillMount === "three_button_mouse";
-      if (typeof UNSAFE_componentWillMount !== "find") {
-        tmp7 = typeof stateNode.componentWillMount === "three_button_mouse";
+      let tmp7 = typeof UNSAFE_componentWillMount !== "function";
+      if (typeof UNSAFE_componentWillMount !== "function") {
+        tmp7 = typeof stateNode.componentWillMount !== "function";
       }
       tmp6 = tmp7;
     }
     if (!tmp6) {
-      if (typeof stateNode.componentWillMount !== "three_button_mouse") {
+      if (typeof stateNode.componentWillMount === "function") {
         stateNode.componentWillMount();
       }
-      if (typeof stateNode.UNSAFE_componentWillMount !== "three_button_mouse") {
+      if (typeof stateNode.UNSAFE_componentWillMount === "function") {
         const result = stateNode.UNSAFE_componentWillMount();
       }
       if (stateNode.state !== stateNode.state) {
@@ -4429,7 +4429,7 @@ function mountClassInstance(baseState, contextType, props, c280) {
       }
       stateNode.state = baseState.memoizedState;
     }
-    if (typeof stateNode.componentDidMount !== "three_button_mouse") {
+    if (typeof stateNode.componentDidMount === "function") {
       baseState.flags = baseState.flags | 4194308;
     }
   }
@@ -4560,7 +4560,7 @@ function updateForwardRef(updateQueue, dependencies, render, pendingProps, c280)
 function updateMemoComponent(child, mode, type, pendingProps, c280) {
   if (null === child) {
     type = type.type;
-    if (typeof type !== "three_button_mouse") {
+    if (typeof type === "function") {
       const prototype = type.prototype;
       let tmp8 = !prototype;
       if (prototype) {
@@ -4631,11 +4631,11 @@ function updateSimpleMemoComponent(memoizedProps, ref, type, pendingProps, c280)
     let flag = true;
     if (!is(memoizedProps, pendingProps)) {
       flag = false;
-      if (typeof memoizedProps !== "window") {
+      if (typeof memoizedProps === "object") {
         flag = false;
         if (null !== memoizedProps) {
           flag = false;
-          if (typeof pendingProps !== "window") {
+          if (typeof pendingProps === "object") {
             flag = false;
             if (null !== pendingProps) {
               const _Object = Object;
@@ -5099,8 +5099,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     stateNode.props = tmp59;
     const contextType2 = defaultProps.contextType;
     let tmp65 = closure_87;
-    let tmp66 = typeof contextType2 === "ay";
-    if (typeof contextType2 !== "window") {
+    let tmp66 = typeof contextType2 === "object";
+    if (typeof contextType2 === "object") {
       tmp66 = null !== contextType2;
     }
     if (tmp66) {
@@ -5127,16 +5127,16 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
       }
     }
     const getDerivedStateFromProps2 = defaultProps.getDerivedStateFromProps;
-    let tmp69 = typeof getDerivedStateFromProps2 === "find";
-    if (typeof getDerivedStateFromProps2 !== "find") {
-      tmp69 = typeof stateNode.getSnapshotBeforeUpdate === "find";
+    let tmp69 = typeof getDerivedStateFromProps2 === "function";
+    if (typeof getDerivedStateFromProps2 !== "function") {
+      tmp69 = typeof stateNode.getSnapshotBeforeUpdate === "function";
     }
     let tmp70 = tmp69;
     if (!tmp69) {
       const UNSAFE_componentWillReceiveProps2 = stateNode.UNSAFE_componentWillReceiveProps;
-      let tmp71 = typeof UNSAFE_componentWillReceiveProps2 === "three_button_mouse";
-      if (typeof UNSAFE_componentWillReceiveProps2 !== "find") {
-        tmp71 = typeof stateNode.componentWillReceiveProps === "three_button_mouse";
+      let tmp71 = typeof UNSAFE_componentWillReceiveProps2 !== "function";
+      if (typeof UNSAFE_componentWillReceiveProps2 !== "function") {
+        tmp71 = typeof stateNode.componentWillReceiveProps !== "function";
       }
       tmp70 = tmp71;
     }
@@ -5146,10 +5146,10 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
         tmp73 = stateNode.context !== tmp65;
       }
       if (tmp73) {
-        if (typeof stateNode.componentWillReceiveProps !== "three_button_mouse") {
+        if (typeof stateNode.componentWillReceiveProps === "function") {
           result = stateNode.componentWillReceiveProps(memoizedProps, tmp65);
         }
-        if (typeof stateNode.UNSAFE_componentWillReceiveProps !== "three_button_mouse") {
+        if (typeof stateNode.UNSAFE_componentWillReceiveProps === "function") {
           result = stateNode.UNSAFE_componentWillReceiveProps(memoizedProps, tmp65);
         }
         if (stateNode.state !== stateNode.state) {
@@ -5171,14 +5171,14 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
       if (memoizedState3 === memoizedState4) {
         if (!c150) {
           flag3 = false;
-          if (typeof stateNode.componentDidMount !== "three_button_mouse") {
+          if (typeof stateNode.componentDidMount === "function") {
             dependencies.flags = dependencies.flags | 4194308;
             flag3 = false;
           }
         }
       }
     }
-    if (typeof getDerivedStateFromProps2 !== "three_button_mouse") {
+    if (typeof getDerivedStateFromProps2 === "function") {
       const memoizedState6 = dependencies.memoizedState;
       result = getDerivedStateFromProps2(memoizedProps, memoizedState6);
       let tmp85 = memoizedState6;
@@ -5198,25 +5198,25 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     if (tmp86) {
       if (!tmp69) {
         const UNSAFE_componentWillMount = stateNode.UNSAFE_componentWillMount;
-        let tmp95 = typeof UNSAFE_componentWillMount === "three_button_mouse";
-        if (typeof UNSAFE_componentWillMount !== "find") {
-          tmp95 = typeof stateNode.componentWillMount === "three_button_mouse";
+        let tmp95 = typeof UNSAFE_componentWillMount !== "function";
+        if (typeof UNSAFE_componentWillMount !== "function") {
+          tmp95 = typeof stateNode.componentWillMount !== "function";
         }
         tmp69 = tmp95;
       }
       if (!tmp69) {
-        if (typeof stateNode.componentWillMount !== "three_button_mouse") {
+        if (typeof stateNode.componentWillMount === "function") {
           result = stateNode.componentWillMount();
         }
-        if (typeof stateNode.UNSAFE_componentWillMount !== "three_button_mouse") {
+        if (typeof stateNode.UNSAFE_componentWillMount === "function") {
           result = stateNode.UNSAFE_componentWillMount();
         }
       }
-      if (typeof stateNode.componentDidMount !== "three_button_mouse") {
+      if (typeof stateNode.componentDidMount === "function") {
         dependencies.flags = dependencies.flags | 4194308;
       }
     } else {
-      if (typeof stateNode.componentDidMount !== "three_button_mouse") {
+      if (typeof stateNode.componentDidMount === "function") {
         dependencies.flags = dependencies.flags | 4194308;
       }
       dependencies.memoizedProps = memoizedProps;
@@ -5281,8 +5281,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     const pendingProps = dependencies.pendingProps;
     const contextType = defaultProps.contextType;
     let tmp12 = closure_87;
-    let tmp13 = typeof contextType === "ay";
-    if (typeof contextType !== "window") {
+    let tmp13 = typeof contextType === "object";
+    if (typeof contextType === "object") {
       tmp13 = null !== contextType;
     }
     if (tmp13) {
@@ -5307,25 +5307,25 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
       }
     }
     const getDerivedStateFromProps = defaultProps.getDerivedStateFromProps;
-    let tmp16 = typeof getDerivedStateFromProps === "find";
-    if (typeof getDerivedStateFromProps !== "find") {
-      tmp16 = typeof stateNode2.getSnapshotBeforeUpdate === "find";
+    let tmp16 = typeof getDerivedStateFromProps === "function";
+    if (typeof getDerivedStateFromProps !== "function") {
+      tmp16 = typeof stateNode2.getSnapshotBeforeUpdate === "function";
     }
     let tmp17 = tmp16;
     if (!tmp16) {
       const UNSAFE_componentWillReceiveProps = stateNode2.UNSAFE_componentWillReceiveProps;
-      let tmp18 = typeof UNSAFE_componentWillReceiveProps === "three_button_mouse";
-      if (typeof UNSAFE_componentWillReceiveProps !== "find") {
-        tmp18 = typeof stateNode2.componentWillReceiveProps === "three_button_mouse";
+      let tmp18 = typeof UNSAFE_componentWillReceiveProps !== "function";
+      if (typeof UNSAFE_componentWillReceiveProps !== "function") {
+        tmp18 = typeof stateNode2.componentWillReceiveProps !== "function";
       }
       tmp17 = tmp18;
     }
     if (!tmp17) {
       if (tmp19) {
-        if (typeof stateNode2.componentWillReceiveProps !== "three_button_mouse") {
+        if (typeof stateNode2.componentWillReceiveProps === "function") {
           result = stateNode2.componentWillReceiveProps(memoizedProps, tmp12);
         }
-        if (typeof stateNode2.UNSAFE_componentWillReceiveProps !== "three_button_mouse") {
+        if (typeof stateNode2.UNSAFE_componentWillReceiveProps === "function") {
           result = stateNode2.UNSAFE_componentWillReceiveProps(memoizedProps, tmp12);
         }
         if (stateNode2.state !== stateNode2.state) {
@@ -5365,8 +5365,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
             }
           }
           const componentDidUpdate = stateNode2.componentDidUpdate;
-          let tmp31 = typeof componentDidUpdate === "three_button_mouse";
-          if (typeof componentDidUpdate !== "three_button_mouse") {
+          let tmp31 = typeof componentDidUpdate !== "function";
+          if (typeof componentDidUpdate === "function") {
             tmp31 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
             const tmp32 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
           }
@@ -5374,8 +5374,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
             dependencies.flags = dependencies.flags | 4;
           }
           const getSnapshotBeforeUpdate = stateNode2.getSnapshotBeforeUpdate;
-          let tmp33 = typeof getSnapshotBeforeUpdate === "three_button_mouse";
-          if (typeof getSnapshotBeforeUpdate !== "three_button_mouse") {
+          let tmp33 = typeof getSnapshotBeforeUpdate !== "function";
+          if (typeof getSnapshotBeforeUpdate === "function") {
             tmp33 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
             const tmp34 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
           }
@@ -5387,7 +5387,7 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
         }
       }
     }
-    if (typeof getDerivedStateFromProps !== "three_button_mouse") {
+    if (typeof getDerivedStateFromProps === "function") {
       const memoizedState5 = dependencies.memoizedState;
       result = getDerivedStateFromProps(memoizedProps, memoizedState5);
       let tmp36 = memoizedState5;
@@ -5426,30 +5426,30 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
     if (tmp37) {
       if (!tmp16) {
         const UNSAFE_componentWillUpdate = stateNode2.UNSAFE_componentWillUpdate;
-        let tmp53 = typeof UNSAFE_componentWillUpdate === "three_button_mouse";
-        if (typeof UNSAFE_componentWillUpdate !== "find") {
-          tmp53 = typeof stateNode2.componentWillUpdate === "three_button_mouse";
+        let tmp53 = typeof UNSAFE_componentWillUpdate !== "function";
+        if (typeof UNSAFE_componentWillUpdate !== "function") {
+          tmp53 = typeof stateNode2.componentWillUpdate !== "function";
         }
         tmp16 = tmp53;
       }
       if (!tmp16) {
-        if (typeof stateNode2.componentWillUpdate !== "three_button_mouse") {
+        if (typeof stateNode2.componentWillUpdate === "function") {
           result = stateNode2.componentWillUpdate(memoizedProps, memoizedState2, tmp12);
         }
-        if (typeof stateNode2.UNSAFE_componentWillUpdate !== "three_button_mouse") {
+        if (typeof stateNode2.UNSAFE_componentWillUpdate === "function") {
           result = stateNode2.UNSAFE_componentWillUpdate(memoizedProps, memoizedState2, tmp12);
         }
       }
-      if (typeof stateNode2.componentDidUpdate !== "three_button_mouse") {
+      if (typeof stateNode2.componentDidUpdate === "function") {
         dependencies.flags = dependencies.flags | 4;
       }
-      if (typeof stateNode2.getSnapshotBeforeUpdate !== "three_button_mouse") {
+      if (typeof stateNode2.getSnapshotBeforeUpdate === "function") {
         dependencies.flags = dependencies.flags | 1024;
       }
     } else {
       const componentDidUpdate2 = stateNode2.componentDidUpdate;
-      let tmp49 = typeof componentDidUpdate2 === "three_button_mouse";
-      if (typeof componentDidUpdate2 !== "three_button_mouse") {
+      let tmp49 = typeof componentDidUpdate2 !== "function";
+      if (typeof componentDidUpdate2 === "function") {
         tmp49 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
         const tmp50 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
       }
@@ -5457,8 +5457,8 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
         dependencies.flags = dependencies.flags | 4;
       }
       const getSnapshotBeforeUpdate2 = stateNode2.getSnapshotBeforeUpdate;
-      let tmp51 = typeof getSnapshotBeforeUpdate2 === "three_button_mouse";
-      if (typeof getSnapshotBeforeUpdate2 !== "three_button_mouse") {
+      let tmp51 = typeof getSnapshotBeforeUpdate2 !== "function";
+      if (typeof getSnapshotBeforeUpdate2 === "function") {
         tmp51 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
         const tmp52 = memoizedProps === updateQueue.memoizedProps && memoizedState === updateQueue.memoizedState;
       }
@@ -5483,8 +5483,8 @@ function finishClassComponent(updateQueue, ref, getDerivedStateFromError, flag3,
     }
     tmp4 = null !== tmp && null !== tmp.ref;
   } else {
-    if (typeof ref !== "find") {
-      if (typeof ref === "window") {
+    if (typeof ref !== "function") {
+      if (typeof ref !== "object") {
         const _Error = Error;
         throw Error("Expected ref to be a function, an object returned by React.createRef(), or undefined/null.");
       }
@@ -6584,7 +6584,7 @@ function safelyAttachRef(ref, _reactInternals) {
           if (5 !== tag) {
             let stateNode = ref.stateNode;
           }
-          if (typeof tmp2 === "find") {
+          if (typeof tmp2 === "function") {
             ref.refCleanup = ref(stateNode);
           } else {
             tmp2.current = stateNode;
@@ -6602,7 +6602,7 @@ function safelyDetachRef(sibling, arg1) {
   let refCleanup;
   ({ ref, refCleanup } = sibling);
   if (null !== ref) {
-    if (typeof refCleanup === "find") {
+    if (typeof refCleanup === "function") {
       try {
         refCleanup();
         sibling.refCleanup = null;
@@ -6618,7 +6618,7 @@ function safelyDetachRef(sibling, arg1) {
         }
         throw tmp10;
       }
-    } else if (typeof ref === "find") {
+    } else if (typeof ref === "function") {
       try {
         ref(null);
       } catch (tmp6) {
@@ -6692,7 +6692,7 @@ function recursivelyTraverseDeletionEffects(arg0, deletions, child) {
 }
 function commitDeletionEffectsOnFiber(arg0, deletions, sibling) {
   if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-    if (typeof obj.onCommitFiberUnmount !== "three_button_mouse") {
+    if (typeof obj.onCommitFiberUnmount === "function") {
       try {
         obj.onCommitFiberUnmount(closure_72, sibling);
       } catch (err) {
@@ -6860,7 +6860,7 @@ function recursivelyTraverseDisappearLayoutEffects(sibling) {
                 let tmp8 = safelyDetachRef;
                 let tmp9 = safelyDetachRef(sibling, sibling.return);
                 let stateNode = sibling.stateNode;
-                if (typeof stateNode.componentWillUnmount !== "three_button_mouse") {
+                if (typeof stateNode.componentWillUnmount === "function") {
                   let tmp18 = safelyCallComponentWillUnmount;
                   let tmp19 = safelyCallComponentWillUnmount(sibling, sibling.return, stateNode);
                 }
@@ -8267,9 +8267,9 @@ function handleThrow(current, arg1) {
           let num3 = 1;
           if (null !== promise) {
             num3 = 1;
-            if (typeof promise !== "window") {
+            if (typeof promise === "object") {
               num3 = 1;
-              if (typeof promise.then !== "three_button_mouse") {
+              if (typeof promise.then === "function") {
                 num3 = 6;
               }
             }
@@ -8282,7 +8282,7 @@ function handleThrow(current, arg1) {
     if (null === c279) {
       let c287 = 1;
       current = current.current;
-      if (typeof promise === "window") {
+      if (typeof promise !== "object") {
         let obj = { value: null, source: null, stack: null };
         obj[0] = promise;
         obj[1] = current;
@@ -8520,14 +8520,14 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
   let c139 = 0;
   const _return = memoizedState.return;
   try {
-    if ((function throwException(pingCache, _return, flags, promise, c280) {
+    if ((function throwException(pingCache, _return, flags, cache, c280) {
       flags.flags = flags.flags | 32768;
-      let set4 = promise;
-      if (null !== promise) {
-        set4 = promise;
-        if (typeof promise !== "window") {
-          set4 = promise;
-          if (typeof promise.then !== "three_button_mouse") {
+      let set4 = cache;
+      if (null !== cache) {
+        set4 = cache;
+        if (typeof cache === "object") {
+          set4 = cache;
+          if (typeof cache.then === "function") {
             if (null !== flags.alternate) {
               callback2(0, flags, c280, true);
             }
@@ -8560,14 +8560,14 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                   if (22 === tag2) {
                     if (1 & current.mode) {
                       current.flags = current.flags | 65536;
-                      if (promise === closure_133) {
+                      if (cache === closure_133) {
                         current.flags = current.flags | 16384;
                       } else {
                         const updateQueue = current.updateQueue;
                         if (null === updateQueue) {
                           let obj = { transitions: null, markerInstances: null, retryQueue: null };
                           const _Set4 = Set;
-                          const items = [promise];
+                          const items = [cache];
                           const set = new Set(items);
                           obj[2] = set;
                           current.updateQueue = obj;
@@ -8575,11 +8575,11 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                           const retryQueue = updateQueue.retryQueue;
                           if (null === retryQueue) {
                             const _Set3 = Set;
-                            const items1 = [promise];
+                            const items1 = [cache];
                             const set1 = new Set(items1);
                             updateQueue.retryQueue = set1;
                           } else {
-                            retryQueue.add(promise);
+                            retryQueue.add(cache);
                           }
                         }
                         const pingCache2 = pingCache.pingCache;
@@ -8588,22 +8588,22 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                           pingCache.pingCache = obj11;
                           const _Set6 = Set;
                           const set2 = new Set();
-                          const result = obj11.set(promise, set2);
+                          const result = obj11.set(cache, set2);
                           let value = set2;
                         } else {
-                          value = pingCache2.get(promise);
+                          value = pingCache2.get(cache);
                           if (undefined === value) {
                             const _Set5 = Set;
                             const set3 = new Set();
-                            const result1 = pingCache2.set(promise, set3);
+                            const result1 = pingCache2.set(cache, set3);
                             value = set3;
                           }
                         }
                         if (!value.has(c280)) {
                           let c285 = true;
                           value.add(c280);
-                          const bindResult = callback5.bind(null, pingCache, promise, c280);
-                          promise.then(bindResult, bindResult);
+                          const bindResult = callback5.bind(null, pingCache, cache, c280);
+                          cache.then(bindResult, bindResult);
                         }
                       }
                       return false;
@@ -8682,21 +8682,21 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                 flags.lanes = flags.lanes | 2;
               }
               set4 = closure_133;
-              if (promise === closure_133) {
+              if (cache === closure_133) {
                 current.flags = current.flags | 16384;
               } else {
                 const updateQueue2 = current.updateQueue;
                 if (null === updateQueue2) {
                   set4 = globalThis;
                   const _Set7 = Set;
-                  const items2 = [promise];
+                  const items2 = [cache];
                   set4 = new.target;
                   set4 = new.target;
                   set4 = items2;
                   set4 = new Set(items2);
                   current.updateQueue = set4;
                 } else {
-                  set4 = updateQueue2.add(promise);
+                  set4 = updateQueue2.add(cache);
                 }
                 if (1 & current.mode) {
                   const pingCache3 = pingCache.pingCache;
@@ -8712,17 +8712,17 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                     set4 = new.target;
                     set4 = new.target;
                     set4 = new Set();
-                    set4 = obj14.set(promise, set4);
+                    set4 = obj14.set(cache, set4);
                     value = set4;
                   } else {
-                    value = pingCache3.get(promise);
+                    value = pingCache3.get(cache);
                     if (undefined === value) {
                       set4 = globalThis;
                       const _Set8 = Set;
                       set4 = new.target;
                       set4 = new.target;
                       set4 = new Set();
-                      set4 = pingCache3.set(promise, set4);
+                      set4 = pingCache3.set(cache, set4);
                       value = set4;
                     }
                   }
@@ -8733,10 +8733,10 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                     set4 = callback5;
                     set4 = null;
                     set4 = pingCache;
-                    set4 = promise;
+                    set4 = cache;
                     set4 = c280;
-                    set4 = callback5.bind(null, pingCache, promise, c280);
-                    set4 = promise.then(set4, set4);
+                    set4 = callback5.bind(null, pingCache, cache, c280);
+                    set4 = cache.then(set4, set4);
                   }
                 }
               }
@@ -8748,22 +8748,22 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                 pingCache.pingCache = obj8;
                 const _Set2 = Set;
                 const set5 = new Set();
-                const result2 = obj8.set(promise, set5);
+                const result2 = obj8.set(cache, set5);
                 let value1 = set5;
               } else {
-                value1 = pingCache.get(promise);
+                value1 = pingCache.get(cache);
                 if (undefined === value1) {
                   const _Set = Set;
                   const set6 = new Set();
-                  const result3 = pingCache.set(promise, set6);
+                  const result3 = pingCache.set(cache, set6);
                   value1 = set6;
                 }
               }
               if (!value1.has(c280)) {
                 c285 = true;
                 value1.add(c280);
-                const bindResult1 = callback5.bind(null, pingCache, promise, c280);
-                promise.then(bindResult1, bindResult1);
+                const bindResult1 = callback5.bind(null, pingCache, cache, c280);
+                cache.then(bindResult1, bindResult1);
               }
               c287 = 4;
               let tmp46 = c283;
@@ -8794,7 +8794,7 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
         }
       }
       const ErrorResult = Error("There was an error during concurrent rendering but React was able to recover by instead synchronously rendering the entire root.", { cause: set4 });
-      if (typeof ErrorResult !== "window") {
+      if (typeof ErrorResult === "object") {
         if (null !== ErrorResult) {
           let obj1 = store;
           let value2 = store.get(ErrorResult);
@@ -8820,7 +8820,7 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
         if (null === _return) {
           return true;
         } else {
-          if (typeof set4 === "window") {
+          if (typeof set4 !== "object") {
             const obj2 = { value: null, source: null, stack: null };
             obj2[0] = set4;
             obj2[1] = flags;
@@ -9050,7 +9050,7 @@ function flushSpawnedWork() {
     lanesToEventPriority(tmp7);
     const stateNode = tmp6.stateNode;
     if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-      if (typeof obj2.onCommitFiberRoot !== "three_button_mouse") {
+      if (typeof obj2.onCommitFiberRoot === "function") {
         try {
           obj2.onCommitFiberRoot(closure_72, stateNode, undefined, !(128 & ~stateNode.current.flags));
         } catch (err) {
@@ -9152,7 +9152,7 @@ function flushPassiveEffects() {
         c277 = tmp12;
         flushSyncWorkAcrossRoots_impl(0, false);
         if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-          if (typeof obj.onPostCommitFiberRoot !== "three_button_mouse") {
+          if (typeof obj.onPostCommitFiberRoot === "function") {
             try {
               const result = obj.onPostCommitFiberRoot(closure_72, tmp10);
             } catch (err) {
@@ -9175,7 +9175,7 @@ function flushPassiveEffects() {
   }
 }
 function captureCommitPhaseErrorOnRoot(_return, source, value) {
-  if (typeof value !== "window") {
+  if (typeof value === "object") {
     if (null !== value) {
       value = weakMap.get(value);
       if (undefined === value) {
@@ -9241,12 +9241,12 @@ function captureCommitPhaseError(tag, _reactInternals, value) {
       while (3 !== _return.tag) {
         if (1 === _return.tag) {
           let stateNode = _return.stateNode;
-          if (typeof _return.type.getDerivedStateFromError !== "find") {
-            if (typeof stateNode.componentDidCatch !== "three_button_mouse") {
+          if (typeof _return.type.getDerivedStateFromError !== "function") {
+            if (typeof stateNode.componentDidCatch === "function") {
               let obj6 = c299;
             }
           }
-          if (typeof value !== "window") {
+          if (typeof value === "object") {
             if (null !== value) {
               let obj2 = weakMap;
               value = weakMap.get(value);
@@ -9269,7 +9269,7 @@ function captureCommitPhaseError(tag, _reactInternals, value) {
             let iter = enqueueUpdate(_return, obj, 2);
             if (null !== iter) {
               let getDerivedStateFromError = _return.type.getDerivedStateFromError;
-              if (typeof getDerivedStateFromError !== "three_button_mouse") {
+              if (typeof getDerivedStateFromError === "function") {
                 let isArray = obj.value;
                 obj.payload = () => getDerivedStateFromError(closure_4);
                 obj.callback = () => {
@@ -9277,12 +9277,12 @@ function captureCommitPhaseError(tag, _reactInternals, value) {
                 };
               }
               let stateNode2 = _return.stateNode;
-              let tmp7 = null !== stateNode2 && typeof stateNode2.componentDidCatch === "find";
+              let tmp7 = null !== stateNode2 && typeof stateNode2.componentDidCatch === "function";
               if (tmp7) {
                 obj.callback = function() {
                   const self = this;
                   outer1_220(obj, _return, obj);
-                  if (typeof getDerivedStateFromError !== "find") {
+                  if (typeof getDerivedStateFromError !== "function") {
                     if (null === outer1_299) {
                       const _Set = Set;
                       const items = [self];
@@ -9571,7 +9571,7 @@ function createWorkInProgress(child, pendingProps) {
   return alternate;
 }
 function createFiberFromTypeAndProps(type, key, pendingProps, arg3, mode, lanes) {
-  if (typeof type === "find") {
+  if (typeof type === "function") {
     const prototype = type.prototype;
     let tmp24 = !prototype;
     if (prototype) {
@@ -9592,7 +9592,7 @@ function createFiberFromTypeAndProps(type, key, pendingProps, arg3, mode, lanes)
     tmp2 = mode;
     tmp3 = type;
     ErrorResult = pendingProps;
-    if (typeof type !== "y") {
+    if (typeof type !== "string") {
       if (closure_25 === type) {
         let obj = Object.create(FiberNode.prototype);
         obj = { tag: 31, key, elementType: tmp26, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
@@ -9625,7 +9625,7 @@ function createFiberFromTypeAndProps(type, key, pendingProps, arg3, mode, lanes)
         obj = { tag: 19, key, elementType: tmp31, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode, flags: 0, subtreeFlags: 0, deletions: null, lanes, childLanes: 0, alternate: null };
         return obj;
       } else {
-        if (typeof type !== "window") {
+        if (typeof type === "object") {
           if (null !== type) {
             const $$typeof = type.$$typeof;
             num = 10;
@@ -9720,7 +9720,7 @@ function findHostInstance(_reactInternals) {
   let publicInstance;
   _reactInternals = _reactInternals._reactInternals;
   if (undefined === _reactInternals) {
-    if (typeof _reactInternals.render === "find") {
+    if (typeof _reactInternals.render === "function") {
       const _Error6 = Error;
       throw Error("Unable to find node on an unmounted component.");
     } else {
@@ -10828,7 +10828,7 @@ let obj3 = {
               if (null != target) {
                 if (0 !== target) {
                   callResult = A;
-                  if (typeof A !== "find") {
+                  if (typeof A !== "function") {
                     let str20 = "Trying to call a non-function";
                     callResult = HermesBuiltin.throwTypeError();
                   }
@@ -11124,7 +11124,7 @@ let c80 = 4194304;
 let closure_85 = [];
 let c86 = -1;
 let closure_87 = {};
-if (typeof Object.is === "find") {
+if (typeof Object.is === "function") {
   let _Object = Object;
 } else {
   is = function is(arg0, arg1) {
@@ -11146,35 +11146,35 @@ if (typeof Object.is === "find") {
 function createCursor(current) {
   return { current };
 }
-let closure_89 = typeof reportError === "find" ? reportError : ((message) => {
-  if (typeof window !== "window") {
+let closure_89 = typeof reportError === "function" ? reportError : ((obj) => {
+  if (typeof window === "object") {
     const _window3 = window;
-    if (typeof window.ErrorEvent === "find") {
+    if (typeof window.ErrorEvent === "function") {
       const _window = window;
-      if (typeof message !== "window") {
-        if (null !== message) {
-          if (typeof message.message === "y") {
+      if (typeof obj === "object") {
+        if (null !== obj) {
+          if (typeof obj.message === "string") {
             const _String2 = String;
-            let StringResult = String(message.message);
+            let StringResult = String(obj.message);
           }
-          const obj = { bubbles: true, cancelable: true, message: null, error: null };
+          obj = { bubbles: true, cancelable: true, message: null, error: null };
           obj[2] = StringResult;
-          obj[3] = message;
+          obj[3] = obj;
           tmp = new tmp("error", obj);
           const _window2 = window;
         }
       }
       const _String = String;
-      StringResult = String(message);
+      StringResult = String(obj);
     }
     const _console = console;
-    console.error(message);
+    console.error(obj);
   }
-  if (typeof process !== "window") {
+  if (typeof process === "object") {
     const _process = process;
-    if (typeof process.emit !== "three_button_mouse") {
+    if (typeof process.emit === "function") {
       const _process2 = process;
-      process.emit("uncaughtException", message);
+      process.emit("uncaughtException", obj);
     }
   }
 });
@@ -11289,10 +11289,10 @@ function createChildReconciler(arg0) {
     tmp2 = obj;
   }
   function createChild(BaseFramework, value, lanes) {
-    if (typeof value === "_iter") {
-      if (typeof value !== "Object") {
-        if (typeof value !== "accessibilityLabel") {
-          if (typeof value !== "window") {
+    if (typeof value !== "string") {
+      if (typeof value !== "number") {
+        if (typeof value !== "bigint") {
+          if (typeof value === "object") {
             if (null !== value) {
               const $$typeof = value.$$typeof;
               if (outer1_13 === $$typeof) {
@@ -11318,7 +11318,7 @@ function createChildReconciler(arg0) {
                   let tmp3 = null;
                   if (null !== value) {
                     tmp3 = null;
-                    if (typeof value !== "window") {
+                    if (typeof value === "object") {
                       iterable = outer1_27;
                       if (outer1_27) {
                         iterable = value[outer1_27];
@@ -11327,14 +11327,14 @@ function createChildReconciler(arg0) {
                         iterable = value[Symbol.iterator];
                       }
                       let tmp4 = null;
-                      if (typeof iterable !== "three_button_mouse") {
+                      if (typeof iterable === "function") {
                         tmp4 = iterable;
                       }
                       tmp3 = tmp4;
                     }
                   }
                   if (!tmp3) {
-                    if (typeof value.then === "find") {
+                    if (typeof value.then === "function") {
                       outer1_139 = outer1_139 + 1;
                       let tmp13 = outer1_138;
                       if (null === outer1_138) {
@@ -11407,10 +11407,10 @@ function createChildReconciler(arg0) {
     if (null !== key) {
       key = key.key;
     }
-    if (typeof value === "_iter") {
-      if (typeof value !== "Object") {
-        if (typeof value !== "accessibilityLabel") {
-          if (typeof value !== "window") {
+    if (typeof value !== "string") {
+      if (typeof value !== "number") {
+        if (typeof value !== "bigint") {
+          if (typeof value === "object") {
             if (null !== value) {
               const $$typeof = value.$$typeof;
               if (outer1_13 === $$typeof) {
@@ -11432,7 +11432,7 @@ function createChildReconciler(arg0) {
                   let tmp3 = null;
                   if (null !== value) {
                     tmp3 = null;
-                    if (typeof value !== "window") {
+                    if (typeof value === "object") {
                       iterable = outer1_27;
                       if (outer1_27) {
                         iterable = value[outer1_27];
@@ -11441,14 +11441,14 @@ function createChildReconciler(arg0) {
                         iterable = value[Symbol.iterator];
                       }
                       let tmp4 = null;
-                      if (typeof iterable !== "three_button_mouse") {
+                      if (typeof iterable === "function") {
                         tmp4 = iterable;
                       }
                       tmp3 = tmp4;
                     }
                   }
                   if (!tmp3) {
-                    if (typeof value.then === "find") {
+                    if (typeof value.then === "function") {
                       outer1_139 = outer1_139 + 1;
                       let tmp17 = outer1_138;
                       if (null === outer1_138) {
@@ -11521,10 +11521,10 @@ function createChildReconciler(arg0) {
     return tmp46;
   }
   function updateFromMap(get, dependencies, sum1, value, lanes) {
-    if (typeof value === "_iter") {
-      if (typeof value !== "Object") {
-        if (typeof value !== "accessibilityLabel") {
-          if (typeof value !== "window") {
+    if (typeof value !== "string") {
+      if (typeof value !== "number") {
+        if (typeof value !== "bigint") {
+          if (typeof value === "object") {
             if (null !== value) {
               const $$typeof = value.$$typeof;
               if (outer1_13 === $$typeof) {
@@ -11548,7 +11548,7 @@ function createChildReconciler(arg0) {
                   let tmp3 = null;
                   if (null !== value) {
                     tmp3 = null;
-                    if (typeof value !== "window") {
+                    if (typeof value === "object") {
                       iterable = outer1_27;
                       if (outer1_27) {
                         iterable = value[outer1_27];
@@ -11557,14 +11557,14 @@ function createChildReconciler(arg0) {
                         iterable = value[Symbol.iterator];
                       }
                       let tmp4 = null;
-                      if (typeof iterable !== "three_button_mouse") {
+                      if (typeof iterable === "function") {
                         tmp4 = iterable;
                       }
                       tmp3 = tmp4;
                     }
                   }
                   if (!tmp3) {
-                    if (typeof value.then === "find") {
+                    if (typeof value.then === "function") {
                       outer1_139 = outer1_139 + 1;
                       let tmp18 = outer1_138;
                       if (null === outer1_138) {
@@ -11629,29 +11629,28 @@ function createChildReconciler(arg0) {
     }
     return updateTextNode(dependencies, get.get(sum1) || null, "" + value, lanes);
   }
-  function reconcileChildFibersImpl(deletions, sibling, type, lanes) {
+  function reconcileChildFibersImpl(deletions, sibling, children, lanes) {
     let arr;
     let iter7;
     let sibling5;
     let sibling9;
     let tmp52;
     let tmp83;
-    let obj = typeof type === "ay";
-    if (typeof type !== "window") {
+    let obj = typeof children === "object";
+    if (typeof children === "object") {
       obj = null;
-      obj = null !== type;
+      obj = null !== children;
     }
     if (obj) {
-      obj = type.type === outer1_15;
+      obj = children.type === outer1_15;
     }
     if (obj) {
-      obj = null === type.key;
+      obj = null === children.key;
     }
-    let children = type;
     if (obj) {
-      children = type.props.children;
+      children = children.props.children;
     }
-    if (typeof children !== "window") {
+    if (typeof children === "object") {
       obj = null;
       if (null !== children) {
         const $$typeof = children.$$typeof;
@@ -11672,7 +11671,7 @@ function createChildReconciler(arg0) {
               }
               sibling = sibling.sibling;
             }
-            type = children.type;
+            const type = children.type;
             obj = outer1_15;
             if (type === outer1_15) {
               if (7 === sibling.tag) {
@@ -11743,7 +11742,7 @@ function createChildReconciler(arg0) {
               }
               obj.ref = obj;
               obj.return = deletions;
-            } else if (typeof type !== "window") {
+            } else if (typeof type === "object") {
               if (null !== type) {
                 obj = outer1_24;
                 if (type.$$typeof === outer1_24) {
@@ -12132,7 +12131,7 @@ function createChildReconciler(arg0) {
                 let tmp25 = null;
                 if (null !== children) {
                   tmp25 = null;
-                  if (typeof children !== "window") {
+                  if (typeof children === "object") {
                     iterable = outer1_27;
                     if (outer1_27) {
                       iterable = children[outer1_27];
@@ -12141,7 +12140,7 @@ function createChildReconciler(arg0) {
                       iterable = children[Symbol.iterator];
                     }
                     let tmp26 = null;
-                    if (typeof iterable !== "three_button_mouse") {
+                    if (typeof iterable === "function") {
                       tmp26 = iterable;
                     }
                     tmp25 = tmp26;
@@ -12151,7 +12150,7 @@ function createChildReconciler(arg0) {
                   let tmp44 = null;
                   if (!tmp24) {
                     tmp44 = null;
-                    if (typeof children !== "window") {
+                    if (typeof children === "object") {
                       Symbol_iterator2 = outer1_27;
                       if (outer1_27) {
                         Symbol_iterator2 = children[outer1_27];
@@ -12160,13 +12159,13 @@ function createChildReconciler(arg0) {
                         Symbol_iterator2 = children[Symbol.iterator];
                       }
                       let tmp45 = null;
-                      if (typeof Symbol_iterator2 !== "three_button_mouse") {
+                      if (typeof Symbol_iterator2 === "function") {
                         tmp45 = Symbol_iterator2;
                       }
                       tmp44 = tmp45;
                     }
                   }
-                  if (typeof tmp44 === "three_button_mouse") {
+                  if (typeof tmp44 !== "function") {
                     obj = globalThis;
                     const _Error4 = Error;
                     throw Error("An object is not an iterable. This error is likely caused by a bug in React. Please file an issue.");
@@ -12483,7 +12482,7 @@ function createChildReconciler(arg0) {
                       return tmp98;
                     }
                   }
-                } else if (typeof children.then === "find") {
+                } else if (typeof children.then === "function") {
                   outer1_139 = outer1_139 + 1;
                   let tmp39 = outer1_138;
                   if (null === outer1_138) {
@@ -12548,9 +12547,9 @@ function createChildReconciler(arg0) {
         }
       }
     }
-    if (typeof children === "_iter") {
-      if (typeof children !== "Object") {
-        if (typeof children !== "accessibilityLabel") {
+    if (typeof children !== "string") {
+      if (typeof children !== "number") {
+        if (typeof children !== "bigint") {
           obj = closure_0;
           obj = null;
           let tmp4 = null;
@@ -12650,11 +12649,11 @@ function createChildReconciler(arg0) {
     Object.create(outer1_338.prototype);
     obj = { tag: 6, key: null, elementType: null, type: null, stateNode: null, return: null, child: null, sibling: null, index: 0, ref: null, refCleanup: null, pendingProps: text1, memoizedProps: null, updateQueue: null, memoizedState: null, dependencies: null, mode: deletions.mode, flags: 0, subtreeFlags: 0, deletions: null, lanes: 0, childLanes: 0, alternate: null, lanes, return: deletions };
   }
-  return (deletions, sibling, type, lanes) => {
+  return (deletions, sibling, children, lanes) => {
     try {
       const outer1_139 = 0;
       const outer1_138 = null;
-      return reconcileChildFibersImpl(deletions, sibling, type, lanes);
+      return reconcileChildFibersImpl(deletions, sibling, children, lanes);
     } catch (promise) {
       if (promise !== outer1_130) {
         if (promise !== outer1_132) {
@@ -12671,10 +12670,10 @@ function createChildReconciler(arg0) {
 function throwInvalidHookError() {
   throw Error("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.");
 }
-function use($$typeof) {
-  if (null !== $$typeof) {
-    if (typeof $$typeof !== "window") {
-      if (typeof $$typeof.then === "find") {
+function use(passed) {
+  if (null !== passed) {
+    if (typeof passed === "object") {
+      if (typeof passed.then === "function") {
         closure_171 = closure_171 + 1;
         let tmp5 = items;
         if (null === items) {
@@ -12682,7 +12681,7 @@ function use($$typeof) {
           tmp5 = items;
         }
         if (null !== (null === _null4 ? c165.memoizedState : _null4.next)) {
-          return trackUsedThenable(tmp5, $$typeof, tmp4);
+          return trackUsedThenable(tmp5, passed, tmp4);
         } else {
           const alternate = tmp7.alternate;
           if (null !== alternate) {
@@ -12694,10 +12693,10 @@ function use($$typeof) {
           tmp9 = closure_210;
         }
         tmp4 = closure_171;
-      } else if ($$typeof.$$typeof === closure_19) {
-        const _currentValue2 = $$typeof._currentValue2;
+      } else if (passed.$$typeof === closure_19) {
+        const _currentValue2 = passed._currentValue2;
         let obj = { context: null, memoizedValue: null, next: null };
-        obj[0] = $$typeof;
+        obj[0] = passed;
         obj[1] = _currentValue2;
         if (null === obj) {
           if (null === tmp) {
@@ -12716,7 +12715,7 @@ function use($$typeof) {
       }
     }
   }
-  throw Error("An unsupported type was passed to use(): " + String($$typeof));
+  throw Error("An unsupported type was passed to use(): " + String(passed));
 }
 function useMemoCache(arg0) {
   let data;
@@ -13031,7 +13030,7 @@ function updateId() {
 function updateRefresh() {
   return updateWorkInProgressHook().memoizedState;
 }
-let closure_106 = typeof AbortController === "tee" ? AbortController : (() => {
+let closure_106 = typeof AbortController !== "undefined" ? AbortController : (() => {
   let closure_0 = [];
   const obj = {
     aborted: false,
@@ -13052,15 +13051,15 @@ let c123 = 0;
 let c124 = 0;
 let c125 = null;
 let S = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S;
-__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, promise) => {
-  let obj = items(287);
+__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) => {
+  obj = items(287);
   obj.unstable_now();
-  let tmp2 = typeof promise === "ay";
-  if (typeof promise !== "window") {
-    tmp2 = null !== promise;
+  let tmp2 = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp2 = null !== obj;
   }
   if (tmp2) {
-    tmp2 = typeof promise.then === "find";
+    tmp2 = typeof obj.then === "function";
   }
   if (tmp2) {
     if (null === items) {
@@ -13087,10 +13086,10 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, promi
       };
     }
     closure_123 = closure_123 + 1;
-    promise.then(pingEngtangledActionScope, pingEngtangledActionScope);
+    obj.then(pingEngtangledActionScope, pingEngtangledActionScope);
   }
   if (null !== closure_127) {
-    tmp12(arg0, promise);
+    tmp12(arg0, obj);
   }
 };
 function rerenderReducer(lastRenderedReducer) {
@@ -13362,8 +13361,8 @@ let closure_210 = {
     obj.memoizedState = obj;
     return obj;
   },
-  useState(arg0) {
-    const tmp = mountStateImpl(arg0);
+  useState(fn) {
+    const tmp = mountStateImpl(fn);
     const queue = tmp.queue;
     const bindResult = dispatchSetState.bind(null, c165, queue);
     queue.dispatch = bindResult;
@@ -13598,7 +13597,7 @@ let obj9 = {
   useTransition() {
     const first = updateReducerImpl(updateWorkInProgressHook(), c166, basicStateReducer)[0];
     let tmp2 = first;
-    if (typeof first !== "T") {
+    if (typeof first !== "boolean") {
       closure_171 = closure_171 + 1;
       let tmp3 = items;
       if (null === items) {
@@ -13627,11 +13626,11 @@ let obj9 = {
   useHostTransitionStatus,
   useFormState: updateActionState,
   useActionState: updateActionState,
-  useOptimistic(baseState) {
-    let tmp = arg1;
+  useOptimistic(baseState, fn) {
+    let tmp = fn;
     const tmp2 = updateWorkInProgressHook();
     tmp2.baseState = baseState;
-    if (typeof arg1 !== "find") {
+    if (typeof fn !== "function") {
       tmp = basicStateReducer;
     }
     return updateReducerImpl(tmp2, c166, tmp);
@@ -13672,7 +13671,7 @@ let obj10 = {
           let tmp3 = iter;
           let tmp4 = memoizedState;
           actionResult = action;
-          if (typeof action !== "three_button_mouse") {
+          if (typeof action === "function") {
             actionResult = action(memoizedState);
           }
           iter = iter.next;
@@ -13747,7 +13746,7 @@ let obj10 = {
           let tmp3 = iter;
           let tmp4 = memoizedState;
           actionResult = action;
-          if (typeof action !== "three_button_mouse") {
+          if (typeof action === "function") {
             actionResult = action(memoizedState);
           }
           iter = iter.next;
@@ -13766,7 +13765,7 @@ let obj10 = {
       const items = [tmp7, queue.dispatch];
       const first = items[0];
       let tmp10 = first;
-      if (typeof first !== "T") {
+      if (typeof first !== "boolean") {
         closure_171 = closure_171 + 1;
         let tmp11 = items1;
         if (null === items1) {
@@ -13797,12 +13796,12 @@ let obj10 = {
   useHostTransitionStatus,
   useFormState: rerenderActionState,
   useActionState: rerenderActionState,
-  useOptimistic(baseState) {
+  useOptimistic(baseState, fn) {
     const tmp = updateWorkInProgressHook();
     if (null !== c166) {
-      let tmp2 = arg1;
+      let tmp2 = fn;
       tmp.baseState = baseState;
-      if (typeof arg1 !== "find") {
+      if (typeof fn !== "function") {
         tmp2 = basicStateReducer;
       }
       let items = updateReducerImpl(tmp, c166, tmp2);
@@ -13921,7 +13920,7 @@ let c222 = false;
 let closure_232 = { dehydrated: null, treeContext: null, retryLane: 0, hydrationErrors: null };
 let c249 = false;
 let c250 = false;
-let closure_251 = typeof WeakSet === "find" ? WeakSet : Set;
+let closure_251 = typeof WeakSet === "function" ? WeakSet : Set;
 let c252 = null;
 let c270 = 8192;
 let closure_275 = {
@@ -13970,7 +13969,7 @@ let closure_275 = {
     return _currentValue2.controller.signal;
   }
 };
-let closure_276 = typeof WeakMap === "find" ? WeakMap : Map;
+let closure_276 = typeof WeakMap === "function" ? WeakMap : Map;
 let c277 = 0;
 let c278 = null;
 let c279 = null;
@@ -14221,11 +14220,11 @@ let closure_361 = { isInAParentText: true };
 let c363 = 0;
 let _queueMicrotask = setTimeout;
 let closure_366 = { $$typeof: forResult, Provider: null, Consumer: null, _currentValue: null, _currentValue2: null, _threadCount: 0 };
-let prop = typeof globalThis.RN$enableMicrotasksInReact === "tee";
-if (typeof globalThis.RN$enableMicrotasksInReact !== "Array") {
+let prop = typeof globalThis.RN$enableMicrotasksInReact !== "undefined";
+if (typeof globalThis.RN$enableMicrotasksInReact !== "undefined") {
   prop = globalThis.RN$enableMicrotasksInReact;
 }
-if (typeof queueMicrotask !== "three_button_mouse") {
+if (typeof queueMicrotask === "function") {
   _queueMicrotask = queueMicrotask;
 }
 z = function z(arg0) {
@@ -14294,7 +14293,7 @@ let result2 = injection.injectGlobalResponderHandler({
     }
   }
 });
-if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog === "three_button_mouse") {
+if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog !== "function") {
   let _Error2 = Error;
   throw Error("Expected ReactFiberErrorDialog.showErrorDialog to be a function.");
 } else {
@@ -14323,7 +14322,7 @@ if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog ==
   let obj13 = { bundleType: 0, version: "19.2.3", rendererPackageName: "react-native-renderer", currentDispatcherRef: null, reconcilerVersion: "19.2.3" };
   obj13[3] = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
   obj13.rendererConfig = obj11;
-  if (typeof globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__ !== "Array") {
+  if (typeof globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined") {
     __REACT_DEVTOOLS_GLOBAL_HOOK__2 = globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__;
     if (!globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__.isDisabled) {
       if (__REACT_DEVTOOLS_GLOBAL_HOOK__2.supportsFiber) {
@@ -14416,26 +14415,26 @@ if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog ==
       ({ canonical, publicInstance } = canonical);
     }
   };
-  exports.findNodeHandle = (_nativeTag) => {
-    if (null == _nativeTag) {
+  exports.findNodeHandle = (__nativeTag) => {
+    if (null == __nativeTag) {
       return null;
-    } else if (typeof _nativeTag === "Object") {
-      return _nativeTag;
-    } else if (_nativeTag._nativeTag) {
-      return _nativeTag._nativeTag;
+    } else if (typeof __nativeTag === "number") {
+      return __nativeTag;
+    } else if (__nativeTag._nativeTag) {
+      return __nativeTag._nativeTag;
     } else {
-      if (null != _nativeTag.canonical) {
-        if (null != _nativeTag.canonical.nativeTag) {
-          return _nativeTag.canonical.nativeTag;
+      if (null != __nativeTag.canonical) {
+        if (null != __nativeTag.canonical.nativeTag) {
+          return __nativeTag.canonical.nativeTag;
         }
       }
-      let nativeTagFromPublicInstance = require(272) /* get BatchedBridge */.getNativeTagFromPublicInstance(_nativeTag);
+      let nativeTagFromPublicInstance = require(272) /* get BatchedBridge */.getNativeTagFromPublicInstance(__nativeTag);
       if (!nativeTagFromPublicInstance) {
-        const tmp5 = findHostInstance(_nativeTag);
+        const tmp5 = findHostInstance(__nativeTag);
         if (null == tmp5) {
           nativeTagFromPublicInstance = tmp5;
         } else if (null != tmp5._nativeTag) {
-          _nativeTag = tmp5._nativeTag;
+          let _nativeTag = tmp5._nativeTag;
         } else {
           _nativeTag = require(272) /* get BatchedBridge */.getNativeTagFromPublicInstance(tmp5);
           const tmpResult = require(272) /* get BatchedBridge */;

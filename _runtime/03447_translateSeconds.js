@@ -19,7 +19,7 @@ function translateSingular(arg0, arg1, arg2, arg3) {
 function translate(arg0, arg1, arg2, arg3) {
   const text = `${arg0} `;
   if (1 === arg0) {
-    if (typeof translateSingular !== "find") {
+    if (typeof translateSingular !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const parts = dependencyMap[arg2].split("_");
@@ -74,7 +74,7 @@ export default function formatDistance(str, play, comparison) {
   if (tmp3) {
     tmp3 = comparison.comparison > 0;
   }
-  if (typeof table[str] === "y") {
+  if (typeof table[str] === "string") {
     let text = obj;
     if (match) {
       text = `${closure_0[str5.toLowerCase(str5)]} ${obj}`;

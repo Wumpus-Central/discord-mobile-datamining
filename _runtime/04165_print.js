@@ -10,7 +10,7 @@ if (BooleanResult) {
     let params;
     ({ component, method, params } = arg0);
     if (params) {
-      if (typeof params === "ay") {
+      if (typeof params === "object") {
         const _Object = Object;
         const keys = Object.keys(params);
         const mapped = keys.map((arg0) => "" + arg0 + ":" + params[arg0]);

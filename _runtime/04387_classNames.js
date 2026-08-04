@@ -10,11 +10,11 @@ function classNames() {
       let tmp4 = str;
       if (str3) {
         let str4 = str3;
-        if (typeof str3 !== "y") {
+        if (typeof str3 !== "string") {
           str4 = str3;
-          if (typeof str3 !== "Object") {
+          if (typeof str3 !== "number") {
             str4 = "";
-            if (typeof str3 !== "window") {
+            if (typeof str3 === "object") {
               let _Array = Array;
               if (Array.isArray(str3)) {
                 let tmp13 = classNames;
@@ -94,8 +94,8 @@ if (undefined !== module) {
     module.exports = classNames;
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
-  if (typeof globalThis.define.amd !== "window") {
+if (typeof globalThis.define === "function") {
+  if (typeof globalThis.define.amd === "object") {
     if (globalThis.define.amd) {
       globalThis.define("classnames", [], () => classNames);
     }

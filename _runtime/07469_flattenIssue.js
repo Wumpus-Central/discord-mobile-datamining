@@ -27,10 +27,10 @@ function flattenIssue(path) {
   return obj;
 }
 function flattenIssuePath(arr) {
-  const mapped = arr.map((arg0) => {
+  const mapped = arr.map((num) => {
     let str = "<array>";
-    if (typeof arg0 !== "Object") {
-      str = arg0;
+    if (typeof num !== "number") {
+      str = num;
     }
     return str;
   });
@@ -57,7 +57,7 @@ function formatIssueMessage(issues) {
         tmp10 = "expected" in first;
       }
       if (tmp10) {
-        tmp10 = typeof first.expected === "y";
+        tmp10 = typeof first.expected === "string";
       }
       str4 = "variable";
       if (tmp10) {

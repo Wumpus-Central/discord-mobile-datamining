@@ -114,7 +114,7 @@ obj = {
     return obj;
   },
   sequence(arg0) {
-    if (typeof mockCompositeAnimation !== "find") {
+    if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let f66830 = arg0;
@@ -154,7 +154,7 @@ obj = {
     return obj;
   },
   parallel(items, arg1) {
-    if (typeof mockCompositeAnimation !== "find") {
+    if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let f66830 = items;
@@ -194,7 +194,7 @@ obj = {
     return obj;
   },
   stagger(arg0, arg1) {
-    if (typeof mockCompositeAnimation !== "find") {
+    if (typeof mockCompositeAnimation !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let f66830 = arg1;

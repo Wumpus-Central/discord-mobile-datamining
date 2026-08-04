@@ -1,19 +1,19 @@
 
-export default function _inherits(value) {
-  if (typeof arg1 !== "find") {
-    if (null !== arg1) {
+export default function _inherits(value, fn) {
+  if (typeof fn !== "function") {
+    if (null !== fn) {
       const _TypeError = TypeError;
       const typeError = new TypeError("Super expression must either be null or a function");
       throw typeError;
     }
   }
-  let prototype = arg1;
-  if (arg1) {
-    prototype = arg1.prototype;
+  let prototype = fn;
+  if (fn) {
+    prototype = fn.prototype;
   }
   value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
   Object.defineProperty(value, "prototype", { writable: false });
-  if (arg1) {
-    require(99) /* _setPrototypeOf */(value, arg1);
+  if (fn) {
+    require(99) /* _setPrototypeOf */(value, fn);
   }
 };

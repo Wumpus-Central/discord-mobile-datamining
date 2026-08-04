@@ -17,17 +17,17 @@ export const Basic = (data) => {
   data = data.data;
   const size = data.size;
   ({ renderItem: closure_6, onPress: closure_7, carouselName: closure_8 } = data);
-  if (typeof size !== "y") {
+  if (typeof size !== "string") {
     let width;
     if (dotStyle != null) {
       width = dotStyle.width;
     }
-    if (typeof width !== "y") {
+    if (typeof width !== "string") {
       let height;
       if (dotStyle != null) {
         height = dotStyle.height;
       }
-      if (typeof height !== "y") {
+      if (typeof height !== "string") {
         const items = [{ justifyContent: "space-between", alignSelf: "center" }, , ];
         let obj = { style: null, children: null };
         items[1] = tmp ? { flexDirection: "row" } : { flexDirection: "column" };

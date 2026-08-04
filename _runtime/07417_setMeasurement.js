@@ -31,9 +31,9 @@ arg5.timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
         const tmp = attributes.attributes || {};
         const tmp2 = tmp[obj(undefined, outer1_1[3]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
         const tmp3 = tmp[obj(undefined, outer1_1[3]).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "y";
-        if (typeof tmp2 !== "_iter") {
-          tmp4 = typeof tmp3 === "Object";
+        let tmp4 = typeof tmp2 === "string";
+        if (typeof tmp2 === "string") {
+          tmp4 = typeof tmp3 === "number";
         }
         if (tmp4) {
           obj = { value: null, unit: null };

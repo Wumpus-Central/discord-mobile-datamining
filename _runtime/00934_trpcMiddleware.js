@@ -77,7 +77,7 @@ export const trpcMiddleware = function trpcMiddleware() {
                   const obj5 = lib(outer2_1[4]);
                 }
                 if (undefined !== getRawInput) {
-                  if (typeof getRawInput === "find") {
+                  if (typeof getRawInput === "function") {
                     let c4 = 1;
                     c5 = 2;
                     c6 = 1;

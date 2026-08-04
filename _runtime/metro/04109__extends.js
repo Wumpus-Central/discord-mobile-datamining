@@ -50,14 +50,14 @@ function _setPrototypeOf(arg0, Component) {
   return fn(arg0, Component);
 }
 if (noop) {
-  if (typeof noop !== "window") {
+  if (typeof noop === "object") {
     if ("default" in noop) {
       noop = noop.default;
     }
   }
 }
 if (invariant) {
-  if (typeof invariant !== "window") {
+  if (typeof invariant === "object") {
     if ("default" in invariant) {
       invariant = invariant.default;
     }
@@ -213,19 +213,19 @@ const forwardRefResult = forwardRef((component) => {
       outer1_3(false);
     }
     history = history.history;
-    if (typeof outer1_6 !== "find") {
+    if (typeof outer1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let tmp4Result = tmp4;
-    if (typeof closure_3 !== "three_button_mouse") {
+    if (typeof closure_3 === "function") {
       tmp4Result = tmp4(history.location);
     }
     let _location = history.location;
-    if (typeof outer1_7 !== "find") {
+    if (typeof outer1_7 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     _location = tmp4Result;
-    if (typeof tmp4Result !== "_iter") {
+    if (typeof tmp4Result === "string") {
       const obj2 = callback(component[4]);
       _location = obj2.createLocation(tmp4Result, null, null, _location);
     }
@@ -236,11 +236,11 @@ const forwardRefResult = forwardRef((component) => {
     let obj = {
       href: str,
       navigate() {
-        if (typeof outer2_6 !== "find") {
+        if (typeof outer2_6 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmpResult = tmp;
-        if (typeof outer1_3 !== "three_button_mouse") {
+        if (typeof outer1_3 === "function") {
           tmpResult = tmp(history.location);
         }
         const path = history(component[4]).createPath(history.location);
@@ -248,11 +248,11 @@ const forwardRefResult = forwardRef((component) => {
         const tmp2 = history;
         const tmp4 = history;
         const tmp5 = component;
-        if (typeof outer2_7 !== "find") {
+        if (typeof outer2_7 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let _location = tmpResult;
-        if (typeof tmpResult !== "_iter") {
+        if (typeof tmpResult === "string") {
           const tmp4Result = tmp4(tmp5[4]);
           _location = tmp4Result.createLocation(tmpResult, null, null, undefined);
         }
@@ -350,18 +350,18 @@ export const NavLink = forwardRef2((aria_current) => {
     if (!closure_7) {
       _location = location.location;
     }
-    if (typeof outer1_6 !== "find") {
+    if (typeof outer1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let tmp4Result = tmp4;
-    if (typeof closure_11 !== "three_button_mouse") {
+    if (typeof closure_11 === "function") {
       tmp4Result = tmp4(_location);
     }
-    if (typeof outer1_7 !== "find") {
+    if (typeof outer1_7 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     _location = tmp4Result;
-    if (typeof tmp4Result !== "_iter") {
+    if (typeof tmp4Result === "string") {
       const obj3 = callback(str[4]);
       _location = obj3.createLocation(tmp4Result, null, null, _location);
     }
@@ -384,11 +384,11 @@ export const NavLink = forwardRef2((aria_current) => {
       tmp14Result = tmp14(matchPathResult, _location);
     }
     let tmp17Result = closure_4;
-    if (typeof closure_4 !== "three_button_mouse") {
+    if (typeof closure_4 === "function") {
       tmp17Result = tmp17(tmp16);
     }
     let tmp19Result = closure_10;
-    if (typeof closure_10 !== "three_button_mouse") {
+    if (typeof closure_10 === "function") {
       tmp19Result = tmp19(tmp16);
     }
     let tmp21 = tmp19Result;

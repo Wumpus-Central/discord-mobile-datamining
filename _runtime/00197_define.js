@@ -55,7 +55,7 @@
                       let iter = tmp.arg;
                       let value = iter.value;
                       if (value) {
-                        if (typeof value !== "window") {
+                        if (typeof value === "object") {
                           let call = outer1_1.call;
                           if (typeof call === "unknown") {
                             let callResult = tmp8("__await");
@@ -69,7 +69,7 @@
                                 const iter = tmp2.arg;
                                 const value = iter.value;
                                 if (value) {
-                                  if (typeof value !== "window") {
+                                  if (typeof value === "object") {
                                     const call = closure_1.call;
                                     if (typeof call === "unknown") {
                                       let callResult = tmp9("__await");
@@ -94,7 +94,7 @@
                                 const iter = tmp2.arg;
                                 const value = iter.value;
                                 if (value) {
-                                  if (typeof value !== "window") {
+                                  if (typeof value === "object") {
                                     const call = closure_1.call;
                                     if (typeof call === "unknown") {
                                       let callResult = tmp9("__await");
@@ -128,7 +128,7 @@
                           const iter = tmp2.arg;
                           let fn = iter.value;
                           if (fn) {
-                            if (typeof fn !== "window") {
+                            if (typeof fn === "object") {
                               const call = closure_1.call;
                               if (typeof call === "unknown") {
                                 let callResult = tmp9("__await");
@@ -163,7 +163,7 @@
                     let iter = tmp.arg;
                     let value = iter.value;
                     if (value) {
-                      if (typeof value !== "window") {
+                      if (typeof value === "object") {
                         let call = outer1_1.call;
                         if (typeof call === "unknown") {
                           let callResult = tmp8("__await");
@@ -177,7 +177,7 @@
                               const iter = tmp2.arg;
                               const value = iter.value;
                               if (value) {
-                                if (typeof value !== "window") {
+                                if (typeof value === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
                                     let callResult = tmp9("__await");
@@ -191,7 +191,7 @@
                                         const iter = tmp2.arg;
                                         const value = iter.value;
                                         if (value) {
-                                          if (typeof value !== "window") {
+                                          if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
                                               let callResult = tmp9("__await");
@@ -216,7 +216,7 @@
                                         const iter = tmp2.arg;
                                         const value = iter.value;
                                         if (value) {
-                                          if (typeof value !== "window") {
+                                          if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
                                               let callResult = tmp9("__await");
@@ -250,7 +250,7 @@
                                   const iter = tmp2.arg;
                                   let fn = iter.value;
                                   if (fn) {
-                                    if (typeof fn !== "window") {
+                                    if (typeof fn === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
                                         let callResult = tmp9("__await");
@@ -279,7 +279,7 @@
                               const iter = tmp2.arg;
                               const value = iter.value;
                               if (value) {
-                                if (typeof value !== "window") {
+                                if (typeof value === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
                                     let callResult = tmp9("__await");
@@ -293,7 +293,7 @@
                                         const iter = tmp2.arg;
                                         const value = iter.value;
                                         if (value) {
-                                          if (typeof value !== "window") {
+                                          if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
                                               let callResult = tmp9("__await");
@@ -318,7 +318,7 @@
                                         const iter = tmp2.arg;
                                         const value = iter.value;
                                         if (value) {
-                                          if (typeof value !== "window") {
+                                          if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
                                               let callResult = tmp9("__await");
@@ -352,7 +352,7 @@
                                   const iter = tmp2.arg;
                                   let fn = iter.value;
                                   if (fn) {
-                                    if (typeof fn !== "window") {
+                                    if (typeof fn === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
                                         let callResult = tmp9("__await");
@@ -390,7 +390,7 @@
                         const iter = tmp2.arg;
                         let fn = iter.value;
                         if (fn) {
-                          if (typeof fn !== "window") {
+                          if (typeof fn === "object") {
                             const call = closure_1.call;
                             if (typeof call === "unknown") {
                               let callResult = tmp9("__await");
@@ -405,7 +405,7 @@
                               const iter = tmp2.arg;
                               const value = iter.value;
                               if (value) {
-                                if (typeof value !== "window") {
+                                if (typeof value === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
                                     let callResult = tmp9("__await");
@@ -431,7 +431,7 @@
                               const iter = tmp2.arg;
                               const value = iter.value;
                               if (value) {
-                                if (typeof value !== "window") {
+                                if (typeof value === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
                                     let callResult = tmp9("__await");
@@ -462,7 +462,7 @@
                             const iter = tmp2.arg;
                             let fn = iter.value;
                             if (fn) {
-                              if (typeof fn !== "window") {
+                              if (typeof fn === "object") {
                                 const call = closure_1.call;
                                 if (typeof call === "unknown") {
                                   let callResult = tmp9("__await");
@@ -588,7 +588,7 @@
     arg0[arg1] = value.value;
   });
   let closure_2 = tmp;
-  let tmp2 = typeof Symbol === "find" ? Symbol : {};
+  let tmp2 = typeof Symbol === "function" ? Symbol : {};
   let closure_3 = tmp3;
   let closure_4 = tmp5;
   try {
@@ -600,7 +600,7 @@
         if (next[closure_3]) {
           const call = tmp2.call;
           return typeof call === "unknown" ? tmp2() : call(next);
-        } else if (typeof next.next === "find") {
+        } else if (typeof next.next === "function") {
           return next;
         } else {
           const _isNaN = isNaN;
@@ -774,7 +774,7 @@
                           let iter = tmp.arg;
                           let value = iter.value;
                           if (value) {
-                            if (typeof value !== "window") {
+                            if (typeof value === "object") {
                               let call = outer1_1.call;
                               if (typeof call === "unknown") {
                                 let callResult = tmp8("__await");
@@ -788,7 +788,7 @@
                                     const iter = tmp2.arg;
                                     const value = iter.value;
                                     if (value) {
-                                      if (typeof value !== "window") {
+                                      if (typeof value === "object") {
                                         const call = closure_1.call;
                                         if (typeof call === "unknown") {
                                           let callResult = tmp9("__await");
@@ -813,7 +813,7 @@
                                     const iter = tmp2.arg;
                                     const value = iter.value;
                                     if (value) {
-                                      if (typeof value !== "window") {
+                                      if (typeof value === "object") {
                                         const call = closure_1.call;
                                         if (typeof call === "unknown") {
                                           let callResult = tmp9("__await");
@@ -847,7 +847,7 @@
                               const iter = tmp2.arg;
                               let fn = iter.value;
                               if (fn) {
-                                if (typeof fn !== "window") {
+                                if (typeof fn === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
                                     let callResult = tmp9("__await");
@@ -882,7 +882,7 @@
                         let iter = tmp.arg;
                         let value = iter.value;
                         if (value) {
-                          if (typeof value !== "window") {
+                          if (typeof value === "object") {
                             let call = outer1_1.call;
                             if (typeof call === "unknown") {
                               let callResult = tmp8("__await");
@@ -896,7 +896,7 @@
                                   const iter = tmp2.arg;
                                   const value = iter.value;
                                   if (value) {
-                                    if (typeof value !== "window") {
+                                    if (typeof value === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
                                         let callResult = tmp9("__await");
@@ -910,7 +910,7 @@
                                             const iter = tmp2.arg;
                                             const value = iter.value;
                                             if (value) {
-                                              if (typeof value !== "window") {
+                                              if (typeof value === "object") {
                                                 const call = closure_1.call;
                                                 if (typeof call === "unknown") {
                                                   let callResult = tmp9("__await");
@@ -935,7 +935,7 @@
                                             const iter = tmp2.arg;
                                             const value = iter.value;
                                             if (value) {
-                                              if (typeof value !== "window") {
+                                              if (typeof value === "object") {
                                                 const call = closure_1.call;
                                                 if (typeof call === "unknown") {
                                                   let callResult = tmp9("__await");
@@ -969,7 +969,7 @@
                                       const iter = tmp2.arg;
                                       let fn = iter.value;
                                       if (fn) {
-                                        if (typeof fn !== "window") {
+                                        if (typeof fn === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
                                             let callResult = tmp9("__await");
@@ -998,7 +998,7 @@
                                   const iter = tmp2.arg;
                                   const value = iter.value;
                                   if (value) {
-                                    if (typeof value !== "window") {
+                                    if (typeof value === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
                                         let callResult = tmp9("__await");
@@ -1012,7 +1012,7 @@
                                             const iter = tmp2.arg;
                                             const value = iter.value;
                                             if (value) {
-                                              if (typeof value !== "window") {
+                                              if (typeof value === "object") {
                                                 const call = closure_1.call;
                                                 if (typeof call === "unknown") {
                                                   let callResult = tmp9("__await");
@@ -1037,7 +1037,7 @@
                                             const iter = tmp2.arg;
                                             const value = iter.value;
                                             if (value) {
-                                              if (typeof value !== "window") {
+                                              if (typeof value === "object") {
                                                 const call = closure_1.call;
                                                 if (typeof call === "unknown") {
                                                   let callResult = tmp9("__await");
@@ -1071,7 +1071,7 @@
                                       const iter = tmp2.arg;
                                       let fn = iter.value;
                                       if (fn) {
-                                        if (typeof fn !== "window") {
+                                        if (typeof fn === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
                                             let callResult = tmp9("__await");
@@ -1109,7 +1109,7 @@
                             const iter = tmp2.arg;
                             let fn = iter.value;
                             if (fn) {
-                              if (typeof fn !== "window") {
+                              if (typeof fn === "object") {
                                 const call = closure_1.call;
                                 if (typeof call === "unknown") {
                                   let callResult = tmp9("__await");
@@ -1124,7 +1124,7 @@
                                   const iter = tmp2.arg;
                                   const value = iter.value;
                                   if (value) {
-                                    if (typeof value !== "window") {
+                                    if (typeof value === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
                                         let callResult = tmp9("__await");
@@ -1150,7 +1150,7 @@
                                   const iter = tmp2.arg;
                                   const value = iter.value;
                                   if (value) {
-                                    if (typeof value !== "window") {
+                                    if (typeof value === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
                                         let callResult = tmp9("__await");
@@ -1181,7 +1181,7 @@
                                 const iter = tmp2.arg;
                                 let fn = iter.value;
                                 if (fn) {
-                                  if (typeof fn !== "window") {
+                                  if (typeof fn === "object") {
                                     const call = closure_1.call;
                                     if (typeof call === "unknown") {
                                       let callResult = tmp9("__await");
@@ -1296,7 +1296,7 @@
                               let iter = tmp.arg;
                               let value = iter.value;
                               if (value) {
-                                if (typeof value !== "window") {
+                                if (typeof value === "object") {
                                   let call = outer1_1.call;
                                   if (typeof call === "unknown") {
                                     let callResult = tmp8("__await");
@@ -1310,7 +1310,7 @@
                                         const iter = tmp2.arg;
                                         const value = iter.value;
                                         if (value) {
-                                          if (typeof value !== "window") {
+                                          if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
                                               let callResult = tmp9("__await");
@@ -1335,7 +1335,7 @@
                                         const iter = tmp2.arg;
                                         const value = iter.value;
                                         if (value) {
-                                          if (typeof value !== "window") {
+                                          if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
                                               let callResult = tmp9("__await");
@@ -1369,7 +1369,7 @@
                                   const iter = tmp2.arg;
                                   let fn = iter.value;
                                   if (fn) {
-                                    if (typeof fn !== "window") {
+                                    if (typeof fn === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
                                         let callResult = tmp9("__await");
@@ -1404,7 +1404,7 @@
                             let iter = tmp.arg;
                             let value = iter.value;
                             if (value) {
-                              if (typeof value !== "window") {
+                              if (typeof value === "object") {
                                 let call = outer1_1.call;
                                 if (typeof call === "unknown") {
                                   let callResult = tmp8("__await");
@@ -1418,7 +1418,7 @@
                                       const iter = tmp2.arg;
                                       const value = iter.value;
                                       if (value) {
-                                        if (typeof value !== "window") {
+                                        if (typeof value === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
                                             let callResult = tmp9("__await");
@@ -1432,7 +1432,7 @@
                                                 const iter = tmp2.arg;
                                                 const value = iter.value;
                                                 if (value) {
-                                                  if (typeof value !== "window") {
+                                                  if (typeof value === "object") {
                                                     const call = closure_1.call;
                                                     if (typeof call === "unknown") {
                                                       let callResult = tmp9("__await");
@@ -1457,7 +1457,7 @@
                                                 const iter = tmp2.arg;
                                                 const value = iter.value;
                                                 if (value) {
-                                                  if (typeof value !== "window") {
+                                                  if (typeof value === "object") {
                                                     const call = closure_1.call;
                                                     if (typeof call === "unknown") {
                                                       let callResult = tmp9("__await");
@@ -1491,7 +1491,7 @@
                                           const iter = tmp2.arg;
                                           let fn = iter.value;
                                           if (fn) {
-                                            if (typeof fn !== "window") {
+                                            if (typeof fn === "object") {
                                               const call = closure_1.call;
                                               if (typeof call === "unknown") {
                                                 let callResult = tmp9("__await");
@@ -1520,7 +1520,7 @@
                                       const iter = tmp2.arg;
                                       const value = iter.value;
                                       if (value) {
-                                        if (typeof value !== "window") {
+                                        if (typeof value === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
                                             let callResult = tmp9("__await");
@@ -1534,7 +1534,7 @@
                                                 const iter = tmp2.arg;
                                                 const value = iter.value;
                                                 if (value) {
-                                                  if (typeof value !== "window") {
+                                                  if (typeof value === "object") {
                                                     const call = closure_1.call;
                                                     if (typeof call === "unknown") {
                                                       let callResult = tmp9("__await");
@@ -1559,7 +1559,7 @@
                                                 const iter = tmp2.arg;
                                                 const value = iter.value;
                                                 if (value) {
-                                                  if (typeof value !== "window") {
+                                                  if (typeof value === "object") {
                                                     const call = closure_1.call;
                                                     if (typeof call === "unknown") {
                                                       let callResult = tmp9("__await");
@@ -1593,7 +1593,7 @@
                                           const iter = tmp2.arg;
                                           let fn = iter.value;
                                           if (fn) {
-                                            if (typeof fn !== "window") {
+                                            if (typeof fn === "object") {
                                               const call = closure_1.call;
                                               if (typeof call === "unknown") {
                                                 let callResult = tmp9("__await");
@@ -1631,7 +1631,7 @@
                                 const iter = tmp2.arg;
                                 let fn = iter.value;
                                 if (fn) {
-                                  if (typeof fn !== "window") {
+                                  if (typeof fn === "object") {
                                     const call = closure_1.call;
                                     if (typeof call === "unknown") {
                                       let callResult = tmp9("__await");
@@ -1646,7 +1646,7 @@
                                       const iter = tmp2.arg;
                                       const value = iter.value;
                                       if (value) {
-                                        if (typeof value !== "window") {
+                                        if (typeof value === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
                                             let callResult = tmp9("__await");
@@ -1672,7 +1672,7 @@
                                       const iter = tmp2.arg;
                                       const value = iter.value;
                                       if (value) {
-                                        if (typeof value !== "window") {
+                                        if (typeof value === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
                                             let callResult = tmp9("__await");
@@ -1703,7 +1703,7 @@
                                     const iter = tmp2.arg;
                                     let fn = iter.value;
                                     if (fn) {
-                                      if (typeof fn !== "window") {
+                                      if (typeof fn === "object") {
                                         const call = closure_1.call;
                                         if (typeof call === "unknown") {
                                           let callResult = tmp9("__await");
@@ -1770,16 +1770,16 @@
         return this;
       });
       arg0.AsyncIterator = AsyncIterator;
-      arg0.async = (arg0, arg1, arg2, arg3, arg4) => {
+      arg0.async = (arg0, fn) => {
         let _Promise = arg4;
         if (arg4 === undefined) {
           let tmp = globalThis;
           _Promise = Promise;
         }
-        if (!arg1) {
+        if (!fn) {
           let tmp4 = Generator;
         } else {
-          tmp4 = arg1;
+          tmp4 = fn;
         }
         let items = arg3;
         let obj = Object.create(tmp4.prototype);
@@ -1895,7 +1895,7 @@
                     let iter = tmp.arg;
                     let value = iter.value;
                     if (value) {
-                      if (typeof value !== "window") {
+                      if (typeof value === "object") {
                         let call = outer1_1.call;
                         if (typeof call === "unknown") {
                           let callResult = tmp8("__await");
@@ -1926,7 +1926,7 @@
                   let iter = tmp.arg;
                   let value = iter.value;
                   if (value) {
-                    if (typeof value !== "window") {
+                    if (typeof value === "object") {
                       let call = outer1_1.call;
                       if (typeof call === "unknown") {
                         let callResult = tmp8("__await");
@@ -1940,7 +1940,7 @@
                             const iter = tmp2.arg;
                             const value = iter.value;
                             if (value) {
-                              if (typeof value !== "window") {
+                              if (typeof value === "object") {
                                 const call = closure_1.call;
                                 if (typeof call === "unknown") {
                                   let callResult = tmp9("__await");
@@ -1965,7 +1965,7 @@
                             const iter = tmp2.arg;
                             const value = iter.value;
                             if (value) {
-                              if (typeof value !== "window") {
+                              if (typeof value === "object") {
                                 const call = closure_1.call;
                                 if (typeof call === "unknown") {
                                   let callResult = tmp9("__await");
@@ -1999,7 +1999,7 @@
                       const iter = tmp2.arg;
                       let fn = iter.value;
                       if (fn) {
-                        if (typeof fn !== "window") {
+                        if (typeof fn === "object") {
                           const call = closure_1.call;
                           if (typeof call === "unknown") {
                             let callResult = tmp9("__await");
@@ -2028,7 +2028,7 @@
           }
         });
         let nextPromise = iter;
-        if (!iter.isGeneratorFunction(arg1)) {
+        if (!iter.isGeneratorFunction(fn)) {
           nextPromise = iter.next().then((done) => {
             if (done.done) {
               let nextResult = done.value;
@@ -2321,7 +2321,7 @@
           typeof call === "unknown" ? tmp2() : call(next);
         } else {
           tmp3 = next;
-          if (typeof next.next !== "find") {
+          if (typeof next.next !== "function") {
             const _isNaN = isNaN;
             if (!isNaN(next.length)) {
               let c1 = -1;
@@ -2378,4 +2378,4 @@
     };
     tmp7 = define2;
   }
-})(typeof arg4 === "ay" ? arg4.exports : {});
+})(typeof obj === "object" ? obj.exports : {});

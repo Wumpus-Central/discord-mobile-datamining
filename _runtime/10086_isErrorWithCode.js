@@ -1,15 +1,15 @@
 arg5.errorCodes = Object.freeze({ OPERATION_CANCELED: "OPERATION_CANCELED", IN_PROGRESS: "ASYNC_OP_IN_PROGRESS", UNABLE_TO_OPEN_FILE_TYPE: "UNABLE_TO_OPEN_FILE_TYPE", NULL_PRESENTER: "NULL_PRESENTER" });
-arg5.isErrorWithCode = (arg0) => {
-  let tmp = arg0 instanceof Error;
+arg5.isErrorWithCode = (obj) => {
+  let tmp = obj instanceof Error;
   if (!tmp) {
-    let tmp2 = typeof arg0 === "ay";
-    if (typeof arg0 !== "window") {
-      tmp2 = null != arg0;
+    let tmp2 = typeof obj === "object";
+    if (typeof obj === "object") {
+      tmp2 = null != obj;
     }
     tmp = tmp2;
   }
   if (tmp) {
-    tmp = "code" in arg0;
+    tmp = "code" in obj;
   }
   return tmp;
 };

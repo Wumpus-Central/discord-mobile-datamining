@@ -141,7 +141,7 @@ export default (self) => {
       let obj = table[num];
       let tmp3 = num;
       let bindResult = obj;
-      if (typeof obj !== "three_button_mouse") {
+      if (typeof obj === "function") {
         bindResult = obj.bind(self);
       }
       self[keys[num]] = bindResult;

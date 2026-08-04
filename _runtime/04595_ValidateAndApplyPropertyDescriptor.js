@@ -1,5 +1,5 @@
 
-export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, arg2, __Configurable__) {
+export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__) {
   const tmp3 = require(4596) /* Type */(arg0);
   if (undefined !== arg0) {
     if (!tmp(4529)(arg0)) {
@@ -8,7 +8,7 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, arg2, __C
     }
   }
   if (require(4576) /* isPropertyKey */(arg1)) {
-    if (typeof arg2 === "los") {
+    if (typeof flag !== "boolean") {
       const tmp87 = new tmp(541)("Assertion failed: extensible must be a Boolean");
       throw tmp87;
     } else if (tmp(4580)(__Configurable__)) {
@@ -20,7 +20,7 @@ export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, arg2, __C
         }
       }
       if (undefined === __Set__) {
-        let tmp64 = arg2;
+        let tmp64 = flag;
         if (tmp64) {
           if ("Undefined" === tmp3) {
             tmp64 = tmp65;

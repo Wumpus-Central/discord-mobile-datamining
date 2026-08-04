@@ -1,6 +1,6 @@
 arg5.start = undefined;
-let _window = typeof window === "tee";
-if (typeof window !== "Array") {
+let _window = typeof window !== "undefined";
+if (typeof window !== "undefined") {
   _window = window;
 }
 if (_window) {

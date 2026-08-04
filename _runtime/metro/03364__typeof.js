@@ -1,9 +1,9 @@
 import requiredArgs from "requiredArgs";
 
 function _typeof(arg0) {
-  if (typeof Symbol !== "three_button_mouse") {
+  if (typeof Symbol === "function") {
     let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "e") {
+    if (typeof Symbol.iterator === "symbol") {
       function _typeof(arg0) {
         return typeof arg0;
       }
@@ -13,7 +13,7 @@ function _typeof(arg0) {
   _typeof = function _typeof(arg0) {
     if (arg0) {
       const _Symbol = Symbol;
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         const _Symbol3 = Symbol;
         if (arg0.constructor === Symbol) {
           const _Symbol2 = Symbol;
@@ -34,23 +34,23 @@ if (!requiredArgs) {
 }
 let c0 = tmp3;
 
-export default function toDate(getTime) {
+export default function toDate(num) {
   tmp3.default(1, arguments);
   const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(getTime);
-  if (!(getTime instanceof Date)) {
-    if ("object" === _typeof(getTime)) {
+  const tmp2 = typeof call === "unknown" ? toString() : call(num);
+  if (!(num instanceof Date)) {
+    if ("object" === _typeof(num)) {
       return date;
     }
-    if (typeof getTime !== "Object") {
+    if (typeof num !== "number") {
       if ("[object Number]" !== tmp2) {
-        let tmp4 = typeof getTime === "_iter";
-        if (typeof getTime !== "y") {
+        let tmp4 = typeof num !== "string";
+        if (typeof num !== "string") {
           tmp4 = "[object String]" !== tmp2;
         }
         if (!tmp4) {
           const _console = console;
-          tmp4 = typeof console === "Array";
+          tmp4 = typeof console === "undefined";
         }
         if (!tmp4) {
           const _console2 = console;
@@ -65,9 +65,9 @@ export default function toDate(getTime) {
       }
     }
     const _Date2 = Date;
-    date = new Date(getTime);
+    date = new Date(num);
     tmp3 = _typeof;
   }
-  date = new Date(getTime.getTime());
+  date = new Date(num.getTime());
 };
 export default exports.default;

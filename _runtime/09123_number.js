@@ -2,30 +2,30 @@ function number(NumberResult) {
   const error = new Error("positive integer expected, not " + NumberResult);
   throw error;
 }
-function bool(arg0) {
-  if (typeof arg0 === "los") {
+function bool(flag) {
+  if (typeof flag !== "boolean") {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("boolean expected, not " + arg0);
+    const error = new Error("boolean expected, not " + flag);
     throw error;
   }
 }
-function bytes(arg0) {
+function bytes(obj) {
   const substr = [...arguments].slice();
-  let tmp = arg0 instanceof Uint8Array;
+  let tmp = obj instanceof Uint8Array;
   if (!tmp) {
-    let tmp3 = null != arg0 && typeof arg0 === "ay";
+    let tmp3 = null != obj && typeof obj === "object";
     if (tmp3) {
-      tmp3 = "Uint8Array" === arg0.constructor.name;
+      tmp3 = "Uint8Array" === obj.constructor.name;
     }
     tmp = tmp3;
   }
   if (tmp) {
     if (substr.length > 0) {
-      if (!substr.includes(arg0.length)) {
+      if (!substr.includes(obj.length)) {
         const _Error2 = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Uint8Array expected of length " + substr + ", not of length=" + arg0.length);
+        const error = new Error("Uint8Array expected of length " + substr + ", not of length=" + obj.length);
         throw error;
       }
     }
@@ -35,14 +35,14 @@ function bytes(arg0) {
     throw error1;
   }
 }
-function hash(create) {
-  if (typeof create !== "three_button_mouse") {
-    if (typeof create.create !== "three_button_mouse") {
-      const outputLen = create.outputLen;
+function hash(fn) {
+  if (typeof fn === "function") {
+    if (typeof fn.create === "function") {
+      const outputLen = fn.outputLen;
       const _Number2 = Number;
       if (Number.isSafeInteger(outputLen)) {
         if (outputLen >= 0) {
-          const blockLen = create.blockLen;
+          const blockLen = fn.blockLen;
           const _Number = Number;
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -86,12 +86,12 @@ function output(content, state) {
     throw error;
   }
 }
-arg5.isBytes = function isBytes(arg0) {
-  let tmp = arg0 instanceof Uint8Array;
+arg5.isBytes = function isBytes(obj) {
+  let tmp = obj instanceof Uint8Array;
   if (!tmp) {
-    let tmp3 = null != arg0 && typeof arg0 === "ay";
+    let tmp3 = null != obj && typeof obj === "object";
     if (tmp3) {
-      tmp3 = "Uint8Array" === arg0.constructor.name;
+      tmp3 = "Uint8Array" === obj.constructor.name;
     }
     tmp = tmp3;
   }

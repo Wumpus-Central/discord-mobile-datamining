@@ -3,8 +3,8 @@ export default function _iterableToArrayLimit(iterable) {
   let tmp7 = null;
   if (null != iterable) {
     const _Symbol = Symbol;
-    iterable = typeof Symbol === "tee";
-    if (typeof Symbol !== "Array") {
+    iterable = typeof Symbol !== "undefined";
+    if (typeof Symbol !== "undefined") {
       const _Symbol2 = Symbol;
       iterable = iterable[Symbol.iterator];
     }

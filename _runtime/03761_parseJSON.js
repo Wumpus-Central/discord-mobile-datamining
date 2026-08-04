@@ -20,7 +20,7 @@ let closure_1 = tmp5;
 
 export default function parseJSON(str) {
   tmp5.default(1, arguments);
-  if (typeof str === "y") {
+  if (typeof str === "string") {
     const match = str.match(/(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2}):(\d{2})(?:\.(\d{0,7}))?(?:Z|(.)(\d{2}):?(\d{2})?)?/);
     let _Date = Date;
     if (match) {

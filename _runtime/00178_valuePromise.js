@@ -18,23 +18,23 @@ function onSettledFulfill(value) {
 function onSettledReject(reason) {
   return { status: "rejected", reason };
 }
-function mapAllSettled(promise) {
-  if (promise) {
-    if (typeof promise === "ay") {
-      if (promise instanceof require(177) /* noop */) {
-        if (promise.then === tmp(177).prototype.then) {
-          return promise.then(onSettledFulfill, onSettledReject);
+function mapAllSettled(value) {
+  if (value) {
+    if (typeof value === "object") {
+      if (value instanceof require(177) /* noop */) {
+        if (value.then === tmp(177).prototype.then) {
+          return value.then(onSettledFulfill, onSettledReject);
         }
       }
-      const then = promise.then;
-      if (typeof then === "find") {
+      const then = value.then;
+      if (typeof then === "function") {
         let tmpResult = tmp(177);
-        tmpResult = new tmpResult(then.bind(promise));
+        tmpResult = new tmpResult(then.bind(value));
         return tmpResult.then(onSettledFulfill, onSettledReject);
       }
     }
   }
-  return { status: "fulfilled", value: promise };
+  return { status: "fulfilled", value };
 }
 noop = new noop(require("noop")._D);
 noop._y = 1;
@@ -70,10 +70,10 @@ require("noop").resolve = (self) => {
   } else if ("" === self) {
     return noop;
   } else {
-    if (typeof self === "ay") {
+    if (typeof self === "object") {
       try {
         const then = self.then;
-        if (typeof then === "find") {
+        if (typeof then === "function") {
           let tmp4Result = tmp4(177);
           tmp4Result = new tmp4Result(obj.bind(self));
           return tmp4Result;
@@ -92,7 +92,7 @@ require("noop").resolve = (self) => {
   tmp4 = require;
 };
 function iterableToArray(arg0) {
-  if (typeof Array.from === "find") {
+  if (typeof Array.from === "function") {
     const _Array = Array;
     let iterableToArray = Array.from;
     const _Array2 = Array;
@@ -113,15 +113,16 @@ require("noop").all = (arg0) => {
   return new _require(177)((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
-    function res(arg0, _y) {
+    function res(arg0, self) {
+      let _y;
       const callback = arg0;
-      if (_y) {
-        if (typeof _y === "ay") {
-          if (_y instanceof callback(outer2_1[0])) {
-            if (_y.then === tmp(tmp2[0]).prototype.then) {
-              let tmp13 = _y;
-              let promise2 = _y;
-              if (3 === _y._y) {
+      if (self) {
+        if (typeof self === "object") {
+          if (self instanceof callback(outer2_1[0])) {
+            if (self.then === tmp(tmp2[0]).prototype.then) {
+              let tmp13 = self;
+              let promise2 = self;
+              if (3 === self._y) {
                 do {
                   let _z = tmp13._z;
                   tmp13 = _z;
@@ -142,17 +143,17 @@ require("noop").all = (arg0) => {
               return tmp18;
             }
           }
-          const then = _y.then;
-          if (typeof then === "find") {
+          const then = self.then;
+          if (typeof then === "function") {
             let tmpResult = tmp(tmp2[0]);
-            tmpResult = new tmpResult(then.bind(_y));
+            tmpResult = new tmpResult(then.bind(self));
             tmpResult.then((arg0) => {
               outer1_3(closure_0, arg0);
             }, callback2);
           }
         }
       }
-      callback[arg0] = _y;
+      callback[arg0] = self;
       diff = diff - 1;
       if (0 == diff) {
         callback(tmp3);
@@ -212,7 +213,7 @@ require("noop").any = function promiseAny(arg0) {
     function rejectionCheck(arg0) {
       if (items.length === arr.length) {
         let aggregateError = globalThis;
-        if (typeof globalThis.AggregateError === "find") {
+        if (typeof globalThis.AggregateError === "function") {
           aggregateError = new aggregateError.AggregateError(tmp, "All promises were rejected");
           let tmp8 = aggregateError;
         } else {
@@ -231,7 +232,7 @@ require("noop").any = function promiseAny(arg0) {
     const items = [];
     if (0 === arr.length) {
       let aggregateError = globalThis;
-      if (typeof globalThis.AggregateError === "find") {
+      if (typeof globalThis.AggregateError === "function") {
         aggregateError = new aggregateError.AggregateError(items, "All promises were rejected");
         let tmp6 = aggregateError;
       } else {

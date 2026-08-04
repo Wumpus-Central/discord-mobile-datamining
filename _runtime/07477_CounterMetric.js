@@ -137,10 +137,10 @@ const items3 = [
   {
     key: "toString",
     value: function toString() {
-      const mapped = Array.from(this._value).map((arg0) => {
-        let simpleHashResult = arg0;
-        if (typeof arg0 !== "_iter") {
-          simpleHashResult = callback(table[2]).simpleHash(arg0);
+      const mapped = Array.from(this._value).map((str) => {
+        let simpleHashResult = str;
+        if (typeof str === "string") {
+          simpleHashResult = callback(table[2]).simpleHash(str);
           const obj = callback(table[2]);
         }
         return simpleHashResult;

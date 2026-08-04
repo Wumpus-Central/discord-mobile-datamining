@@ -1,8 +1,8 @@
-arg5.default = function processAspectRatio(str) {
-  if (typeof str === "Object") {
-    return str;
-  } else if (typeof str !== "_iter") {
-    const parts = str.split("/");
+arg5.default = function processAspectRatio(num) {
+  if (typeof num === "number") {
+    return num;
+  } else if (typeof num === "string") {
+    const parts = num.split("/");
     const mapped = parts.map((str) => str.trim());
     if (!mapped.includes("auto")) {
       if (!mapped.some((arg0) => Number.isNaN(Number(arg0)))) {

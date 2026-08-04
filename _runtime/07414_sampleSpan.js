@@ -8,7 +8,7 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
     obj = {};
     const merged = Object.assign(normalizedRequest);
     obj.normalizedRequest = normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
-    if (typeof tracesSampler.tracesSampler === "find") {
+    if (typeof tracesSampler.tracesSampler === "function") {
       let num = tracesSampler.tracesSampler(obj);
     } else if (undefined !== obj.parentSampled) {
       num = obj.parentSampled;
@@ -45,7 +45,7 @@ arg5.sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
       if (tmp(7403).DEBUG_BUILD) {
         const logger = tmp(7375).logger;
         let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
-        if (typeof tracesSampler.tracesSampler !== "three_button_mouse") {
+        if (typeof tracesSampler.tracesSampler === "function") {
           str = "tracesSampler returned 0 or false";
         }
         logger.log(`[Tracing] Discarding transaction because ${str}`);

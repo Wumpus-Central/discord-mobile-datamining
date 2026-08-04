@@ -518,7 +518,7 @@ obj = {
       },
       {
         key: "forEach",
-        value: function forEach(call) {
+        value: function forEach(fn) {
           let tmp7;
           let tmp8;
           const self = this;
@@ -529,7 +529,7 @@ obj = {
                 const _TypeError2 = TypeError;
                 const typeError = new TypeError("Failed to execute 'forEach' on 'iterable': 1 argument required, but only 0 present.");
                 throw typeError;
-              } else if (typeof call === "three_button_mouse") {
+              } else if (typeof fn !== "function") {
                 const _TypeError = TypeError;
                 const typeError1 = new TypeError("Failed to execute 'forEach' on 'iterable': The callback provided as parameter 1 is not a function.");
                 throw typeError1;
@@ -547,12 +547,12 @@ obj = {
                     let tmp5 = callback;
                     let tmp6 = callback(arr.map(URLSearchParams(13553).tryWrapperForImpl), 2);
                     [tmp7, tmp8] = tmp6;
-                    call = call.call;
+                    let call = fn.call;
                     let tmp9 = num2;
                     if (typeof call === "unknown") {
-                      let tmp10 = call(tmp8, tmp7, self);
+                      let tmp10 = fn(tmp8, tmp7, self);
                     } else {
-                      let tmp27 = call;
+                      let tmp27 = fn;
                       let tmp28 = tmp23;
                       let tmp29 = tmp8;
                       let tmp30 = tmp7;

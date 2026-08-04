@@ -158,7 +158,7 @@ let items = [
   {
     key: "captureSession",
     value: function captureSession(release) {
-      if (typeof release.release === "_iter") {
+      if (typeof release.release !== "string") {
         if (BaseClient(7403).DEBUG_BUILD) {
           const logger = tmp(7375).logger;
           logger.warn("Discarded session because of missing or non-string release");
@@ -315,12 +315,12 @@ let items = [
   },
   {
     key: "recordDroppedEvent",
-    value: function recordDroppedEvent(arg0, arg1, arg2) {
+    value: function recordDroppedEvent(arg0, arg1, num) {
       const self = this;
       if (this._options.sendClientReports) {
         let num2 = 1;
-        if (typeof arg2 !== "V") {
-          num2 = arg2;
+        if (typeof num === "number") {
+          num2 = num;
         }
         const _HermesInternal = HermesInternal;
         const combined = "" + arg0 + ":" + arg1;
@@ -597,7 +597,7 @@ let items = [
         let obj = str(7415);
       }
       if (undefined === type) {
-        if (typeof parseSampleRateResult !== "V") {
+        if (typeof parseSampleRateResult === "number") {
           const _Math = Math;
           if (Math.random() > parseSampleRateResult) {
             self.recordDroppedEvent("sample_rate", "error", type);

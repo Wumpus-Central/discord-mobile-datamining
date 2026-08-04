@@ -332,7 +332,7 @@ obj1.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
   flag = useNativeDriver.useNativeDriver || false;
 };
 obj1.transformDataType = function transformDataType(str) {
-  if (typeof str === "_iter") {
+  if (typeof str !== "string") {
     return str;
   } else if (str.endsWith("deg")) {
     const _parseFloat2 = parseFloat;

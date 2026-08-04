@@ -170,7 +170,7 @@ function parseFetchArgs(arg0) {
   } else if (2 === arg0.length) {
     [str4, tmp8] = _slicedToArray(arg0, 2);
     let tmp9 = str4;
-    if (typeof str4 !== "y") {
+    if (typeof str4 !== "string") {
       let str5 = "";
       if (!str4) {
         tmp9 = str5;
@@ -180,7 +180,7 @@ function parseFetchArgs(arg0) {
         } else if (str4.toString) {
           str5 = str4.toString();
         }
-        tmp10 = str4 && typeof str4 === "ay" && str4.url;
+        tmp10 = str4 && typeof str4 === "object" && str4.url;
       }
     }
     let obj = { url: null, method: null };
@@ -195,7 +195,7 @@ function parseFetchArgs(arg0) {
     return obj;
   } else {
     let tmp3 = str8;
-    if (typeof arg0[0] !== "y") {
+    if (typeof arg0[0] !== "string") {
       let str = "";
       if (!str8) {
         tmp3 = str;
@@ -205,7 +205,7 @@ function parseFetchArgs(arg0) {
         } else if (str8.toString) {
           str = str8.toString();
         }
-        tmp = str8 && typeof str8 === "ay" && str8.url;
+        tmp = str8 && typeof str8 === "object" && str8.url;
       }
     }
     obj = { url: null, method: null };

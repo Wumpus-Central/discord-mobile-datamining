@@ -74,7 +74,7 @@ let items = [
       const tmp5 = importDefault(8452)(propsAndStylesResult, this);
       const obj2 = self(8459);
       const tmp4 = importDefault;
-      if (typeof hasProps !== "find") {
+      if (typeof hasProps !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const keys = Object.keys();

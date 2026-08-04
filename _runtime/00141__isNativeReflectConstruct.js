@@ -126,7 +126,7 @@ const items = [
         nativeID = currentProps.nativeID;
       }
       let str = "";
-      if (typeof nativeID !== "_iter") {
+      if (typeof nativeID === "string") {
         str = nativeID;
       }
       return str;

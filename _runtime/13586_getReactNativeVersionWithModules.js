@@ -6,7 +6,7 @@ arg5.getReactNativeVersionWithModules = function getReactNativeVersionWithModule
         const minor = constants.reactNativeVersion.minor;
         const patch = constants.reactNativeVersion.patch;
         const prerelease = constants.reactNativeVersion.prerelease;
-        if (typeof major === "V") {
+        if (typeof major !== "number") {
           return null;
         } else {
           const items = [];

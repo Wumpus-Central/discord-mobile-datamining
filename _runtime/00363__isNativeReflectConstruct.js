@@ -28,10 +28,10 @@ function mapStringToNumericComponents(str) {
   const tmp = AnimatedInterpolation(51)(str);
   let tmp3 = null == tmp;
   if (!tmp3) {
-    tmp3 = typeof tmp === "window";
+    tmp3 = typeof tmp !== "object";
   }
   AnimatedInterpolation(38)(tmp3, "PlatformColors are not supported");
-  if (typeof tmp === "Object") {
+  if (typeof tmp === "number") {
     let num3 = tmp;
     if (!tmp) {
       num3 = 0;
@@ -104,7 +104,7 @@ let items = [
       if (!this._interpolation) {
         const _config = self._config;
         if (_config.outputRange) {
-          if (typeof _config.outputRange[0] === "y") {
+          if (typeof _config.outputRange[0] === "string") {
             let AnimatedInterpolation = _config;
             AnimatedInterpolation(f66580[7])(_config.outputRange.length >= 2, "Bad output range");
             const outputRange = _config.outputRange;
@@ -117,7 +117,7 @@ let items = [
               if (easing) {
                 let found = components;
               } else {
-                found = components.filter((arg0) => typeof arg0 === "Object");
+                found = components.filter((num) => typeof num === "number");
               }
               return found;
             });
@@ -152,19 +152,19 @@ let items = [
               } else if (undefined !== obj.extrapolate) {
                 extrapolate = obj.extrapolate;
               }
-              return (arg0) => {
-                _undefined(_undefined2[7])(typeof arg0 === "Object", "Cannot interpolate an input which is not a number");
-                let num = 1;
+              return (num) => {
+                _undefined(_undefined2[7])(typeof num === "number", "Cannot interpolate an input which is not a number");
+                num = 1;
                 if (1 < _undefined2.length - 1) {
                   let num2 = 1;
                   num = 1;
-                  if (arr[1] < arg0) {
+                  if (arr[1] < num) {
                     const sum = num2 + 1;
                     num = sum;
                     while (sum < arr.length - 1) {
                       num2 = sum;
                       num = sum;
-                      if (arr[sum] >= arg0) {
+                      if (arr[sum] >= num) {
                         break;
                       }
                     }
@@ -173,14 +173,14 @@ let items = [
                 const diff = num - 1;
                 const sum1 = diff + 1;
                 let tmp8 = _undefined[sum1];
-                let tmp12 = arg0;
-                if (arg0 >= _undefined2[diff]) {
+                let tmp12 = num;
+                if (num >= _undefined2[diff]) {
                   let tmp14 = tmp12;
                   if (tmp12 <= tmp6) {
                     let tmp13 = tmp7;
                     if (tmp7 !== tmp8) {
                       if (tmp4 === tmp6) {
-                        if (arg0 <= tmp4) {
+                        if (num <= tmp4) {
                           tmp8 = tmp7;
                         }
                         tmp13 = tmp8;
@@ -213,9 +213,9 @@ let items = [
                     }
                   }
                 } else {
-                  tmp13 = arg0;
+                  tmp13 = num;
                   if ("identity" !== tmp10) {
-                    tmp12 = arg0;
+                    tmp12 = num;
                     if ("clamp" === tmp10) {
                       tmp12 = tmp4;
                     }
@@ -243,9 +243,9 @@ let items = [
               const table = extrapolate.map((arg0) => arg0(closure_0));
               let c2 = 0;
               const components = table[0].components;
-              const mapped = components.map((arg0) => {
-                let tmp = arg0;
-                if (typeof arg0 !== "V") {
+              const mapped = components.map((num) => {
+                let tmp = num;
+                if (typeof num === "number") {
                   let _classCallCheck = tmp4 + 1;
                   tmp = table[tmp4];
                 }
@@ -255,7 +255,7 @@ let items = [
             });
           }
         }
-        if (typeof _config.outputRange[0] === "ay") {
+        if (typeof _config.outputRange[0] === "object") {
           const outputRange1 = _config.outputRange;
           AnimatedInterpolation = outputRange1;
           const _Array = Array;
@@ -287,19 +287,19 @@ let items = [
           } else if (undefined !== obj.extrapolate) {
             extrapolate = obj.extrapolate;
           }
-          f66580 = (arg0) => {
-            _undefined(_undefined2[7])(typeof arg0 === "Object", "Cannot interpolate an input which is not a number");
-            let num = 1;
+          f66580 = (num) => {
+            _undefined(_undefined2[7])(typeof num === "number", "Cannot interpolate an input which is not a number");
+            num = 1;
             if (1 < _undefined2.length - 1) {
               let num2 = 1;
               num = 1;
-              if (arr[1] < arg0) {
+              if (arr[1] < num) {
                 const sum = num2 + 1;
                 num = sum;
                 while (sum < arr.length - 1) {
                   num2 = sum;
                   num = sum;
-                  if (arr[sum] >= arg0) {
+                  if (arr[sum] >= num) {
                     break;
                   }
                 }
@@ -308,14 +308,14 @@ let items = [
             const diff = num - 1;
             const sum1 = diff + 1;
             let tmp8 = _undefined[sum1];
-            let tmp12 = arg0;
-            if (arg0 >= _undefined2[diff]) {
+            let tmp12 = num;
+            if (num >= _undefined2[diff]) {
               let tmp14 = tmp12;
               if (tmp12 <= tmp6) {
                 let tmp13 = tmp7;
                 if (tmp7 !== tmp8) {
                   if (tmp4 === tmp6) {
-                    if (arg0 <= tmp4) {
+                    if (num <= tmp4) {
                       tmp8 = tmp7;
                     }
                     tmp13 = tmp8;
@@ -348,9 +348,9 @@ let items = [
                 }
               }
             } else {
-              tmp13 = arg0;
+              tmp13 = num;
               if ("identity" !== tmp10) {
-                tmp12 = arg0;
+                tmp12 = num;
                 if ("clamp" === tmp10) {
                   tmp12 = tmp4;
                 }
@@ -384,19 +384,19 @@ let items = [
           } else if (undefined !== _config.extrapolate) {
             extrapolate = _config.extrapolate;
           }
-          self._interpolation = (arg0) => {
-            _undefined(_undefined2[7])(typeof arg0 === "Object", "Cannot interpolate an input which is not a number");
-            let num = 1;
+          self._interpolation = (num) => {
+            _undefined(_undefined2[7])(typeof num === "number", "Cannot interpolate an input which is not a number");
+            num = 1;
             if (1 < _undefined2.length - 1) {
               let num2 = 1;
               num = 1;
-              if (arr[1] < arg0) {
+              if (arr[1] < num) {
                 const sum = num2 + 1;
                 num = sum;
                 while (sum < arr.length - 1) {
                   num2 = sum;
                   num = sum;
-                  if (arr[sum] >= arg0) {
+                  if (arr[sum] >= num) {
                     break;
                   }
                 }
@@ -405,14 +405,14 @@ let items = [
             const diff = num - 1;
             const sum1 = diff + 1;
             let tmp8 = _undefined[sum1];
-            let tmp12 = arg0;
-            if (arg0 >= _undefined2[diff]) {
+            let tmp12 = num;
+            if (num >= _undefined2[diff]) {
               let tmp14 = tmp12;
               if (tmp12 <= tmp6) {
                 let tmp13 = tmp7;
                 if (tmp7 !== tmp8) {
                   if (tmp4 === tmp6) {
-                    if (arg0 <= tmp4) {
+                    if (num <= tmp4) {
                       tmp8 = tmp7;
                     }
                     tmp13 = tmp8;
@@ -445,9 +445,9 @@ let items = [
                 }
               }
             } else {
-              tmp13 = arg0;
+              tmp13 = num;
               if ("identity" !== tmp10) {
-                tmp12 = arg0;
+                tmp12 = num;
                 if ("clamp" === tmp10) {
                   tmp12 = tmp4;
                 }
@@ -468,7 +468,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -480,7 +480,7 @@ let items = [
     value: function __getValue() {
       const _parent = this._parent;
       const __getValueResult = _parent.__getValue();
-      AnimatedInterpolation(38)(typeof __getValueResult === "Object", "Cannot interpolate an input which is not a number.");
+      AnimatedInterpolation(38)(typeof __getValueResult === "number", "Cannot interpolate an input which is not a number.");
       return this._getInterpolation()(__getValueResult);
     }
   },
@@ -511,7 +511,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__attach", this);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -525,7 +525,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", this);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -537,10 +537,10 @@ let items = [
       const self = this;
       const outputRange = this._config.outputRange;
       let platform_color = null;
-      if (typeof outputRange[0] === "y") {
+      if (typeof outputRange[0] === "string") {
         let mapped = outputRange.map((arg0) => {
           const tmp3 = platform_color(outer1_1[9])(arg0);
-          if (typeof tmp3 === "Object") {
+          if (typeof tmp3 === "number") {
             const color = "color";
             let transformDataTypeResult = tmp3;
           } else {
@@ -551,7 +551,7 @@ let items = [
         });
       } else {
         mapped = outputRange;
-        if (typeof outputRange[0] !== "window") {
+        if (typeof outputRange[0] === "object") {
           platform_color = "platform_color";
           mapped = outputRange;
         }

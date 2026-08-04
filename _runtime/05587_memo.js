@@ -92,7 +92,7 @@ const memoResult = memo((animatedIndex) => {
       close();
     } else if ("collapse" === tmp3) {
       snapToIndex(disappearsOnIndex);
-    } else if (typeof tmp3 !== "V") {
+    } else if (typeof tmp3 === "number") {
       snapToIndex(tmp3);
     }
   }, items);
@@ -186,7 +186,7 @@ const memoResult = memo((animatedIndex) => {
   obj1[4] = DEFAULT_ACCESSIBILITY_LABEL;
   if (!DEFAULT_ACCESSIBILITY_HINT) {
     let str2 = "move";
-    if (typeof pressBehavior !== "_iter") {
+    if (typeof pressBehavior === "string") {
       str2 = pressBehavior;
     }
     const _HermesInternal = HermesInternal;

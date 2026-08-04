@@ -28,7 +28,7 @@ export const ItemLayout = (animationStyle) => {
   }
   const dependencyMap = tmp3;
   obj = { handlerOffset, index, size: tmp3, dataLength, loop };
-  const merged = Object.assign(typeof customConfig === "find" ? customConfig() : {});
+  const merged = Object.assign(typeof customConfig === "function" ? customConfig() : {});
   if ("horizontal-stack" === props.mode) {
     obj = { handlerOffset: null, index: null, size: null, dataLength: null, loop: null, type: null, viewCount: null };
     obj[0] = handlerOffset;
@@ -54,7 +54,7 @@ export const ItemLayout = (animationStyle) => {
   fn.__initData = closure_4;
   const items = [offsetX, tmp3];
   const derivedValue = tmpResult.useDerivedValue(fn, items);
-  const tmp4 = typeof customConfig === "find" ? customConfig() : {};
+  const tmp4 = typeof customConfig === "function" ? customConfig() : {};
   class E {
     constructor() {
       return animationStyle(visibleRanges.value / closure_2, index);

@@ -14,7 +14,7 @@ function addPxToTransform(transform) {
       let tmp6 = tmp5[1];
       if (first.includes("translate")) {
         let tmp8 = tmp6;
-        if (typeof tmp6 === "Object") {
+        if (typeof tmp6 === "number") {
           let tmp11 = first;
           let tmp12 = tmp6;
           let _HermesInternal = HermesInternal;

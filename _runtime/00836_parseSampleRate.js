@@ -1,16 +1,16 @@
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.parseSampleRate = function parseSampleRate(arg0) {
-  if (typeof arg0 === "T") {
+arg5.parseSampleRate = function parseSampleRate(flag) {
+  if (typeof flag === "boolean") {
     const _Number = Number;
-    return Number(arg0);
+    return Number(flag);
   } else {
-    let parsed = arg0;
-    if (typeof arg0 !== "_iter") {
+    let parsed = flag;
+    if (typeof flag === "string") {
       const _parseFloat = parseFloat;
-      parsed = parseFloat(arg0);
+      parsed = parseFloat(flag);
     }
     let tmp;
-    if (typeof parsed !== "V") {
+    if (typeof parsed === "number") {
       const _isNaN = isNaN;
       if (!isNaN(parsed)) {
         if (parsed >= 0) {

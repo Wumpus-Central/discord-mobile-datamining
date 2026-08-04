@@ -1,5 +1,5 @@
 let c0 = 0.1;
-let closure_1 = typeof Float32Array === "find";
+let closure_1 = typeof Float32Array === "function";
 arg5.default = function bezier(arg0, arg1, arg2, arg3) {
   let closure_0 = arg0;
   let closure_1 = arg1;

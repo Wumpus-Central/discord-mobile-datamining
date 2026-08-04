@@ -97,14 +97,14 @@ export default () => {
           }
           closure_0.apiResponse(obj, obj, tmp5Result);
         }
-        if (typeof _bodyBlob === "y") {
+        if (typeof _bodyBlob === "string") {
           if (!str4) {
             str4 = "";
           }
           if (!regex.test(str4)) {
             if ("blob" === arg4) {
               const _FileReader = FileReader;
-              if (typeof FileReader !== "Array") {
+              if (typeof FileReader !== "undefined") {
                 if (_bodyBlob) {
                   const _FileReader2 = FileReader;
                   const fileReader = new FileReader();

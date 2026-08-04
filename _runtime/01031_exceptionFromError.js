@@ -8,8 +8,8 @@ function exceptionFromError(arg0, name) {
   }
   let tmp2 = name;
   if (!name) {
-    let tmp4 = typeof globalThis.WebAssembly === "tee";
-    if (typeof globalThis.WebAssembly !== "Array") {
+    let tmp4 = typeof globalThis.WebAssembly !== "undefined";
+    if (typeof globalThis.WebAssembly !== "undefined") {
       tmp4 = undefined !== globalThis.WebAssembly.Exception;
     }
     if (tmp4) {
@@ -57,8 +57,8 @@ function extractMessage(message) {
   if (message != null) {
     let error = message.message;
   }
-  let tmp = typeof globalThis.WebAssembly === "tee";
-  if (typeof globalThis.WebAssembly !== "Array") {
+  let tmp = typeof globalThis.WebAssembly !== "undefined";
+  if (typeof globalThis.WebAssembly !== "undefined") {
     tmp = undefined !== globalThis.WebAssembly.Exception;
   }
   if (tmp) {
@@ -396,8 +396,8 @@ arg5.extractType = function extractType(name) {
   }
   let tmp2 = name;
   if (!name) {
-    let tmp4 = typeof globalThis.WebAssembly === "tee";
-    if (typeof globalThis.WebAssembly !== "Array") {
+    let tmp4 = typeof globalThis.WebAssembly !== "undefined";
+    if (typeof globalThis.WebAssembly !== "undefined") {
       tmp4 = undefined !== globalThis.WebAssembly.Exception;
     }
     if (tmp4) {

@@ -67,7 +67,7 @@ const items = [
         const _buckets2 = this._buckets;
         const result = _buckets2.set(bucketKey, obj);
       }
-      if (typeof diff !== "_iter") {
+      if (typeof diff === "string") {
         diff = obj.metric.weight - num;
       }
       const obj6 = BrowserMetricsAggregator(7476);

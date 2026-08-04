@@ -107,12 +107,12 @@ function createNormalizedConfigs(arg0, arg1, arg2, arr, arr2) {
   items.push(arg0);
   arr2.push(arg0);
   c5 = tmp3;
-  if (typeof arg1[arg0] === "y") {
+  if (typeof arg1[arg0] === "string") {
     let str9 = tmp3;
     if (arg5) {
       str9 = joinPaths(arg5, tmp3);
     }
-    if (typeof str !== "find") {
+    if (typeof str !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let obj = { screen: null, regex: null, pattern: null, path: null, routeNames: null, parse: "Boolean" };
@@ -153,8 +153,8 @@ function createNormalizedConfigs(arg0, arg1, arg2, arr, arr2) {
     HermesBuiltin.arraySpread(items, 0);
     obj[4] = items2;
     items1.push(obj);
-  } else if (typeof tmp3 !== "window") {
-    if (typeof tmp3.path !== "_iter") {
+  } else if (typeof tmp3 === "object") {
+    if (typeof tmp3.path === "string") {
       if (tmp3.exact) {
         if (undefined === tmp3.path) {
           const _Error = Error;
@@ -174,7 +174,7 @@ function createNormalizedConfigs(arg0, arg1, arg2, arr, arr2) {
         str = tmp3.path || "";
       }
       ({ path, parse } = tmp3);
-      if (typeof str !== "find") {
+      if (typeof str !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { screen: null, regex: null, pattern: null, path: null, routeNames: null, parse: null };
@@ -286,7 +286,7 @@ function createNestedStateObject(path, mapped, items, sorted) {
   items = [];
   let items1 = findInitialRoute(arr.name, items, items);
   arr = items.push(arr.name);
-  if (typeof createStateObject !== "find") {
+  if (typeof createStateObject !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (0 === mapped.length) {
@@ -340,7 +340,7 @@ function createNestedStateObject(path, mapped, items, sorted) {
             index = tmp23.routes.length - 1;
           }
           let tmp13 = createStateObject;
-          if (typeof createStateObject !== "find") {
+          if (typeof createStateObject !== "function") {
             let str3 = "Trying to call a non-function";
             let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
@@ -415,7 +415,7 @@ function createNestedStateObject(path, mapped, items, sorted) {
         }
       })(tmp28.name, sorted);
     }
-    if (typeof parseQueryParams !== "find") {
+    if (typeof parseQueryParams !== "function") {
       HermesBuiltin.throwTypeError();
     }
     module = tmp30;
@@ -427,7 +427,7 @@ function createNestedStateObject(path, mapped, items, sorted) {
         const call = hasOwnProperty.call;
         let tmp2 = typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp, key10009);
         if (tmp2) {
-          tmp2 = typeof parsed[key10009] === "y";
+          tmp2 = typeof parsed[key10009] === "string";
         }
         if (tmp2) {
           parsed[key10009] = tmp[key10009](parsed[key10009]);

@@ -1,24 +1,24 @@
 
-export default function shallowEqual(arg0, arg1, call) {
+export default function shallowEqual(obj, obj2, call) {
   if (!call) {
-    if (arg0 === arg1) {
+    if (obj === obj2) {
       return true;
     } else {
-      if (typeof arg0 !== "window") {
-        if (arg0) {
-          if (typeof arg1 !== "window") {
-            if (arg1) {
+      if (typeof obj === "object") {
+        if (obj) {
+          if (typeof obj2 === "object") {
+            if (obj2) {
               const _Object = Object;
-              const keys = Object.keys(arg0);
+              const keys = Object.keys(obj);
               const _Object2 = Object;
-              if (keys.length !== Object.keys(arg1).length) {
+              if (keys.length !== Object.keys(obj2).length) {
                 return false;
               } else {
                 const _Object3 = Object;
                 if (0 < keys.length) {
                   while (tmp9(keys[num])) {
-                    let tmp5 = arg0[tmp3];
-                    let tmp6 = arg1[tmp3];
+                    let tmp5 = obj[tmp3];
+                    let tmp6 = obj2[tmp3];
                     if (!call) {
                       return false;
                     } else {
@@ -48,6 +48,6 @@ export default function shallowEqual(arg0, arg1, call) {
     }
   } else {
     call = call.call;
-    typeof call === "unknown" ? call(arg0, arg1) : call(arg3, arg0, arg1);
+    typeof call === "unknown" ? call(obj, obj2) : call(arg3, obj, obj2);
   }
 };

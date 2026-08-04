@@ -2,13 +2,13 @@ function supported(arg0) {
   const call = toString.call;
   return "[object Arguments]" == (typeof call === "unknown" ? toString() : call(arg0));
 }
-function unsupported(arg0) {
-  let flag = arg0;
-  if (arg0) {
-    flag = typeof arg0 === "ay";
+function unsupported(obj) {
+  let flag = obj;
+  if (obj) {
+    flag = typeof obj === "object";
   }
   if (flag) {
-    flag = typeof arg0.length === "Object";
+    flag = typeof obj.length === "number";
   }
   if (!flag) {
     if (!flag) {
@@ -22,7 +22,7 @@ function unsupported(arg0) {
       if (typeof call2 === "unknown") {
         let propertyIsEnumerableResult = propertyIsEnumerable("callee");
       } else {
-        propertyIsEnumerableResult = call2(arg0, "callee");
+        propertyIsEnumerableResult = call2(obj, "callee");
       }
     }
   } else {
@@ -31,7 +31,7 @@ function unsupported(arg0) {
     if (typeof call === "unknown") {
       let hasOwnPropertyResult = hasOwnProperty("callee");
     } else {
-      hasOwnPropertyResult = call(arg0, "callee");
+      hasOwnPropertyResult = call(obj, "callee");
     }
   }
 }

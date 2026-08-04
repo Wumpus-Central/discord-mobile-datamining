@@ -5,8 +5,8 @@ class DataView {
   constructor(arg0) {
     self = this;
     tmp = DataView(this, DataView);
-    tmp2 = typeof global === "window";
-    if (typeof global !== "window") {
+    tmp2 = typeof global !== "object";
+    if (typeof global === "object") {
       tmp2 = undefined === global.length;
     }
     if (!tmp2) {

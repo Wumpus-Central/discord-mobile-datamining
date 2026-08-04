@@ -36,7 +36,7 @@ export const useMountReactions = function useMountReactions(detectorUpdater, cur
   const items = [detectorUpdater, current2];
   callback2(() => {
     if (closure_3) {
-      if (typeof subscribe !== "find") {
+      if (typeof subscribe !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const MountRegistry = current2(subscribe[2]).MountRegistry;
@@ -75,7 +75,7 @@ export const useMountReactions = function useMountReactions(detectorUpdater, cur
   const items1 = [detectorUpdater, current2];
   callback(() => {
     if (!closure_3) {
-      if (typeof subscribe !== "find") {
+      if (typeof subscribe !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const MountRegistry = current2(subscribe[2]).MountRegistry;

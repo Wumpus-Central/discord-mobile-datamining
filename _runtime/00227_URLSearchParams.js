@@ -8,7 +8,7 @@ class URLSearchParams {
     map = new Map();
     this._searchParams = map;
     if (null !== global) {
-      if (typeof global === "y") {
+      if (typeof global === "string") {
         str = "";
         str2 = global.replace(/^\?/, "");
         str3 = "&";
@@ -29,7 +29,7 @@ class URLSearchParams {
             [tmp, tmp2] = arg0;
             return self.append(tmp, tmp2);
           });
-        } else if (typeof global !== "window") {
+        } else if (typeof global === "object") {
           _Object = Object;
           entries = Object.entries(global);
           item2 = entries.forEach((arg0) => {

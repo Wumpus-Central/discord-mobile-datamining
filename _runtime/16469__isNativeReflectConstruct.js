@@ -25,7 +25,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
     const _Error = Error;
     const fn3 = function t(fn) {
@@ -79,17 +79,17 @@ if (typeof exports !== "window") {
     _assertThisInitialized = obj;
     const _Number = Number;
     c3 = POSITIVE_INFINITY2;
-    const fn4 = function r(arg0, timeout) {
+    const fn4 = function r(arg0, num) {
       let closure_0 = arg0;
-      let tmp = timeout;
-      if (typeof timeout !== "Object") {
-        timeout = undefined;
-        if (null != timeout) {
-          timeout = timeout.timeout;
+      let tmp = num;
+      if (typeof num !== "number") {
+        let timeout;
+        if (null != num) {
+          timeout = num.timeout;
         }
         tmp = timeout;
       }
-      let num = 5000;
+      num = 5000;
       if (null !== tmp) {
         num = 5000;
         if (undefined !== tmp) {
@@ -97,10 +97,10 @@ if (typeof exports !== "window") {
         }
       }
       let tmp3 = arg2;
-      if (typeof timeout !== "Object") {
+      if (typeof num !== "number") {
         let prop;
-        if (null != timeout) {
-          prop = timeout.intervalBetweenAttempts;
+        if (null != num) {
+          prop = num.intervalBetweenAttempts;
         }
         tmp3 = prop;
       }
@@ -115,7 +115,7 @@ if (typeof exports !== "window") {
       let fn;
       if (num !== c3) {
         fn = () => {
-          if (typeof num !== "find") {
+          if (typeof num !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let closure_0 = num2;
@@ -148,7 +148,7 @@ if (typeof exports !== "window") {
                 if (arg0) {
                   callback(arg0);
                 } else {
-                  if (typeof closure_1 !== "find") {
+                  if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
@@ -170,7 +170,7 @@ if (typeof exports !== "window") {
                 if (arg0) {
                   callback(arg0);
                 } else {
-                  if (typeof closure_1 !== "find") {
+                  if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
@@ -202,7 +202,7 @@ if (typeof exports !== "window") {
               if (arg0) {
                 callback(arg0);
               } else {
-                if (typeof closure_1 !== "find") {
+                if (typeof closure_1 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 callback = r;
@@ -224,7 +224,7 @@ if (typeof exports !== "window") {
               if (arg0) {
                 callback(arg0);
               } else {
-                if (typeof closure_1 !== "find") {
+                if (typeof closure_1 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 callback = r;
@@ -263,7 +263,7 @@ if (typeof exports !== "window") {
                 if (arg0) {
                   callback(arg0);
                 } else {
-                  if (typeof closure_1 !== "find") {
+                  if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
@@ -285,7 +285,7 @@ if (typeof exports !== "window") {
                 if (arg0) {
                   callback(arg0);
                 } else {
-                  if (typeof closure_1 !== "find") {
+                  if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
@@ -317,7 +317,7 @@ if (typeof exports !== "window") {
               if (arg0) {
                 callback(arg0);
               } else {
-                if (typeof closure_1 !== "find") {
+                if (typeof closure_1 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 callback = r;
@@ -339,7 +339,7 @@ if (typeof exports !== "window") {
               if (arg0) {
                 callback(arg0);
               } else {
-                if (typeof closure_1 !== "find") {
+                if (typeof closure_1 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 callback = r;
@@ -371,7 +371,7 @@ if (typeof exports !== "window") {
     const _Object = Object;
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["exports"], function i(arg0) {
       let fn = function t(fn) {
@@ -422,17 +422,17 @@ if (typeof globalThis.define !== "three_button_mouse") {
           };
         }
       };
-      const fn2 = function r(arg0, timeout) {
+      const fn2 = function r(arg0, num) {
         let closure_0 = arg0;
-        let tmp = timeout;
-        if (typeof timeout !== "Object") {
-          timeout = undefined;
-          if (null != timeout) {
-            timeout = timeout.timeout;
+        let tmp = num;
+        if (typeof num !== "number") {
+          let timeout;
+          if (null != num) {
+            timeout = num.timeout;
           }
           tmp = timeout;
         }
-        let num = 5000;
+        num = 5000;
         if (null !== tmp) {
           num = 5000;
           if (undefined !== tmp) {
@@ -440,10 +440,10 @@ if (typeof globalThis.define !== "three_button_mouse") {
           }
         }
         let tmp3 = arg2;
-        if (typeof timeout !== "Object") {
+        if (typeof num !== "number") {
           let prop;
-          if (null != timeout) {
-            prop = timeout.intervalBetweenAttempts;
+          if (null != num) {
+            prop = num.intervalBetweenAttempts;
           }
           tmp3 = prop;
         }
@@ -458,7 +458,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
         let fn;
         if (num !== c3) {
           fn = () => {
-            if (typeof num !== "find") {
+            if (typeof num !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let closure_0 = num2;
@@ -491,7 +491,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
                   if (arg0) {
                     callback(arg0);
                   } else {
-                    if (typeof closure_1 !== "find") {
+                    if (typeof closure_1 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = r;
@@ -507,7 +507,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
                   if (arg0) {
                     callback(arg0);
                   } else {
-                    if (typeof closure_1 !== "find") {
+                    if (typeof closure_1 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = r;
@@ -533,7 +533,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
                 if (arg0) {
                   callback(arg0);
                 } else {
-                  if (typeof closure_1 !== "find") {
+                  if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
@@ -555,7 +555,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
                 if (arg0) {
                   callback(arg0);
                 } else {
-                  if (typeof closure_1 !== "find") {
+                  if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
@@ -594,7 +594,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
                   if (arg0) {
                     callback(arg0);
                   } else {
-                    if (typeof closure_1 !== "find") {
+                    if (typeof closure_1 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = r;
@@ -610,7 +610,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
                   if (arg0) {
                     callback(arg0);
                   } else {
-                    if (typeof closure_1 !== "find") {
+                    if (typeof closure_1 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     callback = r;
@@ -636,7 +636,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
                 if (arg0) {
                   callback(arg0);
                 } else {
-                  if (typeof closure_1 !== "find") {
+                  if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
@@ -658,7 +658,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
                 if (arg0) {
                   callback(arg0);
                 } else {
-                  if (typeof closure_1 !== "find") {
+                  if (typeof closure_1 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   callback = r;
@@ -691,7 +691,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
   }
 }
 let self = this;
-if (typeof globalThis !== "Array") {
+if (typeof globalThis !== "undefined") {
   self = globalThis;
 }
 obj = {};
@@ -750,17 +750,17 @@ _assertThisInitialized = {
   }
 };
 c3 = POSITIVE_INFINITY;
-let fn2 = function r(arg0, timeout) {
+let fn2 = function r(arg0, num) {
   let closure_0 = arg0;
-  let tmp = timeout;
-  if (typeof timeout !== "Object") {
-    timeout = undefined;
-    if (null != timeout) {
-      timeout = timeout.timeout;
+  let tmp = num;
+  if (typeof num !== "number") {
+    let timeout;
+    if (null != num) {
+      timeout = num.timeout;
     }
     tmp = timeout;
   }
-  let num = 5000;
+  num = 5000;
   if (null !== tmp) {
     num = 5000;
     if (undefined !== tmp) {
@@ -768,10 +768,10 @@ let fn2 = function r(arg0, timeout) {
     }
   }
   let tmp3 = arg2;
-  if (typeof timeout !== "Object") {
+  if (typeof num !== "number") {
     let prop;
-    if (null != timeout) {
-      prop = timeout.intervalBetweenAttempts;
+    if (null != num) {
+      prop = num.intervalBetweenAttempts;
     }
     tmp3 = prop;
   }
@@ -786,7 +786,7 @@ let fn2 = function r(arg0, timeout) {
   let fn;
   if (num !== c3) {
     fn = () => {
-      if (typeof num !== "find") {
+      if (typeof num !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let closure_0 = num2;
@@ -819,7 +819,7 @@ let fn2 = function r(arg0, timeout) {
             if (arg0) {
               callback(arg0);
             } else {
-              if (typeof closure_1 !== "find") {
+              if (typeof closure_1 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               callback = r;
@@ -841,7 +841,7 @@ let fn2 = function r(arg0, timeout) {
             if (arg0) {
               callback(arg0);
             } else {
-              if (typeof closure_1 !== "find") {
+              if (typeof closure_1 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               callback = r;
@@ -873,7 +873,7 @@ let fn2 = function r(arg0, timeout) {
           if (arg0) {
             callback(arg0);
           } else {
-            if (typeof closure_1 !== "find") {
+            if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             callback = r;
@@ -895,7 +895,7 @@ let fn2 = function r(arg0, timeout) {
           if (arg0) {
             callback(arg0);
           } else {
-            if (typeof closure_1 !== "find") {
+            if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             callback = r;
@@ -934,7 +934,7 @@ let fn2 = function r(arg0, timeout) {
             if (arg0) {
               callback(arg0);
             } else {
-              if (typeof closure_1 !== "find") {
+              if (typeof closure_1 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               callback = r;
@@ -956,7 +956,7 @@ let fn2 = function r(arg0, timeout) {
             if (arg0) {
               callback(arg0);
             } else {
-              if (typeof closure_1 !== "find") {
+              if (typeof closure_1 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               callback = r;
@@ -988,7 +988,7 @@ let fn2 = function r(arg0, timeout) {
           if (arg0) {
             callback(arg0);
           } else {
-            if (typeof closure_1 !== "find") {
+            if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             callback = r;
@@ -1010,7 +1010,7 @@ let fn2 = function r(arg0, timeout) {
           if (arg0) {
             callback(arg0);
           } else {
-            if (typeof closure_1 !== "find") {
+            if (typeof closure_1 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             callback = r;

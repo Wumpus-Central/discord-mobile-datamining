@@ -2,7 +2,7 @@ class Deque {
   constructor(arg0) {
     obj = {};
     length = global;
-    if (typeof global === "Object") {
+    if (typeof global === "number") {
       tmp = globalThis;
       _Math = Math;
       _Math2 = Math;
@@ -237,7 +237,7 @@ class Deque {
       num9 = 16;
       sum = 1.5 * self._capacity + 16;
       length = sum;
-      if (typeof sum === "Object") {
+      if (typeof sum === "number") {
         tmp = globalThis;
         _Math = Math;
         _Math2 = Math;

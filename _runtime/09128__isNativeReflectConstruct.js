@@ -133,7 +133,7 @@ let items = [
       }
       const diff = blockLen - 8;
       const BigIntResult = BigInt(8 * self.length);
-      if (typeof view.setBigUint64 === "find") {
+      if (typeof view.setBigUint64 === "function") {
         view.setBigUint64(diff, BigIntResult, isLE);
       } else {
         const _BigInt = BigInt;

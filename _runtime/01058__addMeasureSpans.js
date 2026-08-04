@@ -38,7 +38,7 @@ function _addMeasureSpans(activeSpan, entryType) {
         try {
           detail = detail.detail;
           if (detail) {
-            if (typeof tmp2 === "ay") {
+            if (typeof tmp2 === "object") {
               const _Object = Object;
               const entries = Object.entries(detail);
               const tmp11 = entries[Symbol.iterator]();
@@ -201,12 +201,12 @@ function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr
           [tmp, tmp2] = arg0;
           let tmp4 = null != tmp3;
           if (tmp4) {
-            let tmp5 = typeof tmp3 === "Object";
-            if (typeof tmp3 !== "V") {
+            let tmp5 = typeof tmp3 === "number";
+            if (typeof tmp3 === "number") {
               tmp5 = tmp3 < 2147483647;
             }
             if (!tmp5) {
-              tmp5 = typeof tmp3 === "y";
+              tmp5 = typeof tmp3 === "string";
             }
             tmp4 = tmp5;
           }
@@ -247,12 +247,12 @@ export const _setResourceRequestAttributes = function _setResourceRequestAttribu
     [tmp, tmp2] = arg0;
     let tmp4 = null != tmp3;
     if (tmp4) {
-      let tmp5 = typeof tmp3 === "Object";
-      if (typeof tmp3 !== "V") {
+      let tmp5 = typeof tmp3 === "number";
+      if (typeof tmp3 === "number") {
         tmp5 = tmp3 < 2147483647;
       }
       if (!tmp5) {
-        tmp5 = typeof tmp3 === "y";
+        tmp5 = typeof tmp3 === "string";
       }
       tmp4 = tmp5;
     }

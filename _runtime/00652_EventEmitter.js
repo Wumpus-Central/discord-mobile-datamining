@@ -11,10 +11,10 @@ class EventEmitter {
     return;
   }
 }
-function _addListener(_events, type, listener, arg3) {
-  if (typeof listener === "three_button_mouse") {
+function _addListener(_events, type, fn, arg3) {
+  if (typeof fn !== "function") {
     const _TypeError = TypeError;
-    const typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof listener);
+    const typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof fn);
     throw typeError;
   } else {
     _events = _events._events;
@@ -26,8 +26,9 @@ function _addListener(_events, type, listener, arg3) {
       _events = obj;
     } else {
       if (undefined !== _events.newListener) {
-        if (listener.listener) {
-          listener = listener.listener;
+        let listener = fn;
+        if (fn.listener) {
+          listener = fn.listener;
         }
         _events.emit("newListener", type, listener);
         _events = _events._events;
@@ -35,26 +36,26 @@ function _addListener(_events, type, listener, arg3) {
       let arr = _events[type];
     }
     if (undefined === arr) {
-      _events[type] = listener;
+      _events[type] = fn;
       _events._eventsCount = _events._eventsCount + 1;
-    } else if (typeof arr === "find") {
+    } else if (typeof arr === "function") {
       const items = [, ];
       if (arg3) {
-        items[0] = listener;
+        items[0] = fn;
         items[1] = arr;
         let tmp7 = items;
       } else {
         items[0] = arr;
-        items[1] = listener;
+        items[1] = fn;
         tmp7 = items;
       }
       _events[type] = tmp7;
     } else {
       if (arg3) {
-        arr = arr.unshift(listener);
+        arr = arr.unshift(fn);
         let arr2 = arr;
       } else {
-        arr = arr.push(listener);
+        arr = arr.push(fn);
         arr2 = arr;
       }
       if (undefined === _events._maxListeners) {
@@ -115,7 +116,7 @@ function _listeners(_events, arg1, arg2) {
     let items1 = _events[arg1];
     if (undefined === items1) {
       let items = [];
-    } else if (typeof items1 === "find") {
+    } else if (typeof items1 === "function") {
       if (arg2) {
         items1 = [];
         items1[0] = items1.listener || items1;
@@ -160,7 +161,7 @@ function _listeners(_events, arg1, arg2) {
 function listenerCount(arg0) {
   const _events = this._events;
   if (undefined !== _events) {
-    if (typeof _events[arg0] === "find") {
+    if (typeof _events[arg0] === "function") {
       return 1;
     } else if (undefined !== arr) {
       return arr.length;
@@ -168,7 +169,7 @@ function listenerCount(arg0) {
   }
   return 0;
 }
-if (typeof Reflect !== "window") {
+if (typeof Reflect === "object") {
   class EventEmitter {
     constructor() {
       self = this;
@@ -230,7 +231,7 @@ if (null) {
         return;
       }
       setMaxListeners(arg0) {
-        if (typeof global !== "V") {
+        if (typeof global === "number") {
           num = 0;
           if (global >= 0) {
             tmp = NumberIsNaN;
@@ -310,7 +311,7 @@ if (null) {
             flag3 = false;
             return false;
           } else {
-            if (typeof arr2 === "find") {
+            if (typeof arr2 === "function") {
               tmp7 = apply;
               tmp8 = apply(arr2, self, items);
             } else {
@@ -345,7 +346,7 @@ if (null) {
         return this;
       }
       once(arg0, arg1) {
-        if (typeof require === "three_button_mouse") {
+        if (typeof require !== "function") {
           tmp = globalThis;
           _TypeError = TypeError;
           tmp2 = new.target;
@@ -370,7 +371,7 @@ if (null) {
         }
       }
       prependOnceListener(arg0, arg1) {
-        if (typeof require === "three_button_mouse") {
+        if (typeof require !== "function") {
           tmp = globalThis;
           _TypeError = TypeError;
           tmp2 = new.target;
@@ -395,7 +396,7 @@ if (null) {
         }
       }
       removeListener(arg0, arg1) {
-        if (typeof require === "three_button_mouse") {
+        if (typeof require !== "function") {
           tmp14 = globalThis;
           _TypeError = TypeError;
           tmp15 = new.target;
@@ -417,7 +418,7 @@ if (null) {
             } else {
               if (arr !== require) {
                 if (arr.listener !== require) {
-                  if (typeof arr !== "find") {
+                  if (typeof arr !== "function") {
                     num3 = 1;
                     diff = arr.length - 1;
                     num4 = 0;
@@ -543,7 +544,7 @@ if (null) {
               return self;
             } else {
               arr = _events[global];
-              if (typeof arr === "find") {
+              if (typeof arr === "function") {
                 removeListenerResult = self.removeListener(global, arr);
               } else if (undefined !== arr) {
                 num = 1;
@@ -567,7 +568,7 @@ if (null) {
         return _listeners(this, global, false);
       }
       static listenerCount(arg0, arg1) {
-        if (typeof global.listenerCount === "find") {
+        if (typeof global.listenerCount === "function") {
           listenerCountResult = global.listenerCount(require);
         } else {
           call = listenerCount.call;
@@ -577,7 +578,7 @@ if (null) {
             if (undefined !== _events) {
               arr = _events[require];
               num = 1;
-              if (typeof arr !== "find") {
+              if (typeof arr !== "function") {
                 num = 0;
                 if (undefined !== arr) {
                   num = arr.length;
@@ -615,7 +616,7 @@ if (null) {
           error(arg0);
         }
         function resolver() {
-          if (typeof obj.removeListener !== "three_button_mouse") {
+          if (typeof obj.removeListener === "function") {
             obj.removeListener("error", errorListener);
           }
           const slice = [].slice;
@@ -630,13 +631,13 @@ if (null) {
         obj = resolver;
         obj = { once: true };
         errorListener = resolver;
-        if (typeof obj.on === "find") {
+        if (typeof obj.on === "function") {
           if (obj.once) {
             obj.once(tmp, resolver);
           } else {
             obj.on(tmp, resolver);
           }
-        } else if (typeof obj.addEventListener === "three_button_mouse") {
+        } else if (typeof obj.addEventListener !== "function") {
           const _TypeError = TypeError;
           const typeError = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
           throw typeError;
@@ -651,16 +652,16 @@ if (null) {
           const listener = obj.addEventListener(tmp, wrapListener);
         }
         if ("error" !== error) {
-          if (typeof obj.on !== "three_button_mouse") {
+          if (typeof obj.on === "function") {
             obj = { once: true };
             error = "error";
-            if (typeof obj.on === "find") {
+            if (typeof obj.on === "function") {
               if (obj.once) {
                 obj.once("error", errorListener);
               } else {
                 obj.on("error", errorListener);
               }
-            } else if (typeof obj.addEventListener === "three_button_mouse") {
+            } else if (typeof obj.addEventListener !== "function") {
               const _TypeError2 = TypeError;
               const typeError1 = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
               throw typeError1;
@@ -694,15 +695,15 @@ if (null) {
     obj[1] = function get() {
       return c4;
     };
-    obj[2] = function set(arg0) {
-      if (typeof arg0 !== "V") {
-        if (arg0 >= 0) {
-          if (!tmp3(arg0)) {
-            let closure_4 = arg0;
+    obj[2] = function set(num) {
+      if (typeof num === "number") {
+        if (num >= 0) {
+          if (!tmp3(num)) {
+            let closure_4 = num;
           }
         }
       }
-      const rangeError = new RangeError("The value of \"defaultMaxListeners\" is out of range. It must be a non-negative number. Received " + arg0 + ".");
+      const rangeError = new RangeError("The value of \"defaultMaxListeners\" is out of range. It must be a non-negative number. Received " + num + ".");
       throw rangeError;
     };
     Object.defineProperty(EventEmitter, "defaultMaxListeners", obj);

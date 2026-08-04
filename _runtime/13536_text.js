@@ -72,7 +72,7 @@ const fn = (toString, toString2) => {
         const enforceResult = tmp6(13539).enforce(toString);
         if (!tmp6(13501)(enforceResult, "source")) {
           let str11 = "";
-          if (typeof text2 !== "_iter") {
+          if (typeof text2 === "string") {
             str11 = text2;
           }
           enforceResult.source = closure_7(closure_9, str11);

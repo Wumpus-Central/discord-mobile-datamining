@@ -1,5 +1,5 @@
-let _globalThis = typeof globalThis === "ay";
-if (typeof globalThis !== "window") {
+let _globalThis = typeof globalThis === "object";
+if (typeof globalThis === "object") {
   _globalThis = globalThis;
 }
 let tmp = _globalThis;
@@ -12,8 +12,8 @@ if (tmp) {
 }
 if (!tmp) {
   const _window = window;
-  let _window2 = typeof window === "ay";
-  if (typeof window !== "window") {
+  let _window2 = typeof window === "object";
+  if (typeof window === "object") {
     _window2 = window;
   }
   let tmp2 = _window2;
@@ -28,8 +28,8 @@ if (!tmp) {
 }
 if (!tmp) {
   const _self = self;
-  let _self2 = typeof self === "ay";
-  if (typeof self !== "window") {
+  let _self2 = typeof self === "object";
+  if (typeof self === "object") {
     _self2 = self;
   }
   let tmp3 = _self2;
@@ -43,8 +43,8 @@ if (!tmp) {
   tmp = tmp3;
 }
 if (!tmp) {
-  let tmp5 = typeof global === "ay";
-  if (typeof global !== "window") {
+  let tmp5 = typeof global === "object";
+  if (typeof global === "object") {
     tmp5 = global;
   }
   let tmp6 = tmp5;
@@ -58,8 +58,8 @@ if (!tmp) {
   tmp = tmp6;
 }
 if (!tmp) {
-  let self = typeof this === "ay";
-  if (typeof this !== "window") {
+  let self = typeof this === "object";
+  if (typeof this === "object") {
     self = this;
   }
   let tmp7 = self;

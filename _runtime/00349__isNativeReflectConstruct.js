@@ -82,18 +82,18 @@ class ScrollView {
     };
     tmp3Result.getInnerViewRef = () => f101664._innerView.nativeInstance;
     tmp3Result.getNativeScrollRef = () => f101664._scrollView.nativeInstance;
-    tmp3Result.scrollTo = (arg0, arg1, arg2) => {
+    tmp3Result.scrollTo = (num) => {
       let animated;
       let x;
       let y;
-      if (typeof arg0 === "Object") {
+      if (typeof num === "number") {
         x = arg1;
         animated = arg2;
         const _console = console;
         console.warn("`scrollTo(y, x, animated)` is deprecated. Use `scrollTo({x: 5, y: 5, animated: true})` instead.");
-        y = arg0;
-      } else if (arg0) {
-        ({ y, x, animated } = arg0);
+        y = num;
+      } else if (num) {
+        ({ y, x, animated } = num);
       }
       const nativeScrollRef = f101664.getNativeScrollRef();
       if (null != nativeScrollRef) {
@@ -125,21 +125,21 @@ class ScrollView {
         const obj = outer1_2(outer1_4[9]);
       }
     };
-    tmp3Result.scrollResponderScrollNativeHandleToKeyboard = (measureLayout, arg1, _preventNegativeScrollOffset) => {
-      let num = arg1;
+    tmp3Result.scrollResponderScrollNativeHandleToKeyboard = (num, arg1, _preventNegativeScrollOffset) => {
+      num = arg1;
       if (!arg1) {
         num = 0;
       }
       f101664._additionalScrollOffset = num;
       f101664._preventNegativeScrollOffset = _preventNegativeScrollOffset;
       if (null != f101664._innerView.nativeInstance) {
-        if (typeof measureLayout === "Object") {
+        if (typeof num === "number") {
           const obj = outer1_2(outer1_4[10]);
           const tmp4 = outer1_2(outer1_4[11]);
-          obj.measureLayout(measureLayout, tmp4(obj(outer1_4[8]).findNodeHandle(tmp)), tmp._textInputFocusError, tmp._inputMeasureAndScrollToKeyboard);
+          obj.measureLayout(num, tmp4(obj(outer1_4[8]).findNodeHandle(tmp)), tmp._textInputFocusError, tmp._inputMeasureAndScrollToKeyboard);
           const obj2 = obj(outer1_4[8]);
         } else {
-          measureLayout.measureLayout(tmp._innerView.nativeInstance, tmp._inputMeasureAndScrollToKeyboard, tmp._textInputFocusError);
+          num.measureLayout(tmp._innerView.nativeInstance, tmp._inputMeasureAndScrollToKeyboard, tmp._textInputFocusError);
         }
       }
     };
@@ -169,7 +169,7 @@ class ScrollView {
       if (null == _keyboardMetrics._keyboardMetrics) {
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => {
-          if (typeof scrollTextInputIntoVisibleRect !== "find") {
+          if (typeof scrollTextInputIntoVisibleRect !== "function") {
             HermesBuiltin.throwTypeError();
           }
           if (null != _keyboardMetrics._keyboardMetrics) {
@@ -240,7 +240,7 @@ class ScrollView {
               outer1_1.nativeInstance = nativeInstance;
               outer1_1.publicInstance = tmp;
               if (null != callback) {
-                if (typeof tmp3 === "find") {
+                if (typeof tmp3 === "function") {
                   tmp3(tmp);
                 } else {
                   tmp3.current = tmp;
@@ -266,7 +266,7 @@ class ScrollView {
               outer1_1.nativeInstance = nativeInstance;
               outer1_1.publicInstance = tmp;
               if (null != callback) {
-                if (typeof tmp3 === "find") {
+                if (typeof tmp3 === "function") {
                   tmp3(tmp);
                 } else {
                   tmp3.current = tmp;
@@ -375,7 +375,7 @@ class ScrollView {
         const props = obj.props;
         props.onResponderRelease(nativeEvent);
       }
-      if (typeof nativeEvent.target !== "Object") {
+      if (typeof nativeEvent.target !== "number") {
         const result = outer1_2(outer1_4[16]).currentlyFocusedInput();
         let _becameResponderWhileAnimating = null == result;
         if (!_becameResponderWhileAnimating) {
@@ -434,8 +434,8 @@ class ScrollView {
           tmp = "never" === keyboardShouldPersistTaps;
         }
         target = target.target;
-        let tmp3 = typeof target === "V";
-        if (typeof target !== "Object") {
+        let tmp3 = typeof target !== "number";
+        if (typeof target !== "number") {
           const result = obj._softKeyboardIsDetached();
           let tmp8 = !result;
           if (!result) {
@@ -550,7 +550,7 @@ let items = [
     key: "componentDidMount",
     value: function componentDidMount() {
       const self = this;
-      if (typeof this.props.keyboardShouldPersistTaps !== "los") {
+      if (typeof this.props.keyboardShouldPersistTaps === "boolean") {
         let str = "false";
         if (true === self.props.keyboardShouldPersistTaps) {
           str = "true";
@@ -885,7 +885,7 @@ let obj = {
   key: "componentDidMount",
   value: function componentDidMount() {
     const self = this;
-    if (typeof this.props.keyboardShouldPersistTaps !== "los") {
+    if (typeof this.props.keyboardShouldPersistTaps === "boolean") {
       let str = "false";
       if (true === self.props.keyboardShouldPersistTaps) {
         str = "true";

@@ -4,7 +4,7 @@ import { jsx } from "jsxProd";
 const require = arg1;
 let c3 = importAllResult;
 
-export default importAllResult.forwardRef(function ServerContainer(arg0, arg1) {
+export default importAllResult.forwardRef(function ServerContainer(arg0, fn) {
   let _location;
   let children;
   let obj;
@@ -13,15 +13,15 @@ export default importAllResult.forwardRef(function ServerContainer(arg0, arg1) {
     console.error("'ServerContainer' should only be used on the server with 'react-dom/server' for SSR.");
   }, []);
   obj = {};
-  if (arg1) {
+  if (fn) {
     obj = { getCurrentOptions: null };
     obj[0] = function getCurrentOptions() {
       return obj.options;
     };
-    if (typeof arg1 === "find") {
-      arg1(obj);
+    if (typeof fn === "function") {
+      fn(obj);
     } else {
-      arg1.current = obj;
+      fn.current = obj;
     }
   }
   obj = { value: { location: _location }, children: null };

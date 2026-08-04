@@ -18,7 +18,7 @@ arg5.messagesFromParams = function messagesFromParams(closure_2) {
   let input;
   let messages;
   ({ messages, input } = closure_2);
-  if (typeof closure_2.system === "y") {
+  if (typeof closure_2.system === "string") {
     const obj = { role: "system", content: null };
     obj[1] = closure_2.system;
     const items = [obj];

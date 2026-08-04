@@ -27,7 +27,7 @@ export default {
       } else {
         str7 = dateTime.dateTime({ width: "full" });
       }
-      if (typeof dateLongFormatter !== "find") {
+      if (typeof dateLongFormatter !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if ("P" === tmp2) {
@@ -39,7 +39,7 @@ export default {
       } else {
         dateResult = dateTime.date({ width: "full" });
       }
-      if (typeof timeLongFormatter !== "find") {
+      if (typeof timeLongFormatter !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if ("p" === tmp3) {
@@ -53,7 +53,7 @@ export default {
       }
       return str7.replace("{{date}}", dateResult).replace("{{time}}", timeResult);
     } else {
-      if (typeof dateLongFormatter !== "find") {
+      if (typeof dateLongFormatter !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if ("P" === str) {

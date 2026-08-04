@@ -3,7 +3,7 @@ try {
   globalThis.regeneratorRuntime = tmp3;
 } catch (err) {
   const _globalThis = globalThis;
-  if (typeof globalThis === "ay") {
+  if (typeof globalThis === "object") {
     const _globalThis2 = globalThis;
     globalThis.regeneratorRuntime = tmp2;
   } else {

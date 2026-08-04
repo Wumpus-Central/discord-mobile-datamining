@@ -81,7 +81,7 @@ const items = [
       let assetSource = null;
       if (href) {
         let tmp10 = href;
-        if (typeof href !== "_iter") {
+        if (typeof href === "string") {
           obj = { uri: null };
           obj[0] = href;
           tmp10 = obj;

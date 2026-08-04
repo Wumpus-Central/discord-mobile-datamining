@@ -1,5 +1,5 @@
-let tmp = typeof exports === "ay";
-if (typeof exports !== "window") {
+let tmp = typeof exports === "object";
+if (typeof exports === "object") {
   tmp = exports;
 }
 if (tmp) {
@@ -10,7 +10,7 @@ if (tmp) {
 }
 let tmp2 = tmp;
 if (tmp) {
-  tmp2 = typeof module === "ay";
+  tmp2 = typeof module === "object";
 }
 if (tmp2) {
   tmp2 = module;

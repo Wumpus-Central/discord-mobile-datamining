@@ -1,16 +1,16 @@
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
-function structuredCloneInternal(source) {
-  if (null == source) {
-    return source;
+function structuredCloneInternal(style) {
+  if (null == style) {
+    return style;
   } else {
-    let tmp = typeof source;
+    let tmp = typeof style;
     if ("boolean" !== tmp) {
       if ("number" !== tmp) {
         if ("string" !== tmp) {
           if ("bigint" !== tmp) {
-            if (typeof source === "window") {
+            if (typeof style !== "object") {
               tmp = dependencyMap;
               tmp = globalThis;
               const _String2 = String;
@@ -18,40 +18,40 @@ function structuredCloneInternal(source) {
               const _HermesInternal2 = HermesInternal;
               tmp = new.target;
               tmp = new.target;
-              tmp = new tmp("Failed to execute 'structuredClone' on 'Window': " + String(source) + " could not be cloned.", "DataCloneError");
+              tmp = new tmp("Failed to execute 'structuredClone' on 'Window': " + String(style) + " could not be cloned.", "DataCloneError");
               throw tmp;
             } else {
               tmp = map;
-              if (map.has(source)) {
-                return obj8.get(source);
+              if (map.has(style)) {
+                return obj8.get(style);
               } else {
                 tmp = globalThis;
                 const _Array = Array;
-                if (Array.isArray(source)) {
+                if (Array.isArray(style)) {
                   const items = [];
-                  const result = obj8.set(source, items);
+                  const result = obj8.set(style, items);
                   const _Object4 = Object;
-                  const keys = Object.keys(source);
+                  const keys = Object.keys(style);
                   const iter2 = keys[Symbol.iterator]();
                   const nextResult = iter2.next();
                   while (iter2 !== undefined) {
                     let tmp97 = structuredCloneInternal;
-                    items[nextResult] = structuredCloneInternal(source[nextResult]);
+                    items[nextResult] = structuredCloneInternal(style[nextResult]);
                     continue;
                   }
                   return items;
                 } else {
                   const _Object = Object;
-                  if (Object.getPrototypeOf(source) === closure_6) {
+                  if (Object.getPrototypeOf(style) === closure_6) {
                     let obj = {};
-                    const result1 = obj8.set(source, obj);
+                    const result1 = obj8.set(style, obj);
                     const _Object3 = Object;
-                    const keys1 = Object.keys(source);
+                    const keys1 = Object.keys(style);
                     const iter = keys1[Symbol.iterator]();
                     const nextResult1 = iter.next();
                     while (iter !== undefined) {
                       let tmp89 = structuredCloneInternal;
-                      obj[nextResult1] = structuredCloneInternal(source[nextResult1]);
+                      obj[nextResult1] = structuredCloneInternal(style[nextResult1]);
                       continue;
                     }
                     return obj;
@@ -74,11 +74,11 @@ function structuredCloneInternal(source) {
                       }
                     }
                     const _Map = Map;
-                    if (source instanceof Map) {
+                    if (style instanceof Map) {
                       const _Map2 = Map;
                       map = new Map();
-                      const result3 = map.set(source, map);
-                      const tmp73 = source[Symbol.iterator]();
+                      const result3 = map.set(style, map);
+                      const tmp73 = style[Symbol.iterator]();
                       while (tmp73 !== undefined) {
                         let tmp77 = callback;
                         let tmp78 = callback(tmp75, 2);
@@ -90,11 +90,11 @@ function structuredCloneInternal(source) {
                       return map;
                     } else {
                       const _Set = Set;
-                      if (source instanceof Set) {
+                      if (style instanceof Set) {
                         const _Set2 = Set;
                         const set = new Set();
-                        const result5 = map.set(source, set);
-                        const tmp60 = source[Symbol.iterator]();
+                        const result5 = map.set(style, set);
+                        const tmp60 = style[Symbol.iterator]();
                         while (tmp60 !== undefined) {
                           let tmp64 = structuredCloneInternal;
                           let addResult = set.add(structuredCloneInternal(tmp62));
@@ -103,47 +103,47 @@ function structuredCloneInternal(source) {
                         return set;
                       } else {
                         const _RegExp = RegExp;
-                        if (source instanceof RegExp) {
+                        if (style instanceof RegExp) {
                           const _RegExp2 = RegExp;
-                          const regExp = new RegExp(source.source, source.flags);
-                          const result6 = map.set(source, regExp);
+                          const regExp = new RegExp(style.source, style.flags);
+                          const result6 = map.set(style, regExp);
                           return regExp;
                         } else {
                           obj = require(126) /* setPlatformObject */;
-                          const platformObjectClone = obj.getPlatformObjectClone(source);
+                          const platformObjectClone = obj.getPlatformObjectClone(style);
                           if (null != platformObjectClone) {
-                            const platformObjectCloneResult = platformObjectClone(source);
-                            const result7 = map.set(source, platformObjectCloneResult);
+                            const platformObjectCloneResult = platformObjectClone(style);
+                            const result7 = map.set(style, platformObjectCloneResult);
                             return platformObjectCloneResult;
                           } else {
                             const _Error2 = Error;
-                            if (source instanceof Error) {
+                            if (style instanceof Error) {
                               let _Error = Error;
-                              const message = source.message;
-                              if (source.cause) {
+                              const message = style.message;
+                              if (style.cause) {
                                 obj = { cause: null };
-                                obj[0] = source.cause;
+                                obj[0] = style.cause;
                                 _Error = new _Error(message, obj);
                               } else {
                                 _Error = new _Error(message);
                               }
-                              const result8 = map.set(source, _Error);
-                              if (set.has(source.name)) {
-                                _Error.name = source.name;
+                              const result8 = map.set(style, _Error);
+                              if (set.has(style.name)) {
+                                _Error.name = style.name;
                               } else {
                                 _Error.name = "Error";
                               }
-                              _Error.stack = source.stack;
+                              _Error.stack = style.stack;
                               return _Error;
                             } else {
-                              if (!(function isNonSerializableObject(source) {
-                                return closure_9 in source;
-                              })(source)) {
-                                if (!tmp14Result.isPlatformObject(source)) {
+                              if (!(function isNonSerializableObject(style) {
+                                return closure_9 in style;
+                              })(style)) {
+                                if (!tmp14Result.isPlatformObject(style)) {
                                   const obj1 = {};
-                                  const result9 = map.set(source, obj1);
+                                  const result9 = map.set(style, obj1);
                                   const _Object2 = Object;
-                                  const keys2 = Object.keys(source);
+                                  const keys2 = Object.keys(style);
                                   for (const item10058 of keys2) {
                                     let tmp23 = structuredCloneInternal;
                                     obj1[item10058] = structuredCloneInternal(arg0[item10058]);
@@ -156,7 +156,7 @@ function structuredCloneInternal(source) {
                               const _String = String;
                               let tmp25 = importDefault(157);
                               const _HermesInternal = HermesInternal;
-                              tmp25 = new tmp25("Failed to execute 'structuredClone' on 'Window': " + String(source) + " could not be cloned.", "DataCloneError");
+                              tmp25 = new tmp25("Failed to execute 'structuredClone' on 'Window': " + String(style) + " could not be cloned.", "DataCloneError");
                               throw tmp25;
                             }
                           }
@@ -172,7 +172,7 @@ function structuredCloneInternal(source) {
         }
       }
     }
-    return source;
+    return style;
   }
 }
 let set = new Set(["Error", "EvalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"]);

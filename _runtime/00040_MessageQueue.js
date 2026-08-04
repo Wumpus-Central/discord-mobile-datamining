@@ -89,8 +89,8 @@ let items = [
   },
   {
     key: "registerLazyCallableModule",
-    value: function registerLazyCallableModule(MobileVoiceOverlayManager, closure_5) {
-      let closure_1 = closure_5;
+    value: function registerLazyCallableModule(MobileVoiceOverlayManager, fn) {
+      let closure_1 = fn;
       this._lazyCallableModules[MobileVoiceOverlayManager] = () => {
         if (c1) {
           let closure_0 = tmp();
@@ -200,8 +200,8 @@ let items = [
   {
     key: "__shouldPauseOnThrow",
     value: function __shouldPauseOnThrow() {
-      let tmp = typeof globalThis.DebuggerInternal === "tee";
-      if (typeof globalThis.DebuggerInternal !== "Array") {
+      let tmp = typeof globalThis.DebuggerInternal !== "undefined";
+      if (typeof globalThis.DebuggerInternal !== "undefined") {
         tmp = true === globalThis.DebuggerInternal.shouldPauseOnThrow;
       }
       return tmp;

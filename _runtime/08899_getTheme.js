@@ -26,10 +26,10 @@ function getTitle(arg0) {
 export default require("noop").memo((theme) => {
   const obj = {};
   const merged = Object.assign(theme);
-  if (typeof getTextColor !== "find") {
+  if (typeof getTextColor !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof getTheme !== "find") {
+  if (typeof getTheme !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (theme.theme) {
@@ -57,13 +57,13 @@ export default require("noop").memo((theme) => {
   }
   obj.textColor = require(8904) /* colorToHex */.colorToHex(str3);
   let tmp4Result = tmp4(8904);
-  if (typeof getDividerColor !== "find") {
+  if (typeof getDividerColor !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (theme.dividerColor) {
     let dividerColor = theme.dividerColor;
   } else {
-    if (typeof tmp6 !== "find") {
+    if (typeof tmp6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (theme.theme) {
@@ -91,13 +91,13 @@ export default require("noop").memo((theme) => {
   }
   obj.dividerColor = tmp4Result.colorToHex(dividerColor);
   tmp4Result = tmp4(8904);
-  if (typeof getButtonColor !== "find") {
+  if (typeof getButtonColor !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (theme.buttonColor) {
     str2 = theme.buttonColor;
   } else {
-    if (typeof tmp6 !== "find") {
+    if (typeof tmp6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (theme.theme) {
@@ -123,7 +123,7 @@ export default require("noop").memo((theme) => {
     }
   }
   obj.buttonColor = tmp4Result.colorToHex(str2);
-  if (typeof getTheme !== "find") {
+  if (typeof getTheme !== "function") {
     HermesBuiltin.throwTypeError();
   }
   if (theme.theme) {
@@ -141,7 +141,7 @@ export default require("noop").memo((theme) => {
     obj8 = closure_2;
   }
   obj.theme = str12;
-  if (typeof getTitle !== "find") {
+  if (typeof getTitle !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let title = theme.title;

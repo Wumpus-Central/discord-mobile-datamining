@@ -1,6 +1,6 @@
 function resolveAssetSource(source) {
   if (null != source) {
-    if (typeof source !== "ay") {
+    if (typeof source !== "object") {
       const assetByID = require(84).getAssetByID(source);
       if (assetByID) {
         const _default = new tmp12(85).default((function getDevServerURL() {

@@ -1,7 +1,7 @@
 const require = arg1;
 const dependencyMap = arg6;
 arg5.hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
-  if (typeof globalThis.__SENTRY_TRACING__ !== "los") {
+  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
     if (!globalThis.__SENTRY_TRACING__) {
       return false;
     }

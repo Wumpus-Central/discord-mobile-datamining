@@ -172,7 +172,7 @@ if (isJest.shouldBeUseWeb()) {
   const obj5 = { get: null, set: null };
   obj5[0] = maybeThrowError;
   obj5[1] = function set() {
-    if (typeof maybeThrowError !== "find") {
+    if (typeof maybeThrowError !== "function") {
       HermesBuiltin.throwTypeError();
     }
     if (obj.isJest()) {

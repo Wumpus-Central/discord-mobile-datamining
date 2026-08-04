@@ -3,7 +3,7 @@ arg5.default = {
     if (arg0) {
       return arg0;
     } else {
-      if (typeof globalThis.DOMParser === "tee") {
+      if (typeof globalThis.DOMParser !== "undefined") {
         const dOMParser = new globalThis.DOMParser();
         return dOMParser;
       } else {

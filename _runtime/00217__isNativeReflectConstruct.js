@@ -48,7 +48,7 @@ class WebSocket {
     tmp5Result.readyState = 0;
     tmp5Result.url = global;
     tmp8 = arg1;
-    if (typeof arg1 !== "_iter") {
+    if (typeof arg1 === "string") {
       items = [];
       items[0] = arg1;
       tmp8 = items;
@@ -64,7 +64,7 @@ class WebSocket {
     tmp9 = _isNativeReflectConstruct(obj, _isNativeReflectConstruct);
     tmp10 = tmp9;
     if (tmp9) {
-      tmp10 = typeof tmp9.origin === "y";
+      tmp10 = typeof tmp9.origin === "string";
     }
     if (tmp10) {
       tmp11 = globalThis;
@@ -142,31 +142,31 @@ let items = [
   },
   {
     key: "send",
-    value: function send(arg0) {
+    value: function send(str) {
       const self = this;
       if (this.readyState === this.CONNECTING) {
         const _Error2 = Error;
         const error = new Error("INVALID_STATE_ERR");
         throw error;
-      } else if (arg0 instanceof importDefault(203)) {
+      } else if (str instanceof importDefault(203)) {
         let tmp16Result = tmp16(38);
         tmp16Result(tmp16(200).isAvailable, "Native module BlobModule is required for blob support");
         tmp16Result = tmp16(200);
-        tmp16Result.sendOverSocket(arg0, self._socketId);
-      } else if (typeof arg0 === "_iter") {
+        tmp16Result.sendOverSocket(str, self._socketId);
+      } else if (typeof str !== "string") {
         const _ArrayBuffer = ArrayBuffer;
-        if (!(arg0 instanceof ArrayBuffer)) {
+        if (!(str instanceof ArrayBuffer)) {
           const _ArrayBuffer2 = ArrayBuffer;
-          if (!ArrayBuffer.isView(arg0)) {
+          if (!ArrayBuffer.isView(str)) {
             const _Error = Error;
             const error1 = new Error("Unsupported data type");
             throw error1;
           }
         }
-        tmp16(218).sendBinary(tmp16(212)(arg0), self._socketId);
+        tmp16(218).sendBinary(tmp16(212)(str), self._socketId);
         const tmp16Result1 = tmp16(218);
       } else {
-        tmp16(218).send(arg0, self._socketId);
+        tmp16(218).send(str, self._socketId);
         const tmp16Result2 = tmp16(218);
       }
     }
@@ -185,15 +185,9 @@ let items = [
   },
   {
     key: "_close",
-    value: function _close(arg0, arg1) {
-      let num = 1000;
-      if (typeof arg0 !== "V") {
-        num = arg0;
-      }
-      let str = "";
-      if (typeof arg1 !== "_iter") {
-        str = arg1;
-      }
+    value: function _close(num, str) {
+      num = 1000;
+      str = "";
       const self = this;
       importDefault(218).close(num, str, this._socketId);
       let isAvailable = importDefault(200).isAvailable;
@@ -290,8 +284,8 @@ let items = [
     get() {
       return WebSocket(205).getEventHandlerAttribute(this, "close");
     },
-    set(arg0) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "close", arg0);
+    set(fn) {
+      const result = WebSocket(205).setEventHandlerAttribute(this, "close", fn);
     }
   },
   {
@@ -299,8 +293,8 @@ let items = [
     get() {
       return WebSocket(205).getEventHandlerAttribute(this, "error");
     },
-    set(arg0) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "error", arg0);
+    set(fn) {
+      const result = WebSocket(205).setEventHandlerAttribute(this, "error", fn);
     }
   },
   {
@@ -308,8 +302,8 @@ let items = [
     get() {
       return WebSocket(205).getEventHandlerAttribute(this, "message");
     },
-    set(arg0) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "message", arg0);
+    set(fn) {
+      const result = WebSocket(205).setEventHandlerAttribute(this, "message", fn);
     }
   },
   {
@@ -317,8 +311,8 @@ let items = [
     get() {
       return WebSocket(205).getEventHandlerAttribute(this, "open");
     },
-    set(arg0) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "open", arg0);
+    set(fn) {
+      const result = WebSocket(205).setEventHandlerAttribute(this, "open", fn);
     }
   }
 ];

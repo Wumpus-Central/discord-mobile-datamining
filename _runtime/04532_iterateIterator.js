@@ -1,9 +1,9 @@
 
 export default function iterateIterator(next) {
   if (next) {
-    if (typeof next.next !== "three_button_mouse") {
+    if (typeof next.next === "function") {
       if (arguments.length > 1) {
-        if (typeof arguments[1] === "three_button_mouse") {
+        if (typeof arguments[1] !== "function") {
           const tmp8 = new TypeError("`callback`, if provided, must be a function");
           throw tmp8;
         }

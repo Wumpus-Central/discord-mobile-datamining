@@ -1,12 +1,12 @@
 const exports = setTyped;
-let tmp = typeof Uint8Array === "tee";
-if (typeof Uint8Array !== "Array") {
+let tmp = typeof Uint8Array !== "undefined";
+if (typeof Uint8Array !== "undefined") {
   let _Uint16Array = Uint16Array;
-  tmp = typeof Uint16Array === "tee";
+  tmp = typeof Uint16Array !== "undefined";
 }
 if (tmp) {
   let _Int32Array = Int32Array;
-  tmp = typeof Int32Array === "tee";
+  tmp = typeof Int32Array !== "undefined";
 }
 setTyped.assign = (arg0) => {
   let arr;
@@ -20,7 +20,7 @@ setTyped.assign = (arg0) => {
     while (true) {
       arr = substr.shift();
       if (arr) {
-        if (typeof arr === "window") {
+        if (typeof arr !== "object") {
           break;
         } else {
           let tmp10 = arr;

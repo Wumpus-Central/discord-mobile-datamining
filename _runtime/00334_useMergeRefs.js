@@ -7,19 +7,19 @@ export default function useMergeRefs() {
   const items1 = [...items];
   return items(335)(useCallback((arg0) => {
     const items = arg0;
-    let closure_1 = items.map((arg0) => {
-      let closure_0 = arg0;
-      if (null != arg0) {
-        if (typeof arg0 === "find") {
-          let fn = arg0(closure_0);
-          if (typeof fn !== "find") {
+    let closure_1 = items.map((fn) => {
+      let closure_0 = fn;
+      if (null != fn) {
+        if (typeof fn === "function") {
+          fn = fn(closure_0);
+          if (typeof fn !== "function") {
             fn = () => {
               callback(null);
             };
           }
           return fn;
         } else {
-          arg0.current = closure_0;
+          fn.current = closure_0;
           return () => {
             closure_0.current = null;
           };

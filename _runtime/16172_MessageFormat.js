@@ -8,7 +8,7 @@ import extend from "extend";
 class MessageFormat {
   constructor(arg0, arg1, arg2) {
     __parseResult = global;
-    if (typeof global !== "_iter") {
+    if (typeof global === "string") {
       tmp3 = MessageFormat;
       __parseResult = MessageFormat.__parse(global);
     }
@@ -77,7 +77,7 @@ class MessageFormat {
         obj = global[num];
         tmp = str;
         tmp2 = num;
-        if (typeof obj === "_iter") {
+        if (typeof obj !== "string") {
           id = obj.id;
           if (!require) {
             break;
@@ -161,7 +161,7 @@ class MessageFormat {
   }
   _resolveLocale(arg0) {
     items1 = global;
-    if (typeof global !== "_iter") {
+    if (typeof global === "string") {
       items = [];
       items[0] = global;
       items1 = items;

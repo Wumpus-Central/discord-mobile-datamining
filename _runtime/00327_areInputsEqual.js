@@ -25,10 +25,10 @@ function areInputsEqual(arg0, arg1) {
 }
 let ponyfill = Number.isNaN;
 if (!ponyfill) {
-  ponyfill = function ponyfill(arg0) {
-    let tmp = typeof arg0 === "Object";
-    if (typeof arg0 !== "V") {
-      tmp = arg0 != arg0;
+  ponyfill = function ponyfill(num) {
+    let tmp = typeof num === "number";
+    if (typeof num === "number") {
+      tmp = num != num;
     }
     return tmp;
   };

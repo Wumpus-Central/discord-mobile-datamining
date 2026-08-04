@@ -268,7 +268,7 @@ function SceneView(arg0) {
   const tmp16 = callback(obj3.useState(defaultHeaderHeight), 2);
   _require = tmp16[1];
   let tmp17 = statusBarTranslucent;
-  if (typeof statusBarTranslucent !== "T") {
+  if (typeof statusBarTranslucent !== "boolean") {
     tmp17 = 0 !== num3;
   }
   if (header) {

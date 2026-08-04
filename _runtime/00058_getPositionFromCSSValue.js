@@ -479,7 +479,7 @@ function parseBackgroundPositionCSSString(str) {
 arg5.default = function processBackgroundPosition(str) {
   if (null == str) {
     let items = [];
-  } else if (typeof str === "y") {
+  } else if (typeof str === "string") {
     items = parseBackgroundPositionCSSString(str.replace(/\n/g, " "));
   } else {
     items = [];

@@ -3,8 +3,8 @@ arg5.default = function rng() {
   let tmp = getRandomValues;
   if (!getRandomValues) {
     const _crypto = crypto;
-    getRandomValues = typeof crypto === "tee";
-    if (typeof crypto !== "Array") {
+    getRandomValues = typeof crypto !== "undefined";
+    if (typeof crypto !== "undefined") {
       const _crypto4 = crypto;
       getRandomValues = crypto.getRandomValues;
     }

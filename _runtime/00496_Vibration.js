@@ -10,7 +10,7 @@ arg5.default = {
     if (arg1 === undefined) {
       flag = false;
     }
-    if (typeof num === "Object") {
+    if (typeof num === "number") {
       module(497).vibrate(num);
       const obj2 = module(497);
     } else {

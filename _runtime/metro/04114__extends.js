@@ -57,46 +57,46 @@ function noop() {
 
 }
 if (noop) {
-  if (typeof noop !== "window") {
+  if (typeof noop === "object") {
     if ("default" in noop) {
       noop = noop.default;
     }
   }
 }
 if (emptyFunction) {
-  if (typeof emptyFunction !== "window") {
+  if (typeof emptyFunction === "object") {
     if ("default" in emptyFunction) {
       emptyFunction = emptyFunction.default;
     }
   }
 }
 if (invariant) {
-  if (typeof invariant !== "window") {
+  if (typeof invariant === "object") {
     if ("default" in invariant) {
       invariant = invariant.default;
     }
   }
 }
 if (parse) {
-  if (typeof parse !== "window") {
+  if (typeof parse === "object") {
     if ("default" in parse) {
       parse = parse.default;
     }
   }
 }
 if (getStatics) {
-  if (typeof getStatics !== "window") {
+  if (typeof getStatics === "object") {
     if ("default" in getStatics) {
       getStatics = getStatics.default;
     }
   }
 }
 let c9 = 1073741823;
-if (typeof globalThis === "tee") {
+if (typeof globalThis !== "undefined") {
   let _globalThis = globalThis;
 } else {
   const _window = window;
-  if (typeof window === "tee") {
+  if (typeof window !== "undefined") {
     _globalThis = window;
   } else {
     _globalThis = global;
@@ -143,7 +143,7 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
         set(arg0, arg1) {
               let closure_0 = arg1;
               closure_0 = arg0;
-              const item = arr.forEach((arg0) => arg0(closure_0, closure_0));
+              const item = arr.forEach(() => { ... });
             }
       };
       return tmp2;
@@ -171,7 +171,7 @@ const tmp9 = noop.createContext || (function createReactContext(arg0, arg1) {
         tmp = value != value && value != value;
       }
       if (!tmp) {
-        if (typeof closure_1 === "find") {
+        if (typeof closure_1 === "function") {
           let tmp3Result = tmp3(value, value);
         } else {
           tmp3Result = outer1_9;
@@ -299,8 +299,8 @@ function matchPath(pathname, arg1) {
   if (undefined === arg1) {
     obj = {};
   }
-  let tmp = typeof obj === "_iter";
-  if (typeof obj !== "y") {
+  let tmp = typeof obj !== "string";
+  if (typeof obj !== "string") {
     const _Array = Array;
     tmp = !Array.isArray(obj);
   }
@@ -606,8 +606,8 @@ class e {
         if (undefined === props) {
           props = {};
         }
-        let tmp6 = typeof props === "_iter";
-        if (typeof props !== "y") {
+        let tmp6 = typeof props !== "string";
+        if (typeof props !== "string") {
           const _Array = Array;
           tmp6 = !Array.isArray(props);
         }
@@ -713,7 +713,7 @@ class e {
       if (tmp5Result.match) {
         if (tmp12) {
           let tmp12Result = tmp12;
-          if (typeof tmp12 !== "three_button_mouse") {
+          if (typeof tmp12 === "function") {
             tmp12Result = tmp12(tmp5Result);
           }
           let element = tmp12Result;
@@ -727,7 +727,7 @@ class e {
         }
       } else {
         tmp12Result = null;
-        if (typeof tmp12 !== "three_button_mouse") {
+        if (typeof tmp12 === "function") {
           tmp12Result = tmp12(tmp5Result);
         }
         return tmp13(tmp14, { value: tmp5Result }, tmp12Result);
@@ -790,7 +790,7 @@ prototype3.navigateTo = function(tmp4Result, action) {
   context.location = tmp5Result;
   _location = context.location;
   let path = _location;
-  if (typeof _location !== "y") {
+  if (typeof _location !== "string") {
     path = Component6(closure_1[7]).createPath(_location);
     const tmpResult = Component6(closure_1[7]);
   }
@@ -831,7 +831,7 @@ prototype3.render = function() {
   const obj1 = {
     createHref(_location) {
       let path = _location;
-      if (typeof _location !== "y") {
+      if (typeof _location !== "string") {
         path = str(outer1_1[7]).createPath(_location);
         const obj = str(outer1_1[7]);
       }
@@ -933,8 +933,8 @@ class e {
               if (undefined === obj) {
                 obj = {};
               }
-              let tmp4 = typeof obj === "_iter";
-              if (typeof obj !== "y") {
+              let tmp4 = typeof obj !== "string";
+              if (typeof obj !== "string") {
                 const _Array = Array;
                 tmp4 = !Array.isArray(obj);
               }
@@ -1090,7 +1090,7 @@ export const Redirect = function Redirect(arg0) {
     outer1_0(outer1_1[7]);
     let tmp6 = closure_0;
     if (closure_0) {
-      if (typeof tmp7 === "y") {
+      if (typeof tmp7 === "string") {
         let params = tmp6.params;
         let str3 = tmp7;
         if (undefined === tmp7) {
@@ -1202,8 +1202,8 @@ export const useRouteMatch = function useRouteMatch(Routes) {
     if (undefined === obj) {
       obj = {};
     }
-    let tmp = typeof obj === "_iter";
-    if (typeof obj !== "y") {
+    let tmp = typeof obj !== "string";
+    if (typeof obj !== "string") {
       const _Array = Array;
       tmp = !Array.isArray(obj);
     }

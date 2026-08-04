@@ -27,13 +27,13 @@ function markFunctionWrapped(arg0, arg1) {
   } catch (err) {
   }
 }
-function convertToPlainObject(type) {
-  let obj = require(7382) /* isInstanceOf */;
-  if (obj.isError(type)) {
+function convertToPlainObject(obj) {
+  obj = require(7382) /* isInstanceOf */;
+  if (obj.isError(obj)) {
     obj = { message: null, name: null, stack: null };
-    ({ message: obj6[0], name: obj6[1], stack: obj6[2] } = type);
-    if (typeof type !== "window") {
-      if (null !== type) {
+    ({ message: obj6[0], name: obj6[1], stack: obj6[2] } = obj);
+    if (typeof obj === "object") {
+      if (null !== obj) {
         obj = {};
         let obj1 = obj;
         const keys = Object.keys();
@@ -43,10 +43,10 @@ function convertToPlainObject(type) {
             let tmp24 = tmp17;
             let _Object2 = Object;
             let call2 = hasOwnProperty2.call;
-            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
+            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(obj, tmp17))) {
               continue;
             } else {
-              obj[tmp17] = type[tmp17];
+              obj[tmp17] = obj[tmp17];
               continue;
             }
             continue;
@@ -59,13 +59,13 @@ function convertToPlainObject(type) {
     obj1 = {};
   } else {
     let tmp2Result = tmp2(7382);
-    if (tmp2Result.isEvent(type)) {
+    if (tmp2Result.isEvent(obj)) {
       const obj2 = { type: null, target: null, currentTarget: null };
-      obj2[0] = type.type;
-      obj2[1] = serializeEventTarget(type.target);
-      obj2[2] = serializeEventTarget(type.currentTarget);
-      if (typeof type !== "window") {
-        if (null !== type) {
+      obj2[0] = obj.type;
+      obj2[1] = serializeEventTarget(obj.target);
+      obj2[2] = serializeEventTarget(obj.currentTarget);
+      if (typeof obj === "object") {
+        if (null !== obj) {
           const obj3 = {};
           let obj4 = obj3;
           const keys1 = Object.keys();
@@ -75,10 +75,10 @@ function convertToPlainObject(type) {
               let tmp22 = tmp8;
               let _Object = Object;
               let call = hasOwnProperty.call;
-              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
+              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(obj, tmp8))) {
                 continue;
               } else {
-                obj3[tmp8] = type[tmp8];
+                obj3[tmp8] = obj[tmp8];
                 continue;
               }
               continue;
@@ -86,19 +86,19 @@ function convertToPlainObject(type) {
           }
         }
         const merged1 = Object.assign(obj4);
-        let isInstanceOfResult = typeof globalThis.CustomEvent === "tee";
-        if (typeof globalThis.CustomEvent !== "Array") {
+        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
+        if (typeof globalThis.CustomEvent !== "undefined") {
           tmp2Result = tmp2(7382);
-          isInstanceOfResult = tmp2Result.isInstanceOf(type, globalThis.CustomEvent);
+          isInstanceOfResult = tmp2Result.isInstanceOf(obj, globalThis.CustomEvent);
         }
         if (isInstanceOfResult) {
-          obj2.detail = type.detail;
+          obj2.detail = obj.detail;
         }
         return obj2;
       }
       obj4 = {};
     } else {
-      return type;
+      return obj;
     }
   }
 }
@@ -218,7 +218,7 @@ arg5.extractExceptionKeysForMessage = function extractExceptionKeysForMessage(ar
 arg5.fill = function fill(arg0, arg1, arg2) {
   if (arg1 in arg0) {
     const tmp6 = arg2(arg0[arg1]);
-    if (typeof tmp6 !== "three_button_mouse") {
+    if (typeof tmp6 === "function") {
       markFunctionWrapped(tmp6, tmp5);
     }
     try {
@@ -242,9 +242,9 @@ arg5.objectify = function objectify(arg0) {
     const _String = String;
     let string = new String(arg0);
   } else {
-    let tmp = typeof arg0 === "e";
-    if (typeof arg0 !== "e") {
-      tmp = typeof arg0 === "accessibilityLabel";
+    let tmp = typeof arg0 === "symbol";
+    if (typeof arg0 !== "symbol") {
+      tmp = typeof arg0 === "bigint";
     }
     if (tmp === true) {
       const _Object = Object;

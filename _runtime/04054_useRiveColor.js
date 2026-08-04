@@ -25,11 +25,11 @@ export const useRiveColor = function useRiveColor(FillColor, instance) {
     tmp8 = cResult[1];
   }
   if (cResult[2] !== tmp6) {
-    const fn = function p(arg0) {
-      let fromHexStringResult = arg0;
-      if (typeof arg0 !== "_iter") {
+    const fn = function p(str) {
+      let fromHexStringResult = str;
+      if (typeof str === "string") {
         const RiveColor = tmp6(outer1_1[4]).RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(arg0);
+        fromHexStringResult = RiveColor.fromHexString(str);
       }
       tmp6(fromHexStringResult.toInt());
     };

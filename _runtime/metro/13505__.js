@@ -1,5 +1,5 @@
 
-export default require("prop") ? ((arg0) => typeof arg0 === "e") : ((arg0) => {
+export default require("prop") ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
   const tmp3 = require(13506) /* all */("Symbol");
   let tmpResultResult = require(13504) /* all */(tmp3);
   if (tmpResultResult) {

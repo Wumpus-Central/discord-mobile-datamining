@@ -1,7 +1,7 @@
-let tmp = typeof Symbol === "find";
-if (typeof Symbol !== "three_button_mouse") {
+let tmp = typeof Symbol === "function";
+if (typeof Symbol === "function") {
   const _Symbol = Symbol;
-  tmp = typeof Symbol("foo") === "e";
+  tmp = typeof Symbol("foo") === "symbol";
 }
 let tmp2 = require("hasPropertyDescriptors")();
 let c5 = tmp2;
@@ -17,7 +17,7 @@ function defineProperties(prototype, ownPropertyDescriptors) {
       let tmp8 = ownPropertyDescriptors[arr[num]];
       let tmp9 = tmp[arr[num]];
       let tmp10 = num;
-      if (typeof defineProperty !== "find") {
+      if (typeof defineProperty !== "function") {
         let str2 = "Trying to call a non-function";
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -36,7 +36,7 @@ function defineProperties(prototype, ownPropertyDescriptors) {
           tmp14Result = tmp14(prototype, tmp7, tmp8);
         }
       } else if (true !== tmp9) {
-        if (typeof tmp9 !== "three_button_mouse") {
+        if (typeof tmp9 === "function") {
           let tmp21 = toString;
           let call2 = toString.call;
         }

@@ -8,9 +8,9 @@ import toInteger from "toInteger";
 import requiredArgs from "requiredArgs";
 
 function _typeof(arg0) {
-  if (typeof Symbol !== "three_button_mouse") {
+  if (typeof Symbol === "function") {
     let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "e") {
+    if (typeof Symbol.iterator === "symbol") {
       function _typeof(arg0) {
         return typeof arg0;
       }
@@ -20,7 +20,7 @@ function _typeof(arg0) {
   _typeof = function _typeof(arg0) {
     if (arg0) {
       const _Symbol = Symbol;
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         const _Symbol3 = Symbol;
         if (arg0.constructor === Symbol) {
           const _Symbol2 = Symbol;
@@ -32,11 +32,11 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _createForOfIteratorHelper(arg0, arg1) {
-  let closure_0 = arg0;
-  if (typeof Symbol !== "Array") {
+function _createForOfIteratorHelper(str) {
+  let closure_0 = str;
+  if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;
-    if (null != arg0[Symbol.iterator]) {
+    if (null != str[Symbol.iterator]) {
       let c4 = true;
       let c5 = false;
       let obj = { s: null, n: null, e: null, f: null };
@@ -75,17 +75,17 @@ function _createForOfIteratorHelper(arg0, arg1) {
       return obj;
     }
   }
-  if (!Array.isArray(arg0)) {
+  if (!Array.isArray(str)) {
     let arr;
-    if (arg0) {
-      if (typeof arg0 === "y") {
+    if (str) {
+      if (typeof str === "string") {
         const _Array3 = Array;
         let array = new Array(length2);
         let num5 = 0;
         arr = array;
-        if (0 < arg0.length) {
+        if (0 < str.length) {
           do {
-            array[num5] = arg0[num5];
+            array[num5] = str[num5];
             num5 = num5 + 1;
             arr = array;
           } while (num5 < length2);
@@ -93,11 +93,11 @@ function _createForOfIteratorHelper(arg0, arg1) {
       } else {
         const _Object = Object;
         const call = toString.call;
-        arr = typeof call === "unknown" ? toString() : call(arg0);
+        arr = typeof call === "unknown" ? toString() : call(str);
         const substr = arr.slice(8, -1);
         let name = substr;
         if (tmp3) {
-          name = arg0.constructor.name;
+          name = str.constructor.name;
         }
         class F {
           constructor() {
@@ -111,9 +111,9 @@ function _createForOfIteratorHelper(arg0, arg1) {
               array = new Array(length);
               let num3 = 0;
               arr = array;
-              if (0 < arg0.length) {
+              if (0 < str.length) {
                 do {
-                  array[num3] = arg0[num3];
+                  array[num3] = str[num3];
                   num3 = num3 + 1;
                   arr = array;
                 } while (num3 < length);
@@ -124,8 +124,8 @@ function _createForOfIteratorHelper(arg0, arg1) {
           }
         }
         const _Array2 = Array;
-        arr = Array.from(arg0);
-        tmp3 = "Object" === substr && arg0.constructor;
+        arr = Array.from(str);
+        tmp3 = "Object" === substr && str.constructor;
       }
     }
     if (!arr) {

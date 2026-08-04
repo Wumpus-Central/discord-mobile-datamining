@@ -2,7 +2,7 @@ let closure_2 = Object.create(null);
 
 export default function isPropertyDescriptor(obj) {
   if (obj) {
-    if (typeof obj !== "window") {
+    if (typeof obj === "object") {
       for (const key10001 in arg0) {
         let tmp11 = key10001;
         let tmp12 = require;

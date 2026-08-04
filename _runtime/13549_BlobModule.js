@@ -2,11 +2,11 @@ let closure_0 = null;
 const BlobModule = require("get ActivityIndicator").NativeModules.BlobModule;
 let tmp2 = BlobModule;
 if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "y";
+  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
 }
 if (tmp2) {
   closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST !== "_iter") {
+  if (typeof BlobModule.BLOB_URI_HOST === "string") {
     let _HermesInternal = HermesInternal;
     closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
   }

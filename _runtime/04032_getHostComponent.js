@@ -32,11 +32,11 @@ export const getHostComponent = function getHostComponent(RiveView, arg1) {
   }
   tmp = importAll;
 };
-export const callback = function callback(arg0) {
-  let tmp = arg0;
-  if (typeof arg0 !== "three_button_mouse") {
+export const callback = function callback(fn) {
+  let tmp = fn;
+  if (typeof fn === "function") {
     const obj = { f: null };
-    obj[0] = arg0;
+    obj[0] = fn;
     tmp = obj;
   }
   return tmp;

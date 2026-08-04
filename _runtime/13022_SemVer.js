@@ -18,7 +18,7 @@ class SemVer {
       version = global.version;
     } else {
       version = global;
-      if (typeof global !== "y") {
+      if (typeof global !== "string") {
         tmp33 = globalThis;
         _TypeError6 = TypeError;
         _HermesInternal3 = HermesInternal;
@@ -168,7 +168,7 @@ let items = [
       const self = this;
       SemVer(13025)("SemVer.compare", this.version, this.options, tmp2Result);
       if (!(tmp2Result instanceof SemVer)) {
-        if (typeof tmp2Result !== "_iter") {
+        if (typeof tmp2Result === "string") {
           if (tmp2Result === self.version) {
             return 0;
           }
@@ -370,7 +370,7 @@ let items = [
             do {
               let tmp11 = diff;
               let num3 = diff;
-              if (typeof self.prerelease[diff] !== "V") {
+              if (typeof self.prerelease[diff] === "number") {
                 let prerelease2 = self.prerelease;
                 prerelease2[diff] = prerelease2[diff] + 1;
                 num3 = -2;

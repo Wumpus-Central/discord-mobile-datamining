@@ -32,7 +32,7 @@ let items = [
   },
   {
     key: "slice",
-    value: function slice(arg0, arg1) {
+    value: function slice(num, num2) {
       let offset;
       let size;
       let str = arg2;
@@ -40,20 +40,20 @@ let items = [
         str = "";
       }
       const self = this;
-      let tmp = arg0;
+      let tmp = num;
       ({ offset, size } = this.data);
       let tmp2 = size;
       let tmp3 = offset;
-      if (typeof arg0 !== "V") {
+      if (typeof num === "number") {
         if (tmp > size) {
           tmp = size;
         }
         let diff = size - tmp;
         const sum = offset + tmp;
-        if (typeof arg1 !== "V") {
-          let size2 = arg1;
-          if (arg1 < 0) {
-            size2 = self.size + arg1;
+        if (typeof num2 === "number") {
+          let size2 = num2;
+          if (num2 < 0) {
+            size2 = self.size + num2;
           }
           if (size2 > self.size) {
             size2 = self.size;

@@ -60,14 +60,14 @@ export default function extractGradient(arg0, arg1) {
           num8 = 0;
         }
         let num9 = num8;
-        if (typeof num8 !== "Object") {
-          if (typeof num8 !== "window") {
-            if (typeof num8.__getAnimatedValue === "find") {
+        if (typeof num8 !== "number") {
+          if (typeof num8 === "object") {
+            if (typeof num8.__getAnimatedValue === "function") {
               num9 = num8.__getAnimatedValue();
             }
           }
-          let match = typeof num8 === "y";
-          if (typeof num8 !== "_iter") {
+          let match = typeof num8 === "string";
+          if (typeof num8 === "string") {
             let tmp27 = closure_5;
             match = num8.match(closure_5);
           }
@@ -86,7 +86,7 @@ export default function extractGradient(arg0, arg1) {
           let tmp11 = processColor;
           tmp10 = processColor(stopColor);
         }
-        if (typeof tmp10 !== "V") {
+        if (typeof tmp10 === "number") {
           let _isNaN = isNaN;
           if (!isNaN(num9)) {
             let _Math = Math;

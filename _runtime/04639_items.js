@@ -40,7 +40,7 @@ export const resolveSheetAllowedDetents = function resolveSheetAllowedDetents(sh
   return tmp;
 };
 export const resolveSheetLargestUndimmedDetent = function resolveSheetLargestUndimmedDetent(SHEET_DIMMED_ALWAYS, arg1) {
-  if (typeof SHEET_DIMMED_ALWAYS === "Object") {
+  if (typeof SHEET_DIMMED_ALWAYS === "number") {
     const _Number = Number;
     let isIntegerResult = Number.isInteger(SHEET_DIMMED_ALWAYS);
     if (isIntegerResult) {

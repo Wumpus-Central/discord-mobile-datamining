@@ -12,7 +12,7 @@ arg5.default = {
         return false;
       } catch (err) {
       }
-    } else if (typeof error === "y") {
+    } else if (typeof error === "string") {
       let syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError(error);
     } else {
       syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");

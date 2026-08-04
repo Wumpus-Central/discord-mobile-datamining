@@ -8,7 +8,7 @@ export default () => () => ({
   onCommand(type) {
     if ("devtools.open" === type.type) {
       if ("devtools.open" === type.type) {
-        if (typeof closure_1 !== "find") {
+        if (typeof closure_1 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let obj = { reload: null, show: null, getConstants: null, debugRemotely: null, setHotLoadingEnabled: null, setProfilingEnabled: null };
@@ -34,7 +34,7 @@ export default () => () => ({
         obj.show();
       }
       if ("devtools.reload" === type.type) {
-        if (typeof closure_1 !== "find") {
+        if (typeof closure_1 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj = { reload: null, show: null, getConstants: null, debugRemotely: null, setHotLoadingEnabled: null, setProfilingEnabled: null };

@@ -382,8 +382,8 @@ let items = [
           obj = {};
         }
         const backgroundColor = StyleSheet.flatten(obj).backgroundColor;
-        let tmp10 = typeof backgroundColor === "y";
-        if (typeof backgroundColor !== "_iter") {
+        let tmp10 = typeof backgroundColor === "string";
+        if (typeof backgroundColor === "string") {
           tmp10 = 0 === importDefault(5707)(backgroundColor).alpha();
           const obj19 = importDefault(5707)(backgroundColor);
         }

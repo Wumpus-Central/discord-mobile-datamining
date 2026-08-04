@@ -76,7 +76,7 @@ export default function _default(pressRetentionOffset) {
   let closure_20 = onPressIn({ width: 0, height: 0 });
   const items = [hitSlop];
   let tmp5 = onPress(() => {
-    if (typeof hitSlop === "Object") {
+    if (typeof hitSlop === "number") {
       let numberAsInsetResult = hitSlop(delayHoverIn[6]).numberAsInset(tmp);
       const obj2 = hitSlop(delayHoverIn[6]);
     } else {
@@ -92,7 +92,7 @@ export default function _default(pressRetentionOffset) {
   let tmp3 = delayLongPress(onPressOut(testOnly_pressed), 2);
   let obj = hitSlop(delayHoverIn[6]);
   const addInsetsResult = obj.addInsets(tmp5, onPress(() => {
-    if (typeof pressRetentionOffset === "Object") {
+    if (typeof pressRetentionOffset === "number") {
       let numberAsInsetResult = hitSlop(delayHoverIn[6]).numberAsInset(tmp);
       const obj2 = hitSlop(delayHoverIn[6]);
     } else {
@@ -216,7 +216,7 @@ export default function _default(pressRetentionOffset) {
   const items8 = [delayHoverIn, delayHoverOut, onHoverIn, onHoverOut];
   const items9 = [tmp15, tmp12, tmp14, isScreenReaderEnabled];
   const tmp6 = onPress(() => {
-    if (typeof pressRetentionOffset === "Object") {
+    if (typeof pressRetentionOffset === "number") {
       let numberAsInsetResult = hitSlop(delayHoverIn[6]).numberAsInset(tmp);
       const obj2 = hitSlop(delayHoverIn[6]);
     } else {
@@ -442,13 +442,13 @@ export default function _default(pressRetentionOffset) {
     return onTouchesCancelledResult.onFinalize(fn4);
   }, items9);
   const tmp22 = hitSlop;
-  if (typeof style !== "three_button_mouse") {
+  if (typeof style === "function") {
     obj = { pressed: null };
     obj[0] = tmp4;
     style = style(obj);
   }
   let childrenResult = children;
-  if (typeof children !== "three_button_mouse") {
+  if (typeof children === "function") {
     obj = { pressed: null };
     obj[0] = tmp4;
     childrenResult = children(obj);

@@ -44,7 +44,7 @@ class HMAC {
     hashResult = require("number").hash(global);
     toBytesResult = require("_asyncLoop").toBytes(require);
     tmp3Result.iHash = global.create();
-    if (typeof tmp3Result.iHash.update === "three_button_mouse") {
+    if (typeof tmp3Result.iHash.update !== "function") {
       tmp13 = globalThis;
       _Error = Error;
       tmp14 = new.target;

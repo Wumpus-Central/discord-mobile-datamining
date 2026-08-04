@@ -12,6 +12,6 @@ export default function _isNativeFunction(arg0) {
     str = "[native code]";
     const index = strResult.indexOf("[native code]");
   } catch (err) {
-    return typeof tmp === "find";
+    return typeof tmp === "function";
   }
 };

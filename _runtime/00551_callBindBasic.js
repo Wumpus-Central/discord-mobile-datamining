@@ -1,7 +1,7 @@
 
 export default function callBindBasic(items) {
   if (items.length >= 1) {
-    if (typeof items[0] !== "three_button_mouse") {
+    if (typeof items[0] === "function") {
       const tmp4 = require(552);
       return tmp4(require(554) /* bind */, require(556), items);
     }

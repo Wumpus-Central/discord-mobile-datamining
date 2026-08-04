@@ -1,5 +1,5 @@
 
-export default (version, arg1, version2) => {
+export default (obj, arg1, obj2) => {
   switch (arg1) {
     case "t":
     break;
@@ -150,63 +150,65 @@ export default (version, arg1, version2) => {
     case "channelId":
     break;
     case "channel_id":
-      let version3 = version;
-      if (typeof version !== "window") {
-        version3 = version.version;
+      let version3 = obj;
+      if (typeof obj === "object") {
+        version3 = obj.version;
       }
-      let version4 = version2;
-      if (typeof version2 !== "window") {
-        version4 = version2.version;
+      let version4 = obj2;
+      if (typeof obj2 === "object") {
+        version4 = obj2.version;
       }
       return version3 === version4;
     case "id":
     break;
     case "children":
-      if (typeof version !== "window") {
-        version = version.version;
+      let version = obj;
+      if (typeof obj === "object") {
+        version = obj.version;
       }
-      if (typeof version2 !== "window") {
-        version2 = version2.version;
+      let version2 = obj2;
+      if (typeof obj2 === "object") {
+        version2 = obj2.version;
       }
       return version !== version2;
     case "cix":
     break;
     case "ix":
       let tmp13 = require(13044) /* SemVer */;
-      let tmp13Result = tmp13(version, version2, arg3);
+      let tmp13Result = tmp13(obj, obj2, arg3);
       return tmp13Result;
     case "unicodeVersion":
     break;
     case "code":
       tmp13 = require(13044) /* SemVer */;
-      tmp13Result = tmp13(version, version2, arg3);
+      tmp13Result = tmp13(obj, obj2, arg3);
       return tmp13Result;
     case "color":
     break;
     case "colors":
       tmp13 = require(13044) /* SemVer */;
-      tmp13Result = tmp13(version, version2, arg3);
+      tmp13Result = tmp13(obj, obj2, arg3);
       return tmp13Result;
     case "concat":
     break;
     case "constructor":
-      return require(13045) /* SemVer */(version, version2, arg3);
+      return require(13045) /* SemVer */(obj, obj2, arg3);
     case "container":
     break;
     case "content":
-      return require(13042) /* SemVer */(version, version2, arg3);
+      return require(13042) /* SemVer */(obj, obj2, arg3);
     case "context":
     break;
     case "text":
-      return require(13046) /* SemVer */(version, version2, arg3);
+      return require(13046) /* SemVer */(obj, obj2, arg3);
     case "count":
     break;
     case "create":
-      return require(13043) /* SemVer */(version, version2, arg3);
+      return require(13043) /* SemVer */(obj, obj2, arg3);
     case "createStyles":
     break;
     case "ty":
-      return require(13047) /* SemVer */(version, version2, arg3);
+      return require(13047) /* SemVer */(obj, obj2, arg3);
     case "current":
     break;
     case "cursor":

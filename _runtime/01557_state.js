@@ -49,11 +49,11 @@ export default function useLinkProps(to) {
     getPathFromState = to(1483).getPathFromState;
   }
   let pathFromState = to;
-  if (typeof to !== "y") {
+  if (typeof to !== "string") {
     let obj = { name: null, params: null, state: null };
     ({ screen: obj7[0], params: obj7[1] } = to);
     const params2 = to.params;
-    if (typeof closure_4 !== "find") {
+    if (typeof closure_4 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let state;
@@ -78,7 +78,7 @@ export default function useLinkProps(to) {
           state = obj;
         } else {
           const params = params2.params;
-          if (typeof tmp12 !== "find") {
+          if (typeof tmp12 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let state1;

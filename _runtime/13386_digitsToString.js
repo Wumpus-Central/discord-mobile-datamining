@@ -1620,11 +1620,11 @@ function ceil(result) {
 function clamp(arg0, arg1, arg2) {
   return new this(arg0).clamp(arg1, arg2);
 }
-function config(defaults) {
+function config(obj) {
   let tmp;
   let tmp4;
-  if (defaults) {
-    if (typeof defaults !== "window") {
+  if (obj) {
+    if (typeof obj === "object") {
       const self = this;
       const items = ["precision", 1, 1000000000, "rounding", 0, 8, "toExpNeg", -9000000000000000, 0, "toExpPos", 0, 9000000000000000, "maxE", 0, 9000000000000000, "minE", -9000000000000000, 0, "modulo", 0, 9];
       let num = 0;
@@ -1636,7 +1636,7 @@ function config(defaults) {
             let tmp3 = obj;
             self[tmp] = obj[tmp];
           }
-          tmp4 = defaults[tmp];
+          tmp4 = obj[tmp];
           if (undefined !== tmp4) {
             let tmp5 = floor;
             if (floor(tmp4) !== tmp4) {
@@ -1654,10 +1654,10 @@ function config(defaults) {
         const _Error = Error;
         throw Error(c9 + tmp + ": " + tmp4);
       }
-      if (true === defaults.defaults) {
+      if (true === obj.defaults) {
         self.crypto = obj.crypto;
       }
-      const _crypto = defaults.crypto;
+      const _crypto = obj.crypto;
       if (undefined !== _crypto) {
         if (true !== _crypto) {
           if (false !== _crypto) {
@@ -1671,7 +1671,7 @@ function config(defaults) {
         }
         if (_crypto) {
           const _crypto2 = crypto;
-          if (typeof crypto !== "Array") {
+          if (typeof crypto !== "undefined") {
             const _crypto5 = crypto;
             if (crypto) {
               const _crypto3 = crypto;
@@ -4936,7 +4936,7 @@ function clone(arg0) {
             self.d = substr1;
             return;
           }
-        } else if (typeof arg0 === "Object") {
+        } else if (typeof arg0 === "number") {
           num25 = 0;
           if (0 === arg0) {
             num34 = 1;
@@ -5008,7 +5008,7 @@ function clone(arg0) {
             }
             return tmp64;
           }
-        } else if (typeof arg0 === "y") {
+        } else if (typeof arg0 === "string") {
           num4 = 0;
           charCodeAtResult = arg0.charCodeAt(0);
           num5 = 45;
@@ -5185,7 +5185,7 @@ function clone(arg0) {
             tmp12 = constructor1;
           }
           return tmp12;
-        } else if (typeof arg0 === "accessibilityLabel") {
+        } else if (typeof arg0 === "bigint") {
           num = 0;
           if (arg0 < 0) {
             str = -arg0;
@@ -5324,7 +5324,7 @@ function clone(arg0) {
               self.d = substr1;
               return;
             }
-          } else if (typeof arg0 === "Object") {
+          } else if (typeof arg0 === "number") {
             num25 = 0;
             if (0 === arg0) {
               num34 = 1;
@@ -5396,7 +5396,7 @@ function clone(arg0) {
               }
               return tmp64;
             }
-          } else if (typeof arg0 === "y") {
+          } else if (typeof arg0 === "string") {
             num4 = 0;
             charCodeAtResult = arg0.charCodeAt(0);
             num5 = 45;
@@ -5573,7 +5573,7 @@ function clone(arg0) {
               tmp12 = constructor1;
             }
             return tmp12;
-          } else if (typeof arg0 === "accessibilityLabel") {
+          } else if (typeof arg0 === "bigint") {
             num = 0;
             if (arg0 < 0) {
               str = -arg0;
@@ -5612,7 +5612,7 @@ cloneResult.default = cloneResult;
 cloneResult = new cloneResult("2.3025850929940456840179914546843642076011014886287729760333279009675726096773524802359972050895982983419677840422862486334095254650828067566662873690987816894829072083255546808437998948262331985283935053089653777326288461633662222876982198867465436674744042432743651550489343149393914796194044002221051017141748003688084012647080685567743216228355220114804663715659121373450747856947683463616792101806445070648000277502684916746550586856935673420670581136429224554405758925724208241314695689016758940256776311356919292033376587141660230105703089634572075440370847469940168269282808481184289314848524948644871927809676271275775397027668605952496716674183485704422507197965004714951050492214776567636938662976979522110718264549734772662425709429322582798502585509785265383207606726317164309505995087807523710333101197857547331541421808427543863591778117054309827482385045648019095610299291824318237525357709750539565187697510374970888692180205189339507238539205144634197265287286965110862571492198849978748873771345686209167058");
 c5 = cloneResult;
 cloneResult1 = new cloneResult("3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989380952572010654858632789");
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(() => closure_1);
   }
@@ -5620,10 +5620,10 @@ if (typeof globalThis.define !== "three_button_mouse") {
 if (undefined !== module) {
   if (module.exports) {
     const _Symbol = Symbol;
-    let tmp4 = typeof Symbol === "find";
-    if (typeof Symbol !== "three_button_mouse") {
+    let tmp4 = typeof Symbol === "function";
+    if (typeof Symbol === "function") {
       const _Symbol4 = Symbol;
-      tmp4 = typeof Symbol.iterator === "e";
+      tmp4 = typeof Symbol.iterator === "symbol";
     }
     if (tmp4) {
       const _Symbol2 = Symbol;

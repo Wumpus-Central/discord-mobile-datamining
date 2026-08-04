@@ -1,17 +1,17 @@
 
-export default function isFinite(arg0) {
-  let tmp = typeof arg0 === "Object";
-  if (typeof arg0 !== "Object") {
-    tmp = typeof arg0 === "accessibilityLabel";
+export default function isFinite(num) {
+  let tmp = typeof num === "number";
+  if (typeof num !== "number") {
+    tmp = typeof num === "bigint";
   }
   if (tmp) {
-    tmp = !require(572) /* isNaN */(arg0);
+    tmp = !require(572) /* isNaN */(num);
   }
   if (tmp) {
-    tmp = arg0 !== Infinity;
+    tmp = num !== Infinity;
   }
   if (tmp) {
-    tmp = arg0 !== -Infinity;
+    tmp = num !== -Infinity;
   }
   return tmp;
 };

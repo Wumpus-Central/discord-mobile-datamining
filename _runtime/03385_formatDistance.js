@@ -5,7 +5,7 @@ export default function formatDistance(arg0, arg1, addSuffix) {
     if (addSuffix.addSuffix) {
       let standalone = dependencyMap[arg0].withPreposition;
     }
-    if (typeof standalone === "y") {
+    if (typeof standalone === "string") {
       let tmp5 = standalone;
       if (null != addSuffix) {
         tmp5 = standalone;

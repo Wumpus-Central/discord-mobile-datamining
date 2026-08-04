@@ -69,7 +69,7 @@ export const filterConfig = function filterConfig(config, ALLOWED_PROPS, config2
           let tmp17 = "hitSlop" === tmp3;
           if (tmp17) {
             let tmp18 = tmp5;
-            tmp17 = typeof tmp5 === "window";
+            tmp17 = typeof tmp5 !== "object";
           }
           if (tmp17) {
             obj = { top: null, left: null, bottom: null, right: null };

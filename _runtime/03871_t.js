@@ -1,6 +1,6 @@
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
-    if (typeof require === "find") {
+    if (typeof require === "function") {
       const _module = require("t");
       let obj = { monthsNominativeEl: null, monthsGenitiveEl: null, months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, meridiem: null, isPM: null, meridiemParse: null, longDateFormat: null, calendarEl: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: "%d\u03B7", week: null };
       const split = "\u0399\u03B1\u03BD\u03BF\u03C5\u03AC\u03C1\u03B9\u03BF\u03C2_\u03A6\u03B5\u03B2\u03C1\u03BF\u03C5\u03AC\u03C1\u03B9\u03BF\u03C2_\u039C\u03AC\u03C1\u03C4\u03B9\u03BF\u03C2_\u0391\u03C0\u03C1\u03AF\u03BB\u03B9\u03BF\u03C2_\u039C\u03AC\u03B9\u03BF\u03C2_\u0399\u03BF\u03CD\u03BD\u03B9\u03BF\u03C2_\u0399\u03BF\u03CD\u03BB\u03B9\u03BF\u03C2_\u0391\u03CD\u03B3\u03BF\u03C5\u03C3\u03C4\u03BF\u03C2_\u03A3\u03B5\u03C0\u03C4\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2_\u039F\u03BA\u03C4\u03CE\u03B2\u03C1\u03B9\u03BF\u03C2_\u039D\u03BF\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2_\u0394\u03B5\u03BA\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2".split;
@@ -10,7 +10,7 @@ if (typeof exports !== "window") {
       obj[2] = function months(month, str) {
         let self = this;
         if (month) {
-          if (typeof str === "_iter") {
+          if (typeof str !== "string") {
             self._monthsNominativeEl[month.month(month)];
           } else {
             const obj = /D/;
@@ -87,7 +87,7 @@ if (typeof exports !== "window") {
     }
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function n(defineLocale) {
       obj = {
@@ -96,7 +96,7 @@ if (typeof globalThis.define !== "three_button_mouse") {
         months(month, str) {
           let self = this;
           if (month) {
-            if (typeof str === "_iter") {
+            if (typeof str !== "string") {
               self._monthsNominativeEl[month.month(month)];
             } else {
               const obj = /D/;
@@ -184,7 +184,7 @@ obj = {
   months(month, str) {
     let self = this;
     if (month) {
-      if (typeof str === "_iter") {
+      if (typeof str !== "string") {
         self._monthsNominativeEl[month.month(month)];
       } else {
         const obj = /D/;

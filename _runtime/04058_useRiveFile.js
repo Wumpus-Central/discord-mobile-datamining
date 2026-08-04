@@ -40,7 +40,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
         [tmp, tmp2] = arg0;
         let tmp4 = null !== tmp2;
         if (tmp4) {
-          tmp4 = typeof tmp2 === "ay";
+          tmp4 = typeof tmp2 === "object";
         }
         if (tmp4) {
           tmp4 = "__type" in tmp2;
@@ -54,7 +54,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
           let tmp10 = obj;
         } else {
           const source = tmp2.source;
-          if (typeof source === "Object") {
+          if (typeof source === "number") {
             const assetSource = outer1_8.resolveAssetSource(source);
             if (assetSource) {
               if (assetSource.uri) {
@@ -68,7 +68,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
             throw error;
           } else {
             const uri = source.uri;
-            if (typeof source !== "window") {
+            if (typeof source === "object") {
               if (uri) {
                 const obj1 = { sourceUrl: null };
                 obj1[0] = uri;
@@ -76,7 +76,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
               }
             }
             ({ fileName, path } = source);
-            if (typeof source !== "window") {
+            if (typeof source === "object") {
               if (fileName) {
                 obj = { sourceAsset: null };
                 obj[0] = fileName;
@@ -100,7 +100,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   }, items);
   c2 = tmp3;
   callback = callback2(tmp3);
-  let tmp4 = null != src && typeof src === "ay";
+  let tmp4 = null != src && typeof src === "object";
   if (tmp4) {
     tmp4 = "uri" in src;
   }
@@ -108,7 +108,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   if (tmp4) {
     str2 = "uri";
   }
-  let tmp5 = null != src && typeof src === "ay";
+  let tmp5 = null != src && typeof src === "object";
   if (tmp5) {
     tmp5 = "uri" in src;
   }
@@ -241,7 +241,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
               const obj8 = { value: null, done: true };
               obj8[0] = undefined;
               return obj8;
-            } else if (typeof obj5 === "y") {
+            } else if (typeof obj5 === "string") {
               if (!obj5.startsWith("http://")) {
                 if (!obj5.startsWith("https://")) {
                   const RiveFileFactory3 = obj(4041).RiveFileFactory;
@@ -259,7 +259,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
               obj10[0] = RiveFileFactory4.fromURL(obj5, outer2_3.current);
               return obj10;
             } else {
-              if (typeof obj5 !== "Object") {
+              if (typeof obj5 !== "number") {
                 if (!("uri" in obj5)) {
                   const _ArrayBuffer = ArrayBuffer;
                   if (obj5 instanceof ArrayBuffer) {

@@ -1,8 +1,8 @@
-const fn = function n(arg0, arg1) {
-  let result = arg0;
-  if (typeof arg0 !== "_iter") {
+const fn = function n(str) {
+  let result = str;
+  if (typeof str === "string") {
     const _Number = Number;
-    result = Number(arg0.split("%")[0]) * arg1 / 100;
+    result = Number(str.split("%")[0]) * arg1 / 100;
   }
   return Math.max(0, arg1 - result);
 };

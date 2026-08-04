@@ -37,7 +37,7 @@ obj2[0] = require("monadic").strategies.variadic;
 
 export const repeat = function repeat(str) {
   let length;
-  if (typeof str.repeat === "find") {
+  if (typeof str.repeat === "function") {
     return str.repeat(arg1);
   } else {
     const _Array = Array;

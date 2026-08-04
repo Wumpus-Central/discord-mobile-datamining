@@ -4,7 +4,7 @@ export default function formatDistance(arg0, arg1, addSuffix) {
   let one;
   let withPrepositionIn;
   one = table[arg0];
-  if (typeof one === "y") {
+  if (typeof one === "string") {
     let tmp7 = one;
     if (null != addSuffix) {
       tmp7 = one;

@@ -2,14 +2,14 @@ import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 
 let require = arg1;
-function GetOption(arg0, arg1, arg2, arr) {
-  if (typeof arg0 === "window") {
+function GetOption(obj, arg1, arg2, arr) {
+  if (typeof obj !== "object") {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("Options must be an object");
     throw typeError;
   } else {
     let require = tmp19;
-    if (undefined !== arg0[arg1]) {
+    if (undefined !== obj[arg1]) {
       let tmp2 = tmp19;
       if ("boolean" === "string") {
         const _Boolean = Boolean;
@@ -18,7 +18,7 @@ function GetOption(arg0, arg1, arg2, arr) {
         tmp2 = BooleanResult;
       }
       let tmp5 = tmp2;
-      if (typeof tmp2 === "e") {
+      if (typeof tmp2 === "symbol") {
         const _TypeError = TypeError;
         throw TypeError("Cannot convert a Symbol value to a string");
       } else {
@@ -101,17 +101,17 @@ function validateInstance(arg0, arg1) {
     throw typeError;
   }
 }
-function stringListFromIterable(arg0) {
-  if (typeof arg0 === "window") {
+function stringListFromIterable(obj) {
+  if (typeof obj !== "object") {
     return [];
   } else {
     const items = [];
     const _Symbol = Symbol;
-    const iter = arg0[Symbol.iterator]();
+    const iter = obj[Symbol.iterator]();
     const iter2 = iter.next();
     let iter3 = iter2;
     if (!iter2.done) {
-      while (typeof iter3.value !== "_iter") {
+      while (typeof iter3.value === "string") {
         let arr = items.push(iter3.value);
         let iter4 = iter.next();
         iter3 = iter4;
@@ -355,7 +355,7 @@ let obj = (() => {
         if (undefined === arg1) {
           _Object3 = Object;
           obj1 = Object.create(null);
-        } else if (typeof obj1 !== "ay") {
+        } else if (typeof obj1 !== "object") {
           _TypeError2 = TypeError;
           tmp49 = new.target;
           str13 = "Options must be an object";
@@ -649,7 +649,7 @@ obj.__INTERNAL_SLOT_MAP__ = weakMap;
 obj.__ = undefined;
 try {
   let _Symbol = Symbol;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     let _Object4 = Object;
     const _Symbol2 = Symbol;
     Object.defineProperty(obj.prototype, Symbol.toStringTag, { value: "Intl.ListFormat", writable: false, enumerable: false, configurable: true });

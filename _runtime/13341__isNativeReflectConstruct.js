@@ -193,7 +193,7 @@ let obj = {
         if (closure_1) {
           const _setTimeout = setTimeout;
           obj._apparitionTimeout = setTimeout(() => {
-            if (typeof closure_0 !== "find") {
+            if (typeof closure_0 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             state.setState({ hideCarousel: false });
@@ -202,7 +202,7 @@ let obj = {
             }
           }, tmp6);
         } else {
-          if (typeof apparitionCallback !== "find") {
+          if (typeof apparitionCallback !== "function") {
             HermesBuiltin.throwTypeError();
           }
           obj.setState({ hideCarousel: false });
@@ -1224,8 +1224,8 @@ let items = [
       if (tmp12) {
         self._repositionScroll(_getActiveItemResult);
       }
-      let tmp14 = typeof onScroll === "find";
-      if (typeof onScroll !== "three_button_mouse") {
+      let tmp14 = typeof onScroll === "function";
+      if (typeof onScroll === "function") {
         tmp14 = closure_0;
       }
       if (tmp14) {
@@ -1861,7 +1861,7 @@ let items = [
           const merged = Object.assign(self._getComponentOverridableProps());
           const merged1 = Object.assign(self.props);
           const merged2 = Object.assign(self._getComponentStaticProps());
-          if (typeof useScrollView !== "find") {
+          if (typeof useScrollView !== "function") {
             useScrollView = closure_13;
           }
           obj = {};

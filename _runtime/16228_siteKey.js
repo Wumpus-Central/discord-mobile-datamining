@@ -47,12 +47,12 @@ export default function _default(siteKey) {
     text1 = `https://hcaptcha.com/1/api.js?render=explicit&onload=onloadCallback${"&host=" + str + ".react-native.hcaptcha.com"}${"&hl=" + languageCode}`;
   }
   text2 = text1;
-  if (typeof theme !== "window") {
+  if (typeof theme === "object") {
     text2 = `${tmp2}&custom=true`;
   }
   let tmp4 = theme;
   if (theme) {
-    tmp4 = typeof theme === "y";
+    tmp4 = typeof theme === "string";
   }
   let tmp5 = theme;
   if (tmp4) {
@@ -62,7 +62,7 @@ export default function _default(siteKey) {
   }
   let tmp7 = rqdata;
   if (rqdata) {
-    tmp7 = typeof rqdata === "y";
+    tmp7 = typeof rqdata === "string";
   }
   if (tmp7) {
     const _HermesInternal2 = HermesInternal;

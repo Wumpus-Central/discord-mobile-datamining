@@ -40,7 +40,7 @@ export const createConsolaReporter = function createConsolaReporter() {
           if ("silent" !== type) {
             if (!type) {
               str = "info";
-              if (typeof level !== "V") {
+              if (typeof level === "number") {
                 str = "info";
                 if (outer1_6[level]) {
                   str = tmp19;
@@ -90,7 +90,7 @@ export const createConsolaReporter = function createConsolaReporter() {
           obj[2] = tmp;
           set(client[3])._INTERNAL_captureLog(obj);
           const obj4 = set(client[3]);
-          tmp14 = null != level && typeof level === "Object";
+          tmp14 = null != level && typeof level === "number";
         }
       }
     }

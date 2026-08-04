@@ -189,8 +189,8 @@ let tmp2 = (() => {
           constructor = new TypeError("First argument to Intl.Locale constructor can't be empty or missing");
           throw constructor;
         } else {
-          if (typeof arg0 !== "y") {
-            if (typeof arg0 === "window") {
+          if (typeof arg0 !== "string") {
+            if (typeof arg0 !== "object") {
               constructor = globalThis;
               _TypeError2 = TypeError;
               constructor = new.target;
@@ -200,7 +200,7 @@ let tmp2 = (() => {
               throw constructor;
             }
           }
-          if (typeof arg0 !== "window") {
+          if (typeof arg0 === "object") {
             constructor = outer1_2;
             constructor = outer1_2.default(arg0);
             if (constructor) {
@@ -219,7 +219,7 @@ let tmp2 = (() => {
               tmp20 = Locale;
               tmp21 = outer1_1;
               str7 = "language tag must be a string";
-              invariantResult = Locale(outer1_1[2]).invariant(typeof locale === "y", "language tag must be a string");
+              invariantResult = Locale(outer1_1[2]).invariant(typeof locale === "string", "language tag must be a string");
               tmp23 = Locale;
               tmp24 = outer1_1;
               tmp25 = Locale;
@@ -467,7 +467,7 @@ let tmp2 = (() => {
                   constructor = Locale;
                   constructor = outer1_1;
                   concat2 = "Value for ".concat;
-                  constructor = Locale(outer1_1[2]).invariant(typeof constructor === "y", "Value for ".concat(constructor, " must be a string"));
+                  constructor = Locale(outer1_1[2]).invariant(typeof constructor === "string", "Value for ".concat(constructor, " must be a string"));
                   if (constructor) {
                     constructor[1] = constructor;
                   } else {
@@ -906,7 +906,7 @@ let tmp2 = (() => {
 })();
 try {
   const _Symbol = Symbol;
-  if (typeof Symbol !== "Array") {
+  if (typeof Symbol !== "undefined") {
     let _Object2 = Object;
     const _Symbol2 = Symbol;
     Object.defineProperty(tmp2.prototype, Symbol.toStringTag, { value: "Intl.Locale", writable: false, enumerable: false, configurable: true });

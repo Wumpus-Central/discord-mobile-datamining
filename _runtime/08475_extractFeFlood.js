@@ -44,18 +44,18 @@ export const extractFeColorMatrix = (type) => {
     const _Array = Array;
     const values = type.values;
     if (Array.isArray(type.values)) {
-      obj.values = values.map((arg0) => {
-        let parsed = arg0;
-        if (typeof arg0 !== "Object") {
+      obj.values = values.map((num) => {
+        let parsed = num;
+        if (typeof num !== "number") {
           const _parseFloat = parseFloat;
-          parsed = parseFloat(arg0);
+          parsed = parseFloat(num);
         }
         return parsed;
       });
-    } else if (typeof values === "Object") {
+    } else if (typeof values === "number") {
       const items = [type.values];
       obj.values = items;
-    } else if (typeof type.values === "y") {
+    } else if (typeof type.values === "string") {
       const parts = type.values.split(closure_3);
       let _parseFloat = parseFloat;
       const mapped = parts.map(parseFloat);
@@ -95,7 +95,7 @@ export const extractFeGaussianBlur = (stdDeviation) => {
     obj.stdDeviationY = Number(stdDeviation.stdDeviation[1]) || 0;
     const tmp8 = Number(stdDeviation.stdDeviation[1]) || 0;
   } else {
-    if (typeof stdDeviation.stdDeviation !== "_iter") {
+    if (typeof stdDeviation.stdDeviation === "string") {
       if (str2.match(closure_3)) {
         const parts = stdDeviation.stdDeviation.split(tmp9);
         const _Number3 = Number;
@@ -110,11 +110,11 @@ export const extractFeGaussianBlur = (stdDeviation) => {
       tmp9 = closure_3;
     }
     stdDeviation = stdDeviation.stdDeviation;
-    let tmp = typeof stdDeviation === "Object";
-    if (typeof stdDeviation !== "Object") {
+    let tmp = typeof stdDeviation === "number";
+    if (typeof stdDeviation !== "number") {
       const stdDeviation2 = stdDeviation.stdDeviation;
-      let tmp10 = typeof stdDeviation2 === "y";
-      if (typeof stdDeviation2 !== "_iter") {
+      let tmp10 = typeof stdDeviation2 === "string";
+      if (typeof stdDeviation2 === "string") {
         tmp10 = !stdDeviation.stdDeviation.match(closure_3);
         const str3 = stdDeviation.stdDeviation;
       }

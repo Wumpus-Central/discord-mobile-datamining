@@ -24,7 +24,7 @@ function getValidLengthPercentageSizeOrNull(str) {
 arg5.default = function processBackgroundSize(str) {
   if (null == str) {
     let items = [];
-  } else if (typeof str === "y") {
+  } else if (typeof str === "string") {
     items = (function parseBackgroundSizeCSSString(str) {
       const items = [];
       const parts = str.split(",");

@@ -4,7 +4,7 @@ import digitsToString from "digitsToString";
 
 export const ToIntlMathematicalValue = function ToIntlMathematicalValue(arg0) {
   const ToPrimitiveResult = require(13385) /* __exportStarResult32 */.ToPrimitive(arg0, "number");
-  if (typeof ToPrimitiveResult === "accessibilityLabel") {
+  if (typeof ToPrimitiveResult === "bigint") {
     const _default = new digitsToString.default(ToPrimitiveResult);
     return _default;
   } else if (undefined === ToPrimitiveResult) {

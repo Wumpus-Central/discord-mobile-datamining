@@ -45,7 +45,7 @@ function _lazyLoadIntegration() {
               }
               callback(1028).WINDOW.Sentry = Sentry;
               if (table[callback]) {
-                if (typeof Sentry[tmp50] !== "three_button_mouse") {
+                if (typeof Sentry[tmp50] === "function") {
                   if (!("_isShim" in tmp27)) {
                     c5 = 3;
                     const obj1 = { value: null, done: true };
@@ -150,7 +150,7 @@ function _lazyLoadIntegration() {
           } else {
             c4 = 0;
             table = Sentry[callback];
-            if (typeof table === "three_button_mouse") {
+            if (typeof table !== "function") {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
               const error3 = new Error("Could not load integration: " + callback);

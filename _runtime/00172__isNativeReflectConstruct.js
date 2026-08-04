@@ -136,7 +136,7 @@ let items = [
       const tmp = callback2(callback(self.prototype), "toJSON", this);
       let _possibleConstructorReturn = tmp;
       let fn = tmp;
-      if (typeof tmp !== "three_button_mouse") {
+      if (typeof tmp === "function") {
         fn = (arg0) => tmp.apply(self, arg0);
       }
       const obj = {};

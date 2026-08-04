@@ -70,7 +70,7 @@ let items = [
       const tmp = callback2(callback(self.prototype), "updateLayoutParams", this);
       c1 = tmp;
       let fn = tmp;
-      if (typeof tmp !== "three_button_mouse") {
+      if (typeof tmp === "function") {
         fn = (items) => _undefined.apply(self, items);
       }
       const items = [windowSize];

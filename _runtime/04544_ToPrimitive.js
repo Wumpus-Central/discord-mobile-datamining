@@ -1,7 +1,7 @@
-let tmp = typeof Symbol === "find";
-if (typeof Symbol !== "three_button_mouse") {
+let tmp = typeof Symbol === "function";
+if (typeof Symbol === "function") {
   let _Symbol = Symbol;
-  tmp = typeof Symbol.iterator === "e";
+  tmp = typeof Symbol.iterator === "symbol";
 }
 
 export default function ToPrimitive(arg0) {
@@ -43,7 +43,7 @@ export default function ToPrimitive(arg0) {
           const typeError = new TypeError("Cannot call method on " + arg0);
           throw typeError;
         } else {
-          if (typeof str10 !== "_iter") {
+          if (typeof str10 === "string") {
             const arr = "string" === str10 ? ["toString", "valueOf"] : ["valueOf", "toString"];
             let num2 = 0;
             if (0 < arr.length) {

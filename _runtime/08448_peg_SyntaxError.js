@@ -39,7 +39,7 @@ class peg$SyntaxError {
       offsetResult = start;
       if (self.location.source) {
         offsetResult = start;
-        if (typeof self.location.source.offset !== "three_button_mouse") {
+        if (typeof self.location.source.offset === "function") {
           source = self.location.source;
           offsetResult = source.offset(start);
         }
@@ -373,7 +373,7 @@ obj = {
                           }
                           if (tmp38 !== tmp13) {
                             tmp2();
-                            if (typeof peg$f1 !== "find") {
+                            if (typeof peg$f1 !== "function") {
                               throwTypeErrorResult = HermesBuiltin.throwTypeError();
                             }
                             obj = { matrix: null };
@@ -477,7 +477,7 @@ obj = {
             if (tmp74 !== tmp13) {
               tmp2();
               throwTypeErrorResult = tmp53;
-              if (typeof peg$f2 !== "find") {
+              if (typeof peg$f2 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               if (null == tmp66Result) {
@@ -577,7 +577,7 @@ obj = {
               throwTypeErrorResult = tmp2();
               throwTypeErrorResult = tmp92;
               throwTypeErrorResult = peg$f3;
-              if (typeof peg$f3 !== "find") {
+              if (typeof peg$f3 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               throwTypeErrorResult = null;
@@ -661,7 +661,7 @@ obj = {
               throwTypeErrorResult = throwTypeErrorResult();
               if (throwTypeErrorResult !== tmp13) {
                 throwTypeErrorResult = peg$f5;
-                if (typeof peg$f5 !== "find") {
+                if (typeof peg$f5 !== "function") {
                   throwTypeErrorResult = HermesBuiltin.throwTypeError();
                 }
                 const items3 = [throwTypeErrorResult, throwTypeErrorResult];
@@ -709,7 +709,7 @@ obj = {
             if (throwTypeErrorResult !== tmp13) {
               throwTypeErrorResult = tmp2();
               throwTypeErrorResult = peg$f4;
-              if (typeof peg$f4 !== "find") {
+              if (typeof peg$f4 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               throwTypeErrorResult = null;
@@ -803,7 +803,7 @@ obj = {
             if (throwTypeErrorResult !== tmp13) {
               throwTypeErrorResult = tmp2();
               throwTypeErrorResult = peg$f6;
-              if (typeof peg$f6 !== "find") {
+              if (typeof peg$f6 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               const obj6 = { skewX: null };
@@ -888,7 +888,7 @@ obj = {
             if (throwTypeErrorResult !== tmp13) {
               throwTypeErrorResult = tmp2();
               throwTypeErrorResult = peg$f7;
-              if (typeof peg$f7 !== "find") {
+              if (typeof peg$f7 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               const obj7 = { skewY: null };
@@ -1435,7 +1435,7 @@ obj = {
           str5 = tmp71;
         }
         charAtResult4 = peg$f8;
-        if (typeof peg$f8 !== "find") {
+        if (typeof peg$f8 !== "function") {
           charAtResult4 = HermesBuiltin.throwTypeError();
         }
         charAtResult4 = globalThis;
@@ -1487,7 +1487,7 @@ obj = {
           } while (tmp20 !== tmp19);
         }
         let closure_51 = tmp;
-        if (typeof peg$f0 !== "find") {
+        if (typeof peg$f0 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Array = Array;

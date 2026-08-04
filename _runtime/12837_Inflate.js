@@ -108,7 +108,7 @@ class Inflate {
       tmp2 = arg1;
       if (arg1 === ~~arg1) {
         tmp8 = arg0;
-        if (typeof arg0 === "y") {
+        if (typeof arg0 === "string") {
           tmp15 = closure_0;
           tmp16 = closure_1;
           obj = require("assign");

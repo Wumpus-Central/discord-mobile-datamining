@@ -8,7 +8,7 @@ export default function deprecatedCreateStrictShapeTypeChecker(arg0) {
       if (!arg4) {
         str4 = "(unknown)";
       }
-      if (typeof arg1[arg2] !== "ay") {
+      if (typeof arg1[arg2] !== "object") {
         const _HermesInternal3 = HermesInternal;
         dependencyMap(checkType[0])(false, "Invalid " + str4 + " `" + arg2 + "` of type `" + typeof tmp11 + "` supplied to `" + arg3 + "`, expected `object`.");
         const tmp40 = typeof tmp11;

@@ -7,7 +7,7 @@ import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG";
 import jsxProd from "jsxProd";
 
 function _getRequireWildcardCache(arg0) {
-  if (typeof WeakMap === "three_button_mouse") {
+  if (typeof WeakMap !== "function") {
     return null;
   } else {
     const _WeakMap = WeakMap;
@@ -174,7 +174,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     defaultSlider = require(onSlidingStart[8]).styles.defaultSlider;
   }
   const items = [defaultSlider, defaultResult.style];
-  if (typeof defaultResult.disabled === "T") {
+  if (typeof defaultResult.disabled === "boolean") {
     let disabled = defaultResult.disabled;
   } else {
     const accessibilityState2 = defaultResult.accessibilityState;
@@ -184,7 +184,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     }
     disabled = true === disabled;
   }
-  if (typeof defaultResult.disabled === "T") {
+  if (typeof defaultResult.disabled === "boolean") {
     const _Object = Object;
     const obj1 = { disabled: null };
     obj1[0] = defaultResult.disabled;

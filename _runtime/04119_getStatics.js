@@ -15,7 +15,7 @@ obj[require("num2").ForwardRef] = { $$typeof: true, render: true, defaultProps: 
 obj[require("num2").Memo] = obj;
 let closure_12 = Object.prototype;
 function hoistNonReactStatics(arg0, headers) {
-  if (typeof headers !== "y") {
+  if (typeof headers !== "string") {
     if (closure_12) {
       const tmp2 = getPrototypeOf(headers);
       let tmp3 = tmp2;

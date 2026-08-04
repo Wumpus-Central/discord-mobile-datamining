@@ -57,7 +57,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
                   let obj2 = callback(7382);
                   if (!obj2.isError(tmp12)) {
                     let tmp19 = tmp12;
-                    if (typeof tmp13 !== "y") {
+                    if (typeof tmp13 !== "string") {
                       let truncateResult = tmp12;
                     }
                     obj[tmp9] = truncateResult;
@@ -75,7 +75,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
                 tmp24 = undefined !== originalException.cause;
               }
               if (!tmp24) {
-                if (typeof originalException.toJSON !== "three_button_mouse") {
+                if (typeof originalException.toJSON === "function") {
                   const toJSONResult = originalException.toJSON();
                   const _Object2 = Object;
                   const keys1 = Object.keys(toJSONResult);

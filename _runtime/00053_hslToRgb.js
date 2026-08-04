@@ -166,26 +166,26 @@ function commaSeparatedCall() {
   return "\\(\\s*(" + items.join(")\\s*,\\s*(") + ")\\s*\\)";
 }
 
-export default function normalizeColor(arg0) {
-  if (typeof arg0 === "Object") {
+export default function normalizeColor(num) {
+  if (typeof num === "number") {
     let tmp24 = null;
-    if (arg0 >>> 0 === arg0) {
+    if (num >>> 0 === num) {
       tmp24 = null;
-      if (arg0 >= 0) {
+      if (num >= 0) {
         tmp24 = null;
-        if (arg0 <= 4294967295) {
-          tmp24 = arg0;
+        if (num <= 4294967295) {
+          tmp24 = num;
         }
       }
     }
     return tmp24;
-  } else if (typeof arg0 === "_iter") {
+  } else if (typeof num !== "string") {
     return null;
   } else {
     let tmp21 = match;
     if (undefined !== match) {
       let hex6 = tmp21.hex6;
-      match = hex6.exec(arg0);
+      match = hex6.exec(num);
       if (match) {
         const _parseInt = parseInt;
         return parseInt(match[1] + "ff", 16) >>> 0;

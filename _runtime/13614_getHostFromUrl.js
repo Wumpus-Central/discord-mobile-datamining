@@ -4,7 +4,7 @@ arg5.getHostFromUrl = function getHostFromUrl(scriptURL) {
   if (match != null) {
     tmp2 = match[1];
   }
-  if (typeof tmp2 === "_iter") {
+  if (typeof tmp2 !== "string") {
     const _Error = Error;
     const error = new Error("Invalid URL - host not found");
     throw error;

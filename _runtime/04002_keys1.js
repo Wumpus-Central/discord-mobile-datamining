@@ -21,7 +21,7 @@ function createImpl(arg0) {
 
 export const create = (arg0) => {
   if (arg0) {
-    if (typeof tmp !== "find") {
+    if (typeof tmp !== "function") {
       HermesBuiltin.throwTypeError();
     }
     store = store(4001).createStore(arg0);

@@ -66,7 +66,7 @@ function hslToRgb(arg0, arg1, arg2) {
   }
   const diff = 2 * arg2 - result;
   const sum = arg0 + 0.3333333333333333;
-  if (typeof hue2rgb !== "find") {
+  if (typeof hue2rgb !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let sum1 = sum;
@@ -89,7 +89,7 @@ function hslToRgb(arg0, arg1, arg2) {
       sum2 = sum3;
     }
   }
-  if (typeof hue2rgb !== "find") {
+  if (typeof hue2rgb !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let sum4 = arg0;
@@ -113,7 +113,7 @@ function hslToRgb(arg0, arg1, arg2) {
     }
   }
   const diff3 = arg0 - 0.3333333333333333;
-  if (typeof hue2rgb !== "find") {
+  if (typeof hue2rgb !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let sum7 = diff3;
@@ -149,7 +149,7 @@ function hwbToRgb(arg0, arg1, arg2) {
     return rounded << 24 | rounded << 16 | rounded << 8;
   } else {
     const sum = arg0 + 0.3333333333333333;
-    if (typeof hue2rgb !== "find") {
+    if (typeof hue2rgb !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let sum1 = sum;
@@ -173,7 +173,7 @@ function hwbToRgb(arg0, arg1, arg2) {
       }
     }
     const sum2 = num4 * (1 - arg1 - arg2) + arg1;
-    if (typeof hue2rgb !== "find") {
+    if (typeof hue2rgb !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let sum3 = arg0;
@@ -198,7 +198,7 @@ function hwbToRgb(arg0, arg1, arg2) {
     }
     const diff2 = arg0 - 0.3333333333333333;
     const sum4 = num10 * (1 - arg1 - arg2) + arg1;
-    if (typeof hue2rgb !== "find") {
+    if (typeof hue2rgb !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let sum5 = diff2;
@@ -299,35 +299,35 @@ clampRGBA.__initData = { code: "function clampRGBA_Pnpm_ColorsTs8(RGBA){for(let 
 const shareable = isReanimated3.makeShareable({ transparent: 0, aliceblue: 4042850303, antiquewhite: 4209760255, aqua: 16777215, aquamarine: 2147472639, azure: 4043309055, beige: 4126530815, bisque: 4293182719, black: 255, blanchedalmond: 4293643775, blue: 65535, blueviolet: 2318131967, brown: 2771004159, burlywood: 3736635391, burntsienna: 3934150143, cadetblue: 1604231423, chartreuse: 2147418367, chocolate: 3530104575, coral: 4286533887, cornflowerblue: 1687547391, cornsilk: 4294499583, crimson: 3692313855, cyan: 16777215, darkblue: 35839, darkcyan: 9145343, darkgoldenrod: 3095792639, darkgray: 2846468607, darkgreen: 6553855, darkgrey: 2846468607, darkkhaki: 3182914559, darkmagenta: 2332068863, darkolivegreen: 1433087999, darkorange: 4287365375, darkorchid: 2570243327, darkred: 2332033279, darksalmon: 3918953215, darkseagreen: 2411499519, darkslateblue: 1211993087, darkslategray: 793726975, darkslategrey: 793726975, darkturquoise: 13554175, darkviolet: 2483082239, deeppink: 4279538687, deepskyblue: 12582911, dimgray: 1768516095, dimgrey: 1768516095, dodgerblue: 512819199, firebrick: 2988581631, floralwhite: 4294635775, forestgreen: 579543807, fuchsia: 4278255615, gainsboro: 3705462015, ghostwhite: 4177068031, gold: 4292280575, goldenrod: 3668254975, gray: 2155905279, green: 8388863, greenyellow: 2919182335, grey: 2155905279, honeydew: 4043305215, hotpink: 4285117695, indianred: 3445382399, indigo: 1258324735, ivory: 4294963455, khaki: 4041641215, lavender: 3873897215, lavenderblush: 4293981695, lawngreen: 2096890111, lemonchiffon: 4294626815, lightblue: 2916673279, lightcoral: 4034953471, lightcyan: 3774873599, lightgoldenrodyellow: 4210742015, lightgray: 3553874943, lightgreen: 2431553791, lightgrey: 3553874943, lightpink: 4290167295, lightsalmon: 4288707327, lightseagreen: 548580095, lightskyblue: 2278488831, lightslategray: 2005441023, lightslategrey: 2005441023, lightsteelblue: 2965692159, lightyellow: 4294959359, lime: 16711935, limegreen: 852308735, linen: 4210091775, magenta: 4278255615, maroon: 2147483903, mediumaquamarine: 1724754687, mediumblue: 52735, mediumorchid: 3126187007, mediumpurple: 2473647103, mediumseagreen: 1018393087, mediumslateblue: 2070474495, mediumspringgreen: 16423679, mediumturquoise: 1221709055, mediumvioletred: 3340076543, midnightblue: 421097727, mintcream: 4127193855, mistyrose: 4293190143, moccasin: 4293178879, navajowhite: 4292783615, navy: 33023, oldlace: 4260751103, olive: 2155872511, olivedrab: 1804477439, orange: 4289003775, orangered: 4282712319, orchid: 3664828159, palegoldenrod: 4008225535, palegreen: 2566625535, paleturquoise: 2951671551, palevioletred: 3681588223, papayawhip: 4293907967, peachpuff: 4292524543, peru: 3448061951, pink: 4290825215, plum: 3718307327, powderblue: 2967529215, purple: 2147516671, rebeccapurple: 1714657791, red: 4278190335, rosybrown: 3163525119, royalblue: 1097458175, saddlebrown: 2336560127, salmon: 4202722047, sandybrown: 4104413439, seagreen: 780883967, seashell: 4294307583, sienna: 2689740287, silver: 3233857791, skyblue: 2278484991, slateblue: 1784335871, slategray: 1887473919, slategrey: 1887473919, snow: 4294638335, springgreen: 16744447, steelblue: 1182971135, tan: 3535047935, teal: 8421631, thistle: 3636451583, tomato: 4284696575, turquoise: 1088475391, violet: 4001558271, wheat: 4125012991, white: 4294967295, whitesmoke: 4126537215, yellow: 4294902015, yellowgreen: 2597139199 });
 const shareable1 = isReanimated3.makeShareable(["backgroundColor", "borderBottomColor", "borderColor", "borderLeftColor", "borderRightColor", "borderTopColor", "borderStartColor", "borderEndColor", "borderBlockColor", "borderBlockEndColor", "borderBlockStartColor", "color", "outlineColor", "shadowColor", "textDecorationColor", "tintColor", "textShadowColor", "overlayColor", "fill", "floodColor", "lightingColor", "stopColor", "stroke"]);
 const shareable2 = isReanimated3.makeShareable({ boxShadow: "color" });
-function normalizeColor(arg0) {
-  if (typeof arg0 === "Object") {
+function normalizeColor(num) {
+  if (typeof num === "number") {
     let tmp75 = null;
-    if (arg0 >>> 0 === arg0) {
+    if (num >>> 0 === num) {
       tmp75 = null;
-      if (arg0 >= 0) {
+      if (num >= 0) {
         tmp75 = null;
-        if (arg0 <= 4294967295) {
-          tmp75 = arg0;
+        if (num <= 4294967295) {
+          tmp75 = num;
         }
       }
     }
     let tmp76 = tmp75;
   } else {
     tmp76 = null;
-    if (typeof arg0 !== "_iter") {
+    if (typeof num === "string") {
       const hex6 = obj.hex6;
-      let match = hex6.exec(arg0);
+      let match = hex6.exec(num);
       if (match) {
         const _Number27 = Number;
         match = Number.parseInt(`${tmp73[1]}ff`, 16);
         let tmp6 = match >>> 0;
-      } else if (undefined !== shareable[arg0]) {
-        tmp6 = shareable[arg0];
+      } else if (undefined !== shareable[num]) {
+        tmp6 = shareable[num];
       } else {
         const rgb = tmp77.rgb;
-        const match1 = rgb.exec(arg0);
+        const match1 = rgb.exec(num);
         if (match1) {
-          if (typeof parse255 !== "find") {
+          if (typeof parse255 !== "function") {
             let throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const _Number24 = Number;
@@ -340,7 +340,7 @@ function normalizeColor(arg0) {
             }
             num81 = num82;
           }
-          if (typeof parse255 !== "find") {
+          if (typeof parse255 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const _Number25 = Number;
@@ -353,7 +353,7 @@ function normalizeColor(arg0) {
             }
             num84 = num85;
           }
-          if (typeof parse255 !== "find") {
+          if (typeof parse255 !== "function") {
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
           const _Number26 = Number;
@@ -371,10 +371,10 @@ function normalizeColor(arg0) {
           const tmp70 = num84 << 16;
         } else {
           const rgba = tmp77.rgba;
-          let num = rgba.exec(arg0);
+          num = rgba.exec(num);
           if (num) {
             if (undefined !== num[6]) {
-              if (typeof parse255 !== "find") {
+              if (typeof parse255 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               const _Number21 = Number;
@@ -387,7 +387,7 @@ function normalizeColor(arg0) {
                 }
                 num67 = num68;
               }
-              if (typeof parse255 !== "find") {
+              if (typeof parse255 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               const _Number22 = Number;
@@ -400,7 +400,7 @@ function normalizeColor(arg0) {
                 }
                 num70 = num71;
               }
-              if (typeof parse255 !== "find") {
+              if (typeof parse255 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               const _Number23 = Number;
@@ -413,7 +413,7 @@ function normalizeColor(arg0) {
                 }
                 num73 = num74;
               }
-              if (typeof parse1 !== "find") {
+              if (typeof parse1 !== "function") {
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               num = Number;
@@ -432,7 +432,7 @@ function normalizeColor(arg0) {
               const tmp59 = num70 << 16;
               const tmp61 = num73 << 8;
             } else {
-              if (typeof parse255 !== "find") {
+              if (typeof parse255 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const _Number17 = Number;
@@ -445,7 +445,7 @@ function normalizeColor(arg0) {
                 }
                 num52 = num53;
               }
-              if (typeof parse255 !== "find") {
+              if (typeof parse255 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const _Number18 = Number;
@@ -458,7 +458,7 @@ function normalizeColor(arg0) {
                 }
                 num55 = num56;
               }
-              if (typeof parse255 !== "find") {
+              if (typeof parse255 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const _Number19 = Number;
@@ -471,7 +471,7 @@ function normalizeColor(arg0) {
                 }
                 num58 = num59;
               }
-              if (typeof parse1 !== "find") {
+              if (typeof parse1 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               const _Number20 = Number;
@@ -492,32 +492,32 @@ function normalizeColor(arg0) {
             }
           } else {
             const hex3 = tmp77.hex3;
-            throwTypeErrorResult = hex3.exec(arg0);
+            throwTypeErrorResult = hex3.exec(num);
             if (throwTypeErrorResult) {
               const _Number16 = Number;
               tmp6 = Number.parseInt(`${tmp[1]}${tmp[1]}${tmp[2]}${tmp[2]}${tmp[3]}${tmp[3]}ff`, 16) >>> 0;
             } else {
               const hex8 = tmp77.hex8;
-              const match2 = hex8.exec(arg0);
+              const match2 = hex8.exec(num);
               if (match2) {
                 const _Number15 = Number;
                 tmp6 = Number.parseInt(match2[1], 16) >>> 0;
               } else {
                 const hex4 = tmp77.hex4;
-                const match3 = hex4.exec(arg0);
+                const match3 = hex4.exec(num);
                 if (match3) {
                   const _Number14 = Number;
                   tmp6 = Number.parseInt(match3[1] + match3[1] + match3[2] + match3[2] + match3[3] + match3[3] + match3[4] + match3[4], 16) >>> 0;
                 } else {
                   const hsl = tmp77.hsl;
-                  const match4 = hsl.exec(arg0);
+                  const match4 = hsl.exec(num);
                   if (match4) {
-                    if (typeof parse360 !== "find") {
+                    if (typeof parse360 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _Number11 = Number;
                     const result = Number.parseFloat(match4[1]) % 360;
-                    if (typeof parsePercentage !== "find") {
+                    if (typeof parsePercentage !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _Number12 = Number;
@@ -530,7 +530,7 @@ function normalizeColor(arg0) {
                       }
                       num37 = num39;
                     }
-                    if (typeof tmp38 !== "find") {
+                    if (typeof tmp38 !== "function") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _Number13 = Number;
@@ -548,15 +548,15 @@ function normalizeColor(arg0) {
                     tmp38 = parsePercentage;
                   } else {
                     const hsla = tmp77.hsla;
-                    let num2 = hsla.exec(arg0);
+                    let num2 = hsla.exec(num);
                     if (num2) {
                       if (undefined !== num2[6]) {
-                        if (typeof parse360 !== "find") {
+                        if (typeof parse360 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number8 = Number;
                         const result1 = Number.parseFloat(num2[6]) % 360;
-                        if (typeof parsePercentage !== "find") {
+                        if (typeof parsePercentage !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number9 = Number;
@@ -569,7 +569,7 @@ function normalizeColor(arg0) {
                           }
                           num26 = num28;
                         }
-                        if (typeof tmp27 !== "find") {
+                        if (typeof tmp27 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number10 = Number;
@@ -582,7 +582,7 @@ function normalizeColor(arg0) {
                           }
                           num29 = num31;
                         }
-                        if (typeof parse1 !== "find") {
+                        if (typeof parse1 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         num2 = Number;
@@ -601,12 +601,12 @@ function normalizeColor(arg0) {
                         const tmp23Result = hslToRgb((result1 + 360) % 360 / 360, num26, num29);
                         tmp27 = parsePercentage;
                       } else {
-                        if (typeof parse360 !== "find") {
+                        if (typeof parse360 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number4 = Number;
                         const result2 = Number.parseFloat(num2[2]) % 360;
-                        if (typeof parsePercentage !== "find") {
+                        if (typeof parsePercentage !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number5 = Number;
@@ -619,7 +619,7 @@ function normalizeColor(arg0) {
                           }
                           num14 = num16;
                         }
-                        if (typeof tmp16 !== "find") {
+                        if (typeof tmp16 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number6 = Number;
@@ -632,7 +632,7 @@ function normalizeColor(arg0) {
                           }
                           num17 = num19;
                         }
-                        if (typeof parse1 !== "find") {
+                        if (typeof parse1 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number7 = Number;
@@ -653,15 +653,15 @@ function normalizeColor(arg0) {
                       }
                     } else {
                       const hwb = tmp77.hwb;
-                      const match5 = hwb.exec(arg0);
+                      const match5 = hwb.exec(num);
                       tmp6 = null;
                       if (match5) {
-                        if (typeof parse360 !== "find") {
+                        if (typeof parse360 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number = Number;
                         const result3 = Number.parseFloat(match5[1]) % 360;
-                        if (typeof parsePercentage !== "find") {
+                        if (typeof parsePercentage !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number2 = Number;
@@ -674,7 +674,7 @@ function normalizeColor(arg0) {
                           }
                           num5 = num7;
                         }
-                        if (typeof tmp11 !== "find") {
+                        if (typeof tmp11 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _Number3 = Number;
@@ -836,7 +836,7 @@ HSVtoRGB.__closure = {};
 HSVtoRGB.__workletHash = 5232397720804;
 HSVtoRGB.__initData = { code: "function HSVtoRGB_Pnpm_ColorsTs16(h,s,v){let r,g,b;const i=Math.floor(h*6);const f=h*6-i;const p=v*(1-s);const q=v*(1-f*s);const t=v*(1-(1-f)*s);switch(i%6){case 0:[r,g,b]=[v,t,p];break;case 1:[r,g,b]=[q,v,p];break;case 2:[r,g,b]=[p,v,t];break;case 3:[r,g,b]=[p,q,v];break;case 4:[r,g,b]=[t,p,v];break;case 5:[r,g,b]=[v,p,q];break;}return{r:Math.round(r*255),g:Math.round(g*255),b:Math.round(b*255)};}" };
 const fn6 = function c(arg0, arg1, arg2, arg3) {
-  if (typeof HSVtoRGB !== "find") {
+  if (typeof HSVtoRGB !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const rounded = Math.floor(6 * arg0);
@@ -873,7 +873,7 @@ const fn6 = function c(arg0, arg1, arg2, arg3) {
   const rounded1 = Math.round(255 * tmp9);
   const rounded2 = Math.round(255 * tmp8);
   const rounded3 = Math.round(255 * tmp7);
-  if (typeof fn5 !== "find") {
+  if (typeof fn5 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let num5 = arg3;
@@ -889,16 +889,16 @@ const fn6 = function c(arg0, arg1, arg2, arg3) {
 fn6.__closure = { HSVtoRGB, rgbaColor: fn5 };
 fn6.__workletHash = 16564231422584;
 fn6.__initData = { code: "function pnpm_ColorsTs17(h,s,v,a){const{HSVtoRGB,rgbaColor}=this.__closure;const{r:r,g:g,b:b}=HSVtoRGB(h,s,v);return rgbaColor(r,g,b,a);}" };
-function processColorInitially(semantic) {
-  if (null == semantic) {
-    return semantic;
+function processColorInitially(arr) {
+  if (null == arr) {
+    return arr;
   } else {
-    let tmp = semantic;
-    if (typeof semantic !== "Object") {
-      const tmp3 = normalizeColor(semantic);
+    let tmp = arr;
+    if (typeof arr !== "number") {
+      const tmp3 = normalizeColor(arr);
       if (null != tmp3) {
         tmp = tmp3;
-        if (typeof tmp3 !== "Object") {
+        if (typeof tmp3 !== "number") {
           return null;
         }
       }
@@ -910,15 +910,15 @@ processColorInitially.__closure = { normalizeColor };
 processColorInitially.__workletHash = 7970244905356;
 processColorInitially.__initData = { code: "function processColorInitially_Pnpm_ColorsTs18(color){const{normalizeColor}=this.__closure;if(color===null||color===undefined){return color;}let colorNumber;if(typeof color==='number'){colorNumber=color;}else{const normalizedColor=normalizeColor(color);if(normalizedColor===null||normalizedColor===undefined){return undefined;}if(typeof normalizedColor!=='number'){return null;}colorNumber=normalizedColor;}return(colorNumber<<24|colorNumber>>>8)>>>0;}" };
 function isColor(current) {
-  let tmp = typeof current === "y";
-  if (typeof current !== "_iter") {
-    if (typeof processColorInitially !== "find") {
+  let tmp = typeof current === "string";
+  if (typeof current === "string") {
+    if (typeof processColorInitially !== "function") {
       HermesBuiltin.throwTypeError();
     }
     let tmp3 = current;
     if (null != current) {
       let tmp4 = current;
-      if (typeof current === "Object") {
+      if (typeof current === "number") {
         tmp3 = (tmp4 << 24 | tmp4 >>> 8) >>> 0;
       } else {
         const tmp8 = normalizeColor(current);
@@ -936,17 +936,17 @@ isColor.__closure = { processColorInitially };
 isColor.__workletHash = 13504829084422;
 isColor.__initData = { code: "function isColor_Pnpm_ColorsTs19(value){const{processColorInitially}=this.__closure;if(typeof value!=='string'){return false;}return processColorInitially(value)!=null;}" };
 isJest = isJest.isAndroid();
-function processColor(arg0) {
-  if (typeof processColorInitially !== "find") {
+function processColor(num) {
+  if (typeof processColorInitially !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let tmp = arg0;
-  if (null != arg0) {
-    let tmp2 = arg0;
-    if (typeof arg0 === "Object") {
+  let tmp = num;
+  if (null != num) {
+    let tmp2 = num;
+    if (typeof num === "number") {
       tmp = (tmp2 << 24 | tmp2 >>> 8) >>> 0;
     } else {
-      const tmp7 = normalizeColor(arg0);
+      const tmp7 = normalizeColor(num);
       if (null != tmp7) {
         tmp = null;
         tmp2 = tmp7;
@@ -955,7 +955,7 @@ function processColor(arg0) {
   }
   if (null != tmp) {
     let tmp3 = null;
-    if (typeof tmp !== "V") {
+    if (typeof tmp === "number") {
       let tmp4 = tmp;
       if (isJest) {
         tmp4 = tmp | 0;
@@ -976,20 +976,20 @@ function processColorsInProps(obj) {
       let _Array = Array;
       if (Array.isArray(arg0[key10007])) {
         let arr = arg0[key10007];
-        arg0[key10007] = arr.map((arg0) => {
-          if (typeof closure_16 !== "find") {
+        arg0[key10007] = arr.map((num) => {
+          if (typeof closure_16 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (typeof closure_14 !== "find") {
+          if (typeof closure_14 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          let tmp = arg0;
-          if (null != arg0) {
-            let tmp2 = arg0;
-            if (typeof arg0 === "Object") {
+          let tmp = num;
+          if (null != num) {
+            let tmp2 = num;
+            if (typeof num === "number") {
               tmp = (tmp2 << 24 | tmp2 >>> 8) >>> 0;
             } else {
-              const tmp9 = callback(arg0);
+              const tmp9 = callback(num);
               if (null != tmp9) {
                 tmp = null;
                 tmp2 = tmp9;
@@ -999,7 +999,7 @@ function processColorsInProps(obj) {
           let tmp3;
           if (null != tmp) {
             let tmp4 = null;
-            if (typeof tmp !== "V") {
+            if (typeof tmp === "number") {
               let tmp5 = tmp;
               if (closure_15) {
                 tmp5 = tmp | 0;
@@ -1048,13 +1048,13 @@ processColorsInProps.__closure = { ColorProperties: shareable1, processColor, Ne
 processColorsInProps.__workletHash = 978448002474;
 processColorsInProps.__initData = { code: "function processColorsInProps_Pnpm_ColorsTs21(props){const{ColorProperties,processColor,NestedColorProperties}=this.__closure;for(const key in props){if(ColorProperties.includes(key)){if(Array.isArray(props[key])){props[key]=props[key].map(function(color){return processColor(color);});}else{props[key]=processColor(props[key]);}}else if(NestedColorProperties[key]){const propGroupList=props[key];for(const propGroup of propGroupList){const nestedPropertyName=NestedColorProperties[key];if(propGroup[nestedPropertyName]!==undefined){propGroup[nestedPropertyName]=processColor(propGroup[nestedPropertyName]);}}}}}" };
 function convertToRGBA(current) {
-  if (typeof processColorInitially !== "find") {
+  if (typeof processColorInitially !== "function") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = current;
   if (null != current) {
     let tmp2 = current;
-    if (typeof current === "Object") {
+    if (typeof current === "number") {
       tmp = (tmp2 << 24 | tmp2 >>> 8) >>> 0;
     } else {
       const tmp5 = normalizeColor(current);

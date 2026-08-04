@@ -199,7 +199,7 @@ class StringFormat {
     str = "";
     if (arg0) {
       StringResult = arg0;
-      if (typeof arg0 !== "y") {
+      if (typeof arg0 !== "string") {
         tmp2 = globalThis;
         _String = String;
         StringResult = String(arg0);

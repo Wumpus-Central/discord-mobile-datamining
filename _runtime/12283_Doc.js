@@ -28,14 +28,14 @@ let items = [
   },
   {
     key: "write",
-    value: function write(str) {
+    value: function write(fn) {
       let self = this;
       self = this;
-      if (typeof str === "find") {
-        str(self, { execution: "sync" });
-        str(self, { execution: "async" });
+      if (typeof fn === "function") {
+        fn(self, { execution: "sync" });
+        fn(self, { execution: "async" });
       } else {
-        const parts = str.split("\n");
+        const parts = fn.split("\n");
         const found = parts.filter((arg0) => arg0);
         const _Math = Math;
         const items = [];

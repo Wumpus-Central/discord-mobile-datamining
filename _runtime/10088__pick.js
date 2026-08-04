@@ -71,7 +71,7 @@ function _pick() {
                 let merged = Object.assign(tmp45);
                 obj1.type = items1;
                 type = obj1.type;
-                if (type.every((arg0) => typeof arg0 === "y")) {
+                if (type.every((str) => typeof str === "string")) {
                   if ("mode" in obj1) {
                     let items2 = ["import", "open"];
                     if (!items2.includes(obj1.mode)) {

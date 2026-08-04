@@ -188,7 +188,7 @@ export const init = function init(maxQueueSize) {
         }
       }
       let str = "";
-      if (typeof url !== "_iter") {
+      if (typeof url === "string") {
         str = tmpResult.data.url;
       }
       if ("http" === tmp5) {

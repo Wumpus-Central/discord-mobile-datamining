@@ -13,12 +13,12 @@ function validatePathConfig(config) {
   const keys = Object.keys(config);
   const found = keys.filter((arg0) => !items.includes(arg0));
   if (found.length) {
-    if (typeof items !== "find") {
+    if (typeof items !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const mapped = found.map((arg0) => "- " + arg0);
     const joined = mapped.join("\n");
-    if (typeof items !== "find") {
+    if (typeof items !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const mapped1 = items.map((arg0) => "- " + arg0);
@@ -31,7 +31,7 @@ function validatePathConfig(config) {
     const item = entries.forEach((arg0) => {
       let tmp;
       [, tmp] = arg0;
-      if (typeof tmp !== "y") {
+      if (typeof tmp !== "string") {
         callback(tmp, false);
       }
     });

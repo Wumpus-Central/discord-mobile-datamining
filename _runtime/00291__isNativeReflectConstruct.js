@@ -267,7 +267,7 @@ let items = [
       } else {
         background = self.props.background;
       }
-      if (typeof getBackgroundProp !== "find") {
+      if (typeof getBackgroundProp !== "function") {
         HermesBuiltin.throwTypeError();
       }
       if (true === self.props.useForeground) {

@@ -130,68 +130,19 @@ export function makeMultiplexedTransport(arg0, arg1) {
         let c2 = 0;
         let c1 = 0;
         return (function*(arg0) {
-          if (c1 === 2) {
-            c1 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp3 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c1 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c1 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c1 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  const obj1 = { envelope: null, getEvent: null };
-                  obj1[0] = closure_0;
-                  obj1[1] = function getEvent() { ... };
-                  const mapped = outer1_3(obj1).map(() => { ... });
-                  const found = mapped.filter(() => { ... });
-                  let arr3 = found;
-                  if (!found.length) {
-                    let items = ["", c1];
-                    const items1 = [items];
-                    arr3 = items1;
-                  }
-                  c2 = 1;
-                  c1 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = Promise.all(arr3.map(() => { ... }));
-                  return obj2;
-                }
-              } else if (arg0 === 1) {
-                c1 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c1 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
-              } else {
-                c1 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1[0];
-                return obj;
-              }
-            } catch (tmp7) {
-              c1 = tmp;
-              throw tmp7;
-            }
+          const obj1 = { envelope: null, getEvent: null };
+          obj1[0] = closure_0;
+          obj1[1] = function getEvent() { ... };
+          const mapped = outer1_3(obj1).map(() => { ... });
+          const found = mapped.filter(() => { ... });
+          let arr3 = found;
+          if (!found.length) {
+            let items = ["", c1];
+            const items1 = [items];
+            arr3 = items1;
           }
+          yield Promise.all(arr3.map(() => { ... }));
+          return arg1[0];
         })();
       });
       const _send = tmp;
@@ -210,64 +161,15 @@ export function makeMultiplexedTransport(arg0, arg1) {
         let c3 = 0;
         let c4 = 0;
         return (function*(arg0, arr) {
-          if (c4 === 2) {
-            c4 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw arr;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arr;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c4 = 2;
-              if (0 === c3) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw arr;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arr;
-                  return obj;
-                } else {
-                  let closure_2 = tmp2;
-                  let closure_1 = 0;
-                  const items = [];
-                  const arraySpreadResult = HermesBuiltin.arraySpread(outer1_2.values(), closure_1);
-                  closure_1 = arraySpreadResult;
-                  items[arraySpreadResult] = outer1_1;
-                  closure_1 = closure_1 + 1;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = Promise.all(items.map(() => { ... }));
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw arr;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arr;
-                return obj2;
-              } else {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arr.every(/* F119122 */ function() { ... });
-                return obj;
-              }
-            } catch (tmp6) {
-              c4 = tmp;
-              throw tmp6;
-            }
-          }
+          let closure_2 = tmp2;
+          let closure_1 = 0;
+          const items = [];
+          const arraySpreadResult = HermesBuiltin.arraySpread(outer1_2.values(), closure_1);
+          closure_1 = arraySpreadResult;
+          items[arraySpreadResult] = outer1_1;
+          closure_1 = closure_1 + 1;
+          yield Promise.all(items.map(() => { ... }));
+          return arr.every(/* F119122 */ function() { ... });
         })();
       });
       const _flush = tmp;

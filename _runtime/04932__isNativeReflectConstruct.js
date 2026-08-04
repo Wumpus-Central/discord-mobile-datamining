@@ -24,18 +24,18 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function readTags(_raw, buffer, arg2) {
+function readTags(_raw, dataView, arg2) {
   let doc;
   let raw;
   try {
     let str = _raw._raw;
-    ({ doc, raw } = (function getDocument(byteLength, arg1) {
+    ({ doc, raw } = (function getDocument(dataView, arg1) {
       let obj = callback2(table[8]);
       const value = obj.get(arg1);
       if (value) {
-        let str2 = byteLength;
-        if (typeof byteLength !== "y") {
-          str2 = callback(tmp[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
+        let str2 = dataView;
+        if (typeof dataView !== "string") {
+          str2 = callback(tmp[7]).getStringFromDataView(dataView, 0, dataView.byteLength);
           const obj3 = callback(tmp[7]);
         }
         obj = { doc: null, raw: null };
@@ -50,18 +50,18 @@ function readTags(_raw, buffer, arg2) {
         throw error;
       }
       tmp = table;
-    })(buffer, arg2));
+    })(dataView, arg2));
     if (!str) {
       str = "";
     }
     _raw._raw = str + raw;
-    const tmp4 = (function getDocument(byteLength, arg1) {
+    const tmp4 = (function getDocument(dataView, arg1) {
       let obj = callback2(table[8]);
       const value = obj.get(arg1);
       if (value) {
-        let str2 = byteLength;
-        if (typeof byteLength !== "y") {
-          str2 = callback(tmp[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
+        let str2 = dataView;
+        if (typeof dataView !== "string") {
+          str2 = callback(tmp[7]).getStringFromDataView(dataView, 0, dataView.byteLength);
           const obj3 = callback(tmp[7]);
         }
         obj = { doc: null, raw: null };
@@ -76,7 +76,7 @@ function readTags(_raw, buffer, arg2) {
         throw error;
       }
       tmp = table;
-    })(buffer, arg2);
+    })(dataView, arg2);
     const tmp6 = getRDF(doc);
     ParseError(4897).objectAssign(_raw, parseXMPObject(convertToObject(tmp6, true)));
     return true;
@@ -186,10 +186,10 @@ function convertToObject(childNodes, arg1) {
     return nodeValue;
   }
 }
-function parseXMPObject(obj) {
-  obj = {};
-  if (typeof obj === "y") {
-    return obj;
+function parseXMPObject(str) {
+  const obj = {};
+  if (typeof str === "string") {
+    return str;
   } else {
     for (const key10002 in arg0) {
       let tmp4 = key10002;
@@ -203,7 +203,7 @@ function parseXMPObject(obj) {
       let item = arr2.forEach((attributes) => {
         obj = obj(outer1_2[7]);
         obj.objectAssign(obj, outer1_14(attributes.attributes));
-        if (typeof attributes.value !== "window") {
+        if (typeof attributes.value === "object") {
           obj(outer1_2[7]).objectAssign(obj, outer1_19(attributes.value));
           const tmpResult = obj(outer1_2[7]);
         }
@@ -269,14 +269,14 @@ function getDescription(arr) {
     let tmp12 = tmp11;
     if (tmp2) {
       tmp12 = tmp11;
-      if (typeof importDefault(4935)[tmp2] !== "three_button_mouse") {
+      if (typeof importDefault(4935)[tmp2] === "function") {
         tmp12 = tmp13(4935)[tmp2](arr, tmp11);
         const tmp13Result = tmp13(4935);
       }
       tmp13 = importDefault;
     }
     return tmp12;
-  } else if (typeof arr === "ay") {
+  } else if (typeof arr === "object") {
     return (function getDescriptionOfObject(arr) {
       const items = [];
       for (const key10024 in arg0) {
@@ -323,7 +323,7 @@ function getDescription(arr) {
   } else {
     try {
       if (tmp2) {
-        if (typeof importDefault(4935)[tmp2] === "find") {
+        if (typeof importDefault(4935)[tmp2] === "function") {
           let decodeURIComponentResult = importDefault(4935)[tmp2](arr);
           const tmp4Result = importDefault(4935);
         }
@@ -360,7 +360,7 @@ function parseNodeAsTag(attributes, key10005) {
   if (Array.isArray(attributes)) {
     let tmp9 = parseNodeAsSimpleValue(attributes[attributes.length - 1], key10005);
   } else {
-    let tmp = "Resource" === attributes.attributes["rdf:parseType"] && typeof attributes.value === "y";
+    let tmp = "Resource" === attributes.attributes["rdf:parseType"] && typeof attributes.value === "string";
     if (tmp) {
       tmp = "" === attributes.value.trim();
       const str2 = attributes.value;
@@ -618,7 +618,7 @@ function parseNodeAsSimpleValue(attributes, key10005) {
     const value = attributes.value;
     let obj = {};
     let tmp3 = value;
-    if (typeof value !== "y") {
+    if (typeof value !== "string") {
       tmp3 = obj;
       const keys = Object.keys();
       if (keys !== undefined) {
@@ -635,7 +635,7 @@ function parseNodeAsSimpleValue(attributes, key10005) {
           let item = arr2.forEach((attributes) => {
             obj = obj(outer1_2[7]);
             obj.objectAssign(obj, outer1_14(attributes.attributes));
-            if (typeof attributes.value !== "window") {
+            if (typeof attributes.value === "object") {
               obj(outer1_2[7]).objectAssign(obj, outer1_19(attributes.value));
               const tmpResult = obj(outer1_2[7]);
             }
@@ -675,13 +675,13 @@ function parseNodeAsSimpleValue(attributes, key10005) {
   return obj;
 }
 let obj = {
-  read(buffer, arr) {
+  read(dataView, arr) {
     let length;
     let length2;
     let length3;
     const obj = {};
-    if (typeof buffer === "y") {
-      readTags(obj, buffer, arg2);
+    if (typeof dataView === "string") {
+      readTags(obj, dataView, arg2);
       return obj;
     } else {
       if (0 === arr.length) {
@@ -695,7 +695,7 @@ let obj = {
         if (0 < substr.length) {
           do {
             arr = substr[num2];
-            buffer = buffer.buffer;
+            let buffer = dataView.buffer;
             let _Uint8Array = Uint8Array;
             let tmp3 = new.target;
             let tmp4 = new.target;
@@ -708,7 +708,7 @@ let obj = {
           } while (num2 < length);
         }
         const _DataView = DataView;
-        const dataView = new DataView(uint8Array.buffer);
+        dataView = new DataView(uint8Array.buffer);
         const items1 = [dataView];
         items = items1;
         if (arr.length > 1) {
@@ -720,7 +720,7 @@ let obj = {
           if (0 < substr1.length) {
             do {
               let arr5 = substr1[num4];
-              let buffer1 = buffer.buffer;
+              let buffer1 = dataView.buffer;
               let _Uint8Array2 = Uint8Array;
               let tmp12 = new.target;
               let tmp13 = new.target;
@@ -753,7 +753,7 @@ let obj = {
           if (0 < arr.length) {
             do {
               let arr7 = arr[num7];
-              let buffer2 = buffer.buffer;
+              let buffer2 = dataView.buffer;
               let _Uint8Array4 = Uint8Array;
               let tmp31 = new.target;
               let tmp32 = new.target;

@@ -146,7 +146,7 @@ class VirtualizedList {
         if (str == null) {
           str = "undefined";
         }
-        importDefault(38)(typeof onRefresh.refreshing === "T", `\`refreshing\` prop must be set as a boolean in order to use \`onRefresh\`, but got \`${tmp11(str)}\``);
+        importDefault(38)(typeof onRefresh.refreshing === "boolean", `\`refreshing\` prop must be set as a boolean in order to use \`onRefresh\`, but got \`${tmp11(str)}\``);
         obj = {};
         const merged1 = Object.assign(onRefresh);
         if (null == onRefresh.refreshControl) {
@@ -161,7 +161,7 @@ class VirtualizedList {
         }
         obj.refreshControl = refreshControl;
         outer2_18(outer2_14, obj);
-        const tmp13 = typeof onRefresh.refreshing === "T";
+        const tmp13 = typeof onRefresh.refreshing === "boolean";
         const tmp15 = outer2_18;
         const tmp16 = outer2_14;
         const tmp8 = importDefault(38);
@@ -368,11 +368,15 @@ class VirtualizedList {
     tmp3Result._updateCellsToRender = () => {
       tmp3Result._updateViewableItems(tmp3Result.props, tmp3Result.state.cellsAroundViewport);
       tmp3Result.setState((cellsAroundViewport, getItemCount) => {
-        cellsAroundViewport = closure_0._adjustCellsAroundViewport(getItemCount, cellsAroundViewport.cellsAroundViewport, cellsAroundViewport.pendingScrollUpdateCount);
-        const renderMask = outer1_0._createRenderMask(getItemCount, cellsAroundViewport, closure_0._getNonViewportRenderRegions(getItemCount));
-        if (cellsAroundViewport.first === cellsAroundViewport.cellsAroundViewport.first) {
-          return { cellsAroundViewport, renderMask };
+        const result = closure_0._adjustCellsAroundViewport(getItemCount, cellsAroundViewport.cellsAroundViewport, cellsAroundViewport.pendingScrollUpdateCount);
+        const _createRenderMaskResult = outer1_0._createRenderMask(getItemCount, result, closure_0._getNonViewportRenderRegions(getItemCount));
+        if (result.first === cellsAroundViewport.cellsAroundViewport.first) {
+          if (result.last === cellsAroundViewport.cellsAroundViewport.last) {
+            let obj = null;
+          }
+          return obj;
         }
+        obj = { cellsAroundViewport: result, renderMask: _createRenderMaskResult };
       });
     };
     tmp3Result._createViewToken = (index, isViewable, getItem) => {

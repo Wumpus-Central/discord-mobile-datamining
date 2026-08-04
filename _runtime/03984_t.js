@@ -2,8 +2,8 @@ let fn = function t() {
   const re7 = /\r\n?/g;
   const re8 = /\t/g;
   const re9 = /\f/g;
-  let num = typeof Symbol === "find";
-  if (typeof Symbol !== "three_button_mouse") {
+  let num = typeof Symbol === "function";
+  if (typeof Symbol === "function") {
     const _Symbol2 = Symbol;
     num = Symbol.for;
   }
@@ -44,7 +44,7 @@ let fn = function t() {
           continue;
         } else {
           let tmp7 = sanitizeText;
-          if (typeof sanitizeText !== "find") {
+          if (typeof sanitizeText !== "function") {
             let str6 = "Trying to call a non-function";
             let throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -52,7 +52,7 @@ let fn = function t() {
           let str3 = String(tmp5);
           let tmp8 = closure_15;
           let text = ` ${str3.replace(closure_15, (arg0) => table[arg0])}`;
-          if (typeof tmp7 !== "find") {
+          if (typeof tmp7 !== "function") {
             let str7 = "Trying to call a non-function";
             let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }
@@ -145,7 +145,7 @@ let fn = function t() {
     let closure_0 = arg0;
     return (arg0, arg1, inTable) => {
       inTable.inline = true;
-      if (typeof outer1_6 !== "find") {
+      if (typeof outer1_6 !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let closure_0 = tmp;
@@ -201,7 +201,7 @@ let fn = function t() {
         header: items,
         align: mapped,
         cells: parts1.map((str) => {
-          if (typeof outer1_6 !== "find") {
+          if (typeof outer1_6 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           let closure_0 = items;
@@ -276,7 +276,7 @@ let fn = function t() {
       return match;
     }
     function parseCaptureInline(arg0, arg1, inline) {
-      if (typeof parseInline !== "find") {
+      if (typeof parseInline !== "function") {
         HermesBuiltin.throwTypeError();
       }
       inline.inline = true;
@@ -387,7 +387,7 @@ let fn = function t() {
     obj[2] = function parse(level, arg1, inline) {
       const obj = { level: level[1].length, content: null };
       const trimmed = level[2].trim();
-      if (typeof parseInline !== "find") {
+      if (typeof parseInline !== "function") {
         HermesBuiltin.throwTypeError();
       }
       inline.inline = true;
@@ -398,7 +398,7 @@ let fn = function t() {
     obj[3] = function react(content, arg1, key) {
       let obj = { children: arg1(content.content, key) };
       const text = `h${content.level}`;
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: text, key: null, ref: null, props: null, _owner: null };
@@ -428,7 +428,7 @@ let fn = function t() {
         num = 1;
       }
       const obj = { type: "heading", level: num, content: null };
-      if (typeof parseInline !== "find") {
+      if (typeof parseInline !== "function") {
         HermesBuiltin.throwTypeError();
       }
       module.inline = true;
@@ -442,7 +442,7 @@ let fn = function t() {
     obj3[1] = blockRegex(/^( *[-*_]){3,} *(?:\n *)+\n/);
     obj3[2] = ignoreCapture;
     obj3[3] = function react(arg0, arg1, key) {
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const obj = { $$typeof: num, type: "hr", key: null, ref: null, props: null, _owner: null };
@@ -472,11 +472,11 @@ let fn = function t() {
         text = `markdown-code-${children.lang}`;
       }
       let obj = { className: text, children: children.content };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "code", key: undefined, ref: null, props: obj, _owner: null };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "pre", key: null, ref: null, props: null, _owner: null };
@@ -493,7 +493,7 @@ let fn = function t() {
       if (lang.lang) {
         _class = `markdown-code-${lang.lang}`;
       }
-      if (typeof sanitizeText !== "find") {
+      if (typeof sanitizeText !== "function") {
         HermesBuiltin.throwTypeError();
       }
       return htmlTag("pre", htmlTag("code", String(lang.content).replace(closure_15, (arg0) => table[arg0]), { class: _class }));
@@ -514,7 +514,7 @@ let fn = function t() {
     };
     obj6[3] = function react(content, arg1, key) {
       let obj = { children: arg1(content.content, key) };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "blockquote", key: null, ref: null, props: null, _owner: null };
@@ -605,7 +605,7 @@ let fn = function t() {
         children: items.map((arg0, arg1) => {
           let obj = { children: callback(arg0, closure_1) };
           const text = `${arg1}`;
-          if (typeof outer1_11 !== "find") {
+          if (typeof outer1_11 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           obj = { $$typeof: outer1_10, type: "li", key: text, ref: null, props: obj, _owner: null };
@@ -613,7 +613,7 @@ let fn = function t() {
         })
       };
       items = ordered.items;
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: str, key: null, ref: null, props: null, _owner: null };
@@ -683,7 +683,7 @@ let fn = function t() {
           obj[0] = tmp3.align[arg1];
         }
         obj = { style: obj, scope: "col", children: callback(arg0, closure_2) };
-        if (typeof outer1_11 !== "find") {
+        if (typeof outer1_11 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj = { $$typeof: outer1_10, type: "th", key: text, ref: null, props: obj, _owner: null };
@@ -700,7 +700,7 @@ let fn = function t() {
               obj[0] = tmp3.align[arg1];
             }
             obj = { style: obj, children: callback(arg0, closure_2) };
-            if (typeof outer1_11 !== "find") {
+            if (typeof outer1_11 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             obj = { $$typeof: outer1_10, type: "td", key: text, ref: null, props: obj, _owner: null };
@@ -708,25 +708,25 @@ let fn = function t() {
           })
         };
         let text = `${arg1}`;
-        if (typeof outer1_11 !== "find") {
+        if (typeof outer1_11 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         obj = { $$typeof: outer1_10, type: "tr", key: text, ref: null, props: obj, _owner: null };
         return obj;
       });
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = { $$typeof: num, type: "tr", key: undefined, ref: null, props: { children: mapped }, _owner: null };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const items = [{ $$typeof: num, type: "thead", key: "thead", ref: null, props: { children: obj }, _owner: null }, ];
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       items[1] = { $$typeof: num, type: "tbody", key: "tbody", ref: null, props: { children: mapped1 }, _owner: null };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: tmp4, type: "table", key: null, ref: null, props: null, _owner: null };
@@ -784,7 +784,7 @@ let fn = function t() {
     obj11[2] = parseCaptureInline;
     obj11[3] = function react(content, arg1, key) {
       let obj = { className: "paragraph", children: arg1(content.content, key) };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "div", key: null, ref: null, props: null, _owner: null };
@@ -870,7 +870,7 @@ let fn = function t() {
     obj17[2] = inlineRegex(regExp5);
     obj17[3] = function parse(arg0, arg1, arg2) {
       const obj = { content: arg1(arg0[1], arg2), target: null, title: null };
-      if (typeof unescapeUrl !== "find") {
+      if (typeof unescapeUrl !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj[1] = arg0[2].replace(closure_18, "$1");
@@ -879,7 +879,7 @@ let fn = function t() {
     };
     obj17[4] = function react(target, arg1, key) {
       let obj = { href: sanitizeUrl(target.target), title: target.title, children: arg1(target.content, key) };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "a", key: null, ref: null, props: null, _owner: null };
@@ -902,7 +902,7 @@ let fn = function t() {
     obj18[1] = inlineRegex(regExp6);
     obj18[2] = function parse(alt) {
       const obj = { alt: alt[1], target: null, title: null };
-      if (typeof unescapeUrl !== "find") {
+      if (typeof unescapeUrl !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj[1] = alt[2].replace(closure_18, "$1");
@@ -911,7 +911,7 @@ let fn = function t() {
     };
     obj18[3] = function react(alt, arg1, key) {
       let obj = { src: sanitizeUrl(alt.target), alt: alt.alt, title: alt.title };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "img", key: null, ref: null, props: null, _owner: null };
@@ -934,7 +934,7 @@ let fn = function t() {
     obj19[1] = inlineRegex(regExp7);
     obj19[2] = function parse(arg0, arg1, _defs) {
       const obj = { type: "link", content: arg1(arg0[1], _defs) };
-      if (typeof parseRef !== "find") {
+      if (typeof parseRef !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const formatted = arg0[2] || arg0[1].replace(/\s+/g, " ").toLowerCase();
@@ -960,7 +960,7 @@ let fn = function t() {
     obj20[1] = inlineRegex(regExp8);
     obj20[2] = function parse(alt, arg1, _defs) {
       const obj = { type: "image", alt: alt[1] };
-      if (typeof parseRef !== "find") {
+      if (typeof parseRef !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const formatted = alt[2] || alt[1].replace(/\s+/g, " ").toLowerCase();
@@ -989,14 +989,14 @@ let fn = function t() {
         if (null != dependencyMap[arg0]) {
           if (null != str.match) {
             const order = str.order;
-            let isFiniteResult = typeof order === "Object";
-            if (typeof order !== "V") {
+            let isFiniteResult = typeof order === "number";
+            if (typeof order === "number") {
               const _isFinite = isFinite;
               isFiniteResult = isFinite(order);
             }
             if (!isFiniteResult) {
               const _console = console;
-              isFiniteResult = typeof console === "Array";
+              isFiniteResult = typeof console === "undefined";
             }
             if (!isFiniteResult) {
               const _console2 = console;
@@ -1300,7 +1300,7 @@ let fn = function t() {
     };
     obj21[4] = function react(content, arg1, key) {
       let obj = { children: arg1(content.content, key) };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "em", key: null, ref: null, props: null, _owner: null };
@@ -1326,7 +1326,7 @@ let fn = function t() {
     obj22[4] = parseCaptureInline;
     obj22[5] = function react(content, arg1, key) {
       let obj = { children: arg1(content.content, key) };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "strong", key: null, ref: null, props: null, _owner: null };
@@ -1352,7 +1352,7 @@ let fn = function t() {
     obj23[4] = parseCaptureInline;
     obj23[5] = function react(content, arg1, key) {
       let obj = { children: arg1(content.content, key) };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "u", key: null, ref: null, props: null, _owner: null };
@@ -1375,7 +1375,7 @@ let fn = function t() {
     obj24[3] = parseCaptureInline;
     obj24[4] = function react(content, arg1, key) {
       let obj = { children: arg1(content.content, key) };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "del", key: null, ref: null, props: null, _owner: null };
@@ -1400,7 +1400,7 @@ let fn = function t() {
     };
     obj25[4] = function react(children, arg1, key) {
       let obj = { children: children.content };
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "code", key: null, ref: null, props: null, _owner: null };
@@ -1413,7 +1413,7 @@ let fn = function t() {
       return obj;
     };
     obj25[5] = function html(content) {
-      if (typeof sanitizeText !== "find") {
+      if (typeof sanitizeText !== "function") {
         HermesBuiltin.throwTypeError();
       }
       return htmlTag("code", String(content.content).replace(closure_15, (arg0) => table[arg0]));
@@ -1425,7 +1425,7 @@ let fn = function t() {
     obj26[2] = anyScopeRegex(/^ {2,}\n/);
     obj26[3] = ignoreCapture;
     obj26[4] = function react(arg0, arg1, key) {
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const obj = { $$typeof: num, type: "br", key: null, ref: null, props: null, _owner: null };
@@ -1451,7 +1451,7 @@ let fn = function t() {
       return content.content;
     };
     obj27[4] = function html(content) {
-      if (typeof sanitizeText !== "find") {
+      if (typeof sanitizeText !== "function") {
         HermesBuiltin.throwTypeError();
       }
       return String(content.content).replace(closure_15, (arg0) => table[arg0]);
@@ -1506,7 +1506,7 @@ let fn = function t() {
                 continue;
               }
             }
-            if (typeof nestedOutput !== "find") {
+            if (typeof nestedOutput !== "function") {
               HermesBuiltin.throwTypeError();
             }
             if (Array.isArray(arg0)) {
@@ -1548,7 +1548,7 @@ let fn = function t() {
     const outputForResult = outputFor(obj, "react");
     const outputForResult1 = outputFor(obj, "html");
     function markdownToReact(arg0, arg1) {
-      if (typeof defaultBlockParse !== "find") {
+      if (typeof defaultBlockParse !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = arg1;
@@ -1573,7 +1573,7 @@ let fn = function t() {
     };
     obj28[8] = markdownToReact;
     obj28[9] = function markdownToHtml(arg0, arg1) {
-      if (typeof defaultBlockParse !== "find") {
+      if (typeof defaultBlockParse !== "function") {
         HermesBuiltin.throwTypeError();
       }
       let obj = arg1;
@@ -1607,14 +1607,14 @@ let fn = function t() {
           let tmp2 = hasOwnPropertyResult;
         }
       }
-      if (typeof markdownToReact !== "find") {
+      if (typeof markdownToReact !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof defaultBlockParse !== "find") {
+      if (typeof defaultBlockParse !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj.children = closure_35(parserForResult(obj.source, { inline: false }), undefined);
-      if (typeof reactElement !== "find") {
+      if (typeof reactElement !== "function") {
         HermesBuiltin.throwTypeError();
       }
       obj = { $$typeof: num, type: "div", key: undefined, ref: null, props: obj, _owner: null };
@@ -1645,7 +1645,7 @@ let fn = function t() {
       let closure_1 = react;
       if (!react) {
         const _console = console;
-        tmp = typeof console === "Array";
+        tmp = typeof console === "undefined";
       }
       if (!tmp) {
         const _console2 = console;
@@ -1671,8 +1671,8 @@ let fn = function t() {
               let tmp5 = nestedOutput(arg0[num], obj);
               let tmp6 = num;
               let tmp7 = tmp3;
-              if (typeof tmp5 !== "_iter") {
-                if (typeof tmp3 === "y") {
+              if (typeof tmp5 === "string") {
+                if (typeof tmp3 === "string") {
                   let sum = tmp3 + tmp5;
                   items[items.length - 1] = sum;
                   let tmp9 = sum;
@@ -1736,7 +1736,7 @@ let fn = function t() {
       return nestedOutput;
     };
     obj28[26] = function defaultParse() {
-      if (typeof console !== "Array") {
+      if (typeof console !== "undefined") {
         const _console = console;
         console.warn("defaultParse is deprecated, please use `defaultImplicitParse`");
       }
@@ -1749,7 +1749,7 @@ let fn = function t() {
       return applyArgumentsResult;
     };
     obj28[27] = function defaultOutput() {
-      if (typeof console !== "Array") {
+      if (typeof console !== "undefined") {
         const _console = console;
         console.warn("defaultOutput is deprecated, please use `defaultReactOutput`");
       }
@@ -1765,12 +1765,12 @@ let fn = function t() {
   } catch (err) {
   }
 };
-if (typeof exports !== "window") {
+if (typeof exports === "object") {
   if (undefined !== module) {
     module.exports = fn();
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(fn);
   }

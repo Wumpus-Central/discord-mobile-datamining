@@ -58,7 +58,7 @@ let items = [
       self = this;
       let fn;
       fn = callback2(callback(self.prototype), "updateLayoutParams", this);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [windowSize];

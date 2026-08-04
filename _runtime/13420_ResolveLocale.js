@@ -49,7 +49,7 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
       let tmp19 = undefined === first;
       let tmp20 = items1;
       if (!tmp19) {
-        tmp19 = typeof first === "y";
+        tmp19 = typeof first === "string";
       }
       let invariantResult1 = require(13422) /* isMatched */.invariant(tmp19, "value must be a string or undefined");
       let iter = keywords.find((key) => key.key === closure_0);
@@ -79,11 +79,11 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
       let tmp23 = localeMatcher[str];
       let tmp24 = null == tmp23;
       if (!tmp24) {
-        tmp24 = typeof tmp23 === "y";
+        tmp24 = typeof tmp23 === "string";
       }
       let invariantResult2 = tmp14(13422).invariant(tmp24, "optionsValue must be a string or undefined");
       let str3 = tmp23;
-      if (typeof tmp23 !== "_iter") {
+      if (typeof tmp23 === "string") {
         let formatted = str.toLowerCase();
         str3 = tmp14(13428).CanonicalizeUValue(formatted, tmp23);
         if ("" === str3) {

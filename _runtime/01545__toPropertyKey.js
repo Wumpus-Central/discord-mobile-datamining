@@ -3,33 +3,33 @@ import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
 
-function _toPropertyKey(arg0) {
-  let StringResult = arg0;
-  if (typeof arg0 !== "window") {
-    StringResult = arg0;
-    if (arg0) {
+function _toPropertyKey(obj) {
+  let StringResult = obj;
+  if (typeof obj === "object") {
+    StringResult = obj;
+    if (obj) {
       const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
+      if (undefined !== obj[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(arg0, "string");
+          callResult = call(obj, "string");
         }
         StringResult = callResult;
-        if (typeof callResult !== "window") {
+        if (typeof callResult === "object") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(arg0);
+        StringResult = String(obj);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "e") {
+  if (typeof StringResult !== "symbol") {
     text = `${tmp}`;
   }
   return text;
@@ -88,18 +88,18 @@ export default function useDescriptors(state) {
     const arraySpreadResult = HermesBuiltin.arraySpread(found, 1);
     items[arraySpreadResult] = props.options;
     items[arraySpreadResult + 1] = _undefined[key.key];
-    const reduced = items.reduce((arg0, arg1) => {
-      let tmp = arg1;
-      if (typeof arg1 !== "three_button_mouse") {
+    const reduced = items.reduce((arg0, fn) => {
+      let tmp = fn;
+      if (typeof fn === "function") {
         const obj = { route: null, navigation: null };
         obj[0] = closure_0;
         obj[1] = _slicedToArray;
-        tmp = arg1(obj);
+        tmp = fn(obj);
       }
       return Object.assign(arg0, tmp);
     }, {});
     let tmp6Result = obj;
-    if (typeof obj !== "three_button_mouse") {
+    if (typeof obj === "function") {
       obj = { route: null, navigation: null, options: null };
       obj[0] = key;
       obj[1] = tmp2;

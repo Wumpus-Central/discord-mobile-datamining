@@ -57,7 +57,7 @@ let obj = {
       let __makeNativeResult = obj.__makeNative(arg0);
     }
     let fn = callback3(callback2(self.prototype), "__makeNative", self);
-    if (typeof fn !== "three_button_mouse") {
+    if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
     const items = [arg0];
@@ -94,7 +94,7 @@ let items = [
               });
               continue;
             } else {
-              if (typeof arr === "ay") {
+              if (typeof arr === "object") {
                 obj = {};
                 let tmp = arr;
                 for (const key10013 in arr) {
@@ -157,7 +157,7 @@ let items = [
               });
               continue;
             } else {
-              if (typeof arr === "ay") {
+              if (typeof arr === "object") {
                 obj = {};
                 let tmp = arr;
                 for (const key10013 in arr) {
@@ -211,7 +211,7 @@ let items = [
               });
               continue;
             } else {
-              if (typeof arr === "ay") {
+              if (typeof arr === "object") {
                 obj = {};
                 let tmp = arr;
                 for (const key10013 in arr) {
@@ -271,7 +271,7 @@ let items = [
               });
               continue;
             } else {
-              if (typeof arr === "ay") {
+              if (typeof arr === "object") {
                 obj = {};
                 let tmp = arr;
                 for (const key10013 in arr) {
@@ -313,7 +313,7 @@ let items = [
         let __addChildResult = obj.__addChild(self);
       }
       let fn = callback3(callback2(self.prototype), "__attach", self);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -329,7 +329,7 @@ let items = [
         let __removeChildResult = obj.__removeChild(self);
       }
       let fn = callback3(callback2(self.prototype), "__detach", self);
-      if (typeof fn !== "three_button_mouse") {
+      if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

@@ -53,7 +53,7 @@ export default function formatDuration(arg0, locale) {
     if (locale.formatDistance) {
       const reduced = format.reduce((arr) => {
         let combined = arr;
-        if (typeof table[arg1] !== "V") {
+        if (typeof table[arg1] === "number") {
           if (closure_2) {
             combined = arr.concat(locale.formatDistance(tmp, tmp3));
           } else {

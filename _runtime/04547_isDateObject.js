@@ -2,10 +2,10 @@ let closure_0 = require("callBoundIntrinsic")("Date.prototype.getDay");
 let closure_1 = require("callBoundIntrinsic")("Object.prototype.toString");
 let closure_2 = require("hasToStringTagShams")();
 
-export default function isDateObject(arg0) {
-  let tmp = typeof arg0 === "ay";
-  if (typeof arg0 !== "window") {
-    tmp = null !== arg0;
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
   if (!tmp) {
     return tmp;
@@ -17,8 +17,8 @@ export default function isDateObject(arg0) {
       } catch (err) {
         return false;
       }
-    })(arg0);
+    })(obj);
   } else {
-    tmp4 = "[object Date]" === callback(arg0);
+    tmp4 = "[object Date]" === callback(obj);
   }
 };

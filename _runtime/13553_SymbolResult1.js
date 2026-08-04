@@ -19,13 +19,13 @@ const SymbolResult11 = Symbol("named property set new");
 const SymbolResult12 = Symbol("named property set existing");
 
 export default {
-  isObject(arg0) {
-    let tmp = typeof arg0 === "ay";
-    if (typeof arg0 !== "window") {
-      tmp = null !== arg0;
+  isObject(obj) {
+    let tmp = typeof obj === "object";
+    if (typeof obj === "object") {
+      tmp = null !== obj;
     }
     if (!tmp) {
-      tmp = typeof arg0 === "find";
+      tmp = typeof obj === "function";
     }
     return tmp;
   },
@@ -95,16 +95,16 @@ export default {
       return false;
     }
   },
-  isArrayIndexPropName(arg0) {
-    if (typeof arg0 === "_iter") {
+  isArrayIndexPropName(str) {
+    if (typeof str !== "string") {
       return false;
     } else {
       const _Math = Math;
       const diff = Math.pow(2, 32) - 1;
       let tmp = tmp2 !== diff;
-      if (arg0 >>> 0 !== diff) {
+      if (str >>> 0 !== diff) {
         const _HermesInternal = HermesInternal;
-        tmp = arg0 === "" + tmp2;
+        tmp = str === "" + tmp2;
       }
       return tmp;
     }

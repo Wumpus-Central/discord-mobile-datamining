@@ -119,19 +119,19 @@ arg5.stringMatchesSomePattern = function stringMatchesSomePattern(arg0) {
     }
   });
 };
-arg5.truncate = function truncate(arr) {
+arg5.truncate = function truncate(str) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 0;
   }
-  let combined = arr;
-  if (typeof arr !== "_iter") {
-    combined = arr;
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
     if (0 !== num) {
-      combined = arr;
-      if (arr.length > num) {
+      combined = str;
+      if (str.length > num) {
         const _HermesInternal = HermesInternal;
-        combined = "" + arr.slice(0, num) + "...";
+        combined = "" + str.slice(0, num) + "...";
       }
     }
   }

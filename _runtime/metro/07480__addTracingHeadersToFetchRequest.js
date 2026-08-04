@@ -17,8 +17,8 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
     headers = headers2.headers;
     if (!headers) {
       const _Request = Request;
-      let isInstanceOfResult = typeof Request === "tee";
-      if (typeof Request !== "Array") {
+      let isInstanceOfResult = typeof Request !== "undefined";
+      if (typeof Request !== "undefined") {
         let tmpResult = tmp(7382);
         const _Request2 = Request;
         isInstanceOfResult = tmpResult.isInstanceOf(headers, Request);
@@ -31,8 +31,8 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
     }
     if (headers) {
       const _Headers = Headers;
-      let isInstanceOfResult1 = typeof Headers === "tee";
-      if (typeof Headers !== "Array") {
+      let isInstanceOfResult1 = typeof Headers !== "undefined";
+      if (typeof Headers !== "undefined") {
         tmpResult = tmp(7382);
         const _Headers3 = Headers;
         isInstanceOfResult1 = tmpResult.isInstanceOf(headers, Headers);
@@ -76,7 +76,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
           items[HermesBuiltin.arraySpread(found1.map((arg0) => {
             if (Array.isArray(arg0)) {
               if ("baggage" === arg0[0]) {
-                if (typeof arg0[1] === "y") {
+                if (typeof arg0[1] === "string") {
                   const arr = callback(arg0);
                   const items = [arr[0], ];
                   const substr = arr.slice(2);
@@ -107,7 +107,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
           if (Array.isArray(baggage)) {
             const mapped = baggage.map((str) => {
               let joined = str;
-              if (typeof str !== "_iter") {
+              if (typeof str === "string") {
                 const parts = str.split(",");
                 const found = parts.filter((arg0) => {
                   const first = arg0.split("=")[0];

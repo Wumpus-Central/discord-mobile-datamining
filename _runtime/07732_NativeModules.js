@@ -45,7 +45,7 @@ if (!fn) {
     }
     if (null != obj) {
       const _Object3 = Object;
-      if (typeof Object.getOwnPropertySymbols !== "three_button_mouse") {
+      if (typeof Object.getOwnPropertySymbols === "function") {
         const _Object4 = Object;
         const ownPropertySymbols = Object.getOwnPropertySymbols(obj);
         let num = 0;
@@ -234,8 +234,8 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   }
   const items3 = [importDefault(onShouldStartLoadWithRequest2[7]).container, importDefault(onShouldStartLoadWithRequest2[7]).webView, style];
   const items4 = [importDefault(onShouldStartLoadWithRequest2[7]).container, containerStyle];
-  let tmp29 = typeof source === "V";
-  if (typeof source !== "Object") {
+  let tmp29 = typeof source !== "number";
+  if (typeof source !== "number") {
     tmp29 = source;
   }
   if (tmp29) {
@@ -263,8 +263,8 @@ const forwardRefResult = forwardRef((overScrollMode) => {
   }
   obj = {};
   const merged = Object.assign(tmp15);
-  let tmp38 = typeof onMessage === "find";
-  if (typeof onMessage !== "find") {
+  let tmp38 = typeof onMessage === "function";
+  if (typeof onMessage !== "function") {
     tmp38 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
     const tmp39 = null != messagingWithWebViewKeyEnabled && messagingWithWebViewKeyEnabled;
   }

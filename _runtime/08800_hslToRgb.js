@@ -84,22 +84,22 @@ function commaSeparatedCall() {
   return "\\(\\s*(" + items.join(")\\s*,\\s*(") + ")\\s*\\)";
 }
 
-export default function normalizeColor(arg0) {
-  if (typeof arg0 === "Object") {
-    let num = 0;
+export default function normalizeColor(num) {
+  if (typeof num === "number") {
+    num = 0;
     let tmp82 = null;
-    if (arg0 >>> 0 === arg0) {
+    if (num >>> 0 === num) {
       tmp82 = null;
-      if (arg0 >= 0) {
+      if (num >= 0) {
         num = 4294967295;
         tmp82 = null;
-        if (arg0 <= 4294967295) {
-          tmp82 = arg0;
+        if (num <= 4294967295) {
+          tmp82 = num;
         }
       }
     }
     return tmp82;
-  } else if (typeof arg0 === "_iter") {
+  } else if (typeof num !== "string") {
     return null;
   } else {
     let tmp10 = obj;
@@ -133,7 +133,7 @@ export default function normalizeColor(arg0) {
       const tmp91 = callWithSlashSeparator;
     }
     const hex6 = tmp10.hex6;
-    const match = hex6.exec(arg0);
+    const match = hex6.exec(num);
     if (match) {
       const _parseInt12 = parseInt;
       num = 16;
@@ -147,7 +147,7 @@ export default function normalizeColor(arg0) {
           return num2;
         } else {
           let rgb = tmp10.rgb;
-          num = rgb.exec(arg0);
+          num = rgb.exec(num);
           if (num) {
             let tmp73 = globalThis;
             let _parseInt9 = parseInt;
@@ -189,7 +189,7 @@ export default function normalizeColor(arg0) {
             let tmp18 = (tmp75 | tmp77 | num << 8 | 255) >>> 0;
           } else {
             let rgba = tmp10.rgba;
-            let num3 = rgba.exec(arg0);
+            let num3 = rgba.exec(num);
             if (num3) {
               if (undefined !== num3[6]) {
                 let tmp64 = globalThis;
@@ -303,7 +303,7 @@ export default function normalizeColor(arg0) {
               let tmp72 = tmp63;
             } else {
               let hex3 = tmp10.hex3;
-              let match1 = hex3.exec(arg0);
+              let match1 = hex3.exec(num);
               if (match1) {
                 let tmp56 = globalThis;
                 let _parseInt3 = parseInt;
@@ -313,7 +313,7 @@ export default function normalizeColor(arg0) {
                 tmp18 = parseInt(`${tmp13[1]}${tmp13[1]}${tmp13[2]}${tmp13[2]}${tmp13[3]}${tmp13[3]}ff`, 16) >>> 0;
               } else {
                 let hex8 = tmp10.hex8;
-                let match2 = hex8.exec(arg0);
+                let match2 = hex8.exec(num);
                 if (match2) {
                   let tmp55 = globalThis;
                   let _parseInt2 = parseInt;
@@ -322,7 +322,7 @@ export default function normalizeColor(arg0) {
                   tmp18 = parseInt(match2[1], 16) >>> 0;
                 } else {
                   let hex4 = tmp10.hex4;
-                  let match3 = hex4.exec(arg0);
+                  let match3 = hex4.exec(num);
                   if (match3) {
                     let tmp54 = globalThis;
                     let _parseInt = parseInt;
@@ -331,7 +331,7 @@ export default function normalizeColor(arg0) {
                     tmp18 = parseInt(match3[1] + match3[1] + match3[2] + match3[2] + match3[3] + match3[3] + match3[4] + match3[4], 16) >>> 0;
                   } else {
                     let hsl = tmp10.hsl;
-                    let match4 = hsl.exec(arg0);
+                    let match4 = hsl.exec(num);
                     if (match4) {
                       let tmp50 = globalThis;
                       let _parseFloat10 = parseFloat;
@@ -365,7 +365,7 @@ export default function normalizeColor(arg0) {
                       tmp18 = (255 | tmp49((result + 360) % 360 / 360, num65, num68)) >>> 0;
                     } else {
                       let hsla = tmp10.hsla;
-                      let num4 = hsla.exec(arg0);
+                      let num4 = hsla.exec(num);
                       if (num4) {
                         if (undefined !== num4[6]) {
                           let tmp42 = globalThis;
@@ -459,7 +459,7 @@ export default function normalizeColor(arg0) {
                         let tmp48 = tmp40;
                       } else {
                         let hwb = tmp10.hwb;
-                        let match5 = hwb.exec(arg0);
+                        let match5 = hwb.exec(num);
                         tmp18 = null;
                         if (match5) {
                           let roundResult = globalThis;

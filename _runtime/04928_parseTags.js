@@ -35,7 +35,7 @@ function parseTags(byteLength, size, sum) {
           obj3 = module(4929).iptc[uint16];
           if (obj3) {
             let tmp11 = obj3;
-            if (typeof obj3 !== "y") {
+            if (typeof obj3 !== "string") {
               break;
             } else {
               let combined = obj3;
@@ -103,7 +103,7 @@ function parseTags(byteLength, size, sum) {
           }
         }
       }
-      if (typeof obj3.name === "find") {
+      if (typeof obj3.name === "function") {
         let name = obj3.name(items);
       } else {
         name = obj3.name;

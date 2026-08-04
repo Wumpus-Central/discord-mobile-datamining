@@ -1,7 +1,7 @@
 arg5.useDataMultiplier = function useDataMultiplier(arg0, arg1) {
   const array = new Array(arg1);
   let flag = false;
-  if (typeof arg0[0] !== "window") {
+  if (typeof arg0[0] === "object") {
     flag = true;
   }
   for (let num = 0; num < arg1; num = num + 1) {

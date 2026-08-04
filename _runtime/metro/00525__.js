@@ -1,5 +1,5 @@
-let randomUUID = typeof crypto === "tee";
-if (typeof crypto !== "Array") {
+let randomUUID = typeof crypto !== "undefined";
+if (typeof crypto !== "undefined") {
   const _crypto3 = crypto;
   randomUUID = crypto.randomUUID;
 }

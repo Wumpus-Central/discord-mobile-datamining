@@ -22,7 +22,7 @@ function onVercelAiSpanStart(setAttribute) {
             delete tmp[tmp2];
           }
           gen_ai_tool_call_id = data["gen_ai.tool.call.id"];
-          if (typeof gen_ai_tool_call_id !== "_iter") {
+          if (typeof gen_ai_tool_call_id === "string") {
             const toolCallSpanMap = tmp3(959).toolCallSpanMap;
             const result = toolCallSpanMap.set(gen_ai_tool_call_id, setAttribute);
           }
@@ -49,7 +49,7 @@ function onVercelAiSpanStart(setAttribute) {
       const tmp11 = data[tmp3(undefined, 956).AI_TELEMETRY_FUNCTION_ID_ATTRIBUTE];
       let tmp12 = tmp11;
       if (tmp11) {
-        tmp12 = typeof tmp11 === "y";
+        tmp12 = typeof tmp11 === "string";
       }
       if (tmp12) {
         const _HermesInternal = HermesInternal;
@@ -145,17 +145,17 @@ function processEndedVercelAiSpan(item10015) {
     renameAttributeKey(data, require(956).AI_USAGE_PROMPT_TOKENS_ATTRIBUTE, require(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE);
     renameAttributeKey(data, require(956).AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE, require(958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE);
     const tmp34 = data[require(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
-    let tmp35 = typeof tmp34 === "Object";
-    if (typeof tmp34 !== "V") {
-      tmp35 = typeof data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE] === "Object";
+    let tmp35 = typeof tmp34 === "number";
+    if (typeof tmp34 === "number") {
+      tmp35 = typeof data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE] === "number";
     }
     if (tmp35) {
       data[tmp29(958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] + data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE];
     }
     const tmp = data[require(undefined, 958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE];
-    let tmp2 = typeof tmp === "Object";
-    if (typeof tmp !== "V") {
-      tmp2 = typeof data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] === "Object";
+    let tmp2 = typeof tmp === "number";
+    if (typeof tmp === "number") {
+      tmp2 = typeof data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] === "number";
     }
     if (tmp2) {
       data["gen_ai.usage.total_tokens"] = data[tmp29(undefined, 958).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] + data[tmp29(undefined, 958).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];

@@ -58,7 +58,7 @@ _loadFont = function _loadFont() {
               let obj1 = { value: null, done: true };
               obj1[0] = outer1_3.loadFontFromBytes(tmp26);
               return obj1;
-            } else if (typeof tmp26 === "Object") {
+            } else if (typeof tmp26 === "number") {
               const assetSource = outer1_2.resolveAssetSource(tmp26);
               let uri;
               if (assetSource != null) {
@@ -76,7 +76,7 @@ _loadFont = function _loadFont() {
                 throw error;
               }
             } else {
-              if (typeof tmp26 !== "window") {
+              if (typeof tmp26 === "object") {
                 if ("name" in tmp26) {
                   c1 = 3;
                   const obj3 = { value: null, done: true };
@@ -84,7 +84,7 @@ _loadFont = function _loadFont() {
                   return obj3;
                 }
               }
-              if (typeof tmp26 !== "window") {
+              if (typeof tmp26 === "object") {
                 if ("uri" in tmp26) {
                   c1 = 3;
                   const obj4 = { value: null, done: true };
@@ -92,7 +92,7 @@ _loadFont = function _loadFont() {
                   return obj4;
                 }
               }
-              if (typeof tmp26 === "y") {
+              if (typeof tmp26 === "string") {
                 obj = /^https?:\/\//;
                 if (!obj.test(tmp26)) {
                   obj1 = /^file:\/\//;

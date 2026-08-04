@@ -49,7 +49,7 @@ class Deflate {
             deflateSetHeaderResult = tmp4Result1.deflateSetHeader(self.strm, options.header);
           }
           if (options.dictionary) {
-            if (typeof options.dictionary === "y") {
+            if (typeof options.dictionary === "string") {
               tmp4Result2 = require("assign");
               dictionary = tmp4Result2.string2buf(options.dictionary);
             } else {
@@ -122,7 +122,7 @@ class Deflate {
         tmp2 = num;
       }
       tmp3 = arg0;
-      if (typeof arg0 === "y") {
+      if (typeof arg0 === "string") {
         tmp10 = closure_0;
         tmp11 = closure_1;
         obj = require("assign");

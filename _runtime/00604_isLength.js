@@ -1,14 +1,14 @@
 
-export default function isLength(arg0) {
-  let tmp = typeof arg0 === "Object";
-  if (typeof arg0 !== "V") {
-    tmp = arg0 > -1;
+export default function isLength(num) {
+  let tmp = typeof num === "number";
+  if (typeof num === "number") {
+    tmp = num > -1;
   }
   if (tmp) {
-    tmp = arg0 % 1 === 0;
+    tmp = num % 1 === 0;
   }
   if (tmp) {
-    tmp = arg0 <= 9007199254740991;
+    tmp = num <= 9007199254740991;
   }
   return tmp;
 };

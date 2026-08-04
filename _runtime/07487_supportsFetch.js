@@ -52,7 +52,7 @@ arg5.supportsErrorEvent = function supportsErrorEvent() {
 };
 arg5.supportsFetch = supportsFetch;
 arg5.supportsNativeFetch = function supportsNativeFetch() {
-  if (typeof globalThis.EdgeRuntime === "y") {
+  if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (supportsFetch()) {
     if (isNativeFunction(require(7376) /* getGlobalSingleton */.GLOBAL_OBJ.fetch)) {
@@ -61,7 +61,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
       let flag2 = false;
       const _document = tmp5(7376).GLOBAL_OBJ.document;
       if (_document) {
-        if (typeof _document.createElement !== "three_button_mouse") {
+        if (typeof _document.createElement === "function") {
           try {
             const element = <iframe />;
             element.hidden = true;

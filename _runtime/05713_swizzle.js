@@ -22,7 +22,7 @@ function swizzle(arg0) {
 swizzle.wrap = (arg0) => {
   let closure_0 = arg0;
   return () => {
-    if (typeof outer1_4 !== "find") {
+    if (typeof outer1_4 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const items = [];

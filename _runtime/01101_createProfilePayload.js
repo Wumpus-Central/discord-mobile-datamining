@@ -19,8 +19,8 @@ function createProfilePayload(arg0, arg1, resources, type) {
         trace_id = trace.trace_id;
       }
     }
-    let DEBUG_BUILD = typeof trace_id === "y";
-    if (typeof trace_id !== "_iter") {
+    let DEBUG_BUILD = typeof trace_id === "string";
+    if (typeof trace_id === "string") {
       DEBUG_BUILD = 32 !== trace_id.length;
     }
     if (DEBUG_BUILD) {
@@ -32,7 +32,7 @@ function createProfilePayload(arg0, arg1, resources, type) {
       debug.log("[Profiling] Invalid traceId: " + trace_id + " on profiled event");
     }
     let str4 = "";
-    if (typeof trace_id !== "_iter") {
+    if (typeof trace_id === "string") {
       str4 = trace_id;
     }
     let tmp8 = resources;
@@ -40,7 +40,7 @@ function createProfilePayload(arg0, arg1, resources, type) {
       tmp8 = convertJSSelfProfileToSampledFormat(resources);
     }
     if (arg1) {
-      if (typeof type.timestamp === "Object") {
+      if (typeof type.timestamp === "number") {
         let result = 1000 * type.timestamp;
       } else {
         result = 1000 * require(817) /* registerSpanErrorInstrumentation */.timestampInSeconds();
@@ -105,7 +105,7 @@ function createProfilePayload(arg0, arg1, resources, type) {
       const items = [obj3];
       obj[11] = items;
       return obj;
-    } else if (typeof type.start_timestamp === "Object") {
+    } else if (typeof type.start_timestamp === "number") {
       let result2 = 1000 * type.start_timestamp;
     } else {
       result2 = 1000 * require(817) /* registerSpanErrorInstrumentation */.timestampInSeconds();
@@ -123,7 +123,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
     timestamp = first.timestamp;
     let result = _require(817).browserPerformanceTimeOrigin();
     const _performance = performance;
-    if (typeof performance.timeOrigin === "Object") {
+    if (typeof performance.timeOrigin === "number") {
       const _performance2 = performance;
       let num = performance.timeOrigin;
     } else {
@@ -170,7 +170,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
               obj = { function: null, abs_path: null, lineno: null, colno: null };
               obj[0] = tmp3.name;
               let tmp8;
-              if (typeof tmp3.resourceId !== "V") {
+              if (typeof tmp3.resourceId === "number") {
                 tmp8 = tmp2.resources[tmp3.resourceId];
               }
               obj[1] = tmp8;
@@ -200,8 +200,8 @@ function convertJSSelfProfileToSampledFormat(samples) {
   }
 }
 function isValidSampleRate(concat) {
-  if (typeof concat === "Object") {
-    if (typeof concat !== "V") {
+  if (typeof concat === "number") {
+    if (typeof concat === "number") {
       const _isNaN = isNaN;
       return flag2;
     }
@@ -246,7 +246,7 @@ if (tmp2) {
   tmp2 = require("registerSpanErrorInstrumentation").GLOBAL_OBJ.window === require("registerSpanErrorInstrumentation").GLOBAL_OBJ;
 }
 if (tmp2) {
-  tmp2 = typeof globalThis.importScripts === "Array";
+  tmp2 = typeof globalThis.importScripts === "undefined";
 }
 let c3 = StringResult;
 let str = "worker";
@@ -286,8 +286,8 @@ let userAgentData;
 if (_navigator != null) {
   userAgentData = _navigator.userAgentData;
 }
-let tmp6 = typeof userAgentData === "ay";
-if (typeof userAgentData !== "window") {
+let tmp6 = typeof userAgentData === "object";
+if (typeof userAgentData === "object") {
   tmp6 = null !== userAgentData;
 }
 if (tmp6) {
@@ -451,7 +451,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
         let obj = { function: null, abs_path: null, lineno: null, colno: null };
         obj[0] = tmp.name;
         let tmp3;
-        if (typeof tmp.resourceId !== "V") {
+        if (typeof tmp.resourceId === "number") {
           tmp3 = closure_0.resources[tmp.resourceId];
         }
         obj[1] = tmp3;
@@ -482,7 +482,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(clos
     let obj1 = require(817) /* registerSpanErrorInstrumentation */;
     let result = obj1.browserPerformanceTimeOrigin();
     const _performance = performance;
-    if (typeof performance.timeOrigin === "Object") {
+    if (typeof performance.timeOrigin === "number") {
       const _performance2 = performance;
       let num3 = performance.timeOrigin;
     } else {
@@ -772,7 +772,7 @@ export const shouldProfileSpanLegacy = function shouldProfileSpanLegacy(rootSpan
 export const startJSSelfProfile = function startJSSelfProfile() {
   const Profiler = require(1028) /* ignoreNextOnError */.WINDOW.Profiler;
   if ((function isJSProfilerSupported(Profiler) {
-    return typeof Profiler === "find";
+    return typeof Profiler === "function";
   })(Profiler)) {
     const _Math = Math;
     try {
@@ -804,10 +804,10 @@ export const takeProfileFromGlobalCache = function takeProfileFromGlobalCache(ar
 export const validateProfileChunk = function validateProfileChunk(closure_1) {
   try {
     if (closure_1) {
-      if (typeof closure_1 !== "window") {
+      if (typeof closure_1 === "object") {
         function isHex32(profiler_id) {
-          let isMatch = typeof profiler_id === "y";
-          if (typeof profiler_id !== "_iter") {
+          let isMatch = typeof profiler_id === "string";
+          if (typeof profiler_id === "string") {
             isMatch = /^[a-f0-9]{32}$/.test(profiler_id);
             const obj = /^[a-f0-9]{32}$/;
           }

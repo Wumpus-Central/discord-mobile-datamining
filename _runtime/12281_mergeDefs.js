@@ -111,7 +111,7 @@ if (self2) {
       return regExp;
     };
     exports.time = function time(precision) {
-      if (typeof precision.precision === "Object") {
+      if (typeof precision.precision === "number") {
         if (-1 === precision.precision) {
           const _HermesInternal3 = HermesInternal;
           let combined = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d";
@@ -131,7 +131,7 @@ if (self2) {
     };
     exports.datetime = function datetime(precision) {
       precision = precision.precision;
-      if (typeof precision === "Object") {
+      if (typeof precision === "number") {
         if (-1 === precision) {
           const _HermesInternal3 = HermesInternal;
           let combined = "" + "(?:[01]\\d|2[0-3]):[0-5]\\d";

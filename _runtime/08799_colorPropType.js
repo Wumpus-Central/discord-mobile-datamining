@@ -10,8 +10,8 @@ function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
       error = new Error(text + " `" + tmp + "` was not specified in `" + arg3 + "`.");
     }
     let error1 = error;
-  } else if (typeof tmp2 !== "Object") {
-    if (typeof tmp2 !== "_iter") {
+  } else if (typeof tmp2 !== "number") {
+    if (typeof tmp2 === "string") {
       if (null === require(8800) /* hslToRgb */(tmp2)) {
         let tmp5 = tmp;
         const text1 = `Invalid ${arg4}`;

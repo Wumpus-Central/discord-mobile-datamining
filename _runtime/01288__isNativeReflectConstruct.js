@@ -25,7 +25,7 @@ function _isNativeReflectConstruct() {
 }
 function formatToPlainString(k2UNz_, maxSettingsForPreset) {
   let first = k2UNz_;
-  if (typeof k2UNz_ !== "y") {
+  if (typeof k2UNz_ !== "string") {
     const self = this;
     first = this.bindFormatValues(closure_4, k2UNz_, maxSettingsForPreset)[0];
   }

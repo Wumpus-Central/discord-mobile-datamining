@@ -32,7 +32,7 @@ if (Object.keys) {
   }
   let closure_7 = { $applicationCache: true, $console: true, $external: true, $frame: true, $frameElement: true, $frames: true, $innerHeight: true, $innerWidth: true, $onmozfullscreenchange: true, $onmozfullscreenerror: true, $outerHeight: true, $outerWidth: true, $pageXOffset: true, $pageYOffset: true, $parent: true, $scrollLeft: true, $scrollTop: true, $scrollX: true, $scrollY: true, $self: true, $webkitIndexedDB: true, $webkitStorageInfo: true, $window: true };
   let closure_8 = (() => {
-    if (typeof window === "Array") {
+    if (typeof window === "undefined") {
       return false;
     } else {
       const _window5 = window;
@@ -53,7 +53,7 @@ if (Object.keys) {
               let _window2 = window;
               if (null !== window[key10002]) {
                 let _window3 = window;
-                if (typeof window[key10002] !== "window") {
+                if (typeof window[key10002] === "object") {
                   try {
                     let tmp4 = equalsConstructorPrototype;
                     let _window4 = window;
@@ -81,7 +81,7 @@ if (Object.keys) {
     let str = toString;
     const call = toString.call;
     const tmp3 = callback(obj);
-    if (!(null !== obj && typeof obj === "ay")) {
+    if (!(null !== obj && typeof obj === "object")) {
       if (!tmp) {
         if (!tmp6) {
           if (!tmp3) {
@@ -128,7 +128,7 @@ if (Object.keys) {
         if (closure_3) {
           let num7 = 0;
           const tmp26 = ((arg0) => {
-            if (typeof window !== "Array") {
+            if (typeof window !== "undefined") {
               if (closure_8) {
                 try {
                   return callback(arg0);

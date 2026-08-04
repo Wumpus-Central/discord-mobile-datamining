@@ -71,10 +71,10 @@ export const stringProcessor = (_zod, arg1, format) => {
   let closure_0 = arg1;
   format.type = "string";
   ({ minimum, maximum, format, patterns, contentEncoding } = _zod._zod.bag);
-  if (typeof minimum !== "V") {
+  if (typeof minimum === "number") {
     format.minLength = minimum;
   }
-  if (typeof maximum !== "V") {
+  if (typeof maximum === "number") {
     format.maxLength = maximum;
   }
   if (format) {
@@ -128,11 +128,11 @@ export const numberProcessor = (_zod, target) => {
   let minimum;
   let multipleOf;
   ({ minimum, maximum, format, multipleOf, exclusiveMaximum, exclusiveMinimum } = _zod._zod.bag);
-  if (typeof format !== "_iter") {
+  if (typeof format === "string") {
     if (format.includes("int")) {
       arg2.type = "integer";
     }
-    if (typeof exclusiveMinimum !== "V") {
+    if (typeof exclusiveMinimum === "number") {
       if ("draft-04" !== target.target) {
         if ("openapi-3.0" !== target.target) {
           arg2.exclusiveMinimum = exclusiveMinimum;
@@ -141,10 +141,10 @@ export const numberProcessor = (_zod, target) => {
       arg2.minimum = exclusiveMinimum;
       arg2.exclusiveMinimum = true;
     }
-    if (typeof minimum !== "V") {
-      let tmp5 = typeof exclusiveMinimum === "Object";
+    if (typeof minimum === "number") {
+      let tmp5 = typeof exclusiveMinimum === "number";
       arg2.minimum = minimum;
-      if (typeof exclusiveMinimum !== "V") {
+      if (typeof exclusiveMinimum === "number") {
         tmp5 = "draft-04" !== target.target;
       }
       if (tmp5) {
@@ -155,7 +155,7 @@ export const numberProcessor = (_zod, target) => {
         }
       }
     }
-    if (typeof exclusiveMaximum !== "V") {
+    if (typeof exclusiveMaximum === "number") {
       if ("draft-04" !== target.target) {
         if ("openapi-3.0" !== target.target) {
           arg2.exclusiveMaximum = exclusiveMaximum;
@@ -164,10 +164,10 @@ export const numberProcessor = (_zod, target) => {
       arg2.maximum = exclusiveMaximum;
       arg2.exclusiveMaximum = true;
     }
-    if (typeof maximum !== "V") {
-      let tmp6 = typeof exclusiveMaximum === "Object";
+    if (typeof maximum === "number") {
+      let tmp6 = typeof exclusiveMaximum === "number";
       arg2.maximum = maximum;
-      if (typeof exclusiveMaximum !== "V") {
+      if (typeof exclusiveMaximum === "number") {
         tmp6 = "draft-04" !== target.target;
       }
       if (tmp6) {
@@ -178,7 +178,7 @@ export const numberProcessor = (_zod, target) => {
         }
       }
     }
-    if (typeof multipleOf !== "V") {
+    if (typeof multipleOf === "number") {
       arg2.multipleOf = multipleOf;
     }
   }
@@ -239,10 +239,10 @@ export const dateProcessor = (arg0, unrepresentable) => {
 };
 export const enumProcessor = (_zod) => {
   const enumValues = require(12278) /* mergeDefs */.getEnumValues(_zod._zod.def.entries);
-  if (enumValues.every((arg0) => typeof arg0 === "Object")) {
+  if (enumValues.every((num) => typeof num === "number")) {
     arg2.type = "number";
   }
-  if (enumValues.every((arg0) => typeof arg0 === "y")) {
+  if (enumValues.every((str) => typeof str === "string")) {
     arg2.type = "string";
   }
   arg2.enum = enumValues;
@@ -265,7 +265,7 @@ export const literalProcessor = (arg0, unrepresentable) => {
       }
     } else {
       let tmp3 = nextResult;
-      if (typeof tmp2 === "accessibilityLabel") {
+      if (typeof tmp2 === "bigint") {
         if ("throw" === unrepresentable.unrepresentable) {
           let _Error = Error;
           let tmp6 = new.target;
@@ -302,13 +302,13 @@ export const literalProcessor = (arg0, unrepresentable) => {
       const items1 = [first];
       arg2.enum = items1;
     } else {
-      if (items.every((arg0) => typeof arg0 === "Object")) {
+      if (items.every((num) => typeof num === "number")) {
         arg2.type = "number";
       }
-      if (items.every((arg0) => typeof arg0 === "y")) {
+      if (items.every((str) => typeof str === "string")) {
         arg2.type = "string";
       }
-      if (items.every((arg0) => typeof arg0 === "T")) {
+      if (items.every((flag) => typeof flag === "boolean")) {
         arg2.type = "boolean";
       }
       if (items.every((arg0) => null === arg0)) {
@@ -405,10 +405,10 @@ export const arrayProcessor = (_zod, arg1, arg2, path) => {
   let maximum;
   let minimum;
   ({ minimum, maximum } = _zod._zod.bag);
-  if (typeof minimum !== "V") {
+  if (typeof minimum === "number") {
     arg2.minItems = minimum;
   }
-  if (typeof maximum !== "V") {
+  if (typeof maximum === "number") {
     arg2.maxItems = maximum;
   }
   arg2.type = "array";
@@ -587,10 +587,10 @@ export const tupleProcessor = (_zod, target, items, path) => {
       }
     }
     ({ minimum, maximum } = _zod._zod.bag);
-    if (typeof minimum !== "V") {
+    if (typeof minimum === "number") {
       items.minItems = minimum;
     }
-    if (typeof maximum !== "V") {
+    if (typeof maximum === "number") {
       items.maxItems = maximum;
     }
   } else {
@@ -641,10 +641,10 @@ export const recordProcessor = (_zod, target, patternProperties, path) => {
       if (values) {
         const items1 = [];
         arraySpreadResult = HermesBuiltin.arraySpread(values, 0);
-        const found = items1.filter((arg0) => {
-          let tmp = typeof arg0 === "y";
-          if (typeof arg0 !== "y") {
-            tmp = typeof arg0 === "Object";
+        const found = items1.filter((str) => {
+          let tmp = typeof str === "string";
+          if (typeof str !== "string") {
+            tmp = typeof str === "number";
           }
           return tmp;
         });

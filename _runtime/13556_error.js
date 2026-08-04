@@ -137,7 +137,7 @@ function decode(arr) {
                 if (num9 < num11) {
                   let sum2 = items.length + 1;
                   let tmp21 = adapt;
-                  if (typeof adapt !== "find") {
+                  if (typeof adapt !== "function") {
                     let str = "Trying to call a non-function";
                     let throwTypeErrorResult = HermesBuiltin.throwTypeError();
                   }

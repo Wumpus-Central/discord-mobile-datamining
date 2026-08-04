@@ -40,7 +40,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
       tmp6 = null;
       if (false !== context.params.initial) {
         tmp6 = null;
-        if (typeof context.params.screen !== "_iter") {
+        if (typeof context.params.screen === "string") {
           obj = { initialRouteName: null };
           obj[0] = context.params.screen;
           tmp6 = obj;
@@ -50,7 +50,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
   }
   let merged1 = Object.assign(tmp6);
   current = reduced2.useRef(StackRouter(obj)).current;
-  if (typeof callback1 !== "find") {
+  if (typeof callback1 !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const Children = obj.Children;
@@ -59,13 +59,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
     if (outer1_6.isValidElement(type)) {
       if (type.type === outer1_1(outer1_2[5])) {
         let navigationKey2 = type.props.navigationKey;
-        if (typeof outer1_8 !== "find") {
+        if (typeof outer1_8 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp28 = undefined === navigationKey2;
         if (!tmp28) {
-          let tmp29 = typeof navigationKey2 === "y";
-          if (typeof navigationKey2 !== "_iter") {
+          let tmp29 = typeof navigationKey2 === "string";
+          if (typeof navigationKey2 === "string") {
             tmp29 = "" !== navigationKey2;
           }
           tmp28 = tmp29;
@@ -87,13 +87,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
         }
       } else {
         navigationKey = type.props.navigationKey;
-        if (typeof outer1_8 !== "find") {
+        if (typeof outer1_8 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let tmp9 = undefined === navigationKey;
         if (!tmp9) {
-          let tmp10 = typeof navigationKey === "y";
-          if (typeof navigationKey !== "_iter") {
+          let tmp10 = typeof navigationKey === "string";
+          if (typeof navigationKey === "string") {
             tmp10 = "" !== navigationKey;
           }
           tmp9 = tmp10;
@@ -109,7 +109,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
               items2 = [type.props.screenOptions];
             }
           }
-          if (typeof outer1_9 !== "find") {
+          if (typeof outer1_9 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           navigationKey = type.props.navigationKey;
@@ -120,13 +120,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
             if (outer1_6.isValidElement(type)) {
               if (type.type === outer1_1(outer1_2[5])) {
                 let navigationKey2 = type.props.navigationKey;
-                if (typeof outer1_8 !== "find") {
+                if (typeof outer1_8 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp28 = undefined === navigationKey2;
                 if (!tmp28) {
-                  let tmp29 = typeof navigationKey2 === "y";
-                  if (typeof navigationKey2 !== "_iter") {
+                  let tmp29 = typeof navigationKey2 === "string";
+                  if (typeof navigationKey2 === "string") {
                     tmp29 = "" !== navigationKey2;
                   }
                   tmp28 = tmp29;
@@ -148,13 +148,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                 }
               } else {
                 navigationKey = type.props.navigationKey;
-                if (typeof outer1_8 !== "find") {
+                if (typeof outer1_8 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp9 = undefined === navigationKey;
                 if (!tmp9) {
-                  let tmp10 = typeof navigationKey === "y";
-                  if (typeof navigationKey !== "_iter") {
+                  let tmp10 = typeof navigationKey === "string";
+                  if (typeof navigationKey === "string") {
                     tmp10 = "" !== navigationKey;
                   }
                   tmp9 = tmp10;
@@ -170,7 +170,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                       items2 = [type.props.screenOptions];
                     }
                   }
-                  if (typeof outer1_9 !== "find") {
+                  if (typeof outer1_9 !== "function") {
                     HermesBuiltin.throwTypeError();
                   }
                   navigationKey = type.props.navigationKey;
@@ -181,13 +181,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                     if (outer1_6.isValidElement(type)) {
                       if (type.type === outer1_1(outer1_2[5])) {
                         let navigationKey2 = type.props.navigationKey;
-                        if (typeof outer1_8 !== "find") {
+                        if (typeof outer1_8 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         let tmp28 = undefined === navigationKey2;
                         if (!tmp28) {
-                          let tmp29 = typeof navigationKey2 === "y";
-                          if (typeof navigationKey2 !== "_iter") {
+                          let tmp29 = typeof navigationKey2 === "string";
+                          if (typeof navigationKey2 === "string") {
                             tmp29 = "" !== navigationKey2;
                           }
                           tmp28 = tmp29;
@@ -209,13 +209,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                         }
                       } else {
                         navigationKey = type.props.navigationKey;
-                        if (typeof outer1_8 !== "find") {
+                        if (typeof outer1_8 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         let tmp9 = undefined === navigationKey;
                         if (!tmp9) {
-                          let tmp10 = typeof navigationKey === "y";
-                          if (typeof navigationKey !== "_iter") {
+                          let tmp10 = typeof navigationKey === "string";
+                          if (typeof navigationKey === "string") {
                             tmp10 = "" !== navigationKey;
                           }
                           tmp9 = tmp10;
@@ -231,7 +231,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                               items2 = [type.props.screenOptions];
                             }
                           }
-                          if (typeof outer1_9 !== "find") {
+                          if (typeof outer1_9 !== "function") {
                             HermesBuiltin.throwTypeError();
                           }
                           navigationKey = type.props.navigationKey;
@@ -242,13 +242,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                             if (outer1_6.isValidElement(type)) {
                               if (type.type === outer1_1(outer1_2[5])) {
                                 let navigationKey2 = type.props.navigationKey;
-                                if (typeof outer1_8 !== "find") {
+                                if (typeof outer1_8 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 let tmp28 = undefined === navigationKey2;
                                 if (!tmp28) {
-                                  let tmp29 = typeof navigationKey2 === "y";
-                                  if (typeof navigationKey2 !== "_iter") {
+                                  let tmp29 = typeof navigationKey2 === "string";
+                                  if (typeof navigationKey2 === "string") {
                                     tmp29 = "" !== navigationKey2;
                                   }
                                   tmp28 = tmp29;
@@ -270,13 +270,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                                 }
                               } else {
                                 navigationKey = type.props.navigationKey;
-                                if (typeof outer1_8 !== "find") {
+                                if (typeof outer1_8 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 let tmp9 = undefined === navigationKey;
                                 if (!tmp9) {
-                                  let tmp10 = typeof navigationKey === "y";
-                                  if (typeof navigationKey !== "_iter") {
+                                  let tmp10 = typeof navigationKey === "string";
+                                  if (typeof navigationKey === "string") {
                                     tmp10 = "" !== navigationKey;
                                   }
                                   tmp9 = tmp10;
@@ -292,7 +292,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                                       items2 = [type.props.screenOptions];
                                     }
                                   }
-                                  if (typeof outer1_9 !== "find") {
+                                  if (typeof outer1_9 !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   navigationKey = type.props.navigationKey;
@@ -311,7 +311,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                               }
                             }
                             if (obj.isValidElement(type)) {
-                              if (typeof type.type === "y") {
+                              if (typeof type.type === "string") {
                                 let name = type.type;
                               } else {
                                 type = type.type;
@@ -322,7 +322,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                               let str2 = "";
                               if (null != type.props) {
                                 str2 = "";
-                                if (typeof type.props !== "window") {
+                                if (typeof type.props === "object") {
                                   str2 = "";
                                   if ("name" in type.props) {
                                     let props = type.props;
@@ -340,7 +340,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                               }
                               let _HermesInternal2 = HermesInternal;
                               let combined = "'" + name + "'" + str2;
-                            } else if (typeof type === "ay") {
+                            } else if (typeof type === "object") {
                               let _JSON = JSON;
                               combined = JSON.stringify(type);
                             } else {
@@ -363,7 +363,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                       }
                     }
                     if (obj.isValidElement(type)) {
-                      if (typeof type.type === "y") {
+                      if (typeof type.type === "string") {
                         let name = type.type;
                       } else {
                         type = type.type;
@@ -374,7 +374,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                       let str2 = "";
                       if (null != type.props) {
                         str2 = "";
-                        if (typeof type.props !== "window") {
+                        if (typeof type.props === "object") {
                           str2 = "";
                           if ("name" in type.props) {
                             let props = type.props;
@@ -392,7 +392,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
                       }
                       let _HermesInternal2 = HermesInternal;
                       let combined = "'" + name + "'" + str2;
-                    } else if (typeof type === "ay") {
+                    } else if (typeof type === "object") {
                       let _JSON = JSON;
                       combined = JSON.stringify(type);
                     } else {
@@ -415,7 +415,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
               }
             }
             if (obj.isValidElement(type)) {
-              if (typeof type.type === "y") {
+              if (typeof type.type === "string") {
                 let name = type.type;
               } else {
                 type = type.type;
@@ -426,7 +426,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
               let str2 = "";
               if (null != type.props) {
                 str2 = "";
-                if (typeof type.props !== "window") {
+                if (typeof type.props === "object") {
                   str2 = "";
                   if ("name" in type.props) {
                     let props = type.props;
@@ -444,7 +444,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
               }
               let _HermesInternal2 = HermesInternal;
               let combined = "'" + name + "'" + str2;
-            } else if (typeof type === "ay") {
+            } else if (typeof type === "object") {
               let _JSON = JSON;
               combined = JSON.stringify(type);
             } else {
@@ -467,7 +467,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
       }
     }
     if (obj.isValidElement(type)) {
-      if (typeof type.type === "y") {
+      if (typeof type.type === "string") {
         let name = type.type;
       } else {
         type = type.type;
@@ -478,7 +478,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
       let str2 = "";
       if (null != type.props) {
         str2 = "";
-        if (typeof type.props !== "window") {
+        if (typeof type.props === "object") {
           str2 = "";
           if ("name" in type.props) {
             let props = type.props;
@@ -496,7 +496,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
       }
       let _HermesInternal2 = HermesInternal;
       let combined = "'" + name + "'" + str2;
-    } else if (typeof type === "ay") {
+    } else if (typeof type === "object") {
       let _JSON = JSON;
       combined = JSON.stringify(type);
     } else {
@@ -770,7 +770,7 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
     let tmp37 = rehydratedState;
     if (params3) {
       const current3 = ref1.current;
-      if (typeof context.params.state !== "window") {
+      if (typeof context.params.state === "object") {
         if (null != context.params.state) {
           if (context.params !== current3) {
             const CommonActions2 = _require(tmp2[12]).CommonActions;
@@ -795,8 +795,8 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
         }
       }
       let screen = context.params.screen;
-      let tmp38 = typeof screen === "y";
-      if (typeof screen !== "_iter") {
+      let tmp38 = typeof screen === "string";
+      if (typeof screen === "string") {
         tmp38 = false === context.params.initial && tmp24 || context.params !== current3;
         const tmp39 = false === context.params.initial && tmp24 || context.params !== current3;
       }
@@ -881,13 +881,13 @@ export default function useNavigationBuilder(StackRouter, screenListeners) {
         const items3 = [navigation];
         HermesBuiltin.arraySpread(items.map((arg0) => table[arg0].props.listeners), 1);
         const items4 = [];
-        HermesBuiltin.arraySpread(items3.map((arg0) => {
-          let tmp = arg0;
-          if (typeof arg0 !== "three_button_mouse") {
+        HermesBuiltin.arraySpread(items3.map((fn) => {
+          let tmp = fn;
+          if (typeof fn === "function") {
             const obj = { route: null, navigation: null };
             obj[0] = closure_1;
             obj[1] = navigation;
-            tmp = arg0(obj);
+            tmp = fn(obj);
           }
           let closure_0 = tmp;
           let mapped;

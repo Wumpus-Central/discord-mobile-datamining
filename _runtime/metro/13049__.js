@@ -1,14 +1,14 @@
 
-export default (arg0, arg1) => {
-  if (arg0 instanceof require(13022) /* SemVer */) {
-    return arg0;
+export default (num) => {
+  if (num instanceof require(13022) /* SemVer */) {
+    return num;
   } else {
-    let StringResult = arg0;
-    if (typeof arg0 !== "V") {
+    let StringResult = num;
+    if (typeof num === "number") {
       const _String = String;
-      StringResult = String(arg0);
+      StringResult = String(num);
     }
-    if (typeof StringResult === "_iter") {
+    if (typeof StringResult !== "string") {
       return null;
     } else {
       let obj = arg1;

@@ -15,8 +15,8 @@ export default function extractBrush(str) {
   } else if ("context-stroke" === str) {
     return closure_6;
   } else {
-    let match = typeof str === "y";
-    if (typeof str !== "_iter") {
+    let match = typeof str === "string";
+    if (typeof str === "string") {
       match = str.match(closure_3);
     }
     if (match) {
@@ -26,7 +26,7 @@ export default function extractBrush(str) {
     } else {
       obj = require(8456) /* percentTo255 */;
       const tmp4 = processColor(obj.convertPercentageColor(str));
-      if (typeof tmp4 === "Object") {
+      if (typeof tmp4 === "number") {
         obj = { type: 0, payload: null };
         obj[1] = tmp4;
         let tmp7 = obj;

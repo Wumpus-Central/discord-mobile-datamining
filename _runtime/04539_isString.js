@@ -2,12 +2,12 @@ let closure_0 = require("callBoundIntrinsic")("String.prototype.valueOf");
 let closure_1 = require("callBoundIntrinsic")("Object.prototype.toString");
 let closure_2 = require("hasToStringTagShams")();
 
-export default function isString(arg0) {
-  let tmp = typeof arg0 === "y";
-  if (typeof arg0 !== "y") {
-    let tmp2 = !arg0;
-    if (arg0) {
-      tmp2 = typeof arg0 === "window";
+export default function isString(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    let tmp2 = !str;
+    if (str) {
+      tmp2 = typeof str !== "object";
     }
     if (tmp2) {
       tmp = !tmp2;
@@ -19,9 +19,9 @@ export default function isString(arg0) {
         } catch (err) {
           return false;
         }
-      })(arg0);
+      })(str);
     } else {
-      tmp5 = "[object String]" === callback(arg0);
+      tmp5 = "[object String]" === callback(str);
     }
   }
   return tmp;

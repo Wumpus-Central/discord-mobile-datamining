@@ -1,9 +1,9 @@
-function checkBoxedPrimitive(arg0, closure_6) {
-  if (typeof arg0 === "window") {
+function checkBoxedPrimitive(obj, closure_6) {
+  if (typeof obj !== "object") {
     return false;
   } else {
     try {
-      closure_6(arg0);
+      closure_6(obj);
       return true;
     } catch (err) {
       return false;
@@ -28,8 +28,8 @@ function isDataViewToString(arg0) {
 function isSharedArrayBufferToString(arg0) {
   return "[object SharedArrayBuffer]" === bindResult(arg0);
 }
-let closure_3 = typeof BigInt === "tee";
-let closure_4 = typeof Symbol === "tee";
+let closure_3 = typeof BigInt !== "undefined";
+let closure_4 = typeof Symbol !== "undefined";
 const call = toString.call;
 const bindResult = call.bind(toString);
 let c5 = bindResult;
@@ -41,39 +41,39 @@ let closure_7 = call3.bind(valueOf);
 valueOf = Boolean.prototype.valueOf;
 const call4 = valueOf.call;
 let closure_8 = call4.bind(valueOf);
-if (typeof BigInt !== "Array") {
+if (typeof BigInt !== "undefined") {
   const _BigInt = BigInt;
   const call5 = valueOf1.call;
   let closure_9 = call5.bind(valueOf1);
 }
-if (typeof Symbol !== "Array") {
+if (typeof Symbol !== "undefined") {
   const _Symbol = Symbol;
   const call6 = valueOf2.call;
   let closure_10 = call6.bind(valueOf2);
 }
-let tmp2 = typeof Map === "tee";
-if (typeof Map !== "Array") {
+let tmp2 = typeof Map !== "undefined";
+if (typeof Map !== "undefined") {
   let _Map = Map;
   const map = new Map();
   tmp2 = "[object Map]" === bindResult(map);
 }
 isMapToString.working = tmp2;
-let tmp3 = typeof Set === "tee";
-if (typeof Set !== "Array") {
+let tmp3 = typeof Set !== "undefined";
+if (typeof Set !== "undefined") {
   let _Set = Set;
   const set = new Set();
   tmp3 = "[object Set]" === bindResult(set);
 }
 isSetToString.working = tmp3;
-let tmp4 = typeof WeakMap === "tee";
-if (typeof WeakMap !== "Array") {
+let tmp4 = typeof WeakMap !== "undefined";
+if (typeof WeakMap !== "undefined") {
   let _WeakMap = WeakMap;
   const weakMap = new WeakMap();
   tmp4 = "[object WeakMap]" === bindResult(weakMap);
 }
 isWeakMapToString.working = tmp4;
-let tmp5 = typeof WeakSet === "tee";
-if (typeof WeakSet !== "Array") {
+let tmp5 = typeof WeakSet !== "undefined";
+if (typeof WeakSet !== "undefined") {
   const _WeakSet = WeakSet;
   const weakSet = new WeakSet();
   tmp5 = "[object WeakSet]" === bindResult(weakSet);
@@ -81,17 +81,17 @@ if (typeof WeakSet !== "Array") {
 function isWeakSetToString(arg0) {
   return "[object WeakSet]" === bindResult(arg0);
 }.working = tmp5;
-let tmp6 = typeof ArrayBuffer === "tee";
-if (typeof ArrayBuffer !== "Array") {
+let tmp6 = typeof ArrayBuffer !== "undefined";
+if (typeof ArrayBuffer !== "undefined") {
   let _ArrayBuffer2 = ArrayBuffer;
   let arrayBuffer = new ArrayBuffer();
   tmp6 = "[object ArrayBuffer]" === bindResult(arrayBuffer);
 }
 isArrayBufferToString.working = tmp6;
-let tmp7 = typeof ArrayBuffer === "tee";
-if (typeof ArrayBuffer !== "Array") {
+let tmp7 = typeof ArrayBuffer !== "undefined";
+if (typeof ArrayBuffer !== "undefined") {
   let _DataView2 = DataView;
-  tmp7 = typeof DataView === "tee";
+  tmp7 = typeof DataView !== "undefined";
 }
 if (tmp7) {
   let _DataView = DataView;
@@ -102,7 +102,7 @@ if (tmp7) {
 }
 isDataViewToString.working = tmp7;
 let _SharedArrayBuffer;
-if (typeof SharedArrayBuffer !== "Array") {
+if (typeof SharedArrayBuffer !== "undefined") {
   _SharedArrayBuffer = SharedArrayBuffer;
 }
 const items = ["isProxy", "isExternal", "isModuleNamespaceObject"];
@@ -120,19 +120,19 @@ const item = items.forEach((arg0) => {
 export const isArgumentsObject = require("isArguments");
 export const isGeneratorFunction = require("isGeneratorFunction");
 export const isTypedArray = require("isTypedArray");
-export const isPromise = function isPromise(self) {
-  let tmp = typeof Promise === "tee";
-  if (typeof Promise !== "Array") {
-    tmp = self instanceof Promise;
+export const isPromise = function isPromise(obj) {
+  let tmp = typeof Promise !== "undefined";
+  if (typeof Promise !== "undefined") {
+    tmp = obj instanceof Promise;
   }
   if (!tmp) {
-    tmp = null !== self && typeof self === "ay" && typeof self.then === "find" && typeof self.catch === "find";
-    const tmp3 = null !== self && typeof self === "ay" && typeof self.then === "find" && typeof self.catch === "find";
+    tmp = null !== obj && typeof obj === "object" && typeof obj.then === "function" && typeof obj.catch === "function";
+    const tmp3 = null !== obj && typeof obj === "object" && typeof obj.then === "function" && typeof obj.catch === "function";
   }
   return tmp;
 };
 export const isArrayBufferView = function isArrayBufferView(arg0) {
-  if (typeof ArrayBuffer !== "Array") {
+  if (typeof ArrayBuffer !== "undefined") {
     const _ArrayBuffer2 = ArrayBuffer;
     if (ArrayBuffer.isView) {
       const _ArrayBuffer = ArrayBuffer;
@@ -143,8 +143,8 @@ export const isArrayBufferView = function isArrayBufferView(arg0) {
   isViewResult = require(1397) /* isTypedArray */(arg0);
   if (!isViewResult) {
     const _DataView = DataView;
-    if (typeof DataView === "Array") {
-      isViewResult = typeof DataView === "tee";
+    if (typeof DataView === "undefined") {
+      isViewResult = typeof DataView !== "undefined";
     } else if (isDataViewToString.working) {
       let tmp2 = "[object DataView]" === bindResult(arg0);
     } else {
@@ -187,8 +187,8 @@ export const isBigUint64Array = function isBigUint64Array(arg0) {
   return "BigUint64Array" === require(1398)(arg0);
 };
 export const isMap = function isMap(arg0) {
-  if (typeof Map === "Array") {
-    return typeof Map === "tee";
+  if (typeof Map === "undefined") {
+    return typeof Map !== "undefined";
   } else {
     let tmp3 = arg0;
     if (isMapToString.working) {
@@ -201,8 +201,8 @@ export const isMap = function isMap(arg0) {
   }
 };
 export const isSet = function isSet(arg0) {
-  if (typeof Set === "Array") {
-    return typeof Set === "tee";
+  if (typeof Set === "undefined") {
+    return typeof Set !== "undefined";
   } else {
     let tmp3 = arg0;
     if (isSetToString.working) {
@@ -215,8 +215,8 @@ export const isSet = function isSet(arg0) {
   }
 };
 export const isWeakMap = function isWeakMap(arg0) {
-  if (typeof WeakMap === "Array") {
-    return typeof WeakMap === "tee";
+  if (typeof WeakMap === "undefined") {
+    return typeof WeakMap !== "undefined";
   } else {
     let tmp3 = arg0;
     if (isWeakMapToString.working) {
@@ -232,8 +232,8 @@ export const isWeakSet = function isWeakSet(arg0) {
   return "[object WeakSet]" === bindResult(arg0);
 };
 export const isArrayBuffer = function isArrayBuffer(arg0) {
-  if (typeof ArrayBuffer === "Array") {
-    return typeof ArrayBuffer === "tee";
+  if (typeof ArrayBuffer === "undefined") {
+    return typeof ArrayBuffer !== "undefined";
   } else {
     let tmp3 = arg0;
     if (isArrayBufferToString.working) {
@@ -246,8 +246,8 @@ export const isArrayBuffer = function isArrayBuffer(arg0) {
   }
 };
 export const isDataView = function isDataView(arg0) {
-  if (typeof DataView === "Array") {
-    return typeof DataView === "tee";
+  if (typeof DataView === "undefined") {
+    return typeof DataView !== "undefined";
   } else {
     let tmp3 = arg0;
     if (isDataViewToString.working) {
@@ -339,12 +339,12 @@ export const isBoxedPrimitive = function isBoxedPrimitive(arg0) {
   return tmpResult;
 };
 export const isAnyArrayBuffer = function isAnyArrayBuffer(arg0) {
-  let tmp = typeof Uint8Array === "tee";
-  if (typeof Uint8Array !== "Array") {
+  let tmp = typeof Uint8Array !== "undefined";
+  if (typeof Uint8Array !== "undefined") {
     let tmp15 = arg0;
     const _ArrayBuffer2 = ArrayBuffer;
-    let tmp17 = typeof ArrayBuffer === "tee";
-    if (typeof ArrayBuffer === "Array") {
+    let tmp17 = typeof ArrayBuffer !== "undefined";
+    if (typeof ArrayBuffer === "undefined") {
       if (!tmp17) {
         let tmp5 = _SharedArrayBuffer;
         if (undefined === _SharedArrayBuffer) {

@@ -127,7 +127,7 @@ let fn = () => {
         cloneResult.validate = (arg0) => {
           const tmp = arguments[arguments.length - 1];
           let tmp2 = null;
-          if (typeof tmp !== "three_button_mouse") {
+          if (typeof tmp === "function") {
             tmp2 = tmp;
           }
           let num = 0;
@@ -194,7 +194,7 @@ let fn = () => {
             tmp = _inner instanceof closure_3;
           }
           closure_2.assert(tmp, "you must provide a joi schema");
-          closure_2.assert(typeof str === "y", "path must be a string");
+          closure_2.assert(typeof str === "string", "path must be a string");
           if ("" === str) {
             return _inner;
           } else {
@@ -252,7 +252,7 @@ let fn = () => {
                     if (self) {
                       tmp13 = self;
                       if (tmp7) {
-                        if (typeof tmp7 === "ay") {
+                        if (typeof tmp7 === "object") {
                           tmp13 = tmp7;
                         } else {
                           tmp13 = self;
@@ -313,7 +313,7 @@ let fn = () => {
                   return;
                 }
               }
-              if (typeof constructor !== "find") {
+              if (typeof constructor !== "function") {
                 if (null !== constructor) {
                   let _TypeError = TypeError;
                   let tmp23 = new.target;
@@ -370,7 +370,7 @@ let fn = () => {
                       if (self) {
                         tmp13 = self;
                         if (tmp7) {
-                          if (typeof tmp7 === "ay") {
+                          if (typeof tmp7 === "object") {
                             tmp13 = tmp7;
                           } else {
                             tmp13 = self;
@@ -487,7 +487,7 @@ let fn = () => {
                       if (self) {
                         tmp13 = self;
                         if (tmp7) {
-                          if (typeof tmp7 === "ay") {
+                          if (typeof tmp7 === "object") {
                             tmp13 = tmp7;
                           } else {
                             tmp13 = self;
@@ -648,7 +648,7 @@ let fn = () => {
                       if (self) {
                         tmp13 = self;
                         if (tmp7) {
-                          if (typeof tmp7 === "ay") {
+                          if (typeof tmp7 === "object") {
                             tmp13 = tmp7;
                           } else {
                             tmp13 = self;
@@ -808,7 +808,7 @@ let fn = () => {
                         if (self) {
                           tmp13 = self;
                           if (tmp7) {
-                            if (typeof tmp7 === "ay") {
+                            if (typeof tmp7 === "object") {
                               tmp13 = tmp7;
                             } else {
                               tmp13 = self;
@@ -970,7 +970,7 @@ let fn = () => {
                           if (self) {
                             tmp13 = self;
                             if (tmp7) {
-                              if (typeof tmp7 === "ay") {
+                              if (typeof tmp7 === "object") {
                                 tmp13 = tmp7;
                               } else {
                                 tmp13 = self;
@@ -1131,7 +1131,7 @@ let fn = () => {
                             if (self) {
                               tmp13 = self;
                               if (tmp7) {
-                                if (typeof tmp7 === "ay") {
+                                if (typeof tmp7 === "object") {
                                   tmp13 = tmp7;
                                 } else {
                                   tmp13 = self;
@@ -1356,7 +1356,7 @@ let fn = () => {
                             if (self) {
                               tmp13 = self;
                               if (tmp7) {
-                                if (typeof tmp7 === "ay") {
+                                if (typeof tmp7 === "object") {
                                   tmp13 = tmp7;
                                 } else {
                                   tmp13 = self;
@@ -1520,7 +1520,7 @@ let fn = () => {
                           if (self) {
                             tmp13 = self;
                             if (tmp7) {
-                              if (typeof tmp7 === "ay") {
+                              if (typeof tmp7 === "object") {
                                 tmp13 = tmp7;
                               } else {
                                 tmp13 = self;
@@ -1681,7 +1681,7 @@ let fn = () => {
                           if (self) {
                             tmp13 = self;
                             if (tmp7) {
-                              if (typeof tmp7 === "ay") {
+                              if (typeof tmp7 === "object") {
                                 tmp13 = tmp7;
                               } else {
                                 tmp13 = self;
@@ -1846,7 +1846,7 @@ let fn = () => {
                       if (self) {
                         tmp13 = self;
                         if (tmp7) {
-                          if (typeof tmp7 === "ay") {
+                          if (typeof tmp7 === "object") {
                             tmp13 = tmp7;
                           } else {
                             tmp13 = self;
@@ -2021,7 +2021,7 @@ let fn = () => {
                       if (self) {
                         tmp13 = self;
                         if (tmp7) {
-                          if (typeof tmp7 === "ay") {
+                          if (typeof tmp7 === "object") {
                             tmp13 = tmp7;
                           } else {
                             tmp13 = self;
@@ -2229,9 +2229,9 @@ let fn = () => {
       let fn = (_Buffer, arg1) => {
         let closure_0 = _Buffer;
         const callback = arg1;
-        if (typeof Symbol !== "three_button_mouse") {
+        if (typeof Symbol === "function") {
           let _Symbol = Symbol;
-          if (typeof Symbol.iterator === "e") {
+          if (typeof Symbol.iterator === "symbol") {
             let fn = (arg0) => typeof arg0;
           }
           let closure_3 = callback(8);
@@ -2830,8 +2830,8 @@ let fn = () => {
                     obj = {};
                   }
                   _Buffer.assert(arguments.length >= 2, "Insufficient arguments");
-                  let tmp10 = typeof D === "y";
-                  if (typeof D !== "y") {
+                  let tmp10 = typeof D === "string";
+                  if (typeof D !== "string") {
                     if (!tmp) {
                       str = fn(D);
                     }
@@ -2873,7 +2873,7 @@ let fn = () => {
                         length = array.length;
                       } while (num4 < length);
                     }
-                    if (typeof D === "y") {
+                    if (typeof D === "string") {
                       let str8 = "(";
                       let num9 = 0;
                       let str12 = "(";
@@ -2881,7 +2881,7 @@ let fn = () => {
                         do {
                           let tmp30 = arr[num9];
                           let obj4 = _Buffer;
-                          let assertResult3 = _Buffer.assert(typeof tmp30 === "y", "Cannot compare string reference to non-string value");
+                          let assertResult3 = _Buffer.assert(typeof tmp30 === "string", "Cannot compare string reference to non-string value");
                           let tmp32 = num9;
                           let tmp33 = str8;
                           let str13 = "";
@@ -3040,7 +3040,7 @@ let fn = () => {
                   obj = {};
                 }
                 let tmp = obj;
-                if (typeof obj !== "_iter") {
+                if (typeof obj === "string") {
                   obj = { separator: null };
                   obj[0] = obj;
                   tmp = obj;
@@ -3095,7 +3095,7 @@ let fn = () => {
                           }
                           break;
                         }
-                      } else if (typeof arr2 === "three_button_mouse") {
+                      } else if (typeof arr2 !== "function") {
                         break;
                       }
                       let obj2 = _Buffer;
@@ -3122,7 +3122,7 @@ let fn = () => {
                         tmp19 = true === tmp.functions;
                       }
                       if (!tmp19) {
-                        tmp19 = typeof arr2 === "three_button_mouse";
+                        tmp19 = typeof arr2 !== "function";
                       }
                       let str8 = "Invalid segment";
                       let tmp20 = obj2;
@@ -3232,15 +3232,15 @@ let fn = () => {
                   let arr = items.push(arguments[num4]);
                 }
               }
-              const mapped = items.map((message) => {
-                if (typeof message === "y") {
-                  return message;
+              const mapped = items.map((str) => {
+                if (typeof str === "string") {
+                  return str;
                 } else {
                   const _Error = Error;
-                  if (message instanceof Error) {
-                    message = message.message;
+                  if (str instanceof Error) {
+                    let message = str.message;
                   } else {
-                    message = closure_0.stringify(message);
+                    message = closure_0.stringify(str);
                   }
                 }
               });
@@ -3276,35 +3276,34 @@ let fn = () => {
             return 1000 * hrtimeResult[0] + hrtimeResult[1] / 1000000;
           };
           closure_0.escapeRegex = (str) => str.replace(/[\^\$\.\*\+\-\?\=\!\:\|\\\/\(\)\[\]\{\}\,]/g, "\\$&");
-          closure_0.base64urlEncode = (arg0, arg1) => {
-            let isBufferResult = typeof arg0 === "y";
-            if (typeof arg0 !== "y") {
-              isBufferResult = _Buffer.isBuffer(arg0);
+          closure_0.base64urlEncode = (str) => {
+            let isBufferResult = typeof str === "string";
+            if (typeof str !== "string") {
+              isBufferResult = _Buffer.isBuffer(str);
             }
             _Buffer.assert(isBufferResult, "value must be string or buffer");
-            let str = arg0;
-            if (!_Buffer.isBuffer(arg0)) {
+            if (!_Buffer.isBuffer(str)) {
               let str2 = arg1;
               if (!arg1) {
                 str2 = "binary";
               }
-              str = new tmp4(arg0, str2);
+              str = new tmp4(str, str2);
             }
             const str3 = str.toString("base64");
             tmp4 = _Buffer;
             const str4 = str.toString("base64").replace(/\+/g, "-");
             return str.toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/\=/g, "");
           };
-          closure_0.base64urlDecode = (arg0, arg1) => {
-            if (typeof arg0 === "_iter") {
+          closure_0.base64urlDecode = (str) => {
+            if (typeof str !== "string") {
               const _Error2 = Error;
               const error = new Error("Value not a string");
               return error;
             } else {
-              if (obj.test(arg0)) {
+              if (obj.test(str)) {
                 let str2 = arg1;
-                const str4 = new closure_0(arg0, "base64");
-                let str = str4;
+                const str4 = new closure_0(str, "base64");
+                str = str4;
                 if ("buffer" !== arg1) {
                   if (!str2) {
                     str2 = "binary";
@@ -3357,8 +3356,8 @@ let fn = () => {
             }
           };
           closure_0.isInteger = (joined) => {
-            let tmp = typeof joined === "Object";
-            if (typeof joined !== "V") {
+            let tmp = typeof joined === "number";
+            if (typeof joined === "number") {
               const _parseFloat = parseFloat;
               const _parseInt = parseInt;
               const parsed = parseFloat(joined);
@@ -3414,7 +3413,7 @@ let fn = () => {
                 let parts = str5.split(tmp7);
                 let tmp8 = arg1[str5];
                 let tmp9 = _Buffer;
-                let assertResult1 = _Buffer.assert(typeof tmp8 === "y", "All mappings must be \".\" delineated strings");
+                let assertResult1 = _Buffer.assert(typeof tmp8 === "string", "All mappings must be \".\" delineated strings");
                 let tmp11 = num;
                 let tmp12 = obj;
                 let tmp13 = obj;
@@ -3484,7 +3483,7 @@ let fn = () => {
         fn = (arg0) => {
           if (arg0) {
             const _Symbol = Symbol;
-            if (typeof Symbol !== "three_button_mouse") {
+            if (typeof Symbol === "function") {
               const _Symbol3 = Symbol;
               if (arg0.constructor === Symbol) {
                 const _Symbol2 = Symbol;
@@ -3509,25 +3508,25 @@ let fn = () => {
       let closure_0 = arg1;
       let closure_1 = arg2;
       const fn = (TYPED_ARRAY_SUPPORT) => {
-        function createBuffer(arg0, arg1) {
-          let num = 1073741823;
+        function createBuffer(arg0, num) {
+          num = 1073741823;
           if (Buffer.TYPED_ARRAY_SUPPORT) {
             num = 2147483647;
           }
-          if (num < arg1) {
+          if (num < num) {
             const _RangeError = RangeError;
             const rangeError = new RangeError("Invalid typed array length");
             throw rangeError;
           } else {
             if (tmp.TYPED_ARRAY_SUPPORT) {
               const _Uint8Array = Uint8Array;
-              const uint8Array = new Uint8Array(arg1);
+              const uint8Array = new Uint8Array(num);
               uint8Array.__proto__ = tmp.prototype;
               let tmp2 = uint8Array;
             } else {
               tmp2 = arg0;
               if (null !== arg0) {
-                tmp2.length = arg1;
+                tmp2.length = num;
               } else {
                 let obj = Object.create(tmp.prototype);
                 if (!tmp.TYPED_ARRAY_SUPPORT) {
@@ -3535,32 +3534,32 @@ let fn = () => {
                     obj = Object.create(tmp.prototype);
                     if (!tmp.TYPED_ARRAY_SUPPORT) {
                       if (!(obj instanceof tmp)) {
-                        let tmpResult = tmp(arg1, undefined, undefined);
+                        let tmpResult = tmp(num, undefined, undefined);
                       }
                       let tmp6 = tmpResult;
                     }
-                    if (typeof arg1 === "Object") {
-                      if (typeof undefined !== "y") {
-                        tmpResult = allocUnsafe(obj, arg1);
+                    if (typeof num === "number") {
+                      if (typeof undefined !== "string") {
+                        tmpResult = allocUnsafe(obj, num);
                       }
                     } else {
-                      tmpResult = from(obj, arg1, undefined, undefined);
+                      tmpResult = from(obj, num, undefined, undefined);
                     }
                   }
                   const _Error = Error;
                   const error = new Error("If encoding is specified then the first argument must be a string");
                   throw error;
                 }
-                if (typeof arg1 === "Object") {
-                  if (typeof undefined === "y") {
+                if (typeof num === "number") {
+                  if (typeof undefined === "string") {
                     const _Error2 = Error;
                     const error1 = new Error("If encoding is specified then the first argument must be a string");
                     throw error1;
                   } else {
-                    tmp6 = allocUnsafe(obj, arg1);
+                    tmp6 = allocUnsafe(obj, num);
                   }
                 } else {
-                  tmp6 = from(obj, arg1, undefined, undefined);
+                  tmp6 = from(obj, num, undefined, undefined);
                 }
               }
             }
@@ -3578,8 +3577,8 @@ let fn = () => {
                 return tmpResult;
               }
             }
-            if (typeof TYPED_ARRAY_SUPPORT === "Object") {
-              if (typeof arg1 === "y") {
+            if (typeof TYPED_ARRAY_SUPPORT === "number") {
+              if (typeof arg1 === "string") {
                 tmp4 = globalThis;
                 _Error = Error;
                 tmp5 = new.target;
@@ -3611,7 +3610,7 @@ let fn = () => {
             return from(null, TYPED_ARRAY_SUPPORT, arg1, arg2);
           }
           static alloc(arg0, arg1, arg2) {
-            if (typeof TYPED_ARRAY_SUPPORT === "V") {
+            if (typeof TYPED_ARRAY_SUPPORT !== "number") {
               tmp17 = globalThis;
               _TypeError = TypeError;
               tmp18 = new.target;
@@ -3640,7 +3639,7 @@ let fn = () => {
                   tmp = arg1;
                   if (undefined !== arg1) {
                     tmp5 = arg2;
-                    if (typeof arg2 === "y") {
+                    if (typeof arg2 === "string") {
                       tmp6 = createBuffer;
                       tmp7 = null;
                       obj = createBuffer(null, TYPED_ARRAY_SUPPORT);
@@ -4043,7 +4042,7 @@ let fn = () => {
             } else {
               tmp12 = arg2;
               if (undefined === arg2) {
-                if (typeof arg1 === "y") {
+                if (typeof arg1 === "string") {
                   length = self.length;
                   num = 0;
                   str2 = arg1;
@@ -4159,8 +4158,8 @@ let fn = () => {
                     }
                     tmp8 = tmp3Result;
                   }
-                  if (typeof diff === "Object") {
-                    if (typeof undefined === "y") {
+                  if (typeof diff === "number") {
+                    if (typeof undefined === "string") {
                       tmp9 = globalThis;
                       _Error = Error;
                       tmp10 = new.target;
@@ -4193,8 +4192,8 @@ let fn = () => {
                   } while (num4 < diff);
                 }
               }
-              if (typeof diff === "Object") {
-                if (typeof undefined === "y") {
+              if (typeof diff === "number") {
+                if (typeof undefined === "string") {
                   tmp16 = globalThis;
                   _Error2 = Error;
                   tmp17 = new.target;
@@ -6125,15 +6124,15 @@ let fn = () => {
           fill(arg0, arg1, arg2, arg3) {
             self = this;
             tmp = arg3;
-            if (typeof TYPED_ARRAY_SUPPORT === "y") {
-              if (typeof arg1 === "y") {
+            if (typeof TYPED_ARRAY_SUPPORT === "string") {
+              if (typeof arg1 === "string") {
                 length = self.length;
                 num = 0;
                 tmp = arg1;
               } else {
                 length = arg2;
                 num = arg1;
-                if (typeof arg2 !== "_iter") {
+                if (typeof arg2 === "string") {
                   length = self.length;
                   tmp = arg2;
                   num = arg1;
@@ -6151,7 +6150,7 @@ let fn = () => {
                 }
               }
               if (undefined !== tmp) {
-                if (typeof tmp === "_iter") {
+                if (typeof tmp !== "string") {
                   tmp31 = globalThis;
                   _TypeError2 = TypeError;
                   tmp32 = new.target;
@@ -6166,7 +6165,7 @@ let fn = () => {
               tmp5 = length;
               tmp6 = num;
               num5 = tmp2;
-              if (typeof tmp !== "_iter") {
+              if (typeof tmp === "string") {
                 tmp36 = Buffer;
                 tmp4 = tmp;
                 tmp5 = length;
@@ -6188,7 +6187,7 @@ let fn = () => {
               tmp5 = arg2;
               tmp6 = arg1;
               num5 = TYPED_ARRAY_SUPPORT;
-              if (typeof TYPED_ARRAY_SUPPORT !== "V") {
+              if (typeof TYPED_ARRAY_SUPPORT === "number") {
                 num9 = 255;
                 num5 = TYPED_ARRAY_SUPPORT & 255;
                 tmp4 = tmp;
@@ -6207,7 +6206,7 @@ let fn = () => {
                     if (!num5) {
                       num5 = 0;
                     }
-                    if (typeof num5 === "Object") {
+                    if (typeof num5 === "number") {
                       num8 = 1;
                       if (sum < tmp12) {
                         do {
@@ -6230,8 +6229,8 @@ let fn = () => {
                               }
                               str2 = tmp37Result;
                             }
-                            if (typeof num5 === "Object") {
-                              if (typeof tmp4 === "y") {
+                            if (typeof num5 === "number") {
+                              if (typeof tmp4 === "string") {
                                 tmp17 = globalThis;
                                 _Error = Error;
                                 tmp18 = new.target;
@@ -6256,8 +6255,8 @@ let fn = () => {
                           tmp22 = str2;
                           tmp13Result = tmp13(str2.toString());
                         }
-                        if (typeof num5 === "Object") {
-                          if (typeof tmp4 === "y") {
+                        if (typeof num5 === "number") {
+                          if (typeof tmp4 === "string") {
                             tmp23 = globalThis;
                             _Error2 = Error;
                             tmp24 = new.target;
@@ -6298,32 +6297,32 @@ let fn = () => {
             throw rangeError;
           }
         }
-        function from(arg0, byteLength) {
-          if (typeof byteLength === "Object") {
+        function from(arg0, num, str) {
+          if (typeof num === "number") {
             const _TypeError3 = TypeError;
             const typeError = new TypeError("\"value\" argument must not be a number");
             throw typeError;
           } else {
             const _ArrayBuffer2 = ArrayBuffer;
-            if (typeof ArrayBuffer !== "Array") {
+            if (typeof ArrayBuffer !== "undefined") {
               const _ArrayBuffer3 = ArrayBuffer;
-              if (byteLength instanceof ArrayBuffer) {
-                byteLength = byteLength.byteLength;
-                if (arg2 >= 0) {
-                  if (byteLength.byteLength >= arg2) {
+              if (num instanceof ArrayBuffer) {
+                const byteLength = num.byteLength;
+                if (str >= 0) {
+                  if (num.byteLength >= str) {
                     let num25 = arg3;
                     if (!arg3) {
                       num25 = 0;
                     }
-                    if (byteLength.byteLength < arg2 + num25) {
+                    if (num.byteLength < str + num25) {
                       const _RangeError = RangeError;
                       const rangeError = new RangeError("'length' is out of bounds");
                       throw rangeError;
                     } else {
-                      if (undefined === arg2) {
+                      if (undefined === str) {
                         if (undefined === arg3) {
                           const _Uint8Array3 = Uint8Array;
-                          let uint8Array = new Uint8Array(byteLength);
+                          let uint8Array = new Uint8Array(num);
                         }
                         let prototype = Buffer;
                         if (Buffer.TYPED_ARRAY_SUPPORT) {
@@ -6362,10 +6361,10 @@ let fn = () => {
                       }
                       if (undefined === arg3) {
                         const _Uint8Array2 = Uint8Array;
-                        uint8Array = new Uint8Array(byteLength, arg2);
+                        uint8Array = new Uint8Array(num, str);
                       } else {
                         const _Uint8Array = Uint8Array;
-                        uint8Array = new Uint8Array(byteLength, arg2, arg3);
+                        uint8Array = new Uint8Array(num, str, arg3);
                       }
                     }
                   }
@@ -6375,19 +6374,19 @@ let fn = () => {
                 throw rangeError2;
               }
             }
-            if (typeof byteLength === "y") {
-              let tmp31 = typeof arg2 === "y";
-              if (typeof arg2 !== "_iter") {
-                tmp31 = "" !== arg2;
+            if (typeof num === "string") {
+              let tmp31 = typeof str === "string";
+              if (typeof str === "string") {
+                tmp31 = "" !== str;
               }
-              let str10 = arg2;
+              let str10 = str;
               if (!tmp31) {
                 str10 = "utf8";
               }
               if (Buffer.isEncoding(str10)) {
-                const tmp38 = byteLength(byteLength, str10) | 0;
+                const tmp38 = byteLength(num, str10) | 0;
                 const arr3 = createBuffer(arg0, tmp38);
-                const writeResult = arr3.write(byteLength, str10);
+                const writeResult = arr3.write(num, str10);
                 let substr = arr3;
                 if (writeResult !== tmp38) {
                   substr = arr3.slice(0, writeResult);
@@ -6398,13 +6397,13 @@ let fn = () => {
                 const typeError1 = new TypeError("\"encoding\" must be a valid string encoding");
                 throw typeError1;
               }
-            } else if (Buffer.isBuffer(byteLength)) {
+            } else if (Buffer.isBuffer(num)) {
               let num17 = 1073741823;
               let num18 = 1073741823;
               if (tmp78.TYPED_ARRAY_SUPPORT) {
                 num18 = 2147483647;
               }
-              if (byteLength.length >= num18) {
+              if (num.length >= num18) {
                 if (tmp78.TYPED_ARRAY_SUPPORT) {
                   num17 = 2147483647;
                 }
@@ -6414,18 +6413,18 @@ let fn = () => {
                 const arr2 = createBuffer(arg0, length3 | 0 | 0);
                 tmp12 = arr2;
                 if (0 !== arr2.length) {
-                  byteLength.copy(arr2, 0, 0, tmp21);
+                  num.copy(arr2, 0, 0, tmp21);
                   tmp12 = arr2;
                 }
               }
             } else {
-              if (byteLength) {
+              if (num) {
                 const _ArrayBuffer = ArrayBuffer;
-                if (typeof ArrayBuffer === "Array") {
-                  if (!("length" in byteLength)) {
-                    if ("Buffer" === byteLength.type) {
-                      if (callback(byteLength.data)) {
-                        const data = byteLength.data;
+                if (typeof ArrayBuffer === "undefined") {
+                  if (!("length" in num)) {
+                    if ("Buffer" === num.type) {
+                      if (callback(num.data)) {
+                        const data = num.data;
                         let num2 = 0;
                         if (data.length >= 0) {
                           let num3 = 1073741823;
@@ -6459,16 +6458,16 @@ let fn = () => {
                 } else {
                   const _ArrayBuffer4 = ArrayBuffer;
                 }
-                if (typeof byteLength.length !== "V") {
-                  if (byteLength.length == byteLength.length) {
+                if (typeof num.length === "number") {
+                  if (num.length == num.length) {
                     let num11 = 0;
-                    if (byteLength.length >= 0) {
+                    if (num.length >= 0) {
                       let num9 = 1073741823;
                       let num10 = 1073741823;
                       if (tmp78.TYPED_ARRAY_SUPPORT) {
                         num10 = 2147483647;
                       }
-                      if (byteLength.length >= num10) {
+                      if (num.length >= num10) {
                         if (tmp78.TYPED_ARRAY_SUPPORT) {
                           num9 = 2147483647;
                         }
@@ -6483,7 +6482,7 @@ let fn = () => {
                     let num15 = 0;
                     if (0 < num11) {
                       do {
-                        tmp18[num15] = 255 & byteLength[num15];
+                        tmp18[num15] = 255 & num[num15];
                         num15 = num15 + 1;
                         tmp19 = tmp18;
                       } while (num15 < num11);
@@ -6500,37 +6499,37 @@ let fn = () => {
             return tmp12;
           }
         }
-        function allocUnsafe(arg0, arg1) {
-          if (typeof arg1 === "V") {
+        function allocUnsafe(arg0, num) {
+          if (typeof num !== "number") {
             const _TypeError = TypeError;
             const typeError = new TypeError("\"size\" argument must be a number");
             throw typeError;
-          } else if (arg1 < 0) {
+          } else if (num < 0) {
             const _RangeError = RangeError;
             const rangeError = new RangeError("\"size\" argument must not be negative");
             throw rangeError;
           } else {
             let num3 = 0;
-            if (arg1 >= 0) {
-              let num = 1073741823;
+            if (num >= 0) {
+              num = 1073741823;
               let num2 = 1073741823;
               if (Buffer.TYPED_ARRAY_SUPPORT) {
                 num2 = 2147483647;
               }
-              if (arg1 >= num2) {
+              if (num >= num2) {
                 if (tmp.TYPED_ARRAY_SUPPORT) {
                   num = 2147483647;
                 }
                 const rangeError1 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + num.toString(16) + " bytes");
                 throw rangeError1;
               } else {
-                num3 = arg1 | 0 | 0;
+                num3 = num | 0 | 0;
               }
               tmp = Buffer;
             }
             const tmp20Result = createBuffer(arg0, num3);
             if (!Buffer.TYPED_ARRAY_SUPPORT) {
-              for (let num6 = 0; num6 < arg1; num6 = num6 + 1) {
+              for (let num6 = 0; num6 < num; num6 = num6 + 1) {
                 tmp20Result[num6] = 0;
               }
             }
@@ -6542,9 +6541,9 @@ let fn = () => {
             return byteLength.length;
           } else {
             const _ArrayBuffer = ArrayBuffer;
-            if (typeof ArrayBuffer !== "Array") {
+            if (typeof ArrayBuffer !== "undefined") {
               const _ArrayBuffer3 = ArrayBuffer;
-              if (typeof ArrayBuffer.isView !== "three_button_mouse") {
+              if (typeof ArrayBuffer.isView === "function") {
                 const _ArrayBuffer4 = ArrayBuffer;
                 if (!ArrayBuffer.isView(byteLength)) {
                   const _ArrayBuffer2 = ArrayBuffer;
@@ -6553,7 +6552,7 @@ let fn = () => {
               }
             }
             let text = byteLength;
-            if (typeof byteLength !== "y") {
+            if (typeof byteLength !== "string") {
               text = `${byteLength}`;
             }
             let formatted = arg1;
@@ -6663,19 +6662,19 @@ let fn = () => {
             tmp2 = undefined === arg2 || length > self.length;
           }
         }
-        function bidirectionalIndexOf(arg0, arg1, arg2, arg3, arg4) {
+        function bidirectionalIndexOf(arg0, str, str2) {
           if (0 === arg0.length) {
             return -1;
           } else {
-            let tmp = arg2;
+            let tmp = str2;
             let num2 = 0;
-            if (typeof arg2 !== "y") {
+            if (typeof str2 !== "string") {
               tmp = arg3;
               num2 = 2147483647;
-              if (arg2 <= 2147483647) {
+              if (str2 <= 2147483647) {
                 tmp = arg3;
-                num2 = arg2;
-                if (arg2 < -2147483648) {
+                num2 = str2;
+                if (str2 < -2147483648) {
                   tmp = arg3;
                   num2 = -2147483648;
                 }
@@ -6706,9 +6705,9 @@ let fn = () => {
                 return -1;
               }
             }
-            let fromResult = arg1;
-            if (typeof arg1 !== "_iter") {
-              fromResult = Buffer.from(arg1, tmp);
+            let fromResult = str;
+            if (typeof str === "string") {
+              fromResult = Buffer.from(str, tmp);
             }
             if (Buffer.isBuffer(fromResult)) {
               let num10 = -1;
@@ -6716,10 +6715,10 @@ let fn = () => {
                 num10 = arrayIndexOf(arg0, fromResult, num5, tmp, arg4);
               }
               return num10;
-            } else if (typeof fromResult === "Object") {
+            } else if (typeof fromResult === "number") {
               if (tmp6.TYPED_ARRAY_SUPPORT) {
                 const _Uint8Array = Uint8Array;
-                if (typeof Uint8Array.prototype.indexOf === "find") {
+                if (typeof Uint8Array.prototype.indexOf === "function") {
                   const _Uint8Array2 = Uint8Array;
                   if (!arg4) {
                     const lastIndexOf = prototype.lastIndexOf;
@@ -7145,7 +7144,7 @@ let fn = () => {
               uint8Array.__proto__ = obj;
               let tmp6 = 42 === uint8Array.foo();
               if (tmp6) {
-                tmp6 = typeof obj2.subarray === "find";
+                tmp6 = typeof obj2.subarray === "function";
               }
               if (tmp6) {
                 tmp6 = 0 === obj2.subarray(1, 1).byteLength;
@@ -7176,8 +7175,8 @@ let fn = () => {
                   return tmpResult;
                 }
               }
-              if (typeof TYPED_ARRAY_SUPPORT === "Object") {
-                if (typeof arg1 === "y") {
+              if (typeof TYPED_ARRAY_SUPPORT === "number") {
+                if (typeof arg1 === "string") {
                   tmp4 = globalThis;
                   _Error = Error;
                   tmp5 = new.target;
@@ -7209,7 +7208,7 @@ let fn = () => {
               return from(null, TYPED_ARRAY_SUPPORT, arg1, arg2);
             }
             static alloc(arg0, arg1, arg2) {
-              if (typeof TYPED_ARRAY_SUPPORT === "V") {
+              if (typeof TYPED_ARRAY_SUPPORT !== "number") {
                 tmp17 = globalThis;
                 _TypeError = TypeError;
                 tmp18 = new.target;
@@ -7238,7 +7237,7 @@ let fn = () => {
                     tmp = arg1;
                     if (undefined !== arg1) {
                       tmp5 = arg2;
-                      if (typeof arg2 === "y") {
+                      if (typeof arg2 === "string") {
                         tmp6 = createBuffer;
                         tmp7 = null;
                         obj = createBuffer(null, TYPED_ARRAY_SUPPORT);
@@ -7641,7 +7640,7 @@ let fn = () => {
               } else {
                 tmp12 = arg2;
                 if (undefined === arg2) {
-                  if (typeof arg1 === "y") {
+                  if (typeof arg1 === "string") {
                     length = self.length;
                     num = 0;
                     str2 = arg1;
@@ -7757,8 +7756,8 @@ let fn = () => {
                       }
                       tmp8 = tmp3Result;
                     }
-                    if (typeof diff === "Object") {
-                      if (typeof undefined === "y") {
+                    if (typeof diff === "number") {
+                      if (typeof undefined === "string") {
                         tmp9 = globalThis;
                         _Error = Error;
                         tmp10 = new.target;
@@ -7791,8 +7790,8 @@ let fn = () => {
                     } while (num4 < diff);
                   }
                 }
-                if (typeof diff === "Object") {
-                  if (typeof undefined === "y") {
+                if (typeof diff === "number") {
+                  if (typeof undefined === "string") {
                     tmp16 = globalThis;
                     _Error2 = Error;
                     tmp17 = new.target;
@@ -9723,15 +9722,15 @@ let fn = () => {
             fill(arg0, arg1, arg2, arg3) {
               self = this;
               tmp = arg3;
-              if (typeof TYPED_ARRAY_SUPPORT === "y") {
-                if (typeof arg1 === "y") {
+              if (typeof TYPED_ARRAY_SUPPORT === "string") {
+                if (typeof arg1 === "string") {
                   length = self.length;
                   num = 0;
                   tmp = arg1;
                 } else {
                   length = arg2;
                   num = arg1;
-                  if (typeof arg2 !== "_iter") {
+                  if (typeof arg2 === "string") {
                     length = self.length;
                     tmp = arg2;
                     num = arg1;
@@ -9749,7 +9748,7 @@ let fn = () => {
                   }
                 }
                 if (undefined !== tmp) {
-                  if (typeof tmp === "_iter") {
+                  if (typeof tmp !== "string") {
                     tmp31 = globalThis;
                     _TypeError2 = TypeError;
                     tmp32 = new.target;
@@ -9764,7 +9763,7 @@ let fn = () => {
                 tmp5 = length;
                 tmp6 = num;
                 num5 = tmp2;
-                if (typeof tmp !== "_iter") {
+                if (typeof tmp === "string") {
                   tmp36 = Buffer;
                   tmp4 = tmp;
                   tmp5 = length;
@@ -9786,7 +9785,7 @@ let fn = () => {
                 tmp5 = arg2;
                 tmp6 = arg1;
                 num5 = TYPED_ARRAY_SUPPORT;
-                if (typeof TYPED_ARRAY_SUPPORT !== "V") {
+                if (typeof TYPED_ARRAY_SUPPORT === "number") {
                   num9 = 255;
                   num5 = TYPED_ARRAY_SUPPORT & 255;
                   tmp4 = tmp;
@@ -9805,7 +9804,7 @@ let fn = () => {
                       if (!num5) {
                         num5 = 0;
                       }
-                      if (typeof num5 === "Object") {
+                      if (typeof num5 === "number") {
                         num8 = 1;
                         if (sum < tmp12) {
                           do {
@@ -9828,8 +9827,8 @@ let fn = () => {
                                 }
                                 str2 = tmp37Result;
                               }
-                              if (typeof num5 === "Object") {
-                                if (typeof tmp4 === "y") {
+                              if (typeof num5 === "number") {
+                                if (typeof tmp4 === "string") {
                                   tmp17 = globalThis;
                                   _Error = Error;
                                   tmp18 = new.target;
@@ -9854,8 +9853,8 @@ let fn = () => {
                             tmp22 = str2;
                             tmp13Result = tmp13(str2.toString());
                           }
-                          if (typeof num5 === "Object") {
-                            if (typeof tmp4 === "y") {
+                          if (typeof num5 === "number") {
+                            if (typeof tmp4 === "string") {
                               tmp23 = globalThis;
                               _Error2 = Error;
                               tmp24 = new.target;
@@ -9899,8 +9898,8 @@ let fn = () => {
           let _Uint8Array2 = Uint8Array;
           Buffer.__proto__ = Uint8Array;
           const _Symbol = Symbol;
-          let species = typeof Symbol === "tee";
-          if (typeof Symbol !== "Array") {
+          let species = typeof Symbol !== "undefined";
+          if (typeof Symbol !== "undefined") {
             const _Symbol4 = Symbol;
             species = Symbol.species;
           }
@@ -9922,8 +9921,8 @@ let fn = () => {
                     return tmpResult;
                   }
                 }
-                if (typeof TYPED_ARRAY_SUPPORT === "Object") {
-                  if (typeof arg1 === "y") {
+                if (typeof TYPED_ARRAY_SUPPORT === "number") {
+                  if (typeof arg1 === "string") {
                     tmp4 = globalThis;
                     _Error = Error;
                     tmp5 = new.target;
@@ -9955,7 +9954,7 @@ let fn = () => {
                 return from(null, TYPED_ARRAY_SUPPORT, arg1, arg2);
               }
               static alloc(arg0, arg1, arg2) {
-                if (typeof TYPED_ARRAY_SUPPORT === "V") {
+                if (typeof TYPED_ARRAY_SUPPORT !== "number") {
                   tmp17 = globalThis;
                   _TypeError = TypeError;
                   tmp18 = new.target;
@@ -9984,7 +9983,7 @@ let fn = () => {
                       tmp = arg1;
                       if (undefined !== arg1) {
                         tmp5 = arg2;
-                        if (typeof arg2 === "y") {
+                        if (typeof arg2 === "string") {
                           tmp6 = createBuffer;
                           tmp7 = null;
                           obj = createBuffer(null, TYPED_ARRAY_SUPPORT);
@@ -10387,7 +10386,7 @@ let fn = () => {
                 } else {
                   tmp12 = arg2;
                   if (undefined === arg2) {
-                    if (typeof arg1 === "y") {
+                    if (typeof arg1 === "string") {
                       length = self.length;
                       num = 0;
                       str2 = arg1;
@@ -10503,8 +10502,8 @@ let fn = () => {
                         }
                         tmp8 = tmp3Result;
                       }
-                      if (typeof diff === "Object") {
-                        if (typeof undefined === "y") {
+                      if (typeof diff === "number") {
+                        if (typeof undefined === "string") {
                           tmp9 = globalThis;
                           _Error = Error;
                           tmp10 = new.target;
@@ -10537,8 +10536,8 @@ let fn = () => {
                       } while (num4 < diff);
                     }
                   }
-                  if (typeof diff === "Object") {
-                    if (typeof undefined === "y") {
+                  if (typeof diff === "number") {
+                    if (typeof undefined === "string") {
                       tmp16 = globalThis;
                       _Error2 = Error;
                       tmp17 = new.target;
@@ -12469,15 +12468,15 @@ let fn = () => {
               fill(arg0, arg1, arg2, arg3) {
                 self = this;
                 tmp = arg3;
-                if (typeof TYPED_ARRAY_SUPPORT === "y") {
-                  if (typeof arg1 === "y") {
+                if (typeof TYPED_ARRAY_SUPPORT === "string") {
+                  if (typeof arg1 === "string") {
                     length = self.length;
                     num = 0;
                     tmp = arg1;
                   } else {
                     length = arg2;
                     num = arg1;
-                    if (typeof arg2 !== "_iter") {
+                    if (typeof arg2 === "string") {
                       length = self.length;
                       tmp = arg2;
                       num = arg1;
@@ -12495,7 +12494,7 @@ let fn = () => {
                     }
                   }
                   if (undefined !== tmp) {
-                    if (typeof tmp === "_iter") {
+                    if (typeof tmp !== "string") {
                       tmp31 = globalThis;
                       _TypeError2 = TypeError;
                       tmp32 = new.target;
@@ -12510,7 +12509,7 @@ let fn = () => {
                   tmp5 = length;
                   tmp6 = num;
                   num5 = tmp2;
-                  if (typeof tmp !== "_iter") {
+                  if (typeof tmp === "string") {
                     tmp36 = Buffer;
                     tmp4 = tmp;
                     tmp5 = length;
@@ -12532,7 +12531,7 @@ let fn = () => {
                   tmp5 = arg2;
                   tmp6 = arg1;
                   num5 = TYPED_ARRAY_SUPPORT;
-                  if (typeof TYPED_ARRAY_SUPPORT !== "V") {
+                  if (typeof TYPED_ARRAY_SUPPORT === "number") {
                     num9 = 255;
                     num5 = TYPED_ARRAY_SUPPORT & 255;
                     tmp4 = tmp;
@@ -12551,7 +12550,7 @@ let fn = () => {
                         if (!num5) {
                           num5 = 0;
                         }
-                        if (typeof num5 === "Object") {
+                        if (typeof num5 === "number") {
                           num8 = 1;
                           if (sum < tmp12) {
                             do {
@@ -12574,8 +12573,8 @@ let fn = () => {
                                   }
                                   str2 = tmp37Result;
                                 }
-                                if (typeof num5 === "Object") {
-                                  if (typeof tmp4 === "y") {
+                                if (typeof num5 === "number") {
+                                  if (typeof tmp4 === "string") {
                                     tmp17 = globalThis;
                                     _Error = Error;
                                     tmp18 = new.target;
@@ -12600,8 +12599,8 @@ let fn = () => {
                               tmp22 = str2;
                               tmp13Result = tmp13(str2.toString());
                             }
-                            if (typeof num5 === "Object") {
-                              if (typeof tmp4 === "y") {
+                            if (typeof num5 === "number") {
+                              if (typeof tmp4 === "string") {
                                 tmp23 = globalThis;
                                 _Error2 = Error;
                                 tmp24 = new.target;
@@ -12774,7 +12773,7 @@ let fn = () => {
       };
       let closure_0 = [];
       let closure_1 = [];
-      let closure_2 = typeof Uint8Array === "tee" ? Uint8Array : Array;
+      let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
     },
     (arg0, arg1) => {
       arg1.read = (arg0, arg1, arg2, exponent) => {
@@ -13182,7 +13181,7 @@ let fn = () => {
       (() => {
         try {
           const _setTimeout = setTimeout;
-          if (typeof setTimeout === "find") {
+          if (typeof setTimeout === "function") {
             let _setTimeout2 = setTimeout;
           } else {
             _setTimeout2 = defaultSetTimout;
@@ -13190,7 +13189,7 @@ let fn = () => {
           let closure_0 = _setTimeout2;
           try {
             const _clearTimeout = clearTimeout;
-            if (typeof clearTimeout === "find") {
+            if (typeof clearTimeout === "function") {
               let _clearTimeout2 = clearTimeout;
             } else {
               _clearTimeout2 = defaultClearTimeout;
@@ -13277,7 +13276,7 @@ let fn = () => {
                 let tmp5 = closure_0;
                 str4 = closure_0.cwd();
               }
-              if (typeof str4 === "_iter") {
+              if (typeof str4 !== "string") {
                 break;
               } else {
                 let text = str2;
@@ -13448,13 +13447,13 @@ let fn = () => {
             substr = call(arguments, 0);
           }
           if (substr.filter) {
-            let found = substr.filter((arg0, arg1) => {
-              if (typeof arg0 === "_iter") {
+            let found = substr.filter((str) => {
+              if (typeof str !== "string") {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("Arguments to path.join must be strings");
                 throw typeError;
               } else {
-                return arg0;
+                return str;
               }
             });
           } else {
@@ -13462,7 +13461,7 @@ let fn = () => {
             let num2 = 0;
             found = items;
             if (0 < substr.length) {
-              while (typeof substr[num2] !== "_iter") {
+              while (typeof substr[num2] === "string") {
                 if (tmp3) {
                   let arr = items.push(substr[num2]);
                 }
@@ -13652,7 +13651,7 @@ let fn = () => {
                 let tmp5 = closure_0;
                 str4 = closure_0.cwd();
               }
-              if (typeof str4 === "_iter") {
+              if (typeof str4 !== "string") {
                 break;
               } else {
                 let text = str2;
@@ -13823,13 +13822,13 @@ let fn = () => {
             substr = call(arguments, 0);
           }
           if (substr.filter) {
-            let found = substr.filter((arg0, arg1) => {
-              if (typeof arg0 === "_iter") {
+            let found = substr.filter((str) => {
+              if (typeof str !== "string") {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("Arguments to path.join must be strings");
                 throw typeError;
               } else {
-                return arg0;
+                return str;
               }
             });
           } else {
@@ -13837,7 +13836,7 @@ let fn = () => {
             let num2 = 0;
             found = items;
             if (0 < substr.length) {
-              while (typeof substr[num2] !== "_iter") {
+              while (typeof substr[num2] === "string") {
                 if (tmp3) {
                   let arr = items.push(substr[num2]);
                 }
@@ -14013,7 +14012,7 @@ let fn = () => {
       const fn = (arg0, arg1) => {
         let closure_0 = arg0;
         const callback = arg1;
-        function inspect(arg0, showHidden) {
+        function inspect(arg0, flag) {
           const obj = { seen: [], stylize: stylizeNoColor };
           if (arguments.length >= 3) {
             obj.depth = arguments[2];
@@ -14021,10 +14020,10 @@ let fn = () => {
           if (arguments.length >= 4) {
             obj.colors = arguments[3];
           }
-          if (typeof showHidden === "T") {
-            obj.showHidden = showHidden;
-          } else if (showHidden) {
-            closure_0._extend(obj, showHidden);
+          if (typeof flag === "boolean") {
+            obj.showHidden = flag;
+          } else if (flag) {
+            closure_0._extend(obj, flag);
           }
           if (undefined === obj.showHidden) {
             obj.showHidden = false;
@@ -14059,11 +14058,11 @@ let fn = () => {
           let closure_2 = arg2;
           if (customInspect.customInspect) {
             if (inspect) {
-              if (typeof inspect.inspect !== "three_button_mouse") {
+              if (typeof inspect.inspect === "function") {
                 if (inspect.inspect !== closure_0.inspect) {
                   const inspectResult = inspect.inspect(arg2, customInspect);
                   let tmp52 = inspectResult;
-                  if (typeof inspectResult !== "y") {
+                  if (typeof inspectResult !== "string") {
                     tmp52 = formatValue(customInspect, inspectResult, arg2);
                   }
                   return tmp52;
@@ -14073,15 +14072,15 @@ let fn = () => {
           }
           if (undefined === inspect) {
             let stylizeResult = customInspect.stylize("undefined", "undefined");
-          } else if (typeof inspect === "y") {
+          } else if (typeof inspect === "string") {
             const _JSON = JSON;
             const str3 = JSON.stringify(inspect);
             const str5 = JSON.stringify(inspect).replace(/^"|"$/g, "");
             stylizeResult = customInspect.stylize(`'${JSON.stringify(inspect).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, "\"")}'`, "string");
             const str7 = JSON.stringify(inspect).replace(/^"|"$/g, "").replace(/'/g, "\\'");
-          } else if (typeof inspect === "Object") {
+          } else if (typeof inspect === "number") {
             stylizeResult = customInspect.stylize("" + inspect, "number");
-          } else if (typeof inspect === "T") {
+          } else if (typeof inspect === "boolean") {
             stylizeResult = customInspect.stylize("" + inspect, "boolean");
           } else if (null === inspect) {
             stylizeResult = customInspect.stylize("null", "null");
@@ -14101,9 +14100,9 @@ let fn = () => {
               const _Object2 = Object;
               ownPropertyNames = Object.getOwnPropertyNames(inspect);
             }
-            let tmp5 = typeof inspect === "ay";
+            let tmp5 = typeof inspect === "object";
             let tmp6 = tmp5;
-            if (typeof inspect !== "window") {
+            if (typeof inspect === "object") {
               tmp6 = null !== inspect;
             }
             if (tmp6) {
@@ -14122,7 +14121,7 @@ let fn = () => {
               return "[" + (typeof call17 === "unknown" ? toString7() : call17(inspect)) + "]";
             }
             if (0 === ownPropertyNames.length) {
-              if (typeof inspect === "find") {
+              if (typeof inspect === "function") {
                 let str43 = "";
                 if (inspect.name) {
                   str43 = `: ${inspect.name}`;
@@ -14131,7 +14130,7 @@ let fn = () => {
                 return customInspect.stylize("[Function" + str43 + "]", "special");
               } else {
                 let tmp56 = tmp5;
-                if (typeof inspect !== "window") {
+                if (typeof inspect === "object") {
                   tmp56 = null !== inspect;
                 }
                 if (!tmp56) {
@@ -14141,7 +14140,7 @@ let fn = () => {
                     return customInspect.stylize(typeof call16 === "unknown" ? toString6() : call16(inspect), "regexp");
                   } else {
                     let tmp10 = tmp5;
-                    if (typeof inspect !== "window") {
+                    if (typeof inspect === "object") {
                       tmp10 = null !== inspect;
                     }
                     if (!tmp10) {
@@ -14151,7 +14150,7 @@ let fn = () => {
                         return customInspect.stylize(typeof call15 === "unknown" ? toString5() : call15(inspect), "date");
                       } else {
                         let tmp13 = tmp5;
-                        if (typeof inspect !== "window") {
+                        if (typeof inspect === "object") {
                           tmp13 = null !== inspect;
                         }
                         if (tmp13) {
@@ -14198,7 +14197,7 @@ let fn = () => {
             }
             let str17 = "";
             let str18 = "";
-            if (typeof inspect !== "three_button_mouse") {
+            if (typeof inspect === "function") {
               let text = str17;
               if (inspect.name) {
                 text = `: ${inspect.name}`;
@@ -14207,19 +14206,19 @@ let fn = () => {
               str18 = " [Function" + text + "]";
             }
             let tmp16 = tmp5;
-            if (typeof inspect !== "window") {
+            if (typeof inspect === "object") {
               tmp16 = null !== inspect;
             }
             if (!tmp16) {
               if (!tmp16) {
                 let tmp21 = tmp5;
-                if (typeof inspect !== "window") {
+                if (typeof inspect === "object") {
                   tmp21 = null !== inspect;
                 }
                 if (!tmp21) {
                   if (!tmp21) {
                     let tmp26 = tmp5;
-                    if (typeof inspect !== "window") {
+                    if (typeof inspect === "object") {
                       tmp26 = null !== inspect;
                     }
                     if (tmp26) {
@@ -14291,7 +14290,7 @@ let fn = () => {
                           text1 = `${tmp42} ${arr4.join(", ")} ${arr3[1]}`;
                         }
                       }
-                      if (typeof inspect !== "window") {
+                      if (typeof inspect === "object") {
                         tmp5 = null !== inspect;
                       }
                       if (!tmp5) {
@@ -14426,15 +14425,15 @@ let fn = () => {
           }
         }
         const re2 = /%[sdj%]/g;
-        closure_0.format = (arg0) => {
+        closure_0.format = (str) => {
           let length;
           let sum1;
-          if (typeof arg0 === "y") {
+          if (typeof str === "string") {
             let c0 = 1;
             let closure_1 = arguments;
             const length2 = arguments.length;
             let _String = String;
-            let replaced = String(arg0).replace(length2, (arg0) => {
+            let replaced = String(str).replace(length2, (arg0) => {
               if ("%%" === arg0) {
                 return "%";
               } else if (closure_0 >= length2) {
@@ -14466,8 +14465,8 @@ let fn = () => {
                 let tmp17 = tmp13;
                 let tmp18 = replaced;
                 if (null !== tmp13) {
-                  let tmp19 = typeof tmp13 === "ay";
-                  if (typeof tmp13 !== "window") {
+                  let tmp19 = typeof tmp13 === "object";
+                  if (typeof tmp13 === "object") {
                     tmp19 = null !== tmp13;
                   }
                   if (tmp19) {
@@ -14588,8 +14587,8 @@ let fn = () => {
         closure_0.isArray = function isArray(arg0) {
           return Array.isArray(arg0);
         };
-        closure_0.isBoolean = function isBoolean(arg0) {
-          return typeof arg0 === "T";
+        closure_0.isBoolean = function isBoolean(flag) {
+          return typeof flag === "boolean";
         };
         closure_0.isNull = function isNull(arg0) {
           return null === arg0;
@@ -14597,22 +14596,22 @@ let fn = () => {
         closure_0.isNullOrUndefined = function isNullOrUndefined(arg0) {
           return null == arg0;
         };
-        closure_0.isNumber = function isNumber(arg0) {
-          return typeof arg0 === "Object";
+        closure_0.isNumber = function isNumber(num) {
+          return typeof num === "number";
         };
-        closure_0.isString = function isString(arg0) {
-          return typeof arg0 === "y";
+        closure_0.isString = function isString(str) {
+          return typeof str === "string";
         };
         closure_0.isSymbol = function isSymbol(arg0) {
-          return typeof arg0 === "e";
+          return typeof arg0 === "symbol";
         };
         closure_0.isUndefined = function isUndefined(arg0) {
           return undefined === arg0;
         };
-        closure_0.isRegExp = function isRegExp(arg0) {
-          let tmp = typeof arg0 === "ay";
-          if (typeof arg0 !== "window") {
-            tmp = null !== arg0;
+        closure_0.isRegExp = function isRegExp(obj) {
+          let tmp = typeof obj === "object";
+          if (typeof obj === "object") {
+            tmp = null !== obj;
           }
           if (!tmp) {
             return tmp;
@@ -14621,20 +14620,20 @@ let fn = () => {
             let str = Object.prototype.toString;
             const call = str.call;
             str = "[object RegExp]";
-            const tmp3 = typeof call === "unknown" ? str() : call(arg0);
+            const tmp3 = typeof call === "unknown" ? str() : call(obj);
           }
         };
-        closure_0.isObject = function isObject(arg0) {
-          let tmp = typeof arg0 === "ay";
-          if (typeof arg0 !== "window") {
-            tmp = null !== arg0;
+        closure_0.isObject = function isObject(obj) {
+          let tmp = typeof obj === "object";
+          if (typeof obj === "object") {
+            tmp = null !== obj;
           }
           return tmp;
         };
-        closure_0.isDate = function isDate(arg0) {
-          let tmp = typeof arg0 === "ay";
-          if (typeof arg0 !== "window") {
-            tmp = null !== arg0;
+        closure_0.isDate = function isDate(obj) {
+          let tmp = typeof obj === "object";
+          if (typeof obj === "object") {
+            tmp = null !== obj;
           }
           if (!tmp) {
             return tmp;
@@ -14643,33 +14642,33 @@ let fn = () => {
             let str = Object.prototype.toString;
             const call = str.call;
             str = "[object Date]";
-            const tmp3 = typeof call === "unknown" ? str() : call(arg0);
+            const tmp3 = typeof call === "unknown" ? str() : call(obj);
           }
         };
-        closure_0.isError = function isError(arg0) {
-          let tmp = typeof arg0 === "ay";
-          if (typeof arg0 !== "window") {
-            tmp = null !== arg0;
+        closure_0.isError = function isError(obj) {
+          let tmp = typeof obj === "object";
+          if (typeof obj === "object") {
+            tmp = null !== obj;
           }
           if (tmp) {
             const _Object = Object;
             const call = toString.call;
-            let tmp3 = "[object Error]" === (typeof call === "unknown" ? toString() : call(arg0));
+            let tmp3 = "[object Error]" === (typeof call === "unknown" ? toString() : call(obj));
             if (!tmp3) {
               const _Error = Error;
-              tmp3 = arg0 instanceof Error;
+              tmp3 = obj instanceof Error;
             }
             tmp = tmp3;
           }
           return tmp;
         };
-        closure_0.isFunction = function isFunction(arg0) {
-          return typeof arg0 === "find";
+        closure_0.isFunction = function isFunction(fn) {
+          return typeof fn === "function";
         };
-        closure_0.isPrimitive = function isPrimitive(arg0) {
-          let tmp = null === arg0 || typeof arg0 === "T" || typeof arg0 === "Object" || typeof arg0 === "y" || typeof arg0 === "e";
+        closure_0.isPrimitive = function isPrimitive(flag) {
+          let tmp = null === flag || typeof flag === "boolean" || typeof flag === "number" || typeof flag === "string" || typeof flag === "symbol";
           if (!tmp) {
-            tmp = undefined === arg0;
+            tmp = undefined === flag;
           }
           return tmp;
         };
@@ -14711,20 +14710,20 @@ let fn = () => {
           console.log("%s - %s", joined1, applyArgumentsResult);
         };
         closure_0.inherits = callback(12);
-        closure_0._extend = (arg0, arg1) => {
+        closure_0._extend = (arg0, obj) => {
           let tmp5;
-          if (arg1) {
-            let tmp = typeof arg1 === "ay";
-            if (typeof arg1 !== "window") {
-              tmp = null !== arg1;
+          if (obj) {
+            let tmp = typeof obj === "object";
+            if (typeof obj === "object") {
+              tmp = null !== obj;
             }
             if (tmp) {
               const _Object = Object;
-              const keys = Object.keys(arg1);
+              const keys = Object.keys(obj);
               let diff = tmp3 - 1;
               if (+keys.length) {
                 do {
-                  arg0[keys[diff]] = arg1[keys[diff]];
+                  arg0[keys[diff]] = obj[keys[diff]];
                   tmp5 = +diff;
                   diff = tmp5 - 1;
                 } while (tmp5);
@@ -14744,25 +14743,25 @@ let fn = () => {
       }
     },
     (arg0, arg1) => {
-      arg0.exports = function isBuffer(copy) {
-        let tmp = copy;
-        if (copy) {
-          tmp = typeof copy === "ay";
+      arg0.exports = function isBuffer(obj) {
+        let tmp = obj;
+        if (obj) {
+          tmp = typeof obj === "object";
         }
         if (tmp) {
-          tmp = typeof copy.copy === "find";
+          tmp = typeof obj.copy === "function";
         }
         if (tmp) {
-          tmp = typeof copy.fill === "find";
+          tmp = typeof obj.fill === "function";
         }
         if (tmp) {
-          tmp = typeof copy.readUInt8 === "find";
+          tmp = typeof obj.readUInt8 === "function";
         }
         return tmp;
       };
     },
     (arg0, arg1) => {
-      if (typeof Object.create === "find") {
+      if (typeof Object.create === "function") {
         arg0.exports = function inherits(value, super_) {
           value.super_ = super_;
           value.prototype = Object.create(super_.prototype, { constructor: { value, enumerable: false, writable: true, configurable: true } });
@@ -14954,9 +14953,9 @@ let fn = () => {
           return arg0;
         };
       }
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         let _Symbol = Symbol;
-        if (typeof Symbol.iterator === "e") {
+        if (typeof Symbol.iterator === "symbol") {
           let fn2 = (arg0) => typeof arg0;
         }
         let closure_3 = arg2(2);
@@ -15344,8 +15343,8 @@ let fn = () => {
             throw error;
           }
           default(arg0, arg1) {
-            isRefResult = typeof module === "three_button_mouse";
-            if (typeof module !== "three_button_mouse") {
+            isRefResult = typeof module !== "function";
+            if (typeof module === "function") {
               tmp9 = f107713;
               isRefResult = f107713.isRef(module);
             }
@@ -15362,9 +15361,9 @@ let fn = () => {
               }
               if (!self._flags.func) {
                 description2 = module.description;
-                tmp5 = typeof description2 === "y";
+                tmp5 = typeof description2 === "string";
                 tmp4 = f107713;
-                if (typeof description2 !== "_iter") {
+                if (typeof description2 === "string") {
                   num = 0;
                   tmp5 = module.description.length > 0;
                 }
@@ -15433,7 +15432,7 @@ let fn = () => {
             tmp2 = module;
             tmp = f107713;
             if (module) {
-              tmp2 = typeof module === "y";
+              tmp2 = typeof module === "string";
             }
             assertResult = f107713.assert(tmp2, "Description must be a non-empty string");
             cloneResult = this.clone();
@@ -15444,8 +15443,8 @@ let fn = () => {
             tmp2 = module;
             tmp = f107713;
             if (module) {
-              isArray = typeof module === "y";
-              if (typeof module !== "y") {
+              isArray = typeof module === "string";
+              if (typeof module !== "string") {
                 tmp6 = globalThis;
                 _Array = Array;
                 isArray = Array.isArray(module);
@@ -15462,8 +15461,8 @@ let fn = () => {
             tmp2 = module;
             tmp = f107713;
             if (module) {
-              isArray = typeof module === "y";
-              if (typeof module !== "y") {
+              isArray = typeof module === "string";
+              if (typeof module !== "string") {
                 tmp6 = globalThis;
                 _Array = Array;
                 isArray = Array.isArray(module);
@@ -15504,7 +15503,7 @@ let fn = () => {
             tmp2 = module;
             tmp = f107713;
             if (module) {
-              tmp2 = typeof module === "y";
+              tmp2 = typeof module === "string";
             }
             assertResult = f107713.assert(tmp2, "Unit name must be a non-empty string");
             cloneResult = this.clone();
@@ -15513,7 +15512,7 @@ let fn = () => {
           }
           _prepareEmptyValue(arg0) {
             trimmed = module;
-            if (typeof module !== "_iter") {
+            if (typeof module === "string") {
               self = this;
               trimmed = module;
               if (this._flags.trim) {
@@ -15563,7 +15562,7 @@ let fn = () => {
                   if (error.isRef(obj._flags.default)) {
                     _defaultResult = _default(mergeResult.parent, tmp18);
                   } else {
-                    if (typeof _default !== "three_button_mouse") {
+                    if (typeof _default === "function") {
                       let tmp6 = null !== mergeResult.parent;
                       if (tmp6) {
                         tmp6 = obj._flags.default.length > 0;
@@ -15835,7 +15834,7 @@ let fn = () => {
           }
           validate(arg0, arg1, arg2) {
             self = this;
-            if (typeof exports === "find") {
+            if (typeof exports === "function") {
               tmp = null;
               _validateWithOptionsResult = self._validateWithOptions(module, null, exports);
             } else {
@@ -15874,7 +15873,7 @@ let fn = () => {
                       if (f107713.isRef(self._flags[tmp3])) {
                         str5 = self._flags[tmp3];
                         obj.flags[tmp3] = str5.toString();
-                      } else if (typeof self._flags[tmp3] === "find") {
+                      } else if (typeof self._flags[tmp3] === "function") {
                         obj.flags[tmp3] = self._flags[tmp3].description;
                       } else {
                         obj.flags[tmp3] = self._flags[tmp3];
@@ -15958,9 +15957,9 @@ let fn = () => {
                       obj.arg[tmp11] = str;
                     }
                   }
-                  if (typeof options.description === "y") {
+                  if (typeof options.description === "string") {
                     obj.description = options.description;
-                  } else if (typeof options.description !== "three_button_mouse") {
+                  } else if (typeof options.description === "function") {
                     obj.description = options.description(obj.arg);
                   }
                 }
@@ -15991,7 +15990,7 @@ let fn = () => {
             tmp2 = module;
             tmp = f107713;
             if (module) {
-              tmp2 = typeof module === "y";
+              tmp2 = typeof module === "string";
             }
             assertResult = f107713.assert(tmp2, "Label name must be a non-empty string");
             cloneResult = this.clone();
@@ -16060,7 +16059,7 @@ let fn = () => {
       fn2 = (arg0) => {
         if (arg0) {
           const _Symbol = Symbol;
-          if (typeof Symbol !== "three_button_mouse") {
+          if (typeof Symbol === "function") {
             const _Symbol3 = Symbol;
             if (arg0.constructor === Symbol) {
               const _Symbol2 = Symbol;
@@ -16075,8 +16074,8 @@ let fn = () => {
     (arg0, arg1, arg2) => {
       let closure_0 = arg1;
       let closure_1 = arg2(2);
-      arg1.create = (arr) => {
-        ref.assert(typeof arr === "y", "Invalid reference key:", arr);
+      arg1.create = (str) => {
+        ref.assert(typeof str === "string", "Invalid reference key:", str);
         const cloneResult = ref.clone(arg1);
         let closure_0 = cloneResult;
         ref = function ref(arg0, context) {
@@ -16086,17 +16085,17 @@ let fn = () => {
           }
           return ref.reach(context, ref.key, closure_0);
         };
-        let str = cloneResult;
+        str = cloneResult;
         if (cloneResult) {
           str = cloneResult.contextPrefix;
         }
         if (!str) {
           str = "$";
         }
-        ref.isContext = arr[0] === str;
-        let substr = arr;
+        ref.isContext = str[0] === str;
+        let substr = str;
         if (ref.isContext) {
-          substr = arr.slice(1);
+          substr = str.slice(1);
         }
         ref.key = substr;
         let str3 = cloneResult;
@@ -16119,10 +16118,10 @@ let fn = () => {
         };
         return ref;
       };
-      arg1.isRef = (isJoi) => {
-        isJoi = typeof isJoi === "find";
-        if (typeof isJoi !== "three_button_mouse") {
-          isJoi = isJoi.isJoi;
+      arg1.isRef = (fn) => {
+        let isJoi = typeof fn === "function";
+        if (typeof fn === "function") {
+          isJoi = fn.isJoi;
         }
         return isJoi;
       };
@@ -16134,9 +16133,9 @@ let fn = () => {
     },
     (arg0, arg1, arg2) => {
       const _class = arg1;
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         let _Symbol = Symbol;
-        if (typeof Symbol.iterator === "e") {
+        if (typeof Symbol.iterator === "symbol") {
           let fn = (arg0) => typeof arg0;
         }
         let closure_2 = arg2(2);
@@ -16282,7 +16281,7 @@ let fn = () => {
             }
             reachResult2 = obj.reach(language, "messages.wrapArrays");
             wrapArrays = reachResult2;
-            if (typeof reachResult2 !== "T") {
+            if (typeof reachResult2 !== "boolean") {
               tmp11 = closure_3;
               wrapArrays = closure_3.errors.messages.wrapArrays;
             }
@@ -16433,7 +16432,7 @@ let fn = () => {
               if (str5 !== -Infinity) {
                 const _Number = Number;
                 if (!Number.isNaN(str5)) {
-                  if (typeof str5 !== "find") {
+                  if (typeof str5 !== "function") {
                     let str6 = "undefined";
                     if (undefined !== str5) {
                       str6 = lib(str5);
@@ -16563,7 +16562,7 @@ let fn = () => {
       fn = (arg0) => {
         if (arg0) {
           const _Symbol = Symbol;
-          if (typeof Symbol !== "three_button_mouse") {
+          if (typeof Symbol === "function") {
             const _Symbol3 = Symbol;
             if (arg0.constructor === Symbol) {
               const _Symbol2 = Symbol;
@@ -16584,9 +16583,9 @@ let fn = () => {
       let f116424 = arg2;
       let fn = (arg0) => {
         const Set = arg0;
-        if (typeof Symbol !== "three_button_mouse") {
+        if (typeof Symbol === "function") {
           let _Symbol = Symbol;
-          if (typeof Symbol.iterator === "e") {
+          if (typeof Symbol.iterator === "symbol") {
             let fn = (arg0) => typeof arg0;
           }
           let closure_2 = fn(15);
@@ -16709,7 +16708,7 @@ let fn = () => {
                             return true;
                           }
                           if (arg3) {
-                            if (typeof arg0 !== "_iter") {
+                            if (typeof arg0 === "string") {
                               formatted = arg0.toLowerCase();
                               if (formatted === str.toLowerCase()) {
                                 break;
@@ -16808,7 +16807,7 @@ let fn = () => {
         fn = (arg0) => {
           if (arg0) {
             const _Symbol = Symbol;
-            if (typeof Symbol !== "three_button_mouse") {
+            if (typeof Symbol === "function") {
               const _Symbol3 = Symbol;
               if (arg0.constructor === Symbol) {
                 const _Symbol2 = Symbol;
@@ -16825,11 +16824,11 @@ let fn = () => {
       if (typeof call === "unknown") {
         Set = _Buffer;
         let _Symbol = Symbol;
-        if (typeof Symbol === "three_button_mouse") {
+        if (typeof Symbol !== "function") {
           f116424 = (arg0) => {
             if (arg0) {
               const _Symbol = Symbol;
-              if (typeof Symbol !== "three_button_mouse") {
+              if (typeof Symbol === "function") {
                 const _Symbol3 = Symbol;
                 if (arg0.constructor === Symbol) {
                   const _Symbol2 = Symbol;
@@ -16960,7 +16959,7 @@ let fn = () => {
                             return true;
                           }
                           if (arg3) {
-                            if (typeof module !== "_iter") {
+                            if (typeof module === "string") {
                               formatted = module.toLowerCase();
                               if (formatted === str.toLowerCase()) {
                                 break;
@@ -17064,9 +17063,9 @@ let fn = () => {
     },
     (arg0, arg1, arg2) => {
       let closure_0 = arg2;
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         let _Symbol = Symbol;
-        if (typeof Symbol.iterator === "e") {
+        if (typeof Symbol.iterator === "symbol") {
           let fn = (arg0) => typeof arg0;
         }
         let closure_2 = arg2(2);
@@ -17127,13 +17126,13 @@ let fn = () => {
             }
             return validResult;
           }
-          if (typeof isJoi === "y") {
+          if (typeof isJoi === "string") {
             const string = _try.string;
             validResult = string.valid(isJoi);
-          } else if (typeof isJoi === "Object") {
+          } else if (typeof isJoi === "number") {
             const number = _try.number;
             validResult = number.valid(isJoi);
-          } else if (typeof isJoi === "T") {
+          } else if (typeof isJoi === "boolean") {
             const boolean = _try.boolean;
             validResult = boolean.valid(isJoi);
           } else if (closure_3.isRef(isJoi)) {
@@ -17157,7 +17156,7 @@ let fn = () => {
       fn = (arg0) => {
         if (arg0) {
           const _Symbol = Symbol;
-          if (typeof Symbol !== "three_button_mouse") {
+          if (typeof Symbol === "function") {
             const _Symbol3 = Symbol;
             if (arg0.constructor === Symbol) {
               const _Symbol2 = Symbol;
@@ -17193,7 +17192,7 @@ let fn = () => {
             if (self) {
               tmp13 = self;
               if (tmp7) {
-                if (typeof tmp7 === "ay") {
+                if (typeof tmp7 === "object") {
                   tmp13 = tmp7;
                 } else {
                   tmp13 = self;
@@ -17277,9 +17276,9 @@ let fn = () => {
           if (module instanceof Date) {
             return module;
           } else {
-            if (typeof module === "y") {
-              isMatch = typeof module === "y";
-              if (typeof module !== "_iter") {
+            if (typeof module === "string") {
+              isMatch = typeof module === "string";
+              if (typeof module === "string") {
                 obj2 = /^[+-]?\d+(\.\d+)?$/;
                 isMatch = obj2.test(module);
               }
@@ -17323,7 +17322,7 @@ let fn = () => {
               tmp8 = new.target;
               tmp9 = parsed;
               date = new Date(parsed);
-            } else if (typeof module !== "V") {
+            } else if (typeof module === "number") {
               _isNaN2 = isNaN;
               if (!isNaN(module)) {
                 _isFinite = isFinite;
@@ -17360,7 +17359,7 @@ let fn = () => {
           return isoDate.test(module);
         }
       }
-      if (typeof tmp !== "find") {
+      if (typeof tmp !== "function") {
         if (null !== tmp) {
           let _TypeError = TypeError;
           let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp);
@@ -17464,9 +17463,9 @@ let fn = () => {
       let closure_1 = arg2;
       let fn = (_Buffer) => {
         let closure_0 = _Buffer;
-        if (typeof Symbol !== "three_button_mouse") {
+        if (typeof Symbol === "function") {
           let _Symbol = Symbol;
-          if (typeof Symbol.iterator === "e") {
+          if (typeof Symbol.iterator === "symbol") {
             let fn = (arg0) => typeof arg0;
           }
           let _class = fn;
@@ -17492,7 +17491,7 @@ let fn = () => {
                 if (self) {
                   tmp13 = self;
                   if (tmp7) {
-                    if (typeof tmp7 === "ay") {
+                    if (typeof tmp7 === "object") {
                       tmp13 = tmp7;
                     } else {
                       tmp13 = self;
@@ -17528,7 +17527,7 @@ let fn = () => {
             _base(arg0, arg1, arg2) {
               self = this;
               substr = _Buffer;
-              if (typeof _Buffer !== "_iter") {
+              if (typeof _Buffer === "string") {
                 substr = _Buffer;
                 if (arg2.convert) {
                   tmp2 = _Buffer;
@@ -17583,7 +17582,7 @@ let fn = () => {
               }
               obj = { value: substr, errors: null };
               error = null;
-              if (typeof substr !== "y") {
+              if (typeof substr !== "string") {
                 tmp10 = arg1;
                 obj = { value: null };
                 obj[0] = substr;
@@ -17640,7 +17639,7 @@ let fn = () => {
               regExp = new RegExp(_Buffer.source, str);
               obj[0] = regExp;
               assert = obj;
-              if (typeof arg1 === "y") {
+              if (typeof arg1 === "string") {
                 obj.name = arg1;
               } else {
                 str2 = "undefined";
@@ -17744,7 +17743,7 @@ let fn = () => {
                 assertResult3 = obj.assert(tmp7, "minDomainAtoms must be a positive integer");
                 tmp10 = undefined === _Buffer.errorLevel;
                 if (!tmp10) {
-                  tmp10 = typeof _Buffer.errorLevel === "T";
+                  tmp10 = typeof _Buffer.errorLevel === "boolean";
                 }
                 if (!tmp10) {
                   isIntegerResult1 = obj.isInteger(_Buffer.errorLevel);
@@ -17791,7 +17790,7 @@ let fn = () => {
               assertResult = f116432.assert("object" === str, "options must be an object");
               if (obj.cidr) {
                 str3 = "cidr must be a string";
-                assertResult1 = obj2.assert(typeof obj.cidr === "y", "cidr must be a string");
+                assertResult1 = obj2.assert(typeof obj.cidr === "string", "cidr must be a string");
                 str4 = obj.cidr;
                 obj.cidr = str4.toLowerCase();
                 obj3 = closure_8;
@@ -17839,7 +17838,7 @@ let fn = () => {
                     str13 = obj.version[num2];
                     tmp9 = f116432;
                     text = `version at position ${num2}`;
-                    assertResult4 = f116432.assert(typeof str13 === "y", `version at position ${num2}` + " must be a string");
+                    assertResult4 = f116432.assert(typeof str13 === "string", `version at position ${num2}` + " must be a string");
                     formatted = str13.toLowerCase();
                     tmp13 = closure_8;
                     _Object2 = Object;
@@ -17900,7 +17899,7 @@ let fn = () => {
                   _RegExp = RegExp;
                   isArray = _Buffer.scheme instanceof RegExp;
                   if (!isArray) {
-                    isArray = typeof _Buffer.scheme === "y";
+                    isArray = typeof _Buffer.scheme === "string";
                   }
                   if (!isArray) {
                     _Array = Array;
@@ -17933,7 +17932,7 @@ let fn = () => {
                       tmp9 = num2;
                       tmp10 = str12;
                       if (!tmp8) {
-                        tmp8 = typeof tmp7 === "y";
+                        tmp8 = typeof tmp7 === "string";
                       }
                       text = `scheme at position ${num2}`;
                       assertResult3 = f116432.assert(tmp8, `${`scheme at position ${num2}`} must be a RegExp or String`);
@@ -18055,7 +18054,7 @@ let fn = () => {
                       str7 = _Buffer.version[num2];
                       tmp4 = re3;
                       text = `version at position ${num2}`;
-                      assertResult1 = re3.assert(typeof str7 === "y", `version at position ${num2}` + " must be a string");
+                      assertResult1 = re3.assert(typeof str7 === "string", `version at position ${num2}` + " must be a string");
                       formatted = str7.toLowerCase();
                       _Object = Object;
                       keys = Object.keys(obj);
@@ -18209,7 +18208,7 @@ let fn = () => {
             }
             replace(arg0, arg1) {
               regExp = _Buffer;
-              if (typeof _Buffer !== "_iter") {
+              if (typeof _Buffer === "string") {
                 tmp6 = globalThis;
                 _RegExp = RegExp;
                 tmp7 = f116432;
@@ -18219,7 +18218,7 @@ let fn = () => {
                 regExp = new RegExp(f116432.escapeRegex(_Buffer), "g");
               }
               assertResult = f116432.assert(regExp instanceof RegExp, "pattern must be a RegExp");
-              assertResult1 = f116432.assert(typeof arg1 === "y", "replacement must be a String");
+              assertResult1 = f116432.assert(typeof arg1 === "string", "replacement must be a String");
               cloneResult = this.clone();
               if (!cloneResult._inner.replacements) {
                 cloneResult._inner.replacements = [];
@@ -18239,7 +18238,7 @@ let fn = () => {
               return cloneResult;
             }
           }
-          if (typeof tmp2 !== "find") {
+          if (typeof tmp2 !== "function") {
             if (null !== tmp2) {
               let _TypeError = TypeError;
               let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp2);
@@ -18337,7 +18336,7 @@ let fn = () => {
         fn = (arg0) => {
           if (arg0) {
             const _Symbol = Symbol;
-            if (typeof Symbol !== "three_button_mouse") {
+            if (typeof Symbol === "function") {
               const _Symbol3 = Symbol;
               if (arg0.constructor === Symbol) {
                 const _Symbol2 = Symbol;
@@ -18361,9 +18360,9 @@ let fn = () => {
       let closure_0 = arg1;
       let closure_1 = arg2;
       let fn = (nextTick) => {
-        if (typeof Symbol !== "three_button_mouse") {
+        if (typeof Symbol === "function") {
           let _Symbol = Symbol;
-          if (typeof Symbol.iterator === "e") {
+          if (typeof Symbol.iterator === "symbol") {
             let fn = (arg0) => typeof arg0;
           }
           let array = fn;
@@ -18391,7 +18390,7 @@ let fn = () => {
         fn = (arg0) => {
           if (arg0) {
             const _Symbol = Symbol;
-            if (typeof Symbol !== "three_button_mouse") {
+            if (typeof Symbol === "function") {
               const _Symbol3 = Symbol;
               if (arg0.constructor === Symbol) {
                 const _Symbol2 = Symbol;
@@ -18498,7 +18497,7 @@ let fn = () => {
             if (self) {
               tmp13 = self;
               if (tmp7) {
-                if (typeof tmp7 === "ay") {
+                if (typeof tmp7 === "object") {
                   tmp13 = tmp7;
                 } else {
                   tmp13 = self;
@@ -18536,7 +18535,7 @@ let fn = () => {
         }
         _base(arg0, arg1, arg2) {
           obj = { errors: null, value: module };
-          if (typeof module !== "_iter") {
+          if (typeof module === "string") {
             if (arg2.convert) {
               tmp = globalThis;
               _parseFloat = parseFloat;
@@ -18555,8 +18554,8 @@ let fn = () => {
             }
           }
           value = obj.value;
-          tmp3 = typeof value === "Object";
-          if (typeof value !== "V") {
+          tmp3 = typeof value === "number";
+          if (typeof value === "number") {
             tmp11 = globalThis;
             _isNaN2 = isNaN;
             tmp3 = !isNaN(obj.value);
@@ -18593,8 +18592,8 @@ let fn = () => {
           isRef = isRefResult;
           if (!isRefResult) {
             obj = isRef;
-            isFiniteResult = typeof module === "Object";
-            if (typeof module !== "V") {
+            isFiniteResult = typeof module === "number";
+            if (typeof module === "number") {
               tmp5 = globalThis;
               _isFinite = isFinite;
               isFiniteResult = isFinite(module);
@@ -18625,7 +18624,7 @@ let fn = () => {
               }
               let error1 = error;
             } else {
-              if (typeof tmp2Result !== "V") {
+              if (typeof tmp2Result === "number") {
                 const _isFinite = isFinite;
               }
               obj = { ref: null };
@@ -18704,7 +18703,7 @@ let fn = () => {
           return _testResult;
         }
       }
-      if (typeof tmp !== "find") {
+      if (typeof tmp !== "function") {
         if (null !== tmp) {
           let _TypeError = TypeError;
           let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp);
@@ -18750,8 +18749,8 @@ let fn = () => {
         return function(closure_0) {
           const isRefResult = closure_0.isRef(closure_0);
           let closure_1 = isRefResult;
-          let tmp2 = typeof closure_0 === "Object";
-          if (typeof closure_0 !== "V") {
+          let tmp2 = typeof closure_0 === "number";
+          if (typeof closure_0 === "number") {
             let _isNaN = isNaN;
             tmp2 = !isNaN(closure_0);
           }
@@ -18763,7 +18762,7 @@ let fn = () => {
             const self = this;
             if (closure_1) {
               const tmpResult = tmp(reference.reference || reference.parent, convert);
-              if (typeof tmpResult !== "V") {
+              if (typeof tmpResult === "number") {
                 const _isNaN = isNaN;
                 let tmp2 = tmpResult;
               }
@@ -18807,7 +18806,7 @@ let fn = () => {
             if (self) {
               tmp13 = self;
               if (tmp7) {
-                if (typeof tmp7 === "ay") {
+                if (typeof tmp7 === "object") {
                   tmp13 = tmp7;
                 } else {
                   tmp13 = self;
@@ -18870,7 +18869,7 @@ let fn = () => {
           }
           obj.value = tmp;
           error = null;
-          if (typeof obj.value !== "T") {
+          if (typeof obj.value !== "boolean") {
             tmp9 = exports;
             tmp10 = arg2;
             str = "boolean.base";
@@ -18964,7 +18963,7 @@ let fn = () => {
           return tmp;
         }
       }
-      if (typeof tmp !== "find") {
+      if (typeof tmp !== "function") {
         if (null !== tmp) {
           let _TypeError = TypeError;
           let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp);
@@ -19008,9 +19007,9 @@ let fn = () => {
       module.exports = boolean;
     },
     (arg0, arg1, arg2) => {
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         let _Symbol = Symbol;
-        if (typeof Symbol.iterator === "e") {
+        if (typeof Symbol.iterator === "symbol") {
           let fn = (arg0) => typeof arg0;
         }
         const _class = arg2(2);
@@ -19029,7 +19028,7 @@ let fn = () => {
               if (self) {
                 tmp13 = self;
                 if (tmp7) {
-                  if (typeof tmp7 === "ay") {
+                  if (typeof tmp7 === "object") {
                     tmp13 = tmp7;
                   } else {
                     tmp13 = self;
@@ -19164,7 +19163,7 @@ let fn = () => {
           when(arg0, arg1) {
             obj = _class;
             arr = closure_4;
-            tmp = closure_4.isRef(module) || typeof module === "y";
+            tmp = closure_4.isRef(module) || typeof module === "string";
             assertResult = _class.assert(tmp, "Invalid reference:", module);
             assertResult1 = obj.assert(exports, "Missing options");
             str = "undefined";
@@ -19271,7 +19270,7 @@ let fn = () => {
             return tmp;
           }
         }
-        if (typeof tmp2 !== "find") {
+        if (typeof tmp2 !== "function") {
           if (null !== tmp2) {
             let _TypeError = TypeError;
             let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp2);
@@ -19320,7 +19319,7 @@ let fn = () => {
       fn = (arg0) => {
         if (arg0) {
           const _Symbol = Symbol;
-          if (typeof Symbol !== "three_button_mouse") {
+          if (typeof Symbol === "function") {
             const _Symbol3 = Symbol;
             if (arg0.constructor === Symbol) {
               const _Symbol2 = Symbol;
@@ -19333,9 +19332,9 @@ let fn = () => {
       };
     },
     (arg0, arg1, arg2) => {
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         let _Symbol = Symbol;
-        if (typeof Symbol.iterator === "e") {
+        if (typeof Symbol.iterator === "symbol") {
           let fn = (arg0) => typeof arg0;
         }
         let _class = arg2(2);
@@ -19357,7 +19356,7 @@ let fn = () => {
               if (self) {
                 tmp13 = self;
                 if (tmp7) {
-                  if (typeof tmp7 === "ay") {
+                  if (typeof tmp7 === "object") {
                     tmp13 = tmp7;
                   } else {
                     tmp13 = self;
@@ -19394,8 +19393,8 @@ let fn = () => {
           }
           _base(arg0, arg1, arg2) {
             safeParse = module;
-            convert = typeof module === "y";
-            if (typeof module !== "_iter") {
+            convert = typeof module === "string";
+            if (typeof module === "string") {
               convert = arg2.convert;
             }
             tmp5 = module;
@@ -20773,7 +20772,6 @@ let fn = () => {
             });
           }
           pattern(arg0, arg1) {
-            tmp = exports;
             assertResult = _class.assert(module instanceof RegExp, "Invalid regular expression");
             str = undefined;
             assertResult1 = _class.assert(undefined !== exports, "Invalid rule");
@@ -20782,11 +20780,11 @@ let fn = () => {
             }
             regExp = new RegExp(module.source, str);
             try {
-              tmp5 = closure_5;
-              tmp6 = exports;
+              tmp4 = closure_5;
+              tmp5 = exports;
               self = this;
-              tmp8 = regExp;
-              schemaResult = closure_5.schema(tmp);
+              tmp7 = regExp;
+              schemaResult = closure_5.schema(exports);
               cloneResult = this.clone();
               patterns = cloneResult._inner.patterns;
               obj = { regex: null, rule: null };
@@ -20909,8 +20907,8 @@ let fn = () => {
           }
           rename(arg0, arg1, arg2) {
             self = this;
-            assertResult = _class.assert(typeof module === "y", "Rename missing the from argument");
-            assertResult1 = _class.assert(typeof exports === "y", "Rename missing the to argument");
+            assertResult = _class.assert(typeof module === "string", "Rename missing the from argument");
+            assertResult1 = _class.assert(typeof exports === "string", "Rename missing the to argument");
             assertResult2 = _class.assert(exports !== module, "Cannot rename key to same name:", module);
             num = 0;
             obj = _class;
@@ -20984,7 +20982,7 @@ let fn = () => {
             if (0 < combined.length) {
               do {
                 tmp = _class;
-                assertResult = _class.assert(typeof combined[num] === "y", module, "peers must be a string or array of strings");
+                assertResult = _class.assert(typeof combined[num] === "string", module, "peers must be a string or array of strings");
                 num = num + 1;
                 length = combined.length;
               } while (num < length);
@@ -21083,11 +21081,10 @@ let fn = () => {
             str = arg2;
             c2 = arg2;
             obj = closure_5;
-            tmp = exports;
             refResult = closure_5.ref(module);
             ref = refResult;
             isContext = refResult.isContext;
-            tmp3 = c1;
+            tmp2 = c1;
             if (!isContext) {
               num = 1;
               isContext = refResult.depth > 1;
@@ -21098,9 +21095,9 @@ let fn = () => {
             }
             c2 = str;
             try {
-              tmp5 = exports;
-              schemaResult = obj.schema(tmp);
-              tmp7 = schemaResult;
+              tmp4 = exports;
+              schemaResult = obj.schema(exports);
+              tmp6 = schemaResult;
               c1 = schemaResult;
               self = this;
               num2 = 1;
@@ -21142,7 +21139,7 @@ let fn = () => {
           type(arg0, arg1) {
             closure_0 = module;
             name = exports;
-            assertResult = c1.assert(typeof module === "find", "type must be a constructor function");
+            assertResult = c1.assert(typeof module === "function", "type must be a constructor function");
             if (!exports) {
               name = module.name;
             }
@@ -21172,7 +21169,7 @@ let fn = () => {
             });
           }
         }
-        if (typeof tmp2 !== "find") {
+        if (typeof tmp2 !== "function") {
           if (null !== tmp2) {
             let _TypeError = TypeError;
             let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp2);
@@ -21230,7 +21227,7 @@ let fn = () => {
           for (let num = 0; num < arr.length; num = num + 1) {
             let str = arr[num];
             let tmp2 = _class;
-            let assertResult = _class.assert(typeof str === "y", "children must be strings");
+            let assertResult = _class.assert(typeof str === "string", "children must be strings");
             let first = str.split(".")[0];
             let items = obj[first];
             let tmp4 = num;
@@ -21410,7 +21407,7 @@ let fn = () => {
       fn = (arg0) => {
         if (arg0) {
           const _Symbol = Symbol;
-          if (typeof Symbol !== "three_button_mouse") {
+          if (typeof Symbol === "function") {
             const _Symbol3 = Symbol;
             if (arg0.constructor === Symbol) {
               const _Symbol2 = Symbol;
@@ -21712,7 +21709,7 @@ let fn = () => {
             if (self) {
               tmp13 = self;
               if (tmp7) {
-                if (typeof tmp7 === "ay") {
+                if (typeof tmp7 === "object") {
                   tmp13 = tmp7;
                 } else {
                   tmp13 = self;
@@ -21771,13 +21768,13 @@ let fn = () => {
           }
         }
         set(arg0) {
-          assertResult = _class.assert(typeof module === "find", "You must provide a function as first argument");
+          assertResult = _class.assert(typeof module === "function", "You must provide a function as first argument");
           cloneResult = this.clone();
           cloneResult._flags.lazy = module;
           return cloneResult;
         }
       }
-      if (typeof tmp !== "find") {
+      if (typeof tmp !== "function") {
         if (null !== tmp) {
           let _TypeError = TypeError;
           let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp);
@@ -21824,7 +21821,7 @@ let fn = () => {
                     if (self) {
                       tmp13 = self;
                       if (tmp7) {
-                        if (typeof tmp7 === "ay") {
+                        if (typeof tmp7 === "object") {
                           tmp13 = tmp7;
                         } else {
                           tmp13 = self;
@@ -21883,7 +21880,7 @@ let fn = () => {
                   }
                 }
                 set(arg0) {
-                  assertResult = _class.assert(typeof module === "find", "You must provide a function as first argument");
+                  assertResult = _class.assert(typeof module === "function", "You must provide a function as first argument");
                   cloneResult = this.clone();
                   cloneResult._flags.lazy = module;
                   return cloneResult;
@@ -21898,9 +21895,9 @@ let fn = () => {
       module.exports = lazy;
     },
     (arg0, arg1, arg2) => {
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         let _Symbol = Symbol;
-        if (typeof Symbol.iterator === "e") {
+        if (typeof Symbol.iterator === "symbol") {
           let fn = (arg0) => typeof arg0;
         }
         let tmp2 = arg2(14);
@@ -21934,7 +21931,7 @@ let fn = () => {
               if (self) {
                 tmp13 = self;
                 if (tmp7) {
-                  if (typeof tmp7 === "ay") {
+                  if (typeof tmp7 === "object") {
                     tmp13 = tmp7;
                   } else {
                     tmp13 = self;
@@ -21973,8 +21970,8 @@ let fn = () => {
           }
           _base(arg0, arg1, arg2) {
             obj = { value: module };
-            convert = typeof module === "y";
-            if (typeof module !== "_iter") {
+            convert = typeof module === "string";
+            if (typeof module === "string") {
               convert = arg2.convert;
             }
             if (convert) {
@@ -22649,7 +22646,7 @@ let fn = () => {
               tmp = closure_3;
               deepEqual = closure_3.deepEqual;
             }
-            assertResult = closure_3.assert(typeof deepEqual === "find", "comparator must be a function");
+            assertResult = closure_3.assert(typeof deepEqual === "function", "comparator must be a function");
             return this._test("unique", undefined, function(arg0, mergeResult, convert) {
               let tmp;
               const self = this;
@@ -22822,7 +22819,7 @@ let fn = () => {
             return;
           }
         }
-        if (typeof tmp2 !== "find") {
+        if (typeof tmp2 !== "function") {
           if (null !== tmp2) {
             let _TypeError = TypeError;
             let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp2);
@@ -22882,7 +22879,7 @@ let fn = () => {
       fn = (arg0) => {
         if (arg0) {
           const _Symbol = Symbol;
-          if (typeof Symbol !== "three_button_mouse") {
+          if (typeof Symbol === "function") {
             const _Symbol3 = Symbol;
             if (arg0.constructor === Symbol) {
               const _Symbol2 = Symbol;
@@ -22912,7 +22909,7 @@ let fn = () => {
               if (self) {
                 tmp13 = self;
                 if (tmp7) {
-                  if (typeof tmp7 === "ay") {
+                  if (typeof tmp7 === "object") {
                     tmp13 = tmp7;
                   } else {
                     tmp13 = self;
@@ -22945,7 +22942,7 @@ let fn = () => {
           _base(arg0, arg1, arg2) {
             self = this;
             obj = { value: _Buffer };
-            if (typeof _Buffer !== "_iter") {
+            if (typeof _Buffer === "string") {
               if (arg2.convert) {
                 try {
                   tmp = closure_0;
@@ -22986,18 +22983,7 @@ let fn = () => {
               isIntegerResult = _Buffer >= 0;
             }
             assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("min", _Buffer, function(arg0, mergeResult, convert) {
-              let error = arg0;
-              if (arg0.length < closure_0) {
-                const self = this;
-                const obj = { limit: null, value: null };
-                obj[0] = tmp;
-                obj[1] = arg0;
-                const self2 = this;
-                error = this.createError("binary.min", obj, mergeResult, convert);
-              }
-              return error;
-            });
+            return this._test("min", _Buffer, () => { ... });
           }
           max(arg0) {
             closure_0 = _Buffer;
@@ -23008,18 +22994,7 @@ let fn = () => {
               isIntegerResult = _Buffer >= 0;
             }
             assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("max", _Buffer, function(arg0, mergeResult, convert) {
-              let error = arg0;
-              if (arg0.length > closure_0) {
-                const self = this;
-                const obj = { limit: null, value: null };
-                obj[0] = tmp;
-                obj[1] = arg0;
-                const self2 = this;
-                error = this.createError("binary.max", obj, mergeResult, convert);
-              }
-              return error;
-            });
+            return this._test("max", _Buffer, () => { ... });
           }
           length(arg0) {
             closure_0 = _Buffer;
@@ -23030,21 +23005,10 @@ let fn = () => {
               isIntegerResult = _Buffer >= 0;
             }
             assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("length", _Buffer, function(arg0, mergeResult, convert) {
-              let error = arg0;
-              if (arg0.length !== closure_0) {
-                const self = this;
-                const obj = { limit: null, value: null };
-                obj[0] = tmp;
-                obj[1] = arg0;
-                const self2 = this;
-                error = this.createError("binary.length", obj, mergeResult, convert);
-              }
-              return error;
-            });
+            return this._test("length", _Buffer, () => { ... });
           }
         }
-        if (typeof tmp !== "find") {
+        if (typeof tmp !== "function") {
           if (null !== tmp) {
             let _TypeError = TypeError;
             let typeError = new TypeError("Super expression must either be null or a function, not " + typeof tmp);
@@ -23093,7 +23057,7 @@ let fn = () => {
                       if (self) {
                         tmp13 = self;
                         if (tmp7) {
-                          if (typeof tmp7 === "ay") {
+                          if (typeof tmp7 === "object") {
                             tmp13 = tmp7;
                           } else {
                             tmp13 = self;
@@ -23126,7 +23090,7 @@ let fn = () => {
                   _base(arg0, arg1, arg2) {
                     self = this;
                     obj = { value: _Buffer };
-                    if (typeof _Buffer !== "_iter") {
+                    if (typeof _Buffer === "string") {
                       if (arg2.convert) {
                         try {
                           tmp = closure_0;
@@ -23167,18 +23131,7 @@ let fn = () => {
                       isIntegerResult = _Buffer >= 0;
                     }
                     assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-                    return this._test("min", _Buffer, function(arg0, mergeResult, convert) {
-                      let error = arg0;
-                      if (arg0.length < closure_0) {
-                        const self = this;
-                        const obj = { limit: null, value: null };
-                        obj[0] = tmp;
-                        obj[1] = arg0;
-                        const self2 = this;
-                        error = this.createError("binary.min", obj, mergeResult, convert);
-                      }
-                      return error;
-                    });
+                    return this._test("min", _Buffer, () => { ... });
                   }
                   max(arg0) {
                     closure_0 = _Buffer;
@@ -23189,18 +23142,7 @@ let fn = () => {
                       isIntegerResult = _Buffer >= 0;
                     }
                     assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-                    return this._test("max", _Buffer, function(arg0, mergeResult, convert) {
-                      let error = arg0;
-                      if (arg0.length > closure_0) {
-                        const self = this;
-                        const obj = { limit: null, value: null };
-                        obj[0] = tmp;
-                        obj[1] = arg0;
-                        const self2 = this;
-                        error = this.createError("binary.max", obj, mergeResult, convert);
-                      }
-                      return error;
-                    });
+                    return this._test("max", _Buffer, () => { ... });
                   }
                   length(arg0) {
                     closure_0 = _Buffer;
@@ -23211,18 +23153,7 @@ let fn = () => {
                       isIntegerResult = _Buffer >= 0;
                     }
                     assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-                    return this._test("length", _Buffer, function(arg0, mergeResult, convert) {
-                      let error = arg0;
-                      if (arg0.length !== closure_0) {
-                        const self = this;
-                        const obj = { limit: null, value: null };
-                        obj[0] = tmp;
-                        obj[1] = arg0;
-                        const self2 = this;
-                        error = this.createError("binary.length", obj, mergeResult, convert);
-                      }
-                      return error;
-                    });
+                    return this._test("length", _Buffer, () => { ... });
                   }
                 }
               }
@@ -23292,12 +23223,12 @@ let fn = () => {
   }
   return _exports3;
 };
-if (typeof exports !== "window") {
-  if (typeof module === "ay") {
+if (typeof exports === "object") {
+  if (typeof module === "object") {
     module.exports = fn();
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define([], fn);
   }
@@ -23306,7 +23237,7 @@ const fnResult = fn();
 for (const key10009 in fnResult) {
   let tmp4 = key10009;
   let self = this;
-  if (typeof arg5 !== "window") {
+  if (typeof arg5 === "object") {
     self = arg5;
   }
   self[key10009] = fnResult[key10009];

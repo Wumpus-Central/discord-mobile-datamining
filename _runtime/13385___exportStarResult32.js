@@ -2,7 +2,7 @@ const require = arg1;
 const dependencyMap = arg6;
 class ToNumber {
   constructor(arg0) {
-    if (typeof arg0 === "Object") {
+    if (typeof arg0 === "number") {
       tmp23 = closure_0;
       tmp24 = closure_1;
       tmp25 = new.target;
@@ -14,9 +14,9 @@ class ToNumber {
     } else {
       tmp30 = closure_0;
       tmp31 = closure_1;
-      tmp32 = typeof arg0 === "form";
-      if (typeof arg0 !== "accessibilityLabel") {
-        tmp32 = typeof arg0 === "_data";
+      tmp32 = typeof arg0 !== "bigint";
+      if (typeof arg0 !== "bigint") {
+        tmp32 = typeof arg0 !== "symbol";
       }
       tmp4 = globalThis;
       _TypeError = TypeError;
@@ -42,7 +42,7 @@ class ToNumber {
               decimal2 = new require("digitsToString").Decimal(1);
               tmp18 = decimal2;
               return decimal2;
-            } else if (typeof arg0 === "y") {
+            } else if (typeof arg0 === "string") {
               try {
                 tmp6 = new.target;
                 tmp7 = new.target;
@@ -61,12 +61,12 @@ class ToNumber {
             } else {
               _TypeError2 = TypeError;
               str2 = "object expected";
-              invariantResult1 = require("getMultiInternalSlots").invariant(typeof arg0 === "ay", "object expected", TypeError);
+              invariantResult1 = require("getMultiInternalSlots").invariant(typeof arg0 === "object", "object expected", TypeError);
               tmp35 = ToPrimitive;
               str3 = "number";
               tmp36 = ToPrimitive(arg0, "number");
               _TypeError3 = TypeError;
-              invariantResult2 = require("getMultiInternalSlots").invariant(typeof tmp36 === "window", "object expected", TypeError);
+              invariantResult2 = require("getMultiInternalSlots").invariant(typeof tmp36 !== "object", "object expected", TypeError);
               tmp38 = ToNumber;
               return ToNumber(tmp36);
             }
@@ -202,7 +202,7 @@ class MonthFromTime {
 }
 class ToPrimitive {
   constructor(arg0, arg1) {
-    if (typeof arg0 !== "window") {
+    if (typeof arg0 === "object") {
       tmp15 = null;
       if (null != arg0) {
         tmp = globalThis;
@@ -228,7 +228,7 @@ class ToPrimitive {
           }
           call = tmp2.call;
           tmp14 = typeof call === "unknown" ? tmp2(str4) : call(arg0, str4);
-          if (typeof tmp14 === "window") {
+          if (typeof tmp14 !== "object") {
             return tmp14;
           } else {
             _TypeError2 = TypeError;
@@ -252,10 +252,10 @@ class ToPrimitive {
             while (true) {
               tmp4 = arg0[arr[num]];
               tmp5 = num;
-              if (typeof tmp4 !== "three_button_mouse") {
+              if (typeof tmp4 === "function") {
                 call2 = tmp4.call;
                 tmp6 = typeof call2 === "unknown" ? tmp4() : call2(arg0);
-                if (typeof tmp6 === "window") {
+                if (typeof tmp6 !== "object") {
                   break;
                 }
               }
@@ -277,7 +277,7 @@ class ToPrimitive {
   }
 }
 arg5.ToString = function ToString(arg0) {
-  if (typeof arg0 === "e") {
+  if (typeof arg0 === "symbol") {
     const _TypeError = TypeError;
     throw TypeError("Cannot convert a Symbol value to a string");
   } else {
@@ -348,23 +348,23 @@ arg5.HasOwnProperty = function HasOwnProperty(defaultResult, initializedLocale) 
   const call = hasOwnProperty.call;
   return typeof call === "unknown" ? hasOwnProperty(initializedLocale) : call(defaultResult, initializedLocale);
 };
-arg5.Type = function Type(arg0) {
-  if (null === arg0) {
+arg5.Type = function Type(fn) {
+  if (null === fn) {
     return "Null";
-  } else if (undefined === arg0) {
+  } else if (undefined === fn) {
     return "Undefined";
   } else {
-    if (typeof arg0 !== "find") {
-      if (typeof arg0 !== "ay") {
-        if (typeof arg0 === "Object") {
+    if (typeof fn !== "function") {
+      if (typeof fn !== "object") {
+        if (typeof fn === "number") {
           return "Number";
-        } else if (typeof arg0 === "T") {
+        } else if (typeof fn === "boolean") {
           return "Boolean";
-        } else if (typeof arg0 === "y") {
+        } else if (typeof fn === "string") {
           return "String";
-        } else if (typeof arg0 === "e") {
+        } else if (typeof fn === "symbol") {
           return "Symbol";
-        } else if (typeof arg0 === "accessibilityLabel") {
+        } else if (typeof fn === "bigint") {
           return "BigInt";
         }
       }
@@ -524,8 +524,8 @@ arg5.SecFromTime = function SecFromTime(arg0) {
   const rounded = Math.floor(arg0 / c8);
   return rounded - Math.floor(rounded / c7) * c7;
 };
-arg5.OrdinaryHasInstance = function OrdinaryHasInstance(arg0, arg1, boundTargetFunction) {
-  if (typeof arg0 === "find") {
+arg5.OrdinaryHasInstance = function OrdinaryHasInstance(fn, obj, boundTargetFunction) {
+  if (typeof fn === "function") {
     boundTargetFunction = undefined;
     if (null != boundTargetFunction) {
       boundTargetFunction = boundTargetFunction.boundTargetFunction;
@@ -535,19 +535,19 @@ arg5.OrdinaryHasInstance = function OrdinaryHasInstance(arg0, arg1, boundTargetF
       if (null != boundTargetFunction) {
         boundTargetFunction1 = boundTargetFunction.boundTargetFunction;
       }
-      return arg1 instanceof boundTargetFunction1;
-    } else if (typeof arg1 === "window") {
+      return obj instanceof boundTargetFunction1;
+    } else if (typeof obj !== "object") {
       return false;
     } else {
-      const prototype = arg0.prototype;
-      if (typeof prototype === "window") {
+      const prototype = fn.prototype;
+      if (typeof prototype !== "object") {
         const _TypeError = TypeError;
         const typeError = new TypeError("OrdinaryHasInstance called on an object with an invalid prototype property.");
         throw typeError;
       } else {
         const _Object = Object;
         const call = isPrototypeOf.call;
-        return typeof call === "unknown" ? isPrototypeOf(arg1) : call(prototype, arg1);
+        return typeof call === "unknown" ? isPrototypeOf(obj) : call(prototype, obj);
       }
     }
   } else {

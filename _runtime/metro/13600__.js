@@ -17,7 +17,7 @@ arg5.default = () => (startTimer) => {
       }
       items.push({ title, time: 0, delta: 0 });
       function stop(title) {
-        if (typeof step !== "find") {
+        if (typeof step !== "function") {
           HermesBuiltin.throwTypeError();
         }
         let arr = items;

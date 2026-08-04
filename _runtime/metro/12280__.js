@@ -121,7 +121,7 @@ if (self2) {
           const issues = iter.issues;
           let obj = { origin: null, code: "too_big", maximum: null, input: null, inclusive: null, inst: null, continue: null };
           obj[0] = closure_2;
-          if (typeof iter2.value === "ay") {
+          if (typeof iter2.value === "object") {
             value = iter2.value;
             let time = value.getTime();
           } else {
@@ -170,7 +170,7 @@ if (self2) {
           const issues = iter.issues;
           let obj = { origin: null, code: "too_small", minimum: null, input: null, inclusive: null, inst: null, continue: null };
           obj[0] = closure_2;
-          if (typeof iter2.value === "ay") {
+          if (typeof iter2.value === "object") {
             value = iter2.value;
             let time = value.getTime();
           } else {
@@ -205,7 +205,7 @@ if (self2) {
           const error = new Error("Cannot mix number and bigint in multiple_of check.");
           throw error;
         } else {
-          if (typeof value.value === "accessibilityLabel") {
+          if (typeof value.value === "bigint") {
             const _BigInt = BigInt;
             const result = value.value % iter.value;
             let tmp3 = result === BigInt(0);
@@ -714,7 +714,7 @@ if (self2) {
       $ZodCheck.init(_zod, position);
       const escapeRegexResult = closure_5.escapeRegex(position.includes);
       let combined = escapeRegexResult;
-      if (typeof position.position !== "V") {
+      if (typeof position.position === "number") {
         const _HermesInternal = HermesInternal;
         combined = "^.{" + position.position + "}" + escapeRegexResult;
       }

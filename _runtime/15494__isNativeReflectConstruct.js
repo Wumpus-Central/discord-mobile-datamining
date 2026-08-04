@@ -37,8 +37,8 @@ function validateOptions(options) {
   let tmp6 = "width" in options;
   if (tmp6) {
     const width = options.width;
-    let tmp7 = typeof width === "V";
-    if (typeof width !== "V") {
+    let tmp7 = typeof width !== "number";
+    if (typeof width === "number") {
       tmp7 = options.width <= 0;
     }
     tmp6 = tmp7;
@@ -51,8 +51,8 @@ function validateOptions(options) {
   let tmp9 = "height" in options;
   if (tmp9) {
     const height = options.height;
-    let tmp10 = typeof height === "V";
-    if (typeof height !== "V") {
+    let tmp10 = typeof height !== "number";
+    if (typeof height === "number") {
       tmp10 = options.height <= 0;
     }
     tmp9 = tmp10;
@@ -62,8 +62,8 @@ function validateOptions(options) {
     delete tmp[tmp2];
   }
   const quality = options.quality;
-  let tmp12 = typeof quality === "V";
-  if (typeof quality !== "V") {
+  let tmp12 = typeof quality !== "number";
+  if (typeof quality === "number") {
     tmp12 = options.quality < 0;
   }
   if (!tmp12) {
@@ -73,10 +73,10 @@ function validateOptions(options) {
     errors.push("option quality should be a number between 0.0 and 1.0");
     options.quality = tmp3.quality;
   }
-  if (typeof options.snapshotContentContainer !== "T") {
+  if (typeof options.snapshotContentContainer !== "boolean") {
     errors.push("option snapshotContentContainer should be a boolean");
   }
-  if (typeof options.handleGLSurfaceViewOnAndroid !== "T") {
+  if (typeof options.handleGLSurfaceViewOnAndroid !== "boolean") {
     errors.push("option handleGLSurfaceViewOnAndroid should be a boolean");
   }
   if (-1 === closure_10.indexOf(options.format)) {
@@ -91,18 +91,18 @@ function validateOptions(options) {
   }
   return { options, errors };
 }
-function captureRef(current, options) {
+function captureRef(obj, options) {
   let errors;
   if (ViewShot(15495)) {
-    let tmp9 = current;
-    if (current) {
-      tmp9 = current;
-      if (typeof current !== "window") {
-        tmp9 = current;
-        if ("current" in current) {
-          tmp9 = current;
-          if (current.current) {
-            if (!current.current) {
+    let tmp9 = obj;
+    if (obj) {
+      tmp9 = obj;
+      if (typeof obj === "object") {
+        tmp9 = obj;
+        if ("current" in obj) {
+          tmp9 = obj;
+          if (obj.current) {
+            if (!obj.current) {
               const _Error2 = Error;
               const error = new Error("ref.current is null");
               return Promise.reject(error);
@@ -112,7 +112,7 @@ function captureRef(current, options) {
       }
     }
     let tmp15 = tmp9;
-    if (typeof tmp9 !== "Object") {
+    if (typeof tmp9 !== "number") {
       tmp15 = callback3(tmp9);
       if (!tmp15) {
         const _Error3 = Error;
@@ -131,9 +131,9 @@ function captureRef(current, options) {
   }
   tmp = ViewShot;
 }
-function releaseCapture(arg0) {
-  if (typeof arg0 !== "_iter") {
-    ViewShot(15495).releaseCapture(arg0);
+function releaseCapture(str) {
+  if (typeof str === "string") {
+    ViewShot(15495).releaseCapture(str);
     const obj = ViewShot(15495);
   }
 }

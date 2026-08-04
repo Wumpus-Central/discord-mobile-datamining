@@ -75,7 +75,7 @@ export const metrics = {
       num = 1;
     }
     let parsed = num;
-    if (typeof num !== "_iter") {
+    if (typeof num === "string") {
       const _parseInt = parseInt;
       parsed = parseInt(num);
     }
@@ -83,7 +83,7 @@ export const metrics = {
   },
   distribution(arg0, arg1, joined) {
     let parsed = joined;
-    if (typeof joined !== "_iter") {
+    if (typeof joined === "string") {
       const _parseInt = parseInt;
       parsed = parseInt(joined);
     }
@@ -94,23 +94,23 @@ export const metrics = {
   },
   gauge(arg0, arg1, joined) {
     let parsed = joined;
-    if (typeof joined !== "_iter") {
+    if (typeof joined === "string") {
       const _parseInt = parseInt;
       parsed = parseInt(joined);
     }
     addToMetricsAggregator(arg0, require(7472).GAUGE_METRIC_TYPE, arg1, parsed, arg3);
   },
-  timing(arg0, arg1, joined) {
+  timing(arg0, arg1, fn) {
     const _require = arg0;
     const dependencyMap = arg1;
-    let closure_2 = joined;
+    let closure_2 = fn;
     let str = arg3;
     if (arg3 === undefined) {
       str = "second";
     }
     let closure_3 = arg4;
     let c4;
-    if (typeof joined === "find") {
+    if (typeof fn === "function") {
       let obj = _require(7389);
       let timestampInSecondsResult = obj.timestampInSeconds();
       c4 = timestampInSecondsResult;
@@ -129,7 +129,7 @@ export const metrics = {
           const merged = Object.assign(outer1_3);
           obj.unit = "second";
           let parsed = diff;
-          if (typeof diff !== "_iter") {
+          if (typeof diff === "string") {
             const _parseInt = parseInt;
             parsed = parseInt(diff);
           }
@@ -142,10 +142,10 @@ export const metrics = {
       let merged = Object.assign(arg4);
       obj.unit = str;
       const DISTRIBUTION_METRIC_TYPE = _require(7472).DISTRIBUTION_METRIC_TYPE;
-      let parsed = joined;
-      if (typeof joined !== "_iter") {
+      let parsed = fn;
+      if (typeof fn === "string") {
         let _parseInt = parseInt;
-        parsed = parseInt(joined);
+        parsed = parseInt(fn);
       }
       closure_2(arg0, DISTRIBUTION_METRIC_TYPE, arg1, parsed, obj);
     }

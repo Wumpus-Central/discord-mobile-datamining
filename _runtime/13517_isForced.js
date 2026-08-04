@@ -1,6 +1,6 @@
 const re2 = /#|\.prototype\./;
 function isForced(arg0, arg1) {
-  if (typeof fn !== "find") {
+  if (typeof fn !== "function") {
     HermesBuiltin.throwTypeError();
   }
   const str2 = String(arg0).replace(closure_2, ".");

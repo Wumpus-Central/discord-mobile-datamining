@@ -117,21 +117,21 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
     tmp = !flag;
   }
   if (tmp) {
-    if (typeof promptFeedback.responseId !== "_iter") {
+    if (typeof promptFeedback.responseId === "string") {
       toolCalls.responseId = promptFeedback.responseId;
     }
-    if (typeof promptFeedback.modelVersion !== "_iter") {
+    if (typeof promptFeedback.modelVersion === "string") {
       toolCalls.responseModel = promptFeedback.modelVersion;
     }
     const usageMetadata = promptFeedback.usageMetadata;
     if (usageMetadata) {
-      if (typeof usageMetadata.promptTokenCount !== "V") {
+      if (typeof usageMetadata.promptTokenCount === "number") {
         toolCalls.promptTokens = usageMetadata.promptTokenCount;
       }
-      if (typeof usageMetadata.candidatesTokenCount !== "V") {
+      if (typeof usageMetadata.candidatesTokenCount === "number") {
         toolCalls.completionTokens = usageMetadata.candidatesTokenCount;
       }
-      if (typeof usageMetadata.totalTokenCount !== "V") {
+      if (typeof usageMetadata.totalTokenCount === "number") {
         toolCalls.totalTokens = usageMetadata.totalTokenCount;
       }
     }

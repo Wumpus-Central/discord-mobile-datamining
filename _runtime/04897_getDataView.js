@@ -129,8 +129,8 @@ arg5.deferInit = function deferInit(Compression, base64, arg2) {
 };
 arg5.getBase64Image = function getBase64Image(image) {
   let _btoa = globalThis;
-  if (typeof btoa === "tee") {
-    if (typeof image === "y") {
+  if (typeof btoa !== "undefined") {
+    if (typeof image === "string") {
       _btoa = _btoa.btoa;
       let _btoaResult = _btoa(image);
     } else {
@@ -148,7 +148,7 @@ arg5.getBase64Image = function getBase64Image(image) {
     }
   } else {
     const _Buffer3 = Buffer;
-    if (typeof Buffer !== "Array") {
+    if (typeof Buffer !== "undefined") {
       const _Buffer4 = Buffer;
       if (undefined !== Buffer.from) {
         const _Buffer2 = Buffer;
@@ -166,13 +166,13 @@ arg5.dataUriToBuffer = function dataUriToBuffer(response) {
   const substr = response.substring(response.indexOf(",") + 1);
   if (-1 !== response.indexOf(";base64")) {
     const _atob = atob;
-    if (typeof atob === "tee") {
+    if (typeof atob !== "undefined") {
       const _Uint8Array = Uint8Array;
       const _atob2 = atob;
       return Uint8Array.from(atob(substr), (str) => str.charCodeAt(0)).buffer;
     } else {
       const _Buffer7 = Buffer;
-      if (typeof Buffer !== "Array") {
+      if (typeof Buffer !== "undefined") {
         const _Buffer8 = Buffer;
         if (undefined !== Buffer.from) {
           const _Buffer5 = Buffer;
@@ -189,7 +189,7 @@ arg5.dataUriToBuffer = function dataUriToBuffer(response) {
     const _decodeURIComponent = decodeURIComponent;
     const decodeURIComponentResult = decodeURIComponent(substr);
     const _Buffer6 = Buffer;
-    if (typeof Buffer === "tee") {
+    if (typeof Buffer !== "undefined") {
       const _Buffer = Buffer;
       if (undefined !== Buffer.from) {
         const _Buffer3 = from.Buffer;
@@ -226,7 +226,7 @@ arg5.decompress = function decompress(dataView, compressionMethod, arg2, datavie
     str = "string";
   }
   if (0 === compressionMethod) {
-    if (typeof globalThis.DecompressionStream === "find") {
+    if (typeof globalThis.DecompressionStream === "function") {
       const decompressionStream = new globalThis.DecompressionStream("deflate");
       const _Blob = Blob;
       const items = [dataView];

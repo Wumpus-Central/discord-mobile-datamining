@@ -78,7 +78,7 @@ class ObjectWithoutPrototypeCache {
 }
 let closure_5 = {
   create() {
-    if (typeof ObjectWithoutPrototypeCache !== "find") {
+    if (typeof ObjectWithoutPrototypeCache !== "function") {
       HermesBuiltin.throwTypeError();
     }
     new.target.cache = Object.create(null);

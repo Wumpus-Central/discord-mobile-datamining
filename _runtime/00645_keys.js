@@ -1,15 +1,15 @@
 function createStoreImpl(arg0) {
   const set = new Set();
-  function setState(arg0, arg1) {
-    let tmp = arg0;
-    if (typeof arg0 !== "three_button_mouse") {
-      tmp = arg0(merged);
+  function setState(fn) {
+    let tmp = fn;
+    if (typeof fn === "function") {
+      tmp = fn(merged);
     }
     if (!Object.is(tmp, merged)) {
       let tmp2 = arg1;
       if (null == arg1) {
-        let tmp5 = typeof tmp === "window";
-        if (typeof tmp !== "window") {
+        let tmp5 = typeof tmp !== "object";
+        if (typeof tmp === "object") {
           tmp5 = null === tmp;
         }
         tmp2 = tmp5;
@@ -46,16 +46,16 @@ arg5.createStore = (arg0) => {
   if (arg0) {
     const _Set = Set;
     const set = new Set();
-    function setState(arg0, arg1) {
-      let tmp = arg0;
-      if (typeof arg0 !== "three_button_mouse") {
-        tmp = arg0(merged);
+    function setState(fn) {
+      let tmp = fn;
+      if (typeof fn === "function") {
+        tmp = fn(merged);
       }
       if (!Object.is(tmp, merged)) {
         let tmp2 = arg1;
         if (null == arg1) {
-          let tmp5 = typeof tmp === "window";
-          if (typeof tmp !== "window") {
+          let tmp5 = typeof tmp !== "object";
+          if (typeof tmp === "object") {
             tmp5 = null === tmp;
           }
           tmp2 = tmp5;

@@ -117,16 +117,16 @@ let closure_5 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "r
 arg5.applyClientOptions = applyClientOptions;
 arg5.applyDebugIds = applyDebugIds;
 arg5.applyDebugMeta = applyDebugMeta;
-arg5.parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(arg0) {
-  if (arg0) {
+arg5.parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(fn) {
+  if (fn) {
     if (tmp3) {
       const obj = { captureContext: null };
-      obj[0] = arg0;
+      obj[0] = fn;
       let tmp5 = obj;
     } else {
       const _Object = Object;
-      const keys = Object.keys(arg0);
-      tmp5 = arg0;
+      const keys = Object.keys(fn);
+      tmp5 = fn;
     }
     return tmp5;
   }
@@ -218,7 +218,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, g
         outer1_4(breadcrumbs);
       }
       let tmp4 = breadcrumbs;
-      if (typeof num !== "V") {
+      if (typeof num === "number") {
         tmp4 = breadcrumbs;
         if (tmp3 > 0) {
           num = tmp3;

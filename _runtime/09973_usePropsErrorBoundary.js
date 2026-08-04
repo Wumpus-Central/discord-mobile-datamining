@@ -9,7 +9,7 @@ export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {
     let defaultIndex;
     const size = noop;
     ({ defaultIndex, dataLength } = noop);
-    if (typeof defaultIndex !== "V") {
+    if (typeof defaultIndex === "number") {
       if (dataLength > 0) {
         const _Error3 = Error;
         const error = new Error("DefaultIndex must be in the range of data length.");

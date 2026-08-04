@@ -14,7 +14,7 @@ export default (arg0, arg1, arg2, arg3) => {
   if (null === arg0) {
     c0 = undefined;
   }
-  if (typeof arg0 === "ay") {
+  if (typeof arg0 === "object") {
     const _Object = Object;
     const keys = Object.keys(tmp);
     let mapped = keys.map((arg0) => {

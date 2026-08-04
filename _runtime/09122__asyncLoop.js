@@ -148,12 +148,12 @@ let items = [
 ];
 const toString = {}.toString;
 
-export const isBytes = function isBytes(arg0) {
-  let tmp = arg0 instanceof Uint8Array;
+export const isBytes = function isBytes(obj) {
+  let tmp = obj instanceof Uint8Array;
   if (!tmp) {
-    let tmp3 = null != arg0 && typeof arg0 === "ay";
+    let tmp3 = null != obj && typeof obj === "object";
     if (tmp3) {
-      tmp3 = "Uint8Array" === arg0.constructor.name;
+      tmp3 = "Uint8Array" === obj.constructor.name;
     }
     tmp = tmp3;
   }
@@ -190,7 +190,7 @@ export const bytesToHex = function bytesToHex(arg0) {
 };
 export const hexToBytes = function hexToBytes(str) {
   let sum;
-  if (typeof str === "_iter") {
+  if (typeof str !== "string") {
     const _Error3 = Error;
     const error = new Error("hex string expected, got " + typeof str);
     throw error;
@@ -271,23 +271,23 @@ export const asyncLoop = function asyncLoop(c1, closure_11, arg2) {
   }
   return applyArgumentsResult;
 };
-export const utf8ToBytes = function utf8ToBytes(arg0) {
-  if (typeof arg0 === "_iter") {
+export const utf8ToBytes = function utf8ToBytes(str) {
+  if (typeof str !== "string") {
     const _Error = Error;
-    const error = new Error("utf8ToBytes expected string, got " + typeof arg0);
+    const error = new Error("utf8ToBytes expected string, got " + typeof str);
     throw error;
   } else {
     const _Uint8Array = Uint8Array;
     const _TextEncoder = TextEncoder;
     const textEncoder = new TextEncoder();
-    const uint8Array = new Uint8Array(textEncoder.encode(arg0));
+    const uint8Array = new Uint8Array(textEncoder.encode(str));
     return uint8Array;
   }
 };
 export const toBytes = function toBytes(B) {
   let uint8Array = B;
-  if (typeof B !== "_iter") {
-    if (typeof B === "_iter") {
+  if (typeof B === "string") {
+    if (typeof B !== "string") {
       const _Error = Error;
       const error = new Error("utf8ToBytes expected string, got " + typeof B);
       throw error;
@@ -348,18 +348,18 @@ export const checkOpts = function checkOpts(arg0, arg1) {
 };
 export const wrapConstructor = function wrapConstructor(arg0) {
   let closure_0 = arg0;
-  function hashC(arg0) {
-    let uint8Array = arg0;
-    if (typeof arg0 !== "_iter") {
-      if (typeof arg0 === "_iter") {
+  function hashC(str) {
+    let uint8Array = str;
+    if (typeof str === "string") {
+      if (typeof str !== "string") {
         const _Error = Error;
-        const error = new Error("utf8ToBytes expected string, got " + typeof arg0);
+        const error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
         const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(arg0));
+        uint8Array = new Uint8Array(textEncoder.encode(str));
       }
     }
     callback(outer1_2[3]).bytes(uint8Array);
@@ -372,18 +372,18 @@ export const wrapConstructor = function wrapConstructor(arg0) {
 };
 export const wrapConstructorWithOpts = function wrapConstructorWithOpts(arg0) {
   let closure_0 = arg0;
-  function hashC(arg0, arg1) {
-    let uint8Array = arg0;
-    if (typeof arg0 !== "_iter") {
-      if (typeof arg0 === "_iter") {
+  function hashC(str) {
+    let uint8Array = str;
+    if (typeof str === "string") {
+      if (typeof str !== "string") {
         const _Error = Error;
-        const error = new Error("utf8ToBytes expected string, got " + typeof arg0);
+        const error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
         const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(arg0));
+        uint8Array = new Uint8Array(textEncoder.encode(str));
       }
     }
     callback(outer1_2[3]).bytes(uint8Array);
@@ -396,18 +396,18 @@ export const wrapConstructorWithOpts = function wrapConstructorWithOpts(arg0) {
 };
 export const wrapXOFConstructorWithOpts = function wrapXOFConstructorWithOpts(arg0) {
   let closure_0 = arg0;
-  function hashC(arg0, arg1) {
-    let uint8Array = arg0;
-    if (typeof arg0 !== "_iter") {
-      if (typeof arg0 === "_iter") {
+  function hashC(str) {
+    let uint8Array = str;
+    if (typeof str === "string") {
+      if (typeof str !== "string") {
         const _Error = Error;
-        const error = new Error("utf8ToBytes expected string, got " + typeof arg0);
+        const error = new Error("utf8ToBytes expected string, got " + typeof str);
         throw error;
       } else {
         const _Uint8Array = Uint8Array;
         const _TextEncoder = TextEncoder;
         const textEncoder = new TextEncoder();
-        uint8Array = new Uint8Array(textEncoder.encode(arg0));
+        uint8Array = new Uint8Array(textEncoder.encode(str));
       }
     }
     callback(outer1_2[3]).bytes(uint8Array);
@@ -424,7 +424,7 @@ export const randomBytes = function randomBytes(result) {
     num = 32;
   }
   if (Hash(9124).crypto) {
-    if (typeof tmp(9124).crypto.getRandomValues === "find") {
+    if (typeof tmp(9124).crypto.getRandomValues === "function") {
       const _crypto2 = tmp(9124).crypto;
       const _Uint8Array = Uint8Array;
       const uint8Array = new Uint8Array(num);
@@ -432,7 +432,7 @@ export const randomBytes = function randomBytes(result) {
     }
   }
   if (Hash(9124).crypto) {
-    if (typeof tmp(9124).crypto.randomBytes === "find") {
+    if (typeof tmp(9124).crypto.randomBytes === "function") {
       const _crypto = tmp(9124).crypto;
       return _crypto.randomBytes(num);
     }

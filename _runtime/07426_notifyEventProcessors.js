@@ -11,7 +11,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
   return new _require(7399).SyncPromise((arg0, arg1) => {
     let dependencyMap = arg0;
     if (null !== table) {
-      if (typeof tmp3 !== "three_button_mouse") {
+      if (typeof tmp3 === "function") {
         let obj = {};
         let merged = Object.assign(tmp4);
         let tmp3Result = tmp3(obj, closure_2);
@@ -29,7 +29,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
             return new outer2_0(outer2_1[0]).SyncPromise((arg0, arg1) => {
               let dependencyMap = arg0;
               if (null !== table) {
-                if (typeof tmp3 !== "three_button_mouse") {
+                if (typeof tmp3 === "function") {
                   let obj = {};
                   let merged = Object.assign(tmp4);
                   let tmp3Result = tmp3(obj, closure_2);
@@ -59,7 +59,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                     let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
                       let dependencyMap = arg0;
                       if (null !== table) {
-                        if (typeof tmp3 !== "three_button_mouse") {
+                        if (typeof tmp3 === "function") {
                           let obj = {};
                           let merged = Object.assign(tmp4);
                           let tmp3Result = tmp3(obj, closure_2);
@@ -102,7 +102,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
             return new outer2_0(outer2_1[0]).SyncPromise((arg0, arg1) => {
               let dependencyMap = arg0;
               if (null !== table) {
-                if (typeof tmp3 !== "three_button_mouse") {
+                if (typeof tmp3 === "function") {
                   let obj = {};
                   let merged = Object.assign(tmp4);
                   let tmp3Result = tmp3(obj, closure_2);
@@ -132,7 +132,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                     let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
                       let dependencyMap = arg0;
                       if (null !== table) {
-                        if (typeof tmp3 !== "three_button_mouse") {
+                        if (typeof tmp3 === "function") {
                           let obj = {};
                           let merged = Object.assign(tmp4);
                           let tmp3Result = tmp3(obj, closure_2);
@@ -177,7 +177,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
           let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
             let dependencyMap = arg0;
             if (null !== table) {
-              if (typeof tmp3 !== "three_button_mouse") {
+              if (typeof tmp3 === "function") {
                 let obj = {};
                 let merged = Object.assign(tmp4);
                 let tmp3Result = tmp3(obj, closure_2);
@@ -195,7 +195,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                     return new outer2_0(outer2_1[0]).SyncPromise((arg0, arg1) => {
                       let dependencyMap = arg0;
                       if (null !== table) {
-                        if (typeof tmp3 !== "three_button_mouse") {
+                        if (typeof tmp3 === "function") {
                           let obj = {};
                           let merged = Object.assign(tmp4);
                           let tmp3Result = tmp3(obj, closure_2);
@@ -230,7 +230,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                     return new outer2_0(outer2_1[0]).SyncPromise((arg0, arg1) => {
                       let dependencyMap = arg0;
                       if (null !== table) {
-                        if (typeof tmp3 !== "three_button_mouse") {
+                        if (typeof tmp3 === "function") {
                           let obj = {};
                           let merged = Object.assign(tmp4);
                           let tmp3Result = tmp3(obj, closure_2);
@@ -267,7 +267,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                   let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
                     let dependencyMap = arg0;
                     if (null !== table) {
-                      if (typeof tmp3 !== "three_button_mouse") {
+                      if (typeof tmp3 === "function") {
                         let obj = {};
                         let merged = Object.assign(tmp4);
                         let tmp3Result = tmp3(obj, closure_2);
@@ -297,7 +297,7 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                           let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
                             let dependencyMap = arg0;
                             if (null !== table) {
-                              if (typeof tmp3 !== "three_button_mouse") {
+                              if (typeof tmp3 === "function") {
                                 let obj = {};
                                 let merged = Object.assign(tmp4);
                                 let tmp3Result = tmp3(obj, closure_2);

@@ -8,7 +8,7 @@ obj = {
   parseErrorStack(arg0) {
     const obj = require(190) /* parseErrorStack */;
     if (obj.default) {
-      if (typeof obj.default === "find") {
+      if (typeof obj.default === "function") {
         let defaultResult = obj.default(arg0);
       }
       return defaultResult;
@@ -18,7 +18,7 @@ obj = {
   symbolicateStackTrace(arg0, arg1) {
     const obj = require(998) /* _symbolicateStackTrace */;
     if (obj.default) {
-      if (typeof obj.default === "find") {
+      if (typeof obj.default === "function") {
         let defaultResult = obj.default(arg0, arg1);
       }
       return defaultResult;
@@ -28,7 +28,7 @@ obj = {
   getDevServer() {
     const obj = require(999) /* getDevServer */;
     if (obj.default) {
-      if (typeof obj.default === "find") {
+      if (typeof obj.default === "function") {
         let defaultResult = obj.default();
       }
       return defaultResult;

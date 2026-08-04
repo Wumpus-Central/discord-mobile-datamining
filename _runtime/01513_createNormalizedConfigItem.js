@@ -9,10 +9,10 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
   let routes;
   let reduce = config1;
   if (config1) {
-    if (typeof createNormalizedConfigItem !== "find") {
+    if (typeof createNormalizedConfigItem !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof reduce === "window") {
+    if (typeof reduce !== "object") {
       let obj = {};
     } else {
       let tmp2 = null;
@@ -22,7 +22,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
     tmp2 = tmp2 != reduce.screens;
     let reduced;
     if (tmp2) {
-      if (typeof createNormalizedConfigs !== "find") {
+      if (typeof createNormalizedConfigs !== "function") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -32,16 +32,16 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
         let tmp;
         let tmp2;
         [tmp, tmp2] = arg1;
-        if (typeof closure_0 !== "find") {
+        if (typeof closure_0 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp2 !== "window") {
+        if (typeof tmp2 === "object") {
           if (null != tmp2) {
             let obj = { initialRouteName: null, screens: null };
             obj[0] = tmp2.initialRouteName;
             let reduced;
             if (null != tmp2.screens) {
-              if (typeof closure_1 !== "find") {
+              if (typeof closure_1 !== "function") {
                 HermesBuiltin.throwTypeError();
               }
               let _Object = Object;
@@ -50,16 +50,16 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                 let tmp;
                 let tmp2;
                 [tmp, tmp2] = arg1;
-                if (typeof closure_0 !== "find") {
+                if (typeof closure_0 !== "function") {
                   HermesBuiltin.throwTypeError();
                 }
-                if (typeof tmp2 !== "window") {
+                if (typeof tmp2 === "object") {
                   if (null != tmp2) {
                     let obj = { initialRouteName: null, screens: null };
                     obj[0] = tmp2.initialRouteName;
                     let reduced;
                     if (null != tmp2.screens) {
-                      if (typeof closure_1 !== "find") {
+                      if (typeof closure_1 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
                       let _Object = Object;
@@ -68,16 +68,16 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                         let tmp;
                         let tmp2;
                         [tmp, tmp2] = arg1;
-                        if (typeof closure_0 !== "find") {
+                        if (typeof closure_0 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
-                        if (typeof tmp2 !== "window") {
+                        if (typeof tmp2 === "object") {
                           if (null != tmp2) {
                             let obj = { initialRouteName: null, screens: null };
                             obj[0] = tmp2.initialRouteName;
                             let reduced;
                             if (null != tmp2.screens) {
-                              if (typeof closure_1 !== "find") {
+                              if (typeof closure_1 !== "function") {
                                 HermesBuiltin.throwTypeError();
                               }
                               let _Object = Object;
@@ -86,16 +86,16 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
                                 let tmp;
                                 let tmp2;
                                 [tmp, tmp2] = arg1;
-                                if (typeof closure_0 !== "find") {
+                                if (typeof closure_0 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
-                                if (typeof tmp2 !== "window") {
+                                if (typeof tmp2 === "object") {
                                   if (null != tmp2) {
                                     let obj = { initialRouteName: null, screens: null };
                                     obj[0] = tmp2.initialRouteName;
                                     let reduced;
                                     if (null != tmp2.screens) {
-                                      if (typeof closure_1 !== "find") {
+                                      if (typeof closure_1 !== "function") {
                                         HermesBuiltin.throwTypeError();
                                       }
                                       let _Object = Object;

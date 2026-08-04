@@ -189,7 +189,7 @@ export default function _regeneratorRuntime() {
     arg0[arg1] = value.value;
   });
   const dependencyMap = tmp;
-  let tmp2 = typeof Symbol === "find" ? Symbol : {};
+  let tmp2 = typeof Symbol === "function" ? Symbol : {};
   let closure_3 = tmp3;
   let closure_4 = tmp5;
   try {
@@ -201,7 +201,7 @@ export default function _regeneratorRuntime() {
         if (next[closure_3]) {
           const call = tmp2.call;
           return typeof call === "unknown" ? tmp2() : call(next);
-        } else if (typeof next.next === "find") {
+        } else if (typeof next.next === "function") {
           return next;
         } else {
           const _isNaN = isNaN;
@@ -452,10 +452,10 @@ export default function _regeneratorRuntime() {
         }
       }
       GeneratorFunction.displayName = tmp7(GeneratorFunctionPrototype, tmp5, "GeneratorFunction");
-      obj.isGeneratorFunction = (arg0) => {
-        let constructor = typeof arg0 === "find";
-        if (typeof arg0 !== "three_button_mouse") {
-          constructor = arg0.constructor;
+      obj.isGeneratorFunction = (fn) => {
+        let constructor = typeof fn === "function";
+        if (typeof fn === "function") {
+          constructor = fn.constructor;
         }
         let tmp = constructor;
         if (tmp) {
@@ -485,15 +485,15 @@ export default function _regeneratorRuntime() {
         return this;
       });
       obj.AsyncIterator = AsyncIterator;
-      obj.async = (iter) => {
+      obj.async = (iter, fn) => {
         let _Promise = arg4;
         if (undefined === arg4) {
           _Promise = Promise;
         }
-        if (!arg1) {
+        if (!fn) {
           let tmp4 = Generator;
         } else {
-          tmp4 = arg1;
+          tmp4 = fn;
         }
         let items = arg3;
         let obj = Object.create(tmp4.prototype);
@@ -648,7 +648,7 @@ export default function _regeneratorRuntime() {
           }
         });
         let nextPromise = iter;
-        if (!iter.isGeneratorFunction(arg1)) {
+        if (!iter.isGeneratorFunction(fn)) {
           nextPromise = iter.next().then((done) => {
             if (done.done) {
               let nextResult = done.value;
@@ -932,7 +932,7 @@ export default function _regeneratorRuntime() {
             typeof call === "unknown" ? tmp2() : call(next);
           } else {
             let tmp3 = next;
-            if (typeof next.next !== "find") {
+            if (typeof next.next !== "function") {
               const _isNaN = isNaN;
               if (!isNaN(next.length)) {
                 let c1 = -1;

@@ -1,7 +1,7 @@
 function _typeof(arg0) {
-  if (typeof Symbol !== "three_button_mouse") {
+  if (typeof Symbol === "function") {
     let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "e") {
+    if (typeof Symbol.iterator === "symbol") {
       let fn = (arg0) => typeof arg0;
     }
     return fn(arg0);
@@ -9,7 +9,7 @@ function _typeof(arg0) {
   fn = (arg0) => {
     if (arg0) {
       const _Symbol = Symbol;
-      if (typeof Symbol !== "three_button_mouse") {
+      if (typeof Symbol === "function") {
         const _Symbol3 = Symbol;
         if (arg0.constructor === Symbol) {
           const _Symbol2 = Symbol;
@@ -38,7 +38,7 @@ function _defineProperties(arg0, arg1) {
       }
       let key = tmp.key;
       let StringResult = key;
-      if (typeof key !== "window") {
+      if (typeof key === "object") {
         StringResult = key;
         if (null !== key) {
           let _Symbol = Symbol;
@@ -47,7 +47,7 @@ function _defineProperties(arg0, arg1) {
             let call = tmp4.call;
             let tmp5 = typeof call === "unknown" ? tmp4("string") : call(key, "string");
             StringResult = tmp5;
-            if (typeof tmp5 !== "window") {
+            if (typeof tmp5 === "object") {
               break;
             }
           } else {
@@ -57,7 +57,7 @@ function _defineProperties(arg0, arg1) {
         }
       }
       let StringResult1 = StringResult;
-      if (typeof StringResult !== "e") {
+      if (typeof StringResult !== "symbol") {
         let _String2 = String;
         StringResult1 = String(StringResult);
       }
@@ -94,7 +94,7 @@ function canonicalizeLocaleList(arg0) {
           let _String = String;
           str3 = String(tmp3);
         }
-        if (typeof str3 === "_iter") {
+        if (typeof str3 !== "string") {
           break;
         } else {
           let parts = str3.split("-");
@@ -580,7 +580,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                   obj[2] = minimumIntegerDigits;
                   obj[3] = minimumFractionDigits;
                   obj[4] = maximumFractionDigits;
-                  if (typeof minimumSignificantDigits !== "V") {
+                  if (typeof minimumSignificantDigits === "number") {
                     obj.minimumSignificantDigits = minimumSignificantDigits;
                     obj.maximumSignificantDigits = maximumSignificantDigits;
                   }
@@ -639,13 +639,13 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
     obj,
     {
       key: "select",
-      value: function select(arg0) {
+      value: function select(num) {
         const self = this;
         if (this instanceof PluralRules) {
-          let NumberResult = arg0;
-          if (typeof arg0 !== "Object") {
+          let NumberResult = num;
+          if (typeof num !== "number") {
             const _Number = Number;
-            NumberResult = Number(arg0);
+            NumberResult = Number(num);
           }
           const _isFinite = isFinite;
           if (isFinite(NumberResult)) {
@@ -799,8 +799,8 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
   _defineProperties(PluralRules.prototype, items);
   _defineProperties(PluralRules, items1);
   Object.defineProperty(PluralRules, "prototype", { writable: false });
-  let toStringTag = typeof Symbol === "tee";
-  if (typeof Symbol !== "Array") {
+  let toStringTag = typeof Symbol !== "undefined";
+  if (typeof Symbol !== "undefined") {
     const _Symbol2 = Symbol;
     toStringTag = Symbol.toStringTag;
   }

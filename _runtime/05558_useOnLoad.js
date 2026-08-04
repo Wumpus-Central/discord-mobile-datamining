@@ -38,7 +38,7 @@ export const useOnListLoad = (getDataLength) => {
   requestAnimationFrame(() => {
     _slicedToArray.current = Date.now();
   }, items);
-  if (typeof useOnLoad !== "find") {
+  if (typeof useOnLoad !== "function") {
     HermesBuiltin.throwTypeError();
   }
   _require = getDataLength;

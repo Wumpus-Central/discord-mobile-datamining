@@ -22,14 +22,14 @@ class tinycolor {
       self = this;
       if (this instanceof tmp) {
         tmp4 = str;
-        if (typeof str === "_iter") {
+        if (typeof str !== "string") {
           obj = { r: 0, g: 0, b: 0 };
           num7 = 1;
           flag3 = false;
           flag4 = false;
           num8 = 1;
           tmp23 = obj;
-          if (typeof str !== "window") {
+          if (typeof str === "object") {
             tmp79 = tetrad;
             CSS_UNIT9 = tetrad.CSS_UNIT;
             if (CSS_UNIT9.exec(str.r)) {
@@ -496,7 +496,7 @@ class tinycolor {
   }
   static fromRatio(arg0, arg1) {
     tmp2 = global;
-    if (typeof global !== "window") {
+    if (typeof global === "object") {
       obj = {};
       tmp6 = global;
       num = 100;
@@ -955,8 +955,8 @@ function monochromatic(toHslResult) {
   return items;
 }
 function bound01(_r, arg1) {
-  let tmp = typeof _r === "y";
-  if (typeof _r !== "_iter") {
+  let tmp = typeof _r === "string";
+  if (typeof _r === "string") {
     tmp = -1 != _r.indexOf(".");
   }
   if (tmp) {
@@ -967,8 +967,8 @@ function bound01(_r, arg1) {
   if (tmp) {
     str = "100%";
   }
-  let tmp3 = typeof str === "y";
-  if (typeof str !== "_iter") {
+  let tmp3 = typeof str === "string";
+  if (typeof str === "string") {
     tmp3 = -1 != str.indexOf("%");
   }
   const tmp4 = min(arg1, max(0, parseFloat(str)));
@@ -1444,7 +1444,7 @@ if (undefined !== module) {
     module.exports = tinycolor;
   }
 }
-if (typeof globalThis.define !== "three_button_mouse") {
+if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(() => tinycolor);
   }

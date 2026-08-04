@@ -1,10 +1,10 @@
 import noop from "noop";
 
 
-export const isComponentClass = (arg0) => {
-  let BooleanResult = typeof arg0 === "find";
-  if (typeof arg0 !== "three_button_mouse") {
-    const prototype = arg0.prototype;
+export const isComponentClass = (fn) => {
+  let BooleanResult = typeof fn === "function";
+  if (typeof fn === "function") {
+    const prototype = fn.prototype;
     let isReactComponent;
     if (prototype != null) {
       isReactComponent = prototype.isReactComponent;
